@@ -1,0 +1,838 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.LENGTH",
+ "title": "Length",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to i are KICD's words (e read, not yet checked by a person; j attitudinal and not mapped). Metres and centimetres only: no kilometres in the Grade 4 outcomes (HOREB's earlier skill title mentions km; it is not in the design). Outcome b and c have a hands-on side (measuring with a ruler, laying out a metre); the skills here are what a typed or tapped answer can test (reading a ruler, using 100 cm = 1 m).",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+   "key_step": "The child chooses centimetres for short lengths and metres for long ones, and compares lengths only in the same unit.",
+   "floor": {
+    "prerequisite": "Measures in metres (Grade 3).",
+    "question": "Which unit for the length of the classroom?",
+    "answer": "metres"
+   },
+   "representations": [
+    "a centimetre cube",
+    "body benchmarks: a fingernail is about 1 cm",
+    "a ruler"
+   ],
+   "steps": [
+    "Is the object short or long?",
+    "Short: centimetres. Long: metres.",
+    "To compare, use the same unit.",
+    "Check the estimate with a benchmark."
+   ],
+   "contexts": [
+    "the length of a pencil",
+    "a desk in class",
+    "a ribbon at the market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pencil and a classroom door."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the pencil.",
+     "say": "Centimetres or metres?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for centimetres."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write pencil: cm, door: m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_WRONG_UNIT",
+     "listen_for": [
+      "metres"
+     ],
+     "ask": "Is a pencil longer than a metre stick?",
+     "repair": "No: centimetres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_CM_AS_M_SIZE",
+     "listen_for": [
+      "a hand"
+     ],
+     "ask": "How wide is your fingernail?",
+     "repair": "About 1 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_BIGGER_NUMBER_LONGER",
+     "listen_for": [
+      "30 cm"
+     ],
+     "ask": "How many centimetres is 2 m?",
+     "repair": "200 cm: longer."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_ESTIMATE_FAR_OUT",
+     "listen_for": [
+      "200 cm"
+     ],
+     "ask": "Is a book as long as two metre sticks?",
+     "repair": "No: about 20 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which unit for the length of a matchbox?",
+     "answer": "centimetres",
+     "shows": "choosing"
+    },
+    {
+     "question": "Which is longer, 90 cm or 1 m?",
+     "answer": "1 m",
+     "shows": "same unit"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
+   "key_step": "The child lines one end up with 0 (or subtracts the start from the end) and counts the centimetre gaps.",
+   "floor": {
+    "prerequisite": "Counts on a number line.",
+    "question": "From 0 to 6 on a number line, how many jumps?",
+    "answer": "6"
+   },
+   "representations": [
+    "a ruler picture",
+    "a number line",
+    "a tape measure"
+   ],
+   "steps": [
+    "Put one end at 0.",
+    "Read the mark at the other end.",
+    "If it does not start at 0, take the start from the end.",
+    "Write the unit: cm."
+   ],
+   "contexts": [
+    "the length of a pencil",
+    "a leaf from the school garden",
+    "a piece of string"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ruler and a pencil from 2 to 9."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 2 mark.",
+     "say": "Does the pencil start at 0?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "count",
+     "do": "Count the gaps from 2 to 9 with the child."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 9 - 2 = 7 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_NOT_FROM_ZERO",
+     "listen_for": [
+      "9 cm"
+     ],
+     "ask": "Where does the pencil start?",
+     "repair": "At 2: 9 - 2 = 7 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_COUNTS_MARKS",
+     "listen_for": [
+      "7 cm"
+     ],
+     "ask": "Count the gaps, not the marks.",
+     "repair": "6 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_DIFFERENCE_AS_END",
+     "listen_for": [
+      "9 cm"
+     ],
+     "ask": "Did I ask for the rope or how much longer?",
+     "repair": "How much longer: 5 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_STARTS_AT_ONE",
+     "listen_for": [
+      "9 cm"
+     ],
+     "ask": "Where does the first centimetre start?",
+     "repair": "At 0: 8 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A crayon lies from 3 cm to 11 cm on a ruler. How long is it?",
+     "answer": "8 cm",
+     "shows": "not from zero"
+    },
+    {
+     "question": "A line goes from 0 to 12 on a ruler. How long is it?",
+     "answer": "12 cm",
+     "shows": "from zero"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+   "key_step": "The child knows 1 m = 100 cm and counts 100 cm for every metre.",
+   "floor": {
+    "prerequisite": "Counts in hundreds.",
+    "question": "100, 200, ?",
+    "answer": "300"
+   },
+   "representations": [
+    "a metre stick marked in centimetres",
+    "ten 10 cm strips",
+    "a tape measure"
+   ],
+   "steps": [
+    "1 m = 100 cm.",
+    "For more metres, count in hundreds.",
+    "Half a metre is half of 100 cm.",
+    "Check on a metre stick."
+   ],
+   "contexts": [
+    "a metre stick in class",
+    "cloth at a tailor",
+    "a high-jump bar"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a metre stick with 10 long marks."
+    },
+    {
+     "beat": "count",
+     "do": "Count in tens with the child to the end."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: how many centimetres in all?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 m = 100 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_10_NOT_100",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "How many 10 cm pieces fit along a metre?",
+     "repair": "10: 100 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_HALF_METRE_WRONG",
+     "listen_for": [
+      "25 cm"
+     ],
+     "ask": "What is half of 100?",
+     "repair": "50 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_1000_CM",
+     "listen_for": [
+      "1,000"
+     ],
+     "ask": "Count the tens along the metre stick.",
+     "repair": "100 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_ADDS_100_FOR_METRES",
+     "listen_for": [
+      "103"
+     ],
+     "ask": "How many centimetres in each metre?",
+     "repair": "100: 300 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many centimetres in 4 m?",
+     "answer": "400",
+     "shows": "many metres"
+    },
+    {
+     "question": "Half a metre is how many centimetres?",
+     "answer": "50",
+     "shows": "half"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
+   "key_step": "The child multiplies metres by 100 to get centimetres, divides centimetres by 100 to get metres, and keeps any centimetres left over.",
+   "floor": {
+    "prerequisite": "1 m = 100 cm.",
+    "question": "How many cm in 2 m?",
+    "answer": "200"
+   },
+   "representations": [
+    "a place value chart for m and cm",
+    "a metre stick",
+    "a conversion table"
+   ],
+   "steps": [
+    "Metres to cm: x 100.",
+    "Add any centimetres.",
+    "Cm to metres: take out each 100 cm as a metre.",
+    "Write what is left as cm."
+   ],
+   "contexts": [
+    "cloth bought at a tailor",
+    "a running track",
+    "a rope for a well"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3 m 4 cm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3 m.",
+     "say": "How many centimetres is 3 m?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 300."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 300 + 4 = 304 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_ADD_DIGITS",
+     "listen_for": [
+      "34 cm"
+     ],
+     "ask": "How many cm is 3 m?",
+     "repair": "300: 304 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_WRONG_FACTOR",
+     "listen_for": [
+      "60 cm"
+     ],
+     "ask": "How many cm in 1 m?",
+     "repair": "100: 600 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_DIRECTION",
+     "listen_for": [
+      "40000 m"
+     ],
+     "ask": "Should there be more metres or fewer?",
+     "repair": "Fewer: 4 m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_LEFTOVER_CM_LOST",
+     "listen_for": [
+      "3 m"
+     ],
+     "ask": "What is left after 300 cm?",
+     "repair": "50 cm: 3 m 50 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Change 5 m 20 cm to centimetres.",
+     "answer": "520 cm",
+     "shows": "to cm"
+    },
+    {
+     "question": "Change 608 cm to metres and centimetres.",
+     "answer": "6 m 8 cm",
+     "shows": "to m and cm"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
+   "key_step": "The child goes round the shape once, adding every side.",
+   "floor": {
+    "prerequisite": "Adds lengths.",
+    "question": "8 cm + 5 cm",
+    "answer": "13 cm"
+   },
+   "representations": [
+    "string laid round a shape",
+    "a fence round a plot",
+    "a shape on a grid"
+   ],
+   "steps": [
+    "Start at one corner.",
+    "Go round, writing each side.",
+    "Add all the sides.",
+    "Write the unit."
+   ],
+   "contexts": [
+    "a fence round a shamba",
+    "a frame round a picture",
+    "the edge of a football pitch"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle 8 cm by 5 cm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sides one by one.",
+     "say": "How many sides must we add?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for four."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 8, 5, 8 and 5 on the sides."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 8 + 5 + 8 + 5 = 26 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_TWO_SIDES_ONLY",
+     "listen_for": [
+      "13 cm"
+     ],
+     "ask": "Did we go all the way round?",
+     "repair": "No: 26 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_AREA_NOT_PERIMETER",
+     "listen_for": [
+      "84 m"
+     ],
+     "ask": "Is the fence the inside or the edge?",
+     "repair": "The edge: add the sides, 38 m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_SQUARE_ONE_SIDE",
+     "listen_for": [
+      "6 cm"
+     ],
+     "ask": "How many sides has a square?",
+     "repair": "Four: 24 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_SIDE_MISSED",
+     "listen_for": [
+      "14 cm"
+     ],
+     "ask": "Did you tick every side?",
+     "repair": "No: 20 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A plot is 15 m long and 10 m wide. How long is the fence round it?",
+     "answer": "50 m",
+     "shows": "rectangle"
+    },
+    {
+     "question": "A triangle has sides 7 cm, 7 cm and 4 cm. Perimeter?",
+     "answer": "18 cm",
+     "shows": "any shape"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+   "key_step": "The child adds centimetres to centimetres and metres to metres, changing 100 cm into 1 m.",
+   "floor": {
+    "prerequisite": "1 m = 100 cm.",
+    "question": "120 cm is how many m and cm?",
+    "answer": "1 m 20 cm"
+   },
+   "representations": [
+    "m and cm columns",
+    "a metre stick",
+    "ribbons laid end to end"
+   ],
+   "steps": [
+    "Write m and cm in columns.",
+    "Add the centimetres.",
+    "100 cm or more: carry 1 m.",
+    "Add the metres."
+   ],
+   "contexts": [
+    "two pieces of cloth",
+    "a rope joined to another",
+    "a long jump in two tries"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 m 70 cm + 1 m 50 cm in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cm.",
+     "say": "What is 70 + 50?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 120."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 cm, carry 1 m: 4 m 20 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_NO_REGROUP",
+     "listen_for": [
+      "3 m 120 cm"
+     ],
+     "ask": "Can we have 120 cm in the cm column?",
+     "repair": "No: 1 m 20 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_ADDS_ACROSS",
+     "listen_for": [
+      "53 m"
+     ],
+     "ask": "Do metres and centimetres go together?",
+     "repair": "No: 3 m 50 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_100_CM_AS_10_M",
+     "listen_for": [
+      "13 m 20 cm"
+     ],
+     "ask": "How many cm make 1 m?",
+     "repair": "100: carry 1 m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_CM_DROPPED",
+     "listen_for": [
+      "3 m"
+     ],
+     "ask": "Where did the centimetres go?",
+     "repair": "Add them: 3 m 75 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "3 m 45 cm + 2 m 80 cm",
+     "answer": "6 m 25 cm",
+     "shows": "regrouping"
+    },
+    {
+     "question": "1 m 30 cm + 4 m 25 cm",
+     "answer": "5 m 55 cm",
+     "shows": "no regrouping"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB",
+   "key_step": "The child takes centimetres from centimetres, changing 1 m into 100 cm when the top is too small, and takes 1 from the metres.",
+   "floor": {
+    "prerequisite": "Subtracts with regrouping.",
+    "question": "130 - 60",
+    "answer": "70"
+   },
+   "representations": [
+    "m and cm columns",
+    "a rope cut from a longer one",
+    "a metre stick"
+   ],
+   "steps": [
+    "Write m and cm in columns, bigger length on top.",
+    "Top cm too small: change 1 m into 100 cm.",
+    "Take away the cm.",
+    "Take away the metres."
+   ],
+   "contexts": [
+    "rope cut for a well",
+    "cloth left after sewing",
+    "how much longer one jump was"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5 m 20 cm - 2 m 70 cm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 20 - 70.",
+     "say": "Can we take 70 from 20?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Change 5 m to 4 m and 20 cm to 120 cm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 120 - 70 = 50, 4 - 2 = 2: 2 m 50 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "3 m 50 cm"
+     ],
+     "ask": "Which number is on top in the cm?",
+     "repair": "20: regroup."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_BORROW_100_NOT_10",
+     "listen_for": [
+      "2 m 80 cm"
+     ],
+     "ask": "How many cm in the metre we borrowed?",
+     "repair": "100: 130 - 60 = 70."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_ADDS",
+     "listen_for": [
+      "7 m 50 cm"
+     ],
+     "ask": "Is \"how much longer\" a total?",
+     "repair": "No: take away."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_METRE_NOT_REDUCED",
+     "listen_for": [
+      "3 m 70 cm"
+     ],
+     "ask": "Where did the 100 cm come from?",
+     "repair": "From the metres: 4 m becomes 3 m, so 2 m 70 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "6 m 10 cm - 3 m 45 cm",
+     "answer": "2 m 65 cm",
+     "shows": "regrouping"
+    },
+    {
+     "question": "8 m 75 cm - 2 m 50 cm",
+     "answer": "6 m 25 cm",
+     "shows": "no regrouping"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT",
+   "key_step": "The child multiplies the centimetres and the metres, changes every 100 cm into 1 m and adds it to the metres.",
+   "floor": {
+    "prerequisite": "Multiplies 2-digit numbers by a 1-digit number.",
+    "question": "60 x 4",
+    "answer": "240"
+   },
+   "representations": [
+    "m and cm columns",
+    "pieces laid end to end",
+    "a number line in metres"
+   ],
+   "steps": [
+    "Multiply the centimetres.",
+    "Change each 100 cm into 1 m.",
+    "Multiply the metres.",
+    "Add the metres carried."
+   ],
+   "contexts": [
+    "cloth for school uniforms",
+    "fencing posts in a row",
+    "ribbons for a party"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 m 60 cm x 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 60 cm.",
+     "say": "What is 60 x 4?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 240."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child changes 240 cm into 2 m 40 cm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 8 m + 2 m = 10 m 40 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_NO_REGROUP",
+     "listen_for": [
+      "8 m 240 cm"
+     ],
+     "ask": "Can we have 240 in the cm column?",
+     "repair": "No: 2 m 40 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_ONLY_METRES",
+     "listen_for": [
+      "6 m 30 cm"
+     ],
+     "ask": "Did we multiply the centimetres?",
+     "repair": "No: 90 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_CARRY_NOT_ADDED",
+     "listen_for": [
+      "8 m 40 cm"
+     ],
+     "ask": "Where did the 2 m go?",
+     "repair": "Add it: 10 m 40 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_ADDS_NUMBER",
+     "listen_for": [
+      "4 m 20 cm"
+     ],
+     "ask": "Is x 3 three pieces?",
+     "repair": "Yes: 3 m 60 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "1 m 75 cm x 3",
+     "answer": "5 m 25 cm",
+     "shows": "regrouping"
+    },
+    {
+     "question": "2 m 20 cm x 4",
+     "answer": "8 m 80 cm",
+     "shows": "no regrouping"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV",
+   "key_step": "The child divides the metres, changes any metres left over into 100 cm each, adds them to the centimetres and divides those.",
+   "floor": {
+    "prerequisite": "Divides with a remainder.",
+    "question": "5 ÷ 2",
+    "answer": "2 remainder 1"
+   },
+   "representations": [
+    "a rope cut into equal pieces",
+    "m and cm columns",
+    "a metre stick"
+   ],
+   "steps": [
+    "Divide the metres.",
+    "Change the metres left over to cm.",
+    "Add them to the cm.",
+    "Divide the cm."
+   ],
+   "contexts": [
+    "a rope shared among groups",
+    "cloth cut for dresses",
+    "a fence shared by neighbours"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5 m ÷ 2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 5 m.",
+     "say": "How many whole metres each, and how many left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2 each, 1 left."
+    },
+    {
+     "beat": "write",
+     "do": "Change 1 m to 100 cm."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 100 ÷ 2 = 50: 2 m 50 cm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_METRES_ONLY",
+     "listen_for": [
+      "1 m 80 cm"
+     ],
+     "ask": "Did we share the centimetres too?",
+     "repair": "No: 80 ÷ 4 = 20, so 1 m 20 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_REMAINDER_METRES_LOST",
+     "listen_for": [
+      "2 m"
+     ],
+     "ask": "What happened to the metre left over?",
+     "repair": "Share it: 50 cm each."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_MULTIPLIES",
+     "listen_for": [
+      "18 m 90 cm"
+     ],
+     "ask": "Is a piece longer than the whole rope?",
+     "repair": "No: divide, 2 m 10 cm."
+    },
+    {
+     "code": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_REMAINDER_AS_CM",
+     "listen_for": [
+      "3 m 1 cm"
+     ],
+     "ask": "How many cm in the metre left over?",
+     "repair": "100: 3 m 50 cm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "8 m 40 cm ÷ 4",
+     "answer": "2 m 10 cm",
+     "shows": "no remainder in metres"
+    },
+    {
+     "question": "9 m ÷ 2",
+     "answer": "4 m 50 cm",
+     "shows": "metre left over"
+    }
+   ]
+  }
+ ]
+}

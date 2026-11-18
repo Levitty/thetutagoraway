@@ -1,0 +1,389 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.ADDITION",
+ "title": "Addition",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words (a to d verified, e attitudinal). Single and double regrouping are separate outcomes, so separate skills. The estimate skill rounds each number to the nearest ten as the outcome says. Pattern outcome d goes up to a sum of 10,000.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+   "key_step": "The child adds the ones first and, when a column makes 10 or more, writes the ones and carries the ten to the next column.",
+   "floor": {
+    "prerequisite": "Adds two 3-digit numbers with regrouping (Grade 3).",
+    "question": "348 + 125",
+    "answer": "473"
+   },
+   "representations": [
+    "bundles of sticks: ones, tens, hundreds",
+    "a place value chart with columns",
+    "the column method"
+   ],
+   "steps": [
+    "Line up ones under ones.",
+    "Add the ones.",
+    "10 or more: write the ones, carry 1 ten.",
+    "Add each column to the left, with any carry."
+   ],
+   "contexts": [
+    "eggs collected on a poultry farm",
+    "shillings saved in two months",
+    "people at two football matches"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2,468 + 1,359 in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 8 and 9.",
+     "say": "What do the ones make?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 17."
+    },
+    {
+     "beat": "write",
+     "do": "Write 7 and a small 1 above the tens."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the tens with the carried 1."
+    },
+    {
+     "beat": "reveal",
+     "do": "Finish: 3,827."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_NO_CARRY",
+     "listen_for": [
+      "371117"
+     ],
+     "ask": "Can one column hold 17?",
+     "repair": "No: write 7 and carry 1."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_CARRY_FORGOTTEN",
+     "listen_for": [
+      "5,911"
+     ],
+     "ask": "Where did the carried 1 go?",
+     "repair": "Into the tens: 6,021."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_COLUMNS_MISALIGNED",
+     "listen_for": [
+      "4,236"
+     ],
+     "ask": "Is the 8 of 78 under the ones?",
+     "repair": "Line up from the right: 3,534."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_CARRY_WRONG_COLUMN",
+     "listen_for": [
+      "3,873"
+     ],
+     "ask": "Which column is next to the ones?",
+     "repair": "The tens: 3,783."
+    }
+   ],
+   "checks": [
+    {
+     "question": "3,165 + 2,417",
+     "answer": "5,582",
+     "shows": "one carry"
+    },
+    {
+     "question": "4,520 + 3,384",
+     "answer": "7,904",
+     "shows": "carry into the thousands"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP",
+   "key_step": "The child checks every column: carry only when that column makes 10 or more, keep the ones digit, move the ten.",
+   "floor": {
+    "prerequisite": "Adds with one carry.",
+    "question": "3,165 + 2,417",
+    "answer": "5,582"
+   },
+   "representations": [
+    "bundles of sticks",
+    "place value counters",
+    "the column method"
+   ],
+   "steps": [
+    "Add the ones; carry if 10 or more.",
+    "Add the tens with any carry; carry if 10 or more.",
+    "Do the same for hundreds and thousands.",
+    "Check the answer is near the estimate."
+   ],
+   "contexts": [
+    "tickets sold for a school play",
+    "litres of milk at a cooperative",
+    "shillings collected in a harambee"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2,785 + 1,468 in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ones.",
+     "say": "What is 5 + 8?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 13."
+    },
+    {
+     "beat": "write",
+     "do": "Write 3, carry 1."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the tens: 8 + 6 + 1."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5, carry 1, and finish: 4,253."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_CARRY_ONLY_ONCE",
+     "listen_for": [
+      "4,153"
+     ],
+     "ask": "Did the tens make 10 or more?",
+     "repair": "Yes, 15: carry again."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_THOUSANDS_DROPPED",
+     "listen_for": [
+      "515"
+     ],
+     "ask": "Where does the last carried 1 go?",
+     "repair": "Into a new column: 10,515."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_TENS_DIGIT_WRITTEN",
+     "listen_for": [
+      "11,111"
+     ],
+     "ask": "In 13, which digit is the ones?",
+     "repair": "3 stays, 1 ten is carried."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_CARRIES_EVERY_COLUMN",
+     "listen_for": [
+      "6,805"
+     ],
+     "ask": "Did the hundreds make 10 or more?",
+     "repair": "No, 8: nothing to carry."
+    }
+   ],
+   "checks": [
+    {
+     "question": "4,687 + 2,546",
+     "answer": "7,233",
+     "shows": "three carries"
+    },
+    {
+     "question": "1,395 + 3,428",
+     "answer": "4,823",
+     "shows": "two carries"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN",
+   "key_step": "The child rounds each number to the nearest ten first, then adds the rounded numbers.",
+   "floor": {
+    "prerequisite": "Rounds to the nearest ten.",
+    "question": "Round 68 to the nearest ten.",
+    "answer": "70"
+   },
+   "representations": [
+    "a number line in tens",
+    "rounded prices",
+    "a table of exact and rounded numbers"
+   ],
+   "steps": [
+    "Round the first number to the nearest ten.",
+    "Round the second number.",
+    "Add the rounded numbers.",
+    "Compare with the exact sum if asked."
+   ],
+   "contexts": [
+    "the cost of two items at the market",
+    "water used in two months",
+    "visitors on two days"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 68 + 47."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 68.",
+     "say": "What is 68 to the nearest ten?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 70."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rounds 47."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 70 + 50 = 120."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_ROUND_ONLY_ONE",
+     "listen_for": [
+      "932"
+     ],
+     "ask": "Did you round both numbers?",
+     "repair": "No: 350 + 580 = 930."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_ROUND_WRONG",
+     "listen_for": [
+      "100"
+     ],
+     "ask": "What is the ones digit of 68?",
+     "repair": "8: round up to 70."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_EXACT_REQUIRED",
+     "listen_for": [
+      "615"
+     ],
+     "ask": "Is that rounded?",
+     "repair": "No: 350 + 270 = 620."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_ROUND_TO_HUNDRED",
+     "listen_for": [
+      "900"
+     ],
+     "ask": "Which place do we round to?",
+     "repair": "Tens: 350 + 580."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Estimate 234 + 158 by rounding to the nearest ten.",
+     "answer": "390",
+     "shows": "both rounded"
+    },
+    {
+     "question": "Estimate 76 + 45 by rounding to the nearest ten.",
+     "answer": "130",
+     "shows": "rounding up"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS",
+   "key_step": "The child finds the same amount added between terms and adds it again to continue or fill a gap.",
+   "floor": {
+    "prerequisite": "Adds with regrouping.",
+    "question": "2,750 + 250",
+    "answer": "3,000"
+   },
+   "representations": [
+    "a number line with equal jumps",
+    "a table of weeks and savings",
+    "jumps written under the pattern"
+   ],
+   "steps": [
+    "Find the jump between two terms next to each other.",
+    "Check the jump is the same each time.",
+    "Add the jump to continue.",
+    "For a gap, add the jump to the term before it."
+   ],
+   "contexts": [
+    "savings each week in a chama",
+    "trees planted each month",
+    "pages read each day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 1,200, 1,500, 1,800, ?"
+    },
+    {
+     "beat": "point",
+     "do": "Point from 1,200 to 1,500.",
+     "say": "How much is added?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 300."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2,100."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_ADD_ONE_STEP_ONLY",
+     "listen_for": [
+      "1,900"
+     ],
+     "ask": "Is the jump 100 or 300?",
+     "repair": "300: 2,100."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_RULE_AS_TERM",
+     "listen_for": [
+      "3,500"
+     ],
+     "ask": "Did I ask for the next term or the rule?",
+     "repair": "The rule: add 500."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_MISSING_NOT_CHECKED",
+     "listen_for": [
+      "3,500"
+     ],
+     "ask": "Does 3,500 to 3,700 match the jump?",
+     "repair": "No: the jump is 300, so 3,400."
+    },
+    {
+     "code": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_DOUBLES",
+     "listen_for": [
+      "3,500"
+     ],
+     "ask": "Is 1,500 double 1,250?",
+     "repair": "No: add 250 each time, 2,000."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Next: 4,450, 4,700, 4,950, ?",
+     "answer": "5,200",
+     "shows": "continue"
+    },
+    {
+     "question": "Missing: 2,600, ?, 3,400, 3,800",
+     "answer": "3,000",
+     "shows": "gap"
+    }
+   ]
+  }
+ ]
+}

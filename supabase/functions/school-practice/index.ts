@@ -998,8 +998,6 @@ var CORE_FAMILIES = [
     skill: "G4_LETTERS",
     cskill: "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
     outcome: "MATH.G4.NUMBER.USE_OF_LETTERS.b",
-    misMapped: false,
-    reveals: ["M_EXP_WRONG_OPERATION"],
     rung: 1,
     form: "word",
     draw: () => {
@@ -1007,7 +1005,7 @@ var CORE_FAMILIES = [
       return { add, letter, thing, p: person(), k: randInt(0, 3) };
     },
     make: ({ add, letter, thing, p, k }) => {
-      const opts2 = [{ text: `${letter} + ${add}`, right: true }, { text: `${letter} \u2212 ${add}`, right: false, why: "Adding more makes the number bigger, so use +." }, { text: `${add}${letter}`, right: false, why: `${add}${letter} means ${add} lots of ${letter}. Here ${add} more are put in.` }, { text: `${letter}`, right: false, why: `That leaves out the ${add} that were added.` }];
+      const opts2 = [{ text: `${letter} + ${add}`, right: true }, { text: `${letter} \u2212 ${add}`, right: false, why: "Adding more makes the number bigger, so use +.", mis: "M_EXP_WRONG_OPERATION" }, { text: `${add}${letter}`, right: false, why: `${add}${letter} means ${add} lots of ${letter}. Here ${add} more are put in.`, mis: "M_EXP_NOT_NUMBER_WORD" }, { text: `${letter}`, right: false, why: `That leaves out the ${add} that were added.`, mis: "SLIP" }];
       return {
         question: `A bag has ${letter} ${thing}. ${p.name} adds ${add} more. Which expression shows how many ${thing} are in the bag now?`,
         options: [...opts2.slice(k), ...opts2.slice(0, k)],
@@ -1021,8 +1019,6 @@ var CORE_FAMILIES = [
     skill: "G4_LETTERS",
     cskill: "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
     outcome: "MATH.G4.NUMBER.USE_OF_LETTERS.c",
-    misMapped: false,
-    reveals: ["M_SIM_LETTER_DROPPED"],
     rung: 2,
     form: "direct",
     draw: () => {
@@ -1037,7 +1033,7 @@ var CORE_FAMILIES = [
         instruction: "Write the answer with the letter.",
         answer: ans,
         accepts: [`${r}${v}`],
-        wrong: [[`${a + b + c19}${v}`, `Look at the sign before ${c19}${v}: it means take away.`], [`${a + b}${v}`, `You have not yet taken away ${c19}${v}.`], [`${r}`, "The letter must stay: these are all lots of the same thing."]],
+        wrong: [[`${a + b + c19}${v}`, `Look at the sign before ${c19}${v}: it means take away.`, "M_SIM_SUBTRACT_WRONG"], [`${a + b}${v}`, `You have not yet taken away ${c19}${v}.`, "SLIP"], [`${r}`, "The letter must stay: these are all lots of the same thing.", "M_SIM_LETTER_DROPPED"]],
         hints: ["Think of the letter as a thing, such as pens.", `${a} pens and ${b} more, then ${c19} taken away.`],
         steps: [`${a}${v} + ${b}${v} = ${a + b}${v}.`, `${a + b}${v} \u2212 ${c19}${v} = ${ans}.`]
       };
@@ -102038,8 +102034,6 @@ var FAMILIES146 = [
     skill: "G4_NUMBER_WORDS",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.b",
-    misMapped: false,
-    reveals: ["M_SYM_JOIN_PARTS"],
     rung: 1,
     form: "word",
     draw: () => ({ t: randInt(1, 9), tu: randInt(1, 99) }),
@@ -102048,7 +102042,7 @@ var FAMILIES146 = [
       return {
         question: `A school fee notice says: "${cap(words(n))} shillings." Write the amount in figures. Give your answer as a number.`,
         answer: n,
-        wrong: [[t * 100 + tu, 'You left out a zero. The word "thousand" tells you the 1st digit is in the thousands place. No hundreds are named, so the hundreds place holds a zero.'], [t * 1e3 + tu * 10, "Check the last part of the words. It names tens and ones, not hundreds."], [Number(`${t}000${tu}`), "That has too many digits. A number in the thousands has four digits."]],
+        wrong: [[t * 100 + tu, 'You left out a zero. The word "thousand" tells you the 1st digit is in the thousands place. No hundreds are named, so the hundreds place holds a zero.', "M_SYM_JOIN_PARTS"], [t * 1e3 + tu * 10, "Check the last part of the words. It names tens and ones, not hundreds.", "M_SYM_PART_SHIFTED"], [Number(`${t}000${tu}`), "That has too many digits. A number in the thousands has four digits.", "M_SYM_PARTS_WRITTEN_IN_FULL"]],
         hints: ['Find the word "thousand". The digit before it goes in the thousands place.', "No hundreds are named. What goes in the hundreds place when there are none?"],
         steps: [`The thousands: ${ONES[t]} thousand is ${t}000.`, `The rest: ${w99(tu)} is ${tu}.`, `Put them together: ${commas(n)}.`]
       };
@@ -102082,8 +102076,6 @@ var FAMILIES146 = [
     skill: "G4_PLACE_VALUE",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.a",
-    misMapped: false,
-    reveals: ["M_TV_FACE_VALUE"],
     rung: 1,
     form: "table",
     draw: () => {
@@ -102099,7 +102091,7 @@ var FAMILIES146 = [
       question: `Look at the place value chart. How much is the digit in the ${["Thousands", "Hundreds", "Tens"][col]} column worth altogether?`,
       model: { type: "table", data: { head: ["Thousands", "Hundreds", "Tens", "Ones"], rows: [{ cells: ds.map(String) }] } },
       answer: dg2 * place3,
-      wrong: [[dg2, "That is the digit itself. Its total value depends on the column it sits in."], [n, "That is the whole number. The question asks about one digit only."], [dg2 * place3 * 10, "Check the column name again. Is it worth that much?"], [dg2 * (place3 === 10 ? 1 : place3 / 10), "You used the column to the right. Look at the heading above the digit."]],
+      wrong: [[dg2, "That is the digit itself. Its total value depends on the column it sits in.", "M_TV_FACE_VALUE"], [n, "That is the whole number. The question asks about one digit only.", "M_TV_WHOLE_NUMBER_GIVEN"], [dg2 * place3 * 10, "Check the column name again. Is it worth that much?", "M_TV_WRONG_ZEROS"], [dg2 * (place3 === 10 ? 1 : place3 / 10), "You used the column to the right. Look at the heading above the digit.", "M_TV_WRONG_ZEROS"]],
       hints: ["Look at the digit under the heading you are asked about.", "Each column has its own size. A digit is worth more in a column further to the left."],
       steps: [`The digit in that column is ${dg2}.`, `${dg2} \xD7 ${commas(place3)} = ${commas(dg2 * place3)}.`]
     }),
@@ -102110,8 +102102,6 @@ var FAMILIES146 = [
     skill: "G4_ORDER_ROUND",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.d",
-    misMapped: false,
-    reveals: ["M_ORDER_DIRECTION"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -102126,7 +102116,7 @@ var FAMILIES146 = [
       question: "The table shows how many learners are in four schools. Put the schools in order, from the smallest to the largest. How many learners are in the third school in that order?",
       model: { type: "table", data: { head: ["School", "Learners"], rows: nm.map((n, i) => ({ label: `${n} Primary`, value: String(vals[i]) })) } },
       answer: s[2],
-      wrong: [[s[3], "That is the largest number, the fourth in the order. Count from the smallest."], [vals[2], "That is the third school in the table. The question asks for the third one after putting them in order."], [s[1], "That is the second in the order. Count one more."]],
+      wrong: [[s[3], "That is the largest number, the fourth in the order. Count from the smallest.", "M_ORDER_DIRECTION"], [vals[2], "That is the third school in the table. The question asks for the third one after putting them in order.", "M_ORDER_TABLE_POSITION"], [s[1], "That is the second in the order. Count one more.", "SLIP"]],
       hints: ["Write the four numbers from the smallest to the largest.", "Compare the hundreds first, then the tens."],
       steps: [`In order: ${s.join(", ")}.`, `The third number is ${s[2]}.`]
     }),
@@ -102169,8 +102159,6 @@ var FAMILIES146 = [
     skill: "G4_FACTORS_MULTIPLES",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.f",
-    misMapped: false,
-    reveals: [],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102183,7 +102171,7 @@ var FAMILIES146 = [
       return { n, three, x, p: person(), k: randInt(0, 3) };
     },
     make: ({ n, three, x, p, k }) => {
-      const opts2 = [{ text: String(x), right: true }, ...three.map((f) => ({ text: String(f), right: false, why: `${n} \xF7 ${f} = ${n / f} with nothing left over, so ${f} is a factor.` }))];
+      const opts2 = [{ text: String(x), right: true }, ...three.map((f) => ({ text: String(f), right: false, why: `${n} \xF7 ${f} = ${n / f} with nothing left over, so ${f} is a factor.`, mis: "M_FACTOR_NOT_TESTED" }))];
       return {
         question: `${p.name} packs ${n} eggs into trays of the same size. No egg is left over. Which of these numbers is NOT a factor of ${n}?`,
         options: rot(opts2, k),
@@ -102197,8 +102185,6 @@ var FAMILIES146 = [
     skill: "G4_FACTORS_MULTIPLES",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.g",
-    misMapped: false,
-    reveals: ["M_MULTIPLE_NOT_CHECKED"],
     rung: 2,
     form: "why",
     draw: () => {
@@ -102208,9 +102194,9 @@ var FAMILIES146 = [
     make: ({ m: m20, k, n, r, p }) => {
       const opts2 = [
         { text: `${m20} \xD7 ${k} = ${n}, so ${m20} goes into ${n}`, right: true },
-        { text: `${n} is an even number, and even numbers are multiples`, right: false, why: `Many even numbers are not multiples of ${m20}. For example, ${n + 2} is even but ${m20} does not go into it exactly.` },
-        { text: `${n} is bigger than ${m20}, and bigger numbers are multiples`, right: false, why: `${n + 1} is also bigger than ${m20}, but it is not a multiple of ${m20}.` },
-        { text: `${m20} + ${n - m20} = ${n}, so the two numbers make ${n}`, right: false, why: `Any two numbers can be added to make ${n}. A multiple of ${m20} comes from counting in ${m20}s or multiplying ${m20}.` }
+        { text: `${n} is an even number, and even numbers are multiples`, right: false, why: `Many even numbers are not multiples of ${m20}. For example, ${n + 2} is even but ${m20} does not go into it exactly.`, mis: "M_MULTIPLE_ANY_EVEN" },
+        { text: `${n} is bigger than ${m20}, and bigger numbers are multiples`, right: false, why: `${n + 1} is also bigger than ${m20}, but it is not a multiple of ${m20}.`, mis: "M_MULTIPLE_NOT_CHECKED" },
+        { text: `${m20} + ${n - m20} = ${n}, so the two numbers make ${n}`, right: false, why: `Any two numbers can be added to make ${n}. A multiple of ${m20} comes from counting in ${m20}s or multiplying ${m20}.`, mis: "SLIP" }
       ];
       return {
         question: `${p.name} counts in ${m20}s and reaches ${n}. ${p.She} says ${n} is a multiple of ${m20}. Why is ${p.she} right?`,
@@ -102225,8 +102211,6 @@ var FAMILIES146 = [
     skill: "G4_ODD_EVEN",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.i",
-    misMapped: false,
-    reveals: ["M_PATTERN_WRONG_PARITY"],
     rung: 2,
     form: "why",
     draw: () => ({ s: randInt(1, 9), d: pick([3, 5, 7, 9]), r: randInt(0, 3) }),
@@ -102234,9 +102218,9 @@ var FAMILIES146 = [
       const t = [0, 1, 2, 3, 4].map((i) => s + i * d).join(", ");
       const opts2 = [
         { text: `Each time we add ${d}, an odd number, so odd and even swap`, right: true },
-        { text: "The numbers get bigger each time, so they must swap between odd and even", right: false, why: "Numbers can get bigger and stay odd. Think of adding 2 each time to 5: 5, 7, 9." },
-        { text: "Adding any number at all changes an odd number to an even number", right: false, why: "Adding an even number, such as 4, keeps an odd number odd." },
-        { text: `The first number is ${s % 2 ? "odd" : "even"}, so all the numbers are ${s % 2 ? "odd" : "even"} too`, right: false, why: "Look at the pattern again. The numbers are not all the same kind." }
+        { text: "The numbers get bigger each time, so they must swap between odd and even", right: false, why: "Numbers can get bigger and stay odd. Think of adding 2 each time to 5: 5, 7, 9.", mis: "M_PATTERN_ADD_ONE" },
+        { text: "Adding any number at all changes an odd number to an even number", right: false, why: "Adding an even number, such as 4, keeps an odd number odd.", mis: "M_PATTERN_ADDING_CHANGES_PARITY" },
+        { text: `The first number is ${s % 2 ? "odd" : "even"}, so all the numbers are ${s % 2 ? "odd" : "even"} too`, right: false, why: "Look at the pattern again. The numbers are not all the same kind.", mis: "M_PATTERN_WRONG_PARITY" }
       ];
       return {
         question: `Look at this pattern: ${t}. The numbers change from odd to even, and from even to odd, again and again. Why?`,
@@ -102251,8 +102235,6 @@ var FAMILIES146 = [
     skill: "G4_ODD_EVEN",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.i",
-    misMapped: false,
-    reveals: ["M_PATTERN_HOUSES_ONE_SIDE"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102262,7 +102244,7 @@ var FAMILIES146 = [
     make: ({ o, n }) => ({
       question: `The odd house numbers on one side of a road follow a pattern: ${o}, ${o + 2}, ${o + 4}, ${o + 6}. What is the number of the ${["", "", "", "", "", "", "", "7th", "8th", "9th"][n]} house on that side?`,
       answer: o + 2 * (n - 1),
-      wrong: [[2 * n, "That is an even number. The houses on this side all have odd numbers."], [o + 2 * n, "That is one step too far. Count the houses carefully."], [o + n - 1, "The pattern goes up by 2 each time, not by 1."]],
+      wrong: [[2 * n, "That is an even number. The houses on this side all have odd numbers.", "M_PATTERN_HOUSES_ONE_SIDE"], [o + 2 * n, "That is one step too far. Count the houses carefully.", "SLIP"], [o + n - 1, "The pattern goes up by 2 each time, not by 1.", "M_PATTERN_ADD_ONE"]],
       hints: ["Look at how much the numbers go up each time.", "The 1st house is the first number. Each house after it adds the same amount."],
       steps: ["The numbers go up by 2 each time.", `For the ${n}th house we add 2 a total of ${n - 1} times to ${o}.`, `${o} + ${2 * (n - 1)} = ${o + 2 * (n - 1)}.`]
     }),
@@ -102273,15 +102255,13 @@ var FAMILIES146 = [
     skill: "G4_ROMAN_NUMERALS",
     cskill: "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
     outcome: "MATH.G4.NUMBER.WHOLE_NUMBERS.j",
-    misMapped: false,
-    reveals: [],
     rung: 2,
     form: "word",
     draw: () => ({ n: pick([2, 3, 4, 7, 8, 9]), p: person() }),
     make: ({ n, p }) => ({
       question: `${p.name}'s watch shows Roman numerals on its face. The minute hand points to ${ROMAN[n]}. How many minutes past the hour is it?`,
       answer: 5 * n,
-      wrong: [[n, `Read the Roman numeral first. Then remember that each number on a clock face is worth 5 minutes.`], [60 - 5 * n, "That is how many minutes are left to the next hour. Count the minutes past the hour."], [5 * (n + 1), "Check the Roman numeral again. Which number does it stand for?"]],
+      wrong: [[n, `Read the Roman numeral first. Then remember that each number on a clock face is worth 5 minutes.`, "M_ROMAN_CLOCK_NUMBER_AS_MINUTES"], [60 - 5 * n, "That is how many minutes are left to the next hour. Count the minutes past the hour.", "SLIP"], [5 * (n + 1), "Check the Roman numeral again. Which number does it stand for?", "SLIP"]],
       hints: [`What number does ${ROMAN[n]} stand for?`, "Each number on a clock face is 5 minutes."],
       steps: [`${ROMAN[n]} is ${n}.`, `${n} \xD7 5 = ${5 * n} minutes.`]
     }),
@@ -102295,8 +102275,6 @@ var FAMILIES146 = [
     skill: "G4_ADD",
     cskill: "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN",
     outcome: "MATH.G4.NUMBER.ADDITION.c",
-    misMapped: false,
-    reveals: ["M_EST_ROUND_WRONG"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102313,7 +102291,7 @@ var FAMILIES146 = [
     make: ({ a, b, est, what, p }) => ({
       question: `${p.name} sells ${a} ${what} on Saturday and ${b} ${what} on Sunday. Round each number to the nearest ten. Estimate how many ${what} ${p.she} sells in all.`,
       answer: est,
-      wrong: [[a + b, "That is the exact total. An estimate rounds each number first."], [f10(a) + f10(b), "You rounded both numbers down. Look at the ones digit of each one to decide."], [r10(a) + b, "Only one number was rounded. Round both numbers."]],
+      wrong: [[a + b, "That is the exact total. An estimate rounds each number first.", "M_EST_EXACT_REQUIRED"], [f10(a) + f10(b), "You rounded both numbers down. Look at the ones digit of each one to decide.", "M_EST_ROUND_WRONG"], [r10(a) + b, "Only one number was rounded. Round both numbers.", "M_EST_ROUND_ONLY_ONE"]],
       hints: ["Round each number to the nearest ten first.", "Then add the two rounded numbers."],
       steps: [`${a} is about ${r10(a)}. ${b} is about ${r10(b)}.`, `${r10(a)} + ${r10(b)} = ${est}.`]
     }),
@@ -102324,8 +102302,6 @@ var FAMILIES146 = [
     skill: "G4_ADD",
     cskill: "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN",
     outcome: "MATH.G4.NUMBER.ADDITION.c",
-    misMapped: false,
-    reveals: ["M_EST_ROUND_WRONG"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -102343,7 +102319,7 @@ var FAMILIES146 = [
       question: "The table shows litres of water used at a school. Round each number to the nearest ten. Estimate how many litres are used in the three months.",
       model: { type: "table", data: { head: ["Month", "Litres used"], rows: ["January", "February", "March"].map((m20, i) => ({ label: m20, value: commas(v[i]) })) } },
       answer: est,
-      wrong: [[sum(v), "That is the exact total. An estimate rounds each number first."], [sum(v.map(f10)), "You rounded every number down. Look at the ones digit of each one."], [r10(v[0]) + r10(v[1]), "That leaves out one month. The question asks for all three months."]],
+      wrong: [[sum(v), "That is the exact total. An estimate rounds each number first.", "M_EST_EXACT_REQUIRED"], [sum(v.map(f10)), "You rounded every number down. Look at the ones digit of each one.", "M_EST_ROUND_WRONG"], [r10(v[0]) + r10(v[1]), "That leaves out one month. The question asks for all three months.", "SLIP"]],
       hints: ["Round each of the three numbers to the nearest ten.", "Then add the three rounded numbers."],
       steps: [`The rounded numbers are ${v.map(r10).join(", ")}.`, `${v.map(r10).join(" + ")} = ${commas(est)}.`]
     }),
@@ -102376,8 +102352,6 @@ var FAMILIES146 = [
     skill: "G4_ADD",
     cskill: "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS",
     outcome: "MATH.G4.NUMBER.ADDITION.d",
-    misMapped: false,
-    reveals: ["M_PAT_MISSING_NOT_CHECKED"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -102388,7 +102362,7 @@ var FAMILIES146 = [
       question: "A farmer plants the same number of extra trees each month. The table shows the pattern. How many trees go in the empty box?",
       model: { type: "table", data: { head: ["Month", "Trees planted"], rows: [{ label: "Month 1", value: String(a) }, { label: "Month 2", value: "?" }, { label: "Month 3", value: String(a + 2 * d) }, { label: "Month 4", value: String(a + 3 * d) }] } },
       answer: a + d,
-      wrong: [[a + 2 * d, "That is Month 3. The empty box is between Month 1 and Month 3."], [d, "That is how many more trees are planted each month. Add it to Month 1."], [2 * a + 2 * d, "Adding two rows does not follow the pattern. Find what is added each month."]],
+      wrong: [[a + 2 * d, "That is Month 3. The empty box is between Month 1 and Month 3.", "SLIP"], [d, "That is how many more trees are planted each month. Add it to Month 1.", "M_PAT_RULE_AS_TERM"], [2 * a + 2 * d, "Adding two rows does not follow the pattern. Find what is added each month.", "M_PAT_MISSING_NOT_CHECKED"]],
       hints: ["Look at Month 3 and Month 4. How much more is planted?", "Month 2 is one step after Month 1."],
       steps: [`Month 4 \u2212 Month 3 = ${d}. So ${d} more trees each month.`, `Month 2 = ${a} + ${d} = ${a + d}.`]
     }),
@@ -102402,8 +102376,6 @@ var FAMILIES146 = [
     skill: "G4_SUB",
     cskill: "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
     outcome: "MATH.G4.NUMBER.SUBTRACTION.c",
-    misMapped: false,
-    reveals: ["M_EST_DIFF_ROUND_DOWN"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102422,7 +102394,7 @@ var FAMILIES146 = [
     make: ({ a, b, est, what }) => ({
       question: `A shop has ${a} ${what}. The shop sells ${b} of them in a week. Round each number to the nearest ten. Estimate how many ${what} are left.`,
       answer: est,
-      wrong: [[a - b, "That is the exact answer. An estimate rounds each number first."], [f10(a) - f10(b), "You rounded both numbers down. Look at the ones digit of each one."], [r10(a) + r10(b), "The shop sells some, so there are fewer left. Take away."]],
+      wrong: [[a - b, "That is the exact answer. An estimate rounds each number first.", "M_EST_EXACT_REQUIRED"], [f10(a) - f10(b), "You rounded both numbers down. Look at the ones digit of each one.", "M_EST_DIFF_ROUND_DOWN"], [r10(a) + r10(b), "The shop sells some, so there are fewer left. Take away.", "M_EST_DIFF_ADDS"]],
       hints: ["Round each number to the nearest ten.", "Then take the smaller rounded number from the bigger one."],
       steps: [`${a} is about ${r10(a)}. ${b} is about ${r10(b)}.`, `${r10(a)} \u2212 ${r10(b)} = ${est}.`]
     }),
@@ -102433,8 +102405,6 @@ var FAMILIES146 = [
     skill: "G4_SUB",
     cskill: "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
     outcome: "MATH.G4.NUMBER.SUBTRACTION.c",
-    misMapped: false,
-    reveals: ["M_EST_EXACT_REQUIRED"],
     rung: 2,
     form: "steps",
     draw: () => {
@@ -102454,10 +102424,10 @@ var FAMILIES146 = [
     make: ({ a, b, p }) => ({
       question: `${p.name}'s school had ${commas(a)} books. It gave out ${commas(b)} books. ${p.name} wants to estimate how many are left.`,
       parts: [
-        { prompt: `Round ${commas(a)} to the nearest ten.`, answer: r10(a), hint: `Look at the ones digit of ${commas(a)}.`, wrong: [[f10(a), "The ones digit decides. 5 or more goes up."]] },
-        { prompt: `Round ${commas(b)} to the nearest ten.`, answer: r10(b), hint: `Look at the ones digit of ${commas(b)}.`, wrong: [[f10(b), "The ones digit decides. 5 or more goes up."]] },
-        { prompt: "Now estimate how many books are left.", answer: r10(a) - r10(b), unit: "books", hint: "Take the second rounded number from the first.", wrong: [[r10(a) + r10(b), "Books were given out. Take away."]] },
-        { prompt: `Now work out the exact number of books left: ${commas(a)} \u2212 ${commas(b)}.`, answer: a - b, unit: "books", hint: "Subtract the exact numbers. Regroup where you need to.", wrong: [[r10(a) - r10(b), "That is the estimate. Use the exact numbers here."]] }
+        { prompt: `Round ${commas(a)} to the nearest ten.`, answer: r10(a), hint: `Look at the ones digit of ${commas(a)}.`, wrong: [[f10(a), "The ones digit decides. 5 or more goes up.", "M_EST_DIFF_ROUND_DOWN"]] },
+        { prompt: `Round ${commas(b)} to the nearest ten.`, answer: r10(b), hint: `Look at the ones digit of ${commas(b)}.`, wrong: [[f10(b), "The ones digit decides. 5 or more goes up.", "M_EST_DIFF_ROUND_DOWN"]] },
+        { prompt: "Now estimate how many books are left.", answer: r10(a) - r10(b), unit: "books", hint: "Take the second rounded number from the first.", wrong: [[r10(a) + r10(b), "Books were given out. Take away.", "M_EST_DIFF_ADDS"]] },
+        { prompt: `Now work out the exact number of books left: ${commas(a)} \u2212 ${commas(b)}.`, answer: a - b, unit: "books", hint: "Subtract the exact numbers. Regroup where you need to.", wrong: [[r10(a) - r10(b), "That is the estimate. Use the exact numbers here.", "SLIP"]] }
       ],
       steps: [`${commas(a)} is about ${commas(r10(a))}. ${commas(b)} is about ${commas(r10(b))}.`, `Estimate: ${commas(r10(a))} \u2212 ${commas(r10(b))} = ${commas(r10(a) - r10(b))}.`, `Exact: ${commas(a)} \u2212 ${commas(b)} = ${commas(a - b)}.`]
     }),
@@ -102468,8 +102438,6 @@ var FAMILIES146 = [
     skill: "G4_SUB",
     cskill: "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS",
     outcome: "MATH.G4.NUMBER.SUBTRACTION.d",
-    misMapped: false,
-    reveals: ["M_SUBPAT_ADDS"],
     rung: 1,
     form: "direct",
     draw: () => {
@@ -102482,7 +102450,7 @@ var FAMILIES146 = [
         question: `What is the next number in this pattern: ${seq}?`,
         story: false,
         answer: s - 4 * d,
-        wrong: [[s - 3 * d, "That is the last number shown. The next one is smaller again."], [s - 5 * d, "That skips a number. Take away the same amount just once."], [s - 2 * d, "That is a number that is already in the pattern. The pattern keeps going down."]],
+        wrong: [[s - 3 * d, "That is the last number shown. The next one is smaller again.", "SLIP"], [s - 5 * d, "That skips a number. Take away the same amount just once.", "M_SUBPAT_STEP_NOT_CONSTANT"], [s - 2 * d, "That is a number that is already in the pattern. The pattern keeps going down.", "M_SUBPAT_ADDS"]],
         hints: ["Find how much the numbers go down each time.", "Take that amount from the last number."],
         steps: [`${commas(s)} \u2212 ${commas(s - d)} = ${d}. The numbers go down by ${d}.`, `${commas(s - 3 * d)} \u2212 ${d} = ${commas(s - 4 * d)}.`]
       };
@@ -102494,8 +102462,6 @@ var FAMILIES146 = [
     skill: "G4_SUB",
     cskill: "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS",
     outcome: "MATH.G4.NUMBER.SUBTRACTION.d",
-    misMapped: false,
-    reveals: ["M_SUBPAT_STEP_NOT_CONSTANT"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102505,7 +102471,7 @@ var FAMILIES146 = [
     make: ({ s, d, n }) => ({
       question: `A water tank has ${commas(s)} litres. Each day ${d} litres are used. The amount left each day follows a pattern. How many litres are left after ${n} days?`,
       answer: s - n * d,
-      wrong: [[s - (n - 1) * d, "That is one day too few. Count all the days."], [s + n * d, "Water is used, so the amount goes down."], [n * d, "That is the water used. The question asks for the water left."]],
+      wrong: [[s - (n - 1) * d, "That is one day too few. Count all the days.", "SLIP"], [s + n * d, "Water is used, so the amount goes down.", "M_SUBPAT_ADDS"], [n * d, "That is the water used. The question asks for the water left.", "SLIP"]],
       hints: ["Each day the amount goes down by the same number of litres.", `Find the water used in ${n} days. Then take it from the start.`],
       steps: [`Water used in ${n} days: ${n} \xD7 ${d} = ${n * d} litres.`, `${commas(s)} \u2212 ${n * d} = ${commas(s - n * d)} litres.`]
     }),
@@ -102519,8 +102485,6 @@ var FAMILIES146 = [
     skill: "G4_MULTIPLY",
     cskill: "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
     outcome: "MATH.G4.NUMBER.MULTIPLICATION.c",
-    misMapped: false,
-    reveals: ["M_EST_PROD_ROUND_ONE"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102534,7 +102498,7 @@ var FAMILIES146 = [
     make: ({ n, k, est, other, p, what }) => ({
       question: `${p.name} buys ${k} ${what[2]} of ${what[0]}. Each ${what[1]} has ${n} ${what[0]}. Round ${n} to the nearest ten. Estimate how many ${what[0]} ${p.she} buys.`,
       answer: est,
-      wrong: [[n * k, "That is the exact answer. An estimate rounds first."], [other, `You rounded ${n} the wrong way. Look at its ones digit.`], [r10(n) + k, "The question has equal groups. Multiply, do not add."]],
+      wrong: [[n * k, "That is the exact answer. An estimate rounds first.", "M_EST_PROD_EXACT_REQUIRED"], [other, `You rounded ${n} the wrong way. Look at its ones digit.`, "SLIP"], [r10(n) + k, "The question has equal groups. Multiply, do not add.", "M_EST_PROD_ADDED"]],
       hints: [`Round ${n} to the nearest ten first.`, `Then multiply by ${k}.`],
       steps: [`${n} is about ${r10(n)}.`, `${r10(n)} \xD7 ${k} = ${est}.`]
     }),
@@ -102545,8 +102509,6 @@ var FAMILIES146 = [
     skill: "G4_MULTIPLY",
     cskill: "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
     outcome: "MATH.G4.NUMBER.MULTIPLICATION.c",
-    misMapped: false,
-    reveals: [],
     rung: 2,
     form: "why",
     draw: () => {
@@ -102560,9 +102522,9 @@ var FAMILIES146 = [
       const e = r10(n), up = e > n, more = up ? "more" : "less", big = up ? "bigger" : "smaller";
       const opts2 = [
         { text: `${n} was rounded ${up ? "up" : "down"} to ${e}, which is ${big} than ${n}`, right: true },
-        { text: `An estimate is always ${big} than the exact answer`, right: false, why: "An estimate can be bigger or smaller. It depends on how the numbers were rounded." },
-        { text: `${k} was rounded as well`, right: false, why: `${k} was not changed. Only the other number was rounded.` },
-        { text: "The exact answer is wrong", right: false, why: "The exact answer is right. The estimate is only close to it." }
+        { text: `An estimate is always ${big} than the exact answer`, right: false, why: "An estimate can be bigger or smaller. It depends on how the numbers were rounded.", mis: "SLIP" },
+        { text: `${k} was rounded as well`, right: false, why: `${k} was not changed. Only the other number was rounded.`, mis: "M_EST_PROD_ROUND_ONE" },
+        { text: "The exact answer is wrong", right: false, why: "The exact answer is right. The estimate is only close to it.", mis: "M_EST_PROD_EXACT_REQUIRED" }
       ];
       return {
         question: `${p.name} estimates ${n} \xD7 ${k}. ${p.She} rounds ${n} to ${e} and works out ${e} \xD7 ${k} = ${e * k}. The exact answer is ${n * k}. Why is the estimate ${more} than the exact answer?`,
@@ -102577,8 +102539,6 @@ var FAMILIES146 = [
     skill: "G4_MULTIPLY",
     cskill: "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS",
     outcome: "MATH.G4.NUMBER.MULTIPLICATION.d",
-    misMapped: false,
-    reveals: ["M_MULPAT_ADD_STEP"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102588,7 +102548,7 @@ var FAMILIES146 = [
     make: ({ a, m: m20, p }) => ({
       question: `${p.name} plants seedlings. In week 1 there are ${a}. In week 2 there are ${a * m20}. In week 3 there are ${a * m20 * m20}. This pattern goes on. How many seedlings are there in week 4?`,
       answer: a * m20 ** 3,
-      wrong: [[a * m20 * m20 + a * m20, "That adds the last two numbers. Check how week 1 changes to week 2: is it adding?"], [a * m20 * m20 + a, "The pattern is not adding. Check how the numbers change from week to week."], [a * m20 ** 4, "That is one step too far. Week 4 comes right after week 3."]],
+      wrong: [[a * m20 * m20 + a * m20, "That adds the last two numbers. Check how week 1 changes to week 2: is it adding?", "M_MULPAT_ADD_STEP"], [a * m20 * m20 + a, "The pattern is not adding. Check how the numbers change from week to week.", "M_MULPAT_ADD_STEP"], [a * m20 ** 4, "That is one step too far. Week 4 comes right after week 3.", "SLIP"]],
       hints: ["How do you get from week 1 to week 2? Is it adding or multiplying?", "Do the same step again after week 3."],
       steps: [`${a} \xD7 ${m20} = ${a * m20}, and ${a * m20} \xD7 ${m20} = ${a * m20 * m20}. The number is multiplied by ${m20} each week.`, `Week 4: ${a * m20 * m20} \xD7 ${m20} = ${a * m20 ** 3}.`]
     }),
@@ -102599,8 +102559,6 @@ var FAMILIES146 = [
     skill: "G4_MULTIPLY",
     cskill: "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS",
     outcome: "MATH.G4.NUMBER.MULTIPLICATION.d",
-    misMapped: false,
-    reveals: ["M_MULPAT_SKIP_TABLE"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -102612,7 +102570,7 @@ var FAMILIES146 = [
       question: `The table shows a pattern. How many ${c19.e} are there in ${k} ${c19.thing}?`,
       model: { type: "table", data: { head: [c19.head, c19.what], rows: [1, 2, 3, 4].map((i) => ({ label: String(i), value: String(i * c19.u) })) } },
       answer: k * c19.u,
-      wrong: [[k + c19.u, "The numbers in the table grow by multiplying. Do not add."], [(k - 1) * c19.u, `That is for one ${c19.head === "Weeks" ? "week" : c19.head.slice(0, -1).toLowerCase()} fewer. Use the number you are asked about.`], [4 * c19.u + (k - 4), "Counting on by 1 from the last row does not follow the pattern."]],
+      wrong: [[k + c19.u, "The numbers in the table grow by multiplying. Do not add.", "M_MULPAT_ADD_STEP"], [(k - 1) * c19.u, `That is for one ${c19.head === "Weeks" ? "week" : c19.head.slice(0, -1).toLowerCase()} fewer. Use the number you are asked about.`, "SLIP"], [4 * c19.u + (k - 4), "Counting on by 1 from the last row does not follow the pattern.", "M_MULPAT_ADD_STEP"]],
       hints: ["Look at row 1. How many are there for one?", "Each row is that number multiplied by the number in the first column."],
       steps: [`One of them has ${c19.u}. The table goes up by ${c19.u} each time.`, `${k} \xD7 ${c19.u} = ${k * c19.u}.`]
     }),
@@ -102626,8 +102584,6 @@ var FAMILIES146 = [
     skill: "G4_DIVIDE",
     cskill: "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
     outcome: "MATH.G4.NUMBER.DIVISION.b",
-    misMapped: false,
-    reveals: ["M_RELATE_WRONG_FACT"],
     rung: 1,
     form: "steps",
     draw: () => {
@@ -102637,9 +102593,9 @@ var FAMILIES146 = [
     make: ({ a, b, p }) => ({
       question: `${p.name} packs eggs. ${p.She} fills ${a} trays with ${b} eggs in each tray. Answer the parts. They use related facts.`,
       parts: [
-        { prompt: `How many eggs are there? ${a} \xD7 ${b} = ?`, answer: a * b, unit: "eggs", hint: `${a} trays with ${b} eggs in each tray.`, wrong: [[a + b, "Equal trays: multiply."]] },
-        { prompt: `Share ${a * b} eggs equally into ${a} trays. ${a * b} \xF7 ${a} = ?`, answer: b, unit: "eggs", hint: "Which multiplication fact is related to this division?", wrong: [[a, "That is the number of trays. How many eggs go in each tray?"]] },
-        { prompt: `Put ${a * b} eggs into trays of ${b}. ${a * b} \xF7 ${b} = ?`, answer: a, unit: "trays", hint: "Use the same fact again.", wrong: [[b, "That is the number in each tray. The question asks how many trays."]] }
+        { prompt: `How many eggs are there? ${a} \xD7 ${b} = ?`, answer: a * b, unit: "eggs", hint: `${a} trays with ${b} eggs in each tray.`, wrong: [[a + b, "Equal trays: multiply.", "M_RELATE_MISSING_ADDS"]] },
+        { prompt: `Share ${a * b} eggs equally into ${a} trays. ${a * b} \xF7 ${a} = ?`, answer: b, unit: "eggs", hint: "Which multiplication fact is related to this division?", wrong: [[a, "That is the number of trays. How many eggs go in each tray?", "M_RELATE_WRONG_FACT"]] },
+        { prompt: `Put ${a * b} eggs into trays of ${b}. ${a * b} \xF7 ${b} = ?`, answer: a, unit: "trays", hint: "Use the same fact again.", wrong: [[b, "That is the number in each tray. The question asks how many trays.", "M_RELATE_WRONG_FACT"]] }
       ],
       steps: [`${a} \xD7 ${b} = ${a * b}.`, `The related divisions are ${a * b} \xF7 ${a} = ${b} and ${a * b} \xF7 ${b} = ${a}.`]
     }),
@@ -102651,7 +102607,7 @@ var FAMILIES146 = [
     cskill: "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
     outcome: "MATH.G4.NUMBER.DIVISION.b",
     misMapped: false,
-    reveals: [],
+    reveals: ["M_RELATE_CHECK_ADDS"],
     rung: 2,
     form: "spot",
     draw: () => {
@@ -102679,8 +102635,6 @@ var FAMILIES146 = [
     skill: "G4_DIVIDE",
     cskill: "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
     outcome: "MATH.G4.NUMBER.DIVISION.b",
-    misMapped: false,
-    reveals: ["M_RELATE_CHECK_ADDS"],
     rung: 2,
     form: "why",
     draw: () => {
@@ -102690,9 +102644,9 @@ var FAMILIES146 = [
     make: ({ d, q, n, r, p }) => {
       const opts2 = [
         { text: `Multiplying undoes dividing, so ${q} \xD7 ${d} must give back ${n}`, right: true },
-        { text: "Multiplying is easier than dividing", right: false, why: "Easy or hard is not the reason. Multiplying undoes dividing, so it can be used to check." },
-        { text: `${q} + ${d} must be the same as ${n}`, right: false, why: "Adding does not undo dividing." },
-        { text: `The answer to a division is always smaller than ${d}`, right: false, why: "The answer to a division can be bigger or smaller than the divider." }
+        { text: "Multiplying is easier than dividing", right: false, why: "Easy or hard is not the reason. Multiplying undoes dividing, so it can be used to check.", mis: "SLIP" },
+        { text: `${q} + ${d} must be the same as ${n}`, right: false, why: "Adding does not undo dividing.", mis: "M_RELATE_CHECK_ADDS" },
+        { text: `The answer to a division is always smaller than ${d}`, right: false, why: "The answer to a division can be bigger or smaller than the divider.", mis: "SLIP" }
       ];
       return {
         question: `${p.name} divides ${n} by ${d} and gets ${q}. To check a division, ${p.she} works out ${q} \xD7 ${d}. Why does this check work?`,
@@ -102710,8 +102664,6 @@ var FAMILIES146 = [
     skill: "G4_FRACTIONS",
     cskill: "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
     outcome: "MATH.G4.NUMBER.FRACTIONS.a",
-    misMapped: false,
-    reveals: ["M_FRAC_TWO_NUMBERS_SEPARATE"],
     rung: 1,
     form: "word",
     draw: () => {
@@ -102721,9 +102673,9 @@ var FAMILIES146 = [
     make: ({ d, n, p, k }) => {
       const opts2 = [
         { text: `The chapati was cut into ${d} equal pieces`, right: true },
-        { text: `${p.name} ate ${d} pieces of the chapati`, right: false, why: "The number of pieces eaten is the top number, the numerator." },
-        { text: `There are ${n} equal pieces in the whole chapati`, right: false, why: `${n} is the numerator. It tells how many pieces ${p.name} ate.` },
-        { text: `${d - n} pieces are left over after ${p.name} eats`, right: false, why: "The bottom number does not tell how many are left. It tells how many equal parts the whole has." }
+        { text: `${p.name} ate ${d} pieces of the chapati`, right: false, why: "The number of pieces eaten is the top number, the numerator.", mis: "M_FRAC_SWAP_NUM_DEN" },
+        { text: `There are ${n} equal pieces in the whole chapati`, right: false, why: `${n} is the numerator. It tells how many pieces ${p.name} ate.`, mis: "M_FRAC_SWAP_NUM_DEN" },
+        { text: `${d - n} pieces are left over after ${p.name} eats`, right: false, why: "The bottom number does not tell how many are left. It tells how many equal parts the whole has.", mis: "M_FRAC_TWO_NUMBERS_SEPARATE" }
       ];
       return {
         question: `${p.name} cuts a chapati into ${d} equal pieces. ${p.She} eats ${n} pieces. ${p.She} writes the fraction ${n}/${d}. What does the denominator ${d} tell us?`,
@@ -102804,7 +102756,7 @@ var FAMILIES146 = [
     cskill: "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS",
     outcome: "MATH.G4.NUMBER.FRACTIONS.c",
     misMapped: false,
-    reveals: [],
+    reveals: ["M_TYPE_MIXED_AS_PROPER", "M_TYPE_EQUAL_IS_PROPER"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -102839,8 +102791,6 @@ var FAMILIES146 = [
     skill: "G4_FRACTIONS",
     cskill: "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED",
     outcome: "MATH.G4.NUMBER.FRACTIONS.d",
-    misMapped: false,
-    reveals: ["M_MIX_REMAINDER_AS_WHOLE", "M_MIX_REMAINDER_OVER_QUOTIENT"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102850,9 +102800,9 @@ var FAMILIES146 = [
     make: ({ d, q, r, n, p, k }) => {
       const opts2 = [
         { text: `${q} ${r}/${d}`, right: true },
-        { text: `${r} ${q}/${d}`, right: false, why: `The whole number shows how many times ${d} goes into ${n}. The leftover goes on top of the fraction.` },
-        { text: `${q} ${r}/${n}`, right: false, why: "The denominator stays the same as in the improper fraction." },
-        { text: `${q + 1} ${r}/${d}`, right: false, why: `Check how many whole ones you can make from ${n} parts. Do not go over.` }
+        { text: `${r} ${q}/${d}`, right: false, why: `The whole number shows how many times ${d} goes into ${n}. The leftover goes on top of the fraction.`, mis: "M_MIX_REMAINDER_AS_WHOLE" },
+        { text: `${q} ${r}/${n}`, right: false, why: "The denominator stays the same as in the improper fraction.", mis: "M_MIX_REMAINDER_OVER_QUOTIENT" },
+        { text: `${q + 1} ${r}/${d}`, right: false, why: `Check how many whole ones you can make from ${n} parts. Do not go over.`, mis: "M_MIX_WHOLES_MISCOUNTED" }
       ];
       return {
         question: `${p.name} drinks ${n}/${d} litres of water in one day. Write ${n}/${d} as a mixed number.`,
@@ -102867,8 +102817,6 @@ var FAMILIES146 = [
     skill: "G4_FRACTIONS",
     cskill: "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED",
     outcome: "MATH.G4.NUMBER.FRACTIONS.d",
-    misMapped: false,
-    reveals: ["M_MIX_REMAINDER_AS_WHOLE"],
     rung: 2,
     form: "steps",
     draw: () => {
@@ -102878,9 +102826,9 @@ var FAMILIES146 = [
     make: ({ d, q, r, n, p }) => ({
       question: `${p.name} pours ${n}/${d} litres of juice. ${p.She} wants to write it as a mixed number. Answer the parts.`,
       parts: [
-        { prompt: `How many whole litres are in ${n}/${d}? How many times does ${d} go into ${n}?`, answer: q, unit: "litres", hint: `Count in ${d}s up to ${n}.`, wrong: [[q + 1, `That goes over ${n}. Check by multiplying.`]] },
-        { prompt: `How many parts are left over?`, answer: r, hint: `Take ${q} \xD7 ${d} from ${n}.`, wrong: [[d - r, "That is how many parts are missing from the next whole. Count the ones left over."]] },
-        { prompt: `Check the mixed number. ${q} \xD7 ${d} + ${r} = ?`, answer: n, hint: "Whole litres times the denominator, plus the parts left over.", wrong: [[q + r, "Multiply the whole number by the denominator first."]] }
+        { prompt: `How many whole litres are in ${n}/${d}? How many times does ${d} go into ${n}?`, answer: q, unit: "litres", hint: `Count in ${d}s up to ${n}.`, wrong: [[q + 1, `That goes over ${n}. Check by multiplying.`, "M_MIX_WHOLES_MISCOUNTED"]] },
+        { prompt: `How many parts are left over?`, answer: r, hint: `Take ${q} \xD7 ${d} from ${n}.`, wrong: [[d - r, "That is how many parts are missing from the next whole. Count the ones left over.", "SLIP"]] },
+        { prompt: `Check the mixed number. ${q} \xD7 ${d} + ${r} = ?`, answer: n, hint: "Whole litres times the denominator, plus the parts left over.", wrong: [[q + r, "Multiply the whole number by the denominator first.", "SLIP"]] }
       ],
       steps: [`${n} \xF7 ${d} = ${q} with ${r} left over.`, `So ${n}/${d} = ${q} ${r}/${d}.`, `Check: ${q} \xD7 ${d} + ${r} = ${n}.`]
     }),
@@ -102920,8 +102868,6 @@ var FAMILIES146 = [
     skill: "G4_FRACTIONS",
     cskill: "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER",
     outcome: "MATH.G4.NUMBER.FRACTIONS.e",
-    misMapped: false,
-    reveals: ["M_IMP_ADDS_WHOLE", "M_IMP_WHOLE_TIMES_NUMERATOR"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -102931,9 +102877,9 @@ var FAMILIES146 = [
     make: ({ d, w: w14, n, p, k }) => {
       const opts2 = [
         { text: `${w14 * d + n}/${d}`, right: true },
-        { text: `${w14 + n}/${d}`, right: false, why: "You added the whole number and the numerator. First find how many parts the whole numbers make." },
-        { text: `${w14 * n + d}/${d}`, right: false, why: "The whole number is multiplied by the denominator, not by the numerator." },
-        { text: `${w14 * d}/${d}`, right: false, why: "That only counts the whole ones. Add the extra parts too." }
+        { text: `${w14 + n}/${d}`, right: false, why: "You added the whole number and the numerator. First find how many parts the whole numbers make.", mis: "M_IMP_ADDS_WHOLE" },
+        { text: `${w14 * n + d}/${d}`, right: false, why: "The whole number is multiplied by the denominator, not by the numerator.", mis: "M_IMP_WHOLE_TIMES_NUMERATOR" },
+        { text: `${w14 * d}/${d}`, right: false, why: "That only counts the whole ones. Add the extra parts too.", mis: "M_IMP_NUMERATOR_NOT_ADDED" }
       ];
       return {
         question: `${p.name} has ${w14} ${n}/${d} cakes. Write ${w14} ${n}/${d} as an improper fraction.`,
@@ -102948,8 +102894,6 @@ var FAMILIES146 = [
     skill: "G4_FRACTIONS",
     cskill: "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER",
     outcome: "MATH.G4.NUMBER.FRACTIONS.e",
-    misMapped: false,
-    reveals: ["M_IMP_WHOLE_TIMES_NUMERATOR"],
     rung: 2,
     form: "steps",
     draw: () => ({ d: randInt(3, 8), w: randInt(2, 5), n: 0, p: person() }),
@@ -102958,9 +102902,9 @@ var FAMILIES146 = [
       return {
         question: `${p.name} has ${w14} ${n}/${d} loaves of bread. Each loaf is cut into ${d} equal slices. ${p.She} wants to write ${w14} ${n}/${d} as an improper fraction. Answer the parts.`,
         parts: [
-          { prompt: "How many slices are in one whole loaf?", answer: d, unit: "slices", hint: "The denominator tells how many equal slices.", wrong: [[n, "That is the extra slices. Look at the denominator."]] },
-          { prompt: `How many slices are in ${w14} whole loaves?`, answer: w14 * d, unit: "slices", hint: `${w14} loaves, each with ${d} slices.`, wrong: [[w14 + d, "Equal groups: multiply."]] },
-          { prompt: `Add the ${n} extra slices. How many slices are there in all?`, answer: w14 * d + n, unit: "slices", hint: "The slices of the whole loaves, plus the extra slices.", wrong: [[w14 * d, "You have not added the extra slices."]] }
+          { prompt: "How many slices are in one whole loaf?", answer: d, unit: "slices", hint: "The denominator tells how many equal slices.", wrong: [[n, "That is the extra slices. Look at the denominator.", "SLIP"]] },
+          { prompt: `How many slices are in ${w14} whole loaves?`, answer: w14 * d, unit: "slices", hint: `${w14} loaves, each with ${d} slices.`, wrong: [[w14 + d, "Equal groups: multiply.", "M_IMP_ADDS_WHOLE"]] },
+          { prompt: `Add the ${n} extra slices. How many slices are there in all?`, answer: w14 * d + n, unit: "slices", hint: "The slices of the whole loaves, plus the extra slices.", wrong: [[w14 * d, "You have not added the extra slices.", "M_IMP_NUMERATOR_NOT_ADDED"]] }
         ],
         steps: [`Each loaf has ${d} slices.`, `${w14} \xD7 ${d} = ${w14 * d}.`, `${w14 * d} + ${n} = ${w14 * d + n}. So the improper fraction has numerator ${w14 * d + n} and denominator ${d}.`]
       };
@@ -103006,8 +102950,6 @@ var FAMILIES146 = [
     skill: "G4_DECIMALS",
     cskill: "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS",
     outcome: "MATH.G4.NUMBER.DECIMALS.d",
-    misMapped: false,
-    reveals: ["M_DEC_DIGITS_AFTER_POINT_AS_WHOLE"],
     rung: 2,
     form: "why",
     draw: () => {
@@ -103022,9 +102964,9 @@ var FAMILIES146 = [
       const a = `0.${String(h).padStart(2, "0")}`, b = `0.${t}`;
       const opts2 = [
         { text: `${b} has ${t} tenths, but ${a} has only ${Math.floor(h / 10)} tenths`, right: true },
-        { text: `${h} is not bigger than ${t}, so ${a} is the smaller one`, right: false, why: `${h} is bigger than ${t}. But the digits after the point are compared place by place, not as one whole number.` },
-        { text: "A decimal with more digits after the point is always smaller", right: false, why: "Not always. Compare place by place, starting with the tenths." },
-        { text: "Decimals cannot be compared with each other at all", right: false, why: "Decimals can be compared. Start with the tenths." }
+        { text: `${h} is not bigger than ${t}, so ${a} is the smaller one`, right: false, why: `${h} is bigger than ${t}. But the digits after the point are compared place by place, not as one whole number.`, mis: "M_DEC_DIGITS_AFTER_POINT_AS_WHOLE" },
+        { text: "A decimal with more digits after the point is always smaller", right: false, why: "Not always. Compare place by place, starting with the tenths.", mis: "M_DEC_LONGER_IS_LARGER" },
+        { text: "Decimals cannot be compared with each other at all", right: false, why: "Decimals can be compared. Start with the tenths.", mis: "SLIP" }
       ];
       return {
         question: `${p.name} says ${a} is bigger than ${b}, because ${h} is bigger than ${t}. Why is ${p.she} wrong?`,
@@ -103103,8 +103045,6 @@ var FAMILIES146 = [
     skill: "G4_LETTERS",
     cskill: "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
     outcome: "MATH.G4.NUMBER.USE_OF_LETTERS.c",
-    misMapped: false,
-    reveals: ["M_SIM_ADD_UNLIKE"],
     rung: 2,
     form: "why",
     draw: () => {
@@ -103114,9 +103054,9 @@ var FAMILIES146 = [
     make: ({ a, b, v, w: w14, r }) => {
       const opts2 = [
         { text: `${a}${v} and ${b}${v} are lots of the same thing, but ${b}${w14} is not`, right: true },
-        { text: `${w14} is a smaller letter than ${v}, so it cannot be added`, right: false, why: "The size of a letter does not matter. What matters is whether the letters are the same." },
-        { text: "Letters can never be added to anything at all", right: false, why: `Letters can be added when they stand for the same thing. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
-        { text: `${a} and ${b} in front must be the same number to add`, right: false, why: `The numbers in front can be different. ${a}${v} + ${b}${v} = ${a + b}${v}.` }
+        { text: `${w14} is a smaller letter than ${v}, so it cannot be added`, right: false, why: "The size of a letter does not matter. What matters is whether the letters are the same.", mis: "SLIP" },
+        { text: "Letters can never be added to anything at all", right: false, why: `Letters can be added when they stand for the same thing. ${a}${v} + ${b}${v} = ${a + b}${v}.`, mis: "M_SIM_ADD_UNLIKE" },
+        { text: `${a} and ${b} in front must be the same number to add`, right: false, why: `The numbers in front can be different. ${a}${v} + ${b}${v} = ${a + b}${v}.`, mis: "SLIP" }
       ];
       return {
         question: `We can simplify ${a}${v} + ${b}${v}. We cannot simplify ${a}${v} + ${b}${w14}. Why?`,
@@ -103157,8 +103097,6 @@ var FAMILIES146 = [
     skill: "G4_LETTERS",
     cskill: "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
     outcome: "MATH.G4.NUMBER.USE_OF_LETTERS.a",
-    misMapped: false,
-    reveals: ["M_LET_LETTER_IS_OBJECT"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -103168,7 +103106,7 @@ var FAMILIES146 = [
     make: ({ k, pp, rub, p }) => ({
       question: `${p.name} buys ${k} pencils and 1 rubber. The cost is ${k}p + ${rub} shillings. The letter p stands for the price of one pencil. A pencil costs ${sh(pp)}. How much does ${p.name} pay in all?`,
       answer: k * pp + rub,
-      wrong: [[Number(`${k}${pp}`) + rub, `${k}p means ${k} times p. It does not mean ${k} and the price written side by side.`], [k + pp + rub, `${k}p means ${k} lots of p, so multiply. Do not add.`], [pp + rub, `There are ${k} pencils. Use ${k}p, not p.`]],
+      wrong: [[Number(`${k}${pp}`) + rub, `${k}p means ${k} times p. It does not mean ${k} and the price written side by side.`, "M_LET_JOINED_AS_DIGITS"], [k + pp + rub, `${k}p means ${k} lots of p, so multiply. Do not add.`, "M_LET_COEFFICIENT_ADDED"], [pp + rub, `There are ${k} pencils. Use ${k}p, not p.`, "SLIP"]],
       hints: ["Put the price of a pencil in the place of the letter p.", `${k}p means ${k} times the price of a pencil.`],
       steps: [`${k}p = ${k} \xD7 ${pp} = ${k * pp}.`, `${k * pp} + ${rub} = ${k * pp + rub} shillings.`]
     }),
@@ -103210,7 +103148,7 @@ var FAMILIES146 = [
     cskill: "MATH.G4.MEASUR.LENGTH.PERIMETER",
     outcome: "MATH.G4.MEASUR.LENGTH.e",
     misMapped: false,
-    reveals: [],
+    reveals: ["M_PER_TWO_SIDES_ONLY"],
     rung: 3,
     form: "word",
     draw: () => {
@@ -103231,8 +103169,6 @@ var FAMILIES146 = [
     skill: "G4_AREA",
     cskill: "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
     outcome: "MATH.G4.MEASUR.AREA.c",
-    misMapped: false,
-    reveals: ["M_AREA_MISSING_ROW_ADDS"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -103242,7 +103178,7 @@ var FAMILIES146 = [
     make: ({ r, c: c19, p }) => ({
       question: `${p.name} covers a floor with ${r * c19} square tiles. The area of the floor is ${r * c19} tiles. The tiles are in ${r} equal rows. How many tiles are in each row?`,
       answer: c19,
-      wrong: [[r * c19 - r, "Taking away does not share the tiles equally into rows."], [r * c19 * r, "The tiles are shared into rows, so the number in each row is smaller than the total."], [r, "That is the number of rows. The question asks how many tiles are in each row."]],
+      wrong: [[r * c19 - r, "Taking away does not share the tiles equally into rows.", "M_AREA_MISSING_ROW_ADDS"], [r * c19 * r, "The tiles are shared into rows, so the number in each row is smaller than the total.", "SLIP"], [r, "That is the number of rows. The question asks how many tiles are in each row.", "SLIP"]],
       hints: ["Area is rows times tiles in each row.", "Share all the tiles equally into the rows."],
       steps: [`rows \xD7 tiles in each row = ${r * c19}.`, `${r * c19} \xF7 ${r} = ${c19} tiles in each row.`]
     }),
@@ -103254,7 +103190,7 @@ var FAMILIES146 = [
     cskill: "MATH.G4.MEASUR.AREA.AREA_COUNT",
     outcome: "MATH.G4.MEASUR.AREA.b",
     misMapped: false,
-    reveals: [],
+    reveals: ["M_AREA_COUNTS_TWICE"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -103278,17 +103214,15 @@ var FAMILIES146 = [
     skill: "G4_AREA",
     cskill: "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
     outcome: "MATH.G4.MEASUR.AREA.c",
-    misMapped: false,
-    reveals: ["M_AREA_ADDS_ROWS_COLS"],
     rung: 2,
     form: "why",
     draw: () => ({ r: randInt(3, 8), c: randInt(4, 9), k: randInt(0, 3) }),
     make: ({ r, c: c19, k }) => {
       const opts2 = [
         { text: `There are ${r} equal rows with ${c19} squares in each row`, right: true },
-        { text: "Area is the distance around the outside of the rectangle", right: false, why: "The distance around is the perimeter. Area is how many unit squares cover the rectangle." },
-        { text: `${r} + ${c19} counts all the squares inside the rectangle`, right: false, why: "Adding counts the squares along two sides only, not the squares inside." },
-        { text: "We must double the longest side of the rectangle", right: false, why: "Doubling a side does not count the squares inside the rectangle." }
+        { text: "Area is the distance around the outside of the rectangle", right: false, why: "The distance around is the perimeter. Area is how many unit squares cover the rectangle.", mis: "M_AREA_PERIMETER_NOT_AREA" },
+        { text: `${r} + ${c19} counts all the squares inside the rectangle`, right: false, why: "Adding counts the squares along two sides only, not the squares inside.", mis: "M_AREA_ADDS_ROWS_COLS" },
+        { text: "We must double the longest side of the rectangle", right: false, why: "Doubling a side does not count the squares inside the rectangle.", mis: "SLIP" }
       ];
       return {
         question: `A rectangle is covered by ${r} rows of ${c19} unit squares. Why can we find its area by working out ${r} \xD7 ${c19}?`,
@@ -103303,8 +103237,6 @@ var FAMILIES146 = [
     skill: "G4_VOLUME",
     cskill: "MATH.G4.MEASUR.VOLUME.STACK_CUBES",
     outcome: "MATH.G4.MEASUR.VOLUME.a",
-    misMapped: false,
-    reveals: ["M_VOL_ONE_LAYER_ONLY"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -103314,7 +103246,7 @@ var FAMILIES146 = [
     make: ({ a, b, c: c19, p }) => ({
       question: `${p.name} builds a tower from cubes. Each layer has ${a} rows of ${b} cubes. There are ${c19} layers. How many cubes are in the tower?`,
       answer: a * b * c19,
-      wrong: [[a * b, "That is the cubes in one layer. There are more layers."], [a + b + c19, "Layers are equal groups. Multiply, do not add."], [a * b + c19, "Each layer has the same number of cubes. Multiply the cubes in a layer by the number of layers."]],
+      wrong: [[a * b, "That is the cubes in one layer. There are more layers.", "M_VOL_ONE_LAYER_ONLY"], [a + b + c19, "Layers are equal groups. Multiply, do not add.", "M_VOL_ADDS_DIMENSIONS"], [a * b + c19, "Each layer has the same number of cubes. Multiply the cubes in a layer by the number of layers.", "M_VOL_LAYERS_ADDED"]],
       hints: ["First find how many cubes are in one layer.", "Then count all the layers."],
       steps: [`One layer: ${a} \xD7 ${b} = ${a * b} cubes.`, `${c19} layers: ${a * b} \xD7 ${c19} = ${a * b * c19} cubes.`]
     }),
@@ -103352,8 +103284,6 @@ var FAMILIES146 = [
     skill: "G4_MONEY",
     cskill: "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
     outcome: "MATH.G4.MEASUR.MONEY.a",
-    misMapped: false,
-    reveals: ["M_MONEY_CENTS_AS_DECIMAL_WHOLE"],
     rung: 1,
     form: "word",
     draw: () => {
@@ -103363,7 +103293,7 @@ var FAMILIES146 = [
     make: ({ a, b, p }) => ({
       question: `${p.name} has ${sh(a)} and ${b} cents in a purse. How many cents is that in all?`,
       answer: 100 * a + b,
-      wrong: [[a + b, "There are 100 cents in 1 shilling. Change the shillings to cents first."], [10 * a + b, "Check how many cents make 1 shilling."], [100 * a, "That changes the shillings but leaves out the cents in the purse."]],
+      wrong: [[a + b, "There are 100 cents in 1 shilling. Change the shillings to cents first.", "SLIP"], [10 * a + b, "Check how many cents make 1 shilling.", "M_MONEY_10_CENTS_SHILLING"], [100 * a, "That changes the shillings but leaves out the cents in the purse.", "SLIP"]],
       hints: ["1 shilling is 100 cents.", "Change the shillings to cents. Then add the cents."],
       steps: [`${a} shillings = ${a} \xD7 100 = ${100 * a} cents.`, `${100 * a} + ${b} = ${100 * a + b} cents.`]
     }),
@@ -103374,8 +103304,6 @@ var FAMILIES146 = [
     skill: "G4_MONEY",
     cskill: "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
     outcome: "MATH.G4.MEASUR.MONEY.a",
-    misMapped: false,
-    reveals: ["M_MONEY_DIRECTION"],
     rung: 2,
     form: "steps",
     draw: () => {
@@ -103385,9 +103313,9 @@ var FAMILIES146 = [
     make: ({ w: w14, r, s, c: c19, p }) => ({
       question: `${p.name} has ${commas(c19)} cents. ${p.She} wants to change it to shillings. Answer the parts.`,
       parts: [
-        { prompt: `How many whole shillings are in ${c19} cents?`, answer: w14, unit: "shillings", hint: "100 cents make 1 shilling.", wrong: [[Math.floor(c19 / 10), "Divide by 100, not by 10."]] },
-        { prompt: "How many cents are left over?", answer: r, unit: "cents", hint: `Take ${w14} \xD7 100 from ${c19}.`, wrong: [[100 - r, "That is the amount needed to make the next shilling. Count the cents left over."]] },
-        { prompt: `${p.name} buys a sweet for ${sh(s)}. How many cents are left?`, answer: c19 - 100 * s, unit: "cents", hint: `Change ${sh(s)} to cents, then take it away.`, wrong: [[c19 - s, `${sh(s)} is ${s * 100} cents, not ${s} cents.`]] }
+        { prompt: `How many whole shillings are in ${c19} cents?`, answer: w14, unit: "shillings", hint: "100 cents make 1 shilling.", wrong: [[Math.floor(c19 / 10), "Divide by 100, not by 10.", "M_MONEY_10_CENTS_SHILLING"]] },
+        { prompt: "How many cents are left over?", answer: r, unit: "cents", hint: `Take ${w14} \xD7 100 from ${c19}.`, wrong: [[100 - r, "That is the amount needed to make the next shilling. Count the cents left over.", "SLIP"]] },
+        { prompt: `${p.name} buys a sweet for ${sh(s)}. How many cents are left?`, answer: c19 - 100 * s, unit: "cents", hint: `Change ${sh(s)} to cents, then take it away.`, wrong: [[c19 - s, `${sh(s)} is ${s * 100} cents, not ${s} cents.`, "SLIP"]] }
       ],
       steps: [`${c19} \xF7 100 = ${w14} with ${r} left over.`, `So ${c19} cents = ${sh(w14)} and ${r} cents.`, `${c19} \u2212 ${100 * s} = ${c19 - 100 * s} cents.`]
     }),
@@ -103398,8 +103326,6 @@ var FAMILIES146 = [
     skill: "G4_MONEY",
     cskill: "MATH.G4.MEASUR.MONEY.TOTAL_COST",
     outcome: "MATH.G4.MEASUR.MONEY.c",
-    misMapped: false,
-    reveals: ["M_COST_ONE_ITEM_ONLY"],
     rung: 2,
     form: "table",
     draw: () => {
@@ -103411,7 +103337,7 @@ var FAMILIES146 = [
       question: "The table shows a shopping list. What is the total cost, in shillings?",
       model: { type: "table", data: { head: ["Item", "Number bought", "Price each (sh)"], rows: its.map(([, l], i) => ({ cells: [l, String(q[i]), String(pr2[i])] })) } },
       answer: total,
-      wrong: [[sum(pr2), "That adds the prices of one of each item. Count how many of each are bought."], [total - cost[2], "That leaves out the last item. Include every row."], [sum(q.map((n, i) => n + pr2[i])), "The number bought and the price are not added. Multiply them for each item."]],
+      wrong: [[sum(pr2), "That adds the prices of one of each item. Count how many of each are bought.", "M_LIST_OMITS_QUANTITY"], [total - cost[2], "That leaves out the last item. Include every row.", "M_COST_ONE_ITEM_ONLY"], [sum(q.map((n, i) => n + pr2[i])), "The number bought and the price are not added. Multiply them for each item.", "M_COST_ADDS_QUANTITY"]],
       hints: ["For each row, multiply the number bought by the price each.", "Then add the three costs."],
       steps: its.map(([, l], i) => `${l}: ${q[i]} \xD7 ${pr2[i]} = ${cost[i]}.`).concat([`Total: ${cost.join(" + ")} = ${commas(total)}.`])
     }),
@@ -103518,7 +103444,7 @@ var FAMILIES146 = [
     cskill: "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY",
     outcome: "MATH.G4.GEOMET.PLANE_FIGURES.c",
     misMapped: false,
-    reveals: [],
+    reveals: ["M_SYM_ANY_LINE"],
     rung: 1,
     form: "direct",
     draw: () => {
@@ -103625,7 +103551,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_PV_GIVES_TOTAL_VALUE",
       "M_PV_COUNT_FROM_LEFT",
-      "M_PV_ZERO_IS_NOT_A_PLACE"
+      "M_PV_ZERO_IS_NOT_A_PLACE",
+      "M_PV_TEN_THOUSANDS_AS_THOUSANDS"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH": {
@@ -103645,7 +103572,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TV_FACE_VALUE",
       "M_TV_WRONG_ZEROS",
-      "M_TV_COMPOSE_DROPS_ZEROS"
+      "M_TV_COMPOSE_DROPS_ZEROS",
+      "M_TV_WHOLE_NUMBER_GIVEN"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000": {
@@ -103665,7 +103593,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_SYM_JOIN_PARTS",
       "M_SYM_REVERSE_DIGITS",
-      "M_SYM_PARTS_WRITTEN_IN_FULL"
+      "M_SYM_PARTS_WRITTEN_IN_FULL",
+      "M_SYM_PART_SHIFTED"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000": {
@@ -103683,7 +103612,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_WORDS_HUNDRED_DROPPED",
       "M_WORDS_SPELLING_TY",
-      "M_WORDS_SPELLING_FORTY"
+      "M_WORDS_SPELLING_FORTY",
+      "M_WORDS_TEEN_AS_TEN_AND"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000": {
@@ -103701,7 +103631,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_ORDER_FIRST_DIGIT_ONLY",
       "M_ORDER_DIRECTION",
-      "M_ORDER_ZERO_TENS"
+      "M_ORDER_ZERO_TENS",
+      "M_ORDER_TABLE_POSITION"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000": {
@@ -103719,7 +103650,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_ROUND_DROP_ONES",
       "M_ROUND_NO_CARRY",
-      "M_ROUND_WRONG_PLACE"
+      "M_ROUND_WRONG_PLACE",
+      "M_ROUND_FIVE_DOWN"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50": {
@@ -103737,7 +103669,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_FACTOR_ONLY_ITSELF",
       "M_FACTOR_MULTIPLE_SWAP",
-      "M_FACTOR_MISSED_PAIR"
+      "M_FACTOR_MISSED_PAIR",
+      "M_FACTOR_NOT_TESTED"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100": {
@@ -103755,7 +103688,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MULTIPLE_FACTOR_SWAP",
       "M_MULTIPLE_STARTS_AT_ZERO_OR_ONE",
-      "M_MULTIPLE_NOT_CHECKED"
+      "M_MULTIPLE_NOT_CHECKED",
+      "M_MULTIPLE_ANY_EVEN"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100": {
@@ -103773,7 +103707,9 @@ var SKILLS_G4 = {
     "mis": [
       "M_EVEN_ODD_TENS_DIGIT",
       "M_ZERO_NOT_EVEN",
-      "M_EVEN_MEANS_BIG"
+      "M_EVEN_MEANS_BIG",
+      "M_ODD_PLUS_ODD_ODD",
+      "M_EVEN_PAIRS_COUNTED"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS": {
@@ -103793,7 +103729,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_PATTERN_ADD_ONE",
       "M_PATTERN_WRONG_PARITY",
-      "M_PATTERN_HOUSES_ONE_SIDE"
+      "M_PATTERN_HOUSES_ONE_SIDE",
+      "M_PATTERN_ADDING_CHANGES_PARITY"
     ]
   },
   "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X": {
@@ -103811,7 +103748,9 @@ var SKILLS_G4 = {
     "mis": [
       "M_ROMAN_IV_AS_6",
       "M_ROMAN_IIII_FOR_4",
-      "M_ROMAN_X_AS_5"
+      "M_ROMAN_X_AS_5",
+      "M_ROMAN_CLOCK_NUMBER_AS_MINUTES",
+      "M_ROMAN_IX_AS_11"
     ]
   },
   "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP": {
@@ -103831,7 +103770,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_ADD_NO_CARRY",
       "M_ADD_CARRY_FORGOTTEN",
-      "M_ADD_COLUMNS_MISALIGNED"
+      "M_ADD_COLUMNS_MISALIGNED",
+      "M_ADD_CARRY_WRONG_COLUMN"
     ]
   },
   "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP": {
@@ -103850,7 +103790,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_ADD_CARRY_ONLY_ONCE",
-      "M_ADD_THOUSANDS_DROPPED"
+      "M_ADD_THOUSANDS_DROPPED",
+      "M_ADD_TENS_DIGIT_WRITTEN",
+      "M_ADD_CARRIES_EVERY_COLUMN"
     ]
   },
   "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN": {
@@ -103871,7 +103813,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_EST_ROUND_ONLY_ONE",
       "M_EST_ROUND_WRONG",
-      "M_EST_EXACT_REQUIRED"
+      "M_EST_EXACT_REQUIRED",
+      "M_EST_ROUND_TO_HUNDRED"
     ]
   },
   "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS": {
@@ -103891,7 +103834,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_PAT_ADD_ONE_STEP_ONLY",
       "M_PAT_RULE_AS_TERM",
-      "M_PAT_MISSING_NOT_CHECKED"
+      "M_PAT_MISSING_NOT_CHECKED",
+      "M_PAT_DOUBLES"
     ]
   },
   "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP": {
@@ -103911,7 +103855,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_SUB_ZERO_RESULT_DROPPED",
       "M_SUB_ADDS",
-      "M_SUB_COLUMNS_MISALIGNED"
+      "M_SUB_COLUMNS_MISALIGNED",
+      "M_SUB_MINUS_ZERO_IS_ZERO"
     ]
   },
   "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP": {
@@ -103931,7 +103876,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_SUB_SMALLER_FROM_LARGER",
       "M_SUB_BORROW_NOT_REDUCED",
-      "M_SUB_ZERO_REGROUP"
+      "M_SUB_ZERO_REGROUP",
+      "M_SUB_BORROW_WRONG_COLUMN"
     ]
   },
   "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN": {
@@ -103952,7 +103898,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_EST_DIFF_ROUND_DOWN",
       "M_EST_DIFF_ADDS",
-      "M_EST_EXACT_REQUIRED"
+      "M_EST_EXACT_REQUIRED",
+      "M_EST_DIFF_ROUND_ONE_ONLY"
     ]
   },
   "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS": {
@@ -103972,7 +103919,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_SUBPAT_ADDS",
       "M_SUBPAT_STEP_NOT_CONSTANT",
-      "M_SUBPAT_RULE_AS_TERM"
+      "M_SUBPAT_RULE_AS_TERM",
+      "M_SUBPAT_STEP_FROM_WRONG_PAIR"
     ]
   },
   "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS": {
@@ -103990,7 +103938,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MUL_TENS_ZERO_FORGOTTEN",
       "M_MUL_TENS_ZERO_TWICE",
-      "M_MUL_TENS_ADDS"
+      "M_MUL_TENS_ADDS",
+      "M_MUL_TENS_ZERO_IN_MIDDLE"
     ]
   },
   "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP": {
@@ -104010,7 +103959,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MUL_ONES_ONLY",
       "M_MUL_SECOND_ROW_ZERO",
-      "M_MUL_ADDS_PARTS"
+      "M_MUL_ADDS_PARTS",
+      "M_MUL_BY_ONES_DIGIT_ONLY"
     ]
   },
   "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP": {
@@ -104031,7 +103981,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MUL_CARRY_FORGOTTEN",
       "M_MUL_CARRY_ADDED_BEFORE",
-      "M_MUL_PARTIAL_PRODUCTS_SWAPPED"
+      "M_MUL_PARTIAL_PRODUCTS_SWAPPED",
+      "M_MUL_PRODUCTS_WRITTEN_SIDE_BY_SIDE"
     ]
   },
   "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN": {
@@ -104052,7 +104003,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_EST_PROD_ADDS_ZEROS",
       "M_EST_PROD_EXACT_REQUIRED",
-      "M_EST_PROD_ROUND_ONE"
+      "M_EST_PROD_ROUND_ONE",
+      "M_EST_PROD_ADDED"
     ]
   },
   "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS": {
@@ -104070,7 +104022,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MULPAT_ADD_STEP",
       "M_MULPAT_SKIP_TABLE",
-      "M_MULPAT_RULE_AS_TERM"
+      "M_MULPAT_RULE_AS_TERM",
+      "M_MULPAT_MISSING_AS_MIDDLE"
     ]
   },
   "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER": {
@@ -104088,7 +104041,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_DIV_LARGER_BY_SMALLER",
       "M_DIV_ZERO_DROPPED",
-      "M_DIV_SUBTRACT"
+      "M_DIV_SUBTRACT",
+      "M_DIV_TENS_REMAINDER_LOST"
     ]
   },
   "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER": {
@@ -104127,7 +104081,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_RELATE_WRONG_FACT",
       "M_RELATE_CHECK_ADDS",
-      "M_RELATE_MISSING_ADDS"
+      "M_RELATE_MISSING_ADDS",
+      "M_RELATE_ONE_DIVISION_ONLY"
     ]
   },
   "MATH.G4.NUMBER.FRACTIONS.NUM_DEN": {
@@ -104145,7 +104100,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_FRAC_SWAP_NUM_DEN",
       "M_FRAC_TWO_NUMBERS_SEPARATE",
-      "M_FRAC_PARTS_NOT_EQUAL"
+      "M_FRAC_PARTS_NOT_EQUAL",
+      "M_FRAC_BIGGER_DENOMINATOR_BIGGER"
     ]
   },
   "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE": {
@@ -104165,7 +104121,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_FRAC_SHADED_OVER_UNSHADED",
       "M_FRAC_COUNT_CUTS",
-      "M_FRAC_WRONG_NUMBER_OF_PARTS"
+      "M_FRAC_WRONG_NUMBER_OF_PARTS",
+      "M_FRAC_UNSHADED_GIVEN"
     ]
   },
   "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP": {
@@ -104185,7 +104142,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_FRAC_GROUP_PART_OVER_OTHER",
       "M_FRAC_OF_GROUP_DIVIDES_WRONG",
-      "M_FRAC_OF_GROUP_ONE_PART_ONLY"
+      "M_FRAC_OF_GROUP_ONE_PART_ONLY",
+      "M_FRAC_OF_GROUP_MULTIPLIES"
     ]
   },
   "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS": {
@@ -104200,12 +104158,14 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_FRACTIONS",
     "pre": [
-      "MATH.G4.NUMBER.FRACTIONS.NUM_DEN"
+      "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+      "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE"
     ],
     "mis": [
       "M_TYPE_IMPROPER_NOT_FRACTION",
       "M_TYPE_MIXED_AS_PROPER",
-      "M_TYPE_EQUAL_IS_PROPER"
+      "M_TYPE_EQUAL_IS_PROPER",
+      "M_TYPE_BIG_NUMBERS_IMPROPER"
     ]
   },
   "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED": {
@@ -104226,7 +104186,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MIX_REMAINDER_AS_WHOLE",
       "M_MIX_REMAINDER_OVER_QUOTIENT",
-      "M_MIX_NO_REMAINDER_LEFT_OUT"
+      "M_MIX_NO_REMAINDER_LEFT_OUT",
+      "M_MIX_WHOLES_MISCOUNTED"
     ]
   },
   "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER": {
@@ -104247,7 +104208,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_IMP_ADDS_WHOLE",
       "M_IMP_WHOLE_TIMES_NUMERATOR",
-      "M_IMP_DENOMINATOR_CHANGED"
+      "M_IMP_DENOMINATOR_CHANGED",
+      "M_IMP_NUMERATOR_NOT_ADDED"
     ]
   },
   "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH": {
@@ -104268,7 +104230,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_DEC_TENTH_AS_TEN",
       "M_DEC_HUNDREDTH_SAME_AS_TENTH",
-      "M_DEC_PARTS_NOT_EQUAL"
+      "M_DEC_PARTS_NOT_EQUAL",
+      "M_DEC_HUNDREDTH_BIGGER"
     ]
   },
   "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION": {
@@ -104283,12 +104246,14 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_DECIMALS",
     "pre": [
-      "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH"
+      "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
+      "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
     ],
     "mis": [
       "M_DEC_FRACTION_AS_TWO_WHOLES",
       "M_DEC_HUNDREDTH_ONE_DIGIT",
-      "M_DEC_READ_AS_WHOLE"
+      "M_DEC_READ_AS_WHOLE",
+      "M_DEC_TENTHS_OVER_TEN"
     ]
   },
   "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE": {
@@ -104309,7 +104274,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_DEC_PLACE_NAME_AS_WHOLE",
       "M_DEC_VALUE_OF_DIGIT",
-      "M_DEC_ZERO_PLACE_HOLDER"
+      "M_DEC_ZERO_PLACE_HOLDER",
+      "M_DEC_PLACES_REVERSED"
     ]
   },
   "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS": {
@@ -104330,7 +104296,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_DEC_LONGER_IS_LARGER",
       "M_DEC_DIGITS_AFTER_POINT_AS_WHOLE",
-      "M_DEC_ORDER_DIRECTION"
+      "M_DEC_ORDER_DIRECTION",
+      "M_DEC_SHORTER_IS_LARGER"
     ]
   },
   "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT": {
@@ -104348,7 +104315,10 @@ var SKILLS_G4 = {
     "mis": [
       "M_LET_LETTER_IS_ITS_ALPHABET_POSITION",
       "M_LET_LETTER_IS_OBJECT",
-      "M_LET_DIFFERENT_LETTERS_DIFFERENT_NUMBERS"
+      "M_LET_DIFFERENT_LETTERS_DIFFERENT_NUMBERS",
+      "M_LET_LETTER_IGNORED",
+      "M_LET_JOINED_AS_DIGITS",
+      "M_LET_COEFFICIENT_ADDED"
     ]
   },
   "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS": {
@@ -104368,7 +104338,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_EXP_NOT_NUMBER_WORD",
       "M_EXP_WRONG_OPERATION",
-      "M_EXP_ORDER_OF_SUBTRACTION"
+      "M_EXP_ORDER_OF_SUBTRACTION",
+      "M_EXP_GUESSES_NUMBER"
     ]
   },
   "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS": {
@@ -104406,7 +104377,9 @@ var SKILLS_G4 = {
     "pre": [],
     "mis": [
       "M_LEN_WRONG_UNIT",
-      "M_LEN_CM_AS_M_SIZE"
+      "M_LEN_CM_AS_M_SIZE",
+      "M_LEN_BIGGER_NUMBER_LONGER",
+      "M_LEN_ESTIMATE_FAR_OUT"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.MEASURE_CM": {
@@ -104426,7 +104399,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_LEN_NOT_FROM_ZERO",
       "M_LEN_COUNTS_MARKS",
-      "M_LEN_DIFFERENCE_AS_END"
+      "M_LEN_DIFFERENCE_AS_END",
+      "M_LEN_STARTS_AT_ONE"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.M_CM_RELATION": {
@@ -104445,7 +104419,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_LEN_10_NOT_100",
-      "M_LEN_HALF_METRE_WRONG"
+      "M_LEN_HALF_METRE_WRONG",
+      "M_LEN_1000_CM",
+      "M_LEN_ADDS_100_FOR_METRES"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM": {
@@ -104465,7 +104441,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_CONV_ADD_DIGITS",
       "M_CONV_WRONG_FACTOR",
-      "M_CONV_DIRECTION"
+      "M_CONV_DIRECTION",
+      "M_CONV_LEFTOVER_CM_LOST"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.PERIMETER": {
@@ -104487,7 +104464,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_PER_TWO_SIDES_ONLY",
       "M_PER_AREA_NOT_PERIMETER",
-      "M_PER_SQUARE_ONE_SIDE"
+      "M_PER_SQUARE_ONE_SIDE",
+      "M_PER_SIDE_MISSED"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.LENGTH_ADD": {
@@ -104506,7 +104484,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_LADD_NO_REGROUP",
-      "M_LADD_ADDS_ACROSS"
+      "M_LADD_ADDS_ACROSS",
+      "M_LADD_100_CM_AS_10_M",
+      "M_LADD_CM_DROPPED"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.LENGTH_SUB": {
@@ -104525,7 +104505,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_LSUB_SMALLER_FROM_LARGER",
-      "M_LSUB_BORROW_100_NOT_10"
+      "M_LSUB_BORROW_100_NOT_10",
+      "M_LSUB_ADDS",
+      "M_LSUB_METRE_NOT_REDUCED"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.LENGTH_MULT": {
@@ -104544,7 +104526,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_LMUL_NO_REGROUP",
-      "M_LMUL_ONLY_METRES"
+      "M_LMUL_ONLY_METRES",
+      "M_LMUL_CARRY_NOT_ADDED",
+      "M_LMUL_ADDS_NUMBER"
     ]
   },
   "MATH.G4.MEASUR.LENGTH.LENGTH_DIV": {
@@ -104564,7 +104548,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_LDIV_METRES_ONLY",
-      "M_LDIV_REMAINDER_METRES_LOST"
+      "M_LDIV_REMAINDER_METRES_LOST",
+      "M_LDIV_MULTIPLIES",
+      "M_LDIV_REMAINDER_AS_CM"
     ]
   },
   "MATH.G4.MEASUR.AREA.COMPARE_AREA": {
@@ -104583,7 +104569,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_AREA_LONGER_IS_LARGER",
-      "M_AREA_COUNTS_EDGES"
+      "M_AREA_COUNTS_EDGES",
+      "M_AREA_CUT_CHANGES",
+      "M_AREA_ONE_SIDE_STICKS_OUT"
     ]
   },
   "MATH.G4.MEASUR.AREA.AREA_COUNT": {
@@ -104601,7 +104589,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_AREA_COUNTS_EDGE_ONLY",
       "M_AREA_COUNTS_TWICE",
-      "M_AREA_UNIT_LENGTH"
+      "M_AREA_UNIT_LENGTH",
+      "M_AREA_HALF_SQUARES_WHOLE"
     ]
   },
   "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS": {
@@ -104622,7 +104611,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_AREA_ADDS_ROWS_COLS",
       "M_AREA_PERIMETER_NOT_AREA",
-      "M_AREA_MISSING_ROW_ADDS"
+      "M_AREA_MISSING_ROW_ADDS",
+      "M_AREA_ONE_ROW_ONLY"
     ]
   },
   "MATH.G4.MEASUR.VOLUME.STACK_CUBES": {
@@ -104639,7 +104629,9 @@ var SKILLS_G4 = {
     "pre": [],
     "mis": [
       "M_VOL_CUBE_CUBOID_SWAP",
-      "M_VOL_COUNT_VISIBLE_ONLY"
+      "M_VOL_COUNT_VISIBLE_ONLY",
+      "M_VOL_STEPS_CALLED_CUBOID",
+      "M_VOL_TALLER_MORE_BLOCKS"
     ]
   },
   "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID": {
@@ -104660,7 +104652,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_VOL_ADDS_DIMENSIONS",
       "M_VOL_ONE_LAYER_ONLY",
-      "M_VOL_SURFACE_NOT_VOLUME"
+      "M_VOL_SURFACE_NOT_VOLUME",
+      "M_VOL_LAYERS_ADDED"
     ]
   },
   "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE": {
@@ -104681,7 +104674,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_VOL_CUBE_SIDE_ONLY",
       "M_VOL_CUBE_SQUARES_SIDE",
-      "M_VOL_CUBE_TIMES_THREE"
+      "M_VOL_CUBE_TIMES_THREE",
+      "M_VOL_CUBE_LAYER_PLUS_SIDE"
     ]
   },
   "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE": {
@@ -104699,7 +104693,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_CAP_MASS_CONFUSED",
       "M_CAP_READS_JUG_TOP",
-      "M_CAP_BIGGER_CONTAINER_MORE"
+      "M_CAP_BIGGER_CONTAINER_MORE",
+      "M_CAP_POURS_COUNTED"
     ]
   },
   "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE": {
@@ -104720,7 +104715,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_CAP_HALF_LITRE_THREE",
       "M_CAP_QUARTER_TWO",
-      "M_CAP_HALF_AS_5"
+      "M_CAP_HALF_AS_5",
+      "M_CAP_QUARTER_MORE_THAN_HALF"
     ]
   },
   "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD": {
@@ -104739,7 +104735,10 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_CAP_ADD_OMIT_UNIT",
-      "M_CAP_ADD_SUBTRACTS"
+      "M_CAP_ADD_SUBTRACTS",
+      "M_CAP_ADD_TOPS_AND_BOTTOMS",
+      "M_CAP_ADD_CARRY_MISSED",
+      "M_CAP_ADD_COUNTS_CONTAINERS"
     ]
   },
   "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB": {
@@ -104758,7 +104757,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_CAP_SUB_ADDS",
-      "M_CAP_SUB_ORDER"
+      "M_CAP_SUB_ORDER",
+      "M_CAP_SUB_GIVES_USED",
+      "M_CAP_SUB_SMALLER_DIGIT"
     ]
   },
   "MATH.G4.MEASUR.MASS.KG_MEASURE": {
@@ -104776,7 +104777,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MASS_LARGER_IS_HEAVIER",
       "M_MASS_CAPACITY_UNIT",
-      "M_MASS_SCALE_READ_END"
+      "M_MASS_SCALE_READ_END",
+      "M_MASS_BALANCE_DOWN_LIGHTER"
     ]
   },
   "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG": {
@@ -104797,7 +104799,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MASS_HALF_KG_AS_500",
       "M_MASS_QUARTER_TWO",
-      "M_MASS_HALF_LARGER_THAN_KG"
+      "M_MASS_HALF_LARGER_THAN_KG",
+      "M_MASS_QUARTERS_AS_KG"
     ]
   },
   "MATH.G4.MEASUR.MASS.MASS_ADD": {
@@ -104816,7 +104819,10 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_MASS_ADD_OMIT_UNIT",
-      "M_MASS_ADD_SUBTRACTS"
+      "M_MASS_ADD_SUBTRACTS",
+      "M_MASS_ADD_TOPS_AND_BOTTOMS",
+      "M_MASS_ADD_CARRY_MISSED",
+      "M_MASS_ADD_COUNTS_BAGS"
     ]
   },
   "MATH.G4.MEASUR.MASS.MASS_SUB": {
@@ -104835,7 +104841,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_MASS_SUB_ADDS",
-      "M_MASS_SUB_CONTAINER"
+      "M_MASS_SUB_CONTAINER",
+      "M_MASS_SUB_GIVES_SOLD",
+      "M_MASS_SUB_SMALLER_DIGIT"
     ]
   },
   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM": {
@@ -104853,7 +104861,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TIME_HANDS_SWAPPED",
       "M_TIME_PAST_TO_SWAP",
-      "M_TIME_MIDNIGHT_NOON"
+      "M_TIME_MIDNIGHT_NOON",
+      "M_TIME_HOUR_FROM_NEXT_NUMBER"
     ]
   },
   "MATH.G4.MEASUR.TIME.ESTIMATE_TIME": {
@@ -104872,7 +104881,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_TIME_AMPM_WRONG",
-      "M_TIME_SHADOW_DIRECTION"
+      "M_TIME_SHADOW_DIRECTION",
+      "M_TIME_PM_MEANS_EVENING",
+      "M_TIME_SHADOW_POINTS_TO_SUN"
     ]
   },
   "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES": {
@@ -104892,7 +104903,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TIME_100_MINUTES",
       "M_TIME_REMAINDER_AS_DECIMAL",
-      "M_TIME_DIVIDES_TO_MULTIPLY"
+      "M_TIME_DIVIDES_TO_MULTIPLY",
+      "M_TIME_HALF_HOUR_50"
     ]
   },
   "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS": {
@@ -104913,7 +104925,9 @@ var SKILLS_G4 = {
     "mis": [
       "M_TIME_10_HOURS_DAY",
       "M_TIME_WEEK_NOT_7",
-      "M_TIME_DAYS_TO_WEEKS_REMAINDER"
+      "M_TIME_DAYS_TO_WEEKS_REMAINDER",
+      "M_TIME_WEEKS_ADDS_7",
+      "M_TIME_HOURS_REMAINDER_KEPT"
     ]
   },
   "MATH.G4.MEASUR.TIME.RECORD_DURATION": {
@@ -104932,7 +104946,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_TIME_DURATION_END_TIME",
-      "M_TIME_DURATION_WRONG_UNITS"
+      "M_TIME_DURATION_WRONG_UNITS",
+      "M_TIME_DURATION_COUNTS_NUMBERS",
+      "M_TIME_DURATION_ACROSS_HOUR"
     ]
   },
   "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION": {
@@ -104953,7 +104969,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TIME_SUBTRACT_AS_DECIMAL",
       "M_TIME_ADD_MINUTES_OVER_60",
-      "M_TIME_NOON_AMPM"
+      "M_TIME_NOON_AMPM",
+      "M_TIME_HOURS_ADDED_AS_MINUTES"
     ]
   },
   "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK": {
@@ -104973,7 +104990,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TIME_DIGITAL_BASE_10",
       "M_TIME_DIGITAL_ANALOGUE_SWAP",
-      "M_TIME_24H_AS_AM"
+      "M_TIME_24H_AS_AM",
+      "M_TIME_DIGITAL_MINUTES_UNDER_10"
     ]
   },
   "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS": {
@@ -104993,7 +105011,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_MONEY_10_CENTS_SHILLING",
       "M_MONEY_CENTS_AS_DECIMAL_WHOLE",
-      "M_MONEY_DIRECTION"
+      "M_MONEY_DIRECTION",
+      "M_MONEY_HALF_SHILLING_5"
     ]
   },
   "MATH.G4.MEASUR.MONEY.SHOPPING_LIST": {
@@ -105013,7 +105032,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_LIST_OVER_BUDGET",
       "M_LIST_OMITS_QUANTITY",
-      "M_LIST_UNITS_MIXED"
+      "M_LIST_UNITS_MIXED",
+      "M_LIST_QUANTITY_AS_COST"
     ]
   },
   "MATH.G4.MEASUR.MONEY.TOTAL_COST": {
@@ -105035,7 +105055,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_COST_ADDS_QUANTITY",
       "M_COST_CHANGE_ADDS",
-      "M_COST_ONE_ITEM_ONLY"
+      "M_COST_ONE_ITEM_ONLY",
+      "M_COST_CHANGE_FROM_ONE_ITEM"
     ]
   },
   "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI": {
@@ -105054,7 +105075,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TURN_CLOCKWISE_AS_LEFT",
       "M_TURN_VIEWED_FROM_BEHIND",
-      "M_TURN_ANTI_MEANING"
+      "M_TURN_ANTI_MEANING",
+      "M_TURN_OPENING_LID_CLOCKWISE"
     ]
   },
   "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS": {
@@ -105094,7 +105116,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_ANGLE_ARM_LENGTH",
       "M_ANGLE_IS_THE_LINE",
-      "M_ANGLE_COUNT_SIDES"
+      "M_ANGLE_COUNT_SIDES",
+      "M_ANGLE_TURNED_NOT_ANGLE"
     ]
   },
   "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS": {
@@ -105114,7 +105137,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_ANGLE_CURVED_HAS_ANGLE",
       "M_ANGLE_RECTANGLE_ANGLES",
-      "M_ANGLE_SQUARE_CORNER_ONLY_SQUARES"
+      "M_ANGLE_SQUARE_CORNER_ONLY_SQUARES",
+      "M_ANGLE_ONLY_SQUARE_CORNERS"
     ]
   },
   "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE": {
@@ -105135,7 +105159,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TURN_QUARTER_AS_STRAIGHT",
       "M_TURN_ANGLE_SMALLER_TURN",
-      "M_TURN_HOUR_HAND_RIGHT_ANGLE"
+      "M_TURN_HOUR_HAND_RIGHT_ANGLE",
+      "M_TURN_FULL_AS_STRAIGHT"
     ]
   },
   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES": {
@@ -105153,7 +105178,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_SHAPE_ORIENTATION",
       "M_SHAPE_OVAL_CIRCLE",
-      "M_SHAPE_TRIANGLE_NEEDS_EQUAL_SIDES"
+      "M_SHAPE_TRIANGLE_NEEDS_EQUAL_SIDES",
+      "M_SHAPE_SOLID_FOR_FACE"
     ]
   },
   "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES": {
@@ -105172,7 +105198,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_DRAW_UNEQUAL_SQUARE",
-      "M_DRAW_OPEN_SHAPE"
+      "M_DRAW_OPEN_SHAPE",
+      "M_DRAW_OVAL_POINTED",
+      "M_DRAW_CORNERS_ROUNDED"
     ],
     "hands": true
   },
@@ -105193,7 +105221,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_SYM_DIAGONAL_RECTANGLE",
       "M_SYM_ANY_LINE",
-      "M_SYM_COUNT_CIRCLE"
+      "M_SYM_COUNT_CIRCLE",
+      "M_SYM_SQUARE_TWO_ONLY"
     ]
   },
   "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS": {
@@ -105212,7 +105241,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_SPAT_REPEAT_BROKEN",
-      "M_SPAT_COLOUR_ONLY"
+      "M_SPAT_COLOUR_ONLY",
+      "M_SPAT_SIZE_IGNORED",
+      "M_SPAT_TURN_IGNORED"
     ],
     "hands": true
   },
@@ -105234,7 +105265,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_PROP_RECT_ALL_SIDES_EQUAL",
       "M_PROP_SQUARE_NOT_RECT",
-      "M_PROP_COUNT_SIDES_CORNERS"
+      "M_PROP_COUNT_SIDES_CORNERS",
+      "M_PROP_OVAL_LIKE_CIRCLE"
     ]
   },
   "MATH.G4.DATA_H.DATA.DATA_MATERIALS": {
@@ -105251,7 +105283,10 @@ var SKILLS_G4 = {
     "pre": [],
     "mis": [
       "M_DATA_TALLY_ONES",
-      "M_DATA_WRONG_TOOL"
+      "M_DATA_WRONG_TOOL",
+      "M_DATA_GATE_OF_SIX",
+      "M_DATA_NO_RECORD",
+      "M_DATA_LIST_AS_TABLE"
     ]
   },
   "MATH.G4.DATA_H.DATA.COLLECT_DATA": {
@@ -105270,7 +105305,9 @@ var SKILLS_G4 = {
     ],
     "mis": [
       "M_COLLECT_COUNTS_TWICE",
-      "M_COLLECT_TOO_MANY_ITEMS"
+      "M_COLLECT_TOO_MANY_ITEMS",
+      "M_COLLECT_ONLY_FRIENDS",
+      "M_COLLECT_SOME_MISSED"
     ],
     "hands": true
   },
@@ -105292,7 +105329,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TABLE_TALLY_COUNTS_BARS",
       "M_TABLE_ITEM_LEFT_OUT",
-      "M_TABLE_HEADINGS_MISSING"
+      "M_TABLE_HEADINGS_MISSING",
+      "M_TABLE_GATES_AS_NUMBER"
     ]
   },
   "MATH.G4.DATA_H.DATA.INTERPRET_TABLE": {
@@ -105313,7 +105351,8 @@ var SKILLS_G4 = {
     "mis": [
       "M_TABLE_MOST_AS_LAST_ROW",
       "M_TABLE_ADDS_FOR_DIFFERENCE",
-      "M_TABLE_NAME_NOT_NUMBER"
+      "M_TABLE_NAME_NOT_NUMBER",
+      "M_TABLE_TOTAL_MISSES_ROW"
     ]
   }
 };

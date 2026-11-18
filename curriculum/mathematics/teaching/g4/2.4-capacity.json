@@ -1,0 +1,376 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.CAPACITY",
+ "title": "Capacity",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words, with b read from the PDF where the text layer lost the fraction signs: 'litres and litres' in the table is half a litre and a quarter of a litre (the design's own competence text says half-litre and quarter-litre containers). To confirm by a person. Outcome d attitudinal. Millilitres are not in Grade 4. Hands-on measuring with containers is done in class.",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
+   "key_step": "The child counts how many full 1 litre measures fill a container, reading the level the liquid reaches, not the top of the jug.",
+   "floor": {
+    "prerequisite": "Measures capacity in litres (Grade 3).",
+    "question": "How many 1 litre bottles fill a 5 litre jerrycan?",
+    "answer": "5"
+   },
+   "representations": [
+    "a 1 litre bottle and a jerrycan",
+    "a marked jug",
+    "containers of different shapes"
+   ],
+   "steps": [
+    "Fill the litre measure to the line.",
+    "Pour and count each full litre.",
+    "Read a jug at the level of the water.",
+    "Height alone does not tell capacity."
+   ],
+   "contexts": [
+    "a jerrycan of water from the borehole",
+    "milk at the dairy",
+    "cooking oil at the shop"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 5 litre jug with water at the 3 mark."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top of the water.",
+     "say": "How much water is in the jug?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3 litres."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 litres; the jug holds 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_MASS_CONFUSED",
+     "listen_for": [
+      "kilograms"
+     ],
+     "ask": "Do we pour or weigh water to see how much a can holds?",
+     "repair": "Pour: litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_READS_JUG_TOP",
+     "listen_for": [
+      "5 litres"
+     ],
+     "ask": "Where is the top of the water?",
+     "repair": "At 3: 3 litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_BIGGER_CONTAINER_MORE",
+     "listen_for": [
+      "the tall one"
+     ],
+     "ask": "How could we check?",
+     "repair": "Pour one into the other."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_POURS_COUNTED",
+     "listen_for": [
+      "4 litres"
+     ],
+     "ask": "Was every pour a full litre?",
+     "repair": "No: 3 1/2 litres."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A jug is marked to 4 litres. The water is at the 2 mark. How much water?",
+     "answer": "2 litres",
+     "shows": "reading level"
+    },
+    {
+     "question": "How many 1 litre bottles fill a 10 litre bucket?",
+     "answer": "10",
+     "shows": "counting litres"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
+   "key_step": "The child knows 2 half litres and 4 quarter litres each make 1 litre.",
+   "floor": {
+    "prerequisite": "Halves and quarters of a whole.",
+    "question": "How many quarters make a whole?",
+    "answer": "4"
+   },
+   "representations": [
+    "1/2 and 1/4 litre cups",
+    "a litre bottle",
+    "fraction strips"
+   ],
+   "steps": [
+    "Pour half litres into a litre: 2 fill it.",
+    "Pour quarter litres: 4 fill it.",
+    "A half is 2 quarters.",
+    "Count in halves or quarters."
+   ],
+   "contexts": [
+    "milk sold in half-litre packets",
+    "cooking oil in quarter-litre bottles",
+    "juice at a party"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 1 litre jug and a 1/4 litre cup."
+    },
+    {
+     "beat": "count",
+     "do": "Count the cups poured with the child: 1, 2, 3, 4."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: how many half litres would fill it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 quarters = 2 halves = 1 litre."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_HALF_LITRE_THREE",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "How many halves make a whole?",
+     "repair": "2."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_QUARTER_TWO",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many quarters make a whole?",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_HALF_AS_5",
+     "listen_for": [
+      "5 litres"
+     ],
+     "ask": "Is half a litre more or less than a litre?",
+     "repair": "Less: 2 quarter litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_QUARTER_MORE_THAN_HALF",
+     "listen_for": [
+      "1/4 litre"
+     ],
+     "ask": "How many quarter cups fill a half cup?",
+     "repair": "Two: the half is bigger."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many 1/2 litre packets make 3 litres?",
+     "answer": "6",
+     "shows": "halves"
+    },
+    {
+     "question": "How many 1/4 litre cups make 2 litres?",
+     "answer": "8",
+     "shows": "quarters"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD",
+   "key_step": "The child adds the litres in each container and writes the unit, carrying tens when needed.",
+   "floor": {
+    "prerequisite": "Adds with regrouping.",
+    "question": "38 + 27",
+    "answer": "65"
+   },
+   "representations": [
+    "containers with labels",
+    "a bar model",
+    "columns with a litres heading"
+   ],
+   "steps": [
+    "Write the litres in each container.",
+    "Add them, carrying if needed.",
+    "Halves and quarters: count how many make a litre.",
+    "Write litres after the answer."
+   ],
+   "contexts": [
+    "water in jerrycans",
+    "milk from two cows",
+    "a tank filled twice"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two jerrycans of 20 litres and a bucket of 10 litres."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each one.",
+     "say": "How many litres does each hold?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 20, 20, 10."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 + 20 + 10 = 50 litres."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_OMIT_UNIT",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "20 what?",
+     "repair": "20 litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_SUBTRACTS",
+     "listen_for": [
+      "4 litres"
+     ],
+     "ask": "Altogether: more or less?",
+     "repair": "More: add, 16 litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_TOPS_AND_BOTTOMS",
+     "listen_for": [
+      "2/4 litre"
+     ],
+     "ask": "How many halves fill a litre?",
+     "repair": "Two: 1 litre."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_CARRY_MISSED",
+     "listen_for": [
+      "55 litres"
+     ],
+     "ask": "What is 8 + 7?",
+     "repair": "15: carry 1, 65 litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_COUNTS_CONTAINERS",
+     "listen_for": [
+      "3 litres"
+     ],
+     "ask": "Did I ask how many containers?",
+     "repair": "No: the litres, 50."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A cow gives 9 litres in the morning and 7 litres in the evening. How much milk?",
+     "answer": "16 litres",
+     "shows": "adding"
+    },
+    {
+     "question": "1/2 litre + 1/4 litre + 1/4 litre",
+     "answer": "1 litre",
+     "shows": "fractions of a litre"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB",
+   "key_step": "The child takes the litres used from the litres there were and gives what is left, with the bigger amount first.",
+   "floor": {
+    "prerequisite": "Subtracts with regrouping.",
+    "question": "50 - 18",
+    "answer": "32"
+   },
+   "representations": [
+    "a drum with a level line",
+    "a bar model",
+    "columns"
+   ],
+   "steps": [
+    "Write the starting litres.",
+    "Take away the litres used.",
+    "Regroup when needed.",
+    "Write litres after the answer."
+   ],
+   "contexts": [
+    "water used from a tank",
+    "milk sold from a can",
+    "oil used in cooking"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 20 litre drum; shade 7 litres used."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the part not shaded.",
+     "say": "How much is left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 13 litres."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 - 7 = 13 litres."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_ADDS",
+     "listen_for": [
+      "27 litres"
+     ],
+     "ask": "Is there more or less after using some?",
+     "repair": "Less: 13 litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_ORDER",
+     "listen_for": [
+      "24 litres"
+     ],
+     "ask": "How much more fills the tank: take away or add?",
+     "repair": "Take away: 15 - 9 = 6 litres."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_GIVES_USED",
+     "listen_for": [
+      "7 litres"
+     ],
+     "ask": "Is 7 the water used or left?",
+     "repair": "Used: 13 left."
+    },
+    {
+     "code": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_SMALLER_DIGIT",
+     "listen_for": [
+      "48 litres"
+     ],
+     "ask": "Is 0 - 8 the same as 8 - 0?",
+     "repair": "No: regroup, 32 litres."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A tank holds 60 litres. 24 litres are used. How much is left?",
+     "answer": "36 litres",
+     "shows": "regrouping"
+    },
+    {
+     "question": "A 25 litre jerrycan has 18 litres. How much more fills it?",
+     "answer": "7 litres",
+     "shows": "how much more"
+    }
+   ]
+  }
+ ]
+}

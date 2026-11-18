@@ -1,0 +1,385 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.SUBTRACTION",
+ "title": "Subtraction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words (verified); e is attitudinal. The design does not set a range for the minuend beyond 4 digits and 10,000.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP",
+   "key_step": "The child lines up the digits from the right and takes away column by column, top minus bottom, keeping zeros.",
+   "floor": {
+    "prerequisite": "Subtracts a 2-digit from a 3-digit number (Grade 3).",
+    "question": "587 - 42",
+    "answer": "545"
+   },
+   "representations": [
+    "place value counters",
+    "bundles of sticks",
+    "the column method"
+   ],
+   "steps": [
+    "Write the bigger number on top.",
+    "Line up the ones.",
+    "Take away each column, top minus bottom.",
+    "Write every digit, zeros too."
+   ],
+   "contexts": [
+    "eggs left after selling",
+    "shillings left after paying fees",
+    "books left in a store"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5,420 - 2,310 in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 0 - 0.",
+     "say": "What is 0 take away 0?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 0."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finishes each column."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3,110 and point at the zero in the ones."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_ZERO_RESULT_DROPPED",
+     "listen_for": [
+      "311"
+     ],
+     "ask": "How many digits should the answer have?",
+     "repair": "Four: 3,110."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_ADDS",
+     "listen_for": [
+      "7,100"
+     ],
+     "ask": "Were the eggs sold or bought?",
+     "repair": "Sold: take away, 2,500."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_COLUMNS_MISALIGNED",
+     "listen_for": [
+      "3,337"
+     ],
+     "ask": "Is the 3 of 123 under the ones?",
+     "repair": "Line up from the right: 4,444."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_MINUS_ZERO_IS_ZERO",
+     "listen_for": [
+      "2,000"
+     ],
+     "ask": "What is 6 take away 0?",
+     "repair": "6: 2,706."
+    }
+   ],
+   "checks": [
+    {
+     "question": "6,875 - 3,402",
+     "answer": "3,473",
+     "shows": "no regrouping"
+    },
+    {
+     "question": "9,508 - 4,302",
+     "answer": "5,206",
+     "shows": "zeros kept"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
+   "key_step": "When the top digit is smaller, the child takes one from the next column, makes it ten more here, and reduces that next digit.",
+   "floor": {
+    "prerequisite": "Subtracts with one regrouping (Grade 3).",
+    "question": "452 - 128",
+    "answer": "324"
+   },
+   "representations": [
+    "bundles of ten untied",
+    "place value counters",
+    "the column method"
+   ],
+   "steps": [
+    "Start at the ones.",
+    "Top smaller: take 1 from the next column.",
+    "Add 10 here and make the next digit one less.",
+    "Take away; carry on left."
+   ],
+   "contexts": [
+    "a tank of water used",
+    "money left after shopping",
+    "seedlings left after planting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 6,304 - 2,578."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 4 - 8.",
+     "say": "Can we take 8 from 4?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Show the 0 tens: go to the hundreds, 3 becomes 2, the tens become 10, then 9."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child does 14 - 8."
+    },
+    {
+     "beat": "reveal",
+     "do": "Finish: 3,726."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "4,274"
+     ],
+     "ask": "Is the top or the bottom digit taken away from?",
+     "repair": "Always the top: regroup."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_BORROW_NOT_REDUCED",
+     "listen_for": [
+      "3,495"
+     ],
+     "ask": "Where did the ten come from?",
+     "repair": "From the next column: make it one less."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_ZERO_REGROUP",
+     "listen_for": [
+      "3,273"
+     ],
+     "ask": "Can we take a ten from 0 tens?",
+     "repair": "Go to the hundreds first: 2,727."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_BORROW_WRONG_COLUMN",
+     "listen_for": [
+      "3,435"
+     ],
+     "ask": "Which column is next to the ones?",
+     "repair": "The tens: take the ten from there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "7,215 - 3,468",
+     "answer": "3,747",
+     "shows": "three regroupings"
+    },
+    {
+     "question": "5,003 - 2,147",
+     "answer": "2,856",
+     "shows": "across zeros"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
+   "key_step": "The child rounds each number to the nearest ten first, then takes the smaller rounded number from the bigger.",
+   "floor": {
+    "prerequisite": "Rounds to the nearest ten.",
+    "question": "Round 197 to the nearest ten.",
+    "answer": "200"
+   },
+   "representations": [
+    "a number line in tens",
+    "rounded amounts in a table",
+    "a shop stock list"
+   ],
+   "steps": [
+    "Round the first number.",
+    "Round the second number.",
+    "Take away.",
+    "Say it is about that much."
+   ],
+   "contexts": [
+    "stock left in a shop",
+    "steps walked to school and back",
+    "bags of cement used"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 483 - 197."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 197.",
+     "say": "What is it to the nearest ten?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 200."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rounds 483."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 480 - 200 = 280."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_DIFF_ROUND_DOWN",
+     "listen_for": [
+      "290"
+     ],
+     "ask": "What is the ones digit of 197?",
+     "repair": "7: round up to 200."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_DIFF_ADDS",
+     "listen_for": [
+      "900"
+     ],
+     "ask": "Is it a difference or a total?",
+     "repair": "A difference: 610 - 290 = 320."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_EXACT_REQUIRED",
+     "listen_for": [
+      "345"
+     ],
+     "ask": "Did you round first?",
+     "repair": "No: 540 - 200 = 340."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_DIFF_ROUND_ONE_ONLY",
+     "listen_for": [
+      "283"
+     ],
+     "ask": "Did you round both numbers?",
+     "repair": "No: 480 - 200 = 280."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Estimate 726 - 348 by rounding to the nearest ten.",
+     "answer": "380",
+     "shows": "both rounded"
+    },
+    {
+     "question": "Estimate 905 - 462 by rounding to the nearest ten.",
+     "answer": "450",
+     "shows": "rounding 905 up to 910 and 462 to 460"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS",
+   "key_step": "The child finds the same amount taken away between two terms side by side and takes it away again.",
+   "floor": {
+    "prerequisite": "Subtracts with regrouping.",
+    "question": "5,000 - 300",
+    "answer": "4,700"
+   },
+   "representations": [
+    "a number line with jumps back",
+    "a table of days and water left",
+    "jumps written under the pattern"
+   ],
+   "steps": [
+    "Find the jump between two terms side by side.",
+    "Check it is the same each time.",
+    "Take it away to continue.",
+    "For a gap, take the jump from the term before."
+   ],
+   "contexts": [
+    "water left in a tank each day",
+    "money left after weekly spending",
+    "maize left in a store each week"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5,600, 5,300, 5,000, ?"
+    },
+    {
+     "beat": "point",
+     "do": "Point from 5,600 to 5,300.",
+     "say": "How much is taken away?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 300."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4,700."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_ADDS",
+     "listen_for": [
+      "8,500"
+     ],
+     "ask": "Is the pattern going up or down?",
+     "repair": "Down: 7,500."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_STEP_NOT_CONSTANT",
+     "listen_for": [
+      "4,800"
+     ],
+     "ask": "Is the jump the same each time?",
+     "repair": "Yes, 300: 4,700."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_RULE_AS_TERM",
+     "listen_for": [
+      "5,400"
+     ],
+     "ask": "Did I ask for the rule or the next term?",
+     "repair": "The rule: subtract 200."
+    },
+    {
+     "code": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_STEP_FROM_WRONG_PAIR",
+     "listen_for": [
+      "7,600"
+     ],
+     "ask": "Which two terms sit side by side?",
+     "repair": "7,600 and 7,200: the step is 400, so 8,000."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Next: 9,250, 8,750, 8,250, ?",
+     "answer": "7,750",
+     "shows": "continue"
+    },
+    {
+     "question": "Missing: 6,300, 6,100, ?, 5,700",
+     "answer": "5,900",
+     "shows": "gap"
+    }
+   ]
+  }
+ ]
+}

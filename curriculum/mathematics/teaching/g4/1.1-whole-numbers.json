@@ -1,0 +1,1022 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.WHOLE_NUMBERS",
+ "title": "Whole Numbers",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to j are KICD's own words, read from the PDF's text layer (status kicd_read, not yet checked by a person). Outcome k is attitudinal and is not mapped to a skill. The number ranges differ: a and b go up to tens of thousands (the learning experiences stop at 10,000 for total value and for reading in symbols), c to f stop at 1,000, factors at 50, multiples at 100, even and odd at 100. Each skill keeps its own outcome's limit. HOREB's earlier list folded total value into place value and called the limit 'thousands'; both are corrected here.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+   "key_step": "The child names the places from the right: ones, tens, hundreds, thousands, ten thousands, and counts a zero as a place.",
+   "floor": {
+    "prerequisite": "Place value to hundreds (Grade 3).",
+    "question": "In 482, which place is the 4 in?",
+    "answer": "hundreds"
+   },
+   "representations": [
+    "place value cards",
+    "a five-column place value chart",
+    "an abacus with five spikes"
+   ],
+   "steps": [
+    "Write the number in the chart, ones on the right.",
+    "Name the columns from the right.",
+    "Find the digit and read its column name.",
+    "A zero still takes a column."
+   ],
+   "contexts": [
+    "the number of people at a stadium",
+    "a county population on a poster",
+    "the price of a cow"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart: Ten thousands, Thousands, Hundreds, Tens, Ones. Write 30,407 in it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4.",
+     "say": "Which column is it in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for hundreds."
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle the zero beside it: it is a place too."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_GIVES_TOTAL_VALUE",
+     "listen_for": [
+      "5,000",
+      "five thousand"
+     ],
+     "ask": "Did I ask what it is worth, or the name of its column?",
+     "repair": "The column name: thousands."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_COUNT_FROM_LEFT",
+     "listen_for": [
+      "tens"
+     ],
+     "ask": "Where do we start naming the columns?",
+     "repair": "At the ones, on the right."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_ZERO_IS_NOT_A_PLACE",
+     "listen_for": [
+      "thousands"
+     ],
+     "ask": "Is the zero sitting in a column?",
+     "repair": "Yes: count it, so the 4 is in the hundreds."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_TEN_THOUSANDS_AS_THOUSANDS",
+     "listen_for": [
+      "thousands"
+     ],
+     "ask": "How many columns are there from the ones to the 6?",
+     "repair": "Five: the fifth is ten thousands."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In 57,203 which place is the 7 in?",
+     "answer": "thousands",
+     "shows": "naming places"
+    },
+    {
+     "question": "In 40,816 which digit is in the hundreds place?",
+     "answer": "8",
+     "shows": "finding a place"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
+   "key_step": "The child multiplies the digit by its place: write the digit, then one zero for every place to its right.",
+   "floor": {
+    "prerequisite": "Names the place of a digit.",
+    "question": "In 4,316, which place is the 3 in?",
+    "answer": "hundreds"
+   },
+   "representations": [
+    "place value cards that stack",
+    "a place value chart",
+    "money: notes of 1,000, 100 and 10 shillings"
+   ],
+   "steps": [
+    "Find the digit and its place.",
+    "Write the digit.",
+    "Write one zero for each place to its right.",
+    "To build a number, write 0 in an empty place."
+   ],
+   "contexts": [
+    "shillings in a chama savings book",
+    "books in a school library",
+    "bags of maize in a store"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 27,540 in a chart."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 7.",
+     "say": "How many places are to its right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for three."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7 then three zeros: 7,000."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_FACE_VALUE",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Is the 7 worth seven shillings here?",
+     "repair": "No: it is in the thousands, so 7,000."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_WRONG_ZEROS",
+     "listen_for": [
+      "30,000"
+     ],
+     "ask": "Count the digits to the right of the 3. How many?",
+     "repair": "Three, so three zeros: 3,000."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_COMPOSE_DROPS_ZEROS",
+     "listen_for": [
+      "468"
+     ],
+     "ask": "Which columns are empty?",
+     "repair": "Thousands and tens: write 0 in each, 40,608."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_WHOLE_NUMBER_GIVEN",
+     "listen_for": [
+      "3,482"
+     ],
+     "ask": "Did I ask about the whole number or one digit?",
+     "repair": "One digit: the 4 is worth 400."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the total value of 6 in 46,219?",
+     "answer": "6,000",
+     "shows": "total value"
+    },
+    {
+     "question": "Write 20,000 + 300 + 5 as one number.",
+     "answer": "20,305",
+     "shows": "building with empty places"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
+   "key_step": "The child writes one digit under each of thousands, hundreds, tens and ones, putting 0 in any place that is not said.",
+   "floor": {
+    "prerequisite": "Reads numbers to 1,000 in symbols (Grade 3).",
+    "question": "Write six hundred and twelve in symbols.",
+    "answer": "612"
+   },
+   "representations": [
+    "four empty boxes for Th, H, T, O",
+    "place value cards",
+    "a price tag"
+   ],
+   "steps": [
+    "Draw four boxes: Th, H, T, O.",
+    "Put the thousands digit in the first box.",
+    "Fill the hundreds, tens and ones that are said.",
+    "Write 0 in any box that is empty."
+   ],
+   "contexts": [
+    "a school fee notice",
+    "the price of a bicycle",
+    "the number of trees planted"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four boxes: Th H T O."
+    },
+    {
+     "beat": "write",
+     "do": "Write four thousand and six under the boxes."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: which boxes stay empty?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for hundreds and tens."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4, 0, 0, 6: 4,006."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_JOIN_PARTS",
+     "listen_for": [
+      "46"
+     ],
+     "ask": "How many digits does a thousands number have?",
+     "repair": "Four: 4,006."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_REVERSE_DIGITS",
+     "listen_for": [
+      "1,041"
+     ],
+     "ask": "In fourteen, which comes first, the ten or the four?",
+     "repair": "The ten: 1,014."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_PARTS_WRITTEN_IN_FULL",
+     "listen_for": [
+      "2000300 50"
+     ],
+     "ask": "How many digits should the answer have?",
+     "repair": "Four: 2,350."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_PART_SHIFTED",
+     "listen_for": [
+      "3,450"
+     ],
+     "ask": "How many hundreds are said?",
+     "repair": "None: 3,045."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write five thousand, two hundred and nine in symbols.",
+     "answer": "5,209",
+     "shows": "a zero in the tens"
+    },
+    {
+     "question": "Write seven thousand and thirty in symbols.",
+     "answer": "7,030",
+     "shows": "two empty places"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
+   "key_step": "The child says the hundreds first, then \"and\", then the tens and ones as one word or a hyphenated pair.",
+   "floor": {
+    "prerequisite": "Writes numbers 1 to 100 in words (Grade 3).",
+    "question": "Write 47 in words.",
+    "answer": "forty-seven"
+   },
+   "representations": [
+    "a number chart with words",
+    "word cards: hundreds, tens, teens",
+    "a cheque or receipt"
+   ],
+   "steps": [
+    "Say the hundreds: four hundred.",
+    "Say \"and\".",
+    "Say the tens and ones: a teen is one word; twenty-one to ninety-nine take a hyphen.",
+    "Check the spelling: forty has no u."
+   ],
+   "contexts": [
+    "a receipt from the shop",
+    "a cheque for school fees",
+    "a chama record book"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 405."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4.",
+     "say": "What do we say first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for four hundred."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 0 and the 5.",
+     "say": "Are there any tens?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write four hundred and five."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_HUNDRED_DROPPED",
+     "listen_for": [
+      "forty-five"
+     ],
+     "ask": "What is the 4 worth?",
+     "repair": "Four hundred: four hundred and five."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_SPELLING_TY",
+     "listen_for": [
+      "three hundred and fourteen"
+     ],
+     "ask": "Is it 14 or 40 at the end?",
+     "repair": "40: forty."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_SPELLING_FORTY",
+     "listen_for": [
+      "fourty"
+     ],
+     "ask": "Does forty have a u?",
+     "repair": "No: forty."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_TEEN_AS_TEN_AND",
+     "listen_for": [
+      "ten five"
+     ],
+     "ask": "How do we say 15 in English, as one word?",
+     "repair": "Fifteen: six hundred and fifteen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 760 in words.",
+     "answer": "seven hundred and sixty",
+     "shows": "tens, no ones"
+    },
+    {
+     "question": "Write 913 in words.",
+     "answer": "nine hundred and thirteen",
+     "shows": "a teen"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
+   "key_step": "The child counts the digits first, then compares hundreds, then tens, then ones, and checks the direction asked.",
+   "floor": {
+    "prerequisite": "Place value to hundreds.",
+    "question": "Which is bigger, 7 hundreds or 9 tens?",
+    "answer": "7 hundreds"
+   },
+   "representations": [
+    "a number line to 1,000",
+    "numbers lined up in a place value chart",
+    "number cards to order"
+   ],
+   "steps": [
+    "Count the digits: more digits is bigger.",
+    "Compare the hundreds.",
+    "If they match, compare the tens, then the ones.",
+    "Write them in the direction asked."
+   ],
+   "contexts": [
+    "marks of learners in a test",
+    "heights of hills",
+    "prices at the market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart and write 98, 214 and 105 under H T O."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hundreds column.",
+     "say": "Which number has no hundreds?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 98."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 98, 105, 214."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_FIRST_DIGIT_ONLY",
+     "listen_for": [
+      "98"
+     ],
+     "ask": "How many digits has 98? And 214?",
+     "repair": "Two and three: 214 is bigger."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_DIRECTION",
+     "listen_for": [
+      "350, 305, 53"
+     ],
+     "ask": "Which word tells us where to start?",
+     "repair": "Smallest: start with 53."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_ZERO_TENS",
+     "listen_for": [
+      "499"
+     ],
+     "ask": "Which column do we compare first?",
+     "repair": "Hundreds: 5 is more than 4."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_TABLE_POSITION",
+     "listen_for": [
+      "789"
+     ],
+     "ask": "Did you put them in order first?",
+     "repair": "No: 312, 450, 501, so 501 is third."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order from largest to smallest: 640, 406, 604.",
+     "answer": "640, 604, 406",
+     "shows": "direction and tens"
+    },
+    {
+     "question": "Which is the smallest: 299, 1,000, 920?",
+     "answer": "299",
+     "shows": "comparing hundreds"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
+   "key_step": "The child finds the two tens the number lies between and looks at the ones: 5 or more goes up, less than 5 stays.",
+   "floor": {
+    "prerequisite": "Counts in tens.",
+    "question": "Which two tens is 47 between?",
+    "answer": "40 and 50"
+   },
+   "representations": [
+    "a number line marked in tens",
+    "a road with mileposts every ten",
+    "a hill picture: 5 is the top"
+   ],
+   "steps": [
+    "Find the tens on either side.",
+    "Look at the ones digit.",
+    "5 or more: go up to the next ten.",
+    "Less than 5: stay on the ten below."
+   ],
+   "contexts": [
+    "people at a church service",
+    "bags of maize sold",
+    "distance in metres to the borehole"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 460 to 470."
+    },
+    {
+     "beat": "point",
+     "do": "Mark 468.",
+     "say": "Is it nearer 460 or 470?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 470."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 468 rounds to 470."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_DROP_ONES",
+     "listen_for": [
+      "460"
+     ],
+     "ask": "Which ten is 468 nearer?",
+     "repair": "470."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_NO_CARRY",
+     "listen_for": [
+      "3100"
+     ],
+     "ask": "What comes after 390 when we count in tens?",
+     "repair": "400."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_WRONG_PLACE",
+     "listen_for": [
+      "500"
+     ],
+     "ask": "Did we round to the nearest ten or hundred?",
+     "repair": "Ten: 460."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_FIVE_DOWN",
+     "listen_for": [
+      "340"
+     ],
+     "ask": "What is the rule when the ones digit is 5?",
+     "repair": "Go up: 350."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Round 734 to the nearest ten.",
+     "answer": "730",
+     "shows": "round down"
+    },
+    {
+     "question": "Round 895 to the nearest ten.",
+     "answer": "900",
+     "shows": "carry into the hundreds"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
+   "key_step": "The child finds factors in pairs that multiply to the number, starting with 1 and the number itself, and tests each by dividing.",
+   "floor": {
+    "prerequisite": "Multiplication facts.",
+    "question": "4 x 6 = ?",
+    "answer": "24"
+   },
+   "representations": [
+    "arrays of counters",
+    "factor pairs as a rainbow",
+    "sharing sweets equally"
+   ],
+   "steps": [
+    "Start with 1 x the number.",
+    "Try 2, 3, 4 and so on.",
+    "Keep each pair that divides with nothing left.",
+    "Stop when the pairs meet."
+   ],
+   "contexts": [
+    "arranging chairs in equal rows",
+    "sharing mangoes equally",
+    "packing eggs in trays"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 12 counters in one row."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child makes other rectangles with the 12 counters."
+    },
+    {
+     "beat": "count",
+     "do": "Count the rows and columns of each rectangle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 x 12, 2 x 6, 3 x 4: the factors are 1, 2, 3, 4, 6, 12."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_ONLY_ITSELF",
+     "listen_for": [
+      "2, 3, 4, 6"
+     ],
+     "ask": "Can 12 counters make one long row?",
+     "repair": "Yes: 1 and 12 are factors too."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_MULTIPLE_SWAP",
+     "listen_for": [
+      "6, 12, 18"
+     ],
+     "ask": "Do these divide into 6 or come after it?",
+     "repair": "After it: those are multiples."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_MISSED_PAIR",
+     "listen_for": [
+      "missing 12 and 18"
+     ],
+     "ask": "What goes with 3 to make 36?",
+     "repair": "12, and 2 goes with 18."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_NOT_TESTED",
+     "listen_for": [
+      "7 is odd"
+     ],
+     "ask": "What is 42 divided by 7?",
+     "repair": "6, nothing left: 7 is a factor."
+    }
+   ],
+   "checks": [
+    {
+     "question": "List the factors of 18.",
+     "answer": "1, 2, 3, 6, 9, 18",
+     "shows": "all pairs"
+    },
+    {
+     "question": "Is 5 a factor of 45?",
+     "answer": "Yes: 45 ÷ 5 = 9",
+     "shows": "testing by dividing"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
+   "key_step": "The child counts in steps of the number from the number itself, and tests a multiple by dividing with nothing left.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "6 x 4 = ?",
+    "answer": "24"
+   },
+   "representations": [
+    "a hundred square with multiples shaded",
+    "skip counting on a number line",
+    "times table rows"
+   ],
+   "steps": [
+    "Start at the number itself.",
+    "Add the number each time.",
+    "To test, divide: nothing left means a multiple.",
+    "A multiple is in the times table; a factor goes into the number."
+   ],
+   "contexts": [
+    "a bus that comes every 4 days",
+    "packets of 6 pencils",
+    "a market every 7 days"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 0 to 30."
+    },
+    {
+     "beat": "count",
+     "do": "Count in fives with the child, jumping from 5."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: will we land on 23?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Circle 5, 10, 15, 20, 25, 30."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_FACTOR_SWAP",
+     "listen_for": [
+      "1, 5"
+     ],
+     "ask": "Are those numbers that go into 5, or come from 5 x ?",
+     "repair": "Go into 5: those are factors."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_STARTS_AT_ZERO_OR_ONE",
+     "listen_for": [
+      "8, 9, 10"
+     ],
+     "ask": "What is 7 x 1?",
+     "repair": "7: the first multiple is 7."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_NOT_CHECKED",
+     "listen_for": [
+      "bigger than 4"
+     ],
+     "ask": "What is 25 divided by 4?",
+     "repair": "6 remainder 1: not a multiple."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_ANY_EVEN",
+     "listen_for": [
+      "both are even"
+     ],
+     "ask": "Do we land on 14 counting in fours?",
+     "repair": "No: 12, then 16."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the multiples of 9 between 20 and 50.",
+     "answer": "27, 36, 45",
+     "shows": "skip counting"
+    },
+    {
+     "question": "Is 42 a multiple of 6?",
+     "answer": "Yes: 6 x 7 = 42",
+     "shows": "testing"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
+   "key_step": "The child looks only at the ones digit: 0, 2, 4, 6 or 8 is even; 1, 3, 5, 7 or 9 is odd.",
+   "floor": {
+    "prerequisite": "Shares into two equal groups.",
+    "question": "Share 8 sweets between 2 children. How many each?",
+    "answer": "4"
+   },
+   "representations": [
+    "counters in pairs",
+    "a hundred square with even numbers shaded",
+    "learners in pairs"
+   ],
+   "steps": [
+    "Look at the ones digit only.",
+    "0, 2, 4, 6, 8: even.",
+    "1, 3, 5, 7, 9: odd.",
+    "Check with pairs: one left over means odd."
+   ],
+   "contexts": [
+    "learners lining up in pairs",
+    "house numbers on a street",
+    "sharing bananas between two"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 7 counters in pairs."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the one left over.",
+     "say": "Has every counter a partner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7 is odd. Then write 47 and underline the 7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_EVEN_ODD_TENS_DIGIT",
+     "listen_for": [
+      "even"
+     ],
+     "ask": "Which digit tells us even or odd?",
+     "repair": "The ones digit: 7, so odd."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_ZERO_NOT_EVEN",
+     "listen_for": [
+      "odd"
+     ],
+     "ask": "Can 30 learners make pairs with nobody left?",
+     "repair": "Yes: 30 is even."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_EVEN_MEANS_BIG",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "Does size decide even or odd?",
+     "repair": "No: look at the ones digit."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_ODD_PLUS_ODD_ODD",
+     "listen_for": [
+      "odd"
+     ],
+     "ask": "What happens to the two left-over counters?",
+     "repair": "They make a pair: 42 is even."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_EVEN_PAIRS_COUNTED",
+     "listen_for": [
+      "8 pairs"
+     ],
+     "ask": "Is anyone without a partner?",
+     "repair": "Yes, one: 17 is odd."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 58 even or odd?",
+     "answer": "even",
+     "shows": "ones digit"
+    },
+    {
+     "question": "Write the odd numbers between 70 and 80.",
+     "answer": "71, 73, 75, 77, 79",
+     "shows": "listing"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
+   "key_step": "The child finds the step between terms, checks every term is even or every term odd, and uses the step to find the missing term.",
+   "floor": {
+    "prerequisite": "Even and odd numbers.",
+    "question": "Is 35 even or odd?",
+    "answer": "odd"
+   },
+   "representations": [
+    "a number line with jumps",
+    "house numbers on one side of a road",
+    "a hundred square"
+   ],
+   "steps": [
+    "Find what is added each time.",
+    "Check the kind: all even or all odd.",
+    "Add the step to find the next term.",
+    "Check the answer is the same kind."
+   ],
+   "contexts": [
+    "house numbers on one side of a street",
+    "seats in a hall",
+    "steps on a staircase"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw jumps on a number line: 31, 33, ?, 37."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the jump from 31 to 33.",
+     "say": "How big is each jump?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 35 in the gap."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_ADD_ONE",
+     "listen_for": [
+      "17"
+     ],
+     "ask": "How much is added from 12 to 14?",
+     "repair": "2, so 18."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_WRONG_PARITY",
+     "listen_for": [
+      "34"
+     ],
+     "ask": "Are the numbers even or odd?",
+     "repair": "Odd: 35."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_HOUSES_ONE_SIDE",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Are the houses on this side even or odd?",
+     "repair": "Even: 8."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_ADDING_CHANGES_PARITY",
+     "listen_for": [
+      "even"
+     ],
+     "ask": "Is 5 + 4 even or odd?",
+     "repair": "Odd: 9, then 13, then 17."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Next: 21, 25, 29, ?",
+     "answer": "33",
+     "shows": "step and kind"
+    },
+    {
+     "question": "Missing: 40, ?, 48, 52",
+     "answer": "44",
+     "shows": "missing term"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
+   "key_step": "The child builds 1 to 10 from I, V and X: add a numeral after a bigger one, take away one before it (IV, IX).",
+   "floor": {
+    "prerequisite": "Counts 1 to 10.",
+    "question": "What comes after 8?",
+    "answer": "9"
+   },
+   "representations": [
+    "a clock face with Roman numerals",
+    "matchsticks",
+    "cards I, V, X"
+   ],
+   "steps": [
+    "I is 1, V is 5, X is 10.",
+    "A numeral after a bigger one is added: VI is 6.",
+    "I before a bigger one is taken away: IV is 4, IX is 9.",
+    "Never more than three of the same in a row."
+   ],
+   "contexts": [
+    "a clock face in the classroom",
+    "chapter numbers in a book",
+    "class numbers on a door"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write V and then IV and VI under it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the I before the V.",
+     "say": "Is it added or taken away?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for taken away."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write IV = 4, VI = 6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_IV_AS_6",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Is the I before or after the V?",
+     "repair": "Before: take away, 4."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_IIII_FOR_4",
+     "listen_for": [
+      "IIII"
+     ],
+     "ask": "Can we write four I in a row?",
+     "repair": "No: IV."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_X_AS_5",
+     "listen_for": [
+      "V"
+     ],
+     "ask": "Which numeral is 10?",
+     "repair": "X."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_CLOCK_NUMBER_AS_MINUTES",
+     "listen_for": [
+      "3 minutes"
+     ],
+     "ask": "How many minutes is each number on the clock?",
+     "repair": "Five: III is 15 minutes."
+    },
+    {
+     "code": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_IX_AS_11",
+     "listen_for": [
+      "11"
+     ],
+     "ask": "Is the I before or after the X?",
+     "repair": "Before: 9."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 7 in Roman numerals.",
+     "answer": "VII",
+     "shows": "adding"
+    },
+    {
+     "question": "What number is IX?",
+     "answer": "9",
+     "shows": "taking away"
+    }
+   ]
+  }
+ ]
+}

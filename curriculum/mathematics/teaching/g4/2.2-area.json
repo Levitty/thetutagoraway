@@ -1,0 +1,282 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.AREA",
+ "title": "Area",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words (verified); d is read (attitude). The design uses unit squares, rows and columns: no formula in letters and no units like cm squared. Outcome a is practical (placing one surface over another); the typed skill compares areas counted in unit squares.",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.AREA.COMPARE_AREA",
+   "key_step": "The child compares surfaces by covering: the one that covers the other completely is larger; when each sticks out, count the squares.",
+   "floor": {
+    "prerequisite": "Counts unit squares.",
+    "question": "How many squares cover a 2 by 3 rectangle?",
+    "answer": "6"
+   },
+   "representations": [
+    "real surfaces laid on each other",
+    "paper cut-outs",
+    "squares on a grid"
+   ],
+   "steps": [
+    "Lay one surface on the other.",
+    "If one covers the other, it is larger.",
+    "If each sticks out, cover both with squares.",
+    "Count and compare."
+   ],
+   "contexts": [
+    "two exercise books",
+    "a desk top and a chalkboard",
+    "two plots of land on a drawing"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a long strip of 10 squares and a 3 by 4 rectangle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the strip.",
+     "say": "It is longer. Is it larger?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "count",
+     "do": "Count the squares of each with the child."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 10 and 12: B is larger."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_LONGER_IS_LARGER",
+     "listen_for": [
+      "A"
+     ],
+     "ask": "Count the squares in each.",
+     "repair": "10 and 12: B."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_COUNTS_EDGES",
+     "listen_for": [
+      "A"
+     ],
+     "ask": "Are we comparing the edges or the surface?",
+     "repair": "The surface: count the squares."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_CUT_CHANGES",
+     "listen_for": [
+      "bigger"
+     ],
+     "ask": "Did we add any paper?",
+     "repair": "No: the area is the same."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_ONE_SIDE_STICKS_OUT",
+     "listen_for": [
+      "A"
+     ],
+     "ask": "Does B stick out anywhere?",
+     "repair": "Yes: count squares to decide."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Shape P is 2 by 6 squares and shape Q is 3 by 3. Which is larger?",
+     "answer": "P",
+     "shows": "count to compare"
+    },
+    {
+     "question": "A square is cut in half and the halves joined end to end. Has the area changed?",
+     "answer": "no",
+     "shows": "same paper"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
+   "key_step": "The child counts every unit square inside the shape once, joining halves into wholes, and gives the answer in squares.",
+   "floor": {
+    "prerequisite": "Counts objects in rows.",
+    "question": "How many dots in 3 rows of 4?",
+    "answer": "12"
+   },
+   "representations": [
+    "a grid",
+    "square tiles",
+    "a floor of square tiles"
+   ],
+   "steps": [
+    "Count row by row.",
+    "Mark each square as you count it.",
+    "Pair up half squares.",
+    "Write the answer in squares."
+   ],
+   "contexts": [
+    "tiles on a classroom floor",
+    "a vegetable plot drawn on squared paper",
+    "a mat"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 4 by 3 rectangle on a grid."
+    },
+    {
+     "beat": "count",
+     "do": "Count the squares row by row with the child, ticking each."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: did we count the middle squares?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12 squares."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_COUNTS_EDGE_ONLY",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Did we count the middle squares?",
+     "repair": "No: 12."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_COUNTS_TWICE",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "Did you tick each square?",
+     "repair": "Count again: 15."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_UNIT_LENGTH",
+     "listen_for": [
+      "12 cm"
+     ],
+     "ask": "Is area a length?",
+     "repair": "No: 12 squares."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_HALF_SQUARES_WHOLE",
+     "listen_for": [
+      "10 squares"
+     ],
+     "ask": "How many halves make a whole?",
+     "repair": "Two: 6 + 2 = 8."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A rectangle covers 5 rows of 3 squares. Count the squares.",
+     "answer": "15 squares",
+     "shows": "counting"
+    },
+    {
+     "question": "A shape covers 4 whole squares and 2 half squares. Area?",
+     "answer": "5 squares",
+     "shows": "halves"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
+   "key_step": "The child counts the rows and the squares in one row and multiplies them.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "4 x 6",
+    "answer": "24"
+   },
+   "representations": [
+    "an array of squares",
+    "tiles in rows",
+    "a grid"
+   ],
+   "steps": [
+    "Count the squares in one row.",
+    "Count the rows.",
+    "Multiply rows by squares in a row.",
+    "To find a missing side, divide."
+   ],
+   "contexts": [
+    "tiles on a floor",
+    "chairs in a hall seen from above",
+    "a garden plot"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 4 rows of 6 squares."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one row.",
+     "say": "How many in a row?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 rows x 6 = 24 squares."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_ADDS_ROWS_COLS",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Is it 4 + 6, or 4 rows of 6?",
+     "repair": "4 rows of 6: 24."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_PERIMETER_NOT_AREA",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "Is that the edge or the inside?",
+     "repair": "The edge: area is 20."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_MISSING_ROW_ADDS",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "How many rows of 6 make 24?",
+     "repair": "4: divide."
+    },
+    {
+     "code": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_ONE_ROW_ONLY",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many rows are there?",
+     "repair": "5: 35 squares."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A floor has 6 rows of 8 tiles. How many tiles?",
+     "answer": "48",
+     "shows": "multiply"
+    },
+    {
+     "question": "A rectangle has 30 squares in 5 rows. How many squares in each row?",
+     "answer": "6",
+     "shows": "missing side"
+    }
+   ]
+  }
+ ]
+}

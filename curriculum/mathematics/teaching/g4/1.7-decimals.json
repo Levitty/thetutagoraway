@@ -1,0 +1,377 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.DECIMALS",
+ "title": "Decimals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words (verified); e is digital use and f is attitude and neither is mapped. Decimals go up to hundredths. Money in shillings and cents is a natural context.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
+   "key_step": "The child shows a tenth as one of ten equal parts and a hundredth as one of a hundred equal parts of the same whole.",
+   "floor": {
+    "prerequisite": "A fraction of a whole.",
+    "question": "A strip is cut into 10 equal parts. What is one part?",
+    "answer": "1/10"
+   },
+   "representations": [
+    "a strip cut into ten",
+    "a hundred square",
+    "shillings and ten-cent coins"
+   ],
+   "steps": [
+    "Cut the whole into 10 equal parts: each is a tenth.",
+    "Cut each tenth into 10: each is a hundredth.",
+    "A tenth is ten hundredths.",
+    "The parts must be equal."
+   ],
+   "contexts": [
+    "a metre of cloth cut into ten",
+    "a hundred square in class",
+    "a shilling and its cents"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hundred square; shade one column."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the column.",
+     "say": "What part of the square is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for one tenth."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one small square.",
+     "say": "And this one?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1/10 and 1/100."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_TENTH_AS_TEN",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Is a tenth bigger or smaller than one whole?",
+     "repair": "Smaller: 0.1."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_HUNDREDTH_SAME_AS_TENTH",
+     "listen_for": [
+      "1/100"
+     ],
+     "ask": "How many columns are in the square?",
+     "repair": "10: one column is 1/10."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_PARTS_NOT_EQUAL",
+     "listen_for": [
+      "a tenth"
+     ],
+     "ask": "Are the pieces equal?",
+     "repair": "No: not tenths."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_HUNDREDTH_BIGGER",
+     "listen_for": [
+      "1/100"
+     ],
+     "ask": "Which piece is bigger on the square?",
+     "repair": "The column: 1/10."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many hundredths make one tenth?",
+     "answer": "10",
+     "shows": "relation"
+    },
+    {
+     "question": "Which is smaller, 1/10 or 1/100?",
+     "answer": "1/100",
+     "shows": "size"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
+   "key_step": "The child writes tenths in the first place after the point and hundredths in the second, with a 0 for an empty place.",
+   "floor": {
+    "prerequisite": "A tenth and a hundredth.",
+    "question": "How many tenths is one column of a hundred square?",
+    "answer": "1"
+   },
+   "representations": [
+    "a place value chart with a point",
+    "a hundred square",
+    "money: 0.50 is 50 cents"
+   ],
+   "steps": [
+    "Write the wholes before the point.",
+    "Tenths in the first place after the point.",
+    "Hundredths in the second place.",
+    "Write 0 in an empty place."
+   ],
+   "contexts": [
+    "metres of cloth",
+    "prices in shillings and cents",
+    "a runner's time"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart: Ones . Tenths Hundredths."
+    },
+    {
+     "beat": "write",
+     "do": "Write 7/100 above it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: is there any tenth?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 0.07."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_FRACTION_AS_TWO_WHOLES",
+     "listen_for": [
+      "3.10"
+     ],
+     "ask": "How many wholes are there?",
+     "repair": "None: 0.3."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_HUNDREDTH_ONE_DIGIT",
+     "listen_for": [
+      "0.7"
+     ],
+     "ask": "Is 7 tenths or 7 hundredths?",
+     "repair": "Hundredths: 0.07."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_READ_AS_WHOLE",
+     "listen_for": [
+      "point thirty-seven"
+     ],
+     "ask": "How do we read digits after the point?",
+     "repair": "One by one: three seven."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_TENTHS_OVER_TEN",
+     "listen_for": [
+      "0.12"
+     ],
+     "ask": "How many tenths make a whole?",
+     "repair": "Ten: 1.2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 4/10 as a decimal.",
+     "answer": "0.4",
+     "shows": "tenths"
+    },
+    {
+     "question": "Write 2 and 5/100 as a decimal.",
+     "answer": "2.05",
+     "shows": "zero place holder"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
+   "key_step": "The child names places right of the point as tenths then hundredths, and gives a digit's value as that many tenths or hundredths.",
+   "floor": {
+    "prerequisite": "Writes decimals.",
+    "question": "Write 6/10 as a decimal.",
+    "answer": "0.6"
+   },
+   "representations": [
+    "a place value chart with the point",
+    "money: shillings, ten cents, cents",
+    "a metre stick"
+   ],
+   "steps": [
+    "Find the point.",
+    "Right of it: tenths, then hundredths.",
+    "The value is the digit times its place.",
+    "A zero keeps the place."
+   ],
+   "contexts": [
+    "prices in shillings and cents",
+    "lengths in metres",
+    "rainfall measured in a gauge"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart and write 4.65."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 6.",
+     "say": "Which place is just after the point?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for tenths."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 tenths = 0.6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_PLACE_NAME_AS_WHOLE",
+     "listen_for": [
+      "tens"
+     ],
+     "ask": "Is it left or right of the point?",
+     "repair": "Right: tenths."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_VALUE_OF_DIGIT",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Is the 6 six wholes?",
+     "repair": "No: 0.6."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_ZERO_PLACE_HOLDER",
+     "listen_for": [
+      "tenths"
+     ],
+     "ask": "What is in the tenths place?",
+     "repair": "0: the 7 is hundredths."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_PLACES_REVERSED",
+     "listen_for": [
+      "tenths"
+     ],
+     "ask": "Which place comes first after the point?",
+     "repair": "Tenths, then hundredths: the 8 is hundredths."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the value of 3 in 5.38?",
+     "answer": "0.3",
+     "shows": "value"
+    },
+    {
+     "question": "In 2.09 which place is the 9 in?",
+     "answer": "hundredths",
+     "shows": "zero place"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS",
+   "key_step": "The child lines up the points, gives both numbers the same number of places, and compares from the left.",
+   "floor": {
+    "prerequisite": "Decimal place value.",
+    "question": "Which is bigger, 6 tenths or 58 hundredths?",
+    "answer": "6 tenths"
+   },
+   "representations": [
+    "a place value chart",
+    "a number line from 0 to 1",
+    "money: 0.60 and 0.58 shillings"
+   ],
+   "steps": [
+    "Line up the points.",
+    "Fill empty places with 0.",
+    "Compare the wholes, then tenths, then hundredths.",
+    "Write in the direction asked."
+   ],
+   "contexts": [
+    "lengths of ribbons",
+    "times in a race",
+    "masses of fruit"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 0 to 1 in tenths."
+    },
+    {
+     "beat": "point",
+     "do": "Mark 0.6 and 0.58.",
+     "say": "Which is further along?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 0.6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 0.60 > 0.58."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_LONGER_IS_LARGER",
+     "listen_for": [
+      "0.58"
+     ],
+     "ask": "Write 0.6 as hundredths. What is it?",
+     "repair": "0.60: bigger."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_DIGITS_AFTER_POINT_AS_WHOLE",
+     "listen_for": [
+      "0.29"
+     ],
+     "ask": "Is 29 hundredths more than 5 tenths?",
+     "repair": "No: 0.5 is 50 hundredths."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_ORDER_DIRECTION",
+     "listen_for": [
+      "0.44, 0.4, 0.04"
+     ],
+     "ask": "Which comes first, smallest or largest?",
+     "repair": "Smallest: 0.04."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_SHORTER_IS_LARGER",
+     "listen_for": [
+      "0.3"
+     ],
+     "ask": "Write 0.3 as hundredths.",
+     "repair": "0.30 is less than 0.35."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order smallest to largest: 0.7, 0.07, 0.17.",
+     "answer": "0.07, 0.17, 0.7",
+     "shows": "ordering"
+    },
+    {
+     "question": "Which is larger, 0.4 or 0.45?",
+     "answer": "0.45",
+     "shows": "same places"
+    }
+   ]
+  }
+ ]
+}

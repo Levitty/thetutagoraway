@@ -1,0 +1,287 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.VOLUME",
+ "title": "Volume",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words (verified); d is attitudinal. The design is by piling blocks (counting unit cubes in layers), with no formula in letters. Outcome a is practical (piling objects); the typed skill counts blocks from a picture.",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.VOLUME.STACK_CUBES",
+   "key_step": "The child piles blocks into cubes and cuboids with flat faces and counts every block, including the hidden ones, layer by layer.",
+   "floor": {
+    "prerequisite": "Counts objects.",
+    "question": "Count the blocks in a row of 6.",
+    "answer": "6"
+   },
+   "representations": [
+    "real blocks or matchboxes",
+    "a picture of layers",
+    "a pile drawn layer by layer"
+   ],
+   "steps": [
+    "Pile the blocks in flat layers.",
+    "Count the blocks in one layer.",
+    "Count the layers.",
+    "Count the hidden blocks too."
+   ],
+   "contexts": [
+    "bricks at a building site",
+    "boxes in a shop store",
+    "matchboxes on a desk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 2 layers of 3 by 2 blocks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top layer.",
+     "say": "How many blocks in this layer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: is there a layer under it we cannot see?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 + 6 = 12 blocks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.STACK_CUBES.M_VOL_CUBE_CUBOID_SWAP",
+     "listen_for": [
+      "cube"
+     ],
+     "ask": "Are all the edges of a matchbox the same length?",
+     "repair": "No: a cuboid."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.STACK_CUBES.M_VOL_COUNT_VISIBLE_ONLY",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "What holds up the top blocks?",
+     "repair": "A hidden layer: 12."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.STACK_CUBES.M_VOL_STEPS_CALLED_CUBOID",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are all the faces flat rectangles?",
+     "repair": "No: not a cuboid."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.STACK_CUBES.M_VOL_TALLER_MORE_BLOCKS",
+     "listen_for": [
+      "A"
+     ],
+     "ask": "Count the blocks in B.",
+     "repair": "8: B has more."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A pile has 3 layers of 4 blocks. How many blocks?",
+     "answer": "12",
+     "shows": "layers"
+    },
+    {
+     "question": "Is a dice a cube or a cuboid?",
+     "answer": "cube",
+     "shows": "naming"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
+   "key_step": "The child counts the blocks in one layer (rows times columns) and multiplies by the number of layers.",
+   "floor": {
+    "prerequisite": "Area as rows times columns.",
+    "question": "4 rows of 3",
+    "answer": "12"
+   },
+   "representations": [
+    "blocks piled into a cuboid",
+    "a picture in layers",
+    "a box filled with cubes"
+   ],
+   "steps": [
+    "Find the blocks in the bottom layer.",
+    "Count the layers.",
+    "Multiply.",
+    "Write the answer in blocks."
+   ],
+   "contexts": [
+    "bricks in a pile",
+    "soap bars in a carton",
+    "boxes on a lorry"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cuboid 4 long, 3 wide, 2 high in blocks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom layer.",
+     "say": "How many blocks in it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12 x 2 = 24 blocks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_ADDS_DIMENSIONS",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Is it 4 + 3 + 2 blocks?",
+     "repair": "No: 12 in a layer, 24."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_ONE_LAYER_ONLY",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "How many layers?",
+     "repair": "3: 30."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_SURFACE_NOT_VOLUME",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Are we counting faces or blocks?",
+     "repair": "Blocks: 12."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_LAYERS_ADDED",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "Is it 10 + 3, or 3 layers of 10?",
+     "repair": "3 layers of 10: 30."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A cuboid is 5 blocks long, 2 wide and 3 high. How many blocks?",
+     "answer": "30",
+     "shows": "layers"
+    },
+    {
+     "question": "A box holds 4 layers of 6 cubes. How many cubes?",
+     "answer": "24",
+     "shows": "layer times height"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
+   "key_step": "The child sees a cube has the same number of blocks along every edge and multiplies side x side x side.",
+   "floor": {
+    "prerequisite": "Volume of a cuboid.",
+    "question": "A cuboid 2 by 2 by 3 blocks has how many?",
+    "answer": "12"
+   },
+   "representations": [
+    "blocks piled into a cube",
+    "a cube drawn in layers",
+    "a dice made of small cubes"
+   ],
+   "steps": [
+    "Count the blocks along one edge.",
+    "One layer is side x side.",
+    "There are as many layers as the side.",
+    "Multiply."
+   ],
+   "contexts": [
+    "a box of sugar cubes",
+    "a cube of building blocks",
+    "a carton"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cube 3 blocks long, in layers."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top layer.",
+     "say": "How many blocks in it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 9."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shows the 3 layers."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 9 x 3 = 27 blocks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_SIDE_ONLY",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is the cube only one row?",
+     "repair": "No: 27."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_SQUARES_SIDE",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "How many layers of 16?",
+     "repair": "4: 64."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_TIMES_THREE",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "Is it 5 + 5 + 5, or 5 x 5 x 5?",
+     "repair": "5 x 5 x 5 = 125."
+    },
+    {
+     "code": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_LAYER_PLUS_SIDE",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Do we add the 3 layers or multiply?",
+     "repair": "Multiply: 27."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A cube is 2 blocks long. How many blocks?",
+     "answer": "8",
+     "shows": "side cubed"
+    },
+    {
+     "question": "A cube is 4 blocks long. How many blocks?",
+     "answer": "64",
+     "shows": "layers"
+    }
+   ]
+  }
+ ]
+}

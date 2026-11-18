@@ -1,0 +1,279 @@
+{
+ "sub_strand": "MATH.G4.GEOMET.ANGLES",
+ "title": "Angles",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words (verified); d is attitudinal. Grade 4 only identifies and relates angles to turns: no measuring in degrees and no named types (acute, obtuse) are in the outcomes. A right angle is met as a quarter turn, as outcome c links turns and angles.",
+ "skills": [
+  {
+   "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
+   "key_step": "The child sees an angle as the opening between two lines that meet at a point, whatever their length or the way they face.",
+   "floor": {
+    "prerequisite": "Moves along a straight line from a point (Grade 3).",
+    "question": "Point to where the two edges of a book meet.",
+    "answer": "the corner"
+   },
+   "representations": [
+    "two sticks joined at one end",
+    "scissors opening",
+    "lines drawn on paper"
+   ],
+   "steps": [
+    "Find the point where two lines meet.",
+    "The angle is the opening between them.",
+    "Long or short arms do not change it.",
+    "Turned any way, it is still an angle."
+   ],
+   "contexts": [
+    "opening a door",
+    "scissors in the classroom",
+    "the hands of a clock"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two angles with the same opening, one with long arms."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the openings.",
+     "say": "Which opening is wider?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the same."
+    },
+    {
+     "beat": "reveal",
+     "do": "Shade both openings the same size."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_ARM_LENGTH",
+     "listen_for": [
+      "the longer arms"
+     ],
+     "ask": "Is the opening wider or just the arms longer?",
+     "repair": "Only the arms: they are the same."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_IS_THE_LINE",
+     "listen_for": [
+      "a straight line"
+     ],
+     "ask": "Is the angle a line or the space between two lines?",
+     "repair": "The space: the opening."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_COUNT_SIDES",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "How many corners does a triangle have?",
+     "repair": "3 angles."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_TURNED_NOT_ANGLE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Turn the page. Is the opening still there?",
+     "repair": "Yes: it is an angle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many angles has a square?",
+     "answer": "4",
+     "shows": "counting angles"
+    },
+    {
+     "question": "Two angles have the same opening; one has arms twice as long. Which is bigger?",
+     "answer": "neither: they are the same",
+     "shows": "arm length"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
+   "key_step": "The child finds angles at the corners of objects, of any opening, and knows curved edges have none.",
+   "floor": {
+    "prerequisite": "An angle at a point.",
+    "question": "Where is the angle in an open pair of scissors?",
+    "answer": "where the blades meet"
+   },
+   "representations": [
+    "classroom objects",
+    "paper corners",
+    "shapes cut from card"
+   ],
+   "steps": [
+    "Look for corners where two straight edges meet.",
+    "Each corner is an angle.",
+    "Square corners are right angles; others are angles too.",
+    "Curved edges have no corners."
+   ],
+   "contexts": [
+    "a window frame",
+    "a triangular flag",
+    "a round plate"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a book, a triangular flag and a plate."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the flag.",
+     "say": "How many corners?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the angles: book 4, flag 3, plate 0."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_CURVED_HAS_ANGLE",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Can you find a corner on a circle?",
+     "repair": "No: 0."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_RECTANGLE_ANGLES",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Count the corners of a rectangle.",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_SQUARE_CORNER_ONLY_SQUARES",
+     "listen_for": [
+      "only a square"
+     ],
+     "ask": "Does a door have square corners?",
+     "repair": "Yes: a rectangle has right angles too."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_ONLY_SQUARE_CORNERS",
+     "listen_for": [
+      "not a square corner"
+     ],
+     "ask": "Do two edges meet at the point of the flag?",
+     "repair": "Yes: it is an angle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many angles has a triangle?",
+     "answer": "3",
+     "shows": "objects"
+    },
+    {
+     "question": "Does a rectangle have right angles?",
+     "answer": "yes, four",
+     "shows": "square corners"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE",
+   "key_step": "The child links turns to angles: a quarter turn makes a right angle, a half turn a straight line, a full turn returns to the start; a bigger turn makes a bigger angle.",
+   "floor": {
+    "prerequisite": "Quarter, half and full turns.",
+    "question": "How many quarter turns make a half turn?",
+    "answer": "2"
+   },
+   "representations": [
+    "a door opening",
+    "clock hands",
+    "two strips joined with a pin"
+   ],
+   "steps": [
+    "Start with the two strips together.",
+    "Turn one a quarter: a right angle.",
+    "Turn a half: a straight line.",
+    "Turn a full turn: back to the start."
+   ],
+   "contexts": [
+    "a door opening",
+    "the hands of a clock",
+    "a gate swinging"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock showing 3 o'clock."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hands.",
+     "say": "How much has the minute hand turned from 12 to 3?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a quarter turn."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the square corner: a right angle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_QUARTER_AS_STRAIGHT",
+     "listen_for": [
+      "a straight line"
+     ],
+     "ask": "Is a quarter turn half way round?",
+     "repair": "No: it makes a right angle."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_ANGLE_SMALLER_TURN",
+     "listen_for": [
+      "quarter turn"
+     ],
+     "ask": "Which opens wider, a quarter or a half turn?",
+     "repair": "The half turn."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_HOUR_HAND_RIGHT_ANGLE",
+     "listen_for": [
+      "4 o'clock"
+     ],
+     "ask": "Fit a book corner between the hands at 3 o'clock.",
+     "repair": "It fits: 3 o'clock."
+    },
+    {
+     "code": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_FULL_AS_STRAIGHT",
+     "listen_for": [
+      "a straight line"
+     ],
+     "ask": "Which turn makes a straight line?",
+     "repair": "A half turn; a full turn goes back to the start."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What angle does a quarter turn make?",
+     "answer": "a right angle",
+     "shows": "quarter"
+    },
+    {
+     "question": "Which makes a bigger angle, a half turn or a quarter turn?",
+     "answer": "a half turn",
+     "shows": "compare"
+    }
+   ]
+  }
+ ]
+}
