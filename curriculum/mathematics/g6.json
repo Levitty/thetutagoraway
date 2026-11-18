@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 161,
-  "misconceptions": 294
+  "prerequisites": 165,
+  "misconceptions": 302
  },
  "sub_strands": [
   {
@@ -6640,6 +6640,13 @@
        "strength": "helpful",
        "reason": "Reading the clock comes first.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading the hours and minutes on a clock comes before naming the half of the day.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -6669,6 +6676,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Needs to know which half of the day.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading a clock face, including quarter to and quarter past.",
        "status": "proposed"
       }
      ],
@@ -6701,6 +6715,13 @@
        "strength": "essential",
        "reason": "Writes the time with a.m. or p.m. first.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing which half of the day a time is in decides whether 12 hours are added.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -6730,6 +6751,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Relating the two systems first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.TIME.WRITE_AM_PM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A 24-hour time changed back needs a.m. or p.m. written.",
        "status": "proposed"
       }
      ],
@@ -6953,6 +6981,126 @@
      "reveals": "The a.m. version of the time.",
      "help": "Ask whether it is before or after noon.",
      "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_PM_STARTS_IN_EVENING",
+     "skill": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
+     "error": "Believes p.m. starts in the evening, so calls afternoon times a.m.",
+     "example": {
+      "question": "Is 3 o'clock in the afternoon a.m. or p.m.?",
+      "wrong_answer": "a.m.",
+      "correct_answer": "p.m."
+     },
+     "cause": "Links p.m. with darkness and evening, not with \"after noon\".",
+     "reveals": "a.m. for an afternoon time.",
+     "help": "Draw the day line: everything after 12 noon is p.m., even in daylight.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_SWAHILI_HOURS",
+     "skill": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
+     "error": "Reads a time said in Swahili time as the same hour in English time.",
+     "example": {
+      "question": "\"Saa tatu asubuhi\" in English time",
+      "wrong_answer": "3:00 a.m.",
+      "correct_answer": "9:00 a.m."
+     },
+     "cause": "Swahili time counts the hours from 6 a.m. (saa moja is 7 a.m.); the child uses the number without adding 6.",
+     "reveals": "The hour six hours early as an option.",
+     "help": "Swahili time starts at sunrise: add 6 hours to the Swahili hour (saa tatu = 3 + 6 = 9 o'clock).",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE.M_AM_ALSO_PLUS_12",
+     "skill": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE",
+     "error": "Adds 12 to a.m. times as well as p.m. times.",
+     "example": {
+      "question": "9 a.m. in 24-hour time",
+      "wrong_answer": "21:00",
+      "correct_answer": "09:00"
+     },
+     "cause": "Thinks the 24-hour clock always means adding 12.",
+     "reveals": "An a.m. time with 12 added.",
+     "help": "Only hours after noon get 12 added; morning hours stay the same.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE.M_MINUTES_CHANGED_TOO",
+     "skill": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE",
+     "error": "Adds 12 to the minutes as well as the hours.",
+     "example": {
+      "question": "3:20 p.m. in 24-hour time",
+      "wrong_answer": "15:32",
+      "correct_answer": "15:20"
+     },
+     "cause": "Adds 12 to every number in the time.",
+     "reveals": "A time with the minutes changed.",
+     "help": "The minutes never change: only the hour gets 12 added.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.CONVERT_12_24.M_PM_ON_24H",
+     "skill": "MATH.G6.MEASUR.TIME.CONVERT_12_24",
+     "error": "Writes a 24-hour time with p.m. instead of taking 12 away.",
+     "example": {
+      "question": "18:30 in 12-hour time",
+      "wrong_answer": "18:30 p.m.",
+      "correct_answer": "6:30 p.m."
+     },
+     "cause": "Adds p.m. without changing the hour.",
+     "reveals": "The 24-hour number with p.m. as an option.",
+     "help": "On a 12-hour clock no hour is more than 12: take 12 away, then write p.m.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.CONVERT_12_24.M_SUBTRACT_TEN",
+     "skill": "MATH.G6.MEASUR.TIME.CONVERT_12_24",
+     "error": "Takes 10 away from a 24-hour hour to get the 12-hour time.",
+     "example": {
+      "question": "16:00 in 12-hour time",
+      "wrong_answer": "6:00 p.m.",
+      "correct_answer": "4:00 p.m."
+     },
+     "cause": "Drops the first digit of the hour.",
+     "reveals": "A time two hours late as an option.",
+     "help": "Take away 12, not 10: 16 - 12 = 4.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE.M_HOURS_ONLY",
+     "skill": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE",
+     "error": "Takes the hours away and ignores the minutes.",
+     "example": {
+      "question": "A bus leaves at 08:40 and arrives at 11:15. How long is the journey?",
+      "wrong_answer": "3 hours",
+      "correct_answer": "2 h 35 min"
+     },
+     "cause": "Looks only at the hour numbers.",
+     "reveals": "A whole number of hours as an option.",
+     "help": "Count on: 08:40 to 09:00 is 20 min, 09:00 to 11:00 is 2 h, 11:00 to 11:15 is 15 min.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE.M_OVERNIGHT_SUBTRACTED",
+     "skill": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE",
+     "error": "For an overnight journey takes the arrival time from the departure time.",
+     "example": {
+      "question": "A bus leaves at 21:30 and arrives at 05:00 the next day. How long is the journey?",
+      "wrong_answer": "16 h 30 min (21:30 - 05:00)",
+      "correct_answer": "7 h 30 min"
+     },
+     "cause": "Subtracts the smaller time from the larger.",
+     "reveals": "The other part of the day as an option.",
+     "help": "Count on to midnight (2 h 30 min), then from midnight to 05:00 (5 h).",
+     "source": "to be confirmed by a teacher (no source yet)",
      "status": "draft"
     }
    ]

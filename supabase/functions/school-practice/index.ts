@@ -115998,11 +115998,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_TIME",
     "pre": [
-      "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION"
+      "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION",
+      "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL"
     ],
     "mis": [
       "M_NOON_IS_AM",
-      "M_NIGHT_IS_PM"
+      "M_NIGHT_IS_PM",
+      "M_PM_STARTS_IN_EVENING",
+      "M_SWAHILI_HOURS"
     ]
   },
   "MATH.G6.MEASUR.TIME.WRITE_AM_PM": {
@@ -116017,7 +116020,8 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_TIME",
     "pre": [
-      "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY"
+      "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
+      "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE"
     ],
     "mis": [
       "M_TWELVE_AT_NIGHT",
@@ -116038,11 +116042,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_TIME",
     "pre": [
-      "MATH.G6.MEASUR.TIME.WRITE_AM_PM"
+      "MATH.G6.MEASUR.TIME.WRITE_AM_PM",
+      "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY"
     ],
     "mis": [
       "M_ADD_TEN",
-      "M_SAME_NUMBER"
+      "M_SAME_NUMBER",
+      "M_AM_ALSO_PLUS_12",
+      "M_MINUTES_CHANGED_TOO"
     ]
   },
   "MATH.G6.MEASUR.TIME.CONVERT_12_24": {
@@ -116057,11 +116064,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_TIME",
     "pre": [
-      "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE"
+      "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE",
+      "MATH.G6.MEASUR.TIME.WRITE_AM_PM"
     ],
     "mis": [
       "M_ADD_12_TO_NOON",
-      "M_MIDNIGHT_AS_12"
+      "M_MIDNIGHT_AS_12",
+      "M_PM_ON_24H",
+      "M_SUBTRACT_TEN"
     ]
   },
   "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE": {
@@ -116081,7 +116091,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_SUBTRACT_AS_DECIMAL",
-      "M_WRONG_ROW_READ"
+      "M_WRONG_ROW_READ",
+      "M_HOURS_ONLY",
+      "M_OVERNIGHT_SUBTRACTED"
     ]
   },
   "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET": {
