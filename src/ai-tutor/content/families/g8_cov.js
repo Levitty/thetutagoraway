@@ -179,7 +179,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ LINEAR EQUATIONS
-  cov({ id: 'g8c.eq.eliminate-subtract', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.c', form: 'steps', rung: 3,
+  cov({ id: 'g8c.eq.eliminate-subtract', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION', misMapped: false, reveals: ['M_NOT_DIVIDED_BY_COEFFICIENT', 'M_ADDED_INSTEAD_OF_SUBTRACTED'], form: 'steps', rung: 3,
     gen: () => {
       const c = pick([40, 50, 60, 70, 80]), t = pick([20, 30, 40, 50]), a = randInt(2, 4), b1 = randInt(1, 3), b2 = randInt(b1 + 1, 6), P1 = a * c + b1 * t, P2 = a * c + b2 * t;
       const w1 = [[P2 - P1, 'You subtracted the totals but did not divide by the difference in the number of packets of salt.'], [round((P1 + P2) / (b1 + b2), 2), 'The bars of soap are the same in both orders, so subtract the equations. Adding does not remove them.']];
@@ -191,7 +191,7 @@ export const FAMILIES = [
         steps: [`Subtract: ${b2 - b1} packets of salt cost ${sh(P2 - P1)}, so one packet is ${sh(t)}.`, `${a} bars of soap cost ${sh(P1)} − ${sh(b1 * t)} = ${sh(a * c)}, so one bar is ${sh(c)}.`], chk: (v) => a * v[1] + b1 * v[0] === P1 && a * v[1] + b2 * v[0] === P2 };
     } }),
 
-  cov({ id: 'g8c.eq.eliminate-add', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.c', form: 'steps', rung: 3,
+  cov({ id: 'g8c.eq.eliminate-add', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION', misMapped: false, reveals: ['M_EQUAL_SPLIT_ASSUMED', 'M_NOT_DIVIDED_BY_COEFFICIENT'], form: 'steps', rung: 3,
     gen: () => {
       const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S = big + small, p = person();
       const goods = pick(['maize', 'beans', 'rice', 'sugar']), other = pick(['flour', 'salt']);

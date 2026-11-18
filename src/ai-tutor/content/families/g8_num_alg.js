@@ -716,7 +716,7 @@ export const FAMILIES = [
     }) }),
 
   // ======================================================== LINEAR EQUATIONS
-  fam({ id: 'g8.eq.form-prices', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.a', rung: 2, form: 'direct',
+  fam({ id: 'g8.eq.form-prices', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.a', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS', misMapped: false, reveals: ['M_COEFFICIENTS_SWAPPED', 'M_COUNTS_LEFT_OUT', 'M_TOTALS_ADDED'], rung: 2, form: 'direct',
     draw: () => {
       const m = price('mandazi'), c = price('chapati'), a1 = randInt(2, 4), b1 = randInt(1, 3), a2 = randInt(1, 4), b2 = randInt(2, 5);
       if (m >= c || a1 === b1 || a2 === b2 || a1 * b2 === a2 * b1) return null;
@@ -734,7 +734,7 @@ export const FAMILIES = [
         steps: [`${ps[0].name}: ${a1} mandazi and ${b1} chapati make ${a1}m + ${b1}c = ${T1}.`, `${ps[1].name}: ${a2}m + ${b2}c = ${T2}.`] };
     } }),
 
-  fam({ id: 'g8.eq.form-sign-spot', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.a', rung: 3, form: 'spot',
+  fam({ id: 'g8.eq.form-sign-spot', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.a', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS', rung: 3, form: 'spot',
     draw: () => ({ S: randInt(14, 40) * 2, d: randInt(2, 6) * 2, p: person() }),
     make: ({ S, d, p }) => {
       const sign = '−';
@@ -745,24 +745,25 @@ export const FAMILIES = [
           { text: `The big bag is heavier: x = y ${sign} ${d}.`, ok: sign === '+' },
           { text: `Substitute: (y ${sign} ${d}) + y = ${S}, so 2y = ${S + d}.`, ok: true },
         ],
+        mis: 'M_MORE_THAN_SIGN_REVERSED',
         fix: `If the big bag is ${d} kg heavier, you add ${d} to the small bag: x = y + ${d}.`,
         steps: ['Write what is the same in both statements.', 'A heavier bag is the lighter one plus the difference.'] };
     } }),
 
-  fam({ id: 'g8.eq.eliminate-steps', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.b', rung: 3, form: 'steps',
+  fam({ id: 'g8.eq.eliminate-steps', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION', rung: 3, form: 'steps',
     draw: () => { const a = randInt(2, 5), b1 = randInt(1, 3), b2 = b1 + randInt(1, 3), x = randInt(1, 6), y = randInt(1, 6); return { a, b1, b2, x, y, c1: a * x + b1 * y, c2: a * x + b2 * y }; },
     make: ({ a, b1, b2, x, y, c1, c2 }) => ({
       question: `The equations ${a}x + ${b1 === 1 ? '' : b1}y = ${c1} and ${a}x + ${b2}y = ${c2} are true together. Follow the method of elimination to find x and y.`,
       parts: [
-        { prompt: 'Take the first equation from the second. The x terms cancel. What number is on the right-hand side?', answer: c2 - c1, hint: `${c2} − ${c1}`, wrong: [[c1 + c2, 'To make the x terms cancel you subtract the equations.']] },
-        { prompt: `The left-hand side is ${b2 - b1}y. What is y?`, answer: y, hint: `Divide the right-hand side by ${b2 - b1}.`, wrong: [[c2 - c1, `Divide by the number in front of y, which is ${b2 - b1}.`]] },
-        { prompt: `Put your y into the first equation. What is x?`, answer: x, hint: `${a}x + ${b1} × y = ${c1}. Solve for x.`, wrong: [[c1 - b1 * y, `That is ${a}x. Divide by ${a} to find x.`]] },
+        { prompt: 'Take the first equation from the second. The x terms cancel. What number is on the right-hand side?', answer: c2 - c1, hint: `${c2} − ${c1}`, wrong: [[c1 + c2, 'To make the x terms cancel you subtract the equations.', 'M_ADDED_INSTEAD_OF_SUBTRACTED']] },
+        { prompt: `The left-hand side is ${b2 - b1}y. What is y?`, answer: y, hint: `Divide the right-hand side by ${b2 - b1}.`, wrong: [[c2 - c1, `Divide by the number in front of y, which is ${b2 - b1}.`, 'M_NOT_DIVIDED_BY_COEFFICIENT']] },
+        { prompt: `Put your y into the first equation. What is x?`, answer: x, hint: `${a}x + ${b1} × y = ${c1}. Solve for x.`, wrong: [[c1 - b1 * y, `That is ${a}x. Divide by ${a} to find x.`, 'M_TERM_FOR_UNKNOWN']] },
       ],
       steps: [`(${a}x + ${b2}y) − (${a}x + ${b1}y) = ${c2} − ${c1}, so ${b2 - b1}y = ${c2 - c1}.`, `y = ${c2 - c1} ÷ ${b2 - b1} = ${y}.`, `${a}x + ${b1} × ${y} = ${c1}, so ${a}x = ${c1 - b1 * y} and x = ${x}.`],
     }),
     check: ({ a, b1, b2, c1, c2 }, v) => a * v[2] + b1 * v[1] === c1 && a * v[2] + b2 * v[1] === c2 && v[0] === (b2 - b1) * v[1] }),
 
-  fam({ id: 'g8.eq.substitute-spot', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.b', rung: 3, form: 'spot',
+  fam({ id: 'g8.eq.substitute-spot', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.b', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION', rung: 3, form: 'spot',
     draw: () => {
       const x0 = randInt(2, 6), m = randInt(2, 4), c = pick([-3, -2, -1, 1, 2, 3]), pp = randInt(2, 4), y0 = m * x0 + c;
       return y0 > 0 ? { x0, m, c, pp, y0, t: pp * x0 + y0, p: person() } : null;
@@ -777,11 +778,12 @@ export const FAMILIES = [
           { text: `Put x = ${x0} into y = ${m}x ${signed(c)}: y = ${m} × ${x0} ${signed(-c)} = ${wrongY}.`, ok: wrongY === m * x0 + c },
           { text: `So x = ${x0} and y = ${wrongY}.`, ok: true },
         ],
+        mis: 'M_SIGN_CHANGED_ON_SUBSTITUTING',
         fix: `The equation says y = ${m}x ${signed(c)}, so the ${Math.abs(c)} is ${c < 0 ? 'taken away' : 'added'}. The sign was changed when ${p.name} used it again.`,
         steps: ['Use the same equation, with the same signs, to find y.', `y = ${m} × ${x0} ${signed(c)} = ${y0}.`] };
     } }),
 
-  fam({ id: 'g8.eq.museum-tickets', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.d', rung: 3, form: 'word',
+  fam({ id: 'g8.eq.museum-tickets', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.d', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT', rung: 3, form: 'word',
     draw: () => {
       const A = pick([100, 150, 200, 250, 300]), C = pick([50, 60, 70, 80, 90, 100]), a1 = randInt(1, 3), a2 = a1 + randInt(1, 3), n = randInt(3, 8);
       const T1 = a1 * A + n * C, T2 = a2 * A + n * C;
@@ -790,46 +792,46 @@ export const FAMILIES = [
     make: ({ A, C, a1, a2, n, T1, T2 }) => ({
       question: `A museum in Nairobi charges one price for an adult and one price for a child. A group of ${a1} adult${a1 > 1 ? 's' : ''} and ${n} children pays sh ${commas(T1)} in total. A group of ${a2} adults and ${n} children pays sh ${commas(T2)} in total. How much is one adult ticket, in shillings?`,
       answer: A,
-      wrong: [[T2 - T1, `That is the cost of ${a2 - a1} extra adult${a2 - a1 > 1 ? 's' : ''}. Share it between them.`], [round(T1 / (a1 + n), 2), 'Adults and children pay different prices, so you cannot share the total equally.'], [C, 'That is the price for a child. The question asks about an adult.'], [T1 / a1, 'The first group also has children, who pay too.']],
+      wrong: [[T2 - T1, `That is the cost of ${a2 - a1} extra adult${a2 - a1 > 1 ? 's' : ''}. Share it between them.`, 'M_DIFFERENCE_NOT_SHARED'], [round(T1 / (a1 + n), 2), 'Adults and children pay different prices, so you cannot share the total equally.', 'M_TOTAL_SHARED_EQUALLY'], [C, 'That is the price for a child. The question asks about an adult.', 'M_OTHER_UNKNOWN_GIVEN'], [T1 / a1, 'The first group also has children, who pay too.', 'M_OTHER_GROUP_IGNORED']],
       hints: ['Both groups have the same number of children.', 'So the difference in the totals is paid only by the extra adults.'],
       steps: [`Extra adults: ${a2} − ${a1} = ${a2 - a1}. Extra cost: ${commas(T2)} − ${commas(T1)} = ${commas(T2 - T1)}.`, `One adult: ${commas(T2 - T1)} ÷ ${a2 - a1} = sh ${A}.`],
     }),
     check: ({ a1, a2, n, T1, T2, C }, a) => a1 * a + n * C === T1 && a2 * a + n * C === T2 }),
 
-  fam({ id: 'g8.eq.coins', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.d', rung: 3, form: 'word',
+  fam({ id: 'g8.eq.coins', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.d', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT', rung: 3, form: 'word',
     draw: () => { const x = randInt(4, 14), y = randInt(4, 14), N = x + y, V = 5 * x + 10 * y; return distinct(y, x, V / 10, N / 2) ? { x, y, N, V, p: person() } : null; },
     make: ({ x, y, N, V, p }) => ({
       question: `${p.name}'s purse holds ${N} coins. Some are sh 5 coins and the rest are sh 10 coins. The coins are worth sh ${V} altogether. How many sh 10 coins are in the purse?`,
       answer: y,
-      wrong: [[x, 'That is the number of sh 5 coins. The question asks about the sh 10 coins.'], [V / 10, 'That would be right only if every coin were sh 10. Some are sh 5.'], [N / 2, 'The two kinds of coin are not equal in number. Use the total value.']],
+      wrong: [[x, 'That is the number of sh 5 coins. The question asks about the sh 10 coins.', 'M_OTHER_UNKNOWN_GIVEN'], [V / 10, 'That would be right only if every coin were sh 10. Some are sh 5.', 'M_ALL_ONE_KIND'], [N / 2, 'The two kinds of coin are not equal in number. Use the total value.', 'M_EQUAL_SPLIT_ASSUMED']],
       hints: ['Let one letter stand for the sh 5 coins and another for the sh 10 coins.', 'One equation counts the coins. The other adds up the money.'],
       steps: [`Let f be the sh 5 coins and t the sh 10 coins: f + t = ${N} and 5f + 10t = ${V}.`, `Multiply the first by 5: 5f + 5t = ${5 * N}. Subtract from the second: 5t = ${V - 5 * N}.`, `t = ${(V - 5 * N) / 5}.`],
     }),
     check: ({ N, V }, a) => 5 * (N - a) + 10 * a === V }),
 
-  fam({ id: 'g8.eq.hens-goats-steps', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'G8.EQUATIONS.d', rung: 3, form: 'steps',
+  fam({ id: 'g8.eq.hens-goats-steps', skill: 'G8_SIMULTANEOUS_INTRO', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.d', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT', rung: 3, form: 'steps',
     draw: () => { const h = randInt(5, 20), g = randInt(4, 15); return h !== g ? { h, g, N: h + g, L: 2 * h + 4 * g } : null; },
     make: ({ N, L }) => ({
       question: `A farmer keeps hens and goats. There are ${N} animals in total and ${L} legs in total. Let h be the number of hens and g the number of goats. Then h + g = ${N} and 2h + 4g = ${L}.`,
       parts: [
-        { prompt: 'Double the first equation. What does 2h + 2g equal?', answer: 2 * N, hint: 'Double both sides.', wrong: [[N + 2, 'Both sides are doubled, not increased by 2.']] },
-        { prompt: 'Take that from the second equation. What does 2g equal?', answer: L - 2 * N, hint: 'The 2h terms cancel. Take the right-hand sides away.', wrong: [[L + 2 * N, 'The terms must cancel, so subtract.']] },
-        { prompt: 'How many goats are there?', answer: (L - 2 * N) / 2, unit: 'goats', hint: 'Divide by 2.', wrong: [[L - 2 * N, 'That is 2g. How many goats is that?']] },
-        { prompt: 'How many hens are there?', answer: N - (L - 2 * N) / 2, unit: 'hens', hint: 'Take the goats from the total animals.', wrong: [[(L - 2 * N) / 2, 'That is the number of goats.']] },
+        { prompt: 'Double the first equation. What does 2h + 2g equal?', answer: 2 * N, hint: 'Double both sides.', wrong: [[N + 2, 'Both sides are doubled, not increased by 2.', 'M_DOUBLED_AS_ADD_TWO']] },
+        { prompt: 'Take that from the second equation. What does 2g equal?', answer: L - 2 * N, hint: 'The 2h terms cancel. Take the right-hand sides away.', wrong: [[L + 2 * N, 'The terms must cancel, so subtract.', 'M_ADDED_INSTEAD_OF_SUBTRACTED']] },
+        { prompt: 'How many goats are there?', answer: (L - 2 * N) / 2, unit: 'goats', hint: 'Divide by 2.', wrong: [[L - 2 * N, 'That is 2g. How many goats is that?', 'M_TERM_FOR_UNKNOWN']] },
+        { prompt: 'How many hens are there?', answer: N - (L - 2 * N) / 2, unit: 'hens', hint: 'Take the goats from the total animals.', wrong: [[(L - 2 * N) / 2, 'That is the number of goats.', 'M_OTHER_UNKNOWN_GIVEN']] },
       ],
       steps: [`2h + 2g = ${2 * N}.`, `(2h + 4g) − (2h + 2g) = ${L} − ${2 * N}, so 2g = ${L - 2 * N}.`, `g = ${(L - 2 * N) / 2}.`, `h = ${N} − ${(L - 2 * N) / 2} = ${N - (L - 2 * N) / 2}.`],
     }),
     check: ({ N, L }, v) => v[0] === 2 * N && v[1] === L - v[0] && v[2] * 2 === v[1] && v[3] + v[2] === N && 2 * v[3] + 4 * v[2] === L }),
 
-  fam({ id: 'g8.eq.eliminate-why', skill: 'G8_LINEAR_EQ_ADV', outcome: 'G8.EQUATIONS.b', rung: 2, form: 'why',
+  fam({ id: 'g8.eq.eliminate-why', skill: 'G8_LINEAR_EQ_ADV', outcome: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.c', cskill: 'MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION', rung: 2, form: 'why',
     draw: () => { const a = randInt(2, 5), b1 = randInt(1, 3), b2 = b1 + randInt(1, 3), x = randInt(1, 6), y = randInt(1, 6); return { a, b1, b2, c1: a * x + b1 * y, c2: a * x + b2 * y, p: person() }; },
     make: ({ a, b1, b2, c1, c2, p }) => ({
       question: `To solve ${a}x + ${b1 === 1 ? '' : b1}y = ${c1} and ${a}x + ${b2}y = ${c2}, ${p.name} subtracts one equation from the other. Why does that help?`,
       options: [
         { text: 'The x terms are the same, so they cancel out', right: true },
-        { text: 'It makes all the numbers in the equations smaller', right: false, why: 'Smaller numbers are not the aim. The aim is to remove one unknown.' },
-        { text: 'It gives the value of x straight away, in one step', right: false, why: 'The x terms disappear, so you find y first and then x.' },
-        { text: 'Subtracting is always the way to solve two equations', right: false, why: 'Sometimes you add, when the terms are opposites. The aim is to cancel one unknown.' },
+        { text: 'It makes all the numbers in the equations smaller', right: false, why: 'Smaller numbers are not the aim. The aim is to remove one unknown.', mis: 'M_ELIMINATION_TO_SHRINK' },
+        { text: 'It gives the value of x straight away, in one step', right: false, why: 'The x terms disappear, so you find y first and then x.', mis: 'M_ONE_STEP_BOTH' },
+        { text: 'Subtracting is always the way to solve two equations', right: false, why: 'Sometimes you add, when the terms are opposites. The aim is to cancel one unknown.', mis: 'M_ALWAYS_SUBTRACT' },
       ],
       hints: ['Look at the numbers in front of x in the two equations.', 'What happens to terms that are the same when you subtract?'],
       steps: [`Both equations have ${a}x.`, `Subtracting gives ${a}x − ${a}x = 0, so only y is left.`],

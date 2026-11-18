@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 8,
  "source": "KICD KICD-Grade8-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: ALGEBR.LINEAR_EQUATIONS, MEASUR.CIRCLES, MEASUR.AREA, MEASUR.MONEY, GEOMET.GEOMETRICAL_CONSTRUCTION, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: MEASUR.CIRCLES, MEASUR.AREA, MEASUR.MONEY, GEOMET.GEOMETRICAL_CONSTRUCTION, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
  "totals": {
   "strands": 5,
   "sub_strands": 16,
   "outcomes": 121,
   "lessons": 150,
-  "skills": 43,
-  "prerequisites": 99,
-  "misconceptions": 212
+  "skills": 48,
+  "prerequisites": 112,
+  "misconceptions": 238
  },
  "sub_strands": [
   {
@@ -5425,7 +5425,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to d are tested; e (use IT) and f (recognise use) are not questions. Every skill is about two linear equations in two unknowns (simultaneous equations): forming them (a), solving by substitution (b) and by elimination (c), and applying them (d). Elimination is split in two: when one unknown already has the same number in front, and when an equation must first be multiplied to make them the same. The existing elimination families carried the old letter b; they are refiled under c. Solving graphically is in Coordinates and Graphs.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
     "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
@@ -5472,8 +5472,609 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+     "name": "Form two linear equations in two unknowns from a story",
+     "outcomes": [
+      "MATH.G8.ALGEBR.LINEAR_EQUATIONS.a"
+     ],
+     "mastery": "The child names the two unknowns with letters and units, writes one equation for each fact in the story (each with its own total), and matches every number to the right letter: 3 mandazi and 2 chapati for 70 shillings is 3m + 2c = 70.",
+     "question_forms": [
+      "form two equations",
+      "which pair is right",
+      "which step has the mistake",
+      "more than, less than"
+     ],
+     "thinking": [
+      "modelling",
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G8_SIMULTANEOUS_INTRO"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.FORM_EQUATION_FROM_STORY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Forming one equation from a story.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.FORM_EXPRESSION_RELATIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Expressions for related quantities.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION",
+     "name": "Solve simultaneous equations by substitution",
+     "outcomes": [
+      "MATH.G8.ALGEBR.LINEAR_EQUATIONS.b"
+     ],
+     "mastery": "The child makes one unknown the subject of one equation (or uses one already given as y = ...), substitutes the whole expression in a bracket into the other equation, solves for the first unknown, then substitutes back to find the second and checks both equations.",
+     "question_forms": [
+      "solve by substitution",
+      "which step has the mistake",
+      "y is given in terms of x",
+      "check the answer"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G8_SIMULTANEOUS_INTRO"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Solving one equation.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Substituting with signs.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.ALGEBRAIC_EXPRESSIONS.SIMPLIFY_WITH_BRACKETS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Removing the bracket after substituting.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "name": "Solve simultaneous equations by elimination when one unknown has the same coefficient",
+     "outcomes": [
+      "MATH.G8.ALGEBR.LINEAR_EQUATIONS.c"
+     ],
+     "mastery": "The child sees that one unknown has the same number in front in both equations, subtracts the equations (or adds them when the terms are opposites) so that unknown cancels, divides by the coefficient that is left, and substitutes back for the other unknown.",
+     "question_forms": [
+      "solve by elimination",
+      "add or subtract",
+      "why does subtracting help",
+      "find x and y"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G8_SIMULTANEOUS_INTRO",
+      "G8_LINEAR_EQ_ADV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.EQUATION_BALANCE_REASON",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The same done to both sides.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_TWO_STEP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Solving what is left.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Subtracting negative terms.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL",
+     "name": "Multiply an equation to make the coefficients equal, then eliminate",
+     "outcomes": [
+      "MATH.G8.ALGEBR.LINEAR_EQUATIONS.c"
+     ],
+     "mastery": "The child multiplies every term of one (or both) equations, the right side too, by the number that makes the coefficients of one unknown equal, then eliminates as before: 2x + 3y = 12 and x + y = 5 becomes 2x + 2y = 10, so y = 2 and x = 3.",
+     "question_forms": [
+      "make the coefficients equal",
+      "multiply the second equation by",
+      "solve by elimination",
+      "which multiplier"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G8_SIMULTANEOUS_INTRO"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Eliminating when the coefficients match.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.FACTORS.LCM_BY_FACTORS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The LCM of two coefficients.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "name": "Use simultaneous equations to solve real-life problems",
+     "outcomes": [
+      "MATH.G8.ALGEBR.LINEAR_EQUATIONS.d"
+     ],
+     "mastery": "The child forms two equations from a story (tickets, coins, animals and legs, prices), solves them by any method, and answers the question that was asked, with units, checking that the answer makes sense in the story.",
+     "question_forms": [
+      "price of one adult ticket",
+      "how many sh 10 coins",
+      "how many goats",
+      "cost of one item"
+     ],
+     "thinking": [
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G8_SIMULTANEOUS_INTRO"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Forming the equations.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Solving them.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.ALGEBR.LINEAR_EQUATIONS.SOLVE_IN_CONTEXT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Answering the question in the story.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_COEFFICIENTS_SWAPPED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+     "error": "Puts the number of one item in front of the other item's letter.",
+     "example": {
+      "question": "3 mandazi and 2 chapati cost 70. Equation?",
+      "wrong_answer": "2m + 3c = 70",
+      "correct_answer": "3m + 2c = 70"
+     },
+     "cause": "Writes the numbers in the order heard, not matched to items.",
+     "reveals": "The answer 2m + 3c = 70 as a wrong option, with a reason that names the idea.",
+     "help": "Each number goes with its own item.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_COUNTS_LEFT_OUT",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+     "error": "Leaves the numbers of items out of the equation.",
+     "example": {
+      "question": "3 mandazi and 2 chapati cost 70. Equation?",
+      "wrong_answer": "m + c = 70",
+      "correct_answer": "3m + 2c = 70"
+     },
+     "cause": "Writes the letters only.",
+     "reveals": "The answer m + c = 70 as a wrong option, with a reason that names the idea.",
+     "help": "The equation must say how many of each.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_TOTALS_ADDED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+     "error": "Uses the sum of the two bills as the total of the second equation.",
+     "example": {
+      "question": "Bills of 70 and 110 for two orders. Second equation total?",
+      "wrong_answer": "180",
+      "correct_answer": "110"
+     },
+     "cause": "Thinks each new bill includes the last.",
+     "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+     "help": "Each person pays their own total.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_MORE_THAN_SIGN_REVERSED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+     "error": "Writes \"x is 5 more than y\" as y = x + 5.",
+     "example": {
+      "question": "The big bag is 5 kg heavier than the small bag (x big, y small)",
+      "wrong_answer": "y = x + 5",
+      "correct_answer": "x = y + 5"
+     },
+     "cause": "Writes the words in the order they come.",
+     "reveals": "The answer y = x + 5 as a wrong option, with a reason that names the idea.",
+     "help": "Add the 5 to the smaller one to make them equal.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS.M_ONE_LETTER_FOR_BOTH",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+     "error": "Uses the same letter for two different unknowns.",
+     "example": {
+      "question": "Mandazi and chapati have different prices. Equation for 3 mandazi and 2 chapati costing 70?",
+      "wrong_answer": "5x = 70",
+      "correct_answer": "3m + 2c = 70"
+     },
+     "cause": "Thinks one letter stands for \"the price\".",
+     "reveals": "The answer 5x = 70 as a wrong option, with a reason that names the idea.",
+     "help": "Two different prices need two letters.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_SIGN_CHANGED_ON_SUBSTITUTING",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION",
+     "error": "Changes the sign of a number when substituting the expression.",
+     "example": {
+      "question": "y = 2x - 3 into x + y = 9",
+      "wrong_answer": "x + 2x + 3 = 9",
+      "correct_answer": "x + 2x - 3 = 9"
+     },
+     "cause": "Copies the expression carelessly.",
+     "reveals": "The answer x + 2x + 3 = 9 as a wrong option, with a reason that names the idea.",
+     "help": "Put the whole expression in a bracket: x + (2x - 3).",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_SUBSTITUTED_INTO_SAME",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION",
+     "error": "Substitutes the expression back into the equation it came from.",
+     "example": {
+      "question": "y = 2x - 3 and x + y = 9: put y = 2x - 3 into y = 2x - 3",
+      "wrong_answer": "0 = 0",
+      "correct_answer": "put it into x + y = 9"
+     },
+     "cause": "Loses track of which equation was used.",
+     "reveals": "The answer 0 = 0 as a wrong option, with a reason that names the idea.",
+     "help": "Substitute into the other equation.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_BRACKET_NOT_EXPANDED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION",
+     "error": "Multiplies only the first term of the bracket after substituting.",
+     "example": {
+      "question": "2x + 3y = 13 with y = x - 1",
+      "wrong_answer": "2x + 3x - 1 = 13",
+      "correct_answer": "2x + 3x - 3 = 13"
+     },
+     "cause": "Forgets the 3 multiplies every term.",
+     "reveals": "The answer 2x + 3x - 1 = 13 as a wrong option, with a reason that names the idea.",
+     "help": "3(x - 1) = 3x - 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION.M_ONLY_ONE_FOUND",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION",
+     "error": "Stops after finding one unknown.",
+     "example": {
+      "question": "y = 2x - 3 and x + y = 9. Solve.",
+      "wrong_answer": "x = 4",
+      "correct_answer": "x = 4, y = 5"
+     },
+     "cause": "Thinks one value is the answer.",
+     "reveals": "The answer x = 4 as a wrong option, with a reason that names the idea.",
+     "help": "Substitute back for the other unknown.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ADDED_INSTEAD_OF_SUBTRACTED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Adds the equations when the matching terms have the same sign.",
+     "example": {
+      "question": "2x + y = 7 and 2x + 3y = 13: eliminate x",
+      "wrong_answer": "4x + 4y = 20",
+      "correct_answer": "2y = 6"
+     },
+     "cause": "Always adds the equations.",
+     "reveals": "The answer 4x + 4y = 20 as a wrong option, with a reason that names the idea.",
+     "help": "Same sign: subtract to cancel.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_NOT_DIVIDED_BY_COEFFICIENT",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Stops at the number of lots of the unknown without dividing.",
+     "example": {
+      "question": "2y = 6",
+      "wrong_answer": "y = 6",
+      "correct_answer": "y = 3"
+     },
+     "cause": "Forgets the 2 in front.",
+     "reveals": "The answer y = 6 as a wrong option, with a reason that names the idea.",
+     "help": "Divide both sides by 2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_TERM_FOR_UNKNOWN",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Gives the value of a term (2x) as the value of the unknown.",
+     "example": {
+      "question": "2x + 3 = 7",
+      "wrong_answer": "x = 4",
+      "correct_answer": "x = 2"
+     },
+     "cause": "Stops once the term is alone.",
+     "reveals": "The answer x = 4 as a wrong option, with a reason that names the idea.",
+     "help": "That is 2x: divide by 2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ELIMINATION_TO_SHRINK",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Believes elimination is done to make the numbers smaller.",
+     "example": {
+      "question": "Why subtract 2x + y = 7 from 2x + 3y = 13?",
+      "wrong_answer": "to make the numbers smaller",
+      "correct_answer": "so the x terms cancel"
+     },
+     "cause": "Does not see the aim of removing an unknown.",
+     "reveals": "The answer to make the numbers smaller as a wrong option, with a reason that names the idea.",
+     "help": "The aim is one equation with one unknown.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ONE_STEP_BOTH",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Expects elimination to give both unknowns at once.",
+     "example": {
+      "question": "After subtracting, what do you find first?",
+      "wrong_answer": "x and y together",
+      "correct_answer": "y, then x by substituting"
+     },
+     "cause": "Thinks one step solves everything.",
+     "reveals": "The answer x and y together as a wrong option, with a reason that names the idea.",
+     "help": "One unknown disappears; find the other first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_ALWAYS_SUBTRACT",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Believes you always subtract to eliminate.",
+     "example": {
+      "question": "x + y = 10 and x - y = 4: eliminate y",
+      "wrong_answer": "subtract: 2y = 6",
+      "correct_answer": "add: 2x = 14"
+     },
+     "cause": "Learnt one case only.",
+     "reveals": "The answer subtract: 2y = 6 as a wrong option, with a reason that names the idea.",
+     "help": "Opposite signs: add to cancel.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION.M_EQUAL_SPLIT_ASSUMED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+     "error": "Shares a total equally as if the two unknowns were the same.",
+     "example": {
+      "question": "x + y = 50 and x - y = 6",
+      "wrong_answer": "x = 25",
+      "correct_answer": "x = 28"
+     },
+     "cause": "Ignores the second equation.",
+     "reveals": "The answer x = 25 as a wrong option, with a reason that names the idea.",
+     "help": "The difference matters: add the equations.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_ONLY_ONE_TERM_MULTIPLIED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL",
+     "error": "Multiplies only one term of the equation.",
+     "example": {
+      "question": "Multiply x + y = 5 by 2",
+      "wrong_answer": "2x + y = 5",
+      "correct_answer": "2x + 2y = 10"
+     },
+     "cause": "Changes the term it wants to match.",
+     "reveals": "The answer 2x + y = 5 as a wrong option, with a reason that names the idea.",
+     "help": "Every term, both sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_RIGHT_SIDE_NOT_MULTIPLIED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL",
+     "error": "Multiplies the left side but not the total.",
+     "example": {
+      "question": "Multiply x + y = 5 by 2",
+      "wrong_answer": "2x + 2y = 5",
+      "correct_answer": "2x + 2y = 10"
+     },
+     "cause": "Forgets the equation must stay balanced.",
+     "reveals": "The answer 2x + 2y = 5 as a wrong option, with a reason that names the idea.",
+     "help": "The right side is multiplied too.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_WRONG_MULTIPLIER",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL",
+     "error": "Multiplies by a number that does not make the coefficients equal.",
+     "example": {
+      "question": "3x + 2y = 16 and x + y = 6: make the x terms equal",
+      "wrong_answer": "multiply the second by 2",
+      "correct_answer": "multiply the second by 3"
+     },
+     "cause": "Picks a number from the other unknown.",
+     "reveals": "The answer multiply the second by 2 as a wrong option, with a reason that names the idea.",
+     "help": "Match 3x: multiply the second equation by 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL.M_SIGNS_IN_SUBTRACTION",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL",
+     "error": "Subtracts a negative term wrongly.",
+     "example": {
+      "question": "(3x + 2y) - (3x - 4y)",
+      "wrong_answer": "-2y",
+      "correct_answer": "6y"
+     },
+     "cause": "Takes 4 from 2 without the sign.",
+     "reveals": "The answer -2y as a wrong option, with a reason that names the idea.",
+     "help": "2y - (-4y) = 6y.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_DIFFERENCE_NOT_SHARED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "error": "Gives the cost of the extra items as the price of one.",
+     "example": {
+      "question": "1 adult and 4 children pay 700; 3 adults and 4 children pay 1,300. One adult?",
+      "wrong_answer": "600",
+      "correct_answer": "300"
+     },
+     "cause": "Forgets the extra is for 2 adults.",
+     "reveals": "The answer 600 as a wrong option, with a reason that names the idea.",
+     "help": "Share 600 between the 2 extra adults.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_TOTAL_SHARED_EQUALLY",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "error": "Shares a total equally among people who pay different prices.",
+     "example": {
+      "question": "1 adult and 4 children pay 700. One adult?",
+      "wrong_answer": "140",
+      "correct_answer": "300"
+     },
+     "cause": "Treats everyone as paying the same.",
+     "reveals": "The answer 140 as a wrong option, with a reason that names the idea.",
+     "help": "Adults and children pay different prices.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_OTHER_UNKNOWN_GIVEN",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "error": "Gives the value of the other unknown.",
+     "example": {
+      "question": "Solving gives a = 300 and c = 100, where a is the adult price. One adult ticket?",
+      "wrong_answer": "100",
+      "correct_answer": "300"
+     },
+     "cause": "Answers with the last value found.",
+     "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+     "help": "Read the question again: which one is asked?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_OTHER_GROUP_IGNORED",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "error": "Divides a group total by one kind of person only.",
+     "example": {
+      "question": "1 adult and 4 children pay 700. One adult?",
+      "wrong_answer": "700",
+      "correct_answer": "300"
+     },
+     "cause": "Forgets the children in the group pay too.",
+     "reveals": "The answer 700 as a wrong option, with a reason that names the idea.",
+     "help": "Take the children's cost away first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_ALL_ONE_KIND",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "error": "Assumes every coin or animal is of one kind.",
+     "example": {
+      "question": "20 coins of sh 5 and sh 10 worth sh 150. How many sh 10 coins?",
+      "wrong_answer": "15",
+      "correct_answer": "10"
+     },
+     "cause": "Divides the total value by one coin value.",
+     "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+     "help": "Some coins are sh 5: use both equations.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT.M_DOUBLED_AS_ADD_TWO",
+     "skill": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT",
+     "error": "Adds 2 to an equation instead of multiplying it by 2.",
+     "example": {
+      "question": "h + g = 30, times 2",
+      "wrong_answer": "h + g + 2 = 32",
+      "correct_answer": "2h + 2g = 60"
+     },
+     "cause": "Confuses doubling with adding two.",
+     "reveals": "The answer h + g + 2 = 32 as a wrong option, with a reason that names the idea.",
+     "help": "Double every term: 2h + 2g = 60.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G8.MEASUR.CIRCLES",

@@ -509,6 +509,51 @@
     "take away a negative"
    ],
    "mastery": "The child puts a negative value in brackets, squares the value (not the coefficient), knows a negative squared is positive and that taking away a negative adds: 3m² - 2n with m = -2, n = 5 gives 12 - 10 = 2."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS": {
+   "forms": [
+    "form two equations",
+    "which pair is right",
+    "which step has the mistake",
+    "more than, less than"
+   ],
+   "mastery": "The child names the two unknowns with letters and units, writes one equation for each fact in the story (each with its own total), and matches every number to the right letter: 3 mandazi and 2 chapati for 70 shillings is 3m + 2c = 70."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_SUBSTITUTION": {
+   "forms": [
+    "solve by substitution",
+    "which step has the mistake",
+    "y is given in terms of x",
+    "check the answer"
+   ],
+   "mastery": "The child makes one unknown the subject of one equation (or uses one already given as y = ...), substitutes the whole expression in a bracket into the other equation, solves for the first unknown, then substitutes back to find the second and checks both equations."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION": {
+   "forms": [
+    "solve by elimination",
+    "add or subtract",
+    "why does subtracting help",
+    "find x and y"
+   ],
+   "mastery": "The child sees that one unknown has the same number in front in both equations, subtracts the equations (or adds them when the terms are opposites) so that unknown cancels, divides by the coefficient that is left, and substitutes back for the other unknown."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.ELIMINATION_MAKE_EQUAL": {
+   "forms": [
+    "make the coefficients equal",
+    "multiply the second equation by",
+    "solve by elimination",
+    "which multiplier"
+   ],
+   "mastery": "The child multiplies every term of one (or both) equations, the right side too, by the number that makes the coefficients of one unknown equal, then eliminates as before: 2x + 3y = 12 and x + y = 5 becomes 2x + 2y = 10, so y = 2 and x = 3."
+  },
+  "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SIMULTANEOUS_IN_CONTEXT": {
+   "forms": [
+    "price of one adult ticket",
+    "how many sh 10 coins",
+    "how many goats",
+    "cost of one item"
+   ],
+   "mastery": "The child forms two equations from a story (tickets, coins, animals and legs, prices), solves them by any method, and answers the question that was asked, with units, checking that the answer makes sense in the story."
   }
  }
 }
