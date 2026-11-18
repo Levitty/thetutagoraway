@@ -1,0 +1,197 @@
+{
+ "sub_strand": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
+ "title": "Free-hand sketching",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sketching lines and 2D shapes (outcomes c and d) is marked on the learner's sketch with the rubric; the questions test the principles and techniques.",
+ "skills": [
+  {
+   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
+   "key_step": "The learner explains the principles of free-hand sketching: drawn by hand without instruments, start with light lines, block in the overall shape and proportions first, then firm the correct lines and add detail; keep the pencil soft and sharp.",
+   "floor": {
+    "prerequisite": "Knows plane figures.",
+    "question": "Name a four-sided figure with all sides equal.",
+    "answer": "A square"
+   },
+   "representations": [
+    "a sketch in three stages: light, proportion, firm",
+    "a bottle with its overall box shape",
+    "soft and hard pencil samples"
+   ],
+   "steps": [
+    "Look at the whole shape.",
+    "Sketch light lines.",
+    "Check proportions.",
+    "Firm the right lines and add detail."
+   ],
+   "contexts": [
+    "sketching a stool idea",
+    "sketching a water bottle",
+    "sketching a classroom window"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sketch a bottle in light lines with its overall box shape."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the light box around it.",
+     "say": "Why start with this before the label?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say proportion and whole shape first."
+    },
+    {
+     "beat": "reveal",
+     "do": "Firm the outline and add the label."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_RULER",
+     "listen_for": [
+      "Drawing with a ruler and compass"
+     ],
+     "ask": "What is free-hand sketching?",
+     "repair": "Show a quick freehand sketch of a stool made in one minute; explain it is for ideas, before exact drawing."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_PRESS_FIRST",
+     "listen_for": [
+      "With dark pressed lines"
+     ],
+     "ask": "How should a sketch start?",
+     "repair": "Sketch light lines that can be changed, then darken the right ones; show a pressed wrong line that cannot be removed."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_ERASER",
+     "listen_for": [
+      "Rub out every line at once"
+     ],
+     "ask": "What helps a sketch stay tidy?",
+     "repair": "Leave light construction lines; darken only the correct ones; rub out at the end if needed."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES.M_SP_PROPORTION",
+     "listen_for": [
+      "The label detail"
+     ],
+     "ask": "What do you look at first when sketching a bottle?",
+     "repair": "Block in the whole shape and its proportions with light lines first, then add the details."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How do you start a sketch?",
+     "answer": "With light lines",
+     "shows": "principles"
+    },
+    {
+     "question": "What do you look at first when sketching an object?",
+     "answer": "Its whole shape and proportions",
+     "shows": "proportion"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+   "key_step": "The learner names and uses sketching techniques: lines between marked points with light steady strokes, the box (crating) method, the centreline method for symmetrical objects, the hand-compass and square methods for circles, and shading by hatching, cross-hatching and stippling; the sketched lines and 2D shapes are marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the principles of sketching.",
+    "question": "Should the first lines of a sketch be light or dark?",
+    "answer": "Light"
+   },
+   "representations": [
+    "three shaded squares: hatching, cross-hatching, stippling",
+    "a circle in a light square",
+    "a bottle on a centreline"
+   ],
+   "steps": [
+    "Sketch straight lines between two points.",
+    "Use the box method for a shape.",
+    "Use the centreline method for a symmetrical object.",
+    "Shade with hatching or stippling."
+   ],
+   "contexts": [
+    "sketching a cup",
+    "sketching a round table top",
+    "shading a box to show its form"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three squares side by side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle square.",
+     "say": "Shade it by cross-hatching. What will you draw?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say two sets of crossing lines."
+    },
+    {
+     "beat": "reveal",
+     "do": "Shade the other two by hatching and stippling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_HATCH_DOTS",
+     "listen_for": [
+      "Shading with dots"
+     ],
+     "ask": "What is hatching?",
+     "repair": "Shade three squares: hatching (parallel lines), cross-hatching (crossing lines), stippling (dots); label each."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_CROSS_HATCH",
+     "listen_for": [
+      "One set of lines across the shape"
+     ],
+     "ask": "What is cross-hatching?",
+     "repair": "Draw one set of parallel lines, then a second set crossing them: that is cross-hatching."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_BOX_CIRCLE",
+     "listen_for": [
+      "Box method"
+     ],
+     "ask": "Which method draws a circle with the hand turning about a fixed finger?",
+     "repair": "Sketch a circle twice: in a light square (box method) and by turning the paper about a fixed finger (hand compass)."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_SK_CENTRE_ANY",
+     "listen_for": [
+      "A pile of stones"
+     ],
+     "ask": "Which object suits the centreline method?",
+     "repair": "Draw a centreline, mark equal distances on both sides; try it on a bottle and on a stone."
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_PT7_SK_STROKE_PUSH",
+     "listen_for": [
+      "With many short scratchy strokes"
+     ],
+     "ask": "How is a long straight line sketched freehand?",
+     "repair": "Mark two points, keep the eye on the end point and draw with the whole arm in light strokes; compare with a scratchy line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is hatching?",
+     "answer": "Shading with parallel lines",
+     "shows": "shading"
+    },
+    {
+     "question": "Which method suits a symmetrical bottle?",
+     "answer": "The centreline method",
+     "shows": "methods"
+    }
+   ]
+  }
+ ]
+}

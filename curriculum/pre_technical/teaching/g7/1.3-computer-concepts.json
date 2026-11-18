@@ -1,0 +1,287 @@
+{
+ "sub_strand": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS",
+ "title": "Computer Concepts",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcome c (use a computer) is practical: the teacher watches the learner start up, open a program, save a file with a clear name and shut down, and marks it with the rubric. The questions test the knowledge behind each step.",
+ "skills": [
+  {
+   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+   "key_step": "The learner explains data (raw facts) and information (processed data), and the characteristics of a computer: speed, accuracy (correct output from correct input), storage, diligence (works long hours without tiring), versatility (many kinds of jobs), automation (follows stored instructions).",
+   "floor": {
+    "prerequisite": "Knows how data is collected.",
+    "question": "Name one way to collect data.",
+    "answer": "Counting (asking, measuring)"
+   },
+   "representations": [
+    "a data to information arrow chart",
+    "characteristic cards with a picture each",
+    "a receipt printed from a till"
+   ],
+   "steps": [
+    "Tell data from information.",
+    "Name each characteristic.",
+    "Match each to an example.",
+    "Explain wrong input gives wrong output."
+   ],
+   "contexts": [
+    "a supermarket till",
+    "the school fees office computer",
+    "an M-Pesa statement"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write marks 45, 62, 38 and then \"average 48\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"average 48\".",
+     "say": "Is this data or information, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say information, it was processed."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_DATA_INFO",
+     "listen_for": [
+      "Data too, they are the same thing"
+     ],
+     "ask": "A list of marks 45, 62, 38 is data. What is the class average?",
+     "repair": "Give raw marks (data), then work out the average together (information). Sort ten examples into data and information."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_ALWAYS_RIGHT",
+     "listen_for": [
+      "The right price, computers never make mistakes"
+     ],
+     "ask": "A clerk types a wrong price. What will the computer print?",
+     "repair": "Teach \"garbage in, garbage out\": type a wrong price on purpose and print the receipt."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_TIRED",
+     "listen_for": [
+      "It gets tired and needs rest"
+     ],
+     "ask": "What does diligence mean for a computer?",
+     "repair": "Say diligence means working for long hours without getting tired or bored; compare a cashier at the end of the day with a till."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_THINKS",
+     "listen_for": [
+      "It thinks for itself"
+     ],
+     "ask": "How does a computer know what to do?",
+     "repair": "Follow a short program step by step on paper; show that the computer only follows the instructions given."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS.M_CC_ONE_JOB",
+     "listen_for": [
+      "Diligence"
+     ],
+     "ask": "Which characteristic means a computer can do many kinds of jobs?",
+     "repair": "Show one computer doing a letter, a game, a calculation and a video call; name the characteristic versatility."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A list of raw marks is data or information?",
+     "answer": "Data",
+     "shows": "data and information"
+    },
+    {
+     "question": "Which characteristic means a computer can do many kinds of jobs?",
+     "answer": "Versatility",
+     "shows": "characteristics"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+   "key_step": "The learner classifies computers by function (analogue, digital, hybrid), purpose (general purpose, special purpose) and size (supercomputer, mainframe, minicomputer, microcomputer, including laptops, tablets and smartphones).",
+   "floor": {
+    "prerequisite": "Knows the characteristics of a computer.",
+    "question": "Name one characteristic of a computer.",
+    "answer": "Speed (accuracy, storage)"
+   },
+   "representations": [
+    "a three-way classification tree",
+    "a size ladder with pictures",
+    "device cards to sort"
+   ],
+   "steps": [
+    "Sort by size.",
+    "Sort by purpose.",
+    "Sort by function.",
+    "Give an example of each."
+   ],
+   "contexts": [
+    "a smartphone",
+    "an ATM",
+    "a weather station"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree with three branches: function, purpose, size."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"ATM\".",
+     "say": "Which purpose group is it in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say special purpose."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the tree with all the cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_PHONE_NOT",
+     "listen_for": [
+      "No, only a desktop is"
+     ],
+     "ask": "Is a smartphone a computer?",
+     "repair": "List what a smartphone does (input, processing, storage, output) and compare with a desktop."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_MICRO_SMALL",
+     "listen_for": [
+      "Micro computer"
+     ],
+     "ask": "Which is the biggest and most powerful type?",
+     "repair": "Put the four on a size ladder (super, mainframe, mini, micro) with a picture and an example use each."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_ANALOGUE_OLD",
+     "listen_for": [
+      "Only old data"
+     ],
+     "ask": "What does an analogue computer work with?",
+     "repair": "Compare a car speedometer needle (continuous) with a digital count; analogue computers measure continuous quantities."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY.M_CL_SPECIAL_WEAK",
+     "listen_for": [
+      "A weak general-purpose computer"
+     ],
+     "ask": "A computer in a washing machine does only one job. What type is it?",
+     "repair": "List computers that do one job (washing machine, ATM, traffic light) and say they are built for that job."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a smartphone a computer? Which size group?",
+     "answer": "Yes, a microcomputer",
+     "shows": "size"
+    },
+    {
+     "question": "A computer in a washing machine is general or special purpose?",
+     "answer": "Special purpose",
+     "shows": "purpose"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+   "key_step": "The learner gives the steps of a computer task in order (switch on, log in, open a program, work, save with a clear name in a chosen folder, close, shut down, then switch off at the socket) and says why each matters; the practical task is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the parts of a computer.",
+    "question": "Which device do you use to point and click?",
+    "answer": "The mouse"
+   },
+   "representations": [
+    "a step strip: switch on, log in, open, work, save, close, shut down",
+    "a screenshot of the Save dialog with the name box circled",
+    "two icons: selected and opened"
+   ],
+   "steps": [
+    "Switch on and log in.",
+    "Open a program by double-clicking its icon.",
+    "Save with a clear name in a chosen folder.",
+    "Close the program and shut down before switching off at the socket."
+   ],
+   "contexts": [
+    "typing a club notice in the computer lab",
+    "saving a project to return to next week",
+    "a power cut in the middle of work"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps on cards in the wrong order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"switch off at the socket\".",
+     "say": "Where does this card go, and what must come before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to place it last, after Shut down."
+    },
+    {
+     "beat": "reveal",
+     "do": "Put all the cards in order and read them aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_SWITCH_OFF",
+     "listen_for": [
+      "Switch it off at the wall socket"
+     ],
+     "ask": "You have finished working on a desktop computer. What do you do first?",
+     "repair": "Show the Start menu and Shut down; explain that the computer must close its files first, or work and files can be lost or damaged."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_NO_SAVE",
+     "listen_for": [
+      "It is kept automatically"
+     ],
+     "ask": "You type a letter and close the program without saving. What happens to the new work?",
+     "repair": "Type one line, close without saving on purpose, reopen the file and see it gone. Then save and repeat."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_SAVE_NAME",
+     "listen_for": [
+      "Click Save and keep the name Document1"
+     ],
+     "ask": "What should you do when you save a file for the first time?",
+     "repair": "Ask the class to find \"Document1\" among twenty files with the same name. Then name files like \"Kamau budget Term 1\"."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_DOUBLE",
+     "listen_for": [
+      "Click it once and wait"
+     ],
+     "ask": "How do you open a program from its icon on the desktop with a mouse?",
+     "repair": "Practise: one click selects (the icon turns blue), two quick clicks open. Let the learner see the difference."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What must you do before closing a program you have typed in?",
+     "answer": "Save the work",
+     "shows": "saving"
+    },
+    {
+     "question": "What do you do before switching off at the socket?",
+     "answer": "Shut down from the computer",
+     "shows": "shut down"
+    }
+   ]
+  }
+ ]
+}

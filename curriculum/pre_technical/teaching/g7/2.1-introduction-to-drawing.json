@@ -1,0 +1,369 @@
+{
+ "sub_strand": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING",
+ "title": "Introduction to Drawing",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Printing letters and numbers (outcome c) and drawing the lines (outcome d) are marked on the learner's sheet with the rubric; the questions test the rules.",
+ "skills": [
+  {
+   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
+   "key_step": "The learner explains why drawing is used to communicate (shows shape, size and detail that words describe badly, understood across languages) and tells artistic drawing (expresses ideas and feelings, freehand) from technical drawing (exact, to rules and sizes, used to make things).",
+   "floor": {
+    "prerequisite": "Knows plane shapes.",
+    "question": "Name a shape with three sides.",
+    "answer": "A triangle"
+   },
+   "representations": [
+    "an artistic and a technical drawing of the same object",
+    "a two-column chart",
+    "photos of workers reading plans"
+   ],
+   "steps": [
+    "Say why drawings communicate.",
+    "List who uses drawings.",
+    "Compare artistic and technical drawing.",
+    "Sort example drawings."
+   ],
+   "contexts": [
+    "a house plan for a new classroom",
+    "a tailor's pattern",
+    "a poster for a school play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Pin up an artistic drawing of a stool and a technical drawing with sizes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the technical drawing.",
+     "say": "Which one could a carpenter build from, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to mention exact sizes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the two-column chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_ARTISTS_ONLY",
+     "listen_for": [
+      "Only artists"
+     ],
+     "ask": "Who uses drawing at work?",
+     "repair": "Show a tailor's pattern, a house plan and a car manual drawing; name who uses each."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_WORDS_BETTER",
+     "listen_for": [
+      "It is not, words are always better"
+     ],
+     "ask": "Why is a drawing useful?",
+     "repair": "Ask one learner to describe a bracket in words only while another draws it; compare with a quick sketch."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_TECH_PRETTY",
+     "listen_for": [
+      "A beautiful picture for decoration"
+     ],
+     "ask": "What is a technical drawing?",
+     "repair": "Put an artistic drawing of a chair beside a technical drawing with sizes; ask which a carpenter could build from."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE.M_DP_ART_NO_RULES",
+     "listen_for": [
+      "An artistic drawing"
+     ],
+     "ask": "Which drawing needs exact sizes and rules?",
+     "repair": "Make a two-column chart: artistic (expresses feeling, free) and technical (exact sizes, rules, for making)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which drawing has exact sizes and rules?",
+     "answer": "A technical drawing",
+     "shows": "types"
+    },
+    {
+     "question": "Give one reason drawings are used to communicate.",
+     "answer": "They show shape and size clearly",
+     "shows": "importance"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
+   "key_step": "The learner names the types of lines and their uses: thick continuous (visible outlines), thin continuous (dimension, projection, hatching and leader lines), thin dashed (hidden detail), thin chain (centre lines), thick chain (cutting planes), and draws them; the drawn lines are marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows horizontal and vertical lines.",
+    "question": "Is the edge of the door vertical or horizontal?",
+    "answer": "Vertical"
+   },
+   "representations": [
+    "a line-types chart",
+    "a drawing of a block with a hole showing every line",
+    "line cards to match to uses"
+   ],
+   "steps": [
+    "Name each line.",
+    "Say its use.",
+    "Find each in a drawing.",
+    "Draw each line type."
+   ],
+   "contexts": [
+    "a drawing of a wheel hub",
+    "a house plan",
+    "a bracket with a hidden hole"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a block with a hole: outline thick, hidden edges dashed, centre chain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chain line through the hole.",
+     "say": "What does this line show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say the centre."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label every line type."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_HIDDEN_CHAIN",
+     "listen_for": [
+      "Chain line"
+     ],
+     "ask": "Which line shows hidden detail?",
+     "repair": "Draw both large: short dashes (hidden detail) and long-short-long (centre line). Say \"dashes hide, chains centre\"."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_CENTRE_DASHED",
+     "listen_for": [
+      "Dashed line"
+     ],
+     "ask": "Which line marks the centre of a hole?",
+     "repair": "Draw a hole: its hidden edges in dashes and its centre in chain lines, on the same drawing."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_DIM_THICK",
+     "listen_for": [
+      "Thick continuous line"
+     ],
+     "ask": "Which line is used for dimension lines?",
+     "repair": "Show that thick lines are only for the object's outline; everything added (dimension, projection, hatching) is thin."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES.M_DL_OUTLINE_THIN",
+     "listen_for": [
+      "Thin continuous line"
+     ],
+     "ask": "Which line draws the outline of an object?",
+     "repair": "Draw light construction lines first, then go over the visible outline in thick lines."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which line shows hidden detail?",
+     "answer": "A thin dashed line",
+     "shows": "hidden"
+    },
+    {
+     "question": "Which line is used for the outline of an object?",
+     "answer": "A thick continuous line",
+     "shows": "outline"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS",
+   "key_step": "The learner reads common symbols and abbreviations on drawings: Ø (diameter), R (radius), ⊥ (perpendicular), // (parallel), CL (centre line), A/F (across flats), A/C (across corners), I/D and O/D (inside and outside diameter), DIA, RAD, SQ, HEX, and illustrates them; the drawn symbols are marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows radius and diameter.",
+    "question": "The radius is 10 mm. What is the diameter?",
+    "answer": "20 mm"
+   },
+   "representations": [
+    "a symbol and meaning chart",
+    "a drawing of a nut showing A/F and A/C",
+    "a pipe end showing I/D and O/D"
+   ],
+   "steps": [
+    "Read the symbol.",
+    "Say its meaning.",
+    "Find it on a drawing.",
+    "Draw the symbol correctly."
+   ],
+   "contexts": [
+    "a bolt drawing",
+    "a water pipe",
+    "a spanner marked 17 A/F"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a hexagon nut with A/F and A/C marked."
+    },
+    {
+     "beat": "point",
+     "do": "Point at A/F.",
+     "say": "What does A/F measure on this nut?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say flat to flat."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write A/F and A/C with their meanings."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_R_DIAM",
+     "listen_for": [
+      "Diameter"
+     ],
+     "ask": "What does R mean on a drawing?",
+     "repair": "Draw a circle and label R from the centre to the edge and Ø across; write R 20 and Ø 40 for the same circle."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_PERP_PARALLEL",
+     "listen_for": [
+      "Parallel"
+     ],
+     "ask": "What does the symbol ⊥ mean?",
+     "repair": "Draw ⊥ beside a T-shape and // beside railway lines; the symbol looks like what it means."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_ID_OD",
+     "listen_for": [
+      "Inside diameter"
+     ],
+     "ask": "What does O/D mean?",
+     "repair": "Draw a pipe end: I/D the hole, O/D the outside; \"I for inside, O for outside\"."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS.M_DS_AF_AC",
+     "listen_for": [
+      "Across corners"
+     ],
+     "ask": "What does A/F mean on a nut?",
+     "repair": "Draw a nut: A/F from flat side to flat side (the spanner size), A/C from corner to corner (larger)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does R mean on a drawing?",
+     "answer": "Radius",
+     "shows": "symbols"
+    },
+    {
+     "question": "What does the symbol ⊥ mean?",
+     "answer": "Perpendicular, at a right angle",
+     "shows": "symbols"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+   "key_step": "The learner states and applies the printing rules for drawings: plain capitals, single strokes, all upright (or all at one slope), the same height between faint guide lines, even letter gaps and wider word gaps; the printed sheet is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows that a technical drawing must be exact and clear.",
+    "question": "Who must be able to read a technical drawing?",
+    "answer": "Any worker who uses it"
+   },
+   "representations": [
+    "guide lines drawn 5 mm apart",
+    "a good and a poor printed title side by side",
+    "a capital alphabet in single strokes"
+   ],
+   "steps": [
+    "Draw two faint guide lines.",
+    "Print each letter in capitals with single strokes.",
+    "Keep letter gaps even and word gaps wider.",
+    "Check every letter touches both guide lines."
+   ],
+   "contexts": [
+    "the title block of a drawing",
+    "a label on a sketch of a stool",
+    "a sign-writer painting a shop name"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Print \"Front Elevation\" on the board in mixed case, without guide lines."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Which two rules does this title break?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name capitals and guide lines."
+    },
+    {
+     "beat": "reveal",
+     "do": "Reprint it in capitals between two guide lines."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_CURSIVE",
+     "listen_for": [
+      "In neat joined-up handwriting"
+     ],
+     "ask": "How are notes written on a technical drawing?",
+     "repair": "Show the same note in joined writing and in printed capitals to someone across the room; ask which they can read. Practise single-stroke capitals."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_MIXED",
+     "listen_for": [
+      "Front Elevation"
+     ],
+     "ask": "Which title is correctly printed on a drawing?",
+     "repair": "Write three titles on the board in mixed case and ask the learner to reprint them all in capitals between guide lines."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_NO_GUIDE",
+     "listen_for": [
+      "Writing carefully without any lines"
+     ],
+     "ask": "What keeps all the letters of a note the same height?",
+     "repair": "Draw two faint guide lines 5 mm apart with a sharp pencil; print between them; compare with a line printed without guides."
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_SPACING",
+     "listen_for": [
+      "The same, so the note fits in a short space"
+     ],
+     "ask": "How should the gaps between words compare with the gaps between letters?",
+     "repair": "Print \"STEEL PLATE\" with no word gap and ask a partner to read it at a glance; then reprint with a clear word gap."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In what kind of letters are notes printed on a drawing?",
+     "answer": "Plain capital letters",
+     "shows": "capitals"
+    },
+    {
+     "question": "What are guide lines for?",
+     "answer": "To keep the letters the same height",
+     "shows": "guide lines"
+    }
+   ]
+  }
+ ]
+}

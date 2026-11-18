@@ -3,15 +3,15 @@
  "subject_key": "pre_technical",
  "grade": 7,
  "source": "KICD Pre-Technical Studies, First published 2022; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill; practical outcomes have a knowledge skill and are marked with the rubric); written offline by Claude, awaiting a Pre-Technical Studies teacher's review, safety lines first. Rubrics from KICD, untouched.",
  "totals": {
   "strands": 5,
   "sub_strands": 14,
   "outcomes": 58,
   "lessons": 120,
-  "skills": 33,
-  "prerequisites": 48,
-  "misconceptions": 123
+  "skills": 36,
+  "prerequisites": 96,
+  "misconceptions": 149
  },
  "sub_strands": [
   {
@@ -88,7 +88,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Economic activities in the county are where Pre-Technical knowledge is used. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Simple machines and tools met in Science and Technology are the start of the tools strand. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A school enterprise project is the learner's first business. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     }
@@ -103,9 +125,9 @@
       "wrong_answer": "Only using tools in the workshop",
       "correct_answer": "Tools, drawing, materials, computers, safety and starting a business"
      },
-     "cause": "The child saw only the workshop lessons.",
+     "cause": "The workshop lessons are the most memorable, so the learner forgets drawing, computers, materials and business.",
      "reveals": "Offer \"Only using tools in the workshop\" next to the right answer and ask the question again in a new context.",
-     "help": "List the five strands and one activity from each.",
+     "help": "Show the five strands on a chart and sort ten activities (budgeting, sketching, using a computer, choosing timber, safety rules) into them.",
      "feedback": "Pre-Technical Studies also covers safety, drawing, materials, computers and entrepreneurship, not only tools.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -119,9 +141,9 @@
       "wrong_answer": "Only boys who will become mechanics",
       "correct_answer": "Girls and boys, in many jobs and in daily life"
      },
-     "cause": "Workshop work is pictured as a boys' job.",
+     "cause": "Workshop jobs around the learner are mostly done by men, so the subject looks like a boys' subject.",
      "reveals": "Offer \"Only boys who will become mechanics\" next to the right answer and ask the question again in a new context.",
-     "help": "Name a woman who uses it: a tailor, an engineer, a salon owner, a farmer with a pump.",
+     "help": "Show women engineers, tailors, architects and business owners from Kenya; ask which strand each one uses.",
      "feedback": "Everybody uses it: girls and boys, in homes, shops, farms, offices and workshops.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -135,11 +157,27 @@
       "wrong_answer": "Only in the school workshop",
       "correct_answer": "At home, in shops, on farms and in workshops"
      },
-     "cause": "The child links the subject to a room, not to daily life.",
+     "cause": "The subject has its own room, so the learner ties it to that room.",
      "reveals": "Offer \"Only in the school workshop\" next to the right answer and ask the question again in a new context.",
-     "help": "List what happens at home: cooking safely, mending a chair, a phone, a budget.",
+     "help": "List what a family does in one week (repairing, measuring, budgeting, using a phone safely) and name the strand for each.",
      "feedback": "Safety, tools, drawings and small businesses are part of daily life everywhere.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PT7_PI_STRAND_OTHER",
+     "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
+     "error": "Thinks budgeting or using a computer belongs to another subject, not to Pre-Technical Studies.",
+     "example": {
+      "question": "Preparing a budget for a school club belongs to which strand of Pre-Technical Studies?",
+      "wrong_answer": "None, it is only Mathematics",
+      "correct_answer": "Entrepreneurship"
+     },
+     "cause": "Money sums are done in Mathematics, so the learner does not expect them here.",
+     "reveals": "Offer \"None, it is only Mathematics\" beside \"Entrepreneurship\" and ask the child to choose.",
+     "help": "Read the five strand names (Foundations, Communication, Materials for Production, Tools and Production, Entrepreneurship) and place budgeting and computer use in them.",
+     "feedback": "Budgets belong to the Entrepreneurship strand of Pre-Technical Studies.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -236,15 +274,22 @@
       {
        "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
        "kind": "skill",
-       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Safety with heat at home was first taught in Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
        "kind": "skill",
-       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Grade 5 safety with hot objects and fire. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Road safety from Grade 5 Social Studies. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -278,8 +323,22 @@
       {
        "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Online threats are one kind of safety threat. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Modern communication (phones, internet) from Grade 5 Social Studies. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.MONEY.MONEY_TRANSFER_DIGITAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Mobile money, the most common target of phishing. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -313,8 +372,22 @@
       {
        "requires": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Rules exist to prevent the threats. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Safe handling of hot objects from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Learners first handled simple tools such as levers in Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -332,11 +405,11 @@
       "wrong_answer": "A trip",
       "correct_answer": "A slip"
      },
-     "cause": "Both words are used loosely.",
+     "cause": "Both words describe falling over, and they are used loosely at home.",
      "reveals": "Offer \"A trip\" next to the right answer and ask the question again in a new context.",
      "help": "A slip is sliding on a smooth or wet surface; a trip is catching the foot on something.",
      "feedback": "A slip happens on a wet or smooth floor. A trip happens when the foot catches on something in the way.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -348,11 +421,11 @@
       "wrong_answer": "Only a big open flame",
       "correct_answer": "A faulty wire, an overloaded socket or hot cooking oil"
      },
-     "cause": "The child pictures fire as a bonfire.",
+     "cause": "The learner pictures fire as a bonfire or a burning house, not as a charger or a pan.",
      "reveals": "Offer \"Only a big open flame\" next to the right answer and ask the question again in a new context.",
      "help": "List five ways a fire can start in a house or a workshop.",
      "feedback": "Faulty wires, overloaded sockets, hot oil and sparks can all start a fire, not only a big flame.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -364,11 +437,11 @@
       "wrong_answer": "Only a thief",
       "correct_answer": "A thief, a flood or fire, or a hardware fault"
      },
-     "cause": "The child thinks only of theft.",
+     "cause": "Theft is the threat people talk about most, so floods, fire and hardware faults are forgotten.",
      "reveals": "Offer \"Only a thief\" next to the right answer and ask the question again in a new context.",
      "help": "Ask what happens to a computer in a flood, in lightning or when the power surges.",
      "feedback": "Theft, floods, fire and hardware failure can all harm a device.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -380,11 +453,11 @@
       "wrong_answer": "Only drivers on highways",
       "correct_answer": "Pedestrians, cyclists, boda boda riders, passengers and drivers"
      },
-     "cause": "The child pictures a highway crash.",
+     "cause": "News pictures of highway crashes make the learner think only of drivers.",
      "reveals": "Offer \"Only drivers on highways\" next to the right answer and ask the question again in a new context.",
      "help": "List who is on a road outside the school gate.",
      "feedback": "Walkers, riders and passengers are at risk too, near the school gate as well as on highways.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -396,11 +469,11 @@
       "wrong_answer": "A real message, because it looks official",
       "correct_answer": "Phishing, a trick to get your PIN"
      },
-     "cause": "Logos and good spelling feel trustworthy.",
+     "cause": "A logo and good spelling feel like proof that a message is real.",
      "reveals": "Offer \"A real message, because it looks official\" next to the right answer and ask the question again in a new context.",
      "help": "Show that anybody can copy a logo. Real companies never ask for a PIN.",
      "feedback": "Phishing messages copy real logos. Nobody real asks for your PIN or password.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -412,11 +485,11 @@
       "wrong_answer": "Accept, because more friends is better",
       "correct_answer": "Not accept, and tell a trusted adult"
      },
-     "cause": "The child links friends with popularity.",
+     "cause": "Many friends online feels like being popular, so every request seems good.",
      "reveals": "Offer \"Accept, because more friends is better\" next to the right answer and ask the question again in a new context.",
      "help": "Ask: would you give a stranger at the gate your home address?",
      "feedback": "Do not accept a stranger. Tell a trusted adult about the request.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -428,11 +501,11 @@
       "wrong_answer": "No, words online do not hurt",
       "correct_answer": "Yes, it is cyberbullying and it hurts"
      },
-     "cause": "The harm is not seen.",
+     "cause": "Nobody is hit, so the learner does not see the hurt.",
      "reveals": "Offer \"No, words online do not hurt\" next to the right answer and ask the question again in a new context.",
      "help": "Ask how a nasty message to you would feel; a message can be kept and shared.",
      "feedback": "Cyberbullying hurts like bullying in person. Tell a trusted adult.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -444,11 +517,11 @@
       "wrong_answer": "A nickname",
       "correct_answer": "Impersonation"
      },
-     "cause": "The two ideas both involve a changed name.",
+     "cause": "A nickname and a fake account both use a changed name.",
      "reveals": "Offer \"A nickname\" next to the right answer and ask the question again in a new context.",
      "help": "A nickname is open and harmless; impersonation pretends to be a real person to trick others.",
      "feedback": "Impersonation is pretending to be another real person, usually to trick people.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -460,11 +533,11 @@
       "wrong_answer": "Only banks and big companies",
       "correct_answer": "Anyone with a weak password or a careless click"
      },
-     "cause": "The child thinks only of big news stories.",
+     "cause": "The learner only hears of hacking in news about banks and companies.",
      "reveals": "Offer \"Only banks and big companies\" next to the right answer and ask the question again in a new context.",
      "help": "Ask what a thief would want from a child's social media account.",
      "feedback": "Anyone can be hacked. Strong passwords and careful clicking protect you.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -476,11 +549,11 @@
       "wrong_answer": "Work as quickly as possible",
       "correct_answer": "Work carefully and follow the steps"
      },
-     "cause": "Speed feels like skill.",
+     "cause": "Speed looks like skill, and finishing first is praised in class.",
      "reveals": "Offer \"Work as quickly as possible\" next to the right answer and ask the question again in a new context.",
      "help": "Ask what happens to a hand that hurries near a saw.",
      "feedback": "Rushing causes accidents. Work carefully and follow the steps.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -492,11 +565,11 @@
       "wrong_answer": "Say nothing, it is small",
       "correct_answer": "Tell the teacher and clean the cut"
      },
-     "cause": "The child fears trouble or thinks it is small.",
+     "cause": "The learner fears being punished or thinks a small cut does not count.",
      "reveals": "Offer \"Say nothing, it is small\" next to the right answer and ask the question again in a new context.",
      "help": "A cut can be dirty; the teacher can also fix what caused it.",
      "feedback": "Always tell the teacher about an injury, however small.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -508,11 +581,11 @@
       "wrong_answer": "Leave it loose",
       "correct_answer": "Tie it back"
      },
-     "cause": "The hazard is not obvious.",
+     "cause": "The learner has never seen hair or a sleeve caught in a turning machine.",
      "reveals": "Offer \"Leave it loose\" next to the right answer and ask the question again in a new context.",
      "help": "Show how a loose sleeve could be caught by a moving part.",
      "feedback": "Hair and loose clothes can be caught by moving parts. Tie hair back.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -524,11 +597,27 @@
       "wrong_answer": "Anywhere, on the floor is fine",
       "correct_answer": "Back in their place, cleaned"
      },
-     "cause": "The child does not see the trip risk.",
+     "cause": "The learner sees a tool on the floor as untidy, not as something to trip on or a blade to step on.",
      "reveals": "Offer \"Anywhere, on the floor is fine\" next to the right answer and ask the question again in a new context.",
      "help": "Ask who might step on a tool left in a walkway.",
      "feedback": "Tools left about cause trips and cuts. Put them back in their place.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_PT7_SR_HORSEPLAY",
+     "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+     "error": "Thinks playing or running in the workshop is fine when no machine is on.",
+     "example": {
+      "question": "Two learners chase each other in the workshop while the teacher is out. What is wrong?",
+      "wrong_answer": "Nothing, no machine is running",
+      "correct_answer": "Running and playing cause falls, cuts and knocked tools, at any time"
+     },
+     "cause": "The learner links danger only with machines that are switched on.",
+     "reveals": "Offer \"Nothing, no machine is running\" beside \"Running and playing cause falls, cuts and knocked tools, at any time\" and ask the child to choose.",
+     "help": "List what is in the workshop even with machines off (sharp tools, heavy vices, benches, edges) and agree the rule: walk, never play.",
+     "feedback": "Never run or play in the workshop. Sharp tools and hard edges are always there.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -619,7 +708,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Phones and computers as modern communication, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.DATA_H.DATA.COLLECT_DATA",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Collecting data, the raw material a computer processes. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reading a table, which is information made from data. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -645,12 +756,61 @@
       {
        "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "What a computer is comes before sorting computers. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting by a property, first practised with shapes. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting materials by a property in Grade 6 Science is the same kind of grouping. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
      "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+     "name": "Give the correct steps for using a computer: start up, open a program, save a file with a clear name, and shut down properly",
+     "outcomes": [
+      "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c"
+     ],
+     "mastery": "Orders the steps of a computer task (switch on, log in, open the program by double-clicking its icon or from the Start menu, work, save with a clear file name in a chosen folder, close the program, shut down from the operating system before switching off at the socket), and says what happens when work is not saved or the power is cut without shutting down (lost work, damaged files). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "put the steps of a task in order",
+      "say what goes wrong when a step is skipped",
+      "pick the right mouse or keyboard action"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The parts and characteristics of a computer come before using one. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the input, output and storage devices tells the learner what the mouse, keyboard and disk are doing. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     }
    ],
@@ -664,9 +824,9 @@
       "wrong_answer": "Data too, they are the same thing",
       "correct_answer": "Information, because the data was processed"
      },
-     "cause": "The words are used as if equal.",
+     "cause": "In daily talk \"data\" and \"information\" mean the same thing.",
      "reveals": "Offer \"Data too, they are the same thing\" next to the right answer and ask the question again in a new context.",
-     "help": "Data is raw; information is data made useful by processing.",
+     "help": "Give raw marks (data), then work out the average together (information). Sort ten examples into data and information.",
      "feedback": "Data is raw facts. Information is data that has been processed so it means something.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -680,9 +840,9 @@
       "wrong_answer": "The right price, computers never make mistakes",
       "correct_answer": "The wrong price, from wrong input"
      },
-     "cause": "Accuracy is mixed up with being right.",
+     "cause": "Accurate is heard as \"always right\", so the learner forgets the person typing.",
      "reveals": "Offer \"The right price, computers never make mistakes\" next to the right answer and ask the question again in a new context.",
-     "help": "A computer is exact in its sums; it cannot know your typing was wrong.",
+     "help": "Teach \"garbage in, garbage out\": type a wrong price on purpose and print the receipt.",
      "feedback": "A computer is accurate at the working, but wrong input gives wrong output.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -696,9 +856,9 @@
       "wrong_answer": "It gets tired and needs rest",
       "correct_answer": "It can work for long hours without getting tired"
      },
-     "cause": "The word is read for people.",
+     "cause": "Diligence is a word used for hard-working people, who get tired.",
      "reveals": "Offer \"It gets tired and needs rest\" next to the right answer and ask the question again in a new context.",
-     "help": "A person tires; a computer repeats the same work without losing care.",
+     "help": "Say diligence means working for long hours without getting tired or bored; compare a cashier at the end of the day with a till.",
      "feedback": "Diligence means it works for long hours without tiring or losing care.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -712,9 +872,9 @@
       "wrong_answer": "It thinks for itself",
       "correct_answer": "It follows instructions given to it"
      },
-     "cause": "Films show clever machines.",
+     "cause": "Films and adverts show clever talking machines.",
      "reveals": "Offer \"It thinks for itself\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask what a computer does with no program.",
+     "help": "Follow a short program step by step on paper; show that the computer only follows the instructions given.",
      "feedback": "A computer follows the instructions it is given. It does not think for itself.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -728,9 +888,9 @@
       "wrong_answer": "Diligence",
       "correct_answer": "Versatility"
      },
-     "cause": "The child does not know the word.",
+     "cause": "The learner has not met the word versatility and guesses a word they know.",
      "reveals": "Offer \"Diligence\" next to the right answer and ask the question again in a new context.",
-     "help": "List what a laptop does: write, draw, play, calculate.",
+     "help": "Show one computer doing a letter, a game, a calculation and a video call; name the characteristic versatility.",
      "feedback": "Versatility is doing many different kinds of jobs.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -744,9 +904,9 @@
       "wrong_answer": "No, only a desktop is",
       "correct_answer": "Yes, it is a micro computer"
      },
-     "cause": "The child links computers with big screens.",
+     "cause": "The learner links a computer with a big screen, a keyboard and a desk.",
      "reveals": "Offer \"No, only a desktop is\" next to the right answer and ask the question again in a new context.",
-     "help": "A phone takes input, processes, stores and gives output.",
+     "help": "List what a smartphone does (input, processing, storage, output) and compare with a desktop.",
      "feedback": "A smartphone is a small computer: it takes input, processes, stores and gives output.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -760,9 +920,9 @@
       "wrong_answer": "Micro computer",
       "correct_answer": "Super computer"
      },
-     "cause": "The names suggest nothing about size order.",
+     "cause": "The names do not show the order of size, so the learner guesses.",
      "reveals": "Offer \"Micro computer\" next to the right answer and ask the question again in a new context.",
-     "help": "Order them from biggest: super, mainframe, mini, micro.",
+     "help": "Put the four on a size ladder (super, mainframe, mini, micro) with a picture and an example use each.",
      "feedback": "The order from biggest is super, mainframe, mini and micro. A laptop is a micro computer.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -776,9 +936,9 @@
       "wrong_answer": "Only old data",
       "correct_answer": "Continuous measurements such as temperature or speed"
      },
-     "cause": "The word sounds old.",
+     "cause": "\"Analogue\" sounds like old-fashioned, as in an old clock or radio.",
      "reveals": "Offer \"Only old data\" next to the right answer and ask the question again in a new context.",
-     "help": "A petrol pump meter reads a flow, not digits alone.",
+     "help": "Compare a car speedometer needle (continuous) with a digital count; analogue computers measure continuous quantities.",
      "feedback": "Analogue computers work with continuous quantities, such as temperature, speed or flow.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -792,11 +952,75 @@
       "wrong_answer": "A weak general-purpose computer",
       "correct_answer": "A special-purpose computer"
      },
-     "cause": "Special sounds like a poor copy.",
+     "cause": "\"Special\" sounds like a cheaper version in the learner's mind.",
      "reveals": "Offer \"A weak general-purpose computer\" next to the right answer and ask the question again in a new context.",
-     "help": "It is built for one job and does it well.",
+     "help": "List computers that do one job (washing machine, ATM, traffic light) and say they are built for that job.",
      "feedback": "A special-purpose computer is built for one job. General-purpose computers do many jobs.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_SWITCH_OFF",
+     "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+     "error": "Switches a desktop computer off at the wall socket without shutting it down from the operating system.",
+     "example": {
+      "question": "You have finished working on a desktop computer. What do you do first?",
+      "wrong_answer": "Switch it off at the wall socket",
+      "correct_answer": "Save, close the programs, then choose Shut down"
+     },
+     "cause": "Lights, radios and televisions are switched off at the socket, so a computer seems the same.",
+     "reveals": "Offer \"Switch it off at the wall socket\" beside \"Save, close the programs, then choose Shut down\" and ask the child to choose.",
+     "help": "Show the Start menu and Shut down; explain that the computer must close its files first, or work and files can be lost or damaged.",
+     "feedback": "Shut down from the computer first. Switch off at the socket only after the screen goes dark.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_NO_SAVE",
+     "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+     "error": "Thinks typed work is kept automatically when a program is closed without saving.",
+     "example": {
+      "question": "You type a letter and close the program without saving. What happens to the new work?",
+      "wrong_answer": "It is kept automatically",
+      "correct_answer": "It may be lost, because it was never saved"
+     },
+     "cause": "Phone apps keep messages and notes by themselves, so the learner expects every program to do the same.",
+     "reveals": "Offer \"It is kept automatically\" beside \"It may be lost, because it was never saved\" and ask the child to choose.",
+     "help": "Type one line, close without saving on purpose, reopen the file and see it gone. Then save and repeat.",
+     "feedback": "Save your work before you close a program, or the new work may be lost.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_SAVE_NAME",
+     "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+     "error": "Accepts the computer's suggested name (Document1) and folder, so the file cannot be found later.",
+     "example": {
+      "question": "What should you do when you save a file for the first time?",
+      "wrong_answer": "Click Save and keep the name Document1",
+      "correct_answer": "Give it a clear name and choose the folder"
+     },
+     "cause": "The learner wants to finish quickly and does not picture looking for the file next week.",
+     "reveals": "Offer \"Click Save and keep the name Document1\" beside \"Give it a clear name and choose the folder\" and ask the child to choose.",
+     "help": "Ask the class to find \"Document1\" among twenty files with the same name. Then name files like \"Kamau budget Term 1\".",
+     "feedback": "Give every file a clear name and save it in a folder you will remember.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE.M_PT7_CU_DOUBLE",
+     "skill": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+     "error": "Single-clicks a desktop icon and waits for the program to open.",
+     "example": {
+      "question": "How do you open a program from its icon on the desktop with a mouse?",
+      "wrong_answer": "Click it once and wait",
+      "correct_answer": "Double-click it, or click once and press Enter"
+     },
+     "cause": "On a phone one tap opens an app, so one click seems enough.",
+     "reveals": "Offer \"Click it once and wait\" beside \"Double-click it, or click once and press Enter\" and ask the child to choose.",
+     "help": "Practise: one click selects (the icon turns blue), two quick clicks open. Let the learner see the difference.",
+     "feedback": "One click selects an icon. A double-click opens it.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -906,7 +1130,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Seeing and describing shapes and images, from Grade 6 Science. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Naming plane shapes, which drawings show. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sizes on technical drawings are in millimetres. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -932,15 +1178,15 @@
       {
        "requires": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Lines are the alphabet of technical drawing. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.GEOMET.LINES.IDENTIFY_HORIZONTAL_VERTICAL",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Horizontal and vertical lines, from Grade 5 Mathematics. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -978,22 +1224,22 @@
       {
        "requires": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Symbols are read on drawings made of the line types. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Perpendicular lines, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Diameter and radius, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1001,6 +1247,41 @@
       {
        "skill": "PRE_.G8.COMMUN.DIMENSIONING.a",
        "reason": "Grade 8 Pre-Technical Studies builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+     "name": "State the rules for printing letters and numbers on a technical drawing: capitals, single strokes, guide lines, even height and spacing",
+     "outcomes": [
+      "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c"
+     ],
+     "mastery": "Says that notes on a technical drawing are printed in plain capital (upper case) letters and numbers, made with single strokes, all upright (or all at the same slope), the same height between two faint guide lines, with even gaps between letters and a wider gap between words, and picks the note that follows these rules. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "pick the correctly printed note",
+      "say which rule a printed note breaks",
+      "say what guide lines are for"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A technical drawing must be read the same way by everyone; clear printing is part of that. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Guide lines for letters are two faint parallel lines. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1016,9 +1297,9 @@
       "wrong_answer": "Only artists",
       "correct_answer": "Builders, tailors, mechanics, engineers and artists"
      },
-     "cause": "The child links drawing with art class.",
+     "cause": "Drawing at school happens in art lessons, so the learner links it with artists.",
      "reveals": "Offer \"Only artists\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask how a builder tells workers the plan of a house.",
+     "help": "Show a tailor's pattern, a house plan and a car manual drawing; name who uses each.",
      "feedback": "Builders, tailors and engineers all use drawings to share plans.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1032,9 +1313,9 @@
       "wrong_answer": "It is not, words are always better",
       "correct_answer": "It shows shape and size that words describe badly"
      },
-     "cause": "Words are the child's main tool.",
+     "cause": "Words are the learner's main way of explaining, so they feel enough.",
      "reveals": "Offer \"It is not, words are always better\" next to the right answer and ask the question again in a new context.",
-     "help": "Describe a door hinge in words, then draw it.",
+     "help": "Ask one learner to describe a bracket in words only while another draws it; compare with a quick sketch.",
      "feedback": "A drawing shows shape, size and parts that words describe badly.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1048,9 +1329,9 @@
       "wrong_answer": "A beautiful picture for decoration",
       "correct_answer": "An exact drawing with sizes that a worker can follow"
      },
-     "cause": "Technical is read as fancy.",
+     "cause": "\"Technical\" is heard as fancy or advanced.",
      "reveals": "Offer \"A beautiful picture for decoration\" next to the right answer and ask the question again in a new context.",
-     "help": "Compare a painting of a house with its building plan.",
+     "help": "Put an artistic drawing of a chair beside a technical drawing with sizes; ask which a carpenter could build from.",
      "feedback": "A technical drawing gives exact shape and size by rules so a worker can make the thing.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1064,9 +1345,9 @@
       "wrong_answer": "An artistic drawing",
       "correct_answer": "A technical drawing"
      },
-     "cause": "The two are swapped.",
+     "cause": "The learner swaps the two because both are called drawing.",
      "reveals": "Offer \"An artistic drawing\" next to the right answer and ask the question again in a new context.",
-     "help": "A plan for a table must have sizes; a drawing of a sunset need not.",
+     "help": "Make a two-column chart: artistic (expresses feeling, free) and technical (exact sizes, rules, for making).",
      "feedback": "An artistic drawing shows feeling or beauty. A technical drawing uses rules and exact sizes.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1080,9 +1361,9 @@
       "wrong_answer": "Chain line",
       "correct_answer": "Dashed line"
      },
-     "cause": "Both lines have breaks.",
+     "cause": "Both broken lines look alike from a distance, and the learner remembers only \"a broken line\".",
      "reveals": "Offer \"Chain line\" next to the right answer and ask the question again in a new context.",
-     "help": "Dashed has equal short dashes; chain has long and short dashes.",
+     "help": "Draw both large: short dashes (hidden detail) and long-short-long (centre line). Say \"dashes hide, chains centre\".",
      "feedback": "Hidden detail is shown by a dashed line. A chain line shows centres.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1096,9 +1377,9 @@
       "wrong_answer": "Dashed line",
       "correct_answer": "Chain line"
      },
-     "cause": "Both lines have breaks.",
+     "cause": "The learner has learnt \"dashed\" first and uses it for every broken line.",
      "reveals": "Offer \"Dashed line\" next to the right answer and ask the question again in a new context.",
-     "help": "Chain means long-short-long.",
+     "help": "Draw a hole: its hidden edges in dashes and its centre in chain lines, on the same drawing.",
      "feedback": "A chain line (long and short dashes) marks centres. Dashed lines show hidden detail.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1112,9 +1393,9 @@
       "wrong_answer": "Thick continuous line",
       "correct_answer": "Thin continuous line"
      },
-     "cause": "Thick is thought to mean important.",
+     "cause": "Thick is taken to mean important, and the size feels important.",
      "reveals": "Offer \"Thick continuous line\" next to the right answer and ask the question again in a new context.",
-     "help": "Thick lines are for the outline; dimension lines must not hide it.",
+     "help": "Show that thick lines are only for the object's outline; everything added (dimension, projection, hatching) is thin.",
      "feedback": "Dimension lines are thin continuous lines. The outline is thick.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1128,9 +1409,9 @@
       "wrong_answer": "Thin continuous line",
       "correct_answer": "Thick continuous line"
      },
-     "cause": "The child sketches lightly.",
+     "cause": "The learner draws lightly for fear of mistakes and never firms the outline.",
      "reveals": "Offer \"Thin continuous line\" next to the right answer and ask the question again in a new context.",
-     "help": "The outline must stand out from the thin working lines.",
+     "help": "Draw light construction lines first, then go over the visible outline in thick lines.",
      "feedback": "The outline and visible edges are thick continuous lines.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1144,9 +1425,9 @@
       "wrong_answer": "Diameter",
       "correct_answer": "Radius"
      },
-     "cause": "Both words belong to circles.",
+     "cause": "Radius and diameter both belong to circles, and the learner holds only one word for \"circle size\".",
      "reveals": "Offer \"Diameter\" next to the right answer and ask the question again in a new context.",
-     "help": "Diameter is across the whole circle; radius is half of it.",
+     "help": "Draw a circle and label R from the centre to the edge and Ø across; write R 20 and Ø 40 for the same circle.",
      "feedback": "R stands for radius. Diameter is shown by the symbol ⌀.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1160,9 +1441,9 @@
       "wrong_answer": "Parallel",
       "correct_answer": "Perpendicular, at a right angle"
      },
-     "cause": "The two ideas are about lines.",
+     "cause": "Both symbols describe how two lines sit, and both are made of straight strokes.",
      "reveals": "Offer \"Parallel\" next to the right answer and ask the question again in a new context.",
-     "help": "Draw two lines at a right angle: the symbol is those two lines.",
+     "help": "Draw ⊥ beside a T-shape and // beside railway lines; the symbol looks like what it means.",
      "feedback": "The symbol ⊥ means perpendicular, at a right angle.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1176,9 +1457,9 @@
       "wrong_answer": "Inside diameter",
       "correct_answer": "Outside diameter"
      },
-     "cause": "The letters I and O are confused.",
+     "cause": "The letters I and O are read quickly and swapped.",
      "reveals": "Offer \"Inside diameter\" next to the right answer and ask the question again in a new context.",
-     "help": "Measure a pipe across the outside, then across the hole.",
+     "help": "Draw a pipe end: I/D the hole, O/D the outside; \"I for inside, O for outside\".",
      "feedback": "O/D is outside diameter. I/D is inside diameter.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1192,11 +1473,75 @@
       "wrong_answer": "Across corners",
       "correct_answer": "Across flats"
      },
-     "cause": "Both measure a hexagon.",
+     "cause": "Both measure a hexagon, and \"across\" is in both.",
      "reveals": "Offer \"Across corners\" next to the right answer and ask the question again in a new context.",
-     "help": "A/F is spanner size: from one flat side to the opposite.",
+     "help": "Draw a nut: A/F from flat side to flat side (the spanner size), A/C from corner to corner (larger).",
      "feedback": "A/F is across flats, side to side. A/C is across corners.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_CURSIVE",
+     "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+     "error": "Writes notes on a technical drawing in joined-up handwriting.",
+     "example": {
+      "question": "How are notes written on a technical drawing?",
+      "wrong_answer": "In neat joined-up handwriting",
+      "correct_answer": "In separate, plain capital letters"
+     },
+     "cause": "Joined handwriting is praised in English lessons, so it seems the neatest choice.",
+     "reveals": "Offer \"In neat joined-up handwriting\" beside \"In separate, plain capital letters\" and ask the child to choose.",
+     "help": "Show the same note in joined writing and in printed capitals to someone across the room; ask which they can read. Practise single-stroke capitals.",
+     "feedback": "Notes on a drawing are printed in plain capital letters, not joined writing.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_MIXED",
+     "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+     "error": "Mixes capital and small letters in a note, as in a sentence.",
+     "example": {
+      "question": "Which title is correctly printed on a drawing?",
+      "wrong_answer": "Front Elevation",
+      "correct_answer": "FRONT ELEVATION"
+     },
+     "cause": "In writing, sentences and names begin with a capital and go on in small letters.",
+     "reveals": "Offer \"Front Elevation\" beside \"FRONT ELEVATION\" and ask the child to choose.",
+     "help": "Write three titles on the board in mixed case and ask the learner to reprint them all in capitals between guide lines.",
+     "feedback": "Use capital letters all through a note or title on a drawing.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_NO_GUIDE",
+     "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+     "error": "Prints without guide lines, so the letters rise, fall and change height.",
+     "example": {
+      "question": "What keeps all the letters of a note the same height?",
+      "wrong_answer": "Writing carefully without any lines",
+      "correct_answer": "Two faint guide lines drawn first"
+     },
+     "cause": "The learner thinks extra lines will spoil a clean sheet.",
+     "reveals": "Offer \"Writing carefully without any lines\" beside \"Two faint guide lines drawn first\" and ask the child to choose.",
+     "help": "Draw two faint guide lines 5 mm apart with a sharp pencil; print between them; compare with a line printed without guides.",
+     "feedback": "Draw two faint guide lines first. Every letter touches both.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING.M_PT7_DLT_SPACING",
+     "skill": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+     "error": "Crowds the words together with no larger gap between words than between letters.",
+     "example": {
+      "question": "How should the gaps between words compare with the gaps between letters?",
+      "wrong_answer": "The same, so the note fits in a short space",
+      "correct_answer": "Wider between words than between letters"
+     },
+     "cause": "The learner wants the note to fit in the box and squeezes it.",
+     "reveals": "Offer \"The same, so the note fits in a short space\" beside \"Wider between words than between letters\" and ask the child to choose.",
+     "help": "Print \"STEEL PLATE\" with no word gap and ask a partner to read it at a glance; then reprint with a clear word gap.",
+     "feedback": "Leave even gaps between letters and a wider gap between words.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1298,15 +1643,15 @@
       {
        "requires": "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Sketching is quick drawing for communication. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Plane figures are what the learner sketches. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1317,7 +1662,9 @@
      "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
      "name": "Name the techniques of free-hand sketching and shading",
      "outcomes": [
-      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b"
+      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b",
+      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.c",
+      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.d"
      ],
      "mastery": "The child says the box method fits a light box round the object first, the centreline method draws a centre line and builds a matching shape on each side, the hand compass method draws a circle or an arc by turning the paper or the hand about a fixed finger, and that shading uses hatching (parallel lines), cross-hatching (two sets of lines crossing), stippling (dots) and blending (smooth change from dark to light). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -1335,8 +1682,22 @@
       {
        "requires": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The principles come before the techniques. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.GEOMET.LINES.DRAW_PARALLEL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Hatching is shading with parallel lines. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Shadows and light, which shading shows. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1354,9 +1715,9 @@
       "wrong_answer": "Drawing with a ruler and compass",
       "correct_answer": "Drawing by hand without drawing tools"
      },
-     "cause": "The child links neat with a ruler.",
+     "cause": "Neat work at school is drawn with a ruler, so a sketch seems to need one.",
      "reveals": "Offer \"Drawing with a ruler and compass\" next to the right answer and ask the question again in a new context.",
-     "help": "Free-hand means the hand alone.",
+     "help": "Show a quick freehand sketch of a stool made in one minute; explain it is for ideas, before exact drawing.",
      "feedback": "Free-hand sketching is done without a ruler or compass.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1370,9 +1731,9 @@
       "wrong_answer": "With dark pressed lines",
       "correct_answer": "With light lines you can change"
      },
-     "cause": "The child wants it right first time.",
+     "cause": "The learner wants the sketch right the first time.",
      "reveals": "Offer \"With dark pressed lines\" next to the right answer and ask the question again in a new context.",
-     "help": "Light lines can be corrected and firmed up.",
+     "help": "Sketch light lines that can be changed, then darken the right ones; show a pressed wrong line that cannot be removed.",
      "feedback": "Start light. Firm up the correct lines later.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1386,9 +1747,9 @@
       "wrong_answer": "Rub out every line at once",
       "correct_answer": "Light lines, then firm the right ones"
      },
-     "cause": "The child fears wrong lines.",
+     "cause": "The learner fears wrong lines and rubs out at once.",
      "reveals": "Offer \"Rub out every line at once\" next to the right answer and ask the question again in a new context.",
-     "help": "Overlapping light lines are part of sketching.",
+     "help": "Leave light construction lines; darken only the correct ones; rub out at the end if needed.",
      "feedback": "Light lines let you correct without much rubbing out.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1402,9 +1763,9 @@
       "wrong_answer": "The label detail",
       "correct_answer": "The whole shape and its proportions"
      },
-     "cause": "The detail is most interesting.",
+     "cause": "The detail is the most interesting part to look at.",
      "reveals": "Offer \"The label detail\" next to the right answer and ask the question again in a new context.",
-     "help": "Get height to width right before details.",
+     "help": "Block in the whole shape and its proportions with light lines first, then add the details.",
      "feedback": "Look at the whole shape and proportions first. Add detail last.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1418,9 +1779,9 @@
       "wrong_answer": "Shading with dots",
       "correct_answer": "Shading with parallel lines"
      },
-     "cause": "Hatching and stippling are mixed up.",
+     "cause": "Hatching and stippling are both shading and are learnt together.",
      "reveals": "Offer \"Shading with dots\" next to the right answer and ask the question again in a new context.",
-     "help": "Dots are stippling; parallel lines are hatching.",
+     "help": "Shade three squares: hatching (parallel lines), cross-hatching (crossing lines), stippling (dots); label each.",
      "feedback": "Hatching is shading with parallel lines. Dots are stippling.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1434,9 +1795,9 @@
       "wrong_answer": "One set of lines across the shape",
       "correct_answer": "Two sets of lines that cross each other"
      },
-     "cause": "The name is read as \"across\".",
+     "cause": "The word \"cross\" is heard as \"across the shape\".",
      "reveals": "Offer \"One set of lines across the shape\" next to the right answer and ask the question again in a new context.",
-     "help": "It is hatching, then hatching again across the first lines.",
+     "help": "Draw one set of parallel lines, then a second set crossing them: that is cross-hatching.",
      "feedback": "Cross-hatching is two sets of lines crossing each other, for darker shade.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1450,9 +1811,9 @@
       "wrong_answer": "Box method",
       "correct_answer": "Hand compass method"
      },
-     "cause": "Box and compass both sound like circles.",
+     "cause": "Box and compass both sound like ways to make a circle.",
      "reveals": "Offer \"Box method\" next to the right answer and ask the question again in a new context.",
-     "help": "The box method puts the object in a box. A hand compass pivots.",
+     "help": "Sketch a circle twice: in a light square (box method) and by turning the paper about a fixed finger (hand compass).",
      "feedback": "The hand compass method draws arcs and circles. The box method draws a light box round an object.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1466,11 +1827,27 @@
       "wrong_answer": "A pile of stones",
       "correct_answer": "A bottle, the same on both sides"
      },
-     "cause": "The method is not tied to symmetry in the child's mind.",
+     "cause": "The learner has not linked the centreline method with symmetry.",
      "reveals": "Offer \"A pile of stones\" next to the right answer and ask the question again in a new context.",
-     "help": "Fold the paper in half: do both sides match?",
+     "help": "Draw a centreline, mark equal distances on both sides; try it on a bottle and on a stone.",
      "feedback": "The centreline method suits symmetrical objects, the same on both sides of a centre line.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES.M_PT7_SK_STROKE_PUSH",
+     "skill": "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES",
+     "error": "Sketches long lines with short scratchy strokes pushed away from the body.",
+     "example": {
+      "question": "How is a long straight line sketched freehand?",
+      "wrong_answer": "With many short scratchy strokes",
+      "correct_answer": "With light, steady strokes, moving the whole arm, between two marked points"
+     },
+     "cause": "Short strokes feel easier to control.",
+     "reveals": "Offer \"With many short scratchy strokes\" beside \"With light, steady strokes, moving the whole arm, between two marked points\" and ask the child to choose.",
+     "help": "Mark two points, keep the eye on the end point and draw with the whole arm in light strokes; compare with a scratchy line.",
+     "feedback": "Mark two points and sketch with light, steady strokes using the whole arm.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1546,7 +1923,8 @@
      "name": "Say why ICT tools matter in communication and what each tool is used for",
      "outcomes": [
       "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a",
-      "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b"
+      "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b",
+      "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.c"
      ],
      "mastery": "The child says ICT tools carry messages fast, over long distances and to many people, and keep a record; email sends written messages and files, a mobile phone calls and sends texts, video conferencing lets people see and hear one another live over the internet, social networking shares messages and pictures with groups, and online collaboration lets several people work on one file. The child says some tools need airtime or data and an internet link, and does not say ICT tools cost nothing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -1564,8 +1942,15 @@
       {
        "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The devices used for ICT communication. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Modern means of communication, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1583,9 +1968,9 @@
       "wrong_answer": "Nothing, it is free",
       "correct_answer": "Data or an internet link, and a device"
      },
-     "cause": "Messages seem to arrive for free.",
+     "cause": "Messages seem to arrive for nothing because the learner does not pay for the data.",
      "reveals": "Offer \"Nothing, it is free\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask what your parent buys for the phone each month.",
+     "help": "List what each tool needs (a device, airtime or data, power) and the cost of one hour of video calling.",
      "feedback": "Calls, data and devices cost money. Airtime or data is needed.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1599,9 +1984,9 @@
       "wrong_answer": "A text message (SMS)",
       "correct_answer": "A video conference"
      },
-     "cause": "The child links all phone use with data.",
+     "cause": "The learner links every phone use with data bundles.",
      "reveals": "Offer \"A text message (SMS)\" next to the right answer and ask the question again in a new context.",
-     "help": "An SMS travels on the phone network.",
+     "help": "Switch off mobile data and send an SMS; it still goes. Then try a video call.",
      "feedback": "An SMS uses the phone network. A video conference needs an internet link.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1615,9 +2000,9 @@
       "wrong_answer": "Email",
       "correct_answer": "Video conferencing"
      },
-     "cause": "Both are on the internet.",
+     "cause": "Email and video calls both run on the internet.",
      "reveals": "Offer \"Email\" next to the right answer and ask the question again in a new context.",
-     "help": "Email is written and read later.",
+     "help": "Sort tools into live (phone call, video conference) and not live (email, SMS).",
      "feedback": "Video conferencing shows and sounds both ways live. Email sends written messages and files.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1631,11 +2016,27 @@
       "wrong_answer": "It cannot",
       "correct_answer": "It shows products to many customers"
      },
-     "cause": "The child sees only chat and games.",
+     "cause": "The learner sees social media used mostly for chat and games.",
      "reveals": "Offer \"It cannot\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask how a seller shows photos to buyers.",
+     "help": "Show a small business page selling mandazi or tailoring on a social network; list three uses for work.",
      "feedback": "Social networking shares messages and pictures with many people, including customers.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_PT7_IT_PICK_TOOL",
+     "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+     "error": "Picks a tool that does not suit the message, such as an SMS to send a drawing to a fundi.",
+     "example": {
+      "question": "You must send a drawing of a shelf to a fundi far away. Which tool suits it best?",
+      "wrong_answer": "An SMS text message",
+      "correct_answer": "Email or a messaging app that sends pictures"
+     },
+     "cause": "The learner uses the tool they use most, whatever the message.",
+     "reveals": "Offer \"An SMS text message\" beside \"Email or a messaging app that sends pictures\" and ask the child to choose.",
+     "help": "Give five messages (a drawing, an urgent warning, a meeting) and choose the tool for each, saying why.",
+     "feedback": "Choose the tool that suits the message. A drawing needs a tool that sends pictures.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1732,8 +2133,15 @@
       {
        "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
        "kind": "skill",
-       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Conductors and insulators, a key difference between metals and non-metals. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Properties of solids, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1762,8 +2170,22 @@
       {
        "requires": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The materials themselves come first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reduce, reuse and recycle, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Prudent use of resources, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1781,9 +2203,9 @@
       "wrong_answer": "Glass, even though it shines",
       "correct_answer": "Steel"
      },
-     "cause": "Shine and metal are linked in the child's mind.",
+     "cause": "Shine is the first thing the learner links with metal.",
      "reveals": "Offer \"Glass, even though it shines\" next to the right answer and ask the question again in a new context.",
-     "help": "Glass shines but does not carry electricity or stick to a magnet.",
+     "help": "Put glass, a polished tile and a steel spoon side by side; test each with heat or a magnet and sort them.",
      "feedback": "Glass shines but is non-metallic.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1797,9 +2219,9 @@
       "wrong_answer": "Stone, because it is hard",
       "correct_answer": "Copper"
      },
-     "cause": "Hard and heavy feel like metal.",
+     "cause": "Hard and heavy objects feel like metal in the hand.",
      "reveals": "Offer \"Stone, because it is hard\" next to the right answer and ask the question again in a new context.",
-     "help": "Stone is hard and heavy but is not a metal.",
+     "help": "Compare a stone and a copper wire: the stone is hard but breaks, does not conduct; the copper bends and conducts.",
      "feedback": "Stone is hard but is non-metallic.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1813,9 +2235,9 @@
       "wrong_answer": "A chair",
       "correct_answer": "Wood"
      },
-     "cause": "The child names the thing instead of what it is made of.",
+     "cause": "The learner names the thing, not what it is made of.",
      "reveals": "Offer \"A chair\" next to the right answer and ask the question again in a new context.",
-     "help": "A material is what a thing is made from.",
+     "help": "Ask \"what is it made of?\" for ten objects; write the material, not the object.",
      "feedback": "A chair is a product. Wood is a material it is made from.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1829,9 +2251,9 @@
       "wrong_answer": "Waste it, there is plenty",
       "correct_answer": "Plan the cuts and use offcuts"
      },
-     "cause": "Plenty feels endless.",
+     "cause": "Plenty now feels like plenty for ever.",
      "reveals": "Offer \"Waste it, there is plenty\" next to the right answer and ask the question again in a new context.",
-     "help": "Trees take years to grow.",
+     "help": "Show how much timber one tree gives and how long it takes to grow; plan cuts on paper to use offcuts.",
      "feedback": "Plan to waste less and use offcuts, even when materials are plentiful.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1845,9 +2267,9 @@
       "wrong_answer": "Burn it",
       "correct_answer": "Recycle it"
      },
-     "cause": "The child wants the scrap gone.",
+     "cause": "The learner wants the scrap out of the way as fast as possible.",
      "reveals": "Offer \"Burn it\" next to the right answer and ask the question again in a new context.",
-     "help": "Jua kali workers melt and reshape scrap into new things.",
+     "help": "List scrap that can be sold, recycled or reused (scrap metal dealers, offcuts for small items); say what burning releases.",
      "feedback": "Scrap metal can be recycled into new products. Burning plastics also harms the air.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -1861,11 +2283,43 @@
       "wrong_answer": "Throw it away and buy new",
       "correct_answer": "Repair and reuse it"
      },
-     "cause": "New feels better.",
+     "cause": "New things look better and repair seems like poverty.",
      "reveals": "Offer \"Throw it away and buy new\" next to the right answer and ask the question again in a new context.",
-     "help": "Repairing saves materials and money.",
+     "help": "Repair a chair leg in class; compare the cost and material used with buying a new chair.",
      "feedback": "Repair and reuse saves materials. Buy new only when needed.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL.M_PT7_MM_FACTORY_METAL",
+     "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
+     "error": "Thinks any factory-made material is metallic, so puts a plastic pipe with the metals.",
+     "example": {
+      "question": "Which of these is a metallic material?",
+      "wrong_answer": "A plastic water pipe, because it is made in a factory",
+      "correct_answer": "An iron sheet"
+     },
+     "cause": "Metals and plastics are both bought in hardware shops, so made in a factory sounds like metal.",
+     "reveals": "Offer \"A plastic water pipe, because it is made in a factory\" beside \"An iron sheet\" and ask the child to choose.",
+     "help": "Sort hardware-shop items by testing: does it conduct heat? Does it bend without breaking? Does it ring when tapped?",
+     "feedback": "Being made in a factory does not make a material a metal. Plastic is non-metallic.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE.M_PT7_MS_CHEAP_LASTS",
+     "skill": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE",
+     "error": "Thinks the cheapest material is the sustainable choice, even when it wears out fast.",
+     "example": {
+      "question": "A carpenter can buy cheap timber that rots in a year, or treated timber that lasts ten years. Which is more sustainable?",
+      "wrong_answer": "The cheap timber, because it costs less now",
+      "correct_answer": "The treated timber, because it lasts and saves material"
+     },
+     "cause": "Low cost today feels like saving.",
+     "reveals": "Offer \"The cheap timber, because it costs less now\" beside \"The treated timber, because it lasts and saves material\" and ask the child to choose.",
+     "help": "Count how many cheap posts are needed in ten years against one treated post; add up the cost and the trees used.",
+     "feedback": "A material that lasts uses fewer resources over time.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1960,15 +2414,15 @@
       {
        "requires": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "A metal must be told from a non-metal first. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
        "kind": "skill",
-       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Metals as conductors. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1997,15 +2451,22 @@
       {
        "requires": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Properties are described for the metals already named. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
        "kind": "skill",
-       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Conduction of heat. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Properties of solids such as hardness, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2034,8 +2495,22 @@
       {
        "requires": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "A use is chosen for a property. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The metal must be named to say its use. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses of heat and conductors, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2053,9 +2528,9 @@
       "wrong_answer": "Steel",
       "correct_answer": "Aluminium"
      },
-     "cause": "Both are grey-silver.",
+     "cause": "Both are grey-silver and the learner sorts by colour only.",
      "reveals": "Offer \"Steel\" next to the right answer and ask the question again in a new context.",
-     "help": "Steel sticks to a magnet; aluminium does not.",
+     "help": "Test a steel nail and an aluminium can with a magnet and by weight in the hand.",
      "feedback": "Aluminium is light and silvery and does not stick to a magnet. Steel does.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2069,9 +2544,9 @@
       "wrong_answer": "Aluminium",
       "correct_answer": "Copper"
      },
-     "cause": "The child has seen only grey metals.",
+     "cause": "Most metals the learner sees are grey, so copper is not recognised.",
      "reveals": "Offer \"Aluminium\" next to the right answer and ask the question again in a new context.",
-     "help": "Look at an electric wire with the plastic stripped off.",
+     "help": "Strip a piece of electric cable and show the reddish-brown copper inside.",
      "feedback": "Copper is reddish-brown.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2085,9 +2560,9 @@
       "wrong_answer": "It cannot be metal",
       "correct_answer": "It may be aluminium or copper"
      },
-     "cause": "Only iron and steel are noticed.",
+     "cause": "Only iron and steel objects are tested with magnets at home and school.",
      "reveals": "Offer \"It cannot be metal\" next to the right answer and ask the question again in a new context.",
-     "help": "Try a magnet on a sufuria and a nail.",
+     "help": "Test a nail, a copper wire, an aluminium can and a brass key with a magnet; only the nail sticks.",
      "feedback": "Only iron and steel stick to a magnet. Aluminium and copper do not.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2101,9 +2576,9 @@
       "wrong_answer": "Copper",
       "correct_answer": "Steel"
      },
-     "cause": "The child knows only magnet and nail.",
+     "cause": "The only magnet test the learner has seen used a nail or pins.",
      "reveals": "Offer \"Copper\" next to the right answer and ask the question again in a new context.",
-     "help": "Test a coin, a nail and foil with a magnet.",
+     "help": "Test five metals with a magnet and record which stick.",
      "feedback": "Only iron and steel are magnetic. Copper and aluminium are not.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2117,9 +2592,9 @@
       "wrong_answer": "Copper and aluminium as well",
       "correct_answer": "Iron and steel"
      },
-     "cause": "Rust is used for any ageing metal.",
+     "cause": "\"Rust\" is used at home for any old, dull metal.",
      "reveals": "Offer \"Copper and aluminium as well\" next to the right answer and ask the question again in a new context.",
-     "help": "Rust is the red-brown flaking on iron and steel.",
+     "help": "Show a rusty nail, green old copper and a dull aluminium pot; only iron and steel rust (red-brown).",
      "feedback": "Rust forms on iron and steel. Copper and aluminium do not rust like iron.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2133,9 +2608,9 @@
       "wrong_answer": "Metals do not carry heat",
       "correct_answer": "Metals conduct heat well"
      },
-     "cause": "The handle on a pan is plastic, so the child thinks metals keep heat in.",
+     "cause": "Pan handles are plastic or wood, so the learner thinks metal keeps heat in.",
      "reveals": "Offer \"Metals do not carry heat\" next to the right answer and ask the question again in a new context.",
-     "help": "Touch a metal spoon in hot water.",
+     "help": "Put a metal and a plastic spoon in hot water and feel the handles after a minute (with care).",
      "feedback": "Metals conduct heat well, so a pan has a plastic or wooden handle.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2149,9 +2624,9 @@
       "wrong_answer": "It shatters",
       "correct_answer": "It can be shaped into a sheet or drawn into wire"
      },
-     "cause": "The child compares to glass.",
+     "cause": "The learner compares all hard materials with glass.",
      "reveals": "Offer \"It shatters\" next to the right answer and ask the question again in a new context.",
-     "help": "A jua kali worker hammers a hot piece of steel into a shape.",
+     "help": "Hammer a short copper wire flat and bend it; compare with a piece of tile (shown, not done by learners).",
      "feedback": "Metals can be hammered into sheets and drawn into wire, unlike brittle glass.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2165,9 +2640,9 @@
       "wrong_answer": "Steel",
       "correct_answer": "Copper"
      },
-     "cause": "Steel is the metal most known.",
+     "cause": "Steel is the metal the learner knows best.",
      "reveals": "Offer \"Steel\" next to the right answer and ask the question again in a new context.",
-     "help": "Copper conducts electricity very well.",
+     "help": "Strip a cable and show copper; say copper conducts electricity very well and bends easily.",
      "feedback": "Copper is used for electric wire because it conducts electricity well.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2181,9 +2656,9 @@
       "wrong_answer": "It is very heavy",
       "correct_answer": "It is light and conducts heat"
      },
-     "cause": "Strong and heavy are linked.",
+     "cause": "Strong and heavy are linked in the learner's mind.",
      "reveals": "Offer \"It is very heavy\" next to the right answer and ask the question again in a new context.",
-     "help": "Aluminium is light and spreads heat.",
+     "help": "Weigh an aluminium sufuria and a steel one of the same size; aluminium is light and conducts heat.",
      "feedback": "A sufuria is aluminium because it is light and conducts heat.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2197,11 +2672,43 @@
       "wrong_answer": "Because it does not conduct heat",
       "correct_answer": "Because it is hard and strong"
      },
-     "cause": "The reason is guessed.",
+     "cause": "The learner guesses a reason without checking the property against the job.",
      "reveals": "Offer \"Because it does not conduct heat\" next to the right answer and ask the question again in a new context.",
-     "help": "A jembe digs hard ground.",
+     "help": "For each use, ask \"what must the metal do here?\" then pick the property.",
      "feedback": "Steel is hard and strong, so it suits a jembe, a panga and nails.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES.M_PT7_MT_FERROUS",
+     "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES",
+     "error": "Thinks ferrous means any strong or hard metal, so calls aluminium ferrous.",
+     "example": {
+      "question": "Which metal is ferrous (contains iron)?",
+      "wrong_answer": "Aluminium, because it is a strong metal",
+      "correct_answer": "Mild steel"
+     },
+     "cause": "The learner meets \"ferrous\" as a new word and guesses it means strong.",
+     "reveals": "Offer \"Aluminium, because it is a strong metal\" beside \"Mild steel\" and ask the child to choose.",
+     "help": "Teach ferrous = contains iron (iron, steel); non-ferrous = no iron (copper, aluminium, zinc, lead, tin). Test with a magnet and rust.",
+     "feedback": "Ferrous metals contain iron, like mild steel. Aluminium is non-ferrous.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES.M_PT7_MU_GALVANISE",
+     "skill": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES",
+     "error": "Thinks iron roofing sheets are coated with zinc (galvanised) to make them shine.",
+     "example": {
+      "question": "Why are iron roofing sheets galvanised (coated with zinc)?",
+      "wrong_answer": "To make them shine",
+      "correct_answer": "To stop them rusting"
+     },
+     "cause": "New iron sheets are shiny, so the learner thinks the coating is for looks.",
+     "reveals": "Offer \"To make them shine\" beside \"To stop them rusting\" and ask the child to choose.",
+     "help": "Show a new and an old roofing sheet; rust starts where the zinc coat is scratched. Name galvanising.",
+     "feedback": "Zinc coating protects iron sheets from rust.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2304,8 +2811,15 @@
       {
        "requires": "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Non-metals are first told from metals. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorting materials such as plastic, paper and glass, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2334,22 +2848,22 @@
       {
        "requires": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The materials are named first. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
        "kind": "skill",
-       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Most non-metals are poor conductors. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
        "kind": "skill",
-       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Transparent, translucent and opaque materials, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2383,8 +2897,22 @@
       {
        "requires": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "A use is chosen for a property. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The material is named first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Transparency, which decides the use of glass. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2407,9 +2935,9 @@
       "wrong_answer": "Fake",
       "correct_answer": "Made by people from chemicals"
      },
-     "cause": "The word is used for imitations.",
+     "cause": "\"Synthetic\" is used for imitation hair and fake leather.",
      "reveals": "Offer \"Fake\" next to the right answer and ask the question again in a new context.",
-     "help": "Nylon and plastic are real materials made in factories.",
+     "help": "Say synthetic means made by people from chemicals (often from oil): nylon, polythene, PVC. It can be very strong.",
      "feedback": "Synthetic means made by people from chemicals. It does not mean fake.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2423,9 +2951,9 @@
       "wrong_answer": "No, people changed it",
       "correct_answer": "Yes, it comes from a tree"
      },
-     "cause": "The child confuses natural with untouched.",
+     "cause": "The learner confuses natural with untouched.",
      "reveals": "Offer \"No, people changed it\" next to the right answer and ask the question again in a new context.",
-     "help": "Natural means the source: plants, animals or the ground.",
+     "help": "Trace a table back to a tree; the material is still wood, a natural material, even when shaped.",
      "feedback": "Natural describes where a material comes from. Wood is still natural when shaped.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2439,9 +2967,9 @@
       "wrong_answer": "Cotton",
       "correct_answer": "A polythene bag"
      },
-     "cause": "Plastic is everywhere and feels like part of nature.",
+     "cause": "Plastic is everywhere around the learner, so it feels like part of nature.",
      "reveals": "Offer \"Cotton\" next to the right answer and ask the question again in a new context.",
-     "help": "Plastic is made in factories from chemicals.",
+     "help": "Trace a polythene bag back to oil and a factory; trace cotton back to a plant.",
      "feedback": "Plastic is synthetic. Cotton, wool and wood are natural.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2455,9 +2983,9 @@
       "wrong_answer": "Wool",
       "correct_answer": "Nylon"
      },
-     "cause": "Both are cloth.",
+     "cause": "Both are fabrics, and the learner sorts by use, not source.",
      "reveals": "Offer \"Wool\" next to the right answer and ask the question again in a new context.",
-     "help": "Wool comes from sheep; nylon is made from chemicals.",
+     "help": "Burn-test is not done; instead read clothing labels and trace each fibre to a plant, an animal or a factory.",
      "feedback": "Nylon is synthetic. Wool and cotton are natural.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2471,9 +2999,9 @@
       "wrong_answer": "Wood",
       "correct_answer": "A clay brick"
      },
-     "cause": "Non-metals are lumped together.",
+     "cause": "Wood and paper burn, and the learner lumps all non-metals with them.",
      "reveals": "Offer \"Wood\" next to the right answer and ask the question again in a new context.",
-     "help": "Bricks and tiles are baked in a very hot kiln.",
+     "help": "Show (do not test) that clay bricks and stone are fired or formed by great heat; they do not burn.",
      "feedback": "Stone and clay products do not burn. Wood and paper do.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2487,9 +3015,9 @@
       "wrong_answer": "Nothing, plastic is heat-proof",
       "correct_answer": "It softens and melts"
      },
-     "cause": "The child has not seen melting.",
+     "cause": "The learner has not seen plastic melt and trusts its hardness.",
      "reveals": "Offer \"Nothing, plastic is heat-proof\" next to the right answer and ask the question again in a new context.",
-     "help": "Plastic cups lose shape in hot water.",
+     "help": "Show a picture of a plastic basin melted by a jiko; say plastics soften with heat.",
      "feedback": "Plastics soften and melt in heat. Metals and ceramics do not.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2503,9 +3031,9 @@
       "wrong_answer": "No, hard materials never break",
       "correct_answer": "Yes, glass is hard but brittle"
      },
-     "cause": "Hard and strong are mixed up.",
+     "cause": "Hard and strong are treated as the same word.",
      "reveals": "Offer \"No, hard materials never break\" next to the right answer and ask the question again in a new context.",
-     "help": "Drop a glass cup and a plastic one.",
+     "help": "Compare a glass marble (hard, breaks) with a rubber ball (soft, does not break): hard is not the same as tough.",
      "feedback": "Glass is hard but brittle, so it breaks. Hardness is not the same as toughness.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2519,9 +3047,9 @@
       "wrong_answer": "Rubber carries electricity",
       "correct_answer": "Rubber does not carry electricity"
      },
-     "cause": "The child does not know insulators.",
+     "cause": "The learner has not met the idea of an insulator.",
      "reveals": "Offer \"Rubber carries electricity\" next to the right answer and ask the question again in a new context.",
-     "help": "Rubber and plastic cover wires.",
+     "help": "Show a cable: copper inside carries electricity, rubber or plastic outside stops it. Name insulator.",
      "feedback": "Rubber does not carry electricity, so it protects.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2535,9 +3063,9 @@
       "wrong_answer": "Glass",
       "correct_answer": "Plastic"
      },
-     "cause": "The child does not check the property.",
+     "cause": "The learner picks a familiar material without checking it against the job.",
      "reveals": "Offer \"Glass\" next to the right answer and ask the question again in a new context.",
-     "help": "A water tank must not rust or break when knocked.",
+     "help": "Ask \"what must a water tank do?\" (hold water, not break, be light) and test each material against it.",
      "feedback": "Plastic is light, waterproof and does not rust, so it suits a tank.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2551,9 +3079,9 @@
       "wrong_answer": "Wood, because it is natural",
       "correct_answer": "Ceramic, because it is hard and does not burn"
      },
-     "cause": "Wood is the first material that comes to mind.",
+     "cause": "Wood is the first material that comes to mind for making things.",
      "reveals": "Offer \"Wood, because it is natural\" next to the right answer and ask the question again in a new context.",
-     "help": "A tile must not burn or soak up water.",
+     "help": "For a kitchen floor, list what it must do (not burn, easy to clean, hard); compare wood and ceramic tiles.",
      "feedback": "Ceramic tiles are hard, waterproof and do not burn.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2567,11 +3095,27 @@
       "wrong_answer": "It is the wall",
       "correct_answer": "It joins the blocks as it sets"
      },
-     "cause": "Cement and concrete are mixed up.",
+     "cause": "Cement and concrete are used as one word in daily talk.",
      "reveals": "Offer \"It is the wall\" next to the right answer and ask the question again in a new context.",
-     "help": "Cement sets hard when mixed with water and sand.",
+     "help": "Show cement powder, then a block joined with mortar; cement is the binder that sets and holds.",
      "feedback": "Cement is mixed with sand and water to join blocks or make concrete.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES.M_PT7_NU_GLASS_STRONG",
+     "skill": "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES",
+     "error": "Thinks glass is used for windows because it is the strongest material.",
+     "example": {
+      "question": "Why is glass used for windows?",
+      "wrong_answer": "Because it is the strongest material",
+      "correct_answer": "Because it lets light through and keeps out wind and rain"
+     },
+     "cause": "Windows feel important, so the learner thinks the material must be strong.",
+     "reveals": "Offer \"Because it is the strongest material\" beside \"Because it lets light through and keeps out wind and rain\" and ask the child to choose.",
+     "help": "Ask what a window must do (let light in, keep weather out); glass is transparent, but it breaks easily.",
+     "feedback": "Glass is used for windows because it is transparent.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2674,29 +3218,29 @@
       {
        "requires": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Measuring length in centimetres, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The millimetre, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Reading a weighing scale. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Reading seconds on a digital timer. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2730,15 +3274,15 @@
       {
        "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Measuring comes before marking. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.GEOMET.LINES.IDENTIFY_PERPENDICULAR",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Right angles, which a try-square checks. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2772,15 +3316,22 @@
       {
        "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The measuring tools. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The marking tools. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Choosing a tool depends on how exact the job must be, in millimetres. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2809,15 +3360,22 @@
       {
        "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The tools to be cared for. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
        "kind": "skill",
-       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Safe handling at home and school, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Steel rusts when left wet. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2825,6 +3383,48 @@
       {
        "skill": "PRE_.G8.TOOLS_.CUTTING_TOOLS.d",
        "reason": "Grade 8 Pre-Technical Studies builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE",
+     "name": "Give the correct way to use measuring and marking out tools: read from the zero mark with the eye straight above, hold the try-square against a straight edge, scribe and punch in order",
+     "outcomes": [
+      "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c"
+     ],
+     "mastery": "Says to measure from the zero mark (not the worn end of a ruler), read the scale with the eye straight above the mark, hold the stock of a try-square firmly against a straight face edge, scribe away from the body, and dot-punch only where two scribed lines cross; picks the use that gives a true mark. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. The practical part (the drawing, the item made, the tool or computer used) is marked by the teacher with the KICD rubric, never by a tap.",
+     "question_forms": [
+      "say which way of using a tool gives a true reading",
+      "put the marking-out steps in order",
+      "find the mistake in a described use"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The learner must know which tool measures what before using it. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The marking tools and their jobs come first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Workshop rules are read in millimetres. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2840,9 +3440,9 @@
       "wrong_answer": "Ammeter",
       "correct_answer": "Voltmeter"
      },
-     "cause": "The two meters are mixed up.",
+     "cause": "Both meters have a dial and a needle and are named after units the learner has just met.",
      "reveals": "Offer \"Ammeter\" next to the right answer and ask the question again in a new context.",
-     "help": "Volts go with the voltmeter, amperes with the ammeter.",
+     "help": "Write volt = voltmeter, ampere = ammeter; match each unit to its meter.",
      "feedback": "A voltmeter measures voltage. An ammeter measures current.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2856,9 +3456,9 @@
       "wrong_answer": "Length",
       "correct_answer": "Mass"
      },
-     "cause": "The child names any tool as \"measuring\".",
+     "cause": "The learner calls every tool a \"measuring tool\" without asking what it measures.",
      "reveals": "Offer \"Length\" next to the right answer and ask the question again in a new context.",
-     "help": "A balance compares masses.",
+     "help": "Make a table: tool, what it measures, unit (balance, mass, kg or g).",
      "feedback": "A weighing balance measures mass.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2872,9 +3472,9 @@
       "wrong_answer": "Speed",
       "correct_answer": "Time"
      },
-     "cause": "The child links it with races.",
+     "cause": "The learner has seen stopwatches at races, where speed is the point.",
      "reveals": "Offer \"Speed\" next to the right answer and ask the question again in a new context.",
-     "help": "It shows seconds and parts of seconds.",
+     "help": "Time a learner walking 10 m: the stopwatch gives seconds; speed needs distance as well.",
      "feedback": "A stopwatch measures time.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2888,9 +3488,9 @@
       "wrong_answer": "Steel rule",
       "correct_answer": "Tape measure"
      },
-     "cause": "The child knows only the ruler.",
+     "cause": "The steel rule is the tool the learner knows best.",
      "reveals": "Offer \"Steel rule\" next to the right answer and ask the question again in a new context.",
-     "help": "A steel rule is short and stiff; a tape is long and flexible.",
+     "help": "Try to measure the classroom wall with a 30 cm rule, then with a tape; compare time and accuracy.",
      "feedback": "A tape measure measures long lengths. A steel rule suits short ones.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2904,11 +3504,11 @@
       "wrong_answer": "Makes the hole",
       "correct_answer": "Makes a small dent to mark a centre"
      },
-     "cause": "Punch sounds like it cuts through.",
+     "cause": "\"Punch\" sounds like a tool that goes right through.",
      "reveals": "Offer \"Makes the hole\" next to the right answer and ask the question again in a new context.",
      "help": "The dent guides the drill bit.",
      "feedback": "A dot punch makes a small dent to mark where to drill.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -2920,11 +3520,11 @@
       "wrong_answer": "Cutting metal",
       "correct_answer": "Marking circles and arcs"
      },
-     "cause": "It looks like scissors.",
+     "cause": "Dividers have two sharp legs and look like scissors.",
      "reveals": "Offer \"Cutting metal\" next to the right answer and ask the question again in a new context.",
-     "help": "It has two points like a compass.",
+     "help": "Scribe an arc on a scrap plate with dividers; show they mark, never cut.",
      "feedback": "A divider marks circles, arcs and equal distances. It does not cut.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -2936,9 +3536,9 @@
       "wrong_answer": "The length of a board",
       "correct_answer": "A right angle"
      },
-     "cause": "It has a ruler-like blade.",
+     "cause": "The blade of a try-square looks like a ruler.",
      "reveals": "Offer \"The length of a board\" next to the right answer and ask the question again in a new context.",
-     "help": "The corner is 90 degrees.",
+     "help": "Check the corner of a book and a board with the try-square; it tests a right angle, not a length.",
      "feedback": "A try-square checks and marks right angles.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2952,9 +3552,9 @@
       "wrong_answer": "Pencil",
       "correct_answer": "Scriber"
      },
-     "cause": "Pencil is the usual marker.",
+     "cause": "A pencil is the usual marker at school.",
      "reveals": "Offer \"Pencil\" next to the right answer and ask the question again in a new context.",
-     "help": "A pencil line on steel is thick and rubs off.",
+     "help": "Mark steel with a pencil and with a scriber, then wipe both; only the scribed line stays.",
      "feedback": "A scriber scratches a fine lasting line on metal.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2968,9 +3568,9 @@
       "wrong_answer": "Tape measure",
       "correct_answer": "Callipers"
      },
-     "cause": "The tape is the child's usual tool.",
+     "cause": "The tape measure is the tool the learner has used most.",
      "reveals": "Offer \"Tape measure\" next to the right answer and ask the question again in a new context.",
-     "help": "A tape is too thick to grip a small round part.",
+     "help": "Measure a bolt with a tape and with callipers; compare how exact each reading is.",
      "feedback": "Callipers measure the diameter of small round parts most exactly.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2984,9 +3584,9 @@
       "wrong_answer": "Whatever is nearest",
       "correct_answer": "A try-square"
      },
-     "cause": "Convenience beats suitability.",
+     "cause": "Convenience feels more important than the right tool.",
      "reveals": "Offer \"Whatever is nearest\" next to the right answer and ask the question again in a new context.",
-     "help": "The right tool gives a better result.",
+     "help": "Role-play a fundi job: pick the tool for each step and say why; the nearest tool gives a wrong mark.",
      "feedback": "Choose the tool made for the job, such as a try-square for a right angle.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3000,9 +3600,9 @@
       "wrong_answer": "No reason, both are the same",
       "correct_answer": "It gives a finer line that lasts"
      },
-     "cause": "Marking seems the same with any tool.",
+     "cause": "The learner thinks a mark is a mark, whatever made it.",
      "reveals": "Offer \"No reason, both are the same\" next to the right answer and ask the question again in a new context.",
-     "help": "A finer line gives a more accurate cut.",
+     "help": "Compare a pencil line and a scribed line on steel under a magnifier; the scribed line is finer and stays.",
      "feedback": "A finer line means a more accurate cut, so the right tool matters.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3016,9 +3616,9 @@
       "wrong_answer": "Put it away wet",
       "correct_answer": "Wipe it dry and oil it lightly"
      },
-     "cause": "Rust is not seen at once.",
+     "cause": "Rust does not appear at once, so the learner does not link it with putting tools away wet.",
      "reveals": "Offer \"Put it away wet\" next to the right answer and ask the question again in a new context.",
-     "help": "Steel rusts in damp air.",
+     "help": "Leave one wet and one oiled steel offcut for a week and compare.",
      "feedback": "Wipe tools dry and oil them lightly so they do not rust.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3032,9 +3632,9 @@
       "wrong_answer": "Nothing, it is strong",
       "correct_answer": "Use it as a lever or hammer"
      },
-     "cause": "Steel seems tough.",
+     "cause": "Steel feels too tough to be harmed.",
      "reveals": "Offer \"Nothing, it is strong\" next to the right answer and ask the question again in a new context.",
-     "help": "A bent rule gives wrong readings.",
+     "help": "Show a bent steel rule whose scale is now wrong; a tool used as a lever or hammer loses its accuracy.",
      "feedback": "Do not use measuring tools as levers or hammers. They bend and lose accuracy.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3048,9 +3648,9 @@
       "wrong_answer": "In a heap in the box",
       "correct_answer": "In their place, clean and dry"
      },
-     "cause": "Tidy-up is rushed.",
+     "cause": "Tidying is rushed at the end of the lesson.",
      "reveals": "Offer \"In a heap in the box\" next to the right answer and ask the question again in a new context.",
-     "help": "Points and edges get damaged in a heap.",
+     "help": "Use a shadow board: each tool has its outline; a missing or misplaced tool is seen at once.",
      "feedback": "Put tools back in their place so points and edges are not damaged.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3064,11 +3664,91 @@
       "wrong_answer": "With the sharp point uncovered",
       "correct_answer": "With the point covered or in a holder"
      },
-     "cause": "The hazard is not seen.",
+     "cause": "The learner sees a sharp point as useful, not as a danger to hands in the tool box.",
      "reveals": "Offer \"With the sharp point uncovered\" next to the right answer and ask the question again in a new context.",
      "help": "A point can hurt a hand and be blunted.",
      "feedback": "Cover sharp points so they do not hurt you or become blunt.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_RULE_END",
+     "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE",
+     "error": "Measures from the end of a ruler that has a margin before its zero mark.",
+     "example": {
+      "question": "A ruler has a small gap before the 0 mark. Where do you start measuring?",
+      "wrong_answer": "At the end of the ruler",
+      "correct_answer": "At the 0 mark"
+     },
+     "cause": "On a steel rule the end is the zero, so every ruler seems the same.",
+     "reveals": "Offer \"At the end of the ruler\" beside \"At the 0 mark\" and ask the child to choose.",
+     "help": "Measure the same line from the end and from the 0 mark; compare the two readings and see the difference.",
+     "feedback": "Start from the 0 mark, not the end of the ruler.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_PARALLAX",
+     "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE",
+     "error": "Reads a scale from the side, so the reading is off.",
+     "example": {
+      "question": "How should your eye be placed when you read a measurement on a rule?",
+      "wrong_answer": "From the side, at an angle",
+      "correct_answer": "Straight above the mark"
+     },
+     "cause": "The learner looks from wherever they are standing and does not know the reading shifts.",
+     "reveals": "Offer \"From the side, at an angle\" beside \"Straight above the mark\" and ask the child to choose.",
+     "help": "Let two learners read the same mark from the left and right; they get different readings. Then both read from straight above.",
+     "feedback": "Put your eye straight above the mark when you read a scale.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_TRY_STOCK",
+     "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE",
+     "error": "Lets the stock of the try-square float, or rests it on a rough edge, when marking a line square.",
+     "example": {
+      "question": "When marking a line square across a board, where is the stock of the try-square held?",
+      "wrong_answer": "Anywhere on the board",
+      "correct_answer": "Firmly against the straight face edge"
+     },
+     "cause": "The learner thinks the blade alone makes the right angle.",
+     "reveals": "Offer \"Anywhere on the board\" beside \"Firmly against the straight face edge\" and ask the child to choose.",
+     "help": "Mark two lines, one with the stock loose and one held against the face edge; check both with the square. Only the second is square.",
+     "feedback": "Hold the stock tight against a straight edge, then mark along the blade.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE.M_PT7_TU_PUNCH_FIRST",
+     "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE",
+     "error": "Dot-punches the centre of a hole before scribing the lines that fix where it is.",
+     "example": {
+      "question": "When do you dot-punch the centre of a hole on a steel plate?",
+      "wrong_answer": "First, at a point that looks about right",
+      "correct_answer": "After scribing two lines that cross at the centre"
+     },
+     "cause": "The punch mark feels like the real start of the job.",
+     "reveals": "Offer \"First, at a point that looks about right\" beside \"After scribing two lines that cross at the centre\" and ask the child to choose.",
+     "help": "Scribe two crossing lines, then place the punch point where they meet. Show a plate punched first and how far off it is.",
+     "feedback": "Scribe the lines first. Punch where they cross.",
+     "source": "To confirm by a Pre-Technical Studies teacher (SAFETY: the rule must match the school's workshop rules and the Kenyan guidance before a child sees it): a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE.M_PT7_TC_GAUGE_DIVIDER",
+     "skill": "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE",
+     "error": "Picks dividers to mark a line parallel to the edge of a wooden plank, instead of a marking gauge.",
+     "example": {
+      "question": "Which tool marks a line parallel to the edge of a wooden plank?",
+      "wrong_answer": "Dividers",
+      "correct_answer": "A marking gauge"
+     },
+     "cause": "Both tools have a sharp point, so any pointed tool seems to mark lines.",
+     "reveals": "Offer \"Dividers\" beside \"A marking gauge\" and ask the child to choose.",
+     "help": "Show the marking gauge stock running along the edge while the spur marks; compare dividers, which swing arcs.",
+     "feedback": "A marking gauge marks a line parallel to the edge of wood.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3137,7 +3817,8 @@
      "code": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
      "name": "Classify computer hardware as input, output (hardcopy or softcopy) or storage",
      "outcomes": [
-      "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a"
+      "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a",
+      "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.b"
      ],
      "mastery": "The child says input devices send data in (keyboard, mouse, scanner, microphone, touch screen, digital camera), output devices give results out as hardcopy (printer, plotter: on paper) or softcopy (monitor, speaker, projector: on a screen or as sound), and storage devices keep data (hard disk, flash disk, memory card, CD or DVD). Hardware is the parts you can touch. The child does not call a printer an input device. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
@@ -3155,8 +3836,15 @@
       {
        "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The kinds of computer come before their devices. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Input, processing, storage and output. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3179,9 +3867,9 @@
       "wrong_answer": "Input device",
       "correct_answer": "Output device (hardcopy)"
      },
-     "cause": "The printer is plugged into the computer.",
+     "cause": "The printer is plugged into the computer, so the learner thinks it sends things in.",
      "reveals": "Offer \"Input device\" next to the right answer and ask the question again in a new context.",
-     "help": "Input sends data in; output gives results out.",
+     "help": "Follow the direction: data flows from the computer to the printer, so it is output.",
      "feedback": "A printer is an output device. It gives hardcopy on paper.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3195,9 +3883,9 @@
       "wrong_answer": "Printer",
       "correct_answer": "Monitor"
      },
-     "cause": "Output is thought to be on paper.",
+     "cause": "The learner thinks output must be on paper.",
      "reveals": "Offer \"Printer\" next to the right answer and ask the question again in a new context.",
-     "help": "Softcopy is on a screen or sound, hardcopy on paper.",
+     "help": "Softcopy is shown on a screen or played; hardcopy is printed on paper you can hold.",
      "feedback": "A monitor gives softcopy. A printer gives hardcopy.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3211,9 +3899,9 @@
       "wrong_answer": "Output device",
       "correct_answer": "Input device"
      },
-     "cause": "It looks like a printer.",
+     "cause": "A scanner looks like a printer.",
      "reveals": "Offer \"Output device\" next to the right answer and ask the question again in a new context.",
-     "help": "Data goes in: input.",
+     "help": "Scan a page and see it appear on screen: data goes into the computer, so it is input.",
      "feedback": "A scanner is an input device because it sends data in.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3227,9 +3915,9 @@
       "wrong_answer": "Input device",
       "correct_answer": "Storage device"
      },
-     "cause": "It is plugged in for transfer.",
+     "cause": "The flash disk is plugged in to move files, so it seems to put things in.",
      "reveals": "Offer \"Input device\" next to the right answer and ask the question again in a new context.",
-     "help": "Storage keeps data for later.",
+     "help": "Say storage keeps data for later; a flash disk can hold files on and off the computer.",
      "feedback": "A flash disk is a storage device. It keeps data for later.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3326,7 +4014,29 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A school enterprise project, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Why economic activities matter to a county. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Profit from sales, from Grade 6. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -3352,8 +4062,15 @@
       {
        "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Who an entrepreneur is comes first. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Honesty in a school enterprise, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3382,8 +4099,15 @@
       {
        "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "An idea starts a business. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reusing waste, a source of ideas. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3406,9 +4130,9 @@
       "wrong_answer": "Anyone who has a job",
       "correct_answer": "A person who starts and runs a business"
      },
-     "cause": "The two words are used loosely.",
+     "cause": "\"Worker\" and \"business person\" are used loosely in daily talk.",
      "reveals": "Offer \"Anyone who has a job\" next to the right answer and ask the question again in a new context.",
-     "help": "An employee works for someone else's business.",
+     "help": "Compare a teacher employed by a school and a woman who starts a tailoring shop; only she takes the risk and runs the business.",
      "feedback": "An entrepreneur starts and runs a business and takes the risk. An employee works for someone else.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3422,9 +4146,9 @@
       "wrong_answer": "Only rich people",
       "correct_answer": "Anyone with an idea and a plan"
      },
-     "cause": "Big business is pictured.",
+     "cause": "The learner pictures big companies when they hear \"business\".",
      "reveals": "Offer \"Only rich people\" next to the right answer and ask the question again in a new context.",
-     "help": "Many businesses start from small savings, such as a mandazi stall.",
+     "help": "List small Kenyan businesses that started with little money (mandazi stall, boda boda, shoe repair).",
      "feedback": "Anyone with an idea, effort and a plan can start small.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3438,9 +4162,9 @@
       "wrong_answer": "Only the owner gains",
       "correct_answer": "It makes jobs, grinds maize and pays taxes"
      },
-     "cause": "The child sees the owner only.",
+     "cause": "The learner sees the owner's profit and not the jobs and service.",
      "reveals": "Offer \"Only the owner gains\" next to the right answer and ask the question again in a new context.",
-     "help": "Count the workers and customers.",
+     "help": "Map who gains from a posho mill: farmers, workers, families, the county (taxes).",
      "feedback": "Businesses give jobs, goods and services and pay taxes, so the community gains.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3454,9 +4178,9 @@
       "wrong_answer": "Spending everything and hoping",
       "correct_answer": "A risk taken after counting the cost"
      },
-     "cause": "The word risk is linked with luck.",
+     "cause": "\"Risk\" is linked with luck and betting in the learner's world.",
      "reveals": "Offer \"Spending everything and hoping\" next to the right answer and ask the question again in a new context.",
-     "help": "Add up the costs and the chance of success first.",
+     "help": "Compare a calculated risk (count costs, test a small batch) with gambling (hope with no plan).",
      "feedback": "A calculated risk is taken after thinking about costs and the chance of success.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3470,9 +4194,9 @@
       "wrong_answer": "Give up",
       "correct_answer": "Find out why and try again"
      },
-     "cause": "Failure feels final.",
+     "cause": "A first failure feels final to the learner.",
      "reveals": "Offer \"Give up\" next to the right answer and ask the question again in a new context.",
-     "help": "Many businesses learn from early mistakes.",
+     "help": "Tell the story of a trader who changed her product after a slow start; list what she learnt.",
      "feedback": "A determined entrepreneur learns from failure and tries again.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3486,9 +4210,9 @@
       "wrong_answer": "Only luck",
       "correct_answer": "Hard work, honesty and good planning"
      },
-     "cause": "Success is seen, work is not.",
+     "cause": "The learner sees success but not the work behind it.",
      "reveals": "Offer \"Only luck\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask what a trader does before sunrise.",
+     "help": "Interview (or read about) a local business owner: hours, planning, savings.",
      "feedback": "Hard work, honesty and planning matter more than luck.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3502,9 +4226,9 @@
       "wrong_answer": "Creativity",
       "correct_answer": "Honesty"
      },
-     "cause": "Profit is put first.",
+     "cause": "Profit is put above everything, so cheating looks clever.",
      "reveals": "Offer \"Creativity\" next to the right answer and ask the question again in a new context.",
-     "help": "Customers do not return after being cheated.",
+     "help": "Ask what happens when customers find out: they stop buying. Honesty keeps customers.",
      "feedback": "Honesty keeps customers. Cheating loses them.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3518,9 +4242,9 @@
       "wrong_answer": "A lot of money",
       "correct_answer": "A good idea that meets a need"
      },
-     "cause": "Capital is the loudest need.",
+     "cause": "Money is the need people talk about most.",
      "reveals": "Offer \"A lot of money\" next to the right answer and ask the question again in a new context.",
-     "help": "Many businesses start small and grow.",
+     "help": "Order the steps: notice a need, form an idea, plan, then find the money.",
      "feedback": "A good idea that meets a need comes first. Money can start small.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3534,9 +4258,9 @@
       "wrong_answer": "No, it must be new",
       "correct_answer": "Yes, you can improve what others do"
      },
-     "cause": "Original is mixed up with useful.",
+     "cause": "\"Original\" and \"useful\" are mixed up.",
      "reveals": "Offer \"No, it must be new\" next to the right answer and ask the question again in a new context.",
-     "help": "Many shops sell better service, not new goods.",
+     "help": "Show businesses that improved an old idea (a faster delivery, a cleaner kiosk).",
      "feedback": "Improving on what others do is a good source of ideas.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3550,9 +4274,9 @@
       "wrong_answer": "Copy it exactly beside it",
       "correct_answer": "Look for a need not yet met"
      },
-     "cause": "Success seems copyable.",
+     "cause": "Another business's success looks easy to copy.",
      "reveals": "Offer \"Copy it exactly beside it\" next to the right answer and ask the question again in a new context.",
-     "help": "A second identical kiosk shares the same customers.",
+     "help": "Count customers: two identical kiosks side by side share them; look for an unmet need instead.",
      "feedback": "Look for a need not yet met rather than copying exactly.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3566,11 +4290,27 @@
       "wrong_answer": "Nothing, they are rubbish",
       "correct_answer": "Sandals, flower pots or farm buckets"
      },
-     "cause": "Waste is only seen as dirty.",
+     "cause": "Waste is seen only as dirt.",
      "reveals": "Offer \"Nothing, they are rubbish\" next to the right answer and ask the question again in a new context.",
-     "help": "Jua kali workers turn old tyres into sandals.",
+     "help": "Show items made from waste (tyre sandals, bottle-top art, briquettes from sawdust).",
      "feedback": "Waste can be reused or recycled into products that sell.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_PT7_EM_GOODS_ONLY",
+     "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+     "error": "Thinks an entrepreneur must sell goods, so a person who sells a service is not one.",
+     "example": {
+      "question": "A young woman starts a phone repair service. Is she an entrepreneur?",
+      "wrong_answer": "No, she does not sell goods",
+      "correct_answer": "Yes, she starts and runs a business that offers a service"
+     },
+     "cause": "Shops with goods on shelves are the businesses the learner sees most.",
+     "reveals": "Offer \"No, she does not sell goods\" beside \"Yes, she starts and runs a business that offers a service\" and ask the child to choose.",
+     "help": "Sort businesses into goods (kiosk, butchery) and services (salon, repair, transport); all are run by entrepreneurs.",
+     "feedback": "An entrepreneur can sell goods or services.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3657,8 +4397,22 @@
       {
        "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "A business must be understood before it is placed. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Where industries are found in the county, from Grade 4. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Transport links, a location factor. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3687,8 +4441,15 @@
       {
        "requires": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The place and the size are decided together. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Capital limits size; budgeting from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3711,9 +4472,9 @@
       "wrong_answer": "In the town centre",
       "correct_answer": "Near homes that grow maize, with power"
      },
-     "cause": "Town means customers.",
+     "cause": "Towns have many people, so the learner thinks they are always best.",
      "reveals": "Offer \"In the town centre\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask where the maize is and who carries it.",
+     "help": "For a posho mill, ask where the maize is and where the customers live; map it.",
      "feedback": "A posho mill is best near its customers and power, not always in town.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3727,9 +4488,9 @@
       "wrong_answer": "The business does well",
       "correct_answer": "The business may fail"
      },
-     "cause": "Cost seems the main thing.",
+     "cause": "Low cost feels like the most important thing to the learner.",
      "reveals": "Offer \"The business does well\" next to the right answer and ask the question again in a new context.",
-     "help": "Customers matter more than rent.",
+     "help": "Compare two sites: cheap with no customers and dearer on a busy road; count likely sales.",
      "feedback": "Cheap rent does not help if customers do not come. Consider customers, power, safety and more.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3743,9 +4504,9 @@
       "wrong_answer": "No, anywhere will do",
       "correct_answer": "Yes, near customers and with power and water"
      },
-     "cause": "The child focuses on the product.",
+     "cause": "The learner thinks only about the product, not the place.",
      "reveals": "Offer \"No, anywhere will do\" next to the right answer and ask the question again in a new context.",
-     "help": "A salon needs water and power.",
+     "help": "List what a salon needs nearby: customers, water, power, security, transport.",
      "feedback": "Place matters. Customers, power, water and safety all count.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3759,9 +4520,9 @@
       "wrong_answer": "Yes, always",
       "correct_answer": "No, it depends on capital, market and skills"
      },
-     "cause": "Big looks successful.",
+     "cause": "Big businesses look successful on adverts and buildings.",
      "reveals": "Offer \"Yes, always\" next to the right answer and ask the question again in a new context.",
-     "help": "A big workshop with no orders loses money.",
+     "help": "Compare a small bakery selling all its bread with a big one throwing half away; size must fit the market.",
      "feedback": "Size should match capital, market, skills and space.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3775,9 +4536,9 @@
       "wrong_answer": "Only what the owner wants",
       "correct_answer": "Capital, market, raw materials, skills and the law"
      },
-     "cause": "Dreams seem enough.",
+     "cause": "The learner thinks a dream is enough to decide size.",
      "reveals": "Offer \"Only what the owner wants\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask what happens when the money runs out.",
+     "help": "List what limits size: capital, market, raw materials, skills and labour, land, the law.",
      "feedback": "Capital, market, materials, labour and the law all limit size.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3791,11 +4552,43 @@
       "wrong_answer": "A very big one",
       "correct_answer": "A small one"
      },
-     "cause": "Market size is not thought of.",
+     "cause": "The learner does not count customers before choosing size.",
      "reveals": "Offer \"A very big one\" next to the right answer and ask the question again in a new context.",
-     "help": "The bakery sells only what customers buy.",
+     "help": "Work out loaves a day for 20 families; compare with what a big bakery makes.",
      "feedback": "The size of the market limits the size of the business.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION.M_PT7_UL_RAW_FAR",
+     "skill": "PRET.G7.ENTREP.UNIT.UNIT_LOCATION",
+     "error": "Places a unit that uses heavy, bulky raw materials far from where they come from.",
+     "example": {
+      "question": "A sawmill uses heavy logs. Where is it best placed?",
+      "wrong_answer": "In the city centre, far from the forest",
+      "correct_answer": "Near the forest, where the logs come from"
+     },
+     "cause": "The learner thinks of customers only and forgets the cost of moving heavy materials.",
+     "reveals": "Offer \"In the city centre, far from the forest\" beside \"Near the forest, where the logs come from\" and ask the child to choose.",
+     "help": "Work out the transport cost of moving logs 100 km against moving planks; the bulky load should travel least.",
+     "feedback": "A unit that uses heavy raw materials is placed near them.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.ENTREP.UNIT.UNIT_SIZE.M_PT7_US_BUILDING",
+     "skill": "PRET.G7.ENTREP.UNIT.UNIT_SIZE",
+     "error": "Thinks the size of a production unit is shown only by the size of its building.",
+     "example": {
+      "question": "Which of these shows the size of a production unit?",
+      "wrong_answer": "Only how big its building is",
+      "correct_answer": "The number of workers, the capital, the output and the machines"
+     },
+     "cause": "Size is a word the learner uses for how big something looks.",
+     "reveals": "Offer \"Only how big its building is\" beside \"The number of workers, the capital, the output and the machines\" and ask the child to choose.",
+     "help": "Compare a small room with ten machines and many workers to a big empty store; list the measures of size.",
+     "feedback": "The size of a unit is measured by its workers, capital, output and machines, not only its building.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3892,15 +4685,22 @@
       {
        "requires": "MATH.G5.MEASUR.MONEY.BUDGET_MEANING",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "What a budget is, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Factors in saving, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Financial goals guide a business as well as a person. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3934,8 +4734,15 @@
       {
        "requires": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Goals come before SMART goals. Proposed, to confirm by a Pre-Technical Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Saving, from Grade 5. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3964,15 +4771,15 @@
       {
        "requires": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
        "kind": "skill",
-       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "The goal is set first. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Totals and balances. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       },
       {
@@ -3985,8 +4792,8 @@
       {
        "requires": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES",
        "kind": "skill",
-       "reason": "Mathematics taught the measuring, drawing or money idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "reason": "Profit from sales. Proposed, to confirm by a Pre-Technical Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -4009,9 +4816,9 @@
       "wrong_answer": "Only rich people",
       "correct_answer": "Everyone who handles money"
      },
-     "cause": "Goals sound like big plans.",
+     "cause": "\"Goals\" sound like big plans for big money.",
      "reveals": "Offer \"Only rich people\" next to the right answer and ask the question again in a new context.",
-     "help": "A child saving for a shoe has a goal.",
+     "help": "Set a class goal: save 300 shillings for a football in 6 weeks; anyone with money can set goals.",
      "feedback": "Everyone who handles money, even a little, gains from goals.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4025,9 +4832,9 @@
       "wrong_answer": "Nothing, they are the same",
       "correct_answer": "A goal has a plan and a date"
      },
-     "cause": "The two words are used alike.",
+     "cause": "In daily talk \"I want\" and \"my goal\" are used alike.",
      "reveals": "Offer \"Nothing, they are the same\" next to the right answer and ask the question again in a new context.",
-     "help": "A wish says \"I want\"; a goal says how and when.",
+     "help": "Turn a wish (\"I want a bicycle\") into a goal (amount, plan, date).",
      "feedback": "A goal has a plan, an amount and a date. A wish does not.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4041,9 +4848,9 @@
       "wrong_answer": "A new game",
       "correct_answer": "School shoes, a need"
      },
-     "cause": "Wants feel urgent.",
+     "cause": "Wants feel urgent and exciting.",
      "reveals": "Offer \"A new game\" next to the right answer and ask the question again in a new context.",
-     "help": "Needs first, then wants.",
+     "help": "Sort ten items into needs and wants; plan needs first.",
      "feedback": "Needs come before wants when money is limited.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4057,9 +4864,9 @@
       "wrong_answer": "Colour of the notebook",
       "correct_answer": "Time and income"
      },
-     "cause": "Time is not seen as a factor.",
+     "cause": "Time is not seen as part of a money plan.",
      "reveals": "Offer \"Colour of the notebook\" next to the right answer and ask the question again in a new context.",
-     "help": "More time means smaller savings each week.",
+     "help": "Compare saving 1,200 in 6 weeks and in 12 weeks with 100 a week; time changes what is possible.",
      "feedback": "Income, cost and time decide how soon a goal can be reached.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4073,9 +4880,9 @@
       "wrong_answer": "Ambitious",
       "correct_answer": "Achievable"
      },
-     "cause": "The word is guessed.",
+     "cause": "The learner guesses a word that sounds good with the letter.",
      "reveals": "Offer \"Ambitious\" next to the right answer and ask the question again in a new context.",
-     "help": "S, M, A, R, T: Specific, Measurable, Achievable, Realistic, Time-bound.",
+     "help": "Write SMART down the side: Specific, Measurable, Achievable, Realistic, Time-bound; give an example for each.",
      "feedback": "SMART means Specific, Measurable, Achievable, Realistic and Time-bound.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4089,9 +4896,9 @@
       "wrong_answer": "Save more money",
       "correct_answer": "Save 1,200 shillings in 12 weeks by saving 100 shillings a week"
      },
-     "cause": "The child does not see what is missing.",
+     "cause": "The learner does not see what is missing from a short goal.",
      "reveals": "Offer \"Save more money\" next to the right answer and ask the question again in a new context.",
-     "help": "Ask: how much, how, by when?",
+     "help": "Test \"save more money\" against each SMART letter; it fails four of them.",
      "feedback": "A SMART goal names an amount, a way and a date.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4105,9 +4912,9 @@
       "wrong_answer": "Yes, it has a number",
       "correct_answer": "No, it is not realistic"
      },
-     "cause": "A number seems enough.",
+     "cause": "A number makes a goal feel measurable, so it seems complete.",
      "reveals": "Offer \"Yes, it has a number\" next to the right answer and ask the question again in a new context.",
-     "help": "Weekly income decides what is realistic.",
+     "help": "Check a goal of 1 million in a month against income: not achievable or realistic.",
      "feedback": "A number is not enough. The goal must also be achievable and realistic.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4121,11 +4928,11 @@
       "wrong_answer": "500 shillings",
       "correct_answer": "100 shillings"
      },
-     "cause": "The money received feels like gain.",
+     "cause": "The money received at the sale feels like the gain.",
      "reveals": "Offer \"500 shillings\" next to the right answer and ask the question again in a new context.",
-     "help": "Profit is what is left after paying for the goods.",
+     "help": "Write profit = selling price - buying price; work three examples with real items.",
      "feedback": "Profit is selling price minus buying price.",
-     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "source": "To confirm by a Pre-Technical Studies teacher (MONEY: figures, rates and institution names change; check against current Kenyan practice): a common classroom error, not traced to a study by the author.",
      "status": "draft"
     },
     {
@@ -4137,9 +4944,9 @@
       "wrong_answer": "1,300 weeks",
       "correct_answer": "12 weeks"
      },
-     "cause": "Two numbers are added without thought.",
+     "cause": "The learner combines the two numbers in the question without thinking what is asked.",
      "reveals": "Offer \"1,300 weeks\" next to the right answer and ask the question again in a new context.",
-     "help": "Count the 100s in 1,200.",
+     "help": "Ask \"how many 100s make 1,200?\" with counters; that is division.",
      "feedback": "Divide the goal by the amount saved each week.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4153,9 +4960,9 @@
       "wrong_answer": "10 shillings",
       "correct_answer": "200 shillings"
      },
-     "cause": "The number of items is forgotten.",
+     "cause": "The number of items is forgotten once one profit is found.",
      "reveals": "Offer \"10 shillings\" next to the right answer and ask the question again in a new context.",
-     "help": "Multiply the profit on one by the number sold.",
+     "help": "Draw 20 loaves, each with 10 shillings profit; add them up, then multiply.",
      "feedback": "Total profit is profit on one item times the number sold.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -4169,11 +4976,27 @@
       "wrong_answer": "Minus 15 shillings",
       "correct_answer": "15 shillings"
      },
-     "cause": "The order of subtracting is reversed.",
+     "cause": "The learner subtracts in the order the numbers appear.",
      "reveals": "Offer \"Minus 15 shillings\" next to the right answer and ask the question again in a new context.",
-     "help": "Selling price is the bigger number when there is a profit.",
+     "help": "Always start from the money that came in (selling price), then take away the cost.",
      "feedback": "Profit is selling price minus buying price.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_PT7_SM_NO_DATE",
+     "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
+     "error": "Thinks a goal with an amount and an item is SMART even without a time.",
+     "example": {
+      "question": "\"I will save 500 shillings for a calculator.\" What is missing for it to be SMART?",
+      "wrong_answer": "Nothing, it is already SMART",
+      "correct_answer": "A time limit, such as within 10 weeks"
+     },
+     "cause": "The amount and the item feel like the whole plan.",
+     "reveals": "Offer \"Nothing, it is already SMART\" beside \"A time limit, such as within 10 weeks\" and ask the child to choose.",
+     "help": "Tick each SMART letter for the goal; T has no tick. Add \"within 10 weeks by saving 50 shillings a week\".",
+     "feedback": "A SMART goal says by when it will be reached.",
+     "source": "To confirm by a Pre-Technical Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

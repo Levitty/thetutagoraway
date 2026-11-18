@@ -1,0 +1,295 @@
+{
+ "sub_strand": "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_",
+ "title": "Safety in the Immediate Environment",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Every safety rule here is to be confirmed by the teacher against the school's workshop rules before it is used (SAFETY in the library). Observing safety (outcome c) is seen over the term, never scored by a tap. Online-safety lines always name a trusted adult; no learner is asked about their own accounts.",
+ "skills": [
+  {
+   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS",
+   "key_step": "The learner identifies safety threats in the immediate environment: falls (from a height), slips (on a wet or smooth floor), trips (over objects in the way), road crashes (pedestrians, cyclists, boda boda riders, passengers, drivers), fires (wires, sockets, cooking oil, candles) and threats to devices (theft, floods, fire, hardware failure).",
+   "floor": {
+    "prerequisite": "Knows how to stay safe near heat.",
+    "question": "Why should a sufuria handle be turned away from the edge of the jiko?",
+    "answer": "So nobody knocks it and gets burnt"
+   },
+   "representations": [
+    "picture cards: slip, trip, fall",
+    "a classroom hazard hunt sheet",
+    "a chart of threats to a computer"
+   ],
+   "steps": [
+    "Name each kind of threat.",
+    "Tell a slip from a trip from a fall.",
+    "Name what can harm a device.",
+    "Say who is at risk on the road."
+   ],
+   "contexts": [
+    "a wet corridor after mopping",
+    "a school bag in the walkway",
+    "an overloaded extension cable in the lab"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three stick pictures: a wet floor, a bag on the floor, a ladder."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bag on the floor.",
+     "say": "What threat is this: a slip, a trip or a fall?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a trip."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label all three pictures."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_SLIP_TRIP",
+     "listen_for": [
+      "A trip"
+     ],
+     "ask": "Kamau steps on a wet floor and his feet slide away. What is this?",
+     "repair": "A slip is sliding on a smooth or wet surface; a trip is catching the foot on something."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_FIRE_STOVE",
+     "listen_for": [
+      "Only a big open flame"
+     ],
+     "ask": "Which can start a fire?",
+     "repair": "List five ways a fire can start in a house or a workshop."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_DEVICE_THIEF",
+     "listen_for": [
+      "Only a thief"
+     ],
+     "ask": "Which can harm a computer?",
+     "repair": "Ask what happens to a computer in a flood, in lightning or when the power surges."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS.M_ST_ROAD_DRIVER",
+     "listen_for": [
+      "Only drivers on highways"
+     ],
+     "ask": "Who is at risk from road crashes?",
+     "repair": "List who is on a road outside the school gate."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kamau's foot catches on a box and he falls. Slip or trip?",
+     "answer": "A trip",
+     "shows": "slip and trip"
+    },
+    {
+     "question": "Name one threat to a computer other than theft.",
+     "answer": "Fire (flood, hardware failure)",
+     "shows": "devices"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE",
+   "key_step": "The learner identifies online threats (cyberbullying, impersonation, phishing, hacking, strangers' requests) and says what to do: never share a PIN or password, do not open unknown links, do not accept strangers, keep proof, block and report, and tell a trusted adult.",
+   "floor": {
+    "prerequisite": "Knows mobile money and phone messages.",
+    "question": "What is an M-Pesa PIN for?",
+    "answer": "To approve your own payments"
+   },
+   "representations": [
+    "a fake SMS printed large with clues circled",
+    "a threat and response chart",
+    "a trusted adult list"
+   ],
+   "steps": [
+    "Name the threat.",
+    "Find the clue that it is a trick.",
+    "Choose the safe action.",
+    "Name a trusted adult to tell."
+   ],
+   "contexts": [
+    "an SMS asking for an M-Pesa PIN",
+    "a friend request from an unknown person",
+    "nasty messages in a class group"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a fake SMS: \"Your account is blocked. Send your PIN to unlock.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"send your PIN\".",
+     "say": "What kind of threat is this, and what do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say phishing, do not reply, tell an adult."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the rule: never share a PIN."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_LOOKS_REAL",
+     "listen_for": [
+      "A real message, because it looks official"
+     ],
+     "ask": "A message that looks like M-Pesa asks you to send your PIN. What is it?",
+     "repair": "Show that anybody can copy a logo. Real companies never ask for a PIN."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_ACCEPT_STRANGER",
+     "listen_for": [
+      "Accept, because more friends is better"
+     ],
+     "ask": "A stranger sends you a friend request. What should you do?",
+     "repair": "Ask: would you give a stranger at the gate your home address?"
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_BULLY_JOKE",
+     "listen_for": [
+      "No, words online do not hurt"
+     ],
+     "ask": "Is hurting someone with nasty messages harmful?",
+     "repair": "Ask how a nasty message to you would feel; a message can be kept and shared."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_IMPERSONATE",
+     "listen_for": [
+      "A nickname"
+     ],
+     "ask": "Someone makes an account with your friend's name and photo. What is this?",
+     "repair": "A nickname is open and harmless; impersonation pretends to be a real person to trick others."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE.M_SO_HACK_EXPERT",
+     "listen_for": [
+      "Only banks and big companies"
+     ],
+     "ask": "Who can be hacked?",
+     "repair": "Ask what a thief would want from a child's social media account."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A message asks for your PIN. What is it?",
+     "answer": "Phishing",
+     "shows": "phishing"
+    },
+    {
+     "question": "What should you do about nasty messages?",
+     "answer": "Keep proof, block and tell a trusted adult",
+     "shows": "response"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES",
+   "key_step": "The learner outlines safety rules for working with materials and tools: wear protective clothing, tie back hair, follow instructions and steps, no running or playing, keep tools in their place, report every injury and near miss, use tools only with the teacher's permission.",
+   "floor": {
+    "prerequisite": "Knows the threats in the immediate environment.",
+    "question": "Name one threat in a workshop.",
+    "answer": "A trip over a tool on the floor"
+   },
+   "representations": [
+    "a workshop rules poster",
+    "a hazard and rule matching game",
+    "a picture of correct dress: apron, tied hair"
+   ],
+   "steps": [
+    "Name the threat.",
+    "Give the rule that prevents it.",
+    "Say why the rule matters.",
+    "Say what to do if something goes wrong."
+   ],
+   "contexts": [
+    "the school workshop",
+    "a carpenter's shed",
+    "the computer lab"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a workshop with a learner whose hair is loose near a drill."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hair.",
+     "say": "Which rule is broken, and what could happen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say tie back hair; it can be caught."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the rule on the poster."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_RUSH",
+     "listen_for": [
+      "Work as quickly as possible"
+     ],
+     "ask": "Which habit keeps you safe in the workshop?",
+     "repair": "Ask what happens to a hand that hurries near a saw."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_NO_REPORT",
+     "listen_for": [
+      "Say nothing, it is small"
+     ],
+     "ask": "You cut your finger a little. What should you do?",
+     "repair": "A cut can be dirty; the teacher can also fix what caused it."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_LOOSE",
+     "listen_for": [
+      "Leave it loose"
+     ],
+     "ask": "What should you do with long hair in the workshop?",
+     "repair": "Show how a loose sleeve could be caught by a moving part."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_SR_TOOLS_FLOOR",
+     "listen_for": [
+      "Anywhere, on the floor is fine"
+     ],
+     "ask": "Where do tools go when the job is done?",
+     "repair": "Ask who might step on a tool left in a walkway."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES.M_PT7_SR_HORSEPLAY",
+     "listen_for": [
+      "Nothing, no machine is running"
+     ],
+     "ask": "Two learners chase each other in the workshop while the teacher is out. What is wrong?",
+     "repair": "List what is in the workshop even with machines off (sharp tools, heavy vices, benches, edges) and agree the rule: walk, never play."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you do after a small cut in the workshop?",
+     "answer": "Tell the teacher",
+     "shows": "reporting"
+    },
+    {
+     "question": "Why is running not allowed in the workshop?",
+     "answer": "It causes falls and cuts",
+     "shows": "behaviour"
+    }
+   ]
+  }
+ ]
+}

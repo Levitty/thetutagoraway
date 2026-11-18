@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE",
+ "title": "Computer Hardware",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY",
+   "key_step": "The learner classifies hardware devices as input (keyboard, mouse, scanner, microphone, camera), output (softcopy: monitor, speakers; hardcopy: printer), processing (CPU) or storage (hard disk, flash disk, memory card), and picks the device for a task; using the devices is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows the types of computers.",
+    "question": "Name one micro computer.",
+    "answer": "A laptop (smartphone)"
+   },
+   "representations": [
+    "an input-process-output-storage arrow chart",
+    "device cards to sort",
+    "a printout and a screen side by side"
+   ],
+   "steps": [
+    "Follow the data.",
+    "Decide input, output or storage.",
+    "For output, decide softcopy or hardcopy.",
+    "Pick the device for a task."
+   ],
+   "contexts": [
+    "the school fees office",
+    "a cyber café",
+    "a supermarket till"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw arrows: input → computer → output, with storage below."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"scanner\".",
+     "say": "Where does it go on the chart?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say input."
+    },
+    {
+     "beat": "reveal",
+     "do": "Place all the cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_PRINTER_IN",
+     "listen_for": [
+      "Input device"
+     ],
+     "ask": "A printer is a type of what?",
+     "repair": "Follow the direction: data flows from the computer to the printer, so it is output."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_MONITOR_HARD",
+     "listen_for": [
+      "Printer"
+     ],
+     "ask": "Which output is softcopy?",
+     "repair": "Softcopy is shown on a screen or played; hardcopy is printed on paper you can hold."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_SCANNER_OUT",
+     "listen_for": [
+      "Output device"
+     ],
+     "ask": "A scanner sends a picture into the computer. What is it?",
+     "repair": "Scan a page and see it appear on screen: data goes into the computer, so it is input."
+    },
+    {
+     "code": "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY.M_HW_STORAGE_INPUT",
+     "listen_for": [
+      "Input device"
+     ],
+     "ask": "A flash disk keeps files. What is it?",
+     "repair": "Say storage keeps data for later; a flash disk can hold files on and off the computer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a printer input or output?",
+     "answer": "Output (hardcopy)",
+     "shows": "output"
+    },
+    {
+     "question": "A flash disk is which kind of device?",
+     "answer": "Storage",
+     "shows": "storage"
+    }
+   ]
+  }
+ ]
+}

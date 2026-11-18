@@ -1,0 +1,107 @@
+{
+ "sub_strand": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI",
+ "title": "ICT Tools in Communication",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS",
+   "key_step": "The learner explains why ICT tools matter in communication (fast, far, cheap per message, keeps records) and describes the tools (mobile phone, SMS, email, video conferencing, social networking, radio, television), choosing the right tool for a message; using the tools is marked with the rubric.",
+   "floor": {
+    "prerequisite": "Knows modern means of communication.",
+    "question": "Name one modern means of communication.",
+    "answer": "A mobile phone"
+   },
+   "representations": [
+    "tool cards with a picture and a need each (device, data)",
+    "a live and not-live chart",
+    "a message-to-tool matching sheet"
+   ],
+   "steps": [
+    "Name the tools.",
+    "Say what each needs.",
+    "Sort live and not live.",
+    "Pick a tool for a message."
+   ],
+   "contexts": [
+    "a class WhatsApp group for a project",
+    "emailing a drawing to a fundi",
+    "a video call with a relative abroad"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three messages: a drawing, an urgent warning, a monthly report."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the drawing.",
+     "say": "Which tool would you use to send it, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say email or a picture message."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match tools to the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_ALL_FREE",
+     "listen_for": [
+      "Nothing, it is free"
+     ],
+     "ask": "What does a video call need?",
+     "repair": "List what each tool needs (a device, airtime or data, power) and the cost of one hour of video calling."
+    },
+    {
+     "code": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_SMS_NET",
+     "listen_for": [
+      "A text message (SMS)"
+     ],
+     "ask": "Which needs no internet?",
+     "repair": "Switch off mobile data and send an SMS; it still goes. Then try a video call."
+    },
+    {
+     "code": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_EMAIL_LIVE",
+     "listen_for": [
+      "Email"
+     ],
+     "ask": "Which tool lets people see and hear one another live?",
+     "repair": "Sort tools into live (phone call, video conference) and not live (email, SMS)."
+    },
+    {
+     "code": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_IT_SOCIAL_FUN",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can social networking help a small business?",
+     "repair": "Show a small business page selling mandazi or tailoring on a social network; list three uses for work."
+    },
+    {
+     "code": "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS.M_PT7_IT_PICK_TOOL",
+     "listen_for": [
+      "An SMS text message"
+     ],
+     "ask": "You must send a drawing of a shelf to a fundi far away. Which tool suits it best?",
+     "repair": "Give five messages (a drawing, an urgent warning, a meeting) and choose the tool for each, saying why."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which tool works without the internet: SMS or email?",
+     "answer": "SMS",
+     "shows": "tools"
+    },
+    {
+     "question": "Which tool lets people see each other live?",
+     "answer": "Video conferencing",
+     "shows": "tools"
+    }
+   ]
+  }
+ ]
+}

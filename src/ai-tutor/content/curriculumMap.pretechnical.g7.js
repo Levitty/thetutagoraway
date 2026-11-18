@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/pre_technical/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/pre_technical/g7.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill; practical outcomes have a knowledge skill and are marked with the rubric); written offline by Claude, awaiting a Pre-Technical Studies teacher's review, safety lines first. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH": {
   "name": "Introduction to Pre-Technical Studies",
@@ -394,7 +394,8 @@ export const SKILLS = {
   "mis": [
    "M_PI_TOOLS_ONLY",
    "M_PI_BOYS",
-   "M_PI_SCHOOL_ONLY"
+   "M_PI_SCHOOL_ONLY",
+   "M_PT7_PI_STRAND_OTHER"
   ]
  },
  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS": {
@@ -444,7 +445,8 @@ export const SKILLS = {
    "M_SR_RUSH",
    "M_SR_NO_REPORT",
    "M_SR_LOOSE",
-   "M_SR_TOOLS_FLOOR"
+   "M_SR_TOOLS_FLOOR",
+   "M_PT7_SR_HORSEPLAY"
   ]
  },
  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS": {
@@ -478,6 +480,24 @@ export const SKILLS = {
    "M_CL_MICRO_SMALL",
    "M_CL_ANALOGUE_OLD",
    "M_CL_SPECIAL_WEAK"
+  ]
+ },
+ "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE": {
+  "name": "Give the correct steps for using a computer: start up, open a program, save a file with a clear name, and shut down properly",
+  "sub": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS",
+  "outcome": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c",
+  "outcomes": [
+   "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c"
+  ],
+  "pre": [
+   "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+   "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY"
+  ],
+  "mis": [
+   "M_PT7_CU_SWITCH_OFF",
+   "M_PT7_CU_NO_SAVE",
+   "M_PT7_CU_SAVE_NAME",
+   "M_PT7_CU_DOUBLE"
   ]
  },
  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE": {
@@ -530,6 +550,23 @@ export const SKILLS = {
    "M_DS_AF_AC"
   ]
  },
+ "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING": {
+  "name": "State the rules for printing letters and numbers on a technical drawing: capitals, single strokes, guide lines, even height and spacing",
+  "sub": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING",
+  "outcome": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c",
+  "outcomes": [
+   "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c"
+  ],
+  "pre": [
+   "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE"
+  ],
+  "mis": [
+   "M_PT7_DLT_CURSIVE",
+   "M_PT7_DLT_MIXED",
+   "M_PT7_DLT_NO_GUIDE",
+   "M_PT7_DLT_SPACING"
+  ]
+ },
  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES": {
   "name": "Explain the principles of free-hand sketching",
   "sub": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
@@ -552,7 +589,9 @@ export const SKILLS = {
   "sub": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
   "outcome": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b",
   "outcomes": [
-   "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b"
+   "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b",
+   "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.c",
+   "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.d"
   ],
   "pre": [
    "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES"
@@ -561,7 +600,8 @@ export const SKILLS = {
    "M_SK_HATCH_DOTS",
    "M_SK_CROSS_HATCH",
    "M_SK_BOX_CIRCLE",
-   "M_SK_CENTRE_ANY"
+   "M_SK_CENTRE_ANY",
+   "M_PT7_SK_STROKE_PUSH"
   ]
  },
  "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS": {
@@ -570,7 +610,8 @@ export const SKILLS = {
   "outcome": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a",
   "outcomes": [
    "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a",
-   "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b"
+   "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b",
+   "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.c"
   ],
   "pre": [
    "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY"
@@ -579,7 +620,8 @@ export const SKILLS = {
    "M_IT_ALL_FREE",
    "M_IT_SMS_NET",
    "M_IT_EMAIL_LIVE",
-   "M_IT_SOCIAL_FUN"
+   "M_IT_SOCIAL_FUN",
+   "M_PT7_IT_PICK_TOOL"
   ]
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL": {
@@ -594,7 +636,8 @@ export const SKILLS = {
   "mis": [
    "M_MM_SHINY",
    "M_MM_HARD_METAL",
-   "M_MM_PRODUCT"
+   "M_MM_PRODUCT",
+   "M_PT7_MM_FACTORY_METAL"
   ]
  },
  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE": {
@@ -610,7 +653,8 @@ export const SKILLS = {
   "mis": [
    "M_MS_WASTE_OK",
    "M_MS_BURN_OFFCUTS",
-   "M_MS_NEW_ONLY"
+   "M_MS_NEW_ONLY",
+   "M_PT7_MS_CHEAP_LASTS"
   ]
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES": {
@@ -626,7 +670,8 @@ export const SKILLS = {
   "mis": [
    "M_MT_ALU_STEEL",
    "M_MT_COPPER_COLOUR",
-   "M_MT_MAGNET_ALL"
+   "M_MT_MAGNET_ALL",
+   "M_PT7_MT_FERROUS"
   ]
  },
  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES": {
@@ -654,12 +699,14 @@ export const SKILLS = {
    "PRE_.G7.MATERI.METALLIC_MATERIALS.c"
   ],
   "pre": [
-   "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES"
+   "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+   "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES"
   ],
   "mis": [
    "M_MU_WIRE_STEEL",
    "M_MU_ALU_HEAVY",
-   "M_MU_PROPERTY_SWAP"
+   "M_MU_PROPERTY_SWAP",
+   "M_PT7_MU_GALVANISE"
   ]
  },
  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS": {
@@ -705,12 +752,14 @@ export const SKILLS = {
    "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.d"
   ],
   "pre": [
-   "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES"
+   "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+   "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS"
   ],
   "mis": [
    "M_NU_GLASS_HANDLE",
    "M_NU_WOOD_ANY",
-   "M_NU_CEMENT"
+   "M_NU_CEMENT",
+   "M_PT7_NU_GLASS_STRONG"
   ]
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS": {
@@ -759,7 +808,8 @@ export const SKILLS = {
   "mis": [
    "M_TC_TAPE_ALL",
    "M_TC_NEAREST",
-   "M_TC_PRECISION"
+   "M_TC_PRECISION",
+   "M_PT7_TC_GAUGE_DIVIDER"
   ]
  },
  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE": {
@@ -770,7 +820,8 @@ export const SKILLS = {
    "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.d"
   ],
   "pre": [
-   "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS"
+   "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+   "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES"
   ],
   "mis": [
    "M_CT_NO_OIL",
@@ -779,15 +830,35 @@ export const SKILLS = {
    "M_CT_POINTS_OPEN"
   ]
  },
+ "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE": {
+  "name": "Give the correct way to use measuring and marking out tools: read from the zero mark with the eye straight above, hold the try-square against a straight edge, scribe and punch in order",
+  "sub": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU",
+  "outcome": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c",
+  "outcomes": [
+   "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c"
+  ],
+  "pre": [
+   "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+   "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS"
+  ],
+  "mis": [
+   "M_PT7_TU_RULE_END",
+   "M_PT7_TU_PARALLAX",
+   "M_PT7_TU_TRY_STOCK",
+   "M_PT7_TU_PUNCH_FIRST"
+  ]
+ },
  "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY": {
   "name": "Classify computer hardware as input, output (hardcopy or softcopy) or storage",
   "sub": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE",
   "outcome": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a",
   "outcomes": [
-   "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a"
+   "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a",
+   "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.b"
   ],
   "pre": [
-   "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY"
+   "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+   "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS"
   ],
   "mis": [
    "M_HW_PRINTER_IN",
@@ -807,7 +878,8 @@ export const SKILLS = {
   "mis": [
    "M_EM_ALL_WORKERS",
    "M_EM_RICH_ONLY",
-   "M_EM_OWNER_ONLY"
+   "M_EM_OWNER_ONLY",
+   "M_PT7_EM_GOODS_ONLY"
   ]
  },
  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES": {
@@ -857,7 +929,8 @@ export const SKILLS = {
   "mis": [
    "M_UL_TOWN_ALWAYS",
    "M_UL_CHEAP_ONLY",
-   "M_UL_ANYWHERE"
+   "M_UL_ANYWHERE",
+   "M_PT7_UL_RAW_FAR"
   ]
  },
  "PRET.G7.ENTREP.UNIT.UNIT_SIZE": {
@@ -873,7 +946,8 @@ export const SKILLS = {
   "mis": [
    "M_US_BIGGER_BETTER",
    "M_US_WISH_ONLY",
-   "M_US_NO_MARKET"
+   "M_US_NO_MARKET",
+   "M_PT7_US_BUILDING"
   ]
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS": {
@@ -884,7 +958,9 @@ export const SKILLS = {
    "PRE_.G7.ENTREP.FINANCIAL_GOALS.a",
    "PRE_.G7.ENTREP.FINANCIAL_GOALS.b"
   ],
-  "pre": [],
+  "pre": [
+   "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING"
+  ],
   "mis": [
    "M_FI_RICH_ONLY",
    "M_FI_WISH",
@@ -905,7 +981,8 @@ export const SKILLS = {
   "mis": [
    "M_SM_LETTERS",
    "M_SM_VAGUE",
-   "M_SM_NUMBER_ENOUGH"
+   "M_SM_NUMBER_ENOUGH",
+   "M_PT7_SM_NO_DATE"
   ]
  },
  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS": {
@@ -930,6 +1007,7 @@ export const MIS_FEEDBACK = {
  "M_PI_TOOLS_ONLY": "Pre-Technical Studies also covers safety, drawing, materials, computers and entrepreneurship, not only tools.",
  "M_PI_BOYS": "Everybody uses it: girls and boys, in homes, shops, farms, offices and workshops.",
  "M_PI_SCHOOL_ONLY": "Safety, tools, drawings and small businesses are part of daily life everywhere.",
+ "M_PT7_PI_STRAND_OTHER": "Budgets belong to the Entrepreneurship strand of Pre-Technical Studies.",
  "M_ST_SLIP_TRIP": "A slip happens on a wet or smooth floor. A trip happens when the foot catches on something in the way.",
  "M_ST_FIRE_STOVE": "Faulty wires, overloaded sockets, hot oil and sparks can all start a fire, not only a big flame.",
  "M_ST_DEVICE_THIEF": "Theft, floods, fire and hardware failure can all harm a device.",
@@ -943,6 +1021,7 @@ export const MIS_FEEDBACK = {
  "M_SR_NO_REPORT": "Always tell the teacher about an injury, however small.",
  "M_SR_LOOSE": "Hair and loose clothes can be caught by moving parts. Tie hair back.",
  "M_SR_TOOLS_FLOOR": "Tools left about cause trips and cuts. Put them back in their place.",
+ "M_PT7_SR_HORSEPLAY": "Never run or play in the workshop. Sharp tools and hard edges are always there.",
  "M_CC_DATA_INFO": "Data is raw facts. Information is data that has been processed so it means something.",
  "M_CC_ALWAYS_RIGHT": "A computer is accurate at the working, but wrong input gives wrong output.",
  "M_CC_TIRED": "Diligence means it works for long hours without tiring or losing care.",
@@ -952,6 +1031,10 @@ export const MIS_FEEDBACK = {
  "M_CL_MICRO_SMALL": "The order from biggest is super, mainframe, mini and micro. A laptop is a micro computer.",
  "M_CL_ANALOGUE_OLD": "Analogue computers work with continuous quantities, such as temperature, speed or flow.",
  "M_CL_SPECIAL_WEAK": "A special-purpose computer is built for one job. General-purpose computers do many jobs.",
+ "M_PT7_CU_SWITCH_OFF": "Shut down from the computer first. Switch off at the socket only after the screen goes dark.",
+ "M_PT7_CU_NO_SAVE": "Save your work before you close a program, or the new work may be lost.",
+ "M_PT7_CU_SAVE_NAME": "Give every file a clear name and save it in a folder you will remember.",
+ "M_PT7_CU_DOUBLE": "One click selects an icon. A double-click opens it.",
  "M_DP_ARTISTS_ONLY": "Builders, tailors and engineers all use drawings to share plans.",
  "M_DP_WORDS_BETTER": "A drawing shows shape, size and parts that words describe badly.",
  "M_DP_TECH_PRETTY": "A technical drawing gives exact shape and size by rules so a worker can make the thing.",
@@ -964,6 +1047,10 @@ export const MIS_FEEDBACK = {
  "M_DS_PERP_PARALLEL": "The symbol ⊥ means perpendicular, at a right angle.",
  "M_DS_ID_OD": "O/D is outside diameter. I/D is inside diameter.",
  "M_DS_AF_AC": "A/F is across flats, side to side. A/C is across corners.",
+ "M_PT7_DLT_CURSIVE": "Notes on a drawing are printed in plain capital letters, not joined writing.",
+ "M_PT7_DLT_MIXED": "Use capital letters all through a note or title on a drawing.",
+ "M_PT7_DLT_NO_GUIDE": "Draw two faint guide lines first. Every letter touches both.",
+ "M_PT7_DLT_SPACING": "Leave even gaps between letters and a wider gap between words.",
  "M_SP_RULER": "Free-hand sketching is done without a ruler or compass.",
  "M_SP_PRESS_FIRST": "Start light. Firm up the correct lines later.",
  "M_SP_ERASER": "Light lines let you correct without much rubbing out.",
@@ -972,16 +1059,20 @@ export const MIS_FEEDBACK = {
  "M_SK_CROSS_HATCH": "Cross-hatching is two sets of lines crossing each other, for darker shade.",
  "M_SK_BOX_CIRCLE": "The hand compass method draws arcs and circles. The box method draws a light box round an object.",
  "M_SK_CENTRE_ANY": "The centreline method suits symmetrical objects, the same on both sides of a centre line.",
+ "M_PT7_SK_STROKE_PUSH": "Mark two points and sketch with light, steady strokes using the whole arm.",
  "M_IT_ALL_FREE": "Calls, data and devices cost money. Airtime or data is needed.",
  "M_IT_SMS_NET": "An SMS uses the phone network. A video conference needs an internet link.",
  "M_IT_EMAIL_LIVE": "Video conferencing shows and sounds both ways live. Email sends written messages and files.",
  "M_IT_SOCIAL_FUN": "Social networking shares messages and pictures with many people, including customers.",
+ "M_PT7_IT_PICK_TOOL": "Choose the tool that suits the message. A drawing needs a tool that sends pictures.",
  "M_MM_SHINY": "Glass shines but is non-metallic.",
  "M_MM_HARD_METAL": "Stone is hard but is non-metallic.",
  "M_MM_PRODUCT": "A chair is a product. Wood is a material it is made from.",
  "M_MS_WASTE_OK": "Plan to waste less and use offcuts, even when materials are plentiful.",
  "M_MS_BURN_OFFCUTS": "Scrap metal can be recycled into new products. Burning plastics also harms the air.",
  "M_MS_NEW_ONLY": "Repair and reuse saves materials. Buy new only when needed.",
+ "M_PT7_MM_FACTORY_METAL": "Being made in a factory does not make a material a metal. Plastic is non-metallic.",
+ "M_PT7_MS_CHEAP_LASTS": "A material that lasts uses fewer resources over time.",
  "M_MT_ALU_STEEL": "Aluminium is light and silvery and does not stick to a magnet. Steel does.",
  "M_MT_COPPER_COLOUR": "Copper is reddish-brown.",
  "M_MT_MAGNET_ALL": "Only iron and steel stick to a magnet. Aluminium and copper do not.",
@@ -992,6 +1083,8 @@ export const MIS_FEEDBACK = {
  "M_MU_WIRE_STEEL": "Copper is used for electric wire because it conducts electricity well.",
  "M_MU_ALU_HEAVY": "A sufuria is aluminium because it is light and conducts heat.",
  "M_MU_PROPERTY_SWAP": "Steel is hard and strong, so it suits a jembe, a panga and nails.",
+ "M_PT7_MT_FERROUS": "Ferrous metals contain iron, like mild steel. Aluminium is non-ferrous.",
+ "M_PT7_MU_GALVANISE": "Zinc coating protects iron sheets from rust.",
  "M_NC_SYNTH_FAKE": "Synthetic means made by people from chemicals. It does not mean fake.",
  "M_NC_NATURAL_UNMADE": "Natural describes where a material comes from. Wood is still natural when shaped.",
  "M_NC_PLASTIC_NATURAL": "Plastic is synthetic. Cotton, wool and wood are natural.",
@@ -1003,6 +1096,7 @@ export const MIS_FEEDBACK = {
  "M_NU_GLASS_HANDLE": "Plastic is light, waterproof and does not rust, so it suits a tank.",
  "M_NU_WOOD_ANY": "Ceramic tiles are hard, waterproof and do not burn.",
  "M_NU_CEMENT": "Cement is mixed with sand and water to join blocks or make concrete.",
+ "M_PT7_NU_GLASS_STRONG": "Glass is used for windows because it is transparent.",
  "M_MV_VOLT_AMP": "A voltmeter measures voltage. An ammeter measures current.",
  "M_MV_BALANCE_LEN": "A weighing balance measures mass.",
  "M_MV_STOPWATCH": "A stopwatch measures time.",
@@ -1018,6 +1112,11 @@ export const MIS_FEEDBACK = {
  "M_CT_HAMMER": "Do not use measuring tools as levers or hammers. They bend and lose accuracy.",
  "M_CT_HEAP": "Put tools back in their place so points and edges are not damaged.",
  "M_CT_POINTS_OPEN": "Cover sharp points so they do not hurt you or become blunt.",
+ "M_PT7_TU_RULE_END": "Start from the 0 mark, not the end of the ruler.",
+ "M_PT7_TU_PARALLAX": "Put your eye straight above the mark when you read a scale.",
+ "M_PT7_TU_TRY_STOCK": "Hold the stock tight against a straight edge, then mark along the blade.",
+ "M_PT7_TU_PUNCH_FIRST": "Scribe the lines first. Punch where they cross.",
+ "M_PT7_TC_GAUGE_DIVIDER": "A marking gauge marks a line parallel to the edge of wood.",
  "M_HW_PRINTER_IN": "A printer is an output device. It gives hardcopy on paper.",
  "M_HW_MONITOR_HARD": "A monitor gives softcopy. A printer gives hardcopy.",
  "M_HW_SCANNER_OUT": "A scanner is an input device because it sends data in.",
@@ -1033,12 +1132,15 @@ export const MIS_FEEDBACK = {
  "M_EI_NEW_ONLY": "Improving on what others do is a good source of ideas.",
  "M_EI_COPY_EXACT": "Look for a need not yet met rather than copying exactly.",
  "M_EI_WASTE": "Waste can be reused or recycled into products that sell.",
+ "M_PT7_EM_GOODS_ONLY": "An entrepreneur can sell goods or services.",
  "M_UL_TOWN_ALWAYS": "A posho mill is best near its customers and power, not always in town.",
  "M_UL_CHEAP_ONLY": "Cheap rent does not help if customers do not come. Consider customers, power, safety and more.",
  "M_UL_ANYWHERE": "Place matters. Customers, power, water and safety all count.",
  "M_US_BIGGER_BETTER": "Size should match capital, market, skills and space.",
  "M_US_WISH_ONLY": "Capital, market, materials, labour and the law all limit size.",
  "M_US_NO_MARKET": "The size of the market limits the size of the business.",
+ "M_PT7_UL_RAW_FAR": "A unit that uses heavy raw materials is placed near them.",
+ "M_PT7_US_BUILDING": "The size of a unit is measured by its workers, capital, output and machines, not only its building.",
  "M_FI_RICH_ONLY": "Everyone who handles money, even a little, gains from goals.",
  "M_FI_WISH": "A goal has a plan, an amount and a date. A wish does not.",
  "M_FI_WANTS_FIRST": "Needs come before wants when money is limited.",
@@ -1049,5 +1151,6 @@ export const MIS_FEEDBACK = {
  "M_FN_SELL_PROFIT": "Profit is selling price minus buying price.",
  "M_FN_ADD_WEEKS": "Divide the goal by the amount saved each week.",
  "M_FN_ONE_ITEM": "Total profit is profit on one item times the number sold.",
- "M_FN_BUY_SELL": "Profit is selling price minus buying price."
+ "M_FN_BUY_SELL": "Profit is selling price minus buying price.",
+ "M_PT7_SM_NO_DATE": "A SMART goal says by when it will be reached."
 };

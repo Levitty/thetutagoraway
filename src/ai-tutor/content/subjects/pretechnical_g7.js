@@ -7,6 +7,7 @@ import { FAMILIES as A } from '../families/pretechnical_g7_a.js';
 import { FAMILIES as B } from '../families/pretechnical_g7_b.js';
 import { FAMILIES as C } from '../families/pretechnical_g7_c.js';
 import { SIGNED } from '../families/pretechnical_g7_signed.js';
+import { AWAITING } from '../families/pretechnical_g7_awaiting.js';
 
 export default {
   subject: 'pretechnical', grade: 7, prefix: 'PRET',
@@ -16,6 +17,7 @@ export default {
   families: [...A, ...B, ...C],                          // add each family file you write: [...A, ...B]
   familyFiles: ['pretechnical_g7_a.js', 'pretechnical_g7_b.js', 'pretechnical_g7_c.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'pretechnical_g7_signed.js',
+  awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'pretechnical7.',          // every family id starts with this
   marker: null,                            // 'text' when answers are marked as words by answerCheckText.js

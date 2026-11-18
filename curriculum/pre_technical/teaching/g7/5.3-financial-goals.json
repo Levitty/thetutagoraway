@@ -1,0 +1,279 @@
+{
+ "sub_strand": "PRE_.G7.ENTREP.FINANCIAL_GOALS",
+ "title": "Financial Goals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use shillings and amounts a Grade 7 learner might really save (pocket money, a chama, a school club). Never ask about a family's own income.",
+ "skills": [
+  {
+   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS",
+   "key_step": "The learner explains why financial goals matter (direction, discipline, saving, avoiding debt, meeting needs) and the factors when setting them: income, needs before wants, time available, cost of the item, savings already made, and changes in prices.",
+   "floor": {
+    "prerequisite": "Knows what a budget is.",
+    "question": "What is a budget?",
+    "answer": "A plan for using money"
+   },
+   "representations": [
+    "a wish to goal chart",
+    "needs and wants cards",
+    "a time and amount table"
+   ],
+   "steps": [
+    "Say why goals matter.",
+    "Tell a goal from a wish.",
+    "Put needs first.",
+    "List the factors."
+   ],
+   "contexts": [
+    "saving for school shoes",
+    "a class saving for a ball",
+    "a chama saving for a water tank"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"I want a bicycle.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "What must be added to make this a goal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say an amount, a plan and a date."
+    },
+    {
+     "beat": "reveal",
+     "do": "Rewrite it as a goal."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_RICH_ONLY",
+     "listen_for": [
+      "Only rich people"
+     ],
+     "ask": "Who needs financial goals?",
+     "repair": "Set a class goal: save 300 shillings for a football in 6 weeks; anyone with money can set goals."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_WISH",
+     "listen_for": [
+      "Nothing, they are the same"
+     ],
+     "ask": "What makes a goal different from a wish?",
+     "repair": "Turn a wish (\"I want a bicycle\") into a goal (amount, plan, date)."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_WANTS_FIRST",
+     "listen_for": [
+      "A new game"
+     ],
+     "ask": "A learner has little money. What comes first?",
+     "repair": "Sort ten items into needs and wants; plan needs first."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS.M_FI_NO_TIME",
+     "listen_for": [
+      "Colour of the notebook"
+     ],
+     "ask": "Which factor says how soon a goal can be reached?",
+     "repair": "Compare saving 1,200 in 6 weeks and in 12 weeks with 100 a week; time changes what is possible."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is a goal different from a wish?",
+     "answer": "A goal has a plan and a date",
+     "shows": "goal"
+    },
+    {
+     "question": "Name one factor in setting a financial goal.",
+     "answer": "Income (time, needs)",
+     "shows": "factors"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART",
+   "key_step": "The learner tells a SMART financial goal (Specific, Measurable, Achievable, Realistic, Time-bound) from a weak one, and formulates one for themselves, such as \"save 1,200 shillings in 12 weeks by saving 100 shillings a week for a school bag\".",
+   "floor": {
+    "prerequisite": "Knows what a financial goal is.",
+    "question": "Is \"save money\" a goal or a wish?",
+    "answer": "A wish (it has no plan or date)"
+   },
+   "representations": [
+    "SMART letters down the side of the board",
+    "a goal checklist with ticks",
+    "weak and SMART goal cards"
+   ],
+   "steps": [
+    "Read the goal.",
+    "Check each SMART letter.",
+    "Find what is missing.",
+    "Rewrite it as SMART."
+   ],
+   "contexts": [
+    "saving for a school bag",
+    "a club saving for a trip",
+    "a youth saving for a sewing machine"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the goal: \"I will save more money.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the goal.",
+     "say": "Which SMART letters does it fail?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name specific, measurable and time-bound."
+    },
+    {
+     "beat": "reveal",
+     "do": "Rewrite it as a SMART goal."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_LETTERS",
+     "listen_for": [
+      "Ambitious"
+     ],
+     "ask": "What does the A in SMART stand for?",
+     "repair": "Write SMART down the side: Specific, Measurable, Achievable, Realistic, Time-bound; give an example for each."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_VAGUE",
+     "listen_for": [
+      "Save more money"
+     ],
+     "ask": "Which is a SMART goal?",
+     "repair": "Test \"save more money\" against each SMART letter; it fails four of them."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_SM_NUMBER_ENOUGH",
+     "listen_for": [
+      "Yes, it has a number"
+     ],
+     "ask": "A learner with 100 shillings a week aims to save 1 million shillings in a month. Is it SMART?",
+     "repair": "Check a goal of 1 million in a month against income: not achievable or realistic."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART.M_PT7_SM_NO_DATE",
+     "listen_for": [
+      "Nothing, it is already SMART"
+     ],
+     "ask": "\"I will save 500 shillings for a calculator.\" What is missing for it to be SMART?",
+     "repair": "Tick each SMART letter for the goal; T has no tick. Add \"within 10 weeks by saving 50 shillings a week\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does the T in SMART stand for?",
+     "answer": "Time-bound",
+     "shows": "letters"
+    },
+    {
+     "question": "Is \"save more money\" a SMART goal?",
+     "answer": "No, it is not specific, measurable or time-bound",
+     "shows": "SMART"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS",
+   "key_step": "The learner works out simple money for a goal: weeks to reach a saving target (target ÷ weekly saving), profit on one item (selling price - buying price), total profit (profit per item × number sold).",
+   "floor": {
+    "prerequisite": "Can find profit on one sale.",
+    "question": "Buy for 40, sell for 55. Profit?",
+    "answer": "15 shillings"
+   },
+   "representations": [
+    "a savings chart week by week",
+    "profit = selling - buying written large",
+    "counters for weekly savings"
+   ],
+   "steps": [
+    "Read what is asked.",
+    "Choose the operation.",
+    "Work it out.",
+    "Check the answer makes sense."
+   ],
+   "contexts": [
+    "saving pocket money",
+    "selling mandazi at school",
+    "a chama contribution"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: save 1,200 at 100 a week."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two numbers.",
+     "say": "Which operation finds the number of weeks?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say divide."
+    },
+    {
+     "beat": "reveal",
+     "do": "Work it out: 12 weeks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_SELL_PROFIT",
+     "listen_for": [
+      "500 shillings"
+     ],
+     "ask": "A trader buys a bag for 400 shillings and sells it for 500. What is the profit?",
+     "repair": "Write profit = selling price - buying price; work three examples with real items."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_ADD_WEEKS",
+     "listen_for": [
+      "1,300 weeks"
+     ],
+     "ask": "To save 1,200 shillings at 100 shillings a week, how many weeks are needed?",
+     "repair": "Ask \"how many 100s make 1,200?\" with counters; that is division."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_ONE_ITEM",
+     "listen_for": [
+      "10 shillings"
+     ],
+     "ask": "A trader earns 10 shillings profit on each of 20 loaves. What is the total profit?",
+     "repair": "Draw 20 loaves, each with 10 shillings profit; add them up, then multiply."
+    },
+    {
+     "code": "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS.M_FN_BUY_SELL",
+     "listen_for": [
+      "Minus 15 shillings"
+     ],
+     "ask": "Buying 60, selling 75. Profit?",
+     "repair": "Always start from the money that came in (selling price), then take away the cost."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Buy at 400, sell at 500. What is the profit?",
+     "answer": "100 shillings",
+     "shows": "profit"
+    },
+    {
+     "question": "Save 1,200 at 100 a week. How many weeks?",
+     "answer": "12 weeks",
+     "shows": "weeks"
+    }
+   ]
+  }
+ ]
+}

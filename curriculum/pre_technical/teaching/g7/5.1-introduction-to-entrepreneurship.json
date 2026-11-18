@@ -1,0 +1,279 @@
+{
+ "sub_strand": "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE",
+ "title": "Introduction to Entrepreneurship",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING",
+   "key_step": "The learner explains that an entrepreneur starts and runs a business, taking a risk to meet a need, and why entrepreneurship matters in the community: creates jobs, provides goods and services, uses local resources, pays taxes, raises incomes, encourages new ideas.",
+   "floor": {
+    "prerequisite": "Knows what profit is.",
+    "question": "Buy for 50, sell for 70. What is the profit?",
+    "answer": "20 shillings"
+   },
+   "representations": [
+    "a \"who gains?\" web around a posho mill",
+    "photos of local businesses",
+    "goods and services cards"
+   ],
+   "steps": [
+    "Say who an entrepreneur is.",
+    "Name local entrepreneurs.",
+    "List what they give the community.",
+    "Tell goods from services."
+   ],
+   "contexts": [
+    "a posho mill",
+    "a boda boda business",
+    "a salon"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a posho mill in the middle with arrows out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty arrow.",
+     "say": "Who else gains from this business, and how?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name farmers, workers or the county."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in all the arrows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_ALL_WORKERS",
+     "listen_for": [
+      "Anyone who has a job"
+     ],
+     "ask": "Who is an entrepreneur?",
+     "repair": "Compare a teacher employed by a school and a woman who starts a tailoring shop; only she takes the risk and runs the business."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_RICH_ONLY",
+     "listen_for": [
+      "Only rich people"
+     ],
+     "ask": "Who can start a small business?",
+     "repair": "List small Kenyan businesses that started with little money (mandazi stall, boda boda, shoe repair)."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_EM_OWNER_ONLY",
+     "listen_for": [
+      "Only the owner gains"
+     ],
+     "ask": "How does a posho mill help its community?",
+     "repair": "Map who gains from a posho mill: farmers, workers, families, the county (taxes)."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING.M_PT7_EM_GOODS_ONLY",
+     "listen_for": [
+      "No, she does not sell goods"
+     ],
+     "ask": "A young woman starts a phone repair service. Is she an entrepreneur?",
+     "repair": "Sort businesses into goods (kiosk, butchery) and services (salon, repair, transport); all are run by entrepreneurs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who is an entrepreneur?",
+     "answer": "A person who starts and runs a business",
+     "shows": "meaning"
+    },
+    {
+     "question": "Give one way a business helps its community.",
+     "answer": "Creates jobs (provides goods, pays taxes)",
+     "shows": "importance"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES",
+   "key_step": "The learner describes the qualities of an entrepreneur: creativity, taking calculated risks, determination (persistence), hard work, honesty and integrity, self-confidence, good planning and decision-making, good customer relations.",
+   "floor": {
+    "prerequisite": "Knows who an entrepreneur is.",
+    "question": "Is a person who starts a salon an entrepreneur?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "quality cards with a short story each",
+    "a \"calculated risk or gamble?\" sort",
+    "a local business owner's story"
+   ],
+   "steps": [
+    "Name a quality.",
+    "Match it to a story.",
+    "Tell calculated risk from gambling.",
+    "Say why honesty matters."
+   ],
+   "contexts": [
+    "a mandazi seller trying a new flavour",
+    "a milk seller adding water",
+    "a tailor who keeps going after a slow month"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two stories: one tests a small batch first, one spends all savings at once."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first story.",
+     "say": "Which shows a calculated risk, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say the small test batch."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"calculated risk\" beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_GAMBLE",
+     "listen_for": [
+      "Spending everything and hoping"
+     ],
+     "ask": "What is a calculated risk?",
+     "repair": "Compare a calculated risk (count costs, test a small batch) with gambling (hope with no plan)."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_GIVE_UP",
+     "listen_for": [
+      "Give up"
+     ],
+     "ask": "A first batch of soap did not sell. What does a determined entrepreneur do?",
+     "repair": "Tell the story of a trader who changed her product after a slow start; list what she learnt."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_LUCK",
+     "listen_for": [
+      "Only luck"
+     ],
+     "ask": "Why does a business succeed?",
+     "repair": "Interview (or read about) a local business owner: hours, planning, savings."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES.M_EQ_CHEAT",
+     "listen_for": [
+      "Creativity"
+     ],
+     "ask": "A shopkeeper adds water to milk. Which quality is missing?",
+     "repair": "Ask what happens when customers find out: they stop buying. Honesty keeps customers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a calculated risk?",
+     "answer": "A risk taken after counting the cost",
+     "shows": "risk"
+    },
+    {
+     "question": "A shopkeeper adds water to milk. Which quality is missing?",
+     "answer": "Honesty",
+     "shows": "honesty"
+    }
+   ]
+  },
+  {
+   "skill": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS",
+   "key_step": "The learner names sources of business ideas: needs and problems in the community, hobbies and skills, improving existing businesses, waste materials, the media and the internet, talking to people, trade fairs, and chooses an idea that meets a need.",
+   "floor": {
+    "prerequisite": "Knows what an entrepreneur does.",
+    "question": "What does an entrepreneur start?",
+    "answer": "A business"
+   },
+   "representations": [
+    "a sources web",
+    "idea cards from local needs",
+    "items made from waste"
+   ],
+   "steps": [
+    "Notice a need.",
+    "Name the source of the idea.",
+    "Check it meets a need.",
+    "Improve on what exists."
+   ],
+   "contexts": [
+    "no tailor near a school",
+    "sawdust piling up at a sawmill",
+    "a hobby of baking"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a need: \"learners walk 3 km to repair shoes\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the need.",
+     "say": "What business idea comes from this, and what source is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say a shoe repair kiosk; a community need."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add more needs and ideas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_CAPITAL_FIRST",
+     "listen_for": [
+      "A lot of money"
+     ],
+     "ask": "What comes first when starting a business?",
+     "repair": "Order the steps: notice a need, form an idea, plan, then find the money."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_NEW_ONLY",
+     "listen_for": [
+      "No, it must be new"
+     ],
+     "ask": "Can a business idea come from improving another business?",
+     "repair": "Show businesses that improved an old idea (a faster delivery, a cleaner kiosk)."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_COPY_EXACT",
+     "listen_for": [
+      "Copy it exactly beside it"
+     ],
+     "ask": "A kiosk next door sells airtime and does well. What is a good idea?",
+     "repair": "Count customers: two identical kiosks side by side share them; look for an unmet need instead."
+    },
+    {
+     "code": "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS.M_EI_WASTE",
+     "listen_for": [
+      "Nothing, they are rubbish"
+     ],
+     "ask": "What can old tyres become in a business?",
+     "repair": "Show items made from waste (tyre sandals, bottle-top art, briquettes from sawdust)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one source of business ideas.",
+     "answer": "Needs in the community (hobbies, waste)",
+     "shows": "sources"
+    },
+    {
+     "question": "What can old tyres become in a business?",
+     "answer": "Sandals (flower pots, buckets)",
+     "shows": "waste"
+    }
+   ]
+  }
+ ]
+}

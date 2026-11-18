@@ -9,7 +9,7 @@
 //                                       'G3o:SUB.KEY.a' an official outcome of a grade below (code without the subject prefix)
 //     also  ['c', 'OTHER.SUB.c']        more official outcomes for the skill (the code's last segment, e.g. 'a_')
 //     mis   [[short, error, question, wrong, right, cause, help, feedback, source?]]  more misconceptions
-//     fix   { SHORT: [cause, help, error?] | { error?, cause?, help?, feedback?, question?, wrong?, right? } }  a real cause and
+//     fix   { SHORT: [cause, help, error?] | { error?, cause?, help?, feedback?, question?, wrong?, right?, source? } }  a real cause and
 //           repair (and a sharper error, or a corrected example) for a first-pass misconception
 //     pack  { key_step, floor, reps, steps, contexts, board, checks }  the teaching pack entry; each misconception's listen-for,
 //           ask and repair are the library's own wrong answer, example question and help (scripts/maths-teaching-pack-file.mjs rules)
@@ -23,7 +23,8 @@ import { packSlug, packEntries, packFileText } from '../maths-teaching-pack-file
 //   o.grade, o.subPrefix ('CRE.G4.'), o.skillPrefix ('CRES.G4.'), o.lower(g) -> the JSON of grade g below (or null),
 //   o.outcomePrefix(g), o.lowerSkillPrefix(g), o.misPrefix ('M_C4_'), o.taken (short codes used by the subject's other grades),
 //   o.notTested (outcomes seen in class, not asked), o.reviewer ('a CRE teacher'), o.masteryRule (a RegExp new skills must match),
-//   o.source (the source line of a new misconception without its own)
+//   o.source (the source line of a new misconception without its own),
+//   o.resolveExtra(ref) (optional: a prerequisite in another subject, returns [code, 'skill'] or null; Pre-Technical, 18 Nov 2026)
 export function deepenGrade(cur, data, o) {
   const fail = (m) => { throw new Error(`${o.label}: ${m}`); };
   const { NEW = [], DEPTH = {} } = data;
@@ -64,6 +65,8 @@ export function deepenGrade(cur, data, o) {
   for (const s of cur.sub_strands) for (const k of s.skills) if (!work.some(w => w.k === k)) fail(`${k.code} has no depth entry (prerequisites, misconceptions, teaching pack)`);
 
   const resolve = (r) => {
+    const x = o.resolveExtra && o.resolveExtra(r);   // a skill of another subject (Pre-Technical: Science, Maths), [code, kind] or null
+    if (x) return x;
     const m = /^G(\d)(o?):(.+)$/.exec(r);
     if (m) {
       const g = Number(m[1]), b = below[g] || fail(`prerequisite ${r}: Grade ${g} is not below or has no file`);
@@ -88,8 +91,9 @@ export function deepenGrade(cur, data, o) {
     }
     for (const [short, f] of Object.entries(d.fix || {})) {
       const m = s.misconceptions.find(x => x.code === `${k.code}.${short}`) || fail(`${k.code}: fix for unknown misconception ${short}`);
-      const { error, cause, help, feedback, question, wrong, right } = Array.isArray(f) ? { cause: f[0], help: f[1], error: f[2] } : f;
+      const { error, cause, help, feedback, question, wrong, right, source } = Array.isArray(f) ? { cause: f[0], help: f[1], error: f[2] } : f;
       if (error) m.error = error; if (cause) m.cause = cause; if (help) m.help = help; if (feedback) m.feedback = feedback;
+      if (source) m.source = source;   // a sharper source line (Pre-Technical marks safety lines for a teacher to confirm)
       if (question || wrong || right) {   // a first-pass example that was wrong or unclear
         m.example = { question: question || m.example.question, wrong_answer: wrong || m.example.wrong_answer, correct_answer: right || m.example.correct_answer };
         if (m.example.wrong_answer === m.example.correct_answer) fail(`${short}: the wrong answer is the right one`);

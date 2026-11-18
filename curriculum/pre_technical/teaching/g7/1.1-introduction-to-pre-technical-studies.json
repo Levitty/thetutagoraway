@@ -1,0 +1,99 @@
+{
+ "sub_strand": "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH",
+ "title": "Introduction to Pre-Technical Studies",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Pre-Technical Studies; not yet checked by a Pre-Technical Studies teacher; safety lines marked SAFETY in the library to confirm first; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO",
+   "key_step": "The learner names the five strands of Pre-Technical Studies (Foundations of Pre-Technical Studies, Communication in Pre-Technical Studies, Materials for Production, Tools and Production, Entrepreneurship), places activities in them, and explains how the learning area is used by everyone at home, at work and in business.",
+   "floor": {
+    "prerequisite": "Knows the economic activities in the county.",
+    "question": "Name one economic activity in your county.",
+    "answer": "Farming (trade, fishing)"
+   },
+   "representations": [
+    "a five-strand chart",
+    "activity cards to sort",
+    "photos of Kenyan workers, women and men"
+   ],
+   "steps": [
+    "Name the five strands.",
+    "Sort activities into the strands.",
+    "Say where each is used in daily life.",
+    "Say who uses it: girls, boys, workers, business owners."
+   ],
+   "contexts": [
+    "a fundi repairing a door",
+    "a tailor measuring cloth",
+    "a young woman running a phone repair kiosk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw five columns, one per strand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"make a budget for the club\".",
+     "say": "Which strand does this belong to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Entrepreneurship."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort all the cards into the columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_TOOLS_ONLY",
+     "listen_for": [
+      "Only using tools in the workshop"
+     ],
+     "ask": "Which of these is part of Pre-Technical Studies?",
+     "repair": "Show the five strands on a chart and sort ten activities (budgeting, sketching, using a computer, choosing timber, safety rules) into them."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_BOYS",
+     "listen_for": [
+      "Only boys who will become mechanics"
+     ],
+     "ask": "Who uses Pre-Technical knowledge?",
+     "repair": "Show women engineers, tailors, architects and business owners from Kenya; ask which strand each one uses."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PI_SCHOOL_ONLY",
+     "listen_for": [
+      "Only in the school workshop"
+     ],
+     "ask": "Where is Pre-Technical knowledge used in daily life?",
+     "repair": "List what a family does in one week (repairing, measuring, budgeting, using a phone safely) and name the strand for each."
+    },
+    {
+     "code": "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO.M_PT7_PI_STRAND_OTHER",
+     "listen_for": [
+      "None, it is only Mathematics"
+     ],
+     "ask": "Preparing a budget for a school club belongs to which strand of Pre-Technical Studies?",
+     "repair": "Read the five strand names (Foundations, Communication, Materials for Production, Tools and Production, Entrepreneurship) and place budgeting and computer use in them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the strand that deals with tools and making items.",
+     "answer": "Tools and Production",
+     "shows": "strands"
+    },
+    {
+     "question": "Who uses Pre-Technical knowledge?",
+     "answer": "Girls and boys, at home and at work",
+     "shows": "role"
+    }
+   ]
+  }
+ ]
+}
