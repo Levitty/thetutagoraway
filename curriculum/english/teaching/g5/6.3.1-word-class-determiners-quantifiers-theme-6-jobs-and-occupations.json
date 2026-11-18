@@ -1,0 +1,183 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE",
+ "title": "Word Class: Determiners: Quantifiers: (Theme 6: Jobs and occupations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"count or not?\" and \"some or almost none?\" before choosing few, a few, little or a little.",
+   "floor": {
+    "prerequisite": "Uses many and much.",
+    "question": "How ___ water?",
+    "answer": "much"
+   },
+   "steps": [
+    "Count: few, a few.",
+    "Not count: little, a little.",
+    "A few = some; few = almost none."
+   ],
+   "contexts": [
+    "jobs: a few nurses, little time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: There are ___ nurses. We have ___ time."
+    },
+    {
+     "beat": "point",
+     "do": "Point at nurses.",
+     "say": "Can we count them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills time."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_FEW_UNCOUNTABLE",
+     "listen_for": [
+      "a few"
+     ],
+     "ask": "Can you count it?",
+     "repair": "A little."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_LITTLE_COUNTABLE",
+     "listen_for": [
+      "a little"
+     ],
+     "ask": "Can you count them?",
+     "repair": "A few."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_NEGATIVE_POSITIVE",
+     "listen_for": [
+      "few"
+     ],
+     "ask": "Some or almost none?",
+     "repair": "A few is some."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_MUCH_MANY",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Count?",
+     "repair": "Many."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She has ___ friends, so she is lonely.",
+     "answer": "few",
+     "shows": "negative"
+    },
+    {
+     "question": "Add ___ sugar.",
+     "answer": "a little",
+     "shows": "uncount"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+   "assessed_by": "questions",
+   "key_step": "The child matches each quantifier with a singular or plural noun and the right verb.",
+   "floor": {
+    "prerequisite": "Uses few and little.",
+    "question": "___ water (uncount)",
+    "answer": "a little"
+   },
+   "steps": [
+    "Each + singular.",
+    "All + plural.",
+    "Enough before the noun.",
+    "Most of the."
+   ],
+   "contexts": [
+    "jobs in a village"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Each learner ___ a book."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Each.",
+     "say": "One or many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills has and writes an all sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_EACH_PLURAL",
+     "listen_for": [
+      "have"
+     ],
+     "ask": "Each is one or many?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_ALL_SINGULAR",
+     "listen_for": [
+      "learner"
+     ],
+     "ask": "All one?",
+     "repair": "Plural."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_ENOUGH_POSITION",
+     "listen_for": [
+      "food enough"
+     ],
+     "ask": "Before or after the noun?",
+     "repair": "Before."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_OF_THE_MISSING",
+     "listen_for": [
+      "Most of learners"
+     ],
+     "ask": "Most of what?",
+     "repair": "Most of the."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_LEAST_LESS",
+     "listen_for": [
+      "less"
+     ],
+     "ask": "Smallest of all?",
+     "repair": "Least."
+    }
+   ],
+   "checks": [
+    {
+     "question": "All ___ (learner) passed.",
+     "answer": "learners",
+     "shows": "all"
+    },
+    {
+     "question": "There is ___ (enough) food.",
+     "answer": "enough food",
+     "shows": "position"
+    }
+   ]
+  }
+ ]
+}

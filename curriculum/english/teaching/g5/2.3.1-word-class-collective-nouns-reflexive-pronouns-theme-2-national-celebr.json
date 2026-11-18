@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV",
+ "title": "Word Class: Collective Nouns/ Reflexive Pronouns (Theme 2: National celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child names the group word that goes with the animals, people or things, with of.",
+   "floor": {
+    "prerequisite": "Makes plurals.",
+    "question": "One cow, many ...",
+    "answer": "cows"
+   },
+   "steps": [
+    "Name the members.",
+    "Choose the group word.",
+    "Add of."
+   ],
+   "contexts": [
+    "a national celebration crowd",
+    "animals on a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a ___ of cows, a ___ of birds."
+    },
+    {
+     "beat": "point",
+     "do": "Point at cows.",
+     "say": "Which group word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills birds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_WRONG_ANIMAL",
+     "listen_for": [
+      "flock"
+     ],
+     "ask": "Which animals?",
+     "repair": "Herd for cows."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_THING_MIX",
+     "listen_for": [
+      "herd"
+     ],
+     "ask": "Animals or things?",
+     "repair": "Bunch for things."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_OF_MISSING",
+     "listen_for": [
+      "a flock birds"
+     ],
+     "ask": "What joins them?",
+     "repair": "Of."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_PLURAL_S",
+     "listen_for": [
+      "flock"
+     ],
+     "ask": "One group or many?",
+     "repair": "One flock."
+    }
+   ],
+   "checks": [
+    {
+     "question": "a ___ of flowers",
+     "answer": "bunch",
+     "shows": "thing"
+    },
+    {
+     "question": "a ___ of sheep",
+     "answer": "flock",
+     "shows": "animal"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses -self or -selves when the doer and the receiver are the same person.",
+   "floor": {
+    "prerequisite": "Uses possessives.",
+    "question": "This is ___ book (I).",
+    "answer": "my"
+   },
+   "steps": [
+    "Who did it?",
+    "To whom?",
+    "Same person: -self."
+   ],
+   "contexts": [
+    "getting ready for a celebration",
+    "cooking alone"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I washed ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at I.",
+     "say": "Who was washed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes myself and another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_HISSELF",
+     "listen_for": [
+      "hisself"
+     ],
+     "ask": "Is hisself a word?",
+     "repair": "Himself."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_OBJECT_PRONOUN",
+     "listen_for": [
+      "me"
+     ],
+     "ask": "Same person?",
+     "repair": "Myself."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_SINGULAR_PLURAL",
+     "listen_for": [
+      "ourself"
+     ],
+     "ask": "One or many?",
+     "repair": "Ourselves."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_WRONG_PERSON",
+     "listen_for": [
+      "myself"
+     ],
+     "ask": "Who is it?",
+     "repair": "Match the doer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She hurt ___.",
+     "answer": "herself",
+     "shows": "reflexive"
+    },
+    {
+     "question": "We cooked it ___.",
+     "answer": "ourselves",
+     "shows": "plural"
+    }
+   ]
+  }
+ ]
+}

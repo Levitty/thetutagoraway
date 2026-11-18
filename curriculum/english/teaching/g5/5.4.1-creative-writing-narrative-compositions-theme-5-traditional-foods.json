@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR",
+ "title": "Creative Writing: Narrative Compositions (Theme 5: Traditional foods)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names each part of a sample story and what it does.",
+   "floor": {
+    "prerequisite": "Finds characters, places and events.",
+    "question": "Who is in the story?",
+    "answer": "the characters"
+   },
+   "steps": [
+    "Title.",
+    "Introduction: who and where.",
+    "Body: events and problem.",
+    "Conclusion: ending and lesson."
+   ],
+   "contexts": [
+    "a story about traditional food",
+    "a farm story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw four boxes: title, introduction, body, conclusion."
+    },
+    {
+     "beat": "point",
+     "do": "Point at body.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child places four sentences in the boxes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS.M5_NP_INTRO_PROBLEM",
+     "listen_for": [
+      "the introduction"
+     ],
+     "ask": "What does the introduction do?",
+     "repair": "Sets the scene."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS.M5_NP_CONCLUSION_SUMMARY",
+     "listen_for": [
+      "tell the story again"
+     ],
+     "ask": "Does it retell?",
+     "repair": "It ends the story."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS.M5_NP_SETTING_CHARACTER",
+     "listen_for": [
+      "character"
+     ],
+     "ask": "Person or place?",
+     "repair": "Place: setting."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_PARTS.M5_NP_TITLE_SENTENCE",
+     "listen_for": [
+      "The day that my goat got lost in the forest"
+     ],
+     "ask": "Can it be shorter?",
+     "repair": "A short title."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the problem?",
+     "answer": "the body",
+     "shows": "parts"
+    },
+    {
+     "question": "Better title: \"The Lost Goat\" or a long sentence?",
+     "answer": "The Lost Goat",
+     "shows": "title"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans a problem and its solution and keeps the whole story in the past tense.",
+   "floor": {
+    "prerequisite": "Knows the parts of a story.",
+    "question": "Name the parts of a story.",
+    "answer": "introduction, body, conclusion"
+   },
+   "steps": [
+    "Plan the problem.",
+    "Write the introduction.",
+    "Build the problem.",
+    "Solve it; check tense and speech marks."
+   ],
+   "contexts": [
+    "a story about a harvest",
+    "a lost item",
+    "helping a neighbour"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Problem? Solution?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Problem.",
+     "say": "What goes wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the solution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M5_NC_TENSE_SWITCH",
+     "listen_for": [
+      "opened ... sees"
+     ],
+     "ask": "When did it happen?",
+     "repair": "Past."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M5_NC_FORCED_PROVERB",
+     "listen_for": [
+      "Too many cooks spoil the broth."
+     ],
+     "ask": "Does the lesson match?",
+     "repair": "Choose another."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M5_NC_NO_CLIMAX",
+     "listen_for": [
+      "more events"
+     ],
+     "ask": "What goes wrong?",
+     "repair": "Build a problem."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION.M5_NC_DIALOGUE_UNPUNCTUATED",
+     "listen_for": [
+      "Mum said come home."
+     ],
+     "ask": "Where are the spoken words?",
+     "repair": "Quotation marks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Correct: She opened the gate and sees a cow.",
+     "answer": "saw",
+     "shows": "tense"
+    },
+    {
+     "question": "Which proverb fits a story about patience?",
+     "answer": "Slow and steady wins the race.",
+     "shows": "proverb"
+    }
+   ]
+  }
+ ]
+}

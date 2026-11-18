@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US",
+ "title": "Tense: Future Time using will/shall (Theme 7: Learning through technology)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+   "assessed_by": "questions",
+   "key_step": "The child uses will or shall with a plain verb for the future.",
+   "floor": {
+    "prerequisite": "Uses past and present.",
+    "question": "Yesterday I ___ (go).",
+    "answer": "went"
+   },
+   "steps": [
+    "Is it future?",
+    "Will or shall.",
+    "Plain verb."
+   ],
+   "contexts": [
+    "plans for learning with technology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Tomorrow we ___ ___ a tablet. (use)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Tomorrow.",
+     "say": "Which helping word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a shall question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_WILL_PAST",
+     "listen_for": [
+      "went"
+     ],
+     "ask": "After will?",
+     "repair": "Plain verb."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_WILL_S",
+     "listen_for": [
+      "tells"
+     ],
+     "ask": "Will tells?",
+     "repair": "Will tell."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_WILL_ING",
+     "listen_for": [
+      "playing"
+     ],
+     "ask": "Will playing?",
+     "repair": "Will play."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_PRESENT_FOR_FUTURE",
+     "listen_for": [
+      "go"
+     ],
+     "ask": "When is it?",
+     "repair": "Will go."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_DOUBLE_MODAL",
+     "listen_for": [
+      "will shall"
+     ],
+     "ask": "Two helping words?",
+     "repair": "One."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Next week she ___ (visit).",
+     "answer": "will visit",
+     "shows": "future"
+    },
+    {
+     "question": "___ we start?",
+     "answer": "Shall",
+     "shows": "offer"
+    }
+   ]
+  }
+ ]
+}

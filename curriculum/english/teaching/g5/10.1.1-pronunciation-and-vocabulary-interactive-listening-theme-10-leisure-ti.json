@@ -1,0 +1,181 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary: Interactive Listening (Theme 10: Leisure time activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the words that show feeling and names the mood, checking it to the end.",
+   "floor": {
+    "prerequisite": "Reads feelings from cues.",
+    "question": "A crying girl feels ...",
+    "answer": "sad"
+   },
+   "steps": [
+    "Find feeling words.",
+    "Name the mood.",
+    "Check whether it changes."
+   ],
+   "contexts": [
+    "a choral verse",
+    "a narrative about leisure"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a verse that starts sad and ends happy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the last line.",
+     "say": "Mood here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the first mood."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS.M_MOOD_OPPOSITE",
+     "listen_for": [
+      "happy"
+     ],
+     "ask": "Do the words show that?",
+     "repair": "Check the clue."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS.M_MOOD_NAMED_NOT_SHOWN",
+     "listen_for": [
+      "angry"
+     ],
+     "ask": "Which words show it?",
+     "repair": "Find them."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS.M5_MOOD_ACTION_ONLY",
+     "listen_for": [
+      "night"
+     ],
+     "ask": "Is it a feeling?",
+     "repair": "Name the feeling."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS.M5_MOOD_ONE_LINE",
+     "listen_for": [
+      "sad"
+     ],
+     "ask": "Read to the end.",
+     "repair": "Moods change."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Her hands shook as she waited.\" Mood?",
+     "answer": "nervous",
+     "shows": "mood"
+    },
+    {
+     "question": "Is \"night\" a mood?",
+     "answer": "No",
+     "shows": "feeling"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY",
+   "assessed_by": "questions",
+   "key_step": "The child waits for a pause, asks permission, makes the point and gives the turn back.",
+   "floor": {
+    "prerequisite": "Uses polite expressions.",
+    "question": "Ask politely for the salt.",
+    "answer": "May I have the salt, please?"
+   },
+   "steps": [
+    "Wait for a pause.",
+    "Say Excuse me or Sorry to interrupt.",
+    "Make the point briefly.",
+    "Hand back."
+   ],
+   "contexts": [
+    "a group discussion on leisure",
+    "a phone call",
+    "a class debate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Sorry to interrupt, but ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the phrase.",
+     "say": "Your friends are talking about a film. Add your point."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the turn back."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M5_IP_SHOUT",
+     "listen_for": [
+      "shout \"Me! Me!\""
+     ],
+     "ask": "Is shouting polite?",
+     "repair": "Ask quietly."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M5_IP_NO_PAUSE",
+     "listen_for": [
+      "any time"
+     ],
+     "ask": "Did they pause?",
+     "repair": "Wait."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M5_IP_TAKE_OVER",
+     "listen_for": [
+      "keep talking about my own idea"
+     ],
+     "ask": "Whose turn is it now?",
+     "repair": "Give it back."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.INTERRUPT_POLITELY.M5_IP_IMPOLITE_PHRASE",
+     "listen_for": [
+      "You are wrong, listen to me."
+     ],
+     "ask": "Did you ask first?",
+     "repair": "May I say something?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Polite way to add a point?",
+     "answer": "Excuse me, may I add something?",
+     "shows": "polite"
+    },
+    {
+     "question": "After your point, what do you do?",
+     "answer": "let the speaker continue",
+     "shows": "hand back"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.PRONOUNCE_SOUNDS"
+ ]
+}

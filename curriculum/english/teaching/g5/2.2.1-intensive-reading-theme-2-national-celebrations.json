@@ -1,0 +1,452 @@
+{
+ "sub_strand": "ENGL.G5.READIN.T2_INTENSIVE_READING",
+ "title": "Intensive Reading (Theme 2: National celebrations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+   "assessed_by": "questions",
+   "key_step": "The child sorts what the story mentions into people, places and events, in order.",
+   "floor": {
+    "prerequisite": "Answers who and where.",
+    "question": "Who is in the story?",
+    "answer": "a name"
+   },
+   "steps": [
+    "List the people.",
+    "List the places.",
+    "List the events in order."
+   ],
+   "contexts": [
+    "a story about a national celebration"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three columns: who, where, what happened."
+    },
+    {
+     "beat": "point",
+     "do": "Point at who.",
+     "say": "Who is the main character?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the other columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_MIXES_CHARACTER_PLACE",
+     "listen_for": [
+      "the market"
+     ],
+     "ask": "Person or place?",
+     "repair": "Sort it."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_MINOR_FOR_MAIN",
+     "listen_for": [
+      "the shopkeeper"
+     ],
+     "ask": "Who is the story mostly about?",
+     "repair": "The main character."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_ORDER_REVERSED",
+     "listen_for": [
+      "last event first"
+     ],
+     "ask": "What happened first?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_ORDER_SWAPPED",
+     "listen_for": [
+      "two swapped"
+     ],
+     "ask": "Which came before?",
+     "repair": "Swap them."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_WRONG_PLACE",
+     "listen_for": [
+      "a different place in the story"
+     ],
+     "ask": "Where did this scene happen?",
+     "repair": "Find the place named."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"the market\" a character?",
+     "answer": "No, a place",
+     "shows": "place"
+    },
+    {
+     "question": "What happened first?",
+     "answer": "the first event",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT",
+   "assessed_by": "questions",
+   "key_step": "The child finds a clue in the text and says what it suggests will happen next.",
+   "floor": {
+    "prerequisite": "Answers inference questions.",
+    "question": "Why did she take an umbrella?",
+    "answer": "it might rain"
+   },
+   "steps": [
+    "Read to the stop point.",
+    "Find a clue.",
+    "Predict from it.",
+    "Read on to check."
+   ],
+   "contexts": [
+    "a celebration story",
+    "a story about table manners"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Black clouds gathered over the stadium."
+    },
+    {
+     "beat": "point",
+     "do": "Point at black clouds.",
+     "say": "What will happen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads on to check."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M_PRED_NO_CLUE",
+     "listen_for": [
+      "a prediction with no clue"
+     ],
+     "ask": "Which clue tells you?",
+     "repair": "Find it first."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M_PRED_CONTRADICTS",
+     "listen_for": [
+      "a prediction that goes against the text"
+     ],
+     "ask": "Does it fit the text?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M_PRED_ALREADY_HAPPENED",
+     "listen_for": [
+      "something already told"
+     ],
+     "ask": "Has that already happened?",
+     "repair": "Predict what is next."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M5_PRED_WISH",
+     "listen_for": [
+      "they will go swimming"
+     ],
+     "ask": "What do the clues show?",
+     "repair": "Not your wish."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The baby's eyes kept closing.\" Next?",
+     "answer": "the baby will sleep",
+     "shows": "clue"
+    },
+    {
+     "question": "Is \"they will fly to the moon\" a fair prediction for a farm story?",
+     "answer": "No",
+     "shows": "fits text"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the sentence that answers the question and checks the answer against it.",
+   "floor": {
+    "prerequisite": "Answers simple questions on a text.",
+    "question": "Who is the story about?",
+    "answer": "a name"
+   },
+   "steps": [
+    "Read the question.",
+    "Find the key word.",
+    "Read that sentence.",
+    "Answer only from it."
+   ],
+   "contexts": [
+    "texts on celebrations, diseases and leisure"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a short text and a True, False or Not stated item."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the key word.",
+     "say": "Is it in the text?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks True, False or Not stated."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NEARBY_DETAIL",
+     "listen_for": [
+      "a nearby detail"
+     ],
+     "ask": "Does that answer the question?",
+     "repair": "Read the whole sentence."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NOT_STATED_AS_TRUE",
+     "listen_for": [
+      "True"
+     ],
+     "ask": "Can you find it?",
+     "repair": "If not, Not stated."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_NOT_STATED",
+     "listen_for": [
+      "Not stated"
+     ],
+     "ask": "Does the text talk about it?",
+     "repair": "Yes, differently: False."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_OUTSIDE_KNOWLEDGE",
+     "listen_for": [
+      "a number from memory"
+     ],
+     "ask": "What number does the text give?",
+     "repair": "Use the text."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_MISSES_STATED",
+     "listen_for": [
+      "Not stated"
+     ],
+     "ask": "Look again.",
+     "repair": "It is there."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_TRUE",
+     "listen_for": [
+      "True"
+     ],
+     "ask": "Is it exactly the same?",
+     "repair": "Different: False."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The text does not mention the date. True, False or Not stated?",
+     "answer": "Not stated",
+     "shows": "not stated"
+    },
+    {
+     "question": "How many people came? (text says 300)",
+     "answer": "300",
+     "shows": "stated"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child points to the clue and says what it shows that the text does not say.",
+   "floor": {
+    "prerequisite": "Answers factual questions.",
+    "question": "What did he carry?",
+    "answer": "a stated object"
+   },
+   "steps": [
+    "Find the clue.",
+    "Say what it shows.",
+    "Check it fits all the text."
+   ],
+   "contexts": [
+    "texts on table manners and sports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wanjiru looked at the empty plate and smiled."
+    },
+    {
+     "beat": "point",
+     "do": "Point at smiled.",
+     "say": "How did she feel about the meal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the clue."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_REPEATS_TEXT",
+     "listen_for": [
+      "a repeated sentence"
+     ],
+     "ask": "Did you copy a line?",
+     "repair": "Say what it shows."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_CONTRADICTS",
+     "listen_for": [
+      "the opposite feeling"
+     ],
+     "ask": "Does it agree with the clues?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_OVERREACH",
+     "listen_for": [
+      "an unsupported claim"
+     ],
+     "ask": "Does the text show that much?",
+     "repair": "Only what the clue shows."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M5_INFER_NOT_STATED",
+     "listen_for": [
+      "The text does not say."
+     ],
+     "ask": "Is there a clue?",
+     "repair": "Use it to answer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"He yawned again and again.\" He was ...",
+     "answer": "tired",
+     "shows": "clue"
+    },
+    {
+     "question": "\"The ground was wet but the sky was clear.\" What happened earlier?",
+     "answer": "it rained",
+     "shows": "cause"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+   "assessed_by": "questions",
+   "key_step": "The child notices an unfamiliar word, then uses the words around it to work out its meaning.",
+   "floor": {
+    "prerequisite": "Uses clues in a sentence.",
+    "question": "What helps you guess a new word?",
+    "answer": "the words around it"
+   },
+   "steps": [
+    "Find the new word.",
+    "Read before and after.",
+    "Try a meaning.",
+    "Check it fits."
+   ],
+   "contexts": [
+    "dialogues about jobs",
+    "a pollution text"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The thirsty, parched land had no rain for months."
+    },
+    {
+     "beat": "point",
+     "do": "Point at parched.",
+     "say": "What clue is near it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the meaning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_COMMON_MEANING",
+     "listen_for": [
+      "a place for money"
+     ],
+     "ask": "Does the usual meaning fit?",
+     "repair": "Use this sentence."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_LOOKS_LIKE",
+     "listen_for": [
+      "a word that looks similar"
+     ],
+     "ask": "Does it fit the sentence?",
+     "repair": "Not the look."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_OPPOSITE",
+     "listen_for": [
+      "eager"
+     ],
+     "ask": "Does it agree with the clue?",
+     "repair": "Not the opposite."
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_WRONG_CLUE",
+     "listen_for": [
+      "on Tuesday"
+     ],
+     "ask": "Does that part explain it?",
+     "repair": "Find the clue."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"He was famished; he had not eaten all day.\" Famished means ...",
+     "answer": "very hungry",
+     "shows": "clue"
+    },
+    {
+     "question": "Which word in this line would you look up?",
+     "answer": "the unfamiliar word",
+     "shows": "noticing"
+    }
+   ]
+  }
+ ]
+}

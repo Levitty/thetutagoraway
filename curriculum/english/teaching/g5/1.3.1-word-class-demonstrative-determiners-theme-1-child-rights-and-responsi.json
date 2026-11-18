@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA",
+ "title": "Word Class: Demonstrative Determiners (Theme 1: Child rights and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+   "assessed_by": "questions",
+   "key_step": "The child asks \"one or many?\" and \"near or far?\" before choosing this, these, that or those.",
+   "floor": {
+    "prerequisite": "Uses a and the.",
+    "question": "___ book is mine.",
+    "answer": "The"
+   },
+   "steps": [
+    "One or many?",
+    "Near or far?",
+    "Choose the word."
+   ],
+   "contexts": [
+    "books on a desk",
+    "children across the field"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw near and far boxes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the far box with many items.",
+     "say": "These or those?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_THIS_PLURAL",
+     "listen_for": [
+      "this"
+     ],
+     "ask": "One or many?",
+     "repair": "These for many."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_THESE_SINGULAR",
+     "listen_for": [
+      "These"
+     ],
+     "ask": "One or many?",
+     "repair": "This for one."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_NEAR_FAR",
+     "listen_for": [
+      "That"
+     ],
+     "ask": "Near or far?",
+     "repair": "This is near."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_THEM",
+     "listen_for": [
+      "them"
+     ],
+     "ask": "Is them a demonstrative?",
+     "repair": "Those."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ shoes here are mine.",
+     "answer": "These",
+     "shows": "near, many"
+    },
+    {
+     "question": "___ boy over there is my brother.",
+     "answer": "That",
+     "shows": "far, one"
+    }
+   ]
+  }
+ ]
+}

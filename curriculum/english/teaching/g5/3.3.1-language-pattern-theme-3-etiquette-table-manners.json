@@ -1,0 +1,175 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN",
+ "title": "Language Pattern (Theme 3: Etiquette-table manners)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO",
+   "assessed_by": "questions",
+   "key_step": "The child puts too before the adjective and to before the plain verb, or for before the person.",
+   "floor": {
+    "prerequisite": "Uses adjectives.",
+    "question": "The tea is ___ (hot).",
+    "answer": "hot"
+   },
+   "steps": [
+    "Too + adjective.",
+    "To + plain verb.",
+    "For + person."
+   ],
+   "contexts": [
+    "table manners: food too hot to eat"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The tea is too hot ___ drink."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "To or for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a for sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_MISSING_TO",
+     "listen_for": [
+      "too heavy carry"
+     ],
+     "ask": "What comes before carry?",
+     "repair": "To."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_FOR_TO",
+     "listen_for": [
+      "too hot for to drink"
+     ],
+     "ask": "For to?",
+     "repair": "Just to."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_THAT",
+     "listen_for": [
+      "too tired that"
+     ],
+     "ask": "Too ... that?",
+     "repair": "Too ... to."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_FOR_VERB",
+     "listen_for": [
+      "too heavy to me"
+     ],
+     "ask": "A person or an action?",
+     "repair": "For me."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The box is too heavy ___ me.",
+     "answer": "for",
+     "shows": "for"
+    },
+    {
+     "question": "She is too tired ___ play.",
+     "answer": "to",
+     "shows": "to"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB",
+   "assessed_by": "questions",
+   "key_step": "The child uses must for a rule and should for advice, with a plain verb and an -ly adverb.",
+   "floor": {
+    "prerequisite": "Uses adverbs.",
+    "question": "She ate ___ (slow).",
+    "answer": "slowly"
+   },
+   "steps": [
+    "Rule or advice?",
+    "Must or should.",
+    "Plain verb.",
+    "Adverb after."
+   ],
+   "contexts": [
+    "table manners rules"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: We ___ chew ___. (quiet)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first gap.",
+     "say": "Rule or advice?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the adverb."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_TO",
+     "listen_for": [
+      "should to wash"
+     ],
+     "ask": "Should to?",
+     "repair": "Should wash."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_VERB_FORM",
+     "listen_for": [
+      "must walking"
+     ],
+     "ask": "After must?",
+     "repair": "Plain verb."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_ADJECTIVE",
+     "listen_for": [
+      "speak polite"
+     ],
+     "ask": "How do you speak?",
+     "repair": "Politely."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_STRENGTH",
+     "listen_for": [
+      "should"
+     ],
+     "ask": "A rule or advice?",
+     "repair": "Must for a rule."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You ___ eat ___ (polite).",
+     "answer": "should eat politely",
+     "shows": "advice"
+    },
+    {
+     "question": "Pupils ___ wash hands (rule).",
+     "answer": "must",
+     "shows": "rule"
+    }
+   ]
+  }
+ ]
+}

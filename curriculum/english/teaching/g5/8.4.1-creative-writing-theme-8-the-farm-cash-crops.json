@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING",
+ "title": "Creative Writing (Theme 8: The farm-cash crops)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES",
+   "assessed_by": "questions",
+   "key_step": "The child spots as ... as or like and checks the comparison makes sense.",
+   "floor": {
+    "prerequisite": "Knows adjectives.",
+    "question": "What is an ox like?",
+    "answer": "strong"
+   },
+   "steps": [
+    "Find as ... as or like.",
+    "Say the two things compared.",
+    "Check it makes sense."
+   ],
+   "contexts": [
+    "farm animals in a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: as busy as a ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at busy.",
+     "say": "Which animal is busy?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a like simile."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M_SIM_STATEMENT",
+     "listen_for": [
+      "He is very strong."
+     ],
+     "ask": "Is anything compared?",
+     "repair": "Add as ... as."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M_SIM_METAPHOR",
+     "listen_for": [
+      "He is a lion."
+     ],
+     "ask": "Is there as or like?",
+     "repair": "Add it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M_SIM_WRONG_COMPARISON",
+     "listen_for": [
+      "tortoise"
+     ],
+     "ask": "Is that animal busy?",
+     "repair": "Choose one that is."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M5_SIM_LIKE_AS_MIX",
+     "listen_for": [
+      "like"
+     ],
+     "ask": "As ... as or like?",
+     "repair": "Not both."
+    }
+   ],
+   "checks": [
+    {
+     "question": "as slow as a ___",
+     "answer": "tortoise",
+     "shows": "comparison"
+    },
+    {
+     "question": "Is \"He is a lion\" a simile?",
+     "answer": "No, a metaphor",
+     "shows": "simile"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION"
+ ]
+}

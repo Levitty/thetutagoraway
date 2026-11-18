@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Handwriting (Theme 3: Etiquette-table manners)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE",
+   "assessed_by": "teacher",
+   "key_step": "The child joins every letter in a word with the same slant and leaves a space between words.",
+   "floor": {
+    "prerequisite": "Writes neat print.",
+    "question": "Copy a sentence neatly.",
+    "answer": "neat print"
+   },
+   "steps": [
+    "Show the joining strokes.",
+    "Join letter pairs.",
+    "Join whole words.",
+    "Copy a sentence."
+   ],
+   "contexts": [
+    "a thank-you card",
+    "a class poem copied",
+    "a note to a parent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write in cursive: table manners."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the join between b and l.",
+     "say": "Watch how it joins."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child copies the phrase."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE.M5_CU_PRINT_MIX",
+     "listen_for": [
+      "h-a joined, p p y printed"
+     ],
+     "ask": "Are all letters joined?",
+     "repair": "Join them all."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE.M5_CU_SLANT",
+     "listen_for": [
+      "letters lean left and right"
+     ],
+     "ask": "Do they lean the same way?",
+     "repair": "Same slant."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE.M5_CU_JOIN_WORDS",
+     "listen_for": [
+      "weeat"
+     ],
+     "ask": "Where does a word end?",
+     "repair": "Space between words."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.CURSIVE.M5_CU_CANNOT_READ",
+     "listen_for": [
+      "cannot read it"
+     ],
+     "ask": "Which letter is this?",
+     "repair": "Practise reading joined writing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Copy \"please and thank you\" in cursive.",
+     "answer": "joined, even slant, spaces",
+     "shows": "cursive"
+    },
+    {
+     "question": "Read a cursive note.",
+     "answer": "reads it correctly",
+     "shows": "reading cursive"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F",
+ "title": "Functional Writing: Filling Forms (Theme 1: Child rights and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM",
+   "assessed_by": "composition",
+   "key_step": "The child reads each label and its format before writing.",
+   "floor": {
+    "prerequisite": "Knows what goes in a box.",
+    "question": "What goes in \"School\"?",
+    "answer": "the school's name"
+   },
+   "steps": [
+    "Read the whole form.",
+    "Read each label and format.",
+    "Write the detail.",
+    "Check every box."
+   ],
+   "contexts": [
+    "a school club form",
+    "a library card",
+    "a health card"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw: Name (BLOCK LETTERS), County, Date of birth (DD/MM/YYYY)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at County.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the date box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM.M5_FF_COUNTY_TOWN",
+     "listen_for": [
+      "Kitale"
+     ],
+     "ask": "Town or county?",
+     "repair": "County is bigger."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM.M5_FF_DATE_ORDER",
+     "listen_for": [
+      "03/14/2015"
+     ],
+     "ask": "What order does the form show?",
+     "repair": "Follow it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM.M5_FF_GUARDIAN",
+     "listen_for": [
+      "Amina Wekesa (the child)"
+     ],
+     "ask": "Whose name is asked?",
+     "repair": "The adult's."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.FILL_FORM.M5_FF_ALL_CAPS_IGNORED",
+     "listen_for": [
+      "amina"
+     ],
+     "ask": "What are block letters?",
+     "repair": "Capitals."
+    }
+   ],
+   "checks": [
+    {
+     "question": "County for a child in Kitale?",
+     "answer": "Trans Nzoia",
+     "shows": "county"
+    },
+    {
+     "question": "Date of birth 5 June 2015 in DD/MM/YYYY?",
+     "answer": "05/06/2015",
+     "shows": "format"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM",
+   "assessed_by": "composition",
+   "key_step": "The child lists what the form must collect, then writes a short exact label and enough space for each.",
+   "floor": {
+    "prerequisite": "Fills in forms.",
+    "question": "Fill in this box: Class.",
+    "answer": "Grade 5"
+   },
+   "steps": [
+    "Decide the purpose.",
+    "List the details needed.",
+    "Write short labels.",
+    "Leave space; add signature and date."
+   ],
+   "contexts": [
+    "a reading club form",
+    "a sports team form",
+    "a class survey"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Purpose: join the chess club."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Purpose.",
+     "say": "What details will the club need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child drafts the labels."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM.M5_DF_NO_SPACE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Will the answer fit?",
+     "repair": "More space."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM.M5_DF_VAGUE_LABEL",
+     "listen_for": [
+      "Number"
+     ],
+     "ask": "Will the reader know what to write?",
+     "repair": "Be exact."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM.M5_DF_MISSING_DETAIL",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What is the form for?",
+     "repair": "Add what it needs."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.DESIGN_FORM.M5_DF_QUESTIONS_AS_LABELS",
+     "listen_for": [
+      "What is the name that you were given at birth?"
+     ],
+     "ask": "Can it be shorter?",
+     "repair": "A short label."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Better label: \"Number\" or \"Parent's phone number\"?",
+     "answer": "Parent's phone number",
+     "shows": "label"
+    },
+    {
+     "question": "What does every form end with?",
+     "answer": "signature and date",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

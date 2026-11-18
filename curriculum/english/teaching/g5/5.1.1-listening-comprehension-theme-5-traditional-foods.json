@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension (Theme 5: Traditional foods)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS",
+   "assessed_by": "voice",
+   "key_step": "The child decides the feeling first, then lets voice, face and hands match it.",
+   "floor": {
+    "prerequisite": "Reads feelings in others.",
+    "question": "This face is ...",
+    "answer": "happy"
+   },
+   "steps": [
+    "Decide the feeling.",
+    "Choose a voice for it.",
+    "Add a fitting gesture.",
+    "As a listener, face the speaker and nod."
+   ],
+   "contexts": [
+    "telling a traditional food story",
+    "reciting a poem on technology",
+    "a talk on a disease"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: happy, worried, proud."
+    },
+    {
+     "beat": "point",
+     "do": "Point at worried.",
+     "say": "Say \"The rain has not come\" in a worried voice."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says it in a proud voice."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS.M5_EF_FLAT",
+     "listen_for": [
+      "flat voice and still face"
+     ],
+     "ask": "How did you feel then?",
+     "repair": "Show it in your voice."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS.M5_EF_WRONG_FEELING",
+     "listen_for": [
+      "laughs while reading"
+     ],
+     "ask": "Does laughing fit sad news?",
+     "repair": "Match the words."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS.M5_EF_LISTENER_AWAY",
+     "listen_for": [
+      "look at my desk and play with a pen"
+     ],
+     "ask": "Where are your eyes?",
+     "repair": "On the speaker."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS.M5_EF_OVERACT",
+     "listen_for": [
+      "shouts and jumps for every word"
+     ],
+     "ask": "Is the message clear?",
+     "repair": "A few gestures."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Say \"We won the trophy!\" with feeling.",
+     "answer": "excited voice, smile",
+     "shows": "feeling"
+    },
+    {
+     "question": "Show you are listening.",
+     "answer": "faces the speaker, nods",
+     "shows": "listener"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY",
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA",
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES"
+ ]
+}

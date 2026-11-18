@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO",
+ "title": "Speaking Fluency: pronunciation (Theme 9: Communicable diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY",
+   "assessed_by": "voice",
+   "key_step": "The child plans key words, then talks to the class with pauses, not fillers.",
+   "floor": {
+    "prerequisite": "Speaks in full sentences.",
+    "question": "Say a sentence about your home.",
+    "answer": "a full sentence"
+   },
+   "steps": [
+    "Write three key words.",
+    "Practise once aloud.",
+    "Look up and talk.",
+    "Pause between points."
+   ],
+   "contexts": [
+    "communicable diseases",
+    "environmental pollution",
+    "my favourite sport"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three key words: germs, wash, clinic."
+    },
+    {
+     "beat": "point",
+     "do": "Point at germs.",
+     "say": "Tell us in one sentence."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the next two points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY.M5_SF_READ_NOTES",
+     "listen_for": [
+      "reads every word with head down"
+     ],
+     "ask": "Where are your eyes?",
+     "repair": "Key words only; look up."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY.M5_SF_FILLERS",
+     "listen_for": [
+      "Eeh, we should, aah, wash ..."
+     ],
+     "ask": "What can you do instead of eeh?",
+     "repair": "Pause."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY.M5_SF_MONOTONE_FAST",
+     "listen_for": [
+      "finishes in thirty seconds"
+     ],
+     "ask": "How long was it?",
+     "repair": "Slow down."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.SPEAK_FLUENTLY.M5_SF_STOPS",
+     "listen_for": [
+      "I play, no, I played, no ..."
+     ],
+     "ask": "Do you need to start again?",
+     "repair": "Correct once, go on."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Talk for two minutes on keeping clean.",
+     "answer": "steady, clear, few fillers",
+     "shows": "fluency"
+    },
+    {
+     "question": "Present your talk with notes.",
+     "answer": "looks up most of the time",
+     "shows": "delivery"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY",
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES",
+  "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.EXPRESS_FEELINGS"
+ ]
+}

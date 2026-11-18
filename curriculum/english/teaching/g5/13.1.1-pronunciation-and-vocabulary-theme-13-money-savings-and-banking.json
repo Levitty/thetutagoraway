@@ -1,0 +1,99 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO",
+ "title": "Pronunciation and Vocabulary (Theme 13: Money- savings and banking)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL",
+   "assessed_by": "teacher",
+   "key_step": "The child gives one strength and one improvement about words, similes or gestures, with a reason.",
+   "floor": {
+    "prerequisite": "Knows what a simile is.",
+    "question": "Is \"as strong as an ox\" a simile?",
+    "answer": "yes"
+   },
+   "steps": [
+    "Listen to the talk.",
+    "Note one strength.",
+    "Note one improvement.",
+    "Say both kindly."
+   ],
+   "contexts": [
+    "class talks on saving money",
+    "a poem performance",
+    "a debate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Strength. Improve."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Strength.",
+     "say": "What did Amina do well?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives one improvement."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL.M5_JO_PERSON",
+     "listen_for": [
+      "Juma is my friend, so it was good."
+     ],
+     "ask": "Is it about the friend or the talk?",
+     "repair": "The talk."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL.M5_JO_LOUD_ONLY",
+     "listen_for": [
+      "She was loud."
+     ],
+     "ask": "What else did they do?",
+     "repair": "Words and gestures."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL.M5_JO_ONLY_FAULTS",
+     "listen_for": [
+      "You said eeh and you forgot a word."
+     ],
+     "ask": "What was good?",
+     "repair": "Start there."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.JUDGE_ORAL.M5_JO_WRONG_SIMILE_OK",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does it make sense?",
+     "repair": "Check the comparison."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"as quick as a tortoise\" a good simile?",
+     "answer": "No",
+     "shows": "simile"
+    },
+    {
+     "question": "Give feedback on a talk.",
+     "answer": "one strength, one improvement",
+     "shows": "feedback"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY",
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.ORAL_SENTENCES",
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.SPEAKER_FEELINGS"
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "sub_strand": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension (Theme 1: Child rights and responsibilities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS",
+   "assessed_by": "questions",
+   "key_step": "The child says whether the word names something every child needs (a right) or something a child must do (a responsibility).",
+   "floor": {
+    "prerequisite": "Uses theme words.",
+    "question": "What is a family?",
+    "answer": "people who live together and care"
+   },
+   "steps": [
+    "Say the word.",
+    "Is it a right or a responsibility?",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "child rights at school",
+    "chores at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: education, sweeping, health care."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sweeping.",
+     "say": "Right or responsibility?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS.M_VOC_RIGHT_RESPONSIBILITY",
+     "listen_for": [
+      "responsibility"
+     ],
+     "ask": "Is it given to you or done by you?",
+     "repair": "Done by you: responsibility."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS.M_VOC_NEAR_MEANING",
+     "listen_for": [
+      "respect"
+     ],
+     "ask": "What does it mean?",
+     "repair": "Match the meaning."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS.M5_VOC_RIGHT_AS_WANT",
+     "listen_for": [
+      "a new phone"
+     ],
+     "ask": "Want or need?",
+     "repair": "Rights are needs."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS.M5_VOC_ABUSE_ANY_RULE",
+     "listen_for": [
+      "abuse"
+     ],
+     "ask": "Does it harm the child?",
+     "repair": "If not, it is guidance."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Going to school is a ...",
+     "answer": "right",
+     "shows": "right"
+    },
+    {
+     "question": "Helping at home is a ...",
+     "answer": "responsibility",
+     "shows": "responsibility"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY",
+   "assessed_by": "questions",
+   "key_step": "The child says each word aloud and listens for the sound, ignoring the spelling.",
+   "floor": {
+    "prerequisite": "Hears the difference between two sounds.",
+    "question": "Same or different: ship, sheep?",
+    "answer": "different"
+   },
+   "steps": [
+    "Say the target sound alone.",
+    "Say each word aloud.",
+    "Sort by the sound heard.",
+    "Check words with tricky spellings."
+   ],
+   "contexts": [
+    "words about child rights",
+    "a song for a national celebration",
+    "saving at a bank"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: cup, put, bus, car."
+    },
+    {
+     "beat": "point",
+     "do": "Point at put.",
+     "say": "Say it. Does it sound like cup?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts the four words by sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY.M5_SI_LETTER_NOT_SOUND",
+     "listen_for": [
+      "put"
+     ],
+     "ask": "Did you say it aloud?",
+     "repair": "Listen, do not look."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY.M5_SI_UH_AH",
+     "listen_for": [
+      "cut"
+     ],
+     "ask": "Short or long?",
+     "repair": "Cup is short; car is long."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY.M5_SI_SILENT_H",
+     "listen_for": [
+      "hour"
+     ],
+     "ask": "Do you hear h?",
+     "repair": "Hour: silent h."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY.M5_SI_P_B",
+     "listen_for": [
+      "bat"
+     ],
+     "ask": "Puff or buzz?",
+     "repair": "P puffs."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.SOUND_IDENTIFY.M5_SI_NG_N",
+     "listen_for": [
+      "sin"
+     ],
+     "ask": "Where is the sound made?",
+     "repair": "At the back: ng."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which word has the vowel in \"bus\": love or move?",
+     "answer": "love",
+     "shows": "sound not letter"
+    },
+    {
+     "question": "Which word starts with /h/: honest or happy?",
+     "answer": "happy",
+     "shows": "silent h"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA",
+   "assessed_by": "voice",
+   "key_step": "The child asks \"what was it all about?\" after listening, then adds two details.",
+   "floor": {
+    "prerequisite": "Recalls details from an oral text.",
+    "question": "Teacher reads a sentence. Who was in it?",
+    "answer": "the person named"
+   },
+   "steps": [
+    "Say what to listen for.",
+    "Listen once.",
+    "Say the main idea in one sentence.",
+    "Add two details; respond to any request."
+   ],
+   "contexts": [
+    "a talk on child rights",
+    "a radio item on traditional food",
+    "a speech at a national day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Main idea, Detail 1, Detail 2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Main idea.",
+     "say": "What was the talk mostly about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the two details."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA.M5_LM_DETAIL_AS_MAIN",
+     "listen_for": [
+      "Otieno"
+     ],
+     "ask": "Was the talk all about that?",
+     "repair": "Find the big idea."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA.M5_LM_FIRST_SENTENCE",
+     "listen_for": [
+      "greeting the class"
+     ],
+     "ask": "Is the greeting the point?",
+     "repair": "What did most of it explain?"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA.M5_LM_NO_RESPONSE",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What did the speaker ask?",
+     "repair": "Do it."
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.LISTEN_MAIN_IDEA.M5_LM_OWN_OPINION",
+     "listen_for": [
+      "Chores are boring."
+     ],
+     "ask": "Did the speaker say that?",
+     "repair": "Tell the speaker's message."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A talk explains why we need clean water and gives two examples. Main idea?",
+     "answer": "We need clean water.",
+     "shows": "main idea"
+    },
+    {
+     "question": "The speaker says, \"Stand if you have a younger sibling.\" You ...",
+     "answer": "stand if you have one",
+     "shows": "respond"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T11_SPELLING",
+ "title": "Spelling (Theme 11: Sports - appreciating talents)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES",
+   "assessed_by": "questions",
+   "key_step": "The child picks the spelling that matches the meaning in the sentence.",
+   "floor": {
+    "prerequisite": "Spells common words.",
+    "question": "Spell: there",
+    "answer": "there"
+   },
+   "steps": [
+    "Read the sentence.",
+    "Which meaning?",
+    "Choose the spelling."
+   ],
+   "contexts": [
+    "a sports report",
+    "a bank notice"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ bags are over ___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first gap.",
+     "say": "Belonging or place?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_THERE_THEIR",
+     "listen_for": [
+      "there"
+     ],
+     "ask": "Belonging?",
+     "repair": "Their."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_TO_TOO_TWO",
+     "listen_for": [
+      "to"
+     ],
+     "ask": "Number?",
+     "repair": "Two."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_SOUND_ONLY",
+     "listen_for": [
+      "peace"
+     ],
+     "ask": "Which meaning?",
+     "repair": "A piece of cake."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_HEAR_HERE",
+     "listen_for": [
+      "hear"
+     ],
+     "ask": "Listen or place?",
+     "repair": "Here for place."
+    }
+   ],
+   "checks": [
+    {
+     "question": "I have ___ pens. (2)",
+     "answer": "two",
+     "shows": "number"
+    },
+    {
+     "question": "Can you ___ me? (listen)",
+     "answer": "hear",
+     "shows": "hear/here"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS",
+   "assessed_by": "questions",
+   "key_step": "The child uses the sentence to choose which meaning of the word is meant.",
+   "floor": {
+    "prerequisite": "Uses context clues.",
+    "question": "What does \"bank\" mean in \"river bank\"?",
+    "answer": "side of a river"
+   },
+   "steps": [
+    "Read the sentence.",
+    "List the meanings.",
+    "Choose the one that fits."
+   ],
+   "contexts": [
+    "sports words: bat, match"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The match was lit. The match was won."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first match.",
+     "say": "Which meaning here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the second."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS.M_HOMON_FIRST_MEANING",
+     "listen_for": [
+      "He saved money at the bank."
+     ],
+     "ask": "Does that meaning fit?",
+     "repair": "Use the sentence."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS.M_HOMON_CONTEXT_IGNORED",
+     "listen_for": [
+      "The batsman hit the ball with his bat."
+     ],
+     "ask": "What does the sentence say?",
+     "repair": "Read it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS.M5_HOMON_SPELL_DIFF",
+     "listen_for": [
+      "No, they mean different things"
+     ],
+     "ask": "Same spelling?",
+     "repair": "Homonyms are."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS.M5_HOMON_ONE_MEANING_ONLY",
+     "listen_for": [
+      "a football game"
+     ],
+     "ask": "Any other meaning?",
+     "repair": "Check the sentence."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"A bat flew out.\" Bat means ...",
+     "answer": "an animal",
+     "shows": "meaning"
+    },
+    {
+     "question": "Are homonyms spelt the same?",
+     "answer": "Yes",
+     "shows": "definition"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS"
+ ]
+}

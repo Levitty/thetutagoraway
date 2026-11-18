@@ -1,0 +1,182 @@
+{
+ "sub_strand": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS",
+ "title": "Word Class: Adverbs (Theme 9: Communicable diseases)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+   "assessed_by": "questions",
+   "key_step": "The child asks how, when, where or how often and puts the adverb in the right place.",
+   "floor": {
+    "prerequisite": "Uses adverbs of manner.",
+    "question": "She ran ___ (quick).",
+    "answer": "quickly"
+   },
+   "steps": [
+    "Find the verb.",
+    "Ask how, when, where, how often.",
+    "Frequency after be, before other verbs."
+   ],
+   "contexts": [
+    "a health routine"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She ___ washes her hands. (always)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at washes.",
+     "say": "Where does always go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes with is."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_ADJECTIVE_FOR_ADVERB",
+     "listen_for": [
+      "quick"
+     ],
+     "ask": "Describing the action?",
+     "repair": "Quickly."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_GOOD_WELL",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Describing the action?",
+     "repair": "Well."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_HARD_HARDLY",
+     "listen_for": [
+      "hardly"
+     ],
+     "ask": "Hardly means almost not.",
+     "repair": "Hard."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_TYPE_CONFUSION",
+     "listen_for": [
+      "when (time)"
+     ],
+     "ask": "When or how often?",
+     "repair": "Name it."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_POSITION",
+     "listen_for": [
+      "always is"
+     ],
+     "ask": "After is?",
+     "repair": "Is always."
+    }
+   ],
+   "checks": [
+    {
+     "question": "He is ___ late (never).",
+     "answer": "is never late",
+     "shows": "position"
+    },
+    {
+     "question": "She did ___ (good).",
+     "answer": "well",
+     "shows": "good/well"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD",
+   "assessed_by": "questions",
+   "key_step": "The child uses could for past ability or polite asking, would for polite offers or imagined results, with a plain verb.",
+   "floor": {
+    "prerequisite": "Uses will.",
+    "question": "I ___ go tomorrow.",
+    "answer": "will"
+   },
+   "steps": [
+    "Past ability: could.",
+    "Polite: could you, would you.",
+    "Plain verb after."
+   ],
+   "contexts": [
+    "a clinic visit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: When I was five, I ___ swim."
+    },
+    {
+     "beat": "point",
+     "do": "Point at When I was five.",
+     "say": "Can or could?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a polite would question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_CAN_FOR_COULD",
+     "listen_for": [
+      "can"
+     ],
+     "ask": "Past?",
+     "repair": "Could."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_WILL_FOR_WOULD",
+     "listen_for": [
+      "will"
+     ],
+     "ask": "Polite or imagined?",
+     "repair": "Would."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_PAST_AFTER_MODAL",
+     "listen_for": [
+      "helped"
+     ],
+     "ask": "After could?",
+     "repair": "Plain verb."
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_HOW_MANY_ORDER",
+     "listen_for": [
+      "How could you many"
+     ],
+     "ask": "How many what?",
+     "repair": "How many ... could."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ you help me, please?",
+     "answer": "Could",
+     "shows": "polite"
+    },
+    {
+     "question": "How many ___ you carry?",
+     "answer": "could",
+     "shows": "pattern"
+    }
+   ]
+  }
+ ]
+}

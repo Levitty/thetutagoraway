@@ -1,0 +1,179 @@
+{
+ "sub_strand": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D",
+ "title": "Functional Writing: Diary (Theme 12: Environmental pollution)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS",
+   "assessed_by": "questions",
+   "key_step": "The child names the date, greeting, first-person events and feelings in a sample entry.",
+   "floor": {
+    "prerequisite": "Knows diary basics.",
+    "question": "What starts an entry?",
+    "answer": "the date"
+   },
+   "steps": [
+    "Find the date.",
+    "Find the greeting.",
+    "Find events.",
+    "Find feelings."
+   ],
+   "contexts": [
+    "an entry about pollution",
+    "an entry about a trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a sample entry."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "What part is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the feelings."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS.M5_DP_LETTER",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "To whom is it written?",
+     "repair": "To yourself."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS.M5_DP_NO_DATE",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "When was it?",
+     "repair": "Date."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS.M5_DP_THIRD_PERSON",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Who is writing?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_PARTS.M5_DP_TIMETABLE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Plans or what happened?",
+     "repair": "What happened."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"8 am Maths\" a diary entry?",
+     "answer": "No",
+     "shows": "diary"
+    },
+    {
+     "question": "\"She went home.\" Diary sentence?",
+     "answer": "No",
+     "shows": "person"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child writes one dated entry a day in the first person and past tense, with feelings.",
+   "floor": {
+    "prerequisite": "Knows the parts of a diary.",
+    "question": "What are the parts?",
+    "answer": "date, events, feelings"
+   },
+   "steps": [
+    "Write the date.",
+    "Write what happened.",
+    "Say how you felt.",
+    "New day, new entry."
+   ],
+   "contexts": [
+    "a river clean-up",
+    "a week at school",
+    "a visit to grandparents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Tuesday, 12th March."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "What happened today?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a feeling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING.M5_DW_FUTURE",
+     "listen_for": [
+      "Tomorrow we will clean the river."
+     ],
+     "ask": "Has it happened yet?",
+     "repair": "Write today."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING.M5_DW_NO_FEELINGS",
+     "listen_for": [
+      "We picked up plastic. We went home."
+     ],
+     "ask": "How did you feel?",
+     "repair": "Add it."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING.M5_DW_THIRD_PERSON",
+     "listen_for": [
+      "Baraka cleaned the classroom."
+     ],
+     "ask": "Who is writing?",
+     "repair": "I."
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.DIARY_WRITING.M5_DW_ONE_ENTRY",
+     "listen_for": [
+      "one"
+     ],
+     "ask": "How many days?",
+     "repair": "One entry each."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write a sentence for today.",
+     "answer": "Today I ...",
+     "shows": "past"
+    },
+    {
+     "question": "Monday and Tuesday: how many entries?",
+     "answer": "two",
+     "shows": "entries"
+    }
+   ]
+  }
+ ]
+}
