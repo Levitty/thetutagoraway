@@ -1,0 +1,376 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.MASS",
+ "title": "Mass",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words (verified); e is attitudinal. Kilograms, half and quarter kilograms; grams are not in Grade 4. HOREB's skill title said 'Units and Conversion', which is not in the design for this grade. Hands-on weighing with a beam balance is done in class.",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
+   "key_step": "The child balances objects against kilogram masses and reads the pointer on a scale, not its end, knowing size does not tell mass.",
+   "floor": {
+    "prerequisite": "Measures mass in kilograms (Grade 3).",
+    "question": "Which unit for a bag of maize flour?",
+    "answer": "kilograms"
+   },
+   "representations": [
+    "a beam balance with 1 kg masses",
+    "a spring scale",
+    "real objects"
+   ],
+   "steps": [
+    "Put the object on one pan.",
+    "Add kilogram masses to the other until they balance.",
+    "Count the masses.",
+    "On a scale, read where the pointer stops."
+   ],
+   "contexts": [
+    "a bag of sugar at the shop",
+    "a cabbage at the market",
+    "a sack of potatoes"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance: a cabbage on one pan, two 1 kg masses on the other, level."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the level beam.",
+     "say": "What is the mass of the cabbage?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2 kg."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write cabbage = 2 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_LARGER_IS_HEAVIER",
+     "listen_for": [
+      "the sponge"
+     ],
+     "ask": "How can we know for sure?",
+     "repair": "Weigh them."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_CAPACITY_UNIT",
+     "listen_for": [
+      "litres"
+     ],
+     "ask": "Do we pour sugar into a litre or weigh it?",
+     "repair": "Weigh it: kilograms."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_SCALE_READ_END",
+     "listen_for": [
+      "5 kg"
+     ],
+     "ask": "Where does the pointer stop?",
+     "repair": "At 3 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_BALANCE_DOWN_LIGHTER",
+     "listen_for": [
+      "the other object"
+     ],
+     "ask": "Which pan pushes down harder?",
+     "repair": "The heavier one: the cabbage."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A scale pointer stops at 4 kg. What is the mass?",
+     "answer": "4 kg",
+     "shows": "reading"
+    },
+    {
+     "question": "On a balance the bag of rice goes down and the 1 kg mass goes up. Which is heavier?",
+     "answer": "the rice",
+     "shows": "balance"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
+   "key_step": "The child knows 2 half kilograms and 4 quarter kilograms each balance 1 kg.",
+   "floor": {
+    "prerequisite": "Halves and quarters.",
+    "question": "How many halves make a whole?",
+    "answer": "2"
+   },
+   "representations": [
+    "1/2 kg and 1/4 kg masses on a balance",
+    "packets of salt",
+    "fraction strips"
+   ],
+   "steps": [
+    "Balance 1 kg with half kilograms: 2.",
+    "Balance 1 kg with quarter kilograms: 4.",
+    "A half kilogram is 2 quarters.",
+    "Count in halves or quarters."
+   ],
+   "contexts": [
+    "half-kilogram packets of salt",
+    "a quarter kilogram of tea leaves",
+    "butter at the shop"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance: 1 kg on one side."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds 1/4 kg masses until it balances."
+    },
+    {
+     "beat": "count",
+     "do": "Count them: 4."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 quarters = 2 halves = 1 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_HALF_KG_AS_500",
+     "listen_for": [
+      "5 kg"
+     ],
+     "ask": "Is half a kilogram more or less than 1 kg?",
+     "repair": "Less: two quarter kilograms."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_QUARTER_TWO",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many quarters balance 1 kg?",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_HALF_LARGER_THAN_KG",
+     "listen_for": [
+      "1/2 kg"
+     ],
+     "ask": "Is half of something bigger than the whole?",
+     "repair": "No: 1 kg is heavier."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_QUARTERS_AS_KG",
+     "listen_for": [
+      "3 kg"
+     ],
+     "ask": "How many quarters make 1 kg?",
+     "repair": "4: three is 3/4 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many 1/2 kg packets make 2 kg?",
+     "answer": "4",
+     "shows": "halves"
+    },
+    {
+     "question": "How many 1/4 kg masses balance 1/2 kg?",
+     "answer": "2",
+     "shows": "quarters and halves"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.MASS.MASS_ADD",
+   "key_step": "The child adds the kilograms of each item and writes kg, carrying tens when needed.",
+   "floor": {
+    "prerequisite": "Adds with regrouping.",
+    "question": "26 + 17",
+    "answer": "43"
+   },
+   "representations": [
+    "bags with mass labels",
+    "a bar model",
+    "columns with a kg heading"
+   ],
+   "steps": [
+    "Write each mass.",
+    "Add, carrying if needed.",
+    "Halves and quarters: count how many make 1 kg.",
+    "Write kg after the answer."
+   ],
+   "contexts": [
+    "sacks on a lorry",
+    "shopping bags",
+    "maize harvested from two plots"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw bags of 10 kg, 5 kg and 2 kg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each bag.",
+     "say": "What is the mass of each?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 10, 5, 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 10 + 5 + 2 = 17 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_OMIT_UNIT",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "20 what?",
+     "repair": "20 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_SUBTRACTS",
+     "listen_for": [
+      "6 kg"
+     ],
+     "ask": "Is the total more or less?",
+     "repair": "More: 24 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_TOPS_AND_BOTTOMS",
+     "listen_for": [
+      "2/6 kg"
+     ],
+     "ask": "How many quarters is a half?",
+     "repair": "Two: 3/4 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_CARRY_MISSED",
+     "listen_for": [
+      "33 kg"
+     ],
+     "ask": "What is 6 + 7?",
+     "repair": "13: carry 1, 43 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_COUNTS_BAGS",
+     "listen_for": [
+      "3 kg"
+     ],
+     "ask": "Did I ask how many bags?",
+     "repair": "No: the mass, 17 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A sack of 35 kg and a bag of 18 kg. Total mass?",
+     "answer": "53 kg",
+     "shows": "carrying"
+    },
+    {
+     "question": "1/2 kg + 1/2 kg + 1/4 kg",
+     "answer": "1 1/4 kg",
+     "shows": "fractions of a kilogram"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.MASS.MASS_SUB",
+   "key_step": "The child takes the mass removed from the mass there was, and takes away the container to find the contents.",
+   "floor": {
+    "prerequisite": "Subtracts with regrouping.",
+    "question": "42 - 17",
+    "answer": "25"
+   },
+   "representations": [
+    "a sack with part shaded",
+    "a bar model",
+    "a balance"
+   ],
+   "steps": [
+    "Write the starting mass.",
+    "Take away the mass sold or the container.",
+    "Regroup when needed.",
+    "Write kg."
+   ],
+   "contexts": [
+    "maize sold from a sack",
+    "a box and what is inside",
+    "sugar used from a bag"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a full box marked 20 kg and an empty box marked 3 kg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the empty box.",
+     "say": "What does the box alone weigh?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3 kg."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 - 3 = 17 kg of contents."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_ADDS",
+     "listen_for": [
+      "68 kg"
+     ],
+     "ask": "After selling, more or less?",
+     "repair": "Less: 32 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_CONTAINER",
+     "listen_for": [
+      "20 kg"
+     ],
+     "ask": "Does the 20 kg include the box?",
+     "repair": "Yes: take it away, 17 kg."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_GIVES_SOLD",
+     "listen_for": [
+      "18 kg"
+     ],
+     "ask": "Is 18 kg sold or left?",
+     "repair": "Sold: 32 kg left."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_SMALLER_DIGIT",
+     "listen_for": [
+      "35 kg"
+     ],
+     "ask": "Can we take 7 from 2?",
+     "repair": "Regroup: 25 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 90 kg sack has 36 kg sold. How much is left?",
+     "answer": "54 kg",
+     "shows": "regrouping"
+    },
+    {
+     "question": "A full basket is 12 kg and the basket alone is 2 kg. Mass of the fruit?",
+     "answer": "10 kg",
+     "shows": "container"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,545 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.FRACTIONS",
+ "title": "Fractions",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words (verified); f is digital use and g is attitude and neither is mapped. Outcome b is split into two skills (part of a whole and part of a group). The denominator is at most 12 as outcome b says. Fractions are shown as part of a whole or group; no adding or comparing at this grade.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+   "key_step": "The child says the denominator counts the equal parts the whole is cut into and the numerator counts the parts taken.",
+   "floor": {
+    "prerequisite": "Halves, quarters and eighths of a whole (Grade 3).",
+    "question": "A chapati is cut into 4 equal parts. What is one part called?",
+    "answer": "a quarter"
+   },
+   "representations": [
+    "paper strips folded into equal parts",
+    "a chapati cut into pieces",
+    "fraction cards"
+   ],
+   "steps": [
+    "Check the parts are equal.",
+    "Count all the equal parts: the denominator.",
+    "Count the parts taken: the numerator.",
+    "Write numerator over denominator."
+   ],
+   "contexts": [
+    "a chapati shared at supper",
+    "an orange cut into pieces",
+    "a bar of soap"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a strip in 8 equal parts; shade 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at all the parts.",
+     "say": "How many equal parts in all?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 8."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3/8 and label: 3 numerator, 8 denominator."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_SWAP_NUM_DEN",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is 3 the parts taken or all the parts?",
+     "repair": "Taken: the denominator is 8."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_TWO_NUMBERS_SEPARATE",
+     "listen_for": [
+      "8 things are shaded"
+     ],
+     "ask": "What does the bottom number count?",
+     "repair": "All the equal parts."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_PARTS_NOT_EQUAL",
+     "listen_for": [
+      "1/4"
+     ],
+     "ask": "Are the four pieces the same size?",
+     "repair": "No: it is not a quarter."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_BIGGER_DENOMINATOR_BIGGER",
+     "listen_for": [
+      "1/8"
+     ],
+     "ask": "If a chapati is cut into more pieces, are the pieces bigger or smaller?",
+     "repair": "Smaller: 1/3 is bigger."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In 5/9, which number is the denominator?",
+     "answer": "9",
+     "shows": "naming"
+    },
+    {
+     "question": "Which is bigger, 1/4 or 1/6 of the same cake?",
+     "answer": "1/4",
+     "shows": "meaning of the denominator"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+   "key_step": "The child counts all the equal parts for the denominator and the shaded parts for the numerator.",
+   "floor": {
+    "prerequisite": "Names the numerator and denominator.",
+    "question": "In 2/5 what is the numerator?",
+    "answer": "2"
+   },
+   "representations": [
+    "shaded shapes",
+    "folded paper",
+    "fraction strips up to twelfths"
+   ],
+   "steps": [
+    "Check the parts are equal.",
+    "Count all the parts.",
+    "Count the shaded parts.",
+    "Write shaded over all."
+   ],
+   "contexts": [
+    "slices of a pizza eaten",
+    "a shamba split into plots",
+    "a cake at a birthday"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle in 8 equal parts; shade 5."
+    },
+    {
+     "beat": "count",
+     "do": "Count all the parts with the child."
+    },
+    {
+     "beat": "count",
+     "do": "Count the shaded parts."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5/8."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_SHADED_OVER_UNSHADED",
+     "listen_for": [
+      "5/3"
+     ],
+     "ask": "Is the bottom number all the parts?",
+     "repair": "Yes: 5/8."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_COUNT_CUTS",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Count the pieces, not the cuts.",
+     "repair": "4 pieces."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_WRONG_NUMBER_OF_PARTS",
+     "listen_for": [
+      "3/3"
+     ],
+     "ask": "How many slices were there in all?",
+     "repair": "12: 3/12."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_UNSHADED_GIVEN",
+     "listen_for": [
+      "3/8"
+     ],
+     "ask": "Which parts did I ask about?",
+     "repair": "The shaded ones: 5/8."
+    }
+   ],
+   "checks": [
+    {
+     "question": "7 of 12 equal parts are shaded. What fraction is shaded?",
+     "answer": "7/12",
+     "shows": "shaded over all"
+    },
+    {
+     "question": "A cake is cut into 6 equal pieces and 1 is eaten. What fraction is left?",
+     "answer": "5/6",
+     "shows": "what is left"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+   "key_step": "The child shares the group into as many equal groups as the denominator, then takes as many groups as the numerator.",
+   "floor": {
+    "prerequisite": "Divides without a remainder.",
+    "question": "12 ÷ 4",
+    "answer": "3"
+   },
+   "representations": [
+    "counters in equal groups",
+    "goats in a herd",
+    "a bar split into equal parts"
+   ],
+   "steps": [
+    "Count the whole group.",
+    "Share it into denominator equal groups.",
+    "Count one group.",
+    "Take numerator groups."
+   ],
+   "contexts": [
+    "goats in a herd",
+    "learners in a class",
+    "mangoes in a basket"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 12 mangoes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child loops them into 4 equal groups."
+    },
+    {
+     "beat": "count",
+     "do": "Count one group: 3."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1/4 of 12 = 3, and 3/4 of 12 = 9."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_GROUP_PART_OVER_OTHER",
+     "listen_for": [
+      "3/5"
+     ],
+     "ask": "Is the bottom number all the goats?",
+     "repair": "Yes, 8: 3/8."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_DIVIDES_WRONG",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Into how many groups do we share?",
+     "repair": "4: 3 each."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_ONE_PART_ONLY",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "How many groups did we take?",
+     "repair": "3 groups: 9."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_MULTIPLIES",
+     "listen_for": [
+      "45"
+     ],
+     "ask": "Is a third of 15 more or less than 15?",
+     "repair": "Less: 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 2/5 of 20?",
+     "answer": "8",
+     "shows": "share then take"
+    },
+    {
+     "question": "A class has 24 learners. 1/3 are girls. How many girls?",
+     "answer": "8",
+     "shows": "fraction of a group"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS",
+   "key_step": "The child compares the numerator with the denominator: smaller is proper, equal or bigger is improper, a whole number and a fraction is mixed.",
+   "floor": {
+    "prerequisite": "A fraction of a whole.",
+    "question": "Is 3/4 more or less than one whole?",
+    "answer": "less"
+   },
+   "representations": [
+    "fraction strips with one whole marked",
+    "a number line from 0 to 3",
+    "sorting cards"
+   ],
+   "steps": [
+    "Is there a whole number in front? Mixed.",
+    "If not, compare top and bottom.",
+    "Top smaller: proper.",
+    "Top equal or bigger: improper."
+   ],
+   "contexts": [
+    "chapatis shared at a party",
+    "litres of milk in jugs",
+    "oranges cut in halves"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 0 to 2 in quarters."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 5/4.",
+     "say": "Is it before or after 1?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for after."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5/4 is improper; 3/4 is proper; 1 1/4 is mixed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_IMPROPER_NOT_FRACTION",
+     "listen_for": [
+      "not a fraction"
+     ],
+     "ask": "Can we have 7 quarters of chapati?",
+     "repair": "Yes: 7/4 is an improper fraction."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_MIXED_AS_PROPER",
+     "listen_for": [
+      "proper"
+     ],
+     "ask": "Is there a whole number in front?",
+     "repair": "Yes: mixed."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_EQUAL_IS_PROPER",
+     "listen_for": [
+      "proper"
+     ],
+     "ask": "Is 5/5 less than one whole?",
+     "repair": "No, it is one whole: improper."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_BIG_NUMBERS_IMPROPER",
+     "listen_for": [
+      "improper"
+     ],
+     "ask": "Is 9 bigger than 12?",
+     "repair": "No: proper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What kind of fraction is 11/8?",
+     "answer": "improper",
+     "shows": "compare"
+    },
+    {
+     "question": "What kind of fraction is 3 2/5?",
+     "answer": "mixed",
+     "shows": "whole and fraction"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED",
+   "key_step": "The child divides the numerator by the denominator: the answer is the wholes and the remainder stays over the same denominator.",
+   "floor": {
+    "prerequisite": "Divides with a remainder.",
+    "question": "11 ÷ 4",
+    "answer": "2 remainder 3"
+   },
+   "representations": [
+    "quarter pieces grouped into wholes",
+    "a number line",
+    "division with remainder"
+   ],
+   "steps": [
+    "Divide the numerator by the denominator.",
+    "The answer is the wholes.",
+    "The remainder is the top of the fraction.",
+    "The denominator stays the same."
+   ],
+   "contexts": [
+    "quarters of oranges at a sports day",
+    "half loaves in a bakery",
+    "pieces of cake"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 11 quarter pieces."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child groups them into wholes of 4."
+    },
+    {
+     "beat": "count",
+     "do": "Count the wholes: 2, with 3 quarters left."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 11/4 = 2 3/4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_REMAINDER_AS_WHOLE",
+     "listen_for": [
+      "3 2/4"
+     ],
+     "ask": "How many wholes did we make?",
+     "repair": "2: 2 3/4."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_REMAINDER_OVER_QUOTIENT",
+     "listen_for": [
+      "3 2/3"
+     ],
+     "ask": "What size are the pieces left over?",
+     "repair": "Fifths: 3 2/5."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_NO_REMAINDER_LEFT_OUT",
+     "listen_for": [
+      "3 0/4"
+     ],
+     "ask": "Is anything left over?",
+     "repair": "No: it is 3."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_WHOLES_MISCOUNTED",
+     "listen_for": [
+      "1 7/4"
+     ],
+     "ask": "Can 7 quarters make another whole?",
+     "repair": "Yes: 2 3/4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Change 13/5 to a mixed fraction.",
+     "answer": "2 3/5",
+     "shows": "divide"
+    },
+    {
+     "question": "Change 9/2 to a mixed fraction.",
+     "answer": "4 1/2",
+     "shows": "halves"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER",
+   "key_step": "The child changes each whole into parts (whole times denominator) and adds the extra parts; the denominator stays.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "3 x 5",
+    "answer": "15"
+   },
+   "representations": [
+    "wholes cut into equal parts",
+    "a number line",
+    "fraction strips"
+   ],
+   "steps": [
+    "Multiply the whole number by the denominator.",
+    "Add the numerator.",
+    "Write the total over the same denominator.",
+    "Check by changing back."
+   ],
+   "contexts": [
+    "chapatis cut into quarters",
+    "litres poured into half-litre cups",
+    "oranges cut into thirds"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 2 whole circles and 3/5 of another, all in fifths."
+    },
+    {
+     "beat": "count",
+     "do": "Count the fifths in the wholes with the child."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: how many fifths in all?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2 x 5 + 3 = 13: 13/5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_ADDS_WHOLE",
+     "listen_for": [
+      "5/5"
+     ],
+     "ask": "How many fifths are in 2 wholes?",
+     "repair": "10: 13/5."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_WHOLE_TIMES_NUMERATOR",
+     "listen_for": [
+      "11/5"
+     ],
+     "ask": "Which number tells the parts in one whole?",
+     "repair": "The denominator: 3 x 5 + 2 = 17."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_DENOMINATOR_CHANGED",
+     "listen_for": [
+      "5/5"
+     ],
+     "ask": "Did the size of the pieces change?",
+     "repair": "No: thirds, 5/3."
+    },
+    {
+     "code": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_NUMERATOR_NOT_ADDED",
+     "listen_for": [
+      "10/5"
+     ],
+     "ask": "Where are the 3 extra fifths?",
+     "repair": "Add them: 13/5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Change 3 1/4 to an improper fraction.",
+     "answer": "13/4",
+     "shows": "times then add"
+    },
+    {
+     "question": "Change 1 5/6 to an improper fraction.",
+     "answer": "11/6",
+     "shows": "one whole"
+    }
+   ]
+  }
+ ]
+}

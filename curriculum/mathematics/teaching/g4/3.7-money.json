@@ -1,0 +1,286 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.MONEY",
+ "title": "Money",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words (verified); d is attitudinal. Value of a shopping list at most 10,000 shillings. Cents are used with shillings: 100 cents is one shilling. HOREB's skill is titled 'Money (Budgets, Spending & Saving)', which goes beyond the Grade 4 outcomes.",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
+   "key_step": "The child uses sh 1 = 100 cents: multiply shillings by 100 for cents, take out each 100 cents for a shilling.",
+   "floor": {
+    "prerequisite": "Converts money into different denominations (Grade 3).",
+    "question": "How many sh 10 coins make sh 50?",
+    "answer": "5"
+   },
+   "representations": [
+    "coins: 50 cents and 1 shilling",
+    "a place value chart: sh and cents",
+    "a price tag"
+   ],
+   "steps": [
+    "sh 1 = 100 cents.",
+    "Shillings to cents: x 100, add the cents.",
+    "Cents to shillings: take out each 100.",
+    "What is left stays as cents."
+   ],
+   "contexts": [
+    "a price at the kiosk",
+    "coins in a purse",
+    "change at the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write sh 3 and 5 cents."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sh 3.",
+     "say": "How many cents is sh 3?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 300."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 300 + 5 = 305 cents."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_10_CENTS_SHILLING",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "How many cents in one shilling?",
+     "repair": "100: 500."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_CENTS_AS_DECIMAL_WHOLE",
+     "listen_for": [
+      "35"
+     ],
+     "ask": "How many cents is sh 3?",
+     "repair": "300: 305 cents."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_DIRECTION",
+     "listen_for": [
+      "40,000"
+     ],
+     "ask": "More shillings or fewer than cents?",
+     "repair": "Fewer: sh 4."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_HALF_SHILLING_5",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "What is half of 100 cents?",
+     "repair": "50."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write sh 7 and 20 cents in cents.",
+     "answer": "720 cents",
+     "shows": "to cents"
+    },
+    {
+     "question": "Change 650 cents to shillings and cents.",
+     "answer": "sh 6 and 50 cents",
+     "shows": "to shillings"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST",
+   "key_step": "The child lists three items with quantity, price and cost (quantity times price) and keeps the total within the money available.",
+   "floor": {
+    "prerequisite": "Buys up to 3 items with balance (Grade 3).",
+    "question": "You have sh 100 and buy bread at sh 60. What is your balance?",
+    "answer": "sh 40"
+   },
+   "representations": [
+    "a shopping list table: item, quantity, price, cost",
+    "price cards",
+    "play money"
+   ],
+   "steps": [
+    "Write each item.",
+    "Write how many and the price of one.",
+    "Cost = how many x price.",
+    "Check the total is not more than your money."
+   ],
+   "contexts": [
+    "shopping at the kiosk for supper",
+    "buying school supplies",
+    "market day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a list: Item, Quantity, Price, Cost."
+    },
+    {
+     "beat": "write",
+     "do": "Write 3 loaves, sh 55 each."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: what goes in the cost column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for sh 165."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh 165."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_OVER_BUDGET",
+     "listen_for": [
+      "bread, milk and sugar"
+     ],
+     "ask": "What do the three cost together?",
+     "repair": "sh 145: more than sh 100."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_OMITS_QUANTITY",
+     "listen_for": [
+      "sh 55"
+     ],
+     "ask": "How many loaves?",
+     "repair": "3: sh 165."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_UNITS_MIXED",
+     "listen_for": [
+      "53"
+     ],
+     "ask": "Are 50 cents and sh 3 the same unit?",
+     "repair": "No: sh 3.50."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_QUANTITY_AS_COST",
+     "listen_for": [
+      "sh 2"
+     ],
+     "ask": "Is 2 the money or the kilograms?",
+     "repair": "The kilograms: sh 300."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You have sh 200. Rice costs sh 120, oil sh 90 and salt sh 30. Can you buy all three?",
+     "answer": "No: they cost sh 240",
+     "shows": "within budget"
+    },
+    {
+     "question": "4 pencils at sh 15 each. What goes in the cost column?",
+     "answer": "sh 60",
+     "shows": "quantity times price"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.MONEY.TOTAL_COST",
+   "key_step": "The child works out the cost of each line (quantity times price), adds every line, and takes the total from the money paid for change.",
+   "floor": {
+    "prerequisite": "Adds and multiplies money.",
+    "question": "sh 120 + sh 90",
+    "answer": "sh 210"
+   },
+   "representations": [
+    "a shopping list table",
+    "a receipt",
+    "play money"
+   ],
+   "steps": [
+    "Cost of each line: how many x price.",
+    "Add all the lines.",
+    "Check every item is in.",
+    "Change = money paid - total."
+   ],
+   "contexts": [
+    "a receipt from the shop",
+    "buying for a class party",
+    "market shopping"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a receipt: rice sh 120, beans sh 90, oil sh 150."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each line.",
+     "say": "How many items must we add?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for three."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the three prices."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write total sh 360."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_ADDS_QUANTITY",
+     "listen_for": [
+      "sh 19"
+     ],
+     "ask": "Is it 4 + 15, or 4 lots of 15?",
+     "repair": "4 lots: sh 60."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_CHANGE_ADDS",
+     "listen_for": [
+      "sh 155"
+     ],
+     "ask": "Do you get back more than you paid?",
+     "repair": "No: sh 45."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_ONE_ITEM_ONLY",
+     "listen_for": [
+      "sh 210"
+     ],
+     "ask": "Did you add the oil?",
+     "repair": "No: sh 360."
+    },
+    {
+     "code": "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_CHANGE_FROM_ONE_ITEM",
+     "listen_for": [
+      "sh 45"
+     ],
+     "ask": "What is the total of bread and milk?",
+     "repair": "sh 85: change sh 15."
+    }
+   ],
+   "checks": [
+    {
+     "question": "2 kg of sugar at sh 140 and a loaf at sh 60. Total?",
+     "answer": "sh 340",
+     "shows": "total of lines"
+    },
+    {
+     "question": "You buy items costing sh 250 and pay with sh 500. Change?",
+     "answer": "sh 250",
+     "shows": "change"
+    }
+   ]
+  }
+ ]
+}

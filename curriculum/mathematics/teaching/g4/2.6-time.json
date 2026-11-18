@@ -1,0 +1,658 @@
+{
+ "sub_strand": "MATH.G4.MEASUR.TIME",
+ "title": "Time",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to f are KICD's words (verified); g attitudinal. Outcome c has three kinds of conversion (hours and minutes, hours and days, days and weeks), split into two skills. Time durations are in hours and minutes. Outcome f also covers an electronic clock, and a digital clock reading is a skill of its own.",
+ "skills": [
+  {
+   "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+   "key_step": "The child reads the hour from the short hand, the minutes from the long hand counting in fives, and says a.m. before noon and p.m. after.",
+   "floor": {
+    "prerequisite": "Reads time past and to the hour (Grade 3).",
+    "question": "The long hand is on 6 and the short hand is past 2. What time?",
+    "answer": "half past 2"
+   },
+   "representations": [
+    "a clock face with movable hands",
+    "a day line from midnight to midnight",
+    "a digital clock"
+   ],
+   "steps": [
+    "Read the short hand: the hour it has passed.",
+    "Count the long hand in fives.",
+    "Past the hour or to the next hour.",
+    "Before noon a.m., after noon p.m."
+   ],
+   "contexts": [
+    "school assembly time",
+    "a matatu leaving the stage",
+    "a church service"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock: short hand just before 5, long hand on 9."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the short hand.",
+     "say": "Which number has it passed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 4."
+    },
+    {
+     "beat": "count",
+     "do": "Count the long hand in fives with the child: 45."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4:45, quarter to 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_HANDS_SWAPPED",
+     "listen_for": [
+      "12 o'clock"
+     ],
+     "ask": "Which hand is the hour hand?",
+     "repair": "The short one: 3 o'clock."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_PAST_TO_SWAP",
+     "listen_for": [
+      "20 past 4"
+     ],
+     "ask": "Is the long hand on the right or the left side?",
+     "repair": "The left: 20 to 5."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_MIDNIGHT_NOON",
+     "listen_for": [
+      "a.m."
+     ],
+     "ask": "Is noon the start of the afternoon?",
+     "repair": "Yes: 12 noon is p.m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_HOUR_FROM_NEXT_NUMBER",
+     "listen_for": [
+      "5:45"
+     ],
+     "ask": "Has the short hand reached 5?",
+     "repair": "No: 4:45."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The short hand is past 7 and the long hand is on 3, in the morning. What time is it?",
+     "answer": "7:15 a.m.",
+     "shows": "reading a.m."
+    },
+    {
+     "question": "The short hand is just before 3 and the long hand is on 10, in the afternoon. What time?",
+     "answer": "2:50 p.m.",
+     "shows": "to the hour"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME",
+   "key_step": "The child uses daily events and the sun to place a time in the morning (a.m.) or after noon (p.m.).",
+   "floor": {
+    "prerequisite": "Estimates time in hours (Grade 3).",
+    "question": "About how long is a school day?",
+    "answer": "about 8 hours"
+   },
+   "representations": [
+    "a day line with events",
+    "shadow of a stick at different times",
+    "a picture timetable"
+   ],
+   "steps": [
+    "Think of the event: morning or after noon?",
+    "Morning to noon: a.m.",
+    "Noon to midnight: p.m.",
+    "Shadows are short at noon and long in morning and evening."
+   ],
+   "contexts": [
+    "waking up for school",
+    "lunch break",
+    "evening prayers"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a day line: midnight, sunrise, noon, sunset, midnight."
+    },
+    {
+     "beat": "point",
+     "do": "Point at lunch at 1 o'clock.",
+     "say": "Before or after noon?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for after."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1:00 p.m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_AMPM_WRONG",
+     "listen_for": [
+      "p.m."
+     ],
+     "ask": "Does school start in the morning?",
+     "repair": "Yes: a.m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_SHADOW_DIRECTION",
+     "listen_for": [
+      "in the morning"
+     ],
+     "ask": "Where is the sun at noon?",
+     "repair": "High overhead: shortest shadow."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_PM_MEANS_EVENING",
+     "listen_for": [
+      "a.m."
+     ],
+     "ask": "Is 1 o'clock lunch after noon?",
+     "repair": "Yes: p.m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_SHADOW_POINTS_TO_SUN",
+     "listen_for": [
+      "east"
+     ],
+     "ask": "Is the sun in front of or behind the pole from its shadow?",
+     "repair": "Behind: the shadow points west."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Supper is at 7 o'clock in the evening. a.m. or p.m.?",
+     "answer": "p.m.",
+     "shows": "after noon"
+    },
+    {
+     "question": "When is a shadow longest: early morning or noon?",
+     "answer": "early morning",
+     "shows": "shadows"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
+   "key_step": "The child uses 1 hour = 60 minutes: multiply hours by 60, and take minutes out in 60s for hours.",
+   "floor": {
+    "prerequisite": "Multiplies by multiples of 10.",
+    "question": "3 x 60",
+    "answer": "180"
+   },
+   "representations": [
+    "a clock face: one turn of the long hand",
+    "a number line in 60s",
+    "a conversion table"
+   ],
+   "steps": [
+    "1 hour = 60 minutes.",
+    "Hours to minutes: x 60.",
+    "Minutes to hours: take out each 60.",
+    "What is left stays as minutes."
+   ],
+   "contexts": [
+    "a football match",
+    "a journey to Nairobi",
+    "a lesson"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock; trace the long hand once round."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the full turn.",
+     "say": "How many minutes is one turn?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 60."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 90 minutes = 60 + 30 = 1 hour 30 minutes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_100_MINUTES",
+     "listen_for": [
+      "200"
+     ],
+     "ask": "How many minutes in one hour?",
+     "repair": "60: 120."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_REMAINDER_AS_DECIMAL",
+     "listen_for": [
+      "1 hour 90 minutes"
+     ],
+     "ask": "Where did the 60 minutes for the hour go?",
+     "repair": "Take them out: 1 hour 30 minutes."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_DIVIDES_TO_MULTIPLY",
+     "listen_for": [
+      "20 minutes"
+     ],
+     "ask": "Are there more minutes or fewer than hours?",
+     "repair": "More: 180."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_HALF_HOUR_50",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "What is half of 60?",
+     "repair": "30."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Change 2 hours 15 minutes to minutes.",
+     "answer": "135 minutes",
+     "shows": "to minutes"
+    },
+    {
+     "question": "Change 150 minutes to hours and minutes.",
+     "answer": "2 hours 30 minutes",
+     "shows": "to hours"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
+   "key_step": "The child uses 1 day = 24 hours and 1 week = 7 days, multiplying to the smaller unit and taking out groups for the bigger one.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "3 x 7",
+    "answer": "21"
+   },
+   "representations": [
+    "a calendar",
+    "a week chart",
+    "a conversion table"
+   ],
+   "steps": [
+    "1 week = 7 days; 1 day = 24 hours.",
+    "To the smaller unit: multiply.",
+    "To the bigger unit: take out groups.",
+    "Keep what is left over."
+   ],
+   "contexts": [
+    "school holidays",
+    "a calendar for the term",
+    "a hospital stay"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a calendar of 17 days."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rings full weeks of 7."
+    },
+    {
+     "beat": "count",
+     "do": "Count the rings: 2, with 3 days left."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 17 days = 2 weeks 3 days."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_10_HOURS_DAY",
+     "listen_for": [
+      "24"
+     ],
+     "ask": "How many hours in one day?",
+     "repair": "24: 48."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_WEEK_NOT_7",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "How many days from Monday to Sunday?",
+     "repair": "7: 21."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_DAYS_TO_WEEKS_REMAINDER",
+     "listen_for": [
+      "2 weeks"
+     ],
+     "ask": "Are any days left over?",
+     "repair": "Yes, 3."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_WEEKS_ADDS_7",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Is it 3 + 7, or 3 weeks of 7?",
+     "repair": "3 x 7 = 21."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_HOURS_REMAINDER_KEPT",
+     "listen_for": [
+      "1 day 30 hours"
+     ],
+     "ask": "How many hours are left after 24?",
+     "repair": "6."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many hours in 3 days?",
+     "answer": "72",
+     "shows": "days to hours"
+    },
+    {
+     "question": "Change 25 days to weeks and days.",
+     "answer": "3 weeks 4 days",
+     "shows": "days to weeks"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.TIME.RECORD_DURATION",
+   "key_step": "The child counts on from the start time to the end time in hours, then minutes, and writes the duration in hours and minutes.",
+   "floor": {
+    "prerequisite": "Reads time.",
+    "question": "What time is it 1 hour after 9:00?",
+    "answer": "10:00"
+   },
+   "representations": [
+    "a time line",
+    "a clock face",
+    "a timetable"
+   ],
+   "steps": [
+    "Start at the start time.",
+    "Count whole hours on.",
+    "Count the minutes left.",
+    "Write hours and minutes."
+   ],
+   "contexts": [
+    "a lesson",
+    "a journey on a matatu",
+    "a football match"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a time line from 9:00 to 10:30."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 9:00 to 10:00.",
+     "say": "How long is that jump?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1 hour."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws the jump from 10:00 to 10:30."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 hour 30 minutes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_END_TIME",
+     "listen_for": [
+      "10:30"
+     ],
+     "ask": "Is 10:30 a time or a length of time?",
+     "repair": "A time: 1 hour 30 minutes."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_WRONG_UNITS",
+     "listen_for": [
+      "130"
+     ],
+     "ask": "How many minutes in the hour?",
+     "repair": "60: 90 minutes."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_COUNTS_NUMBERS",
+     "listen_for": [
+      "3 hours"
+     ],
+     "ask": "Count the jumps, not the numbers.",
+     "repair": "2 hours."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_ACROSS_HOUR",
+     "listen_for": [
+      "1 hour 30 minutes"
+     ],
+     "ask": "Count on from 9:40 to 10:00.",
+     "repair": "20 minutes, then 10: 30 minutes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A game starts at 3:15 p.m. and ends at 4:45 p.m. How long is it?",
+     "answer": "1 hour 30 minutes",
+     "shows": "counting on"
+    },
+    {
+     "question": "From 8:50 to 9:20 is how long?",
+     "answer": "30 minutes",
+     "shows": "across the hour"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
+   "key_step": "The child adds or counts on in hours and minutes, changing 60 minutes into an hour and minding a.m. and p.m. across noon.",
+   "floor": {
+    "prerequisite": "Converts minutes to hours.",
+    "question": "90 minutes in hours and minutes",
+    "answer": "1 hour 30 minutes"
+   },
+   "representations": [
+    "a time line",
+    "columns for hours and minutes",
+    "a clock"
+   ],
+   "steps": [
+    "Count on in hours.",
+    "Count on the minutes.",
+    "60 minutes or more: one more hour.",
+    "Crossing 12 noon: a.m. becomes p.m."
+   ],
+   "contexts": [
+    "a bus to Mombasa",
+    "a film at a hall",
+    "a sports day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a time line from 8:45 to 10:15."
+    },
+    {
+     "beat": "point",
+     "do": "Point from 8:45 to 9:00.",
+     "say": "How many minutes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 15."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the jumps 9:00 to 10:00 and 10:00 to 10:15."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 15 + 60 + 15 = 1 hour 30 minutes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_SUBTRACT_AS_DECIMAL",
+     "listen_for": [
+      "1 hour 70 minutes"
+     ],
+     "ask": "Can there be 70 minutes in the answer?",
+     "repair": "No: count on, 1 hour 30 minutes."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_ADD_MINUTES_OVER_60",
+     "listen_for": [
+      "5:90"
+     ],
+     "ask": "Can a clock show 90 minutes?",
+     "repair": "No: 6:30."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_NOON_AMPM",
+     "listen_for": [
+      "12:30 a.m."
+     ],
+     "ask": "Did we pass noon?",
+     "repair": "Yes: p.m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_HOURS_ADDED_AS_MINUTES",
+     "listen_for": [
+      "7:37"
+     ],
+     "ask": "Is 2 hours the same as 2 minutes?",
+     "repair": "No: 9:35."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A bus leaves at 10:40 a.m. and takes 2 hours 30 minutes. When does it arrive?",
+     "answer": "1:10 p.m.",
+     "shows": "across noon"
+    },
+    {
+     "question": "From 7:35 to 9:10 is how long?",
+     "answer": "1 hour 35 minutes",
+     "shows": "counting on"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
+   "key_step": "The child reads hours before the colon and minutes after it (two digits, 0 to 59) and matches the time to the analogue clock.",
+   "floor": {
+    "prerequisite": "Reads an analogue clock.",
+    "question": "The long hand is on 9 and the short hand past 3. What time?",
+    "answer": "quarter to 4"
+   },
+   "representations": [
+    "a digital clock",
+    "an analogue clock beside it",
+    "a phone screen"
+   ],
+   "steps": [
+    "Hours before the colon.",
+    "Minutes after it, always two digits.",
+    "Minutes go up to 59, then the hour changes.",
+    "Match to past or to on a clock face."
+   ],
+   "contexts": [
+    "a phone clock",
+    "a bus timetable",
+    "a microwave at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3:45."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 45.",
+     "say": "Minutes or a part of 100?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for minutes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the clock: long hand on 9, quarter to 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_DIGITAL_BASE_10",
+     "listen_for": [
+      "45 hundredths"
+     ],
+     "ask": "How many minutes in an hour?",
+     "repair": "60: 45 minutes."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_DIGITAL_ANALOGUE_SWAP",
+     "listen_for": [
+      "quarter past 3"
+     ],
+     "ask": "How many minutes to the next hour?",
+     "repair": "15: quarter to 4."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_24H_AS_AM",
+     "listen_for": [
+      "3:00 a.m."
+     ],
+     "ask": "Is 15:00 before or after noon?",
+     "repair": "After: 3:00 p.m."
+    },
+    {
+     "code": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_DIGITAL_MINUTES_UNDER_10",
+     "listen_for": [
+      "3:70"
+     ],
+     "ask": "Is 3:70 a real time?",
+     "repair": "No: 3:07."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 20 minutes to 6 in the evening as on a digital clock.",
+     "answer": "5:40",
+     "shows": "digital"
+    },
+    {
+     "question": "A digital clock shows 9:05. How many minutes past 9?",
+     "answer": "5",
+     "shows": "two-digit minutes"
+    }
+   ]
+  }
+ ]
+}

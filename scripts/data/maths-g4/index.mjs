@@ -1,0 +1,21 @@
+// Every Grade 4 Maths sub-strand (moved here and taken to the depth standard on 18 Nov 2026).
+import * as whole from './whole.mjs';
+import * as addition from './addition.mjs';
+import * as subtraction from './subtraction.mjs';
+import * as multiplication from './multiplication.mjs';
+import * as division from './division.mjs';
+import * as fractions from './fractions.mjs';
+import * as decimals from './decimals.mjs';
+import * as letters from './letters.mjs';
+import * as length from './length.mjs';
+import * as area from './area.mjs';
+import * as volume from './volume.mjs';
+import * as capacity from './capacity.mjs';
+import * as mass from './mass.mjs';
+import * as time from './time.mjs';
+import * as money from './money.mjs';
+import * as position from './position.mjs';
+import * as angles from './angles.mjs';
+import * as plane from './plane.mjs';
+import * as data from './data.mjs';
+export const SUBS = [whole, addition, subtraction, multiplication, division, fractions, decimals, letters, length, area, volume, capacity, mass, time, money, position, angles, plane, data];

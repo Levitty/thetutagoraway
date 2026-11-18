@@ -1,0 +1,379 @@
+{
+ "sub_strand": "MATH.G4.DATA_H.DATA",
+ "title": "Data",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words (verified); f attitudinal. Data are collected at school, at most 10 items, and recorded in a table; no graphs are asked in Grade 4. Collecting data (b) is hands-on and stays with the teacher; the skills here read and use a table. HOREB's earlier skill title said 'Bar Graphs & Tables'; graphs are not in the design for this grade.",
+ "skills": [
+  {
+   "skill": "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+   "key_step": "The child chooses tally marks, counters and a table to collect and record data, drawing tallies in gates of five with the fifth stroke across.",
+   "floor": {
+    "prerequisite": "Counts objects one by one (Grade 3).",
+    "question": "Count the learners in your row.",
+    "answer": "a number"
+   },
+   "representations": [
+    "tally marks in gates of five",
+    "counters in a tin",
+    "a blank table"
+   ],
+   "steps": [
+    "Decide what to count.",
+    "Make a tally mark for each one.",
+    "Cross every fifth mark over the four before it.",
+    "Write the totals in a table."
+   ],
+   "contexts": [
+    "counting cars at the school gate",
+    "favourite fruits in class",
+    "birds seen in the school garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four strokes."
+    },
+    {
+     "beat": "count",
+     "do": "Count them with the child: one, two, three, four."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: where does the fifth stroke go?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the fifth stroke across the four: one gate is 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_TALLY_ONES",
+     "listen_for": [
+      "IIIIIII"
+     ],
+     "ask": "How can we see 5 quickly?",
+     "repair": "Make a gate: four and one across."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_WRONG_TOOL",
+     "listen_for": [
+      "a ruler"
+     ],
+     "ask": "What do we use to record counts?",
+     "repair": "Tally marks and a table."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_GATE_OF_SIX",
+     "listen_for": [
+      "five and a line"
+     ],
+     "ask": "How many strokes are in a gate?",
+     "repair": "Five: the fifth goes across."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_NO_RECORD",
+     "listen_for": [
+      "I will remember"
+     ],
+     "ask": "What if you lose count at 23?",
+     "repair": "Tally marks keep the count."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_LIST_AS_TABLE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is each fruit written once with its count?",
+     "repair": "No: make a table."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Show 8 with tally marks.",
+     "answer": "one gate of five and III",
+     "shows": "gates"
+    },
+    {
+     "question": "What can you use to record how many learners like each fruit?",
+     "answer": "tally marks and a table",
+     "shows": "materials"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.DATA_H.DATA.COLLECT_DATA",
+   "key_step": "The child asks or counts every member of the group once, records as they go, and keeps to at most 10 items.",
+   "floor": {
+    "prerequisite": "Counts each object once.",
+    "question": "Count the chairs in a row without missing any.",
+    "answer": "a number"
+   },
+   "representations": [
+    "a class list with ticks",
+    "tally marks",
+    "a question card"
+   ],
+   "steps": [
+    "Choose a question with at most 10 answers.",
+    "Ask or count each member once.",
+    "Tick or tally as you go.",
+    "Check nobody was missed or counted twice."
+   ],
+   "contexts": [
+    "favourite fruits in class",
+    "ways learners come to school",
+    "colours of school bags"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a class list with tick boxes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty box.",
+     "say": "Has this learner answered?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child ticks names as each one answers."
+    },
+    {
+     "beat": "reveal",
+     "do": "Check: every box ticked once."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_COUNTS_TWICE",
+     "listen_for": [
+      "always right"
+     ],
+     "ask": "Could someone walk past twice?",
+     "repair": "Yes: tick names to stop that."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_TOO_MANY_ITEMS",
+     "listen_for": [
+      "record all 15"
+     ],
+     "ask": "How many items can our table hold?",
+     "repair": "At most 10."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_ONLY_FRIENDS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Did everyone in the class answer?",
+     "repair": "No: ask them all."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_SOME_MISSED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Did you count the back rows?",
+     "repair": "No: use the class list."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How can you make sure nobody is counted twice?",
+     "answer": "tick each name on the class list",
+     "shows": "once each"
+    },
+    {
+     "question": "Why ask every learner, not only your friends?",
+     "answer": "so the data is for the whole class",
+     "shows": "whole group"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
+   "key_step": "The child draws a table with headings, puts each item once, records tallies and writes the totals as numbers.",
+   "floor": {
+    "prerequisite": "Tally marks in gates of five.",
+    "question": "How many is one gate and II?",
+    "answer": "7"
+   },
+   "representations": [
+    "a table with Item, Tally and Total columns",
+    "tally marks",
+    "a chalkboard table"
+   ],
+   "steps": [
+    "Write the headings.",
+    "List each item once.",
+    "Record the tallies.",
+    "Count each tally and write the total."
+   ],
+   "contexts": [
+    "fruits learners like",
+    "colours of cars passing",
+    "pets at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: Fruit, Tally, Total."
+    },
+    {
+     "beat": "write",
+     "do": "Write mango with two gates and III."
+    },
+    {
+     "beat": "count",
+     "do": "Count with the child: 5, 10, 11, 12, 13."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 13 in the total column."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_TALLY_COUNTS_BARS",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "How many marks are in a gate?",
+     "repair": "5: 7."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_ITEM_LEFT_OUT",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "How many kinds were in the survey?",
+     "repair": "4: one is missing."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_HEADINGS_MISSING",
+     "listen_for": [
+      "only numbers"
+     ],
+     "ask": "What do the numbers count?",
+     "repair": "We need headings."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_GATES_AS_NUMBER",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many marks in each gate?",
+     "repair": "5: 13."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A tally shows three gates and I. What is the total?",
+     "answer": "16",
+     "shows": "counting tallies"
+    },
+    {
+     "question": "What headings does a table of favourite fruits need?",
+     "answer": "Fruit, Tally and Total (or Number)",
+     "shows": "headings"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE",
+   "key_step": "The child reads the number beside each item, compares numbers for most and least, subtracts for how many more and adds every row for a total.",
+   "floor": {
+    "prerequisite": "Subtracts.",
+    "question": "12 - 8",
+    "answer": "4"
+   },
+   "representations": [
+    "a table of counts",
+    "a number line",
+    "counters for each row"
+   ],
+   "steps": [
+    "Read the question.",
+    "Find the row or rows it asks about.",
+    "Most or least: compare the numbers.",
+    "How many more: subtract; in all: add every row."
+   ],
+   "contexts": [
+    "fruits sold at the school canteen",
+    "learners' favourite games",
+    "books borrowed from the library"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: mangoes 8, oranges 12, bananas 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the numbers.",
+     "say": "Which is the biggest number?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write oranges are the most."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_MOST_AS_LAST_ROW",
+     "listen_for": [
+      "bananas"
+     ],
+     "ask": "Is the last row the biggest number?",
+     "repair": "No: oranges, 12."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_ADDS_FOR_DIFFERENCE",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "Is \"how many more\" a total?",
+     "repair": "No: 12 - 8 = 4."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_NAME_NOT_NUMBER",
+     "listen_for": [
+      "football"
+     ],
+     "ask": "Did I ask which game or how many?",
+     "repair": "How many: 14."
+    },
+    {
+     "code": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_TOTAL_MISSES_ROW",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "Did you add the bananas?",
+     "repair": "No: 25."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mangoes 9, oranges 6, bananas 11. How many more bananas than oranges?",
+     "answer": "5",
+     "shows": "difference"
+    },
+    {
+     "question": "Same table: how many fruits in all?",
+     "answer": "26",
+     "shows": "total"
+    }
+   ]
+  }
+ ]
+}

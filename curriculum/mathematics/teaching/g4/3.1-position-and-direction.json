@@ -1,0 +1,189 @@
+{
+ "sub_strand": "MATH.G4.GEOMET.POSITION_AND_DIRECTION",
+ "title": "Position and Direction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words (verified); e attitudinal. Outcomes b and d say 'demonstrate' a turn: they are done with the body in the classroom and are listed on skills a and c as the hands-on side. The turns are quarter, half and full (HOREB's earlier list said 'three-quarter', which is not in the design for this grade).",
+ "skills": [
+  {
+   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
+   "key_step": "The child says clockwise is the way clock hands move (top to the right) and anticlockwise is the opposite.",
+   "floor": {
+    "prerequisite": "Turns to the right and to the left from a point (Grade 3).",
+    "question": "Turn to your right. Which hand points forward now?",
+    "answer": "my left"
+   },
+   "representations": [
+    "a clock face",
+    "the body turning in class",
+    "a wheel or bottle top"
+   ],
+   "steps": [
+    "Watch a clock hand: it goes over the top to the right.",
+    "That way is clockwise.",
+    "The opposite way is anticlockwise.",
+    "Look from above: the view from below is reversed."
+   ],
+   "contexts": [
+    "opening a water tap",
+    "a wheel of a bicycle",
+    "a sufuria lid"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock with an arrow going from 12 to 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "Which way is this turn?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for clockwise."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the opposite arrow and write anticlockwise."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_CLOCKWISE_AS_LEFT",
+     "listen_for": [
+      "anticlockwise"
+     ],
+     "ask": "Which way does the top of a clock hand move?",
+     "repair": "To the right: clockwise."
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_VIEWED_FROM_BEHIND",
+     "listen_for": [
+      "the same"
+     ],
+     "ask": "If you look from below, does the turn look the same?",
+     "repair": "No: it is reversed."
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_ANTI_MEANING",
+     "listen_for": [
+      "quarter turn"
+     ],
+     "ask": "What does anti mean?",
+     "repair": "Against: the opposite of clockwise."
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_OPENING_LID_CLOCKWISE",
+     "listen_for": [
+      "clockwise"
+     ],
+     "ask": "Try it beside the clock. Which way did the lid go?",
+     "repair": "Anticlockwise."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The hands of a clock turn which way?",
+     "answer": "clockwise",
+     "shows": "naming"
+    },
+    {
+     "question": "Which way is the opposite of clockwise?",
+     "answer": "anticlockwise",
+     "shows": "opposite"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
+   "key_step": "The child knows a quarter turn is one of four equal turns of a full turn, a half turn faces the opposite way, and a full turn comes back to the start.",
+   "floor": {
+    "prerequisite": "Clockwise and anticlockwise.",
+    "question": "Which way do clock hands turn?",
+    "answer": "clockwise"
+   },
+   "representations": [
+    "the body turning to face walls of the classroom",
+    "a clock: quarter past, half past",
+    "a compass rose"
+   ],
+   "steps": [
+    "A full turn is all the way round.",
+    "A half turn faces the opposite way.",
+    "A quarter turn is one of four equal turns.",
+    "Say the direction: clockwise or anticlockwise."
+   ],
+   "contexts": [
+    "facing the chalkboard in class",
+    "a matatu turning at a roundabout",
+    "a dance at a school festival"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a compass rose: N, E, S, W."
+    },
+    {
+     "beat": "point",
+     "do": "Point at N.",
+     "say": "Face north and make a quarter turn clockwise. Where do you face?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for east."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the quarter arc from N to E."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_QUARTER_AS_HALF",
+     "listen_for": [
+      "half"
+     ],
+     "ask": "How many quarter turns make a full turn?",
+     "repair": "Four: a quarter is one of them."
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_FACING_WRONG",
+     "listen_for": [
+      "west"
+     ],
+     "ask": "Which way does a clock hand go from 12?",
+     "repair": "Towards 3: east."
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_FULL_AS_NO_TURN",
+     "listen_for": [
+      "not a turn"
+     ],
+     "ask": "Did you move?",
+     "repair": "Yes, all the way round: facing east again."
+    },
+    {
+     "code": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_HALF_AS_RIGHT",
+     "listen_for": [
+      "east"
+     ],
+     "ask": "Is a half turn one quarter or two?",
+     "repair": "Two: south."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You face east and make a half turn. Which way do you face?",
+     "answer": "west",
+     "shows": "half turn"
+    },
+    {
+     "question": "You face south and make a quarter turn anticlockwise. Which way do you face?",
+     "answer": "east",
+     "shows": "quarter turn"
+    }
+   ]
+  }
+ ]
+}

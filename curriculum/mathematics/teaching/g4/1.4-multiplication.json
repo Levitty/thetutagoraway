@@ -1,0 +1,479 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.MULTIPLICATION",
+ "title": "Multiplication",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words (verified). The range is small: a multiplies up to a two-digit number by a multiple of 10 (for example 24 x 30), b multiplies two 2-digit numbers, c estimates with products not above 1,000 and d makes patterns with products not above 100. Outcome b says 'with and without regrouping', so it is two skills. HOREB's outcome list had folded a and b together.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
+   "key_step": "The child multiplies by the digit and then by 10: the digits move one place left and the ones place takes a zero.",
+   "floor": {
+    "prerequisite": "Multiplies a single digit by 10 (Grade 3).",
+    "question": "7 x 10",
+    "answer": "70"
+   },
+   "representations": [
+    "place value chart: digits shift left",
+    "bundles of ten",
+    "multiplication tables"
+   ],
+   "steps": [
+    "Split the multiple of 10: 30 = 3 x 10.",
+    "Multiply by the digit.",
+    "Multiply by 10: one zero at the end.",
+    "Check the size of the answer."
+   ],
+   "contexts": [
+    "crates of 30 eggs",
+    "packets of 20 exercise books",
+    "seats in rows of 40"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 24 x 30."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 30.",
+     "say": "What is 30 as a digit times 10?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3 x 10."
+    },
+    {
+     "beat": "write",
+     "do": "Write 24 x 3 = 72."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 72 x 10 = 720."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ZERO_FORGOTTEN",
+     "listen_for": [
+      "72"
+     ],
+     "ask": "Did we multiply by 3 or by 30?",
+     "repair": "By 30: 720."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ZERO_TWICE",
+     "listen_for": [
+      "6,000"
+     ],
+     "ask": "How many zeros are in 20 and 30 together?",
+     "repair": "Two: 600."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ADDS",
+     "listen_for": [
+      "67"
+     ],
+     "ask": "Is that multiplying?",
+     "repair": "No: 7 x 60 = 420."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ZERO_IN_MIDDLE",
+     "listen_for": [
+      "203"
+     ],
+     "ask": "Where does the zero go when the digits move left?",
+     "repair": "In the ones place: 230."
+    }
+   ],
+   "checks": [
+    {
+     "question": "15 x 40",
+     "answer": "600",
+     "shows": "two steps"
+    },
+    {
+     "question": "8 x 70",
+     "answer": "560",
+     "shows": "digit then ten"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
+   "key_step": "The child splits the second number into tens and ones, multiplies by each, and adds the two parts.",
+   "floor": {
+    "prerequisite": "Multiplies by a multiple of 10.",
+    "question": "21 x 30",
+    "answer": "630"
+   },
+   "representations": [
+    "an area model in four parts",
+    "long multiplication with two rows",
+    "arrays"
+   ],
+   "steps": [
+    "Split: 32 = 30 + 2.",
+    "Multiply by the ones.",
+    "Multiply by the tens (zero at the end).",
+    "Add the two rows."
+   ],
+   "contexts": [
+    "chairs in a hall",
+    "bags of maize in a lorry",
+    "mangoes in crates"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle split 20 and 1 across, 30 and 2 down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 20 by 30 box.",
+     "say": "What goes in this box?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 600."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the other boxes: 30, 40, 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add: 600 + 30 + 40 + 2 = 672."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_ONES_ONLY",
+     "listen_for": [
+      "602"
+     ],
+     "ask": "Did we fill every box?",
+     "repair": "No: 30 and 40 too."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_SECOND_ROW_ZERO",
+     "listen_for": [
+      "60"
+     ],
+     "ask": "Is the second row tens or ones?",
+     "repair": "Tens: write a zero first."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_ADDS_PARTS",
+     "listen_for": [
+      "194"
+     ],
+     "ask": "Add the parts again carefully.",
+     "repair": "294."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_BY_ONES_DIGIT_ONLY",
+     "listen_for": [
+      "36"
+     ],
+     "ask": "Did we multiply by the 10 in 13?",
+     "repair": "No: add 120, 156."
+    }
+   ],
+   "checks": [
+    {
+     "question": "23 x 13",
+     "answer": "299",
+     "shows": "two rows"
+    },
+    {
+     "question": "42 x 21",
+     "answer": "882",
+     "shows": "area model"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
+   "key_step": "The child carries the tens of each digit's product into the next column, then adds the two rows.",
+   "floor": {
+    "prerequisite": "Multiplies 2-digit by 2-digit without regrouping.",
+    "question": "23 x 13",
+    "answer": "299"
+   },
+   "representations": [
+    "long multiplication with carries",
+    "an area model",
+    "bundles of ten"
+   ],
+   "steps": [
+    "Multiply by the ones digit, carrying tens.",
+    "Write a zero and multiply by the tens digit, carrying.",
+    "Add the two rows.",
+    "Check with an estimate."
+   ],
+   "contexts": [
+    "learners in classes of 36",
+    "packets of 24 biscuits",
+    "cows giving 15 litres each"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 36 x 24."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 6 x 4.",
+     "say": "What is 6 x 4?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 24."
+    },
+    {
+     "beat": "write",
+     "do": "Write 4, carry 2."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child does 3 x 4 + 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "Finish both rows and add: 144 + 720 = 864."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_CARRY_FORGOTTEN",
+     "listen_for": [
+      "744"
+     ],
+     "ask": "Where did the carried 2 go?",
+     "repair": "Add it: 864."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_CARRY_ADDED_BEFORE",
+     "listen_for": [
+      "124"
+     ],
+     "ask": "Do we add the carry before or after multiplying?",
+     "repair": "After: 2 x 3 = 6, + 2 = 8, so 84."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_PARTIAL_PRODUCTS_SWAPPED",
+     "listen_for": [
+      "225"
+     ],
+     "ask": "Did we add the two rows?",
+     "repair": "Yes: 135 + 900 = 1,035."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_PRODUCTS_WRITTEN_SIDE_BY_SIDE",
+     "listen_for": [
+      "1224"
+     ],
+     "ask": "Can 24 stay in the ones place?",
+     "repair": "No: 4 ones, carry 2 tens."
+    }
+   ],
+   "checks": [
+    {
+     "question": "47 x 23",
+     "answer": "1,081",
+     "shows": "carries in both rows"
+    },
+    {
+     "question": "58 x 6",
+     "answer": "348",
+     "shows": "one row with a carry"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
+   "key_step": "The child rounds each number to the nearest ten, then multiplies the rounded numbers.",
+   "floor": {
+    "prerequisite": "Multiplies multiples of 10.",
+    "question": "40 x 20",
+    "answer": "800"
+   },
+   "representations": [
+    "a number line in tens",
+    "rounded prices",
+    "an area picture"
+   ],
+   "steps": [
+    "Round the first number.",
+    "Round the second number.",
+    "Multiply the digits.",
+    "Add the zeros from both."
+   ],
+   "contexts": [
+    "boxes of mangoes on a lorry",
+    "tickets for a bus trip",
+    "chairs in rows"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 38 x 21."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 38.",
+     "say": "What is it to the nearest ten?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 40."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rounds 21."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 40 x 20 = 800."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_ADDS_ZEROS",
+     "listen_for": [
+      "8,000"
+     ],
+     "ask": "How many zeros in 40 and 20 together?",
+     "repair": "Two: 800."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_EXACT_REQUIRED",
+     "listen_for": [
+      "589"
+     ],
+     "ask": "Did you round first?",
+     "repair": "No: 20 x 30 = 600."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_ROUND_ONE",
+     "listen_for": [
+      "360"
+     ],
+     "ask": "Did you round both?",
+     "repair": "No: 30 x 10 = 300."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_ADDED",
+     "listen_for": [
+      "60"
+     ],
+     "ask": "Is it a product?",
+     "repair": "Yes: multiply, 800."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Estimate 47 x 32.",
+     "answer": "1,500",
+     "shows": "both rounded"
+    },
+    {
+     "question": "Estimate 19 x 26.",
+     "answer": "600",
+     "shows": "rounding up"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+   "key_step": "The child finds the number each term is multiplied by and uses it to continue or fill a gap, keeping products to 100.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "12 x 2",
+    "answer": "24"
+   },
+   "representations": [
+    "a table of weeks and seedlings",
+    "arrows marked x 2",
+    "times table rows"
+   ],
+   "steps": [
+    "Divide a term by the one before to find the rule.",
+    "Check it works for every pair.",
+    "Multiply to continue.",
+    "For a gap, use the term before it."
+   ],
+   "contexts": [
+    "seedlings that double each week",
+    "chickens on a farm",
+    "money in a savings tin"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3, 6, 12, 24, ?"
+    },
+    {
+     "beat": "point",
+     "do": "Point from 6 to 12.",
+     "say": "What is 6 multiplied by?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 24 x 2 = 48."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_ADD_STEP",
+     "listen_for": [
+      "27"
+     ],
+     "ask": "Is 3 added, or is it doubled?",
+     "repair": "Doubled: 48."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_SKIP_TABLE",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "What is the jump each time?",
+     "repair": "8: 32."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_RULE_AS_TERM",
+     "listen_for": [
+      "80"
+     ],
+     "ask": "Did I ask for the next term or the rule?",
+     "repair": "The rule: multiply by 2."
+    },
+    {
+     "code": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_MISSING_AS_MIDDLE",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "What is 16 x 2?",
+     "repair": "32: so the rule is x 2 and the gap is 8."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Next: 2, 6, 18, ?",
+     "answer": "54",
+     "shows": "x 3"
+    },
+    {
+     "question": "Missing: 5, 10, ?, 40",
+     "answer": "20",
+     "shows": "gap"
+    }
+   ]
+  }
+ ]
+}

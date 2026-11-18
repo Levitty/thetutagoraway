@@ -1,0 +1,467 @@
+{
+ "sub_strand": "MATH.G4.GEOMET.PLANE_FIGURES",
+ "title": "Plane Figures",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words (a to d verified, e read; f attitudinal). Outcomes b (drawing) and d (patterns) are hands-on and are listed as such: they stay with paper and the teacher. The shapes are rectangles, squares, triangles, circles and ovals; lines of symmetry are found by folding.",
+ "skills": [
+  {
+   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+   "key_step": "The child names rectangles, squares, triangles, circles and ovals by their sides, corners and curves, whatever way they are turned.",
+   "floor": {
+    "prerequisite": "Shapes in a combined shape (Grade 3).",
+    "question": "A shape has three straight sides. What is it?",
+    "answer": "a triangle"
+   },
+   "representations": [
+    "cut-out shapes",
+    "objects in class",
+    "shapes turned on the board"
+   ],
+   "steps": [
+    "Count the straight sides and corners.",
+    "Curved with no corners: circle or oval.",
+    "Four sides: square if all equal, rectangle if opposite sides equal.",
+    "Turning a shape does not change its name."
+   ],
+   "contexts": [
+    "a window",
+    "a clock face",
+    "an egg"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square standing on its corner."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sides.",
+     "say": "Are the four sides equal and the corners square?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: still a square."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_ORIENTATION",
+     "listen_for": [
+      "diamond"
+     ],
+     "ask": "Did turning it change its sides?",
+     "repair": "No: still a square."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_OVAL_CIRCLE",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "Is an egg the same width every way?",
+     "repair": "No: an oval."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_TRIANGLE_NEEDS_EQUAL_SIDES",
+     "listen_for": [
+      "not equal"
+     ],
+     "ask": "Does it have three straight sides?",
+     "repair": "Yes: a triangle."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_SOLID_FOR_FACE",
+     "listen_for": [
+      "cylinder"
+     ],
+     "ask": "What shape do you trace from the top?",
+     "repair": "A circle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What shape is a one-shilling coin?",
+     "answer": "circle",
+     "shows": "curves"
+    },
+    {
+     "question": "A shape has four equal sides and four square corners, standing on a corner. What is it?",
+     "answer": "a square",
+     "shows": "turned shape"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES",
+   "key_step": "The child draws each shape with straight sides that meet (a ruler for rectangles, squares and triangles) and smooth closed curves for circles and ovals.",
+   "floor": {
+    "prerequisite": "Names the shapes.",
+    "question": "How many sides has a rectangle?",
+    "answer": "4"
+   },
+   "representations": [
+    "a ruler and pencil",
+    "tracing round objects",
+    "squared paper"
+   ],
+   "steps": [
+    "Choose the shape.",
+    "Use a ruler for straight sides.",
+    "Make the sides meet at the corners.",
+    "Curves: smooth, closed, no corners."
+   ],
+   "contexts": [
+    "a drawing lesson",
+    "designing a flag",
+    "a poster for sports day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square with a ruler, one side at a time."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a corner.",
+     "say": "Do the two sides meet here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a rectangle and an oval."
+    },
+    {
+     "beat": "reveal",
+     "do": "Check each: closed, straight sides or smooth curve."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES.M_DRAW_UNEQUAL_SQUARE",
+     "listen_for": [
+      "a square"
+     ],
+     "ask": "Are all four sides the same length?",
+     "repair": "No: it is a rectangle."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES.M_DRAW_OPEN_SHAPE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do all the lines meet?",
+     "repair": "No: join them to close it."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES.M_DRAW_OVAL_POINTED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does an egg have pointed ends?",
+     "repair": "No: make the curve smooth."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES.M_DRAW_CORNERS_ROUNDED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does a rectangle have square corners?",
+     "repair": "Yes: use a ruler."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Draw a square with sides of 4 cm. What must be true of the sides?",
+     "answer": "all four are 4 cm",
+     "shows": "equal sides"
+    },
+    {
+     "question": "What must happen at every corner of a triangle you draw?",
+     "answer": "the lines must meet",
+     "shows": "closed shape"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY",
+   "key_step": "The child folds a shape so the two halves fit exactly; only such folds are lines of symmetry.",
+   "floor": {
+    "prerequisite": "Names the shapes.",
+    "question": "What shape has four equal sides?",
+    "answer": "a square"
+   },
+   "representations": [
+    "paper shapes folded",
+    "a mirror on the line",
+    "letters cut from card"
+   ],
+   "steps": [
+    "Fold the shape.",
+    "Do the halves fit exactly?",
+    "Yes: the fold is a line of symmetry.",
+    "Try every way: across, down and corner to corner."
+   ],
+   "contexts": [
+    "a kite",
+    "a butterfly",
+    "the Kenyan flag"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle and its diagonal."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the diagonal.",
+     "say": "If we fold along it, do the halves fit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the two lines that do fit: down the middle and across."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_DIAGONAL_RECTANGLE",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Fold a rectangle corner to corner. Do the halves fit?",
+     "repair": "No: 2 lines."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_ANY_LINE",
+     "listen_for": [
+      "two parts"
+     ],
+     "ask": "Do the parts fit on top of each other?",
+     "repair": "Only then is it a line of symmetry."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_COUNT_CIRCLE",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "Can you fold a circle another way and still fit?",
+     "repair": "Yes, every way through the middle: many."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_SQUARE_TWO_ONLY",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Fold the square corner to corner. Do the halves fit?",
+     "repair": "Yes: 4 lines."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many lines of symmetry has a rectangle?",
+     "answer": "2",
+     "shows": "folding"
+    },
+    {
+     "question": "How many lines of symmetry has a square?",
+     "answer": "4",
+     "shows": "diagonals too"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS",
+   "key_step": "The child finds the part that repeats (shape, size, colour and the way it points) and repeats the whole part.",
+   "floor": {
+    "prerequisite": "Names the shapes.",
+    "question": "Name a shape with three sides.",
+    "answer": "a triangle"
+   },
+   "representations": [
+    "cut-out shapes laid in a row",
+    "beads on a string",
+    "patterns on a kikoi or basket"
+   ],
+   "steps": [
+    "Find where the pattern starts again.",
+    "Mark the part that repeats.",
+    "Check shape, size, colour and direction.",
+    "Repeat the whole part."
+   ],
+   "contexts": [
+    "a woven basket",
+    "beadwork",
+    "a tiled floor"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw: red square, blue triangle, red square, blue triangle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first two shapes.",
+     "say": "Which part repeats?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for red square, blue triangle."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws the next two shapes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Ring each repeat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS.M_SPAT_REPEAT_BROKEN",
+     "listen_for": [
+      "triangle"
+     ],
+     "ask": "What came after the last triangle before?",
+     "repair": "A square."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS.M_SPAT_COLOUR_ONLY",
+     "listen_for": [
+      "red triangle"
+     ],
+     "ask": "Look at the shape and the colour together.",
+     "repair": "Blue triangle."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS.M_SPAT_SIZE_IGNORED",
+     "listen_for": [
+      "big square"
+     ],
+     "ask": "What size came after a big square?",
+     "repair": "Small."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS.M_SPAT_TURN_IGNORED",
+     "listen_for": [
+      "pointing up"
+     ],
+     "ask": "Which way did the last triangle point?",
+     "repair": "Up, so the next points down."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Square, square, triangle, square, square, triangle, ?",
+     "answer": "square",
+     "shows": "repeating part"
+    },
+    {
+     "question": "Big circle, small circle, big circle, ?",
+     "answer": "small circle",
+     "shows": "size"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES",
+   "key_step": "The child describes each figure by its sides, corners and curves: a rectangle has opposite sides equal and four square corners; a square is a rectangle with all sides equal.",
+   "floor": {
+    "prerequisite": "Names the shapes.",
+    "question": "How many corners has a rectangle?",
+    "answer": "4"
+   },
+   "representations": [
+    "cut-out shapes",
+    "a table of properties",
+    "a geoboard"
+   ],
+   "steps": [
+    "Count the sides.",
+    "Count the corners.",
+    "Check which sides are equal.",
+    "Curves: circle (same distance from the middle) or oval."
+   ],
+   "contexts": [
+    "a door",
+    "a chessboard square",
+    "a road sign"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle with its sides marked 6 cm and 3 cm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the opposite sides.",
+     "say": "Which sides are equal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the opposite ones."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the equal sides and the four square corners."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_RECT_ALL_SIDES_EQUAL",
+     "listen_for": [
+      "all four"
+     ],
+     "ask": "Is the long side the same as the short side?",
+     "repair": "No: opposite sides are equal."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_SQUARE_NOT_RECT",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Does a square have four square corners and opposite sides equal?",
+     "repair": "Yes: it is a rectangle too."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_COUNT_SIDES_CORNERS",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Count the corners as you touch them.",
+     "repair": "3."
+    },
+    {
+     "code": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_OVAL_LIKE_CIRCLE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Measure to the end and to the side of an oval.",
+     "repair": "Different: only a circle is the same."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many sides and corners has a triangle?",
+     "answer": "3 sides and 3 corners",
+     "shows": "counting"
+    },
+    {
+     "question": "Which sides of a rectangle are equal?",
+     "answer": "the opposite sides",
+     "shows": "equal sides"
+    }
+   ]
+  }
+ ]
+}

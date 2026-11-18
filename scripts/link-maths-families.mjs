@@ -4,6 +4,11 @@
 //   Grade 7 (17 Nov 2026): g7_num_alg.js, g7_measure.js, g7_geo_data.js, gaps.js, labelFixes.js
 //   Grade 8 (18 Nov 2026): g8_num_alg.js, g8_measure_geo.js, g8_cov.js, gaps.js, labelFixes.js
 //   Grade 9 (18 Nov 2026): g9_num_alg.js, g9_measure.js, g9_geo_data.js, gaps.js, labelFixes.js
+//   Grade 4 (18 Nov 2026): g4.js, labelFixes.js. These 61 older families were filed at family level on 12 Nov 2026
+//     (scripts/link-maths-g4-families.mjs, now the old command for this one). A family already filed with `misMapped: false` is
+//     retagged when its link now names codes, options or a working's mis: the family-level tie is removed and each wrong answer
+//     gets its own code. A link with only reveals (6th) keeps the family-level tie. (The 127 g4c_*.js families are written with
+//     their codes and need no link.)
 // One linker for both grades (18 Nov 2026): scripts/link-maths-g7-families.mjs is kept as the old command.
 // A link is  familyId: [skill suffix, outcome letter, wrong-option codes, mis for a working, options, reveals]
 // (scripts/data/maths-g<grade>/<sub>.mjs, `links`).
@@ -18,8 +23,8 @@
 // Idempotent: a family that already has a cskill is skipped.
 import { readFileSync, writeFileSync } from 'node:fs';
 const GRADE = Number(process.argv[2]);
-const FILES = { 7: ['g7_num_alg.js', 'g7_measure.js', 'g7_geo_data.js', 'gaps.js', 'labelFixes.js'], 8: ['g8_num_alg.js', 'g8_measure_geo.js', 'g8_cov.js', 'gaps.js', 'labelFixes.js'], 9: ['g9_num_alg.js', 'g9_measure.js', 'g9_geo_data.js', 'gaps.js', 'labelFixes.js'] }[GRADE];
-if (!FILES) { console.error('usage: node scripts/link-maths-families.mjs 7|8|9 [sub-strand key]'); process.exit(1); }
+const FILES = { 4: ['g4.js', 'labelFixes.js'], 7: ['g7_num_alg.js', 'g7_measure.js', 'g7_geo_data.js', 'gaps.js', 'labelFixes.js'], 8: ['g8_num_alg.js', 'g8_measure_geo.js', 'g8_cov.js', 'gaps.js', 'labelFixes.js'], 9: ['g9_num_alg.js', 'g9_measure.js', 'g9_geo_data.js', 'gaps.js', 'labelFixes.js'] }[GRADE];
+if (!FILES) { console.error('usage: node scripts/link-maths-families.mjs 4|7|8|9 [sub-strand key]'); process.exit(1); }
 const { SUBS } = await import(`./data/maths-g${GRADE}/index.mjs`);
 const DIR = new URL('../src/ai-tutor/content/families/', import.meta.url);
 const only = process.argv[3];
@@ -38,10 +43,22 @@ for (const d of SUBS) {
     const startRe = new RegExp(`(fam|fx|cov)\\(\\{ id: '${id.replace(/\./g, '\\.')}'`); const sm = startRe.exec(s); const start = sm ? sm.index : -1;
     const nextRe = /\n  (fam|fx|cov)\(\{ id:/g; nextRe.lastIndex = start + 10; const nm = nextRe.exec(s); let end = nm ? nm.index : s.length;
     let block = s.slice(start, end);
-    if (/cskill:/.test(block.slice(0, 300))) { skipped++; continue; }
+    if (/cskill:/.test(block.slice(0, 400))) {
+      // already filed: retag a family-level tie when the link now ties the wrong answers one by one
+      if (!/misMapped: false/.test(block.slice(0, 400))) { skipped++; continue; }
+      if (!(codes || opts || mis)) {
+        // still family level: the reveals are brought up to the link's (a family filed with reveals: [] names one now)
+        const want = reveals ? `reveals: ${JSON.stringify(reveals).replace(/"/g, "'").replace(/,/g, ', ')}` : null;
+        const have = /reveals: \[[^\]]*\]/.exec(block.slice(0, 400));
+        if (!want || !have || have[0] === want) { skipped++; continue; }
+        src[file] = s.slice(0, start) + block.replace(have[0], want) + s.slice(end); done++; continue;
+      }
+      block = block.replace(/, misMapped: false, reveals: \[[^\]]*\]/, '');
+    } else {
     const m = new RegExp(`outcome: 'G${GRADE}\\.[A-Z_]+\\.([a-z])'`).exec(block.slice(0, 300));
     if (!m) { problems.push(`${id}: no old outcome`); continue; }
     block = block.replace(m[0], `outcome: 'MATH.G${GRADE}.${d.key}.${letter}', cskill: 'MATH.G${GRADE}.${d.key}.${cs}'` + (reveals ? `, misMapped: false, reveals: ${JSON.stringify(reveals).replace(/"/g, "'").replace(/,/g, ', ')}` : ''));
+    }
     // wrong options
     if (codes) {
       const lists = Array.isArray(codes[0]) ? codes : [codes];

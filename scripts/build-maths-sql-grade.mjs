@@ -3,6 +3,7 @@
 //   Grade 6 (18 Nov 2026)  supabase/migrations/20261120_maths_g6_skills_misconceptions.sql
 //   Grade 8 (18 Nov 2026)  supabase/migrations/20261121_maths_g8_skills_misconceptions.sql
 //   Grade 9 (18 Nov 2026)  supabase/migrations/20261122_maths_g9_skills_misconceptions.sql
+//   Grade 4 (18 Nov 2026)  supabase/migrations/20261123_maths_g4_skills_misconceptions.sql
 // Same shape as 20261118_map_review_misconceptions.sql: one INSERT per row, idempotent, drafts only overwritten while still drafts.
 //   node scripts/build-maths-sql-grade.mjs 7    (or 6)      NOT RUN: the owner runs it in the Supabase SQL Editor.
 // One script for both grades (18 Nov 2026): scripts/build-maths-g7-sql.mjs is kept as the old command.
@@ -17,9 +18,10 @@ const RUN = SCIENCE ? { file: `20261122_${SUBJECT_DIR}_g${GRADE}_skills_misconce
   7: { file: '20261119_maths_g7_skills_misconceptions.sql', when: 'owner, 17 Nov 2026', after: '20261118_map_review_misconceptions.sql', why: `Grade 7 Maths had outcomes only.` },
   6: { file: '20261120_maths_g6_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261118_map_review_misconceptions.sql', why: `Grade 6 Maths skills and misconceptions were in the repository (curriculum/mathematics/g6.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 added prerequisites, misconceptions and a teaching pack.` },
   8: { file: '20261121_maths_g8_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261119_maths_g7_skills_misconceptions.sql and 20261120_maths_g6_skills_misconceptions.sql (Grade 8 prerequisites name Grade 6 and 7 skills; there is no foreign key on them, so the order is for the reviewer only)', why: `Grade 8 Maths had outcomes only; mapped on 18 Nov 2026 to the depth standard of Grades 6 and 7 (two prerequisites and four misconceptions per skill, a teaching pack).` },
+  4: { file: '20261123_maths_g4_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (it created the tables and loaded the first Grade 4 pass of 12 Nov 2026; Grade 4 prerequisites name Grade 3 outcomes, with no foreign key on them)', why: `Grade 4 Maths was loaded by 20261110_curriculum.sql with its first pass (one or two prerequisites and two or three misconceptions per skill); the depth pass of 18 Nov 2026 brought every skill to two or more prerequisites and four misconceptions, with a teaching pack. Rows a teacher has already reviewed are not overwritten.` },
   9: { file: '20261122_maths_g9_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261121_maths_g8_skills_misconceptions.sql (Grade 9 prerequisites name Grade 5 to 8 skills; there is no foreign key on them, so the order is for the reviewer only)', why: `Grade 9 Maths had outcomes only; mapped on 18 Nov 2026 to the depth standard of Grades 6, 7 and 8 (two prerequisites and four misconceptions per skill, a teaching pack).` },
 }[GRADE];
-if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 6|7|8|9, or science 4|5|6, or integrated_science 7|8|9'); process.exit(1); }
+if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 4|6|7|8|9, or science 4|5|6, or integrated_science 7|8|9'); process.exit(1); }
 const cur = JSON.parse(readFileSync(new URL(`../curriculum/${SUBJECT_DIR}/g${GRADE}.json`, import.meta.url), 'utf8'));
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 const arr = (a) => `ARRAY[${a.map(q).join(', ')}]::text[]`;

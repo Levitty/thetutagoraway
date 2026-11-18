@@ -34,13 +34,13 @@ export const FAMILIES = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam({ id: 'g4.num.figures-notice', skill: 'G4_NUMBER_WORDS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.b', misMapped: false, reveals: ['M_SYM_JOIN_PARTS'], rung: 1, form: 'word',
+  fam({ id: 'g4.num.figures-notice', skill: 'G4_NUMBER_WORDS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.b', rung: 1, form: 'word',
     draw: () => ({ t: randInt(1, 9), tu: randInt(1, 99) }),
     make: ({ t, tu }) => {
       const n = t * 1000 + tu;
       return { question: `A school fee notice says: "${cap(words(n))} shillings." Write the amount in figures. Give your answer as a number.`,
         answer: n,
-        wrong: [[t * 100 + tu, 'You left out a zero. The word "thousand" tells you the 1st digit is in the thousands place. No hundreds are named, so the hundreds place holds a zero.'], [t * 1000 + tu * 10, 'Check the last part of the words. It names tens and ones, not hundreds.'], [Number(`${t}000${tu}`), 'That has too many digits. A number in the thousands has four digits.']],
+        wrong: [[t * 100 + tu, 'You left out a zero. The word "thousand" tells you the 1st digit is in the thousands place. No hundreds are named, so the hundreds place holds a zero.', 'M_SYM_JOIN_PARTS'], [t * 1000 + tu * 10, 'Check the last part of the words. It names tens and ones, not hundreds.', 'M_SYM_PART_SHIFTED'], [Number(`${t}000${tu}`), 'That has too many digits. A number in the thousands has four digits.', 'M_SYM_PARTS_WRITTEN_IN_FULL']],
         hints: ['Find the word "thousand". The digit before it goes in the thousands place.', 'No hundreds are named. What goes in the hundreds place when there are none?'],
         steps: [`The thousands: ${ONES[t]} thousand is ${t}000.`, `The rest: ${w99(tu)} is ${tu}.`, `Put them together: ${commas(n)}.`] };
     },
@@ -56,7 +56,7 @@ export const FAMILIES = [
         steps: [`The thousands part is ${ONES[t]} thousand.`, `There are no hundreds. The tens and ones make ${w99(tu)}.`, `In words: ${words(n)}.`] };
     } }),
 
-  fam({ id: 'g4.place.chart-total', skill: 'G4_PLACE_VALUE', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.a', misMapped: false, reveals: ['M_TV_FACE_VALUE'], rung: 1, form: 'table',
+  fam({ id: 'g4.place.chart-total', skill: 'G4_PLACE_VALUE', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.a', rung: 1, form: 'table',
     draw: () => {
       const ds = []; while (ds.length < 4) { const x = randInt(1, 9); if (!ds.includes(x)) ds.push(x); }
       const col = randInt(0, 2), place = [1000, 100, 10][col], n = ds[0] * 1000 + ds[1] * 100 + ds[2] * 10 + ds[3], dg = ds[col];
@@ -66,12 +66,12 @@ export const FAMILIES = [
       question: `Look at the place value chart. How much is the digit in the ${['Thousands', 'Hundreds', 'Tens'][col]} column worth altogether?`,
       model: { type: 'table', data: { head: ['Thousands', 'Hundreds', 'Tens', 'Ones'], rows: [{ cells: ds.map(String) }] } },
       answer: dg * place,
-      wrong: [[dg, 'That is the digit itself. Its total value depends on the column it sits in.'], [n, 'That is the whole number. The question asks about one digit only.'], [dg * place * 10, 'Check the column name again. Is it worth that much?'], [dg * (place === 10 ? 1 : place / 10), 'You used the column to the right. Look at the heading above the digit.']],
+      wrong: [[dg, 'That is the digit itself. Its total value depends on the column it sits in.', 'M_TV_FACE_VALUE'], [n, 'That is the whole number. The question asks about one digit only.', 'M_TV_WHOLE_NUMBER_GIVEN'], [dg * place * 10, 'Check the column name again. Is it worth that much?', 'M_TV_WRONG_ZEROS'], [dg * (place === 10 ? 1 : place / 10), 'You used the column to the right. Look at the heading above the digit.', 'M_TV_WRONG_ZEROS']],
       hints: ['Look at the digit under the heading you are asked about.', 'Each column has its own size. A digit is worth more in a column further to the left.'],
       steps: [`The digit in that column is ${dg}.`, `${dg} × ${commas(place)} = ${commas(dg * place)}.`] }),
     check: ({ n, place }, a) => Math.floor((n % (place * 10)) / place) * place === a }),
 
-  fam({ id: 'g4.order.third-smallest', skill: 'G4_ORDER_ROUND', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.d', misMapped: false, reveals: ['M_ORDER_DIRECTION'], rung: 2, form: 'table',
+  fam({ id: 'g4.order.third-smallest', skill: 'G4_ORDER_ROUND', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.d', rung: 2, form: 'table',
     draw: () => {
       const names = ['Amani', 'Tumaini', 'Upendo', 'Baraka', 'Jamii', 'Mwangaza'];
       const vals = Array.from({ length: 4 }, () => randInt(21, 98) * 10 + randInt(0, 9));
@@ -84,7 +84,7 @@ export const FAMILIES = [
       question: 'The table shows how many learners are in four schools. Put the schools in order, from the smallest to the largest. How many learners are in the third school in that order?',
       model: { type: 'table', data: { head: ['School', 'Learners'], rows: nm.map((n, i) => ({ label: `${n} Primary`, value: String(vals[i]) })) } },
       answer: s[2],
-      wrong: [[s[3], 'That is the largest number, the fourth in the order. Count from the smallest.'], [vals[2], 'That is the third school in the table. The question asks for the third one after putting them in order.'], [s[1], 'That is the second in the order. Count one more.']],
+      wrong: [[s[3], 'That is the largest number, the fourth in the order. Count from the smallest.', 'M_ORDER_DIRECTION'], [vals[2], 'That is the third school in the table. The question asks for the third one after putting them in order.', 'M_ORDER_TABLE_POSITION'], [s[1], 'That is the second in the order. Count one more.', 'SLIP']],
       hints: ['Write the four numbers from the smallest to the largest.', 'Compare the hundreds first, then the tens.'],
       steps: [`In order: ${s.join(', ')}.`, `The third number is ${s[2]}.`] }),
     check: ({ vals, s }, a) => vals.filter(v => v < a).length === 2 && vals.includes(a) && s.indexOf(a) === 2 }),
@@ -113,7 +113,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.factors.not-a-factor', skill: 'G4_FACTORS_MULTIPLES', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.f', misMapped: false, reveals: [], rung: 2, form: 'word',
+  fam({ id: 'g4.factors.not-a-factor', skill: 'G4_FACTORS_MULTIPLES', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.f', rung: 2, form: 'word',
     draw: () => {
       const n = pick([24, 30, 36, 40, 42, 48]);
       const fs = []; for (let i = 2; i <= 12; i++) if (n % i === 0) fs.push(i);
@@ -122,13 +122,13 @@ export const FAMILIES = [
       return { n, three, x, p: person(), k: randInt(0, 3) };
     },
     make: ({ n, three, x, p, k }) => {
-      const opts = [{ text: String(x), right: true }, ...three.map(f => ({ text: String(f), right: false, why: `${n} ÷ ${f} = ${n / f} with nothing left over, so ${f} is a factor.` }))];
+      const opts = [{ text: String(x), right: true }, ...three.map(f => ({ text: String(f), right: false, why: `${n} ÷ ${f} = ${n / f} with nothing left over, so ${f} is a factor.`, mis: 'M_FACTOR_NOT_TESTED' }))];
       return { question: `${p.name} packs ${n} eggs into trays of the same size. No egg is left over. Which of these numbers is NOT a factor of ${n}?`, options: rot(opts, k),
         hints: ['A factor divides the number exactly. Nothing is left over.', 'Try dividing by each number in turn.'],
         steps: [`Test each number. Divide ${n} by it.`, `${n} ÷ ${x} leaves a remainder, so ${x} is not a factor.`] };
     } }),
 
-  fam({ id: 'g4.multiples.why-multiple', skill: 'G4_FACTORS_MULTIPLES', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.g', misMapped: false, reveals: ['M_MULTIPLE_NOT_CHECKED'], rung: 2, form: 'why',
+  fam({ id: 'g4.multiples.why-multiple', skill: 'G4_FACTORS_MULTIPLES', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.g', rung: 2, form: 'why',
     draw: () => {
       const m = pick([3, 4, 5, 6, 7, 8, 9]), k = randInt(4, 12), n = m * k;
       return n % 2 === 0 && n <= 100 ? { m, k, n, r: randInt(0, 3), p: person() } : null;
@@ -136,46 +136,46 @@ export const FAMILIES = [
     make: ({ m, k, n, r, p }) => {
       const opts = [
         { text: `${m} × ${k} = ${n}, so ${m} goes into ${n}`, right: true },
-        { text: `${n} is an even number, and even numbers are multiples`, right: false, why: `Many even numbers are not multiples of ${m}. For example, ${n + 2} is even but ${m} does not go into it exactly.` },
-        { text: `${n} is bigger than ${m}, and bigger numbers are multiples`, right: false, why: `${n + 1} is also bigger than ${m}, but it is not a multiple of ${m}.` },
-        { text: `${m} + ${n - m} = ${n}, so the two numbers make ${n}`, right: false, why: `Any two numbers can be added to make ${n}. A multiple of ${m} comes from counting in ${m}s or multiplying ${m}.` },
+        { text: `${n} is an even number, and even numbers are multiples`, right: false, why: `Many even numbers are not multiples of ${m}. For example, ${n + 2} is even but ${m} does not go into it exactly.`, mis: 'M_MULTIPLE_ANY_EVEN' },
+        { text: `${n} is bigger than ${m}, and bigger numbers are multiples`, right: false, why: `${n + 1} is also bigger than ${m}, but it is not a multiple of ${m}.`, mis: 'M_MULTIPLE_NOT_CHECKED' },
+        { text: `${m} + ${n - m} = ${n}, so the two numbers make ${n}`, right: false, why: `Any two numbers can be added to make ${n}. A multiple of ${m} comes from counting in ${m}s or multiplying ${m}.`, mis: 'SLIP' },
       ];
       return { question: `${p.name} counts in ${m}s and reaches ${n}. ${p.She} says ${n} is a multiple of ${m}. Why is ${p.she} right?`, options: rot(opts, r),
         hints: [`Count in ${m}s: ${m}, ${m * 2}, ${m * 3} and so on.`, 'A multiple is made by multiplying the number by 1, 2, 3 and so on.'],
         steps: [`Counting in ${m}s reaches ${n}.`, `${m} × ${k} = ${n}, so ${n} is a multiple of ${m}.`] };
     } }),
 
-  fam({ id: 'g4.oddeven.pattern-why', skill: 'G4_ODD_EVEN', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.i', misMapped: false, reveals: ['M_PATTERN_WRONG_PARITY'], rung: 2, form: 'why',
+  fam({ id: 'g4.oddeven.pattern-why', skill: 'G4_ODD_EVEN', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.i', rung: 2, form: 'why',
     draw: () => ({ s: randInt(1, 9), d: pick([3, 5, 7, 9]), r: randInt(0, 3) }),
     make: ({ s, d, r }) => {
       const t = [0, 1, 2, 3, 4].map(i => s + i * d).join(', ');
       const opts = [
         { text: `Each time we add ${d}, an odd number, so odd and even swap`, right: true },
-        { text: 'The numbers get bigger each time, so they must swap between odd and even', right: false, why: 'Numbers can get bigger and stay odd. Think of adding 2 each time to 5: 5, 7, 9.' },
-        { text: 'Adding any number at all changes an odd number to an even number', right: false, why: 'Adding an even number, such as 4, keeps an odd number odd.' },
-        { text: `The first number is ${s % 2 ? 'odd' : 'even'}, so all the numbers are ${s % 2 ? 'odd' : 'even'} too`, right: false, why: 'Look at the pattern again. The numbers are not all the same kind.' },
+        { text: 'The numbers get bigger each time, so they must swap between odd and even', right: false, why: 'Numbers can get bigger and stay odd. Think of adding 2 each time to 5: 5, 7, 9.', mis: 'M_PATTERN_ADD_ONE' },
+        { text: 'Adding any number at all changes an odd number to an even number', right: false, why: 'Adding an even number, such as 4, keeps an odd number odd.', mis: 'M_PATTERN_ADDING_CHANGES_PARITY' },
+        { text: `The first number is ${s % 2 ? 'odd' : 'even'}, so all the numbers are ${s % 2 ? 'odd' : 'even'} too`, right: false, why: 'Look at the pattern again. The numbers are not all the same kind.', mis: 'M_PATTERN_WRONG_PARITY' },
       ];
       return { question: `Look at this pattern: ${t}. The numbers change from odd to even, and from even to odd, again and again. Why?`, options: rot(opts, r),
         hints: [`The pattern adds ${d} each time. Is ${d} odd or even?`, 'Try: odd + odd, and then even + odd.'],
         steps: [`${d} is an odd number, and we add it each time.`, 'Odd + odd = even. Even + odd = odd.', 'So the numbers swap between odd and even.'] };
     } }),
 
-  fam({ id: 'g4.oddeven.house-numbers', skill: 'G4_ODD_EVEN', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.i', misMapped: false, reveals: ['M_PATTERN_HOUSES_ONE_SIDE'], rung: 2, form: 'word',
+  fam({ id: 'g4.oddeven.house-numbers', skill: 'G4_ODD_EVEN', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.i', rung: 2, form: 'word',
     draw: () => { const o = pick([1, 3, 5, 7, 9, 11]), n = randInt(7, 9); return uniq(2 * n, o + 2 * n, o + n - 1, o + 2 * (n - 1)) ? { o, n } : null; },
     make: ({ o, n }) => ({
       question: `The odd house numbers on one side of a road follow a pattern: ${o}, ${o + 2}, ${o + 4}, ${o + 6}. What is the number of the ${['', '', '', '', '', '', '', '7th', '8th', '9th'][n]} house on that side?`,
       answer: o + 2 * (n - 1),
-      wrong: [[2 * n, 'That is an even number. The houses on this side all have odd numbers.'], [o + 2 * n, 'That is one step too far. Count the houses carefully.'], [o + n - 1, 'The pattern goes up by 2 each time, not by 1.']],
+      wrong: [[2 * n, 'That is an even number. The houses on this side all have odd numbers.', 'M_PATTERN_HOUSES_ONE_SIDE'], [o + 2 * n, 'That is one step too far. Count the houses carefully.', 'SLIP'], [o + n - 1, 'The pattern goes up by 2 each time, not by 1.', 'M_PATTERN_ADD_ONE']],
       hints: ['Look at how much the numbers go up each time.', 'The 1st house is the first number. Each house after it adds the same amount.'],
       steps: ['The numbers go up by 2 each time.', `For the ${n}th house we add 2 a total of ${n - 1} times to ${o}.`, `${o} + ${2 * (n - 1)} = ${o + 2 * (n - 1)}.`] }),
     check: ({ o, n }, a) => a % 2 === 1 && (a - o) / 2 === n - 1 }),
 
-  fam({ id: 'g4.roman.minute-hand', skill: 'G4_ROMAN_NUMERALS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.j', misMapped: false, reveals: [], rung: 2, form: 'word',
+  fam({ id: 'g4.roman.minute-hand', skill: 'G4_ROMAN_NUMERALS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.j', rung: 2, form: 'word',
     draw: () => ({ n: pick([2, 3, 4, 7, 8, 9]), p: person() }),
     make: ({ n, p }) => ({
       question: `${p.name}'s watch shows Roman numerals on its face. The minute hand points to ${ROMAN[n]}. How many minutes past the hour is it?`,
       answer: 5 * n,
-      wrong: [[n, `Read the Roman numeral first. Then remember that each number on a clock face is worth 5 minutes.`], [60 - 5 * n, 'That is how many minutes are left to the next hour. Count the minutes past the hour.'], [5 * (n + 1), 'Check the Roman numeral again. Which number does it stand for?']],
+      wrong: [[n, `Read the Roman numeral first. Then remember that each number on a clock face is worth 5 minutes.`, 'M_ROMAN_CLOCK_NUMBER_AS_MINUTES'], [60 - 5 * n, 'That is how many minutes are left to the next hour. Count the minutes past the hour.', 'SLIP'], [5 * (n + 1), 'Check the Roman numeral again. Which number does it stand for?', 'SLIP']],
       hints: [`What number does ${ROMAN[n]} stand for?`, 'Each number on a clock face is 5 minutes.'],
       steps: [`${ROMAN[n]} is ${n}.`, `${n} × 5 = ${5 * n} minutes.`] }),
     check: ({ n }, a) => a % 5 === 0 && ROMAN[a / 5] === ROMAN[n] }),
@@ -183,7 +183,7 @@ export const FAMILIES = [
   // ======================================================================
   // ADDITION: estimate, patterns
   // ======================================================================
-  fam({ id: 'g4.add.estimate-sales', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', misMapped: false, reveals: ['M_EST_ROUND_WRONG'], rung: 2, form: 'word',
+  fam({ id: 'g4.add.estimate-sales', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', rung: 2, form: 'word',
     draw: () => {
       const pk = () => { let v; do { v = randInt(12, 99) * 10 + randInt(1, 9); } while (v % 10 === 5); return v; };
       const a = pk(), b = pk(), est = r10(a) + r10(b), ex = a + b;
@@ -192,12 +192,12 @@ export const FAMILIES = [
     make: ({ a, b, est, what, p }) => ({
       question: `${p.name} sells ${a} ${what} on Saturday and ${b} ${what} on Sunday. Round each number to the nearest ten. Estimate how many ${what} ${p.she} sells in all.`,
       answer: est,
-      wrong: [[a + b, 'That is the exact total. An estimate rounds each number first.'], [f10(a) + f10(b), 'You rounded both numbers down. Look at the ones digit of each one to decide.'], [r10(a) + b, 'Only one number was rounded. Round both numbers.']],
+      wrong: [[a + b, 'That is the exact total. An estimate rounds each number first.', 'M_EST_EXACT_REQUIRED'], [f10(a) + f10(b), 'You rounded both numbers down. Look at the ones digit of each one to decide.', 'M_EST_ROUND_WRONG'], [r10(a) + b, 'Only one number was rounded. Round both numbers.', 'M_EST_ROUND_ONLY_ONE']],
       hints: ['Round each number to the nearest ten first.', 'Then add the two rounded numbers.'],
       steps: [`${a} is about ${r10(a)}. ${b} is about ${r10(b)}.`, `${r10(a)} + ${r10(b)} = ${est}.`] }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a + b)) <= 10 }),
 
-  fam({ id: 'g4.add.estimate-water', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', misMapped: false, reveals: ['M_EST_ROUND_WRONG'], rung: 2, form: 'table',
+  fam({ id: 'g4.add.estimate-water', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', rung: 2, form: 'table',
     draw: () => {
       const v = Array.from({ length: 3 }, () => { let x; do { x = randInt(100, 330) * 10 + randInt(1, 9); } while (x % 10 === 5); return x; });
       const est = sum(v.map(r10));
@@ -207,7 +207,7 @@ export const FAMILIES = [
       question: 'The table shows litres of water used at a school. Round each number to the nearest ten. Estimate how many litres are used in the three months.',
       model: { type: 'table', data: { head: ['Month', 'Litres used'], rows: ['January', 'February', 'March'].map((m, i) => ({ label: m, value: commas(v[i]) })) } },
       answer: est,
-      wrong: [[sum(v), 'That is the exact total. An estimate rounds each number first.'], [sum(v.map(f10)), 'You rounded every number down. Look at the ones digit of each one.'], [r10(v[0]) + r10(v[1]), 'That leaves out one month. The question asks for all three months.']],
+      wrong: [[sum(v), 'That is the exact total. An estimate rounds each number first.', 'M_EST_EXACT_REQUIRED'], [sum(v.map(f10)), 'You rounded every number down. Look at the ones digit of each one.', 'M_EST_ROUND_WRONG'], [r10(v[0]) + r10(v[1]), 'That leaves out one month. The question asks for all three months.', 'SLIP']],
       hints: ['Round each of the three numbers to the nearest ten.', 'Then add the three rounded numbers.'],
       steps: [`The rounded numbers are ${v.map(r10).join(', ')}.`, `${v.map(r10).join(' + ')} = ${commas(est)}.`] }),
     check: ({ v }, a) => a % 10 === 0 && Math.abs(a - sum(v)) <= 15 }),
@@ -222,13 +222,13 @@ export const FAMILIES = [
       steps: [`Each week ${p.she} saves ${sh(d)} more.`, `Week ${n} adds ${sh(d)} a total of ${n - 1} times to ${sh(s)}.`, `${s} + ${(n - 1) * d} = ${s + (n - 1) * d}.`] }),
     check: ({ s, d, n }, a) => (a - s) / d === n - 1 }),
 
-  fam({ id: 'g4.add.pattern-missing', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ADD_PATTERNS', outcome: 'MATH.G4.NUMBER.ADDITION.d', misMapped: false, reveals: ['M_PAT_MISSING_NOT_CHECKED'], rung: 2, form: 'table',
+  fam({ id: 'g4.add.pattern-missing', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ADD_PATTERNS', outcome: 'MATH.G4.NUMBER.ADDITION.d', rung: 2, form: 'table',
     draw: () => { const a = randInt(10, 80) * 10, d = pick([30, 40, 50, 60, 70, 80]); return uniq(a + d, a + 2 * d, d, 2 * a + 2 * d) ? { a, d, p: person() } : null; },
     make: ({ a, d }) => ({
       question: 'A farmer plants the same number of extra trees each month. The table shows the pattern. How many trees go in the empty box?',
       model: { type: 'table', data: { head: ['Month', 'Trees planted'], rows: [{ label: 'Month 1', value: String(a) }, { label: 'Month 2', value: '?' }, { label: 'Month 3', value: String(a + 2 * d) }, { label: 'Month 4', value: String(a + 3 * d) }] } },
       answer: a + d,
-      wrong: [[a + 2 * d, 'That is Month 3. The empty box is between Month 1 and Month 3.'], [d, 'That is how many more trees are planted each month. Add it to Month 1.'], [2 * a + 2 * d, 'Adding two rows does not follow the pattern. Find what is added each month.']],
+      wrong: [[a + 2 * d, 'That is Month 3. The empty box is between Month 1 and Month 3.', 'SLIP'], [d, 'That is how many more trees are planted each month. Add it to Month 1.', 'M_PAT_RULE_AS_TERM'], [2 * a + 2 * d, 'Adding two rows does not follow the pattern. Find what is added each month.', 'M_PAT_MISSING_NOT_CHECKED']],
       hints: ['Look at Month 3 and Month 4. How much more is planted?', 'Month 2 is one step after Month 1.'],
       steps: [`Month 4 − Month 3 = ${d}. So ${d} more trees each month.`, `Month 2 = ${a} + ${d} = ${a + d}.`] }),
     check: ({ a, d }, v) => v - a === d && a + 2 * d - v === d }),
@@ -236,7 +236,7 @@ export const FAMILIES = [
   // ======================================================================
   // SUBTRACTION: estimate, patterns
   // ======================================================================
-  fam({ id: 'g4.sub.estimate-stock', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN', outcome: 'MATH.G4.NUMBER.SUBTRACTION.c', misMapped: false, reveals: ['M_EST_DIFF_ROUND_DOWN'], rung: 2, form: 'word',
+  fam({ id: 'g4.sub.estimate-stock', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN', outcome: 'MATH.G4.NUMBER.SUBTRACTION.c', rung: 2, form: 'word',
     draw: () => {
       const pk = () => { let v; do { v = randInt(12, 99) * 10 + randInt(1, 9); } while (v % 10 === 5); return v; };
       let a = pk(), b = pk(); if (a < b) [a, b] = [b, a];
@@ -246,12 +246,12 @@ export const FAMILIES = [
     make: ({ a, b, est, what }) => ({
       question: `A shop has ${a} ${what}. The shop sells ${b} of them in a week. Round each number to the nearest ten. Estimate how many ${what} are left.`,
       answer: est,
-      wrong: [[a - b, 'That is the exact answer. An estimate rounds each number first.'], [f10(a) - f10(b), 'You rounded both numbers down. Look at the ones digit of each one.'], [r10(a) + r10(b), 'The shop sells some, so there are fewer left. Take away.']],
+      wrong: [[a - b, 'That is the exact answer. An estimate rounds each number first.', 'M_EST_EXACT_REQUIRED'], [f10(a) - f10(b), 'You rounded both numbers down. Look at the ones digit of each one.', 'M_EST_DIFF_ROUND_DOWN'], [r10(a) + r10(b), 'The shop sells some, so there are fewer left. Take away.', 'M_EST_DIFF_ADDS']],
       hints: ['Round each number to the nearest ten.', 'Then take the smaller rounded number from the bigger one.'],
       steps: [`${a} is about ${r10(a)}. ${b} is about ${r10(b)}.`, `${r10(a)} − ${r10(b)} = ${est}.`] }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a - b)) <= 10 && v + r10(b) === r10(a) }),
 
-  fam({ id: 'g4.sub.estimate-steps', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN', outcome: 'MATH.G4.NUMBER.SUBTRACTION.c', misMapped: false, reveals: ['M_EST_EXACT_REQUIRED'], rung: 2, form: 'steps',
+  fam({ id: 'g4.sub.estimate-steps', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN', outcome: 'MATH.G4.NUMBER.SUBTRACTION.c', rung: 2, form: 'steps',
     draw: () => {
       const pk = () => { let v; do { v = randInt(150, 480) * 10 + randInt(1, 9); } while (v % 10 === 5); return v; };
       let a = pk(), b = pk(); if (a < b) [a, b] = [b, a];
@@ -262,32 +262,32 @@ export const FAMILIES = [
     make: ({ a, b, p }) => ({
       question: `${p.name}'s school had ${commas(a)} books. It gave out ${commas(b)} books. ${p.name} wants to estimate how many are left.`,
       parts: [
-        { prompt: `Round ${commas(a)} to the nearest ten.`, answer: r10(a), hint: `Look at the ones digit of ${commas(a)}.`, wrong: [[f10(a), 'The ones digit decides. 5 or more goes up.']] },
-        { prompt: `Round ${commas(b)} to the nearest ten.`, answer: r10(b), hint: `Look at the ones digit of ${commas(b)}.`, wrong: [[f10(b), 'The ones digit decides. 5 or more goes up.']] },
-        { prompt: 'Now estimate how many books are left.', answer: r10(a) - r10(b), unit: 'books', hint: 'Take the second rounded number from the first.', wrong: [[r10(a) + r10(b), 'Books were given out. Take away.']] },
-        { prompt: `Now work out the exact number of books left: ${commas(a)} − ${commas(b)}.`, answer: a - b, unit: 'books', hint: 'Subtract the exact numbers. Regroup where you need to.', wrong: [[r10(a) - r10(b), 'That is the estimate. Use the exact numbers here.']] },
+        { prompt: `Round ${commas(a)} to the nearest ten.`, answer: r10(a), hint: `Look at the ones digit of ${commas(a)}.`, wrong: [[f10(a), 'The ones digit decides. 5 or more goes up.', 'M_EST_DIFF_ROUND_DOWN']] },
+        { prompt: `Round ${commas(b)} to the nearest ten.`, answer: r10(b), hint: `Look at the ones digit of ${commas(b)}.`, wrong: [[f10(b), 'The ones digit decides. 5 or more goes up.', 'M_EST_DIFF_ROUND_DOWN']] },
+        { prompt: 'Now estimate how many books are left.', answer: r10(a) - r10(b), unit: 'books', hint: 'Take the second rounded number from the first.', wrong: [[r10(a) + r10(b), 'Books were given out. Take away.', 'M_EST_DIFF_ADDS']] },
+        { prompt: `Now work out the exact number of books left: ${commas(a)} − ${commas(b)}.`, answer: a - b, unit: 'books', hint: 'Subtract the exact numbers. Regroup where you need to.', wrong: [[r10(a) - r10(b), 'That is the estimate. Use the exact numbers here.', 'SLIP']] },
       ],
       steps: [`${commas(a)} is about ${commas(r10(a))}. ${commas(b)} is about ${commas(r10(b))}.`, `Estimate: ${commas(r10(a))} − ${commas(r10(b))} = ${commas(r10(a) - r10(b))}.`, `Exact: ${commas(a)} − ${commas(b)} = ${commas(a - b)}.`] }),
     check: ({ a, b }, v) => v[0] + 0 === r10(a) && v[1] === r10(b) && v[2] === v[0] - v[1] && v[3] + b === a && Math.abs(v[2] - v[3]) <= 10 }),
 
-  fam({ id: 'g4.sub.pattern-next', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS', outcome: 'MATH.G4.NUMBER.SUBTRACTION.d', misMapped: false, reveals: ['M_SUBPAT_ADDS'], rung: 1, form: 'direct',
+  fam({ id: 'g4.sub.pattern-next', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS', outcome: 'MATH.G4.NUMBER.SUBTRACTION.d', rung: 1, form: 'direct',
     draw: () => { const d = pick([20, 30, 40, 50, 60, 70, 80]), s = randInt(30, 150) * 10 + 0; return s - 5 * d > 0 ? { s, d } : null; },
     make: ({ s, d }) => {
       const seq = [0, 1, 2, 3].map(i => commas(s - i * d)).join(', ');
       return { question: `What is the next number in this pattern: ${seq}?`, story: false,
         answer: s - 4 * d,
-        wrong: [[s - 3 * d, 'That is the last number shown. The next one is smaller again.'], [s - 5 * d, 'That skips a number. Take away the same amount just once.'], [s - 2 * d, 'That is a number that is already in the pattern. The pattern keeps going down.']],
+        wrong: [[s - 3 * d, 'That is the last number shown. The next one is smaller again.', 'SLIP'], [s - 5 * d, 'That skips a number. Take away the same amount just once.', 'M_SUBPAT_STEP_NOT_CONSTANT'], [s - 2 * d, 'That is a number that is already in the pattern. The pattern keeps going down.', 'M_SUBPAT_ADDS']],
         hints: ['Find how much the numbers go down each time.', 'Take that amount from the last number.'],
         steps: [`${commas(s)} − ${commas(s - d)} = ${d}. The numbers go down by ${d}.`, `${commas(s - 3 * d)} − ${d} = ${commas(s - 4 * d)}.`] };
     },
     check: ({ s, d }, a) => (s - a) / d === 4 }),
 
-  fam({ id: 'g4.sub.pattern-tank', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS', outcome: 'MATH.G4.NUMBER.SUBTRACTION.d', misMapped: false, reveals: ['M_SUBPAT_STEP_NOT_CONSTANT'], rung: 2, form: 'word',
+  fam({ id: 'g4.sub.pattern-tank', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS', outcome: 'MATH.G4.NUMBER.SUBTRACTION.d', rung: 2, form: 'word',
     draw: () => { const d = pick([50, 60, 75, 80, 90]), n = pick([4, 5, 6]), s = pick([10, 12, 15]) * 100; return s - n * d > 0 && uniq(s - n * d, s - (n - 1) * d, s + n * d, n * d) ? { s, d, n } : null; },
     make: ({ s, d, n }) => ({
       question: `A water tank has ${commas(s)} litres. Each day ${d} litres are used. The amount left each day follows a pattern. How many litres are left after ${n} days?`,
       answer: s - n * d,
-      wrong: [[s - (n - 1) * d, 'That is one day too few. Count all the days.'], [s + n * d, 'Water is used, so the amount goes down.'], [n * d, 'That is the water used. The question asks for the water left.']],
+      wrong: [[s - (n - 1) * d, 'That is one day too few. Count all the days.', 'SLIP'], [s + n * d, 'Water is used, so the amount goes down.', 'M_SUBPAT_ADDS'], [n * d, 'That is the water used. The question asks for the water left.', 'SLIP']],
       hints: ['Each day the amount goes down by the same number of litres.', `Find the water used in ${n} days. Then take it from the start.`],
       steps: [`Water used in ${n} days: ${n} × ${d} = ${n * d} litres.`, `${commas(s)} − ${n * d} = ${commas(s - n * d)} litres.`] }),
     check: ({ s, d, n }, a) => a + n * d === s }),
@@ -295,7 +295,7 @@ export const FAMILIES = [
   // ======================================================================
   // MULTIPLICATION: estimate, patterns
   // ======================================================================
-  fam({ id: 'g4.mul.estimate-boxes', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: ['M_EST_PROD_ROUND_ONE'], rung: 2, form: 'word',
+  fam({ id: 'g4.mul.estimate-boxes', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.c', rung: 2, form: 'word',
     draw: () => {
       let n; do { n = randInt(23, 88); } while (n % 5 === 0);
       const k = randInt(3, 9), u = n % 10, est = r10(n) * k, other = (u < 5 ? r10(n) + 10 : r10(n) - 10) * k;
@@ -304,37 +304,37 @@ export const FAMILIES = [
     make: ({ n, k, est, other, p, what }) => ({
       question: `${p.name} buys ${k} ${what[2]} of ${what[0]}. Each ${what[1]} has ${n} ${what[0]}. Round ${n} to the nearest ten. Estimate how many ${what[0]} ${p.she} buys.`,
       answer: est,
-      wrong: [[n * k, 'That is the exact answer. An estimate rounds first.'], [other, `You rounded ${n} the wrong way. Look at its ones digit.`], [r10(n) + k, 'The question has equal groups. Multiply, do not add.']],
+      wrong: [[n * k, 'That is the exact answer. An estimate rounds first.', 'M_EST_PROD_EXACT_REQUIRED'], [other, `You rounded ${n} the wrong way. Look at its ones digit.`, 'SLIP'], [r10(n) + k, 'The question has equal groups. Multiply, do not add.', 'M_EST_PROD_ADDED']],
       hints: [`Round ${n} to the nearest ten first.`, `Then multiply by ${k}.`],
       steps: [`${n} is about ${r10(n)}.`, `${r10(n)} × ${k} = ${est}.`] }),
     check: ({ n, k }, a) => a % k === 0 && a / k === r10(n) }),
 
-  fam({ id: 'g4.mul.estimate-why', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: [], rung: 2, form: 'why',
+  fam({ id: 'g4.mul.estimate-why', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.c', rung: 2, form: 'why',
     draw: () => { let n; do { n = randInt(23, 88); } while (n % 5 === 0); return { n, k: randInt(3, 9), r: randInt(0, 3), p: person() }; },
     make: ({ n, k, r, p }) => {
       const e = r10(n), up = e > n, more = up ? 'more' : 'less', big = up ? 'bigger' : 'smaller';
       const opts = [
         { text: `${n} was rounded ${up ? 'up' : 'down'} to ${e}, which is ${big} than ${n}`, right: true },
-        { text: `An estimate is always ${big} than the exact answer`, right: false, why: 'An estimate can be bigger or smaller. It depends on how the numbers were rounded.' },
-        { text: `${k} was rounded as well`, right: false, why: `${k} was not changed. Only the other number was rounded.` },
-        { text: 'The exact answer is wrong', right: false, why: 'The exact answer is right. The estimate is only close to it.' },
+        { text: `An estimate is always ${big} than the exact answer`, right: false, why: 'An estimate can be bigger or smaller. It depends on how the numbers were rounded.', mis: 'SLIP' },
+        { text: `${k} was rounded as well`, right: false, why: `${k} was not changed. Only the other number was rounded.`, mis: 'M_EST_PROD_ROUND_ONE' },
+        { text: 'The exact answer is wrong', right: false, why: 'The exact answer is right. The estimate is only close to it.', mis: 'M_EST_PROD_EXACT_REQUIRED' },
       ];
       return { question: `${p.name} estimates ${n} × ${k}. ${p.She} rounds ${n} to ${e} and works out ${e} × ${k} = ${e * k}. The exact answer is ${n * k}. Why is the estimate ${more} than the exact answer?`, options: rot(opts, r),
         hints: [`Compare ${n} with the rounded number.`, `If a number is made ${big}, what happens to the product?`],
         steps: [`${n} became ${e}. That is ${big}.`, `A ${big} number multiplied by ${k} gives a ${big} product.`] };
     } }),
 
-  fam({ id: 'g4.mul.pattern-seedlings', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.d', misMapped: false, reveals: ['M_MULPAT_ADD_STEP'], rung: 2, form: 'word',
+  fam({ id: 'g4.mul.pattern-seedlings', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.d', rung: 2, form: 'word',
     draw: () => { const a = pick([2, 3, 4, 5]), m = pick([2, 3]); return uniq(a * m ** 3, a * m * m + a * m, a * m * m + a, a * m ** 4) ? { a, m, p: person() } : null; },
     make: ({ a, m, p }) => ({
       question: `${p.name} plants seedlings. In week 1 there are ${a}. In week 2 there are ${a * m}. In week 3 there are ${a * m * m}. This pattern goes on. How many seedlings are there in week 4?`,
       answer: a * m ** 3,
-      wrong: [[a * m * m + a * m, 'That adds the last two numbers. Check how week 1 changes to week 2: is it adding?'], [a * m * m + a, 'The pattern is not adding. Check how the numbers change from week to week.'], [a * m ** 4, 'That is one step too far. Week 4 comes right after week 3.']],
+      wrong: [[a * m * m + a * m, 'That adds the last two numbers. Check how week 1 changes to week 2: is it adding?', 'M_MULPAT_ADD_STEP'], [a * m * m + a, 'The pattern is not adding. Check how the numbers change from week to week.', 'M_MULPAT_ADD_STEP'], [a * m ** 4, 'That is one step too far. Week 4 comes right after week 3.', 'SLIP']],
       hints: ['How do you get from week 1 to week 2? Is it adding or multiplying?', 'Do the same step again after week 3.'],
       steps: [`${a} × ${m} = ${a * m}, and ${a * m} × ${m} = ${a * m * m}. The number is multiplied by ${m} each week.`, `Week 4: ${a * m * m} × ${m} = ${a * m ** 3}.`] }),
     check: ({ a, m }, v) => v / m / m / m === a }),
 
-  fam({ id: 'g4.mul.pattern-table', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.d', misMapped: false, reveals: ['M_MULPAT_SKIP_TABLE'], rung: 2, form: 'table',
+  fam({ id: 'g4.mul.pattern-table', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.d', rung: 2, form: 'table',
     draw: () => {
       const c = pick([{ u: 4, head: 'Chairs', what: 'Legs', thing: 'chairs', e: 'legs' }, { u: 7, head: 'Weeks', what: 'Days', thing: 'weeks', e: 'days' }, { u: 6, head: 'Trays', what: 'Eggs', thing: 'trays of eggs', e: 'eggs' }, { u: 5, head: 'Packets', what: 'Biscuits', thing: 'packets', e: 'biscuits' }]);
       const k = randInt(7, 9);
@@ -344,7 +344,7 @@ export const FAMILIES = [
       question: `The table shows a pattern. How many ${c.e} are there in ${k} ${c.thing}?`,
       model: { type: 'table', data: { head: [c.head, c.what], rows: [1, 2, 3, 4].map(i => ({ label: String(i), value: String(i * c.u) })) } },
       answer: k * c.u,
-      wrong: [[k + c.u, 'The numbers in the table grow by multiplying. Do not add.'], [(k - 1) * c.u, `That is for one ${c.head === 'Weeks' ? 'week' : c.head.slice(0, -1).toLowerCase()} fewer. Use the number you are asked about.`], [4 * c.u + (k - 4), 'Counting on by 1 from the last row does not follow the pattern.']],
+      wrong: [[k + c.u, 'The numbers in the table grow by multiplying. Do not add.', 'M_MULPAT_ADD_STEP'], [(k - 1) * c.u, `That is for one ${c.head === 'Weeks' ? 'week' : c.head.slice(0, -1).toLowerCase()} fewer. Use the number you are asked about.`, 'SLIP'], [4 * c.u + (k - 4), 'Counting on by 1 from the last row does not follow the pattern.', 'M_MULPAT_ADD_STEP']],
       hints: ['Look at row 1. How many are there for one?', 'Each row is that number multiplied by the number in the first column.'],
       steps: [`One of them has ${c.u}. The table goes up by ${c.u} each time.`, `${k} × ${c.u} = ${k * c.u}.`] }),
     check: ({ c, k }, a) => a % c.u === 0 && a / c.u === k }),
@@ -352,19 +352,19 @@ export const FAMILIES = [
   // ======================================================================
   // DIVISION: relating multiplication and division
   // ======================================================================
-  fam({ id: 'g4.div.related-facts', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_RELATE_WRONG_FACT'], rung: 1, form: 'steps',
+  fam({ id: 'g4.div.related-facts', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', rung: 1, form: 'steps',
     draw: () => { const a = randInt(4, 9), b = randInt(6, 9); return a !== b ? { a, b, p: person() } : null; },
     make: ({ a, b, p }) => ({
       question: `${p.name} packs eggs. ${p.She} fills ${a} trays with ${b} eggs in each tray. Answer the parts. They use related facts.`,
       parts: [
-        { prompt: `How many eggs are there? ${a} × ${b} = ?`, answer: a * b, unit: 'eggs', hint: `${a} trays with ${b} eggs in each tray.`, wrong: [[a + b, 'Equal trays: multiply.']] },
-        { prompt: `Share ${a * b} eggs equally into ${a} trays. ${a * b} ÷ ${a} = ?`, answer: b, unit: 'eggs', hint: 'Which multiplication fact is related to this division?', wrong: [[a, 'That is the number of trays. How many eggs go in each tray?']] },
-        { prompt: `Put ${a * b} eggs into trays of ${b}. ${a * b} ÷ ${b} = ?`, answer: a, unit: 'trays', hint: 'Use the same fact again.', wrong: [[b, 'That is the number in each tray. The question asks how many trays.']] },
+        { prompt: `How many eggs are there? ${a} × ${b} = ?`, answer: a * b, unit: 'eggs', hint: `${a} trays with ${b} eggs in each tray.`, wrong: [[a + b, 'Equal trays: multiply.', 'M_RELATE_MISSING_ADDS']] },
+        { prompt: `Share ${a * b} eggs equally into ${a} trays. ${a * b} ÷ ${a} = ?`, answer: b, unit: 'eggs', hint: 'Which multiplication fact is related to this division?', wrong: [[a, 'That is the number of trays. How many eggs go in each tray?', 'M_RELATE_WRONG_FACT']] },
+        { prompt: `Put ${a * b} eggs into trays of ${b}. ${a * b} ÷ ${b} = ?`, answer: a, unit: 'trays', hint: 'Use the same fact again.', wrong: [[b, 'That is the number in each tray. The question asks how many trays.', 'M_RELATE_WRONG_FACT']] },
       ],
       steps: [`${a} × ${b} = ${a * b}.`, `The related divisions are ${a * b} ÷ ${a} = ${b} and ${a * b} ÷ ${b} = ${a}.`] }),
     check: ({ a, b }, v) => v[0] === a * b && v[1] * a === v[0] && v[2] * b === v[0] }),
 
-  fam({ id: 'g4.div.spot-check', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: [], rung: 2, form: 'spot',
+  fam({ id: 'g4.div.spot-check', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_RELATE_CHECK_ADDS'], rung: 2, form: 'spot',
     draw: () => { const d = randInt(3, 9), q = randInt(11, 19); return { d, q, n: d * q, kind: pick(['div', 'times', 'end']), off: pick([-1, 1]), slip: pick([-10, 10, 1, -1]), p: person() }; },
     make: ({ d, q, n, kind, off, slip, p }) => {
       const q2 = kind === 'div' ? q + off : q, prod = kind === 'times' ? q * d + slip : q2 * d;
@@ -382,14 +382,14 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.div.why-check', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_RELATE_CHECK_ADDS'], rung: 2, form: 'why',
+  fam({ id: 'g4.div.why-check', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', rung: 2, form: 'why',
     draw: () => { const d = randInt(3, 9), q = randInt(11, 19); return { d, q, n: d * q, r: randInt(0, 3), p: person() }; },
     make: ({ d, q, n, r, p }) => {
       const opts = [
         { text: `Multiplying undoes dividing, so ${q} × ${d} must give back ${n}`, right: true },
-        { text: 'Multiplying is easier than dividing', right: false, why: 'Easy or hard is not the reason. Multiplying undoes dividing, so it can be used to check.' },
-        { text: `${q} + ${d} must be the same as ${n}`, right: false, why: 'Adding does not undo dividing.' },
-        { text: `The answer to a division is always smaller than ${d}`, right: false, why: 'The answer to a division can be bigger or smaller than the divider.' },
+        { text: 'Multiplying is easier than dividing', right: false, why: 'Easy or hard is not the reason. Multiplying undoes dividing, so it can be used to check.', mis: 'SLIP' },
+        { text: `${q} + ${d} must be the same as ${n}`, right: false, why: 'Adding does not undo dividing.', mis: 'M_RELATE_CHECK_ADDS' },
+        { text: `The answer to a division is always smaller than ${d}`, right: false, why: 'The answer to a division can be bigger or smaller than the divider.', mis: 'SLIP' },
       ];
       return { question: `${p.name} divides ${n} by ${d} and gets ${q}. To check a division, ${p.she} works out ${q} × ${d}. Why does this check work?`, options: rot(opts, r),
         hints: ['Think of sharing into equal groups, then putting the groups back together.', 'Dividing splits a number up. What puts it back?'],
@@ -399,14 +399,14 @@ export const FAMILIES = [
   // ======================================================================
   // FRACTIONS: numerator and denominator, types, improper and mixed
   // ======================================================================
-  fam({ id: 'g4.frac.denominator-chapati', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.NUM_DEN', outcome: 'MATH.G4.NUMBER.FRACTIONS.a', misMapped: false, reveals: ['M_FRAC_TWO_NUMBERS_SEPARATE'], rung: 1, form: 'word',
+  fam({ id: 'g4.frac.denominator-chapati', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.NUM_DEN', outcome: 'MATH.G4.NUMBER.FRACTIONS.a', rung: 1, form: 'word',
     draw: () => { const d = pick([4, 5, 6, 8, 10]), n = randInt(2, d - 2); return { d, n, p: person(), k: randInt(0, 3) }; },
     make: ({ d, n, p, k }) => {
       const opts = [
         { text: `The chapati was cut into ${d} equal pieces`, right: true },
-        { text: `${p.name} ate ${d} pieces of the chapati`, right: false, why: 'The number of pieces eaten is the top number, the numerator.' },
-        { text: `There are ${n} equal pieces in the whole chapati`, right: false, why: `${n} is the numerator. It tells how many pieces ${p.name} ate.` },
-        { text: `${d - n} pieces are left over after ${p.name} eats`, right: false, why: 'The bottom number does not tell how many are left. It tells how many equal parts the whole has.' },
+        { text: `${p.name} ate ${d} pieces of the chapati`, right: false, why: 'The number of pieces eaten is the top number, the numerator.', mis: 'M_FRAC_SWAP_NUM_DEN' },
+        { text: `There are ${n} equal pieces in the whole chapati`, right: false, why: `${n} is the numerator. It tells how many pieces ${p.name} ate.`, mis: 'M_FRAC_SWAP_NUM_DEN' },
+        { text: `${d - n} pieces are left over after ${p.name} eats`, right: false, why: 'The bottom number does not tell how many are left. It tells how many equal parts the whole has.', mis: 'M_FRAC_TWO_NUMBERS_SEPARATE' },
       ];
       return { question: `${p.name} cuts a chapati into ${d} equal pieces. ${p.She} eats ${n} pieces. ${p.She} writes the fraction ${n}/${d}. What does the denominator ${d} tell us?`, options: rot(opts, k),
         hints: ['The denominator is the bottom number of a fraction.', 'It names the equal parts that make one whole.'],
@@ -446,7 +446,7 @@ export const FAMILIES = [
         steps: [`The top number ${n} is bigger than the bottom number ${d}.`, `So ${n}/${d} is more than 1 whole. It is an improper fraction.`] };
     } }),
 
-  fam({ id: 'g4.frac.type-table', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS', outcome: 'MATH.G4.NUMBER.FRACTIONS.c', misMapped: false, reveals: [], rung: 2, form: 'table',
+  fam({ id: 'g4.frac.type-table', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS', outcome: 'MATH.G4.NUMBER.FRACTIONS.c', misMapped: false, reveals: ['M_TYPE_MIXED_AS_PROPER', 'M_TYPE_EQUAL_IS_PROPER'], rung: 2, form: 'table',
     draw: () => {
       const counts = [1, 2, 3].sort(() => Math.random() - 0.5), types = ['proper', 'improper', 'mixed'];
       const list = []; types.forEach((t, i) => { for (let j = 0; j < counts[i]; j++) list.push(t); });
@@ -466,28 +466,28 @@ export const FAMILIES = [
     },
     check: ({ texts, ask }, a) => texts.filter(x => (ask === 2 ? x.includes(' ') : ask === 1 ? !x.includes(' ') && Number(x.split('/')[0]) > Number(x.split('/')[1]) : !x.includes(' ') && Number(x.split('/')[0]) < Number(x.split('/')[1]))).length === a }),
 
-  fam({ id: 'g4.frac.improper-to-mixed-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_MIX_REMAINDER_AS_WHOLE', 'M_MIX_REMAINDER_OVER_QUOTIENT'], rung: 2, form: 'word',
+  fam({ id: 'g4.frac.improper-to-mixed-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', rung: 2, form: 'word',
     draw: () => { const d = randInt(3, 8), q = randInt(1, 4), r = randInt(1, d - 1); return q !== r ? { d, q, r, n: q * d + r, p: person(), k: randInt(0, 3) } : null; },
     make: ({ d, q, r, n, p, k }) => {
       const opts = [
         { text: `${q} ${r}/${d}`, right: true },
-        { text: `${r} ${q}/${d}`, right: false, why: `The whole number shows how many times ${d} goes into ${n}. The leftover goes on top of the fraction.` },
-        { text: `${q} ${r}/${n}`, right: false, why: 'The denominator stays the same as in the improper fraction.' },
-        { text: `${q + 1} ${r}/${d}`, right: false, why: `Check how many whole ones you can make from ${n} parts. Do not go over.` },
+        { text: `${r} ${q}/${d}`, right: false, why: `The whole number shows how many times ${d} goes into ${n}. The leftover goes on top of the fraction.`, mis: 'M_MIX_REMAINDER_AS_WHOLE' },
+        { text: `${q} ${r}/${n}`, right: false, why: 'The denominator stays the same as in the improper fraction.', mis: 'M_MIX_REMAINDER_OVER_QUOTIENT' },
+        { text: `${q + 1} ${r}/${d}`, right: false, why: `Check how many whole ones you can make from ${n} parts. Do not go over.`, mis: 'M_MIX_WHOLES_MISCOUNTED' },
       ];
       return { question: `${p.name} drinks ${n}/${d} litres of water in one day. Write ${n}/${d} as a mixed number.`, options: rot(opts, k),
         hints: [`How many times does ${d} go into ${n}?`, 'The leftover parts make the fraction.'],
         steps: [`${n} ÷ ${d} = ${q} with ${r} left over.`, `So ${n}/${d} = ${q} ${r}/${d}.`] };
     } }),
 
-  fam({ id: 'g4.frac.improper-to-mixed-steps', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_MIX_REMAINDER_AS_WHOLE'], rung: 2, form: 'steps',
+  fam({ id: 'g4.frac.improper-to-mixed-steps', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', rung: 2, form: 'steps',
     draw: () => { const d = randInt(3, 9), q = randInt(2, 4), r = randInt(1, d - 1); return { d, q, r, n: q * d + r, p: person() }; },
     make: ({ d, q, r, n, p }) => ({
       question: `${p.name} pours ${n}/${d} litres of juice. ${p.She} wants to write it as a mixed number. Answer the parts.`,
       parts: [
-        { prompt: `How many whole litres are in ${n}/${d}? How many times does ${d} go into ${n}?`, answer: q, unit: 'litres', hint: `Count in ${d}s up to ${n}.`, wrong: [[q + 1, `That goes over ${n}. Check by multiplying.`]] },
-        { prompt: `How many parts are left over?`, answer: r, hint: `Take ${q} × ${d} from ${n}.`, wrong: [[d - r, 'That is how many parts are missing from the next whole. Count the ones left over.']] },
-        { prompt: `Check the mixed number. ${q} × ${d} + ${r} = ?`, answer: n, hint: 'Whole litres times the denominator, plus the parts left over.', wrong: [[q + r, 'Multiply the whole number by the denominator first.']] },
+        { prompt: `How many whole litres are in ${n}/${d}? How many times does ${d} go into ${n}?`, answer: q, unit: 'litres', hint: `Count in ${d}s up to ${n}.`, wrong: [[q + 1, `That goes over ${n}. Check by multiplying.`, 'M_MIX_WHOLES_MISCOUNTED']] },
+        { prompt: `How many parts are left over?`, answer: r, hint: `Take ${q} × ${d} from ${n}.`, wrong: [[d - r, 'That is how many parts are missing from the next whole. Count the ones left over.', 'SLIP']] },
+        { prompt: `Check the mixed number. ${q} × ${d} + ${r} = ?`, answer: n, hint: 'Whole litres times the denominator, plus the parts left over.', wrong: [[q + r, 'Multiply the whole number by the denominator first.', 'SLIP']] },
       ],
       steps: [`${n} ÷ ${d} = ${q} with ${r} left over.`, `So ${n}/${d} = ${q} ${r}/${d}.`, `Check: ${q} × ${d} + ${r} = ${n}.`] }),
     check: ({ d, n }, v) => v[0] * d + v[1] === n && v[1] < d && v[2] === n }),
@@ -510,30 +510,30 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.frac.mixed-to-improper-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER', outcome: 'MATH.G4.NUMBER.FRACTIONS.e', misMapped: false, reveals: ['M_IMP_ADDS_WHOLE', 'M_IMP_WHOLE_TIMES_NUMERATOR'], rung: 2, form: 'word',
+  fam({ id: 'g4.frac.mixed-to-improper-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER', outcome: 'MATH.G4.NUMBER.FRACTIONS.e', rung: 2, form: 'word',
     draw: () => { const d = randInt(3, 8), w = randInt(2, 4), n = randInt(1, d - 1); return uniq(w * d + n, w + n, w * n + d, w * d) && w + n !== d ? { d, w, n, p: person(), k: randInt(0, 3) } : null; },
     make: ({ d, w, n, p, k }) => {
       const opts = [
         { text: `${w * d + n}/${d}`, right: true },
-        { text: `${w + n}/${d}`, right: false, why: 'You added the whole number and the numerator. First find how many parts the whole numbers make.' },
-        { text: `${w * n + d}/${d}`, right: false, why: 'The whole number is multiplied by the denominator, not by the numerator.' },
-        { text: `${w * d}/${d}`, right: false, why: 'That only counts the whole ones. Add the extra parts too.' },
+        { text: `${w + n}/${d}`, right: false, why: 'You added the whole number and the numerator. First find how many parts the whole numbers make.', mis: 'M_IMP_ADDS_WHOLE' },
+        { text: `${w * n + d}/${d}`, right: false, why: 'The whole number is multiplied by the denominator, not by the numerator.', mis: 'M_IMP_WHOLE_TIMES_NUMERATOR' },
+        { text: `${w * d}/${d}`, right: false, why: 'That only counts the whole ones. Add the extra parts too.', mis: 'M_IMP_NUMERATOR_NOT_ADDED' },
       ];
       return { question: `${p.name} has ${w} ${n}/${d} cakes. Write ${w} ${n}/${d} as an improper fraction.`, options: rot(opts, k),
         hints: [`How many parts are in ${w} whole cakes, if each cake has ${d} parts?`, 'Then add the extra parts.'],
         steps: [`${w} × ${d} = ${w * d} parts in the whole cakes.`, `${w * d} + ${n} = ${w * d + n} parts, so ${w * d + n}/${d}.`] };
     } }),
 
-  fam({ id: 'g4.frac.mixed-to-improper-steps', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER', outcome: 'MATH.G4.NUMBER.FRACTIONS.e', misMapped: false, reveals: ['M_IMP_WHOLE_TIMES_NUMERATOR'], rung: 2, form: 'steps',
+  fam({ id: 'g4.frac.mixed-to-improper-steps', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER', outcome: 'MATH.G4.NUMBER.FRACTIONS.e', rung: 2, form: 'steps',
     draw: () => ({ d: randInt(3, 8), w: randInt(2, 5), n: 0, p: person() }),
     make: ({ d, w, p }) => {
       const n = randInt(1, d - 1);
       return {
         question: `${p.name} has ${w} ${n}/${d} loaves of bread. Each loaf is cut into ${d} equal slices. ${p.She} wants to write ${w} ${n}/${d} as an improper fraction. Answer the parts.`,
         parts: [
-          { prompt: 'How many slices are in one whole loaf?', answer: d, unit: 'slices', hint: 'The denominator tells how many equal slices.', wrong: [[n, 'That is the extra slices. Look at the denominator.']] },
-          { prompt: `How many slices are in ${w} whole loaves?`, answer: w * d, unit: 'slices', hint: `${w} loaves, each with ${d} slices.`, wrong: [[w + d, 'Equal groups: multiply.']] },
-          { prompt: `Add the ${n} extra slices. How many slices are there in all?`, answer: w * d + n, unit: 'slices', hint: 'The slices of the whole loaves, plus the extra slices.', wrong: [[w * d, 'You have not added the extra slices.']] },
+          { prompt: 'How many slices are in one whole loaf?', answer: d, unit: 'slices', hint: 'The denominator tells how many equal slices.', wrong: [[n, 'That is the extra slices. Look at the denominator.', 'SLIP']] },
+          { prompt: `How many slices are in ${w} whole loaves?`, answer: w * d, unit: 'slices', hint: `${w} loaves, each with ${d} slices.`, wrong: [[w + d, 'Equal groups: multiply.', 'M_IMP_ADDS_WHOLE']] },
+          { prompt: `Add the ${n} extra slices. How many slices are there in all?`, answer: w * d + n, unit: 'slices', hint: 'The slices of the whole loaves, plus the extra slices.', wrong: [[w * d, 'You have not added the extra slices.', 'M_IMP_NUMERATOR_NOT_ADDED']] },
         ],
         steps: [`Each loaf has ${d} slices.`, `${w} × ${d} = ${w * d}.`, `${w * d} + ${n} = ${w * d + n}. So the improper fraction has numerator ${w * d + n} and denominator ${d}.`] };
     },
@@ -560,15 +560,15 @@ export const FAMILIES = [
     },
     check: ({ t, hv }, a) => hv.every(h => h / 100 < a) && Math.round(a * 10) === t }),
 
-  fam({ id: 'g4.dec.why-bigger', skill: 'G4_DECIMALS', cskill: 'MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS', outcome: 'MATH.G4.NUMBER.DECIMALS.d', misMapped: false, reveals: ['M_DEC_DIGITS_AFTER_POINT_AS_WHOLE'], rung: 2, form: 'why',
+  fam({ id: 'g4.dec.why-bigger', skill: 'G4_DECIMALS', cskill: 'MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS', outcome: 'MATH.G4.NUMBER.DECIMALS.d', rung: 2, form: 'why',
     draw: () => { const t = randInt(4, 9); let h; do { h = randInt(11, t * 10 - 1); } while (h % 10 === 0); return { t, h, r: randInt(0, 3), p: person() }; },
     make: ({ t, h, r, p }) => {
       const a = `0.${String(h).padStart(2, '0')}`, b = `0.${t}`;
       const opts = [
         { text: `${b} has ${t} tenths, but ${a} has only ${Math.floor(h / 10)} tenths`, right: true },
-        { text: `${h} is not bigger than ${t}, so ${a} is the smaller one`, right: false, why: `${h} is bigger than ${t}. But the digits after the point are compared place by place, not as one whole number.` },
-        { text: 'A decimal with more digits after the point is always smaller', right: false, why: 'Not always. Compare place by place, starting with the tenths.' },
-        { text: 'Decimals cannot be compared with each other at all', right: false, why: 'Decimals can be compared. Start with the tenths.' },
+        { text: `${h} is not bigger than ${t}, so ${a} is the smaller one`, right: false, why: `${h} is bigger than ${t}. But the digits after the point are compared place by place, not as one whole number.`, mis: 'M_DEC_DIGITS_AFTER_POINT_AS_WHOLE' },
+        { text: 'A decimal with more digits after the point is always smaller', right: false, why: 'Not always. Compare place by place, starting with the tenths.', mis: 'M_DEC_LONGER_IS_LARGER' },
+        { text: 'Decimals cannot be compared with each other at all', right: false, why: 'Decimals can be compared. Start with the tenths.', mis: 'SLIP' },
       ];
       return { question: `${p.name} says ${a} is bigger than ${b}, because ${h} is bigger than ${t}. Why is ${p.she} wrong?`, options: rot(opts, r),
         hints: ['Look at the tenths place of each decimal.', `${b} is the same as ${t} tenths and 0 hundredths.`],
@@ -613,14 +613,14 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.letters.why-same-thing', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.c', misMapped: false, reveals: ['M_SIM_ADD_UNLIKE'], rung: 2, form: 'why',
+  fam({ id: 'g4.letters.why-same-thing', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.c', rung: 2, form: 'why',
     draw: () => { const [v, w] = [...['x', 'y', 'n', 'p', 'k']].sort(() => Math.random() - 0.5); return { a: randInt(2, 8), b: randInt(2, 8), v, w, r: randInt(0, 3) }; },
     make: ({ a, b, v, w, r }) => {
       const opts = [
         { text: `${a}${v} and ${b}${v} are lots of the same thing, but ${b}${w} is not`, right: true },
-        { text: `${w} is a smaller letter than ${v}, so it cannot be added`, right: false, why: 'The size of a letter does not matter. What matters is whether the letters are the same.' },
-        { text: 'Letters can never be added to anything at all', right: false, why: `Letters can be added when they stand for the same thing. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
-        { text: `${a} and ${b} in front must be the same number to add`, right: false, why: `The numbers in front can be different. ${a}${v} + ${b}${v} = ${a + b}${v}.` },
+        { text: `${w} is a smaller letter than ${v}, so it cannot be added`, right: false, why: 'The size of a letter does not matter. What matters is whether the letters are the same.', mis: 'SLIP' },
+        { text: 'Letters can never be added to anything at all', right: false, why: `Letters can be added when they stand for the same thing. ${a}${v} + ${b}${v} = ${a + b}${v}.`, mis: 'M_SIM_ADD_UNLIKE' },
+        { text: `${a} and ${b} in front must be the same number to add`, right: false, why: `The numbers in front can be different. ${a}${v} + ${b}${v} = ${a + b}${v}.`, mis: 'SLIP' },
       ];
       return { question: `We can simplify ${a}${v} + ${b}${v}. We cannot simplify ${a}${v} + ${b}${w}. Why?`, options: rot(opts, r),
         hints: [`Think of ${v} as pens and ${w} as books.`, 'Can you add 3 pens and 2 books to make one kind of thing?'],
@@ -643,12 +643,12 @@ export const FAMILIES = [
         steps: [`One ${what[0]} has ${k}. The table goes up by ${k} each time.`, `${v} ${what[1]} have ${v} × ${k}, written ${k}${v}.`] };
     } }),
 
-  fam({ id: 'g4.letters.price-p', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.a', misMapped: false, reveals: ['M_LET_LETTER_IS_OBJECT'], rung: 2, form: 'word',
+  fam({ id: 'g4.letters.price-p', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.a', rung: 2, form: 'word',
     draw: () => { const k = randInt(3, 8), pp = price('pencil'), rub = price('rubber'); return uniq(k * pp + rub, Number(`${k}${pp}`) + rub, k + pp + rub, pp + rub) ? { k, pp, rub, p: person() } : null; },
     make: ({ k, pp, rub, p }) => ({
       question: `${p.name} buys ${k} pencils and 1 rubber. The cost is ${k}p + ${rub} shillings. The letter p stands for the price of one pencil. A pencil costs ${sh(pp)}. How much does ${p.name} pay in all?`,
       answer: k * pp + rub,
-      wrong: [[Number(`${k}${pp}`) + rub, `${k}p means ${k} times p. It does not mean ${k} and the price written side by side.`], [k + pp + rub, `${k}p means ${k} lots of p, so multiply. Do not add.`], [pp + rub, `There are ${k} pencils. Use ${k}p, not p.`]],
+      wrong: [[Number(`${k}${pp}`) + rub, `${k}p means ${k} times p. It does not mean ${k} and the price written side by side.`, 'M_LET_JOINED_AS_DIGITS'], [k + pp + rub, `${k}p means ${k} lots of p, so multiply. Do not add.`, 'M_LET_COEFFICIENT_ADDED'], [pp + rub, `There are ${k} pencils. Use ${k}p, not p.`, 'SLIP']],
       hints: ['Put the price of a pencil in the place of the letter p.', `${k}p means ${k} times the price of a pencil.`],
       steps: [`${k}p = ${k} × ${pp} = ${k * pp}.`, `${k * pp} + ${rub} = ${k * pp + rub} shillings.`] }),
     check: ({ k, pp, rub }, a) => (a - rub) / pp === k }),
@@ -672,7 +672,7 @@ export const FAMILIES = [
         steps: L.map((x, i) => `Piece ${'ABC'[i]} is ${x} cm.`).concat([`The longest is Piece ${'ABC'[best]}.`]) };
     } }),
 
-  fam({ id: 'g4.perimeter.fence-posts', skill: 'G5_PERIMETER_INTRO', cskill: 'MATH.G4.MEASUR.LENGTH.PERIMETER', outcome: 'MATH.G4.MEASUR.LENGTH.e', misMapped: false, reveals: [], rung: 3, form: 'word',
+  fam({ id: 'g4.perimeter.fence-posts', skill: 'G5_PERIMETER_INTRO', cskill: 'MATH.G4.MEASUR.LENGTH.PERIMETER', outcome: 'MATH.G4.MEASUR.LENGTH.e', misMapped: false, reveals: ['M_PER_TWO_SIDES_ONLY'], rung: 3, form: 'word',
     draw: () => { const g = pick([2, 4, 5]), l = randInt(10, 30), w = randInt(6, 20); return (l + w) % g === 0 ? { g, l, w, p: person() } : null; },
     make: ({ g, l, w, p }) => ({
       question: `A school garden is ${l} m long and ${w} m wide. ${p.name} puts a fence all the way round it. The fence posts are ${g} m apart. How many posts does ${p.she} need?`,
@@ -682,17 +682,17 @@ export const FAMILIES = [
       steps: [`Distance round: ${l} + ${w} + ${l} + ${w} = ${2 * (l + w)} m.`, `${2 * (l + w)} ÷ ${g} = ${(2 * (l + w)) / g} posts.`] }),
     check: ({ g, l, w }, a) => a * g === 2 * l + 2 * w }),
 
-  fam({ id: 'g4.area.rows-missing', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_ROWS_COLS', outcome: 'MATH.G4.MEASUR.AREA.c', misMapped: false, reveals: ['M_AREA_MISSING_ROW_ADDS'], rung: 2, form: 'word',
+  fam({ id: 'g4.area.rows-missing', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_ROWS_COLS', outcome: 'MATH.G4.MEASUR.AREA.c', rung: 2, form: 'word',
     draw: () => { const r = randInt(4, 9), c = randInt(5, 12); return uniq(c, r * c, r + c, r * c - r) ? { r, c, p: person() } : null; },
     make: ({ r, c, p }) => ({
       question: `${p.name} covers a floor with ${r * c} square tiles. The area of the floor is ${r * c} tiles. The tiles are in ${r} equal rows. How many tiles are in each row?`,
       answer: c,
-      wrong: [[r * c - r, 'Taking away does not share the tiles equally into rows.'], [r * c * r, 'The tiles are shared into rows, so the number in each row is smaller than the total.'], [r, 'That is the number of rows. The question asks how many tiles are in each row.']],
+      wrong: [[r * c - r, 'Taking away does not share the tiles equally into rows.', 'M_AREA_MISSING_ROW_ADDS'], [r * c * r, 'The tiles are shared into rows, so the number in each row is smaller than the total.', 'SLIP'], [r, 'That is the number of rows. The question asks how many tiles are in each row.', 'SLIP']],
       hints: ['Area is rows times tiles in each row.', 'Share all the tiles equally into the rows.'],
       steps: [`rows × tiles in each row = ${r * c}.`, `${r * c} ÷ ${r} = ${c} tiles in each row.`] }),
     check: ({ r }, a) => a * r === r * a && a >= 5 && (a * r) % r === 0 }),
 
-  fam({ id: 'g4.area.rooms-table', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_COUNT', outcome: 'MATH.G4.MEASUR.AREA.b', misMapped: false, reveals: [], rung: 2, form: 'table',
+  fam({ id: 'g4.area.rooms-table', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_COUNT', outcome: 'MATH.G4.MEASUR.AREA.b', misMapped: false, reveals: ['M_AREA_COUNTS_TWICE'], rung: 2, form: 'table',
     draw: () => {
       const rows = Array.from({ length: 3 }, () => randInt(3, 9)), cols = Array.from({ length: 3 }, () => randInt(4, 12)), a = rows.map((r, i) => r * cols[i]);
       const best = a.indexOf(Math.max(...a));
@@ -706,26 +706,26 @@ export const FAMILIES = [
         steps: rows.map((r, i) => `Room ${'ABC'[i]}: ${r} × ${cols[i]} = ${a[i]}.`).concat([`The greatest area is Room ${'ABC'[best]}.`]) };
     } }),
 
-  fam({ id: 'g4.area.why-multiply', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_ROWS_COLS', outcome: 'MATH.G4.MEASUR.AREA.c', misMapped: false, reveals: ['M_AREA_ADDS_ROWS_COLS'], rung: 2, form: 'why',
+  fam({ id: 'g4.area.why-multiply', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_ROWS_COLS', outcome: 'MATH.G4.MEASUR.AREA.c', rung: 2, form: 'why',
     draw: () => ({ r: randInt(3, 8), c: randInt(4, 9), k: randInt(0, 3) }),
     make: ({ r, c, k }) => {
       const opts = [
         { text: `There are ${r} equal rows with ${c} squares in each row`, right: true },
-        { text: 'Area is the distance around the outside of the rectangle', right: false, why: 'The distance around is the perimeter. Area is how many unit squares cover the rectangle.' },
-        { text: `${r} + ${c} counts all the squares inside the rectangle`, right: false, why: 'Adding counts the squares along two sides only, not the squares inside.' },
-        { text: 'We must double the longest side of the rectangle', right: false, why: 'Doubling a side does not count the squares inside the rectangle.' },
+        { text: 'Area is the distance around the outside of the rectangle', right: false, why: 'The distance around is the perimeter. Area is how many unit squares cover the rectangle.', mis: 'M_AREA_PERIMETER_NOT_AREA' },
+        { text: `${r} + ${c} counts all the squares inside the rectangle`, right: false, why: 'Adding counts the squares along two sides only, not the squares inside.', mis: 'M_AREA_ADDS_ROWS_COLS' },
+        { text: 'We must double the longest side of the rectangle', right: false, why: 'Doubling a side does not count the squares inside the rectangle.', mis: 'SLIP' },
       ];
       return { question: `A rectangle is covered by ${r} rows of ${c} unit squares. Why can we find its area by working out ${r} × ${c}?`, options: rot(opts, k),
         hints: ['Picture one row of unit squares.', 'Equal rows are equal groups.'],
         steps: [`One row has ${c} squares. There are ${r} rows.`, `${r} groups of ${c} is ${r} × ${c} = ${r * c} squares.`] };
     } }),
 
-  fam({ id: 'g4.vol.tower-layers', skill: 'G4_VOLUME', cskill: 'MATH.G4.MEASUR.VOLUME.STACK_CUBES', outcome: 'MATH.G4.MEASUR.VOLUME.a', misMapped: false, reveals: ['M_VOL_ONE_LAYER_ONLY'], rung: 2, form: 'word',
+  fam({ id: 'g4.vol.tower-layers', skill: 'G4_VOLUME', cskill: 'MATH.G4.MEASUR.VOLUME.STACK_CUBES', outcome: 'MATH.G4.MEASUR.VOLUME.a', rung: 2, form: 'word',
     draw: () => { const a = randInt(2, 5), b = randInt(2, 6), c = randInt(2, 6); return uniq(a * b * c, a + b + c, a * b, a * b + c) ? { a, b, c, p: person() } : null; },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} builds a tower from cubes. Each layer has ${a} rows of ${b} cubes. There are ${c} layers. How many cubes are in the tower?`,
       answer: a * b * c,
-      wrong: [[a * b, 'That is the cubes in one layer. There are more layers.'], [a + b + c, 'Layers are equal groups. Multiply, do not add.'], [a * b + c, 'Each layer has the same number of cubes. Multiply the cubes in a layer by the number of layers.']],
+      wrong: [[a * b, 'That is the cubes in one layer. There are more layers.', 'M_VOL_ONE_LAYER_ONLY'], [a + b + c, 'Layers are equal groups. Multiply, do not add.', 'M_VOL_ADDS_DIMENSIONS'], [a * b + c, 'Each layer has the same number of cubes. Multiply the cubes in a layer by the number of layers.', 'M_VOL_LAYERS_ADDED']],
       hints: ['First find how many cubes are in one layer.', 'Then count all the layers.'],
       steps: [`One layer: ${a} × ${b} = ${a * b} cubes.`, `${c} layers: ${a * b} × ${c} = ${a * b * c} cubes.`] }),
     check: ({ a, b, c }, v) => v % c === 0 && v / c === a * b }),
@@ -746,29 +746,29 @@ export const FAMILIES = [
   // ======================================================================
   // MONEY: cents, shopping lists
   // ======================================================================
-  fam({ id: 'g4.money.cents-purse', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', misMapped: false, reveals: ['M_MONEY_CENTS_AS_DECIMAL_WHOLE'], rung: 1, form: 'word',
+  fam({ id: 'g4.money.cents-purse', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', rung: 1, form: 'word',
     draw: () => { const a = randInt(2, 9), b = pick([20, 25, 50, 75]); return { a, b, p: person() }; },
     make: ({ a, b, p }) => ({
       question: `${p.name} has ${sh(a)} and ${b} cents in a purse. How many cents is that in all?`,
       answer: 100 * a + b,
-      wrong: [[a + b, 'There are 100 cents in 1 shilling. Change the shillings to cents first.'], [10 * a + b, 'Check how many cents make 1 shilling.'], [100 * a, 'That changes the shillings but leaves out the cents in the purse.']],
+      wrong: [[a + b, 'There are 100 cents in 1 shilling. Change the shillings to cents first.', 'SLIP'], [10 * a + b, 'Check how many cents make 1 shilling.', 'M_MONEY_10_CENTS_SHILLING'], [100 * a, 'That changes the shillings but leaves out the cents in the purse.', 'SLIP']],
       hints: ['1 shilling is 100 cents.', 'Change the shillings to cents. Then add the cents.'],
       steps: [`${a} shillings = ${a} × 100 = ${100 * a} cents.`, `${100 * a} + ${b} = ${100 * a + b} cents.`] }),
     check: ({ a, b }, v) => v % 100 === b && Math.floor(v / 100) === a }),
 
-  fam({ id: 'g4.money.cents-to-shillings', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', misMapped: false, reveals: ['M_MONEY_DIRECTION'], rung: 2, form: 'steps',
+  fam({ id: 'g4.money.cents-to-shillings', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', rung: 2, form: 'steps',
     draw: () => { const w = randInt(3, 9), r = pick([25, 50, 75]), s = randInt(1, w - 1); return { w, r, s, c: 100 * w + r, p: person() }; },
     make: ({ w, r, s, c, p }) => ({
       question: `${p.name} has ${commas(c)} cents. ${p.She} wants to change it to shillings. Answer the parts.`,
       parts: [
-        { prompt: `How many whole shillings are in ${c} cents?`, answer: w, unit: 'shillings', hint: '100 cents make 1 shilling.', wrong: [[Math.floor(c / 10), 'Divide by 100, not by 10.']] },
-        { prompt: 'How many cents are left over?', answer: r, unit: 'cents', hint: `Take ${w} × 100 from ${c}.`, wrong: [[100 - r, 'That is the amount needed to make the next shilling. Count the cents left over.']] },
-        { prompt: `${p.name} buys a sweet for ${sh(s)}. How many cents are left?`, answer: c - 100 * s, unit: 'cents', hint: `Change ${sh(s)} to cents, then take it away.`, wrong: [[c - s, `${sh(s)} is ${s * 100} cents, not ${s} cents.`]] },
+        { prompt: `How many whole shillings are in ${c} cents?`, answer: w, unit: 'shillings', hint: '100 cents make 1 shilling.', wrong: [[Math.floor(c / 10), 'Divide by 100, not by 10.', 'M_MONEY_10_CENTS_SHILLING']] },
+        { prompt: 'How many cents are left over?', answer: r, unit: 'cents', hint: `Take ${w} × 100 from ${c}.`, wrong: [[100 - r, 'That is the amount needed to make the next shilling. Count the cents left over.', 'SLIP']] },
+        { prompt: `${p.name} buys a sweet for ${sh(s)}. How many cents are left?`, answer: c - 100 * s, unit: 'cents', hint: `Change ${sh(s)} to cents, then take it away.`, wrong: [[c - s, `${sh(s)} is ${s * 100} cents, not ${s} cents.`, 'SLIP']] },
       ],
       steps: [`${c} ÷ 100 = ${w} with ${r} left over.`, `So ${c} cents = ${sh(w)} and ${r} cents.`, `${c} − ${100 * s} = ${c - 100 * s} cents.`] }),
     check: ({ c, s }, v) => v[0] * 100 + v[1] === c && v[2] === c - s * 100 }),
 
-  fam({ id: 'g4.money.list-table-total', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.TOTAL_COST', outcome: 'MATH.G4.MEASUR.MONEY.c', misMapped: false, reveals: ['M_COST_ONE_ITEM_ONLY'], rung: 2, form: 'table',
+  fam({ id: 'g4.money.list-table-total', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.TOTAL_COST', outcome: 'MATH.G4.MEASUR.MONEY.c', rung: 2, form: 'table',
     draw: () => {
       const ITEMS = [['kg of rice', 'Rice (1 kg)'], ['kg of sugar', 'Sugar (1 kg)'], ['loaf of bread', 'Bread (1 loaf)'], ['litre of milk', 'Milk (1 litre)'], ['exercise book', 'Exercise book'], ['pencil', 'Pencil'], ['egg', 'Egg'], ['kg of beans', 'Beans (1 kg)']];
       const its = [...ITEMS].sort(() => Math.random() - 0.5).slice(0, 3), q = its.map(() => randInt(2, 6)), pr = its.map(([k]) => price(k)), cost = q.map((n, i) => n * pr[i]), total = sum(cost);
@@ -778,7 +778,7 @@ export const FAMILIES = [
       question: 'The table shows a shopping list. What is the total cost, in shillings?',
       model: { type: 'table', data: { head: ['Item', 'Number bought', 'Price each (sh)'], rows: its.map(([, l], i) => ({ cells: [l, String(q[i]), String(pr[i])] })) } },
       answer: total,
-      wrong: [[sum(pr), 'That adds the prices of one of each item. Count how many of each are bought.'], [total - cost[2], 'That leaves out the last item. Include every row.'], [sum(q.map((n, i) => n + pr[i])), 'The number bought and the price are not added. Multiply them for each item.']],
+      wrong: [[sum(pr), 'That adds the prices of one of each item. Count how many of each are bought.', 'M_LIST_OMITS_QUANTITY'], [total - cost[2], 'That leaves out the last item. Include every row.', 'M_COST_ONE_ITEM_ONLY'], [sum(q.map((n, i) => n + pr[i])), 'The number bought and the price are not added. Multiply them for each item.', 'M_COST_ADDS_QUANTITY']],
       hints: ['For each row, multiply the number bought by the price each.', 'Then add the three costs.'],
       steps: its.map(([, l], i) => `${l}: ${q[i]} × ${pr[i]} = ${cost[i]}.`).concat([`Total: ${cost.join(' + ')} = ${commas(total)}.`]) }),
     check: ({ q, pr, total }, a) => q.reduce((t, n, i) => t + pr[i] * n, 0) === a && a === total }),
@@ -833,7 +833,7 @@ export const FAMILIES = [
         steps: ['Find every fold line where the two halves match.', `${cap(name)} has ${lines} lines of symmetry.`] };
     } }),
 
-  fam({ id: 'g4.symmetry.letters', skill: 'G4_PLANE_FIGURES', cskill: 'MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY', outcome: 'MATH.G4.GEOMET.PLANE_FIGURES.c', misMapped: false, reveals: [], rung: 1, form: 'direct',
+  fam({ id: 'g4.symmetry.letters', skill: 'G4_PLANE_FIGURES', cskill: 'MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY', outcome: 'MATH.G4.GEOMET.PLANE_FIGURES.c', misMapped: false, reveals: ['M_SYM_ANY_LINE'], rung: 1, form: 'direct',
     draw: () => {
       const G = { none: ['F', 'G', 'J', 'L', 'P', 'R'], one: ['A', 'B', 'C', 'D', 'E', 'K', 'M', 'T', 'U', 'V', 'W', 'Y'], two: ['H', 'I', 'O', 'X'] };
       const T = pick(['none', 'one', 'two']), others = ['none', 'one', 'two'].filter(t => t !== T);

@@ -1,0 +1,296 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.USE_OF_LETTERS",
+ "title": "Use of letters",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words (verified); d is attitudinal and is not mapped. HOREB filed this sub-strand under Algebra; KICD files it under Numbers. Expressions have one letter and simple addition and subtraction only, for example 3m + 2m.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
+   "key_step": "The child reads a letter as a number not yet known, puts its value in place of the letter, and reads 3p as 3 times p.",
+   "floor": {
+    "prerequisite": "Missing numbers in a box (Grade 3).",
+    "question": "□ + 4 = 10. What is in the box?",
+    "answer": "6"
+   },
+   "representations": [
+    "a box with a letter on it",
+    "price tags with letters",
+    "a table of values"
+   ],
+   "steps": [
+    "The letter stands for a number.",
+    "Put the value in place of the letter.",
+    "3p means 3 x p.",
+    "Work it out."
+   ],
+   "contexts": [
+    "the price of a pencil at the school shop",
+    "the number of mangoes in a bag",
+    "the age of a sister"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write p = 20 and 3p."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3p.",
+     "say": "What does 3p mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3 times p."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 x 20 = 60."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_LETTER_IS_ITS_ALPHABET_POSITION",
+     "listen_for": [
+      "3",
+      "a is 1"
+     ],
+     "ask": "Is a the first letter, or a number we were told?",
+     "repair": "We were told a = 5: 7."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_LETTER_IS_OBJECT",
+     "listen_for": [
+      "3 bananas"
+     ],
+     "ask": "Is b the bananas or the number of bananas?",
+     "repair": "The number: 3 x b."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_DIFFERENT_LETTERS_DIFFERENT_NUMBERS",
+     "listen_for": [
+      "must be different"
+     ],
+     "ask": "Can two letters stand for the same number?",
+     "repair": "Yes: y + y = 8."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_LETTER_IGNORED",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "What number does n stand for?",
+     "repair": "6: 6 + 4 = 10."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_JOINED_AS_DIGITS",
+     "listen_for": [
+      "320"
+     ],
+     "ask": "Is 3p three hundred and twenty?",
+     "repair": "No: 3 x 20 = 60."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_COEFFICIENT_ADDED",
+     "listen_for": [
+      "23"
+     ],
+     "ask": "Add or multiply?",
+     "repair": "Multiply: 60."
+    }
+   ],
+   "checks": [
+    {
+     "question": "If m = 7, what is m + 5?",
+     "answer": "12",
+     "shows": "substitution"
+    },
+    {
+     "question": "If k = 9, what is 4k?",
+     "answer": "36",
+     "shows": "times"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
+   "key_step": "The child chooses the operation from the story (more: +, fewer: -, each: x) and keeps the letter for the unknown amount.",
+   "floor": {
+    "prerequisite": "A letter stands for a number.",
+    "question": "If b = 4, what is b + 3?",
+    "answer": "7"
+   },
+   "representations": [
+    "a bar model",
+    "story cards",
+    "a table of inputs and outputs"
+   ],
+   "steps": [
+    "Name the unknown with a letter.",
+    "Find the action: get, give, each, share.",
+    "Choose the operation.",
+    "Write the expression in story order."
+   ],
+   "contexts": [
+    "books Ann has",
+    "mangoes in bags",
+    "money left after shopping"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 3 bags, each labelled m."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bags.",
+     "say": "How do we write the mangoes in 3 bags?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3 x m."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_NOT_NUMBER_WORD",
+     "listen_for": [
+      "5b"
+     ],
+     "ask": "Does Ann get 5 lots of b, or b more?",
+     "repair": "b more: 5 + b."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_WRONG_OPERATION",
+     "listen_for": [
+      "m + 3"
+     ],
+     "ask": "Is it 3 more mangoes or 3 bags of m?",
+     "repair": "3 bags: 3m."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_ORDER_OF_SUBTRACTION",
+     "listen_for": [
+      "20 - t"
+     ],
+     "ask": "What did Tom start with?",
+     "repair": "t: t - 20."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_GUESSES_NUMBER",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Do we know how many sweets she had?",
+     "repair": "No: s + 4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A box has k pencils. Write the pencils in 5 boxes.",
+     "answer": "5k",
+     "shows": "times"
+    },
+    {
+     "question": "Otieno had y shillings and spent 50. Write what is left.",
+     "answer": "y - 50",
+     "shows": "take away in order"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
+   "key_step": "The child adds or takes away the numbers in front of the same letter and keeps the letter; different letters stay apart.",
+   "floor": {
+    "prerequisite": "Forms expressions.",
+    "question": "Write 2 bags of b and 3 more bags of b.",
+    "answer": "2b + 3b"
+   },
+   "representations": [
+    "bags labelled with letters",
+    "like terms in the same colour",
+    "fruit: apples and oranges"
+   ],
+   "steps": [
+    "Find terms with the same letter.",
+    "Add or take away the numbers in front.",
+    "Keep the letter.",
+    "Leave terms with other letters as they are."
+   ],
+   "contexts": [
+    "bags of maize and beans",
+    "boxes of chalk",
+    "crates of soda"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3a + 2a."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two a terms.",
+     "say": "How many lots of a altogether?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 5."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5a."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_ADD_UNLIKE",
+     "listen_for": [
+      "5ab"
+     ],
+     "ask": "Are a and b the same thing?",
+     "repair": "No: leave it as 3a + 2b."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_LETTER_DROPPED",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "5 what?",
+     "repair": "5a."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_LETTER_SQUARED",
+     "listen_for": [
+      "7bb"
+     ],
+     "ask": "Is it 7 lots of b, or b times b?",
+     "repair": "7 lots: 7b."
+    },
+    {
+     "code": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_SUBTRACT_WRONG",
+     "listen_for": [
+      "10b"
+     ],
+     "ask": "Is the sign + or -?",
+     "repair": "Take away: 4b."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Simplify 6k + 2k.",
+     "answer": "8k",
+     "shows": "adding like terms"
+    },
+    {
+     "question": "Simplify 9m - 4m + 2n.",
+     "answer": "5m + 2n",
+     "shows": "unlike terms kept"
+    }
+   ]
+  }
+ ]
+}

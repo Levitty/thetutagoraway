@@ -1,0 +1,286 @@
+{
+ "sub_strand": "MATH.G4.NUMBER.DIVISION",
+ "title": "Division",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a, b are KICD's words (verified); c and d are digital use and attitude and are not mapped. Outcome a is one outcome 'with and without remainder', split into two skills. The divisor is one digit and the dividend at most two digits.",
+ "skills": [
+  {
+   "skill": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
+   "key_step": "The child shares the tens first, joins any tens left over to the ones, and checks by multiplying back.",
+   "floor": {
+    "prerequisite": "Divides a 2-digit number by a 1-digit number without a remainder (Grade 3).",
+    "question": "24 ÷ 3",
+    "answer": "8"
+   },
+   "representations": [
+    "bundles of ten and loose sticks",
+    "sharing counters into groups",
+    "the long division layout"
+   ],
+   "steps": [
+    "Share the tens.",
+    "Untie any tens left over and add them to the ones.",
+    "Share the ones.",
+    "Check: answer x divisor = the number."
+   ],
+   "contexts": [
+    "sharing oranges among children",
+    "packing eggs into trays",
+    "chairs in equal rows"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 5 bundles and 2 sticks: 52."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bundles.",
+     "say": "How many bundles does each of 4 children get?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1, with 1 left over."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child unties the extra bundle and shares 12 sticks."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 52 ÷ 4 = 13."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_LARGER_BY_SMALLER",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "What is 13 x 6?",
+     "repair": "78, too much: 12."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_ZERO_DROPPED",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Is 2 x 3 equal to 60?",
+     "repair": "No: 20."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_SUBTRACT",
+     "listen_for": [
+      "32"
+     ],
+     "ask": "Did we share or take away?",
+     "repair": "Share: 9 each."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_TENS_REMAINDER_LOST",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Where did the extra ten go?",
+     "repair": "Untie it: 12 ones, 3 each, so 13."
+    }
+   ],
+   "checks": [
+    {
+     "question": "84 ÷ 7",
+     "answer": "12",
+     "shows": "sharing tens and ones"
+    },
+    {
+     "question": "96 ÷ 6",
+     "answer": "16",
+     "shows": "a ten left over"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
+   "key_step": "The child divides, checks the remainder is less than the divisor, and decides in a story whether the remainder needs one more group.",
+   "floor": {
+    "prerequisite": "Divides without a remainder.",
+    "question": "45 ÷ 5",
+    "answer": "9"
+   },
+   "representations": [
+    "counters shared into groups",
+    "buses and children",
+    "repeated subtraction on a number line"
+   ],
+   "steps": [
+    "Find the biggest multiple not more than the number.",
+    "Subtract to find the remainder.",
+    "Check the remainder is less than the divisor.",
+    "In a story, decide what to do with it."
+   ],
+   "contexts": [
+    "children in buses of 10",
+    "eggs in packets of 6",
+    "mangoes in bags of 4"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 47 dots and loop groups of 5."
+    },
+    {
+     "beat": "count",
+     "do": "Count the loops with the child."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: can 7 be left over?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 47 ÷ 5 = 9 remainder 2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_TOO_BIG",
+     "listen_for": [
+      "8 remainder 7"
+     ],
+     "ask": "Can 7 make another group of 5?",
+     "repair": "Yes: 9 remainder 2."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_IGNORED",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Are any left over?",
+     "repair": "Yes, 3: 5 remainder 3."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_AS_ANSWER",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Is 4 the packets or the eggs left?",
+     "repair": "The eggs left: 6 packets."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_STORY_REMAINDER_DOWN",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Where do the last 7 children sit?",
+     "repair": "In one more bus: 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "58 ÷ 6",
+     "answer": "9 remainder 4",
+     "shows": "remainder"
+    },
+    {
+     "question": "33 learners sit 4 to a bench. How many benches are needed?",
+     "answer": "9",
+     "shows": "rounding up in a story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
+   "key_step": "The child sees one array as a multiplication and two divisions, and uses multiplying to check or find a missing number.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "7 x 8",
+    "answer": "56"
+   },
+   "representations": [
+    "an array of counters",
+    "a fact family triangle",
+    "egg trays"
+   ],
+   "steps": [
+    "Write the multiplication fact.",
+    "Read the array by rows: one division.",
+    "Read it by columns: the other division.",
+    "Check a division by multiplying."
+   ],
+   "contexts": [
+    "eggs in trays",
+    "learners in rows at assembly",
+    "books shared equally"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an array of 6 rows of 7."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rows.",
+     "say": "How many in each row?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the two division facts."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 x 7 = 42, 42 ÷ 7 = 6, 42 ÷ 6 = 7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_WRONG_FACT",
+     "listen_for": [
+      "6 ÷ 42"
+     ],
+     "ask": "Which number is the whole?",
+     "repair": "42: it comes first, 42 ÷ 7."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_CHECK_ADDS",
+     "listen_for": [
+      "7 + 8"
+     ],
+     "ask": "What undoes dividing?",
+     "repair": "Multiplying: 8 x 7."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_MISSING_ADDS",
+     "listen_for": [
+      "48"
+     ],
+     "ask": "Is it times or take away?",
+     "repair": "Times: 54 ÷ 6 = 9."
+    },
+    {
+     "code": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_ONE_DIVISION_ONLY",
+     "listen_for": [
+      "only one"
+     ],
+     "ask": "Turn the array round. What do you see?",
+     "repair": "7 rows of 6: 42 ÷ 6 = 7."
+    }
+   ],
+   "checks": [
+    {
+     "question": "8 x 9 = 72. Write the two division facts.",
+     "answer": "72 ÷ 9 = 8 and 72 ÷ 8 = 9",
+     "shows": "fact family"
+    },
+    {
+     "question": "? x 7 = 63",
+     "answer": "9",
+     "shows": "missing factor"
+    }
+   ]
+  }
+ ]
+}
