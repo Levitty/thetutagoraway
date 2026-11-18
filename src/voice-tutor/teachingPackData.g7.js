@@ -12270,6 +12270,1434 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Temperature",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "key_step": "The child finds the total cost and the total selling money first, then subtracts the smaller from the bigger.",
+  "floor": {
+   "prerequisite": "Subtracts money.",
+   "question": "sh 2,500 - sh 2,200",
+   "answer": "sh 300"
+  },
+  "representations": [
+   "a table of buying and selling",
+   "a bar for cost and for selling",
+   "one item then many"
+  ],
+  "steps": [
+   "Total cost.",
+   "Total selling money.",
+   "Subtract.",
+   "Say profit or loss."
+  ],
+  "contexts": [
+   "tomatoes at a market",
+   "a faulty radio",
+   "mandazi at school"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 30 kg bought at sh 60, sold at sh 80."
+   },
+   {
+    "beat": "point",
+    "do": "Point at sh 60 and sh 80.",
+    "say": "What is the cost of all 30 kg?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 2,400 - 1,800 = 600."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PROFIT_ON_ONE_UNIT",
+    "listen_for": [
+     "sh 20"
+    ],
+    "ask": "Is that for one kilogram or for all?",
+    "repair": "All 30: times 30.",
+    "error": "Gives the profit on one kilogram as the whole profit.",
+    "example": {
+     "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+     "wrong_answer": "sh 20",
+     "correct_answer": "sh 600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_AS_PROFIT",
+    "listen_for": [
+     "sh 2,400"
+    ],
+    "ask": "Did the tomatoes cost nothing?",
+    "repair": "Take the cost away.",
+    "error": "Gives the money from selling as the profit.",
+    "example": {
+     "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+     "wrong_answer": "sh 2,400",
+     "correct_answer": "sh 600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_COST_AS_PROFIT",
+    "listen_for": [
+     "sh 1,800"
+    ],
+    "ask": "Is that money in or money out?",
+    "repair": "Money out.",
+    "error": "Gives the cost of buying as the profit.",
+    "example": {
+     "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+     "wrong_answer": "sh 1,800",
+     "correct_answer": "sh 600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_BUYING_PRICE_AS_LOSS",
+    "listen_for": [
+     "sh 2,500 lost"
+    ],
+    "ask": "Did she get nothing back?",
+    "repair": "Only the difference.",
+    "error": "Gives the buying price as the loss.",
+    "example": {
+     "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+     "wrong_answer": "sh 2,500",
+     "correct_answer": "sh 300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_PRICE_AS_LOSS",
+    "listen_for": [
+     "sh 2,200"
+    ],
+    "ask": "Is that what she lost or what she got?",
+    "repair": "What she got.",
+    "error": "Gives the selling price as the loss.",
+    "example": {
+     "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+     "wrong_answer": "sh 2,200",
+     "correct_answer": "sh 300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PRICES_ADDED_FOR_LOSS",
+    "listen_for": [
+     "added"
+    ],
+    "ask": "Is a loss the two prices together?",
+    "repair": "Subtract.",
+    "error": "Adds the buying and selling prices.",
+    "example": {
+     "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+     "wrong_answer": "sh 4,700",
+     "correct_answer": "sh 300"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "25 kg bought at sh 50, sold at sh 70 a kg: profit?",
+    "answer": "sh 500",
+    "shows": "totals"
+   },
+   {
+    "question": "Bought at sh 3,000, sold at sh 2,600: profit or loss, and how much?",
+    "answer": "loss of sh 400",
+    "shows": "which"
+   }
+  ],
+  "name": "Work out profit and loss from buying and selling prices",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS",
+  "key_step": "The child puts every cost, including delivery, into the total cost before subtracting.",
+  "floor": {
+   "prerequisite": "Profit from cost and selling.",
+   "question": "cost 28,000, selling 32,000",
+   "answer": "4,000"
+  },
+  "representations": [
+   "a list of costs",
+   "a bar of money in and out",
+   "a three-step table"
+  ],
+  "steps": [
+   "Goods plus extra costs.",
+   "Selling money for all.",
+   "Subtract."
+  ],
+  "contexts": [
+   "cement and delivery",
+   "sukuma and transport",
+   "soda and a crate deposit"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 40 bags at sh 700, delivery sh 1,500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the delivery.",
+    "say": "Is the delivery part of the cost?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 28,000 + 1,500 = 29,500."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_EXTRA_COST_LEFT_OUT",
+    "listen_for": [
+     "no delivery"
+    ],
+    "ask": "Who paid the delivery?",
+    "repair": "The seller: add it.",
+    "error": "Leaves the delivery or transport cost out of the total cost.",
+    "example": {
+     "question": "40 bags at sh 700, delivery sh 1,500, sold at sh 800: profit",
+     "wrong_answer": "sh 4,000",
+     "correct_answer": "sh 2,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_ONE_ITEM_FOR_ALL",
+    "listen_for": [
+     "sh 800"
+    ],
+    "ask": "How many bags were sold?",
+    "repair": "Times 40.",
+    "error": "Gives the price of one bag as the money from selling all.",
+    "example": {
+     "question": "40 bags sold at sh 800 each: money from selling",
+     "wrong_answer": "sh 800",
+     "correct_answer": "sh 32,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "40 bags at sh 700, delivery sh 1,500, sold at sh 800 each: profit?",
+    "answer": "sh 2,500",
+    "shows": "all costs"
+   },
+   {
+    "question": "50 crates at sh 900, transport sh 2,000, sold at sh 1,000: profit?",
+    "answer": "sh 3,000",
+    "shows": "all costs"
+   }
+  ],
+  "name": "Work out profit when there are extra costs such as transport",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "key_step": "The child divides the profit by the buying price, never the selling price, and multiplies by 100.",
+  "floor": {
+   "prerequisite": "A fraction as a percentage.",
+   "question": "1/4 as a percentage",
+   "answer": "25%"
+  },
+  "representations": [
+   "profit over buying price",
+   "a 100 square",
+   "a table of items"
+  ],
+  "steps": [
+   "Profit in shillings.",
+   "Over the buying price.",
+   "Times 100.",
+   "Compare percentages, not shillings."
+  ],
+  "contexts": [
+   "a school bag",
+   "a radio",
+   "three items at a stall"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: bought sh 2,000, sold sh 2,500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at sh 2,000.",
+    "say": "Which price do we compare the profit with?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 500 / 2,000 x 100 = 25%."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PERCENT_ON_SELLING_PRICE",
+    "listen_for": [
+     "over 2,500"
+    ],
+    "ask": "Which price did the trader start with?",
+    "repair": "The buying price.",
+    "error": "Takes the percentage on the selling price.",
+    "example": {
+     "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+     "wrong_answer": "20%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PROFIT_AMOUNT_AS_PERCENT",
+    "listen_for": [
+     "500%"
+    ],
+    "ask": "Is 500 a percentage?",
+    "repair": "Divide and times 100.",
+    "error": "Gives the profit in shillings as the percentage.",
+    "example": {
+     "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+     "wrong_answer": "500",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_SELLING_OVER_BUYING_PERCENT",
+    "listen_for": [
+     "125%"
+    ],
+    "ask": "Is the profit the whole selling price?",
+    "repair": "Find the profit first.",
+    "error": "Writes the selling price as a percentage of the buying price.",
+    "example": {
+     "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+     "wrong_answer": "125%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_NOT_MULTIPLIED_BY_100",
+    "listen_for": [
+     "0.25%"
+    ],
+    "ask": "What turns 0.25 into a percentage?",
+    "repair": "Times 100.",
+    "error": "Writes the decimal as the percentage.",
+    "example": {
+     "question": "500 / 2,000 = 0.25: percentage",
+     "wrong_answer": "0.25%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_BIGGEST_AMOUNT_AS_BIGGEST_PERCENT",
+    "listen_for": [
+     "the most shillings"
+    ],
+    "ask": "Out of what did it make that profit?",
+    "repair": "Its own buying price.",
+    "error": "Chooses the item with the biggest profit in shillings as the best percentage.",
+    "example": {
+     "question": "Bag: bought 400, sold 600. Jacket: bought 2,000, sold 2,400. Best percentage?",
+     "wrong_answer": "Jacket",
+     "correct_answer": "Bag (50% against 20%)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bought sh 800, sold sh 1,000: percentage profit?",
+    "answer": "25%",
+    "shows": "buying price"
+   },
+   {
+    "question": "Bought sh 1,200, sold sh 900: percentage loss?",
+    "answer": "25%",
+    "shows": "loss"
+   }
+  ],
+  "name": "Calculate percentage profit and loss",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "key_step": "The child takes the discount off the marked price, and a second discount off the new price.",
+  "floor": {
+   "prerequisite": "A percentage of an amount.",
+   "question": "20% of 1,000",
+   "answer": "200"
+  },
+  "representations": [
+   "a price tag with a cut",
+   "start at 100",
+   "a bar cut twice"
+  ],
+  "steps": [
+   "Discount = percentage of the marked price.",
+   "Price paid = marked - discount.",
+   "A second discount: on the new price.",
+   "Percentage discount = discount / marked x 100."
+  ],
+  "contexts": [
+   "a coat in a sale",
+   "shoes at a market",
+   "a phone offer"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Start at 100. Write 20% off."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 80.",
+    "say": "What is 10% of 80?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80 - 8 = 72, so 28% off in all."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SUCCESSIVE_DISCOUNTS_ADDED",
+    "listen_for": [
+     "30%"
+    ],
+    "ask": "Is the second 10% of 100 or of 80?",
+    "repair": "Of 80.",
+    "error": "Adds two discounts one after another as one percentage.",
+    "example": {
+     "question": "20% off, then 10% off the new price: total discount",
+     "wrong_answer": "30%",
+     "correct_answer": "28%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNTS_NOT_COMBINABLE",
+    "listen_for": [
+     "cannot be combined"
+    ],
+    "ask": "Can we take one off and then the other?",
+    "repair": "Yes.",
+    "error": "Believes two discounts cannot be combined.",
+    "example": {
+     "question": "20% off, then 10% off: can we find the total?",
+     "wrong_answer": "no",
+     "correct_answer": "yes, 28%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SECOND_DISCOUNT_IGNORED",
+    "listen_for": [
+     "only 20%"
+    ],
+    "ask": "Did the second discount take money off?",
+    "repair": "Yes.",
+    "error": "Leaves out the second discount.",
+    "example": {
+     "question": "20% off, then 10% off: total discount",
+     "wrong_answer": "20%",
+     "correct_answer": "28%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNT_AS_PRICE_PAID",
+    "listen_for": [
+     "sh 200 to pay"
+    ],
+    "ask": "Is that what you pay or what you save?",
+    "repair": "What you save.",
+    "error": "Gives the discount as the price to pay.",
+    "example": {
+     "question": "Marked sh 1,000, 20% off: price paid",
+     "wrong_answer": "sh 200",
+     "correct_answer": "sh 800"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Marked sh 1,500, 20% discount: price paid?",
+    "answer": "sh 1,200",
+    "shows": "off the marked price"
+   },
+   {
+    "question": "20% off, then 10% off the new price: total percentage off?",
+    "answer": "28%",
+    "shows": "second on the new price"
+   }
+  ],
+  "name": "Calculate a discount, a percentage discount and the price after it",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "key_step": "The child says what percentage of the marked price was paid and finds 1%, then 100%.",
+  "floor": {
+   "prerequisite": "A percentage of an amount.",
+   "question": "80% of 1,000",
+   "answer": "800"
+  },
+  "representations": [
+   "a bar of 100% with 20% cut off",
+   "a ratio table",
+   "check forwards"
+  ],
+  "steps": [
+   "Paid = 100% - discount.",
+   "That percentage is the price paid.",
+   "Find 1%.",
+   "Find 100%."
+  ],
+  "contexts": [
+   "a jacket in a sale",
+   "a school bag",
+   "a pair of shoes"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of 100% with 20% cut off."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the part paid.",
+    "say": "What percentage is sh 800?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80% = 800, 1% = 10, 100% = 1,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_DISCOUNT_ADDED_BACK_ON_PAID",
+    "listen_for": [
+     "sh 960"
+    ],
+    "ask": "Is 20% of 800 the same as 20% of the marked price?",
+    "repair": "No.",
+    "error": "Adds the discount percentage to the price paid.",
+    "example": {
+     "question": "Paid sh 800 after 20% off: marked price",
+     "wrong_answer": "sh 960",
+     "correct_answer": "sh 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PERCENT_AS_SHILLINGS",
+    "listen_for": [
+     "sh 820"
+    ],
+    "ask": "Is 20% the same as sh 20?",
+    "repair": "No.",
+    "error": "Adds the percentage as shillings.",
+    "example": {
+     "question": "Paid sh 800 after 20% off: marked price",
+     "wrong_answer": "sh 820",
+     "correct_answer": "sh 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PAID_AS_DISCOUNT_PERCENT",
+    "listen_for": [
+     "sh 4,000"
+    ],
+    "ask": "Was sh 800 20% or 80%?",
+    "repair": "80%.",
+    "error": "Treats the price paid as the discount percentage of the marked price.",
+    "example": {
+     "question": "Paid sh 800 after 20% off: marked price",
+     "wrong_answer": "sh 4,000",
+     "correct_answer": "sh 1,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Paid sh 1,200 after 25% off: marked price?",
+    "answer": "sh 1,600",
+    "shows": "work back"
+   },
+   {
+    "question": "Check: 25% off sh 1,600",
+    "answer": "sh 1,200",
+    "shows": "forwards"
+   }
+  ],
+  "name": "Find the marked price from the price paid after a discount",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "key_step": "The child finds which sales earn commission, changes the rate to a decimal by dividing by 100, and adds the basic salary.",
+  "floor": {
+   "prerequisite": "A percentage as a decimal.",
+   "question": "3%",
+   "answer": "0.03"
+  },
+  "representations": [
+   "a pay slip",
+   "sales above a target line",
+   "rate x sales"
+  ],
+  "steps": [
+   "Which sales earn it?",
+   "Rate as a decimal.",
+   "Commission = rate x sales.",
+   "Pay = basic + commission."
+  ],
+  "contexts": [
+   "a phone seller",
+   "a land agent",
+   "a matatu tout"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of sales with a target line at sh 100,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point above the line.",
+    "say": "How much is above the target?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3% of 150,000 = 4,500."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_ALL_SALES",
+    "listen_for": [
+     "on all the sales"
+    ],
+    "ask": "Which part earns commission?",
+    "repair": "Above the target.",
+    "error": "Works out commission on all the sales when it is only above a target.",
+    "example": {
+     "question": "3% on sales above sh 100,000; sales sh 250,000",
+     "wrong_answer": "sh 7,500",
+     "correct_answer": "sh 4,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_BASIC_SALARY_LEFT_OUT",
+    "listen_for": [
+     "only commission"
+    ],
+    "ask": "Is there a basic salary?",
+    "repair": "Add it.",
+    "error": "Gives the commission alone as the pay.",
+    "example": {
+     "question": "Basic sh 20,000 plus commission sh 4,500: pay",
+     "wrong_answer": "sh 4,500",
+     "correct_answer": "sh 24,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_TARGET",
+    "listen_for": [
+     "3% of the target"
+    ],
+    "ask": "Is the target the sales above it?",
+    "repair": "No.",
+    "error": "Works out commission on the target instead of the sales above it.",
+    "example": {
+     "question": "3% on sales above sh 100,000; sales sh 250,000",
+     "wrong_answer": "sh 3,000",
+     "correct_answer": "sh 4,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_PERCENT_AS_TENTHS",
+    "listen_for": [
+     "0.5 for 5%"
+    ],
+    "ask": "Per cent means out of what?",
+    "repair": "100.",
+    "error": "Divides the rate by 10 instead of 100.",
+    "example": {
+     "question": "5% as a decimal",
+     "wrong_answer": "0.5",
+     "correct_answer": "0.05"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Basic sh 20,000, 3% on sales above sh 100,000, sales sh 250,000: pay?",
+    "answer": "sh 24,500",
+    "shows": "above target"
+   },
+   {
+    "question": "5% commission on sh 300,000",
+    "answer": "sh 15,000",
+    "shows": "rate"
+   }
+  ],
+  "name": "Calculate commission, percentage commission and pay with a basic salary",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "key_step": "The child finds the units used from two readings, charges each band at its own rate, and adds the fixed charge.",
+  "floor": {
+   "prerequisite": "Subtracts readings.",
+   "question": "2,420 - 2,340",
+   "answer": "80"
+  },
+  "representations": [
+   "a bill with its lines",
+   "a band table",
+   "a meter"
+  ],
+  "steps": [
+   "Units used.",
+   "Charge each band.",
+   "Add the fixed charge.",
+   "Tokens: charges first, then divide."
+  ],
+  "contexts": [
+   "a KPLC bill",
+   "a county water bill",
+   "tokens at a shop"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write readings 2,340 and 2,420."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two readings.",
+    "say": "How many units were used this month?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80 x 25 + 200 = 2,200."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_READING_FOR_UNITS_USED",
+    "listen_for": [
+     "2,420 units"
+    ],
+    "ask": "Did the house use all 2,420 this month?",
+    "repair": "Only the difference.",
+    "error": "Uses this month's meter reading as the units used.",
+    "example": {
+     "question": "Readings 2,340 and 2,420, sh 25 a unit",
+     "wrong_answer": "2,420 units",
+     "correct_answer": "80 units"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIXED_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "no fixed charge"
+    ],
+    "ask": "What other line is on the bill?",
+    "repair": "The fixed charge.",
+    "error": "Leaves the fixed charge off the bill.",
+    "example": {
+     "question": "80 units at sh 25 and a fixed charge of sh 200",
+     "wrong_answer": "sh 2,000",
+     "correct_answer": "sh 2,200"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_BILL_PARTS_ADDED",
+    "listen_for": [
+     "added all"
+    ],
+    "ask": "Is the rate per unit added or multiplied?",
+    "repair": "Multiplied.",
+    "error": "Adds the units, the rate and the fixed charge.",
+    "example": {
+     "question": "80 units at sh 25 and a fixed charge of sh 200",
+     "wrong_answer": "sh 305",
+     "correct_answer": "sh 2,200"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_TOP_RATE_FOR_ALL_UNITS",
+    "listen_for": [
+     "all at the top rate"
+    ],
+    "ask": "Do the first 10 cost the top rate?",
+    "repair": "No.",
+    "error": "Charges every unit at the top band rate.",
+    "example": {
+     "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+     "wrong_answer": "sh 1,750",
+     "correct_answer": "sh 1,300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIRST_RATE_FOR_ALL_UNITS",
+    "listen_for": [
+     "all at the first rate"
+    ],
+    "ask": "Which units cost the first rate?",
+    "repair": "The first 10.",
+    "error": "Charges every unit at the first band rate.",
+    "example": {
+     "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+     "wrong_answer": "sh 1,000",
+     "correct_answer": "sh 1,300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_CHARGES_NOT_TAKEN_FIRST",
+    "listen_for": [
+     "1,000 / 25"
+    ],
+    "ask": "What comes off first?",
+    "repair": "The charges.",
+    "error": "Divides all the token money by the unit price.",
+    "example": {
+     "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+     "wrong_answer": "40",
+     "correct_answer": "36"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_MONEY_LEFT_AS_UNITS",
+    "listen_for": [
+     "900 units"
+    ],
+    "ask": "Is sh 900 the units?",
+    "repair": "Divide by 25.",
+    "error": "Gives the money left after charges as the number of units.",
+    "example": {
+     "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+     "wrong_answer": "900",
+     "correct_answer": "36"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Readings 1,500 and 1,620, sh 20 a unit, fixed sh 150: bill?",
+    "answer": "sh 2,550",
+    "shows": "units used"
+   },
+   {
+    "question": "25 units: first 10 at sh 40, next 10 at sh 55, after 20 at sh 70, fixed sh 100",
+    "answer": "sh 1,400",
+    "shows": "bands"
+   }
+  ],
+  "name": "Read an electricity or water bill and work out what is paid",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "key_step": "The child multiplies each line by the number bought before adding, then subtracts from the note.",
+  "floor": {
+   "prerequisite": "Number x price.",
+   "question": "3 x 150",
+   "answer": "450"
+  },
+  "representations": [
+   "a receipt",
+   "line totals",
+   "counting up change"
+  ],
+  "steps": [
+   "Each line: number x price.",
+   "Add the lines.",
+   "Change = note - total."
+  ],
+  "contexts": [
+   "a duka receipt",
+   "a supermarket",
+   "a canteen"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write a receipt: 2 bread at 60, 3 sugar at 150."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3.",
+    "say": "What does the sugar line cost?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 120 + 450 = 570, change 430."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_QUANTITY_IGNORED_ON_BILL",
+    "listen_for": [
+     "added the prices"
+    ],
+    "ask": "How many packets of sugar?",
+    "repair": "Three: multiply.",
+    "error": "Adds the prices without multiplying by the number bought.",
+    "example": {
+     "question": "2 loaves at 60 and 3 kg of sugar at 150; paid with sh 1,000",
+     "wrong_answer": "sh 790",
+     "correct_answer": "sh 430"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_TOTAL_GIVEN_AS_CHANGE",
+    "listen_for": [
+     "sh 570"
+    ],
+    "ask": "Is that the change or the bill?",
+    "repair": "The bill.",
+    "error": "Gives the total of the bill as the change.",
+    "example": {
+     "question": "Total sh 570, paid with sh 1,000",
+     "wrong_answer": "sh 570",
+     "correct_answer": "sh 430"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_BILL_ADDED_TO_NOTE",
+    "listen_for": [
+     "sh 1,570"
+    ],
+    "ask": "Do you get more than you gave?",
+    "repair": "Subtract.",
+    "error": "Adds the bill to the note.",
+    "example": {
+     "question": "Total sh 570, paid with sh 1,000",
+     "wrong_answer": "sh 1,570",
+     "correct_answer": "sh 430"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2 bread at sh 60, 3 kg sugar at sh 150, paid sh 1,000: change?",
+    "answer": "sh 430",
+    "shows": "lines"
+   },
+   {
+    "question": "4 litres of milk at sh 60: line total?",
+    "answer": "sh 240",
+    "shows": "multiply"
+   }
+  ],
+  "name": "Read a shop bill or receipt and find the total and the change",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.PREPARE_BILL": {
+  "skill": "MATH.G7.MEASUR.MONEY.PREPARE_BILL",
+  "key_step": "The child writes quantity, unit price and line total for each item, in matching units, and adds the lines.",
+  "floor": {
+   "prerequisite": "Multiplies a quantity by a price.",
+   "question": "3 x 180",
+   "answer": "540"
+  },
+  "representations": [
+   "a bill with four columns",
+   "units checked",
+   "a total line"
+  ],
+  "steps": [
+   "List the items.",
+   "Quantity and unit price.",
+   "Line totals in matching units.",
+   "Add for the total."
+  ],
+  "contexts": [
+   "a school canteen order",
+   "a tailor's bill",
+   "a hardware order"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bill with columns: item, quantity, price, total."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 500 g of sugar at sh 160 a kg.",
+    "say": "How many kilograms is 500 g?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0.5 x 160 = 80."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_LINE_TOTAL_NOT_MULTIPLIED",
+    "listen_for": [
+     "copied the price"
+    ],
+    "ask": "How many kilograms were bought?",
+    "repair": "Multiply.",
+    "error": "Writes the price of one item as the line total.",
+    "example": {
+     "question": "3 kg of rice at sh 180 a kg: line total",
+     "wrong_answer": "sh 180",
+     "correct_answer": "sh 540"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_UNIT_PRICE_MISMATCHED",
+    "listen_for": [
+     "500 x 160"
+    ],
+    "ask": "Is the price per gram or per kilogram?",
+    "repair": "Per kg: 0.5 kg.",
+    "error": "Multiplies a price per kilogram by a mass in grams.",
+    "example": {
+     "question": "500 g of sugar at sh 160 a kg",
+     "wrong_answer": "sh 80,000",
+     "correct_answer": "sh 80"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bill: 3 kg rice at sh 180, 500 g sugar at sh 160 a kg. Total?",
+    "answer": "sh 620",
+    "shows": "lines and units"
+   },
+   {
+    "question": "2 dozen eggs at sh 300 a dozen: line total?",
+    "answer": "sh 600",
+    "shows": "quantity"
+   }
+  ],
+  "name": "Prepare a bill for items bought or a service",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "key_step": "The child charges each parcel by its own mass, and counts the first 100 g once.",
+  "floor": {
+   "prerequisite": "Changes kg to g.",
+   "question": "1.5 kg in g",
+   "answer": "1,500 g"
+  },
+  "representations": [
+   "a postage table",
+   "parcels in a row",
+   "100 g parts"
+  ],
+  "steps": [
+   "Each parcel's mass.",
+   "Its band.",
+   "Add the charges.",
+   "Rates: first part, then the extra parts."
+  ],
+  "contexts": [
+   "Posta Kenya parcels",
+   "a courier",
+   "a matatu parcel service"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write sh 80 for the first 100 g, sh 30 each extra 100 g."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 600 g.",
+    "say": "How many extra 100 g parts after the first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80 + 5 x 30 = 230."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_PARCELS_CHARGED_TOGETHER",
+    "listen_for": [
+     "one charge"
+    ],
+    "ask": "Were the parcels posted together?",
+    "repair": "No: one each.",
+    "error": "Adds the masses and charges one band for parcels posted separately.",
+    "example": {
+     "question": "Parcels of 300 g, 800 g and 1.5 kg posted one after another",
+     "wrong_answer": "one charge for 2.6 kg",
+     "correct_answer": "three charges added"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_HEAVIEST_RATE_FOR_ALL",
+    "listen_for": [
+     "all at the top"
+    ],
+    "ask": "Is the light parcel in the top band?",
+    "repair": "No.",
+    "error": "Charges every parcel at the rate of the heaviest.",
+    "example": {
+     "question": "Parcels of 300 g, 800 g and 1.5 kg",
+     "wrong_answer": "three times the 1.5 kg charge",
+     "correct_answer": "each parcel its own charge"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "no sh 80"
+    ],
+    "ask": "What does the first 100 g cost?",
+    "repair": "sh 80.",
+    "error": "Charges every 100 g at the extra rate and leaves out the first charge.",
+    "example": {
+     "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+     "wrong_answer": "sh 180",
+     "correct_answer": "sh 230"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_RATE_FOR_ALL_PARTS",
+    "listen_for": [
+     "all at sh 80"
+    ],
+    "ask": "Is every part sh 80?",
+    "repair": "Only the first.",
+    "error": "Charges every 100 g at the first rate.",
+    "example": {
+     "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+     "wrong_answer": "sh 480",
+     "correct_answer": "sh 230"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_COUNTED_AS_EXTRA",
+    "listen_for": [
+     "6 extra"
+    ],
+    "ask": "Is the first 100 g extra?",
+    "repair": "No: 5 extra.",
+    "error": "Counts the first 100 g as an extra part as well.",
+    "example": {
+     "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+     "wrong_answer": "sh 260",
+     "correct_answer": "sh 230"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g?",
+    "answer": "sh 230",
+    "shows": "first part"
+   },
+   {
+    "question": "Parcels of 300 g and 1.5 kg with bands up to 500 g sh 100, over 1 kg to 2 kg sh 300",
+    "answer": "sh 400",
+    "shows": "each its own band"
+   }
+  ],
+  "name": "Work out postal charges from a table or a rate",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "key_step": "The child matches the task to the service and says whether it has a charge.",
+  "floor": {
+   "prerequisite": "Says how money moves digitally.",
+   "question": "How can money go from one phone to another?",
+   "answer": "send money"
+  },
+  "representations": [
+   "a menu on the phone",
+   "a list of tasks",
+   "a till and a paybill sign"
+  ],
+  "steps": [
+   "What is the task?",
+   "Which service?",
+   "What is needed (number, account)?",
+   "Is there a charge?"
+  ],
+  "contexts": [
+   "school fees",
+   "a shop",
+   "cash from an agent"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: pay school fees; buy bread at a shop; get cash."
+   },
+   {
+    "beat": "point",
+    "do": "Point at school fees.",
+    "say": "Which service, and what number goes in the account box?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write paybill and the learner's admission number."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_PAYBILL_TILL_CONFUSED",
+    "listen_for": [
+     "till for fees"
+    ],
+    "ask": "Which service asks for an account number?",
+    "repair": "Paybill.",
+    "error": "Uses a till (buy goods) to pay a school fee paybill, or leaves out the account number.",
+    "example": {
+     "question": "Pay school fees to a paybill",
+     "wrong_answer": "use a till number",
+     "correct_answer": "paybill number and the learner's account number"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_SEND_FOR_WITHDRAW",
+    "listen_for": [
+     "send to get cash"
+    ],
+    "ask": "Who gives you the cash?",
+    "repair": "The agent, by withdraw.",
+    "error": "Confuses sending money to a person with withdrawing cash at an agent.",
+    "example": {
+     "question": "Get cash from your account",
+     "wrong_answer": "send money to the agent",
+     "correct_answer": "withdraw at an agent"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_ALL_SERVICES_FREE",
+    "listen_for": [
+     "all free"
+    ],
+    "ask": "Look at the message after sending: is there a charge?",
+    "repair": "Yes.",
+    "error": "Believes every mobile money service is free.",
+    "example": {
+     "question": "Which costs a charge: sending sh 1,500 or depositing sh 1,500?",
+     "wrong_answer": "neither",
+     "correct_answer": "sending"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which service pays a school fee?",
+    "answer": "paybill with an account number",
+    "shows": "service"
+   },
+   {
+    "question": "Which service gets you cash?",
+    "answer": "withdraw at an agent",
+    "shows": "service"
+   }
+  ],
+  "name": "Identify mobile money services for different transactions",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "key_step": "The child looks up each transaction in its own row and takes both the amount and its charge from the balance.",
+  "floor": {
+   "prerequisite": "Reads a table.",
+   "question": "sh 700 is in which row: 501 to 1,000?",
+   "answer": "yes"
+  },
+  "representations": [
+   "a charges table",
+   "an account balance line",
+   "the message from the phone"
+  ],
+  "steps": [
+   "Find each row.",
+   "Each charge.",
+   "Add charges for separate sends.",
+   "Balance = start - amount - charge."
+  ],
+  "contexts": [
+   "sending to an aunt",
+   "withdrawing at an agent",
+   "paying a bill"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: balance sh 3,000, withdraw sh 1,200, charge sh 43."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the charge.",
+    "say": "Where does the charge come from?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3,000 - 1,200 - 43 = 1,757."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_SENDS_CHARGED_TOGETHER",
+    "listen_for": [
+     "one charge for both"
+    ],
+    "ask": "Were they one send or two?",
+    "repair": "Two.",
+    "error": "Charges two separate sends as one send of the total.",
+    "example": {
+     "question": "Send sh 400, later sh 1,200: charges",
+     "wrong_answer": "one charge for sh 1,600",
+     "correct_answer": "two charges added"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_ONE_CHARGE_FOR_TWO_SENDS",
+    "listen_for": [
+     "only the big charge"
+    ],
+    "ask": "How many sends?",
+    "repair": "Two charges.",
+    "error": "Gives only the bigger send's charge.",
+    "example": {
+     "question": "Send sh 400, later sh 1,200: charges",
+     "wrong_answer": "the sh 1,200 charge only",
+     "correct_answer": "both charges"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAW_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "no charge taken"
+    ],
+    "ask": "Does the charge leave the account?",
+    "repair": "Yes.",
+    "error": "Takes the amount withdrawn but not the charge from the balance.",
+    "example": {
+     "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+     "wrong_answer": "sh 1,800",
+     "correct_answer": "sh 1,757"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAWN_AMOUNT_NOT_TAKEN",
+    "listen_for": [
+     "only the charge"
+    ],
+    "ask": "Did the cash leave the account?",
+    "repair": "Yes.",
+    "error": "Takes only the charge from the balance.",
+    "example": {
+     "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+     "wrong_answer": "sh 2,957",
+     "correct_answer": "sh 1,757"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_CHARGE_TAKEN_FROM_CASH",
+    "listen_for": [
+     "from the cash"
+    ],
+    "ask": "What does the question ask for?",
+    "repair": "The balance.",
+    "error": "Takes the charge from the cash withdrawn, answering how much cash is received.",
+    "example": {
+     "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43: balance",
+     "wrong_answer": "sh 1,157",
+     "correct_answer": "sh 1,757"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Balance sh 2,500, withdraw sh 700, charge sh 32: balance?",
+    "answer": "sh 1,768",
+    "shows": "both leave"
+   },
+   {
+    "question": "Send sh 400 (charge sh 7) and later sh 1,200 (charge sh 25): charges?",
+    "answer": "sh 32",
+    "shows": "two charges"
+   }
+  ],
+  "name": "Work out mobile money transactions and their charges",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
   "key_step": "The child puts the centre on the corner, a base line on one arm, and reads the scale that starts at zero on that arm.",

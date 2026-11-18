@@ -5893,6 +5893,692 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PROFIT_ON_ONE_UNIT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the profit on one kilogram as the whole profit.",
+  "example": {
+   "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+   "wrong_answer": "sh 20",
+   "correct_answer": "sh 600"
+  },
+  "cause": "Finds the difference in price and stops.",
+  "reveals": "The answer sh 20 as a wrong option, with a reason that names the idea.",
+  "help": "Every kilogram makes sh 20: times 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_AS_PROFIT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the money from selling as the profit.",
+  "example": {
+   "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+   "wrong_answer": "sh 2,400",
+   "correct_answer": "sh 600"
+  },
+  "cause": "Thinks all money taken in is profit.",
+  "reveals": "The answer sh 2,400 as a wrong option, with a reason that names the idea.",
+  "help": "Profit is what is left after the cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_COST_AS_PROFIT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the cost of buying as the profit.",
+  "example": {
+   "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+   "wrong_answer": "sh 1,800",
+   "correct_answer": "sh 600"
+  },
+  "cause": "Picks one of the totals worked out.",
+  "reveals": "The answer sh 1,800 as a wrong option, with a reason that names the idea.",
+  "help": "Profit = selling money - cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_BUYING_PRICE_AS_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the buying price as the loss.",
+  "example": {
+   "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+   "wrong_answer": "sh 2,500",
+   "correct_answer": "sh 300"
+  },
+  "cause": "Thinks the money paid is lost.",
+  "reveals": "The answer sh 2,500 as a wrong option, with a reason that names the idea.",
+  "help": "Only the difference is lost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_PRICE_AS_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the selling price as the loss.",
+  "example": {
+   "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+   "wrong_answer": "sh 2,200",
+   "correct_answer": "sh 300"
+  },
+  "cause": "Reads the last number in the story.",
+  "reveals": "The answer sh 2,200 as a wrong option, with a reason that names the idea.",
+  "help": "Compare it with the buying price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PRICES_ADDED_FOR_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Adds the buying and selling prices.",
+  "example": {
+   "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+   "wrong_answer": "sh 4,700",
+   "correct_answer": "sh 300"
+  },
+  "cause": "Combines the two prices by adding.",
+  "reveals": "The answer sh 4,700 as a wrong option, with a reason that names the idea.",
+  "help": "A loss is a difference: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_EXTRA_COST_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS",
+  "error": "Leaves the delivery or transport cost out of the total cost.",
+  "example": {
+   "question": "40 bags at sh 700, delivery sh 1,500, sold at sh 800: profit",
+   "wrong_answer": "sh 4,000",
+   "correct_answer": "sh 2,500"
+  },
+  "cause": "Counts only the price of the goods as cost.",
+  "reveals": "The answer sh 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Every shilling spent to get the goods is a cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_ONE_ITEM_FOR_ALL": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS",
+  "error": "Gives the price of one bag as the money from selling all.",
+  "example": {
+   "question": "40 bags sold at sh 800 each: money from selling",
+   "wrong_answer": "sh 800",
+   "correct_answer": "sh 32,000"
+  },
+  "cause": "Forgets to multiply by the number sold.",
+  "reveals": "The answer sh 800 as a wrong option, with a reason that names the idea.",
+  "help": "Times the number of bags.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PERCENT_ON_SELLING_PRICE": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Takes the percentage on the selling price.",
+  "example": {
+   "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+   "wrong_answer": "20%",
+   "correct_answer": "25%"
+  },
+  "cause": "Divides by the bigger, last price.",
+  "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+  "help": "Percentage profit is on the buying price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PROFIT_AMOUNT_AS_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Gives the profit in shillings as the percentage.",
+  "example": {
+   "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+   "wrong_answer": "500",
+   "correct_answer": "25%"
+  },
+  "cause": "Stops at the profit.",
+  "reveals": "The answer 500 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the buying price and multiply by 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_SELLING_OVER_BUYING_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Writes the selling price as a percentage of the buying price.",
+  "example": {
+   "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+   "wrong_answer": "125%",
+   "correct_answer": "25%"
+  },
+  "cause": "Compares the two prices instead of the profit.",
+  "reveals": "The answer 125% as a wrong option, with a reason that names the idea.",
+  "help": "Find the profit first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_NOT_MULTIPLIED_BY_100": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Writes the decimal as the percentage.",
+  "example": {
+   "question": "500 / 2,000 = 0.25: percentage",
+   "wrong_answer": "0.25%",
+   "correct_answer": "25%"
+  },
+  "cause": "Puts a % sign on the decimal.",
+  "reveals": "The answer 0.25% as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 100 to make a percentage.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_BIGGEST_AMOUNT_AS_BIGGEST_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Chooses the item with the biggest profit in shillings as the best percentage.",
+  "example": {
+   "question": "Bag: bought 400, sold 600. Jacket: bought 2,000, sold 2,400. Best percentage?",
+   "wrong_answer": "Jacket",
+   "correct_answer": "Bag (50% against 20%)"
+  },
+  "cause": "Compares shillings, not percentages.",
+  "reveals": "The answer Jacket as a wrong option, with a reason that names the idea.",
+  "help": "Each profit over its own buying price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SUCCESSIVE_DISCOUNTS_ADDED": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Adds two discounts one after another as one percentage.",
+  "example": {
+   "question": "20% off, then 10% off the new price: total discount",
+   "wrong_answer": "30%",
+   "correct_answer": "28%"
+  },
+  "cause": "Treats both percentages as of the first price.",
+  "reveals": "The answer 30% as a wrong option, with a reason that names the idea.",
+  "help": "The second is on the smaller price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNTS_NOT_COMBINABLE": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Believes two discounts cannot be combined.",
+  "example": {
+   "question": "20% off, then 10% off: can we find the total?",
+   "wrong_answer": "no",
+   "correct_answer": "yes, 28%"
+  },
+  "cause": "Has not seen the steps done one after another.",
+  "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+  "help": "Take one off, then the other off what is left.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SECOND_DISCOUNT_IGNORED": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Leaves out the second discount.",
+  "example": {
+   "question": "20% off, then 10% off: total discount",
+   "wrong_answer": "20%",
+   "correct_answer": "28%"
+  },
+  "cause": "Thinks only the first discount counts.",
+  "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+  "help": "The second takes money off too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNT_AS_PRICE_PAID": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Gives the discount as the price to pay.",
+  "example": {
+   "question": "Marked sh 1,000, 20% off: price paid",
+   "wrong_answer": "sh 200",
+   "correct_answer": "sh 800"
+  },
+  "cause": "Stops after finding 20%.",
+  "reveals": "The answer sh 200 as a wrong option, with a reason that names the idea.",
+  "help": "Take the discount off the marked price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_DISCOUNT_ADDED_BACK_ON_PAID": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "error": "Adds the discount percentage to the price paid.",
+  "example": {
+   "question": "Paid sh 800 after 20% off: marked price",
+   "wrong_answer": "sh 960",
+   "correct_answer": "sh 1,000"
+  },
+  "cause": "Takes 20% of the price paid instead of the marked price.",
+  "reveals": "The answer sh 960 as a wrong option, with a reason that names the idea.",
+  "help": "sh 800 is 80% of the marked price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PERCENT_AS_SHILLINGS": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "error": "Adds the percentage as shillings.",
+  "example": {
+   "question": "Paid sh 800 after 20% off: marked price",
+   "wrong_answer": "sh 820",
+   "correct_answer": "sh 1,000"
+  },
+  "cause": "Reads 20% as sh 20.",
+  "reveals": "The answer sh 820 as a wrong option, with a reason that names the idea.",
+  "help": "A percentage is a part of an amount.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PAID_AS_DISCOUNT_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "error": "Treats the price paid as the discount percentage of the marked price.",
+  "example": {
+   "question": "Paid sh 800 after 20% off: marked price",
+   "wrong_answer": "sh 4,000",
+   "correct_answer": "sh 1,000"
+  },
+  "cause": "Uses the discount rate as the paid part.",
+  "reveals": "The answer sh 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Paid = 100% - 20% = 80%.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_ALL_SALES": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Works out commission on all the sales when it is only above a target.",
+  "example": {
+   "question": "3% on sales above sh 100,000; sales sh 250,000",
+   "wrong_answer": "sh 7,500",
+   "correct_answer": "sh 4,500"
+  },
+  "cause": "Misses the words \"above\".",
+  "reveals": "The answer sh 7,500 as a wrong option, with a reason that names the idea.",
+  "help": "Take the target off first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_BASIC_SALARY_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Gives the commission alone as the pay.",
+  "example": {
+   "question": "Basic sh 20,000 plus commission sh 4,500: pay",
+   "wrong_answer": "sh 4,500",
+   "correct_answer": "sh 24,500"
+  },
+  "cause": "Stops after the commission.",
+  "reveals": "The answer sh 4,500 as a wrong option, with a reason that names the idea.",
+  "help": "Pay = basic + commission.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_TARGET": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Works out commission on the target instead of the sales above it.",
+  "example": {
+   "question": "3% on sales above sh 100,000; sales sh 250,000",
+   "wrong_answer": "sh 3,000",
+   "correct_answer": "sh 4,500"
+  },
+  "cause": "Uses the target as the sales.",
+  "reveals": "The answer sh 3,000 as a wrong option, with a reason that names the idea.",
+  "help": "The part above the target: 250,000 - 100,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_PERCENT_AS_TENTHS": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Divides the rate by 10 instead of 100.",
+  "example": {
+   "question": "5% as a decimal",
+   "wrong_answer": "0.5",
+   "correct_answer": "0.05"
+  },
+  "cause": "Moves the point one place.",
+  "reveals": "The answer 0.5 as a wrong option, with a reason that names the idea.",
+  "help": "Per cent means out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_READING_FOR_UNITS_USED": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Uses this month's meter reading as the units used.",
+  "example": {
+   "question": "Readings 2,340 and 2,420, sh 25 a unit",
+   "wrong_answer": "2,420 units",
+   "correct_answer": "80 units"
+  },
+  "cause": "Reads the meter as the month's use.",
+  "reveals": "The answer 2,420 units as a wrong option, with a reason that names the idea.",
+  "help": "Units used = new reading - old reading.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIXED_CHARGE_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Leaves the fixed charge off the bill.",
+  "example": {
+   "question": "80 units at sh 25 and a fixed charge of sh 200",
+   "wrong_answer": "sh 2,000",
+   "correct_answer": "sh 2,200"
+  },
+  "cause": "Stops after the units.",
+  "reveals": "The answer sh 2,000 as a wrong option, with a reason that names the idea.",
+  "help": "Add the fixed charge.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_BILL_PARTS_ADDED": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Adds the units, the rate and the fixed charge.",
+  "example": {
+   "question": "80 units at sh 25 and a fixed charge of sh 200",
+   "wrong_answer": "sh 305",
+   "correct_answer": "sh 2,200"
+  },
+  "cause": "Adds every number on the bill.",
+  "reveals": "The answer sh 305 as a wrong option, with a reason that names the idea.",
+  "help": "Units times the rate, then add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_TOP_RATE_FOR_ALL_UNITS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Charges every unit at the top band rate.",
+  "example": {
+   "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+   "wrong_answer": "sh 1,750",
+   "correct_answer": "sh 1,300"
+  },
+  "cause": "Uses the band the total falls in for all units.",
+  "reveals": "The answer sh 1,750 as a wrong option, with a reason that names the idea.",
+  "help": "Each band has its own rate.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIRST_RATE_FOR_ALL_UNITS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Charges every unit at the first band rate.",
+  "example": {
+   "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+   "wrong_answer": "sh 1,000",
+   "correct_answer": "sh 1,300"
+  },
+  "cause": "Uses the first rate in the table.",
+  "reveals": "The answer sh 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "Only the first 10 cost 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_CHARGES_NOT_TAKEN_FIRST": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Divides all the token money by the unit price.",
+  "example": {
+   "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+   "wrong_answer": "40",
+   "correct_answer": "36"
+  },
+  "cause": "Forgets the charges come off first.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Take the charges off first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_MONEY_LEFT_AS_UNITS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Gives the money left after charges as the number of units.",
+  "example": {
+   "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+   "wrong_answer": "900",
+   "correct_answer": "36"
+  },
+  "cause": "Stops before dividing.",
+  "reveals": "The answer 900 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the price of one unit.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_QUANTITY_IGNORED_ON_BILL": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "error": "Adds the prices without multiplying by the number bought.",
+  "example": {
+   "question": "2 loaves at 60 and 3 kg of sugar at 150; paid with sh 1,000",
+   "wrong_answer": "sh 790",
+   "correct_answer": "sh 430"
+  },
+  "cause": "Reads only the price column.",
+  "reveals": "The answer sh 790 as a wrong option, with a reason that names the idea.",
+  "help": "Line cost = number x price each.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_TOTAL_GIVEN_AS_CHANGE": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "error": "Gives the total of the bill as the change.",
+  "example": {
+   "question": "Total sh 570, paid with sh 1,000",
+   "wrong_answer": "sh 570",
+   "correct_answer": "sh 430"
+  },
+  "cause": "Stops after the total.",
+  "reveals": "The answer sh 570 as a wrong option, with a reason that names the idea.",
+  "help": "Change = note - total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_BILL_ADDED_TO_NOTE": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "error": "Adds the bill to the note.",
+  "example": {
+   "question": "Total sh 570, paid with sh 1,000",
+   "wrong_answer": "sh 1,570",
+   "correct_answer": "sh 430"
+  },
+  "cause": "Combines the two amounts by adding.",
+  "reveals": "The answer sh 1,570 as a wrong option, with a reason that names the idea.",
+  "help": "Change is what is left: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_LINE_TOTAL_NOT_MULTIPLIED": {
+  "skill": "MATH.G7.MEASUR.MONEY.PREPARE_BILL",
+  "error": "Writes the price of one item as the line total.",
+  "example": {
+   "question": "3 kg of rice at sh 180 a kg: line total",
+   "wrong_answer": "sh 180",
+   "correct_answer": "sh 540"
+  },
+  "cause": "Copies the price column.",
+  "reveals": "The answer sh 180 as a wrong option, with a reason that names the idea.",
+  "help": "Quantity x unit price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_UNIT_PRICE_MISMATCHED": {
+  "skill": "MATH.G7.MEASUR.MONEY.PREPARE_BILL",
+  "error": "Multiplies a price per kilogram by a mass in grams.",
+  "example": {
+   "question": "500 g of sugar at sh 160 a kg",
+   "wrong_answer": "sh 80,000",
+   "correct_answer": "sh 80"
+  },
+  "cause": "Does not match the units.",
+  "reveals": "The answer sh 80,000 as a wrong option, with a reason that names the idea.",
+  "help": "500 g is 0.5 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_PARCELS_CHARGED_TOGETHER": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Adds the masses and charges one band for parcels posted separately.",
+  "example": {
+   "question": "Parcels of 300 g, 800 g and 1.5 kg posted one after another",
+   "wrong_answer": "one charge for 2.6 kg",
+   "correct_answer": "three charges added"
+  },
+  "cause": "Treats the parcels as one.",
+  "reveals": "The answer one charge for 2.6 kg as a wrong option, with a reason that names the idea.",
+  "help": "Each parcel is charged by its own mass.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_HEAVIEST_RATE_FOR_ALL": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Charges every parcel at the rate of the heaviest.",
+  "example": {
+   "question": "Parcels of 300 g, 800 g and 1.5 kg",
+   "wrong_answer": "three times the 1.5 kg charge",
+   "correct_answer": "each parcel its own charge"
+  },
+  "cause": "Uses one band for all.",
+  "reveals": "The answer three times the 1.5 kg charge as a wrong option, with a reason that names the idea.",
+  "help": "Look up each parcel.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_CHARGE_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Charges every 100 g at the extra rate and leaves out the first charge.",
+  "example": {
+   "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+   "wrong_answer": "sh 180",
+   "correct_answer": "sh 230"
+  },
+  "cause": "Forgets the first part has its own price.",
+  "reveals": "The answer sh 180 as a wrong option, with a reason that names the idea.",
+  "help": "First 100 g: sh 80.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_RATE_FOR_ALL_PARTS": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Charges every 100 g at the first rate.",
+  "example": {
+   "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+   "wrong_answer": "sh 480",
+   "correct_answer": "sh 230"
+  },
+  "cause": "Uses the first price for all parts.",
+  "reveals": "The answer sh 480 as a wrong option, with a reason that names the idea.",
+  "help": "Only the first part costs sh 80.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_COUNTED_AS_EXTRA": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Counts the first 100 g as an extra part as well.",
+  "example": {
+   "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+   "wrong_answer": "sh 260",
+   "correct_answer": "sh 230"
+  },
+  "cause": "Counts all six parts as extra.",
+  "reveals": "The answer sh 260 as a wrong option, with a reason that names the idea.",
+  "help": "600 g has 5 extra parts after the first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_PAYBILL_TILL_CONFUSED": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "error": "Uses a till (buy goods) to pay a school fee paybill, or leaves out the account number.",
+  "example": {
+   "question": "Pay school fees to a paybill",
+   "wrong_answer": "use a till number",
+   "correct_answer": "paybill number and the learner's account number"
+  },
+  "cause": "Thinks the two pay services are the same.",
+  "reveals": "The answer use a till number as a wrong option, with a reason that names the idea.",
+  "help": "A paybill needs an account number; a till is for paying a shop.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_SEND_FOR_WITHDRAW": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "error": "Confuses sending money to a person with withdrawing cash at an agent.",
+  "example": {
+   "question": "Get cash from your account",
+   "wrong_answer": "send money to the agent",
+   "correct_answer": "withdraw at an agent"
+  },
+  "cause": "Sees both as money leaving the account.",
+  "reveals": "The answer send money to the agent as a wrong option, with a reason that names the idea.",
+  "help": "Withdraw gives you cash; send moves money to another account.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_ALL_SERVICES_FREE": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "error": "Believes every mobile money service is free.",
+  "example": {
+   "question": "Which costs a charge: sending sh 1,500 or depositing sh 1,500?",
+   "wrong_answer": "neither",
+   "correct_answer": "sending"
+  },
+  "cause": "Does not see the charge in the message.",
+  "reveals": "The answer neither as a wrong option, with a reason that names the idea.",
+  "help": "Sending and withdrawing carry charges; depositing usually does not.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_SENDS_CHARGED_TOGETHER": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Charges two separate sends as one send of the total.",
+  "example": {
+   "question": "Send sh 400, later sh 1,200: charges",
+   "wrong_answer": "one charge for sh 1,600",
+   "correct_answer": "two charges added"
+  },
+  "cause": "Adds the amounts first.",
+  "reveals": "The answer one charge for sh 1,600 as a wrong option, with a reason that names the idea.",
+  "help": "Each send has its own charge.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_ONE_CHARGE_FOR_TWO_SENDS": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Gives only the bigger send's charge.",
+  "example": {
+   "question": "Send sh 400, later sh 1,200: charges",
+   "wrong_answer": "the sh 1,200 charge only",
+   "correct_answer": "both charges"
+  },
+  "cause": "Counts one charge.",
+  "reveals": "The answer the sh 1,200 charge only as a wrong option, with a reason that names the idea.",
+  "help": "Two sends: two charges.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAW_CHARGE_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Takes the amount withdrawn but not the charge from the balance.",
+  "example": {
+   "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+   "wrong_answer": "sh 1,800",
+   "correct_answer": "sh 1,757"
+  },
+  "cause": "Forgets the charge comes from the account.",
+  "reveals": "The answer sh 1,800 as a wrong option, with a reason that names the idea.",
+  "help": "Take both away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAWN_AMOUNT_NOT_TAKEN": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Takes only the charge from the balance.",
+  "example": {
+   "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+   "wrong_answer": "sh 2,957",
+   "correct_answer": "sh 1,757"
+  },
+  "cause": "Thinks only the charge is paid.",
+  "reveals": "The answer sh 2,957 as a wrong option, with a reason that names the idea.",
+  "help": "The cash taken out leaves the account too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_CHARGE_TAKEN_FROM_CASH": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Takes the charge from the cash withdrawn, answering how much cash is received.",
+  "example": {
+   "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43: balance",
+   "wrong_answer": "sh 1,157",
+   "correct_answer": "sh 1,757"
+  },
+  "cause": "Thinks the agent keeps the charge from the cash.",
+  "reveals": "The answer sh 1,157 as a wrong option, with a reason that names the idea.",
+  "help": "The question is the balance: start from sh 3,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE_READ": {
   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
   "error": "Reads the scale that does not start at zero on the arm.",

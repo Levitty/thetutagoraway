@@ -1095,6 +1095,115 @@
    ],
    "mastery": "The child starts from the first reading, adds each rise and subtracts each fall in turn, and gives the final temperature in degrees Celsius or kelvin."
   },
+  "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS": {
+   "forms": [
+    "profit on many kilograms",
+    "loss on a faulty item",
+    "profit or loss?",
+    "selling price from cost and profit"
+   ],
+   "mastery": "The child finds profit as selling money minus cost and loss as cost minus selling money, for one item or for many (kilograms of tomatoes), and says which it is."
+  },
+  "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS": {
+   "forms": [
+    "total cost with delivery",
+    "money from selling all",
+    "profit after transport",
+    "which costs count"
+   ],
+   "mastery": "The child adds extra costs (delivery, transport) to the cost of the goods, finds the money from selling all the items, and takes the total cost from it."
+  },
+  "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS": {
+   "forms": [
+    "percentage profit",
+    "percentage loss",
+    "find the wrong step",
+    "which item gave the best percentage"
+   ],
+   "mastery": "The child finds the profit or loss in shillings, divides it by the buying price (not the selling price) and multiplies by 100, and compares items by percentage, not by the shilling amount."
+  },
+  "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT": {
+   "forms": [
+    "discount in shillings",
+    "percentage discount",
+    "price after a discount",
+    "two discounts one after another"
+   ],
+   "mastery": "The child finds a discount as marked price minus price paid, writes it as a percentage of the marked price, takes a percentage discount off the marked price, and explains that a second discount is taken off the new, smaller price."
+  },
+  "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK": {
+   "forms": [
+    "marked price from price paid",
+    "what percentage was paid",
+    "find 1% then 100%",
+    "check by taking the discount off"
+   ],
+   "mastery": "The child says that after a 20% discount the price paid is 80% of the marked price, finds 1% and then 100%, and does not add 20% of the price paid back on."
+  },
+  "MATH.G7.MEASUR.MONEY.COMMISSION": {
+   "forms": [
+    "commission on sales",
+    "commission above a target",
+    "pay with a basic salary",
+    "find the wrong step",
+    "percentage commission"
+   ],
+   "mastery": "The child changes the rate to a decimal by dividing by 100, works out commission on the right part of the sales (all, or only the part above a target), and adds the basic salary for the month's pay."
+  },
+  "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS": {
+   "forms": [
+    "units from meter readings",
+    "water bill in bands",
+    "fixed charge",
+    "units a token buys"
+   ],
+   "mastery": "The child finds the units used as the difference of two meter readings, charges each band of units at its own rate, adds the fixed charge, and finds the units a token buys after the charges are taken."
+  },
+  "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL": {
+   "forms": [
+    "change from a note",
+    "total of a receipt",
+    "cost of one line",
+    "check a receipt"
+   ],
+   "mastery": "The child multiplies each line by the number bought, adds the lines for the total, and takes the total from the note given for the change."
+  },
+  "MATH.G7.MEASUR.MONEY.PREPARE_BILL": {
+   "forms": [
+    "write a bill",
+    "line totals",
+    "price per kg for grams",
+    "total to pay"
+   ],
+   "mastery": "The child writes each item with its quantity, unit price and line total, matches units (a price per kg with a mass in kg), adds all the lines and states the total to pay."
+  },
+  "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES": {
+   "forms": [
+    "three parcels from a table",
+    "first 100 g and each extra",
+    "which band",
+    "total postage"
+   ],
+   "mastery": "The child finds the band for each parcel by its own mass, adds the charge for each parcel posted, and for a rate such as sh 80 for the first 100 g and sh 30 for each extra 100 g counts one fewer extra part."
+  },
+  "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES": {
+   "forms": [
+    "which service for this task",
+    "paybill or till",
+    "send or withdraw",
+    "which ones are charged"
+   ],
+   "mastery": "The child names the service for a task: send money to a person, withdraw cash at an agent, deposit cash, pay a school fee to a paybill with an account number, pay a shop through a till (buy goods), buy airtime, save or borrow, and says which ones carry a charge."
+  },
+  "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS": {
+   "forms": [
+    "two sends, two charges",
+    "balance after a withdrawal",
+    "charge from the table",
+    "cash received"
+   ],
+   "mastery": "The child finds the charge for each send or withdrawal from its own row of a table, adds the charges for separate transactions, and finds the balance left after the amount and the charge both leave the account."
+  },
   "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
    "forms": [
     "read the angle",

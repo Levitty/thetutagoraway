@@ -855,49 +855,49 @@ export const FAMILIES = [
     check: ({ vals }, a) => Math.min(...vals) + a === Math.max(...vals) }),
 
   // =========================================================== MONEY
-  fam({ id: 'g7.money.profit-tomatoes', skill: 'G7_MONEY', outcome: 'G7.MONEY.a', rung: 2, form: 'word',
+  fam({ id: 'g7.money.profit-tomatoes', skill: 'G7_MONEY', outcome: 'MATH.G7.MEASUR.MONEY.a', cskill: 'MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS', rung: 2, form: 'word',
     draw: () => { const c = price('kg of tomatoes'), m = pick([10, 20, 30]), n = randInt(12, 40); return uniq(n * m, m, n * (c + m), n * c) ? { c, m, n, p: person() } : null; },
     make: ({ c, m, n, p }) => ({
       question: `${p.name} buys ${n} kg of tomatoes at ${sh(c)} a kilogram. ${p.She} sells all of them at ${sh(c + m)} a kilogram. How much profit does ${p.she} make, in shillings?`,
       answer: n * m,
-      wrong: [[m, 'That is the profit on 1 kg. There are several kilograms.'], [n * (c + m), 'That is the money from selling. Profit is what is left after the cost is taken away.'], [n * c, 'That is what the tomatoes cost to buy. Profit is selling money minus cost.']],
+      wrong: [[m, 'That is the profit on 1 kg. There are several kilograms.', 'M_PROFIT_ON_ONE_UNIT'], [n * (c + m), 'That is the money from selling. Profit is what is left after the cost is taken away.', 'M_SELLING_AS_PROFIT'], [n * c, 'That is what the tomatoes cost to buy. Profit is selling money minus cost.', 'M_COST_AS_PROFIT']],
       hints: ['Profit = money from selling − cost of buying.', 'Find the cost for all the tomatoes, and the selling money for all of them.'],
       steps: [`Cost: ${n} × ${c} = ${sh(n * c)}. Selling: ${n} × ${c + m} = ${sh(n * (c + m))}.`, `Profit = ${sh(n * (c + m))} − ${sh(n * c)} = ${sh(n * m)}.`],
     }),
     check: ({ c, m, n }, a) => n * c + a === n * (c + m) }),
-  fam({ id: 'g7.money.loss-fault', skill: 'G7_MONEY', outcome: 'G7.MONEY.a', rung: 1, form: 'word',
+  fam({ id: 'g7.money.loss-fault', skill: 'G7_MONEY', outcome: 'MATH.G7.MEASUR.MONEY.a', cskill: 'MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS', rung: 1, form: 'word',
     draw: () => { const item = pick(['radio', 'bicycle', 'mobile phone', 'sewing machine', 'television']); const c = price(item), l = pick([100, 200, 300, 500, 800]); return c > l * 3 ? { item, c, l, p: person() } : null; },
     make: ({ item, c, l, p }) => ({
       question: `A ${item} has a fault. ${p.name} paid ${sh(c)} for it and can only get ${sh(c - l)} now. What is the loss, in shillings?`,
       answer: l,
-      wrong: [[c, 'That is the buying price. The loss is how much less the item sold for.'], [c - l, 'That is the selling price. Compare it with the buying price.'], [c + (c - l), 'A loss is a difference, so take one price from the other.']],
+      wrong: [[c, 'That is the buying price. The loss is how much less the item sold for.', 'M_BUYING_PRICE_AS_LOSS'], [c - l, 'That is the selling price. Compare it with the buying price.', 'M_SELLING_PRICE_AS_LOSS'], [c + (c - l), 'A loss is a difference, so take one price from the other.', 'M_PRICES_ADDED_FOR_LOSS']],
       hints: ['A loss happens when the selling price is less than the buying price.', 'Loss = buying price − selling price.'],
       steps: [`Bought for ${sh(c)}, sold for ${sh(c - l)}.`, `Loss = ${sh(c)} − ${sh(c - l)} = ${sh(l)}.`],
     }),
     check: ({ c, l }, a) => c - a === c - l }),
-  fam({ id: 'g7.money.cement-transport', skill: 'G7_MONEY', outcome: 'G7.MONEY.a', rung: 3, form: 'steps',
+  fam({ id: 'g7.money.cement-transport', skill: 'G7_MONEY', outcome: 'MATH.G7.MEASUR.MONEY.a', cskill: 'MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS', rung: 3, form: 'steps',
     draw: () => { const c = price('bag of cement'), n = randInt(20, 50), t = pick([1000, 1500, 2000]), m = pick([60, 80, 100, 120]); return n * m > t + 500 ? { c, n, t, m } : null; },
     make: ({ c, n, t, m }) => ({
       question: `A hardware seller buys ${n} bags of cement at ${sh(c)} a bag. Delivery to the shop costs ${sh(t)}. The seller then sells every bag at ${sh(c + m)}.`,
       parts: [
-        { prompt: 'What is the total cost, with delivery, in shillings?', answer: n * c + t, unit: 'sh', hint: 'Cost of the bags, plus the delivery.', wrong: [[n * c, 'Add the delivery cost as well.']] },
-        { prompt: 'How much money does the seller get from selling all the bags, in shillings?', answer: n * (c + m), unit: 'sh', hint: 'Number of bags times the selling price.', wrong: [[c + m, 'There are many bags. Multiply by the number of bags.']] },
-        { prompt: 'What is the profit, in shillings?', answer: n * m - t, unit: 'sh', hint: 'Money from selling minus total cost.', wrong: [[n * m, 'Take the delivery cost into account too: use the total cost.']] },
+        { prompt: 'What is the total cost, with delivery, in shillings?', answer: n * c + t, unit: 'sh', hint: 'Cost of the bags, plus the delivery.', wrong: [[n * c, 'Add the delivery cost as well.', 'M_EXTRA_COST_LEFT_OUT']] },
+        { prompt: 'How much money does the seller get from selling all the bags, in shillings?', answer: n * (c + m), unit: 'sh', hint: 'Number of bags times the selling price.', wrong: [[c + m, 'There are many bags. Multiply by the number of bags.', 'M_ONE_ITEM_FOR_ALL']] },
+        { prompt: 'What is the profit, in shillings?', answer: n * m - t, unit: 'sh', hint: 'Money from selling minus total cost.', wrong: [[n * m, 'Take the delivery cost into account too: use the total cost.', 'M_EXTRA_COST_LEFT_OUT']] },
       ],
       steps: [`${n} × ${c} + ${t} = ${sh(n * c + t)}.`, `${n} × ${c + m} = ${sh(n * (c + m))}.`, `${sh(n * (c + m))} − ${sh(n * c + t)} = ${sh(n * m - t)}.`],
     }),
     check: ({ c, n, t, m }, v) => v[0] === n * c + t && v[1] === n * (c + m) && v[2] === v[1] - v[0] }),
-  fam({ id: 'g7.money.percent-profit', skill: 'G7_MONEY', outcome: 'G7.MONEY.b', rung: 2, form: 'word',
+  fam({ id: 'g7.money.percent-profit', skill: 'G7_MONEY', outcome: 'MATH.G7.MEASUR.MONEY.b', cskill: 'MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS', rung: 2, form: 'word',
     draw: () => { const item = pick(['school bag', 'radio', 'bicycle', 'sewing machine']), c = price(item), pc = pick([10, 20, 25, 40, 50]); const pr = (c * pc) / 100; return Number.isInteger(pr) && Number.isInteger(pr * 100 / (c + pr) * 10) && uniq(pc, pr, (pr * 100) / (c + pr), ((c + pr) * 100) / c) ? { item, c, pc, pr, p: person() } : null; },
     make: ({ item, c, pc, pr, p }) => ({
       question: `${p.name} buys a ${item} for ${sh(c)} and sells it for ${sh(c + pr)}. What is the percentage profit?`,
       answer: pc,
-      wrong: [[round((pr * 100) / (c + pr), 1), 'Percentage profit is taken on the buying price, not on the selling price.'], [pr, 'That is the profit in shillings. Write it as a percentage of the buying price.'], [round(((c + pr) * 100) / c, 1), 'That compares the selling price with the buying price. Find the profit first.']],
+      wrong: [[round((pr * 100) / (c + pr), 1), 'Percentage profit is taken on the buying price, not on the selling price.', 'M_PERCENT_ON_SELLING_PRICE'], [pr, 'That is the profit in shillings. Write it as a percentage of the buying price.', 'M_PROFIT_AMOUNT_AS_PERCENT'], [round(((c + pr) * 100) / c, 1), 'That compares the selling price with the buying price. Find the profit first.', 'M_SELLING_OVER_BUYING_PERCENT']],
       hints: ['Find the profit in shillings first.', 'Percentage profit = profit ÷ buying price × 100.'],
       steps: [`Profit = ${sh(c + pr)} − ${sh(c)} = ${sh(pr)}.`, `Percentage profit = ${pr} ÷ ${c} × 100 = ${pc}%.`],
     }),
     check: ({ c, pc, pr }, a) => (c * a) / 100 === pr }),
-  fam({ id: 'g7.money.spot-percent-profit', skill: 'G7_MONEY', outcome: 'G7.MONEY.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.money.spot-percent-profit', skill: 'G7_MONEY', outcome: 'MATH.G7.MEASUR.MONEY.b', cskill: 'MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS', rung: 3, form: 'spot',
     draw: () => { const c = pick([400, 500, 800, 1000, 1200, 2000]), pc = pick([10, 20, 25, 40, 50]); return { c, pc, pr: (c * pc) / 100, p: person() }; },
     make: ({ c, pc, pr, p }) => ({
       question: `${p.name} found the percentage profit on a ${pick(['jacket', 'kettle', 'blanket'])} that was bought for ${sh(c)} and sold for ${sh(c + pr)}. The working is below. Which step is wrong?`,
@@ -907,10 +907,11 @@ export const FAMILIES = [
         { text: `Percentage profit = ${pc / 100}%`, ok: pc / 100 === pc },
         { text: `The shopkeeper makes a profit of ${pc / 100}%.`, ok: pc / 100 === pc / 100 },
       ],
-      fix: 'A fraction or decimal becomes a percentage when you multiply by 100.',
+      mis: 'M_NOT_MULTIPLIED_BY_100',
+        fix: 'A fraction or decimal becomes a percentage when you multiply by 100.',
       steps: [`${pr} ÷ ${c} = ${pc / 100}.`, `${pc / 100} × 100 = ${pc}%.`],
     }) }),
-  fam({ id: 'g7.money.table-best-percent', skill: 'G7_MONEY', outcome: 'G7.MONEY.b', rung: 3, form: 'table',
+  fam({ id: 'g7.money.table-best-percent', skill: 'G7_MONEY', outcome: 'MATH.G7.MEASUR.MONEY.b', cskill: 'MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS', rung: 3, form: 'table',
     draw: () => {
       const names = ['Shoes', 'Bag', 'Jacket'], rows = names.map(() => { const c = pick([200, 400, 500, 800, 1000, 1200, 2000, 2500]), pc = pick([10, 20, 25, 40, 50, 60]); return { c, pc, pr: (c * pc) / 100 }; });
       if (!rows.every(r => Number.isInteger(r.pr)) || !uniq(...rows.map(r => r.pc)) || !uniq(...rows.map(r => r.pr))) return null;
@@ -920,44 +921,47 @@ export const FAMILIES = [
     make: ({ names, rows, bp }) => ({
       question: 'A trader sold three items. The table shows what each cost to buy and what it sold for. Which item gave the greatest percentage profit?',
       model: { type: 'table', data: { head: ['Item', 'Bought for (sh)', 'Sold for (sh)'], rows: rows.map((r, i) => ({ cells: [names[i], commas(r.c), commas(r.c + r.pr)] })) } },
-      options: rows.map((r, i) => ({ text: names[i], right: i === bp, why: i === bp ? undefined : 'Find each profit as a percentage of its own buying price. The biggest profit in shillings is not always the biggest percentage.' })),
+      // the item with the most shillings of profit is the trap; the third item is just not the best
+      options: (() => { const ba = rows.findIndex(r => r.pr === Math.max(...rows.map(x => x.pr))); return rows.map((r, i) => ({ text: names[i], right: i === bp, ...(i === bp ? {} : i === ba
+        ? { why: 'This item makes the most shillings of profit, but compared with its own buying price the percentage is smaller.', mis: 'M_BIGGEST_AMOUNT_AS_BIGGEST_PERCENT' }
+        : { why: 'Find each profit as a percentage of its own buying price. This one is not the biggest percentage.', mis: 'SLIP' }) })); })(),
       hints: ['Find the profit on each item.', 'Divide each profit by its own buying price and multiply by 100.'],
       steps: rows.map((r, i) => `${names[i]}: profit ${r.pr}, ${r.pr} ÷ ${r.c} × 100 = ${r.pc}%.`),
     }) }),
-  fam({ id: 'g7.money.reverse-discount', skill: 'G7_PERCENTAGES', outcome: 'G7.MONEY.c', rung: 3, form: 'word',
+  fam({ id: 'g7.money.reverse-discount', skill: 'G7_PERCENTAGES', outcome: 'MATH.G7.MEASUR.MONEY.c', cskill: 'MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK', rung: 3, form: 'word',
     draw: () => { const M = pick([500, 800, 1000, 1200, 1500, 2000, 2500, 4000]), d = pick([10, 20, 25, 40]); const S = (M * (100 - d)) / 100; return Number.isInteger(S) && uniq(M, S * (100 + d) / 100, S + d, S * 100 / d) ? { M, d, S, p: person(), item: pick(['jacket', 'pair of shoes', 'school bag']) } : null; },
     make: ({ M, d, S, p, item }) => ({
       question: `A shop gives ${d}% discount on a ${item}. ${p.name} pays ${sh(S)} after the discount. What was the price marked on the ${item} before the discount?`,
       answer: M,
-      wrong: [[round((S * (100 + d)) / 100, 2), `The discount was taken off the marked price, so ${sh(S)} is only ${100 - d}% of it. Adding ${d}% to ${sh(S)} gives the wrong base.`], [S + d, 'The discount is a percentage, not an amount of shillings.'], [round((S * 100) / d, 2), `${sh(S)} is ${100 - d}% of the marked price, not ${d}%.`]],
+      wrong: [[round((S * (100 + d)) / 100, 2), `The discount was taken off the marked price, so ${sh(S)} is only ${100 - d}% of it. Adding ${d}% to ${sh(S)} gives the wrong base.`, 'M_DISCOUNT_ADDED_BACK_ON_PAID'], [S + d, 'The discount is a percentage, not an amount of shillings.', 'M_PERCENT_AS_SHILLINGS'], [round((S * 100) / d, 2), `${sh(S)} is ${100 - d}% of the marked price, not ${d}%.`, 'M_PAID_AS_DISCOUNT_PERCENT']],
       hints: [`After a ${d}% discount, ${p.name} pays what percentage of the marked price?`, 'Find 1% of the marked price, then 100%.'],
       steps: [`Paid = 100% − ${d}% = ${100 - d}% of the marked price.`, `${100 - d}% is ${sh(S)}, so 1% is ${sh(round(S / (100 - d), 4))} and 100% is ${sh(M)}.`],
     }),
     check: ({ d, S }, a) => (a * (100 - d)) / 100 === S }),
-  fam({ id: 'g7.money.why-two-discounts', skill: 'G7_PERCENTAGES', outcome: 'G7.MONEY.c', rung: 3, form: 'why',
+  fam({ id: 'g7.money.why-two-discounts', skill: 'G7_PERCENTAGES', outcome: 'MATH.G7.MEASUR.MONEY.c', cskill: 'MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT', rung: 3, form: 'why',
     draw: () => { const [d1, d2] = pick([[20, 10], [10, 10], [30, 20], [50, 10]]); return { d1, d2, tot: 100 - ((100 - d1) * (100 - d2)) / 100, p: person() }; },
     make: ({ d1, d2, tot, p }) => ({
       question: `A shop gives ${d1}% discount on a coat. Then it takes a further ${d2}% off the new price. ${p.name} says the coat is now ${d1 + d2}% cheaper than the first price. Why is ${p.she} wrong?`,
       options: [
         { text: `The second discount is taken off the smaller price, so altogether the coat is ${tot}% cheaper`, right: true },
-        { text: `The second discount is bigger than the first, so the total is more than ${d1 + d2}%`, right: false, why: 'The second discount is applied to a smaller price, so it takes off less money.' },
-        { text: 'Two discounts cannot be added or combined in any way', right: false, why: 'They can be combined: take off the first, then work out the second on the new price.' },
-        { text: `The total is only ${d1}% because the second discount does not count`, right: false, why: 'The second discount does take some money off the price.' },
+        { text: `The second discount is bigger than the first, so the total is more than ${d1 + d2}%`, right: false, why: 'The second discount is applied to a smaller price, so it takes off less money.', mis: 'SLIP' },
+        { text: 'Two discounts cannot be added or combined in any way', right: false, why: 'They can be combined: take off the first, then work out the second on the new price.', mis: 'M_DISCOUNTS_NOT_COMBINABLE' },
+        { text: `The total is only ${d1}% because the second discount does not count`, right: false, why: 'The second discount does take some money off the price.', mis: 'M_SECOND_DISCOUNT_IGNORED' },
       ],
       hints: ['Imagine the first price is 100. Take off the first discount.', 'Then take the second discount off what is left.'],
       steps: [`Start at 100. After ${d1}% off: ${100 - d1}.`, `${d2}% of ${100 - d1} is ${round(((100 - d1) * d2) / 100, 2)}, so the price is ${round(100 - tot, 2)}. Altogether ${tot}% cheaper.`],
     }) }),
-  fam({ id: 'g7.money.commission-above-target', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.d', rung: 3, form: 'word',
+  fam({ id: 'g7.money.commission-above-target', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.d', cskill: 'MATH.G7.MEASUR.MONEY.COMMISSION', rung: 3, form: 'word',
     draw: () => { const b = pick([15000, 18000, 20000, 25000]), r = pick([2, 3, 4, 5]), T = pick([50000, 100000, 200000]), S = T + pick([50000, 100000, 150000]); const c = (r * (S - T)) / 100; return uniq(b + c, b + (r * S) / 100, c, b + (r * T) / 100) ? { b, r, T, S, c, p: person() } : null; },
     make: ({ b, r, T, S, c, p }) => ({
       question: `${p.name} sells phones. ${p.She} is paid a basic salary of ${sh(b)} a month. ${p.She} also earns ${r}% commission on the value of sales above ${sh(T)}. This month ${p.she} sells goods worth ${sh(S)}. How much is ${p.her} pay for the month?`,
       answer: b + c,
-      wrong: [[b + (r * S) / 100, `The commission is only on the sales above ${sh(T)}.`], [c, 'That is the commission only. Add the basic salary.'], [b + (r * T) / 100, 'Use the part of the sales above the target, not the target itself.']],
+      wrong: [[b + (r * S) / 100, `The commission is only on the sales above ${sh(T)}.`, 'M_COMMISSION_ON_ALL_SALES'], [c, 'That is the commission only. Add the basic salary.', 'M_BASIC_SALARY_LEFT_OUT'], [b + (r * T) / 100, 'Use the part of the sales above the target, not the target itself.', 'M_COMMISSION_ON_TARGET']],
       hints: ['How much of the sales is above the target?', 'Work out the commission on that part only, then add the basic salary.'],
       steps: [`Sales above target: ${sh(S)} − ${sh(T)} = ${sh(S - T)}.`, `Commission: ${r}% of ${sh(S - T)} = ${sh(c)}. Pay = ${sh(b)} + ${sh(c)} = ${sh(b + c)}.`],
     }),
     check: ({ b, r, T, S }, a) => ((a - b) * 100) / r === S - T }),
-  fam({ id: 'g7.money.spot-commission-decimal', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.d', rung: 2, form: 'spot',
+  fam({ id: 'g7.money.spot-commission-decimal', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.d', cskill: 'MATH.G7.MEASUR.MONEY.COMMISSION', rung: 2, form: 'spot',
     draw: () => { const r = pick([3, 4, 5, 6, 8]), S = pick([120000, 240000, 300000, 450000]); return { r, S, p: person() }; },
     make: ({ r, S, p }) => {
       const bad = r / 10, good = r / 100;
@@ -968,32 +972,33 @@ export const FAMILIES = [
           { text: `${bad} × ${commas(S)} = ${commas(bad * S)}`, ok: round(bad * S, 2) === round(bad * S, 2) },
           { text: `The agent earns ${sh(bad * S)}.`, ok: true },
         ],
+        mis: 'M_PERCENT_AS_TENTHS',
         fix: `${r}% means ${r} out of 100, so the decimal is ${r} ÷ 100.`,
         steps: [`${r}% = ${r} ÷ 100 = ${good}.`, `${good} × ${commas(S)} = ${sh(round(good * S, 2))}.`] };
     } }),
-  fam({ id: 'g7.money.electricity-bill', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 2, form: 'table',
+  fam({ id: 'g7.money.electricity-bill', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.e', cskill: 'MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS', rung: 2, form: 'table',
     draw: () => { const prev = randInt(1200, 4800), u = randInt(40, 160), rate = pick([20, 22, 24, 25, 28, 30]), fixed = pick([150, 200, 250, 300]); return uniq(u * rate + fixed, (prev + u) * rate + fixed, u * rate, u + rate + fixed) ? { prev, u, rate, fixed, p: person() } : null; },
     make: ({ prev, u, rate, fixed, p }) => ({
       question: `${p.name} reads this electricity bill for the house. In this question, the prices are as shown. What is the total to pay, in shillings?`,
       model: { type: 'table', data: { head: ['Item', 'Amount'], rows: [{ label: 'Meter reading last month', value: commas(prev) }, { label: 'Meter reading this month', value: commas(prev + u) }, { label: 'Charge for each unit used (sh)', value: String(rate) }, { label: 'Fixed charge (sh)', value: String(fixed) }] } },
       answer: u * rate + fixed,
-      wrong: [[(prev + u) * rate + fixed, 'The number of units used is the difference between the two meter readings, not the reading itself.'], [u * rate, 'Add the fixed charge too.'], [u + rate + fixed, 'Units are multiplied by the charge for each unit, not added.']],
+      wrong: [[(prev + u) * rate + fixed, 'The number of units used is the difference between the two meter readings, not the reading itself.', 'M_READING_FOR_UNITS_USED'], [u * rate, 'Add the fixed charge too.', 'M_FIXED_CHARGE_LEFT_OUT'], [u + rate + fixed, 'Units are multiplied by the charge for each unit, not added.', 'M_BILL_PARTS_ADDED']],
       hints: ['Units used = this month\'s reading − last month\'s reading.', 'Multiply the units by the charge for each unit, then add the fixed charge.'],
       steps: [`Units used = ${commas(prev + u)} − ${commas(prev)} = ${u}.`, `Bill = ${u} × ${rate} + ${fixed} = ${sh(u * rate + fixed)}.`],
     }),
     check: ({ u, rate, fixed }, a) => (a - fixed) / rate === u }),
-  fam({ id: 'g7.money.water-bill-bands', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 3, form: 'table',
+  fam({ id: 'g7.money.water-bill-bands', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.e', cskill: 'MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS', rung: 3, form: 'table',
     draw: () => { const a = pick([30, 35, 40, 45]), b = a + pick([10, 15, 20]), c = b + pick([10, 15, 20]), n = randInt(22, 32), F = pick([100, 150, 200]); return { a, b, c, n, F, p: person() }; },
     make: ({ a, b, c, n, F, p }) => ({
       question: `In this question, a water company charges in bands, as the table shows. ${p.name}'s family uses ${n} units in a month, and pays a fixed charge of ${sh(F)} as well. What is the water bill, in shillings?`,
       model: { type: 'table', data: { head: ['Units used', 'Charge for each unit (sh)'], rows: [{ label: 'First 10 units', value: String(a) }, { label: 'Next 10 units', value: String(b) }, { label: 'Every unit after 20', value: String(c) }] } },
       answer: 10 * a + 10 * b + (n - 20) * c + F,
-      wrong: [[n * c + F, 'Each band has its own charge. Only the units above 20 cost the top rate.'], [n * a + F, 'Only the first 10 units cost the lowest rate.'], [10 * a + 10 * b + (n - 20) * c, 'Add the fixed charge as well.']],
+      wrong: [[n * c + F, 'Each band has its own charge. Only the units above 20 cost the top rate.', 'M_TOP_RATE_FOR_ALL_UNITS'], [n * a + F, 'Only the first 10 units cost the lowest rate.', 'M_FIRST_RATE_FOR_ALL_UNITS'], [10 * a + 10 * b + (n - 20) * c, 'Add the fixed charge as well.', 'M_FIXED_CHARGE_LEFT_OUT']],
       hints: ['Split the units into the three bands of the table.', 'Work out the cost of each band, then add all three and the fixed charge.'],
       steps: [`First 10: 10 × ${a} = ${10 * a}. Next 10: 10 × ${b} = ${10 * b}. After 20: ${n - 20} × ${c} = ${(n - 20) * c}.`, `Bill = ${10 * a} + ${10 * b} + ${(n - 20) * c} + ${F} = ${sh(10 * a + 10 * b + (n - 20) * c + F)}.`],
     }),
     check: ({ a, b, c, n, F }, v) => v - F - 10 * a - 10 * b === (n - 20) * c }),
-  fam({ id: 'g7.money.shop-bill-change', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 2, form: 'table',
+  fam({ id: 'g7.money.shop-bill-change', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.e', cskill: 'MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL', rung: 2, form: 'table',
     draw: () => {
       const items = ['kg of sugar', 'loaf of bread', 'litre of milk', 'kg of rice'].sort(() => Math.random() - 0.5).slice(0, 3);
       const rows = items.map(it => ({ it, q: randInt(1, 4), pr: price(it) })); const t = rows.reduce((a, r) => a + r.q * r.pr, 0); const note = [500, 1000, 2000].find(x => x > t);
@@ -1003,22 +1008,22 @@ export const FAMILIES = [
       question: `This receipt is from a shop. ${p.name} pays with a ${sh(note)} note. How much change does ${p.she} get, in shillings?`,
       model: { type: 'table', data: { head: ['Item', 'Number', 'Price each (sh)'], rows: rows.map(r => ({ cells: [r.it.replace('kg of ', '').replace('litre of ', 'milk ').replace('loaf of bread', 'bread'), String(r.q), String(r.pr)] })) } },
       answer: note - t,
-      wrong: [[note - rows.reduce((a, r) => a + r.pr, 0), 'The receipt shows how many of each item were bought. Multiply price by number.'], [t, 'That is the total bill. Change is what is left from the note.'], [note + t, 'Change is what is left after paying the bill, so take away.']],
+      wrong: [[note - rows.reduce((a, r) => a + r.pr, 0), 'The receipt shows how many of each item were bought. Multiply price by number.', 'M_QUANTITY_IGNORED_ON_BILL'], [t, 'That is the total bill. Change is what is left from the note.', 'M_TOTAL_GIVEN_AS_CHANGE'], [note + t, 'Change is what is left after paying the bill, so take away.', 'M_BILL_ADDED_TO_NOTE']],
       hints: ['Find the cost of each line: number × price each.', 'Add the lines, then take the total from the note.'],
       steps: [rows.map(r => `${r.q} × ${r.pr} = ${r.q * r.pr}`).join(', ') + '.', `Total = ${sh(t)}. Change = ${sh(note)} − ${sh(t)} = ${sh(note - t)}.`],
     }),
     check: ({ rows, note }, a) => note - a === rows.reduce((s, r) => s + r.q * r.pr, 0) }),
-  fam({ id: 'g7.money.kplc-tokens', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.e', rung: 2, form: 'word',
-    draw: () => { const S = pick([500, 1000, 1500, 2000]), C = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]); const n = (S - C) / u; return Number.isInteger(n) && uniq(n, S / u, S - C, C / u) ? { S, C, u, n, p: person() } : null; },
+  fam({ id: 'g7.money.kplc-tokens', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.e', cskill: 'MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS', rung: 2, form: 'word',
+    draw: () => { const S = pick([500, 1000, 1500, 2000]), C = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]); const n = (S - C) / u; return Number.isInteger(n) && C / u > 2 && uniq(n, S / u, S - C, C / u) ? { S, C, u, n, p: person() } : null; },   // leaving the charges out must not look like a slip of one or two
     make: ({ S, C, u, n, p }) => ({
       question: `${p.name} buys KPLC tokens for ${sh(S)}. In this question, ${sh(C)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
       answer: n,
-      wrong: [[round(S / u, 2), `The charges of ${sh(C)} are taken first. Only the rest buys units.`], [S - C, 'That is the money left for units. Divide it by the price of one unit.'], [round(C / u, 2), 'The units are bought with the money left after the charges, not with the charges.']],
+      wrong: [[round(S / u, 2), `The charges of ${sh(C)} are taken first. Only the rest buys units.`, 'M_CHARGES_NOT_TAKEN_FIRST'], [S - C, 'That is the money left for units. Divide it by the price of one unit.', 'M_MONEY_LEFT_AS_UNITS'], [round(C / u, 2), 'The units are bought with the money left after the charges, not with the charges.', 'SLIP']],
       hints: ['How much money is left after the charges?', 'Divide that money by the price of one unit.'],
       steps: [`Money for units = ${sh(S)} − ${sh(C)} = ${sh(S - C)}.`, `Units = ${S - C} ÷ ${u} = ${n}.`],
     }),
     check: ({ S, C, u }, a) => a * u + C === S }),
-  fam({ id: 'g7.money.parcels-table', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.g', rung: 2, form: 'table',
+  fam({ id: 'g7.money.parcels-table', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.g', cskill: 'MATH.G7.MEASUR.MONEY.POSTAL_CHARGES', rung: 2, form: 'table',
     draw: () => {
       const ch = [pick([100, 120, 150]), pick([180, 200, 220]), pick([300, 350, 400]), pick([550, 600, 650])];
       const bandsMass = [[200, 300, 400], [600, 700, 800, 900], [1200, 1500, 1800], [2500, 3000, 4000]];
@@ -1033,40 +1038,40 @@ export const FAMILIES = [
       return { question: `The table shows the charges at a post office in this question. ${p.name} posts three parcels, one after the other, of ${say(ms[0])}, ${say(ms[1])} and ${say(ms[2])}. What is the total postage, in shillings?`,
         model: { type: 'table', data: { head: ['Mass of one parcel', 'Postage (sh)'], rows: [{ label: 'Up to 500 g', value: String(ch[0]) }, { label: 'Over 500 g, up to 1 kg', value: String(ch[1]) }, { label: 'Over 1 kg, up to 2 kg', value: String(ch[2]) }, { label: 'Over 2 kg, up to 5 kg', value: String(ch[3]) }] } },
         answer: ans,
-        wrong: [[one, 'The parcels are posted separately. Each parcel is charged by its own mass.'], [top, 'Each parcel has its own charge. They do not all cost the same as the heaviest.'], [ans + ch[0], 'There are only three parcels, so only three charges are added.']],
+        wrong: [[one, 'The parcels are posted separately. Each parcel is charged by its own mass.', 'M_PARCELS_CHARGED_TOGETHER'], [top, 'Each parcel has its own charge. They do not all cost the same as the heaviest.', 'M_HEAVIEST_RATE_FOR_ALL'], [ans + ch[0], 'There are only three parcels, so only three charges are added.', 'SLIP']],
         hints: ['Find the row for each parcel by its own mass.', 'Add the three charges.'],
         steps: ms.map((m) => `${say(m)}: look up its row in the table.`).concat([`Total of the three charges = ${sh(ans)}.`]) };
     },
     check: ({ ans, ch, ms }, a) => a === ms.reduce((s, m) => s + ch[m <= 500 ? 0 : m <= 1000 ? 1 : m <= 2000 ? 2 : 3], 0) }),
-  fam({ id: 'g7.money.parcel-per-100g', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.g', rung: 2, form: 'word',
+  fam({ id: 'g7.money.parcel-per-100g', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.g', cskill: 'MATH.G7.MEASUR.MONEY.POSTAL_CHARGES', rung: 2, form: 'word',
     draw: () => { const F = pick([60, 80, 100]), E = pick([20, 30, 40]), k = randInt(4, 12); return uniq(F + E * (k - 1), k * E, k * F, F + E * k) ? { F, E, k, p: person() } : null; },
     make: ({ F, E, k, p }) => ({
       question: `In this question, a courier's postal charges are these. A parcel costs ${sh(F)} for the first 100 g, and ${sh(E)} for each extra 100 g. ${p.name} posts a parcel of ${k * 100} g. What does the postage cost, in shillings?`,
       answer: F + E * (k - 1),
-      wrong: [[k * E, 'The first 100 g has its own charge. Add it.'], [k * F, 'Only the first 100 g costs that much. The rest costs less per 100 g.'], [F + E * k, 'The first 100 g is not an extra part. Count one fewer extra part.']],
+      wrong: [[k * E, 'The first 100 g has its own charge. Add it.', 'M_FIRST_PART_CHARGE_LEFT_OUT'], [k * F, 'Only the first 100 g costs that much. The rest costs less per 100 g.', 'M_FIRST_RATE_FOR_ALL_PARTS'], [F + E * k, 'The first 100 g is not an extra part. Count one fewer extra part.', 'M_FIRST_PART_COUNTED_AS_EXTRA']],
       hints: [`How many 100 g parts are there in ${k * 100} g?`, 'The first part is charged at the first price. All the others are charged at the extra price.'],
       steps: [`${k * 100} g is ${k} lots of 100 g. The first costs ${sh(F)}, and ${k - 1} are extra.`, `Postage = ${F} + ${k - 1} × ${E} = ${sh(F + E * (k - 1))}.`],
     }),
     check: ({ F, E, k }, a) => (a - F) / E === k - 1 }),
-  fam({ id: 'g7.money.mobile-two-sends', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.h', rung: 2, form: 'table',
+  fam({ id: 'g7.money.mobile-two-sends', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.i', cskill: 'MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS', rung: 2, form: 'table',
     draw: () => {
       const a = pick([5, 7, 10]), b = a + pick([3, 5, 8]), c = b + pick([8, 10, 15]), ch = [0, a, b, c], edges = [100, 500, 1000, 2500];
       const band = (x) => (x <= 100 ? 0 : x <= 500 ? 1 : x <= 1000 ? 2 : 3);
       const X = pick([250, 400, 700, 900]), Y = pick([1200, 1500, 2000, 300]);
       if (band(X) === band(Y) || X + Y > 2500) return null;
       const ans = ch[band(X)] + ch[band(Y)], comb = ch[band(X + Y)];
-      return uniq(ans, comb, ch[band(Math.max(X, Y))]) ? { ch, X, Y, ans, comb, big: ch[band(Math.max(X, Y))], p: person(), band } : null;
+      return uniq(ans, comb, ch[band(Math.max(X, Y))]) && Math.abs(ans - comb) > 2 ? { ch, X, Y, ans, comb, big: ch[band(Math.max(X, Y))], p: person(), band } : null;
     },
     make: ({ ch, X, Y, ans, comb, big, p }) => ({
       question: `The table shows one mobile money agent's charges for sending money, for this question only. ${p.name} sends ${sh(X)} to an aunt, and later ${sh(Y)} to a friend. How much is paid in charges altogether?`,
       model: { type: 'table', data: { head: ['Amount sent (sh)', 'Charge (sh)'], rows: [{ label: '1 to 100', value: String(ch[0]) }, { label: '101 to 500', value: String(ch[1]) }, { label: '501 to 1,000', value: String(ch[2]) }, { label: '1,001 to 2,500', value: String(ch[3]) }] } },
       answer: ans,
-      wrong: [[comb, 'These are two separate sends. Each send has its own charge.'], [big, 'There are two sends, so there are two charges to add.'], [ans + ch[1], 'Only two sends were made, so add only two charges.']],
+      wrong: [[comb, 'These are two separate sends. Each send has its own charge.', 'M_SENDS_CHARGED_TOGETHER'], [big, 'There are two sends, so there are two charges to add.', 'M_ONE_CHARGE_FOR_TWO_SENDS'], [ans + ch[1], 'Only two sends were made, so add only two charges.', 'SLIP']],
       hints: ['Find the row for each amount separately.', 'Add the two charges.'],
       steps: [`${sh(X)} is in its own row, and ${sh(Y)} is in another row of the table.`, `Total charge = ${sh(ans)}.`],
     }),
     check: ({ ch, X, Y, ans, band }, a) => a === ch[band(X)] + ch[band(Y)] }),
-  fam({ id: 'g7.money.mobile-withdraw-left', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'G7.MONEY.h', rung: 2, form: 'table',
+  fam({ id: 'g7.money.mobile-withdraw-left', skill: 'G7_MONEY_TRANSACTIONS', outcome: 'MATH.G7.MEASUR.MONEY.i', cskill: 'MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS', rung: 2, form: 'table',
     draw: () => {
       const ch = [pick([10, 11]), pick([25, 27, 29]), pick([30, 32, 34]), pick([40, 43, 45]), pick([55, 60, 65])];
       const W = pick([80, 300, 700, 1200, 2000]); const band = (x) => (x <= 100 ? 0 : x <= 500 ? 1 : x <= 1000 ? 2 : x <= 1500 ? 3 : 4);
@@ -1077,7 +1082,7 @@ export const FAMILIES = [
       question: `${p.name} has ${sh(B)} in a mobile money account and takes out ${sh(W)} cash from an agent. The agent's charge is in the table, which is only an example and not a real price list. The charge is also taken from the account. How much money stays in the account, in shillings?`,
       model: { type: 'table', data: { head: ['Amount withdrawn (sh)', 'Charge (sh)'], rows: [{ label: '1 to 100', value: String(ch[0]) }, { label: '101 to 500', value: String(ch[1]) }, { label: '501 to 1,000', value: String(ch[2]) }, { label: '1,001 to 1,500', value: String(ch[3]) }, { label: '1,501 to 2,500', value: String(ch[4]) }] } },
       answer: B - W - c,
-      wrong: [[B - W, 'The charge also comes out of the account. Find it in the table.'], [B - c, 'The money withdrawn also leaves the account.'], [W - c, 'Start from what was in the account, not from the amount withdrawn.']],
+      wrong: [[B - W, 'The charge also comes out of the account. Find it in the table.', 'M_WITHDRAW_CHARGE_LEFT_OUT'], [B - c, 'The money withdrawn also leaves the account.', 'M_WITHDRAWN_AMOUNT_NOT_TAKEN'], [W - c, 'Start from what was in the account, not from the amount withdrawn.', 'M_CHARGE_TAKEN_FROM_CASH']],
       hints: [`Which row of the table does ${sh(W)} fall in?`, 'Take the money withdrawn and the charge away from the amount in the account.'],
       steps: [`The charge for ${sh(W)} is ${sh(c)}.`, `Left = ${sh(B)} − ${sh(W)} − ${sh(c)} = ${sh(B - W - c)}.`],
     }),
