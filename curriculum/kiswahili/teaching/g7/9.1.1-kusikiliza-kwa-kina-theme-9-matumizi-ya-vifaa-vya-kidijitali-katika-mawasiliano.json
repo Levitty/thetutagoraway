@@ -60,10 +60,10 @@
     {
      "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SPELL_T9",
      "listen_for": [
-      "ndege"
+      "ndama"
      ],
-     "ask": "Ukiandika \"ndege\", msomaji ataelewa nini?",
-     "repair": "Neno lenye maana ya \"a small bird (or a game)\" ni \"dege\". \"ndege\" lina maana ya \"a bird or an aeroplane\"."
+     "ask": "Ukiandika \"ndama\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"draughts (the board game)\" ni \"dama\". \"ndama\" lina maana ya \"a calf\"."
     },
     {
      "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SAME_T9",
@@ -71,7 +71,7 @@
       "ndiyo"
      ],
      "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
-     "repair": "Hapana. \"dege\" ni a small bird (or a game), na \"ndege\" ni a bird or an aeroplane."
+     "repair": "Hapana. \"dama\" ni draughts (the board game), na \"ndama\" ni a calf."
     },
     {
      "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_TWISTER_T9",
@@ -92,8 +92,8 @@
    ],
    "checks": [
     {
-     "question": "Andika neno lenye maana ya \"a bird or an aeroplane\".",
-     "answer": "ndege",
+     "question": "Andika neno lenye maana ya \"a calf\".",
+     "answer": "ndama",
      "shows": "spelling by meaning"
     },
     {

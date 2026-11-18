@@ -15,7 +15,7 @@ export const NEW = [
     cause: 'Many Kenyan speakers say z for dh (zahabu) and s for th (sumuni) because their first languages lack these Arabic-origin sounds; the child then cannot tell dh from th either.',
     pre: [[K6('T1_MATAMSHI_BORA.MATAMSHI'), E, 'Grade 6 told close sounds apart.'], ['G5:KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI', E, 'Grade 5 met th/dh first, with f/v, s/z and l/r.']] }),
   matamshi({ G: 7, sub: 'KUSIKI.T9_KUSIKILIZA_KWA_KINA', tag: 'T9', sounds: ['d', 'nd'], letters: ['a', 'b'], theme: 'vifaa vya kidijitali (digital devices)', nd: true,
-    w: [['doa', 'ndoa', 'a stain', 'a marriage'], ['dege', 'ndege', 'a small bird (or a game)', 'a bird or an aeroplane']],
+    w: [['doa', 'ndoa', 'a stain', 'a marriage'], ['dama', 'ndama', 'draughts (the board game)', 'a calf']],
     tw: 'Ndege wa Dadi alidondoka ndani ya ndoo ya dada.', notw: 'Simu yangu mpya ina kamera nzuri.',
     pre: [['KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI', E, 'Theme 2 practised close sounds this year.'], [K6('T1_MATAMSHI_BORA.MATAMSHI'), E, 'Grade 6 d/nd with other nasal pairs.']] }),
   NY('T4', 'maana', 'KUSIKI.T4_NYIMBO', ['a', 'b', 'c', 'd'], { theme: 'aina za maliasili', aina: ['bembelezi', 'wimbo wa watoto'], mfano: 'Lala mtoto lala, mama yuaja, lala', tukio: 'mama anapombembeleza mtoto alale', ujumbe: 'mtoto atulie na alale kwa amani.', mhusika: 'mtoto', sifa: 'mpendwa', ushahidi: 'mama anamwimbia kwa upole', mbinu: ['lala, lala', 'takriri', 'kurudia hutuliza na kuleta mapigo ya wimbo'], fomula: ['Lala, lala', 'kuitikia kwa sauti ya chini'] },

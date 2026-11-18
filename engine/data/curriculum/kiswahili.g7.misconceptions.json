@@ -2236,16 +2236,16 @@
  },
  "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SPELL_T9": {
   "skill": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI",
-  "error": "Writes the word with the letter of the other sound (ndege where dege is meant).",
+  "error": "Writes the word with the letter of the other sound (ndama where dama is meant).",
   "example": {
-   "question": "Jaza pengo: ___ maana yake ni \"a small bird (or a game)\".",
-   "wrong_answer": "ndege",
-   "correct_answer": "dege"
+   "question": "Jaza pengo: ___ maana yake ni \"draughts (the board game)\".",
+   "wrong_answer": "ndama",
+   "correct_answer": "dama"
   },
   "cause": "The child spells as he speaks; if the two sounds are one sound in his speech, the letter is a guess.",
-  "reveals": "The question \"Jaza pengo: ___ maana yake ni \"a small bird (or a game)\".\" with \"ndege\" among the options.",
+  "reveals": "The question \"Jaza pengo: ___ maana yake ni \"draughts (the board game)\".\" with \"ndama\" among the options.",
   "help": "Pair each spelling with its meaning on a card; the child sorts the cards by meaning, then by letter.",
-  "feedback": "Neno lenye maana ya \"a small bird (or a game)\" ni \"dege\". \"ndege\" lina maana ya \"a bird or an aeroplane\".",
+  "feedback": "Neno lenye maana ya \"draughts (the board game)\" ni \"dama\". \"ndama\" lina maana ya \"a calf\".",
   "source": "mother-tongue sound interference common in Kenyan classrooms; to confirm by a native Kiswahili teacher",
   "status": "draft"
  },
@@ -2253,14 +2253,14 @@
   "skill": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI",
   "error": "Thinks the two words are one word said in two ways, with one meaning.",
   "example": {
-   "question": "\"dege\" na \"ndege\" ni maneno yenye maana moja?",
+   "question": "\"dama\" na \"ndama\" ni maneno yenye maana moja?",
    "wrong_answer": "ndiyo",
    "correct_answer": "hapana"
   },
   "cause": "The child has heard both said by different people for the same thing and takes the difference for an accent.",
-  "reveals": "The question \"\"dege\" na \"ndege\" ni maneno yenye maana moja?\" with \"ndiyo\" among the options.",
+  "reveals": "The question \"\"dama\" na \"ndama\" ni maneno yenye maana moja?\" with \"ndiyo\" among the options.",
   "help": "Use both words in two sentences that cannot swap: the child says which sentence breaks.",
-  "feedback": "Hapana. \"dege\" ni a small bird (or a game), na \"ndege\" ni a bird or an aeroplane.",
+  "feedback": "Hapana. \"dama\" ni draughts (the board game), na \"ndama\" ni a calf.",
   "source": "common learner error; to confirm by a native Kiswahili teacher",
   "status": "draft"
  },
