@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE",
+ "title": "Civic Engagement in Governance",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Six elective positions at a general election: President, Governor, Senator, Member of the National Assembly, Woman Representative, MCA. Name no party or person.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT",
+   "key_step": "The child names individual and collective civic activities, the role of political parties and the six elective positions.",
+   "floor": {
+    "prerequisite": "Tells citizens' rights from responsibilities.",
+    "question": "At what age can a citizen vote?",
+    "answer": "18"
+   },
+   "representations": [
+    "activity cards",
+    "a ballot paper outline with six boxes",
+    "role cards for parties"
+   ],
+   "steps": [
+    "Name the activity.",
+    "Sort individual or collective.",
+    "Say what parties do.",
+    "Name the six posts."
+   ],
+   "contexts": [
+    "voting at a polling station",
+    "a public budget forum",
+    "a group clean-up"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw six empty ballot boxes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first.",
+     "say": "Which post is the top of the national ballot?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for President."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the other five."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_ACT",
+     "listen_for": [
+      "Skipping school"
+     ],
+     "ask": "Which is a civic activity?",
+     "repair": "Define civic: taking part in public life for the common good."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_PARTY",
+     "listen_for": [
+      "Close schools"
+     ],
+     "ask": "What do political parties do?",
+     "repair": "List what parties do: field candidates, share policies, give citizens a voice."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_POST",
+     "listen_for": [
+      "Head teacher"
+     ],
+     "ask": "Which post is vied for in a general election?",
+     "repair": "List the six posts on the general election ballot."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_COLLECTIVE",
+     "listen_for": [
+      "Individual"
+     ],
+     "ask": "A youth group cleans a market together. Is this individual or collective civic engagement?",
+     "repair": "Sort examples by \"one person\" or \"a group\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name three positions vied for in a general election.",
+     "answer": "any three of: President, Governor, Senator, Member of the National Assembly, Woman Representative, MCA",
+     "shows": "posts"
+    },
+    {
+     "question": "What do political parties do?",
+     "answer": "field candidates, share policies and give citizens a voice",
+     "shows": "parties"
+    }
+   ]
+  }
+ ]
+}

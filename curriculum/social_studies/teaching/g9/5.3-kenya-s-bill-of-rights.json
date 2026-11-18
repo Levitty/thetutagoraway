@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS",
+ "title": "Kenya’s Bill of Rights",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Chapter Four. Special groups: children, persons with disabilities, youth, older persons, minorities and marginalised groups. Applying the Bill of Rights: scenario cards.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS",
+   "key_step": "The child names rights in Kenya's Bill of Rights, the special groups it protects and how to apply it in daily life.",
+   "floor": {
+    "prerequisite": "Names the rights of the child in Kenya.",
+    "question": "Give one right of the child.",
+    "answer": "any right such as education"
+   },
+   "representations": [
+    "Chapter Four extracts",
+    "special group cards",
+    "scenario cards"
+   ],
+   "steps": [
+    "Name the right.",
+    "Name a special group and its protection.",
+    "Read the scenario.",
+    "Apply the right to it."
+   ],
+   "contexts": [
+    "a ramp for a wheelchair user",
+    "a learner speaking at a forum",
+    "older persons' care"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A school has no ramp for a learner in a wheelchair.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Which right and which special group?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for equality and persons with disabilities."
+    },
+    {
+     "beat": "write",
+     "do": "Write what should be done."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_CHAPTER",
+     "listen_for": [
+      "Chapter 1"
+     ],
+     "ask": "In which chapter is the Bill of Rights?",
+     "repair": "Show the chapter list: Chapter 1 is Sovereignty, Chapter 4 the Bill of Rights."
+    },
+    {
+     "code": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_RIGHT",
+     "listen_for": [
+      "The right to cheat"
+     ],
+     "ask": "Which is a right in the Bill of Rights?",
+     "repair": "Read three real rights and ask whether each protects dignity."
+    },
+    {
+     "code": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_SPECIAL",
+     "listen_for": [
+      "Only adults with jobs"
+     ],
+     "ask": "Which is a special group protected by the Constitution?",
+     "repair": "Ask who is more likely to be left out or harmed."
+    },
+    {
+     "code": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_LIMITLESS",
+     "listen_for": [
+      "Yes, it has no limits"
+     ],
+     "ask": "Can the right to free expression be used to spread hate speech?",
+     "repair": "Read the limit on expression in the Constitution."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which chapter is the Bill of Rights?",
+     "answer": "Chapter 4",
+     "shows": "chapter"
+    },
+    {
+     "question": "Name two special groups protected by the Constitution.",
+     "answer": "any two of: children, persons with disabilities, youth, older persons, minorities and marginalised groups",
+     "shows": "special groups"
+    }
+   ]
+  }
+ ]
+}

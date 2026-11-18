@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY",
+ "title": "The Constitution of Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Stages as taught (to confirm): collecting views, drafting, review, debate in Parliament, referendum (4 August 2010), promulgation (27 August 2010).",
+ "skills": [
+  {
+   "skill": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING",
+   "key_step": "The child orders the stages of making Kenya's Constitution and names the roles of Parliament and citizens.",
+   "floor": {
+    "prerequisite": "Says what the Constitution contains.",
+    "question": "Which chapter is the Bill of Rights?",
+    "answer": "Chapter 4"
+   },
+   "representations": [
+    "a timeline strip",
+    "stage cards",
+    "role cards"
+   ],
+   "steps": [
+    "Collect citizens' views.",
+    "Draft and review.",
+    "Parliament debates and approves.",
+    "Referendum, then promulgation."
+   ],
+   "contexts": [
+    "public hearings across counties",
+    "the 2010 referendum",
+    "promulgation day at Uhuru Park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the stages in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the referendum.",
+     "say": "What must happen before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a draft approved by Parliament\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number the stages."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_ORDER",
+     "listen_for": [
+      "The referendum"
+     ],
+     "ask": "Which stage comes first?",
+     "repair": "Ask: what did people vote on? A draft must exist first."
+    },
+    {
+     "code": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_PARLIAMENT",
+     "listen_for": [
+      "Ignores it"
+     ],
+     "ask": "What does Parliament do with the draft?",
+     "repair": "Show Parliament debating and approving the draft before the referendum."
+    },
+    {
+     "code": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_YEAR",
+     "listen_for": [
+      "2002"
+     ],
+     "ask": "In which year was Kenya's current Constitution promulgated?",
+     "repair": "Put 2002 (review begins) and 2010 (referendum and promulgation) on a timeline."
+    },
+    {
+     "code": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_CITIZENS_NONE",
+     "listen_for": [
+      "They did not"
+     ],
+     "ask": "How did citizens take part in making the 2010 Constitution?",
+     "repair": "List the two citizen stages on the timeline."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which stage comes first in making a constitution?",
+     "answer": "collecting views from citizens",
+     "shows": "order"
+    },
+    {
+     "question": "In which year was the current Constitution promulgated?",
+     "answer": "2010",
+     "shows": "year"
+    }
+   ]
+  }
+ ]
+}

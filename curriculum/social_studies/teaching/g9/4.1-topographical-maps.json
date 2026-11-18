@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS",
+ "title": "Topographical maps",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Enlarging: multiply the grid size; reducing: divide. A cross-section: lay paper along the line, mark where contours cross, plot heights.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS",
+   "key_step": "The child reads human activities on a topographical map, enlarges and reduces parts of it, and reads a cross-section.",
+   "floor": {
+    "prerequisite": "Reads marginal information and relief on a topographical map.",
+    "question": "What do contours show?",
+    "answer": "the height of the land"
+   },
+   "representations": [
+    "a topographical sheet",
+    "squared paper",
+    "a strip of paper for a cross-section"
+   ],
+   "steps": [
+    "Find human features from the key.",
+    "Grid the part to enlarge or reduce.",
+    "Copy square by square at the new size.",
+    "Draw a cross-section along a line."
+   ],
+   "contexts": [
+    "a market and railway on a survey map",
+    "enlarging a hill area",
+    "a cross-section across a valley"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three contours round a hill and a straight line across them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at where the line crosses the inner contour.",
+     "say": "Is this the highest or lowest point along the line?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for highest."
+    },
+    {
+     "beat": "draw",
+     "do": "Plot the cross-section."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_CONTOUR",
+     "listen_for": [
+      "Roads"
+     ],
+     "ask": "What do contour lines show?",
+     "repair": "Check the key; follow a contour round a hill and see it never leads anywhere."
+    },
+    {
+     "code": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_SECTION",
+     "listen_for": [
+      "The map's title"
+     ],
+     "ask": "What does a cross-section show?",
+     "repair": "Cut a loaf or a clay hill and show the side view."
+    },
+    {
+     "code": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_HUMAN",
+     "listen_for": [
+      "A river"
+     ],
+     "ask": "Which is a human activity shown on a map?",
+     "repair": "Sort map features into natural and made by people."
+    },
+    {
+     "code": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_ENLARGE_SCALE",
+     "listen_for": [
+      "1:100,000"
+     ],
+     "ask": "A map at 1:50,000 is enlarged two times. What is the new scale?",
+     "repair": "Show that on the enlarged map each centimetre covers less ground."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a human activity shown on a topographical map: a railway or a river?",
+     "answer": "a railway",
+     "shows": "human features"
+    },
+    {
+     "question": "What does a cross-section show?",
+     "answer": "the shape of the land along a line",
+     "shows": "cross-section"
+    }
+   ]
+  }
+ ]
+}

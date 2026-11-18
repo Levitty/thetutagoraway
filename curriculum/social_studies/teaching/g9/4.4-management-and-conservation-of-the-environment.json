@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT",
+ "title": "Management and Conservation of the Environment",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk the school compound and list signs of degradation (bare patches, gullies, litter) before the lesson.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION",
+   "key_step": "The child names causes and effects of environmental degradation and designs measures to manage and conserve the environment.",
+   "floor": {
+    "prerequisite": "Picks ways to conserve vegetation.",
+    "question": "Give one way to conserve vegetation.",
+    "answer": "any such as planting trees"
+   },
+   "representations": [
+    "a compound walk list",
+    "cause-effect-answer cards",
+    "before and after photos"
+   ],
+   "steps": [
+    "Name the cause.",
+    "Name the effect.",
+    "Design a measure.",
+    "Say who can carry it out."
+   ],
+   "contexts": [
+    "gullies on a bare slope",
+    "litter in a market",
+    "charcoal burning in a forest"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bare slope with a gully."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gully.",
+     "say": "What caused this, and how can we stop it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no cover; plant grass and trees, terraces\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write cause, effect and answer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_CAUSE",
+     "listen_for": [
+      "Planting trees"
+     ],
+     "ask": "Which causes environmental degradation?",
+     "repair": "Sort actions into \"harms\" and \"heals\"."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_EFFECT",
+     "listen_for": [
+      "Better soil"
+     ],
+     "ask": "Which is an effect of degradation?",
+     "repair": "Show a gully photo and ask what happened to the soil."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_ANSWER",
+     "listen_for": [
+      "Burning forests"
+     ],
+     "ask": "Which helps to conserve the environment?",
+     "repair": "Compare land after burning with land after tree planting."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_PLASTIC_HARMLESS",
+     "listen_for": [
+      "It is harmless, it does not rot"
+     ],
+     "ask": "Why is plastic waste harmful to the environment?",
+     "repair": "Show a blocked drain and a cow that ate plastic."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two causes of environmental degradation.",
+     "answer": "any two of: deforestation, overgrazing, pollution, poor farming",
+     "shows": "causes"
+    },
+    {
+     "question": "Give one measure to conserve the environment.",
+     "answer": "any of: planting trees, terracing, recycling, laws, controlled grazing",
+     "shows": "answer"
+    }
+   ]
+  }
+ ]
+}

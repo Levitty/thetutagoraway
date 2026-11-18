@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.SOCIAL.PATHWAY_CHOICES",
+ "title": "Pathway Choices",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm with the current senior school guidelines): three pathways, STEM, Social Sciences, and Arts and Sports Science. Invite a counsellor; every learner fills a private interests sheet.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS",
+   "key_step": "The child names the three senior school pathways and the factors for choosing one, and says it is chosen with parents, teachers and counsellors.",
+   "floor": {
+    "prerequisite": "Describes their own traits and abilities.",
+    "question": "Give one ability you have.",
+    "answer": "any honest answer"
+   },
+   "representations": [
+    "three pathway columns",
+    "subject and career cards",
+    "a private interests sheet"
+   ],
+   "steps": [
+    "Name the three pathways.",
+    "List your interests and abilities.",
+    "Match them to a pathway.",
+    "Talk it over with a parent, teacher or counsellor."
+   ],
+   "contexts": [
+    "a learner who loves debating",
+    "a learner strong in maths and building things",
+    "a learner in the school athletics team"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write STEM, Social Sciences, Arts and Sports Science."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Social Sciences.",
+     "say": "Which career could come from here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a career such as lawyer or teacher."
+    },
+    {
+     "beat": "write",
+     "do": "Add two careers under each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_NUMBER",
+     "listen_for": [
+      "Two"
+     ],
+     "ask": "How many senior school pathways are there?",
+     "repair": "Write the three pathways as three columns and sort subjects into them."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_FACTOR",
+     "listen_for": [
+      "Where her friends are going"
+     ],
+     "ask": "Which should guide a learner's choice of pathway?",
+     "repair": "Fill the interests and abilities sheet first, then look at which pathway fits it."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_NAME",
+     "listen_for": [
+      "Trade and Business only"
+     ],
+     "ask": "Which is a senior school pathway?",
+     "repair": "List the three pathway names and show the subjects that sit inside each."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_PRESTIGE",
+     "listen_for": [
+      "Yes, STEM is the only good one"
+     ],
+     "ask": "Is the Social Sciences pathway only for learners who cannot do STEM?",
+     "repair": "List careers from each pathway: lawyer, journalist, engineer, sports coach."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many senior school pathways are there?",
+     "answer": "three",
+     "shows": "number"
+    },
+    {
+     "question": "Which should guide a learner's choice of pathway?",
+     "answer": "their interests, abilities and career goals",
+     "shows": "factors"
+    }
+   ]
+  }
+ ]
+}

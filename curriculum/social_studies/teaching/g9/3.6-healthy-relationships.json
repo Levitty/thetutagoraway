@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS",
+ "title": "Healthy relationships",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use story characters. Strategies to overcome barriers: honest talk, setting boundaries, forgiving, choosing friends wisely.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS",
+   "key_step": "The child names ways of sustaining healthy relationships, barriers to them and strategies to overcome the barriers.",
+   "floor": {
+    "prerequisite": "Handles peer pressure.",
+    "question": "A friend pushes you to do wrong. What do you do?",
+    "answer": "say no clearly and walk away"
+   },
+   "representations": [
+    "builds and breaks cards",
+    "strategy cards",
+    "friendship stories"
+   ],
+   "steps": [
+    "Name what builds the relationship.",
+    "Name what breaks it.",
+    "Pick a strategy for the barrier.",
+    "Say how it helps."
+   ],
+   "contexts": [
+    "two friends after a misunderstanding",
+    "jealousy over marks",
+    "a friend spreading gossip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"jealousy\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the word.",
+     "say": "What strategy helps overcome jealousy?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer such as honest talk or celebrating others."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more barriers and strategies."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_WAY",
+     "listen_for": [
+      "Gossip"
+     ],
+     "ask": "Which sustains a healthy relationship?",
+     "repair": "Ask how the person being gossiped about feels and what happens to trust."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_BARRIER",
+     "listen_for": [
+      "Trust"
+     ],
+     "ask": "Which is a barrier to a healthy relationship?",
+     "repair": "Sort cards into \"builds\" and \"breaks\"."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_FORGIVE",
+     "listen_for": [
+      "Ends the friendship"
+     ],
+     "ask": "What does forgiveness do?",
+     "repair": "Tell a story where forgiveness saved a friendship."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_BOUNDARY",
+     "listen_for": [
+      "No, it ruins it"
+     ],
+     "ask": "Can saying no to a friend's harmful request keep the friendship healthy?",
+     "repair": "Role-play a kind but firm no."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways of sustaining a healthy relationship.",
+     "answer": "any two of: respect, honest talk, trust, forgiveness, listening",
+     "shows": "ways"
+    },
+    {
+     "question": "Give one barrier to a healthy relationship.",
+     "answer": "any of: jealousy, mistrust, gossip, peer pressure",
+     "shows": "barrier"
+    }
+   ]
+  }
+ ]
+}

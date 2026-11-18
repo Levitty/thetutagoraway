@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION",
+ "title": "Cultural Globalisation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Kenyan culture with world recognition: Kiswahili (an African Union working language, to confirm), long-distance running, benga music, the kikoi and kanga.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE",
+   "key_step": "The child names cultural elements with global recognition, how African culture promotes a common humanity, and ways to preserve culture.",
+   "floor": {
+    "prerequisite": "Tells what globalisation is.",
+    "question": "What is globalisation?",
+    "answer": "the world becoming one connected place"
+   },
+   "representations": [
+    "element cards",
+    "examples of Kenyan culture abroad",
+    "preservation cards"
+   ],
+   "steps": [
+    "Name the element.",
+    "Give a Kenyan example recognised abroad.",
+    "Say how it promotes common humanity.",
+    "Name a way to preserve it."
+   ],
+   "contexts": [
+    "Kiswahili taught abroad",
+    "Kenyan marathon runners",
+    "benga music"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write language, sport, music."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sport.",
+     "say": "Which Kenyan sport has world recognition?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for long-distance running."
+    },
+    {
+     "beat": "write",
+     "do": "Write a way to preserve each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_ELEMENT",
+     "listen_for": [
+      "The price of petrol"
+     ],
+     "ask": "Which is an element of culture?",
+     "repair": "List the elements: language, music, dance, dress, food, sport, beliefs."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_KISWAHILI",
+     "listen_for": [
+      "None has any"
+     ],
+     "ask": "Which Kenyan language has global recognition?",
+     "repair": "Show Kiswahili used in the African Union and taught abroad."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_HUMANITY",
+     "listen_for": [
+      "Mocking other cultures"
+     ],
+     "ask": "What promotes a common humanity?",
+     "repair": "Ask how the mocked group feels and whether it brings people together."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_LOSE_ALL",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does sharing Kenyan music with the world mean Kenya loses it?",
+     "repair": "Show Kenyan music played abroad and still at home."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which Kenyan language has global recognition?",
+     "answer": "Kiswahili",
+     "shows": "recognition"
+    },
+    {
+     "question": "Give one way of preserving culture.",
+     "answer": "any of: teaching it to the young, festivals, recording it, using the language",
+     "shows": "preserve"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS",
+   "key_step": "The child names factors that promote healthy cultural relationships in a connected world and rejects those that harm them.",
+   "floor": {
+    "prerequisite": "Names cultural elements with global recognition.",
+    "question": "Name one element of culture.",
+    "answer": "any of: language, music, dance, dress, food, sport"
+   },
+   "representations": [
+    "factor cards: helps or harms",
+    "a culture day plan",
+    "media examples"
+   ],
+   "steps": [
+    "Name the factor.",
+    "Say how it builds respect.",
+    "Name a harmful opposite.",
+    "Plan one action for the class."
+   ],
+   "contexts": [
+    "a school culture day",
+    "learning greetings in another language",
+    "respectful media"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"stereotypes\" and \"cultural exchange\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Which helps healthy cultural relationships?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cultural exchange."
+    },
+    {
+     "beat": "write",
+     "do": "Write three more helping factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS.M_SS9_CF_STEREOTYPE",
+     "listen_for": [
+      "Yes, they explain people quickly"
+     ],
+     "ask": "Do stereotypes help healthy cultural relationships?",
+     "repair": "Test a stereotype against real people from that culture."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS.M_SS9_CF_LANGUAGE_NONE",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does learning another language help cultural relationships?",
+     "repair": "Greet a visitor in their language and see the reaction."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS.M_SS9_CF_MEDIA_ALL_GOOD",
+     "listen_for": [
+      "No, media only help"
+     ],
+     "ask": "Can the media harm cultural relationships?",
+     "repair": "Compare a respectful programme with a mocking post."
+    },
+    {
+     "code": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS.M_SS9_CF_EXCHANGE_NONE",
+     "listen_for": [
+      "They do not"
+     ],
+     "ask": "How do cultural festivals and exchange programmes help?",
+     "repair": "Recall a school culture day and what learners learnt."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two factors that promote healthy cultural relationships.",
+     "answer": "any two of: respect and tolerance, learning languages, cultural exchange, responsible media, travel, laws against discrimination",
+     "shows": "factors"
+    },
+    {
+     "question": "Do stereotypes help cultural relationships?",
+     "answer": "No, they spread wrong ideas",
+     "shows": "rejects"
+    }
+   ]
+  }
+ ]
+}

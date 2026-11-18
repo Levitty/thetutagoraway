@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS",
+ "title": "Indigenous Knowledge Systems in African Societies",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Respect elders' knowledge. Herbal medicine is discussed as knowledge, never as advice to take any remedy.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE",
+   "key_step": "The child names types of indigenous knowledge, what they were used for, and how they can be used with modern knowledge.",
+   "floor": {
+    "prerequisite": "Names methods of traditional education.",
+    "question": "Name one method of traditional education.",
+    "answer": "any such as storytelling"
+   },
+   "representations": [
+    "type cards",
+    "a proverb and a weather sign",
+    "an elder's visit"
+   ],
+   "steps": [
+    "Name the type.",
+    "Say how it was passed on.",
+    "Say what it was used for.",
+    "Say how it can be used with modern knowledge."
+   ],
+   "contexts": [
+    "reading signs of rain",
+    "herbal knowledge",
+    "proverbs teaching values"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a proverb such as \"Unity is strength\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the proverb.",
+     "say": "What knowledge does it carry?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a value."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more types."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_WRITTEN",
+     "listen_for": [
+      "By printed books"
+     ],
+     "ask": "How was indigenous knowledge mainly passed on?",
+     "repair": "Ask an elder to explain a proverb or a weather sign and note that it was never written."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_TYPE",
+     "listen_for": [
+      "A computer game"
+     ],
+     "ask": "Which is an indigenous knowledge system?",
+     "repair": "Sort examples: from elders long ago (herbal medicine, weather signs) or modern."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_USE",
+     "listen_for": [
+      "Nothing useful"
+     ],
+     "ask": "What was indigenous knowledge used for?",
+     "repair": "Name a use for each: weather signs for planting, herbs for healing, proverbs for values."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_MODERN_REPLACE",
+     "listen_for": [
+      "No, only modern knowledge counts"
+     ],
+     "ask": "A farmer listens to the radio forecast and also watches for signs elders taught. Is this wise?",
+     "repair": "Compare a forecast with a traditional sign for the same season."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two indigenous knowledge systems.",
+     "answer": "any two of: oral literature, herbal medicine, weather forecasting, farming skills, crafts",
+     "shows": "types"
+    },
+    {
+     "question": "How was indigenous knowledge mainly passed on?",
+     "answer": "by word of mouth",
+     "shows": "how passed on"
+    }
+   ]
+  }
+ ]
+}

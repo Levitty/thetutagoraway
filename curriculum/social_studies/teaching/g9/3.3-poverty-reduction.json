@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.PEOPLE.POVERTY_REDUCTION",
+ "title": "Poverty Reduction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Talk about poverty without pointing at anyone in class. Overexploitation: charcoal burning, overfishing, sand harvesting.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY",
+   "key_step": "The child names causes of poverty in Africa and explains how overexploiting resources deepens it.",
+   "floor": {
+    "prerequisite": "Gives the effects of high population density.",
+    "question": "Give one effect of high density.",
+    "answer": "any effect such as unemployment"
+   },
+   "representations": [
+    "cause cards",
+    "a forest-over-time drawing",
+    "a cause-and-effect chain"
+   ],
+   "steps": [
+    "Name the cause.",
+    "Say how it leads to poverty.",
+    "Name an overexploited resource.",
+    "Show the chain to poverty."
+   ],
+   "contexts": [
+    "charcoal burning on a hill",
+    "overfishing in a lake",
+    "drought in the north"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hill with many trees, then with stumps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the stumps.",
+     "say": "What happens to families who sold charcoal now?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they lose income\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the chain."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_CAUSE",
+     "listen_for": [
+      "High employment"
+     ],
+     "ask": "Which is a cause of poverty?",
+     "repair": "Underline \"un-\" and ask what it changes."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_OVER",
+     "listen_for": [
+      "Endless wealth"
+     ],
+     "ask": "What can overexploiting resources lead to?",
+     "repair": "Show a forest cut for charcoal over five years in drawings."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_GOV",
+     "listen_for": [
+      "Good governance"
+     ],
+     "ask": "Which can lead to poverty?",
+     "repair": "Pair: corruption takes money from services; good governance uses it for people."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_LAZY",
+     "listen_for": [
+      "No, only lazy people are poor"
+     ],
+     "ask": "Can a hardworking family be poor?",
+     "repair": "Read a story of a farming family hit by drought."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two causes of poverty in Africa.",
+     "answer": "any two of: unemployment, drought, corruption, conflict, low education, rapid population growth",
+     "shows": "causes"
+    },
+    {
+     "question": "What can overexploiting resources lead to?",
+     "answer": "empty resources and deeper poverty",
+     "shows": "overexploitation"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI",
+ "title": "Community Service Learning Project",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Grade 9 implements and reports. Keep the report short: problem, solution, what was done, results, lessons.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+   "key_step": "The child orders the project steps and says what the final report contains.",
+   "floor": {
+    "prerequisite": "Orders the Grade 8 CSL steps.",
+    "question": "What comes after designing a solution?",
+    "answer": "planning"
+   },
+   "representations": [
+    "step cards",
+    "a report frame",
+    "the class project log"
+   ],
+   "steps": [
+    "Identify the problem.",
+    "Design and plan.",
+    "Implement.",
+    "Write the report: problem, solution, work, results, lessons."
+   ],
+   "contexts": [
+    "a school garden for a children's home",
+    "clearing a blocked drain",
+    "a reading day at a nursery school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the report headings."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"results\".",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for what changed after the project."
+    },
+    {
+     "beat": "write",
+     "do": "Fill one heading as an example."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_ORDER",
+     "listen_for": [
+      "Write the report"
+     ],
+     "ask": "What is the first step in a community service project?",
+     "repair": "Lay the five step cards in a line and ask what each needs from the one before."
+    },
+    {
+     "code": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_PLAN",
+     "listen_for": [
+      "Writing the report"
+     ],
+     "ask": "What comes before implementing?",
+     "repair": "Hold up a plan (future: who, what, when) and a report (past: what was done) side by side."
+    },
+    {
+     "code": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_REPORT",
+     "listen_for": [
+      "Identifying the problem"
+     ],
+     "ask": "What comes last?",
+     "repair": "Ask: can you write about results before the work? Put the report last."
+    },
+    {
+     "code": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_REPORT_CONTENT",
+     "listen_for": [
+      "Only the names of the learners"
+     ],
+     "ask": "What should a CSL report include?",
+     "repair": "Give a report frame with five headings."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first step in a community service project?",
+     "answer": "identify the problem",
+     "shows": "first"
+    },
+    {
+     "question": "Give two things a CSL report should include.",
+     "answer": "any two of: the problem, the solution, what was done, results, lessons",
+     "shows": "report"
+    }
+   ]
+  }
+ ]
+}

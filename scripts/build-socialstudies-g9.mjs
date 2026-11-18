@@ -3,6 +3,8 @@
 // Idempotent. Official outcomes and sub-strand text are never touched. Skills 'proposed', misconceptions 'draft'.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { SKILLS, MIS } from './data/socialstudies-g9-skills.mjs';
+import { SUBS as DEPTH } from './data/socialstudies-depth/g9.mjs';
+import { applyDepth } from './science-depth.mjs';
 const path = new URL('../curriculum/social_studies/g9.json', import.meta.url);
 const g = JSON.parse(readFileSync(path, 'utf8'));
 const P = 'SOCI.G9.';
@@ -28,5 +30,9 @@ for (const [skill, short, error, q, wrong, right, feedback] of MIS) {
 }
 g.totals = { ...g.totals, skills: SKILLS.length, prerequisites: nPre, misconceptions: MIS.length };
 g.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Social Studies teacher's review";
+// Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g9.mjs adds prerequisites, misconceptions to four per skill (with a real
+// cause for each first-pass one) and the teaching pack in curriculum/social_studies/teaching/g9/, through scripts/science-depth.mjs.
+const depth = applyDepth(g, DEPTH, { dir: 'social_studies', grade: 9, prefix: P, derive: true });
+g.status = g.status.replace(/; depth pass 18 Nov 2026.*$/, '') + '; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g9)';
 writeFileSync(path, JSON.stringify(g, null, 1) + '\n');
-console.log(`socialstudies g9: ${SKILLS.length} skills, ${nPre} prerequisites, ${MIS.length} misconceptions`);
+console.log(`social studies g9: ${g.totals.skills} skills, ${g.totals.prerequisites} prerequisites, ${g.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR",
+ "title": "Internal Land Forming Processes",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Cut out continents from a world map and fit Africa and South America together. Model faulting with foam or layered paper.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING",
+   "key_step": "The child names types and causes of earth movements, features made by faulting and their effects on people.",
+   "floor": {
+    "prerequisite": "Names the layers of the earth.",
+    "question": "Which layer do we live on?",
+    "answer": "the crust"
+   },
+   "representations": [
+    "layered paper or foam",
+    "feature cards",
+    "a Rift Valley cross-section"
+   ],
+   "steps": [
+    "Name the force: tension or compression.",
+    "Show the fault.",
+    "Name the feature formed.",
+    "Name the effect on people."
+   ],
+   "contexts": [
+    "the Great Rift Valley",
+    "hot springs at Lake Bogoria",
+    "Olkaria geothermal power"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a block of land with two cracks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle block.",
+     "say": "Tension pulls the sides apart. What happens to the middle?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it sinks\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write rift valley and two effects."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_TENSION",
+     "listen_for": [
+      "Compressional"
+     ],
+     "ask": "Which force pulls the crust apart?",
+     "repair": "Act it with hands: pull apart (tension), push together (compression)."
+    },
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_RIFT",
+     "listen_for": [
+      "A delta"
+     ],
+     "ask": "Which feature is made by faulting?",
+     "repair": "Sort landforms into those made by rivers and those made by faulting."
+    },
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_EFFECT",
+     "listen_for": [
+      "Nothing at all"
+     ],
+     "ask": "Which can faulting bring?",
+     "repair": "List faulting effects in Kenya: Rift Valley lakes, hot springs, geothermal power, earthquakes."
+    },
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_GEOTHERMAL",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does the Rift Valley help Kenya make electricity?",
+     "repair": "Show Olkaria on the map with steam pipes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which force pulls the crust apart?",
+     "answer": "tensional force",
+     "shows": "forces"
+    },
+    {
+     "question": "Give one effect of faulting on people.",
+     "answer": "any of: earthquakes, hot springs, geothermal power, fertile valley floors, lakes for fishing and tourism",
+     "shows": "effects"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS",
+   "key_step": "The child explains continental drift and plate tectonics, gives evidence, and links plate movement to rifts, mountains, earthquakes and volcanoes.",
+   "floor": {
+    "prerequisite": "Names the layers of the earth.",
+    "question": "Which layer lies below the crust?",
+    "answer": "the mantle"
+   },
+   "representations": [
+    "cut-out continents",
+    "a plate map",
+    "evidence cards"
+   ],
+   "steps": [
+    "Say the continents were once one: Pangaea.",
+    "Give the evidence.",
+    "Say plates move on the mantle.",
+    "Name what happens where plates meet or part."
+   ],
+   "contexts": [
+    "Africa and South America fitting",
+    "the East African Rift opening",
+    "earthquakes along plate edges"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Africa and South America apart."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the coasts.",
+     "say": "What do you notice if we push them together?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they fit\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write Pangaea and two pieces of evidence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS.M_SS9_PT_FIXED",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Have the continents always been in the same place?",
+     "repair": "Fit the coasts of Africa and South America together."
+    },
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS.M_SS9_PT_FAST",
+     "listen_for": [
+      "Many kilometres a year"
+     ],
+     "ask": "How fast do the plates move?",
+     "repair": "Compare with fingernail growth."
+    },
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS.M_SS9_PT_EVIDENCE",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Give one piece of evidence for continental drift.",
+     "repair": "Show matching fossil maps across the Atlantic."
+    },
+    {
+     "code": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS.M_SS9_PT_PLATE_COUNTRY",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does each country have its own plate?",
+     "repair": "Show the African plate covering many countries."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was Pangaea?",
+     "answer": "the single land mass the continents once formed",
+     "shows": "drift"
+    },
+    {
+     "question": "What happens where plates pull apart?",
+     "answer": "rift valleys form",
+     "shows": "plate tectonics"
+    }
+   ]
+  }
+ ]
+}

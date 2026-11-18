@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ",
+ "title": "Multi-purpose River Projects in Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Aswan High Dam (Nile, Egypt), Kariba (Zambezi), Akosombo (Volta, Ghana), Seven Forks on the Tana (Masinga, Kamburu, Gitaru, Kindaruma, Kiambere).",
+ "skills": [
+  {
+   "skill": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS",
+   "key_step": "The child names multi-purpose river projects in Africa, their uses and their challenges.",
+   "floor": {
+    "prerequisite": "Locates Africa's main rivers.",
+    "question": "Which river flows north to the Mediterranean?",
+    "answer": "the Nile"
+   },
+   "representations": [
+    "a map of Africa with dams",
+    "use and challenge cards",
+    "a dam diagram"
+   ],
+   "steps": [
+    "Name the dam.",
+    "Name the river and country.",
+    "List its uses.",
+    "List its challenges."
+   ],
+   "contexts": [
+    "Aswan on the Nile",
+    "Kariba on the Zambezi",
+    "Masinga on the Tana"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Aswan, Kariba, Akosombo, Masinga."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Kariba.",
+     "say": "Which river is it on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Zambezi."
+    },
+    {
+     "beat": "write",
+     "do": "Write the river for each and two uses."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_RIVER",
+     "listen_for": [
+      "The Zambezi"
+     ],
+     "ask": "On which river is the Aswan High Dam?",
+     "repair": "Pair each dam with its river and country on the map."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_USE",
+     "listen_for": [
+      "Causing drought"
+     ],
+     "ask": "Which is a use of a multi-purpose dam?",
+     "repair": "List what a dam is built to give: power, irrigation, water, flood control, fish."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_CHALLENGE",
+     "listen_for": [
+      "Cheap power"
+     ],
+     "ask": "Which is a challenge of a big dam?",
+     "repair": "Sort dam facts into benefits and challenges."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_ONE_USE",
+     "listen_for": [
+      "It only makes electricity"
+     ],
+     "ask": "Why is Aswan called a multi-purpose project?",
+     "repair": "Break the word: multi = many purposes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "On which river is the Aswan High Dam?",
+     "answer": "the Nile",
+     "shows": "river"
+    },
+    {
+     "question": "Give one challenge of a big dam.",
+     "answer": "any of: high cost, displaced people, silting, water weeds, loss of land",
+     "shows": "challenge"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS",
+   "key_step": "The child outlines the conditions that favoured the Tana River projects and pairs river project challenges with solutions.",
+   "floor": {
+    "prerequisite": "Names river projects and their challenges.",
+    "question": "Give one challenge of a dam.",
+    "answer": "any challenge such as silting"
+   },
+   "representations": [
+    "a Tana River profile drawing",
+    "condition cards",
+    "challenge and solution cards"
+   ],
+   "steps": [
+    "Name the river conditions: permanent, large volume, falls and gorges.",
+    "Name the land conditions: hard rock, few people.",
+    "Name the need: power and irrigation.",
+    "Pair challenges with solutions."
+   ],
+   "contexts": [
+    "the Seven Forks dams",
+    "silting from bare hills",
+    "resettling families"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river dropping through a narrow gorge."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gorge.",
+     "say": "Why is this a good dam site?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"narrow, hard rock, water falls\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more conditions and two solutions."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS.M_SS9_RC_FLAT_SITE",
+     "listen_for": [
+      "A flat plain"
+     ],
+     "ask": "Which site suits a dam on the Tana: a deep gorge or a flat plain?",
+     "repair": "Model water held by a narrow gorge and spreading on a plain."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS.M_SS9_RC_SEASONAL",
+     "listen_for": [
+      "Any river would do"
+     ],
+     "ask": "Why was the Tana chosen for the Seven Forks dams?",
+     "repair": "Compare the Tana with a river that dries up."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS.M_SS9_RC_SILT_FIX",
+     "listen_for": [
+      "Build a higher wall"
+     ],
+     "ask": "Which solution fits silting of a dam?",
+     "repair": "Trace the silt back to bare hills upstream."
+    },
+    {
+     "code": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS.M_SS9_RC_DISPLACED",
+     "listen_for": [
+      "Just move them"
+     ],
+     "ask": "People must move for a new dam. What is fair?",
+     "repair": "Read a story of families moved without help."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two conditions that led to dams on the Tana.",
+     "answer": "any two of: permanent river, large volume, falls and gorges, hard rock, few people to displace, demand for power and irrigation",
+     "shows": "conditions"
+    },
+    {
+     "question": "Which solution fits silting?",
+     "answer": "planting trees and controlling soil erosion in the catchment",
+     "shows": "solution"
+    }
+   ]
+  }
+ ]
+}
