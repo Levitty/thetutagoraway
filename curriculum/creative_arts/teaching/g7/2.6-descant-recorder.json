@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.CREATI.DESCANT_RECORDER",
+ "title": "Descant Recorder",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sight reading from staff notation; the phone names the symbols in words.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS",
+   "key_step": "The child names what to check before playing from the staff: clef, key signature, time signature, note values, rests, tempo and dynamics.",
+   "floor": {
+    "prerequisite": "Plays C to D' (Grade 6).",
+    "question": "Which hand is on top of the recorder?",
+    "answer": "the left"
+   },
+   "representations": [
+    "a short piece on the board",
+    "a recorder",
+    "symbol cards"
+   ],
+   "steps": [
+    "Check the clef and key.",
+    "Check the time signature.",
+    "Look for rests, tempo and dynamics.",
+    "Clap, then play."
+   ],
+   "contexts": [
+    "sight reading in class",
+    "learning a piece for a concert"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at \"f\" under the notes.",
+     "say": "What does it ask?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"loud\"."
+    },
+    {
+     "beat": "predict",
+     "do": "And \"allegro\"?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Fast."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_FACTOR",
+     "listen_for": [
+      "The colour of the recorder"
+     ],
+     "ask": "What should you check before playing a melody?",
+     "repair": "Read a piece from left to right: clef, key, time, then notes."
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_REST",
+     "listen_for": [
+      "Play louder"
+     ],
+     "ask": "What does a rest mean?",
+     "repair": "Clap a line and hold still at each rest."
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_TEMPO",
+     "listen_for": [
+      "Dynamics"
+     ],
+     "ask": "Which tells how fast to play?",
+     "repair": "Sort words: allegro, andante (tempo); forte, piano (dynamics)."
+    },
+    {
+     "code": "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS.M_CA7_RC_KEY_SKIP",
+     "listen_for": [
+      "F"
+     ],
+     "ask": "A piece has one sharp at the start, on the F line. What do you play for every F?",
+     "repair": "Circle every F before playing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a rest tell you?",
+     "answer": "to be silent for its length",
+     "shows": "rest"
+    },
+    {
+     "question": "Which tells how fast to play: tempo or dynamics?",
+     "answer": "tempo",
+     "shows": "tempo"
+    }
+   ]
+  }
+ ]
+}

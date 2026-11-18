@@ -32,6 +32,8 @@ export const SKILLS = [
   [SW, 'SWIMMING', 'Describe water entry and the backstroke', ['a', 'd'], [], FM, 'The child says water entry may be feet first or by a dive, that in a pencil dive the body is straight with feet first, that in a crouch dive the body is crouched on the pool edge, and that in backstroke the swimmer lies on the back with alternate arm strokes and a flutter kick; swimming is only with a lifeguard.'],
   [IG, 'ROPE_GAMES', 'Name indigenous rope games and their benefits', ['a', 'd'], [], FM, 'The child names rope skipping, tug of war and rope jumping, and says rope games build fitness, coordination and teamwork.'],
   [AN, 'SPORTS_VALUES', 'Name the values of clean sports', ['a'], [], FM, 'The child names fair play, honesty, respect, teamwork and discipline as the spirit of clean sport, and says cheating and drugs spoil sport.'],
+  // Added in the depth pass (18 Nov 2026): outcomes b and c (analyse a folk song, analyse a storytelling performance) had no skill.
+  [AN, 'ANALYSIS', 'Analyse a folk song and a storytelling performance using the right terms', ['b', 'c'], ['FOLK_SONGS', 'STORY_TECHNIQUES'], FM, 'The child analyses a Kenyan folk song by its community, occasion, type, message, soloist and chorus, instruments and costume, and a storytelling performance by its theme, characters, techniques (voice, gesture, pause, audience participation) and lesson, and backs each point with something heard or seen.'],
 ];
 
 // [skill id, code, error (for the teacher), example question, wrong, right, feedback]

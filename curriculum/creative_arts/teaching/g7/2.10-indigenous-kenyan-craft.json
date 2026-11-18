@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT",
+ "title": "Indigenous Kenyan Craft",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Jewellery belongs to communities; speak with respect. Use local beads and seeds.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK",
+   "key_step": "The child says jewellery decorates, shows identity, age and status, marks ceremonies, and names beadwork materials and tools (beads, seeds, thread, wire, needle).",
+   "floor": {
+    "prerequisite": "Knows age-sets (Grade 6 Social Studies).",
+    "question": "What is an age-set?",
+    "answer": "people initiated at the same time"
+   },
+   "representations": [
+    "beads and seeds",
+    "a needle and thread",
+    "pictures of jewellery"
+   ],
+   "steps": [
+    "Name what it is for.",
+    "Choose materials.",
+    "Plan a pattern with meaning.",
+    "Thread with a needle."
+   ],
+   "contexts": [
+    "beadwork for a patriotic song",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a beaded collar.",
+     "say": "What can it show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for identity or status."
+    },
+    {
+     "beat": "write",
+     "do": "Write materials and tools."
+    },
+    {
+     "beat": "reveal",
+     "do": "Beads, thread, needle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_MATERIAL",
+     "listen_for": [
+      "Cement"
+     ],
+     "ask": "Which is a material for beadwork?",
+     "repair": "Sort materials you can thread from those you cannot."
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_FUNCTION",
+     "listen_for": [
+      "Nothing at all"
+     ],
+     "ask": "What does jewellery show in Kenyan communities?",
+     "repair": "Look at pictures of Maasai beadwork: colours show age and status."
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_TOOL",
+     "listen_for": [
+      "A hammer"
+     ],
+     "ask": "Which tool is used for beading?",
+     "repair": "Thread beads with a needle and show why a hammer would break them."
+    },
+    {
+     "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK.M_CA7_BW_COLOUR_RANDOM",
+     "listen_for": [
+      "no, any colour"
+     ],
+     "ask": "Do colours in traditional Kenyan beadwork carry meaning?",
+     "repair": "Read what each colour means in one community."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one function of jewellery in Kenyan communities.",
+     "answer": "any of: decoration, identity, status, ceremonies",
+     "shows": "function"
+    },
+    {
+     "question": "Which tool is used to thread beads?",
+     "answer": "a needle",
+     "shows": "tool"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE",
+ "title": "Introduction to Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school timetable and clubs as examples of the categories.",
+ "skills": [
+  {
+   "skill": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES",
+   "key_step": "The child names the categories (visual arts and crafts, music, performing arts, physical education and sports) and how they work together.",
+   "floor": {
+    "prerequisite": "Names elements of music (Grade 6).",
+    "question": "What is tempo?",
+    "answer": "how fast the music goes"
+   },
+   "representations": [
+    "category cards",
+    "school club list",
+    "a folk dance video description"
+   ],
+   "steps": [
+    "Name the activity.",
+    "Say what the person does.",
+    "Place it in a category.",
+    "Find links: music with dance, art with costume."
+   ],
+   "contexts": [
+    "a school drama festival",
+    "sports day with a band"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "A dance with drums and costumes.",
+     "say": "How many categories?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Music, performing arts and visual arts."
+    },
+    {
+     "beat": "write",
+     "do": "Write the links."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_ONE_ONLY",
+     "listen_for": [
+      "They never go together"
+     ],
+     "ask": "How do music and dance relate?",
+     "repair": "Watch a folk dance: name the music, the movement and the costume, three categories in one."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_SPORT",
+     "listen_for": [
+      "Mathematics"
+     ],
+     "ask": "Which is a category of Creative Arts and Sports?",
+     "repair": "Read the subject name aloud: Creative Arts and Sports. List what PE adds."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_ARTS",
+     "listen_for": [
+      "Playing football"
+     ],
+     "ask": "Which is art and craft?",
+     "repair": "Sort ten activities into visual arts, performing arts and sports with the reason for each."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.CA_CATEGORIES.M_CA7_CC_DRAMA_SPORT",
+     "listen_for": [
+      "sports"
+     ],
+     "ask": "Which category does drama belong to?",
+     "repair": "Ask what the performer does: tells a story (performing arts) or competes (sport)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which category is weaving?",
+     "answer": "visual arts and crafts",
+     "shows": "category"
+    },
+    {
+     "question": "Give one way music and sport work together.",
+     "answer": "any, such as a band at sports day or rhythm in aerobics",
+     "shows": "relationship"
+    }
+   ]
+  }
+ ]
+}

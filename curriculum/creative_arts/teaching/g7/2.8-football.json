@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G7.CREATI.FOOTBALL",
+ "title": "Football",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Skills on the field; crayons made from candle wax and colour with a teacher.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS",
+   "key_step": "The child says trapping stops and controls the ball, dribbling keeps it close while moving, shooting sends it at goal with the laces, and crayon etching scratches a dark top layer.",
+   "floor": {
+    "prerequisite": "Kicks, stops and dribbles (Grade 5).",
+    "question": "Which part of the foot stops the ball best?",
+    "answer": "the inside"
+   },
+   "representations": [
+    "a ball and cones",
+    "crayons and a scratching tool",
+    "pictures"
+   ],
+   "steps": [
+    "Trap: cushion the ball.",
+    "Dribble: small touches, eyes up.",
+    "Shoot: laces, eyes on the ball."
+   ],
+   "contexts": [
+    "a class match",
+    "a crayon-etched football poster"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Ball stopped under the sole.",
+     "say": "Which skill?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for trapping."
+    },
+    {
+     "beat": "predict",
+     "do": "Then a kick at goal?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Shooting."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_TRAP",
+     "listen_for": [
+      "Kicking at the goal"
+     ],
+     "ask": "What is trapping?",
+     "repair": "Trap a ball dead under the sole, then shoot; name each."
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_DRIBBLE",
+     "listen_for": [
+      "Passing to a friend"
+     ],
+     "ask": "What is dribbling?",
+     "repair": "Dribble round cones alone, then pass; name each."
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_ETCH",
+     "listen_for": [
+      "By painting over water"
+     ],
+     "ask": "How is crayon etching made?",
+     "repair": "Scratch through a dark crayon layer to show colours."
+    },
+    {
+     "code": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS.M_CA7_FS_SHOOT_TOE",
+     "listen_for": [
+      "the toe"
+     ],
+     "ask": "Which part of the foot gives a powerful, accurate shot?",
+     "repair": "Shoot five with the toe and five with the laces; count on target."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is trapping?",
+     "answer": "stopping and controlling the ball",
+     "shows": "trapping"
+    },
+    {
+     "question": "Which part of the foot is best for a powerful shot?",
+     "answer": "the laces",
+     "shows": "shooting"
+    }
+   ]
+  }
+ ]
+}

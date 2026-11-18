@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI",
+ "title": "Storytelling and Animation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use oral narratives from local communities; flipbooks from small notebooks.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES",
+   "key_step": "The child names storytelling techniques (voice variation, gesture, facial expression, pauses, audience participation) and the qualities of a good flipbook (many pages, small changes, same place).",
+   "floor": {
+    "prerequisite": "Has put on a puppet show (Grade 5).",
+    "question": "Which way should a puppet face?",
+    "answer": "the audience"
+   },
+   "representations": [
+    "a local oral narrative",
+    "a flipbook",
+    "technique cards"
+   ],
+   "steps": [
+    "Tell the story with voice changes.",
+    "Add gestures and pauses.",
+    "Invite the audience to answer.",
+    "For a flipbook, change each page a little."
+   ],
+   "contexts": [
+    "a storytelling festival",
+    "an animation for a class message"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The storyteller stops before the ending.",
+     "say": "Which technique?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a pause."
+    },
+    {
+     "beat": "reveal",
+     "do": "A pause builds suspense."
+    },
+    {
+     "beat": "write",
+     "do": "Write the techniques."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_VOICE",
+     "listen_for": [
+      "Using one flat voice"
+     ],
+     "ask": "Which is a storytelling technique?",
+     "repair": "Tell one line in a flat voice and then as the hyena; ask which holds attention."
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_FLIP",
+     "listen_for": [
+      "One picture"
+     ],
+     "ask": "What does a good flipbook have?",
+     "repair": "Flip a ten-page flipbook of a bouncing ball."
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_AUDIENCE",
+     "listen_for": [
+      "Never let them speak"
+     ],
+     "ask": "How can a storyteller involve the audience?",
+     "repair": "Use a call-and-response opening the class answers."
+    },
+    {
+     "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES.M_CA7_ST_BIG_JUMPS",
+     "listen_for": [
+      "a lot"
+     ],
+     "ask": "In a flipbook, should each page change a lot or a little?",
+     "repair": "Flip two books, big changes and small; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one storytelling technique.",
+     "answer": "any of: voice variation, gesture, facial expression, pause, audience participation",
+     "shows": "technique"
+    },
+    {
+     "question": "What makes flipbook movement smooth?",
+     "answer": "small changes from page to page",
+     "shows": "flipbook"
+    }
+   ]
+  }
+ ]
+}

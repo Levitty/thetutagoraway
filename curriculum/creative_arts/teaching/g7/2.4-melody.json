@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "C major melodies on the staff; sing and play on recorders.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES",
+   "key_step": "The child names the qualities of a good melody in C major: a clear shape, mostly steps with some leaps, repeated phrases, no sharps or flats, ending on C.",
+   "floor": {
+    "prerequisite": "Sings doh to doh' (Grade 6).",
+    "question": "Which is the top note of the ladder?",
+    "answer": "doh'"
+   },
+   "representations": [
+    "a melody on the staff",
+    "a recorder",
+    "a checklist"
+   ],
+   "steps": [
+    "Start near C.",
+    "Move mostly by step.",
+    "Repeat a phrase.",
+    "End on C."
+   ],
+   "contexts": [
+    "writing a school song tune",
+    "a melody for a poem"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A melody ends on D.",
+     "say": "Finished?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "End on C."
+    },
+    {
+     "beat": "write",
+     "do": "Write the qualities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_HOME",
+     "listen_for": [
+      "G"
+     ],
+     "ask": "On which note does a melody in C major end?",
+     "repair": "Sing ending on G and on C; C sounds finished."
+    },
+    {
+     "code": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_SHAPE",
+     "listen_for": [
+      "No pattern at all"
+     ],
+     "ask": "Which is a quality of a good melody?",
+     "repair": "Draw the melody's shape as a line: up, then down to C."
+    },
+    {
+     "code": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_REPEAT",
+     "listen_for": [
+      "To make it harder to sing"
+     ],
+     "ask": "Why repeat a phrase in a melody?",
+     "repair": "Sing a well-known song and count its repeated phrases."
+    },
+    {
+     "code": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES.M_CA7_MQ_SHARPS",
+     "listen_for": [
+      "yes, F sharp"
+     ],
+     "ask": "Does a melody in C major need sharps or flats?",
+     "repair": "Play the C scale on white keys or recorder: no sharps."
+    }
+   ],
+   "checks": [
+    {
+     "question": "On which note does a C major melody end?",
+     "answer": "C",
+     "shows": "home"
+    },
+    {
+     "question": "Does C major have sharps?",
+     "answer": "No",
+     "shows": "key"
+    }
+   ]
+  }
+ ]
+}

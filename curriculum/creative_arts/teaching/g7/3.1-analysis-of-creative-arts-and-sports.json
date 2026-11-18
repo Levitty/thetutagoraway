@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART",
+ "title": "Analysis of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Analyse a folk song and a story the class performed; model evidence-based comments.",
+ "skills": [
+  {
+   "skill": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES",
+   "key_step": "The child names the values of clean sport (fair play, honesty, respect, teamwork, discipline) and says cheating and drugs spoil sport.",
+   "floor": {
+    "prerequisite": "Plays safely by the rules (Grade 5).",
+    "question": "What should a batter do with the bat after hitting?",
+    "answer": "drop it"
+   },
+   "representations": [
+    "short sport stories",
+    "value cards",
+    "a class charter"
+   ],
+   "steps": [
+    "Read what the player did.",
+    "Ask: fair or unfair?",
+    "Name the value kept or broken."
+   ],
+   "contexts": [
+    "a football match where a player owns up to a handball",
+    "a race with doping news"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A player helps an injured opponent.",
+     "say": "Which value?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for respect."
+    },
+    {
+     "beat": "reveal",
+     "do": "Respect and fair play."
+    },
+    {
+     "beat": "write",
+     "do": "Write the values."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_CHEAT",
+     "listen_for": [
+      "Fair play"
+     ],
+     "ask": "Which spoils clean sport?",
+     "repair": "Ask: does this make the game fairer or less fair?"
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_VALUE",
+     "listen_for": [
+      "Cheating"
+     ],
+     "ask": "Which is a value of clean sport?",
+     "repair": "List what happens to a game when everyone cheats."
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_TEAM",
+     "listen_for": [
+      "Only winning"
+     ],
+     "ask": "What matters in a team game?",
+     "repair": "Discuss a team that lost but played fairly and well together."
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES.M_CA7_SV_DRUGS_OK",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is using drugs to win allowed if nobody sees?",
+     "repair": "Talk about athletes banned for doping."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a value of clean sport.",
+     "answer": "any of: fair play, honesty, respect, teamwork, discipline",
+     "shows": "values"
+    },
+    {
+     "question": "Is doping allowed?",
+     "answer": "No, it is cheating",
+     "shows": "doping"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS",
+   "key_step": "The child analyses a folk song (community, occasion, type, message, soloist and chorus, instruments, costume) and a story performance (theme, characters, techniques, lesson) with evidence.",
+   "floor": {
+    "prerequisite": "Names the elements and message of a song (Grade 6).",
+    "question": "Where do you find a song's message?",
+    "answer": "in its words"
+   },
+   "representations": [
+    "a recorded or class performance",
+    "an analysis frame",
+    "term cards"
+   ],
+   "steps": [
+    "Watch or listen once.",
+    "Note what you hear and see.",
+    "Say what each shows.",
+    "Give the message or theme."
+   ],
+   "contexts": [
+    "a music festival entry",
+    "a class storytelling session"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "The chorus repeats the soloist's line.",
+     "say": "What does it show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"call and response\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the point with evidence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Model a full analysis sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA7_AN_OPINION_ONLY",
+     "listen_for": [
+      "I liked it"
+     ],
+     "ask": "Which is an analysis of a folk song?",
+     "repair": "Ask \"what did you hear or see that shows that?\" after each point."
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA7_AN_THEME_PLOT",
+     "listen_for": [
+      "the hare tricked the hyena and ran away"
+     ],
+     "ask": "What is the theme of the story we watched?",
+     "repair": "Ask \"what is the story teaching?\" after retelling."
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA7_AN_TYPE_FROM_TUNE",
+     "listen_for": [
+      "a dance song, because it is fast"
+     ],
+     "ask": "A fast song is sung while winnowing. What type is it?",
+     "repair": "Look at the occasion and the words first."
+    },
+    {
+     "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA7_AN_TECHNIQUE_CONTENT",
+     "listen_for": [
+      "a story about a lion"
+     ],
+     "ask": "Name a technique the storyteller used.",
+     "repair": "Ask \"how did she tell it?\" not \"what was it about?\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two things to say when analysing a folk song.",
+     "answer": "any two of: community, occasion, type, message, soloist and chorus, instruments, costume",
+     "shows": "folk song"
+    },
+    {
+     "question": "What is the theme of a story?",
+     "answer": "the idea or lesson it teaches",
+     "shows": "story"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G7.CREATI.DRAWING_AND_PAINTING",
+ "title": "Drawing and Painting",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use pictures from calendars and the classroom. Paint scenery after learners sort colours.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE",
+   "key_step": "The child says balance spreads visual weight evenly, and tells symmetrical, asymmetrical and radial balance apart.",
+   "floor": {
+    "prerequisite": "Finds lines of symmetry (Grade 4 Maths).",
+    "question": "How many lines of symmetry does a square have?",
+    "answer": "four"
+   },
+   "representations": [
+    "pictures with each balance",
+    "a fold line",
+    "cut shapes"
+   ],
+   "steps": [
+    "Find the centre line or point.",
+    "Compare the weight on each side.",
+    "Name the balance."
+   ],
+   "contexts": [
+    "drawing a market scene",
+    "designing a poster"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a wheel-like flower drawing.",
+     "say": "Which balance?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for radial."
+    },
+    {
+     "beat": "predict",
+     "do": "A butterfly?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Symmetrical."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_SYM",
+     "listen_for": [
+      "Both sides are different"
+     ],
+     "ask": "What is symmetrical balance?",
+     "repair": "Fold a butterfly drawing: both halves match, so symmetrical."
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_MEANING",
+     "listen_for": [
+      "Making everything the same colour"
+     ],
+     "ask": "What is balance in a picture?",
+     "repair": "Show a big shape balanced by two small ones of the same visual weight."
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_RADIAL",
+     "listen_for": [
+      "Items spread from the centre"
+     ],
+     "ask": "What is radial balance?",
+     "repair": "Show a sunflower or a wheel: parts spread out from the centre."
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_CENTRE_ONLY",
+     "listen_for": [
+      "no, it must be in the centre"
+     ],
+     "ask": "Can a picture be balanced with the main tree on the left?",
+     "repair": "Balance a big tree on the left with a house and a bird on the right."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is asymmetrical balance?",
+     "answer": "different sides with equal visual weight",
+     "shows": "asymmetrical"
+    },
+    {
+     "question": "Which balance spreads out from a centre?",
+     "answer": "radial",
+     "shows": "radial"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP",
+   "key_step": "The child sorts warm (red, orange, yellow) and cool (blue, green, violet) colours and says warm colours come forward and cool ones go back.",
+   "floor": {
+    "prerequisite": "Sorts colours on the wheel (Grade 6).",
+    "question": "Is orange a secondary colour?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a colour wheel cut in half",
+    "scenery pictures",
+    "paint"
+   ],
+   "steps": [
+    "Split the wheel: fire side and water side.",
+    "Name warm and cool.",
+    "Use cool for distance, warm for the front."
+   ],
+   "contexts": [
+    "painting a Rift Valley scenery",
+    "painting a sunset over a lake"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at blue.",
+     "say": "Warm or cool?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cool."
+    },
+    {
+     "beat": "predict",
+     "do": "Far hills or near flowers?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Far hills."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_WARM",
+     "listen_for": [
+      "Blue"
+     ],
+     "ask": "Which is a warm colour?",
+     "repair": "Sort colours by fire (warm) and water (cool)."
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_COOL",
+     "listen_for": [
+      "Red"
+     ],
+     "ask": "Which is a cool colour?",
+     "repair": "Hold red near a picture of fire and blue near water."
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_FEEL",
+     "listen_for": [
+      "Cool colours"
+     ],
+     "ask": "Which colours remind us of the sun and fire?",
+     "repair": "Ask what the sun looks like: red, orange, yellow are warm."
+    },
+    {
+     "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP.M_CA7_CT_DISTANCE",
+     "listen_for": [
+      "warm colours"
+     ],
+     "ask": "Which colours make hills look far away?",
+     "repair": "Paint two strips of hills, warm and cool; which looks further?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a warm colour.",
+     "answer": "any of: red, orange, yellow",
+     "shows": "warm"
+    },
+    {
+     "question": "Which seem to go back in a picture: warm or cool colours?",
+     "answer": "cool colours",
+     "shows": "depth"
+    }
+   ]
+  }
+ ]
+}

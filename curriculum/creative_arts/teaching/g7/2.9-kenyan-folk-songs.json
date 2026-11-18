@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.CREATI.KENYAN_FOLK_SONGS",
+ "title": "Kenyan Folk Songs",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use songs from learners' own communities, with respect. Examples are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS",
+   "key_step": "The child classifies Kenyan folk songs (lullabies, work, wedding, initiation, war, funeral dirges, praise, play songs) by occasion, mood and words.",
+   "floor": {
+    "prerequisite": "Classifies folk songs by occasion (Grade 4).",
+    "question": "When is a work song sung?",
+    "answer": "while working"
+   },
+   "representations": [
+    "song descriptions",
+    "type cards",
+    "singing"
+   ],
+   "steps": [
+    "Read or hear the words.",
+    "Name the occasion.",
+    "Note the mood.",
+    "Name the type."
+   ],
+   "contexts": [
+    "a music festival class set piece",
+    "a family celebration"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A slow, sad song at a burial.",
+     "say": "Type?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dirge."
+    },
+    {
+     "beat": "reveal",
+     "do": "A dirge."
+    },
+    {
+     "beat": "write",
+     "do": "Write the types and occasions."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_LULLABY",
+     "listen_for": [
+      "Going to war"
+     ],
+     "ask": "What is a lullaby for?",
+     "repair": "Hum a lullaby softly; ask who it is for."
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_WORK",
+     "listen_for": [
+      "At bedtime"
+     ],
+     "ask": "When is a work song sung?",
+     "repair": "Sing a work song while miming digging in time."
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_FUNERAL",
+     "listen_for": [
+      "A wedding song"
+     ],
+     "ask": "Which song is sung at a funeral?",
+     "repair": "Compare the mood and tempo: slow and sad (dirge), lively (wedding)."
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS.M_CA7_FO_PRAISE_CHURCH",
+     "listen_for": [
+      "a church song"
+     ],
+     "ask": "A song praises a brave hunter. What type is it?",
+     "repair": "Read the words: who is praised?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a dirge?",
+     "answer": "a funeral song",
+     "shows": "type"
+    },
+    {
+     "question": "A song sung while pounding grain is which type?",
+     "answer": "a work song",
+     "shows": "occasion"
+    }
+   ]
+  }
+ ]
+}

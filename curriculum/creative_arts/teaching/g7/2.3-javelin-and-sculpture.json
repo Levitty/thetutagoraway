@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE",
+ "title": "Javelin and Sculpture",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Throwing only in a cleared field with a teacher; carving with safe tools. Questions ask for materials, order and safety.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN",
+   "key_step": "The child names carving materials (soft wood, bamboo), the throwing phases in order (grip and carry, approach, cross-step, delivery, recovery) and the safety rules.",
+   "floor": {
+    "prerequisite": "Carves a bat safely (Grade 5).",
+    "question": "Which way do you cut when carving?",
+    "answer": "away from the body"
+   },
+   "representations": [
+    "a carved stick (no point)",
+    "phase cards",
+    "a field with a marked zone"
+   ],
+   "steps": [
+    "Grip and carry above the shoulder.",
+    "Approach run.",
+    "Cross-steps.",
+    "Deliver, then recover behind the line."
+   ],
+   "contexts": [
+    "an athletics lesson",
+    "sports day field events"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the five phases mixed up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"delivery\".",
+     "say": "What comes just before?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cross-steps."
+    },
+    {
+     "beat": "write",
+     "do": "Number them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_MATERIAL",
+     "listen_for": [
+      "Iron"
+     ],
+     "ask": "Which material suits carving a javelin?",
+     "repair": "Ask what a knife can shape: soft wood and bamboo, not iron."
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_PHASE",
+     "listen_for": [
+      "Delivery"
+     ],
+     "ask": "Which phase comes first in a javelin throw?",
+     "repair": "Walk through the phases slowly with a stick: grip, run, cross-step, throw, recover."
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_SAFETY",
+     "listen_for": [
+      "Anywhere among people"
+     ],
+     "ask": "Where is a javelin thrown?",
+     "repair": "Show the point and the distance it flies; mark the safe zone."
+    },
+    {
+     "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN.M_CA7_JV_FETCH_ANY",
+     "listen_for": [
+      "straight after your throw"
+     ],
+     "ask": "When may you collect your javelin?",
+     "repair": "Practise the signal: throw, wait, collect together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which material is good for carving a javelin?",
+     "answer": "soft wood or bamboo",
+     "shows": "material"
+    },
+    {
+     "question": "What is the last phase of a javelin throw?",
+     "answer": "recovery",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

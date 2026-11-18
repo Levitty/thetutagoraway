@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G7.CREATI.RHYTHM",
+ "title": "Rhythm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dictation: the teacher claps, learners write on a monotone line. On the phone, notes are in words.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS",
+   "key_step": "The child names the factors in making a rhythm in simple time: time signature, number of bars, note values and rests adding up per bar, a repeated idea and a firm ending.",
+   "floor": {
+    "prerequisite": "Composes with notes and rests (Grade 6).",
+    "question": "How many beats does a crotchet rest last?",
+    "answer": "one"
+   },
+   "representations": [
+    "a monotone line on the board",
+    "claps",
+    "a checklist"
+   ],
+   "steps": [
+    "Choose the time signature.",
+    "Fill each bar with the right beats.",
+    "Repeat an idea.",
+    "End on a long note."
+   ],
+   "contexts": [
+    "a rhythm for a school cheer",
+    "a drum part for a dance"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a 2/4 bar with three crotchets."
+    },
+    {
+     "beat": "count",
+     "do": "Count the bar."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"too many\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Two beats only."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_BEATS",
+     "listen_for": [
+      "Any number of beats"
+     ],
+     "ask": "In a bar of 2 time, the notes must add up to...",
+     "repair": "Count each bar aloud and tick it when it makes two."
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_FACTOR",
+     "listen_for": [
+      "The colour of the paper"
+     ],
+     "ask": "Which is a factor in making a rhythm?",
+     "repair": "Ask: does it change what we hear? Only those are factors."
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_BARS",
+     "listen_for": [
+      "Two"
+     ],
+     "ask": "How many bars are in a four-bar pattern?",
+     "repair": "Number each bar above the staff: 1, 2, 3, 4."
+    },
+    {
+     "code": "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS.M_CA7_RF_NO_END",
+     "listen_for": [
+      "a single quaver"
+     ],
+     "ask": "Which ending makes a four-bar rhythm sound finished?",
+     "repair": "Clap both endings; ask which feels finished."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one factor in making a rhythm.",
+     "answer": "any of: time signature, bars, note values, rests, ending",
+     "shows": "factors"
+    },
+    {
+     "question": "What must the notes in each bar add up to?",
+     "answer": "the beats in the time signature",
+     "shows": "bar total"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES",
+ "title": "Kenyan Indigenous Games",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use ropes on grass; songs from local communities.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES",
+   "key_step": "The child names indigenous rope games (skipping, double rope, tug of war) and says they build fitness, coordination, rhythm and teamwork.",
+   "floor": {
+    "prerequisite": "Plaits a rope (Grade 5).",
+    "question": "How many strands in a simple plait?",
+    "answer": "three"
+   },
+   "representations": [
+    "ropes",
+    "a song for rhythm",
+    "game cards"
+   ],
+   "steps": [
+    "Name the game.",
+    "Say what the body does.",
+    "Name the benefit."
+   ],
+   "contexts": [
+    "a break-time skipping game",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Skipping to a song builds what?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for rhythm or coordination."
+    },
+    {
+     "beat": "reveal",
+     "do": "Rhythm, coordination and fitness."
+    },
+    {
+     "beat": "write",
+     "do": "Write games and benefits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_NAME",
+     "listen_for": [
+      "Football"
+     ],
+     "ask": "Which is a rope game?",
+     "repair": "Ask what each game is played with."
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_BENEFIT",
+     "listen_for": [
+      "Weak muscles"
+     ],
+     "ask": "What do rope games build?",
+     "repair": "Skip for one minute and feel the heartbeat."
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_SKIP",
+     "listen_for": [
+      "Sitting down"
+     ],
+     "ask": "How is rope skipping done?",
+     "repair": "Skip with the class."
+    },
+    {
+     "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES.M_CA7_RG_TUG_ARMS",
+     "listen_for": [
+      "the arms only"
+     ],
+     "ask": "In tug of war, what gives the most pull?",
+     "repair": "Pull with arms only, then lean back with the legs; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an indigenous rope game.",
+     "answer": "any of: skipping, tug of war, double rope",
+     "shows": "name"
+    },
+    {
+     "question": "What does skipping build?",
+     "answer": "fitness and coordination",
+     "shows": "benefit"
+    }
+   ]
+  }
+ ]
+}
