@@ -87959,7 +87959,8 @@ var SKILLS31 = {
     "mis": [
       "M_PI_TOOLS_ONLY",
       "M_PI_BOYS",
-      "M_PI_SCHOOL_ONLY"
+      "M_PI_SCHOOL_ONLY",
+      "M_PT7_PI_STRAND_OTHER"
     ]
   },
   "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS": {
@@ -88009,7 +88010,8 @@ var SKILLS31 = {
       "M_SR_RUSH",
       "M_SR_NO_REPORT",
       "M_SR_LOOSE",
-      "M_SR_TOOLS_FLOOR"
+      "M_SR_TOOLS_FLOOR",
+      "M_PT7_SR_HORSEPLAY"
     ]
   },
   "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS": {
@@ -88043,6 +88045,24 @@ var SKILLS31 = {
       "M_CL_MICRO_SMALL",
       "M_CL_ANALOGUE_OLD",
       "M_CL_SPECIAL_WEAK"
+    ]
+  },
+  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE": {
+    "name": "Give the correct steps for using a computer: start up, open a program, save a file with a clear name, and shut down properly",
+    "sub": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS",
+    "outcome": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c",
+    "outcomes": [
+      "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c"
+    ],
+    "pre": [
+      "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS",
+      "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY"
+    ],
+    "mis": [
+      "M_PT7_CU_SWITCH_OFF",
+      "M_PT7_CU_NO_SAVE",
+      "M_PT7_CU_SAVE_NAME",
+      "M_PT7_CU_DOUBLE"
     ]
   },
   "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE": {
@@ -88095,6 +88115,23 @@ var SKILLS31 = {
       "M_DS_AF_AC"
     ]
   },
+  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING": {
+    "name": "State the rules for printing letters and numbers on a technical drawing: capitals, single strokes, guide lines, even height and spacing",
+    "sub": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING",
+    "outcome": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c",
+    "outcomes": [
+      "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c"
+    ],
+    "pre": [
+      "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE"
+    ],
+    "mis": [
+      "M_PT7_DLT_CURSIVE",
+      "M_PT7_DLT_MIXED",
+      "M_PT7_DLT_NO_GUIDE",
+      "M_PT7_DLT_SPACING"
+    ]
+  },
   "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES": {
     "name": "Explain the principles of free-hand sketching",
     "sub": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
@@ -88117,7 +88154,9 @@ var SKILLS31 = {
     "sub": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
     "outcome": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b",
     "outcomes": [
-      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b"
+      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b",
+      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.c",
+      "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.d"
     ],
     "pre": [
       "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES"
@@ -88126,7 +88165,8 @@ var SKILLS31 = {
       "M_SK_HATCH_DOTS",
       "M_SK_CROSS_HATCH",
       "M_SK_BOX_CIRCLE",
-      "M_SK_CENTRE_ANY"
+      "M_SK_CENTRE_ANY",
+      "M_PT7_SK_STROKE_PUSH"
     ]
   },
   "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS": {
@@ -88135,7 +88175,8 @@ var SKILLS31 = {
     "outcome": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a",
     "outcomes": [
       "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a",
-      "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b"
+      "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b",
+      "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.c"
     ],
     "pre": [
       "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY"
@@ -88144,7 +88185,8 @@ var SKILLS31 = {
       "M_IT_ALL_FREE",
       "M_IT_SMS_NET",
       "M_IT_EMAIL_LIVE",
-      "M_IT_SOCIAL_FUN"
+      "M_IT_SOCIAL_FUN",
+      "M_PT7_IT_PICK_TOOL"
     ]
   },
   "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL": {
@@ -88159,7 +88201,8 @@ var SKILLS31 = {
     "mis": [
       "M_MM_SHINY",
       "M_MM_HARD_METAL",
-      "M_MM_PRODUCT"
+      "M_MM_PRODUCT",
+      "M_PT7_MM_FACTORY_METAL"
     ]
   },
   "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE": {
@@ -88175,7 +88218,8 @@ var SKILLS31 = {
     "mis": [
       "M_MS_WASTE_OK",
       "M_MS_BURN_OFFCUTS",
-      "M_MS_NEW_ONLY"
+      "M_MS_NEW_ONLY",
+      "M_PT7_MS_CHEAP_LASTS"
     ]
   },
   "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES": {
@@ -88191,7 +88235,8 @@ var SKILLS31 = {
     "mis": [
       "M_MT_ALU_STEEL",
       "M_MT_COPPER_COLOUR",
-      "M_MT_MAGNET_ALL"
+      "M_MT_MAGNET_ALL",
+      "M_PT7_MT_FERROUS"
     ]
   },
   "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES": {
@@ -88219,12 +88264,14 @@ var SKILLS31 = {
       "PRE_.G7.MATERI.METALLIC_MATERIALS.c"
     ],
     "pre": [
-      "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES"
+      "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES",
+      "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES"
     ],
     "mis": [
       "M_MU_WIRE_STEEL",
       "M_MU_ALU_HEAVY",
-      "M_MU_PROPERTY_SWAP"
+      "M_MU_PROPERTY_SWAP",
+      "M_PT7_MU_GALVANISE"
     ]
   },
   "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS": {
@@ -88270,12 +88317,14 @@ var SKILLS31 = {
       "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.d"
     ],
     "pre": [
-      "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES"
+      "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES",
+      "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS"
     ],
     "mis": [
       "M_NU_GLASS_HANDLE",
       "M_NU_WOOD_ANY",
-      "M_NU_CEMENT"
+      "M_NU_CEMENT",
+      "M_PT7_NU_GLASS_STRONG"
     ]
   },
   "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS": {
@@ -88324,7 +88373,8 @@ var SKILLS31 = {
     "mis": [
       "M_TC_TAPE_ALL",
       "M_TC_NEAREST",
-      "M_TC_PRECISION"
+      "M_TC_PRECISION",
+      "M_PT7_TC_GAUGE_DIVIDER"
     ]
   },
   "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE": {
@@ -88335,7 +88385,8 @@ var SKILLS31 = {
       "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.d"
     ],
     "pre": [
-      "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS"
+      "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS",
+      "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES"
     ],
     "mis": [
       "M_CT_NO_OIL",
@@ -88344,15 +88395,35 @@ var SKILLS31 = {
       "M_CT_POINTS_OPEN"
     ]
   },
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE": {
+    "name": "Give the correct way to use measuring and marking out tools: read from the zero mark with the eye straight above, hold the try-square against a straight edge, scribe and punch in order",
+    "sub": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU",
+    "outcome": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c",
+    "outcomes": [
+      "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c"
+    ],
+    "pre": [
+      "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS",
+      "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS"
+    ],
+    "mis": [
+      "M_PT7_TU_RULE_END",
+      "M_PT7_TU_PARALLAX",
+      "M_PT7_TU_TRY_STOCK",
+      "M_PT7_TU_PUNCH_FIRST"
+    ]
+  },
   "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY": {
     "name": "Classify computer hardware as input, output (hardcopy or softcopy) or storage",
     "sub": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE",
     "outcome": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a",
     "outcomes": [
-      "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a"
+      "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a",
+      "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.b"
     ],
     "pre": [
-      "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY"
+      "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY",
+      "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS"
     ],
     "mis": [
       "M_HW_PRINTER_IN",
@@ -88372,7 +88443,8 @@ var SKILLS31 = {
     "mis": [
       "M_EM_ALL_WORKERS",
       "M_EM_RICH_ONLY",
-      "M_EM_OWNER_ONLY"
+      "M_EM_OWNER_ONLY",
+      "M_PT7_EM_GOODS_ONLY"
     ]
   },
   "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES": {
@@ -88422,7 +88494,8 @@ var SKILLS31 = {
     "mis": [
       "M_UL_TOWN_ALWAYS",
       "M_UL_CHEAP_ONLY",
-      "M_UL_ANYWHERE"
+      "M_UL_ANYWHERE",
+      "M_PT7_UL_RAW_FAR"
     ]
   },
   "PRET.G7.ENTREP.UNIT.UNIT_SIZE": {
@@ -88438,7 +88511,8 @@ var SKILLS31 = {
     "mis": [
       "M_US_BIGGER_BETTER",
       "M_US_WISH_ONLY",
-      "M_US_NO_MARKET"
+      "M_US_NO_MARKET",
+      "M_PT7_US_BUILDING"
     ]
   },
   "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS": {
@@ -88449,7 +88523,9 @@ var SKILLS31 = {
       "PRE_.G7.ENTREP.FINANCIAL_GOALS.a",
       "PRE_.G7.ENTREP.FINANCIAL_GOALS.b"
     ],
-    "pre": [],
+    "pre": [
+      "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING"
+    ],
     "mis": [
       "M_FI_RICH_ONLY",
       "M_FI_WISH",
@@ -88470,7 +88546,8 @@ var SKILLS31 = {
     "mis": [
       "M_SM_LETTERS",
       "M_SM_VAGUE",
-      "M_SM_NUMBER_ENOUGH"
+      "M_SM_NUMBER_ENOUGH",
+      "M_PT7_SM_NO_DATE"
     ]
   },
   "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS": {
@@ -88495,6 +88572,7 @@ var MIS_FEEDBACK30 = {
   "M_PI_TOOLS_ONLY": "Pre-Technical Studies also covers safety, drawing, materials, computers and entrepreneurship, not only tools.",
   "M_PI_BOYS": "Everybody uses it: girls and boys, in homes, shops, farms, offices and workshops.",
   "M_PI_SCHOOL_ONLY": "Safety, tools, drawings and small businesses are part of daily life everywhere.",
+  "M_PT7_PI_STRAND_OTHER": "Budgets belong to the Entrepreneurship strand of Pre-Technical Studies.",
   "M_ST_SLIP_TRIP": "A slip happens on a wet or smooth floor. A trip happens when the foot catches on something in the way.",
   "M_ST_FIRE_STOVE": "Faulty wires, overloaded sockets, hot oil and sparks can all start a fire, not only a big flame.",
   "M_ST_DEVICE_THIEF": "Theft, floods, fire and hardware failure can all harm a device.",
@@ -88508,6 +88586,7 @@ var MIS_FEEDBACK30 = {
   "M_SR_NO_REPORT": "Always tell the teacher about an injury, however small.",
   "M_SR_LOOSE": "Hair and loose clothes can be caught by moving parts. Tie hair back.",
   "M_SR_TOOLS_FLOOR": "Tools left about cause trips and cuts. Put them back in their place.",
+  "M_PT7_SR_HORSEPLAY": "Never run or play in the workshop. Sharp tools and hard edges are always there.",
   "M_CC_DATA_INFO": "Data is raw facts. Information is data that has been processed so it means something.",
   "M_CC_ALWAYS_RIGHT": "A computer is accurate at the working, but wrong input gives wrong output.",
   "M_CC_TIRED": "Diligence means it works for long hours without tiring or losing care.",
@@ -88517,6 +88596,10 @@ var MIS_FEEDBACK30 = {
   "M_CL_MICRO_SMALL": "The order from biggest is super, mainframe, mini and micro. A laptop is a micro computer.",
   "M_CL_ANALOGUE_OLD": "Analogue computers work with continuous quantities, such as temperature, speed or flow.",
   "M_CL_SPECIAL_WEAK": "A special-purpose computer is built for one job. General-purpose computers do many jobs.",
+  "M_PT7_CU_SWITCH_OFF": "Shut down from the computer first. Switch off at the socket only after the screen goes dark.",
+  "M_PT7_CU_NO_SAVE": "Save your work before you close a program, or the new work may be lost.",
+  "M_PT7_CU_SAVE_NAME": "Give every file a clear name and save it in a folder you will remember.",
+  "M_PT7_CU_DOUBLE": "One click selects an icon. A double-click opens it.",
   "M_DP_ARTISTS_ONLY": "Builders, tailors and engineers all use drawings to share plans.",
   "M_DP_WORDS_BETTER": "A drawing shows shape, size and parts that words describe badly.",
   "M_DP_TECH_PRETTY": "A technical drawing gives exact shape and size by rules so a worker can make the thing.",
@@ -88529,6 +88612,10 @@ var MIS_FEEDBACK30 = {
   "M_DS_PERP_PARALLEL": "The symbol \u22A5 means perpendicular, at a right angle.",
   "M_DS_ID_OD": "O/D is outside diameter. I/D is inside diameter.",
   "M_DS_AF_AC": "A/F is across flats, side to side. A/C is across corners.",
+  "M_PT7_DLT_CURSIVE": "Notes on a drawing are printed in plain capital letters, not joined writing.",
+  "M_PT7_DLT_MIXED": "Use capital letters all through a note or title on a drawing.",
+  "M_PT7_DLT_NO_GUIDE": "Draw two faint guide lines first. Every letter touches both.",
+  "M_PT7_DLT_SPACING": "Leave even gaps between letters and a wider gap between words.",
   "M_SP_RULER": "Free-hand sketching is done without a ruler or compass.",
   "M_SP_PRESS_FIRST": "Start light. Firm up the correct lines later.",
   "M_SP_ERASER": "Light lines let you correct without much rubbing out.",
@@ -88537,16 +88624,20 @@ var MIS_FEEDBACK30 = {
   "M_SK_CROSS_HATCH": "Cross-hatching is two sets of lines crossing each other, for darker shade.",
   "M_SK_BOX_CIRCLE": "The hand compass method draws arcs and circles. The box method draws a light box round an object.",
   "M_SK_CENTRE_ANY": "The centreline method suits symmetrical objects, the same on both sides of a centre line.",
+  "M_PT7_SK_STROKE_PUSH": "Mark two points and sketch with light, steady strokes using the whole arm.",
   "M_IT_ALL_FREE": "Calls, data and devices cost money. Airtime or data is needed.",
   "M_IT_SMS_NET": "An SMS uses the phone network. A video conference needs an internet link.",
   "M_IT_EMAIL_LIVE": "Video conferencing shows and sounds both ways live. Email sends written messages and files.",
   "M_IT_SOCIAL_FUN": "Social networking shares messages and pictures with many people, including customers.",
+  "M_PT7_IT_PICK_TOOL": "Choose the tool that suits the message. A drawing needs a tool that sends pictures.",
   "M_MM_SHINY": "Glass shines but is non-metallic.",
   "M_MM_HARD_METAL": "Stone is hard but is non-metallic.",
   "M_MM_PRODUCT": "A chair is a product. Wood is a material it is made from.",
   "M_MS_WASTE_OK": "Plan to waste less and use offcuts, even when materials are plentiful.",
   "M_MS_BURN_OFFCUTS": "Scrap metal can be recycled into new products. Burning plastics also harms the air.",
   "M_MS_NEW_ONLY": "Repair and reuse saves materials. Buy new only when needed.",
+  "M_PT7_MM_FACTORY_METAL": "Being made in a factory does not make a material a metal. Plastic is non-metallic.",
+  "M_PT7_MS_CHEAP_LASTS": "A material that lasts uses fewer resources over time.",
   "M_MT_ALU_STEEL": "Aluminium is light and silvery and does not stick to a magnet. Steel does.",
   "M_MT_COPPER_COLOUR": "Copper is reddish-brown.",
   "M_MT_MAGNET_ALL": "Only iron and steel stick to a magnet. Aluminium and copper do not.",
@@ -88557,6 +88648,8 @@ var MIS_FEEDBACK30 = {
   "M_MU_WIRE_STEEL": "Copper is used for electric wire because it conducts electricity well.",
   "M_MU_ALU_HEAVY": "A sufuria is aluminium because it is light and conducts heat.",
   "M_MU_PROPERTY_SWAP": "Steel is hard and strong, so it suits a jembe, a panga and nails.",
+  "M_PT7_MT_FERROUS": "Ferrous metals contain iron, like mild steel. Aluminium is non-ferrous.",
+  "M_PT7_MU_GALVANISE": "Zinc coating protects iron sheets from rust.",
   "M_NC_SYNTH_FAKE": "Synthetic means made by people from chemicals. It does not mean fake.",
   "M_NC_NATURAL_UNMADE": "Natural describes where a material comes from. Wood is still natural when shaped.",
   "M_NC_PLASTIC_NATURAL": "Plastic is synthetic. Cotton, wool and wood are natural.",
@@ -88568,6 +88661,7 @@ var MIS_FEEDBACK30 = {
   "M_NU_GLASS_HANDLE": "Plastic is light, waterproof and does not rust, so it suits a tank.",
   "M_NU_WOOD_ANY": "Ceramic tiles are hard, waterproof and do not burn.",
   "M_NU_CEMENT": "Cement is mixed with sand and water to join blocks or make concrete.",
+  "M_PT7_NU_GLASS_STRONG": "Glass is used for windows because it is transparent.",
   "M_MV_VOLT_AMP": "A voltmeter measures voltage. An ammeter measures current.",
   "M_MV_BALANCE_LEN": "A weighing balance measures mass.",
   "M_MV_STOPWATCH": "A stopwatch measures time.",
@@ -88583,6 +88677,11 @@ var MIS_FEEDBACK30 = {
   "M_CT_HAMMER": "Do not use measuring tools as levers or hammers. They bend and lose accuracy.",
   "M_CT_HEAP": "Put tools back in their place so points and edges are not damaged.",
   "M_CT_POINTS_OPEN": "Cover sharp points so they do not hurt you or become blunt.",
+  "M_PT7_TU_RULE_END": "Start from the 0 mark, not the end of the ruler.",
+  "M_PT7_TU_PARALLAX": "Put your eye straight above the mark when you read a scale.",
+  "M_PT7_TU_TRY_STOCK": "Hold the stock tight against a straight edge, then mark along the blade.",
+  "M_PT7_TU_PUNCH_FIRST": "Scribe the lines first. Punch where they cross.",
+  "M_PT7_TC_GAUGE_DIVIDER": "A marking gauge marks a line parallel to the edge of wood.",
   "M_HW_PRINTER_IN": "A printer is an output device. It gives hardcopy on paper.",
   "M_HW_MONITOR_HARD": "A monitor gives softcopy. A printer gives hardcopy.",
   "M_HW_SCANNER_OUT": "A scanner is an input device because it sends data in.",
@@ -88598,12 +88697,15 @@ var MIS_FEEDBACK30 = {
   "M_EI_NEW_ONLY": "Improving on what others do is a good source of ideas.",
   "M_EI_COPY_EXACT": "Look for a need not yet met rather than copying exactly.",
   "M_EI_WASTE": "Waste can be reused or recycled into products that sell.",
+  "M_PT7_EM_GOODS_ONLY": "An entrepreneur can sell goods or services.",
   "M_UL_TOWN_ALWAYS": "A posho mill is best near its customers and power, not always in town.",
   "M_UL_CHEAP_ONLY": "Cheap rent does not help if customers do not come. Consider customers, power, safety and more.",
   "M_UL_ANYWHERE": "Place matters. Customers, power, water and safety all count.",
   "M_US_BIGGER_BETTER": "Size should match capital, market, skills and space.",
   "M_US_WISH_ONLY": "Capital, market, materials, labour and the law all limit size.",
   "M_US_NO_MARKET": "The size of the market limits the size of the business.",
+  "M_PT7_UL_RAW_FAR": "A unit that uses heavy raw materials is placed near them.",
+  "M_PT7_US_BUILDING": "The size of a unit is measured by its workers, capital, output and machines, not only its building.",
   "M_FI_RICH_ONLY": "Everyone who handles money, even a little, gains from goals.",
   "M_FI_WISH": "A goal has a plan, an amount and a date. A wish does not.",
   "M_FI_WANTS_FIRST": "Needs come before wants when money is limited.",
@@ -88614,7 +88716,8 @@ var MIS_FEEDBACK30 = {
   "M_FN_SELL_PROFIT": "Profit is selling price minus buying price.",
   "M_FN_ADD_WEEKS": "Divide the goal by the amount saved each week.",
   "M_FN_ONE_ITEM": "Total profit is profit on one item times the number sold.",
-  "M_FN_BUY_SELL": "Profit is selling price minus buying price."
+  "M_FN_BUY_SELL": "Profit is selling price minus buying price.",
+  "M_PT7_SM_NO_DATE": "A SMART goal says by when it will be reached."
 };
 
 // src/ai-tutor/content/families/pretechnical_g7_signed.js
@@ -89390,6 +89493,13 @@ var FAMILIES103 = [
   ], { h: ["Which step does the sum wrongly?", "Cross out the answers that are plainly wrong, then choose."], s1: "Redo each step." }))
 ];
 
+// src/ai-tutor/content/families/pretechnical_g7_awaiting.js
+var AWAITING12 = [
+  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_USE",
+  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LETTERING",
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_USE"
+];
+
 // src/ai-tutor/content/subjects/pretechnical_g7.js
 var pretechnical_g7_default = {
   subject: "pretechnical",
@@ -89406,6 +89516,8 @@ var pretechnical_g7_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED30,
   signedFile: "pretechnical_g7_signed.js",
+  awaiting: AWAITING12,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "pretechnical7.",
@@ -89823,7 +89935,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_FC_NATURE_ONLY",
       "M_PT8_FC_WIRING",
-      "M_PT8_FC_FUEL"
+      "M_PT8_FC_FUEL",
+      "M_PT8_FC_BURN_WIND"
     ]
   },
   "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_PREVENT": {
@@ -89839,7 +89952,26 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_FP_MATCHES",
       "M_PT8_FP_EXITS",
-      "M_PT8_FP_UNATTENDED"
+      "M_PT8_FP_UNATTENDED",
+      "M_PT8_FP_OVERLOAD"
+    ]
+  },
+  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH": {
+    "name": "Choose the right way to put out a fire: cooling, smothering or starving; the right extinguisher; when to raise the alarm and get out",
+    "sub": "PRE_.G8.FOUNDA.FIRE_SAFETY",
+    "outcome": "PRE_.G8.FOUNDA.FIRE_SAFETY.c",
+    "outcomes": [
+      "PRE_.G8.FOUNDA.FIRE_SAFETY.c"
+    ],
+    "pre": [
+      "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_CAUSES"
+    ],
+    "mis": [
+      "M_PT8_FE_WATER_OIL",
+      "M_PT8_FE_WATER_ELEC",
+      "M_PT8_FE_AIM_TOP",
+      "M_PT8_FE_RUN",
+      "M_PT8_FE_FIGHT_FIRST"
     ]
   },
   "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS": {
@@ -89854,7 +89986,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DT_NOT_IMPORTANT",
       "M_PT8_DT_VIRUS_ONLY",
-      "M_PT8_DT_THEFT"
+      "M_PT8_DT_THEFT",
+      "M_PT8_DT_POWER"
     ]
   },
   "PRET.G8.FOUNDA.DATA_SAFETY.DATA_PROTECT": {
@@ -89862,7 +89995,8 @@ var SKILLS32 = {
     "sub": "PRE_.G8.FOUNDA.DATA_SAFETY",
     "outcome": "PRE_.G8.FOUNDA.DATA_SAFETY.c",
     "outcomes": [
-      "PRE_.G8.FOUNDA.DATA_SAFETY.c"
+      "PRE_.G8.FOUNDA.DATA_SAFETY.c",
+      "PRE_.G8.FOUNDA.DATA_SAFETY.d"
     ],
     "pre": [
       "PRET.G8.FOUNDA.DATA_SAFETY.DATA_THREATS"
@@ -89870,7 +90004,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DP_PASSWORD_SHARE",
       "M_PT8_DP_BACKUP",
-      "M_PT8_DP_UNKNOWN_LINK"
+      "M_PT8_DP_UNKNOWN_LINK",
+      "M_PT8_DP_WEAK_PW"
     ]
   },
   "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS": {
@@ -89884,7 +90019,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DI_TOOL_MIX",
       "M_PT8_DI_TSQUARE",
-      "M_PT8_DI_PROTRACTOR"
+      "M_PT8_DI_PROTRACTOR",
+      "M_PT8_DI_SET_SQUARE"
     ]
   },
   "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT": {
@@ -89900,7 +90036,25 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DL_TITLE_TOP",
       "M_PT8_DL_NO_BORDER",
-      "M_PT8_DL_A4"
+      "M_PT8_DL_A4",
+      "M_PT8_DL_TSQUARE_EDGE"
+    ]
+  },
+  "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT": {
+    "name": "Give the construction steps for combined shapes: bisecting a line, constructing 60 and 90 degree angles, a hexagon in a circle, and a slot with semicircular ends",
+    "sub": "PRE_.G8.COMMUN.PLANE_GEOMETRY",
+    "outcome": "PRE_.G8.COMMUN.PLANE_GEOMETRY.c",
+    "outcomes": [
+      "PRE_.G8.COMMUN.PLANE_GEOMETRY.c"
+    ],
+    "pre": [
+      "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS"
+    ],
+    "mis": [
+      "M_PT8_GC_HEX_SIDE",
+      "M_PT8_GC_BISECT_SHORT",
+      "M_PT8_GC_SLOT_RADIUS",
+      "M_PT8_GC_PROTRACTOR"
     ]
   },
   "PRET.G8.COMMUN.DIMENSIONING.DIM_TYPES": {
@@ -89908,7 +90062,8 @@ var SKILLS32 = {
     "sub": "PRE_.G8.COMMUN.DIMENSIONING",
     "outcome": "PRE_.G8.COMMUN.DIMENSIONING.a",
     "outcomes": [
-      "PRE_.G8.COMMUN.DIMENSIONING.a"
+      "PRE_.G8.COMMUN.DIMENSIONING.a",
+      "PRE_.G8.COMMUN.DIMENSIONING.b"
     ],
     "pre": [
       "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_INSTRUMENTS"
@@ -89916,7 +90071,9 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DM_LINE_MIX",
       "M_PT8_DM_UNITS",
-      "M_PT8_DM_OBJECT_LINE"
+      "M_PT8_DM_OBJECT_LINE",
+      "M_PT8_DM_TOUCH",
+      "M_PT8_DM_CHAIN_PARALLEL"
     ]
   },
   "PRET.G8.COMMUN.DIMENSIONING.DIM_READ": {
@@ -89932,7 +90089,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DR_ADD",
       "M_PT8_DR_DIAMETER",
-      "M_PT8_DR_UNIT"
+      "M_PT8_DR_UNIT",
+      "M_PT8_DR_MEASURE_PAPER"
     ]
   },
   "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE": {
@@ -89949,7 +90107,26 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_SC_INVERT",
       "M_PT8_SC_CALC",
-      "M_PT8_SC_ENLARGE"
+      "M_PT8_SC_ENLARGE",
+      "M_PT8_SC_DIVISIONS"
+    ]
+  },
+  "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT": {
+    "name": "Work out drawing sizes from real sizes for a given scale, and choose a scale that fits the sheet",
+    "sub": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING",
+    "outcome": "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.c",
+    "outcomes": [
+      "PRE_.G8.COMMUN.PLAIN_SCALE_DRAWING.c"
+    ],
+    "pre": [
+      "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.PLAIN_SCALE",
+      "PRET.G8.COMMUN.PLANE_GEOMETRY.DRAW_LAYOUT"
+    ],
+    "mis": [
+      "M_PT8_SV_UNITS",
+      "M_PT8_SV_MULTIPLY",
+      "M_PT8_SV_ENLARGE",
+      "M_PT8_SV_FIT"
     ]
   },
   "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG": {
@@ -89964,7 +90141,25 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_VP_TEXT",
       "M_PT8_VP_TOOL",
-      "M_PT8_VP_LOOP"
+      "M_PT8_VP_LOOP",
+      "M_PT8_VP_SPRITE"
+    ]
+  },
+  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE": {
+    "name": "Build and read block instructions that solve a problem: order, events, loops and if-blocks in a visual programming application",
+    "sub": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING",
+    "outcome": "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.c",
+    "outcomes": [
+      "PRE_.G8.COMMUN.VISUAL_PROGRAMMING.c"
+    ],
+    "pre": [
+      "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VISUAL_PROG"
+    ],
+    "mis": [
+      "M_PT8_VS_ORDER",
+      "M_PT8_VS_LOOP",
+      "M_PT8_VS_NO_EVENT",
+      "M_PT8_VS_IF_ALWAYS"
     ]
   },
   "PRET.G8.MATERI.COMPOSITE_MATERIALS.COMPOSITE": {
@@ -89980,7 +90175,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_CM_SINGLE",
       "M_PT8_CM_PLYWOOD",
-      "M_PT8_CM_USE"
+      "M_PT8_CM_USE",
+      "M_PT8_CM_STEEL_WEIGHT"
     ]
   },
   "PRET.G8.MATERI.CERAMIC_MATERIALS.CERAMIC": {
@@ -89996,7 +90192,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_CR_BRITTLE",
       "M_PT8_CR_CONDUCT",
-      "M_PT8_CR_METAL"
+      "M_PT8_CR_METAL",
+      "M_PT8_CR_SUN_DRY"
     ]
   },
   "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS": {
@@ -90012,7 +90209,26 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_CT_WOOD_METAL",
       "M_PT8_CT_PLANE",
-      "M_PT8_CT_BLUNT"
+      "M_PT8_CT_BLUNT",
+      "M_PT8_CT_RIP_CROSS"
+    ]
+  },
+  "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE": {
+    "name": "Give the safe way to use cutting tools: hold the work in a vice or clamp, cut away from the body, fit the blade the right way, start a cut gently, carry tools safely",
+    "sub": "PRE_.G8.TOOLS_.CUTTING_TOOLS",
+    "outcome": "PRE_.G8.TOOLS_.CUTTING_TOOLS.c",
+    "outcomes": [
+      "PRE_.G8.TOOLS_.CUTTING_TOOLS.c"
+    ],
+    "pre": [
+      "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_TOOLS"
+    ],
+    "mis": [
+      "M_PT8_CU_TOWARDS",
+      "M_PT8_CU_HAND_HOLD",
+      "M_PT8_CU_BLADE_BACK",
+      "M_PT8_CU_PRESS_HARD",
+      "M_PT8_CU_CARRY"
     ]
   },
   "PRET.G8.TOOLS_.COMPUTER_SOFTWARE.SOFTWARE": {
@@ -90021,13 +90237,15 @@ var SKILLS32 = {
     "outcome": "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a",
     "outcomes": [
       "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.a",
-      "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b"
+      "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.b",
+      "PRE_.G8.TOOLS_.COMPUTER_SOFTWARE.c"
     ],
     "pre": [],
     "mis": [
       "M_PT8_SW_TOUCH",
       "M_PT8_SW_OS",
-      "M_PT8_SW_APP"
+      "M_PT8_SW_APP",
+      "M_PT8_SW_UTILITY"
     ]
   },
   "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING": {
@@ -90042,7 +90260,25 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_BK_BIG_ONLY",
       "M_PT8_BK_ASSET",
-      "M_PT8_BK_CASH"
+      "M_PT8_BK_CASH",
+      "M_PT8_BK_DRAWINGS"
+    ]
+  },
+  "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS": {
+    "name": "Prepare simple financial statements: the cash balance, gross and net profit, and assets = capital + liabilities",
+    "sub": "PRE_.G8.ENTREP.BOOKKEEPING",
+    "outcome": "PRE_.G8.ENTREP.BOOKKEEPING.c",
+    "outcomes": [
+      "PRE_.G8.ENTREP.BOOKKEEPING.c"
+    ],
+    "pre": [
+      "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING"
+    ],
+    "mis": [
+      "M_PT8_FS_SALES_PROFIT",
+      "M_PT8_FS_GROSS_NET",
+      "M_PT8_FS_CAPITAL_ADD",
+      "M_PT8_FS_CASH_ADD"
     ]
   },
   "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET": {
@@ -90060,7 +90296,25 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_BU_INCOME",
       "M_PT8_BU_NO_NEED",
-      "M_PT8_BU_UNETHICAL"
+      "M_PT8_BU_UNETHICAL",
+      "M_PT8_BU_LOAN_INCOME"
+    ]
+  },
+  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE": {
+    "name": "Prepare a simple personal budget: income, needs before wants, planned saving, and the balance as surplus or deficit",
+    "sub": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING",
+    "outcome": "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.c",
+    "outcomes": [
+      "PRE_.G8.ENTREP.INCOME_AND_BUDGETING.c"
+    ],
+    "pre": [
+      "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET"
+    ],
+    "mis": [
+      "M_PT8_BP_DEFICIT",
+      "M_PT8_BP_WANTS_FIRST",
+      "M_PT8_BP_SAVE_LAST",
+      "M_PT8_BP_SURPLUS_LOSS"
     ]
   },
   "PRET.G8.ENTREP.OF_GOODS_AND_SERVICES.MARKETING": {
@@ -90071,7 +90325,8 @@ var SKILLS32 = {
       "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.a",
       "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.b",
       "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.c",
-      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d"
+      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.d",
+      "PRE_.G8.ENTREP.OF_GOODS_AND_SERVICES.e"
     ],
     "pre": [
       "PRET.G8.ENTREP.BOOKKEEPING.BOOKKEEPING"
@@ -90098,7 +90353,8 @@ var SKILLS32 = {
     "mis": [
       "M_PT8_DS_MIDDLEMAN_BAD",
       "M_PT8_DS_CHANNEL",
-      "M_PT8_DS_ETHICS"
+      "M_PT8_DS_ETHICS",
+      "M_PT8_DS_SERVICE_AGENT"
     ]
   }
 };
@@ -90109,55 +90365,103 @@ var MIS_FEEDBACK31 = {
   "M_PT8_FP_MATCHES": "Matches are kept out of the reach of children.",
   "M_PT8_FP_EXITS": "Exits must be clear and unlocked in a fire.",
   "M_PT8_FP_UNATTENDED": "Never leave a stove or candle burning unattended.",
+  "M_PT8_FE_WATER_OIL": "Never pour water on burning oil. Turn off the heat and cover the pan.",
+  "M_PT8_FE_WATER_ELEC": "Never use water on an electrical fire. Switch off the power first.",
+  "M_PT8_FE_AIM_TOP": "Aim at the base of the fire, where the fuel is.",
+  "M_PT8_FE_RUN": "If your clothes catch fire: stop, drop and roll.",
+  "M_PT8_FE_FIGHT_FIRST": "Raise the alarm and get out first. Call 999 or 112.",
+  "M_PT8_FC_BURN_WIND": "Wind carries sparks. Dry grass can start a bush fire.",
+  "M_PT8_FP_OVERLOAD": "Do not overload sockets. Switch off when you finish.",
   "M_PT8_DT_NOT_IMPORTANT": "Schoolwork, photos and messages are hard to replace and may be private.",
   "M_PT8_DT_VIRUS_ONLY": "Viruses spread by flash disks and files as well as the internet.",
   "M_PT8_DT_THEFT": "Theft or loss of a device is a threat to the data in it.",
   "M_PT8_DP_PASSWORD_SHARE": "A password is kept secret.",
   "M_PT8_DP_BACKUP": "A backup is a second copy kept on another device.",
   "M_PT8_DP_UNKNOWN_LINK": "Unknown links can carry viruses or tricks, so do not open them.",
+  "M_PT8_DT_POWER": "A power cut while saving can damage or lose a file.",
+  "M_PT8_DP_WEAK_PW": "Use a long password that others cannot guess. Never use your name or birth date.",
   "M_PT8_DI_TOOL_MIX": "The compass draws circles and arcs. The set square draws upright and slanted lines.",
   "M_PT8_DI_TSQUARE": "The T-square draws horizontal lines. The protractor measures angles.",
   "M_PT8_DI_PROTRACTOR": "A protractor measures angles. A ruler measures length.",
   "M_PT8_DL_TITLE_TOP": "The title block is at the bottom right of the sheet.",
   "M_PT8_DL_NO_BORDER": "The border is a frame drawn inside the edges of the sheet.",
   "M_PT8_DL_A4": "A4 is 297 by 210 millimetres.",
+  "M_PT8_GC_HEX_SIDE": "The side of a hexagon in a circle equals the radius.",
+  "M_PT8_GC_BISECT_SHORT": "Open the compass to more than half the line so the arcs cross.",
+  "M_PT8_GC_SLOT_RADIUS": "The radius of a semicircular end is half the width of the slot.",
+  "M_PT8_GC_PROTRACTOR": "Equal arcs make an equilateral triangle, so the angle is 60 degrees.",
+  "M_PT8_DI_SET_SQUARE": "The 30-60 degree set square draws 30 and 60 degree lines.",
+  "M_PT8_DL_TSQUARE_EDGE": "Keep the T-square stock against the one working edge of the board.",
   "M_PT8_DM_LINE_MIX": "The dimension line has arrowheads. Extension lines stretch out from the object.",
   "M_PT8_DM_UNITS": "Sizes on drawings are normally in millimetres.",
   "M_PT8_DM_OBJECT_LINE": "The object line is thick. The dimension line is thin.",
   "M_PT8_DR_ADD": "Add the sections: 30 plus 45 is 75 millimetres.",
   "M_PT8_DR_DIAMETER": "The diameter is twice the radius: 40 millimetres.",
   "M_PT8_DR_UNIT": "A dimension needs a unit, normally millimetres.",
+  "M_PT8_DM_TOUCH": "Leave a small gap between the outline and a projection line.",
+  "M_PT8_DM_CHAIN_PARALLEL": "Parallel dimensioning measures every size from one datum edge.",
+  "M_PT8_DR_MEASURE_PAPER": "A dimension gives the real size. Read it; do not measure the paper.",
   "M_PT8_SC_INVERT": "A scale of 1:50 is a reduction: the object is 50 times bigger than the drawing.",
   "M_PT8_SC_CALC": "Multiply the drawing length by 50: 4 times 50 is 200 centimetres.",
   "M_PT8_SC_ENLARGE": "A scale of 2:1 makes the drawing twice as big as the object.",
+  "M_PT8_SV_UNITS": "Change to millimetres first, then divide by the scale.",
+  "M_PT8_SV_MULTIPLY": "For 1:20 the drawing is 20 times smaller: divide by 20.",
+  "M_PT8_SV_ENLARGE": "At 2:1 the drawing is twice the real size.",
+  "M_PT8_SV_FIT": "Choose a scale that makes the drawing fit inside the border.",
+  "M_PT8_SC_DIVISIONS": "On a plain scale the small divisions are to the left of zero.",
   "M_PT8_VP_TEXT": "In visual programming, blocks snap together.",
   "M_PT8_VP_TOOL": "Scratch and App Inventor are visual programming tools.",
   "M_PT8_VP_LOOP": "A loop repeats instructions.",
+  "M_PT8_VS_ORDER": "Blocks run from top to bottom, so the order matters.",
+  "M_PT8_VS_LOOP": "A repeat block runs its blocks the number of times shown.",
+  "M_PT8_VS_NO_EVENT": "A stack runs only when an event block, such as the green flag, starts it.",
+  "M_PT8_VS_IF_ALWAYS": "An if-block runs its blocks only when the condition is true.",
+  "M_PT8_VP_SPRITE": "A sprite is a character the blocks control. The backdrop is the background.",
   "M_PT8_CM_SINGLE": "Concrete is a mixture of cement, sand, ballast and water.",
   "M_PT8_CM_PLYWOOD": "Plywood is made of thin layers glued with the grain crosswise.",
   "M_PT8_CM_USE": "Reinforced concrete is used in buildings, bridges and slabs.",
+  "M_PT8_CM_STEEL_WEIGHT": "Steel bars give concrete strength against pulling and bending.",
   "M_PT8_CR_BRITTLE": "Ceramics are hard but brittle, so they break when dropped.",
   "M_PT8_CR_CONDUCT": "Ceramics do not conduct electricity, so they are used as insulators.",
   "M_PT8_CR_METAL": "Bricks, tiles and clay pots are ceramics. Iron is a metal.",
+  "M_PT8_CR_SUN_DRY": "Clay becomes ceramic when it is fired at a high temperature.",
   "M_PT8_CT_WOOD_METAL": "A hacksaw cuts metal. A tenon saw cuts wood.",
   "M_PT8_CT_PLANE": "A plane smooths wood. A chisel shapes joints.",
   "M_PT8_CT_BLUNT": "A blunt tool needs more force and slips, so keep tools sharp.",
+  "M_PT8_CU_TOWARDS": "Always cut away from your body, hands behind the edge.",
+  "M_PT8_CU_HAND_HOLD": "Clamp the work. Never hold it in your hand while you cut.",
+  "M_PT8_CU_BLADE_BACK": "Hacksaw teeth point away from the handle.",
+  "M_PT8_CU_PRESS_HARD": "Start gently to make a groove, then use long steady strokes.",
+  "M_PT8_CU_CARRY": "Carry edged tools in your hand, pointing down. Walk.",
+  "M_PT8_CT_RIP_CROSS": "A cross-cut saw cuts across the grain; a rip saw cuts along it.",
   "M_PT8_SW_TOUCH": "Hardware can be touched. Software is the programs.",
   "M_PT8_SW_OS": "Windows, Android and Linux are operating systems. A word processor is an application.",
   "M_PT8_SW_APP": "A spreadsheet is used for tables and calculations.",
+  "M_PT8_SW_UTILITY": "An antivirus is a utility: it looks after the computer.",
   "M_PT8_BK_BIG_ONLY": "Every business keeps records to know its income, spending and profit.",
   "M_PT8_BK_ASSET": "What a business owes is a liability. What it owns is an asset.",
   "M_PT8_BK_CASH": "A credit sale is paid later. A cash sale is paid now.",
+  "M_PT8_FS_SALES_PROFIT": "Profit is what is left after costs and expenses, not the sales.",
+  "M_PT8_FS_GROSS_NET": "Net profit = gross profit - expenses.",
+  "M_PT8_FS_CAPITAL_ADD": "Capital = assets - liabilities.",
+  "M_PT8_FS_CASH_ADD": "Money paid out is taken away from the cash.",
+  "M_PT8_BK_DRAWINGS": "Money the owner takes for personal use is drawings, not a business expense.",
   "M_PT8_BU_INCOME": "A salary, business profit and sales are income. A bill is spending.",
   "M_PT8_BU_NO_NEED": "A budget plans spending so that needs come first and some is saved.",
   "M_PT8_BU_UNETHICAL": "Hiding spending or using money meant for something else is unethical.",
+  "M_PT8_BP_DEFICIT": "Spending more than income is a deficit.",
+  "M_PT8_BP_WANTS_FIRST": "Plan needs first, then wants.",
+  "M_PT8_BP_SAVE_LAST": "Put saving in the budget at the start, as an item.",
+  "M_PT8_BP_SURPLUS_LOSS": "Money left after planned spending is a surplus.",
+  "M_PT8_BU_LOAN_INCOME": "A loan must be paid back. Plan the repayment in the budget.",
   "M_PT8_MK_SELLING_ONLY": "Marketing helps a business find customers and sell.",
   "M_PT8_MK_INFO": "A survey, asking customers and watching competitors give market information.",
   "M_PT8_MK_FACTOR": "Demand, price, location, competition and transport matter in choosing a market.",
   "M_PT8_MK_TOOL": "Posters, radio, social media, samples and offers are marketing tools.",
   "M_PT8_DS_MIDDLEMAN_BAD": "Intermediaries bring goods from producers to buyers.",
   "M_PT8_DS_CHANNEL": "The longest channel has a wholesaler and a retailer between producer and consumer.",
-  "M_PT8_DS_ETHICS": "Honest weights, fair prices and safe delivery are ethical. Hoarding and cheating are not."
+  "M_PT8_DS_ETHICS": "Honest weights, fair prices and safe delivery are ethical. Hoarding and cheating are not.",
+  "M_PT8_DS_SERVICE_AGENT": "Services also reach customers through agents."
 };
 
 // src/ai-tutor/content/families/pretechnical_g8_signed.js
@@ -90557,6 +90861,17 @@ var FAMILIES105 = [
   ], ["b", "c"])
 ];
 
+// src/ai-tutor/content/families/pretechnical_g8_awaiting.js
+var AWAITING13 = [
+  "PRET.G8.FOUNDA.FIRE_SAFETY.FIRE_EXTINGUISH",
+  "PRET.G8.COMMUN.PLANE_GEOMETRY.GEOM_CONSTRUCT",
+  "PRET.G8.COMMUN.PLAIN_SCALE_DRAWING.SCALE_CONVERT",
+  "PRET.G8.COMMUN.VISUAL_PROGRAMMING.VP_SEQUENCE",
+  "PRET.G8.TOOLS_.CUTTING_TOOLS.CUT_USE",
+  "PRET.G8.ENTREP.BOOKKEEPING.FIN_STATEMENTS",
+  "PRET.G8.ENTREP.INCOME_AND_BUDGETING.BUDGET_PREPARE"
+];
+
 // src/ai-tutor/content/subjects/pretechnical_g8.js
 var pretechnical_g8_default = {
   subject: "pretechnical",
@@ -90573,6 +90888,8 @@ var pretechnical_g8_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED31,
   signedFile: "pretechnical_g8_signed.js",
+  awaiting: AWAITING13,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "pretechnical8.",
@@ -90960,7 +91277,26 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_RP_SAFE",
       "M_PT9_RP_RISK",
-      "M_PT9_RP_TYPE"
+      "M_PT9_RP_TYPE",
+      "M_PT9_RP_BELOW"
+    ]
+  },
+  "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES": {
+    "name": "Give the safety rules for working on raised platforms: ladder angle and footing, three points of contact, no overreaching, top step, guard rails",
+    "sub": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR",
+    "outcome": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c",
+    "outcomes": [
+      "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c"
+    ],
+    "pre": [
+      "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS"
+    ],
+    "mis": [
+      "M_PT9_PR_ANGLE",
+      "M_PT9_PR_OVERREACH",
+      "M_PT9_PR_TOP_STEP",
+      "M_PT9_PR_CONTACT",
+      "M_PT9_PR_FOOTING"
     ]
   },
   "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY": {
@@ -90975,7 +91311,9 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_HC_FLAMMABLE",
       "M_PT9_HC_CORROSIVE",
-      "M_PT9_HC_PETROL"
+      "M_PT9_HC_PETROL",
+      "M_PT9_HC_HOME_SAFE",
+      "M_PT9_HC_SKULL"
     ]
   },
   "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING": {
@@ -90983,7 +91321,8 @@ var SKILLS33 = {
     "sub": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST",
     "outcome": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
     "outcomes": [
-      "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c"
+      "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
+      "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.d"
     ],
     "pre": [
       "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY"
@@ -90991,7 +91330,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_HH_LABEL",
       "M_PT9_HH_MIX",
-      "M_PT9_HH_STORE"
+      "M_PT9_HH_STORE",
+      "M_PT9_HH_PPE"
     ]
   },
   "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS": {
@@ -91001,13 +91341,15 @@ var SKILLS33 = {
     "outcomes": [
       "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.a",
       "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.b",
-      "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c"
+      "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c",
+      "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.d"
     ],
     "pre": [],
     "mis": [
       "M_PT9_TA_GROW",
       "M_PT9_TA_ETHIC",
-      "M_PT9_TA_CAREER"
+      "M_PT9_TA_CAREER",
+      "M_PT9_TA_ONE_ONLY"
     ]
   },
   "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE": {
@@ -91021,7 +91363,26 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_OB_FRONT",
       "M_PT9_OB_ANGLE",
-      "M_PT9_OB_CABINET"
+      "M_PT9_OB_CABINET",
+      "M_PT9_OB_ISOMETRIC"
+    ]
+  },
+  "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW": {
+    "name": "Give the steps to sketch and draw blocks in oblique: the front face true shape first, receding lines parallel at 45 degrees, half depth in cabinet, circles on the front face",
+    "sub": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION",
+    "outcome": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
+    "outcomes": [
+      "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
+      "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.c"
+    ],
+    "pre": [
+      "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE"
+    ],
+    "mis": [
+      "M_PT9_OD_CIRCLE_FACE",
+      "M_PT9_OD_DEPTH_FULL",
+      "M_PT9_OD_START",
+      "M_PT9_OD_CONVERGE"
     ]
   },
   "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS": {
@@ -91035,7 +91396,25 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_VA_USE",
       "M_PT9_VA_BLOCK",
-      "M_PT9_VA_SOLVE"
+      "M_PT9_VA_SOLVE",
+      "M_PT9_VA_AREAS"
+    ]
+  },
+  "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD": {
+    "name": "Plan, build and test a simple visual program that solves a day-to-day problem: state the problem, plan the steps, use variables, reset at the start, test with right and wrong inputs",
+    "sub": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING",
+    "outcome": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b",
+    "outcomes": [
+      "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b"
+    ],
+    "pre": [
+      "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS"
+    ],
+    "mis": [
+      "M_PT9_VB_PLAN",
+      "M_PT9_VB_VARIABLE",
+      "M_PT9_VB_RESET",
+      "M_PT9_VB_TEST_ONCE"
     ]
   },
   "PRET.G9.MATERI.WOOD.WOOD_TYPES": {
@@ -91050,7 +91429,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_WT_HARD",
       "M_PT9_WT_SOFT",
-      "M_PT9_WT_BOARD"
+      "M_PT9_WT_BOARD",
+      "M_PT9_WT_FEEL"
     ]
   },
   "PRET.G9.MATERI.WOOD.WOOD_PREP": {
@@ -91066,7 +91446,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_WP_SEASON",
       "M_PT9_WP_ORDER",
-      "M_PT9_WP_TREAT"
+      "M_PT9_WP_TREAT",
+      "M_PT9_WP_STACK"
     ]
   },
   "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE": {
@@ -91082,7 +91463,9 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_WS_BURN",
       "M_PT9_WS_ORGANIC",
-      "M_PT9_WS_SHARP"
+      "M_PT9_WS_SHARP",
+      "M_PT9_WS_ONE_BIN",
+      "M_PT9_WS_BATTERY"
     ]
   },
   "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS": {
@@ -91098,7 +91481,25 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_HT_VICE",
       "M_PT9_HT_CLAMP",
-      "M_PT9_HT_CARE"
+      "M_PT9_HT_CARE",
+      "M_PT9_HT_TONGS"
+    ]
+  },
+  "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE": {
+    "name": "Give the correct way to use holding tools: work low in the vice, soft packing for finished work, clamp work for drilling, support long work",
+    "sub": "PRE_.G9.TOOLS_.HOLDING_TOOLS",
+    "outcome": "PRE_.G9.TOOLS_.HOLDING_TOOLS.c",
+    "outcomes": [
+      "PRE_.G9.TOOLS_.HOLDING_TOOLS.c"
+    ],
+    "pre": [
+      "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS"
+    ],
+    "mis": [
+      "M_PT9_HU_HIGH",
+      "M_PT9_HU_PACKING",
+      "M_PT9_HU_DRILL_HAND",
+      "M_PT9_HU_SUPPORT"
     ]
   },
   "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS": {
@@ -91114,7 +91515,26 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_DT_HAMMER",
       "M_PT9_DT_SCREWDRIVER",
-      "M_PT9_DT_SPANNER"
+      "M_PT9_DT_SPANNER",
+      "M_PT9_DT_MALLET"
+    ]
+  },
+  "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE": {
+    "name": "Give the correct way to use driving tools: hammer grip and starting a nail, screwdriver that fills the slot, spanner of the right size pulled towards you",
+    "sub": "PRE_.G9.TOOLS_.DRIVING_TOOLS",
+    "outcome": "PRE_.G9.TOOLS_.DRIVING_TOOLS.c",
+    "outcomes": [
+      "PRE_.G9.TOOLS_.DRIVING_TOOLS.c"
+    ],
+    "pre": [
+      "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS"
+    ],
+    "mis": [
+      "M_PT9_DU_GRIP",
+      "M_PT9_DU_START_NAIL",
+      "M_PT9_DU_SPANNER_FIT",
+      "M_PT9_DU_SCREWDRIVER_SIZE",
+      "M_PT9_DU_PUSH"
     ]
   },
   "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS": {
@@ -91129,7 +91549,26 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_PJ_FIRST",
       "M_PT9_PJ_TEST",
-      "M_PT9_PJ_MATERIAL"
+      "M_PT9_PJ_MATERIAL",
+      "M_PT9_PJ_TOO_BIG"
+    ]
+  },
+  "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN": {
+    "name": "Plan and evaluate the making of a project item: sketch and working drawing, materials list and cost, order of making, testing and evaluation against the problem",
+    "sub": "PRE_.G9.TOOLS_.PROJECT",
+    "outcome": "PRE_.G9.TOOLS_.PROJECT.c",
+    "outcomes": [
+      "PRE_.G9.TOOLS_.PROJECT.c",
+      "PRE_.G9.TOOLS_.PROJECT.d"
+    ],
+    "pre": [
+      "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS"
+    ],
+    "mis": [
+      "M_PT9_PP_NO_DRAWING",
+      "M_PT9_PP_NO_COST",
+      "M_PT9_PP_FINISH_FIRST",
+      "M_PT9_PP_LOOKS_ONLY"
     ]
   },
   "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES": {
@@ -91144,7 +91583,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_FT_NAME",
       "M_PT9_FT_CENTRAL",
-      "M_PT9_FT_INSURE"
+      "M_PT9_FT_INSURE",
+      "M_PT9_FT_SACCO"
     ]
   },
   "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES": {
@@ -91152,7 +91592,8 @@ var SKILLS33 = {
     "sub": "PRE_.G9.ENTREP.FINANCIAL_SERVICES",
     "outcome": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
     "outcomes": [
-      "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c"
+      "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
+      "PRE_.G9.ENTREP.FINANCIAL_SERVICES.d"
     ],
     "pre": [
       "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES"
@@ -91160,7 +91601,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_FV_LOAN",
       "M_PT9_FV_SAVE",
-      "M_PT9_FV_SERVICE"
+      "M_PT9_FV_SERVICE",
+      "M_PT9_FV_PREMIUM"
     ]
   },
   "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS": {
@@ -91175,7 +91617,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_GV_PROTECT",
       "M_PT9_GV_LICENCE",
-      "M_PT9_GV_HELP"
+      "M_PT9_GV_HELP",
+      "M_PT9_GV_STATE_CORP"
     ]
   },
   "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES": {
@@ -91192,7 +91635,8 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_TX_VAT",
       "M_PT9_TX_USE",
-      "M_PT9_TX_EGOV"
+      "M_PT9_TX_EGOV",
+      "M_PT9_TX_PAYE"
     ]
   },
   "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN": {
@@ -91207,7 +91651,25 @@ var SKILLS33 = {
     "mis": [
       "M_PT9_BPL_IMPORT",
       "M_PT9_BPL_PART",
-      "M_PT9_BPL_MONEY"
+      "M_PT9_BPL_MONEY",
+      "M_PT9_BPL_ONCE"
+    ]
+  },
+  "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE": {
+    "name": "Fill in a business plan template for a small project: description, market and competitors, start-up capital, projected sales, costs and profit, executive summary written last",
+    "sub": "PRE_.G9.ENTREP.BUSINESS_PLAN",
+    "outcome": "PRE_.G9.ENTREP.BUSINESS_PLAN.c",
+    "outcomes": [
+      "PRE_.G9.ENTREP.BUSINESS_PLAN.c"
+    ],
+    "pre": [
+      "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN"
+    ],
+    "mis": [
+      "M_PT9_BT_STARTUP",
+      "M_PT9_BT_PROFIT",
+      "M_PT9_BT_SUMMARY",
+      "M_PT9_BT_COMPETITORS"
     ]
   }
 };
@@ -91215,54 +91677,103 @@ var MIS_FEEDBACK32 = {
   "M_PT9_RP_SAFE": "Work at height needs a trained adult and a helper.",
   "M_PT9_RP_RISK": "Falling is the main risk at height.",
   "M_PT9_RP_TYPE": "A scaffold is a raised platform.",
+  "M_PT9_PR_ANGLE": "Place the foot about 1 out for every 4 up.",
+  "M_PT9_PR_OVERREACH": "Never lean out. Climb down and move the ladder.",
+  "M_PT9_PR_TOP_STEP": "Do not stand on the top steps. Use a taller ladder.",
+  "M_PT9_PR_CONTACT": "Keep three points of contact. Carry tools in a belt or bag.",
+  "M_PT9_PR_FOOTING": "A ladder stands on firm, level ground, held by a helper.",
+  "M_PT9_RP_BELOW": "People below can be hit by falling tools. Keep the area below clear.",
   "M_PT9_HC_FLAMMABLE": "Flammable means catches fire easily.",
   "M_PT9_HC_CORROSIVE": "Corrosive substances eat away skin and metal.",
   "M_PT9_HC_PETROL": "Petrol is flammable.",
   "M_PT9_HH_LABEL": "Read the label first.",
   "M_PT9_HH_MIX": "Never mix cleaners.",
   "M_PT9_HH_STORE": "Store in a labelled container out of reach.",
+  "M_PT9_HC_HOME_SAFE": "Many home products are hazardous. Read the label.",
+  "M_PT9_HC_SKULL": "The skull and crossbones means toxic: it can poison.",
+  "M_PT9_HH_PPE": "Wear gloves, a mask, boots and long sleeves when handling pesticides.",
   "M_PT9_TA_GROW": "Talents grow by practice and guidance.",
   "M_PT9_TA_ETHIC": "Fair play is ethical.",
   "M_PT9_TA_CAREER": "Drawing links to design careers.",
+  "M_PT9_TA_ONE_ONLY": "Use all your talents, abilities and interests to choose a career.",
   "M_PT9_OB_FRONT": "The front face is true shape.",
   "M_PT9_OB_ANGLE": "Depth lines are usually at 45 degrees.",
   "M_PT9_OB_CABINET": "In cabinet the depth is half size.",
+  "M_PT9_OD_CIRCLE_FACE": "Put circles and the most detail on the front face.",
+  "M_PT9_OD_DEPTH_FULL": "In cabinet oblique the receding lines are half the real depth.",
+  "M_PT9_OD_START": "Draw the front face first, then the receding lines.",
+  "M_PT9_OD_CONVERGE": "In oblique, all receding lines are parallel.",
+  "M_PT9_OB_ISOMETRIC": "Oblique keeps the front face true shape. Isometric uses 30 degree lines.",
   "M_PT9_VA_USE": "Games and apps can be made.",
   "M_PT9_VA_BLOCK": "Blocks are joined.",
   "M_PT9_VA_SOLVE": "It solves problems step by step.",
+  "M_PT9_VB_PLAN": "State the problem and plan the steps first.",
+  "M_PT9_VB_VARIABLE": "Use a variable to keep a value that changes.",
+  "M_PT9_VB_RESET": "Reset variables at the start of the program.",
+  "M_PT9_VB_TEST_ONCE": "Test with right, wrong and unusual inputs.",
+  "M_PT9_VA_AREAS": "Visual programming is used in robotics, games, education and real apps.",
   "M_PT9_WT_HARD": "Mahogany is a hardwood.",
   "M_PT9_WT_SOFT": "Pine is a softwood.",
   "M_PT9_WT_BOARD": "Plywood is made of glued layers.",
   "M_PT9_WP_SEASON": "Seasoning dries timber.",
   "M_PT9_WP_ORDER": "Logs are sawn first.",
   "M_PT9_WP_TREAT": "Preservatives protect wood.",
+  "M_PT9_WT_FEEL": "Hardwood and softwood are named from the tree, not from how hard the wood is.",
+  "M_PT9_WP_STACK": "Stack timber off the ground with sticks between boards so air flows.",
   "M_PT9_WS_BURN": "Do not burn plastic.",
   "M_PT9_WS_ORGANIC": "Peelings make compost.",
   "M_PT9_WS_SHARP": "Wrap broken glass and dispose of it safely.",
+  "M_PT9_WS_ONE_BIN": "Sort waste so it can be reused, recycled or composted.",
+  "M_PT9_WS_BATTERY": "Keep used batteries apart for a collection point. Never burn them.",
   "M_PT9_HT_VICE": "A vice holds the work.",
   "M_PT9_HT_CLAMP": "A G-clamp is a holding tool.",
   "M_PT9_HT_CARE": "Clean and oil tools.",
+  "M_PT9_HU_HIGH": "Hold the work low in the vice.",
+  "M_PT9_HU_PACKING": "Use soft packing to protect finished work.",
+  "M_PT9_HU_DRILL_HAND": "Never hold work by hand for drilling. Clamp it.",
+  "M_PT9_HU_SUPPORT": "Support the free end of long work.",
+  "M_PT9_HT_TONGS": "Use tongs to hold hot metal.",
   "M_PT9_DT_HAMMER": "A hammer drives nails.",
   "M_PT9_DT_SCREWDRIVER": "Match the screwdriver to the screw head.",
   "M_PT9_DT_SPANNER": "A spanner turns nuts and bolts.",
+  "M_PT9_DU_GRIP": "Hold a hammer near the end of its handle.",
+  "M_PT9_DU_START_NAIL": "Start a nail with light taps, then move your fingers away.",
+  "M_PT9_DU_SPANNER_FIT": "Use the spanner that fits the nut exactly.",
+  "M_PT9_DU_SCREWDRIVER_SIZE": "Choose a screwdriver that fills the slot.",
+  "M_PT9_DU_PUSH": "Pull a spanner towards you.",
+  "M_PT9_DT_MALLET": "Strike a wooden chisel handle with a mallet.",
   "M_PT9_PJ_FIRST": "Start by identifying a problem.",
   "M_PT9_PJ_TEST": "Test the item.",
   "M_PT9_PJ_MATERIAL": "Use local materials.",
+  "M_PT9_PP_NO_DRAWING": "Draw first: a sketch and a working drawing with sizes.",
+  "M_PT9_PP_NO_COST": "List materials and costs before you start.",
+  "M_PT9_PP_FINISH_FIRST": "Finishing comes last.",
+  "M_PT9_PP_LOOKS_ONLY": "Judge the item by the problem it solves.",
+  "M_PT9_PJ_TOO_BIG": "Choose a problem you can solve with your skills, tools and local materials.",
   "M_PT9_FT_NAME": "A SACCO is a financial institution.",
   "M_PT9_FT_CENTRAL": "It supervises banks.",
   "M_PT9_FT_INSURE": "Insurance companies give cover.",
   "M_PT9_FV_LOAN": "A loan is repaid with interest.",
   "M_PT9_FV_SAVE": "Savings are for planned needs.",
   "M_PT9_FV_SERVICE": "Banks keep savings.",
+  "M_PT9_FT_SACCO": "A SACCO is owned by its members, who save and borrow together.",
+  "M_PT9_FV_PREMIUM": "An insurance premium pays for cover. It is not returned like savings.",
   "M_PT9_GV_PROTECT": "Regulation protects customers.",
   "M_PT9_GV_LICENCE": "Businesses need a licence.",
   "M_PT9_GV_HELP": "Government provides roads and power.",
   "M_PT9_TX_VAT": "VAT is Value Added Tax.",
   "M_PT9_TX_USE": "Taxes pay for public services.",
   "M_PT9_TX_EGOV": "eCitizen is an e-Government service.",
+  "M_PT9_GV_STATE_CORP": "The government also runs businesses through state corporations.",
+  "M_PT9_TX_PAYE": "PAYE is a direct tax on income.",
   "M_PT9_BPL_IMPORT": "A plan guides the owner.",
   "M_PT9_BPL_PART": "The market is a component.",
-  "M_PT9_BPL_MONEY": "The money plan shows costs and income."
+  "M_PT9_BPL_MONEY": "The money plan shows costs and income.",
+  "M_PT9_BT_STARTUP": "Start-up capital covers equipment, permits and the first stock.",
+  "M_PT9_BT_PROFIT": "Projected profit = projected sales - projected costs.",
+  "M_PT9_BT_SUMMARY": "Write the executive summary last; place it first.",
+  "M_PT9_BT_COMPETITORS": "Name your competitors and say how you will be different.",
+  "M_PT9_BPL_ONCE": "Review and update a business plan when things change."
 };
 
 // src/ai-tutor/content/families/pretechnical_g9_signed.js
@@ -91635,6 +92146,17 @@ var FAMILIES107 = [
   ], ["a", "b"])
 ];
 
+// src/ai-tutor/content/families/pretechnical_g9_awaiting.js
+var AWAITING14 = [
+  "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.PLATFORM_RULES",
+  "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE_DRAW",
+  "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VP_APP_BUILD",
+  "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLD_USE",
+  "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVE_USE",
+  "PRET.G9.TOOLS_.PROJECT.PROJECT_PLAN",
+  "PRET.G9.ENTREP.BUSINESS_PLAN.BP_TEMPLATE"
+];
+
 // src/ai-tutor/content/subjects/pretechnical_g9.js
 var pretechnical_g9_default = {
   subject: "pretechnical",
@@ -91651,6 +92173,8 @@ var pretechnical_g9_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED32,
   signedFile: "pretechnical_g9_signed.js",
+  awaiting: AWAITING14,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-pretechnical-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "pretechnical9.",
