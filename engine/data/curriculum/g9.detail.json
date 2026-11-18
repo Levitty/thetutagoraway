@@ -480,6 +480,60 @@
     "why can this not be right"
    ],
    "mastery": "The child finds where a line meets the y-axis by putting x = 0 and the x-axis by putting y = 0, writes them as points ((0, c) and (x, 0)), and uses them in context: a drum emptying by y = 60 - 4x is empty when y = 0, after 15 minutes; the area of the triangle the line makes with the axes is half the product of the intercepts."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN": {
+   "forms": [
+    "solve",
+    "why does the sign change",
+    "find the mistake",
+    "largest whole number"
+   ],
+   "mastery": "The child solves an inequality such as 7 - 3x > 19 like an equation, taking the same away from both sides, and reverses the sign when multiplying or dividing both sides by a negative number (x < -4), and explains why with a pair of numbers (2 < 5 but -2 > -5)."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN": {
+   "forms": [
+    "show on the number line",
+    "which inequality is shown",
+    "open or solid circle",
+    "why is the circle wrong"
+   ],
+   "mastery": "The child marks the boundary number with an open circle for < or > (not included) and a solid circle for less than or equal to or greater than or equal to (included), shades towards smaller numbers for < and towards bigger numbers for >, and reads an inequality from a number line."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE": {
+   "forms": [
+    "solid or dashed",
+    "draw the boundary",
+    "why is this correct",
+    "which line is the boundary"
+   ],
+   "mastery": "The child draws the line y = mx + c for an inequality such as y < 2x + 1, solid when the sign includes \"equal to\" and dashed when it does not, and knows the line style says whether the boundary is in the region, not which side to shade."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION": {
+   "forms": [
+    "which point lies in the region",
+    "shade the region",
+    "test a point",
+    "is (2, 3) in the region"
+   ],
+   "mastery": "The child tests a point not on the line (often the origin) in the inequality to decide which side to shade, and says whether a given point is in the region by putting its x into the line and comparing the y values: for y > 2x + 1, the point (1, 5) is in the region because 5 > 3."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST": {
+   "forms": [
+    "the most that can be bought",
+    "how many sacks at most",
+    "how much spare room",
+    "write the inequality"
+   ],
+   "mastery": "The child writes an inequality for a limit (cost at most the budget, load at most the limit, counting fixed amounts like the driver and tools), solves it, and gives the largest whole number that fits, rounding down: 1,000 shillings at 45 a book is at most 22 books."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST": {
+   "forms": [
+    "the smallest number",
+    "at least",
+    "how many must come",
+    "write the inequality"
+   ],
+   "mastery": "The child writes an inequality for a target (money left at least an amount after a cost), adds the fixed cost to the target before dividing, solves, and gives the smallest whole number that fits, rounding up: a bus of 6,000 and at least 1,500 left at 350 a learner needs at least 22 learners."
   }
  }
 }

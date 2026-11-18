@@ -954,7 +954,7 @@ const LINES = [
 // ---------------------------------------------------------------- LINEAR INEQUALITIES
 const FLIP = { '>': '<', '≥': '≤', '<': '>', '≤': '≥' };
 const INEQ = [
-  fam({ id: 'g9.ineq.spot-negative-divide', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.a', rung: 3, form: 'spot',
+  fam({ id: 'g9.ineq.spot-negative-divide', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.a', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN', rung: 3, form: 'spot',
     draw: () => {
       const m = randInt(2, 5), cc = randInt(1, 4), v = randInt(-3, 4), sign = pick(['>', '≥', '<', '≤']), type = pick(['noflip', 'edge', 'subtract']);
       const c = m * cc, k = m * (cc - v), r = k - c;
@@ -971,23 +971,23 @@ const INEQ = [
         { text: `The ${small ? 'largest' : 'smallest'} whole number that works is ${fm(N)}`, ok: N === good },
       ];
       const fix = { noflip: 'Dividing both sides of an inequality by a negative number reverses the sign. Step 2 kept it the same.', edge: `In Step 3, the sign in x ${sign2} ${fm(shownV)} ${sign2 === '<' || sign2 === '>' ? 'does not include' : 'includes'} ${fm(shownV)} itself, which changes the whole number that works.`, subtract: `Taking ${c} from both sides gives ${k} − ${c} on the right. Step 1 added instead.` }[type];
-      return { question: `Solve ${c} − ${m}x ${sign} ${k}. ${who.name} worked as shown below. One step is wrong. Which one?`, working, fix,
+      return { question: `Solve ${c} − ${m}x ${sign} ${k}. ${who.name} worked as shown below. One step is wrong. Which one?`, working, mis: { noflip: 'M_NO_FLIP_NEGATIVE', edge: 'M_BOUNDARY_INCLUDED_WRONG', subtract: 'M_CONSTANT_ADDED_NOT_SUBTRACTED' }[type], fix,
         steps: [`Take ${c} from both sides: −${m}x ${sign} ${fm(r)}.`, `Divide by −${m} and reverse the sign: x ${FLIP[sign]} ${fm(r / -m)}.`] };
     } }),
-  fam({ id: 'g9.ineq.why-reverse', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.a', rung: 2, form: 'why',
+  fam({ id: 'g9.ineq.why-reverse', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.a', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN', rung: 2, form: 'why',
     draw: () => { const m = randInt(2, 6), v = randInt(2, 7), sign = pick(['<', '≤']); return { m, k: m * v, v, sign, who: person() }; },
     make: ({ m, k, v, sign, who }) => ({
       question: `${who.name} solves −${m}x ${sign} ${k} and writes x ${FLIP[sign]} −${v}. Why does the sign change from ${sign} to ${FLIP[sign]}?`,
       options: [
         { text: `Dividing both sides by a negative reverses the inequality`, right: true },
-        { text: `The sign changes every time you divide, whatever the number`, right: false, why: 'Dividing by a positive number keeps the sign. For example, 6 < 9 and 2 < 3.' },
-        { text: `The sign changes because ${k} is a positive number`, right: false, why: 'The sign of the number on the right does not decide this. It is the number you divide by.' },
-        { text: `The sign changes because x is on the left side`, right: false, why: 'Where x sits does not matter. It is the negative number you divide by.' },
+        { text: `The sign changes every time you divide, whatever the number`, right: false, why: 'Dividing by a positive number keeps the sign. For example, 6 < 9 and 2 < 3.', mis: 'M_FLIP_EVERY_DIVISION' },
+        { text: `The sign changes because ${k} is a positive number`, right: false, why: 'The sign of the number on the right does not decide this. It is the number you divide by.', mis: 'M_FLIP_FOR_NEGATIVE_RHS' },
+        { text: `The sign changes because x is on the left side`, right: false, why: 'Where x sits does not matter. It is the negative number you divide by.', mis: 'M_FLIP_FOR_X_POSITION' },
       ],
       hints: ['What happens to the order of two numbers when both are multiplied or divided by a negative number?', 'Try it with 2 and 5.'],
       steps: [`Divide both sides by −${m}. A negative divisor reverses the order.`, `x ${FLIP[sign]} −${v}.`],
     }) }),
-  fam({ id: 'g9.ineq.number-line-words', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.b', rung: 2, form: 'direct',
+  fam({ id: 'g9.ineq.number-line-words', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.b', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN', misMapped: false, reveals: ['M_CIRCLE_TYPE_SWAPPED', 'M_READ_DIRECTION_SWAPPED'], rung: 2, form: 'direct',
     draw: () => ({ v: randInt(-5, 8), solid: Math.random() < 0.5, left: Math.random() < 0.5 }),
     make: ({ v, solid, left }) => {
       const right = left ? (solid ? '≤' : '<') : (solid ? '≥' : '>');
@@ -1000,21 +1000,21 @@ const INEQ = [
         hints: ['A solid circle includes the number. An open circle does not.', 'Shading to the left shows smaller numbers. Shading to the right shows bigger numbers.'],
         steps: [`The circle is ${solid ? 'solid, so the number is included' : 'open, so the number is not included'}.`, `The shading is to the ${left ? 'left' : 'right'}, so the sign is ${right}: x ${right} ${fm(v)}.`] };
     } }),
-  fam({ id: 'g9.ineq.why-circle', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.b', rung: 2, form: 'why',
+  fam({ id: 'g9.ineq.why-circle', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.b', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN', rung: 2, form: 'why',
     draw: () => ({ v: randInt(-4, 9), sign: pick(['<', '>', '≤', '≥']), who: person() }),
     make: ({ v, sign, who }) => {
       const inc = sign === '≤' || sign === '≥', left = sign === '<' || sign === '≤';
       return { question: `To graph x ${sign} ${fm(v)}, ${who.name} draws ${inc ? 'an open' : 'a solid'} circle and an arrow pointing ${left ? 'left' : 'right'}. The circle is at ${fm(v)}. A teacher marks the circle wrong. Why?`,
         options: [
           { text: inc ? `x ${sign} ${fm(v)} includes ${fm(v)}, so the circle must be solid` : `x ${sign} ${fm(v)} does not include ${fm(v)}, so the circle must be open`, right: true },
-          { text: `The circle is right, but the shading should go to the ${left ? 'right' : 'left'}`, right: false, why: `The shading to the ${left ? 'left' : 'right'} is correct for ${sign === '<' || sign === '≤' ? 'smaller' : 'bigger'} numbers. The circle is the problem.` },
-          { text: inc ? 'An open circle is used when the sign is ≤ or ≥ and the number is negative' : 'A solid circle is used when the number is on the right of zero', right: false, why: 'The sign of the number does not decide the circle. The sign < > ≤ ≥ does.' },
-          { text: `Nothing is wrong: the circle is always ${inc ? 'open' : 'solid'} at the boundary`, right: false, why: 'The circle depends on whether the boundary number is included in the answer.' },
+          { text: `The circle is right, but the shading should go to the ${left ? 'right' : 'left'}`, right: false, why: `The shading to the ${left ? 'left' : 'right'} is correct for ${sign === '<' || sign === '≤' ? 'smaller' : 'bigger'} numbers. The circle is the problem.`, mis: 'M_SHADE_WRONG_WAY' },
+          { text: inc ? 'An open circle is used when the sign is ≤ or ≥ and the number is negative' : 'A solid circle is used when the number is on the right of zero', right: false, why: 'The sign of the number does not decide the circle. The sign < > ≤ ≥ does.', mis: 'M_CIRCLE_BY_NUMBER_SIGN' },
+          { text: `Nothing is wrong: the circle is always ${inc ? 'open' : 'solid'} at the boundary`, right: false, why: 'The circle depends on whether the boundary number is included in the answer.', mis: 'M_CIRCLE_ALWAYS_SAME' },
         ],
         hints: ['Does the sign include the boundary number itself?', 'A solid circle includes the number. An open circle leaves it out.'],
         steps: [`${sign} ${inc ? 'includes' : 'does not include'} the boundary number ${fm(v)}.`, `So the circle should be ${inc ? 'solid' : 'open'}.`] };
     } }),
-  fam({ id: 'g9.ineq.region-graph', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.c', rung: 2, form: 'graph',
+  fam({ id: 'g9.ineq.region-graph', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.c', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION', misMapped: false, reveals: ['M_POINT_ON_LINE_IN_REGION', 'M_WRONG_SIDE_SHADED', 'M_Y_ONLY_COMPARED'], rung: 2, form: 'graph',
     draw: () => {
       const m = pick([1, 2, -1]), c = pick([1, 2, 3, 4]), op = pick(['>', '<']), x0 = randInt(1, 4), d = randInt(1, 3), sg = op === '>' ? 1 : -1;
       const line = (x) => m * x + c, sat = (p) => (op === '>' ? p[1] > line(p[0]) : p[1] < line(p[0]));
@@ -1031,21 +1031,21 @@ const INEQ = [
         hints: ['Work out what y is on the line at the x of each point.', `The region is where y is ${op === '>' ? 'greater' : 'less'} than that.`],
         steps: pts.map((p, i) => `(${p[0]}, ${p[1]}): the line gives y = ${m * p[0] + c} here, so the point is ${sat[i] ? 'in the region' : 'not in the region'}.`) };
     } }),
-  fam({ id: 'g9.ineq.why-boundary', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.c', rung: 2, form: 'why',
+  fam({ id: 'g9.ineq.why-boundary', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.c', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE', rung: 2, form: 'why',
     draw: () => ({ m: pick([2, 3, 1]), c: pick([1, 2, 4, 5]), sign: pick(['>', '<', '≥', '≤']), who: person() }),
     make: ({ m, c, sign, who }) => {
       const inc = sign === '≥' || sign === '≤', rhs = `${m === 1 ? '' : m}x + ${c}`;
       return { question: `${who.name} shades the region y ${sign} ${rhs} and draws its boundary line as a ${inc ? 'solid' : 'dashed'} line. Why is this correct?`,
         options: [
           { text: inc ? 'The sign includes "equal to", so the line is in the region' : 'The sign leaves out "equal to", so the line is not in the region', right: true },
-          { text: `${inc ? 'Solid' : 'Dashed'} lines are used when the gradient is ${m > 1 ? 'big' : 'small'}, whatever the sign`, right: false, why: 'The gradient has nothing to do with it. The inequality sign decides.' },
-          { text: `A ${inc ? 'solid' : 'dashed'} line shows which side of the line to shade`, right: false, why: 'The shading shows the side. The line style shows whether the boundary is included.' },
-          { text: `A ${inc ? 'solid' : 'dashed'} line is used when the line goes through the origin`, right: false, why: 'Where the line goes does not matter. The inequality sign decides.' },
+          { text: `${inc ? 'Solid' : 'Dashed'} lines are used when the gradient is ${m > 1 ? 'big' : 'small'}, whatever the sign`, right: false, why: 'The gradient has nothing to do with it. The inequality sign decides.', mis: 'M_STYLE_BY_GRADIENT' },
+          { text: `A ${inc ? 'solid' : 'dashed'} line shows which side of the line to shade`, right: false, why: 'The shading shows the side. The line style shows whether the boundary is included.', mis: 'M_STYLE_SHOWS_SIDE' },
+          { text: `A ${inc ? 'solid' : 'dashed'} line is used when the line goes through the origin`, right: false, why: 'Where the line goes does not matter. The inequality sign decides.', mis: 'M_STYLE_BY_ORIGIN' },
         ],
         hints: ['Is a point on the line in the region?', 'Does the sign include "equal to"?'],
         steps: [`The sign ${sign} ${inc ? 'includes' : 'does not include'} "equal to".`, `So the boundary is ${inc ? 'solid' : 'dashed'}.`] };
     } }),
-  fam({ id: 'g9.ineq.budget-max', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.d', rung: 2, form: 'word',
+  fam({ id: 'g9.ineq.budget-max', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST', rung: 2, form: 'word',
     draw: () => {
       const item = pick(['exercise book', 'loaf of bread', 'kg of rice', 'litre of milk']), p = price(item), n = randInt(8, 15), r = 5 * randInt(1, Math.max(1, Math.floor(p / 5) - 1)), B = p * n + r;
       if (r >= p) return null;
@@ -1054,12 +1054,12 @@ const INEQ = [
     make: ({ item, p, n, B, who }) => ({
       question: `${who.name} has ${sh(B)} to spend. Each ${item} costs ${sh(p)}. What is the maximum number of ${item === 'exercise book' ? 'exercise books' : item === 'loaf of bread' ? 'loaves' : item === 'kg of rice' ? 'kg of rice' : 'litres of milk'} ${who.she} can buy?`,
       answer: n,
-      wrong: [[n + 1, `That would cost more than ${sh(B)}. You cannot round up when there is a budget.`], [B - p, 'Take the number of items from the amount of money, not the money left. Divide the budget by the price.'], [round(B / p, 1), 'You can only buy a whole number of items. Take the whole number part.']],
+      wrong: [[n + 1, `That would cost more than ${sh(B)}. You cannot round up when there is a budget.`, 'M_ROUNDED_UP_BUDGET'], [B - p, 'Take the number of items from the amount of money, not the money left. Divide the budget by the price.', 'M_PRICE_SUBTRACTED'], [round(B / p, 1), 'You can only buy a whole number of items. Take the whole number part.', 'M_DECIMAL_COUNT_LEFT']],
       hints: [`Write an inequality: ${p} × n ≤ ${B}.`, 'Divide, then think about whether n can be a fraction.'],
       steps: [`${p}n ≤ ${commas(B)}, so n ≤ ${commas(B)} ÷ ${p} = ${round(B / p, 2)}.`, `n must be a whole number, so the maximum is ${n}.`],
     }),
     check: ({ p, B }, a) => p * a <= B && p * (a + 1) > B }),
-  fam({ id: 'g9.ineq.at-least-tickets', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.d', rung: 3, form: 'word',
+  fam({ id: 'g9.ineq.at-least-tickets', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST', rung: 3, form: 'word',
     draw: () => {
       const E = pick([12000, 15000, 18000, 20000]), X = pick([3000, 5000, 6000]), p = pick([450, 600, 700, 800, 900]);
       if ((E + X) % p === 0) return null;
@@ -1069,20 +1069,20 @@ const INEQ = [
     make: ({ E, X, p, n, w1, w2, w3, who }) => ({
       question: `${who.name}'s class hires a bus for a trip. The bus costs ${sh(E)}. Each learner who comes pays ${sh(p)}. The class wants to have at least ${sh(X)} left after paying for the bus. What is the smallest number of learners who must come?`,
       answer: n,
-      wrong: [[w1, `With ${w1} learners the money left would be less than ${sh(X)}. Round up, not down.`], [w2, 'The bus must be paid for first. Add its cost to the money the class wants left.'], [w3, 'The amount left over is added to the cost of the bus, not taken from it.']],
+      wrong: [[w1, `With ${w1} learners the money left would be less than ${sh(X)}. Round up, not down.`, 'M_ROUNDED_DOWN_TARGET'], [w2, 'The bus must be paid for first. Add its cost to the money the class wants left.', 'M_COST_LEFT_OUT'], [w3, 'The amount left over is added to the cost of the bus, not taken from it.', 'M_TARGET_SUBTRACTED']],
       hints: [`Write an inequality: ${p} × n − ${E} ≥ ${X}.`, 'Solve for n, then decide whether to round up or down.'],
       steps: [`${p}n − ${commas(E)} ≥ ${commas(X)}, so ${p}n ≥ ${commas(E + X)}.`, `n ≥ ${round((E + X) / p, 2)}, so the smallest whole number is ${n}.`],
     }),
     check: ({ E, X, p }, a) => p * a - E >= X && p * (a - 1) - E < X }),
-  fam({ id: 'g9.ineq.steps-pickup-load', skill: 'G8_INEQUALITIES', outcome: 'G9.INEQ.d', rung: 3, form: 'steps',
+  fam({ id: 'g9.ineq.steps-pickup-load', skill: 'G8_INEQUALITIES', outcome: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST', rung: 3, form: 'steps',
     draw: () => { const W = pick([1200, 1500, 2000]), b = pick([150, 200, 300]), w = pick([50, 60, 70, 80]); return (W - b) % w !== 0 ? { W, b, w } : null; },
     make: ({ W, b, w }) => {
       const room = W - b, n = Math.floor(room / w);
       return { question: `A pickup can carry at most ${commas(W)} kg altogether. The driver and tools have a mass of ${b} kg. Each sack of maize has a mass of ${w} kg.`,
         parts: [
-          { prompt: 'What is the greatest mass of sacks the pickup can carry, in kg?', answer: room, unit: 'kg', hint: 'Take the mass of the driver and tools from the most the pickup can carry.', wrong: [[W, 'The driver and tools also count towards the load.']] },
-          { prompt: 'What is the greatest number of whole sacks it can carry?', answer: n, hint: `Divide by ${w}. You cannot carry part of a sack.`, wrong: [[n + 1, 'That many sacks would be over the limit. Take the whole number part.']] },
-          { prompt: 'How many kg of spare room are left?', answer: room - n * w, unit: 'kg', hint: 'Take the mass of the sacks from the greatest mass of sacks.', wrong: [[w, 'The spare room is what is left after the sacks are loaded.']] },
+          { prompt: 'What is the greatest mass of sacks the pickup can carry, in kg?', answer: room, unit: 'kg', hint: 'Take the mass of the driver and tools from the most the pickup can carry.', wrong: [[W, 'The driver and tools also count towards the load.', 'M_FIXED_LOAD_LEFT_OUT']] },
+          { prompt: 'What is the greatest number of whole sacks it can carry?', answer: n, hint: `Divide by ${w}. You cannot carry part of a sack.`, wrong: [[n + 1, 'That many sacks would be over the limit. Take the whole number part.', 'M_ROUNDED_UP_BUDGET']] },
+          { prompt: 'How many kg of spare room are left?', answer: room - n * w, unit: 'kg', hint: 'Take the mass of the sacks from the greatest mass of sacks.', wrong: [[w, 'The spare room is what is left after the sacks are loaded.', 'M_SPARE_AS_SACK']] },
         ],
         steps: [`Greatest mass of sacks: ${commas(W)} − ${b} = ${commas(room)} kg.`, `${commas(room)} ÷ ${w} = ${round(room / w, 2)}, so ${n} whole sacks.`, `Spare room: ${commas(room)} − ${n} × ${w} = ${room - n * w} kg.`] };
     },

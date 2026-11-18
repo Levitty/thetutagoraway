@@ -5,4 +5,5 @@ import * as indices from './indices.mjs';
 import * as proportion from './proportion.mjs';
 import * as matrices from './matrices.mjs';
 import * as line from './line.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices, line];
+import * as inequalities from './inequalities.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities];

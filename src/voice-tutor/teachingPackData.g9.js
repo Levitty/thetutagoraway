@@ -5446,6 +5446,782 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_",
   "sub_strand_name": "Equations of a Straight Line",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN": {
+  "skill": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN",
+  "key_step": "The child solves like an equation and, at the step where both sides are divided by a negative number, reverses the sign and checks with one value.",
+  "floor": {
+   "prerequisite": "Solves a two-step equation.",
+   "question": "7 - 3x = 19",
+   "answer": "x = -4"
+  },
+  "representations": [
+   "a balance",
+   "a number pair such as 2 < 5",
+   "a check with a value"
+  ],
+  "steps": [
+   "Take the constant from both sides.",
+   "Divide both sides by the number in front of x.",
+   "If that number is negative, reverse the sign.",
+   "Check with a value of x."
+  ],
+  "contexts": [
+   "how many trips a boda boda can make",
+   "a temperature that must stay below a value",
+   "marks needed to pass"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 < 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at both numbers.",
+    "say": "Multiply both by -1. Is -2 < -5 still true?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write -2 > -5: the sign reverses."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN.M_NO_FLIP_NEGATIVE",
+    "listen_for": [
+     "x < -4 for -3x < 12"
+    ],
+    "ask": "Try x = -5 in -3x < 12. Does it work?",
+    "repair": "No: reverse the sign.",
+    "error": "Keeps the inequality sign when dividing by a negative number.",
+    "example": {
+     "question": "-3x < 12",
+     "wrong_answer": "x < -4",
+     "correct_answer": "x > -4"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN.M_FLIP_EVERY_DIVISION",
+    "listen_for": [
+     "x > 4 for 3x < 12"
+    ],
+    "ask": "Is 3 negative?",
+    "repair": "No: keep the sign.",
+    "error": "Reverses the sign whenever it divides, even by a positive number.",
+    "example": {
+     "question": "3x < 12",
+     "wrong_answer": "x > 4",
+     "correct_answer": "x < 4"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN.M_FLIP_FOR_NEGATIVE_RHS",
+    "listen_for": [
+     "reversed because of -6"
+    ],
+    "ask": "What did you divide by?",
+    "repair": "2, positive: keep it.",
+    "error": "Reverses the sign because the number on the right is negative.",
+    "example": {
+     "question": "2x > -6",
+     "wrong_answer": "x < -3",
+     "correct_answer": "x > -3"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN.M_FLIP_FOR_X_POSITION",
+    "listen_for": [
+     "because x is on the left"
+    ],
+    "ask": "Would it change if x were on the right?",
+    "repair": "The divisor decides.",
+    "error": "Thinks the sign reverses because of which side x is on.",
+    "example": {
+     "question": "Why does -2x > 8 become x < -4?",
+     "wrong_answer": "Because x is on the left",
+     "correct_answer": "Because both sides were divided by -2"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN.M_CONSTANT_ADDED_NOT_SUBTRACTED",
+    "listen_for": [
+     "26"
+    ],
+    "ask": "What do we take from both sides?",
+    "repair": "7: 19 - 7 = 12.",
+    "error": "Adds the constant to the other side instead of taking it away.",
+    "example": {
+     "question": "7 - 3x > 19: first step?",
+     "wrong_answer": "-3x > 26",
+     "correct_answer": "-3x > 12"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN.M_BOUNDARY_INCLUDED_WRONG",
+    "listen_for": [
+     "4 for x < 4"
+    ],
+    "ask": "Is 4 less than 4?",
+    "repair": "No: 3.",
+    "error": "Includes the boundary for < or > (or leaves it out for less than or equal to) when giving whole-number answers.",
+    "example": {
+     "question": "x < 4: the largest whole number?",
+     "wrong_answer": "4",
+     "correct_answer": "3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 5 - 2x is at least 13.",
+    "answer": "x is at most -4",
+    "shows": "dividing by a negative"
+   },
+   {
+    "question": "Solve 4x + 3 > 15.",
+    "answer": "x > 3",
+    "shows": "positive divisor"
+   }
+  ],
+  "name": "Solve linear inequalities in one unknown, including dividing by a negative",
+  "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN": {
+  "skill": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN",
+  "key_step": "The child decides open or solid from the sign (is the boundary included?) and the direction from smaller or bigger.",
+  "floor": {
+   "prerequisite": "Shows a simple inequality on a number line.",
+   "question": "x > 2",
+   "answer": "open circle at 2, shaded right"
+  },
+  "representations": [
+   "a number line",
+   "open and solid circles",
+   "words: included, not included"
+  ],
+  "steps": [
+   "Find the boundary number.",
+   "Included (at most, at least): solid. Not included: open.",
+   "Smaller: shade left. Bigger: shade right.",
+   "Read back to check."
+  ],
+  "contexts": [
+   "age limits for a youth football team",
+   "a speed limit near a school",
+   "temperatures in a fridge"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line from -5 to 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at -3.",
+    "say": "For \"x is at least -3\", is -3 itself allowed?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for yes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child draws the circle and the shading."
+   },
+   {
+    "beat": "reveal",
+    "do": "Show a solid circle at -3, shaded right."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN.M_CIRCLE_TYPE_SWAPPED",
+    "listen_for": [
+     "solid for >"
+    ],
+    "ask": "Is 2 itself in x > 2?",
+    "repair": "No: open circle.",
+    "error": "Uses a solid circle for < or > and an open one for less than or equal to.",
+    "example": {
+     "question": "Show x > 2.",
+     "wrong_answer": "solid circle at 2",
+     "correct_answer": "open circle at 2"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN.M_SHADE_WRONG_WAY",
+    "listen_for": [
+     "shaded right for <"
+    ],
+    "ask": "Are the numbers smaller or bigger?",
+    "repair": "Smaller: left.",
+    "error": "Shades the wrong way from the circle.",
+    "example": {
+     "question": "Show x < -1.",
+     "wrong_answer": "shaded to the right",
+     "correct_answer": "shaded to the left"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN.M_CIRCLE_BY_NUMBER_SIGN",
+    "listen_for": [
+     "open because it is negative"
+    ],
+    "ask": "Does the minus sign of -3 decide?",
+    "repair": "No: the inequality sign does.",
+    "error": "Chooses the circle by whether the number is negative or positive.",
+    "example": {
+     "question": "Show x is at least -3.",
+     "wrong_answer": "open circle because -3 is negative",
+     "correct_answer": "solid circle"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN.M_CIRCLE_ALWAYS_SAME",
+    "listen_for": [
+     "always open"
+    ],
+    "ask": "Is 5 in \"at most 5\"?",
+    "repair": "Yes: solid.",
+    "error": "Always uses the same circle.",
+    "example": {
+     "question": "Show x < 5 and x at most 5.",
+     "wrong_answer": "the same circle for both",
+     "correct_answer": "open for <, solid for at most"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN.M_READ_DIRECTION_SWAPPED",
+    "listen_for": [
+     "x > 3"
+    ],
+    "ask": "Which way is the shading?",
+    "repair": "Left: smaller.",
+    "error": "Reads the shading as the opposite inequality.",
+    "example": {
+     "question": "Open circle at 3, shading left. Inequality?",
+     "wrong_answer": "x > 3",
+     "correct_answer": "x < 3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which inequality: solid circle at -2, shaded left?",
+    "answer": "x is at most -2",
+    "shows": "reading"
+   },
+   {
+    "question": "Describe the number line for x > 1.5.",
+    "answer": "open circle at 1.5, shaded right",
+    "shows": "drawing"
+   }
+  ],
+  "name": "Show the solution of an inequality on a number line",
+  "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE": {
+  "skill": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE",
+  "key_step": "The child draws the line from y = mx + c and picks solid or dashed only from whether the sign includes \"equal to\".",
+  "floor": {
+   "prerequisite": "Draws a straight line from its equation.",
+   "question": "y = 2x + 1",
+   "answer": "through (0, 1) and (1, 3)"
+  },
+  "representations": [
+   "solid and dashed lines",
+   "a table of points",
+   "the sign written beside the line"
+  ],
+  "steps": [
+   "Change the sign to = to get the line.",
+   "Plot two or three points.",
+   "Equal to included: solid. Not included: dashed.",
+   "Then decide the side to shade."
+  ],
+  "contexts": [
+   "a farmer's planting plan",
+   "buying two kinds of pens on a budget",
+   "a speed and time limit"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write y < 2x + 1."
+   },
+   {
+    "beat": "point",
+    "do": "Point at <.",
+    "say": "Are points on the line itself allowed?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Draw the line dashed."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE.M_LINE_STYLE_SWAPPED",
+    "listen_for": [
+     "solid for <"
+    ],
+    "ask": "Are points on the line allowed?",
+    "repair": "No: dashed.",
+    "error": "Draws a solid line for < or > and a dashed one for less than or equal to.",
+    "example": {
+     "question": "y < 2x + 1: line style?",
+     "wrong_answer": "solid",
+     "correct_answer": "dashed"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE.M_STYLE_BY_GRADIENT",
+    "listen_for": [
+     "steep line, dashed"
+    ],
+    "ask": "Does the gradient decide?",
+    "repair": "No: the sign.",
+    "error": "Chooses the line style from the gradient.",
+    "example": {
+     "question": "y is at most 3x - 2: line style?",
+     "wrong_answer": "dashed, the line is steep",
+     "correct_answer": "solid"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE.M_STYLE_SHOWS_SIDE",
+    "listen_for": [
+     "shows the side"
+    ],
+    "ask": "What shows the side?",
+    "repair": "The shading.",
+    "error": "Thinks the line style shows which side to shade.",
+    "example": {
+     "question": "What does a dashed line tell you?",
+     "wrong_answer": "which side to shade",
+     "correct_answer": "that the line is not in the region"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE.M_STYLE_BY_ORIGIN",
+    "listen_for": [
+     "through the origin"
+    ],
+    "ask": "Does the origin matter?",
+    "repair": "No: the sign.",
+    "error": "Chooses the style from whether the line goes through the origin.",
+    "example": {
+     "question": "y > 2x: line style?",
+     "wrong_answer": "solid, it goes through (0, 0)",
+     "correct_answer": "dashed"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Line style for y is at least x - 3?",
+    "answer": "solid",
+    "shows": "included"
+   },
+   {
+    "question": "Line style for y > -2x + 4?",
+    "answer": "dashed",
+    "shows": "not included"
+   }
+  ],
+  "name": "Draw the boundary line of an inequality in two unknowns",
+  "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION": {
+  "skill": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION",
+  "key_step": "The child puts the point's x into the line to get the line's y there, and compares the point's y with it.",
+  "floor": {
+   "prerequisite": "Substitutes into an expression.",
+   "question": "2x + 1 at x = 4",
+   "answer": "9"
+  },
+  "representations": [
+   "the graph with the region shaded",
+   "a test-point table",
+   "the origin as test point"
+  ],
+  "steps": [
+   "Pick a point not on the line (the origin if you can).",
+   "Put its coordinates into the inequality.",
+   "True: shade its side. False: the other side.",
+   "Points on a dashed line are not in the region."
+  ],
+  "contexts": [
+   "a planting plan with limits",
+   "a budget for two items",
+   "a delivery van's load"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw the line y = 2x + 1 dashed."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the origin.",
+    "say": "Put (0, 0) into y < 2x + 1. True or false?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for true: 0 < 1."
+   },
+   {
+    "beat": "reveal",
+    "do": "Shade the side with the origin."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION.M_POINT_ON_LINE_IN_REGION",
+    "listen_for": [
+     "yes, on the line"
+    ],
+    "ask": "Is the line dashed or solid?",
+    "repair": "Dashed: not in.",
+    "error": "Counts a point on a dashed boundary line as in the region.",
+    "example": {
+     "question": "y > x + 1: is (1, 2) in the region?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, it is on the line"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION.M_WRONG_SIDE_SHADED",
+    "listen_for": [
+     "other side"
+    ],
+    "ask": "Did the test point work?",
+    "repair": "Yes: shade its side.",
+    "error": "Shades the side of the line that does not satisfy the inequality.",
+    "example": {
+     "question": "y < 2x + 1: test (0, 0).",
+     "wrong_answer": "shade the side without (0, 0)",
+     "correct_answer": "shade the side with (0, 0), since 0 < 1"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION.M_X_Y_SWAPPED_IN_TEST",
+    "listen_for": [
+     "used 3 as y"
+    ],
+    "ask": "Which number is x in (3, 1)?",
+    "repair": "3.",
+    "error": "Puts the x-coordinate in for y when testing a point.",
+    "example": {
+     "question": "y > 2x + 1: test (3, 1).",
+     "wrong_answer": "3 > 3, on the line",
+     "correct_answer": "1 > 7 is false: not in the region"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION.M_Y_ONLY_COMPARED",
+    "listen_for": [
+     "5 > 1"
+    ],
+    "ask": "What is 2x + 1 at x = 4?",
+    "repair": "9: 5 is not more.",
+    "error": "Compares the point's y with c only, ignoring mx.",
+    "example": {
+     "question": "y > 2x + 1: is (4, 5) in the region?",
+     "wrong_answer": "Yes, 5 > 1",
+     "correct_answer": "No, 5 < 9"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is (2, 7) in the region y > 3x - 1?",
+    "answer": "Yes, 7 > 5",
+    "shows": "testing a point"
+   },
+   {
+    "question": "Which side of y = x + 2 is shaded for y < x + 2, the side with (0, 0) or not?",
+    "answer": "The side with (0, 0)",
+    "shows": "test point"
+   }
+  ],
+  "name": "Find and shade the region of an inequality in two unknowns",
+  "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST": {
+  "skill": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST",
+  "key_step": "The child takes any fixed amount from the limit first, divides by the amount for one item, and keeps the whole number part.",
+  "floor": {
+   "prerequisite": "Writes an inequality from words.",
+   "question": "Cost of n books at 45 is at most 1,000",
+   "answer": "45n is at most 1,000"
+  },
+  "representations": [
+   "an inequality",
+   "a check: n and n + 1",
+   "a table of costs"
+  ],
+  "steps": [
+   "Take any fixed part from the limit.",
+   "Divide by the amount for one.",
+   "Round down to a whole number.",
+   "Check: the next number is over the limit."
+  ],
+  "contexts": [
+   "a learner buying exercise books",
+   "a pickup carrying sacks of maize",
+   "a lift with a load limit"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 45n is at most 1,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 1,000 / 45 = 22.2.",
+    "say": "Can you buy 22.2 books?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "predict",
+    "do": "The child says if 23 books fit the budget."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 23 x 45 = 1,035: too much. At most 22."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST.M_ROUNDED_UP_BUDGET",
+    "listen_for": [
+     "23"
+    ],
+    "ask": "What do 23 books cost?",
+    "repair": "1,035: over.",
+    "error": "Rounds up when the answer must stay within a limit.",
+    "example": {
+     "question": "1,000 shillings, 45 a book. Most books?",
+     "wrong_answer": "23",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST.M_PRICE_SUBTRACTED",
+    "listen_for": [
+     "955"
+    ],
+    "ask": "Is 955 a number of books?",
+    "repair": "No: divide.",
+    "error": "Subtracts the price from the budget instead of dividing.",
+    "example": {
+     "question": "1,000 shillings, 45 a book. Most books?",
+     "wrong_answer": "955",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST.M_DECIMAL_COUNT_LEFT",
+    "listen_for": [
+     "22.2"
+    ],
+    "ask": "Can you buy part of a book?",
+    "repair": "No: 22.",
+    "error": "Leaves a decimal number of items.",
+    "example": {
+     "question": "1,000 shillings, 45 a book. Most books?",
+     "wrong_answer": "22.2",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST.M_FIXED_LOAD_LEFT_OUT",
+    "listen_for": [
+     "1,000"
+    ],
+    "ask": "Do the driver and tools count?",
+    "repair": "Yes: take them off.",
+    "error": "Leaves the fixed part (driver and tools) out of the limit.",
+    "example": {
+     "question": "Limit 1,000 kg, driver and tools 160 kg, sacks 90 kg. Room for sacks?",
+     "wrong_answer": "1,000 kg",
+     "correct_answer": "840 kg"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST.M_SPARE_AS_SACK",
+    "listen_for": [
+     "90"
+    ],
+    "ask": "What is left after 9 sacks?",
+    "repair": "840 - 810 = 30.",
+    "error": "Gives the mass of one sack as the spare room.",
+    "example": {
+     "question": "840 kg of room, 9 sacks of 90 kg. Spare room?",
+     "wrong_answer": "90 kg",
+     "correct_answer": "30 kg"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A pickup carries at most 1,200 kg. The driver is 80 kg. Sacks are 100 kg. Most sacks?",
+    "answer": "11",
+    "shows": "at most"
+   },
+   {
+    "question": "A learner has 500 shillings. Pens cost 35. Most pens?",
+    "answer": "14",
+    "shows": "round down"
+   }
+  ],
+  "name": "Solve \"at most\" problems with whole numbers",
+  "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST": {
+  "skill": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST",
+  "key_step": "The child adds what must be paid first to the target, divides, and rounds up.",
+  "floor": {
+   "prerequisite": "Writes an inequality from words.",
+   "question": "n learners at 350 must raise at least 7,500",
+   "answer": "350n is at least 7,500"
+  },
+  "representations": [
+   "an inequality",
+   "a check: n and n - 1",
+   "a money table"
+  ],
+  "steps": [
+   "Add the fixed cost to the amount wanted.",
+   "Divide by the amount from each one.",
+   "Round up to a whole number.",
+   "Check: one fewer is not enough."
+  ],
+  "contexts": [
+   "a class trip by bus",
+   "a chama saving for a goal",
+   "selling mandazi to cover costs"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 350n - 6,000 is at least 1,500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6,000.",
+    "say": "What must the money cover?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the bus and the 1,500."
+   },
+   {
+    "beat": "write",
+    "do": "Write 350n is at least 7,500, n at least 21.4."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write at least 22 learners."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST.M_ROUNDED_DOWN_TARGET",
+    "listen_for": [
+     "21"
+    ],
+    "ask": "What do 21 learners raise?",
+    "repair": "7,350: short. 22.",
+    "error": "Rounds down when the answer must reach a target.",
+    "example": {
+     "question": "Need at least 7,500; 350 a learner. Fewest learners?",
+     "wrong_answer": "21",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST.M_COST_LEFT_OUT",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "Who pays for the bus?",
+    "repair": "The learners: add 6,000.",
+    "error": "Forgets to add the cost that must be paid first.",
+    "example": {
+     "question": "Bus 6,000, want at least 1,500 left, 350 a learner. Fewest?",
+     "wrong_answer": "5",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST.M_TARGET_SUBTRACTED",
+    "listen_for": [
+     "13"
+    ],
+    "ask": "Do they need 6,000 minus 1,500?",
+    "repair": "No: 6,000 plus 1,500.",
+    "error": "Takes the target from the cost instead of adding it.",
+    "example": {
+     "question": "Bus 6,000, want at least 1,500 left, 350 a learner. Fewest?",
+     "wrong_answer": "13",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST.M_SIGN_DIRECTION_WORDS",
+    "listen_for": [
+     "n < 20"
+    ],
+    "ask": "Does \"at least 20\" allow 25?",
+    "repair": "Yes: 20 or more.",
+    "error": "Writes \"at least\" as < or \"at most\" as >.",
+    "example": {
+     "question": "At least 20 learners. Inequality?",
+     "wrong_answer": "n < 20",
+     "correct_answer": "n is at least 20 (n greater than or equal to 20)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A hall costs 4,000 to hire. Tickets are 150. The club wants at least 2,000 left. Fewest tickets?",
+    "answer": "40",
+    "shows": "at least"
+   },
+   {
+    "question": "A chama needs at least 10,000. Each member pays 700. Fewest members?",
+    "answer": "15",
+    "shows": "round up"
+   }
+  ],
+  "name": "Solve \"at least\" problems with whole numbers",
+  "sub_strand": "MATH.G9.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;
