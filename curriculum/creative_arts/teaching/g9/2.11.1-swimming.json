@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G9.CREATI.SWIMMING",
+ "title": "Swimming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Diving only into deep water with a lifeguard; questions ask for body position and safety.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY",
+   "key_step": "The child describes the standing dive (toes over the edge, arms over the head, bend, push, hands enter first, deep water only) and butterfly (both arms together, dolphin kick, breathe forward).",
+   "floor": {
+    "prerequisite": "Explains inverted breaststroke (Grade 8).",
+    "question": "Which kick is used in inverted breaststroke?",
+    "answer": "the frog kick"
+   },
+   "representations": [
+    "pictures",
+    "land practice",
+    "a deep-water area with a lifeguard"
+   ],
+   "steps": [
+    "Dive: toes over edge, arms up, bend, push, hands first.",
+    "Butterfly: arms together over the water.",
+    "Dolphin kick.",
+    "Breathe forward."
+   ],
+   "contexts": [
+    "a swimming gala",
+    "a swimming lesson"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Butterfly arms: together or alternate?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Together."
+    },
+    {
+     "beat": "write",
+     "do": "Write the dive phases."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_SHALLOW",
+     "listen_for": [
+      "anywhere in the pool"
+     ],
+     "ask": "Where may you do a standing dive?",
+     "repair": "Show the depth markings; talk about head injuries."
+    },
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_FEET_FIRST",
+     "listen_for": [
+      "the feet"
+     ],
+     "ask": "Which part enters the water first in a standing dive?",
+     "repair": "Practise the arm position on land: hands together over the head."
+    },
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_ARMS_ALTERNATE",
+     "listen_for": [
+      "one after another"
+     ],
+     "ask": "In butterfly, do the arms move together or one after another?",
+     "repair": "Practise both arms together on land."
+    },
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_FROG_KICK",
+     "listen_for": [
+      "the frog kick"
+     ],
+     "ask": "Which kick is used in butterfly?",
+     "repair": "Kick with legs together like a dolphin tail."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which kick is used in butterfly?",
+     "answer": "the dolphin kick",
+     "shows": "kick"
+    },
+    {
+     "question": "Where is a standing dive allowed?",
+     "answer": "only into deep water with a lifeguard",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

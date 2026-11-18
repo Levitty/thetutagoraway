@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_",
+ "title": "Indigenous Kenyan Craft- Pottery",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clay work on boards; dry pieces slowly in the shade.",
+ "skills": [
+  {
+   "skill": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB",
+   "key_step": "The child orders the slab method: wedge, roll an even slab with guide sticks, cut pieces, score and join with slip, decorate, dry slowly.",
+   "floor": {
+    "prerequisite": "Knows Grade 4 slab steps.",
+    "question": "What joins two pieces of clay?",
+    "answer": "slip"
+   },
+   "representations": [
+    "clay and guide sticks",
+    "a card template",
+    "a sample vase"
+   ],
+   "steps": [
+    "Wedge the clay.",
+    "Roll an even slab.",
+    "Cut, score and join with slip.",
+    "Decorate; dry slowly."
+   ],
+   "contexts": [
+    "modelling a vase",
+    "a pencil holder"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"join\".",
+     "say": "What comes before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"score\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB.M_PS_COIL",
+     "listen_for": [
+      "A long coil of clay"
+     ],
+     "ask": "What is a slab in pottery?",
+     "repair": "Roll a ball of clay flat with a rolling pin."
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB.M_PS_JOIN",
+     "listen_for": [
+      "Press them together dry"
+     ],
+     "ask": "How do you join two slabs?",
+     "repair": "Join two pieces dry and then scored with slip, and compare."
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB.M_PS_DRY",
+     "listen_for": [
+      "Quickly in the hot sun"
+     ],
+     "ask": "How should a clay item be dried?",
+     "repair": "Dry two small tiles, one fast and one slow, and look for cracks."
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB.M_CA6_PS_UNEVEN_SLAB",
+     "listen_for": [
+      "they are not needed"
+     ],
+     "ask": "Why use two guide sticks when rolling a slab?",
+     "repair": "Roll with guide sticks and cut to show even thickness."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are edges scored before joining?",
+     "answer": "so the slip grips and the join holds",
+     "shows": "scoring"
+    },
+    {
+     "question": "Where should a clay vase dry?",
+     "answer": "slowly in the shade",
+     "shows": "drying"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G4.PERFOR.GYMNASTICS",
+ "title": "Gymnastics",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Practise only on mats with a teacher watching. Questions ask about body shape and safety.",
+ "skills": [
+  {
+   "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
+   "key_step": "The child explains the crab balance (tummy up, hands and feet down, hips lifted) and the side roll (body long, rolling sideways).",
+   "floor": {
+    "prerequisite": "Knows the body parts for a forward roll (Grade 3).",
+    "question": "Which part should not touch the mat in a forward roll?",
+    "answer": "the top of the head"
+   },
+   "representations": [
+    "a mat",
+    "pictures",
+    "the teacher showing slowly"
+   ],
+   "steps": [
+    "Crab: sit, hands behind, lift hips, tummy up.",
+    "Hold still and count three.",
+    "Side roll: lie long, arms up, roll sideways."
+   ],
+   "contexts": [
+    "a PE lesson",
+    "a gymnastics display on sports day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a crab balance.",
+     "say": "Is the tummy up or down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for up."
+    },
+    {
+     "beat": "count",
+     "do": "Count three while holding."
+    },
+    {
+     "beat": "reveal",
+     "do": "Lower slowly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_DOWN",
+     "listen_for": [
+      "Down"
+     ],
+     "ask": "In a crab balance, which way does the tummy face?",
+     "repair": "Sit down, put hands behind and lift the hips: the tummy faces up."
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_ROLL_HEAD",
+     "listen_for": [
+      "Over the head, forwards"
+     ],
+     "ask": "In which direction does a side roll go?",
+     "repair": "Lie down and roll to the side with the body straight."
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_ROLL_BENT",
+     "listen_for": [
+      "Curled up in a ball"
+     ],
+     "ask": "What is the body like in a side roll?",
+     "repair": "Roll once straight and once curled and compare."
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_RUSH",
+     "listen_for": [
+      "No time, move at once"
+     ],
+     "ask": "How long is a crab balance held?",
+     "repair": "Hold and count three together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a crab balance, which way does the tummy face?",
+     "answer": "up",
+     "shows": "crab shape"
+    },
+    {
+     "question": "In a side roll, is the body kept long or curled?",
+     "answer": "long",
+     "shows": "side roll"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
+   "key_step": "The child chooses safe actions: warm up, use a mat, take turns with space, stop when it hurts, and wait for the teacher.",
+   "floor": {
+    "prerequisite": "Knows the mat area is marked.",
+    "question": "Why do we mark the mat area?",
+    "answer": "so people stay safe and do not crowd"
+   },
+   "representations": [
+    "mats",
+    "a safety chart",
+    "a warm-up routine"
+   ],
+   "steps": [
+    "Warm up first.",
+    "Use the mat and space.",
+    "Stop if it hurts and tell the teacher."
+   ],
+   "contexts": [
+    "a PE lesson",
+    "a break-time game near hard ground"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A learner wants to roll on concrete.",
+     "say": "Is that safe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Only on a mat."
+    },
+    {
+     "beat": "write",
+     "do": "Write three safety rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_NO_WARMUP",
+     "listen_for": [
+      "Start straight away"
+     ],
+     "ask": "What should you do before gymnastics?",
+     "repair": "Say: a cold muscle can be hurt easily."
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_HARD_GROUND",
+     "listen_for": [
+      "On a hard stony floor"
+     ],
+     "ask": "Where is gymnastics done?",
+     "repair": "Say: a fall on stones hurts, on a mat it does not."
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_PAIN_GO_ON",
+     "listen_for": [
+      "Keep going"
+     ],
+     "ask": "Your wrist hurts in a crab balance. What do you do?",
+     "repair": "Say: telling is brave and keeps you from a worse injury."
+    },
+    {
+     "code": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_SHOES",
+     "listen_for": [
+      "yes, shoes protect the feet"
+     ],
+     "ask": "Should you do a side roll in school shoes?",
+     "repair": "Show how a hard shoe can hit a partner or slip on a mat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why warm up before gymnastics?",
+     "answer": "to prepare the muscles and avoid injury",
+     "shows": "warm-up"
+    },
+    {
+     "question": "What should you do if a move hurts?",
+     "answer": "stop and tell the teacher",
+     "shows": "pain"
+    }
+   ]
+  }
+ ]
+}

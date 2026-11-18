@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/creative_arts/g5.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g5-non-question-outcomes-2026-11-12.md"};
+export const MAP_SOURCE = {"source":"curriculum/creative_arts/g5.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g5-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g5)"};
 export const SUBSTRANDS = {
  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS": {
   "name": "Wind Musical Instruments (Drawing)",
@@ -466,7 +466,8 @@ export const SKILLS = {
   "mis": [
    "M_WI_SHARE_UNCLEANED",
    "M_WI_STORE_DAMP",
-   "M_WI_ROUGH_HANDLING"
+   "M_WI_ROUGH_HANDLING",
+   "M_CA5_WI_BLOW_FOOD"
   ]
  },
  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING": {
@@ -482,7 +483,8 @@ export const SKILLS = {
   "mis": [
    "M_WI_HATCH_ONE_DIRECTION",
    "M_WI_ETCH_DRAW_ON",
-   "M_WI_ETCH_ORDER"
+   "M_WI_ETCH_ORDER",
+   "M_CA5_WI_ETCH_LIGHT_TOP"
   ]
  },
  "CREA.G5.CREATI.FOOTBALL.SKILLS": {
@@ -496,7 +498,8 @@ export const SKILLS = {
   "mis": [
    "M_FB_TOE_POKE",
    "M_FB_TRAP_SWAP",
-   "M_FB_DRIBBLE_FAR"
+   "M_FB_DRIBBLE_FAR",
+   "M_CA5_FB_DRIBBLE_LOOK_DOWN"
   ]
  },
  "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE": {
@@ -513,7 +516,8 @@ export const SKILLS = {
   "mis": [
    "M_FB_PM_GLUE_FIRST",
    "M_FB_PM_SKIP_SOAK",
-   "M_FB_PM_REMOVE_WET"
+   "M_FB_PM_REMOVE_WET",
+   "M_CA5_FB_PM_THICK_GLUE"
   ]
  },
  "CREA.G5.CREATI.RHYTHM.VALUES": {
@@ -544,7 +548,8 @@ export const SKILLS = {
   "mis": [
    "M_RH_NAME_TAA_AA_SHORT",
    "M_RH_NAME_TATE_ONE",
-   "M_RH_REST_SOUNDED"
+   "M_RH_REST_SOUNDED",
+   "M_CA5_RH_MINIM_TAA"
   ]
  },
  "CREA.G5.CREATI.RHYTHM.TWO_BEAT": {
@@ -561,7 +566,8 @@ export const SKILLS = {
   "mis": [
    "M_RH_COUNT_SOUNDS",
    "M_RH_STRONG_SECOND",
-   "M_RH_TWO_BEAT_THREE"
+   "M_RH_TWO_BEAT_THREE",
+   "M_CA5_RH_BAR_UNEQUAL"
   ]
  },
  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL": {
@@ -576,7 +582,8 @@ export const SKILLS = {
    "M_PM_GREEN_PRIMARY",
    "M_PM_BLACK_WHITE_PRIMARY",
    "M_PM_SECONDARY_MAKES_PRIMARY",
-   "M_PM_ORANGE_PRIMARY"
+   "M_PM_ORANGE_PRIMARY",
+   "M_CA5_PM_SECONDARY_NEXT"
   ]
  },
  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING": {
@@ -592,7 +599,8 @@ export const SKILLS = {
   "mis": [
    "M_PM_MIX_RY_GREEN",
    "M_PM_MIX_BY_PURPLE",
-   "M_PM_MIX_BROWN"
+   "M_PM_MIX_BROWN",
+   "M_CA5_PM_MIX_ALL_THREE"
   ]
  },
  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH": {
@@ -608,7 +616,8 @@ export const SKILLS = {
   "mis": [
    "M_PM_WASH_THICK",
    "M_PM_WASH_DETAIL_FIRST",
-   "M_PM_WASH_SMALL_BRUSH"
+   "M_PM_WASH_SMALL_BRUSH",
+   "M_CA5_PM_WASH_DRY_PAPER"
   ]
  },
  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC": {
@@ -625,7 +634,8 @@ export const SKILLS = {
   "mis": [
    "M_PM_MOSAIC_PAINTED",
    "M_PM_MOSAIC_OVERLAP",
-   "M_PM_MOSAIC_NO_PLAN"
+   "M_PM_MOSAIC_NO_PLAN",
+   "M_CA5_PM_MOSAIC_NO_GAPS"
   ]
  },
  "CREA.G5.CREATI.MELODY.SOLFA": {
@@ -639,7 +649,8 @@ export const SKILLS = {
   "mis": [
    "M_ML_FIRST_HIGHEST",
    "M_ML_ORDER_SCRAMBLED",
-   "M_ML_DOWN_UP_SAME"
+   "M_ML_DOWN_UP_SAME",
+   "M_CA5_ML_F_AFTER_S"
   ]
  },
  "CREA.G5.CREATI.MELODY.SIGNS": {
@@ -655,7 +666,8 @@ export const SKILLS = {
   "mis": [
    "M_ML_SIGN_FA_UP",
    "M_ML_SIGN_D_OPEN",
-   "M_ML_SIGN_SAME_HEIGHT"
+   "M_ML_SIGN_SAME_HEIGHT",
+   "M_CA5_ML_S_FIST"
   ]
  },
  "CREA.G5.CREATI.MELODY.TECHNIQUES": {
@@ -671,7 +683,8 @@ export const SKILLS = {
   "mis": [
    "M_ML_STEP_LEAP",
    "M_ML_REPEAT_NEW",
-   "M_ML_END_SHORT"
+   "M_ML_END_SHORT",
+   "M_CA5_ML_NO_END_HOME"
   ]
  },
  "CREA.G5.CREATI.ROUNDERS.BAT": {
@@ -685,7 +698,8 @@ export const SKILLS = {
   "mis": [
    "M_RD_HEAD_HANDLE",
    "M_RD_KNOB_HITS",
-   "M_RD_CRICKET_FLAT"
+   "M_RD_CRICKET_FLAT",
+   "M_CA5_RD_GRIP_TOP"
   ]
  },
  "CREA.G5.CREATI.ROUNDERS.CARVING": {
@@ -701,7 +715,8 @@ export const SKILLS = {
   "mis": [
    "M_RD_SANDPAPER_CUTS",
    "M_RD_CUT_TOWARD_BODY",
-   "M_RD_FRESH_WOOD"
+   "M_RD_FRESH_WOOD",
+   "M_CA5_RD_NO_MEASURE"
   ]
  },
  "CREA.G5.CREATI.ROUNDERS.SAFETY": {
@@ -717,7 +732,8 @@ export const SKILLS = {
   "mis": [
    "M_RD_THROW_BAT",
    "M_RD_STAND_CLOSE",
-   "M_RD_BOWL_AT_PERSON"
+   "M_RD_BOWL_AT_PERSON",
+   "M_CA5_RD_RUN_BACKWARD"
   ]
  },
  "CREA.G5.PERFOR.ATHLETICS.BATON": {
@@ -749,7 +765,8 @@ export const SKILLS = {
   "mis": [
    "M_AT_PASS_ANYWHERE",
    "M_AT_DROP_LEAVE_IT",
-   "M_AT_FINISH_ANY"
+   "M_AT_FINISH_ANY",
+   "M_CA5_AT_RELAY_RUN_ANY_LANE"
   ]
  },
  "CREA.G5.PERFOR.ATHLETICS.PLAITING": {
@@ -763,7 +780,8 @@ export const SKILLS = {
   "mis": [
    "M_AT_PLAIT_TWO",
    "M_AT_PLAIT_SAME_STRAND",
-   "M_AT_PLAIT_UNEQUAL"
+   "M_AT_PLAIT_UNEQUAL",
+   "M_CA5_AT_PLAIT_TIGHT_LOOSE"
   ]
  },
  "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES": {
@@ -777,7 +795,8 @@ export const SKILLS = {
   "mis": [
    "M_FD_TD_APPLIQUE_SWAP",
    "M_FD_APPLIQUE_PAINT",
-   "M_FD_TIE_DYE_WAX"
+   "M_FD_TIE_DYE_WAX",
+   "M_CA5_FD_PRINT_IS_DYE"
   ]
  },
  "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE": {
@@ -793,7 +812,8 @@ export const SKILLS = {
   "mis": [
    "M_FD_TD_UNTIE_FIRST",
    "M_FD_TD_TIED_DARK",
-   "M_FD_TD_NO_FIXER"
+   "M_FD_TD_NO_FIXER",
+   "M_CA5_FD_TD_DRY_CLOTH"
   ]
  },
  "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE": {
@@ -809,7 +829,8 @@ export const SKILLS = {
   "mis": [
    "M_FD_APP_CUT_BACKGROUND",
    "M_FD_APP_LOOSE",
-   "M_FD_APP_NO_PIN"
+   "M_FD_APP_NO_PIN",
+   "M_CA5_FD_APP_SAME_COLOUR"
   ]
  },
  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND": {
@@ -823,7 +844,8 @@ export const SKILLS = {
   "mis": [
    "M_FN_COMMUNITY_MIX",
    "M_FN_SOLOIST_CHORUS_SWAP",
-   "M_FN_OCCASION_SAME"
+   "M_FN_OCCASION_SAME",
+   "M_CA5_FN_DANCE_NEW"
   ]
  },
  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS": {
@@ -839,7 +861,8 @@ export const SKILLS = {
   "mis": [
    "M_FN_ORNAMENT_COSTUME",
    "M_FN_PROP_INSTRUMENT",
-   "M_FN_FORMATION_WORN"
+   "M_FN_FORMATION_WORN",
+   "M_CA5_FN_COSTUME_DAILY"
   ]
  },
  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES": {
@@ -855,7 +878,8 @@ export const SKILLS = {
   "mis": [
    "M_FN_ROLE_FUN_ONLY",
    "M_FN_ROLE_OLD_ONLY",
-   "M_FN_ROLE_NO_WORK"
+   "M_FN_ROLE_NO_WORK",
+   "M_CA5_FN_ROLE_ONE"
   ]
  },
  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY": {
@@ -871,7 +895,8 @@ export const SKILLS = {
   "mis": [
    "M_FN_NO_WARMUP",
    "M_FN_MOCK_OTHER",
-   "M_FN_CROWDED_SPACE"
+   "M_FN_CROWDED_SPACE",
+   "M_CA5_FN_PROPS_SWING"
   ]
  },
  "CREA.G5.PERFOR.PUPPETRY.TYPES": {
@@ -885,7 +910,8 @@ export const SKILLS = {
   "mis": [
    "M_PP_GLOVE_STRING",
    "M_PP_GLOVE_FINGER",
-   "M_PP_SHADOW_GLOVE"
+   "M_PP_SHADOW_GLOVE",
+   "M_CA5_PP_GLOVE_ROD"
   ]
  },
  "CREA.G5.PERFOR.PUPPETRY.MAKE": {
@@ -901,7 +927,8 @@ export const SKILLS = {
   "mis": [
    "M_PP_RECYCLE_NEW",
    "M_PP_SIZE_NO_FIT",
-   "M_PP_SHARP_UNSUPERVISED"
+   "M_PP_SHARP_UNSUPERVISED",
+   "M_CA5_PP_NO_FINGER_HOLES"
   ]
  },
  "CREA.G5.PERFOR.PUPPETRY.SHOW": {
@@ -917,7 +944,8 @@ export const SKILLS = {
   "mis": [
    "M_PP_ALL_MOVE",
    "M_PP_SHOW_FACE",
-   "M_PP_TOPICAL_ANY"
+   "M_PP_TOPICAL_ANY",
+   "M_CA5_PP_ONLY_TALK"
   ]
  },
  "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES": {
@@ -931,7 +959,8 @@ export const SKILLS = {
   "mis": [
    "M_DR_ALPHABET_ORDER",
    "M_DR_MORE_HOLES_HIGHER",
-   "M_DR_HIGH_C_LOW"
+   "M_DR_HIGH_C_LOW",
+   "M_CA5_DR_D_ALL_HOLES"
   ]
  },
  "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE": {
@@ -947,7 +976,8 @@ export const SKILLS = {
   "mis": [
    "M_DR_BLOW_HARD",
    "M_DR_FINGER_TIPS",
-   "M_DR_NO_TONGUE"
+   "M_DR_NO_TONGUE",
+   "M_CA5_DR_PUFF_CHEEKS"
   ]
  },
  "CREA.G5.PERFOR.SWIMMING.CRAWL": {
@@ -993,7 +1023,8 @@ export const SKILLS = {
   "mis": [
    "M_SW_CG_ONLY_BOARD",
    "M_SW_CG_NO_COUNT",
-   "M_SW_CG_RHYTHM_FAST"
+   "M_SW_CG_RHYTHM_FAST",
+   "M_CA5_SW_CG_WIN_ONLY"
   ]
  },
  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE": {
@@ -1007,7 +1038,8 @@ export const SKILLS = {
   "mis": [
    "M_AP_CRIT_VAGUE",
    "M_AP_CRIT_RUDE",
-   "M_AP_CRIT_TOUCH"
+   "M_AP_CRIT_TOUCH",
+   "M_CA5_AP_CRIT_ONLY_PRAISE"
   ]
  },
  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS": {
@@ -1023,7 +1055,8 @@ export const SKILLS = {
   "mis": [
    "M_AP_TERM_FORMATION_COSTUME",
    "M_AP_TERM_SOLOIST_CHORUS",
-   "M_AP_TERM_OCCASION_COMMUNITY"
+   "M_AP_TERM_OCCASION_COMMUNITY",
+   "M_CA5_AP_TERM_PROP_ORNAMENT"
   ]
  },
  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM": {
@@ -1037,7 +1070,8 @@ export const SKILLS = {
   "mis": [
    "M_AP_ANTHEM_NATIONAL",
    "M_AP_ANTHEM_SIT",
-   "M_AP_ANTHEM_VALUE"
+   "M_AP_ANTHEM_VALUE",
+   "M_CA5_AP_ANTHEM_LANGUAGE"
   ]
  }
 };
@@ -1056,12 +1090,16 @@ export const MIS_FEEDBACK = {
  "M_WI_HATCH_ONE_DIRECTION": "Cross-hatching is sets of lines that cross each other. The more crossing, the darker and more textured the area looks.",
  "M_WI_ETCH_DRAW_ON": "In crayon etching you scratch the dark layer away with a pointed tool so the bright colours below show.",
  "M_WI_ETCH_ORDER": "The bright colours go on first and the dark crayon covers them. Scratching uncovers the bright colours.",
+ "M_CA5_WI_BLOW_FOOD": "Rinse your mouth before you play. Food crumbs dirty and block the instrument.",
+ "M_CA5_WI_ETCH_LIGHT_TOP": "Put a dark layer on top. The bright colours show when you scratch through it.",
  "M_FB_TOE_POKE": "An instep kick uses the laces, the top of the foot. Toes hurt and send the ball in an uncontrolled direction.",
  "M_FB_TRAP_SWAP": "In a step trap the sole goes on top of the ball. The inside-of-the-foot stop meets the ball with the side of the foot.",
  "M_FB_DRIBBLE_FAR": "In a straight dribble you push the ball in small touches and keep it close, so you stay in control.",
  "M_FB_PM_GLUE_FIRST": "Soak, then pound to a soft pulp, and only then mix in the adhesive.",
  "M_FB_PM_SKIP_SOAK": "Soaking softens the paper so that it can be pounded into a smooth pulp.",
  "M_FB_PM_REMOVE_WET": "A wet cone loses its shape. Wait until it is completely dry before taking it off the mould.",
+ "M_CA5_FB_DRIBBLE_LOOK_DOWN": "Look up as you dribble. You need to see your team mates and the space.",
+ "M_CA5_FB_PM_THICK_GLUE": "Keep the paste smooth. It soaks into the paper so the layers hold.",
  "M_RH_MINIM_ONE": "A minim lasts two beats. A crotchet lasts one beat.",
  "M_RH_PAIR_TWO_BEATS": "A pair of quavers together lasts one beat. Each quaver is half a beat.",
  "M_RH_REST_NO_TIME": "A rest is silence that lasts as long as its note. A crotchet rest is one beat of silence.",
@@ -1072,6 +1110,8 @@ export const MIS_FEEDBACK = {
  "M_RH_COUNT_SOUNDS": "Count beats, not sounds. Each ta-te is one beat, so ta-te ta-te is two beats.",
  "M_RH_STRONG_SECOND": "In a two-beat pattern the first beat is strong and the second is weak.",
  "M_RH_TWO_BEAT_THREE": "Add the beats. Taa and ta-te make 1 plus 1, which is two beats. Taa taa taa is three.",
+ "M_CA5_RH_MINIM_TAA": "A minim is taa-aa. Hold it for two beats.",
+ "M_CA5_RH_BAR_UNEQUAL": "In two-beat time every bar has exactly two beats.",
  "M_PM_GREEN_PRIMARY": "Green is a secondary colour: it is made by mixing blue and yellow. The primary colours are red, yellow and blue.",
  "M_PM_BLACK_WHITE_PRIMARY": "The primary colours are red, yellow and blue. Black and white are not on the colour wheel.",
  "M_PM_SECONDARY_MAKES_PRIMARY": "Primary colours cannot be made by mixing other colours. All the other colours are made from them.",
@@ -1085,6 +1125,10 @@ export const MIS_FEEDBACK = {
  "M_PM_MOSAIC_PAINTED": "A mosaic is made by sticking many small pieces of material, such as paper, seeds or tile pieces, onto a surface.",
  "M_PM_MOSAIC_OVERLAP": "Mosaic pieces sit close together side by side, leaving small gaps.",
  "M_PM_MOSAIC_NO_PLAN": "Draw the design first. Then glue a small area at a time so the glue does not dry before the pieces are placed.",
+ "M_CA5_PM_MIX_ALL_THREE": "All three primaries mixed make a dull brown, not a bright colour.",
+ "M_CA5_PM_WASH_DRY_PAPER": "For a wash, wet the paper and use watery paint so it spreads smoothly.",
+ "M_CA5_PM_MOSAIC_NO_GAPS": "Leave small, even gaps between mosaic pieces.",
+ "M_CA5_PM_SECONDARY_NEXT": "Each secondary sits between the two primaries that make it.",
  "M_ML_FIRST_HIGHEST": "The sounds go up from d to s. d is the lowest and s is the highest.",
  "M_ML_ORDER_SCRAMBLED": "Going up the order is d r m f s.",
  "M_ML_DOWN_UP_SAME": "Going down from s the order is s f m r d.",
@@ -1094,6 +1138,9 @@ export const MIS_FEEDBACK = {
  "M_ML_STEP_LEAP": "A step moves to the next syllable (d to r). Skipping one syllable (d to m) is a narrow leap.",
  "M_ML_REPEAT_NEW": "When the same pitch is sung again, this is repetition of a pitch.",
  "M_ML_END_SHORT": "A melody sounds finished when it ends on a long note.",
+ "M_CA5_ML_F_AFTER_S": "After m comes f, then s.",
+ "M_CA5_ML_S_FIST": "d is a fist. s is a flat hand facing you, held higher.",
+ "M_CA5_ML_NO_END_HOME": "End your melody on d so it sounds finished.",
  "M_RD_HEAD_HANDLE": "The head is the thicker, rounded part that hits the ball. The handle is held.",
  "M_RD_KNOB_HITS": "The knob stops the bat slipping from the hand. The head hits the ball.",
  "M_RD_CRICKET_FLAT": "A rounders bat is rounded and smooth all round. A cricket bat is flat.",
@@ -1103,6 +1150,9 @@ export const MIS_FEEDBACK = {
  "M_RD_THROW_BAT": "Never throw the bat. Put it down so no one is hit.",
  "M_RD_STAND_CLOSE": "Stay well away from the batter so you are not hit by the swing.",
  "M_RD_BOWL_AT_PERSON": "Bowl underarm to the batter. Never throw the ball hard at a person.",
+ "M_CA5_RD_GRIP_TOP": "Hold the bat at its handle and hit with the thicker end.",
+ "M_CA5_RD_NO_MEASURE": "Mark the shape and length first, then carve.",
+ "M_CA5_RD_RUN_BACKWARD": "Run forward to the next base. Running backwards can make you fall.",
  "M_AT_VISUAL_LOOK_AHEAD": "In a visual change the receiver looks back and sees the baton come into the hand.",
  "M_AT_NON_VISUAL_STOP": "In a non-visual change the receiver keeps running, looking ahead, and puts the hand back when called.",
  "M_AT_UP_DOWN_SWAP": "In an upsweep the baton moves upward into the hand. In a downsweep it moves downward.",
@@ -1113,6 +1163,8 @@ export const MIS_FEEDBACK = {
  "M_AT_PLAIT_TWO": "A plait uses three strands.",
  "M_AT_PLAIT_SAME_STRAND": "The outer strand crosses over the middle one, first from the right, then from the left.",
  "M_AT_PLAIT_UNEQUAL": "Cut the three strands to the same length so the plait is neat.",
+ "M_CA5_AT_RELAY_RUN_ANY_LANE": "After the change, stay in your lane until the other runners pass.",
+ "M_CA5_AT_PLAIT_TIGHT_LOOSE": "Pull each crossing the same so the rope is even and strong.",
  "M_FD_TD_APPLIQUE_SWAP": "Appliqué sews or sticks cut shapes of cloth onto another cloth. Tie and dye uses tied cloth and dye.",
  "M_FD_APPLIQUE_PAINT": "Appliqué is not painting. It is sewing or sticking cut shapes onto cloth.",
  "M_FD_TIE_DYE_WAX": "Tie and dye uses tying to keep dye out. Batik uses wax.",
@@ -1122,6 +1174,9 @@ export const MIS_FEEDBACK = {
  "M_FD_APP_CUT_BACKGROUND": "The background cloth stays whole. The shapes are placed on top.",
  "M_FD_APP_LOOSE": "Sew or stick round the edges so the shapes stay on.",
  "M_FD_APP_NO_PIN": "Pin or tack the shapes where they belong before sewing.",
+ "M_CA5_FD_PRINT_IS_DYE": "Tie and dye makes patterns by tying and dyeing. Stamping with a block is printing.",
+ "M_CA5_FD_TD_DRY_CLOTH": "Wash and wet the cloth first so the dye takes evenly.",
+ "M_CA5_FD_APP_SAME_COLOUR": "Use a colour that stands out from the background.",
  "M_FN_COMMUNITY_MIX": "Isukuti is a dance of the Luhya. Adumu is a Maasai dance.",
  "M_FN_SOLOIST_CHORUS_SWAP": "The soloist leads and the chorus answers.",
  "M_FN_OCCASION_SAME": "Chakacha is danced at weddings and celebrations.",
@@ -1134,6 +1189,10 @@ export const MIS_FEEDBACK = {
  "M_FN_NO_WARMUP": "Warm up first so your muscles are ready and do not get hurt.",
  "M_FN_MOCK_OTHER": "Respect the dances of all communities and do not laugh at them.",
  "M_FN_CROWDED_SPACE": "Clear the space of stones and sharp things before dancing.",
+ "M_CA5_FN_DANCE_NEW": "A folk dance comes from a community and is passed down.",
+ "M_CA5_FN_COSTUME_DAILY": "A costume is the special dress used for the dance.",
+ "M_CA5_FN_ROLE_ONE": "Folk dance teaches, celebrates and passes on history, not only entertains.",
+ "M_CA5_FN_PROPS_SWING": "Use props with control and keep space from others.",
  "M_PP_GLOVE_STRING": "A glove puppet is worn on the hand. A string puppet hangs on strings.",
  "M_PP_GLOVE_FINGER": "A finger puppet fits on one finger. A glove puppet covers the hand.",
  "M_PP_SHADOW_GLOVE": "A shadow puppet is a flat shape that is seen as a shadow on a lit screen.",
@@ -1143,12 +1202,17 @@ export const MIS_FEEDBACK = {
  "M_PP_ALL_MOVE": "Only the puppet that is speaking moves.",
  "M_PP_SHOW_FACE": "The puppeteers hide behind a screen so the audience watches the puppets.",
  "M_PP_TOPICAL_ANY": "A topical song is about an issue people are talking about now, such as hygiene or road safety.",
+ "M_CA5_PP_GLOVE_ROD": "A glove puppet fits over the hand. A puppet on a stick is a rod puppet.",
+ "M_CA5_PP_NO_FINGER_HOLES": "Leave room for a finger in the head and fingers in the arms.",
+ "M_CA5_PP_ONLY_TALK": "Make your puppet listen with small nods while the other talks.",
  "M_DR_ALPHABET_ORDER": "G is the lowest of the three. The order going up is G, A, B.",
  "M_DR_MORE_HOLES_HIGHER": "G covers the most holes and is the lowest. B covers fewer and is higher.",
  "M_DR_HIGH_C_LOW": "C1 and D1 are higher notes than G, A and B.",
  "M_DR_BLOW_HARD": "Blow gently and steadily. A hard blow gives a shrill squeak.",
  "M_DR_FINGER_TIPS": "Cover each hole fully with the soft pad of the finger.",
  "M_DR_NO_TONGUE": "Tonguing starts each note clearly, using a soft \"too\".",
+ "M_CA5_DR_D_ALL_HOLES": "High D' uses one finger, the second of the left hand, with the thumb off.",
+ "M_CA5_DR_PUFF_CHEEKS": "Keep cheeks still and blow gently and steadily.",
  "M_SW_ARMS_TOGETHER": "In front crawl the arms pull one after the other.",
  "M_SW_FROG_KICK": "In front crawl the legs make small quick up-and-down flutter kicks.",
  "M_SW_LIFT_HEAD": "Turn the head to the side to breathe in.",
@@ -1160,6 +1224,7 @@ export const MIS_FEEDBACK = {
  "M_SW_CG_ONLY_BOARD": "Some counting games, like skipping while counting, move the whole body and build fitness.",
  "M_SW_CG_NO_COUNT": "Players count as part of the game.",
  "M_SW_CG_RHYTHM_FAST": "Count and move together to the beat.",
+ "M_CA5_SW_CG_WIN_ONLY": "Counting games build counting, fitness and teamwork, not only winning.",
  "M_AP_CRIT_VAGUE": "A helpful comment says what you see and why you like it.",
  "M_AP_CRIT_RUDE": "Say what could be better in a polite way.",
  "M_AP_CRIT_TOUCH": "Look carefully and do not touch other people's work.",
@@ -1168,5 +1233,8 @@ export const MIS_FEEDBACK = {
  "M_AP_TERM_OCCASION_COMMUNITY": "The occasion is when it is performed. The community is the people it comes from.",
  "M_AP_ANTHEM_NATIONAL": "The East African Community Anthem belongs to the East African Community. Kenya's national anthem is Ee Mungu Nguvu Yetu.",
  "M_AP_ANTHEM_SIT": "Stand still and straight and sing or listen in silence.",
- "M_AP_ANTHEM_VALUE": "The anthem asks for unity, peace and co-operation."
+ "M_AP_ANTHEM_VALUE": "The anthem asks for unity, peace and co-operation.",
+ "M_CA5_AP_CRIT_ONLY_PRAISE": "A helpful critique says what works and gives one kind idea to improve.",
+ "M_CA5_AP_TERM_PROP_ORNAMENT": "Held things are props. Worn decorations are ornaments.",
+ "M_CA5_AP_ANTHEM_LANGUAGE": "The East African Community anthem is sung in Kiswahili."
 };

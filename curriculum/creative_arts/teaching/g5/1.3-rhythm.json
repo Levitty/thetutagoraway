@@ -1,0 +1,272 @@
+{
+ "sub_strand": "CREA.G5.CREATI.RHYTHM",
+ "title": "Rhythm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Count the beat aloud and clap; notes are described in words on the phone. Calligraphy pens are made with a teacher.",
+ "skills": [
+  {
+   "skill": "CREA.G5.CREATI.RHYTHM.VALUES",
+   "key_step": "The child says a minim lasts two beats, a crotchet one, a pair of quavers one together, and each rest the same as its note.",
+   "floor": {
+    "prerequisite": "Knows crotchet and quaver values (Grade 4).",
+    "question": "How many beats does a crotchet last?",
+    "answer": "one"
+   },
+   "representations": [
+    "notes described in words and drawn",
+    "claps",
+    "a beat count"
+   ],
+   "steps": [
+    "Count the beat.",
+    "Minim: hold for two.",
+    "Crotchet: one. Quavers: two in one beat.",
+    "Rests are silent for the same time."
+   ],
+   "contexts": [
+    "clapping a song's rhythm",
+    "a drum pattern"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count 1 2 and hold a clap for both."
+    },
+    {
+     "beat": "predict",
+     "do": "How many beats did that note last?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for two."
+    },
+    {
+     "beat": "reveal",
+     "do": "That is a minim."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_MINIM_ONE",
+     "listen_for": [
+      "One beat"
+     ],
+     "ask": "How many beats does a minim last?",
+     "repair": "Clap and count \"1, 2\" while holding a minim, then \"1\" for a crotchet."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_PAIR_TWO_BEATS",
+     "listen_for": [
+      "Two beats"
+     ],
+     "ask": "How many beats do a pair of quavers last together?",
+     "repair": "Clap \"ta-te\" in the time of one clap and say \"two sounds, one beat\"."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_REST_NO_TIME",
+     "listen_for": [
+      "It takes no time"
+     ],
+     "ask": "How long is a crotchet rest?",
+     "repair": "Clap a pattern and hold hands apart on the rest while counting."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_QUAVER_ONE_BEAT_EACH",
+     "listen_for": [
+      "One beat"
+     ],
+     "ask": "How long does one quaver last?",
+     "repair": "Compare \"taa\" (one clap) with \"ta-te\" (two claps in the same beat)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats does a minim last?",
+     "answer": "two",
+     "shows": "minim"
+    },
+    {
+     "question": "How many beats does a minim rest last?",
+     "answer": "two",
+     "shows": "rest"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.RHYTHM.NAMES",
+   "key_step": "The child matches taa (crotchet), ta-te (pair of quavers) and taa-aa (minim), and keeps silent for rests.",
+   "floor": {
+    "prerequisite": "Says taa and ta-te (Grade 4).",
+    "question": "Say the name for a crotchet.",
+    "answer": "taa"
+   },
+   "representations": [
+    "flash cards",
+    "claps",
+    "name cards"
+   ],
+   "steps": [
+    "Look at the note.",
+    "Say its name for its length.",
+    "Rests: silence."
+   ],
+   "contexts": [
+    "saying a rhythm before playing it",
+    "a calligraphy chart of rhythm names"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a minim.",
+     "say": "What do we say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for taa-aa."
+    },
+    {
+     "beat": "count",
+     "do": "Clap and hold for two."
+    },
+    {
+     "beat": "reveal",
+     "do": "taa-aa lasts two beats."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_RH_NAME_TAA_AA_SHORT",
+     "listen_for": [
+      "Taa"
+     ],
+     "ask": "Which French name is the minim?",
+     "repair": "Say taa-aa while holding a long clap and ask how many beats it fills."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_RH_NAME_TATE_ONE",
+     "listen_for": [
+      "One sound"
+     ],
+     "ask": "How many sounds does ta-te have?",
+     "repair": "Clap each syllable: \"ta\" then \"te\" in one beat."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_RH_REST_SOUNDED",
+     "listen_for": [
+      "Clap it quietly"
+     ],
+     "ask": "What do you do on a rest in a rhythm pattern?",
+     "repair": "Clap a pattern with a crotchet rest and hold the hands apart."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.NAMES.M_CA5_RH_MINIM_TAA",
+     "listen_for": [
+      "taa"
+     ],
+     "ask": "What do you say for a minim?",
+     "repair": "Clap and hold the hands together for the second beat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the French name for a minim?",
+     "answer": "taa-aa",
+     "shows": "naming"
+    },
+    {
+     "question": "Which note is ta-te?",
+     "answer": "a pair of quavers",
+     "shows": "naming"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.RHYTHM.TWO_BEAT",
+   "key_step": "The child recognises two-beat patterns: a strong beat then a weak one, two beats in every bar.",
+   "floor": {
+    "prerequisite": "Says the values of notes.",
+    "question": "How many beats do two crotchets make?",
+    "answer": "two"
+   },
+   "representations": [
+    "claps: strong, weak",
+    "a pattern on the board",
+    "bar lines"
+   ],
+   "steps": [
+    "Count 1 2, 1 2.",
+    "Make beat 1 strong.",
+    "Put a bar line after every two beats."
+   ],
+   "contexts": [
+    "marching in a parade",
+    "a clapping game"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Clap STRONG weak, STRONG weak."
+    },
+    {
+     "beat": "predict",
+     "do": "Where does the bar line go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for after every two beats."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the lines."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_RH_COUNT_SOUNDS",
+     "listen_for": [
+      "Four beats"
+     ],
+     "ask": "How many beats are in ta-te ta-te?",
+     "repair": "Clap the pattern while walking one step for each beat."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_RH_STRONG_SECOND",
+     "listen_for": [
+      "The second beat"
+     ],
+     "ask": "In a two-beat pattern, which beat is strong?",
+     "repair": "Count \"ONE two, ONE two\" and stamp on the strong beat."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_RH_TWO_BEAT_THREE",
+     "listen_for": [
+      "Taa taa taa"
+     ],
+     "ask": "Which pattern fills two beats?",
+     "repair": "Add the beats one by one: taa = 1, ta-te = 1."
+    },
+    {
+     "code": "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_CA5_RH_BAR_UNEQUAL",
+     "listen_for": [
+      "any number"
+     ],
+     "ask": "In two-beat time, how many beats go in every bar?",
+     "repair": "Count 1 2 | 1 2 and draw a line after each 2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In two-beat time, which beat is strong?",
+     "answer": "the first",
+     "shows": "accent"
+    },
+    {
+     "question": "How many beats in each bar?",
+     "answer": "two",
+     "shows": "bars"
+    }
+   ]
+  }
+ ]
+}

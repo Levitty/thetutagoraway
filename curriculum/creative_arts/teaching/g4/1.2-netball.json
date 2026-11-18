@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G4.CREATI.NETBALL",
+ "title": "Netball",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Practise passes in pairs on the field; questions only ask what a good pass and catch look like.",
+ "skills": [
+  {
+   "skill": "CREA.G4.CREATI.NETBALL.PASSES",
+   "key_step": "The child describes the chest pass, the overhead pass and a two-handed catch: hands, eyes and where the ball goes.",
+   "floor": {
+    "prerequisite": "Pushes with two hands (Grade 3).",
+    "question": "Which body part pushes in a chest pass?",
+    "answer": "the hands and arms"
+   },
+   "representations": [
+    "a netball or a macramé ball",
+    "pictures of the two passes",
+    "a pair of learners"
+   ],
+   "steps": [
+    "Hold the ball with two hands.",
+    "Chest pass: push from the chest; overhead: throw from above the head.",
+    "Catch: fingers spread, eyes on the ball, pull it in."
+   ],
+   "contexts": [
+    "a class netball game",
+    "passing to a team mate across a crowded court"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show both passes.",
+     "say": "Which one starts above the head?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for overhead."
+    },
+    {
+     "beat": "predict",
+     "do": "Where should the catcher look?"
+    },
+    {
+     "beat": "reveal",
+     "do": "At the ball, with fingers spread."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_CHEST_BOUNCE",
+     "listen_for": [
+      "From above the head"
+     ],
+     "ask": "Where does a chest pass start?",
+     "repair": "Hold the ball at the chest, push out and say chest. Lift above the head and say over."
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_ONE_HAND",
+     "listen_for": [
+      "With one hand"
+     ],
+     "ask": "How should a netball pass or catch be done?",
+     "repair": "Try catching a ball with one hand and with two hands and see which is steadier."
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_EYES_AWAY",
+     "listen_for": [
+      "At the ground"
+     ],
+     "ask": "What should the catcher look at?",
+     "repair": "Roll a soft ball and catch it, first looking at it and then looking away."
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_STIFF_ARMS",
+     "listen_for": [
+      "Stiff and straight"
+     ],
+     "ask": "How do the arms catch a fast ball?",
+     "repair": "Catch a soft ball with straight arms and with bending arms."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which pass is pushed from the chest with two hands?",
+     "answer": "the chest pass",
+     "shows": "naming passes"
+    },
+    {
+     "question": "How should you catch a netball?",
+     "answer": "with both hands, fingers spread, eyes on the ball",
+     "shows": "safe catch"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
+   "key_step": "The child orders the steps of a macramé ball: soft core, strands, tight overhand knots, and says it is knotted, not sewn.",
+   "floor": {
+    "prerequisite": "Weaves strips over and under (Grade 3).",
+    "question": "In paper weaving, does a strip go over every strip?",
+    "answer": "no, over one and under the next"
+   },
+   "representations": [
+    "sisal or cloth strips",
+    "a soft core of paper or cloth",
+    "a finished ball"
+   ],
+   "steps": [
+    "Make a soft core.",
+    "Lay strands round it.",
+    "Tie tight overhand knots until it is covered.",
+    "Trim the ends."
+   ],
+   "contexts": [
+    "making balls for a class netball game",
+    "reusing old cloth from home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: core, strands, knots, trim, out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"knots\".",
+     "say": "What goes before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"strands round the core\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_SEW",
+     "listen_for": [
+      "By sewing the strings"
+     ],
+     "ask": "How is a macramé ball made?",
+     "repair": "Tie two strings in an overhand knot and show it holds with no needle or glue."
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_LOOSE",
+     "listen_for": [
+      "Leave it loose"
+     ],
+     "ask": "What should be done to each overhand knot?",
+     "repair": "Make one tight and one loose knot, pull both and see which holds."
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_HARD_CORE",
+     "listen_for": [
+      "A heavy stone"
+     ],
+     "ask": "What can be put inside a macramé ball?",
+     "repair": "Say: a netball is light. A stone could hurt a friend."
+    },
+    {
+     "code": "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_FIRM_LOOSE",
+     "listen_for": [
+      "so they look nice only"
+     ],
+     "ask": "Why must macramé knots be pulled tight?",
+     "repair": "Shake a loosely knotted strip and a tight one; see which comes apart."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a macramé ball sewn or knotted?",
+     "answer": "knotted",
+     "shows": "macramé means knots"
+    },
+    {
+     "question": "Why is the core soft?",
+     "answer": "so the ball is safe to catch",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

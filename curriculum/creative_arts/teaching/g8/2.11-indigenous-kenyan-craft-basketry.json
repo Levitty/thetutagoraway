@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_",
+ "title": "Indigenous Kenyan Craft (Basketry)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use grass, sisal or banana fibre; needles with a teacher.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY",
+   "key_step": "The child describes coil basketry: a bundle of grass or sisal wound in a spiral from the centre, stitched to the row before, to make baskets, trays and mats.",
+   "floor": {
+    "prerequisite": "Knows plain weaving (Grade 6).",
+    "question": "What are the warp and weft?",
+    "answer": "lengthwise threads and the threads woven across"
+   },
+   "representations": [
+    "grass or sisal",
+    "a needle and thread",
+    "a coiled tray"
+   ],
+   "steps": [
+    "Make a bundle.",
+    "Start a tight spiral at the centre.",
+    "Stitch each round to the one before.",
+    "Shape the sides."
+   ],
+   "contexts": [
+    "making a fruit tray",
+    "a market basket"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show the centre of a tray.",
+     "say": "Where did it start?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the centre."
+    },
+    {
+     "beat": "predict",
+     "do": "What holds the rounds together?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Stitching."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY.M_CA8_BK_COIL",
+     "listen_for": [
+      "Weaving straight strips"
+     ],
+     "ask": "What is coil basketry?",
+     "repair": "Wind a rope of grass in a spiral and stitch it."
+    },
+    {
+     "code": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY.M_CA8_BK_MATERIAL",
+     "listen_for": [
+      "Iron"
+     ],
+     "ask": "Which material suits coil baskets?",
+     "repair": "Ask what bends and can be stitched: grass, sisal."
+    },
+    {
+     "code": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY.M_CA8_BK_ITEM",
+     "listen_for": [
+      "A brick"
+     ],
+     "ask": "Which can be made by coiling?",
+     "repair": "Show a coiled tray and a coiled basket."
+    },
+    {
+     "code": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY.M_CA8_BK_START_EDGE",
+     "listen_for": [
+      "at the outer edge"
+     ],
+     "ask": "Where does a coiled basket start?",
+     "repair": "Show a coil growing from the centre outward."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a material for coil basketry.",
+     "answer": "any of: grass, sisal, banana fibre",
+     "shows": "material"
+    },
+    {
+     "question": "What joins each round of the coil?",
+     "answer": "stitches",
+     "shows": "method"
+    }
+   ]
+  }
+ ]
+}

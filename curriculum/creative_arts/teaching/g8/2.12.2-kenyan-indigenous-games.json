@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES",
+ "title": "Kenyan Indigenous Games",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Tagging games on grass; songs for rhythm. Safe touching only.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES",
+   "key_step": "The child describes indigenous tagging games: a chaser tags with a light touch, the tagged runner becomes the chaser, and the games build speed, agility and teamwork.",
+   "floor": {
+    "prerequisite": "Names rope games and their benefits (Grade 7).",
+    "question": "What does skipping build?",
+    "answer": "fitness and coordination"
+   },
+   "representations": [
+    "an open grass area",
+    "a song for rhythm",
+    "game cards"
+   ],
+   "steps": [
+    "Choose the chaser.",
+    "Tag with a light touch.",
+    "The tagged runner chases next."
+   ],
+   "contexts": [
+    "a break-time game",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A runner is tagged.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"becomes the chaser\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "The runner chases."
+    },
+    {
+     "beat": "write",
+     "do": "Write the rules and benefits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES.M_CA8_TG_RULE",
+     "listen_for": [
+      "Nothing happens"
+     ],
+     "ask": "What happens when the chaser touches a runner?",
+     "repair": "Play one round: the touched runner becomes the chaser."
+    },
+    {
+     "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES.M_CA8_TG_BENEFIT",
+     "listen_for": [
+      "Weak muscles"
+     ],
+     "ask": "What do tagging games build?",
+     "repair": "Feel the heartbeat after a tag game."
+    },
+    {
+     "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES.M_CA8_TG_KIND",
+     "listen_for": [
+      "Chess"
+     ],
+     "ask": "Which is a tagging game?",
+     "repair": "Ask: does someone chase and touch?"
+    },
+    {
+     "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES.M_CA8_TG_PUSH",
+     "listen_for": [
+      "push them hard"
+     ],
+     "ask": "How should a chaser tag a runner?",
+     "repair": "Practise a gentle touch on the shoulder."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do tagging games build?",
+     "answer": "speed, agility and teamwork",
+     "shows": "benefit"
+    },
+    {
+     "question": "How is a runner tagged?",
+     "answer": "with a light touch",
+     "shows": "rule"
+    }
+   ]
+  }
+ ]
+}

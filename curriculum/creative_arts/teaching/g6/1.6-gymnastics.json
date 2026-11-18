@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G6.CREATI.GYMNASTICS",
+ "title": "Gymnastics",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Cartwheels on mats only, with a teacher spotting.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL",
+   "key_step": "The child describes the cartwheel (hand, hand, foot, foot in a line, legs straight) and orders a cartwheel, forward roll and swan balance sequence.",
+   "floor": {
+    "prerequisite": "Knows gymnastics safety (Grade 4).",
+    "question": "Where should gymnastics be done?",
+    "answer": "on a mat"
+   },
+   "representations": [
+    "a mat with a straight line",
+    "pictures",
+    "step cards"
+   ],
+   "steps": [
+    "Start facing the line, arms up.",
+    "Hand, hand, foot, foot along the line.",
+    "Join the sequence smoothly: cartwheel, roll, balance."
+   ],
+   "contexts": [
+    "a PE lesson",
+    "a sports day display"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write hand, foot, hand, foot."
+    },
+    {
+     "beat": "predict",
+     "do": "Is that the right order?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Hand, hand, foot, foot."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL.M_CW_ORDER",
+     "listen_for": [
+      "The feet"
+     ],
+     "ask": "In a cartwheel, which touch the ground first?",
+     "repair": "Walk through the order slowly: hand, hand, foot, foot."
+    },
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL.M_CW_BENT",
+     "listen_for": [
+      "Bent"
+     ],
+     "ask": "How should the arms be in a cartwheel?",
+     "repair": "Compare a cartwheel with a bent arm and a straight arm."
+    },
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL.M_CW_SEQUENCE",
+     "listen_for": [
+      "Swan balance, cartwheel, forward roll"
+     ],
+     "ask": "What is the order of the three actions?",
+     "repair": "Write the three actions on cards and put them in order."
+    },
+    {
+     "code": "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL.M_CA6_CW_HANDS_TOGETHER",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "In a cartwheel, do both hands go down together?",
+     "repair": "Walk through hand, hand, foot, foot on lines."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the order of contact in a cartwheel?",
+     "answer": "hand, hand, foot, foot",
+     "shows": "order"
+    },
+    {
+     "question": "Should the legs be straight or bent?",
+     "answer": "straight",
+     "shows": "form"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G7.CREATI.SWIMMING",
+ "title": "Swimming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Diving only in deep water with a lifeguard. Questions ask for body position and safety.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.SWIMMING.SWIMMING",
+   "key_step": "The child describes water entry (sitting, pencil dive feet first, crouch dive from the edge into deep water) and backstroke (on the back, alternate arms, flutter kick, head back).",
+   "floor": {
+    "prerequisite": "Describes breaststroke (Grade 6).",
+    "question": "Which kick is used in breaststroke?",
+    "answer": "the frog kick"
+   },
+   "representations": [
+    "pictures",
+    "land practice",
+    "a pool with a lifeguard"
+   ],
+   "steps": [
+    "Enter safely: pencil dive feet first.",
+    "Lie on the back, head back.",
+    "Arms alternate over the head.",
+    "Flutter kick."
+   ],
+   "contexts": [
+    "a swimming lesson",
+    "a gala"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "In backstroke, do arms move together?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "They alternate."
+    },
+    {
+     "beat": "write",
+     "do": "Write the parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_PENCIL",
+     "listen_for": [
+      "Head first with arms apart"
+     ],
+     "ask": "In a pencil dive, how does the body enter the water?",
+     "repair": "Show a pencil: straight and pointed down, feet first."
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_BACK",
+     "listen_for": [
+      "The front"
+     ],
+     "ask": "In backstroke the swimmer lies on...",
+     "repair": "Float on the back first, then add the arms."
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_SAFETY",
+     "listen_for": [
+      "Alone at any time"
+     ],
+     "ask": "When should a learner swim?",
+     "repair": "Name what could go wrong alone: cramp, a knock on the head."
+    },
+    {
+     "code": "CREA.G7.CREATI.SWIMMING.SWIMMING.M_CA7_SM_HEAD_UP_BACK",
+     "listen_for": [
+      "lifted to see the feet"
+     ],
+     "ask": "In backstroke, where should the head be?",
+     "repair": "Float with ears in the water and look at the roof."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a pencil dive, how does the body enter?",
+     "answer": "feet first, body straight",
+     "shows": "entry"
+    },
+    {
+     "question": "In backstroke the swimmer lies on...",
+     "answer": "the back",
+     "shows": "position"
+    }
+   ]
+  }
+ ]
+}

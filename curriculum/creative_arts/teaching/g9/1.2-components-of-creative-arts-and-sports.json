@@ -1,0 +1,450 @@
+{
+ "sub_strand": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A",
+ "title": "Components of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Draw the grand stave on the board; notes are named in words on the phone. Fitness drills on the field with music.",
+ "skills": [
+  {
+   "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+   "key_step": "The child names the elements of a play: plot, characters, setting, theme, conflict, resolution, dialogue and stage directions.",
+   "floor": {
+    "prerequisite": "Names the elements of a story (Grade 7).",
+    "question": "What is the setting of a story?",
+    "answer": "where and when it happens"
+   },
+   "representations": [
+    "a short play script",
+    "element cards",
+    "a play performance"
+   ],
+   "steps": [
+    "Read or watch a short scene.",
+    "Who: characters. Where: setting.",
+    "What is the problem: conflict.",
+    "How it ends: resolution."
+   ],
+   "contexts": [
+    "a drama festival play",
+    "a class play on a social issue"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Two brothers argue over land.",
+     "say": "Which element?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for conflict."
+    },
+    {
+     "beat": "predict",
+     "do": "They agree to share. Which element?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Resolution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_CONFLICT_FIGHT",
+     "listen_for": [
+      "a fight with blows"
+     ],
+     "ask": "What is conflict in a play?",
+     "repair": "Find the conflict in a play with no fighting at all."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_RESOLUTION_START",
+     "listen_for": [
+      "at the start"
+     ],
+     "ask": "Where does the resolution come in a play?",
+     "repair": "Order the parts of a known play: introduction, conflict, climax, resolution."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_THEME_PLOT",
+     "listen_for": [
+      "what happens first, then next"
+     ],
+     "ask": "What is the theme of a play?",
+     "repair": "Ask \"what is the play teaching?\" after retelling."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_DIRECTIONS_SPOKEN",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are stage directions spoken aloud in a performance?",
+     "repair": "Act out \"(she opens the door slowly)\" without saying it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the resolution of a play?",
+     "answer": "the part where the conflict is settled",
+     "shows": "resolution"
+    },
+    {
+     "question": "Are stage directions spoken?",
+     "answer": "No, they are acted",
+     "shows": "directions"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER",
+   "key_step": "The child tells power (strength used quickly) and reaction time (quick response to a signal) from the other components and names activities that train them.",
+   "floor": {
+    "prerequisite": "Tells endurance from agility (Grade 8).",
+    "question": "What is agility?",
+    "answer": "changing direction quickly"
+   },
+   "representations": [
+    "a ruler for the drop test",
+    "cones",
+    "music for drills"
+   ],
+   "steps": [
+    "Explosive move: power.",
+    "Respond to a signal: reaction time.",
+    "Choose the activity that trains it."
+   ],
+   "contexts": [
+    "a PE circuit with music",
+    "training for the 100 m"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A vertical jump trains...?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for power."
+    },
+    {
+     "beat": "reveal",
+     "do": "Power."
+    },
+    {
+     "beat": "point",
+     "do": "Drop a ruler: catch it.",
+     "say": "What does that test?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_POWER_STRENGTH",
+     "listen_for": [
+      "they are the same"
+     ],
+     "ask": "What is the difference between strength and power?",
+     "repair": "Compare lifting a bag slowly (strength) and a vertical jump (power)."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_REACTION_SPEED",
+     "listen_for": [
+      "how fast you run"
+     ],
+     "ask": "What is reaction time?",
+     "repair": "Do the ruler-drop test: catch it as fast as you can."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_ACTIVITY",
+     "listen_for": [
+      "a long, slow jog"
+     ],
+     "ask": "Which activity trains power?",
+     "repair": "Match each activity to what it trains."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_START_REACTION",
+     "listen_for": [
+      "endurance"
+     ],
+     "ask": "A sprinter practises starts to the gun. What does this train?",
+     "repair": "Practise starts to a clap and time the response."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is power?",
+     "answer": "strength used quickly",
+     "shows": "power"
+    },
+    {
+     "question": "Which activity trains reaction time?",
+     "answer": "any of: starts to a signal, the ruler-drop catch",
+     "shows": "reaction"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE",
+   "key_step": "The child names pitches on the grand stave: treble and bass joined by a brace, middle C on the ledger line between them.",
+   "floor": {
+    "prerequisite": "Names bass staff pitches (Grade 8).",
+    "question": "What are the bass staff spaces?",
+    "answer": "A C E G"
+   },
+   "representations": [
+    "a grand stave on the board",
+    "the rhymes",
+    "note cards"
+   ],
+   "steps": [
+    "Check the clef.",
+    "Use the right rhyme.",
+    "Middle C sits between the staves."
+   ],
+   "contexts": [
+    "reading a piano or choir score",
+    "a school song in four parts"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the ledger line between the staves.",
+     "say": "Which note?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for middle C."
+    },
+    {
+     "beat": "predict",
+     "do": "Bottom line of the bass?"
+    },
+    {
+     "beat": "reveal",
+     "do": "G."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_MIDDLE_C_TWO",
+     "listen_for": [
+      "no, they are different notes"
+     ],
+     "ask": "Is middle C on the treble staff the same note as middle C on the bass staff?",
+     "repair": "Play middle C and show both ways of writing it."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_BASS_AS_TREBLE",
+     "listen_for": [
+      "E"
+     ],
+     "ask": "What is the note on the bottom line of the bass staff?",
+     "repair": "Check the clef before naming any note."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_BRACE",
+     "listen_for": [
+      "two different songs"
+     ],
+     "ask": "What does the brace on a grand stave show?",
+     "repair": "Show piano music: both hands read at once."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_HIGH_LOW",
+     "listen_for": [
+      "the treble staff"
+     ],
+     "ask": "Which staff of the grand stave holds the low notes?",
+     "repair": "Sing low and point to the bass staff."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is middle C on the grand stave?",
+     "answer": "on a ledger line between the treble and bass staves",
+     "shows": "middle C"
+    },
+    {
+     "question": "What joins the two staves?",
+     "answer": "a brace",
+     "shows": "brace"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44",
+   "key_step": "The child groups notes in four-four time with dots and ties: four beats per bar, a dot adds half, a tie joins same-pitch notes.",
+   "floor": {
+    "prerequisite": "Groups notes in three-four (Grade 8).",
+    "question": "How many beats is a dotted minim?",
+    "answer": "three"
+   },
+   "representations": [
+    "notes in words and drawn",
+    "claps",
+    "bar lines"
+   ],
+   "steps": [
+    "Read the top number: 4.",
+    "Add dotted values: half again.",
+    "Tied notes count as one.",
+    "Draw the bar line at four."
+   ],
+   "contexts": [
+    "a hymn in four-four",
+    "a march for a parade"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count ONE two THREE four."
+    },
+    {
+     "beat": "predict",
+     "do": "A dotted crotchet and a quaver make how many beats?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for two."
+    },
+    {
+     "beat": "reveal",
+     "do": "1 and a half + a half = 2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_DOT_DOUBLE",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "How many beats is a dotted crotchet?",
+     "repair": "A crotchet is 1; half of 1 is a half; 1 + a half = one and a half."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_TIE_DIFFERENT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Can a tie join a C and a D?",
+     "repair": "Show a tie (same pitch, held) and a slur (different pitches, smooth)."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_FIVE_BEATS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A bar has a dotted minim and a minim. Is it a correct bar of four-four?",
+     "repair": "Write the beat count under each note."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_ACCENT_ALL",
+     "listen_for": [
+      "all four equally"
+     ],
+     "ask": "Which beats are strong in four-four time?",
+     "repair": "Count ONE two THREE four while stepping."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats is a dotted crotchet?",
+     "answer": "one and a half",
+     "shows": "dot"
+    },
+    {
+     "question": "What does a tie join?",
+     "answer": "two notes of the same pitch",
+     "shows": "tie"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+   "key_step": "The child builds F major: F G A B-flat C D E F, one flat (B flat) on every B, home note F.",
+   "floor": {
+    "prerequisite": "Builds G major (Grade 8).",
+    "question": "Which note is sharp in G major?",
+    "answer": "F"
+   },
+   "representations": [
+    "a staff on the board",
+    "a recorder",
+    "note cards"
+   ],
+   "steps": [
+    "Start on F.",
+    "Write the next seven notes in order.",
+    "Lower B to B flat.",
+    "End on F."
+   ],
+   "contexts": [
+    "playing an F major solo",
+    "writing a scale for homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write F G A B C D E F."
+    },
+    {
+     "beat": "predict",
+     "do": "Which note must change?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for B."
+    },
+    {
+     "beat": "reveal",
+     "do": "Make it B flat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_SHARP",
+     "listen_for": [
+      "sharp"
+     ],
+     "ask": "F major has one...",
+     "repair": "Write F G A B C D E F and play it: B must be lowered."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_WHICH_FLAT",
+     "listen_for": [
+      "E"
+     ],
+     "ask": "Which note is flat in F major?",
+     "repair": "Count the steps from F: the fourth note, B, is lowered."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_HOME",
+     "listen_for": [
+      "C"
+     ],
+     "ask": "On which note does F major start and end?",
+     "repair": "The key name is the home note."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_FLAT_ONCE",
+     "listen_for": [
+      "only the first one"
+     ],
+     "ask": "In F major, is every B played as B flat?",
+     "repair": "Circle every B in an F major tune."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which note is flat in F major?",
+     "answer": "B",
+     "shows": "flat"
+    },
+    {
+     "question": "On which note does F major start and end?",
+     "answer": "F",
+     "shows": "home"
+    }
+   ]
+  }
+ ]
+}

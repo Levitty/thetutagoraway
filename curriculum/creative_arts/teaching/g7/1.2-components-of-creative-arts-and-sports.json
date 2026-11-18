@@ -1,0 +1,360 @@
+{
+ "sub_strand": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A",
+ "title": "Components of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Notes and pitches are described in words on the phone; draw the staff on the board. Fitness tests on the field.",
+ "skills": [
+  {
+   "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS",
+   "key_step": "The child names the elements of a story: characters, setting (where and when), plot (events in order), conflict and theme.",
+   "floor": {
+    "prerequisite": "Writes a narrative (Grade 6 English).",
+    "question": "What is the setting of a story?",
+    "answer": "where and when it happens"
+   },
+   "representations": [
+    "a short Kenyan folk tale",
+    "element cards",
+    "a story map"
+   ],
+   "steps": [
+    "Who: characters.",
+    "Where and when: setting.",
+    "What happens: plot.",
+    "What it teaches: theme."
+   ],
+   "contexts": [
+    "the hare and the hyena tale",
+    "a class play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a three-line story."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"in the forest at night\".",
+     "say": "Which element?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for setting."
+    },
+    {
+     "beat": "reveal",
+     "do": "Setting."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_SETTING",
+     "listen_for": [
+      "The people in it"
+     ],
+     "ask": "What is the setting of a story?",
+     "repair": "Ask \"where and when?\" for three stories and underline the answers."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_CHARACTER",
+     "listen_for": [
+      "The place of the story"
+     ],
+     "ask": "Who are the characters?",
+     "repair": "Ask \"who?\" for characters and \"where?\" for setting with one story."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_PLOT",
+     "listen_for": [
+      "The title of the story"
+     ],
+     "ask": "What is the plot?",
+     "repair": "Retell a story in three events: that chain is the plot."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS.M_CA7_SE_THEME_TITLE",
+     "listen_for": [
+      "its title"
+     ],
+     "ask": "What is the theme of a story?",
+     "repair": "Read a fable: the title names the animals, the theme is the lesson."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the plot of a story?",
+     "answer": "the events in order",
+     "shows": "plot"
+    },
+    {
+     "question": "What is a theme?",
+     "answer": "the main idea or lesson",
+     "shows": "theme"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS",
+   "key_step": "The child names health-related (endurance, strength, flexibility, body composition) and skill-related (agility, balance, coordination, power, speed, reaction time) components, with an activity for each.",
+   "floor": {
+    "prerequisite": "Knows a healthy daily routine (Grade 6 Science).",
+    "question": "Name one activity that keeps the heart healthy.",
+    "answer": "any of: running, skipping, swimming"
+   },
+   "representations": [
+    "activity cards",
+    "a field",
+    "a component chart"
+   ],
+   "steps": [
+    "Name the activity.",
+    "Ask what it trains.",
+    "Match the component."
+   ],
+   "contexts": [
+    "a PE warm-up",
+    "training for a race"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A zigzag run around cones trains...?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for agility."
+    },
+    {
+     "beat": "reveal",
+     "do": "Agility: changing direction fast."
+    },
+    {
+     "beat": "write",
+     "do": "Write a component and an activity for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_AGILITY",
+     "listen_for": [
+      "Flexibility"
+     ],
+     "ask": "Which is the ability to change direction quickly?",
+     "repair": "Do a zigzag run (agility) and a sit-and-reach (flexibility); name each."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_FLEX",
+     "listen_for": [
+      "Strength"
+     ],
+     "ask": "Which is the range of movement at a joint?",
+     "repair": "Compare touching the toes (flexibility) with lifting a heavy bag (strength)."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_ENDURANCE",
+     "listen_for": [
+      "Speed"
+     ],
+     "ask": "Which is lasting a long time without tiring?",
+     "repair": "Compare a 60 m sprint (speed) with a 1,500 m run (endurance)."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS.M_CA7_FC_STRENGTH_SIZE",
+     "listen_for": [
+      "being big"
+     ],
+     "ask": "What is muscular strength?",
+     "repair": "Compare a small learner lifting a heavy load with a big learner who cannot."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which component is the range of movement at a joint?",
+     "answer": "flexibility",
+     "shows": "flexibility"
+    },
+    {
+     "question": "Which activity trains endurance: a long run or one jump?",
+     "answer": "a long run",
+     "shows": "endurance"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES",
+   "key_step": "The child reads semibreve 4, minim 2, crotchet 1, quaver half, and groups notes so each bar of two-four time holds two crotchet beats.",
+   "floor": {
+    "prerequisite": "Knows note values (Grade 6).",
+    "question": "How many beats does a minim last?",
+    "answer": "two"
+   },
+   "representations": [
+    "staff on the board",
+    "notes described in words",
+    "claps"
+   ],
+   "steps": [
+    "Read the time signature: 2/4.",
+    "Add the beats as you go.",
+    "Draw a bar line after two beats."
+   ],
+   "contexts": [
+    "a march for a school parade",
+    "writing a class rhythm"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count 1 2 | 1 2."
+    },
+    {
+     "beat": "predict",
+     "do": "A minim fills how many bars of 2/4?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for one."
+    },
+    {
+     "beat": "reveal",
+     "do": "A minim is 2 beats: one bar."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_MINIM",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "How many beats is a minim?",
+     "repair": "Draw both: hollow head and stem is the minim, two beats; filled head is the crotchet, one."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_SEMIBREVE",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many beats is a semibreve?",
+     "repair": "Line up semibreve, minim, crotchet and count 4, 2, 1 while clapping."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_BAR",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "In 2 time, a bar holds how many crotchet beats?",
+     "repair": "The top number counts the beats: 2/4 has two crotchet beats in a bar."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES.M_CA7_NV_QUAVER_BEAT",
+     "listen_for": [
+      "one beat"
+     ],
+     "ask": "How long is one quaver in two-four time?",
+     "repair": "Clap ta-te: two quavers share one beat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats is a semibreve?",
+     "answer": "four",
+     "shows": "values"
+    },
+    {
+     "question": "In 2/4, how many crotchet beats in a bar?",
+     "answer": "two",
+     "shows": "grouping"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES",
+   "key_step": "The child names treble staff pitches: lines E G B D F, spaces F A C E, middle C on a ledger line below.",
+   "floor": {
+    "prerequisite": "Sings the sol-fa ladder (Grade 6).",
+    "question": "What comes after s going up?",
+    "answer": "l"
+   },
+   "representations": [
+    "a staff drawn on the board",
+    "the two rhymes",
+    "a recorder"
+   ],
+   "steps": [
+    "Find the line or space.",
+    "Lines: Every Good Boy Deserves Fruit.",
+    "Spaces: FACE."
+   ],
+   "contexts": [
+    "reading a recorder piece",
+    "a choir part"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the bottom line.",
+     "say": "Which note?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for E."
+    },
+    {
+     "beat": "predict",
+     "do": "The space above it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "F."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_LINES",
+     "listen_for": [
+      "F A C E"
+     ],
+     "ask": "What are the lines of the treble staff from the bottom?",
+     "repair": "Lines: Every Good Boy Deserves Fruit. Spaces: FACE."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_SPACES",
+     "listen_for": [
+      "E G B D F"
+     ],
+     "ask": "What are the spaces of the treble staff from the bottom?",
+     "repair": "Point at a space: FACE fits in the spaces."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_FIRST",
+     "listen_for": [
+      "F"
+     ],
+     "ask": "Which note is on the bottom line of the treble staff?",
+     "repair": "Count up from the bottom line: E (line), F (space), G (line)."
+    },
+    {
+     "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES.M_CA7_TP_LEDGER_C",
+     "listen_for": [
+      "D"
+     ],
+     "ask": "Which note sits on one ledger line below the treble staff?",
+     "repair": "Count down: E line, D space, C ledger line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What are the treble staff spaces from the bottom?",
+     "answer": "F A C E",
+     "shows": "spaces"
+    },
+    {
+     "question": "Which note is on the middle line?",
+     "answer": "B",
+     "shows": "lines"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "sub_strand": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN",
+ "title": "String Musical Instruments and Drawing",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring an improvised fiddle or a picture of the nyatiti, orutu, litungu and obokano. Community facts are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS",
+   "key_step": "The child names Kenyan string instruments (nyatiti, orutu, litungu, obokano), their community and whether they are plucked or bowed.",
+   "floor": {
+    "prerequisite": "Identifies Kenyan string instruments (Grade 3).",
+    "question": "Name a Kenyan string instrument.",
+    "answer": "any of: nyatiti, orutu, litungu, obokano"
+   },
+   "representations": [
+    "pictures",
+    "an improvised fiddle",
+    "a matching table"
+   ],
+   "steps": [
+    "Ask: plucked or bowed?",
+    "Name the instrument.",
+    "Name the community."
+   ],
+   "contexts": [
+    "a music festival",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show the orutu with its bow.",
+     "say": "Plucked or bowed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for bowed."
+    },
+    {
+     "beat": "predict",
+     "do": "The nyatiti?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Plucked."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS.M_SM_WIND_AS_STRING",
+     "listen_for": [
+      "The nzumari"
+     ],
+     "ask": "Which of these is a string instrument?",
+     "repair": "Ask: what do you do to make the sound? Pluck, bow, blow or hit? Sort five instruments by that one question."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS.M_SM_PLAY",
+     "listen_for": [
+      "It is plucked with the fingers"
+     ],
+     "ask": "How is the orutu played?",
+     "repair": "Look at pictures: the orutu has one string and a bow, the nyatiti has many strings and no bow."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS.M_SM_COMMUNITY",
+     "listen_for": [
+      "The Luhya"
+     ],
+     "ask": "The nyatiti belongs to which people?",
+     "repair": "Make a matching card: instrument, community, how it is played."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS.M_CA6_SM_OBOKANO_SMALL",
+     "listen_for": [
+      "a small fiddle"
+     ],
+     "ask": "Is the obokano a small fiddle or a large lyre?",
+     "repair": "Show the size of the obokano next to a learner."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is the orutu played?",
+     "answer": "with a bow",
+     "shows": "playing"
+    },
+    {
+     "question": "Is the nzumari a string instrument?",
+     "answer": "No, it is a wind instrument",
+     "shows": "sorting"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS",
+   "key_step": "The child says the strings vibrate to make sound, the body amplifies it, pegs tune it, and tighter or thinner strings give higher notes.",
+   "floor": {
+    "prerequisite": "Knows how wind instruments make sound (Grade 5).",
+    "question": "What vibrates in a flute?",
+    "answer": "the air inside"
+   },
+   "representations": [
+    "an improvised fiddle",
+    "rubber bands on a tin",
+    "a labelled drawing"
+   ],
+   "steps": [
+    "Pluck: the string vibrates.",
+    "The hollow body makes it louder.",
+    "Turn the peg: tighter is higher."
+   ],
+   "contexts": [
+    "tuning a fiddle before a performance",
+    "making a fiddle in class"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Tighten the peg.",
+     "say": "Higher or lower?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for higher."
+    },
+    {
+     "beat": "reveal",
+     "do": "Pluck: higher."
+    },
+    {
+     "beat": "write",
+     "do": "Write each part and its job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS.M_SP_BODY",
+     "listen_for": [
+      "It makes the strings vibrate"
+     ],
+     "ask": "What does the hollow body of a string instrument do?",
+     "repair": "Pluck a string held in the air and then over a tin: hear the tin make it louder."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS.M_SP_PEG",
+     "listen_for": [
+      "To pluck the strings"
+     ],
+     "ask": "What are the pegs for?",
+     "repair": "Tighten a rubber band and pluck: hear it rise."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS.M_SP_TIGHT",
+     "listen_for": [
+      "A looser, slacker string"
+     ],
+     "ask": "Which string gives a higher sound?",
+     "repair": "Tighten and loosen a rubber band and listen."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS.M_CA6_SP_THICK_HIGH",
+     "listen_for": [
+      "the thin one"
+     ],
+     "ask": "Which string gives the lower note: a thick one or a thin one?",
+     "repair": "Pluck a thick and a thin rubber band on a tin."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does the hollow body do?",
+     "answer": "makes the sound louder",
+     "shows": "resonator"
+    },
+    {
+     "question": "What is the peg for?",
+     "answer": "tightening or loosening the string to tune it",
+     "shows": "tuning"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING",
+   "key_step": "The child says stippling shades with small dots: dots close together make dark areas, spaced dots light areas.",
+   "floor": {
+    "prerequisite": "Shades by cross-hatching (Grade 5).",
+    "question": "How does cross-hatching make an area darker?",
+    "answer": "more crossing lines"
+   },
+   "representations": [
+    "a fine pen",
+    "a sample stippled drum",
+    "a tone strip"
+   ],
+   "steps": [
+    "Draw the outline lightly.",
+    "Dot the darkest parts closely.",
+    "Space the dots out toward the light."
+   ],
+   "contexts": [
+    "drawing a musical instrument",
+    "drawing a fruit"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box and dot one end closely."
+    },
+    {
+     "beat": "predict",
+     "do": "Which end looks darker?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the close dots."
+    },
+    {
+     "beat": "reveal",
+     "do": "Close dots are dark."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING.M_ST_LINES",
+     "listen_for": [
+      "Drawing with many lines"
+     ],
+     "ask": "What is stippling?",
+     "repair": "Draw one patch with dots and one with lines and name them."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING.M_ST_DARK",
+     "listen_for": [
+      "Put the dots far apart"
+     ],
+     "ask": "How do you make a part of a stippled picture look dark?",
+     "repair": "Make two squares, one with close dots and one with spaced dots, and ask which looks darker."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING.M_ST_SMEAR",
+     "listen_for": [
+      "Smudge the ink with a finger"
+     ],
+     "ask": "Which step belongs to stippling?",
+     "repair": "Compare stippling and smudged charcoal."
+    },
+    {
+     "code": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING.M_CA6_ST_BIG_BLOBS",
+     "listen_for": [
+      "big blobs"
+     ],
+     "ask": "Should stippling dots be big blobs or small dots?",
+     "repair": "Stipple a strip with fine dots and one with blobs; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is stippling?",
+     "answer": "shading with small dots",
+     "shows": "meaning"
+    },
+    {
+     "question": "How do you show a dark area in stippling?",
+     "answer": "put the dots closer together",
+     "shows": "tone"
+    }
+   ]
+  }
+ ]
+}

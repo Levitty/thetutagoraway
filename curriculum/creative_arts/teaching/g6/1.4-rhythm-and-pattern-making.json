@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+ "title": "Rhythm and Pattern Making",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Count beats aloud; block printing with a teacher. Notes are described in words on the phone.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES",
+   "key_step": "The child gives note and rest values (semibreve 4, dotted minim 3, minim 2, crotchet 1, quaver half) and groups them in three-beat bars.",
+   "floor": {
+    "prerequisite": "Knows values to the minim (Grade 5).",
+    "question": "How many beats does a minim last?",
+    "answer": "two"
+   },
+   "representations": [
+    "notes in words and drawn",
+    "claps",
+    "bar lines"
+   ],
+   "steps": [
+    "Count 1 2 3.",
+    "Fill each bar with three beats.",
+    "Draw the bar line after beat three."
+   ],
+   "contexts": [
+    "a waltz-time song",
+    "a class drum pattern"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count STRONG 2 3."
+    },
+    {
+     "beat": "predict",
+     "do": "A minim and what fills the bar?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a crotchet."
+    },
+    {
+     "beat": "reveal",
+     "do": "2 + 1 = 3."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES.M_RN_VALUE",
+     "listen_for": [
+      "Two beats"
+     ],
+     "ask": "How many beats does a crotchet last?",
+     "repair": "Clap crotchets, minims and quavers while counting."
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES.M_RN_REST",
+     "listen_for": [
+      "Clap one beat"
+     ],
+     "ask": "What do you do at a rest?",
+     "repair": "Clap a pattern with a rest and stay silent on it."
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES.M_RN_BAR",
+     "listen_for": [
+      "Three notes"
+     ],
+     "ask": "What does a three-beat bar add up to?",
+     "repair": "Write a bar of one minim and one crotchet and count it."
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES.M_CA6_RN_DOTTED",
+     "listen_for": [
+      "two"
+     ],
+     "ask": "How many beats does a dotted minim last?",
+     "repair": "Clap a minim (2) then add half (1)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats in each bar of three-beat time?",
+     "answer": "three",
+     "shows": "bars"
+    },
+    {
+     "question": "A minim plus how many crotchets fill a three-beat bar?",
+     "answer": "one",
+     "shows": "grouping"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING",
+   "key_step": "The child orders block printing (draw a motif, cut the block, ink it, press, repeat in rows) and says a full repeat fills the area evenly.",
+   "floor": {
+    "prerequisite": "Knows patterns of shapes (Grade 4 Maths).",
+    "question": "Continue: square, triangle, square, ...",
+    "answer": "triangle"
+   },
+   "representations": [
+    "a potato or foam block",
+    "ink or paint",
+    "paper with a grid"
+   ],
+   "steps": [
+    "Draw a geometric motif.",
+    "Cut away the background.",
+    "Ink and press.",
+    "Repeat along the grid."
+   ],
+   "contexts": [
+    "printing wrapping paper",
+    "a class cloth banner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"press\".",
+     "say": "What comes before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for ink."
+    },
+    {
+     "beat": "write",
+     "do": "Number them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING.M_BP_ORDER",
+     "listen_for": [
+      "Press the block on the paper"
+     ],
+     "ask": "What comes first in block printing?",
+     "repair": "Write each step on a card and put the cards in order."
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING.M_BP_INK",
+     "listen_for": [
+      "On the paper"
+     ],
+     "ask": "Where is the ink put?",
+     "repair": "Press a clean block and an inked block on paper and compare."
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING.M_BP_REPEAT",
+     "listen_for": [
+      "Different motifs placed at random"
+     ],
+     "ask": "What is a full repeat pattern?",
+     "repair": "Print one motif in a row and then in many rows."
+    },
+    {
+     "code": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING.M_CA6_BP_MIRROR",
+     "listen_for": [
+      "the right way round"
+     ],
+     "ask": "You cut the letter K on a block. How will it print?",
+     "repair": "Print a block with a cut letter and look."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a full repeat pattern?",
+     "answer": "the motif printed again and again in rows to fill the space",
+     "shows": "repeat"
+    },
+    {
+     "question": "Which part of the block prints?",
+     "answer": "the raised part",
+     "shows": "relief"
+    }
+   ]
+  }
+ ]
+}

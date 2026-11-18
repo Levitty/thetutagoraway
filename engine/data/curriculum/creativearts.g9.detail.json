@@ -1,0 +1,281 @@
+{
+ "outcomes": {
+  "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.a": "identify careers in Creative Arts and Sports",
+  "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.b": "illustrate entrepreneurial opportunities in Creative Arts and Sports",
+  "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.c": "appreciate careers in Creative Arts and Sports",
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.a": "describe the elements of a play",
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.b": "perform activities demonstrating the components of fitness",
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.c": "name pitches on the grand stave",
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.d": "group music notes in 4 time 4 incorporating note extension",
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.e": "construct the scale of F major on a staff",
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.f": "appreciate the basic elements of Creative Arts and sports",
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.a": "discuss harmony/unity in a picture",
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.b": "classify analogous colours on a colour wheel for painting",
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.c": "illustrate a colour gradation strip for colour harmony",
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.d": "paint a scenery composition to express harmony/unity",
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.e": "appreciate own and others pictures",
+  "CREA.G9.CREATI.RHYTHM.a": "describe the effect of note extension on rhythmic patterns",
+  "CREA.G9.CREATI.RHYTHM.b": "compose a four-bar rhythmic pattern in 4 4 time",
+  "CREA.G9.CREATI.RHYTHM.c": "notate four-bar rhythms in 4 time from 4 dictation",
+  "CREA.G9.CREATI.RHYTHM.d": "appreciate rhythmic patterns as a means of creating interest in Creative Arts and Sports",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.a": "describe the phases in Triple jump",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.b": "perform Triple jump for skill acquisition",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.c": "identify long distance races in athletics",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.d": "perform techniques for long distance running",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.e": "explore characteristics of mosaic in sample pictures",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.f": "create a mosaic pictorial composition inspired by an athletic event",
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.g": "acknowledge own and others’ efforts in performing Triple jump, skills in long distance races and pictorial composition",
+  "CREA.G9.CREATI.MELODY.a": "describe the use of variation in composing a melody",
+  "CREA.G9.CREATI.MELODY.b": "compose a four-bar melody in F Major and 4 time, 4",
+  "CREA.G9.CREATI.MELODY.c": "notate four-bar, melodies in 4 time, 4",
+  "CREA.G9.CREATI.MELODY.d": "perform melodies in F major and 4 time, 4",
+  "CREA.G9.CREATI.MELODY.e": "value the use of melody in Creative Arts and Sports",
+  "CREA.G9.CREATI.RUGBY.a": "distinguish passes in Rugby",
+  "CREA.G9.CREATI.RUGBY.b": "perform passing skills in Rugby",
+  "CREA.G9.CREATI.RUGBY.c": "perform kick techniques in Rugby",
+  "CREA.G9.CREATI.RUGBY.d": "value own and others' efforts in applying passing and kicking skills for enjoyment",
+  "CREA.G9.CREATI.PHOTOGRAPHY.a": "identify different viewpoints in photography",
+  "CREA.G9.CREATI.PHOTOGRAPHY.b": "take photographs of a scenery in viewpoint for showcase",
+  "CREA.G9.CREATI.PHOTOGRAPHY.c": "present the photographs for appreciation",
+  "CREA.G9.CREATI.DESCANT_RECORDER.a": "identify the fingering of notes in the scale of F major",
+  "CREA.G9.CREATI.DESCANT_RECORDER.b": "play the scale of F major from staff notation on a descant recorder",
+  "CREA.G9.CREATI.DESCANT_RECORDER.c": "perform a solo piece in F major on a descant recorder, applying correct playing techniques",
+  "CREA.G9.CREATI.DESCANT_RECORDER.d": "value playing music on the descant recorder",
+  "CREA.G9.CREATI.PLAY.a": "describe the format of a play script",
+  "CREA.G9.CREATI.PLAY.b": "create a one act play addressing a societal issue",
+  "CREA.G9.CREATI.PLAY.c": "act a role in a play performance",
+  "CREA.G9.CREATI.PLAY.d": "recognise play performance as a channel of addressing societal issues",
+  "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.a": "perform passes in Basketball for skill acquisition",
+  "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.b": "execute dribbling in Basketball for skill acquisition",
+  "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.c": "design logo for a Basketball team",
+  "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.d": "appreciate each other’s skills in Basketball game",
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.a": "describe coil techniques in pottery",
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.b": "model a vessel using coil method",
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.c": "make a frame loom for weaving",
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.d": "make a fabric using 2/1 twill weaving technique",
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.e": "display and critique own and others’ woven articles",
+  "CREA.G9.CREATI.SWIMMING.a": "describe the body position in standing dive and butterfly stroke in swimming",
+  "CREA.G9.CREATI.SWIMMING.b": "perform a standing dive in swimming",
+  "CREA.G9.CREATI.SWIMMING.c": "perform the butterfly stroke in swimming",
+  "CREA.G9.CREATI.SWIMMING.d": "appreciate swimming as a life skill",
+  "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.a": "identify types of indigenous board games played in Kenya",
+  "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.b": "perform different indigenous board games",
+  "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.c": "perform indigenous board games to background music for enjoyment",
+  "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.d": "appreciate the role played by indigenous board games for mental health",
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.a": "analyse a play performance",
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.b": "examine ethical practices in sports",
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.c": "analyse a solo vocal piece of music",
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.d": "critique exhibited artworks for inspiration",
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.e": "appreciate the role of analysis in adding value to Creative Arts and Sports"
+ },
+ "skills": {
+  "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names careers in each area (visual arts: graphic designer, photographer, painter; physical education and sports: coach, referee, physiotherapist, athlete; music: musician, sound engineer, music teacher; theatre: actor, director, set designer), says what each does, and names entrepreneurial opportunities (selling crafts, event photography, a dance troupe, a sports academy, hiring out sound equipment). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.1.1, CREA.G9.RUBRIC.1.2, CREA.G9.RUBRIC.1.3), never as a phone question: b) illustrate entrepreneurial opportunities in Creative Arts and Sports."
+  },
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the elements of a play (plot, characters, setting, theme, conflict, resolution, dialogue and stage directions) and says what each is in a short play they have read or watched. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says power is strength used quickly (a standing long jump, a vertical jump, a shot put) and reaction time is how fast the body responds to a signal (a sprint start, catching a dropped ruler), and picks an activity that trains each. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.1.1, CREA.G9.RUBRIC.1.2, CREA.G9.RUBRIC.1.3), never as a phone question: b) perform activities demonstrating the components of fitness."
+  },
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the grand stave joins the treble and bass staves with a brace, names the lines and spaces of both (treble E G B D F and F A C E; bass G B D F A and A C E G), and places middle C on the ledger line between them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says four-four time has four crotchet beats in a bar (beat 1 strong, beat 3 medium), that a dot adds half a note's value (dotted crotchet one and a half beats, dotted minim three) and a tie joins two notes of the same pitch into one sound, and checks that each bar adds up to four. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says F major has one flat, B flat, and its notes are F G A B-flat C D E F, starting and ending on F, and that the flat applies to every B in the piece. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says harmony (unity) is when all the parts of a picture look as if they belong together, made by repeating similar colours, shapes, lines or textures, and tells it from contrast and dominance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: d) paint a scenery composition to express harmony/unity."
+  },
+  "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says analogous colours sit next to each other on the colour wheel (such as yellow, yellow-orange and orange, or blue, blue-green and green), give a calm, harmonious effect, and tells them from complementary colours, which sit opposite. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: c) illustrate a colour gradation strip for colour harmony."
+  },
+  "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a dot or a tie makes a note last longer (a dotted crotchet one and a half beats, a crotchet tied to a quaver the same), that this gives long-short patterns and moves the stress, and that a dotted note is often followed by a shorter note to complete the beat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) compose a four-bar rhythmic pattern in 4 4 time; c) notate four-bar rhythms in 4 time from 4 dictation."
+  },
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child orders the phases (approach run, hop, step, jump, landing), says the hop lands on the take-off foot, the step lands on the other foot and the jump ends in the pit on both feet, and that the jump is measured from the take-off board. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform Triple jump for skill acquisition."
+  },
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names long distance races (5 000 m, 10 000 m, the marathon, cross-country) and their technique: an even pace, relaxed arm action, a short economical stride, steady breathing and a finishing kick, and says why Kenyan runners pace a race. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: d) perform techniques for long distance running."
+  },
+  "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a mosaic is a picture made of small pieces (tesserae) of one material (paper, seeds, stones, tiles) placed close together with small even gaps (grout lines), following a planned design, with colour used to show shape and light. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: f) create a mosaic pictorial composition inspired by an athletic event."
+  },
+  "CREA.G9.CREATI.MELODY.VARIATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says variation repeats a phrase with a change (in some pitches, in the rhythm, or moved higher or lower as a sequence) so the melody is both familiar and interesting, and that an answering phrase is often a variation of the opening phrase. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) compose a four-bar melody in F Major and 4 time, 4; c) notate four-bar, melodies in 4 time, 4; d) perform melodies in F major and 4 time, 4."
+  },
+  "CREA.G9.CREATI.RUGBY.RUGBY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child tells the basic (lateral) pass, the spin pass (the ball spins for a long, fast pass) and the pop pass (a short, soft lift to a team mate running close), says the ball may only be passed sideways or backwards, and tells the place kick (off a kicking tee) from the drop kick (the ball touches the ground before it is kicked). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform passing skills in Rugby; c) perform kick techniques in Rugby."
+  },
+  "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the bird's eye view (camera high, looking down), the normal or eye-level view and the worm's eye view (camera low, looking up), and says what each does to the subject (small, natural, tall and powerful). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) take photographs of a scenery in viewpoint for showcase; c) present the photographs for appreciation."
+  },
+  "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the F major scale on the recorder is F G A B-flat C D E F, that low F needs the right hand as well as all left-hand holes, and that B flat uses a cross-fingering, not the fingering of B, and reads the flat in the key signature before playing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) play the scale of F major from staff notation on a descant recorder; c) perform a solo piece in F major on a descant recorder, applying correct playing techniques."
+  },
+  "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the parts of a play script (title, cast list, acts and scenes, the character's name before each speech, dialogue, and stage directions in brackets or italics) and says stage directions are read and acted, not spoken aloud. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) create a one act play addressing a societal issue; c) act a role in a play performance."
+  },
+  "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child describes the chest, bounce and overhead passes and when each is used, high dribbling (for speed in open space) and low dribbling (to protect the ball near a defender), and says a player may not walk with the ball (travelling) or dribble, stop and dribble again (double dribble). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: a) perform passes in Basketball for skill acquisition; b) execute dribbling in Basketball for skill acquisition."
+  },
+  "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a logo is a simple symbol, name or letter combination that stands for a team, and that a good one is simple, easy to recognise and remember, uses few colours, works small and large, and fits the team's name or spirit. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: c) design logo for a Basketball team."
+  },
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child orders coil pottery: prepare the clay (remove impurities, knead and wedge), roll coils of even thickness, score and join each coil with slip, smooth the inside, decorate when slightly dry by incising, and dry slowly in the shade. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) model a vessel using coil method."
+  },
+  "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a frame loom holds the warp threads tight on a frame, and in a 2/1 twill the weft passes over two warp threads and under one, moving one thread along on each row so that diagonal lines form, unlike the plain weave of over one, under one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: c) make a frame loom for weaving; d) make a fabric using 2/1 twill weaving technique; e) display and critique own and others’ woven articles."
+  },
+  "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child describes the standing dive (toes over the edge, arms stretched over the head, bend, push and enter hands first, only into deep water with a lifeguard) and the butterfly (body flat and wave-like, both arms over the water together, dolphin kick with legs together, breathing forward). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform a standing dive in swimming; c) perform the butterfly stroke in swimming."
+  },
+  "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names indigenous board games (bao and other games of sowing seeds in pits, played on boards or in the ground), says how a turn is played (sowing seeds one by one into the next pits and capturing), and that they build counting, planning, patience and mental health. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform different indigenous board games; c) perform indigenous board games to background music for enjoyment."
+  },
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child analyses a play performance by its theme, setting, conflict, resolution, use of voice and body, props, costume and audience involvement, and a solo vocal piece by its melody, dynamics, tempo, diction, message and accompaniment, backing each point with something seen or heard. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names ethical practices in sport (no doping, fair play, honest age and identity, no match fixing, respect for officials and opponents, safeguarding) and says why doping is banned (it is cheating and harms health). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child critiques an artwork in four steps (describe what is seen, analyse the elements and principles used, interpret the meaning, judge with reasons), kindly and with evidence from the work. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.3.1), never as a phone question: d) critique exhibited artworks for inspiration."
+  }
+ }
+}

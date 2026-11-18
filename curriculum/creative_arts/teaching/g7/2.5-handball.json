@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G7.CREATI.HANDBALL",
+ "title": "Handball",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach on a marked court; contact rules shown by the teacher.",
+ "skills": [
+  {
+   "skill": "CREA.G7.CREATI.HANDBALL.HANDBALL",
+   "key_step": "The child describes handball: seven a side, three steps and three seconds with the ball, passes from netball, dribbling by bouncing, the jump shot from the air.",
+   "floor": {
+    "prerequisite": "Knows netball passes (Grade 4).",
+    "question": "Which pass starts from the chest?",
+    "answer": "the chest pass"
+   },
+   "representations": [
+    "a handball",
+    "a court diagram",
+    "rule cards"
+   ],
+   "steps": [
+    "Pass with two hands.",
+    "Dribble by bouncing.",
+    "Three steps, three seconds.",
+    "Jump shot: take off, throw in the air."
+   ],
+   "contexts": [
+    "a PE handball game",
+    "inter-house tournament"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Walk with the ball: 1, 2, 3."
+    },
+    {
+     "beat": "predict",
+     "do": "May you take a fourth step?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Pass or bounce."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_PLAYERS",
+     "listen_for": [
+      "Eleven"
+     ],
+     "ask": "How many players are in a handball team, with the goalkeeper?",
+     "repair": "Count the positions on a handball court drawing: six and a goalkeeper."
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_HANDS",
+     "listen_for": [
+      "With the feet"
+     ],
+     "ask": "How is handball played?",
+     "repair": "Say the name slowly: hand-ball."
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_STEPS",
+     "listen_for": [
+      "Ten"
+     ],
+     "ask": "How many steps may a player take with the ball?",
+     "repair": "Walk three steps with the ball, then pass or bounce."
+    },
+    {
+     "code": "CREA.G7.CREATI.HANDBALL.HANDBALL.M_CA7_HB_AREA",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "May a field player stand inside the goal area?",
+     "repair": "Mark the goal area line on the court."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many players in a handball team?",
+     "answer": "seven",
+     "shows": "team"
+    },
+    {
+     "question": "How long may you hold the ball without moving it?",
+     "answer": "three seconds",
+     "shows": "rule"
+    }
+   ]
+  }
+ ]
+}

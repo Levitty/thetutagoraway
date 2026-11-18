@@ -33,6 +33,9 @@ export const SKILLS = [
   [SW, 'SWIMMING_STROKES', 'Explain inverted breaststroke and water treading', ['a'], [], FM, 'The child says the inverted breaststroke is done on the back with a frog kick and arms moving together, and water treading keeps the body upright in deep water by moving the legs and arms; swimming is only with a lifeguard.'],
   [IG, 'TAG_GAMES', 'Describe indigenous tagging games', ['a'], [], FM, 'The child says in a tagging game the chaser touches a runner who then becomes the chaser, and that such games build speed, agility and teamwork.'],
   [AN, 'SPORTSMANSHIP', 'Name the spirit of sportsmanship', ['c'], [], FM, 'The child names fair play, honesty, respect for opponents and officials, and accepting defeat gracefully as sportsmanship.'],
+  // Added in the depth pass (18 Nov 2026): testable outcomes with no skill (Rhythm 2.2 a; Analysis 3.1 b and d).
+  [RH, 'THREE_FOUR', 'Describe three-four time and the rhythms written in it', ['a'], ['TIME_34'], FM, 'The child says three-four time has three crotchet beats in every bar with the first beat strong (STRONG weak weak), that it suits waltz-like songs and dances, that a dotted minim fills a bar, and checks that every bar of a four-bar pattern adds up to three beats.'],
+  [AN, 'ANALYSIS', 'Analyse a verse performance and a Kenyan folk dance using the right terms', ['b', 'd'], ['VERSE_LANGUAGE', 'FOLK_DANCES'], FM, 'The child analyses a verse performance by its message, language (simile, metaphor, repetition), voice and gestures, and a Kenyan folk dance by its community, occasion, formation, costume, props and instruments, backing each point with something seen or heard.'],
 ];
 
 // [skill id, code, error (for the teacher), example question, wrong, right, feedback]
@@ -71,7 +74,7 @@ export const MIS = [
   m('NETBALL', 'NB_PLAYERS', 'Gives the wrong number of players.', 'How many players are in a netball team?', 'Eleven', 'Seven', 'A netball team has seven players.'),
   m('NETBALL', 'NB_RUN', 'Says players may run with the ball.', 'May a netball player run with the ball?', 'Yes, as far as she likes', 'No, she must pass or shoot', 'A player may not run with the ball.'),
   m('NETBALL', 'NB_SECONDS', 'Gives the wrong time for holding the ball.', 'For how long may a player hold the ball?', 'Ten seconds', 'Three seconds', 'A player may hold the ball for three seconds.'),
-  m('FABRIC_DECOR', 'FB_TIE', 'Thinks tie and dye uses no tying.', 'In tie and dye, why is cloth tied?', 'To stop it dyeing evenly everywhere so patterns form', 'To make it smaller for storage', 'Tied parts resist the dye and keep their colour.'),
+  m('FABRIC_DECOR', 'FB_TIE', 'Thinks tie and dye uses no tying.', 'In tie and dye, why is cloth tied?', 'To make it smaller for storage', 'To stop it dyeing evenly everywhere so patterns form', 'Tied parts resist the dye and keep their colour.'),
   m('FABRIC_DECOR', 'FB_STENCIL', 'Mixes stencil with pleating.', 'Which technique uses a cut-out design?', 'Pleating', 'Stencil printing', 'Stencil printing uses a cut-out design.'),
   m('FABRIC_DECOR', 'FB_PLEAT', 'Mixes pleating with stencil.', 'Which technique folds cloth into folds?', 'Stencil printing', 'Pleating', 'Pleating folds cloth.'),
   m('RECORDER_TECH', 'RT_BLOW', 'Says blow hard.', 'How should you blow a descant recorder?', 'As hard as possible', 'Gently and steadily', 'Blow gently and steadily.'),

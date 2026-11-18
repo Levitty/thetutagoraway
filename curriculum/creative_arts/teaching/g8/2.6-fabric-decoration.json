@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.FABRIC_DECORATION",
+ "title": "Fabric Decoration",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dyeing with gloves and an adult for hot water; stencils cut by the teacher or with safe tools.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR",
+   "key_step": "The child describes tie and dye by marbling (crumple and bind before dyeing), pleating (folding cloth in regular folds) and stencil printing (colour through a cut-out).",
+   "floor": {
+    "prerequisite": "Knows tie and dye steps (Grade 5).",
+    "question": "Why do tied parts stay light?",
+    "answer": "the dye cannot reach them"
+   },
+   "representations": [
+    "cloth samples",
+    "a stencil",
+    "string and dye"
+   ],
+   "steps": [
+    "Marbling: crumple, bind, dye.",
+    "Pleating: fold evenly, press.",
+    "Stencil: cut a design, dab colour through."
+   ],
+   "contexts": [
+    "a class banner",
+    "decorating a T-shirt for sports day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a cut-out card.",
+     "say": "Which technique?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for stencil."
+    },
+    {
+     "beat": "predict",
+     "do": "Folded cloth?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Pleating."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR.M_CA8_FB_TIE",
+     "listen_for": [
+      "To make it smaller for storage"
+     ],
+     "ask": "In tie and dye, why is cloth tied?",
+     "repair": "Untie a dyed piece and show the light patterns where it was tied."
+    },
+    {
+     "code": "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR.M_CA8_FB_STENCIL",
+     "listen_for": [
+      "Pleating"
+     ],
+     "ask": "Which technique uses a cut-out design?",
+     "repair": "Hold up a stencil: colour goes through the holes."
+    },
+    {
+     "code": "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR.M_CA8_FB_PLEAT",
+     "listen_for": [
+      "Stencil printing"
+     ],
+     "ask": "Which technique folds cloth into folds?",
+     "repair": "Fold paper like a fan: that is pleating."
+    },
+    {
+     "code": "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR.M_CA8_FB_MARBLE_SAME",
+     "listen_for": [
+      "neat rings"
+     ],
+     "ask": "What kind of pattern does marbling give?",
+     "repair": "Crumple and bind cloth, dye it, and compare with a ring tie."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which technique uses a cut-out design?",
+     "answer": "stencil printing",
+     "shows": "stencil"
+    },
+    {
+     "question": "How is marbling done?",
+     "answer": "crumple and bind the cloth, then dye it",
+     "shows": "marbling"
+    }
+   ]
+  }
+ ]
+}

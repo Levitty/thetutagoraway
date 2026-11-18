@@ -1,0 +1,361 @@
+{
+ "sub_strand": "CREA.G4.PERFOR.DESCANT_RECORDER",
+ "title": "Descant Recorder",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Each learner uses their own recorder. Holes and fingers are described in words on the phone.",
+ "skills": [
+  {
+   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
+   "key_step": "The child names the head joint (mouthpiece and window), the body joint (finger holes and thumb hole) and the foot joint.",
+   "floor": {
+    "prerequisite": "Names parts of a string instrument (Grade 3).",
+    "question": "Which part of a string instrument shakes to make the sound?",
+    "answer": "the string"
+   },
+   "representations": [
+    "a recorder",
+    "a labelled drawing",
+    "part cards"
+   ],
+   "steps": [
+    "Find the mouthpiece and window.",
+    "Find the finger holes and the thumb hole.",
+    "Find the foot joint."
+   ],
+   "contexts": [
+    "the first recorder lesson",
+    "putting a recorder together after cleaning"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the window.",
+     "say": "What does it do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it makes the sound\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Air splits at its edge."
+    },
+    {
+     "beat": "write",
+     "do": "Label the three joints."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_BLOW",
+     "listen_for": [
+      "The foot joint"
+     ],
+     "ask": "Where does the player blow?",
+     "repair": "Hold a recorder and point to the mouthpiece."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_HOLES",
+     "listen_for": [
+      "The head joint"
+     ],
+     "ask": "Where are most of the finger holes?",
+     "repair": "Name the joints while placing fingers."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_NAMES",
+     "listen_for": [
+      "The head joint"
+     ],
+     "ask": "Which is the lowest part?",
+     "repair": "Name them from top to bottom: head, middle, foot."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_THUMB",
+     "listen_for": [
+      "for blowing"
+     ],
+     "ask": "What is the hole at the back of the recorder for?",
+     "repair": "Hold the recorder; find which finger covers the back hole."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where do you blow on a recorder?",
+     "answer": "into the mouthpiece",
+     "shows": "parts"
+    },
+    {
+     "question": "Which finger covers the back hole?",
+     "answer": "the left thumb",
+     "shows": "thumb hole"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
+   "key_step": "The child cares for a recorder: own use only, wash with cool soapy water, dry in shade, keep in a case.",
+   "floor": {
+    "prerequisite": "Knows hygiene habits.",
+    "question": "Why do we wash hands before eating?",
+    "answer": "to remove germs"
+   },
+   "representations": [
+    "a recorder and case",
+    "a care chart",
+    "a basin of cool water"
+   ],
+   "steps": [
+    "Use only your own.",
+    "Wash with cool water and dry in shade.",
+    "Keep it in its case."
+   ],
+   "contexts": [
+    "after a music lesson",
+    "carrying a recorder home"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A friend asks to play your recorder.",
+     "say": "What do you say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, we do not share\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Germs pass on the mouthpiece."
+    },
+    {
+     "beat": "write",
+     "do": "Write three care rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_HOT_WATER",
+     "listen_for": [
+      "In boiling water"
+     ],
+     "ask": "How is a recorder cleaned?",
+     "repair": "Say: hot water can bend the plastic."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_SHARE",
+     "listen_for": [
+      "Use it at once"
+     ],
+     "ask": "Wanjiku wants to use Otieno's recorder. What first?",
+     "repair": "Link to sharing a cup."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_STORE",
+     "listen_for": [
+      "In the sun on the desk"
+     ],
+     "ask": "Where should a recorder be kept?",
+     "repair": "Show a bent recorder from heat."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_SUN",
+     "listen_for": [
+      "in hot sun"
+     ],
+     "ask": "Where should a wet recorder dry?",
+     "repair": "Explain that heat can bend plastic."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should you not share a recorder?",
+     "answer": "germs pass on the mouthpiece",
+     "shows": "hygiene"
+    },
+    {
+     "question": "Where is a recorder kept?",
+     "answer": "in its case",
+     "shows": "storage"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
+   "key_step": "The child orders B, A, G from high to low: B covers thumb and one hole, A two, G three, all with the left hand.",
+   "floor": {
+    "prerequisite": "Hears higher and lower notes.",
+    "question": "Is a whistle high or low?",
+    "answer": "high"
+   },
+   "representations": [
+    "a recorder",
+    "a fingering chart in words",
+    "singing the notes"
+   ],
+   "steps": [
+    "Left hand on top.",
+    "B: thumb and first hole.",
+    "A: add the second.",
+    "G: add the third."
+   ],
+   "contexts": [
+    "playing Hot Cross Buns",
+    "a class recorder song"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count the holes for B."
+    },
+    {
+     "beat": "predict",
+     "do": "Add one finger: higher or lower?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for lower."
+    },
+    {
+     "beat": "reveal",
+     "do": "It is A, lower."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_MORE_HIGHER",
+     "listen_for": [
+      "B"
+     ],
+     "ask": "Which note covers the most holes?",
+     "repair": "Play B A G and watch the fingers go down."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_FINGERS_MIX",
+     "listen_for": [
+      "One finger"
+     ],
+     "ask": "How many fingers (with the thumb) does A need?",
+     "repair": "Make a chart: B one, A two, G three."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_ORDER",
+     "listen_for": [
+      "B, A, G"
+     ],
+     "ask": "Which is the right order from low to high?",
+     "repair": "Play them and listen."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_RIGHT_HAND",
+     "listen_for": [
+      "the right hand"
+     ],
+     "ask": "Which hand plays B, A and G?",
+     "repair": "Put the left hand on top, near the mouthpiece."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which note is lowest: B, A or G?",
+     "answer": "G",
+     "shows": "order"
+    },
+    {
+     "question": "How many front holes for A?",
+     "answer": "two",
+     "shows": "fingering"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+   "key_step": "The child describes good technique: sit or stand tall, cover holes with finger pads, blow gently, tongue each note.",
+   "floor": {
+    "prerequisite": "Follows soft and loud directions.",
+    "question": "What does \"piano\" or soft ask for?",
+    "answer": "quiet playing"
+   },
+   "representations": [
+    "a recorder",
+    "a mirror",
+    "a checklist"
+   ],
+   "steps": [
+    "Sit tall.",
+    "Use the soft pads of the fingers.",
+    "Blow gently and say \"doo\"."
+   ],
+   "contexts": [
+    "a music lesson",
+    "a class performance"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Blow very hard.",
+     "say": "What sound comes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a squeak\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Blow gently."
+    },
+    {
+     "beat": "write",
+     "do": "Write the three points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_BLOW_HARD",
+     "listen_for": [
+      "As hard as you can"
+     ],
+     "ask": "How hard should you blow?",
+     "repair": "Blow gently and hard and compare."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_TIP_FINGERS",
+     "listen_for": [
+      "With the tip of the finger"
+     ],
+     "ask": "How do you cover a hole?",
+     "repair": "Press a pad and a tip on a hole and see the leak."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_SLOUCH",
+     "listen_for": [
+      "Slouched, to relax"
+     ],
+     "ask": "How should you sit to play?",
+     "repair": "Try breathing slouched and tall."
+    },
+    {
+     "code": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_NO_TONGUE",
+     "listen_for": [
+      "push air hard"
+     ],
+     "ask": "How do you start a note on the recorder?",
+     "repair": "Whisper \"doo\" into the recorder."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What part of the finger covers a hole?",
+     "answer": "the soft pad",
+     "shows": "fingering"
+    },
+    {
+     "question": "What happens if you blow too hard?",
+     "answer": "it squeaks",
+     "shows": "breath"
+    }
+   ]
+  }
+ ]
+}

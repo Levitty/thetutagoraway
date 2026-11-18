@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.SWIMMING",
+ "title": "Swimming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Treading water only in deep water with a lifeguard.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES",
+   "key_step": "The child explains inverted breaststroke (on the back, arms together, frog kick) and water treading (upright, head above water, arms and legs moving).",
+   "floor": {
+    "prerequisite": "Describes backstroke (Grade 7).",
+    "question": "In backstroke, do arms move together?",
+    "answer": "no, they alternate"
+   },
+   "representations": [
+    "pictures",
+    "land practice",
+    "a deep-water area with a lifeguard"
+   ],
+   "steps": [
+    "Lie on the back.",
+    "Arms sweep together.",
+    "Frog kick.",
+    "For treading, stay upright and keep moving."
+   ],
+   "contexts": [
+    "a swimming lesson",
+    "a water safety day"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Inverted breaststroke: front or back?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for back."
+    },
+    {
+     "beat": "reveal",
+     "do": "On the back."
+    },
+    {
+     "beat": "write",
+     "do": "Write the parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES.M_CA8_SS_BACK",
+     "listen_for": [
+      "The front"
+     ],
+     "ask": "In inverted breaststroke the swimmer lies on...",
+     "repair": "\"Inverted\" means turned over: on the back."
+    },
+    {
+     "code": "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES.M_CA8_SS_TREAD",
+     "listen_for": [
+      "Lying flat on the water"
+     ],
+     "ask": "What is water treading?",
+     "repair": "Show treading upright, head above water, legs moving."
+    },
+    {
+     "code": "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES.M_CA8_SS_SAFETY",
+     "listen_for": [
+      "Alone at any time"
+     ],
+     "ask": "When should a learner swim?",
+     "repair": "Name what could go wrong in deep water alone."
+    },
+    {
+     "code": "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES.M_CA8_SS_TREAD_STILL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do you keep still when treading water?",
+     "repair": "Watch a swimmer's legs under water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is water treading?",
+     "answer": "staying upright in deep water by moving arms and legs",
+     "shows": "treading"
+    },
+    {
+     "question": "Which kick is used in inverted breaststroke?",
+     "answer": "the frog kick",
+     "shows": "kick"
+    }
+   ]
+  }
+ ]
+}

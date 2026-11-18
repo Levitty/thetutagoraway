@@ -265,6 +265,36 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_CA5_WI_BLOW_FOOD": {
+  "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE",
+  "error": "Plays a wind instrument straight after eating without rinsing the mouth.",
+  "example": {
+   "question": "You have just eaten mandazi. What should you do before playing your flute?",
+   "wrong_answer": "play it straight away",
+   "correct_answer": "rinse your mouth first"
+  },
+  "cause": "The child does not link food in the mouth with dirt in the instrument.",
+  "reveals": "Offer \"play it straight away\" next to the right answer and ask the question again in a new context.",
+  "help": "Show crumbs on a mouthpiece; they block and dirty it.",
+  "feedback": "Rinse your mouth before you play. Food crumbs dirty and block the instrument.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_CA5_WI_ETCH_LIGHT_TOP": {
+  "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING",
+  "error": "Uses light crayon for the top layer, so the scratched lines do not show.",
+  "example": {
+   "question": "Which colour goes on top in crayon etching?",
+   "wrong_answer": "a light colour",
+   "correct_answer": "a dark colour (black)"
+  },
+  "cause": "The child thinks the first and second layer can be any colours.",
+  "reveals": "Offer \"a light colour\" next to the right answer and ask the question again in a new context.",
+  "help": "Scratch a dark top over bright colours and a light top over bright colours; compare.",
+  "feedback": "Put a dark layer on top. The bright colours show when you scratch through it.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_TOE_POKE": {
   "skill": "CREA.G5.CREATI.FOOTBALL.SKILLS",
   "error": "Thinks a strong kick uses the toes.",
@@ -378,6 +408,36 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G5.CREATI.FOOTBALL.SKILLS.M_CA5_FB_DRIBBLE_LOOK_DOWN": {
+  "skill": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+  "error": "Keeps eyes only on the ball while dribbling, never looking up.",
+  "example": {
+   "question": "While dribbling, where should you look?",
+   "wrong_answer": "only at the ball",
+   "correct_answer": "mostly ahead, glancing at the ball"
+  },
+  "cause": "Beginners lose the ball when they look up, so they stop looking up.",
+  "reveals": "Offer \"only at the ball\" next to the right answer and ask the question again in a new context.",
+  "help": "Dribble slowly and call out how many fingers the teacher shows.",
+  "feedback": "Look up as you dribble. You need to see your team mates and the space.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_CA5_FB_PM_THICK_GLUE": {
+  "skill": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE",
+  "error": "Makes the paste very thick so the cones dry faster.",
+  "example": {
+   "question": "Why is papier mâché paste kept smooth and not too thick?",
+   "wrong_answer": "thick paste dries faster",
+   "correct_answer": "smooth paste soaks into the paper and sticks the layers well"
+  },
+  "cause": "The child thinks more glue means stronger and quicker.",
+  "reveals": "Offer \"thick paste dries faster\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a strip in runny paste and one in thick lumps.",
+  "feedback": "Keep the paste smooth. It soaks into the paper so the layers hold.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G5.CREATI.RHYTHM.VALUES.M_RH_MINIM_ONE": {
   "skill": "CREA.G5.CREATI.RHYTHM.VALUES",
@@ -568,6 +628,36 @@
    "mark": "doubtful",
    "why": "A trap option: a child who has used or seen the item would not say this."
   }
+ },
+ "CREA.G5.CREATI.RHYTHM.NAMES.M_CA5_RH_MINIM_TAA": {
+  "skill": "CREA.G5.CREATI.RHYTHM.NAMES",
+  "error": "Says only \"taa\" for a minim, cutting it to one beat.",
+  "example": {
+   "question": "What do you say for a minim?",
+   "wrong_answer": "taa",
+   "correct_answer": "taa-aa, held for two beats"
+  },
+  "cause": "The child learnt taa first and uses it for every long note.",
+  "reveals": "Offer \"taa\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap and hold the hands together for the second beat.",
+  "feedback": "A minim is taa-aa. Hold it for two beats.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.RHYTHM.TWO_BEAT.M_CA5_RH_BAR_UNEQUAL": {
+  "skill": "CREA.G5.CREATI.RHYTHM.TWO_BEAT",
+  "error": "Puts three beats in one bar and one in the next in a two-beat pattern.",
+  "example": {
+   "question": "In two-beat time, how many beats go in every bar?",
+   "wrong_answer": "any number",
+   "correct_answer": "two"
+  },
+  "cause": "The child draws bar lines where it looks tidy, not by counting.",
+  "reveals": "Offer \"any number\" next to the right answer and ask the question again in a new context.",
+  "help": "Count 1 2 | 1 2 and draw a line after each 2.",
+  "feedback": "In two-beat time every bar has exactly two beats.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_GREEN_PRIMARY": {
   "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
@@ -816,6 +906,66 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_CA5_PM_MIX_ALL_THREE": {
+  "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING",
+  "error": "Thinks mixing all three primaries makes a bright new secondary.",
+  "example": {
+   "question": "Red, yellow and blue are mixed together. What do you get?",
+   "wrong_answer": "a bright orange",
+   "correct_answer": "a dull brown"
+  },
+  "cause": "The child expects more colours to give a brighter colour.",
+  "reveals": "Offer \"a bright orange\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix all three on a palette and look.",
+  "feedback": "All three primaries mixed make a dull brown, not a bright colour.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_CA5_PM_WASH_DRY_PAPER": {
+  "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+  "error": "Paints a wash on dry paper with little water and gets hard streaks.",
+  "example": {
+   "question": "How do you get a smooth wash?",
+   "wrong_answer": "use thick paint on dry paper",
+   "correct_answer": "wet the paper and use a lot of water with a little paint"
+  },
+  "cause": "The child paints the way they paint small details.",
+  "reveals": "Offer \"use thick paint on dry paper\" next to the right answer and ask the question again in a new context.",
+  "help": "Paint a wash on dry and on damp paper; compare.",
+  "feedback": "For a wash, wet the paper and use watery paint so it spreads smoothly.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_CA5_PM_MOSAIC_NO_GAPS": {
+  "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+  "error": "Pushes mosaic pieces together with no gaps at all.",
+  "example": {
+   "question": "In a mosaic, should the pieces touch with no gaps?",
+   "wrong_answer": "yes, no gaps",
+   "correct_answer": "no; leave small even gaps between pieces"
+  },
+  "cause": "The child copies montage, where gaps are not wanted.",
+  "reveals": "Offer \"yes, no gaps\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a mosaic: the gaps make the pattern clear.",
+  "feedback": "Leave small, even gaps between mosaic pieces.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_CA5_PM_SECONDARY_NEXT": {
+  "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+  "error": "Places a secondary colour next to another secondary on the wheel instead of between its two primaries.",
+  "example": {
+   "question": "On the colour wheel, where is green?",
+   "wrong_answer": "next to orange",
+   "correct_answer": "between blue and yellow"
+  },
+  "cause": "The child learns the colours as a list, not as a mixing map.",
+  "reveals": "Offer \"next to orange\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the wheel and place each secondary between its two parents.",
+  "feedback": "Each secondary sits between the two primaries that make it.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.CREATI.MELODY.SOLFA.M_ML_FIRST_HIGHEST": {
   "skill": "CREA.G5.CREATI.MELODY.SOLFA",
   "error": "Thinks d is the highest sound because it comes first.",
@@ -987,6 +1137,51 @@
    "why": "A recall slip (names, order or sign), more a trap option than a held belief."
   }
  },
+ "CREA.G5.CREATI.MELODY.SOLFA.M_CA5_ML_F_AFTER_S": {
+  "skill": "CREA.G5.CREATI.MELODY.SOLFA",
+  "error": "Puts s before f when going up the ladder.",
+  "example": {
+   "question": "Going up, which comes after m: f or s?",
+   "wrong_answer": "s",
+   "correct_answer": "f"
+  },
+  "cause": "The child knows the letters but learnt them out of order.",
+  "reveals": "Offer \"s\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d r m f s slowly with the ladder.",
+  "feedback": "After m comes f, then s.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.MELODY.SIGNS.M_CA5_ML_S_FIST": {
+  "skill": "CREA.G5.CREATI.MELODY.SIGNS",
+  "error": "Shows s as a fist, mixing it with d.",
+  "example": {
+   "question": "Which syllable is a flat hand facing you?",
+   "wrong_answer": "d",
+   "correct_answer": "s"
+  },
+  "cause": "Both d and s are \"home\" notes in songs, so the child mixes the signs.",
+  "reveals": "Offer \"d\" next to the right answer and ask the question again in a new context.",
+  "help": "Show d (fist) low and s (flat hand facing you) higher.",
+  "feedback": "d is a fist. s is a flat hand facing you, held higher.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.MELODY.TECHNIQUES.M_CA5_ML_NO_END_HOME": {
+  "skill": "CREA.G5.CREATI.MELODY.TECHNIQUES",
+  "error": "Ends a short melody on f, so it sounds unfinished.",
+  "example": {
+   "question": "A melody ends d r m f. Does it sound finished?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; it should end on d"
+  },
+  "cause": "The child stops when the notes run out.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing it ending on f and ending on d; compare.",
+  "feedback": "End your melody on d so it sounds finished.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_HEAD_HANDLE": {
   "skill": "CREA.G5.CREATI.ROUNDERS.BAT",
   "error": "Says the head of the bat is the part you hold.",
@@ -1157,6 +1352,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G5.CREATI.ROUNDERS.BAT.M_CA5_RD_GRIP_TOP": {
+  "skill": "CREA.G5.CREATI.ROUNDERS.BAT",
+  "error": "Holds the bat at the hitting end.",
+  "example": {
+   "question": "Where do you hold a rounders bat?",
+   "wrong_answer": "at the thick end",
+   "correct_answer": "at the handle"
+  },
+  "cause": "The child holds it where it looks strongest.",
+  "reveals": "Offer \"at the thick end\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold at the handle and swing gently.",
+  "feedback": "Hold the bat at its handle and hit with the thicker end.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.ROUNDERS.CARVING.M_CA5_RD_NO_MEASURE": {
+  "skill": "CREA.G5.CREATI.ROUNDERS.CARVING",
+  "error": "Starts carving without marking the size and shape on the wood.",
+  "example": {
+   "question": "What do you do before you start carving the bat?",
+   "wrong_answer": "start cutting",
+   "correct_answer": "mark the shape and length on the wood"
+  },
+  "cause": "The child is eager to cut and does not plan.",
+  "reveals": "Offer \"start cutting\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a bat cut too short without a mark.",
+  "feedback": "Mark the shape and length first, then carve.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.CREATI.ROUNDERS.SAFETY.M_CA5_RD_RUN_BACKWARD": {
+  "skill": "CREA.G5.CREATI.ROUNDERS.SAFETY",
+  "error": "Runs backwards to watch the ball while running between bases.",
+  "example": {
+   "question": "Should you run backwards between bases to watch the ball?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; run forward and look ahead"
+  },
+  "cause": "The child wants to see the ball.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the risk of tripping.",
+  "feedback": "Run forward to the next base. Running backwards can make you fall.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_VISUAL_LOOK_AHEAD": {
   "skill": "CREA.G5.PERFOR.ATHLETICS.BATON",
@@ -1348,6 +1588,36 @@
    "why": "A trap option: a child who has used or seen the item would not say this."
   }
  },
+ "CREA.G5.PERFOR.ATHLETICS.RELAY.M_CA5_AT_RELAY_RUN_ANY_LANE": {
+  "skill": "CREA.G5.PERFOR.ATHLETICS.RELAY",
+  "error": "Leaves their lane after passing the baton.",
+  "example": {
+   "question": "After passing the baton, what should you do?",
+   "wrong_answer": "run across to the finish",
+   "correct_answer": "stay in your lane until the others pass"
+  },
+  "cause": "The child thinks their job ends at the change.",
+  "reveals": "Offer \"run across to the finish\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk through a change and show where the next team runs.",
+  "feedback": "After the change, stay in your lane until the other runners pass.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_CA5_AT_PLAIT_TIGHT_LOOSE": {
+  "skill": "CREA.G5.PERFOR.ATHLETICS.PLAITING",
+  "error": "Pulls some crossings tight and others loose.",
+  "example": {
+   "question": "Why pull every crossing of a plait the same?",
+   "wrong_answer": "it does not matter",
+   "correct_answer": "so the rope is even and strong"
+  },
+  "cause": "The child focuses on the order and forgets the tension.",
+  "reveals": "Offer \"it does not matter\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare an even plait and an uneven one.",
+  "feedback": "Pull each crossing the same so the rope is even and strong.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_TD_APPLIQUE_SWAP": {
   "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
   "error": "Swaps tie and dye with appliqué.",
@@ -1518,6 +1788,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_CA5_FD_PRINT_IS_DYE": {
+  "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+  "error": "Calls a printed pattern tie and dye.",
+  "example": {
+   "question": "A pattern is stamped on cloth with a block. Is it tie and dye?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; it is printing"
+  },
+  "cause": "All patterned cloth looks alike to the child.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a tie-dye cloth and a printed one side by side.",
+  "feedback": "Tie and dye makes patterns by tying and dyeing. Stamping with a block is printing.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_CA5_FD_TD_DRY_CLOTH": {
+  "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE",
+  "error": "Puts dry, unwashed cloth into the dye.",
+  "example": {
+   "question": "What do you do to the cloth before dyeing it?",
+   "wrong_answer": "nothing",
+   "correct_answer": "wash it and wet it so the dye spreads evenly"
+  },
+  "cause": "The child does not know starch and dirt block dye.",
+  "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Dye a washed and an unwashed strip.",
+  "feedback": "Wash and wet the cloth first so the dye takes evenly.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_CA5_FD_APP_SAME_COLOUR": {
+  "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE",
+  "error": "Chooses appliqué pieces the same colour as the background.",
+  "example": {
+   "question": "Why choose a different colour for appliqué pieces?",
+   "wrong_answer": "it does not matter",
+   "correct_answer": "so the shapes stand out"
+  },
+  "cause": "The child matches colours to look neat.",
+  "reveals": "Offer \"it does not matter\" next to the right answer and ask the question again in a new context.",
+  "help": "Pin a same-colour shape and a contrasting one; compare.",
+  "feedback": "Use a colour that stands out from the background.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_COMMUNITY_MIX": {
   "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
@@ -1747,6 +2062,66 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_CA5_FN_DANCE_NEW": {
+  "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+  "error": "Thinks a folk dance was made up recently by a choreographer.",
+  "example": {
+   "question": "Where does a Kenyan folk dance come from?",
+   "wrong_answer": "a dancer made it up last year",
+   "correct_answer": "a community, passed down over many years"
+  },
+  "cause": "The child sees dance on TV made by groups.",
+  "reveals": "Offer \"a dancer made it up last year\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask an elder or read where the dance comes from.",
+  "feedback": "A folk dance comes from a community and is passed down.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_CA5_FN_COSTUME_DAILY": {
+  "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+  "error": "Thinks dancers wear school uniform as the costume.",
+  "example": {
+   "question": "What is a costume in a folk dance?",
+   "wrong_answer": "school uniform",
+   "correct_answer": "the special dress of the community for the dance"
+  },
+  "cause": "The child calls any clothes a costume.",
+  "reveals": "Offer \"school uniform\" next to the right answer and ask the question again in a new context.",
+  "help": "Show pictures of dance costumes.",
+  "feedback": "A costume is the special dress used for the dance.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_CA5_FN_ROLE_ONE": {
+  "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES",
+  "error": "Thinks a folk dance has only one role, entertainment.",
+  "example": {
+   "question": "Name a role of folk dance in the community other than fun.",
+   "wrong_answer": "there is none",
+   "correct_answer": "any of: teaching values, marking ceremonies, passing on history"
+  },
+  "cause": "The child sees dance only at shows.",
+  "reveals": "Offer \"there is none\" next to the right answer and ask the question again in a new context.",
+  "help": "List occasions where dance is used.",
+  "feedback": "Folk dance teaches, celebrates and passes on history, not only entertains.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_CA5_FN_PROPS_SWING": {
+  "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY",
+  "error": "Swings props wildly near others.",
+  "example": {
+   "question": "How should props be used in a dance?",
+   "wrong_answer": "swing them as hard as you can",
+   "correct_answer": "with control, keeping space from others"
+  },
+  "cause": "The child thinks bigger movement is better dancing.",
+  "reveals": "Offer \"swing them as hard as you can\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise prop moves slowly in spaces.",
+  "feedback": "Use props with control and keep space from others.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_GLOVE_STRING": {
   "skill": "CREA.G5.PERFOR.PUPPETRY.TYPES",
   "error": "Says a glove puppet hangs on strings.",
@@ -1918,6 +2293,51 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G5.PERFOR.PUPPETRY.TYPES.M_CA5_PP_GLOVE_ROD": {
+  "skill": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+  "error": "Calls a puppet on a stick a glove puppet.",
+  "example": {
+   "question": "A puppet is moved by a stick from below. What type is it?",
+   "wrong_answer": "a glove puppet",
+   "correct_answer": "a rod puppet"
+  },
+  "cause": "Both are moved from below.",
+  "reveals": "Offer \"a glove puppet\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a hand inside a glove puppet and a stick in a rod puppet.",
+  "feedback": "A glove puppet fits over the hand. A puppet on a stick is a rod puppet.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.PUPPETRY.MAKE.M_CA5_PP_NO_FINGER_HOLES": {
+  "skill": "CREA.G5.PERFOR.PUPPETRY.MAKE",
+  "error": "Makes a glove puppet with no places for the fingers to move the head and arms.",
+  "example": {
+   "question": "Where do your fingers go in a glove puppet?",
+   "wrong_answer": "they do not go anywhere",
+   "correct_answer": "one finger in the head and fingers in the arms"
+  },
+  "cause": "The child makes the puppet like a doll.",
+  "reveals": "Offer \"they do not go anywhere\" next to the right answer and ask the question again in a new context.",
+  "help": "Put a hand in a sample and move the head.",
+  "feedback": "Leave room for a finger in the head and fingers in the arms.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.PUPPETRY.SHOW.M_CA5_PP_ONLY_TALK": {
+  "skill": "CREA.G5.PERFOR.PUPPETRY.SHOW",
+  "error": "Moves the puppet only while it talks and leaves it still the rest of the time.",
+  "example": {
+   "question": "Should the puppet keep moving while another puppet talks?",
+   "wrong_answer": "no, it stays still",
+   "correct_answer": "it listens: small nods and turns toward the speaker"
+  },
+  "cause": "The child thinks moving means talking.",
+  "reveals": "Offer \"no, it stays still\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise a listening puppet.",
+  "feedback": "Make your puppet listen with small nods while the other talks.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_ALPHABET_ORDER": {
   "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
   "error": "Puts the notes in alphabet order for pitch.",
@@ -2032,6 +2452,36 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_CA5_DR_D_ALL_HOLES": {
+  "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+  "error": "Covers all holes for D'.",
+  "example": {
+   "question": "How do you play the high D' on a descant recorder?",
+   "wrong_answer": "cover all the holes",
+   "correct_answer": "only the second finger of the left hand, thumb off"
+  },
+  "cause": "The child links D with \"many fingers\" because low notes need many.",
+  "reveals": "Offer \"cover all the holes\" next to the right answer and ask the question again in a new context.",
+  "help": "Play D' with one finger and listen.",
+  "feedback": "High D' uses one finger, the second of the left hand, with the thumb off.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA5_DR_PUFF_CHEEKS": {
+  "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+  "error": "Puffs the cheeks to blow.",
+  "example": {
+   "question": "Should your cheeks puff out when you play the recorder?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; blow a gentle, steady stream"
+  },
+  "cause": "The child thinks more air needs bigger cheeks.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Play while looking in a mirror.",
+  "feedback": "Keep cheeks still and blow gently and steadily.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_ARMS_TOGETHER": {
   "skill": "CREA.G5.PERFOR.SWIMMING.CRAWL",
   "error": "Thinks both arms pull at the same time.",
@@ -2118,7 +2568,7 @@
   },
   "cause": "The child is excited.",
   "reveals": "Offer \"Walk\" next to the right answer and ask the question again in a new context.",
-  "help": "Set rules.",
+  "help": "Walk the pool side slowly with the class and point at the wet, slippery floor.",
   "feedback": "Walk on the pool side. Running can make you slip.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft",
@@ -2240,6 +2690,21 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_CA5_SW_CG_WIN_ONLY": {
+  "skill": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+  "error": "Thinks counting games are only about winning.",
+  "example": {
+   "question": "Name a benefit of indigenous counting games.",
+   "wrong_answer": "only winning",
+   "correct_answer": "any of: counting skill, coordination, fitness, teamwork"
+  },
+  "cause": "The child focuses on the score.",
+  "reveals": "Offer \"only winning\" next to the right answer and ask the question again in a new context.",
+  "help": "List what the body and mind do in one game.",
+  "feedback": "Counting games build counting, fitness and teamwork, not only winning.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_VAGUE": {
   "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
@@ -2411,5 +2876,50 @@
    "mark": "doubtful",
    "why": "A trap option: a child who has used or seen the item would not say this."
   }
+ },
+ "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA5_AP_CRIT_ONLY_PRAISE": {
+  "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+  "error": "Gives only praise and no idea for improving.",
+  "example": {
+   "question": "What makes a helpful critique?",
+   "wrong_answer": "only saying it is good",
+   "correct_answer": "saying what works and one kind idea to improve"
+  },
+  "cause": "The child fears hurting a friend.",
+  "reveals": "Offer \"only saying it is good\" next to the right answer and ask the question again in a new context.",
+  "help": "Use two stars and a wish.",
+  "feedback": "A helpful critique says what works and gives one kind idea to improve.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_CA5_AP_TERM_PROP_ORNAMENT": {
+  "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS",
+  "error": "Calls a fly whisk an ornament.",
+  "example": {
+   "question": "A dancer holds a fly whisk. Is it a prop or an ornament?",
+   "wrong_answer": "an ornament",
+   "correct_answer": "a prop"
+  },
+  "cause": "Both add to the look of the dance.",
+  "reveals": "Offer \"an ornament\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: is it worn or held?",
+  "feedback": "Held things are props. Worn decorations are ornaments.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA5_AP_ANTHEM_LANGUAGE": {
+  "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+  "error": "Thinks the EAC anthem is sung in English only.",
+  "example": {
+   "question": "In which language is the EAC anthem sung?",
+   "wrong_answer": "English",
+   "correct_answer": "Kiswahili"
+  },
+  "cause": "The child expects anthems for many countries to be in English.",
+  "reveals": "Offer \"English\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the first line of the anthem.",
+  "feedback": "The East African Community anthem is sung in Kiswahili.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  }
 }

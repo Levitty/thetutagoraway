@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G8.CREATI.DRAWING_AND_PAINTING",
+ "title": "Drawing and Painting",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a still life with one big object; a colour wheel for complements.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE",
+   "key_step": "The child says dominance is the main feature the eye sees first, made by size, colour, contrast or position, with the rest subordinate.",
+   "floor": {
+    "prerequisite": "Knows balance in a picture (Grade 7).",
+    "question": "What is symmetrical balance?",
+    "answer": "both sides alike"
+   },
+   "representations": [
+    "posters",
+    "a still life",
+    "a viewfinder"
+   ],
+   "steps": [
+    "Find what the eye sees first.",
+    "Ask how it stands out.",
+    "Name the subordinate parts."
+   ],
+   "contexts": [
+    "a sports day poster",
+    "a still life painting"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a poster.",
+     "say": "What do you see first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "predict",
+     "do": "Why does it stand out?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Size and bright colour."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE.M_CA8_DM_MEANING",
+     "listen_for": [
+      "Every part is equal"
+     ],
+     "ask": "What is dominance in a picture?",
+     "repair": "Ask what the eye sees first in a poster: that is dominant."
+    },
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE.M_CA8_DM_HOW",
+     "listen_for": [
+      "Making it the smallest and dullest"
+     ],
+     "ask": "Which makes a feature dominant?",
+     "repair": "Paint a red pot among grey ones; which stands out?"
+    },
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE.M_CA8_DM_OTHER",
+     "listen_for": [
+      "Dominant parts"
+     ],
+     "ask": "What are the less important parts called?",
+     "repair": "Main feature: dominant. The rest: subordinate."
+    },
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE.M_CA8_DM_TWO_MAIN",
+     "listen_for": [
+      "several equal ones"
+     ],
+     "ask": "Should a picture have one dominant feature or several?",
+     "repair": "Show a poster with two big competing pictures."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is dominance?",
+     "answer": "the main feature that catches the eye first",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name one way to make a feature dominant.",
+     "answer": "any of: larger, brighter, contrasting colour, central position",
+     "shows": "how"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY",
+   "key_step": "The child names complementary pairs (red and green, blue and orange, yellow and violet) opposite on the wheel, giving strong contrast.",
+   "floor": {
+    "prerequisite": "Sorts warm and cool colours (Grade 7).",
+    "question": "Is blue warm or cool?",
+    "answer": "cool"
+   },
+   "representations": [
+    "a colour wheel",
+    "paint",
+    "a gradation strip"
+   ],
+   "steps": [
+    "Find the colour on the wheel.",
+    "Go straight across the centre.",
+    "Name the complement."
+   ],
+   "contexts": [
+    "a football kit design",
+    "a poster that must stand out"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at yellow.",
+     "say": "What is opposite?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for violet."
+    },
+    {
+     "beat": "reveal",
+     "do": "Violet."
+    },
+    {
+     "beat": "write",
+     "do": "Write the three pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY.M_CA8_CP_RED",
+     "listen_for": [
+      "Orange"
+     ],
+     "ask": "Which colour is complementary to red?",
+     "repair": "Draw a line through the centre of the wheel from red: it lands on green."
+    },
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY.M_CA8_CP_BLUE",
+     "listen_for": [
+      "Green"
+     ],
+     "ask": "Which colour is complementary to blue?",
+     "repair": "Go across the wheel from blue: orange."
+    },
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY.M_CA8_CP_WHEEL",
+     "listen_for": [
+      "Side by side"
+     ],
+     "ask": "Where do complementary colours sit on the wheel?",
+     "repair": "Complements are opposite; neighbours are analogous."
+    },
+    {
+     "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY.M_CA8_CP_MIX_GREY",
+     "listen_for": [
+      "a bright new colour"
+     ],
+     "ask": "Red and green paint are mixed. What do you get?",
+     "repair": "Mix a little of each on a palette."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the complement of blue?",
+     "answer": "orange",
+     "shows": "pairs"
+    },
+    {
+     "question": "Where are complementary colours on the wheel?",
+     "answer": "opposite each other",
+     "shows": "wheel"
+    }
+   ]
+  }
+ ]
+}

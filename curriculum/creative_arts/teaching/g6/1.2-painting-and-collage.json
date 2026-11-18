@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G6.CREATI.PAINTING_AND_COLLAGE",
+ "title": "Painting and Collage",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mix tertiary colours where the class can see. Mounting uses a teacher's cutting knife only.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL",
+   "key_step": "The child sorts primary, secondary and tertiary colours, and warm (red, orange, yellow) from cool (blue, green, purple) colours.",
+   "floor": {
+    "prerequisite": "Mixes secondary colours (Grade 5).",
+    "question": "What do yellow and blue make?",
+    "answer": "green"
+   },
+   "representations": [
+    "a twelve-part colour wheel",
+    "paint",
+    "warm and cool cards"
+   ],
+   "steps": [
+    "Primary: cannot be mixed.",
+    "Secondary: two primaries.",
+    "Tertiary: a primary with its neighbour secondary.",
+    "Warm or cool: fire or water."
+   ],
+   "contexts": [
+    "painting a sunset",
+    "painting a lake"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Red plus orange?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for red-orange."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mix: red-orange, a tertiary."
+    },
+    {
+     "beat": "point",
+     "do": "Is it warm or cool?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CW_SECONDARY_PRIMARY",
+     "listen_for": [
+      "Green"
+     ],
+     "ask": "Which of these is a primary colour?",
+     "repair": "Mix red and yellow to get orange, and ask whether red can be made by mixing."
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CW_MIX",
+     "listen_for": [
+      "Red and blue"
+     ],
+     "ask": "Which two colours make green?",
+     "repair": "Mix the three pairs of primaries on paper."
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CW_WARM",
+     "listen_for": [
+      "Blue"
+     ],
+     "ask": "Which colour is warm?",
+     "repair": "Link warm colours to fire and cool colours to water and sky."
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CA6_CW_TERTIARY_TWO_SECONDARY",
+     "listen_for": [
+      "mix two secondary colours"
+     ],
+     "ask": "How is a tertiary colour made?",
+     "repair": "Mix yellow and green on the palette: yellow-green."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is blue-green a tertiary colour?",
+     "answer": "yes",
+     "shows": "tertiary"
+    },
+    {
+     "question": "Is orange warm or cool?",
+     "answer": "warm",
+     "shows": "temperature"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES",
+   "key_step": "The child says a still life paints objects arranged on a table, brush strokes show form, a mat mount frames a picture, and a collage pastes materials.",
+   "floor": {
+    "prerequisite": "Knows how a montage is made (Grade 4).",
+    "question": "What is a montage made from?",
+    "answer": "many pictures pasted on a theme"
+   },
+   "representations": [
+    "a still life setup (a pot and fruits)",
+    "a mounted painting",
+    "a collage sample"
+   ],
+   "steps": [
+    "Still life: arrange, look, paint.",
+    "Mat mount: card with a window round the picture.",
+    "Collage: plan, cut, paste materials."
+   ],
+   "contexts": [
+    "a class exhibition",
+    "a painting for the school office"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show fruits on a table.",
+     "say": "What kind of painting is this subject for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for still life."
+    },
+    {
+     "beat": "predict",
+     "do": "What frames it for display?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A mat mount."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES.M_PT_STILL",
+     "listen_for": [
+      "A painting of people moving"
+     ],
+     "ask": "What is a still life?",
+     "repair": "Set a bowl of fruit and a jug on a table and ask what could move."
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES.M_PT_MAT",
+     "listen_for": [
+      "To stand on"
+     ],
+     "ask": "What is a mat used for when mounting a painting?",
+     "repair": "Show a framed picture with a card border."
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES.M_PT_COLLAGE",
+     "listen_for": [
+      "By drawing with a pencil"
+     ],
+     "ask": "How is a collage made?",
+     "repair": "Tear paper pieces and glue them to make a picture."
+    },
+    {
+     "code": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES.M_CA6_PT_COLLAGE_ONE_MATERIAL",
+     "listen_for": [
+      "only coloured paper"
+     ],
+     "ask": "What can a collage be made from?",
+     "repair": "Show a collage with fabric, seeds and paper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a still life?",
+     "answer": "a picture of objects that do not move, arranged together",
+     "shows": "still life"
+    },
+    {
+     "question": "What is a mat mount for?",
+     "answer": "framing a picture neatly for display",
+     "shows": "mounting"
+    }
+   ]
+  }
+ ]
+}

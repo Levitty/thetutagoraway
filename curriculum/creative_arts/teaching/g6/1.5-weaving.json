@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G6.CREATI.WEAVING",
+ "title": "Weaving",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a card loom with serrated edges; the phone describes over-under patterns in words.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE",
+   "key_step": "The child says the warp runs lengthwise on the loom, the weft goes across over one and under one, and the next row starts opposite.",
+   "floor": {
+    "prerequisite": "Made a plain paper weave (Grade 3).",
+    "question": "In a paper weave, does each strip go over every strip?",
+    "answer": "no, over one, under one"
+   },
+   "representations": [
+    "a serrated card loom",
+    "yarn or sisal",
+    "a sample mat"
+   ],
+   "steps": [
+    "Thread the warp lengthwise.",
+    "Weave the weft over one, under one.",
+    "Start the next row opposite.",
+    "Push rows close gently."
+   ],
+   "contexts": [
+    "weaving a mat for gymnastics",
+    "a table mat"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show row one: over, under.",
+     "say": "How does row two start?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for under."
+    },
+    {
+     "beat": "reveal",
+     "do": "Opposite to row one."
+    },
+    {
+     "beat": "write",
+     "do": "Label warp and weft."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE.M_WV_WARP",
+     "listen_for": [
+      "The weft"
+     ],
+     "ask": "Which threads are held tight on the loom?",
+     "repair": "Make a loom and name the threads as they are used: warp stays, weft travels."
+    },
+    {
+     "code": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE.M_WV_PATTERN",
+     "listen_for": [
+      "Over two warp threads and under two"
+     ],
+     "ask": "How does a plain weave go?",
+     "repair": "Weave a strip over one and under one."
+    },
+    {
+     "code": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE.M_WV_SAME_ROW",
+     "listen_for": [
+      "The same as the first row"
+     ],
+     "ask": "How does the second row of a plain weave start?",
+     "repair": "Weave two rows the same and see the strip fall apart."
+    },
+    {
+     "code": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE.M_CA6_WV_PULL_TIGHT",
+     "listen_for": [
+      "tight is always stronger"
+     ],
+     "ask": "Why must the weft not be pulled too tight?",
+     "repair": "Weave two rows, one too tight; see the waist form."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which threads run lengthwise on the loom?",
+     "answer": "the warp",
+     "shows": "warp"
+    },
+    {
+     "question": "In plain weave, if row one starts over, how does row two start?",
+     "answer": "under",
+     "shows": "alternating"
+    }
+   ]
+  }
+ ]
+}

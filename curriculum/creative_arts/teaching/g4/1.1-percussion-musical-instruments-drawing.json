@@ -1,0 +1,367 @@
+{
+ "sub_strand": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR",
+ "title": "Percussion Musical Instruments (Drawing)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring real or improvised instruments: a drum, a kayamba, shakers, a set of tuned bottles. Community names are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
+   "key_step": "The child names Kenyan percussion instruments, says each is hit, shaken or scraped, and keeps string and wind instruments out of the group.",
+   "floor": {
+    "prerequisite": "Names a Kenyan string instrument (Grade 3).",
+    "question": "Is the nyatiti played by plucking or hitting?",
+    "answer": "plucking"
+   },
+   "representations": [
+    "real or improvised instruments",
+    "picture cards with the community",
+    "three columns: hit, shake, scrape"
+   ],
+   "steps": [
+    "Look at how the instrument makes its sound.",
+    "Hit, shaken or scraped means percussion.",
+    "Plucked is string; blown is wind.",
+    "Say the community it comes from."
+   ],
+   "contexts": [
+    "a Luhya isukuti dance at a school festival",
+    "a kayamba in a coastal song",
+    "a church choir with a drum"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hold up a drum and a nyatiti.",
+     "say": "Which one is percussion?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the drum."
+    },
+    {
+     "beat": "predict",
+     "do": "Show a kayamba.",
+     "say": "Is it hit, shaken or plucked?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Shake it: shaken, so percussion."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_STRING_AS_PERC",
+     "listen_for": [
+      "The nyatiti"
+     ],
+     "ask": "Which of these is a percussion instrument?",
+     "repair": "Ask: do you hit it, pluck it or blow it? Sort five instruments by that one question."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_WIND_AS_PERC",
+     "listen_for": [
+      "The nzumari"
+     ],
+     "ask": "Which of these is a percussion instrument?",
+     "repair": "Ask who makes the sound: the breath, a plucking finger or a hit?"
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_KAYAMBA_HIT",
+     "listen_for": [
+      "It is hit with two sticks"
+     ],
+     "ask": "How is the kayamba played?",
+     "repair": "Shake a tin of seeds and listen: the seeds hit the walls and make the sound."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_COMMUNITY",
+     "listen_for": [
+      "The Luo"
+     ],
+     "ask": "The isukuti drums belong mainly to which people?",
+     "repair": "Use a map of Kenya and a recording of isukuti to link the sound to the Luhya of western Kenya."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a percussion instrument: orutu, isukuti or nzumari?",
+     "answer": "isukuti",
+     "shows": "sorting by how it is played"
+    },
+    {
+     "question": "How is the kayamba played?",
+     "answer": "it is shaken",
+     "shows": "playing method"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
+   "key_step": "The child sorts percussion instruments by whether they can play notes of different pitch (melodic) or not (non-melodic), never by loudness.",
+   "floor": {
+    "prerequisite": "Tells long and short sounds apart (Grade 3).",
+    "question": "Is a clap a long or a short sound?",
+    "answer": "short"
+   },
+   "representations": [
+    "tuned bottles with different water levels",
+    "a single drum",
+    "a kayamba"
+   ],
+   "steps": [
+    "Play the instrument twice.",
+    "Ask: can it go higher and lower?",
+    "Yes means melodic; no means non-melodic."
+   ],
+   "contexts": [
+    "tuned bottles at a school concert",
+    "a marimba in a band",
+    "a rattle at a dance"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Tap three bottles with different water.",
+     "say": "Do the notes go up?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "point",
+     "do": "Shake the kayamba.",
+     "say": "Does it go up?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Bottles: melodic. Kayamba: non-melodic."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_LOUD_MELODIC",
+     "listen_for": [
+      "The loudest drum"
+     ],
+     "ask": "Which of these is a melodic instrument?",
+     "repair": "Play one drum hard and soft: the note does not change. Then play a xylophone bar by bar."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_ALL_MELODIC",
+     "listen_for": [
+      "Yes, every instrument makes a sound"
+     ],
+     "ask": "Is a kayamba melodic?",
+     "repair": "Shake the kayamba and try to hum a tune with it. Then do the same on tuned bars."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_NONMEL_MEANS",
+     "listen_for": [
+      "It makes a bad sound"
+     ],
+     "ask": "What does non-melodic mean?",
+     "repair": "Play a non-melodic shaker in a rhythm: it sounds good but has one sound."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_SHAKER_MELODIC",
+     "listen_for": [
+      "melodic, it plays with the song"
+     ],
+     "ask": "Is the kayamba melodic or non-melodic?",
+     "repair": "Shake the kayamba softly and loudly: ask if the note goes up or down. It never does."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a xylophone melodic or non-melodic?",
+     "answer": "melodic",
+     "shows": "pitch decides the group"
+    },
+    {
+     "question": "A drum is very loud. Does that make it melodic?",
+     "answer": "No, loudness does not decide it",
+     "shows": "loudness is not pitch"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
+   "key_step": "The child says the skin vibrates to make the sound, the shell makes it fuller, and tightness and size change the pitch.",
+   "floor": {
+    "prerequisite": "Knows that sound comes from things that shake.",
+    "question": "What happens to a ruler that you twang on a desk?",
+    "answer": "it shakes and makes a sound"
+   },
+   "representations": [
+    "a drum",
+    "a ruler on a desk edge",
+    "two drums of different size"
+   ],
+   "steps": [
+    "Hit the skin and feel it shake.",
+    "Name the part and its job.",
+    "Tighten or loosen: say what happens to the pitch."
+   ],
+   "contexts": [
+    "a drummer warming the skin by the fire to tighten it",
+    "a big and a small drum in a band"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the skin, shell and stick."
+    },
+    {
+     "beat": "predict",
+     "do": "Tighten the skin.",
+     "say": "Higher or lower?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for higher."
+    },
+    {
+     "beat": "reveal",
+     "do": "Play it: tighter is higher."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_SHELL_SOUND",
+     "listen_for": [
+      "The wooden shell"
+     ],
+     "ask": "What part of a drum vibrates to make the main sound?",
+     "repair": "Lay a few grains on the skin and tap it: the grains jump. Touch the shell: it hardly moves."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_LOOSE_HIGHER",
+     "listen_for": [
+      "It gets lower"
+     ],
+     "ask": "A drummer tightens the skin. What happens to the sound?",
+     "repair": "Tap a plastic sheet held loose and then held tight over a bowl."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_BIG_HIGHER",
+     "listen_for": [
+      "The small drum"
+     ],
+     "ask": "Which drum gives the lower sound?",
+     "repair": "Hit a small and a big tin and listen: the big one sounds lower."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_STICK_SOUND",
+     "listen_for": [
+      "It makes the sound by itself"
+     ],
+     "ask": "What does the drum stick do?",
+     "repair": "Hit the stick on the floor: only a small tap. Hit it on the drum: a big sound."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of the drum shakes to make the sound?",
+     "answer": "the skin",
+     "shows": "the vibrating part"
+    },
+    {
+     "question": "Which gives the lower sound: a big drum or a small drum?",
+     "answer": "a big drum",
+     "shows": "size and pitch"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
+   "key_step": "The child orders the steps of making charcoal sticks (an adult does the fire) and says smudging makes soft light and dark tones.",
+   "floor": {
+    "prerequisite": "Draws a picture using shapes (Grade 3).",
+    "question": "What shape is the top of a drum?",
+    "answer": "a circle"
+   },
+   "representations": [
+    "twigs, foil and a tin (shown, not lit)",
+    "a charcoal drawing of a drum",
+    "a value strip from light to dark"
+   ],
+   "steps": [
+    "Cut and trim straight twigs.",
+    "Seal them in foil or a tin.",
+    "An adult burns them with little air; let them cool.",
+    "Draw, then smudge for soft tones."
+   ],
+   "contexts": [
+    "an art lesson drawing a drum",
+    "a teacher preparing charcoal before class"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the four steps in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"let them cool\".",
+     "say": "What comes just before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"burn with little air\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number all four."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_BURN_AIR",
+     "listen_for": [
+      "In an open fire until they turn to ash"
+     ],
+     "ask": "How are the twigs burned to make charcoal sticks?",
+     "repair": "Show wood char in a tin with a tight lid: it stays black and in shape because little air gets in."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_USE_HOT",
+     "listen_for": [
+      "Nothing, use it at once"
+     ],
+     "ask": "What must happen before the charcoal is used?",
+     "repair": "Say: hot charcoal burns the skin and stays hot inside for a long time."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_SMUDGE_ERASE",
+     "listen_for": [
+      "It removes the drawing"
+     ],
+     "ask": "What does smudging do in a charcoal drawing?",
+     "repair": "Draw a dark patch and rub it with a finger: it spreads into a soft shade."
+    },
+    {
+     "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_LIGHT_HARD",
+     "listen_for": [
+      "Press more lightly"
+     ],
+     "ask": "How do you make a darker area with charcoal?",
+     "repair": "Make three strokes with light, medium and hard pressure and compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are the twigs sealed before burning?",
+     "answer": "so they get little air and turn to charcoal, not ash",
+     "shows": "little air"
+    },
+    {
+     "question": "What does smudging do to a charcoal drawing?",
+     "answer": "it spreads the charcoal into soft light and dark tones",
+     "shows": "tonal value"
+    }
+   ]
+  }
+ ]
+}

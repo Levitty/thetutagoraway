@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A",
+ "title": "Roles of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use local examples: a choir at a wedding, a county sports day, a muralist, a footballer earning a living.",
+ "skills": [
+  {
+   "skill": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.ROLES",
+   "key_step": "The child describes roles of Creative Arts and Sports: entertainment, passing on culture, health and fitness, unity, communication and earning a living.",
+   "floor": {
+    "prerequisite": "Names the categories (Grade 7).",
+    "question": "Which category is drama?",
+    "answer": "performing arts"
+   },
+   "representations": [
+    "role cards",
+    "local examples",
+    "a storyboard frame"
+   ],
+   "steps": [
+    "Name an activity.",
+    "Ask what it does for people.",
+    "Name the role."
+   ],
+   "contexts": [
+    "a county music festival",
+    "a marathon in town"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A choir sings at a wedding.",
+     "say": "Which role?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Entertainment, culture and unity."
+    },
+    {
+     "beat": "write",
+     "do": "Write six roles."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.ROLES.M_CA8_RO_USELESS",
+     "listen_for": [
+      "Nothing useful"
+     ],
+     "ask": "What do Creative Arts and Sports do for society?",
+     "repair": "List people in the county who earn a living from music, art or sport."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.ROLES.M_CA8_RO_HEALTH",
+     "listen_for": [
+      "Making people sick"
+     ],
+     "ask": "Which role do sports play?",
+     "repair": "Compare a week with daily exercise and a week without."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.ROLES.M_CA8_RO_CULTURE",
+     "listen_for": [
+      "They make it forget its past"
+     ],
+     "ask": "How do songs and dances help a community?",
+     "repair": "Name a folk song an elder taught the class."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.ROLES.M_CA8_RO_JOB_ONLY_STARS",
+     "listen_for": [
+      "only famous stars"
+     ],
+     "ask": "Who can earn a living from Creative Arts and Sports?",
+     "repair": "List jobs behind one football match or one concert."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a role of sport in society.",
+     "answer": "any of: fitness, unity, entertainment, earning a living",
+     "shows": "roles"
+    },
+    {
+     "question": "How do the arts pass on culture?",
+     "answer": "songs, dances and crafts carry a community's ways to the young",
+     "shows": "culture"
+    }
+   ]
+  }
+ ]
+}

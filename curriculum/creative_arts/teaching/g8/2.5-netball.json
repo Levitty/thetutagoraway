@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.NETBALL",
+ "title": "Netball",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Footwork, dodging and marking practised in threes on a court.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.NETBALL.NETBALL",
+   "key_step": "The child describes netball passes (chest, bounce, shoulder, overhead), footwork (land and pivot), dodging and marking, with the three-second rule.",
+   "floor": {
+    "prerequisite": "Knows chest and overhead passes (Grade 4).",
+    "question": "Where does a chest pass start?",
+    "answer": "at the chest"
+   },
+   "representations": [
+    "a netball",
+    "a court diagram",
+    "bibs"
+   ],
+   "steps": [
+    "Choose the pass for the space.",
+    "Land and pivot.",
+    "Dodge to get free; mark to block."
+   ],
+   "contexts": [
+    "an inter-house netball match",
+    "a PE lesson"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Ball bounced to a team mate.",
+     "say": "Which pass?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for bounce pass."
+    },
+    {
+     "beat": "predict",
+     "do": "Can she run with it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: pivot and pass."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.NETBALL.NETBALL.M_CA8_NB_PLAYERS",
+     "listen_for": [
+      "Eleven"
+     ],
+     "ask": "How many players are in a netball team?",
+     "repair": "Count the seven positions with bibs: GS, GA, WA, C, WD, GD, GK."
+    },
+    {
+     "code": "CREA.G8.CREATI.NETBALL.NETBALL.M_CA8_NB_RUN",
+     "listen_for": [
+      "Yes, as far as she likes"
+     ],
+     "ask": "May a netball player run with the ball?",
+     "repair": "Land, pivot on one foot, then pass."
+    },
+    {
+     "code": "CREA.G8.CREATI.NETBALL.NETBALL.M_CA8_NB_SECONDS",
+     "listen_for": [
+      "Ten seconds"
+     ],
+     "ask": "For how long may a player hold the ball?",
+     "repair": "Count three seconds aloud while holding the ball."
+    },
+    {
+     "code": "CREA.G8.CREATI.NETBALL.NETBALL.M_CA8_NB_PIVOT_BOTH",
+     "listen_for": [
+      "step with both feet"
+     ],
+     "ask": "After landing with the ball, what may you do?",
+     "repair": "Mark the landing foot with chalk and pivot on it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many players in a netball team?",
+     "answer": "seven",
+     "shows": "team"
+    },
+    {
+     "question": "How long may a player hold the ball?",
+     "answer": "three seconds",
+     "shows": "rule"
+    }
+   ]
+  }
+ ]
+}

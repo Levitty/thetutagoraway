@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G6.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sing the ladder from doh to doh' with hand signs. The phone describes signs in words.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.MELODY.SOLFA",
+   "key_step": "The child says the sol-fa ladder d r m f s l t d' up and down and reads the signs for l (relaxed hand hanging) and t (finger pointing up).",
+   "floor": {
+    "prerequisite": "Reads the signs for d r m f s (Grade 5).",
+    "question": "Which sign has the thumb pointing down?",
+    "answer": "f"
+   },
+   "representations": [
+    "an eight-rung ladder",
+    "singing",
+    "hand signs"
+   ],
+   "steps": [
+    "Sing up d to d'.",
+    "Sing down d' to d.",
+    "Add signs for l and t."
+   ],
+   "contexts": [
+    "a choir warm-up",
+    "learning a new melody"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw eight rungs with d at the bottom."
+    },
+    {
+     "beat": "predict",
+     "do": "What comes after s?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for l."
+    },
+    {
+     "beat": "reveal",
+     "do": "l, t, then d'."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.MELODY.SOLFA.M_ML_ORDER",
+     "listen_for": [
+      "Ti"
+     ],
+     "ask": "Which syllable comes after soh going up?",
+     "repair": "Sing the ladder up and down several times."
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.SOLFA.M_ML_DOWN",
+     "listen_for": [
+      "Re"
+     ],
+     "ask": "Which syllable comes first when you sing down from doh1?",
+     "repair": "Climb a stair as you sing up and walk down as you sing down."
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.SOLFA.M_ML_SIGN",
+     "listen_for": [
+      "A finger pointing up"
+     ],
+     "ask": "What is the hand sign for doh?",
+     "repair": "Make the two signs and sing the syllables."
+    },
+    {
+     "code": "CREA.G6.CREATI.MELODY.SOLFA.M_CA6_ML_TOP_DOH_LOW",
+     "listen_for": [
+      "lower"
+     ],
+     "ask": "Is doh' higher or lower than doh?",
+     "repair": "Sing up the ladder and land on doh'."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which comes just below doh'?",
+     "answer": "ti",
+     "shows": "order"
+    },
+    {
+     "question": "Going down, what comes after s?",
+     "answer": "f",
+     "shows": "descending"
+    }
+   ]
+  }
+ ]
+}

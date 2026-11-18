@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/creative_arts/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Creative Arts and Sports teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/creative_arts/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Creative Arts and Sports teacher's review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g7)"};
 export const SUBSTRANDS = {
  "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE": {
   "name": "Introduction to Creative Arts and Sports",
@@ -475,7 +475,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_CC_ONE_ONLY",
    "M_CA7_CC_SPORT",
-   "M_CA7_CC_ARTS"
+   "M_CA7_CC_ARTS",
+   "M_CA7_CC_DRAMA_SPORT"
   ]
  },
  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS": {
@@ -489,7 +490,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_SE_SETTING",
    "M_CA7_SE_CHARACTER",
-   "M_CA7_SE_PLOT"
+   "M_CA7_SE_PLOT",
+   "M_CA7_SE_THEME_TITLE"
   ]
  },
  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS": {
@@ -503,7 +505,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_FC_AGILITY",
    "M_CA7_FC_FLEX",
-   "M_CA7_FC_ENDURANCE"
+   "M_CA7_FC_ENDURANCE",
+   "M_CA7_FC_STRENGTH_SIZE"
   ]
  },
  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES": {
@@ -518,7 +521,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_NV_MINIM",
    "M_CA7_NV_SEMIBREVE",
-   "M_CA7_NV_BAR"
+   "M_CA7_NV_BAR",
+   "M_CA7_NV_QUAVER_BEAT"
   ]
  },
  "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES": {
@@ -534,7 +538,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_TP_LINES",
    "M_CA7_TP_SPACES",
-   "M_CA7_TP_FIRST"
+   "M_CA7_TP_FIRST",
+   "M_CA7_TP_LEDGER_C"
   ]
  },
  "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE": {
@@ -548,7 +553,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_BL_SYM",
    "M_CA7_BL_MEANING",
-   "M_CA7_BL_RADIAL"
+   "M_CA7_BL_RADIAL",
+   "M_CA7_BL_CENTRE_ONLY"
   ]
  },
  "CREA.G7.CREATI.DRAWING_AND_PAINTING.COLOUR_TEMP": {
@@ -562,7 +568,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_CT_WARM",
    "M_CA7_CT_COOL",
-   "M_CA7_CT_FEEL"
+   "M_CA7_CT_FEEL",
+   "M_CA7_CT_DISTANCE"
   ]
  },
  "CREA.G7.CREATI.RHYTHM.RHYTHM_FACTORS": {
@@ -578,7 +585,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_RF_BEATS",
    "M_CA7_RF_FACTOR",
-   "M_CA7_RF_BARS"
+   "M_CA7_RF_BARS",
+   "M_CA7_RF_NO_END"
   ]
  },
  "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.JAVELIN": {
@@ -593,7 +601,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_JV_MATERIAL",
    "M_CA7_JV_PHASE",
-   "M_CA7_JV_SAFETY"
+   "M_CA7_JV_SAFETY",
+   "M_CA7_JV_FETCH_ANY"
   ]
  },
  "CREA.G7.CREATI.MELODY.MELODY_QUALITIES": {
@@ -604,12 +613,14 @@ export const SKILLS = {
    "CREA.G7.CREATI.MELODY.a"
   ],
   "pre": [
-   "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES"
+   "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.NOTE_VALUES",
+   "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES"
   ],
   "mis": [
    "M_CA7_MQ_HOME",
    "M_CA7_MQ_SHAPE",
-   "M_CA7_MQ_REPEAT"
+   "M_CA7_MQ_REPEAT",
+   "M_CA7_MQ_SHARPS"
   ]
  },
  "CREA.G7.CREATI.HANDBALL.HANDBALL": {
@@ -623,7 +634,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_HB_PLAYERS",
    "M_CA7_HB_HANDS",
-   "M_CA7_HB_STEPS"
+   "M_CA7_HB_STEPS",
+   "M_CA7_HB_AREA"
   ]
  },
  "CREA.G7.CREATI.DESCANT_RECORDER.RECORDER_FACTORS": {
@@ -640,7 +652,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_RC_FACTOR",
    "M_CA7_RC_REST",
-   "M_CA7_RC_TEMPO"
+   "M_CA7_RC_TEMPO",
+   "M_CA7_RC_KEY_SKIP"
   ]
  },
  "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES": {
@@ -657,7 +670,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_ST_VOICE",
    "M_CA7_ST_FLIP",
-   "M_CA7_ST_AUDIENCE"
+   "M_CA7_ST_AUDIENCE",
+   "M_CA7_ST_BIG_JUMPS"
   ]
  },
  "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS": {
@@ -674,7 +688,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_FS_TRAP",
    "M_CA7_FS_DRIBBLE",
-   "M_CA7_FS_ETCH"
+   "M_CA7_FS_ETCH",
+   "M_CA7_FS_SHOOT_TOE"
   ]
  },
  "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS": {
@@ -688,7 +703,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_FO_LULLABY",
    "M_CA7_FO_WORK",
-   "M_CA7_FO_FUNERAL"
+   "M_CA7_FO_FUNERAL",
+   "M_CA7_FO_PRAISE_CHURCH"
   ]
  },
  "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT.BEADWORK": {
@@ -703,7 +719,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_BW_MATERIAL",
    "M_CA7_BW_FUNCTION",
-   "M_CA7_BW_TOOL"
+   "M_CA7_BW_TOOL",
+   "M_CA7_BW_COLOUR_RANDOM"
   ]
  },
  "CREA.G7.CREATI.SWIMMING.SWIMMING": {
@@ -718,7 +735,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_SM_PENCIL",
    "M_CA7_SM_BACK",
-   "M_CA7_SM_SAFETY"
+   "M_CA7_SM_SAFETY",
+   "M_CA7_SM_HEAD_UP_BACK"
   ]
  },
  "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.ROPE_GAMES": {
@@ -733,7 +751,8 @@ export const SKILLS = {
   "mis": [
    "M_CA7_RG_NAME",
    "M_CA7_RG_BENEFIT",
-   "M_CA7_RG_SKIP"
+   "M_CA7_RG_SKIP",
+   "M_CA7_RG_TUG_ARMS"
   ]
  },
  "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES": {
@@ -747,7 +766,27 @@ export const SKILLS = {
   "mis": [
    "M_CA7_SV_CHEAT",
    "M_CA7_SV_VALUE",
-   "M_CA7_SV_TEAM"
+   "M_CA7_SV_TEAM",
+   "M_CA7_SV_DRUGS_OK"
+  ]
+ },
+ "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS": {
+  "name": "Analyse a folk song and a storytelling performance using the right terms",
+  "sub": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART",
+  "outcome": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
+  "outcomes": [
+   "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
+   "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.c"
+  ],
+  "pre": [
+   "CREA.G7.CREATI.KENYAN_FOLK_SONGS.FOLK_SONGS",
+   "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES"
+  ],
+  "mis": [
+   "M_CA7_AN_OPINION_ONLY",
+   "M_CA7_AN_THEME_PLOT",
+   "M_CA7_AN_TYPE_FROM_TUNE",
+   "M_CA7_AN_TECHNIQUE_CONTENT"
   ]
  }
 };
@@ -755,6 +794,7 @@ export const MIS_FEEDBACK = {
  "M_CA7_CC_ONE_ONLY": "Music and dance often work together.",
  "M_CA7_CC_SPORT": "Physical education and sports is a category.",
  "M_CA7_CC_ARTS": "A collage is art and craft.",
+ "M_CA7_CC_DRAMA_SPORT": "Drama tells a story to an audience. It is a performing art.",
  "M_CA7_SE_SETTING": "The setting is the place and time.",
  "M_CA7_SE_CHARACTER": "Characters are the people or animals in the story.",
  "M_CA7_SE_PLOT": "The plot is the order of events.",
@@ -767,46 +807,68 @@ export const MIS_FEEDBACK = {
  "M_CA7_TP_LINES": "The lines are E G B D F.",
  "M_CA7_TP_SPACES": "The spaces are F A C E.",
  "M_CA7_TP_FIRST": "The bottom line is E.",
+ "M_CA7_SE_THEME_TITLE": "The theme is the main idea or lesson, not the title.",
+ "M_CA7_FC_STRENGTH_SIZE": "Muscular strength is the force a muscle can produce, not body size.",
+ "M_CA7_NV_QUAVER_BEAT": "One quaver lasts half a beat. Two quavers make one beat.",
+ "M_CA7_TP_LEDGER_C": "One ledger line below the treble staff is middle C.",
  "M_CA7_BL_SYM": "Symmetrical balance has both sides alike.",
  "M_CA7_BL_MEANING": "Balance is the even spread of visual weight.",
  "M_CA7_BL_RADIAL": "Radial balance spreads from the centre.",
  "M_CA7_CT_WARM": "Red, orange and yellow are warm.",
  "M_CA7_CT_COOL": "Blue, green and violet are cool.",
  "M_CA7_CT_FEEL": "Warm colours remind us of sun and fire.",
+ "M_CA7_BL_CENTRE_ONLY": "A picture can be balanced off-centre if the weight on each side is equal. That is asymmetrical balance.",
+ "M_CA7_CT_DISTANCE": "Cool colours seem to go back, so far hills are painted blue.",
  "M_CA7_RF_BEATS": "The notes in each bar add up to the time signature.",
  "M_CA7_RF_FACTOR": "The time signature is a factor.",
  "M_CA7_RF_BARS": "A four-bar pattern has four bars.",
+ "M_CA7_RF_NO_END": "End on a long note so the rhythm sounds finished.",
  "M_CA7_JV_MATERIAL": "Soft wood or bamboo is carved.",
  "M_CA7_JV_PHASE": "The grip and carry come first, then the approach run.",
  "M_CA7_JV_SAFETY": "A javelin is thrown only in a cleared field with a teacher.",
+ "M_CA7_JV_FETCH_ANY": "Wait for the teacher's signal before collecting any javelin.",
  "M_CA7_MQ_HOME": "A melody in C major ends on C.",
  "M_CA7_MQ_SHAPE": "A good melody has a clear shape.",
  "M_CA7_MQ_REPEAT": "Repetition makes a melody easy to remember.",
+ "M_CA7_MQ_SHARPS": "C major has no sharps or flats.",
  "M_CA7_HB_PLAYERS": "A handball team has seven players.",
  "M_CA7_HB_HANDS": "Handball is played with the hands.",
  "M_CA7_HB_STEPS": "A player may take three steps with the ball.",
+ "M_CA7_HB_AREA": "Only the goalkeeper may be inside the goal area.",
  "M_CA7_RC_FACTOR": "Check the time signature and key.",
  "M_CA7_RC_REST": "A rest is a silence.",
  "M_CA7_RC_TEMPO": "Tempo tells how fast to play.",
+ "M_CA7_RC_KEY_SKIP": "The key signature applies to every F in the piece: play F sharp.",
  "M_CA7_ST_VOICE": "Storytellers vary their voice.",
  "M_CA7_ST_FLIP": "A flipbook has many pictures that change a little each time.",
  "M_CA7_ST_AUDIENCE": "Storytellers invite the audience to join in.",
+ "M_CA7_ST_BIG_JUMPS": "Change each page a little so the movement looks smooth.",
  "M_CA7_FS_TRAP": "Trapping is stopping and controlling the ball.",
  "M_CA7_FS_DRIBBLE": "Dribbling keeps the ball close while moving.",
  "M_CA7_FS_ETCH": "Crayon etching scratches a top layer to show colours.",
+ "M_CA7_FS_SHOOT_TOE": "Shoot with the laces for power and aim.",
  "M_CA7_FO_LULLABY": "A lullaby puts a baby to sleep.",
  "M_CA7_FO_WORK": "A work song is sung while working.",
  "M_CA7_FO_FUNERAL": "A dirge is a funeral song.",
+ "M_CA7_FO_PRAISE_CHURCH": "Folk praise songs praise people such as heroes, not only God.",
  "M_CA7_BW_MATERIAL": "Beadwork uses beads and thread.",
  "M_CA7_BW_FUNCTION": "Jewellery shows identity, status and ceremonies.",
  "M_CA7_BW_TOOL": "A needle is used for beading.",
+ "M_CA7_BW_COLOUR_RANDOM": "In many communities bead colours carry meaning.",
  "M_CA7_SM_PENCIL": "In a pencil dive the body is straight, feet first.",
  "M_CA7_SM_BACK": "In backstroke the swimmer lies on the back.",
  "M_CA7_SM_SAFETY": "Swim only with a lifeguard or teacher.",
+ "M_CA7_SM_HEAD_UP_BACK": "Keep your head back, ears in the water, looking up.",
  "M_CA7_RG_NAME": "Tug of war is a rope game.",
  "M_CA7_RG_BENEFIT": "Rope games build fitness and coordination.",
  "M_CA7_RG_SKIP": "In skipping one jumps over the rope.",
+ "M_CA7_RG_TUG_ARMS": "Lean back and push with your legs together. The legs give the pull.",
  "M_CA7_SV_CHEAT": "Cheating spoils sport.",
  "M_CA7_SV_VALUE": "Fair play is a value of clean sport.",
- "M_CA7_SV_TEAM": "Teamwork and respect matter in a team game."
+ "M_CA7_SV_TEAM": "Teamwork and respect matter in a team game.",
+ "M_CA7_SV_DRUGS_OK": "Drugs to win are cheating and harm your health, seen or not.",
+ "M_CA7_AN_OPINION_ONLY": "An analysis says what you heard or saw and what it shows.",
+ "M_CA7_AN_THEME_PLOT": "The theme is the idea the story teaches, not the events.",
+ "M_CA7_AN_TYPE_FROM_TUNE": "A song's type comes from its occasion and words, not only its speed.",
+ "M_CA7_AN_TECHNIQUE_CONTENT": "A technique is how the story is told, such as voice changes or pauses."
 };

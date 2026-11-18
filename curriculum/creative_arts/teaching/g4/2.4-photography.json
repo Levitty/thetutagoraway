@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G4.PERFOR.PHOTOGRAPHY",
+ "title": "Photography",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use school or family devices only with permission. Never photograph a person without asking.",
+ "skills": [
+  {
+   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
+   "key_step": "The child names devices that take photographs (camera, phone, tablet), asks permission and handles them with care.",
+   "floor": {
+    "prerequisite": "Knows sources of light.",
+    "question": "Name one source of light.",
+    "answer": "the sun"
+   },
+   "representations": [
+    "a phone or tablet (school)",
+    "pictures of devices",
+    "a care chart"
+   ],
+   "steps": [
+    "Find the lens.",
+    "Ask permission to use it.",
+    "Hold with two hands and use the strap."
+   ],
+   "contexts": [
+    "photographing a class project",
+    "a school sports day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a radio and a phone.",
+     "say": "Which can take a photo?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the phone."
+    },
+    {
+     "beat": "write",
+     "do": "Write: ask, two hands, strap."
+    },
+    {
+     "beat": "reveal",
+     "do": "The phone has a lens."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_TV_CAMERA",
+     "listen_for": [
+      "A television"
+     ],
+     "ask": "Which of these takes photographs?",
+     "repair": "Sort devices by whether they have a lens."
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_NO_ASK",
+     "listen_for": [
+      "Take it quickly"
+     ],
+     "ask": "Before taking a photograph of a person, what should you do?",
+     "repair": "Ask: how would you feel if someone photographed you without asking?"
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_CARELESS",
+     "listen_for": [
+      "With wet hands, by one finger"
+     ],
+     "ask": "How should you handle a camera?",
+     "repair": "Show a smudged lens photo and a clean one."
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_RADIO_CAMERA",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Can a radio take a photograph?",
+     "repair": "Look for the lens."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a device that can take a photograph.",
+     "answer": "any of: camera, phone, tablet",
+     "shows": "devices"
+    },
+    {
+     "question": "What must you do before using someone's phone?",
+     "answer": "ask permission",
+     "shows": "care"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+   "key_step": "The child says good light falls on the subject (sun behind the photographer) and the centre of interest is big and clear.",
+   "floor": {
+    "prerequisite": "Knows light helps us see.",
+    "question": "Is it easier to see in the dark or in light?",
+    "answer": "in light"
+   },
+   "representations": [
+    "two photos, good and poor light",
+    "a frame made of card",
+    "a device"
+   ],
+   "steps": [
+    "Stand with the sun behind you.",
+    "Choose the centre of interest.",
+    "Move close so it fills the frame."
+   ],
+   "contexts": [
+    "photographing a friend's artwork",
+    "a picture of a tree at school"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a photo with the sun behind the subject.",
+     "say": "What is wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"too dark\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Turn so the sun is behind you."
+    },
+    {
+     "beat": "write",
+     "do": "Write the two rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_SUN_BEHIND_SUBJECT",
+     "listen_for": [
+      "Behind the person being photographed"
+     ],
+     "ask": "Where should the sun be for a good photograph?",
+     "repair": "Take two photos, one each way, and compare the faces."
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_CENTRE_SMALL",
+     "listen_for": [
+      "Very small at the edge"
+     ],
+     "ask": "The centre of interest in a photograph should be...",
+     "repair": "Take a photo close up and from far and compare."
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_CENTRE_MEANING",
+     "listen_for": [
+      "The middle of the room"
+     ],
+     "ask": "What is the centre of interest?",
+     "repair": "Ask: what do you want people to look at?"
+    },
+    {
+     "code": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_TILT",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Your phone is tilted. What happens to the photo?",
+     "repair": "Take two photos, straight and tilted, and compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where should the sun be when you take a photo?",
+     "answer": "behind you",
+     "shows": "light"
+    },
+    {
+     "question": "What is the centre of interest?",
+     "answer": "the main thing the photo is about",
+     "shows": "focus"
+    }
+   ]
+  }
+ ]
+}

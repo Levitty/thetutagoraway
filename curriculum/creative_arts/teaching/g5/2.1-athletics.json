@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G5.PERFOR.ATHLETICS",
+ "title": "Athletics",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Baton changes are practised in pairs walking, then jogging. Plaiting uses three strands.",
+ "skills": [
+  {
+   "skill": "CREA.G5.PERFOR.ATHLETICS.BATON",
+   "key_step": "The child tells the visual change (receiver looks back) from the non-visual (receiver looks ahead, hand back), and the upsweep from the downsweep.",
+   "floor": {
+    "prerequisite": "Sprints well (Grade 4).",
+    "question": "Where should a sprinter look?",
+    "answer": "ahead"
+   },
+   "representations": [
+    "a baton or rolled paper",
+    "a chart of the changes",
+    "a pair of learners"
+   ],
+   "steps": [
+    "Visual: receiver looks back at the baton.",
+    "Non-visual: receiver looks ahead, hand back.",
+    "Upsweep: baton pushed up into the hand; downsweep: pushed down."
+   ],
+   "contexts": [
+    "a class relay",
+    "sports day 4x100 m"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Receiver looks ahead with hand back.",
+     "say": "Which change?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for non-visual."
+    },
+    {
+     "beat": "predict",
+     "do": "Baton pushed down into a palm facing up?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Downsweep."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_VISUAL_LOOK_AHEAD",
+     "listen_for": [
+      "Straight ahead"
+     ],
+     "ask": "In a visual baton change, where does the receiver look?",
+     "repair": "Walk through a change slowly and ask where the eyes go."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_NON_VISUAL_STOP",
+     "listen_for": [
+      "Stops and turns round"
+     ],
+     "ask": "In a non-visual change, what does the receiver do?",
+     "repair": "Practise at walking speed with eyes ahead."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_UP_DOWN_SWAP",
+     "listen_for": [
+      "Downward"
+     ],
+     "ask": "In an upsweep, which way does the baton move into the hand?",
+     "repair": "Show a baton swinging up into a palm and then pressed down."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.BATON.M_AT_THROW_BATON",
+     "listen_for": [
+      "Thrown to the next runner"
+     ],
+     "ask": "How is the baton passed?",
+     "repair": "Pass at walking pace and then at a jog."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which change does the receiver look back?",
+     "answer": "the visual change",
+     "shows": "visual"
+    },
+    {
+     "question": "In a downsweep, which way does the baton move?",
+     "answer": "down into the receiver's hand",
+     "shows": "sweep"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.ATHLETICS.RELAY",
+   "key_step": "The child follows relay rules: pass in the changeover zone, pick up a dropped baton, stay in lane, the last runner finishes with the baton.",
+   "floor": {
+    "prerequisite": "Knows start commands (Grade 4).",
+    "question": "What comes after \"set\"?",
+    "answer": "go"
+   },
+   "representations": [
+    "a track with zones marked",
+    "a baton",
+    "a rules chart"
+   ],
+   "steps": [
+    "Pass inside the zone.",
+    "If dropped, the runner picks it up.",
+    "Stay in lane.",
+    "Finish with the baton."
+   ],
+   "contexts": [
+    "sports day",
+    "a class relay"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The baton is passed after the zone.",
+     "say": "Allowed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Only inside the zone."
+    },
+    {
+     "beat": "write",
+     "do": "Write the rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_AT_PASS_ANYWHERE",
+     "listen_for": [
+      "Anywhere on the track"
+     ],
+     "ask": "Where must the baton be passed in a relay?",
+     "repair": "Mark the zone with cones and practise."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_AT_DROP_LEAVE_IT",
+     "listen_for": [
+      "The nearest teammate"
+     ],
+     "ask": "The baton is dropped. Who picks it up?",
+     "repair": "Practise a drop and pick up."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_AT_FINISH_ANY",
+     "listen_for": [
+      "When any runner crosses the line"
+     ],
+     "ask": "When has a relay team finished?",
+     "repair": "Run a relay with the team lined up at the end."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.RELAY.M_CA5_AT_RELAY_RUN_ANY_LANE",
+     "listen_for": [
+      "run across to the finish"
+     ],
+     "ask": "After passing the baton, what should you do?",
+     "repair": "Walk through a change and show where the next team runs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where must the baton be passed?",
+     "answer": "inside the changeover zone",
+     "shows": "zone"
+    },
+    {
+     "question": "A runner drops the baton. What happens?",
+     "answer": "the runner picks it up and goes on",
+     "shows": "dropped baton"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.ATHLETICS.PLAITING",
+   "key_step": "The child plaits three strands by crossing the outer strand over the middle, left then right, evenly.",
+   "floor": {
+    "prerequisite": "Weaves over and under (Grade 3).",
+    "question": "In weaving, does a strip go over or under the next one?",
+    "answer": "over one, under the next"
+   },
+   "representations": [
+    "three strands of sisal or cloth",
+    "a sample rope",
+    "a clip"
+   ],
+   "steps": [
+    "Tie three strands at the top.",
+    "Cross left over middle.",
+    "Cross right over middle.",
+    "Repeat evenly; tie the end."
+   ],
+   "contexts": [
+    "making a rope for relay lanes",
+    "plaiting hair or sisal at home"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count the strands: three."
+    },
+    {
+     "beat": "predict",
+     "do": "After left over middle, which goes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for right."
+    },
+    {
+     "beat": "reveal",
+     "do": "Right over middle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_AT_PLAIT_TWO",
+     "listen_for": [
+      "Two"
+     ],
+     "ask": "How many strands are in a plaited rope?",
+     "repair": "Plait with two and three strands and compare."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_AT_PLAIT_SAME_STRAND",
+     "listen_for": [
+      "The same strand goes over each time"
+     ],
+     "ask": "In a plait, how do the strands cross?",
+     "repair": "Colour the three strands differently and plait slowly."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_AT_PLAIT_UNEQUAL",
+     "listen_for": [
+      "Different lengths"
+     ],
+     "ask": "What should the three strands be like at the start?",
+     "repair": "Plait with equal and unequal strands and compare the ends."
+    },
+    {
+     "code": "CREA.G5.PERFOR.ATHLETICS.PLAITING.M_CA5_AT_PLAIT_TIGHT_LOOSE",
+     "listen_for": [
+      "it does not matter"
+     ],
+     "ask": "Why pull every crossing of a plait the same?",
+     "repair": "Compare an even plait and an uneven one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many strands are used in a simple plait?",
+     "answer": "three",
+     "shows": "strands"
+    },
+    {
+     "question": "Which strand crosses next after the left?",
+     "answer": "the right strand over the middle",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/creative_arts/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Creative Arts and Sports teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/creative_arts/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Creative Arts and Sports teacher's review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g8)"};
 export const SUBSTRANDS = {
  "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A": {
   "name": "Roles of Creative Arts and Sports",
@@ -470,7 +470,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_RO_USELESS",
    "M_CA8_RO_HEALTH",
-   "M_CA8_RO_CULTURE"
+   "M_CA8_RO_CULTURE",
+   "M_CA8_RO_JOB_ONLY_STARS"
   ]
  },
  "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.VERSE_ELEMENTS": {
@@ -484,7 +485,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_VE_STANZA",
    "M_CA8_VE_RHYME",
-   "M_CA8_VE_LINE"
+   "M_CA8_VE_LINE",
+   "M_CA8_VE_RHYTHM_RHYME"
   ]
  },
  "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY": {
@@ -498,7 +500,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_FA_AGILITY",
    "M_CA8_FA_ENDURANCE",
-   "M_CA8_FA_ACTIVITY"
+   "M_CA8_FA_ACTIVITY",
+   "M_CA8_FA_AGILITY_SPEED"
   ]
  },
  "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF": {
@@ -513,7 +516,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_BS_LINES",
    "M_CA8_BS_SPACES",
-   "M_CA8_BS_CLEF"
+   "M_CA8_BS_CLEF",
+   "M_CA8_BS_MIDDLE_C"
   ]
  },
  "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34": {
@@ -527,7 +531,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_T3_BEATS",
    "M_CA8_T3_DOTTED",
-   "M_CA8_T3_BAR"
+   "M_CA8_T3_BAR",
+   "M_CA8_T3_FOUR_CROTCHETS"
   ]
  },
  "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR": {
@@ -543,7 +548,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_GM_SHARP",
    "M_CA8_GM_NOTE",
-   "M_CA8_GM_HOME"
+   "M_CA8_GM_HOME",
+   "M_CA8_GM_SHARP_ALL_F"
   ]
  },
  "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE": {
@@ -557,7 +563,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_DM_MEANING",
    "M_CA8_DM_HOW",
-   "M_CA8_DM_OTHER"
+   "M_CA8_DM_OTHER",
+   "M_CA8_DM_TWO_MAIN"
   ]
  },
  "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY": {
@@ -571,7 +578,25 @@ export const SKILLS = {
   "mis": [
    "M_CA8_CP_RED",
    "M_CA8_CP_BLUE",
-   "M_CA8_CP_WHEEL"
+   "M_CA8_CP_WHEEL",
+   "M_CA8_CP_MIX_GREY"
+  ]
+ },
+ "CREA.G8.CREATI.RHYTHM.THREE_FOUR": {
+  "name": "Describe three-four time and the rhythms written in it",
+  "sub": "CREA.G8.CREATI.RHYTHM",
+  "outcome": "CREA.G8.CREATI.RHYTHM.a",
+  "outcomes": [
+   "CREA.G8.CREATI.RHYTHM.a"
+  ],
+  "pre": [
+   "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34"
+  ],
+  "mis": [
+   "M_CA8_TF_STRONG_LAST",
+   "M_CA8_TF_MARCH",
+   "M_CA8_TF_BAR_COUNT",
+   "M_CA8_TF_TOP_NUMBER"
   ]
  },
  "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE": {
@@ -586,7 +611,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_MD_RACE",
    "M_CA8_MD_MONTAGE",
-   "M_CA8_MD_PACE"
+   "M_CA8_MD_PACE",
+   "M_CA8_MD_LANE_ALL"
   ]
  },
  "CREA.G8.CREATI.MELODY.MELODY_METHODS": {
@@ -596,11 +622,14 @@ export const SKILLS = {
   "outcomes": [
    "CREA.G8.CREATI.MELODY.a"
   ],
-  "pre": [],
+  "pre": [
+   "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR"
+  ],
   "mis": [
    "M_CA8_MY_HOME",
    "M_CA8_MY_ANSWER",
-   "M_CA8_MY_STEP"
+   "M_CA8_MY_STEP",
+   "M_CA8_MY_QUESTION_HOME"
   ]
  },
  "CREA.G8.CREATI.NETBALL.NETBALL": {
@@ -615,7 +644,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_NB_PLAYERS",
    "M_CA8_NB_RUN",
-   "M_CA8_NB_SECONDS"
+   "M_CA8_NB_SECONDS",
+   "M_CA8_NB_PIVOT_BOTH"
   ]
  },
  "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR": {
@@ -632,7 +662,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_FB_TIE",
    "M_CA8_FB_STENCIL",
-   "M_CA8_FB_PLEAT"
+   "M_CA8_FB_PLEAT",
+   "M_CA8_FB_MARBLE_SAME"
   ]
  },
  "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH": {
@@ -647,7 +678,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_RT_BLOW",
    "M_CA8_RT_P",
-   "M_CA8_RT_REPEAT"
+   "M_CA8_RT_REPEAT",
+   "M_CA8_RT_CRESC"
   ]
  },
  "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE": {
@@ -663,7 +695,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_VL_SIMILE",
    "M_CA8_VL_METAPHOR",
-   "M_CA8_VL_REPEAT"
+   "M_CA8_VL_REPEAT",
+   "M_CA8_VL_PERSON"
   ]
  },
  "CREA.G8.CREATI.VOLLEYBALL.VOLLEYBALL": {
@@ -677,7 +710,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_VO_PLAYERS",
    "M_CA8_VO_SERVE",
-   "M_CA8_VO_TOUCH"
+   "M_CA8_VO_TOUCH",
+   "M_CA8_VO_VOLLEY_PALMS"
   ]
  },
  "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES": {
@@ -691,7 +725,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_FD_ISUKUTI",
    "M_CA8_FD_ADUMU",
-   "M_CA8_FD_CHAKACHA"
+   "M_CA8_FD_CHAKACHA",
+   "M_CA8_FD_ONE_DANCE"
   ]
  },
  "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY": {
@@ -705,7 +740,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_BK_COIL",
    "M_CA8_BK_MATERIAL",
-   "M_CA8_BK_ITEM"
+   "M_CA8_BK_ITEM",
+   "M_CA8_BK_START_EDGE"
   ]
  },
  "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES": {
@@ -719,7 +755,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_SS_BACK",
    "M_CA8_SS_TREAD",
-   "M_CA8_SS_SAFETY"
+   "M_CA8_SS_SAFETY",
+   "M_CA8_SS_TREAD_STILL"
   ]
  },
  "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES": {
@@ -733,7 +770,8 @@ export const SKILLS = {
   "mis": [
    "M_CA8_TG_RULE",
    "M_CA8_TG_BENEFIT",
-   "M_CA8_TG_KIND"
+   "M_CA8_TG_KIND",
+   "M_CA8_TG_PUSH"
   ]
  },
  "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP": {
@@ -747,7 +785,27 @@ export const SKILLS = {
   "mis": [
    "M_CA8_SP_CHEAT",
    "M_CA8_SP_DEFEAT",
-   "M_CA8_SP_OFFICIAL"
+   "M_CA8_SP_OFFICIAL",
+   "M_CA8_SP_WIN_GLOAT"
+  ]
+ },
+ "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS": {
+  "name": "Analyse a verse performance and a Kenyan folk dance using the right terms",
+  "sub": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART",
+  "outcome": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
+  "outcomes": [
+   "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
+   "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.d"
+  ],
+  "pre": [
+   "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE",
+   "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES"
+  ],
+  "mis": [
+   "M_CA8_AN_OPINION_ONLY",
+   "M_CA8_AN_FORMATION_COSTUME",
+   "M_CA8_AN_MESSAGE_TOPIC",
+   "M_CA8_AN_COMMUNITY_GUESS"
   ]
  }
 };
@@ -755,6 +813,7 @@ export const MIS_FEEDBACK = {
  "M_CA8_RO_USELESS": "They entertain, keep culture and keep people fit.",
  "M_CA8_RO_HEALTH": "Sports keep people fit and healthy.",
  "M_CA8_RO_CULTURE": "Songs and dances pass on culture.",
+ "M_CA8_RO_JOB_ONLY_STARS": "Many people earn a living from the arts and sport, not only stars.",
  "M_CA8_VE_STANZA": "A stanza is a group of lines.",
  "M_CA8_VE_RHYME": "Rhyme is repeated end sounds.",
  "M_CA8_VE_LINE": "A line is one row of words.",
@@ -770,46 +829,73 @@ export const MIS_FEEDBACK = {
  "M_CA8_GM_SHARP": "G major has one sharp.",
  "M_CA8_GM_NOTE": "F is sharp in G major.",
  "M_CA8_GM_HOME": "G major begins and ends on G.",
+ "M_CA8_VE_RHYTHM_RHYME": "Rhythm is the beat you can clap. Rhyme is the same ending sound.",
+ "M_CA8_FA_AGILITY_SPEED": "Agility is changing direction quickly, as in a zigzag run.",
+ "M_CA8_BS_MIDDLE_C": "Middle C is on one ledger line above the bass staff.",
+ "M_CA8_T3_FOUR_CROTCHETS": "A bar of three-four time holds exactly three crotchet beats.",
+ "M_CA8_GM_SHARP_ALL_F": "In G major every F is F sharp.",
  "M_CA8_DM_MEANING": "Dominance is the main feature.",
  "M_CA8_DM_HOW": "Size and colour make a feature dominant.",
  "M_CA8_DM_OTHER": "The less important parts are subordinate.",
  "M_CA8_CP_RED": "Red and green are complementary.",
  "M_CA8_CP_BLUE": "Blue and orange are complementary.",
  "M_CA8_CP_WHEEL": "Complementary colours sit opposite each other.",
+ "M_CA8_DM_TWO_MAIN": "Choose one dominant feature so the eye knows where to look.",
+ "M_CA8_CP_MIX_GREY": "Side by side, complements are bright. Mixed, they make a dull brown.",
+ "M_CA8_TF_STRONG_LAST": "In three-four time the first beat of the bar is strong.",
+ "M_CA8_TF_MARCH": "Marches are in two or four. A waltz is in three-four.",
+ "M_CA8_TF_BAR_COUNT": "Every bar of three-four time holds three beats.",
+ "M_CA8_TF_TOP_NUMBER": "The top number is the number of beats in a bar.",
  "M_CA8_MD_RACE": "The 800 metres is middle distance.",
  "M_CA8_MD_MONTAGE": "A montage combines many pieces.",
  "M_CA8_MD_PACE": "They need pace and endurance.",
+ "M_CA8_MD_LANE_ALL": "In the 800 m runners break to the inside after the first bend.",
  "M_CA8_MY_HOME": "A melody in G major ends on G.",
  "M_CA8_MY_ANSWER": "An answering phrase replies to the opening phrase.",
  "M_CA8_MY_STEP": "A melody moves by steps and leaps.",
+ "M_CA8_MY_QUESTION_HOME": "A question phrase ends away from home so the answer can bring it back.",
  "M_CA8_NB_PLAYERS": "A netball team has seven players.",
  "M_CA8_NB_RUN": "A player may not run with the ball.",
  "M_CA8_NB_SECONDS": "A player may hold the ball for three seconds.",
+ "M_CA8_NB_PIVOT_BOTH": "Keep your landing foot down and pivot on it.",
  "M_CA8_FB_TIE": "Tied parts resist the dye and keep their colour.",
  "M_CA8_FB_STENCIL": "Stencil printing uses a cut-out design.",
  "M_CA8_FB_PLEAT": "Pleating folds cloth.",
+ "M_CA8_FB_MARBLE_SAME": "Marbling crumples the cloth, so it gives irregular veins like marble.",
  "M_CA8_RT_BLOW": "Blow gently and steadily.",
  "M_CA8_RT_P": "p means soft.",
  "M_CA8_RT_REPEAT": "A repeat sign means play again.",
+ "M_CA8_RT_CRESC": "Crescendo means gradually louder, not faster.",
  "M_CA8_VL_SIMILE": "A simile uses like or as.",
  "M_CA8_VL_METAPHOR": "A metaphor says one thing is another.",
  "M_CA8_VL_REPEAT": "Repetition stresses an idea.",
+ "M_CA8_VL_PERSON": "Personification gives human actions to things that are not human.",
  "M_CA8_VO_PLAYERS": "A volleyball team has six players on court.",
  "M_CA8_VO_SERVE": "The overarm serve is hit with an open hand.",
  "M_CA8_VO_TOUCH": "A team has three touches.",
+ "M_CA8_VO_VOLLEY_PALMS": "Volley with your fingertips above your forehead, not the palms.",
  "M_CA8_FD_ISUKUTI": "Isukuti is a Luhya dance.",
  "M_CA8_FD_ADUMU": "Adumu is a Maasai jumping dance.",
  "M_CA8_FD_CHAKACHA": "Chakacha is from the Coast.",
+ "M_CA8_FD_ONE_DANCE": "A community has several dances for different occasions.",
  "M_CA8_BK_COIL": "Coil basketry winds a coil in a spiral.",
  "M_CA8_BK_MATERIAL": "Grass or sisal is used.",
  "M_CA8_BK_ITEM": "A tray can be made by coiling.",
+ "M_CA8_BK_START_EDGE": "A coiled basket starts at the centre and spirals outward.",
  "M_CA8_SS_BACK": "The swimmer lies on the back.",
  "M_CA8_SS_TREAD": "Treading keeps the body upright.",
  "M_CA8_SS_SAFETY": "Swim only with a lifeguard or teacher.",
+ "M_CA8_SS_TREAD_STILL": "Treading needs gentle, steady arm and leg movement.",
  "M_CA8_TG_RULE": "The touched runner becomes the chaser.",
  "M_CA8_TG_BENEFIT": "They build speed and agility.",
  "M_CA8_TG_KIND": "A chasing game is a tagging game.",
+ "M_CA8_TG_PUSH": "A tag is a light touch. Pushing is unsafe.",
  "M_CA8_SP_CHEAT": "Fair play shows sportsmanship.",
  "M_CA8_SP_DEFEAT": "Accept defeat with respect.",
- "M_CA8_SP_OFFICIAL": "Respect the referee."
+ "M_CA8_SP_OFFICIAL": "Respect the referee.",
+ "M_CA8_SP_WIN_GLOAT": "Win with respect: shake hands and thank the other team.",
+ "M_CA8_AN_OPINION_ONLY": "An analysis names what you saw or heard and what it shows.",
+ "M_CA8_AN_FORMATION_COSTUME": "The pattern dancers make is the formation.",
+ "M_CA8_AN_MESSAGE_TOPIC": "The message is what the verse says about its topic.",
+ "M_CA8_AN_COMMUNITY_GUESS": "Use several clues together: steps, songs, instruments, language and occasion."
 };

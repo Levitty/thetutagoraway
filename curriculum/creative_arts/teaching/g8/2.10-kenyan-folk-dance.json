@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.KENYAN_FOLK_DANCE",
+ "title": "Kenyan Folk Dance",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Every community's dance is shown with respect. Community facts are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES",
+   "key_step": "The child classifies Kenyan folk dances by community and occasion (isukuti, Luhya; adumu, Maasai; chakacha, Coast; mwomboko, Kikuyu) and says dances keep culture alive.",
+   "floor": {
+    "prerequisite": "Gives the background of a folk dance (Grade 5).",
+    "question": "What three things make a dance's background?",
+    "answer": "community, occasion, meaning"
+   },
+   "representations": [
+    "a map of Kenya",
+    "dance cards",
+    "rhythm on a drum"
+   ],
+   "steps": [
+    "Name the dance.",
+    "Name the community or region.",
+    "Name the occasion."
+   ],
+   "contexts": [
+    "a music festival",
+    "a national celebration"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "High jumps by young men.",
+     "say": "Which dance?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for adumu."
+    },
+    {
+     "beat": "predict",
+     "do": "Which community?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Maasai."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES.M_CA8_FD_ISUKUTI",
+     "listen_for": [
+      "Maasai"
+     ],
+     "ask": "Which community is known for isukuti?",
+     "repair": "Match: isukuti (Luhya drums), adumu (Maasai jumping)."
+    },
+    {
+     "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES.M_CA8_FD_ADUMU",
+     "listen_for": [
+      "Luhya"
+     ],
+     "ask": "Which community is known for the jumping dance adumu?",
+     "repair": "Picture the high jumps of Maasai morans: adumu."
+    },
+    {
+     "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES.M_CA8_FD_CHAKACHA",
+     "listen_for": [
+      "Highlands"
+     ],
+     "ask": "Which region is known for chakacha?",
+     "repair": "Show the coast on the map and play chakacha rhythm."
+    },
+    {
+     "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.FOLK_DANCES.M_CA8_FD_ONE_DANCE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does a community have only one folk dance?",
+     "repair": "List dances for a wedding, a harvest and an initiation in one community."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which community is known for isukuti?",
+     "answer": "the Luhya",
+     "shows": "community"
+    },
+    {
+     "question": "Where does chakacha come from?",
+     "answer": "the Coast",
+     "shows": "region"
+    }
+   ]
+  }
+ ]
+}

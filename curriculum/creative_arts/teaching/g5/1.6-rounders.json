@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G5.CREATI.ROUNDERS",
+ "title": "Rounders",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Carving is done with a teacher and safe tools. Questions ask for names, order and safety.",
+ "skills": [
+  {
+   "skill": "CREA.G5.CREATI.ROUNDERS.BAT",
+   "key_step": "The child names the parts of a rounders bat (handle, barrel or hitting end) and says it is round, not flat like a cricket bat.",
+   "floor": {
+    "prerequisite": "Catches with both hands (Grade 4).",
+    "question": "How should you catch a ball?",
+    "answer": "with both hands, eyes on the ball"
+   },
+   "representations": [
+    "a rounders bat",
+    "a cricket bat picture",
+    "part cards"
+   ],
+   "steps": [
+    "Find the handle.",
+    "Find the thicker hitting end.",
+    "Say the shape: round."
+   ],
+   "contexts": [
+    "a PE rounders game",
+    "carving a bat"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the thin end.",
+     "say": "What is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for handle."
+    },
+    {
+     "beat": "reveal",
+     "do": "You hold the handle."
+    },
+    {
+     "beat": "write",
+     "do": "Label the parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_HEAD_HANDLE",
+     "listen_for": [
+      "The handle"
+     ],
+     "ask": "Which part of a rounders bat hits the ball?",
+     "repair": "Hold the bat and point to the part that touches the ball."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_KNOB_HITS",
+     "listen_for": [
+      "It hits the ball"
+     ],
+     "ask": "What does the knob at the end of the handle do?",
+     "repair": "Swing a bat with and without a knob grip."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_RD_CRICKET_FLAT",
+     "listen_for": [
+      "Flat on one side like a cricket bat"
+     ],
+     "ask": "What shape is the head of a rounders bat?",
+     "repair": "Compare a rounders bat and a cricket bat side by side."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.BAT.M_CA5_RD_GRIP_TOP",
+     "listen_for": [
+      "at the thick end"
+     ],
+     "ask": "Where do you hold a rounders bat?",
+     "repair": "Hold at the handle and swing gently."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a rounders bat round or flat?",
+     "answer": "round",
+     "shows": "shape"
+    },
+    {
+     "question": "Which end do you hold?",
+     "answer": "the handle",
+     "shows": "grip"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.ROUNDERS.CARVING",
+   "key_step": "The child chooses dry wood, safe tools (knife, rasp, sandpaper) and the safe steps: mark, cut away from the body, smooth, finish.",
+   "floor": {
+    "prerequisite": "Has made toys from materials (Grade 3).",
+    "question": "Name a material you used to make a toy.",
+    "answer": "any material"
+   },
+   "representations": [
+    "a piece of soft wood",
+    "tools shown, not used",
+    "a step chart"
+   ],
+   "steps": [
+    "Mark the shape.",
+    "Cut away from the body.",
+    "Smooth with a rasp, then sandpaper.",
+    "Oil or varnish."
+   ],
+   "contexts": [
+    "carving a bat for class games",
+    "a wooden spoon at home"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A learner cuts toward their hand.",
+     "say": "Safe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Cut away from the body."
+    },
+    {
+     "beat": "write",
+     "do": "Write the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_RD_SANDPAPER_CUTS",
+     "listen_for": [
+      "The saw"
+     ],
+     "ask": "Which tool makes the carved bat smooth?",
+     "repair": "Match each tool with a finished sample."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_RD_CUT_TOWARD_BODY",
+     "listen_for": [
+      "Cut towards your body for control"
+     ],
+     "ask": "Which is the safe way to carve?",
+     "repair": "Show where the knife goes if it slips."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_RD_FRESH_WOOD",
+     "listen_for": [
+      "Fresh wood just cut from a tree"
+     ],
+     "ask": "Which wood suits a bat?",
+     "repair": "Compare a dry stick and a fresh stick: bend, split and weigh."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.CARVING.M_CA5_RD_NO_MEASURE",
+     "listen_for": [
+      "start cutting"
+     ],
+     "ask": "What do you do before you start carving the bat?",
+     "repair": "Show a bat cut too short without a mark."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which way should you cut when carving?",
+     "answer": "away from the body",
+     "shows": "safety"
+    },
+    {
+     "question": "What smooths the bat last?",
+     "answer": "sandpaper",
+     "shows": "finishing"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.ROUNDERS.SAFETY",
+   "key_step": "The child keeps safe in rounders: drop the bat (do not throw it), stand back from the batter, bowl to the bat.",
+   "floor": {
+    "prerequisite": "Knows PE safety rules (Grade 4).",
+    "question": "Why warm up?",
+    "answer": "to prepare the muscles"
+   },
+   "representations": [
+    "a field with bases",
+    "a rules chart",
+    "a soft ball"
+   ],
+   "steps": [
+    "Drop the bat after hitting.",
+    "Fielders stand back.",
+    "Run forward to the base."
+   ],
+   "contexts": [
+    "a class rounders game",
+    "inter-house games"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The batter throws the bat and runs.",
+     "say": "Safe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Drop it."
+    },
+    {
+     "beat": "write",
+     "do": "Write three rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_RD_THROW_BAT",
+     "listen_for": [
+      "Throw it away and run"
+     ],
+     "ask": "What should a batter do with the bat after hitting the ball?",
+     "repair": "Set a target zone for dropped bats and practise."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_RD_STAND_CLOSE",
+     "listen_for": [
+      "Close beside the batter to see better"
+     ],
+     "ask": "Where should fielders and waiting players stand?",
+     "repair": "Mark a line to stand behind."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_RD_BOWL_AT_PERSON",
+     "listen_for": [
+      "Hard at the batter's body"
+     ],
+     "ask": "How should the ball be bowled to the batter?",
+     "repair": "Practise underarm bowling at a target."
+    },
+    {
+     "code": "CREA.G5.CREATI.ROUNDERS.SAFETY.M_CA5_RD_RUN_BACKWARD",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Should you run backwards between bases to watch the ball?",
+     "repair": "Show the risk of tripping."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should a batter do with the bat after hitting?",
+     "answer": "drop it",
+     "shows": "bat safety"
+    },
+    {
+     "question": "Where should the bowler aim?",
+     "answer": "at the bat, not the batter",
+     "shows": "bowling"
+    }
+   ]
+  }
+ ]
+}

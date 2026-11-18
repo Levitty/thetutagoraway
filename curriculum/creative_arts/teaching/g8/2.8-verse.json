@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G8.CREATI.VERSE",
+ "title": "Verse",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use poems on local issues; learners perform their own verses.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE",
+   "key_step": "The child describes language in verse: simile (like or as), metaphor (one thing is another), personification, repetition and imagery.",
+   "floor": {
+    "prerequisite": "Tells a story with voice and gesture (Grade 7).",
+    "question": "Name one storytelling technique.",
+    "answer": "any of: voice variation, gesture, pause"
+   },
+   "representations": [
+    "a short poem",
+    "figure-of-speech cards",
+    "highlighters"
+   ],
+   "steps": [
+    "Look for like or as: simile.",
+    "One thing is another: metaphor.",
+    "Things acting like people: personification."
+   ],
+   "contexts": [
+    "a verse on clean water",
+    "a verse for a festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"Her voice is music\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Simile or metaphor?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for metaphor."
+    },
+    {
+     "beat": "reveal",
+     "do": "No like or as: metaphor."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE.M_CA8_VL_SIMILE",
+     "listen_for": [
+      "The moon is a silver coin"
+     ],
+     "ask": "Which is a simile?",
+     "repair": "Look for \"like\" or \"as\": only then is it a simile."
+    },
+    {
+     "code": "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE.M_CA8_VL_METAPHOR",
+     "listen_for": [
+      "as fast as a cheetah"
+     ],
+     "ask": "Which is a metaphor?",
+     "repair": "Metaphor says one thing IS another, with no \"like\" or \"as\"."
+    },
+    {
+     "code": "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE.M_CA8_VL_REPEAT",
+     "listen_for": [
+      "To make mistakes"
+     ],
+     "ask": "Why repeat a line in verse?",
+     "repair": "Read a poem with a refrain and feel the stress it gives."
+    },
+    {
+     "code": "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE.M_CA8_VL_PERSON",
+     "listen_for": [
+      "The old man walked slowly"
+     ],
+     "ask": "Which is personification?",
+     "repair": "Find things that are not people doing people actions."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a simile: \"as brave as a lion\" or \"he is a lion\"?",
+     "answer": "as brave as a lion",
+     "shows": "simile"
+    },
+    {
+     "question": "Why repeat a line in verse?",
+     "answer": "to stress an idea",
+     "shows": "repetition"
+    }
+   ]
+  }
+ ]
+}

@@ -6,6 +6,11 @@ import { readFileSync } from 'node:fs';
 import { SKILLS, OUTCOMES, MIS_FEEDBACK } from '../src/ai-tutor/content/curriculumMap.creativearts.g7.js';
 import entry from '../src/ai-tutor/content/subjects/creativearts_g7.js';
 import { SIGNED } from '../src/ai-tutor/content/families/creativearts_g7_signed.js';
+import { creativeArtsDepthTests } from './helpers/creativeArtsDepth.mjs';
+
+// The depth pass of 18 Nov 2026 (Grade 5 Maths standard): two prerequisites and four misconceptions per skill, teaching pack.
+// ANALYSIS (outcomes 3.1 b and c) was added in that pass and has no question family yet.
+creativeArtsDepthTests({ grade: 7, outcomes: 73, noFamilies: ['CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS'] });
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/creative_arts/g7.json', import.meta.url), 'utf8'));
 const subs = source.sub_strands;

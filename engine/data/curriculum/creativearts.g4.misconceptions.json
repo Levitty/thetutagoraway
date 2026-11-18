@@ -284,6 +284,21 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_SHAKER_MELODIC": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
+  "error": "Calls the kayamba melodic because it is played in time with a song.",
+  "example": {
+   "question": "Is the kayamba melodic or non-melodic?",
+   "wrong_answer": "melodic, it plays with the song",
+   "correct_answer": "non-melodic"
+  },
+  "cause": "The child thinks anything that plays along with a tune is playing the tune.",
+  "reveals": "Offer \"melodic, it plays with the song\" next to the right answer and ask the question again in a new context.",
+  "help": "Shake the kayamba softly and loudly: ask if the note goes up or down. It never does.",
+  "feedback": "The kayamba keeps the rhythm, but it cannot go up or down in pitch. It is non-melodic.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_CHEST_BOUNCE": {
   "skill": "CREA.G4.CREATI.NETBALL.PASSES",
   "error": "Says a chest pass is thrown from the head.",
@@ -416,6 +431,21 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_FIRM_LOOSE": {
+  "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
+  "error": "Leaves knots loose so that they look neat and are quick to tie.",
+  "example": {
+   "question": "Why must macramé knots be pulled tight?",
+   "wrong_answer": "so they look nice only",
+   "correct_answer": "so the ball keeps its shape and does not come apart"
+  },
+  "cause": "The child sees knots as decoration and not as what holds the ball together.",
+  "reveals": "Offer \"so they look nice only\" next to the right answer and ask the question again in a new context.",
+  "help": "Shake a loosely knotted strip and a tight one; see which comes apart.",
+  "feedback": "Pull each knot tight. Tight knots hold the ball together when it is thrown.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_GREEN_PRIMARY": {
   "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
@@ -683,6 +713,36 @@
    "why": "Children would not say this; a trap option."
   }
  },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_BROWN_SECONDARY": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
+  "error": "Calls brown a secondary colour because it is mixed.",
+  "example": {
+   "question": "Is brown a secondary colour?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; the secondary colours are orange, green and purple"
+  },
+  "cause": "The child knows secondaries are mixed and thinks every mixed colour is one.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Show that brown needs all three primaries; a secondary is exactly two primaries.",
+  "feedback": "A secondary colour is made from two primary colours. Brown needs more, so it is not one.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_MIX_WHITE": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
+  "error": "Thinks adding white to red makes a new secondary colour.",
+  "example": {
+   "question": "Red and white are mixed. What do you get?",
+   "wrong_answer": "orange",
+   "correct_answer": "a lighter red (pink)"
+  },
+  "cause": "White changes the paint, so the child thinks it makes a new colour.",
+  "reveals": "Offer \"orange\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix red and white: it is still red, only lighter.",
+  "feedback": "White makes a colour lighter. Red and white make a light red, not a new colour.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_LONGER": {
   "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
   "error": "Thinks a quaver is longer than a crotchet because it has two sounds.",
@@ -929,6 +989,51 @@
    "mark": "doubtful",
    "why": "Children would not say this; a trap option."
   }
+ },
+ "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_SA_REST": {
+  "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
+  "error": "Says \"taa\" for a crotchet rest, reading every symbol as a sound.",
+  "example": {
+   "question": "What do you say for a crotchet rest?",
+   "wrong_answer": "taa",
+   "correct_answer": "nothing: say \"sa\" in your head or show silence for one beat"
+  },
+  "cause": "The child reads every symbol on the line as a sound to say.",
+  "reveals": "Offer \"taa\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap a pattern and hold hands apart for the rest.",
+  "feedback": "A rest is a silence. Do not say taa; keep quiet for one beat.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_TOO_LONG": {
+  "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
+  "error": "Thinks a longer pattern is always a better pattern.",
+  "example": {
+   "question": "Which is better: a pattern that repeats a clear idea, or one that is very long and never repeats?",
+   "wrong_answer": "the very long one",
+   "correct_answer": "the one that repeats a clear idea"
+  },
+  "cause": "Length feels like effort, so the child counts it as quality.",
+  "reveals": "Offer \"the very long one\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap both; ask which one the class can remember.",
+  "feedback": "A good rhythm has a clear idea that repeats. Longer is not better.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_SIZES_MIX": {
+  "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
+  "error": "Writes small letters as tall as capital letters in free hand lettering.",
+  "example": {
+   "question": "In free hand lettering, is \"a\" as tall as \"T\"?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; small letters stay between the middle lines"
+  },
+  "cause": "The child copies letters one at a time without guide lines.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Rule four guide lines and write a, t, g on them.",
+  "feedback": "Small letters sit between the middle lines. Only ascenders and capitals go higher.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_M_LOWEST": {
   "skill": "CREA.G4.CREATI.MELODY.SOLFA",
@@ -1196,6 +1301,36 @@
    "why": "Children would not say this; a trap option."
   }
  },
+ "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_HEIGHT": {
+  "skill": "CREA.G4.CREATI.MELODY.SIGNS",
+  "error": "Shows every hand sign at the same height, so the hands do not show pitch rising.",
+  "example": {
+   "question": "Where should the hand be for m compared with d?",
+   "wrong_answer": "at the same height",
+   "correct_answer": "higher than for d"
+  },
+  "cause": "The child learns the hand shapes but not that their height shows pitch.",
+  "reveals": "Offer \"at the same height\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d r m and raise the hand a little for each.",
+  "feedback": "The hand goes up as the note goes up. Show m higher than d.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_ALL_LEAPS": {
+  "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
+  "error": "Thinks a good melody jumps about a lot to be exciting.",
+  "example": {
+   "question": "Which is easier to sing: d r m r d, or d m d m d m?",
+   "wrong_answer": "d m d m d m",
+   "correct_answer": "d r m r d"
+  },
+  "cause": "The child links excitement with big jumps.",
+  "reveals": "Offer \"d m d m d m\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing both; ask which feels smooth.",
+  "feedback": "Good melodies move mostly by step, with a few leaps.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_COMMANDS_ORDER": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
   "error": "Puts the start commands in the wrong order.",
@@ -1369,13 +1504,13 @@
  },
  "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_MEANING": {
   "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
-  "error": "Gives the wrong meaning for a flag colour.",
+  "error": "Swaps the meanings of the flag colours, giving red the meaning of green (the land).",
   "example": {
    "question": "What does the red in the Kenyan flag stand for?",
    "wrong_answer": "The land",
    "correct_answer": "The blood shed for freedom"
   },
-  "cause": "The child guesses from the colour.",
+  "cause": "The child learns the colours and the meanings as two lists and pairs them by guessing.",
   "reveals": "Offer \"The land\" next to the right answer and ask the question again in a new context.",
   "help": "Match each colour to its meaning on a card.",
   "feedback": "Black stands for the people, red for the blood shed for freedom, green for the land and white for peace.",
@@ -1404,6 +1539,21 @@
    "mark": "doubtful",
    "why": "Children would not say this; a trap option."
   }
+ },
+ "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_SHIELD": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
+  "error": "Thinks the shield and spears stand for war.",
+  "example": {
+   "question": "What does the shield and spears on the Kenyan flag stand for?",
+   "wrong_answer": "war",
+   "correct_answer": "defence of freedom"
+  },
+  "cause": "Spears are weapons, so the child links them with fighting.",
+  "reveals": "Offer \"war\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the meaning together: they defend freedom.",
+  "feedback": "The shield and spears stand for defending our freedom.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_DOWN": {
   "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
@@ -1537,6 +1687,21 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_SHOES": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
+  "error": "Thinks gymnastics is safer in hard school shoes.",
+  "example": {
+   "question": "Should you do a side roll in school shoes?",
+   "wrong_answer": "yes, shoes protect the feet",
+   "correct_answer": "no; bare feet or soft shoes on a mat"
+  },
+  "cause": "Shoes protect feet outside, so the child expects the same on a mat.",
+  "reveals": "Offer \"yes, shoes protect the feet\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how a hard shoe can hit a partner or slip on a mat.",
+  "feedback": "Take off hard shoes. Bare feet or soft shoes are safer on a mat.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_PATRIOTIC": {
   "skill": "CREA.G4.PERFOR.SONGS.TYPES",
@@ -1785,6 +1950,51 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_ANY_CHURCH": {
+  "skill": "CREA.G4.PERFOR.SONGS.TYPES",
+  "error": "Thinks any song sung in church is sacred, whatever its words.",
+  "example": {
+   "question": "A song about road safety is sung at a church event. Is it sacred?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; it is topical"
+  },
+  "cause": "The child sorts by place, not by message.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the words: what are they about?",
+  "feedback": "Look at the words, not the place. A song about road safety is topical.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_KENYA_ONLY": {
+  "skill": "CREA.G4.PERFOR.SONGS.EAC",
+  "error": "Thinks the EAC anthem is only for Kenya.",
+  "example": {
+   "question": "Which countries sing the East African Community anthem?",
+   "wrong_answer": "only Kenya",
+   "correct_answer": "all the partner states of the East African Community"
+  },
+  "cause": "The child knows only one anthem belongs to a country.",
+  "reveals": "Offer \"only Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Name some partner states on a map.",
+  "feedback": "The EAC anthem belongs to all the member countries, not only Kenya.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_RADIO": {
+  "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
+  "error": "Thinks a pop song heard on the radio is a folk song.",
+  "example": {
+   "question": "Is a new pop song on the radio a folk song?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; a folk song comes from a community and is passed down"
+  },
+  "cause": "Both are songs people know, so the child mixes them.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who made it and how old it is.",
+  "feedback": "A folk song is passed down in a community. A new radio song is not a folk song.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_TV_CAMERA": {
   "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
   "error": "Thinks a television or a radio takes photographs.",
@@ -1898,6 +2108,36 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_RADIO_CAMERA": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
+  "error": "Thinks a radio can take photographs because it is an electronic device.",
+  "example": {
+   "question": "Can a radio take a photograph?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; it has no camera"
+  },
+  "cause": "Electronic devices look alike to the child.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Look for the lens.",
+  "feedback": "Only a device with a camera lens can take a photograph.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_TILT": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+  "error": "Thinks tilting the device does not change the photo.",
+  "example": {
+   "question": "Your phone is tilted. What happens to the photo?",
+   "wrong_answer": "nothing",
+   "correct_answer": "the picture comes out slanted"
+  },
+  "cause": "The child does not link the device angle to the picture.",
+  "reveals": "Offer \"nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Take two photos, straight and tilted, and compare.",
+  "feedback": "Hold the device straight so the picture is not slanted.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_BLOW": {
   "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
@@ -2127,6 +2367,66 @@
    "why": "Children would not say this; a trap option."
   }
  },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_THUMB": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
+  "error": "Thinks the hole at the back is for blowing.",
+  "example": {
+   "question": "What is the hole at the back of the recorder for?",
+   "wrong_answer": "for blowing",
+   "correct_answer": "the left thumb covers it"
+  },
+  "cause": "The child sees a hole and thinks of air going in.",
+  "reveals": "Offer \"for blowing\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold the recorder; find which finger covers the back hole.",
+  "feedback": "The back hole is covered by the left thumb. You blow into the mouthpiece.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_SUN": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
+  "error": "Leaves the recorder in hot sun to dry it.",
+  "example": {
+   "question": "Where should a wet recorder dry?",
+   "wrong_answer": "in hot sun",
+   "correct_answer": "in the shade, after shaking out water"
+  },
+  "cause": "Sun dries clothes, so the child expects the same.",
+  "reveals": "Offer \"in hot sun\" next to the right answer and ask the question again in a new context.",
+  "help": "Explain that heat can bend plastic.",
+  "feedback": "Dry it in the shade. Strong sun can bend the recorder.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_RIGHT_HAND": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
+  "error": "Plays B, A, G with the right hand.",
+  "example": {
+   "question": "Which hand plays B, A and G?",
+   "wrong_answer": "the right hand",
+   "correct_answer": "the left hand, on top"
+  },
+  "cause": "The child uses the hand they write with.",
+  "reveals": "Offer \"the right hand\" next to the right answer and ask the question again in a new context.",
+  "help": "Put the left hand on top, near the mouthpiece.",
+  "feedback": "The left hand goes on top and plays B, A and G.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_NO_TONGUE": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+  "error": "Starts every note with a push of breath and no tongue.",
+  "example": {
+   "question": "How do you start a note on the recorder?",
+   "wrong_answer": "push air hard",
+   "correct_answer": "say \"doo\" with the tongue"
+  },
+  "cause": "The child does not know the tongue starts notes.",
+  "reveals": "Offer \"push air hard\" next to the right answer and ask the question again in a new context.",
+  "help": "Whisper \"doo\" into the recorder.",
+  "feedback": "Start each note with a soft \"doo\" using your tongue.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_DIVE_SHALLOW": {
   "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
   "error": "Thinks diving into shallow water is fine.",
@@ -2300,13 +2600,13 @@
  },
  "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_BUILDS": {
   "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
-  "error": "Gives the wrong thing that a game builds.",
+  "error": "Says the frog jump builds the arms, picking the body part that looks busy rather than the one that does the work.",
   "example": {
    "question": "The frog jump builds...",
    "wrong_answer": "Arm strength only",
    "correct_answer": "Leg strength"
   },
-  "cause": "The child does not know what moves.",
+  "cause": "The arms swing in the jump, so the child thinks they are doing the work.",
   "reveals": "Offer \"Arm strength only\" next to the right answer and ask the question again in a new context.",
   "help": "Feel which muscles work.",
   "feedback": "The frog jump builds leg strength.",
@@ -2335,6 +2635,21 @@
    "mark": "doubtful",
    "why": "A slip of recall (a fact the lesson states), more a trap option than a held belief."
   }
+ },
+ "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_NO_RULES": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
+  "error": "Thinks indigenous games have no rules because they are played for fun.",
+  "example": {
+   "question": "Do indigenous animal games have rules?",
+   "wrong_answer": "no",
+   "correct_answer": "yes; each game has rules everyone follows"
+  },
+  "cause": "Fun play feels free to the child.",
+  "reveals": "Offer \"no\" next to the right answer and ask the question again in a new context.",
+  "help": "Play one game and name its rules.",
+  "feedback": "Indigenous games have rules. Following them keeps the game fair and safe.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_COPY": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
@@ -2452,13 +2767,13 @@
  },
  "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_VERSES": {
   "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
-  "error": "Gives the wrong number of verses of the Kenya National Anthem.",
+  "error": "Says the anthem has five verses, counting the lines or the times it is repeated, not the three stanzas.",
   "example": {
    "question": "How many verses does the Kenya National Anthem have?",
    "wrong_answer": "Five",
    "correct_answer": "Three"
   },
-  "cause": "The child guesses.",
+  "cause": "At assembly only one stanza is often sung, so the child guesses the count.",
   "reveals": "Offer \"Five\" next to the right answer and ask the question again in a new context.",
   "help": "Count the verses on a printed copy.",
   "feedback": "The Kenya National Anthem has three verses.",
@@ -2563,5 +2878,65 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_LIKE_ONLY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
+  "error": "Thinks appreciating art means only saying \"I like it\".",
+  "example": {
+   "question": "Your friend shows a drawing. Which is appreciation?",
+   "wrong_answer": "I like it",
+   "correct_answer": "I like how the dark shading makes the drum look round"
+  },
+  "cause": "The child has not learnt to say why.",
+  "reveals": "Offer \"I like it\" next to the right answer and ask the question again in a new context.",
+  "help": "Add \"because\" to every comment.",
+  "feedback": "Say what you like and why. That is appreciation.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_BEST_ONLY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
+  "error": "Thinks a portfolio keeps only finished, best work.",
+  "example": {
+   "question": "Should your sketches go in your portfolio?",
+   "wrong_answer": "no, only the best work",
+   "correct_answer": "yes; it shows how your work grew"
+  },
+  "cause": "The child thinks a portfolio is a display.",
+  "reveals": "Offer \"no, only the best work\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a sketch and the final piece side by side.",
+  "feedback": "Keep sketches too. A portfolio shows how your work grew.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_LANGUAGE": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+  "error": "Thinks the anthem is only sung in Kiswahili.",
+  "example": {
+   "question": "In which languages is the Kenya National Anthem sung?",
+   "wrong_answer": "only Kiswahili",
+   "correct_answer": "Kiswahili and English"
+  },
+  "cause": "The child has heard it in one language at assembly.",
+  "reveals": "Offer \"only Kiswahili\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing one verse in each language.",
+  "feedback": "The anthem has Kiswahili and English words.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_COSTUME_ANY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
+  "error": "Thinks any clothes count as a costume in a folk performance.",
+  "example": {
+   "question": "What is a costume in a folk song performance?",
+   "wrong_answer": "any clothes",
+   "correct_answer": "special dress of the community used for the performance"
+  },
+  "cause": "The child calls everyday clothes costume.",
+  "reveals": "Offer \"any clothes\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a picture of a performance costume.",
+  "feedback": "A costume is special dress that belongs to the song and community.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  }
 }

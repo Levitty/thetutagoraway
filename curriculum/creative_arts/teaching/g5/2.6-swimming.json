@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G5.PERFOR.SWIMMING",
+ "title": "Swimming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Pool work only with a trained adult; questions ask for parts of the stroke and rules.",
+ "skills": [
+  {
+   "skill": "CREA.G5.PERFOR.SWIMMING.CRAWL",
+   "key_step": "The child describes the front crawl: body flat, alternate arm pulls, flutter kick from the hips, breathe to the side.",
+   "floor": {
+    "prerequisite": "Glides (Grade 4).",
+    "question": "In a glide, where are the arms?",
+    "answer": "stretched forward"
+   },
+   "representations": [
+    "pictures of the crawl",
+    "land practice",
+    "a float board"
+   ],
+   "steps": [
+    "Body flat on the water.",
+    "Arms pull one after the other.",
+    "Flutter kick from the hips.",
+    "Turn the head to breathe."
+   ],
+   "contexts": [
+    "a swimming lesson",
+    "a swimming gala"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Both arms pull together.",
+     "say": "Front crawl?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Arms alternate."
+    },
+    {
+     "beat": "write",
+     "do": "Write the four parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_ARMS_TOGETHER",
+     "listen_for": [
+      "Both together"
+     ],
+     "ask": "In front crawl, how do the arms move?",
+     "repair": "Show on land."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_FROG_KICK",
+     "listen_for": [
+      "Like a frog"
+     ],
+     "ask": "How do the legs kick in front crawl?",
+     "repair": "Practise on the pool edge."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_LIFT_HEAD",
+     "listen_for": [
+      "Lifts the head forward"
+     ],
+     "ask": "How does the swimmer breathe in?",
+     "repair": "Practise on the pool edge."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.CRAWL.M_SW_HOLD_BREATH",
+     "listen_for": [
+      "Holds it"
+     ],
+     "ask": "What does the swimmer do with the breath under water?",
+     "repair": "Blow bubbles."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do the arms pull together or one after another in front crawl?",
+     "answer": "one after another",
+     "shows": "arms"
+    },
+    {
+     "question": "How do you breathe in front crawl?",
+     "answer": "turn the head to the side",
+     "shows": "breathing"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY",
+   "key_step": "The child keeps clean and safe: shower first, walk not run, never swim alone, no diving in shallow water.",
+   "floor": {
+    "prerequisite": "Knows Grade 4 pool rules.",
+    "question": "How do you enter shallow water?",
+    "answer": "feet first"
+   },
+   "representations": [
+    "a rules chart",
+    "a picture of a pool",
+    "a whistle"
+   ],
+   "steps": [
+    "Shower before swimming.",
+    "Walk on the side.",
+    "Swim with an adult and a buddy."
+   ],
+   "contexts": [
+    "a school swimming lesson",
+    "a hotel pool"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A learner swims alone at lunch.",
+     "say": "Safe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Always with an adult."
+    },
+    {
+     "beat": "write",
+     "do": "Write four rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_RUN_POOL",
+     "listen_for": [
+      "Walk"
+     ],
+     "ask": "What should you not do on the pool side?",
+     "repair": "Walk the pool side slowly with the class and point at the wet, slippery floor."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_SWIM_ALONE",
+     "listen_for": [
+      "Alone, if a good swimmer"
+     ],
+     "ask": "When should a learner swim?",
+     "repair": "Discuss why."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_NO_SHOWER",
+     "listen_for": [
+      "Jump in"
+     ],
+     "ask": "What should you do before getting into the pool?",
+     "repair": "Talk about keeping the water clean."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY.M_SW_DIVE_SHALLOW",
+     "listen_for": [
+      "Dive in"
+     ],
+     "ask": "How should you enter water of unknown depth?",
+     "repair": "Discuss injuries."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why shower before swimming?",
+     "answer": "to keep the pool water clean",
+     "shows": "hygiene"
+    },
+    {
+     "question": "Can you swim when no adult is there?",
+     "answer": "No",
+     "shows": "supervision"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+   "key_step": "The child names indigenous counting games (games that count seeds, stones, claps or jumps), says they need counting and rhythm, and what they build.",
+   "floor": {
+    "prerequisite": "Knows indigenous animal games (Grade 4).",
+    "question": "What do animal games copy?",
+    "answer": "animal movements"
+   },
+   "representations": [
+    "game descriptions",
+    "stones or seeds",
+    "a drum for rhythm"
+   ],
+   "steps": [
+    "Name the game.",
+    "Say what is counted.",
+    "Say what it builds."
+   ],
+   "contexts": [
+    "a cultural day",
+    "a break-time game"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A game counts jumps to a song.",
+     "say": "What does it build?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for counting and fitness."
+    },
+    {
+     "beat": "reveal",
+     "do": "Counting, rhythm and fitness."
+    },
+    {
+     "beat": "write",
+     "do": "Write the game and its benefits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_SW_CG_ONLY_BOARD",
+     "listen_for": [
+      "Bao only"
+     ],
+     "ask": "Which counting game is a moving game?",
+     "repair": "List counting games that move."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_SW_CG_NO_COUNT",
+     "listen_for": [
+      "No counting"
+     ],
+     "ask": "What do players do in a counting game?",
+     "repair": "Play one and watch."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_SW_CG_RHYTHM_FAST",
+     "listen_for": [
+      "Counting as fast as possible"
+     ],
+     "ask": "What does counting to a rhythm mean?",
+     "repair": "Clap the beat."
+    },
+    {
+     "code": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES.M_CA5_SW_CG_WIN_ONLY",
+     "listen_for": [
+      "only winning"
+     ],
+     "ask": "Name a benefit of indigenous counting games.",
+     "repair": "List what the body and mind do in one game."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What skill do counting games need?",
+     "answer": "counting",
+     "shows": "skill"
+    },
+    {
+     "question": "Name a benefit of counting games.",
+     "answer": "any of: counting, coordination, fitness, teamwork",
+     "shows": "benefit"
+    }
+   ]
+  }
+ ]
+}

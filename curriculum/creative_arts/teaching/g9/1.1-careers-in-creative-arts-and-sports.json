@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS",
+ "title": "Careers in Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use real local examples (a county choir trainer, a photographer at weddings, a football coach). Careers are open to every learner.",
+ "skills": [
+  {
+   "skill": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS",
+   "key_step": "The child names careers in visual arts, sports, music and theatre, says what each does, and names entrepreneurial opportunities.",
+   "floor": {
+    "prerequisite": "Names the roles of the arts and sport (Grade 8).",
+    "question": "Name one role of sport in society.",
+    "answer": "any of: fitness, unity, entertainment, earning a living"
+   },
+   "representations": [
+    "career cards in four areas",
+    "a local market or event",
+    "a career map"
+   ],
+   "steps": [
+    "Name the area.",
+    "Name a career in it.",
+    "Say what the person does.",
+    "Name a business someone could start."
+   ],
+   "contexts": [
+    "a county music festival",
+    "a local football academy"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "A person mixes sound at a concert.",
+     "say": "Which career?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for sound engineer."
+    },
+    {
+     "beat": "predict",
+     "do": "Which area?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Music."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_ONLY_PERFORMER",
+     "listen_for": [
+      "only being a famous singer"
+     ],
+     "ask": "Which is a career in Creative Arts and Sports?",
+     "repair": "List the people behind one concert or one match."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_NO_MONEY",
+     "listen_for": [
+      "no, it is only a hobby"
+     ],
+     "ask": "Can a photographer earn a living?",
+     "repair": "Count the paid jobs at one wedding: photographer, decorator, DJ, caterer."
+    },
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_AREA_MIX",
+     "listen_for": [
+      "music"
+     ],
+     "ask": "Which area does a sports physiotherapist work in?",
+     "repair": "Ask: who does this person help, musicians or athletes?"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_ENTERPRISE_JOB",
+     "listen_for": [
+      "working for a big company"
+     ],
+     "ask": "What is an entrepreneurial opportunity in Creative Arts?",
+     "repair": "Compare an employee with a learner who sells beadwork at a market."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a career in theatre.",
+     "answer": "any of: actor, director, set designer, costume designer",
+     "shows": "careers"
+    },
+    {
+     "question": "Name an entrepreneurial opportunity in visual arts.",
+     "answer": "any of: selling crafts, event photography, sign writing",
+     "shows": "enterprise"
+    }
+   ]
+  }
+ ]
+}

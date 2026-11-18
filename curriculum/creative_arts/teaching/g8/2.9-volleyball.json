@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.VOLLEYBALL",
+ "title": "Volleyball",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Overarm serves from closer to the net first; volleys in pairs.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.VOLLEYBALL.VOLLEYBALL",
+   "key_step": "The child describes the overarm serve (toss, hit with an open hand above the head), the volley (fingertips above the forehead), six players and three touches.",
+   "floor": {
+    "prerequisite": "Knows the under-arm serve and dig (Grade 6).",
+    "question": "Which part of the body plays a dig?",
+    "answer": "the joined forearms"
+   },
+   "representations": [
+    "a volleyball",
+    "a net",
+    "pictures"
+   ],
+   "steps": [
+    "Serve: toss, step, hit high.",
+    "Volley: hands make a window, push with fingers.",
+    "Use up to three touches."
+   ],
+   "contexts": [
+    "a class volleyball game",
+    "a school tournament"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Hands above the forehead.",
+     "say": "Which skill?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for volley."
+    },
+    {
+     "beat": "predict",
+     "do": "Palms or fingertips?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Fingertips."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.VOLLEYBALL.VOLLEYBALL.M_CA8_VO_PLAYERS",
+     "listen_for": [
+      "Eleven"
+     ],
+     "ask": "How many players are on the court for a volleyball team?",
+     "repair": "Draw the court: three at the front, three at the back."
+    },
+    {
+     "code": "CREA.G8.CREATI.VOLLEYBALL.VOLLEYBALL.M_CA8_VO_SERVE",
+     "listen_for": [
+      "With the feet"
+     ],
+     "ask": "How is the overarm serve hit?",
+     "repair": "Toss the ball and hit it with an open hand above the head."
+    },
+    {
+     "code": "CREA.G8.CREATI.VOLLEYBALL.VOLLEYBALL.M_CA8_VO_TOUCH",
+     "listen_for": [
+      "Ten"
+     ],
+     "ask": "How many touches does a team have before sending the ball over?",
+     "repair": "Play dig, volley, spike: three touches."
+    },
+    {
+     "code": "CREA.G8.CREATI.VOLLEYBALL.VOLLEYBALL.M_CA8_VO_VOLLEY_PALMS",
+     "listen_for": [
+      "flat palms"
+     ],
+     "ask": "Which part of the hand touches the ball in a volley?",
+     "repair": "Make a window with the hands above the forehead and catch the ball on the fingers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many players are on court for one team?",
+     "answer": "six",
+     "shows": "team"
+    },
+    {
+     "question": "How many touches before the ball goes over?",
+     "answer": "three",
+     "shows": "rule"
+    }
+   ]
+  }
+ ]
+}

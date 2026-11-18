@@ -1,0 +1,275 @@
+{
+ "sub_strand": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART",
+ "title": "Analysis of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Analyse a class play and a solo song; visit a real or virtual gallery for critique. Anti-doping from news stories.",
+ "skills": [
+  {
+   "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS",
+   "key_step": "The child analyses a play performance (theme, setting, conflict, resolution, voice, body, props, costume, audience) and a solo vocal piece (melody, dynamics, tempo, diction, message, accompaniment) with evidence.",
+   "floor": {
+    "prerequisite": "Analyses a verse and a folk dance (Grade 8).",
+    "question": "What is the message of a verse?",
+    "answer": "what it says about its topic"
+   },
+   "representations": [
+    "a class play",
+    "a recording of a solo song",
+    "an analysis checklist"
+   ],
+   "steps": [
+    "Watch or listen once.",
+    "Note what you see and hear.",
+    "Say what each shows.",
+    "Give the theme or message."
+   ],
+   "contexts": [
+    "a drama festival play",
+    "a solo at a music festival"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "The singer whispers the last line.",
+     "say": "Which element?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dynamics."
+    },
+    {
+     "beat": "predict",
+     "do": "What does it show?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Sadness or calm at the end."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_OPINION",
+     "listen_for": [
+      "it was nice"
+     ],
+     "ask": "Which is an analysis of a play performance?",
+     "repair": "Ask \"what did you see or hear that shows that?\""
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_DICTION",
+     "listen_for": [
+      "how loud it is"
+     ],
+     "ask": "What is diction in a solo vocal piece?",
+     "repair": "Sing a line mumbling and then clearly."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_ACCOMPANIMENT",
+     "listen_for": [
+      "no, solo means alone"
+     ],
+     "ask": "Can a solo vocal piece have an accompaniment?",
+     "repair": "Listen to a soloist with a guitar."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_AUDIENCE",
+     "listen_for": [
+      "only the costumes"
+     ],
+     "ask": "Name one thing to look for when analysing a play performance.",
+     "repair": "Use the full analysis checklist."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two things to analyse in a play performance.",
+     "answer": "any two of: theme, setting, conflict, resolution, voice, body, props, costume, audience",
+     "shows": "play"
+    },
+    {
+     "question": "What is diction?",
+     "answer": "how clearly the words are pronounced",
+     "shows": "song"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS",
+   "key_step": "The child names ethical practices in sport (no doping, fair play, honest age, no match fixing, respect, safeguarding) and why doping is banned.",
+   "floor": {
+    "prerequisite": "Names the spirit of sportsmanship (Grade 8).",
+    "question": "How should players treat referees?",
+    "answer": "respect their decisions"
+   },
+   "representations": [
+    "news stories",
+    "ethics cards",
+    "a class charter"
+   ],
+   "steps": [
+    "Read what happened.",
+    "Ask: fair and safe?",
+    "Name the practice kept or broken."
+   ],
+   "contexts": [
+    "an athlete banned for doping",
+    "an age-cheating case in school games"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A player takes a drug to run faster.",
+     "say": "Ethical?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Doping: cheating and harmful."
+    },
+    {
+     "beat": "write",
+     "do": "Write five ethical practices."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_DOPING_OK_SMALL",
+     "listen_for": [
+      "yes, if it is small"
+     ],
+     "ask": "Is a small amount of a banned substance allowed?",
+     "repair": "Read an anti-doping rule together."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_AGE_CHEAT",
+     "listen_for": [
+      "yes, it helps the team win"
+     ],
+     "ask": "Is it fair to lie about age to play in a younger team?",
+     "repair": "Discuss how the younger players feel."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_MATCH_FIXING",
+     "listen_for": [
+      "yes, it is their choice"
+     ],
+     "ask": "A player is paid to lose a match on purpose. Is that ethical?",
+     "repair": "Talk about fans, team mates and the sport."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_DOPING_ONLY_HEALTH",
+     "listen_for": [
+      "only because it is unhealthy"
+     ],
+     "ask": "Give two reasons why doping is banned.",
+     "repair": "Discuss what doping does to fairness."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is doping banned?",
+     "answer": "it is cheating and harms health",
+     "shows": "doping"
+    },
+    {
+     "question": "What is match fixing?",
+     "answer": "deciding a result on purpose, often for money",
+     "shows": "fixing"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+   "key_step": "The child critiques an artwork in four steps (describe, analyse, interpret, judge), kindly and with evidence.",
+   "floor": {
+    "prerequisite": "Catalogues exhibited works (Grade 6).",
+    "question": "Name two details in a catalogue entry.",
+    "answer": "any two of: title, artist, medium, date"
+   },
+   "representations": [
+    "a class or virtual gallery",
+    "a four-step card",
+    "sentence starters"
+   ],
+   "steps": [
+    "Describe what you see.",
+    "Analyse the elements and principles.",
+    "Interpret the meaning.",
+    "Judge with reasons."
+   ],
+   "contexts": [
+    "a school art exhibition",
+    "a visit to a gallery"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a painting.",
+     "say": "Describe it first."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a description."
+    },
+    {
+     "beat": "predict",
+     "do": "What does it mean?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Model an interpretation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_JUDGE_FIRST",
+     "listen_for": [
+      "say if it is good or bad"
+     ],
+     "ask": "What is the first step of a critique?",
+     "repair": "Use the four steps: describe, analyse, interpret, judge."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_NO_REASON",
+     "listen_for": [
+      "it is bad"
+     ],
+     "ask": "Which is a good critique judgement?",
+     "repair": "Add \"because\" to every judgement."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_ARTIST_PERSON",
+     "listen_for": [
+      "whether the artist is a nice person"
+     ],
+     "ask": "What should a critique comment on?",
+     "repair": "Cover the name and critique the work only."
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_INTERPRET_DESCRIBE",
+     "listen_for": [
+      "listing what is in the picture"
+     ],
+     "ask": "What is the interpretation step of a critique?",
+     "repair": "Ask \"what is the artist telling us?\" after describing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What are the four steps of a critique?",
+     "answer": "describe, analyse, interpret, judge",
+     "shows": "steps"
+    },
+    {
+     "question": "Which step comes last?",
+     "answer": "judge",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

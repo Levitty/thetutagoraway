@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART",
+ "title": "Analysis of Creative Arts works",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a class exhibition and a familiar song.",
+ "skills": [
+  {
+   "skill": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS",
+   "key_step": "The child names elements of music in a song (pitch, tempo, dynamics, rhythm, melody) and says the message the song carries.",
+   "floor": {
+    "prerequisite": "Uses pitch, tempo and dynamics (Grade 4).",
+    "question": "What does tempo mean?",
+    "answer": "how fast or slow"
+   },
+   "representations": [
+    "a familiar song",
+    "element cards",
+    "the song lyrics"
+   ],
+   "steps": [
+    "Listen once for speed and loudness.",
+    "Listen for high and low.",
+    "Read the words for the message."
+   ],
+   "contexts": [
+    "a school song",
+    "a patriotic song at assembly"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Sing softly then loudly.",
+     "say": "Which element changed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dynamics."
+    },
+    {
+     "beat": "reveal",
+     "do": "Dynamics."
+    },
+    {
+     "beat": "write",
+     "do": "Write the elements and the message."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS.M_AE_TEMPO",
+     "listen_for": [
+      "How loud or soft the music is"
+     ],
+     "ask": "What is tempo?",
+     "repair": "Clap fast, slow, loud and soft and name each."
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS.M_AE_PITCH",
+     "listen_for": [
+      "How loud a sound is"
+     ],
+     "ask": "What is pitch?",
+     "repair": "Sing a high and a low note and name them."
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS.M_AE_MESSAGE",
+     "listen_for": [
+      "The tune"
+     ],
+     "ask": "What is the message of a song?",
+     "repair": "Read the words of a song without the tune and ask what they say."
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS.M_CA6_AE_DYNAMICS_SPEED",
+     "listen_for": [
+      "dynamics"
+     ],
+     "ask": "A song gets faster. Which element changed?",
+     "repair": "Sing louder, then faster; name each."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Loud and soft in music is called...",
+     "answer": "dynamics",
+     "shows": "element"
+    },
+    {
+     "question": "Where do you find a song's message?",
+     "answer": "in its words",
+     "shows": "message"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE",
+   "key_step": "The child says a catalogue lists each exhibited work with a number, title, artist, medium and date, so visitors can find and know the works.",
+   "floor": {
+    "prerequisite": "Labels work with name, title and date (Grade 4).",
+    "question": "What goes on a portfolio label?",
+    "answer": "name, title and date"
+   },
+   "representations": [
+    "a class exhibition",
+    "a sample catalogue page",
+    "number cards"
+   ],
+   "steps": [
+    "Number each work.",
+    "Write title, artist, medium, date.",
+    "Match the numbers to the display."
+   ],
+   "contexts": [
+    "an end of term exhibition",
+    "a parents' open day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show an entry with no artist.",
+     "say": "What is missing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the artist."
+    },
+    {
+     "beat": "write",
+     "do": "Write a full entry."
+    },
+    {
+     "beat": "reveal",
+     "do": "Compare with the sample."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE.M_AC_STORY",
+     "listen_for": [
+      "A story about the artist"
+     ],
+     "ask": "What is a catalogue of an exhibition?",
+     "repair": "Show a real exhibition list."
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE.M_AC_ENTRY",
+     "listen_for": [
+      "The visitor's name"
+     ],
+     "ask": "Which detail belongs in a catalogue entry?",
+     "repair": "Write an entry for one artwork."
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE.M_AC_PURPOSE",
+     "listen_for": [
+      "To keep the artworks secret"
+     ],
+     "ask": "Why is a catalogue made?",
+     "repair": "Walk through an exhibition with and without a list."
+    },
+    {
+     "code": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE.M_CA6_AC_ORDER",
+     "listen_for": [
+      "they do not need numbers"
+     ],
+     "ask": "Why are catalogue entries numbered?",
+     "repair": "Number the works and the entries to match."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two details in a catalogue entry.",
+     "answer": "any two of: number, title, artist, medium, date",
+     "shows": "entry"
+    },
+    {
+     "question": "What is a catalogue for?",
+     "answer": "to tell visitors about each work on display",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

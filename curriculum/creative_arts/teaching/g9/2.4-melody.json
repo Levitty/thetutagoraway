@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G9.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sing familiar tunes and find the varied phrases; compose in F major in four-four.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.MELODY.VARIATION",
+   "key_step": "The child describes variation: repeating a phrase with a change in some pitches, the rhythm or its height (sequence), so the melody is familiar and interesting.",
+   "floor": {
+    "prerequisite": "Names methods of making a melody (Grade 8).",
+    "question": "What is an answering phrase?",
+    "answer": "a phrase that replies to the opening phrase"
+   },
+   "representations": [
+    "familiar songs",
+    "a staff on the board",
+    "a recorder"
+   ],
+   "steps": [
+    "Sing the opening phrase.",
+    "Change one thing: pitch, rhythm or height.",
+    "Keep the shape recognisable.",
+    "End on F."
+   ],
+   "contexts": [
+    "a melody for a class anthem",
+    "a variation of a folk tune"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The answer copies the question but ends on F.",
+     "say": "Variation or new tune?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for variation."
+    },
+    {
+     "beat": "reveal",
+     "do": "A variation."
+    },
+    {
+     "beat": "write",
+     "do": "Write three ways to vary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_EXACT_COPY",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a variation the same as an exact repeat?",
+     "repair": "Sing a phrase, then the same phrase with two notes changed."
+    },
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_ALL_NEW",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A phrase is changed in every note and rhythm. Is it still a variation?",
+     "repair": "Change only the rhythm, then only two pitches."
+    },
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_ONLY_PITCH",
+     "listen_for": [
+      "there is none"
+     ],
+     "ask": "Name a way to vary a phrase other than changing pitches.",
+     "repair": "Vary a phrase by rhythm only."
+    },
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_END_ANYWHERE",
+     "listen_for": [
+      "C"
+     ],
+     "ask": "On which note should an F major melody end?",
+     "repair": "Sing the ending on C and on F."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is variation in a melody?",
+     "answer": "repeating a phrase with a change",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name one way to vary a phrase.",
+     "answer": "change some pitches, change the rhythm, or move it higher or lower",
+     "shows": "how"
+    }
+   ]
+  }
+ ]
+}

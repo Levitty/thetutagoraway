@@ -1,0 +1,362 @@
+{
+ "sub_strand": "CREA.G4.CREATI.RHYTHM",
+ "title": "Rhythm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clap and say the French names; write notes on the board as words and drawings. Count the beat aloud.",
+ "skills": [
+  {
+   "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
+   "key_step": "The child says a crotchet is one beat, a pair of quavers one beat together, and rests are silent beats that are counted.",
+   "floor": {
+    "prerequisite": "Knows a half of a whole.",
+    "question": "Two halves make how many wholes?",
+    "answer": "one"
+   },
+   "representations": [
+    "notes drawn on the board",
+    "clapping",
+    "a beat count 1 2 3 4"
+   ],
+   "steps": [
+    "Say the beat aloud.",
+    "Crotchet: one clap on one beat.",
+    "Pair of quavers: two quick claps in one beat.",
+    "Rest: silence, still counted."
+   ],
+   "contexts": [
+    "clapping a pattern for a song",
+    "tapping a drum rhythm"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count 1 2 3 4 and clap crotchets."
+    },
+    {
+     "beat": "predict",
+     "do": "How many claps fit in one beat with quavers?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for two."
+    },
+    {
+     "beat": "reveal",
+     "do": "Clap ta-te on one beat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_LONGER",
+     "listen_for": [
+      "Two beats"
+     ],
+     "ask": "How many beats do a pair of quavers last together?",
+     "repair": "Clap one crotchet, then clap two quick claps in the same beat."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_REST_SKIP",
+     "listen_for": [
+      "Skip it and go on"
+     ],
+     "ask": "A crotchet rest comes in a pattern. What do you do?",
+     "repair": "Clap taa, rest, taa while counting 1 2 3 out loud."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_REST_SOUND",
+     "listen_for": [
+      "Make a sound"
+     ],
+     "ask": "What do you do at a rest?",
+     "repair": "Clap the pattern and hold open hands at the rest."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_REST_FULL",
+     "listen_for": [
+      "One whole beat"
+     ],
+     "ask": "How long is a quaver rest?",
+     "repair": "Match each rest to the note of the same length."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats does a crotchet rest last?",
+     "answer": "one",
+     "shows": "rests are counted"
+    },
+    {
+     "question": "How long does one quaver last?",
+     "answer": "half a beat",
+     "shows": "quaver value"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
+   "key_step": "The child matches taa to a crotchet and ta-te to a pair of quavers, and keeps silent for rests.",
+   "floor": {
+    "prerequisite": "Knows the beats of a crotchet and a pair of quavers.",
+    "question": "How many beats does a pair of quavers last?",
+    "answer": "one"
+   },
+   "representations": [
+    "flash cards of notes",
+    "French names on cards",
+    "clapping"
+   ],
+   "steps": [
+    "Look at the note.",
+    "One crotchet: taa.",
+    "Two joined quavers: ta-te.",
+    "Rest: silence."
+   ],
+   "contexts": [
+    "saying the rhythm of a school song",
+    "a call-and-response clapping game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a pair of quavers.",
+     "say": "What do we say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for ta-te."
+    },
+    {
+     "beat": "point",
+     "do": "Show a crotchet rest."
+    },
+    {
+     "beat": "reveal",
+     "do": "Silence for one beat."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_TATE_TWO_BEATS",
+     "listen_for": [
+      "Two beats"
+     ],
+     "ask": "How long does ta-te last?",
+     "repair": "Say ta-te as you tap one beat once."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_TAA_PAIR",
+     "listen_for": [
+      "Ta-te"
+     ],
+     "ask": "Which name is for a crotchet?",
+     "repair": "Say taa slowly and ta-te quickly and tap the beats."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_REST_TAA",
+     "listen_for": [
+      "Taa"
+     ],
+     "ask": "What do you say aloud at a rest?",
+     "repair": "Chant taa, rest, taa and hold the rest in silence."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_SA_REST",
+     "listen_for": [
+      "taa"
+     ],
+     "ask": "What do you say for a crotchet rest?",
+     "repair": "Clap a pattern and hold hands apart for the rest."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the French name for a crotchet?",
+     "answer": "taa",
+     "shows": "naming"
+    },
+    {
+     "question": "How many beats is ta-te?",
+     "answer": "one",
+     "shows": "pair value"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
+   "key_step": "The child names what makes a good rhythm: a steady beat, a clear repeated idea, some variety and a firm ending.",
+   "floor": {
+    "prerequisite": "Says taa and ta-te.",
+    "question": "Say the rhythm taa ta-te taa taa.",
+    "answer": "taa ta-te taa taa"
+   },
+   "representations": [
+    "two patterns clapped by the teacher",
+    "a checklist",
+    "a drum"
+   ],
+   "steps": [
+    "Keep a steady beat.",
+    "Repeat a short idea.",
+    "Change a little for interest.",
+    "End on a long note."
+   ],
+   "contexts": [
+    "making a rhythm for a class song",
+    "a rhythm for a sports cheer"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Clap two patterns."
+    },
+    {
+     "beat": "predict",
+     "do": "Which is easier to remember?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "The one with the repeated idea."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_ALL_SAME",
+     "listen_for": [
+      "Taa taa taa taa"
+     ],
+     "ask": "Which pattern has variation?",
+     "repair": "Clap both and ask which is more interesting."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_NO_REPEAT",
+     "listen_for": [
+      "It makes the pattern boring and wrong"
+     ],
+     "ask": "What does repetition do in a pattern?",
+     "repair": "Clap a tune that repeats a short part and ask if it is easy to remember."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_END_SHORT",
+     "listen_for": [
+      "A short note"
+     ],
+     "ask": "A good rhythmic pattern ends on...",
+     "repair": "Clap one ending on a short sound and one on a long sound."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_TOO_LONG",
+     "listen_for": [
+      "the very long one"
+     ],
+     "ask": "Which is better: a pattern that repeats a clear idea, or one that is very long and never repeats?",
+     "repair": "Clap both; ask which one the class can remember."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one quality of a good rhythm.",
+     "answer": "any of: steady beat, a repeated idea, variety, a firm ending",
+     "shows": "qualities"
+    },
+    {
+     "question": "Is a pattern of only crotchets the most interesting?",
+     "answer": "No, some variety helps",
+     "shows": "variety"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
+   "key_step": "The child tells ascenders (b, d, h, l, t) from descenders (g, p, y) and keeps small letters between guide lines.",
+   "floor": {
+    "prerequisite": "Writes letters clearly.",
+    "question": "Which is a capital: t or T?",
+    "answer": "T"
+   },
+   "representations": [
+    "four guide lines on the board",
+    "the words taa and ta-te",
+    "a pencil and ruler"
+   ],
+   "steps": [
+    "Rule guide lines.",
+    "Small letters stay in the middle.",
+    "Ascenders go up; descenders go down."
+   ],
+   "contexts": [
+    "writing rhythm names on a chart",
+    "labelling a class display"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four guide lines."
+    },
+    {
+     "beat": "point",
+     "do": "Write \"t\".",
+     "say": "Does it go up or down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for up."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"g\" going down."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_G_ASC",
+     "listen_for": [
+      "d"
+     ],
+     "ask": "Which letter has a descender?",
+     "repair": "Write the letters on a ruled line and see which go below it."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_B_DESC",
+     "listen_for": [
+      "p"
+     ],
+     "ask": "Which letter has an ascender?",
+     "repair": "Draw a line and write b above and p below it."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_ALL_ASC",
+     "listen_for": [
+      "k"
+     ],
+     "ask": "Which letter has neither?",
+     "repair": "Write the word \"ace\" and look for letters that go neither up nor down."
+    },
+    {
+     "code": "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_SIZES_MIX",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "In free hand lettering, is \"a\" as tall as \"T\"?",
+     "repair": "Rule four guide lines and write a, t, g on them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is \"t\" an ascender or a descender?",
+     "answer": "an ascender",
+     "shows": "tall letters"
+    },
+    {
+     "question": "Name a descender.",
+     "answer": "any of: g, p, q, y, j",
+     "shows": "letters below the line"
+    }
+   ]
+  }
+ ]
+}

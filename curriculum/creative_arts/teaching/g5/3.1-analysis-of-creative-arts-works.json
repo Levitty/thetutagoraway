@@ -1,0 +1,273 @@
+{
+ "sub_strand": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART",
+ "title": "Analysis of Creative Arts works",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Model kind, specific comments. Learners never mock a work or a community.",
+ "skills": [
+  {
+   "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+   "key_step": "The child gives a kind, specific comment: one thing that works and why, and one idea to improve.",
+   "floor": {
+    "prerequisite": "Says what is good and why (Grade 4).",
+    "question": "Finish: I like it because...",
+    "answer": "any specific reason"
+   },
+   "representations": [
+    "a class gallery",
+    "two stars and a wish cards",
+    "sentence starters"
+   ],
+   "steps": [
+    "Look closely.",
+    "Name what works and why.",
+    "Give one kind wish."
+   ],
+   "contexts": [
+    "a school gallery walk",
+    "feedback on a friend's melody"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show an artwork.",
+     "say": "Give one star."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a specific comment."
+    },
+    {
+     "beat": "predict",
+     "do": "Now a wish?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Model a kind wish."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_VAGUE",
+     "listen_for": [
+      "It is nice."
+     ],
+     "ask": "Which comment is the most helpful?",
+     "repair": "Practise with a sentence starter."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_RUDE",
+     "listen_for": [
+      "This is ugly."
+     ],
+     "ask": "Which comment is polite?",
+     "repair": "Practise kind wording."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_AP_CRIT_TOUCH",
+     "listen_for": [
+      "Touch it to feel it"
+     ],
+     "ask": "What should you do with a display piece?",
+     "repair": "Set gallery rules."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA5_AP_CRIT_ONLY_PRAISE",
+     "listen_for": [
+      "only saying it is good"
+     ],
+     "ask": "What makes a helpful critique?",
+     "repair": "Use two stars and a wish."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which comment is specific: \"nice\" or \"the bright sky shows morning\"?",
+     "answer": "the bright sky shows morning",
+     "shows": "specific"
+    },
+    {
+     "question": "What else does a helpful critique give besides praise?",
+     "answer": "one kind idea to improve",
+     "shows": "balance"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS",
+   "key_step": "The child uses the right words for a dance: formation, costume, ornament, prop, soloist, chorus, occasion.",
+   "floor": {
+    "prerequisite": "Names parts of a folk performance (Grade 4).",
+    "question": "Who answers the soloist?",
+    "answer": "the chorus"
+   },
+   "representations": [
+    "term cards",
+    "pictures",
+    "a dance description"
+   ],
+   "steps": [
+    "Worn: costume or ornament.",
+    "Held: prop.",
+    "Pattern of dancers: formation."
+   ],
+   "contexts": [
+    "writing about a festival dance",
+    "a class discussion"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Dancers move in two lines.",
+     "say": "Which word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for formation."
+    },
+    {
+     "beat": "reveal",
+     "do": "Formation."
+    },
+    {
+     "beat": "write",
+     "do": "Write the terms and meanings."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_AP_TERM_FORMATION_COSTUME",
+     "listen_for": [
+      "Costume"
+     ],
+     "ask": "Which word means the shape the dancers make?",
+     "repair": "Use each word in a sentence."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_AP_TERM_SOLOIST_CHORUS",
+     "listen_for": [
+      "Soloist"
+     ],
+     "ask": "Which word means the group that answers the leader?",
+     "repair": "Role-play call and response."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_AP_TERM_OCCASION_COMMUNITY",
+     "listen_for": [
+      "Community"
+     ],
+     "ask": "Which word means when a dance is performed?",
+     "repair": "Use each in a sentence."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS.M_CA5_AP_TERM_PROP_ORNAMENT",
+     "listen_for": [
+      "an ornament"
+     ],
+     "ask": "A dancer holds a fly whisk. Is it a prop or an ornament?",
+     "repair": "Ask: is it worn or held?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do we call beads worn by a dancer?",
+     "answer": "ornaments",
+     "shows": "terms"
+    },
+    {
+     "question": "What is the occasion of a dance?",
+     "answer": "the event it is performed at",
+     "shows": "occasion"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+   "key_step": "The child says the EAC anthem calls for unity, peace and working together, is sung in Kiswahili, standing still.",
+   "floor": {
+    "prerequisite": "Knows how the EAC anthem is sung (Grade 4).",
+    "question": "Do you sit or stand?",
+    "answer": "stand"
+   },
+   "representations": [
+    "the anthem text",
+    "a map of the EAC",
+    "a values chart"
+   ],
+   "steps": [
+    "Read a line.",
+    "Say the message.",
+    "Name a value: unity, peace, cooperation."
+   ],
+   "contexts": [
+    "EAC day at school",
+    "a regional event"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Read a line about unity.",
+     "say": "Which value?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for unity."
+    },
+    {
+     "beat": "write",
+     "do": "Write the values."
+    },
+    {
+     "beat": "reveal",
+     "do": "Unity, peace, cooperation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_AP_ANTHEM_NATIONAL",
+     "listen_for": [
+      "Kenya only"
+     ],
+     "ask": "The East African Community Anthem is the anthem of which group?",
+     "repair": "Sing both and say who each belongs to."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_AP_ANTHEM_SIT",
+     "listen_for": [
+      "Sit and talk"
+     ],
+     "ask": "What should you do while the anthem is sung?",
+     "repair": "Practise standing."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_AP_ANTHEM_VALUE",
+     "listen_for": [
+      "Rivalry between countries"
+     ],
+     "ask": "Which value does the anthem ask for?",
+     "repair": "Read the words together."
+    },
+    {
+     "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA5_AP_ANTHEM_LANGUAGE",
+     "listen_for": [
+      "English"
+     ],
+     "ask": "In which language is the EAC anthem sung?",
+     "repair": "Read the first line of the anthem."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one value in the EAC anthem.",
+     "answer": "any of: unity, peace, cooperation",
+     "shows": "values"
+    },
+    {
+     "question": "In which language is it sung?",
+     "answer": "Kiswahili",
+     "shows": "language"
+    }
+   ]
+  }
+ ]
+}

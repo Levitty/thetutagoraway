@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G8.CREATI.RHYTHM",
+ "title": "Rhythm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Count three-four with a strong first beat; perform patterns on a drum. Notes are named in words on the phone.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.RHYTHM.THREE_FOUR",
+   "key_step": "The child describes three-four time (three crotchet beats, STRONG weak weak, waltz-like) and checks each bar of a four-bar pattern adds up to three.",
+   "floor": {
+    "prerequisite": "Names the factors in making a rhythm (Grade 7).",
+    "question": "What must the notes in a bar add up to?",
+    "answer": "the beats in the time signature"
+   },
+   "representations": [
+    "a drum",
+    "a monotone line",
+    "claps"
+   ],
+   "steps": [
+    "Count 1 2 3 with beat 1 strong.",
+    "Fill each bar with three beats.",
+    "End on a dotted minim."
+   ],
+   "contexts": [
+    "a waltz-like folk song",
+    "a rhythm for a dance"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Clap STRONG weak weak."
+    },
+    {
+     "beat": "predict",
+     "do": "A minim and two quavers: full bar?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "2 + 1 = 3."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.RHYTHM.THREE_FOUR.M_CA8_TF_STRONG_LAST",
+     "listen_for": [
+      "the third"
+     ],
+     "ask": "In three-four time, which beat is strong?",
+     "repair": "Count STRONG weak weak and step on the first beat."
+    },
+    {
+     "code": "CREA.G8.CREATI.RHYTHM.THREE_FOUR.M_CA8_TF_MARCH",
+     "listen_for": [
+      "a march"
+     ],
+     "ask": "Which suits three-four time: a march or a waltz?",
+     "repair": "March to 1 2, then sway to 1 2 3."
+    },
+    {
+     "code": "CREA.G8.CREATI.RHYTHM.THREE_FOUR.M_CA8_TF_BAR_COUNT",
+     "listen_for": [
+      "no, it can change"
+     ],
+     "ask": "Must every bar of a three-four pattern hold three beats?",
+     "repair": "Write the beat count under each bar."
+    },
+    {
+     "code": "CREA.G8.CREATI.RHYTHM.THREE_FOUR.M_CA8_TF_TOP_NUMBER",
+     "listen_for": [
+      "the note value"
+     ],
+     "ask": "In three-four time, what does the top number 3 tell you?",
+     "repair": "Top: how many beats. Bottom: what kind of beat (crotchet)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats in each bar of three-four?",
+     "answer": "three",
+     "shows": "beats"
+    },
+    {
+     "question": "Which beat is strong?",
+     "answer": "the first",
+     "shows": "accent"
+    }
+   ]
+  }
+ ]
+}

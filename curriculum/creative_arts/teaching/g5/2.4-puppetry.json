@@ -1,0 +1,275 @@
+{
+ "sub_strand": "CREA.G5.PERFOR.PUPPETRY",
+ "title": "Puppetry",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use clean recyclable materials; scissors and needles with a teacher.",
+ "skills": [
+  {
+   "skill": "CREA.G5.PERFOR.PUPPETRY.TYPES",
+   "key_step": "The child identifies a glove puppet (worn over the hand) and tells it from finger, rod, string and shadow puppets.",
+   "floor": {
+    "prerequisite": "Knows toys made by assemblage (Grade 3).",
+    "question": "What is assemblage?",
+    "answer": "joining found objects to make something"
+   },
+   "representations": [
+    "sample puppets",
+    "picture cards",
+    "a sock"
+   ],
+   "steps": [
+    "Ask how it is moved.",
+    "Over the hand: glove.",
+    "On a stick: rod. On strings: string."
+   ],
+   "contexts": [
+    "a puppet show at school",
+    "a story time"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Put a sock over your hand.",
+     "say": "What type?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for glove puppet."
+    },
+    {
+     "beat": "predict",
+     "do": "A puppet on strings?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A string puppet (marionette)."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_GLOVE_STRING",
+     "listen_for": [
+      "By strings from above"
+     ],
+     "ask": "How is a glove puppet moved?",
+     "repair": "Show both types."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_GLOVE_FINGER",
+     "listen_for": [
+      "A glove puppet"
+     ],
+     "ask": "Which puppet fits on a single finger?",
+     "repair": "Put each on your hand."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_PP_SHADOW_GLOVE",
+     "listen_for": [
+      "A glove puppet"
+     ],
+     "ask": "Which puppet is seen as a shadow behind a lit screen?",
+     "repair": "Make a shadow puppet with a torch."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.TYPES.M_CA5_PP_GLOVE_ROD",
+     "listen_for": [
+      "a glove puppet"
+     ],
+     "ask": "A puppet is moved by a stick from below. What type is it?",
+     "repair": "Show a hand inside a glove puppet and a stick in a rod puppet."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is a glove puppet worked?",
+     "answer": "with the hand inside it",
+     "shows": "glove"
+    },
+    {
+     "question": "What is a puppet on strings called?",
+     "answer": "a string puppet",
+     "shows": "types"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.PUPPETRY.MAKE",
+   "key_step": "The child chooses clean recyclable materials, measures to fit the hand, leaves finger places, and works safely.",
+   "floor": {
+    "prerequisite": "Makes toys from materials (Grade 3).",
+    "question": "Name a recyclable material.",
+    "answer": "any of: old socks, cloth, paper, bottle tops"
+   },
+   "representations": [
+    "old socks, cloth, buttons",
+    "a hand outline",
+    "glue and thread"
+   ],
+   "steps": [
+    "Trace the hand with room to spare.",
+    "Cut and join the body.",
+    "Make the head with a finger place.",
+    "Add features."
+   ],
+   "contexts": [
+    "making a puppet for a class show",
+    "a gift for a younger sibling"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A puppet traced exactly to the hand.",
+     "say": "Will it fit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"too tight\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Leave room."
+    },
+    {
+     "beat": "write",
+     "do": "Write the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_PP_RECYCLE_NEW",
+     "listen_for": [
+      "A new, store-bought cloth"
+     ],
+     "ask": "Which is a recyclable material for a puppet?",
+     "repair": "Sort items into used and new."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_PP_SIZE_NO_FIT",
+     "listen_for": [
+      "It does not need to fit"
+     ],
+     "ask": "Why must a glove puppet fit the hand?",
+     "repair": "Try a puppet that is too big."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_PP_SHARP_UNSUPERVISED",
+     "listen_for": [
+      "Freely, without help"
+     ],
+     "ask": "How should scissors or a knife be used while making a puppet?",
+     "repair": "Set rules for cutting."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.MAKE.M_CA5_PP_NO_FINGER_HOLES",
+     "listen_for": [
+      "they do not go anywhere"
+     ],
+     "ask": "Where do your fingers go in a glove puppet?",
+     "repair": "Put a hand in a sample and move the head."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why trace the hand with room to spare?",
+     "answer": "so the hand fits inside",
+     "shows": "fit"
+    },
+    {
+     "question": "Name one recyclable material for a glove puppet.",
+     "answer": "any of: an old sock, cloth scraps",
+     "shows": "materials"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.PUPPETRY.SHOW",
+   "key_step": "The child plans a puppet show: a topical message, a song, puppets that face the audience and listen, and a hidden puppeteer.",
+   "floor": {
+    "prerequisite": "Knows a topical song (Grade 4).",
+    "question": "What is a topical song about?",
+    "answer": "an issue in the community"
+   },
+   "representations": [
+    "a puppet booth or table",
+    "puppets",
+    "a short script"
+   ],
+   "steps": [
+    "Choose a topical message.",
+    "Pick a song that fits.",
+    "Puppets face the audience; the speaker moves.",
+    "Puppeteers stay hidden."
+   ],
+   "contexts": [
+    "a show about hand washing",
+    "a show about road safety"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The puppet faces the puppeteer.",
+     "say": "Can the audience see it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Face the audience."
+    },
+    {
+     "beat": "write",
+     "do": "Write the show plan."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_PP_ALL_MOVE",
+     "listen_for": [
+      "All puppets move at once"
+     ],
+     "ask": "Which puppet moves when it speaks?",
+     "repair": "Practise with two puppets."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_PP_SHOW_FACE",
+     "listen_for": [
+      "In front of the screen"
+     ],
+     "ask": "Where do the puppeteers stand?",
+     "repair": "Watch a show with and without a screen."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_PP_TOPICAL_ANY",
+     "listen_for": [
+      "Any song we like"
+     ],
+     "ask": "What is a topical song?",
+     "repair": "List current community issues."
+    },
+    {
+     "code": "CREA.G5.PERFOR.PUPPETRY.SHOW.M_CA5_PP_ONLY_TALK",
+     "listen_for": [
+      "no, it stays still"
+     ],
+     "ask": "Should the puppet keep moving while another puppet talks?",
+     "repair": "Practise a listening puppet."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which way should a puppet face?",
+     "answer": "the audience",
+     "shows": "staging"
+    },
+    {
+     "question": "Give a topical song idea for a puppet show.",
+     "answer": "any issue such as hand washing or road safety",
+     "shows": "topical"
+    }
+   ]
+  }
+ ]
+}

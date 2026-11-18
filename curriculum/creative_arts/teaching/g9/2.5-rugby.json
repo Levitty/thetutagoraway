@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G9.CREATI.RUGBY",
+ "title": "Rugby",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Modified, non-contact rugby with a coach; questions ask for names and rules only.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.RUGBY.RUGBY",
+   "key_step": "The child tells the basic, spin and pop passes, says passes go sideways or backwards only, and tells the place kick from the drop kick.",
+   "floor": {
+    "prerequisite": "Describes netball passes (Grade 8).",
+    "question": "Name one netball pass.",
+    "answer": "any of: chest, bounce, shoulder, overhead"
+   },
+   "representations": [
+    "a rugby ball",
+    "a kicking tee",
+    "pictures"
+   ],
+   "steps": [
+    "Pass sideways or backwards.",
+    "Basic pass for short distance; spin for long; pop for close.",
+    "Place kick off a tee; drop kick off the bounce."
+   ],
+   "contexts": [
+    "a modified rugby game",
+    "the Kenya Sevens on TV"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Ball kicked as it bounces.",
+     "say": "Which kick?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for drop kick."
+    },
+    {
+     "beat": "predict",
+     "do": "May the ball be passed forward?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_FORWARD_PASS",
+     "listen_for": [
+      "forward"
+     ],
+     "ask": "In which direction may a rugby ball be passed?",
+     "repair": "Walk through a line passing backwards as it moves forward."
+    },
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_SPIN_POP",
+     "listen_for": [
+      "spin"
+     ],
+     "ask": "Which pass suits a team mate running very close: spin or pop?",
+     "repair": "Try both to a close runner."
+    },
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_DROP_PLACE",
+     "listen_for": [
+      "a drop kick"
+     ],
+     "ask": "A ball is kicked from a kicking tee. Which kick is it?",
+     "repair": "Show the tee for a place kick and the bounce for a drop kick."
+    },
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_LOOK_BALL",
+     "listen_for": [
+      "at the ball in your hands"
+     ],
+     "ask": "Where should you look when passing in rugby?",
+     "repair": "Pass while calling out the catcher's name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which way may a rugby ball be passed?",
+     "answer": "sideways or backwards",
+     "shows": "rule"
+    },
+    {
+     "question": "Which pass is for a long, fast pass?",
+     "answer": "the spin pass",
+     "shows": "passes"
+    }
+   ]
+  }
+ ]
+}

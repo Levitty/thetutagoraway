@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G5.CREATI.FOOTBALL",
+ "title": "Football",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Play on the field with cones; questions ask which part of the foot and the order of steps.",
+ "skills": [
+  {
+   "skill": "CREA.G5.CREATI.FOOTBALL.SKILLS",
+   "key_step": "The child says the inside of the foot is used for passing and stopping, the laces for kicking hard, and dribbling uses small touches.",
+   "floor": {
+    "prerequisite": "Passes a netball to a team mate (Grade 4).",
+    "question": "In netball, what do you look at when passing?",
+    "answer": "the team mate"
+   },
+   "representations": [
+    "a football",
+    "cones",
+    "pictures of the foot parts"
+   ],
+   "steps": [
+    "Pass and stop with the inside of the foot.",
+    "Kick hard with the laces.",
+    "Dribble with small touches, eyes up."
+   ],
+   "contexts": [
+    "a class football game",
+    "a break-time kickabout"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show the inside of the foot.",
+     "say": "What is it used for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for passing or stopping."
+    },
+    {
+     "beat": "predict",
+     "do": "Toe or laces for a hard kick?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Laces."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_TOE_POKE",
+     "listen_for": [
+      "The toes"
+     ],
+     "ask": "Which part of the foot do you use for an instep kick?",
+     "repair": "Kick a ball gently with toes and then with laces and compare control."
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_TRAP_SWAP",
+     "listen_for": [
+      "The inside of the foot"
+     ],
+     "ask": "In a step trap, which part of the foot stops the ball?",
+     "repair": "Show both slowly: side-on for the inside stop, and from above for the step trap."
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_FB_DRIBBLE_FAR",
+     "listen_for": [
+      "Kick the ball far ahead and chase it"
+     ],
+     "ask": "How is a straight dribble done?",
+     "repair": "Dribble around cones with small touches and then with big kicks, and compare how often the ball is lost."
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.SKILLS.M_CA5_FB_DRIBBLE_LOOK_DOWN",
+     "listen_for": [
+      "only at the ball"
+     ],
+     "ask": "While dribbling, where should you look?",
+     "repair": "Dribble slowly and call out how many fingers the teacher shows."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of the foot stops the ball best?",
+     "answer": "the inside of the foot",
+     "shows": "trapping"
+    },
+    {
+     "question": "Should dribbling use big kicks or small touches?",
+     "answer": "small touches",
+     "shows": "dribbling"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE",
+   "key_step": "The child orders papier mâché: tear strips, soak, paste layers over a mould, dry fully, then remove and paint.",
+   "floor": {
+    "prerequisite": "Cuts and pastes neatly.",
+    "question": "What does paste do?",
+    "answer": "sticks things together"
+   },
+   "representations": [
+    "newspaper strips",
+    "flour paste",
+    "a cone mould"
+   ],
+   "steps": [
+    "Tear and soak the strips.",
+    "Paste layers over the mould.",
+    "Dry fully, remove, paint."
+   ],
+   "contexts": [
+    "making cones to mark a football pitch",
+    "a class mask"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write tear, soak, paste, dry, remove out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"remove\".",
+     "say": "What must come before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"dry fully\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_FB_PM_GLUE_FIRST",
+     "listen_for": [
+      "Mix it with paste"
+     ],
+     "ask": "Which step comes straight after soaking the paper?",
+     "repair": "Soak and pound without glue first, then add paste, and compare."
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_FB_PM_SKIP_SOAK",
+     "listen_for": [
+      "To make it heavier"
+     ],
+     "ask": "Why is the paper soaked in water?",
+     "repair": "Try to pound dry paper and wet paper and feel the difference."
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_FB_PM_REMOVE_WET",
+     "listen_for": [
+      "Straight after pressing"
+     ],
+     "ask": "When can the cone be taken off the mould?",
+     "repair": "Remove one wet and one dry cone and compare their shape."
+    },
+    {
+     "code": "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE.M_CA5_FB_PM_THICK_GLUE",
+     "listen_for": [
+      "thick paste dries faster"
+     ],
+     "ask": "Why is papier mâché paste kept smooth and not too thick?",
+     "repair": "Compare a strip in runny paste and one in thick lumps."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When is the cone taken off the mould?",
+     "answer": "when it is completely dry",
+     "shows": "order"
+    },
+    {
+     "question": "Why are strips torn, not cut?",
+     "answer": "torn edges blend and stick better",
+     "shows": "method"
+    }
+   ]
+  }
+ ]
+}

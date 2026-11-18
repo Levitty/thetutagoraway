@@ -3,15 +3,15 @@
  "subject_key": "creative_arts",
  "grade": 9,
  "source": "KICD Creative Arts And Sports, First published 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 18 Nov 2026, depth pass: two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g9), awaiting a Creative Arts and Sports teacher's review",
  "totals": {
   "strands": 3,
   "sub_strands": 15,
   "outcomes": 67,
   "lessons": 142,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 26,
+  "prerequisites": 54,
+  "misconceptions": 104
  },
  "sub_strands": [
   {
@@ -72,8 +72,121 @@
      "indicator": "CREA.G9.RUBRIC.1.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS",
+     "name": "Identify careers and entrepreneurial opportunities in Creative Arts and Sports",
+     "outcomes": [
+      "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.a",
+      "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.b"
+     ],
+     "mastery": "The child names careers in each area (visual arts: graphic designer, photographer, painter; physical education and sports: coach, referee, physiotherapist, athlete; music: musician, sound engineer, music teacher; theatre: actor, director, set designer), says what each does, and names entrepreneurial opportunities (selling crafts, event photography, a dance troupe, a sports academy, hiring out sound equipment). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.1.1, CREA.G9.RUBRIC.1.2, CREA.G9.RUBRIC.1.3), never as a phone question: b) illustrate entrepreneurial opportunities in Creative Arts and Sports.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.ROLES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Earning a living is one of the roles of the arts and sport (Grade 8). Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The senior school pathways (Grade 9 Social Studies) include the Arts and Sports Science pathway these careers follow. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.b"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.1.1",
+       "CREA.G9.RUBRIC.1.2",
+       "CREA.G9.RUBRIC.1.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_ONLY_PERFORMER",
+     "skill": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS",
+     "error": "Thinks the only careers are performing ones (singer, athlete, actor).",
+     "example": {
+      "question": "Which is a career in Creative Arts and Sports?",
+      "wrong_answer": "only being a famous singer",
+      "correct_answer": "many, such as a sound engineer, a referee or a set designer"
+     },
+     "cause": "Performers are the people seen on TV.",
+     "reveals": "Offer \"only being a famous singer\" next to the right answer and ask the question again in a new context.",
+     "help": "List the people behind one concert or one match.",
+     "feedback": "There are many careers behind the stage and the field, not only performers.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_NO_MONEY",
+     "skill": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS",
+     "error": "Thinks the arts and sport cannot earn a steady living.",
+     "example": {
+      "question": "Can a photographer earn a living?",
+      "wrong_answer": "no, it is only a hobby",
+      "correct_answer": "yes, at events, for businesses and in media"
+     },
+     "cause": "The child has heard adults call the arts a hobby.",
+     "reveals": "Offer \"no, it is only a hobby\" next to the right answer and ask the question again in a new context.",
+     "help": "Count the paid jobs at one wedding: photographer, decorator, DJ, caterer.",
+     "feedback": "Photographers and many other artists earn a living from their work.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_AREA_MIX",
+     "skill": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS",
+     "error": "Puts a physiotherapist under music.",
+     "example": {
+      "question": "Which area does a sports physiotherapist work in?",
+      "wrong_answer": "music",
+      "correct_answer": "physical education and sports"
+     },
+     "cause": "The child sorts by the word \"therapy\", not by the field.",
+     "reveals": "Offer \"music\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: who does this person help, musicians or athletes?",
+     "feedback": "A sports physiotherapist works in physical education and sports.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS.M_CA9_CR_ENTERPRISE_JOB",
+     "skill": "CREA.G9.FOUNDA.CAREERS_IN_CREATIVE_ARTS.CAREERS",
+     "error": "Thinks entrepreneurship means only being employed by a company.",
+     "example": {
+      "question": "What is an entrepreneurial opportunity in Creative Arts?",
+      "wrong_answer": "working for a big company",
+      "correct_answer": "starting your own business, such as selling crafts or event photography"
+     },
+     "cause": "The child mixes having a job with starting a business.",
+     "reveals": "Offer \"working for a big company\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare an employee with a learner who sells beadwork at a market.",
+     "feedback": "An entrepreneur starts a business, such as selling crafts or hiring out a sound system.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.1.1",
     "CREA.G9.RUBRIC.1.2",
@@ -167,8 +280,516 @@
      "indicator": "CREA.G9.RUBRIC.1.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+     "name": "Describe the elements of a play",
+     "outcomes": [
+      "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.a"
+     ],
+     "mastery": "The child names the elements of a play (plot, characters, setting, theme, conflict, resolution, dialogue and stage directions) and says what each is in a short play they have read or watched. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.STORY_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The elements of a story (Grade 7) are shared by a play. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The setting and order of a play (Grade 9 English) are read in the same term. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER",
+     "name": "Tell power and reaction time from the other components of fitness",
+     "outcomes": [
+      "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.b"
+     ],
+     "mastery": "The child says power is strength used quickly (a standing long jump, a vertical jump, a shot put) and reaction time is how fast the body responds to a signal (a sprint start, catching a dropped ruler), and picks an activity that trains each. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.1.1, CREA.G9.RUBRIC.1.2, CREA.G9.RUBRIC.1.3), never as a phone question: b) perform activities demonstrating the components of fitness.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Endurance and agility (Grade 8) come before power and reaction time. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_COMPONENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The full list of fitness components (Grade 7) includes these two. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.b"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.1.1",
+       "CREA.G9.RUBRIC.1.2",
+       "CREA.G9.RUBRIC.1.3"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE",
+     "name": "Name pitches on the grand stave",
+     "outcomes": [
+      "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.c"
+     ],
+     "mastery": "The child says the grand stave joins the treble and bass staves with a brace, names the lines and spaces of both (treble E G B D F and F A C E; bass G B D F A and A C E G), and places middle C on the ledger line between them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The bass staff (Grade 8) is the lower half of the grand stave. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.TREBLE_PITCHES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The treble staff (Grade 7) is the upper half. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44",
+     "name": "Group notes in four-four time with note extension",
+     "outcomes": [
+      "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.d"
+     ],
+     "mastery": "The child says four-four time has four crotchet beats in a bar (beat 1 strong, beat 3 medium), that a dot adds half a note's value (dotted crotchet one and a half beats, dotted minim three) and a tie joins two notes of the same pitch into one sound, and checks that each bar adds up to four. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grouping in three-four time and the dotted minim (Grade 8) come before four-four with note extension. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.FRACTIONS.ADD_UNLIKE_FRACTIONS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Adding halves and quarters (Grade 7 Maths) is how dotted notes and quavers fill a bar. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+     "name": "Build the scale of F major",
+     "outcomes": [
+      "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.e"
+     ],
+     "mastery": "The child says F major has one flat, B flat, and its notes are F G A B-flat C D E F, starting and ending on F, and that the flat applies to every B in the piece. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Building G major with one sharp (Grade 8) is the same method for F major with one flat. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.MELODY.MELODY_QUALITIES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "C major (Grade 7) is the key with no sharps or flats that F major is compared with. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_CONFLICT_FIGHT",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+     "error": "Thinks conflict in a play means a physical fight.",
+     "example": {
+      "question": "What is conflict in a play?",
+      "wrong_answer": "a fight with blows",
+      "correct_answer": "the struggle or problem the characters face"
+     },
+     "cause": "In daily speech conflict means fighting.",
+     "reveals": "Offer \"a fight with blows\" next to the right answer and ask the question again in a new context.",
+     "help": "Find the conflict in a play with no fighting at all.",
+     "feedback": "Conflict is the struggle or problem at the heart of the play, not only a fight.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_RESOLUTION_START",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+     "error": "Says the resolution comes at the start of the play.",
+     "example": {
+      "question": "Where does the resolution come in a play?",
+      "wrong_answer": "at the start",
+      "correct_answer": "near the end, when the conflict is settled"
+     },
+     "cause": "The child mixes \"resolution\" with \"introduction\".",
+     "reveals": "Offer \"at the start\" next to the right answer and ask the question again in a new context.",
+     "help": "Order the parts of a known play: introduction, conflict, climax, resolution.",
+     "feedback": "The resolution comes near the end, when the problem is settled.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_THEME_PLOT",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+     "error": "Gives the plot when asked for the theme.",
+     "example": {
+      "question": "What is the theme of a play?",
+      "wrong_answer": "what happens first, then next",
+      "correct_answer": "the main idea it is about, such as honesty"
+     },
+     "cause": "Retelling the events is easier than naming the idea.",
+     "reveals": "Offer \"what happens first, then next\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask \"what is the play teaching?\" after retelling.",
+     "feedback": "The theme is the main idea or lesson, not the events.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS.M_CA9_PE_DIRECTIONS_SPOKEN",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+     "error": "Thinks stage directions are spoken by the actors.",
+     "example": {
+      "question": "Are stage directions spoken aloud in a performance?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; they are acted, not spoken"
+     },
+     "cause": "The child reads everything on the page as lines.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Act out \"(she opens the door slowly)\" without saying it.",
+     "feedback": "Stage directions tell actors what to do. They are acted, not spoken.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_POWER_STRENGTH",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER",
+     "error": "Thinks power is the same as strength.",
+     "example": {
+      "question": "What is the difference between strength and power?",
+      "wrong_answer": "they are the same",
+      "correct_answer": "power is strength used quickly"
+     },
+     "cause": "Both words are used for strong people.",
+     "reveals": "Offer \"they are the same\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare lifting a bag slowly (strength) and a vertical jump (power).",
+     "feedback": "Power is strength used quickly, as in a jump.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_REACTION_SPEED",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER",
+     "error": "Thinks reaction time is how fast you run.",
+     "example": {
+      "question": "What is reaction time?",
+      "wrong_answer": "how fast you run",
+      "correct_answer": "how quickly the body responds to a signal"
+     },
+     "cause": "Both are about being quick.",
+     "reveals": "Offer \"how fast you run\" next to the right answer and ask the question again in a new context.",
+     "help": "Do the ruler-drop test: catch it as fast as you can.",
+     "feedback": "Reaction time is how quickly you respond to a signal, not running speed.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_ACTIVITY",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER",
+     "error": "Picks a long jog as training for power.",
+     "example": {
+      "question": "Which activity trains power?",
+      "wrong_answer": "a long, slow jog",
+      "correct_answer": "standing long jumps"
+     },
+     "cause": "The child thinks any exercise builds every component.",
+     "reveals": "Offer \"a long, slow jog\" next to the right answer and ask the question again in a new context.",
+     "help": "Match each activity to what it trains.",
+     "feedback": "Explosive moves such as jumps train power. Long jogs train endurance.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER.M_CA9_FP_START_REACTION",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_POWER",
+     "error": "Says a sprint start trains endurance.",
+     "example": {
+      "question": "A sprinter practises starts to the gun. What does this train?",
+      "wrong_answer": "endurance",
+      "correct_answer": "reaction time"
+     },
+     "cause": "The child links all running with endurance.",
+     "reveals": "Offer \"endurance\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise starts to a clap and time the response.",
+     "feedback": "Practising starts to a signal trains reaction time.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_MIDDLE_C_TWO",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE",
+     "error": "Thinks there are two different middle Cs on the grand stave.",
+     "example": {
+      "question": "Is middle C on the treble staff the same note as middle C on the bass staff?",
+      "wrong_answer": "no, they are different notes",
+      "correct_answer": "yes, the same note, written on a ledger line from either staff"
+     },
+     "cause": "It is written in two places.",
+     "reveals": "Offer \"no, they are different notes\" next to the right answer and ask the question again in a new context.",
+     "help": "Play middle C and show both ways of writing it.",
+     "feedback": "Middle C is one note. It sits on a ledger line between the two staves.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_BASS_AS_TREBLE",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE",
+     "error": "Reads bass staff notes with the treble names.",
+     "example": {
+      "question": "What is the note on the bottom line of the bass staff?",
+      "wrong_answer": "E",
+      "correct_answer": "G"
+     },
+     "cause": "The treble names were learnt first and are used for both staves.",
+     "reveals": "Offer \"E\" next to the right answer and ask the question again in a new context.",
+     "help": "Check the clef before naming any note.",
+     "feedback": "Bass staff lines are G B D F A. The bottom line is G.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_BRACE",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE",
+     "error": "Thinks the brace joins any two staves of different songs.",
+     "example": {
+      "question": "What does the brace on a grand stave show?",
+      "wrong_answer": "two different songs",
+      "correct_answer": "the two staves are played together as one part"
+     },
+     "cause": "The child has not seen piano music.",
+     "reveals": "Offer \"two different songs\" next to the right answer and ask the question again in a new context.",
+     "help": "Show piano music: both hands read at once.",
+     "feedback": "The brace shows the two staves are read and played together.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE.M_CA9_GS_HIGH_LOW",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.GRAND_STAVE",
+     "error": "Thinks the bass staff is for high notes.",
+     "example": {
+      "question": "Which staff of the grand stave holds the low notes?",
+      "wrong_answer": "the treble staff",
+      "correct_answer": "the bass staff"
+     },
+     "cause": "The child mixes up \"bass\" and \"treble\".",
+     "reveals": "Offer \"the treble staff\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing low and point to the bass staff.",
+     "feedback": "The bass staff holds the low notes; the treble staff the high ones.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_DOT_DOUBLE",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44",
+     "error": "Thinks a dot doubles a note's value.",
+     "example": {
+      "question": "How many beats is a dotted crotchet?",
+      "wrong_answer": "two",
+      "correct_answer": "one and a half"
+     },
+     "cause": "The child thinks the dot adds the whole note again.",
+     "reveals": "Offer \"two\" next to the right answer and ask the question again in a new context.",
+     "help": "A crotchet is 1; half of 1 is a half; 1 + a half = one and a half.",
+     "feedback": "A dot adds half the note's value. A dotted crotchet is one and a half beats.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_TIE_DIFFERENT",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44",
+     "error": "Ties two notes of different pitch.",
+     "example": {
+      "question": "Can a tie join a C and a D?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; a tie joins two notes of the same pitch"
+     },
+     "cause": "The child mixes a tie with a slur.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a tie (same pitch, held) and a slur (different pitches, smooth).",
+     "feedback": "A tie joins two notes of the same pitch into one longer sound.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_FIVE_BEATS",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44",
+     "error": "Writes a bar of four-four time with five beats.",
+     "example": {
+      "question": "A bar has a dotted minim and a minim. Is it a correct bar of four-four?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; it has five beats"
+     },
+     "cause": "The child adds notes by eye.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Write the beat count under each note.",
+     "feedback": "A bar of four-four time holds exactly four beats.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44.M_CA9_T4_ACCENT_ALL",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_44",
+     "error": "Stresses every beat equally in four-four time.",
+     "example": {
+      "question": "Which beats are strong in four-four time?",
+      "wrong_answer": "all four equally",
+      "correct_answer": "beat 1 strongest, beat 3 medium"
+     },
+     "cause": "The child counts evenly without stress.",
+     "reveals": "Offer \"all four equally\" next to the right answer and ask the question again in a new context.",
+     "help": "Count ONE two THREE four while stepping.",
+     "feedback": "In four-four time beat 1 is strongest and beat 3 is medium.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_SHARP",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+     "error": "Puts a sharp in F major.",
+     "example": {
+      "question": "F major has one...",
+      "wrong_answer": "sharp",
+      "correct_answer": "flat"
+     },
+     "cause": "G major, with one sharp, was learnt first.",
+     "reveals": "Offer \"sharp\" next to the right answer and ask the question again in a new context.",
+     "help": "Write F G A B C D E F and play it: B must be lowered.",
+     "feedback": "F major has one flat, B flat.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_WHICH_FLAT",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+     "error": "Names E as the flat note in F major.",
+     "example": {
+      "question": "Which note is flat in F major?",
+      "wrong_answer": "E",
+      "correct_answer": "B"
+     },
+     "cause": "The child guesses the note before F.",
+     "reveals": "Offer \"E\" next to the right answer and ask the question again in a new context.",
+     "help": "Count the steps from F: the fourth note, B, is lowered.",
+     "feedback": "In F major the B is flat.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_HOME",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+     "error": "Ends an F major scale on C.",
+     "example": {
+      "question": "On which note does F major start and end?",
+      "wrong_answer": "C",
+      "correct_answer": "F"
+     },
+     "cause": "C major feels like home from Grade 7.",
+     "reveals": "Offer \"C\" next to the right answer and ask the question again in a new context.",
+     "help": "The key name is the home note.",
+     "feedback": "F major starts and ends on F.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR.M_CA9_FM_FLAT_ONCE",
+     "skill": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+     "error": "Flattens only the first B in a piece.",
+     "example": {
+      "question": "In F major, is every B played as B flat?",
+      "wrong_answer": "only the first one",
+      "correct_answer": "yes, every B"
+     },
+     "cause": "The child treats the key signature like a one-time accidental.",
+     "reveals": "Offer \"only the first one\" next to the right answer and ask the question again in a new context.",
+     "help": "Circle every B in an F major tune.",
+     "feedback": "The key signature makes every B a B flat.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.1.1",
     "CREA.G9.RUBRIC.1.2",
@@ -246,8 +867,230 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+     "name": "Say what harmony or unity is in a picture and how it is made",
+     "outcomes": [
+      "CREA.G9.CREATI.DRAWING_AND_PAINTING.a"
+     ],
+     "mastery": "The child says harmony (unity) is when all the parts of a picture look as if they belong together, made by repeating similar colours, shapes, lines or textures, and tells it from contrast and dominance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: d) paint a scenery composition to express harmony/unity.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Dominance (Grade 8) is the principle compared with harmony. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Balance (Grade 7) is another principle of arranging a picture. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.DRAWING_AND_PAINTING.d"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS",
+     "name": "Classify analogous colours on a colour wheel",
+     "outcomes": [
+      "CREA.G9.CREATI.DRAWING_AND_PAINTING.b"
+     ],
+     "mastery": "The child says analogous colours sit next to each other on the colour wheel (such as yellow, yellow-orange and orange, or blue, blue-green and green), give a calm, harmonious effect, and tells them from complementary colours, which sit opposite. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: c) illustrate a colour gradation strip for colour harmony.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Complementary colours (Grade 8) sit opposite; analogous ones sit beside each other. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The twelve-part colour wheel with tertiary colours (Grade 6) is where analogous colours are found. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.DRAWING_AND_PAINTING.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_ALL_SAME",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+     "error": "Thinks harmony means every part is exactly the same colour and shape.",
+     "example": {
+      "question": "Does harmony mean everything in a picture is identical?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; parts are similar enough to belong together"
+     },
+     "cause": "The child takes \"unity\" to mean sameness.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a landscape in greens and blues with varied shapes.",
+     "feedback": "Harmony uses similar colours, shapes or lines, not identical ones.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_CONTRAST",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+     "error": "Uses strong contrasting colours to show harmony.",
+     "example": {
+      "question": "Which colours give harmony: red and green, or yellow and orange?",
+      "wrong_answer": "red and green",
+      "correct_answer": "yellow and orange"
+     },
+     "cause": "Bright contrasts catch the eye, so the child thinks they work best.",
+     "reveals": "Offer \"red and green\" next to the right answer and ask the question again in a new context.",
+     "help": "Paint both pairs and ask which feels calm.",
+     "feedback": "Neighbouring colours give harmony. Opposites give contrast.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_DOMINANCE",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+     "error": "Says harmony is when one feature stands out.",
+     "example": {
+      "question": "A picture has one big bright feature that catches the eye. Which principle is that?",
+      "wrong_answer": "harmony",
+      "correct_answer": "dominance"
+     },
+     "cause": "Both are principles learnt in Grades 8 and 9.",
+     "reveals": "Offer \"harmony\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: does one thing stand out, or does everything belong together?",
+     "feedback": "One feature standing out is dominance. Everything belonging together is harmony.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_REPEAT_BAD",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+     "error": "Thinks repeating shapes in a picture is boring and should be avoided.",
+     "example": {
+      "question": "How can an artist create unity in a picture?",
+      "wrong_answer": "never repeat any shape",
+      "correct_answer": "repeat similar shapes, colours or lines"
+     },
+     "cause": "The child thinks variety is always better.",
+     "reveals": "Offer \"never repeat any shape\" next to the right answer and ask the question again in a new context.",
+     "help": "Find repeated shapes in a woven mat.",
+     "feedback": "Repeating similar shapes, colours or lines creates unity.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_OPPOSITE",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS",
+     "error": "Says analogous colours sit opposite each other on the wheel.",
+     "example": {
+      "question": "Where are analogous colours on the colour wheel?",
+      "wrong_answer": "opposite each other",
+      "correct_answer": "next to each other"
+     },
+     "cause": "Grade 8 complementary colours were opposite, so the child keeps that rule.",
+     "reveals": "Offer \"opposite each other\" next to the right answer and ask the question again in a new context.",
+     "help": "Point at three neighbours on the wheel.",
+     "feedback": "Analogous colours are neighbours. Complementary colours are opposite.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_PAIR",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS",
+     "error": "Picks blue and orange as analogous.",
+     "example": {
+      "question": "Which group is analogous?",
+      "wrong_answer": "blue and orange",
+      "correct_answer": "blue, blue-green and green"
+     },
+     "cause": "The child remembers blue and orange as a pair from Grade 8.",
+     "reveals": "Offer \"blue and orange\" next to the right answer and ask the question again in a new context.",
+     "help": "Find each colour on the wheel and check if they touch.",
+     "feedback": "Blue, blue-green and green are neighbours, so they are analogous.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_ANY_THREE",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS",
+     "error": "Thinks any three colours are analogous.",
+     "example": {
+      "question": "Are red, yellow and blue analogous?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; they are the primaries, spread apart on the wheel"
+     },
+     "cause": "The child thinks \"analogous\" means a group of three.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Mark red, yellow and blue on the wheel: they are far apart.",
+     "feedback": "Analogous colours must sit side by side on the wheel.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_MOOD",
+     "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS",
+     "error": "Thinks analogous colours give a loud, clashing effect.",
+     "example": {
+      "question": "What effect do analogous colours usually give?",
+      "wrong_answer": "loud and clashing",
+      "correct_answer": "calm and harmonious"
+     },
+     "cause": "Bright paint looks loud to the child whatever its neighbours.",
+     "reveals": "Offer \"loud and clashing\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare an analogous strip with a complementary strip.",
+     "feedback": "Analogous colours blend smoothly and give a calm effect.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -321,8 +1164,121 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION",
+     "name": "Describe the effect of note extension on rhythmic patterns",
+     "outcomes": [
+      "CREA.G9.CREATI.RHYTHM.a"
+     ],
+     "mastery": "The child says a dot or a tie makes a note last longer (a dotted crotchet one and a half beats, a crotchet tied to a quaver the same), that this gives long-short patterns and moves the stress, and that a dotted note is often followed by a shorter note to complete the beat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) compose a four-bar rhythmic pattern in 4 4 time; c) notate four-bar rhythms in 4 time from 4 dictation.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.RHYTHM.THREE_FOUR",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Rhythms in three-four with the dotted minim (Grade 8) come before dotted crotchets and ties. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The dot was first met on the minim (Grade 6). Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.RHYTHM.b",
+       "CREA.G9.CREATI.RHYTHM.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_DOTTED_EVEN",
+     "skill": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION",
+     "error": "Claps a dotted crotchet and quaver as two even notes.",
+     "example": {
+      "question": "How does a dotted crotchet followed by a quaver sound?",
+      "wrong_answer": "two even notes",
+      "correct_answer": "long, then short"
+     },
+     "cause": "The child claps every pair evenly.",
+     "reveals": "Offer \"two even notes\" next to the right answer and ask the question again in a new context.",
+     "help": "Say \"taa-i te\" and clap long-short.",
+     "feedback": "A dotted crotchet and a quaver sound long, then short.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_TIE_SOUND_TWICE",
+     "skill": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION",
+     "error": "Sounds both notes of a tie separately.",
+     "example": {
+      "question": "How many times do you sound two tied notes?",
+      "wrong_answer": "twice",
+      "correct_answer": "once, held for both values"
+     },
+     "cause": "The child sees two notes and plays two.",
+     "reveals": "Offer \"twice\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap a tied pair as one long clap.",
+     "feedback": "Tied notes are sounded once and held for both values.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_DOT_REST",
+     "skill": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION",
+     "error": "Thinks a dot after a note means a short silence.",
+     "example": {
+      "question": "What does a dot after a note do?",
+      "wrong_answer": "adds a short silence",
+      "correct_answer": "makes the note longer by half its value"
+     },
+     "cause": "The dot looks like a small rest.",
+     "reveals": "Offer \"adds a short silence\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap a crotchet, then a dotted crotchet; hear it held longer.",
+     "feedback": "A dot makes the note half as long again, not a silence.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_NO_EFFECT",
+     "skill": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION",
+     "error": "Thinks note extension does not change the feel of a rhythm.",
+     "example": {
+      "question": "Does adding dots change how a rhythm feels?",
+      "wrong_answer": "no",
+      "correct_answer": "yes; it gives long-short patterns and moves the stress"
+     },
+     "cause": "The child counts beats but does not listen to the feel.",
+     "reveals": "Offer \"no\" next to the right answer and ask the question again in a new context.",
+     "help": "Clap a plain and a dotted version of one bar.",
+     "feedback": "Dots and ties give long-short patterns and change the feel.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -422,8 +1378,340 @@
      "indicator": "CREA.G9.RUBRIC.2.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP",
+     "name": "Describe the phases of the triple jump",
+     "outcomes": [
+      "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.a"
+     ],
+     "mastery": "The child orders the phases (approach run, hop, step, jump, landing), says the hop lands on the take-off foot, the step lands on the other foot and the jump ends in the pit on both feet, and that the jump is measured from the take-off board. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform Triple jump for skill acquisition.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G6.PERFOR.ATHLETICS.JUMPS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The long jump run-up, take-off and landing (Grade 6) are the start and end of the triple jump. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A controlled sprint (Grade 4) is the approach run. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.b"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE",
+     "name": "Identify long distance races and their techniques",
+     "outcomes": [
+      "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.c"
+     ],
+     "mastery": "The child names long distance races (5 000 m, 10 000 m, the marathon, cross-country) and their technique: an even pace, relaxed arm action, a short economical stride, steady breathing and a finishing kick, and says why Kenyan runners pace a race. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: d) perform techniques for long distance running.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Pace and endurance in middle distance races (Grade 8) matter even more in long distance. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Endurance (Grade 8) is what long distance running trains. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.d"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC",
+     "name": "Explore the characteristics of a mosaic",
+     "outcomes": [
+      "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.e"
+     ],
+     "mastery": "The child says a mosaic is a picture made of small pieces (tesserae) of one material (paper, seeds, stones, tiles) placed close together with small even gaps (grout lines), following a planned design, with colour used to show shape and light. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: f) create a mosaic pictorial composition inspired by an athletic event.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The materials and steps of a mosaic (Grade 5) are explored further here. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A montage of athletes (Grade 8) is the picture-making met before an athletics mosaic. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.f"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_HOP_OTHER_FOOT",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP",
+     "error": "Lands the hop on the other foot.",
+     "example": {
+      "question": "In the triple jump, which foot does the hop land on?",
+      "wrong_answer": "the other foot",
+      "correct_answer": "the same foot you took off from"
+     },
+     "cause": "The child thinks every phase changes feet.",
+     "reveals": "Offer \"the other foot\" next to the right answer and ask the question again in a new context.",
+     "help": "Chalk the pattern: right, right, left, both (for a right-foot take-off).",
+     "feedback": "The hop lands on the take-off foot; the step lands on the other foot.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_ORDER",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP",
+     "error": "Puts the phases in the order jump, step, hop.",
+     "example": {
+      "question": "What is the order of the triple jump phases?",
+      "wrong_answer": "jump, step, hop",
+      "correct_answer": "hop, step, jump"
+     },
+     "cause": "The child knows the three words but not their order.",
+     "reveals": "Offer \"jump, step, hop\" next to the right answer and ask the question again in a new context.",
+     "help": "Say \"hop, step, jump\" while walking through it.",
+     "feedback": "The order is hop, step, then jump into the pit.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_BIG_HOP",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP",
+     "error": "Makes the hop as big as possible and has no energy left for the jump.",
+     "example": {
+      "question": "Should the hop be as big as possible?",
+      "wrong_answer": "yes, the bigger the better",
+      "correct_answer": "no; the three phases should be balanced"
+     },
+     "cause": "The first phase feels like the most important.",
+     "reveals": "Offer \"yes, the bigger the better\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure three jumps: one with a huge hop, one balanced.",
+     "feedback": "Balance the hop, step and jump so you keep speed for all three.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_MEASURE",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP",
+     "error": "Measures the triple jump from where the jump phase starts.",
+     "example": {
+      "question": "Where is a triple jump measured from?",
+      "wrong_answer": "from where the last jump starts",
+      "correct_answer": "from the take-off board to the nearest mark in the pit"
+     },
+     "cause": "The child sees the last jump into the pit as the jump.",
+     "reveals": "Offer \"from where the last jump starts\" next to the right answer and ask the question again in a new context.",
+     "help": "Lay a tape from the board to the pit.",
+     "feedback": "The whole distance from the take-off board to the nearest mark in the pit is measured.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_800",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE",
+     "error": "Names the 800 m as a long distance race.",
+     "example": {
+      "question": "Which is a long distance race?",
+      "wrong_answer": "800 m",
+      "correct_answer": "10 000 m"
+     },
+     "cause": "The 800 m feels long to a learner.",
+     "reveals": "Offer \"800 m\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort 100, 800, 1 500, 5 000 and 10 000 m.",
+     "feedback": "The 800 m is middle distance. 5 000 m, 10 000 m and the marathon are long distance.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_FAST_START",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE",
+     "error": "Starts a long race at sprint speed.",
+     "example": {
+      "question": "How should a long distance race be started?",
+      "wrong_answer": "as fast as possible",
+      "correct_answer": "at an even pace you can keep"
+     },
+     "cause": "Sprint starts were learnt first.",
+     "reveals": "Offer \"as fast as possible\" next to the right answer and ask the question again in a new context.",
+     "help": "Run two laps flat out from the start and two at even pace; compare.",
+     "feedback": "Start at an even pace you can keep for the whole race.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_LONG_STRIDE",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE",
+     "error": "Uses long bounding strides in a long race.",
+     "example": {
+      "question": "Which stride suits a long distance race?",
+      "wrong_answer": "long bounding strides",
+      "correct_answer": "a short, relaxed, economical stride"
+     },
+     "cause": "Long strides look fast.",
+     "reveals": "Offer \"long bounding strides\" next to the right answer and ask the question again in a new context.",
+     "help": "Run 400 m bounding, then with short relaxed strides.",
+     "feedback": "A short relaxed stride saves energy over a long race.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_NO_WATER",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE",
+     "error": "Thinks a runner should not drink water during a long race.",
+     "example": {
+      "question": "Should runners drink water in a long race?",
+      "wrong_answer": "no, it slows them",
+      "correct_answer": "yes, small sips at water points"
+     },
+     "cause": "The child thinks stopping for anything loses time.",
+     "reveals": "Offer \"no, it slows them\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about water points in the marathon.",
+     "feedback": "Take small sips at water points to avoid dehydration.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_PAINT",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC",
+     "error": "Thinks a mosaic is painted in small dots.",
+     "example": {
+      "question": "How is a mosaic made?",
+      "wrong_answer": "by painting small dots",
+      "correct_answer": "by placing small pieces of material close together"
+     },
+     "cause": "Stippling (Grade 6) also uses small units.",
+     "reveals": "Offer \"by painting small dots\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a stippled drawing with a seed mosaic.",
+     "feedback": "A mosaic is made of small pieces of material, not paint dots.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_RANDOM",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC",
+     "error": "Places mosaic pieces at random with no plan.",
+     "example": {
+      "question": "What comes before placing the mosaic pieces?",
+      "wrong_answer": "nothing; place them anywhere",
+      "correct_answer": "sketch the design and plan the colours"
+     },
+     "cause": "The child wants to start sticking straight away.",
+     "reveals": "Offer \"nothing; place them anywhere\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a planned and an unplanned mosaic.",
+     "feedback": "Sketch the design and plan colours before placing pieces.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_MIXED_MATERIALS",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC",
+     "error": "Thinks a mosaic should mix many kinds of material like a collage.",
+     "example": {
+      "question": "Is a mosaic usually made of one kind of material or many?",
+      "wrong_answer": "many, like a collage",
+      "correct_answer": "one kind, such as seeds or tiles, in different colours"
+     },
+     "cause": "Mosaic and collage are both made of pieces.",
+     "reveals": "Offer \"many, like a collage\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a seed mosaic with a mixed collage.",
+     "feedback": "A mosaic usually uses one kind of material in different colours.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_BIG_PIECES",
+     "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC",
+     "error": "Uses a few big pieces, losing the detail of the picture.",
+     "example": {
+      "question": "Why are mosaic pieces small?",
+      "wrong_answer": "they are cheaper",
+      "correct_answer": "small pieces show shapes and detail"
+     },
+     "cause": "Big pieces fill the space faster.",
+     "reveals": "Offer \"they are cheaper\" next to the right answer and ask the question again in a new context.",
+     "help": "Make the same shape with big and small pieces.",
+     "feedback": "Small pieces let the mosaic show shapes and detail.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -501,8 +1789,122 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION",
+     "name": "Describe the use of variation in composing a melody",
+     "outcomes": [
+      "CREA.G9.CREATI.MELODY.a"
+     ],
+     "mastery": "The child says variation repeats a phrase with a change (in some pitches, in the rhythm, or moved higher or lower as a sequence) so the melody is both familiar and interesting, and that an answering phrase is often a variation of the opening phrase. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) compose a four-bar melody in F Major and 4 time, 4; c) notate four-bar, melodies in 4 time, 4; d) perform melodies in F major and 4 time, 4.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.MELODY.MELODY_METHODS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Question and answer phrases (Grade 8) are where variation is used. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The F major scale is the key the melodies are composed in. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.MELODY.b",
+       "CREA.G9.CREATI.MELODY.c",
+       "CREA.G9.CREATI.MELODY.d"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_EXACT_COPY",
+     "skill": "CREA.G9.CREATI.MELODY.VARIATION",
+     "error": "Thinks a variation is an exact copy of the phrase.",
+     "example": {
+      "question": "Is a variation the same as an exact repeat?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; it repeats the phrase with a change"
+     },
+     "cause": "The child knows repetition and stops there.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing a phrase, then the same phrase with two notes changed.",
+     "feedback": "A variation repeats the idea with a change.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_ALL_NEW",
+     "skill": "CREA.G9.CREATI.MELODY.VARIATION",
+     "error": "Changes every note, so the phrase is no longer recognisable.",
+     "example": {
+      "question": "A phrase is changed in every note and rhythm. Is it still a variation?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; too much change loses the link to the first phrase"
+     },
+     "cause": "The child thinks more change is more creative.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Change only the rhythm, then only two pitches.",
+     "feedback": "Keep enough of the phrase so it is still recognisable.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_ONLY_PITCH",
+     "skill": "CREA.G9.CREATI.MELODY.VARIATION",
+     "error": "Thinks only the pitches can be varied.",
+     "example": {
+      "question": "Name a way to vary a phrase other than changing pitches.",
+      "wrong_answer": "there is none",
+      "correct_answer": "change the rhythm, or move it higher or lower (sequence)"
+     },
+     "cause": "Pitch is the most noticeable change.",
+     "reveals": "Offer \"there is none\" next to the right answer and ask the question again in a new context.",
+     "help": "Vary a phrase by rhythm only.",
+     "feedback": "You can vary rhythm too, or repeat the phrase higher or lower.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.MELODY.VARIATION.M_CA9_VA_END_ANYWHERE",
+     "skill": "CREA.G9.CREATI.MELODY.VARIATION",
+     "error": "Ends an F major melody on C.",
+     "example": {
+      "question": "On which note should an F major melody end?",
+      "wrong_answer": "C",
+      "correct_answer": "F"
+     },
+     "cause": "C feels like home from earlier keys.",
+     "reveals": "Offer \"C\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing the ending on C and on F.",
+     "feedback": "An F major melody ends on F.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -573,8 +1975,121 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY",
+     "name": "Distinguish the passes and kicks in rugby",
+     "outcomes": [
+      "CREA.G9.CREATI.RUGBY.a"
+     ],
+     "mastery": "The child tells the basic (lateral) pass, the spin pass (the ball spins for a long, fast pass) and the pop pass (a short, soft lift to a team mate running close), says the ball may only be passed sideways or backwards, and tells the place kick (off a kicking tee) from the drop kick (the ball touches the ground before it is kicked). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform passing skills in Rugby; c) perform kick techniques in Rugby.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.NETBALL.NETBALL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Passing to a moving team mate (Grade 8 netball) prepares rugby passes. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.FOOTBALL.FOOTBALL_SKILLS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Kicking technique (Grade 7 football) is used in place and drop kicks. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.RUGBY.b",
+       "CREA.G9.CREATI.RUGBY.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_FORWARD_PASS",
+     "skill": "CREA.G9.CREATI.RUGBY.RUGBY",
+     "error": "Passes the rugby ball forward.",
+     "example": {
+      "question": "In which direction may a rugby ball be passed?",
+      "wrong_answer": "forward",
+      "correct_answer": "sideways or backwards"
+     },
+     "cause": "In football and netball the ball is passed forward.",
+     "reveals": "Offer \"forward\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk through a line passing backwards as it moves forward.",
+     "feedback": "A rugby pass must go sideways or backwards, never forward.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_SPIN_POP",
+     "skill": "CREA.G9.CREATI.RUGBY.RUGBY",
+     "error": "Uses a spin pass for a team mate running right beside them.",
+     "example": {
+      "question": "Which pass suits a team mate running very close: spin or pop?",
+      "wrong_answer": "spin",
+      "correct_answer": "pop"
+     },
+     "cause": "The spin pass looks the most skilful.",
+     "reveals": "Offer \"spin\" next to the right answer and ask the question again in a new context.",
+     "help": "Try both to a close runner.",
+     "feedback": "A pop pass is a short, soft lift for a close team mate. A spin pass is for distance.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_DROP_PLACE",
+     "skill": "CREA.G9.CREATI.RUGBY.RUGBY",
+     "error": "Calls a kick off a tee a drop kick.",
+     "example": {
+      "question": "A ball is kicked from a kicking tee. Which kick is it?",
+      "wrong_answer": "a drop kick",
+      "correct_answer": "a place kick"
+     },
+     "cause": "Both kicks start with the ball near the ground.",
+     "reveals": "Offer \"a drop kick\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the tee for a place kick and the bounce for a drop kick.",
+     "feedback": "Off a tee is a place kick. Dropped and kicked as it bounces is a drop kick.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.RUGBY.RUGBY.M_CA9_RU_LOOK_BALL",
+     "skill": "CREA.G9.CREATI.RUGBY.RUGBY",
+     "error": "Watches the ball instead of the catcher when passing.",
+     "example": {
+      "question": "Where should you look when passing in rugby?",
+      "wrong_answer": "at the ball in your hands",
+      "correct_answer": "at the target, the catcher's hands"
+     },
+     "cause": "Beginners fear dropping the ball.",
+     "reveals": "Offer \"at the ball in your hands\" next to the right answer and ask the question again in a new context.",
+     "help": "Pass while calling out the catcher's name.",
+     "feedback": "Look at your target when you pass.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -640,8 +2155,121 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS",
+     "name": "Identify viewpoints in photography",
+     "outcomes": [
+      "CREA.G9.CREATI.PHOTOGRAPHY.a"
+     ],
+     "mastery": "The child names the bird's eye view (camera high, looking down), the normal or eye-level view and the worm's eye view (camera low, looking up), and says what each does to the subject (small, natural, tall and powerful). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) take photographs of a scenery in viewpoint for showcase; c) present the photographs for appreciation.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Light and the centre of interest (Grade 4) are the first elements of a photograph. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G8.CREATI.DRAWING_AND_PAINTING.DOMINANCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Dominance (Grade 8) explains why a viewpoint can make a subject look powerful. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.PHOTOGRAPHY.b",
+       "CREA.G9.CREATI.PHOTOGRAPHY.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_WORM_DOWN",
+     "skill": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS",
+     "error": "Says the worm's eye view looks down on the subject.",
+     "example": {
+      "question": "In a worm's eye view, where is the camera?",
+      "wrong_answer": "high, looking down",
+      "correct_answer": "low, looking up"
+     },
+     "cause": "The child swaps the two named views.",
+     "reveals": "Offer \"high, looking down\" next to the right answer and ask the question again in a new context.",
+     "help": "Lie on the ground and look up at a tree.",
+     "feedback": "A worm's eye view is taken from low down, looking up.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_BIRD_EFFECT",
+     "skill": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS",
+     "error": "Thinks a bird's eye view makes the subject look tall and powerful.",
+     "example": {
+      "question": "What does a bird's eye view do to a person in the photo?",
+      "wrong_answer": "makes them look tall and powerful",
+      "correct_answer": "makes them look small"
+     },
+     "cause": "The child thinks height gives power to the subject.",
+     "reveals": "Offer \"makes them look tall and powerful\" next to the right answer and ask the question again in a new context.",
+     "help": "Photograph a friend from a staircase and from the ground.",
+     "feedback": "From above, the subject looks small. From below, it looks tall.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_NORMAL",
+     "skill": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS",
+     "error": "Thinks the normal viewpoint is the worst one.",
+     "example": {
+      "question": "When is the normal (eye-level) view useful?",
+      "wrong_answer": "never",
+      "correct_answer": "when you want the subject to look natural"
+     },
+     "cause": "The child thinks unusual means better.",
+     "reveals": "Offer \"never\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare eye-level and worm's eye portraits.",
+     "feedback": "Eye level shows the subject naturally, as we usually see it.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_ZOOM",
+     "skill": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS",
+     "error": "Thinks zooming in changes the viewpoint.",
+     "example": {
+      "question": "Does zooming in change the viewpoint?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; the viewpoint is where the camera is, high, level or low"
+     },
+     "cause": "Zoom changes the picture, so it seems like a new viewpoint.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Zoom without moving, then move the camera low.",
+     "feedback": "Viewpoint is the camera's position, not the zoom.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -715,8 +2343,121 @@
      "indicator": "CREA.G9.RUBRIC.2.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING",
+     "name": "Identify the fingering of the notes of the scale of F major on the descant recorder",
+     "outcomes": [
+      "CREA.G9.CREATI.DESCANT_RECORDER.a"
+     ],
+     "mastery": "The child says the F major scale on the recorder is F G A B-flat C D E F, that low F needs the right hand as well as all left-hand holes, and that B flat uses a cross-fingering, not the fingering of B, and reads the flat in the key signature before playing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) play the scale of F major from staff notation on a descant recorder; c) perform a solo piece in F major on a descant recorder, applying correct playing techniques.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Recorder technique and directions (Grade 8) are used to play the F major scale. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.F_MAJOR",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The F major scale and its B flat are needed before fingering them. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.DESCANT_RECORDER.b",
+       "CREA.G9.CREATI.DESCANT_RECORDER.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_B_FOR_BFLAT",
+     "skill": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING",
+     "error": "Plays B flat with the fingering for B.",
+     "example": {
+      "question": "How do you play B flat on the recorder?",
+      "wrong_answer": "with the B fingering",
+      "correct_answer": "with its own cross-fingering"
+     },
+     "cause": "The child thinks a flat is played like the plain note.",
+     "reveals": "Offer \"with the B fingering\" next to the right answer and ask the question again in a new context.",
+     "help": "Play B, then B flat with the cross-fingering; hear the difference.",
+     "feedback": "B flat has its own fingering. It is not the same as B.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: recorder fingerings differ between Baroque and German recorders; check against the class recorders.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_LOW_F_LEFT",
+     "skill": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING",
+     "error": "Plays low F with the left hand only.",
+     "example": {
+      "question": "Does low F need the right hand?",
+      "wrong_answer": "no, only the left hand",
+      "correct_answer": "yes, the left hand and most right-hand holes"
+     },
+     "cause": "Notes learnt so far used mostly the left hand.",
+     "reveals": "Offer \"no, only the left hand\" next to the right answer and ask the question again in a new context.",
+     "help": "Play low F slowly, covering the right-hand holes.",
+     "feedback": "Low F needs the right hand as well as all the left-hand holes.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: recorder fingerings differ between Baroque and German recorders; check against the class recorders.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_IGNORE_KEY",
+     "skill": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING",
+     "error": "Ignores the flat in the key signature when sight reading.",
+     "example": {
+      "question": "A piece in F major has a B on the middle line. What do you play?",
+      "wrong_answer": "B",
+      "correct_answer": "B flat"
+     },
+     "cause": "The child reads each note alone and forgets the key signature.",
+     "reveals": "Offer \"B\" next to the right answer and ask the question again in a new context.",
+     "help": "Circle every B before playing.",
+     "feedback": "In F major every B is B flat.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_BLOW_LOW",
+     "skill": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING",
+     "error": "Blows hard for low F, so it squeaks.",
+     "example": {
+      "question": "How should you blow for low F?",
+      "wrong_answer": "hard",
+      "correct_answer": "very gently"
+     },
+     "cause": "Big notes seem to need big breath.",
+     "reveals": "Offer \"hard\" next to the right answer and ask the question again in a new context.",
+     "help": "Play low F gently and then hard.",
+     "feedback": "Low notes need very gentle breath and every hole sealed.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -790,8 +2531,128 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT",
+     "name": "Describe the format of a play script",
+     "outcomes": [
+      "CREA.G9.CREATI.PLAY.a"
+     ],
+     "mastery": "The child names the parts of a play script (title, cast list, acts and scenes, the character's name before each speech, dialogue, and stage directions in brackets or italics) and says stage directions are read and acted, not spoken aloud. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) create a one act play addressing a societal issue; c) act a role in a play performance.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G9.FOUNDA.COMPONENTS_OF_CREATIVE_A.PLAY_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The elements of a play are what a script sets out. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G8.CREATI.VERSE.VERSE_LANGUAGE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Using language for effect (Grade 8 verse) carries into dialogue. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI.STORY_TECHNIQUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Composing and performing a story (Grade 7) comes before writing a play. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.PLAY.b",
+       "CREA.G9.CREATI.PLAY.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_QUOTES",
+     "skill": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT",
+     "error": "Writes dialogue in quotation marks as in a story.",
+     "example": {
+      "question": "How is dialogue written in a play script?",
+      "wrong_answer": "in quotation marks, like a story",
+      "correct_answer": "after the character's name, with no quotation marks"
+     },
+     "cause": "Stories use quotation marks, so the child copies that.",
+     "reveals": "Offer \"in quotation marks, like a story\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a story page and a script page side by side.",
+     "feedback": "In a script the character's name comes first, then the words, with no quotation marks.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_DIRECTIONS_PLAIN",
+     "skill": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT",
+     "error": "Writes stage directions as plain lines like dialogue.",
+     "example": {
+      "question": "How are stage directions shown in a script?",
+      "wrong_answer": "as ordinary lines",
+      "correct_answer": "in brackets or italics"
+     },
+     "cause": "The child does not know scripts mark them differently.",
+     "reveals": "Offer \"as ordinary lines\" next to the right answer and ask the question again in a new context.",
+     "help": "Underline every stage direction in a sample script.",
+     "feedback": "Stage directions go in brackets or italics so actors know not to say them.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_NO_CAST",
+     "skill": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT",
+     "error": "Leaves out the cast list.",
+     "example": {
+      "question": "What comes at the start of a play script, after the title?",
+      "wrong_answer": "the first line of dialogue",
+      "correct_answer": "the cast list (characters)"
+     },
+     "cause": "Stories start straight away, so the child does too.",
+     "reveals": "Offer \"the first line of dialogue\" next to the right answer and ask the question again in a new context.",
+     "help": "Read the first page of a published play.",
+     "feedback": "A script starts with the title and the cast list.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_SCENE_ACT",
+     "skill": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT",
+     "error": "Thinks a scene is bigger than an act.",
+     "example": {
+      "question": "Which is bigger: an act or a scene?",
+      "wrong_answer": "a scene",
+      "correct_answer": "an act; it is made of scenes"
+     },
+     "cause": "Scenes are what the child notices changing.",
+     "reveals": "Offer \"a scene\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a contents page: Act 1, Scenes 1-3.",
+     "feedback": "An act is made of scenes.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -867,8 +2728,232 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL",
+     "name": "Describe passing and dribbling in basketball",
+     "outcomes": [
+      "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.a",
+      "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.b"
+     ],
+     "mastery": "The child describes the chest, bounce and overhead passes and when each is used, high dribbling (for speed in open space) and low dribbling (to protect the ball near a defender), and says a player may not walk with the ball (travelling) or dribble, stop and dribble again (double dribble). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: a) perform passes in Basketball for skill acquisition; b) execute dribbling in Basketball for skill acquisition.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.NETBALL.NETBALL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Chest, bounce and overhead passes (Grade 8 netball) are the basketball passes. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.HANDBALL.HANDBALL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Dribbling by bouncing (Grade 7 handball) prepares basketball dribbling. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.a",
+       "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.b"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO",
+     "name": "Say what makes a good logo for a team",
+     "outcomes": [
+      "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.c"
+     ],
+     "mastery": "The child says a logo is a simple symbol, name or letter combination that stands for a team, and that a good one is simple, easy to recognise and remember, uses few colours, works small and large, and fits the team's name or spirit. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: c) design logo for a Basketball team.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.DRAWING_AND_PAINTING.COMPLEMENTARY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Colour contrast (Grade 8) makes a logo stand out. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Balance in a design (Grade 7) helps a logo look steady. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_TRAVEL",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL",
+     "error": "Walks with the ball without dribbling.",
+     "example": {
+      "question": "May you walk with the basketball in your hands?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; that is travelling"
+     },
+     "cause": "In rugby players run with the ball.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk with the ball and blow the whistle: travelling.",
+     "feedback": "You must dribble to move. Walking with the ball is travelling.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_DOUBLE",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL",
+     "error": "Dribbles, stops, then dribbles again.",
+     "example": {
+      "question": "After you stop dribbling, may you dribble again?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; that is a double dribble"
+     },
+     "cause": "The child thinks dribbling can restart any time.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Dribble, catch, then try again: whistle.",
+     "feedback": "Once you stop dribbling, pass or shoot. Dribbling again is a double dribble.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_HIGH_LOW",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL",
+     "error": "Uses a high dribble near a defender.",
+     "example": {
+      "question": "Which dribble protects the ball near a defender?",
+      "wrong_answer": "a high dribble",
+      "correct_answer": "a low dribble"
+     },
+     "cause": "High dribbles are faster, so the child uses them everywhere.",
+     "reveals": "Offer \"a high dribble\" next to the right answer and ask the question again in a new context.",
+     "help": "Dribble high past a defender, then low; who keeps it?",
+     "feedback": "Dribble low near a defender. Dribble high for speed in open space.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_PASS_CHOICE",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL",
+     "error": "Uses a chest pass over a defender's raised arms.",
+     "example": {
+      "question": "Which pass goes over a defender with raised arms?",
+      "wrong_answer": "the chest pass",
+      "correct_answer": "the overhead pass"
+     },
+     "cause": "The chest pass is the first one learnt.",
+     "reveals": "Offer \"the chest pass\" next to the right answer and ask the question again in a new context.",
+     "help": "Pass to a team mate behind a defender with raised arms.",
+     "feedback": "Use an overhead pass to go over a defender's arms.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_DETAIL",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO",
+     "error": "Thinks a good logo is full of detail.",
+     "example": {
+      "question": "Is a good logo simple or detailed?",
+      "wrong_answer": "detailed, with many pictures",
+      "correct_answer": "simple and easy to recognise"
+     },
+     "cause": "Detail looks like effort.",
+     "reveals": "Offer \"detailed, with many pictures\" next to the right answer and ask the question again in a new context.",
+     "help": "Shrink a busy logo and a simple one to stamp size.",
+     "feedback": "A good logo is simple so it is recognised even when small.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_MANY_COLOURS",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO",
+     "error": "Uses many colours in a logo.",
+     "example": {
+      "question": "How many colours should a team logo usually use?",
+      "wrong_answer": "as many as possible",
+      "correct_answer": "a few, often two or three"
+     },
+     "cause": "Bright colours seem attractive.",
+     "reveals": "Offer \"as many as possible\" next to the right answer and ask the question again in a new context.",
+     "help": "Print a logo in black only: does it still work?",
+     "feedback": "Use a few colours so the logo is clear and cheap to print.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_NO_MEANING",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO",
+     "error": "Picks a picture that has nothing to do with the team.",
+     "example": {
+      "question": "What should a team logo show?",
+      "wrong_answer": "any picture you like",
+      "correct_answer": "something linked to the team's name or spirit"
+     },
+     "cause": "The child chooses a favourite picture.",
+     "reveals": "Offer \"any picture you like\" next to the right answer and ask the question again in a new context.",
+     "help": "Brainstorm the team name and what it stands for first.",
+     "feedback": "A logo should link to the team's name or spirit.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_COPY",
+     "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO",
+     "error": "Copies a famous team's logo.",
+     "example": {
+      "question": "May you copy a famous club's logo for your team?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; design your own"
+     },
+     "cause": "Famous logos look good, so copying seems fine.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss why every team needs its own identity.",
+     "feedback": "Design your own logo. Copying another team's logo is not allowed.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -952,8 +3037,233 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY",
+     "name": "Describe the coil technique in pottery",
+     "outcomes": [
+      "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.a"
+     ],
+     "mastery": "The child orders coil pottery: prepare the clay (remove impurities, knead and wedge), roll coils of even thickness, score and join each coil with slip, smooth the inside, decorate when slightly dry by incising, and dry slowly in the shade. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) model a vessel using coil method.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The slab method and joining with slip (Grade 6) are used again with coils. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_.BASKETRY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Coil basketry (Grade 8) uses the same spiral idea. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.b"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL",
+     "name": "Describe a frame loom and the 2/1 twill weave",
+     "outcomes": [
+      "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.c",
+      "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.d"
+     ],
+     "mastery": "The child says a frame loom holds the warp threads tight on a frame, and in a 2/1 twill the weft passes over two warp threads and under one, moving one thread along on each row so that diagonal lines form, unlike the plain weave of over one, under one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: c) make a frame loom for weaving; d) make a fabric using 2/1 twill weaving technique; e) display and critique own and others’ woven articles.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Plain weave (Grade 6) is the over one, under one pattern twill changes. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G8.CREATI.FABRIC_DECORATION.FABRIC_DECOR",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Fabric decoration (Grade 8) is the other way of making patterns on cloth. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.c",
+       "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.d",
+       "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.e"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_NO_WEDGE",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY",
+     "error": "Skips wedging the clay.",
+     "example": {
+      "question": "Why is clay wedged before making coils?",
+      "wrong_answer": "it is not needed",
+      "correct_answer": "to remove air bubbles so the pot does not crack"
+     },
+     "cause": "The child is eager to start shaping.",
+     "reveals": "Offer \"it is not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Cut a lump of unwedged clay and show the air pockets.",
+     "feedback": "Wedge the clay to remove air so the pot does not crack.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_UNEVEN",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY",
+     "error": "Rolls coils of different thickness.",
+     "example": {
+      "question": "Why roll coils of even thickness?",
+      "wrong_answer": "it does not matter",
+      "correct_answer": "so the walls are even and dry without cracking"
+     },
+     "cause": "The child rolls quickly by eye.",
+     "reveals": "Offer \"it does not matter\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll coils against a guide stick.",
+     "feedback": "Even coils give even walls that dry without cracking.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_NO_SLIP",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY",
+     "error": "Presses coils together without scoring or slip.",
+     "example": {
+      "question": "How are coils joined firmly?",
+      "wrong_answer": "just press them together",
+      "correct_answer": "score and join with slip, then smooth"
+     },
+     "cause": "Wet clay feels sticky enough.",
+     "reveals": "Offer \"just press them together\" next to the right answer and ask the question again in a new context.",
+     "help": "Join two coils with and without slip; let them dry and test.",
+     "feedback": "Score, add slip and smooth the join so the coils hold.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_DRY_SUN",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY",
+     "error": "Dries the pot in hot sun to finish quickly.",
+     "example": {
+      "question": "Where should a coil pot dry?",
+      "wrong_answer": "in hot sun",
+      "correct_answer": "slowly in the shade"
+     },
+     "cause": "Sun dries things fast.",
+     "reveals": "Offer \"in hot sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a pot dried in sun (cracks) with one in shade.",
+     "feedback": "Dry the pot slowly in the shade so it does not crack.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_PLAIN",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL",
+     "error": "Thinks 2/1 twill is over one, under one.",
+     "example": {
+      "question": "In a 2/1 twill, how does the weft pass the warp?",
+      "wrong_answer": "over one, under one",
+      "correct_answer": "over two, under one"
+     },
+     "cause": "Plain weave was learnt first.",
+     "reveals": "Offer \"over one, under one\" next to the right answer and ask the question again in a new context.",
+     "help": "Weave three rows of each and compare.",
+     "feedback": "A 2/1 twill goes over two warp threads and under one.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_NO_SHIFT",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL",
+     "error": "Starts every row at the same place, so no diagonal forms.",
+     "example": {
+      "question": "Why does a twill show diagonal lines?",
+      "wrong_answer": "it does not",
+      "correct_answer": "each row moves one warp thread along"
+     },
+     "cause": "The child repeats the first row exactly.",
+     "reveals": "Offer \"it does not\" next to the right answer and ask the question again in a new context.",
+     "help": "Weave four rows, shifting one thread each time.",
+     "feedback": "Move one thread along each row to make the diagonal.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_WARP_WEFT",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL",
+     "error": "Calls the threads stretched on the frame the weft.",
+     "example": {
+      "question": "What are the threads stretched tight on a frame loom called?",
+      "wrong_answer": "the weft",
+      "correct_answer": "the warp"
+     },
+     "cause": "The two words are easy to swap.",
+     "reveals": "Offer \"the weft\" next to the right answer and ask the question again in a new context.",
+     "help": "Warp goes on the loom first; weft goes across.",
+     "feedback": "The warp is stretched on the loom. The weft is woven across it.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_LOOSE_WARP",
+     "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL",
+     "error": "Leaves the warp loose on the frame.",
+     "example": {
+      "question": "Why must the warp be tight on a frame loom?",
+      "wrong_answer": "it does not matter",
+      "correct_answer": "so the weave is even and does not sag"
+     },
+     "cause": "The child ties the warp quickly.",
+     "reveals": "Offer \"it does not matter\" next to the right answer and ask the question again in a new context.",
+     "help": "Weave on a loose warp and a tight one.",
+     "feedback": "Keep the warp tight so the fabric is even.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -1024,8 +3334,121 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY",
+     "name": "Describe the standing dive and the butterfly stroke",
+     "outcomes": [
+      "CREA.G9.CREATI.SWIMMING.a"
+     ],
+     "mastery": "The child describes the standing dive (toes over the edge, arms stretched over the head, bend, push and enter hands first, only into deep water with a lifeguard) and the butterfly (body flat and wave-like, both arms over the water together, dolphin kick with legs together, breathing forward). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform a standing dive in swimming; c) perform the butterfly stroke in swimming.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.SWIMMING.SWIMMING_STROKES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Inverted breaststroke and treading (Grade 8) build deep-water confidence. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.CREATI.SWIMMING.SWIMMING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Water entry and the crouch dive (Grade 7) come before the standing dive. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.SWIMMING.b",
+       "CREA.G9.CREATI.SWIMMING.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_SHALLOW",
+     "skill": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY",
+     "error": "Thinks a standing dive is safe in shallow water.",
+     "example": {
+      "question": "Where may you do a standing dive?",
+      "wrong_answer": "anywhere in the pool",
+      "correct_answer": "only into deep water with a lifeguard"
+     },
+     "cause": "Confident swimmers feel safe everywhere.",
+     "reveals": "Offer \"anywhere in the pool\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the depth markings; talk about head injuries.",
+     "feedback": "Dive only into deep water with a lifeguard present.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_FEET_FIRST",
+     "skill": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY",
+     "error": "Thinks a standing dive enters feet first.",
+     "example": {
+      "question": "Which part enters the water first in a standing dive?",
+      "wrong_answer": "the feet",
+      "correct_answer": "the hands, arms stretched over the head"
+     },
+     "cause": "The pencil dive (Grade 7) entered feet first.",
+     "reveals": "Offer \"the feet\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise the arm position on land: hands together over the head.",
+     "feedback": "In a standing dive the hands enter first.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_ARMS_ALTERNATE",
+     "skill": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY",
+     "error": "Moves the arms one after the other in butterfly.",
+     "example": {
+      "question": "In butterfly, do the arms move together or one after another?",
+      "wrong_answer": "one after another",
+      "correct_answer": "together"
+     },
+     "cause": "Front crawl arms alternate.",
+     "reveals": "Offer \"one after another\" next to the right answer and ask the question again in a new context.",
+     "help": "Practise both arms together on land.",
+     "feedback": "In butterfly both arms move together over the water.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY.M_CA9_DB_FROG_KICK",
+     "skill": "CREA.G9.CREATI.SWIMMING.DIVE_BUTTERFLY",
+     "error": "Uses a frog kick in butterfly.",
+     "example": {
+      "question": "Which kick is used in butterfly?",
+      "wrong_answer": "the frog kick",
+      "correct_answer": "the dolphin kick, legs together"
+     },
+     "cause": "Breaststroke also moves both arms together, with a frog kick.",
+     "reveals": "Offer \"the frog kick\" next to the right answer and ask the question again in a new context.",
+     "help": "Kick with legs together like a dolphin tail.",
+     "feedback": "Butterfly uses the dolphin kick with both legs together.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -1093,8 +3516,121 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES",
+     "name": "Identify indigenous board games and what they build",
+     "outcomes": [
+      "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.a"
+     ],
+     "mastery": "The child names indigenous board games (bao and other games of sowing seeds in pits, played on boards or in the ground), says how a turn is played (sowing seeds one by one into the next pits and capturing), and that they build counting, planning, patience and mental health. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.2.1, CREA.G9.RUBRIC.2.2, CREA.G9.RUBRIC.2.3), never as a phone question: b) perform different indigenous board games; c) perform indigenous board games to background music for enjoyment.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.TAG_GAMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Tagging games (Grade 8) are the indigenous games met before board games. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counting games (Grade 5) build the counting a sowing game needs. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.b",
+       "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.c"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.2.1",
+       "CREA.G9.RUBRIC.2.2",
+       "CREA.G9.RUBRIC.2.3"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_CHESS",
+     "skill": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES",
+     "error": "Names chess or draughts as an indigenous Kenyan board game.",
+     "example": {
+      "question": "Which is an indigenous Kenyan board game?",
+      "wrong_answer": "chess",
+      "correct_answer": "bao (a game of sowing seeds in pits)"
+     },
+     "cause": "Chess and draughts are the board games the child knows.",
+     "reveals": "Offer \"chess\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a chess board with a bao board of pits.",
+     "feedback": "Bao and other sowing games are indigenous. Chess came from elsewhere.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_LUCK",
+     "skill": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES",
+     "error": "Thinks board games like bao depend only on luck.",
+     "example": {
+      "question": "Does winning at bao depend only on luck?",
+      "wrong_answer": "yes",
+      "correct_answer": "no; it needs counting and planning ahead"
+     },
+     "cause": "There is no thinking visible when seeds are dropped.",
+     "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Play a round and plan two moves ahead.",
+     "feedback": "Bao needs counting and planning, not just luck.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_BENEFIT",
+     "skill": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES",
+     "error": "Thinks board games have no benefit because they are not active.",
+     "example": {
+      "question": "Name a benefit of indigenous board games.",
+      "wrong_answer": "none; you sit still",
+      "correct_answer": "any of: counting, planning, patience, mental health, social time"
+     },
+     "cause": "The child links benefit only with physical fitness.",
+     "reveals": "Offer \"none; you sit still\" next to the right answer and ask the question again in a new context.",
+     "help": "List what the mind does in one game.",
+     "feedback": "Board games build counting, planning, patience and mental health.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_SOW_SKIP",
+     "skill": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES",
+     "error": "Drops several seeds in one pit when sowing.",
+     "example": {
+      "question": "When sowing in bao, how many seeds go in each pit?",
+      "wrong_answer": "as many as you like",
+      "correct_answer": "one seed in each pit in turn"
+     },
+     "cause": "The child hurries to empty the hand.",
+     "reveals": "Offer \"as many as you like\" next to the right answer and ask the question again in a new context.",
+     "help": "Sow slowly, counting one per pit.",
+     "feedback": "Sow one seed into each pit in turn.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.2.1",
     "CREA.G9.RUBRIC.2.2",
@@ -1182,8 +3718,324 @@
      "indicator": "CREA.G9.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS",
+     "name": "Analyse a play performance and a solo vocal piece",
+     "outcomes": [
+      "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
+      "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.c"
+     ],
+     "mastery": "The child analyses a play performance by its theme, setting, conflict, resolution, use of voice and body, props, costume and audience involvement, and a solo vocal piece by its melody, dynamics, tempo, diction, message and accompaniment, backing each point with something seen or heard. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Analysing a verse and a folk dance (Grade 8) is the same method for a play and a solo song. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Analysing themes in a play (Grade 9 English) supports analysing a performance. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS",
+     "name": "Examine ethical practices in sports",
+     "outcomes": [
+      "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.b"
+     ],
+     "mastery": "The child names ethical practices in sport (no doping, fair play, honest age and identity, no match fixing, respect for officials and opponents, safeguarding) and says why doping is banned (it is cheating and harms health). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The spirit of sportsmanship (Grade 8) is the base of ethics in sport. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_VALUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The values of clean sport (Grade 7) include saying no to doping. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "name": "Critique exhibited artworks",
+     "outcomes": [
+      "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.d"
+     ],
+     "mastery": "The child critiques an artwork in four steps (describe what is seen, analyse the elements and principles used, interpret the meaning, judge with reasons), kindly and with evidence from the work. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception. Practical, marked by the teacher with the KICD rubric (CREA.G9.RUBRIC.3.1), never as a phone question: d) critique exhibited artworks for inspiration.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer in a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Cataloguing exhibited work (Grade 6) comes before critiquing it. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Harmony, with dominance and balance, is a principle named when analysing an artwork. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A kind, specific comment (Grade 5) is the first step of a critique. Proposed, to confirm by a CBC Creative Arts and Sports teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed",
+     "teacher_rubric": {
+      "outcomes": [
+       "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.d"
+      ],
+      "indicators": [
+       "CREA.G9.RUBRIC.3.1"
+      ],
+      "by": "teacher"
+     }
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_OPINION",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS",
+     "error": "Analyses a play only by saying it was nice.",
+     "example": {
+      "question": "Which is an analysis of a play performance?",
+      "wrong_answer": "it was nice",
+      "correct_answer": "the actor's shaking voice showed the father's fear, which built the conflict"
+     },
+     "cause": "Giving an opinion feels like analysing.",
+     "reveals": "Offer \"it was nice\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask \"what did you see or hear that shows that?\"",
+     "feedback": "An analysis names what you saw or heard and what it shows.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_DICTION",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS",
+     "error": "Thinks diction in a song means how loud it is.",
+     "example": {
+      "question": "What is diction in a solo vocal piece?",
+      "wrong_answer": "how loud it is",
+      "correct_answer": "how clearly the words are pronounced"
+     },
+     "cause": "The child mixes diction with dynamics.",
+     "reveals": "Offer \"how loud it is\" next to the right answer and ask the question again in a new context.",
+     "help": "Sing a line mumbling and then clearly.",
+     "feedback": "Diction is how clearly the words are sung.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_ACCOMPANIMENT",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS",
+     "error": "Thinks a solo vocal piece can have no accompaniment by definition.",
+     "example": {
+      "question": "Can a solo vocal piece have an accompaniment?",
+      "wrong_answer": "no, solo means alone",
+      "correct_answer": "yes; one singer may be accompanied by instruments"
+     },
+     "cause": "The child takes \"solo\" to mean no other sound.",
+     "reveals": "Offer \"no, solo means alone\" next to the right answer and ask the question again in a new context.",
+     "help": "Listen to a soloist with a guitar.",
+     "feedback": "A solo has one singer, but it may have an instrumental accompaniment.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS.M_CA9_PA_AUDIENCE",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.PERFORMANCE_ANALYSIS",
+     "error": "Leaves out how the actors involve the audience.",
+     "example": {
+      "question": "Name one thing to look for when analysing a play performance.",
+      "wrong_answer": "only the costumes",
+      "correct_answer": "any of: theme, conflict, use of voice and body, props, costume, audience involvement"
+     },
+     "cause": "Costumes are the most visible part.",
+     "reveals": "Offer \"only the costumes\" next to the right answer and ask the question again in a new context.",
+     "help": "Use the full analysis checklist.",
+     "feedback": "Look at theme, conflict, voice, body, props, costume and audience involvement.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_DOPING_OK_SMALL",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS",
+     "error": "Thinks a small amount of a banned drug is acceptable.",
+     "example": {
+      "question": "Is a small amount of a banned substance allowed?",
+      "wrong_answer": "yes, if it is small",
+      "correct_answer": "no; any banned substance is doping"
+     },
+     "cause": "The child thinks only large amounts count.",
+     "reveals": "Offer \"yes, if it is small\" next to the right answer and ask the question again in a new context.",
+     "help": "Read an anti-doping rule together.",
+     "feedback": "Any banned substance is doping and is not allowed.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_AGE_CHEAT",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS",
+     "error": "Thinks lying about age to play in a younger group is harmless.",
+     "example": {
+      "question": "Is it fair to lie about age to play in a younger team?",
+      "wrong_answer": "yes, it helps the team win",
+      "correct_answer": "no; it is cheating and unfair to younger players"
+     },
+     "cause": "The child focuses on winning.",
+     "reveals": "Offer \"yes, it helps the team win\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss how the younger players feel.",
+     "feedback": "Lying about age is cheating and unfair to others.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_MATCH_FIXING",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS",
+     "error": "Thinks losing a match on purpose for money is a private choice.",
+     "example": {
+      "question": "A player is paid to lose a match on purpose. Is that ethical?",
+      "wrong_answer": "yes, it is their choice",
+      "correct_answer": "no; it is match fixing and cheats everyone"
+     },
+     "cause": "The child sees the choice as affecting only the player.",
+     "reveals": "Offer \"yes, it is their choice\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about fans, team mates and the sport.",
+     "feedback": "Losing on purpose for money is match fixing. It cheats everyone.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS.M_CA9_SE_DOPING_ONLY_HEALTH",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTS_ETHICS",
+     "error": "Thinks doping is banned only because it is unhealthy.",
+     "example": {
+      "question": "Give two reasons why doping is banned.",
+      "wrong_answer": "only because it is unhealthy",
+      "correct_answer": "it is cheating, and it harms health"
+     },
+     "cause": "Health warnings are what the child has heard.",
+     "reveals": "Offer \"only because it is unhealthy\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss what doping does to fairness.",
+     "feedback": "Doping is banned because it is cheating and because it harms health.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_JUDGE_FIRST",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Starts a critique by judging before describing.",
+     "example": {
+      "question": "What is the first step of a critique?",
+      "wrong_answer": "say if it is good or bad",
+      "correct_answer": "describe what you see"
+     },
+     "cause": "Judging is the quickest response.",
+     "reveals": "Offer \"say if it is good or bad\" next to the right answer and ask the question again in a new context.",
+     "help": "Use the four steps: describe, analyse, interpret, judge.",
+     "feedback": "Start by describing what you see. Judge last.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_NO_REASON",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Judges an artwork without giving reasons.",
+     "example": {
+      "question": "Which is a good critique judgement?",
+      "wrong_answer": "it is bad",
+      "correct_answer": "it works because the warm colours draw the eye to the dancer"
+     },
+     "cause": "The child thinks an opinion is enough.",
+     "reveals": "Offer \"it is bad\" next to the right answer and ask the question again in a new context.",
+     "help": "Add \"because\" to every judgement.",
+     "feedback": "Give a reason from the work for every judgement.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_ARTIST_PERSON",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Comments on the artist as a person instead of the work.",
+     "example": {
+      "question": "What should a critique comment on?",
+      "wrong_answer": "whether the artist is a nice person",
+      "correct_answer": "the artwork itself"
+     },
+     "cause": "The child knows the artist and mixes the two.",
+     "reveals": "Offer \"whether the artist is a nice person\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover the name and critique the work only.",
+     "feedback": "A critique is about the artwork, not the artist as a person.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE.M_CA9_CQ_INTERPRET_DESCRIBE",
+     "skill": "CREA.G9.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE",
+     "error": "Gives a description when asked for the meaning.",
+     "example": {
+      "question": "What is the interpretation step of a critique?",
+      "wrong_answer": "listing what is in the picture",
+      "correct_answer": "saying what the work means or expresses"
+     },
+     "cause": "Describing is easier than interpreting.",
+     "reveals": "Offer \"listing what is in the picture\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask \"what is the artist telling us?\" after describing.",
+     "feedback": "Interpretation says what the work means, not only what is in it.",
+     "source": "To confirm by a CBC Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "CREA.G9.RUBRIC.3.1"
    ]

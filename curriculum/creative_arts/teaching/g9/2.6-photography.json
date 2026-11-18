@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G9.CREATI.PHOTOGRAPHY",
+ "title": "Photography",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use school devices with permission; never photograph people without asking.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS",
+   "key_step": "The child names the bird's eye (high, looking down), normal (eye level) and worm's eye (low, looking up) viewpoints and what each does to the subject.",
+   "floor": {
+    "prerequisite": "Knows good light and the centre of interest (Grade 4).",
+    "question": "Where should the sun be?",
+    "answer": "behind the photographer"
+   },
+   "representations": [
+    "sample photos",
+    "a school device",
+    "a staircase or bench"
+   ],
+   "steps": [
+    "Decide where the camera goes: high, level or low.",
+    "Look at the effect.",
+    "Choose for the message."
+   ],
+   "contexts": [
+    "photographs of scenery around the school",
+    "a picture of a tall building"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "A photo of a tree from the ground.",
+     "say": "Which viewpoint?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for worm's eye."
+    },
+    {
+     "beat": "predict",
+     "do": "What does it do to the tree?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Makes it look tall."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_WORM_DOWN",
+     "listen_for": [
+      "high, looking down"
+     ],
+     "ask": "In a worm's eye view, where is the camera?",
+     "repair": "Lie on the ground and look up at a tree."
+    },
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_BIRD_EFFECT",
+     "listen_for": [
+      "makes them look tall and powerful"
+     ],
+     "ask": "What does a bird's eye view do to a person in the photo?",
+     "repair": "Photograph a friend from a staircase and from the ground."
+    },
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_NORMAL",
+     "listen_for": [
+      "never"
+     ],
+     "ask": "When is the normal (eye-level) view useful?",
+     "repair": "Compare eye-level and worm's eye portraits."
+    },
+    {
+     "code": "CREA.G9.CREATI.PHOTOGRAPHY.VIEWPOINTS.M_CA9_VP_ZOOM",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does zooming in change the viewpoint?",
+     "repair": "Zoom without moving, then move the camera low."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the camera in a bird's eye view?",
+     "answer": "high, looking down",
+     "shows": "bird"
+    },
+    {
+     "question": "Which viewpoint makes a subject look tall and powerful?",
+     "answer": "the worm's eye view",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

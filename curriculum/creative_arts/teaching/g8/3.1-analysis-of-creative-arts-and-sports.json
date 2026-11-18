@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART",
+ "title": "Analysis of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Analyse a verse and a folk dance the class performed; back every point with evidence.",
+ "skills": [
+  {
+   "skill": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP",
+   "key_step": "The child names the spirit of sportsmanship: fair play, honesty, respect for opponents and officials, winning and losing with grace.",
+   "floor": {
+    "prerequisite": "Names values of clean sport (Grade 7).",
+    "question": "Name one value.",
+    "answer": "any of: fair play, honesty, respect, teamwork"
+   },
+   "representations": [
+    "short match stories",
+    "value cards",
+    "a class charter"
+   ],
+   "steps": [
+    "Read what the player did.",
+    "Fair or unfair?",
+    "Name the sportsmanship shown or missing."
+   ],
+   "contexts": [
+    "a football final",
+    "sports day"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A team loses and shakes hands.",
+     "say": "Sportsmanship?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Accepting defeat with respect."
+    },
+    {
+     "beat": "write",
+     "do": "Write four signs of sportsmanship."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP.M_CA8_SP_CHEAT",
+     "listen_for": [
+      "Cheating to win"
+     ],
+     "ask": "Which shows sportsmanship?",
+     "repair": "Ask how the other team feels when they lose to a cheat."
+    },
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP.M_CA8_SP_DEFEAT",
+     "listen_for": [
+      "With anger"
+     ],
+     "ask": "How should a good sport accept defeat?",
+     "repair": "Watch a team shake hands after losing."
+    },
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP.M_CA8_SP_OFFICIAL",
+     "listen_for": [
+      "Insult them"
+     ],
+     "ask": "How should players treat referees?",
+     "repair": "Discuss what happens to a game without a respected referee."
+    },
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.SPORTSMANSHIP.M_CA8_SP_WIN_GLOAT",
+     "listen_for": [
+      "laugh at the losers"
+     ],
+     "ask": "How should a winning team behave?",
+     "repair": "Role-play winning with respect."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How should players treat referees?",
+     "answer": "respect their decisions",
+     "shows": "officials"
+    },
+    {
+     "question": "How should a good sport accept defeat?",
+     "answer": "with respect, congratulating the winners",
+     "shows": "defeat"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS",
+   "key_step": "The child analyses a verse performance (message, language, voice, gesture) and a folk dance (community, occasion, formation, costume, props, instruments) with evidence.",
+   "floor": {
+    "prerequisite": "Analyses a folk song and a story (Grade 7).",
+    "question": "What is the theme of a story?",
+    "answer": "the idea it teaches"
+   },
+   "representations": [
+    "a class performance",
+    "an analysis frame",
+    "term cards"
+   ],
+   "steps": [
+    "Watch once.",
+    "Note what you see and hear.",
+    "Say what each shows.",
+    "Give the message."
+   ],
+   "contexts": [
+    "a verse at a festival",
+    "a folk dance on cultural day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "The verse repeats \"we need water\".",
+     "say": "What does it show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it stresses the message\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the point with evidence."
+    },
+    {
+     "beat": "reveal",
+     "do": "Model a full analysis sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA8_AN_OPINION_ONLY",
+     "listen_for": [
+      "it was good"
+     ],
+     "ask": "Which is an analysis of a verse performance?",
+     "repair": "Ask \"what did you hear that shows that?\""
+    },
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA8_AN_FORMATION_COSTUME",
+     "listen_for": [
+      "costume"
+     ],
+     "ask": "Dancers move in a circle. Which term describes this?",
+     "repair": "Worn: costume. Pattern of dancers: formation."
+    },
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA8_AN_MESSAGE_TOPIC",
+     "listen_for": [
+      "trees"
+     ],
+     "ask": "A verse is about trees. What is its message?",
+     "repair": "Ask \"what does the poet want us to think or do?\""
+    },
+    {
+     "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART.ANALYSIS.M_CA8_AN_COMMUNITY_GUESS",
+     "listen_for": [
+      "from the colour of the costume only"
+     ],
+     "ask": "How do you know which community a dance comes from?",
+     "repair": "List all the clues in one performance."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the message of a verse?",
+     "answer": "what it says about its topic",
+     "shows": "message"
+    },
+    {
+     "question": "Name two things to note in a folk dance.",
+     "answer": "any two of: community, occasion, formation, costume, props, instruments",
+     "shows": "dance"
+    }
+   ]
+  }
+ ]
+}
