@@ -850,6 +850,87 @@
    ],
    "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
   },
+  "MATH.G7.MEASUR.AREA.AREA_M2_CM2": {
+   "forms": [
+    "m2 to cm2",
+    "cm2 to m2",
+    "why 10,000",
+    "find the mistake"
+   ],
+   "mastery": "The child says a square metre is a square 100 cm by 100 cm, so 1 m2 = 10,000 cm2, changes m2 to cm2 by multiplying by 10,000 and cm2 to m2 by dividing, and finds the wrong step in a working that uses 100."
+  },
+  "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE": {
+   "forms": [
+    "field in hectares",
+    "acres to m2",
+    "total of plots in hectares",
+    "which unit for land"
+   ],
+   "mastery": "The child says 1 hectare is 10,000 m2 (a square 100 m by 100 m), finds a field in hectares from its length and width, totals plots in m2 and changes to hectares, and uses the acre size the question gives to change acres to m2."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS": {
+   "forms": [
+    "area from base and height",
+    "which length is the height",
+    "why not the slanting side",
+    "rhombus from its diagonals"
+   ],
+   "mastery": "The child multiplies the base by the perpendicular height, not the slanting side, explains that cutting a triangle off one end and moving it makes a rectangle, and finds a rhombus from base x height or half the product of its diagonals."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM": {
+   "forms": [
+    "area of a plot",
+    "find the other parallel side",
+    "find the mistake",
+    "which sides are added"
+   ],
+   "mastery": "The child adds the two parallel sides, multiplies by the distance between them and halves, finds a missing parallel side by doubling the area, dividing by the height and taking away the known side, and spots a working that doubles instead of halving."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT": {
+   "forms": [
+    "tiles for a floor",
+    "same unit first",
+    "how many cover the whole floor",
+    "carpet for a room"
+   ],
+   "mastery": "The child puts the floor and one tile in the same unit (cm2), divides the floor area by the area of one tile, and does not count tiles along the edges only."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_CIRCLE": {
+   "forms": [
+    "area from the diameter",
+    "half circle window",
+    "why four times",
+    "area from the radius"
+   ],
+   "mastery": "The child halves the diameter for the radius, multiplies pi x r x r with pi = 22/7, halves for a half circle, and explains that doubling the radius makes the area four times as big."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE": {
+   "forms": [
+    "diameter from the walk round",
+    "then the radius",
+    "then the area",
+    "which step first"
+   ],
+   "mastery": "From the circumference the child finds the diameter (divide by pi), halves it for the radius, then finds pi x r x r, keeping each step in order."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_BORDERS": {
+   "forms": [
+    "path round a garden",
+    "path round a pond",
+    "outer minus inner",
+    "frame round a picture"
+   ],
+   "mastery": "The child finds the outer shape (a rectangle grows by twice the path width each way; a circle grows by the path width on its radius), finds the inner shape, and takes the inner area from the outer area."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES": {
+   "forms": [
+    "L-shaped floor",
+    "rectangle and half circle",
+    "cost of tiling",
+    "split the shape"
+   ],
+   "mastery": "The child splits an L-shaped floor or a stage into rectangles and a half circle, finds each area, adds them, and multiplies the whole area by the cost of one square metre."
+  },
   "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
    "forms": [
     "m3 to cm3",

@@ -9073,6 +9073,1081 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Length",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.MEASUR.AREA.AREA_M2_CM2": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_M2_CM2",
+  "key_step": "The child says a square metre is 100 cm by 100 cm, so the factor is 10,000 and not 100.",
+  "floor": {
+   "prerequisite": "Changes m to cm.",
+   "question": "3 m in cm",
+   "answer": "300"
+  },
+  "representations": [
+   "a square metre on the floor",
+   "100 rows of 100",
+   "a conversion line"
+  ],
+  "steps": [
+   "Draw 1 m2.",
+   "Each side is 100 cm.",
+   "100 x 100 = 10,000.",
+   "m2 to cm2: x 10,000; back: divide."
+  ],
+  "contexts": [
+   "a classroom floor",
+   "a carpet",
+   "a notice board"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square with each side marked 100 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two sides.",
+    "say": "How many cm squares fit along and down?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 m2 = 10,000 cm2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_M2_CM2.M_SQUARE_UNIT_FACTOR_NOT_SQUARED",
+    "listen_for": [
+     "100 cm2"
+    ],
+    "ask": "How many rows of 100?",
+    "repair": "100 rows: 10,000.",
+    "error": "Uses 100 for the cm2 in a square metre.",
+    "example": {
+     "question": "3 m2 in cm2",
+     "wrong_answer": "300",
+     "correct_answer": "30,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_M2_CM2.M_CM2_TO_M2_MULTIPLIED",
+    "listen_for": [
+     "multiplied"
+    ],
+    "ask": "Are m2 bigger or smaller?",
+    "repair": "Bigger: divide.",
+    "error": "Multiplies by 10,000 when changing cm2 to m2.",
+    "example": {
+     "question": "50,000 cm2 in m2",
+     "wrong_answer": "500,000,000",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3 m2 in cm2",
+    "answer": "30,000",
+    "shows": "factor"
+   },
+   {
+    "question": "50,000 cm2 in m2",
+    "answer": "5",
+    "shows": "divide"
+   }
+  ],
+  "name": "Know the square metre and change between m2 and cm2",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "key_step": "The child finds the area in m2 first and then divides by 10,000 for hectares, or multiplies by the given acre size.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "200 m by 150 m",
+   "answer": "30,000 m2"
+  },
+  "representations": [
+   "a 100 m square",
+   "a land title",
+   "a conversion table"
+  ],
+  "steps": [
+   "Area in m2.",
+   "1 ha = 10,000 m2.",
+   "Divide for hectares.",
+   "Acres: use the size given."
+  ],
+  "contexts": [
+   "a shamba",
+   "a school compound",
+   "plots for sale"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a field 200 m by 150 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the area 30,000 m2.",
+    "say": "How many 10,000s are in it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3 ha."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_FOR_ACRE",
+    "listen_for": [
+     "10,000 for an acre"
+    ],
+    "ask": "What does the question say an acre is?",
+    "repair": "Use 4,000.",
+    "error": "Uses 10,000 m2, the hectare, for an acre.",
+    "example": {
+     "question": "3 acres in m2 (1 acre = 4,000 m2)",
+     "wrong_answer": "30,000",
+     "correct_answer": "12,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_FACTOR_ZERO_DROPPED",
+    "listen_for": [
+     "400"
+    ],
+    "ask": "How many zeros in 4,000?",
+    "repair": "Three.",
+    "error": "Multiplies by 400 instead of 4,000.",
+    "example": {
+     "question": "3 acres in m2 (1 acre = 4,000 m2)",
+     "wrong_answer": "1,200",
+     "correct_answer": "12,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_ADDED_FACTOR",
+    "listen_for": [
+     "plus 4,000"
+    ],
+    "ask": "Three acres, each 4,000: add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the conversion number instead of multiplying.",
+    "example": {
+     "question": "3 acres in m2 (1 acre = 4,000 m2)",
+     "wrong_answer": "4,003",
+     "correct_answer": "12,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_M2_LEFT_UNCONVERTED",
+    "listen_for": [
+     "30,000 ha"
+    ],
+    "ask": "Which unit is asked?",
+    "repair": "Hectares.",
+    "error": "Gives the area in m2 when hectares are asked.",
+    "example": {
+     "question": "A field 200 m by 150 m in hectares",
+     "wrong_answer": "30,000",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_AS_100_M2",
+    "listen_for": [
+     "300 ha"
+    ],
+    "ask": "How big is a hectare square?",
+    "repair": "100 m by 100 m.",
+    "error": "Believes a hectare is 100 m2.",
+    "example": {
+     "question": "A field 200 m by 150 m in hectares",
+     "wrong_answer": "300",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_AS_1000_M2",
+    "listen_for": [
+     "30 ha"
+    ],
+    "ask": "Is a hectare 1,000 m2?",
+    "repair": "10,000.",
+    "error": "Uses 1,000 m2 for a hectare.",
+    "example": {
+     "question": "30,000 m2 in hectares",
+     "wrong_answer": "30",
+     "correct_answer": "3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A field 250 m by 120 m: hectares?",
+    "answer": "3",
+    "shows": "divide by 10,000"
+   },
+   {
+    "question": "5 acres in m2, with 1 acre = 4,000 m2",
+    "answer": "20,000",
+    "shows": "acre size"
+   }
+  ],
+  "name": "Use hectares and acres for land and change them to and from square metres",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "key_step": "The child chooses the length that meets the base at a right angle as the height.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "12 by 7",
+   "answer": "84"
+  },
+  "representations": [
+   "cut and move a triangle",
+   "a set square on the height",
+   "diagonals of a rhombus"
+  ],
+  "steps": [
+   "Find the base.",
+   "Find the perpendicular height.",
+   "Base x height.",
+   "Rhombus: half the diagonals multiplied."
+  ],
+  "contexts": [
+   "a floor tile",
+   "a kite",
+   "a field"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a parallelogram with its slanting side and a dotted height."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the dotted line.",
+    "say": "Which line meets the base at a right angle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "draw",
+    "do": "Cut the triangle and move it to make a rectangle."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_SLANT_SIDE_FOR_HEIGHT",
+    "listen_for": [
+     "base x slant"
+    ],
+    "ask": "Does the slanting side meet the base square on?",
+    "repair": "Use the height.",
+    "error": "Multiplies the base by the slanting side.",
+    "example": {
+     "question": "Base 12 cm, slanting side 9 cm, height 7 cm",
+     "wrong_answer": "108",
+     "correct_answer": "84"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_HALF_FOR_PARALLELOGRAM",
+    "listen_for": [
+     "half"
+    ],
+    "ask": "Is this a triangle?",
+    "repair": "No half.",
+    "error": "Halves base x height as for a triangle.",
+    "example": {
+     "question": "Base 12 cm, height 7 cm",
+     "wrong_answer": "42",
+     "correct_answer": "84"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_PERIMETER_FOR_AREA",
+    "listen_for": [
+     "added the sides"
+    ],
+    "ask": "Is that the distance round?",
+    "repair": "Area multiplies.",
+    "error": "Adds the sides, which gives the perimeter.",
+    "example": {
+     "question": "Base 12 cm, slanting side 9 cm",
+     "wrong_answer": "42",
+     "correct_answer": "84 (with height 7 cm)"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_SLANT_THOUGHT_SHORTER",
+    "listen_for": [
+     "the height is longer"
+    ],
+    "ask": "Which is the shortest way across?",
+    "repair": "The height.",
+    "error": "Believes the slanting side is shorter than the height.",
+    "example": {
+     "question": "Which is longer: the slanting side or the height?",
+     "wrong_answer": "the height",
+     "correct_answer": "the slanting side"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_RHOMBUS_DIAGONALS_NOT_HALVED",
+    "listen_for": [
+     "10 x 6 = 60"
+    ],
+    "ask": "Is the rhombus the whole rectangle?",
+    "repair": "Half of it.",
+    "error": "Multiplies the diagonals of a rhombus and does not halve.",
+    "example": {
+     "question": "Rhombus with diagonals 10 cm and 6 cm",
+     "wrong_answer": "60",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Base 15 cm, slanting side 10 cm, height 8 cm: area?",
+    "answer": "120 cm2",
+    "shows": "height"
+   },
+   {
+    "question": "Rhombus with diagonals 12 cm and 8 cm: area?",
+    "answer": "48 cm2",
+    "shows": "half the diagonals"
+   }
+  ],
+  "name": "Work out the area of a parallelogram and a rhombus",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "key_step": "The child adds the parallel sides, multiplies by the height, then halves.",
+  "floor": {
+   "prerequisite": "Area of a triangle.",
+   "question": "base 10, height 6",
+   "answer": "30"
+  },
+  "representations": [
+   "two trapeziums make a parallelogram",
+   "the formula",
+   "a shamba drawing"
+  ],
+  "steps": [
+   "Add the parallel sides.",
+   "Multiply by the height.",
+   "Halve.",
+   "Back: double, divide, subtract."
+  ],
+  "contexts": [
+   "a shamba",
+   "a roof face",
+   "a field"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a trapezium and a copy upside down beside it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the long shape they make.",
+    "say": "What shape is it, and how much of it is one trapezium?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1/2 x (a + b) x h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_TRAPEZIUM_HALF_LEFT_OUT",
+    "listen_for": [
+     "forgot the half"
+    ],
+    "ask": "How many trapeziums make the parallelogram?",
+    "repair": "Two: take half.",
+    "error": "Forgets the half in the trapezium formula.",
+    "example": {
+     "question": "Parallel sides 30 m and 50 m, 20 m apart",
+     "wrong_answer": "1,600",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_HEIGHT_LEFT_OUT",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Where is the height?",
+    "repair": "Multiply by it.",
+    "error": "Gives the average of the parallel sides as the area.",
+    "example": {
+     "question": "Parallel sides 30 m and 50 m, 20 m apart",
+     "wrong_answer": "40",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_ONE_PARALLEL_SIDE_USED",
+    "listen_for": [
+     "one side"
+    ],
+    "ask": "How many parallel sides?",
+    "repair": "Two: add them.",
+    "error": "Uses one parallel side only.",
+    "example": {
+     "question": "Parallel sides 30 m and 50 m, 20 m apart",
+     "wrong_answer": "600",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_HALF_NOT_UNDONE",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "What undoes a half?",
+    "repair": "Double first.",
+    "error": "Divides the area by the height without doubling first.",
+    "example": {
+     "question": "Area 120 m2, height 8 m: sum of parallel sides",
+     "wrong_answer": "15",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_KNOWN_SIDE_ADDED",
+    "listen_for": [
+     "42"
+    ],
+    "ask": "Is the other side more than the sum?",
+    "repair": "Subtract.",
+    "error": "Adds the known side to the sum to find the other side.",
+    "example": {
+     "question": "Sum of parallel sides 30 m, one side 12 m: the other",
+     "wrong_answer": "42",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_DOUBLED_NOT_HALVED",
+    "listen_for": [
+     "x 2"
+    ],
+    "ask": "Is it half or double?",
+    "repair": "Half.",
+    "error": "Doubles the product instead of halving it.",
+    "example": {
+     "question": "(12 + 8) x 6: then?",
+     "wrong_answer": "240",
+     "correct_answer": "60"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Parallel sides 30 m and 50 m, 20 m apart: area?",
+    "answer": "800 m2",
+    "shows": "formula"
+   },
+   {
+    "question": "Area 120 m2, height 8 m, one parallel side 12 m: the other?",
+    "answer": "18 m",
+    "shows": "work back"
+   }
+  ],
+  "name": "Work out the area of a trapezium and a missing parallel side",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT",
+  "key_step": "The child changes the floor and the tile to one unit and divides one area by the other.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "400 cm by 300 cm",
+   "answer": "120,000 cm2"
+  },
+  "representations": [
+   "tiles in rows and columns",
+   "a floor plan",
+   "one tile"
+  ],
+  "steps": [
+   "Floor in cm.",
+   "Floor area.",
+   "Tile area.",
+   "Divide."
+  ],
+  "contexts": [
+   "tiling a classroom",
+   "a carpet",
+   "mats on a floor"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a floor 4 m by 3 m and one tile 50 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the floor.",
+    "say": "How many 50 cm tiles fit along 4 m?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 8 x 6 = 48."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT.M_TILES_ALONG_SIDES_ADDED",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Does that cover the middle?",
+    "repair": "Rows times columns.",
+    "error": "Counts the tiles along two sides and adds them.",
+    "example": {
+     "question": "Floor 4 m by 3 m, tiles 50 cm",
+     "wrong_answer": "14",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT.M_AREAS_IN_DIFFERENT_UNITS",
+    "listen_for": [
+     "12 tiles"
+    ],
+    "ask": "Is a tile 1 m2?",
+    "repair": "Same unit first.",
+    "error": "Gives the floor area in m2 as the number of tiles.",
+    "example": {
+     "question": "Floor 4 m by 3 m, tiles 50 cm",
+     "wrong_answer": "12",
+     "correct_answer": "48"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Floor 5 m by 4 m, tiles of 25 cm: how many?",
+    "answer": "320",
+    "shows": "same unit"
+   },
+   {
+    "question": "Why is 12 wrong for a 4 m by 3 m floor and 50 cm tiles?",
+    "answer": "a tile is not 1 m2",
+    "shows": "compare areas"
+   }
+  ],
+  "name": "Use the area of a rectangle to count tiles or cover a floor",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "key_step": "The child halves the diameter first, then multiplies pi by the radius twice.",
+  "floor": {
+   "prerequisite": "Squares a number.",
+   "question": "7 squared",
+   "answer": "49"
+  },
+  "representations": [
+   "sectors rearranged to a rectangle",
+   "a circle with its radius",
+   "the formula"
+  ],
+  "steps": [
+   "Radius from diameter.",
+   "r x r.",
+   "Times 22/7.",
+   "Half circle: halve."
+  ],
+  "contexts": [
+   "a flower bed",
+   "a church window",
+   "a round mat"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle with a diameter of 14 m marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the diameter.",
+    "say": "What is the radius?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 22/7 x 7 x 7 = 154."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_DIAMETER_FOR_RADIUS_AREA",
+    "listen_for": [
+     "14 x 14"
+    ],
+    "ask": "What is half of 14?",
+    "repair": "Use 7.",
+    "error": "Uses the diameter in place of the radius.",
+    "example": {
+     "question": "Circle diameter 14 m",
+     "wrong_answer": "616",
+     "correct_answer": "154"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_CIRCUMFERENCE_FOR_AREA",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "Is that the distance round?",
+    "repair": "Area needs r x r.",
+    "error": "Works out pi x d, the distance round, for the area.",
+    "example": {
+     "question": "Circle diameter 14 m",
+     "wrong_answer": "44",
+     "correct_answer": "154"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_RADIUS_NOT_SQUARED_AREA",
+    "listen_for": [
+     "22/7 x 7"
+    ],
+    "ask": "How many r in the area?",
+    "repair": "Two.",
+    "error": "Multiplies pi by the radius once.",
+    "example": {
+     "question": "Circle radius 7 m",
+     "wrong_answer": "22",
+     "correct_answer": "154"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_SEMICIRCLE_NOT_HALVED",
+    "listen_for": [
+     "whole circle"
+    ],
+    "ask": "Is the window a whole circle?",
+    "repair": "Halve.",
+    "error": "Gives the whole circle for a half circle.",
+    "example": {
+     "question": "Half circle, straight edge 14 cm",
+     "wrong_answer": "154",
+     "correct_answer": "77"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_AREA_SCALES_LIKE_LENGTH",
+    "listen_for": [
+     "twice the area"
+    ],
+    "ask": "What is 14 x 14 compared with 7 x 7?",
+    "repair": "4 times.",
+    "error": "Believes doubling the radius doubles the area.",
+    "example": {
+     "question": "Radius 7 cm and radius 14 cm: how many times the area?",
+     "wrong_answer": "2",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_PI_AS_SCALE_FACTOR",
+    "listen_for": [
+     "3 times"
+    ],
+    "ask": "Is pi different for the two mats?",
+    "repair": "No.",
+    "error": "Believes pi changes how much the area grows.",
+    "example": {
+     "question": "Radius doubled: how many times the area?",
+     "wrong_answer": "3, because pi is about 3",
+     "correct_answer": "4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Circle of diameter 28 m: area (pi = 22/7)?",
+    "answer": "616 m2",
+    "shows": "radius first"
+   },
+   {
+    "question": "Radius doubled: how many times the area?",
+    "answer": "4",
+    "shows": "r x r"
+   }
+  ],
+  "name": "Work out the area of a circle and a half circle",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE",
+  "key_step": "The child divides the circumference by pi for the diameter before halving.",
+  "floor": {
+   "prerequisite": "Circumference from the diameter.",
+   "question": "d = 14, pi = 22/7",
+   "answer": "44"
+  },
+  "representations": [
+   "a rope round a pond",
+   "the two formulas",
+   "a chain of steps"
+  ],
+  "steps": [
+   "Diameter = C divided by pi.",
+   "Radius = half.",
+   "Area = pi x r x r."
+  ],
+  "contexts": [
+   "a fish pond",
+   "a round field",
+   "a water tank top"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write C = 88 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 88.",
+    "say": "What do we divide by to get the diameter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 88 divided by 22/7 = 28."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE.M_CIRCUMFERENCE_HALVED_FOR_DIAMETER",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "Is the diameter half the distance round?",
+    "repair": "Divide by pi.",
+    "error": "Halves the circumference to get the diameter.",
+    "example": {
+     "question": "Circumference 88 m: diameter",
+     "wrong_answer": "44",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE.M_DIAMETER_DOUBLED_FOR_RADIUS",
+    "listen_for": [
+     "56"
+    ],
+    "ask": "Is the radius longer than the diameter?",
+    "repair": "Half.",
+    "error": "Doubles the diameter to get the radius.",
+    "example": {
+     "question": "Diameter 28 m: radius",
+     "wrong_answer": "56",
+     "correct_answer": "14"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Circumference 44 m: area (pi = 22/7)?",
+    "answer": "154 m2",
+    "shows": "chain"
+   },
+   {
+    "question": "Circumference 88 m: diameter?",
+    "answer": "28 m",
+    "shows": "divide by pi"
+   }
+  ],
+  "name": "Find the area of a circle from the distance round it",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_BORDERS": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+  "key_step": "The child finds the outer shape with the right size and takes the inner shape away.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "14 by 10",
+   "answer": "140"
+  },
+  "representations": [
+   "a picture frame",
+   "two shapes, one inside the other",
+   "outer minus inner"
+  ],
+  "steps": [
+   "Outer size.",
+   "Outer area.",
+   "Inner area.",
+   "Subtract."
+  ],
+  "contexts": [
+   "a path round a garden",
+   "a path round a pond",
+   "a frame"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a garden 12 m by 8 m with a 1 m path round it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the outer length.",
+    "say": "How long is the outside now?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 14 x 10 - 12 x 8 = 44."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_BORDER_CORNERS_LEFT_OUT",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "What about the corners?",
+    "repair": "Outer minus inner.",
+    "error": "Multiplies the perimeter of the garden by the path width.",
+    "example": {
+     "question": "Garden 12 m by 8 m, path 1 m wide",
+     "wrong_answer": "40",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_BORDER_WIDTH_ADDED_ONCE",
+    "listen_for": [
+     "13 by 9"
+    ],
+    "ask": "Is the path on both ends?",
+    "repair": "Add 2.",
+    "error": "Adds the path width once to each side length.",
+    "example": {
+     "question": "Garden 12 m by 8 m, path 1 m wide",
+     "wrong_answer": "21",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_NOT_SUBTRACTED",
+    "listen_for": [
+     "140"
+    ],
+    "ask": "Is the garden part of the path?",
+    "repair": "Take it away.",
+    "error": "Gives the area of the whole outer shape.",
+    "example": {
+     "question": "Garden 12 m by 8 m, path 1 m wide",
+     "wrong_answer": "140",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_RING_WIDTH_ADDED_TWICE",
+    "listen_for": [
+     "7 + 14"
+    ],
+    "ask": "How many times does the radius cross the path?",
+    "repair": "Once.",
+    "error": "Adds the path width twice to the radius of a pond.",
+    "example": {
+     "question": "Pond radius 7 m, path 7 m wide: outer radius",
+     "wrong_answer": "21",
+     "correct_answer": "14"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_RADIUS_USED",
+    "listen_for": [
+     "pond radius"
+    ],
+    "ask": "Which circle is the big one?",
+    "repair": "Pond and path.",
+    "error": "Uses the pond radius for the big circle.",
+    "example": {
+     "question": "Pond radius 7 m, path 7 m: area of pond and path",
+     "wrong_answer": "154",
+     "correct_answer": "616"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Garden 10 m by 6 m, path 2 m wide: area of the path?",
+    "answer": "80 m2",
+    "shows": "outer minus inner"
+   },
+   {
+    "question": "Pond radius 7 m, path 7 m: area of the path (pi = 22/7)?",
+    "answer": "462 m2",
+    "shows": "ring"
+   }
+  ],
+  "name": "Work out the area of a border or path round a shape",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES",
+  "key_step": "The child splits the shape into parts whose areas are known and adds them.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "6 by 4",
+   "answer": "24"
+  },
+  "representations": [
+   "an L split into two rectangles",
+   "a rectangle with a half circle",
+   "a floor plan"
+  ],
+  "steps": [
+   "Split the shape.",
+   "Each area.",
+   "Add.",
+   "Cost: area x price."
+  ],
+  "contexts": [
+   "an L-shaped floor",
+   "a school stage",
+   "a compound"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an L-shaped floor and a dotted line splitting it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two parts.",
+    "say": "What is each area?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write the two areas and add them."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_SIDES_ADDED_FOR_AREA",
+    "listen_for": [
+     "4 + 3"
+    ],
+    "ask": "Add or multiply the sides?",
+    "repair": "Multiply.",
+    "error": "Adds two sides of a rectangle for its area.",
+    "example": {
+     "question": "A rectangle 4 m by 3 m",
+     "wrong_answer": "7",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_PARTS_MULTIPLIED_NOT_ADDED",
+    "listen_for": [
+     "40 x 12"
+    ],
+    "ask": "Are the parts put together or multiplied?",
+    "repair": "Add.",
+    "error": "Multiplies the areas of the two parts.",
+    "example": {
+     "question": "Parts of 40 m2 and 12 m2",
+     "wrong_answer": "480",
+     "correct_answer": "52"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_COST_ON_PART_ONLY",
+    "listen_for": [
+     "one part"
+    ],
+    "ask": "Is the whole floor tiled?",
+    "repair": "Yes: use the total.",
+    "error": "Works out the cost for one part only.",
+    "example": {
+     "question": "Parts 40 m2 and 12 m2 at sh 100 a m2",
+     "wrong_answer": "sh 4,000",
+     "correct_answer": "sh 5,200"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Floor of two rectangles, 8 m by 5 m and 4 m by 3 m, at sh 100 a m2: cost?",
+    "answer": "sh 5,200",
+    "shows": "add then cost"
+   },
+   {
+    "question": "Rectangle 20 m by 14 m and half circle on a 14 m side (pi = 22/7): area?",
+    "answer": "357 m2",
+    "shows": "combined"
+   }
+  ],
+  "name": "Work out the area of a combined shape and the cost of covering it",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
   "skill": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT",
   "key_step": "The child says a cubic metre is 100 cm by 100 cm by 100 cm, so the factor is 1,000,000 and not 100.",
