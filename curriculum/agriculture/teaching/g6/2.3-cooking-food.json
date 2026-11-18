@@ -1,0 +1,185 @@
+{
+ "sub_strand": "AGRI.G6.FOOD_P.COOKING_FOOD",
+ "title": "Cooking Food",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Stewing on a jiko and baking scones or a simple cake in a sufuria oven or a school oven, with the teacher at the heat. Rubbing-in is done with cool fingertips.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+   "key_step": "The child matches cooking methods to how they cook and the foods they suit: stewing (slow, little liquid, covered: meat, beans, vegetables), baking (dry heat in an oven: scones, cakes, bread), boiling, steaming, frying.",
+   "floor": {
+    "prerequisite": "Knows frying methods.",
+    "question": "Which method covers food in oil?",
+    "answer": "deep frying"
+   },
+   "representations": [
+    "a method chart",
+    "pictures of stews and baked foods",
+    "cards to match"
+   ],
+   "steps": [
+    "Name the method.",
+    "Say what cooks the food: water, steam, oil, dry heat.",
+    "Name a food it suits."
+   ],
+   "contexts": [
+    "beef stew for lunch",
+    "scones for a school event",
+    "githeri"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"scones\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which method cooks scones."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"baking\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"baking: dry heat in an oven\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG_CK_MIX",
+     "listen_for": [
+      "Boiling"
+     ],
+     "ask": "Which method cooks food in oil?",
+     "repair": "Name what each method uses: water, steam, oil, dry heat."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG_CK_FOOD",
+     "listen_for": [
+      "Roasting"
+     ],
+     "ask": "Which method is used for githeri?",
+     "repair": "List five foods and the way each is cooked at home."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG_CK_STEAM",
+     "listen_for": [
+      "The boiling water the food sits in"
+     ],
+     "ask": "In steaming, what cooks the food?",
+     "repair": "Compare food in the water and food above it."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG6_CK_STEW",
+     "listen_for": [
+      "Boiled fast in lots of water"
+     ],
+     "ask": "How is food stewed?",
+     "repair": "Compare a pan of fast-boiling water with a gently simmering stew."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which method cooks food slowly in a little liquid?",
+     "answer": "stewing",
+     "shows": "method"
+    },
+    {
+     "question": "Which method uses dry heat in an oven?",
+     "answer": "baking",
+     "shows": "method"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+   "key_step": "The child says how to stew (prepare, brown onions lightly, add food and a little liquid, cover, simmer on low heat, stir) and bake scones by rubbing in (sift, rub fat in with fingertips, add liquid, shape, bake in a hot oven without opening it often).",
+   "floor": {
+    "prerequisite": "Knows what stewing and baking are.",
+    "question": "What is baking?",
+    "answer": "cooking with dry heat in an oven"
+   },
+   "representations": [
+    "step cards for each method",
+    "flour and margarine for rubbing in",
+    "a sufuria oven"
+   ],
+   "steps": [
+    "Stewing: prepare, brown, add liquid, cover, simmer.",
+    "Rubbing in: sift, rub in, add liquid, shape.",
+    "Bake until risen and brown."
+   ],
+   "contexts": [
+    "the school kitchen",
+    "baking at home on a jiko with a sufuria",
+    "a 4-K club bake"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the rubbing-in cards: add milk, sift flour, rub in fat."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"sift, rub in, add milk\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order the cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG6_CP_RUBPALMS",
+     "listen_for": [
+      "With the palms, pressing hard"
+     ],
+     "ask": "How is fat rubbed into flour?",
+     "repair": "Feel how warm the palm is compared with the fingertips."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG6_CP_OPEN",
+     "listen_for": [
+      "It helps the scones cook"
+     ],
+     "ask": "Why should the oven door not be opened often while baking?",
+     "repair": "Compare with the lid on a cooking pot from Grade 4."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG6_CP_STEWFAST",
+     "listen_for": [
+      "A high flame"
+     ],
+     "ask": "What heat is used for stewing?",
+     "repair": "Show meat stewed fast (tough, burnt at the bottom) and slow (soft)."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG6_CP_NOSIFT",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why is flour sifted before baking?",
+     "repair": "Bake two scones, one with sifted flour."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should rubbed-in flour look like?",
+     "answer": "fine breadcrumbs",
+     "shows": "rubbing in"
+    },
+    {
+     "question": "What heat is used to stew?",
+     "answer": "low heat",
+     "shows": "stewing"
+    }
+   ]
+  }
+ ]
+}

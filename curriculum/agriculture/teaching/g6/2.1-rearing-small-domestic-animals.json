@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A",
+ "title": "Rearing Small Domestic Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep a pair of rabbits or guinea pigs at school with a rota for feeding, water and cleaning. Children wash hands after handling animals and lift rabbits by supporting the back and rump, never by the ears.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS",
+   "key_step": "The child says the routine practices in rearing small animals (rabbits, guinea pigs, chickens): housing, feeding, watering, cleaning, parasite and disease control, and gentle handling.",
+   "floor": {
+    "prerequisite": "Knows the uses of domestic animals.",
+    "question": "Why are rabbits kept?",
+    "answer": "for meat and income"
+   },
+   "representations": [
+    "a picture of a hutch",
+    "a routine chart",
+    "the school rabbits"
+   ],
+   "steps": [
+    "House them safely.",
+    "Feed and water them daily.",
+    "Clean the house.",
+    "Check for sickness and parasites."
+   ],
+   "contexts": [
+    "rabbits at school",
+    "chickens at home",
+    "guinea pigs in a 4-K club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the daily jobs: feed, water, clean."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which job is done more than once a day."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"water: always fresh\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"clean water always\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS.M_AG_SA_WATER",
+     "listen_for": [
+      "Only when they look thirsty"
+     ],
+     "ask": "How often do rabbits and chickens need clean water?",
+     "repair": "Check a trough left for a day."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS.M_AG_SA_DIRTY",
+     "listen_for": [
+      "Wet and left for weeks"
+     ],
+     "ask": "How should the animal house be kept?",
+     "repair": "Discuss how dirt spreads disease."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS.M_AG_SA_SICK",
+     "listen_for": [
+      "Leave it with the others and say nothing"
+     ],
+     "ask": "A chicken looks sick. What should you do?",
+     "repair": "Role play a sick chicken."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS.M_AG6_SA_EARS",
+     "listen_for": [
+      "By the ears"
+     ],
+     "ask": "How should a rabbit be lifted?",
+     "repair": "Show the correct hold on a soft toy; ask where the rabbit's weight is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two routine practices in rearing rabbits.",
+     "answer": "any two of feeding, watering, cleaning, housing, parasite control",
+     "shows": "routine"
+    },
+    {
+     "question": "What should be done with a sick rabbit?",
+     "answer": "separate it and get help",
+     "shows": "sick"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.REARING_HUTCH",
+   "key_step": "The child says how a hutch is set up (raised, airy, roofed, wire floor or bedding, safe from predators) and how rabbits are fed (greens and dry feed twice a day), watered (clean water always), cleaned (droppings out daily) and kept healthy.",
+   "floor": {
+    "prerequisite": "Knows the routine practices.",
+    "question": "How often do rabbits need water?",
+    "answer": "always"
+   },
+   "representations": [
+    "a model hutch",
+    "safe and unsafe feed samples",
+    "a daily rota"
+   ],
+   "steps": [
+    "Raise the hutch; give it a roof and air.",
+    "Feed fresh greens and dry feed.",
+    "Keep clean water in.",
+    "Remove droppings; check for mites."
+   ],
+   "contexts": [
+    "the school hutch",
+    "a home hutch in Kiambu",
+    "a guinea pig box"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hutch on legs with a wire front."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the legs.",
+     "say": "Why are they here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to keep it dry and safe\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"raised: dry and safe\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.REARING_HUTCH.M_AG6_RH_FLOOR",
+     "listen_for": [
+      "It does not need to be"
+     ],
+     "ask": "Why is a rabbit hutch raised off the ground?",
+     "repair": "Ask what happens to a hutch on the ground when it rains."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.REARING_HUTCH.M_AG6_RH_WETGREENS",
+     "listen_for": [
+      "Wet or wilted leaves"
+     ],
+     "ask": "What greens should rabbits be fed?",
+     "repair": "Ask the teacher about bloat and runny droppings from wet greens."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.REARING_HUTCH.M_AG6_RH_CROWD",
+     "listen_for": [
+      "It keeps them warm"
+     ],
+     "ask": "Why should a hutch not be overcrowded?",
+     "repair": "Draw a small hutch with ten rabbits; ask what happens to the droppings and the food."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.REARING_HUTCH.M_AG6_RH_PARASITE",
+     "listen_for": [
+      "Nothing, rabbits do that"
+     ],
+     "ask": "A rabbit scratches a lot and has bare patches. What should be done?",
+     "repair": "Show a picture of mange on a rabbit's ear."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a hutch raised?",
+     "answer": "to keep it dry and safe from predators",
+     "shows": "housing"
+    },
+    {
+     "question": "Give one sign of a sick rabbit.",
+     "answer": "not eating, runny droppings, scratching or bare patches",
+     "shows": "health"
+    }
+   ]
+  }
+ ]
+}

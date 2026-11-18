@@ -1,0 +1,106 @@
+{
+ "sub_strand": "AGRI.G6.HYGIEN.GOOD_GROOMING",
+ "title": "Good Grooming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach body changes and hygiene with care and in plain words; the class may be split for menstrual hygiene. Never point at a child.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS",
+   "key_step": "The child says the practices that keep the body clean, especially at puberty: daily bathing and clean underwear, managing sweat, gentle face washing for acne, menstrual hygiene (changing pads regularly, washing, safe disposal), clean nails, own towel and toothbrush.",
+   "floor": {
+    "prerequisite": "Knows good grooming habits.",
+    "question": "How often should we bathe?",
+    "answer": "daily"
+   },
+   "representations": [
+    "a body care chart",
+    "a calendar for changing pads (for girls)",
+    "personal items: towel, toothbrush"
+   ],
+   "steps": [
+    "Bathe daily; change underwear daily.",
+    "Wash the face gently.",
+    "Keep personal items to yourself.",
+    "Change pads regularly and dispose of them safely."
+   ],
+   "contexts": [
+    "after games",
+    "at the start of puberty",
+    "at boarding school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"sharing a toothbrush with a friend\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether it is safe."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, germs pass\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"toothbrush and towel: your own\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS.M_AG_BC_SOAP",
+     "listen_for": [
+      "With water only, quickly"
+     ],
+     "ask": "How should hands be washed?",
+     "repair": "Compare hands washed with soap and without."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS.M_AG_BC_TEETH",
+     "listen_for": [
+      "Once a week"
+     ],
+     "ask": "How often should teeth be brushed?",
+     "repair": "Show the plaque with a disclosing tablet if available."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS.M_AG_BC_SHARE",
+     "listen_for": [
+      "A toothbrush"
+     ],
+     "ask": "Which item should not be shared?",
+     "repair": "Discuss how germs pass on a shared toothbrush."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS.M_AG6_BC_PIMPLE",
+     "listen_for": [
+      "Squeeze them"
+     ],
+     "ask": "What should you do about pimples?",
+     "repair": "Explain that squeezing pushes germs deeper and can leave scars."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS.M_AG6_BC_SWEAT",
+     "listen_for": [
+      "Sweat is dirty, so perfume fixes it"
+     ],
+     "ask": "Why does sweat start to smell?",
+     "repair": "Fresh sweat after games hardly smells; stale sweat on unwashed clothes does."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How often should underwear be changed?",
+     "answer": "every day",
+     "shows": "habit"
+    },
+    {
+     "question": "Why should you not share a towel?",
+     "answer": "germs and skin infections pass on it",
+     "shows": "share"
+    }
+   ]
+  }
+ ]
+}

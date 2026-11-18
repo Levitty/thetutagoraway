@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/agriculture/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/agriculture/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g6)"};
 export const SUBSTRANDS = {
  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION": {
   "name": "Controlling Soil Erosion",
@@ -229,7 +229,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_ER_MIX",
    "M_AG_ER_GULLY",
-   "M_AG_ER_CAUSE"
+   "M_AG_ER_CAUSE",
+   "M_AG6_ER_SPLASH"
   ]
  },
  "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL": {
@@ -245,7 +246,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_EC_DOWNHILL",
    "M_AG_EC_BARE",
-   "M_AG_EC_GRAZE"
+   "M_AG_EC_GRAZE",
+   "M_AG6_EC_GULLY_FILL"
   ]
  },
  "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS": {
@@ -260,7 +262,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_SB_RAISED_DRY",
    "M_AG_SB_WET",
-   "M_AG_SB_BARE"
+   "M_AG_SB_BARE",
+   "M_AG6_SB_PITMANURE"
   ]
  },
  "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS": {
@@ -274,8 +277,27 @@ export const SKILLS = {
   "mis": [
    "M_AG_DT_KILL",
    "M_AG_DT_WRONG",
-   "M_AG_DT_SNARE"
+   "M_AG_DT_SNARE",
+   "M_AG6_DT_HURT"
   ]
+ },
+ "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENT_SETUP": {
+  "name": "Say how a deterrent is put up and kept working",
+  "sub": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS",
+  "outcome": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.b",
+  "outcomes": [
+   "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.b"
+  ],
+  "pre": [
+   "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS"
+  ],
+  "mis": [
+   "M_AG6_DS_GAPS",
+   "M_AG6_DS_ONCE",
+   "M_AG6_DS_LIVE",
+   "M_AG6_DS_SITE"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS": {
   "name": "Say the routine practices in rearing rabbits and chickens",
@@ -288,8 +310,27 @@ export const SKILLS = {
   "mis": [
    "M_AG_SA_WATER",
    "M_AG_SA_DIRTY",
-   "M_AG_SA_SICK"
+   "M_AG_SA_SICK",
+   "M_AG6_SA_EARS"
   ]
+ },
+ "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.REARING_HUTCH": {
+  "name": "Say how a rabbit hutch is set up and how the animals are fed, watered and kept healthy",
+  "sub": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A",
+  "outcome": "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.b",
+  "outcomes": [
+   "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.b"
+  ],
+  "pre": [
+   "AGRI.G6.FOOD_P.REARING_SMALL_DOMESTIC_A.SMALL_ANIMALS"
+  ],
+  "mis": [
+   "M_AG6_RH_FLOOR",
+   "M_AG6_RH_WETGREENS",
+   "M_AG6_RH_CROWD",
+   "M_AG6_RH_PARASITE"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE": {
   "name": "Say how to dry and store crop produce at home",
@@ -302,8 +343,27 @@ export const SKILLS = {
   "mis": [
    "M_AG_PR_WET",
    "M_AG_PR_FLOOR",
-   "M_AG_PR_WHY"
+   "M_AG_PR_WHY",
+   "M_AG6_PR_WHOLE"
   ]
+ },
+ "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS": {
+  "name": "Say the steps of sun-drying fruits and vegetables and how to tell they are dry",
+  "sub": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS",
+  "outcome": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.b",
+  "outcomes": [
+   "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.b"
+  ],
+  "pre": [
+   "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE"
+  ],
+  "mis": [
+   "M_AG6_DRY_GROUND",
+   "M_AG6_DRY_UNEVEN",
+   "M_AG6_DRY_NIGHT",
+   "M_AG6_DRY_SOFT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
   "name": "Match a cooking method to its food and to how it cooks",
@@ -316,21 +376,43 @@ export const SKILLS = {
   "mis": [
    "M_AG_CK_MIX",
    "M_AG_CK_FOOD",
-   "M_AG_CK_STEAM"
+   "M_AG_CK_STEAM",
+   "M_AG6_CK_STEW"
   ]
+ },
+ "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_PRACTICE": {
+  "name": "Say how to stew and how to bake by the rubbing-in method",
+  "sub": "AGRI.G6.FOOD_P.COOKING_FOOD",
+  "outcome": "AGRI.G6.FOOD_P.COOKING_FOOD.b",
+  "outcomes": [
+   "AGRI.G6.FOOD_P.COOKING_FOOD.b"
+  ],
+  "pre": [
+   "AGRI.G6.FOOD_P.COOKING_FOOD.COOKING_METHODS"
+  ],
+  "mis": [
+   "M_AG6_CP_RUBPALMS",
+   "M_AG6_CP_OPEN",
+   "M_AG6_CP_STEWFAST",
+   "M_AG6_CP_NOSIFT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G6.HYGIEN.GOOD_GROOMING.BODY_CLEANLINESS": {
   "name": "Say the practices that keep the body clean and why",
   "sub": "AGRI.G6.HYGIEN.GOOD_GROOMING",
   "outcome": "AGRI.G6.HYGIEN.GOOD_GROOMING.a",
   "outcomes": [
-   "AGRI.G6.HYGIEN.GOOD_GROOMING.a"
+   "AGRI.G6.HYGIEN.GOOD_GROOMING.a",
+   "AGRI.G6.HYGIEN.GOOD_GROOMING.b"
   ],
   "pre": [],
   "mis": [
    "M_AG_BC_SOAP",
    "M_AG_BC_TEETH",
-   "M_AG_BC_SHARE"
+   "M_AG_BC_SHARE",
+   "M_AG6_BC_PIMPLE",
+   "M_AG6_BC_SWEAT"
   ]
  },
  "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS": {
@@ -344,8 +426,27 @@ export const SKILLS = {
   "mis": [
    "M_AG_ST_BLOOD",
    "M_AG_ST_RUB",
-   "M_AG_ST_MATCH"
+   "M_AG_ST_MATCH",
+   "M_AG6_ST_LATER"
   ]
+ },
+ "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAIN_STEPS": {
+  "name": "Say the steps of removing a blood or grass stain",
+  "sub": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL",
+  "outcome": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.b",
+  "outcomes": [
+   "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.b"
+  ],
+  "pre": [
+   "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS"
+  ],
+  "mis": [
+   "M_AG6_SS_OUTSIDE",
+   "M_AG6_SS_SCRAPE",
+   "M_AG6_SS_IRON",
+   "M_AG6_SS_SALT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET": {
   "name": "Name the basic crochet stitches, the tool and the articles made",
@@ -358,21 +459,44 @@ export const SKILLS = {
   "mis": [
    "M_AG_CR_NEEDLE",
    "M_AG_CR_STITCH",
-   "M_AG_CR_HEIGHT"
+   "M_AG_CR_HEIGHT",
+   "M_AG6_CR_ARTICLE"
   ]
+ },
+ "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET_STEPS": {
+  "name": "Say how a crocheted article is made, from slip knot to fastening off",
+  "sub": "AGRI.G6.PRODUC.CROCHETING_STITCHES",
+  "outcome": "AGRI.G6.PRODUC.CROCHETING_STITCHES.b",
+  "outcomes": [
+   "AGRI.G6.PRODUC.CROCHETING_STITCHES.b"
+  ],
+  "pre": [
+   "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET"
+  ],
+  "mis": [
+   "M_AG6_CS_TURN",
+   "M_AG6_CS_COUNT",
+   "M_AG6_CS_TIGHT",
+   "M_AG6_CS_CUT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED": {
   "name": "Say what a moist bed garden is and how it is built",
   "sub": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G",
   "outcome": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.a",
   "outcomes": [
-   "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.a"
+   "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.a",
+   "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.b"
   ],
-  "pre": [],
+  "pre": [
+   "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS"
+  ],
   "mis": [
    "M_AG_MB_RAISED",
    "M_AG_MB_ORDER",
-   "M_AG_MB_NOMULCH"
+   "M_AG_MB_NOMULCH",
+   "M_AG6_MB_HOLES"
   ]
  }
 };
@@ -383,31 +507,67 @@ export const MIS_FEEDBACK = {
  "M_AG_EC_DOWNHILL": "Rows across the slope hold the water back. Rows up and down let it run away.",
  "M_AG_EC_BARE": "Plants and mulch hold the soil. Bare ground washes away.",
  "M_AG_EC_GRAZE": "Overgrazing eats the cover and leaves the soil bare to wash away.",
+ "M_AG6_ER_SPLASH": "Raindrops hitting bare soil throw it up and loosen it. That is splash erosion.",
+ "M_AG6_EC_GULLY_FILL": "Stone or stick checks across a gully slow the water and trap soil. Plant grass to hold it.",
  "M_AG_SB_RAISED_DRY": "A sunken bed holds water in a dry place. A raised bed drains fast.",
  "M_AG_SB_WET": "A raised bed drains well in a very wet place. A sunken bed would flood.",
  "M_AG_SB_BARE": "Mulch shades the soil so less water evaporates.",
+ "M_AG6_SB_PITMANURE": "Put manure in the pit with the topsoil. The pit holds water and the manure feeds the crop.",
  "M_AG_DT_KILL": "Wild animals are conserved. We keep them away from crops and do not kill them.",
  "M_AG_DT_WRONG": "A scarecrow and shiny strips scare birds. A beehive fence keeps elephants away.",
  "M_AG_DT_SNARE": "A deterrent keeps animals away without hurting them. A snare traps and harms.",
+ "M_AG6_DT_HURT": "A deterrent keeps animals away without harming them. It protects crops and wildlife.",
+ "M_AG6_DS_GAPS": "Close the gaps at the bottom. Many animals push or dig under a fence.",
+ "M_AG6_DS_ONCE": "Animals get used to a deterrent that never changes. Move it or change it often.",
+ "M_AG6_DS_LIVE": "A live fence works only when it has grown thick. Use dry thorns or mesh until then.",
+ "M_AG6_DS_SITE": "Put the deterrent where the animals enter, before they reach the crop.",
  "M_AG_SA_WATER": "Animals need clean water every day.",
  "M_AG_SA_DIRTY": "A clean, dry house helps the animals stay healthy.",
  "M_AG_SA_SICK": "Separate a sick animal and tell an adult or health worker.",
+ "M_AG6_SA_EARS": "Never lift a rabbit by its ears. Support its body under the chest and rump.",
+ "M_AG6_RH_FLOOR": "Raise the hutch so it stays dry and predators cannot reach the rabbits.",
+ "M_AG6_RH_WETGREENS": "Give rabbits fresh, dry greens. Wet or mouldy feed upsets their stomachs.",
+ "M_AG6_RH_CROWD": "Give each rabbit enough space. Crowding causes fights and disease.",
+ "M_AG6_RH_PARASITE": "Scratching and bare patches mean mites. Separate the rabbit and get it treated.",
  "M_AG_PR_WET": "Damp food grows mould. Store only dry food.",
  "M_AG_PR_FLOOR": "Keep dry produce in a closed container off the floor.",
  "M_AG_PR_WHY": "Dry food keeps because germs and moulds need water.",
+ "M_AG6_PR_WHOLE": "Thin slices dry fast. Thick pieces stay wet inside and rot.",
+ "M_AG6_DRY_GROUND": "Dry food on a clean raised rack with a net over it, away from dust and animals.",
+ "M_AG6_DRY_UNEVEN": "Cut slices the same thickness so they dry together. Thick ones stay wet and spoil.",
+ "M_AG6_DRY_NIGHT": "Take drying food in at night. Dew makes it damp again.",
+ "M_AG6_DRY_SOFT": "Dried leaves are ready when they are crisp. Fruit is ready when leathery, not sticky.",
  "M_AG_CK_MIX": "Frying cooks in oil. Boiling cooks in water.",
  "M_AG_CK_FOOD": "Githeri is boiled in water.",
  "M_AG_CK_STEAM": "Steamed food sits above the water and is cooked by the steam.",
+ "M_AG6_CK_STEW": "Stewing cooks food slowly in a little liquid with the lid on.",
+ "M_AG6_CP_RUBPALMS": "Use cool fingertips and lift the flour. Warm palms melt the fat.",
+ "M_AG6_CP_OPEN": "Keep the oven closed while baking. Opening it lets the heat out.",
+ "M_AG6_CP_STEWFAST": "Stew on low heat. Slow cooking makes food soft and stops it burning.",
+ "M_AG6_CP_NOSIFT": "Sifting removes lumps and adds air, so the scones rise and are light.",
  "M_AG_BC_SOAP": "Soap lifts the germs off. Use soap and water.",
  "M_AG_BC_TEETH": "Brush the teeth twice a day.",
  "M_AG_BC_SHARE": "A toothbrush, a towel and a comb are personal and should not be shared.",
+ "M_AG6_BC_PIMPLE": "Do not squeeze pimples. Wash your face gently and keep your hands off it.",
+ "M_AG6_BC_SWEAT": "Bathe daily and wear clean clothes. Smell comes from germs on stale sweat.",
  "M_AG_ST_BLOOD": "Hot water sets a blood stain. Use cold water and soap.",
  "M_AG_ST_RUB": "Rubbing hard spreads the stain. Work gently from the outside in.",
  "M_AG_ST_MATCH": "Grease needs soap and warm water to break it down.",
+ "M_AG6_ST_LATER": "Treat a stain at once. Old stains set and are hard to remove.",
+ "M_AG6_SS_OUTSIDE": "Work from the outside in, so the stain does not spread.",
+ "M_AG6_SS_SCRAPE": "Lift off the loose part first, then treat the mark that is left.",
+ "M_AG6_SS_IRON": "Check the stain is gone first. Heat from ironing or sun fixes it.",
+ "M_AG6_SS_SALT": "Soak a fresh blood stain in cold salty water, then wash with soap.",
  "M_AG_CR_NEEDLE": "Crocheting uses one hook and yarn.",
  "M_AG_CR_STITCH": "The chain stitch begins every piece.",
  "M_AG_CR_HEIGHT": "Double crochet is taller than single crochet.",
+ "M_AG6_CR_ARTICLE": "Crochet makes mats, rugs, wipers and bags for the home as well as clothes.",
+ "M_AG6_CS_TURN": "Make a turning chain at each row end: one for single, three for double crochet.",
+ "M_AG6_CS_COUNT": "Count the chain and the stitches in each row so the article is the right size and straight.",
+ "M_AG6_CS_TIGHT": "Keep the tension even and loose enough for the hook to go in.",
+ "M_AG6_CS_CUT": "Fasten off by pulling the end through the last loop, then weave it in.",
  "M_AG_MB_RAISED": "A moist bed garden is sunken with layers that hold water.",
  "M_AG_MB_ORDER": "Choose the site and dig first, then add layers, topsoil, plant, mulch and water.",
- "M_AG_MB_NOMULCH": "Mulch on top keeps the water in."
+ "M_AG_MB_NOMULCH": "Mulch on top keeps the water in.",
+ "M_AG6_MB_HOLES": "A moist bed keeps water at the bottom. Holes go near the top, not the bottom."
 };

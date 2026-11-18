@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G6.PRODUC.CROCHETING_STITCHES",
+ "title": "Crocheting Stitches",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a 5 mm hook and thick cotton or reused yarn; make a short chain and a small square of single crochet before a mat or wiper.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET",
+   "key_step": "The child names the basic crochet stitches (chain, slip stitch, single crochet, double crochet), the tool (one hook) and household articles made (mats, rugs, wipers, bags), and tells crochet from knitting.",
+   "floor": {
+    "prerequisite": "Knows how stitches differ by look.",
+    "question": "Which stitch has no gaps?",
+    "answer": "back stitch"
+   },
+   "representations": [
+    "a hook and samples of each stitch",
+    "a crocheted mat",
+    "a knitted sample to compare"
+   ],
+   "steps": [
+    "One hook: crochet. Two needles: knitting.",
+    "Start with a chain.",
+    "Single is short; double is taller."
+   ],
+   "contexts": [
+    "a table mat at home",
+    "a kitchen wiper",
+    "a 4-K craft table"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hook and two needles."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hook.",
+     "say": "Crochet or knitting?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"crochet\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"crochet: one hook\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET.M_AG_CR_NEEDLE",
+     "listen_for": [
+      "Two knitting needles"
+     ],
+     "ask": "What is used to crochet?",
+     "repair": "Show the hook and two needles."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET.M_AG_CR_STITCH",
+     "listen_for": [
+      "Double crochet"
+     ],
+     "ask": "Which stitch is the base of a crocheted piece?",
+     "repair": "Start a piece with a chain."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET.M_AG_CR_HEIGHT",
+     "listen_for": [
+      "Single crochet"
+     ],
+     "ask": "Which stitch is taller?",
+     "repair": "Crochet a row of each and compare."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET.M_AG6_CR_ARTICLE",
+     "listen_for": [
+      "Only a sweater"
+     ],
+     "ask": "Which household article can be crocheted?",
+     "repair": "Show a crocheted mat and a kitchen wiper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What tool is used for crocheting?",
+     "answer": "a crochet hook",
+     "shows": "tool"
+    },
+    {
+     "question": "Which is taller: single or double crochet?",
+     "answer": "double crochet",
+     "shows": "stitch"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET_STEPS",
+   "key_step": "The child says how a crocheted article is made: slip knot, chain to length, turning chain, rows of single or double crochet with even tension, fasten off, weave in the end.",
+   "floor": {
+    "prerequisite": "Knows the crochet stitches.",
+    "question": "What is the first stitch made?",
+    "answer": "a chain"
+   },
+   "representations": [
+    "step cards",
+    "a hook and yarn",
+    "a half-made mat"
+   ],
+   "steps": [
+    "Make a slip knot and a chain.",
+    "Turn with a turning chain.",
+    "Work rows of single or double crochet.",
+    "Fasten off and weave in."
+   ],
+   "contexts": [
+    "a cleaning rug",
+    "a pot holder",
+    "a table mat"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square whose sides slope inwards."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what was forgotten."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the turning chain\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"turning chain: straight edges\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET_STEPS.M_AG6_CS_TURN",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why is a turning chain made at the end of each row?",
+     "repair": "Show a square with turning chains and one without; compare the edges."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET_STEPS.M_AG6_CS_COUNT",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why count the stitches in the first chain?",
+     "repair": "Compare two wipers: one counted, one not; measure the widths of the rows."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET_STEPS.M_AG6_CS_TIGHT",
+     "listen_for": [
+      "The work is stronger"
+     ],
+     "ask": "What happens if crochet stitches are pulled too tight?",
+     "repair": "Try to push the hook into a very tight chain."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CROCHETING_STITCHES.CROCHET_STEPS.M_AG6_CS_CUT",
+     "listen_for": [
+      "Cut the yarn and leave it"
+     ],
+     "ask": "How is crochet finished?",
+     "repair": "Pull a finished piece cut without fastening: it unravels."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is done at the end of each row?",
+     "answer": "a turning chain",
+     "shows": "row"
+    },
+    {
+     "question": "How is the last stitch finished?",
+     "answer": "pull the yarn through the last loop and weave it in",
+     "shows": "fasten off"
+    }
+   ]
+  }
+ ]
+}

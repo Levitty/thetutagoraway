@@ -1,0 +1,98 @@
+{
+ "sub_strand": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G",
+ "title": "Constructing Moist Bed Garden",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Line a sunken bed with a polythene sheet (holes near the top only), fill with layers of dry grass, manure and soil, and mulch. Grow kale, spinach or onions.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED",
+   "key_step": "The child says a moist bed garden is a bed lined (often with polythene) and filled with layers of organic matter and soil so water is held at the bottom for the roots, and how it is built: dig, line, add dry grass, manure and soil in layers, make overflow holes near the top, plant, mulch.",
+   "floor": {
+    "prerequisite": "Knows sunken beds hold moisture.",
+    "question": "Which bed suits a dry place?",
+    "answer": "a sunken bed"
+   },
+   "representations": [
+    "a cut-away model in a clear container",
+    "polythene, grass, manure, soil",
+    "a step chart"
+   ],
+   "steps": [
+    "Dig the bed.",
+    "Line it; holes near the top only.",
+    "Fill: dry grass, manure, soil in layers.",
+    "Plant and mulch."
+   ],
+   "contexts": [
+    "a school garden in Kitui",
+    "a home garden in a dry area",
+    "a 4-K plot"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a lined bed in cross-section with water at the bottom."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if holes are made in the bottom."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the water drains away\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"holes near the top\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED.M_AG_MB_RAISED",
+     "listen_for": [
+      "A raised bed above the ground"
+     ],
+     "ask": "What is a moist bed garden?",
+     "repair": "Dig and water a sunken bed."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED.M_AG_MB_ORDER",
+     "listen_for": [
+      "Plant the seedlings"
+     ],
+     "ask": "What comes first in building a moist bed garden?",
+     "repair": "Write the steps on cards."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED.M_AG_MB_NOMULCH",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What goes on top of a moist bed garden?",
+     "repair": "Compare a mulched and an unmulched bed."
+    },
+    {
+     "code": "AGRI.G6.PRODUC.CONSTRUCTING_MOIST_BED_G.MOIST_BED.M_AG6_MB_HOLES",
+     "listen_for": [
+      "In the bottom, so water drains"
+     ],
+     "ask": "Where are the holes in a moist bed lining made?",
+     "repair": "Fill a lined tray with holes in the bottom and one with holes near the top; water both."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a moist bed garden?",
+     "answer": "a lined bed that holds water at the bottom for the roots",
+     "shows": "meaning"
+    },
+    {
+     "question": "Why is dry grass put at the bottom?",
+     "answer": "it holds water like a sponge and rots into manure",
+     "shows": "layers"
+    }
+   ]
+  }
+ ]
+}

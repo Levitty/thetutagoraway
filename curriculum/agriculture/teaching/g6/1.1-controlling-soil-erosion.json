@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION",
+ "title": "Controlling Soil Erosion",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Pour water from a watering can on a bare tray of soil and on a grassed tray, both tilted, to show splash, sheet and rill erosion. Visit a gully only with the teacher, never at its edge.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_TYPES",
+   "key_step": "The child names the types of soil erosion (splash, sheet, rill, gully) by what they look like and says what causes them (rain on bare soil, running water, overgrazing, cutting trees, ploughing up and down slopes).",
+   "floor": {
+    "prerequisite": "Knows bare and washed sites need soil improvement.",
+    "question": "What is a sign that soil is being washed away?",
+    "answer": "bare ground or channels"
+   },
+   "representations": [
+    "tilted trays of soil and a watering can",
+    "photos of each type",
+    "a chart: type, what it looks like"
+   ],
+   "steps": [
+    "Look at the size of the damage.",
+    "Specks: splash. A thin layer: sheet. Small channels: rill. Deep channels: gully.",
+    "Say what caused it."
+   ],
+   "contexts": [
+    "a path down a hill after rain",
+    "an overgrazed field in Baringo",
+    "the school football pitch"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a slope with thin channels."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the channels.",
+     "say": "Which type is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"rill erosion\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what they become if nothing is done."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_TYPES.M_AG_ER_MIX",
+     "listen_for": [
+      "Gully erosion"
+     ],
+     "ask": "Which erosion removes a thin layer of soil evenly?",
+     "repair": "Draw each type: sheet is a thin sheet, rill is a small channel, gully is a deep channel."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_TYPES.M_AG_ER_GULLY",
+     "listen_for": [
+      "A thin layer of soil washed away evenly"
+     ],
+     "ask": "What is gully erosion?",
+     "repair": "Show a photo of a gully next to a rill."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_TYPES.M_AG_ER_CAUSE",
+     "listen_for": [
+      "Planting grass on the slope"
+     ],
+     "ask": "Which action causes soil erosion?",
+     "repair": "Pour water on bare soil and on soil with grass and compare."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_TYPES.M_AG6_ER_SPLASH",
+     "listen_for": [
+      "People splashing water about"
+     ],
+     "ask": "What causes splash erosion?",
+     "repair": "Drop water from a height on bare soil on white paper: look at the soil specks thrown up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a deep channel cut by running water called?",
+     "answer": "a gully",
+     "shows": "type"
+    },
+    {
+     "question": "Name a human activity that causes erosion.",
+     "answer": "overgrazing, cutting trees or ploughing up and down a slope",
+     "shows": "cause"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL",
+   "key_step": "The child picks the right control for each type and place: cover crops, mulch and grass for splash and sheet erosion; contour ploughing, terraces, grass strips and cut-off drains on slopes; stone or stick checks and planting in gullies; controlled grazing.",
+   "floor": {
+    "prerequisite": "Knows the types of erosion.",
+    "question": "What is rill erosion?",
+    "answer": "small channels cut by water"
+   },
+   "representations": [
+    "a model slope with contour lines of sticks",
+    "pictures of terraces and gully checks",
+    "a matching chart"
+   ],
+   "steps": [
+    "Name the type of erosion and the place.",
+    "Choose a control that slows water or covers soil.",
+    "Say why it works."
+   ],
+   "contexts": [
+    "a hillside farm in Murang'a",
+    "the school slope",
+    "a gully near a road"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a slope with rows going up and down."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where the water will run."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"straight down the rows\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw the rows across the slope."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL.M_AG_EC_DOWNHILL",
+     "listen_for": [
+      "Up and down the slope"
+     ],
+     "ask": "How should a slope be ploughed?",
+     "repair": "Pour water down furrows that go up and down and across."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL.M_AG_EC_BARE",
+     "listen_for": [
+      "Clearing all the plants from the slope"
+     ],
+     "ask": "Which action helps control erosion?",
+     "repair": "Compare a bare slope and a grassed slope in rain."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL.M_AG_EC_GRAZE",
+     "listen_for": [
+      "It protects the soil with manure"
+     ],
+     "ask": "How does overgrazing affect the soil?",
+     "repair": "Look at a heavily grazed patch and a fenced patch."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONTROLLING_SOIL_EROSION.EROSION_CONTROL.M_AG6_EC_GULLY_FILL",
+     "listen_for": [
+      "Fill it with rubbish and polythene"
+     ],
+     "ask": "How can a growing gully be controlled?",
+     "repair": "Show a gully with stone checks holding soil behind them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How should a slope be ploughed?",
+     "answer": "across the slope, along the contour",
+     "shows": "contour"
+    },
+    {
+     "question": "How does grass control erosion?",
+     "answer": "roots hold the soil and leaves cover it",
+     "shows": "cover"
+    }
+   ]
+  }
+ ]
+}
