@@ -7502,7 +7502,7 @@
        "requires": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
        "kind": "skill",
        "strength": "essential",
-       "reason": "r cubed.",
+       "reason": "Working out r cubed for the volume.",
        "status": "proposed"
       }
      ],
