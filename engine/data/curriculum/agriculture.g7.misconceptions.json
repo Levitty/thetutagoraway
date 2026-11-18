@@ -1,165 +1,270 @@
 {
  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_GOOD": {
   "skill": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION",
-  "error": "Thinks more fertiliser is always good.",
+  "error": "Thinks more fertiliser always makes soil healthier, so adds far more than the packet says.",
   "example": {
    "question": "What can too much fertiliser do to the soil?",
    "wrong_answer": "Make it healthier",
    "correct_answer": "Pollute and harm it"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child knows fertiliser feeds crops and reasons that more food is always better.",
   "reveals": "Offer \"Make it healthier\" next to the right answer and ask the question again in a new situation.",
-  "help": "Too much fertiliser pollutes the soil.",
+  "help": "Show the packet rate (a bottle top per hole); explain that the extra salts burn roots and wash into rivers.",
   "feedback": "Too much fertiliser pollutes the soil.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_PLASTIC": {
   "skill": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION",
-  "error": "Thinks buried polythene is harmless.",
+  "error": "Thinks polythene buried in the soil rots and feeds plants like leaves do.",
   "example": {
    "question": "Why is polythene a problem in the soil?",
    "wrong_answer": "It feeds the plants",
    "correct_answer": "It does not rot and blocks water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child has seen leaves and peelings disappear in soil and expects all waste to rot.",
   "reveals": "Offer \"It feeds the plants\" next to the right answer and ask the question again in a new situation.",
-  "help": "Polythene does not rot and blocks water and roots.",
+  "help": "Dig up a polythene bag buried last term next to a buried leaf; one is unchanged.",
   "feedback": "Polythene does not rot and blocks water and roots.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_CONTROL": {
   "skill": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION",
-  "error": "Names a harmful control.",
+  "error": "Names burning plastic as a way to control soil pollution.",
   "example": {
    "question": "Which helps to control soil pollution?",
    "wrong_answer": "Burning plastic on the farm",
    "correct_answer": "Reducing and recycling waste"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Burning makes the rubbish disappear from sight, so the child thinks the problem is gone.",
   "reveals": "Offer \"Burning plastic on the farm\" next to the right answer and ask the question again in a new situation.",
-  "help": "Reduce, reuse and recycle waste.",
+  "help": "Ask where the smoke, ash and melted plastic go; burning moves the pollution into the air and soil.",
   "feedback": "Reduce, reuse and recycle waste.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION.M_AG7_SP_CONTAINER": {
+  "skill": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION",
+  "error": "Reuses empty pesticide containers to store water or food.",
+  "example": {
+   "question": "What should be done with an empty pesticide container?",
+   "wrong_answer": "Wash it and use it for drinking water",
+   "correct_answer": "Return it to the seller or dispose of it as the label says; never reuse it"
+  },
+  "cause": "The containers look strong and useful, and the child does not know washing leaves poison behind.",
+  "reveals": "Offer \"Wash it and use it for drinking water\" next to the right answer and ask the question again in a new context.",
+  "help": "Read a pesticide label's disposal instructions with the class.",
+  "feedback": "Never reuse pesticide containers for food or water. Return them or dispose of them safely.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_WASTE": {
   "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF",
-  "error": "Thinks run-off is only waste.",
+  "error": "Thinks surface run-off is only waste water to be got rid of.",
   "example": {
    "question": "What can be done with surface run-off?",
    "wrong_answer": "Nothing, it is useless",
    "correct_answer": "Trap it and use it in the garden"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child sees run-off flooding paths and roads and only as a nuisance.",
   "reveals": "Offer \"Nothing, it is useless\" next to the right answer and ask the question again in a new situation.",
-  "help": "Run-off can be trapped and used.",
+  "help": "Follow run-off after rain to a low place where plants grow green; ask what it could water.",
   "feedback": "Run-off can be trapped and used.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_STRUCTURE": {
   "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF",
-  "error": "Names a non-structure.",
+  "error": "Names a bare path or open ground as a structure that traps run-off.",
   "example": {
    "question": "Which traps run-off?",
    "wrong_answer": "A bare path",
    "correct_answer": "A trench or a water pan"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks any place water flows over is a structure for it.",
   "reveals": "Offer \"A bare path\" next to the right answer and ask the question again in a new situation.",
-  "help": "Trenches and water pans trap run-off.",
+  "help": "Compare water poured on a bare tray and on a tray with a small ditch dug across it.",
   "feedback": "Trenches and water pans trap run-off.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_MULCH": {
   "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF",
-  "error": "Thinks mulch speeds up run-off.",
+  "error": "Thinks mulch makes run-off flow faster.",
   "example": {
    "question": "What does mulch do to run-off?",
    "wrong_answer": "Speeds it up",
    "correct_answer": "Slows it down"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks a cover makes the surface slippery like a plastic sheet.",
   "reveals": "Offer \"Speeds it up\" next to the right answer and ask the question again in a new situation.",
-  "help": "Mulch slows run-off and keeps water.",
+  "help": "Pour water on a tilted bare tray and a mulched tray; time how fast it runs off each.",
   "feedback": "Mulch slows run-off and keeps water.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF.M_AG7_RO_ROOF": {
+  "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF",
+  "error": "Does not count water from roofs and paved areas as run-off that can be used.",
+  "example": {
+   "question": "Which water can be led into a retention pit?",
+   "wrong_answer": "Only rain falling straight into the pit",
+   "correct_answer": "Run-off from roofs, paths and slopes as well"
+  },
+  "cause": "The child thinks only water that falls on the garden can be used there.",
+  "reveals": "Offer \"Only rain falling straight into the pit\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace where the roof water goes after a storm.",
+  "feedback": "Run-off from roofs, paths and slopes can be led into retention structures.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_DOWN": {
+  "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD",
+  "error": "Digs the ditch straight down the slope.",
+  "example": {
+   "question": "How is a retention ditch laid out on a slope?",
+   "wrong_answer": "Straight down the slope",
+   "correct_answer": "Across the slope, along the contour"
+  },
+  "cause": "The child digs where the water runs, thinking the ditch should follow it.",
+  "reveals": "Offer \"Straight down the slope\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour water down a tray with a ditch down the slope and one across it.",
+  "feedback": "Dig across the slope so the ditch catches the water instead of speeding it up.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_BANK": {
+  "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD",
+  "error": "Throws the dug soil on the uphill side.",
+  "example": {
+   "question": "Where is the dug soil put when making a retention ditch?",
+   "wrong_answer": "On the uphill side",
+   "correct_answer": "On the downhill side as a bank"
+  },
+  "cause": "The child does not picture the bank as a wall that holds water.",
+  "reveals": "Offer \"On the uphill side\" next to the right answer and ask the question again in a new context.",
+  "help": "Model both on a tray; see which holds the water in the ditch.",
+  "feedback": "Throw the soil downhill to make a bank that holds the water in the ditch.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_CROP": {
+  "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD",
+  "error": "Plants maize or beans in the wet retention pit.",
+  "example": {
+   "question": "Which crop suits a retention pit that stays wet?",
+   "wrong_answer": "Maize or beans",
+   "correct_answer": "Bananas, arrowroots, sugarcane or napier grass"
+  },
+  "cause": "The child plants the usual field crops.",
+  "reveals": "Offer \"Maize or beans\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which crops grow in wet valley bottoms.",
+  "feedback": "Bananas, arrowroots, sugarcane and napier like the wet soil of a retention pit.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD.M_AG7_RB_SILT": {
+  "skill": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD",
+  "error": "Thinks a retention ditch needs no care once dug.",
+  "example": {
+   "question": "Why must a retention ditch be cleared after heavy rain?",
+   "wrong_answer": "It does not need clearing",
+   "correct_answer": "Silt fills it and it stops holding water"
+  },
+  "cause": "The child thinks digging is the whole job.",
+  "reveals": "Offer \"It does not need clearing\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a ditch half filled with silt after a season.",
+  "feedback": "Clear the silt from the ditch after heavy rains so it keeps holding water.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_LONG": {
   "skill": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP",
-  "error": "Thinks long boiling is good.",
+  "error": "Thinks boiling vegetables for a long time keeps them nutritious and safe.",
   "example": {
    "question": "How should vegetables be cooked to keep vitamins?",
    "wrong_answer": "Boil them for a long time",
    "correct_answer": "Cook them a short time with a lid"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child links long cooking with safety and softness.",
   "reveals": "Offer \"Boil them for a long time\" next to the right answer and ask the question again in a new situation.",
-  "help": "Short cooking keeps the vitamins.",
+  "help": "Compare bright green kale cooked for 5 minutes with grey kale boiled for 40.",
   "feedback": "Short cooking keeps the vitamins.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_WATER": {
   "skill": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP",
-  "error": "Throws away the cooking water.",
+  "error": "Throws away the water vegetables were cooked in.",
   "example": {
    "question": "What should be done with the cooking water?",
    "wrong_answer": "Throw it away at once",
    "correct_answer": "Use it, for example in soup"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child sees the cooking water as dirty, not as holding minerals and vitamins.",
   "reveals": "Offer \"Throw it away at once\" next to the right answer and ask the question again in a new situation.",
-  "help": "The water holds minerals; use it.",
+  "help": "Show the green colour in the water; explain some vitamins and minerals leave the leaves into it.",
   "feedback": "The water holds minerals; use it.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_WASH": {
   "skill": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP",
-  "error": "Cuts before washing.",
+  "error": "Cuts vegetables up small before washing them.",
   "example": {
    "question": "When should vegetables be washed?",
    "wrong_answer": "After they are cut up small",
    "correct_answer": "Before they are cut"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks small pieces wash cleaner.",
   "reveals": "Offer \"After they are cut up small\" next to the right answer and ask the question again in a new situation.",
-  "help": "Wash before cutting to avoid losing vitamins.",
+  "help": "Explain that vitamins wash out of the cut surfaces; wash whole leaves first, then cut.",
   "feedback": "Wash before cutting to avoid losing vitamins.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_EARLY": {
+  "skill": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP",
+  "error": "Cuts vegetables hours before cooking and leaves them in the open or in water.",
+  "example": {
+   "question": "When should vegetables be cut for cooking?",
+   "wrong_answer": "Hours before, and left to soak",
+   "correct_answer": "Just before cooking"
+  },
+  "cause": "The child thinks preparing early saves time with no loss.",
+  "reveals": "Offer \"Hours before, and left to soak\" next to the right answer and ask the question again in a new context.",
+  "help": "Leave cut kale out for three hours: it wilts and darkens.",
+  "feedback": "Cut vegetables just before cooking. Cut leaves left out or soaking lose vitamins.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_DRY": {
   "skill": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE",
-  "error": "Thinks trees dry up the land.",
+  "error": "Thinks trees dry up the land by drinking all the water.",
   "example": {
    "question": "What do trees do to the land?",
    "wrong_answer": "Dry it up",
    "correct_answer": "Help hold the soil and bring rain"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child has heard that some trees (like eucalyptus) use much water and applies it to all trees.",
   "reveals": "Offer \"Dry it up\" next to the right answer and ask the question again in a new situation.",
-  "help": "Trees hold soil and help rain.",
+  "help": "Compare the soil under a tree's shade with bare ground at midday; talk about cover, humus and springs in forests.",
   "feedback": "Trees hold soil and help rain.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_GAS": {
   "skill": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE",
-  "error": "Gives the wrong gas.",
+  "error": "Says trees give out smoke or carbon dioxide instead of oxygen.",
   "example": {
    "question": "Which gas do trees give out?",
    "wrong_answer": "Smoke",
    "correct_answer": "Oxygen"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child links trees with firewood and smoke.",
   "reveals": "Offer \"Smoke\" next to the right answer and ask the question again in a new situation.",
-  "help": "Trees give out oxygen.",
+  "help": "Recall air components from Science: plants take in carbon dioxide and give out oxygen in daylight.",
   "feedback": "Trees give out oxygen.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -172,461 +277,1286 @@
    "wrong_answer": "Only firewood",
    "correct_answer": "Shade, fruit, timber and shelter"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "At home the child sees trees cut mainly for fuel.",
   "reveals": "Offer \"Only firewood\" next to the right answer and ask the question again in a new situation.",
-  "help": "Trees give shade, fruit, timber and shelter.",
+  "help": "List what a mango or grevillea gives over its life: fruit, shade, timber, fodder, bees, windbreak.",
   "feedback": "Trees give shade, fruit, timber and shelter.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_RAIN": {
+  "skill": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE",
+  "error": "Thinks trees have nothing to do with rain or water in rivers.",
+  "example": {
+   "question": "How do forests help rivers like the Tana?",
+   "wrong_answer": "They do not; rivers come from the sea",
+   "correct_answer": "They hold rain in the soil and release it slowly into streams and springs"
+  },
+  "cause": "The child does not connect forests in water towers with the rivers below.",
+  "reveals": "Offer \"They do not; rivers come from the sea\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the Mau or Mount Kenya forests on a map and the rivers flowing out of them.",
+  "feedback": "Forests hold rain in the soil and let it out slowly into rivers. They are water towers.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_SLEEVE": {
+  "skill": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING",
+  "error": "Plants the seedling with its polythene sleeve still on.",
+  "example": {
+   "question": "What is done with the seedling's polythene sleeve when planting?",
+   "wrong_answer": "Leave it on to protect the roots",
+   "correct_answer": "Remove it carefully without breaking the soil ball"
+  },
+  "cause": "The child thinks the sleeve is part of the plant's home.",
+  "reveals": "Offer \"Leave it on to protect the roots\" next to the right answer and ask the question again in a new context.",
+  "help": "Show roots curled inside a sleeve dug up after a year.",
+  "feedback": "Remove the polythene sleeve. Roots cannot grow through it.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_SITE": {
+  "skill": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING",
+  "error": "Plants a tree right next to a house, under power lines or over a pit latrine.",
+  "example": {
+   "question": "Where should a tree that grows big be planted?",
+   "wrong_answer": "Right next to the house wall",
+   "correct_answer": "Away from buildings, power lines and latrines, with room to grow"
+  },
+  "cause": "The child thinks of the small seedling, not the full-grown tree.",
+  "reveals": "Offer \"Right next to the house wall\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a tree whose roots have cracked a wall.",
+  "feedback": "Plant big trees away from houses, power lines and latrines, where they have room to grow.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_ONCE": {
+  "skill": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING",
+  "error": "Waters the tree only on planting day.",
+  "example": {
+   "question": "How long must a newly planted tree be cared for?",
+   "wrong_answer": "Only on the day it is planted",
+   "correct_answer": "Until it is established: watered, weeded and protected for months"
+  },
+  "cause": "The child thinks planting is the job.",
+  "reveals": "Offer \"Only on the day it is planted\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a care record and seedlings that died after planting day.",
+  "feedback": "Water, weed and protect a young tree until it is established.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_TYPE": {
+  "skill": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING",
+  "error": "Thinks any tree can be planted anywhere, such as eucalyptus beside a spring or a wetland.",
+  "example": {
+   "question": "Why is eucalyptus not planted beside springs and wetlands?",
+   "wrong_answer": "It does not matter which tree",
+   "correct_answer": "It uses a lot of water and can dry the spring"
+  },
+  "cause": "The child sees all trees as equally good for the land.",
+  "reveals": "Offer \"It does not matter which tree\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask the class which indigenous trees grow by rivers in their area.",
+  "feedback": "Choose a tree that suits the place. Eucalyptus uses much water, so keep it away from springs.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_SMALL": {
   "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH",
-  "error": "Gives a coarse tilth for small seeds.",
+  "error": "Gives a coarse tilth for small seeds such as carrots.",
   "example": {
    "question": "Which tilth suits small seeds like carrot?",
    "wrong_answer": "Coarse tilth",
    "correct_answer": "Fine tilth"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks a rough bed is less work and that seeds find their way.",
   "reveals": "Offer \"Coarse tilth\" next to the right answer and ask the question again in a new situation.",
-  "help": "Small seeds need a fine tilth.",
+  "help": "Sow carrot seed on a lumpy tray and a fine tray; count how many come up.",
   "feedback": "Small seeds need a fine tilth.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_TUBER": {
   "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH",
-  "error": "Gives a fine tilth for tubers.",
+  "error": "Gives a fine tilth for sweet potato vines and tubers.",
   "example": {
    "question": "Which tilth suits sweet potato cuttings?",
    "wrong_answer": "Fine tilth",
    "correct_answer": "Coarse tilth"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks finer is always better for every crop.",
   "reveals": "Offer \"Fine tilth\" next to the right answer and ask the question again in a new situation.",
-  "help": "Tubers and cuttings suit a coarse tilth.",
+  "help": "Explain that big planting materials need air and loose clods; fine soil packs hard round them.",
   "feedback": "Tubers and cuttings suit a coarse tilth.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_MEDIUM": {
   "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH",
-  "error": "Gives the wrong tilth for maize.",
+  "error": "Gives a fine tilth for maize and beans.",
   "example": {
    "question": "Which tilth suits maize and beans?",
    "wrong_answer": "Fine tilth",
    "correct_answer": "Medium tilth"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child sorts seeds into tiny and big only, with no middle.",
   "reveals": "Offer \"Fine tilth\" next to the right answer and ask the question again in a new situation.",
-  "help": "Maize and beans suit a medium tilth.",
+  "help": "Lay carrot, bean and potato side by side: small, medium, large match fine, medium, coarse.",
   "feedback": "Maize and beans suit a medium tilth.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_MEANING": {
+  "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH",
+  "error": "Thinks tilth means how fertile the soil is.",
+  "example": {
+   "question": "What is tilth?",
+   "wrong_answer": "How fertile the soil is",
+   "correct_answer": "How fine or coarse the soil is after it is dug"
+  },
+  "cause": "The child links soil words with fertility.",
+  "reveals": "Offer \"How fertile the soil is\" next to the right answer and ask the question again in a new context.",
+  "help": "Show three trays of the same soil dug to different sizes.",
+  "feedback": "Tilth is how fine or coarse the soil is after cultivation, not how fertile it is.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_RAKE": {
+  "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP",
+  "error": "Thinks raking is the first step in preparing a seedbed.",
+  "example": {
+   "question": "Which is done first when preparing a seedbed?",
+   "wrong_answer": "Raking",
+   "correct_answer": "Clearing the site and digging"
+  },
+  "cause": "The child has seen the raking at the end and thinks it starts the job.",
+  "reveals": "Offer \"Raking\" next to the right answer and ask the question again in a new context.",
+  "help": "Try to rake a hard, uncleared plot.",
+  "feedback": "Clear and dig first. Raking comes last to make a fine, level surface.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_WET": {
+  "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP",
+  "error": "Digs when the soil is soaking wet.",
+  "example": {
+   "question": "When is the best time to dig a seedbed?",
+   "wrong_answer": "When the soil is soaking wet",
+   "correct_answer": "When the soil is moist but not wet"
+  },
+  "cause": "The child thinks wet soil is soft and easy.",
+  "reveals": "Offer \"When the soil is soaking wet\" next to the right answer and ask the question again in a new context.",
+  "help": "Dig a lump of soaked clay: it smears and dries into hard clods.",
+  "feedback": "Dig when the soil is moist, not wet. Wet soil smears and dries into hard clods.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_ROOTS": {
+  "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP",
+  "error": "Leaves weed roots and couch grass in the seedbed.",
+  "example": {
+   "question": "Why are weed roots removed when preparing a seedbed?",
+   "wrong_answer": "They add manure",
+   "correct_answer": "They grow again and compete with the crop"
+  },
+  "cause": "The child thinks cut weeds are dead.",
+  "reveals": "Offer \"They add manure\" next to the right answer and ask the question again in a new context.",
+  "help": "Show couch grass roots sprouting from a small piece.",
+  "feedback": "Remove weed roots. Many weeds grow again from small pieces.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_TOOL": {
+  "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP",
+  "error": "Uses a rake to break hard ground for primary cultivation.",
+  "example": {
+   "question": "Which tool is used to dig hard ground first?",
+   "wrong_answer": "A rake",
+   "correct_answer": "A jembe or forked jembe"
+  },
+  "cause": "The child does not tell digging tools from finishing tools.",
+  "reveals": "Offer \"A rake\" next to the right answer and ask the question again in a new context.",
+  "help": "Show each tool and what it does to a lump of hard soil.",
+  "feedback": "Dig with a jembe or forked jembe. A rake only levels and fines the surface.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_WEED": {
   "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES",
-  "error": "Says weeds help the crop.",
+  "error": "Thinks weeds help the crop grow by giving it company and shade.",
   "example": {
    "question": "Why is weeding done?",
    "wrong_answer": "Weeds help the crop grow",
    "correct_answer": "To remove competition for water and food"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child sees weeds as green plants like the crop and does not picture the roots competing.",
   "reveals": "Offer \"Weeds help the crop grow\" next to the right answer and ask the question again in a new situation.",
-  "help": "Weeds compete with crops.",
+  "help": "Grow two rows of beans, one weeded; compare their size after three weeks.",
   "feedback": "Weeds compete with crops.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_THIN": {
   "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES",
-  "error": "Mixes thinning and gapping.",
+  "error": "Says thinning is replacing seeds that failed to come up.",
   "example": {
    "question": "What is thinning?",
    "wrong_answer": "Replacing seeds that failed",
    "correct_answer": "Removing extra seedlings"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinning and gapping are taught together and both change the number of plants.",
   "reveals": "Offer \"Replacing seeds that failed\" next to the right answer and ask the question again in a new situation.",
-  "help": "Thinning removes extra seedlings.",
+  "help": "Use the words: thin = make fewer; gap = fill a gap.",
   "feedback": "Thinning removes extra seedlings.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_GAP": {
   "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES",
-  "error": "Mixes gapping and thinning.",
+  "error": "Says gapping is removing extra seedlings.",
   "example": {
    "question": "What is gapping?",
    "wrong_answer": "Removing extra seedlings",
    "correct_answer": "Replacing seeds that did not grow"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child swaps the two words learnt together.",
   "reveals": "Offer \"Removing extra seedlings\" next to the right answer and ask the question again in a new situation.",
-  "help": "Gapping replaces seeds that did not grow.",
+  "help": "Point at an empty space in a row: \"a gap\" is filled by gapping.",
   "feedback": "Gapping replaces seeds that did not grow.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES.M_AG7_CP_EARTH": {
+  "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES",
+  "error": "Thinks earthing-up means adding more seeds round the plant.",
+  "example": {
+   "question": "What is earthing-up?",
+   "wrong_answer": "Sowing more seeds near the plant",
+   "correct_answer": "Heaping soil round the base of the stems"
+  },
+  "cause": "The word \"earth\" makes the child think of planting.",
+  "reveals": "Offer \"Sowing more seeds near the plant\" next to the right answer and ask the question again in a new context.",
+  "help": "Show earthed-up potatoes and maize; ask what has been added.",
+  "feedback": "Earthing-up heaps soil round the stems to hold the plant up and cover the roots or tubers.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_LATEGAP": {
+  "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS",
+  "error": "Gaps a month after the crop came up.",
+  "example": {
+   "question": "When should gapping be done?",
+   "wrong_answer": "A month or more after germination",
+   "correct_answer": "Within about two weeks of germination"
+  },
+  "cause": "The child does not see that late seedlings are shaded and left behind.",
+  "reveals": "Offer \"A month or more after germination\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a late-gapped plant, small beside its neighbours.",
+  "feedback": "Gap within about two weeks so the new plants keep up with the rest.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_THINWEAK": {
+  "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS",
+  "error": "Pulls out the biggest seedlings when thinning.",
+  "example": {
+   "question": "Which seedlings are left when thinning?",
+   "wrong_answer": "The smallest",
+   "correct_answer": "The strongest and healthiest at the right spacing"
+  },
+  "cause": "The child thinks the big ones have had their share.",
+  "reveals": "Offer \"The smallest\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a big and a weak seedling side by side.",
+  "feedback": "Leave the strongest seedlings at the right spacing; remove the weak ones.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_THINDRY": {
+  "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS",
+  "error": "Thins when the soil is dry and hard.",
+  "example": {
+   "question": "When is thinning best done?",
+   "wrong_answer": "When the soil is dry and hard",
+   "correct_answer": "When the soil is moist, so the seedlings left are not disturbed"
+  },
+  "cause": "The child does not think about the roots of the plants left behind.",
+  "reveals": "Offer \"When the soil is dry and hard\" next to the right answer and ask the question again in a new context.",
+  "help": "Pull a seedling from dry soil and from moist soil; look at its neighbours.",
+  "feedback": "Thin when the soil is moist, so the seedlings left behind keep their roots.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS.M_AG7_PS_DEEPWEED": {
+  "skill": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS",
+  "error": "Weeds deep and close to the crop with a jembe, cutting its roots.",
+  "example": {
+   "question": "How should weeds close to young maize be removed?",
+   "wrong_answer": "Dig deep with a jembe right next to the stem",
+   "correct_answer": "Pull them by hand or weed shallowly, not cutting the crop's roots"
+  },
+  "cause": "The child thinks deep weeding gets all the weed out.",
+  "reveals": "Offer \"Dig deep with a jembe right next to the stem\" next to the right answer and ask the question again in a new context.",
+  "help": "Show cut maize roots after deep weeding close to the stem.",
+  "feedback": "Weed shallowly or by hand near the crop so its roots are not cut.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_RAW": {
   "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS",
-  "error": "Thinks raw milk is always safe.",
+  "error": "Thinks raw milk straight from the cow is always the safest.",
   "example": {
    "question": "What should be done to milk before drinking?",
    "wrong_answer": "Nothing, raw is safest",
    "correct_answer": "Boil or pasteurise it"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child links fresh with pure and has not heard of germs in milk.",
   "reveals": "Offer \"Nothing, raw is safest\" next to the right answer and ask the question again in a new situation.",
-  "help": "Boil or pasteurise milk to kill germs.",
+  "help": "Explain that milk can carry germs from the animal and the hands; boiling kills them.",
   "feedback": "Boil or pasteurise milk to kill germs.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_HANDS": {
   "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS",
-  "error": "Skips handwashing.",
+  "error": "Skips washing hands and tools before handling food from animals.",
   "example": {
    "question": "What should be done before handling meat?",
    "wrong_answer": "Nothing at all",
    "correct_answer": "Wash hands and tools"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks clean-looking hands are clean.",
   "reveals": "Offer \"Nothing at all\" next to the right answer and ask the question again in a new situation.",
-  "help": "Wash hands and tools first.",
+  "help": "Recall hand washing from Grade 4: germs cannot be seen.",
   "feedback": "Wash hands and tools first.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_COOL": {
   "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS",
-  "error": "Leaves products in the sun.",
+  "error": "Leaves milk or eggs in the hot sun.",
   "example": {
    "question": "How should fresh milk be kept?",
    "wrong_answer": "In the hot sun",
    "correct_answer": "Cool and covered"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child does not link warmth with food going bad.",
   "reveals": "Offer \"In the hot sun\" next to the right answer and ask the question again in a new situation.",
-  "help": "Keep milk cool and covered.",
+  "help": "Leave a cup of milk in the sun and one in the shade for a morning; smell both.",
   "feedback": "Keep milk cool and covered.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS.M_AG7_AP_WASHEGG": {
+  "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS",
+  "error": "Washes eggs in water before storing them.",
+  "example": {
+   "question": "How should dirty eggs be cleaned before storing?",
+   "wrong_answer": "Soak and wash them in water",
+   "correct_answer": "Wipe them with a dry cloth or rough paper"
+  },
+  "cause": "The child thinks washing always cleans best.",
+  "reveals": "Offer \"Soak and wash them in water\" next to the right answer and ask the question again in a new context.",
+  "help": "Explain the eggshell has tiny pores and a natural coat; water carries germs in.",
+  "feedback": "Wipe eggs dry. Washing removes the shell's coat and lets germs in.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_GRADE": {
+  "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP",
+  "error": "Packs cracked and whole eggs together.",
+  "example": {
+   "question": "What is done with cracked eggs when grading?",
+   "wrong_answer": "Pack them with the others",
+   "correct_answer": "Remove them and use them first at home"
+  },
+  "cause": "The child sees a small crack as no problem.",
+  "reveals": "Offer \"Pack them with the others\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how a cracked egg leaks and spoils the tray.",
+  "feedback": "Remove cracked eggs when grading. They spoil quickly and can spoil others.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_POINT": {
+  "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP",
+  "error": "Packs eggs in the tray pointed end up.",
+  "example": {
+   "question": "Which way up are eggs packed in a tray?",
+   "wrong_answer": "Pointed end up",
+   "correct_answer": "Broad end up"
+  },
+  "cause": "The child sets the egg as it looks neat.",
+  "reveals": "Offer \"Pointed end up\" next to the right answer and ask the question again in a new context.",
+  "help": "Candle an egg: the air space is at the broad end.",
+  "feedback": "Pack eggs broad end up, where the air space is, so they keep fresh longer.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_WATER": {
+  "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP",
+  "error": "Adds water to honey to make more of it.",
+  "example": {
+   "question": "Why must no water get into honey?",
+   "wrong_answer": "Water makes more honey to sell",
+   "correct_answer": "Watered honey ferments and goes sour"
+  },
+  "cause": "The child thinks of diluting juice.",
+  "reveals": "Offer \"Water makes more honey to sell\" next to the right answer and ask the question again in a new context.",
+  "help": "Explain honey keeps for years because it is very dry and thick.",
+  "feedback": "Keep honey dry. Water makes it ferment and spoil.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP.M_AG7_EH_OPEN": {
+  "skill": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP",
+  "error": "Stores honey in an open container.",
+  "example": {
+   "question": "How should strained honey be stored?",
+   "wrong_answer": "In an open basin",
+   "correct_answer": "In a clean, dry, airtight container, labelled"
+  },
+  "cause": "The child thinks honey cannot spoil at all.",
+  "reveals": "Offer \"In an open basin\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what comes to an open honey basin: ants, bees, dust, damp air.",
+  "feedback": "Store honey in clean, dry, airtight containers so it stays pure.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_STEAM": {
   "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS",
-  "error": "Mixes steaming and boiling.",
+  "error": "Says steaming is cooking in oil.",
   "example": {
    "question": "What is steaming?",
    "wrong_answer": "Cooking in oil",
    "correct_answer": "Cooking over the steam of boiling water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child mixes the cooking words because all four are taught together.",
   "reveals": "Offer \"Cooking in oil\" next to the right answer and ask the question again in a new situation.",
-  "help": "Steaming cooks food over steam.",
+  "help": "Show steam rising from a pot; food in a basket above the water cooks in that steam.",
   "feedback": "Steaming cooks food over steam.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_FRY": {
   "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS",
-  "error": "Mixes frying and baking.",
+  "error": "Says frying is cooking in an oven.",
   "example": {
    "question": "What is frying?",
    "wrong_answer": "Cooking in an oven",
    "correct_answer": "Cooking in hot oil"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child pictures a hot box for all dry cooking.",
   "reveals": "Offer \"Cooking in an oven\" next to the right answer and ask the question again in a new situation.",
-  "help": "Frying cooks food in hot oil.",
+  "help": "Frying uses hot oil in a pan; an oven is for baking and roasting.",
   "feedback": "Frying cooks food in hot oil.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_BAKE": {
   "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS",
-  "error": "Mixes baking and boiling.",
+  "error": "Says boiling is the method that uses an oven.",
   "example": {
    "question": "Which method uses an oven?",
    "wrong_answer": "Boiling",
    "correct_answer": "Baking"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child guesses the most common cooking word.",
   "reveals": "Offer \"Boiling\" next to the right answer and ask the question again in a new situation.",
-  "help": "Baking uses an oven.",
+  "help": "Match each method to its heat: water (boiling), steam (steaming), oil (frying), oven (baking).",
   "feedback": "Baking uses an oven.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG7_CK_GRILL": {
+  "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+  "error": "Thinks grilling and roasting are the same as frying because the food browns.",
+  "example": {
+   "question": "How is grilling different from frying?",
+   "wrong_answer": "There is no difference; both brown the food",
+   "correct_answer": "Grilling cooks with direct dry heat and no oil; frying cooks in hot oil"
+  },
+  "cause": "The child judges by the brown colour of the food.",
+  "reveals": "Offer \"There is no difference; both brown the food\" next to the right answer and ask the question again in a new context.",
+  "help": "Show meat on a wire grill over charcoal and in a frying pan.",
+  "feedback": "Grilling uses direct heat with no oil. Frying cooks food in hot oil.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_DRY": {
+  "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+  "error": "Lets the water in the steamer boil dry.",
+  "example": {
+   "question": "What must you watch when steaming food?",
+   "wrong_answer": "Nothing, steaming looks after itself",
+   "correct_answer": "That the water does not boil dry; top it up with boiling water"
+  },
+  "cause": "The child does not see the water under the food.",
+  "reveals": "Offer \"Nothing, steaming looks after itself\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a steamer pan burnt dry.",
+  "feedback": "Check the water when steaming and top it up so it does not boil dry.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_TURN": {
+  "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+  "error": "Leaves food on the grill without turning it.",
+  "example": {
+   "question": "Why is grilled meat turned?",
+   "wrong_answer": "It is not needed",
+   "correct_answer": "So both sides cook evenly and it does not burn"
+  },
+  "cause": "The child thinks heat reaches all sides.",
+  "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+  "help": "Grill a tomato half without turning: burnt underneath, raw on top.",
+  "feedback": "Turn grilled food so both sides cook evenly.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_RAW": {
+  "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+  "error": "Judges grilled chicken cooked because the outside is brown.",
+  "example": {
+   "question": "How do you know grilled chicken is cooked through?",
+   "wrong_answer": "The outside is brown",
+   "correct_answer": "The juices run clear and the inside is no longer pink"
+  },
+  "cause": "The child judges by the outside only.",
+  "reveals": "Offer \"The outside is brown\" next to the right answer and ask the question again in a new context.",
+  "help": "Cut a piece browned outside but pink inside.",
+  "feedback": "Meat is cooked when the juices run clear and it is not pink inside.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE.M_AG7_CPR_SLEEVE": {
+  "skill": "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE",
+  "error": "Leans over the grill with loose sleeves and long hair untied.",
+  "example": {
+   "question": "How should you dress when grilling over a fire?",
+   "wrong_answer": "Any clothes are fine",
+   "correct_answer": "Sleeves rolled up, hair tied back, an apron on"
+  },
+  "cause": "The child does not think about clothes catching fire.",
+  "reveals": "Offer \"Any clothes are fine\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how a loose sleeve hangs into a flame in a picture.",
+  "feedback": "Roll up sleeves and tie back hair near a grill or fire.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_DUNG": {
   "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE",
-  "error": "Leaves dung in the house.",
+  "error": "Leaves dung in the animal house because the animals do not mind it.",
   "example": {
    "question": "What should be done to the animals' house?",
    "wrong_answer": "Leave the dung inside",
    "correct_answer": "Clean it and remove the dung"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks animals live with dirt naturally.",
   "reveals": "Offer \"Leave the dung inside\" next to the right answer and ask the question again in a new situation.",
-  "help": "Clean the house and remove dung.",
+  "help": "Ask what grows in wet dung: flies, worms, germs that make animals sick.",
   "feedback": "Clean the house and remove dung.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_WATER": {
   "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE",
-  "error": "Gives dirty water.",
+  "error": "Gives animals dirty water because animals drink from puddles anyway.",
   "example": {
    "question": "What water should animals drink?",
    "wrong_answer": "Any dirty water",
    "correct_answer": "Clean water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child has seen animals drink from puddles and thinks they need no clean water.",
   "reveals": "Offer \"Any dirty water\" next to the right answer and ask the question again in a new situation.",
-  "help": "Give clean water.",
+  "help": "Show a dirty waterer with green slime; animals catch diseases from it as people do.",
   "feedback": "Give clean water.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_SICK": {
   "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE",
-  "error": "Keeps the sick with the healthy.",
+  "error": "Keeps a sick animal with the healthy ones.",
   "example": {
    "question": "What should be done with a sick animal?",
    "wrong_answer": "Keep it with the others",
    "correct_answer": "Separate it from the others"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks the animal will feel lonely or that illness does not spread among animals.",
   "reveals": "Offer \"Keep it with the others\" next to the right answer and ask the question again in a new situation.",
-  "help": "Separate sick animals.",
+  "help": "Ask how a cold spreads in a classroom; disease spreads the same way among animals.",
   "feedback": "Separate sick animals.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE.M_AG7_AH_AIR": {
+  "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE",
+  "error": "Closes up the animal house completely to keep it warm.",
+  "example": {
+   "question": "Why does an animal house need ventilation?",
+   "wrong_answer": "It does not; closed is warmer",
+   "correct_answer": "Fresh air removes damp and smells that cause disease"
+  },
+  "cause": "The child thinks warmth is all an animal needs.",
+  "reveals": "Offer \"It does not; closed is warmer\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare the smell of a closed and an airy hen house.",
+  "feedback": "Animal houses need fresh air to stay dry and healthy, without cold draughts on the animals.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_WETBED": {
+  "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING",
+  "error": "Puts fresh bedding on a floor that is still wet.",
+  "example": {
+   "question": "When is new bedding put in an animal house after cleaning?",
+   "wrong_answer": "Straight after scrubbing, while wet",
+   "correct_answer": "After the house has dried"
+  },
+  "cause": "The child wants to finish quickly.",
+  "reveals": "Offer \"Straight after scrubbing, while wet\" next to the right answer and ask the question again in a new context.",
+  "help": "Leave bedding on a wet floor overnight and smell it.",
+  "feedback": "Let the house dry before new bedding goes in. Damp bedding grows germs.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_FEEDER": {
+  "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING",
+  "error": "Tops up feeders and waterers without washing them.",
+  "example": {
+   "question": "How often should a waterer be washed?",
+   "wrong_answer": "Never, only topped up",
+   "correct_answer": "Every day before refilling"
+  },
+  "cause": "The child sees the water level, not the slime.",
+  "reveals": "Offer \"Never, only topped up\" next to the right answer and ask the question again in a new context.",
+  "help": "Feel the inside of an unwashed waterer.",
+  "feedback": "Wash and rinse feeders and waterers every day before refilling.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_NOGLOVES": {
+  "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING",
+  "error": "Cleans out droppings with bare hands and no mask.",
+  "example": {
+   "question": "What should you wear to clean a poultry house?",
+   "wrong_answer": "Nothing special",
+   "correct_answer": "Gloves, a mask, an apron and gumboots"
+  },
+  "cause": "The child does not see dust and droppings as a danger.",
+  "reveals": "Offer \"Nothing special\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the dust rising when bedding is moved.",
+  "feedback": "Wear gloves, a mask and gumboots when cleaning animal houses, and wash your hands after.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING.M_AG7_HC_ORDER": {
+  "skill": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING",
+  "error": "Disinfects before removing the old bedding and droppings.",
+  "example": {
+   "question": "What is done before using disinfectant in an animal house?",
+   "wrong_answer": "Nothing, spray it straight away",
+   "correct_answer": "Remove the bedding and droppings and scrub the house"
+  },
+  "cause": "The child thinks the disinfectant does all the work.",
+  "reveals": "Offer \"Nothing, spray it straight away\" next to the right answer and ask the question again in a new context.",
+  "help": "Explain disinfectant cannot reach germs under dirt.",
+  "feedback": "Remove dirt and scrub first. Disinfectant works only on a clean surface.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_WHITE": {
   "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS",
-  "error": "Washes coloured with white.",
+  "error": "Washes a loose-coloured shirt together with white clothes.",
   "example": {
    "question": "How should a loose-coloured shirt be washed?",
    "wrong_answer": "With white clothes",
    "correct_answer": "Separately"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child wants to save water and soap and has not seen colour run.",
   "reveals": "Offer \"With white clothes\" next to the right answer and ask the question again in a new situation.",
-  "help": "Wash loose colours separately.",
+  "help": "Wash a scrap of loose-coloured cloth with a white handkerchief and show the stain.",
   "feedback": "Wash loose colours separately.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_SOAK": {
   "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS",
-  "error": "Soaks for long.",
+  "error": "Soaks a loose-coloured article for a whole day.",
   "example": {
    "question": "How long should a loose-coloured shirt be soaked?",
    "wrong_answer": "For a whole day",
    "correct_answer": "Not for long"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child soaks all clothes the same way to loosen dirt.",
   "reveals": "Offer \"For a whole day\" next to the right answer and ask the question again in a new situation.",
-  "help": "Do not soak loose colours long.",
+  "help": "Soak a loose-coloured scrap and watch the water change colour over an hour.",
   "feedback": "Do not soak loose colours long.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_DRY": {
   "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS",
-  "error": "Dries in the hot sun.",
+  "error": "Dries loose-coloured clothes in the hot sun.",
   "example": {
    "question": "Where should loose-coloured clothes dry?",
    "wrong_answer": "In the hot sun",
    "correct_answer": "In the shade"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child dries everything the same way and has seen whites dried in sun.",
   "reveals": "Offer \"In the hot sun\" next to the right answer and ask the question again in a new situation.",
-  "help": "Dry loose colours in the shade.",
+  "help": "Recall Grade 5: colours dry inside out in the shade so they do not fade.",
   "feedback": "Dry loose colours in the shade.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS.M_AG7_LC_MEANING": {
+  "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS",
+  "error": "Thinks a loose-coloured article is one with a loose fit.",
+  "example": {
+   "question": "What is a loose-coloured article?",
+   "wrong_answer": "Clothing that fits loosely",
+   "correct_answer": "One whose dye comes out in water"
+  },
+  "cause": "The child takes \"loose\" from how clothes fit.",
+  "reveals": "Offer \"Clothing that fits loosely\" next to the right answer and ask the question again in a new context.",
+  "help": "Dip a corner of a loose-coloured scrap in water and press it on white paper.",
+  "feedback": "Loose-coloured means the dye runs in water, not that the clothes are loose.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_NOTEST": {
+  "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS",
+  "error": "Washes a new coloured item without testing whether the colour runs.",
+  "example": {
+   "question": "How can you test if a colour will run?",
+   "wrong_answer": "There is no way to know",
+   "correct_answer": "Press a damp white cloth on a hidden part; see if colour comes off"
+  },
+  "cause": "The child has not seen a colour test.",
+  "reveals": "Offer \"There is no way to know\" next to the right answer and ask the question again in a new context.",
+  "help": "Do the test on a hidden seam in class.",
+  "feedback": "Test a hidden part with a damp white cloth before washing.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_HOT": {
+  "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS",
+  "error": "Washes loose colours in hot water to get them cleaner.",
+  "example": {
+   "question": "Which water is used for loose colours?",
+   "wrong_answer": "Hot water",
+   "correct_answer": "Cool or lukewarm water"
+  },
+  "cause": "The child thinks hotter water always cleans better.",
+  "reveals": "Offer \"Hot water\" next to the right answer and ask the question again in a new context.",
+  "help": "Dip loose-coloured scraps in hot and cool water; compare.",
+  "feedback": "Use cool or lukewarm water. Heat makes the dye run more.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_RUB": {
+  "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS",
+  "error": "Rubs and scrubs loose colours hard on a stone or board.",
+  "example": {
+   "question": "How is a loose-coloured article washed?",
+   "wrong_answer": "Scrubbed hard on a board",
+   "correct_answer": "Quickly, by kneading and squeezing"
+  },
+  "cause": "The child washes as for dirty work clothes.",
+  "reveals": "Offer \"Scrubbed hard on a board\" next to the right answer and ask the question again in a new context.",
+  "help": "Scrub a loose-coloured scrap and knead another; compare the colour left.",
+  "feedback": "Knead and squeeze loose colours quickly. Hard rubbing pulls the dye out.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS.M_AG7_CS_FOLDWET": {
+  "skill": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS",
+  "error": "Folds the wet article and leaves it in a heap.",
+  "example": {
+   "question": "What happens if a wet loose-coloured shirt is left folded in a basin?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "The colour runs into the other parts of the shirt"
+  },
+  "cause": "The child does not think colour moves while the cloth is wet.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Leave a wet folded scrap for an hour and open it.",
+  "feedback": "Hang loose colours to dry at once. Wet folds let colour run into other parts.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_TOOL": {
   "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING",
-  "error": "Names the wrong tool.",
+  "error": "Names a hammer, nails or a crochet hook as the tools for knitting.",
   "example": {
    "question": "Which tools are used for knitting?",
    "wrong_answer": "A hammer and nails",
    "correct_answer": "Needles and yarn"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child mixes knitting with other making activities, or with crochet from Grade 6.",
   "reveals": "Offer \"A hammer and nails\" next to the right answer and ask the question again in a new situation.",
-  "help": "Knitting uses needles and yarn.",
+  "help": "Show a pair of knitting needles beside a crochet hook: knitting uses two needles.",
   "feedback": "Knitting uses needles and yarn.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_STITCH": {
   "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING",
-  "error": "Names a wrong stitch.",
+  "error": "Picks a made-up stitch such as \"brick stitch\" as a knitting stitch and rejects purl.",
   "example": {
    "question": "Which is a knitting stitch?",
-   "wrong_answer": "Purl stitch",
-   "correct_answer": "Brick stitch"
+   "wrong_answer": "Brick stitch",
+   "correct_answer": "Purl stitch"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
-  "reveals": "Offer \"Purl stitch\" next to the right answer and ask the question again in a new situation.",
-  "help": "Knit and purl are knitting stitches.",
+  "cause": "The child does not yet know knit and purl are the two basic knitting stitches.",
+  "reveals": "Offer \"Brick stitch\" next to the right answer and ask the question again in a new situation.",
+  "help": "Knit one row and purl the next on a sample; name each.",
   "feedback": "Knit and purl are knitting stitches.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_CAST": {
   "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING",
-  "error": "Mixes casting on and off.",
+  "error": "Says casting on is finishing the knitting.",
   "example": {
    "question": "What is casting on?",
    "wrong_answer": "Finishing the knitting",
    "correct_answer": "Making the first row of stitches"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Casting on and casting off sound alike.",
   "reveals": "Offer \"Finishing the knitting\" next to the right answer and ask the question again in a new situation.",
-  "help": "Casting on makes the first stitches.",
+  "help": "On starts the work (stitches go on the needle); off finishes it (stitches come off).",
   "feedback": "Casting on makes the first stitches.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING.M_AG7_KN_GARTER": {
+  "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING",
+  "error": "Thinks garter stitch is made by alternating knit and purl rows.",
+  "example": {
+   "question": "How is garter stitch made?",
+   "wrong_answer": "Knit one row, purl the next",
+   "correct_answer": "Knit every row"
+  },
+  "cause": "The child mixes the two basic patterns.",
+  "reveals": "Offer \"Knit one row, purl the next\" next to the right answer and ask the question again in a new context.",
+  "help": "Knit two samples: every row knit, and alternate rows; compare both faces.",
+  "feedback": "Garter stitch is knit every row. Knit and purl alternate rows make stocking stitch.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_DROP": {
+  "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE",
+  "error": "Ignores a dropped stitch and keeps knitting.",
+  "example": {
+   "question": "A stitch has slipped off the needle. What happens if you ignore it?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "It runs down and leaves a ladder or hole"
+  },
+  "cause": "The child does not see that each stitch holds the ones below.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Pull a dropped stitch on a sample and watch it run.",
+  "feedback": "Pick up a dropped stitch at once, or it runs down and makes a hole.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_TIGHT": {
+  "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE",
+  "error": "Casts on very tightly so the stitches will not slide.",
+  "example": {
+   "question": "Why should casting on not be too tight?",
+   "wrong_answer": "Tight is stronger",
+   "correct_answer": "The needle cannot go into the stitches and the edge will not stretch"
+  },
+  "cause": "The child thinks tight means strong.",
+  "reveals": "Offer \"Tight is stronger\" next to the right answer and ask the question again in a new context.",
+  "help": "Try to knit into a very tight cast-on row.",
+  "feedback": "Cast on evenly and not too tight so the needle goes in and the edge stretches.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_ENDS": {
+  "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE",
+  "error": "Cuts the yarn ends short and leaves them loose.",
+  "example": {
+   "question": "What is done with the yarn ends after casting off?",
+   "wrong_answer": "Cut them short and leave them",
+   "correct_answer": "Sew them in along the edge"
+  },
+  "cause": "The child thinks cutting the end finishes the article.",
+  "reveals": "Offer \"Cut them short and leave them\" next to the right answer and ask the question again in a new context.",
+  "help": "Wash a sample with loose short ends; it starts to unravel.",
+  "feedback": "Sew in the ends so the article does not unravel.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE.M_AG7_KA_COUNT": {
+  "skill": "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE",
+  "error": "Casts on without counting, so the mat is the wrong width.",
+  "example": {
+   "question": "How do you make a knitted mat the right width?",
+   "wrong_answer": "Cast on until it looks wide enough",
+   "correct_answer": "Knit a small test square, measure it and cast on the number needed"
+  },
+  "cause": "The child judges by eye.",
+  "reveals": "Offer \"Cast on until it looks wide enough\" next to the right answer and ask the question again in a new context.",
+  "help": "Measure a 10-stitch test square and work out the stitches for 30 cm.",
+  "feedback": "Count and measure: a test square tells how many stitches to cast on.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_SPACE": {
   "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN",
-  "error": "Thinks it needs a big field.",
+  "error": "Thinks a framed suspended garden needs a big field.",
   "example": {
    "question": "Why use a suspended garden?",
    "wrong_answer": "It needs a big field",
    "correct_answer": "It saves space"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child links any garden with a field.",
   "reveals": "Offer \"It needs a big field\" next to the right answer and ask the question again in a new situation.",
-  "help": "A suspended garden saves space.",
+  "help": "Show a frame on a veranda or beside a wall growing kale in bottles.",
   "feedback": "A suspended garden saves space.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_DRAIN": {
   "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN",
-  "error": "Forgets drainage.",
+  "error": "Leaves the hanging containers with no drainage holes.",
   "example": {
    "question": "What must the containers have?",
    "wrong_answer": "No holes at all",
    "correct_answer": "Holes for drainage"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks holes waste water.",
   "reveals": "Offer \"No holes at all\" next to the right answer and ask the question again in a new situation.",
-  "help": "Containers need drainage holes.",
+  "help": "Water a container with no holes for a week; the roots rot in standing water.",
   "feedback": "Containers need drainage holes.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_SOIL": {
   "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN",
-  "error": "Fills with only sand.",
+  "error": "Fills the containers with sand only.",
   "example": {
    "question": "What should the soil mixture have?",
    "wrong_answer": "Only sand",
    "correct_answer": "Soil and manure"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks sand drains well and so is best.",
   "reveals": "Offer \"Only sand\" next to the right answer and ask the question again in a new situation.",
-  "help": "Use soil mixed with manure.",
+  "help": "Compare kale in sand only and in soil with manure after three weeks.",
   "feedback": "Use soil mixed with manure.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN.M_AG7_FG_CROP": {
+  "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN",
+  "error": "Thinks tall heavy crops like maize or bananas suit a suspended garden.",
+  "example": {
+   "question": "Which crop suits a framed suspended garden?",
+   "wrong_answer": "Maize or bananas",
+   "correct_answer": "Kale, spinach, strawberries or herbs"
+  },
+  "cause": "The child thinks any crop grows in any garden.",
+  "reveals": "Offer \"Maize or bananas\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how heavy a banana bunch is compared with a bottle of soil.",
+  "feedback": "Small, shallow-rooted crops like kale, spinach and herbs suit hanging containers.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_WEAK": {
+  "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD",
+  "error": "Uses thin sticks that bend under the weight of soil and water.",
+  "example": {
+   "question": "Why must the frame be strong?",
+   "wrong_answer": "It does not carry much",
+   "correct_answer": "Wet soil in many containers is heavy"
+  },
+  "cause": "The child does not picture the weight of wet soil.",
+  "reveals": "Offer \"It does not carry much\" next to the right answer and ask the question again in a new context.",
+  "help": "Weigh a bottle of dry soil and of wet soil.",
+  "feedback": "Wet soil is heavy. Use strong poles, planks or bars and fix them firmly.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_SHADE": {
+  "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD",
+  "error": "Hangs the rows so close that the top containers shade the lower ones.",
+  "example": {
+   "question": "How should the rows of containers be hung?",
+   "wrong_answer": "As close together as possible",
+   "correct_answer": "Spaced or staggered so every plant gets light"
+  },
+  "cause": "The child wants to fit in as many as possible.",
+  "reveals": "Offer \"As close together as possible\" next to the right answer and ask the question again in a new context.",
+  "help": "Hang two rows close together and look at the shadow on the lower row.",
+  "feedback": "Space or stagger the containers so the lower plants get light too.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_POSTS": {
+  "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD",
+  "error": "Stands the uprights on the ground without fixing them.",
+  "example": {
+   "question": "How are the uprights of the frame fixed?",
+   "wrong_answer": "Stood on the ground",
+   "correct_answer": "Dug into the ground or braced firmly"
+  },
+  "cause": "The child thinks the weight holds the frame down.",
+  "reveals": "Offer \"Stood on the ground\" next to the right answer and ask the question again in a new context.",
+  "help": "Push a free-standing model frame with wet bottles on it.",
+  "feedback": "Dig the uprights in or brace them so the frame does not fall.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD.M_AG7_FB_NOPLAN": {
+  "skill": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD",
+  "error": "Starts cutting and joining without a sketch or measurements.",
+  "example": {
+   "question": "What is done before cutting the materials?",
+   "wrong_answer": "Nothing, start building",
+   "correct_answer": "Sketch the frame and measure"
+  },
+  "cause": "The child is keen to build.",
+  "reveals": "Offer \"Nothing, start building\" next to the right answer and ask the question again in a new context.",
+  "help": "Show pieces cut too short for the frame.",
+  "feedback": "Sketch and measure first, then cut. It saves materials.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_RAW": {
   "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION",
-  "error": "Thinks raw produce sells best.",
+  "error": "Thinks raw produce always sells for more than processed produce.",
   "example": {
    "question": "How does value addition help a farmer?",
    "wrong_answer": "It lowers the price",
    "correct_answer": "It raises the selling price"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child thinks fresh is always worth most.",
   "reveals": "Offer \"It lowers the price\" next to the right answer and ask the question again in a new situation.",
-  "help": "Value addition raises the price.",
+  "help": "Compare the price of a kilogram of raw groundnuts with roasted, packed groundnuts.",
   "feedback": "Value addition raises the price.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_EXAMPLE": {
   "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION",
-  "error": "Gives a non-example.",
+  "error": "Gives leaving produce to rot or selling it unsorted as value addition.",
   "example": {
    "question": "Which is value addition?",
    "wrong_answer": "Leaving mangoes to rot",
    "correct_answer": "Making mangoes into juice"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child does not know what \"value\" means in selling.",
   "reveals": "Offer \"Leaving mangoes to rot\" next to the right answer and ask the question again in a new situation.",
-  "help": "Making juice adds value.",
+  "help": "Define value addition: changing produce so it is worth more or keeps longer.",
   "feedback": "Making juice adds value.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_STEPS": {
   "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION",
-  "error": "Skips cleaning and sorting.",
+  "error": "Skips cleaning and sorting before processing.",
   "example": {
    "question": "What comes first in preparing produce for sale?",
    "wrong_answer": "Selling it dirty",
    "correct_answer": "Cleaning and sorting"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child goes straight to the interesting part: drying or frying.",
   "reveals": "Offer \"Selling it dirty\" next to the right answer and ask the question again in a new situation.",
-  "help": "Clean and sort first.",
+  "help": "Show crisps made from unsorted potatoes with bad spots; who would buy them?",
   "feedback": "Clean and sort first.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION.M_AG7_VA_LIFE": {
+  "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION",
+  "error": "Thinks value addition is only about price and not about keeping produce longer.",
+  "example": {
+   "question": "How else does drying cassava add value, besides a better price?",
+   "wrong_answer": "It does not; price is all",
+   "correct_answer": "It keeps for months instead of days"
+  },
+  "cause": "The child thinks of value as money only.",
+  "reveals": "Offer \"It does not; price is all\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a raw cassava root after a week with dried chips.",
+  "feedback": "Value addition can make produce keep longer as well as sell for more.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_PACK": {
+  "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS",
+  "error": "Packs dried chips while still warm or in an open bag.",
+  "example": {
+   "question": "How are dried chips packed?",
+   "wrong_answer": "Warm, in an open bag",
+   "correct_answer": "Cooled, in a clean sealed packet, labelled"
+  },
+  "cause": "The child thinks drying is the last step.",
+  "reveals": "Offer \"Warm, in an open bag\" next to the right answer and ask the question again in a new context.",
+  "help": "Pack warm chips in a sealed bag: droplets form inside.",
+  "feedback": "Cool the chips, then seal them in clean packets and label them.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_THICK": {
+  "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS",
+  "error": "Slices the produce in thick, uneven pieces.",
+  "example": {
+   "question": "Why are potatoes sliced thin and even for crisps?",
+   "wrong_answer": "It does not matter",
+   "correct_answer": "So they cook or dry evenly and are crisp"
+  },
+  "cause": "The child thinks only taste matters.",
+  "reveals": "Offer \"It does not matter\" next to the right answer and ask the question again in a new context.",
+  "help": "Fry or dry thick and thin slices; compare.",
+  "feedback": "Thin, even slices dry or fry evenly and come out crisp.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_LABEL": {
+  "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS",
+  "error": "Thinks a label is just decoration.",
+  "example": {
+   "question": "Why is a packet of dried pumpkin labelled?",
+   "wrong_answer": "Only to look nice",
+   "correct_answer": "To tell the buyer what it is, its weight, the date and who made it"
+  },
+  "cause": "The child has not thought about what a buyer needs to know.",
+  "reveals": "Offer \"Only to look nice\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare two packets, one labelled and one plain; which would you buy?",
+  "feedback": "A label tells buyers what is inside, the weight, the date and the maker.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS.M_AG7_VS_SPOILT": {
+  "skill": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS",
+  "error": "Uses produce with rotten or bitter parts to save money.",
+  "example": {
+   "question": "Can sweet potatoes with rotten spots be used for chips?",
+   "wrong_answer": "Yes, it saves money",
+   "correct_answer": "No, sort them out; rot spoils the taste and the whole batch"
+  },
+  "cause": "The child does not want to waste anything.",
+  "reveals": "Offer \"Yes, it saves money\" next to the right answer and ask the question again in a new context.",
+  "help": "Show chips with dark bitter spots.",
+  "feedback": "Sort out spoilt produce first. One bad piece spoils the batch.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_FORM": {
   "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS",
-  "error": "Names a non-form.",
+  "error": "Names a non-soap such as a brick or stone as a form of soap.",
   "example": {
    "question": "Which is a form of soap?",
    "wrong_answer": "Brick",
    "correct_answer": "Bar"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child takes \"bar\" to mean any hard block.",
   "reveals": "Offer \"Brick\" next to the right answer and ask the question again in a new situation.",
-  "help": "Soap comes as bar, liquid, powder or paste.",
+  "help": "Show bar, liquid, paste and powder soap side by side.",
   "feedback": "Soap comes as bar, liquid, powder or paste.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_USE": {
   "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS",
-  "error": "Thinks soap needs no water.",
+  "error": "Thinks soap cleans without water.",
   "example": {
    "question": "What does soap do with water?",
    "wrong_answer": "Adds dirt",
    "correct_answer": "Removes dirt and germs"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child sees soap as the cleaner and water as optional.",
   "reveals": "Offer \"Adds dirt\" next to the right answer and ask the question again in a new situation.",
-  "help": "Soap with water removes dirt and germs.",
+  "help": "Rub dry soap on a dirty cloth and then with water; only the wet one lathers and lifts dirt.",
   "feedback": "Soap with water removes dirt and germs.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_SAFE": {
   "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS",
-  "error": "Thinks children may handle caustic chemicals.",
+  "error": "Thinks children may handle the strong ingredients of soap alone.",
   "example": {
    "question": "Who handles strong soap chemicals?",
    "wrong_answer": "Any child alone",
    "correct_answer": "The teacher only"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The child does not know lye from ashes or caustic soda burns skin and eyes.",
   "reveals": "Offer \"Any child alone\" next to the right answer and ask the question again in a new situation.",
-  "help": "Strong chemicals are handled by the teacher only.",
+  "help": "Read a caustic soda warning label; only the teacher handles lye, with gloves and goggles.",
   "feedback": "Strong chemicals are handled by the teacher only.",
   "source": "To confirm by an Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS.M_AG7_SF_POWDER": {
+  "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS",
+  "error": "Thinks powder soap is only for clothes and bar soap only for bathing, so no form has another use.",
+  "example": {
+   "question": "Which form of soap is often used for washing dishes?",
+   "wrong_answer": "Only bar soap for bathing",
+   "correct_answer": "Liquid or paste soap"
+  },
+  "cause": "The child knows each form from one use at home.",
+  "reveals": "Offer \"Only bar soap for bathing\" next to the right answer and ask the question again in a new context.",
+  "help": "List where each form is used at home and at school.",
+  "feedback": "Soap forms have many uses: liquid and paste for dishes, powder for clothes, bars for bathing and laundry.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_FAT": {
+  "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING",
+  "error": "Thinks soap is made from ash and water alone.",
+  "example": {
+   "question": "Which ingredient is mixed with lye from ashes to make soap?",
+   "wrong_answer": "Nothing else is needed",
+   "correct_answer": "Animal fat or plant oil"
+  },
+  "cause": "The child has heard ash cleans pots and thinks it is the soap.",
+  "reveals": "Offer \"Nothing else is needed\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the ingredients list: lye plus fat or oil.",
+  "feedback": "Soap is made from lye and fat or oil. Ash water alone is not soap.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_CURE": {
+  "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING",
+  "error": "Uses the soap the day it is poured into the mould.",
+  "example": {
+   "question": "When is homemade soap ready to use?",
+   "wrong_answer": "As soon as it is poured",
+   "correct_answer": "After it has hardened and cured for some weeks"
+  },
+  "cause": "The child thinks soap is ready once it is made.",
+  "reveals": "Offer \"As soon as it is poured\" next to the right answer and ask the question again in a new context.",
+  "help": "Explain fresh soap is still harsh; curing makes it mild and hard.",
+  "feedback": "Let homemade soap harden and cure for weeks before using it.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_POT": {
+  "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING",
+  "error": "Thinks any cooking pot can be used for soap and then for food again.",
+  "example": {
+   "question": "Can the soap-making pot be used for cooking afterwards?",
+   "wrong_answer": "Yes, after a rinse",
+   "correct_answer": "No, keep a separate pot for soap making"
+  },
+  "cause": "The child does not think lye stays in the pot.",
+  "reveals": "Offer \"Yes, after a rinse\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what could be left on the pot's surface.",
+  "feedback": "Keep a separate pot for soap. Never cook food in it.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING.M_AG7_SM_SALT": {
+  "skill": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING",
+  "error": "Thinks salt is added to soap for flavour.",
+  "example": {
+   "question": "Why is salt added in homemade soap making?",
+   "wrong_answer": "For taste",
+   "correct_answer": "To help the soap separate and set hard"
+  },
+  "cause": "The child links salt with food.",
+  "reveals": "Offer \"For taste\" next to the right answer and ask the question again in a new context.",
+  "help": "Show soap made with and without salt: one stays soft.",
+  "feedback": "Salt helps the soap separate and set hard. Soap is never eaten.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  }
 }

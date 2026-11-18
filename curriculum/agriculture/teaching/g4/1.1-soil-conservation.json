@@ -1,0 +1,189 @@
+{
+ "sub_strand": "AGRI.G4.CONSER.SOIL_CONSERVATION",
+ "title": "Soil Conservation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Start a small compost heap in a corner of the school garden in the first lesson so the class can watch it change over the weeks. Feel the heat with the back of the hand (never bare arms into a hot heap); wear gloves to turn it.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+   "key_step": "The child sorts waste into what rots safely (leaves, peelings, grass, animal dung, ash in small amounts) and what stays out (polythene, tins, glass, meat, diseased plants, seeding weeds), and gives the reason.",
+   "floor": {
+    "prerequisite": "Knows waste that rots from waste that does not.",
+    "question": "Will a polythene bag rot in the soil?",
+    "answer": "no"
+   },
+   "representations": [
+    "a sorting tray of real clean waste",
+    "a two-column chart: goes in, stays out",
+    "a picture of a compost heap in a Kenyan homestead"
+   ],
+   "steps": [
+    "Ask: will it rot?",
+    "Ask: is it safe (no meat, no disease, no seeds)?",
+    "Put it in the right column.",
+    "Say why for each item."
+   ],
+   "contexts": [
+    "kitchen peelings at home",
+    "leaves swept in the school compound",
+    "cow dung from a neighbour"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: Goes in, Stays out."
+    },
+    {
+     "beat": "point",
+     "do": "Hold up a polythene bag.",
+     "say": "Will it rot on the heap?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"polythene: stays out, it never rots\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_ANY",
+     "listen_for": [
+      "A polythene bag"
+     ],
+     "ask": "Which of these should NOT go on a compost heap?",
+     "repair": "Dig up an old heap with a teacher. Ask what rotted and what did not."
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_MEAT",
+     "listen_for": [
+      "They are the best food for a compost heap"
+     ],
+     "ask": "Why are meat bones and cooked food kept out of the compost heap?",
+     "repair": "Ask what comes to a heap with meat scraps in it, and whether the school garden needs those visitors."
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_FERT",
+     "listen_for": [
+      "Fertiliser bought from the shop"
+     ],
+     "ask": "Which of these is made by rotting plant remains and dung?",
+     "repair": "Show a bag of fertiliser and a handful of compost. Ask where each one comes from."
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_DISEASED",
+     "listen_for": [
+      "Dry maize stalks"
+     ],
+     "ask": "Which of these should stay off the compost heap?",
+     "repair": "Show a weed head shedding seed; ask where the seeds go if it is put on the heap and the compost is spread on the garden."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two things that can go on a compost heap.",
+     "answer": "any two of leaves, grass, peelings, animal dung",
+     "shows": "materials"
+    },
+    {
+     "question": "Why do we keep tins off the compost heap?",
+     "answer": "they do not rot",
+     "shows": "reason"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+   "key_step": "The child says how a heap is built (a dug base, layers of dry and green material with soil or manure, watered, covered), how it is cared for (kept damp, turned every two to three weeks) and how to tell it is ready (dark, crumbly, earthy smell, cool, the materials no longer seen).",
+   "floor": {
+    "prerequisite": "Knows which materials go on a heap.",
+    "question": "Name a material for compost.",
+    "answer": "dry leaves"
+   },
+   "representations": [
+    "a cut-away drawing of a heap in layers",
+    "a stick pushed into the heap to feel the heat",
+    "two jars: fresh layers and ready compost"
+   ],
+   "steps": [
+    "Lay dry material at the bottom.",
+    "Add green material, then soil or manure.",
+    "Water each layer and repeat.",
+    "Cover, keep damp and turn every few weeks.",
+    "Use it when it is dark and crumbly."
+   ],
+   "contexts": [
+    "the school compost corner",
+    "a heap behind a homestead",
+    "a compost basket in a small garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a heap in layers and label the bottom layer."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if the heap is never watered."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it stays dry and does not rot\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"rotting needs water and air\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_ONE",
+     "listen_for": [
+      "Dry and fresh materials mixed in layers"
+     ],
+     "ask": "What makes the best compost heap?",
+     "repair": "Make two small heaps, one with one material and one with a mix. Compare them after a month."
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_DRY",
+     "listen_for": [
+      "To be kept dry and open to the sun"
+     ],
+     "ask": "What does a compost heap need while it rots?",
+     "repair": "Compare a damp covered heap and a dry open heap after a month. Then flood one and smell it."
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_EARLY",
+     "listen_for": [
+      "After one day, when the heap is made"
+     ],
+     "ask": "When is compost ready to put on the garden?",
+     "repair": "Open a young heap and an old heap side by side. Ask which still looks like peelings."
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_LAYERS",
+     "listen_for": [
+      "Thrown in one pile any way"
+     ],
+     "ask": "How are compost materials put on the heap?",
+     "repair": "Build a model heap in a clear bottle with coloured layers: dry, green, soil, then sprinkle water; compare it with a jumbled bottle after two weeks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is put between the layers of a compost heap?",
+     "answer": "soil or manure",
+     "shows": "layers"
+    },
+    {
+     "question": "How do you know compost is ready to use?",
+     "answer": "it is dark, crumbly and smells of earth",
+     "shows": "ready"
+    }
+   ]
+  }
+ ]
+}

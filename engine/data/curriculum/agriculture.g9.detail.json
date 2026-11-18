@@ -1,0 +1,223 @@
+{
+ "outcomes": {
+  "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.a": "describe methods of conserving forage in coping with drought",
+  "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.b": "conserve forage to cope with drought",
+  "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.c": "adopt conservation of forage in coping with drought",
+  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.a": "explain the importance of conserving leftover food at home",
+  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.b": "prepare leftover food to avoid wastage",
+  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.c": "embrace the use of leftover food to avoid food wastage",
+  "AGRI.G9.CONSER.INTEGRATED_FARMING.a": "describe components of integrated farming in conserving resources",
+  "AGRI.G9.CONSER.INTEGRATED_FARMING.b": "make a model of integrated farming for the conservation of resources",
+  "AGRI.G9.CONSER.INTEGRATED_FARMING.c": "appreciate the importance of integrated farming in the conservation of resources",
+  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.a": "explain organic gardening practises in crop production",
+  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.b": "grow a crop using organic gardening practises",
+  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.c": "appreciate the importance of organic gardening in the production of healthy foods",
+  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.a": "explain ways of preparing storage structures before storing crop produce",
+  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.b": "prepare an existing storage structure in readiness for storing crop produce",
+  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.c": "manage stored crop produce to reduce spoilage",
+  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.d": "show responsibility in managing stored crop produce to reduce spoilage",
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.a": "identify types of flour mixtures used in food production",
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.b": "prepare flour mixtures for food production",
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.c": "make products from various flour mixtures",
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.d": "appreciate products made from various flour mixtures",
+  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.a": "explain the importance of cleaning waste disposal facilities",
+  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.b": "clean waste disposal facilities at the household level",
+  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.c": "adopt the use of clean waste disposal facilities at the household level",
+  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.a": "describe methods of disinfecting clothing and household articles",
+  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.b": "carry out disinfection of clothing and household articles",
+  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.c": "appreciate the importance of disinfecting clothing and household articles",
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.a": "describe grafting as a method of plant propagation",
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.b": "carry out grafting for various purposes",
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.c": "take care of the grafted plant to ensure successful union",
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.d": "appraise grafting for aesthetics, repair, improvement and rejuvenation purposes",
+  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.a": "describe how to make a homemade sun dryer for vegetables",
+  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.b": "construct a homemade sun dryer to preserve vegetables",
+  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.c": "adopt the use of a homemade sun dryer in the preservation of vegetables"
+ },
+ "skills": {
+  "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS": {
+   "forms": [
+    "choose the method",
+    "match method and picture",
+    "story with a reason"
+   ],
+   "mastery": "Describes the methods of conserving forage to cope with drought (haymaking by baling or stacking, standing forage left uncut, keeping crop residues such as maize stover) and says why conserved feed keeps animals alive in a drought, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING": {
+   "forms": [
+    "order the steps",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Says how hay is made: cut grass at flowering, dry it in the sun and turn it until it is dry but still green, bale it in a box baler or stack it on a raised base with a sloping top, cover it from rain, store it dry and off the ground, and feed it in the dry season; in the app the child picks the right step, order, material, reason or method in new situations. The practical (conserving forage by stacking or box-baling) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY": {
+   "forms": [
+    "choose the reason",
+    "story",
+    "spot the error"
+   ],
+   "mastery": "Explains why leftover food is conserved at home (saves money and food, less waste) and how it is kept safe (cooled quickly, covered, kept cool and used within a day), and says unsafe leftovers cause food poisoning, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP": {
+   "forms": [
+    "order the steps",
+    "choose the recipe",
+    "story"
+   ],
+   "mastery": "Says how leftover food is prepared: check it smells and looks fine, reheat it once until steaming hot all through, or turn it into a new dish (fried rice, fried ugali, mukimo, soup), serve at once, and throw away food left out too long or reheated before; in the app the child picks the right step, order, material, reason or method in new situations. The practical (preparing leftover food to avoid wastage) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS": {
+   "forms": [
+    "match the component",
+    "story",
+    "choose the reason"
+   ],
+   "mastery": "Describes the components of integrated farming (fish rearing, rabbit keeping, poultry, vegetables, fruit trees, compost) on one plot and how each one's waste becomes another's input, conserving land, water, feed and money, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL": {
+   "forms": [
+    "order the steps",
+    "choose the link",
+    "spot the error"
+   ],
+   "mastery": "Says how an integrated farming model is designed: sketch the plot, place each component where it can feed the next (rabbit hutch over the fish pond, poultry near the vegetables, compost near the garden), show the links with arrows (droppings to pond and garden, pond water to crops, crop waste to animals), choose materials and build it; in the app the child picks the right step, order, material, reason or method in new situations. The practical (making a model of integrated farming) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_PRACTICES": {
+   "forms": [
+    "choose the practice",
+    "story",
+    "spot the error"
+   ],
+   "mastery": "Explains organic gardening practices (organic manure and compost, organic pesticides, mechanical weed control, foliar feeds from animal waste and plants such as Mexican sunflower, crop rotation, mulching) and how they give healthy food without synthetic chemicals, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.ORGANIC_GARDENING.ORGANIC_INPUTS": {
+   "forms": [
+    "order the steps",
+    "choose the input",
+    "story"
+   ],
+   "mastery": "Says how organic inputs are prepared and used: compost made and dug in, a foliar feed made by soaking chopped Mexican sunflower or manure in water for two weeks and diluting it, an organic spray of chilli, garlic, ash or neem, applied early in the morning or evening, and weeds removed by hand or jembe; in the app the child picks the right step, order, material, reason or method in new situations. The practical (growing a crop using organic gardening practices) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_PREP": {
+   "forms": [
+    "order the steps",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Says how a store, granary, container or bag is prepared: empty last season's produce, clean and dust, seal cracks, repair leaks, put in pallets and rat guards, and let it dry and air before the new produce goes in; in the app the child picks the right step, order, material, reason or method in new situations. The practical (preparing an existing storage structure) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE.STORE_MANAGE": {
+   "forms": [
+    "choose the action",
+    "order the checks",
+    "story"
+   ],
+   "mastery": "Says how stored produce is managed: check moisture of cereals and pulses (bite or salt test), keep air moving, control rodents, turn the produce, look for pests, mould and heating, and remove and dispose of spoilt produce quickly; in the app the child picks the right step, order, material, reason or method in new situations. The practical (managing stored crop produce) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_MIXTURES": {
+   "forms": [
+    "match mixture and product",
+    "choose the type",
+    "story"
+   ],
+   "mastery": "Identifies the types of flour mixtures: batters (runny: more liquid than flour, poured, for pancakes and crepes) and doughs (stiff: more flour than liquid, kneaded and shaped, for chapati, mandazi and bread), and matches products to each, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.MIXTURE_PREP": {
+   "forms": [
+    "order the steps",
+    "choose the measure",
+    "story"
+   ],
+   "mastery": "Says how flour mixtures are prepared: measure ingredients, sift flour, for a batter beat in eggs and liquid gradually to a smooth pouring mixture and rest it, for a dough add liquid little by little, knead until smooth and elastic, rest it covered; in the app the child picks the right step, order, material, reason or method in new situations. The practical (preparing batters and doughs) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT.FLOUR_PRODUCTS": {
+   "forms": [
+    "order the steps",
+    "choose the method",
+    "story"
+   ],
+   "mastery": "Says how products are made: pancakes (pour batter thinly into a hot greased pan, turn when bubbles burst), chapati (roll, oil and fold, roll thin, cook both sides on a hot pan), mandazi (roll, cut, deep fry in hot oil by an adult until golden), and how to tell each is cooked; in the app the child picks the right step, order, material, reason or method in new situations. The practical (making pancakes, chapati or mandazi) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY": {
+   "forms": [
+    "choose the reason",
+    "story",
+    "match facility and risk"
+   ],
+   "mastery": "Explains why waste bins, sinks and open drains are cleaned (they breed flies, mosquitoes, rats and germs that spread diseases such as cholera and typhoid, smell, block and flood), naming the risk from each facility, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN": {
+   "forms": [
+    "order the steps",
+    "choose the tool",
+    "story"
+   ],
+   "mastery": "Says how waste facilities are cleaned at home: protective clothing on, empty the bin and scrub it with soap and water, dry it in the sun with the lid open, clear food from the sink strainer and scrub the sink and pipe, remove silt and rubbish from the drain so water flows, dispose of waste safely, wash hands; in the app the child picks the right step, order, material, reason or method in new situations. The practical (cleaning waste disposal facilities at the household level) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_METHODS": {
+   "forms": [
+    "match method and article",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Describes the methods of disinfecting clothing and household articles (sunlight, salt solution, boiling, disinfectants diluted as the label says, ironing) and which suits which article (boiling for white cotton towels and handkerchiefs, sunlight for most, ironing for cotton), and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN.DISINFECT_PRACTICE": {
+   "forms": [
+    "order the steps",
+    "choose the method",
+    "story"
+   ],
+   "mastery": "Says how to disinfect an article: wash it clean first, choose the method for the fabric, boil white cottons for 10 to 15 minutes, soak in salt water, dry in full sun, iron with a hot iron, use a chemical disinfectant only diluted by an adult and rinse it out, and store the clean article dry; in the app the child picks the right step, order, material, reason or method in new situations. The practical (disinfecting clothing and household articles) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING": {
+   "forms": [
+    "name the part",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Describes grafting: joining a scion (a shoot or bud from a good plant) to a rootstock (a strong rooted plant) so they grow as one; names the scion, rootstock and union, the common grafts (cleft, whip, side) and crops grafted (mango, avocado, citrus), and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS": {
+   "forms": [
+    "order the steps",
+    "choose the tool",
+    "story"
+   ],
+   "mastery": "Says the steps of a graft: choose a healthy rootstock and a scion from a good mother plant of the same kind, make clean matching cuts with a sharp clean knife (by an adult or with an adult beside), fit the cambium layers together, wrap firmly with grafting tape, cover the scion top, and label; in the app the child picks the right step, order, material, reason or method in new situations. The practical (carrying out grafting) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE": {
+   "forms": [
+    "choose the action",
+    "order the steps",
+    "story"
+   ],
+   "mastery": "Says how a grafted plant is cared for: water it, keep it in light shade, protect the union from knocks and animals, remove shoots growing from the rootstock below the union, remove the tape once the union has healed (about 6 to 8 weeks), and watch for the scion to sprout; in the app the child picks the right step, order, material, reason or method in new situations. The practical (caring for grafted plants until the union succeeds) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES": {
+   "forms": [
+    "match purpose and case",
+    "story",
+    "choose the best"
+   ],
+   "mastery": "Appraises the purposes of grafting (repairing a damaged plant, aesthetics such as several colours on one plant, improvement such as early fruiting and better fruit on a hardy rootstock, rejuvenating an old tree by topworking) and judges which purpose fits a given case, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_DESIGN": {
+   "forms": [
+    "name the part",
+    "choose the material",
+    "story with a reason"
+   ],
+   "mastery": "Describes a homemade sun dryer: a box with a clear cover that lets sunlight in and traps heat, a black inside that absorbs heat, mesh trays for the vegetables, air inlets low and outlets high so warm air carries moisture away, raised off the ground, from local materials, and gives the reason in a new situation; in the app the child picks the right answer in new situations. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER.SUN_DRYER_USE": {
+   "forms": [
+    "order the steps",
+    "choose the place",
+    "story"
+   ],
+   "mastery": "Says how a sun dryer is built and used: sketch and measure, build the box and trays, fit the clear cover and air holes, face it to the sun, raised and tilted, load washed thinly sliced vegetables in one layer, close it, turn the produce, take it out when crisp, store it sealed, and clean the dryer; in the app the child picks the right step, order, material, reason or method in new situations. The practical (constructing a homemade sun dryer and drying vegetables in it) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -3,15 +3,15 @@
  "subject_key": "agriculture",
  "grade": 5,
  "source": "KICD Agriculture, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g5)",
  "totals": {
   "strands": 4,
   "sub_strands": 13,
   "outcomes": 42,
   "lessons": 120,
   "skills": 30,
-  "prerequisites": 39,
-  "misconceptions": 86
+  "prerequisites": 69,
+  "misconceptions": 120
  },
  "sub_strands": [
   {
@@ -90,6 +90,20 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.SOIL.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 listed the characteristics of soils; poor soil is read from them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing what rots helps choose where organic waste can be gathered. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -100,7 +114,7 @@
      "outcomes": [
       "AGRI.G5.CONSER.SOIL_CONSERVATION.b"
      ],
-     "mastery": "The child puts in peelings, leaves, grass, crop remains and animal dung, keeps out plastic, polythene, tins, glass, batteries and meat or oily leftovers (they do not rot, or they draw rats and flies), layers dry and fresh material with soil, keeps it damp and covered, and waits for it to rot into dark crumbly manure. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts in peelings, leaves, grass, crop remains and animal dung, keeps out plastic, polythene, tins, glass, batteries and meat or oily leftovers (they do not rot, or they draw rats and flies), layers dry and fresh material with soil, keeps it damp and covered, and waits for it to rot into dark crumbly manure. The practical (constructing and filling an organic waste pit) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick what goes into the pit",
       "put the steps of making a pit in order",
@@ -126,9 +140,17 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A waste pit is filled and cared for like the Grade 4 compost heap. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     },
     {
      "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
@@ -136,7 +158,7 @@
      "outcomes": [
       "AGRI.G5.CONSER.SOIL_CONSERVATION.c"
      ],
-     "mastery": "The child says plant remains can be rotted into compost, spread as mulch, or dug into the soil, and that as they rot they add plant food and humus, make the soil crumbly and help it hold water; the child does not call them rubbish and knows burning them wastes this. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child says plant remains can be rotted into compost, spread as mulch, or dug into the soil, and that as they rot they add plant food and humus, make the soil crumbly and help it hold water; the child does not call them rubbish and knows burning them wastes this. The practical (using plant remains as mulch or compost on a school plot) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick a use of plant remains",
       "say what rotted remains add to soil",
@@ -155,9 +177,24 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Plant remains are the main compost material named in Grade 4. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Plant remains are decomposable waste that returns to the soil. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -288,6 +325,70 @@
      "feedback": "Leaves and grass can be rotted into compost or used as mulch. They are plant food in waiting.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG5_SITE_PLANTS",
+     "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
+     "error": "Thinks soil where weeds grow thickly is always poor and needs improving.",
+     "example": {
+      "question": "Thick green weeds grow in one corner of the school. What does this say about the soil?",
+      "wrong_answer": "The soil there is poor",
+      "correct_answer": "The soil there is likely fertile and moist"
+     },
+     "cause": "The child sees weeds as a sign of a neglected, bad place.",
+     "reveals": "Offer \"The soil there is poor\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the weedy corner with a bare hard patch: which soil is dark and soft when dug?",
+     "feedback": "Plants grow thickly where the soil is good. Bare, hard or washed patches need improving.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG5_PIT_DEEP",
+     "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+     "error": "Thinks the deeper the pit, the better, even if it fills with water.",
+     "example": {
+      "question": "Why is an organic waste pit not dug in a waterlogged place?",
+      "wrong_answer": "Water helps the waste rot faster",
+      "correct_answer": "The pit fills with water, the waste rots badly and smells"
+     },
+     "cause": "The child knows rotting needs water and does not see that too much water stops air reaching it.",
+     "reveals": "Offer \"Water helps the waste rot faster\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a jar of leaves just damp with one under water after two weeks: smell and look.",
+     "feedback": "Waste rots well when damp, not soaked. A pit in wet ground floods and smells.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG5_REM_FRESH",
+     "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+     "error": "Thinks fresh plant remains feed the crop the moment they are put on the soil.",
+     "example": {
+      "question": "Maize stalks are laid on the soil. When do they feed the soil?",
+      "wrong_answer": "At once, the same day",
+      "correct_answer": "Slowly, as they rot over weeks and months"
+     },
+     "cause": "The child thinks of plant remains like fertiliser poured on.",
+     "reveals": "Offer \"At once, the same day\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at mulch laid last term: what has happened to the bottom layer?",
+     "feedback": "Plant remains feed the soil slowly as they rot. Meanwhile they cover and protect it.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG5_REM_ANIMALS",
+     "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+     "error": "Thinks plant remains are only good as animal feed and give the soil nothing.",
+     "example": {
+      "question": "Which is a use of plant remains for soil improvement?",
+      "wrong_answer": "Only feeding them to cattle",
+      "correct_answer": "Using them as mulch or compost"
+     },
+     "cause": "In many homes stover goes to the animals, so the child sees no other use.",
+     "reveals": "Offer \"Only feeding them to cattle\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to the soil under a mulch of dry grass in the dry season.",
+     "feedback": "Plant remains can be mulch or compost. They keep water in and add humus to the soil.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -352,9 +453,10 @@
      "code": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
      "name": "Identify ways of conserving water in a household garden",
      "outcomes": [
-      "AGRI.G5.CONSER.WATER_CONSERVATION.a"
+      "AGRI.G5.CONSER.WATER_CONSERVATION.a",
+      "AGRI.G5.CONSER.WATER_CONSERVATION.b"
      ],
-     "mastery": "The child names mulching (a layer of dry grass or leaves on the soil), cover cropping (a low crop that shades the soil) and shading (a roof or net over beds), says each slows evaporation, and adds watering early or late in the day and using a little water at the roots. The child does not think midday is the best time. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child names mulching (a layer of dry grass or leaves on the soil), cover cropping (a low crop that shades the soil) and shading (a roof or net over beds), says each slows evaporation, and adds watering early or late in the day and using a little water at the roots. The child does not think midday is the best time. The practical (practising water conservation in the school garden) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "name the way from a description",
       "say what a way does for the water",
@@ -373,9 +475,17 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drip irrigation from Grade 4 is one way of saving garden water. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     },
     {
      "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
@@ -383,7 +493,7 @@
      "outcomes": [
       "AGRI.G5.CONSER.WATER_CONSERVATION.b"
      ],
-     "mastery": "The child keeps the crop, soil, size of bed and amount of water the same and changes only the mulch, knows the mulched bed stays damp longer (checked by feeling the soil a finger deep), and names dry grass, maize stalks or banana leaves as mulch. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child keeps the crop, soil, size of bed and amount of water the same and changes only the mulch, knows the mulched bed stays damp longer (checked by feeling the soil a finger deep), and names dry grass, maize stalks or banana leaves as mulch. The practical (running the mulching test in the garden) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick what stays the same in a fair test",
       "say what the result will be",
@@ -402,9 +512,17 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Mulching is one of the methods of conserving water named in Science Grade 4. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -486,6 +604,54 @@
      "help": "Do the test: dig a finger deep in both beds and feel.",
      "feedback": "Mulch shades the soil and slows drying, so the mulched bed stays damp longer.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG5_WAT_GREY",
+     "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+     "error": "Thinks used washing water can never be used in the garden.",
+     "example": {
+      "question": "Which water can be reused on garden plants?",
+      "wrong_answer": "None, garden water must be fresh",
+      "correct_answer": "Water left after washing vegetables or rinsing, without strong soap"
+     },
+     "cause": "The child thinks used water is dirty and harmful to everything.",
+     "reveals": "Offer \"None, garden water must be fresh\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour vegetable-washing water on a bed and watch the plants over a week.",
+     "feedback": "Water from washing vegetables can water the garden. Do not use water with strong soap or bleach.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG5_TEST_SURFACE",
+     "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+     "error": "Judges the soil only by its top crust, so the bare bed looks as damp as the mulched one after rain.",
+     "example": {
+      "question": "How should you check how damp the soil is in the mulching test?",
+      "wrong_answer": "Look at the top of the soil",
+      "correct_answer": "Push a finger or a stick a few centimetres into the soil and feel"
+     },
+     "cause": "The child trusts what is seen on the surface.",
+     "reveals": "Offer \"Look at the top of the soil\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig a finger into both beds two days after watering: the bare one is dry below the crust.",
+     "feedback": "Feel a few centimetres down. The top can look damp while the soil below is dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG5_TEST_ONEDAY",
+     "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+     "error": "Reads the result after one day and calls it final.",
+     "example": {
+      "question": "When should the results of a mulching test be read?",
+      "wrong_answer": "After one day",
+      "correct_answer": "After several days, checking each day"
+     },
+     "cause": "The child wants a quick answer and does not see that change takes time.",
+     "reveals": "Offer \"After one day\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the record sheet: on day one both beds feel the same, by day five they differ.",
+     "feedback": "A fair test needs time. Check every day for several days before you decide.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -571,6 +737,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 4 matched small wild animals to their damage; Grade 5 adds bigger animals and property. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -582,7 +755,7 @@
       "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a",
       "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.b"
      ],
-     "mastery": "The child picks scarecrows, shiny strips, noise makers, fences and hedges, chilli, beehive fences, trenches and guard dogs, matches the way to the animal, never poisons or kills, and for elephants or buffalo keeps away and tells the Kenya Wildlife Service or an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child picks scarecrows, shiny strips, noise makers, fences and hedges, chilli, beehive fences, trenches and guard dogs, matches the way to the animal, never poisons or kills, and for elephants or buffalo keeps away and tells the Kenya Wildlife Service or an adult. The practical (repelling wild animals with a safe method chosen for the locality) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the safe way to repel",
       "match a way to an animal",
@@ -608,9 +781,17 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The scarecrow is the first repelling method; Grade 5 adds more. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -692,6 +873,54 @@
      "help": "Ask who gets hurt when a person meets a frightened buffalo.",
      "feedback": "Big animals are dangerous. Keep away and tell an adult or the Kenya Wildlife Service.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG5_DMG_MONKEY",
+     "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+     "error": "Thinks baboons and monkeys harm only fruit trees and never other crops or property.",
+     "example": {
+      "question": "What damage can baboons do on a farm?",
+      "wrong_answer": "Only eat fruit",
+      "correct_answer": "Uproot and eat maize, eat fruit and break into stores"
+     },
+     "cause": "The child has seen monkeys in fruit trees only.",
+     "reveals": "Offer \"Only eat fruit\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of a maize field after baboons; ask what was eaten.",
+     "feedback": "Baboons and monkeys eat many crops and can break into stores, not only fruit trees.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG5_DMG_NIGHT",
+     "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+     "error": "Thinks damage found in the morning was done by domestic animals, because wild animals come only by day.",
+     "example": {
+      "question": "Crops are found eaten in the morning with holes under the fence. Who could have done it?",
+      "wrong_answer": "Only the neighbour's goats in the day",
+      "correct_answer": "A wild animal such as a porcupine at night"
+     },
+     "cause": "The child does not know many wild animals feed at night.",
+     "reveals": "Offer \"Only the neighbour's goats in the day\" next to the right answer and ask the question again in a new context.",
+     "help": "Show tracks and a porcupine quill near a damaged plot.",
+     "feedback": "Many wild animals, like porcupines and bush pigs, feed at night. Look for tracks.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG5_REP_FIRE",
+     "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+     "error": "Thinks setting the bush on fire is a good way to chase wild animals away.",
+     "example": {
+      "question": "Is burning the bush a good way to repel wild animals?",
+      "wrong_answer": "Yes, it chases them away",
+      "correct_answer": "No, it destroys their home, the soil and can burn farms and people"
+     },
+     "cause": "The child sees the animals run from fire and thinks it works.",
+     "reveals": "Offer \"Yes, it chases them away\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what else the fire burns: grass for cattle, trees, homes.",
+     "feedback": "Burning harms land, people and animals. Use safe methods like fences, noise and chilli.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -784,6 +1013,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Preparing a seedbed and sowing, from Grade 4, are the first practices. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -794,7 +1030,7 @@
      "outcomes": [
       "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b"
      ],
-     "mastery": "The child makes a raised bed about a metre wide that can be reached from the sides, digs and breaks it to a fine tilth with manure, sows tiny seeds of kale, cabbage or tomato in shallow lines, covers them thinly, mulches and shades the bed, and waters lightly morning and evening on well-drained ground. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child makes a raised bed about a metre wide that can be reached from the sides, digs and breaks it to a fine tilth with manure, sows tiny seeds of kale, cabbage or tomato in shallow lines, covers them thinly, mulches and shades the bed, and waters lightly morning and evening on well-drained ground. The practical (establishing a vegetable nursery bed) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the right bed",
       "put the steps in order",
@@ -820,9 +1056,17 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.PLANTS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 plant care (watering and shading) is what a nursery needs. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     },
     {
      "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
@@ -830,7 +1074,7 @@
      "outcomes": [
       "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c"
      ],
-     "mastery": "The child waters the nursery first and lifts seedlings with soil on the roots when they are about four to six weeks old with a few true leaves, transplants in the evening or on a cloudy day at the same depth, firms and waters them, shades them for a few days, then weeds, waters, mulches and replaces any that die. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child waters the nursery first and lifts seedlings with soil on the roots when they are about four to six weeks old with a few true leaves, transplants in the evening or on a cloudy day at the same depth, firms and waters them, shades them for a few days, then weeds, waters, mulches and replaces any that die. The practical (transplanting and caring for vegetable seedlings) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the best time and way to transplant",
       "say when a seedling is ready",
@@ -849,9 +1093,24 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Roots take in water, so transplanting must keep soil on them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.PLANTS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 watering and protecting plants, done now for transplants. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -982,6 +1241,70 @@
      "feedback": "New transplants need water and shade for a few days, then weeding and mulching.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG5_VEG_HARVEST",
+     "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+     "error": "Thinks vegetables are harvested by uprooting the whole plant every time.",
+     "example": {
+      "question": "How are sukuma wiki leaves harvested?",
+      "wrong_answer": "Uproot the whole plant",
+      "correct_answer": "Pick the lower mature leaves and leave the plant to grow"
+     },
+     "cause": "The child has seen root crops pulled out and thinks all crops end at harvest.",
+     "reveals": "Offer \"Uproot the whole plant\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a kale plant picked for weeks: the stem has scars of old leaves.",
+     "feedback": "Pick the older lower leaves of sukuma wiki. The plant keeps growing new ones.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG5_VEG_MANURE",
+     "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+     "error": "Leaves out manure because vegetables are small plants that need little food.",
+     "example": {
+      "question": "Should manure be added when preparing a vegetable bed?",
+      "wrong_answer": "No, vegetables are small",
+      "correct_answer": "Yes, vegetables grow fast and need rich soil"
+     },
+     "cause": "The child judges a plant's needs by its size.",
+     "reveals": "Offer \"No, vegetables are small\" next to the right answer and ask the question again in a new context.",
+     "help": "Grow kale in poor soil and in manured soil side by side.",
+     "feedback": "Vegetables grow fast and need rich soil. Add well-rotted manure.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG5_NURS_SHADE",
+     "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+     "error": "Leaves the nursery bed in full sun with no shade.",
+     "example": {
+      "question": "Why is a nursery bed given shade?",
+      "wrong_answer": "It is not needed",
+      "correct_answer": "Young seedlings dry and scorch in strong sun"
+     },
+     "cause": "The child knows plants need sun and thinks more is always better.",
+     "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "Put one tray of seedlings in the sun and one under a shade for a hot day.",
+     "feedback": "Young seedlings are tender. Light shade stops them drying out.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG5_TRANS_SMALL",
+     "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+     "error": "Transplants seedlings as soon as they come up, with one leaf.",
+     "example": {
+      "question": "When are seedlings ready to transplant?",
+      "wrong_answer": "As soon as they come up",
+      "correct_answer": "When they have four to six true leaves and are hardened"
+     },
+     "cause": "The child thinks moving them early saves time.",
+     "reveals": "Offer \"As soon as they come up\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a tiny and a ready seedling; ask which has the stronger roots.",
+     "feedback": "Transplant when seedlings have four to six true leaves and are about a pencil thick.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1067,6 +1390,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 4 matched animals to the things they give; Grade 5 focuses on food. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1102,6 +1432,13 @@
        "kind": "outcome",
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child names and groups the animals before relating all their uses. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       }
      ],
@@ -1204,6 +1541,38 @@
      "feedback": "Dung rots into manure that adds plant food and helps the soil.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG5_PROD_HONEY",
+     "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+     "error": "Thinks honey is made by flowers and bees only carry it.",
+     "example": {
+      "question": "Where does honey come from?",
+      "wrong_answer": "Flowers make it and bees carry it",
+      "correct_answer": "Bees make it from nectar they collect from flowers"
+     },
+     "cause": "The child knows flowers are involved and does not know the bees change nectar into honey.",
+     "reveals": "Offer \"Flowers make it and bees carry it\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a honeycomb: the bees store and change the nectar inside it.",
+     "feedback": "Bees make honey from flower nectar and store it in the comb.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG5_USE_CAMEL",
+     "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+     "error": "Thinks camels are kept only for carrying loads.",
+     "example": {
+      "question": "What do camels give families in northern Kenya?",
+      "wrong_answer": "Only carrying",
+      "correct_answer": "Milk, meat and carrying"
+     },
+     "cause": "The child knows the camel only as a pack animal from pictures.",
+     "reveals": "Offer \"Only carrying\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of camel milk in a market in Isiolo.",
+     "feedback": "Camels give milk and meat and carry loads in dry areas.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1283,7 +1652,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drying works because water leaves the grain as vapour; the child knows how liquids and gases behave. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 named the common foods of the area, among them maize, beans and sorghum. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
      "status": "proposed"
     },
     {
@@ -1292,7 +1676,7 @@
      "outcomes": [
       "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b"
      ],
-     "mastery": "The child cleans and sun-dries the grain on a mat or clean tarpaulin until it is hard (a grain cracks when bitten), cools it, mixes with ash or uses a sealed container only when fully dry, stores it off the floor away from rats and checks it often; the child knows damp grain grows mould that can poison. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child cleans and sun-dries the grain on a mat or clean tarpaulin until it is hard (a grain cracks when bitten), cools it, mixes with ash or uses a sealed container only when fully dry, stores it off the floor away from rats and checks it often; the child knows damp grain grows mould that can poison. The practical (drying, cleaning and storing cereals or pulses) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the steps in order",
       "say how to tell grain is dry",
@@ -1311,9 +1695,17 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Rats and other pests that raid stores were met in Grade 4. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -1412,6 +1804,38 @@
      "feedback": "A dry grain is hard and cracks when bitten or sounds like a rattle when shaken.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG5_PRES_ASH",
+     "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+     "error": "Thinks mixing grain with ash or storage dust is done to add flavour.",
+     "example": {
+      "question": "Why do some farmers mix stored beans with ash?",
+      "wrong_answer": "To make them taste better",
+      "correct_answer": "To keep weevils away"
+     },
+     "cause": "The child has seen ash mixed with food in other cooking and links it to taste.",
+     "reveals": "Offer \"To make them taste better\" next to the right answer and ask the question again in a new context.",
+     "help": "Show weevil holes in untreated beans next to beans stored with ash.",
+     "feedback": "Ash keeps weevils from moving and laying eggs in stored beans. It is washed off before cooking.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG5_PRACT_MIXOLD",
+     "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+     "error": "Pours the new harvest on top of last season's grain in the store.",
+     "example": {
+      "question": "What should be done with old grain before storing the new harvest?",
+      "wrong_answer": "Pour the new grain on top",
+      "correct_answer": "Remove the old grain and clean the store first"
+     },
+     "cause": "The child thinks the store is simply a place to keep adding to.",
+     "reveals": "Offer \"Pour the new grain on top\" next to the right answer and ask the question again in a new context.",
+     "help": "Show weevils in old grain; ask where they go when new grain is poured on.",
+     "feedback": "Empty and clean the store before the new harvest. Old grain carries pests into the new.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1502,6 +1926,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The three food groups of Grade 4 are the nutrients by another name. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1567,6 +1998,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 4 explained a balanced meal protects health; here is what happens without it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1602,6 +2040,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Choosing a balanced plate is the main way to prevent these diseases. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       }
      ],
@@ -1816,6 +2261,54 @@
      "feedback": "Eating enough protein foods prevents kwashiorkor. Good food is the best protection.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG5_NUT_WATER",
+     "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+     "error": "Leaves water out of what the body needs from food and drink.",
+     "example": {
+      "question": "Why does the body need water?",
+      "wrong_answer": "It does not; only food matters",
+      "correct_answer": "To carry food and waste, cool the body and help digestion"
+     },
+     "cause": "The child thinks of water as a drink, not as part of a healthy diet.",
+     "reveals": "Offer \"It does not; only food matters\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how you feel after games on a hot day with no water.",
+     "feedback": "Water carries food round the body, removes waste and keeps us cool. Drink clean water every day.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG5_DIS_RICKETS",
+     "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+     "error": "Thinks rickets (soft, bent leg bones) is caused by walking too early.",
+     "example": {
+      "question": "What causes rickets?",
+      "wrong_answer": "Walking too early",
+      "correct_answer": "Too little vitamin D and calcium (sunlight, milk, small fish)"
+     },
+     "cause": "The child sees bent legs and links them to how the child walks.",
+     "reveals": "Offer \"Walking too early\" next to the right answer and ask the question again in a new context.",
+     "help": "Show which foods and what sunlight build strong bones.",
+     "feedback": "Rickets comes from too little vitamin D and calcium. Milk, omena and sunlight help bones grow strong.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG5_PREV_SWEETS",
+     "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+     "error": "Thinks sweets and soda give the body what it needs to stay healthy because they give energy.",
+     "example": {
+      "question": "Do sweets and soda prevent nutritional diseases?",
+      "wrong_answer": "Yes, they give energy",
+      "correct_answer": "No, they give sugar but almost none of the other nutrients"
+     },
+     "cause": "The child knows sugar gives energy and thinks energy is all the body needs.",
+     "reveals": "Offer \"Yes, they give energy\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a soda with milk on a nutrient chart: which has protein and calcium?",
+     "feedback": "Sweets and soda give sugar only. Healthy bodies need all the nutrients from many foods.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1903,6 +2396,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Hot oil passes heat to the food by conduction and convection, met in Science Grade 5. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -1913,7 +2413,7 @@
      "outcomes": [
       "AGRI.G5.FOOD_P.COOKING_FOOD.b"
      ],
-     "mastery": "The child washes hands first, dries food before frying (water makes hot oil spit), fills the pan no more than half, lowers food in gently, keeps handles turned in, never leaves hot oil alone, smothers an oil fire with a lid and never uses water, drains the food and serves it hot on a clean plate. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child washes hands first, dries food before frying (water makes hot oil spit), fills the pan no more than half, lowers food in gently, keeps handles turned in, never leaves hot oil alone, smothers an oil fire with a lid and never uses water, drains the food and serves it hot on a clean plate. The practical (cooking foods by dry fat frying and deep frying with the teacher) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the safe action",
       "say why an action is dangerous",
@@ -1941,7 +2441,8 @@
        "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2056,6 +2557,22 @@
      "feedback": "Hot oil can catch fire. Never leave it alone.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG5_FRY_COLDOIL",
+     "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+     "error": "Puts food into cold oil and heats them together for deep frying.",
+     "example": {
+      "question": "When is food put into the oil for deep frying?",
+      "wrong_answer": "Into cold oil, then heat",
+      "correct_answer": "When the oil is hot enough"
+     },
+     "cause": "The child does not know cold oil soaks into the food.",
+     "reveals": "Offer \"Into cold oil, then heat\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a piece fried from cold oil (greasy) with one put into hot oil (crisp).",
+     "feedback": "Wait for the oil to be hot before adding food, or the food soaks up oil and goes soggy.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2142,6 +2659,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 4 hygiene practices are the base of good grooming. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2152,7 +2676,7 @@
      "outcomes": [
       "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b"
      ],
-     "mastery": "The child picks the school uniform for school, sports clothes for games, old clothes, an apron and gumboots for farm work, neat modest clothes for a place of worship or a visit, and polite greetings, please and thank you, and good table manners, and knows dress changes with the activity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child picks the school uniform for school, sports clothes for games, old clothes, an apron and gumboots for farm work, neat modest clothes for a place of worship or a visit, and polite greetings, please and thank you, and good table manners, and knows dress changes with the activity. The practical (practising good grooming as a daily habit) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the right dress for the place",
       "pick the right manners",
@@ -2171,9 +2695,17 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Matching clothes to an activity began with protective clothing in Grade 4. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2255,6 +2787,54 @@
      "help": "Practise a greeting for a visitor in class, then ask how the visitor would feel with no greeting.",
      "feedback": "Greeting visitors and new people politely shows respect. Say please and thank you every day.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG5_GROOM_HAIR",
+     "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+     "error": "Thinks hair only needs combing for school photos and visits.",
+     "example": {
+      "question": "How often should hair be combed or brushed?",
+      "wrong_answer": "Only on special days",
+      "correct_answer": "Every day"
+     },
+     "cause": "The child links grooming with being seen by visitors.",
+     "reveals": "Offer \"Only on special days\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to uncombed hair over a week: tangles, dirt, lice.",
+     "feedback": "Comb or brush your hair every day to keep it neat and clean.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG5_DRESS_GARDEN",
+     "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+     "error": "Wears school or best clothes for digging in the garden.",
+     "example": {
+      "question": "What should you wear for gardening?",
+      "wrong_answer": "My best school uniform",
+      "correct_answer": "Old clothes or an overall, and gumboots"
+     },
+     "cause": "The child thinks neat means wearing the best clothes for everything.",
+     "reveals": "Offer \"My best school uniform\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a uniform after a gardening lesson.",
+     "feedback": "Wear old clothes or an overall for gardening. Keep your uniform clean for class.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG5_ETIQ_EAT",
+     "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+     "error": "Talks with food in the mouth and reaches across the table.",
+     "example": {
+      "question": "Which is good table manners?",
+      "wrong_answer": "Talking with a full mouth",
+      "correct_answer": "Chewing with the mouth closed and asking for food to be passed"
+     },
+     "cause": "The child eats at home without thinking about others at the table.",
+     "reveals": "Offer \"Talking with a full mouth\" next to the right answer and ask the question again in a new context.",
+     "help": "Act out two meals and ask which is pleasant to sit next to.",
+     "feedback": "Chew with your mouth closed and ask politely for food to be passed.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2340,6 +2920,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Telling materials apart by look and feel uses the properties of solids. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2350,7 +2937,7 @@
      "outcomes": [
       "AGRI.G5.HYGIEN.HOME_HYGIENE.b"
      ],
-     "mastery": "The child cleans glass with a damp cloth and wipes it dry, wood with a damp cloth and polish without soaking, an earthen floor by sprinkling a little water and sweeping softly, cement by sweeping then scrubbing with soap and water, and tiles by sweeping and mopping then drying so nobody slips, always dusting or sweeping before washing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child cleans glass with a damp cloth and wipes it dry, wood with a damp cloth and polish without soaking, an earthen floor by sprinkling a little water and sweeping softly, cement by sweeping then scrubbing with soap and water, and tiles by sweeping and mopping then drying so nobody slips, always dusting or sweeping before washing. The practical (cleaning different surfaces in the home or school) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the way to clean a surface",
       "say why a way is wrong",
@@ -2378,7 +2965,8 @@
        "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2477,6 +3065,38 @@
      "feedback": "Sweep or dust first, then wash. Water on dust makes mud.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG5_SURF_PLASTIC",
+     "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+     "error": "Thinks a plastic table is made of wood because it is coloured brown.",
+     "example": {
+      "question": "A brown table is light, smooth and bends a little. What is it made of?",
+      "wrong_answer": "Wood, because it is brown",
+      "correct_answer": "Plastic"
+     },
+     "cause": "The child names the material from its colour.",
+     "reveals": "Offer \"Wood, because it is brown\" next to the right answer and ask the question again in a new context.",
+     "help": "Tap a plastic and a wooden table; feel the weight and grain.",
+     "feedback": "Look at how it feels, sounds and bends, not only its colour.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG5_SURF_EARTH",
+     "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+     "error": "Thinks an earthen floor is just dirt that cannot be cleaned.",
+     "example": {
+      "question": "Can an earthen floor be kept clean?",
+      "wrong_answer": "No, it is only dirt",
+      "correct_answer": "Yes, by sweeping and smearing it"
+     },
+     "cause": "The child thinks only hard floors count as clean surfaces.",
+     "reveals": "Offer \"No, it is only dirt\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a smeared earthen floor in a rural home: smooth and swept.",
+     "feedback": "Earthen floors are swept daily and smeared to keep them smooth and clean.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2561,6 +3181,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Doing jobs in the right order began with cleaning in Grade 4. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2571,7 +3198,7 @@
      "outcomes": [
       "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b"
      ],
-     "mastery": "The child knows a fast colour does not run in water, washes coloured items apart from white ones, dries white items in the sun to keep them bright and coloured items inside out in the shade so the colour does not fade, and irons cotton hot while it is a little damp. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child knows a fast colour does not run in water, washes coloured items apart from white ones, dries white items in the sun to keep them bright and coloured items inside out in the shade so the colour does not fade, and irons cotton hot while it is a little damp. The practical (laundering a cotton item) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "say how to treat white items",
       "say how to treat fast coloured items",
@@ -2590,9 +3217,17 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Ironing uses heat; Science Grade 5 safety with hot objects applies. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2691,6 +3326,38 @@
      "feedback": "Cotton takes a hot iron and presses best while a little damp.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG5_LAUN_SORT",
+     "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+     "error": "Skips sorting and mending, and goes straight to soaking.",
+     "example": {
+      "question": "What is the first step in laundering?",
+      "wrong_answer": "Soak everything together",
+      "correct_answer": "Sort the clothes and mend any tears"
+     },
+     "cause": "The child thinks washing starts with water.",
+     "reveals": "Offer \"Soak everything together\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a small tear that became a big hole after washing.",
+     "feedback": "Sort and mend first. Washing makes small tears bigger.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG5_CARE_WRING",
+     "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+     "error": "Twists and wrings coloured cotton hard to dry it fast.",
+     "example": {
+      "question": "How should a coloured cotton shirt be squeezed after rinsing?",
+      "wrong_answer": "Twist it as hard as possible",
+      "correct_answer": "Squeeze gently or fold and press"
+     },
+     "cause": "The child thinks harder wringing dries faster with no harm.",
+     "reveals": "Offer \"Twist it as hard as possible\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a shirt wrung hard (creased, stretched) with one squeezed gently.",
+     "feedback": "Squeeze cotton gently. Hard wringing stretches and creases it.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2782,6 +3449,13 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 4 told tacking stitches apart by their length and spacing. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2793,7 +3467,7 @@
       "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b",
       "AGRI.G5.PRODUC.REPAIRING_GARMENTS.c"
      ],
-     "mastery": "The child uses back stitch for a gaping seam, picks thread that matches the cloth, starts a little before the gap on the sound seam, sews to a little past the gap, finishes with two small stitches on top of each other, does not pull the thread so tight that the cloth puckers, and trims the thread. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child uses back stitch for a gaping seam, picks thread that matches the cloth, starts a little before the gap on the sound seam, sews to a little past the gap, finishes with two small stitches on top of each other, does not pull the thread so tight that the cloth puckers, and trims the thread. The practical (making stitch samples and repairing a gaping seam) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the stitch for a gaping seam",
       "put the repair steps in order",
@@ -2819,9 +3493,17 @@
        "reason": "Grade 4 Agriculture and Nutrition introduced it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A gaping seam is tacked or pinned before it is restitched. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2920,6 +3602,38 @@
      "feedback": "Too tight puckers the cloth. Pull firm and even.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG5_STITCH_TACK",
+     "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+     "error": "Thinks running stitch and tacking are exactly the same and both are taken out.",
+     "example": {
+      "question": "How is running stitch different from tacking?",
+      "wrong_answer": "They are the same and both are removed",
+      "correct_answer": "Running stitch is smaller and stays in; tacking is long and is removed"
+     },
+     "cause": "The child sees the same in-and-out movement.",
+     "reveals": "Offer \"They are the same and both are removed\" next to the right answer and ask the question again in a new context.",
+     "help": "Lay a tacking sample beside a running stitch sample and measure the stitches.",
+     "feedback": "Running stitch is small and permanent. Tacking is long and comes out.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG5_SEAM_RIGHT",
+     "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+     "error": "Repairs the seam on the right side of the garment so the stitches show.",
+     "example": {
+      "question": "Which side of the garment is a seam repaired from?",
+      "wrong_answer": "The right side, where it shows",
+      "correct_answer": "The wrong side, along the old seam line"
+     },
+     "cause": "The child works where the hole is seen.",
+     "reveals": "Offer \"The right side, where it shows\" next to the right answer and ask the question again in a new context.",
+     "help": "Turn a shirt inside out and show the old seam line to follow.",
+     "feedback": "Turn the garment inside out and stitch along the old seam line.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3007,6 +3721,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.PLANTS.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 made a kitchen garden from local materials; innovative gardens build on it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -3018,7 +3739,7 @@
       "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
       "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.c"
      ],
-     "mastery": "The child builds a sack garden with a central column of stones for watering, layers of soil mixed with manure, and holes in the side for seedlings, makes drainage holes in bottles and containers, grows kale, spinach, spring onions or coriander, and does not choose maize, cassava or sweet potato; the garden still needs watering. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child builds a sack garden with a central column of stones for watering, layers of soil mixed with manure, and holes in the side for seedlings, makes drainage holes in bottles and containers, grows kale, spinach, spring onions or coriander, and does not choose maize, cassava or sweet potato; the garden still needs watering. The practical (constructing an innovative garden and growing a crop in it) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the crop that suits",
       "put the steps of building a sack garden in order",
@@ -3046,7 +3767,8 @@
        "status": "proposed"
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -3128,6 +3850,54 @@
      "help": "Feel the soil of a sack garden two days after watering.",
      "feedback": "A small garden dries quickly. Water it regularly through the stone column.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG5_GTYPE_TOWN",
+     "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+     "error": "Thinks innovative gardens are only for towns.",
+     "example": {
+      "question": "Who can use a sack garden?",
+      "wrong_answer": "Only people in towns",
+      "correct_answer": "Anyone with little space, water or good soil, in town or village"
+     },
+     "cause": "The child has seen sack gardens in town pictures only.",
+     "reveals": "Offer \"Only people in towns\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask where a village school with rocky ground could grow kale.",
+     "feedback": "Innovative gardens help anyone short of land, water or good soil.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG5_GTYPE_TYRE",
+     "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+     "error": "Thinks a tyre garden is vertical because tyres stand up.",
+     "example": {
+      "question": "Old tyres laid flat on the ground and filled with soil make which garden?",
+      "wrong_answer": "Vertical",
+      "correct_answer": "Horizontal"
+     },
+     "cause": "The child knows tyres can stand upright and does not look at how they are laid.",
+     "reveals": "Offer \"Vertical\" next to the right answer and ask the question again in a new context.",
+     "help": "Lay a tyre flat and one stacked in a tower; ask which grows upwards.",
+     "feedback": "Tyres laid flat side by side make a horizontal garden. Stacked up, they make a vertical one.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG5_GBUILD_SUN",
+     "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
+     "error": "Puts the innovative garden in deep shade behind a building.",
+     "example": {
+      "question": "Where should a sack garden be placed?",
+      "wrong_answer": "In deep shade behind a wall",
+      "correct_answer": "Where it gets sunlight for most of the day, near water"
+     },
+     "cause": "The child thinks shade keeps the soil damp and so is best.",
+     "reveals": "Offer \"In deep shade behind a wall\" next to the right answer and ask the question again in a new context.",
+     "help": "Grow kale in one sack in shade and one in sun for three weeks.",
+     "feedback": "Vegetables need sunlight. Put the garden in the sun and near water.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

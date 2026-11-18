@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_",
+ "title": "Cleaning Waste Disposal Facilities",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clean a dustbin, a sink and an open drain at school with gloves, a brush, soap and water; use improvised tools (a stick brush, a reused bucket). Disinfectants are used by an adult.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY",
+   "key_step": "The child explains why bins, sinks and open drains are kept clean: they breed flies, mosquitoes, rats and germs that spread cholera, typhoid and malaria, they smell, and blocked ones flood.",
+   "floor": {
+    "prerequisite": "Knows harmful invertebrates.",
+    "question": "Name a harmful insect that spreads disease.",
+    "answer": "a fly or mosquito"
+   },
+   "representations": [
+    "pictures of clean and dirty facilities",
+    "a risk chart",
+    "a fly path drawing"
+   ],
+   "steps": [
+    "Name the facility.",
+    "Name the risk.",
+    "Name the disease."
+   ],
+   "contexts": [
+    "the school drains",
+    "a kitchen sink at home",
+    "a market bin"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fly going from an open bin to a plate."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what it carries."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"germs\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"cholera, typhoid\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_DRAIN",
+     "listen_for": [
+      "Rain cleans them"
+     ],
+     "ask": "Why must open drains be cleared?",
+     "repair": "Show a blocked drain with standing water after rain."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_LID",
+     "listen_for": [
+      "It does not need one"
+     ],
+     "ask": "Why should a dustbin have a lid?",
+     "repair": "Compare an open and a covered bin after a day."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_DISEASE",
+     "listen_for": [
+      "None, they only smell"
+     ],
+     "ask": "Which disease can spread from dirty drains and bins?",
+     "repair": "Trace how a fly goes from a bin to food."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_WHY.M_AG9_WF_SINK",
+     "listen_for": [
+      "They wash away"
+     ],
+     "ask": "Why should fat and food scraps not go down the sink?",
+     "repair": "Show a pipe blocked with hardened fat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should drains be kept clear?",
+     "answer": "stagnant water breeds mosquitoes and floods",
+     "shows": "drains"
+    },
+    {
+     "question": "Name a disease spread from dirty bins.",
+     "answer": "cholera or typhoid",
+     "shows": "disease"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN",
+   "key_step": "The child says how to clean waste facilities: PPE on; empty and scrub the bin, dry it in sun with the lid open; clear the sink strainer, scrub sink and pipe; remove drain silt and rubbish to a safe place; wash hands.",
+   "floor": {
+    "prerequisite": "Knows why facilities are cleaned.",
+    "question": "Why does a bin need a lid?",
+    "answer": "to keep out flies and rats"
+   },
+   "representations": [
+    "gloves, brush, bucket, soap",
+    "step cards",
+    "improvised tools"
+   ],
+   "steps": [
+    "PPE on.",
+    "Bin: empty, scrub, dry in sun.",
+    "Sink: clear strainer, scrub.",
+    "Drain: remove silt away; wash hands."
+   ],
+   "contexts": [
+    "the school compound",
+    "a home kitchen",
+    "an estate drain"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"put the washed bin back wet and close it\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it smells and grows germs\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"dry in the sun, lid open\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_HANDS",
+     "listen_for": [
+      "Nothing special"
+     ],
+     "ask": "What should you wear to clean a dustbin?",
+     "repair": "Recall protective clothing from Grade 4."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_WET",
+     "listen_for": [
+      "Close it wet"
+     ],
+     "ask": "What is done after washing a bin?",
+     "repair": "Smell a bin closed wet for two days."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_SILT",
+     "listen_for": [
+      "On the edge of the drain"
+     ],
+     "ask": "Where does silt removed from a drain go?",
+     "repair": "Show silt washed back into a drain after rain."
+    },
+    {
+     "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_.WASTE_FACILITY_CLEAN.M_AG9_WC_STRAINER",
+     "listen_for": [
+      "Rinse it only"
+     ],
+     "ask": "How is a sink kept clean daily?",
+     "repair": "Lift a strainer full of old food."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is a washed bin dried?",
+     "answer": "in the sun with the lid open",
+     "shows": "dry"
+    },
+    {
+     "question": "Where should drain silt be put?",
+     "answer": "away from the drain",
+     "shows": "silt"
+    }
+   ]
+  }
+ ]
+}

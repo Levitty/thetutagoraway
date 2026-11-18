@@ -1,0 +1,98 @@
+{
+ "sub_strand": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT",
+ "title": "Conserving Food Nutrients",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Cook two lots of sukuma wiki: one washed whole then cut and cooked briefly with a lid, one cut first, soaked and boiled long uncovered. Compare colour and taste.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP",
+   "key_step": "The child names ways of keeping vitamins and minerals in vegetables: wash whole before cutting, cut just before cooking with a sharp knife, peel thinly, cook a short time in little water with a lid, use the cooking water, serve at once.",
+   "floor": {
+    "prerequisite": "Knows what vitamins and minerals do.",
+    "question": "What do vitamins and minerals do?",
+    "answer": "protect the body"
+   },
+   "representations": [
+    "two pots of cooked kale to compare",
+    "a step chart",
+    "cards: keep or lose"
+   ],
+   "steps": [
+    "Wash whole, then cut.",
+    "Cut just before cooking.",
+    "Cook short, in little water, with a lid.",
+    "Use the cooking water; serve at once."
+   ],
+   "contexts": [
+    "sukuma wiki for supper",
+    "cabbage at school",
+    "carrots in a stew"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"cut, then wash\" and \"wash, then cut\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which keeps more vitamins."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"wash, then cut\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"vitamins wash out of cut surfaces\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_LONG",
+     "listen_for": [
+      "Boil them for a long time"
+     ],
+     "ask": "How should vegetables be cooked to keep vitamins?",
+     "repair": "Compare bright green kale cooked for 5 minutes with grey kale boiled for 40."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_WATER",
+     "listen_for": [
+      "Throw it away at once"
+     ],
+     "ask": "What should be done with the cooking water?",
+     "repair": "Show the green colour in the water; explain some vitamins and minerals leave the leaves into it."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_WASH",
+     "listen_for": [
+      "After they are cut up small"
+     ],
+     "ask": "When should vegetables be washed?",
+     "repair": "Explain that vitamins wash out of the cut surfaces; wash whole leaves first, then cut."
+    },
+    {
+     "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP.M_AG7_NK_EARLY",
+     "listen_for": [
+      "Hours before, and left to soak"
+     ],
+     "ask": "When should vegetables be cut for cooking?",
+     "repair": "Leave cut kale out for three hours: it wilts and darkens."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why cook vegetables with a lid on?",
+     "answer": "they cook faster, so fewer vitamins are lost",
+     "shows": "lid"
+    },
+    {
+     "question": "Should potatoes be peeled thickly or thinly?",
+     "answer": "thinly, the goodness is near the skin",
+     "shows": "peel"
+    }
+   ]
+  }
+ ]
+}

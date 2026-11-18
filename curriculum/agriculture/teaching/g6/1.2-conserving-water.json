@@ -1,0 +1,98 @@
+{
+ "sub_strand": "AGRI.G6.CONSER.CONSERVING_WATER",
+ "title": "Conserving Water:",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dig one sunken bed and a few shallow (zai-like) pits in the school garden; compare the soil moisture with a flat bed after a week without rain.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS",
+   "key_step": "The child says which seedbeds keep soil moisture (sunken beds and shallow pits in dry places, mulched beds) and how they are made (dug below ground level, edges raised, manure mixed in, mulched), and that raised beds suit wet places.",
+   "floor": {
+    "prerequisite": "Knows ways of conserving water in a garden.",
+    "question": "Name a way to conserve water in a garden.",
+    "answer": "mulching"
+   },
+   "representations": [
+    "a cross-section drawing of sunken, flat and raised beds",
+    "a tray model",
+    "a moisture record"
+   ],
+   "steps": [
+    "Dry place: sink the bed or dig pits.",
+    "Raise the edges to hold water.",
+    "Mix in manure; mulch.",
+    "Wet place: raise the bed instead."
+   ],
+   "contexts": [
+    "the school garden in a dry spell",
+    "kale in Makueni",
+    "arrowroots in a wet valley"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sunken bed and a raised bed in cross-section."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which holds rain water in a dry place."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the sunken bed\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw water held in the sunken bed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS.M_AG_SB_RAISED_DRY",
+     "listen_for": [
+      "A raised bed"
+     ],
+     "ask": "Which seedbed keeps moisture best in a dry place?",
+     "repair": "Pour water on a raised and a sunken bed and watch which keeps it."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS.M_AG_SB_WET",
+     "listen_for": [
+      "A sunken bed"
+     ],
+     "ask": "Which seedbed suits a very wet place?",
+     "repair": "Pour a lot of water on both beds."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS.M_AG_SB_BARE",
+     "listen_for": [
+      "Nothing, it only looks tidy"
+     ],
+     "ask": "What does mulch do on a seedbed?",
+     "repair": "Cover one bed with dry grass and leave one bare in the sun."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WATER.SEEDBEDS.M_AG6_SB_PITMANURE",
+     "listen_for": [
+      "Nothing, the pit is enough"
+     ],
+     "ask": "What is put in a shallow planting pit before planting?",
+     "repair": "Grow two pits, one with manure; compare after a month."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which seedbed suits a dry area?",
+     "answer": "a sunken bed or shallow pits",
+     "shows": "dry"
+    },
+    {
+     "question": "Why mulch a sunken bed?",
+     "answer": "to stop the water drying up",
+     "shows": "mulch"
+    }
+   ]
+  }
+ ]
+}

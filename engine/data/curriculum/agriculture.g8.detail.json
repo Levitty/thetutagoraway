@@ -51,6 +51,14 @@
    ],
    "mastery": "The child names terracing (steps on a slope), contour farming, mulching, cover crops, planting trees and strip cropping, and says they slow water and wind so soil is not carried away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY": {
+   "forms": [
+    "order the steps",
+    "choose the measure",
+    "story"
+   ],
+   "mastery": "Says how soil conservation measures are carried out: mark the contour (with an A-frame or line level), lay stone lines or trash lines along it, build soil bunds with the soil thrown uphill or downhill as designed, plant strips of crops or grass across the slope, grass a waterway to carry extra water safely, and repair after heavy rain; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (carrying out soil conservation activities in the school) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE": {
    "forms": [
     "pick the right answer",
@@ -58,6 +66,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says harvested water is stored in clean covered tanks, drums and jerricans so it stays free of dirt and mosquitoes, and is treated by boiling or a purifier before drinking. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP": {
+   "forms": [
+    "order the steps",
+    "choose the part",
+    "story"
+   ],
+   "mastery": "Says how water is harvested and stored at school: gutters sloping to a down pipe, a mesh to keep out leaves, the first dirty flush let away, a clean, covered tank or container on a firm base, a tap above the bottom, shallow pans or ponds for run-off, and regular cleaning of roof, gutters and tank; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (taking part in harvesting and storing water in the school) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN": {
    "forms": [
@@ -67,6 +83,14 @@
    ],
    "mastery": "The child says a kitchen garden near the house gives fresh vegetables and herbs, saves money, uses little space and waste water, and grows crops such as sukuma wiki, spinach, onions and tomatoes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP": {
+   "forms": [
+    "order the steps",
+    "choose the crop",
+    "story"
+   ],
+   "mastery": "Says how a kitchen or backyard garden is established: a site near the house and water with sun, fenced, beds or a keyhole garden prepared with manure, a mix of vegetables, herbs and spices planted in small, staggered amounts for a steady supply, watered with saved water, weeded and harvested often; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (establishing and caring for a kitchen or backyard garden) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD": {
    "forms": [
     "pick the right answer",
@@ -74,6 +98,22 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says a fold is a light movable pen that is moved to fresh ground, protects birds from predators and rain, spreads manure and keeps the birds clean. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD": {
+   "forms": [
+    "order the steps",
+    "choose the material",
+    "story"
+   ],
+   "mastery": "Says how a fold is built: sized for the number of birds, a light frame of wood or reused materials so two people can move it, a roofed part for shelter and laying, a wire mesh run with no gaps, handles or wheels, and a door for feeding and cleaning; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (constructing a poultry fold) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING": {
+   "forms": [
+    "order the steps",
+    "choose the reason",
+    "story"
+   ],
+   "mastery": "Says how poultry are reared in a fold: moved to fresh ground every few days, fed and given clean water daily, feeders and waterers cleaned, droppings left on the ground as manure, protected from predators, rain and hot sun, and sick birds separated; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (rearing poultry in a fold as a project) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE": {
    "forms": [
@@ -83,13 +123,21 @@
    ],
    "mastery": "The child names aphids, cutworms and caterpillars as pests and blight, wilt and damping off as diseases of vegetables, and names controls (hand-picking, crop rotation, clean tools and spacing). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS": {
+   "forms": [
+    "choose the method",
+    "order the steps",
+    "story"
+   ],
+   "mastery": "Says how pests and diseases on vegetables are controlled: handpicking pests, removing and burying or burning affected parts away from the garden, uprooting heavily affected plants, dusting with ash or using natural sprays, crop rotation, clean tools, resistant varieties and early action, with chemicals used only by trained adults; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (controlling pests and diseases on vegetable crops) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS": {
    "forms": [
     "pick the right answer",
     "pick the right answer in a short story",
     "find the false step in a learner's reason"
    ],
-   "mastery": "The child says fish is scaled, gutted, washed and then dried, salted, smoked or fried so it lasts longer, and that clean hands, tools and water keep it safe; knives are used only with a teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+   "mastery": "The child says fish is scaled, gutted, washed and then dried, salted, smoked or fried so it lasts longer, and that clean hands, tools and water keep it safe; knives are used only with a teacher. The practical (processing fresh fish (scaling, gutting, cleaning, salting, frying)) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS": {
    "forms": [
@@ -97,7 +145,7 @@
     "pick the right answer in a short story",
     "find the false step in a learner's reason"
    ],
-   "mastery": "The child says dressing is done after slaughter and bleeding, then scalding, plucking, removing the insides and washing and chilling the carcass, to give clean meat; it is done only with a teacher and kindly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+   "mastery": "The child says dressing is done after slaughter and bleeding, then scalding, plucking, removing the insides and washing and chilling the carcass, to give clean meat; it is done only with a teacher and kindly. The practical (dressing a poultry carcass with the teacher) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE": {
    "forms": [
@@ -105,7 +153,7 @@
     "pick the right answer in a short story",
     "find the false step in a learner's reason"
    ],
-   "mastery": "The child says fresh milk is kept longer by boiling, cooling, fermenting (such as into yoghurt or mursik) or drying, and that clean containers and cool storage help. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+   "mastery": "The child says fresh milk is kept longer by boiling, cooling, fermenting (such as into yoghurt or mursik) or drying, and that clean containers and cool storage help. The practical (preserving milk by boiling, fermenting and home cooling) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE": {
    "forms": [
@@ -113,7 +161,7 @@
     "pick the right answer in a short story",
     "find the false step in a learner's reason"
    ],
-   "mastery": "The child says meat is kept longer by drying, salting, smoking and freezing, which slow or stop germs, and that raw meat must be kept cold and covered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+   "mastery": "The child says meat is kept longer by drying, salting, smoking and freezing, which slow or stop germs, and that raw meat must be kept cold and covered. The practical (preserving meat by salting, boiling, drying or smoking) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL": {
    "forms": [
@@ -123,6 +171,14 @@
    ],
    "mastery": "The child says a balanced meal has energy foods (ugali, rice), body-building foods (beans, fish, meat), protective foods (vegetables, fruits) and water, and the cost, age, health and the foods in season are considered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP": {
+   "forms": [
+    "order the steps",
+    "choose the menu",
+    "story"
+   ],
+   "mastery": "Says how a balanced meal is prepared: plan a menu with all food groups for the person's age, health, activity and the occasion, list and buy ingredients within the budget, prepare and cook in a sensible order so all is ready together, keep nutrients in, and serve attractively in family style or blue plate style; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (preparing and presenting a balanced meal) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN": {
    "forms": [
     "pick the right answer",
@@ -130,6 +186,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names washing dishes, wiping surfaces, sweeping, disposing of waste and cleaning the sink every day, and cleaning the cooker and shelves each week, and keeping raw meat apart from vegetables. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE": {
+   "forms": [
+    "order the steps",
+    "sort the job",
+    "story"
+   ],
+   "mastery": "Says how a kitchen is cleaned: daily (wash dishes, wipe surfaces, clean the stove, sweep and mop, empty waste), weekly (shelves, store, cupboards, windows), special cleaning (walls, emptying and scrubbing the store), working from top to bottom and clean to dirty, with the right cleaning agent for each surface; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (cleaning a kitchen to maintain hygiene) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS": {
    "forms": [
@@ -139,6 +203,14 @@
    ],
    "mastery": "The child says a plain seam joins two pieces with a row of stitching, a French seam encloses the raw edges so they do not fray, and that seams are used for pillow cases, curtains and table cloths. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING": {
+   "forms": [
+    "order the steps",
+    "choose the seam",
+    "story"
+   ],
+   "mastery": "Says how a seam is made by hand: place right sides together, pin and tack on the fitting line, stitch with back stitch or small running stitches about 1.5 cm from the edge, remove tacking, press the seam open (open seam) or to one side (plain seam), neaten the raw edges, and uses seams to make a pillow case, cushion cover or bag; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (making seam samples and a household item with seams) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS": {
    "forms": [
     "pick the right answer",
@@ -147,6 +219,14 @@
    ],
    "mastery": "The child says open troughs get dirty, spill and lose water, and that a waterer made from a bottle or jerrican that lets out only a little water keeps it clean and saves water. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN": {
+   "forms": [
+    "order the steps",
+    "choose the material",
+    "story"
+   ],
+   "mastery": "Says how an innovative waterer is designed: name the problem (spilling, dirt, waste), sketch a design for the animal (an upturned bottle in a dish, a nipple drinker, a covered trough), choose clean, safe, reused materials, build it at the right height for the animal, test it for leaks, spills and ease of cleaning, then adjust it; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (designing and constructing an innovative waterer) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES": {
    "forms": [
     "pick the right answer",
@@ -154,6 +234,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names eCitizen, M-Pesa, online lessons, farm advice and weather SMS as services reached through a phone or computer, and says they are used safely with a trusted adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS": {
+   "forms": [
+    "order the steps",
+    "choose the service",
+    "story"
+   ],
+   "mastery": "Says how to access an ICT support service (weather forecast, veterinary or extension advice, market prices, supplies, banking, catering or cleaning services) by SMS, USSD code, app or website: find the right official service, follow the steps, check the information against another source, keep PINs and passwords private, and log out; in the app the child picks the right step, order, tool, material or reason in new situations. The practical (accessing support services using ICT with the teacher) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   }
  }
 }

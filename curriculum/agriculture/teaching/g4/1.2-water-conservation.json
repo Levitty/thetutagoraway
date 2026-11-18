@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G4.CONSER.WATER_CONSERVATION",
+ "title": "Water Conservation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A 2-litre bottle with a pin hole in the cap, hung on a stick above a seedling, is enough to show drip irrigation. Use only clean, safe pins under the teacher's eye.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+   "key_step": "The child says drip irrigation gives water slowly, drop by drop, straight to the soil at the roots, so little is lost to running off or drying up, and less water grows the same crop.",
+   "floor": {
+    "prerequisite": "Knows why we conserve water.",
+    "question": "Why should we not waste water?",
+    "answer": "it is scarce"
+   },
+   "representations": [
+    "a dripping bottle beside a seedling",
+    "a drawing comparing a watering can and a drip",
+    "a cup measuring water used in one day by each"
+   ],
+   "steps": [
+    "Water drips slowly from a pipe or container.",
+    "It falls on the soil at the roots.",
+    "Little runs off or dries up.",
+    "So less water is used."
+   ],
+   "contexts": [
+    "a school vegetable bed in the dry season",
+    "tomatoes on a farm in Kajiado",
+    "a kitchen garden near the house"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plant with a bottle above it and drops falling at its base."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the drops.",
+     "say": "Where do they land: on the leaves or at the roots?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"at the roots\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which uses less water: a full can poured once, or the drip."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_FAST",
+     "listen_for": [
+      "It pours a lot of water out very fast"
+     ],
+     "ask": "How does drip irrigation give water to a plant?",
+     "repair": "Pierce a bottle with a pin hole and watch it. Ask how fast the water comes out."
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_LEAVES",
+     "listen_for": [
+      "Onto the leaves of the plant"
+     ],
+     "ask": "Where does the water from a drip system go?",
+     "repair": "Ask which part of the plant takes up water. Look at where a real drip tube ends."
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_WASTE",
+     "listen_for": [
+      "It uses more water so the plant grows faster"
+     ],
+     "ask": "Why does drip irrigation save water?",
+     "repair": "Water one bed with a bucket and one by drip. Measure the water used."
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_WHENEVER",
+     "listen_for": [
+      "Watering when it drizzles"
+     ],
+     "ask": "What is drip irrigation?",
+     "repair": "Show the bottle dripping beside a plant on a dry day; ask where the water comes from."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does drip irrigation put the water?",
+     "answer": "on the soil at the roots",
+     "shows": "meaning"
+    },
+    {
+     "question": "Why does drip irrigation save water?",
+     "answer": "little runs off or dries up",
+     "shows": "saving"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
+   "key_step": "The child says how a simple drip is set up: a container raised above the plants, a small hole or a tube with small holes, the drip placed at the base of the plant, then refilled and kept clear.",
+   "floor": {
+    "prerequisite": "Knows drip irrigation puts water at the roots.",
+    "question": "Where does the drip fall?",
+    "answer": "at the roots"
+   },
+   "representations": [
+    "a 2-litre bottle with a small hole in the cap",
+    "a bucket with a thin pipe",
+    "a sketch of the container higher than the bed"
+   ],
+   "steps": [
+    "Raise the container above the plants.",
+    "Make a small hole or fix a thin pipe.",
+    "Put the drip at the base of each plant.",
+    "Refill and clear the hole when needed."
+   ],
+   "contexts": [
+    "a bucket drip in a school garden",
+    "bottles hung on sticks over kale",
+    "a home garden in Machakos"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bucket on a stand and a pipe to three plants."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if the bucket is put on the ground below the bed."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the water will not flow\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"water runs downhill: keep the container higher\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_LOW",
+     "listen_for": [
+      "Lower than the bed, on the ground"
+     ],
+     "ask": "Where should the water container of a simple drip system be put?",
+     "repair": "Raise and lower a bottle with a hole above a bed. Watch when the water flows."
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_BIGHOLE",
+     "listen_for": [
+      "Big, so all the water comes out at once"
+     ],
+     "ask": "How big should the hole in a drip bottle be?",
+     "repair": "Make one tiny hole and one large hole in two bottles. Watch which waters a whole week."
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_FAR",
+     "listen_for": [
+      "Far from the plant, in the middle of the path"
+     ],
+     "ask": "Where should the end of the drip tube be placed?",
+     "repair": "Dig up a small plant and show how close its roots are to the stem."
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_NOCHECK",
+     "listen_for": [
+      "Nothing, it works by itself"
+     ],
+     "ask": "A bottle drip has been set up. What must you keep doing?",
+     "repair": "Leave one bottle unchecked for a week in class; it runs dry or the hole clogs with soil."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is the drip container put higher than the plants?",
+     "answer": "water flows down",
+     "shows": "height"
+    },
+    {
+     "question": "Why is the hole in the bottle kept small?",
+     "answer": "so water drips slowly and is not wasted",
+     "shows": "hole size"
+    }
+   ]
+  }
+ ]
+}

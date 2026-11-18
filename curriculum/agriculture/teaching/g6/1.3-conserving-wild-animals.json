@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS",
+ "title": "Conserving Wild Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A model mesh fence, a thorny fence of cut branches (gloves on), or a solar light and a tin rattle can be built in the school garden. No snares: they kill and are illegal.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS",
+   "key_step": "The child picks a safe deterrent for each wild animal (mesh fences for hares and porcupines, thorny fences for small antelopes, lights and noise for bush pigs and monkeys, deflectors on paths) and says a trap that kills is not a deterrent.",
+   "floor": {
+    "prerequisite": "Knows safe ways of repelling wild animals.",
+    "question": "Give a safe way of repelling birds.",
+    "answer": "a scarecrow"
+   },
+   "representations": [
+    "pictures of deterrents",
+    "a chart: animal, deterrent",
+    "a model fence"
+   ],
+   "steps": [
+    "Name the animal.",
+    "Choose a deterrent that suits it.",
+    "Check it does not harm the animal."
+   ],
+   "contexts": [
+    "a farm near a forest",
+    "the school garden",
+    "a goat pen near a park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"porcupines dig up cassava at night\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for a deterrent."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's choice."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"mesh fence dug into the ground, or lights\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS.M_AG_DT_KILL",
+     "listen_for": [
+      "Set poison to kill them"
+     ],
+     "ask": "What should a farmer do about elephants that raid his crops?",
+     "repair": "Discuss why wild animals are conserved and how deterrents work."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS.M_AG_DT_WRONG",
+     "listen_for": [
+      "A beehive fence"
+     ],
+     "ask": "Which deterrent keeps birds off the crops?",
+     "repair": "Match each animal to what it fears."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS.M_AG_DT_SNARE",
+     "listen_for": [
+      "A snare set along the path"
+     ],
+     "ask": "Which is a safe deterrent?",
+     "repair": "A deterrent keeps the animal away. A snare harms it."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENTS.M_AG6_DT_HURT",
+     "listen_for": [
+      "By hurting or killing the animal"
+     ],
+     "ask": "How does a deterrent protect crops?",
+     "repair": "Ask whether a bright light at night hurts a bush pig, and what it does."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a physical deterrent.",
+     "answer": "a mesh fence, thorny fence, light, noise maker or deflector",
+     "shows": "name"
+    },
+    {
+     "question": "Is a snare a deterrent?",
+     "answer": "no, it traps or kills the animal",
+     "shows": "trap"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENT_SETUP",
+   "key_step": "The child says how a deterrent is put up: find where the animals enter, choose and gather local materials, build it there (fence posts firm, mesh to the ground, thorns tied, lights at the edge), check it daily and repair, and move or change it.",
+   "floor": {
+    "prerequisite": "Knows which deterrent suits which animal.",
+    "question": "Which deterrent suits hares?",
+    "answer": "a mesh fence"
+   },
+   "representations": [
+    "a farm sketch with animal paths",
+    "local materials",
+    "a step card"
+   ],
+   "steps": [
+    "Find where the animals come in.",
+    "Build the deterrent there.",
+    "Close gaps; fix it firmly.",
+    "Check, repair and change it."
+   ],
+   "contexts": [
+    "the school maize plot",
+    "a home garden near a forest",
+    "a goat shed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a garden with an animal path entering at one corner."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where the fence or light should go."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"at the corner where they enter\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw it there."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENT_SETUP.M_AG6_DS_GAPS",
+     "listen_for": [
+      "It does not matter"
+     ],
+     "ask": "Why must the bottom of a mesh fence touch or go into the ground?",
+     "repair": "Show tracks under a fence gap in a picture."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENT_SETUP.M_AG6_DS_ONCE",
+     "listen_for": [
+      "The light is broken for ever"
+     ],
+     "ask": "A solar light has kept porcupines away for a month. Now they are back. Why?",
+     "repair": "Compare with the scarecrow from Grade 4: birds got used to it when it was not moved."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENT_SETUP.M_AG6_DS_LIVE",
+     "listen_for": [
+      "The same day it is planted"
+     ],
+     "ask": "A school plants a kei apple hedge to keep out goats and hares. When will it work?",
+     "repair": "Show young hedge plants with wide gaps between them."
+    },
+    {
+     "code": "AGRI.G6.CONSER.CONSERVING_WILD_ANIMALS.DETERRENT_SETUP.M_AG6_DS_SITE",
+     "listen_for": [
+      "In the middle of the garden"
+     ],
+     "ask": "Where should a deflector or fence be put?",
+     "repair": "Draw the animal paths on a farm sketch and mark where they enter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why check a fence every day?",
+     "answer": "to find and repair gaps",
+     "shows": "care"
+    },
+    {
+     "question": "Why move a noise maker now and then?",
+     "answer": "so animals do not get used to it",
+     "shows": "change"
+    }
+   ]
+  }
+ ]
+}

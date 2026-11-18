@@ -17,8 +17,9 @@ const SUBJECT_DIR = /^[a-z_]+$/.test(process.argv[2] || '') ? process.argv[2] : 
 const SUBJECT = SUBJECT_DIR;
 const GRADE = Number(SUBJECT_DIR === 'mathematics' ? (process.argv[2] || 7) : process.argv[3]);
 // Social Studies Grades 4-9 too (18 Nov 2026):  node scripts/build-maths-sql-grade.mjs social_studies 4
-const SCIENCE = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies' }[SUBJECT_DIR];
-const DAY = SUBJECT_DIR === 'social_studies' ? '20261123' : '20261122';
+// Agriculture Grades 4-9 too (18 Nov 2026):  node scripts/build-maths-sql-grade.mjs agriculture 4   (20261126_agriculture_g<grade>_...)
+const SCIENCE = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies', agriculture: 'Agriculture' }[SUBJECT_DIR];
+const DAY = { social_studies: '20261123', agriculture: '20261126' }[SUBJECT_DIR] || '20261122';
 const LABEL = SCIENCE || { mathematics: 'Maths', english: 'English' }[SUBJECT_DIR];
 const TITLE = LABEL;
 const ENGLISH = (g) => ({ file: `20261130_english_g${g}_skills_misconceptions.sql`, when: 'owner, 18 Nov 2026', after: `20261110_curriculum.sql${g > 4 ? ` and 20261130_english_g${g - 1}_skills_misconceptions.sql (Grade ${g} prerequisites name Grade ${g - 1} skills; there is no foreign key on them, so the order is for the reviewer only)` : ''}`, why: `Grade ${g} English had a first-pass map (about one prerequisite per skill, several sub-strands without skills, no teaching pack) that no HOREB migration loaded; the depth pass of 18 Nov 2026 brought it to the Grade 5 Maths standard (a skill for every sub-strand and every testable outcome, two prerequisites and four misconceptions per skill, a teaching pack).` });
@@ -29,7 +30,7 @@ const RUN = SUBJECT_DIR === 'english' ? (GRADE >= 4 && GRADE <= 9 ? ENGLISH(GRAD
   4: { file: '20261123_maths_g4_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (it created the tables and loaded the first Grade 4 pass of 12 Nov 2026; Grade 4 prerequisites name Grade 3 outcomes, with no foreign key on them)', why: `Grade 4 Maths was loaded by 20261110_curriculum.sql with its first pass (one or two prerequisites and two or three misconceptions per skill); the depth pass of 18 Nov 2026 brought every skill to two or more prerequisites and four misconceptions, with a teaching pack. Rows a teacher has already reviewed are not overwritten.` },
   9: { file: '20261122_maths_g9_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261121_maths_g8_skills_misconceptions.sql (Grade 9 prerequisites name Grade 5 to 8 skills; there is no foreign key on them, so the order is for the reviewer only)', why: `Grade 9 Maths had outcomes only; mapped on 18 Nov 2026 to the depth standard of Grades 6, 7 and 8 (two prerequisites and four misconceptions per skill, a teaching pack).` },
 }[GRADE];
-if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 4|6|7|8|9, or science 4|5|6, or integrated_science 7|8|9, or english 4..9, or social_studies 4..9'); process.exit(1); }
+if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 4|6|7|8|9, or science 4|5|6, or integrated_science 7|8|9, or english 4..9, or social_studies 4..9, or agriculture 4..9'); process.exit(1); }
 const cur = JSON.parse(readFileSync(new URL(`../curriculum/${SUBJECT_DIR}/g${GRADE}.json`, import.meta.url), 'utf8'));
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 const arr = (a) => `ARRAY[${a.map(q).join(', ')}]::text[]`;

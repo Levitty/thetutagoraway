@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT",
+ "title": "Crop Establishment",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Prepare three small plots side by side: fine (carrots), medium (beans or maize) and coarse (sweet potato vines or arrowroot). Use jembes, forked jembes and rakes with the teacher's rules for carrying tools.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH",
+   "key_step": "The child matches the tilth to the planting material: fine for small seeds (carrot, onion), medium for medium seeds (maize, beans), coarse for large materials (tubers, vines, suckers, cuttings), and says why.",
+   "floor": {
+    "prerequisite": "Knows how to make a fine seedbed.",
+    "question": "Why break the soil fine for tiny seeds?",
+    "answer": "so they can come up"
+   },
+   "representations": [
+    "three trays of tilth",
+    "planting materials to sort",
+    "a matching chart"
+   ],
+   "steps": [
+    "Look at the size of the planting material.",
+    "Small: fine. Medium: medium. Large: coarse.",
+    "Say why."
+   ],
+   "contexts": [
+    "carrots at school",
+    "maize on a farm",
+    "sweet potato vines at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a carrot seed, a bean and a sweet potato vine."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which tilth each needs."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's match."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write fine, medium, coarse under each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_SMALL",
+     "listen_for": [
+      "Coarse tilth"
+     ],
+     "ask": "Which tilth suits small seeds like carrot?",
+     "repair": "Sow carrot seed on a lumpy tray and a fine tray; count how many come up."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_TUBER",
+     "listen_for": [
+      "Fine tilth"
+     ],
+     "ask": "Which tilth suits sweet potato cuttings?",
+     "repair": "Explain that big planting materials need air and loose clods; fine soil packs hard round them."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_MEDIUM",
+     "listen_for": [
+      "Fine tilth"
+     ],
+     "ask": "Which tilth suits maize and beans?",
+     "repair": "Lay carrot, bean and potato side by side: small, medium, large match fine, medium, coarse."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH.M_AG7_TL_MEANING",
+     "listen_for": [
+      "How fertile the soil is"
+     ],
+     "ask": "What is tilth?",
+     "repair": "Show three trays of the same soil dug to different sizes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which tilth suits arrowroot suckers?",
+     "answer": "coarse",
+     "shows": "match"
+    },
+    {
+     "question": "Which tilth suits beans?",
+     "answer": "medium",
+     "shows": "match"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP",
+   "key_step": "The child says how a seedbed is prepared to the right tilth: clear, dig (primary cultivation) when moist, remove roots and stones, break clods (secondary cultivation) to fine, medium or coarse, level and rake for small seeds.",
+   "floor": {
+    "prerequisite": "Knows which tilth suits which planting material.",
+    "question": "Which tilth for carrots?",
+    "answer": "fine"
+   },
+   "representations": [
+    "tools: jembe, forked jembe, rake",
+    "step cards",
+    "three plots"
+   ],
+   "steps": [
+    "Clear the site.",
+    "Dig when moist.",
+    "Remove roots and stones.",
+    "Break clods to the tilth needed; level and rake for small seeds."
+   ],
+   "contexts": [
+    "the school garden",
+    "a family plot",
+    "a farmer in Meru"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: rake, dig, clear."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"clear, dig, rake\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order the cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_RAKE",
+     "listen_for": [
+      "Raking"
+     ],
+     "ask": "Which is done first when preparing a seedbed?",
+     "repair": "Try to rake a hard, uncleared plot."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_WET",
+     "listen_for": [
+      "When the soil is soaking wet"
+     ],
+     "ask": "When is the best time to dig a seedbed?",
+     "repair": "Dig a lump of soaked clay: it smears and dries into hard clods."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_ROOTS",
+     "listen_for": [
+      "They add manure"
+     ],
+     "ask": "Why are weed roots removed when preparing a seedbed?",
+     "repair": "Show couch grass roots sprouting from a small piece."
+    },
+    {
+     "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP.M_AG7_TP_TOOL",
+     "listen_for": [
+      "A rake"
+     ],
+     "ask": "Which tool is used to dig hard ground first?",
+     "repair": "Show each tool and what it does to a lump of hard soil."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which tool is used for primary cultivation?",
+     "answer": "a jembe or forked jembe",
+     "shows": "tool"
+    },
+    {
+     "question": "Why not dig soaking wet soil?",
+     "answer": "it smears and dries into hard clods",
+     "shows": "timing"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
+ "title": "Uses of Domestic Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring products to class: an egg, milk, honey, a feather, a hide offcut, a little wool.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+   "key_step": "The child names the food from domestic animals (milk from cows, goats and camels; eggs from hens, ducks and turkeys; meat; honey from bees; blood in some communities) and which animal gives each.",
+   "floor": {
+    "prerequisite": "Knows the uses of domestic animals.",
+    "question": "Which animal gives eggs?",
+    "answer": "a hen"
+   },
+   "representations": [
+    "real products",
+    "an animal and product matching game",
+    "a picture of a market"
+   ],
+   "steps": [
+    "Name the food.",
+    "Name the animal that gives it.",
+    "Say whether one or many animals give it."
+   ],
+   "contexts": [
+    "breakfast at home",
+    "a dairy in Nyandarua",
+    "honey from Baringo"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"milk\" in the middle."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which animals give milk."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cow, goat, camel."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw arrows from the three animals."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_COCK",
+     "listen_for": [
+      "The cockerel"
+     ],
+     "ask": "Which bird lays the eggs we eat?",
+     "repair": "Ask the child to watch the flock: who sits on a nest?"
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_WOOL",
+     "listen_for": [
+      "A goat"
+     ],
+     "ask": "Which animal gives wool?",
+     "repair": "Show a sample of wool and a sample of goat skin and ask where each comes from."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_MILK_ALL",
+     "listen_for": [
+      "A hen"
+     ],
+     "ask": "Which of these does not give milk to the family?",
+     "repair": "List the animals the family milks."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG5_PROD_HONEY",
+     "listen_for": [
+      "Flowers make it and bees carry it"
+     ],
+     "ask": "Where does honey come from?",
+     "repair": "Show a honeycomb: the bees store and change the nectar inside it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which bird lays the eggs we usually eat?",
+     "answer": "a hen",
+     "shows": "eggs"
+    },
+    {
+     "question": "Name two animals that give milk.",
+     "answer": "any two of cow, goat, camel",
+     "shows": "milk"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+   "key_step": "The child relates domestic animals to all their uses: food, transport and work (donkeys, camels, oxen), manure, hides and wool, guarding (dogs), pest control (cats), income and cultural uses such as dowry.",
+   "floor": {
+    "prerequisite": "Knows the food domestic animals give.",
+    "question": "What food do bees give?",
+    "answer": "honey"
+   },
+   "representations": [
+    "a spider chart per animal",
+    "pictures of animals at work",
+    "a sack of manure"
+   ],
+   "steps": [
+    "Name the animal.",
+    "List food it gives.",
+    "List work and other uses.",
+    "Say how the family earns from it."
+   ],
+   "contexts": [
+    "a donkey cart in Machakos",
+    "oxen ploughing in Busia",
+    "a dog guarding a home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a donkey with a cart."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what use is shown."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"carrying, transport\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"transport\" and add \"manure\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_FOOD_ONLY",
+     "listen_for": [
+      "Only for meat"
+     ],
+     "ask": "Why does a farmer keep oxen?",
+     "repair": "Ask who ploughs the field in a family with no tractor."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_DONKEY",
+     "listen_for": [
+      "To give milk for tea"
+     ],
+     "ask": "What is the main use of a donkey on many farms?",
+     "repair": "Ask who carries water in the dry season."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_DUNG",
+     "listen_for": [
+      "It cannot, it is only waste"
+     ],
+     "ask": "How can cow dung help a vegetable garden?",
+     "repair": "Compare kale grown with and without manure."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG5_USE_CAMEL",
+     "listen_for": [
+      "Only carrying"
+     ],
+     "ask": "What do camels give families in northern Kenya?",
+     "repair": "Show a picture of camel milk in a market in Isiolo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a use of cattle that is not food.",
+     "answer": "ploughing, manure, hides or income",
+     "shows": "non-food"
+    },
+    {
+     "question": "Why is dung useful?",
+     "answer": "it is manure for crops or fuel",
+     "shows": "manure"
+    }
+   ]
+  }
+ ]
+}

@@ -3,15 +3,15 @@
  "subject_key": "agriculture",
  "grade": 4,
  "source": "KICD Agriculture, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical and attitude outcomes are listed in docs/qa/agriculture-g4-non-question-outcomes-2026-11-12.md",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical and attitude outcomes are listed in docs/qa/agriculture-g4-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g4)",
  "totals": {
   "strands": 4,
   "sub_strands": 13,
   "outcomes": 39,
   "lessons": 120,
   "skills": 28,
-  "prerequisites": 25,
-  "misconceptions": 85
+  "prerequisites": 72,
+  "misconceptions": 112
  },
  "sub_strands": [
   {
@@ -91,6 +91,20 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 picked out waste materials that can be reused; compost reuses the ones that rot. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.SOIL.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing what good soil is like tells the child what compost adds to it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -111,7 +125,7 @@
      "outcomes": [
       "AGRI.G4.CONSER.SOIL_CONSERVATION.b"
      ],
-     "mastery": "The child mixes dry and fresh materials in layers with a little soil or dung, keeps the heap damp (not soaking) and covered, turns it now and then, and waits until it is dark, crumbly and smells like soil before using it on the garden. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child mixes dry and fresh materials in layers with a little soil or dung, keeps the heap damp (not soaking) and covered, turns it now and then, and waits until it is dark, crumbly and smells like soil before using it on the garden. The practical (preparing a compost heap in the school garden) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the steps in order",
       "say what the heap needs",
@@ -130,6 +144,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Science Grade 4 chose the right way to manage waste; composting is the way for plant waste. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.SOIL.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 soil conservation activities lead into adding compost to the soil. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -142,7 +170,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -241,6 +270,38 @@
      "feedback": "Waste needs weeks to rot. Compost is ready when it is dark, crumbly and smells like soil.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_DISEASED",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+     "error": "Puts diseased plants and weeds full of seed on the compost heap.",
+     "example": {
+      "question": "Which of these should stay off the compost heap?",
+      "wrong_answer": "Dry maize stalks",
+      "correct_answer": "Weeds with ripe seeds"
+     },
+     "cause": "The child thinks all plant material is the same once it rots and does not know seeds and disease can live through a cool heap.",
+     "reveals": "Offer \"Dry maize stalks\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a weed head shedding seed; ask where the seeds go if it is put on the heap and the compost is spread on the garden.",
+     "feedback": "Weeds with seeds and sick plants can spread to the garden in the compost. Keep them off the heap.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_LAYERS",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+     "error": "Thinks the materials are simply thrown in a pile with no layers and no soil or manure between them.",
+     "example": {
+      "question": "How are compost materials put on the heap?",
+      "wrong_answer": "Thrown in one pile any way",
+      "correct_answer": "In layers: dry material, green material, manure or soil, then water"
+     },
+     "cause": "The child has seen rubbish heaps grow by dumping and thinks a compost heap grows the same way.",
+     "reveals": "Offer \"Thrown in one pile any way\" next to the right answer and ask the question again in a new context.",
+     "help": "Build a model heap in a clear bottle with coloured layers: dry, green, soil, then sprinkle water; compare it with a jumbled bottle after two weeks.",
+     "feedback": "Compost is built in layers of dry and green material with soil or manure between, then watered.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -325,6 +386,20 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child first says what conserving water means before judging a way of doing it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drip irrigation feeds the roots; Science Grade 4 taught that roots take in water. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -341,7 +416,7 @@
      "outcomes": [
       "AGRI.G4.CONSER.WATER_CONSERVATION.b"
      ],
-     "mastery": "The child puts the water container higher than the bed, makes a tiny hole in a bottle or tube, puts the dripping end beside the plant roots, fills the container, and checks that the hole is not blocked by soil. A big hole would let all the water out at once. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts the water container higher than the bed, makes a tiny hole in a bottle or tube, puts the dripping end beside the plant roots, fills the container, and checks that the hole is not blocked by soil. A big hole would let all the water out at once. The practical (setting up and running a bottle or bucket drip on crops) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the set-up steps in order",
       "say where the water container goes",
@@ -360,6 +435,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Water runs down from a raised container because gravity pulls it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.WATER.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 named ways of storing water; the drip container is one of them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -372,7 +461,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -471,6 +561,38 @@
      "feedback": "The water must fall where the roots are, so the drip end is placed next to the plant.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_WHENEVER",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+     "error": "Thinks drip irrigation means watering only when it rains a little.",
+     "example": {
+      "question": "What is drip irrigation?",
+      "wrong_answer": "Watering when it drizzles",
+      "correct_answer": "Water dripping slowly to the roots from a pipe or container"
+     },
+     "cause": "The word \"drip\" reminds the child of light rain.",
+     "reveals": "Offer \"Watering when it drizzles\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the bottle dripping beside a plant on a dry day; ask where the water comes from.",
+     "feedback": "Drip irrigation is water we give slowly, drop by drop, to the roots, even on a dry day.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_NOCHECK",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
+     "error": "Thinks a drip system, once set up, needs no checking or refilling.",
+     "example": {
+      "question": "A bottle drip has been set up. What must you keep doing?",
+      "wrong_answer": "Nothing, it works by itself",
+      "correct_answer": "Refill it and check the hole is not blocked"
+     },
+     "cause": "The child thinks setting up is the whole job, as with planting.",
+     "reveals": "Offer \"Nothing, it works by itself\" next to the right answer and ask the question again in a new context.",
+     "help": "Leave one bottle unchecked for a week in class; it runs dry or the hole clogs with soil.",
+     "feedback": "A drip bottle must be refilled and its hole kept clear, or the plant gets no water.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -555,6 +677,20 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Fuels are sorted as solid (firewood, charcoal), liquid (paraffin) and gas (cooking gas). Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 listed sources of heat; fuels are the ones burnt at home. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -566,7 +702,7 @@
      "outcomes": [
       "AGRI.G4.CONSER.FUEL_CONSERVATION.b"
      ],
-     "mastery": "The child puts a lid on the pot, cuts food small, soaks hard foods such as beans before cooking, uses dry firewood, keeps the fire small once the pot boils, cooks several foods on one fire and uses an energy-saving jiko, and does not think a big flame cooks food faster. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child puts a lid on the pot, cuts food small, soaks hard foods such as beans before cooking, uses dry firewood, keeps the fire small once the pot boils, cooks several foods on one fire and uses an energy-saving jiko, and does not think a big flame cooks food faster. The practical (using fuel-saving practices while cooking with the teacher) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the fuel-saving habit",
       "say why a habit saves fuel",
@@ -585,10 +721,25 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Cooking is a use of heat; saving fuel means keeping that heat in the pot. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 conserved heat; covering a pot does the same. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -687,6 +838,38 @@
      "feedback": "Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_ELECTRIC",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+     "error": "Thinks electricity is not a fuel used for cooking because you cannot see it burn.",
+     "example": {
+      "question": "Which of these is used for cooking in some homes?",
+      "wrong_answer": "Only things that burn with a flame",
+      "correct_answer": "Electricity, as well as firewood, charcoal, paraffin and gas"
+     },
+     "cause": "The child thinks a fuel must be something that burns with a flame.",
+     "reveals": "Offer \"Only things that burn with a flame\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of an electric cooker and ask what makes it hot.",
+     "feedback": "Electricity can cook food too, in an electric cooker or kettle.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_SOAK",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
+     "error": "Puts dry beans straight on the fire without soaking them first.",
+     "example": {
+      "question": "How can you use less fuel to cook dry beans?",
+      "wrong_answer": "Cook them dry straight away",
+      "correct_answer": "Soak them first so they cook faster"
+     },
+     "cause": "The child does not link a shorter cooking time with less fuel.",
+     "reveals": "Offer \"Cook them dry straight away\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a soaked and a dry bean: press both, then count how long each takes to cook in the demonstration.",
+     "feedback": "Soaking beans first makes them cook faster, so less fuel is burnt.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -764,7 +947,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Animals feed; knowing what each eats tells which crop part it damages. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "To say what damage is done the child names the plant part: roots, stem, leaves or seeds. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       {
        "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
@@ -779,7 +977,7 @@
      "outcomes": [
       "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.b"
      ],
-     "mastery": "The child makes the frame from two sticks in a cross, dresses it in old clothes, adds a hat, shiny or noisy things (old tins, strips of cloth or plastic that flap), sets it in the middle of the crop where it can be seen, moves it often, and does not use poison or traps because a scarecrow only scares animals away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child makes the frame from two sticks in a cross, dresses it in old clothes, adds a hat, shiny or noisy things (old tins, strips of cloth or plastic that flap), sets it in the middle of the crop where it can be seen, moves it often, and does not use poison or traps because a scarecrow only scares animals away. The practical (making and putting up a scarecrow in the school garden) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the material for a scarecrow",
       "say why it must be moved",
@@ -798,6 +996,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Animals respond to what they see and hear; a scarecrow works on that. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.PLANTS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 cared for plants with local materials; a scarecrow is built from them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -806,7 +1018,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -905,6 +1118,38 @@
      "feedback": "Birds must see the scarecrow from far. Put it high in the middle of the crop.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_DOMESTIC",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+     "error": "Counts goats and chickens that wander into the garden as wild animals.",
+     "example": {
+      "question": "Which of these is a small wild animal that destroys crops?",
+      "wrong_answer": "A neighbour's goat",
+      "correct_answer": "A mole rat"
+     },
+     "cause": "The child sorts by the damage done, not by whether people keep the animal.",
+     "reveals": "Offer \"A neighbour's goat\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who owns the goat and who feeds it; then ask who owns the mole rat.",
+     "feedback": "Goats and chickens are domestic: people keep them. Moles, squirrels, rats and birds such as weaver birds are wild.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_DULL",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+     "error": "Makes the scarecrow from dull, stiff material that does not move or rustle.",
+     "example": {
+      "question": "Which scarecrow scares birds better?",
+      "wrong_answer": "A stiff one made of dull sacks",
+      "correct_answer": "One with bright, loose cloth and tins that move and rattle in the wind"
+     },
+     "cause": "The child thinks a human shape alone frightens the birds.",
+     "reveals": "Offer \"A stiff one made of dull sacks\" next to the right answer and ask the question again in a new context.",
+     "help": "Hang a still sack and a flapping bright cloth; ask the class which they notice first from far away.",
+     "feedback": "Birds fear what moves and makes noise. Bright, loose cloth and rattling tins work best.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -989,6 +1234,20 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.PLANTS.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 made a kitchen garden; now the child names crops sown straight into it. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Seeds and the young roots and leaves that grow from them are parts of a plant. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1005,7 +1264,7 @@
      "outcomes": [
       "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.b"
      ],
-     "mastery": "The child digs the soil, breaks the lumps and removes stones and weeds until it is fine like flour, makes a flat bed, sows tiny seeds very shallow in lines (mixed with dry sand so they spread thinly), covers them lightly, waters gently, and thins crowded seedlings so each has room. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child digs the soil, breaks the lumps and removes stones and weeds until it is fine like flour, makes a flat bed, sows tiny seeds very shallow in lines (mixed with dry sand so they spread thinly), covers them lightly, waters gently, and thins crowded seedlings so each has room. The practical (sowing tiny seeds in a finely prepared seedbed) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the steps in order",
       "say how deep to sow",
@@ -1024,6 +1283,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.SOIL.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Telling fine soil from lumpy soil comes from describing soils in Grade 3. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.PLANTS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 plant-care activities: watering and protecting young plants. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1032,7 +1305,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -1131,6 +1405,38 @@
      "feedback": "Crowded plants fight for light, water and food. Thin them so each can grow big.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_NAME",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+     "error": "Names spinach or sukuma wiki as sown from tiny seeds straight in the plot when the class grew it from seedlings.",
+     "example": {
+      "question": "Which crop is sown straight into the plot from tiny seeds?",
+      "wrong_answer": "Sukuma wiki, from transplanted seedlings",
+      "correct_answer": "Carrot"
+     },
+     "cause": "The child names a crop with small seeds without asking how it is usually planted.",
+     "reveals": "Offer \"Sukuma wiki, from transplanted seedlings\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a carrot: ask whether a carrot root could be moved without breaking it. Root crops are sown where they grow.",
+     "feedback": "Carrots are sown straight in the bed because the root would be damaged if moved.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_WATERHARD",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+     "error": "Pours water hard from a bucket on newly sown tiny seeds.",
+     "example": {
+      "question": "How should a bed of tiny seeds be watered after sowing?",
+      "wrong_answer": "Pour a bucket over it quickly",
+      "correct_answer": "Gently, with a watering can with a fine rose"
+     },
+     "cause": "The child thinks more water at once is better and does not picture the seeds washing away.",
+     "reveals": "Offer \"Pour a bucket over it quickly\" next to the right answer and ask the question again in a new context.",
+     "help": "Sow sand-coloured seeds in a tray and pour water hard: watch them wash to one corner.",
+     "feedback": "Water tiny seeds gently with a fine rose so they are not washed away.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1215,6 +1521,20 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.PLANTS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 sorted plants into edible and non-edible; fruits are edible plants. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 sorted market food into fruits and vegetables. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -1226,7 +1546,7 @@
      "outcomes": [
       "AGRI.G4.FOOD_P.GROWING_FRUITS.b"
      ],
-     "mastery": "The child digs a hole, mixes the topsoil with manure, sets the seedling at the same depth it grew in the bag, firms the soil, waters it, puts a mulch of dry grass around (not touching the stem), gives space between plants, and keeps watering in the dry weather while it is young. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child digs a hole, mixes the topsoil with manure, sets the seedling at the same depth it grew in the bag, firms the soil, waters it, puts a mulch of dry grass around (not touching the stem), gives space between plants, and keeps watering in the dry weather while it is young. The practical (growing a fruit crop suited to the locality) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the planting steps in order",
       "say what goes in the hole",
@@ -1245,6 +1565,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.PLANTS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 plant care (watering, protecting) is what a young fruit tree needs. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The planting hole is filled with topsoil mixed with compost or manure. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1253,7 +1587,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -1368,6 +1703,22 @@
      "feedback": "A young seedling has short roots and dries quickly. It needs regular water and a mulch.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_VEG",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+     "error": "Calls tomato, pumpkin and avocado vegetables, so leaves them out of a list of fruits.",
+     "example": {
+      "question": "Is an avocado a fruit?",
+      "wrong_answer": "No, it is a vegetable because it is not sweet",
+      "correct_answer": "Yes, it is a fruit: it grows from the flower and holds the seed"
+     },
+     "cause": "The child sorts by taste (sweet = fruit) and by how food is eaten at home.",
+     "reveals": "Offer \"No, it is a vegetable because it is not sweet\" next to the right answer and ask the question again in a new context.",
+     "help": "Cut an avocado and a tomato: point at the seeds inside. A fruit holds the seeds.",
+     "feedback": "An avocado holds its seed inside, so it is a fruit, even though it is not sweet.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1452,6 +1803,13 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.RESOUR.ANIMALS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 named the domestic animals in the immediate environment. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1486,6 +1844,20 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.ANIMALS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 related food items to the animals that give them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.ANIMALS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 explained why domestic animals matter to people. Proposed, to confirm by a CBC Agriculture teacher.",
        "status": "proposed"
       }
      ],
@@ -1598,6 +1970,38 @@
      "feedback": "Donkeys, camels and oxen are strong enough to carry or pull. Hens and rabbits are too small.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_PET",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+     "error": "Thinks cats and dogs are not domestic animals because they are not eaten.",
+     "example": {
+      "question": "Is a dog a domestic animal?",
+      "wrong_answer": "No, we do not eat it",
+      "correct_answer": "Yes, people keep it at home"
+     },
+     "cause": "The child links domestic animals only with food animals.",
+     "reveals": "Offer \"No, we do not eat it\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who feeds and shelters the dog. Domestic means kept and cared for by people.",
+     "feedback": "A dog is a domestic animal: people keep it, feed it and shelter it.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_DOG",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+     "error": "Thinks dogs and cats are kept for no use.",
+     "example": {
+      "question": "What use is a cat on a farm?",
+      "wrong_answer": "None, it is only a pet",
+      "correct_answer": "It catches rats and mice"
+     },
+     "cause": "The child does not see guarding or catching pests as a use.",
+     "reveals": "Offer \"None, it is only a pet\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what eats the maize in a store at night, and what chases it away.",
+     "feedback": "Cats catch rats and dogs guard the home. These are uses too.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1682,6 +2086,20 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 classified food into three groups; a balanced meal has all three. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.FAMILY_NEEDS.d",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 selected food for a healthy body. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1717,6 +2135,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 started the three food groups; Grade 4 names them by their job. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1737,7 +2162,7 @@
      "outcomes": [
       "AGRI.G4.FOOD_P.BALANCED_MEAL.b"
      ],
-     "mastery": "The child picks the plate that has an energy food, a body-building food and a protective food (for example ugali, beans and sukuma wiki), spots the group a plate is missing, adds one food to fix it, and does not count a drink of soda or sweets as a food group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child picks the plate that has an energy food, a body-building food and a protective food (for example ugali, beans and sukuma wiki), spots the group a plate is missing, adds one food to fix it, and does not count a drink of soda or sweets as a food group. The practical (selecting foods from the three groups for a balanced meal) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the balanced meal",
       "say which group a meal is missing",
@@ -1756,6 +2181,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The child picks a balanced plate because they know why it matters. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1764,7 +2196,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -1911,6 +2344,54 @@
      "feedback": "Soda and sweets give sugar only. A fruit or vegetable gives protective food.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_MORE",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+     "error": "Thinks eating a lot makes a meal balanced.",
+     "example": {
+      "question": "What makes a meal balanced?",
+      "wrong_answer": "A very big plate of food",
+      "correct_answer": "Foods from all the food groups in the right amounts"
+     },
+     "cause": "The child links \"balanced\" with plenty.",
+     "reveals": "Offer \"A very big plate of food\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a big plate of only rice next to a smaller plate of rice, beans and cabbage; ask which has all three groups.",
+     "feedback": "A balanced meal has foods from all the groups, not just a lot of food.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_MILK",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+     "error": "Puts milk with the drinks that give energy, not with the body-building foods.",
+     "example": {
+      "question": "Which group is milk in?",
+      "wrong_answer": "Energy-giving foods",
+      "correct_answer": "Body-building foods"
+     },
+     "cause": "The child thinks of milk as a drink like tea or soda.",
+     "reveals": "Offer \"Energy-giving foods\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what young animals and babies grow on; milk builds the body.",
+     "feedback": "Milk is a body-building food, like eggs, meat and beans.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_TWO",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+     "error": "Picks a plate with two groups, such as ugali and beans, and calls it balanced.",
+     "example": {
+      "question": "Which meal is balanced?",
+      "wrong_answer": "Ugali and beans",
+      "correct_answer": "Ugali, beans and sukuma wiki"
+     },
+     "cause": "The child checks for energy and body-building foods and forgets protective foods.",
+     "reveals": "Offer \"Ugali and beans\" next to the right answer and ask the question again in a new context.",
+     "help": "Tick the groups on a plate chart: energy, body-building, protective. One box stays empty.",
+     "feedback": "Ugali and beans have no protective food. Add a vegetable or fruit to balance the meal.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1998,6 +2479,13 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Boiling and steaming use water and steam; the child knows liquid and gas. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2014,7 +2502,7 @@
      "outcomes": [
       "AGRI.G4.FOOD_P.COOKING_FOOD.b"
      ],
-     "mastery": "The child boils beans, githeri and rice, steams soft foods such as sweet potato, roasts maize cobs, shallow fries eggs and chapati, cooks hard foods longer than soft ones, and does not overcook green vegetables because they lose colour and goodness. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child boils beans, githeri and rice, steams soft foods such as sweet potato, roasts maize cobs, shallow fries eggs and chapati, cooks hard foods longer than soft ones, and does not overcook green vegetables because they lose colour and goodness. The practical (cooking a food by boiling or shallow frying with the teacher) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the method for the food",
       "say how long hard and soft foods need",
@@ -2033,10 +2521,18 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Green vegetables are protective foods whose goodness is lost with long cooking. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     },
     {
      "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
@@ -2044,7 +2540,7 @@
      "outcomes": [
       "AGRI.G4.FOOD_P.COOKING_FOOD.b"
      ],
-     "mastery": "The child washes hands before cooking, asks a grown-up to help with the fire or stove, turns pot handles inwards, uses a cloth to hold a hot pot, never leaves a cooking fire alone, never uses water on an oil fire (a lid smothers it), and washes the pots and wipes the table after. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child washes hands before cooking, asks a grown-up to help with the fire or stove, turns pot handles inwards, uses a cloth to hold a hot pot, never leaves a cooking fire alone, never uses water on an oil fire (a lid smothers it), and washes the pots and wipes the table after. The practical (cooking safely and leaving the kitchen clean) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the safe action",
       "say why an action is dangerous",
@@ -2070,6 +2566,13 @@
        "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 named common accidents at home; burns and scalds are among them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2078,7 +2581,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2225,6 +2729,54 @@
      "feedback": "A cooking fire must never be left alone. A pot can boil dry or burn and the fire can spread.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_BOIL",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+     "error": "Thinks boiling means only heating water, not cooking food in it.",
+     "example": {
+      "question": "Which is cooked by boiling?",
+      "wrong_answer": "Nothing, boiling is only for water",
+      "correct_answer": "Eggs, potatoes or rice cooked in boiling water"
+     },
+     "cause": "The child has seen water boiled for tea and drinking and links the word only with water.",
+     "reveals": "Offer \"Nothing, boiling is only for water\" next to the right answer and ask the question again in a new context.",
+     "help": "Show an egg going into a pan of boiling water and coming out cooked.",
+     "feedback": "Boiling cooks food in water that is bubbling hot, like eggs and potatoes.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_NOSALT",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
+     "error": "Thinks the method does not matter as long as the food is hot.",
+     "example": {
+      "question": "Why cook sukuma wiki quickly instead of boiling it for an hour?",
+      "wrong_answer": "It makes no difference",
+      "correct_answer": "Long cooking destroys its goodness and spoils the taste and colour"
+     },
+     "cause": "The child judges cooking only by whether food is hot and soft.",
+     "reveals": "Offer \"It makes no difference\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare bright green quickly cooked sukuma with grey overcooked sukuma; ask which looks and tastes better.",
+     "feedback": "Cook green vegetables for a short time to keep their goodness and colour.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_DIRTY",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
+     "error": "Thinks the kitchen can be cleaned the next day.",
+     "example": {
+      "question": "When should the pots and surfaces be cleaned after cooking?",
+      "wrong_answer": "The next day",
+      "correct_answer": "Straight after cooking and eating"
+     },
+     "cause": "The child does not link leftover food with flies and germs.",
+     "reveals": "Offer \"The next day\" next to the right answer and ask the question again in a new context.",
+     "help": "Leave a crumb of food on a plate overnight in a jar; look at the flies or mould the next day.",
+     "feedback": "Clean pots and surfaces straight after cooking so flies and germs do not gather.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2305,7 +2857,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 named materials used to clean the body. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Science Grade 4 linked clean habits with a healthy digestive system. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       {
        "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
@@ -2320,7 +2887,7 @@
      "outcomes": [
       "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.b"
      ],
-     "mastery": "The child washes hands before eating or cooking and after using the toilet, playing outside or touching animals, wets the hands, rubs soap all over (palms, backs, between the fingers and under the nails) for about as long as it takes to sing a short song, rinses in clean running water and dries on a clean cloth or in the air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child washes hands before eating or cooking and after using the toilet, playing outside or touching animals, wets the hands, rubs soap all over (palms, backs, between the fingers and under the nails) for about as long as it takes to sing a short song, rinses in clean running water and dries on a clean cloth or in the air. The practical (applying hand washing and other personal hygiene practices) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "pick the time to wash hands",
       "put the steps in order",
@@ -2339,10 +2906,18 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 washed hands, face and feet with local materials. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2441,6 +3016,38 @@
      "feedback": "Wash before eating or cooking, and after the toilet, playing outside or touching animals.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_NAILS",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+     "error": "Thinks long nails are fine as long as the hands are washed.",
+     "example": {
+      "question": "Why should nails be kept short and clean?",
+      "wrong_answer": "They do not matter if hands are washed",
+      "correct_answer": "Dirt and germs hide under long nails"
+     },
+     "cause": "The child washes the palms and does not think about the space under the nails.",
+     "reveals": "Offer \"They do not matter if hands are washed\" next to the right answer and ask the question again in a new context.",
+     "help": "Use a toothpick (gently) to show the dirt under a long nail after gardening.",
+     "feedback": "Germs hide under long nails. Keep nails short and clean.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_TOWEL",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
+     "error": "Dries washed hands on dirty clothes or a shared dirty towel.",
+     "example": {
+      "question": "How should you dry your hands after washing?",
+      "wrong_answer": "On my dirty shirt",
+      "correct_answer": "In the air or on a clean towel of my own"
+     },
+     "cause": "The child thinks once hands are washed, they stay clean whatever they touch.",
+     "reveals": "Offer \"On my dirty shirt\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask where the germs on the dirty shirt go when wet hands touch it.",
+     "feedback": "Dry clean hands in the air or on a clean towel, not on dirty clothes.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2525,6 +3132,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 named materials for cleaning a home. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_HOME.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 named the materials for cleaning personal and common items. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2541,7 +3162,7 @@
      "outcomes": [
       "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.b"
      ],
-     "mastery": "The child opens the windows, dusts high places first, sweeps the floor second and mops last, washes the cleanest utensils (cups, plates) first and greasy sufurias last, uses a broom for dry dirt and a mop for a wet clean, and washes the cloths after use. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child opens the windows, dusts high places first, sweeps the floor second and mops last, washes the cleanest utensils (cups, plates) first and greasy sufurias last, uses a broom for dry dirt and a mop for a wet clean, and washes the cloths after use. The practical (cleaning a room with the right methods and order) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the cleaning jobs in order",
       "pick the right tool",
@@ -2560,6 +3181,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_HOME.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 cleaned the home; Grade 4 puts the jobs in order. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2568,7 +3196,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2667,6 +3296,38 @@
      "feedback": "Wash the cleanest things first (cups, plates) and the greasy pots last, so the water stays clean longer.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_WIPE",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+     "error": "Thinks wiping and scrubbing are the same job.",
+     "example": {
+      "question": "Which method suits a dirty cemented veranda?",
+      "wrong_answer": "Wiping with a dry cloth",
+      "correct_answer": "Scrubbing with a brush, soap and water"
+     },
+     "cause": "The child knows both use a cloth or brush and does not match the method to how dirty the surface is.",
+     "reveals": "Offer \"Wiping with a dry cloth\" next to the right answer and ask the question again in a new context.",
+     "help": "Try a dry cloth on a muddy floor tile, then a brush and soapy water.",
+     "feedback": "Hard, very dirty floors are scrubbed. Wiping is for light dust on smooth surfaces.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_WINDOWS",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+     "error": "Opens no windows while sweeping, so dust stays in the room.",
+     "example": {
+      "question": "What should you do before sweeping a room?",
+      "wrong_answer": "Close the windows",
+      "correct_answer": "Open the windows and move the furniture"
+     },
+     "cause": "The child thinks closed windows keep the dust from blowing about.",
+     "reveals": "Offer \"Close the windows\" next to the right answer and ask the question again in a new context.",
+     "help": "Sweep a dusty corner with windows closed and open; watch where the dust goes.",
+     "feedback": "Open windows to let dust and stale air out before you sweep.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2744,7 +3405,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 named common accidents at school; protective clothing prevents some of them. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.PLANTS.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 3 safety when handling plants: thorns and sap call for gloves. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -2754,7 +3430,7 @@
      "outcomes": [
       "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.b"
      ],
-     "mastery": "The child shakes or rinses off the dirt, washes the item with soap and water (scrubbing boots and rubber gloves), rinses and dries it fully in the shade or sun, keeps it in a clean dry place, does not share a dirty mask or gloves, and knows clean protective clothing keeps germs and chemicals off the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child shakes or rinses off the dirt, washes the item with soap and water (scrubbing boots and rubber gloves), rinses and dries it fully in the shade or sun, keeps it in a clean dry place, does not share a dirty mask or gloves, and knows clean protective clothing keeps germs and chemicals off the body. The practical (cleaning protective clothing for hygiene) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the cleaning steps in order",
       "say where to dry and keep them",
@@ -2773,6 +3449,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_HOME.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 2 cleaned personal and common items with local materials. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_HOME.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Telling personal items from common ones explains why masks and gloves are not shared. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2781,7 +3471,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -2880,6 +3571,38 @@
      "feedback": "Dirty protective clothing can pass germs from one child to another. Clean it first.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_APRON",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+     "error": "Thinks an apron is for keeping warm.",
+     "example": {
+      "question": "What does an apron protect?",
+      "wrong_answer": "It keeps the body warm",
+      "correct_answer": "It keeps clothes clean from food, dirt and splashes"
+     },
+     "cause": "The child sees an apron as an extra layer of clothing.",
+     "reveals": "Offer \"It keeps the body warm\" next to the right answer and ask the question again in a new context.",
+     "help": "Splash water on an apron worn over a shirt; the shirt stays dry.",
+     "feedback": "An apron keeps your clothes clean when you cook or garden.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_BOOTS",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
+     "error": "Washes only the outside of gumboots and leaves the inside wet and dirty.",
+     "example": {
+      "question": "How should gumboots be cleaned?",
+      "wrong_answer": "Wash the outside only",
+      "correct_answer": "Wash outside and inside, then dry them upside down"
+     },
+     "cause": "The child cleans what can be seen.",
+     "reveals": "Offer \"Wash the outside only\" next to the right answer and ask the question again in a new context.",
+     "help": "Feel inside a boot left wet; it smells and stays damp.",
+     "feedback": "Wash gumboots inside and out, then stand them upside down to dry.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2958,7 +3681,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Even and uneven tacking are told apart by measuring stitch lengths in centimetres. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Stitch lengths are given in centimetres. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       {
        "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
@@ -2973,7 +3711,7 @@
      "outcomes": [
       "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.b"
      ],
-     "mastery": "The child pins the pieces together, tacks with long loose stitches and a contrasting thread, makes the final stitching (by hand or on a machine) next to the tacking, and then pulls the tacking out, and uses diagonal tacking to hold thick or slippery layers flat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "mastery": "The child pins the pieces together, tacks with long loose stitches and a contrasting thread, makes the final stitching (by hand or on a machine) next to the tacking, and then pulls the tacking out, and uses diagonal tacking to hold thick or slippery layers flat. The practical (making an item using tacking stitches) is marked by the teacher with the KICD rubric indicator; the app asks only the knowledge half. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
      "question_forms": [
       "put the steps in order",
       "pick the tacking for a job",
@@ -2992,6 +3730,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Tacking stitches are measured (about 1 cm, gaps about 1 cm) as they are sewn. Proposed, to confirm by a CBC Agriculture teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3000,7 +3745,8 @@
        "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
       }
      ],
-     "status": "proposed"
+     "status": "proposed",
+     "assessed_by": "teacher marks the practical with the KICD rubric"
     }
    ],
    "misconceptions": [
@@ -3098,6 +3844,38 @@
      "help": "Compare how long it takes to unpick tiny stitches and long stitches.",
      "feedback": "Long loose stitches in a thread that shows are easy to see and to pull out.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_DIAG",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+     "error": "Thinks diagonal tacking is used to join a seam in a straight line.",
+     "example": {
+      "question": "What is diagonal tacking used for?",
+      "wrong_answer": "Joining a straight seam",
+      "correct_answer": "Holding layers of cloth flat together over a large area"
+     },
+     "cause": "The child thinks every tacking stitch is for seams.",
+     "reveals": "Offer \"Joining a straight seam\" next to the right answer and ask the question again in a new context.",
+     "help": "Show slanting stitches holding a lining flat; ask why they slope.",
+     "feedback": "Diagonal tacking holds layers flat over a wide area. Even tacking is for straight seams.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_KNOT",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+     "error": "Ties a big knot at both ends so the tacking cannot come out.",
+     "example": {
+      "question": "How does tacking start and end?",
+      "wrong_answer": "With a big knot at each end",
+      "correct_answer": "With a small knot or a backstitch to start and a loose end so it pulls out easily"
+     },
+     "cause": "The child thinks every stitch must be fixed firmly.",
+     "reveals": "Offer \"With a big knot at each end\" next to the right answer and ask the question again in a new context.",
+     "help": "Pull out a tacking thread with and without knots at both ends.",
+     "feedback": "Tacking is made to come out, so it is finished loosely, not tied at both ends.",
+     "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

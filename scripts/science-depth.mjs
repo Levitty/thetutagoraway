@@ -13,6 +13,7 @@
 //          curriculum/<dir>/teaching/g<N>/<number>-<name>.json with the Maths rules (scripts/maths-teaching-pack-file.mjs)
 // A sub-strand's entry: { key, packNotes, pre, mis, fix, pack }. Everything stays proposed or draft until a teacher reviews it.
 // Social Studies Grades 4-9 use the same pass (18 Nov 2026): dir 'social_studies', data in scripts/data/socialstudies-depth/.
+// Agriculture Grades 4-9 too (18 Nov 2026): dir 'agriculture', through scripts/agriculture-depth.mjs (new skills, outcomes, rubric lines).
 // With { derive: true } a pack entry may leave out a misconception: its listen-for, ask and repair are then the library's own
 // wrong answer, example question and help, so every library misconception is in the pack without writing it twice.
 // ============================================================================
@@ -24,7 +25,7 @@ const J = (f) => JSON.parse(readFileSync(new URL(`curriculum/${f}.json`, ROOT), 
 const fail = (m) => { throw new Error(m); };
 const FILES = ['science/g4', 'science/g5', 'science/g6', 'integrated_science/g7', 'integrated_science/g8', 'integrated_science/g9',
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `mathematics/g${n}`), 'environmental_activities/g1', 'environmental_activities/g2', 'environmental_activities/g3',
-  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`)];
+  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`), ...[4, 5, 6, 7, 8, 9].map(n => `agriculture/g${n}`), 'pre_technical/g7', 'pre_technical/g8', 'pre_technical/g9'];
 
 function knownCodes() {
   const skills = new Set(), outcomes = new Set();
@@ -38,7 +39,7 @@ function knownCodes() {
 // Review marks from the blind reviews of 13 Nov 2026 (Science G4 and G6, Integrated Science G7), kept by misconception code so a
 // rebuild never drops them; scripts/build-subject-map.mjs carries them into engine/data/curriculum/<subject>.g<N>.misconceptions.json.
 const REVIEWS = JSON.parse(readFileSync(new URL('scripts/data/science-depth/reviews.json', ROOT), 'utf8'));
-const SUBJECT = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies' };
+const SUBJECT = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies', agriculture: 'Agriculture' };
 
 // g: the grade's JSON after its own build; depth: the sub-strand entries; dir: 'science' | 'integrated_science'.
 export function applyDepth(g, depth, { dir, grade, prefix, derive = false }) {

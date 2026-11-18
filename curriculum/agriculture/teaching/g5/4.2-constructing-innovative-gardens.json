@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_",
+ "title": "Constructing Innovative Gardens",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Build a sack garden with a stone column in the middle, or a horizontal tyre or bottle garden, from local and reused materials.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+   "key_step": "The child tells a vertical garden (grows upwards: sack, stacked tyres, hanging bottles, pockets on a wall) from a horizontal garden (spread flat: tyres laid flat, raised boxes, keyhole bed) and says both save land and water.",
+   "floor": {
+    "prerequisite": "Knows the practices in growing vegetables.",
+    "question": "Name a practice in growing vegetables.",
+    "answer": "watering"
+   },
+   "representations": [
+    "pictures of each garden",
+    "a model sack and a tray garden",
+    "a sorting chart"
+   ],
+   "steps": [
+    "Look at the direction it grows.",
+    "Upwards: vertical. Flat: horizontal.",
+    "Say what it saves."
+   ],
+   "contexts": [
+    "a sack garden in Kibera",
+    "a tyre garden at school",
+    "a bottle wall garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tall sack with plants on its sides."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sack.",
+     "say": "Vertical or horizontal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"vertical\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"grows upwards: vertical\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_NEED_LAND",
+     "listen_for": [
+      "A horizontal garden"
+     ],
+     "ask": "Which kind of garden needs the least ground?",
+     "repair": "Stand a sack on the ground and measure the ground it covers."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_SWAP",
+     "listen_for": [
+      "Horizontal"
+     ],
+     "ask": "A sack garden is which kind of garden?",
+     "repair": "Stand a sack up and lay a tray flat and name each one."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG5_GTYPE_TOWN",
+     "listen_for": [
+      "Only people in towns"
+     ],
+     "ask": "Who can use a sack garden?",
+     "repair": "Ask where a village school with rocky ground could grow kale."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG5_GTYPE_TYRE",
+     "listen_for": [
+      "Vertical"
+     ],
+     "ask": "Old tyres laid flat on the ground and filled with soil make which garden?",
+     "repair": "Lay a tyre flat and one stacked in a tower; ask which grows upwards."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a sack garden vertical or horizontal?",
+     "answer": "vertical",
+     "shows": "type"
+    },
+    {
+     "question": "Why do people use vertical gardens?",
+     "answer": "they need little land",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
+   "key_step": "The child says how an innovative garden is built (a sack or container with drainage holes, a central stone column for water in a sack, soil mixed with manure, planted at the top and sides) and which crops suit it (kale, spinach, onions, herbs, not maize or cassava).",
+   "floor": {
+    "prerequisite": "Knows vertical from horizontal gardens.",
+    "question": "What type is a sack garden?",
+    "answer": "vertical"
+   },
+   "representations": [
+    "a sack, stones, a tin with both ends cut",
+    "soil and manure",
+    "seedlings"
+   ],
+   "steps": [
+    "Fold the sack edge; place a tin in the middle.",
+    "Fill the tin with stones and around it soil with manure; lift the tin.",
+    "Make holes in the sides; plant seedlings.",
+    "Water through the stones."
+   ],
+   "contexts": [
+    "a school sack garden",
+    "a home in town",
+    "a roof-top garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sack cut open with a column of stones."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the stones are for."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to carry water down\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"stones: water reaches the bottom\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_ANY_CROP",
+     "listen_for": [
+      "Maize"
+     ],
+     "ask": "Which crop suits a sack garden?",
+     "repair": "Ask how deep the roots of maize and cassava go compared with kale."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_DRAIN",
+     "listen_for": [
+      "For decoration only"
+     ],
+     "ask": "Why is a column of stones placed in the middle of a sack garden?",
+     "repair": "Pour water into one sack with a column and one without, then open them."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_NO_WATER",
+     "listen_for": [
+      "Never, the sack keeps it"
+     ],
+     "ask": "How often does a sack garden need water?",
+     "repair": "Feel the soil of a sack garden two days after watering."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG5_GBUILD_SUN",
+     "listen_for": [
+      "In deep shade behind a wall"
+     ],
+     "ask": "Where should a sack garden be placed?",
+     "repair": "Grow kale in one sack in shade and one in sun for three weeks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a crop that suits a sack garden.",
+     "answer": "kale, spinach, onions or herbs",
+     "shows": "crop"
+    },
+    {
+     "question": "Why does a sack garden need a stone column?",
+     "answer": "so water reaches all the soil",
+     "shows": "water"
+    }
+   ]
+  }
+ ]
+}

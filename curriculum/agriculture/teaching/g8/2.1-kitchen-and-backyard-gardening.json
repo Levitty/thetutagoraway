@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR",
+ "title": "Kitchen and Backyard Gardening",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Lay out a small kitchen garden near the school kitchen: a keyhole bed or a few raised or sunken beds with vegetables, herbs (dhania, mint) and spices. Each group cares for one bed.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN",
+   "key_step": "The child explains the role of a kitchen and backyard garden: fresh, healthy food close at hand, a balanced diet, money saved, extra to sell, use of small spaces and household water, and space for herbs and spices.",
+   "floor": {
+    "prerequisite": "Knows vertical and horizontal innovative gardens.",
+    "question": "Name an innovative garden.",
+    "answer": "a sack garden"
+   },
+   "representations": [
+    "a garden plan",
+    "pictures of keyhole gardens",
+    "a price list of vegetables"
+   ],
+   "steps": [
+    "Fresh food near the kitchen.",
+    "Balanced diet.",
+    "Money saved or earned.",
+    "Small spaces used."
+   ],
+   "contexts": [
+    "a home in Kisumu",
+    "the school kitchen",
+    "a town plot"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"sukuma wiki: 20 shillings a day\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how much is spent in a month."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"600 shillings\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"a kitchen garden saves this\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_SPACE",
+     "listen_for": [
+      "On a distant large farm"
+     ],
+     "ask": "Where is a kitchen garden kept?",
+     "repair": "Show a keyhole garden two steps from a kitchen door."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_CROP",
+     "listen_for": [
+      "Timber trees"
+     ],
+     "ask": "Which crop suits a kitchen garden?",
+     "repair": "Ask what the cook needs every day: greens, onions, tomatoes, herbs."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_MONEY",
+     "listen_for": [
+      "It costs a lot more"
+     ],
+     "ask": "How does a kitchen garden help a family?",
+     "repair": "Count the shillings spent on sukuma wiki in a month against a packet of seed."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN.M_AG8_KG_ONECROP",
+     "listen_for": [
+      "One crop in a large amount"
+     ],
+     "ask": "What is grown in a kitchen garden?",
+     "repair": "Show a kitchen garden plan with many small patches."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two roles of a kitchen garden.",
+     "answer": "any two of fresh food, saving money, balanced diet, income",
+     "shows": "role"
+    },
+    {
+     "question": "Where is a kitchen garden usually placed?",
+     "answer": "near the house",
+     "shows": "site"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP",
+   "key_step": "The child says how a kitchen or backyard garden is established: sunny site near the house and water, fence, prepare beds with manure (or a keyhole bed), plant a mix of crops in staggered small amounts, water, weed, harvest often.",
+   "floor": {
+    "prerequisite": "Knows the role of a kitchen garden.",
+    "question": "Why have a kitchen garden?",
+    "answer": "fresh food and saving money"
+   },
+   "representations": [
+    "a site sketch",
+    "seeds of vegetables and herbs",
+    "a planting calendar"
+   ],
+   "steps": [
+    "Choose a sunny site near the house.",
+    "Fence it; prepare beds with manure.",
+    "Plant a mix in small amounts every few weeks.",
+    "Water, weed, harvest often."
+   ],
+   "contexts": [
+    "the school kitchen garden",
+    "a backyard in Nakuru",
+    "a keyhole garden in Turkana"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a calendar with one big planting in March."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask when there will be no vegetables."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw small plantings every three weeks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP.M_AG8_GS_ALLONCE",
+     "listen_for": [
+      "Plant everything on one day"
+     ],
+     "ask": "How can a kitchen garden give vegetables all the time?",
+     "repair": "Draw a harvest calendar for one planting and for staggered plantings."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP.M_AG8_GS_FAR",
+     "listen_for": [
+      "Far from the house in the shade"
+     ],
+     "ask": "Where is a kitchen garden best placed?",
+     "repair": "Ask how often the cook goes to pick greens, and how water is carried."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP.M_AG8_GS_FENCE",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why fence a backyard garden?",
+     "repair": "Show a bed scratched by chickens."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP.M_AG8_GS_HERB",
+     "listen_for": [
+      "None, herbs come only from shops"
+     ],
+     "ask": "Which herb can be grown in a kitchen garden?",
+     "repair": "Grow dhania in a tin in class."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why plant small amounts every few weeks?",
+     "answer": "for a steady supply",
+     "shows": "staggering"
+    },
+    {
+     "question": "Why fence a backyard garden?",
+     "answer": "to keep animals out",
+     "shows": "fence"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G5.CONSER.WATER_CONSERVATION",
+ "title": "Water Conservation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Run the mulch test in two equal tins or beds for a week; the class records the soil feel each morning.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+   "key_step": "The child names ways of conserving water in a household garden (water in the evening or early morning, mulch, drip irrigation, reuse safe household water, harvest rain, sunken beds, weed) and says why each saves water.",
+   "floor": {
+    "prerequisite": "Knows drip irrigation saves water.",
+    "question": "Where does drip put the water?",
+    "answer": "at the roots"
+   },
+   "representations": [
+    "a list chart with pictures",
+    "a bucket of vegetable-washing water",
+    "a mulched bed"
+   ],
+   "steps": [
+    "Water when it is cool.",
+    "Cover the soil with mulch.",
+    "Water the roots, not the leaves.",
+    "Reuse safe water; harvest rain."
+   ],
+   "contexts": [
+    "a kitchen garden in a dry month",
+    "the school vegetable plot",
+    "a sack garden in town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"water at noon or in the evening?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which keeps more water in the soil."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"evening\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"less water dries up when it is cool\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_NOON",
+     "listen_for": [
+      "At midday when the sun is hottest"
+     ],
+     "ask": "When is it best to water a garden to save water?",
+     "repair": "Pour a cup of water on the ground at noon and one at six in the evening and compare how long each stays damp."
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_MULCH_WARM",
+     "listen_for": [
+      "It keeps the plants warm at night"
+     ],
+     "ask": "What does a layer of dry grass around kale do for the water in the soil?",
+     "repair": "Uncover a mulched patch and a bare patch at midday and feel both."
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_MORE",
+     "listen_for": [
+      "Pouring much more water on it each day"
+     ],
+     "ask": "A garden dries out quickly. Which action saves water?",
+     "repair": "Ask where the water went. Then show that a cover stops it escaping."
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG5_WAT_GREY",
+     "listen_for": [
+      "None, garden water must be fresh"
+     ],
+     "ask": "Which water can be reused on garden plants?",
+     "repair": "Pour vegetable-washing water on a bed and watch the plants over a week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways to conserve water in a garden.",
+     "answer": "any two of mulch, drip, watering when cool, reuse, harvest rain",
+     "shows": "ways"
+    },
+    {
+     "question": "Why water in the evening?",
+     "answer": "less water is lost to the sun",
+     "shows": "time"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+   "key_step": "The child plans a fair test (two beds the same in soil, crop, water and sun, one mulched) and reads the result (the mulched bed stays damp longer).",
+   "floor": {
+    "prerequisite": "Knows what mulch is.",
+    "question": "What is mulch?",
+    "answer": "a cover of dry plant material on the soil"
+   },
+   "representations": [
+    "two tins of soil",
+    "a daily record sheet",
+    "dry grass"
+   ],
+   "steps": [
+    "Make two beds the same.",
+    "Mulch one only.",
+    "Give each the same water.",
+    "Feel and record the soil each day; compare."
+   ],
+   "contexts": [
+    "the school garden",
+    "two flower pots in class",
+    "a home garden"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two tins, one with grass on top."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will be drier after three sunny days."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the result: bare tin driest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG_TEST_UNFAIR",
+     "listen_for": [
+      "Nothing is wrong, this is fair"
+     ],
+     "ask": "To test mulch, Otieno gives the mulched bed less water and plants beans there and kale in the other bed. What is wrong?",
+     "repair": "Ask what Otieno could blame if the mulched bed did better."
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG_TEST_RESULT",
+     "listen_for": [
+      "The bare one"
+     ],
+     "ask": "After a week of sun, which bed will stay damp longer, the mulched one or the bare one?",
+     "repair": "Do the test: dig a finger deep in both beds and feel."
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG5_TEST_SURFACE",
+     "listen_for": [
+      "Look at the top of the soil"
+     ],
+     "ask": "How should you check how damp the soil is in the mulching test?",
+     "repair": "Dig a finger into both beds two days after watering: the bare one is dry below the crust."
+    },
+    {
+     "code": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG5_TEST_ONEDAY",
+     "listen_for": [
+      "After one day"
+     ],
+     "ask": "When should the results of a mulching test be read?",
+     "repair": "Show the record sheet: on day one both beds feel the same, by day five they differ."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a fair test, what is changed?",
+     "answer": "only one thing: the mulch",
+     "shows": "fair test"
+    },
+    {
+     "question": "What result shows mulch conserves water?",
+     "answer": "the mulched soil stays damp longer",
+     "shows": "result"
+    }
+   ]
+  }
+ ]
+}

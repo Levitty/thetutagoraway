@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS",
+ "title": "Conserving Wild Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Talk about wild animals as neighbours to live with, not enemies. No child goes near a big wild animal: in a story, the answer is always to tell an adult or the Kenya Wildlife Service.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+   "key_step": "The child names small wild animals that destroy crops (birds such as weaver birds, squirrels, moles, rats, porcupines, monkeys in some places) and matches each to its damage (eating seeds and grain, digging roots, cutting stems).",
+   "floor": {
+    "prerequisite": "Knows the parts of a plant.",
+    "question": "Which part of the plant is under the ground?",
+    "answer": "the roots"
+   },
+   "representations": [
+    "pictures of the animals and of damaged crops",
+    "a matching chart: animal, damage",
+    "a walk to look for damage in the school garden"
+   ],
+   "steps": [
+    "Name the animal.",
+    "Say what part of the crop it eats or damages.",
+    "Say how you can tell it was there."
+   ],
+   "contexts": [
+    "weaver birds on a sorghum field",
+    "moles in a sweet potato bed",
+    "rats in a maize store"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a maize plant with a hole dug at its roots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hole.",
+     "say": "Which small animal digs this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a mole\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"mole: eats roots\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_BIG",
+     "listen_for": [
+      "None, only big animals harm crops"
+     ],
+     "ask": "Which of these small animals can harm a maize field?",
+     "repair": "Walk the school plot and look for signs: pecked grain, tunnels, gnawed cobs."
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_BEE",
+     "listen_for": [
+      "A rat in the maize"
+     ],
+     "ask": "Which small animal does NOT harm the crop?",
+     "repair": "Watch bees on a flowering crop. Ask what happens to the flower afterwards."
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_MATCH",
+     "listen_for": [
+      "A weaver bird"
+     ],
+     "ask": "Which animal digs up roots and tubers under the ground?",
+     "repair": "Match pictures of the animals to pictures of the damage."
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_DOMESTIC",
+     "listen_for": [
+      "A neighbour's goat"
+     ],
+     "ask": "Which of these is a small wild animal that destroys crops?",
+     "repair": "Ask who owns the goat and who feeds it; then ask who owns the mole rat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which small wild animal eats ripe sorghum on the farm?",
+     "answer": "weaver birds (birds)",
+     "shows": "pest"
+    },
+    {
+     "question": "What part of a crop do moles damage?",
+     "answer": "the roots",
+     "shows": "damage"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+   "key_step": "The child says how a scarecrow is made from local materials (two crossed poles, old clothes, a stuffed head, bright cloth, tins that rattle), put up where the birds can see it, and moved often so they do not get used to it.",
+   "floor": {
+    "prerequisite": "Knows which small animals damage crops.",
+    "question": "Which animals eat seeds in the garden?",
+    "answer": "birds"
+   },
+   "representations": [
+    "a model scarecrow from sticks and cloth",
+    "a picture of a scarecrow in a field",
+    "a sketch with labels"
+   ],
+   "steps": [
+    "Tie two poles into a cross.",
+    "Dress it with old clothes and a stuffed head.",
+    "Add bright cloth and tins that move.",
+    "Stand it where birds can see it and move it every few days."
+   ],
+   "contexts": [
+    "a millet field in Ukambani",
+    "the school maize plot",
+    "a home vegetable bed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a scarecrow in the middle of a field."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the birds will do after it has stood in one place for a month."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they stop fearing it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"move it often\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_FIXED",
+     "listen_for": [
+      "It does not need to be moved at all"
+     ],
+     "ask": "Why is a scarecrow moved from place to place?",
+     "repair": "Ask what a bird does after a week of seeing the same scarecrow that never moves."
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_KILL",
+     "listen_for": [
+      "Kill the animals that come near"
+     ],
+     "ask": "What is a scarecrow made to do?",
+     "repair": "Ask who also visits the plot, such as bees, and what poison would do to them."
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_HIDDEN",
+     "listen_for": [
+      "Hidden in the bush at the edge"
+     ],
+     "ask": "Where is the best place to stand a scarecrow?",
+     "repair": "Stand a scarecrow at the edge and in the middle and ask which one the bird can see from the sky."
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_DULL",
+     "listen_for": [
+      "A stiff one made of dull sacks"
+     ],
+     "ask": "Which scarecrow scares birds better?",
+     "repair": "Hang a still sack and a flapping bright cloth; ask the class which they notice first from far away."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a scarecrow moved every few days?",
+     "answer": "so birds do not get used to it",
+     "shows": "use"
+    },
+    {
+     "question": "Name two materials used to make a scarecrow.",
+     "answer": "poles, old clothes, sacks, tins or bright cloth",
+     "shows": "materials"
+    }
+   ]
+  }
+ ]
+}

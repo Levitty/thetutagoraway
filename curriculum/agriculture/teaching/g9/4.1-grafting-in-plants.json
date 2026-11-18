@@ -1,0 +1,367 @@
+{
+ "sub_strand": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS",
+ "title": "Grafting in Plants",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Graft avocado or mango seedlings (whip or cleft graft) with grafting tape; the teacher handles the grafting knife or works beside the learner. Care for the grafted plants for the term.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING",
+   "key_step": "The child describes grafting (joining a scion from a good plant to a strong rootstock so they grow as one), names the scion, rootstock and union, common grafts and crops, and that the scion keeps its fruit type.",
+   "floor": {
+    "prerequisite": "Knows plants reproduce from seed.",
+    "question": "What grows from a seed?",
+    "answer": "a new plant"
+   },
+   "representations": [
+    "a grafted seedling",
+    "a labelled drawing",
+    "pictures of grafts"
+   ],
+   "steps": [
+    "Rootstock: roots.",
+    "Scion: shoot from the good plant.",
+    "Union: where they join.",
+    "Same or close kind only."
+   ],
+   "contexts": [
+    "grafted mangoes in Makueni",
+    "avocado seedlings in Murang'a",
+    "oranges"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seedling with a different shoot taped on top."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top shoot.",
+     "say": "Scion or rootstock?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"scion\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label scion, union, rootstock."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_SWAP",
+     "listen_for": [
+      "The scion"
+     ],
+     "ask": "In a graft, which part gives the roots?",
+     "repair": "Label a grafted seedling: root (rootstock) at the bottom, shoot (scion) on top."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_ANY",
+     "listen_for": [
+      "Yes, any plants join"
+     ],
+     "ask": "Can a mango scion be grafted onto an avocado rootstock?",
+     "repair": "Explain the tissues must match to grow as one."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_SEED",
+     "listen_for": [
+      "It is the same"
+     ],
+     "ask": "How is a grafted mango different from one grown from seed?",
+     "repair": "Compare seedling mangoes (mixed fruit) with grafted ones."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_MEANING.M_AG9_GM_UNION",
+     "listen_for": [
+      "The grafting tape"
+     ],
+     "ask": "What is the graft union?",
+     "repair": "Show a healed union after the tape is off."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the scion?",
+     "answer": "the shoot from the good plant joined on top",
+     "shows": "parts"
+    },
+    {
+     "question": "Name a crop that is often grafted.",
+     "answer": "mango, avocado or orange",
+     "shows": "crops"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS",
+   "key_step": "The child says the steps: choose rootstock and scion of the same kind, make clean matching cuts with a sharp clean knife (adult), line up the cambium, wrap firmly with tape, cover the scion top, label.",
+   "floor": {
+    "prerequisite": "Knows the parts of a graft.",
+    "question": "Which part gives the roots?",
+    "answer": "the rootstock"
+   },
+   "representations": [
+    "a grafting knife (teacher), tape, seedlings",
+    "step cards",
+    "a cut stem showing cambium"
+   ],
+   "steps": [
+    "Choose rootstock and scion.",
+    "Make clean matching cuts.",
+    "Line up the cambium.",
+    "Wrap firmly; label."
+   ],
+   "contexts": [
+    "the school nursery",
+    "a farmer group nursery",
+    "a home avocado"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a stem cut across showing a green ring under the bark."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the green ring.",
+     "say": "What must touch here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the scion's cambium\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"match cambium to cambium\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_CAMBIUM",
+     "listen_for": [
+      "Any part of the cuts"
+     ],
+     "ask": "What must touch for a graft to take?",
+     "repair": "Show the thin green ring under the bark in a cut stem."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_BLUNT",
+     "listen_for": [
+      "Any knife works"
+     ],
+     "ask": "Why is a sharp, clean knife used for grafting?",
+     "repair": "Compare a smooth cut and a torn cut on a stem."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_LOOSE",
+     "listen_for": [
+      "Loosely"
+     ],
+     "ask": "How is the graft wrapped?",
+     "repair": "Show a loose graft that slipped apart."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_STEPS.M_AG9_GS_DRY",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What happens if a scion dries before grafting?",
+     "repair": "Leave a cut scion in the sun for an hour."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What must line up in a graft?",
+     "answer": "the cambium layers",
+     "shows": "cambium"
+    },
+    {
+     "question": "Why use a sharp clean knife?",
+     "answer": "smooth cuts join and no disease gets in",
+     "shows": "knife"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE",
+   "key_step": "The child says how a graft is cared for: water, light shade, protect the union, remove rootstock shoots below the union, remove the tape after 6 to 8 weeks, watch for the scion to sprout.",
+   "floor": {
+    "prerequisite": "Knows how a graft is made.",
+    "question": "What is used to wrap the graft?",
+    "answer": "grafting tape"
+   },
+   "representations": [
+    "grafted seedlings",
+    "a care record",
+    "pictures of failed grafts"
+   ],
+   "steps": [
+    "Water; keep in light shade.",
+    "Protect the union.",
+    "Remove shoots below the union.",
+    "Remove tape after healing."
+   ],
+   "contexts": [
+    "the school grafts",
+    "a nursery in Thika",
+    "a home avocado"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a graft with a shoot growing below the tape."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to do with that shoot."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"remove it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Cross it out."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_SUCKERS",
+     "listen_for": [
+      "Leave them to grow"
+     ],
+     "ask": "What is done with shoots growing below the graft union?",
+     "repair": "Show a graft where rootstock shoots took over."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_TAPE",
+     "listen_for": [
+      "Never"
+     ],
+     "ask": "When is the grafting tape removed?",
+     "repair": "Show a stem strangled by tape left on."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_SUN",
+     "listen_for": [
+      "In full sun, unwatered"
+     ],
+     "ask": "Where is a new graft kept?",
+     "repair": "Compare grafts in shade and sun after a week."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_CARE.M_AG9_GC_KNOCK",
+     "listen_for": [
+      "It is strong"
+     ],
+     "ask": "Why protect the graft union?",
+     "repair": "Show a broken graft."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is done with shoots below the union?",
+     "answer": "remove them",
+     "shows": "suckers"
+    },
+    {
+     "question": "When is the tape removed?",
+     "answer": "after the union heals, about 6 to 8 weeks",
+     "shows": "tape"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES",
+   "key_step": "The child appraises grafting purposes: repair (bridge grafts over damage), aesthetics (several colours on one plant), improvement (good fruit on a hardy rootstock, early fruiting), rejuvenation (topworking old trees), and picks the purpose for a case.",
+   "floor": {
+    "prerequisite": "Knows what grafting is.",
+    "question": "What does the scion give?",
+    "answer": "the fruit type"
+   },
+   "representations": [
+    "case cards",
+    "pictures of each purpose",
+    "a judging chart"
+   ],
+   "steps": [
+    "Read the case.",
+    "Name the problem.",
+    "Choose the purpose that solves it.",
+    "Say why."
+   ],
+   "contexts": [
+    "an old avocado tree",
+    "a goat-damaged mango",
+    "a two-colour rose"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"an old tree gives poor fruit\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which purpose fits."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"rejuvenation by topworking\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"topworking\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_REPAIR",
+     "listen_for": [
+      "Nothing, cut it down"
+     ],
+     "ask": "A young mango tree has its bark eaten by goats. What can grafting do?",
+     "repair": "Show a bridge graft picture."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_OLD",
+     "listen_for": [
+      "Cut it down and plant a seed"
+     ],
+     "ask": "How can an old avocado tree with poor fruit be rejuvenated?",
+     "repair": "Show a topworked tree fruiting in two years."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_LOOKS",
+     "listen_for": [
+      "No, only for fruit"
+     ],
+     "ask": "Can grafting be used for beauty?",
+     "repair": "Show a rose with two colours."
+    },
+    {
+     "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS.GRAFT_PURPOSES.M_AG9_GP_IMPROVE",
+     "listen_for": [
+      "The rootstock decides the fruit"
+     ],
+     "ask": "Why graft a good variety onto a hardy local rootstock?",
+     "repair": "Compare fruit of the scion parent and the rootstock parent."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which purpose is a two-colour rose?",
+     "answer": "aesthetics",
+     "shows": "purpose"
+    },
+    {
+     "question": "How can grafting repair a damaged trunk?",
+     "answer": "bridge grafting over the wound",
+     "shows": "repair"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
+ "title": "Uses of Domestic Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the animals the children see at home. A walk to see the school's or a neighbour's animals works better than pictures.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+   "key_step": "The child names the domestic animals kept in the community (cattle, goats, sheep, donkeys, camels, pigs, rabbits, chickens, ducks, turkeys, bees, dogs, cats) and groups them (livestock, poultry, pets, bees).",
+   "floor": {
+    "prerequisite": "Knows a domestic animal is kept by people.",
+    "question": "Who looks after a domestic animal?",
+    "answer": "people"
+   },
+   "representations": [
+    "pictures in groups",
+    "a visit to the school or a neighbour's animals",
+    "a grouping chart"
+   ],
+   "steps": [
+    "Ask: do people keep it?",
+    "Name it.",
+    "Put it in its group: livestock, poultry, pet or bees."
+   ],
+   "contexts": [
+    "chickens at home",
+    "cattle in Narok",
+    "camels in Marsabit"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: livestock, poultry, pets."
+    },
+    {
+     "beat": "point",
+     "do": "Show a duck.",
+     "say": "Which box?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"poultry\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write duck with chickens and turkeys."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_WILD",
+     "listen_for": [
+      "A zebra"
+     ],
+     "ask": "Which of these is a domestic animal?",
+     "repair": "Ask who feeds, houses and looks after each animal."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_FOUR",
+     "listen_for": [
+      "None, birds are not domestic animals"
+     ],
+     "ask": "Which of these is a domestic animal kept for eggs?",
+     "repair": "Ask which birds the community keeps at home."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_GROUP",
+     "listen_for": [
+      "A goat"
+     ],
+     "ask": "Which of these is poultry?",
+     "repair": "Ask which animals have feathers and lay eggs."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_PET",
+     "listen_for": [
+      "No, we do not eat it"
+     ],
+     "ask": "Is a dog a domestic animal?",
+     "repair": "Ask who feeds and shelters the dog. Domestic means kept and cared for by people."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two kinds of poultry.",
+     "answer": "any two of chicken, duck, turkey, goose",
+     "shows": "groups"
+    },
+    {
+     "question": "Is a giraffe a domestic animal?",
+     "answer": "no, it is wild",
+     "shows": "domestic"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+   "key_step": "The child matches each domestic animal to what it gives (milk, meat, eggs, wool, hides, honey, manure) and does (carrying, ploughing, guarding, catching rats), and says one animal can have several uses.",
+   "floor": {
+    "prerequisite": "Knows the domestic animals in the community.",
+    "question": "Name a domestic animal.",
+    "answer": "a cow"
+   },
+   "representations": [
+    "a matching chart: animal and uses",
+    "products: an egg, a bottle of milk, honey",
+    "pictures of a donkey cart and an ox plough"
+   ],
+   "steps": [
+    "Name the animal.",
+    "List what it gives.",
+    "List the work it does."
+   ],
+   "contexts": [
+    "a donkey carrying water",
+    "a cow giving milk and manure",
+    "bees giving honey"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow in the middle with three arrows."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to write at each arrow."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for milk, meat, manure or ploughing."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write all the uses on the arrows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_MIX",
+     "listen_for": [
+      "A goat"
+     ],
+     "ask": "Which animal gives us wool?",
+     "repair": "Show wool, milk, eggs and honey and ask where each comes from."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_ONE",
+     "listen_for": [
+      "None, an animal gives only one thing"
+     ],
+     "ask": "Which animal gives us milk, meat and hides?",
+     "repair": "Make a list of everything one cow gives the family."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_WORK",
+     "listen_for": [
+      "A hen"
+     ],
+     "ask": "Which animal is used to carry loads?",
+     "repair": "Ask which animals in the village pull carts and which do not."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_DOG",
+     "listen_for": [
+      "None, it is only a pet"
+     ],
+     "ask": "What use is a cat on a farm?",
+     "repair": "Ask what eats the maize in a store at night, and what chases it away."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two uses of a cow.",
+     "answer": "any two of milk, meat, hides, manure, ploughing",
+     "shows": "uses"
+    },
+    {
+     "question": "Which animal gives wool?",
+     "answer": "a sheep",
+     "shows": "product"
+    }
+   ]
+  }
+ ]
+}

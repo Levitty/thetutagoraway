@@ -1,0 +1,195 @@
+{
+ "sub_strand": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR",
+ "title": "Preparation of Animal Products",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Knives, slaughter and scalding water are handled by the teacher or a trained adult only; learners watch, then scale and clean with blunt scalers and gloves. Talk about humane handling: calm birds, no rough handling, a quick kill by an adult.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS",
+   "key_step": "The child says why fish is processed (to make it safe, tasty and keep longer, to sell for more) and how: scale, gut, clean, then salt and dry, smoke or fry, with the knife used by the teacher.",
+   "floor": {
+    "prerequisite": "Knows how animal products are prepared safely.",
+    "question": "What comes first before preparing animal products?",
+    "answer": "washing hands and tools"
+   },
+   "representations": [
+    "pictures of each step",
+    "a scaler and gloves",
+    "step cards"
+   ],
+   "steps": [
+    "Scale: remove the scales.",
+    "Gut: remove the insides (teacher).",
+    "Clean in clean water.",
+    "Salt and dry, smoke or fry."
+   ],
+   "contexts": [
+    "tilapia from Lake Victoria",
+    "omena drying in Kisumu",
+    "fish at a coast market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: fry, gut, scale."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"scale, gut, fry\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_ORDER",
+     "listen_for": [
+      "Drying it whole"
+     ],
+     "ask": "What is done first to fresh fish?",
+     "repair": "Gut and scale first: the gut spoils fastest; then clean, salt and dry or fry."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_METHOD",
+     "listen_for": [
+      "Leaving it in the sun uncovered"
+     ],
+     "ask": "Which makes fish last longer?",
+     "repair": "Compare fish dried salted on a raised rack under a net with fish left on the ground."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_SAFE",
+     "listen_for": [
+      "Any learner alone"
+     ],
+     "ask": "Who uses the knife to gut fish at school?",
+     "repair": "At school the teacher uses the knife; learners scale with a blunt scaler and gloves."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS.M_AG8_FP_SALT",
+     "listen_for": [
+      "Only for taste"
+     ],
+     "ask": "Why is fish salted before drying?",
+     "repair": "Salt a slice of fish and watch water come out over an hour."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is fish gutted soon after it is caught?",
+     "answer": "the gut spoils fastest",
+     "shows": "gutting"
+    },
+    {
+     "question": "Name a way of preserving fish.",
+     "answer": "salting and drying, smoking or frying",
+     "shows": "method"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS",
+   "key_step": "The child says why a poultry carcass is dressed (safe, clean meat for cooking or sale) and the order: humane slaughter and bleeding by an adult, scald, pluck, remove offal, wash, chill.",
+   "floor": {
+    "prerequisite": "Knows how fish is processed.",
+    "question": "What is the first step in processing fish?",
+    "answer": "scaling"
+   },
+   "representations": [
+    "pictures of each step",
+    "step cards",
+    "a hygiene checklist"
+   ],
+   "steps": [
+    "An adult slaughters humanely; bleed.",
+    "Scald to loosen feathers.",
+    "Pluck; remove offal.",
+    "Wash and chill."
+   ],
+   "contexts": [
+    "a Christmas chicken at home",
+    "a poultry project",
+    "a market in Kakamega"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: pluck, scald, bleed."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"bleed, scald, pluck\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_ORDER",
+     "listen_for": [
+      "Plucking"
+     ],
+     "ask": "Which comes first in dressing a bird?",
+     "repair": "Order: humane slaughter and bleeding by an adult, scald, pluck, remove offal, wash, chill."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_SCALD",
+     "listen_for": [
+      "Rubbing with soil"
+     ],
+     "ask": "What is done to loosen feathers?",
+     "repair": "Dip a feather in hot water (by the teacher) and show how it slides out."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_SAFE",
+     "listen_for": [
+      "Any learner alone"
+     ],
+     "ask": "Who slaughters poultry at school?",
+     "repair": "Slaughter is done humanely by a trained adult; learners help with plucking and cleaning."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_OFFAL",
+     "listen_for": [
+      "The next day"
+     ],
+     "ask": "When should the offal be removed from a dressed bird?",
+     "repair": "Smell a bird left uncleaned (from the teacher's account)."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS.M_AG8_PD_ROUGH",
+     "listen_for": [
+      "It does not matter"
+     ],
+     "ask": "Why should a bird be handled calmly before slaughter?",
+     "repair": "Talk about humane handling: calm, quick, by a trained adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What loosens the feathers?",
+     "answer": "scalding in hot water",
+     "shows": "scald"
+    },
+    {
+     "question": "Who slaughters poultry at school?",
+     "answer": "the teacher or a trained adult",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

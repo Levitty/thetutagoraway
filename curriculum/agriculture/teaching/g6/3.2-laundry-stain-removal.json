@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL",
+ "title": "Laundry: Stain Removal",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Practise on cotton scraps stained with grass and with a drop of animal blood from the butchery (or a pretend stain), using cold water, salt and soap. No bleach or chemicals for children.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS",
+   "key_step": "The child identifies common stains (blood, grass, mud, food, ink) and picks the right treatment: blood in cold water (never hot), grass with soap and rubbing or a solvent used by the teacher, mud left to dry and brushed off, then washed.",
+   "floor": {
+    "prerequisite": "Knows the laundry steps.",
+    "question": "What is done before washing?",
+    "answer": "sorting and soaking"
+   },
+   "representations": [
+    "stained scraps",
+    "a treatment chart",
+    "cold water, salt, soap"
+   ],
+   "steps": [
+    "Name the stain.",
+    "Choose the treatment.",
+    "Say why hot water is wrong for blood."
+   ],
+   "contexts": [
+    "grass on sports shorts",
+    "a nosebleed on a shirt",
+    "mud on socks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"blood stain: hot or cold water?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"cold\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"hot water sets blood\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS.M_AG_ST_BLOOD",
+     "listen_for": [
+      "Hot water"
+     ],
+     "ask": "How should a fresh blood stain be treated first?",
+     "repair": "Test hot and cold water on a safe stain."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS.M_AG_ST_RUB",
+     "listen_for": [
+      "Rub it hard in a circle"
+     ],
+     "ask": "How should a stain be treated?",
+     "repair": "Try both on a safe cloth."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS.M_AG_ST_MATCH",
+     "listen_for": [
+      "Cold water only"
+     ],
+     "ask": "How is a grease stain on clothes treated?",
+     "repair": "Match each stain to the right treatment."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAINS.M_AG6_ST_LATER",
+     "listen_for": [
+      "On washing day, a week later"
+     ],
+     "ask": "When is a stain easiest to remove?",
+     "repair": "Compare a fresh grass stain with one left for a week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which water is used on a blood stain?",
+     "answer": "cold water",
+     "shows": "blood"
+    },
+    {
+     "question": "Name a common stain on sports clothes.",
+     "answer": "grass or mud",
+     "shows": "stain"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAIN_STEPS",
+   "key_step": "The child orders the steps of stain removal: act at once, scrape off the loose part, work from the outside in with the right treatment, rinse, check the stain is gone, then wash and dry as usual (no heat until it is gone).",
+   "floor": {
+    "prerequisite": "Knows the treatment for each stain.",
+    "question": "What is used on a blood stain?",
+    "answer": "cold water"
+   },
+   "representations": [
+    "step cards",
+    "scraps and a basin",
+    "a magnifier to check"
+   ],
+   "steps": [
+    "Act at once; scrape off the loose part.",
+    "Treat from the outside in.",
+    "Rinse and check.",
+    "Wash and dry as usual."
+   ],
+   "contexts": [
+    "a school shirt after lunch",
+    "a towel with a blood spot",
+    "shorts with grass stains"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: iron, treat the stain, check it is gone."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"treat, check, iron\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order the cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAIN_STEPS.M_AG6_SS_OUTSIDE",
+     "listen_for": [
+      "From the middle outwards"
+     ],
+     "ask": "Which way should a stain be worked?",
+     "repair": "Rub a wet ink-like stain both ways on paper: one spreads it wider."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAIN_STEPS.M_AG6_SS_SCRAPE",
+     "listen_for": [
+      "Rub it in with water"
+     ],
+     "ask": "What is done first to a lump of food or mud on a shirt?",
+     "repair": "Rub a dab of porridge on a scrap with water, and scrape another first; compare."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAIN_STEPS.M_AG6_SS_IRON",
+     "listen_for": [
+      "There is no need"
+     ],
+     "ask": "Why check that a stain has gone before ironing or drying in the sun?",
+     "repair": "Iron a faint stain on a scrap and try to wash it again."
+    },
+    {
+     "code": "AGRI.G6.HYGIEN.LAUNDRY_STAIN_REMOVAL.STAIN_STEPS.M_AG6_SS_SALT",
+     "listen_for": [
+      "Hot water and hard rubbing"
+     ],
+     "ask": "What helps remove a fresh blood stain?",
+     "repair": "Soak a blood-stained scrap in cold salt water and another in hot water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why work from the outside of a stain inwards?",
+     "answer": "so it does not spread",
+     "shows": "direction"
+    },
+    {
+     "question": "Why check the stain before ironing?",
+     "answer": "heat sets the stain",
+     "shows": "heat"
+    }
+   ]
+  }
+ ]
+}

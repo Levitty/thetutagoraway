@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD",
+ "title": "Conserving Leftover Food",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make a new dish from leftovers (rice into fried rice, ugali into fried ugali, githeri into mukimo) with the teacher. Teach the safety rules: cool quickly, cover, keep cool, reheat until steaming hot, reheat once only.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY",
+   "key_step": "The child explains why leftover food is conserved (saves food and money, less waste) and how it is kept safe (cooled quickly, covered, kept cool, used soon), and that unsafe leftovers cause food poisoning.",
+   "floor": {
+    "prerequisite": "Knows why food is kept cool and covered.",
+    "question": "Why keep milk cool?",
+    "answer": "germs grow in warmth"
+   },
+   "representations": [
+    "a safe-keeping chart",
+    "covered containers",
+    "a cost sum"
+   ],
+   "steps": [
+    "Cool it quickly.",
+    "Cover it.",
+    "Keep it cool.",
+    "Use it soon."
+   ],
+   "contexts": [
+    "githeri left from lunch",
+    "rice after a party",
+    "ugali after supper"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"rice left out all day in the heat\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether to eat it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"unsafe: germs grow without a smell\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_OPEN",
+     "listen_for": [
+      "In the warm pot, uncovered"
+     ],
+     "ask": "How should leftover food be kept overnight?",
+     "repair": "Ask what flies and warmth do to food overnight."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_SMELL",
+     "listen_for": [
+      "Yes, it smells fine"
+     ],
+     "ask": "Leftover rice has been out all day in the heat but smells fine. Is it safe?",
+     "repair": "Explain some food-poisoning germs give no smell."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_WASTE",
+     "listen_for": [
+      "There is no reason"
+     ],
+     "ask": "Why conserve leftover food?",
+     "repair": "Add up the cost of food thrown away in a week."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_WHY.M_AG9_LW_DAYS",
+     "listen_for": [
+      "A week"
+     ],
+     "ask": "How long can leftovers be kept without a fridge?",
+     "repair": "Show mould on githeri kept for three days."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a reason to conserve leftovers.",
+     "answer": "saves food and money",
+     "shows": "why"
+    },
+    {
+     "question": "How are leftovers kept safe?",
+     "answer": "cooled quickly, covered, kept cool",
+     "shows": "how"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP",
+   "key_step": "The child says how leftovers are prepared: check them, reheat once until steaming hot, or make a new dish (fried rice, fried ugali, mukimo, soup), serve at once, throw away food kept too long or reheated before.",
+   "floor": {
+    "prerequisite": "Knows how leftovers are kept safe.",
+    "question": "How are leftovers kept overnight?",
+    "answer": "cooled, covered, cool place"
+   },
+   "representations": [
+    "recipe cards",
+    "a pan",
+    "step cards"
+   ],
+   "steps": [
+    "Check the food.",
+    "Reheat until steaming hot, once only.",
+    "Or make a new dish.",
+    "Serve at once."
+   ],
+   "contexts": [
+    "fried rice",
+    "mukimo from githeri",
+    "soup from vegetables"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"leftover ugali\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for a new dish."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"fried ugali\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_WARM",
+     "listen_for": [
+      "Just warm"
+     ],
+     "ask": "How hot should reheated leftovers be?",
+     "repair": "Explain heat must reach the middle to kill germs."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_MIXOLD",
+     "listen_for": [
+      "Yes, it saves food"
+     ],
+     "ask": "Should yesterday's leftovers be stirred into today's fresh stew?",
+     "repair": "Explain germs in the old food spread through the whole pot."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_TWICE",
+     "listen_for": [
+      "As many times as needed"
+     ],
+     "ask": "How many times should leftovers be reheated?",
+     "repair": "Explain each cooling and warming lets germs grow again."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD.LEFTOVER_PREP.M_AG9_LP_RECIPE",
+     "listen_for": [
+      "None, only reheating"
+     ],
+     "ask": "What new dish can be made from leftover rice?",
+     "repair": "Make fried rice with leftover rice and vegetables."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How hot should reheated food be?",
+     "answer": "steaming hot all through",
+     "shows": "reheat"
+    },
+    {
+     "question": "How many times can leftovers be reheated?",
+     "answer": "once",
+     "shows": "once"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_",
+ "title": "Preservation of Cereals and Pulses",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The bite test and the salt-in-a-bottle test show dryness: dry grain cracks when bitten, and dry salt shaken with dry grain stays loose. Storage dusts are handled only by the teacher.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+   "key_step": "The child describes how cereals and pulses are preserved at home: dried well in the sun, cleaned and sorted, treated (ash, approved dust, hermetic bags), and stored dry, raised and covered in granaries, sacks on pallets, drums or hermetic bags.",
+   "floor": {
+    "prerequisite": "Knows that wet things go mouldy.",
+    "question": "What grows on damp bread?",
+    "answer": "mould"
+   },
+   "representations": [
+    "samples of damp and dry grain",
+    "pictures of a granary and a hermetic bag",
+    "a methods chart"
+   ],
+   "steps": [
+    "Dry the grain well.",
+    "Clean and sort out broken or eaten grains.",
+    "Treat against pests.",
+    "Store dry, raised and closed."
+   ],
+   "contexts": [
+    "maize after the long rains",
+    "beans stored in a drum",
+    "sorghum in a granary in Ukambani"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a granary on legs with a rat guard."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the legs and the guard.",
+     "say": "Why are these here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to keep rats and damp out\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"raised and guarded\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WET",
+     "listen_for": [
+      "It stores better when damp"
+     ],
+     "ask": "Why must grain be dried before storing?",
+     "repair": "Store a handful dry and a handful damp in jars for a week."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_SACK",
+     "listen_for": [
+      "An open basket"
+     ],
+     "ask": "Which container keeps weevils from grain?",
+     "repair": "Place weevils in an open jar and a sealed jar overnight."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WATER",
+     "listen_for": [
+      "Soak them in water"
+     ],
+     "ask": "Which is a way of preserving beans?",
+     "repair": "Ask what happens to soaked beans after a day."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG5_PRES_ASH",
+     "listen_for": [
+      "To make them taste better"
+     ],
+     "ask": "Why do some farmers mix stored beans with ash?",
+     "repair": "Show weevil holes in untreated beans next to beans stored with ash."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why must grain be dry before it is stored?",
+     "answer": "damp grain goes mouldy and rots",
+     "shows": "drying"
+    },
+    {
+     "question": "Name a container that keeps air and pests out.",
+     "answer": "a hermetic bag or a sealed drum",
+     "shows": "container"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+   "key_step": "The child says the steps to make grain and beans last: harvest when mature, dry fully (checked by the bite or salt test), clean, treat, store in a clean, dry, raised, pest-proof store, and check often.",
+   "floor": {
+    "prerequisite": "Knows the methods of preservation.",
+    "question": "Name a method of preserving maize.",
+    "answer": "drying"
+   },
+   "representations": [
+    "a bottle, dry salt and grain for the salt test",
+    "step cards",
+    "a clean storage sack and a pallet"
+   ],
+   "steps": [
+    "Dry the grain fully.",
+    "Test it: bite or salt test.",
+    "Clean and treat it.",
+    "Store in a clean, raised, closed store; check often."
+   ],
+   "contexts": [
+    "beans after harvest at home",
+    "school maize",
+    "a farmer's store"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"the grain looks dry\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether that is enough to store it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, test it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"bite test: cracks = dry\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_SEAL_EARLY",
+     "listen_for": [
+      "Seal it at once"
+     ],
+     "ask": "Maize is just harvested and still damp. What should be done before it is sealed?",
+     "repair": "Seal two jars, one with dry maize and one with damp, and look after a week."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_GROUND",
+     "listen_for": [
+      "On the bare floor against the wall"
+     ],
+     "ask": "Where should sacks of grain be kept?",
+     "repair": "Ask where rats and damp enter."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_DRYNESS",
+     "listen_for": [
+      "Look at the colour"
+     ],
+     "ask": "How can you test that maize grains are dry?",
+     "repair": "Try the bite test on a dry and a damp grain."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG5_PRACT_MIXOLD",
+     "listen_for": [
+      "Pour the new grain on top"
+     ],
+     "ask": "What should be done with old grain before storing the new harvest?",
+     "repair": "Show weevils in old grain; ask where they go when new grain is poured on."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How can you test that maize is dry?",
+     "answer": "bite it: dry grain cracks; or the salt test",
+     "shows": "test"
+    },
+    {
+     "question": "Why are sacks put on a raised pallet?",
+     "answer": "to keep off damp and let air move under them",
+     "shows": "storage"
+    }
+   ]
+  }
+ ]
+}

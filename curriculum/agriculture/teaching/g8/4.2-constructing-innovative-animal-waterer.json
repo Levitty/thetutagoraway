@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_",
+ "title": "Constructing Innovative Animal Waterer",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Visit homes that keep animals to see the waterers; then design and build a bottle or nipple waterer for chickens or rabbits from reused containers, test it and adjust.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS",
+   "key_step": "The child explains the challenges of common animal waterers (open troughs get dirty, spill, waste water, breed mosquitoes, are knocked over, spread disease) and how an innovative waterer helps (clean water, less waste, less work).",
+   "floor": {
+    "prerequisite": "Knows hygiene in rearing animals.",
+    "question": "Why give animals clean water?",
+    "answer": "dirty water makes them sick"
+   },
+   "representations": [
+    "pictures of open troughs and bottle waterers",
+    "a problem list from home visits",
+    "a model"
+   ],
+   "steps": [
+    "Name the problems of an open trough.",
+    "Say how each harms the animal or wastes water.",
+    "Say how a better design helps."
+   ],
+   "contexts": [
+    "chickens at home",
+    "goats at a trough",
+    "rabbits at school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an open dish with droppings in it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the birds will catch."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"diseases\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw an upturned bottle waterer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_OPEN",
+     "listen_for": [
+      "They stay perfectly clean"
+     ],
+     "ask": "What is a problem of open troughs?",
+     "repair": "Look at an open trough at the end of the day: droppings, feathers, mud."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_SAVE",
+     "listen_for": [
+      "It wastes water"
+     ],
+     "ask": "How does an innovative waterer help?",
+     "repair": "Measure water spilled from an open dish and from a bottle waterer in a day."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_MATERIAL",
+     "listen_for": [
+      "A heavy stone"
+     ],
+     "ask": "Which can make a simple waterer?",
+     "repair": "Choose light, clean, cleanable reused containers such as plastic bottles and basins."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS.M_AG8_WA_HEIGHT",
+     "listen_for": [
+      "It does not matter"
+     ],
+     "ask": "Why is a chicken waterer raised to about the birds' back height?",
+     "repair": "Watch chickens at a waterer on the ground: they scratch dirt in."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one challenge of an open trough.",
+     "answer": "it gets dirty, spills or wastes water",
+     "shows": "challenge"
+    },
+    {
+     "question": "How does an innovative waterer save water?",
+     "answer": "it lets out only what the animal drinks",
+     "shows": "saving"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN",
+   "key_step": "The child says how an innovative waterer is made: name the problem, sketch a design for the animal, choose clean safe reused materials, build it at the right height, test for leaks and spills, watch the animals use it, adjust, clean daily.",
+   "floor": {
+    "prerequisite": "Knows the problems of common waterers.",
+    "question": "Name a problem of an open trough.",
+    "answer": "it gets dirty"
+   },
+   "representations": [
+    "a sketch sheet",
+    "plastic bottles, a dish, wire",
+    "a test checklist"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Sketch the design.",
+    "Build at the right height.",
+    "Test, watch, adjust."
+   ],
+   "contexts": [
+    "a chicken waterer at school",
+    "a rabbit waterer at home",
+    "a goat waterer"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bottle upside down in a dish."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask why the water does not all run out."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's idea."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"air cannot get in until the water level drops\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN.M_AG8_WD_TEST",
+     "listen_for": [
+      "Give it to the animals and leave it"
+     ],
+     "ask": "What is done after building a waterer?",
+     "repair": "Test a bottle waterer that leaks onto the floor."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN.M_AG8_WD_CHEM",
+     "listen_for": [
+      "Yes, after washing"
+     ],
+     "ask": "Can an old pesticide container be used as a waterer?",
+     "repair": "Recall Grade 7: chemical containers are never reused for food or water."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN.M_AG8_WD_CLEAN",
+     "listen_for": [
+      "It does not need cleaning"
+     ],
+     "ask": "Why must a waterer be easy to clean?",
+     "repair": "Look inside a sealed waterer after a week."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN.M_AG8_WD_PROBLEM",
+     "listen_for": [
+      "Start building"
+     ],
+     "ask": "What is the first step in designing an innovative waterer?",
+     "repair": "List the problems found on the household visits."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is done after building a waterer?",
+     "answer": "test it and adjust",
+     "shows": "test"
+    },
+    {
+     "question": "Why is a chicken waterer raised?",
+     "answer": "so they do not scratch dirt into it",
+     "shows": "height"
+    }
+   ]
+  }
+ ]
+}

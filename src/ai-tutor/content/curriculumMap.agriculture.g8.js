@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/agriculture/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Agriculture teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/agriculture/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Agriculture teacher's review; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g8)"};
 export const SUBSTRANDS = {
  "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR": {
   "name": "Soil Conservation Measures",
@@ -296,8 +296,27 @@ export const SKILLS = {
   "mis": [
    "M_AG8_SC_TERRACE",
    "M_AG8_SC_MULCH",
-   "M_AG8_SC_CONTOUR"
+   "M_AG8_SC_CONTOUR",
+   "M_AG8_SC_TRASH"
   ]
+ },
+ "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY": {
+  "name": "Say how soil conservation measures are laid out and built on a slope",
+  "sub": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR",
+  "outcome": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.b",
+  "outcomes": [
+   "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.b"
+  ],
+  "pre": [
+   "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE"
+  ],
+  "mis": [
+   "M_AG8_CA_LEVEL",
+   "M_AG8_CA_WATERWAY",
+   "M_AG8_CA_STRIPS",
+   "M_AG8_CA_REPAIR"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE": {
   "name": "Say how harvested water is stored safely for home use",
@@ -312,8 +331,27 @@ export const SKILLS = {
   "mis": [
    "M_AG8_WS_COVER",
    "M_AG8_WS_TREAT",
-   "M_AG8_WS_MOSQUITO"
+   "M_AG8_WS_MOSQUITO",
+   "M_AG8_WS_CHEMICAL"
   ]
+ },
+ "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP": {
+  "name": "Say how rain water and run-off are harvested and stored, and how the system is kept clean",
+  "sub": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO",
+  "outcome": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.b",
+  "outcomes": [
+   "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.b"
+  ],
+  "pre": [
+   "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE"
+  ],
+  "mis": [
+   "M_AG8_HS_FIRST",
+   "M_AG8_HS_GUTTER",
+   "M_AG8_HS_TAP",
+   "M_AG8_HS_CLEAN"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN": {
   "name": "Explain the role of a kitchen and backyard garden",
@@ -326,8 +364,27 @@ export const SKILLS = {
   "mis": [
    "M_AG8_KG_SPACE",
    "M_AG8_KG_CROP",
-   "M_AG8_KG_MONEY"
+   "M_AG8_KG_MONEY",
+   "M_AG8_KG_ONECROP"
   ]
+ },
+ "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.GARDEN_SETUP": {
+  "name": "Say how a kitchen or backyard garden is sited, laid out, planted and cared for",
+  "sub": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR",
+  "outcome": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.b",
+  "outcomes": [
+   "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.b"
+  ],
+  "pre": [
+   "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR.KITCHEN_GARDEN"
+  ],
+  "mis": [
+   "M_AG8_GS_ALLONCE",
+   "M_AG8_GS_FAR",
+   "M_AG8_GS_FENCE",
+   "M_AG8_GS_HERB"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD": {
   "name": "Describe a fold in poultry rearing",
@@ -340,8 +397,45 @@ export const SKILLS = {
   "mis": [
    "M_AG8_PF_MOVE",
    "M_AG8_PF_PROTECT",
-   "M_AG8_PF_MANURE"
+   "M_AG8_PF_MANURE",
+   "M_AG8_PF_BIG"
   ]
+ },
+ "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD": {
+  "name": "Say how a poultry fold is designed and built from local materials",
+  "sub": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL",
+  "outcome": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.b",
+  "outcomes": [
+   "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.b"
+  ],
+  "pre": [
+   "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.POULTRY_FOLD"
+  ],
+  "mis": [
+   "M_AG8_FB_HEAVY",
+   "M_AG8_FB_NOROOF",
+   "M_AG8_FB_MESH",
+   "M_AG8_FB_SIZE"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
+ },
+ "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_REARING": {
+  "name": "Say how poultry are reared in a fold: moving, feeding, watering, cleaning and protecting",
+  "sub": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL",
+  "outcome": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.c",
+  "outcomes": [
+   "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.c"
+  ],
+  "pre": [
+   "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL.FOLD_BUILD"
+  ],
+  "mis": [
+   "M_AG8_FR_LITTER",
+   "M_AG8_FR_STAY",
+   "M_AG8_FR_WATER",
+   "M_AG8_FR_SUN"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE": {
   "name": "Name pests and diseases of vegetables and how to control them",
@@ -356,8 +450,27 @@ export const SKILLS = {
   "mis": [
    "M_AG8_PD_PEST",
    "M_AG8_PD_DISEASE",
-   "M_AG8_PD_CONTROL"
+   "M_AG8_PD_CONTROL",
+   "M_AG8_PD_CUTWORM"
   ]
+ },
+ "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_CONTROL_METHODS": {
+  "name": "Say how pests and diseases are controlled on vegetables without harmful chemicals",
+  "sub": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO",
+  "outcome": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.b",
+  "outcomes": [
+   "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.b"
+  ],
+  "pre": [
+   "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO.PEST_DISEASE"
+  ],
+  "mis": [
+   "M_AG8_PCM_COMPOST",
+   "M_AG8_PCM_SAME",
+   "M_AG8_PCM_LATE",
+   "M_AG8_PCM_SPRAY"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.FISH_PROCESS": {
   "name": "Say why and how fresh fish is processed",
@@ -371,7 +484,8 @@ export const SKILLS = {
   "mis": [
    "M_AG8_FP_ORDER",
    "M_AG8_FP_METHOD",
-   "M_AG8_FP_SAFE"
+   "M_AG8_FP_SAFE",
+   "M_AG8_FP_SALT"
   ]
  },
  "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR.POULTRY_DRESS": {
@@ -388,7 +502,9 @@ export const SKILLS = {
   "mis": [
    "M_AG8_PD_ORDER",
    "M_AG8_PD_SCALD",
-   "M_AG8_PD_SAFE"
+   "M_AG8_PD_SAFE",
+   "M_AG8_PD_OFFAL",
+   "M_AG8_PD_ROUGH"
   ]
  },
  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE": {
@@ -403,7 +519,8 @@ export const SKILLS = {
   "mis": [
    "M_AG8_MP_BOIL",
    "M_AG8_MP_FERMENT",
-   "M_AG8_MP_CONTAINER"
+   "M_AG8_MP_CONTAINER",
+   "M_AG8_MP_COOLER"
   ]
  },
  "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE": {
@@ -420,7 +537,8 @@ export const SKILLS = {
   "mis": [
    "M_AG8_ME_DRY",
    "M_AG8_ME_COLD",
-   "M_AG8_ME_SALT"
+   "M_AG8_ME_SALT",
+   "M_AG8_ME_THICK"
   ]
  },
  "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL": {
@@ -435,8 +553,28 @@ export const SKILLS = {
   "mis": [
    "M_AG8_BM_ENERGY",
    "M_AG8_BM_PROTEIN",
-   "M_AG8_BM_PROTECT"
+   "M_AG8_BM_PROTECT",
+   "M_AG8_BM_SAME"
   ]
+ },
+ "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.MEAL_PREP": {
+  "name": "Say how a balanced meal is planned, cooked and served for a given person",
+  "sub": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA",
+  "outcome": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.b",
+  "outcomes": [
+   "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.b",
+   "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.c"
+  ],
+  "pre": [
+   "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA.BALANCED_MEAL"
+  ],
+  "mis": [
+   "M_AG8_MPR_ORDER",
+   "M_AG8_MPR_STYLE",
+   "M_AG8_MPR_BUDGET",
+   "M_AG8_MPR_SICK"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN": {
   "name": "Name routine cleaning practices in a kitchen",
@@ -449,8 +587,27 @@ export const SKILLS = {
   "mis": [
    "M_AG8_KC_DAILY",
    "M_AG8_KC_RAW",
-   "M_AG8_KC_WASTE"
+   "M_AG8_KC_WASTE",
+   "M_AG8_KC_CLOTH"
   ]
+ },
+ "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE": {
+  "name": "Say how a kitchen is cleaned daily, weekly and on special occasions",
+  "sub": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN",
+  "outcome": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.b",
+  "outcomes": [
+   "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.b"
+  ],
+  "pre": [
+   "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN"
+  ],
+  "mis": [
+   "M_AG8_KR_BOTTOM",
+   "M_AG8_KR_MIX",
+   "M_AG8_KR_STORE",
+   "M_AG8_KR_SPONGE"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS": {
   "name": "Name seams used in making household items",
@@ -463,8 +620,28 @@ export const SKILLS = {
   "mis": [
    "M_AG8_SM_PLAIN",
    "M_AG8_SM_FRENCH",
-   "M_AG8_SM_USE"
+   "M_AG8_SM_USE",
+   "M_AG8_SM_OPEN"
   ]
+ },
+ "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAM_MAKING": {
+  "name": "Say how open and plain seams are made and used to construct a household item",
+  "sub": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI",
+  "outcome": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.b",
+  "outcomes": [
+   "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.b",
+   "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.c"
+  ],
+  "pre": [
+   "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI.SEAMS"
+  ],
+  "mis": [
+   "M_AG8_SEW_RIGHT",
+   "M_AG8_SEW_EDGE",
+   "M_AG8_SEW_NEATEN",
+   "M_AG8_SEW_PRESS"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS": {
   "name": "Explain the challenges of animal waterers and how an innovative one helps",
@@ -477,8 +654,27 @@ export const SKILLS = {
   "mis": [
    "M_AG8_WA_OPEN",
    "M_AG8_WA_SAVE",
-   "M_AG8_WA_MATERIAL"
+   "M_AG8_WA_MATERIAL",
+   "M_AG8_WA_HEIGHT"
   ]
+ },
+ "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERER_DESIGN": {
+  "name": "Say how an innovative waterer is designed, built, tested and improved",
+  "sub": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_",
+  "outcome": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
+  "outcomes": [
+   "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.b"
+  ],
+  "pre": [
+   "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_.WATERERS"
+  ],
+  "mis": [
+   "M_AG8_WD_TEST",
+   "M_AG8_WD_CHEM",
+   "M_AG8_WD_CLEAN",
+   "M_AG8_WD_PROBLEM"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES": {
   "name": "Describe support services reached through ICT",
@@ -491,51 +687,129 @@ export const SKILLS = {
   "mis": [
    "M_AG8_IS_SERVICE",
    "M_AG8_IS_WEATHER",
-   "M_AG8_IS_SAFE"
+   "M_AG8_IS_SAFE",
+   "M_AG8_IS_VET"
   ]
+ },
+ "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS": {
+  "name": "Say how a support service is reached safely through ICT",
+  "sub": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES",
+  "outcome": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.b",
+  "outcomes": [
+   "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.b"
+  ],
+  "pre": [
+   "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES"
+  ],
+  "mis": [
+   "M_AG8_IA_FAKE",
+   "M_AG8_IA_CHECK",
+   "M_AG8_IA_LOGOUT",
+   "M_AG8_IA_STEPS"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  }
 };
 export const MIS_FEEDBACK = {
  "M_AG8_SC_TERRACE": "Terraces slow water and hold soil.",
  "M_AG8_SC_MULCH": "Mulch covers and protects soil.",
  "M_AG8_SC_CONTOUR": "Plant along the contour.",
+ "M_AG8_SC_TRASH": "Lay crop trash in lines across the slope. It traps soil and rots into manure.",
+ "M_AG8_CA_LEVEL": "Mark the contour first so the line is level and water spreads, not runs.",
+ "M_AG8_CA_WATERWAY": "Grass in a waterway holds the soil so the flowing water does not cut a gully.",
+ "M_AG8_CA_STRIPS": "Strips go across the slope so each strip catches soil washed from the one above.",
+ "M_AG8_CA_REPAIR": "Check and repair bunds after storms. One break lets all the water through.",
  "M_AG8_WS_COVER": "Keep water covered.",
  "M_AG8_WS_TREAT": "Boil or purify before drinking.",
  "M_AG8_WS_MOSQUITO": "Covers keep out dirt and mosquitoes.",
+ "M_AG8_WS_CHEMICAL": "Use containers made and kept only for water. Chemical and fuel cans stay unsafe.",
+ "M_AG8_HS_FIRST": "Let the first flush wash the roof and run away. Collect the cleaner water after it.",
+ "M_AG8_HS_GUTTER": "Gutters slope gently towards the down pipe so water flows to the tank.",
+ "M_AG8_HS_TAP": "Fit the tap above the bottom so the settled dirt stays in the tank.",
+ "M_AG8_HS_CLEAN": "Clean the roof, gutters and tank before the rains and regularly after.",
  "M_AG8_KG_SPACE": "A kitchen garden is near the house.",
  "M_AG8_KG_CROP": "Sukuma wiki suits a kitchen garden.",
  "M_AG8_KG_MONEY": "It saves money.",
+ "M_AG8_KG_ONECROP": "A kitchen garden grows a little of many crops the family uses often.",
+ "M_AG8_GS_ALLONCE": "Plant small amounts every few weeks so there is always something to harvest.",
+ "M_AG8_GS_FAR": "Put the kitchen garden near the house and water, in the sun.",
+ "M_AG8_GS_FENCE": "Fence the garden so home animals do not eat or scratch it.",
+ "M_AG8_GS_HERB": "Herbs like dhania and mint grow well in a small kitchen garden.",
  "M_AG8_PF_MOVE": "A fold is moved.",
  "M_AG8_PF_PROTECT": "A fold protects from predators.",
  "M_AG8_PF_MANURE": "Manure is spread.",
+ "M_AG8_PF_BIG": "A fold suits a small flock. It must stay light enough to move.",
+ "M_AG8_FB_HEAVY": "Build the fold light, so it can be moved often to fresh ground.",
+ "M_AG8_FB_NOROOF": "A fold needs a roofed part for shelter, laying and roosting.",
+ "M_AG8_FB_MESH": "Use small-hole mesh and close every gap so predators cannot get in.",
+ "M_AG8_FB_SIZE": "Size the fold for the flock. Crowded birds fight and fall sick.",
+ "M_AG8_FR_LITTER": "Leave the droppings on the ground. They manure the soil.",
+ "M_AG8_FR_STAY": "Move the fold every few days so the birds have fresh grass and the ground stays clean.",
+ "M_AG8_FR_WATER": "Birds need clean water all day. Check and refill it.",
+ "M_AG8_FR_SUN": "Keep shade over part of the fold on hot days.",
  "M_AG8_PD_PEST": "Aphids are pests.",
  "M_AG8_PD_DISEASE": "Blight is a disease.",
  "M_AG8_PD_CONTROL": "Crop rotation helps.",
+ "M_AG8_PD_CUTWORM": "Cutworms hide in the soil by day and cut seedlings at night.",
+ "M_AG8_PCM_COMPOST": "Remove diseased plants and burn or bury them away from the garden.",
+ "M_AG8_PCM_SAME": "Rotate crops so soil diseases and pests do not build up.",
+ "M_AG8_PCM_LATE": "Act at the first sign. Pests and diseases spread fast.",
+ "M_AG8_PCM_SPRAY": "Only trained adults spray chemicals. Learners use handpicking, ash and natural sprays.",
  "M_AG8_FP_ORDER": "Scale and gut first.",
  "M_AG8_FP_METHOD": "Drying or smoking helps.",
  "M_AG8_FP_SAFE": "The teacher uses the knife.",
  "M_AG8_PD_ORDER": "Bleeding comes before plucking.",
  "M_AG8_PD_SCALD": "Scalding loosens feathers.",
  "M_AG8_PD_SAFE": "The teacher does it.",
+ "M_AG8_FP_SALT": "Salt draws water out of fish and stops germs, so it keeps longer.",
+ "M_AG8_PD_OFFAL": "Remove the offal straight after plucking so the meat does not spoil.",
+ "M_AG8_PD_ROUGH": "Handle birds calmly and kill quickly. It is kinder and gives better meat.",
  "M_AG8_MP_BOIL": "Boil and cool milk.",
  "M_AG8_MP_FERMENT": "Yoghurt is fermented milk.",
  "M_AG8_MP_CONTAINER": "Use clean covered containers.",
  "M_AG8_ME_DRY": "Drying preserves meat.",
  "M_AG8_ME_COLD": "Keep raw meat cold and covered.",
  "M_AG8_ME_SALT": "Salting helps meat last.",
+ "M_AG8_MP_COOLER": "Evaporating water cools a clay pot in wet sand. It keeps milk cool without power.",
+ "M_AG8_ME_THICK": "Cut meat into thin strips so it dries quickly and evenly.",
  "M_AG8_BM_ENERGY": "Ugali gives energy.",
  "M_AG8_BM_PROTEIN": "Beans build the body.",
  "M_AG8_BM_PROTECT": "Vegetables protect the body.",
+ "M_AG8_BM_SAME": "Age, health and work change what each person needs. Plan meals with that in mind.",
+ "M_AG8_MPR_ORDER": "Start the food that takes longest. Cook vegetables last so all is hot and fresh together.",
+ "M_AG8_MPR_STYLE": "Blue plate: plates filled in the kitchen. Family style: dishes on the table to share.",
+ "M_AG8_MPR_BUDGET": "Cheap proteins like beans, ndengu, eggs and omena make a balanced meal without meat.",
+ "M_AG8_MPR_SICK": "Give a sick person light, soft, nourishing food and plenty to drink.",
  "M_AG8_KC_DAILY": "Wash dishes every day.",
  "M_AG8_KC_RAW": "Keep raw meat apart.",
  "M_AG8_KC_WASTE": "Dispose of waste properly.",
+ "M_AG8_KC_CLOTH": "Keep separate clean cloths for dishes, surfaces and the floor.",
+ "M_AG8_KR_BOTTOM": "Clean from top to bottom. The floor is last.",
+ "M_AG8_KR_MIX": "Never mix cleaning agents. Some make poisonous gases.",
+ "M_AG8_KR_STORE": "Empty and clean the store from time to time and throw out spoilt food.",
+ "M_AG8_KR_SPONGE": "Wash and dry dish cloths daily. Wet cloths grow germs.",
  "M_AG8_SM_PLAIN": "A plain seam is one row of stitches.",
  "M_AG8_SM_FRENCH": "A French seam encloses raw edges.",
  "M_AG8_SM_USE": "Seams join cloth items.",
+ "M_AG8_SM_OPEN": "An open seam is stitched, then its turnings are pressed open flat.",
+ "M_AG8_SEW_RIGHT": "Put the right sides together, then the raw edges end up inside.",
+ "M_AG8_SEW_EDGE": "Stitch about 1.5 cm in so the seam does not fray out.",
+ "M_AG8_SEW_NEATEN": "Neaten raw edges so they do not fray in use and washing.",
+ "M_AG8_SEW_PRESS": "Press each seam so it lies flat and the item is neat.",
  "M_AG8_WA_OPEN": "Open troughs get dirty and spill.",
  "M_AG8_WA_SAVE": "It saves water.",
  "M_AG8_WA_MATERIAL": "A clean bottle can be used.",
+ "M_AG8_WA_HEIGHT": "Set the waterer at back height so the birds drink without dirtying it.",
+ "M_AG8_WD_TEST": "Test and adjust the waterer before you rely on it.",
+ "M_AG8_WD_CHEM": "Never use chemical containers for animal water. Use clean food-grade bottles.",
+ "M_AG8_WD_CLEAN": "Design the waterer so it opens and can be washed daily.",
+ "M_AG8_WD_PROBLEM": "Start by naming the problem. The design must solve it.",
  "M_AG8_IS_SERVICE": "eCitizen is an ICT service.",
  "M_AG8_IS_WEATHER": "It helps plan farm work.",
- "M_AG8_IS_SAFE": "Keep passwords private."
+ "M_AG8_IS_SAFE": "Keep passwords private.",
+ "M_AG8_IS_VET": "Farmers can get vet and extension advice by phone, SMS or app.",
+ "M_AG8_IA_FAKE": "Real services do not ask you to send money to claim a prize. Do not reply; tell an adult.",
+ "M_AG8_IA_CHECK": "Check information with a second source before you act on it.",
+ "M_AG8_IA_LOGOUT": "Always log out of online services on a shared computer.",
+ "M_AG8_IA_STEPS": "Use only official codes and numbers from the provider."
 };

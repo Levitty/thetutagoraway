@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS",
+ "title": "Preserving Crop Products",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sun-dry thin slices of mango, sukuma wiki or tomatoes on a clean raised rack covered with a net. Knives are used by the teacher or with a teacher holding the board.",
+ "skills": [
+  {
+   "skill": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE",
+   "key_step": "The child says how crop produce is preserved at home by drying (cut thin, dried on a clean raised rack in the sun, stored dry and sealed) and why dry food keeps (germs and moulds need water to grow).",
+   "floor": {
+    "prerequisite": "Knows how grain is dried and stored.",
+    "question": "Why must grain be dry before storing?",
+    "answer": "so it does not go mouldy"
+   },
+   "representations": [
+    "dried and fresh samples",
+    "a drying rack",
+    "a picture of dried mango"
+   ],
+   "steps": [
+    "Cut thin.",
+    "Dry on a clean raised rack in the sun.",
+    "Store sealed and dry.",
+    "Say why: moulds need water."
+   ],
+   "contexts": [
+    "dried mango from Makueni",
+    "dried sukuma wiki for the dry season",
+    "dried tomatoes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"why does dried mango keep for months?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no water for moulds\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"germs and moulds need water\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE.M_AG_PR_WET",
+     "listen_for": [
+      "When it is still damp"
+     ],
+     "ask": "When may dried maize be stored?",
+     "repair": "Store one damp and one dry sample and see which grows mould."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE.M_AG_PR_FLOOR",
+     "listen_for": [
+      "On the floor in an open sack"
+     ],
+     "ask": "Where should dry produce be stored?",
+     "repair": "Compare a sack on the floor and one on a pallet."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE.M_AG_PR_WHY",
+     "listen_for": [
+      "The sun makes it harmless for ever"
+     ],
+     "ask": "Why does dry food keep longer?",
+     "repair": "Add water to dried food and watch it spoil."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.PRESERVE.M_AG6_PR_WHOLE",
+     "listen_for": [
+      "It makes no difference"
+     ],
+     "ask": "Why are mangoes cut into thin slices for drying?",
+     "repair": "Dry a thick and a thin slice side by side for two days."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why does dried food keep longer?",
+     "answer": "moulds and germs need water to grow",
+     "shows": "why"
+    },
+    {
+     "question": "Name a fruit that can be sun-dried.",
+     "answer": "mango, pawpaw, banana or pineapple",
+     "shows": "example"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS",
+   "key_step": "The child orders the steps of sun-drying (choose fresh, wash, cut thin and even, spread on a raised rack, cover with a net, turn, take in at night, dry until crisp or leathery, cool and store sealed) and tells when it is dry.",
+   "floor": {
+    "prerequisite": "Knows why drying preserves food.",
+    "question": "Why does dry food keep?",
+    "answer": "moulds need water"
+   },
+   "representations": [
+    "step cards",
+    "a rack and a net",
+    "samples at different stages"
+   ],
+   "steps": [
+    "Wash and cut thin.",
+    "Spread on a raised rack; cover.",
+    "Turn; take in at night.",
+    "Test: crisp or leathery.",
+    "Store sealed."
+   ],
+   "contexts": [
+    "the school drying rack",
+    "a home in Kitui",
+    "a women's group drying mangoes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: store, cut thin, dry on a rack."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's order."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them: cut thin, dry, store."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS.M_AG6_DRY_GROUND",
+     "listen_for": [
+      "On the bare ground"
+     ],
+     "ask": "Where should vegetables be spread for drying?",
+     "repair": "Ask what reaches food on the ground: dust, chickens, insects."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS.M_AG6_DRY_UNEVEN",
+     "listen_for": [
+      "It only looks neater"
+     ],
+     "ask": "Why are slices for drying cut the same thickness?",
+     "repair": "Dry a thick and a thin slice on the same tray and feel both after a day."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS.M_AG6_DRY_NIGHT",
+     "listen_for": [
+      "Leave it out all night"
+     ],
+     "ask": "What should be done with drying produce in the evening?",
+     "repair": "Touch a slice left out overnight: it is damp again."
+    },
+    {
+     "code": "AGRI.G6.FOOD_P.PRESERVING_CROP_PRODUCTS.DRYING_STEPS.M_AG6_DRY_SOFT",
+     "listen_for": [
+      "It has been in the sun one day"
+     ],
+     "ask": "How do you know dried sukuma wiki is ready to store?",
+     "repair": "Break a crisp and a limp leaf."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why cover drying produce with a net?",
+     "answer": "to keep off flies, dust and birds",
+     "shows": "cover"
+    },
+    {
+     "question": "How do you know dried mango is ready?",
+     "answer": "it is leathery, not sticky or wet",
+     "shows": "test"
+    }
+   ]
+  }
+ ]
+}

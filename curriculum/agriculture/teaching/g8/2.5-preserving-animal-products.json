@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC",
+ "title": "Preserving animal products",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Boil and cool milk, make mala or yoghurt, and show a home cooler (a clay pot in a wet sand box or a charcoal cooler). Salt and dry thin strips of meat with the teacher.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE",
+   "key_step": "The child says why milk is preserved (it spoils fast; preserving saves food and money) and how at home: boil and cool, ferment into mala or yoghurt, keep cool in a clay pot, charcoal cooler or fridge, in clean covered containers.",
+   "floor": {
+    "prerequisite": "Knows how animal products are kept safe.",
+    "question": "Why keep milk cool?",
+    "answer": "germs grow fast in warmth"
+   },
+   "representations": [
+    "a clay pot in wet sand",
+    "a jar of mala",
+    "step cards"
+   ],
+   "steps": [
+    "Boil, then cool quickly.",
+    "Or ferment into mala or yoghurt.",
+    "Keep cool and covered.",
+    "Use clean containers."
+   ],
+   "contexts": [
+    "milk at home",
+    "mala in Rift Valley homes",
+    "a dairy in Nyeri"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clay pot standing in wet sand."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the milk inside."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it stays cool\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"water evaporates and cools the pot\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_BOIL",
+     "listen_for": [
+      "By leaving it raw in the sun"
+     ],
+     "ask": "How can milk be kept longer?",
+     "repair": "Boil and cool one cup and leave one raw in the sun; smell both in the evening."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_FERMENT",
+     "listen_for": [
+      "Boiling dry"
+     ],
+     "ask": "Which preserves milk by fermenting?",
+     "repair": "Mala and yoghurt are milk soured by useful microbes on purpose; they keep longer."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_CONTAINER",
+     "listen_for": [
+      "In a dirty can"
+     ],
+     "ask": "How should milk be stored?",
+     "repair": "Old milk left in a can carries germs that spoil the new milk fast."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MILK_PRESERVE.M_AG8_MP_COOLER",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can milk be kept cool at home without electricity?",
+     "repair": "Feel the inside of a clay pot standing in wet sand."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways of preserving milk at home.",
+     "answer": "any two of boiling, fermenting, cooling",
+     "shows": "methods"
+    },
+    {
+     "question": "Why boil milk?",
+     "answer": "to kill germs",
+     "shows": "boil"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE",
+   "key_step": "The child says why meat is preserved (it spoils fast in warmth) and how at home: salting, boiling, drying thin strips, smoking, keeping cold and covered.",
+   "floor": {
+    "prerequisite": "Knows the sun-drying steps.",
+    "question": "Why cut produce thin for drying?",
+    "answer": "so it dries fast"
+   },
+   "representations": [
+    "pictures of nyirinyiri and smoked meat",
+    "salt",
+    "step cards"
+   ],
+   "steps": [
+    "Cut into thin strips.",
+    "Salt to draw out water.",
+    "Dry on a rack under a net, or smoke.",
+    "Store dry and covered."
+   ],
+   "contexts": [
+    "nyirinyiri in Samburu",
+    "smoked fish and meat",
+    "meat at a butchery"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"thick or thin strips for drying?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"thin\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"thin strips dry fast\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_DRY",
+     "listen_for": [
+      "Leaving it wet in the sun"
+     ],
+     "ask": "Which method preserves meat?",
+     "repair": "Show nyirinyiri or biltong: thin strips salted and dried keep for weeks."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_COLD",
+     "listen_for": [
+      "Warm and uncovered"
+     ],
+     "ask": "How should raw meat be kept?",
+     "repair": "Leave a piece of meat warm and uncovered and one cold and covered; compare."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_SALT",
+     "listen_for": [
+      "Spoils it faster"
+     ],
+     "ask": "What does salting do to meat?",
+     "repair": "Salt draws out water so germs cannot grow."
+    },
+    {
+     "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC.MEAT_PRESERVE.M_AG8_ME_THICK",
+     "listen_for": [
+      "It does not matter"
+     ],
+     "ask": "Why is meat cut into thin strips for drying?",
+     "repair": "Recall Grade 6: thin slices of fruit dried fast, thick ones rotted."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two ways of preserving meat at home.",
+     "answer": "any two of salting, drying, smoking, boiling",
+     "shows": "methods"
+    },
+    {
+     "question": "Why salt meat?",
+     "answer": "salt draws out water so germs cannot grow",
+     "shows": "salt"
+    }
+   ]
+  }
+ ]
+}

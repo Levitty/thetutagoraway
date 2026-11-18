@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G9.CONSER.INTEGRATED_FARMING",
+ "title": "Integrated Farming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Design a model of integrated farming on a board: a fish pond, a rabbit hutch above it, poultry, vegetables and a compost pit, with arrows showing what each part gives the others. Use cartons and reused materials.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS",
+   "key_step": "The child describes the components of integrated farming (fish, rabbits, poultry, vegetables, fruit trees, compost) and how each one's waste is another's input, saving land, water, feed and money.",
+   "floor": {
+    "prerequisite": "Knows how a kitchen garden is set up.",
+    "question": "Where is a kitchen garden placed?",
+    "answer": "near the house"
+   },
+   "representations": [
+    "a plot drawing with arrows",
+    "pictures of each component",
+    "a links chart"
+   ],
+   "steps": [
+    "Name the components.",
+    "Find what each gives another.",
+    "Draw the links.",
+    "Say what is saved."
+   ],
+   "contexts": [
+    "a demonstration farm",
+    "a smallholding in Kisii",
+    "a school farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rabbit hutch and a fish pond."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what one gives the other."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"droppings feed the fish\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw an arrow from hutch to pond."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_MIXED",
+     "listen_for": [
+      "Keeping many things, each on its own"
+     ],
+     "ask": "What makes a farm \"integrated\"?",
+     "repair": "Draw arrows between the parts of a farm; a farm with no arrows is not integrated."
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_DUNG",
+     "listen_for": [
+      "They are waste"
+     ],
+     "ask": "How can rabbit droppings be used in integrated farming?",
+     "repair": "Show a hutch built over a fish pond."
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_POND",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can water from a fish pond help the garden?",
+     "repair": "Water two beds, one with pond water, and compare."
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_PARTS.M_AG9_IP_LAND",
+     "listen_for": [
+      "It does not; it needs more land"
+     ],
+     "ask": "Why does integrated farming suit a small plot?",
+     "repair": "Show a small plot plan with a pond, hutch, poultry and beds."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name three components of integrated farming.",
+     "answer": "any three of fish, rabbits, poultry, vegetables, compost",
+     "shows": "parts"
+    },
+    {
+     "question": "How does integrated farming conserve resources?",
+     "answer": "the waste of one part feeds another",
+     "shows": "conserve"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL",
+   "key_step": "The child says how a model is designed: sketch, place each component to feed the next, show the links with arrows, choose materials, build and present.",
+   "floor": {
+    "prerequisite": "Knows the components and their links.",
+    "question": "What do rabbit droppings give the pond?",
+    "answer": "food for fish"
+   },
+   "representations": [
+    "a sketch sheet",
+    "cartons and reused materials",
+    "a checklist"
+   ],
+   "steps": [
+    "Sketch the plot.",
+    "Place parts near what they feed.",
+    "Show links with arrows.",
+    "Build and label."
+   ],
+   "contexts": [
+    "a class model",
+    "a science fair display",
+    "a farm plan at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plan with the compost pit far from the garden."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what is wrong."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"too far to carry\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Move it near the garden."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_ARROW",
+     "listen_for": [
+      "From the pond to the hutch"
+     ],
+     "ask": "In a model, which way does the arrow go between the rabbit hutch and the fish pond?",
+     "repair": "Ask what moves from one to the other."
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_LABEL",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why label the parts of an integrated farming model?",
+     "repair": "Ask a visitor to explain an unlabelled model."
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_PLACE",
+     "listen_for": [
+      "Far from the garden"
+     ],
+     "ask": "Where is the compost pit best placed in an integrated plot?",
+     "repair": "Count the steps to carry compost across the plot model."
+    },
+    {
+     "code": "AGRI.G9.CONSER.INTEGRATED_FARMING.INTEGRATED_MODEL.M_AG9_IM_SKETCH",
+     "listen_for": [
+      "Start building at once"
+     ],
+     "ask": "What is done before building the model?",
+     "repair": "Show a model where the pond covers the garden."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do the arrows in the model show?",
+     "answer": "what moves from one part to another",
+     "shows": "arrows"
+    },
+    {
+     "question": "Why sketch before building?",
+     "answer": "so the parts fit",
+     "shows": "plan"
+    }
+   ]
+  }
+ ]
+}

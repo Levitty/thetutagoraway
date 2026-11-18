@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO",
+ "title": "Water Harvesting and Storage",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Look at the school roof, gutters and tank. Clean a gutter (from the ground, with a pole), fit a mesh over the tank inlet, and discuss first-flush diversion.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE",
+   "key_step": "The child says how harvested water is stored safely for home use: clean covered tanks and containers used only for water, shallow pans and ponds for run-off (fenced, for animals and gardens), treated before drinking, protected from mosquitoes.",
+   "floor": {
+    "prerequisite": "Knows how run-off can be used.",
+    "question": "Name a structure that holds run-off.",
+    "answer": "a retention pit"
+   },
+   "representations": [
+    "pictures of tanks, pans and ponds",
+    "a covered and an open container",
+    "a treatment chart"
+   ],
+   "steps": [
+    "Store in clean, covered containers.",
+    "Use pans and ponds for run-off.",
+    "Treat water before drinking.",
+    "Keep mosquitoes out."
+   ],
+   "contexts": [
+    "the school tank",
+    "a water pan in Kajiado",
+    "jerrycans at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an open tank with wrigglers in it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what will come out of the water."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"mosquitoes\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a lid on the tank."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_COVER",
+     "listen_for": [
+      "Uncovered"
+     ],
+     "ask": "How should stored water be kept?",
+     "repair": "Leave a basin of water uncovered for two days; look at the dust, insects and larvae."
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_TREAT",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What should be done before drinking harvested water?",
+     "repair": "Show the dirt washed off a roof in the first rain."
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_MOSQUITO",
+     "listen_for": [
+      "To warm the water"
+     ],
+     "ask": "Why must water tanks be covered?",
+     "repair": "Show mosquito larvae in an open container; malaria mosquitoes breed in still water."
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.WATER_STORE.M_AG8_WS_CHEMICAL",
+     "listen_for": [
+      "An old paraffin jerrycan"
+     ],
+     "ask": "Which container is safe for storing drinking water?",
+     "repair": "Smell a washed paraffin can."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why cover a water tank?",
+     "answer": "to keep out dirt and mosquitoes",
+     "shows": "cover"
+    },
+    {
+     "question": "What is done to harvested water before drinking?",
+     "answer": "boil or treat it",
+     "shows": "treat"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP",
+   "key_step": "The child says how a school harvests and stores water: clean roof, gutters sloping to a down pipe, mesh over the inlet, first flush let away, a covered tank on a firm base with the tap above the bottom, pans for run-off, regular cleaning.",
+   "floor": {
+    "prerequisite": "Knows safe water storage.",
+    "question": "Why cover stored water?",
+    "answer": "to keep it clean and stop mosquitoes"
+   },
+   "representations": [
+    "a model roof and gutter",
+    "a mesh",
+    "step cards"
+   ],
+   "steps": [
+    "Clean the roof and gutters.",
+    "Gutters slope to the down pipe.",
+    "Mesh on the inlet; let the first flush go.",
+    "Covered tank; clean regularly."
+   ],
+   "contexts": [
+    "the school roof",
+    "a home in Kitui",
+    "a church tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a roof, a gutter and a tank."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where leaves will go without a mesh."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"into the tank\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a mesh on the inlet."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP.M_AG8_HS_FIRST",
+     "listen_for": [
+      "Let it into the tank"
+     ],
+     "ask": "What is done with the first rain from a roof?",
+     "repair": "Collect the first and the later rain in two glasses and compare."
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP.M_AG8_HS_GUTTER",
+     "listen_for": [
+      "Flat along the roof"
+     ],
+     "ask": "How must a gutter be fixed?",
+     "repair": "Pour water into a flat gutter model: it stands and overflows."
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP.M_AG8_HS_TAP",
+     "listen_for": [
+      "It should be at the very bottom"
+     ],
+     "ask": "Why is the tank tap fitted a little above the bottom?",
+     "repair": "Let muddy water settle in a bottle; which layer would a bottom tap draw?"
+    },
+    {
+     "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO.HARVEST_SETUP.M_AG8_HS_CLEAN",
+     "listen_for": [
+      "Never"
+     ],
+     "ask": "How often should gutters and the tank be cleaned?",
+     "repair": "Show leaves and mud from a blocked gutter."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why let the first rain run away?",
+     "answer": "it washes dirt off the roof",
+     "shows": "first flush"
+    },
+    {
+     "question": "Which way do gutters slope?",
+     "answer": "towards the down pipe and tank",
+     "shows": "gutters"
+    }
+   ]
+  }
+ ]
+}

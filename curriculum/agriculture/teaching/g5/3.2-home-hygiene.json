@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G5.HYGIEN.HOME_HYGIENE",
+ "title": "Home Hygiene",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring small samples: a tile, a piece of wood, a glass jar, a cemented brick, a lump of earthen floor material. Children use plain soap and water only.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+   "key_step": "The child identifies home surfaces by material: wood (furniture, doors), glass (windows, mirrors), tile, cement, earth, plastic and metal, telling them apart by feel, weight, sound and whether light passes through.",
+   "floor": {
+    "prerequisite": "Knows the properties of solids.",
+    "question": "Is glass see-through?",
+    "answer": "yes"
+   },
+   "representations": [
+    "samples of each material",
+    "a feel bag",
+    "a walk round the classroom"
+   ],
+   "steps": [
+    "Look: see-through, shiny, grain?",
+    "Feel: smooth, rough, cold, light?",
+    "Tap: what sound?",
+    "Name the material."
+   ],
+   "contexts": [
+    "a classroom",
+    "a kitchen at home",
+    "a church or mosque"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a window, a door and a floor."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the window.",
+     "say": "What material, and how do you know?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"glass: we see through it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label each surface."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_CEMENT",
+     "listen_for": [
+      "A cemented floor"
+     ],
+     "ask": "A floor is made of smooth shiny squares laid side by side. What is it?",
+     "repair": "Let the child feel a piece of rough cement and a glazed tile and say which is which."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_GLASS",
+     "listen_for": [
+      "Wood"
+     ],
+     "ask": "A window pane is see-through and smooth. What is it made of?",
+     "repair": "Hold each material up to the light and ask which lets the light through."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG5_SURF_PLASTIC",
+     "listen_for": [
+      "Wood, because it is brown"
+     ],
+     "ask": "A brown table is light, smooth and bends a little. What is it made of?",
+     "repair": "Tap a plastic and a wooden table; feel the weight and grain."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG5_SURF_EARTH",
+     "listen_for": [
+      "No, it is only dirt"
+     ],
+     "ask": "Can an earthen floor be kept clean?",
+     "repair": "Show a smeared earthen floor in a rural home: smooth and swept."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which surface can you see through?",
+     "answer": "glass",
+     "shows": "glass"
+    },
+    {
+     "question": "Name a floor surface made with water and sand.",
+     "answer": "cement",
+     "shows": "cement"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+   "key_step": "The child chooses how to clean each surface: wood with a damp cloth and dry (never soaked), glass with a damp cloth or newspaper, tiles and cement swept then mopped or scrubbed and dried, earthen floors swept and smeared.",
+   "floor": {
+    "prerequisite": "Knows the surfaces by material.",
+    "question": "What is a door usually made of?",
+    "answer": "wood or metal"
+   },
+   "representations": [
+    "a chart: surface, method, tool",
+    "a cloth, a mop, newspaper",
+    "samples to clean"
+   ],
+   "steps": [
+    "Name the surface.",
+    "Sweep or dust first.",
+    "Choose damp wipe, mop, scrub or smear.",
+    "Dry it."
+   ],
+   "contexts": [
+    "a tiled bathroom",
+    "a wooden desk",
+    "an earthen floor in a homestead"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"wooden table: pour water and scrub?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what will happen to the wood."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it swells or cracks\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"damp cloth, then dry\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_SOAK_WOOD",
+     "listen_for": [
+      "Pour lots of water on it"
+     ],
+     "ask": "How should a wooden table be cleaned?",
+     "repair": "Compare a piece of wood soaked overnight with a piece wiped damp, after a day."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_EARTH_SCRUB",
+     "listen_for": [
+      "Scrub it with plenty of water"
+     ],
+     "ask": "How is an earthen floor cleaned?",
+     "repair": "Ask what plenty of water does to packed soil."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_WET_SLIP",
+     "listen_for": [
+      "Leave them wet"
+     ],
+     "ask": "After mopping the tiles, what must be done?",
+     "repair": "Walk carefully on a wet tile and a dry tile, and ask which is safer."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_WASH_FIRST",
+     "listen_for": [
+      "Scrub it with water"
+     ],
+     "ask": "What comes first in cleaning a cemented floor?",
+     "repair": "Pour water on a dusty floor and look at the mud, then sweep first and try again."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is a wooden table cleaned?",
+     "answer": "with a damp cloth, then dried",
+     "shows": "wood"
+    },
+    {
+     "question": "Why dry a tiled floor after mopping?",
+     "answer": "a wet tile is slippery",
+     "shows": "tile"
+    }
+   ]
+  }
+ ]
+}

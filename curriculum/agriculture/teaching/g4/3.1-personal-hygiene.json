@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE",
+ "title": "Personal Hygiene",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep this sub-strand kind: never point at a child's own body, clothes or smell. Use a tippy-tap made from a jerrycan so the class can wash hands with running water.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+   "key_step": "The child names practices that keep the body clean and healthy (bathing daily, brushing teeth twice a day, washing hands, cutting nails, combing hair, wearing clean clothes) and says why each matters.",
+   "floor": {
+    "prerequisite": "Knows materials used to clean the body.",
+    "question": "What do we use to clean our teeth?",
+    "answer": "a toothbrush and toothpaste"
+   },
+   "representations": [
+    "a picture chart of a daily routine",
+    "a toothbrush, comb, soap and nail cutter",
+    "a hygiene song"
+   ],
+   "steps": [
+    "Name the practice.",
+    "Say how often.",
+    "Say what it protects us from."
+   ],
+   "contexts": [
+    "getting ready for school",
+    "after games",
+    "before going to bed"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"brush teeth: how often?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"twice a day\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"morning and night\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_PERFUME",
+     "listen_for": [
+      "Putting on perfume"
+     ],
+     "ask": "Which keeps the body clean?",
+     "repair": "Ask whether perfume washes dirt and germs off the skin."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_RARE",
+     "listen_for": [
+      "Once a week"
+     ],
+     "ask": "How often should teeth be brushed?",
+     "repair": "Look at how quickly a smooth tooth feels rough again."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_HANDS",
+     "listen_for": [
+      "Hands that look clean cannot have germs"
+     ],
+     "ask": "Why must hands that look clean still be washed before eating?",
+     "repair": "Rub clean-looking hands in glitter or powder and see how it spreads."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_NAILS",
+     "listen_for": [
+      "They do not matter if hands are washed"
+     ],
+     "ask": "Why should nails be kept short and clean?",
+     "repair": "Use a toothpick (gently) to show the dirt under a long nail after gardening."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How often should you brush your teeth?",
+     "answer": "at least twice a day",
+     "shows": "routine"
+    },
+    {
+     "question": "Why should we bathe daily?",
+     "answer": "to remove sweat, dirt and germs",
+     "shows": "reason"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
+   "key_step": "The child says when to wash hands (before eating and cooking, after the toilet, after handling animals or rubbish) and how (running water, soap, rub all parts including between the fingers and under the nails for about 20 seconds, rinse, dry on a clean towel or in the air).",
+   "floor": {
+    "prerequisite": "Knows hands can carry germs.",
+    "question": "Can germs be seen?",
+    "answer": "no"
+   },
+   "representations": [
+    "a tippy-tap",
+    "a hand-washing step chart",
+    "glitter on hands to stand for germs"
+   ],
+   "steps": [
+    "Wet the hands with running water.",
+    "Soap all parts: palms, backs, between fingers, nails.",
+    "Rub while you count to twenty.",
+    "Rinse and dry on a clean towel or in the air."
+   ],
+   "contexts": [
+    "before lunch at school",
+    "after the toilet",
+    "after feeding chickens"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two hands with dots for germs between the fingers."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether a quick rinse with no soap will remove them."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Rub with soap on the drawing and wipe the dots away."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_NOSOAP",
+     "listen_for": [
+      "Water only"
+     ],
+     "ask": "What do we use to wash hands properly?",
+     "repair": "Wash greasy hands with water only and then with soap."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_QUICK",
+     "listen_for": [
+      "One second, a quick dip is enough"
+     ],
+     "ask": "How long should hands be rubbed with soap?",
+     "repair": "Count while rubbing with soap and talk about how long it takes to reach under the nails."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_BEFORE",
+     "listen_for": [
+      "After eating only"
+     ],
+     "ask": "When must hands be washed?",
+     "repair": "Ask what is on hands before a meal after playing outside."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_TOWEL",
+     "listen_for": [
+      "On my dirty shirt"
+     ],
+     "ask": "How should you dry your hands after washing?",
+     "repair": "Ask where the germs on the dirty shirt go when wet hands touch it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two times you must wash your hands.",
+     "answer": "any two of before eating, after the toilet, after touching animals",
+     "shows": "when"
+    },
+    {
+     "question": "What do you use with water to wash hands well?",
+     "answer": "soap",
+     "shows": "how"
+    }
+   ]
+  }
+ ]
+}

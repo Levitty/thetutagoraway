@@ -1,0 +1,278 @@
+{
+ "sub_strand": "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
+ "title": "Growing Vegetables",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Raise a nursery of kale or cabbage with the class, transplant in the evening after watering the nursery, and keep a care record.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+   "key_step": "The child names the practices in growing vegetables in order (site and seedbed, nursery, transplanting, watering, weeding, manure, pest control, harvesting) and says how one depends on another.",
+   "floor": {
+    "prerequisite": "Knows how to prepare a seedbed.",
+    "question": "Why break the soil fine?",
+    "answer": "so small seeds can grow"
+   },
+   "representations": [
+    "picture cards to order",
+    "a garden calendar",
+    "the school vegetable plot"
+   ],
+   "steps": [
+    "Choose the site; prepare the bed.",
+    "Raise the nursery.",
+    "Transplant.",
+    "Water, weed, feed, protect.",
+    "Harvest."
+   ],
+   "contexts": [
+    "kale at school",
+    "tomatoes at home",
+    "a 4-K club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: transplant, nursery, harvest."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's order."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them: nursery, transplant, harvest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_ORDER",
+     "listen_for": [
+      "Transplant, make a nursery, sow, harvest"
+     ],
+     "ask": "Which is the correct order?",
+     "repair": "Ask what you transplant if you have not sown."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_WATER_ONLY",
+     "listen_for": [
+      "Nothing, only watering is needed"
+     ],
+     "ask": "What else must be done after transplanting kale?",
+     "repair": "Compare a weeded and an unweeded bed after three weeks."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG5_VEG_HARVEST",
+     "listen_for": [
+      "Uproot the whole plant"
+     ],
+     "ask": "How are sukuma wiki leaves harvested?",
+     "repair": "Show a kale plant picked for weeks: the stem has scars of old leaves."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG5_VEG_MANURE",
+     "listen_for": [
+      "No, vegetables are small"
+     ],
+     "ask": "Should manure be added when preparing a vegetable bed?",
+     "repair": "Grow kale in poor soil and in manured soil side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which comes before transplanting?",
+     "answer": "raising seedlings in a nursery",
+     "shows": "order"
+    },
+    {
+     "question": "Name a practice after transplanting.",
+     "answer": "watering, weeding, manuring or pest control",
+     "shows": "care"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+   "key_step": "The child says how a nursery bed is made (good site near water, dug fine, manured, raised a little, drills, thin shallow sowing, mulch, shade, gentle watering) and why (tender seedlings are easy to care for in one small place).",
+   "floor": {
+    "prerequisite": "Knows how to sow tiny seeds.",
+    "question": "How deep are tiny seeds sown?",
+    "answer": "shallow"
+   },
+   "representations": [
+    "a tray nursery",
+    "a picture of a shade made of sticks and grass",
+    "step cards"
+   ],
+   "steps": [
+    "Dig fine and add manure.",
+    "Make shallow drills.",
+    "Sow thinly; cover lightly.",
+    "Mulch, shade, water gently."
+   ],
+   "contexts": [
+    "the school nursery",
+    "a home nursery in a basin",
+    "a farmer's cabbage nursery"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a nursery bed with a shade over it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the shade.",
+     "say": "Why is this here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to protect from strong sun\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"shade: tender seedlings\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_COARSE",
+     "listen_for": [
+      "Big lumps are better for tiny seeds"
+     ],
+     "ask": "Why is the nursery soil broken to a fine crumb?",
+     "repair": "Hide a tiny seed under a lump and under a crumb and ask which one can push through."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_DEEP",
+     "listen_for": [
+      "About 10 cm deep"
+     ],
+     "ask": "How deep should you cover tiny kale seeds?",
+     "repair": "Ask how a tiny shoot can push through a thick layer of soil."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_FLOOD",
+     "listen_for": [
+      "Soaked heavily until water stands"
+     ],
+     "ask": "How should the nursery bed be watered?",
+     "repair": "Ask what happens to tiny seeds in a puddle."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG5_NURS_SHADE",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why is a nursery bed given shade?",
+     "repair": "Put one tray of seedlings in the sun and one under a shade for a hot day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are vegetables raised in a nursery first?",
+     "answer": "tender seedlings are easier to care for in one place",
+     "shows": "why"
+    },
+    {
+     "question": "Why is the nursery near water?",
+     "answer": "seedlings need regular watering",
+     "shows": "site"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+   "key_step": "The child says how to transplant (water the nursery first, lift with soil on the roots, plant in the evening at the same depth, firm, water) and care afterwards (water, shade if hot, gap, weed, protect from pests).",
+   "floor": {
+    "prerequisite": "Knows how a nursery is made.",
+    "question": "What is put over a nursery for shade?",
+    "answer": "a frame of sticks and dry grass"
+   },
+   "representations": [
+    "seedlings in a tray",
+    "a trowel",
+    "a care record sheet"
+   ],
+   "steps": [
+    "Water the nursery the day before.",
+    "Lift with soil round the roots.",
+    "Plant in the evening at the same depth; firm and water.",
+    "Water, gap and weed in the weeks after."
+   ],
+   "contexts": [
+    "kale transplanting at school",
+    "tomatoes at home",
+    "onions in a farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seedling lifted with a ball of soil and one with bare roots."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will wilt."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the bare one\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"keep soil on the roots\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_NOON",
+     "listen_for": [
+      "At midday in the sun"
+     ],
+     "ask": "When is it best to transplant seedlings?",
+     "repair": "Place one wilted and one shaded seedling in the sun and compare."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_DRY",
+     "listen_for": [
+      "Leave the bed dry so the soil falls off"
+     ],
+     "ask": "What should you do before lifting seedlings from the nursery?",
+     "repair": "Ask which seedlings keep their roots: one pulled dry or one lifted wet with soil."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_NOWATER",
+     "listen_for": [
+      "Nothing until harvest"
+     ],
+     "ask": "What is done after transplanting seedlings?",
+     "repair": "Look at two transplanted beds, one cared for and one left."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG5_TRANS_SMALL",
+     "listen_for": [
+      "As soon as they come up"
+     ],
+     "ask": "When are seedlings ready to transplant?",
+     "repair": "Show a tiny and a ready seedling; ask which has the stronger roots."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why transplant in the evening?",
+     "answer": "it is cool, so seedlings lose less water",
+     "shows": "time"
+    },
+    {
+     "question": "What is gapping?",
+     "answer": "replacing seedlings that died",
+     "shows": "care"
+    }
+   ]
+  }
+ ]
+}

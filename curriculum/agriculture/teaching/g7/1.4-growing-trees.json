@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G7.CONSER.GROWING_TREES",
+ "title": "Growing Trees",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Each learner plants and cares for a tree in the school compound or at home, from a seedling, seed or cutting, with a name tag and a care record.",
+ "skills": [
+  {
+   "skill": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE",
+   "key_step": "The child explains why trees matter: they hold soil, break wind, give shade and oxygen, take in carbon dioxide, hold rain in forests that feed rivers, give homes to wildlife, and give fruit, timber, fodder, medicine and fuel.",
+   "floor": {
+    "prerequisite": "Knows the components of air.",
+    "question": "Which gas do we breathe in to live?",
+    "answer": "oxygen"
+   },
+   "representations": [
+    "a spider chart",
+    "a map of Kenya's water towers",
+    "pictures of a bare and a forested hillside"
+   ],
+   "steps": [
+    "Soil: roots hold it.",
+    "Air: oxygen in, carbon dioxide out.",
+    "Water: forests feed rivers.",
+    "People: fruit, timber, medicine, shade."
+   ],
+   "contexts": [
+    "the Mau forest",
+    "a mango tree at home",
+    "the school windbreak"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hill with trees and a hill without."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which hill keeps its soil after heavy rain."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the one with trees\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"roots hold soil\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_DRY",
+     "listen_for": [
+      "Dry it up"
+     ],
+     "ask": "What do trees do to the land?",
+     "repair": "Compare the soil under a tree's shade with bare ground at midday; talk about cover, humus and springs in forests."
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_GAS",
+     "listen_for": [
+      "Smoke"
+     ],
+     "ask": "Which gas do trees give out?",
+     "repair": "Recall air components from Science: plants take in carbon dioxide and give out oxygen in daylight."
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_USE",
+     "listen_for": [
+      "Only firewood"
+     ],
+     "ask": "What else do trees give?",
+     "repair": "List what a mango or grevillea gives over its life: fruit, shade, timber, fodder, bees, windbreak."
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE.M_AG7_TI_RAIN",
+     "listen_for": [
+      "They do not; rivers come from the sea"
+     ],
+     "ask": "How do forests help rivers like the Tana?",
+     "repair": "Show the Mau or Mount Kenya forests on a map and the rivers flowing out of them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways trees help the environment.",
+     "answer": "any two of holding soil, shade, oxygen, rain and rivers, wildlife homes",
+     "shows": "importance"
+    },
+    {
+     "question": "Which gas do trees take in?",
+     "answer": "carbon dioxide",
+     "shows": "gas"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING",
+   "key_step": "The child says how a tree is planted and cared for: choose a suitable tree and site, dig early, topsoil apart and mixed with manure, remove the sleeve, plant at the nursery depth, firm, water, mulch, fence, then water and weed until established.",
+   "floor": {
+    "prerequisite": "Knows how a fruit seedling is planted.",
+    "question": "What is mixed with topsoil when planting?",
+    "answer": "manure"
+   },
+   "representations": [
+    "a seedling in a sleeve",
+    "a planting hole",
+    "a care record"
+   ],
+   "steps": [
+    "Choose the tree and site.",
+    "Dig early; topsoil apart; add manure.",
+    "Remove the sleeve; plant at the same depth.",
+    "Water, mulch, fence; keep caring."
+   ],
+   "contexts": [
+    "a school tree-planting day",
+    "a home compound",
+    "a church or mosque compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seedling in a polythene sleeve going into a hole."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to do with the sleeve."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"remove it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"remove the sleeve, keep the soil ball\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_SLEEVE",
+     "listen_for": [
+      "Leave it on to protect the roots"
+     ],
+     "ask": "What is done with the seedling's polythene sleeve when planting?",
+     "repair": "Show roots curled inside a sleeve dug up after a year."
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_SITE",
+     "listen_for": [
+      "Right next to the house wall"
+     ],
+     "ask": "Where should a tree that grows big be planted?",
+     "repair": "Show a tree whose roots have cracked a wall."
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_ONCE",
+     "listen_for": [
+      "Only on the day it is planted"
+     ],
+     "ask": "How long must a newly planted tree be cared for?",
+     "repair": "Show a care record and seedlings that died after planting day."
+    },
+    {
+     "code": "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING.M_AG7_TP_TYPE",
+     "listen_for": [
+      "It does not matter which tree"
+     ],
+     "ask": "Why is eucalyptus not planted beside springs and wetlands?",
+     "repair": "Ask the class which indigenous trees grow by rivers in their area."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is the topsoil kept apart when digging?",
+     "answer": "it is the richest soil, to go back round the roots",
+     "shows": "topsoil"
+    },
+    {
+     "question": "Why fence a young tree?",
+     "answer": "to keep animals from eating or trampling it",
+     "shows": "protect"
+    }
+   ]
+  }
+ ]
+}

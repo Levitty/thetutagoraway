@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS",
+ "title": "Conserving Wild Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The answer to a big wild animal in every story is: keep away and tell an adult or the Kenya Wildlife Service. Children never chase animals.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+   "key_step": "The child matches wild animals to the damage they do to property (elephants trampling crops and breaking water tanks, baboons and monkeys eating crops and raiding stores, porcupines and bush pigs digging roots at night, birds eating grain).",
+   "floor": {
+    "prerequisite": "Knows small wild animals that destroy crops.",
+    "question": "What do moles eat?",
+    "answer": "roots"
+   },
+   "representations": [
+    "pictures of animals and damage",
+    "track prints",
+    "a matching chart"
+   ],
+   "steps": [
+    "Look at the damage.",
+    "Look for signs: tracks, droppings, time.",
+    "Name the animal."
+   ],
+   "contexts": [
+    "a farm near a game park",
+    "a school plot near a forest",
+    "a grain store"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a broken water tank and big footprints."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the footprints.",
+     "say": "Which animal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"an elephant\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"elephants break tanks looking for water\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_MIX",
+     "listen_for": [
+      "A quelea bird"
+     ],
+     "ask": "Which wild animal digs up sweet potatoes and cassava from the ground?",
+     "repair": "Ask where a bird can reach and where a digger can reach."
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_ALL",
+     "listen_for": [
+      "A bee that visits the flowers"
+     ],
+     "ask": "Which wild creature helps a farmer?",
+     "repair": "Ask what bees do to the flowers on a tomato plant and what owls do to rats."
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG5_DMG_MONKEY",
+     "listen_for": [
+      "Only eat fruit"
+     ],
+     "ask": "What damage can baboons do on a farm?",
+     "repair": "Show a picture of a maize field after baboons; ask what was eaten."
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG5_DMG_NIGHT",
+     "listen_for": [
+      "Only the neighbour's goats in the day"
+     ],
+     "ask": "Crops are found eaten in the morning with holes under the fence. Who could have done it?",
+     "repair": "Show tracks and a porcupine quill near a damaged plot."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a wild animal that digs up root crops at night.",
+     "answer": "a porcupine or bush pig",
+     "shows": "match"
+    },
+    {
+     "question": "What property can elephants damage?",
+     "answer": "crops, fences, water tanks, stores",
+     "shows": "property"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+   "key_step": "The child chooses safe ways of repelling wild animals that do not harm them (scarecrows, noise makers, live thorny or beehive fences, chilli and dung smoke, guarding, lights) and matches the method to the animal, keeping away from big animals.",
+   "floor": {
+    "prerequisite": "Knows wild animals damage property.",
+    "question": "What do baboons damage?",
+    "answer": "crops and stores"
+   },
+   "representations": [
+    "pictures of each method",
+    "a chart: animal, method",
+    "a model beehive fence"
+   ],
+   "steps": [
+    "Name the animal.",
+    "Choose a method that suits it.",
+    "Check it does not hurt the animal or people.",
+    "Keep away from big animals."
+   ],
+   "contexts": [
+    "farms near Tsavo",
+    "the school garden and birds",
+    "a home with monkeys"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"elephants\" and \"birds\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which a scarecrow will repel."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"birds\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"elephants: beehive fence or chilli\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_KILL",
+     "listen_for": [
+      "Poison them"
+     ],
+     "ask": "Monkeys keep eating the maize. What is the best thing to do?",
+     "repair": "Ask what happens to other animals that eat the poison and what the law says about wild animals."
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_ONE",
+     "listen_for": [
+      "A scarecrow made of old clothes"
+     ],
+     "ask": "Which is more likely to keep elephants off a farm?",
+     "repair": "Ask whether an elephant is afraid of a coat on a stick."
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_CLOSE",
+     "listen_for": [
+      "Run at it and shout"
+     ],
+     "ask": "A buffalo comes into the shamba at dusk. What should a child do?",
+     "repair": "Ask who gets hurt when a person meets a frightened buffalo."
+    },
+    {
+     "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG5_REP_FIRE",
+     "listen_for": [
+      "Yes, it chases them away"
+     ],
+     "ask": "Is burning the bush a good way to repel wild animals?",
+     "repair": "Ask what else the fire burns: grass for cattle, trees, homes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a safe way to keep elephants off a farm.",
+     "answer": "a beehive fence or chilli",
+     "shows": "method"
+    },
+    {
+     "question": "Why should we not poison wild animals?",
+     "answer": "it kills them and other animals; they are protected",
+     "shows": "safe"
+    }
+   ]
+  }
+ ]
+}

@@ -25,7 +25,7 @@ function allCodes() {
 
 // dir: 'science' | 'integrated_science'; subject: 'science' | 'integratedscience'; noFamilies: skill codes known to have no family yet.
 // notTested: the subject's own rule for outcomes seen in class rather than asked (Social Studies adds practical tasks, 18 Nov 2026).
-export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5, notTested = NOT_TESTED }) {
+export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5, notTested = NOT_TESTED, families = true }) {
   const source = J(`curriculum/${dir}/g${grade}.json`);
   const lib = J(`engine/data/curriculum/${subject}.g${grade}.misconceptions.json`);
   const own = `${(source.sub_strands.find(s => s.skills?.length)?.skills[0].code || source.sub_strands[0].code).split('.').slice(0, 2).join('.')}.`;   // the skills' own prefix (CRE skills are CRES.G<n>.)
@@ -112,7 +112,8 @@ export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = 
     }
   });
 
-  test(`${label}: families are filed under real skills and outcomes, stay off for children, and the skills with none are known`, async () => {
+  // families: false for a grade with no subject entry and no families yet (Agriculture Grade 9, 18 Nov 2026).
+  if (families) test(`${label}: families are filed under real skills and outcomes, stay off for children, and the skills with none are known`, async () => {
     const entry = (await import(new URL(`src/ai-tutor/content/subjects/${subject}_g${grade}.js`, ROOT))).default;
     const byCode = new Map(skills.map(k => [k.code, k]));
     for (const f of entry.families) {

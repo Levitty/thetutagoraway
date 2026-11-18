@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H",
+ "title": "Conserving Animal Feed: Hay",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make hay from grass or maize stover in a box baler (a wooden box with open ends and strings laid across it) and build a small stack on a raised base. Talk about the last drought and what happened to animals.",
+ "skills": [
+  {
+   "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS",
+   "key_step": "The child describes methods of conserving forage for drought (haymaking by baling or stacking, standing forage, crop residues) and says why: feed when grass is gone, fewer animal deaths, milk and income kept.",
+   "floor": {
+    "prerequisite": "Knows why produce is dried to keep.",
+    "question": "Why does dried food keep?",
+    "answer": "moulds need water"
+   },
+   "representations": [
+    "a seasons calendar",
+    "pictures of bales, stacks and a paddock",
+    "a box baler"
+   ],
+   "steps": [
+    "Plenty in the rains, little in the drought.",
+    "Conserve: bale, stack, keep standing forage, keep stover.",
+    "Feed it in the drought."
+   ],
+   "contexts": [
+    "cattle in Laikipia",
+    "goats in Kitui",
+    "a dairy cow at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a calendar with green months and brown months."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask when to make hay."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"in the green months\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark haymaking in the rains."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_RAINY",
+     "listen_for": [
+      "During the drought"
+     ],
+     "ask": "When should forage be conserved for a drought?",
+     "repair": "Show a calendar: grass is plenty in April and gone in September."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_STANDING",
+     "listen_for": [
+      "Grass cut and stood in heaps"
+     ],
+     "ask": "What is standing forage?",
+     "repair": "Show a fenced paddock left ungrazed in the rains."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_STOVER",
+     "listen_for": [
+      "Burn it to clear the shamba"
+     ],
+     "ask": "What can be done with maize stover after harvest to help in a drought?",
+     "repair": "Ask what cattle eat when the grass is gone."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAY_METHODS.M_AG9_HM_LOSS",
+     "listen_for": [
+      "Moving is always better"
+     ],
+     "ask": "Why is conserving feed better than moving animals in a drought?",
+     "repair": "Discuss the losses of animals in the last drought."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two methods of conserving forage.",
+     "answer": "any two of baling, stacking, standing forage, keeping stover",
+     "shows": "methods"
+    },
+    {
+     "question": "Why conserve forage?",
+     "answer": "to feed animals in a drought",
+     "shows": "why"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING",
+   "key_step": "The child says how hay is made: cut at flowering, dry and turn until dry but green, bale in a box baler or stack on a raised base with a sloping top, cover, store dry, feed in the dry season.",
+   "floor": {
+    "prerequisite": "Knows the methods of conserving forage.",
+    "question": "Name a method.",
+    "answer": "baling"
+   },
+   "representations": [
+    "a box baler with strings",
+    "cut grass",
+    "step cards"
+   ],
+   "steps": [
+    "Cut at flowering.",
+    "Dry and turn.",
+    "Bale or stack on a raised base.",
+    "Cover and store dry."
+   ],
+   "contexts": [
+    "a school box baler",
+    "a farm in Nyandarua",
+    "a herder's stack"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a stack on the ground with a flat top."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens in the rain."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it gets wet and rots\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Redraw it raised with a sloping top."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_LATE",
+     "listen_for": [
+      "When it is old, dry and brown"
+     ],
+     "ask": "When is grass best cut for hay?",
+     "repair": "Compare green leafy grass and old brown stems: which would a cow choose?"
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_OPEN",
+     "listen_for": [
+      "Out in the field"
+     ],
+     "ask": "Where are hay bales kept after baling?",
+     "repair": "Show a bale left out in rain: black and mouldy inside."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_WET",
+     "listen_for": [
+      "It keeps better"
+     ],
+     "ask": "What happens if hay is baled while still damp?",
+     "repair": "Smell a damp bale left for a week."
+    },
+    {
+     "code": "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H.HAYMAKING.M_AG9_HK_GROUND",
+     "listen_for": [
+      "On the ground with a flat top"
+     ],
+     "ask": "How should a hay stack be built?",
+     "repair": "Pour water on a flat-topped and a sloping model stack."
+    }
+   ],
+   "checks": [
+    {
+     "question": "When is grass cut for hay?",
+     "answer": "at flowering",
+     "shows": "cutting"
+    },
+    {
+     "question": "Why must hay be dry before baling?",
+     "answer": "damp hay goes mouldy",
+     "shows": "drying"
+    }
+   ]
+  }
+ ]
+}

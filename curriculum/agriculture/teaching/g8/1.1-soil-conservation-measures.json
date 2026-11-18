@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR",
+ "title": "Soil Conservation Measures",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Lay a stone line or trash line along a contour marked with an A-frame on the school slope, plant a grass strip, and build a farm model in a carton showing all five measures.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE",
+   "key_step": "The child names methods of soil conservation and what each does: strip cropping, grassed waterways, stone lines, trash lines, soil bunds, terraces, contour farming, mulching, cover crops, agroforestry.",
+   "floor": {
+    "prerequisite": "Knows how erosion is controlled.",
+    "question": "How should a slope be ploughed?",
+    "answer": "along the contour"
+   },
+   "representations": [
+    "pictures of each measure",
+    "a farm model in a carton",
+    "a matching chart"
+   ],
+   "steps": [
+    "Name the measure.",
+    "Say how it slows water or covers soil.",
+    "Say where it is used."
+   ],
+   "contexts": [
+    "terraces in Murang'a",
+    "stone lines in Machakos",
+    "the school slope"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a slope with lines of stones across it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lines.",
+     "say": "What do they do to the water?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"slow it and trap soil\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"stone lines\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_TERRACE",
+     "listen_for": [
+      "Speeds up the water"
+     ],
+     "ask": "What does terracing do on a slope?",
+     "repair": "Pour water down a tray with and without small steps of soil; time it."
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_MULCH",
+     "listen_for": [
+      "Leaves it bare"
+     ],
+     "ask": "What does mulch do to soil?",
+     "repair": "Lay mulch on a tray and show it covering the soil from raindrops."
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_CONTOUR",
+     "listen_for": [
+      "Up and down the slope"
+     ],
+     "ask": "How should crops be planted on a slope?",
+     "repair": "Recall Grade 6: rows across the slope stop water; rows down the slope become channels."
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.SOIL_CONSERVE.M_AG8_SC_TRASH",
+     "listen_for": [
+      "Burn them to clear the field"
+     ],
+     "ask": "What can be done with maize stalks after harvest to conserve soil?",
+     "repair": "Show a trash line holding soil behind it after rain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two soil conservation measures.",
+     "answer": "any two of strip cropping, grassed waterways, stone lines, trash lines, bunds, terraces",
+     "shows": "name"
+    },
+    {
+     "question": "How do trash lines conserve soil?",
+     "answer": "they slow water and trap soil",
+     "shows": "how"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY",
+   "key_step": "The child says how measures are carried out: mark the contour with an A-frame, lay stone or trash lines and build bunds along it, plant strips across the slope, grass the waterway, repair after storms.",
+   "floor": {
+    "prerequisite": "Knows the soil conservation measures.",
+    "question": "Name a measure.",
+    "answer": "stone lines"
+   },
+   "representations": [
+    "an A-frame made of sticks and a stone on a string",
+    "pegs",
+    "step cards"
+   ],
+   "steps": [
+    "Mark the contour with an A-frame.",
+    "Lay lines or build bunds along it.",
+    "Plant grass or strips.",
+    "Repair after storms."
+   ],
+   "contexts": [
+    "the school slope",
+    "a farm in Embu",
+    "a carton farm model"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an A-frame on a slope."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the hanging stone shows when the legs are level."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it hangs at the middle mark\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"level: on the contour\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY.M_AG8_CA_LEVEL",
+     "listen_for": [
+      "By eye, roughly across"
+     ],
+     "ask": "How is a stone line laid on a slope?",
+     "repair": "Pour water along a tilted line on a model; it runs to the low end and cuts a gully."
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY.M_AG8_CA_WATERWAY",
+     "listen_for": [
+      "So it looks nice"
+     ],
+     "ask": "Why is a waterway planted with grass?",
+     "repair": "Run water down a bare channel and a grassed channel on a model."
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY.M_AG8_CA_STRIPS",
+     "listen_for": [
+      "Down the slope"
+     ],
+     "ask": "How are strips laid out in strip cropping?",
+     "repair": "Draw both on a slope and trace where rain water goes."
+    },
+    {
+     "code": "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR.CONSERVE_ACTIVITY.M_AG8_CA_REPAIR",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What must be done to soil bunds after a heavy storm?",
+     "repair": "Show a broken bund with a gully below the break."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What tool marks a contour on a slope?",
+     "answer": "an A-frame or line level",
+     "shows": "tool"
+    },
+    {
+     "question": "Why plant grass in a waterway?",
+     "answer": "grass holds the soil",
+     "shows": "waterway"
+    }
+   ]
+  }
+ ]
+}

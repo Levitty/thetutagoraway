@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/agriculture/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Agriculture teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/agriculture/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Agriculture teacher's review; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g7)"};
 export const SUBSTRANDS = {
  "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI": {
   "name": "Controlling Soil Pollution",
@@ -314,7 +314,8 @@ export const SKILLS = {
   "mis": [
    "M_AG7_SP_GOOD",
    "M_AG7_SP_PLASTIC",
-   "M_AG7_SP_CONTROL"
+   "M_AG7_SP_CONTROL",
+   "M_AG7_SP_CONTAINER"
   ]
  },
  "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF": {
@@ -331,21 +332,42 @@ export const SKILLS = {
   "mis": [
    "M_AG7_RO_WASTE",
    "M_AG7_RO_STRUCTURE",
-   "M_AG7_RO_MULCH"
+   "M_AG7_RO_MULCH",
+   "M_AG7_RO_ROOF"
   ]
+ },
+ "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD": {
+  "name": "Say how a water retention ditch or pit is sited, dug and used",
+  "sub": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN",
+  "outcome": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.b",
+  "outcomes": [
+   "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.b"
+  ],
+  "pre": [
+   "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF"
+  ],
+  "mis": [
+   "M_AG7_RB_DOWN",
+   "M_AG7_RB_BANK",
+   "M_AG7_RB_CROP",
+   "M_AG7_RB_SILT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP": {
   "name": "Name ways of keeping vitamins and minerals in vegetables",
   "sub": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT",
   "outcome": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.a",
   "outcomes": [
-   "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.a"
+   "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.a",
+   "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT.b"
   ],
   "pre": [],
   "mis": [
    "M_AG7_NK_LONG",
    "M_AG7_NK_WATER",
-   "M_AG7_NK_WASH"
+   "M_AG7_NK_WASH",
+   "M_AG7_NK_EARLY"
   ]
  },
  "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE": {
@@ -359,8 +381,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_TI_DRY",
    "M_AG7_TI_GAS",
-   "M_AG7_TI_USE"
+   "M_AG7_TI_USE",
+   "M_AG7_TI_RAIN"
   ]
+ },
+ "AGRI.G7.CONSER.GROWING_TREES.TREE_PLANTING": {
+  "name": "Say how a tree is planted and cared for until it is established",
+  "sub": "AGRI.G7.CONSER.GROWING_TREES",
+  "outcome": "AGRI.G7.CONSER.GROWING_TREES.b",
+  "outcomes": [
+   "AGRI.G7.CONSER.GROWING_TREES.b"
+  ],
+  "pre": [
+   "AGRI.G7.CONSER.GROWING_TREES.TREES_IMPORTANCE"
+  ],
+  "mis": [
+   "M_AG7_TP_SLEEVE",
+   "M_AG7_TP_SITE",
+   "M_AG7_TP_ONCE",
+   "M_AG7_TP_TYPE"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH": {
   "name": "Match the tilth to the planting material",
@@ -373,8 +414,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_TL_SMALL",
    "M_AG7_TL_TUBER",
-   "M_AG7_TL_MEDIUM"
+   "M_AG7_TL_MEDIUM",
+   "M_AG7_TL_MEANING"
   ]
+ },
+ "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP": {
+  "name": "Say how a seedbed is prepared to a fine, medium or coarse tilth",
+  "sub": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT",
+  "outcome": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.b",
+  "outcomes": [
+   "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.b"
+  ],
+  "pre": [
+   "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT.TILTH"
+  ],
+  "mis": [
+   "M_AG7_TP_RAKE",
+   "M_AG7_TP_WET",
+   "M_AG7_TP_ROOTS",
+   "M_AG7_TP_TOOL"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES": {
   "name": "Name management practices for crops and what each does",
@@ -389,8 +449,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_CP_WEED",
    "M_AG7_CP_THIN",
-   "M_AG7_CP_GAP"
+   "M_AG7_CP_GAP",
+   "M_AG7_CP_EARTH"
   ]
+ },
+ "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS": {
+  "name": "Say when and how gapping, thinning, weeding and earthing-up are carried out",
+  "sub": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT",
+  "outcome": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.b",
+  "outcomes": [
+   "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.b"
+  ],
+  "pre": [
+   "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES"
+  ],
+  "mis": [
+   "M_AG7_PS_LATEGAP",
+   "M_AG7_PS_THINWEAK",
+   "M_AG7_PS_THINDRY",
+   "M_AG7_PS_DEEPWEED"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS": {
   "name": "Say how animal products are prepared safely",
@@ -405,8 +484,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_AP_RAW",
    "M_AG7_AP_HANDS",
-   "M_AG7_AP_COOL"
+   "M_AG7_AP_COOL",
+   "M_AG7_AP_WASHEGG"
   ]
+ },
+ "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP": {
+  "name": "Say how eggs are sorted, graded and packed and how honey is crushed, strained and packed",
+  "sub": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT",
+  "outcome": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.b",
+  "outcomes": [
+   "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.b"
+  ],
+  "pre": [
+   "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS"
+  ],
+  "mis": [
+   "M_AG7_EH_GRADE",
+   "M_AG7_EH_POINT",
+   "M_AG7_EH_WATER",
+   "M_AG7_EH_OPEN"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
   "name": "Name methods of cooking and the food each suits",
@@ -421,8 +519,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_CK_STEAM",
    "M_AG7_CK_FRY",
-   "M_AG7_CK_BAKE"
+   "M_AG7_CK_BAKE",
+   "M_AG7_CK_GRILL"
   ]
+ },
+ "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_PRACTICE": {
+  "name": "Say how to grill, roast and steam food safely and tell when it is cooked",
+  "sub": "AGRI.G7.FOOD_P.COOKING_FOOD",
+  "outcome": "AGRI.G7.FOOD_P.COOKING_FOOD.b",
+  "outcomes": [
+   "AGRI.G7.FOOD_P.COOKING_FOOD.b"
+  ],
+  "pre": [
+   "AGRI.G7.FOOD_P.COOKING_FOOD.COOKING_METHODS"
+  ],
+  "mis": [
+   "M_AG7_CPR_DRY",
+   "M_AG7_CPR_TURN",
+   "M_AG7_CPR_RAW",
+   "M_AG7_CPR_SLEEVE"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE": {
   "name": "Name hygiene practices in rearing animals",
@@ -437,8 +554,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_AH_DUNG",
    "M_AG7_AH_WATER",
-   "M_AG7_AH_SICK"
+   "M_AG7_AH_SICK",
+   "M_AG7_AH_AIR"
   ]
+ },
+ "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING": {
+  "name": "Say the steps of cleaning an animal house, feeders and waterers",
+  "sub": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA",
+  "outcome": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.b",
+  "outcomes": [
+   "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.b"
+  ],
+  "pre": [
+   "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE"
+  ],
+  "mis": [
+   "M_AG7_HC_WETBED",
+   "M_AG7_HC_FEEDER",
+   "M_AG7_HC_NOGLOVES",
+   "M_AG7_HC_ORDER"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS": {
   "name": "Say how to launder a loose-coloured article",
@@ -451,8 +587,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_LC_WHITE",
    "M_AG7_LC_SOAK",
-   "M_AG7_LC_DRY"
+   "M_AG7_LC_DRY",
+   "M_AG7_LC_MEANING"
   ]
+ },
+ "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS": {
+  "name": "Say the steps of laundering a loose-coloured article",
+  "sub": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I",
+  "outcome": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.b",
+  "outcomes": [
+   "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.b"
+  ],
+  "pre": [
+   "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS"
+  ],
+  "mis": [
+   "M_AG7_CS_NOTEST",
+   "M_AG7_CS_HOT",
+   "M_AG7_CS_RUB",
+   "M_AG7_CS_FOLDWET"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING": {
   "name": "Name the stitches and tools used in knitting",
@@ -465,8 +620,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_KN_TOOL",
    "M_AG7_KN_STITCH",
-   "M_AG7_KN_CAST"
+   "M_AG7_KN_CAST",
+   "M_AG7_KN_GARTER"
   ]
+ },
+ "AGRI.G7.PRODUC.KNITTING_SKILLS.KNIT_ARTICLE": {
+  "name": "Say how a simple knitted article is made, from casting on to casting off",
+  "sub": "AGRI.G7.PRODUC.KNITTING_SKILLS",
+  "outcome": "AGRI.G7.PRODUC.KNITTING_SKILLS.b",
+  "outcomes": [
+   "AGRI.G7.PRODUC.KNITTING_SKILLS.b"
+  ],
+  "pre": [
+   "AGRI.G7.PRODUC.KNITTING_SKILLS.KNITTING"
+  ],
+  "mis": [
+   "M_AG7_KA_DROP",
+   "M_AG7_KA_TIGHT",
+   "M_AG7_KA_ENDS",
+   "M_AG7_KA_COUNT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN": {
   "name": "Describe a framed suspended garden and its advantages",
@@ -481,8 +655,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_FG_SPACE",
    "M_AG7_FG_DRAIN",
-   "M_AG7_FG_SOIL"
+   "M_AG7_FG_SOIL",
+   "M_AG7_FG_CROP"
   ]
+ },
+ "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD": {
+  "name": "Say how a framed suspended garden is designed, built and planted",
+  "sub": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP",
+  "outcome": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.b",
+  "outcomes": [
+   "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.b"
+  ],
+  "pre": [
+   "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN"
+  ],
+  "mis": [
+   "M_AG7_FB_WEAK",
+   "M_AG7_FB_SHADE",
+   "M_AG7_FB_POSTS",
+   "M_AG7_FB_NOPLAN"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION": {
   "name": "Name ways of adding value to crop produce",
@@ -497,8 +690,27 @@ export const SKILLS = {
   "mis": [
    "M_AG7_VA_RAW",
    "M_AG7_VA_EXAMPLE",
-   "M_AG7_VA_STEPS"
+   "M_AG7_VA_STEPS",
+   "M_AG7_VA_LIFE"
   ]
+ },
+ "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS": {
+  "name": "Say the steps of adding value to a crop produce by drying or frying",
+  "sub": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO",
+  "outcome": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.b",
+  "outcomes": [
+   "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.b"
+  ],
+  "pre": [
+   "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION"
+  ],
+  "mis": [
+   "M_AG7_VS_PACK",
+   "M_AG7_VS_THICK",
+   "M_AG7_VS_LABEL",
+   "M_AG7_VS_SPOILT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  },
  "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS": {
   "name": "Name the forms of soap used at home",
@@ -511,51 +723,132 @@ export const SKILLS = {
   "mis": [
    "M_AG7_SF_FORM",
    "M_AG7_SF_USE",
-   "M_AG7_SF_SAFE"
+   "M_AG7_SF_SAFE",
+   "M_AG7_SF_POWDER"
   ]
+ },
+ "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING": {
+  "name": "Say how homemade soap is made from natural ingredients and how to stay safe",
+  "sub": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP",
+  "outcome": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.b",
+  "outcomes": [
+   "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.b"
+  ],
+  "pre": [
+   "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS"
+  ],
+  "mis": [
+   "M_AG7_SM_FAT",
+   "M_AG7_SM_CURE",
+   "M_AG7_SM_POT",
+   "M_AG7_SM_SALT"
+  ],
+  "nofamily": "teacher marks the practical with the KICD rubric"
  }
 };
 export const MIS_FEEDBACK = {
  "M_AG7_SP_GOOD": "Too much fertiliser pollutes the soil.",
  "M_AG7_SP_PLASTIC": "Polythene does not rot and blocks water and roots.",
  "M_AG7_SP_CONTROL": "Reduce, reuse and recycle waste.",
+ "M_AG7_SP_CONTAINER": "Never reuse pesticide containers for food or water. Return them or dispose of them safely.",
  "M_AG7_RO_WASTE": "Run-off can be trapped and used.",
  "M_AG7_RO_STRUCTURE": "Trenches and water pans trap run-off.",
  "M_AG7_RO_MULCH": "Mulch slows run-off and keeps water.",
+ "M_AG7_RO_ROOF": "Run-off from roofs, paths and slopes can be led into retention structures.",
+ "M_AG7_RB_DOWN": "Dig across the slope so the ditch catches the water instead of speeding it up.",
+ "M_AG7_RB_BANK": "Throw the soil downhill to make a bank that holds the water in the ditch.",
+ "M_AG7_RB_CROP": "Bananas, arrowroots, sugarcane and napier like the wet soil of a retention pit.",
+ "M_AG7_RB_SILT": "Clear the silt from the ditch after heavy rains so it keeps holding water.",
  "M_AG7_NK_LONG": "Short cooking keeps the vitamins.",
  "M_AG7_NK_WATER": "The water holds minerals; use it.",
  "M_AG7_NK_WASH": "Wash before cutting to avoid losing vitamins.",
+ "M_AG7_NK_EARLY": "Cut vegetables just before cooking. Cut leaves left out or soaking lose vitamins.",
  "M_AG7_TI_DRY": "Trees hold soil and help rain.",
  "M_AG7_TI_GAS": "Trees give out oxygen.",
  "M_AG7_TI_USE": "Trees give shade, fruit, timber and shelter.",
+ "M_AG7_TI_RAIN": "Forests hold rain in the soil and let it out slowly into rivers. They are water towers.",
+ "M_AG7_TP_SLEEVE": "Remove the polythene sleeve. Roots cannot grow through it.",
+ "M_AG7_TP_SITE": "Plant big trees away from houses, power lines and latrines, where they have room to grow.",
+ "M_AG7_TP_ONCE": "Water, weed and protect a young tree until it is established.",
+ "M_AG7_TP_TYPE": "Choose a tree that suits the place. Eucalyptus uses much water, so keep it away from springs.",
  "M_AG7_TL_SMALL": "Small seeds need a fine tilth.",
  "M_AG7_TL_TUBER": "Tubers and cuttings suit a coarse tilth.",
  "M_AG7_TL_MEDIUM": "Maize and beans suit a medium tilth.",
+ "M_AG7_TL_MEANING": "Tilth is how fine or coarse the soil is after cultivation, not how fertile it is.",
+ "M_AG7_TP_RAKE": "Clear and dig first. Raking comes last to make a fine, level surface.",
+ "M_AG7_TP_WET": "Dig when the soil is moist, not wet. Wet soil smears and dries into hard clods.",
+ "M_AG7_TP_ROOTS": "Remove weed roots. Many weeds grow again from small pieces.",
+ "M_AG7_TP_TOOL": "Dig with a jembe or forked jembe. A rake only levels and fines the surface.",
  "M_AG7_CP_WEED": "Weeds compete with crops.",
  "M_AG7_CP_THIN": "Thinning removes extra seedlings.",
  "M_AG7_CP_GAP": "Gapping replaces seeds that did not grow.",
+ "M_AG7_CP_EARTH": "Earthing-up heaps soil round the stems to hold the plant up and cover the roots or tubers.",
+ "M_AG7_PS_LATEGAP": "Gap within about two weeks so the new plants keep up with the rest.",
+ "M_AG7_PS_THINWEAK": "Leave the strongest seedlings at the right spacing; remove the weak ones.",
+ "M_AG7_PS_THINDRY": "Thin when the soil is moist, so the seedlings left behind keep their roots.",
+ "M_AG7_PS_DEEPWEED": "Weed shallowly or by hand near the crop so its roots are not cut.",
  "M_AG7_AP_RAW": "Boil or pasteurise milk to kill germs.",
  "M_AG7_AP_HANDS": "Wash hands and tools first.",
  "M_AG7_AP_COOL": "Keep milk cool and covered.",
+ "M_AG7_AP_WASHEGG": "Wipe eggs dry. Washing removes the shell's coat and lets germs in.",
+ "M_AG7_EH_GRADE": "Remove cracked eggs when grading. They spoil quickly and can spoil others.",
+ "M_AG7_EH_POINT": "Pack eggs broad end up, where the air space is, so they keep fresh longer.",
+ "M_AG7_EH_WATER": "Keep honey dry. Water makes it ferment and spoil.",
+ "M_AG7_EH_OPEN": "Store honey in clean, dry, airtight containers so it stays pure.",
  "M_AG7_CK_STEAM": "Steaming cooks food over steam.",
  "M_AG7_CK_FRY": "Frying cooks food in hot oil.",
  "M_AG7_CK_BAKE": "Baking uses an oven.",
+ "M_AG7_CK_GRILL": "Grilling uses direct heat with no oil. Frying cooks food in hot oil.",
+ "M_AG7_CPR_DRY": "Check the water when steaming and top it up so it does not boil dry.",
+ "M_AG7_CPR_TURN": "Turn grilled food so both sides cook evenly.",
+ "M_AG7_CPR_RAW": "Meat is cooked when the juices run clear and it is not pink inside.",
+ "M_AG7_CPR_SLEEVE": "Roll up sleeves and tie back hair near a grill or fire.",
  "M_AG7_AH_DUNG": "Clean the house and remove dung.",
  "M_AG7_AH_WATER": "Give clean water.",
  "M_AG7_AH_SICK": "Separate sick animals.",
+ "M_AG7_AH_AIR": "Animal houses need fresh air to stay dry and healthy, without cold draughts on the animals.",
+ "M_AG7_HC_WETBED": "Let the house dry before new bedding goes in. Damp bedding grows germs.",
+ "M_AG7_HC_FEEDER": "Wash and rinse feeders and waterers every day before refilling.",
+ "M_AG7_HC_NOGLOVES": "Wear gloves, a mask and gumboots when cleaning animal houses, and wash your hands after.",
+ "M_AG7_HC_ORDER": "Remove dirt and scrub first. Disinfectant works only on a clean surface.",
  "M_AG7_LC_WHITE": "Wash loose colours separately.",
  "M_AG7_LC_SOAK": "Do not soak loose colours long.",
  "M_AG7_LC_DRY": "Dry loose colours in the shade.",
+ "M_AG7_LC_MEANING": "Loose-coloured means the dye runs in water, not that the clothes are loose.",
+ "M_AG7_CS_NOTEST": "Test a hidden part with a damp white cloth before washing.",
+ "M_AG7_CS_HOT": "Use cool or lukewarm water. Heat makes the dye run more.",
+ "M_AG7_CS_RUB": "Knead and squeeze loose colours quickly. Hard rubbing pulls the dye out.",
+ "M_AG7_CS_FOLDWET": "Hang loose colours to dry at once. Wet folds let colour run into other parts.",
  "M_AG7_KN_TOOL": "Knitting uses needles and yarn.",
  "M_AG7_KN_STITCH": "Knit and purl are knitting stitches.",
  "M_AG7_KN_CAST": "Casting on makes the first stitches.",
+ "M_AG7_KN_GARTER": "Garter stitch is knit every row. Knit and purl alternate rows make stocking stitch.",
+ "M_AG7_KA_DROP": "Pick up a dropped stitch at once, or it runs down and makes a hole.",
+ "M_AG7_KA_TIGHT": "Cast on evenly and not too tight so the needle goes in and the edge stretches.",
+ "M_AG7_KA_ENDS": "Sew in the ends so the article does not unravel.",
+ "M_AG7_KA_COUNT": "Count and measure: a test square tells how many stitches to cast on.",
  "M_AG7_FG_SPACE": "A suspended garden saves space.",
  "M_AG7_FG_DRAIN": "Containers need drainage holes.",
  "M_AG7_FG_SOIL": "Use soil mixed with manure.",
+ "M_AG7_FG_CROP": "Small, shallow-rooted crops like kale, spinach and herbs suit hanging containers.",
+ "M_AG7_FB_WEAK": "Wet soil is heavy. Use strong poles, planks or bars and fix them firmly.",
+ "M_AG7_FB_SHADE": "Space or stagger the containers so the lower plants get light too.",
+ "M_AG7_FB_POSTS": "Dig the uprights in or brace them so the frame does not fall.",
+ "M_AG7_FB_NOPLAN": "Sketch and measure first, then cut. It saves materials.",
  "M_AG7_VA_RAW": "Value addition raises the price.",
  "M_AG7_VA_EXAMPLE": "Making juice adds value.",
  "M_AG7_VA_STEPS": "Clean and sort first.",
+ "M_AG7_VA_LIFE": "Value addition can make produce keep longer as well as sell for more.",
+ "M_AG7_VS_PACK": "Cool the chips, then seal them in clean packets and label them.",
+ "M_AG7_VS_THICK": "Thin, even slices dry or fry evenly and come out crisp.",
+ "M_AG7_VS_LABEL": "A label tells buyers what is inside, the weight, the date and the maker.",
+ "M_AG7_VS_SPOILT": "Sort out spoilt produce first. One bad piece spoils the batch.",
  "M_AG7_SF_FORM": "Soap comes as bar, liquid, powder or paste.",
  "M_AG7_SF_USE": "Soap with water removes dirt and germs.",
- "M_AG7_SF_SAFE": "Strong chemicals are handled by the teacher only."
+ "M_AG7_SF_SAFE": "Strong chemicals are handled by the teacher only.",
+ "M_AG7_SF_POWDER": "Soap forms have many uses: liquid and paste for dishes, powder for clothes, bars for bathing and laundry.",
+ "M_AG7_SM_FAT": "Soap is made from lye and fat or oil. Ash water alone is not soap.",
+ "M_AG7_SM_CURE": "Let homemade soap harden and cure for weeks before using it.",
+ "M_AG7_SM_POT": "Keep a separate pot for soap. Never cook food in it.",
+ "M_AG7_SM_SALT": "Salt helps the soap separate and set hard. Soap is never eaten."
 };

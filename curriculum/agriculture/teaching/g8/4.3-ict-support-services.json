@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES",
+ "title": "ICT Support Services",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Show real services on the school phone or computer with the teacher: a weather forecast, an SMS market price service, a vet or extension helpline, M-Pesa as a payment service. Learners never type real PINs or passwords.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES",
+   "key_step": "The child describes support services reached through ICT: weather forecasts, veterinary and extension advice, market prices, farm supplies, banking and mobile money, catering and cleaning services, and government services such as eCitizen.",
+   "floor": {
+    "prerequisite": "Knows ICT tools and their uses.",
+    "question": "Name an ICT tool.",
+    "answer": "a mobile phone"
+   },
+   "representations": [
+    "a list of real services",
+    "a phone with the teacher",
+    "a matching chart: need, service"
+   ],
+   "steps": [
+    "Name the need.",
+    "Name the ICT service.",
+    "Say how it helps."
+   ],
+   "contexts": [
+    "a farmer checking the weather",
+    "paying school fees by mobile money",
+    "ordering seed online"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"a farmer wants to know if it will rain tomorrow\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which service helps."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a weather forecast service\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"weather SMS or app\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_SERVICE",
+     "listen_for": [
+      "A bus ride"
+     ],
+     "ask": "Which service is reached through ICT?",
+     "repair": "An ICT service is reached through a phone, computer or the internet: eCitizen, M-Pesa, weather SMS."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_WEATHER",
+     "listen_for": [
+      "It cannot help"
+     ],
+     "ask": "How can a weather SMS help a farmer?",
+     "repair": "Ask when a farmer should plant, spray or harvest; a forecast helps choose the day."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_SAFE",
+     "listen_for": [
+      "Share it"
+     ],
+     "ask": "What should you do with your password?",
+     "repair": "Real services never ask for your PIN. Keep it private; tell an adult about such calls."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_SERVICES.M_AG8_IS_VET",
+     "listen_for": [
+      "There is no way"
+     ],
+     "ask": "How can a farmer get advice about a sick cow without travelling?",
+     "repair": "Show a farmer helpline or SMS service with the teacher."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an ICT service useful to a farmer.",
+     "answer": "weather forecast, vet advice, market prices, supplies",
+     "shows": "service"
+    },
+    {
+     "question": "How can a weather forecast help a farmer?",
+     "answer": "to plan planting, spraying and harvesting",
+     "shows": "weather"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS",
+   "key_step": "The child says how to access a support service safely: find the official service, follow the steps (SMS, USSD, app, website), check information against another source, keep PINs and passwords private, beware of scams, log out.",
+   "floor": {
+    "prerequisite": "Knows ICT support services.",
+    "question": "Name an ICT support service.",
+    "answer": "a weather forecast"
+   },
+   "representations": [
+    "a phone with the teacher",
+    "step cards",
+    "real and scam message examples"
+   ],
+   "steps": [
+    "Find the official service.",
+    "Follow its steps.",
+    "Check the information.",
+    "Keep PINs private; log out."
+   ],
+   "contexts": [
+    "market prices by SMS",
+    "a vet helpline",
+    "mobile money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a message asking for your PIN to \"update your account\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to do."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"do not reply, tell an adult\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"real services never ask for your PIN\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS.M_AG8_IA_FAKE",
+     "listen_for": [
+      "A real service; send the money"
+     ],
+     "ask": "An SMS says you have won a prize and asks you to send money to claim it. What is it?",
+     "repair": "Compare a real service message with a scam message."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS.M_AG8_IA_CHECK",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why check market price information with another source?",
+     "repair": "Compare prices from two services for the same day."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS.M_AG8_IA_LOGOUT",
+     "listen_for": [
+      "Just close the window"
+     ],
+     "ask": "What should you do after using an online service on a shared computer?",
+     "repair": "Show how the next user can open the account after the window is closed."
+    },
+    {
+     "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES.ICT_ACCESS.M_AG8_IA_STEPS",
+     "listen_for": [
+      "Try any code"
+     ],
+     "ask": "How do you find the right USSD code or number for a service?",
+     "repair": "Show where official codes are printed: posters, the provider's website."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you do after using an online service on a shared computer?",
+     "answer": "log out",
+     "shows": "log out"
+    },
+    {
+     "question": "Should you give your PIN to a caller who says they are from the bank?",
+     "answer": "no, never",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

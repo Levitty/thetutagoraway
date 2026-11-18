@@ -1,0 +1,277 @@
+{
+ "sub_strand": "AGRI.G4.FOOD_P.COOKING_FOOD",
+ "title": "Cooking Food",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Every cooking practical is done with the teacher at the fire or stove. Children stand back from hot oil; long sleeves are rolled up and hair tied back.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+   "key_step": "The child describes boiling (in bubbling water), steaming (over steam, not in the water), roasting (in dry heat over fire or in ashes) and shallow frying (in a little hot oil, turned once).",
+   "floor": {
+    "prerequisite": "Knows heat is used to cook.",
+    "question": "Name a use of heat at home.",
+    "answer": "cooking"
+   },
+   "representations": [
+    "pictures of each method",
+    "a chart: method, what cooks the food",
+    "a demonstration of steaming bananas over water"
+   ],
+   "steps": [
+    "Boiling: food in bubbling water.",
+    "Steaming: food above the water, in the steam.",
+    "Roasting: dry heat, no water or oil.",
+    "Shallow frying: a little hot oil."
+   ],
+   "contexts": [
+    "roasting maize by the road",
+    "boiling eggs",
+    "steaming matoke"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pot of water with a basket of food above it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the food.",
+     "say": "Is it in the water?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, above it\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"steaming: cooked by steam\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_STEAM",
+     "listen_for": [
+      "Inside the boiling water"
+     ],
+     "ask": "In steaming, where is the food?",
+     "repair": "Show a steamer with the food on a rack above the water."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_FRY",
+     "listen_for": [
+      "A pot full of oil to cover the food"
+     ],
+     "ask": "What is used in shallow frying?",
+     "repair": "Show a frying pan with a spoonful of oil beside a pot full of oil."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_ROAST",
+     "listen_for": [
+      "In a pot of boiling water"
+     ],
+     "ask": "How is a maize cob roasted?",
+     "repair": "Roast a cob over a jiko and compare it with a boiled cob."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_BOIL",
+     "listen_for": [
+      "Nothing, boiling is only for water"
+     ],
+     "ask": "Which is cooked by boiling?",
+     "repair": "Show an egg going into a pan of boiling water and coming out cooked."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is roasted maize cooked?",
+     "answer": "in dry heat over a fire",
+     "shows": "roasting"
+    },
+    {
+     "question": "How much oil is used for shallow frying?",
+     "answer": "a little",
+     "shows": "shallow frying"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
+   "key_step": "The child picks a method that suits the food (green vegetables quickly, beans and maize boiled long, eggs boiled or fried) and says how to tell it is cooked well.",
+   "floor": {
+    "prerequisite": "Knows the four methods of cooking.",
+    "question": "What is steaming?",
+    "answer": "cooking with steam"
+   },
+   "representations": [
+    "a chart: food, best method, time",
+    "pictures of well and badly cooked vegetables",
+    "a demonstration"
+   ],
+   "steps": [
+    "Name the food: hard or soft?",
+    "Choose the method.",
+    "Cook for the right time.",
+    "Check it is done."
+   ],
+   "contexts": [
+    "githeri for lunch",
+    "fried eggs for breakfast",
+    "boiled sweet potatoes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"beans\" and \"sukuma wiki\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which needs the longer cooking."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"beans\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"hard foods long, green vegetables short\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_FRYALL",
+     "listen_for": [
+      "Shallow frying"
+     ],
+     "ask": "Which method suits dry beans best?",
+     "repair": "Try to fry dry beans and ask why they stay hard."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_OVER",
+     "listen_for": [
+      "For a very long time until it is soft and brown"
+     ],
+     "ask": "How long should sukuma wiki be cooked?",
+     "repair": "Cook greens for 3 minutes and for 30 minutes and compare colour and taste."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_SHORT",
+     "listen_for": [
+      "Spinach"
+     ],
+     "ask": "Which food needs the longest time to cook?",
+     "repair": "Put beans and spinach in two pots and see which is soft first."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_NOSALT",
+     "listen_for": [
+      "It makes no difference"
+     ],
+     "ask": "Why cook sukuma wiki quickly instead of boiling it for an hour?",
+     "repair": "Compare bright green quickly cooked sukuma with grey overcooked sukuma; ask which looks and tastes better."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which takes longer to cook: dry beans or cabbage?",
+     "answer": "dry beans",
+     "shows": "hard and soft"
+    },
+    {
+     "question": "Give a food cooked by shallow frying.",
+     "answer": "eggs, onions or fish",
+     "shows": "match"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
+   "key_step": "The child says how to cook safely (turn pot handles in, stay with the fire, use a dry cloth to hold hot pots, cover a burning pan, never use water on an oil fire, keep children away) and to clean up at once.",
+   "floor": {
+    "prerequisite": "Knows heat can burn.",
+    "question": "Can hot water burn the skin?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a picture of a stove with handles turned in and out",
+    "a dry cloth and a lid",
+    "a safety poster"
+   ],
+   "steps": [
+    "Turn handles in.",
+    "Stay with the pot.",
+    "Hold hot pots with a dry cloth.",
+    "Clean pots and surfaces straight away."
+   ],
+   "contexts": [
+    "the home jiko",
+    "a gas cooker",
+    "the school kitchen"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pan with a handle sticking out over the edge."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what could happen when a small child walks past."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it could be knocked and burn them\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Turn the handle in on the drawing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_HANDLE",
+     "listen_for": [
+      "Sticking out, so it is easy to reach"
+     ],
+     "ask": "How should the handle of a pot on the stove be turned?",
+     "repair": "Ask what happens when a child passes and brushes the handle."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_WATERFIRE",
+     "listen_for": [
+      "Pour water on it"
+     ],
+     "ask": "The oil in a pan catches fire. What should be done?",
+     "repair": "Talk about why water makes burning oil splash and spread."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_LEAVE",
+     "listen_for": [
+      "Go out and play, it will be fine"
+     ],
+     "ask": "The pot is on the fire. What should the cook do?",
+     "repair": "Ask what can happen to a pot that boils dry or a fire that spreads."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_DIRTY",
+     "listen_for": [
+      "The next day"
+     ],
+     "ask": "When should the pots and surfaces be cleaned after cooking?",
+     "repair": "Leave a crumb of food on a plate overnight in a jar; look at the flies or mould the next day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What do you put on a small pan of burning oil?",
+     "answer": "a lid or a damp cloth, never water",
+     "shows": "oil fire"
+    },
+    {
+     "question": "Why turn pot handles in?",
+     "answer": "so nobody knocks the pot over",
+     "shows": "handles"
+    }
+   ]
+  }
+ ]
+}

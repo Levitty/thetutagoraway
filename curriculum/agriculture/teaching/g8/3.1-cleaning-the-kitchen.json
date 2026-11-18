@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN",
+ "title": "Cleaning the Kitchen",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clean the school or home kitchen in three kinds: daily (dishes, surfaces, floor, waste), weekly (shelves, store, stove), special (walls, store emptied, after an event). Use soap and hot water; children never mix cleaning chemicals.",
+ "skills": [
+  {
+   "skill": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN",
+   "key_step": "The child names routine kitchen cleaning practices (washing dishes, wiping surfaces, cleaning the stove, sweeping and mopping, emptying waste, keeping raw and cooked food apart, separate cloths) and why each matters.",
+   "floor": {
+    "prerequisite": "Knows how to clean different surfaces.",
+    "question": "How is a wooden table cleaned?",
+    "answer": "with a damp cloth, then dried"
+   },
+   "representations": [
+    "a checklist",
+    "pictures of clean and dirty kitchens",
+    "cloths of different colours"
+   ],
+   "steps": [
+    "Wash dishes and wipe surfaces.",
+    "Keep raw and cooked food apart.",
+    "Empty waste into a covered bin.",
+    "Separate cloths."
+   ],
+   "contexts": [
+    "the school kitchen",
+    "a home kitchen",
+    "a hotel kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"one cloth for dishes and floor\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what could happen."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"germs spread to the dishes\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"separate cloths\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_DAILY",
+     "listen_for": [
+      "Once a year"
+     ],
+     "ask": "How often are dishes washed?",
+     "repair": "Sort jobs into daily, weekly and special; dishes and surfaces are daily."
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_RAW",
+     "listen_for": [
+      "Mixed together"
+     ],
+     "ask": "How should raw meat be kept from vegetables?",
+     "repair": "Use separate boards or wash between; raw meat juices carry germs."
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_WASTE",
+     "listen_for": [
+      "Left under the table"
+     ],
+     "ask": "What should be done with kitchen waste?",
+     "repair": "Put waste in a covered bin and empty it daily."
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_CLEAN.M_AG8_KC_CLOTH",
+     "listen_for": [
+      "One cloth is enough"
+     ],
+     "ask": "Why use separate cloths for dishes and for the floor?",
+     "repair": "Ask where the floor cloth has been."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How often are dishes washed?",
+     "answer": "after every meal, every day",
+     "shows": "daily"
+    },
+    {
+     "question": "Why keep raw meat apart from other food?",
+     "answer": "its germs can spread to food eaten raw",
+     "shows": "cross-contamination"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE",
+   "key_step": "The child sorts and orders kitchen cleaning: daily (dishes, surfaces, stove, floor, waste), weekly (shelves, cupboards, store, windows), special (walls, emptying the store), top to bottom, clean to dirty, the right agent for each surface, never mixing chemicals.",
+   "floor": {
+    "prerequisite": "Knows the routine practices.",
+    "question": "Name a daily cleaning job.",
+    "answer": "washing dishes"
+   },
+   "representations": [
+    "sorting cards: daily, weekly, special",
+    "cleaning tools",
+    "a rota"
+   ],
+   "steps": [
+    "Sort the job: daily, weekly or special.",
+    "Work top to bottom.",
+    "Use the right agent; never mix them.",
+    "Floor last; dry the cloths."
+   ],
+   "contexts": [
+    "the school kitchen rota",
+    "a home kitchen",
+    "after a school event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: wipe shelves, mop floor, clean stove."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which is last."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"mop the floor\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them top to bottom."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE.M_AG8_KR_BOTTOM",
+     "listen_for": [
+      "The shelves"
+     ],
+     "ask": "Which is cleaned last in a kitchen?",
+     "repair": "Wipe crumbs off a shelf onto a just-mopped floor."
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE.M_AG8_KR_MIX",
+     "listen_for": [
+      "Mixing makes them stronger and better"
+     ],
+     "ask": "Why must cleaning agents not be mixed?",
+     "repair": "Read the warning on a bleach bottle."
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE.M_AG8_KR_STORE",
+     "listen_for": [
+      "Adding new food"
+     ],
+     "ask": "What is special cleaning of a food store?",
+     "repair": "Show weevils and mouse droppings at the back of a store."
+    },
+    {
+     "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.KITCHEN_ROUTINE.M_AG8_KR_SPONGE",
+     "listen_for": [
+      "Leave them wet in the sink"
+     ],
+     "ask": "What is done with dish cloths and sponges after washing up?",
+     "repair": "Smell a sponge left wet for two days."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a weekly kitchen cleaning job.",
+     "answer": "cleaning shelves, cupboards or the store",
+     "shows": "weekly"
+    },
+    {
+     "question": "Why never mix cleaning agents?",
+     "answer": "some mixtures give off poisonous gas",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}
