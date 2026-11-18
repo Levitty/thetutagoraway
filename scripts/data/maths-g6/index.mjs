@@ -5,4 +5,5 @@
 //   mis    more misconceptions (mi from ../maths-g6-lib.mjs)
 //   pack   { SKILL: pk(...) }  the teaching pack entry, covering every misconception of the skill
 import * as whole from './whole-numbers.mjs';
-export const DEPTH = [whole];
+import * as mult from './multiplication.mjs';
+export const DEPTH = [whole, mult];

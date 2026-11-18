@@ -559,6 +559,90 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_COLUMN_BY_COLUMN": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+  "error": "Multiplies each digit only by the digit under it, as in column addition.",
+  "example": {
+   "question": "1,324 x 12",
+   "wrong_answer": "1,328 (4 x 2 and 2 x 1, the rest copied)",
+   "correct_answer": "15,888"
+  },
+  "cause": "Lines the numbers up on the right and works down each column, the way addition is done.",
+  "reveals": "An answer about the size of the bigger number as an option.",
+  "help": "Estimate first: 1,300 x 10 is already 13,000, so 1,328 cannot be right. Then multiply every digit by 2, and every digit by 10.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_STORY_ADDED": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+  "error": "Adds the two numbers in a story that needs multiplying.",
+  "example": {
+   "question": "A school buys 24 crates of milk at Ksh 1,350 each. What is the total cost?",
+   "wrong_answer": "Ksh 1,374 (1,350 + 24)",
+   "correct_answer": "Ksh 32,400"
+  },
+  "cause": "Reaches for the operation used most often instead of picturing 24 crates each costing 1,350.",
+  "reveals": "The sum of the two numbers in the story as an option.",
+  "help": "Draw the crates: 24 crates each costing 1,350 is 1,350 written 24 times, which is 1,350 x 24.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_EXACT_THEN_ROUNDED": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+  "error": "Works out the exact product and rounds it, instead of rounding the numbers first.",
+  "example": {
+   "question": "Estimate 38 x 62 by rounding each number to the nearest ten.",
+   "wrong_answer": "2,360 (38 x 62 = 2,356, then rounded)",
+   "correct_answer": "40 x 60 = 2,400"
+  },
+  "cause": "Thinks an estimate is a rounded answer, not a quick answer from rounded numbers.",
+  "reveals": "The rounded exact product as an option.",
+  "help": "An estimate is done in the head before working: round both numbers first, then multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ROUND_TO_HUNDRED": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+  "error": "Rounds a three-digit factor to the nearest hundred instead of the nearest ten.",
+  "example": {
+   "question": "Estimate 236 x 47 by rounding each number to the nearest ten.",
+   "wrong_answer": "200 x 50 = 10,000",
+   "correct_answer": "240 x 50 = 12,000"
+  },
+  "cause": "Rounds to the first digit of every number, the way a quick guess is often made.",
+  "reveals": "The estimate from rounding to the hundred as an option.",
+  "help": "Read the place in the question: nearest ten means look at the ones digit only.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_BACKWARDS_MULTIPLIED": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+  "error": "Multiplies to find a missing term before the given ones, instead of dividing.",
+  "example": {
+   "question": "__, 24, 72, 216: what is the first term?",
+   "wrong_answer": "72 (24 x 3)",
+   "correct_answer": "8"
+  },
+  "cause": "Uses the rule in the forward direction whichever way the gap is.",
+  "reveals": "The forward-rule answer for a term at the start.",
+  "help": "Going back along a times 3 pattern means dividing by 3: 24 / 3 = 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_NEXT_ROW_ONLY": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+  "error": "Continues the output column by its gap instead of using the rule on the input.",
+  "example": {
+   "question": "Inputs 2, 3, 4 give outputs 6, 9, 12. What does input 10 give?",
+   "wrong_answer": "15 (added 3 once more)",
+   "correct_answer": "30"
+  },
+  "cause": "Looks down the output column only and treats the table as a list.",
+  "reveals": "The next output in the list as the answer for an input far down.",
+  "help": "Ask what was done to each input: 2 became 6, 3 became 9. Do the same to 10.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
  "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D.M_ZERO_IN_QUOTIENT_LOST": {
   "skill": "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D",
   "error": "Leaves a zero out of the quotient when a digit of the dividend is too small to divide.",

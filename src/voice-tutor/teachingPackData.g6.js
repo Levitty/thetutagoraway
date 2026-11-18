@@ -1013,6 +1013,409 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.NUMBER.WHOLE_NUMBERS",
   "sub_strand_name": "Whole Numbers",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D",
+  "key_step": "The child splits the two-digit number into tens and ones, multiplies by each, and explains that the second row ends in zero because it is times tens.",
+  "floor": {
+   "prerequisite": "Multiplies a 3-digit number by a 2-digit number.",
+   "question": "What is 314 x 12?",
+   "answer": "3,768"
+  },
+  "representations": [
+   "a rectangle split into a strip for the ones and a strip for the tens",
+   "partitioning: 2,314 x 3 and 2,314 x 20 written side by side",
+   "the standard written method with two rows"
+  ],
+  "steps": [
+   "Estimate the product first.",
+   "Multiply by the ones digit and write the first row.",
+   "Write 0 in the ones place, then multiply by the tens digit for the second row.",
+   "Add the two rows and compare with the estimate."
+  ],
+  "contexts": [
+   "crates of milk for a school",
+   "bags of fertiliser for a cooperative",
+   "bus fares for a school trip"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2,314 x 23 and next to it 23 = 20 + 3."
+   },
+   {
+    "beat": "write",
+    "do": "Work 2,314 x 3 = 6,942 as the first row."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2 in 23.",
+    "say": "What does this 2 stand for?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 20."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write the second row starting with 0."
+   },
+   {
+    "beat": "reveal",
+    "do": "Add the rows: 6,942 + 46,280 = 53,222."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_NO_PLACE_HOLDER_ZERO",
+    "listen_for": [
+     "4,628",
+     "no zero",
+     "11,570"
+    ],
+    "ask": "What does the 2 in 23 stand for?",
+    "repair": "It is 2 tens, so the second row is times 20 and ends in 0.",
+    "error": "Forgets the zero in the ones place when multiplying by the tens digit, so the second partial product is ten times too small.",
+    "example": {
+     "question": "2,314 x 23",
+     "wrong_answer": "11,570 (the row for the 2 tens was not shifted: 6,942 + 4,628)",
+     "correct_answer": "53,222"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_CARRY_ADDED_BEFORE",
+    "listen_for": [
+     "I forgot the carry",
+     "add then multiply"
+    ],
+    "ask": "Where did you write the carried digit, and when did you add it?",
+    "repair": "Multiply first, then add the carried digit; write it small and cross it off.",
+    "error": "Adds the carried digit before multiplying, or forgets it, in a long product.",
+    "example": {
+     "question": "1,845 x 12",
+     "wrong_answer": "22,040 (a carry was lost)",
+     "correct_answer": "22,140"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_MULTIPLY_ONES_ONLY",
+    "listen_for": [
+     "6,000",
+     "only times 5"
+    ],
+    "ask": "Is 1,200 x 15 the same as 1,200 x 5?",
+    "repair": "Multiply by the tens too: 15 is 10 + 5.",
+    "error": "Multiplies only by the ones digit of the two-digit number.",
+    "example": {
+     "question": "1,200 x 15",
+     "wrong_answer": "6,000 (x 5 only)",
+     "correct_answer": "18,000"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_COLUMN_BY_COLUMN",
+    "listen_for": [
+     "1,328",
+     "down the columns"
+    ],
+    "ask": "Is 1,324 x 12 more or less than 1,324 x 10?",
+    "repair": "Every digit of the top number is multiplied by each digit of 12, not only the digit under it.",
+    "error": "Multiplies each digit only by the digit under it, as in column addition.",
+    "example": {
+     "question": "1,324 x 12",
+     "wrong_answer": "1,328 (4 x 2 and 2 x 1, the rest copied)",
+     "correct_answer": "15,888"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D.M_STORY_ADDED",
+    "listen_for": [
+     "1,374",
+     "plus 24"
+    ],
+    "ask": "If there were 2 crates, what would they cost?",
+    "repair": "Equal groups of the same cost means multiply: 24 crates of 1,350.",
+    "error": "Adds the two numbers in a story that needs multiplying.",
+    "example": {
+     "question": "A school buys 24 crates of milk at Ksh 1,350 each. What is the total cost?",
+     "wrong_answer": "Ksh 1,374 (1,350 + 24)",
+     "correct_answer": "Ksh 32,400"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 2,314 x 23?",
+    "answer": "53,222",
+    "shows": "zero in the tens row"
+   },
+   {
+    "question": "A cooperative buys 18 bags of fertiliser at Ksh 2,450 each. What is the total cost?",
+    "answer": "Ksh 44,100",
+    "shows": "a story that needs multiplying"
+   }
+  ],
+  "name": "Multiply a 4-digit number by a 2-digit number",
+  "sub_strand": "MATH.G6.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
+  "key_step": "The child rounds each number to the nearest ten before doing anything else, multiplies the rounded numbers, and uses the estimate to judge an exact answer.",
+  "floor": {
+   "prerequisite": "Rounds a number to the nearest ten.",
+   "question": "Round 47 to the nearest ten.",
+   "answer": "50"
+  },
+  "representations": [
+   "each number on a number line between two tens",
+   "the rounded numbers multiplied as tens (4 tens x 6 tens)",
+   "an exact answer set beside the estimate"
+  ],
+  "steps": [
+   "Round the first number to the nearest ten.",
+   "Round the second number to the nearest ten.",
+   "Multiply the non-zero digits, then put back all the zeros.",
+   "Say whether the exact answer is close to the estimate."
+  ],
+  "contexts": [
+   "the cost of exercise books for a class",
+   "the price of school uniforms in bulk",
+   "chairs for a church hall"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 38 x 62."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 38.",
+    "say": "What is 38 to the nearest ten?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 40."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 62.",
+    "say": "And 62?"
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child to say the estimate before working it out."
+   },
+   {
+    "beat": "write",
+    "do": "Write 40 x 60 = 2,400."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ROUND_ONE_FACTOR",
+    "listen_for": [
+     "40 x 62",
+     "only the first"
+    ],
+    "ask": "Is 62 rounded yet?",
+    "repair": "Round both numbers before you multiply.",
+    "error": "Rounds only one of the two factors, so the estimate is not the usual one.",
+    "example": {
+     "question": "Estimate 38 x 62.",
+     "wrong_answer": "40 x 62 = 2,480",
+     "correct_answer": "40 x 60 = 2,400"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ZEROS_LOST_IN_ESTIMATE",
+    "listen_for": [
+     "1,960",
+     "one zero"
+    ],
+    "ask": "How many zeros are in 280 and 70 together?",
+    "repair": "Put back every zero from both numbers: 28 x 7 = 196, then two zeros.",
+    "error": "Loses a zero when multiplying the rounded tens, so the estimate is ten times too small.",
+    "example": {
+     "question": "Estimate 280 x 70.",
+     "wrong_answer": "1,960 (the zero of the 70 was lost)",
+     "correct_answer": "19,600"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_EXACT_THEN_ROUNDED",
+    "listen_for": [
+     "2,356",
+     "I worked it out first"
+    ],
+    "ask": "Could you do this one in your head in a few seconds?",
+    "repair": "Round first, then multiply: the estimate is quick and comes before the exact answer.",
+    "error": "Works out the exact product and rounds it, instead of rounding the numbers first.",
+    "example": {
+     "question": "Estimate 38 x 62 by rounding each number to the nearest ten.",
+     "wrong_answer": "2,360 (38 x 62 = 2,356, then rounded)",
+     "correct_answer": "40 x 60 = 2,400"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10.M_ROUND_TO_HUNDRED",
+    "listen_for": [
+     "200 x 50",
+     "to the hundred"
+    ],
+    "ask": "Which place does nearest ten tell you to round to?",
+    "repair": "Nearest ten: 236 becomes 240, not 200.",
+    "error": "Rounds a three-digit factor to the nearest hundred instead of the nearest ten.",
+    "example": {
+     "question": "Estimate 236 x 47 by rounding each number to the nearest ten.",
+     "wrong_answer": "200 x 50 = 10,000",
+     "correct_answer": "240 x 50 = 12,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 38 x 62 by rounding each number to the nearest ten.",
+    "answer": "2,400",
+    "shows": "both rounded"
+   },
+   {
+    "question": "Estimate 236 x 47 by rounding each number to the nearest ten.",
+    "answer": "12,000",
+    "shows": "three-digit factor to the ten"
+   }
+  ],
+  "name": "Estimate products by rounding to the nearest ten",
+  "sub_strand": "MATH.G6.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS": {
+  "skill": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+  "key_step": "The child finds the number each term is multiplied by to get the next, checks it on every pair, and uses it forwards (multiply) or backwards (divide).",
+  "floor": {
+   "prerequisite": "Continues a pattern that adds the same number.",
+   "question": "What comes next: 7, 14, 21, 28, __?",
+   "answer": "35"
+  },
+  "representations": [
+   "terms in a row with an arrow and \"x ?\" between each pair",
+   "an input and output table",
+   "a growing pile of counters"
+  ],
+  "steps": [
+   "Divide each term by the one before it.",
+   "Check the same number works for every pair.",
+   "Multiply to go forward, divide to go back.",
+   "For a table, do the rule to the input, not to the last output."
+  ],
+  "contexts": [
+   "bacteria doubling in a science lesson",
+   "savings in a chama that double",
+   "chairs in rows that triple"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2, 6, 18, 54 with arrows between the terms."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first arrow.",
+    "say": "What do we multiply 2 by to get 6?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say times 3."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write x 3 on each arrow and check it."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask what comes after 54."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_ADD_NOT_MULTIPLY",
+    "listen_for": [
+     "add 12",
+     "the gap"
+    ],
+    "ask": "Is the gap the same each time?",
+    "repair": "If the gaps grow, divide each term by the one before.",
+    "error": "Finds an additive rule (the difference between the first two terms) for a multiplying pattern.",
+    "example": {
+     "question": "2, 6, 18, __: next term?",
+     "wrong_answer": "30 (the last gap, 12, was added again)",
+     "correct_answer": "54"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_CONSTANT_DIFFERENCE",
+    "listen_for": [
+     "36",
+     "same gap again"
+    ],
+    "ask": "What do you multiply 12 by to get 24?",
+    "repair": "The pattern doubles; the gap doubles too.",
+    "error": "Expects the gap between terms to stay the same, so continues a doubling pattern by repeating the last gap.",
+    "example": {
+     "question": "3, 6, 12, 24, __",
+     "wrong_answer": "36 (the last gap, 12, was repeated)",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_BACKWARDS_MULTIPLIED",
+    "listen_for": [
+     "72",
+     "times 3 again"
+    ],
+    "ask": "Which way are you going along the pattern?",
+    "repair": "Going back, undo the rule: divide by 3.",
+    "error": "Multiplies to find a missing term before the given ones, instead of dividing.",
+    "example": {
+     "question": "__, 24, 72, 216: what is the first term?",
+     "wrong_answer": "72 (24 x 3)",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_NEXT_ROW_ONLY",
+    "listen_for": [
+     "15",
+     "add 3 more"
+    ],
+    "ask": "What did the rule do to the input 2?",
+    "repair": "Use the rule on the input: 10 x 3 = 30.",
+    "error": "Continues the output column by its gap instead of using the rule on the input.",
+    "example": {
+     "question": "Inputs 2, 3, 4 give outputs 6, 9, 12. What does input 10 give?",
+     "wrong_answer": "15 (added 3 once more)",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What comes next: 3, 6, 12, 24, __?",
+    "answer": "48",
+    "shows": "doubling"
+   },
+   {
+    "question": "What is the first term: __, 24, 72, 216?",
+    "answer": "8",
+    "shows": "backwards by dividing"
+   }
+  ],
+  "name": "Make and continue multiplication patterns (numbers up to 1,000)",
+  "sub_strand": "MATH.G6.NUMBER.MULTIPLICATION",
+  "sub_strand_name": "Multiplication",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;
