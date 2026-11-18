@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS",
+ "title": "Determiners: Numerals and Ordinals (Theme 10: Social and mass media)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM",
+   "assessed_by": "questions",
+   "key_step": "The child uses cardinals and ordinals before nouns, ordinal before cardinal.",
+   "floor": {
+    "prerequisite": "Writes numbers in words.",
+    "question": "Write 5th.",
+    "answer": "fifth"
+   },
+   "steps": [
+    "Cardinal: how many.",
+    "Ordinal: position.",
+    "Ordinal first."
+   ],
+   "contexts": [
+    "mass media"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: the ___ ___ learners (first, two)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at first.",
+     "say": "Which comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M_EN9_DN_ORDINAL",
+     "listen_for": [
+      "five"
+     ],
+     "ask": "Position?",
+     "repair": "Fifth."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M_EN9_DN_CARDINAL",
+     "listen_for": [
+      "fifth"
+     ],
+     "ask": "How many?",
+     "repair": "Five."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M_EN9_DN_ORDER",
+     "listen_for": [
+      "books three"
+     ],
+     "ask": "Before the noun?",
+     "repair": "Three books."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM.M9_DN_FIRST_TWO",
+     "listen_for": [
+      "two first"
+     ],
+     "ask": "Ordinal first?",
+     "repair": "First two."
+    }
+   ],
+   "checks": [
+    {
+     "question": "the ___ ___ (three, last)",
+     "answer": "last three",
+     "shows": "order"
+    },
+    {
+     "question": "the ___ (5) day",
+     "answer": "fifth",
+     "shows": "ordinal"
+    }
+   ]
+  }
+ ]
+}

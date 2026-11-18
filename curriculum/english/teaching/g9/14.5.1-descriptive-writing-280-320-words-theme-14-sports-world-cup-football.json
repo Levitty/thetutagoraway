@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_",
+ "title": "Descriptive writing (280 – 320 words) (Theme 14: Sports – world cup (football))",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans a line per sense, writes 280 to 320 words imaginatively and edits spelling.",
+   "floor": {
+    "prerequisite": "Writes descriptions.",
+    "question": "Describe in three exact words.",
+    "answer": "exact words"
+   },
+   "steps": [
+    "Plan five senses.",
+    "Draft 280 to 320 words.",
+    "Imaginative language.",
+    "Edit spelling."
+   ],
+   "contexts": [
+    "the World Cup final"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: see, hear, smell, touch, taste."
+    },
+    {
+     "beat": "point",
+     "do": "Point at taste.",
+     "say": "What could you taste?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes that line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M9_DC_FEW_SENSES",
+     "listen_for": [
+      "only sights"
+     ],
+     "ask": "Other senses?",
+     "repair": "Plan all five."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M9_DC_NARRATES",
+     "listen_for": [
+      "First they kicked off, then they scored."
+     ],
+     "ask": "What is it like?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M9_DC_LENGTH",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Words?",
+     "repair": "Add details."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION.M9_DC_SPELLING",
+     "listen_for": [
+      "hand it in"
+     ],
+     "ask": "Edited?",
+     "repair": "Edit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is 150 words enough?",
+     "answer": "No",
+     "shows": "length"
+    },
+    {
+     "question": "All five senses?",
+     "answer": "yes",
+     "shows": "senses"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Spelling (Theme 6: Leisure time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+   "assessed_by": "questions",
+   "key_step": "The child tells homophones and homonyms apart by meaning and spells commonly misspelt words.",
+   "floor": {
+    "prerequisite": "Spells Grade 8 words.",
+    "question": "Spell: accommodate",
+    "answer": "accommodate"
+   },
+   "steps": [
+    "Meaning.",
+    "Homophone spelling.",
+    "Homonym meaning.",
+    "Tricky words."
+   ],
+   "contexts": [
+    "leisure texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: There / Their."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Their.",
+     "say": "Belonging?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spells committee."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M_EN9_SG_HOMOPHONE",
+     "listen_for": [
+      "There"
+     ],
+     "ask": "Belonging?",
+     "repair": "Their."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M_EN9_SG_SEPARATE",
+     "listen_for": [
+      "seperate"
+     ],
+     "ask": "Sep-a-rate.",
+     "repair": "Separate."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M_EN9_SG_COMMITTEE",
+     "listen_for": [
+      "comitee"
+     ],
+     "ask": "Doubles?",
+     "repair": "Committee."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M9_SG_HOMONYM",
+     "listen_for": [
+      "a wild animal"
+     ],
+     "ask": "Meaning here?",
+     "repair": "Put up with."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell: separate",
+     "answer": "separate",
+     "shows": "spelling"
+    },
+    {
+     "question": "\"bear the pain\": bear means ...",
+     "answer": "put up with",
+     "shows": "homonym"
+    }
+   ]
+  }
+ ]
+}

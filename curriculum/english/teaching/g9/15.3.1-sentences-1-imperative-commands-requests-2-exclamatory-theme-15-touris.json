@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI",
+ "title": "Sentences-.1 Imperative – commands, requests 2 Exclamatory (Theme 15: Tourist attraction sites: world)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE",
+   "assessed_by": "questions",
+   "key_step": "The child ends commands and requests with a full stop, strong feelings with one exclamation mark.",
+   "floor": {
+    "prerequisite": "Uses end marks.",
+    "question": "End: Watch out",
+    "answer": "Watch out!"
+   },
+   "steps": [
+    "Command or request: full stop.",
+    "Strong feeling or urgent command: !",
+    "Question: ?"
+   ],
+   "contexts": [
+    "tourist sites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Please pass the salt"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end.",
+     "say": "Calm or strong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child punctuates an exclamation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M_EN9_EI_MARK",
+     "listen_for": [
+      "What a lovely day?"
+     ],
+     "ask": "Strong feeling?",
+     "repair": "One !"
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M_EN9_EI_COMMAND",
+     "listen_for": [
+      "Are you coming?"
+     ],
+     "ask": "Question or command?",
+     "repair": "Command."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M_EN9_EI_STOP",
+     "listen_for": [
+      "Sit down?"
+     ],
+     "ask": "Asking?",
+     "repair": "Full stop."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE.M9_EI_POLITE_IMPERATIVE",
+     "listen_for": [
+      "!"
+     ],
+     "ask": "Calm request?",
+     "repair": "Full stop."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What a lovely day",
+     "answer": "What a lovely day!",
+     "shows": "exclamation"
+    },
+    {
+     "question": "Sit down (calm)",
+     "answer": "Sit down.",
+     "shows": "imperative"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING",
+ "title": "Assessing Writing (Theme 8: Tourism: international)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING",
+   "assessed_by": "teacher",
+   "key_step": "The child names the qualities and scores a composition against each criterion with comments and corrections.",
+   "floor": {
+    "prerequisite": "Assesses writing.",
+    "question": "First step?",
+    "answer": "reread"
+   },
+   "steps": [
+    "Read the criteria.",
+    "Score each.",
+    "Comment.",
+    "Suggest corrections."
+   ],
+   "contexts": [
+    "international tourism compositions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the criteria list."
+    },
+    {
+     "beat": "point",
+     "do": "Point at organisation.",
+     "say": "How well organised is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child scores another criterion."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING.M9_AW_LENGTH",
+     "listen_for": [
+      "the longest"
+     ],
+     "ask": "Length?",
+     "repair": "Criteria."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING.M9_AW_NO_CRITERIA",
+     "listen_for": [
+      "just a number"
+     ],
+     "ask": "Why that score?",
+     "repair": "Comment."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING.M9_AW_SPELLING_ONLY",
+     "listen_for": [
+      "four spellings"
+     ],
+     "ask": "Other qualities?",
+     "repair": "Check all."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING.M9_AW_NO_CORRECTIONS",
+     "listen_for": [
+      "wrong"
+     ],
+     "ask": "Correction?",
+     "repair": "Suggest it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Best composition is the longest?",
+     "answer": "No",
+     "shows": "criteria"
+    },
+    {
+     "question": "Mark \"comitee\".",
+     "answer": "committee",
+     "shows": "correction"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION"
+ ]
+}

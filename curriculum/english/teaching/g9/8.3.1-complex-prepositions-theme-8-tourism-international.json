@@ -1,0 +1,90 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS",
+ "title": "Complex Prepositions (Theme 8: Tourism: international)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS",
+   "assessed_by": "questions",
+   "key_step": "The child uses complex prepositions whole: because of, instead of, according to, in spite of.",
+   "floor": {
+    "prerequisite": "Uses prepositions.",
+    "question": "since or for five years?",
+    "answer": "for"
+   },
+   "steps": [
+    "Learn the full form.",
+    "Use before a noun."
+   ],
+   "contexts": [
+    "tourism"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ the rain, the match went on."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Full form?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes according to."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M_EN9_CP_BECAUSE",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "Before a noun?",
+     "repair": "Because of."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M_EN9_CP_INSTEAD",
+     "listen_for": [
+      "instead"
+     ],
+     "ask": "Instead?",
+     "repair": "Instead of."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M_EN9_CP_ACCORDING",
+     "listen_for": [
+      "according from"
+     ],
+     "ask": "From?",
+     "repair": "To."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS.M9_CP_IN_SPITE",
+     "listen_for": [
+      "In spite"
+     ],
+     "ask": "In spite?",
+     "repair": "In spite of."
+    }
+   ],
+   "checks": [
+    {
+     "question": "___ the weather, the trip was cancelled.",
+     "answer": "Because of",
+     "shows": "because of"
+    },
+    {
+     "question": "according ___ the guide",
+     "answer": "to",
+     "shows": "according to"
+    }
+   ]
+  }
+ ]
+}

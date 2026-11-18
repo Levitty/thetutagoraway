@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_",
+ "title": "Conversation Skills: Job Interviews (Theme 11: Income generating activities)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW",
+   "assessed_by": "voice",
+   "key_step": "The child prepares, then asks or answers with examples and closes politely.",
+   "floor": {
+    "prerequisite": "Conducts interviews politely.",
+    "question": "Open an interview.",
+    "answer": "Good morning, thank you for coming"
+   },
+   "steps": [
+    "Research the job.",
+    "Prepare examples.",
+    "Answer with an example.",
+    "Thank and close."
+   ],
+   "contexts": [
+    "income generating activities"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Answer + Example."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Example.",
+     "say": "Why should we hire you?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child closes the interview."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW.M9_JI_NO_PREPARATION",
+     "listen_for": [
+      "just go"
+     ],
+     "ask": "Prepared?",
+     "repair": "Research."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW.M9_JI_VAGUE",
+     "listen_for": [
+      "I am good."
+     ],
+     "ask": "Example?",
+     "repair": "Give one."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW.M9_JI_BAD_QUESTIONS",
+     "listen_for": [
+      "Which tribe are you?"
+     ],
+     "ask": "Fair?",
+     "repair": "Skills only."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW.M9_JI_NO_CLOSE",
+     "listen_for": [
+      "leave"
+     ],
+     "ask": "End?",
+     "repair": "Thank them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fair interview question?",
+     "answer": "What skills would you bring?",
+     "shows": "fair"
+    },
+    {
+     "question": "Answer with ...",
+     "answer": "an example",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

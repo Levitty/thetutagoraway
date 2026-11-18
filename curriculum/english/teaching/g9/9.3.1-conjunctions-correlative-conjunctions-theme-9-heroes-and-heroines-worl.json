@@ -1,0 +1,90 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA",
+ "title": "Conjunctions: Correlative Conjunctions (Theme 9: Heroes and heroines: world)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE",
+   "assessed_by": "questions",
+   "key_step": "The child keeps the pairs together: either or, neither nor, not only but also, whether or.",
+   "floor": {
+    "prerequisite": "Uses compound sentences.",
+    "question": "Join with but.",
+    "answer": "a compound sentence"
+   },
+   "steps": [
+    "Learn the pairs.",
+    "Match them."
+   ],
+   "contexts": [
+    "heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: whether ___ to stay or go."
+    },
+    {
+     "beat": "point",
+     "do": "Point at whether.",
+     "say": "Partner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a not only sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M_EN9_CO_EITHER",
+     "listen_for": [
+      "nor"
+     ],
+     "ask": "Either with?",
+     "repair": "Or."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M_EN9_CO_NEITHER",
+     "listen_for": [
+      "or"
+     ],
+     "ask": "Neither with?",
+     "repair": "Nor."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M_EN9_CO_NOTONLY",
+     "listen_for": [
+      "and"
+     ],
+     "ask": "Not only with?",
+     "repair": "But also."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE.M9_CO_WHETHER",
+     "listen_for": [
+      "whether ... nor"
+     ],
+     "ask": "Whether with?",
+     "repair": "Or."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Neither Ali ___ Juma came.",
+     "answer": "nor",
+     "shows": "pair"
+    },
+    {
+     "question": "whether ... ?",
+     "answer": "or",
+     "shows": "whether"
+    }
+   ]
+  }
+ ]
+}

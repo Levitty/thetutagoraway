@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO",
+ "title": "Narrative compositions (Theme 9: Heroes and heroines: world)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+   "assessed_by": "questions",
+   "key_step": "The child names setting, characters, plot, conflict, climax and resolution in a story.",
+   "floor": {
+    "prerequisite": "Writes narratives.",
+    "question": "What is a climax?",
+    "answer": "the most exciting point"
+   },
+   "steps": [
+    "Setting.",
+    "Characters.",
+    "Plot and conflict.",
+    "Climax and resolution."
+   ],
+   "contexts": [
+    "heroes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a plot mountain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top.",
+     "say": "What is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the resolution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M_EN9_NE_SETTING",
+     "listen_for": [
+      "The people in the story"
+     ],
+     "ask": "People or place?",
+     "repair": "Setting is time and place."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M_EN9_NE_PLOT",
+     "listen_for": [
+      "The title of the story"
+     ],
+     "ask": "Title or events?",
+     "repair": "Plot."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M_EN9_NE_CLIMAX",
+     "listen_for": [
+      "The last line"
+     ],
+     "ask": "Most exciting?",
+     "repair": "Climax."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS.M9_NE_RESOLUTION",
+     "listen_for": [
+      "climax"
+     ],
+     "ask": "Solved?",
+     "repair": "Resolution."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The problem is solved in the ...",
+     "answer": "resolution",
+     "shows": "resolution"
+    },
+    {
+     "question": "Time and place is the ...",
+     "answer": "setting",
+     "shows": "setting"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION"
+ ]
+}

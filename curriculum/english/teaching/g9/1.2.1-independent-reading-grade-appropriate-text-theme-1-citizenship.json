@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T1_INDEPENDENT_READING_",
+ "title": "Independent Reading - Grade Appropriate Text (Theme 1: Citizenship)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING",
+   "assessed_by": "teacher",
+   "key_step": "The child selects grade-appropriate print and digital texts, reads widely and logs content and opinion.",
+   "floor": {
+    "prerequisite": "Reads independently.",
+    "question": "Last book read?",
+    "answer": "a title"
+   },
+   "steps": [
+    "Select.",
+    "Read.",
+    "Log content and opinion.",
+    "Recommend."
+   ],
+   "contexts": [
+    "citizenship",
+    "world heroes",
+    "income generation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a log: title, source, about, my view."
+    },
+    {
+     "beat": "point",
+     "do": "Point at my view.",
+     "say": "What did you think?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a print text."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING.M9_IR_NO_LOG",
+     "listen_for": [
+      "I remember"
+     ],
+     "ask": "Recorded?",
+     "repair": "Log it."
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING.M9_IR_ONE_SOURCE",
+     "listen_for": [
+      "more websites"
+     ],
+     "ask": "Print and digital?",
+     "repair": "Mix."
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING.M9_IR_LOG_TITLES",
+     "listen_for": [
+      "the title only"
+     ],
+     "ask": "Only a title?",
+     "repair": "Add content."
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING.M9_IR_TOO_EASY",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Grade level?",
+     "repair": "Choose it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a log entry include?",
+     "answer": "title, content, opinion",
+     "shows": "log"
+    },
+    {
+     "question": "Only picture books in Grade 9?",
+     "answer": "No",
+     "shows": "level"
+    }
+   ]
+  }
+ ]
+}

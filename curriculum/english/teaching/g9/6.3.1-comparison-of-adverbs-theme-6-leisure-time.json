@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB",
+ "title": "Comparison of Adverbs (Theme 6: Leisure time)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES",
+   "assessed_by": "questions",
+   "key_step": "The child compares adverbs with more and most, -er and -est for short ones, and knows the irregulars.",
+   "floor": {
+    "prerequisite": "Forms adverbs.",
+    "question": "quick -> ?",
+    "answer": "quickly"
+   },
+   "steps": [
+    "Long: more, most.",
+    "Short: -er, -est.",
+    "Irregular: well, better, best."
+   ],
+   "contexts": [
+    "leisure"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: carefully, fast, well."
+    },
+    {
+     "beat": "point",
+     "do": "Point at well.",
+     "say": "Comparative?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child does the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M_EN9_AD_MORE",
+     "listen_for": [
+      "carefullier"
+     ],
+     "ask": "Long adverb?",
+     "repair": "More carefully."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M_EN9_AD_SUPER",
+     "listen_for": [
+      "faster"
+     ],
+     "ask": "All?",
+     "repair": "Fastest."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M_EN9_AD_THAN",
+     "listen_for": [
+      "She sings well than I do."
+     ],
+     "ask": "Comparing?",
+     "repair": "Better than."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES.M9_AD_IRREGULAR",
+     "listen_for": [
+      "weller"
+     ],
+     "ask": "Weller?",
+     "repair": "Better."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She runs ___ (fast) than me.",
+     "answer": "faster",
+     "shows": "short"
+    },
+    {
+     "question": "He sings ___ (well) of all.",
+     "answer": "best",
+     "shows": "irregular"
+    }
+   ]
+  }
+ ]
+}

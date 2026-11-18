@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T10_PLAY_PROJECT",
+ "title": "Play: Project (Theme 10: Social and mass media)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES",
+   "assessed_by": "questions",
+   "key_step": "The child chooses a few simple props and costumes that fit the setting and create the mood.",
+   "floor": {
+    "prerequisite": "Knows play structure.",
+    "question": "Where is the scene set?",
+    "answer": "a place and time"
+   },
+   "steps": [
+    "Setting.",
+    "Mood.",
+    "Few simple props.",
+    "Fitting costume."
+   ],
+   "contexts": [
+    "a play on mass media"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: scene: funeral at dusk."
+    },
+    {
+     "beat": "point",
+     "do": "Point at dusk.",
+     "say": "Which prop?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child picks a costume."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES.M9_PC_EXPENSIVE",
+     "listen_for": [
+      "buy a gold crown"
+     ],
+     "ask": "Costly?",
+     "repair": "Make it."
+    },
+    {
+     "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES.M9_PC_MOOD_MISMATCH",
+     "listen_for": [
+      "balloons"
+     ],
+     "ask": "Mood?",
+     "repair": "Match it."
+    },
+    {
+     "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES.M9_PC_TOO_MANY",
+     "listen_for": [
+      "as many as possible"
+     ],
+     "ask": "How many?",
+     "repair": "A few."
+    },
+    {
+     "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES.M9_PC_COSTUME_ERA",
+     "listen_for": [
+      "jeans and a phone"
+     ],
+     "ask": "Setting?",
+     "repair": "Match it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Prop for a night scene?",
+     "answer": "a lantern",
+     "shows": "props"
+    },
+    {
+     "question": "Costume for a 1950s village?",
+     "answer": "kanga or shuka",
+     "shows": "costume"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.PERFORM_ORAL"
+ ]
+}

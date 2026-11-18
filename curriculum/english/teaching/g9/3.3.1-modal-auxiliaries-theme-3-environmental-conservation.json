@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES",
+ "title": "Modal Auxiliaries (Theme 3: Environmental conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the modal for ability, permission, duty or possibility, with a plain verb.",
+   "floor": {
+    "prerequisite": "Uses auxiliaries.",
+    "question": "She can ___ (swim).",
+    "answer": "swim"
+   },
+   "steps": [
+    "Ability: can.",
+    "Formal permission: may.",
+    "Duty: must.",
+    "Plain verb after."
+   ],
+   "contexts": [
+    "conservation rules"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ I leave early? (to the principal)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Formal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a must sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M_EN9_MD_ABILITY",
+     "listen_for": [
+      "must"
+     ],
+     "ask": "Able?",
+     "repair": "Can."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M_EN9_MD_DUTY",
+     "listen_for": [
+      "can"
+     ],
+     "ask": "Duty?",
+     "repair": "Must."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M_EN9_MD_BASE",
+     "listen_for": [
+      "She can to swim."
+     ],
+     "ask": "Can to?",
+     "repair": "Can swim."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS.M9_MD_PERMISSION",
+     "listen_for": [
+      "Can"
+     ],
+     "ask": "Formal?",
+     "repair": "May."
+    }
+   ],
+   "checks": [
+    {
+     "question": "We ___ protect wetlands (duty).",
+     "answer": "must",
+     "shows": "duty"
+    },
+    {
+     "question": "___ I come in? (formal)",
+     "answer": "May",
+     "shows": "permission"
+    }
+   ]
+  }
+ ]
+}

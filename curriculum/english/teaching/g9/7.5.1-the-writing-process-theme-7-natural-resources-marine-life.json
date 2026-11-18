@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
+ "title": "The Writing Process (Theme 7: Natural resources: marine life)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS",
+   "assessed_by": "questions",
+   "key_step": "The child orders the stages and says what happens at each.",
+   "floor": {
+    "prerequisite": "Knows the process.",
+    "question": "First stage?",
+    "answer": "prewriting"
+   },
+   "steps": [
+    "Prewrite.",
+    "Draft.",
+    "Revise.",
+    "Edit.",
+    "Publish."
+   ],
+   "contexts": [
+    "marine life composition"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the stages jumbled."
+    },
+    {
+     "beat": "point",
+     "do": "Point at editing.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS.M9_WP_ORDER",
+     "listen_for": [
+      "publishing first"
+     ],
+     "ask": "First?",
+     "repair": "Prewrite."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS.M9_WP_REVISE_EDIT",
+     "listen_for": [
+      "revising"
+     ],
+     "ask": "Ideas or spelling?",
+     "repair": "Edit spelling."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS.M9_WP_ONE_DRAFT",
+     "listen_for": [
+      "hand it in"
+     ],
+     "ask": "Final?",
+     "repair": "Revise."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS.M9_WP_SKIP_PLAN",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Plan?",
+     "repair": "Yes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spelling fixes are ...",
+     "answer": "editing",
+     "shows": "edit"
+    },
+    {
+     "question": "After the first draft?",
+     "answer": "revise",
+     "shows": "revise"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child plans setting, characters, a plot to a climax and a resolution, with background and fitting idioms.",
+   "floor": {
+    "prerequisite": "Knows narrative elements.",
+    "question": "What is a climax?",
+    "answer": "the most exciting point"
+   },
+   "steps": [
+    "Plan elements.",
+    "Background details.",
+    "Build to the climax.",
+    "Resolve; check idioms and tense."
+   ],
+   "contexts": [
+    "world heroes",
+    "sea travel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: setting, characters, climax, resolution."
+    },
+    {
+     "beat": "point",
+     "do": "Point at climax.",
+     "say": "What is your turning point?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the resolution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION.M9_NC_NO_CLIMAX",
+     "listen_for": [
+      "more events"
+     ],
+     "ask": "Turning point?",
+     "repair": "Build to it."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION.M9_NC_UNBELIEVABLE",
+     "listen_for": [
+      "it is fine"
+     ],
+     "ask": "Prepared?",
+     "repair": "Background."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION.M9_NC_IDIOM_MISUSE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Meaning?",
+     "repair": "Easy."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION.M9_NC_TENSE",
+     "listen_for": [
+      "left ... sails"
+     ],
+     "ask": "Past?",
+     "repair": "Sailed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Plain sailing\" for a stormy trip?",
+     "answer": "No",
+     "shows": "idiom"
+    },
+    {
+     "question": "Why add background?",
+     "answer": "to make events believable",
+     "shows": "credibility"
+    }
+   ]
+  }
+ ]
+}

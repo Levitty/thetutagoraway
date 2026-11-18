@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE",
+ "title": "Reading for Interpretation (Theme 8: Tourism: international)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV",
+   "assessed_by": "questions",
+   "key_step": "The child says who speaks in the poem (first, second or third person) and to whom.",
+   "floor": {
+    "prerequisite": "Knows persona.",
+    "question": "Who is the persona?",
+    "answer": "the speaker"
+   },
+   "steps": [
+    "Pronouns.",
+    "Who speaks.",
+    "To whom."
+   ],
+   "contexts": [
+    "international tourism poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: You must save the forest."
+    },
+    {
+     "beat": "point",
+     "do": "Point at You.",
+     "say": "Point of view?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the speaker."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M_EN9_RP_POV_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M_EN9_RP_POV_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M_EN9_RP_POV_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV.M9_RP_POV_PERSON",
+     "listen_for": [
+      "the forest"
+     ],
+     "ask": "Who speaks to whom?",
+     "repair": "Second person."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"I walked along the shore.\" Point of view?",
+     "answer": "first person",
+     "shows": "pov"
+    },
+    {
+     "question": "\"You must ...\" addresses ...",
+     "answer": "the reader",
+     "shows": "second person"
+    }
+   ]
+  }
+ ]
+}

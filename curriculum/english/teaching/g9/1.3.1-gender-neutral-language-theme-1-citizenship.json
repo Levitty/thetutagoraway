@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU",
+ "title": "Gender Neutral Language (Theme 1: Citizenship)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL",
+   "assessed_by": "questions",
+   "key_step": "The child replaces words that assume a man or a woman with words for anyone.",
+   "floor": {
+    "prerequisite": "Forms compound nouns.",
+    "question": "Plural of chairman?",
+    "answer": "chairmen"
+   },
+   "steps": [
+    "Spot the biased word.",
+    "Choose a neutral word.",
+    "Use their for anyone."
+   ],
+   "contexts": [
+    "citizenship"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: chairman, policeman, mankind."
+    },
+    {
+     "beat": "point",
+     "do": "Point at policeman.",
+     "say": "A word for anyone?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child replaces the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M_EN9_GN_CHAIRMAN",
+     "listen_for": [
+      "chairman"
+     ],
+     "ask": "Only men chair?",
+     "repair": "Chairperson."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M_EN9_GN_POLICE",
+     "listen_for": [
+      "policeman"
+     ],
+     "ask": "Only men?",
+     "repair": "Police officer."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M_EN9_GN_MANKIND",
+     "listen_for": [
+      "mankind"
+     ],
+     "ask": "All people?",
+     "repair": "Humankind."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL.M9_GN_HE_GENERIC",
+     "listen_for": [
+      "his"
+     ],
+     "ask": "Boy or girl?",
+     "repair": "Their."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Neutral word for fireman?",
+     "answer": "firefighter",
+     "shows": "neutral"
+    },
+    {
+     "question": "Every learner should bring ___ book.",
+     "answer": "their",
+     "shows": "pronoun"
+    }
+   ]
+  }
+ ]
+}

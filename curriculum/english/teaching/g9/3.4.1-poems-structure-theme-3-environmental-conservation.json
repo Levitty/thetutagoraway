@@ -1,0 +1,175 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T3_POEMS_STRUCTURE",
+ "title": "Poems: Structure (Theme 3: Environmental conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES",
+   "assessed_by": "questions",
+   "key_step": "The child names stanzas, rhyme and personification and gives examples.",
+   "floor": {
+    "prerequisite": "Knows poem parts.",
+    "question": "A stanza is ...",
+    "answer": "a group of lines"
+   },
+   "steps": [
+    "Stanza.",
+    "Rhyme.",
+    "Personification."
+   ],
+   "contexts": [
+    "conservation poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The wind whispered secrets."
+    },
+    {
+     "beat": "point",
+     "do": "Point at whispered.",
+     "say": "Device?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds rhyme."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M_EN9_PF_STANZA",
+     "listen_for": [
+      "One line of a poem"
+     ],
+     "ask": "One line or a group?",
+     "repair": "Stanza."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M_EN9_PF_RHYME",
+     "listen_for": [
+      "Same beginning sound"
+     ],
+     "ask": "End sounds?",
+     "repair": "Rhyme."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M_EN9_PF_PERSON",
+     "listen_for": [
+      "as brave as a lion"
+     ],
+     "ask": "Like or human action?",
+     "repair": "Personification."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES.M9_PF_PERSONIFICATION_ANIMAL",
+     "listen_for": [
+      "simile"
+     ],
+     "ask": "Human action?",
+     "repair": "Personification."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The sea wept\" is ...",
+     "answer": "personification",
+     "shows": "device"
+    },
+    {
+     "question": "Repeated end sounds are ...",
+     "answer": "rhyme",
+     "shows": "rhyme"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child chooses a feeling, writes lines in stanzas with an image and a device, and lets meaning lead rhyme.",
+   "floor": {
+    "prerequisite": "Knows poem structure.",
+    "question": "A stanza is ...",
+    "answer": "a group of lines"
+   },
+   "steps": [
+    "Choose a topic and feeling.",
+    "Write lines with images.",
+    "Group into stanzas.",
+    "Add a device."
+   ],
+   "contexts": [
+    "environmental conservation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Trees are important."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Make it an image."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a stanza."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING.M9_PW_PROSE",
+     "listen_for": [
+      "one paragraph"
+     ],
+     "ask": "Lines?",
+     "repair": "Break it up."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING.M9_PW_FORCED_RHYME",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Meaning?",
+     "repair": "First."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING.M9_PW_NO_IMAGERY",
+     "listen_for": [
+      "Trees are important."
+     ],
+     "ask": "Image?",
+     "repair": "Add one."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING.M9_PW_NO_MESSAGE",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Feeling?",
+     "repair": "Choose it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is a poem set out?",
+     "answer": "lines and stanzas",
+     "shows": "form"
+    },
+    {
+     "question": "Must poems rhyme?",
+     "answer": "No",
+     "shows": "rhyme"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER",
+ "title": "Present and Past Perfect Aspect (Theme 4: Consumer protection: consumer laws and policies)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT",
+   "assessed_by": "questions",
+   "key_step": "The child uses has or have for a past linked to now, had for the earlier of two past events, with the past participle.",
+   "floor": {
+    "prerequisite": "Uses past tenses.",
+    "question": "Past participle of go?",
+    "answer": "gone"
+   },
+   "steps": [
+    "Linked to now: has/have.",
+    "Earlier past: had.",
+    "Past participle.",
+    "No finished time with has."
+   ],
+   "contexts": [
+    "consumer laws"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I ___ (see) the film yesterday."
+    },
+    {
+     "beat": "point",
+     "do": "Point at yesterday.",
+     "say": "Finished time?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a past perfect."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M_EN9_PE_PRESENT",
+     "listen_for": [
+      "She had finished."
+     ],
+     "ask": "Linked to now?",
+     "repair": "Has."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M_EN9_PE_PAST",
+     "listen_for": [
+      "She has finished before I came."
+     ],
+     "ask": "Earlier past?",
+     "repair": "Had."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M_EN9_PE_PARTICIPLE",
+     "listen_for": [
+      "She has went home."
+     ],
+     "ask": "Went?",
+     "repair": "Gone."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT.M9_PE_WITH_TIME",
+     "listen_for": [
+      "have seen"
+     ],
+     "ask": "Yesterday?",
+     "repair": "Saw."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She ___ (finish) before we came.",
+     "answer": "had finished",
+     "shows": "past perfect"
+    },
+    {
+     "question": "I ___ (see) it yesterday.",
+     "answer": "saw",
+     "shows": "finished time"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_",
+ "title": "Reference Materials: Dictionary, Thesaurus, Encyclopaedia (Theme 5: Relationships: community)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH",
+   "assessed_by": "questions",
+   "key_step": "The child matches the reference to the need, checks usage, chooses fitting synonyms and notes the source.",
+   "floor": {
+    "prerequisite": "Uses reference materials.",
+    "question": "Where is a word's meaning?",
+    "answer": "dictionary"
+   },
+   "steps": [
+    "Dictionary: meaning, part of speech, usage.",
+    "Thesaurus: fitting synonym.",
+    "Encyclopaedia: facts.",
+    "Note the source."
+   ],
+   "contexts": [
+    "community research"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: advice / advise."
+    },
+    {
+     "beat": "point",
+     "do": "Point at advice.",
+     "say": "Noun or verb? Check."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds a synonym."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH.M9_RR_DICTIONARY_ONLY_MEANING",
+     "listen_for": [
+      "I do not know"
+     ],
+     "ask": "Usage?",
+     "repair": "Check it."
+    },
+    {
+     "code": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH.M9_RR_THESAURUS_SWAP",
+     "listen_for": [
+      "a bulky mistake"
+     ],
+     "ask": "Fits?",
+     "repair": "Check context."
+    },
+    {
+     "code": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH.M9_RR_COPY",
+     "listen_for": [
+      "copied paragraphs"
+     ],
+     "ask": "Copied?",
+     "repair": "Own words."
+    },
+    {
+     "code": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH.M9_RR_WRONG_SOURCE",
+     "listen_for": [
+      "a thesaurus"
+     ],
+     "ask": "Right book?",
+     "repair": "Match it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Replace \"big\" in \"a big mistake\".",
+     "answer": "serious",
+     "shows": "fit"
+    },
+    {
+     "question": "Copy or note?",
+     "answer": "note key points with the source",
+     "shows": "notes"
+    }
+   ]
+  }
+ ]
+}

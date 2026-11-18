@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO",
+ "title": "Letter of Application (Theme 5: Relationships: community)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION",
+   "assessed_by": "questions",
+   "key_step": "The child names the parts of an application letter and checks tone is formal.",
+   "floor": {
+    "prerequisite": "Knows formal letters.",
+    "question": "Closing for Dear Sir?",
+    "answer": "Yours faithfully"
+   },
+   "steps": [
+    "Both addresses.",
+    "Date.",
+    "Dear Sir; subject.",
+    "Body; closing; signature."
+   ],
+   "contexts": [
+    "Senior School placement"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the layout."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the subject line.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the closing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M_EN9_LA_CLOSE",
+     "listen_for": [
+      "Yours sincerely"
+     ],
+     "ask": "Dear Sir?",
+     "repair": "Faithfully."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M_EN9_LA_SUBJECT",
+     "listen_for": [
+      "The signature"
+     ],
+     "ask": "What is it about?",
+     "repair": "Subject line."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M_EN9_LA_ADDRESS",
+     "listen_for": [
+      "At the bottom"
+     ],
+     "ask": "Where?",
+     "repair": "Top."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION.M9_LA_FRIENDLY_OPENING",
+     "listen_for": [
+      "Hi! I hope you are well."
+     ],
+     "ask": "Formal?",
+     "repair": "Purpose first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the subject line?",
+     "answer": "above the body",
+     "shows": "part"
+    },
+    {
+     "question": "Friendly opening?",
+     "answer": "No",
+     "shows": "tone"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER",
+   "assessed_by": "composition",
+   "key_step": "The child writes a formal letter that states the purpose, shows suitability and requests politely, closing faithfully.",
+   "floor": {
+    "prerequisite": "Knows application parts.",
+    "question": "Subject line goes ...",
+    "answer": "above the body"
+   },
+   "steps": [
+    "Both addresses and date.",
+    "Dear Sir or Madam; subject.",
+    "Purpose and suitability.",
+    "Request; Yours faithfully."
+   ],
+   "contexts": [
+    "Senior School placement"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the formal layout."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the subject line.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the suitability paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER.M9_AL_FRIENDLY_TONE",
+     "listen_for": [
+      "Hi! How are you?"
+     ],
+     "ask": "Formal?",
+     "repair": "Direct."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER.M9_AL_NO_QUALIFICATIONS",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Suitable?",
+     "repair": "Say why."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER.M9_AL_SINCERELY",
+     "listen_for": [
+      "Yours sincerely"
+     ],
+     "ask": "Dear Sir?",
+     "repair": "Faithfully."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER.M9_AL_BEGGING",
+     "listen_for": [
+      "Please, please take me, I am suffering."
+     ],
+     "ask": "Confident?",
+     "repair": "Polite request."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Dear Sir ... closing?",
+     "answer": "Yours faithfully",
+     "shows": "closing"
+    },
+    {
+     "question": "Why you are suitable goes in ...",
+     "answer": "the body",
+     "shows": "content"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN",
+ "title": "Legibility and Neatness (Theme 1: Citizenship)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY",
+   "assessed_by": "teacher",
+   "key_step": "The child indents each paragraph, breaks words between syllables with a hyphen and writes evenly.",
+   "floor": {
+    "prerequisite": "Writes legibly.",
+    "question": "Copy neatly.",
+    "answer": "neat copy"
+   },
+   "steps": [
+    "Indent.",
+    "Break words between syllables.",
+    "Hyphen at the line end.",
+    "Even letters."
+   ],
+   "contexts": [
+    "citizenship essay"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: environment at a line end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the break.",
+     "say": "Where does it break?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child indents a paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY.M9_LG_NO_INDENT",
+     "listen_for": [
+      "start at the margin"
+     ],
+     "ask": "New paragraph?",
+     "repair": "Indent."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY.M9_LG_BAD_BREAK",
+     "listen_for": [
+      "en-vironment"
+     ],
+     "ask": "Syllables?",
+     "repair": "Environ-ment."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY.M9_LG_NO_HYPHEN",
+     "listen_for": [
+      "no mark"
+     ],
+     "ask": "Mark?",
+     "repair": "Hyphen."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY.M9_LG_UNEVEN",
+     "listen_for": [
+      "mixed sizes"
+     ],
+     "ask": "Even?",
+     "repair": "Same size."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Break \"environment\".",
+     "answer": "environ-ment",
+     "shows": "break"
+    },
+    {
+     "question": "New paragraph?",
+     "answer": "indent",
+     "shows": "indent"
+    }
+   ]
+  }
+ ]
+}

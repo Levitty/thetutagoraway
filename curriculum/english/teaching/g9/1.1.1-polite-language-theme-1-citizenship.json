@@ -1,0 +1,176 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
+ "title": "Polite Language (Theme 1: Citizenship)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM",
+   "assessed_by": "questions",
+   "key_step": "The child spots where a blunt word could hurt and swaps in a gentle expression that keeps the meaning.",
+   "floor": {
+    "prerequisite": "Uses gender-neutral words.",
+    "question": "Neutral word for chairman?",
+    "answer": "chairperson"
+   },
+   "steps": [
+    "Find the blunt word.",
+    "Choose a euphemism.",
+    "Check the meaning stays clear."
+   ],
+   "contexts": [
+    "condolences",
+    "talking about age or jobs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: died, old, jobless."
+    },
+    {
+     "beat": "point",
+     "do": "Point at died.",
+     "say": "A gentler word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child replaces the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM.M9_EU_BLUNT",
+     "listen_for": [
+      "Your grandfather is dead."
+     ],
+     "ask": "Could it hurt?",
+     "repair": "Soften it."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM.M9_EU_LITERAL",
+     "listen_for": [
+      "He works two jobs."
+     ],
+     "ask": "Two jobs?",
+     "repair": "No job now."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM.M9_EU_OVERUSE",
+     "listen_for": [
+      "take a little when you feel like it"
+     ],
+     "ask": "Is it clear enough?",
+     "repair": "Give the facts."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM.M9_EU_INSULT",
+     "listen_for": [
+      "old-timer"
+     ],
+     "ask": "Would they like it?",
+     "repair": "Senior citizen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Gentle word for \"toilet\"?",
+     "answer": "washroom",
+     "shows": "euphemism"
+    },
+    {
+     "question": "\"Between jobs\" means ...",
+     "answer": "without a job now",
+     "shows": "meaning"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE",
+   "assessed_by": "voice",
+   "key_step": "The child addresses the chair, states the side, argues with evidence and rebuts the point politely within time.",
+   "floor": {
+    "prerequisite": "Disagrees politely.",
+    "question": "Disagree politely.",
+    "answer": "I see your point, but ..."
+   },
+   "steps": [
+    "Address the chair and house.",
+    "State your side.",
+    "Argue with evidence.",
+    "Rebut politely; keep time."
+   ],
+   "contexts": [
+    "citizenship motions"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Madam Chair, members of the house, ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at members of the house.",
+     "say": "Who are they?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rebuts a point."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE.M9_DB_ATTACK_SPEAKER",
+     "listen_for": [
+      "My opponent is lazy and uses phones all day."
+     ],
+     "ask": "Point or person?",
+     "repair": "The point."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE.M9_DB_NO_CHAIR",
+     "listen_for": [
+      "I think ..."
+     ],
+     "ask": "Who first?",
+     "repair": "The chair."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE.M9_DB_NO_EVIDENCE",
+     "listen_for": [
+      "Because I like trees."
+     ],
+     "ask": "Evidence?",
+     "repair": "Reason and example."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE.M9_DB_OVERTIME",
+     "listen_for": [
+      "That is fine."
+     ],
+     "ask": "Time?",
+     "repair": "Fit it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Opening of a debate speech?",
+     "answer": "Madam Chair, members of the house",
+     "shows": "convention"
+    },
+    {
+     "question": "Rebut without attacking.",
+     "answer": "My opponent claims ..., but ...",
+     "shows": "rebuttal"
+    }
+   ]
+  }
+ ]
+}

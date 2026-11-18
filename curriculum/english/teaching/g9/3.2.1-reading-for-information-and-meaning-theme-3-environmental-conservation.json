@@ -1,0 +1,175 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
+ "title": "Reading for Information and Meaning (Theme 3: Environmental conservation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT",
+   "assessed_by": "questions",
+   "key_step": "The child works out a meaning from the sentence, including figurative meanings.",
+   "floor": {
+    "prerequisite": "Uses context clues.",
+    "question": "Clue for apprehended?",
+    "answer": "at the gate"
+   },
+   "steps": [
+    "Find the word.",
+    "Read around.",
+    "Literal or figurative?",
+    "Meaning."
+   ],
+   "contexts": [
+    "reading for information"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The town was buried in rubbish."
+    },
+    {
+     "beat": "point",
+     "do": "Point at buried.",
+     "say": "Literal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the meaning."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M_EN9_RS_CONTEXT_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M_EN9_RS_CONTEXT_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M_EN9_RS_CONTEXT_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT.M9_RS_CONTEXT_FIGURATIVE",
+     "listen_for": [
+      "put under the ground"
+     ],
+     "ask": "Picture?",
+     "repair": "Covered."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"buried in rubbish\" means ...",
+     "answer": "covered with a lot of rubbish",
+     "shows": "figurative"
+    },
+    {
+     "question": "Meaning from context of a new word?",
+     "answer": "a meaning that fits",
+     "shows": "context"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT",
+   "assessed_by": "questions",
+   "key_step": "The child links the main event or issue in the text to a real situation.",
+   "floor": {
+    "prerequisite": "Relates texts to life.",
+    "question": "Link to life.",
+    "answer": "a link"
+   },
+   "steps": [
+    "Main event.",
+    "Real situation.",
+    "Link."
+   ],
+   "contexts": [
+    "conservation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Text / Real life."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Real life.",
+     "say": "Where have you seen this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains the link."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M_EN9_RS_CONNECT_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M_EN9_RS_CONNECT_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M_EN9_RS_CONNECT_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT.M9_RS_CONNECT_DETAIL",
+     "listen_for": [
+      "I also have a river near home."
+     ],
+     "ask": "Main event?",
+     "repair": "Link it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Link a polluted river story.",
+     "answer": "a real clean-up or dumping",
+     "shows": "link"
+    },
+    {
+     "question": "Is \"I have a river\" a link?",
+     "answer": "No",
+     "shows": "detail"
+    }
+   ]
+  }
+ ]
+}

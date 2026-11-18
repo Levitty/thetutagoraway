@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER",
+ "title": "Nouns and Quantifiers (Theme 2: Science fiction)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS",
+   "assessed_by": "questions",
+   "key_step": "The child matches each quantifier to a count or non-count noun.",
+   "floor": {
+    "prerequisite": "Uses Grade 8 quantifiers.",
+    "question": "fewer or less people?",
+    "answer": "fewer"
+   },
+   "steps": [
+    "Count?",
+    "many, few, a number of.",
+    "Non-count: much, little, a great deal of.",
+    "A lot of."
+   ],
+   "contexts": [
+    "nouns in science fiction texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: ___ water / ___ robots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at water.",
+     "say": "Count?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M_EN9_QT_MUCH",
+     "listen_for": [
+      "much"
+     ],
+     "ask": "Count?",
+     "repair": "Many."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M_EN9_QT_MANY",
+     "listen_for": [
+      "many"
+     ],
+     "ask": "Non-count?",
+     "repair": "Much."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M_EN9_QT_FEW",
+     "listen_for": [
+      "few"
+     ],
+     "ask": "Count?",
+     "repair": "Little for non-count."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS.M9_QT_A_LOT_OF",
+     "listen_for": [
+      "alot"
+     ],
+     "ask": "Three words?",
+     "repair": "A lot of."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How ___ robots?",
+     "answer": "many",
+     "shows": "count"
+    },
+    {
+     "question": "There is ___ water.",
+     "answer": "a lot of",
+     "shows": "a lot of"
+    }
+   ]
+  }
+ ]
+}

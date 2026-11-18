@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S",
+ "title": "Play: Structure and Setting (Class Reader) (Theme 1: Citizenship)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE",
+   "assessed_by": "questions",
+   "key_step": "The child names acts and scenes, describes the setting and orders the scenes.",
+   "floor": {
+    "prerequisite": "Describes setting.",
+    "question": "Where is the story set?",
+    "answer": "a place and time"
+   },
+   "steps": [
+    "Acts.",
+    "Scenes.",
+    "Setting.",
+    "Order."
+   ],
+   "contexts": [
+    "the class reader play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Act 1, Scene 1, Scene 2; Act 2 ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Act.",
+     "say": "Bigger or smaller?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child describes the setting of Act 1."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M_EN9_PL_STRUCTURE_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a nearby detail?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M_EN9_PL_STRUCTURE_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M_EN9_PL_STRUCTURE_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE.M9_PL_ACT_SCENE",
+     "listen_for": [
+      "scenes, acts"
+     ],
+     "ask": "Which is bigger?",
+     "repair": "Act."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Big parts of a play?",
+     "answer": "acts",
+     "shows": "acts"
+    },
+    {
+     "question": "Setting from the stage directions?",
+     "answer": "place and time stated",
+     "shows": "setting"
+    }
+   ]
+  }
+ ]
+}

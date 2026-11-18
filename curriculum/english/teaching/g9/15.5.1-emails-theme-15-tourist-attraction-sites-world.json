@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.WRITIN.T15_EMAILS",
+ "title": "Emails (Theme 15: Tourist attraction sites: world)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.WRITIN.T15_EMAILS.EMAIL",
+   "assessed_by": "composition",
+   "key_step": "The child writes the address, a clear subject, a fitting greeting, short paragraphs, a closing and the name, and checks attachments.",
+   "floor": {
+    "prerequisite": "Writes notes and letters.",
+    "question": "Closing to a teacher?",
+    "answer": "Kind regards"
+   },
+   "steps": [
+    "To and subject.",
+    "Greeting.",
+    "Short paragraphs.",
+    "Closing, name, attachment check."
+   ],
+   "contexts": [
+    "booking a trip",
+    "emailing a teacher"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Subject: ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Subject.",
+     "say": "What goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the body."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.WRITIN.T15_EMAILS.EMAIL.M9_EM_NO_SUBJECT",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Subject?",
+     "repair": "Write one."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T15_EMAILS.EMAIL.M9_EM_TEXTSPEAK",
+     "listen_for": [
+      "hi, wnt 2 book trip"
+     ],
+     "ask": "Formal?",
+     "repair": "Full words."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T15_EMAILS.EMAIL.M9_EM_LETTER_ADDRESSES",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Needed?",
+     "repair": "No."
+    },
+    {
+     "code": "ENGL.G9.WRITIN.T15_EMAILS.EMAIL.M9_EM_FORGOT_ATTACHMENT",
+     "listen_for": [
+      "send"
+     ],
+     "ask": "Attached?",
+     "repair": "Check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Subject for a trip booking?",
+     "answer": "Trip to Mombasa, 12 May",
+     "shows": "subject"
+    },
+    {
+     "question": "Postal address in an email?",
+     "answer": "No",
+     "shows": "format"
+    }
+   ]
+  }
+ ]
+}

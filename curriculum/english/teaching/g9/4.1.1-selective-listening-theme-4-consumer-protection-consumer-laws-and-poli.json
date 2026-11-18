@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING",
+ "title": "Selective Listening (Theme 4: Consumer protection: consumer laws and policies)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND",
+   "assessed_by": "voice",
+   "key_step": "The child notes information by speaker, judges the message with a reason and responds with fitting words.",
+   "floor": {
+    "prerequisite": "Listens and responds.",
+    "question": "What is the message?",
+    "answer": "a message"
+   },
+   "steps": [
+    "Note who said what.",
+    "Select the information.",
+    "Judge with a reason.",
+    "Respond or express feelings."
+   ],
+   "contexts": [
+    "speeches on sea travel",
+    "talks on consumer laws"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Speaker / Point / My judgement."
+    },
+    {
+     "beat": "point",
+     "do": "Point at My judgement.",
+     "say": "Is it fair? Why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child responds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND.M9_LR_NO_JUDGEMENT",
+     "listen_for": [
+      "The speaker said consumers have rights."
+     ],
+     "ask": "Fair or not?",
+     "repair": "Judge it."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND.M9_LR_WRONG_INFO",
+     "listen_for": [
+      "50,000 shillings"
+     ],
+     "ask": "Exact number?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND.M9_LR_SPEAKERS_MIXED",
+     "listen_for": [
+      "the first speaker"
+     ],
+     "ask": "Who said it?",
+     "repair": "Note names."
+    },
+    {
+     "code": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND.M9_LR_FEELING_NO_WORDS",
+     "listen_for": [
+      "good"
+     ],
+     "ask": "Exact word?",
+     "repair": "And a reason."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a message fair? Answer with ...",
+     "answer": "a judgement and reason",
+     "shows": "judge"
+    },
+    {
+     "question": "Feeling about the poem?",
+     "answer": "an exact word and reason",
+     "shows": "feelings"
+    }
+   ]
+  }
+ ]
+}

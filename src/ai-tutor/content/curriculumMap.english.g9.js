@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/english/g9.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Kenyan English teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/english/g9.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft (depth pass 18 Nov 2026, to the Grade 5 Maths standard), written offline by Claude, awaiting a Kenyan English teacher's review"};
 export const SUBSTRANDS = {
  "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE": {
   "name": "Polite Language (Theme 1: Citizenship)",
@@ -1713,6 +1713,67 @@ export const OUTCOMES = {
  }
 };
 export const SKILLS = {
+ "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM": {
+  "name": "Use euphemisms to show politeness",
+  "sub": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
+  "outcome": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.a",
+   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.b"
+  ],
+  "pre": [
+   "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL"
+  ],
+  "mis": [
+   "M9_EU_BLUNT",
+   "M9_EU_LITERAL",
+   "M9_EU_OVERUSE",
+   "M9_EU_INSULT"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.DEBATE": {
+  "name": "Conduct a debate while keeping the conventions of polite language",
+  "sub": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
+  "outcome": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.c",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.c"
+  ],
+  "pre": [
+   "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.EUPHEMISM"
+  ],
+  "mis": [
+   "M9_DB_ATTACK_SPEAKER",
+   "M9_DB_NO_CHAIR",
+   "M9_DB_NO_EVIDENCE",
+   "M9_DB_OVERTIME"
+  ],
+  "nofamily": "voice"
+ },
+ "ENGL.G9.READIN.T1_INDEPENDENT_READING_.INDEPENDENT_READING": {
+  "name": "Select and read grade-appropriate texts and keep a reading log or portfolio",
+  "sub": "ENGL.G9.READIN.T1_INDEPENDENT_READING_",
+  "outcome": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T1_INDEPENDENT_READING_.a",
+   "ENGL.G9.READIN.T1_INDEPENDENT_READING_.b",
+   "ENGL.G9.READIN.T1_INDEPENDENT_READING_.c",
+   "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.a",
+   "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.b",
+   "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.b",
+   "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.c"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION"
+  ],
+  "mis": [
+   "M9_IR_NO_LOG",
+   "M9_IR_ONE_SOURCE",
+   "M9_IR_LOG_TITLES",
+   "M9_IR_TOO_EASY"
+  ],
+  "nofamily": "teacher"
+ },
  "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.GENDER_NEUTRAL": {
   "name": "Replace gender-biased words with gender-neutral ones",
   "sub": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU",
@@ -1725,7 +1786,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_GN_CHAIRMAN",
    "M_EN9_GN_POLICE",
-   "M_EN9_GN_MANKIND"
+   "M_EN9_GN_MANKIND",
+   "M9_GN_HE_GENERIC"
   ]
  },
  "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE": {
@@ -1740,8 +1802,68 @@ export const SKILLS = {
   "mis": [
    "M_EN9_PL_STRUCTURE_DETAIL",
    "M_EN9_PL_STRUCTURE_OPPOSITE",
-   "M_EN9_PL_STRUCTURE_NOTSAID"
+   "M_EN9_PL_STRUCTURE_NOTSAID",
+   "M9_PL_ACT_SCENE"
   ]
+ },
+ "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.LEGIBILITY": {
+  "name": "Indent paragraphs, break words correctly and write a neat, legible text",
+  "sub": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN",
+  "outcome": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.a",
+   "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.b",
+   "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN.c"
+  ],
+  "pre": [
+   "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH"
+  ],
+  "mis": [
+   "M9_LG_NO_INDENT",
+   "M9_LG_BAD_BREAK",
+   "M9_LG_NO_HYPHEN",
+   "M9_LG_UNEVEN"
+  ],
+  "nofamily": "teacher"
+ },
+ "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.SHORT_FORMS": {
+  "name": "Identify and explain riddles, tongue twisters and proverbs",
+  "sub": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR",
+  "outcome": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.a",
+   "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_SF_RIDDLE_PROVERB",
+   "M9_SF_TWISTER_PURPOSE",
+   "M9_SF_RIDDLE_LITERAL",
+   "M9_SF_OPENING"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.PERFORM_ORAL": {
+  "name": "Perform short oral forms, oral poems and parts of a play",
+  "sub": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR",
+  "outcome": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.c",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.c",
+   "ENGL.G9.LISTEN.T8_ORAL_POETRY.b",
+   "ENGL.G9.READIN.T10_PLAY_PROJECT.b",
+   "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.b",
+   "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.d"
+  ],
+  "pre": [
+   "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR.SHORT_FORMS"
+  ],
+  "mis": [
+   "M9_PO_MUMBLE",
+   "M9_PO_NO_PROPS",
+   "M9_PO_BACK_TO_AUDIENCE",
+   "M9_PO_FLAT_POEM"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G9.READIN.T2_INTENSIVE_READING_SI.RP_STYLE": {
   "name": "Name repetition and its function in a poem",
@@ -1755,7 +1877,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RP_STYLE_DETAIL",
    "M_EN9_RP_STYLE_OPPOSITE",
-   "M_EN9_RP_STYLE_NOTSAID"
+   "M_EN9_RP_STYLE_NOTSAID",
+   "M9_RP_REPEAT_NO_FUNCTION"
   ]
  },
  "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER.QUANTIFIERS": {
@@ -1770,7 +1893,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_QT_MUCH",
    "M_EN9_QT_MANY",
-   "M_EN9_QT_FEW"
+   "M_EN9_QT_FEW",
+   "M9_QT_A_LOT_OF"
   ]
  },
  "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.PL_SEQUENCE": {
@@ -1781,11 +1905,14 @@ export const SKILLS = {
    "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.a",
    "ENGL.G9.READIN.T2_INTENSIVE_READING_PL.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE"
+  ],
   "mis": [
    "M_EN9_PL_SEQUENCE_DETAIL",
    "M_EN9_PL_SEQUENCE_OPPOSITE",
-   "M_EN9_PL_SEQUENCE_NOTSAID"
+   "M_EN9_PL_SEQUENCE_NOTSAID",
+   "M9_PL_STAGE_ORDER"
   ]
  },
  "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS": {
@@ -1800,7 +1927,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_QB_BRACKET",
    "M_EN9_QB_EXTRA",
-   "M_EN9_QB_END"
+   "M_EN9_QB_END",
+   "M9_QB_BRACKETS_SPEECH"
   ]
  },
  "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN": {
@@ -1808,13 +1936,16 @@ export const SKILLS = {
   "sub": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
   "outcome": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
   "outcomes": [
-   "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a"
+   "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
+   "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.b",
+   "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.a"
   ],
   "pre": [],
   "mis": [
    "M_EN9_LS_MAIN_DETAIL",
    "M_EN9_LS_MAIN_OPPOSITE",
-   "M_EN9_LS_MAIN_NOTSAID"
+   "M_EN9_LS_MAIN_NOTSAID",
+   "M9_LS_SIDE"
   ]
  },
  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT": {
@@ -1828,7 +1959,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_CONTEXT_DETAIL",
    "M_EN9_RS_CONTEXT_OPPOSITE",
-   "M_EN9_RS_CONTEXT_NOTSAID"
+   "M_EN9_RS_CONTEXT_NOTSAID",
+   "M9_RS_CONTEXT_FIGURATIVE"
   ]
  },
  "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONNECT": {
@@ -1842,7 +1974,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_CONNECT_DETAIL",
    "M_EN9_RS_CONNECT_OPPOSITE",
-   "M_EN9_RS_CONNECT_NOTSAID"
+   "M_EN9_RS_CONNECT_NOTSAID",
+   "M9_RS_CONNECT_DETAIL"
   ]
  },
  "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS": {
@@ -1857,7 +1990,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_MD_ABILITY",
    "M_EN9_MD_DUTY",
-   "M_EN9_MD_BASE"
+   "M_EN9_MD_BASE",
+   "M9_MD_PERMISSION"
   ]
  },
  "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES": {
@@ -1872,8 +2006,27 @@ export const SKILLS = {
   "mis": [
    "M_EN9_PF_STANZA",
    "M_EN9_PF_RHYME",
-   "M_EN9_PF_PERSON"
+   "M_EN9_PF_PERSON",
+   "M9_PF_PERSONIFICATION_ANIMAL"
   ]
+ },
+ "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_WRITING": {
+  "name": "Create a poem on a topic of interest",
+  "sub": "ENGL.G9.READIN.T3_POEMS_STRUCTURE",
+  "outcome": "ENGL.G9.READIN.T3_POEMS_STRUCTURE.c",
+  "outcomes": [
+   "ENGL.G9.READIN.T3_POEMS_STRUCTURE.c"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T3_POEMS_STRUCTURE.POEM_FEATURES"
+  ],
+  "mis": [
+   "M9_PW_PROSE",
+   "M9_PW_FORCED_RHYME",
+   "M9_PW_NO_IMAGERY",
+   "M9_PW_NO_MESSAGE"
+  ],
+  "nofamily": "composition"
  },
  "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH": {
   "name": "Name the characteristics of a well-formed paragraph",
@@ -1886,8 +2039,53 @@ export const SKILLS = {
   "mis": [
    "M_EN9_PA_TOPIC",
    "M_EN9_PA_UNITY",
-   "M_EN9_PA_COHERENCE"
+   "M_EN9_PA_COHERENCE",
+   "M9_PA_DEVELOPMENT"
   ]
+ },
+ "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH_WRITING": {
+  "name": "Write well-developed, coherent, unified narrative and descriptive paragraphs",
+  "sub": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG",
+  "outcome": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.b",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.b",
+   "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.a",
+   "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.b",
+   "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI.c"
+  ],
+  "pre": [
+   "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG.PARAGRAPH"
+  ],
+  "mis": [
+   "M9_PW2_NO_UNITY",
+   "M9_PW2_NO_COHERENCE",
+   "M9_PW2_PERSON_SWITCH",
+   "M9_PW2_UNDEVELOPED"
+  ],
+  "nofamily": "composition"
+ },
+ "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.LISTEN_RESPOND": {
+  "name": "Select information from listening texts and judge and respond to their message",
+  "sub": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING",
+  "outcome": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.a",
+   "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING.b",
+   "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS.b",
+   "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.a",
+   "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_.b",
+   "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.a",
+   "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.b",
+   "ENGL.G9.LISTEN.T8_ORAL_POETRY.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_LR_NO_JUDGEMENT",
+   "M9_LR_WRONG_INFO",
+   "M9_LR_SPEAKERS_MIXED",
+   "M9_LR_FEELING_NO_WORDS"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_PREDICT": {
   "name": "Predict events in a reading text",
@@ -1900,7 +2098,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_PREDICT_DETAIL",
    "M_EN9_RS_PREDICT_OPPOSITE",
-   "M_EN9_RS_PREDICT_NOTSAID"
+   "M_EN9_RS_PREDICT_NOTSAID",
+   "M9_RS_PREDICT_WISH"
   ]
  },
  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_KEYEVENTS": {
@@ -1914,7 +2113,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_KEYEVENTS_DETAIL",
    "M_EN9_RS_KEYEVENTS_OPPOSITE",
-   "M_EN9_RS_KEYEVENTS_NOTSAID"
+   "M_EN9_RS_KEYEVENTS_NOTSAID",
+   "M9_RS_KEYEVENTS_MINOR"
   ]
  },
  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_QUESTIONS": {
@@ -1929,7 +2129,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_QUESTIONS_DETAIL",
    "M_EN9_RS_QUESTIONS_OPPOSITE",
-   "M_EN9_RS_QUESTIONS_NOTSAID"
+   "M_EN9_RS_QUESTIONS_NOTSAID",
+   "M9_RS_QUESTIONS_COPY"
   ]
  },
  "ENGL.G9.READIN.T4_INTENSIVE_READING.RS_RELATE": {
@@ -1937,13 +2138,17 @@ export const SKILLS = {
   "sub": "ENGL.G9.READIN.T4_INTENSIVE_READING",
   "outcome": "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
   "outcomes": [
-   "ENGL.G9.READIN.T4_INTENSIVE_READING.e"
+   "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
+   "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.c",
+   "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.a",
+   "ENGL.G9.READIN.T15_INTENSIVE_READING_PO.b"
   ],
   "pre": [],
   "mis": [
    "M_EN9_RS_RELATE_DETAIL",
    "M_EN9_RS_RELATE_OPPOSITE",
-   "M_EN9_RS_RELATE_NOTSAID"
+   "M_EN9_RS_RELATE_NOTSAID",
+   "M9_RS_RELATE_RETELL"
   ]
  },
  "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER.PERFECT": {
@@ -1958,7 +2163,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_PE_PRESENT",
    "M_EN9_PE_PAST",
-   "M_EN9_PE_PARTICIPLE"
+   "M_EN9_PE_PARTICIPLE",
+   "M9_PE_WITH_TIME"
   ]
  },
  "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS": {
@@ -1967,14 +2173,71 @@ export const SKILLS = {
   "outcome": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
   "outcomes": [
    "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.a",
-   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c"
+   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.c",
+   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.b",
+   "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.a"
   ],
   "pre": [],
   "mis": [
    "M_EN9_PL_CHARACTERS_DETAIL",
    "M_EN9_PL_CHARACTERS_OPPOSITE",
-   "M_EN9_PL_CHARACTERS_NOTSAID"
+   "M_EN9_PL_CHARACTERS_NOTSAID",
+   "M9_PL_CHARACTERS_ADVERB"
   ]
+ },
+ "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS": {
+  "name": "Pronounce semi-vowels and diphthongs with clarity",
+  "sub": "ENGL.G9.LISTEN.T5_PRONUNCIATION",
+  "outcome": "ENGL.G9.LISTEN.T5_PRONUNCIATION.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T5_PRONUNCIATION.a",
+   "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_PS_Y_J",
+   "M9_PS_W_V",
+   "M9_PS_DAY_DIE",
+   "M9_PS_NOW_NO"
+  ],
+  "nofamily": "voice"
+ },
+ "ENGL.G9.LISTEN.T5_PRONUNCIATION.SENTENCE_STRESS": {
+  "name": "Stress content words and use emphatic stress to convey meaning",
+  "sub": "ENGL.G9.LISTEN.T5_PRONUNCIATION",
+  "outcome": "ENGL.G9.LISTEN.T5_PRONUNCIATION.b",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T5_PRONUNCIATION.b",
+   "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE.b"
+  ],
+  "pre": [
+   "ENGL.G9.LISTEN.T5_PRONUNCIATION.PRONOUNCE_SOUNDS"
+  ],
+  "mis": [
+   "M9_SS_ALL_STRONG",
+   "M9_SS_WRONG_EMPHASIS",
+   "M9_SS_FUNCTION_STRONG",
+   "M9_SS_MEANING_SAME"
+  ],
+  "nofamily": "voice"
+ },
+ "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.REFERENCE_RESEARCH": {
+  "name": "Use the dictionary, thesaurus and encyclopaedia to research a topic",
+  "sub": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_",
+  "outcome": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.a",
+   "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.b",
+   "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_RR_DICTIONARY_ONLY_MEANING",
+   "M9_RR_THESAURUS_SWAP",
+   "M9_RR_COPY",
+   "M9_RR_WRONG_SOURCE"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER": {
   "name": "Put adjectives in the correct order",
@@ -1988,8 +2251,31 @@ export const SKILLS = {
   "mis": [
    "M_EN9_AO_COLOUR",
    "M_EN9_AO_OPINION",
-   "M_EN9_AO_AGE"
+   "M_EN9_AO_AGE",
+   "M9_AO_MATERIAL"
   ]
+ },
+ "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.PLAY_STYLE": {
+  "name": "Identify features of style in a play and relate them to its message",
+  "sub": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA",
+  "outcome": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.a",
+   "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA.b",
+   "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.a",
+   "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA.b",
+   "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL.a"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE"
+  ],
+  "mis": [
+   "M9_PS2_NO_EXAMPLE",
+   "M9_PS2_NO_LINK",
+   "M9_PS2_MONOLOGUE_DIALOGUE",
+   "M9_PS2_IRONY"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION": {
   "name": "Name the parts of a letter of application",
@@ -2002,8 +2288,65 @@ export const SKILLS = {
   "mis": [
    "M_EN9_LA_CLOSE",
    "M_EN9_LA_SUBJECT",
-   "M_EN9_LA_ADDRESS"
+   "M_EN9_LA_ADDRESS",
+   "M9_LA_FRIENDLY_OPENING"
   ]
+ },
+ "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.APPLICATION_LETTER": {
+  "name": "Write a letter of application for placement at Senior School",
+  "sub": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO",
+  "outcome": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.b",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.b"
+  ],
+  "pre": [
+   "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO.LETTER_APPLICATION"
+  ],
+  "mis": [
+   "M9_AL_FRIENDLY_TONE",
+   "M9_AL_NO_QUALIFICATIONS",
+   "M9_AL_SINCERELY",
+   "M9_AL_BEGGING"
+  ],
+  "nofamily": "composition"
+ },
+ "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.NEGOTIATION": {
+  "name": "Use words, phrases and cues for negotiation",
+  "sub": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL",
+  "outcome": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.a",
+   "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.b"
+  ],
+  "pre": [
+   "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES.MODALS"
+  ],
+  "mis": [
+   "M9_NG_DEMAND",
+   "M9_NG_NO_LISTEN",
+   "M9_NG_WALK_AWAY",
+   "M9_NG_HOSTILE_CUES"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G9.READIN.T6_READING_FLUENCY.READ_FLUENTLY": {
+  "name": "Read at the right speed, accurately and with expression",
+  "sub": "ENGL.G9.READIN.T6_READING_FLUENCY",
+  "outcome": "ENGL.G9.READIN.T6_READING_FLUENCY.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T6_READING_FLUENCY.a",
+   "ENGL.G9.READIN.T6_READING_FLUENCY.b"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T15_READING_FLUENCY.SKIM_SCAN"
+  ],
+  "mis": [
+   "M9_RF_STOPS_UNKNOWN",
+   "M9_RF_RUSH",
+   "M9_RF_FLAT",
+   "M9_RF_NO_WAYS"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB.ADVERB_DEGREES": {
   "name": "Use the degrees of comparison of adverbs",
@@ -2017,7 +2360,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_AD_MORE",
    "M_EN9_AD_SUPER",
-   "M_EN9_AD_THAN"
+   "M_EN9_AD_THAN",
+   "M9_AD_IRREGULAR"
   ]
  },
  "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.PL_THEMES": {
@@ -2027,13 +2371,15 @@ export const SKILLS = {
   "outcomes": [
    "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.a",
    "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.b",
-   "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c"
+   "ENGL.G9.READIN.T6_INTENSIVE_READING_PL.c",
+   "ENGL.G9.READIN.T14_INTENSIVE_READING_PL.b"
   ],
   "pre": [],
   "mis": [
    "M_EN9_PL_THEMES_DETAIL",
    "M_EN9_PL_THEMES_OPPOSITE",
-   "M_EN9_PL_THEMES_NOTSAID"
+   "M_EN9_PL_THEMES_NOTSAID",
+   "M9_PL_THEME_TOPIC"
   ]
  },
  "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
@@ -2042,14 +2388,35 @@ export const SKILLS = {
   "outcome": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.a",
   "outcomes": [
    "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.a",
-   "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.b"
+   "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.b",
+   "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.a"
   ],
   "pre": [],
   "mis": [
    "M_EN9_SG_HOMOPHONE",
    "M_EN9_SG_SEPARATE",
-   "M_EN9_SG_COMMITTEE"
+   "M_EN9_SG_COMMITTEE",
+   "M9_SG_HOMONYM"
   ]
+ },
+ "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.INTERPRET_EVALUATE": {
+  "name": "Distinguish reading for interpretation from reading for evaluation, and interpret a text",
+  "sub": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN",
+  "outcome": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.a",
+   "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.b"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT"
+  ],
+  "mis": [
+   "M9_IE_SAME",
+   "M9_IE_ACCEPT_ALL",
+   "M9_IE_LITERAL",
+   "M9_IE_OPINION_NO_REASON"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS": {
   "name": "Use relative and interrogative pronouns",
@@ -2063,7 +2430,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RP_WHICH",
    "M_EN9_RP_WHOSE",
-   "M_EN9_RP_WHO"
+   "M_EN9_RP_WHO",
+   "M9_RP_WHOM"
   ]
  },
  "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.PL_RELATIONSHIP": {
@@ -2074,12 +2442,54 @@ export const SKILLS = {
    "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.a",
    "ENGL.G9.READIN.T7_INTENSIVE_READING_PL.b"
   ],
-  "pre": [],
+  "pre": [
+   "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_.PL_CHARACTERS"
+  ],
   "mis": [
    "M_EN9_PL_RELATIONSHIP_DETAIL",
    "M_EN9_PL_RELATIONSHIP_OPPOSITE",
-   "M_EN9_PL_RELATIONSHIP_NOTSAID"
+   "M_EN9_PL_RELATIONSHIP_NOTSAID",
+   "M9_PL_REL_ONE_WAY"
   ]
+ },
+ "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS": {
+  "name": "Outline the stages of the writing process",
+  "sub": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
+  "outcome": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.a",
+   "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_WP_ORDER",
+   "M9_WP_REVISE_EDIT",
+   "M9_WP_ONE_DRAFT",
+   "M9_WP_SKIP_PLAN"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.NARRATIVE_COMPOSITION": {
+  "name": "Write compositions, stories and poems through the writing process, using narrative elements and idioms",
+  "sub": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
+  "outcome": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.b",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.b",
+   "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.b",
+   "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.b",
+   "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.b"
+  ],
+  "pre": [
+   "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS",
+   "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS"
+  ],
+  "mis": [
+   "M9_NC_NO_CLIMAX",
+   "M9_NC_UNBELIEVABLE",
+   "M9_NC_IDIOM_MISUSE",
+   "M9_NC_TENSE"
+  ],
+  "nofamily": "composition"
  },
  "ENGL.G9.READIN.T8_READING_FOR_INTERPRE.RP_POV": {
   "name": "Identify the point of view of a poem",
@@ -2093,7 +2503,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RP_POV_DETAIL",
    "M_EN9_RP_POV_OPPOSITE",
-   "M_EN9_RP_POV_NOTSAID"
+   "M_EN9_RP_POV_NOTSAID",
+   "M9_RP_POV_PERSON"
   ]
  },
  "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS.COMPLEX_PREPS": {
@@ -2108,7 +2519,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_CP_BECAUSE",
    "M_EN9_CP_INSTEAD",
-   "M_EN9_CP_ACCORDING"
+   "M_EN9_CP_ACCORDING",
+   "M9_CP_IN_SPITE"
   ]
  },
  "ENGL.G9.READIN.T8_POETRY_CHARACTERS.RP_PERSONA": {
@@ -2123,8 +2535,28 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RP_PERSONA_DETAIL",
    "M_EN9_RP_PERSONA_OPPOSITE",
-   "M_EN9_RP_PERSONA_NOTSAID"
+   "M_EN9_RP_PERSONA_NOTSAID",
+   "M9_RP_PERSONA_LISTENER"
   ]
+ },
+ "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.ASSESS_WRITING": {
+  "name": "Identify the qualities of a good composition and assess one against criteria",
+  "sub": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING",
+  "outcome": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.a",
+   "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.c"
+  ],
+  "pre": [
+   "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING"
+  ],
+  "mis": [
+   "M9_AW_LENGTH",
+   "M9_AW_NO_CRITERIA",
+   "M9_AW_SPELLING_ONLY",
+   "M9_AW_NO_CORRECTIONS"
+  ],
+  "nofamily": "teacher"
  },
  "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA.CORRELATIVE": {
   "name": "Use correlative conjunctions in pairs",
@@ -2138,7 +2570,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_CO_EITHER",
    "M_EN9_CO_NEITHER",
-   "M_EN9_CO_NOTONLY"
+   "M_EN9_CO_NOTONLY",
+   "M9_CO_WHETHER"
   ]
  },
  "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO.NARRATIVE_ELEMENTS": {
@@ -2152,8 +2585,45 @@ export const SKILLS = {
   "mis": [
    "M_EN9_NE_SETTING",
    "M_EN9_NE_PLOT",
-   "M_EN9_NE_CLIMAX"
+   "M_EN9_NE_CLIMAX",
+   "M9_NE_RESOLUTION"
   ]
+ },
+ "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.IMPROMPTU_SPEECH": {
+  "name": "Prepare quickly for and make an impromptu speech",
+  "sub": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES",
+  "outcome": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.a",
+   "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_IS_NO_PLAN",
+   "M9_IS_FREEZE",
+   "M9_IS_NO_CLOSE",
+   "M9_IS_OFF_TOPIC"
+  ],
+  "nofamily": "voice"
+ },
+ "ENGL.G9.READIN.T10_NOTE_MAKING.NOTE_MAKING": {
+  "name": "Identify the main points of an argumentative passage and make notes",
+  "sub": "ENGL.G9.READIN.T10_NOTE_MAKING",
+  "outcome": "ENGL.G9.READIN.T10_NOTE_MAKING.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T10_NOTE_MAKING.a",
+   "ENGL.G9.READIN.T10_NOTE_MAKING.b"
+  ],
+  "pre": [
+   "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.LS_MAIN"
+  ],
+  "mis": [
+   "M9_NM_ONE_SIDE",
+   "M9_NM_COPIES",
+   "M9_NM_EVIDENCE_AS_POINT",
+   "M9_NM_NO_POSITION"
+  ],
+  "nofamily": "teacher"
  },
  "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.DETERMINERS_NUM": {
   "name": "Use numerals and ordinals as determiners",
@@ -2167,8 +2637,77 @@ export const SKILLS = {
   "mis": [
    "M_EN9_DN_ORDINAL",
    "M_EN9_DN_CARDINAL",
-   "M_EN9_DN_ORDER"
+   "M_EN9_DN_ORDER",
+   "M9_DN_FIRST_TWO"
   ]
+ },
+ "ENGL.G9.READIN.T10_PLAY_PROJECT.PROPS_COSTUMES": {
+  "name": "Identify simple props and costumes that create mood and atmosphere",
+  "sub": "ENGL.G9.READIN.T10_PLAY_PROJECT",
+  "outcome": "ENGL.G9.READIN.T10_PLAY_PROJECT.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T10_PLAY_PROJECT.a"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S.PL_STRUCTURE"
+  ],
+  "mis": [
+   "M9_PC_EXPENSIVE",
+   "M9_PC_MOOD_MISMATCH",
+   "M9_PC_TOO_MANY",
+   "M9_PC_COSTUME_ERA"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.BURSARY_FORMS": {
+  "name": "Recognise and fill bursary and scholarship application forms",
+  "sub": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC",
+  "outcome": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.a",
+   "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_BF_WRONG_FORM",
+   "M9_BF_INCOMPLETE",
+   "M9_BF_NO_DOCUMENTS",
+   "M9_BF_UNSIGNED"
+  ],
+  "nofamily": "composition"
+ },
+ "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.JOB_INTERVIEW": {
+  "name": "Prepare for and take part in a mock job interview",
+  "sub": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_",
+  "outcome": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.a",
+   "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_JI_NO_PREPARATION",
+   "M9_JI_VAGUE",
+   "M9_JI_BAD_QUESTIONS",
+   "M9_JI_NO_CLOSE"
+  ],
+  "nofamily": "voice"
+ },
+ "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.FICTION_NONFICTION": {
+  "name": "Distinguish between fiction and non-fiction",
+  "sub": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI",
+  "outcome": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_FN_REAL_PLACE",
+   "M9_FN_BIOGRAPHY",
+   "M9_FN_COVER",
+   "M9_FN_SCIENCE_FICTION"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS.NOUNS_FORMED": {
   "name": "Form nouns from verbs and from other nouns",
@@ -2182,7 +2721,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_NF_DECIDE",
    "M_EN9_NF_FRIEND",
-   "M_EN9_NF_CHILD"
+   "M_EN9_NF_CHILD",
+   "M9_NF_ADJ_FOR_NOUN"
   ]
  },
  "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL.PL_LESSONS": {
@@ -2197,7 +2737,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_PL_LESSONS_DETAIL",
    "M_EN9_PL_LESSONS_OPPOSITE",
-   "M_EN9_PL_LESSONS_NOTSAID"
+   "M_EN9_PL_LESSONS_NOTSAID",
+   "M9_PL_LESSON_PLOT"
   ]
  },
  "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING.ABBREVIATIONS": {
@@ -2211,7 +2752,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_AB_EG",
    "M_EN9_AB_ETC",
-   "M_EN9_AB_UN"
+   "M_EN9_AB_UN",
+   "M9_AB_FULL_STOPS"
   ]
  },
  "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.RS_CLUES": {
@@ -2220,13 +2762,15 @@ export const SKILLS = {
   "outcome": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
   "outcomes": [
    "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.a",
-   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b"
+   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b",
+   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.d"
   ],
   "pre": [],
   "mis": [
    "M_EN9_RS_CLUES_DETAIL",
    "M_EN9_RS_CLUES_OPPOSITE",
-   "M_EN9_RS_CLUES_NOTSAID"
+   "M_EN9_RS_CLUES_NOTSAID",
+   "M9_RS_CLUES_OVERREACH"
   ]
  },
  "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
@@ -2241,7 +2785,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_PV_BREAKDOWN",
    "M_EN9_PV_RUNOUT",
-   "M_EN9_PV_TURNUP"
+   "M_EN9_PV_TURNUP",
+   "M9_PV_HANG_UP_ON"
   ]
  },
  "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.PL_TRAITS": {
@@ -2249,14 +2794,34 @@ export const SKILLS = {
   "sub": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO",
   "outcome": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a",
   "outcomes": [
-   "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a"
+   "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.a",
+   "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO.b"
   ],
   "pre": [],
   "mis": [
    "M_EN9_PL_TRAITS_DETAIL",
    "M_EN9_PL_TRAITS_OPPOSITE",
-   "M_EN9_PL_TRAITS_NOTSAID"
+   "M_EN9_PL_TRAITS_NOTSAID",
+   "M9_PL_TRAITS_ONE_CLUE"
   ]
+ },
+ "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.DIALOGUE_WRITING": {
+  "name": "Apply the writing process in creating a dialogue",
+  "sub": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_",
+  "outcome": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.b",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_.b"
+  ],
+  "pre": [
+   "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS"
+  ],
+  "mis": [
+   "M9_DW_QUOTES",
+   "M9_DW_NO_REVISION",
+   "M9_DW_DIRECTIONS",
+   "M9_DW_NO_PURPOSE"
+  ],
+  "nofamily": "composition"
  },
  "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.RS_IMAGES": {
   "name": "Pick the mental images a passage creates",
@@ -2269,7 +2834,8 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_IMAGES_DETAIL",
    "M_EN9_RS_IMAGES_OPPOSITE",
-   "M_EN9_RS_IMAGES_NOTSAID"
+   "M_EN9_RS_IMAGES_NOTSAID",
+   "M9_RS_IMAGES_ADD"
   ]
  },
  "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE.SUBORDINATING": {
@@ -2285,8 +2851,45 @@ export const SKILLS = {
   "mis": [
    "M_EN9_SC_ALTHOUGH",
    "M_EN9_SC_BECAUSE",
-   "M_EN9_SC_UNLESS"
+   "M_EN9_SC_UNLESS",
+   "M9_SC_FRAGMENT"
   ]
+ },
+ "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.IDIOMS": {
+  "name": "Explain the meaning of idioms in different contexts",
+  "sub": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI",
+  "outcome": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI.a"
+  ],
+  "pre": [
+   "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.RS_CONTEXT"
+  ],
+  "mis": [
+   "M9_ID_LITERAL",
+   "M9_ID_OPPOSITE",
+   "M9_ID_WRONG_FIT",
+   "M9_ID_CHANGED"
+  ],
+  "nofamily": "questions"
+ },
+ "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.QUESTION_TAGS": {
+  "name": "Write and use question tags with the correct intonation",
+  "sub": "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN",
+  "outcome": "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.a",
+   "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.b",
+   "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_QT_SAME_SIGN",
+   "M9_QT_ISNT_IT",
+   "M9_QT_LETS",
+   "M9_QT_TUNE"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.RS_SUMMARY": {
   "name": "Pick out the main points and organise them into a summary",
@@ -2294,13 +2897,18 @@ export const SKILLS = {
   "outcome": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
   "outcomes": [
    "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.a",
-   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b"
+   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.b",
+   "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.c",
+   "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.c",
+   "ENGL.G9.READIN.T13_INTENSIVE_READING_VI.b",
+   "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT.c"
   ],
   "pre": [],
   "mis": [
    "M_EN9_RS_SUMMARY_DETAIL",
    "M_EN9_RS_SUMMARY_OPPOSITE",
-   "M_EN9_RS_SUMMARY_NOTSAID"
+   "M_EN9_RS_SUMMARY_NOTSAID",
+   "M9_RS_SUMMARY_OWN_WORDS"
   ]
  },
  "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.DIRECT_INDIRECT": {
@@ -2310,7 +2918,8 @@ export const SKILLS = {
   "outcomes": [
    "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.a",
    "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.b",
-   "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.c"
+   "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.c",
+   "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND.d"
   ],
   "pre": [
    "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING.QUOTES_BRACKETS"
@@ -2318,8 +2927,49 @@ export const SKILLS = {
   "mis": [
    "M_EN9_DI_QUOTE",
    "M_EN9_DI_TENSE",
-   "M_EN9_DI_PRONOUN"
+   "M_EN9_DI_PRONOUN",
+   "M9_DI_TIME_WORDS"
   ]
+ },
+ "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.DESCRIPTIVE_COMPOSITION": {
+  "name": "Write a descriptive composition of 280 to 320 words using the five senses",
+  "sub": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_",
+  "outcome": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.a",
+   "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.b",
+   "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.c",
+   "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.d"
+  ],
+  "pre": [
+   "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.ADJ_ORDER",
+   "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.WRITING_PROCESS"
+  ],
+  "mis": [
+   "M9_DC_FEW_SENSES",
+   "M9_DC_NARRATES",
+   "M9_DC_LENGTH",
+   "M9_DC_SPELLING"
+  ],
+  "nofamily": "composition"
+ },
+ "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.NEWS_REPORT": {
+  "name": "Read and analyse a news report and present one",
+  "sub": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO",
+  "outcome": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.a",
+  "outcomes": [
+   "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.a",
+   "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.b",
+   "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_NR_OPINION",
+   "M9_NR_TIME",
+   "M9_NR_NO_HEADLINE",
+   "M9_NR_MISSING_WS"
+  ],
+  "nofamily": "voice"
  },
  "ENGL.G9.READIN.T15_READING_FLUENCY.RS_FLUENCY": {
   "name": "Make predictions about characters, events and the message of a text",
@@ -2332,8 +2982,27 @@ export const SKILLS = {
   "mis": [
    "M_EN9_RS_FLUENCY_DETAIL",
    "M_EN9_RS_FLUENCY_OPPOSITE",
-   "M_EN9_RS_FLUENCY_NOTSAID"
+   "M_EN9_RS_FLUENCY_NOTSAID",
+   "M9_RS_FLUENCY_TITLE"
   ]
+ },
+ "ENGL.G9.READIN.T15_READING_FLUENCY.SKIM_SCAN": {
+  "name": "Preview, skim and scan a text",
+  "sub": "ENGL.G9.READIN.T15_READING_FLUENCY",
+  "outcome": "ENGL.G9.READIN.T15_READING_FLUENCY.a",
+  "outcomes": [
+   "ENGL.G9.READIN.T15_READING_FLUENCY.a",
+   "ENGL.G9.READIN.T15_READING_FLUENCY.c",
+   "ENGL.G9.READIN.T15_READING_FLUENCY.d"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_SK_READ_ALL",
+   "M9_SK_GIST_DETAIL",
+   "M9_SK_STOP_UNKNOWN",
+   "M9_SK_WRONG_KEYWORD"
+  ],
+  "nofamily": "questions"
  },
  "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI.EXCLAM_IMPERATIVE": {
   "name": "Punctuate imperative and exclamatory sentences",
@@ -2347,47 +3016,113 @@ export const SKILLS = {
   "mis": [
    "M_EN9_EI_MARK",
    "M_EN9_EI_COMMAND",
-   "M_EN9_EI_STOP"
+   "M_EN9_EI_STOP",
+   "M9_EI_POLITE_IMPERATIVE"
   ]
+ },
+ "ENGL.G9.WRITIN.T15_EMAILS.EMAIL": {
+  "name": "Identify the elements of an email and write one",
+  "sub": "ENGL.G9.WRITIN.T15_EMAILS",
+  "outcome": "ENGL.G9.WRITIN.T15_EMAILS.a",
+  "outcomes": [
+   "ENGL.G9.WRITIN.T15_EMAILS.a",
+   "ENGL.G9.WRITIN.T15_EMAILS.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M9_EM_NO_SUBJECT",
+   "M9_EM_TEXTSPEAK",
+   "M9_EM_LETTER_ADDRESSES",
+   "M9_EM_FORGOT_ATTACHMENT"
+  ],
+  "nofamily": "composition"
  }
 };
 export const MIS_FEEDBACK = {
+ "M9_EU_BLUNT": "Choose a gentle expression: passed away.",
+ "M9_EU_LITERAL": "A euphemism softens a hard fact.",
+ "M9_EU_OVERUSE": "Be gentle, but give facts plainly when people need them.",
+ "M9_EU_INSULT": "Choose words the person would be happy to hear.",
+ "M9_DB_ATTACK_SPEAKER": "Rebut the point, not the person.",
+ "M9_DB_NO_CHAIR": "Address the chair and the house first.",
+ "M9_DB_NO_EVIDENCE": "Give a reason and an example.",
+ "M9_DB_OVERTIME": "Plan to fit the time.",
+ "M9_IR_NO_LOG": "Log each text.",
+ "M9_IR_ONE_SOURCE": "Mix print and digital.",
+ "M9_IR_LOG_TITLES": "Add a line on content and opinion.",
+ "M9_IR_TOO_EASY": "Choose grade-appropriate texts.",
  "M_EN9_GN_CHAIRMAN": "Chairperson does not assume the sex of the chair.",
  "M_EN9_GN_POLICE": "Police officer fits a man or a woman.",
  "M_EN9_GN_MANKIND": "Humankind includes everyone.",
+ "M9_GN_HE_GENERIC": "Use their, or his or her, when the person could be anyone.",
  "M_EN9_PL_STRUCTURE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_STRUCTURE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_STRUCTURE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_ACT_SCENE": "Acts are the big parts; scenes are inside acts.",
+ "M9_LG_NO_INDENT": "Indent each new paragraph.",
+ "M9_LG_BAD_BREAK": "Break between syllables, with a hyphen.",
+ "M9_LG_NO_HYPHEN": "Add a hyphen.",
+ "M9_LG_UNEVEN": "Keep letters even.",
+ "M9_SF_RIDDLE_PROVERB": "A riddle asks for an answer; a proverb teaches.",
+ "M9_SF_TWISTER_PURPOSE": "Tongue twisters train the tongue.",
+ "M9_SF_RIDDLE_LITERAL": "Think of things that fit every clue.",
+ "M9_SF_OPENING": "Riddles have a call and response before the puzzle.",
+ "M9_PO_MUMBLE": "Clear sounds first, then speed.",
+ "M9_PO_NO_PROPS": "One simple prop can set the scene.",
+ "M9_PO_BACK_TO_AUDIENCE": "Keep your face open to the audience.",
+ "M9_PO_FLAT_POEM": "Let the voice and gestures carry the meaning.",
  "M_EN9_RP_STYLE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RP_STYLE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RP_STYLE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RP_REPEAT_NO_FUNCTION": "Say what the repetition adds: stress, rhythm or feeling.",
  "M_EN9_QT_MUCH": "Use many with count nouns such as chairs.",
  "M_EN9_QT_MANY": "Use much with non-count nouns such as water.",
  "M_EN9_QT_FEW": "Use little with non-count nouns such as milk.",
+ "M9_QT_A_LOT_OF": "A lot of is three words.",
  "M_EN9_PL_SEQUENCE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_SEQUENCE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_SEQUENCE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_STAGE_ORDER": "Follow what happens on stage in order.",
  "M_EN9_QB_BRACKET": "Quotation marks hold the exact words spoken.",
  "M_EN9_QB_EXTRA": "Brackets hold extra information.",
  "M_EN9_QB_END": "The full stop goes inside the closing quotation marks.",
+ "M9_QB_BRACKETS_SPEECH": "Quotation marks for spoken words; brackets for extra information.",
  "M_EN9_LS_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_LS_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_LS_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_LS_SIDE": "Listen for the conclusion: it shows the speaker's side.",
  "M_EN9_RS_CONTEXT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_CONTEXT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_CONTEXT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M_EN9_RS_CONNECT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_CONNECT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_CONNECT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RS_CONTEXT_FIGURATIVE": "Ask what picture the writer is making.",
+ "M9_RS_CONNECT_DETAIL": "Link the main event or issue.",
  "M_EN9_MD_ABILITY": "Can shows ability.",
  "M_EN9_MD_DUTY": "Must shows duty.",
  "M_EN9_MD_BASE": "A modal is followed by the base verb with no to.",
+ "M9_MD_PERMISSION": "May is the formal word for permission.",
  "M_EN9_PF_STANZA": "A stanza is a group of lines.",
  "M_EN9_PF_RHYME": "Rhyme is repeated end sounds.",
  "M_EN9_PF_PERSON": "Personification gives human actions to a thing.",
+ "M9_PW_PROSE": "Break it into lines and stanzas.",
+ "M9_PW_FORCED_RHYME": "Meaning first; rhyme is optional.",
+ "M9_PW_NO_IMAGERY": "Use an image or personification.",
+ "M9_PW_NO_MESSAGE": "Choose a feeling or message first.",
+ "M9_PF_PERSONIFICATION_ANIMAL": "A thing given human actions is personification.",
  "M_EN9_PA_TOPIC": "The topic sentence states the main idea.",
  "M_EN9_PA_UNITY": "Unity means one main idea.",
  "M_EN9_PA_COHERENCE": "Coherence means ideas flow in order.",
+ "M9_PW2_NO_UNITY": "One idea per paragraph.",
+ "M9_PW2_NO_COHERENCE": "Order and link ideas.",
+ "M9_PW2_PERSON_SWITCH": "Keep the same person.",
+ "M9_PW2_UNDEVELOPED": "Support the topic sentence.",
+ "M9_PA_DEVELOPMENT": "Topic sentence, unity, coherence and development.",
+ "M9_LR_NO_JUDGEMENT": "Say whether it is fair and why.",
+ "M9_LR_WRONG_INFO": "Note numbers exactly.",
+ "M9_LR_SPEAKERS_MIXED": "Note each speaker's name with the point.",
+ "M9_LR_FEELING_NO_WORDS": "Use an exact feeling word and a reason.",
  "M_EN9_RS_PREDICT_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_PREDICT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_PREDICT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
@@ -2400,85 +3135,212 @@ export const MIS_FEEDBACK = {
  "M_EN9_RS_RELATE_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_RELATE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_RELATE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RS_PREDICT_WISH": "Use the clues.",
+ "M9_RS_KEYEVENTS_MINOR": "Key events change the story.",
+ "M9_RS_QUESTIONS_COPY": "Follow the word limit.",
+ "M9_RS_RELATE_RETELL": "Name a real person or situation.",
  "M_EN9_PE_PRESENT": "Present perfect uses have or has.",
  "M_EN9_PE_PAST": "Past perfect uses had.",
  "M_EN9_PE_PARTICIPLE": "Use the past participle after has.",
+ "M9_PE_WITH_TIME": "With yesterday, use the simple past.",
  "M_EN9_PL_CHARACTERS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_CHARACTERS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_CHARACTERS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_CHARACTERS_ADVERB": "Actions are described with adverbs: angrily.",
+ "M9_PS_Y_J": "Y is a glide: tongue near the roof, no stop.",
+ "M9_PS_W_V": "Round the lips for w; no teeth.",
+ "M9_PS_DAY_DIE": "Day slides from e to i; die slides from a to i.",
+ "M9_PS_NOW_NO": "Now opens wide then rounds: ah-oo.",
+ "M9_SS_ALL_STRONG": "Content words strong, function words weak.",
+ "M9_SS_WRONG_EMPHASIS": "Stress the word that corrects or contrasts.",
+ "M9_SS_FUNCTION_STRONG": "Keep the, is and in weak.",
+ "M9_SS_MEANING_SAME": "Stress shows what you mean.",
+ "M9_RR_DICTIONARY_ONLY_MEANING": "A dictionary shows part of speech and usage too.",
+ "M9_RR_THESAURUS_SWAP": "Check the synonym fits the context.",
+ "M9_RR_COPY": "Note key points and the source.",
+ "M9_RR_WRONG_SOURCE": "Match the reference to the need.",
  "M_EN9_AO_COLOUR": "Size comes before colour.",
  "M_EN9_AO_OPINION": "Opinion comes before material.",
  "M_EN9_AO_AGE": "Age comes before colour.",
+ "M9_AO_MATERIAL": "Opinion, size, age, shape, colour, origin, material, purpose.",
+ "M9_PS2_NO_EXAMPLE": "Quote or describe an example.",
+ "M9_PS2_NO_LINK": "Say what it shows or adds.",
+ "M9_PS2_MONOLOGUE_DIALOGUE": "Mono means one speaker.",
+ "M9_PS2_IRONY": "Irony is when the opposite of what is expected happens or is said.",
  "M_EN9_LA_CLOSE": "Yours faithfully goes with Dear Sir or Madam.",
  "M_EN9_LA_SUBJECT": "The subject line states what the letter is about.",
  "M_EN9_LA_ADDRESS": "The writer's address goes at the top.",
+ "M9_AL_FRIENDLY_TONE": "Formal and direct.",
+ "M9_AL_NO_QUALIFICATIONS": "Give reasons you are suitable.",
+ "M9_AL_SINCERELY": "Dear Sir: Yours faithfully.",
+ "M9_AL_BEGGING": "Be polite and confident.",
+ "M9_LA_FRIENDLY_OPENING": "Go straight to the purpose.",
+ "M9_NG_DEMAND": "Offer something in return.",
+ "M9_NG_NO_LISTEN": "Listen and find a middle point.",
+ "M9_NG_WALK_AWAY": "Make a counter-offer.",
+ "M9_NG_HOSTILE_CUES": "Keep calm, open cues.",
+ "M9_RF_STOPS_UNKNOWN": "Keep the flow; check later.",
+ "M9_RF_RUSH": "Steady pace.",
+ "M9_RF_FLAT": "Show the feeling.",
+ "M9_RF_NO_WAYS": "Preview, phrase, pause, vary, pace.",
  "M_EN9_AD_MORE": "Long adverbs take more and most.",
  "M_EN9_AD_SUPER": "Use the superlative when comparing three or more.",
  "M_EN9_AD_THAN": "Use the comparative with than.",
+ "M9_AD_IRREGULAR": "Well, better, best; badly, worse, worst.",
  "M_EN9_PL_THEMES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_THEMES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_THEMES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_THEME_TOPIC": "A theme is an idea about life, said as a phrase.",
  "M_EN9_SG_HOMOPHONE": "Their shows belonging.",
  "M_EN9_SG_SEPARATE": "Separate has \"par\" in the middle.",
  "M_EN9_SG_COMMITTEE": "Committee has double m, double t and double e.",
+ "M9_SG_HOMONYM": "Use the sentence to pick the meaning.",
+ "M9_IE_SAME": "Interpret: what it means. Evaluate: how good or true it is.",
+ "M9_IE_ACCEPT_ALL": "Ask who says it and why.",
+ "M9_IE_LITERAL": "Find the picture the writer means.",
+ "M9_IE_OPINION_NO_REASON": "Give a reason from the text.",
  "M_EN9_RP_WHICH": "Use which for things.",
  "M_EN9_RP_WHOSE": "Whose shows belonging.",
  "M_EN9_RP_WHO": "Use who for people.",
+ "M9_RP_WHOM": "After to, for, with: whom.",
  "M_EN9_PL_RELATIONSHIP_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_RELATIONSHIP_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_RELATIONSHIP_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_REL_ONE_WAY": "Describe how each treats the other, and how it changes.",
+ "M9_WP_ORDER": "Plan, draft, revise, edit, publish.",
+ "M9_WP_REVISE_EDIT": "Revise ideas; edit mechanics.",
+ "M9_WP_ONE_DRAFT": "Always revise.",
+ "M9_WP_SKIP_PLAN": "Plan every text.",
+ "M9_NC_NO_CLIMAX": "Build to a climax.",
+ "M9_NC_UNBELIEVABLE": "Prepare the reader with background details.",
+ "M9_NC_IDIOM_MISUSE": "Use idioms for their real meaning.",
+ "M9_NC_TENSE": "Past tense throughout.",
  "M_EN9_RP_POV_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RP_POV_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RP_POV_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RP_POV_PERSON": "Point of view is who speaks and to whom.",
  "M_EN9_CP_BECAUSE": "Because of is followed by a noun.",
  "M_EN9_CP_INSTEAD": "Instead of is followed by a noun.",
  "M_EN9_CP_ACCORDING": "Use according to.",
+ "M9_CP_IN_SPITE": "In spite of, because of, instead of.",
  "M_EN9_RP_PERSONA_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RP_PERSONA_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RP_PERSONA_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RP_PERSONA_LISTENER": "The persona is the speaker.",
+ "M9_AW_LENGTH": "Use the criteria.",
+ "M9_AW_NO_CRITERIA": "Comment on each criterion.",
+ "M9_AW_SPELLING_ONLY": "Check every quality.",
+ "M9_AW_NO_CORRECTIONS": "Suggest the correction.",
  "M_EN9_CO_EITHER": "Either goes with or.",
  "M_EN9_CO_NEITHER": "Neither goes with nor.",
  "M_EN9_CO_NOTONLY": "Not only goes with but also.",
+ "M9_CO_WHETHER": "Whether goes with or.",
  "M_EN9_NE_SETTING": "Setting is time and place.",
  "M_EN9_NE_PLOT": "The plot is the order of events.",
  "M_EN9_NE_CLIMAX": "The climax is the most exciting point.",
+ "M9_NE_RESOLUTION": "Climax: the most exciting point. Resolution: how it ends.",
+ "M9_IS_NO_PLAN": "Plan quickly: position, two points, close.",
+ "M9_IS_FREEZE": "Use a frame to start.",
+ "M9_IS_NO_CLOSE": "Sum up and thank the audience.",
+ "M9_IS_OFF_TOPIC": "Link every point to the topic.",
+ "M9_NM_ONE_SIDE": "Note both sides.",
+ "M9_NM_COPIES": "Key words.",
+ "M9_NM_EVIDENCE_AS_POINT": "Note the point the evidence supports.",
+ "M9_NM_NO_POSITION": "Note the writer's position first.",
  "M_EN9_DN_ORDINAL": "Ordinals show position.",
  "M_EN9_DN_CARDINAL": "Cardinals show how many.",
  "M_EN9_DN_ORDER": "A determiner comes before the noun.",
+ "M9_DN_FIRST_TWO": "Ordinal before cardinal: the first two.",
+ "M9_PC_EXPENSIVE": "Simple props work.",
+ "M9_PC_MOOD_MISMATCH": "Match props to the mood.",
+ "M9_PC_TOO_MANY": "A few props that matter.",
+ "M9_PC_COSTUME_ERA": "Match costume to setting.",
+ "M9_BF_WRONG_FORM": "Read the heading.",
+ "M9_BF_INCOMPLETE": "Answer every section.",
+ "M9_BF_NO_DOCUMENTS": "Check the list of attachments.",
+ "M9_BF_UNSIGNED": "Sign the declaration; get the guardian's too.",
+ "M9_JI_NO_PREPARATION": "Research the job; prepare examples.",
+ "M9_JI_VAGUE": "Give an example that proves it.",
+ "M9_JI_BAD_QUESTIONS": "Ask about skills and experience only.",
+ "M9_JI_NO_CLOSE": "Thank them.",
+ "M9_FN_REAL_PLACE": "Fiction can use real places; the events are made up.",
+ "M9_FN_BIOGRAPHY": "True life stories are non-fiction.",
+ "M9_FN_COVER": "Check the blurb and contents.",
+ "M9_FN_SCIENCE_FICTION": "Made-up events, even with science, are fiction.",
  "M_EN9_NF_DECIDE": "The noun from decide is decision.",
  "M_EN9_NF_FRIEND": "Friendship is the noun formed from friend.",
  "M_EN9_NF_CHILD": "Childhood is the noun formed from child.",
+ "M9_NF_ADJ_FOR_NOUN": "Add -ness, -ity, -tion to make a noun.",
  "M_EN9_PL_LESSONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_LESSONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_LESSONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_LESSON_PLOT": "A lesson is advice for life.",
  "M_EN9_AB_EG": "e.g. means for example.",
  "M_EN9_AB_ETC": "etc. means and so on.",
  "M_EN9_AB_UN": "UN stands for United Nations.",
+ "M9_AB_FULL_STOPS": "Modern acronyms usually have no full stops.",
  "M_EN9_RS_CLUES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_CLUES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_CLUES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RS_CLUES_OVERREACH": "Keep conclusions to what the clues show.",
  "M_EN9_PV_BREAKDOWN": "Break down means stop working.",
  "M_EN9_PV_RUNOUT": "Run out of means have no more.",
  "M_EN9_PV_TURNUP": "Turn up means arrive.",
+ "M9_PV_HANG_UP_ON": "Hang on means wait; hang up ends a call.",
  "M_EN9_PL_TRAITS_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_PL_TRAITS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_PL_TRAITS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_PL_TRAITS_ONE_CLUE": "Use all the clues: words, actions, others' views.",
+ "M9_DW_QUOTES": "No quotation marks.",
+ "M9_DW_NO_REVISION": "Revise and edit.",
+ "M9_DW_DIRECTIONS": "Brackets.",
+ "M9_DW_NO_PURPOSE": "Plan what changes by the end.",
  "M_EN9_RS_IMAGES_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_IMAGES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_IMAGES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RS_IMAGES_ADD": "Use only the words.",
  "M_EN9_SC_ALTHOUGH": "Although shows contrast.",
  "M_EN9_SC_BECAUSE": "Because shows a reason.",
  "M_EN9_SC_UNLESS": "Unless means if not.",
+ "M9_SC_FRAGMENT": "Join it to a main clause: We waited because the ship was late.",
+ "M9_ID_LITERAL": "Use the context.",
+ "M9_ID_OPPOSITE": "Check the context.",
+ "M9_ID_WRONG_FIT": "Match the meaning.",
+ "M9_ID_CHANGED": "Idioms are fixed.",
+ "M9_QT_SAME_SIGN": "Positive sentence, negative tag.",
+ "M9_QT_ISNT_IT": "Copy the helper and use a pronoun.",
+ "M9_QT_LETS": "Let's takes shall we.",
+ "M9_QT_TUNE": "Fall when you expect agreement.",
  "M_EN9_RS_SUMMARY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_SUMMARY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_SUMMARY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_RS_SUMMARY_OWN_WORDS": "Rewrite the points in your own words.",
  "M_EN9_DI_QUOTE": "Indirect speech has no quotation marks.",
  "M_EN9_DI_TENSE": "Am becomes was.",
  "M_EN9_DI_PRONOUN": "I becomes he.",
+ "M9_DI_TIME_WORDS": "Change time words too: tomorrow becomes the next day.",
+ "M9_DC_FEW_SENSES": "Plan a line for each sense.",
+ "M9_DC_NARRATES": "Describe what it is like.",
+ "M9_DC_LENGTH": "Add senses and details.",
+ "M9_DC_SPELLING": "Edit before the final copy.",
+ "M9_NR_OPINION": "Report facts in a neutral tone.",
+ "M9_NR_TIME": "Practise with a timer.",
+ "M9_NR_NO_HEADLINE": "Lead with the main news.",
+ "M9_NR_MISSING_WS": "Check who, what, where, when.",
  "M_EN9_RS_FLUENCY_DETAIL": "Check the answer against the text: it must cover what the question asks, not one small detail.",
  "M_EN9_RS_FLUENCY_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
  "M_EN9_RS_FLUENCY_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M9_SK_READ_ALL": "Scan for the key word.",
+ "M9_SK_GIST_DETAIL": "Gist is the whole topic.",
+ "M9_SK_STOP_UNKNOWN": "Previewing skips unknown words.",
+ "M9_SK_WRONG_KEYWORD": "Choose the word the answer will be near.",
+ "M9_RS_FLUENCY_TITLE": "Start with the title.",
  "M_EN9_EI_MARK": "An exclamation ends with an exclamation mark.",
  "M_EN9_EI_COMMAND": "An imperative gives a command.",
- "M_EN9_EI_STOP": "A command ends with a full stop or exclamation mark."
+ "M_EN9_EI_STOP": "A command ends with a full stop or exclamation mark.",
+ "M9_EI_POLITE_IMPERATIVE": "A calm request ends with a full stop.",
+ "M9_EM_NO_SUBJECT": "Always write a clear subject.",
+ "M9_EM_TEXTSPEAK": "Write in full for formal emails.",
+ "M9_EM_LETTER_ADDRESSES": "The email address does that job.",
+ "M9_EM_FORGOT_ATTACHMENT": "Attach, then send."
 };

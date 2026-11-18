@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN",
+ "title": "Relative Pronouns: Interrogative Pronouns (Theme 7: Natural resources: marine life)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS",
+   "assessed_by": "questions",
+   "key_step": "The child uses who, whom, whose and which by person, object, owner or thing.",
+   "floor": {
+    "prerequisite": "Uses Grade 6 relatives.",
+    "question": "The car ___ broke down.",
+    "answer": "which"
+   },
+   "steps": [
+    "Person: who.",
+    "Object or after preposition: whom.",
+    "Owner: whose.",
+    "Thing: which."
+   ],
+   "contexts": [
+    "marine life"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The man to ___ I spoke."
+    },
+    {
+     "beat": "point",
+     "do": "Point at to.",
+     "say": "After a preposition?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills whose."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M_EN9_RP_WHICH",
+     "listen_for": [
+      "who"
+     ],
+     "ask": "Thing?",
+     "repair": "Which."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M_EN9_RP_WHOSE",
+     "listen_for": [
+      "who"
+     ],
+     "ask": "Owner?",
+     "repair": "Whose."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M_EN9_RP_WHO",
+     "listen_for": [
+      "which"
+     ],
+     "ask": "Person?",
+     "repair": "Who."
+    },
+    {
+     "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN.RELATIVE_PRONOUNS.M9_RP_WHOM",
+     "listen_for": [
+      "who"
+     ],
+     "ask": "After to?",
+     "repair": "Whom."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The fisherman ___ boat sank.",
+     "answer": "whose",
+     "shows": "owner"
+    },
+    {
+     "question": "The man to ___ I spoke.",
+     "answer": "whom",
+     "shows": "whom"
+    }
+   ]
+  }
+ ]
+}
