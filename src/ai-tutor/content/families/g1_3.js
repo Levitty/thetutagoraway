@@ -185,81 +185,81 @@ export const FAMILIES = [
       steps: [`Think about each shape: a circle has no corners, a triangle has 3 sides, a square has 4 equal sides.`, `The answer is the ${q.r}.`] }) }),
 
   // ================================================================ GRADE 2
-  fam({ id: 'g2.add.make-100', skill: 'G2_ADD', outcome: 'G2.ADD.0', rung: 2, form: 'word',
+  fam({ id: 'g2.add.make-100', skill: 'G2_ADD', outcome: 'MATH.G2.NUMBER.ADDITION.d', cskill: 'MATH.G2.NUMBER.ADDITION.ADD_MISSING_100', rung: 2, form: 'word',
     draw: () => { const a = pick([35, 40, 45, 55, 60, 65, 70, 75, 85, 90, 95]); return { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `${p.name} has ${sh(a)}. ${p.She} needs ${sh(100)} for a book. How much more does ${p.she} need?`,
       answer: 100 - a,
-      wrong: [[110 - a, 'Count up from the tens first, then the ones. One ten too many was counted.'], [90 - a, 'Count up from the tens first, then the ones. One ten too few was counted.'], [a, 'That is the money already saved. Ask how much is missing.']],
+      wrong: [[110 - a, 'Count up from the tens first, then the ones. One ten too many was counted.', 'M_AMISS_COUNT_UP_TENS_SLIP'], [90 - a, 'Count up from the tens first, then the ones. One ten too few was counted.', 'M_AMISS_COUNT_UP_TENS_SLIP'], [a, 'That is the money already saved. Ask how much is missing.', 'M_AMISS_GIVES_KNOWN']],
       hints: ['Count up from the money to the next ten, then to 100.', 'Add the two jumps together.'],
       steps: [`Count on from ${a} to 100.`, `${a} + ${100 - a} = 100, so ${sh(100 - a)} more.`] }),
     check: ({ a }, ans) => a + ans === 100 }),
 
-  fam({ id: 'g2.sub.how-many-fewer', skill: 'G2_SUB', outcome: 'G2.SUB.0', rung: 2, form: 'word',
+  fam({ id: 'g2.sub.how-many-fewer', skill: 'G2_SUB', outcome: 'MATH.G2.NUMBER.SUBTRACTION.b', cskill: 'MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D', rung: 2, form: 'word',
     draw: () => { const a = randInt(45, 99), b = randInt(15, a - 12); return a % 10 < b % 10 && distinct(a - b, a + b, a - b + 10, a - b - 10) ? { a, b } : null; },
     make: ({ a, b }) => ({
       question: `One shop has ${a} mangoes. Another shop has ${b} mangoes. How many fewer mangoes does the second shop have?`,
       answer: a - b,
-      wrong: [[a - b + 10, 'Take care when you take the ones from the ones. Did you take one ten too few?'], [a - b - 10, 'Take care when you borrow a ten. Did you take one ten too many?'], [a + b, 'Fewer means the gap between the two. Take away, do not add.']],
+      wrong: [[a - b + 10, 'Take care when you take the ones from the ones. Did you take one ten too few?', 'M_SUB2_SMALLER_FROM_LARGER'], [a - b - 10, 'Take care when you borrow a ten. Did you take one ten too many?', 'M_SUB2_BORROWS_TWICE'], [a + b, 'Fewer means the gap between the two. Take away, do not add.', 'M_SUB2_ADDS']],
       hints: ['Fewer means find the gap between the two numbers.', 'Take the smaller number from the bigger one.'],
       steps: [`The shops have ${a} and ${b} mangoes.`, `${a} − ${b} = ${a - b} fewer.`] }),
     check: ({ a, b }, ans) => b + ans === a }),
 
-  fam({ id: 'g2.counting.skip-gap', skill: 'G2_COUNTING', outcome: 'G2.WHOLE.0', rung: 1, form: 'direct',
+  fam({ id: 'g2.counting.skip-gap', skill: 'G2_COUNTING', outcome: 'MATH.G2.NUMBER.WHOLE_NUMBERS.f', cskill: 'MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100', rung: 1, form: 'direct',
     draw: () => { const s = pick([5, 10]), back = Math.random() < 0.5, d = back ? -s : s; const a = back ? randInt(5, 9) * s + (s === 5 ? 0 : 0) : randInt(1, 6) * s; return a + 4 * d >= 0 && a + 4 * d <= 100 && a <= 100 ? { s, d, a } : null; },
     make: ({ s, d, a }) => ({ story: false,
       question: `Count ${d < 0 ? 'back' : 'on'} in ${s}s: ${a}, ${a + d}, __, ${a + 3 * d}, ${a + 4 * d}. What is the missing number?`,
       answer: a + 2 * d,
-      wrong: [[a + 2 * d + 1, `Each jump is ${s}, not 1.`], [a + 2 * d - 1, `Each jump is ${s}, not 1.`], [a + 3 * d, 'That number is already in the pattern, after the gap.']],
+      wrong: [[a + 2 * d + 1, `Each jump is ${s}, not 1.`, 'M_PAT2_STEP_ONE'], [a + 2 * d - 1, `Each jump is ${s}, not 1.`, 'M_PAT2_STEP_ONE'], [a + 3 * d, 'That number is already in the pattern, after the gap.', 'M_PAT2_COPIES_NEXT']],
       hints: ['Find the jump from one number to the next.', `Do the numbers go ${d < 0 ? 'down' : 'up'}?`],
       steps: [`The numbers go ${d < 0 ? 'down' : 'up'} by ${s} each time.`, `${a + d} ${d < 0 ? '−' : '+'} ${s} = ${a + 2 * d}.`] }),
     check: ({ s, d, a }, ans) => Math.abs(ans - (a + d)) === s && Math.abs(a + 3 * d - ans) === s }),
 
-  fam({ id: 'g2.place.tens-and-ones', skill: 'G2_PLACE_VALUE', outcome: 'G2.WHOLE.0', rung: 1, form: 'direct',
+  fam({ id: 'g2.place.tens-and-ones', skill: 'G2_PLACE_VALUE', outcome: 'MATH.G2.NUMBER.WHOLE_NUMBERS.d', cskill: 'MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS', rung: 1, form: 'direct',
     draw: () => { const t = randInt(2, 9), o = randInt(1, 9); return t !== o ? { t, o } : null; },
     make: ({ t, o }) => ({ story: false, question: `What number is ${t} tens and ${o} ones?`,
       answer: 10 * t + o,
-      wrong: [[10 * o + t, 'The tens digit goes first. Check which digit is in the tens place.'], [t + o, 'That adds the digits. Each ten is worth 10.'], [100 * t + o, 'A ten is worth 10, not 100.']],
+      wrong: [[10 * o + t, 'The tens digit goes first. Check which digit is in the tens place.', 'M_PV2_REVERSED'], [t + o, 'That adds the digits. Each ten is worth 10.', 'M_PV2_ADDS_DIGITS'], [100 * t + o, 'A ten is worth 10, not 100.', 'M_PV2_TEN_AS_HUNDRED']],
       hints: ['Each ten is worth 10. Count the tens first.', 'Then add the ones.'],
       steps: [`${t} tens is ${10 * t}.`, `${10 * t} + ${o} = ${10 * t + o}.`] }),
     check: ({ t, o }, ans) => Math.floor(ans / 10) === t && ans % 10 === o }),
 
-  fam({ id: 'g2.mul.rows', skill: 'G2_MULTIPLY_INTRO', outcome: 'G2.MUL.0', rung: 1, form: 'word',
+  fam({ id: 'g2.mul.rows', skill: 'G2_MULTIPLY_INTRO', outcome: 'MATH.G2.NUMBER.MULTIPLICATION.c', cskill: 'MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5', rung: 1, form: 'word',
     draw: () => { const r = randInt(2, 5), c = pick([2, 3, 5, 10]); return distinct(r * c, r + c, r * c - c, r * c + c) ? { r, c } : null; },
     make: ({ r, c }) => ({
       question: `A farmer plants ${r} rows of maize. Each row has ${c} plants. How many plants are there?`,
       answer: r * c,
-      wrong: [[r * c + c, `Count the rows again. There are only ${r} rows.`], [r * c - c, `Count the rows again. There are ${r} rows, not one less.`], [r + c, 'Do not add the two numbers. Add the plants row by row.']],
+      wrong: [[r * c + c, `Count the rows again. There are only ${r} rows.`, 'M_MUL2_ONE_GROUP_EXTRA'], [r * c - c, `Count the rows again. There are ${r} rows, not one less.`, 'M_MUL2_ONE_GROUP_SHORT'], [r + c, 'Do not add the two numbers. Add the plants row by row.', 'M_MUL2_ADDS_NUMBERS']],
       hints: ['Each row has the same number of plants.', 'Add the row amounts: the same number again and again.'],
       steps: [`${r} rows with ${c} plants each.`, `${Array(r).fill(c).join(' + ')} = ${r * c}.`] }),
     check: ({ r, c }, ans) => ans / c === r }),
 
-  fam({ id: 'g2.mul.legs', skill: 'G2_MULTIPLY_INTRO', outcome: 'G2.MUL.0', rung: 1, form: 'word',
+  fam({ id: 'g2.mul.legs', skill: 'G2_MULTIPLY_INTRO', outcome: 'MATH.G2.NUMBER.MULTIPLICATION.c', cskill: 'MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5', rung: 1, form: 'word',
     draw: () => { const an = pick([['hens', 2], ['goats', 4], ['cows', 4], ['ducks', 2]]); const n = randInt(3, 6); return distinct(n * an[1], n + an[1], n, n * an[1] + an[1]) ? { an, n } : null; },
     make: ({ an: [name, legs], n }) => ({
       question: `Each of the ${n} ${name} on the farm has ${legs} legs. How many legs are there altogether?`,
       answer: n * legs,
-      wrong: [[n + legs, 'Do not add the two numbers. Count the legs animal by animal.'], [n, 'That is the number of animals. Count their legs.'], [n * legs + legs, `Count the animals again. There are only ${n}.`]],
+      wrong: [[n + legs, 'Do not add the two numbers. Count the legs animal by animal.', 'M_MUL2_ADDS_NUMBERS'], [n, 'That is the number of animals. Count their legs.', 'M_MUL2_COUNTS_GROUPS'], [n * legs + legs, `Count the animals again. There are only ${n}.`, 'M_MUL2_ONE_GROUP_EXTRA']],
       hints: ['Every animal has the same number of legs.', 'Add the legs animal by animal.'],
       steps: [`${n} animals with ${legs} legs each.`, `${Array(n).fill(legs).join(' + ')} = ${n * legs}.`] }),
     check: ({ an, n }, ans) => ans / n === an[1] }),
 
-  fam({ id: 'g2.div.benches', skill: 'G2_DIVISION_INTRO', outcome: 'G2.DIV.0', rung: 1, form: 'word',
+  fam({ id: 'g2.div.benches', skill: 'G2_DIVISION_INTRO', outcome: 'MATH.G2.NUMBER.DIVISION.b', cskill: 'MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3', rung: 1, form: 'word',
     draw: () => { const per = pick([2, 3, 4, 5]), k = randInt(3, 8); const tot = per * k; return distinct(k, tot - per, per, k + 1) ? { per, k, tot } : null; },
     make: ({ per, k, tot }) => ({
       question: `${tot} learners sit ${per} to a bench. How many benches do they need?`,
       answer: k,
-      wrong: [[tot - per, `Take away ${per} again and again. Count how many times.`], [per, 'That is how many sit on one bench. Count how many benches.'], [k + 1, 'Count in groups. Do not count one extra bench.']],
+      wrong: [[tot - per, `Take away ${per} again and again. Count how many times.`, 'M_DIV2_SUBTRACTS_ONCE'], [per, 'That is how many sit on one bench. Count how many benches.', 'M_DIV2_GIVES_GROUP_SIZE'], [k + 1, 'Count in groups. Do not count one extra bench.', 'M_DIV2_ONE_EXTRA']],
       hints: [`Put the learners in groups of ${per}.`, 'Count the groups.'],
       steps: [`Each bench takes ${per} learners.`, `${per} × ${k} = ${tot}, so ${k} benches.`] }),
     check: ({ per, tot }, ans) => ans * per === tot }),
 
-  fam({ id: 'g2.frac.half-of', skill: 'G2_FRACTIONS', outcome: 'G2.FRAC.0', rung: 1, form: 'word',
+  fam({ id: 'g2.frac.half-of', skill: 'G2_FRACTIONS', outcome: 'MATH.G2.NUMBER.FRACTIONS.c', cskill: 'MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS', rung: 1, form: 'word',
     draw: () => { const n = pick([8, 10, 12, 14, 16, 18, 20]); return distinct(n / 2, n, n - 2, n / 2 + 1) ? { n, a: person(), b: person() } : null; },
     make: ({ n, a, b }) => ({
       question: `${a.name} has ${n} mangoes. ${a.She} gives half of them to ${b.name}. How many mangoes does ${b.name} get?`,
       answer: n / 2,
-      wrong: [[n, 'Half is not all of them. Share into two equal groups.'], [n - 2, 'Half means two equal groups. Share them one by one between two.'], [n / 2 + 1, 'Check the two groups are equal. One group has one too many.']],
+      wrong: [[n, 'Half is not all of them. Share into two equal groups.', 'M_FRUSE_HALF_IS_ALL'], [n - 2, 'Half means two equal groups. Share them one by one between two.', 'M_FRUSE_TAKES_TWO'], [n / 2 + 1, 'Check the two groups are equal. One group has one too many.', 'M_FRUSE_UNEQUAL_HALVES']],
       hints: ['Half means two equal groups.', 'Share the mangoes one by one into two groups.'],
       steps: [`Half means two equal groups of the ${n} mangoes.`, `${n} ÷ 2 = ${n / 2}.`] }),
     check: ({ n }, ans) => ans * 2 === n }),
@@ -271,12 +271,12 @@ export const FAMILIES = [
       hints: ['Think how long it is. Is it as small as your finger, or as big as a room?', 'Small things use centimetres. Bigger things use metres.'],
       steps: [`${it[0][0].toUpperCase() + it[0].slice(1)} is ${it[1] === 'metres' ? 'big, so we count in metres' : 'small, so we count in centimetres'}.`, `The best unit is ${it[1]}.`] }) }),
 
-  fam({ id: 'g2.cap.buckets-fill', skill: 'G2_CAPACITY', outcome: 'G2.CAP.0', rung: 1, form: 'word',
+  fam({ id: 'g2.cap.buckets-fill', skill: 'G2_CAPACITY', outcome: 'MATH.G2.MEASUR.CAPACITY.c', cskill: 'MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES', rung: 1, form: 'word',
     draw: () => { const j = pick([2, 5, 10]), k = randInt(3, 6); return { j, k, tot: j * k }; },
     make: ({ j, k, tot }) => ({
       question: `A bucket holds ${j} litres. A drum holds ${tot} litres. How many full buckets fill the drum?`,
       answer: k,
-      wrong: [[tot - j, `Count how many buckets of ${j} litres fit. Do not take away once.`], [j, 'That is the size of one bucket. Count how many buckets.'], [k + 1, 'Count the buckets again. One bucket too many.']],
+      wrong: [[tot - j, `Count how many buckets of ${j} litres fit. Do not take away once.`, 'M_LIT2_SUBTRACTS_ONCE'], [j, 'That is the size of one bucket. Count how many buckets.', 'M_LIT2_GIVES_CONTAINER_SIZE'], [k + 1, 'Count the buckets again. One bucket too many.', 'SLIP']],
       hints: [`Each bucket pours ${j} litres.`, 'Count in jumps until you reach the drum.'],
       steps: [`Count in ${j}s up to ${tot}.`, `${j} × ${k} = ${tot}, so ${k} buckets.`] }),
     check: ({ j, tot }, ans) => ans * j === tot }),
@@ -291,20 +291,20 @@ export const FAMILIES = [
       steps: [`One week is 7 days.`, `${Array(w).fill(7).join(' + ')} = ${7 * w} days.`] }),
     check: ({ w }, ans) => ans / 7 === w }),
 
-  fam({ id: 'g2.money.two-things', skill: 'G2_MONEY', outcome: 'G2.MONEY.0', rung: 1, form: 'word',
+  fam({ id: 'g2.money.two-things', skill: 'G2_MONEY', outcome: 'MATH.G2.MEASUR.MONEY.d', cskill: 'MATH.G2.MEASUR.MONEY.ADD_MONEY_100', rung: 1, form: 'word',
     draw: () => { const items = shuffle(['pencil', 'pen', 'rubber', 'ruler', 'exercise book', 'chapati', 'mango']).slice(0, 2); const pa = price(items[0]), pb = price(items[1]); const s = pa + pb; return s <= 100 && distinct(s, Math.abs(pa - pb), s + 10, s - 10, pa, pb) ? { items, pa, pb } : null; },
     make: ({ items, pa, pb }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? 'an ' : 'a ') + n;
       const cap = (s) => s[0].toUpperCase() + s.slice(1);
       return { question: `${cap(art(items[0]))} costs ${sh(pa)}. ${cap(art(items[1]))} costs ${sh(pb)}. How much do they cost together?`,
         answer: pa + pb,
-        wrong: [[Math.abs(pa - pb), 'Together means put the prices together. Add, do not take away.'], [pa + pb + 10, 'Check the tens when you add the ones. One ten too many was carried.'], [pa + pb - 10, 'Check the ones when you add them. A ten was left out.']],
+        wrong: [[Math.abs(pa - pb), 'Together means put the prices together. Add, do not take away.', 'M_MON2_SUBTRACTS'], [pa + pb + 10, 'Check the tens when you add the ones. One ten too many was carried.', 'M_MON2_CARRY_SLIP'], [pa + pb - 10, 'Check the ones when you add them. A ten was left out.', 'M_MON2_CARRY_SLIP']],
         hints: ['Together means add the two prices.', 'Add the tens, then add the ones.'],
         steps: [`Add the two prices: ${pa} + ${pb}.`, `${pa} + ${pb} = ${pa + pb}, so ${sh(pa + pb)}.`] };
     },
     check: ({ pa, pb }, ans) => ans - pb === pa }),
 
-  fam({ id: 'g2.shapes.tile-pattern', skill: 'G2_SHAPES', outcome: 'G2.SHAPES.0', rung: 2, form: 'word',
+  fam({ id: 'g2.shapes.tile-pattern', skill: 'G2_SHAPES', outcome: 'MATH.G2.GEOMET.SHAPES.c', cskill: 'MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS', misMapped: false, reveals: ['M_SPAT_REPEAT_UNIT'], rung: 2, form: 'word',
     draw: () => {
       const sh3 = shuffle(['circle', 'square', 'triangle', 'rectangle']);
       const unit = pick([[0, 1, 2], [0, 0, 1], [0, 1, 1]]).map(i => sh3[i]);

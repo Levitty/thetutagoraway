@@ -1,0 +1,643 @@
+{
+ "sub_strand": "MATH.G2.MEASUR.TIME",
+ "title": "Time",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to g are KICD's words; h is attitudinal. Months and special occasions, days in each month, reading the calendar, measuring time with arbitrary units (a shadow), the clock hands, and time by the hour on analogue and digital clocks.",
+ "skills": [
+  {
+   "skill": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS",
+   "key_step": "The child says the months in order and finds an occasion's month on the class calendar.",
+   "floor": {
+    "prerequisite": "Months of the year (Grade 1).",
+    "question": "Name the first month of the year.",
+    "answer": "January"
+   },
+   "representations": [
+    "a months song",
+    "a class calendar with occasions",
+    "month cards to order"
+   ],
+   "steps": [
+    "Sing the months.",
+    "Find the occasion on the calendar.",
+    "Name its month.",
+    "Say the month before and after."
+   ],
+   "contexts": [
+    "Christmas",
+    "Madaraka Day",
+    "school opening in January"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the months in order with a gap after January."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which month?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for February."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write February."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_ORDER",
+     "listen_for": [
+      "March"
+     ],
+     "ask": "What comes straight after January in the song?",
+     "repair": "February."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_OCCASION_WRONG_MONTH",
+     "listen_for": [
+      "January"
+     ],
+     "ask": "Is Christmas before or after the new year?",
+     "repair": "Before: December."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_DAY_MONTH_MIX",
+     "listen_for": [
+      "Monday"
+     ],
+     "ask": "Is Monday a day or a month?",
+     "repair": "A day: May is a month."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_BEFORE_AFTER",
+     "listen_for": [
+      "July"
+     ],
+     "ask": "Which side is before?",
+     "repair": "Left: May."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which month comes after August?",
+     "answer": "September",
+     "shows": "order"
+    },
+    {
+     "question": "In which month is Jamhuri Day?",
+     "answer": "December",
+     "shows": "occasion"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS",
+   "key_step": "The child uses the knuckles: a knuckle month has 31 days, a gap month 30, February 28 or 29.",
+   "floor": {
+    "prerequisite": "Knows the months in order.",
+    "question": "Which month comes after March?",
+    "answer": "April"
+   },
+   "representations": [
+    "knuckles of two fists",
+    "a rhyme",
+    "a calendar"
+   ],
+   "steps": [
+    "Make two fists.",
+    "Name months on knuckles and gaps.",
+    "Knuckle 31, gap 30.",
+    "February 28 or 29."
+   ],
+   "contexts": [
+    "a birthday month",
+    "the school term",
+    "a calendar at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two fists with knuckles and gaps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first knuckle: January.",
+     "say": "How many days?"
+    },
+    {
+     "beat": "count",
+     "do": "Name the months along the knuckles with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for April on a gap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write April 30."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_ALL_30",
+     "listen_for": [
+      "30"
+     ],
+     "ask": "Is January on a knuckle?",
+     "repair": "Yes: 31."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_FEB_30",
+     "listen_for": [
+      "30"
+     ],
+     "ask": "Which month is shortest?",
+     "repair": "February: 28 or 29."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_KNUCKLE_SLIP",
+     "listen_for": [
+      "30"
+     ],
+     "ask": "Where does August go?",
+     "repair": "On a knuckle: 31."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_WEEKS_FOR_DAYS",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "What is the last date in April?",
+     "repair": "30."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many days in June?",
+     "answer": "30",
+     "shows": "gap month"
+    },
+    {
+     "question": "How many days in December?",
+     "answer": "31",
+     "shows": "knuckle month"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.TIME.READ_CALENDAR",
+   "key_step": "The child finds the date in the grid and reads the day name at the top of its column.",
+   "floor": {
+    "prerequisite": "Days of the week (Grade 1).",
+    "question": "What day comes after Wednesday?",
+    "answer": "Thursday"
+   },
+   "representations": [
+    "a calendar page",
+    "a drawn grid",
+    "date cards"
+   ],
+   "steps": [
+    "Find the month.",
+    "Find the date.",
+    "Go up the column to the day.",
+    "A week later: down one row."
+   ],
+   "contexts": [
+    "a school calendar",
+    "a church calendar",
+    "a birthday"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a calendar row with the 14th under Thu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 14th.",
+     "say": "Which day is above it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Thursday."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Thursday, 14th."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_ROW_COLUMN",
+     "listen_for": [
+      "Tuesday"
+     ],
+     "ask": "What is written at the top of that column?",
+     "repair": "Thursday."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_WEEK_LATER",
+     "listen_for": [
+      "4th"
+     ],
+     "ask": "How many days in a week?",
+     "repair": "7: the 10th."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_DATE_DAY_SWAP",
+     "listen_for": [
+      "Friday"
+     ],
+     "ask": "Is a date a number or a name?",
+     "repair": "A number: the 5th."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_WRONG_MONTH_PAGE",
+     "listen_for": [
+      "a day from February's page"
+     ],
+     "ask": "Which month is this page?",
+     "repair": "Find March first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The 3rd is a Monday. What date is the next Monday?",
+     "answer": "the 10th",
+     "shows": "a week later"
+    },
+    {
+     "question": "Write the date: Tuesday the 5th of May.",
+     "answer": "Tuesday, 5th May",
+     "shows": "writing a date"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+   "key_step": "The child uses a steady unit (claps) to compare how long things take, and the length of a shadow for the time of day.",
+   "floor": {
+    "prerequisite": "Relates days to activities.",
+    "question": "What do we do on Sunday?",
+    "answer": "go to church or rest"
+   },
+   "representations": [
+    "steady claps",
+    "a stick and its shadow",
+    "a table of counts"
+   ],
+   "steps": [
+    "Choose a steady unit.",
+    "Count while the activity happens.",
+    "More counts, longer.",
+    "Short shadow: midday."
+   ],
+   "contexts": [
+    "walking to the gate",
+    "a tree's shadow",
+    "filling a bucket"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a stick with shadows at 8, 12 and 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the shortest shadow.",
+     "say": "When was it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for midday."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: midday, shortest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_MORE_CLAPS_SHORTER",
+     "listen_for": [
+      "the tree"
+     ],
+     "ask": "Which needed more claps?",
+     "repair": "The gate: longer."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_SHADOW_NOON_LONG",
+     "listen_for": [
+      "in the morning"
+     ],
+     "ask": "When was the mark shortest?",
+     "repair": "Midday."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_UNEVEN_COUNT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Were the claps the same speed?",
+     "repair": "No: we cannot compare."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_SHADOW_POINTS_SUN",
+     "listen_for": [
+      "east"
+     ],
+     "ask": "Where is the sun and where is the shadow?",
+     "repair": "Opposite: west."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Task A took 15 claps, task B 9 claps. Which took longer?",
+     "answer": "A",
+     "shows": "counts"
+    },
+    {
+     "question": "When is a shadow longest: morning or midday?",
+     "answer": "morning",
+     "shows": "shadow"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+   "key_step": "The child says the short hand is the hour hand and the long hand is the minute hand.",
+   "floor": {
+    "prerequisite": "Tells longer from shorter.",
+    "question": "Which stick is longer?",
+    "answer": "the longer one"
+   },
+   "representations": [
+    "a real clock",
+    "a paper clock with hands",
+    "a picture"
+   ],
+   "steps": [
+    "Find the two hands.",
+    "Short: hour.",
+    "Long: minute.",
+    "The minute hand moves faster."
+   ],
+   "contexts": [
+    "the school clock",
+    "a wall clock at home",
+    "a church clock"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock with a long and a short hand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the short hand.",
+     "say": "Which is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the hour hand."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label: hour, minute."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_SWAP",
+     "listen_for": [
+      "the long one"
+     ],
+     "ask": "Which hand moves slowly?",
+     "repair": "The short one: the hour hand."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_FASTER",
+     "listen_for": [
+      "the hour hand"
+     ],
+     "ask": "Which hand moved more?",
+     "repair": "The minute hand."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_SECOND_HAND",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Which hand moves every second?",
+     "repair": "The thin second hand."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_NUMBERS_MINUTES",
+     "listen_for": [
+      "the minute hand"
+     ],
+     "ask": "Which hand shows the hour?",
+     "repair": "The short one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which hand is the minute hand?",
+     "answer": "the long one",
+     "shows": "naming"
+    },
+    {
+     "question": "Which hand moves faster?",
+     "answer": "the minute hand",
+     "shows": "speed"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.TIME.READ_HOUR",
+   "key_step": "The child checks the long hand is on 12, then reads the hour from the short hand.",
+   "floor": {
+    "prerequisite": "Knows the hands.",
+    "question": "Which is the hour hand?",
+    "answer": "the short one"
+   },
+   "representations": [
+    "a paper clock",
+    "a real clock",
+    "time cards"
+   ],
+   "steps": [
+    "Is the long hand on 12?",
+    "Then it is o'clock.",
+    "Read the short hand.",
+    "Say the hour o'clock."
+   ],
+   "contexts": [
+    "break time",
+    "home time",
+    "a church service"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock: long hand on 12, short on 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the short hand.",
+     "say": "Which number?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 4."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: 4 o'clock."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_READS_MINUTE_HAND",
+     "listen_for": [
+      "12 o'clock"
+     ],
+     "ask": "Where does the short hand point?",
+     "repair": "4: 4 o'clock."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_HOUR_LATER",
+     "listen_for": [
+      "6:01"
+     ],
+     "ask": "Where will the short hand be?",
+     "repair": "On 7: 7 o'clock."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_12_AS_0",
+     "listen_for": [
+      "0 o'clock"
+     ],
+     "ask": "Which number do both hands point to?",
+     "repair": "12."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_BETWEEN_NUMBERS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is the long hand on 12?",
+     "repair": "No: not o'clock."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Short hand on 9, long on 12. Time?",
+     "answer": "9 o'clock",
+     "shows": "reading"
+    },
+    {
+     "question": "It is 2 o'clock. One hour later?",
+     "answer": "3 o'clock",
+     "shows": "an hour later"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.TIME.WRITE_HOUR",
+   "key_step": "The child writes the hour from the short hand, as words (5 o'clock) and digital (5:00).",
+   "floor": {
+    "prerequisite": "Reads o'clock times.",
+    "question": "Short hand on 5, long on 12. Time?",
+    "answer": "5 o'clock"
+   },
+   "representations": [
+    "a paper clock",
+    "a digital clock",
+    "time cards"
+   ],
+   "steps": [
+    "Read the hour.",
+    "Write it with o'clock.",
+    "Digital: hour, colon, 00.",
+    "Draw hands: short to hour, long to 12."
+   ],
+   "contexts": [
+    "a timetable",
+    "a notice of a meeting",
+    "a bus time"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock: short hand on 3, long on 12."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the digital box.",
+     "say": "How do we write it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3:00."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3:00 and 3 o'clock."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_DIGITAL_ORDER",
+     "listen_for": [
+      "00:3"
+     ],
+     "ask": "What comes before the colon?",
+     "repair": "The hour: 3:00."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_HANDS_EQUAL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Which hand points to 5?",
+     "repair": "The short one."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_SWAP_HANDS_DRAWN",
+     "listen_for": [
+      "long hand on 8, short on 12"
+     ],
+     "ask": "Which hand points to 8?",
+     "repair": "The short hand."
+    },
+    {
+     "code": "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_WRITES_12",
+     "listen_for": [
+      "12 o'clock"
+     ],
+     "ask": "Where is the short hand?",
+     "repair": "9: 9 o'clock."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 7 o'clock as digital.",
+     "answer": "7:00",
+     "shows": "digital"
+    },
+    {
+     "question": "Draw 11 o'clock: where is the short hand?",
+     "answer": "on 11",
+     "shows": "drawing"
+    }
+   ]
+  }
+ ]
+}

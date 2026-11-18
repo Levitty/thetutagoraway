@@ -1,0 +1,2970 @@
+{
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_REVERSED_DIGITS": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100",
+  "error": "Reads or picks a number with its digits reversed, as 61 for 16.",
+  "example": {
+   "question": "Which card shows sixteen: 16 or 61?",
+   "wrong_answer": "61",
+   "correct_answer": "16"
+  },
+  "cause": "Hears 'six' first in sixteen and looks for the 6 first.",
+  "reveals": "The answer 61 as a wrong option, with a reason that names the idea.",
+  "help": "Sixteen is ten and six: the 1 for the ten comes first.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_TEEN_TY": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100",
+  "error": "Mixes teen and ty numbers, picking 40 for fourteen.",
+  "example": {
+   "question": "Point to fourteen: 14 or 40?",
+   "wrong_answer": "40",
+   "correct_answer": "14"
+  },
+  "cause": "The words sound alike.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Fourteen ends in -teen and has 1 ten; forty has 4 tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_100_AS_10": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100",
+  "error": "Reads 100 as ten or 'one zero zero'.",
+  "example": {
+   "question": "Read the number 100.",
+   "wrong_answer": "ten",
+   "correct_answer": "one hundred"
+  },
+  "cause": "Has not met three-digit numbers.",
+  "reveals": "The answer ten as a wrong option, with a reason that names the idea.",
+  "help": "Count ten bundles of ten: one hundred.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_CHART_ROW_SLIP": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100",
+  "error": "On a hundred chart, finds the number one row off.",
+  "example": {
+   "question": "On a hundred chart, which number is just below 34?",
+   "wrong_answer": "35",
+   "correct_answer": "44"
+  },
+  "cause": "Moves along the row instead of down.",
+  "reveals": "The answer 35 as a wrong option, with a reason that names the idea.",
+  "help": "Down a column adds ten.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_COUNTS_BUNDLES_AS_ONES": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+  "error": "Counts each bundle of ten as one.",
+  "example": {
+   "question": "3 bundles of 10 sticks and 4 loose sticks. How many sticks?",
+   "wrong_answer": "7",
+   "correct_answer": "34"
+  },
+  "cause": "Counts objects, not what they hold.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Open a bundle and count: it is ten.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_ONES_TENS_SWAP": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+  "error": "Writes the loose sticks as tens and the bundles as ones.",
+  "example": {
+   "question": "2 bundles of ten and 6 loose sticks. What number?",
+   "wrong_answer": "62",
+   "correct_answer": "26"
+  },
+  "cause": "Writes the numbers in the order seen.",
+  "reveals": "The answer 62 as a wrong option, with a reason that names the idea.",
+  "help": "Bundles are tens: write them first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_NOT_GROUPED": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+  "error": "Counts a big collection one by one and loses count instead of making tens.",
+  "example": {
+   "question": "Count 47 bottle tops.",
+   "wrong_answer": "45",
+   "correct_answer": "47"
+  },
+  "cause": "Counts in ones without grouping.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "Make heaps of ten, then count the heaps and the rest.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_EXTRA_ZERO": {
+  "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+  "error": "Writes 3 tens and 5 ones as 305.",
+  "example": {
+   "question": "3 bundles of ten and 5 loose sticks. Write the number.",
+   "wrong_answer": "305",
+   "correct_answer": "35"
+  },
+  "cause": "Writes 30 and 5 side by side.",
+  "reveals": "The answer 305 as a wrong option, with a reason that names the idea.",
+  "help": "Tens and ones make a 2-digit number.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_DECADE_SKIP": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+  "error": "After a number ending in 9, says the wrong ten, as 29, 20 or 29, 40.",
+  "example": {
+   "question": "Count on: 27, 28, 29, __",
+   "wrong_answer": "20",
+   "correct_answer": "30"
+  },
+  "cause": "Does not know which ten comes next.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "On a hundred chart, the next row starts the next ten.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_TEN_TEN": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+  "error": "Counts past a ten as 'twenty-nine, twenty-ten'.",
+  "example": {
+   "question": "What comes after 39?",
+   "wrong_answer": "thirty-ten",
+   "correct_answer": "forty"
+  },
+  "cause": "Keeps saying the tens word and adds ten.",
+  "reveals": "The answer thirty-ten as a wrong option, with a reason that names the idea.",
+  "help": "Ten ones make a new ten: forty.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_99_TO_1000": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+  "error": "Says 1000 or 910 after 99.",
+  "example": {
+   "question": "What comes after 99?",
+   "wrong_answer": "1000",
+   "correct_answer": "100"
+  },
+  "cause": "Adds a zero or writes 9 and 10.",
+  "reveals": "The answer 1000 as a wrong option, with a reason that names the idea.",
+  "help": "Ten tens make a hundred: 100.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_COUNTS_START": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+  "error": "When counting on, says the starting number as one.",
+  "example": {
+   "question": "Count on 3 from 46. Where do you stop?",
+   "wrong_answer": "48",
+   "correct_answer": "49"
+  },
+  "cause": "Counts the start number.",
+  "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+  "help": "Put a finger on 46 and say one on 47.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_DECADE_BACK": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50",
+  "error": "Counting back past a ten, says the wrong number, as 31, 30, 20.",
+  "example": {
+   "question": "Count back: 32, 31, 30, __",
+   "wrong_answer": "20",
+   "correct_answer": "29"
+  },
+  "cause": "Jumps a whole ten.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Count back on a number line one step at a time.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_GOES_FORWARD": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50",
+  "error": "Counts forward when asked to count back.",
+  "example": {
+   "question": "Count back from 45: 45, 44, __",
+   "wrong_answer": "45",
+   "correct_answer": "43"
+  },
+  "cause": "Treats counting as going up.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "Walk backwards on a number line.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_NUMBER_BEFORE_AFTER": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50",
+  "error": "Gives the number after when asked for the number before.",
+  "example": {
+   "question": "What number comes before 40?",
+   "wrong_answer": "41",
+   "correct_answer": "39"
+  },
+  "cause": "Mixes before and after.",
+  "reveals": "The answer 41 as a wrong option, with a reason that names the idea.",
+  "help": "Before means one less, to the left on the number line.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_TEENS_REVERSED": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50",
+  "error": "Counting back through the teens says 61, 51 for sixteen, fifteen.",
+  "example": {
+   "question": "Count back: 17, 16, 15. Write them.",
+   "wrong_answer": "71, 61, 51",
+   "correct_answer": "17, 16, 15"
+  },
+  "cause": "Writes the ones digit first.",
+  "reveals": "The answer 71, 61, 51 as a wrong option, with a reason that names the idea.",
+  "help": "Write the ten first for each teen.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_REVERSED_DIGITS": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100",
+  "error": "Writes the digits in the order heard, as 54 for forty-five.",
+  "example": {
+   "question": "Write forty-five.",
+   "wrong_answer": "54",
+   "correct_answer": "45"
+  },
+  "cause": "Is not sure which digit stands for the tens, so the order slips.",
+  "reveals": "The answer 54 as a wrong option, with a reason that names the idea.",
+  "help": "Forty means 4 tens: write the 4 first.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_JOINED": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100",
+  "error": "Writes the tens and ones side by side, as 405 for forty-five.",
+  "example": {
+   "question": "Write forty-five.",
+   "wrong_answer": "405",
+   "correct_answer": "45"
+  },
+  "cause": "Writes 40 then 5.",
+  "reveals": "The answer 405 as a wrong option, with a reason that names the idea.",
+  "help": "A number to 99 has only two digits.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_MIRROR_DIGIT": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100",
+  "error": "Writes a digit back to front (a mirrored 3 or 7).",
+  "example": {
+   "question": "Write 37.",
+   "wrong_answer": "a mirrored 3 or 7",
+   "correct_answer": "37"
+  },
+  "cause": "Has not fixed how the digits face.",
+  "reveals": "The answer a mirrored 3 or 7 as a wrong option, with a reason that names the idea.",
+  "help": "Trace the digit in sand starting at the top.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_TEEN_TY": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100",
+  "error": "Writes 70 for seventeen or 17 for seventy.",
+  "example": {
+   "question": "Write seventeen.",
+   "wrong_answer": "70",
+   "correct_answer": "17"
+  },
+  "cause": "Teen and ty sound alike.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Seventeen is 1 ten and 7; seventy is 7 tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_REVERSED": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+  "error": "Writes the ones digit first when building a number from tens and ones.",
+  "example": {
+   "question": "What number is 4 tens and 7 ones?",
+   "wrong_answer": "74",
+   "correct_answer": "47"
+  },
+  "cause": "Writes in the order the parts are said back to front.",
+  "reveals": "The answer 74 as a wrong option, with a reason that names the idea.",
+  "help": "Tens on the left, ones on the right.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_ADDS_DIGITS": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+  "error": "Adds the tens and ones as digits.",
+  "example": {
+   "question": "What number is 4 tens and 7 ones?",
+   "wrong_answer": "11",
+   "correct_answer": "47"
+  },
+  "cause": "Thinks 'and' means add the digits.",
+  "reveals": "The answer 11 as a wrong option, with a reason that names the idea.",
+  "help": "4 tens is 40, not 4.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_TEN_AS_HUNDRED": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+  "error": "Writes the tens as hundreds, as 407 for 4 tens and 7 ones.",
+  "example": {
+   "question": "What number is 4 tens and 7 ones?",
+   "wrong_answer": "407",
+   "correct_answer": "47"
+  },
+  "cause": "Thinks a ten needs two zeros.",
+  "reveals": "The answer 407 as a wrong option, with a reason that names the idea.",
+  "help": "A ten is worth 10: one zero.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_FACE_VALUE": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+  "error": "Says the tens digit is worth only itself.",
+  "example": {
+   "question": "What is the 7 in 74 worth?",
+   "wrong_answer": "7",
+   "correct_answer": "70"
+  },
+  "cause": "Sees the digit, not the place.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Put 74 in tens and ones tins.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_SPELLING_ELEVEN_TWELVE": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+  "error": "Spells eleven or twelve as they sound, as 'leven' or 'twelf'.",
+  "example": {
+   "question": "Write 12 in words.",
+   "wrong_answer": "twelf",
+   "correct_answer": "twelve"
+  },
+  "cause": "Writes by sound.",
+  "reveals": "The answer twelf as a wrong option, with a reason that names the idea.",
+  "help": "Learn the special words eleven and twelve as wholes.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_TEN_ONE": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+  "error": "Writes eleven as 'ten-one' or 'onety-one'.",
+  "example": {
+   "question": "Write 11 in words.",
+   "wrong_answer": "ten-one",
+   "correct_answer": "eleven"
+  },
+  "cause": "Builds the word from tens and ones.",
+  "reveals": "The answer ten-one as a wrong option, with a reason that names the idea.",
+  "help": "11 and 12 have their own names.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_FIFTEEN_FIVETEEN": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+  "error": "Writes fiveteen for fifteen or threeteen for thirteen.",
+  "example": {
+   "question": "Write 15 in words.",
+   "wrong_answer": "fiveteen",
+   "correct_answer": "fifteen"
+  },
+  "cause": "Adds -teen to the ones word.",
+  "reveals": "The answer fiveteen as a wrong option, with a reason that names the idea.",
+  "help": "Five changes to fif-, three to thir-.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_EIGHT_SPELLING": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+  "error": "Spells eight as ate or eigth.",
+  "example": {
+   "question": "Write 8 in words.",
+   "wrong_answer": "eigth",
+   "correct_answer": "eight"
+  },
+  "cause": "Spells by sound.",
+  "reveals": "The answer eigth as a wrong option, with a reason that names the idea.",
+  "help": "Write eight with the letters e-i-g-h-t.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_STEP_ONE": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
+  "error": "Fills the gap by adding one instead of the pattern's jump.",
+  "example": {
+   "question": "35, 40, __, 50",
+   "wrong_answer": "41",
+   "correct_answer": "45"
+  },
+  "cause": "Thinks a pattern goes up by one.",
+  "reveals": "The answer 41 as a wrong option, with a reason that names the idea.",
+  "help": "Find the jump between two numbers first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_COPIES_NEXT": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
+  "error": "Writes a number already in the pattern in the gap.",
+  "example": {
+   "question": "20, 30, __, 50",
+   "wrong_answer": "50",
+   "correct_answer": "40"
+  },
+  "cause": "Copies the next number.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "The gap is between its neighbours.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_DIRECTION": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
+  "error": "Continues a falling pattern upwards.",
+  "example": {
+   "question": "60, 50, 40, __",
+   "wrong_answer": "50",
+   "correct_answer": "30"
+  },
+  "cause": "Assumes patterns go up.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "Check: bigger or smaller each time?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_CROSS_100": {
+  "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
+  "error": "Goes past 100 wrongly, as 90, 95, 910.",
+  "example": {
+   "question": "85, 90, 95, __",
+   "wrong_answer": "910",
+   "correct_answer": "100"
+  },
+  "cause": "Writes 9 and 10.",
+  "reveals": "The answer 910 as a wrong option, with a reason that names the idea.",
+  "help": "Ten tens make 100.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_MISALIGNED": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D",
+  "error": "Writes the 1-digit number under the tens.",
+  "example": {
+   "question": "43 + 5 in a column",
+   "wrong_answer": "93",
+   "correct_answer": "48"
+  },
+  "cause": "Lines up from the left.",
+  "reveals": "The answer 93 as a wrong option, with a reason that names the idea.",
+  "help": "Ones under ones: line up from the right.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_FORGETS_CARRY": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D",
+  "error": "Writes the ones digit of the sum and forgets the ten.",
+  "example": {
+   "question": "47 + 8",
+   "wrong_answer": "45",
+   "correct_answer": "55"
+  },
+  "cause": "Does not record the new ten.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "Exchange ten ones for a bundle and put it with the tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_COUNTS_START": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D",
+  "error": "Counts on including the start number.",
+  "example": {
+   "question": "Count on 5 from 43.",
+   "wrong_answer": "47",
+   "correct_answer": "48"
+  },
+  "cause": "Says 43 as one.",
+  "reveals": "The answer 47 as a wrong option, with a reason that names the idea.",
+  "help": "Finger on 43, first count is 44.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_WRITES_15": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D",
+  "error": "Writes the whole 2-digit sum of the ones in the ones place.",
+  "example": {
+   "question": "47 + 8",
+   "wrong_answer": "415",
+   "correct_answer": "55"
+  },
+  "cause": "Does not know a column holds one digit.",
+  "reveals": "The answer 415 as a wrong option, with a reason that names the idea.",
+  "help": "One digit per column: carry the ten.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_FORGETS_CARRY": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+  "error": "Forgets to carry the ten.",
+  "example": {
+   "question": "38 + 45",
+   "wrong_answer": "73",
+   "correct_answer": "83"
+  },
+  "cause": "Regrouping slip.",
+  "reveals": "The answer 73 as a wrong option, with a reason that names the idea.",
+  "help": "Ten ones make a ten: carry it.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_ADDS_ALL_DIGITS": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+  "error": "Adds all four digits together.",
+  "example": {
+   "question": "34 + 25",
+   "wrong_answer": "14",
+   "correct_answer": "59"
+  },
+  "cause": "Treats the numbers as digits to total.",
+  "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+  "help": "Add tens with tens, ones with ones.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_SUBTRACTS": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+  "error": "Takes away when the story says altogether.",
+  "example": {
+   "question": "A class has 34 girls and 25 boys. How many altogether?",
+   "wrong_answer": "9",
+   "correct_answer": "59"
+  },
+  "cause": "Takes the smaller from the larger.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Altogether means add.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_CARRY_TWICE": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+  "error": "Carries a ten when none was made.",
+  "example": {
+   "question": "42 + 35",
+   "wrong_answer": "87",
+   "correct_answer": "77"
+  },
+  "cause": "Carries from habit.",
+  "reveals": "The answer 87 as a wrong option, with a reason that names the idea.",
+  "help": "Carry only when the ones make ten or more.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_ADDS_ZEROS": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_TENS",
+  "error": "Writes the sum of the tens followed by two zeros, as 30 + 50 = 800.",
+  "example": {
+   "question": "30 + 50",
+   "wrong_answer": "800",
+   "correct_answer": "80"
+  },
+  "cause": "Adds the digits and keeps both zeros.",
+  "reveals": "The answer 800 as a wrong option, with a reason that names the idea.",
+  "help": "3 bundles and 5 bundles of ten: 8 bundles.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_ONES_COUNT": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_TENS",
+  "error": "Adds the tens as ones, as 30 + 50 = 8.",
+  "example": {
+   "question": "30 + 50",
+   "wrong_answer": "8",
+   "correct_answer": "80"
+  },
+  "cause": "Drops the zeros.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Each is tens, so the answer is tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_JOINS": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_TENS",
+  "error": "Writes the numbers side by side, as 3050.",
+  "example": {
+   "question": "30 + 50",
+   "wrong_answer": "3050",
+   "correct_answer": "80"
+  },
+  "cause": "Thinks add means join.",
+  "reveals": "The answer 3050 as a wrong option, with a reason that names the idea.",
+  "help": "Count in tens: 30, 40, 50, 60, 70, 80.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_WRONG_TEN_COUNT": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_TENS",
+  "error": "Counts on in tens one step too many or too few.",
+  "example": {
+   "question": "40 + 30, counting on in tens from 40",
+   "wrong_answer": "80",
+   "correct_answer": "70"
+  },
+  "cause": "Counts 40 as a step.",
+  "reveals": "The answer 80 as a wrong option, with a reason that names the idea.",
+  "help": "Finger on 40: 50, 60, 70.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_COUNT_UP_TENS_SLIP": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100",
+  "error": "Counts up to 100 in tens and counts one ten too many or too few.",
+  "example": {
+   "question": "Juma has sh. 35. He needs sh. 100. How much more?",
+   "wrong_answer": "75",
+   "correct_answer": "65"
+  },
+  "cause": "Loses track of the tens counted.",
+  "reveals": "The answer 75 as a wrong option, with a reason that names the idea.",
+  "help": "Count up: 35 to 40 is 5, then 40 to 100 is 6 tens.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_GIVES_KNOWN": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100",
+  "error": "Gives the number already in the question.",
+  "example": {
+   "question": "35 + __ = 100",
+   "wrong_answer": "35",
+   "correct_answer": "65"
+  },
+  "cause": "Copies a number from the sentence.",
+  "reveals": "The answer 35 as a wrong option, with a reason that names the idea.",
+  "help": "The box is what must be added.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_ADDS_BOTH": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100",
+  "error": "Adds the two numbers shown.",
+  "example": {
+   "question": "40 + __ = 70",
+   "wrong_answer": "110",
+   "correct_answer": "30"
+  },
+  "cause": "Sees + and adds.",
+  "reveals": "The answer 110 as a wrong option, with a reason that names the idea.",
+  "help": "Count up from 40 to 70.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_PATTERN_ONE_STEP": {
+  "skill": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100",
+  "error": "Adds one in an adding pattern instead of the jump.",
+  "example": {
+   "question": "12, 17, 22, __",
+   "wrong_answer": "23",
+   "correct_answer": "27"
+  },
+  "cause": "Assumes the jump is one.",
+  "reveals": "The answer 23 as a wrong option, with a reason that names the idea.",
+  "help": "Find the jump first: 17 - 12.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D.M_S21_ADDS": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D",
+  "error": "Adds instead of taking away.",
+  "example": {
+   "question": "48 - 5",
+   "wrong_answer": "53",
+   "correct_answer": "43"
+  },
+  "cause": "Misreads the sign.",
+  "reveals": "The answer 53 as a wrong option, with a reason that names the idea.",
+  "help": "Circle the sign first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D.M_S21_TAKES_FROM_BOTH": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D",
+  "error": "Takes the 1-digit number from both the tens and the ones digits.",
+  "example": {
+   "question": "48 - 3",
+   "wrong_answer": "15",
+   "correct_answer": "45"
+  },
+  "cause": "Applies the take-away to every digit.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Only the ones lose 3: the tens stay.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D.M_S21_COUNTS_START": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D",
+  "error": "Counts back including the start number.",
+  "example": {
+   "question": "Count back 4 from 37.",
+   "wrong_answer": "34",
+   "correct_answer": "33"
+  },
+  "cause": "Says 37 as the first step.",
+  "reveals": "The answer 34 as a wrong option, with a reason that names the idea.",
+  "help": "Finger on 37, first step is 36.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D.M_S21_DROPS_TENS": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D",
+  "error": "Gives only the ones digit.",
+  "example": {
+   "question": "48 - 5",
+   "wrong_answer": "3",
+   "correct_answer": "43"
+  },
+  "cause": "Stops after the ones.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Bring down the tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D.M_SUB2_SMALLER_FROM_LARGER": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+  "error": "Takes the smaller ones digit from the larger, whichever is on top.",
+  "example": {
+   "question": "52 - 27",
+   "wrong_answer": "35",
+   "correct_answer": "25"
+  },
+  "cause": "Thinks you always take small from big in a column.",
+  "reveals": "The answer 35 as a wrong option, with a reason that names the idea.",
+  "help": "With bundles: 2 sticks cannot give 7, so open a bundle.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D.M_SUB2_BORROWS_TWICE": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+  "error": "Takes two tens away when borrowing one.",
+  "example": {
+   "question": "52 - 27",
+   "wrong_answer": "15",
+   "correct_answer": "25"
+  },
+  "cause": "Reduces the tens too much.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Cross out once and write one less.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D.M_SUB2_ADDS": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+  "error": "Adds when asked how many fewer.",
+  "example": {
+   "question": "One shop has 62 mangoes, another 35. How many fewer has the second?",
+   "wrong_answer": "97",
+   "correct_answer": "27"
+  },
+  "cause": "Sees two numbers and adds.",
+  "reveals": "The answer 97 as a wrong option, with a reason that names the idea.",
+  "help": "Fewer asks for the gap.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D.M_SUB2_BORROW_NOT_REDUCED": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+  "error": "Adds ten to the ones but keeps the tens digit the same.",
+  "example": {
+   "question": "43 - 18",
+   "wrong_answer": "35",
+   "correct_answer": "25"
+  },
+  "cause": "Borrows from nowhere.",
+  "reveals": "The answer 35 as a wrong option, with a reason that names the idea.",
+  "help": "The ten comes from the tens: write one less there.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS.M_ST_KEEPS_ZEROS": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS",
+  "error": "Writes 80 - 30 = 500 or 05.",
+  "example": {
+   "question": "80 - 30",
+   "wrong_answer": "500",
+   "correct_answer": "50"
+  },
+  "cause": "Mixes up where the zero goes.",
+  "reveals": "The answer 500 as a wrong option, with a reason that names the idea.",
+  "help": "8 bundles take 3 bundles: 5 bundles.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS.M_ST_ONES": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS",
+  "error": "Gives the tens as ones, as 80 - 30 = 5.",
+  "example": {
+   "question": "80 - 30",
+   "wrong_answer": "5",
+   "correct_answer": "50"
+  },
+  "cause": "Drops the zero.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "The answer is tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS.M_ST_ADDS": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS",
+  "error": "Adds the tens.",
+  "example": {
+   "question": "70 - 20",
+   "wrong_answer": "90",
+   "correct_answer": "50"
+  },
+  "cause": "Misreads the sign.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Circle the sign.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS.M_ST_COUNT_BACK_SLIP": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS",
+  "error": "Counts back in tens one step too many or too few.",
+  "example": {
+   "question": "90 - 40, counting back in tens from 90",
+   "wrong_answer": "60",
+   "correct_answer": "50"
+  },
+  "cause": "Counts 90 as a step.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Finger on 90: 80, 70, 60, 50.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100.M_SP2_GOES_UP": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100",
+  "error": "Continues a falling pattern upwards.",
+  "example": {
+   "question": "90, 80, 70, __",
+   "wrong_answer": "80",
+   "correct_answer": "60"
+  },
+  "cause": "Assumes patterns grow.",
+  "reveals": "The answer 80 as a wrong option, with a reason that names the idea.",
+  "help": "Check: up or down?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100.M_SP2_TAKES_ONE": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100",
+  "error": "Takes away one each time.",
+  "example": {
+   "question": "50, 47, 44, __",
+   "wrong_answer": "43",
+   "correct_answer": "41"
+  },
+  "cause": "Ignores the jump.",
+  "reveals": "The answer 43 as a wrong option, with a reason that names the idea.",
+  "help": "Find the jump between two neighbours.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100.M_SP2_MISSING_ADDS": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100",
+  "error": "Adds the numbers shown to find a missing number taken away.",
+  "example": {
+   "question": "60 - __ = 25",
+   "wrong_answer": "85",
+   "correct_answer": "35"
+  },
+  "cause": "Sees two numbers and adds.",
+  "reveals": "The answer 85 as a wrong option, with a reason that names the idea.",
+  "help": "Count up from 25 to 60.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100.M_SP2_CROSS_TEN": {
+  "skill": "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100",
+  "error": "Breaks the pattern when it crosses a ten, as 32, 30, 28 written as 32, 30, 20.",
+  "example": {
+   "question": "34, 32, 30, __",
+   "wrong_answer": "20",
+   "correct_answer": "28"
+  },
+  "cause": "Jumps to the ten below.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Count back 2 on a number line.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_ADDS_GROUPS_AND_SIZE": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+  "error": "Adds the number of groups and the group size.",
+  "example": {
+   "question": "3 plates with 2 mandazi each. How many mandazi?",
+   "wrong_answer": "5",
+   "correct_answer": "6"
+  },
+  "cause": "Sees two numbers and adds them.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Draw the plates and count all the mandazi.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_COUNTS_GROUPS": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+  "error": "Gives the number of groups as the answer.",
+  "example": {
+   "question": "2 groups of 3 counters. How many counters?",
+   "wrong_answer": "2",
+   "correct_answer": "6"
+  },
+  "cause": "Counts the groups.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Count the counters, not the groups.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_UNEQUAL": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+  "error": "Makes groups of different sizes.",
+  "example": {
+   "question": "Make 3 groups of 2 with counters.",
+   "wrong_answer": "2, 3, 1",
+   "correct_answer": "2, 2, 2"
+  },
+  "cause": "Does not keep the groups equal.",
+  "reveals": "The answer 2, 3, 1 as a wrong option, with a reason that names the idea.",
+  "help": "Every group must have the same number.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_ONE_GROUP_SHORT": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+  "error": "Writes one group too few in the addition.",
+  "example": {
+   "question": "3 groups of 3. Write the addition.",
+   "wrong_answer": "3 + 3 = 6",
+   "correct_answer": "3 + 3 + 3 = 9"
+  },
+  "cause": "Loses count of groups.",
+  "reveals": "The answer 3 + 3 = 6 as a wrong option, with a reason that names the idea.",
+  "help": "Tick each group as you write it.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_WRITES_PLUS": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN",
+  "error": "Keeps the + sign or writes 2 + 3 for 3 groups of 2.",
+  "example": {
+   "question": "Write 2 + 2 + 2 as a multiplication.",
+   "wrong_answer": "2 + 3",
+   "correct_answer": "3 x 2 = 6"
+  },
+  "cause": "Does not know the x sign yet.",
+  "reveals": "The answer 2 + 3 as a wrong option, with a reason that names the idea.",
+  "help": "x means 'groups of'.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_WRONG_COUNT": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN",
+  "error": "Uses the wrong number of groups in the sentence.",
+  "example": {
+   "question": "Write 5 + 5 + 5 + 5 as a multiplication.",
+   "wrong_answer": "3 x 5",
+   "correct_answer": "4 x 5 = 20"
+  },
+  "cause": "Counts the + signs instead of the fives.",
+  "reveals": "The answer 3 x 5 as a wrong option, with a reason that names the idea.",
+  "help": "Count the fives, not the signs.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_TOTAL_AS_FACTOR": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN",
+  "error": "Writes the total as one of the numbers, as 6 x 2.",
+  "example": {
+   "question": "Write 3 + 3 as a multiplication.",
+   "wrong_answer": "6 x 3",
+   "correct_answer": "2 x 3 = 6"
+  },
+  "cause": "Mixes the total and the groups.",
+  "reveals": "The answer 6 x 3 as a wrong option, with a reason that names the idea.",
+  "help": "The groups and the size go before =; the total after.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_X_AS_PLUS": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN",
+  "error": "Reads x as plus, so 3 x 2 = 5.",
+  "example": {
+   "question": "3 x 2",
+   "wrong_answer": "5",
+   "correct_answer": "6"
+  },
+  "cause": "The x looks like +.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "x means groups of: 3 groups of 2.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_ADDS_NUMBERS": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
+  "error": "Adds the two numbers instead of multiplying.",
+  "example": {
+   "question": "Each of 4 goats has 4 legs. How many legs?",
+   "wrong_answer": "8",
+   "correct_answer": "16"
+  },
+  "cause": "Uses addition.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Count the legs goat by goat: 4, 8, 12, 16.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_ONE_GROUP_EXTRA": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
+  "error": "Counts one group too many.",
+  "example": {
+   "question": "A farmer plants 3 rows with 5 plants in each. How many plants?",
+   "wrong_answer": "20",
+   "correct_answer": "15"
+  },
+  "cause": "Starts the skip count with an extra group.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Count the rows on fingers while skip counting.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_ONE_GROUP_SHORT": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
+  "error": "Counts one group too few.",
+  "example": {
+   "question": "4 x 3",
+   "wrong_answer": "9",
+   "correct_answer": "12"
+  },
+  "cause": "Stops a step early.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Fingers for each group: 3, 6, 9, 12.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_COUNTS_GROUPS": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
+  "error": "Gives the number of animals or rows as the answer.",
+  "example": {
+   "question": "5 hens have 2 legs each. How many legs?",
+   "wrong_answer": "5",
+   "correct_answer": "10"
+  },
+  "cause": "Counts the hens.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Count the legs, not the hens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_ADDS_TEN": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10",
+  "error": "Adds ten instead of multiplying by ten.",
+  "example": {
+   "question": "7 x 10",
+   "wrong_answer": "17",
+   "correct_answer": "70"
+  },
+  "cause": "Treats x 10 as + 10.",
+  "reveals": "The answer 17 as a wrong option, with a reason that names the idea.",
+  "help": "7 bundles of ten: count in tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_ZERO_FRONT": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10",
+  "error": "Writes 07 for 7 x 10.",
+  "example": {
+   "question": "7 x 10",
+   "wrong_answer": "07",
+   "correct_answer": "70"
+  },
+  "cause": "Puts the zero first.",
+  "reveals": "The answer 07 as a wrong option, with a reason that names the idea.",
+  "help": "Tens digit first, then 0 ones.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_HUNDRED": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10",
+  "error": "Writes 700 for 7 x 10.",
+  "example": {
+   "question": "7 x 10",
+   "wrong_answer": "700",
+   "correct_answer": "70"
+  },
+  "cause": "Adds two zeros.",
+  "reveals": "The answer 700 as a wrong option, with a reason that names the idea.",
+  "help": "Count 7 tens aloud.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_COUNT_SLIP": {
+  "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10",
+  "error": "Counts in tens one step too many.",
+  "example": {
+   "question": "How much is 4 ten-shilling coins?",
+   "wrong_answer": "sh. 50",
+   "correct_answer": "sh. 40"
+  },
+  "cause": "Starts the count at ten for no coin.",
+  "reveals": "The answer sh. 50 as a wrong option, with a reason that names the idea.",
+  "help": "Touch each coin: 10, 20, 30, 40.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_UNEQUAL": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2",
+  "error": "Shares so that one child gets more and calls it fair.",
+  "example": {
+   "question": "Share 10 sweets between 2 children: 6 and 4. Is it fair?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Thinks sharing means giving some to each.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Give one at a time to each child until none are left.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_GIVES_TOTAL": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2",
+  "error": "Gives the total as what each gets.",
+  "example": {
+   "question": "Share 12 mangoes between 2. How many each?",
+   "wrong_answer": "12",
+   "correct_answer": "6"
+  },
+  "cause": "Answers with the number in the story.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Act it out: one for you, one for me.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_TAKES_TWO": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2",
+  "error": "Takes away 2 instead of sharing between 2.",
+  "example": {
+   "question": "Share 14 pencils between 2. How many each?",
+   "wrong_answer": "12",
+   "correct_answer": "7"
+  },
+  "cause": "Sees 2 and subtracts.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Share one by one into 2 piles.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_COUNTS_ROUNDS_WRONG": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2",
+  "error": "Loses count of the rounds of giving.",
+  "example": {
+   "question": "Share 16 between 2. How many each?",
+   "wrong_answer": "9",
+   "correct_answer": "8"
+  },
+  "cause": "Counts unevenly while sharing.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Count both piles at the end.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_SUBTRACTS_ONCE": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
+  "error": "Takes one group away and gives what is left.",
+  "example": {
+   "question": "15 learners sit 3 to a bench. How many benches?",
+   "wrong_answer": "12",
+   "correct_answer": "5"
+  },
+  "cause": "Does one take-away and stops.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Keep taking 3 until none are left; count the benches.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_GIVES_GROUP_SIZE": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
+  "error": "Gives the size of a group instead of the number of groups.",
+  "example": {
+   "question": "18 learners sit 3 to a bench. How many benches?",
+   "wrong_answer": "3",
+   "correct_answer": "6"
+  },
+  "cause": "Repeats a number in the story.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Ask: how many in each, and how many groups?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_ONE_EXTRA": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
+  "error": "Counts one group too many.",
+  "example": {
+   "question": "21 in groups of 3. How many groups?",
+   "wrong_answer": "8",
+   "correct_answer": "7"
+  },
+  "cause": "Counts an empty group.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Ring each group and count the rings.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_SHARE_GROUP_CONFUSED": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
+  "error": "Shares into 3 groups when asked for groups of 3.",
+  "example": {
+   "question": "Put 12 counters in groups of 3. How many groups?",
+   "wrong_answer": "3",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes 'into 3 groups' and 'groups of 3'.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Groups of 3 means each group has 3.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_ORDER": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SIGN",
+  "error": "Writes the smaller number first, as 3 ÷ 12.",
+  "example": {
+   "question": "Write 12 shared into 3 equal groups as a division.",
+   "wrong_answer": "3 ÷ 12 = 4",
+   "correct_answer": "12 ÷ 3 = 4"
+  },
+  "cause": "Writes the numbers in any order.",
+  "reveals": "The answer 3 ÷ 12 = 4 as a wrong option, with a reason that names the idea.",
+  "help": "The number being shared comes first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_USES_MINUS": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SIGN",
+  "error": "Writes a subtraction for a sharing.",
+  "example": {
+   "question": "Write 10 shared by 2 equals 5 as a sentence.",
+   "wrong_answer": "10 - 2 = 5",
+   "correct_answer": "10 ÷ 2 = 5"
+  },
+  "cause": "Thinks sharing is taking away.",
+  "reveals": "The answer 10 - 2 = 5 as a wrong option, with a reason that names the idea.",
+  "help": "Use the ÷ sign for sharing.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_ANSWER_PLACE": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SIGN",
+  "error": "Puts the answer in the wrong place, as 5 ÷ 2 = 10.",
+  "example": {
+   "question": "Write: 10 shared by 2 gives 5.",
+   "wrong_answer": "5 ÷ 2 = 10",
+   "correct_answer": "10 ÷ 2 = 5"
+  },
+  "cause": "Does not know which number goes after =.",
+  "reveals": "The answer 5 ÷ 2 = 10 as a wrong option, with a reason that names the idea.",
+  "help": "The answer goes after the = sign.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_READS_AS_PLUS": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_SIGN",
+  "error": "Reads ÷ as plus or times.",
+  "example": {
+   "question": "What is 8 ÷ 2?",
+   "wrong_answer": "10",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes the signs.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "÷ means share by.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_GIVES_DIVISOR": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5",
+  "error": "Gives the divisor as the answer.",
+  "example": {
+   "question": "20 ÷ 4",
+   "wrong_answer": "4",
+   "correct_answer": "5"
+  },
+  "cause": "Repeats a number.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Make groups of 4 and count them.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_SKIP_SLIP": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5",
+  "error": "Counts in fives one step too many or too few.",
+  "example": {
+   "question": "25 ÷ 5",
+   "wrong_answer": "4",
+   "correct_answer": "5"
+  },
+  "cause": "Loses count while skip counting.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Fingers: 5, 10, 15, 20, 25.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_SUBTRACTS": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5",
+  "error": "Takes away the divisor once.",
+  "example": {
+   "question": "16 ÷ 4",
+   "wrong_answer": "12",
+   "correct_answer": "4"
+  },
+  "cause": "Sees one take-away.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Keep taking 4 until none are left.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_MULTIPLIES": {
+  "skill": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5",
+  "error": "Multiplies instead of dividing.",
+  "example": {
+   "question": "20 ÷ 5",
+   "wrong_answer": "100",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes the signs.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "Dividing shares out, so the answer is smaller.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_UNEQUAL": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+  "error": "Calls either of two unequal pieces a half.",
+  "example": {
+   "question": "A mandazi is broken into a big piece and a small piece. Is each a half?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Thinks half means one of two pieces.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Fold paper: halves match exactly.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_BIGGER_HALF": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+  "error": "Talks of 'the bigger half'.",
+  "example": {
+   "question": "Wanjiku says she has the bigger half. Can one half be bigger?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Uses 'half' for any part, as in everyday speech.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Two halves of the same thing are always the same size.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_WRITES_2_1": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+  "error": "Writes a half as 2/1 or 12.",
+  "example": {
+   "question": "Write a half.",
+   "wrong_answer": "2/1",
+   "correct_answer": "1/2"
+  },
+  "cause": "Does not know which number goes where.",
+  "reveals": "The answer 2/1 as a wrong option, with a reason that names the idea.",
+  "help": "1 part out of 2 equal parts: 1 on top, 2 below.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_WRONG_FOLD": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+  "error": "Folds a shape so the parts do not match and calls them halves.",
+  "example": {
+   "question": "A rectangle is folded corner to a middle point. Are the parts halves?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Folds without matching the edges.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Match the edges before you press the fold.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_FOUR_UNEQUAL": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE",
+  "error": "Calls any of four unequal parts a quarter.",
+  "example": {
+   "question": "A circle is cut into 4 pieces of different sizes. Is one piece a quarter?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Thinks a quarter is one of four pieces.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Fold in half, then in half again: the parts match.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_BIGGER_THAN_HALF": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE",
+  "error": "Thinks a quarter is bigger than a half because 4 is bigger than 2.",
+  "example": {
+   "question": "Which is bigger: a half or a quarter of the same orange?",
+   "wrong_answer": "a quarter",
+   "correct_answer": "a half"
+  },
+  "cause": "Compares the numbers 4 and 2.",
+  "reveals": "The answer a quarter as a wrong option, with a reason that names the idea.",
+  "help": "Cut two same oranges into 2 and 4.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_THREE_PARTS": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE",
+  "error": "Calls one of three equal parts a quarter.",
+  "example": {
+   "question": "A bar is cut into 3 equal parts. Is one part a quarter?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Thinks quarter means a small part.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "A quarter is one of 4 equal parts.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_TWO_MAKE_WHOLE": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE",
+  "error": "Says two quarters make a whole.",
+  "example": {
+   "question": "How many quarters make a whole?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes quarters with halves.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Fold paper into quarters and count the parts.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_HALF_IS_ALL": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS",
+  "error": "Gives the whole group as the half.",
+  "example": {
+   "question": "Akinyi has 12 mangoes and gives half to Baraka. How many does Baraka get?",
+   "wrong_answer": "12",
+   "correct_answer": "6"
+  },
+  "cause": "Does not share.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Share into 2 equal groups.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_TAKES_TWO": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS",
+  "error": "Takes away 2 for 'half'.",
+  "example": {
+   "question": "Half of 10 sweets?",
+   "wrong_answer": "8",
+   "correct_answer": "5"
+  },
+  "cause": "Links half with the number 2 and subtracts.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Share between 2 one by one.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_UNEQUAL_HALVES": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS",
+  "error": "Shares so that one half has one more.",
+  "example": {
+   "question": "Half of 14 bananas?",
+   "wrong_answer": "8",
+   "correct_answer": "7"
+  },
+  "cause": "Shares unevenly.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Check both groups are equal.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_QUARTER_AS_FOUR": {
+  "skill": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS",
+  "error": "Gives 4 as a quarter of any group.",
+  "example": {
+   "question": "A quarter of 8 sweets?",
+   "wrong_answer": "4",
+   "correct_answer": "2"
+  },
+  "cause": "Sees 4 and writes it.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Share 8 into 4 equal groups.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_GAPS": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+  "error": "Leaves gaps or overlaps between the sticks.",
+  "example": {
+   "question": "Sticks laid along a desk with gaps count 4. Is the desk 4 sticks long?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, longer"
+  },
+  "cause": "Does not place each stick at the end of the last.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Put each stick exactly where the last one ended.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_MIXED_UNITS": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+  "error": "Uses sticks of different lengths and counts them as the same.",
+  "example": {
+   "question": "A table is measured with 2 long sticks and 3 short sticks. Is it 5 sticks long?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the sticks are different"
+  },
+  "cause": "Does not see units must be equal.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Use sticks that are all the same length.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_LONGER_UNIT_MORE": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+  "error": "Thinks a longer stick gives a bigger count.",
+  "example": {
+   "question": "A bench is 6 short sticks long. With longer sticks, will the count be more or fewer?",
+   "wrong_answer": "more",
+   "correct_answer": "fewer"
+  },
+  "cause": "Thinks bigger unit means bigger number.",
+  "reveals": "The answer more as a wrong option, with a reason that names the idea.",
+  "help": "Measure the same bench with both sticks.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_NOT_FROM_END": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+  "error": "Starts measuring from the middle of the object.",
+  "example": {
+   "question": "Measuring starts a hand's width in from the end. Is the count right?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, too small"
+  },
+  "cause": "Does not line up the start.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Start at the very end.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_PENCIL_METRE": {
+  "skill": "MATH.G2.MEASUR.LENGTH.KNOW_METRE",
+  "error": "Thinks a short object is about a metre.",
+  "example": {
+   "question": "Is a pencil about 1 metre long?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Has no picture of a metre.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Hold a metre stick next to a pencil.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_UNIT_MIX": {
+  "skill": "MATH.G2.MEASUR.LENGTH.KNOW_METRE",
+  "error": "Uses m for things that are not lengths, such as 2 m of water.",
+  "example": {
+   "question": "Which is measured in metres: a road or water in a jug?",
+   "wrong_answer": "water in a jug",
+   "correct_answer": "a road"
+  },
+  "cause": "Uses m for any amount.",
+  "reveals": "The answer water in a jug as a wrong option, with a reason that names the idea.",
+  "help": "Metres are for how long or far.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_STEP_ANY": {
+  "skill": "MATH.G2.MEASUR.LENGTH.KNOW_METRE",
+  "error": "Thinks any step is a metre.",
+  "example": {
+   "question": "Is a small step about a metre?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, a big step is"
+  },
+  "cause": "Uses steps loosely.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Take a big step beside a metre stick.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_WRITES_MT": {
+  "skill": "MATH.G2.MEASUR.LENGTH.KNOW_METRE",
+  "error": "Writes the unit as mt or M.",
+  "example": {
+   "question": "Write 5 metres the short way.",
+   "wrong_answer": "5 mt",
+   "correct_answer": "5 m"
+  },
+  "cause": "Copies forms seen elsewhere.",
+  "reveals": "The answer 5 mt as a wrong option, with a reason that names the idea.",
+  "help": "Metre is written m, small.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_NO_UNIT": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES",
+  "error": "Writes the number without m.",
+  "example": {
+   "question": "The corridor is 9 metre sticks long. Write its length.",
+   "wrong_answer": "9",
+   "correct_answer": "9 m"
+  },
+  "cause": "Leaves out the unit.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Always write m.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_COUNTS_MARKS": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES",
+  "error": "Counts the chalk marks, including the first, so gets one too many.",
+  "example": {
+   "question": "Marks at the start and at the end of each metre: 5 marks along a wall. How long?",
+   "wrong_answer": "5 m",
+   "correct_answer": "4 m"
+  },
+  "cause": "Counts marks not metres.",
+  "reveals": "The answer 5 m as a wrong option, with a reason that names the idea.",
+  "help": "Count the spaces between marks.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_OVERLAP": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES",
+  "error": "Overlaps the metre stick each time, so counts too many.",
+  "example": {
+   "question": "A stick overlapped each time counts 6 along a wall that is 5 m. Why?",
+   "wrong_answer": "the wall is 6 m",
+   "correct_answer": "the overlaps added an extra count"
+  },
+  "cause": "Places the stick before the last end.",
+  "reveals": "The answer the wall is 6 m as a wrong option, with a reason that names the idea.",
+  "help": "Mark the end with chalk and start there.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_LONGER_FEWER": {
+  "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES",
+  "error": "Says a length of more metres is shorter.",
+  "example": {
+   "question": "Which is longer: a 7 m rope or a 4 m rope?",
+   "wrong_answer": "4 m",
+   "correct_answer": "7 m"
+  },
+  "cause": "Mixes more and longer.",
+  "reveals": "The answer 4 m as a wrong option, with a reason that names the idea.",
+  "help": "More metres means longer.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_UP_IS_HEAVY": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+  "error": "Thinks the side that goes up is heavier.",
+  "example": {
+   "question": "The stone's side goes down and the bottle tops' side goes up. Which is heavier?",
+   "wrong_answer": "the bottle tops",
+   "correct_answer": "the stone"
+  },
+  "cause": "Links up with more.",
+  "reveals": "The answer the bottle tops as a wrong option, with a reason that names the idea.",
+  "help": "Press each pan: the heavy side sinks.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_MIXED_UNITS": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+  "error": "Uses items of different masses and counts them as equal.",
+  "example": {
+   "question": "A book balances 3 stones of different sizes. Is it 3 stones heavy?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the stones are different"
+  },
+  "cause": "Does not see units must be the same.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Use items that are all the same.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_HEAVIER_UNIT_MORE": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+  "error": "Thinks a heavier unit gives a bigger count.",
+  "example": {
+   "question": "A bag balances 10 bottle tops. With heavier stones, more or fewer?",
+   "wrong_answer": "more",
+   "correct_answer": "fewer"
+  },
+  "cause": "Thinks bigger unit, bigger number.",
+  "reveals": "The answer more as a wrong option, with a reason that names the idea.",
+  "help": "Try both units.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_NOT_LEVEL": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+  "error": "Counts the units before the beam is level.",
+  "example": {
+   "question": "The beam still tips to the bag with 5 tops on. Is the bag 5 tops?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, more than 5"
+  },
+  "cause": "Stops adding too early.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Keep adding until level.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_BIG_IS_KG": {
+  "skill": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM",
+  "error": "Thinks a big light object weighs many kilograms.",
+  "example": {
+   "question": "Is a big empty box more than 1 kg?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Judges mass by size.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Hold it and a 1 kg packet.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_UNIT_MIX": {
+  "skill": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM",
+  "error": "Uses kilograms for things that are not mass, as 2 kg of milk to drink.",
+  "example": {
+   "question": "Which is bought by the kilogram: sugar or a pencil?",
+   "wrong_answer": "a pencil",
+   "correct_answer": "sugar"
+  },
+  "cause": "Uses kg for anything bought.",
+  "reveals": "The answer a pencil as a wrong option, with a reason that names the idea.",
+  "help": "Kilograms say how heavy.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_WRITES_KILO_WRONG": {
+  "skill": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM",
+  "error": "Writes the unit as Kg, kgs or KG.",
+  "example": {
+   "question": "Write 2 kilograms the short way.",
+   "wrong_answer": "2 kgs",
+   "correct_answer": "2 kg"
+  },
+  "cause": "Copies shop signs.",
+  "reveals": "The answer 2 kgs as a wrong option, with a reason that names the idea.",
+  "help": "Kilogram is written kg, small, no s.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_FEATHER_KG": {
+  "skill": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM",
+  "error": "Thinks a kilogram of feathers is lighter than a kilogram of stones.",
+  "example": {
+   "question": "Which is heavier: 1 kg of maize or 1 kg of cotton?",
+   "wrong_answer": "the maize",
+   "correct_answer": "they are the same"
+  },
+  "cause": "Thinks of the material, not the mass.",
+  "reveals": "The answer the maize as a wrong option, with a reason that names the idea.",
+  "help": "Both balance a 1 kg mass.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_COUNTS_ITEMS": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG",
+  "error": "Counts the items on the pan instead of the kilogram masses.",
+  "example": {
+   "question": "4 oranges balance two 1 kg masses. Their mass?",
+   "wrong_answer": "4 kg",
+   "correct_answer": "2 kg"
+  },
+  "cause": "Counts the wrong pan.",
+  "reveals": "The answer 4 kg as a wrong option, with a reason that names the idea.",
+  "help": "Count the 1 kg masses.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_NO_UNIT": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG",
+  "error": "Writes the mass without kg.",
+  "example": {
+   "question": "A bag balances three 1 kg masses. Write its mass.",
+   "wrong_answer": "3",
+   "correct_answer": "3 kg"
+  },
+  "cause": "Leaves out the unit.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Always write kg.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_HEAVIER_LESS": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG",
+  "error": "Says the item with more kilograms is lighter.",
+  "example": {
+   "question": "Which is heavier: a 5 kg bag or a 2 kg bag?",
+   "wrong_answer": "2 kg",
+   "correct_answer": "5 kg"
+  },
+  "cause": "Mixes the words.",
+  "reveals": "The answer 2 kg as a wrong option, with a reason that names the idea.",
+  "help": "More kilograms, heavier.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_READS_TIPPED": {
+  "skill": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG",
+  "error": "Reads the mass while the beam tips.",
+  "example": {
+   "question": "The masses' side sinks with 3 kg on. Is the bag 3 kg?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, less"
+  },
+  "cause": "Does not wait for level.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Read only when level.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_TALL_MORE": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+  "error": "Thinks the taller container holds more.",
+  "example": {
+   "question": "A tall bottle and a wide bowl both take 6 cups. Which holds more?",
+   "wrong_answer": "the tall bottle",
+   "correct_answer": "the same"
+  },
+  "cause": "Judges by height.",
+  "reveals": "The answer the tall bottle as a wrong option, with a reason that names the idea.",
+  "help": "Fill both with the same cup and count.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_PART_CUP": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+  "error": "Counts a cup that was not full.",
+  "example": {
+   "question": "A jug takes 5 cups, the last only half full. How many full cups?",
+   "wrong_answer": "5",
+   "correct_answer": "4 and a half"
+  },
+  "cause": "Counts every pour.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Fill to the top each time.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_BIGGER_CUP_MORE": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+  "error": "Thinks a bigger cup gives a bigger count.",
+  "example": {
+   "question": "A bucket takes 10 small cups. With a big mug, more or fewer?",
+   "wrong_answer": "more",
+   "correct_answer": "fewer"
+  },
+  "cause": "Bigger unit, bigger number.",
+  "reveals": "The answer more as a wrong option, with a reason that names the idea.",
+  "help": "Fill the bucket with both.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_MIXED_CUPS": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+  "error": "Uses cups of different sizes and adds the counts.",
+  "example": {
+   "question": "2 small cups and 3 big cups fill a jug. Does it hold 5 cups?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the cups are different"
+  },
+  "cause": "Does not keep one unit.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Use one cup only.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_CUP_LITRE": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE",
+  "error": "Thinks a cup holds about a litre.",
+  "example": {
+   "question": "Does a cup hold about 1 litre?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, less"
+  },
+  "cause": "Has no picture of a litre.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Pour cups into a 1-litre bottle.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_UNIT_MIX": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE",
+  "error": "Uses litres for things that are not liquid amounts, as 2 litres of sugar.",
+  "example": {
+   "question": "Which is measured in litres: milk or sugar?",
+   "wrong_answer": "sugar",
+   "correct_answer": "milk"
+  },
+  "cause": "Uses l for anything bought.",
+  "reveals": "The answer sugar as a wrong option, with a reason that names the idea.",
+  "help": "Litres say how much liquid a container holds.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_WRITES_LT": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE",
+  "error": "Writes the unit as lt or L inconsistently.",
+  "example": {
+   "question": "Write 3 litres the short way.",
+   "wrong_answer": "3 lt",
+   "correct_answer": "3 l"
+  },
+  "cause": "Copies from signs.",
+  "reveals": "The answer 3 lt as a wrong option, with a reason that names the idea.",
+  "help": "Litre is written l (some books use L).",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_BIG_IS_LITRES": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE",
+  "error": "Thinks a big container always holds many litres, even a big flat tray.",
+  "example": {
+   "question": "Does a big flat tray hold more than a 5 l jerrycan?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Judges by size seen from above.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Pour the jerrycan into the tray.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_SUBTRACTS_ONCE": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
+  "error": "Takes one bucket away from the drum and gives what is left.",
+  "example": {
+   "question": "A bucket holds 5 litres. A drum holds 20 litres. How many buckets fill the drum?",
+   "wrong_answer": "15",
+   "correct_answer": "4"
+  },
+  "cause": "Does one take-away.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Count the buckets poured until it is full.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_GIVES_CONTAINER_SIZE": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
+  "error": "Gives the litres in one bucket as the number of buckets.",
+  "example": {
+   "question": "A bucket holds 2 litres. A drum holds 10 litres. How many buckets?",
+   "wrong_answer": "2",
+   "correct_answer": "5"
+  },
+  "cause": "Repeats a number.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Ask: how many buckets, not how big.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_NO_UNIT": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
+  "error": "Writes the capacity without l.",
+  "example": {
+   "question": "A jug takes 3 litre fills. Write its capacity.",
+   "wrong_answer": "3",
+   "correct_answer": "3 l"
+  },
+  "cause": "Leaves out the unit.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Always write l.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_COUNTS_CUPS_AS_LITRES": {
+  "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
+  "error": "Counts cups as litres.",
+  "example": {
+   "question": "A basin takes 8 cups or 2 litre bottles. How many litres?",
+   "wrong_answer": "8",
+   "correct_answer": "2"
+  },
+  "cause": "Counts the wrong container.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Only the 1-litre bottle counts litres.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_ORDER": {
+  "skill": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS",
+  "error": "Gives the months out of order, as March before February.",
+  "example": {
+   "question": "What month comes after January?",
+   "wrong_answer": "March",
+   "correct_answer": "February"
+  },
+  "cause": "Has not fixed the order.",
+  "reveals": "The answer March as a wrong option, with a reason that names the idea.",
+  "help": "Sing the months song and point to each.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_OCCASION_WRONG_MONTH": {
+  "skill": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS",
+  "error": "Links an occasion to the wrong month.",
+  "example": {
+   "question": "In which month is Christmas?",
+   "wrong_answer": "January",
+   "correct_answer": "December"
+  },
+  "cause": "Links it to the new year holiday.",
+  "reveals": "The answer January as a wrong option, with a reason that names the idea.",
+  "help": "Mark occasions on a class calendar.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_DAY_MONTH_MIX": {
+  "skill": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS",
+  "error": "Gives a day of the week when asked for a month.",
+  "example": {
+   "question": "Name a month of the year.",
+   "wrong_answer": "Monday",
+   "correct_answer": "May"
+  },
+  "cause": "Mixes days and months.",
+  "reveals": "The answer Monday as a wrong option, with a reason that names the idea.",
+  "help": "Days are 7; months are 12.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS.M_MO_BEFORE_AFTER": {
+  "skill": "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS",
+  "error": "Gives the month after when asked for the month before.",
+  "example": {
+   "question": "What month comes before June?",
+   "wrong_answer": "July",
+   "correct_answer": "May"
+  },
+  "cause": "Mixes before and after.",
+  "reveals": "The answer July as a wrong option, with a reason that names the idea.",
+  "help": "Before is to the left on the month line.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_ALL_30": {
+  "skill": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS",
+  "error": "Says every month has 30 days.",
+  "example": {
+   "question": "How many days does January have?",
+   "wrong_answer": "30",
+   "correct_answer": "31"
+  },
+  "cause": "Thinks months are equal.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Use the knuckles: knuckle months have 31.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_FEB_30": {
+  "skill": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS",
+  "error": "Says February has 30 or 31 days.",
+  "example": {
+   "question": "How many days does February have?",
+   "wrong_answer": "30",
+   "correct_answer": "28 (29 in a leap year)"
+  },
+  "cause": "Does not know February is special.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "February is the short month.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_KNUCKLE_SLIP": {
+  "skill": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS",
+  "error": "Counts the knuckles wrongly and gives 30 for July or August.",
+  "example": {
+   "question": "How many days does August have?",
+   "wrong_answer": "30",
+   "correct_answer": "31"
+  },
+  "cause": "Restarts the knuckles from the wrong place after July.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "After July on the last knuckle, start again on the first knuckle for August.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS.M_DM_WEEKS_FOR_DAYS": {
+  "skill": "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS",
+  "error": "Gives the number of weeks instead of days.",
+  "example": {
+   "question": "How many days does April have?",
+   "wrong_answer": "4",
+   "correct_answer": "30"
+  },
+  "cause": "Thinks of about four weeks.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Count the dates on a calendar page.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_ROW_COLUMN": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_CALENDAR",
+  "error": "Reads the day from the row instead of the column.",
+  "example": {
+   "question": "On a calendar, the 14th is under the letter T in the Thursday column. What day is it?",
+   "wrong_answer": "Tuesday",
+   "correct_answer": "Thursday"
+  },
+  "cause": "Mixes the two days starting with T.",
+  "reveals": "The answer Tuesday as a wrong option, with a reason that names the idea.",
+  "help": "Follow the date straight up to the day name.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_WEEK_LATER": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_CALENDAR",
+  "error": "Adds one instead of seven for a week later.",
+  "example": {
+   "question": "The 3rd is a Monday. What is the date the next Monday?",
+   "wrong_answer": "4th",
+   "correct_answer": "10th"
+  },
+  "cause": "Thinks the next Monday is the next date.",
+  "reveals": "The answer 4th as a wrong option, with a reason that names the idea.",
+  "help": "A week is 7 days: go down one row.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_DATE_DAY_SWAP": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_CALENDAR",
+  "error": "Gives a day when asked for a date.",
+  "example": {
+   "question": "What is the date today if it is the 5th, Friday?",
+   "wrong_answer": "Friday",
+   "correct_answer": "the 5th"
+  },
+  "cause": "Mixes date and day.",
+  "reveals": "The answer Friday as a wrong option, with a reason that names the idea.",
+  "help": "The date is a number; the day is a name.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_CALENDAR.M_RC_WRONG_MONTH_PAGE": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_CALENDAR",
+  "error": "Reads a date on the wrong month's page.",
+  "example": {
+   "question": "What day is 2nd March on this calendar?",
+   "wrong_answer": "a day from February's page",
+   "correct_answer": "the day under 2 on March's page"
+  },
+  "cause": "Does not check the month at the top.",
+  "reveals": "The answer a day from February's page as a wrong option, with a reason that names the idea.",
+  "help": "Check the month name first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_MORE_CLAPS_SHORTER": {
+  "skill": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+  "error": "Says the activity with more claps took less time.",
+  "example": {
+   "question": "Walking to the gate took 20 claps; to the tree 12 claps. Which took longer?",
+   "wrong_answer": "the tree",
+   "correct_answer": "the gate"
+  },
+  "cause": "Mixes more and longer.",
+  "reveals": "The answer the tree as a wrong option, with a reason that names the idea.",
+  "help": "More claps means more time.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_SHADOW_NOON_LONG": {
+  "skill": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+  "error": "Thinks shadows are longest at midday.",
+  "example": {
+   "question": "When is a tree's shadow shortest?",
+   "wrong_answer": "in the morning",
+   "correct_answer": "at midday"
+  },
+  "cause": "Has not watched shadows.",
+  "reveals": "The answer in the morning as a wrong option, with a reason that names the idea.",
+  "help": "Mark a stick's shadow at 8, 12 and 4.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_UNEVEN_COUNT": {
+  "skill": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+  "error": "Counts fast for one activity and slow for another and compares the counts.",
+  "example": {
+   "question": "Two children count claps at different speeds. Can we compare their counts?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the claps must be the same speed"
+  },
+  "cause": "Does not see the unit must be steady.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Clap with a steady beat for both.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.ARBITRARY_TIME.M_AT_SHADOW_POINTS_SUN": {
+  "skill": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+  "error": "Thinks a shadow points towards the sun.",
+  "example": {
+   "question": "In the morning the sun is in the east. Which way does the shadow point?",
+   "wrong_answer": "east",
+   "correct_answer": "west"
+  },
+  "cause": "Does not see the object blocks the light.",
+  "reveals": "The answer east as a wrong option, with a reason that names the idea.",
+  "help": "Stand with your back to the sun: your shadow is in front.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_SWAP": {
+  "skill": "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+  "error": "Calls the long hand the hour hand.",
+  "example": {
+   "question": "Which hand is the hour hand: the long one or the short one?",
+   "wrong_answer": "the long one",
+   "correct_answer": "the short one"
+  },
+  "cause": "Thinks the bigger hand shows the bigger unit.",
+  "reveals": "The answer the long one as a wrong option, with a reason that names the idea.",
+  "help": "The short hand moves slowly, one number each hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_FASTER": {
+  "skill": "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+  "error": "Says the hour hand moves faster.",
+  "example": {
+   "question": "Which hand moves faster?",
+   "wrong_answer": "the hour hand",
+   "correct_answer": "the minute hand"
+  },
+  "cause": "Has not watched a clock.",
+  "reveals": "The answer the hour hand as a wrong option, with a reason that names the idea.",
+  "help": "Watch a clock for five minutes.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_SECOND_HAND": {
+  "skill": "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+  "error": "Confuses the thin second hand with the minute hand.",
+  "example": {
+   "question": "A clock has a thin hand that moves all the time. Is it the minute hand?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the second hand"
+  },
+  "cause": "Has seen three hands.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "The minute hand is long and moves slowly; the thin one sweeps quickly.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.CLOCK_HANDS.M_CH_NUMBERS_MINUTES": {
+  "skill": "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+  "error": "Thinks the numbers on the clock are only for the minute hand.",
+  "example": {
+   "question": "Which hand points to the hour number?",
+   "wrong_answer": "the minute hand",
+   "correct_answer": "the hour hand"
+  },
+  "cause": "Mixes what each hand points to.",
+  "reveals": "The answer the minute hand as a wrong option, with a reason that names the idea.",
+  "help": "The short hand points to the hour number.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_READS_MINUTE_HAND": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_HOUR",
+  "error": "Reads the number the long hand points to as the hour.",
+  "example": {
+   "question": "The short hand points to 4 and the long hand to 12. What time?",
+   "wrong_answer": "12 o'clock",
+   "correct_answer": "4 o'clock"
+  },
+  "cause": "Reads the long hand.",
+  "reveals": "The answer 12 o'clock as a wrong option, with a reason that names the idea.",
+  "help": "The short hand tells the hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_HOUR_LATER": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_HOUR",
+  "error": "Gives the time one hour later as one minute later or the same.",
+  "example": {
+   "question": "It is 6 o'clock. What time is it one hour later?",
+   "wrong_answer": "6:01",
+   "correct_answer": "7 o'clock"
+  },
+  "cause": "Mixes hours and minutes.",
+  "reveals": "The answer 6:01 as a wrong option, with a reason that names the idea.",
+  "help": "One hour later the short hand moves to the next number.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_12_AS_0": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_HOUR",
+  "error": "Reads 12 o'clock as 0 o'clock or 1 o'clock.",
+  "example": {
+   "question": "Both hands point to 12. What time?",
+   "wrong_answer": "0 o'clock",
+   "correct_answer": "12 o'clock"
+  },
+  "cause": "Not sure about the top number.",
+  "reveals": "The answer 0 o'clock as a wrong option, with a reason that names the idea.",
+  "help": "Both hands on 12 is 12 o'clock.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.READ_HOUR.M_RH_BETWEEN_NUMBERS": {
+  "skill": "MATH.G2.MEASUR.TIME.READ_HOUR",
+  "error": "Calls a time o'clock when the long hand is not on 12.",
+  "example": {
+   "question": "The long hand points to 6 and the short hand is between 3 and 4. Is it 3 o'clock?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, half past 3"
+  },
+  "cause": "Ignores the long hand.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "O'clock only when the long hand is on 12.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_DIGITAL_ORDER": {
+  "skill": "MATH.G2.MEASUR.TIME.WRITE_HOUR",
+  "error": "Writes the digital time as 00:3 or 3:3.",
+  "example": {
+   "question": "Write 3 o'clock as on a digital clock.",
+   "wrong_answer": "00:3",
+   "correct_answer": "3:00"
+  },
+  "cause": "Does not know the hours come first.",
+  "reveals": "The answer 00:3 as a wrong option, with a reason that names the idea.",
+  "help": "Hours, colon, then 00 minutes.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_HANDS_EQUAL": {
+  "skill": "MATH.G2.MEASUR.TIME.WRITE_HOUR",
+  "error": "Draws both hands the same length.",
+  "example": {
+   "question": "Draw 5 o'clock. Are the hands the same length?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the hour hand is shorter"
+  },
+  "cause": "Does not show which is which.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Draw the minute hand long to 12, the hour hand short to 5.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_SWAP_HANDS_DRAWN": {
+  "skill": "MATH.G2.MEASUR.TIME.WRITE_HOUR",
+  "error": "Draws the long hand to the hour and the short hand to 12.",
+  "example": {
+   "question": "Draw 8 o'clock.",
+   "wrong_answer": "long hand on 8, short on 12",
+   "correct_answer": "short hand on 8, long on 12"
+  },
+  "cause": "Swaps the hands.",
+  "reveals": "The answer long hand on 8, short on 12 as a wrong option, with a reason that names the idea.",
+  "help": "The short hand shows the hour.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.TIME.WRITE_HOUR.M_WH_WRITES_12": {
+  "skill": "MATH.G2.MEASUR.TIME.WRITE_HOUR",
+  "error": "Writes 12 o'clock for every o'clock time because the long hand is on 12.",
+  "example": {
+   "question": "The short hand is on 9, the long hand on 12. Write the time.",
+   "wrong_answer": "12 o'clock",
+   "correct_answer": "9 o'clock"
+  },
+  "cause": "Reads the long hand.",
+  "reveals": "The answer 12 o'clock as a wrong option, with a reason that names the idea.",
+  "help": "Read the short hand for the hour.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_SIZE_VALUE": {
+  "skill": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100",
+  "error": "Thinks a bigger coin is worth more, whatever its number.",
+  "example": {
+   "question": "Which is worth more: a sh. 20 coin or a sh. 50 note?",
+   "wrong_answer": "the sh. 20 coin (it is heavy)",
+   "correct_answer": "the sh. 50 note"
+  },
+  "cause": "Judges by size or weight.",
+  "reveals": "The answer the sh. 20 coin (it is heavy) as a wrong option, with a reason that names the idea.",
+  "help": "Read the number on each.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_COUNT_PIECES": {
+  "skill": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100",
+  "error": "Thinks more pieces means more money.",
+  "example": {
+   "question": "Which is more: four sh. 1 coins or one sh. 20 coin?",
+   "wrong_answer": "four sh. 1 coins",
+   "correct_answer": "one sh. 20 coin"
+  },
+  "cause": "Counts pieces.",
+  "reveals": "The answer four sh. 1 coins as a wrong option, with a reason that names the idea.",
+  "help": "Count the value: 1, 2, 3, 4.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_10_20_MIX": {
+  "skill": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100",
+  "error": "Mixes up the sh. 10 and sh. 20 coins.",
+  "example": {
+   "question": "Which coin has 20 on it?",
+   "wrong_answer": "the sh. 10 coin",
+   "correct_answer": "the sh. 20 coin"
+  },
+  "cause": "The coins look alike in colour.",
+  "reveals": "The answer the sh. 10 coin as a wrong option, with a reason that names the idea.",
+  "help": "Read the number before naming.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_NOTE_ALWAYS_MORE": {
+  "skill": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100",
+  "error": "Thinks any note is worth more than any amount in coins.",
+  "example": {
+   "question": "Is a sh. 50 note worth more than three sh. 20 coins?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, three twenties are sh. 60"
+  },
+  "cause": "Thinks paper money is always more.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Count the coins' value.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_COUNTS_COINS": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS",
+  "error": "Counts the number of coins instead of their value.",
+  "example": {
+   "question": "How much money in four sh. 10 coins?",
+   "wrong_answer": "4",
+   "correct_answer": "sh. 40"
+  },
+  "cause": "Counts pieces.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Count in tens: 10, 20, 30, 40.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_STEP_TEN_FOR_TWENTY": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS",
+  "error": "Counts twenty-shilling coins in tens.",
+  "example": {
+   "question": "How much in three sh. 20 coins?",
+   "wrong_answer": "sh. 30",
+   "correct_answer": "sh. 60"
+  },
+  "cause": "Counts every coin as ten.",
+  "reveals": "The answer sh. 30 as a wrong option, with a reason that names the idea.",
+  "help": "Count in twenties: 20, 40, 60.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_HOW_MANY_COINS": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS",
+  "error": "Gives the amount when asked how many coins.",
+  "example": {
+   "question": "How many sh. 10 coins make sh. 60?",
+   "wrong_answer": "60",
+   "correct_answer": "6"
+  },
+  "cause": "Answers with the amount.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Count coins while counting in tens to 60.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_EXTRA_STEP": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS",
+  "error": "Counts one step too many.",
+  "example": {
+   "question": "Count: 20, 20, 20, 20 shillings.",
+   "wrong_answer": "sh. 100",
+   "correct_answer": "sh. 80"
+  },
+  "cause": "Starts at 20 before the first coin.",
+  "reveals": "The answer sh. 100 as a wrong option, with a reason that names the idea.",
+  "help": "Touch each coin as you count.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_COUNTS_NOTES": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES",
+  "error": "Counts notes instead of their value.",
+  "example": {
+   "question": "How much in two sh. 50 notes?",
+   "wrong_answer": "2",
+   "correct_answer": "sh. 100"
+  },
+  "cause": "Counts pieces.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Count in fifties: 50, 100.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_ADDS_DIGITS": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES",
+  "error": "Adds 50 and 50 as 5 + 5 = 10.",
+  "example": {
+   "question": "sh. 50 + sh. 50",
+   "wrong_answer": "sh. 10",
+   "correct_answer": "sh. 100"
+  },
+  "cause": "Adds the first digits.",
+  "reveals": "The answer sh. 10 as a wrong option, with a reason that names the idea.",
+  "help": "Fifty is 5 tens: 10 tens is 100.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_HOW_MANY_FIFTIES": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES",
+  "error": "Says one fifty makes a hundred.",
+  "example": {
+   "question": "How many sh. 50 notes make sh. 100?",
+   "wrong_answer": "1",
+   "correct_answer": "2"
+  },
+  "cause": "Thinks 50 is close to 100.",
+  "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+  "help": "Count in fifties to 100.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_100_AS_10": {
+  "skill": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES",
+  "error": "Reads the sh. 100 note as sh. 10.",
+  "example": {
+   "question": "What is a sh. 100 note worth?",
+   "wrong_answer": "sh. 10",
+   "correct_answer": "sh. 100"
+  },
+  "cause": "Misses the second zero.",
+  "reveals": "The answer sh. 10 as a wrong option, with a reason that names the idea.",
+  "help": "Count the digits: three.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_SUBTRACTS": {
+  "skill": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
+  "error": "Takes away when asked for the total cost.",
+  "example": {
+   "question": "A pen costs sh. 20 and a rubber sh. 15. How much together?",
+   "wrong_answer": "sh. 5",
+   "correct_answer": "sh. 35"
+  },
+  "cause": "Takes the smaller from the larger.",
+  "reveals": "The answer sh. 5 as a wrong option, with a reason that names the idea.",
+  "help": "Together means add.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_CARRY_SLIP": {
+  "skill": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
+  "error": "Forgets or adds an extra ten when adding.",
+  "example": {
+   "question": "sh. 35 + sh. 47",
+   "wrong_answer": "sh. 72",
+   "correct_answer": "sh. 82"
+  },
+  "cause": "Regrouping slip.",
+  "reveals": "The answer sh. 72 as a wrong option, with a reason that names the idea.",
+  "help": "Ones first: 5 + 7 = 12, carry the ten.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_NO_SH": {
+  "skill": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
+  "error": "Writes the total without sh.",
+  "example": {
+   "question": "sh. 50 + sh. 20",
+   "wrong_answer": "70",
+   "correct_answer": "sh. 70"
+  },
+  "cause": "Drops the unit.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Money totals carry sh.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_JOINS": {
+  "skill": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
+  "error": "Writes the two amounts side by side, as 5020.",
+  "example": {
+   "question": "sh. 50 + sh. 20",
+   "wrong_answer": "sh. 5020",
+   "correct_answer": "sh. 70"
+  },
+  "cause": "Thinks add means join.",
+  "reveals": "The answer sh. 5020 as a wrong option, with a reason that names the idea.",
+  "help": "Count on: 50, 60, 70.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_ONE_ITEM": {
+  "skill": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE",
+  "error": "Pays for only some of the items.",
+  "example": {
+   "question": "Bread sh. 50, a pen sh. 20, a sweet sh. 5. How much to pay?",
+   "wrong_answer": "sh. 70",
+   "correct_answer": "sh. 75"
+  },
+  "cause": "Leaves out an item.",
+  "reveals": "The answer sh. 70 as a wrong option, with a reason that names the idea.",
+  "help": "Tick each item as you add it.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_COUNTS_ITEMS": {
+  "skill": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE",
+  "error": "Gives the number of items as the cost.",
+  "example": {
+   "question": "Three sweets at sh. 5 each. How much to pay?",
+   "wrong_answer": "3",
+   "correct_answer": "sh. 15"
+  },
+  "cause": "Counts items.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Add each price.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_WRONG_COINS": {
+  "skill": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE",
+  "error": "Picks coins that do not make the exact cost.",
+  "example": {
+   "question": "Pay exactly sh. 30 with sh. 10 and sh. 20 coins.",
+   "wrong_answer": "two sh. 20 coins",
+   "correct_answer": "one sh. 10 and one sh. 20"
+  },
+  "cause": "Picks coins without totalling.",
+  "reveals": "The answer two sh. 20 coins as a wrong option, with a reason that names the idea.",
+  "help": "Count the coins you pick: does it make 30?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_MORE_MONEY_NEEDED": {
+  "skill": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE",
+  "error": "Says the money is enough when the total is more.",
+  "example": {
+   "question": "Items cost sh. 60 and sh. 50. Is sh. 100 enough?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the cost is sh. 110"
+  },
+  "cause": "Does not add before deciding.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Find the total first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_SLANT_NOT_STRAIGHT": {
+  "skill": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+  "error": "Thinks a slanting line is not straight.",
+  "example": {
+   "question": "A line goes from the bottom left to the top right of the page. Is it straight?",
+   "wrong_answer": "no, it is slanting",
+   "correct_answer": "yes"
+  },
+  "cause": "Thinks straight means upright or flat.",
+  "reveals": "The answer no, it is slanting as a wrong option, with a reason that names the idea.",
+  "help": "Lay a ruler along it: it does not bend.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_WOBBLY_OK": {
+  "skill": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+  "error": "Calls a wobbly freehand line straight.",
+  "example": {
+   "question": "Is a wobbly line drawn without a ruler straight?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Has not checked with a ruler.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Check with a ruler edge.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_BROKEN_IS_CURVED": {
+  "skill": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+  "error": "Calls a zigzag (two straight lines) a curved line.",
+  "example": {
+   "question": "A zigzag line: curved or made of straight lines?",
+   "wrong_answer": "curved",
+   "correct_answer": "straight lines"
+  },
+  "cause": "Calls any line that is not one straight line curved.",
+  "reveals": "The answer curved as a wrong option, with a reason that names the idea.",
+  "help": "Look at each part: each part is straight.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_RULER_SLIPS": {
+  "skill": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+  "error": "Lets the ruler slip so the line bends at the end.",
+  "example": {
+   "question": "Your line bends at the end. What happened?",
+   "wrong_answer": "nothing",
+   "correct_answer": "the ruler moved"
+  },
+  "cause": "Does not hold the ruler firmly.",
+  "reveals": "The answer nothing as a wrong option, with a reason that names the idea.",
+  "help": "Press the ruler down with the other hand.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_CORNER_IS_CURVE": {
+  "skill": "MATH.G2.GEOMET.LINES.CURVED_LINES",
+  "error": "Calls a corner a curve.",
+  "example": {
+   "question": "The corner of a book: curved or straight?",
+   "wrong_answer": "curved",
+   "correct_answer": "straight edges meeting"
+  },
+  "cause": "Thinks any turn is a curve.",
+  "reveals": "The answer curved as a wrong option, with a reason that names the idea.",
+  "help": "A curve bends smoothly; a corner turns sharply.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_CIRCLE_NOT_LINE": {
+  "skill": "MATH.G2.GEOMET.LINES.CURVED_LINES",
+  "error": "Thinks a circle edge is not a line.",
+  "example": {
+   "question": "Is the edge of a plate a curved line?",
+   "wrong_answer": "no",
+   "correct_answer": "yes"
+  },
+  "cause": "Thinks lines are only straight.",
+  "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+  "help": "Trace the plate edge with a finger.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_RULER_FOR_CURVE": {
+  "skill": "MATH.G2.GEOMET.LINES.CURVED_LINES",
+  "error": "Tries to draw a curved line with a ruler and gets straight pieces.",
+  "example": {
+   "question": "How do you draw a rainbow line?",
+   "wrong_answer": "with a ruler",
+   "correct_answer": "freehand or round a plate"
+  },
+  "cause": "Uses a ruler for all lines.",
+  "reveals": "The answer with a ruler as a wrong option, with a reason that names the idea.",
+  "help": "Draw curves freehand or round a round object.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_WAVY_STRAIGHT": {
+  "skill": "MATH.G2.GEOMET.LINES.CURVED_LINES",
+  "error": "Calls a gently wavy line straight.",
+  "example": {
+   "question": "A road on a map bends gently. Straight or curved?",
+   "wrong_answer": "straight",
+   "correct_answer": "curved"
+  },
+  "cause": "Looks at the overall direction.",
+  "reveals": "The answer straight as a wrong option, with a reason that names the idea.",
+  "help": "Lay a ruler on it: does it leave the ruler?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_TURNED": {
+  "skill": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+  "error": "Thinks a turned square or triangle is a different shape.",
+  "example": {
+   "question": "A square turned on its corner: is it still a square?",
+   "wrong_answer": "no",
+   "correct_answer": "yes"
+  },
+  "cause": "Thinks position changes the shape.",
+  "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+  "help": "Turn a cut-out and count its equal sides.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_OVAL_CIRCLE": {
+  "skill": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+  "error": "Calls an oval a circle.",
+  "example": {
+   "question": "An egg is what shape?",
+   "wrong_answer": "circle",
+   "correct_answer": "oval"
+  },
+  "cause": "Calls all round shapes circles.",
+  "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+  "help": "A circle is the same width every way; an oval is longer one way.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_RECT_SQUARE": {
+  "skill": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+  "error": "Calls a rectangle a square.",
+  "example": {
+   "question": "A door is what shape?",
+   "wrong_answer": "square",
+   "correct_answer": "rectangle"
+  },
+  "cause": "Calls every four-sided shape a square.",
+  "reveals": "The answer square as a wrong option, with a reason that names the idea.",
+  "help": "A square has all sides equal.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_OBJECT_NAME": {
+  "skill": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+  "error": "Names the object instead of the shape.",
+  "example": {
+   "question": "What shape is a clock face?",
+   "wrong_answer": "clock",
+   "correct_answer": "circle"
+  },
+  "cause": "Answers with the object.",
+  "reveals": "The answer clock as a wrong option, with a reason that names the idea.",
+  "help": "Ask 'what shape?'",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_GAPS": {
+  "skill": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES",
+  "error": "Leaves gaps at the corners so the shape is not closed.",
+  "example": {
+   "question": "Draw a triangle. Do the lines meet?",
+   "wrong_answer": "gaps at corners",
+   "correct_answer": "closed"
+  },
+  "cause": "Lifts the pencil early.",
+  "reveals": "The answer gaps at corners as a wrong option, with a reason that names the idea.",
+  "help": "Start and end at the same point.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_SIDE_COUNT": {
+  "skill": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES",
+  "error": "Draws the wrong number of sides.",
+  "example": {
+   "question": "Draw a square. How many sides?",
+   "wrong_answer": "3 or 5",
+   "correct_answer": "4"
+  },
+  "cause": "Draws without counting.",
+  "reveals": "The answer 3 or 5 as a wrong option, with a reason that names the idea.",
+  "help": "Count each side as you draw.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_CURVED_SIDES": {
+  "skill": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES",
+  "error": "Draws curved sides on a square or triangle.",
+  "example": {
+   "question": "Draw a triangle with a ruler. Are the sides straight?",
+   "wrong_answer": "curved",
+   "correct_answer": "straight"
+  },
+  "cause": "Draws freehand.",
+  "reveals": "The answer curved as a wrong option, with a reason that names the idea.",
+  "help": "Use a ruler for straight sides.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_OVAL_FOR_CIRCLE": {
+  "skill": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES",
+  "error": "Draws an oval when asked for a circle.",
+  "example": {
+   "question": "Draw a circle round a cup. Is it an oval?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, a circle"
+  },
+  "cause": "Draws freehand and stretches it.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Trace round a round object.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_REPEAT_UNIT": {
+  "skill": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+  "error": "Repeats only the last shape instead of the repeating part.",
+  "example": {
+   "question": "circle, triangle, triangle, circle, triangle, triangle, circle, __",
+   "wrong_answer": "circle",
+   "correct_answer": "triangle"
+  },
+  "cause": "Does not find the part that repeats.",
+  "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+  "help": "Ring the part that repeats.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_ALTERNATES": {
+  "skill": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+  "error": "Assumes every pattern goes A, B, A, B.",
+  "example": {
+   "question": "square, square, circle, square, square, __",
+   "wrong_answer": "square",
+   "correct_answer": "circle"
+  },
+  "cause": "Uses a two-step pattern for all.",
+  "reveals": "The answer square as a wrong option, with a reason that names the idea.",
+  "help": "Count how many of each in the repeat.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_COLOUR_ONLY": {
+  "skill": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+  "error": "Follows the colour and ignores the shape.",
+  "example": {
+   "question": "red circle, blue square, red circle, blue __",
+   "wrong_answer": "circle",
+   "correct_answer": "square"
+  },
+  "cause": "Looks at colour only.",
+  "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+  "help": "Say the shape name aloud for each.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_MISSING_MIDDLE": {
+  "skill": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+  "error": "Fills a gap in the middle with the next shape after the gap.",
+  "example": {
+   "question": "triangle, circle, __, circle, triangle, circle",
+   "wrong_answer": "circle",
+   "correct_answer": "triangle"
+  },
+  "cause": "Copies a neighbour.",
+  "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+  "help": "Say the pattern aloud from the start.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ }
+}

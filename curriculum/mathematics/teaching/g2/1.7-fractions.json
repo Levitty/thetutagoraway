@@ -1,0 +1,282 @@
+{
+ "sub_strand": "MATH.G2.NUMBER.FRACTIONS",
+ "title": "Fractions",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words, but the text layer lost the fractions: from the learning experiences a is 1/2 and b is 1/4 (to confirm by a person). d is attitudinal.",
+ "skills": [
+  {
+   "skill": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+   "key_step": "The child folds so the two parts match exactly, then names one part a half.",
+   "floor": {
+    "prerequisite": "Identifies rectangles and circles (Grade 1).",
+    "question": "Which shape is round?",
+    "answer": "a circle"
+   },
+   "representations": [
+    "paper circles and rectangles",
+    "drawn shapes",
+    "the symbol 1/2"
+   ],
+   "steps": [
+    "Fold.",
+    "Do the parts match?",
+    "One part is a half.",
+    "Write 1/2."
+   ],
+   "contexts": [
+    "sharing a chapati",
+    "an orange cut in two",
+    "a sheet of paper folded"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle with a line making two equal parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two parts.",
+     "say": "Are they the same?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shades one part."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1/2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_UNEQUAL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do the pieces match?",
+     "repair": "No: halves are equal."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_BIGGER_HALF",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "If the parts are not equal, are they halves?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_WRITES_2_1",
+     "listen_for": [
+      "2/1"
+     ],
+     "ask": "How many equal parts make the whole?",
+     "repair": "2, below: 1/2."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE.M_HALF_WRONG_FOLD",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do the edges meet?",
+     "repair": "No: fold again so they meet."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a circle cut into two equal parts in halves?",
+     "answer": "yes",
+     "shows": "equal parts"
+    },
+    {
+     "question": "Write a half.",
+     "answer": "1/2",
+     "shows": "symbol"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE",
+   "key_step": "The child folds in half and in half again, checks the four parts match, and names one a quarter.",
+   "floor": {
+    "prerequisite": "Knows a half.",
+    "question": "Fold a paper into 2 equal parts: one part is?",
+    "answer": "a half"
+   },
+   "representations": [
+    "paper cut-outs",
+    "drawn shapes in 4 parts",
+    "the symbol 1/4"
+   ],
+   "steps": [
+    "Fold in half.",
+    "Fold in half again.",
+    "4 equal parts.",
+    "One part is 1/4."
+   ],
+   "contexts": [
+    "an orange in four",
+    "a cake at a birthday",
+    "a chapati shared by four"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle in 4 equal parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one part.",
+     "say": "What is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a quarter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1/4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_FOUR_UNEQUAL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are the 4 pieces equal?",
+     "repair": "No: not quarters."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_BIGGER_THAN_HALF",
+     "listen_for": [
+      "a quarter"
+     ],
+     "ask": "Which piece is bigger?",
+     "repair": "The half."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_THREE_PARTS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "How many parts make the whole?",
+     "repair": "3, so not a quarter."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE.M_QTR_TWO_MAKE_WHOLE",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many parts when unfolded?",
+     "repair": "4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many quarters make a whole?",
+     "answer": "4",
+     "shows": "parts"
+    },
+    {
+     "question": "Which is bigger: 1/2 or 1/4 of the same bread?",
+     "answer": "1/2",
+     "shows": "comparing"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS",
+   "key_step": "The child shares the group or thing into 2 (or 4) equal parts and counts one part.",
+   "floor": {
+    "prerequisite": "Shares equally between two.",
+    "question": "Share 8 between 2.",
+    "answer": "4 each"
+   },
+   "representations": [
+    "counters",
+    "real fruit",
+    "a drawing of shares"
+   ],
+   "steps": [
+    "How many equal parts? 2 or 4.",
+    "Share one by one.",
+    "Count one part.",
+    "Check the parts are equal."
+   ],
+   "contexts": [
+    "half of the mangoes",
+    "a quarter of an orange",
+    "half a loaf of bread"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 12 mangoes and 2 baskets."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shares them one by one."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the count in one basket."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write half of 12 = 6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_HALF_IS_ALL",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Did Baraka get all of them?",
+     "repair": "No: half, 6."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_TAKES_TWO",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "How many in each share?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_UNEQUAL_HALVES",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Are 8 and 6 equal?",
+     "repair": "No: 7 and 7."
+    },
+    {
+     "code": "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS.M_FRUSE_QUARTER_AS_FOUR",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "How many in one group?",
+     "repair": "2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Half of 16?",
+     "answer": "8",
+     "shows": "half of a group"
+    },
+    {
+     "question": "A quarter of 8?",
+     "answer": "2",
+     "shows": "quarter of a group"
+    }
+   ]
+  }
+ ]
+}

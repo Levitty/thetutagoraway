@@ -1,0 +1,461 @@
+{
+ "sub_strand": "MATH.G2.MEASUR.MONEY",
+ "title": "Money",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words; f is attitudinal. Coins (1, 5, 10, 20) and notes (50, 100) up to sh. 100; counting sh. 10 and sh. 20 coins and sh. 50 and sh. 100 notes; adding two amounts to sh. 100; buying up to 3 items with no balance.",
+ "skills": [
+  {
+   "skill": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100",
+   "key_step": "The child reads the number on each coin or note and uses it to name and compare.",
+   "floor": {
+    "prerequisite": "Kenyan coins and the sh. 50 note (Grade 1).",
+    "question": "Which is worth more: sh. 5 or sh. 10?",
+    "answer": "sh. 10"
+   },
+   "representations": [
+    "model coins and notes",
+    "pictures of real money",
+    "a sorting tray"
+   ],
+   "steps": [
+    "Read the number.",
+    "Name it.",
+    "Sort by value.",
+    "Compare by value, not size."
+   ],
+   "contexts": [
+    "the market",
+    "a church offering",
+    "bus fare"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sh. 20 coin and a sh. 50 note."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each number.",
+     "say": "Which is worth more?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the note."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 50 > sh. 20."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_SIZE_VALUE",
+     "listen_for": [
+      "the sh. 20 coin (it is heavy)"
+     ],
+     "ask": "Which number is bigger?",
+     "repair": "50: the note."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_COUNT_PIECES",
+     "listen_for": [
+      "four sh. 1 coins"
+     ],
+     "ask": "How much are the four coins worth?",
+     "repair": "sh. 4: the sh. 20 coin is more."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_10_20_MIX",
+     "listen_for": [
+      "the sh. 10 coin"
+     ],
+     "ask": "What number is on it?",
+     "repair": "20."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100.M_IM_NOTE_ALWAYS_MORE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "What are three twenties worth?",
+     "repair": "sh. 60: more than sh. 50."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is worth more: sh. 100 or sh. 50?",
+     "answer": "sh. 100",
+     "shows": "comparing"
+    },
+    {
+     "question": "Is a sh. 10 coin a coin or a note?",
+     "answer": "a coin",
+     "shows": "kinds"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS",
+   "key_step": "The child counts on by the value of each coin, touching each once.",
+   "floor": {
+    "prerequisite": "Counts in tens and twos.",
+    "question": "Count in tens: 10, 20, __",
+    "answer": "30"
+   },
+   "representations": [
+    "model coins",
+    "a coin line",
+    "a counting table"
+   ],
+   "steps": [
+    "Name the coin's value.",
+    "Touch each coin.",
+    "Count on by its value.",
+    "Write sh."
+   ],
+   "contexts": [
+    "fare money",
+    "pocket money",
+    "the school canteen"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four sh. 10 coins."
+    },
+    {
+     "beat": "count",
+     "do": "Count them in tens with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 40."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 40."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_COUNTS_COINS",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "What is each coin worth?",
+     "repair": "10: sh. 40."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_STEP_TEN_FOR_TWENTY",
+     "listen_for": [
+      "sh. 30"
+     ],
+     "ask": "What is each coin worth?",
+     "repair": "20: sh. 60."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_HOW_MANY_COINS",
+     "listen_for": [
+      "60"
+     ],
+     "ask": "How many coins did you touch?",
+     "repair": "6."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS.M_C1020_EXTRA_STEP",
+     "listen_for": [
+      "sh. 100"
+     ],
+     "ask": "How many coins?",
+     "repair": "4: sh. 80."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How much in five sh. 20 coins?",
+     "answer": "sh. 100",
+     "shows": "twenties"
+    },
+    {
+     "question": "How many sh. 10 coins make sh. 70?",
+     "answer": "7",
+     "shows": "how many"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES",
+   "key_step": "The child counts sh. 50 notes in fifties and sh. 100 notes in hundreds.",
+   "floor": {
+    "prerequisite": "Counts coins by value.",
+    "question": "How much in three sh. 10 coins?",
+    "answer": "sh. 30"
+   },
+   "representations": [
+    "model notes",
+    "a counting line",
+    "a table"
+   ],
+   "steps": [
+    "Name the note's value.",
+    "Count on by it.",
+    "Say the total.",
+    "Write sh."
+   ],
+   "contexts": [
+    "paying for shoes",
+    "a harambee",
+    "a shop till"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two sh. 50 notes."
+    },
+    {
+     "beat": "count",
+     "do": "Count in fifties with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 100."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 100."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_COUNTS_NOTES",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "What is each note worth?",
+     "repair": "50: sh. 100."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_ADDS_DIGITS",
+     "listen_for": [
+      "sh. 10"
+     ],
+     "ask": "How many tens in two fifties?",
+     "repair": "10 tens: sh. 100."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_HOW_MANY_FIFTIES",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "50, then?",
+     "repair": "100: 2 notes."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES.M_C50_100_AS_10",
+     "listen_for": [
+      "sh. 10"
+     ],
+     "ask": "How many zeros?",
+     "repair": "Two: one hundred."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many sh. 50 notes make sh. 100?",
+     "answer": "2",
+     "shows": "fifties"
+    },
+    {
+     "question": "How much in one sh. 100 note?",
+     "answer": "sh. 100",
+     "shows": "hundred"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
+   "key_step": "The child adds the two amounts as numbers and writes sh.",
+   "floor": {
+    "prerequisite": "Adds 2-digit numbers.",
+    "question": "35 + 47",
+    "answer": "82"
+   },
+   "representations": [
+    "model money",
+    "price tags",
+    "a column sum"
+   ],
+   "steps": [
+    "Read both amounts.",
+    "Add ones, then tens.",
+    "Carry if needed.",
+    "Write sh."
+   ],
+   "contexts": [
+    "a pen and a rubber",
+    "bread and milk",
+    "two fares"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write sh. 35 + sh. 47."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 5 + 7.",
+     "say": "How many ones?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12 and the carry."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 82."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_SUBTRACTS",
+     "listen_for": [
+      "sh. 5"
+     ],
+     "ask": "Together or difference?",
+     "repair": "Together: sh. 35."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_CARRY_SLIP",
+     "listen_for": [
+      "sh. 72"
+     ],
+     "ask": "Did you carry the ten?",
+     "repair": "Yes: sh. 82."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_NO_SH",
+     "listen_for": [
+      "70"
+     ],
+     "ask": "70 what?",
+     "repair": "sh. 70."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.ADD_MONEY_100.M_MON2_JOINS",
+     "listen_for": [
+      "sh. 5020"
+     ],
+     "ask": "Is it less than 100?",
+     "repair": "Yes: sh. 70."
+    }
+   ],
+   "checks": [
+    {
+     "question": "sh. 50 + sh. 20",
+     "answer": "sh. 70",
+     "shows": "two notes and coins"
+    },
+    {
+     "question": "sh. 45 + sh. 30",
+     "answer": "sh. 75",
+     "shows": "two prices"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE",
+   "key_step": "The child adds all the prices and picks coins and notes that make exactly that total.",
+   "floor": {
+    "prerequisite": "Bought 2 items without balance (Grade 1).",
+    "question": "A sweet sh. 5 and a pencil sh. 10: total?",
+    "answer": "sh. 15"
+   },
+   "representations": [
+    "the classroom model shop",
+    "price tags",
+    "model money"
+   ],
+   "steps": [
+    "Add every price.",
+    "Pick money to make the total.",
+    "Count the money picked.",
+    "No change needed."
+   ],
+   "contexts": [
+    "the model shop",
+    "a kiosk",
+    "a market stall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write bread sh. 50, pen sh. 20, sweet sh. 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each price.",
+     "say": "Total?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for sh. 75."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws coins that make sh. 75."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 50 + sh. 20 + sh. 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_ONE_ITEM",
+     "listen_for": [
+      "sh. 70"
+     ],
+     "ask": "Did you add the sweet?",
+     "repair": "No: sh. 75."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_COUNTS_ITEMS",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "What does each cost?",
+     "repair": "sh. 5: sh. 15."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_WRONG_COINS",
+     "listen_for": [
+      "two sh. 20 coins"
+     ],
+     "ask": "What do two twenties make?",
+     "repair": "40: too much. Use 10 + 20."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE.M_BNB_MORE_MONEY_NEEDED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "What is 60 + 50?",
+     "repair": "110: not enough."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Three items at sh. 10, sh. 20, sh. 30. Total?",
+     "answer": "sh. 60",
+     "shows": "three items"
+    },
+    {
+     "question": "Which coins pay exactly sh. 30: two sh. 20 or sh. 10 and sh. 20?",
+     "answer": "sh. 10 and sh. 20",
+     "shows": "exact payment"
+    }
+   ]
+  }
+ ]
+}

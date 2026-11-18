@@ -4,7 +4,8 @@
 // misconceptions or more, every misconception a reveal question and a repair in the teaching pack.
 // What is new here: a misconception and its repair in the teaching pack are written once, together (m), and `assemble` splits them
 // into the library (`mis`) and the pack entries (`pack[skill].mis`), so the two can never drift apart.
-// A prerequisite ref: 'G2o:SUB.letter' (a Grade 2 outcome, before Grade 2 had skills), 'G2:SUB.SKILL' (a Grade 2 skill),
+// A prerequisite ref: 'G2o:SUB.letter' (a Grade 2 outcome, before Grade 2 had skills; all became Grade 2 skills once Grade 2
+// was mapped later on 18 Nov 2026), 'G2:SUB.SKILL' (a Grade 2 skill),
 // 'G3:SKILL' (same sub-strand), 'G3x:SUB.SKILL' (another Grade 3 sub-strand), and for Grade 1 'PP2:NAME' (a readiness skill).
 // The errors are those of young children (counting on from the wrong number, reversed digits, zero in place value, the clock hands).
 export { E, H } from '../maths-g7/lib.mjs';

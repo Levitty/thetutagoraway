@@ -1,0 +1,376 @@
+{
+ "sub_strand": "MATH.G2.NUMBER.MULTIPLICATION",
+ "title": "Multiplication",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; the text layer lost the x sign in b. e is attitudinal. Repeated addition uses 1, 2 and 3 groups of 2 and 3; facts are 1-digit numbers times 1 to 5 and times 10.",
+ "skills": [
+  {
+   "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+   "key_step": "The child makes equal groups and adds the group size once for each group.",
+   "floor": {
+    "prerequisite": "Adds three single digits (Grade 1).",
+    "question": "2 + 2 + 2",
+    "answer": "6"
+   },
+   "representations": [
+    "counters on plates",
+    "drawn rings",
+    "an addition sentence"
+   ],
+   "steps": [
+    "Make equal groups.",
+    "Count the groups.",
+    "Add the size each time.",
+    "Say the total."
+   ],
+   "contexts": [
+    "mandazi on plates",
+    "shoes in pairs",
+    "hens in a coop"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 3 plates with 2 dots each."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the plates.",
+     "say": "How many groups?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the dots in twos with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2 + 2 + 2 = 6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_ADDS_GROUPS_AND_SIZE",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Is it 3 + 2, or 2 three times?",
+     "repair": "2 + 2 + 2 = 6."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_COUNTS_GROUPS",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Are we counting groups or counters?",
+     "repair": "Counters: 6."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_UNEQUAL",
+     "listen_for": [
+      "2, 3, 1"
+     ],
+     "ask": "Is each group 2?",
+     "repair": "Make each 2: 2, 2, 2."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD.M_MRA_ONE_GROUP_SHORT",
+     "listen_for": [
+      "3 + 3 = 6"
+     ],
+     "ask": "How many threes did you write?",
+     "repair": "Three: 9."
+    }
+   ],
+   "checks": [
+    {
+     "question": "2 groups of 3: how many?",
+     "answer": "6",
+     "shows": "repeated addition"
+    },
+    {
+     "question": "Write 3 groups of 2 as an addition.",
+     "answer": "2 + 2 + 2",
+     "shows": "writing"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN",
+   "key_step": "The child counts how many equal numbers are added and writes that many x the number.",
+   "floor": {
+    "prerequisite": "Writes repeated addition.",
+    "question": "3 groups of 2 as an addition?",
+    "answer": "2 + 2 + 2"
+   },
+   "representations": [
+    "counters",
+    "an addition sentence",
+    "a multiplication sentence"
+   ],
+   "steps": [
+    "Count the equal numbers.",
+    "Write the count.",
+    "Write x and the number.",
+    "Write = and the total."
+   ],
+   "contexts": [
+    "eggs in rows",
+    "chairs in rows",
+    "pairs of socks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5 + 5 + 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each 5.",
+     "say": "How many fives?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 x 5 = 15."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_WRITES_PLUS",
+     "listen_for": [
+      "2 + 3"
+     ],
+     "ask": "How many twos? Write that, x, then 2.",
+     "repair": "3 x 2 = 6."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_WRONG_COUNT",
+     "listen_for": [
+      "3 x 5"
+     ],
+     "ask": "How many fives are there?",
+     "repair": "Four: 4 x 5."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_TOTAL_AS_FACTOR",
+     "listen_for": [
+      "6 x 3"
+     ],
+     "ask": "How many threes?",
+     "repair": "Two: 2 x 3 = 6."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN.M_MS_X_AS_PLUS",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Draw 3 groups of 2: how many?",
+     "repair": "6."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 4 + 4 as multiplication.",
+     "answer": "2 x 4 = 8",
+     "shows": "writing x"
+    },
+    {
+     "question": "Read 3 x 2.",
+     "answer": "3 groups of 2",
+     "shows": "reading x"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
+   "key_step": "The child skip counts in the group size, once for each group.",
+   "floor": {
+    "prerequisite": "Counts in twos, fives and tens.",
+    "question": "Count in fives: 5, 10, __",
+    "answer": "15"
+   },
+   "representations": [
+    "arrays of bottle tops",
+    "a multiplication chart",
+    "skip counting on fingers"
+   ],
+   "steps": [
+    "Find groups and size.",
+    "Skip count the size.",
+    "Stop after the number of groups.",
+    "Say the total."
+   ],
+   "contexts": [
+    "legs of goats",
+    "rows of maize",
+    "packets of biscuits"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 4 goats."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the legs of one goat.",
+     "say": "How many?"
+    },
+    {
+     "beat": "count",
+     "do": "Skip count in fours with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 16."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 x 4 = 16."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_ADDS_NUMBERS",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Is it 4 + 4, or 4 four times?",
+     "repair": "Four fours: 16."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_ONE_GROUP_EXTRA",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "How many rows did you count?",
+     "repair": "Three: 15."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_ONE_GROUP_SHORT",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "How many threes?",
+     "repair": "Four: 12."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5.M_MUL2_COUNTS_GROUPS",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Are we counting hens or legs?",
+     "repair": "Legs: 10."
+    }
+   ],
+   "checks": [
+    {
+     "question": "3 x 5",
+     "answer": "15",
+     "shows": "fact"
+    },
+    {
+     "question": "6 hens have 2 legs each. How many legs?",
+     "answer": "12",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10",
+   "key_step": "The child says the number of tens and writes it with a zero in the ones.",
+   "floor": {
+    "prerequisite": "Knows tens.",
+    "question": "How many tens in 60?",
+    "answer": "6"
+   },
+   "representations": [
+    "bundles of ten",
+    "ten-shilling coins",
+    "a tens chart"
+   ],
+   "steps": [
+    "How many tens?",
+    "Count in tens.",
+    "Write the digit then 0.",
+    "Check with bundles."
+   ],
+   "contexts": [
+    "ten-shilling coins",
+    "crates of 10 eggs",
+    "bundles of sticks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 7 bundles of ten."
+    },
+    {
+     "beat": "count",
+     "do": "Count them in tens together."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 70."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7 x 10 = 70."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_ADDS_TEN",
+     "listen_for": [
+      "17"
+     ],
+     "ask": "How many tens is 7 bundles?",
+     "repair": "70."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_ZERO_FRONT",
+     "listen_for": [
+      "07"
+     ],
+     "ask": "Which digit shows the tens?",
+     "repair": "7: 70."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_HUNDRED",
+     "listen_for": [
+      "700"
+     ],
+     "ask": "Is 7 tens more than 100?",
+     "repair": "No: 70."
+    },
+    {
+     "code": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10.M_M102_COUNT_SLIP",
+     "listen_for": [
+      "sh. 50"
+     ],
+     "ask": "How many coins did you touch?",
+     "repair": "4: sh. 40."
+    }
+   ],
+   "checks": [
+    {
+     "question": "5 x 10",
+     "answer": "50",
+     "shows": "fact"
+    },
+    {
+     "question": "How much are 8 ten-shilling coins?",
+     "answer": "sh. 80",
+     "shows": "coins"
+    }
+   ]
+  }
+ ]
+}

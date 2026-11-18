@@ -95,15 +95,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.NUMBER_CONCEPT.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Represents numbers with objects, so compares amounts and sizes.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.LENGTH.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Compares lengths with fixed units.",
        "status": "proposed"
@@ -134,8 +134,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts forward to 20 and beyond.",
        "status": "proposed"
@@ -178,8 +178,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.e",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads and writes numbers 1 to 20 in words.",
        "status": "proposed"
@@ -473,8 +473,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts forward to 100.",
        "status": "proposed"
@@ -510,8 +510,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts back from 50.",
        "status": "proposed"
@@ -548,15 +548,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Place value in ones and tens.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.NUMBER_CONCEPT.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Represents numbers with objects in groups of ten.",
        "status": "proposed"
@@ -585,8 +585,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads numbers to 100.",
        "status": "proposed"
@@ -622,15 +622,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.e",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads and writes numbers 1 to 20 in words.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Knows the tens and ones of a 2-digit number.",
        "status": "proposed"
@@ -660,8 +660,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.f",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Missing numbers in patterns to 100.",
        "status": "proposed"
@@ -1166,8 +1166,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.ADDITION.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds two 2-digit numbers.",
        "status": "proposed"
@@ -1210,8 +1210,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.ADDITION.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds with regrouping up to 100.",
        "status": "proposed"
@@ -1729,8 +1729,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.SUBTRACTION.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts 2-digit numbers.",
        "status": "proposed"
@@ -1773,8 +1773,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.SUBTRACTION.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Has regrouped with 2-digit numbers.",
        "status": "proposed"
@@ -2279,15 +2279,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.MULTIPLICATION.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Repeated addition by 2 and 3.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writes repeated addition with the x sign.",
        "status": "proposed"
@@ -2324,8 +2324,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.MULTIPLICATION.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Multiplies by 1 to 5.",
        "status": "proposed"
@@ -2355,8 +2355,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.MULTIPLICATION.d",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Multiplies 1-digit numbers by 10 (Grade 2).",
        "status": "proposed"
@@ -2652,15 +2652,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.DIVISION.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Equal grouping by 3.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.DIVISION.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.DIVISION.DIV_SIGN",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Writes division with the ÷ sign.",
        "status": "proposed"
@@ -3007,15 +3007,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.NUMBER.FRACTIONS.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knows a half of a whole.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.NUMBER.FRACTIONS.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knows a quarter of a whole.",
        "status": "proposed"
@@ -3373,15 +3373,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.MEASUR.LENGTH.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measures length in metres (Grade 2).",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.LENGTH.KNOW_METRE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knows the metre as a unit.",
        "status": "proposed"
@@ -3492,8 +3492,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.LENGTH.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Measured with fixed units.",
        "status": "proposed"
@@ -3837,15 +3837,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.MEASUR.MASS.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measured mass in kilograms (Grade 2).",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.MASS.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knows the kilogram as a unit.",
        "status": "proposed"
@@ -3956,8 +3956,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.MASS.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Measured mass with fixed units.",
        "status": "proposed"
@@ -4299,15 +4299,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.MEASUR.CAPACITY.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measured capacity in litres (Grade 2).",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.CAPACITY.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knows the litre as a unit.",
        "status": "proposed"
@@ -4418,8 +4418,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.CAPACITY.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Measured capacity with fixed units.",
        "status": "proposed"
@@ -4783,15 +4783,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.MEASUR.TIME.e",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.TIME.CLOCK_HANDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies the minute and hour hands.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.TIME.d",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.TIME.ARBITRARY_TIME",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Measured time with arbitrary units.",
        "status": "proposed"
@@ -4828,8 +4828,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.TIME.f",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.TIME.READ_HOUR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads time by the hour.",
        "status": "proposed"
@@ -4866,8 +4866,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.TIME.g",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.TIME.WRITE_HOUR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Wrote time by the hour on digital clocks.",
        "status": "proposed"
@@ -4933,8 +4933,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.MEASUR.TIME.f",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.TIME.READ_HOUR",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Knows the hour from the clock.",
        "status": "proposed"
@@ -5556,8 +5556,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.MEASUR.MONEY.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies coins and notes up to sh. 100.",
        "status": "proposed"
@@ -5600,8 +5600,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.MEASUR.MONEY.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counts sh. 50 and sh. 100 notes.",
        "status": "proposed"
@@ -6306,8 +6306,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.GEOMET.LINES.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Models straight lines.",
        "status": "proposed"
@@ -6352,8 +6352,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Identifies objects and shapes in the environment.",
        "status": "proposed"
@@ -6667,15 +6667,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G2.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies shapes in the environment.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.GEOMET.LINES.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Draws straight lines.",
        "status": "proposed"
@@ -6712,8 +6712,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.GEOMET.SHAPES.c",
-       "kind": "outcome",
+       "requires": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Made patterns of shapes.",
        "status": "proposed"
@@ -6744,8 +6744,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G2.GEOMET.SHAPES.b",
-       "kind": "outcome",
+       "requires": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Draws shapes.",
        "status": "proposed"
