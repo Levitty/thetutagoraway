@@ -9,4 +9,5 @@ import * as inequalities from './inequalities.mjs';
 import * as area from './area.mjs';
 import * as volume from './volume.mjs';
 import * as density from './density.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density];
+import * as speed from './speed.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed];

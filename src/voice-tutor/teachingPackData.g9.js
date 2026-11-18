@@ -9289,6 +9289,1390 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D",
   "sub_strand_name": "Mass, Volume, Weight and Density",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS",
+  "key_step": "The child writes the time in hours (or seconds) before dividing, and checks that a km/h number is bigger than the m/s number for the same speed.",
+  "floor": {
+   "prerequisite": "Finds speed from distance and time.",
+   "question": "120 km in 2 h",
+   "answer": "60 km/h"
+  },
+  "representations": [
+   "a timetable",
+   "a units ladder km/h to m/s",
+   "a stage table"
+  ],
+  "steps": [
+   "Change the time to hours (or seconds).",
+   "Speed = distance / time.",
+   "km/h to m/s: divide by 3.6.",
+   "m/s to km/h: multiply by 3.6."
+  ],
+  "contexts": [
+   "a bus from Nairobi to Nakuru",
+   "the SGR train",
+   "an athlete in Iten"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 18 km in 20 minutes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 20 minutes.",
+    "say": "What part of an hour is this?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for one third."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 18 / (1/3) = 54 km/h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_KM_PER_MINUTE",
+    "listen_for": [
+     "0.9"
+    ],
+    "ask": "Is that per minute or per hour?",
+    "repair": "Per minute: times 60.",
+    "error": "Divides km by minutes and calls it km/h.",
+    "example": {
+     "question": "18 km in 20 minutes. Speed in km/h?",
+     "wrong_answer": "0.9",
+     "correct_answer": "54"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_HUNDRED_MINUTE_HOUR",
+    "listen_for": [
+     "90"
+    ],
+    "ask": "How many minutes in an hour?",
+    "repair": "60.",
+    "error": "Treats an hour as 100 minutes.",
+    "example": {
+     "question": "18 km in 20 minutes. Speed?",
+     "wrong_answer": "90",
+     "correct_answer": "54"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_WRONG_ROW_READ",
+    "listen_for": [
+     "the next stage"
+    ],
+    "ask": "Which row is the stage asked?",
+    "repair": "Point at it.",
+    "error": "Reads the speed of another stage from the table.",
+    "example": {
+     "question": "Find the speed on stage 2.",
+     "wrong_answer": "stage 3 speed",
+     "correct_answer": "stage 2 speed"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_TIME_FOR_SPEED",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Is 20 a speed?",
+    "repair": "A time.",
+    "error": "Gives the time as the speed.",
+    "example": {
+     "question": "18 km in 20 minutes. Speed?",
+     "wrong_answer": "20",
+     "correct_answer": "54"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_MULTIPLY_FOR_MS",
+    "listen_for": [
+     "259.2"
+    ],
+    "ask": "Is the m/s number bigger or smaller?",
+    "repair": "Smaller: divide.",
+    "error": "Multiplies by 3.6 to change km/h to m/s.",
+    "example": {
+     "question": "72 km/h in m/s?",
+     "wrong_answer": "259.2",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_KM_ONLY_CONVERTED",
+    "listen_for": [
+     "72,000"
+    ],
+    "ask": "Did the hours change?",
+    "repair": "No: divide by 3,600.",
+    "error": "Changes km to m but not hours to seconds.",
+    "example": {
+     "question": "72 km/h in m/s?",
+     "wrong_answer": "72,000",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS.M_SIXTY_SECONDS_HOUR",
+    "listen_for": [
+     "1.2"
+    ],
+    "ask": "Seconds in an hour?",
+    "repair": "3,600.",
+    "error": "Uses 60 seconds in an hour.",
+    "example": {
+     "question": "72 km/h in m/s?",
+     "wrong_answer": "1.2",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Change 90 km/h to m/s.",
+    "answer": "25 m/s",
+    "shows": "divide by 3.6"
+   },
+   {
+    "question": "A bus covers 36 km in 40 minutes. Speed in km/h?",
+    "answer": "54 km/h",
+    "shows": "minutes to hours"
+   }
+  ],
+  "name": "Work out speed in km/h and m/s and change between them",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING",
+  "key_step": "The child sees the gap closing by both speeds every hour and divides the distance by the sum.",
+  "floor": {
+   "prerequisite": "Finds time from distance and speed.",
+   "question": "240 km at 60 km/h",
+   "answer": "4 h"
+  },
+  "representations": [
+   "a road line with two arrows",
+   "a table hour by hour",
+   "closing speed"
+  ],
+  "steps": [
+   "Add the speeds (towards each other).",
+   "Time = distance / closing speed.",
+   "Distance of each = its speed x time.",
+   "Check the two distances add to the road."
+  ],
+  "contexts": [
+   "a bus and a matatu between Nairobi and Nakuru",
+   "two cyclists on a murram road",
+   "two trains on a line"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a road 240 km long with a bus at one end and a matatu at the other."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the gap.",
+    "say": "After one hour, how much has the gap shrunk?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 50 + 70 = 120."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 240 / 120 = 2 h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING.M_SPEEDS_SUBTRACTED_MEETING",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Are they moving apart or together?",
+    "repair": "Together: add.",
+    "error": "Subtracts the speeds for vehicles moving towards each other.",
+    "example": {
+     "question": "50 km/h and 70 km/h towards each other. Closing speed?",
+     "wrong_answer": "20",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING.M_ONE_VEHICLE_ONLY",
+    "listen_for": [
+     "4.8 h"
+    ],
+    "ask": "Is the matatu standing still?",
+    "repair": "No: both close the gap.",
+    "error": "Uses one vehicle's speed for the time to meet.",
+    "example": {
+     "question": "240 km apart, 50 and 70 km/h. Time to meet?",
+     "wrong_answer": "4.8 h",
+     "correct_answer": "2 h"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING.M_OTHER_TOWN_DISTANCE",
+    "listen_for": [
+     "140"
+    ],
+    "ask": "From which town?",
+    "repair": "A: the bus's distance.",
+    "error": "Gives the distance from the other town.",
+    "example": {
+     "question": "They meet after 2 h; bus at 50 from A. Distance from A?",
+     "wrong_answer": "140",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING.M_MEET_HALF_WAY",
+    "listen_for": [
+     "half way"
+    ],
+    "ask": "Same speeds?",
+    "repair": "No: the faster goes further.",
+    "error": "Says they meet half way.",
+    "example": {
+     "question": "240 km, 50 and 70 km/h. Where?",
+     "wrong_answer": "120 km from A",
+     "correct_answer": "100 km from A"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Two towns 180 km apart; cars at 40 and 50 km/h towards each other. Time to meet?",
+    "answer": "2 h",
+    "shows": "closing speed"
+   },
+   {
+    "question": "Where do they meet, from the slower car's town?",
+    "answer": "80 km",
+    "shows": "distance of one"
+   }
+  ],
+  "name": "Find when and where two vehicles moving towards each other meet",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED",
+  "key_step": "The child writes total distance and total time (with every rest, both ways) before dividing.",
+  "floor": {
+   "prerequisite": "Finds speed from distance and time.",
+   "question": "150 km in 3 h",
+   "answer": "50 km/h"
+  },
+  "representations": [
+   "a journey table with a rest row",
+   "a timeline",
+   "totals"
+  ],
+  "steps": [
+   "Total distance (both ways if there and back).",
+   "Total time, rests included.",
+   "Divide.",
+   "Do not average the speeds."
+  ],
+  "contexts": [
+   "a matatu with a rest at Naivasha",
+   "a there-and-back trip to Machakos",
+   "a school trip bus"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: 120 km at 60 km/h, 120 km at 40 km/h."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each row.",
+    "say": "How long does each part take?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2 h and 3 h."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 240 / 5 = 48 km/h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_REST_LEFT_OUT",
+    "listen_for": [
+     "66.7"
+    ],
+    "ask": "Was the rest part of the journey?",
+    "repair": "Yes: 4 h.",
+    "error": "Leaves the rest or stop out of the total time.",
+    "example": {
+     "question": "200 km in 3 h of driving plus a 1 h rest. Average speed?",
+     "wrong_answer": "66.7",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_SPEEDS_AVERAGED",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Do both parts take the same time?",
+    "repair": "No: totals.",
+    "error": "Averages the speeds of two parts that take different times.",
+    "example": {
+     "question": "120 km at 60 and 120 km at 40. Average speed?",
+     "wrong_answer": "50",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_DISTANCE_FOR_SPEED",
+    "listen_for": [
+     "240"
+    ],
+    "ask": "Did you divide by time?",
+    "repair": "240 / 5.",
+    "error": "Gives the total distance as the average speed.",
+    "example": {
+     "question": "240 km in 5 h. Average speed?",
+     "wrong_answer": "240",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_TIME_FOR_AVERAGE",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "Is 5 a speed?",
+    "repair": "A time.",
+    "error": "Gives the total time as the average speed.",
+    "example": {
+     "question": "240 km in 5 h. Average speed?",
+     "wrong_answer": "5",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_ONE_WAY_DISTANCE",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "How far was driven altogether?",
+    "repair": "Twice the road.",
+    "error": "Counts the road once for a there-and-back trip.",
+    "example": {
+     "question": "120 km road there and back in 5 h. Average speed?",
+     "wrong_answer": "24",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_MINUTES_AS_HOURS",
+    "listen_for": [
+     "0.75"
+    ],
+    "ask": "Hours or minutes?",
+    "repair": "Hours: 2.",
+    "error": "Divides by the time in minutes.",
+    "example": {
+     "question": "90 km in 120 minutes. Average speed in km/h?",
+     "wrong_answer": "0.75",
+     "correct_answer": "45"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED.M_STOP_ADDED_TWICE",
+    "listen_for": [
+     "3.5 h"
+    ],
+    "ask": "Does 07:00 to 10:00 include the stop?",
+    "repair": "Yes: 3 h.",
+    "error": "Adds the stop again to a time that already includes it.",
+    "example": {
+     "question": "Left 07:00, arrived 10:00 with a 30-minute stop. Time?",
+     "wrong_answer": "3.5 h",
+     "correct_answer": "3 h"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A bus goes 90 km in 1.5 h, rests 30 min, then 60 km in 1 h. Average speed?",
+    "answer": "50 km/h",
+    "shows": "rests included"
+   },
+   {
+    "question": "A road of 100 km is driven there at 50 km/h and back at 100 km/h. Average speed?",
+    "answer": "66.7 km/h",
+    "shows": "there and back"
+   }
+  ],
+  "name": "Work out the average speed for a whole journey",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY",
+  "key_step": "The child draws the trip, joins start to end with a straight line (the displacement), and divides that by the time.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "30 and 40",
+   "answer": "50"
+  },
+  "representations": [
+   "a sketch with arrows",
+   "displacement arrow",
+   "speed and velocity side by side"
+  ],
+  "steps": [
+   "Draw the path.",
+   "Join start to end: displacement.",
+   "Velocity = displacement / time.",
+   "Give the direction."
+  ],
+  "contexts": [
+   "a boda boda ride east then north",
+   "a cyclist out and back",
+   "a lorry heading north"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 30 km east then 40 km north."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the start and the end.",
+    "say": "How far apart are they in a straight line?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 50."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 50 / 2 = 25 km/h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_VELOCITY_AS_SPEED",
+    "listen_for": [
+     "35"
+    ],
+    "ask": "Is that the path or start to end?",
+    "repair": "The path: use 50.",
+    "error": "Uses total distance instead of displacement for velocity.",
+    "example": {
+     "question": "30 km east then 40 km north in 2 h. Average velocity?",
+     "wrong_answer": "35",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_DISPLACEMENT_FOR_VELOCITY",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Did you divide by the time?",
+    "repair": "25.",
+    "error": "Gives the displacement as the velocity.",
+    "example": {
+     "question": "Displacement 50 km in 2 h. Velocity?",
+     "wrong_answer": "50",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_LEGS_SUBTRACTED",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "Are the legs on one line?",
+    "repair": "Right angles: Pythagoras.",
+    "error": "Subtracts the two legs at right angles.",
+    "example": {
+     "question": "30 km east then 40 km north. Displacement?",
+     "wrong_answer": "10",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_VELOCITY_TIMES_TIME",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Multiply or divide?",
+    "repair": "Divide.",
+    "error": "Multiplies displacement by time.",
+    "example": {
+     "question": "50 km in 2 h. Velocity?",
+     "wrong_answer": "100",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_VELOCITY_IGNORES_TIME",
+    "listen_for": [
+     "ignores time"
+    ],
+    "ask": "Is velocity per hour?",
+    "repair": "Yes: it uses time.",
+    "error": "Thinks velocity does not use time.",
+    "example": {
+     "question": "Why is a round trip's velocity 0?",
+     "wrong_answer": "velocity ignores time",
+     "correct_answer": "the displacement is 0"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_VELOCITY_ONLY_SOME_THINGS",
+    "listen_for": [
+     "a bicycle cannot"
+    ],
+    "ask": "Does a cyclist move?",
+    "repair": "Yes: velocity.",
+    "error": "Thinks only some objects (cars, planes) have a velocity.",
+    "example": {
+     "question": "Can a cyclist have a velocity?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_VELOCITY_UPSIDE_DOWN",
+    "listen_for": [
+     "0.04"
+    ],
+    "ask": "Which goes on top?",
+    "repair": "Displacement.",
+    "error": "Divides time by displacement.",
+    "example": {
+     "question": "50 km in 2 h. Velocity?",
+     "wrong_answer": "0.04",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY.M_TIME_SUBTRACTED",
+    "listen_for": [
+     "117"
+    ],
+    "ask": "Is velocity a difference?",
+    "repair": "No: displacement / time.",
+    "error": "Subtracts the time from the displacement.",
+    "example": {
+     "question": "120 km north in 3 h. Velocity?",
+     "wrong_answer": "117",
+     "correct_answer": "40 km/h north"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A walker goes 6 km east then 8 km north in 2 h. Average velocity size?",
+    "answer": "5 km/h",
+    "shows": "displacement"
+   },
+   {
+    "question": "A cyclist rides 10 km east and back in 1 h. Average velocity?",
+    "answer": "0",
+    "shows": "round trip"
+   }
+  ],
+  "name": "Determine velocity as displacement over time, with direction",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION",
+  "key_step": "The child writes the change in velocity between the two times asked and divides by the time between them, with speeds in m/s.",
+  "floor": {
+   "prerequisite": "Finds a gradient.",
+   "question": "(2, 8) and (6, 16)",
+   "answer": "2"
+  },
+  "representations": [
+   "a velocity table",
+   "a velocity-time graph",
+   "units m/s per s"
+  ],
+  "steps": [
+   "Change speeds to m/s.",
+   "Change in velocity between the two times.",
+   "Divide by the time taken.",
+   "For stopping: time = speed / deceleration."
+  ],
+  "contexts": [
+   "a matatu braking at a bump",
+   "a boda boda pulling away",
+   "a train leaving the station"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: t 2 s, v 8 m/s; t 6 s, v 16 m/s."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two velocities.",
+    "say": "By how much did the velocity change?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 8."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 8 / 4 = 2 m/s squared."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_FINAL_OVER_TIME",
+    "listen_for": [
+     "2.67"
+    ],
+    "ask": "Did it start from rest?",
+    "repair": "No: use the change.",
+    "error": "Divides the final velocity by the time when the start was not at rest.",
+    "example": {
+     "question": "From 4 m/s to 16 m/s in 6 s. Acceleration?",
+     "wrong_answer": "2.67",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_CHANGE_NOT_DIVIDED",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Per second?",
+    "repair": "Divide by the time.",
+    "error": "Gives the change in velocity as the acceleration.",
+    "example": {
+     "question": "From 4 to 16 m/s in 6 s. Acceleration?",
+     "wrong_answer": "12",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_WRONG_READINGS_USED",
+    "listen_for": [
+     "the end of the table"
+    ],
+    "ask": "Which times were asked?",
+    "repair": "2 s and 6 s.",
+    "error": "Uses readings at the wrong times from the table.",
+    "example": {
+     "question": "Acceleration between 2 s and 6 s?",
+     "wrong_answer": "used 0 s and 8 s",
+     "correct_answer": "used 2 s and 6 s"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_ACCEL_UPSIDE_DOWN",
+    "listen_for": [
+     "0.5"
+    ],
+    "ask": "Which goes on top?",
+    "repair": "The velocity change.",
+    "error": "Divides time by change in velocity.",
+    "example": {
+     "question": "Change 12 m/s in 6 s. Acceleration?",
+     "wrong_answer": "0.5",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_START_VELOCITY_FOR_ACCEL",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Is that the slope?",
+    "repair": "It is where the line starts.",
+    "error": "Gives the starting velocity as the acceleration.",
+    "example": {
+     "question": "A line starts at 4 m/s and rises. Acceleration?",
+     "wrong_answer": "4",
+     "correct_answer": "the slope"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_KMH_WITH_MS2",
+    "listen_for": [
+     "18"
+    ],
+    "ask": "Are the units the same?",
+    "repair": "Change to m/s.",
+    "error": "Uses km/h with an acceleration in m/s squared.",
+    "example": {
+     "question": "54 km/h, slowing at 3 m/s squared. Time to stop?",
+     "wrong_answer": "18",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_DECEL_MULTIPLIED",
+    "listen_for": [
+     "45"
+    ],
+    "ask": "Speed lost each second is 3. How many seconds to lose 15?",
+    "repair": "5.",
+    "error": "Multiplies speed by deceleration for the time.",
+    "example": {
+     "question": "15 m/s, slowing at 3 m/s squared. Time to stop?",
+     "wrong_answer": "45",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_CONVERTED_TWICE",
+    "listen_for": [
+     "1.39"
+    ],
+    "ask": "How many times did you divide by 3.6?",
+    "repair": "Once only.",
+    "error": "Divides by 3.6 twice.",
+    "example": {
+     "question": "54 km/h at 3 m/s squared. Time?",
+     "wrong_answer": "1.39",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_SPEED_FOR_TIME",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Is 15 a time?",
+    "repair": "A speed: divide by 3.",
+    "error": "Gives the speed in m/s as the time.",
+    "example": {
+     "question": "15 m/s at 3 m/s squared. Time?",
+     "wrong_answer": "15",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_ACCEL_SQUARED_TIME",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "Multiply or divide?",
+    "repair": "Divide.",
+    "error": "Multiplies the final velocity by the time.",
+    "example": {
+     "question": "From rest to 20 m/s in 4 s. Acceleration?",
+     "wrong_answer": "80",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION.M_TIME_ADDED_ACCEL",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "Add or divide?",
+    "repair": "Divide: 20 / 4.",
+    "error": "Adds the time to the velocity.",
+    "example": {
+     "question": "From rest to 20 m/s in 4 s. Acceleration?",
+     "wrong_answer": "24",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A car goes from 5 m/s to 25 m/s in 4 s. Acceleration?",
+    "answer": "5 m/s squared",
+    "shows": "change over time"
+   },
+   {
+    "question": "A matatu at 72 km/h brakes at 4 m/s squared. Seconds to stop?",
+    "answer": "5 s",
+    "shows": "convert then divide"
+   }
+  ],
+  "name": "Work out acceleration and deceleration",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH",
+  "key_step": "The child shades the area under the graph and splits it into a triangle and a rectangle before working anything out.",
+  "floor": {
+   "prerequisite": "Finds the area of a triangle and a rectangle.",
+   "question": "Triangle 6 by 12; rectangle 14 by 12",
+   "answer": "36 and 168"
+  },
+  "representations": [
+   "a shaded velocity-time graph",
+   "the area split into shapes",
+   "a table of parts"
+  ],
+  "steps": [
+   "Shade the area under the line.",
+   "Split it into a triangle and a rectangle.",
+   "Find each area.",
+   "Add them for the distance."
+  ],
+  "contexts": [
+   "a bus leaving a stage",
+   "a sprinter in a race",
+   "a lift going up"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a graph rising to 12 m/s at 6 s, then flat to 20 s."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child shades the area and splits it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the triangle.",
+    "say": "What is its area?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 36 + 168 = 204 m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH.M_FULL_SPEED_FROM_START",
+    "listen_for": [
+     "240"
+    ],
+    "ask": "Was the bus at 12 m/s at the start?",
+    "repair": "No: the first part is a triangle.",
+    "error": "Uses the top velocity for the whole time.",
+    "example": {
+     "question": "Up to 12 m/s in 6 s, then 12 m/s to 20 s. Distance?",
+     "wrong_answer": "240",
+     "correct_answer": "204"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH.M_WHOLE_AS_TRIANGLE",
+    "listen_for": [
+     "120"
+    ],
+    "ask": "Is the whole shape a triangle?",
+    "repair": "No: a triangle and a rectangle.",
+    "error": "Treats the whole area as one triangle.",
+    "example": {
+     "question": "Up to 12 m/s in 6 s, then 12 m/s to 20 s. Distance?",
+     "wrong_answer": "120",
+     "correct_answer": "204"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH.M_RECTANGLE_ONLY",
+    "listen_for": [
+     "168"
+    ],
+    "ask": "Did the bus move while speeding up?",
+    "repair": "Yes: add 36.",
+    "error": "Counts only the constant-velocity part.",
+    "example": {
+     "question": "Same graph. Distance?",
+     "wrong_answer": "168",
+     "correct_answer": "204"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH.M_TRIANGLE_ONLY",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "Did the bus stop at 6 s?",
+    "repair": "No: add the rectangle.",
+    "error": "Counts only the speeding-up part.",
+    "example": {
+     "question": "Same graph. Distance?",
+     "wrong_answer": "36",
+     "correct_answer": "204"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A train speeds up from rest to 20 m/s in 10 s, then keeps 20 m/s for 30 s. Distance?",
+    "answer": "700 m",
+    "shows": "triangle plus rectangle"
+   },
+   {
+    "question": "Distance while speeding up only?",
+    "answer": "100 m",
+    "shows": "triangle"
+   }
+  ],
+  "name": "Find distance as the area under a velocity-time graph",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY",
+  "key_step": "The child traces a longitude from pole to pole on a globe and reads its degrees east or west of Greenwich.",
+  "floor": {
+   "prerequisite": "Reads positions from a zero line.",
+   "question": "On a number line, where is -3?",
+   "answer": "3 to the left of 0"
+  },
+  "representations": [
+   "a globe",
+   "a world map with longitudes",
+   "a table of cities and longitudes"
+  ],
+  "steps": [
+   "Find the Greenwich meridian (0 degrees).",
+   "Move east or west.",
+   "Read the degrees.",
+   "Write E or W."
+  ],
+  "contexts": [
+   "Nairobi and Kisumu on a map",
+   "flights to London",
+   "a globe in the classroom"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a globe with the Greenwich meridian and a few longitudes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a line to the right of Greenwich.",
+    "say": "East or west?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for east."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write Nairobi about 37 degrees E."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY.M_LONGITUDE_AS_LATITUDE",
+    "listen_for": [
+     "latitudes run pole to pole"
+    ],
+    "ask": "Which lines are long, from pole to pole?",
+    "repair": "Longitudes.",
+    "error": "Mixes up longitude and latitude.",
+    "example": {
+     "question": "Which lines run from pole to pole?",
+     "wrong_answer": "latitudes",
+     "correct_answer": "longitudes"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY.M_NO_EAST_WEST",
+    "listen_for": [
+     "37 degrees"
+    ],
+    "ask": "East or west of Greenwich?",
+    "repair": "East: 37 E.",
+    "error": "Gives a longitude without E or W.",
+    "example": {
+     "question": "Longitude of Nairobi?",
+     "wrong_answer": "37 degrees",
+     "correct_answer": "37 degrees E"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY.M_LONGITUDE_BEYOND_180",
+    "listen_for": [
+     "360"
+    ],
+    "ask": "Where do east and west meet?",
+    "repair": "At 180.",
+    "error": "Gives longitudes beyond 180 degrees.",
+    "example": {
+     "question": "How far east can a longitude go?",
+     "wrong_answer": "360 degrees",
+     "correct_answer": "180 degrees"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY.M_EQUATOR_AS_ZERO_LONGITUDE",
+    "listen_for": [
+     "the equator"
+    ],
+    "ask": "Does the equator run pole to pole?",
+    "repair": "No: Greenwich is 0 longitude.",
+    "error": "Takes the equator as 0 degrees longitude.",
+    "example": {
+     "question": "Which line is 0 degrees longitude?",
+     "wrong_answer": "the equator",
+     "correct_answer": "the Greenwich meridian"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is Lima (77 degrees) east or west of Greenwich?",
+    "answer": "West",
+    "shows": "east or west"
+   },
+   {
+    "question": "What is the longitude of the Greenwich meridian?",
+    "answer": "0 degrees",
+    "shows": "the zero line"
+   }
+  ],
+  "name": "Identify longitudes on the globe",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME",
+  "key_step": "The child finds the difference in longitude (subtract on the same side, add across 0 degrees), then multiplies by 4 for minutes.",
+  "floor": {
+   "prerequisite": "Converts minutes to hours.",
+   "question": "148 minutes",
+   "answer": "2 h 28 min"
+  },
+  "representations": [
+   "a longitude line with 0 marked",
+   "4 minutes a degree",
+   "15 degrees an hour"
+  ],
+  "steps": [
+   "Same side: subtract. Opposite sides: add.",
+   "Times 4 for minutes.",
+   "Change to hours and minutes.",
+   "Going back: minutes / 4 = degrees."
+  ],
+  "contexts": [
+   "Nairobi and Kinshasa",
+   "Mombasa and New York",
+   "a radio broadcast across Africa"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line with 0 in the middle, 37 E on the right, 74 W on the left."
+   },
+   {
+    "beat": "point",
+    "do": "Point at both places.",
+    "say": "Same side or opposite sides of 0?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for opposite: add."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 37 + 74 = 111 degrees, x 4 = 444 minutes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_ONE_MINUTE_PER_DEGREE",
+    "listen_for": [
+     "37 minutes"
+    ],
+    "ask": "How many minutes for each degree?",
+    "repair": "4.",
+    "error": "Uses 1 minute of time for each degree.",
+    "example": {
+     "question": "A difference of 37 degrees. Time?",
+     "wrong_answer": "37 minutes",
+     "correct_answer": "148 minutes"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_FIFTEEN_PER_DEGREE",
+    "listen_for": [
+     "150 minutes"
+    ],
+    "ask": "Is it 15 degrees an hour or 15 minutes a degree?",
+    "repair": "15 degrees an hour.",
+    "error": "Uses 15 minutes for each degree.",
+    "example": {
+     "question": "A difference of 10 degrees. Time?",
+     "wrong_answer": "150 minutes",
+     "correct_answer": "40 minutes"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_DEGREES_DIVIDED",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "Multiply or divide by 4?",
+    "repair": "Multiply.",
+    "error": "Divides the degrees by 4.",
+    "example": {
+     "question": "A difference of 40 degrees. Time?",
+     "wrong_answer": "10 minutes",
+     "correct_answer": "160 minutes"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_SAME_SIDE_ADDED",
+    "listen_for": [
+     "52"
+    ],
+    "ask": "Same side of 0?",
+    "repair": "Yes: subtract.",
+    "error": "Adds the longitudes of two places on the same side of 0 degrees.",
+    "example": {
+     "question": "37 degrees E and 15 degrees E. Difference?",
+     "wrong_answer": "52",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_OPPOSITE_SIDES_SUBTRACTED",
+    "listen_for": [
+     "37"
+    ],
+    "ask": "Do you cross 0?",
+    "repair": "Yes: add.",
+    "error": "Subtracts the longitudes of places on opposite sides of 0 degrees.",
+    "example": {
+     "question": "37 degrees E and 74 degrees W. Difference?",
+     "wrong_answer": "37",
+     "correct_answer": "111"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_EAST_WEST_SWAPPED_LON",
+    "listen_for": [
+     "22 E"
+    ],
+    "ask": "Ahead means east or west?",
+    "repair": "East: bigger.",
+    "error": "Moves the wrong way in longitude for a place ahead or behind.",
+    "example": {
+     "question": "A town 1 h ahead of Nairobi (37 E). Longitude?",
+     "wrong_answer": "22 E",
+     "correct_answer": "52 E"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_MINUTES_AS_DEGREES",
+    "listen_for": [
+     "97 E"
+    ],
+    "ask": "Are 60 minutes 60 degrees?",
+    "repair": "No: 15.",
+    "error": "Uses the minutes as degrees without dividing by 4.",
+    "example": {
+     "question": "A town 60 minutes ahead of 37 E. Longitude?",
+     "wrong_answer": "97 E",
+     "correct_answer": "52 E"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_HOURS_ONLY",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Where did the 20 minutes go?",
+    "repair": "140 / 4 = 35.",
+    "error": "Uses only the whole hours and drops the minutes.",
+    "example": {
+     "question": "2 h 20 min ahead. Degrees?",
+     "wrong_answer": "30",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME.M_DIFFERENCE_AS_LONGITUDE",
+    "listen_for": [
+     "15 E"
+    ],
+    "ask": "Is 15 the town's longitude?",
+    "repair": "Add it to 37.",
+    "error": "Gives the difference in longitude as the longitude.",
+    "example": {
+     "question": "A town 15 degrees east of Nairobi (37 E). Longitude?",
+     "wrong_answer": "15 E",
+     "correct_answer": "52 E"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Kisumu 35 E and Accra 0. Time difference?",
+    "answer": "2 h 20 min",
+    "shows": "degrees to minutes"
+   },
+   {
+    "question": "A town is 1 h 40 min behind Mombasa (40 E). Its longitude?",
+    "answer": "15 E",
+    "shows": "minutes to degrees"
+   }
+  ],
+  "name": "Relate a difference in longitude to a difference in time",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME": {
+  "skill": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME",
+  "key_step": "The child decides ahead (east) or behind (west) first, then adds or subtracts the whole time difference, minutes included.",
+  "floor": {
+   "prerequisite": "Turns degrees into time.",
+   "question": "30 degrees",
+   "answer": "2 h"
+  },
+  "representations": [
+   "a clock face",
+   "a world map with arrows east is ahead",
+   "a timeline for a flight"
+  ],
+  "steps": [
+   "Time difference from the longitudes.",
+   "East: add. West: subtract.",
+   "For a flight: add the flight time first.",
+   "Then change to the local time."
+  ],
+  "contexts": [
+   "a call from Nairobi to a cousin in New York",
+   "a flight from Nairobi to Lagos",
+   "a football match shown live"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a map with Nairobi in the middle and arrows: east ahead, west behind."
+   },
+   {
+    "beat": "point",
+    "do": "Point at Lima, to the west.",
+    "say": "Is Lima's clock ahead or behind?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for behind."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write noon - 7 h 36 min = 04:24."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME.M_EAST_WEST_SWAPPED",
+    "listen_for": [
+     "later for the west"
+    ],
+    "ask": "Where does the sun rise first?",
+    "repair": "In the east: east is ahead.",
+    "error": "Adds time for a place to the west or subtracts for a place to the east.",
+    "example": {
+     "question": "Noon in Nairobi. Local time in Lima (to the west)?",
+     "wrong_answer": "later than noon",
+     "correct_answer": "earlier than noon"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME.M_LEFTOVER_MINUTES_DROPPED",
+    "listen_for": [
+     "05:00"
+    ],
+    "ask": "Where are the 24 minutes?",
+    "repair": "Take them away too.",
+    "error": "Uses only whole hours of the time difference.",
+    "example": {
+     "question": "Time difference 7 h 24 min. Noon in Nairobi; Lima?",
+     "wrong_answer": "05:00",
+     "correct_answer": "04:36"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME.M_DEPARTURE_ZONE_KEPT",
+    "listen_for": [
+     "13:00"
+    ],
+    "ask": "Whose clock is that?",
+    "repair": "Nairobi's: change it.",
+    "error": "Gives the arrival time in the departure city's time.",
+    "example": {
+     "question": "Leave Nairobi 08:00, fly 5 h west. Local arrival?",
+     "wrong_answer": "13:00",
+     "correct_answer": "earlier than 13:00"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME.M_DIFFERENCE_WRONG_WAY",
+    "listen_for": [
+     "15:00"
+    ],
+    "ask": "Ahead or behind?",
+    "repair": "Behind: subtract.",
+    "error": "Applies the time difference in the wrong direction after a flight.",
+    "example": {
+     "question": "Land 13:00 Nairobi time in a city 2 h behind. Local time?",
+     "wrong_answer": "15:00",
+     "correct_answer": "11:00"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME.M_ONE_MINUTE_LOCAL",
+    "listen_for": [
+     "11:30"
+    ],
+    "ask": "Minutes for each degree?",
+    "repair": "4.",
+    "error": "Uses 1 minute a degree when finding the local time.",
+    "example": {
+     "question": "Nairobi 37 E noon; place 7 E. Local time?",
+     "wrong_answer": "11:30",
+     "correct_answer": "10:00"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "It is 09:00 in Nairobi (37 E). Local time in Lagos (3 E)?",
+    "answer": "06:44",
+    "shows": "west is behind"
+   },
+   {
+    "question": "A plane leaves Nairobi (37 E) at 10:00 and flies 4 h to Dubai (55 E). Local arrival?",
+    "answer": "15:12",
+    "shows": "flight then local"
+   }
+  ],
+  "name": "Determine the local time of places on different longitudes",
+  "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
+  "sub_strand_name": "Time, Distance and Speed",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

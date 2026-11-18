@@ -705,6 +705,87 @@
     "complete the steps"
    ],
    "mastery": "The child finds the volume of an irregular stone by the rise in water level in a measuring cylinder, then its density; finds the mean density of a mixture as total mass over total volume (not the average of the densities); and uses a known density to find the mass of another piece."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS": {
+   "forms": [
+    "speed in km/h",
+    "change to m/s",
+    "speed on a stage",
+    "from the table"
+   ],
+   "mastery": "The child finds speed as distance over time with the time in hours for km/h (45 minutes = 0.75 h) or in seconds for m/s, and changes km/h to m/s by dividing by 3.6 and m/s to km/h by multiplying by 3.6: 72 km/h = 20 m/s."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING": {
+   "forms": [
+    "when do they meet",
+    "how far from",
+    "closing speed",
+    "complete the steps"
+   ],
+   "mastery": "The child adds the two speeds for vehicles moving towards each other (the gap closes at v1 + v2), finds the time to meet as the distance over that sum, and the meeting place from either vehicle's distance: 240 km apart at 50 and 70 km/h, they meet after 2 h, 100 km from the first town."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED": {
+   "forms": [
+    "average speed for the whole journey",
+    "including the stop",
+    "there and back",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds average speed as total distance over total time, counting rests and stops in the time, counting both ways of a there-and-back trip in the distance, and does not average the speeds of parts that take different times: 120 km at 60 km/h and 120 km at 40 km/h is 240 / 5 = 48 km/h."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY": {
+   "forms": [
+    "size of the average velocity",
+    "why is the velocity zero",
+    "velocity north",
+    "speed or velocity"
+   ],
+   "mastery": "The child tells velocity (displacement in a direction over time) from speed (distance over time), finds the displacement of a two-leg trip at right angles by Pythagoras, says a round trip has zero average velocity, and gives velocity with its direction: 30 km east then 40 km north in 2 h is 25 km/h."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION": {
+   "forms": [
+    "find the acceleration",
+    "from the table",
+    "from the graph",
+    "how long to stop"
+   ],
+   "mastery": "The child finds acceleration as change in velocity over time (from a table, a graph or a story), in m/s squared, uses the change between the two readings asked, changes km/h to m/s before using m/s squared, and finds the time to stop as speed over deceleration: 54 km/h = 15 m/s, at 3 m/s squared it stops in 5 s."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH": {
+   "forms": [
+    "how far in the first 20 s",
+    "area under the graph",
+    "distance while speeding up",
+    "which shapes"
+   ],
+   "mastery": "The child splits the area under a velocity-time graph into a triangle (speeding up from rest) and a rectangle (constant velocity) and adds them: up to 12 m/s in 6 s, then 12 m/s to 20 s, is 36 + 168 = 204 m."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY": {
+   "forms": [
+    "what is a longitude",
+    "east or west",
+    "the prime meridian",
+    "longitude of the place"
+   ],
+   "mastery": "The child describes longitudes as half-circles from the North Pole to the South Pole, measured in degrees east or west of the Greenwich meridian (0 degrees) up to 180 degrees, and gives the longitude of a place with E or W (Nairobi about 37 degrees E, Lima about 77 degrees W)."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME": {
+   "forms": [
+    "how many minutes apart",
+    "find the longitude",
+    "difference in longitude",
+    "degrees to minutes"
+   ],
+   "mastery": "The child finds the difference in longitude (subtract when both are east or both west, add when on opposite sides of 0 degrees) and turns it into time at 4 minutes a degree (15 degrees an hour), and works back from a time difference to a longitude: 2 h 20 min = 140 minutes = 35 degrees."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME": {
+   "forms": [
+    "local time in",
+    "what time does the plane land",
+    "which step is wrong",
+    "ahead or behind"
+   ],
+   "mastery": "The child finds the time difference from the longitudes, adds it for a place to the east (ahead) and takes it away for a place to the west (behind), keeps the leftover minutes, and for a flight adds the flight time first and then changes to the local time at the arrival city."
   }
  }
 }

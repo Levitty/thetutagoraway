@@ -537,7 +537,7 @@ export const FAMILIES = [
     check: ({ rho, rise, start, chip }, v) => v[0] === rise && Math.abs(v[1] * v[0] - rho * rise) < 1e-6 && Math.abs(v[2] / chip - v[1]) < 1e-6 }),
 
   // ======================================================== SPEED
-  fam({ id: 'g9.speed.stage-table', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.a', rung: 2, form: 'table',
+  fam({ id: 'g9.speed.stage-table', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.a', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS', rung: 2, form: 'table',
     draw: () => {
       const rs = [...ROADS].sort(() => Math.random() - 0.5).slice(0, 3);
       const rows = rs.map(([a, b, d]) => { const v = pick([40, 45, 50, 60, 75, 80]); return { a, b, d, v, min: (d / v) * 60 }; });
@@ -549,28 +549,28 @@ export const FAMILIES = [
       return { question: `The table shows the stages of a bus journey. Find the speed of the bus on the stage from ${r.a} to ${r.b}, in km/h.`,
         model: { type: 'table', data: { head: ['Stage', 'Distance (km)', 'Time (minutes)'], rows: rows.map(x => ({ cells: [`${x.a} to ${x.b}`, String(x.d), String(x.min)] })) } },
         answer: r.v,
-        wrong: [[round(r.d / r.min, 2), 'That is the speed in km per minute. The question asks for km per hour.'], [round(r.d / (r.min / 100), 1), 'An hour is not made of 100 minutes. Change the minutes to hours before dividing.'], [other.v, 'That is the speed on a different stage. Check you read the right row.'], [r.min, 'That is the time in minutes. Speed = distance ÷ time.']],
+        wrong: [[round(r.d / r.min, 2), 'That is the speed in km per minute. The question asks for km per hour.', 'M_KM_PER_MINUTE'], [round(r.d / (r.min / 100), 1), 'An hour is not made of 100 minutes. Change the minutes to hours before dividing.', 'M_HUNDRED_MINUTE_HOUR'], [other.v, 'That is the speed on a different stage. Check you read the right row.', 'M_WRONG_ROW_READ'], [r.min, 'That is the time in minutes. Speed = distance ÷ time.', 'M_TIME_FOR_SPEED']],
         hints: ['Speed = distance ÷ time, with the time in hours.', 'Change minutes to hours by dividing by 60.'],
         steps: [`The time is ${r.min} minutes. There are 60 minutes in an hour, so speed = distance × 60 ÷ minutes.`, `${r.d} × 60 ÷ ${r.min} = ${r.v} km/h.`] };
     },
     check: ({ rows, k }, a) => Math.abs((a * rows[k].min) / 60 - rows[k].d) < 1e-6 }),
 
-  fam({ id: 'g9.speed.meet-on-road', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.a', rung: 3, form: 'steps',
+  fam({ id: 'g9.speed.meet-on-road', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.a', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING', rung: 3, form: 'steps',
     draw: () => { const [a, b, D] = pick(ROADS.filter(r => r[2] >= 120)); const v1 = pick([40, 50, 60, 70, 80]), v2 = pick([60, 70, 80, 90, 100]); const t = D / (v1 + v2); return v1 !== v2 && Math.abs(t * 2 - Math.round(t * 2)) < 1e-9 ? { a, b, D, v1, v2 } : null; },
     make: ({ a, b, D, v1, v2 }) => {
       const t = D / (v1 + v2);
       return { question: `A bus leaves ${a} for ${b} at ${v1} km/h. At the same moment a matatu leaves ${b} for ${a} at ${v2} km/h on the same road. The road is ${D} km long. The two vehicles meet on the way.`,
         parts: [
-          { prompt: 'How many km closer do they get to each other every hour?', answer: v1 + v2, unit: 'km', hint: 'They travel towards each other, so add their speeds.', wrong: [[Math.abs(v2 - v1), 'They move towards each other, so the gaps add. Do not subtract.']] },
-          { prompt: 'After how many hours do they meet?', answer: t, unit: 'hours', hint: 'Time = distance ÷ speed. Use the distance between the towns and how fast they close it.', wrong: [[round(D / v1, 2), 'Both vehicles are moving. Use the speed at which the gap closes.'], [round(D / Math.abs(v2 - v1), 2), 'They are moving towards each other, so add the speeds.']] },
-          { prompt: `How far from ${a} do they meet, in km?`, answer: v1 * t, unit: 'km', hint: `The bus has been travelling for the time you found.`, wrong: [[v2 * t, `That is the distance from ${b}.`], [round(D / 2, 1), 'They are not travelling at the same speed, so they do not meet half way.']] },
+          { prompt: 'How many km closer do they get to each other every hour?', answer: v1 + v2, unit: 'km', hint: 'They travel towards each other, so add their speeds.', wrong: [[Math.abs(v2 - v1), 'They move towards each other, so the gaps add. Do not subtract.', 'M_SPEEDS_SUBTRACTED_MEETING']] },
+          { prompt: 'After how many hours do they meet?', answer: t, unit: 'hours', hint: 'Time = distance ÷ speed. Use the distance between the towns and how fast they close it.', wrong: [[round(D / v1, 2), 'Both vehicles are moving. Use the speed at which the gap closes.', 'M_ONE_VEHICLE_ONLY'], [round(D / Math.abs(v2 - v1), 2), 'They are moving towards each other, so add the speeds.', 'M_SPEEDS_SUBTRACTED_MEETING']] },
+          { prompt: `How far from ${a} do they meet, in km?`, answer: v1 * t, unit: 'km', hint: `The bus has been travelling for the time you found.`, wrong: [[v2 * t, `That is the distance from ${b}.`, 'M_OTHER_TOWN_DISTANCE'], [round(D / 2, 1), 'They are not travelling at the same speed, so they do not meet half way.', 'M_MEET_HALF_WAY']] },
         ],
         hints: ['Think of the gap between the vehicles shrinking.'],
         steps: [`The gap closes by ${v1} + ${v2} = ${v1 + v2} km every hour.`, `Time: ${D} ÷ ${v1 + v2} = ${T(t)} hours.`, `Distance from ${a}: ${v1} × ${T(t)} = ${T(v1 * t)} km.`] };
     },
     check: ({ D, v1, v2 }, v) => v[0] === v1 + v2 && Math.abs(v[1] * v[0] - D) < 1e-6 && Math.abs(v[2] + v2 * v[1] - D) < 1e-6 }),
 
-  fam({ id: 'g9.speed.journey-table', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.b', rung: 2, form: 'table',
+  fam({ id: 'g9.speed.journey-table', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.b', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED', rung: 2, form: 'table',
     draw: () => {
       const d1 = pick([60, 90, 120, 150]), t1 = pick([1, 1.5, 2, 2.5, 3]), d2 = pick([60, 80, 100, 120]), t2 = pick([1, 1.5, 2, 2.5]), rest = pick([0.5, 1]);
       const avg = (d1 + d2) / (t1 + t2 + rest);
@@ -581,13 +581,13 @@ export const FAMILIES = [
       return { question: 'A matatu makes a journey in two parts with a rest in between. The table shows the journey. Find its average speed for the whole journey, including the rest, in km/h.',
         model: { type: 'table', data: { head: ['Part', 'Distance (km)', 'Time (hours)'], rows: [{ cells: ['First part', String(d1), String(t1)] }, { cells: ['Rest', '0', String(rest)] }, { cells: ['Second part', String(d2), String(t2)] }] } },
         answer: avg,
-        wrong: [[round(D / (t1 + t2), 2), 'The rest is part of the journey time. Include it.'], [round((d1 / t1 + d2 / t2) / 2, 2), 'The two parts last different times, so you cannot just average the two speeds. Use total distance ÷ total time.'], [round(D, 2), 'That is the total distance. Divide it by the total time.'], [round(Tt, 2), 'That is the total time. Average speed is distance ÷ time.']],
+        wrong: [[round(D / (t1 + t2), 2), 'The rest is part of the journey time. Include it.', 'M_REST_LEFT_OUT'], [round((d1 / t1 + d2 / t2) / 2, 2), 'The two parts last different times, so you cannot just average the two speeds. Use total distance ÷ total time.', 'M_SPEEDS_AVERAGED'], [round(D, 2), 'That is the total distance. Divide it by the total time.', 'M_DISTANCE_FOR_SPEED'], [round(Tt, 2), 'That is the total time. Average speed is distance ÷ time.', 'M_TIME_FOR_AVERAGE']],
         hints: ['Average speed = total distance ÷ total time.', 'Add the three times, including the rest.'],
         steps: [`Total distance: ${d1} + ${d2} = ${D} km.`, `Total time: ${t1} + ${rest} + ${t2} = ${T(Tt)} hours.`, `Average speed: ${D} ÷ ${T(Tt)} = ${T(avg)} km/h.`] };
     },
     check: ({ d1, d2, t1, t2, rest }, a) => Math.abs(a * (t1 + t2 + rest) - (d1 + d2)) < 0.011 }),
 
-  fam({ id: 'g9.speed.there-and-back-spot', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.b', rung: 3, form: 'spot',
+  fam({ id: 'g9.speed.there-and-back-spot', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.b', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED', rung: 3, form: 'spot',
     draw: () => { const [a, b, D] = pick(ROADS); const v1 = pick([40, 50, 80, 100]), v2 = pick([40, 50, 80, 100]); if (v1 === v2 || !dp(D / v1, 2) || !dp(D / v2, 2)) return null; return { a, b, D, v1, v2, kind: pick(['once', 'speeds']), who: person() }; },
     make: ({ a, b, D, v1, v2, kind, who }) => {
       const Tt = round(D / v1 + D / v2, 3), dist = kind === 'once' ? D : 2 * D, shown = kind === 'speeds' ? (v1 + v2) / 2 : round(dist / Tt, 1);
@@ -597,11 +597,12 @@ export const FAMILIES = [
           { text: `Time = ${D} ÷ ${v1} + ${D} ÷ ${v2} = ${T(round(D / v1, 3))} + ${T(round(D / v2, 3))} = ${T(Tt)} hours`, ok: true },
           { text: kind === 'speeds' ? `Average speed = (${v1} + ${v2}) ÷ 2 = ${T(shown)} km/h` : `Average speed = ${dist} ÷ ${T(Tt)} = ${T(shown)} km/h`, ok: Math.abs(shown - dist / Tt) < 0.06 },
         ],
+        mis: kind === 'once' ? 'M_ONE_WAY_DISTANCE' : 'M_SPEEDS_AVERAGED',
         fix: kind === 'once' ? 'The trip is there and back, so the total distance is the road length twice.' : 'The two parts take different times, so the speeds cannot just be averaged. Use total distance ÷ total time.',
         steps: [`Total distance: ${2 * D} km. Total time: ${T(Tt)} hours.`, `Average speed: ${2 * D} ÷ ${T(Tt)} = ${T(round((2 * D) / Tt, 1))} km/h, to 1 decimal place.`] };
     } }),
 
-  fam({ id: 'g9.speed.whole-journey-stop', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.b', rung: 2, form: 'word',
+  fam({ id: 'g9.speed.whole-journey-stop', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.b', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED', rung: 2, form: 'word',
     draw: () => {
       const [a, b, D] = pick(ROADS.filter(r => r[2] >= 150)), dep = pick([360, 390, 420, 450, 480]), span = pick([180, 210, 240, 270, 300, 360]), stop = pick([30, 60]);
       const w = D / (span / 60), m = D / ((span - stop) / 60);
@@ -611,49 +612,49 @@ export const FAMILIES = [
       const w = round(D / (span / 60), 2), m = round(D / ((span - stop) / 60), 2);
       return { question: `A bus leaves ${a} at ${clock(dep)} in the morning. It reaches ${b}, ${D} km away, at ${clock(dep + span)}. On the way it stops for ${stop} minutes. Find the average speed for the whole journey, including the stop, in km/h.`,
         answer: w,
-        wrong: [[m, 'The stop is part of the journey time. The question asks for the whole journey, including the stop.'], [round(D / span, 3), 'The time is in minutes. Change it to hours first.'], [round(D / (span / 60 + stop / 60), 2), 'The time between leaving and arriving already includes the stop. Do not add it again.'], [round(span / 60, 2), 'That is the time in hours. Average speed is distance ÷ time.']],
+        wrong: [[m, 'The stop is part of the journey time. The question asks for the whole journey, including the stop.', 'M_REST_LEFT_OUT'], [round(D / span, 3), 'The time is in minutes. Change it to hours first.', 'M_MINUTES_AS_HOURS'], [round(D / (span / 60 + stop / 60), 2), 'The time between leaving and arriving already includes the stop. Do not add it again.', 'M_STOP_ADDED_TWICE'], [round(span / 60, 2), 'That is the time in hours. Average speed is distance ÷ time.', 'M_TIME_FOR_AVERAGE']],
         hints: ['Find the time from leaving to arriving.', 'Average speed = total distance ÷ total time.'],
         steps: [`Time: ${clock(dep)} to ${clock(dep + span)} is ${span} minutes = ${T(span / 60)} hours.`, `Speed: ${D} ÷ ${T(span / 60)} = ${T(w)} km/h.`] };
     },
     check: ({ D, span }, a) => Math.abs((a * span) / 60 - D) < 0.011 }),
 
-  fam({ id: 'g9.speed.velocity-two-legs', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.c', rung: 3, form: 'word',
+  fam({ id: 'g9.speed.velocity-two-legs', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY', rung: 3, form: 'word',
     draw: () => { const [a, b, c] = pick(TRIPLES.concat([[12, 16, 20], [15, 20, 25]])); const t = pick([1, 2, 2.5, 4, 5]); return dp(c / t, 1) && distinct(c / t, (a + b) / t, c) ? { a: a * 1, b, c, t, who: person() } : null; },
     make: ({ a, b, c, t, who }) => ({
       question: `${who.name} rides a boda boda ${a} km due east and then ${b} km due north. The whole ride takes ${t} hours. Find the size of ${who.her} average velocity for the ride, in km/h.`,
       answer: round(c / t, 2),
-      wrong: [[round((a + b) / t, 2), 'That is the distance ÷ time, which is the average speed. Velocity uses the straight-line displacement from start to end.'], [c, 'That is the displacement. Now divide it by the time.'], [round(Math.abs(b - a) / t, 2), 'The two legs are at right angles. Use Pythagoras to find the displacement.'], [round(c * t, 2), 'Velocity is displacement divided by time.']],
+      wrong: [[round((a + b) / t, 2), 'That is the distance ÷ time, which is the average speed. Velocity uses the straight-line displacement from start to end.', 'M_VELOCITY_AS_SPEED'], [c, 'That is the displacement. Now divide it by the time.', 'M_DISPLACEMENT_FOR_VELOCITY'], [round(Math.abs(b - a) / t, 2), 'The two legs are at right angles. Use Pythagoras to find the displacement.', 'M_LEGS_SUBTRACTED'], [round(c * t, 2), 'Velocity is displacement divided by time.', 'M_VELOCITY_TIMES_TIME']],
       hints: ['Average velocity = displacement ÷ time.', 'The displacement is the straight line from the start to the end. The two legs are at right angles.'],
       steps: [`Displacement² = ${a}² + ${b}² = ${a * a + b * b}, so the displacement is ${c} km.`, `Velocity: ${c} ÷ ${t} = ${T(round(c / t, 2))} km/h.`] }),
     check: ({ a, b, t }, ans) => Math.abs((ans * t) ** 2 - (a * a + b * b)) < 0.01 }),
 
-  fam({ id: 'g9.speed.accel-table', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.d', rung: 2, form: 'table',
+  fam({ id: 'g9.speed.accel-table', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION', rung: 2, form: 'table',
     draw: () => { const u = pick([2, 4, 6]), a = pick([1, 1.5, 2, 3]); const v = (t) => u + a * t; return distinct(a, v(6) / 6, 4 * a, v(8) / 8) ? { u, a, what: pick(['car', 'train', 'motorbike']) } : null; },
     make: ({ u, a, what }) => {
       const v = (t) => round(u + a * t, 2);
       return { question: `A ${what} speeds up steadily on a straight road. The table shows its velocity. Find its acceleration between 2 s and 6 s, in m/s².`,
         model: { type: 'table', data: { head: ['Time (s)', 'Velocity (m/s)'], rows: [0, 2, 4, 6, 8].map(t => ({ label: String(t), value: String(v(t)) })) } },
         answer: a,
-        wrong: [[round(v(6) / 6, 2), 'The car did not start from rest. Use the change in velocity between the two times.'], [round(v(6) - v(2), 2), 'That is the change in velocity. Divide it by the time it took.'], [round(v(8) / 8, 2), 'Use the readings at 2 s and 6 s, and the change between them.'], [round(4 / (v(6) - v(2)), 3), 'Acceleration is change in velocity ÷ time, the other way up.']],
+        wrong: [[round(v(6) / 6, 2), 'The car did not start from rest. Use the change in velocity between the two times.', 'M_FINAL_OVER_TIME'], [round(v(6) - v(2), 2), 'That is the change in velocity. Divide it by the time it took.', 'M_CHANGE_NOT_DIVIDED'], [round(v(8) / 8, 2), 'Use the readings at 2 s and 6 s, and the change between them.', 'M_WRONG_READINGS_USED'], [round(4 / (v(6) - v(2)), 3), 'Acceleration is change in velocity ÷ time, the other way up.', 'M_ACCEL_UPSIDE_DOWN']],
         hints: ['Acceleration = change in velocity ÷ time taken.', 'Read the velocity at 2 s and at 6 s.'],
         steps: [`At 2 s: ${v(2)} m/s. At 6 s: ${v(6)} m/s. Change: ${T(round(v(6) - v(2), 2))} m/s.`, `Time taken: 6 − 2 = 4 s.`, `Acceleration: ${T(round(v(6) - v(2), 2))} ÷ 4 = ${a} m/s².`] };
     },
     check: ({ u, a }, ans) => Math.abs(u + ans * 6 - (u + ans * 2) - 4 * ans) < 1e-9 && Math.abs((u + a * 6) - (u + a * 2) - 4 * ans) < 1e-9 }),
 
-  fam({ id: 'g9.speed.accel-graph', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.d', rung: 2, form: 'graph',
+  fam({ id: 'g9.speed.accel-graph', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION', rung: 2, form: 'graph',
     draw: () => ({ u: pick([5, 10]), a: pick([2, 3, 4]), what: pick(['train', 'lorry', 'bus']) }),
     make: ({ u, a, what }) => {
       const ts = [0, 2, 4, 6, 8], top = u + 8 * a, step = top > 25 ? 10 : 5, yTicks = []; for (let y = 0; y <= top + step; y += step) yTicks.push(y);
       return { question: `A ${what} moves on a straight track. Its velocity is drawn as a line on the graph. Use the slope of the line to find how fast the velocity grows each second. Give the acceleration in m/s².`,
         model: { type: 'line-graph', data: { points: ts.map(t => ({ x: t, y: u + a * t })), xTicks: ts, yTicks, xLabel: 'Time (s)', yLabel: 'Velocity (m/s)' } },
         answer: a,
-        wrong: [[round(top / 8, 2), 'The line does not start at zero. Use the change in velocity, not the final velocity.'], [8 * a, 'That is the total change in velocity. Divide it by the 8 seconds.'], [u, 'That is the velocity at the start. Acceleration is how fast the velocity changes.'], [round(1 / a, 3), 'Acceleration is the gradient: how far up for each second along.']],
+        wrong: [[round(top / 8, 2), 'The line does not start at zero. Use the change in velocity, not the final velocity.', 'M_FINAL_OVER_TIME'], [8 * a, 'That is the total change in velocity. Divide it by the 8 seconds.', 'M_CHANGE_NOT_DIVIDED'], [u, 'That is the velocity at the start. Acceleration is how fast the velocity changes.', 'M_START_VELOCITY_FOR_ACCEL'], [round(1 / a, 3), 'Acceleration is the gradient: how far up for each second along.', 'M_ACCEL_UPSIDE_DOWN']],
         hints: ['Acceleration is the gradient of a velocity-time graph.', 'Pick two points on the line and divide the rise by the run.'],
         steps: [`At 0 s the velocity is ${u} m/s. At 8 s it is ${top} m/s.`, `Gradient: (${top} − ${u}) ÷ 8 = ${a} m/s².`] };
     },
     check: ({ u, a }, ans) => u + ans * 8 === u + a * 8 }),
 
-  fam({ id: 'g9.speed.distance-from-graph', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.d', rung: 3, form: 'graph',
+  fam({ id: 'g9.speed.distance-from-graph', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH', rung: 3, form: 'graph',
     draw: () => ({ t1: pick([5, 10]), v: pick([10, 15, 20]), t2: pick([15, 20, 25, 30]), who: person() }),
     make: ({ t1, v, t2, who }) => {
       const xTicks = []; for (let x = 0; x <= t2; x += 5) xTicks.push(x);
@@ -662,36 +663,36 @@ export const FAMILIES = [
       return { question: `A bus leaves a stop, accelerates steadily and then travels at a constant velocity. The graph shows its velocity. ${who.name} says the distance travelled is the area under the graph. How far does the bus travel in the first ${t2} seconds, in metres?`,
         model: { type: 'line-graph', data: { points: [{ x: 0, y: 0 }, { x: t1, y: v }, { x: t2, y: v }], xTicks, yTicks, xLabel: 'Time (s)', yLabel: 'Velocity (m/s)' } },
         answer: dist,
-        wrong: [[v * t2, 'The bus did not travel at full velocity from the start. The first part is a triangle.'], [round(0.5 * t2 * v, 2), 'Only the first part is a triangle. After that the velocity is constant, which is a rectangle.'], [(t2 - t1) * v, 'That is only the constant-velocity part. Add the distance while speeding up.'], [round(0.5 * t1 * v, 2), 'That is only the speeding-up part. The bus kept going afterwards.']],
+        wrong: [[v * t2, 'The bus did not travel at full velocity from the start. The first part is a triangle.', 'M_FULL_SPEED_FROM_START'], [round(0.5 * t2 * v, 2), 'Only the first part is a triangle. After that the velocity is constant, which is a rectangle.', 'M_WHOLE_AS_TRIANGLE'], [(t2 - t1) * v, 'That is only the constant-velocity part. Add the distance while speeding up.', 'M_RECTANGLE_ONLY'], [round(0.5 * t1 * v, 2), 'That is only the speeding-up part. The bus kept going afterwards.', 'M_TRIANGLE_ONLY']],
         hints: ['Split the area under the line into a triangle and a rectangle.', 'Triangle: half base times height. Rectangle: base times height.'],
         steps: [`Triangle: ½ × ${t1} × ${v} = ${T(0.5 * t1 * v)} m.`, `Rectangle: (${t2} − ${t1}) × ${v} = ${T((t2 - t1) * v)} m.`, `Total: ${T(dist)} m.`] };
     },
     check: ({ t1, v, t2 }, ans) => Math.abs(ans - 0.5 * (t2 + (t2 - t1)) * v) < 1e-6 }),
 
-  fam({ id: 'g9.speed.brake-time', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.d', rung: 3, form: 'word',
+  fam({ id: 'g9.speed.brake-time', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION', rung: 3, form: 'word',
     draw: () => { const kmh = pick([36, 54, 72, 90, 108]), a = pick([2, 2.5, 4, 5]); const t = kmh / 3.6 / a; return dp(t, 1) && distinct(t, kmh / a, (kmh / 3.6) * a) ? { kmh, a, who: person() } : null; },
     make: ({ kmh, a, who }) => {
       const ms = kmh / 3.6, t = round(ms / a, 2);
       return { question: `${who.name} drives a matatu at ${kmh} km/h. ${who.She} brakes and the matatu slows down steadily by ${a} m/s² until it stops. How many seconds does it take to stop?`,
         answer: t,
-        wrong: [[round(kmh / a, 2), 'The speed is in km/h but the deceleration uses metres and seconds. Change the speed to m/s first.'], [round(ms * a, 2), 'Time = change in velocity ÷ deceleration. Divide.'], [round(ms / a / 3.6, 2), 'You changed the units twice. Divide by 3.6 once only, then divide by the deceleration.'], [ms, 'That is the speed in m/s. Divide by how much speed is lost each second.']],
+        wrong: [[round(kmh / a, 2), 'The speed is in km/h but the deceleration uses metres and seconds. Change the speed to m/s first.', 'M_KMH_WITH_MS2'], [round(ms * a, 2), 'Time = change in velocity ÷ deceleration. Divide.', 'M_DECEL_MULTIPLIED'], [round(ms / a / 3.6, 2), 'You changed the units twice. Divide by 3.6 once only, then divide by the deceleration.', 'M_CONVERTED_TWICE'], [ms, 'That is the speed in m/s. Divide by how much speed is lost each second.', 'M_SPEED_FOR_TIME']],
         hints: ['Change the speed to m/s: divide km/h by 3.6.', 'Time = change in velocity ÷ deceleration.'],
         steps: [`${kmh} km/h ÷ 3.6 = ${T(round(ms, 2))} m/s.`, `Time: ${T(round(ms, 2))} ÷ ${a} = ${T(t)} s.`] };
     },
     check: ({ kmh, a }, ans) => Math.abs(ans * a * 3.6 - kmh) < 0.01 }),
 
   // ---- longitude and local time
-  fam({ id: 'g9.speed.longitude-minutes', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.g', rung: 2, form: 'word',
+  fam({ id: 'g9.speed.longitude-minutes', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME', rung: 2, form: 'word',
     draw: () => { const [c1, c2] = [pick(LONGITUDES), pick(LONGITUDES)]; const d = Math.abs(c1[1] - c2[1]); return d >= 4 && d <= 80 ? { c1, c2, d } : null; },
     make: ({ c1, c2, d }) => ({
       question: `${c1[0]} is on longitude ${lonText(c1[1])} and ${c2[0]} is on longitude ${lonText(c2[1])}. The sun's position moves round the Earth, so the local time changes by 4 minutes for every degree of longitude. By how many minutes do the local times of the two places differ?`,
       answer: 4 * d,
-      wrong: [[d, 'The local time changes by 4 minutes for every degree, not 1 minute.'], [15 * d, 'It is 15 degrees for each hour. For each degree it is 4 minutes.'], [round(d / 4, 2), 'Multiply the difference in degrees by 4. Do not divide.'], [4 * (Math.abs(c1[1]) + Math.abs(c2[1])), 'Add the longitudes only if the places are on opposite sides of 0°. Otherwise subtract.']].filter(w => w[0] !== 4 * d),
+      wrong: [[d, 'The local time changes by 4 minutes for every degree, not 1 minute.', 'M_ONE_MINUTE_PER_DEGREE'], [15 * d, 'It is 15 degrees for each hour. For each degree it is 4 minutes.', 'M_FIFTEEN_PER_DEGREE'], [round(d / 4, 2), 'Multiply the difference in degrees by 4. Do not divide.', 'M_DEGREES_DIVIDED'], [4 * (Math.abs(c1[1]) + Math.abs(c2[1])), 'Add the longitudes only if the places are on opposite sides of 0°. Otherwise subtract.', 'M_SAME_SIDE_ADDED']].filter(w => w[0] !== 4 * d),
       hints: ['Find how many degrees of longitude separate the two places.', 'Each degree is 4 minutes of time.'],
       steps: [`Difference in longitude: ${d}°.`, `Time difference: ${d} × 4 = ${4 * d} minutes.`] }),
     check: ({ c1, c2 }, a) => a / 4 === Math.abs(c1[1] - c2[1]) }),
 
-  fam({ id: 'g9.speed.local-time-options', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.g', rung: 2, form: 'word',
+  fam({ id: 'g9.speed.local-time-options', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.g', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME', rung: 2, form: 'word',
     draw: () => {
       const c1 = pick(LONGITUDES), c2 = pick(LONGITUDES), d = c2[1] - c1[1];
       if (Math.abs(d) < 8 || Math.abs(d) > 100 || (4 * d) % 60 === 0) return null;
@@ -702,14 +703,14 @@ export const FAMILIES = [
       question: `It is 12:00 noon local time in ${c1[0]}, on longitude ${lonText(c1[1])}. ${c2[0]} is on longitude ${lonText(c2[1])}. What is the local time in ${c2[0]}? Remember: the Earth turns towards the east, so places to the east are ahead.`,
       options: [
         { text: clock24(right), right: true },
-        { text: clock24(rev), right: false, why: `${c2[0]} is to the ${d > 0 ? 'east' : 'west'} of ${c1[0]}. East is ahead in time and west is behind.` },
-        { text: clock24(deg), right: false, why: 'Each degree is 4 minutes of time, not 1 minute.' },
-        { text: clock24(hr), right: false, why: 'The leftover minutes count too. Do not drop them.' },
+        { text: clock24(rev), right: false, why: `${c2[0]} is to the ${d > 0 ? 'east' : 'west'} of ${c1[0]}. East is ahead in time and west is behind.`, mis: 'M_EAST_WEST_SWAPPED' },
+        { text: clock24(deg), right: false, why: 'Each degree is 4 minutes of time, not 1 minute.', mis: 'M_ONE_MINUTE_LOCAL' },
+        { text: clock24(hr), right: false, why: 'The leftover minutes count too. Do not drop them.', mis: 'M_LEFTOVER_MINUTES_DROPPED' },
       ],
       hints: ['Find the difference in longitude, then multiply by 4 minutes.', `East of ${c1[0]} the time is later. West of it the time is earlier.`],
       steps: [`Difference: ${Math.abs(d)}°. Time difference: ${Math.abs(d)} × 4 = ${4 * Math.abs(d)} minutes.`, `${c2[0]} is ${d > 0 ? 'east' : 'west'}, so add${d > 0 ? '' : ' (no: take away)'} to noon: ${clock24(right)}.`].map((x, i) => (i === 1 ? `${c2[0]} is ${d > 0 ? 'east, so the time is later' : 'west, so the time is earlier'}: ${clock24(right)}.` : x)) }) }),
 
-  fam({ id: 'g9.speed.find-longitude', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.g', rung: 3, form: 'word',
+  fam({ id: 'g9.speed.find-longitude', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.f', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME', rung: 3, form: 'word',
     draw: () => {
       const [name, base] = pick([['Nairobi', 37], ['Mombasa', 40], ['Kisumu', 35]]), dd = pick([5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 22]), ahead = pick([true, false]);
       const lon = ahead ? base + dd : base - dd;
@@ -721,13 +722,13 @@ export const FAMILIES = [
       const gap = `${h ? `${h} h ` : ''}${m} min`;
       return { question: `A town east of the Greenwich meridian has a local time that is ${gap} ${ahead ? 'ahead of' : 'behind'} the local time in ${name}. ${name} is on longitude ${base}°E. What is the longitude of the town, in degrees east?`,
         answer: lon,
-        wrong: [[ahead ? base - dd : base + dd, ahead ? 'Places that are ahead in time lie further east, so the longitude gets bigger.' : 'Places that are behind in time lie further west, so the longitude gets smaller.'], [ahead ? base + mins : base - mins, 'Each degree is 4 minutes. Divide the minutes by 4 to get degrees.'], [ahead ? base + 15 * h : base - 15 * h, 'The minutes count too. Change the whole time difference to minutes first.'], [dd, 'That is the difference in longitude. Add it to, or take it from, the longitude of ' + name + '.']].filter(w => w[0] !== lon),
+        wrong: [[ahead ? base - dd : base + dd, ahead ? 'Places that are ahead in time lie further east, so the longitude gets bigger.' : 'Places that are behind in time lie further west, so the longitude gets smaller.', 'M_EAST_WEST_SWAPPED_LON'], [ahead ? base + mins : base - mins, 'Each degree is 4 minutes. Divide the minutes by 4 to get degrees.', 'M_MINUTES_AS_DEGREES'], [ahead ? base + 15 * h : base - 15 * h, 'The minutes count too. Change the whole time difference to minutes first.', 'M_HOURS_ONLY'], [dd, 'That is the difference in longitude. Add it to, or take it from, the longitude of ' + name + '.', 'M_DIFFERENCE_AS_LONGITUDE']].filter(w => w[0] !== lon),
         hints: ['Change the time difference to minutes, then divide by 4 to find degrees.', 'Ahead in time means further east. Behind means further west.'],
         steps: [`Time difference: ${gap} = ${mins} minutes.`, `Degrees: ${mins} ÷ 4 = ${dd}°.`, `${ahead ? 'Ahead, so east' : 'Behind, so west'}: ${base} ${ahead ? '+' : '−'} ${dd} = ${lon}°E.`] };
     },
     check: ({ base, ahead, dd }, a) => (ahead ? a - base : base - a) * 4 === 4 * dd }),
 
-  fam({ id: 'g9.speed.longitude-spot', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.g', rung: 3, form: 'spot',
+  fam({ id: 'g9.speed.longitude-spot', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.g', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME', rung: 3, form: 'spot',
     draw: () => { const base = pick([['Nairobi', 37], ['Mombasa', 40], ['Kisumu', 35], ['Dar es Salaam', 39]]), other = pick([['New York', -74], ['Lima', -77]]); return { base, other, kind: pick(['hemisphere', 'perdeg', 'direction']), who: person() }; },
     make: ({ base, other, kind, who }) => {
       const a = base[1], b = Math.abs(other[1]), trueDiff = a + b, shownDiff = kind === 'hemisphere' ? b - a : trueDiff;
@@ -740,11 +741,12 @@ export const FAMILIES = [
           { text: `${mins} minutes = ${h} h ${m} min`, ok: h * 60 + m === mins },
           { text: `${other[0]} is ${behind ? 'west, so it is behind' : 'ahead of'} ${base[0]}, so the local time is ${clock(t)}`, ok: behind === true },
         ],
+        mis: kind === 'hemisphere' ? 'M_OPPOSITE_SIDES_SUBTRACTED' : kind === 'perdeg' ? 'M_ONE_MINUTE_LOCAL' : 'M_EAST_WEST_SWAPPED',
         fix: kind === 'hemisphere' ? 'The places are on opposite sides of 0°, so the angles add. Taking one from the other is wrong.' : kind === 'perdeg' ? 'Each degree of longitude is 4 minutes of time, not 1 minute.' : 'West is behind in time, so the later steps should subtract from noon.',
         steps: [`Difference: ${a} + ${b} = ${trueDiff}°. Time: ${trueDiff} × 4 = ${4 * trueDiff} minutes, which is ${Math.floor((4 * trueDiff) / 60)} h ${(4 * trueDiff) % 60} min.`, `${other[0]} is west, so it is behind: ${clock(720 - 4 * trueDiff)}.`] };
     } }),
 
-  fam({ id: 'g9.speed.flight-local-arrival', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.g', rung: 3, form: 'steps',
+  fam({ id: 'g9.speed.flight-local-arrival', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.g', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME', rung: 3, form: 'steps',
     draw: () => {
       const [city, lon, dur] = pick([['Dubai', 55, 5], ['Delhi', 77, 6], ['London', 0, 8], ['Lagos', 3, 6]]);
       const dep = pick([8, 9, 10]) * 60, d = lon - 37, mins = 4 * d, arr = dep + dur * 60 + mins;
@@ -753,9 +755,9 @@ export const FAMILIES = [
     make: ({ city, lon, dur, dep, d, mins, arr }) => ({
       question: `A plane leaves Nairobi (longitude 37°E) at ${clock24(dep)} Nairobi time. The flight to ${city} (longitude ${lonText(lon)}) takes ${dur} hours.`,
       parts: [
-        { prompt: `By how many degrees of longitude do Nairobi and ${city} differ?`, answer: Math.abs(d), unit: '°', hint: 'Both places are on the same side of the 0° line, or on opposite sides. Check which.', wrong: [[37 + lon, d > 0 ? 'Both places are east of 0°, so subtract.' : 'Think about which side of 0° each place is on.']].filter(w => w[0] !== Math.abs(d)) },
-        { prompt: `By how many minutes does the local time in ${city} differ from Nairobi time?`, answer: Math.abs(mins), unit: 'minutes', hint: 'Each degree is 4 minutes.', wrong: [[Math.abs(d), 'Each degree is 4 minutes, not 1 minute.'], [Math.abs(d) * 15, '15 degrees make an hour. For each degree it is 4 minutes.']] },
-        { prompt: `What is the local time in ${city} when the plane lands? Write it as four figures in 24-hour time, for example 1530.`, answer: Number(clock24(arr).replace(':', '')), hint: `${city} is ${d > 0 ? 'east, so its time is ahead' : 'west, so its time is behind'} of Nairobi. Add the flight time to the leaving time first.`, wrong: [[Number(clock24(dep + dur * 60).replace(':', '')), 'That is the Nairobi time when the plane lands. Change it to the local time of the other city.'], [Number(clock24(dep + dur * 60 - mins).replace(':', '')), d > 0 ? 'The east is ahead, so add the time difference.' : 'The west is behind, so take the time difference away.']] },
+        { prompt: `By how many degrees of longitude do Nairobi and ${city} differ?`, answer: Math.abs(d), unit: '°', hint: 'Both places are on the same side of the 0° line, or on opposite sides. Check which.', wrong: [[37 + lon, d > 0 ? 'Both places are east of 0°, so subtract.' : 'Think about which side of 0° each place is on.', 'M_SAME_SIDE_ADDED']].filter(w => w[0] !== Math.abs(d)) },
+        { prompt: `By how many minutes does the local time in ${city} differ from Nairobi time?`, answer: Math.abs(mins), unit: 'minutes', hint: 'Each degree is 4 minutes.', wrong: [[Math.abs(d), 'Each degree is 4 minutes, not 1 minute.', 'M_ONE_MINUTE_PER_DEGREE'], [Math.abs(d) * 15, '15 degrees make an hour. For each degree it is 4 minutes.', 'M_FIFTEEN_PER_DEGREE']] },
+        { prompt: `What is the local time in ${city} when the plane lands? Write it as four figures in 24-hour time, for example 1530.`, answer: Number(clock24(arr).replace(':', '')), hint: `${city} is ${d > 0 ? 'east, so its time is ahead' : 'west, so its time is behind'} of Nairobi. Add the flight time to the leaving time first.`, wrong: [[Number(clock24(dep + dur * 60).replace(':', '')), 'That is the Nairobi time when the plane lands. Change it to the local time of the other city.', 'M_DEPARTURE_ZONE_KEPT'], [Number(clock24(dep + dur * 60 - mins).replace(':', '')), d > 0 ? 'The east is ahead, so add the time difference.' : 'The west is behind, so take the time difference away.', 'M_DIFFERENCE_WRONG_WAY']] },
       ],
       hints: ['Work in minutes, then change back to hours and minutes.'],
       steps: [`Difference in longitude: ${Math.abs(d)}°. Time difference: ${Math.abs(d)} × 4 = ${Math.abs(mins)} minutes.`, `Landing in Nairobi time: ${clock24(dep)} + ${dur} h = ${clock24(dep + dur * 60)}.`, `${city} is ${d > 0 ? 'ahead' : 'behind'} by ${Math.abs(mins)} minutes, so the local time is ${clock24(arr)}.`] }),
