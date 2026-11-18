@@ -8920,6 +8920,745 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.GEOMET.LINES",
   "sub_strand_name": "Lines",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY": {
+  "skill": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY",
+  "key_step": "The child picks out the angles that sit between the two halves of a straight line at one point, however many there are, and names each acute, right or obtuse against 90 degrees.",
+  "floor": {
+   "prerequisite": "Knows a right angle is 90 degrees.",
+   "question": "Is the corner of a book more or less than 90 degrees?",
+   "answer": "It is 90 degrees"
+  },
+  "representations": [
+   "a door opening as a turn",
+   "a straight line with two or three angles at one point",
+   "a right angle corner used to sort angles"
+  ],
+  "steps": [
+   "Find the straight line and the point on it.",
+   "Every angle between the two halves of the line lies on it.",
+   "Compare each angle with a right angle.",
+   "Name it acute, right or obtuse."
+  ],
+  "contexts": [
+   "the hands of a clock",
+   "a road junction",
+   "scissors opening"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a straight line with three angles at one point."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each angle in turn.",
+    "say": "Is this angle part of the straight line?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to answer for each."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to mark each angle acute, right or obtuse."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_ANY_TWO_ANGLES",
+    "listen_for": [
+     "the L-shape",
+     "they are next to each other"
+    ],
+    "ask": "Do the outer arms make one straight line?",
+    "repair": "Angles on a straight line share a point and their outer arms make a straight line.",
+    "error": "Believes any two angles drawn near each other are on a straight line.",
+    "example": {
+     "question": "Which pair of angles lie on a straight line?",
+     "wrong_answer": "two neighbouring angles of an L-shape",
+     "correct_answer": "two angles that meet along a line"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_OBTUSE_AS_ACUTE",
+    "listen_for": [
+     "120 is acute"
+    ],
+    "ask": "Is 120 more or less than a right angle?",
+    "repair": "More than 90 is obtuse.",
+    "error": "Calls angles by size looks rather than by the 90 degree rule.",
+    "example": {
+     "question": "Is an angle of 120 degrees acute or obtuse?",
+     "wrong_answer": "acute",
+     "correct_answer": "obtuse"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_LONG_ARMS_BIGGER",
+    "listen_for": [
+     "longer arms"
+    ],
+    "ask": "If we put one on top of the other, do the arms line up?",
+    "repair": "The turn is the same; arm length does not matter.",
+    "error": "Believes an angle with longer arms is a bigger angle.",
+    "example": {
+     "question": "Two angles of 40 degrees are drawn, one with arms of 3 cm and one with arms of 8 cm. Which angle is bigger?",
+     "wrong_answer": "the one with 8 cm arms",
+     "correct_answer": "They are equal"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_ONLY_TWO_ON_A_LINE",
+    "listen_for": [
+     "only two"
+    ],
+    "ask": "Is the third angle also between the two halves of the line?",
+    "repair": "All the angles at the point on the line lie on it.",
+    "error": "Believes only two angles can lie on a straight line at a point.",
+    "example": {
+     "question": "Three angles meet at a point on a straight line. Do all three lie on the straight line?",
+     "wrong_answer": "No, only two angles can",
+     "correct_answer": "Yes: together they make the straight angle"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is an angle of 120 degrees acute or obtuse?",
+    "answer": "obtuse",
+    "shows": "compare with 90"
+   },
+   {
+    "question": "Two angles of 40 degrees are drawn, one with longer arms. Which is bigger?",
+    "answer": "They are equal",
+    "shows": "arm length"
+   }
+  ],
+  "name": "Identify angles on a straight line at a point",
+  "sub_strand": "MATH.G6.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR": {
+  "skill": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR",
+  "key_step": "The child puts the centre mark on the vertex and the 0 line on one arm, estimates acute or obtuse, and reads the scale that starts at 0 on that arm.",
+  "floor": {
+   "prerequisite": "Reads both scales of a protractor.",
+   "question": "On the outer scale a line points to 50. What does the inner scale show there?",
+   "answer": "130"
+  },
+  "representations": [
+   "a real protractor on a drawn angle",
+   "an angle with the 0 arm marked",
+   "an estimate written before measuring"
+  ],
+  "steps": [
+   "Estimate: acute or obtuse?",
+   "Centre mark on the vertex.",
+   "0 line along one arm.",
+   "Read the scale that starts at 0 on that arm; check against the estimate."
+  ],
+  "contexts": [
+   "the angle of a roof",
+   "a ramp at school",
+   "the opening of a door"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an acute angle and a protractor over it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the angle.",
+    "say": "Is it smaller or bigger than a right angle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's estimate."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two scale numbers by the arm.",
+    "say": "Which number fits your estimate?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to measure an angle drawn in their book."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE",
+    "listen_for": [
+     "130",
+     "the outer one"
+    ],
+    "ask": "Is this angle acute or obtuse?",
+    "repair": "Use the scale that starts at 0 on the arm; check with the estimate.",
+    "error": "Reads the wrong scale of the protractor, giving the supplement of the angle.",
+    "example": {
+     "question": "An acute angle starting on the inner zero is read from the outer scale",
+     "wrong_answer": "130 degrees",
+     "correct_answer": "50 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR.M_DIFFERENCE_AS_SUM",
+    "listen_for": [
+     "145",
+     "add them"
+    ],
+    "ask": "Does the angle start at 0?",
+    "repair": "Take the smaller reading from the larger: 110 - 35.",
+    "error": "Adds two protractor readings to find the angle between two arms.",
+    "example": {
+     "question": "Arms at 35 and 110 degrees: angle between?",
+     "wrong_answer": "145 degrees",
+     "correct_answer": "75 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR.M_ZERO_NOT_ON_ARM",
+    "listen_for": [
+     "85"
+    ],
+    "ask": "Where is the first arm on the scale?",
+    "repair": "Line 0 up with an arm, or subtract the two readings.",
+    "error": "Reads where the second arm points without lining zero up with the first arm.",
+    "example": {
+     "question": "One arm of an angle lies on 20 on the protractor scale (not on 0). The other arm points to 85. What is the angle?",
+     "wrong_answer": "85 degrees",
+     "correct_answer": "65 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR.M_EDGE_ON_VERTEX",
+    "listen_for": [
+     "the end of the protractor"
+    ],
+    "ask": "Where is the small centre mark?",
+    "repair": "Put the centre mark on the vertex.",
+    "error": "Puts the edge or the end of the protractor on the vertex instead of the centre mark.",
+    "example": {
+     "question": "Which part of the protractor goes on the vertex (corner) of the angle?",
+     "wrong_answer": "the edge (or the end) of the protractor",
+     "correct_answer": "the centre mark on the baseline"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "The arms of an angle are at 35 and 110 on a protractor. What is the angle?",
+    "answer": "75 degrees",
+    "shows": "difference of readings"
+   },
+   {
+    "question": "One arm lies on 20 on the scale and the other points to 85. What is the angle?",
+    "answer": "65 degrees",
+    "shows": "zero not on the arm"
+   }
+  ],
+  "name": "Measure angles on a straight line at a point",
+  "sub_strand": "MATH.G6.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE": {
+  "skill": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE",
+  "key_step": "The child says the angles on a straight line at a point add up to 180 degrees and finds the missing one by taking the sum of the known ones from 180.",
+  "floor": {
+   "prerequisite": "Identifies angles on a straight line.",
+   "question": "How many degrees is a straight angle?",
+   "answer": "180"
+  },
+  "representations": [
+   "a paper strip folded to show two angles on a line",
+   "the angles on a line with a bar of 180 split into parts",
+   "the working: 180 - (sum of known angles)"
+  ],
+  "steps": [
+   "Write the angles on the line add to 180.",
+   "Add the known angles.",
+   "Take the sum from 180.",
+   "For \"one is twice the other\", share 180 into 3 parts."
+  ],
+  "contexts": [
+   "a ladder against a wall",
+   "a road leaving a straight road",
+   "a see-saw"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line with angles 100, 50 and ?."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 100 and the 50.",
+    "say": "What do these two make together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 150."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask what the missing angle is."
+   },
+   {
+    "beat": "write",
+    "do": "Write 180 - 150 = 30."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE.M_NINETY_NOT_180",
+    "listen_for": [
+     "50",
+     "ninety"
+    ],
+    "ask": "Is a straight line a right angle?",
+    "repair": "A straight line is 180 degrees.",
+    "error": "Takes 90 degrees as the total on a straight line.",
+    "example": {
+     "question": "Angle 40 on a line, other angle?",
+     "wrong_answer": "50 degrees",
+     "correct_answer": "140 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE.M_THREE_HUNDRED_SIXTY",
+    "listen_for": [
+     "210",
+     "360"
+    ],
+    "ask": "Is a straight line a full turn?",
+    "repair": "A straight line is a half turn: 180.",
+    "error": "Takes 360 degrees as the total on a straight line.",
+    "example": {
+     "question": "Angles of 100 and 50 degrees on a line, third angle?",
+     "wrong_answer": "210 degrees",
+     "correct_answer": "30 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE.M_MULTIPLE_HALVED",
+    "listen_for": [
+     "90",
+     "half of 180"
+    ],
+    "ask": "How many equal parts are there if one angle is twice the other?",
+    "repair": "3 parts make 180: one part is 60.",
+    "error": "When one angle on a line is a multiple of the other, halves 180 instead of sharing it in the right parts.",
+    "example": {
+     "question": "Two angles lie on a straight line and one is twice the other. What is the smaller angle?",
+     "wrong_answer": "90 degrees",
+     "correct_answer": "60 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE.M_ONE_ANGLE_SUBTRACTED_LINE",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "Did you use the 50 as well?",
+    "repair": "Add the known angles, then take from 180.",
+    "error": "With three angles on a line, takes only one of the known angles from 180.",
+    "example": {
+     "question": "Angles of 100 and 50 degrees and an unknown angle lie on a straight line. What is the unknown angle?",
+     "wrong_answer": "80 degrees",
+     "correct_answer": "30 degrees"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "An angle of 40 degrees lies on a straight line. What is the other angle?",
+    "answer": "140 degrees",
+    "shows": "from 180"
+   },
+   {
+    "question": "Two angles lie on a straight line and one is twice the other. What is the smaller angle?",
+    "answer": "60 degrees",
+    "shows": "shared in parts"
+   }
+  ],
+  "name": "Work out the sum of angles on a straight line",
+  "sub_strand": "MATH.G6.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE": {
+  "skill": "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE",
+  "key_step": "The child shows by tearing the corners of a paper triangle that they make a straight line (180 degrees), and that a rectangle has four right angles (360 degrees).",
+  "floor": {
+   "prerequisite": "Knows the angles on a straight line add to 180.",
+   "question": "Angles of 70 and ? on a straight line?",
+   "answer": "110"
+  },
+  "representations": [
+   "a paper triangle with its corners torn and laid on a line",
+   "a rectangle with each corner marked 90",
+   "the working: 180 - (sum of two angles)"
+  ],
+  "steps": [
+   "A triangle's angles add to 180.",
+   "A rectangle's angles add to 360 (4 x 90).",
+   "Add the known angles.",
+   "Take the sum from the total."
+  ],
+  "contexts": [
+   "a triangular roof",
+   "a rectangular classroom floor",
+   "a set square"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangle with its three corners torn off and laid on a line."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three corners on the line.",
+    "say": "What do they make together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for a straight line, 180."
+   },
+   {
+    "beat": "write",
+    "do": "Write a triangle with 70 and 50 and ask for the third angle."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child for the answer."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE.M_TRIANGLE_360",
+    "listen_for": [
+     "240",
+     "360"
+    ],
+    "ask": "When we tore the corners, what did they make?",
+    "repair": "The corners of a triangle make a straight line: 180.",
+    "error": "Believes the angles of a triangle add up to 360 degrees.",
+    "example": {
+     "question": "Angles 70 and 50: third angle of a triangle?",
+     "wrong_answer": "240 degrees",
+     "correct_answer": "60 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE.M_RECTANGLE_180",
+    "listen_for": [
+     "180 for a rectangle"
+    ],
+    "ask": "How many right angles has a rectangle?",
+    "repair": "4 x 90 = 360.",
+    "error": "Believes the angles of a rectangle add up to 180 degrees.",
+    "example": {
+     "question": "Sum of the angles of a rectangle?",
+     "wrong_answer": "180 degrees",
+     "correct_answer": "360 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE.M_SUBTRACT_ONE_ANGLE_ONLY",
+    "listen_for": [
+     "120",
+     "only the 60"
+    ],
+    "ask": "Did you use both known angles?",
+    "repair": "Add both, then take from 180.",
+    "error": "Subtracts only one of the two known angles from 180 degrees to find the third angle of a triangle.",
+    "example": {
+     "question": "Angles 60 and 70: third angle?",
+     "wrong_answer": "120 degrees",
+     "correct_answer": "50 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE.M_ONE_CORNER_ONLY",
+    "listen_for": [
+     "90"
+    ],
+    "ask": "How many corners does a rectangle have?",
+    "repair": "Add all four: 360.",
+    "error": "Gives the size of one corner (90 degrees) as the sum of the angles of a rectangle.",
+    "example": {
+     "question": "Sum of the angles of a rectangle?",
+     "wrong_answer": "90 degrees",
+     "correct_answer": "360 degrees"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A triangle has angles of 70 and 50 degrees. What is the third angle?",
+    "answer": "60 degrees",
+    "shows": "triangle sum"
+   },
+   {
+    "question": "What do the angles of a rectangle add up to?",
+    "answer": "360 degrees",
+    "shows": "four right angles"
+   }
+  ],
+  "name": "Determine the sum of angles in rectangles and triangles",
+  "sub_strand": "MATH.G6.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES": {
+  "skill": "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES",
+  "key_step": "The child names a triangle by its sides and angles (three equal sides, two equal sides, a right angle), knows a triangle can have two names, and that each angle of an equilateral triangle is 60 degrees.",
+  "floor": {
+   "prerequisite": "Knows the angles of a triangle add to 180.",
+   "question": "What are three equal angles that add to 180?",
+   "answer": "60 each"
+  },
+  "representations": [
+   "paper triangles sorted by sides and angles",
+   "a triangle constructed with ruler and compasses",
+   "equal sides marked with dashes"
+  ],
+  "steps": [
+   "Measure or read the sides: equal sides get dashes.",
+   "Three equal: equilateral. Two equal: isosceles.",
+   "A 90 degree angle: right-angled (it can also be isosceles).",
+   "Construct with a ruler, compasses and protractor, checking each length."
+  ],
+  "contexts": [
+   "a triangular road sign",
+   "a roof truss",
+   "a folded square scarf"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three triangles: three equal sides, two equal sides, a right angle."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the one with two dashes.",
+    "say": "What do we call a triangle with two equal sides?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for isosceles."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a square folded along its diagonal."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask what names the half-square triangle has."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES.M_ISOSCELES_THREE_EQUAL",
+    "listen_for": [
+     "three sides"
+    ],
+    "ask": "How many dashes are on an isosceles triangle?",
+    "repair": "Isosceles has two equal sides.",
+    "error": "Believes an isosceles triangle has three equal sides.",
+    "example": {
+     "question": "How many equal sides has an isosceles triangle?",
+     "wrong_answer": "3",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES.M_EQUILATERAL_ANGLE_90",
+    "listen_for": [
+     "90 each"
+    ],
+    "ask": "Can three 90 degree angles fit in a triangle?",
+    "repair": "Three equal angles share 180: 60 each.",
+    "error": "Believes each angle of an equilateral triangle is 90 degrees or 45 degrees.",
+    "example": {
+     "question": "Each angle of an equilateral triangle?",
+     "wrong_answer": "90 degrees",
+     "correct_answer": "60 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES.M_TRIANGLE_NAMES_MIXED",
+    "listen_for": [
+     "isosceles for three equal"
+    ],
+    "ask": "How many equal sides does it have?",
+    "repair": "Three equal sides is equilateral.",
+    "error": "Mixes up the names equilateral, isosceles and right-angled.",
+    "example": {
+     "question": "A triangle with three equal sides is called?",
+     "wrong_answer": "isosceles",
+     "correct_answer": "equilateral"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES.M_RIGHT_NOT_ISOSCELES",
+    "listen_for": [
+     "only one name"
+    ],
+    "ask": "Fold a square along its diagonal: what do you see?",
+    "repair": "A triangle can be right-angled and isosceles: 90, 45, 45.",
+    "error": "Believes a right-angled triangle cannot also be isosceles.",
+    "example": {
+     "question": "Can a triangle be both right-angled and isosceles?",
+     "wrong_answer": "No, it is one or the other",
+     "correct_answer": "Yes: its angles are 90, 45 and 45 degrees"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A triangle with three equal sides is called?",
+    "answer": "equilateral",
+    "shows": "name by sides"
+   },
+   {
+    "question": "Can a triangle be both right-angled and isosceles?",
+    "answer": "Yes, with angles 90, 45 and 45 degrees",
+    "shows": "two names"
+   }
+  ],
+  "name": "Construct equilateral, right-angled and isosceles triangles: their properties",
+  "sub_strand": "MATH.G6.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES": {
+  "skill": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES",
+  "key_step": "The child marks which angles are equal (base angles of an isosceles triangle, all three of an equilateral) and uses the sum of 180 to find the unknown.",
+  "floor": {
+   "prerequisite": "Knows the angles of a triangle add to 180.",
+   "question": "A triangle has angles 90 and 30. Third angle?",
+   "answer": "60 degrees"
+  },
+  "representations": [
+   "a paper isosceles triangle folded on its line of symmetry",
+   "equal angles marked with arcs",
+   "the working written step by step"
+  ],
+  "steps": [
+   "Mark the equal sides and the equal angles opposite them.",
+   "Write what is known.",
+   "Use 180 for the sum.",
+   "Check by adding the three angles."
+  ],
+  "contexts": [
+   "a gable roof",
+   "a triangular flag",
+   "a bridge truss"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an isosceles triangle with the top angle 40."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two base angles.",
+    "say": "What do we know about these two?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for \"they are equal\"."
+   },
+   {
+    "beat": "write",
+    "do": "Write 180 - 40 = 140."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for each base angle."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES.M_BASE_ANGLES_NOT_EQUAL",
+    "listen_for": [
+     "140",
+     "one angle"
+    ],
+    "ask": "Is 140 for one base angle or both?",
+    "repair": "Share 140 between the two equal base angles: 70 each.",
+    "error": "Does not use that the base angles of an isosceles triangle are equal.",
+    "example": {
+     "question": "Apex angle 40 degrees, isosceles: base angle?",
+     "wrong_answer": "140 degrees",
+     "correct_answer": "70 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES.M_RIGHT_ANGLED_OTHER_90",
+    "listen_for": [
+     "90 again"
+    ],
+    "ask": "Can a triangle have two right angles?",
+    "repair": "The other two share 90: 90 - 35 = 55.",
+    "error": "Gives 90 degrees as each of the other angles of a right-angled triangle, or the sum 180 for one.",
+    "example": {
+     "question": "A right-angled triangle has an angle of 35 degrees as well. Third angle?",
+     "wrong_answer": "90 degrees (the right angle given again)",
+     "correct_answer": "55 degrees"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES.M_GIVEN_ANGLE_TAKEN_AS_APEX",
+    "listen_for": [
+     "65"
+    ],
+    "ask": "Is the 50 at the top or at the base?",
+    "repair": "Both base angles are 50: the top is 180 - 100 = 80.",
+    "error": "Treats a given base angle of an isosceles triangle as the angle at the top.",
+    "example": {
+     "question": "An isosceles triangle has a base angle of 50 degrees. What is the angle at the top?",
+     "wrong_answer": "65 degrees ((180 - 50) / 2)",
+     "correct_answer": "80 degrees (180 - 50 - 50)"
+    }
+   },
+   {
+    "code": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES.M_BIG_EQUILATERAL_BIG_ANGLES",
+    "listen_for": [
+     "more than 60",
+     "long sides"
+    ],
+    "ask": "Does a bigger triangle turn more at each corner?",
+    "repair": "Every equilateral triangle has 60 degree angles.",
+    "error": "Believes a bigger equilateral triangle has bigger angles.",
+    "example": {
+     "question": "An equilateral triangle has sides of 10 cm. What is each angle?",
+     "wrong_answer": "more than 60 degrees, because the sides are long",
+     "correct_answer": "60 degrees"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "An isosceles triangle has a top angle of 40 degrees. What is each base angle?",
+    "answer": "70 degrees",
+    "shows": "equal base angles"
+   },
+   {
+    "question": "An isosceles triangle has a base angle of 50 degrees. What is the angle at the top?",
+    "answer": "80 degrees",
+    "shows": "base angle given"
+   }
+  ],
+  "name": "Interior angles of equilateral, right-angled and isosceles triangles",
+  "sub_strand": "MATH.G6.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

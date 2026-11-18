@@ -4199,6 +4199,132 @@
   "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
   "status": "draft"
  },
+ "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_LONG_ARMS_BIGGER": {
+  "skill": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY",
+  "error": "Believes an angle with longer arms is a bigger angle.",
+  "example": {
+   "question": "Two angles of 40 degrees are drawn, one with arms of 3 cm and one with arms of 8 cm. Which angle is bigger?",
+   "wrong_answer": "the one with 8 cm arms",
+   "correct_answer": "They are equal"
+  },
+  "cause": "Judges an angle by how much space the drawing takes.",
+  "reveals": "The angle with longer arms as an option.",
+  "help": "An angle is the amount of turn: lay one angle on the other and see the arms line up.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY.M_ONLY_TWO_ON_A_LINE": {
+  "skill": "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY",
+  "error": "Believes only two angles can lie on a straight line at a point.",
+  "example": {
+   "question": "Three angles meet at a point on a straight line. Do all three lie on the straight line?",
+   "wrong_answer": "No, only two angles can",
+   "correct_answer": "Yes: together they make the straight angle"
+  },
+  "cause": "Has seen only pairs of angles on a line.",
+  "reveals": "A no for three angles.",
+  "help": "Count every angle between the two halves of the line: there can be two, three or more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR.M_ZERO_NOT_ON_ARM": {
+  "skill": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR",
+  "error": "Reads where the second arm points without lining zero up with the first arm.",
+  "example": {
+   "question": "One arm of an angle lies on 20 on the protractor scale (not on 0). The other arm points to 85. What is the angle?",
+   "wrong_answer": "85 degrees",
+   "correct_answer": "65 degrees"
+  },
+  "cause": "Reads the number at the second arm only.",
+  "reveals": "The reading at the second arm as an option.",
+  "help": "Put the 0 line on one arm, or take the smaller reading from the larger.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR.M_EDGE_ON_VERTEX": {
+  "skill": "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR",
+  "error": "Puts the edge or the end of the protractor on the vertex instead of the centre mark.",
+  "example": {
+   "question": "Which part of the protractor goes on the vertex (corner) of the angle?",
+   "wrong_answer": "the edge (or the end) of the protractor",
+   "correct_answer": "the centre mark on the baseline"
+  },
+  "cause": "Treats the protractor like a ruler that starts at its end.",
+  "reveals": "The edge of the protractor as an option.",
+  "help": "Find the small centre mark on the straight edge and put it exactly on the corner.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE.M_MULTIPLE_HALVED": {
+  "skill": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE",
+  "error": "When one angle on a line is a multiple of the other, halves 180 instead of sharing it in the right parts.",
+  "example": {
+   "question": "Two angles lie on a straight line and one is twice the other. What is the smaller angle?",
+   "wrong_answer": "90 degrees",
+   "correct_answer": "60 degrees"
+  },
+  "cause": "Shares 180 into two equal parts out of habit.",
+  "reveals": "Half of 180 as an option.",
+  "help": "Draw it as parts: the small angle is 1 part, the big one 2 parts, so 3 parts make 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE.M_ONE_ANGLE_SUBTRACTED_LINE": {
+  "skill": "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE",
+  "error": "With three angles on a line, takes only one of the known angles from 180.",
+  "example": {
+   "question": "Angles of 100 and 50 degrees and an unknown angle lie on a straight line. What is the unknown angle?",
+   "wrong_answer": "80 degrees",
+   "correct_answer": "30 degrees"
+  },
+  "cause": "Stops after one subtraction.",
+  "reveals": "An answer that misses one known angle.",
+  "help": "Add the known angles first: 100 + 50 = 150, then 180 - 150.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES.M_RIGHT_NOT_ISOSCELES": {
+  "skill": "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES",
+  "error": "Believes a right-angled triangle cannot also be isosceles.",
+  "example": {
+   "question": "Can a triangle be both right-angled and isosceles?",
+   "wrong_answer": "No, it is one or the other",
+   "correct_answer": "Yes: its angles are 90, 45 and 45 degrees"
+  },
+  "cause": "Thinks each triangle has only one name.",
+  "reveals": "A no among the choices.",
+  "help": "Fold a square along its diagonal: each half has a right angle and two equal sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES.M_GIVEN_ANGLE_TAKEN_AS_APEX": {
+  "skill": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES",
+  "error": "Treats a given base angle of an isosceles triangle as the angle at the top.",
+  "example": {
+   "question": "An isosceles triangle has a base angle of 50 degrees. What is the angle at the top?",
+   "wrong_answer": "65 degrees ((180 - 50) / 2)",
+   "correct_answer": "80 degrees (180 - 50 - 50)"
+  },
+  "cause": "Uses the apex method on a base angle.",
+  "reveals": "The answer from halving 180 minus the given angle.",
+  "help": "Mark the two equal angles first: both base angles are 50, so the top is 180 - 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES.M_BIG_EQUILATERAL_BIG_ANGLES": {
+  "skill": "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES",
+  "error": "Believes a bigger equilateral triangle has bigger angles.",
+  "example": {
+   "question": "An equilateral triangle has sides of 10 cm. What is each angle?",
+   "wrong_answer": "more than 60 degrees, because the sides are long",
+   "correct_answer": "60 degrees"
+  },
+  "cause": "Links the size of the angles to the length of the sides.",
+  "reveals": "An angle bigger than 60 as an option.",
+  "help": "Three equal angles always share 180: 180 / 3 = 60, for any size.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
  "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS.M_EDGES_AS_FACES": {
   "skill": "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS",
   "error": "Counts edges where faces are asked (or the reverse).",

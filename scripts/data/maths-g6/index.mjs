@@ -17,4 +17,5 @@ import * as mass from './mass.mjs';
 import * as time from './time.mjs';
 import * as money from './money.mjs';
 import * as lines from './lines.mjs';
-export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area, cap, mass, time, money, lines];
+import * as angles from './angles.mjs';
+export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area, cap, mass, time, money, lines, angles];

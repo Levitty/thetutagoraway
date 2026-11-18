@@ -121121,7 +121121,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_ANY_TWO_ANGLES",
-      "M_OBTUSE_AS_ACUTE"
+      "M_OBTUSE_AS_ACUTE",
+      "M_LONG_ARMS_BIGGER",
+      "M_ONLY_TWO_ON_A_LINE"
     ]
   },
   "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR": {
@@ -121141,7 +121143,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_WRONG_SCALE",
-      "M_DIFFERENCE_AS_SUM"
+      "M_DIFFERENCE_AS_SUM",
+      "M_ZERO_NOT_ON_ARM",
+      "M_EDGE_ON_VERTEX"
     ],
     "hands": true
   },
@@ -121162,7 +121166,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_NINETY_NOT_180",
-      "M_THREE_HUNDRED_SIXTY"
+      "M_THREE_HUNDRED_SIXTY",
+      "M_MULTIPLE_HALVED",
+      "M_ONE_ANGLE_SUBTRACTED_LINE"
     ]
   },
   "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE": {
@@ -121205,7 +121211,8 @@ var SKILLS_G6 = {
     "mis": [
       "M_ISOSCELES_THREE_EQUAL",
       "M_EQUILATERAL_ANGLE_90",
-      "M_TRIANGLE_NAMES_MIXED"
+      "M_TRIANGLE_NAMES_MIXED",
+      "M_RIGHT_NOT_ISOSCELES"
     ],
     "hands": true
   },
@@ -121226,7 +121233,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_BASE_ANGLES_NOT_EQUAL",
-      "M_RIGHT_ANGLED_OTHER_90"
+      "M_RIGHT_ANGLED_OTHER_90",
+      "M_GIVEN_ANGLE_TAKEN_AS_APEX",
+      "M_BIG_EQUILATERAL_BIG_ANGLES"
     ],
     "hands": true
   },
