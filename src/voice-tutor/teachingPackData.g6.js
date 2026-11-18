@@ -10024,6 +10024,620 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.GEOMET.3_D_OBJECTS",
   "sub_strand_name": "3-D Objects",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE",
+  "key_step": "The child tallies in gates of five, writes each frequency, adds the frequencies for the total, and says the most frequent value (not its frequency).",
+  "floor": {
+   "prerequisite": "Draws tally marks.",
+   "question": "Show 7 with tally marks.",
+   "answer": "one gate and two lines"
+  },
+  "representations": [
+   "a class survey with tally marks",
+   "a frequency table: value, tally, frequency",
+   "the total row at the bottom"
+  ],
+  "steps": [
+   "Tally each answer, the fifth mark across the four.",
+   "Count each tally and write the frequency.",
+   "Add the frequencies for the total.",
+   "The most frequent value is the one with the biggest frequency."
+  ],
+  "contexts": [
+   "books read by learners in a week",
+   "how learners come to school",
+   "goals in a football league"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: books read 0, 1, 2, 3 with frequencies 4, 6, 5, 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the frequency column.",
+    "say": "How many learners were asked?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add 4 + 6 + 5 + 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 6.",
+    "say": "What is the most common number of books?"
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether the answer is 6 or 1, and why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_ADD_VALUES_NOT_FREQUENCIES",
+    "listen_for": [
+     "6",
+     "0 + 1 + 2 + 3"
+    ],
+    "ask": "Which column tells how many learners?",
+    "repair": "Add the frequencies: 17 learners.",
+    "error": "Adds the values (0, 1, 2, ...) instead of the frequencies to find the number of learners.",
+    "example": {
+     "question": "Books read 0,1,2,3 with frequencies 4,6,5,2: how many learners?",
+     "wrong_answer": "6",
+     "correct_answer": "17"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_FREQUENCY_AS_VALUE",
+    "listen_for": [
+     "the most is 6"
+    ],
+    "ask": "Is 6 a number of books or a number of learners?",
+    "repair": "The most common value is the number of books with the biggest frequency.",
+    "error": "Reports the biggest frequency as the most common value is not found: gives the frequency instead of the value.",
+    "example": {
+     "question": "Most common number of books?",
+     "wrong_answer": "the frequency 6",
+     "correct_answer": "the value (the number of books)"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_TALLY_GATE_AS_FOUR",
+    "listen_for": [
+     "4 for a gate"
+    ],
+    "ask": "Count the lines in a gate one by one.",
+    "repair": "A gate is 5.",
+    "error": "Counts a tally gate (four lines and one across) as 4, or as 6.",
+    "example": {
+     "question": "What does one gate of tally marks (four lines and one across them) stand for?",
+     "wrong_answer": "4",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_MISSING_FREQUENCY_ADDED",
+    "listen_for": [
+     "50",
+     "add them"
+    ],
+    "ask": "Do all the frequencies together make 30?",
+    "repair": "Take the known ones from the total: 30 - 20 = 10.",
+    "error": "Adds the total to the known frequencies to find a missing one, instead of taking them away.",
+    "example": {
+     "question": "30 learners were asked. The frequencies are 8, 12 and one missing. What is the missing frequency?",
+     "wrong_answer": "50",
+     "correct_answer": "10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Books read: 0, 1, 2, 3 with frequencies 4, 6, 5, 2. How many learners are there?",
+    "answer": "17",
+    "shows": "add frequencies"
+   },
+   {
+    "question": "30 learners were asked. Two frequencies are 8 and 12. What is the third?",
+    "answer": "10",
+    "shows": "missing frequency"
+   }
+  ],
+  "name": "Draw and read a frequency table of data",
+  "sub_strand": "MATH.G6.DATA_H.BAR_GRAPHS",
+  "sub_strand_name": "Bar Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH",
+  "key_step": "The child reads the key aloud and multiplies the number of symbols by it, taking a half symbol as half the key.",
+  "floor": {
+   "prerequisite": "Reads a frequency table.",
+   "question": "In a table, mangoes have frequency 20. How many mangoes?",
+   "answer": "20"
+  },
+  "representations": [
+   "real objects grouped in fives",
+   "a pictograph with a key",
+   "the key written as a multiplication"
+  ],
+  "steps": [
+   "Read the key: one symbol stands for how many?",
+   "Count the symbols.",
+   "Multiply by the key; a half symbol is half the key.",
+   "To draw, divide the frequency by the key."
+  ],
+  "contexts": [
+   "fruit sold at a market",
+   "learners in each house at sports day",
+   "cows on farms"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a pictograph row with 3 and a half symbols and a key: one symbol = 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the key.",
+    "say": "What is one symbol worth?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the half symbol.",
+    "say": "What is half a symbol worth?"
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for the total of the row."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH.M_KEY_IGNORED",
+    "listen_for": [
+     "4",
+     "four symbols"
+    ],
+    "ask": "What does one symbol stand for?",
+    "repair": "Multiply by the key: 4 x 5 = 20.",
+    "error": "Counts each symbol as one even when the key gives a bigger value.",
+    "example": {
+     "question": "Each symbol stands for 5; 4 symbols",
+     "wrong_answer": "4",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH.M_HALF_SYMBOL_AS_WHOLE",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is half a symbol a whole one?",
+    "repair": "Half a symbol is half of 10: 35.",
+    "error": "Counts a half symbol as a whole one.",
+    "example": {
+     "question": "Each symbol is 10; 3 and a half symbols",
+     "wrong_answer": "40",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH.M_DRAW_ONE_PER_ITEM",
+    "listen_for": [
+     "20 symbols"
+    ],
+    "ask": "If one symbol is 5, how many symbols make 20?",
+    "repair": "Divide by the key: 4 symbols.",
+    "error": "Draws one symbol for each item even when the key says a symbol stands for more.",
+    "example": {
+     "question": "Each symbol stands for 5 mangoes. How many symbols show 20 mangoes?",
+     "wrong_answer": "20",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH.M_HALF_SYMBOL_AS_ONE",
+    "listen_for": [
+     "21"
+    ],
+    "ask": "What is half of the key?",
+    "repair": "Half a symbol is 5 when the key is 10.",
+    "error": "Counts a half symbol as 1 whatever the key says.",
+    "example": {
+     "question": "Each symbol stands for 10. A row has 2 and a half symbols. How many?",
+     "wrong_answer": "21",
+     "correct_answer": "25"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Each symbol stands for 5. A row has 4 symbols. How many?",
+    "answer": "20",
+    "shows": "multiply by the key"
+   },
+   {
+    "question": "Each symbol stands for 10. A row has 3 and a half symbols. How many?",
+    "answer": "35",
+    "shows": "half symbol"
+   }
+  ],
+  "name": "Represent data using pictographs",
+  "sub_strand": "MATH.G6.DATA_H.BAR_GRAPHS",
+  "sub_strand_name": "Bar Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.PILING": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.PILING",
+  "key_step": "The child says each object in a pile stands for one answer, compares piles of the same objects by counting, and adds all the piles for the total.",
+  "floor": {
+   "prerequisite": "Counts objects.",
+   "question": "Count these bottle tops: there are 8 in a row.",
+   "answer": "8"
+  },
+  "representations": [
+   "piles of bottle tops or stones on the floor",
+   "piles lined up from a base line",
+   "the piles written as a frequency table"
+  ],
+  "steps": [
+   "Use the same kind of object for every pile.",
+   "Put one object on a pile for each answer.",
+   "Line the piles up and count each.",
+   "Add all the piles for the total."
+  ],
+  "contexts": [
+   "favourite fruits in class",
+   "votes for class prefect",
+   "colours of school bags"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three piles of 5, 8 and 3 bottle tops."
+   },
+   {
+    "beat": "point",
+    "do": "Point at all three piles.",
+    "say": "How many learners voted in all?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3.",
+    "say": "Which pile has the fewest?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PILING.M_PILE_HEIGHT_NOT_COUNT",
+    "listen_for": [
+     "the wide one"
+    ],
+    "ask": "How many objects are in each pile?",
+    "repair": "Count, do not judge by how it looks.",
+    "error": "Judges the most by how spread out the pile looks rather than by counting.",
+    "example": {
+     "question": "Two piles: one spread wide, one tall",
+     "wrong_answer": "the wide one",
+     "correct_answer": "the one with more objects"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PILING.M_TOTAL_OF_TALLEST_ONLY",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Does the total include the other piles?",
+    "repair": "Add all the piles: 16.",
+    "error": "Takes the tallest pile as the total of all piles.",
+    "example": {
+     "question": "Piles of 5, 8 and 3",
+     "wrong_answer": "8",
+     "correct_answer": "16"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PILING.M_PILE_LEFT_OUT",
+    "listen_for": [
+     "16 for four piles"
+    ],
+    "ask": "Did you count every pile?",
+    "repair": "Tick each pile as you add it.",
+    "error": "Leaves one pile out when adding the piles to find the total.",
+    "example": {
+     "question": "Piles of 5, 8, 3 and 6",
+     "wrong_answer": "16",
+     "correct_answer": "22"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.PILING.M_UNEQUAL_OBJECTS_COMPARED",
+    "listen_for": [
+     "the stones are taller"
+    ],
+    "ask": "Are the stones and the bottle tops the same size?",
+    "repair": "Use the same objects, or count.",
+    "error": "Compares piles of objects of different sizes by height.",
+    "example": {
+     "question": "Learners pile bottle tops for juice and large stones for water. The stone pile is taller. Did more learners choose water?",
+     "wrong_answer": "Yes, its pile is taller",
+     "correct_answer": "We cannot tell until we count: the objects are different sizes"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Piles of 5, 8 and 3 bottle tops. How many objects in all?",
+    "answer": "16",
+    "shows": "total of piles"
+   },
+   {
+    "question": "Piles of 5, 8 and 3 bottle tops. Which pile has the fewest?",
+    "answer": "the pile of 3",
+    "shows": "compare by counting"
+   }
+  ],
+  "name": "Represent data through piling",
+  "sub_strand": "MATH.G6.DATA_H.BAR_GRAPHS",
+  "sub_strand_name": "Bar Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW",
+  "key_step": "The child picks a scale with equal steps so the tallest bar fits, works out each bar's height from the scale, and labels the title and both axes.",
+  "floor": {
+   "prerequisite": "Divides by 2, 5 and 10.",
+   "question": "What is 20 divided by 5?",
+   "answer": "4"
+  },
+  "representations": [
+   "squared paper with an axis numbered in equal steps",
+   "a frequency table beside the graph",
+   "a checklist: title, labels, equal widths, scale"
+  ],
+  "steps": [
+   "Find the biggest frequency and the number of squares.",
+   "Choose a step (1, 2, 5 or 10) so the biggest bar fits.",
+   "Number the axis in equal steps from 0.",
+   "Draw bars of equal width with gaps and write the title and labels."
+  ],
+  "contexts": [
+   "milk from cows on a farm",
+   "rainfall each month",
+   "learners in each club"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an empty grid 10 squares tall."
+   },
+   {
+    "beat": "write",
+    "do": "Write frequencies 15, 45, 30."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 45 and the 10 squares.",
+    "say": "If each square is 1, does 45 fit?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to number the axis in fives and draw the bars."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW.M_SCALE_STEP_ONE",
+    "listen_for": [
+     "20 squares"
+    ],
+    "ask": "What does one square stand for?",
+    "repair": "Divide by the scale: 20 / 5 = 4 squares.",
+    "error": "Draws a bar to the count of squares as if each square were one when the scale says each is 5.",
+    "example": {
+     "question": "Scale: each square is 5; frequency 20",
+     "wrong_answer": "20 squares",
+     "correct_answer": "4 squares"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW.M_BARS_UNEVEN_OR_NO_LABELS",
+    "listen_for": [
+     "nothing is missing"
+    ],
+    "ask": "How would someone know what the bars show?",
+    "repair": "A bar graph needs a title, labelled axes and equal widths.",
+    "error": "Draws bars of unequal width or leaves out labels on the axes.",
+    "example": {
+     "question": "What is missing from a graph without axis labels?",
+     "wrong_answer": "nothing is missing",
+     "correct_answer": "the axis labels"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW.M_UNEVEN_SCALE",
+    "listen_for": [
+     "0, 5, 10, 20, 40"
+    ],
+    "ask": "Do all the steps go up by the same amount?",
+    "repair": "Equal steps: 0, 10, 20, 30, 40.",
+    "error": "Numbers the axis with uneven steps.",
+    "example": {
+     "question": "Which scale is right for a bar graph: 0, 5, 10, 20, 40 or 0, 10, 20, 30, 40?",
+     "wrong_answer": "0, 5, 10, 20, 40",
+     "correct_answer": "0, 10, 20, 30, 40"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW.M_SCALE_DOES_NOT_FIT",
+    "listen_for": [
+     "each square is 1"
+    ],
+    "ask": "How many squares would 45 need?",
+    "repair": "Pick a step so 45 fits: each square 5.",
+    "error": "Chooses a scale that makes the tallest bar run off the grid.",
+    "example": {
+     "question": "The biggest frequency is 45 and the grid is 10 squares tall. Which scale fits: each square 1, 5 or 10?",
+     "wrong_answer": "1",
+     "correct_answer": "5 (45 needs 9 squares)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Each square stands for 5. How many squares tall is a bar for 20?",
+    "answer": "4",
+    "shows": "use the scale"
+   },
+   {
+    "question": "The biggest frequency is 45 and the grid is 10 squares tall. Which scale fits: each square 1, 5 or 10?",
+    "answer": "5",
+    "shows": "choose the scale"
+   }
+  ],
+  "name": "Represent data using bar graphs",
+  "sub_strand": "MATH.G6.DATA_H.BAR_GRAPHS",
+  "sub_strand_name": "Bar Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET",
+  "key_step": "The child reads the scale first, reads each bar at its top against the axis, and answers the question asked (difference, total, second highest).",
+  "floor": {
+   "prerequisite": "Reads a scale that goes up in 5s.",
+   "question": "On a scale 0, 5, 10, 15, a point is halfway between 10 and 15. What value?",
+   "answer": "12.5"
+  },
+  "representations": [
+   "a bar graph with a ruler laid across the top of a bar",
+   "the bars written as a table",
+   "the question words underlined"
+  ],
+  "steps": [
+   "Read the scale: what is each line worth?",
+   "Read each bar at its top.",
+   "Underline what is asked: how many more, how many in all, second highest.",
+   "Work it out and answer in a sentence."
+  ],
+  "contexts": [
+   "crops grown by farmers",
+   "learners' favourite subjects",
+   "matatus passing a stage each hour"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar graph: maize 40, beans 30, rice 15, scale in 5s."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the scale.",
+    "say": "What is each line worth?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the maize and beans bars.",
+    "say": "How many more chose maize than beans?"
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child to answer before you work it out."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET.M_READ_TOP_OF_BAR_WRONG_LINE",
+    "listen_for": [
+     "10 or 20"
+    ],
+    "ask": "Is the bar on a line or between two lines?",
+    "repair": "Halfway between 10 and 20 is 15.",
+    "error": "Reads the value at the nearest labelled line instead of where the bar ends.",
+    "example": {
+     "question": "A bar ends halfway between the lines for 10 and 20",
+     "wrong_answer": "10 or 20 (the nearer labelled line)",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET.M_SECOND_HIGHEST_AS_HIGHEST",
+    "listen_for": [
+     "the tallest"
+    ],
+    "ask": "Which bar is next after the tallest?",
+    "repair": "Second highest is the next tallest.",
+    "error": "Gives the highest bar where the second highest was asked.",
+    "example": {
+     "question": "Second highest bar?",
+     "wrong_answer": "the tallest",
+     "correct_answer": "the next tallest"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET.M_DIFFERENCE_AS_TOTAL",
+    "listen_for": [
+     "70",
+     "add them"
+    ],
+    "ask": "Does \"how many more\" mean add or compare?",
+    "repair": "How many more is the difference: 40 - 30 = 10.",
+    "error": "Adds two bars to find how many more one is than the other.",
+    "example": {
+     "question": "How many more chose maize than beans?",
+     "wrong_answer": "70",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET.M_SQUARES_COUNTED_NOT_SCALE",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "What is each square worth?",
+    "repair": "Read the scale: 6 squares x 5 = 30.",
+    "error": "Counts the squares a bar covers instead of reading the scale.",
+    "example": {
+     "question": "Each square on the bar graph is 5. A bar is 6 squares tall. What is its value?",
+     "wrong_answer": "6",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Maize 40, beans 30 on a bar graph. How many more chose maize than beans?",
+    "answer": "10",
+    "shows": "difference"
+   },
+   {
+    "question": "Each square is 5. A bar is 6 squares tall. What is its value?",
+    "answer": "30",
+    "shows": "read the scale"
+   }
+  ],
+  "name": "Interpret information from bar graphs",
+  "sub_strand": "MATH.G6.DATA_H.BAR_GRAPHS",
+  "sub_strand_name": "Bar Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

@@ -121322,7 +121322,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_ADD_VALUES_NOT_FREQUENCIES",
-      "M_FREQUENCY_AS_VALUE"
+      "M_FREQUENCY_AS_VALUE",
+      "M_TALLY_GATE_AS_FOUR",
+      "M_MISSING_FREQUENCY_ADDED"
     ]
   },
   "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH": {
@@ -121342,7 +121344,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_KEY_IGNORED",
-      "M_HALF_SYMBOL_AS_WHOLE"
+      "M_HALF_SYMBOL_AS_WHOLE",
+      "M_DRAW_ONE_PER_ITEM",
+      "M_HALF_SYMBOL_AS_ONE"
     ]
   },
   "MATH.G6.DATA_H.BAR_GRAPHS.PILING": {
@@ -121357,12 +121361,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_DATA_COLLECTION",
     "pre": [
-      "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE"
+      "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.COMPARE_TOTAL_FREQUENCIES"
     ],
     "mis": [
       "M_PILE_HEIGHT_NOT_COUNT",
       "M_TOTAL_OF_TALLEST_ONLY",
-      "M_PILE_LEFT_OUT"
+      "M_PILE_LEFT_OUT",
+      "M_UNEQUAL_OBJECTS_COMPARED"
     ],
     "hands": true
   },
@@ -121378,11 +121384,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_DATA_COLLECTION",
     "pre": [
-      "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE"
+      "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE",
+      "MATH.G5.DATA_H.DATA_REPRESENTATION.READ_FREQUENCY_TABLE"
     ],
     "mis": [
       "M_SCALE_STEP_ONE",
-      "M_BARS_UNEVEN_OR_NO_LABELS"
+      "M_BARS_UNEVEN_OR_NO_LABELS",
+      "M_UNEVEN_SCALE",
+      "M_SCALE_DOES_NOT_FIT"
     ],
     "hands": true
   },
@@ -121404,7 +121413,8 @@ var SKILLS_G6 = {
     "mis": [
       "M_READ_TOP_OF_BAR_WRONG_LINE",
       "M_SECOND_HIGHEST_AS_HIGHEST",
-      "M_DIFFERENCE_AS_TOTAL"
+      "M_DIFFERENCE_AS_TOTAL",
+      "M_SQUARES_COUNTED_NOT_SCALE"
     ]
   }
 };

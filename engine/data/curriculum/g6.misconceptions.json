@@ -4660,5 +4660,117 @@
   "help": "Touch each pile once and say its number.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_TALLY_GATE_AS_FOUR": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE",
+  "error": "Counts a tally gate (four lines and one across) as 4, or as 6.",
+  "example": {
+   "question": "What does one gate of tally marks (four lines and one across them) stand for?",
+   "wrong_answer": "4",
+   "correct_answer": "5"
+  },
+  "cause": "Counts only the upright lines, or counts the cross line twice.",
+  "reveals": "A count one off for each gate.",
+  "help": "Draw the marks one by one while counting: 1, 2, 3, 4, and the fifth goes across.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE.M_MISSING_FREQUENCY_ADDED": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE",
+  "error": "Adds the total to the known frequencies to find a missing one, instead of taking them away.",
+  "example": {
+   "question": "30 learners were asked. The frequencies are 8, 12 and one missing. What is the missing frequency?",
+   "wrong_answer": "50",
+   "correct_answer": "10"
+  },
+  "cause": "Adds every number in the question.",
+  "reveals": "The sum as an option.",
+  "help": "All the frequencies make the total: 8 + 12 + ? = 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH.M_DRAW_ONE_PER_ITEM": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH",
+  "error": "Draws one symbol for each item even when the key says a symbol stands for more.",
+  "example": {
+   "question": "Each symbol stands for 5 mangoes. How many symbols show 20 mangoes?",
+   "wrong_answer": "20",
+   "correct_answer": "4"
+  },
+  "cause": "Does not use the key when drawing.",
+  "reveals": "One symbol per item as an option.",
+  "help": "Read the key aloud: one symbol is 5 mangoes. How many fives make 20?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH.M_HALF_SYMBOL_AS_ONE": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH",
+  "error": "Counts a half symbol as 1 whatever the key says.",
+  "example": {
+   "question": "Each symbol stands for 10. A row has 2 and a half symbols. How many?",
+   "wrong_answer": "21",
+   "correct_answer": "25"
+  },
+  "cause": "Thinks a part symbol is a single item.",
+  "reveals": "A count with the half symbol as 1.",
+  "help": "Half a symbol is half of the key: half of 10 is 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.PILING.M_UNEQUAL_OBJECTS_COMPARED": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.PILING",
+  "error": "Compares piles of objects of different sizes by height.",
+  "example": {
+   "question": "Learners pile bottle tops for juice and large stones for water. The stone pile is taller. Did more learners choose water?",
+   "wrong_answer": "Yes, its pile is taller",
+   "correct_answer": "We cannot tell until we count: the objects are different sizes"
+  },
+  "cause": "Takes height as the count.",
+  "reveals": "A yes from height alone.",
+  "help": "Use the same kind of object for every pile, or count each pile.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW.M_UNEVEN_SCALE": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW",
+  "error": "Numbers the axis with uneven steps.",
+  "example": {
+   "question": "Which scale is right for a bar graph: 0, 5, 10, 20, 40 or 0, 10, 20, 30, 40?",
+   "wrong_answer": "0, 5, 10, 20, 40",
+   "correct_answer": "0, 10, 20, 30, 40"
+  },
+  "cause": "Writes the numbers needed for the bars, not a steady scale.",
+  "reveals": "An uneven scale as an option.",
+  "help": "Each square must stand for the same amount: count up the axis in equal steps.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW.M_SCALE_DOES_NOT_FIT": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW",
+  "error": "Chooses a scale that makes the tallest bar run off the grid.",
+  "example": {
+   "question": "The biggest frequency is 45 and the grid is 10 squares tall. Which scale fits: each square 1, 5 or 10?",
+   "wrong_answer": "1",
+   "correct_answer": "5 (45 needs 9 squares)"
+  },
+  "cause": "Uses each square as 1 out of habit.",
+  "reveals": "A scale that is too small as an option.",
+  "help": "Divide the biggest frequency by the number of squares and pick a step at least that big.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET.M_SQUARES_COUNTED_NOT_SCALE": {
+  "skill": "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET",
+  "error": "Counts the squares a bar covers instead of reading the scale.",
+  "example": {
+   "question": "Each square on the bar graph is 5. A bar is 6 squares tall. What is its value?",
+   "wrong_answer": "6",
+   "correct_answer": "30"
+  },
+  "cause": "Reads the height in squares, not in the scale.",
+  "reveals": "The number of squares as an option.",
+  "help": "Read the number on the axis level with the top of the bar.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

@@ -19,4 +19,5 @@ import * as money from './money.mjs';
 import * as lines from './lines.mjs';
 import * as angles from './angles.mjs';
 import * as solids from './3d-objects.mjs';
-export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area, cap, mass, time, money, lines, angles, solids];
+import * as bars from './bar-graphs.mjs';
+export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area, cap, mass, time, money, lines, angles, solids, bars];
