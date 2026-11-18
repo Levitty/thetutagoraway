@@ -1,0 +1,1106 @@
+{
+ "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NOT_ALIVE": {
+  "mark": "common in the literature",
+  "source": "Stavy and Wax (1989), Children's conceptions of plants as living things, Human Development 32: many children do not count plants as alive."
+ },
+ "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_WASTE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_RESPOND": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_ABSORB": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_STEM_ONLY_HOLDS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_SHADE_ONLY": {
+  "mark": "doubtful",
+  "why": "Few children say leaves are only for shade; the real slip is not knowing leaves make food."
+ },
+ "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_REPRODUCE_BIRTH_ONLY": {
+  "mark": "doubtful",
+  "why": "Kenyan children keep hens and see chicks hatch; \"only live young\" runs against daily life and is mostly a trap option."
+ },
+ "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_STILL_NOT_ALIVE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_INSECT_NOT_ANIMAL": {
+  "mark": "common in the literature",
+  "source": "Bell (1981), When is an animal not an animal?, Journal of Biological Education 15: children keep \"animal\" for large mammals and leave out insects, worms and fish."
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_NO_LEGS_INVERT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_LEGS_VERTEBRATE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_SHELL_IS_BONE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_SMALL_INVERT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WINGS_OR_LEGS_RULE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WATER_RULE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_WINDPIPE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_STOMACH_ALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_LARGE_INTESTINE_FOOD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_LARGE_BEFORE_SMALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_SMALL_IS_SHORT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_STOMACH_FIRST": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_ONLY_WASH_FOOD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_SODA_FOR_WATER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_UNBOILED_WATER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_POWDER_LIQUID": {
+  "mark": "common in the literature",
+  "source": "Stavy and Stachel (1985), Children's ideas about \"solid\" and \"liquid\", European Journal of Science Education 7: powders are classed with liquids."
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_AIR_NOTHING": {
+  "mark": "common in the literature",
+  "source": "Stavy (1988), Children's conception of gas, International Journal of Science Education 10: gases are not seen as matter."
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_SOFT_NOT_SOLID": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_LIQUID_OWN_SHAPE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_GAS_WEIGHTLESS": {
+  "mark": "common in the literature",
+  "source": "Stavy (1988), Children's conception of gas, International Journal of Science Education 10: gases are thought to have no weight."
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_VOLUME_CHANGES": {
+  "mark": "common in the literature",
+  "source": "Piaget and Inhelder, the conservation of liquid quantity: the amount seems to change when the shape does."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PLASTIC_ROTS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_RUST_IS_ROT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_BURY_DISAPPEARS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_POLYTHENE_HARMLESS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_BURNING_SAFE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_ONLY_SMELL": {
+  "mark": "doubtful",
+  "why": "Children know flies and rats come with waste; \"only a smell\" is mostly a trap option."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_BURN_ALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_DUMP_RIVER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_COMPOST_PLASTIC": {
+  "mark": "doubtful",
+  "why": "Children can tell plastic from peelings; this is a trap option more than a held belief."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_STORE_ALL": {
+  "mark": "doubtful",
+  "why": "Nobody believes saving means never using; a trap option."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_WATER_NEVER_ENDS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_ONLY_CLEAN_DRINKING": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_TAP_RUNS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_HOSE_BETTER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_NO_RAINWATER": {
+  "mark": "doubtful",
+  "why": "Roof tanks are common in Kenya; \"rain is useless\" is unlikely to be held."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_BILL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_PEOPLE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_RAIN_ENOUGH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_PUSH_PULL_MIX": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_MAGNET_ALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_GRAVITY_ONLY_FALLING": {
+  "mark": "common in the literature",
+  "source": "Gunstone and White (1981), Understanding of gravity, Science Education 65; also Driver et al. (1994): gravity is linked to falling."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_ONLY_START": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_SHAPE_NOT_EFFECT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_MOTION_NEEDS_FORCE": {
+  "mark": "common in the literature",
+  "source": "Clement (1982), Students' preconceptions in introductory mechanics, American Journal of Physics 50; McCloskey (1983), Intuitive physics: a moving object is thought to need a force that is used up."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_FRICTION_BAD_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_GRAVITY_ONLY_PROBLEM": {
+  "mark": "doubtful",
+  "why": "Children link gravity to falling, not to being only a nuisance; mostly a trap option."
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_NOT_EVERYDAY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_MOON_SOURCE": {
+  "mark": "common in the literature",
+  "source": "Guesne (1985), Light, in Driver, Guesne and Tiberghien (eds), Children's Ideas in Science: the Moon is counted as a light source."
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_SHINY_SOURCE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_NATURAL_ONLY_SKY": {
+  "mark": "doubtful",
+  "why": "Children who have seen lightning and fireflies would not leave them out; a trap option."
+ },
+ "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_WINDOW_ONLY_AIR": {
+  "mark": "doubtful",
+  "why": "Children know a closed window makes a room darker; a trap option."
+ },
+ "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_DARK_WALLS": {
+  "mark": "doubtful",
+  "why": "Children see that dark walls make a room dim; a trap option."
+ },
+ "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_CANDLE_LEFT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_EYES_SEND": {
+  "mark": "common in the literature",
+  "source": "Guesne (1985), Light, in Children's Ideas in Science; Andersson and Karrqvist (1983): light is thought to leave the eyes."
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_PLANT_SOIL_FOOD": {
+  "mark": "common in the literature",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson, Making Sense of Secondary Science (Routledge, 1994): learners think plants take their food from the soil."
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_ONLY_SEE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_SUN_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_HOT_OBJECT_SOURCE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_RUBBING_NOT_HEAT": {
+  "mark": "doubtful",
+  "why": "Children rub their hands against the cold; the idea that rubbing makes no heat runs against experience."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_BOIL_NOT_SAFE": {
+  "mark": "doubtful",
+  "why": "Kenyan children are taught to boil water; this is a trap option."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_DRY_IN_SHADE": {
+  "mark": "doubtful",
+  "why": "Everyone sees washing dry faster in the sun; a trap option."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_ONLY_COOKING": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_BUTTER_ON_BURN": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_REFILL_LIT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_WET_CLOTH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_PLANT": {
+  "mark": "common in the literature",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson, Making Sense of Secondary Science (Routledge, 1994): children place fungi with plants."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_MOULD_DIRT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_YEAST_NOT_LIVING": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_GREEN_FOOD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ROOTS_LEAVES": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ALL_EDIBLE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_YEAST_GAS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_ALL_HARMFUL": {
+  "mark": "common in the literature",
+  "source": "Byrne, J. (2011), International Journal of Science Education 33: children link micro-organisms mainly with disease and harm."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_DECAY_USELESS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_DRY_BEST": {
+  "mark": "doubtful",
+  "why": "Children in Kenya dry maize, fish and fruit in the sun to keep them from spoiling; the belief that sun-dried food moulds fastest runs against everyday experience. It is more a trick option than a held idea."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_SCRAPE_SAFE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_AIR_ONLY": {
+  "mark": "common in the literature",
+  "source": "Leach, Driver, Scott and Wood-Robinson (1996), International Journal of Science Education 18: children think decay and mould arise by themselves."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_SPIDER_INSECT": {
+  "mark": "common in the literature",
+  "source": "Braund, M. (1991), Journal of Biological Education 25: children group spiders and other small animals as insects."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_WORM_NOT_ANIMAL_GROUP": {
+  "mark": "common in the literature",
+  "source": "Bell, B. (1981), Journal of Biological Education 15: children do not count worms, snails and similar creatures as animals."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_CRAB_FISH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_LEG_COUNT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_SMALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_LEGS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_ALL_PESTS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_MOSQUITO_WRONG": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_WORMS_HARM": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_BARE_HANDS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_CRUSH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_NO_WASH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_LUNGS_IN": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_HEART_PRODUCES": {
+  "mark": "common in the literature",
+  "source": "Arnaudin and Mintzes (1985), Science Education 69: students think the heart makes blood."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_VESSEL_NAMES": {
+  "mark": "doubtful",
+  "why": "Few children think vessels are bones; nerves is plausible but we have no source. Ask the teacher whether it comes up."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_POSITION": {
+  "mark": "common in the literature",
+  "source": "Reiss and Tunnicliffe (2001), Research in Science Education 31: children place organs wrongly and draw the heart too large or in the wrong place."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_UPPER_PUMP": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_ONE_ROOM": {
+  "mark": "common in the literature",
+  "source": "Reiss and Tunnicliffe (2001): young children draw the heart as one simple shape."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_SWAP": {
+  "mark": "common in the literature",
+  "source": "Arnaudin and Mintzes (1985): arteries and veins are confused."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_ONE_WAY": {
+  "mark": "common in the literature",
+  "source": "Arnaudin and Mintzes (1985): students describe a one-way flow in which blood is used up in the body."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_CAPILLARY_BIG": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_WHITE_OXYGEN": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_PLATELETS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_ALL_RED": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_CATCHING": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_ARTERY_SOFT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_BP_MEANING": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_REST_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_OLD_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_SALT_FAT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_WATER_SKIP": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_ONE_HABIT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_SMOKE_SAFE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_MELT_DISSOLVE": {
+  "mark": "common in the literature",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994): melting and dissolving are confused."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_EVAP_BOIL": {
+  "mark": "common in the literature",
+  "source": "Russell, Harlen and Watt (1989), International Journal of Science Education 11 (special issue on evaporation): children link evaporation only to boiling."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_CONDENSE_MIXUP": {
+  "mark": "common in the literature",
+  "source": "Osborne and Cosgrove (1983), Journal of Research in Science Teaching 20: drops on a cold glass are thought to come from inside it."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_COLD_MELTS": {
+  "mark": "common in the literature",
+  "source": "Erickson (1979), Science Education 63: children treat cold as a thing that moves."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_FREEZE_HEAT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_STEAM_SMOKE": {
+  "mark": "common in the literature",
+  "source": "Osborne and Cosgrove (1983): children think the visible cloud above boiling water is steam."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOTHES_SOAK": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOUD_SMOKE": {
+  "mark": "common in the literature",
+  "source": "Bar, V. (1989), Science Education 73: children think clouds are made of cotton, smoke or similar."
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_SALT_SEA": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_MOSTLY_OXYGEN": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_ONE_GAS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_CANDLE_ALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_CO2_ONLY_OUT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_OXYGEN_FUEL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_N_USELESS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_FACTORY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_SMELL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_DUST_NOT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_ONLY_NEAR": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_PLANTS_FINE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_WARM_GOOD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_BURN_RUBBISH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TALL_CHIMNEY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TREES_NOT": {
+  "mark": "doubtful",
+  "why": "Children are told from early on that trees clean the air; a held belief that trees do not help is unlikely. Likely only a wrong guess."
+ },
+ "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_COLOUR_OPAQUE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_TRANSLUCENT_TRANSPARENT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_GLASS_ALWAYS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_MADE_BY_OBJECT": {
+  "mark": "common in the literature",
+  "source": "Feher and Rice (1988), Science Education 72: children treat a shadow as something belonging to the object."
+ },
+ "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIDE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIZE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_CLOUD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SWAP": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SAFE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_NOT_EQUAL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_FROM_SURFACE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_ABSORB": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_SIZE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_DISTANCE": {
+  "mark": "common in the literature",
+  "source": "Goldberg and McDermott (1986), The Physics Teacher 24: students place the image on the mirror surface."
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_UPSIDE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_PAINT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_SUN_FRONT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_COLOUR_ORDER": {
+  "mark": "doubtful",
+  "why": "This is recall of a list, not a misconception about how rainbows work. Keep the colour-order items but do not report it as a misconception."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_LADDER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_ONLY_LONG": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_MORE_ENERGY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_LOAD_EFFORT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_FULCRUM_HANDLE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_MOVES": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FAR_FROM_LOAD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_SHORT_ARM": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FREE_WORK": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_FIRST_ALWAYS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_USE_SIZE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_THIRD_SECOND": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_PULLEY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_FLAT_ROAD": {
+  "mark": "doubtful",
+  "why": "Children rarely call level ground a slope; the option is a trap rather than a belief."
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_WEDGE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_STEEP_EASIER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_LIGHTER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_SHORTER_WAY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_SEPARATE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_BIO_PLANTS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_CHEM_LAB": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_LAB_ONLY": {
+  "mark": "common in the literature",
+  "source": "Chambers (1983), The Draw-a-Scientist Test, Science Education 67: scientists are pictured as people in white coats in laboratories."
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_HEALTH_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_NO_CAREER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_FLAME_FIRE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_SKULL_DEAD": {
+  "mark": "doubtful",
+  "why": "No child believes the skull means dead things are inside; it is a trap option. The real slip is treating the symbol as a use or as safe to dispose of."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_CORROSIVE_TOXIC": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_TASTE_SAFE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_POINT_TUBE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_CARELESS_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_BUTTER_BURN": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_VOMIT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_CUT_WASH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_PREDICT_RESULT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_OBSERVE_EYES": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_CONCLUSION_GUESS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_BEAKER_EXACT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_READ_TOP": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_YELLOW_FLAME": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_GRAM": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_MASS_WEIGHT": {
+  "mark": "common in the literature",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson, Making Sense of Secondary Science (Routledge, 1994): learners use mass and weight as one idea."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_CELSIUS_SI": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_LITRE_SI": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_AREA_M": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_SPEED_M": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_DISAPPEAR": {
+  "mark": "common in the literature",
+  "source": "Kind (2004), Beyond Appearances: Students' Misconceptions about Basic Chemical Ideas (Royal Society of Chemistry): dissolved solids are thought to disappear."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_MUDDY_SOLUTION": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_SOLVENT_SOLUTE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_FILTER_SALT": {
+  "mark": "common in the literature",
+  "source": "Kind (2004), Beyond Appearances (Royal Society of Chemistry): learners think filtering removes dissolved substances."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_EVAP_DISTIL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_CHROMA_COLOUR": {
+  "mark": "doubtful",
+  "why": "Chromatography is new at this grade; a wrong option about boiling is a trap, not a held belief."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_SALT_FILTER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_OIL_ONE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_SCIENTISTS_ONLY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_BLUE_BASE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_NEUTRAL_ACID": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_TASTE_TEST": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_ONLY_LITMUS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_SAME_COLOUR": {
+  "mark": "doubtful",
+  "why": "Children who have seen colour change do not hold this; it is a trap option."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_STRONG_CHEM": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_BASE_SWEET": {
+  "mark": "doubtful",
+  "why": "Children who know soap and ash know bases are not sweet; it is a trap option."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_ALL_BURN": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_BASE_OPPOSITE": {
+  "mark": "doubtful",
+  "why": "Calling a base a poison that works against acids is unlikely at this age; the real slip is not knowing what a base is."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_ANTACID_ACID": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_SOIL_ASH": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_STRONGER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_TESTIS_URINE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_URETHRA_ONE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_SCROTUM": {
+  "mark": "doubtful",
+  "why": "No Grade 7 child places the testes in the stomach; the real slip is not knowing they hang outside the body."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_STOMACH_BABY": {
+  "mark": "common in the literature",
+  "source": "Bernstein and Cowan (1975), Children's concepts of how people get babies, Child Development 46: young children place the baby in the stomach."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_OVARY_UTERUS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_CERVIX_VAGINA": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_BOYS_ONLY": {
+  "mark": "doubtful",
+  "why": "Grade 7 learners see both sexes grow; \"only girls change\" is a trap option."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_SAME_AGE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_PERIOD_ILLNESS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_SQUEEZE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_KEEP_QUIET": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_PADS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_FAECES": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_LUNGS_O2": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_SKIN_ONLY_COOL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_EPIDERMIS_SWEAT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_PORE_BLOOD": {
+  "mark": "doubtful",
+  "why": "A pore leading to the blood is an invention of the option writer; children more often say pores are \"holes for air\"."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_HAIR_EPI": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_KIDNEY_STORE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_DRINK_BLADDER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_URETER_URETHRA": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_STONES_CATCH": {
+  "mark": "doubtful",
+  "why": "Kidney stones are not generally feared as contagious; a teacher should say whether this idea is heard in class."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_LESS_WATER": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_SKIN_RARE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_SOCKET": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_STORED_WIRE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_HYDRO_GEO": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_ONE_WIRE": {
+  "mark": "common in the literature",
+  "source": "Osborne (1983), Towards modifying children's ideas about electric current, Research in Science and Technological Education 1: the one-wire (unipolar) model."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_USED_UP": {
+  "mark": "common in the literature",
+  "source": "Shipstone (1984), A study of children's understanding of electricity in simple DC circuits, European Journal of Science Education 6; also Driver et al. (1994): current is used up by the bulb."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_SWITCH_OPEN": {
+  "mark": "doubtful",
+  "why": "An open switch letting current through is a trap; children who have used a torch know it is off."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_SERIES_STAY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_PARALLEL_DIM": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_HOUSE_SERIES": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_MAKES_ELEC": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_RADIO_NONE": {
+  "mark": "doubtful",
+  "why": "Children do not think a speaker gives only light; it is a trap option."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_FRIDGE_COLD": {
+  "mark": "common in the literature",
+  "source": "Erickson (1979), Children's conceptions of heat and temperature, Science Education 63: cold treated as a substance that is made."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_WET_HANDS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_UNPLUG_PULL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_OVERLOAD": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_LIKE_ATTRACT": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_MIDDLE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_ONE_POLE": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_ALL_METALS": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_SHINY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_HEAVY": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_COMPASS_SUN": {
+  "mark": "doubtful",
+  "why": "Children who have seen a compass know it does not follow the Sun; \"points to buried iron\" is more believable."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_FRIDGE_GLUE": {
+  "mark": "doubtful",
+  "why": "No child believes the fridge door is glued; it is a trap option."
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_PICK_ALL": {
+  "mark": "plausible, to confirm by a teacher",
+  "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+ }
+}

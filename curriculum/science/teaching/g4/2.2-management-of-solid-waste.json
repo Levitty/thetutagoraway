@@ -1,0 +1,291 @@
+{
+ "sub_strand": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST",
+ "title": "Management of Solid Waste",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A waste audit of the classroom bin is the anchor: the child sorts real (clean) waste into decomposable and non-decomposable. A buried-items trial (a banana peel and a polythene bag buried for four weeks) shows the difference.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+   "key_step": "The child asks \"will it rot in the soil?\" and sorts waste as decomposable or non-decomposable, whatever it looks like or where it came from.",
+   "floor": {
+    "prerequisite": "Can name waste found at school.",
+    "question": "Name one thing thrown in the classroom bin.",
+    "answer": "for example paper or a pencil sharpening"
+   },
+   "representations": [
+    "real clean waste from the bin",
+    "the buried banana peel and polythene bag after four weeks",
+    "a two-column sorting table"
+   ],
+   "steps": [
+    "Ask of each item: will it rot in damp soil?",
+    "Decomposable: food scraps, leaves, paper, cow dung.",
+    "Non-decomposable: plastic, polythene, glass, metal.",
+    "Check tricky ones: rust is not rotting; paper rots."
+   ],
+   "contexts": [
+    "the school lunch leftovers",
+    "a market rubbish heap",
+    "sweet wrappers on the field"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: rots, does not rot."
+    },
+    {
+     "beat": "write",
+     "do": "Write banana peel, newspaper, glass bottle, polythene bag, rusty tin."
+    },
+    {
+     "beat": "point",
+     "do": "Point at newspaper.",
+     "say": "Will it rot in the soil?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PLASTIC_ROTS",
+     "listen_for": [
+      "plastic rots like food"
+     ],
+     "ask": "What did the polythene bag look like after four weeks in the soil?",
+     "repair": "Plastic and polythene do not rot; they stay for many years."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_RUST_IS_ROT",
+     "listen_for": [
+      "the tin is rotting"
+     ],
+     "ask": "Does a rusty tin turn into soil like a banana peel?",
+     "repair": "Rusting is not rotting; metal is non-decomposable."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_BURY_DISAPPEARS",
+     "listen_for": [
+      "bury it and it is gone"
+     ],
+     "ask": "If we dig up a buried bottle, what will we find?",
+     "repair": "Burying does not make glass or plastic rot."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PAPER_NEVER_ROTS",
+     "listen_for": [
+      "paper is made in a factory"
+     ],
+     "ask": "What is paper made from?",
+     "repair": "Paper comes from trees, so it rots."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a mango peel decomposable or non-decomposable?",
+     "answer": "decomposable",
+     "shows": "sorting"
+    },
+    {
+     "question": "Which of these will not rot in the soil: banana peel, polythene bag, dry leaves?",
+     "answer": "the polythene bag",
+     "shows": "non-decomposable"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+   "key_step": "The child names real dangers of solid waste (animals choke on polythene, blocked drains and floods, breeding of mosquitoes and flies, smoke from burning, dirty water) and follows where waste ends up.",
+   "floor": {
+    "prerequisite": "Can sort waste into decomposable and non-decomposable.",
+    "question": "Is a polythene bag decomposable?",
+    "answer": "no"
+   },
+   "representations": [
+    "a picture of a goat eating polythene at a dump",
+    "a blocked drain after rain",
+    "an arrow chart from the waste to the harm"
+   ],
+   "steps": [
+    "Pick a piece of waste.",
+    "Follow it: who or what meets it next?",
+    "Name the harm at each step (animals, water, air, people).",
+    "Say which harm is worst and why."
+   ],
+   "contexts": [
+    "a goat at a market dump",
+    "flooding in an estate after rain",
+    "smoke from a burning heap near a school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a polythene bag in a field."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw an arrow to a goat and an arrow to a drain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the drain.",
+     "say": "What happens when it rains hard?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the drain blocks and floods."
+    },
+    {
+     "beat": "write",
+     "do": "Write the harm at the end of each arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_POLYTHENE_HARMLESS",
+     "listen_for": [
+      "the goat will be fine"
+     ],
+     "ask": "Can a goat's stomach digest a plastic bag?",
+     "repair": "Polythene blocks an animal's stomach and can kill it."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_BURNING_SAFE",
+     "listen_for": [
+      "burning gets rid of it safely"
+     ],
+     "ask": "What do you breathe in near a burning heap of plastic?",
+     "repair": "Burning makes harmful smoke and can spread fire."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_ONLY_SMELL",
+     "listen_for": [
+      "it only smells bad"
+     ],
+     "ask": "What insects breed in a waste heap?",
+     "repair": "Waste heaps breed flies, rats and mosquitoes that spread disease."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_FAR_AWAY_NO_HARM",
+     "listen_for": [
+      "nobody lives there"
+     ],
+     "ask": "Where does rain carry the bags from the valley?",
+     "repair": "Waste travels with wind and water and harms animals and rivers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one danger of plastic bags thrown in a field.",
+     "answer": "animals eat them and die, or they block drains",
+     "shows": "names a danger"
+    },
+    {
+     "question": "Why can a waste heap near houses cause disease?",
+     "answer": "flies, rats and mosquitoes breed there and spread germs",
+     "shows": "disease link"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+   "key_step": "The child picks the right method for a named piece of waste: compost for food and leaves, reuse or recycle for clean bottles and tins, a pit or collection for what cannot be reused, never burning plastic or dumping in rivers.",
+   "floor": {
+    "prerequisite": "Can say whether a piece of waste is decomposable.",
+    "question": "Is a cabbage leaf decomposable?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a school compost pit",
+    "reused items (a bottle plant pot, a tin pencil holder)",
+    "a chart: waste, method, why"
+   ],
+   "steps": [
+    "Sort the waste first: decomposable or not.",
+    "Decomposable: compost pit.",
+    "Clean non-decomposable: reuse or take for recycling.",
+    "Dangerous or unsafe items: hand to an adult for proper disposal."
+   ],
+   "contexts": [
+    "kitchen waste at home",
+    "empty water bottles after sports day",
+    "an empty pesticide tin on a farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: compost, reuse or recycle, ask an adult."
+    },
+    {
+     "beat": "write",
+     "do": "Write maize husks, plastic bottle, pesticide tin."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the pesticide tin.",
+     "say": "Which box does this go in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"never reuse for food or water\" beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_BURN_ALL",
+     "listen_for": [
+      "burn everything"
+     ],
+     "ask": "What comes out when plastic burns?",
+     "repair": "Burning is not the answer for all waste; plastic smoke is harmful."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_DUMP_RIVER",
+     "listen_for": [
+      "the river takes it away"
+     ],
+     "ask": "Where does the river carry the waste?",
+     "repair": "Waste in a river harms the people and animals downstream."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_COMPOST_PLASTIC",
+     "listen_for": [
+      "put the bag in the compost"
+     ],
+     "ask": "Will the bag rot in the compost pit?",
+     "repair": "Only decomposable waste goes in compost."
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_REUSE_DIRTY",
+     "listen_for": [
+      "use the pesticide tin for water"
+     ],
+     "ask": "What does the danger sign on the tin say?",
+     "repair": "Never reuse a container that held poison for food or water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the best way to manage vegetable peelings at home?",
+     "answer": "put them in a compost pit",
+     "shows": "compost"
+    },
+    {
+     "question": "Give a safe way to reuse an empty plastic bottle.",
+     "answer": "as a plant pot, a pencil holder or a water carrier after washing",
+     "shows": "safe reuse"
+    }
+   ]
+  }
+ ]
+}

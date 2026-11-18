@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/science/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/science/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/science/teaching/g4)"};
 export const SUBSTRANDS = {
  "SCIE.G4.LIVING.PLANTS": {
   "name": "Plants",
@@ -233,7 +233,8 @@ export const SKILLS = {
   "mis": [
    "M_PL_NOT_ALIVE",
    "M_PL_NO_WASTE",
-   "M_PL_NO_RESPOND"
+   "M_PL_NO_RESPOND",
+   "M_PL_SEED_DEAD"
   ]
  },
  "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS": {
@@ -249,7 +250,8 @@ export const SKILLS = {
   "mis": [
    "M_PP_LEAVES_ABSORB",
    "M_PP_STEM_ONLY_HOLDS",
-   "M_PP_LEAVES_SHADE_ONLY"
+   "M_PP_LEAVES_SHADE_ONLY",
+   "M_PP_FOOD_FROM_SOIL"
   ]
  },
  "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS": {
@@ -263,7 +265,8 @@ export const SKILLS = {
   "mis": [
    "M_AN_REPRODUCE_BIRTH_ONLY",
    "M_AN_STILL_NOT_ALIVE",
-   "M_AN_INSECT_NOT_ANIMAL"
+   "M_AN_INSECT_NOT_ANIMAL",
+   "M_AN_PLANTS_ARE_ANIMALS_MOVE"
   ]
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT": {
@@ -279,7 +282,8 @@ export const SKILLS = {
   "mis": [
    "M_VS_NO_LEGS_INVERT",
    "M_VS_LEGS_VERTEBRATE",
-   "M_VS_SHELL_IS_BONE"
+   "M_VS_SHELL_IS_BONE",
+   "M_VS_BIRD_NOT_VERTEBRATE"
   ]
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE": {
@@ -290,12 +294,14 @@ export const SKILLS = {
    "SCIE.G4.LIVING.ANIMALS.b"
   ],
   "pre": [
-   "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT"
+   "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+   "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS"
   ],
   "mis": [
    "M_VR_SMALL_INVERT",
    "M_VR_WINGS_OR_LEGS_RULE",
-   "M_VR_WATER_RULE"
+   "M_VR_WATER_RULE",
+   "M_VR_HARD_BODY_RULE"
   ]
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS": {
@@ -309,7 +315,8 @@ export const SKILLS = {
   "mis": [
    "M_DP_WINDPIPE",
    "M_DP_STOMACH_ALL",
-   "M_DP_LARGE_INTESTINE_FOOD"
+   "M_DP_LARGE_INTESTINE_FOOD",
+   "M_DP_FOOD_TO_LEGS"
   ]
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER": {
@@ -325,7 +332,8 @@ export const SKILLS = {
   "mis": [
    "M_DO_LARGE_BEFORE_SMALL",
    "M_DO_SMALL_IS_SHORT",
-   "M_DO_STOMACH_FIRST"
+   "M_DO_STOMACH_FIRST",
+   "M_DO_ANUS_BEFORE_LARGE"
   ]
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH": {
@@ -341,7 +349,8 @@ export const SKILLS = {
   "mis": [
    "M_DH_ONLY_WASH_FOOD",
    "M_DH_SODA_FOR_WATER",
-   "M_DH_UNBOILED_WATER"
+   "M_DH_UNBOILED_WATER",
+   "M_DH_FIBRE_NOT_NEEDED"
   ]
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT": {
@@ -355,7 +364,8 @@ export const SKILLS = {
   "mis": [
    "M_SS_POWDER_LIQUID",
    "M_SS_AIR_NOTHING",
-   "M_SS_SOFT_NOT_SOLID"
+   "M_SS_SOFT_NOT_SOLID",
+   "M_SS_STEAM_IS_SMOKE"
   ]
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES": {
@@ -371,7 +381,8 @@ export const SKILLS = {
   "mis": [
    "M_SP_LIQUID_OWN_SHAPE",
    "M_SP_GAS_WEIGHTLESS",
-   "M_SP_VOLUME_CHANGES"
+   "M_SP_VOLUME_CHANGES",
+   "M_SP_SOLID_CANNOT_CHANGE"
   ]
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY": {
@@ -385,7 +396,8 @@ export const SKILLS = {
   "mis": [
    "M_WC_PLASTIC_ROTS",
    "M_WC_RUST_IS_ROT",
-   "M_WC_BURY_DISAPPEARS"
+   "M_WC_BURY_DISAPPEARS",
+   "M_WC_PAPER_NEVER_ROTS"
   ]
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS": {
@@ -401,7 +413,8 @@ export const SKILLS = {
   "mis": [
    "M_WD_POLYTHENE_HARMLESS",
    "M_WD_BURNING_SAFE",
-   "M_WD_ONLY_SMELL"
+   "M_WD_ONLY_SMELL",
+   "M_WD_FAR_AWAY_NO_HARM"
   ]
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE": {
@@ -418,7 +431,8 @@ export const SKILLS = {
   "mis": [
    "M_WM_BURN_ALL",
    "M_WM_DUMP_RIVER",
-   "M_WM_COMPOST_PLASTIC"
+   "M_WM_COMPOST_PLASTIC",
+   "M_WM_REUSE_DIRTY"
   ]
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING": {
@@ -432,7 +446,8 @@ export const SKILLS = {
   "mis": [
    "M_CM_STORE_ALL",
    "M_CM_WATER_NEVER_ENDS",
-   "M_CM_ONLY_CLEAN_DRINKING"
+   "M_CM_ONLY_CLEAN_DRINKING",
+   "M_CM_ONLY_WHEN_SHORT"
   ]
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS": {
@@ -448,7 +463,8 @@ export const SKILLS = {
   "mis": [
    "M_CMT_TAP_RUNS",
    "M_CMT_HOSE_BETTER",
-   "M_CMT_NO_RAINWATER"
+   "M_CMT_NO_RAINWATER",
+   "M_CMT_REUSE_DIRTY_DRINK"
   ]
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE": {
@@ -464,7 +480,8 @@ export const SKILLS = {
   "mis": [
    "M_CI_ONLY_BILL",
    "M_CI_ONLY_PEOPLE",
-   "M_CI_RAIN_ENOUGH"
+   "M_CI_RAIN_ENOUGH",
+   "M_CI_TAP_WATER_ENDLESS"
   ]
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES": {
@@ -478,7 +495,8 @@ export const SKILLS = {
   "mis": [
    "M_FT_PUSH_PULL_MIX",
    "M_FT_MAGNET_ALL",
-   "M_FT_GRAVITY_ONLY_FALLING"
+   "M_FT_GRAVITY_ONLY_FALLING",
+   "M_FT_FORCE_IS_LIVING"
   ]
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS": {
@@ -494,7 +512,8 @@ export const SKILLS = {
   "mis": [
    "M_FE_ONLY_START",
    "M_FE_SHAPE_NOT_EFFECT",
-   "M_FE_MOTION_NEEDS_FORCE"
+   "M_FE_MOTION_NEEDS_FORCE",
+   "M_FE_STOPPED_NO_FORCE"
   ]
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES": {
@@ -511,7 +530,8 @@ export const SKILLS = {
   "mis": [
    "M_FU_FRICTION_BAD_ONLY",
    "M_FU_GRAVITY_ONLY_PROBLEM",
-   "M_FU_NOT_EVERYDAY"
+   "M_FU_NOT_EVERYDAY",
+   "M_FU_MORE_FORCE_ALWAYS_BETTER"
   ]
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES": {
@@ -525,7 +545,8 @@ export const SKILLS = {
   "mis": [
    "M_LS_MOON_SOURCE",
    "M_LS_SHINY_SOURCE",
-   "M_LS_NATURAL_ONLY_SKY"
+   "M_LS_NATURAL_ONLY_SKY",
+   "M_LS_ARTIFICIAL_NATURAL_MIX"
   ]
  },
  "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING": {
@@ -541,7 +562,8 @@ export const SKILLS = {
   "mis": [
    "M_HL_WINDOW_ONLY_AIR",
    "M_HL_DARK_WALLS",
-   "M_HL_CANDLE_LEFT"
+   "M_HL_CANDLE_LEFT",
+   "M_HL_MORE_BULBS_ONLY"
   ]
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_USES": {
@@ -557,7 +579,8 @@ export const SKILLS = {
   "mis": [
    "M_LU_EYES_SEND",
    "M_LU_PLANT_SOIL_FOOD",
-   "M_LU_ONLY_SEE"
+   "M_LU_ONLY_SEE",
+   "M_LU_DARK_SEE_A_LITTLE"
   ]
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES": {
@@ -571,7 +594,8 @@ export const SKILLS = {
   "mis": [
    "M_HS_SUN_ONLY",
    "M_HS_HOT_OBJECT_SOURCE",
-   "M_HS_RUBBING_NOT_HEAT"
+   "M_HS_RUBBING_NOT_HEAT",
+   "M_HS_COLD_HAS_COLDNESS"
   ]
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_USES": {
@@ -587,7 +611,8 @@ export const SKILLS = {
   "mis": [
    "M_HU_BOIL_NOT_SAFE",
    "M_HU_DRY_IN_SHADE",
-   "M_HU_ONLY_COOKING"
+   "M_HU_ONLY_COOKING",
+   "M_HU_HEAT_ONLY_FIRE"
   ]
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY": {
@@ -603,7 +628,8 @@ export const SKILLS = {
   "mis": [
    "M_SF_BUTTER_ON_BURN",
    "M_SF_REFILL_LIT",
-   "M_SF_WET_CLOTH"
+   "M_SF_WET_CLOTH",
+   "M_SF_WATER_ON_OIL_FIRE"
   ]
  }
 };
@@ -614,6 +640,8 @@ export const MIS_FEEDBACK = {
  "M_PP_LEAVES_ABSORB": "The roots take in water and mineral salts from the soil. The leaves make food using sunlight.",
  "M_PP_STEM_ONLY_HOLDS": "The stem holds the plant up and also carries water and food to the other parts.",
  "M_PP_LEAVES_SHADE_ONLY": "Leaves are the kitchen of the plant. They make food using sunlight.",
+ "M_PL_SEED_DEAD": "A dry seed is resting, not dead. Give it water and warmth and it grows.",
+ "M_PP_FOOD_FROM_SOIL": "Plants make their own food in their leaves. Roots take in water and mineral salts, not food.",
  "M_AN_REPRODUCE_BIRTH_ONLY": "Reproducing is making new animals. Some give birth to live young. Birds, fish, frogs and snakes lay eggs.",
  "M_AN_STILL_NOT_ALIVE": "An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.",
  "M_AN_INSECT_NOT_ANIMAL": "Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.",
@@ -623,6 +651,9 @@ export const MIS_FEEDBACK = {
  "M_VR_SMALL_INVERT": "Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.",
  "M_VR_WINGS_OR_LEGS_RULE": "The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.",
  "M_VR_WATER_RULE": "Where an animal lives does not decide it. A crab lives in water but has no backbone, so it is an invertebrate.",
+ "M_AN_PLANTS_ARE_ANIMALS_MOVE": "Moving is only one sign. A living thing also feeds, breathes, grows and reproduces.",
+ "M_VS_BIRD_NOT_VERTEBRATE": "Birds have a backbone, so they are vertebrates, light or not.",
+ "M_VR_HARD_BODY_RULE": "Soft skin can cover a backbone. Ask what is inside, not how it feels.",
  "M_DP_WINDPIPE": "The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.",
  "M_DP_STOMACH_ALL": "The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.",
  "M_DP_LARGE_INTESTINE_FOOD": "The large intestine takes in water from the leftover food. What is left is waste that leaves through the anus.",
@@ -632,12 +663,17 @@ export const MIS_FEEDBACK = {
  "M_DH_ONLY_WASH_FOOD": "Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.",
  "M_DH_SODA_FOR_WATER": "Clean water keeps the digestive system working. Soda and sweets are not a replacement for water or a balanced meal.",
  "M_DH_UNBOILED_WATER": "Clear water can still hold germs. Boil or treat water before drinking.",
+ "M_DP_FOOD_TO_LEGS": "Food travels in one long tube: mouth, food pipe, stomach, small and large intestine.",
+ "M_DO_ANUS_BEFORE_LARGE": "After the small intestine comes the large intestine, then the anus.",
+ "M_DH_FIBRE_NOT_NEEDED": "Vegetables and fruit give roughage, which helps food and waste move through the gut.",
  "M_SS_POWDER_LIQUID": "Sand pours, but each grain is a small solid with its own shape. Sand is a solid.",
  "M_SS_AIR_NOTHING": "Air is a gas. A gas is matter. It takes up room even if we cannot see it.",
  "M_SS_SOFT_NOT_SOLID": "A sponge is soft but it keeps its own shape, so it is a solid.",
  "M_SP_LIQUID_OWN_SHAPE": "A liquid takes the shape of its container. It has no shape of its own.",
  "M_SP_GAS_WEIGHTLESS": "Air takes up room and has weight. A pumped football weighs more than a flat one.",
  "M_SP_VOLUME_CHANGES": "The amount stays the same. Only the shape changes. One litre is still one litre.",
+ "M_SS_STEAM_IS_SMOKE": "The cloud above a kettle is water. Hot water turns into a gas called water vapour.",
+ "M_SP_SOLID_CANNOT_CHANGE": "A solid keeps its own shape unless a force changes it. It does not flow like a liquid.",
  "M_WC_PLASTIC_ROTS": "A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.",
  "M_WC_RUST_IS_ROT": "A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.",
  "M_WC_BURY_DISAPPEARS": "Glass does not rot. Buried glass stays for ages, so it is non-decomposable.",
@@ -647,6 +683,9 @@ export const MIS_FEEDBACK = {
  "M_WM_BURN_ALL": "Plastic bottles are better recycled or reused. Burning makes smoke that pollutes the air.",
  "M_WM_DUMP_RIVER": "Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.",
  "M_WM_COMPOST_PLASTIC": "Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.",
+ "M_WC_PAPER_NEVER_ROTS": "Paper comes from trees, so it rots. Ask \"will it rot?\" not \"was it made in a factory?\"",
+ "M_WD_FAR_AWAY_NO_HARM": "Waste does not stay where it is thrown. Wind and rain carry it to animals, rivers and farms.",
+ "M_WM_REUSE_DIRTY": "Reuse only safe, clean containers. A tin that held poison must never hold food or water.",
  "M_CM_STORE_ALL": "To conserve is to use wisely and not waste, so that there is enough for later.",
  "M_CM_WATER_NEVER_ENDS": "Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.",
  "M_CM_ONLY_CLEAN_DRINKING": "Conserving means not wasting water. Closing a tap or reusing water saves it.",
@@ -656,6 +695,9 @@ export const MIS_FEEDBACK = {
  "M_CI_ONLY_BILL": "We save water so there is enough for everyone now and later, and not only to save money.",
  "M_CI_ONLY_PEOPLE": "People, animals and plants all need water to live.",
  "M_CI_RAIN_ENOUGH": "In a long dry season rivers and wells can dry up, so it is important to save water before it happens.",
+ "M_CM_ONLY_WHEN_SHORT": "Conserving water means using it carefully all the time, so there is enough later.",
+ "M_CMT_REUSE_DIRTY_DRINK": "Used water can water plants or clean floors. Drinking and cooking need clean water.",
+ "M_CI_TAP_WATER_ENDLESS": "Taps bring water from rivers, dams or boreholes. These can run low, so we save water.",
  "M_FT_PUSH_PULL_MIX": "Moving something towards you is a pull. Moving something away from you is a push.",
  "M_FT_MAGNET_ALL": "A magnet picks up only iron and steel things, not all metals.",
  "M_FT_GRAVITY_ONLY_FALLING": "Gravity pulls down on everything all the time, even things at rest.",
@@ -665,6 +707,9 @@ export const MIS_FEEDBACK = {
  "M_FU_FRICTION_BAD_ONLY": "Friction is useful in brakes, in walking and in holding things. It is a force that slows things.",
  "M_FU_GRAVITY_ONLY_PROBLEM": "Gravity makes rain fall and keeps us and things on the ground.",
  "M_FU_NOT_EVERYDAY": "A push or a pull is a force. Even writing and walking use a force.",
+ "M_FT_FORCE_IS_LIVING": "Non-living things can push and pull too. A magnet pulls iron and the Earth pulls everything down.",
+ "M_FE_STOPPED_NO_FORCE": "A ball stops because a force (friction) acts on it. Less friction, longer roll.",
+ "M_FU_MORE_FORCE_ALWAYS_BETTER": "Each task needs the right amount of force. Too much can break things.",
  "M_LS_MOON_SOURCE": "The Moon only reflects light from the Sun. The Sun gives out its own light.",
  "M_LS_SHINY_SOURCE": "A shiny roof only reflects light. A burning candle makes its own light.",
  "M_LS_NATURAL_ONLY_SKY": "Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.",
@@ -674,6 +719,9 @@ export const MIS_FEEDBACK = {
  "M_LU_EYES_SEND": "We see because light bounces off things into our eyes. In the dark, with no light, we cannot see.",
  "M_LU_PLANT_SOIL_FOOD": "Plants use light to make their food in the leaves.",
  "M_LU_ONLY_SEE": "Light is used to see, and also for signals, for plants to make food and for solar energy.",
+ "M_LS_ARTIFICIAL_NATURAL_MIX": "Natural sources (Sun, stars, lightning, fireflies) are not made by people. Candles, lamps and bulbs are artificial.",
+ "M_HL_MORE_BULBS_ONLY": "In the day, windows, clear roof sheets and light walls bring sunlight into a house.",
+ "M_LU_DARK_SEE_A_LITTLE": "We see things only when light from them enters our eyes. No light, nothing seen.",
  "M_HS_SUN_ONLY": "The Sun is a source of heat, and so are fire, electricity and cooking gas.",
  "M_HS_HOT_OBJECT_SOURCE": "A hot stone was warmed by the Sun. The Sun is the source.",
  "M_HS_RUBBING_NOT_HEAT": "Rubbing makes friction, and friction makes heat.",
@@ -682,5 +730,8 @@ export const MIS_FEEDBACK = {
  "M_HU_ONLY_COOKING": "Heat is used for cooking and also for drying, warming, ironing and boiling water.",
  "M_SF_BUTTER_ON_BURN": "Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.",
  "M_SF_REFILL_LIT": "Put out the flame, let the stove cool, and then refill it.",
- "M_SF_WET_CLOTH": "Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn."
+ "M_SF_WET_CLOTH": "Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn.",
+ "M_HS_COLD_HAS_COLDNESS": "Cold is less heat. Your hand feels cold because heat leaves it.",
+ "M_HU_HEAT_ONLY_FIRE": "The Sun gives heat we use for drying crops, clothes and warming water.",
+ "M_SF_WATER_ON_OIL_FIRE": "Never throw water on burning oil. Cover the pan to cut off the air, and call an adult."
 };

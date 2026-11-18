@@ -1,0 +1,198 @@
+{
+ "sub_strand": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER",
+ "title": "Properties of Matter",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use water, ice and steam from a kettle (the teacher holds the kettle), a stone, a balloon and a jug. Powders (sand, sugar, flour) are the hard case and are taught with a hand lens: each grain is a tiny solid.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+   "key_step": "The child sorts a substance by how it behaves (keeps its shape, flows and takes the shape of its container, spreads to fill the space), not by whether it is soft, pours or can be seen.",
+   "floor": {
+    "prerequisite": "Can name water, a stone and air.",
+    "question": "Can you see air?",
+    "answer": "no"
+   },
+   "representations": [
+    "a stone, water in a jug and a blown-up balloon",
+    "sand under a hand lens",
+    "a sorting table with three columns"
+   ],
+   "steps": [
+    "Solid: keeps its own shape (a stone, a sponge, a grain of sand).",
+    "Liquid: flows and takes the shape of its container (water, milk, oil).",
+    "Gas: spreads to fill any space (air in a balloon, steam).",
+    "Test the hard cases: sand, ugali, steam."
+   ],
+   "contexts": [
+    "cooking ugali on a jiko",
+    "pumping a bicycle tyre",
+    "a kettle boiling for tea"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three columns: solid, liquid, gas."
+    },
+    {
+     "beat": "write",
+     "do": "Write sand, milk, air, ugali, steam below them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sand.",
+     "say": "Sand pours. Is each grain a solid or a liquid?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to place the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_POWDER_LIQUID",
+     "listen_for": [
+      "sand pours so it is a liquid"
+     ],
+     "ask": "Look at one grain under the lens: does it keep its shape?",
+     "repair": "Each grain is a tiny solid; a pile of grains can pour."
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_AIR_NOTHING",
+     "listen_for": [
+      "air is nothing",
+      "gas is not matter"
+     ],
+     "ask": "What fills a balloon and makes it big?",
+     "repair": "Air is a gas; it is matter even though we cannot see it."
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_SOFT_NOT_SOLID",
+     "listen_for": [
+      "ugali is soft so it is not solid"
+     ],
+     "ask": "Does ugali flow to fill a plate?",
+     "repair": "Soft things that keep their shape are solids."
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_STEAM_IS_SMOKE",
+     "listen_for": [
+      "it is smoke"
+     ],
+     "ask": "What forms on a cold plate held above the kettle?",
+     "repair": "Steam is water as a gas; it turns back to drops."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is milk a solid, a liquid or a gas?",
+     "answer": "a liquid",
+     "shows": "sorts a substance"
+    },
+    {
+     "question": "A learner says flour is a liquid because it pours. Is the learner right?",
+     "answer": "No: flour is a solid made of tiny grains",
+     "shows": "powders are solids"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+   "key_step": "The child says a solid has its own shape and volume, a liquid has a fixed volume but takes the shape of its container, and a gas has no fixed shape or volume and has mass.",
+   "floor": {
+    "prerequisite": "Can sort substances into solid, liquid and gas.",
+    "question": "Is a stone a solid, liquid or gas?",
+    "answer": "a solid"
+   },
+   "representations": [
+    "one cup of water poured into a tall glass and a wide bowl",
+    "a flat and a pumped ball weighed on a balance",
+    "a table of properties"
+   ],
+   "steps": [
+    "Pour the same cup of water into different containers: shape changes, amount does not.",
+    "Put a stone in each: shape stays.",
+    "Weigh a flat ball and a pumped ball: the air has mass.",
+    "Fill in the table of properties."
+   ],
+   "contexts": [
+    "pouring tea from a flask into cups",
+    "pumping a football",
+    "shaping clay pots"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tall glass and a wide bowl."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"250 ml\" above the glass."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how much water there will be after pouring it into the bowl."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"250 ml\" above the bowl."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_LIQUID_OWN_SHAPE",
+     "listen_for": [
+      "water has its own shape"
+     ],
+     "ask": "What shape is water in a bottle, and then in a basin?",
+     "repair": "A liquid takes the shape of its container."
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_GAS_WEIGHTLESS",
+     "listen_for": [
+      "air weighs nothing"
+     ],
+     "ask": "Which ball is heavier, the flat one or the pumped one?",
+     "repair": "Gases have mass and take up space."
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_VOLUME_CHANGES",
+     "listen_for": [
+      "there is more in the tall glass"
+     ],
+     "ask": "Did we add or pour away any water?",
+     "repair": "Pouring changes the shape of a liquid, not its amount."
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_SOLID_CANNOT_CHANGE",
+     "listen_for": [
+      "plasticine is not a solid",
+      "solids never change shape"
+     ],
+     "ask": "Does the plasticine flow by itself, or only when you push it?",
+     "repair": "A solid keeps its shape unless a force changes it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which state of matter takes the shape of its container but keeps the same amount?",
+     "answer": "a liquid",
+     "shows": "liquid property"
+    },
+    {
+     "question": "A pumped ball is heavier than a flat one. What does this show about air?",
+     "answer": "Air has mass (weight)",
+     "shows": "gas has mass"
+    }
+   ]
+  }
+ ]
+}

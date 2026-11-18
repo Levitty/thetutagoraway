@@ -1,0 +1,209 @@
+{
+ "sub_strand": "SCIE.G4.LIVING.PLANTS",
+ "title": "Plants",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach outside first: a potted bean seedling, the school hedge, a touch-me-not (Mimosa) plant if the school has one. The child looks for each sign of life on a real plant before naming it.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+   "key_step": "The child checks a plant against the signs of life (grows, reproduces, removes waste, responds, dies) and says the plant is alive even though it does not walk.",
+   "floor": {
+    "prerequisite": "Can tell living from non-living things.",
+    "question": "Is a stone living or non-living?",
+    "answer": "non-living"
+   },
+   "representations": [
+    "a real seedling and a stone side by side",
+    "a picture of a seedling bending to a window",
+    "a table: sign of life, what the plant does"
+   ],
+   "steps": [
+    "Name the signs of life one at a time.",
+    "For each sign, find what a plant does (it grows taller, makes seeds, bends to light).",
+    "Ask whether moving from place to place is needed: it is not.",
+    "Decide: a plant shows the signs, so it is alive."
+   ],
+   "contexts": [
+    "bean seedlings on the classroom window sill",
+    "a touch-me-not plant folding its leaves",
+    "maize growing in the shamba"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seedling in a pot by a window, bending towards it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bent stem.",
+     "say": "Why has the stem bent this way?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it turns to the light."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"responds\" beside the stem."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what will happen to a bean seed kept in a tin if it is planted."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NOT_ALIVE",
+     "listen_for": [
+      "it does not walk",
+      "plants cannot move"
+     ],
+     "ask": "Does a hen need to fly far to be alive? Does a plant need to walk?",
+     "repair": "Living things grow, reproduce and respond. A plant does all of these without walking."
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_WASTE",
+     "listen_for": [
+      "only animals make waste",
+      "plants are clean"
+     ],
+     "ask": "What do plants give off into the air from their leaves?",
+     "repair": "Plants remove waste: they give off oxygen and water vapour, and shed old leaves."
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_RESPOND",
+     "listen_for": [
+      "plants do not feel anything",
+      "they stay the same"
+     ],
+     "ask": "What happens when you touch a touch-me-not leaf?",
+     "repair": "Plants respond: leaves fold, stems bend to light, roots grow towards water."
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_SEED_DEAD",
+     "listen_for": [
+      "the seed is dead",
+      "it does nothing in the tin"
+     ],
+     "ask": "If we plant the tin beans in wet soil, what will happen?",
+     "repair": "A seed rests until it gets water and warmth. Then it grows, so it was alive."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two signs that show a maize plant is alive.",
+     "answer": "any two of: it grows, it makes seeds, it bends to light, it gives off waste, it dies",
+     "shows": "names signs of life"
+    },
+    {
+     "question": "A learner says a mango tree is not alive because it never moves from its place. Is the learner right?",
+     "answer": "No: the tree grows, makes fruit and seeds and responds, so it is alive",
+     "shows": "moving about is not a sign needed"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+   "key_step": "The child matches each part to its job: roots hold the plant and take in water, the stem holds it up and carries water and food, the leaves make food using sunlight.",
+   "floor": {
+    "prerequisite": "Names roots, stem and leaves on a plant.",
+    "question": "Which part of a plant is under the soil?",
+    "answer": "the roots"
+   },
+   "representations": [
+    "a whole bean plant pulled up gently",
+    "a drawing with the three parts labelled",
+    "a celery or a white flower stem standing in coloured water"
+   ],
+   "steps": [
+    "Show a whole plant and name the three parts.",
+    "Roots: hold the plant firm, take in water and mineral salts.",
+    "Stem: holds the plant up and carries water up and food down.",
+    "Leaves: make food using sunlight."
+   ],
+   "contexts": [
+    "a sukuma wiki plant in the kitchen garden",
+    "a maize plant blown by the wind",
+    "a cut flower in a jar of coloured water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plant with roots, stem and leaves."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw arrows from the roots up the stem to the leaves."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrows.",
+     "say": "What is moving up the stem?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a leaf.",
+     "say": "And what does the leaf make with sunlight?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer: food."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_ABSORB",
+     "listen_for": [
+      "leaves drink the water",
+      "roots make food"
+     ],
+     "ask": "Where is the water a plant drinks: in the soil or in the air?",
+     "repair": "Roots take in water from the soil; leaves make food."
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_STEM_ONLY_HOLDS",
+     "listen_for": [
+      "the stem just holds it up"
+     ],
+     "ask": "How does water from the roots reach the leaves at the top?",
+     "repair": "The stem holds the plant up and carries water and food."
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_SHADE_ONLY",
+     "listen_for": [
+      "leaves give shade",
+      "leaves are for looking nice"
+     ],
+     "ask": "What happens to a plant if all its leaves are cut off?",
+     "repair": "Leaves make the plant's food using sunlight."
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_FOOD_FROM_SOIL",
+     "listen_for": [
+      "it eats from the soil",
+      "the roots get food"
+     ],
+     "ask": "Two plants, same soil, one kept in a dark box. Which grows well?",
+     "repair": "Plants make food in their leaves with sunlight; roots take in water and mineral salts."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of a plant takes in water from the soil?",
+     "answer": "the roots",
+     "shows": "root function"
+    },
+    {
+     "question": "A plant kept in a dark cupboard turns yellow and weak, though the soil is good. Why?",
+     "answer": "Its leaves cannot make food without light",
+     "shows": "leaves make food"
+    }
+   ]
+  }
+ ]
+}

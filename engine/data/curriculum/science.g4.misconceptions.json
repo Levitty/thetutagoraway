@@ -113,6 +113,36 @@
    "why": "Few children say leaves are only for shade; the real slip is not knowing leaves make food."
   }
  },
+ "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_SEED_DEAD": {
+  "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+  "error": "Thinks a dry seed is dead, because it does not grow, feed or move while it is in a tin.",
+  "example": {
+   "question": "A bean seed has been kept dry in a tin for two months. Is it living?",
+   "wrong_answer": "No, it is dead because it does nothing",
+   "correct_answer": "Yes, it is alive but resting; planted in wet soil it grows"
+  },
+  "cause": "Uses \"doing something now\" as the test of life and does not know a seed can rest.",
+  "reveals": "Offer \"No, it is dead because it does nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Plant some of the tin beans in wet soil and watch them sprout within a week.",
+  "feedback": "A dry seed is resting, not dead. Give it water and warmth and it grows.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_FOOD_FROM_SOIL": {
+  "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+  "error": "Thinks plants get their food from the soil through the roots, like eating.",
+  "example": {
+   "question": "Where does a maize plant get its food from?",
+   "wrong_answer": "From the soil, through its roots",
+   "correct_answer": "It makes its own food in the leaves using sunlight"
+  },
+  "cause": "Compares a plant with an animal that eats; roots look like mouths in the soil.",
+  "reveals": "Offer \"From the soil, through its roots\" next to the right answer and ask the question again in a new context.",
+  "help": "Grow two seedlings, one in the dark: same soil, but the one without light turns yellow and weak.",
+  "feedback": "Plants make their own food in their leaves. Roots take in water and mineral salts, not food.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
  "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_REPRODUCE_BIRTH_ONLY": {
   "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
   "error": "Thinks animals reproduce only by giving birth to live young (not by eggs).",
@@ -283,6 +313,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_PLANTS_ARE_ANIMALS_MOVE": {
+  "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+  "error": "Thinks anything that moves by itself is an animal, so a car or a river is alive.",
+  "example": {
+   "question": "A river moves all day. Is it a living thing?",
+   "wrong_answer": "Yes, because it moves",
+   "correct_answer": "No: it does not feed, grow, breathe or reproduce"
+  },
+  "cause": "Uses movement as the only sign of life.",
+  "reveals": "Offer \"Yes, because it moves\" next to the right answer and ask the question again in a new context.",
+  "help": "Go through the signs one by one for the river: it fails all but movement.",
+  "feedback": "Moving is only one sign. A living thing also feeds, breathes, grows and reproduces.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_BIRD_NOT_VERTEBRATE": {
+  "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+  "error": "Thinks birds are not vertebrates because they are light and have feathers, not bones like a cow.",
+  "example": {
+   "question": "Is a hen a vertebrate or an invertebrate?",
+   "wrong_answer": "An invertebrate, it is light with feathers",
+   "correct_answer": "A vertebrate: it has a backbone"
+  },
+  "cause": "Has only felt the backbone of big animals and thinks feathers hide no skeleton.",
+  "reveals": "Offer \"An invertebrate, it is light with feathers\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at the bones of a cooked chicken: the backbone is there.",
+  "feedback": "Birds have a backbone, so they are vertebrates, light or not.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_HARD_BODY_RULE": {
+  "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+  "error": "Uses a hard or soft body as the rule: a soft slug is an invertebrate, so a soft frog must be too.",
+  "example": {
+   "question": "A frog feels soft and wet. Is it a vertebrate?",
+   "wrong_answer": "No, it is soft so it has no backbone",
+   "correct_answer": "Yes, it has a backbone inside"
+  },
+  "cause": "Judges by how the outside feels instead of what is inside.",
+  "reveals": "Offer \"No, it is soft so it has no backbone\" next to the right answer and ask the question again in a new context.",
+  "help": "Feel along your own back: soft skin outside, a backbone inside. A frog is the same.",
+  "feedback": "Soft skin can cover a backbone. Ask what is inside, not how it feels.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_WINDPIPE": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
@@ -455,6 +530,51 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_FOOD_TO_LEGS": {
+  "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+  "error": "Thinks food goes straight down a tube into the legs or fills the whole body like a bag.",
+  "example": {
+   "question": "After you eat ugali, where does the food go first after you swallow?",
+   "wrong_answer": "Into the whole body, all the way to the legs",
+   "correct_answer": "Down the oesophagus into the stomach"
+  },
+  "cause": "Has felt food \"go down\" and pictures the body as one hollow bag.",
+  "reveals": "Offer \"Into the whole body, all the way to the legs\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace the path on a body outline with a string: mouth, food pipe, stomach.",
+  "feedback": "Food travels in one long tube: mouth, food pipe, stomach, small and large intestine.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_ANUS_BEFORE_LARGE": {
+  "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+  "error": "Puts the anus straight after the small intestine and leaves out the large intestine.",
+  "example": {
+   "question": "Which part comes after the small intestine?",
+   "wrong_answer": "The anus",
+   "correct_answer": "The large intestine"
+  },
+  "cause": "Remembers the start and end and forgets the part that takes in water.",
+  "reveals": "Offer \"The anus\" next to the right answer and ask the question again in a new context.",
+  "help": "Lay out the rope model and walk it; stop at each part before the end.",
+  "feedback": "After the small intestine comes the large intestine, then the anus.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_FIBRE_NOT_NEEDED": {
+  "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+  "error": "Thinks vegetables and fruit are not needed if a child eats enough ugali and meat.",
+  "example": {
+   "question": "Which meal helps food pass well through the gut?",
+   "wrong_answer": "Ugali and meat only",
+   "correct_answer": "Ugali, beans and sukuma wiki with a fruit"
+  },
+  "cause": "Thinks a full stomach is all that matters.",
+  "reveals": "Offer \"Ugali and meat only\" next to the right answer and ask the question again in a new context.",
+  "help": "Talk about constipation: roughage from vegetables and fruit helps waste move through.",
+  "feedback": "Vegetables and fruit give roughage, which helps food and waste move through the gut.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_POWDER_LIQUID": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
   "error": "Thinks sand, sugar or flour are liquids because they pour.",
@@ -568,6 +688,36 @@
    "mark": "common in the literature",
    "source": "Piaget and Inhelder, the conservation of liquid quantity: the amount seems to change when the shape does."
   }
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_STEAM_IS_SMOKE": {
+  "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+  "error": "Thinks the steam from a boiling kettle is smoke, not water as a gas.",
+  "example": {
+   "question": "What is coming out of a boiling kettle?",
+   "wrong_answer": "Smoke from the heat",
+   "correct_answer": "Water as a gas (water vapour); the cloud is tiny drops of water"
+  },
+  "cause": "Sees a white cloud and links it with fire and smoke.",
+  "reveals": "Offer \"Smoke from the heat\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a cold plate (teacher only) above the kettle: drops of water form on it.",
+  "feedback": "The cloud above a kettle is water. Hot water turns into a gas called water vapour.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_SOLID_CANNOT_CHANGE": {
+  "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+  "error": "Thinks a solid can never change its shape, so clay or plasticine is not a solid.",
+  "example": {
+   "question": "A learner squeezes plasticine into a new shape. Is it still a solid?",
+   "wrong_answer": "No, a solid cannot change shape",
+   "correct_answer": "Yes: it keeps its new shape until a force changes it"
+  },
+  "cause": "Hears \"a solid has a fixed shape\" and takes it to mean it can never be changed.",
+  "reveals": "Offer \"No, a solid cannot change shape\" next to the right answer and ask the question again in a new context.",
+  "help": "Leave the plasticine on the table: it keeps its shape by itself; only your push changed it.",
+  "feedback": "A solid keeps its own shape unless a force changes it. It does not flow like a liquid.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PLASTIC_ROTS": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
@@ -740,6 +890,51 @@
    "why": "Children can tell plastic from peelings; this is a trap option more than a held belief."
   }
  },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PAPER_NEVER_ROTS": {
+  "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+  "error": "Thinks paper is non-decomposable because it is made in a factory.",
+  "example": {
+   "question": "Is an old newspaper decomposable?",
+   "wrong_answer": "No, it is made in a factory",
+   "correct_answer": "Yes: paper is made from wood and rots in damp soil"
+  },
+  "cause": "Sorts by \"natural or factory-made\" instead of \"rots or not\".",
+  "reveals": "Offer \"No, it is made in a factory\" next to the right answer and ask the question again in a new context.",
+  "help": "Bury a piece of newspaper and a polythene bag; dig up after four weeks.",
+  "feedback": "Paper comes from trees, so it rots. Ask \"will it rot?\" not \"was it made in a factory?\"",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_FAR_AWAY_NO_HARM": {
+  "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+  "error": "Thinks waste dumped far from home harms nobody.",
+  "example": {
+   "question": "A family throws plastic bags into a valley far from houses. Is there any danger?",
+   "wrong_answer": "No, nobody lives there",
+   "correct_answer": "Yes: animals eat them, rain washes them into rivers and drains get blocked"
+  },
+  "cause": "Thinks danger only means danger to people nearby.",
+  "reveals": "Offer \"No, nobody lives there\" next to the right answer and ask the question again in a new context.",
+  "help": "Follow the bag: wind and rain carry it to rivers, farms and the lake.",
+  "feedback": "Waste does not stay where it is thrown. Wind and rain carry it to animals, rivers and farms.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_REUSE_DIRTY": {
+  "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+  "error": "Thinks reusing waste means using any container again, even a chemical or pesticide tin for food or water.",
+  "example": {
+   "question": "Which is a safe way to reuse a container?",
+   "wrong_answer": "Use an old pesticide tin to store drinking water",
+   "correct_answer": "Use a clean plastic bottle as a plant pot"
+  },
+  "cause": "Knows reuse is good but not that some containers stay poisonous.",
+  "reveals": "Offer \"Use an old pesticide tin to store drinking water\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the danger sign on a pesticide tin with the class.",
+  "feedback": "Reuse only safe, clean containers. A tin that held poison must never hold food or water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_STORE_ALL": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
   "error": "Thinks conserving water means storing as much as possible and never using it.",
@@ -910,6 +1105,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_ONLY_WHEN_SHORT": {
+  "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+  "error": "Thinks water needs saving only during a drought, not when there is plenty.",
+  "example": {
+   "question": "When should a family conserve water?",
+   "wrong_answer": "Only when there is a drought",
+   "correct_answer": "All the time, in the rains and in the dry season"
+  },
+  "cause": "Links saving only with shortage they have felt.",
+  "reveals": "Offer \"Only when there is a drought\" next to the right answer and ask the question again in a new context.",
+  "help": "Show that water saved in the rainy season (in tanks) is what lasts into the dry season.",
+  "feedback": "Conserving water means using it carefully all the time, so there is enough later.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_REUSE_DIRTY_DRINK": {
+  "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+  "error": "Thinks used washing water can be reused for drinking or cooking.",
+  "example": {
+   "question": "Water used to wash clothes can be reused to",
+   "wrong_answer": "make tea",
+   "correct_answer": "water the flowers or flush a toilet"
+  },
+  "cause": "Knows reuse saves water but not which uses are safe.",
+  "reveals": "Offer \"make tea\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort uses: drinking and cooking need clean water; plants and floors can take used water.",
+  "feedback": "Used water can water plants or clean floors. Drinking and cooking need clean water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_TAP_WATER_ENDLESS": {
+  "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
+  "error": "Thinks water from a tap comes from the pipe itself, so it never runs out.",
+  "example": {
+   "question": "Where does the water in the school tap come from?",
+   "wrong_answer": "From the pipe; pipes make water",
+   "correct_answer": "From a river, a borehole, a dam or a tank that can run dry"
+  },
+  "cause": "Has only seen the tap, not the source behind it.",
+  "reveals": "Offer \"From the pipe; pipes make water\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the path from a river or borehole to a tank to the tap.",
+  "feedback": "Taps bring water from rivers, dams or boreholes. These can run low, so we save water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_PUSH_PULL_MIX": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
@@ -1082,6 +1322,51 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_FORCE_IS_LIVING": {
+  "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+  "error": "Thinks only living things can push or pull, so a magnet or the Earth cannot exert a force.",
+  "example": {
+   "question": "Can a magnet pull a pin without anyone touching it?",
+   "wrong_answer": "No, only people and animals can pull",
+   "correct_answer": "Yes, magnetic force pulls the pin"
+  },
+  "cause": "Has only met forces made by muscles.",
+  "reveals": "Offer \"No, only people and animals can pull\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a magnet near pins on a table: they move with no hand touching them.",
+  "feedback": "Non-living things can push and pull too. A magnet pulls iron and the Earth pulls everything down.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_STOPPED_NO_FORCE": {
+  "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+  "error": "Thinks a ball that slows and stops by itself had no force acting on it.",
+  "example": {
+   "question": "A ball rolled on grass slows down and stops. Why?",
+   "wrong_answer": "Nothing made it stop; balls just stop",
+   "correct_answer": "Friction from the grass acted on it and stopped it"
+  },
+  "cause": "Does not see friction as a force because nothing visible pushes.",
+  "reveals": "Offer \"Nothing made it stop; balls just stop\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll the ball on grass and on smooth cement: it rolls further where friction is less.",
+  "feedback": "A ball stops because a force (friction) acts on it. Less friction, longer roll.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_MORE_FORCE_ALWAYS_BETTER": {
+  "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+  "error": "Thinks using more force is always better, for example pressing hard when writing or kicking hard when passing.",
+  "example": {
+   "question": "A learner presses very hard when writing with a pencil. What happens?",
+   "wrong_answer": "The writing is better",
+   "correct_answer": "The pencil point breaks or the paper tears"
+  },
+  "cause": "Thinks force is good, so more of it must be better.",
+  "reveals": "Offer \"The writing is better\" next to the right answer and ask the question again in a new context.",
+  "help": "Try writing gently and very hard: compare the paper and the pencil.",
+  "feedback": "Each task needs the right amount of force. Too much can break things.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_MOON_SOURCE": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
   "error": "Thinks the Moon is a source of light.",
@@ -1253,6 +1538,51 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_ARTIFICIAL_NATURAL_MIX": {
+  "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+  "error": "Calls a candle or a fire a natural source because it has a real flame.",
+  "example": {
+   "question": "Is a candle a natural or an artificial source of light?",
+   "wrong_answer": "Natural, because it has a real flame",
+   "correct_answer": "Artificial: people make and light it"
+  },
+  "cause": "Sorts by \"real fire\" instead of \"made by people or not\".",
+  "reveals": "Offer \"Natural, because it has a real flame\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask of each source: did a person make it or light it?",
+  "feedback": "Natural sources (Sun, stars, lightning, fireflies) are not made by people. Candles, lamps and bulbs are artificial.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_MORE_BULBS_ONLY": {
+  "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
+  "error": "Thinks the only way to light a house better is more bulbs, not windows, light walls or skylights.",
+  "example": {
+   "question": "How can a dark kitchen be made brighter in the day without using electricity?",
+   "wrong_answer": "Put in more bulbs",
+   "correct_answer": "Add a window or a clear roof sheet, or paint the walls a light colour"
+  },
+  "cause": "Thinks lighting means artificial lights only.",
+  "reveals": "Offer \"Put in more bulbs\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare the classroom with curtains open and closed, lights off.",
+  "feedback": "In the day, windows, clear roof sheets and light walls bring sunlight into a house.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_DARK_SEE_A_LITTLE": {
+  "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+  "error": "Thinks eyes get used to total darkness and can see a little with no light at all.",
+  "example": {
+   "question": "In a room with no light at all, can you see your book after waiting a long time?",
+   "wrong_answer": "Yes, your eyes get used to it",
+   "correct_answer": "No: with no light at all, nothing can be seen"
+  },
+  "cause": "Has only been in rooms with a little light from a gap.",
+  "reveals": "Offer \"Yes, your eyes get used to it\" next to the right answer and ask the question again in a new context.",
+  "help": "Close a shoebox with a picture inside and look through a pinhole covered with a finger.",
+  "feedback": "We see things only when light from them enters our eyes. No light, nothing seen.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
  "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_SUN_ONLY": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
   "error": "Thinks the Sun is the only source of heat.",
@@ -1423,5 +1753,50 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_COLD_HAS_COLDNESS": {
+  "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+  "error": "Thinks a cold thing (ice, cold water) gives out \"coldness\" in the same way a fire gives out heat.",
+  "example": {
+   "question": "Ice in a cup makes your hand feel cold. Why?",
+   "wrong_answer": "The ice gives coldness to your hand",
+   "correct_answer": "Heat flows from your warm hand into the ice"
+  },
+  "cause": "Feels cold as something that moves, like heat does.",
+  "reveals": "Offer \"The ice gives coldness to your hand\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold an ice cube: it melts because heat from your hand goes into it.",
+  "feedback": "Cold is less heat. Your hand feels cold because heat leaves it.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_HEAT_ONLY_FIRE": {
+  "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+  "error": "Thinks the Sun's heat cannot be used for work, only heat from a fire.",
+  "example": {
+   "question": "How can a family dry beans after harvest without a fire?",
+   "wrong_answer": "They cannot; drying needs a fire",
+   "correct_answer": "Spread them in the sun on a mat"
+  },
+  "cause": "Links \"using heat\" only with fires and stoves.",
+  "reveals": "Offer \"They cannot; drying needs a fire\" next to the right answer and ask the question again in a new context.",
+  "help": "Dry two wet cloths, one in the sun, one in a shaded room: compare after an hour.",
+  "feedback": "The Sun gives heat we use for drying crops, clothes and warming water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_WATER_ON_OIL_FIRE": {
+  "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+  "error": "Thinks water is the right thing to throw on a burning pan of oil.",
+  "example": {
+   "question": "A pan of cooking oil catches fire. What should an adult do?",
+   "wrong_answer": "Throw water on it",
+   "correct_answer": "Turn off the heat and cover the pan with a lid or a damp cloth"
+  },
+  "cause": "Knows water puts out wood fires and uses it for every fire.",
+  "reveals": "Offer \"Throw water on it\" next to the right answer and ask the question again in a new context.",
+  "help": "Explain: water makes burning oil splash and spread. Covering stops the air.",
+  "feedback": "Never throw water on burning oil. Cover the pan to cut off the air, and call an adult.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  }
 }

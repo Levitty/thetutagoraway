@@ -1,0 +1,285 @@
+{
+ "sub_strand": "SCIE.G4.FORCE_.LIGHT",
+ "title": "Light",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Darken the classroom (close curtains) and test each \"source\": a torch, a mirror, a candle (the teacher lights it), a piece of foil. Only things that give out their own light shine in the dark. The Moon is taught with a ball and a torch.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+   "key_step": "The child calls something a source of light only if it gives out its own light, and sorts sources into natural (Sun, stars, lightning, fireflies) and artificial (bulbs, lamps, candles).",
+   "floor": {
+    "prerequisite": "Can name things that give light.",
+    "question": "Name one thing that gives light at night at home.",
+    "answer": "for example a bulb, a lamp or a torch"
+   },
+   "representations": [
+    "a dark classroom with a torch, a mirror and foil",
+    "a ball and a torch for the Moon",
+    "a two-column table: natural, artificial"
+   ],
+   "steps": [
+    "Test: does it shine in a dark room by itself?",
+    "If yes, it is a source; if not (mirror, Moon), it reflects light.",
+    "Ask: did people make it? Artificial. If not, natural.",
+    "Sort the list."
+   ],
+   "contexts": [
+    "a full moon over the village",
+    "a paraffin lamp in the evening",
+    "lightning in a storm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the Sun, the Moon and a mirror."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Moon.",
+     "say": "Does the Moon make its own light?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw an arrow from the Sun to the Moon and from the Moon to the Earth."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"reflects light\" by the Moon."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_MOON_SOURCE",
+     "listen_for": [
+      "the Moon gives light"
+     ],
+     "ask": "Where does the Moon's light come from?",
+     "repair": "The Moon reflects light from the Sun; it is not a source."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_SHINY_SOURCE",
+     "listen_for": [
+      "the mirror shines"
+     ],
+     "ask": "Does the mirror shine in a dark room?",
+     "repair": "Shiny things reflect light; they are not sources."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_NATURAL_ONLY_SKY",
+     "listen_for": [
+      "only the Sun and stars"
+     ],
+     "ask": "What lights up the sky in a storm?",
+     "repair": "Lightning and fireflies are natural sources too."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_ARTIFICIAL_NATURAL_MIX",
+     "listen_for": [
+      "a candle is natural"
+     ],
+     "ask": "Who made and lit the candle?",
+     "repair": "Sources made by people are artificial."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is the Moon a source of light?",
+     "answer": "No: it reflects light from the Sun",
+     "shows": "true source"
+    },
+    {
+     "question": "Sort these: firefly, torch. Which is natural?",
+     "answer": "the firefly",
+     "shows": "natural or artificial"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
+   "key_step": "The child describes ways of lighting a house (windows, clear roof sheets, light-coloured walls, electric bulbs, solar lamps, lanterns, candles) and the safe use of each.",
+   "floor": {
+    "prerequisite": "Knows sources of light.",
+    "question": "Is a solar lamp natural or artificial?",
+    "answer": "artificial"
+   },
+   "representations": [
+    "the classroom with curtains open and closed",
+    "a model room in a box with a window cut out",
+    "a chart: way of lighting, day or night, safety"
+   ],
+   "steps": [
+    "Day: windows, clear roof sheets, light walls.",
+    "Night: bulbs, solar lamps, lanterns, candles.",
+    "Safety: never leave a flame alone, keep it away from curtains.",
+    "Pick the best way for a given room and time."
+   ],
+   "contexts": [
+    "a homestead with no electricity",
+    "a solar lamp for homework",
+    "a mabati house with a clear sheet"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box room with no window."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how bright it will be inside at noon."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add two ways to light it in the day."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_WINDOW_ONLY_AIR",
+     "listen_for": [
+      "windows are for air"
+     ],
+     "ask": "What comes in through the window besides air?",
+     "repair": "Windows also let in light."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_DARK_WALLS",
+     "listen_for": [
+      "dark walls are brighter"
+     ],
+     "ask": "Which reflects more light: a white wall or a black wall?",
+     "repair": "Light-coloured walls reflect more light and make rooms brighter."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_CANDLE_LEFT",
+     "listen_for": [
+      "leave the lamp on while we sleep"
+     ],
+     "ask": "What could happen if the lamp falls over at night?",
+     "repair": "Never leave a flame alone; put it out before sleeping."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_MORE_BULBS_ONLY",
+     "listen_for": [
+      "put in more bulbs"
+     ],
+     "ask": "How can sunlight get into the kitchen?",
+     "repair": "Windows, clear roof sheets and light walls light a house in the day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way to light a house in the day without electricity.",
+     "answer": "windows, clear roof sheets or light-coloured walls",
+     "shows": "daylight"
+    },
+    {
+     "question": "Give one safety rule when using a candle.",
+     "answer": "never leave it burning alone, or keep it away from curtains",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+   "key_step": "The child explains uses of light (seeing, plants making food, drying, warming, signals and safety) and that we see because light enters our eyes.",
+   "floor": {
+    "prerequisite": "Knows sources of light.",
+    "question": "Name a natural source of light.",
+    "answer": "the Sun"
+   },
+   "representations": [
+    "a shoebox with a pinhole and a picture inside",
+    "two seedlings, one in the dark",
+    "a chart of uses"
+   ],
+   "steps": [
+    "We see when light from an object enters our eyes.",
+    "Plants need light to make food.",
+    "Light warms and dries (clothes, grain).",
+    "Light is used for signals: traffic lights, torches, reflectors."
+   ],
+   "contexts": [
+    "reading at night with a solar lamp",
+    "drying maize in the sun",
+    "traffic lights in town"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an eye, a book and a lamp."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a ray from the lamp to the book."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where the light must go next for the eye to see the book."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the ray from the book into the eye."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_EYES_SEND",
+     "listen_for": [
+      "light comes out of our eyes"
+     ],
+     "ask": "Can you see in a dark room just by opening your eyes?",
+     "repair": "Light travels into our eyes from objects."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_PLANT_SOIL_FOOD",
+     "listen_for": [
+      "plants get food from the soil"
+     ],
+     "ask": "What happened to the seedling kept in the dark?",
+     "repair": "Plants need light to make their food."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_ONLY_SEE",
+     "listen_for": [
+      "light is only for seeing"
+     ],
+     "ask": "How do we dry maize after harvest?",
+     "repair": "Light also warms, dries and gives signals."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_DARK_SEE_A_LITTLE",
+     "listen_for": [
+      "eyes get used to the dark"
+     ],
+     "ask": "What did you see in the shoebox with the hole covered?",
+     "repair": "With no light at all, nothing can be seen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why can we not see a book in a room with no light?",
+     "answer": "no light comes from the book into our eyes",
+     "shows": "how we see"
+    },
+    {
+     "question": "Give two uses of light apart from seeing.",
+     "answer": "any two: plants make food, drying, warming, signals",
+     "shows": "other uses"
+    }
+   ]
+  }
+ ]
+}
