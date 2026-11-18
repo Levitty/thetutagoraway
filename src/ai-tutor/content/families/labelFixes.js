@@ -465,13 +465,13 @@ export const CORE_FAMILIES = [
     check: ({ r, h }, a) => Math.abs(a - 2 * (22 / 7) * r * r - 2 * (22 / 7) * r * h) < 0.11 }),
 
   // ---- G8_PROBABILITY_COMBINED: a tree diagram at last
-  fx({ id: 'g8.prob.tree-two-stage', skill: 'G8_PROBABILITY_COMBINED', outcome: 'G8.PROB.d', rung: 2, form: 'table',
+  fx({ id: 'g8.prob.tree-two-stage', skill: 'G8_PROBABILITY_COMBINED', outcome: 'MATH.G8.DATA_H.PROBABILITY.d', cskill: 'MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE', rung: 2, form: 'table',
     draw: () => { const pr = pick([0.2, 0.3, 0.4, 0.6]), ps = pick([0.25, 0.75, 0.2, 0.1]); return { pr, ps }; },
     make: ({ pr, ps }) => {
       const a = round(pr * ps, 4);
       return { question: `A tree diagram has two sets of branches. On the first set, the chance that it rains is ${pr}. On the second set, the chance that the matatu is late is ${ps}, rain or not. Multiply along the branches: what is the probability that it rains and the matatu is late?`,
         answer: a,
-        wrong: [[round(pr + ps, 4), 'Along a branch you multiply. Adding is for choosing between different paths.'], [round(1 - pr * ps, 4), 'That is the chance of everything except this path.'], [round(pr * (1 - ps), 4), 'That is rain and the matatu on time.']],
+        wrong: [[round(pr + ps, 4), 'Along a branch you multiply. Adding is for choosing between different paths.', 'M_BRANCHES_ADDED'], [round(1 - pr * ps, 4), 'That is the chance of everything except this path.', 'M_ALL_BUT_PATH'], [round(pr * (1 - ps), 4), 'That is rain and the matatu on time.', 'M_WRONG_PATH_FOLLOWED']],
         hints: ['Follow one branch for rain, then one for late.', 'Multiply the probabilities along the path.'],
         steps: [`Path: rain (${pr}) then late (${ps}).`, `${pr} × ${ps} = ${a}.`] };
     },

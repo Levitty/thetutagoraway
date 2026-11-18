@@ -7894,5 +7894,439 @@
   "help": "Range = largest - smallest: how spread out.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_SURE_EVENT_AS_CHANCE": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS",
+  "error": "Picks an event with a known result as one that happens by chance.",
+  "example": {
+   "question": "Which happens by chance: Saturday comes after Friday, or a coin lands heads?",
+   "wrong_answer": "Saturday comes after Friday",
+   "correct_answer": "a coin lands heads"
+  },
+  "cause": "Thinks anything in the future is chance.",
+  "reveals": "The answer Saturday comes after Friday as a wrong option, with a reason that names the idea.",
+  "help": "If we know what will happen, no chance is involved.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_LIKELY_AS_CERTAIN": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS",
+  "error": "Calls a likely event certain.",
+  "example": {
+   "question": "It is cloudy in Kericho in April. Rain this afternoon is?",
+   "wrong_answer": "certain",
+   "correct_answer": "likely"
+  },
+  "cause": "Mixes \"very likely\" with \"sure\".",
+  "reveals": "The answer certain as a wrong option, with a reason that names the idea.",
+  "help": "Certain means it must happen.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_UNLIKELY_AS_IMPOSSIBLE": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS",
+  "error": "Calls an unlikely event impossible.",
+  "example": {
+   "question": "Rolling a six five times in a row is?",
+   "wrong_answer": "impossible",
+   "correct_answer": "unlikely"
+  },
+  "cause": "Rare feels like never.",
+  "reveals": "The answer impossible as a wrong option, with a reason that names the idea.",
+  "help": "Impossible means it can never happen.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_LUCKY_NUMBER_MORE_LIKELY": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS",
+  "error": "Believes a favourite or lucky number is more likely on a fair die.",
+  "example": {
+   "question": "On a fair die, is 6 harder to get than 3?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, all are equally likely"
+  },
+  "cause": "Remembers waiting for a six in games.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Each face of a fair die is equally likely.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_BIGGER_FRACTION_BETTER": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT",
+  "error": "Thinks the result with the bigger fraction of heads is closer to the truth.",
+  "example": {
+   "question": "Coin: 7 heads in 10, or 52 heads in 100. Closer to the true probability?",
+   "wrong_answer": "7 in 10",
+   "correct_answer": "52 in 100"
+  },
+  "cause": "Compares the sizes of the results.",
+  "reveals": "The answer 7 in 10 as a wrong option, with a reason that names the idea.",
+  "help": "A short run can be far off; many tosses settle near 1/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_SAME_COIN_SAME_RESULT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT",
+  "error": "Believes any run with the same coin is equally reliable.",
+  "example": {
+   "question": "10 tosses or 100 tosses of the same coin: which is more reliable?",
+   "wrong_answer": "both the same",
+   "correct_answer": "100 tosses"
+  },
+  "cause": "Thinks the coin decides the reliability.",
+  "reveals": "The answer both the same as a wrong option, with a reason that names the idea.",
+  "help": "The number of trials decides it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_FEWER_TRIALS_BETTER": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT",
+  "error": "Believes fewer trials are better because there are fewer counting mistakes.",
+  "example": {
+   "question": "Why not toss only 10 times?",
+   "wrong_answer": "fewer counting mistakes",
+   "correct_answer": "too few to even out the luck"
+  },
+  "cause": "Thinks of the experiment as counting.",
+  "reveals": "The answer fewer counting mistakes as a wrong option, with a reason that names the idea.",
+  "help": "More trials even out lucky and unlucky runs.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_DUE_AFTER_RUN": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT",
+  "error": "Believes after many heads, tails is more likely next.",
+  "example": {
+   "question": "A fair coin gave 5 heads in a row. Next toss?",
+   "wrong_answer": "tails is more likely",
+   "correct_answer": "still 1/2 each"
+  },
+  "cause": "Thinks the coin remembers.",
+  "reveals": "The answer tails is more likely as a wrong option, with a reason that names the idea.",
+  "help": "Each toss is fresh: still an even chance.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_EXTRA_TRIALS_ADDED": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT",
+  "error": "Adds the extra trials to the number of results.",
+  "example": {
+   "question": "12 sides in 40 tosses. About how many in 200?",
+   "wrong_answer": "172",
+   "correct_answer": "60"
+  },
+  "cause": "Treats the increase as extra results.",
+  "reveals": "The answer 172 as a wrong option, with a reason that names the idea.",
+  "help": "Scale up: 12/40 × 200.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_COUNT_SUBTRACTED_FROM_TRIALS": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT",
+  "error": "Takes the results away from the new number of trials.",
+  "example": {
+   "question": "12 sides in 40 tosses. About how many in 200?",
+   "wrong_answer": "188",
+   "correct_answer": "60"
+  },
+  "cause": "Uses the numbers without the probability.",
+  "reveals": "The answer 188 as a wrong option, with a reason that names the idea.",
+  "help": "Use the chance of a side: 0.3 × 200.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_OUT_OF_100": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT",
+  "error": "Treats the result as out of 100 when it was out of another number.",
+  "example": {
+   "question": "12 sides in 40 tosses. About how many in 200?",
+   "wrong_answer": "24",
+   "correct_answer": "60"
+  },
+  "cause": "Reads every result as a percentage.",
+  "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+  "help": "12 out of 40, not 12 out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_TOTAL_TRIALS_WRONG": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT",
+  "error": "Uses one outcome's count as the total number of trials.",
+  "example": {
+   "question": "Green 15, red 20, blue 5. How many spins?",
+   "wrong_answer": "15",
+   "correct_answer": "40"
+  },
+  "cause": "Reads the first number.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Add all the outcomes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_COMPLEMENT_GIVEN": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+  "error": "Gives the probability of the outcome not happening.",
+  "example": {
+   "question": "Side 12 times in 40 tosses. P(side)?",
+   "wrong_answer": "0.7",
+   "correct_answer": "0.3"
+  },
+  "cause": "Uses the other results.",
+  "reveals": "The answer 0.7 as a wrong option, with a reason that names the idea.",
+  "help": "Times it happened over all tosses.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_COUNT_FOR_PROBABILITY": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+  "error": "Gives the number of times as the probability.",
+  "example": {
+   "question": "Side 12 times in 40 tosses. P(side)?",
+   "wrong_answer": "12",
+   "correct_answer": "0.3"
+  },
+  "cause": "Stops at the count.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "A probability is out of all the tosses.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_PART_TO_PART_PROB": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+  "error": "Divides by the other results instead of all the trials.",
+  "example": {
+   "question": "Side 12 times in 40 tosses. P(side)?",
+   "wrong_answer": "12/28",
+   "correct_answer": "12/40"
+  },
+  "cause": "Compares the outcome with the rest.",
+  "reveals": "The answer 12/28 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the total, 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_PROBABILITY_INVERTED": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+  "error": "Puts the total on top.",
+  "example": {
+   "question": "Side 12 times in 40. P(side)?",
+   "wrong_answer": "40/12",
+   "correct_answer": "3/10"
+  },
+  "cause": "Writes the bigger number first.",
+  "reveals": "The answer 40/12 as a wrong option, with a reason that names the idea.",
+  "help": "Times it happened on top; a probability is at most 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_THEORY_FOR_EXPERIMENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+  "error": "Gives the expected probability (such as 1/2) instead of the one from the results.",
+  "example": {
+   "question": "A bottle top: 12 sides in 40. Experimental P(side)?",
+   "wrong_answer": "1/2",
+   "correct_answer": "3/10"
+  },
+  "cause": "Guesses from the shape of the object.",
+  "reveals": "The answer 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "Experimental means from the results.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROB_NOT_SIMPLIFIED": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION",
+  "error": "Leaves the probability fraction unsimplified when simplest form is asked.",
+  "example": {
+   "question": "12 out of 40 in simplest form",
+   "wrong_answer": "12/40",
+   "correct_answer": "3/10"
+  },
+  "cause": "Stops at the fraction.",
+  "reveals": "The answer 12/40 as a wrong option, with a reason that names the idea.",
+  "help": "Divide top and bottom by 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_COMPLEMENT_NOT_FROM_ONE": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION",
+  "error": "Finds the probability of not happening by subtracting from 100 or 10.",
+  "example": {
+   "question": "P(side) = 3/10. P(not side)?",
+   "wrong_answer": "97/100",
+   "correct_answer": "7/10"
+  },
+  "cause": "Uses the wrong whole.",
+  "reveals": "The answer 97/100 as a wrong option, with a reason that names the idea.",
+  "help": "All outcomes add to 1: 1 - 3/10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROBS_DO_NOT_SUM": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION",
+  "error": "Does not check that the probabilities of all outcomes add to 1.",
+  "example": {
+   "question": "Green 3/8, red 1/2, blue 1/4: possible?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, they add to more than 1"
+  },
+  "cause": "Treats each one alone.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "All outcomes together make 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROB_GREATER_THAN_ONE": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION",
+  "error": "Gives a probability greater than 1.",
+  "example": {
+   "question": "Can a probability be 5/4?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, it is at most 1"
+  },
+  "cause": "Does not know the scale of probability.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Probabilities go from 0 (impossible) to 1 (certain).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_BRANCHES_ADDED": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE",
+  "error": "Adds along a branch instead of multiplying.",
+  "example": {
+   "question": "P(rain) 0.3 and P(late) 0.2. P(rain and late)?",
+   "wrong_answer": "0.5",
+   "correct_answer": "0.06"
+  },
+  "cause": "Thinks \"and\" means add.",
+  "reveals": "The answer 0.5 as a wrong option, with a reason that names the idea.",
+  "help": "Along a path, multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_ALL_BUT_PATH": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE",
+  "error": "Gives the probability of everything except this path.",
+  "example": {
+   "question": "P(rain) 0.3 and P(late) 0.2. P(rain and late)?",
+   "wrong_answer": "0.94",
+   "correct_answer": "0.06"
+  },
+  "cause": "Subtracts from 1 without reason.",
+  "reveals": "The answer 0.94 as a wrong option, with a reason that names the idea.",
+  "help": "Follow only the path asked.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_WRONG_PATH_FOLLOWED": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE",
+  "error": "Follows a neighbouring path of the tree.",
+  "example": {
+   "question": "P(rain) 0.3 and P(late) 0.2. P(rain and late)?",
+   "wrong_answer": "0.24 (rain and on time)",
+   "correct_answer": "0.06"
+  },
+  "cause": "Takes the other branch on the second stage.",
+  "reveals": "The answer 0.24 (rain and on time) as a wrong option, with a reason that names the idea.",
+  "help": "Check each branch matches the words.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_SECOND_STAGE_ONLY": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE",
+  "error": "Gives the second probability on its own.",
+  "example": {
+   "question": "P(rain) 0.3, P(late) 0.2. P(rain and late)?",
+   "wrong_answer": "0.2",
+   "correct_answer": "0.06"
+  },
+  "cause": "Forgets the first stage.",
+  "reveals": "The answer 0.2 as a wrong option, with a reason that names the idea.",
+  "help": "Both things must happen: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIVIDED_BY_TEN_PROB": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "error": "Divides the numerator by 10 for the decimal.",
+  "example": {
+   "question": "3/8 as a decimal",
+   "wrong_answer": "0.3",
+   "correct_answer": "0.375"
+  },
+  "cause": "Thinks every fraction is in tenths.",
+  "reveals": "The answer 0.3 as a wrong option, with a reason that names the idea.",
+  "help": "Divide the top by the bottom: 3 ÷ 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIVIDED_WRONG_WAY_PROB": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "error": "Divides the denominator by the numerator.",
+  "example": {
+   "question": "3/8 as a decimal",
+   "wrong_answer": "2.667",
+   "correct_answer": "0.375"
+  },
+  "cause": "Divides the bigger by the smaller.",
+  "reveals": "The answer 2.667 as a wrong option, with a reason that names the idea.",
+  "help": "A probability is at most 1: top ÷ bottom.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIGITS_AROUND_POINT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "error": "Writes the two numbers either side of a point.",
+  "example": {
+   "question": "3/8 as a decimal",
+   "wrong_answer": "3.8",
+   "correct_answer": "0.375"
+  },
+  "cause": "Reads the fraction line as a point.",
+  "reveals": "The answer 3.8 as a wrong option, with a reason that names the idea.",
+  "help": "A fraction means divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DECIMAL_FOR_PERCENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "error": "Gives the decimal when the percentage is asked.",
+  "example": {
+   "question": "3/8 as a percentage",
+   "wrong_answer": "0.375",
+   "correct_answer": "37.5"
+  },
+  "cause": "Stops at the decimal.",
+  "reveals": "The answer 0.375 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_NUMERATOR_FOR_PERCENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "error": "Gives the numerator as the percentage.",
+  "example": {
+   "question": "3/8 as a percentage",
+   "wrong_answer": "3",
+   "correct_answer": "37.5"
+  },
+  "cause": "Reads the top number.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Out of 100: 3/8 × 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_TIMES_TEN_PERCENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "error": "Multiplies by 10 instead of 100 for a percentage.",
+  "example": {
+   "question": "0.375 as a percentage",
+   "wrong_answer": "3.75",
+   "correct_answer": "37.5"
+  },
+  "cause": "Moves the point one place.",
+  "reveals": "The answer 3.75 as a wrong option, with a reason that names the idea.",
+  "help": "Per cent means out of 100: two places.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

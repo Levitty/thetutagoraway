@@ -285,7 +285,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ PROBABILITY
-  cov({ id: 'g8c.prob.experimental', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.c', form: 'word', rung: 2,
+  cov({ id: 'g8c.prob.experimental', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.c', cskill: 'MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY', misMapped: false, reveals: ['M_COMPLEMENT_GIVEN', 'M_PART_TO_PART_PROB', 'M_PROBABILITY_INVERTED', 'M_THEORY_FOR_EXPERIMENT'], form: 'word', rung: 2,
     gen: () => {
       const n = pick([20, 40, 50, 60, 80, 100]), k = randInt(3, n - 3);
       if (k * 2 === n) return null;
@@ -297,7 +297,7 @@ export const FAMILIES = [
         steps: [`It happened ${k} times out of ${n}.`, `Probability = ${k}/${n} = ${right}.`], chk: (a) => { const [x, y] = a.split('/').map(Number); return x * n === k * y; } };
     } }),
 
-  cov({ id: 'g8c.prob.fraction-to-decimal', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.e', form: 'direct', rung: 2,
+  cov({ id: 'g8c.prob.fraction-to-decimal', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.e', cskill: 'MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT', misMapped: false, reveals: ['M_DIVIDED_BY_TEN_PROB', 'M_DIVIDED_WRONG_WAY_PROB', 'M_DIGITS_AROUND_POINT'], form: 'direct', rung: 2,
     gen: () => {
       const d = pick([4, 5, 8, 10, 20, 25, 50]), n = randInt(1, d - 1);
       if (gcd(n, d) !== 1) return null;
@@ -308,7 +308,7 @@ export const FAMILIES = [
         steps: [`${n}/${d} = ${n} ÷ ${d}.`, `${n} ÷ ${d} = ${dec}.`], chk: (a) => Math.abs(a * d - n) < 1e-6 };
     } }),
 
-  cov({ id: 'g8c.prob.as-percentage', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.e', form: 'word', rung: 2,
+  cov({ id: 'g8c.prob.as-percentage', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.e', cskill: 'MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT', misMapped: false, reveals: ['M_DECIMAL_FOR_PERCENT', 'M_NUMERATOR_FOR_PERCENT', 'M_TIMES_TEN_PERCENT'], form: 'word', rung: 2,
     gen: () => {
       const d = pick([20, 25, 50, 10, 4, 5]), n = randInt(1, d - 1);
       if (gcd(n, d) !== 1) return null;
@@ -321,7 +321,7 @@ export const FAMILIES = [
         steps: [`${n}/${d} × 100.`, `${n} ÷ ${d} × 100 = ${pct}%.`], chk: (a) => a * d === n * 100 };
     } }),
 
-  cov({ id: 'g8c.prob.by-chance', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.g', form: 'direct', rung: 1,
+  cov({ id: 'g8c.prob.by-chance', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.g', cskill: 'MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS', misMapped: false, reveals: ['M_SURE_EVENT_AS_CHANCE'], form: 'direct', rung: 1,
     gen: () => {
       const chance = ['A fair coin is tossed and lands on heads', 'A die is rolled and shows a six', 'The first customer at a kiosk buys a mandazi', 'A learner picked from the class by lots is left-handed', 'The next car to pass the school gate is white', 'A raffle ticket drawn at a harambee wins the prize'];
       const sure = ['The sun rises tomorrow morning', 'Saturday comes after Friday', 'A full 5-litre jerrican holds 5 litres of water', 'A learner who is 12 years old will be 13 on her next birthday', 'Water in a closed bottle stays in the bottle until it is poured out'];

@@ -1,0 +1,663 @@
+{
+ "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+ "title": "Probability",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to e and g are tested; f (use IT) is not a question. Grade 8 probability is experimental: the result of a chance experiment (tossing a coin or a bottle top, rolling a die, drawing coloured balls) written as a fraction, a decimal or a percentage, and used to estimate how often an outcome will happen in more trials. Outcomes a and g (identify and recognise chance events) share one skill. The families' old letter b covered experiments, experimental probability and expected results; they are refiled under b and c. One family multiplies along the branches of a tree diagram (combined events); this goes beyond the Grade 8 design and is filed under d for now, for a teacher to confirm or move. Writing a probability as a fraction in its simplest form (d) has no family of its own.",
+ "skills": [
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS",
+   "key_step": "The child asks \"can anyone be sure what will happen?\" and places the event on the line from impossible to certain.",
+   "floor": {
+    "prerequisite": "Uses likely and unlikely.",
+    "question": "Will the sun rise tomorrow?",
+    "answer": "certain"
+   },
+   "representations": [
+    "real events in a list",
+    "a probability line from impossible to certain",
+    "events placed on the line"
+   ],
+   "steps": [
+    "Read the event.",
+    "Can the result be known for sure?",
+    "If not, it is chance.",
+    "Place it on the line."
+   ],
+   "contexts": [
+    "a raffle at a harambee",
+    "tossing a coin to start a football match",
+    "the weather in Kericho"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line from impossible to certain."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle.",
+     "say": "Which event goes here: a coin landing heads?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child places three more events on the line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_SURE_EVENT_AS_CHANCE",
+     "listen_for": [
+      "Saturday after Friday"
+     ],
+     "ask": "Can anyone be unsure about that?",
+     "repair": "Known: no chance."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_LIKELY_AS_CERTAIN",
+     "listen_for": [
+      "certain to rain"
+     ],
+     "ask": "Must it rain?",
+     "repair": "Likely, not certain."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_UNLIKELY_AS_IMPOSSIBLE",
+     "listen_for": [
+      "impossible"
+     ],
+     "ask": "Could it ever happen?",
+     "repair": "Unlikely, not impossible."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_LUCKY_NUMBER_MORE_LIKELY",
+     "listen_for": [
+      "six is harder"
+     ],
+     "ask": "How many faces show a six?",
+     "repair": "One, like every number."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which happens by chance: the next car at the gate is white, or Monday comes after Sunday?",
+     "answer": "the next car is white",
+     "shows": "chance"
+    },
+    {
+     "question": "Picking a red ball from a bag of only red balls is?",
+     "answer": "certain",
+     "shows": "likelihood"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT",
+   "key_step": "The child says the result of a short run can be far off and many trials settle near the true probability.",
+   "floor": {
+    "prerequisite": "Records results in a table.",
+    "question": "Tally 10 coin tosses",
+    "answer": "heads and tails tallied"
+   },
+   "representations": [
+    "coins and bottle tops tossed in class",
+    "a tally of results",
+    "the result after 10, 50 and 100 tosses"
+   ],
+   "steps": [
+    "Plan the trials.",
+    "Record every result.",
+    "Find the fraction for each outcome.",
+    "Compare short and long runs."
+   ],
+   "contexts": [
+    "tossing a coin in class",
+    "a bottle top on a desk",
+    "drawing coloured balls from a bag"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: tosses 10, 50, 100; heads 7, 27, 52."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the three fractions.",
+     "say": "Which is closest to one half?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: what do you expect after 1,000 tosses?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_BIGGER_FRACTION_BETTER",
+     "listen_for": [
+      "7 in 10"
+     ],
+     "ask": "Is the true probability of heads 7/10?",
+     "repair": "Many tosses settle near 1/2."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_SAME_COIN_SAME_RESULT",
+     "listen_for": [
+      "both the same"
+     ],
+     "ask": "Which run had more chances to even out?",
+     "repair": "The longer one."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_FEWER_TRIALS_BETTER",
+     "listen_for": [
+      "counting mistakes"
+     ],
+     "ask": "Is the question about counting or chance?",
+     "repair": "Chance: more trials."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_DUE_AFTER_RUN",
+     "listen_for": [
+      "tails is due"
+     ],
+     "ask": "Does the coin remember?",
+     "repair": "Still even."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Amina tossed a coin 20 times, Baraka 200 times. Whose result is more reliable?",
+     "answer": "Baraka's",
+     "shows": "more trials"
+    },
+    {
+     "question": "A fair die showed six 4 times in a row. Chance of six next roll?",
+     "answer": "1/6",
+     "shows": "independent"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT",
+   "key_step": "The child writes the experimental probability first, then multiplies it by the new number of trials.",
+   "floor": {
+    "prerequisite": "Finds a fraction of a number.",
+    "question": "3/10 of 200",
+    "answer": "60"
+   },
+   "representations": [
+    "the results table",
+    "the probability",
+    "the expected number"
+   ],
+   "steps": [
+    "Add all outcomes for the total trials.",
+    "Find the probability of the outcome.",
+    "Multiply by the new number of trials.",
+    "Say \"about\"."
+   ],
+   "contexts": [
+    "bottle tops on a desk",
+    "a spinner at a fun day",
+    "seeds germinating in a school garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: 12 sides in 40 tosses."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 12 and 40.",
+     "say": "What is the probability of a side?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3/10."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: about how many sides in 200 tosses?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_EXTRA_TRIALS_ADDED",
+     "listen_for": [
+      "172"
+     ],
+     "ask": "Does each extra toss give a side?",
+     "repair": "Scale up."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_COUNT_SUBTRACTED_FROM_TRIALS",
+     "listen_for": [
+      "188"
+     ],
+     "ask": "Is that the number of sides?",
+     "repair": "Probability × tosses."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_OUT_OF_100",
+     "listen_for": [
+      "24"
+     ],
+     "ask": "Was it 12 out of 100?",
+     "repair": "Out of 40."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_TOTAL_TRIALS_WRONG",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "How many spins were there?",
+     "repair": "Add all colours."
+    }
+   ],
+   "checks": [
+    {
+     "question": "9 sides in 30 tosses. About how many sides in 300 tosses?",
+     "answer": "90",
+     "shows": "scale"
+    },
+    {
+     "question": "A spinner: green 15, red 20, blue 5. About how many greens in 200 spins?",
+     "answer": "75",
+     "shows": "total first"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+   "key_step": "The child puts the number of times it happened over all the trials, not over the other outcomes.",
+   "floor": {
+    "prerequisite": "Writes a fraction of a total.",
+    "question": "12 out of 40",
+    "answer": "12/40"
+   },
+   "representations": [
+    "a results table",
+    "the fraction",
+    "simplest form"
+   ],
+   "steps": [
+    "Count the times it happened.",
+    "Count all the trials.",
+    "Write happened / all.",
+    "Simplify."
+   ],
+   "contexts": [
+    "a bottle top landing on its side",
+    "seeds that grow",
+    "a matatu arriving on time"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: side 12, top 18, bottom 10."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the whole table.",
+     "say": "How many tosses altogether?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 40."
+    },
+    {
+     "beat": "write",
+     "do": "Write P(side) = 12/40."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_COMPLEMENT_GIVEN",
+     "listen_for": [
+      "0.7"
+     ],
+     "ask": "Is that side or not side?",
+     "repair": "Side: 12 out of 40."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_COUNT_FOR_PROBABILITY",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Out of how many?",
+     "repair": "All 40."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_PART_TO_PART_PROB",
+     "listen_for": [
+      "12/28"
+     ],
+     "ask": "Did you count all the tosses?",
+     "repair": "Divide by 40."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_PROBABILITY_INVERTED",
+     "listen_for": [
+      "40/12"
+     ],
+     "ask": "Can a probability be more than 1?",
+     "repair": "Happened on top."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_THEORY_FOR_EXPERIMENT",
+     "listen_for": [
+      "1/2"
+     ],
+     "ask": "What did the results say?",
+     "repair": "Use the results."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A seed grew in 18 of 24 pots. Experimental probability it grows?",
+     "answer": "3/4",
+     "shows": "simplest form"
+    },
+    {
+     "question": "Heads 27 times in 50 tosses. P(heads) as a fraction?",
+     "answer": "27/50",
+     "shows": "fraction"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION",
+   "key_step": "The child writes each probability over the total, simplifies, and checks all outcomes add to 1.",
+   "floor": {
+    "prerequisite": "Simplifies a fraction.",
+    "question": "12/40",
+    "answer": "3/10"
+   },
+   "representations": [
+    "a results table",
+    "fractions for each outcome",
+    "the sum to 1"
+   ],
+   "steps": [
+    "Write each outcome over the total.",
+    "Simplify.",
+    "Check they add to 1.",
+    "Not happening: 1 minus."
+   ],
+   "contexts": [
+    "balls drawn from a bag",
+    "bottle tops",
+    "a spinner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write P(side) = 3/10."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3/10.",
+     "say": "What is the probability of not landing on its side?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7/10."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child checks 3/10 + 7/10 = 1."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROB_NOT_SIMPLIFIED",
+     "listen_for": [
+      "12/40"
+     ],
+     "ask": "Can 12 and 40 be divided?",
+     "repair": "By 4."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_COMPLEMENT_NOT_FROM_ONE",
+     "listen_for": [
+      "97/100"
+     ],
+     "ask": "What do all outcomes add to?",
+     "repair": "1."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROBS_DO_NOT_SUM",
+     "listen_for": [
+      "possible"
+     ],
+     "ask": "Do they add to 1?",
+     "repair": "Check."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROB_GREATER_THAN_ONE",
+     "listen_for": [
+      "5/4"
+     ],
+     "ask": "Can something be more than certain?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Red 6, blue 10, green 4 balls drawn in 20 tries. P(blue) in simplest form?",
+     "answer": "1/2",
+     "shows": "simplify"
+    },
+    {
+     "question": "P(rain) = 2/5. P(no rain)?",
+     "answer": "3/5",
+     "shows": "complement"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE",
+   "key_step": "The child follows the path named in the question and multiplies the probabilities along it.",
+   "floor": {
+    "prerequisite": "Multiplies decimals.",
+    "question": "0.3 × 0.2",
+    "answer": "0.06"
+   },
+   "representations": [
+    "a tree diagram drawn",
+    "the path coloured",
+    "the product"
+   ],
+   "steps": [
+    "Draw the first set of branches.",
+    "Draw the second set from each.",
+    "Follow the path asked.",
+    "Multiply along it."
+   ],
+   "contexts": [
+    "rain and a late matatu",
+    "two coins tossed",
+    "a seed growing and flowering"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tree: rain 0.3 / no rain 0.7, then late 0.2 / on time 0.8 on each."
+    },
+    {
+     "beat": "point",
+     "do": "Point at rain then late.",
+     "say": "Which numbers are on this path?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 0.3 and 0.2."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: multiply or add?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_BRANCHES_ADDED",
+     "listen_for": [
+      "0.5"
+     ],
+     "ask": "Along a path, add or multiply?",
+     "repair": "Multiply."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_ALL_BUT_PATH",
+     "listen_for": [
+      "0.94"
+     ],
+     "ask": "Is that this path?",
+     "repair": "Follow only it."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_WRONG_PATH_FOLLOWED",
+     "listen_for": [
+      "0.24"
+     ],
+     "ask": "Is that late or on time?",
+     "repair": "Late."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_SECOND_STAGE_ONLY",
+     "listen_for": [
+      "0.2"
+     ],
+     "ask": "Did it have to rain too?",
+     "repair": "Multiply both."
+    }
+   ],
+   "checks": [
+    {
+     "question": "P(rain) = 0.4, P(late) = 0.5 whatever the weather. P(rain and late)?",
+     "answer": "0.2",
+     "shows": "multiply"
+    },
+    {
+     "question": "Two fair coins: P(two heads)?",
+     "answer": "1/4",
+     "shows": "tree"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+   "key_step": "The child divides top by bottom for the decimal and moves the point two places for the percentage.",
+   "floor": {
+    "prerequisite": "Changes a fraction to a decimal.",
+    "question": "3/8",
+    "answer": "0.375"
+   },
+   "representations": [
+    "the fraction",
+    "long division",
+    "decimal and percentage"
+   ],
+   "steps": [
+    "Divide the top by the bottom.",
+    "Check it is between 0 and 1.",
+    "Multiply by 100 for a percentage.",
+    "Compare probabilities in the same form."
+   ],
+   "contexts": [
+    "a bus on time",
+    "a red card from a pack",
+    "a seed growing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3/8."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child divides 3 by 8."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 0.375.",
+     "say": "What is this out of 100?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 37.5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIVIDED_BY_TEN_PROB",
+     "listen_for": [
+      "0.3"
+     ],
+     "ask": "Is 3/8 the same as 3/10?",
+     "repair": "Divide by 8."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIVIDED_WRONG_WAY_PROB",
+     "listen_for": [
+      "2.667"
+     ],
+     "ask": "Can a probability be more than 1?",
+     "repair": "Top ÷ bottom."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIGITS_AROUND_POINT",
+     "listen_for": [
+      "3.8"
+     ],
+     "ask": "Is the fraction line a point?",
+     "repair": "It means divide."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DECIMAL_FOR_PERCENT",
+     "listen_for": [
+      "0.375"
+     ],
+     "ask": "Out of 100?",
+     "repair": "Times 100."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_NUMERATOR_FOR_PERCENT",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is 3/8 the same as 3%?",
+     "repair": "Times 100."
+    },
+    {
+     "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_TIMES_TEN_PERCENT",
+     "listen_for": [
+      "3.75"
+     ],
+     "ask": "How many places for per cent?",
+     "repair": "Two."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 7/20 as a decimal.",
+     "answer": "0.35",
+     "shows": "decimal"
+    },
+    {
+     "question": "Write 7/20 as a percentage.",
+     "answer": "35%",
+     "shows": "percentage"
+    }
+   ]
+  }
+ ]
+}

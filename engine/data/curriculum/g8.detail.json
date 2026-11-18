@@ -1103,6 +1103,69 @@
     "which is the odd one"
    ],
    "mastery": "The child finds all three averages of one set of data without mixing them up, and chooses the median when one very large or small value would pull the mean, the mode for the most common item, and the mean for sharing a total equally."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS": {
+   "forms": [
+    "which event happens by chance",
+    "likely or unlikely",
+    "certain or impossible",
+    "give an example"
+   ],
+   "mastery": "The child sorts everyday events into ones that happen by chance (a coin landing heads, the next car being white) and ones whose result is known (Saturday after Friday), and describes chance events as impossible, unlikely, even, likely or certain."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT": {
+   "forms": [
+    "whose result is closer to the true probability",
+    "why more tosses",
+    "record the results",
+    "what changes with more trials"
+   ],
+   "mastery": "The child carries out and records a chance experiment (tossing, rolling, drawing balls one at a time), and explains that more trials give a result closer to the true probability, whatever the result of a short run."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT": {
+   "forms": [
+    "about how many times",
+    "in 200 tosses",
+    "expected number of greens",
+    "how many spins altogether"
+   ],
+   "mastery": "The child finds the experimental probability and multiplies it by the new number of trials (or scales the results in proportion): 12 sides in 40 tosses is 0.3, so in 200 tosses about 60 sides."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY": {
+   "forms": [
+    "experimental probability that",
+    "from the table of results",
+    "out of all the tosses",
+    "in its simplest form"
+   ],
+   "mastery": "The child writes the number of times the outcome happened over the total number of trials (not over the other outcomes), in its simplest form: a bottle top landing on its side 12 times in 40 tosses has an experimental probability of 12/40 = 3/10."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION": {
+   "forms": [
+    "as a fraction",
+    "simplest form",
+    "probability it does not happen",
+    "do they add to 1"
+   ],
+   "mastery": "The child writes each outcome's probability as a fraction in its simplest form, knows the probabilities of all the outcomes add to 1, and finds the probability of an outcome not happening as 1 minus the probability: 3/10 on its side gives 7/10 not on its side."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE": {
+   "forms": [
+    "rains and the matatu is late",
+    "along the branches",
+    "which path",
+    "multiply or add"
+   ],
+   "mastery": "The child follows one path of a tree diagram and multiplies the probabilities along it (rain 0.3 and late 0.2 gives 0.06), and adds only when choosing between different paths. Goes beyond the Grade 8 design (teacher to confirm)."
+  },
+  "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT": {
+   "forms": [
+    "as a decimal",
+    "as a percentage",
+    "which is more likely",
+    "between 0 and 1"
+   ],
+   "mastery": "The child divides the numerator by the denominator for the decimal and multiplies the decimal by 100 for the percentage, and knows a probability is between 0 and 1 (0% and 100%): 3/8 = 0.375 = 37.5%."
   }
  }
 }

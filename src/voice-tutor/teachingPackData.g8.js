@@ -14666,6 +14666,874 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
   "sub_strand_name": "Data Presentation and Interpretation",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS",
+  "key_step": "The child asks \"can anyone be sure what will happen?\" and places the event on the line from impossible to certain.",
+  "floor": {
+   "prerequisite": "Uses likely and unlikely.",
+   "question": "Will the sun rise tomorrow?",
+   "answer": "certain"
+  },
+  "representations": [
+   "real events in a list",
+   "a probability line from impossible to certain",
+   "events placed on the line"
+  ],
+  "steps": [
+   "Read the event.",
+   "Can the result be known for sure?",
+   "If not, it is chance.",
+   "Place it on the line."
+  ],
+  "contexts": [
+   "a raffle at a harambee",
+   "tossing a coin to start a football match",
+   "the weather in Kericho"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line from impossible to certain."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the middle.",
+    "say": "Which event goes here: a coin landing heads?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child places three more events on the line."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_SURE_EVENT_AS_CHANCE",
+    "listen_for": [
+     "Saturday after Friday"
+    ],
+    "ask": "Can anyone be unsure about that?",
+    "repair": "Known: no chance.",
+    "error": "Picks an event with a known result as one that happens by chance.",
+    "example": {
+     "question": "Which happens by chance: Saturday comes after Friday, or a coin lands heads?",
+     "wrong_answer": "Saturday comes after Friday",
+     "correct_answer": "a coin lands heads"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_LIKELY_AS_CERTAIN",
+    "listen_for": [
+     "certain to rain"
+    ],
+    "ask": "Must it rain?",
+    "repair": "Likely, not certain.",
+    "error": "Calls a likely event certain.",
+    "example": {
+     "question": "It is cloudy in Kericho in April. Rain this afternoon is?",
+     "wrong_answer": "certain",
+     "correct_answer": "likely"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_UNLIKELY_AS_IMPOSSIBLE",
+    "listen_for": [
+     "impossible"
+    ],
+    "ask": "Could it ever happen?",
+    "repair": "Unlikely, not impossible.",
+    "error": "Calls an unlikely event impossible.",
+    "example": {
+     "question": "Rolling a six five times in a row is?",
+     "wrong_answer": "impossible",
+     "correct_answer": "unlikely"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EVENTS.M_LUCKY_NUMBER_MORE_LIKELY",
+    "listen_for": [
+     "six is harder"
+    ],
+    "ask": "How many faces show a six?",
+    "repair": "One, like every number.",
+    "error": "Believes a favourite or lucky number is more likely on a fair die.",
+    "example": {
+     "question": "On a fair die, is 6 harder to get than 3?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, all are equally likely"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which happens by chance: the next car at the gate is white, or Monday comes after Sunday?",
+    "answer": "the next car is white",
+    "shows": "chance"
+   },
+   {
+    "question": "Picking a red ball from a bag of only red balls is?",
+    "answer": "certain",
+    "shows": "likelihood"
+   }
+  ],
+  "name": "Identify and recognise events that happen by chance",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT",
+  "key_step": "The child says the result of a short run can be far off and many trials settle near the true probability.",
+  "floor": {
+   "prerequisite": "Records results in a table.",
+   "question": "Tally 10 coin tosses",
+   "answer": "heads and tails tallied"
+  },
+  "representations": [
+   "coins and bottle tops tossed in class",
+   "a tally of results",
+   "the result after 10, 50 and 100 tosses"
+  ],
+  "steps": [
+   "Plan the trials.",
+   "Record every result.",
+   "Find the fraction for each outcome.",
+   "Compare short and long runs."
+  ],
+  "contexts": [
+   "tossing a coin in class",
+   "a bottle top on a desk",
+   "drawing coloured balls from a bag"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: tosses 10, 50, 100; heads 7, 27, 52."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three fractions.",
+    "say": "Which is closest to one half?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: what do you expect after 1,000 tosses?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_BIGGER_FRACTION_BETTER",
+    "listen_for": [
+     "7 in 10"
+    ],
+    "ask": "Is the true probability of heads 7/10?",
+    "repair": "Many tosses settle near 1/2.",
+    "error": "Thinks the result with the bigger fraction of heads is closer to the truth.",
+    "example": {
+     "question": "Coin: 7 heads in 10, or 52 heads in 100. Closer to the true probability?",
+     "wrong_answer": "7 in 10",
+     "correct_answer": "52 in 100"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_SAME_COIN_SAME_RESULT",
+    "listen_for": [
+     "both the same"
+    ],
+    "ask": "Which run had more chances to even out?",
+    "repair": "The longer one.",
+    "error": "Believes any run with the same coin is equally reliable.",
+    "example": {
+     "question": "10 tosses or 100 tosses of the same coin: which is more reliable?",
+     "wrong_answer": "both the same",
+     "correct_answer": "100 tosses"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_FEWER_TRIALS_BETTER",
+    "listen_for": [
+     "counting mistakes"
+    ],
+    "ask": "Is the question about counting or chance?",
+    "repair": "Chance: more trials.",
+    "error": "Believes fewer trials are better because there are fewer counting mistakes.",
+    "example": {
+     "question": "Why not toss only 10 times?",
+     "wrong_answer": "fewer counting mistakes",
+     "correct_answer": "too few to even out the luck"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT.M_DUE_AFTER_RUN",
+    "listen_for": [
+     "tails is due"
+    ],
+    "ask": "Does the coin remember?",
+    "repair": "Still even.",
+    "error": "Believes after many heads, tails is more likely next.",
+    "example": {
+     "question": "A fair coin gave 5 heads in a row. Next toss?",
+     "wrong_answer": "tails is more likely",
+     "correct_answer": "still 1/2 each"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Amina tossed a coin 20 times, Baraka 200 times. Whose result is more reliable?",
+    "answer": "Baraka's",
+    "shows": "more trials"
+   },
+   {
+    "question": "A fair die showed six 4 times in a row. Chance of six next roll?",
+    "answer": "1/6",
+    "shows": "independent"
+   }
+  ],
+  "name": "Perform a chance experiment and judge how reliable its result is",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT",
+  "key_step": "The child writes the experimental probability first, then multiplies it by the new number of trials.",
+  "floor": {
+   "prerequisite": "Finds a fraction of a number.",
+   "question": "3/10 of 200",
+   "answer": "60"
+  },
+  "representations": [
+   "the results table",
+   "the probability",
+   "the expected number"
+  ],
+  "steps": [
+   "Add all outcomes for the total trials.",
+   "Find the probability of the outcome.",
+   "Multiply by the new number of trials.",
+   "Say \"about\"."
+  ],
+  "contexts": [
+   "bottle tops on a desk",
+   "a spinner at a fun day",
+   "seeds germinating in a school garden"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 12 sides in 40 tosses."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 12 and 40.",
+    "say": "What is the probability of a side?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3/10."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: about how many sides in 200 tosses?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_EXTRA_TRIALS_ADDED",
+    "listen_for": [
+     "172"
+    ],
+    "ask": "Does each extra toss give a side?",
+    "repair": "Scale up.",
+    "error": "Adds the extra trials to the number of results.",
+    "example": {
+     "question": "12 sides in 40 tosses. About how many in 200?",
+     "wrong_answer": "172",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_COUNT_SUBTRACTED_FROM_TRIALS",
+    "listen_for": [
+     "188"
+    ],
+    "ask": "Is that the number of sides?",
+    "repair": "Probability × tosses.",
+    "error": "Takes the results away from the new number of trials.",
+    "example": {
+     "question": "12 sides in 40 tosses. About how many in 200?",
+     "wrong_answer": "188",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_OUT_OF_100",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "Was it 12 out of 100?",
+    "repair": "Out of 40.",
+    "error": "Treats the result as out of 100 when it was out of another number.",
+    "example": {
+     "question": "12 sides in 40 tosses. About how many in 200?",
+     "wrong_answer": "24",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT.M_TOTAL_TRIALS_WRONG",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "How many spins were there?",
+    "repair": "Add all colours.",
+    "error": "Uses one outcome's count as the total number of trials.",
+    "example": {
+     "question": "Green 15, red 20, blue 5. How many spins?",
+     "wrong_answer": "15",
+     "correct_answer": "40"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "9 sides in 30 tosses. About how many sides in 300 tosses?",
+    "answer": "90",
+    "shows": "scale"
+   },
+   {
+    "question": "A spinner: green 15, red 20, blue 5. About how many greens in 200 spins?",
+    "answer": "75",
+    "shows": "total first"
+   }
+  ],
+  "name": "Use experimental results to estimate how often an outcome will happen",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY",
+  "key_step": "The child puts the number of times it happened over all the trials, not over the other outcomes.",
+  "floor": {
+   "prerequisite": "Writes a fraction of a total.",
+   "question": "12 out of 40",
+   "answer": "12/40"
+  },
+  "representations": [
+   "a results table",
+   "the fraction",
+   "simplest form"
+  ],
+  "steps": [
+   "Count the times it happened.",
+   "Count all the trials.",
+   "Write happened / all.",
+   "Simplify."
+  ],
+  "contexts": [
+   "a bottle top landing on its side",
+   "seeds that grow",
+   "a matatu arriving on time"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: side 12, top 18, bottom 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the whole table.",
+    "say": "How many tosses altogether?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 40."
+   },
+   {
+    "beat": "write",
+    "do": "Write P(side) = 12/40."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_COMPLEMENT_GIVEN",
+    "listen_for": [
+     "0.7"
+    ],
+    "ask": "Is that side or not side?",
+    "repair": "Side: 12 out of 40.",
+    "error": "Gives the probability of the outcome not happening.",
+    "example": {
+     "question": "Side 12 times in 40 tosses. P(side)?",
+     "wrong_answer": "0.7",
+     "correct_answer": "0.3"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_COUNT_FOR_PROBABILITY",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Out of how many?",
+    "repair": "All 40.",
+    "error": "Gives the number of times as the probability.",
+    "example": {
+     "question": "Side 12 times in 40 tosses. P(side)?",
+     "wrong_answer": "12",
+     "correct_answer": "0.3"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_PART_TO_PART_PROB",
+    "listen_for": [
+     "12/28"
+    ],
+    "ask": "Did you count all the tosses?",
+    "repair": "Divide by 40.",
+    "error": "Divides by the other results instead of all the trials.",
+    "example": {
+     "question": "Side 12 times in 40 tosses. P(side)?",
+     "wrong_answer": "12/28",
+     "correct_answer": "12/40"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_PROBABILITY_INVERTED",
+    "listen_for": [
+     "40/12"
+    ],
+    "ask": "Can a probability be more than 1?",
+    "repair": "Happened on top.",
+    "error": "Puts the total on top.",
+    "example": {
+     "question": "Side 12 times in 40. P(side)?",
+     "wrong_answer": "40/12",
+     "correct_answer": "3/10"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY.M_THEORY_FOR_EXPERIMENT",
+    "listen_for": [
+     "1/2"
+    ],
+    "ask": "What did the results say?",
+    "repair": "Use the results.",
+    "error": "Gives the expected probability (such as 1/2) instead of the one from the results.",
+    "example": {
+     "question": "A bottle top: 12 sides in 40. Experimental P(side)?",
+     "wrong_answer": "1/2",
+     "correct_answer": "3/10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A seed grew in 18 of 24 pots. Experimental probability it grows?",
+    "answer": "3/4",
+    "shows": "simplest form"
+   },
+   {
+    "question": "Heads 27 times in 50 tosses. P(heads) as a fraction?",
+    "answer": "27/50",
+    "shows": "fraction"
+   }
+  ],
+  "name": "Write the experimental probability of an outcome",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION",
+  "key_step": "The child writes each probability over the total, simplifies, and checks all outcomes add to 1.",
+  "floor": {
+   "prerequisite": "Simplifies a fraction.",
+   "question": "12/40",
+   "answer": "3/10"
+  },
+  "representations": [
+   "a results table",
+   "fractions for each outcome",
+   "the sum to 1"
+  ],
+  "steps": [
+   "Write each outcome over the total.",
+   "Simplify.",
+   "Check they add to 1.",
+   "Not happening: 1 minus."
+  ],
+  "contexts": [
+   "balls drawn from a bag",
+   "bottle tops",
+   "a spinner"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write P(side) = 3/10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3/10.",
+    "say": "What is the probability of not landing on its side?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 7/10."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child checks 3/10 + 7/10 = 1."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROB_NOT_SIMPLIFIED",
+    "listen_for": [
+     "12/40"
+    ],
+    "ask": "Can 12 and 40 be divided?",
+    "repair": "By 4.",
+    "error": "Leaves the probability fraction unsimplified when simplest form is asked.",
+    "example": {
+     "question": "12 out of 40 in simplest form",
+     "wrong_answer": "12/40",
+     "correct_answer": "3/10"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_COMPLEMENT_NOT_FROM_ONE",
+    "listen_for": [
+     "97/100"
+    ],
+    "ask": "What do all outcomes add to?",
+    "repair": "1.",
+    "error": "Finds the probability of not happening by subtracting from 100 or 10.",
+    "example": {
+     "question": "P(side) = 3/10. P(not side)?",
+     "wrong_answer": "97/100",
+     "correct_answer": "7/10"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROBS_DO_NOT_SUM",
+    "listen_for": [
+     "possible"
+    ],
+    "ask": "Do they add to 1?",
+    "repair": "Check.",
+    "error": "Does not check that the probabilities of all outcomes add to 1.",
+    "example": {
+     "question": "Green 3/8, red 1/2, blue 1/4: possible?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, they add to more than 1"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_FRACTION.M_PROB_GREATER_THAN_ONE",
+    "listen_for": [
+     "5/4"
+    ],
+    "ask": "Can something be more than certain?",
+    "repair": "No.",
+    "error": "Gives a probability greater than 1.",
+    "example": {
+     "question": "Can a probability be 5/4?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, it is at most 1"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Red 6, blue 10, green 4 balls drawn in 20 tries. P(blue) in simplest form?",
+    "answer": "1/2",
+    "shows": "simplify"
+   },
+   {
+    "question": "P(rain) = 2/5. P(no rain)?",
+    "answer": "3/5",
+    "shows": "complement"
+   }
+  ],
+  "name": "Express probability outcomes as fractions",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE",
+  "key_step": "The child follows the path named in the question and multiplies the probabilities along it.",
+  "floor": {
+   "prerequisite": "Multiplies decimals.",
+   "question": "0.3 × 0.2",
+   "answer": "0.06"
+  },
+  "representations": [
+   "a tree diagram drawn",
+   "the path coloured",
+   "the product"
+  ],
+  "steps": [
+   "Draw the first set of branches.",
+   "Draw the second set from each.",
+   "Follow the path asked.",
+   "Multiply along it."
+  ],
+  "contexts": [
+   "rain and a late matatu",
+   "two coins tossed",
+   "a seed growing and flowering"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tree: rain 0.3 / no rain 0.7, then late 0.2 / on time 0.8 on each."
+   },
+   {
+    "beat": "point",
+    "do": "Point at rain then late.",
+    "say": "Which numbers are on this path?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 0.3 and 0.2."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: multiply or add?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_BRANCHES_ADDED",
+    "listen_for": [
+     "0.5"
+    ],
+    "ask": "Along a path, add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds along a branch instead of multiplying.",
+    "example": {
+     "question": "P(rain) 0.3 and P(late) 0.2. P(rain and late)?",
+     "wrong_answer": "0.5",
+     "correct_answer": "0.06"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_ALL_BUT_PATH",
+    "listen_for": [
+     "0.94"
+    ],
+    "ask": "Is that this path?",
+    "repair": "Follow only it.",
+    "error": "Gives the probability of everything except this path.",
+    "example": {
+     "question": "P(rain) 0.3 and P(late) 0.2. P(rain and late)?",
+     "wrong_answer": "0.94",
+     "correct_answer": "0.06"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_WRONG_PATH_FOLLOWED",
+    "listen_for": [
+     "0.24"
+    ],
+    "ask": "Is that late or on time?",
+    "repair": "Late.",
+    "error": "Follows a neighbouring path of the tree.",
+    "example": {
+     "question": "P(rain) 0.3 and P(late) 0.2. P(rain and late)?",
+     "wrong_answer": "0.24 (rain and on time)",
+     "correct_answer": "0.06"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.COMBINED_TWO_STAGE.M_SECOND_STAGE_ONLY",
+    "listen_for": [
+     "0.2"
+    ],
+    "ask": "Did it have to rain too?",
+    "repair": "Multiply both.",
+    "error": "Gives the second probability on its own.",
+    "example": {
+     "question": "P(rain) 0.3, P(late) 0.2. P(rain and late)?",
+     "wrong_answer": "0.2",
+     "correct_answer": "0.06"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "P(rain) = 0.4, P(late) = 0.5 whatever the weather. P(rain and late)?",
+    "answer": "0.2",
+    "shows": "multiply"
+   },
+   {
+    "question": "Two fair coins: P(two heads)?",
+    "answer": "1/4",
+    "shows": "tree"
+   }
+  ],
+  "name": "Find the probability of two events together by multiplying along a tree diagram",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT": {
+  "skill": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT",
+  "key_step": "The child divides top by bottom for the decimal and moves the point two places for the percentage.",
+  "floor": {
+   "prerequisite": "Changes a fraction to a decimal.",
+   "question": "3/8",
+   "answer": "0.375"
+  },
+  "representations": [
+   "the fraction",
+   "long division",
+   "decimal and percentage"
+  ],
+  "steps": [
+   "Divide the top by the bottom.",
+   "Check it is between 0 and 1.",
+   "Multiply by 100 for a percentage.",
+   "Compare probabilities in the same form."
+  ],
+  "contexts": [
+   "a bus on time",
+   "a red card from a pack",
+   "a seed growing"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3/8."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child divides 3 by 8."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 0.375.",
+    "say": "What is this out of 100?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 37.5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIVIDED_BY_TEN_PROB",
+    "listen_for": [
+     "0.3"
+    ],
+    "ask": "Is 3/8 the same as 3/10?",
+    "repair": "Divide by 8.",
+    "error": "Divides the numerator by 10 for the decimal.",
+    "example": {
+     "question": "3/8 as a decimal",
+     "wrong_answer": "0.3",
+     "correct_answer": "0.375"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIVIDED_WRONG_WAY_PROB",
+    "listen_for": [
+     "2.667"
+    ],
+    "ask": "Can a probability be more than 1?",
+    "repair": "Top ÷ bottom.",
+    "error": "Divides the denominator by the numerator.",
+    "example": {
+     "question": "3/8 as a decimal",
+     "wrong_answer": "2.667",
+     "correct_answer": "0.375"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DIGITS_AROUND_POINT",
+    "listen_for": [
+     "3.8"
+    ],
+    "ask": "Is the fraction line a point?",
+    "repair": "It means divide.",
+    "error": "Writes the two numbers either side of a point.",
+    "example": {
+     "question": "3/8 as a decimal",
+     "wrong_answer": "3.8",
+     "correct_answer": "0.375"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_DECIMAL_FOR_PERCENT",
+    "listen_for": [
+     "0.375"
+    ],
+    "ask": "Out of 100?",
+    "repair": "Times 100.",
+    "error": "Gives the decimal when the percentage is asked.",
+    "example": {
+     "question": "3/8 as a percentage",
+     "wrong_answer": "0.375",
+     "correct_answer": "37.5"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_NUMERATOR_FOR_PERCENT",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Is 3/8 the same as 3%?",
+    "repair": "Times 100.",
+    "error": "Gives the numerator as the percentage.",
+    "example": {
+     "question": "3/8 as a percentage",
+     "wrong_answer": "3",
+     "correct_answer": "37.5"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.PROBABILITY.PROBABILITY_DECIMAL_PERCENT.M_TIMES_TEN_PERCENT",
+    "listen_for": [
+     "3.75"
+    ],
+    "ask": "How many places for per cent?",
+    "repair": "Two.",
+    "error": "Multiplies by 10 instead of 100 for a percentage.",
+    "example": {
+     "question": "0.375 as a percentage",
+     "wrong_answer": "3.75",
+     "correct_answer": "37.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 7/20 as a decimal.",
+    "answer": "0.35",
+    "shows": "decimal"
+   },
+   {
+    "question": "Write 7/20 as a percentage.",
+    "answer": "35%",
+    "shows": "percentage"
+   }
+  ],
+  "name": "Express probability outcomes as decimals and percentages",
+  "sub_strand": "MATH.G8.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

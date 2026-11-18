@@ -1194,7 +1194,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ PROBABILITY
-  fam({ id: 'g8.prob.bottle-top-table', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.b', rung: 1, form: 'table',
+  fam({ id: 'g8.prob.bottle-top-table', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.c', cskill: 'MATH.G8.DATA_H.PROBABILITY.EXPERIMENTAL_PROBABILITY', rung: 1, form: 'table',
     draw: () => {
       const n = pick([20, 25, 40, 50]), side = randInt(2, 6) * 2, up = randInt(3, 8) * 2, down = n - side - up;
       if (down < 4) return null;
@@ -1205,13 +1205,13 @@ export const FAMILIES = [
       question: `${p.name} tosses a bottle top many times. The table shows how it landed. What is the experimental probability that it lands on its side? Give the answer as a decimal.`,
       model: { type: 'table', data: { head: ['How it landed', 'Number of times'], rows: [{ label: 'On its side', value: String(side) }, { label: 'Top up', value: String(up) }, { label: 'Top down', value: String(down) }] } },
       answer: round(side / n, 3),
-      wrong: [[round(1 - side / n, 3), 'That is the probability that it does NOT land on its side.'], [side, 'That is the number of times. A probability is that number out of ALL the tosses.'], [round(side / (n - side), 3), 'You divided by the other results only. Divide by the total number of tosses, which includes the side results.']],
+      wrong: [[round(1 - side / n, 3), 'That is the probability that it does NOT land on its side.', 'M_COMPLEMENT_GIVEN'], [side, 'That is the number of times. A probability is that number out of ALL the tosses.', 'M_COUNT_FOR_PROBABILITY'], [round(side / (n - side), 3), 'You divided by the other results only. Divide by the total number of tosses, which includes the side results.', 'M_PART_TO_PART_PROB']],
       hints: ['First find the total number of tosses from the table.', 'Probability = the times it landed on its side ÷ the total number of tosses.'],
       steps: [`Total tosses: ${side} + ${up} + ${down} = ${n}.`, `Experimental probability = ${side} ÷ ${n} = ${round(side / n, 3)}.`],
     }),
     check: ({ n, side }, a) => near(a * n, side) }),
 
-  fam({ id: 'g8.prob.spinner-expected', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.b', rung: 2, form: 'steps',
+  fam({ id: 'g8.prob.spinner-expected', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.b', cskill: 'MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT', rung: 2, form: 'steps',
     draw: () => {
       const n = pick([20, 25, 40, 50]), g = randInt(3, 9) * (n === 25 ? 1 : 2), red = randInt(3, 8), blue = n - g - red;
       if (blue < 3 || g >= n / 2) return null;
@@ -1221,15 +1221,15 @@ export const FAMILIES = [
     make: ({ n, g, red, blue, N, p }) => ({
       question: `${p.name} spins a spinner many times and records the colour it stops on. It stops on green ${g} times, on red ${red} times and on blue ${blue} times.`,
       parts: [
-        { prompt: 'How many spins were there altogether?', answer: n, hint: 'Add the three results.', wrong: [[g, 'That is only the green results. Add all three colours.']] },
-        { prompt: 'What is the experimental probability of green, as a decimal?', answer: round(g / n, 3), hint: 'Divide the green results by the total number of spins.', wrong: [[round(g / (red + blue), 3), 'Divide by ALL the spins, including the green ones.']] },
-        { prompt: `About how many times would green come up in ${N} more spins?`, answer: round((g / n) * N, 1), hint: 'Multiply the probability by the number of spins.', wrong: [[g + N - n, 'Do not add. Use the probability of green times the number of spins.']] },
+        { prompt: 'How many spins were there altogether?', answer: n, hint: 'Add the three results.', wrong: [[g, 'That is only the green results. Add all three colours.', 'M_TOTAL_TRIALS_WRONG']] },
+        { prompt: 'What is the experimental probability of green, as a decimal?', answer: round(g / n, 3), hint: 'Divide the green results by the total number of spins.', wrong: [[round(g / (red + blue), 3), 'Divide by ALL the spins, including the green ones.', 'M_PART_TO_PART_PROB']] },
+        { prompt: `About how many times would green come up in ${N} more spins?`, answer: round((g / n) * N, 1), hint: 'Multiply the probability by the number of spins.', wrong: [[g + N - n, 'Do not add. Use the probability of green times the number of spins.', 'M_EXTRA_TRIALS_ADDED']] },
       ],
       steps: [`Total spins: ${g} + ${red} + ${blue} = ${n}.`, `P(green) = ${g} ÷ ${n} = ${round(g / n, 3)}.`, `In ${N} spins: ${round(g / n, 3)} × ${N} = ${round((g / n) * N, 1)}.`],
     }),
     check: ({ n, g, N }, v) => v[0] === g + (n - g) && near(v[1] * v[0], g) && near(v[2], (g * N) / n) }),
 
-  fam({ id: 'g8.prob.expected-times', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.b', rung: 2, form: 'word',
+  fam({ id: 'g8.prob.expected-times', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.b', cskill: 'MATH.G8.DATA_H.PROBABILITY.EXPECTED_FROM_EXPERIMENT', rung: 2, form: 'word',
     draw: () => {
       const n = pick([40, 50, 80, 100]), c = randInt(2, 9) * (n === 50 || n === 100 ? 5 : 2), N = pick([200, 300, 400, 500]), a = (c * N) / n;
       if (!Number.isInteger(a) || c >= n / 2) return null;
@@ -1238,13 +1238,13 @@ export const FAMILIES = [
     make: ({ n, c, N, a, p }) => ({
       question: `${p.name} tossed a bottle top ${n} times. It landed on its side ${c} times. If ${p.she} tosses it ${N} times, about how many times should it land on its side?`,
       answer: a,
-      wrong: [[c + (N - n), 'The number of times grows in proportion to the number of tosses. Do not add the extra tosses to the result.'], [N - c, 'That takes away the side results from the new total. Use the chance of landing on its side.'], [(c * N) / 100, 'The result is out of the number of tosses, not out of 100.']],
+      wrong: [[c + (N - n), 'The number of times grows in proportion to the number of tosses. Do not add the extra tosses to the result.', 'M_EXTRA_TRIALS_ADDED'], [N - c, 'That takes away the side results from the new total. Use the chance of landing on its side.', 'M_COUNT_SUBTRACTED_FROM_TRIALS'], [(c * N) / 100, 'The result is out of the number of tosses, not out of 100.', 'M_OUT_OF_100']],
       hints: ['Find the experimental probability from the first set of tosses.', 'Multiply that probability by the new number of tosses.'],
       steps: [`Experimental probability = ${c} ÷ ${n}.`, `Expected: ${c} ÷ ${n} × ${N} = ${a} times.`],
     }),
     check: ({ n, c, N }, a) => a * n === c * N }),
 
-  fam({ id: 'g8.prob.more-tosses-why', skill: 'G8_PROBABILITY_INTRO', outcome: 'G8.PROB.b', rung: 3, form: 'why',
+  fam({ id: 'g8.prob.more-tosses-why', skill: 'G8_PROBABILITY_INTRO', outcome: 'MATH.G8.DATA_H.PROBABILITY.b', cskill: 'MATH.G8.DATA_H.PROBABILITY.CHANCE_EXPERIMENT', rung: 3, form: 'why',
     draw: () => {
       const [a, b] = twoPeople(), n1 = pick([10, 20]), h1 = n1 === 10 ? 7 : 14, n2 = pick([400, 500, 1000]), h2 = n2 * 0.52;
       return Number.isInteger(h2) ? { a, b, n1, h1, n2, h2 } : null;
@@ -1253,9 +1253,9 @@ export const FAMILIES = [
       question: `${a.name} tossed a fair coin ${n1} times and got ${h1} heads. ${b.name} tossed the same coin ${n2} times and got ${h2} heads. Whose result is likely to be closer to the true probability of heads, and why?`,
       options: [
         { text: `${b.name}'s, because more tosses give a steadier result`, right: true },
-        { text: `${a.name}'s, because ${h1} out of ${n1} is a bigger fraction of heads`, right: false, why: 'A bigger fraction is not a better one. A result from few tosses can easily be far from the true probability.' },
-        { text: 'Both are equally good, because it is the same coin', right: false, why: 'The same coin does not make a short run of tosses as reliable as a long run.' },
-        { text: `${a.name}'s, because fewer tosses means fewer mistakes in counting`, right: false, why: 'The question is about chance, not about counting mistakes. A long run evens out the lucky and unlucky tosses.' },
+        { text: `${a.name}'s, because ${h1} out of ${n1} is a bigger fraction of heads`, right: false, why: 'A bigger fraction is not a better one. A result from few tosses can easily be far from the true probability.', mis: 'M_BIGGER_FRACTION_BETTER' },
+        { text: 'Both are equally good, because it is the same coin', right: false, why: 'The same coin does not make a short run of tosses as reliable as a long run.', mis: 'M_SAME_COIN_SAME_RESULT' },
+        { text: `${a.name}'s, because fewer tosses means fewer mistakes in counting`, right: false, why: 'The question is about chance, not about counting mistakes. A long run evens out the lucky and unlucky tosses.', mis: 'M_FEWER_TRIALS_BETTER' },
       ],
       hints: ['A fair coin has a probability of heads that stays the same on every toss.', 'Does a short run of tosses or a long run give a more steady result?'],
       steps: [`${a.name}: ${h1} ÷ ${n1} = ${round(h1 / n1, 2)}.`, `${b.name}: ${h2} ÷ ${n2} = ${round(h2 / n2, 2)}.`, 'More tosses even out the lucky and unlucky ones, so the long run is usually nearer to the true probability.'],
