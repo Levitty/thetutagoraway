@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC",
+ "title": "Cleaning of Personal Protective Equipment",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school's gumboots, gloves, aprons and dust coats. Each child has their own item; masks are never shared.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+   "key_step": "The child names protective clothing (gumboots, gloves, apron, dust coat, overall, mask, hat) and what each protects (feet, hands, clothes, body, nose and mouth, head).",
+   "floor": {
+    "prerequisite": "Knows accidents happen at home and school.",
+    "question": "Name an accident in the garden.",
+    "answer": "a cut from a tool"
+   },
+   "representations": [
+    "real protective items",
+    "a body outline to label",
+    "pictures of people at work"
+   ],
+   "steps": [
+    "Name the item.",
+    "Say which part of the body it covers.",
+    "Say what danger it stops."
+   ],
+   "contexts": [
+    "digging in the school garden",
+    "cooking at home",
+    "sweeping a dusty room"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a person in a garden."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the feet.",
+     "say": "What protects them here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"gumboots\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw gumboots and label them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_MATCH",
+     "listen_for": [
+      "Gloves"
+     ],
+     "ask": "Which item protects the eyes?",
+     "repair": "Hold each item up and say which body part it covers."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_FASHION",
+     "listen_for": [
+      "To look smart"
+     ],
+     "ask": "Why does a farmer wear a face mask when spraying?",
+     "repair": "Ask what would happen to a farmer who breathes in the spray."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_SANDALS",
+     "listen_for": [
+      "Open sandals"
+     ],
+     "ask": "Which footwear protects a farmer in wet muddy ground?",
+     "repair": "Ask what can cut or bite a bare foot in a shamba."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_APRON",
+     "listen_for": [
+      "It keeps the body warm"
+     ],
+     "ask": "What does an apron protect?",
+     "repair": "Splash water on an apron worn over a shirt; the shirt stays dry."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What protects the hands when handling manure?",
+     "answer": "gloves",
+     "shows": "item"
+    },
+    {
+     "question": "What does a dust mask protect?",
+     "answer": "the nose and mouth",
+     "shows": "part"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
+   "key_step": "The child says how to clean and store protective clothing: remove dirt, wash with soap and water, rinse, dry fully in the open, store clean and dry, and never share masks or gloves.",
+   "floor": {
+    "prerequisite": "Knows the protective items and their use.",
+    "question": "What protects the feet in mud?",
+    "answer": "gumboots"
+   },
+   "representations": [
+    "a washing basin, soap and a brush",
+    "a drying line",
+    "a storage shelf"
+   ],
+   "steps": [
+    "Remove loose dirt.",
+    "Wash with soap and water; rinse.",
+    "Dry completely in the open.",
+    "Store clean and dry in your own place."
+   ],
+   "contexts": [
+    "after a gardening lesson",
+    "after cooking",
+    "at the end of the week"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"wet gloves put in a bag\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what they will be like next week."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"smelly or mouldy\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"dry first, then store\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_DIRTY",
+     "listen_for": [
+      "Hang it away as it is"
+     ],
+     "ask": "What is done with a muddy apron after work?",
+     "repair": "Smell a stored muddy apron after a week."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_WET",
+     "listen_for": [
+      "Packed away while still wet"
+     ],
+     "ask": "How should washed gloves be stored?",
+     "repair": "Pack away a damp cloth in a bag and smell it a week later."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_SHARE",
+     "listen_for": [
+      "Share them, gloves are gloves"
+     ],
+     "ask": "Two children want to use the same dirty gloves. What is best?",
+     "repair": "Ask how germs and chemicals move from one hand to another."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_BOOTS",
+     "listen_for": [
+      "Wash the outside only"
+     ],
+     "ask": "How should gumboots be cleaned?",
+     "repair": "Feel inside a boot left wet; it smells and stays damp."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why must gloves be dry before they are stored?",
+     "answer": "wet gloves grow mould and smell",
+     "shows": "dry"
+    },
+    {
+     "question": "Why should masks not be shared?",
+     "answer": "germs pass from one person to another",
+     "shows": "share"
+    }
+   ]
+  }
+ ]
+}

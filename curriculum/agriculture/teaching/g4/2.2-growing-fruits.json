@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G4.FOOD_P.GROWING_FRUITS",
+ "title": "Growing Fruits",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the fruits sold in the local market and grown nearby. Plant one grafted mango, pawpaw or passion fruit seedling with the class, in a hole dug and filled with manure the week before.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+   "key_step": "The child names fruits that grow well in the locality (mango, pawpaw, banana, orange, passion fruit, avocado, pineapple, watermelon) and says that each fruit needs the right climate, so not every fruit grows everywhere.",
+   "floor": {
+    "prerequisite": "Knows a fruit from a vegetable at the market.",
+    "question": "Is a mango a fruit or a vegetable?",
+    "answer": "a fruit"
+   },
+   "representations": [
+    "real fruits from the market",
+    "a map of Kenya with fruits drawn where they grow",
+    "a chart: fruit, grows on a tree, bush, vine or ground"
+   ],
+   "steps": [
+    "Name the fruit.",
+    "Say where it grows best (hot or cool, wet or dry).",
+    "Say whether it grows here."
+   ],
+   "contexts": [
+    "mangoes at the coast and in Makueni",
+    "passion fruit in the highlands",
+    "watermelon in Kibwezi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mango tree, a passion fruit vine and a watermelon on the ground."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the watermelon.",
+     "say": "Does every fruit grow on a tall tree?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"fruits grow on trees, bushes, vines and on the ground\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_ANYWHERE",
+     "listen_for": [
+      "Apple"
+     ],
+     "ask": "Which fruit does best at the hot coast?",
+     "repair": "Ask which fruits grow near the school and which come from far."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_TREE",
+     "listen_for": [
+      "None, all fruits come from tall trees"
+     ],
+     "ask": "Which of these gives a fruit but is not a tall tree?",
+     "repair": "Look at a banana plant and a passion fruit vine and ask where the fruit hangs."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_ROOT",
+     "listen_for": [
+      "Cassava"
+     ],
+     "ask": "Which of these is NOT a fruit crop?",
+     "repair": "Dig up a cassava plant and ask which part we eat."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_VEG",
+     "listen_for": [
+      "No, it is a vegetable because it is not sweet"
+     ],
+     "ask": "Is an avocado a fruit?",
+     "repair": "Cut an avocado and a tomato: point at the seeds inside. A fruit holds the seeds."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a fruit that grows on a vine.",
+     "answer": "passion fruit (or watermelon, on the ground)",
+     "shows": "kinds"
+    },
+    {
+     "question": "Why do apples not grow well in a hot dry place?",
+     "answer": "each fruit needs its own climate",
+     "shows": "climate"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
+   "key_step": "The child says how to plant and care for a fruit seedling: dig the hole early, keep topsoil apart, mix it with manure, plant at the same depth as in the nursery, firm, water, mulch, protect, and keep watering and weeding.",
+   "floor": {
+    "prerequisite": "Knows how compost is made and used.",
+    "question": "What does compost add to the soil?",
+    "answer": "plant food"
+   },
+   "representations": [
+    "a planting hole dug in the school compound",
+    "a seedling in a polythene sleeve",
+    "a drawing of the soil line on the stem"
+   ],
+   "steps": [
+    "Dig the hole and keep topsoil apart.",
+    "Mix the topsoil with manure and refill.",
+    "Plant at the nursery depth and firm the soil.",
+    "Water, mulch and fence.",
+    "Keep watering and weeding."
+   ],
+   "contexts": [
+    "a pawpaw at home",
+    "mangoes at school",
+    "a banana stool in Kisii"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seedling with the old soil mark on its stem."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where the new soil level should come."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"at the old mark\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"same depth as in the nursery\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_DEEP",
+     "listen_for": [
+      "Deep, with the stem buried"
+     ],
+     "ask": "How deep should a fruit seedling be planted?",
+     "repair": "Show the soil mark on the stem of a seedling."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_NOMANURE",
+     "listen_for": [
+      "Stones and sand only"
+     ],
+     "ask": "What is mixed with the topsoil in the planting hole?",
+     "repair": "Plant two seedlings, one with manure and one without, and compare after a month."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_CROWD",
+     "listen_for": [
+      "As close as possible to save space"
+     ],
+     "ask": "How far apart should mango seedlings be planted?",
+     "repair": "Show how wide a mature mango tree is."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_DRYSTOP",
+     "listen_for": [
+      "Water once on the day it is planted, then stop"
+     ],
+     "ask": "How is a young fruit seedling looked after in dry weather?",
+     "repair": "Ask what happens to a seedling that dries out for a week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is mixed with the topsoil before planting a fruit seedling?",
+     "answer": "manure or compost",
+     "shows": "manure"
+    },
+    {
+     "question": "Why are fruit seedlings planted far apart?",
+     "answer": "the trees grow big and need space",
+     "shows": "spacing"
+    }
+   ]
+  }
+ ]
+}

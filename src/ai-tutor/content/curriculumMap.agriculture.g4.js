@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/agriculture/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical and attitude outcomes are listed in docs/qa/agriculture-g4-non-question-outcomes-2026-11-12.md"};
+export const MAP_SOURCE = {"source":"curriculum/agriculture/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical and attitude outcomes are listed in docs/qa/agriculture-g4-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g4)"};
 export const SUBSTRANDS = {
  "AGRI.G4.CONSER.SOIL_CONSERVATION": {
   "name": "Soil Conservation",
@@ -292,7 +292,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_CM_ANY",
    "M_AG4_CM_MEAT",
-   "M_AG4_CM_FERT"
+   "M_AG4_CM_FERT",
+   "M_AG4_CM_DISEASED"
   ]
  },
  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING": {
@@ -308,7 +309,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_CK_ONE",
    "M_AG4_CK_DRY",
-   "M_AG4_CK_EARLY"
+   "M_AG4_CK_EARLY",
+   "M_AG4_CK_LAYERS"
   ]
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING": {
@@ -322,7 +324,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_DM_FAST",
    "M_AG4_DM_LEAVES",
-   "M_AG4_DM_WASTE"
+   "M_AG4_DM_WASTE",
+   "M_AG4_DM_WHENEVER"
   ]
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP": {
@@ -338,7 +341,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_DS_LOW",
    "M_AG4_DS_BIGHOLE",
-   "M_AG4_DS_FAR"
+   "M_AG4_DS_FAR",
+   "M_AG4_DS_NOCHECK"
   ]
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES": {
@@ -352,7 +356,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_FT_PETROL",
    "M_AG4_FT_ONE",
-   "M_AG4_FT_STATE"
+   "M_AG4_FT_STATE",
+   "M_AG4_FT_ELECTRIC"
   ]
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING": {
@@ -368,7 +373,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_FS_OPENLID",
    "M_AG4_FS_BIG",
-   "M_AG4_FS_WET"
+   "M_AG4_FS_WET",
+   "M_AG4_FS_SOAK"
   ]
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS": {
@@ -382,7 +388,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_SP_BIG",
    "M_AG4_SP_BEE",
-   "M_AG4_SP_MATCH"
+   "M_AG4_SP_MATCH",
+   "M_AG4_SP_DOMESTIC"
   ]
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE": {
@@ -398,7 +405,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_SC_FIXED",
    "M_AG4_SC_KILL",
-   "M_AG4_SC_HIDDEN"
+   "M_AG4_SC_HIDDEN",
+   "M_AG4_SC_DULL"
   ]
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS": {
@@ -412,7 +420,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_TS_BIGSEED",
    "M_AG4_TS_NURSERY",
-   "M_AG4_TS_CUTTING"
+   "M_AG4_TS_CUTTING",
+   "M_AG4_TS_NAME"
   ]
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING": {
@@ -428,7 +437,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_SB_COARSE",
    "M_AG4_SB_DEEP",
-   "M_AG4_SB_THICK"
+   "M_AG4_SB_THICK",
+   "M_AG4_SB_WATERHARD"
   ]
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES": {
@@ -442,7 +452,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_FY_ANYWHERE",
    "M_AG4_FY_TREE",
-   "M_AG4_FY_ROOT"
+   "M_AG4_FY_ROOT",
+   "M_AG4_FY_VEG"
   ]
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING": {
@@ -453,7 +464,8 @@ export const SKILLS = {
    "AGRI.G4.FOOD_P.GROWING_FRUITS.b"
   ],
   "pre": [
-   "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES"
+   "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+   "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING"
   ],
   "mis": [
    "M_AG4_FG_DEEP",
@@ -473,7 +485,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_AT_WILD",
    "M_AG4_AT_FOUR",
-   "M_AG4_AT_GROUP"
+   "M_AG4_AT_GROUP",
+   "M_AG4_AT_PET"
   ]
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES": {
@@ -489,7 +502,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_AU_MIX",
    "M_AG4_AU_ONE",
-   "M_AG4_AU_WORK"
+   "M_AG4_AU_WORK",
+   "M_AG4_AU_DOG"
   ]
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE": {
@@ -503,7 +517,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_MI_FILL",
    "M_AG4_MI_ONE",
-   "M_AG4_MI_COST"
+   "M_AG4_MI_COST",
+   "M_AG4_MI_MORE"
   ]
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT": {
@@ -519,7 +534,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_GS_UGALI",
    "M_AG4_GS_MEAT",
-   "M_AG4_GS_FRUIT"
+   "M_AG4_GS_FRUIT",
+   "M_AG4_GS_MILK"
   ]
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK": {
@@ -530,12 +546,14 @@ export const SKILLS = {
    "AGRI.G4.FOOD_P.BALANCED_MEAL.b"
   ],
   "pre": [
-   "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT"
+   "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+   "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE"
   ],
   "mis": [
    "M_AG4_MP_ONE",
    "M_AG4_MP_NOVEG",
-   "M_AG4_MP_SWEET"
+   "M_AG4_MP_SWEET",
+   "M_AG4_MP_TWO"
   ]
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
@@ -549,7 +567,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_CMT_STEAM",
    "M_AG4_CMT_FRY",
-   "M_AG4_CMT_ROAST"
+   "M_AG4_CMT_ROAST",
+   "M_AG4_CMT_BOIL"
   ]
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT": {
@@ -560,12 +579,14 @@ export const SKILLS = {
    "AGRI.G4.FOOD_P.COOKING_FOOD.b"
   ],
   "pre": [
-   "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS"
+   "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+   "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT"
   ],
   "mis": [
    "M_AG4_CS_FRYALL",
    "M_AG4_CS_OVER",
-   "M_AG4_CS_SHORT"
+   "M_AG4_CS_SHORT",
+   "M_AG4_CS_NOSALT"
   ]
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE": {
@@ -581,7 +602,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_CF_HANDLE",
    "M_AG4_CF_WATERFIRE",
-   "M_AG4_CF_LEAVE"
+   "M_AG4_CF_LEAVE",
+   "M_AG4_CF_DIRTY"
   ]
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES": {
@@ -595,7 +617,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_HP_PERFUME",
    "M_AG4_HP_RARE",
-   "M_AG4_HP_HANDS"
+   "M_AG4_HP_HANDS",
+   "M_AG4_HP_NAILS"
   ]
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING": {
@@ -611,7 +634,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_HW_NOSOAP",
    "M_AG4_HW_QUICK",
-   "M_AG4_HW_BEFORE"
+   "M_AG4_HW_BEFORE",
+   "M_AG4_HW_TOWEL"
   ]
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS": {
@@ -627,7 +651,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_CLM_MIX",
    "M_AG4_CLM_DUST",
-   "M_AG4_CLM_RUBBISH"
+   "M_AG4_CLM_RUBBISH",
+   "M_AG4_CLM_WIPE"
   ]
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER": {
@@ -643,7 +668,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_CO_FLOOR",
    "M_AG4_CO_MOP",
-   "M_AG4_CO_GREASY"
+   "M_AG4_CO_GREASY",
+   "M_AG4_CO_WINDOWS"
   ]
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS": {
@@ -657,7 +683,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_PI_MATCH",
    "M_AG4_PI_FASHION",
-   "M_AG4_PI_SANDALS"
+   "M_AG4_PI_SANDALS",
+   "M_AG4_PI_APRON"
   ]
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE": {
@@ -673,7 +700,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_PC_DIRTY",
    "M_AG4_PC_WET",
-   "M_AG4_PC_SHARE"
+   "M_AG4_PC_SHARE",
+   "M_AG4_PC_BOOTS"
   ]
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES": {
@@ -687,7 +715,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_TT_PERM",
    "M_AG4_TT_NAME",
-   "M_AG4_TT_SMALL"
+   "M_AG4_TT_SMALL",
+   "M_AG4_TT_DIAG"
   ]
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE": {
@@ -703,7 +732,8 @@ export const SKILLS = {
   "mis": [
    "M_AG4_TU_KEEP",
    "M_AG4_TU_ORDER",
-   "M_AG4_TU_STRONG"
+   "M_AG4_TU_STRONG",
+   "M_AG4_TU_KNOT"
   ]
  }
 };
@@ -714,30 +744,40 @@ export const MIS_FEEDBACK = {
  "M_AG4_CK_ONE": "A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.",
  "M_AG4_CK_DRY": "A heap rots best when it is damp, not soaking, and covered. Too dry and it stops rotting. Too wet and it goes smelly.",
  "M_AG4_CK_EARLY": "Waste needs weeks to rot. Compost is ready when it is dark, crumbly and smells like soil.",
+ "M_AG4_CM_DISEASED": "Weeds with seeds and sick plants can spread to the garden in the compost. Keep them off the heap.",
+ "M_AG4_CK_LAYERS": "Compost is built in layers of dry and green material with soil or manure between, then watered.",
  "M_AG4_DM_FAST": "Drip irrigation gives water slowly, drop by drop, so the soil can soak it up.",
  "M_AG4_DM_LEAVES": "The roots take up water, so the drip goes into the soil beside the roots.",
  "M_AG4_DM_WASTE": "Drip irrigation puts a small amount of water only where it is needed, so little is wasted.",
  "M_AG4_DS_LOW": "Water runs downhill. The container must stand higher than the bed so the water drips out.",
  "M_AG4_DS_BIGHOLE": "A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.",
  "M_AG4_DS_FAR": "The water must fall where the roots are, so the drip end is placed next to the plant.",
+ "M_AG4_DM_WHENEVER": "Drip irrigation is water we give slowly, drop by drop, to the roots, even on a dry day.",
+ "M_AG4_DS_NOCHECK": "A drip bottle must be refilled and its hole kept clear, or the plant gets no water.",
  "M_AG4_FT_PETROL": "Petrol and diesel are fuels for engines. They are not used to cook at home because they catch fire too easily.",
  "M_AG4_FT_ONE": "Homes use many fuels: firewood, charcoal, paraffin, cooking gas, biogas, electricity and solar.",
  "M_AG4_FT_STATE": "Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.",
  "M_AG4_FS_OPENLID": "A lid keeps the heat in so the food cooks faster and uses less fuel.",
  "M_AG4_FS_BIG": "Once water boils it does not get hotter. A big flame only wastes fuel.",
  "M_AG4_FS_WET": "Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.",
+ "M_AG4_FT_ELECTRIC": "Electricity can cook food too, in an electric cooker or kettle.",
+ "M_AG4_FS_SOAK": "Soaking beans first makes them cook faster, so less fuel is burnt.",
  "M_AG4_SP_BIG": "Small animals such as birds, rats and squirrels also harm crops, because there are many of them.",
  "M_AG4_SP_BEE": "Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.",
  "M_AG4_SP_MATCH": "Birds peck grain, rats gnaw grain and cobs, and moles tunnel under the ground and eat roots and tubers.",
  "M_AG4_SC_FIXED": "Birds soon learn that a still scarecrow is harmless. Moving it and changing its clothes keeps them afraid.",
  "M_AG4_SC_KILL": "A scarecrow only scares animals away. Poison and traps can harm many other animals as well.",
  "M_AG4_SC_HIDDEN": "Birds must see the scarecrow from far. Put it high in the middle of the crop.",
+ "M_AG4_SP_DOMESTIC": "Goats and chickens are domestic: people keep them. Moles, squirrels, rats and birds such as weaver birds are wild.",
+ "M_AG4_SC_DULL": "Birds fear what moves and makes noise. Bright, loose cloth and rattling tins work best.",
  "M_AG4_TS_BIGSEED": "Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.",
  "M_AG4_TS_NURSERY": "Carrots do not like being moved, so they are sown where they will grow. Cabbage and tomato are started in a nursery.",
  "M_AG4_TS_CUTTING": "Sweet potato is planted from vine cuttings, not seeds.",
  "M_AG4_SB_COARSE": "Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.",
  "M_AG4_SB_DEEP": "Tiny seeds have little stored food and cannot push up from deep soil. Sow them very shallow.",
  "M_AG4_SB_THICK": "Crowded plants fight for light, water and food. Thin them so each can grow big.",
+ "M_AG4_TS_NAME": "Carrots are sown straight in the bed because the root would be damaged if moved.",
+ "M_AG4_SB_WATERHARD": "Water tiny seeds gently with a fine rose so they are not washed away.",
  "M_AG4_FY_ANYWHERE": "Mango likes the warm coast. Apples need the cool highlands.",
  "M_AG4_FY_TREE": "Fruits grow on trees, bushes, vines and plants like banana and pawpaw.",
  "M_AG4_FY_ROOT": "Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.",
@@ -745,12 +785,15 @@ export const MIS_FEEDBACK = {
  "M_AG4_FG_NOMANURE": "Manure in the hole feeds the young plant and loosens the soil so the roots can spread.",
  "M_AG4_FG_CROWD": "A fruit tree grows big. It needs room for its roots and branches.",
  "M_AG4_FG_DRYSTOP": "A young seedling has short roots and dries quickly. It needs regular water and a mulch.",
+ "M_AG4_FY_VEG": "An avocado holds its seed inside, so it is a fruit, even though it is not sweet.",
  "M_AG4_AT_WILD": "Domestic animals are kept and cared for by people. Zebras are wild.",
  "M_AG4_AT_FOUR": "Chickens, ducks and turkeys are domestic animals called poultry. Bees can be kept too.",
  "M_AG4_AT_GROUP": "Poultry are birds kept for eggs and meat, like chickens, ducks and turkeys. Goats are livestock.",
  "M_AG4_AU_MIX": "Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.",
  "M_AG4_AU_ONE": "Many animals give more than one thing. A cow gives milk, meat and hides, and it can plough too.",
  "M_AG4_AU_WORK": "Donkeys, camels and oxen are strong enough to carry or pull. Hens and rabbits are too small.",
+ "M_AG4_AT_PET": "A dog is a domestic animal: people keep it, feed it and shelter it.",
+ "M_AG4_AU_DOG": "Cats catch rats and dogs guard the home. These are uses too.",
  "M_AG4_MI_FILL": "A full stomach is not the same as a balanced meal. A balanced meal has foods from every group.",
  "M_AG4_MI_ONE": "No single food has everything. The body needs a mix of foods.",
  "M_AG4_MI_COST": "Beans, greens and a staple make a balanced meal that costs little.",
@@ -760,6 +803,9 @@ export const MIS_FEEDBACK = {
  "M_AG4_MP_ONE": "Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.",
  "M_AG4_MP_NOVEG": "Ugali is energy and fish is body-building. Add vegetables or fruit for the protective group.",
  "M_AG4_MP_SWEET": "Soda and sweets give sugar only. A fruit or vegetable gives protective food.",
+ "M_AG4_MI_MORE": "A balanced meal has foods from all the groups, not just a lot of food.",
+ "M_AG4_GS_MILK": "Milk is a body-building food, like eggs, meat and beans.",
+ "M_AG4_MP_TWO": "Ugali and beans have no protective food. Add a vegetable or fruit to balance the meal.",
  "M_AG4_CMT_STEAM": "In steaming the food stays above the water and the steam cooks it.",
  "M_AG4_CMT_FRY": "Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.",
  "M_AG4_CMT_ROAST": "Roasting cooks food by dry heat over a fire or in an oven. Boiling uses water.",
@@ -769,28 +815,39 @@ export const MIS_FEEDBACK = {
  "M_AG4_CF_HANDLE": "A handle that sticks out can be knocked and the hot food spills. Turn it inwards.",
  "M_AG4_CF_WATERFIRE": "Water spreads burning oil. A lid shuts out the air and puts the fire out.",
  "M_AG4_CF_LEAVE": "A cooking fire must never be left alone. A pot can boil dry or burn and the fire can spread.",
+ "M_AG4_CMT_BOIL": "Boiling cooks food in water that is bubbling hot, like eggs and potatoes.",
+ "M_AG4_CS_NOSALT": "Cook green vegetables for a short time to keep their goodness and colour.",
+ "M_AG4_CF_DIRTY": "Clean pots and surfaces straight after cooking so flies and germs do not gather.",
  "M_AG4_HP_PERFUME": "Perfume only covers a smell. Soap and water take dirt and germs off the body.",
  "M_AG4_HP_RARE": "Teeth should be brushed in the morning and at night. The body should be bathed every day.",
  "M_AG4_HP_HANDS": "Germs are too small to see. Wash hands with soap before eating even if they look clean.",
  "M_AG4_HW_NOSOAP": "Soap lifts dirt and germs off the skin. Water alone does not.",
  "M_AG4_HW_QUICK": "Rub the soap on all parts of the hands for about as long as a short song, then rinse.",
  "M_AG4_HW_BEFORE": "Wash before eating or cooking, and after the toilet, playing outside or touching animals.",
+ "M_AG4_HP_NAILS": "Germs hide under long nails. Keep nails short and clean.",
+ "M_AG4_HW_TOWEL": "Dry clean hands in the air or on a clean towel, not on dirty clothes.",
  "M_AG4_CLM_MIX": "Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.",
  "M_AG4_CLM_DUST": "Dusting wipes dust from shelves, tables and other furniture with a cloth.",
  "M_AG4_CLM_RUBBISH": "Rubbish goes into a bin or a pit. Loose rubbish attracts flies and rats and spreads sickness.",
  "M_AG4_CO_FLOOR": "Dust falls to the floor, so dust the shelves first and sweep the floor after.",
  "M_AG4_CO_MOP": "Sweep first to lift the dry dirt. Mop last so the floor comes out clean.",
  "M_AG4_CO_GREASY": "Wash the cleanest things first (cups, plates) and the greasy pots last, so the water stays clean longer.",
+ "M_AG4_CLM_WIPE": "Hard, very dirty floors are scrubbed. Wiping is for light dust on smooth surfaces.",
+ "M_AG4_CO_WINDOWS": "Open windows to let dust and stale air out before you sweep.",
  "M_AG4_PI_MATCH": "Goggles protect the eyes, gloves protect the hands, gumboots protect the feet and a mask protects the nose and mouth.",
  "M_AG4_PI_FASHION": "Protective clothing keeps dust, germs and chemicals off the body. It is not for looks.",
  "M_AG4_PI_SANDALS": "Gumboots cover the whole foot and keep out water, mud, thorns and snakes.",
  "M_AG4_PC_DIRTY": "Dirty protective clothing keeps germs and chemicals. Wash it after use.",
  "M_AG4_PC_WET": "Wet items grow mould and smell. Dry them well before storing.",
  "M_AG4_PC_SHARE": "Dirty protective clothing can pass germs from one child to another. Clean it first.",
+ "M_AG4_PI_APRON": "An apron keeps your clothes clean when you cook or garden.",
+ "M_AG4_PC_BOOTS": "Wash gumboots inside and out, then stand them upside down to dry.",
  "M_AG4_TT_PERM": "Tacking is temporary. It holds the cloth in place until the final stitching is done.",
  "M_AG4_TT_NAME": "Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.",
  "M_AG4_TT_SMALL": "Tacking stitches are long and loose so they are quick to make and easy to take out.",
  "M_AG4_TU_KEEP": "Tacking is only a guide. Pull it out when the final stitching is done.",
  "M_AG4_TU_ORDER": "Tack first to hold the cloth, then sew the final stitching beside it.",
- "M_AG4_TU_STRONG": "Long loose stitches in a thread that shows are easy to see and to pull out."
+ "M_AG4_TU_STRONG": "Long loose stitches in a thread that shows are easy to see and to pull out.",
+ "M_AG4_TT_DIAG": "Diagonal tacking holds layers flat over a wide area. Even tacking is for straight seams.",
+ "M_AG4_TU_KNOT": "Tacking is made to come out, so it is finished loosely, not tied at both ends."
 };

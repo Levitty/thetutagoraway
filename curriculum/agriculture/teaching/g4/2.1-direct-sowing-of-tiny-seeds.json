@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE",
+ "title": "Direct Sowing of Tiny Seeds",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mix tiny seeds with dry sand before sowing so the child can see and spread them thinly. Carrot, onion and dhania are good for a class bed.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+   "key_step": "The child names crops sown straight in the plot from tiny seeds (carrot, onion, dhania, amaranth, radish) and tells them from crops raised in a nursery (cabbage, tomato) and crops from large seeds or cuttings.",
+   "floor": {
+    "prerequisite": "Knows a seed grows into a new plant.",
+    "question": "What grows from a seed?",
+    "answer": "a new plant"
+   },
+   "representations": [
+    "seed packets with pictures",
+    "a tray of real seeds: carrot, maize, bean",
+    "a sorting chart: tiny seeds sown direct, nursery, large seeds"
+   ],
+   "steps": [
+    "Look at the seed size.",
+    "Ask: is it moved after it grows?",
+    "Sort: direct sowing, nursery, large seed or cutting."
+   ],
+   "contexts": [
+    "a carrot bed at school",
+    "dhania in a home garden",
+    "onions in Kirinyaga"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a carrot seed and a maize seed side by side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the carrot seed.",
+     "say": "Is it tiny or large?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"tiny\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether carrots are moved from a nursery or sown where they grow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_BIGSEED",
+     "listen_for": [
+      "Carrot"
+     ],
+     "ask": "Which crop has a large seed, not a tiny one?",
+     "repair": "Put a maize seed, a bean and a carrot seed in the hand and compare them."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_NURSERY",
+     "listen_for": [
+      "Carrot"
+     ],
+     "ask": "Which crop is usually started in a nursery and moved later?",
+     "repair": "Ask a farmer how he starts carrots and how he starts tomatoes."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_CUTTING",
+     "listen_for": [
+      "By sowing tiny seeds"
+     ],
+     "ask": "How is a sweet potato crop usually planted?",
+     "repair": "Show a sweet potato vine cutting next to a packet of carrot seed."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_NAME",
+     "listen_for": [
+      "Sukuma wiki, from transplanted seedlings"
+     ],
+     "ask": "Which crop is sown straight into the plot from tiny seeds?",
+     "repair": "Show a carrot: ask whether a carrot root could be moved without breaking it. Root crops are sown where they grow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a crop sown straight into the plot from tiny seeds.",
+     "answer": "carrot, onion, dhania or amaranth",
+     "shows": "crops"
+    },
+    {
+     "question": "Is maize a tiny seed?",
+     "answer": "no, it is a large seed",
+     "shows": "size"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+   "key_step": "The child says how a fine seedbed is made (dig, break the lumps, remove stones and weeds, level, make shallow drills) and how tiny seeds are sown (mixed with sand, thinly, shallow, lightly covered, gently watered, thinned later).",
+   "floor": {
+    "prerequisite": "Knows which crops are sown from tiny seeds.",
+    "question": "Name a crop sown from tiny seeds.",
+    "answer": "carrot"
+   },
+   "representations": [
+    "a tray of fine soil next to a tray of lumpy soil",
+    "seeds mixed with sand",
+    "a drawing of shallow drills"
+   ],
+   "steps": [
+    "Dig and break the soil fine.",
+    "Remove stones and weeds; level.",
+    "Make shallow drills.",
+    "Sow thinly, cover lightly, water gently.",
+    "Thin the seedlings when they come up."
+   ],
+   "contexts": [
+    "the school carrot bed",
+    "onions at home",
+    "a 4-K club plot"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seed in a deep hole and one in a shallow drill."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which tiny seed will come up."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the shallow one\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"tiny seeds: shallow, about 1 cm\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_COARSE",
+     "listen_for": [
+      "Rough, with lumps and stones"
+     ],
+     "ask": "How should the soil of a seedbed for tiny seeds be?",
+     "repair": "Sow tiny seeds in a lumpy bed and a fine bed and compare how many come up."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_DEEP",
+     "listen_for": [
+      "Deep, about as deep as a hand"
+     ],
+     "ask": "How deep are tiny seeds sown?",
+     "repair": "Sow seeds at two depths and see which come up. A tiny seed has little food to push up."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_THICK",
+     "listen_for": [
+      "Leave them all, more plants give more carrots"
+     ],
+     "ask": "What should be done when carrot seedlings come up crowded?",
+     "repair": "Grow one thick row and one thinned row. Compare the carrots at harvest."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_WATERHARD",
+     "listen_for": [
+      "Pour a bucket over it quickly"
+     ],
+     "ask": "How should a bed of tiny seeds be watered after sowing?",
+     "repair": "Sow sand-coloured seeds in a tray and pour water hard: watch them wash to one corner."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are tiny seeds mixed with sand?",
+     "answer": "to spread them thinly",
+     "shows": "thin sowing"
+    },
+    {
+     "question": "Why are tiny seeds sown shallow?",
+     "answer": "they have little food to push up through deep soil",
+     "shows": "depth"
+    }
+   ]
+  }
+ ]
+}

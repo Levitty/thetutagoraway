@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G4.CONSER.FUEL_CONSERVATION",
+ "title": "Fuel Conservation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Cook nothing in this sub-strand without the teacher. A demonstration with two pots of water, one with a lid and one without, on the same jiko shows the saving clearly.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+   "key_step": "The child names the fuels used at home (firewood, charcoal, paraffin, cooking gas, biogas, electricity), says which are solid, liquid or gas, and that petrol and diesel are for engines.",
+   "floor": {
+    "prerequisite": "Knows solids, liquids and gases.",
+    "question": "Is paraffin a solid, a liquid or a gas?",
+    "answer": "a liquid"
+   },
+   "representations": [
+    "pictures of a jiko, a gas cylinder, a paraffin stove",
+    "a three-column table: solid, liquid, gas",
+    "a walk round the school kitchen"
+   ],
+   "steps": [
+    "Name the fuel.",
+    "Say what it is: solid, liquid or gas.",
+    "Say what it is used for at home."
+   ],
+   "contexts": [
+    "a charcoal jiko",
+    "a gas cooker in town",
+    "firewood in a rural home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: solid, liquid, gas."
+    },
+    {
+     "beat": "point",
+     "do": "Show a picture of charcoal.",
+     "say": "Which box?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"solid\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write charcoal and firewood in Solid."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_PETROL",
+     "listen_for": [
+      "Petrol"
+     ],
+     "ask": "Which of these is a fuel used for cooking at home?",
+     "repair": "Ask what burns in a jiko, a gas cooker and a car. Talk about why petrol is dangerous indoors."
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_ONE",
+     "listen_for": [
+      "Firewood, charcoal, paraffin and gas"
+     ],
+     "ask": "Which list names only fuels used at home?",
+     "repair": "Ask each learner which fuels their home uses and make one class list."
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_STATE",
+     "listen_for": [
+      "Charcoal"
+     ],
+     "ask": "Which of these is a liquid fuel?",
+     "repair": "Pour paraffin, hold charcoal and ask how each can be carried and stored."
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_ELECTRIC",
+     "listen_for": [
+      "Only things that burn with a flame"
+     ],
+     "ask": "Which of these is used for cooking in some homes?",
+     "repair": "Show a picture of an electric cooker and ask what makes it hot."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a gas fuel used for cooking.",
+     "answer": "cooking gas (or biogas)",
+     "shows": "types"
+    },
+    {
+     "question": "Is petrol used for cooking at home?",
+     "answer": "no, it is for engines",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
+   "key_step": "The child says how to save fuel when cooking: cover the pot, use dry firewood, soak hard foods, cut food small, put out the fire when done, use an energy-saving jiko and a fireless cooker.",
+   "floor": {
+    "prerequisite": "Knows the fuels used at home.",
+    "question": "Name a fuel used at home.",
+    "answer": "charcoal"
+   },
+   "representations": [
+    "two pots of water, one with a lid",
+    "dry and wet sticks",
+    "a fireless cooker basket"
+   ],
+   "steps": [
+    "Cover the pot.",
+    "Use dry fuel.",
+    "Prepare food so it cooks fast: soak, cut small.",
+    "Put the fire out when cooking is done."
+   ],
+   "contexts": [
+    "cooking githeri at home",
+    "the school kitchen",
+    "a charcoal jiko"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two pots on a jiko, one with a lid."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which boils first."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"lid on: heat stays in, less fuel\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_OPENLID",
+     "listen_for": [
+      "Cooking with the lid off so you can watch"
+     ],
+     "ask": "Which habit saves fuel when boiling beans?",
+     "repair": "Boil two pots of water, one with a lid and one without, and time them."
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_BIG",
+     "listen_for": [
+      "Add more wood so the flame is big"
+     ],
+     "ask": "The pot is boiling. What should the cook do to save fuel?",
+     "repair": "Ask whether the water gets hotter than boiling when the flame is bigger."
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_WET",
+     "listen_for": [
+      "Wet, freshly cut wood"
+     ],
+     "ask": "Which firewood saves the most fuel?",
+     "repair": "Try to light a dry stick and a wet one and compare smoke and heat."
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_SOAK",
+     "listen_for": [
+      "Cook them dry straight away"
+     ],
+     "ask": "How can you use less fuel to cook dry beans?",
+     "repair": "Compare a soaked and a dry bean: press both, then count how long each takes to cook in the demonstration."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why cover a pot when cooking?",
+     "answer": "heat stays in so it cooks faster with less fuel",
+     "shows": "lid"
+    },
+    {
+     "question": "Why should firewood be dry?",
+     "answer": "it burns well and gives more heat",
+     "shows": "dry fuel"
+    }
+   ]
+  }
+ ]
+}

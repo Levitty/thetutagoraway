@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE",
+ "title": "Domestic Hygiene",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Children help clean the classroom as a practical. Strong chemicals are never used by children; plain soap and water do the work.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+   "key_step": "The child describes the methods of cleaning a home (sweeping, dusting, mopping, scrubbing, wiping, polishing, disposing of rubbish) and which surface or dirt each suits.",
+   "floor": {
+    "prerequisite": "Knows materials used for cleaning.",
+    "question": "What do we sweep with?",
+    "answer": "a broom"
+   },
+   "representations": [
+    "real cleaning tools",
+    "a chart: method, tool, surface",
+    "a picture of a room"
+   ],
+   "steps": [
+    "Look at the dirt: dust, mud, grease, rubbish.",
+    "Choose the method.",
+    "Choose the tool."
+   ],
+   "contexts": [
+    "the classroom floor",
+    "a cemented kitchen at home",
+    "the compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a shelf with dust and a floor with mud."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the shelf.",
+     "say": "Sweep or dust?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"dust\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"shelf: dusting; muddy floor: scrubbing\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_MIX",
+     "listen_for": [
+      "Mopping"
+     ],
+     "ask": "Which method removes dry dirt from a floor?",
+     "repair": "Try to sweep a muddy floor and mop a dusty one."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_DUST",
+     "listen_for": [
+      "Sweeping the compound outside"
+     ],
+     "ask": "What is dusting?",
+     "repair": "Wipe a table with a cloth and look at the dust on it."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_RUBBISH",
+     "listen_for": [
+      "Anywhere outside, the wind will take it"
+     ],
+     "ask": "Where should rubbish from the house go?",
+     "repair": "Walk round the school and look at where rubbish piles up and what it attracts."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_WIPE",
+     "listen_for": [
+      "Wiping with a dry cloth"
+     ],
+     "ask": "Which method suits a dirty cemented veranda?",
+     "repair": "Try a dry cloth on a muddy floor tile, then a brush and soapy water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which method removes dust from a shelf?",
+     "answer": "dusting",
+     "shows": "match"
+    },
+    {
+     "question": "Where should rubbish go?",
+     "answer": "in a dustbin or rubbish pit",
+     "shows": "rubbish"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+   "key_step": "The child puts cleaning jobs in order (open windows, remove rubbish, dust from top to bottom, sweep, then mop or scrub, put things back) and picks the right tool, washing the least dirty items first.",
+   "floor": {
+    "prerequisite": "Knows the methods of cleaning.",
+    "question": "Which method uses water and a mop?",
+    "answer": "mopping"
+   },
+   "representations": [
+    "picture cards of the jobs to put in order",
+    "a real broom, duster and mop",
+    "a drawing of a room top to bottom"
+   ],
+   "steps": [
+    "Open windows.",
+    "Dust from the top down.",
+    "Sweep the floor.",
+    "Mop or scrub last."
+   ],
+   "contexts": [
+    "cleaning the classroom on Friday",
+    "a bedroom at home",
+    "washing up after supper"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: sweep, dust, mop."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which comes first."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"dust\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order them: dust, sweep, mop."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_FLOOR",
+     "listen_for": [
+      "Sweeping the floor"
+     ],
+     "ask": "Which job comes first when cleaning a room?",
+     "repair": "Dust a shelf over a swept floor and look at the floor again."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_MOP",
+     "listen_for": [
+      "Mopping, then sweeping"
+     ],
+     "ask": "What comes first, sweeping or mopping?",
+     "repair": "Mop a dusty floor and see the mud it makes."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_GREASY",
+     "listen_for": [
+      "The greasy sufuria"
+     ],
+     "ask": "Which should be washed first?",
+     "repair": "Wash a cup after a greasy pot in the same water and feel it."
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_WINDOWS",
+     "listen_for": [
+      "Close the windows"
+     ],
+     "ask": "What should you do before sweeping a room?",
+     "repair": "Sweep a dusty corner with windows closed and open; watch where the dust goes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why do we dust before sweeping?",
+     "answer": "dust falls to the floor and is swept up",
+     "shows": "order"
+    },
+    {
+     "question": "Which dishes are washed first?",
+     "answer": "the least dirty, like glasses and cups",
+     "shows": "washing up"
+    }
+   ]
+  }
+ ]
+}

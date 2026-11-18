@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES",
+ "title": "Making Tacking Stitches",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use large needles, thick contrasting thread and a piece of cotton cloth. Count needles in and out at the start and end of every lesson.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+   "key_step": "The child identifies even tacking (stitches and spaces the same length), uneven tacking (long stitch, short space) and diagonal tacking (slanting stitches holding layers flat), and says tacking is temporary.",
+   "floor": {
+    "prerequisite": "Can measure a length in centimetres.",
+    "question": "Measure this line in cm.",
+    "answer": "the length read from the ruler"
+   },
+   "representations": [
+    "sample cloths of each stitch",
+    "a ruler on the stitches",
+    "large drawings"
+   ],
+   "steps": [
+    "Look at the stitches and the spaces.",
+    "Same length: even. Long and short: uneven. Slanting: diagonal.",
+    "Say what each holds."
+   ],
+   "contexts": [
+    "tacking a hem on a school uniform",
+    "joining two pieces of a pillow case",
+    "holding a lining in a bag"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line of long stitches with short gaps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a stitch and a gap.",
+     "say": "Are they the same length?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"uneven tacking\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_PERM",
+     "listen_for": [
+      "To join the cloth for good"
+     ],
+     "ask": "What is tacking used for?",
+     "repair": "Tack two pieces and sew them, then pull out the tacking."
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_NAME",
+     "listen_for": [
+      "Even tacking"
+     ],
+     "ask": "Which tacking has long stitches on top and short stitches underneath?",
+     "repair": "Make each tacking on a scrap and compare the top and the back."
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_SMALL",
+     "listen_for": [
+      "Tiny and tight"
+     ],
+     "ask": "What are tacking stitches like?",
+     "repair": "Pull out a tacking stitch and then a back stitch and compare."
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_DIAG",
+     "listen_for": [
+      "Joining a straight seam"
+     ],
+     "ask": "What is diagonal tacking used for?",
+     "repair": "Show slanting stitches holding a lining flat; ask why they slope."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What are even tacking stitches like?",
+     "answer": "stitches and spaces the same length",
+     "shows": "even"
+    },
+    {
+     "question": "Does tacking stay in the finished item?",
+     "answer": "no, it is taken out",
+     "shows": "temporary"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+   "key_step": "The child says how tacking is done (thread the needle, small knot or backstitch, stitches in and out along the line, finish loosely) and that it holds the cloth in place before the final stitching, then is pulled out.",
+   "floor": {
+    "prerequisite": "Knows the types of tacking stitches.",
+    "question": "Which tacking has stitches and spaces the same?",
+    "answer": "even tacking"
+   },
+   "representations": [
+    "cloth, a large needle and bright thread",
+    "a step card",
+    "a finished sample with the tacking half removed"
+   ],
+   "steps": [
+    "Thread the needle; start with a small knot.",
+    "Sew in and out along the line.",
+    "Finish loosely.",
+    "Sew the final seam, then pull the tacking out."
+   ],
+   "contexts": [
+    "a handkerchief hem",
+    "a simple bag",
+    "a mending job at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two cloth pieces tacked together."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the tacking after the seam is sewn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it is pulled out\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Rub the tacking out of the drawing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_KEEP",
+     "listen_for": [
+      "It is left in the cloth"
+     ],
+     "ask": "What is done with the tacking when the sewing is finished?",
+     "repair": "Show a garment with tacking left in and ask what it looks like."
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_ORDER",
+     "listen_for": [
+      "Final stitching, then tacking"
+     ],
+     "ask": "What comes first, tacking or the final stitching?",
+     "repair": "Sew two slippery pieces without tacking and see them slide."
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_STRONG",
+     "listen_for": [
+      "With tiny, strong stitches"
+     ],
+     "ask": "How should tacking be sewn?",
+     "repair": "Compare how long it takes to unpick tiny stitches and long stitches."
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_KNOT",
+     "listen_for": [
+      "With a big knot at each end"
+     ],
+     "ask": "How does tacking start and end?",
+     "repair": "Pull out a tacking thread with and without knots at both ends."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is tacking done before the final stitching?",
+     "answer": "to hold the cloth in place",
+     "shows": "purpose"
+    },
+    {
+     "question": "Why is tacking done in a bright colour?",
+     "answer": "so it is easy to see and pull out",
+     "shows": "thread"
+    }
+   ]
+  }
+ ]
+}

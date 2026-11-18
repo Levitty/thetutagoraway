@@ -1,0 +1,276 @@
+{
+ "sub_strand": "AGRI.G4.FOOD_P.BALANCED_MEAL",
+ "title": "Balanced Meal",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the meals children eat: ugali, sukuma and beans; githeri; rice and stew; chapati and ndengu. A balanced meal can be cheap.",
+ "skills": [
+  {
+   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+   "key_step": "The child explains that a balanced meal gives the body energy, growth and protection from disease, keeps a person healthy and strong, and need not be expensive.",
+   "floor": {
+    "prerequisite": "Knows foods are put in groups.",
+    "question": "Name a food that gives energy.",
+    "answer": "ugali"
+   },
+   "representations": [
+    "a plate chart with three parts",
+    "pictures of meals from home",
+    "a story of a child who eats only ugali"
+   ],
+   "steps": [
+    "Energy foods: to work and play.",
+    "Body-building foods: to grow and repair.",
+    "Protective foods: to fight disease.",
+    "All three every meal: healthy and strong."
+   ],
+   "contexts": [
+    "a school lunch of githeri and greens",
+    "supper at home",
+    "a family meal on a market day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plate cut into three parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty part.",
+     "say": "What happens if we never eat protective food?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"we fall sick more\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"balanced: energy, growth, protection\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_FILL",
+     "listen_for": [
+      "It is big enough to fill the stomach"
+     ],
+     "ask": "What makes a meal balanced?",
+     "repair": "Compare a large plate of ugali alone with a smaller plate of ugali, beans and greens."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_ONE",
+     "listen_for": [
+      "Ugali gives everything the body needs"
+     ],
+     "ask": "Why can a child not live on ugali alone?",
+     "repair": "Ask what happens to a child who eats only one food for months."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_COST",
+     "listen_for": [
+      "Only a rich family that can buy meat"
+     ],
+     "ask": "Which family can eat a balanced meal?",
+     "repair": "Make a cheap balanced meal with ugali, ndengu and managu."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_MORE",
+     "listen_for": [
+      "A very big plate of food"
+     ],
+     "ask": "What makes a meal balanced?",
+     "repair": "Show a big plate of only rice next to a smaller plate of rice, beans and cabbage; ask which has all three groups."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should we eat a balanced meal?",
+     "answer": "to stay healthy, grow and have energy",
+     "shows": "importance"
+    },
+    {
+     "question": "Does a balanced meal need costly food?",
+     "answer": "no, local foods like githeri and greens balance a meal",
+     "shows": "cost"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+   "key_step": "The child sorts foods into energy-giving (ugali, rice, potatoes, bread, fats), body-building (beans, meat, eggs, fish, milk, ndengu) and protective (vegetables and fruits).",
+   "floor": {
+    "prerequisite": "Knows the three jobs of food in the body.",
+    "question": "What do body-building foods do?",
+    "answer": "help us grow"
+   },
+   "representations": [
+    "real foods or pictures to sort",
+    "a three-column chart",
+    "a food group song"
+   ],
+   "steps": [
+    "Ask: does it give energy, build the body or protect?",
+    "Put it in the column.",
+    "Check with a classmate."
+   ],
+   "contexts": [
+    "foods at the market",
+    "the school kitchen store",
+    "a lunch box"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three columns: energy, body-building, protective."
+    },
+    {
+     "beat": "point",
+     "do": "Show a picture of beans.",
+     "say": "Which column?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"body-building\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write beans under body-building."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_UGALI",
+     "listen_for": [
+      "Body building"
+     ],
+     "ask": "Ugali gives mainly what?",
+     "repair": "Ask what a runner eats before a race and why."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_MEAT",
+     "listen_for": [
+      "Give energy"
+     ],
+     "ask": "Eggs, fish and beans help the body to do what mainly?",
+     "repair": "Ask which foods a growing child or someone with a wound needs."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_FRUIT",
+     "listen_for": [
+      "Body-building"
+     ],
+     "ask": "Sukuma wiki and mangoes are which kind of food?",
+     "repair": "Ask what protective means and which colours protect the body."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_MILK",
+     "listen_for": [
+      "Energy-giving foods"
+     ],
+     "ask": "Which group is milk in?",
+     "repair": "Ask what young animals and babies grow on; milk builds the body."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which group is an egg in?",
+     "answer": "body-building",
+     "shows": "protein"
+    },
+    {
+     "question": "Which group is an orange in?",
+     "answer": "protective",
+     "shows": "protective"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+   "key_step": "The child picks or builds a meal with at least one food from each group and says which food is from which group.",
+   "floor": {
+    "prerequisite": "Can sort foods into the three groups.",
+    "question": "Which group is sukuma wiki in?",
+    "answer": "protective"
+   },
+   "representations": [
+    "paper plates and food pictures",
+    "a menu card",
+    "a tick chart for the three groups"
+   ],
+   "steps": [
+    "List the foods on the plate.",
+    "Tick each group.",
+    "If a group is empty, add a food from it."
+   ],
+   "contexts": [
+    "a school lunch",
+    "a family supper",
+    "a picnic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"rice and chicken\" on a plate."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which group is missing."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"protective\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add cabbage and write \"now balanced\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_ONE",
+     "listen_for": [
+      "Ugali, rice and chapati"
+     ],
+     "ask": "Which plate is a balanced meal?",
+     "repair": "Sort each food on the plate into a group. Count the groups."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_NOVEG",
+     "listen_for": [
+      "Nothing is missing"
+     ],
+     "ask": "A child eats ugali and fish. What is missing?",
+     "repair": "Ask which group each food is in and which group is empty."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_SWEET",
+     "listen_for": [
+      "A bottle of soda"
+     ],
+     "ask": "Which one makes a meal more balanced?",
+     "repair": "Look at what a soda gives: sugar and no body-building or protective foods."
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_TWO",
+     "listen_for": [
+      "Ugali and beans"
+     ],
+     "ask": "Which meal is balanced?",
+     "repair": "Tick the groups on a plate chart: energy, body-building, protective. One box stays empty."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Make ugali and fish a balanced meal.",
+     "answer": "add a vegetable or fruit",
+     "shows": "complete"
+    },
+    {
+     "question": "Is chapati, rice and bread balanced?",
+     "answer": "no, all three are energy foods",
+     "shows": "one group"
+    }
+   ]
+  }
+ ]
+}

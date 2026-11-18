@@ -24,7 +24,8 @@ function allCodes() {
 }
 
 // dir: 'science' | 'integrated_science'; subject: 'science' | 'integratedscience'; noFamilies: skill codes known to have no family yet.
-export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5 }) {
+// notTested: the subject's own rule for outcomes seen in class rather than asked (Social Studies adds practical tasks, 18 Nov 2026).
+export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5, notTested = NOT_TESTED, families = true }) {
   const source = J(`curriculum/${dir}/g${grade}.json`);
   const lib = J(`engine/data/curriculum/${subject}.g${grade}.misconceptions.json`);
   const own = `${source.sub_strands[0].code.split('.').slice(0, 2).join('.')}.`;
@@ -50,7 +51,7 @@ export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = 
   test(`${label}: every testable official outcome has a skill; only attitude outcomes are left out`, () => {
     for (const s of source.sub_strands) {
       const covered = new Set(s.skills.flatMap(k => k.outcomes));
-      const left = s.outcomes.filter(o => !covered.has(o.code) && !NOT_TESTED.test(o.text));
+      const left = s.outcomes.filter(o => !covered.has(o.code) && !notTested.test(o.text.trim()));
       assert.deepEqual(left.map(o => o.code), [], `${s.code}: outcomes with no skill`);
       assert.ok(s.skills.length, `${s.code}: no skills`);
     }
@@ -111,7 +112,8 @@ export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = 
     }
   });
 
-  test(`${label}: families are filed under real skills and outcomes, stay off for children, and the skills with none are known`, async () => {
+  // families: false for a grade with no subject entry and no families yet (Agriculture Grade 9, 18 Nov 2026).
+  if (families) test(`${label}: families are filed under real skills and outcomes, stay off for children, and the skills with none are known`, async () => {
     const entry = (await import(new URL(`src/ai-tutor/content/subjects/${subject}_g${grade}.js`, ROOT))).default;
     const byCode = new Map(skills.map(k => [k.code, k]));
     for (const f of entry.families) {
