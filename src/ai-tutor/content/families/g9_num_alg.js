@@ -296,41 +296,41 @@ const CUBES = [
 // @@NEXT
 // ---------------------------------------------------------------- INDICES AND LOGARITHMS
 const INDICES = [
-  fam({ id: 'g9.ind.growth-power', skill: 'G8_INDICES_INTRO', outcome: 'G9.INDICES.a', rung: 1, form: 'word',
+  fam({ id: 'g9.ind.growth-power', skill: 'G8_INDICES_INTRO', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.a', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM', rung: 1, form: 'word',
     draw: () => { const b = pick([2, 3, 4]), n = randInt(4, 7); return uniq(b ** n, b * n, n ** b, b ** (n - 1)) ? { b, n } : null; },
     make: ({ b, n }) => ({
       question: `A message is sent round a school WhatsApp group. In each round, every person who has it sends it to ${b - 1 === 1 ? '1 new person' : `${b - 1} new people`}. After n rounds, the number of people who have it, counting the first sender, is ${b} to the power n. How many people have it after ${n} rounds?`,
       answer: b ** n,
-      wrong: [[b * n, `${b} to the power ${n} means ${b} multiplied by itself ${n} times, not ${b} times ${n}.`], [n ** b, 'The base is the number that is multiplied. The index tells how many times.'], [b ** (n - 1), 'Check the index. It is the number of rounds.']],
+      wrong: [[b * n, `${b} to the power ${n} means ${b} multiplied by itself ${n} times, not ${b} times ${n}.`, 'M_POWER_AS_PRODUCT'], [n ** b, 'The base is the number that is multiplied. The index tells how many times.', 'M_BASE_INDEX_SWAPPED'], [b ** (n - 1), 'Check the index. It is the number of rounds.', 'M_INDEX_OFF_BY_ONE']],
       hints: ['In b^n, b is the base and n is the index.', `Write ${b}^${n} as ${b} multiplied by itself ${n} times.`],
       steps: [`${b}^${n} = ${Array(n).fill(b).join(' × ')}.`, `${b}^${n} = ${commas(b ** n)}.`],
     }),
     check: ({ b, n }, a) => Math.round(Math.log(a) / Math.log(b)) === n }),
-  fam({ id: 'g9.ind.zero-why', skill: 'G8_INDICES_INTRO', outcome: 'G9.INDICES.a', rung: 2, form: 'why',
+  fam({ id: 'g9.ind.zero-why', skill: 'G8_INDICES_INTRO', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.b', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER', rung: 2, form: 'why',
     draw: () => ({ b: pick([5, 7, 9, 12]), n: randInt(2, 4), who: person() }),
     make: ({ b, n, who }) => ({
       question: `${who.name} says that ${b}^0 = 0, because the index is 0. Why is this wrong?`,
       options: [
         { text: `${b}^${n} ÷ ${b}^${n} = ${b}^(${n} − ${n}) = ${b}^0, and any number divided by itself is 1`, right: true },
-        { text: `The index 0 means the base is multiplied by 0 once, so the answer is 0 but written differently`, right: false, why: 'The index does not multiply the base by anything. It counts how many times the base is multiplied.' },
-        { text: `${b}^0 = ${b}, because an index of 0 leaves the number unchanged`, right: false, why: 'An index of 1 leaves the number unchanged. An index of 0 is different.' },
-        { text: `${b}^0 has no value, because a number cannot be multiplied 0 times`, right: false, why: 'It does have a value. The law for dividing powers gives it one.' },
+        { text: `The index 0 means the base is multiplied by 0 once, so the answer is 0 but written differently`, right: false, why: 'The index does not multiply the base by anything. It counts how many times the base is multiplied.', mis: 'M_ZERO_INDEX_IS_ZERO' },
+        { text: `${b}^0 = ${b}, because an index of 0 leaves the number unchanged`, right: false, why: 'An index of 1 leaves the number unchanged. An index of 0 is different.', mis: 'M_ZERO_INDEX_IS_BASE' },
+        { text: `${b}^0 has no value, because a number cannot be multiplied 0 times`, right: false, why: 'It does have a value. The law for dividing powers gives it one.', mis: 'M_ZERO_INDEX_UNDEFINED' },
       ],
       hints: ['Divide a power by the same power, and use the law for dividing powers.', 'What is any number divided by itself?'],
       steps: [`${b}^${n} ÷ ${b}^${n} = 1, because the two are equal.`, `By the law, ${b}^${n} ÷ ${b}^${n} = ${b}^${n - n} = ${b}^0. So ${b}^0 = 1.`],
     }) }),
-  fam({ id: 'g9.ind.table-powers', skill: 'G8_INDICES_INTRO', outcome: 'G9.INDICES.a', rung: 2, form: 'table',
+  fam({ id: 'g9.ind.table-powers', skill: 'G8_INDICES_INTRO', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE', rung: 2, form: 'table',
     draw: () => { const b = pick([2, 3, 5]), max = { 2: 8, 3: 6, 5: 5 }[b], i = randInt(2, max - 2), j = randInt(2, max - i); return j >= 2 && uniq(b ** (i + j), b ** (i * j), (b * b) ** (i + j), b * (i + j)) ? { b, max, i, j } : null; },
     make: ({ b, max, i, j }) => ({
       question: `The table shows powers of ${b}. Use the law of indices to work out ${b}^${i} × ${b}^${j} by reading one value from the table.`,
       model: { type: 'table', data: { head: ['Power', 'Value'], rows: Array.from({ length: max }, (_, k) => ({ label: `${b}^${k + 1}`, value: String(b ** (k + 1)) })) } },
       answer: b ** (i + j),
-      wrong: [[b ** (i * j), 'When you multiply powers of the same base, add the indices. Do not multiply them.'], [(b * b) ** (i + j), 'The base stays the same. Do not multiply the bases.'], [b * (i + j), 'The index tells how many times the base is multiplied by itself, not how many times it is added.']],
+      wrong: [[b ** (i * j), 'When you multiply powers of the same base, add the indices. Do not multiply them.', 'M_INDICES_MULTIPLIED_FOR_PRODUCT'], [(b * b) ** (i + j), 'The base stays the same. Do not multiply the bases.', 'M_BASES_MULTIPLIED'], [b * (i + j), 'The index tells how many times the base is multiplied by itself, not how many times it is added.', 'M_INDEX_AS_REPEATED_ADDITION']],
       hints: ['Powers of the same base: what do you do with the indices when you multiply?', 'Find that power in the table.'],
       steps: [`${b}^${i} × ${b}^${j} = ${b}^(${i} + ${j}) = ${b}^${i + j}.`, `The table gives ${b}^${i + j} = ${commas(b ** (i + j))}.`],
     }),
     check: ({ b, i, j }, a) => a === b ** i * b ** j }),
-  fam({ id: 'g9.ind.find-index', skill: 'G8_INDICES_LAWS', outcome: 'G9.INDICES.c', rung: 2, form: 'direct',
+  fam({ id: 'g9.ind.find-index', skill: 'G8_INDICES_LAWS', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED', misMapped: false, reveals: ['M_UNKNOWN_INDEX_ADDED_BACK', 'M_INDICES_MULTIPLIED_FOR_PRODUCT', 'M_UNKNOWN_INDEX_TOTAL_GIVEN', 'M_POWER_OF_POWER_ADDED', 'M_DIVIDE_INDICES_MULTIPLIED'], rung: 2, form: 'direct',
     draw: () => {
       const kind = pick(['mul', 'div', 'pow']), b = pick([2, 3, 5, 'x', 'y']), p = randInt(2, 6), n = randInt(2, 7);
       const t = kind === 'mul' ? p + n : kind === 'div' ? n - p : n * p;
@@ -347,7 +347,7 @@ const INDICES = [
         steps: [kind === 'mul' ? `n + ${p} = ${t}` : kind === 'div' ? `n − ${p} = ${t}` : `n × ${p} = ${t}`, `n = ${n}.`] };
     },
     check: ({ kind, p, n, t }, a) => (kind === 'mul' ? a + p === t : kind === 'div' ? a - p === t : a * p === t) }),
-  fam({ id: 'g9.ind.spot-laws', skill: 'G8_INDICES_LAWS', outcome: 'G9.INDICES.c', rung: 3, form: 'spot',
+  fam({ id: 'g9.ind.spot-laws', skill: 'G8_INDICES_LAWS', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED', rung: 3, form: 'spot',
     draw: () => {
       const a = randInt(2, 4), b = randInt(2, 4), c = randInt(2, 5), d = randInt(2, 6), type = pick(['add', 'mult', 'div']);
       const s1 = a * b, s2 = s1 + c;
@@ -364,28 +364,28 @@ const INDICES = [
         { text: `${v}^${sh2} ÷ ${v}^${d} = ${v}^${sh3}`, ok: sh3 === sh2 - d },
       ];
       const fix = { add: 'For a power of a power, the indices are multiplied. Step 1 added them.', mult: 'When powers of the same base are multiplied, the indices are added. Step 2 multiplied them.', div: 'When powers of the same base are divided, the indices are subtracted. Step 3 divided them.' }[type];
-      return { question: `${who.name} simplified (${v}^${a})^${b} × ${v}^${c} ÷ ${v}^${d} in three steps. One step has a mistake. Which one?`, working, fix,
+      return { question: `${who.name} simplified (${v}^${a})^${b} × ${v}^${c} ÷ ${v}^${d} in three steps. One step has a mistake. Which one?`, working, mis: { add: 'M_POWER_OF_POWER_ADDED', mult: 'M_INDICES_MULTIPLIED_FOR_PRODUCT', div: 'M_DIVIDE_INDICES_DIVIDED' }[type], fix,
         steps: [`(${v}^${a})^${b} = ${v}^${a * b}.`, `${v}^${a * b} × ${v}^${c} = ${v}^${a * b + c}.`, `${v}^${a * b + c} ÷ ${v}^${d} = ${v}^${a * b + c - d}.`] };
     } }),
-  fam({ id: 'g9.ind.why-add-bases', skill: 'G8_INDICES_LAWS', outcome: 'G9.INDICES.c', rung: 2, form: 'why',
+  fam({ id: 'g9.ind.why-add-bases', skill: 'G8_INDICES_LAWS', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE', rung: 2, form: 'why',
     draw: () => { const b = pick([2, 3, 5]), m = randInt(2, 4), n = randInt(2, 5); return m !== n ? { b, m, n, who: person() } : null; },
     make: ({ b, m, n, who }) => ({
       question: `${who.name} writes ${b}^${m} × ${b}^${n} = ${b * b}^${m + n}. Which law of indices shows that this is wrong?`,
       options: [
         { text: `The base stays ${b} and the indices are added: ${b}^${m + n}`, right: true },
-        { text: `The indices must be multiplied, giving ${b}^${m * n}`, right: false, why: 'Multiplying the indices is for a power of a power, such as (b^m)^n.' },
-        { text: `The bases must be added, giving ${2 * b}^${m + n}`, right: false, why: 'Bases are never added in the laws of indices.' },
-        { text: `Nothing is wrong: the two bases multiply, so the base becomes ${b * b}`, right: false, why: 'When the bases are the same, they are not multiplied. They stay as they are.' },
+        { text: `The indices must be multiplied, giving ${b}^${m * n}`, right: false, why: 'Multiplying the indices is for a power of a power, such as (b^m)^n.', mis: 'M_INDICES_MULTIPLIED_FOR_PRODUCT' },
+        { text: `The bases must be added, giving ${2 * b}^${m + n}`, right: false, why: 'Bases are never added in the laws of indices.', mis: 'M_BASES_ADDED' },
+        { text: `Nothing is wrong: the two bases multiply, so the base becomes ${b * b}`, right: false, why: 'When the bases are the same, they are not multiplied. They stay as they are.', mis: 'M_BASES_MULTIPLIED' },
       ],
       hints: ['Both powers have the same base. What happens to the base?', 'What happens to the indices when you multiply?'],
       steps: [`The bases are both ${b}, so the base stays ${b}.`, `The indices are added: ${m} + ${n} = ${m + n}. So the answer is ${b}^${m + n}.`],
     }) }),
-  fam({ id: 'g9.ind.rope-pieces', skill: 'G8_INDICES_LAWS', outcome: 'G9.INDICES.c', rung: 2, form: 'word',
+  fam({ id: 'g9.ind.rope-pieces', skill: 'G8_INDICES_LAWS', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE', rung: 2, form: 'word',
     draw: () => { const b = pick([2, 3, 5]), n = randInt(2, 3), m = n + randInt(2, 4); return b ** m <= 6000 ? { b, m, n, who: person() } : null; },
     make: ({ b, m, n, who }) => ({
       question: `${who.name} has a rope ${b}^${m} cm long. ${who.She} cuts it into pieces. Each piece is ${b}^${n} cm long. How many pieces does ${who.she} get? Use the laws of indices.`,
       answer: b ** (m - n),
-      wrong: [[b ** (m + n), 'Cutting is a division. When powers are divided, the indices are subtracted.'], [b ** (m * n), 'Cutting is a division. The indices are subtracted, not multiplied.'], [m - n, `That is the index of the answer. The number of pieces is ${b} to that power.`]],
+      wrong: [[b ** (m + n), 'Cutting is a division. When powers are divided, the indices are subtracted.', 'M_DIVIDE_INDICES_ADDED'], [b ** (m * n), 'Cutting is a division. The indices are subtracted, not multiplied.', 'M_DIVIDE_INDICES_MULTIPLIED'], [m - n, `That is the index of the answer. The number of pieces is ${b} to that power.`, 'M_INDEX_GIVEN_AS_VALUE']],
       hints: ['Number of pieces = length of rope ÷ length of a piece.', 'Divide powers of the same base: subtract the indices.'],
       steps: [`Pieces = ${b}^${m} ÷ ${b}^${n} = ${b}^(${m} − ${n}) = ${b}^${m - n}.`, `${b}^${m - n} = ${b ** (m - n)}.`],
     }),
@@ -393,7 +393,7 @@ const INDICES = [
 ];
 
 const LOGS = [
-  fam({ id: 'g9.log.spot-laws', skill: 'G10_LOG_LAWS', outcome: 'G9.INDICES.d', rung: 3, form: 'spot',
+  fam({ id: 'g9.log.spot-laws', skill: 'G10_LOG_LAWS', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.d', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS', rung: 3, form: 'spot',
     draw: () => {
       const type = pick(['slip', 'last']), plus = Math.random() < 0.6, k = randInt(2, 4);
       let a, b;
@@ -412,10 +412,10 @@ const LOGS = [
         { text: `= ${m}`, ok: m === Math.round(Math.log10(X1)) },
       ];
       const fix = type === 'slip' ? `In Step 2, ${commas(a)} ${plus ? '×' : '÷'} ${commas(b)} is ${commas(X)}, not ${commas(X1)}.` : `In Step 3, log ${commas(X1)} is the power of 10 that gives ${commas(X1)}, which is ${k}, not ${commas(m)}.`;
-      return { question: `${who.name} simplified log ${commas(a)} ${op} log ${commas(b)} without a calculator. One step is wrong. Which one?`, working, fix,
+      return { question: `${who.name} simplified log ${commas(a)} ${op} log ${commas(b)} without a calculator. One step is wrong. Which one?`, working, mis: type === 'slip' ? 'SLIP' : 'M_LOG_AS_TENTH', fix,
         steps: [`log ${commas(a)} ${op} log ${commas(b)} = log ${commas(X)}.`, `${commas(X)} = 10^${k}, so log ${commas(X)} = ${k}.`] };
     } }),
-  fam({ id: 'g9.log.table-pattern', skill: 'G10_LOGARITHMS_INTRO', outcome: 'G9.INDICES.d', rung: 2, form: 'table', allowNegative: true,
+  fam({ id: 'g9.log.table-pattern', skill: 'G10_LOGARITHMS_INTRO', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.d', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10', misMapped: false, reveals: ['M_LOG_SIGN_DROPPED', 'M_LOG_ZEROS_ONLY', 'M_LOG_DIGIT_COUNT', 'M_LOG_TIMES_TEN'], rung: 2, form: 'table', allowNegative: true,
     draw: () => { const k = pick([-3, -4, -5, -6, 4, 5, 6]); return { k }; },
     make: ({ k }) => {
       const num = (e) => (e >= 0 ? commas(10 ** e) : (10 ** e).toFixed(-e));
@@ -428,24 +428,24 @@ const LOGS = [
         steps: [neg ? `${num(k)} = 10^${k}, since the 1 is in decimal place ${-k}.` : `${num(k)} = 10^${k}, since there are ${k} zeros after the 1.`, `So log ${num(k)} = ${k}.`] };
     },
     check: ({ k }, a) => Math.round(Math.log10(k < 0 ? Number((10 ** k).toFixed(-k)) : 10 ** k)) === a }),
-  fam({ id: 'g9.log.tremor-scale', skill: 'G10_LOGARITHMS_INTRO', outcome: 'G9.INDICES.d', rung: 3, form: 'word',
+  fam({ id: 'g9.log.tremor-scale', skill: 'G10_LOGARITHMS_INTRO', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.d', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT', rung: 3, form: 'word',
     draw: () => { const m1 = randInt(2, 4), d = randInt(2, 3); return { m1, m2: m1 + d, d }; },
     make: ({ m1, m2, d }) => ({
       question: `In this question, the magnitude of a tremor is M = log A, where A is the size of the ground movement. A small tremor in the Rift Valley has magnitude ${m1}. A larger one has magnitude ${m2}. How many times larger is the ground movement in the larger tremor?`,
       answer: 10 ** d,
-      wrong: [[d, 'That is the difference in magnitude. Magnitude is a logarithm, so write each A as a power of 10.'], [10 * d, 'Each step in magnitude multiplies A by 10. It is not 10 times the difference.'], [round(m2 / m1, 2), 'Magnitudes are logarithms. Do not divide them. Change each back to A.']],
+      wrong: [[d, 'That is the difference in magnitude. Magnitude is a logarithm, so write each A as a power of 10.', 'M_LOG_DIFFERENCE_AS_RATIO'], [10 * d, 'Each step in magnitude multiplies A by 10. It is not 10 times the difference.', 'M_TEN_TIMES_DIFFERENCE'], [round(m2 / m1, 2), 'Magnitudes are logarithms. Do not divide them. Change each back to A.', 'M_LOGS_DIVIDED']],
       hints: [`If log A = ${m1}, what is A as a power of 10?`, 'Divide the two values of A.'],
       steps: [`log A = ${m1} gives A = 10^${m1}. log A = ${m2} gives A = 10^${m2}.`, `10^${m2} ÷ 10^${m1} = 10^${d} = ${commas(10 ** d)}.`],
     }),
     check: ({ m1, m2 }, a) => Math.abs(Math.log10(a) - (m2 - m1)) < 1e-9 }),
-  fam({ id: 'g9.log.given-values', skill: 'G10_LOG_LAWS', outcome: 'G9.INDICES.d', rung: 2, form: 'steps',
+  fam({ id: 'g9.log.given-values', skill: 'G10_LOG_LAWS', outcome: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.d', cskill: 'MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS', rung: 2, form: 'steps',
     draw: () => { const L = { 2: 0.3010, 3: 0.4771, 5: 0.6990, 7: 0.8451 }; const ps = pick([[2, 3], [2, 5], [2, 7], [3, 5], [3, 7], [5, 7]]); return { p: ps[0], q: ps[1], lp: L[ps[0]], lq: L[ps[1]] }; },
     make: ({ p, q, lp, lq }) => ({
       question: `Given that log ${p} = ${lp.toFixed(4)} and log ${q} = ${lq.toFixed(4)}, use the laws of logarithms to find the values below.`,
       parts: [
-        { prompt: `Find log ${p * q}.`, answer: round(lp + lq, 4), hint: `${p * q} = ${p} × ${q}. The log of a product is the sum of the logs.`, wrong: [[round(lp * lq, 4), 'The log of a product is the sum of the logs, not the product.']] },
-        { prompt: `Find log ${p * p * q}.`, answer: round(2 * lp + lq, 4), hint: `${p * p * q} = ${p} × ${p} × ${q}. Count ${p} twice.`, wrong: [[round(lp + lq, 4), `${p} appears twice in ${p * p * q}.`]] },
-        { prompt: `Find log (${q} ÷ ${p}).`, answer: round(lq - lp, 4), hint: 'The log of a quotient is the difference of the logs. Start with the top number.', wrong: [[round(lp - lq, 4), 'Start with the log of the number on top.'], [round(lq / lp, 4), 'The log of a quotient is the difference of the logs, not their quotient.']] },
+        { prompt: `Find log ${p * q}.`, answer: round(lp + lq, 4), hint: `${p * q} = ${p} × ${q}. The log of a product is the sum of the logs.`, wrong: [[round(lp * lq, 4), 'The log of a product is the sum of the logs, not the product.', 'M_LOG_PRODUCT_AS_PRODUCT']] },
+        { prompt: `Find log ${p * p * q}.`, answer: round(2 * lp + lq, 4), hint: `${p * p * q} = ${p} × ${p} × ${q}. Count ${p} twice.`, wrong: [[round(lp + lq, 4), `${p} appears twice in ${p * p * q}.`, 'M_REPEATED_FACTOR_ONCE']] },
+        { prompt: `Find log (${q} ÷ ${p}).`, answer: round(lq - lp, 4), hint: 'The log of a quotient is the difference of the logs. Start with the top number.', wrong: [[round(lp - lq, 4), 'Start with the log of the number on top.', 'M_LOG_QUOTIENT_ORDER'], [round(lq / lp, 4), 'The log of a quotient is the difference of the logs, not their quotient.', 'M_LOG_QUOTIENT_AS_QUOTIENT']] },
       ],
       steps: [`log ${p * q} = ${lp.toFixed(4)} + ${lq.toFixed(4)} = ${round(lp + lq, 4)}.`, `log ${p * p * q} = 2 × ${lp.toFixed(4)} + ${lq.toFixed(4)} = ${round(2 * lp + lq, 4)}.`, `log (${q} ÷ ${p}) = ${lq.toFixed(4)} − ${lp.toFixed(4)} = ${round(lq - lp, 4)}.`],
     }),

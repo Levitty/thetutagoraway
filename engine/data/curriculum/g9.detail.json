@@ -246,6 +246,69 @@
     "is the answer sensible"
    ],
    "mastery": "The child uses the cube key (x cubed or x^y with 3) and the cube root key on a calculator, puts a negative number in brackets, rounds the display to the accuracy asked (4 significant figures, 2 decimal places), and checks the answer against an estimate: the cube root of 50 is between 3 and 4 because 27 < 50 < 64."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM": {
+   "forms": [
+    "write in index form",
+    "work out the power",
+    "base and index",
+    "after n rounds"
+   ],
+   "mastery": "The child names the base and the index, writes a repeated product in index form (2 x 2 x 2 x 2 x 2 = 2 to the power 5, 72 = 2 cubed x 3 squared) and works out a power by repeated multiplication (3 to the power 4 = 81), including growth that multiplies by the same number each step."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE": {
+   "forms": [
+    "simplify",
+    "which law",
+    "use the table",
+    "how many pieces"
+   ],
+   "mastery": "The child shows from repeated factors that a to the m times a to the n is a to the (m + n) and a to the m divided by a to the n is a to the (m - n), keeps the base unchanged, and uses the laws to simplify and to work out values: 2 to the 5 x 2 to the 3 = 2 to the 8 = 256; 5 to the 7 divided by 5 to the 4 = 125."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER": {
+   "forms": [
+    "why is a to the 0 equal to 1",
+    "simplify the power of a power",
+    "which is true",
+    "find the value"
+   ],
+   "mastery": "The child explains from the division law that any non-zero number to the power 0 is 1 (7 to the 3 divided by 7 to the 3 = 7 to the 0 = 1), and that a power of a power multiplies the indices: (2 cubed) squared = 2 to the 6."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED": {
+   "forms": [
+    "simplify",
+    "find n",
+    "which step is wrong",
+    "write as a single power"
+   ],
+   "mastery": "The child simplifies an expression such as (x cubed) to the 4 x x squared divided by x to the 5 in steps, one law at a time (x to the 12, x to the 14, x to the 9), works with numbers in front of the letters (2x cubed x 3x squared = 6x to the 5), and finds an unknown index by writing an equation for the indices."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10": {
+   "forms": [
+    "write as a power of 10",
+    "find log",
+    "continue the pattern",
+    "which number has log"
+   ],
+   "mastery": "The child writes a power of 10 such as 10,000 = 10 to the 4 and says its common logarithm is the index (log 10,000 = 4), continues the pattern below 1 (log 0.01 = -2) and knows log 1 = 0 and log 10 = 1."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS": {
+   "forms": [
+    "simplify without a calculator",
+    "given log 2 and log 3, find",
+    "which step is wrong",
+    "write as one log"
+   ],
+   "mastery": "The child adds logs of numbers whose product is a power of 10 (log 25 + log 40 = log 1,000 = 3) and subtracts them for a quotient, using log of a product = sum of logs because indices add when powers multiply, and uses given logs to find others (log 6 = log 2 + log 3)."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT": {
+   "forms": [
+    "how many times larger",
+    "magnitude",
+    "each step on the scale",
+    "compare two readings"
+   ],
+   "mastery": "The child reads a scale where each step of 1 multiplies the size by 10 (a tremor of magnitude 5 moves the ground 100 times as much as one of magnitude 3), writing each reading back as a power of 10 and dividing."
   }
  }
 }

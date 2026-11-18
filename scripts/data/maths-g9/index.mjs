@@ -1,4 +1,5 @@
 // Every Grade 9 Maths sub-strand that has its data written (18 Nov 2026). Add a file here when a sub-strand is done.
 import * as integers from './integers.mjs';
 import * as cubes from './cubes.mjs';
-export const SUBS = [integers, cubes];
+import * as indices from './indices.mjs';
+export const SUBS = [integers, cubes, indices];

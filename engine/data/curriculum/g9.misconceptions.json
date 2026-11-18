@@ -1020,5 +1020,509 @@
   "help": "Check: 1.4 x 1.4 x 1.4 = 2.744.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_POWER_AS_PRODUCT": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM",
+  "error": "Multiplies the base by the index.",
+  "example": {
+   "question": "3 to the power 4",
+   "wrong_answer": "12",
+   "correct_answer": "81"
+  },
+  "cause": "Reads the index as a multiplier.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "The index counts how many 3s are multiplied: 3 x 3 x 3 x 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_BASE_INDEX_SWAPPED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM",
+  "error": "Swaps the base and the index.",
+  "example": {
+   "question": "2 to the power 5",
+   "wrong_answer": "25 (5 squared)",
+   "correct_answer": "32"
+  },
+  "cause": "Does not know which number is repeated.",
+  "reveals": "The answer 25 (5 squared) as a wrong option, with a reason that names the idea.",
+  "help": "The big number is the base, the one repeated; the small raised number counts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_INDEX_OFF_BY_ONE": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM",
+  "error": "Uses one factor too few or too many in a growth story.",
+  "example": {
+   "question": "A message is shared with 3 new people each round. Rounds: 4. People reached in the last round?",
+   "wrong_answer": "27",
+   "correct_answer": "81"
+  },
+  "cause": "Counts the rounds wrongly by starting at the first sender.",
+  "reveals": "The answer 27 as a wrong option, with a reason that names the idea.",
+  "help": "Write one row for each round: after 1 round 3, after 2 rounds 3 x 3, ...",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_INDEX_FORM_ADDS": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM",
+  "error": "Writes a repeated sum in index form, or a repeated product as a sum.",
+  "example": {
+   "question": "Write 5 x 5 x 5 in index form.",
+   "wrong_answer": "5 x 3",
+   "correct_answer": "5 cubed"
+  },
+  "cause": "Mixes up repeated addition and repeated multiplication.",
+  "reveals": "The answer 5 x 3 as a wrong option, with a reason that names the idea.",
+  "help": "Repeated adding is multiplying; repeated multiplying is a power.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_PRIMES_NOT_GROUPED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM",
+  "error": "Writes each prime factor separately instead of grouping equal ones as powers.",
+  "example": {
+   "question": "Write 72 in index form.",
+   "wrong_answer": "2 x 2 x 2 x 3 x 3",
+   "correct_answer": "2 cubed x 3 squared"
+  },
+  "cause": "Stops at the factor tree.",
+  "reveals": "The answer 2 x 2 x 2 x 3 x 3 as a wrong option, with a reason that names the idea.",
+  "help": "Count the equal primes and write each count as an index.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_INDICES_MULTIPLIED_FOR_PRODUCT": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Multiplies the indices when multiplying powers.",
+  "example": {
+   "question": "2 to the 3 x 2 to the 4",
+   "wrong_answer": "2 to the 12",
+   "correct_answer": "2 to the 7"
+  },
+  "cause": "Uses the power-of-a-power law.",
+  "reveals": "The answer 2 to the 12 as a wrong option, with a reason that names the idea.",
+  "help": "Write out the factors: three 2s then four 2s make seven 2s.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_BASES_MULTIPLIED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Multiplies the bases as well as adding the indices.",
+  "example": {
+   "question": "3 squared x 3 to the 4",
+   "wrong_answer": "9 to the 6",
+   "correct_answer": "3 to the 6"
+  },
+  "cause": "Thinks every number in a product is multiplied.",
+  "reveals": "The answer 9 to the 6 as a wrong option, with a reason that names the idea.",
+  "help": "The factors are all 3s; the base stays 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_BASES_ADDED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Adds the bases.",
+  "example": {
+   "question": "5 squared x 5 cubed",
+   "wrong_answer": "10 to the 5",
+   "correct_answer": "5 to the 5"
+  },
+  "cause": "Adds everything it sees.",
+  "reveals": "The answer 10 to the 5 as a wrong option, with a reason that names the idea.",
+  "help": "Bases are never added in the laws: 5 to the 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_INDEX_AS_REPEATED_ADDITION": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Multiplies the base by the sum of the indices.",
+  "example": {
+   "question": "2 to the 3 x 2 to the 2",
+   "wrong_answer": "10",
+   "correct_answer": "32"
+  },
+  "cause": "Reads the index as a multiplier.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "2 to the 5 is five 2s multiplied, not 2 x 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_DIVIDE_INDICES_ADDED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Adds the indices when dividing powers.",
+  "example": {
+   "question": "2 to the 10 divided by 2 to the 4",
+   "wrong_answer": "2 to the 14",
+   "correct_answer": "2 to the 6"
+  },
+  "cause": "Uses the multiplication law for every operation.",
+  "reveals": "The answer 2 to the 14 as a wrong option, with a reason that names the idea.",
+  "help": "Dividing cancels factors: take 4 from 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_DIVIDE_INDICES_MULTIPLIED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Multiplies the indices when dividing powers.",
+  "example": {
+   "question": "2 to the 10 divided by 2 to the 4",
+   "wrong_answer": "2 to the 40",
+   "correct_answer": "2 to the 6"
+  },
+  "cause": "Picks an operation without a reason.",
+  "reveals": "The answer 2 to the 40 as a wrong option, with a reason that names the idea.",
+  "help": "Write it as a fraction and cancel the factors.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_INDEX_GIVEN_AS_VALUE": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+  "error": "Gives the index of the answer as the answer.",
+  "example": {
+   "question": "How many pieces of 2 cubed cm from 2 to the 7 cm?",
+   "wrong_answer": "4",
+   "correct_answer": "16"
+  },
+  "cause": "Stops after working out the index.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "The answer is 2 to the power 4, which is 16.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_ZERO_INDEX_IS_ZERO": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER",
+  "error": "Says any number to the power 0 is 0.",
+  "example": {
+   "question": "7 to the power 0",
+   "wrong_answer": "0",
+   "correct_answer": "1"
+  },
+  "cause": "Thinks the index multiplies the base.",
+  "reveals": "The answer 0 as a wrong option, with a reason that names the idea.",
+  "help": "7 cubed divided by 7 cubed is 1, and by the law it is 7 to the 0.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_ZERO_INDEX_IS_BASE": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER",
+  "error": "Says a number to the power 0 is the number itself.",
+  "example": {
+   "question": "9 to the power 0",
+   "wrong_answer": "9",
+   "correct_answer": "1"
+  },
+  "cause": "Mixes up the index 0 and the index 1.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "An index of 1 leaves the number; 0 gives 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_ZERO_INDEX_UNDEFINED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER",
+  "error": "Says a number to the power 0 has no value.",
+  "example": {
+   "question": "12 to the power 0",
+   "wrong_answer": "It has no value",
+   "correct_answer": "1"
+  },
+  "cause": "Cannot picture multiplying a number zero times.",
+  "reveals": "The answer It has no value as a wrong option, with a reason that names the idea.",
+  "help": "The division law gives it a value: 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_POWER_OF_POWER_ADDED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER",
+  "error": "Adds the indices for a power of a power.",
+  "example": {
+   "question": "(2 cubed) squared",
+   "wrong_answer": "2 to the 5",
+   "correct_answer": "2 to the 6"
+  },
+  "cause": "Uses the multiplication law.",
+  "reveals": "The answer 2 to the 5 as a wrong option, with a reason that names the idea.",
+  "help": "(2 cubed) squared is 2 cubed x 2 cubed: 3 + 3 = 6, which is 3 x 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_POWER_OF_POWER_BASE_RAISED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER",
+  "error": "Raises the base to the outside power and keeps the inside index.",
+  "example": {
+   "question": "(3 squared) cubed",
+   "wrong_answer": "27 squared",
+   "correct_answer": "3 to the 6"
+  },
+  "cause": "Applies the outside power to the base only.",
+  "reveals": "The answer 27 squared as a wrong option, with a reason that names the idea.",
+  "help": "The whole power is cubed: multiply the indices.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_DIVIDE_INDICES_DIVIDED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED",
+  "error": "Divides the indices when dividing powers.",
+  "example": {
+   "question": "x to the 12 divided by x to the 4",
+   "wrong_answer": "x cubed",
+   "correct_answer": "x to the 8"
+  },
+  "cause": "Matches the operation on the bases to the indices.",
+  "reveals": "The answer x cubed as a wrong option, with a reason that names the idea.",
+  "help": "Dividing powers subtracts indices: 12 - 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_UNKNOWN_INDEX_TOTAL_GIVEN": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED",
+  "error": "Gives the index on the right as the unknown.",
+  "example": {
+   "question": "x to the n x x cubed = x to the 8. Find n.",
+   "wrong_answer": "8",
+   "correct_answer": "5"
+  },
+  "cause": "Reads n from the answer side.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "n + 3 = 8, so n = 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_UNKNOWN_INDEX_ADDED_BACK": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED",
+  "error": "Adds the known index instead of taking it away when finding n.",
+  "example": {
+   "question": "x to the n x x cubed = x to the 8. Find n.",
+   "wrong_answer": "11",
+   "correct_answer": "5"
+  },
+  "cause": "Uses the law forwards instead of undoing it.",
+  "reveals": "The answer 11 as a wrong option, with a reason that names the idea.",
+  "help": "Write the index equation n + 3 = 8 and solve it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_COEFFICIENTS_ADDED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED",
+  "error": "Adds the numbers in front of the letters when multiplying terms.",
+  "example": {
+   "question": "2x cubed x 3x squared",
+   "wrong_answer": "5x to the 5",
+   "correct_answer": "6x to the 5"
+  },
+  "cause": "Uses the index law on the numbers too.",
+  "reveals": "The answer 5x to the 5 as a wrong option, with a reason that names the idea.",
+  "help": "Numbers multiply; indices of the same letter add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_COEFFICIENT_GIVEN_INDEX": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED",
+  "error": "Puts the number in front into the index.",
+  "example": {
+   "question": "4x squared x x cubed",
+   "wrong_answer": "x to the 9",
+   "correct_answer": "4x to the 5"
+  },
+  "cause": "Treats every number as part of the index.",
+  "reveals": "The answer x to the 9 as a wrong option, with a reason that names the idea.",
+  "help": "The 4 is a number of x-squareds: keep it in front.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_DIGIT_COUNT": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10",
+  "error": "Counts all the digits of a power of 10 instead of the zeros.",
+  "example": {
+   "question": "log 10,000",
+   "wrong_answer": "5",
+   "correct_answer": "4"
+  },
+  "cause": "Counts the 1 as well.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "10,000 = 10 to the 4: four zeros, index 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_SIGN_DROPPED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10",
+  "error": "Gives a positive logarithm for a number less than 1.",
+  "example": {
+   "question": "log 0.001",
+   "wrong_answer": "3",
+   "correct_answer": "-3"
+  },
+  "cause": "Counts places and forgets the direction.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Numbers below 1 are 10 to a negative power: log 0.001 = -3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_ZEROS_ONLY": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10",
+  "error": "Counts only the zeros after the decimal point for a small number.",
+  "example": {
+   "question": "log 0.001",
+   "wrong_answer": "-2",
+   "correct_answer": "-3"
+  },
+  "cause": "Ignores the place of the 1.",
+  "reveals": "The answer -2 as a wrong option, with a reason that names the idea.",
+  "help": "The 1 is in the third decimal place: 10 to the -3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_TIMES_TEN": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10",
+  "error": "Gives ten times the index as the logarithm.",
+  "example": {
+   "question": "log 100,000",
+   "wrong_answer": "50",
+   "correct_answer": "5"
+  },
+  "cause": "Confuses the logarithm with the number of tens multiplied.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "The log is the index itself.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_ONE_IS_ONE": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10",
+  "error": "Says log 1 is 1 (or log 10 is 0).",
+  "example": {
+   "question": "log 1",
+   "wrong_answer": "1",
+   "correct_answer": "0"
+  },
+  "cause": "Thinks the log of a number is close to the number.",
+  "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+  "help": "1 = 10 to the 0, so log 1 = 0; 10 = 10 to the 1, so log 10 = 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_PRODUCT_AS_PRODUCT": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS",
+  "error": "Multiplies the logs for the log of a product.",
+  "example": {
+   "question": "Given log 2 = 0.3010 and log 3 = 0.4771, find log 6.",
+   "wrong_answer": "0.1436",
+   "correct_answer": "0.7781"
+  },
+  "cause": "Matches the operation inside the log with the one outside.",
+  "reveals": "The answer 0.1436 as a wrong option, with a reason that names the idea.",
+  "help": "Logs are indices; multiplying numbers adds indices: log 2 + log 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_REPEATED_FACTOR_ONCE": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS",
+  "error": "Uses a repeated factor only once.",
+  "example": {
+   "question": "log 18 = log (2 x 3 x 3). Given log 2 and log 3, find it.",
+   "wrong_answer": "log 2 + log 3",
+   "correct_answer": "log 2 + 2 log 3"
+  },
+  "cause": "Writes each different prime once.",
+  "reveals": "The answer log 2 + log 3 as a wrong option, with a reason that names the idea.",
+  "help": "18 has two 3s: add log 3 twice.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_QUOTIENT_ORDER": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS",
+  "error": "Subtracts the logs in the wrong order for a quotient.",
+  "example": {
+   "question": "log (2/3) from log 2 and log 3",
+   "wrong_answer": "log 3 - log 2",
+   "correct_answer": "log 2 - log 3"
+  },
+  "cause": "Takes the smaller from the larger.",
+  "reveals": "The answer log 3 - log 2 as a wrong option, with a reason that names the idea.",
+  "help": "Top minus bottom: log 2 - log 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_QUOTIENT_AS_QUOTIENT": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS",
+  "error": "Divides the logs for the log of a quotient.",
+  "example": {
+   "question": "log (3/2) from log 2 = 0.3010, log 3 = 0.4771",
+   "wrong_answer": "1.585",
+   "correct_answer": "0.1761"
+  },
+  "cause": "Matches the operation inside the log.",
+  "reveals": "The answer 1.585 as a wrong option, with a reason that names the idea.",
+  "help": "Dividing numbers subtracts indices: log 3 - log 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_AS_TENTH": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS",
+  "error": "Writes the log of a power of 10 as the number divided by 10.",
+  "example": {
+   "question": "log 1,000",
+   "wrong_answer": "100",
+   "correct_answer": "3"
+  },
+  "cause": "Thinks a logarithm shrinks the number by 10.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "The log is the index: 1,000 = 10 cubed, so log 1,000 = 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_LOG_DIFFERENCE_AS_RATIO": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT",
+  "error": "Gives the difference in magnitude as how many times larger.",
+  "example": {
+   "question": "Magnitude 5 and magnitude 3. How many times larger?",
+   "wrong_answer": "2",
+   "correct_answer": "100"
+  },
+  "cause": "Treats the scale like a ruler.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Each step multiplies by 10: two steps is 10 x 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_TEN_TIMES_DIFFERENCE": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT",
+  "error": "Multiplies the difference by 10.",
+  "example": {
+   "question": "Magnitude 6 and magnitude 3. How many times larger?",
+   "wrong_answer": "30",
+   "correct_answer": "1,000"
+  },
+  "cause": "Knows 10 is involved but adds the steps instead of multiplying.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Three steps of x 10 is 10 cubed = 1,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_LOGS_DIVIDED": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT",
+  "error": "Divides one magnitude by the other.",
+  "example": {
+   "question": "Magnitude 6 and magnitude 3. How many times larger?",
+   "wrong_answer": "2",
+   "correct_answer": "1,000"
+  },
+  "cause": "Compares the readings as if they were the sizes.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Change each reading back to a power of 10 first: 10 to the 6 over 10 cubed.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_SCALE_LINEAR": {
+  "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT",
+  "error": "Thinks equal steps on the scale are equal amounts added.",
+  "example": {
+   "question": "From magnitude 4 to 5 and from 5 to 6: is the increase the same?",
+   "wrong_answer": "Yes, both add 1",
+   "correct_answer": "No: the second is 10 times bigger"
+  },
+  "cause": "Pictures the scale as a ruler.",
+  "reveals": "The answer Yes, both add 1 as a wrong option, with a reason that names the idea.",
+  "help": "Each step multiplies the size by 10, so later steps add far more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
