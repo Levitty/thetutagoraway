@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM",
+ "title": "Usemi Halisi na Usemi wa Taarifa (Theme 15: Maadili ya mtu binafsi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI",
+   "key_step": "The child turns direct speech into reported speech: removes the marks, adds kwamba/kuwa, changes the person, the tense and the time and place words.",
+   "floor": {
+    "prerequisite": "Uses speech marks.",
+    "question": "Andika vizuri: Mama alisema njoo",
+    "answer": "Mama alisema, \"Njoo.\""
+   },
+   "representations": [
+    "a change chart (mimi -> yeye, -na- -> -li-, leo -> siku hiyo)",
+    "sentence pairs",
+    "colour for each change"
+   ],
+   "steps": [
+    "Remove the marks.",
+    "Add kwamba.",
+    "Change the person.",
+    "Change the tense and the time and place words."
+   ],
+   "contexts": [
+    "personal values (maadili ya mtu binafsi)",
+    "a news report",
+    "a court record"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Amina alisema, \"Ninapenda kusoma hapa.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Ninapenda\" and \"hapa\".",
+     "say": "Vitabadilikaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Amina alisema kwamba alipenda kusoma pale.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M_KS7_US_MTU",
+     "listen_for": [
+      "Juma alisema kwamba mimi nitaenda."
+     ],
+     "ask": "Soma tena: \"Badilisha: Juma alisema, \"Mimi nitaenda.\" (usemi wa taarifa)\" Kwa nini \"Juma alisema kwamba mimi nitaenda.\" si jibu sahihi?",
+     "repair": "Katika usemi wa taarifa mtu hubadilika: mimi huwa yeye."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M_KS7_US_ALAMA",
+     "listen_for": [
+      "Juma alisema, \"Nitakuja.\""
+     ],
+     "ask": "Soma tena: \"Ni usemi upi ni wa taarifa?\" Kwa nini \"Juma alisema, \"Nitakuja.\"\" si jibu sahihi?",
+     "repair": "Usemi wa taarifa hauna alama za usemi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M_KS7_US_WAKATI",
+     "listen_for": [
+      "Maneno ya msemaji bila alama"
+     ],
+     "ask": "Soma tena: \"Usemi halisi una nini?\" Kwa nini \"Maneno ya msemaji bila alama\" si jibu sahihi?",
+     "repair": "Usemi halisi ni maneno kamili ya msemaji katika alama za usemi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI.M7_US_KESHO",
+     "listen_for": [
+      "Juma alisema kwamba atakuja kesho."
+     ],
+     "ask": "Siku hiyo ya \"kesho\" bado ni kesho kwa msomaji?",
+     "repair": "Katika usemi wa taarifa: kesho -> siku iliyofuata, hapa -> pale."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Badilisha: Baba alisema, \"Nitarudi leo.\"",
+     "answer": "Baba alisema kwamba angerudi siku hiyo.",
+     "shows": "reported"
+    },
+    {
+     "question": "Katika usemi wa taarifa, \"sisi\" huwa?",
+     "answer": "wao",
+     "shows": "person"
+    }
+   ]
+  }
+ ]
+}

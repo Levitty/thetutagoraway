@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 9: Matumizi ya vifaa vya kidijitali katika mawasiliano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.KUBUNI_AYA",
+   "key_step": "The child plans insha ya kubuni before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "ujumbe uliobadilisha maisha yangu",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ujumbe Uliobadilisha Maisha Yangu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Ujumbe Uliobadilisha Maisha Yangu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.KUBUNI_AYA.M7_INS_AYA_T9",
+     "listen_for": [
+      "mawazo mengi tofauti"
+     ],
+     "ask": "Wazo kuu la aya hii ni lipi?",
+     "repair": "Kila aya ikuze wazo moja kuu."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.KUBUNI_AYA.M7_INS_MTAZAMO_T9",
+     "listen_for": [
+      "kuanza \"nilikwenda...\" kisha \"alikwenda...\" kwa msimulizi yuleyule"
+     ],
+     "ask": "Ni nani anasimulia kisa hiki?",
+     "repair": "Dumisha nafsi na mtazamo mmoja wa msimulizi."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.KUBUNI_AYA.M7_INS_HISIA_T9",
+     "listen_for": [
+      "Nilihuzunika."
+     ],
+     "ask": "Msomaji angeonaje huzuni hii?",
+     "repair": "Onyesha hisia kwa vitendo na picha, si kwa neno moja tu."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T9_INSHA_ZA_KUBUNI.KUBUNI_AYA.M7_INS_ORDER_T9",
+     "listen_for": [
+      "tuliripoti kwa polisi, tuligundua ni utapeli, nilimwonyesha mama, nilipokea ujum"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya kubuni kuhusu \"Ujumbe Uliobadilisha Maisha Yangu\"?",
+     "answer": "Moyo wangu ulidunda kama ngoma nilipousoma ujumbe ule.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya kubuni ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

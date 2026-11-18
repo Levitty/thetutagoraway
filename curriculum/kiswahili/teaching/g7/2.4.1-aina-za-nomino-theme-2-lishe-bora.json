@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO",
+ "title": "Aina za nomino (Theme 2: Lishe bora)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI",
+   "key_step": "The child names a group with its group noun (kikosi, jeshi, bunda) and an idea with an abstract noun (afya, usafi), and agrees the verb with the group noun.",
+   "floor": {
+    "prerequisite": "Gives group and abstract nouns.",
+    "question": "Kundi la ng'ombe huitwa?",
+    "answer": "kundi au mfugo"
+   },
+   "representations": [
+    "pictures of groups",
+    "concrete/abstract sorting cards",
+    "a head-noun arrow"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Group or idea?",
+    "Name it.",
+    "Agree the verb with the head noun."
+   ],
+   "contexts": [
+    "healthy eating (lishe bora): a basket of fruit",
+    "a team at sports day",
+    "a choir"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kikosi cha wachezaji ___ (fika)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kikosi\".",
+     "say": "Kitenzi kitapatana na neno lipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kikosi kimefika\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M_KS7_NM_MOJA",
+     "listen_for": [
+      "mwanafunzi"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya makundi?\" Kwa nini \"mwanafunzi\" si jibu sahihi?",
+     "repair": "Nomino ya makundi hutaja kundi la viumbe au vitu, kama kikosi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M_KS7_NM_SHIKIKA",
+     "listen_for": [
+      "meza"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya dhahania?\" Kwa nini \"meza\" si jibu sahihi?",
+     "repair": "Nomino ya dhahania haishikiki, kama upendo."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M_KS7_NM_KUNDI_DHAHANIA",
+     "listen_for": [
+      "dhahania"
+     ],
+     "ask": "Soma tena: \"Neno jeshi ni nomino ya aina gani?\" Kwa nini \"dhahania\" si jibu sahihi?",
+     "repair": "Jeshi ni kundi la askari, kwa hiyo ni nomino ya makundi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T2_AINA_ZA_NOMINO.NOMINO_MAKUNDI.M7_NM_AGREE",
+     "listen_for": [
+      "wamefika"
+     ],
+     "ask": "Nomino kuu ni ipi, askari au jeshi?",
+     "repair": "Kitenzi hupatana na nomino ya kundi: jeshi limefika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ya dhahania ipi: chakula, lishe, kikapu?",
+     "answer": "lishe",
+     "shows": "abstract"
+    },
+    {
+     "question": "Jaza: Bunda la noti ___ (limepotea / zimepotea).",
+     "answer": "limepotea",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

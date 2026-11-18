@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN",
+ "title": "Kusikiliza kwa Makini (Theme 12: Magonjwa ambukizi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HOJA",
+   "key_step": "The child notes the main points and presents them in order.",
+   "floor": {
+    "prerequisite": "Listens to a short talk and says who and what.",
+    "question": "Mzungumzaji alizungumzia nini?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the recording or a reading by the teacher",
+    "a note grid while listening",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Listen to the end, noting key words.",
+    "Read the question and its question word.",
+    "Find the answer in your notes.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "magonjwa ambukizi",
+    "a radio news bulletin",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "magonjwa ambukizi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HOJA.M_KS7_LS_HOJA_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HOJA.M_KS7_LS_HOJA_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HOJA.M_KS7_LS_HOJA_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HOJA.M7_LSH_LS_HOJA",
+     "listen_for": [
+      "tarehe na majina yaliyotajwa"
+     ],
+     "ask": "Hii ni hoja kuu au ni maelezo?",
+     "repair": "Hoja muhimu ni mambo makuu, si maelezo madogo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Taja hoja muhimu katika habari uliyosikiliza.",
+     "answer": "mambo makuu ambayo mzungumzaji alieleza",
+     "shows": "ls_hoja"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika ulichosikia",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

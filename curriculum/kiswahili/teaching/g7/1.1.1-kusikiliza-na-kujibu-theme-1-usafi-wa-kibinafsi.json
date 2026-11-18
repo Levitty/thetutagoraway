@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
+ "title": "Kusikiliza na Kujibu (Theme 1: Usafi wa kibinafsi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a mazungumzo.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "usafi wa kibinafsi (personal hygiene)",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "usafi wa kibinafsi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short mazungumzo on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO.M7_ORL_REPLY_T1",
+     "listen_for": [
+      "Sijui."
+     ],
+     "ask": "Mazungumzo yataendelea baada ya jibu lako?",
+     "repair": "Jibu kikamilifu na umrudishie mwenzako swali."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO.M7_ORL_INTERRUPT_T1",
+     "listen_for": [
+      "mkatize ili usisahau"
+     ],
+     "ask": "Mwenzako amemaliza?",
+     "repair": "Msikilize mzungumzaji hadi amalize."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO.M7_ORL_EYES_T1",
+     "listen_for": [
+      "kuangalia chini muda wote"
+     ],
+     "ask": "Mzungumzaji anajuaje unamsikiliza?",
+     "repair": "Mwangalie mzungumzaji ili aone unamsikiliza."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO.M7_ORL_OFFTOPIC_T1",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Rafiki anakuuliza: \"Unafanyaje kudumisha usafi wako?\" Jibu lipi linaendeleza mazungumzo?",
+     "answer": "Ninaoga kila siku na kufua nguo zangu. Wewe je?",
+     "shows": "mazungumzo"
+    },
+    {
+     "question": "Mwenzako bado anazungumza na una jambo la kusema. Ufanye nini?",
+     "answer": "subiri amalize, kisha uombe nafasi",
+     "shows": "mazungumzo, second feature"
+    }
+   ]
+  }
+ ]
+}

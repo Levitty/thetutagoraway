@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA",
+ "title": "Barua ya Kirafiki ya Kutoa Mwaliko (Theme 2: Lishe bora)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO",
+   "key_step": "The child finds the parts of a friendly invitation letter and its message: the event, the date, the time and the place.",
+   "floor": {
+    "prerequisite": "Knows the parts of a friendly letter.",
+    "question": "Barua ya kirafiki huanza na?",
+    "answer": "anwani na tarehe"
+   },
+   "representations": [
+    "a model invitation letter",
+    "part and detail cards",
+    "a checklist of event details"
+   ],
+   "steps": [
+    "Find the parts.",
+    "Find the event.",
+    "Find when and where.",
+    "Say why it is written."
+   ],
+   "contexts": [
+    "healthy eating: a party with healthy food",
+    "a birthday",
+    "a school prize day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nakualika... Jumamosi... saa nane... Kakamega."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Jumamosi\".",
+     "say": "Hii inatuambia nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the parts and the event details."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M_KS7_BM_HITIMISHO",
+     "listen_for": [
+      "jina la mwandishi"
+     ],
+     "ask": "Soma tena: \"Barua ya kirafiki huanza kwa nini?\" Kwa nini \"jina la mwandishi\" si jibu sahihi?",
+     "repair": "Barua huanza kwa anwani na tarehe, huisha kwa hitimisho na jina."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M_KS7_BM_SALAMU",
+     "listen_for": [
+      "Mkuu wa Shule"
+     ],
+     "ask": "Soma tena: \"Ni salamu ipi inafaa barua ya kirafiki?\" Kwa nini \"Mkuu wa Shule\" si jibu sahihi?",
+     "repair": "Barua ya kirafiki huanza kwa salamu ya kirafiki."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M_KS7_BM_UMUHIMU",
+     "listen_for": [
+      "kumkaripia mtu"
+     ],
+     "ask": "Soma tena: \"Mwaliko huandikwa kwa nini?\" Kwa nini \"kumkaripia mtu\" si jibu sahihi?",
+     "repair": "Mwaliko humwita mtu kwenye tukio."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.BARUA_MWALIKO.M7_BM_NODETAILS",
+     "listen_for": [
+      "Nakualika kwenye sherehe yangu."
+     ],
+     "ask": "Rafiki atajua aje lini na wapi?",
+     "repair": "Mwaliko hutaja tukio, tarehe, saa na mahali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mwaliko huandikwa kwa lengo gani?",
+     "answer": "kumkaribisha mtu kwenye tukio",
+     "shows": "purpose"
+    },
+    {
+     "question": "Taja mambo manne ya tukio katika mwaliko.",
+     "answer": "tukio, tarehe, saa, mahali",
+     "shows": "details"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.KUANDIKA_MWALIKO",
+   "key_step": "The child plans barua ya kirafiki before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "mwaliko wa sherehe ya lishe bora",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwaliko wa Sherehe ya Lishe Bora"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Mwaliko wa Sherehe ya Lishe Bora\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.KUANDIKA_MWALIKO.M7_INS_FORMAL_T2",
+     "listen_for": [
+      "Mheshimiwa Bwana,"
+     ],
+     "ask": "Unamwandikia nani? Ungezungumza naye hivi?",
+     "repair": "Barua ya kirafiki hutumia lugha ya kirafiki: Mpendwa rafiki, Wako akupendaye."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.KUANDIKA_MWALIKO.M7_INS_NOASK_T2",
+     "listen_for": [
+      "Nataka kukueleza kuhusu safari yetu."
+     ],
+     "ask": "Umemuuliza rafiki yako hali yake?",
+     "repair": "Baada ya salamu, uliza hali ya rafiki yako kabla ya kueleza ujumbe."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.KUANDIKA_MWALIKO.M7_INS_DATE_T2",
+     "listen_for": [
+      "mwishoni, baada ya jina"
+     ],
+     "ask": "Rafiki atajuaje barua iliandikwa lini?",
+     "repair": "Tarehe huandikwa chini ya anwani ya mwandishi, juu upande wa kulia."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T2_BARUA_YA_KIRAFIKI_YA.KUANDIKA_MWALIKO.M7_INS_SIGN_T2",
+     "listen_for": [
+      "Wako mtiifu, Bw. Juma Hamisi"
+     ],
+     "ask": "Rafiki yako anakuita kwa jina gani?",
+     "repair": "Barua ya kirafiki humalizika kwa \"Ni mimi rafiki yako,\" na jina la kwanza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua ya kirafiki kuhusu \"Mwaliko wa Sherehe ya Lishe Bora\"?",
+     "answer": "Mpendwa rafiki yangu Halima,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua ya kirafiki ina sehemu zipi?",
+     "answer": "anwani, tarehe, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA",
+ "title": "Kusikiliza kwa Kina (Theme 2: Lishe bora)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI",
+   "key_step": "The child hears the one feature that separates /dh/ na /th/ and checks the meaning of the word before writing it.",
+   "floor": {
+    "prerequisite": "Says the five vowels and reads open syllables (ba, be, bi, bo, bu).",
+    "question": "Soma: dha-mi-ni",
+    "answer": "dhamini"
+   },
+   "representations": [
+    "a pair card: dhamini / thamini",
+    "a hand on the throat to feel the voice (or the lips for a nasal)",
+    "a picture for each meaning (to sponsor or guarantee, to value)"
+   ],
+   "steps": [
+    "Listen to the whole word.",
+    "Ask: which sound, /dh/ or /th/?",
+    "Think of the meaning in the sentence.",
+    "Write it and read it back."
+   ],
+   "contexts": [
+    "lishe bora (healthy eating)",
+    "a class reading aloud",
+    "a word game in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "dhamini - thamini"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter of each word.",
+     "say": "Neno lipi lina maana ya \"to sponsor or guarantee\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both words under their pictures and says each one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SWAP_T2",
+     "listen_for": [
+      "thamini"
+     ],
+     "ask": "Neno \"dhamini\" lina maana gani, na \"thamini\" lina maana gani?",
+     "repair": "\"dhamini\" ni to sponsor or guarantee; \"thamini\" ni to value. Sauti moja hubadilisha maana."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SPELL_T2",
+     "listen_for": [
+      "thibiti"
+     ],
+     "ask": "Ukiandika \"thibiti\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"to control\" ni \"dhibiti\". \"thibiti\" lina maana ya \"to prove\"."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SAME_T2",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
+     "repair": "Hapana. \"dhibiti\" ni to control, na \"thibiti\" ni to prove."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_TWISTER_T2",
+     "listen_for": [
+      "Mboga na matunda hujenga mwili."
+     ],
+     "ask": "Ni sauti gani zinarudiwa katika sentensi hii?",
+     "repair": "Kitanzandimi hurudia sauti zinazokaribiana, kama /dh/ na /th/, ili kiwe kigumu kutamka."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SYLL_T2",
+     "listen_for": [
+      "d-hamini"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: dha-mi-ni."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika neno lenye maana ya \"to prove\".",
+     "answer": "thibiti",
+     "shows": "spelling by meaning"
+    },
+    {
+     "question": "Ni kipi ni kitanzandimi?",
+     "answer": "Dhahabu ya thamani ya Dhahiri ilithibitishwa na dhamana ya thelathini.",
+     "shows": "kitanzandimi"
+    }
+   ]
+  }
+ ]
+}

@@ -37,7 +37,7 @@ export function depthTests(grade) {
   test(`Grade ${grade} Kiswahili depth: every skill has a full mastery rule, at least 2 prerequisites and 4 misconceptions`, () => {
     let down = 0;
     for (const s of subs) for (const k of s.skills) {
-      assert.ok(k.mastery.length > 60 && /8 of 10/.test(k.mastery), `${k.code}: mastery`);
+      assert.ok(k.mastery.length > 60 && /8 of 10|four of the last five/.test(k.mastery), `${k.code}: mastery (a rule that names 8 of 10, or the first-pass evidence rule of Grades 7 to 9)`);
       assert.ok(k.question_forms.length >= 2, `${k.code}: question forms`);
       assert.ok(k.prerequisites.length >= 2, `${k.code}: only ${k.prerequisites.length} prerequisites`);
       assert.equal(new Set(k.prerequisites.map(x => x.requires)).size, k.prerequisites.length, `${k.code}: a prerequisite twice`);

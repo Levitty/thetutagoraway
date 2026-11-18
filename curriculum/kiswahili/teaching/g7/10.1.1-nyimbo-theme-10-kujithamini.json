@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T10_NYIMBO",
+ "title": "Nyimbo (Theme 10: Kujithamini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T10_NYIMBO.NYIMBO",
+   "key_step": "The child places the nyimbo in its kind and occasion, explains its maana with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Tupige jembe pamoja, shamba letu litastawi\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its maana with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "kujithamini",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Tupige jembe pamoja, shamba letu litastawi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni nyimbo ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T10_NYIMBO.NYIMBO.M7_FSI_KIND_T10",
+     "listen_for": [
+      "wimbo wa dini"
+     ],
+     "ask": "Hutumika lini, na kwa lengo gani?",
+     "repair": "\"Tupige jembe pamoja, shamba letu litastawi\" ni wimbo wa kazi: kazi ya pamoja huwa nyepesi na huleta mafanikio."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T10_NYIMBO.NYIMBO.M7_FSI_WRITTEN_T10",
+     "listen_for": [
+      "fasihi andishi"
+     ],
+     "ask": "Ilipokezwa kwa maandishi au kwa mdomo?",
+     "repair": "Nyimbo ni fasihi simulizi: hupokezwa kwa mdomo."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T10_NYIMBO.NYIMBO.M7_FSI_OCCASION_T10",
+     "listen_for": [
+      "wakati wowote"
+     ],
+     "ask": "Ni mazingira gani yanafaa?",
+     "repair": "Wimbo wa kazi hutumika watu wanapolima au kufanya kazi pamoja."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T10_NYIMBO.NYIMBO.M7_FSI_MESSAGE_T10",
+     "listen_for": [
+      "Tupige jembe pamoja, shamba letu litastawi"
+     ],
+     "ask": "Mtunzi alitaka tujifunze nini?",
+     "repair": "Ujumbe ni funzo kwa maneno yako mwenyewe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Tupige jembe pamoja, shamba letu litastawi\" ni nyimbo ya aina gani?",
+     "answer": "wimbo wa kazi",
+     "shows": "maana"
+    },
+    {
+     "question": "Wimbo wa kazi hutumika lini?",
+     "answer": "watu wanapolima au kufanya kazi pamoja",
+     "shows": "maana, use"
+    }
+   ]
+  }
+ ]
+}

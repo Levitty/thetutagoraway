@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T10_VINYUME",
+ "title": "Vinyume (Theme 10: Kujithamini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T10_VINYUME.VINYUME",
+   "key_step": "The child gives the noun or adjective of the opposite meaning (not a synonym, not a negative) with the right class prefix.",
+   "floor": {
+    "prerequisite": "Gives adjective opposites.",
+    "question": "Kinyume cha \"mzito\" ni?",
+    "answer": "mwepesi"
+   },
+   "representations": [
+    "opposite cards",
+    "class prefix chart",
+    "sentence pairs"
+   ],
+   "steps": [
+    "Read the word.",
+    "Find its opposite.",
+    "Keep the class prefix.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "self-esteem (kujithamini): mnyonge / jasiri",
+    "describing a market",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "nyumba kubwa -> nyumba ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kubwa\".",
+     "say": "Kinyume ni nini, na kiambishi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"nyumba ndogo\" and two nouns with their opposites."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M_KS7_VN_MAANA",
+     "listen_for": [
+      "Neno lenye maana sawa"
+     ],
+     "ask": "Soma tena: \"Kinyume cha neno ni nini?\" Kwa nini \"Neno lenye maana sawa\" si jibu sahihi?",
+     "repair": "Kinyume cha neno ni neno lenye maana kinyume, kama kubwa na dogo."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M_KS7_VN_KIVUMISHI",
+     "listen_for": [
+      "mnene"
+     ],
+     "ask": "Soma tena: \"Kinyume cha mrefu ni kipi?\" Kwa nini \"mnene\" si jibu sahihi?",
+     "repair": "Kinyume cha mrefu ni mfupi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M_KS7_VN_NOMINO",
+     "listen_for": [
+      "asubuhi"
+     ],
+     "ask": "Soma tena: \"Kinyume cha mchana ni kipi?\" Kwa nini \"asubuhi\" si jibu sahihi?",
+     "repair": "Kinyume cha mchana ni usiku."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T10_VINYUME.VINYUME.M7_VN_AGREE",
+     "listen_for": [
+      "mti fupi"
+     ],
+     "ask": "Kivumishi kinapatana na nomino gani?",
+     "repair": "Kinyume huhifadhi kiambishi cha ngeli: mti mfupi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"mwanzo\" ni?",
+     "answer": "mwisho",
+     "shows": "noun opposite"
+    },
+    {
+     "question": "Kinyume cha \"kiti kipya\" ni?",
+     "answer": "kiti kikuukuu",
+     "shows": "with prefix"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI",
+ "title": "Tanzu za Fasihi (Theme 3: Uhuru wa wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU",
+   "key_step": "The child explains fasihi, tells simulizi (by mouth, no known author) from andishi (written, known author), names the tanzu and places a piece he presents.",
+   "floor": {
+    "prerequisite": "Knows a riddle and a methali.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a tree diagram of fasihi",
+    "genre cards",
+    "a short piece to present"
+   ],
+   "steps": [
+    "Ask: spoken or written?",
+    "Known author or community?",
+    "Name the utanzu and kipera.",
+    "Present one piece."
+   ],
+   "contexts": [
+    "animal freedom (uhuru wa wanyama)",
+    "a cultural festival",
+    "the class library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "fasihi simulizi / fasihi andishi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tree.",
+     "say": "Hadithi ya Sungura iko upande gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child places five pieces on the tree and presents one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M_KS7_FT_SIMULIZI",
+     "listen_for": [
+      "kwa maandishi"
+     ],
+     "ask": "Soma tena: \"Fasihi simulizi hupitishwa kwa njia gani?\" Kwa nini \"kwa maandishi\" si jibu sahihi?",
+     "repair": "Fasihi simulizi hupitishwa kwa mdomo."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M_KS7_FT_ANDISHI",
+     "listen_for": [
+      "kwa mdomo"
+     ],
+     "ask": "Soma tena: \"Fasihi andishi hupitishwa kwa njia gani?\" Kwa nini \"kwa mdomo\" si jibu sahihi?",
+     "repair": "Fasihi andishi huandikwa."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M_KS7_FT_TANZU",
+     "listen_for": [
+      "barua rasmi"
+     ],
+     "ask": "Soma tena: \"Ni tanzu ipi ya fasihi simulizi?\" Kwa nini \"barua rasmi\" si jibu sahihi?",
+     "repair": "Methali ni tanzu ya fasihi simulizi."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T3_TANZU_ZA_FASIHI.FASIHI_TANZU.M7_FT_TANZU_VIPERA",
+     "listen_for": [
+      "utanzu"
+     ],
+     "ask": "Methali iko chini ya utanzu gani?",
+     "repair": "Methali ni kipera cha semi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fasihi simulizi hupokezwa vipi?",
+     "answer": "kwa mdomo",
+     "shows": "oral"
+    },
+    {
+     "question": "Novela ni ya fasihi ipi?",
+     "answer": "fasihi andishi",
+     "shows": "written"
+    }
+   ]
+  }
+ ]
+}

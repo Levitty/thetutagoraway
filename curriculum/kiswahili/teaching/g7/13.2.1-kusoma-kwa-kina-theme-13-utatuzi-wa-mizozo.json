@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 13: Utatuzi wa mizozo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.NOVELA_MBINU",
+   "key_step": "The child names the mbinu with the right term, proves each point with a line or event from \"Kisima cha Matumaini\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class novela \"Kisima cha Matumaini\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "utatuzi wa mizozo",
+    "the class novela",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kisima cha Matumaini"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni mbinu gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.NOVELA_MBINU.M7_FAS_SIMMET_T13",
+     "listen_for": [
+      "tashbihi"
+     ],
+     "ask": "Kuna neno \"kama\" au \"mithili ya\" hapa?",
+     "repair": "Tashbihi hulinganisha kwa kama au mithili ya; sitiari hulinganisha moja kwa moja."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.NOVELA_MBINU.M7_FAS_NAMEONLY_T13",
+     "listen_for": [
+      "ni sitiari"
+     ],
+     "ask": "Mbinu hii inamsaidiaje msomaji?",
+     "repair": "Eleza kazi ya mbinu: inajenga picha, inasisitiza, inaonyesha hisia."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.NOVELA_MBINU.M7_FAS_LITERAL_T13",
+     "listen_for": [
+      "maana ya maneno kama yalivyo"
+     ],
+     "ask": "Je, jambo hili linaweza kuwa kweli?",
+     "repair": "Lugha ya picha haina maana ya moja kwa moja."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T13_KUSOMA_KWA_KINA.NOVELA_MBINU.M7_FAS_TAKRIRI_T13",
+     "listen_for": [
+      "kosa la uchapishaji"
+     ],
+     "ask": "Kwa nini mwandishi amerudia neno hili?",
+     "repair": "Takriri ni kurudia neno au kifungu ili kusisitiza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Bwana Tajiri ni fisi\" ni mbinu gani?",
+     "answer": "sitiari",
+     "shows": "mbinu"
+    },
+    {
+     "question": "Mbinu ya sitiari katika \"Bwana Tajiri ni fisi\" ina umuhimu gani?",
+     "answer": "inaonyesha ulafi wake wa mali",
+     "shows": "mbinu, second form"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI",
+ "title": "Mazungumzo Mahususi (Theme 5: Unyanyasaji wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.MAAMKUZI_JAMII",
+   "key_step": "The child names the time, the group and the state of the person, then chooses the greeting or farewell and its reply.",
+   "floor": {
+    "prerequisite": "Greets for the time of day.",
+    "question": "Asubuhi tunasema?",
+    "answer": "Habari za asubuhi"
+   },
+   "representations": [
+    "a clock face",
+    "greeting-reply pair cards (religious, elders, bereaved)",
+    "role play cards"
+   ],
+   "steps": [
+    "What time is it?",
+    "Which group or state?",
+    "Choose the greeting.",
+    "Give or expect the right reply."
+   ],
+   "contexts": [
+    "gender-based violence: comforting a friend",
+    "a mosque or church visit",
+    "a funeral"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bwana asifiwe! - ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the church card.",
+     "say": "Jibu lake ni lipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts three greetings with their replies."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.MAAMKUZI_JAMII.M7_MJM_RELIGIOUS_REPLY",
+     "listen_for": [
+      "Amina"
+     ],
+     "ask": "Salamu hii hujibiwa kwa maneno gani?",
+     "repair": "\"Asalaam aleikum\" hujibiwa \"Waaleikum salaam\"."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.MAAMKUZI_JAMII.M7_MJM_TIME",
+     "listen_for": [
+      "Habari za asubuhi"
+     ],
+     "ask": "Sasa ni wakati gani?",
+     "repair": "Salamu hufuata wakati: jioni ni \"Habari za jioni\"."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.MAAMKUZI_JAMII.M7_MJM_BEREAVED",
+     "listen_for": [
+      "Habari njema rafiki?"
+     ],
+     "ask": "Rafiki yako yuko katika hali gani?",
+     "repair": "Aliyefiwa hupewa pole: \"Pole kwa msiba.\""
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.MAAMKUZI_JAMII.M7_MJM_AGEMATE",
+     "listen_for": [
+      "Shikamoo"
+     ],
+     "ask": "Mtu huyu ni mkubwa kwako au rika lako?",
+     "repair": "Shikamoo ni kwa mkubwa; mwenzako husalimiwa \"Hujambo\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jibu la \"Bwana asifiwe\" ni?",
+     "answer": "Amina / Milele na milele",
+     "shows": "religious reply"
+    },
+    {
+     "question": "Unaagaje usiku?",
+     "answer": "Usiku mwema / Lala salama",
+     "shows": "farewell"
+    }
+   ]
+  }
+ ]
+}
