@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.NATURA.HISTORICAL_INFORMATION",
+ "title": "Historical information",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring sources: an old photograph, a letter, a textbook page, a recorded story. Sort them by kind and by primary or secondary.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES",
+   "key_step": "The child names the sources of historical information and matches each to an example.",
+   "floor": {
+    "prerequisite": "Names methods of traditional education.",
+    "question": "Name one oral method of traditional education.",
+    "answer": "storytelling, proverbs, riddles or songs"
+   },
+   "representations": [
+    "source cards",
+    "objects and photos",
+    "a recorded story"
+   ],
+   "steps": [
+    "Look at the example.",
+    "Ask: spoken, written, dug up, language, picture?",
+    "Name the source.",
+    "Say what it tells us."
+   ],
+   "contexts": [
+    "an elder's story",
+    "old pots dug at a site",
+    "a colonial letter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write oral, written, archaeological."
+    },
+    {
+     "beat": "point",
+     "do": "Point at archaeological.",
+     "say": "Which example goes here: a fossil or a diary?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a fossil."
+    },
+    {
+     "beat": "write",
+     "do": "Sort four examples."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES.M_HI_ONLY_BOOKS",
+     "listen_for": [
+      "Only textbooks"
+     ],
+     "ask": "Which is a source of history?",
+     "repair": "Ask where the history of the community was kept before writing."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES.M_HI_ARCH_ORAL",
+     "listen_for": [
+      "Oral tradition"
+     ],
+     "ask": "A fossil and old pots dug from the ground are which source?",
+     "repair": "Ask: do you hear or dig the evidence?"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES.M_HI_LANGUAGE_NOT",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can similar words in two languages give historical information?",
+     "repair": "Compare a few shared words in two Bantu languages."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES.M_HI_FOSSIL_ROCK",
+     "listen_for": [
+      "Nothing, it is a rock"
+     ],
+     "ask": "What can a fossil tell historians?",
+     "repair": "Show a fossil photo with the bone shape visible."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two sources of historical information.",
+     "answer": "any two of: oral traditions, written records, archaeology, language, genealogies, photographs, audio-visual records",
+     "shows": "sources"
+    },
+    {
+     "question": "Old pots dug from the ground are which source?",
+     "answer": "archaeological",
+     "shows": "match"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY",
+   "key_step": "The child tells primary sources (made at the time by someone there) from secondary sources (made later).",
+   "floor": {
+    "prerequisite": "Names sources of history.",
+    "question": "Give one source of history.",
+    "answer": "any source such as oral tradition"
+   },
+   "representations": [
+    "a sort: primary and secondary",
+    "example cards",
+    "the test question: was the maker there?"
+   ],
+   "steps": [
+    "Read the source.",
+    "Ask: when was it made?",
+    "Ask: was the maker there?",
+    "Sort it."
+   ],
+   "contexts": [
+    "a soldier's diary",
+    "a textbook",
+    "an old photograph"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"a 2024 textbook about 1884\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 2024.",
+     "say": "Was the writer there in 1884?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write secondary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY.M_HI_NEW_PRIMARY",
+     "listen_for": [
+      "Primary"
+     ],
+     "ask": "A textbook written in 2024 about the 1884 Berlin Conference is which source?",
+     "repair": "Ask whether the author was at the conference."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY.M_HI_PHOTO_SECONDARY",
+     "listen_for": [
+      "Secondary"
+     ],
+     "ask": "A diary a soldier wrote during the First World War is which source?",
+     "repair": "Ask who wrote the diary and when."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY.M_HI_INTERVIEW_ANY",
+     "listen_for": [
+      "Secondary, it is old"
+     ],
+     "ask": "You interview your grandmother about her own wedding in 1970. What kind of source is it?",
+     "repair": "Ask: was the speaker there?"
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY.M_HI_DOCUMENTARY_PRIMARY",
+     "listen_for": [
+      "Primary, it has films"
+     ],
+     "ask": "A documentary made in 2020 about independence in 1963. Primary or secondary?",
+     "repair": "Ask who made it and when."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A letter written during the First World War by a soldier is which source?",
+     "answer": "primary",
+     "shows": "primary"
+    },
+    {
+     "question": "A textbook written today about the past is which source?",
+     "answer": "secondary",
+     "shows": "secondary"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE",
+   "key_step": "The child says how historical information has been kept over the years.",
+   "floor": {
+    "prerequisite": "Names sources of history.",
+    "question": "What is an oral source?",
+    "answer": "history passed on by speaking"
+   },
+   "representations": [
+    "method cards",
+    "a museum photo",
+    "a phone recording"
+   ],
+   "steps": [
+    "Name the kind of source.",
+    "Say how it was kept long ago.",
+    "Say how it is kept today.",
+    "Name who keeps it."
+   ],
+   "contexts": [
+    "songs and proverbs",
+    "the National Museums of Kenya",
+    "the Kenya National Archives"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write oral, written, objects."
+    },
+    {
+     "beat": "point",
+     "do": "Point at oral.",
+     "say": "How was oral history kept long ago?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for songs and stories."
+    },
+    {
+     "beat": "write",
+     "do": "Write how it is kept today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE.M_HI_ORAL_LOST",
+     "listen_for": [
+      "It cannot be kept"
+     ],
+     "ask": "How has oral history been kept?",
+     "repair": "Ask how a grandmother passes on a proverb."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE.M_HI_KEEP_OUTSIDE",
+     "listen_for": [
+      "Left out in the open"
+     ],
+     "ask": "How are old objects best preserved?",
+     "repair": "Ask what rain and sun do to old paper."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE.M_HI_ARCHIVE_SHOP",
+     "listen_for": [
+      "A shop for old things"
+     ],
+     "ask": "What is an archive?",
+     "repair": "Show the Kenya National Archives photo."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE.M_HI_DIGITAL_NONE",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can a phone help keep history?",
+     "repair": "Record a short story from an elder."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How has oral history been kept?",
+     "answer": "in songs, proverbs and stories, and now by recording",
+     "shows": "oral"
+    },
+    {
+     "question": "Where are old objects best kept?",
+     "answer": "in museums and archives",
+     "shows": "objects"
+    }
+   ]
+  }
+ ]
+}

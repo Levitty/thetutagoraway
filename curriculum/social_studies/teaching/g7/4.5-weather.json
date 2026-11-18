@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G7.NATURA.WEATHER",
+ "title": "Weather",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Build simple instruments (bottle rain gauge, card wind vane) and a Stevenson screen model. Lightning safety: indoors, away from tall trees.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS",
+   "key_step": "The child names the elements of weather and the instrument for each, including where instruments are kept.",
+   "floor": {
+    "prerequisite": "Names weather elements and instruments.",
+    "question": "Which instrument measures rainfall?",
+    "answer": "a rain gauge"
+   },
+   "representations": [
+    "home-made instruments",
+    "a Stevenson screen model",
+    "matching cards"
+   ],
+   "steps": [
+    "Name the element.",
+    "Name the instrument.",
+    "Say how it is read.",
+    "Say where it is kept."
+   ],
+   "contexts": [
+    "the school weather station",
+    "a wind vane on a roof",
+    "a barometer at a weather office"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write barometer, hygrometer, anemometer."
+    },
+    {
+     "beat": "point",
+     "do": "Point at barometer.",
+     "say": "What does it measure?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for air pressure."
+    },
+    {
+     "beat": "write",
+     "do": "Match each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS.M_WE_TEMP_BAROMETER",
+     "listen_for": [
+      "The thermometer"
+     ],
+     "ask": "Which instrument measures air pressure?",
+     "repair": "Ask what a thermometer measures."
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS.M_WE_WEATHER_CLIMATE",
+     "listen_for": [
+      "Today's temperature"
+     ],
+     "ask": "Which tells the climate of a place?",
+     "repair": "Ask whether one sunny day tells us Nairobi's climate."
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS.M_WE_SCREEN_SUN",
+     "listen_for": [
+      "To warm the instruments"
+     ],
+     "ask": "Why is a Stevenson screen painted white?",
+     "repair": "Feel a white and a black cloth after an hour in the sun."
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS.M_WE_HYGRO_RAIN",
+     "listen_for": [
+      "Rainfall"
+     ],
+     "ask": "What does a hygrometer measure?",
+     "repair": "Match each instrument to its element on cards."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which instrument measures air pressure?",
+     "answer": "a barometer",
+     "shows": "instrument"
+    },
+    {
+     "question": "Why is a Stevenson screen used?",
+     "answer": "to shelter instruments from rain and direct sun",
+     "shows": "screen"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE",
+   "key_step": "The child says how weather matters to people and how to respond safely.",
+   "floor": {
+    "prerequisite": "Names weather elements.",
+    "question": "Name two elements of weather.",
+    "answer": "any two such as temperature and rainfall"
+   },
+   "representations": [
+    "activity cards",
+    "safety cards",
+    "a forecast clip"
+   ],
+   "steps": [
+    "Name the weather.",
+    "Say what it affects.",
+    "Choose the safe response.",
+    "Say how a forecast helps."
+   ],
+   "contexts": [
+    "a farmer planting after a forecast",
+    "lightning during a match",
+    "a flooded river on the way home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a storm cloud with lightning and a tall tree."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tree.",
+     "say": "Is it safe to shelter here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write the safe place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE.M_WE_RIVER_CROSS",
+     "listen_for": [
+      "Under a tall tree"
+     ],
+     "ask": "During lightning, where is it safe to be?",
+     "repair": "Ask why tall trees attract lightning."
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE.M_WE_FORECAST_USELESS",
+     "listen_for": [
+      "It is useless"
+     ],
+     "ask": "Why do farmers listen to the forecast?",
+     "repair": "Ask what a farmer does if heavy rain is coming at harvest."
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE.M_WE_HEAT_NO_RISK",
+     "listen_for": [
+      "Nothing special"
+     ],
+     "ask": "What should you do in very hot weather?",
+     "repair": "Talk about signs of heat illness."
+    },
+    {
+     "code": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE.M_WE_TRANSPORT_NONE",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can heavy rain affect transport?",
+     "repair": "Recall roads cut off in the long rains."
+    }
+   ],
+   "checks": [
+    {
+     "question": "During lightning, where is it safe to be?",
+     "answer": "inside a building",
+     "shows": "safety"
+    },
+    {
+     "question": "Why do farmers listen to weather forecasts?",
+     "answer": "to plan planting and harvest",
+     "shows": "importance"
+    }
+   ]
+  }
+ ]
+}

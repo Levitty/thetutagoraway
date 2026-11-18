@@ -6,7 +6,7 @@
 //   pre    { SKILL: [[ref, reason, strength?], ...] }  more prerequisites. ref is a full code (a skill of any Science,
 //          Integrated Science or Mathematics grade, or a Grade 1-3 Environmental Activities outcome) or a skill key of this grade
 //   mis    [[skill, short, error, question, wrong, right, cause, help, feedback, source?], ...]  more misconceptions
-//   fix    { SHORT: [cause, help] | { error?, cause?, help? } }  a real cause (and a sharper error or repair) for an older
+//   fix    { SHORT: cause | [cause, help] | { error?, cause?, help? } }  a real cause (and a sharper error or repair) for an older
 //          misconception that had a stock line
 //   (review marks in scripts/data/science-depth/reviews.json are put back on their misconceptions every build)
 //   pack   { SKILL: { key_step, floor, reps, steps, contexts, board, mis, checks } }  the teaching pack entry, written to
@@ -79,7 +79,7 @@ export function applyDepth(g, depth, { dir, grade, prefix, derive = false }) {
     }
     for (const [short, f] of Object.entries(d.fix || {})) {
       const m = s.misconceptions.find(x => x.code.endsWith(`.${short}`)) || fail(`${s.code}: fix for unknown misconception ${short}`);
-      const { error, cause, help } = Array.isArray(f) ? { cause: f[0], help: f[1] } : f;
+      const { error, cause, help } = typeof f === 'string' ? { cause: f } : Array.isArray(f) ? { cause: f[0], help: f[1] } : f;
       if (error) m.error = error; if (cause) m.cause = cause; if (help) m.help = help;
       added.fix++;
     }

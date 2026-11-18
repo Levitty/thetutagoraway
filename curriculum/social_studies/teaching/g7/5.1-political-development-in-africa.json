@@ -1,0 +1,369 @@
+{
+ "sub_strand": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN",
+ "title": "Political Development in Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: the Berlin Conference 1884 to 1885 hosted by Bismarck; no African present; effective occupation and notification. Name no living politician.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE",
+   "key_step": "The child tells the roles of European groups in the scramble for Africa and the reasons for it.",
+   "floor": {
+    "prerequisite": "Matches Kenyan leaders to their response to colonialists.",
+    "question": "What is Koitalel Arap Samoei known for?",
+    "answer": "leading the Nandi resistance"
+   },
+   "representations": [
+    "group and role cards",
+    "a reasons web",
+    "a map of colonies"
+   ],
+   "steps": [
+    "Name the group.",
+    "Give its role.",
+    "Give the reason Europe wanted Africa.",
+    "Say how Africans responded."
+   ],
+   "contexts": [
+    "an explorer's map of a river",
+    "a mission station",
+    "the IBEA Company in Kenya"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write explorers, missionaries, traders, soldiers."
+    },
+    {
+     "beat": "point",
+     "do": "Point at traders.",
+     "say": "What did chartered companies do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for trade and treaties."
+    },
+    {
+     "beat": "write",
+     "do": "Write each role."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE.M_PD_ASK_AFRICANS",
+     "listen_for": [
+      "African leaders"
+     ],
+     "ask": "Who decided to divide Africa at Berlin?",
+     "repair": "Ask who was at the table in Berlin."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE.M_PD_MISSION_ONLY",
+     "listen_for": [
+      "None at all"
+     ],
+     "ask": "What was a role of missionaries in the scramble?",
+     "repair": "Ask what a mission station gave local people and what it gave the colonial power."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE.M_PD_EXPLORERS_TOURISTS",
+     "listen_for": [
+      "They were only tourists"
+     ],
+     "ask": "What role did explorers play in the scramble?",
+     "repair": "Read a short explorer report about rivers and resources."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE.M_PD_REASON_HELP",
+     "listen_for": [
+      "To help Africans only"
+     ],
+     "ask": "Give an economic reason for the scramble.",
+     "repair": "List what Europe needed: cotton, rubber, minerals, markets."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one role of explorers in the scramble.",
+     "answer": "mapped routes and reported on resources",
+     "shows": "role"
+    },
+    {
+     "question": "Give one economic reason for the scramble.",
+     "answer": "raw materials or markets for European industry",
+     "shows": "reason"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN",
+   "key_step": "The child tells who met at Berlin and the terms agreed.",
+   "floor": {
+    "prerequisite": "Tells the roles of European groups.",
+    "question": "Give one role of missionaries.",
+    "answer": "opened mission stations and schools"
+   },
+   "representations": [
+    "term cards",
+    "a world map",
+    "a role play of the conference"
+   ],
+   "steps": [
+    "Say when and where.",
+    "Say who was there and who was not.",
+    "Give the terms.",
+    "Say what it led to."
+   ],
+   "contexts": [
+    "Bismarck hosting in Berlin",
+    "no African leaders present",
+    "effective occupation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"Berlin, 1884 to 1885\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "Were any African leaders present?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write two terms."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN.M_PD_BERLIN_DIVIDED",
+     "listen_for": [
+      "Exact borders for every African country"
+     ],
+     "ask": "What did the Berlin Conference decide?",
+     "repair": "Ask whether anyone had surveyed Africa at the time."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN.M_PD_BERLIN_AFRICANS",
+     "listen_for": [
+      "African chiefs and Europeans"
+     ],
+     "ask": "Who attended the Berlin Conference?",
+     "repair": "Ask the child what that means for African views."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN.M_PD_BERLIN_KENYA",
+     "listen_for": [
+      "In Nairobi"
+     ],
+     "ask": "Where was the conference to divide Africa held?",
+     "repair": "Show Berlin on a world map."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN.M_PD_OCCUPATION_MEANING",
+     "listen_for": [
+      "Drawing a line on a map"
+     ],
+     "ask": "What did \"effective occupation\" require?",
+     "repair": "Contrast a line on paper with a fort and officials on the ground."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who attended the Berlin Conference?",
+     "answer": "European powers, with the United States as observer",
+     "shows": "attendance"
+    },
+    {
+     "question": "Give one term of the Berlin Conference.",
+     "answer": "effective occupation, telling others of claims, or free navigation on the Congo and Niger",
+     "shows": "terms"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS",
+   "key_step": "The child tells what colonial rule meant for African nations, good and bad.",
+   "floor": {
+    "prerequisite": "Tells the terms of the Berlin Conference.",
+    "question": "What was effective occupation?",
+    "answer": "real control on the ground"
+   },
+   "representations": [
+    "a T-chart",
+    "effect cards",
+    "a map of borders over communities"
+   ],
+   "steps": [
+    "Name the change.",
+    "Say who it served.",
+    "Sort harm or benefit.",
+    "Give an example from Kenya."
+   ],
+   "contexts": [
+    "the White Highlands",
+    "the Uganda Railway",
+    "borders splitting the Maasai"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a community circle with a border line through it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "What did this do to the community?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"split it\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write more effects."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS.M_PD_ALL_GOOD",
+     "listen_for": [
+      "Roads for the colonial economy"
+     ],
+     "ask": "Which is a harm of colonial rule?",
+     "repair": "Ask who the railways were built to serve."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS.M_PD_BORDERS_FAIR",
+     "listen_for": [
+      "Kept each community together"
+     ],
+     "ask": "What did colonial borders do to communities?",
+     "repair": "Ask which communities live in two countries today."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS.M_PD_LAND_KEPT",
+     "listen_for": [
+      "Africans kept it"
+     ],
+     "ask": "What happened to much African land in the Kenyan highlands under colonial rule?",
+     "repair": "Show a map of the settler areas."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS.M_PD_CASH_CROP_FOOD",
+     "listen_for": [
+      "To feed Africans"
+     ],
+     "ask": "Why were cash crops such as coffee grown in colonial times?",
+     "repair": "Ask who drank the coffee."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one harm of colonial rule.",
+     "answer": "any of: loss of land and independence, forced labour, taxes, split communities, harm to culture",
+     "shows": "harm"
+    },
+    {
+     "question": "What did colonial borders do to some communities?",
+     "answer": "split them or joined them with others",
+     "shows": "borders"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO",
+   "key_step": "The child explains neo-colonialism and picks good governance that ends it.",
+   "floor": {
+    "prerequisite": "Tells what colonial rule meant.",
+    "question": "Give one harm of colonial rule.",
+    "answer": "any harm such as loss of land"
+   },
+   "representations": [
+    "a definition card",
+    "action cards",
+    "a debt story"
+   ],
+   "steps": [
+    "Say what neo-colonialism is.",
+    "Give how it works: trade, debt, money, politics.",
+    "Pick a good governance action.",
+    "Say how it helps."
+   ],
+   "contexts": [
+    "a country deep in debt",
+    "local industries processing their own goods",
+    "fair elections"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A free country must obey a rich lender because of debt.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"must obey\".",
+     "say": "What is this called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for neo-colonialism."
+    },
+    {
+     "beat": "write",
+     "do": "Write two ways to end it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO.M_PD_NEO_SAME",
+     "listen_for": [
+      "Direct rule by a foreign army"
+     ],
+     "ask": "What is neo-colonialism?",
+     "repair": "Ask who runs the country when it owes a great debt."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO.M_PD_NEO_CORRUPT",
+     "listen_for": [
+      "Taking bribes from foreign firms"
+     ],
+     "ask": "Which helps to end neo-colonialism?",
+     "repair": "Ask what bribes do to a country's resources."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO.M_PD_TRADE_BAD",
+     "listen_for": [
+      "Yes, all trade with them is"
+     ],
+     "ask": "Is selling tea to Britain at a fair price neo-colonialism?",
+     "repair": "Compare a fair deal with a deal forced by debt."
+    },
+    {
+     "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO.M_PD_LOAN_FREE",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can large foreign loans lead to neo-colonialism?",
+     "repair": "Act a lender asking for favours from a borrower who cannot pay."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is neo-colonialism?",
+     "answer": "control of a free country through money, trade, debt and politics",
+     "shows": "meaning"
+    },
+    {
+     "question": "Give one way good governance reduces neo-colonialism.",
+     "answer": "any of: accountability, honesty, fair elections, rule of law, local industry, using resources for the people",
+     "shows": "remedy"
+    }
+   ]
+  }
+ ]
+}

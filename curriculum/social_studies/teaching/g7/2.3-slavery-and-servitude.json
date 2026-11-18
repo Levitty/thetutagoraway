@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE",
+ "title": "Slavery and Servitude",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Handle with care: name trafficking and child labour as crimes today and give Childline 116. The Indian Ocean trade reached Zanzibar, Kilwa, Mombasa and inland to the Congo basin.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS",
+   "key_step": "The child tells the forms of slavery and servitude past and present and says each takes away freedom and dignity.",
+   "floor": {
+    "prerequisite": "Names forms of child abuse.",
+    "question": "Name a form of child abuse.",
+    "answer": "any form such as child labour"
+   },
+   "representations": [
+    "form cards: past and today",
+    "a freedom test: can the person leave?",
+    "news stories without names"
+   ],
+   "steps": [
+    "Read the story.",
+    "Ask: is the person free to leave?",
+    "Name the form.",
+    "Say past or today."
+   ],
+   "contexts": [
+    "debt bondage",
+    "child labour in a quarry",
+    "trafficking abroad"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"She cannot leave and is not paid.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"cannot leave\".",
+     "say": "What makes this servitude?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"she is not free\"."
+    },
+    {
+     "beat": "write",
+     "do": "Name the form."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS.M_SL_ONLY_PAST",
+     "listen_for": [
+      "No, it ended long ago"
+     ],
+     "ask": "Is there any form of slavery today?",
+     "repair": "Ask what child labour and trafficking take away from a person."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS.M_SL_SERVANT_PAID",
+     "listen_for": [
+      "Hard work for long hours"
+     ],
+     "ask": "What makes work servitude and not a job?",
+     "repair": "Ask: if a worker may leave, is she a slave?"
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS.M_SL_DEBT_FAIR",
+     "listen_for": [
+      "No, it is fair payment"
+     ],
+     "ask": "A boy must work for a trader for years to pay his father's debt and cannot leave. Is this servitude?",
+     "repair": "Ask whether the boy is free to leave or to go to school."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS.M_SL_TRAFFICKING_TRAVEL",
+     "listen_for": [
+      "A normal job"
+     ],
+     "ask": "A girl is promised a job abroad, then her passport is taken and she cannot leave. What is this?",
+     "repair": "List warning signs: passport taken, no pay, cannot leave."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one form of slavery today.",
+     "answer": "any of: trafficking, forced labour, child labour, forced marriage",
+     "shows": "modern forms"
+    },
+    {
+     "question": "What makes work servitude and not a job?",
+     "answer": "the person is not free to leave",
+     "shows": "freedom test"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN",
+   "key_step": "The child gives the factors that led to the Indian Ocean slave trade.",
+   "floor": {
+    "prerequisite": "Tells the forms of slavery.",
+    "question": "What is debt bondage?",
+    "answer": "being forced to work to pay a debt"
+   },
+   "representations": [
+    "factor cards",
+    "a map with monsoon winds",
+    "a caravan drawing"
+   ],
+   "steps": [
+    "Name the demand: plantations and homes.",
+    "Name the traders.",
+    "Name the routes and winds.",
+    "Name the centre: Zanzibar."
+   ],
+   "contexts": [
+    "clove plantations in Zanzibar",
+    "dhows on the monsoon",
+    "caravans carrying ivory"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a dhow with an arrow from Africa to Arabia."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "What pushed the dhow across?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for monsoon winds."
+    },
+    {
+     "beat": "write",
+     "do": "Write three more factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN.M_SL_ONLY_EUROPE",
+     "listen_for": [
+      "Only Europeans"
+     ],
+     "ask": "Who took part in the Indian Ocean slave trade?",
+     "repair": "Ask which ocean is named in the trade."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN.M_SL_NO_DEMAND",
+     "listen_for": [
+      "To eat as food"
+     ],
+     "ask": "Why were people bought in the Indian Ocean trade?",
+     "repair": "Ask where cloves were grown near Zanzibar and who worked there."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN.M_SL_MONSOON_NONE",
+     "listen_for": [
+      "They did not"
+     ],
+     "ask": "How did the monsoon winds help the Indian Ocean trade?",
+     "repair": "Show the wind directions in different months on a map."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN.M_SL_IVORY_SEPARATE",
+     "listen_for": [
+      "They were not"
+     ],
+     "ask": "How were ivory and slaves linked in the trade?",
+     "repair": "Trace a caravan from the interior to the coast."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two factors that led to the Indian Ocean slave trade.",
+     "answer": "any two of: demand for plantation and household workers, ivory caravans, monsoon winds, Zanzibar as a centre",
+     "shows": "factors"
+    },
+    {
+     "question": "Who took part in the Indian Ocean slave trade?",
+     "answer": "Arab and Swahili traders and some African leaders",
+     "shows": "participants"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT",
+   "key_step": "The child says where the Indian Ocean slave trade reached in Africa and where captives were taken.",
+   "floor": {
+    "prerequisite": "Gives the factors of the trade.",
+    "question": "Which island was a centre of the trade?",
+    "answer": "Zanzibar"
+   },
+   "representations": [
+    "a map of Africa and the Indian Ocean",
+    "route lines",
+    "place cards"
+   ],
+   "steps": [
+    "Mark the coastal towns.",
+    "Draw the inland routes.",
+    "Draw the sea routes.",
+    "Name where captives went."
+   ],
+   "contexts": [
+    "Kilwa and Zanzibar",
+    "caravans to Lake Victoria",
+    "ships to Arabia and India"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the east coast and an arrow across the ocean."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow's end.",
+     "say": "Where were captives taken?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Arabia, India, islands."
+    },
+    {
+     "beat": "write",
+     "do": "Add the inland routes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT.M_SL_ATLANTIC_MIX",
+     "listen_for": [
+      "To North and South America"
+     ],
+     "ask": "Where did the Indian Ocean slave trade take captives?",
+     "repair": "Ask which ocean lies on the east of Africa."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT.M_SL_WEST_COAST",
+     "listen_for": [
+      "The west coast"
+     ],
+     "ask": "Which coast was the centre of the Indian Ocean trade?",
+     "repair": "Ask which coast faces the Indian Ocean."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT.M_SL_COAST_ONLY",
+     "listen_for": [
+      "No, only the coast"
+     ],
+     "ask": "Did the Indian Ocean slave trade reach Lake Victoria and the Congo basin?",
+     "repair": "Draw the caravan routes inland on the map."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT.M_SL_ZANZIBAR_KENYA",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is Zanzibar today?",
+     "repair": "Point to Zanzibar on the map off the Tanzanian coast."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where did the Indian Ocean slave trade take captives?",
+     "answer": "to Arabia, the Persian Gulf, India and islands",
+     "shows": "destinations"
+    },
+    {
+     "question": "Which coast was the centre of the Indian Ocean trade?",
+     "answer": "the east coast",
+     "shows": "extent"
+    }
+   ]
+  }
+ ]
+}

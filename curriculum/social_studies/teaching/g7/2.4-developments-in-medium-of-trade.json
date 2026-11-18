@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O",
+ "title": "Developments in Medium of trade",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Play a barter market in class with no money, then repeat with tokens. Facts: cowries, beads, salt, iron hoes and cattle were used before coins; the rupee and then the East African shilling came with colonial rule.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE",
+   "key_step": "The child compares barter with money and gives the problems of barter.",
+   "floor": {
+    "prerequisite": "Names ways people depend on each other.",
+    "question": "Give one way people depend on each other.",
+    "answer": "any such as trade"
+   },
+   "representations": [
+    "a barter market game",
+    "goods cards",
+    "a T-chart: barter and money"
+   ],
+   "steps": [
+    "Try to swap goods.",
+    "Find the problem: both must want what the other has.",
+    "Try with money tokens.",
+    "Compare."
+   ],
+   "contexts": [
+    "swapping millet for fish",
+    "buying bread with coins",
+    "paying by mobile money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"I have a goat. I need salt. The salt seller wants a pot.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wants a pot\".",
+     "say": "What is the problem?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"he does not want my goat\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the problem: double coincidence of wants."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE.M_MT_BARTER_NO_PROBLEM",
+     "listen_for": [
+      "None, it worked perfectly"
+     ],
+     "ask": "What is a problem of barter trade?",
+     "repair": "Ask Nyambura how she can buy cloth if the seller does not want her maize."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE.M_MT_BARTER_MONEY",
+     "listen_for": [
+      "Buying goods with coins"
+     ],
+     "ask": "What is barter?",
+     "repair": "Ask what Mwangi gives the fisherman for fish when he has no coins."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE.M_MT_VALUE_EASY",
+     "listen_for": [
+      "It was easy"
+     ],
+     "ask": "Why was it hard to trade a cow for salt in barter?",
+     "repair": "Try trading a cow for a small bag of salt in role play."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE.M_MT_MONEY_FOOD",
+     "listen_for": [
+      "Because paper is useful"
+     ],
+     "ask": "Why does a shopkeeper accept a 100-shilling note?",
+     "repair": "Ask what a note is worth on an island where no one accepts it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is barter trade?",
+     "answer": "swapping goods for goods without money",
+     "shows": "meaning"
+    },
+    {
+     "question": "Give one problem of barter.",
+     "answer": "any of: both must want what the other has, goods hard to divide, hard to value, hard to store and carry",
+     "shows": "problem"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY",
+   "key_step": "The child says what was used before coins, why money came, and what it changed.",
+   "floor": {
+    "prerequisite": "Compares barter and money.",
+    "question": "Give one problem of barter.",
+    "answer": "both must want what the other has"
+   },
+   "representations": [
+    "a money timeline",
+    "cowrie shells or beads",
+    "effect cards"
+   ],
+   "steps": [
+    "Name early money.",
+    "Name what brought coins.",
+    "Name good effects.",
+    "Name bad effects."
+   ],
+   "contexts": [
+    "cowries on the coast",
+    "the rupee in colonial Kenya",
+    "savings in a bank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line from long ago to today."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the start.",
+     "say": "What was used as money here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cowries, beads, salt or iron hoes."
+    },
+    {
+     "beat": "write",
+     "do": "Add coins, notes and mobile money."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY.M_MT_COINS_FIRST",
+     "listen_for": [
+      "Mobile money"
+     ],
+     "ask": "What was used as money before coins in many parts of Africa?",
+     "repair": "Ask what Kenyans on the coast used to trade for goods long ago."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY.M_MT_ALL_GOOD",
+     "listen_for": [
+      "None, money only helped"
+     ],
+     "ask": "Which is a bad effect of introducing money?",
+     "repair": "Ask what happens to a person who borrows money and cannot pay."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY.M_MT_MOBILE_COLONIAL",
+     "listen_for": [
+      "In colonial times"
+     ],
+     "ask": "When did mobile money begin in Kenya?",
+     "repair": "Put cowries, rupees, shillings and mobile money on a timeline."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY.M_MT_TAX_NONE",
+     "listen_for": [
+      "They did not"
+     ],
+     "ask": "How did colonial taxes push people to earn money?",
+     "repair": "Explain the hut tax and why it needed cash."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was used as money before coins in many parts of Africa?",
+     "answer": "cowrie shells, beads, salt, iron hoes or cattle",
+     "shows": "early money"
+    },
+    {
+     "question": "Give one bad effect of the introduction of money.",
+     "answer": "debt or a gap between rich and poor",
+     "shows": "effects"
+    }
+   ]
+  }
+ ]
+}

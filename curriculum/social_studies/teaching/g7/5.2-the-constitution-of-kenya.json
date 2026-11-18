@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY",
+ "title": "The Constitution of Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: promulgated 27 August 2010; supreme law; Article 10 national values. Name no office holder or party.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE",
+   "key_step": "The child tells why the Constitution matters and when it was promulgated.",
+   "floor": {
+    "prerequisite": "Knows the key words of the preamble.",
+    "question": "What does \"sovereign\" mean?",
+    "answer": "having supreme power"
+   },
+   "representations": [
+    "the Constitution chapter list",
+    "a timeline",
+    "importance cards"
+   ],
+   "steps": [
+    "Say it is the supreme law.",
+    "Give the date.",
+    "Name what it sets out.",
+    "Say who must obey it."
+   ],
+   "contexts": [
+    "promulgation on 27 August 2010",
+    "the Bill of Rights",
+    "devolution to counties"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"supreme law\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"supreme\".",
+     "say": "Is anyone above the Constitution?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write what it sets out."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE.M_CK_AUTHORITY",
+     "listen_for": [
+      "The President's word"
+     ],
+     "ask": "Which is the supreme law of Kenya?",
+     "repair": "Ask who must obey the Constitution."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE.M_CK_DATE_MIX",
+     "listen_for": [
+      "12 December 1963"
+     ],
+     "ask": "When was the current Constitution promulgated?",
+     "repair": "Ask what happened on 12 December 1963."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE.M_CK_FIRST_CONSTITUTION",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Was the 2010 Constitution Kenya's first?",
+     "repair": "Put 1963 and 2010 on a timeline."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE.M_CK_RIGHTS_NONE",
+     "listen_for": [
+      "Nowhere"
+     ],
+     "ask": "Where are the rights of every Kenyan written?",
+     "repair": "Show the chapter list of the Constitution."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is the supreme law of Kenya?",
+     "answer": "the Constitution",
+     "shows": "supreme"
+    },
+    {
+     "question": "When was the current Constitution promulgated?",
+     "answer": "27 August 2010",
+     "shows": "date"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD",
+   "key_step": "The child chooses ways to uphold and protect the Constitution.",
+   "floor": {
+    "prerequisite": "Tells why the Constitution matters.",
+    "question": "What is the supreme law of Kenya?",
+    "answer": "the Constitution"
+   },
+   "representations": [
+    "action cards",
+    "a public meeting notice",
+    "a corruption reporting poster"
+   ],
+   "steps": [
+    "Read the action.",
+    "Ask: does it obey or break the Constitution?",
+    "Sort it.",
+    "Say who can do it."
+   ],
+   "contexts": [
+    "voting at 18",
+    "reporting corruption",
+    "attending a county budget meeting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"give a bribe to skip a queue\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Does this uphold the Constitution?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write two ways that do."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD.M_CK_BRIBE_OK",
+     "listen_for": [
+      "Voting"
+     ],
+     "ask": "Which action breaks the Constitution's values?",
+     "repair": "Ask what integrity means."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD.M_CK_ONLY_LEADERS",
+     "listen_for": [
+      "Only leaders"
+     ],
+     "ask": "Who must protect the Constitution?",
+     "repair": "Ask what a learner can do."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD.M_CK_COURT_IGNORE",
+     "listen_for": [
+      "No, ignore it"
+     ],
+     "ask": "Should a citizen obey a court order they disagree with?",
+     "repair": "Explain appeal as the lawful way to disagree."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD.M_CK_PARTICIPATION_NONE",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does attending a public meeting on the county budget uphold the Constitution?",
+     "repair": "Show the notice of a public participation forum."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways of upholding the Constitution.",
+     "answer": "any two of: learning it, obeying the law, voting, public participation, paying taxes, respecting rights, reporting corruption",
+     "shows": "ways"
+    },
+    {
+     "question": "Who must protect the Constitution?",
+     "answer": "every citizen",
+     "shows": "everyone"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES",
+   "key_step": "The child names the national values and applies them to everyday life.",
+   "floor": {
+    "prerequisite": "Chooses ways to uphold the Constitution.",
+    "question": "Give one way to uphold the Constitution.",
+    "answer": "any way such as obeying the law"
+   },
+   "representations": [
+    "Article 10 value cards",
+    "situation cards",
+    "a class charter"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Name the value it shows.",
+    "Say why it matters.",
+    "Say how the class can live it."
+   ],
+   "contexts": [
+    "a learner returning extra change",
+    "including a learner in a game",
+    "a fair class election"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A shopkeeper gives back extra change.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Which national value is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for integrity."
+    },
+    {
+     "beat": "write",
+     "do": "Add two more situations."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES.M_CK_VALUE_MIX",
+     "listen_for": [
+      "Wealth"
+     ],
+     "ask": "Which is a national value in the Constitution?",
+     "repair": "Ask for a value from the list in Article 10."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES.M_CK_PATRIOT_BLIND",
+     "listen_for": [
+      "Saying other countries are bad"
+     ],
+     "ask": "What is patriotism?",
+     "repair": "Ask how a good citizen can love Kenya and respect Uganda."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES.M_CK_VALUE_ACTION",
+     "listen_for": [
+      "Wealth"
+     ],
+     "ask": "Sharing a desk fairly with a learner with a disability shows which national value?",
+     "repair": "Act small situations and name the value."
+    },
+    {
+     "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES.M_CK_DEVOLUTION_NOT_VALUE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Is devolution of power a national value in Article 10?",
+     "repair": "Read Article 10 aloud."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two national values in the Constitution.",
+     "answer": "any two from Article 10 such as patriotism, unity, rule of law, integrity, equity, inclusiveness",
+     "shows": "values"
+    },
+    {
+     "question": "What is patriotism?",
+     "answer": "love and loyalty to your country",
+     "shows": "patriotism"
+    }
+   ]
+  }
+ ]
+}

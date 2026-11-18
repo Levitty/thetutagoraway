@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO",
+ "title": "Diversity and interpersonal relationships",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep examples kind and general; never single out a learner's difference. Practise assertive sentences (\"I feel... when... I need...\").",
+ "skills": [
+  {
+   "skill": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS",
+   "key_step": "The child names what makes people different and says differences enrich society.",
+   "floor": {
+    "prerequisite": "Names what promotes national unity.",
+    "question": "Give one thing that promotes national unity.",
+    "answer": "any such as Kiswahili or sports"
+   },
+   "representations": [
+    "a diversity web",
+    "factor cards",
+    "a class survey of languages and interests"
+   ],
+   "steps": [
+    "Name a difference.",
+    "Give an example.",
+    "Say how it enriches the group.",
+    "Say how to treat it fairly."
+   ],
+   "contexts": [
+    "a class with many languages",
+    "a learner with a hearing aid",
+    "different faiths at a school assembly"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a web with \"people differ by\" in the middle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty line.",
+     "say": "What else makes people different?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for age, religion or ability."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the web."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS.M_DV_ONLY_TRIBE",
+     "listen_for": [
+      "Only the ethnic group"
+     ],
+     "ask": "Which is a factor of human diversity?",
+     "repair": "Ask the child how two classmates from the same community may still differ."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS.M_DV_DIFFERENT_WORSE",
+     "listen_for": [
+      "Avoid them"
+     ],
+     "ask": "How should we treat people who are different from us?",
+     "repair": "Ask the child what a new classmate with a different language can teach the class."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS.M_DV_DISABILITY_NOT",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Is disability part of human diversity?",
+     "repair": "Add ability to the list of differences with examples."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS.M_DV_SAME_BETTER",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a class where everyone is the same better than a mixed one?",
+     "repair": "Do a task where each learner's skill is needed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give three factors of human diversity.",
+     "answer": "any three of: age, gender, ethnic group, religion, race, language, ability, family background, talents",
+     "shows": "factors"
+    },
+    {
+     "question": "How should we treat people who are different from us?",
+     "answer": "with respect, learning from them",
+     "shows": "respect"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS",
+   "key_step": "The child picks interpersonal skills for a situation and sorts personality attributes into desirable and undesirable.",
+   "floor": {
+    "prerequisite": "Names factors of diversity.",
+    "question": "Give one factor of diversity.",
+    "answer": "any factor such as language"
+   },
+   "representations": [
+    "skill and situation cards",
+    "a desirable and undesirable sort",
+    "assertive sentence frames"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Pick the skill: communication, negotiation, assertiveness or empathy.",
+    "Say what to do.",
+    "Sort attributes shown."
+   ],
+   "contexts": [
+    "a friend who is upset",
+    "a group deciding a game",
+    "someone taking your pen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A new learner sits alone, looking sad.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"sad\".",
+     "say": "Which skill helps here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for empathy."
+    },
+    {
+     "beat": "write",
+     "do": "Write what to do."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS.M_DV_ASSERT_RUDE",
+     "listen_for": [
+      "To be loud and rude"
+     ],
+     "ask": "What does it mean to be assertive?",
+     "repair": "Ask the child to refuse a bad request politely and firmly."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS.M_DV_EMPATHY_PITY",
+     "listen_for": [
+      "Feeling sorry from far away and doing nothing"
+     ],
+     "ask": "Which shows empathy?",
+     "repair": "Ask what Achieng does when a classmate is crying."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS.M_DV_PASSIVE_GOOD",
+     "listen_for": [
+      "Say nothing to be polite"
+     ],
+     "ask": "A friend keeps taking your pen without asking. What is the best response?",
+     "repair": "Practise an \"I need\" sentence in pairs."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS.M_DV_GOSSIP_HARMLESS",
+     "listen_for": [
+      "Desirable, it is fun"
+     ],
+     "ask": "Is gossiping about a classmate a desirable or undesirable attribute?",
+     "repair": "Ask how the classmate feels when they hear it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does it mean to be assertive?",
+     "answer": "to say what you need clearly and with respect",
+     "shows": "assertiveness"
+    },
+    {
+     "question": "Is jealousy a desirable or undesirable attribute?",
+     "answer": "undesirable",
+     "shows": "sort"
+    }
+   ]
+  }
+ ]
+}

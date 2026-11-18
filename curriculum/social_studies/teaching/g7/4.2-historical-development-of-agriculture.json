@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O",
+ "title": "Historical Development of Agriculture",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): early farming in the Nile Valley, the Ethiopian highlands (teff, coffee) and the West African savanna (sorghum, millet, yams); the shaduf lifted water.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE",
+   "key_step": "The child locates where early farming began in Africa and gives the factors that favoured it.",
+   "floor": {
+    "prerequisite": "Names climatic regions and vegetation.",
+    "question": "Which region is cool and wet?",
+    "answer": "the highlands"
+   },
+   "representations": [
+    "a map of Africa",
+    "crop and animal cards",
+    "factor cards"
+   ],
+   "steps": [
+    "Find the region.",
+    "Name its crops.",
+    "Name its animals.",
+    "Give the factor that helped."
+   ],
+   "contexts": [
+    "wheat by the Nile",
+    "teff in Ethiopia",
+    "sorghum in the Sahel"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Africa with three dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Ethiopian highlands.",
+     "say": "Which crop began here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for teff or coffee."
+    },
+    {
+     "beat": "write",
+     "do": "Label the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE.M_EA_EAST_ONLY",
+     "listen_for": [
+      "Nowhere else"
+     ],
+     "ask": "Where else did early farming begin in Africa?",
+     "repair": "Ask where teff and coffee come from."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE.M_EA_DRY_FARM",
+     "listen_for": [
+      "No water and poor soil"
+     ],
+     "ask": "What helped early farming begin in a place?",
+     "repair": "Ask what a plant needs to grow."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE.M_EA_CROP_MIX",
+     "listen_for": [
+      "The Nile Valley"
+     ],
+     "ask": "Where was teff first grown?",
+     "repair": "Match crop cards to a map."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE.M_EA_ANIMALS_WILD",
+     "listen_for": [
+      "Lions and zebras"
+     ],
+     "ask": "Which animals did early farmers in Africa rear?",
+     "repair": "Sort animals into domestic and wild."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two regions where early farming began in Africa.",
+     "answer": "any two of: the Nile Valley, the Ethiopian highlands, the West African savanna",
+     "shows": "regions"
+    },
+    {
+     "question": "Give one factor that favoured early farming.",
+     "answer": "any of: fertile soil, reliable water, suitable climate, wild plants to domesticate",
+     "shows": "factor"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE",
+   "key_step": "The child says how Nile farming worked and what it gave the world.",
+   "floor": {
+    "prerequisite": "Says where early farming began.",
+    "question": "Name one region where early farming began.",
+    "answer": "the Nile Valley"
+   },
+   "representations": [
+    "a shaduf model",
+    "a flood cycle diagram",
+    "a surplus-to-trades chain"
+   ],
+   "steps": [
+    "The flood leaves silt.",
+    "Irrigation carries water.",
+    "A surplus of food grows.",
+    "Some people do other work: writing, building, trade."
+   ],
+   "contexts": [
+    "the yearly Nile flood",
+    "canals and the shaduf",
+    "scribes recording harvests"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river overflowing onto fields."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the fields after the flood.",
+     "say": "What did the flood leave?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for silt."
+    },
+    {
+     "beat": "write",
+     "do": "Write the chain to surplus and trades."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE.M_EA_FLOOD_BAD",
+     "listen_for": [
+      "Only damage"
+     ],
+     "ask": "What did the yearly Nile flood leave?",
+     "repair": "Ask why Egyptian farmers waited for the flood each year."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE.M_EA_NO_SURPLUS",
+     "listen_for": [
+      "Everyone to farm"
+     ],
+     "ask": "What did a food surplus allow?",
+     "repair": "Ask who feeds the builder if he does not farm."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE.M_EA_SHADUF_PUMP",
+     "listen_for": [
+      "A motor pump"
+     ],
+     "ask": "What was the shaduf?",
+     "repair": "Draw or build a shaduf with a stick and a stone."
+    },
+    {
+     "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE.M_EA_WRITING_UNRELATED",
+     "listen_for": [
+      "It did not"
+     ],
+     "ask": "How did farming help writing begin in Egypt?",
+     "repair": "Ask how a ruler would know how much grain was stored."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the yearly Nile flood leave on the fields?",
+     "answer": "rich silt",
+     "shows": "flood"
+    },
+    {
+     "question": "What did a food surplus allow?",
+     "answer": "some people to become scribes, builders and traders",
+     "shows": "surplus"
+    }
+   ]
+  }
+ ]
+}

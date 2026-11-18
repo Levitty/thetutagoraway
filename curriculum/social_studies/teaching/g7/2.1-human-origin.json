@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G7.PEOPLE.HUMAN_ORIGIN",
+ "title": "Human Origin",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach with respect: every community's and faith's story is told as its people hold it. Avoid calling any story true or false; compare what they share.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL",
+   "key_step": "The child tells traditional stories of human origin, says they were told aloud, and treats each community's story with respect.",
+   "floor": {
+    "prerequisite": "Names methods of traditional education.",
+    "question": "Name one method of traditional education.",
+    "answer": "storytelling or another method"
+   },
+   "representations": [
+    "story cards by community",
+    "an elder's visit",
+    "a map of communities"
+   ],
+   "steps": [
+    "Name the community.",
+    "Tell its story briefly.",
+    "Say who told it and how.",
+    "Say how to treat it: with respect."
+   ],
+   "contexts": [
+    "Gikuyu and Mumbi at Mukuru wa Gathanga",
+    "Enkai sending cattle to the Maasai",
+    "stories told by grandparents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Agikuyu and Maasai."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Maasai.",
+     "say": "What do the Maasai say Enkai sent down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cattle."
+    },
+    {
+     "beat": "write",
+     "do": "Write one story detail for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL.M_HO_SAME_STORY",
+     "listen_for": [
+      "Yes, they all tell the same story"
+     ],
+     "ask": "Do all African communities tell the same story of how people began?",
+     "repair": "Ask the child to tell the story from their home community and compare it with a classmate."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL.M_HO_STORY_FALSE",
+     "listen_for": [
+      "As silly stories that are not true"
+     ],
+     "ask": "How should we treat the origin stories of other communities?",
+     "repair": "Ask how the child would feel if their own story were laughed at."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL.M_HO_WRITTEN_FIRST",
+     "listen_for": [
+      "In books"
+     ],
+     "ask": "How were traditional stories of origin first passed on?",
+     "repair": "Ask a grandparent to tell a story, then compare with the book."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL.M_HO_STORY_COMMUNITY_MIX",
+     "listen_for": [
+      "The Maasai"
+     ],
+     "ask": "Which community tells the story of Gikuyu and Mumbi?",
+     "repair": "Make story cards with the community on the back."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Do all African communities tell the same origin story?",
+     "answer": "No, each has its own",
+     "shows": "many stories"
+    },
+    {
+     "question": "How should we treat other communities' origin stories?",
+     "answer": "with respect",
+     "shows": "respect"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS",
+   "key_step": "The child tells the Christian and Islamic stories of human origin and what religious and traditional stories share.",
+   "floor": {
+    "prerequisite": "Tells traditional origin stories.",
+    "question": "Which community tells of Gikuyu and Mumbi?",
+    "answer": "the Agikuyu"
+   },
+   "representations": [
+    "a comparison table",
+    "story cards",
+    "a Venn diagram"
+   ],
+   "steps": [
+    "Tell the Christian story: God, Adam and Eve, Eden.",
+    "Tell the Islamic story: Allah, Adam and Hawa.",
+    "Compare with a traditional story.",
+    "Fill in what they share."
+   ],
+   "contexts": [
+    "Genesis in the Bible",
+    "the Qur'an's account of Adam",
+    "Mukuru wa Gathanga"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three overlapping circles."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle.",
+     "say": "What do all three stories have?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a creator and a first man and woman."
+    },
+    {
+     "beat": "write",
+     "do": "Write the shared aspects."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS.M_HO_ADAM_ONLY",
+     "listen_for": [
+      "Only Christianity"
+     ],
+     "ask": "Which religions tell a story about how people began?",
+     "repair": "Ask the child what Adam is called in the Bible and in the Qur'an."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS.M_HO_NO_COMMON",
+     "listen_for": [
+      "Nothing at all"
+     ],
+     "ask": "What do traditional and religious stories of human origin share?",
+     "repair": "Ask the child to list who made people, and who the first people were, in two stories."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS.M_HO_HAWA_EVE_DIFFERENT",
+     "listen_for": [
+      "They are not alike at all"
+     ],
+     "ask": "How are Eve in the Bible and Hawa in the Qur'an alike?",
+     "repair": "Put the two names side by side with their stories."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS.M_HO_PURPOSE_NONE",
+     "listen_for": [
+      "None"
+     ],
+     "ask": "What lesson about people do many origin stories share?",
+     "repair": "Ask what each creator asked the first people to do."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two faiths with a story of how people began.",
+     "answer": "Christianity and Islam",
+     "shows": "two faiths"
+    },
+    {
+     "question": "Give one aspect shared by religious and traditional stories.",
+     "answer": "any of: a creator, a first man and woman, a special place, a purpose for people",
+     "shows": "common aspect"
+    }
+   ]
+  }
+ ]
+}

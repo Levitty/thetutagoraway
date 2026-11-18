@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.SOCIAL.SELF_EXPLORATION",
+ "title": "Self-Exploration",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep this personal and safe: learners describe strengths in pairs, never compare or rank. A feelings chart helps learners name emotions before managing them.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES",
+   "key_step": "The child tells an ability, a talent, an interest and a skill apart and picks ways to grow them.",
+   "floor": {
+    "prerequisite": "Names values in a school situation.",
+    "question": "A learner hands in lost money. Which value is this?",
+    "answer": "honesty"
+   },
+   "representations": [
+    "a strengths card each learner fills in",
+    "four labelled boxes",
+    "stories of learners"
+   ],
+   "steps": [
+    "Read the example.",
+    "Ask: born with it, learnt, liked or able to do?",
+    "Name it: talent, skill, interest or ability.",
+    "Pick a way to grow it."
+   ],
+   "contexts": [
+    "a learner who loves football",
+    "a learner who learnt to sew",
+    "a quiet learner who listens well"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write talent, skill, interest, ability."
+    },
+    {
+     "beat": "point",
+     "do": "Point at skill.",
+     "say": "Typing learnt after practice goes where?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for skill."
+    },
+    {
+     "beat": "write",
+     "do": "Add one example of each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES.M_SE_TALENT_ONLY",
+     "listen_for": [
+      "Only winning a prize"
+     ],
+     "ask": "Which of these is an ability?",
+     "repair": "Ask the child to name three things a classmate does well that are not on stage."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES.M_SE_INTEREST_ABILITY",
+     "listen_for": [
+      "An ability"
+     ],
+     "ask": "Amina likes football but has not played much. What is football for her?",
+     "repair": "Ask: can you like something you cannot yet do well?"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES.M_SE_FIXED_ABILITY",
+     "listen_for": [
+      "No, you are born good or bad at it"
+     ],
+     "ask": "Wanjiku finds drawing hard. Can she get better at it?",
+     "repair": "Show early and later drawings by the same learner after practice."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES.M_SE_SKILL_TALENT",
+     "listen_for": [
+      "A talent"
+     ],
+     "ask": "Otieno learnt to type fast after months of practice. Is typing a talent or a skill for him?",
+     "repair": "Sort: born with it (talent), learnt by practice (skill)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Amina likes music but cannot yet play an instrument. What is music for her?",
+     "answer": "an interest",
+     "shows": "interest vs ability"
+    },
+    {
+     "question": "Give one way to grow an ability.",
+     "answer": "any of: practice, feedback, joining a club, a mentor",
+     "shows": "growth"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES",
+   "key_step": "The child chooses personal values that make a steady personality and keeps them under pressure.",
+   "floor": {
+    "prerequisite": "Tells abilities and interests.",
+    "question": "What is an interest?",
+    "answer": "what a person likes to do"
+   },
+   "representations": [
+    "value cards",
+    "peer-pressure stories",
+    "a role play of saying no"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Name the value at stake.",
+    "Say what a steady person does.",
+    "Practise the words to say."
+   ],
+   "contexts": [
+    "friends daring a learner to copy",
+    "finding money in the corridor",
+    "keeping a promise to help at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Friends dare Kevin to skip class.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dare.",
+     "say": "Which value helps Kevin say no?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for responsibility."
+    },
+    {
+     "beat": "write",
+     "do": "Write the words Kevin could use."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES.M_SE_VALUES_THINGS",
+     "listen_for": [
+      "A new phone"
+     ],
+     "ask": "Which is a personal value?",
+     "repair": "Ask the child what a person does when they find a lost wallet."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES.M_SE_VALUES_PEER",
+     "listen_for": [
+      "Copy to please them"
+     ],
+     "ask": "Friends dare Kevin to copy in a test. What does a steady person do?",
+     "repair": "Ask what happens to trust if Kevin copies once."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES.M_SE_VALUE_RULE",
+     "listen_for": [
+      "Yes, it is a rule"
+     ],
+     "ask": "Is honesty only a school rule?",
+     "repair": "Ask whether you would tell the truth at home where the school rules do not apply."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES.M_SE_STEADY_STUBBORN",
+     "listen_for": [
+      "Never change his mind"
+     ],
+     "ask": "Juma learns he was wrong about a friend. What does a steady person do?",
+     "repair": "Compare: changing values to please friends, and changing a mistaken idea."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a personal value: honesty or a bicycle?",
+     "answer": "honesty",
+     "shows": "value vs possession"
+    },
+    {
+     "question": "Friends pressure you to do wrong. What does a steady person do?",
+     "answer": "says no and keeps their values",
+     "shows": "steady personality"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS",
+   "key_step": "The child names feelings and picks healthy ways to manage them over harmful ones.",
+   "floor": {
+    "prerequisite": "Labels emotions in self and others.",
+    "question": "A learner is crying after losing a book. What feeling is this?",
+    "answer": "sadness"
+   },
+   "representations": [
+    "a feelings chart",
+    "healthy and harmful cards",
+    "a calm-down corner"
+   ],
+   "steps": [
+    "Name the feeling.",
+    "Pause and breathe.",
+    "Pick a healthy way.",
+    "Say what to do next."
+   ],
+   "contexts": [
+    "anger after a broken pencil",
+    "fear before an exam",
+    "sadness after a loss"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Kamau is angry.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"angry\".",
+     "say": "What can Kamau do first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"breathe slowly\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more healthy steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS.M_SE_ANGER_BAD",
+     "listen_for": [
+      "Never feel it at all"
+     ],
+     "ask": "What is the best thing to do with anger?",
+     "repair": "Ask what Wanjiru does when she feels angry at a friend."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS.M_SE_REVENGE",
+     "listen_for": [
+      "Break his friend's pencil too"
+     ],
+     "ask": "Kamau is angry because a friend broke his pencil. What should he do?",
+     "repair": "Ask what happens to the friendship after the pencil is broken."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS.M_SE_HIDE_FOREVER",
+     "listen_for": [
+      "Hide it and tell nobody"
+     ],
+     "ask": "Achieng feels sad for many days. What is a healthy step?",
+     "repair": "Discuss who learners can talk to at school."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS.M_SE_FEAR_ALWAYS_BAD",
+     "listen_for": [
+      "It never helps"
+     ],
+     "ask": "How can fear help a person?",
+     "repair": "Ask what fear makes you do when a dog growls."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give a healthy way to manage anger.",
+     "answer": "any of: breathe slowly, pause before speaking, talk to a trusted adult, exercise, write it down",
+     "shows": "healthy way"
+    },
+    {
+     "question": "Is hitting back a healthy way to manage anger?",
+     "answer": "No",
+     "shows": "rejects harm"
+    }
+   ]
+  }
+ ]
+}
