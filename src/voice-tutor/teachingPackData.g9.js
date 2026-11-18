@@ -13488,6 +13488,830 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
   "sub_strand_name": "Coordinates and Graphs",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS": {
+  "skill": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS",
+  "key_step": "The child draws a north line first and turns clockwise from it, writing three figures.",
+  "floor": {
+   "prerequisite": "Measures an angle with a protractor.",
+   "question": "An angle of 70 degrees",
+   "answer": "70 degrees"
+  },
+  "representations": [
+   "a compass rose",
+   "a north line with a clockwise arrow",
+   "three-figure bearings"
+  ],
+  "steps": [
+   "Draw the north line.",
+   "Turn clockwise.",
+   "Write three figures.",
+   "After a turn: add or subtract; take away 360 past north."
+  ],
+  "contexts": [
+   "a boat on Lake Naivasha",
+   "a scout hike on Ngong Hills",
+   "a plane leaving JKIA"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a compass rose with N, E, S, W."
+   },
+   {
+    "beat": "point",
+    "do": "Point from N clockwise to E.",
+    "say": "How many degrees?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 90."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write east = 090 degrees."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS.M_ANTICLOCKWISE_TURN",
+    "listen_for": [
+     "020"
+    ],
+    "ask": "Which way does a bearing turn?",
+    "repair": "Clockwise: add.",
+    "error": "Measures or turns anticlockwise.",
+    "example": {
+     "question": "Bearing 070 degrees, turn clockwise 50 degrees. New bearing?",
+     "wrong_answer": "020",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS.M_TURN_AS_BEARING",
+    "listen_for": [
+     "050"
+    ],
+    "ask": "Where did it start?",
+    "repair": "At 070.",
+    "error": "Gives the size of the turn as the new bearing.",
+    "example": {
+     "question": "Bearing 070 degrees, turn 50 degrees clockwise. New bearing?",
+     "wrong_answer": "050",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS.M_OPPOSITE_DIRECTION",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "Which way is it heading now?",
+    "repair": "120.",
+    "error": "Gives the back bearing instead of the new heading.",
+    "example": {
+     "question": "Heading 120 degrees now. Bearing?",
+     "wrong_answer": "300",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS.M_NOT_THREE_FIGURES",
+    "listen_for": [
+     "90"
+    ],
+    "ask": "How many figures in a bearing?",
+    "repair": "Three: 090.",
+    "error": "Writes a bearing without three figures.",
+    "example": {
+     "question": "Bearing of east?",
+     "wrong_answer": "90",
+     "correct_answer": "090"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS.M_COMPASS_FROM_EAST",
+    "listen_for": [
+     "130"
+    ],
+    "ask": "S40W starts from which line?",
+    "repair": "South: 220.",
+    "error": "Measures a compass bearing from east or west instead of north or south.",
+    "example": {
+     "question": "S40W as a true bearing?",
+     "wrong_answer": "130",
+     "correct_answer": "220"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS.M_OVER_360",
+    "listen_for": [
+     "390"
+    ],
+    "ask": "Can a bearing be over 360?",
+    "repair": "No: 030.",
+    "error": "Leaves a bearing over 360 degrees.",
+    "example": {
+     "question": "Bearing 300 degrees, turn 90 degrees clockwise.",
+     "wrong_answer": "390",
+     "correct_answer": "030"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write N60E as a true bearing.",
+    "answer": "060 degrees",
+    "shows": "compass to true"
+   },
+   {
+    "question": "A boat on 300 degrees turns 80 degrees clockwise. New bearing?",
+    "answer": "020 degrees",
+    "shows": "past north"
+   }
+  ],
+  "name": "Identify compass and true bearings",
+  "sub_strand": "MATH.G9.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER": {
+  "skill": "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER",
+  "key_step": "The child stands at the point after \"from\", draws its north line, and for a back bearing adds or subtracts 180.",
+  "floor": {
+   "prerequisite": "Uses a true bearing.",
+   "question": "Bearing of due west",
+   "answer": "270 degrees"
+  },
+  "representations": [
+   "two points with a north line at each",
+   "parallel north lines",
+   "the back-bearing rule"
+  ],
+  "steps": [
+   "Find the point after \"from\".",
+   "Draw a north line there.",
+   "Measure clockwise to the other point.",
+   "Back bearing: add 180 if under 180, else take 180 away."
+  ],
+  "contexts": [
+   "a church and a school in a village",
+   "two boreholes",
+   "a market and a chief's camp"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a school and a church with a north line at each."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the church's north line.",
+    "say": "The school is from the church on which side?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child guesses the back bearing."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 070 + 180 = 250."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER.M_BACK_BEARING_360_MINUS",
+    "listen_for": [
+     "290"
+    ],
+    "ask": "Is the back bearing 360 minus?",
+    "repair": "No: plus or minus 180.",
+    "error": "Takes the bearing from 360 for the back bearing.",
+    "example": {
+     "question": "Church from school 070 degrees. School from church?",
+     "wrong_answer": "290",
+     "correct_answer": "250"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER.M_BEARING_DIRECTION_REVERSED",
+    "listen_for": [
+     "the other way"
+    ],
+    "ask": "Where do you stand?",
+    "repair": "At the point after \"from\".",
+    "error": "Gives the bearing of A from B when B from A is asked.",
+    "example": {
+     "question": "Bearing of the market from the church?",
+     "wrong_answer": "church from market",
+     "correct_answer": "market from church"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER.M_SOUTH_AS_NORTH",
+    "listen_for": [
+     "000"
+    ],
+    "ask": "Is south the same as north?",
+    "repair": "180.",
+    "error": "Gives 000 degrees for due south.",
+    "example": {
+     "question": "Bearing of due south?",
+     "wrong_answer": "000",
+     "correct_answer": "180"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER.M_EAST_WEST_BEARINGS_SWAPPED",
+    "listen_for": [
+     "270 for east"
+    ],
+    "ask": "Clockwise from north, a quarter turn is?",
+    "repair": "East: 090.",
+    "error": "Gives 270 degrees for due east or 090 degrees for due west.",
+    "example": {
+     "question": "Bearing of due east?",
+     "wrong_answer": "270",
+     "correct_answer": "090"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER.M_BACK_BEARING_SAME",
+    "listen_for": [
+     "040 both ways"
+    ],
+    "ask": "Do you face the same way going back?",
+    "repair": "No: 220.",
+    "error": "Gives the same bearing back.",
+    "example": {
+     "question": "A from B is 040. B from A?",
+     "wrong_answer": "040",
+     "correct_answer": "220"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "B from A is 300 degrees. A from B?",
+    "answer": "120 degrees",
+    "shows": "back bearing"
+   },
+   {
+    "question": "B is due south of A. Bearing of B from A?",
+    "answer": "180 degrees",
+    "shows": "south"
+   }
+  ],
+  "name": "Determine the bearing of one point from another, and back bearings",
+  "sub_strand": "MATH.G9.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE": {
+  "skill": "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE",
+  "key_step": "The child draws each leg from its own north line, to scale, then measures or calculates start to end.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "6 and 8",
+   "answer": "10"
+  },
+  "representations": [
+   "a scale drawing",
+   "north lines at each turn",
+   "a right-angled triangle"
+  ],
+  "steps": [
+   "Choose a scale.",
+   "Draw leg 1: north line, bearing, length.",
+   "Draw leg 2 from the end of leg 1.",
+   "Join start to end and measure or use Pythagoras."
+  ],
+  "contexts": [
+   "a boat on Lake Victoria",
+   "a hike to a village",
+   "a drone survey"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 6 km east then 8 km north."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the start and the end.",
+    "say": "Is the distance from start the path walked?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write square root of (36 + 64) = 10 km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE.M_TOTAL_PATH_DISTANCE",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Straight line or path?",
+    "repair": "Straight: 10.",
+    "error": "Adds the legs for the distance from the start.",
+    "example": {
+     "question": "6 km east then 8 km north. Distance from start?",
+     "wrong_answer": "14",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE.M_ROOT_NOT_TAKEN",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Did you take the square root?",
+    "repair": "10.",
+    "error": "Gives the sum of the squares as the distance.",
+    "example": {
+     "question": "6 km and 8 km at right angles. Distance?",
+     "wrong_answer": "100",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE.M_LEGS_SUBTRACTED_BEARING",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Did it walk back?",
+    "repair": "No: right angles.",
+    "error": "Subtracts the legs.",
+    "example": {
+     "question": "6 km east then 8 km north. Distance?",
+     "wrong_answer": "2",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE.M_DIRECTION_FROM_EAST",
+    "listen_for": [
+     "north-east for 135"
+    ],
+    "ask": "Bearings start from which line?",
+    "repair": "North.",
+    "error": "Reads a bearing as measured from east.",
+    "example": {
+     "question": "Walk on bearing 135 degrees. Direction?",
+     "wrong_answer": "north-east",
+     "correct_answer": "south-east"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE.M_DIRECTION_ANTICLOCKWISE",
+    "listen_for": [
+     "north-west for 045"
+    ],
+    "ask": "Clockwise or anticlockwise?",
+    "repair": "Clockwise: north-east.",
+    "error": "Reads a bearing anticlockwise from north.",
+    "example": {
+     "question": "Walk on bearing 045 degrees. Direction?",
+     "wrong_answer": "north-west",
+     "correct_answer": "north-east"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A boat goes 5 km on 090 degrees then 12 km on 000 degrees. Distance from start?",
+    "answer": "13 km",
+    "shows": "Pythagoras"
+   },
+   {
+    "question": "Which direction is a bearing of 315 degrees?",
+    "answer": "north-west",
+    "shows": "reading a bearing"
+   }
+  ],
+  "name": "Locate a point using bearing and distance",
+  "sub_strand": "MATH.G9.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION": {
+  "skill": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION",
+  "key_step": "The child draws the horizontal from the eye, marks the angle up to the top, and adds the eye height at the end.",
+  "floor": {
+   "prerequisite": "Makes a scale drawing.",
+   "question": "1 cm = 5 m; 20 m",
+   "answer": "4 cm"
+  },
+  "representations": [
+   "a sketch with the eye line",
+   "a scale drawing of the triangle",
+   "a clinometer"
+  ],
+  "steps": [
+   "Draw the horizontal from the eye.",
+   "Mark the angle up to the top.",
+   "Find the height above the eye (scale drawing, or equal sides at 45 degrees).",
+   "Add the eye height."
+  ],
+  "contexts": [
+   "a Safaricom mast near school",
+   "a flag pole on the parade ground",
+   "a tree in the compound"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a learner 20 m from a mast with a horizontal from the eye at 1.5 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 45 degree angle.",
+    "say": "At 45 degrees, how high above the eye is the top?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 20 m."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 20 + 1.5 = 21.5 m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION.M_EYE_HEIGHT_ONLY",
+    "listen_for": [
+     "1.5"
+    ],
+    "ask": "Is that the mast?",
+    "repair": "The eye: the height above it is 20.",
+    "error": "Gives the eye height as the height above the eye.",
+    "example": {
+     "question": "At 45 degrees, 20 m away, eye 1.5 m up. Height above the eye?",
+     "wrong_answer": "1.5",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION.M_EYE_HEIGHT_LEFT_OUT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Is the eye on the ground?",
+    "repair": "No: add 1.5.",
+    "error": "Forgets to add the eye height.",
+    "example": {
+     "question": "At 45 degrees, 20 m away, eye 1.5 m up. Mast?",
+     "wrong_answer": "20",
+     "correct_answer": "21.5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION.M_EYE_HEIGHT_SUBTRACTED",
+    "listen_for": [
+     "18.5"
+    ],
+    "ask": "Is the eye above or below the ground?",
+    "repair": "Above: add.",
+    "error": "Takes the eye height away instead of adding it.",
+    "example": {
+     "question": "20 m above the eye, eye 1.5 m up. Mast?",
+     "wrong_answer": "18.5",
+     "correct_answer": "21.5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION.M_ELEVATION_FROM_VERTICAL",
+    "listen_for": [
+     "from the upright"
+    ],
+    "ask": "Where does the angle start?",
+    "repair": "The horizontal.",
+    "error": "Measures the angle of elevation from the vertical.",
+    "example": {
+     "question": "Where is the angle of elevation measured from?",
+     "wrong_answer": "the upright line",
+     "correct_answer": "the horizontal"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION.M_SCALE_NOT_APPLIED",
+    "listen_for": [
+     "4.3"
+    ],
+    "ask": "Is that cm on paper?",
+    "repair": "Times 5.",
+    "error": "Reads a length from the scale drawing without using the scale.",
+    "example": {
+     "question": "Drawing: 1 cm = 5 m; the mast is 4.3 cm. Height?",
+     "wrong_answer": "4.3",
+     "correct_answer": "21.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "At 45 degrees elevation, 30 m from a tree, eye 1.6 m up. Height of the tree?",
+    "answer": "31.6 m",
+    "shows": "equal sides plus eye height"
+   },
+   {
+    "question": "Is the angle of elevation measured from the horizontal or the vertical?",
+    "answer": "the horizontal",
+    "shows": "identifying"
+   }
+  ],
+  "name": "Identify and determine angles of elevation",
+  "sub_strand": "MATH.G9.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION": {
+  "skill": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION",
+  "key_step": "The child draws the horizontal at the top, marks the angle down, and uses the parallel horizontals to see the equal angle of elevation at the bottom.",
+  "floor": {
+   "prerequisite": "Knows alternate angles are equal.",
+   "question": "Two parallel lines cut by a transversal",
+   "answer": "alternate angles equal"
+  },
+  "representations": [
+   "two horizontal lines",
+   "a tower with lines of sight",
+   "a scale drawing"
+  ],
+  "steps": [
+   "Draw the horizontal at the observer.",
+   "Mark the angle down to the object.",
+   "The angle of elevation from the object is equal.",
+   "Find distances by scale drawing (or equal sides at 45 degrees)."
+  ],
+  "contexts": [
+   "a watch tower on Lake Victoria",
+   "a cliff at Hell's Gate",
+   "a balcony looking at a car"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tower, a horizontal at its top, and a horizontal at the ground."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the angle of depression.",
+    "say": "Which angle at the canoe matches it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to point at the angle of elevation."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write they are alternate angles: equal."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_ELEV_DEP_COMPLEMENTARY",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Are the two horizontals parallel?",
+    "repair": "Yes: the angles are equal.",
+    "error": "Thinks the angles of elevation and depression add to 90 degrees.",
+    "example": {
+     "question": "Depression 30 degrees from the hill. Elevation from below?",
+     "wrong_answer": "60",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_DEPRESSION_FROM_VERTICAL",
+    "listen_for": [
+     "from the cliff"
+    ],
+    "ask": "Where is the angle measured from?",
+    "repair": "The horizontal.",
+    "error": "Measures the angle of depression from the vertical.",
+    "example": {
+     "question": "Where is the angle of depression measured from?",
+     "wrong_answer": "the cliff face",
+     "correct_answer": "the horizontal at the eye"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_UPRIGHT_REASON",
+    "listen_for": [
+     "the hill is upright"
+    ],
+    "ask": "What makes the angles equal?",
+    "repair": "Parallel horizontals.",
+    "error": "Gives the upright tower or cliff as the reason the angles are equal.",
+    "example": {
+     "question": "Why are the angles equal?",
+     "wrong_answer": "the hill is upright",
+     "correct_answer": "the horizontals are parallel"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_LOWER_SMALLER_ANGLE",
+    "listen_for": [
+     "smaller"
+    ],
+    "ask": "Does being lower change the angle?",
+    "repair": "No: equal.",
+    "error": "Thinks the angle looking up is smaller because the observer is lower.",
+    "example": {
+     "question": "Depression 30 degrees. Elevation from the canoe?",
+     "wrong_answer": "smaller than 30",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_NEAR_FOR_FAR",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Which canoe was asked?",
+    "repair": "The farther: add.",
+    "error": "Gives the nearer object's distance for the farther one.",
+    "example": {
+     "question": "Tower 20 m, nearer canoe at 45 degrees, farther 15 m beyond. Farther distance?",
+     "wrong_answer": "20",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_GAP_ONLY",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "From the tower?",
+    "repair": "Add the 20.",
+    "error": "Gives only the extra distance.",
+    "example": {
+     "question": "Nearer 20 m, farther 15 m beyond. Farther distance?",
+     "wrong_answer": "15",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION.M_GAP_SUBTRACTED",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "Is beyond nearer or farther?",
+    "repair": "Farther: add.",
+    "error": "Takes the gap away.",
+    "example": {
+     "question": "Nearer 20 m, farther 15 m beyond. Farther distance?",
+     "wrong_answer": "5",
+     "correct_answer": "35"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "From a 25 m tower a boat is at 45 degrees depression. How far is it from the foot?",
+    "answer": "25 m",
+    "shows": "equal sides"
+   },
+   {
+    "question": "Angle of depression 38 degrees. Angle of elevation from the boat to the top?",
+    "answer": "38 degrees",
+    "shows": "equal angles"
+   }
+  ],
+  "name": "Identify and determine angles of depression",
+  "sub_strand": "MATH.G9.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING": {
+  "skill": "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING",
+  "key_step": "The child draws the baseline to scale, marks each distance along it, then draws each offset across at that point on its side.",
+  "floor": {
+   "prerequisite": "Finds the area of a trapezium.",
+   "question": "Parallel sides 10 and 20, height 30",
+   "answer": "450"
+  },
+  "representations": [
+   "a field book page",
+   "a baseline with offsets",
+   "triangles and trapeziums shaded"
+  ],
+  "steps": [
+   "Draw the baseline to scale.",
+   "Mark each distance along it.",
+   "Draw each offset left or right.",
+   "Join the ends and find the area in parts."
+  ],
+  "contexts": [
+   "a farm in Kitale",
+   "a school field",
+   "a plot sold at a land office"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a field book column: 0, 40 (15 R), 70 (10 L), 100."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 40 (15 R).",
+    "say": "Where do we go first: along or across?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for along 40 m."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child draws the offset 15 m to the right."
+   },
+   {
+    "beat": "reveal",
+    "do": "Show the plot outline."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING.M_OFFSET_SIDE_SWAPPED",
+    "listen_for": [
+     "left"
+    ],
+    "ask": "Which way is right when you walk up the line?",
+    "repair": "Your right.",
+    "error": "Draws an offset on the wrong side of the baseline.",
+    "example": {
+     "question": "Field book: 40 m along, 15 m to the right. Where?",
+     "wrong_answer": "left of the line",
+     "correct_answer": "right of the line"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING.M_OFFSET_FROM_START",
+    "listen_for": [
+     "from the start"
+    ],
+    "ask": "Along first or across first?",
+    "repair": "Along to 40 m.",
+    "error": "Measures offsets from the start of the baseline instead of along it.",
+    "example": {
+     "question": "Offset at 40 m along: where does it start?",
+     "wrong_answer": "at the start point",
+     "correct_answer": "at 40 m along the baseline"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING.M_TRAPEZIUM_AS_RECTANGLE",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "Are the two offsets equal?",
+    "repair": "No: half the sum.",
+    "error": "Uses one offset times the gap instead of the trapezium area.",
+    "example": {
+     "question": "Offsets 10 m and 20 m, 30 m apart. Area between?",
+     "wrong_answer": "600",
+     "correct_answer": "450"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING.M_PARTS_LEFT_OUT_SURVEY",
+    "listen_for": [
+     "trapezium only"
+    ],
+    "ask": "What about the end triangles?",
+    "repair": "Add them.",
+    "error": "Leaves out a triangle at the end of the plot.",
+    "example": {
+     "question": "Plot split into a triangle, a trapezium and a triangle. Area?",
+     "wrong_answer": "the trapezium only",
+     "correct_answer": "all three parts"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Offsets of 12 m and 18 m are 20 m apart along the baseline. Area between them?",
+    "answer": "300 square m",
+    "shows": "trapezium"
+   },
+   {
+    "question": "A triangle at the end: offset 12 m, 10 m from the end of the line. Area?",
+    "answer": "60 square m",
+    "shows": "triangle"
+   }
+  ],
+  "name": "Apply scale drawing in simple surveying with a baseline and offsets",
+  "sub_strand": "MATH.G9.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

@@ -180,7 +180,7 @@ export const FAMILIES = [
     check: ({ x0, rA, rB, fA, fB }, a) => fA + rA * a === fB + rB * a }),
 
   // =========================== SCALE DRAWING: BEARINGS ===========================
-  fam({ id: 'g9.bearings.turn-clockwise', skill: 'G9_BEARINGS', outcome: 'G9.SCALE.a', rung: 2, form: 'word',
+  fam({ id: 'g9.bearings.turn-clockwise', skill: 'G9_BEARINGS', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.a', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS', rung: 2, form: 'word',
     draw: () => {
       const b = randInt(2, 33) * 10, t = randInt(6, 20) * 10, ans = (b + t) % 360;
       if (ans < 100) return null;
@@ -191,13 +191,13 @@ export const FAMILIES = [
     make: ({ b, t, ans, w, what }) => ({
       question: `${what} sets off on a bearing of ${pad3(b)}°. It turns clockwise through ${t}° and goes on. What is its new bearing?`,
       answer: ans,
-      wrong: [[w[0], 'Clockwise means the bearing gets bigger. This turned the other way.'], [w[1], 'That is the size of the turn. The new bearing is measured from north again, so start from the old bearing.'], [w[2], 'That is the opposite direction to the one it is now heading in.']],
+      wrong: [[w[0], 'Clockwise means the bearing gets bigger. This turned the other way.', 'M_ANTICLOCKWISE_TURN'], [w[1], 'That is the size of the turn. The new bearing is measured from north again, so start from the old bearing.', 'M_TURN_AS_BEARING'], [w[2], 'That is the opposite direction to the one it is now heading in.', 'M_OPPOSITE_DIRECTION']],
       hints: ['Clockwise turns add to a bearing.', 'A bearing goes once round from north, up to 360°.'],
       steps: [`New bearing = ${b} + ${t} = ${b + t}.`, b + t >= 360 ? `${b + t} is more than 360, so take away a full turn: ${b + t} − 360 = ${ans}.` : `That is less than 360, so the bearing is ${ans}°.`],
     }),
     check: ({ b, t }, a) => (a - b - t) % 360 === 0 }),
 
-  fam({ id: 'g9.bearings.back-bearing-spot', skill: 'G9_BEARINGS', outcome: 'G9.SCALE.b', rung: 2, form: 'spot',
+  fam({ id: 'g9.bearings.back-bearing-spot', skill: 'G9_BEARINGS', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.b', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER', rung: 2, form: 'spot',
     draw: () => {
       const th = pick([20, 40, 50, 70, 110, 130, 150, 200, 220, 250, 290, 310, 340]);
       return { th, kind: pick(['rule', 'sum']), slip: pick([10, -10, 20]) };
@@ -216,26 +216,27 @@ export const FAMILIES = [
       ];
       return { question: `Zawadi works out the bearing of a school from a church. The bearing of the church from the school is ${pad3(th)}°. Which step has the mistake?`,
         working,
+        mis: kind === 'rule' ? 'M_BACK_BEARING_360_MINUS' : 'SLIP',
         fix: kind === 'rule' ? 'A back bearing is found by adding or taking away 180°, not by taking the bearing from 360°.' : `The sum was worked out wrongly. ${ruleText} does not give ${sumVal}.`,
         steps: [`${th} is ${th < 180 ? 'less' : 'more'} than 180, so ${th < 180 ? 'add' : 'subtract'} 180: the back bearing is ${pad3(back)}°.`, 'Always give a bearing as three figures.'] };
     } }),
 
-  fam({ id: 'g9.bearings.isosceles-legs', skill: 'G9_BEARINGS', outcome: 'G9.SCALE.b', rung: 3, form: 'steps',
+  fam({ id: 'g9.bearings.isosceles-legs', skill: 'G9_BEARINGS', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.b', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER', rung: 3, form: 'steps',
     draw: () => ({ east: Math.random() < 0.5, d: pick([3, 4, 5, 6, 8]), a: pick(['the school', 'the clinic', 'the chief\'s camp']) }),
     make: ({ east, d, a }) => {
       const dir = east ? 'east' : 'west', bB = east ? 90 : 270, bC = east ? 225 : 135, bBack = east ? 45 : 315;
       return { question: `A church is ${d} km due ${dir} of ${a}. A market is ${d} km due south of the same place. Give each bearing in degrees.`,
         parts: [
-          { prompt: `Find the bearing of the church from ${a}.`, answer: bB, unit: '°', hint: `Due ${dir} is a quarter turn clockwise from north, or three quarters.`, wrong: [[bB === 90 ? 270 : 90, 'Bearings turn clockwise from north. Check which way you turned.']] },
-          { prompt: `Find the bearing of the market from ${a}.`, answer: 180, unit: '°', hint: 'Due south is half a turn from north.', wrong: [[0, 'That is due north. The market is due south.']] },
-          { prompt: 'The two distances are equal, so the triangle is right-angled and isosceles. Find the bearing of the market from the church.', answer: bC, unit: '°', hint: 'Each base angle is 45°. Which way from the church is the market?', wrong: [[bBack, 'That is the bearing of the church from the market, the other way round.']] },
-          { prompt: 'Now find the bearing of the church from the market.', answer: bBack, unit: '°', hint: 'A back bearing differs from the first bearing by 180°.', wrong: [[bC, 'That is the bearing of the market from the church. This part asks the other way round.']] },
+          { prompt: `Find the bearing of the church from ${a}.`, answer: bB, unit: '°', hint: `Due ${dir} is a quarter turn clockwise from north, or three quarters.`, wrong: [[bB === 90 ? 270 : 90, 'Bearings turn clockwise from north. Check which way you turned.', 'M_EAST_WEST_BEARINGS_SWAPPED']] },
+          { prompt: `Find the bearing of the market from ${a}.`, answer: 180, unit: '°', hint: 'Due south is half a turn from north.', wrong: [[0, 'That is due north. The market is due south.', 'M_SOUTH_AS_NORTH']] },
+          { prompt: 'The two distances are equal, so the triangle is right-angled and isosceles. Find the bearing of the market from the church.', answer: bC, unit: '°', hint: 'Each base angle is 45°. Which way from the church is the market?', wrong: [[bBack, 'That is the bearing of the church from the market, the other way round.', 'M_BEARING_DIRECTION_REVERSED']] },
+          { prompt: 'Now find the bearing of the church from the market.', answer: bBack, unit: '°', hint: 'A back bearing differs from the first bearing by 180°.', wrong: [[bC, 'That is the bearing of the market from the church. This part asks the other way round.', 'M_BEARING_DIRECTION_REVERSED']] },
         ],
         steps: [`Due ${dir} is ${bB}°, and due south is 180°.`, `The base angles are each 45°, so the market is south-${east ? 'west' : 'east'} of the church: ${bC}°.`, `The back bearing differs by 180°: ${bBack}°.`] };
     },
     check: ({ east }, v) => v[1] === 180 && v[0] === (east ? 90 : 270) && (v[2] + 180) % 360 === v[3] && Math.abs(v[2] - v[1]) === 45 }),
 
-  fam({ id: 'g9.bearings.distance-from-start', skill: 'G9_BEARINGS', outcome: 'G9.SCALE.c', rung: 2, form: 'word',
+  fam({ id: 'g9.bearings.distance-from-start', skill: 'G9_BEARINGS', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.c', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE', rung: 2, form: 'word',
     draw: () => {
       const [a, b, h] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17], [12, 16, 20]]);
       const [b1, b2] = pick([[90, 180], [180, 270], [270, 0], [0, 90]]);
@@ -245,13 +246,13 @@ export const FAMILIES = [
     make: ({ a, b, h, b1, b2, what }) => ({
       question: `${what} goes ${a} km on a bearing of ${pad3(b1)}°. Then it goes ${b} km on a bearing of ${pad3(b2)}°. How far is it from where it started, in km?`,
       answer: h,
-      wrong: [[a + b, 'That is the total distance travelled. The question asks how far it is in a straight line from the start.'], [h * h, 'That is the sum of the squares. Take the square root to get the length.'], [b - a, 'The two legs are at right angles. Do not subtract them: use the right-angled triangle.']],
+      wrong: [[a + b, 'That is the total distance travelled. The question asks how far it is in a straight line from the start.', 'M_TOTAL_PATH_DISTANCE'], [h * h, 'That is the sum of the squares. Take the square root to get the length.', 'M_ROOT_NOT_TAKEN'], [b - a, 'The two legs are at right angles. Do not subtract them: use the right-angled triangle.', 'M_LEGS_SUBTRACTED_BEARING']],
       hints: ['The two bearings differ by 90°, so the path and the straight line make a right-angled triangle.', 'The straight line back is the longest side of that triangle.'],
       steps: [`The bearings ${pad3(b1)}° and ${pad3(b2)}° are at right angles.`, `Distance² = ${a}² + ${b}² = ${a * a + b * b}.`, `Distance = √${a * a + b * b} = ${h} km.`],
     }),
     check: ({ a, b }, ans) => ans * ans === a * a + b * b }),
 
-  fam({ id: 'g9.bearings.which-direction', skill: 'G9_BEARINGS', outcome: 'G9.SCALE.c', rung: 1, form: 'why',
+  fam({ id: 'g9.bearings.which-direction', skill: 'G9_BEARINGS', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.c', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE', misMapped: false, reveals: ['M_DIRECTION_FROM_EAST', 'M_DIRECTION_ANTICLOCKWISE'], rung: 1, form: 'why',
     draw: () => ({ b: pick([45, 135, 225, 315]), d: pick([3, 5, 8, 12]), k: randInt(0, 3) }),
     make: ({ b, d, k }) => {
       const NAME = { 45: 'north-east', 135: 'south-east', 225: 'south-west', 315: 'north-west' };
@@ -263,27 +264,27 @@ export const FAMILIES = [
     } }),
 
   // =========================== ANGLES OF ELEVATION AND DEPRESSION ===========================
-  fam({ id: 'g9.elevation.eye-height-45', skill: 'G9_ELEVATION_DEPRESSION', outcome: 'G9.SCALE.d', rung: 2, form: 'steps',
+  fam({ id: 'g9.elevation.eye-height-45', skill: 'G9_ELEVATION_DEPRESSION', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.e', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION', rung: 2, form: 'steps',
     draw: () => ({ d: pick([12, 15, 18, 20, 24, 30]), eye: pick([1.2, 1.5, 1.6]), flag: pick([2, 3, 4]) }),
     make: ({ d, eye, flag }) => ({
       question: `A radio mast is sighted with a clinometer held ${eye} m above level ground. The clinometer is ${d} m from the foot of the mast. It reads 45° for the top of the mast.`,
       parts: [
-        { prompt: 'The reading is the angle of elevation of the top. How high is the top above the clinometer, in metres?', answer: d, unit: 'm', hint: 'A right-angled triangle with a 45° angle has two equal short sides.', wrong: [[eye, 'That is the height of the clinometer above the ground. Use the 45° angle to find the height above it.']] },
-        { prompt: 'How high is the mast above the ground, in metres?', answer: round(d + eye, 1), unit: 'm', hint: 'Add the height of the clinometer above the ground.', wrong: [[d, 'That is the height above the clinometer only. The clinometer is not at ground level.'], [round(d - eye, 1), 'The clinometer is above the ground, so add its height, do not take it away.']] },
-        { prompt: `A ${flag} m aerial stands on top of the mast. How high is the top of the aerial above the ground, in metres?`, answer: round(d + eye + flag, 1), unit: 'm', hint: 'Add the aerial to the height of the mast.', wrong: [[round(d + flag, 1), 'Do not forget the height of the clinometer above the ground.']] },
+        { prompt: 'The reading is the angle of elevation of the top. How high is the top above the clinometer, in metres?', answer: d, unit: 'm', hint: 'A right-angled triangle with a 45° angle has two equal short sides.', wrong: [[eye, 'That is the height of the clinometer above the ground. Use the 45° angle to find the height above it.', 'M_EYE_HEIGHT_ONLY']] },
+        { prompt: 'How high is the mast above the ground, in metres?', answer: round(d + eye, 1), unit: 'm', hint: 'Add the height of the clinometer above the ground.', wrong: [[d, 'That is the height above the clinometer only. The clinometer is not at ground level.', 'M_EYE_HEIGHT_LEFT_OUT'], [round(d - eye, 1), 'The clinometer is above the ground, so add its height, do not take it away.', 'M_EYE_HEIGHT_SUBTRACTED']] },
+        { prompt: `A ${flag} m aerial stands on top of the mast. How high is the top of the aerial above the ground, in metres?`, answer: round(d + eye + flag, 1), unit: 'm', hint: 'Add the aerial to the height of the mast.', wrong: [[round(d + flag, 1), 'Do not forget the height of the clinometer above the ground.', 'M_EYE_HEIGHT_LEFT_OUT']] },
       ],
       steps: [`With a 45° angle, the two short sides are equal: the top is ${d} m above the clinometer.`, `Mast height = ${d} + ${eye} = ${round(d + eye, 1)} m.`, `With the aerial: ${round(d + eye, 1)} + ${flag} = ${round(d + eye + flag, 1)} m.`],
     }),
     check: ({ d, eye, flag }, v) => v[0] === d && near(v[1] - eye, v[0]) && near(v[2] - v[1], flag) }),
 
-  fam({ id: 'g9.depression.equals-elevation-why', skill: 'G9_ELEVATION_DEPRESSION', outcome: 'G9.SCALE.f', rung: 2, form: 'why',
+  fam({ id: 'g9.depression.equals-elevation-why', skill: 'G9_ELEVATION_DEPRESSION', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.f', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION', rung: 2, form: 'why',
     draw: () => ({ a: randInt(18, 42), k: randInt(0, 3), what: pick(['the boat', 'the swimmer', 'the canoe']), p: person() }),
     make: ({ a, k, what, p }) => {
       const opts = [
         { text: 'The two horizontal lines are parallel, so the angles are alternate angles and equal', right: true },
-        { text: 'The angles of depression and elevation always add up to 90°', right: false, why: `If they added to 90°, the angle looking up would be ${90 - a}°. They are equal, not complementary.` },
-        { text: 'Because the hill stands upright, the angle looking up must be the same', right: false, why: 'The cliff being upright does not make the angles equal. The horizontal lines do.' },
-        { text: 'The angle looking up is always smaller, because the observer is lower', right: false, why: 'Being lower does not change the angle. Look at the horizontal lines.' },
+        { text: 'The angles of depression and elevation always add up to 90°', right: false, why: `If they added to 90°, the angle looking up would be ${90 - a}°. They are equal, not complementary.`, mis: 'M_ELEV_DEP_COMPLEMENTARY' },
+        { text: 'Because the hill stands upright, the angle looking up must be the same', right: false, why: 'The cliff being upright does not make the angles equal. The horizontal lines do.', mis: 'M_UPRIGHT_REASON' },
+        { text: 'The angle looking up is always smaller, because the observer is lower', right: false, why: 'Being lower does not change the angle. Look at the horizontal lines.', mis: 'M_LOWER_SMALLER_ANGLE' },
       ];
       return { question: `${p.name} measures an angle of depression of ${a}° from a hill top down to ${what}. ${p.She} says the angle looking up from ${what} to the hill top is also ${a}°. Why is ${p.she} right?`,
         options: turn(opts, k), fixedOrder: true,
@@ -291,12 +292,12 @@ export const FAMILIES = [
         steps: ['Both angles are measured from a horizontal line to the same line of sight.', 'The horizontal lines are parallel, so the two angles are alternate angles, and alternate angles are equal.'] };
     } }),
 
-  fam({ id: 'g9.depression.two-canoes', skill: 'G9_ELEVATION_DEPRESSION', outcome: 'G9.SCALE.f', rung: 2, form: 'word',
+  fam({ id: 'g9.depression.two-canoes', skill: 'G9_ELEVATION_DEPRESSION', outcome: 'MATH.G9.GEOMET.SCALE_DRAWING.g', cskill: 'MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION', rung: 2, form: 'word',
     draw: () => { const h = pick([24, 30, 36, 40, 45, 60]), gap = pick([15, 20, 25, 30]); return allDistinct(h, gap, h + gap, h - gap) && h !== gap ? { h, gap } : null; },
     make: ({ h, gap }) => ({
       question: `A guard on top of a ${h} m watch tower on the shore of Lake Victoria sees two canoes in a straight line out from the tower. The nearer canoe is at an angle of depression of 45°. The farther canoe is ${gap} m beyond it. How far is the farther canoe from the foot of the tower, in metres?`,
       answer: h + gap,
-      wrong: [[h, 'That is how far the nearer canoe is from the tower. The farther canoe is beyond it.'], [gap, 'That is only the extra distance. Add it to the distance of the nearer canoe.'], [Math.abs(h - gap), 'Farther away means adding the extra distance, not taking it away.']],
+      wrong: [[h, 'That is how far the nearer canoe is from the tower. The farther canoe is beyond it.', 'M_NEAR_FOR_FAR'], [gap, 'That is only the extra distance. Add it to the distance of the nearer canoe.', 'M_GAP_ONLY'], [Math.abs(h - gap), 'Farther away means adding the extra distance, not taking it away.', 'M_GAP_SUBTRACTED']],
       hints: ['At 45°, the distance from the foot of the tower equals the height of the tower.', 'The farther canoe is beyond the nearer one by the extra distance given.'],
       steps: [`At 45°, the nearer canoe is ${h} m from the foot of the tower.`, `The farther canoe is ${gap} m beyond it: ${h} + ${gap} = ${h + gap} m.`],
     }),

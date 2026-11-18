@@ -957,6 +957,60 @@
     "same charge"
    ],
    "mastery": "The child reads the point where two charge lines cross, gives the distance along the bottom axis (both charge the same there), and says which is cheaper on each side of it."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS": {
+   "forms": [
+    "write as a true bearing",
+    "new bearing after the turn",
+    "compass bearing",
+    "which direction is 135 degrees"
+   ],
+   "mastery": "The child writes a true bearing as three figures measured clockwise from north (east is 090 degrees, south-west is 225 degrees), turns a compass bearing such as S40W into a true bearing (220 degrees), and finds a new bearing after a turn, taking 360 away when it passes north."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER": {
+   "forms": [
+    "bearing of the school from the church",
+    "back bearing",
+    "which step is wrong",
+    "due north and due south"
+   ],
+   "mastery": "The child measures the bearing of B from A at A, clockwise from A's north line, and finds the back bearing (A from B) by adding 180 degrees if the bearing is under 180 and taking 180 away if it is over: 070 degrees gives 250 degrees."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE": {
+   "forms": [
+    "how far from the start",
+    "in which direction",
+    "mark the point",
+    "draw the journey"
+   ],
+   "mastery": "The child draws a north line, measures the bearing clockwise and marks the distance to scale, follows a two-leg journey leg by leg, and finds how far the end is from the start (by measuring, or by Pythagoras when the legs meet at a right angle)."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION": {
+   "forms": [
+    "height of the mast",
+    "angle of elevation",
+    "from the eye",
+    "draw to scale"
+   ],
+   "mastery": "The child marks the angle of elevation from the horizontal up to the line of sight at the observer's eye, draws the triangle to scale (or uses the equal sides at 45 degrees), and adds the eye height above the ground to get the full height: at 45 degrees and 20 m away with the eye 1.5 m up, the mast is 21.5 m."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION": {
+   "forms": [
+    "angle of depression",
+    "why are the angles equal",
+    "how far is the canoe",
+    "from the top of the tower"
+   ],
+   "mastery": "The child marks the angle of depression from the horizontal down to the line of sight, knows it equals the angle of elevation from the object back up (alternate angles between parallel horizontals), and finds distances from a height by scale drawing or at 45 degrees by equal sides."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING": {
+   "forms": [
+    "draw the plot",
+    "from the field book",
+    "area of the plot",
+    "offsets"
+   ],
+   "mastery": "The child reads a field book (distances along a baseline and offsets to the left and right), draws the plot to scale, and finds the area by splitting it into triangles and trapeziums."
   }
  }
 }
