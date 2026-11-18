@@ -15,4 +15,5 @@ import * as area from './area.mjs';
 import * as cap from './capacity.mjs';
 import * as mass from './mass.mjs';
 import * as time from './time.mjs';
-export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area, cap, mass, time];
+import * as money from './money.mjs';
+export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area, cap, mass, time, money];

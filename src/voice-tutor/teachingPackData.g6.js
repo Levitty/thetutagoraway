@@ -7927,6 +7927,632 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.MEASUR.TIME",
   "sub_strand_name": "Time",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET": {
+  "skill": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET",
+  "key_step": "The child totals the income and the planned spending separately and takes spending from income, saying whether money is left or the budget is over.",
+  "floor": {
+   "prerequisite": "Adds a list of prices.",
+   "question": "What is Ksh 450 + Ksh 300 + Ksh 250?",
+   "answer": "Ksh 1,000"
+  },
+  "representations": [
+   "a family or class trip budget on paper",
+   "a two-column table: income and spending",
+   "the balance shown as left or over"
+  ],
+  "steps": [
+   "List the income and total it.",
+   "List every planned item as quantity x price and total the spending.",
+   "Balance = income - spending.",
+   "If spending is more, say the budget is over by the difference."
+  ],
+  "contexts": [
+   "a class trip to Nairobi National Park",
+   "a family's weekly shopping",
+   "a chama's meeting"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table with columns Income and Spending."
+   },
+   {
+    "beat": "write",
+    "do": "Write income 4,000 and items 1,800, 1,500 and 1,300."
+   },
+   {
+    "beat": "count",
+    "do": "Add the spending with the child."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two totals.",
+    "say": "Is there enough money for everything?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to compare."
+   },
+   {
+    "beat": "write",
+    "do": "Write \"over budget by 600\"."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET.M_ADD_INCOME_TO_SPENDING",
+    "listen_for": [
+     "8,200",
+     "add them"
+    ],
+    "ask": "Does spending give you more money?",
+    "repair": "Balance is income take away spending.",
+    "error": "Adds income and spending to find the balance.",
+    "example": {
+     "question": "Income 5,000, spending 3,200: balance?",
+     "wrong_answer": "8,200",
+     "correct_answer": "1,800"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET.M_ITEM_LEFT_OUT",
+    "listen_for": [
+     "only three items"
+    ],
+    "ask": "Did you tick every line?",
+    "repair": "Tick each item as you add it.",
+    "error": "Leaves out an item when totalling the spending.",
+    "example": {
+     "question": "Four items in a budget table",
+     "wrong_answer": "total of three items",
+     "correct_answer": "total of four"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET.M_OVER_BUDGET_AS_LEFT",
+    "listen_for": [
+     "600 left"
+    ],
+    "ask": "Is the spending more or less than the income?",
+    "repair": "If spending is more, the budget is over, not left.",
+    "error": "When spending is more than income, takes the smaller from the larger and says money is left.",
+    "example": {
+     "question": "Income Ksh 4,000, planned spending Ksh 4,600. What is the balance?",
+     "wrong_answer": "Ksh 600 left",
+     "correct_answer": "Over budget by Ksh 600 (spending is Ksh 600 more than income)"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET.M_UNIT_PRICE_FOR_LINE",
+    "listen_for": [
+     "180",
+     "one price"
+    ],
+    "ask": "How many kg of sugar are on the list?",
+    "repair": "Cost of a line = quantity x price.",
+    "error": "Writes the price of one unit as the cost of a budget line that buys several.",
+    "example": {
+     "question": "Budget line: 3 kg of sugar at Ksh 180 per kg. Cost?",
+     "wrong_answer": "Ksh 180",
+     "correct_answer": "Ksh 540"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Income Ksh 5,000, planned spending Ksh 3,200. What is the balance?",
+    "answer": "Ksh 1,800 left",
+    "shows": "money left"
+   },
+   {
+    "question": "Income Ksh 4,000, planned spending Ksh 4,600. What is the balance?",
+    "answer": "Over budget by Ksh 600",
+    "shows": "over budget"
+   }
+  ],
+  "name": "Prepare a simple budget",
+  "sub_strand": "MATH.G6.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE": {
+  "skill": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE",
+  "key_step": "The child says which price the trader paid and which the customer paid, and adds or takes away the profit or loss by asking who got more.",
+  "floor": {
+   "prerequisite": "Solves adding and subtracting stories.",
+   "question": "Ksh 1,200 take away Ksh 200?",
+   "answer": "Ksh 1,000"
+  },
+  "representations": [
+   "a market stall role-play",
+   "a bar model: buying price and profit make the selling price",
+   "a table of buying price, selling price, profit or loss"
+  ],
+  "steps": [
+   "Name the price you know: buying or selling.",
+   "Profit: selling = buying + profit; buying = selling - profit.",
+   "Loss: selling = buying - loss; buying = selling + loss.",
+   "Check the answer makes sense in the story."
+  ],
+  "contexts": [
+   "a mama mboga selling vegetables",
+   "a duka owner",
+   "a school tuck shop"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar: buying price, with a piece for profit on the end."
+   },
+   {
+    "beat": "write",
+    "do": "Write buying 600, profit 150."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the whole bar.",
+    "say": "What does the whole bar show?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the selling price."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child for the selling price."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE.M_SELLING_FOR_BUYING",
+    "listen_for": [
+     "1,200",
+     "the same"
+    ],
+    "ask": "Did the trader pay 1,200 or get 1,200?",
+    "repair": "The buying price is what the trader paid: 1,200 - 200.",
+    "error": "Takes the selling price as the buying price.",
+    "example": {
+     "question": "A trader sells a bag for 1,200 making profit of 200: buying price?",
+     "wrong_answer": "1,200",
+     "correct_answer": "1,000"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE.M_ADD_LOSS",
+    "listen_for": [
+     "950",
+     "add the loss"
+    ],
+    "ask": "With a loss, did the trader get more or less than they paid?",
+    "repair": "Selling price = buying price - loss.",
+    "error": "Adds a loss to the buying price to find the selling price.",
+    "example": {
+     "question": "Bought at 800, sold at a loss of 150: selling price?",
+     "wrong_answer": "950",
+     "correct_answer": "650"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE.M_PROFIT_TAKEN_OFF_FOR_SELLING",
+    "listen_for": [
+     "450",
+     "take away"
+    ],
+    "ask": "With a profit, does the trader get more or less than they paid?",
+    "repair": "Add the profit: 750.",
+    "error": "Takes the profit away from the buying price to find the selling price.",
+    "example": {
+     "question": "Bought at Ksh 600 and sold at a profit of Ksh 150. Selling price?",
+     "wrong_answer": "Ksh 450",
+     "correct_answer": "Ksh 750"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE.M_LOSS_TAKEN_OFF_FOR_BUYING",
+    "listen_for": [
+     "500"
+    ],
+    "ask": "With a loss, did the trader pay more or less than 650?",
+    "repair": "Buying price = selling price + loss: 800.",
+    "error": "Takes the loss away from the selling price to find the buying price.",
+    "example": {
+     "question": "Sold for Ksh 650 at a loss of Ksh 150. Buying price?",
+     "wrong_answer": "Ksh 500",
+     "correct_answer": "Ksh 800"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bought at Ksh 600 and sold at a profit of Ksh 150. What is the selling price?",
+    "answer": "Ksh 750",
+    "shows": "add the profit"
+   },
+   {
+    "question": "Sold for Ksh 1,200 at a profit of Ksh 200. What was the buying price?",
+    "answer": "Ksh 1,000",
+    "shows": "take the profit away"
+   }
+  ],
+  "name": "Determine buying and selling prices",
+  "sub_strand": "MATH.G6.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES": {
+  "skill": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES",
+  "key_step": "The child works out the total money in and the total cost for the same goods and takes cost from money in.",
+  "floor": {
+   "prerequisite": "Multiplies money by a whole number.",
+   "question": "What is 12 x Ksh 8?",
+   "answer": "Ksh 96"
+  },
+  "representations": [
+   "coins for money in and money out",
+   "a table: cost, money in, profit",
+   "per item and for all items side by side"
+  ],
+  "steps": [
+   "Find the total cost of all the goods.",
+   "Find the total money from selling them.",
+   "Profit = money in - cost.",
+   "Check the question: per item or for all."
+  ],
+  "contexts": [
+   "mangoes at a market",
+   "eggs from a crate",
+   "mandazi at the canteen"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 12 mangoes bought at Ksh 5 each, sold at Ksh 8 each."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 12.",
+    "say": "How many mangoes do we work with?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to fill the table: cost 60, money in 96."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write profit 96 - 60 = Ksh 36."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES.M_PROFIT_PER_ITEM_VS_TOTAL",
+    "listen_for": [
+     "3",
+     "on one"
+    ],
+    "ask": "How many mangoes were sold?",
+    "repair": "Profit on all 12: 12 x 3 = 36.",
+    "error": "Gives the profit on one item when asked for the profit on all items.",
+    "example": {
+     "question": "12 mangoes bought for 5 each, sold for 8 each: total profit?",
+     "wrong_answer": "3",
+     "correct_answer": "36"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES.M_SELLING_LESS_BUYING_REVERSED",
+    "listen_for": [
+     "minus 150",
+     "1,150"
+    ],
+    "ask": "Which is bigger, the money in or the cost?",
+    "repair": "Profit = selling price - buying price.",
+    "error": "Subtracts selling price from buying price and gives a negative or reversed answer.",
+    "example": {
+     "question": "Bought at 500, sold at 650: profit?",
+     "wrong_answer": "-150 or 1,150",
+     "correct_answer": "150"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES.M_PROFIT_IS_SELLING_PRICE",
+    "listen_for": [
+     "650",
+     "all of it"
+    ],
+    "ask": "Did the trader pay anything for the goods?",
+    "repair": "Take away the cost first.",
+    "error": "Gives the selling price as the profit.",
+    "example": {
+     "question": "Bought at Ksh 500, sold at Ksh 650. Profit?",
+     "wrong_answer": "Ksh 650",
+     "correct_answer": "Ksh 150"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES.M_BULK_COST_AGAINST_ONE_PRICE",
+    "listen_for": [
+     "345",
+     "360 take 15"
+    ],
+    "ask": "Is 15 the money from the whole crate?",
+    "repair": "Money in for 30 eggs is 450; 450 - 360 = 90.",
+    "error": "Compares the cost of a whole crate with the price of one item.",
+    "example": {
+     "question": "A crate of 30 eggs costs Ksh 360. Each egg is sold for Ksh 15. Profit on the crate?",
+     "wrong_answer": "Ksh 345 (360 - 15)",
+     "correct_answer": "Ksh 90 (30 x 15 = 450, 450 - 360)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "12 mangoes are bought at Ksh 5 each and sold at Ksh 8 each. What is the total profit?",
+    "answer": "Ksh 36",
+    "shows": "for all items"
+   },
+   {
+    "question": "A crate of 30 eggs costs Ksh 360 and each egg is sold for Ksh 15. What is the profit on the crate?",
+    "answer": "Ksh 90",
+    "shows": "bulk cost against sales"
+   }
+  ],
+  "name": "Work out profit from sales",
+  "sub_strand": "MATH.G6.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES": {
+  "skill": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES",
+  "key_step": "The child adds every cost, compares the total cost with the money in, and calls it a loss when the money in is less.",
+  "floor": {
+   "prerequisite": "Works out profit.",
+   "question": "Bought at Ksh 500, sold at Ksh 650. Profit?",
+   "answer": "Ksh 150"
+  },
+  "representations": [
+   "a market story with spoilt goods",
+   "a table: all costs, money in, profit or loss",
+   "two bars: cost longer than money in"
+  ],
+  "steps": [
+   "Add every cost: buying price, transport and other costs.",
+   "Find the money in from the goods actually sold.",
+   "If money in is less, loss = cost - money in.",
+   "Answer for all items if the question asks."
+  ],
+  "contexts": [
+   "tomatoes that spoil",
+   "transport to market",
+   "a school fundraising sale"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two bars: costs and money in."
+   },
+   {
+    "beat": "write",
+    "do": "Write costs 2,000 + 300 and money in 2,100."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two bars.",
+    "say": "Which bar is longer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the costs."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether it is a profit or a loss, and how much."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES.M_LOSS_AS_PROFIT",
+    "listen_for": [
+     "profit of 200"
+    ],
+    "ask": "Did the trader get back what they paid?",
+    "repair": "Selling for less than the cost is a loss.",
+    "error": "Calls the difference a profit even when the selling price is lower.",
+    "example": {
+     "question": "Bought at 900, sold at 700: profit or loss?",
+     "wrong_answer": "profit of 200",
+     "correct_answer": "loss of 200"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES.M_SPOILT_GOODS_IGNORED",
+    "listen_for": [
+     "sold all 20"
+    ],
+    "ask": "Can spoilt tomatoes be sold?",
+    "repair": "Only the goods sold bring money in.",
+    "error": "Ignores spoilt goods that bring in no money when working out the loss.",
+    "example": {
+     "question": "Buys 20 tomatoes, 4 spoilt, sells the rest",
+     "wrong_answer": "sells all 20",
+     "correct_answer": "sells 16"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES.M_EXTRA_COSTS_IGNORED",
+    "listen_for": [
+     "profit of 100",
+     "forgot transport"
+    ],
+    "ask": "What else did the trader pay for?",
+    "repair": "Add every cost before comparing.",
+    "error": "Leaves out other costs such as transport when deciding profit or loss.",
+    "example": {
+     "question": "Goods bought for Ksh 2,000, transport Ksh 300, sold for Ksh 2,100. Profit or loss?",
+     "wrong_answer": "Profit of Ksh 100",
+     "correct_answer": "Loss of Ksh 200"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES.M_LOSS_ON_ONE_ITEM",
+    "listen_for": [
+     "5",
+     "one pen"
+    ],
+    "ask": "How many pens were sold?",
+    "repair": "Multiply the loss on one by the number sold.",
+    "error": "Gives the loss on one item when the loss on all of them is asked.",
+    "example": {
+     "question": "10 pens bought at Ksh 30 each and sold at Ksh 25 each. Total loss?",
+     "wrong_answer": "Ksh 5",
+     "correct_answer": "Ksh 50"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bought at Ksh 900, sold at Ksh 700. Profit or loss, and how much?",
+    "answer": "Loss of Ksh 200",
+    "shows": "selling below cost"
+   },
+   {
+    "question": "10 pens are bought at Ksh 30 each and sold at Ksh 25 each. What is the total loss?",
+    "answer": "Ksh 50",
+    "shows": "for all items"
+   }
+  ],
+  "name": "Calculate loss from sales",
+  "sub_strand": "MATH.G6.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES": {
+  "skill": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES",
+  "key_step": "The child matches each tax to what it is charged on (VAT on goods and services, PAYE on pay, import duty on goods coming in, land rates on land) and adds a stated tax to a price for the total.",
+  "floor": {
+   "prerequisite": "Knows what a tax is.",
+   "question": "Who collects taxes in Kenya?",
+   "answer": "the government (KRA, or the county for land rates)"
+  },
+  "representations": [
+   "a supermarket receipt with VAT shown",
+   "a payslip with PAYE",
+   "a sorting table: tax and what it is on"
+  ],
+  "steps": [
+   "Read what is being taxed: a good, pay, an import or land.",
+   "Name the tax.",
+   "If a rate is given, work out the tax.",
+   "For the total, add the tax to the price."
+  ],
+  "contexts": [
+   "a receipt from a supermarket",
+   "a teacher's payslip",
+   "a car imported through Mombasa"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a receipt: radio Ksh 1,000, VAT 16%."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the VAT line.",
+    "say": "What is 16% of 1,000?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 160."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask what the customer pays in all."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1,000 + 160 = Ksh 1,160."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES.M_VAT_ON_PAY",
+    "listen_for": [
+     "VAT from pay"
+    ],
+    "ask": "Is VAT on what you buy or on what you earn?",
+    "repair": "PAYE is taken from pay; VAT is on goods and services.",
+    "error": "Says VAT is taken from workers' pay (confuses with PAYE).",
+    "example": {
+     "question": "Which tax is taken from a worker's pay?",
+     "wrong_answer": "VAT",
+     "correct_answer": "PAYE"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES.M_TAX_PERCENT_OFF_THE_PRICE",
+    "listen_for": [
+     "840",
+     "take it off"
+    ],
+    "ask": "Does tax make the price more or less?",
+    "repair": "Add the tax: 1,160.",
+    "error": "Takes the tax off the price instead of adding it.",
+    "example": {
+     "question": "Price 1,000 plus 16% VAT",
+     "wrong_answer": "840",
+     "correct_answer": "1,160"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES.M_DUTY_ON_LOCAL_GOODS",
+    "listen_for": [
+     "goods made in Kenya"
+    ],
+    "ask": "What does import mean?",
+    "repair": "Import duty is paid on goods brought into Kenya.",
+    "error": "Believes import duty is charged on goods made and sold in Kenya.",
+    "example": {
+     "question": "Import duty is charged on?",
+     "wrong_answer": "goods made and sold in Kenya",
+     "correct_answer": "goods brought into Kenya from other countries"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES.M_TAX_AS_TOTAL",
+    "listen_for": [
+     "160"
+    ],
+    "ask": "Is 160 what the customer pays in all?",
+    "repair": "Total = price + tax.",
+    "error": "Gives the tax as the total price, or the total as the tax.",
+    "example": {
+     "question": "A radio costs Ksh 1,000 plus 16% VAT. What is the total price?",
+     "wrong_answer": "Ksh 160",
+     "correct_answer": "Ksh 1,160"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which tax is taken from a worker's pay?",
+    "answer": "PAYE",
+    "shows": "name the tax"
+   },
+   {
+    "question": "A radio costs Ksh 1,000 plus 16% VAT. What is the total price?",
+    "answer": "Ksh 1,160",
+    "shows": "add the tax"
+   }
+  ],
+  "name": "Identify types of taxes",
+  "sub_strand": "MATH.G6.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

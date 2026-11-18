@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 165,
-  "misconceptions": 302
+  "prerequisites": 168,
+  "misconceptions": 312
  },
  "sub_strands": [
   {
@@ -7252,6 +7252,13 @@
        "strength": "helpful",
        "reason": "Working with prices of items.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.SUBTRACTION.SUB_WORD_PROBLEMS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Finding one price from another and a difference is an adding or taking-away story.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -7281,6 +7288,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Needs to tell cost from price.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.MULTIPLICATION.MULT_WORD_PROBLEMS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The profit on many items is the profit on one times the number of items.",
        "status": "proposed"
       }
      ],
@@ -7312,6 +7326,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Same two prices, other direction.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Telling the buying price from the selling price comes first.",
        "status": "proposed"
       }
      ],
@@ -7505,6 +7526,156 @@
      "reveals": "Discounted amount as option.",
      "help": "VAT is added to the price paid.",
      "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET.M_OVER_BUDGET_AS_LEFT",
+     "skill": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET",
+     "error": "When spending is more than income, takes the smaller from the larger and says money is left.",
+     "example": {
+      "question": "Income Ksh 4,000, planned spending Ksh 4,600. What is the balance?",
+      "wrong_answer": "Ksh 600 left",
+      "correct_answer": "Over budget by Ksh 600 (spending is Ksh 600 more than income)"
+     },
+     "cause": "Always subtracts the smaller number from the larger.",
+     "reveals": "A balance of money left as an option.",
+     "help": "Ask: is there enough money for everything on the list? Compare the two totals first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET.M_UNIT_PRICE_FOR_LINE",
+     "skill": "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET",
+     "error": "Writes the price of one unit as the cost of a budget line that buys several.",
+     "example": {
+      "question": "Budget line: 3 kg of sugar at Ksh 180 per kg. Cost?",
+      "wrong_answer": "Ksh 180",
+      "correct_answer": "Ksh 540"
+     },
+     "cause": "Copies the price without reading the quantity.",
+     "reveals": "The unit price as the line cost.",
+     "help": "Read each line as \"how many, at what price\": 3 x 180.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE.M_PROFIT_TAKEN_OFF_FOR_SELLING",
+     "skill": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE",
+     "error": "Takes the profit away from the buying price to find the selling price.",
+     "example": {
+      "question": "Bought at Ksh 600 and sold at a profit of Ksh 150. Selling price?",
+      "wrong_answer": "Ksh 450",
+      "correct_answer": "Ksh 750"
+     },
+     "cause": "Not sure whether profit is added or taken away.",
+     "reveals": "The buying price minus the profit as an option.",
+     "help": "A profit means the trader got more than they paid: selling price = buying price + profit.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE.M_LOSS_TAKEN_OFF_FOR_BUYING",
+     "skill": "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE",
+     "error": "Takes the loss away from the selling price to find the buying price.",
+     "example": {
+      "question": "Sold for Ksh 650 at a loss of Ksh 150. Buying price?",
+      "wrong_answer": "Ksh 500",
+      "correct_answer": "Ksh 800"
+     },
+     "cause": "Not sure which way the loss goes.",
+     "reveals": "The selling price minus the loss as an option.",
+     "help": "A loss means the trader paid more than they got: buying price = selling price + loss.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES.M_PROFIT_IS_SELLING_PRICE",
+     "skill": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES",
+     "error": "Gives the selling price as the profit.",
+     "example": {
+      "question": "Bought at Ksh 500, sold at Ksh 650. Profit?",
+      "wrong_answer": "Ksh 650",
+      "correct_answer": "Ksh 150"
+     },
+     "cause": "Thinks all the money received is profit.",
+     "reveals": "The selling price as an option.",
+     "help": "The trader first gets back the Ksh 500 paid; only what is above it is profit.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES.M_BULK_COST_AGAINST_ONE_PRICE",
+     "skill": "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES",
+     "error": "Compares the cost of a whole crate with the price of one item.",
+     "example": {
+      "question": "A crate of 30 eggs costs Ksh 360. Each egg is sold for Ksh 15. Profit on the crate?",
+      "wrong_answer": "Ksh 345 (360 - 15)",
+      "correct_answer": "Ksh 90 (30 x 15 = 450, 450 - 360)"
+     },
+     "cause": "Subtracts the two prices it sees without matching what each is for.",
+     "reveals": "The difference between the crate cost and one price.",
+     "help": "Make both totals for the same thing: the money from all 30 eggs, then take away the crate cost.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES.M_EXTRA_COSTS_IGNORED",
+     "skill": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES",
+     "error": "Leaves out other costs such as transport when deciding profit or loss.",
+     "example": {
+      "question": "Goods bought for Ksh 2,000, transport Ksh 300, sold for Ksh 2,100. Profit or loss?",
+      "wrong_answer": "Profit of Ksh 100",
+      "correct_answer": "Loss of Ksh 200"
+     },
+     "cause": "Compares only the two prices named buying and selling.",
+     "reveals": "A profit when the extra cost makes it a loss.",
+     "help": "Add every cost first: 2,000 + 300 = 2,300 spent.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES.M_LOSS_ON_ONE_ITEM",
+     "skill": "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES",
+     "error": "Gives the loss on one item when the loss on all of them is asked.",
+     "example": {
+      "question": "10 pens bought at Ksh 30 each and sold at Ksh 25 each. Total loss?",
+      "wrong_answer": "Ksh 5",
+      "correct_answer": "Ksh 50"
+     },
+     "cause": "Stops after working out one item.",
+     "reveals": "The loss on one item as an option.",
+     "help": "Read the question again: all 10 pens. Multiply the loss on one by 10.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES.M_DUTY_ON_LOCAL_GOODS",
+     "skill": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES",
+     "error": "Believes import duty is charged on goods made and sold in Kenya.",
+     "example": {
+      "question": "Import duty is charged on?",
+      "wrong_answer": "goods made and sold in Kenya",
+      "correct_answer": "goods brought into Kenya from other countries"
+     },
+     "cause": "Mixes up the names of the taxes.",
+     "reveals": "Local goods among the choices.",
+     "help": "\"Import\" means bringing in: the duty is paid when goods come into the country.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES.M_TAX_AS_TOTAL",
+     "skill": "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES",
+     "error": "Gives the tax as the total price, or the total as the tax.",
+     "example": {
+      "question": "A radio costs Ksh 1,000 plus 16% VAT. What is the total price?",
+      "wrong_answer": "Ksh 160",
+      "correct_answer": "Ksh 1,160"
+     },
+     "cause": "Works out the tax and stops.",
+     "reveals": "The tax on its own as the total.",
+     "help": "Read the question: the total is the price and the tax together.",
+     "source": "to be confirmed by a teacher (no source yet)",
      "status": "draft"
     }
    ]
