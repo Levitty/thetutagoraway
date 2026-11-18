@@ -56,7 +56,7 @@ export const MIS = [
   m('TREBLE_PITCHES', 'TP_FIRST', 'Names the wrong first line.', 'Which note is on the bottom line of the treble staff?', 'F', 'E', 'The bottom line is E.'),
   m('BALANCE', 'BL_SYM', 'Does not know symmetrical.', 'What is symmetrical balance?', 'Both sides are different', 'Both sides are alike', 'Symmetrical balance has both sides alike.'),
   m('BALANCE', 'BL_MEANING', 'Thinks balance is about size only.', 'What is balance in a picture?', 'Making everything the same colour', 'Spreading visual weight evenly', 'Balance is the even spread of visual weight.'),
-  m('BALANCE', 'BL_RADIAL', 'Does not know radial.', 'What is radial balance?', 'Items spread from the centre', 'Items in a straight line', 'Radial balance spreads from the centre.'),
+  m('BALANCE', 'BL_RADIAL', 'Does not know radial.', 'What is radial balance?', 'Items in a straight line', 'Items spread from the centre', 'Radial balance spreads from the centre.'),
   m('COLOUR_TEMP', 'CT_WARM', 'Puts blue among warm colours.', 'Which is a warm colour?', 'Blue', 'Orange', 'Red, orange and yellow are warm.'),
   m('COLOUR_TEMP', 'CT_COOL', 'Puts red among cool colours.', 'Which is a cool colour?', 'Red', 'Blue', 'Blue, green and violet are cool.'),
   m('COLOUR_TEMP', 'CT_FEEL', 'Mixes the feeling of warm and cool.', 'Which colours remind us of the sun and fire?', 'Cool colours', 'Warm colours', 'Warm colours remind us of sun and fire.'),

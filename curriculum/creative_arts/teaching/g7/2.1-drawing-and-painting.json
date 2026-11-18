@@ -66,7 +66,7 @@
     {
      "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING.BALANCE.M_CA7_BL_RADIAL",
      "listen_for": [
-      "Items spread from the centre"
+      "Items in a straight line"
      ],
      "ask": "What is radial balance?",
      "repair": "Show a sunflower or a wheel: parts spread out from the centre."

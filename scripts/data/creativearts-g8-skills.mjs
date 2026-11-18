@@ -71,7 +71,7 @@ export const MIS = [
   m('NETBALL', 'NB_PLAYERS', 'Gives the wrong number of players.', 'How many players are in a netball team?', 'Eleven', 'Seven', 'A netball team has seven players.'),
   m('NETBALL', 'NB_RUN', 'Says players may run with the ball.', 'May a netball player run with the ball?', 'Yes, as far as she likes', 'No, she must pass or shoot', 'A player may not run with the ball.'),
   m('NETBALL', 'NB_SECONDS', 'Gives the wrong time for holding the ball.', 'For how long may a player hold the ball?', 'Ten seconds', 'Three seconds', 'A player may hold the ball for three seconds.'),
-  m('FABRIC_DECOR', 'FB_TIE', 'Thinks tie and dye uses no tying.', 'In tie and dye, why is cloth tied?', 'To stop it dyeing evenly everywhere so patterns form', 'To make it smaller for storage', 'Tied parts resist the dye and keep their colour.'),
+  m('FABRIC_DECOR', 'FB_TIE', 'Thinks tie and dye uses no tying.', 'In tie and dye, why is cloth tied?', 'To make it smaller for storage', 'To stop it dyeing evenly everywhere so patterns form', 'Tied parts resist the dye and keep their colour.'),
   m('FABRIC_DECOR', 'FB_STENCIL', 'Mixes stencil with pleating.', 'Which technique uses a cut-out design?', 'Pleating', 'Stencil printing', 'Stencil printing uses a cut-out design.'),
   m('FABRIC_DECOR', 'FB_PLEAT', 'Mixes pleating with stencil.', 'Which technique folds cloth into folds?', 'Stencil printing', 'Pleating', 'Pleating folds cloth.'),
   m('RECORDER_TECH', 'RT_BLOW', 'Says blow hard.', 'How should you blow a descant recorder?', 'As hard as possible', 'Gently and steadily', 'Blow gently and steadily.'),

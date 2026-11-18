@@ -902,11 +902,11 @@
      "error": "Picks \"items in a straight line\" for radial balance.",
      "example": {
       "question": "What is radial balance?",
-      "wrong_answer": "Items spread from the centre",
-      "correct_answer": "Items in a straight line"
+      "wrong_answer": "Items in a straight line",
+      "correct_answer": "Items spread from the centre"
      },
      "cause": "The child has not met \"radius\", so radial means nothing.",
-     "reveals": "Offer \"Items spread from the centre\" next to the right answer and ask the question again in a new situation.",
+     "reveals": "Offer \"Items in a straight line\" next to the right answer and ask the question again in a new situation.",
      "help": "Show a sunflower or a wheel: parts spread out from the centre.",
      "feedback": "Radial balance spreads from the centre.",
      "source": "To confirm by a Creative Arts and Sports teacher: a common classroom error, not traced to a study by the author.",
