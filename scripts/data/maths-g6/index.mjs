@@ -7,4 +7,5 @@
 import * as whole from './whole-numbers.mjs';
 import * as mult from './multiplication.mjs';
 import * as div from './division.mjs';
-export const DEPTH = [whole, mult, div];
+import * as ineq from './inequalities.mjs';
+export const DEPTH = [whole, mult, div, ineq];

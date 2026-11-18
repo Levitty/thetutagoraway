@@ -1385,6 +1385,90 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY.M_AT_MOST_AS_MORE": {
+  "skill": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY",
+  "error": "Writes \"at most\" with a greater-than symbol because \"most\" sounds like \"more\".",
+  "example": {
+   "question": "\"A matatu carries at most 14 passengers\" as an inequality",
+   "wrong_answer": "x >= 14",
+   "correct_answer": "x <= 14"
+  },
+  "cause": "Matches the word \"most\" to \"more\" instead of to the biggest allowed number.",
+  "reveals": "The reversed symbol for \"at most\".",
+  "help": "Say it as a limit: \"at most 14\" means 14 or fewer. Mark 14 and shade to the left on a number line.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY.M_EQUALS_FOR_LIMIT": {
+  "skill": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY",
+  "error": "Writes an equation for a limit, as if the number had to be exact.",
+  "example": {
+   "question": "\"A lift carries no more than 8 people\" as an inequality",
+   "wrong_answer": "x = 8",
+   "correct_answer": "x <= 8"
+  },
+  "cause": "Has written equations more often than inequalities, so writes = when a number appears.",
+  "reveals": "The equation as an option.",
+  "help": "Ask: could 5 people be in the lift? If yes, the number is not exactly 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY.M_ONE_SIDE_ONLY": {
+  "skill": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY",
+  "error": "Does the operation to one side only.",
+  "example": {
+   "question": "Simplify 3x > 18",
+   "wrong_answer": "x > 18",
+   "correct_answer": "x > 6"
+  },
+  "cause": "Removes the 3 from the x side but leaves the other side as it was.",
+  "reveals": "The answer with the number side unchanged.",
+  "help": "Whatever is done to one side is done to the other, as on a balance.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY.M_SYMBOL_BECOMES_EQUALS": {
+  "skill": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY",
+  "error": "Writes an equals sign in the answer, turning the inequality into an equation.",
+  "example": {
+   "question": "Simplify x + 5 < 12",
+   "wrong_answer": "x = 7",
+   "correct_answer": "x < 7"
+  },
+  "cause": "Copies the steps of solving an equation, including the = sign.",
+  "reveals": "The equation as an option.",
+  "help": "Copy the symbol down on every line: the answer is still \"less than\".",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_BOUNDARY_LEFT_OUT": {
+  "skill": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY",
+  "error": "Leaves the boundary out when the inequality allows it (at least, at most).",
+  "example": {
+   "question": "Smallest whole number with x >= 9",
+   "wrong_answer": "10",
+   "correct_answer": "9"
+  },
+  "cause": "Treats every inequality as strict.",
+  "reveals": "The next whole number after the boundary as the answer.",
+  "help": "Read the line under the symbol as \"or equal to\": 9 is allowed.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_DIVIDE_BEFORE_SUBTRACT": {
+  "skill": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY",
+  "error": "In a two-step inequality divides only the x term first, so the number added is left as it was.",
+  "example": {
+   "question": "Solve 2x + 4 < 20",
+   "wrong_answer": "x < 6 (2x + 4 < 20 turned into x + 4 < 10)",
+   "correct_answer": "x < 8"
+  },
+  "cause": "Divides the 2x and the 20 but not the 4, or undoes the steps in the wrong order.",
+  "reveals": "The answer from dividing before subtracting as an option.",
+  "help": "Undo the adding first: take 4 from both sides, then divide both sides by 2.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
  "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT.M_UNIT_TOO_BIG": {
   "skill": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
   "error": "Chooses cm or m for the thickness of a coin or wire.",
