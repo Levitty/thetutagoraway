@@ -116,7 +116,7 @@ function cubeTable(t, fn) {
 }
 
 const CUBES = [
-  fam({ id: 'g9.cubes.spot-negative', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.a', rung: 2, form: 'spot',
+  fam({ id: 'g9.cubes.spot-negative', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.a', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION', rung: 2, form: 'spot',
     draw: () => { const n = randInt(2, 7), type = pick(['sq-sign', 'sign-slip', 'arith']); return type === 'arith' && n === 2 ? null : { n, type, who: person() }; },
     make: ({ n, type, who }) => {
       const v1 = type === 'sq-sign' ? -n * n : type === 'arith' ? 2 * n : n * n;
@@ -127,33 +127,33 @@ const CUBES = [
         { text: `So (−${n})³ = ${fm(v2)}`, ok: v2 === v2 },
       ];
       const fix = { 'sq-sign': 'A negative number times a negative number is positive, so Step 1 should be positive.', 'sign-slip': 'A positive number times a negative number is negative, so Step 2 should be negative.', arith: `Step 1 added ${n} and ${n}. Squaring means multiplying the number by itself.` }[type];
-      return { question: `Below is ${who.name}'s working for (−${n})³. One step is wrong. Which one?`, working, fix,
+      return { question: `Below is ${who.name}'s working for (−${n})³. One step is wrong. Which one?`, working, mis: { 'sq-sign': 'M_NEGATIVE_CUBE_POSITIVE', 'sign-slip': 'M_NEGATIVE_CUBE_POSITIVE', arith: 'M_SQUARE_AS_DOUBLE' }[type], fix,
         steps: [`(−${n}) × (−${n}) = ${n * n}.`, `${n * n} × (−${n}) = −${n ** 3}.`, `So (−${n})³ = −${n ** 3}.`] };
     } }),
-  fam({ id: 'g9.cubes.steps-decimal', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.a', rung: 2, form: 'steps',
+  fam({ id: 'g9.cubes.steps-decimal', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.a', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION', rung: 2, form: 'steps',
     draw: () => ({ n: pick([1.1, 1.2, 1.3, 1.4, 1.5, 2.5]) }),
     make: ({ n }) => {
       const sq = round(n * n, 4), cu = round(sq * n, 6);
       return {
         question: `Work out the cube of ${n}, written ${n}³, in steps.`,
         parts: [
-          { prompt: `What is ${n} × ${n}?`, answer: sq, hint: 'Multiply as if there were no decimal points, then count the decimal places.', wrong: [[round(2 * n, 2), 'That adds the number to itself. Squaring means multiplying it by itself.']] },
-          { prompt: `Now multiply that answer by ${n} again. What is ${n}³?`, answer: cu, hint: 'Take the answer from the first part and multiply by the same number once more.', wrong: [[round(3 * n, 2), 'A cube is the number multiplied by itself three times, not added three times.'], [round(sq * 2, 3), 'That multiplies by 2. Multiply by the number itself.']] },
-          { prompt: `How much bigger is ${n}³ than ${n} × ${n}?`, answer: round(cu - sq, 6), hint: 'Subtract the answer to part 1 from the answer to part 2.', wrong: [[cu, 'That is the cube itself. Take away the square.']] },
+          { prompt: `What is ${n} × ${n}?`, answer: sq, hint: 'Multiply as if there were no decimal points, then count the decimal places.', wrong: [[round(2 * n, 2), 'That adds the number to itself. Squaring means multiplying it by itself.', 'M_SQUARE_AS_DOUBLE']] },
+          { prompt: `Now multiply that answer by ${n} again. What is ${n}³?`, answer: cu, hint: 'Take the answer from the first part and multiply by the same number once more.', wrong: [[round(3 * n, 2), 'A cube is the number multiplied by itself three times, not added three times.', 'M_CUBE_AS_TRIPLE'], [round(sq * 2, 3), 'That multiplies by 2. Multiply by the number itself.', 'M_TIMES_TWO_NOT_N']] },
+          { prompt: `How much bigger is ${n}³ than ${n} × ${n}?`, answer: round(cu - sq, 6), hint: 'Subtract the answer to part 1 from the answer to part 2.', wrong: [[cu, 'That is the cube itself. Take away the square.', 'SLIP']] },
         ],
         steps: [`${n} × ${n} = ${sq}.`, `${sq} × ${n} = ${cu}.`, `${cu} − ${sq} = ${round(cu - sq, 6)}.`],
       };
     },
     check: ({ n }, v) => Math.abs(v[0] * n - v[1]) < 1e-9 && Math.abs(v[1] - v[0] - v[2]) < 1e-9 }),
-  fam({ id: 'g9.cubes.which-cube', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.a', rung: 2, form: 'direct',
+  fam({ id: 'g9.cubes.which-cube', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.a', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION', rung: 2, form: 'direct',
     draw: () => { const c = randInt(3, 9), s = randInt(6, 15), t = randInt(4, 12); const o = [c ** 3, s * s, 3 * (s + 5), c ** 3 + 1]; return uniq(...o, c ** 3 - 1) && !isCube(s * s) && !isCube(3 * (s + 5)) && !isCube(c ** 3 + 1) && t ? { c, s } : null; },
     make: ({ c, s }) => {
-      const o = [{ text: String(c ** 3), right: true }, { text: String(s * s), right: false, why: `That is ${s} × ${s}, a square number. A cube is a number multiplied by itself three times.` }, { text: String(3 * (s + 5)), right: false, why: 'Try to write it as a number multiplied by itself three times. It cannot be done.' }, { text: String(c ** 3 + 1), right: false, why: 'This is one more than a cube number, so it is not a cube itself.' }];
+      const o = [{ text: String(c ** 3), right: true }, { text: String(s * s), right: false, why: `That is ${s} × ${s}, a square number. A cube is a number multiplied by itself three times.`, mis: 'M_SQUARE_AS_CUBE' }, { text: String(3 * (s + 5)), right: false, why: 'Try to write it as a number multiplied by itself three times. It cannot be done.', mis: 'M_MULTIPLE_OF_THREE_AS_CUBE' }, { text: String(c ** 3 + 1), right: false, why: 'This is one more than a cube number, so it is not a cube itself.', mis: 'M_NEAR_CUBE_ACCEPTED' }];
       return { question: `Which of ${o.map(x => x.text).sort((a, b) => a - b).join(', ')} is a cube number?`, story: false, options: o.sort(() => Math.random() - 0.5),
         hints: ['A cube number is a whole number multiplied by itself three times.', 'Try the cubes you know, such as 8, 27 and 64.'],
         steps: [`${c} × ${c} × ${c} = ${c ** 3}.`, `So ${c ** 3} is a cube number. The others are not.`] };
     } }),
-  fam({ id: 'g9.cubes.table-read', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.b', rung: 1, form: 'table',
+  fam({ id: 'g9.cubes.table-read', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.b', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE', rung: 1, form: 'table',
     draw: () => { const t = randInt(21, 88), c = randInt(1, 5); return { t, c }; },
     make: ({ t, c }) => {
       const x100 = t * 10 + c, tb = cubeTable(t, cubeOf);
@@ -161,12 +161,12 @@ const CUBES = [
       return { question: `The table lists cubes to 4 significant figures. A learner needs ${(x100 / 100).toFixed(2)}³. Which number does the table give, in row ${(t / 10).toFixed(1)} and column ${c}?`,
         model: { type: 'table', data: tb },
         answer: val,
-        wrong: [[nearC, 'That is the cube of the number next to it. Check the column heading carefully.'], [nearR, 'That is in the row above. Read the row that matches the first two digits.'], [round((x100 / 100) * 3, 2), 'The cube is the number multiplied by itself three times. Do not multiply by 3.']],
+        wrong: [[nearC, 'That is the cube of the number next to it. Check the column heading carefully.', 'M_NEIGHBOUR_COLUMN_READ'], [nearR, 'That is in the row above. Read the row that matches the first two digits.', 'M_ROW_ABOVE_READ'], [round((x100 / 100) * 3, 2), 'The cube is the number multiplied by itself three times. Do not multiply by 3.', 'M_CUBE_AS_TRIPLE_TABLE']],
         hints: ['The row gives the number to one decimal place.', 'The column gives the second decimal place.'],
         steps: [`${(x100 / 100).toFixed(2)} is in row ${(t / 10).toFixed(1)} and column ${c}.`, `The table gives ${cell(val)}.`] };
     },
     check: ({ t, c }, a) => Math.abs(a - ((t * 10 + c) / 100) ** 3) < 0.0006 * ((t * 10 + c) / 100) ** 3 }),
-  fam({ id: 'g9.cubes.table-scale', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.b', rung: 3, form: 'table',
+  fam({ id: 'g9.cubes.table-scale', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.b', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE', rung: 3, form: 'table',
     draw: () => ({ t: randInt(21, 88), big: Math.random() < 0.5 }),
     make: ({ t, big }) => {
       const x = t / 10, tb = cubeTable(t, cubeOf), base = cubeOf(t * 10);
@@ -175,26 +175,26 @@ const CUBES = [
       return { question: `A table lists cubes of numbers from 1 to 10. Take ${x}³ from it and use ${commas(x2)} = ${x} × ${big ? '10' : '100'} to find ${commas(x2)}³. Give the answer to 4 significant figures.`,
         model: { type: 'table', data: tb },
         answer: ans,
-        wrong: [[round(base * f / 10, 0), 'A change of 10 in the number changes the cube by 10 × 10 × 10. Count all three factors.'], [round(x2 * 3, 0), 'A cube is the number multiplied by itself three times. Do not multiply by 3.'], [base, `The table value is for ${x}³. Now adjust for the change from ${x} to ${commas(x2)}.`]],
+        wrong: [[round(base * f / 10, 0), 'A change of 10 in the number changes the cube by 10 × 10 × 10. Count all three factors.', 'M_TABLE_SCALED_ONCE'], [round(x2 * 3, 0), 'A cube is the number multiplied by itself three times. Do not multiply by 3.', 'M_CUBE_AS_TRIPLE_TABLE'], [base, `The table value is for ${x}³. Now adjust for the change from ${x} to ${commas(x2)}.`, 'M_TABLE_NOT_ADJUSTED']],
         hints: [`${commas(x2)} is ${big ? '10 times' : '100 times'} ${x}.`, `If a number is multiplied by ${big ? '10' : '100'}, its cube is multiplied by ${big ? '10' : '100'} three times.`],
         steps: [`From the table, ${x}³ = ${cell(base)}.`, `${commas(x2)} = ${x} × ${big ? '10' : '100'}, so the cube is multiplied by ${commas(f)}.`, `${commas(x2)}³ = ${commas(ans)}.`] };
     },
     check: ({ t, big }, a) => { const n = big ? t : t * 10; return Math.abs(a - n ** 3) < 0.001 * n ** 3; } }),
-  fam({ id: 'g9.cubes.factor-steps', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.c', rung: 2, form: 'steps',
+  fam({ id: 'g9.cubes.factor-steps', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.c', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS', rung: 2, form: 'steps',
     draw: () => { const m = pick([6, 10, 12, 15, 18, 20, 36, 45]); return { m, N: m ** 3 }; },
     make: ({ m, N }) => {
       const f = factorise(m), ps = Object.keys(f).map(Number);
       const [p1, p2] = ps;
       return { question: `Find the cube root of ${commas(N)} by the prime factor method.`,
         parts: [
-          { prompt: `When ${commas(N)} is written as a product of prime factors, how many times does ${p1} appear?`, answer: 3 * f[p1], hint: `Divide ${commas(N)} by ${p1} again and again until it no longer divides exactly.`, wrong: [[f[p1], 'That counts the factors of the cube root. The cube has three times as many.']] },
-          { prompt: `How many times does ${p2} appear?`, answer: 3 * f[p2], hint: `After removing the ${p1}s, divide by ${p2} again and again.`, wrong: [[f[p2], 'That counts the factors of the cube root. The cube has three times as many.']] },
-          { prompt: `Put the factors in groups of three and take one from each group. What is the cube root of ${commas(N)}?`, answer: m, hint: `Multiply ${p1} by itself ${f[p1]} time${f[p1] > 1 ? 's' : ''}, and ${p2} by itself ${f[p2]} time${f[p2] > 1 ? 's' : ''}, then multiply the two results.`, wrong: [[N / 3, 'Dividing by 3 does not give a cube root.'], [p1 * p2, 'Each prime must be used once for every group of three it has.']] },
+          { prompt: `When ${commas(N)} is written as a product of prime factors, how many times does ${p1} appear?`, answer: 3 * f[p1], hint: `Divide ${commas(N)} by ${p1} again and again until it no longer divides exactly.`, wrong: [[f[p1], 'That counts the factors of the cube root. The cube has three times as many.', 'M_FACTOR_COUNT_OF_ROOT']] },
+          { prompt: `How many times does ${p2} appear?`, answer: 3 * f[p2], hint: `After removing the ${p1}s, divide by ${p2} again and again.`, wrong: [[f[p2], 'That counts the factors of the cube root. The cube has three times as many.', 'M_FACTOR_COUNT_OF_ROOT']] },
+          { prompt: `Put the factors in groups of three and take one from each group. What is the cube root of ${commas(N)}?`, answer: m, hint: `Multiply ${p1} by itself ${f[p1]} time${f[p1] > 1 ? 's' : ''}, and ${p2} by itself ${f[p2]} time${f[p2] > 1 ? 's' : ''}, then multiply the two results.`, wrong: [[N / 3, 'Dividing by 3 does not give a cube root.', 'M_ROOT_AS_DIVIDE_BY_THREE'], [p1 * p2, 'Each prime must be used once for every group of three it has.', 'M_PRIMES_USED_ONCE']] },
         ],
         steps: [`${commas(N)} = ${p1}^${3 * f[p1]} × ${p2}^${3 * f[p2]}.`, `One factor from each group of three: ${p1}^${f[p1]} × ${p2}^${f[p2]}.`, `So the cube root is ${m}.`] };
     },
     check: ({ m, N }, v) => { const ps = Object.keys(factorise(m)).map(Number); return v[2] ** 3 === N && ps[0] ** v[0] * ps[1] ** v[1] === N; } }),
-  fam({ id: 'g9.cubes.factor-spot', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.c', rung: 3, form: 'spot',
+  fam({ id: 'g9.cubes.factor-spot', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.c', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS', rung: 3, form: 'spot',
     draw: () => { const pair = pick([[2, 3], [2, 5], [3, 5], [2, 7], [3, 7]]); return { p: pair[0], q: pair[1], type: pick(['groups', 'add']), who: person() }; },
     make: ({ p, q, type, who }) => {
       const N = (p * q) ** 3;
@@ -208,32 +208,32 @@ const CUBES = [
         { text: `${type === 'add' ? `${pick3[0]} + ${pick3[1]}` : `${pick3[0]} × ${pick3[1]}`} = ${final}. The cube root is ${final}`, ok: final === pick3[0] * pick3[1] },
       ];
       const fix = type === 'groups' ? 'In Step 3 the whole group was taken. Take just one factor from each group of three.' : 'In Step 4 the two numbers were added. The cube root is found by multiplying the numbers taken from each group.';
-      return { question: `${who.name} used prime factors to find ∛${commas(N)}. One step of the working is wrong. Which one?`, working, fix,
+      return { question: `${who.name} used prime factors to find ∛${commas(N)}. One step of the working is wrong. Which one?`, working, mis: type === 'groups' ? 'M_WHOLE_GROUP_TAKEN' : 'M_ROOT_PRIMES_ADDED', fix,
         steps: [`One factor from each group: ${p} and ${q}.`, `${p} × ${q} = ${p * q}, so the cube root of ${commas(N)} is ${p * q}.`] };
     } }),
-  fam({ id: 'g9.cubes.smallest-multiplier', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.c', rung: 3, form: 'direct',
+  fam({ id: 'g9.cubes.smallest-multiplier', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.c', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER', rung: 3, form: 'direct',
     draw: () => { const N = pick([12, 18, 20, 24, 36, 40, 45, 50, 54, 72, 75, 98, 100, 108, 135, 150, 200, 225]); const f = factorise(N); let a = 1; for (const [p, e] of Object.entries(f)) a *= Number(p) ** ((3 - (e % 3)) % 3); const distinct = Object.keys(f).reduce((s, p) => s * Number(p), 1); let sq = 1; for (const [p, e] of Object.entries(f)) sq *= Number(p) ** (e % 2); return a > 1 && uniq(a, distinct, N, sq) ? { N, a, distinct, sq } : null; },
     make: ({ N, a, distinct, sq }) => ({
       question: `Use prime factors to find the smallest whole number that ${N} must be multiplied by to give a perfect cube.`, story: false,
       answer: a,
-      wrong: [[distinct, 'Multiplying by each prime factor once does not always make groups of three. Count how many of each prime are missing.'], [N, `${N} × ${N} is not a cube. Check how many of each prime factor you now have.`], [sq, 'That is what makes a perfect square. A cube needs every prime factor to appear in groups of three.']],
+      wrong: [[distinct, 'Multiplying by each prime factor once does not always make groups of three. Count how many of each prime are missing.', 'M_EACH_PRIME_ONCE'], [N, `${N} × ${N} is not a cube. Check how many of each prime factor you now have.`, 'M_MULTIPLY_BY_ITSELF'], [sq, 'That is what makes a perfect square. A cube needs every prime factor to appear in groups of three.', 'M_SQUARE_RULE_USED']],
       hints: ['Write the number as a product of prime factors.', 'Each prime factor must appear a multiple of three times. How many more of each do you need?'],
       steps: [`${N} = ${Object.entries(factorise(N)).map(([p, e]) => `${p}^${e}`).join(' × ')}.`, `Each power must become a multiple of 3. Multiply by ${a}.`],
     }),
     check: ({ N }, a) => isCube(N * a) && ![...Array(a - 1).keys()].some(i => isCube(N * (i + 1))) }),
-  fam({ id: 'g9.cubes.root-table-read', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.d', rung: 1, form: 'table',
+  fam({ id: 'g9.cubes.root-table-read', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.d', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE', rung: 1, form: 'table',
     draw: () => ({ t: randInt(21, 88), c: randInt(1, 5) }),
     make: ({ t, c }) => {
       const x100 = t * 10 + c, val = rootOf(x100);
       return { question: `From the table of cube roots, write down ∛${(x100 / 100).toFixed(2)}. Use row ${(t / 10).toFixed(1)}, column ${c}.`,
         model: { type: 'table', data: cubeTable(t, rootOf) },
         answer: val,
-        wrong: [[rootOf(x100 + (c === 5 ? -1 : 1)), 'That is the cube root of the number next to it. Check the column heading.'], [rootOf(x100 - 10), 'That is in the row above. Read the row that matches the first two digits.'], [round(x100 / 300, 3), 'Dividing by 3 does not give a cube root. Read the value from the table.']],
+        wrong: [[rootOf(x100 + (c === 5 ? -1 : 1)), 'That is the cube root of the number next to it. Check the column heading.', 'M_ROOT_NEIGHBOUR_READ'], [rootOf(x100 - 10), 'That is in the row above. Read the row that matches the first two digits.', 'M_ROOT_ROW_ABOVE'], [round(x100 / 300, 3), 'Dividing by 3 does not give a cube root. Read the value from the table.', 'M_ROOT_AS_THIRD']],
         hints: ['Find the row that matches the number to one decimal place.', 'Then go across to the column for the second decimal place.'],
         steps: [`${(x100 / 100).toFixed(2)} is in row ${(t / 10).toFixed(1)} and column ${c}.`, `The table gives ${cell(val)}.`] };
     },
     check: ({ t, c }, a) => Math.abs(a ** 3 - (t * 10 + c) / 100) < 0.004 * (t * 10 + c) / 100 }),
-  fam({ id: 'g9.cubes.root-table-scale', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.d', rung: 3, form: 'table',
+  fam({ id: 'g9.cubes.root-table-scale', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.d', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE', rung: 3, form: 'table',
     draw: () => ({ t: randInt(21, 88), kind: pick(['k1000', 'k1000000']) }),
     make: ({ t, kind }) => {
       const x = t / 10, base = rootOf(t * 10), big = kind === 'k1000';
@@ -243,50 +243,50 @@ const CUBES = [
       return { question: `Cube roots are tabled only for numbers from 1 to 10. Write ${commas(n)} as ${x} × ${big ? '1,000' : '1,000,000'} and use the table to find its cube root, to 4 significant figures.`,
         model: { type: 'table', data: cubeTable(t, rootOf) },
         answer: ans,
-        wrong: [[wrongSame, 'Check the power of 10. The cube root of 1,000 is 10, and the cube root of 1,000,000 is 100.'], [base, `The table value is for ${x}. Now adjust for the factor of ${big ? '1,000' : '1,000,000'}.`], [round(n / 3, 2), 'Dividing by 3 does not give a cube root.']],
+        wrong: [[wrongSame, 'Check the power of 10. The cube root of 1,000 is 10, and the cube root of 1,000,000 is 100.', 'M_ROOT_POWER_WRONG'], [base, `The table value is for ${x}. Now adjust for the factor of ${big ? '1,000' : '1,000,000'}.`, 'M_ROOT_TABLE_NOT_SCALED'], [round(n / 3, 2), 'Dividing by 3 does not give a cube root.', 'M_ROOT_AS_THIRD']],
         hints: [`Find the cube root of ${x} in the table first.`, `Then take the cube root of ${big ? '1,000' : '1,000,000'} and multiply the two cube roots.`],
         steps: [`${commas(n)} = ${x} × ${big ? '1,000' : '1,000,000'}.`, `From the table, the cube root of ${x} is ${cell(base)}. The cube root of ${big ? '1,000' : '1,000,000'} is ${big ? '10' : '100'}.`, `${cell(base)} × ${big ? '10' : '100'} = ${commas(ans)}.`] };
     },
     check: ({ t, kind }, a) => { const n = kind === 'k1000' ? t * 100 : t * 100000; return Math.abs(a ** 3 - n) < 0.004 * n; } }),
-  fam({ id: 'g9.cubes.tank-litres', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.e', rung: 2, form: 'word',
+  fam({ id: 'g9.cubes.tank-litres', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.e', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT', rung: 2, form: 'word',
     draw: () => ({ e: pick([1.5, 2, 2.5, 3, 4]), who: person() }),
     make: ({ e, who }) => ({
       question: `${who.name}'s school has a water tank in the shape of a cube. Each edge is ${e} m long. How many litres of water can it hold? (1 m³ = 1,000 litres)`,
       answer: round(e ** 3 * 1000, 1),
-      wrong: [[round(e ** 3, 3), 'That is the volume in m³. The question asks for litres.'], [round(6 * e * e * 1000, 1), 'That uses the area of the six faces. Water fills the inside, so you need the volume.'], [round(3 * e * 1000, 1), 'The volume is edge × edge × edge, not edge × 3.']],
+      wrong: [[round(e ** 3, 3), 'That is the volume in m³. The question asks for litres.', 'M_VOLUME_NOT_LITRES'], [round(6 * e * e * 1000, 1), 'That uses the area of the six faces. Water fills the inside, so you need the volume.', 'M_SURFACE_FOR_VOLUME'], [round(3 * e * 1000, 1), 'The volume is edge × edge × edge, not edge × 3.', 'M_EDGE_TIMES_THREE']],
       hints: ['The volume of a cube is edge × edge × edge.', 'Change m³ to litres at the end.'],
       steps: [`Volume = ${e} × ${e} × ${e} = ${round(e ** 3, 3)} m³.`, `Litres: ${round(e ** 3, 3)} × 1,000 = ${commas(round(e ** 3 * 1000, 1))}.`],
     }),
     check: ({ e }, a) => Math.abs(Math.cbrt(a / 1000) - e) < 1e-6 }),
-  fam({ id: 'g9.cubes.carton-pack', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.e', rung: 3, form: 'word',
+  fam({ id: 'g9.cubes.carton-pack', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.e', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT', rung: 3, form: 'word',
     draw: () => { const s = pick([4, 5, 10]), k = randInt(3, 6); return { s, k, E: s * k, what: pick(['a cube-shaped box', 'a cube-shaped carton']), who: person() }; },
     make: ({ s, k, E, what, who }) => ({
       question: `${who.name} packs small cubes of soap into ${what}. Each small cube has edge ${s} cm. The inside of the large carton is a cube with edge ${E} cm. How many small cubes fit exactly?`,
       answer: k ** 3,
-      wrong: [[k, 'That is the number of cubes along one edge only. The carton has length, width and height.'], [k * k, 'That is one layer. The carton has several layers.'], [round((E ** 3) / s, 0), `Divide the volume of the carton by the volume of one small cube, ${s} × ${s} × ${s}, not by ${s}.`]],
+      wrong: [[k, 'That is the number of cubes along one edge only. The carton has length, width and height.', 'M_ONE_EDGE_COUNT'], [k * k, 'That is one layer. The carton has several layers.', 'M_ONE_LAYER_COUNT'], [round((E ** 3) / s, 0), `Divide the volume of the carton by the volume of one small cube, ${s} × ${s} × ${s}, not by ${s}.`, 'M_DIVIDE_BY_EDGE_ONLY']],
       hints: [`How many small cubes fit along one edge of the carton?`, 'Use that number for the length, the width and the height.'],
       steps: [`Along one edge: ${E} ÷ ${s} = ${k} cubes.`, `In total: ${k} × ${k} × ${k} = ${k ** 3} cubes.`],
     }),
     check: ({ s, E }, a) => a * s ** 3 === E ** 3 }),
-  fam({ id: 'g9.cubes.double-edge-why', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.e', rung: 2, form: 'why',
+  fam({ id: 'g9.cubes.double-edge-why', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.e', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT', rung: 2, form: 'why',
     draw: () => { const k = pick([2, 3]), e = randInt(2, 5); return { k, e, who: person() }; },
     make: ({ k, e, who }) => ({
       question: `A box is a cube with edge ${e} cm. A maker ${k === 2 ? 'doubles' : 'triples'} the edge of the box. ${who.name} says the volume is also ${k === 2 ? 'doubled' : 'tripled'}. Why is this wrong?`,
       options: [
         { text: `Volume uses edge × edge × edge. The new volume is ${k ** 3} times the old one`, right: true },
-        { text: `The volume is ${k * k} times bigger, because volume uses edge × edge`, right: false, why: 'Edge × edge is the area of one face. Volume needs three edges.' },
-        { text: `Volume does not depend on the edge of a cube`, right: false, why: 'The volume of a cube depends only on its edge.' },
-        { text: `The volume becomes ${k} times bigger and then the box adds ${k} more cm`, right: false, why: 'The edge changes by a factor, so the volume changes by that factor, cubed.' },
+        { text: `The volume is ${k * k} times bigger, because volume uses edge × edge`, right: false, why: 'Edge × edge is the area of one face. Volume needs three edges.', mis: 'M_DOUBLE_EDGE_FOUR_VOLUME' },
+        { text: `Volume does not depend on the edge of a cube`, right: false, why: 'The volume of a cube depends only on its edge.', mis: 'M_VOLUME_NOT_FROM_EDGE' },
+        { text: `The volume becomes ${k} times bigger and then the box adds ${k} more cm`, right: false, why: 'The edge changes by a factor, so the volume changes by that factor, cubed.', mis: 'M_DOUBLE_EDGE_DOUBLE_VOLUME' },
       ],
       hints: [`Work out the volume with edge ${e} cm and with the new edge.`, 'Divide the new volume by the old volume.'],
       steps: [`Old volume: ${e}³ = ${e ** 3} cm³.`, `New volume: ${k * e}³ = ${(k * e) ** 3} cm³, which is ${k ** 3} times as much.`],
     }) }),
-  fam({ id: 'g9.cubes.box-edge', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'G9.CUBES.e', rung: 1, form: 'word',
+  fam({ id: 'g9.cubes.box-edge', skill: 'G8_CUBES_CUBE_ROOTS', outcome: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.e', cskill: 'MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT', rung: 1, form: 'word',
     draw: () => { const e = pick([6, 8, 9, 12, 15, 20]); return { e, V: e ** 3, who: person() }; },
     make: ({ e, V, who }) => ({
       question: `${who.name} has a box in the shape of a cube. It holds ${commas(V)} cm³ of rice. What is the length of one edge, in cm?`,
       answer: e,
-      wrong: [[round(V / 3, 0), 'Dividing the volume by 3 does not give the edge. Find the number that multiplies by itself three times.'], [round(Math.sqrt(V), 1), 'A square root is for area. Volume needs a cube root.'], [round(V / 6, 0), 'Dividing by 6 is for faces. Find the number that multiplied three times gives the volume.']],
+      wrong: [[round(V / 3, 0), 'Dividing the volume by 3 does not give the edge. Find the number that multiplies by itself three times.', 'M_EDGE_AS_VOLUME_OVER_3'], [round(Math.sqrt(V), 1), 'A square root is for area. Volume needs a cube root.', 'M_SQUARE_ROOT_FOR_EDGE'], [round(V / 6, 0), 'Dividing by 6 is for faces. Find the number that multiplied three times gives the volume.', 'M_EDGE_AS_VOLUME_OVER_6']],
       hints: ['Volume of a cube = edge × edge × edge.', 'Which number multiplied by itself three times gives the volume? Use prime factors if needed.'],
       steps: [`edge × edge × edge = ${commas(V)}.`, `The edge is the cube root of ${commas(V)}, which is ${e} cm.`],
     }),

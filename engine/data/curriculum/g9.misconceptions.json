@@ -404,5 +404,621 @@
   "help": "Sort the values first; pick the largest and the smallest.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_CUBE_AS_TRIPLE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Multiplies the number by 3 instead of by itself three times.",
+  "example": {
+   "question": "What is 4 cubed?",
+   "wrong_answer": "12",
+   "correct_answer": "64"
+  },
+  "cause": "Reads the small 3 as \"times 3\".",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "The small 3 counts factors: 4 x 4 x 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_SQUARE_AS_DOUBLE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Doubles the number when squaring it on the way to the cube.",
+  "example": {
+   "question": "1.3 x 1.3",
+   "wrong_answer": "2.6",
+   "correct_answer": "1.69"
+  },
+  "cause": "Adds the number to itself.",
+  "reveals": "The answer 2.6 as a wrong option, with a reason that names the idea.",
+  "help": "Squaring is multiplying by itself, not adding.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_NEGATIVE_CUBE_POSITIVE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Gives a positive cube for a negative number.",
+  "example": {
+   "question": "(-3) cubed",
+   "wrong_answer": "27",
+   "correct_answer": "-27"
+  },
+  "cause": "Remembers that two negatives make a positive and stops there.",
+  "reveals": "The answer 27 as a wrong option, with a reason that names the idea.",
+  "help": "Two negatives give a positive, and the third makes it negative again: (-3)(-3)(-3) = -27.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_TIMES_TWO_NOT_N": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Multiplies the square by 2 instead of by the number again.",
+  "example": {
+   "question": "1.2 squared is 1.44. Now find 1.2 cubed.",
+   "wrong_answer": "2.88",
+   "correct_answer": "1.728"
+  },
+  "cause": "Thinks the third step doubles.",
+  "reveals": "The answer 2.88 as a wrong option, with a reason that names the idea.",
+  "help": "Each step multiplies by the same number: 1.44 x 1.2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_SQUARE_AS_CUBE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Takes a square number for a cube number.",
+  "example": {
+   "question": "Which is a cube number: 81, 100, 125?",
+   "wrong_answer": "81",
+   "correct_answer": "125"
+  },
+  "cause": "Knows square numbers better and mixes the two.",
+  "reveals": "The answer 81 as a wrong option, with a reason that names the idea.",
+  "help": "A cube is three equal factors: 5 x 5 x 5 = 125. 81 = 9 x 9 has no three equal factors.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_MULTIPLE_OF_THREE_AS_CUBE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Thinks a multiple of 3 is a cube number.",
+  "example": {
+   "question": "Is 45 a cube number?",
+   "wrong_answer": "Yes, it is in the 3 times table",
+   "correct_answer": "No"
+  },
+  "cause": "Links the cube sign 3 with the 3 times table.",
+  "reveals": "The answer Yes, it is in the 3 times table as a wrong option, with a reason that names the idea.",
+  "help": "A cube is a number times itself three times; test 3 x 3 x 3 = 27 and 4 x 4 x 4 = 64.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_NEAR_CUBE_ACCEPTED": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "error": "Accepts a number one more or one less than a cube as a cube.",
+  "example": {
+   "question": "Is 126 a cube number?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No (125 is)"
+  },
+  "cause": "Checks roughly, not exactly.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Multiply the nearest root three times and compare exactly.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_NEIGHBOUR_COLUMN_READ": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE",
+  "error": "Reads the column next to the right one.",
+  "example": {
+   "question": "Table cube of 2.37: row 2.3, column 7.",
+   "wrong_answer": "the value in column 6",
+   "correct_answer": "the value in column 7"
+  },
+  "cause": "Loses place in a crowded table.",
+  "reveals": "The answer the value in column 6 as a wrong option, with a reason that names the idea.",
+  "help": "Put a ruler under the row and a finger on the column heading.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_ROW_ABOVE_READ": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE",
+  "error": "Reads the row above or below the right one.",
+  "example": {
+   "question": "Table cube of 2.37: which row?",
+   "wrong_answer": "2.2",
+   "correct_answer": "2.3"
+  },
+  "cause": "Moves to the wrong row while finding the column.",
+  "reveals": "The answer 2.2 as a wrong option, with a reason that names the idea.",
+  "help": "The row is the first two digits; read along that row only.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_TABLE_SCALED_ONCE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE",
+  "error": "Moves the decimal point once for a factor of 10 instead of three times.",
+  "example": {
+   "question": "2.37 cubed is 13.31. Find 23.7 cubed.",
+   "wrong_answer": "133.1",
+   "correct_answer": "13,310"
+  },
+  "cause": "Treats the cube like the number itself.",
+  "reveals": "The answer 133.1 as a wrong option, with a reason that names the idea.",
+  "help": "Ten times the number is 10 x 10 x 10 times the cube.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_TABLE_NOT_ADJUSTED": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE",
+  "error": "Gives the table value for a number outside 1 to 10 without adjusting.",
+  "example": {
+   "question": "Find 23.7 cubed from the table.",
+   "wrong_answer": "13.31",
+   "correct_answer": "13,310"
+  },
+  "cause": "Reads the table and stops.",
+  "reveals": "The answer 13.31 as a wrong option, with a reason that names the idea.",
+  "help": "The table is for 2.37; 23.7 is ten times that, so multiply by 1,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_CUBE_AS_TRIPLE_TABLE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE",
+  "error": "Multiplies the number by 3 instead of reading the table.",
+  "example": {
+   "question": "Find 2.37 cubed.",
+   "wrong_answer": "7.11",
+   "correct_answer": "13.31"
+  },
+  "cause": "Reads the small 3 as times 3.",
+  "reveals": "The answer 7.11 as a wrong option, with a reason that names the idea.",
+  "help": "A cube is three equal factors; use the table of cubes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_WHOLE_GROUP_TAKEN": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS",
+  "error": "Takes a whole group of three primes instead of one prime from it.",
+  "example": {
+   "question": "1,000 = (2x2x2)(5x5x5). Cube root?",
+   "wrong_answer": "1,000",
+   "correct_answer": "10"
+  },
+  "cause": "Thinks the group itself is the part of the root.",
+  "reveals": "The answer 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "One prime from each group of three: 2 x 5 = 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_ROOT_PRIMES_ADDED": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS",
+  "error": "Adds the primes taken from each group instead of multiplying them.",
+  "example": {
+   "question": "216 = (2x2x2)(3x3x3). Cube root?",
+   "wrong_answer": "5",
+   "correct_answer": "6"
+  },
+  "cause": "Combines the numbers by adding.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "The root is a product: 2 x 3 = 6. Check: 6 x 6 x 6 = 216.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_FACTOR_COUNT_OF_ROOT": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS",
+  "error": "Counts the primes of the root instead of the cube.",
+  "example": {
+   "question": "How many 2s are in the prime factors of 1,728 = 12 cubed?",
+   "wrong_answer": "2",
+   "correct_answer": "6"
+  },
+  "cause": "Writes the factors of 12 and forgets the cube has three times as many.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Each prime of the root appears three times in the cube.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_ROOT_AS_DIVIDE_BY_THREE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS",
+  "error": "Divides the number by 3 to find its cube root.",
+  "example": {
+   "question": "Cube root of 27,000?",
+   "wrong_answer": "9,000",
+   "correct_answer": "30"
+  },
+  "cause": "Links \"cube root\" with \"divide by 3\".",
+  "reveals": "The answer 9,000 as a wrong option, with a reason that names the idea.",
+  "help": "The root is the number that, multiplied three times, gives 27,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_PRIMES_USED_ONCE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS",
+  "error": "Multiplies each different prime once, whatever the number of groups.",
+  "example": {
+   "question": "5,832 = 2x2x2x3x3x3x3x3x3. Cube root?",
+   "wrong_answer": "6",
+   "correct_answer": "18"
+  },
+  "cause": "Takes each prime once instead of once per group.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Three 3s make one group; six 3s make two groups: 2 x 3 x 3 = 18.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_EACH_PRIME_ONCE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER",
+  "error": "Multiplies by each prime factor once.",
+  "example": {
+   "question": "Smallest number to multiply 72 = 2x2x2x3x3 by to make a cube?",
+   "wrong_answer": "6",
+   "correct_answer": "3"
+  },
+  "cause": "Thinks every prime needs one more.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Count what each prime is short of three: 2 is complete, 3 needs one more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_MULTIPLY_BY_ITSELF": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER",
+  "error": "Multiplies the number by itself.",
+  "example": {
+   "question": "Smallest multiplier for 72?",
+   "wrong_answer": "72",
+   "correct_answer": "3"
+  },
+  "cause": "Thinks squaring the number makes it a cube.",
+  "reveals": "The answer 72 as a wrong option, with a reason that names the idea.",
+  "help": "Multiplying by itself doubles every count; count the primes instead.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_SQUARE_RULE_USED": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER",
+  "error": "Completes pairs (as for a square) instead of groups of three.",
+  "example": {
+   "question": "Smallest multiplier for 72 to make a cube?",
+   "wrong_answer": "2",
+   "correct_answer": "3"
+  },
+  "cause": "Uses the rule for perfect squares.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "A cube needs groups of three, not pairs.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_MISSING_COUNT_WRONG": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER",
+  "error": "Adds one of each short prime even when two are missing.",
+  "example": {
+   "question": "Smallest multiplier for 50 = 2x5x5?",
+   "wrong_answer": "10",
+   "correct_answer": "20"
+  },
+  "cause": "Adds one of each without counting how many are missing.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "2 needs two more (2 x 2) and 5 needs one more: 4 x 5 = 20.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_POWER_WRONG": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE",
+  "error": "Uses the wrong power of 10 when scaling a cube root.",
+  "example": {
+   "question": "Cube root of 4.5 is 1.651. Cube root of 4,500?",
+   "wrong_answer": "165.1",
+   "correct_answer": "16.51"
+  },
+  "cause": "Moves the decimal point as for the number itself.",
+  "reveals": "The answer 165.1 as a wrong option, with a reason that names the idea.",
+  "help": "The cube root of 1,000 is 10; of 1,000,000 is 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_TABLE_NOT_SCALED": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE",
+  "error": "Gives the table value for a large number without adjusting.",
+  "example": {
+   "question": "Cube root of 4,500 from the table?",
+   "wrong_answer": "1.651",
+   "correct_answer": "16.51"
+  },
+  "cause": "Reads the table and stops.",
+  "reveals": "The answer 1.651 as a wrong option, with a reason that names the idea.",
+  "help": "4,500 = 4.5 x 1,000; multiply the table value by 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_NEIGHBOUR_READ": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE",
+  "error": "Reads the cube root of the number next to the right one.",
+  "example": {
+   "question": "Cube root of 3.46: row 3.4, column 6.",
+   "wrong_answer": "column 5 value",
+   "correct_answer": "column 6 value"
+  },
+  "cause": "Loses place in the table.",
+  "reveals": "The answer column 5 value as a wrong option, with a reason that names the idea.",
+  "help": "Use a ruler and check the column heading.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_ROW_ABOVE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE",
+  "error": "Reads the row above the right one.",
+  "example": {
+   "question": "Cube root of 3.46: which row?",
+   "wrong_answer": "3.3",
+   "correct_answer": "3.4"
+  },
+  "cause": "Moves rows while finding the column.",
+  "reveals": "The answer 3.3 as a wrong option, with a reason that names the idea.",
+  "help": "The first two digits name the row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_AS_THIRD": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE",
+  "error": "Divides the number by 3 instead of finding its cube root.",
+  "example": {
+   "question": "Cube root of 6.4?",
+   "wrong_answer": "2.133",
+   "correct_answer": "1.857"
+  },
+  "cause": "Thinks a cube root is a third.",
+  "reveals": "The answer 2.133 as a wrong option, with a reason that names the idea.",
+  "help": "Check: 2.133 x 2.133 x 2.133 is nearly 10, not 6.4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_VOLUME_NOT_LITRES": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Gives the volume in cubic metres when litres are asked.",
+  "example": {
+   "question": "A cube tank of edge 2 m. Litres?",
+   "wrong_answer": "8",
+   "correct_answer": "8,000"
+  },
+  "cause": "Stops after the volume.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Each cubic metre holds 1,000 litres.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_SURFACE_FOR_VOLUME": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Uses the area of the six faces instead of the volume.",
+  "example": {
+   "question": "A cube tank of edge 2 m holds how many litres?",
+   "wrong_answer": "24,000",
+   "correct_answer": "8,000"
+  },
+  "cause": "Mixes up the outside of a solid with its inside.",
+  "reveals": "The answer 24,000 as a wrong option, with a reason that names the idea.",
+  "help": "Water fills the inside: edge x edge x edge.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_EDGE_TIMES_THREE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Multiplies the edge by 3 for the volume.",
+  "example": {
+   "question": "Volume of a cube of edge 2 m?",
+   "wrong_answer": "6 cubic m",
+   "correct_answer": "8 cubic m"
+  },
+  "cause": "Reads cubed as times 3.",
+  "reveals": "The answer 6 cubic m as a wrong option, with a reason that names the idea.",
+  "help": "Three edges multiplied: 2 x 2 x 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_ONE_EDGE_COUNT": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Counts the small cubes along one edge only.",
+  "example": {
+   "question": "5 cm soap cubes in a 30 cm carton. How many?",
+   "wrong_answer": "6",
+   "correct_answer": "216"
+  },
+  "cause": "Forgets width and height.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "6 along each edge: 6 x 6 x 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_ONE_LAYER_COUNT": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Counts one layer of small cubes only.",
+  "example": {
+   "question": "5 cm soap cubes in a 30 cm carton. How many?",
+   "wrong_answer": "36",
+   "correct_answer": "216"
+  },
+  "cause": "Stops at the bottom layer.",
+  "reveals": "The answer 36 as a wrong option, with a reason that names the idea.",
+  "help": "There are 6 layers of 36.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_DIVIDE_BY_EDGE_ONLY": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Divides the big volume by the small edge instead of the small volume.",
+  "example": {
+   "question": "30 cm carton, 5 cm cubes. How many?",
+   "wrong_answer": "5,400",
+   "correct_answer": "216"
+  },
+  "cause": "Divides by the length given.",
+  "reveals": "The answer 5,400 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the volume of one small cube: 5 x 5 x 5 = 125.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_DOUBLE_EDGE_DOUBLE_VOLUME": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Thinks doubling the edge doubles the volume.",
+  "example": {
+   "question": "Double the edge of a cube box. The volume is multiplied by?",
+   "wrong_answer": "2",
+   "correct_answer": "8"
+  },
+  "cause": "Assumes everything changes in step.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "All three edges double: 2 x 2 x 2 = 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_DOUBLE_EDGE_FOUR_VOLUME": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Thinks doubling the edge makes the volume four times as big.",
+  "example": {
+   "question": "Double the edge of a cube box. The volume is multiplied by?",
+   "wrong_answer": "4",
+   "correct_answer": "8"
+  },
+  "cause": "Uses the rule for areas.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Area uses two edges (x 4); volume uses three (x 8).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_VOLUME_NOT_FROM_EDGE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "error": "Believes the volume of a cube does not change when its edge changes.",
+  "example": {
+   "question": "A cube box has its edge made 3 times as long. What happens to its volume?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "It is 27 times as big"
+  },
+  "cause": "Thinks of the box as the same box with a new label.",
+  "reveals": "The answer Nothing as a wrong option, with a reason that names the idea.",
+  "help": "The volume is worked out from the edge: a longer edge gives a bigger volume.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_SQUARE_KEY": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR",
+  "error": "Presses the square key instead of the cube key.",
+  "example": {
+   "question": "Use a calculator: 3.7 cubed",
+   "wrong_answer": "13.69",
+   "correct_answer": "50.65"
+  },
+  "cause": "Knows the x squared key better.",
+  "reveals": "The answer 13.69 as a wrong option, with a reason that names the idea.",
+  "help": "Look at the small number on the key: 3 for a cube.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_SQUARE_ROOT_KEY": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR",
+  "error": "Presses the square root key for a cube root.",
+  "example": {
+   "question": "Use a calculator: the cube root of 50",
+   "wrong_answer": "7.071",
+   "correct_answer": "3.684"
+  },
+  "cause": "Takes any root key as the right one.",
+  "reveals": "The answer 7.071 as a wrong option, with a reason that names the idea.",
+  "help": "The cube root key has a small 3; check that the answer cubed gives 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_NOT_ROUNDED": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR",
+  "error": "Copies the whole display, or rounds to the wrong number of figures.",
+  "example": {
+   "question": "Cube root of 50 to 4 significant figures",
+   "wrong_answer": "3.684031499",
+   "correct_answer": "3.684"
+  },
+  "cause": "Thinks more digits are more correct.",
+  "reveals": "The answer 3.684031499 as a wrong option, with a reason that names the idea.",
+  "help": "Count 4 figures from the first non-zero digit and round.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_NO_ESTIMATE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR",
+  "error": "Accepts a calculator answer that is far from an estimate, after a keying slip.",
+  "example": {
+   "question": "Cube root of 50",
+   "wrong_answer": "36.84",
+   "correct_answer": "3.684"
+  },
+  "cause": "Trusts the display without checking its size.",
+  "reveals": "The answer 36.84 as a wrong option, with a reason that names the idea.",
+  "help": "27 < 50 < 64, so the cube root is between 3 and 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_NEGATIVE_ROOT_ERROR": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR",
+  "error": "Says the cube root of a negative number cannot be found.",
+  "example": {
+   "question": "Cube root of -125",
+   "wrong_answer": "Error, no answer",
+   "correct_answer": "-5"
+  },
+  "cause": "Uses the rule for square roots, where a negative has no real root.",
+  "reveals": "The answer Error, no answer as a wrong option, with a reason that names the idea.",
+  "help": "(-5) x (-5) x (-5) = -125: a negative number has a negative cube root.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_EDGE_AS_VOLUME_OVER_3": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT",
+  "error": "Divides the volume by 3 to get the edge.",
+  "example": {
+   "question": "A cube box holds 3,375 cubic cm. Edge?",
+   "wrong_answer": "1,125 cm",
+   "correct_answer": "15 cm"
+  },
+  "cause": "Thinks cube root means divide by 3.",
+  "reveals": "The answer 1,125 cm as a wrong option, with a reason that names the idea.",
+  "help": "Find the number that multiplied three times gives 3,375.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_SQUARE_ROOT_FOR_EDGE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT",
+  "error": "Takes the square root of the volume.",
+  "example": {
+   "question": "A cube box holds 3,375 cubic cm. Edge?",
+   "wrong_answer": "58.1 cm",
+   "correct_answer": "15 cm"
+  },
+  "cause": "Uses the square root, as for an area.",
+  "reveals": "The answer 58.1 cm as a wrong option, with a reason that names the idea.",
+  "help": "Volume needs a cube root; check 15 x 15 x 15.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_EDGE_AS_VOLUME_OVER_6": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT",
+  "error": "Divides the volume by 6, the number of faces.",
+  "example": {
+   "question": "A cube box holds 3,375 cubic cm. Edge?",
+   "wrong_answer": "562.5 cm",
+   "correct_answer": "15 cm"
+  },
+  "cause": "Links a cube with its six faces.",
+  "reveals": "The answer 562.5 cm as a wrong option, with a reason that names the idea.",
+  "help": "Faces are for surface area; the edge is the cube root of the volume.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_NO_CHECK_BY_CUBING": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT",
+  "error": "Gives an edge without checking it, so a near guess goes unnoticed.",
+  "example": {
+   "question": "A cube tank holds 2,744 litres = 2.744 cubic m. Edge?",
+   "wrong_answer": "1.5 m",
+   "correct_answer": "1.4 m"
+  },
+  "cause": "Guesses from the size of the number.",
+  "reveals": "The answer 1.5 m as a wrong option, with a reason that names the idea.",
+  "help": "Check: 1.4 x 1.4 x 1.4 = 2.744.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

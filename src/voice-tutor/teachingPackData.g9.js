@@ -797,6 +797,1137 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.NUMBER.INTEGERS",
   "sub_strand_name": "INTEGERS",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION",
+  "key_step": "The child writes the number three times with multiplication signs and multiplies two at a time, keeping track of the sign and the decimal places.",
+  "floor": {
+   "prerequisite": "Squares a number.",
+   "question": "1.3 x 1.3",
+   "answer": "1.69"
+  },
+  "representations": [
+   "a cube built from smaller cubes",
+   "the number written three times",
+   "a list of cube numbers"
+  ],
+  "steps": [
+   "Write the number three times with x between.",
+   "Multiply the first two.",
+   "Multiply that answer by the number again.",
+   "Check the sign and the decimal places."
+  ],
+  "contexts": [
+   "dice in a board game",
+   "cube-shaped water tanks at school",
+   "sugar cubes in a packet"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 2 by 2 by 2 cube made of small cubes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one edge.",
+    "say": "How many small cubes along this edge?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2."
+   },
+   {
+    "beat": "predict",
+    "do": "The child says how many small cubes there are altogether."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2 x 2 x 2 = 8."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_CUBE_AS_TRIPLE",
+    "listen_for": [
+     "12 for 4 cubed"
+    ],
+    "ask": "Does the small 3 mean times 3?",
+    "repair": "It means three fours multiplied.",
+    "error": "Multiplies the number by 3 instead of by itself three times.",
+    "example": {
+     "question": "What is 4 cubed?",
+     "wrong_answer": "12",
+     "correct_answer": "64"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_SQUARE_AS_DOUBLE",
+    "listen_for": [
+     "2.6"
+    ],
+    "ask": "Is 1.3 x 1.3 the same as 1.3 + 1.3?",
+    "repair": "No: 1.69.",
+    "error": "Doubles the number when squaring it on the way to the cube.",
+    "example": {
+     "question": "1.3 x 1.3",
+     "wrong_answer": "2.6",
+     "correct_answer": "1.69"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_NEGATIVE_CUBE_POSITIVE",
+    "listen_for": [
+     "27 for (-3) cubed"
+    ],
+    "ask": "How many negative signs, and what does the third one do?",
+    "repair": "Three negatives: negative.",
+    "error": "Gives a positive cube for a negative number.",
+    "example": {
+     "question": "(-3) cubed",
+     "wrong_answer": "27",
+     "correct_answer": "-27"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_TIMES_TWO_NOT_N",
+    "listen_for": [
+     "2.88"
+    ],
+    "ask": "What do you multiply by each time?",
+    "repair": "The same number: 1.2.",
+    "error": "Multiplies the square by 2 instead of by the number again.",
+    "example": {
+     "question": "1.2 squared is 1.44. Now find 1.2 cubed.",
+     "wrong_answer": "2.88",
+     "correct_answer": "1.728"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_SQUARE_AS_CUBE",
+    "listen_for": [
+     "81"
+    ],
+    "ask": "Can 81 be made of three equal factors?",
+    "repair": "No: 81 = 9 x 9.",
+    "error": "Takes a square number for a cube number.",
+    "example": {
+     "question": "Which is a cube number: 81, 100, 125?",
+     "wrong_answer": "81",
+     "correct_answer": "125"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_MULTIPLE_OF_THREE_AS_CUBE",
+    "listen_for": [
+     "45 is a cube"
+    ],
+    "ask": "Which number times itself three times gives 45?",
+    "repair": "None: 27 and 64 are the cubes near it.",
+    "error": "Thinks a multiple of 3 is a cube number.",
+    "example": {
+     "question": "Is 45 a cube number?",
+     "wrong_answer": "Yes, it is in the 3 times table",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION.M_NEAR_CUBE_ACCEPTED",
+    "listen_for": [
+     "126"
+    ],
+    "ask": "What is 5 x 5 x 5 exactly?",
+    "repair": "125, so 126 is not a cube.",
+    "error": "Accepts a number one more or one less than a cube as a cube.",
+    "example": {
+     "question": "Is 126 a cube number?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No (125 is)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Work out 1.5 cubed.",
+    "answer": "3.375",
+    "shows": "decimal cube"
+   },
+   {
+    "question": "Work out (-5) cubed.",
+    "answer": "-125",
+    "shows": "negative cube"
+   }
+  ],
+  "name": "Work out the cube of a number by multiplication",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE",
+  "key_step": "The child writes a number outside the table as a table number times a power of 10, reads the table, and multiplies by that power of 10 cubed.",
+  "floor": {
+   "prerequisite": "Reads a square from a table.",
+   "question": "Square of 2.4 from the table.",
+   "answer": "5.76"
+  },
+  "representations": [
+   "the printed table of cubes",
+   "a ruler under the row",
+   "number x power of 10"
+  ],
+  "steps": [
+   "Find the row from the first two digits.",
+   "Find the column from the third digit.",
+   "Read the value.",
+   "For a number outside 1 to 10, multiply by the power of 10 three times."
+  ],
+  "contexts": [
+   "a carpenter making cube boxes",
+   "a water tank catalogue",
+   "a mathematics set book table"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a small table: rows 2.2, 2.3, 2.4; columns 5, 6, 7."
+   },
+   {
+    "beat": "point",
+    "do": "Point at row 2.3.",
+    "say": "Which column do we need for 2.37?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 7."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child circles the value."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2.37 cubed = 13.31."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_NEIGHBOUR_COLUMN_READ",
+    "listen_for": [
+     "column 6"
+    ],
+    "ask": "Which digit names the column?",
+    "repair": "The third digit: 7.",
+    "error": "Reads the column next to the right one.",
+    "example": {
+     "question": "Table cube of 2.37: row 2.3, column 7.",
+     "wrong_answer": "the value in column 6",
+     "correct_answer": "the value in column 7"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_ROW_ABOVE_READ",
+    "listen_for": [
+     "row 2.2"
+    ],
+    "ask": "What are the first two digits?",
+    "repair": "2.3.",
+    "error": "Reads the row above or below the right one.",
+    "example": {
+     "question": "Table cube of 2.37: which row?",
+     "wrong_answer": "2.2",
+     "correct_answer": "2.3"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_TABLE_SCALED_ONCE",
+    "listen_for": [
+     "133.1"
+    ],
+    "ask": "How many tens are multiplied when you cube 10?",
+    "repair": "Three: 1,000.",
+    "error": "Moves the decimal point once for a factor of 10 instead of three times.",
+    "example": {
+     "question": "2.37 cubed is 13.31. Find 23.7 cubed.",
+     "wrong_answer": "133.1",
+     "correct_answer": "13,310"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_TABLE_NOT_ADJUSTED",
+    "listen_for": [
+     "13.31 for 23.7 cubed"
+    ],
+    "ask": "Is 23.7 in the table?",
+    "repair": "No; it is 2.37 x 10, so multiply by 1,000.",
+    "error": "Gives the table value for a number outside 1 to 10 without adjusting.",
+    "example": {
+     "question": "Find 23.7 cubed from the table.",
+     "wrong_answer": "13.31",
+     "correct_answer": "13,310"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE.M_CUBE_AS_TRIPLE_TABLE",
+    "listen_for": [
+     "7.11"
+    ],
+    "ask": "Is cubing the same as times 3?",
+    "repair": "No: read the table of cubes.",
+    "error": "Multiplies the number by 3 instead of reading the table.",
+    "example": {
+     "question": "Find 2.37 cubed.",
+     "wrong_answer": "7.11",
+     "correct_answer": "13.31"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "From the table, 3.42 cubed = 40.00. Find 34.2 cubed.",
+    "answer": "40,000",
+    "shows": "scale by 1,000"
+   },
+   {
+    "question": "Which row and column give 1.56 cubed?",
+    "answer": "row 1.5, column 6",
+    "shows": "reading the table"
+   }
+  ],
+  "name": "Find cubes of numbers from tables, including numbers outside 1 to 10",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS",
+  "key_step": "The child rings groups of three equal primes and takes one prime from each ring, then multiplies them.",
+  "floor": {
+   "prerequisite": "Writes a number as a product of primes.",
+   "question": "Prime factors of 72",
+   "answer": "2 x 2 x 2 x 3 x 3"
+  },
+  "representations": [
+   "a factor tree",
+   "rings around groups of three",
+   "a division ladder"
+  ],
+  "steps": [
+   "Write the number as a product of primes.",
+   "Ring groups of three equal primes.",
+   "Take one prime from each ring.",
+   "Multiply them and check by cubing."
+  ],
+  "contexts": [
+   "packing soap cubes",
+   "a cube-shaped grain store",
+   "a cube puzzle"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2,744 = 2 x 2 x 2 x 7 x 7 x 7."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2s.",
+    "say": "How many 2s make one group?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for three."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child rings the two groups."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write one 2 and one 7: 2 x 7 = 14."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_WHOLE_GROUP_TAKEN",
+    "listen_for": [
+     "1,000 for the cube root of 1,000",
+     "took 8 and 125"
+    ],
+    "ask": "How many primes do you take from each ring?",
+    "repair": "One.",
+    "error": "Takes a whole group of three primes instead of one prime from it.",
+    "example": {
+     "question": "1,000 = (2x2x2)(5x5x5). Cube root?",
+     "wrong_answer": "1,000",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_ROOT_PRIMES_ADDED",
+    "listen_for": [
+     "5 for the cube root of 216"
+    ],
+    "ask": "Is 5 x 5 x 5 equal to 216?",
+    "repair": "No: multiply, 2 x 3 = 6.",
+    "error": "Adds the primes taken from each group instead of multiplying them.",
+    "example": {
+     "question": "216 = (2x2x2)(3x3x3). Cube root?",
+     "wrong_answer": "5",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_FACTOR_COUNT_OF_ROOT",
+    "listen_for": [
+     "2 twos"
+    ],
+    "ask": "How many times does each prime of 12 appear in 12 cubed?",
+    "repair": "Three times as many.",
+    "error": "Counts the primes of the root instead of the cube.",
+    "example": {
+     "question": "How many 2s are in the prime factors of 1,728 = 12 cubed?",
+     "wrong_answer": "2",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_ROOT_AS_DIVIDE_BY_THREE",
+    "listen_for": [
+     "9,000"
+    ],
+    "ask": "Is 9,000 cubed near 27,000?",
+    "repair": "Far too big: the root is 30.",
+    "error": "Divides the number by 3 to find its cube root.",
+    "example": {
+     "question": "Cube root of 27,000?",
+     "wrong_answer": "9,000",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS.M_PRIMES_USED_ONCE",
+    "listen_for": [
+     "6 for 5,832"
+    ],
+    "ask": "How many rings of 3s are there?",
+    "repair": "Two: take 3 twice.",
+    "error": "Multiplies each different prime once, whatever the number of groups.",
+    "example": {
+     "question": "5,832 = 2x2x2x3x3x3x3x3x3. Cube root?",
+     "wrong_answer": "6",
+     "correct_answer": "18"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the cube root of 3,375 by prime factors.",
+    "answer": "15",
+    "shows": "groups of three"
+   },
+   {
+    "question": "Find the cube root of 1,728 by prime factors.",
+    "answer": "12",
+    "shows": "groups of three"
+   }
+  ],
+  "name": "Find the cube root of a perfect cube by prime factors",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER",
+  "key_step": "The child counts each prime and writes how many more are needed to reach a multiple of three.",
+  "floor": {
+   "prerequisite": "Writes a number as a product of primes.",
+   "question": "Prime factors of 50",
+   "answer": "2 x 5 x 5"
+  },
+  "representations": [
+   "prime factors with counts",
+   "a table of primes and counts",
+   "rings of three"
+  ],
+  "steps": [
+   "Write the prime factors.",
+   "Count each prime.",
+   "Find how many more each needs for a group of three.",
+   "Multiply the missing primes."
+  ],
+  "contexts": [
+   "stacking bricks into a cube",
+   "packing boxes of chalk",
+   "a cube-shaped cake"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 72 = 2 x 2 x 2 x 3 x 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3s.",
+    "say": "How many more 3s for a group of three?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for one."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write the smallest multiplier is 3: 72 x 3 = 216 = 6 cubed."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_EACH_PRIME_ONCE",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Is the group of 2s already full?",
+    "repair": "Yes: only 3 is needed.",
+    "error": "Multiplies by each prime factor once.",
+    "example": {
+     "question": "Smallest number to multiply 72 = 2x2x2x3x3 by to make a cube?",
+     "wrong_answer": "6",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_MULTIPLY_BY_ITSELF",
+    "listen_for": [
+     "72"
+    ],
+    "ask": "How many 2s and 3s does 72 x 72 have?",
+    "repair": "Six and four: not groups of three.",
+    "error": "Multiplies the number by itself.",
+    "example": {
+     "question": "Smallest multiplier for 72?",
+     "wrong_answer": "72",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_SQUARE_RULE_USED",
+    "listen_for": [
+     "2",
+     "made pairs"
+    ],
+    "ask": "Is a cube made of pairs?",
+    "repair": "Groups of three.",
+    "error": "Completes pairs (as for a square) instead of groups of three.",
+    "example": {
+     "question": "Smallest multiplier for 72 to make a cube?",
+     "wrong_answer": "2",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER.M_MISSING_COUNT_WRONG",
+    "listen_for": [
+     "10 for 50"
+    ],
+    "ask": "How many 2s does 50 have, and how many more for three?",
+    "repair": "Two more: 2 x 2 x 5 = 20.",
+    "error": "Adds one of each short prime even when two are missing.",
+    "example": {
+     "question": "Smallest multiplier for 50 = 2x5x5?",
+     "wrong_answer": "10",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Smallest whole number to multiply 108 by to get a perfect cube?",
+    "answer": "2",
+    "shows": "counting primes"
+   },
+   {
+    "question": "Smallest whole number to multiply 45 by to get a perfect cube?",
+    "answer": "75",
+    "shows": "counting primes"
+   }
+  ],
+  "name": "Find the smallest number that makes a number a perfect cube",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE",
+  "key_step": "The child writes a large number as a table number times 1,000 or 1,000,000, so the cube root is the table value times 10 or 100.",
+  "floor": {
+   "prerequisite": "Reads a square root from a table.",
+   "question": "Square root of 5.6 from the table.",
+   "answer": "2.366"
+  },
+  "representations": [
+   "the table of cube roots",
+   "number x 1,000",
+   "a check by cubing"
+  ],
+  "steps": [
+   "Write the number as a table number times 1,000 or 1,000,000.",
+   "Read the cube root of the table number.",
+   "Multiply by 10 or 100.",
+   "Check by cubing roughly."
+  ],
+  "contexts": [
+   "the edge of a water tank",
+   "a cube box for a parcel",
+   "a stone block"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4,500 = 4.5 x 1,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 1,000.",
+    "say": "What is the cube root of 1,000?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 10."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write cube root of 4,500 = 1.651 x 10 = 16.51."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_POWER_WRONG",
+    "listen_for": [
+     "165.1"
+    ],
+    "ask": "What is the cube root of 1,000?",
+    "repair": "10, not 100.",
+    "error": "Uses the wrong power of 10 when scaling a cube root.",
+    "example": {
+     "question": "Cube root of 4.5 is 1.651. Cube root of 4,500?",
+     "wrong_answer": "165.1",
+     "correct_answer": "16.51"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_TABLE_NOT_SCALED",
+    "listen_for": [
+     "1.651 for 4,500"
+    ],
+    "ask": "Is 1.651 cubed near 4,500?",
+    "repair": "No: multiply by 10.",
+    "error": "Gives the table value for a large number without adjusting.",
+    "example": {
+     "question": "Cube root of 4,500 from the table?",
+     "wrong_answer": "1.651",
+     "correct_answer": "16.51"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_NEIGHBOUR_READ",
+    "listen_for": [
+     "the next column"
+    ],
+    "ask": "Which digit is the column?",
+    "repair": "The third digit.",
+    "error": "Reads the cube root of the number next to the right one.",
+    "example": {
+     "question": "Cube root of 3.46: row 3.4, column 6.",
+     "wrong_answer": "column 5 value",
+     "correct_answer": "column 6 value"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_ROW_ABOVE",
+    "listen_for": [
+     "row 3.3"
+    ],
+    "ask": "What are the first two digits?",
+    "repair": "3.4.",
+    "error": "Reads the row above the right one.",
+    "example": {
+     "question": "Cube root of 3.46: which row?",
+     "wrong_answer": "3.3",
+     "correct_answer": "3.4"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE.M_ROOT_AS_THIRD",
+    "listen_for": [
+     "2.133"
+    ],
+    "ask": "Is 2.133 cubed equal to 6.4?",
+    "repair": "No: read the table.",
+    "error": "Divides the number by 3 instead of finding its cube root.",
+    "example": {
+     "question": "Cube root of 6.4?",
+     "wrong_answer": "2.133",
+     "correct_answer": "1.857"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Cube root of 2.8 is 1.409. Find the cube root of 2,800,000.",
+    "answer": "140.9",
+    "shows": "scale by 100"
+   },
+   {
+    "question": "Cube root of 8.1 is 2.008. Find the cube root of 8,100.",
+    "answer": "20.08",
+    "shows": "scale by 10"
+   }
+  ],
+  "name": "Find cube roots from tables, including numbers outside 1 to 10",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT",
+  "key_step": "The child multiplies the edge three times for the volume, and changes to litres or counts small cubes along each edge before cubing.",
+  "floor": {
+   "prerequisite": "Finds the volume of a cuboid.",
+   "question": "3 cm by 3 cm by 3 cm",
+   "answer": "27 cubic cm"
+  },
+  "representations": [
+   "a model of a tank",
+   "layers of small cubes",
+   "units table m cubed to litres"
+  ],
+  "steps": [
+   "Find the volume: edge x edge x edge.",
+   "Change units if asked (1 m cubed = 1,000 litres).",
+   "For small cubes, count along one edge, then cube.",
+   "Check that the answer makes sense."
+  ],
+  "contexts": [
+   "a school water tank",
+   "soap cubes packed in a carton",
+   "a box made bigger at a jua kali workshop"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a carton with 6 small cubes along each edge."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the bottom layer.",
+    "say": "How many cubes in this layer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 36."
+   },
+   {
+    "beat": "point",
+    "do": "Point up the side.",
+    "say": "How many layers?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 36 x 6 = 216."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_VOLUME_NOT_LITRES",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Is that in litres or cubic metres?",
+    "repair": "Cubic metres: times 1,000.",
+    "error": "Gives the volume in cubic metres when litres are asked.",
+    "example": {
+     "question": "A cube tank of edge 2 m. Litres?",
+     "wrong_answer": "8",
+     "correct_answer": "8,000"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_SURFACE_FOR_VOLUME",
+    "listen_for": [
+     "24,000"
+    ],
+    "ask": "Does water cover the outside or fill the inside?",
+    "repair": "The inside: volume.",
+    "error": "Uses the area of the six faces instead of the volume.",
+    "example": {
+     "question": "A cube tank of edge 2 m holds how many litres?",
+     "wrong_answer": "24,000",
+     "correct_answer": "8,000"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_EDGE_TIMES_THREE",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Is cubing the same as times 3?",
+    "repair": "No: 2 x 2 x 2.",
+    "error": "Multiplies the edge by 3 for the volume.",
+    "example": {
+     "question": "Volume of a cube of edge 2 m?",
+     "wrong_answer": "6 cubic m",
+     "correct_answer": "8 cubic m"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_ONE_EDGE_COUNT",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Is that one row or the whole carton?",
+    "repair": "One row: cube it.",
+    "error": "Counts the small cubes along one edge only.",
+    "example": {
+     "question": "5 cm soap cubes in a 30 cm carton. How many?",
+     "wrong_answer": "6",
+     "correct_answer": "216"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_ONE_LAYER_COUNT",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "How many layers?",
+    "repair": "6 layers.",
+    "error": "Counts one layer of small cubes only.",
+    "example": {
+     "question": "5 cm soap cubes in a 30 cm carton. How many?",
+     "wrong_answer": "36",
+     "correct_answer": "216"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_DIVIDE_BY_EDGE_ONLY",
+    "listen_for": [
+     "5,400"
+    ],
+    "ask": "What is the volume of one soap cube?",
+    "repair": "125: divide by that.",
+    "error": "Divides the big volume by the small edge instead of the small volume.",
+    "example": {
+     "question": "30 cm carton, 5 cm cubes. How many?",
+     "wrong_answer": "5,400",
+     "correct_answer": "216"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_DOUBLE_EDGE_DOUBLE_VOLUME",
+    "listen_for": [
+     "2 times"
+    ],
+    "ask": "If each edge doubles, how many small boxes fit inside the big one?",
+    "repair": "8.",
+    "error": "Thinks doubling the edge doubles the volume.",
+    "example": {
+     "question": "Double the edge of a cube box. The volume is multiplied by?",
+     "wrong_answer": "2",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_DOUBLE_EDGE_FOUR_VOLUME",
+    "listen_for": [
+     "4 times"
+    ],
+    "ask": "Is 4 for a face or for the box?",
+    "repair": "A face: the box is 8.",
+    "error": "Thinks doubling the edge makes the volume four times as big.",
+    "example": {
+     "question": "Double the edge of a cube box. The volume is multiplied by?",
+     "wrong_answer": "4",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT.M_VOLUME_NOT_FROM_EDGE",
+    "listen_for": [
+     "volume stays the same"
+    ],
+    "ask": "If the edge grows, can more small cubes fit inside?",
+    "repair": "Yes: the volume grows.",
+    "error": "Believes the volume of a cube does not change when its edge changes.",
+    "example": {
+     "question": "A cube box has its edge made 3 times as long. What happens to its volume?",
+     "wrong_answer": "Nothing",
+     "correct_answer": "It is 27 times as big"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cube tank has edge 1.5 m. How many litres does it hold?",
+    "answer": "3,375 litres",
+    "shows": "cube then litres"
+   },
+   {
+    "question": "How many 4 cm cubes fit in a cube box of edge 20 cm?",
+    "answer": "125",
+    "shows": "count along an edge then cube"
+   }
+  ],
+  "name": "Use cubes for the volume of cube-shaped tanks, cartons and boxes",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT",
+  "key_step": "The child takes the cube root of the volume to get the edge, and checks by cubing.",
+  "floor": {
+   "prerequisite": "Finds a cube root by factors.",
+   "question": "Cube root of 3,375",
+   "answer": "15"
+  },
+  "representations": [
+   "a cube box",
+   "prime factors",
+   "a check by cubing"
+  ],
+  "steps": [
+   "Write the volume.",
+   "Find its cube root by factors or a table.",
+   "Give the edge with its unit.",
+   "Check: edge x edge x edge."
+  ],
+  "contexts": [
+   "a rice box at a shop",
+   "a cube-shaped tank of 2,744 litres",
+   "a gift box"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write volume = 3,375 cubic cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3,375.",
+    "say": "Which number times itself three times gives this?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child guesses between 10 and 20."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 15 x 15 x 15 = 3,375, so the edge is 15 cm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_EDGE_AS_VOLUME_OVER_3",
+    "listen_for": [
+     "1,125"
+    ],
+    "ask": "Is 1,125 cm a sensible edge for a rice box?",
+    "repair": "No: take the cube root.",
+    "error": "Divides the volume by 3 to get the edge.",
+    "example": {
+     "question": "A cube box holds 3,375 cubic cm. Edge?",
+     "wrong_answer": "1,125 cm",
+     "correct_answer": "15 cm"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_SQUARE_ROOT_FOR_EDGE",
+    "listen_for": [
+     "58.1"
+    ],
+    "ask": "Is volume an area?",
+    "repair": "No: cube root.",
+    "error": "Takes the square root of the volume.",
+    "example": {
+     "question": "A cube box holds 3,375 cubic cm. Edge?",
+     "wrong_answer": "58.1 cm",
+     "correct_answer": "15 cm"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_EDGE_AS_VOLUME_OVER_6",
+    "listen_for": [
+     "562.5"
+    ],
+    "ask": "Are the faces needed here?",
+    "repair": "No: cube root.",
+    "error": "Divides the volume by 6, the number of faces.",
+    "example": {
+     "question": "A cube box holds 3,375 cubic cm. Edge?",
+     "wrong_answer": "562.5 cm",
+     "correct_answer": "15 cm"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT.M_NO_CHECK_BY_CUBING",
+    "listen_for": [
+     "1.5 m"
+    ],
+    "ask": "What is 1.5 x 1.5 x 1.5?",
+    "repair": "3.375, too big: try 1.4.",
+    "error": "Gives an edge without checking it, so a near guess goes unnoticed.",
+    "example": {
+     "question": "A cube tank holds 2,744 litres = 2.744 cubic m. Edge?",
+     "wrong_answer": "1.5 m",
+     "correct_answer": "1.4 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cube box holds 1,331 cubic cm. Edge?",
+    "answer": "11 cm",
+    "shows": "cube root"
+   },
+   {
+    "question": "A cube tank holds 8,000 litres. Edge in metres?",
+    "answer": "2 m",
+    "shows": "litres to cubic metres, then cube root"
+   }
+  ],
+  "name": "Use cube roots to find the edge of a cube from its volume",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR": {
+  "skill": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR",
+  "key_step": "The child makes an estimate from the cube numbers first, then keys in, rounds, and compares with the estimate.",
+  "floor": {
+   "prerequisite": "Squares a number on a calculator.",
+   "question": "3.7 squared",
+   "answer": "13.69"
+  },
+  "representations": [
+   "a calculator display",
+   "a list of cube numbers for estimates",
+   "rounding to significant figures"
+  ],
+  "steps": [
+   "Estimate from the cube numbers you know.",
+   "Choose the right key: cube or cube root.",
+   "Round the display as asked.",
+   "Compare with the estimate."
+  ],
+  "contexts": [
+   "checking a carpenter's box sizes",
+   "a tank volume in a hardware catalogue",
+   "a science practical"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 27 < 50 < 64."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 27 and 64.",
+    "say": "So the cube root of 50 is between which two whole numbers?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3 and 4."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write the calculator gives 3.684."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_SQUARE_KEY",
+    "listen_for": [
+     "13.69"
+    ],
+    "ask": "Which small number is on the key you pressed?",
+    "repair": "2: use the cube key.",
+    "error": "Presses the square key instead of the cube key.",
+    "example": {
+     "question": "Use a calculator: 3.7 cubed",
+     "wrong_answer": "13.69",
+     "correct_answer": "50.65"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_SQUARE_ROOT_KEY",
+    "listen_for": [
+     "7.071"
+    ],
+    "ask": "Is 7.071 cubed near 50?",
+    "repair": "No: use the cube root key.",
+    "error": "Presses the square root key for a cube root.",
+    "example": {
+     "question": "Use a calculator: the cube root of 50",
+     "wrong_answer": "7.071",
+     "correct_answer": "3.684"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_NOT_ROUNDED",
+    "listen_for": [
+     "all the digits"
+    ],
+    "ask": "How many significant figures were asked?",
+    "repair": "Four: 3.684.",
+    "error": "Copies the whole display, or rounds to the wrong number of figures.",
+    "example": {
+     "question": "Cube root of 50 to 4 significant figures",
+     "wrong_answer": "3.684031499",
+     "correct_answer": "3.684"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_NO_ESTIMATE",
+    "listen_for": [
+     "36.84"
+    ],
+    "ask": "Is the answer between 3 and 4?",
+    "repair": "No: key it in again.",
+    "error": "Accepts a calculator answer that is far from an estimate, after a keying slip.",
+    "example": {
+     "question": "Cube root of 50",
+     "wrong_answer": "36.84",
+     "correct_answer": "3.684"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR.M_CALC_NEGATIVE_ROOT_ERROR",
+    "listen_for": [
+     "no answer for a negative"
+    ],
+    "ask": "What is (-5) cubed?",
+    "repair": "-125, so the cube root is -5.",
+    "error": "Says the cube root of a negative number cannot be found.",
+    "example": {
+     "question": "Cube root of -125",
+     "wrong_answer": "Error, no answer",
+     "correct_answer": "-5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Use a calculator: the cube root of 200 to 4 significant figures.",
+    "answer": "5.848",
+    "shows": "key and round"
+   },
+   {
+    "question": "Between which two whole numbers is the cube root of 90?",
+    "answer": "4 and 5",
+    "shows": "estimate"
+   }
+  ],
+  "name": "Work out cubes and cube roots on a calculator and check the answer",
+  "sub_strand": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",
+  "sub_strand_name": "CUBES AND CUBE ROOTS",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

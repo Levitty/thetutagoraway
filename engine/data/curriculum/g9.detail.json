@@ -174,6 +174,78 @@
     "how far below"
    ],
    "mastery": "The child reads altitudes or temperatures from a table, picks the highest and the lowest, and finds the gap as highest minus lowest with signs: 450 - (-120) = 570 m, counting the part below zero and the part above it."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION": {
+   "forms": [
+    "work out the cube",
+    "which is a cube number",
+    "cube of a decimal",
+    "find the mistake"
+   ],
+   "mastery": "The child works out the cube of a whole number, a negative number, a decimal or a fraction by multiplying it by itself three times (2.5 x 2.5 x 2.5 = 15.625, (-4) x (-4) x (-4) = -64, (2/3) cubed = 8/27), and recognises the cube numbers up to 1,000."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE": {
+   "forms": [
+    "read from the table",
+    "row and column",
+    "use the table for a larger number",
+    "to 4 significant figures"
+   ],
+   "mastery": "The child reads the cube of a number such as 2.37 from the table (row 2.3, column 7) to 4 significant figures, and for a number outside 1 to 10 writes it as a number from the table times a power of 10 and multiplies the table value by that power cubed: 23.7 cubed = 2.37 cubed x 1,000."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS": {
+   "forms": [
+    "cube root by prime factors",
+    "complete the working",
+    "how many 2s",
+    "find the mistake"
+   ],
+   "mastery": "The child writes a perfect cube as a product of prime factors, puts the factors in groups of three equal primes, takes one prime from each group and multiplies them: 2,744 = (2x2x2)(7x7x7), so the cube root is 2 x 7 = 14."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER": {
+   "forms": [
+    "smallest number to multiply by",
+    "make it a perfect cube",
+    "which factors are missing",
+    "smallest divisor"
+   ],
+   "mastery": "The child writes the number in prime factors, counts how many of each prime are short of a full group of three, and multiplies those missing primes: 72 = 2 x 2 x 2 x 3 x 3 needs one more 3, so the smallest multiplier is 3 and 216 = 6 cubed."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE": {
+   "forms": [
+    "read the cube root",
+    "row and column",
+    "cube root of a large number",
+    "which power of 10"
+   ],
+   "mastery": "The child reads the cube root of a number from 1 to 10 from the table, and for a larger number writes it as a number from the table times 1,000 or 1,000,000 so the cube root is the table value times 10 or 100: the cube root of 4,500 = cube root of 4.5 x 10."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT": {
+   "forms": [
+    "how many litres",
+    "how many small cubes fit",
+    "what happens to the volume",
+    "why is this wrong"
+   ],
+   "mastery": "The child finds the volume of a cube from its edge (edge x edge x edge), changes m cubed to litres (1 m cubed = 1,000 litres), finds how many small cubes fill a large one (cubes along an edge, cubed), and explains that doubling the edge makes the volume 8 times as big."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT": {
+   "forms": [
+    "length of one edge",
+    "side of the tank",
+    "what size box",
+    "check your answer"
+   ],
+   "mastery": "The child finds the edge of a cube-shaped box or tank from its volume by taking the cube root (a box holding 3,375 cubic cm has edge 15 cm), by factors or a table, and checks by cubing the answer."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR": {
+   "forms": [
+    "use a calculator",
+    "which key",
+    "round the display",
+    "is the answer sensible"
+   ],
+   "mastery": "The child uses the cube key (x cubed or x^y with 3) and the cube root key on a calculator, puts a negative number in brackets, rounds the display to the accuracy asked (4 significant figures, 2 decimal places), and checks the answer against an estimate: the cube root of 50 is between 3 and 4 because 27 < 50 < 64."
   }
  }
 }
