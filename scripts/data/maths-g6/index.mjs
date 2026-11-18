@@ -1,0 +1,8 @@
+// The Grade 6 Maths depth pass (18 Nov 2026), one file per sub-strand: more prerequisites, more misconceptions and the
+// teaching pack, merged by scripts/build-maths-g6.mjs on top of scripts/data/maths-g6-*.mjs. Add a file here when a sub-strand is done.
+// Each file exports { key, pre, mis, pack, packNotes }:
+//   pre    { SKILL: [[ref, strength, reason], ...] }  extra prerequisites ('G5:SUB.SKILL' or 'G6:SUB.SKILL')
+//   mis    more misconceptions (mi from ../maths-g6-lib.mjs)
+//   pack   { SKILL: pk(...) }  the teaching pack entry, covering every misconception of the skill
+import * as whole from './whole-numbers.mjs';
+export const DEPTH = [whole];

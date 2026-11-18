@@ -8,6 +8,8 @@ import { SKILLS_G6, OUTCOMES_G6, SUBSTRANDS_G6, horebOf6 } from '../src/ai-tutor
 import { SKILLS_G5 } from '../src/ai-tutor/content/curriculumMap.g5.js';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 import { formText, clusterForms } from '../engine/scripts/content_measures.mjs';
+import { buildPack, renderData, loadSources } from '../scripts/build-teaching-pack.mjs';
+import { teachingFor } from '../src/voice-tutor/teachingPack.js';
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/mathematics/g6.json', import.meta.url), 'utf8'));
 const lib = JSON.parse(readFileSync(new URL('../engine/data/curriculum/g6.misconceptions.json', import.meta.url), 'utf8'));
@@ -88,4 +90,33 @@ test('Grade 6 families stay off for children until a teacher signs them off', ()
   setFamilyMode('reviewed');
   for (const f of mine.filter(x => !x.core)) assert.ok(f.reviewed === true ? isOn(f) : !isOn(f), `${f.id} is on for children without a sign-off`);
   assert.equal(mine.filter(f => f.reviewed === true).length, 0, 'no Grade 6 family is signed yet');
+});
+
+// The depth pass (18 Nov 2026, to the Grade 7 standard): a sub-strand is deepened once it has a teaching pack file.
+const packs = loadSources(6);
+const deepened = source.sub_strands.filter(s => packs.some(p => p.sub_strand === s.code));
+
+test('a deepened sub-strand gives every skill two prerequisites and four misconceptions, each with its own example', () => {
+  assert.ok(deepened.length >= 1);
+  for (const s of deepened) for (const k of s.skills) {
+    assert.ok(k.prerequisites.length >= 2 && k.prerequisites.every(p => p.reason.length > 10), `${k.code}: prerequisites`);
+    assert.equal(new Set(k.prerequisites.map(p => p.requires)).size, k.prerequisites.length, `${k.code}: a prerequisite twice`);
+    const ms = s.misconceptions.filter(m => m.skill === k.code);
+    assert.ok(ms.length >= 4, `${k.code}: only ${ms.length} misconceptions`);
+    for (const m of ms) assert.notEqual(m.example.wrong_answer, m.example.correct_answer, `${m.code}: the wrong answer is the right one`);
+  }
+});
+
+test('the Grade 6 teaching pack covers every skill and every library misconception of a deepened sub-strand', () => {
+  const packed = new Set(packs.flatMap(s => s.skills.flatMap(e => e.misconceptions.map(m => m.code))));
+  for (const s of deepened) {
+    for (const k of s.skills) assert.ok(teachingFor(k.code), `no pack entry for ${k.code}`);
+    for (const m of s.misconceptions) assert.ok(packed.has(m.code), `no reveal question and repair for ${m.code}`);
+  }
+  for (const p of packs) for (const e of p.skills) assert.ok(SKILLS_G6[e.skill], `pack entry for unknown skill ${e.skill}`);
+});
+
+test('the generated Grade 6 teaching pack matches the JSON (run node scripts/build-teaching-pack.mjs)', () => {
+  const onDisk = readFileSync(new URL('../src/voice-tutor/teachingPackData.g6.js', import.meta.url), 'utf8');
+  assert.equal(onDisk, renderData(buildPack(6), 6), 'teachingPackData.g6.js is stale');
 });

@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026)",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: NUMBER.MULTIPLICATION, NUMBER.DIVISION, NUMBER.FRACTIONS, NUMBER.DECIMALS, NUMBER.INEQUALITIES, MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 139,
-  "misconceptions": 187
+  "prerequisites": 145,
+  "misconceptions": 204
  },
  "sub_strands": [
   {
@@ -143,6 +143,13 @@
        "strength": "essential",
        "reason": "Grade 6 extends place value from hundreds of thousands to millions.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading a number in its groups of three (millions, thousands, ones) is how each place is found.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -210,6 +217,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "The groups of three digits after the millions depend on place value.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 5 writes numbers given in words in figures up to hundreds of thousands; Grade 6 adds the millions group.",
        "status": "proposed"
       }
      ],
@@ -317,6 +331,13 @@
        "strength": "essential",
        "reason": "Rounding to the nearest thousand starts in Grade 5.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The same rule one place along: look at the digit to the right of the rounding place.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -348,6 +369,20 @@
        "strength": "essential",
        "reason": "Squaring a two-digit number is a two-digit by two-digit multiplication.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The squares of 1 to 12 are multiplication facts.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The area of a square is the picture of a square number.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -378,6 +413,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "The square root undoes squaring.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.MULT_DIV_FACT_FAMILIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Finding a square root is asking a multiplication fact backwards.",
        "status": "proposed"
       }
      ],
@@ -622,6 +664,261 @@
      "cause": "Does not pair the zeros: two zeros in a square become one zero in the root.",
      "reveals": "Roots of 400, 900 and 6,400 with distractors ten times larger.",
      "help": "Square a few multiples of ten and notice the pattern of zeros.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS.M_THOUSANDS_NAMES_SWAPPED",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS",
+     "error": "Mixes up the ten thousands and the hundred thousands places, so names the digit beside the one asked for.",
+     "example": {
+      "question": "In 5,374,128 which digit is in the ten thousands place?",
+      "wrong_answer": "3",
+      "correct_answer": "7"
+     },
+     "cause": "Both place names end in \"thousands\"; the child counts inside the thousands group from the left (hundred, ten) the wrong way.",
+     "reveals": "An option that is the digit one place to the left of the right one.",
+     "help": "Label the thousands group on a chart from the right: thousands, ten thousands, hundred thousands, and point at each while saying it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS.M_GROUP_READ_ALONE",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS",
+     "error": "Reads a group of three digits as a number on its own, so names the place inside the group and leaves out \"thousand\".",
+     "example": {
+      "question": "In 4,206,315 which place is the 2 in?",
+      "wrong_answer": "hundreds (206 read as its own number)",
+      "correct_answer": "hundred thousands"
+     },
+     "cause": "Sees the commas as breaks between separate numbers and forgets the name of the group.",
+     "reveals": "The place name without \"thousand\" (hundreds, tens) as an option.",
+     "help": "Read the whole number aloud first: four million, two hundred and six thousand, ... The 2 is in the \"two hundred thousand\" part.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS.M_REST_OF_NUMBER",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS",
+     "error": "Gives the value of the number from the digit to the end, instead of the digit times its place.",
+     "example": {
+      "question": "What is the total value of 7 in 4,370,215?",
+      "wrong_answer": "70,215",
+      "correct_answer": "70,000"
+     },
+     "cause": "Reads \"the value from the 7 onwards\" off the number.",
+     "reveals": "The tail of the number (the digit and every digit after it) as an option.",
+     "help": "The total value of one digit has only that digit and zeros: 7 ten thousands is 70,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS.M_EXPANDED_PLACE_SLIP",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS",
+     "error": "Skips a zero when writing expanded form, so the digits after it get a term one place too small.",
+     "example": {
+      "question": "Write 3,050,600 in expanded form.",
+      "wrong_answer": "3,000,000 + 5,000 + 600",
+      "correct_answer": "3,000,000 + 50,000 + 600"
+     },
+     "cause": "Counts the zeros left in the number instead of the place of each digit.",
+     "reveals": "An expanded form whose sum is not the number.",
+     "help": "Add the terms back up: does 3,000,000 + 5,000 + 600 give 3,050,600? Fix the term that is wrong.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS.M_PARTS_WRITTEN_IN_FULL",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS",
+     "error": "Writes every part in full with all its zeros, one after the other.",
+     "example": {
+      "question": "4 million and 6 thousand in symbols?",
+      "wrong_answer": "40000006000 (4,000,000 then 6,000 written side by side)",
+      "correct_answer": "4,006,000"
+     },
+     "cause": "Writes each spoken part as a number and joins the pieces instead of placing them in their groups.",
+     "reveals": "A string far longer than seven digits as an option.",
+     "help": "Draw the three groups as boxes of three: millions, thousands, ones. Each part goes in its own box; empty places are 0.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS.M_COMMAS_FROM_LEFT",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS",
+     "error": "Puts the commas counting from the left, so the groups are wrong.",
+     "example": {
+      "question": "Write five million, forty thousand and eight in figures, with commas.",
+      "wrong_answer": "504,000,8",
+      "correct_answer": "5,040,008"
+     },
+     "cause": "Starts grouping where the writing starts.",
+     "reveals": "A number with its commas in the wrong places.",
+     "help": "Put the commas from the ones end: count three digits from the right, comma, three more, comma.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K.M_ZERO_SAID_AS_WORD",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K",
+     "error": "Reads a zero digit aloud as \"zero\" or \"nought\" in the words.",
+     "example": {
+      "question": "Write 40,506 in words.",
+      "wrong_answer": "forty thousand, five hundred and zero six",
+      "correct_answer": "forty thousand, five hundred and six"
+     },
+     "cause": "Reads every digit, zero included, as if spelling the number digit by digit.",
+     "reveals": "Words with \"zero\" in them as an option.",
+     "help": "A zero is an empty place: it is not said. Cover the 0 and read what is left in each group.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K.M_WORDS_WRITTEN_IN_PIECES",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K",
+     "error": "Writes each word part as figures and joins them, so the number has too many digits.",
+     "example": {
+      "question": "Write \"sixty thousand and five\" in figures.",
+      "wrong_answer": "600005 (60000 then 5)",
+      "correct_answer": "60,005"
+     },
+     "cause": "Writes \"sixty thousand\" as 60000 and puts the 5 after it instead of in the ones place.",
+     "reveals": "A six-digit answer for a five-digit number.",
+     "help": "Draw five boxes for the places; \"sixty thousand\" fills the first two, the 5 goes in the ones box, zeros fill the rest.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K.M_SYMBOL_POINTS_TO_BIGGER",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K",
+     "error": "Uses < and > the wrong way round, reading the symbol as pointing at the bigger number.",
+     "example": {
+      "question": "Put < or > : 45,302 __ 45,203",
+      "wrong_answer": "<",
+      "correct_answer": ">"
+     },
+     "cause": "Remembers that the symbol \"points\" but not which end goes to the bigger number.",
+     "reveals": "The reversed symbol as an option.",
+     "help": "The wide open end faces the bigger number; read 45,302 > 45,203 as \"is greater than\".",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K.M_ONES_DIGIT_DECIDES",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K",
+     "error": "When the first digits are the same, decides by the last digit instead of the next place from the left.",
+     "example": {
+      "question": "Which is larger: 62,815 or 62,951?",
+      "wrong_answer": "62,815 (it ends in 5, which is more than 1)",
+      "correct_answer": "62,951"
+     },
+     "cause": "Looks for any digit that is bigger instead of comparing place by place.",
+     "reveals": "The number with the bigger ones digit as an option.",
+     "help": "Go from the left one place at a time and stop at the first place that is different: here the hundreds, 8 against 9.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND.M_ROUND_ZEROS_DROPPED",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
+     "error": "Rounds correctly but writes only the number of thousands.",
+     "example": {
+      "question": "Round 38,700 to the nearest thousand.",
+      "wrong_answer": "39",
+      "correct_answer": "39,000"
+     },
+     "cause": "Thinks the answer is \"how many thousands\" rather than a number of the same size.",
+     "reveals": "The number of thousands without its zeros as an option.",
+     "help": "A rounded number is still about the same size: 38,700 is about 39,000, not 39.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND.M_NINE_ROUNDED_NO_CARRY",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
+     "error": "Rounds a 9 in the thousands place up to 0 without adding 1 to the ten thousands.",
+     "example": {
+      "question": "Round 49,600 to the nearest thousand.",
+      "wrong_answer": "40,000",
+      "correct_answer": "50,000"
+     },
+     "cause": "Changes the 9 to 0 as in \"9 + 1 = 10\" but does not carry the 1.",
+     "reveals": "The answer with the carry lost as an option.",
+     "help": "Mark the number line from 49,000 to 50,000: 49,600 is nearer to 50,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND.M_ROUND_IN_STEPS",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
+     "error": "Rounds the number one place at a time from the right, so a number just under halfway is rounded up.",
+     "example": {
+      "question": "Round 67,449 to the nearest thousand.",
+      "wrong_answer": "68,000 (67,449 to 67,450 to 67,500 to 68,000)",
+      "correct_answer": "67,000"
+     },
+     "cause": "Believes rounding is done step by step, each step feeding the next.",
+     "reveals": "A rounded-up answer for a number whose hundreds digit is 4.",
+     "help": "Look only at the hundreds digit once: 4 is less than 5, so round down.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100.M_SQUARE_DIGITS_SEPARATELY",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100",
+     "error": "Squares each digit on its own and writes the results side by side.",
+     "example": {
+      "question": "What is 23 squared?",
+      "wrong_answer": "49 (2 squared is 4, 3 squared is 9)",
+      "correct_answer": "529"
+     },
+     "cause": "Treats squaring like a rule done digit by digit.",
+     "reveals": "The digit-by-digit squares as an option.",
+     "help": "Write 23 x 23 and work it out; check that the answer is between 20 x 20 = 400 and 30 x 30 = 900.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100.M_TENS_SQUARED_PLUS_ONES_SQUARED",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100",
+     "error": "Squares the tens and the ones and adds them, missing the two middle parts.",
+     "example": {
+      "question": "What is 21 squared?",
+      "wrong_answer": "401 (400 + 1)",
+      "correct_answer": "441"
+     },
+     "cause": "Splits 21 into 20 + 1 and squares each part, as if squaring shared out over adding.",
+     "reveals": "The answer that misses 2 x 20 x 1 as an option.",
+     "help": "Draw the 21 by 21 square split into 20 + 1 each way: there are two strips of 20 as well as the 400 and the 1.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000.M_NEAREST_ROOT_ACCEPTED",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000",
+     "error": "Gives the nearest whole number as the square root of a number that is not a perfect square.",
+     "example": {
+      "question": "Is 50 a perfect square?",
+      "wrong_answer": "Yes, its square root is 7",
+      "correct_answer": "No: 7 x 7 = 49 and 8 x 8 = 64"
+     },
+     "cause": "Does not check the root by squaring it.",
+     "reveals": "A whole-number root for a number that is not a square.",
+     "help": "Always square the root to check: 7 x 7 is 49, not 50.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000.M_SIDE_IS_AREA_OVER_FOUR",
+     "skill": "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000",
+     "error": "Divides the area of a square by 4 to find the side, as if it were the perimeter.",
+     "example": {
+      "question": "A square plot has an area of 144 m2. How long is one side?",
+      "wrong_answer": "36 m (144 divided by 4)",
+      "correct_answer": "12 m"
+     },
+     "cause": "Mixes up the area of a square with its perimeter.",
+     "reveals": "The area divided by 4 as an option.",
+     "help": "The side times itself gives the area: which number times itself is 144?",
      "source": "to be confirmed by a teacher (no source yet)",
      "status": "draft"
     }
