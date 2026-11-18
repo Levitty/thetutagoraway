@@ -968,6 +968,60 @@
     "distance between towns"
    ],
    "mastery": "The child finds the scale from a map and a real distance, adds the legs of a journey before or after scaling, changes cm to km by dividing by 100,000, and scales both lengths of a plot before finding its area: a plan 5 cm by 3 cm at 1 cm to 20 m is a plot of 100 m by 60 m, 6,000 m²."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS": {
+   "forms": [
+    "name the solid",
+    "how many edges",
+    "faces, vertices and edges",
+    "which objects are cylinders"
+   ],
+   "mastery": "The child names cubes, cuboids, cylinders, pyramids and cones from objects around them, counts their faces, edges and vertices, and uses faces + vertices - edges = 2 to find a missing count: a cube has 6 faces, 8 vertices and 12 edges."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS": {
+   "forms": [
+    "does this net fold into a cube",
+    "length of the rectangle in a cylinder net",
+    "sketch the net",
+    "which faces meet"
+   ],
+   "mastery": "The child sketches a net with each face the right shape and size, edges that will meet the same length (the rectangle of a cylinder is as long as the circumference), and decides whether a net folds into the solid: four squares in a row with one square above and one below makes a cube."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET": {
+   "forms": [
+    "surface area from the net",
+    "find the radius from the rectangle",
+    "a bigger cube",
+    "what happens to the area and the volume"
+   ],
+   "mastery": "The child finds the area of each shape in the net and adds them (two circles and a rectangle for a closed cylinder), finds a radius from the rectangle's length when needed, and knows that when edges are k times as long the surface area is k² times and the volume k³ times as big."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES": {
+   "forms": [
+    "volume of the tray",
+    "size of the base",
+    "height after folding",
+    "which sheet gives the bigger box"
+   ],
+   "mastery": "The child works out the length, width and height of the solid a flat sheet folds into (cutting a square of side x from each corner takes 2x off each side and leaves a height of x), and uses them for its volume: a 30 cm by 20 cm sheet with 5 cm squares cut gives a tray of 20 × 10 × 5 = 1,000 cm³."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE": {
+   "forms": [
+    "shortest distance for the ant",
+    "the beetle on the tin",
+    "unfold the faces",
+    "stay on the surface"
+   ],
+   "mastery": "The child unfolds the faces the path crosses into one flat shape, joins the two points with a straight line, and finds its length with Pythagoras (two faces of a box) or as a fraction of the circumference (round a tin): from one side of a tin of radius 7 cm to the opposite point is 22 cm along the rim."
+  },
+  "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS": {
+   "forms": [
+    "hollow or compact",
+    "where do the flaps go",
+    "will the edges meet",
+    "an open box net"
+   ],
+   "mastery": "The child tells a hollow solid (a container, a tin, a box) from a compact one (a brick, a log), and plans a hollow model from a net with flaps for gluing, faces of matching sizes, and the right faces left open or closed."
   }
  }
 }

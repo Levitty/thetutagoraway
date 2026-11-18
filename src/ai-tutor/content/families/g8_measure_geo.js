@@ -924,7 +924,7 @@ export const FAMILIES = [
     check: ({ s, l, w }, v) => v[0] === l * s && v[1] === w * s && v[2] === v[0] * v[1] && near(v[3] * 10000, v[2]) }),
 
   // ================================================================ SOLIDS
-  fam({ id: 'g8.solids.edges-euler', skill: 'G8_VOLUME_ADV', outcome: 'G8.SOLIDS.a', rung: 3, form: 'word',
+  fam({ id: 'g8.solids.edges-euler', skill: 'G8_VOLUME_ADV', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.a', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS', rung: 3, form: 'word',
     draw: () => {
       const [F, V] = pick([[8, 12], [7, 10], [6, 6], [7, 7], [5, 6], [5, 5]]), E = F + V - 2;
       return uniq(E, F + V, F + V + 2, V - F + 2) ? { F, V, E } : null;
@@ -932,24 +932,24 @@ export const FAMILIES = [
     make: ({ F, V, E }) => ({
       question: `A model solid has ${F} faces and ${V} vertices. For a solid like this, faces + vertices − edges = 2. How many edges does the solid have?`,
       answer: E,
-      wrong: [[F + V, 'The rule has "− edges" in it. Put the numbers in and find the number of edges that makes the rule true.'], [F + V + 2, 'Check the rule: faces + vertices is 2 MORE than the edges, so the edges are fewer.'], [V - F + 2, 'Be careful when you rearrange. Faces and vertices are both added.']],
+      wrong: [[F + V, 'The rule has "− edges" in it. Put the numbers in and find the number of edges that makes the rule true.', 'M_EULER_EDGES_ADDED'], [F + V + 2, 'Check the rule: faces + vertices is 2 MORE than the edges, so the edges are fewer.', 'M_EULER_TWO_WRONG_SIDE'], [V - F + 2, 'Be careful when you rearrange. Faces and vertices are both added.', 'M_EULER_REARRANGED_WRONG']],
       hints: ['Put the number of faces and vertices into the rule.', 'Faces + vertices is 2 more than the number of edges.'],
       steps: [`${F} + ${V} − edges = 2.`, `${F + V} − edges = 2, so edges = ${F + V} − 2 = ${E}.`],
     }),
     check: ({ F, V }, e) => F + V - e === 2 }),
 
-  fam({ id: 'g8.solids.cylinder-net', skill: 'G8_VOLUME_ADV', outcome: 'G8.SOLIDS.b', rung: 2, form: 'word',
+  fam({ id: 'g8.solids.cylinder-net', skill: 'G8_VOLUME_ADV', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.b', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS', rung: 2, form: 'word',
     draw: () => { const r = pick([7, 14, 21]); return { r, L: (44 * r) / 7, p: person() }; },
     make: ({ r, L, p }) => ({
       question: `${p.name} draws the net of a closed tin with a base radius of ${r} cm. The net has two circles and one rectangle that wraps round the side. How long is the rectangle on the edge that wraps round the tin, in cm? (Use π = 22/7)`,
       answer: L,
-      wrong: [[round((22 * r * r) / 7, 0), 'That is the area of one circle. The edge of the rectangle is as long as the distance round the circle.'], [(22 * r) / 7, 'That is π × radius. The distance round a circle is 2 × π × radius.'], [2 * r, 'That is the width of the circle across. The rectangle wraps all the way round it.']],
+      wrong: [[round((22 * r * r) / 7, 0), 'That is the area of one circle. The edge of the rectangle is as long as the distance round the circle.', 'M_CIRCLE_AREA_FOR_LENGTH'], [(22 * r) / 7, 'That is π × radius. The distance round a circle is 2 × π × radius.', 'M_HALF_CIRCUMFERENCE_NET'], [2 * r, 'That is the width of the circle across. The rectangle wraps all the way round it.', 'M_DIAMETER_FOR_WRAP']],
       hints: ['When the rectangle wraps round the tin, its long edge touches the whole edge of a circle.', 'What is the distance round a circle called?'],
       steps: [`The long edge of the rectangle meets the edge of a circle all the way round.`, `So it equals the circumference: 2 × 22/7 × ${r} = ${L} cm.`],
     }),
     check: ({ r }, a) => near((a * 7) / 44, r) }),
 
-  fam({ id: 'g8.solids.cube-net-yes-no', skill: 'G8_VOLUME_ADV', outcome: 'G8.SOLIDS.b', rung: 3, form: 'why',
+  fam({ id: 'g8.solids.cube-net-yes-no', skill: 'G8_VOLUME_ADV', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.b', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS', misMapped: false, reveals: ['M_SAME_SIDE_FLAPS', 'M_SIX_SQUARES_ALWAYS_CUBE'], rung: 3, form: 'why',
     draw: () => {
       const p1 = randInt(1, 4), p2 = randInt(1, 4), side2 = pick(['above', 'below']);
       return p1 === p2 && side2 === 'above' ? null : { p1, p2, side2, ok: side2 === 'below' };
@@ -965,21 +965,21 @@ export const FAMILIES = [
       steps: ok ? ['The row makes four sides.', 'One extra square is above and one is below, so they make the top and the bottom.', 'All six faces are covered, so it folds into a cube.'] : ['The row makes four sides.', 'Both extra squares are above the row, so both fold to the top.', 'The bottom face is missing, so it does not fold into a cube.'],
     }) }),
 
-  fam({ id: 'g8.solids.cylinder-net-steps', skill: 'G8_SURFACE_AREA', outcome: 'G8.SOLIDS.c', rung: 3, form: 'steps',
+  fam({ id: 'g8.solids.cylinder-net-steps', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.c', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET', rung: 3, form: 'steps',
     draw: () => { const r = pick([7, 14, 21]), L = (44 * r) / 7, w = pick([10, 15, 20]); return { r, L, w }; },
     make: ({ r, L, w }) => ({
       question: `The net of a closed cylinder has a rectangle ${L} cm long and ${w} cm wide, and two circles. The ${L} cm edge fits once round the edge of a circle. Use π = 22/7.`,
       parts: [
-        { prompt: 'What is the radius of each circle, in cm?', answer: r, unit: 'cm', hint: 'The rectangle\'s long edge is the circumference of the circle.', wrong: [[(L * 7) / 22, 'That is the diameter. The radius is half of it.'], [L / 2, 'Circumference is 2 × π × radius, not 2 × radius.']] },
-        { prompt: 'What is the area of the rectangle, in cm²?', answer: L * w, unit: 'cm²', hint: 'Area of a rectangle = length × width.', wrong: [[2 * (L + w), 'That is the perimeter of the rectangle. Area is length × width.']] },
-        { prompt: 'What is the area of the two circles together, in cm²?', answer: (44 * r * r) / 7, unit: 'cm²', hint: 'Area of one circle = π × r × r. There are two circles.', wrong: [[(22 * r * r) / 7, 'That is one circle. The net has two.']] },
-        { prompt: 'What is the total surface area of the cylinder, in cm²?', answer: L * w + (44 * r * r) / 7, unit: 'cm²', hint: 'The surface is all the pieces of the net together.', wrong: [[L * w + (22 * r * r) / 7, 'Use both circles.']] },
+        { prompt: 'What is the radius of each circle, in cm?', answer: r, unit: 'cm', hint: 'The rectangle\'s long edge is the circumference of the circle.', wrong: [[(L * 7) / 22, 'That is the diameter. The radius is half of it.', 'M_DIAMETER_FOR_RADIUS_NET'], [L / 2, 'Circumference is 2 × π × radius, not 2 × radius.', 'M_PI_LEFT_OUT_NET']] },
+        { prompt: 'What is the area of the rectangle, in cm²?', answer: L * w, unit: 'cm²', hint: 'Area of a rectangle = length × width.', wrong: [[2 * (L + w), 'That is the perimeter of the rectangle. Area is length × width.', 'M_PERIMETER_FOR_AREA_NET']] },
+        { prompt: 'What is the area of the two circles together, in cm²?', answer: (44 * r * r) / 7, unit: 'cm²', hint: 'Area of one circle = π × r × r. There are two circles.', wrong: [[(22 * r * r) / 7, 'That is one circle. The net has two.', 'M_ONE_CIRCLE_ONLY']] },
+        { prompt: 'What is the total surface area of the cylinder, in cm²?', answer: L * w + (44 * r * r) / 7, unit: 'cm²', hint: 'The surface is all the pieces of the net together.', wrong: [[L * w + (22 * r * r) / 7, 'Use both circles.', 'M_ONE_CIRCLE_ONLY']] },
       ],
       steps: [`${L} = 2 × 22/7 × r, so r = ${r} cm.`, `Rectangle: ${L} × ${w} = ${L * w} cm².`, `Two circles: 2 × 22/7 × ${r} × ${r} = ${(44 * r * r) / 7} cm².`, `Total: ${L * w} + ${(44 * r * r) / 7} = ${L * w + (44 * r * r) / 7} cm².`],
     }),
     check: ({ r, L, w }, v) => v[0] === r && v[1] === L * w && v[2] * 7 === 44 * r * r && v[3] === v[1] + v[2] }),
 
-  fam({ id: 'g8.solids.tray-volume', skill: 'G8_VOLUME_ADV', outcome: 'G8.SOLIDS.c', rung: 3, form: 'word',
+  fam({ id: 'g8.solids.tray-volume', skill: 'G8_VOLUME_ADV', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.c', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES', rung: 3, form: 'word',
     draw: () => {
       const L = pick([30, 40, 50]), W = pick([20, 30]), x = pick([2, 3, 4, 5]);
       return uniq((L - 2 * x) * (W - 2 * x) * x, L * W * x, (L - x) * (W - x) * x, (L - 2 * x) * (W - 2 * x)) ? { L, W, x, p: person() } : null;
@@ -987,27 +987,27 @@ export const FAMILIES = [
     make: ({ L, W, x, p }) => ({
       question: `${p.name} makes a tray from a flat sheet of card ${L} cm long and ${W} cm wide. ${p.She} cuts a square of side ${x} cm from each corner, then folds up the sides. What is the volume of the tray, in cm³?`,
       answer: (L - 2 * x) * (W - 2 * x) * x,
-      wrong: [[L * W * x, 'The base of the tray is smaller than the sheet, because the corners were cut away.'], [(L - x) * (W - x) * x, 'A square is cut from both ends of the length, so take away 2 × the side, not 1 ×.'], [(L - 2 * x) * (W - 2 * x), 'That is the area of the base. Volume also needs the height.']],
+      wrong: [[L * W * x, 'The base of the tray is smaller than the sheet, because the corners were cut away.', 'M_SHEET_AS_BASE'], [(L - x) * (W - x) * x, 'A square is cut from both ends of the length, so take away 2 × the side, not 1 ×.', 'M_ONE_CORNER_REMOVED'], [(L - 2 * x) * (W - 2 * x), 'That is the area of the base. Volume also needs the height.', 'M_BASE_AREA_FOR_VOLUME']],
       hints: ['After cutting the corners and folding, the height of the tray is the side of the cut-out square.', 'The length and the width of the base each lose a square at both ends.'],
       steps: [`Base length: ${L} − 2 × ${x} = ${L - 2 * x} cm.`, `Base width: ${W} − 2 × ${x} = ${W - 2 * x} cm.`, `Volume: ${L - 2 * x} × ${W - 2 * x} × ${x} = ${(L - 2 * x) * (W - 2 * x) * x} cm³.`],
     }),
     check: ({ L, W, x }, a) => a / x / (L - 2 * x) === W - 2 * x }),
 
-  fam({ id: 'g8.solids.double-edge-why', skill: 'G8_SURFACE_AREA', outcome: 'G8.SOLIDS.c', rung: 3, form: 'why',
+  fam({ id: 'g8.solids.double-edge-why', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.c', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET', rung: 3, form: 'why',
     draw: () => ({ k: pick([2, 3]), p: person() }),
     make: ({ k, p }) => ({
       question: `${p.name} makes a small cube from clay. ${p.She} then makes a bigger cube with edges ${k} times as long. What happens to the surface area and to the volume?`,
       options: [
         { text: `The surface area is ${k * k} times as big and the volume is ${k * k * k} times as big`, right: true },
-        { text: `Both are ${k} times as big`, right: false, why: 'Surface area is length × length and volume is length × length × length. They grow faster than the edge.' },
-        { text: `The surface area is ${k} times as big and the volume is ${k * k} times as big`, right: false, why: 'Surface area uses two lengths multiplied, and volume uses three. Each one grows by one more factor than you said.' },
-        { text: `Both are ${k * k * k} times as big`, right: false, why: 'Volume uses three lengths, but surface area is a flat measure that uses only two.' },
+        { text: `Both are ${k} times as big`, right: false, why: 'Surface area is length × length and volume is length × length × length. They grow faster than the edge.', mis: 'M_SA_VOLUME_LINEAR' },
+        { text: `The surface area is ${k} times as big and the volume is ${k * k} times as big`, right: false, why: 'Surface area uses two lengths multiplied, and volume uses three. Each one grows by one more factor than you said.', mis: 'M_SA_LINEAR_VOLUME_SQUARE' },
+        { text: `Both are ${k * k * k} times as big`, right: false, why: 'Volume uses three lengths, but surface area is a flat measure that uses only two.', mis: 'M_SA_AS_CUBE' },
       ],
       hints: ['Try a cube of edge 1 and one of edge made bigger by the number in the question.', 'Surface area is made of squares. Volume is made of layers of squares.'],
       steps: [`A face is edge × edge, so each face is ${k} × ${k} = ${k * k} times as big.`, `Volume is edge × edge × edge: ${k} × ${k} × ${k} = ${k * k * k} times as big.`],
     }) }),
 
-  fam({ id: 'g8.solids.ant-two-faces', skill: 'G8_VOLUME_ADV', outcome: 'G8.SOLIDS.d', rung: 3, form: 'word',
+  fam({ id: 'g8.solids.ant-two-faces', skill: 'G8_VOLUME_ADV', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.d', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE', rung: 3, form: 'word',
     draw: () => {
       const [x, y, c] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17], [12, 16, 20]]), flip = Math.random() < 0.5, a = flip ? x : y, r = flip ? y : x;
       const p = randInt(1, a - 1), q = a - p, spaceWrong = round(Math.sqrt(p * p + q * q + r * r), 1);
@@ -1016,18 +1016,18 @@ export const FAMILIES = [
     make: ({ p, q, r, c, a, spaceWrong, who }) => ({
       question: `A box has a top face and a side face that meet along an edge. An ant is on the top, ${p} cm from the edge. A crumb is on the side, ${q} cm from the same edge. Along the edge, they are ${r} cm apart. The ant must stay on the surface of the box. What is the shortest distance the ant can walk, in cm?`,
       answer: c,
-      wrong: [[a + r, 'That is the walk along two straight lines at right angles. A straight line across the two faces is shorter.'], [a, 'That ignores the sideways distance along the edge.'], [spaceWrong, 'That goes straight through the inside of the box. The ant must stay on the surface.']],
+      wrong: [[a + r, 'That is the walk along two straight lines at right angles. A straight line across the two faces is shorter.', 'M_RIGHT_ANGLE_PATH'], [a, 'That ignores the sideways distance along the edge.', 'M_SIDEWAYS_IGNORED'], [spaceWrong, 'That goes straight through the inside of the box. The ant must stay on the surface.', 'M_THROUGH_INSIDE']],
       hints: ['Imagine the side face folded flat, so the two faces make one flat rectangle.', 'Now the shortest path is a straight line. Use Pythagoras\' theorem.'],
       steps: [`Flat out, the two distances from the edge add up: ${p} + ${q} = ${a} cm.`, `The sideways distance is ${r} cm.`, `Straight line: the square root of ${a}² + ${r}² = ${c} cm.`],
     }),
     check: ({ a, r }, d) => near(d * d, a * a + r * r) }),
 
-  fam({ id: 'g8.solids.beetle-tin', skill: 'G8_VOLUME_ADV', outcome: 'G8.SOLIDS.d', rung: 2, form: 'word',
+  fam({ id: 'g8.solids.beetle-tin', skill: 'G8_VOLUME_ADV', outcome: 'MATH.G8.GEOMET.COMMON_SOLIDS.d', cskill: 'MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE', rung: 2, form: 'word',
     draw: () => { const r = pick([7, 14, 21, 28, 35]); return { r, d: (22 * r) / 7, p: person() }; },
     make: ({ r, d, p }) => ({
       question: `A beetle is on the curved side of a round tin of radius ${r} cm. It walks from a point A on the bottom rim to a point B on the same rim, directly opposite A. It must stay on the curved surface. What is the shortest distance it can walk, in cm? (Use π = 22/7)`,
       answer: d,
-      wrong: [[(44 * r) / 7, 'That is all the way round the tin. B is only halfway round.'], [2 * r, 'That goes straight through the tin. The beetle must stay on the surface.'], [round((22 * r * r) / 7, 0), 'That is an area. The beetle walks a distance along the rim.']],
+      wrong: [[(44 * r) / 7, 'That is all the way round the tin. B is only halfway round.', 'M_FULL_WAY_ROUND'], [2 * r, 'That goes straight through the tin. The beetle must stay on the surface.', 'M_THROUGH_INSIDE'], [round((22 * r * r) / 7, 0), 'That is an area. The beetle walks a distance along the rim.', 'M_AREA_FOR_DISTANCE']],
       hints: ['A and B are on the same rim, directly opposite each other. How far round is that?', 'The rim is a circle. B is half way round it from A.'],
       steps: [`The rim is a circle with circumference 2 × 22/7 × ${r} = ${2 * d} cm.`, `Half way round: ${2 * d} ÷ 2 = ${d} cm.`],
     }),

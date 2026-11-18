@@ -1,0 +1,597 @@
+{
+ "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+ "title": "Common Solids",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to e are tested; f (use IT) and g (promote use) are not questions. The solids are cubes, cuboids, cylinders, pyramids and cones. Euler's rule (faces + vertices - edges = 2) is used by one family to count edges; it is beyond the design's wording (teacher to confirm). Surface area from nets (c) includes how surface area and volume grow when the edges are scaled, and one family finds the volume of a tray folded from a sheet, filed under a skill of its own. The shortest distance on a surface (d) is found by unfolding the faces flat and using Pythagoras or a fraction of a circumference. Making hollow and compact models (e) is hands-on; a phone question can test only the plan (flaps, matching edges). Making models (e) and identifying solids beyond Euler's rule have no family yet.",
+ "skills": [
+  {
+   "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS",
+   "key_step": "The child counts faces, vertices and edges on a real object, then checks with faces + vertices - edges = 2.",
+   "floor": {
+    "prerequisite": "Counts faces of a cuboid.",
+    "question": "Faces of a matchbox",
+    "answer": "6"
+   },
+   "representations": [
+    "real objects: a box, a tin, a cone of a funnel",
+    "a sketch with parts labelled",
+    "a table of F, V, E"
+   ],
+   "steps": [
+    "Name the solid.",
+    "Count faces, then vertices.",
+    "Use F + V - E = 2 for the edges.",
+    "Check by counting."
+   ],
+   "contexts": [
+    "a matchbox",
+    "a tin of cooking fat",
+    "a roof of a hut"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cube."
+    },
+    {
+     "beat": "count",
+     "do": "Count the faces and vertices with the child."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rule F + V - E = 2.",
+     "say": "So how many edges?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_EULER_EDGES_ADDED",
+     "listen_for": [
+      "14"
+     ],
+     "ask": "Where is the 2 in the rule?",
+     "repair": "E = F + V - 2."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_EULER_TWO_WRONG_SIDE",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "Is F + V more or less than E?",
+     "repair": "2 more."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_EULER_REARRANGED_WRONG",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Are faces added or taken away?",
+     "repair": "Added."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_PYRAMID_PRISM_CONFUSED",
+     "listen_for": [
+      "pyramid"
+     ],
+     "ask": "Does it come to a point?",
+     "repair": "No: a prism."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A solid has 5 faces and 6 vertices. How many edges?",
+     "answer": "9",
+     "shows": "Euler"
+    },
+    {
+     "question": "Name a solid with one curved surface and one vertex.",
+     "answer": "a cone",
+     "shows": "identify"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS",
+   "key_step": "The child pictures each fold and checks that every face has a place and edges that meet are the same length.",
+   "floor": {
+    "prerequisite": "Finds a circumference.",
+    "question": "Radius 7 cm",
+    "answer": "44 cm"
+   },
+   "representations": [
+    "a box cut open",
+    "a net sketch",
+    "the folded solid"
+   ],
+   "steps": [
+    "Draw the base.",
+    "Add each face on the edge it folds from.",
+    "Match lengths of edges that meet.",
+    "Fold in your head to check."
+   ],
+   "contexts": [
+    "a cereal box opened out",
+    "a tin label",
+    "a party hat (a cone)"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four squares in a row, one above the second and one below the third."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the square above.",
+     "say": "When we fold, which face does it become?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the top."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: and the one below?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_CIRCLE_AREA_FOR_LENGTH",
+     "listen_for": [
+      "154"
+     ],
+     "ask": "Is that a length?",
+     "repair": "Use the circumference."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_HALF_CIRCUMFERENCE_NET",
+     "listen_for": [
+      "22"
+     ],
+     "ask": "Does it wrap all the way?",
+     "repair": "2πr."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_DIAMETER_FOR_WRAP",
+     "listen_for": [
+      "14"
+     ],
+     "ask": "Across or round?",
+     "repair": "Round."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_SAME_SIDE_FLAPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Where do both extra squares fold?",
+     "repair": "Both on top."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_SIX_SQUARES_ALWAYS_CUBE",
+     "listen_for": [
+      "six in a row"
+     ],
+     "ask": "Fold it: does it close?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_CONE_NET_TRIANGLE",
+     "listen_for": [
+      "triangle"
+     ],
+     "ask": "Can a triangle roll into a cone?",
+     "repair": "A sector."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The net of a closed tin of radius 14 cm: length of the rectangle?",
+     "answer": "88 cm",
+     "shows": "circumference"
+    },
+    {
+     "question": "Name the shapes in the net of a square-based pyramid.",
+     "answer": "one square and four triangles",
+     "shows": "pyramid"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET",
+   "key_step": "The child lists every shape in the net with its area and adds them, and squares or cubes the scale factor for area or volume.",
+   "floor": {
+    "prerequisite": "Finds the area of a circle.",
+    "question": "Radius 7 cm",
+    "answer": "154 cm²"
+   },
+   "representations": [
+    "the net with each area written in",
+    "a table of shapes",
+    "the total"
+   ],
+   "steps": [
+    "List every shape in the net.",
+    "Find each area (find r first if needed).",
+    "Add them.",
+    "Scale: area k², volume k³."
+   ],
+   "contexts": [
+    "a tin of milk powder",
+    "clay cubes in art",
+    "a water tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the net of a closed tin: a rectangle 44 cm by 10 cm and two circles."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 44 cm edge.",
+     "say": "What is the radius of the circles?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7 cm."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes each area on its shape."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_DIAMETER_FOR_RADIUS_NET",
+     "listen_for": [
+      "14"
+     ],
+     "ask": "Is that across or from the centre?",
+     "repair": "Halve it."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_PI_LEFT_OUT_NET",
+     "listen_for": [
+      "22"
+     ],
+     "ask": "Is C = 2r?",
+     "repair": "C = 2πr."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_PERIMETER_FOR_AREA_NET",
+     "listen_for": [
+      "108"
+     ],
+     "ask": "Is that the area?",
+     "repair": "Length × width."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_ONE_CIRCLE_ONLY",
+     "listen_for": [
+      "594"
+     ],
+     "ask": "How many circles in the net?",
+     "repair": "Two."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_SA_VOLUME_LINEAR",
+     "listen_for": [
+      "2 times"
+     ],
+     "ask": "How many lengths in an area?",
+     "repair": "Two: 4 times."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_SA_LINEAR_VOLUME_SQUARE",
+     "listen_for": [
+      "9 times"
+     ],
+     "ask": "How many lengths in a volume?",
+     "repair": "Three: 27."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_SA_AS_CUBE",
+     "listen_for": [
+      "8 times"
+     ],
+     "ask": "Is area flat or solid?",
+     "repair": "Flat: 4 times."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A net has a rectangle 88 cm by 20 cm and two circles of radius 14 cm. Surface area?",
+     "answer": "2,992 cm²",
+     "shows": "cylinder net"
+    },
+    {
+     "question": "A cube's edges are made 3 times as long. How many times the surface area?",
+     "answer": "9",
+     "shows": "scaling"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES",
+   "key_step": "The child takes twice the cut off each side of the sheet and uses the cut as the height.",
+   "floor": {
+    "prerequisite": "Finds the volume of a cuboid.",
+    "question": "20 × 10 × 5",
+    "answer": "1,000 cm³"
+   },
+   "representations": [
+    "a paper sheet with corners cut",
+    "the folded tray",
+    "length, width, height"
+   ],
+   "steps": [
+    "Length = sheet length - 2 × cut.",
+    "Width = sheet width - 2 × cut.",
+    "Height = cut.",
+    "Volume = length × width × height."
+   ],
+   "contexts": [
+    "a tray for seedlings",
+    "a box for chalk",
+    "a mould for bricks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 30 cm by 20 cm sheet with a 5 cm square at each corner."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the long side.",
+     "say": "After cutting both corners, how long is the base?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 20 cm."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child folds the sides up in a sketch."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_SHEET_AS_BASE",
+     "listen_for": [
+      "3,000"
+     ],
+     "ask": "Is the base as big as the sheet?",
+     "repair": "Corners were cut."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_ONE_CORNER_REMOVED",
+     "listen_for": [
+      "25 by 15"
+     ],
+     "ask": "How many corners on each side?",
+     "repair": "Two."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_BASE_AREA_FOR_VOLUME",
+     "listen_for": [
+      "200"
+     ],
+     "ask": "Where is the height?",
+     "repair": "Times 5."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_HEIGHT_FROM_SHEET",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "How high do the sides fold up?",
+     "repair": "By the cut."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 40 cm by 30 cm sheet with 5 cm squares cut from each corner. Volume of the tray?",
+     "answer": "3,000 cm³",
+     "shows": "volume"
+    },
+    {
+     "question": "From the same sheet, the length of the base?",
+     "answer": "30 cm",
+     "shows": "base"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE",
+   "key_step": "The child unfolds the faces the path crosses into one flat picture and draws a single straight line between the points.",
+   "floor": {
+    "prerequisite": "Finds a hypotenuse.",
+    "question": "Sides 6 and 8",
+    "answer": "10"
+   },
+   "representations": [
+    "a box opened flat",
+    "a tin label unrolled",
+    "the straight line drawn"
+   ],
+   "steps": [
+    "Unfold the faces the path crosses.",
+    "Mark both points.",
+    "Join them with one straight line.",
+    "Find its length (Pythagoras or part of a circumference)."
+   ],
+   "contexts": [
+    "an ant on a matchbox",
+    "a beetle on a tin",
+    "a spider on a water tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box with an ant on top and a crumb on the side."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child unfolds the two faces flat and marks both points."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two points.",
+     "say": "What is the shortest way across the flat picture?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a straight line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_RIGHT_ANGLE_PATH",
+     "listen_for": [
+      "14"
+     ],
+     "ask": "Is that the straight way?",
+     "repair": "Join with one line."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_SIDEWAYS_IGNORED",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "How far along the edge?",
+     "repair": "Use both."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_THROUGH_INSIDE",
+     "listen_for": [
+      "14 through"
+     ],
+     "ask": "Can the beetle go through the tin?",
+     "repair": "Stay on the surface."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_FULL_WAY_ROUND",
+     "listen_for": [
+      "44"
+     ],
+     "ask": "Is the opposite point all the way round?",
+     "repair": "Halfway."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_AREA_FOR_DISTANCE",
+     "listen_for": [
+      "154"
+     ],
+     "ask": "Area or distance?",
+     "repair": "Distance along the rim."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unfolded, the ant is 9 cm across and 12 cm along from the crumb. Shortest distance?",
+     "answer": "15 cm",
+     "shows": "Pythagoras"
+    },
+    {
+     "question": "A tin of radius 14 cm: shortest walk on the curved side to the point opposite on the rim?",
+     "answer": "44 cm",
+     "shows": "half circumference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS",
+   "key_step": "The child decides hollow or compact first, then plans a net with matching edges, flaps on alternate edges and the open faces left out.",
+   "floor": {
+    "prerequisite": "Sketches a net.",
+    "question": "Net of a cube",
+    "answer": "six squares, four in a row and one on each side"
+   },
+   "representations": [
+    "real hollow and compact objects",
+    "a net with flaps",
+    "the finished model"
+   ],
+   "steps": [
+    "Hollow or compact?",
+    "Draw the net with matching edges.",
+    "Add flaps on alternate edges.",
+    "Leave out faces that are open."
+   ],
+   "contexts": [
+    "a card box for chalk",
+    "a clay brick",
+    "a tin from local metal sheet"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box net with no flaps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an edge.",
+     "say": "How will this edge stay joined when folded?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to suggest a flap."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds flaps on alternate edges."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_HOLLOW_COMPACT_CONFUSED",
+     "listen_for": [
+      "brick is hollow"
+     ],
+     "ask": "Can a brick hold water?",
+     "repair": "Compact."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_NO_FLAPS",
+     "listen_for": [
+      "no flaps"
+     ],
+     "ask": "What holds the edges together?",
+     "repair": "Flaps."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_NET_SIZE_NOT_MATCHED",
+     "listen_for": [
+      "5 cm meets 4 cm"
+     ],
+     "ask": "Will those edges meet?",
+     "repair": "Same length."
+    },
+    {
+     "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_OPEN_FACE_COUNTED",
+     "listen_for": [
+      "6 faces"
+     ],
+     "ask": "Does an open box have a lid?",
+     "repair": "Five faces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a tin of beans a hollow or a compact solid?",
+     "answer": "hollow",
+     "shows": "hollow"
+    },
+    {
+     "question": "How many faces does the net of an open cuboid box have?",
+     "answer": "5",
+     "shows": "open box"
+    }
+   ]
+  }
+ ]
+}

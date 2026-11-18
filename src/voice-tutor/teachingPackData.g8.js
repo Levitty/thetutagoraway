@@ -12686,6 +12686,798 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
   "sub_strand_name": "Scale Drawing",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS": {
+  "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS",
+  "key_step": "The child counts faces, vertices and edges on a real object, then checks with faces + vertices - edges = 2.",
+  "floor": {
+   "prerequisite": "Counts faces of a cuboid.",
+   "question": "Faces of a matchbox",
+   "answer": "6"
+  },
+  "representations": [
+   "real objects: a box, a tin, a cone of a funnel",
+   "a sketch with parts labelled",
+   "a table of F, V, E"
+  ],
+  "steps": [
+   "Name the solid.",
+   "Count faces, then vertices.",
+   "Use F + V - E = 2 for the edges.",
+   "Check by counting."
+  ],
+  "contexts": [
+   "a matchbox",
+   "a tin of cooking fat",
+   "a roof of a hut"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cube."
+   },
+   {
+    "beat": "count",
+    "do": "Count the faces and vertices with the child."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the rule F + V - E = 2.",
+    "say": "So how many edges?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_EULER_EDGES_ADDED",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Where is the 2 in the rule?",
+    "repair": "E = F + V - 2.",
+    "error": "Adds faces and vertices for the edges, ignoring the 2.",
+    "example": {
+     "question": "6 faces and 8 vertices. Edges?",
+     "wrong_answer": "14",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_EULER_TWO_WRONG_SIDE",
+    "listen_for": [
+     "16"
+    ],
+    "ask": "Is F + V more or less than E?",
+    "repair": "2 more.",
+    "error": "Adds the 2 instead of taking it away.",
+    "example": {
+     "question": "6 faces and 8 vertices. Edges?",
+     "wrong_answer": "16",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_EULER_REARRANGED_WRONG",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Are faces added or taken away?",
+    "repair": "Added.",
+    "error": "Subtracts the faces from the vertices.",
+    "example": {
+     "question": "6 faces and 8 vertices. Edges?",
+     "wrong_answer": "4",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.IDENTIFY_SOLIDS.M_PYRAMID_PRISM_CONFUSED",
+    "listen_for": [
+     "pyramid"
+    ],
+    "ask": "Does it come to a point?",
+    "repair": "No: a prism.",
+    "error": "Calls a triangular prism a pyramid.",
+    "example": {
+     "question": "A tent shape with two triangle ends and three rectangles is?",
+     "wrong_answer": "a pyramid",
+     "correct_answer": "a triangular prism"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A solid has 5 faces and 6 vertices. How many edges?",
+    "answer": "9",
+    "shows": "Euler"
+   },
+   {
+    "question": "Name a solid with one curved surface and one vertex.",
+    "answer": "a cone",
+    "shows": "identify"
+   }
+  ],
+  "name": "Identify common solids and count their faces, edges and vertices",
+  "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+  "sub_strand_name": "Common Solids",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS": {
+  "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS",
+  "key_step": "The child pictures each fold and checks that every face has a place and edges that meet are the same length.",
+  "floor": {
+   "prerequisite": "Finds a circumference.",
+   "question": "Radius 7 cm",
+   "answer": "44 cm"
+  },
+  "representations": [
+   "a box cut open",
+   "a net sketch",
+   "the folded solid"
+  ],
+  "steps": [
+   "Draw the base.",
+   "Add each face on the edge it folds from.",
+   "Match lengths of edges that meet.",
+   "Fold in your head to check."
+  ],
+  "contexts": [
+   "a cereal box opened out",
+   "a tin label",
+   "a party hat (a cone)"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw four squares in a row, one above the second and one below the third."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the square above.",
+    "say": "When we fold, which face does it become?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the top."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: and the one below?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_CIRCLE_AREA_FOR_LENGTH",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "Is that a length?",
+    "repair": "Use the circumference.",
+    "error": "Gives the area of the circle as the length of the rectangle.",
+    "example": {
+     "question": "Net of a tin of radius 7 cm: length of the rectangle?",
+     "wrong_answer": "154 cm",
+     "correct_answer": "44 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_HALF_CIRCUMFERENCE_NET",
+    "listen_for": [
+     "22"
+    ],
+    "ask": "Does it wrap all the way?",
+    "repair": "2πr.",
+    "error": "Uses π × r for the length that wraps round.",
+    "example": {
+     "question": "Radius 7 cm: length of the rectangle?",
+     "wrong_answer": "22 cm",
+     "correct_answer": "44 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_DIAMETER_FOR_WRAP",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Across or round?",
+    "repair": "Round.",
+    "error": "Uses the diameter as the length that wraps round.",
+    "example": {
+     "question": "Radius 7 cm: length of the rectangle?",
+     "wrong_answer": "14 cm",
+     "correct_answer": "44 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_SAME_SIDE_FLAPS",
+    "listen_for": [
+     "yes"
+    ],
+    "ask": "Where do both extra squares fold?",
+    "repair": "Both on top.",
+    "error": "Believes two squares on the same side of a row of four still make a cube.",
+    "example": {
+     "question": "Row of four, with two squares both above it: cube?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_SIX_SQUARES_ALWAYS_CUBE",
+    "listen_for": [
+     "six in a row"
+    ],
+    "ask": "Fold it: does it close?",
+    "repair": "No.",
+    "error": "Believes any six joined squares fold into a cube.",
+    "example": {
+     "question": "Six squares in a row: cube?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SKETCH_NETS.M_CONE_NET_TRIANGLE",
+    "listen_for": [
+     "triangle"
+    ],
+    "ask": "Can a triangle roll into a cone?",
+    "repair": "A sector.",
+    "error": "Draws the curved part of a cone's net as a triangle.",
+    "example": {
+     "question": "The net of a cone is a circle and?",
+     "wrong_answer": "a triangle",
+     "correct_answer": "a sector of a circle"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "The net of a closed tin of radius 14 cm: length of the rectangle?",
+    "answer": "88 cm",
+    "shows": "circumference"
+   },
+   {
+    "question": "Name the shapes in the net of a square-based pyramid.",
+    "answer": "one square and four triangles",
+    "shows": "pyramid"
+   }
+  ],
+  "name": "Sketch the nets of cubes, cuboids, cylinders, pyramids and cones",
+  "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+  "sub_strand_name": "Common Solids",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET": {
+  "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET",
+  "key_step": "The child lists every shape in the net with its area and adds them, and squares or cubes the scale factor for area or volume.",
+  "floor": {
+   "prerequisite": "Finds the area of a circle.",
+   "question": "Radius 7 cm",
+   "answer": "154 cm²"
+  },
+  "representations": [
+   "the net with each area written in",
+   "a table of shapes",
+   "the total"
+  ],
+  "steps": [
+   "List every shape in the net.",
+   "Find each area (find r first if needed).",
+   "Add them.",
+   "Scale: area k², volume k³."
+  ],
+  "contexts": [
+   "a tin of milk powder",
+   "clay cubes in art",
+   "a water tank"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw the net of a closed tin: a rectangle 44 cm by 10 cm and two circles."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 44 cm edge.",
+    "say": "What is the radius of the circles?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 7 cm."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes each area on its shape."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_DIAMETER_FOR_RADIUS_NET",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Is that across or from the centre?",
+    "repair": "Halve it.",
+    "error": "Gives the diameter when the radius is asked from the rectangle's length.",
+    "example": {
+     "question": "Rectangle 44 cm long wraps round once. Radius?",
+     "wrong_answer": "14 cm",
+     "correct_answer": "7 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_PI_LEFT_OUT_NET",
+    "listen_for": [
+     "22"
+    ],
+    "ask": "Is C = 2r?",
+    "repair": "C = 2πr.",
+    "error": "Halves the length to get the radius.",
+    "example": {
+     "question": "Rectangle 44 cm long wraps round once. Radius?",
+     "wrong_answer": "22 cm",
+     "correct_answer": "7 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_PERIMETER_FOR_AREA_NET",
+    "listen_for": [
+     "108"
+    ],
+    "ask": "Is that the area?",
+    "repair": "Length × width.",
+    "error": "Gives the perimeter of the rectangle for its area.",
+    "example": {
+     "question": "Rectangle 44 cm by 10 cm: area?",
+     "wrong_answer": "108 cm²",
+     "correct_answer": "440 cm²"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_ONE_CIRCLE_ONLY",
+    "listen_for": [
+     "594"
+    ],
+    "ask": "How many circles in the net?",
+    "repair": "Two.",
+    "error": "Uses one circle for a closed cylinder.",
+    "example": {
+     "question": "Closed tin net: 440 cm² rectangle, circles of 154 cm². Total?",
+     "wrong_answer": "594 cm²",
+     "correct_answer": "748 cm²"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_SA_VOLUME_LINEAR",
+    "listen_for": [
+     "2 times"
+    ],
+    "ask": "How many lengths in an area?",
+    "repair": "Two: 4 times.",
+    "error": "Believes surface area and volume grow as much as the edge.",
+    "example": {
+     "question": "A cube with edges 2 times as long: surface area?",
+     "wrong_answer": "2 times",
+     "correct_answer": "4 times"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_SA_LINEAR_VOLUME_SQUARE",
+    "listen_for": [
+     "9 times"
+    ],
+    "ask": "How many lengths in a volume?",
+    "repair": "Three: 27.",
+    "error": "Gives each one fewer power: area k times, volume k² times.",
+    "example": {
+     "question": "Edges 3 times as long: volume?",
+     "wrong_answer": "9 times",
+     "correct_answer": "27 times"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SA_FROM_NET.M_SA_AS_CUBE",
+    "listen_for": [
+     "8 times"
+    ],
+    "ask": "Is area flat or solid?",
+    "repair": "Flat: 4 times.",
+    "error": "Believes surface area grows like volume.",
+    "example": {
+     "question": "Edges 2 times as long: surface area?",
+     "wrong_answer": "8 times",
+     "correct_answer": "4 times"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A net has a rectangle 88 cm by 20 cm and two circles of radius 14 cm. Surface area?",
+    "answer": "2,992 cm²",
+    "shows": "cylinder net"
+   },
+   {
+    "question": "A cube's edges are made 3 times as long. How many times the surface area?",
+    "answer": "9",
+    "shows": "scaling"
+   }
+  ],
+  "name": "Work out the surface area of a solid from its net",
+  "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+  "sub_strand_name": "Common Solids",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES": {
+  "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES",
+  "key_step": "The child takes twice the cut off each side of the sheet and uses the cut as the height.",
+  "floor": {
+   "prerequisite": "Finds the volume of a cuboid.",
+   "question": "20 × 10 × 5",
+   "answer": "1,000 cm³"
+  },
+  "representations": [
+   "a paper sheet with corners cut",
+   "the folded tray",
+   "length, width, height"
+  ],
+  "steps": [
+   "Length = sheet length - 2 × cut.",
+   "Width = sheet width - 2 × cut.",
+   "Height = cut.",
+   "Volume = length × width × height."
+  ],
+  "contexts": [
+   "a tray for seedlings",
+   "a box for chalk",
+   "a mould for bricks"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 30 cm by 20 cm sheet with a 5 cm square at each corner."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the long side.",
+    "say": "After cutting both corners, how long is the base?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 20 cm."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child folds the sides up in a sketch."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_SHEET_AS_BASE",
+    "listen_for": [
+     "3,000"
+    ],
+    "ask": "Is the base as big as the sheet?",
+    "repair": "Corners were cut.",
+    "error": "Uses the whole sheet as the base of the tray.",
+    "example": {
+     "question": "30 cm by 20 cm sheet, 5 cm squares cut. Volume?",
+     "wrong_answer": "3,000 cm³",
+     "correct_answer": "1,000 cm³"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_ONE_CORNER_REMOVED",
+    "listen_for": [
+     "25 by 15"
+    ],
+    "ask": "How many corners on each side?",
+    "repair": "Two.",
+    "error": "Takes the square off only one end of each side.",
+    "example": {
+     "question": "30 by 20 sheet, 5 cm squares cut. Base?",
+     "wrong_answer": "25 by 15",
+     "correct_answer": "20 by 10"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_BASE_AREA_FOR_VOLUME",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "Where is the height?",
+    "repair": "Times 5.",
+    "error": "Gives the area of the base as the volume.",
+    "example": {
+     "question": "Base 20 cm by 10 cm, height 5 cm. Volume?",
+     "wrong_answer": "200 cm³",
+     "correct_answer": "1,000 cm³"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.FOLD_NET_MEASURES.M_HEIGHT_FROM_SHEET",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "How high do the sides fold up?",
+    "repair": "By the cut.",
+    "error": "Uses a side of the sheet as the height.",
+    "example": {
+     "question": "30 by 20 sheet, 5 cm squares cut. Height of the tray?",
+     "wrong_answer": "20 cm",
+     "correct_answer": "5 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 40 cm by 30 cm sheet with 5 cm squares cut from each corner. Volume of the tray?",
+    "answer": "3,000 cm³",
+    "shows": "volume"
+   },
+   {
+    "question": "From the same sheet, the length of the base?",
+    "answer": "30 cm",
+    "shows": "base"
+   }
+  ],
+  "name": "Find the measures of a solid folded from a net",
+  "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+  "sub_strand_name": "Common Solids",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE": {
+  "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE",
+  "key_step": "The child unfolds the faces the path crosses into one flat picture and draws a single straight line between the points.",
+  "floor": {
+   "prerequisite": "Finds a hypotenuse.",
+   "question": "Sides 6 and 8",
+   "answer": "10"
+  },
+  "representations": [
+   "a box opened flat",
+   "a tin label unrolled",
+   "the straight line drawn"
+  ],
+  "steps": [
+   "Unfold the faces the path crosses.",
+   "Mark both points.",
+   "Join them with one straight line.",
+   "Find its length (Pythagoras or part of a circumference)."
+  ],
+  "contexts": [
+   "an ant on a matchbox",
+   "a beetle on a tin",
+   "a spider on a water tank"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a box with an ant on top and a crumb on the side."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child unfolds the two faces flat and marks both points."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two points.",
+    "say": "What is the shortest way across the flat picture?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for a straight line."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_RIGHT_ANGLE_PATH",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Is that the straight way?",
+    "repair": "Join with one line.",
+    "error": "Walks along two straight lines at right angles instead of one straight line across.",
+    "example": {
+     "question": "Unfolded: 8 cm across and 6 cm along. Shortest distance?",
+     "wrong_answer": "14 cm",
+     "correct_answer": "10 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_SIDEWAYS_IGNORED",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "How far along the edge?",
+    "repair": "Use both.",
+    "error": "Leaves out the distance along the edge.",
+    "example": {
+     "question": "8 cm across the faces, 6 cm along the edge. Shortest?",
+     "wrong_answer": "8 cm",
+     "correct_answer": "10 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_THROUGH_INSIDE",
+    "listen_for": [
+     "14 through"
+    ],
+    "ask": "Can the beetle go through the tin?",
+    "repair": "Stay on the surface.",
+    "error": "Goes straight through the solid instead of over the surface.",
+    "example": {
+     "question": "A beetle on a tin of radius 7 cm walks to the opposite point of the rim. Shortest?",
+     "wrong_answer": "14 cm",
+     "correct_answer": "22 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_FULL_WAY_ROUND",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "Is the opposite point all the way round?",
+    "repair": "Halfway.",
+    "error": "Goes all the way round instead of halfway.",
+    "example": {
+     "question": "Tin of radius 7 cm, to the opposite point. Shortest?",
+     "wrong_answer": "44 cm",
+     "correct_answer": "22 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.SURFACE_DISTANCE.M_AREA_FOR_DISTANCE",
+    "listen_for": [
+     "154"
+    ],
+    "ask": "Area or distance?",
+    "repair": "Distance along the rim.",
+    "error": "Gives an area as the distance.",
+    "example": {
+     "question": "Tin of radius 7 cm, to the opposite point. Shortest?",
+     "wrong_answer": "154",
+     "correct_answer": "22 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Unfolded, the ant is 9 cm across and 12 cm along from the crumb. Shortest distance?",
+    "answer": "15 cm",
+    "shows": "Pythagoras"
+   },
+   {
+    "question": "A tin of radius 14 cm: shortest walk on the curved side to the point opposite on the rim?",
+    "answer": "44 cm",
+    "shows": "half circumference"
+   }
+  ],
+  "name": "Find the shortest distance between two points on the surface of a solid",
+  "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+  "sub_strand_name": "Common Solids",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS": {
+  "skill": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS",
+  "key_step": "The child decides hollow or compact first, then plans a net with matching edges, flaps on alternate edges and the open faces left out.",
+  "floor": {
+   "prerequisite": "Sketches a net.",
+   "question": "Net of a cube",
+   "answer": "six squares, four in a row and one on each side"
+  },
+  "representations": [
+   "real hollow and compact objects",
+   "a net with flaps",
+   "the finished model"
+  ],
+  "steps": [
+   "Hollow or compact?",
+   "Draw the net with matching edges.",
+   "Add flaps on alternate edges.",
+   "Leave out faces that are open."
+  ],
+  "contexts": [
+   "a card box for chalk",
+   "a clay brick",
+   "a tin from local metal sheet"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a box net with no flaps."
+   },
+   {
+    "beat": "point",
+    "do": "Point at an edge.",
+    "say": "How will this edge stay joined when folded?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to suggest a flap."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child adds flaps on alternate edges."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_HOLLOW_COMPACT_CONFUSED",
+    "listen_for": [
+     "brick is hollow"
+    ],
+    "ask": "Can a brick hold water?",
+    "repair": "Compact.",
+    "error": "Calls a solid object hollow, or a container compact.",
+    "example": {
+     "question": "Is a brick hollow or compact?",
+     "wrong_answer": "hollow",
+     "correct_answer": "compact"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_NO_FLAPS",
+    "listen_for": [
+     "no flaps"
+    ],
+    "ask": "What holds the edges together?",
+    "repair": "Flaps.",
+    "error": "Plans a net with no flaps for gluing.",
+    "example": {
+     "question": "What does a card model need besides the faces?",
+     "wrong_answer": "nothing",
+     "correct_answer": "flaps on some edges"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_NET_SIZE_NOT_MATCHED",
+    "listen_for": [
+     "5 cm meets 4 cm"
+    ],
+    "ask": "Will those edges meet?",
+    "repair": "Same length.",
+    "error": "Draws faces whose meeting edges are different lengths.",
+    "example": {
+     "question": "A box net with a 5 cm side meeting a 4 cm side: will it close?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COMMON_SOLIDS.HOLLOW_COMPACT_MODELS.M_OPEN_FACE_COUNTED",
+    "listen_for": [
+     "6 faces"
+    ],
+    "ask": "Does an open box have a lid?",
+    "repair": "Five faces.",
+    "error": "Includes a lid in the net of an open container.",
+    "example": {
+     "question": "Net of an open box: how many faces?",
+     "wrong_answer": "6",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is a tin of beans a hollow or a compact solid?",
+    "answer": "hollow",
+    "shows": "hollow"
+   },
+   {
+    "question": "How many faces does the net of an open cuboid box have?",
+    "answer": "5",
+    "shows": "open box"
+   }
+  ],
+  "name": "Plan models of hollow and compact solids",
+  "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
+  "sub_strand_name": "Common Solids",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;
