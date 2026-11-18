@@ -120569,7 +120569,8 @@ var SKILLS_G6 = {
     "mis": [
       "M_CM3_HUNDRED_ML",
       "M_CM3_NOT_CAPACITY",
-      "M_CM3_AS_LITRES"
+      "M_CM3_AS_LITRES",
+      "M_CUBE_SIDE_AS_ML"
     ]
   },
   "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML": {
@@ -120584,11 +120585,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_CAPACITY",
     "pre": [
-      "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML"
+      "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML",
+      "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION"
     ],
     "mis": [
       "M_TIMES_HUNDRED",
-      "M_DECIMAL_LITRE"
+      "M_DECIMAL_LITRE",
+      "M_LITRES_ML_JOINED",
+      "M_DIVIDE_FOR_SMALLER_UNIT"
     ]
   },
   "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES": {
@@ -120608,7 +120612,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_DIVIDE_BY_HUNDRED",
-      "M_LEFTOVER_ML_LOST"
+      "M_LEFTOVER_ML_LOST",
+      "M_ML_PLACE_HOLDER_LOST",
+      "M_MULTIPLY_FOR_BIGGER_UNIT"
     ]
   },
   "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT": {

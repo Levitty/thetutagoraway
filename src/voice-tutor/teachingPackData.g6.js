@@ -5799,6 +5799,388 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.MEASUR.AREA",
   "sub_strand_name": "Area",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION": {
+  "skill": "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION",
+  "key_step": "The child says that 1 cm3 holds 1 ml and that 1,000 cm3 (a 10 cm cube) holds 1 litre.",
+  "floor": {
+   "prerequisite": "Knows 1 l = 1,000 ml.",
+   "question": "How many ml in 1 litre?",
+   "answer": "1,000"
+  },
+  "representations": [
+   "a 1 cm cube and a 10 cm cube box",
+   "a litre bottle filled from the 10 cm cube",
+   "the chain 1 cm3 = 1 ml, 1,000 cm3 = 1 l"
+  ],
+  "steps": [
+   "Find the volume of the box in cm3.",
+   "Each cm3 holds 1 ml.",
+   "Divide the ml by 1,000 for litres.",
+   "Use cm3 for space inside a box, ml and l for liquid."
+  ],
+  "contexts": [
+   "a water tank",
+   "a juice box",
+   "a medicine bottle"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 10 cm cube."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one side.",
+    "say": "How many 1 cm cubes fit along this edge?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 10."
+   },
+   {
+    "beat": "write",
+    "do": "Write 10 x 10 x 10 = 1,000 cm3."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many ml and how many litres the cube holds."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION.M_CM3_HUNDRED_ML",
+    "listen_for": [
+     "10 litres",
+     "a hundred"
+    ],
+    "ask": "How many cm3 make one litre?",
+    "repair": "1,000 cm3 is 1 litre.",
+    "error": "Believes 1 cm3 is 100 ml or that 1 litre is 100 cm3.",
+    "example": {
+     "question": "A box of 1,000 cm3 holds how many litres?",
+     "wrong_answer": "10 litres",
+     "correct_answer": "1 litre"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION.M_CM3_NOT_CAPACITY",
+    "listen_for": [
+     "cm",
+     "length"
+    ],
+    "ask": "Are we measuring along the box or the space inside?",
+    "repair": "Space inside is measured in cm3, ml or litres.",
+    "error": "Believes cm3 measures length or area, not capacity.",
+    "example": {
+     "question": "Which unit measures how much a box holds?",
+     "wrong_answer": "cm",
+     "correct_answer": "cm3"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION.M_CM3_AS_LITRES",
+    "listen_for": [
+     "5,000 litres"
+    ],
+    "ask": "How many cm3 fill one litre?",
+    "repair": "Divide by 1,000: 5 litres.",
+    "error": "Gives the number of cm3 as the number of litres.",
+    "example": {
+     "question": "A box of 5,000 cm3 holds how many litres?",
+     "wrong_answer": "5,000",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION.M_CUBE_SIDE_AS_ML",
+    "listen_for": [
+     "30",
+     "add the sides"
+    ],
+    "ask": "How many small cubes fill the big cube?",
+    "repair": "Multiply the three sides: 1,000 cm3 = 1,000 ml.",
+    "error": "Uses the length of a side, or three sides added, as the capacity of a cube.",
+    "example": {
+     "question": "A cube with 10 cm sides holds how many ml?",
+     "wrong_answer": "30 ml (10 + 10 + 10)",
+     "correct_answer": "1,000 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A box of 5,000 cm3 holds how many litres?",
+    "answer": "5 litres",
+    "shows": "divide by 1,000"
+   },
+   {
+    "question": "A cube with 10 cm sides holds how many ml?",
+    "answer": "1,000 ml",
+    "shows": "volume to ml"
+   }
+  ],
+  "name": "The relationship among cm3, millilitres and litres",
+  "sub_strand": "MATH.G6.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML": {
+  "skill": "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML",
+  "key_step": "The child multiplies the litres by 1,000 and adds the ml, keeping zeros in the empty places.",
+  "floor": {
+   "prerequisite": "Knows 1 l = 1,000 ml.",
+   "question": "How many ml in 2 l?",
+   "answer": "2,000 ml"
+  },
+  "representations": [
+   "litre bottles and a measuring jug",
+   "a place value chart with the ml filled in",
+   "the two-step working"
+  ],
+  "steps": [
+   "Multiply the litres by 1,000.",
+   "Add the ml.",
+   "For a decimal of a litre, multiply the decimal by 1,000.",
+   "Check: ml are a bigger number than l."
+  ],
+  "contexts": [
+   "milk from a dairy cow",
+   "a jerrycan of water",
+   "cooking oil"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 l 25 ml."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3 l.",
+    "say": "How many ml is 3 l?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3,000."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to add the 25 ml in the right places."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3,025 ml."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML.M_TIMES_HUNDRED",
+    "listen_for": [
+     "300 ml",
+     "a hundred"
+    ],
+    "ask": "How many ml in one litre?",
+    "repair": "Multiply by 1,000.",
+    "error": "Multiplies litres by 100 to get millilitres.",
+    "example": {
+     "question": "3 l in ml",
+     "wrong_answer": "300 ml",
+     "correct_answer": "3,000 ml"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML.M_DECIMAL_LITRE",
+    "listen_for": [
+     "2,005",
+     "two litres five"
+    ],
+    "ask": "Is 0.5 l five ml or half a litre?",
+    "repair": "Half a litre is 500 ml.",
+    "error": "Reads 2.5 litres as 2 l 5 ml.",
+    "example": {
+     "question": "2.5 l in ml",
+     "wrong_answer": "2,005 ml",
+     "correct_answer": "2,500 ml"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML.M_LITRES_ML_JOINED",
+    "listen_for": [
+     "325",
+     "join them"
+    ],
+    "ask": "How many ml is 3 l on its own?",
+    "repair": "3,000 + 25 = 3,025.",
+    "error": "Writes the litres and the millilitres side by side, losing the place-holder zero.",
+    "example": {
+     "question": "3 l 25 ml in ml",
+     "wrong_answer": "325 ml",
+     "correct_answer": "3,025 ml"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML.M_DIVIDE_FOR_SMALLER_UNIT",
+    "listen_for": [
+     "0.004",
+     "divide"
+    ],
+    "ask": "Is 0.004 ml more or less than a drop?",
+    "repair": "Smaller unit, more of them: multiply.",
+    "error": "Divides by 1,000 to change litres to ml.",
+    "example": {
+     "question": "4 l in ml",
+     "wrong_answer": "0.004 ml",
+     "correct_answer": "4,000 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 2.5 l in ml.",
+    "answer": "2,500 ml",
+    "shows": "decimal of a litre"
+   },
+   {
+    "question": "Write 3 l 25 ml in ml.",
+    "answer": "3,025 ml",
+    "shows": "place-holder zero"
+   }
+  ],
+  "name": "Convert litres to millilitres",
+  "sub_strand": "MATH.G6.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES": {
+  "skill": "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES",
+  "key_step": "The child divides the ml by 1,000 by splitting off the last three digits as ml, and gives litres and ml or a decimal of a litre.",
+  "floor": {
+   "prerequisite": "Knows 1 l = 1,000 ml.",
+   "question": "How many litres is 1,000 ml?",
+   "answer": "1 litre"
+  },
+  "representations": [
+   "a measuring jug and litre bottles",
+   "the number with a line three digits from the right",
+   "litres and ml, and the decimal"
+  ],
+  "steps": [
+   "Draw a line three digits from the right.",
+   "The left part is litres, the right part ml.",
+   "For a decimal, the three ml digits go after the point.",
+   "Check: litres are a smaller number than ml."
+  ],
+  "contexts": [
+   "water used in a day",
+   "soda bottles at a party",
+   "paint for a classroom"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2,050 ml."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a line before the 050."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2.",
+    "say": "How many whole litres?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 050.",
+    "say": "And how many ml are left?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2 l 50 ml = 2.05 l."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES.M_DIVIDE_BY_HUNDRED",
+    "listen_for": [
+     "45 l",
+     "divide by a hundred"
+    ],
+    "ask": "How many ml make one litre?",
+    "repair": "Divide by 1,000.",
+    "error": "Divides by 100 instead of 1,000.",
+    "example": {
+     "question": "4,500 ml in litres",
+     "wrong_answer": "45 l",
+     "correct_answer": "4.5 l"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES.M_LEFTOVER_ML_LOST",
+    "listen_for": [
+     "3 l",
+     "forgot the rest"
+    ],
+    "ask": "What happened to the 250 ml?",
+    "repair": "Write the leftover ml: 3 l 250 ml.",
+    "error": "Gives only the whole litres and drops the leftover ml.",
+    "example": {
+     "question": "3,250 ml in litres and millilitres",
+     "wrong_answer": "3 l",
+     "correct_answer": "3 l 250 ml"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES.M_ML_PLACE_HOLDER_LOST",
+    "listen_for": [
+     "2 l 5 ml",
+     "2.5"
+    ],
+    "ask": "How many digits does the ml part have?",
+    "repair": "Three digits for ml: 050 is 50 ml.",
+    "error": "Loses the zero in the ml part when writing litres and ml or a decimal.",
+    "example": {
+     "question": "2,050 ml in litres and millilitres",
+     "wrong_answer": "2 l 5 ml (or 2.5 l)",
+     "correct_answer": "2 l 50 ml (2.05 l)"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES.M_MULTIPLY_FOR_BIGGER_UNIT",
+    "listen_for": [
+     "3,000,000",
+     "times"
+    ],
+    "ask": "Is a litre bigger or smaller than a ml?",
+    "repair": "Bigger unit, fewer of them: divide.",
+    "error": "Multiplies by 1,000 to change ml to litres.",
+    "example": {
+     "question": "3,000 ml in litres",
+     "wrong_answer": "3,000,000 l",
+     "correct_answer": "3 l"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 4,500 ml in litres.",
+    "answer": "4.5 l",
+    "shows": "divide by 1,000"
+   },
+   {
+    "question": "Write 2,050 ml in litres and millilitres.",
+    "answer": "2 l 50 ml",
+    "shows": "zero in the ml"
+   }
+  ],
+  "name": "Convert millilitres to litres",
+  "sub_strand": "MATH.G6.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;
