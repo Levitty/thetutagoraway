@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G6.PERFOR.ATHLETICS",
+ "title": "Athletics",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Jumps into a sand pit or onto mats with a teacher; rake the sand first.",
+ "skills": [
+  {
+   "skill": "CREA.G6.PERFOR.ATHLETICS.JUMPS",
+   "key_step": "The child describes the long jump (run-up, one-foot take-off, sail, land) and the high jump scissors (angled run, lift the inside leg then the outer).",
+   "floor": {
+    "prerequisite": "Sprints with good form (Grade 4).",
+    "question": "Where should a sprinter look?",
+    "answer": "ahead"
+   },
+   "representations": [
+    "a sand pit or mats",
+    "a take-off board",
+    "pictures of the phases"
+   ],
+   "steps": [
+    "Run up fast.",
+    "Take off from one foot.",
+    "Sail with legs forward.",
+    "Land feet first, fall forward."
+   ],
+   "contexts": [
+    "sports day long jump",
+    "a class high jump"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write run-up, land, take-off, flight."
+    },
+    {
+     "beat": "predict",
+     "do": "What comes after take-off?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for flight."
+    },
+    {
+     "beat": "reveal",
+     "do": "Then land."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.JUMPS.M_AJ_TAKEOFF",
+     "listen_for": [
+      "From both feet together"
+     ],
+     "ask": "In the long jump, how does the athlete take off?",
+     "repair": "Practise a short run-up and take off from one foot."
+    },
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.JUMPS.M_AJ_ORDER",
+     "listen_for": [
+      "Landing"
+     ],
+     "ask": "What is the first phase of the long jump?",
+     "repair": "Write each phase on a card and put the cards in order."
+    },
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.JUMPS.M_AJ_MEASURE",
+     "listen_for": [
+      "From where the run-up starts"
+     ],
+     "ask": "Where is the long jump measured from?",
+     "repair": "Measure a practice jump with a tape."
+    },
+    {
+     "code": "CREA.G6.PERFOR.ATHLETICS.JUMPS.M_CA6_AJ_TWO_FEET",
+     "listen_for": [
+      "two feet"
+     ],
+     "ask": "In the long jump, do you take off from one foot or two?",
+     "repair": "Run up and take off from the strong foot on the board."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is a long jump measured from?",
+     "answer": "the take-off board to the nearest mark in the sand",
+     "shows": "measuring"
+    },
+    {
+     "question": "In the scissors high jump, which leg goes over first?",
+     "answer": "the leg nearest the bar",
+     "shows": "scissors"
+    }
+   ]
+  }
+ ]
+}

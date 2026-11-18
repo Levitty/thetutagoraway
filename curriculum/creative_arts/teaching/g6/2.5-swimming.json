@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G6.PERFOR.SWIMMING",
+ "title": "Swimming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Pool work only with a trained adult; questions ask for body position and actions.",
+ "skills": [
+  {
+   "skill": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE",
+   "key_step": "The child describes breaststroke: body flat and face down, arms pull round to the shoulders together, frog kick, breathe as the arms pull, glide.",
+   "floor": {
+    "prerequisite": "Describes the front crawl (Grade 5).",
+    "question": "In front crawl, do the arms move together?",
+    "answer": "no, one after another"
+   },
+   "representations": [
+    "pictures",
+    "land practice",
+    "a float board"
+   ],
+   "steps": [
+    "Body flat, face down.",
+    "Arms pull out and round together.",
+    "Frog kick.",
+    "Glide."
+   ],
+   "contexts": [
+    "a swimming lesson",
+    "a swimming gala"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Do the arms move together in breaststroke?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Together, round to the shoulders."
+    },
+    {
+     "beat": "write",
+     "do": "Write the order: pull, breathe, kick, glide."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE.M_SW_BACK",
+     "listen_for": [
+      "On the back"
+     ],
+     "ask": "How does the body lie in breaststroke?",
+     "repair": "Name the four strokes and how the body lies in each."
+    },
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE.M_SW_KICK",
+     "listen_for": [
+      "A flutter kick, up and down"
+     ],
+     "ask": "What kind of kick is used in breaststroke?",
+     "repair": "Sit on a bench and practise both kicks."
+    },
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE.M_SW_SAFETY",
+     "listen_for": [
+      "Alone, if he swims well"
+     ],
+     "ask": "When may a child swim?",
+     "repair": "List the rules of the water with the teacher."
+    },
+    {
+     "code": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE.M_CA6_SW_ARMS_PAST_HIPS",
+     "listen_for": [
+      "to the hips"
+     ],
+     "ask": "In breaststroke, how far back do the arms pull?",
+     "repair": "Practise a small heart-shaped pull on land."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which kick is used in breaststroke?",
+     "answer": "the frog (whip) kick",
+     "shows": "kick"
+    },
+    {
+     "question": "When do you breathe in breaststroke?",
+     "answer": "as the arms pull",
+     "shows": "breathing"
+    }
+   ]
+  }
+ ]
+}

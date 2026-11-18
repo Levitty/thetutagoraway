@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G6.CREATI.VOLLEYBALL",
+ "title": "Volleyball",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Practise with a light ball over a low net; questions ask for body position and contact point.",
+ "skills": [
+  {
+   "skill": "CREA.G6.CREATI.VOLLEYBALL.SKILLS",
+   "key_step": "The child describes the under-arm serve (hit from below the waist with the heel of the hand) and the dig (straight joined forearms, knees bent).",
+   "floor": {
+    "prerequisite": "Catches and passes with two hands (Grade 4).",
+    "question": "In netball, where do you look when catching?",
+    "answer": "at the ball"
+   },
+   "representations": [
+    "a light ball",
+    "a low net or rope",
+    "pictures"
+   ],
+   "steps": [
+    "Serve: hold the ball low, swing the hand from below.",
+    "Dig: join hands, straight forearms.",
+    "Bend the knees and push up."
+   ],
+   "contexts": [
+    "a class volleyball game",
+    "inter-house games"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Join the hands with straight arms.",
+     "say": "Which skill?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dig."
+    },
+    {
+     "beat": "predict",
+     "do": "Where does the ball touch?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The forearms."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_VB_FEET",
+     "listen_for": [
+      "Hit it with the forearms"
+     ],
+     "ask": "In volleyball, what must a player not do with the ball?",
+     "repair": "Play a short game where catching the ball loses the point."
+    },
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_VB_DIG",
+     "listen_for": [
+      "The head"
+     ],
+     "ask": "Which part of the body is used for a dig pass?",
+     "repair": "Practise with a soft ball: hold the forearms together and lift a low ball."
+    },
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_VB_SERVE",
+     "listen_for": [
+      "Above the head"
+     ],
+     "ask": "Where is the ball when it is struck in an under-arm serve?",
+     "repair": "Compare the two serves with a soft ball."
+    },
+    {
+     "code": "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_CA6_VB_SWING_ARMS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "In a dig pass, should you swing your arms up high?",
+     "repair": "Dig with straight arms and a small leg push."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of the body hits the ball in a dig?",
+     "answer": "the joined forearms",
+     "shows": "dig"
+    },
+    {
+     "question": "In an under-arm serve, where is the ball hit from?",
+     "answer": "below the waist",
+     "shows": "serve"
+    }
+   ]
+  }
+ ]
+}

@@ -31,13 +31,13 @@
  },
  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS.M_SM_COMMUNITY": {
   "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS",
-  "error": "Gives the wrong community for the instrument.",
+  "error": "Gives the nyatiti to the Luhya, mixing it with the litungu, another lyre.",
   "example": {
    "question": "The nyatiti belongs to which people?",
    "wrong_answer": "The Luhya",
    "correct_answer": "The Luo"
   },
-  "cause": "The child mixes the lyres of different communities.",
+  "cause": "The nyatiti and the litungu are both lyres with many strings, so the child mixes their communities.",
   "reveals": "Offer \"The Luhya\" next to the right answer and ask the question again in a new context.",
   "help": "Make a matching card: instrument, community, how it is played.",
   "feedback": "The nyatiti and the orutu belong to the Luo, the litungu to the Luhya and the obokano to the Gusii.",
@@ -134,6 +134,51 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS.M_CA6_SM_OBOKANO_SMALL": {
+  "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS",
+  "error": "Thinks the obokano is a small hand-held fiddle.",
+  "example": {
+   "question": "Is the obokano a small fiddle or a large lyre?",
+   "wrong_answer": "a small fiddle",
+   "correct_answer": "a large lyre"
+  },
+  "cause": "The child knows it has strings and pictures the orutu.",
+  "reveals": "Offer \"a small fiddle\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the size of the obokano next to a learner.",
+  "feedback": "The obokano of the Gusii is a large lyre, not a small fiddle.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS.M_CA6_SP_THICK_HIGH": {
+  "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS",
+  "error": "Thinks a thicker string gives a higher note.",
+  "example": {
+   "question": "Which string gives the lower note: a thick one or a thin one?",
+   "wrong_answer": "the thin one",
+   "correct_answer": "the thick one"
+  },
+  "cause": "Thick looks strong and loud, so the child links it with high.",
+  "reveals": "Offer \"the thin one\" next to the right answer and ask the question again in a new context.",
+  "help": "Pluck a thick and a thin rubber band on a tin.",
+  "feedback": "A thicker string vibrates more slowly and gives a lower note.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING.M_CA6_ST_BIG_BLOBS": {
+  "skill": "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING",
+  "error": "Makes big blobs instead of small dots, so tones look patchy.",
+  "example": {
+   "question": "Should stippling dots be big blobs or small dots?",
+   "wrong_answer": "big blobs",
+   "correct_answer": "small dots, closer together for darker areas"
+  },
+  "cause": "The child wants to fill the page quickly.",
+  "reveals": "Offer \"big blobs\" next to the right answer and ask the question again in a new context.",
+  "help": "Stipple a strip with fine dots and one with blobs; compare.",
+  "feedback": "Use small dots. Put them closer together where it is darker.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CW_SECONDARY_PRIMARY": {
   "skill": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL",
   "error": "Says green or orange is a primary colour.",
@@ -151,13 +196,13 @@
  },
  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CW_MIX": {
   "skill": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL",
-  "error": "Gives the wrong mix for a secondary colour.",
+  "error": "Mixes red and blue for green, taking the wrong pair from the wheel.",
   "example": {
    "question": "Which two colours make green?",
    "wrong_answer": "Red and blue",
    "correct_answer": "Yellow and blue"
   },
-  "cause": "The child guesses the mix.",
+  "cause": "The child remembers green is mixed from two primaries but not which two.",
   "reveals": "Offer \"Red and blue\" next to the right answer and ask the question again in a new context.",
   "help": "Mix the three pairs of primaries on paper.",
   "feedback": "Yellow and blue make green. Red and yellow make orange. Blue and red make violet.",
@@ -224,6 +269,36 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL.M_CA6_CW_TERTIARY_TWO_SECONDARY": {
+  "skill": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL",
+  "error": "Thinks a tertiary colour is made from two secondary colours.",
+  "example": {
+   "question": "How is a tertiary colour made?",
+   "wrong_answer": "mix two secondary colours",
+   "correct_answer": "mix a primary with the secondary next to it"
+  },
+  "cause": "The child expects the next level to mix two of the level before.",
+  "reveals": "Offer \"mix two secondary colours\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix yellow and green on the palette: yellow-green.",
+  "feedback": "A tertiary colour is a primary mixed with the secondary next to it, such as yellow-green.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES.M_CA6_PT_COLLAGE_ONE_MATERIAL": {
+  "skill": "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES",
+  "error": "Thinks a collage uses only one kind of paper.",
+  "example": {
+   "question": "What can a collage be made from?",
+   "wrong_answer": "only coloured paper",
+   "correct_answer": "many materials: paper, fabric, seeds, leaves"
+  },
+  "cause": "The child has seen collages from paper only.",
+  "reveals": "Offer \"only coloured paper\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a collage with fabric, seeds and paper.",
+  "feedback": "A collage can use many materials, such as paper, fabric, seeds and leaves.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_VB_FEET": {
   "skill": "CREA.G6.CREATI.VOLLEYBALL.SKILLS",
   "error": "Says the ball may be kicked, caught or held.",
@@ -241,13 +316,13 @@
  },
  "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_VB_DIG": {
   "skill": "CREA.G6.CREATI.VOLLEYBALL.SKILLS",
-  "error": "Names the wrong body part for the dig pass.",
+  "error": "Says the dig is played with the head, taking it for heading in football.",
   "example": {
    "question": "Which part of the body is used for a dig pass?",
    "wrong_answer": "The head",
    "correct_answer": "The joined forearms"
   },
-  "cause": "The child mixes the dig with heading in football.",
+  "cause": "The child knows heading a ball from football and expects the same in volleyball.",
   "reveals": "Offer \"The head\" next to the right answer and ask the question again in a new context.",
   "help": "Practise with a soft ball: hold the forearms together and lift a low ball.",
   "feedback": "A dig pass lifts a low ball with the joined forearms or with one hand.",
@@ -269,15 +344,30 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.CREATI.VOLLEYBALL.SKILLS.M_CA6_VB_SWING_ARMS": {
+  "skill": "CREA.G6.CREATI.VOLLEYBALL.SKILLS",
+  "error": "Swings the arms high above the shoulders in a dig pass.",
+  "example": {
+   "question": "In a dig pass, should you swing your arms up high?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; keep arms straight and lift from the legs"
+  },
+  "cause": "The child wants power and swings the arms.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Dig with straight arms and a small leg push.",
+  "feedback": "Keep your arms straight and low. Push with your legs to send the ball.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES.M_RN_VALUE": {
   "skill": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES",
-  "error": "Gives the wrong number of beats for a note.",
+  "error": "Gives a crotchet two beats, taking the minim's value.",
   "example": {
    "question": "How many beats does a crotchet last?",
    "wrong_answer": "Two beats",
    "correct_answer": "One beat"
   },
-  "cause": "The child mixes the note names with their beats.",
+  "cause": "The minim and crotchet look alike except for the hollow head, so the child swaps them.",
   "reveals": "Offer \"Two beats\" next to the right answer and ask the question again in a new context.",
   "help": "Clap crotchets, minims and quavers while counting.",
   "feedback": "A crotchet is one beat, a minim is two, a semibreve four and a quaver half a beat.",
@@ -359,6 +449,36 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES.M_CA6_RN_DOTTED": {
+  "skill": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES",
+  "error": "Thinks a dotted minim lasts two beats like a plain minim.",
+  "example": {
+   "question": "How many beats does a dotted minim last?",
+   "wrong_answer": "two",
+   "correct_answer": "three"
+  },
+  "cause": "The child does not know the dot adds half the value.",
+  "reveals": "Offer \"two\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap a minim (2) then add half (1).",
+  "feedback": "A dot adds half the note's value. A dotted minim lasts three beats.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING.M_CA6_BP_MIRROR": {
+  "skill": "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING",
+  "error": "Cuts a letter on the block the right way round, so it prints backwards.",
+  "example": {
+   "question": "You cut the letter K on a block. How will it print?",
+   "wrong_answer": "the right way round",
+   "correct_answer": "backwards, as a mirror image"
+  },
+  "cause": "The child does not know a print is a mirror of the block.",
+  "reveals": "Offer \"the right way round\" next to the right answer and ask the question again in a new context.",
+  "help": "Print a block with a cut letter and look.",
+  "feedback": "A block prints a mirror image. Cut letters backwards.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE.M_WV_WARP": {
   "skill": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE",
   "error": "Mixes up the warp and the weft.",
@@ -402,6 +522,21 @@
   "help": "Weave two rows the same and see the strip fall apart.",
   "feedback": "The second row goes under where the first went over, so the weave holds.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE.M_CA6_WV_PULL_TIGHT": {
+  "skill": "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE",
+  "error": "Pulls the weft so tight that the edges of the mat curve inward.",
+  "example": {
+   "question": "Why must the weft not be pulled too tight?",
+   "wrong_answer": "tight is always stronger",
+   "correct_answer": "it pulls the edges in and the mat loses its shape"
+  },
+  "cause": "The child thinks tighter is always better.",
+  "reveals": "Offer \"tight is always stronger\" next to the right answer and ask the question again in a new context.",
+  "help": "Weave two rows, one too tight; see the waist form.",
+  "feedback": "Lay the weft gently so the edges stay straight.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL.M_CW_ORDER": {
@@ -449,6 +584,21 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL.M_CA6_CW_HANDS_TOGETHER": {
+  "skill": "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL",
+  "error": "Places both hands down at the same time in a cartwheel.",
+  "example": {
+   "question": "In a cartwheel, do both hands go down together?",
+   "wrong_answer": "yes",
+   "correct_answer": "no; one hand, then the other"
+  },
+  "cause": "The child copies a handstand.",
+  "reveals": "Offer \"yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk through hand, hand, foot, foot on lines.",
+  "feedback": "In a cartwheel the hands go down one after the other: hand, hand, foot, foot.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.CREATI.MELODY.SOLFA.M_ML_ORDER": {
   "skill": "CREA.G6.CREATI.MELODY.SOLFA",
   "error": "Swaps neighbouring sol-fa syllables.",
@@ -481,17 +631,32 @@
  },
  "CREA.G6.CREATI.MELODY.SOLFA.M_ML_SIGN": {
   "skill": "CREA.G6.CREATI.MELODY.SOLFA",
-  "error": "Gives the wrong hand sign.",
+  "error": "Shows doh as a finger pointing up, mixing it with the sign for ti.",
   "example": {
    "question": "What is the hand sign for doh?",
    "wrong_answer": "A finger pointing up",
    "correct_answer": "A closed fist"
   },
-  "cause": "The child mixes the signs of doh and ti.",
+  "cause": "Ti's pointing finger is the newest sign learnt, so the child uses it for doh.",
   "reveals": "Offer \"A finger pointing up\" next to the right answer and ask the question again in a new context.",
   "help": "Make the two signs and sing the syllables.",
   "feedback": "The sign for doh is a closed fist. The sign for ti is a finger pointing up.",
   "source": "Hand signs to confirm by a teacher.",
+  "status": "draft"
+ },
+ "CREA.G6.CREATI.MELODY.SOLFA.M_CA6_ML_TOP_DOH_LOW": {
+  "skill": "CREA.G6.CREATI.MELODY.SOLFA",
+  "error": "Thinks the top doh' is lower than doh.",
+  "example": {
+   "question": "Is doh' higher or lower than doh?",
+   "wrong_answer": "lower",
+   "correct_answer": "higher, the same note eight steps up"
+  },
+  "cause": "The child sees the same name and expects the same height, or lower.",
+  "reveals": "Offer \"lower\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing up the ladder and land on doh'.",
+  "feedback": "Doh' is the high doh, eight steps above doh.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "CREA.G6.PERFOR.ATHLETICS.JUMPS.M_AJ_TAKEOFF": {
@@ -539,6 +704,21 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.PERFOR.ATHLETICS.JUMPS.M_CA6_AJ_TWO_FEET": {
+  "skill": "CREA.G6.PERFOR.ATHLETICS.JUMPS",
+  "error": "Takes off from both feet in the long jump.",
+  "example": {
+   "question": "In the long jump, do you take off from one foot or two?",
+   "wrong_answer": "two feet",
+   "correct_answer": "one foot"
+  },
+  "cause": "Standing jumps use two feet, so the child expects the same.",
+  "reveals": "Offer \"two feet\" next to the right answer and ask the question again in a new context.",
+  "help": "Run up and take off from the strong foot on the board.",
+  "feedback": "Take off from one foot after the run-up.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_BLOW": {
   "skill": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE",
   "error": "Says to blow hard for a good sound.",
@@ -582,6 +762,21 @@
   "help": "Hold a recorder and check which hand is on top.",
   "feedback": "The left hand is on the top holes and the right hand is below.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA6_DR_LOW_C_BLOW_HARD": {
+  "skill": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+  "error": "Blows harder for low C.",
+  "example": {
+   "question": "How should you blow for low C?",
+   "wrong_answer": "harder",
+   "correct_answer": "very gently, with every hole sealed"
+  },
+  "cause": "The child thinks a big note needs big breath.",
+  "reveals": "Offer \"harder\" next to the right answer and ask the question again in a new context.",
+  "help": "Play low C gently and then hard; hear the squeak.",
+  "feedback": "Low notes need very gentle breath and every hole sealed.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE.M_EN_CAT": {
@@ -629,6 +824,21 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE.M_CA6_EN_NO_LEADER": {
+  "skill": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE",
+  "error": "Thinks an ensemble needs no leader or starting signal.",
+  "example": {
+   "question": "How does an ensemble start together?",
+   "wrong_answer": "everyone starts when they want",
+   "correct_answer": "a leader gives a signal"
+  },
+  "cause": "The child thinks each player plays their own part freely.",
+  "reveals": "Offer \"everyone starts when they want\" next to the right answer and ask the question again in a new context.",
+  "help": "Start a class clap on a count of four.",
+  "feedback": "An ensemble starts together on a leader's signal.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB.M_PS_COIL": {
   "skill": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB",
   "error": "Says a slab is made of coils or a ball of clay.",
@@ -674,6 +884,21 @@
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB.M_CA6_PS_UNEVEN_SLAB": {
+  "skill": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB",
+  "error": "Rolls slabs thick in one place and thin in another.",
+  "example": {
+   "question": "Why use two guide sticks when rolling a slab?",
+   "wrong_answer": "they are not needed",
+   "correct_answer": "to keep the slab the same thickness"
+  },
+  "cause": "The child rolls by eye.",
+  "reveals": "Offer \"they are not needed\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll with guide sticks and cut to show even thickness.",
+  "feedback": "Use guide sticks so the slab is the same thickness all over.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE.M_SW_BACK": {
   "skill": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE",
   "error": "Says breaststroke is done on the back.",
@@ -717,6 +942,21 @@
   "help": "List the rules of the water with the teacher.",
   "feedback": "A child swims only with a trained adult watching.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE.M_CA6_SW_ARMS_PAST_HIPS": {
+  "skill": "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE",
+  "error": "Pulls the arms all the way back to the hips in breaststroke.",
+  "example": {
+   "question": "In breaststroke, how far back do the arms pull?",
+   "wrong_answer": "to the hips",
+   "correct_answer": "to the shoulders, then forward again"
+  },
+  "cause": "The child copies the long pull of front crawl.",
+  "reveals": "Offer \"to the hips\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise a small heart-shaped pull on land.",
+  "feedback": "In breaststroke the arms pull to the shoulders, then shoot forward.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS.M_AE_TEMPO": {
@@ -781,13 +1021,13 @@
  },
  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE.M_AC_ENTRY": {
   "skill": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE",
-  "error": "Gives a wrong detail for an entry.",
+  "error": "Puts the visitor's name in a catalogue entry instead of the title and the artist.",
   "example": {
    "question": "Which detail belongs in a catalogue entry?",
    "wrong_answer": "The visitor's name",
    "correct_answer": "The title and the artist"
   },
-  "cause": "The child does not know what the visitor needs.",
+  "cause": "The child mixes a catalogue with a visitors' book, both kept at an exhibition.",
   "reveals": "Offer \"The visitor's name\" next to the right answer and ask the question again in a new context.",
   "help": "Write an entry for one artwork.",
   "feedback": "An entry gives the number, the title, the artist, the material and the size.",
@@ -807,6 +1047,36 @@
   "help": "Walk through an exhibition with and without a list.",
   "feedback": "A catalogue helps visitors find and understand the works.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS.M_CA6_AE_DYNAMICS_SPEED": {
+  "skill": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS",
+  "error": "Calls a change in speed a change in dynamics.",
+  "example": {
+   "question": "A song gets faster. Which element changed?",
+   "wrong_answer": "dynamics",
+   "correct_answer": "tempo"
+  },
+  "cause": "Both make a song feel more exciting.",
+  "reveals": "Offer \"dynamics\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing louder, then faster; name each.",
+  "feedback": "Speed is tempo. Loudness is dynamics.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE.M_CA6_AC_ORDER": {
+  "skill": "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE",
+  "error": "Lists catalogue entries in any order with no numbers.",
+  "example": {
+   "question": "Why are catalogue entries numbered?",
+   "wrong_answer": "they do not need numbers",
+   "correct_answer": "so visitors can match each entry to the work on display"
+  },
+  "cause": "The child thinks a catalogue is only a list of names.",
+  "reveals": "Offer \"they do not need numbers\" next to the right answer and ask the question again in a new context.",
+  "help": "Number the works and the entries to match.",
+  "feedback": "Number entries to match the numbers beside the works.",
+  "source": "To confirm by a CBC Creative Arts teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  }
 }

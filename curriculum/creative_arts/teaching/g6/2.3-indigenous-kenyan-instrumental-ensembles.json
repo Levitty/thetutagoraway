@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU",
+ "title": "Indigenous Kenyan Instrumental Ensembles",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Ensembles need everyone listening. Community examples are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE",
+   "key_step": "The child names kinds of Kenyan ensembles (percussion, string, wind, mixed) and what players do: watch the leader, keep the tempo, balance loudness.",
+   "floor": {
+    "prerequisite": "Names string instruments.",
+    "question": "Is the litungu string or wind?",
+    "answer": "string"
+   },
+   "representations": [
+    "instrument pictures",
+    "class percussion",
+    "a leader's signal"
+   ],
+   "steps": [
+    "Sort the instruments in the group.",
+    "Name the ensemble kind.",
+    "Watch the leader and keep together."
+   ],
+   "contexts": [
+    "a school music festival",
+    "a cultural celebration"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "A group has drums, a nyatiti and a horn.",
+     "say": "Which kind?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for mixed."
+    },
+    {
+     "beat": "predict",
+     "do": "Who gives the start?"
+    },
+    {
+     "beat": "reveal",
+     "do": "The leader."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE.M_EN_CAT",
+     "listen_for": [
+      "Wind"
+     ],
+     "ask": "The nyatiti belongs to which kind?",
+     "repair": "Sort five instruments by how the sound is made."
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE.M_EN_LOUD",
+     "listen_for": [
+      "Play as loud as possible"
+     ],
+     "ask": "What should an ensemble player do about loudness?",
+     "repair": "Play loud together and soft together and compare."
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE.M_EN_SOLO",
+     "listen_for": [
+      "Nothing, each plays his own beat"
+     ],
+     "ask": "What should players keep together in an ensemble?",
+     "repair": "Clap in a group, first alone and then together."
+    },
+    {
+     "code": "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE.M_CA6_EN_NO_LEADER",
+     "listen_for": [
+      "everyone starts when they want"
+     ],
+     "ask": "How does an ensemble start together?",
+     "repair": "Start a class clap on a count of four."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A group of drums only is which kind of ensemble?",
+     "answer": "a percussion ensemble",
+     "shows": "categories"
+    },
+    {
+     "question": "Why should players balance loudness?",
+     "answer": "so all parts are heard",
+     "shows": "balance"
+    }
+   ]
+  }
+ ]
+}

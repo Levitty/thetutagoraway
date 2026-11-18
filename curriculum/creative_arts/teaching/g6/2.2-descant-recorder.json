@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G6.PERFOR.DESCANT_RECORDER",
+ "title": "Descant Recorder",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Low C needs every hole covered gently. Fingerings are described in words.",
+ "skills": [
+  {
+   "skill": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+   "key_step": "The child says how to hold and play: left hand on top, right below, finger pads seal holes, gentle breath (softest for low notes), tongue each note.",
+   "floor": {
+    "prerequisite": "Tongues notes with \"doo\" (Grade 5).",
+    "question": "What starts a note?",
+    "answer": "the tongue"
+   },
+   "representations": [
+    "a recorder",
+    "a fingering chart in words",
+    "a mirror"
+   ],
+   "steps": [
+    "Left hand on top.",
+    "Seal holes with the pads.",
+    "Blow gently; softer for low notes."
+   ],
+   "contexts": [
+    "playing the National Anthem melody",
+    "a class concert"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "One hole not sealed for low C.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a squeak\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Seal all holes."
+    },
+    {
+     "beat": "write",
+     "do": "Write the points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_BLOW",
+     "listen_for": [
+      "As hard as you can"
+     ],
+     "ask": "How should you blow into the recorder?",
+     "repair": "Blow hard and gently and listen to the squeak."
+    },
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_HOLE",
+     "listen_for": [
+      "Partly, with the tips"
+     ],
+     "ask": "How should the finger pads cover the holes?",
+     "repair": "Cover a hole partly and fully and compare."
+    },
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_HAND",
+     "listen_for": [
+      "The right hand"
+     ],
+     "ask": "Which hand is on the top holes?",
+     "repair": "Hold a recorder and check which hand is on top."
+    },
+    {
+     "code": "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA6_DR_LOW_C_BLOW_HARD",
+     "listen_for": [
+      "harder"
+     ],
+     "ask": "How should you blow for low C?",
+     "repair": "Play low C gently and then hard; hear the squeak."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which hand goes at the top of the recorder?",
+     "answer": "the left hand",
+     "shows": "hands"
+    },
+    {
+     "question": "Low notes need harder or gentler breath?",
+     "answer": "gentler",
+     "shows": "breath"
+    }
+   ]
+  }
+ ]
+}

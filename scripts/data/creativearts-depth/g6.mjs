@@ -1,0 +1,322 @@
+// Creative Arts Grade 6, depth pass (18 Nov 2026): prerequisites to two or more per skill (Grade 4-5 Creative Arts skills, Grade 3
+// Creative Activities outcomes, Grade 6 Science), misconceptions to four per skill (six generic errors made specific), the
+// teaching pack for every sub-strand, and the practical outcomes each knowledge skill supports (marked by the teacher with the
+// KICD rubric). Merged by scripts/build-creativearts-g6.mjs through scripts/science-depth.mjs. Draft until a CBC Creative Arts
+// teacher reviews it.
+import { pk } from './lib.mjs';
+
+const G5 = 'CREA.G5.', G4 = 'CREA.G4.', G3 = 'CREA.G3.';
+
+export const SUBS = [
+  {
+    key: 'CREATI.STRING_MUSICAL_INSTRUMEN',
+    packNotes: 'Bring an improvised fiddle or a picture of the nyatiti, orutu, litungu and obokano. Community facts are for a teacher to confirm.',
+    rubric: { PARTS: ['c'], STIPPLING: ['e'] },
+    fix: { M_SM_COMMUNITY: { error: 'Gives the nyatiti to the Luhya, mixing it with the litungu, another lyre.', cause: 'The nyatiti and the litungu are both lyres with many strings, so the child mixes their communities.' } },
+    pre: {
+      INSTRUMENTS: [[`${G3}PERFOR.STRING_MUSICAL_INSTRUMEN.a`, 'Identifying Kenyan string instruments (Grade 3) is extended here to how each is played.']],
+      PARTS: [[`${G5}CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS`, 'How the parts of a wind instrument make sound (Grade 5) is the same idea of vibration and amplifying.']],
+      STIPPLING: [[`${G5}CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING`, 'Cross-hatching for dark areas (Grade 5) is shading by lines; stippling shades with dots.']],
+    },
+    mis: [
+      ['INSTRUMENTS', 'M_CA6_SM_OBOKANO_SMALL', 'Thinks the obokano is a small hand-held fiddle.', 'Is the obokano a small fiddle or a large lyre?', 'a small fiddle', 'a large lyre', 'The child knows it has strings and pictures the orutu.', 'Show the size of the obokano next to a learner.', 'The obokano of the Gusii is a large lyre, not a small fiddle.'],
+      ['PARTS', 'M_CA6_SP_THICK_HIGH', 'Thinks a thicker string gives a higher note.', 'Which string gives the lower note: a thick one or a thin one?', 'the thin one', 'the thick one', 'Thick looks strong and loud, so the child links it with high.', 'Pluck a thick and a thin rubber band on a tin.', 'A thicker string vibrates more slowly and gives a lower note.'],
+      ['STIPPLING', 'M_CA6_ST_BIG_BLOBS', 'Makes big blobs instead of small dots, so tones look patchy.', 'Should stippling dots be big blobs or small dots?', 'big blobs', 'small dots, closer together for darker areas', 'The child wants to fill the page quickly.', 'Stipple a strip with fine dots and one with blobs; compare.', 'Use small dots. Put them closer together where it is darker.'],
+    ],
+    pack: {
+      INSTRUMENTS: pk('The child names Kenyan string instruments (nyatiti, orutu, litungu, obokano), their community and whether they are plucked or bowed.',
+        ['Identifies Kenyan string instruments (Grade 3).', 'Name a Kenyan string instrument.', 'any of: nyatiti, orutu, litungu, obokano'],
+        ['pictures', 'an improvised fiddle', 'a matching table'],
+        ['Ask: plucked or bowed?', 'Name the instrument.', 'Name the community.'],
+        ['a music festival', 'a cultural day'],
+        [['point', 'Show the orutu with its bow.', 'Plucked or bowed?'], ['pause', 'Wait for bowed.'], ['predict', 'The nyatiti?'], ['reveal', 'Plucked.']],
+        [['How is the orutu played?', 'with a bow', 'playing'], ['Is the nzumari a string instrument?', 'No, it is a wind instrument', 'sorting']]),
+      PARTS: pk('The child says the strings vibrate to make sound, the body amplifies it, pegs tune it, and tighter or thinner strings give higher notes.',
+        ['Knows how wind instruments make sound (Grade 5).', 'What vibrates in a flute?', 'the air inside'],
+        ['an improvised fiddle', 'rubber bands on a tin', 'a labelled drawing'],
+        ['Pluck: the string vibrates.', 'The hollow body makes it louder.', 'Turn the peg: tighter is higher.'],
+        ['tuning a fiddle before a performance', 'making a fiddle in class'],
+        [['predict', 'Tighten the peg.', 'Higher or lower?'], ['pause', 'Wait for higher.'], ['reveal', 'Pluck: higher.'], ['write', 'Write each part and its job.']],
+        [['What does the hollow body do?', 'makes the sound louder', 'resonator'], ['What is the peg for?', 'tightening or loosening the string to tune it', 'tuning']]),
+      STIPPLING: pk('The child says stippling shades with small dots: dots close together make dark areas, spaced dots light areas.',
+        ['Shades by cross-hatching (Grade 5).', 'How does cross-hatching make an area darker?', 'more crossing lines'],
+        ['a fine pen', 'a sample stippled drum', 'a tone strip'],
+        ['Draw the outline lightly.', 'Dot the darkest parts closely.', 'Space the dots out toward the light.'],
+        ['drawing a musical instrument', 'drawing a fruit'],
+        [['draw', 'Draw a box and dot one end closely.'], ['predict', 'Which end looks darker?'], ['pause', 'Wait for the close dots.'], ['reveal', 'Close dots are dark.']],
+        [['What is stippling?', 'shading with small dots', 'meaning'], ['How do you show a dark area in stippling?', 'put the dots closer together', 'tone']]),
+    },
+  },
+  {
+    key: 'CREATI.PAINTING_AND_COLLAGE',
+    packNotes: 'Mix tertiary colours where the class can see. Mounting uses a teacher\'s cutting knife only.',
+    rubric: { TECHNIQUES: ['b', 'c', 'd'] },
+    fix: { M_CW_MIX: { error: 'Mixes red and blue for green, taking the wrong pair from the wheel.', cause: 'The child remembers green is mixed from two primaries but not which two.' } },
+    pre: {
+      COLOUR_WHEEL: [[`${G5}CREATI.PAINTING_AND_MOSAIC.MIXING`, 'Secondary colour mixing (Grade 5) is needed to make tertiary colours.']],
+      TECHNIQUES: [[`${G4}CREATI.PAINTING_AND_MONTAGE.MONTAGE`, 'Montage (Grade 4) is the cut-and-paste skill a collage builds on.']],
+    },
+    mis: [
+      ['COLOUR_WHEEL', 'M_CA6_CW_TERTIARY_TWO_SECONDARY', 'Thinks a tertiary colour is made from two secondary colours.', 'How is a tertiary colour made?', 'mix two secondary colours', 'mix a primary with the secondary next to it', 'The child expects the next level to mix two of the level before.', 'Mix yellow and green on the palette: yellow-green.', 'A tertiary colour is a primary mixed with the secondary next to it, such as yellow-green.'],
+      ['TECHNIQUES', 'M_CA6_PT_COLLAGE_ONE_MATERIAL', 'Thinks a collage uses only one kind of paper.', 'What can a collage be made from?', 'only coloured paper', 'many materials: paper, fabric, seeds, leaves', 'The child has seen collages from paper only.', 'Show a collage with fabric, seeds and paper.', 'A collage can use many materials, such as paper, fabric, seeds and leaves.'],
+    ],
+    pack: {
+      COLOUR_WHEEL: pk('The child sorts primary, secondary and tertiary colours, and warm (red, orange, yellow) from cool (blue, green, purple) colours.',
+        ['Mixes secondary colours (Grade 5).', 'What do yellow and blue make?', 'green'],
+        ['a twelve-part colour wheel', 'paint', 'warm and cool cards'],
+        ['Primary: cannot be mixed.', 'Secondary: two primaries.', 'Tertiary: a primary with its neighbour secondary.', 'Warm or cool: fire or water.'],
+        ['painting a sunset', 'painting a lake'],
+        [['predict', 'Red plus orange?'], ['pause', 'Wait for red-orange.'], ['reveal', 'Mix: red-orange, a tertiary.'], ['point', 'Is it warm or cool?']],
+        [['Is blue-green a tertiary colour?', 'yes', 'tertiary'], ['Is orange warm or cool?', 'warm', 'temperature']]),
+      TECHNIQUES: pk('The child says a still life paints objects arranged on a table, brush strokes show form, a mat mount frames a picture, and a collage pastes materials.',
+        ['Knows how a montage is made (Grade 4).', 'What is a montage made from?', 'many pictures pasted on a theme'],
+        ['a still life setup (a pot and fruits)', 'a mounted painting', 'a collage sample'],
+        ['Still life: arrange, look, paint.', 'Mat mount: card with a window round the picture.', 'Collage: plan, cut, paste materials.'],
+        ['a class exhibition', 'a painting for the school office'],
+        [['point', 'Show fruits on a table.', 'What kind of painting is this subject for?'], ['pause', 'Wait for still life.'], ['predict', 'What frames it for display?'], ['reveal', 'A mat mount.']],
+        [['What is a still life?', 'a picture of objects that do not move, arranged together', 'still life'], ['What is a mat mount for?', 'framing a picture neatly for display', 'mounting']]),
+    },
+  },
+  {
+    key: 'CREATI.VOLLEYBALL',
+    packNotes: 'Practise with a light ball over a low net; questions ask for body position and contact point.',
+    rubric: { SKILLS: ['b', 'c'] },
+    fix: { M_VB_DIG: { error: 'Says the dig is played with the head, taking it for heading in football.', cause: 'The child knows heading a ball from football and expects the same in volleyball.' } },
+    pre: {
+      SKILLS: [[`${G4}CREATI.NETBALL.PASSES`, 'Passing with two hands and eyes on the ball (Grade 4 netball) prepares the dig pass.'], [`${G5}CREATI.FOOTBALL.SKILLS`, 'Moving to meet a ball (Grade 5 football) is the footwork of volleyball.', 'helpful']],
+    },
+    mis: [
+      ['SKILLS', 'M_CA6_VB_SWING_ARMS', 'Swings the arms high above the shoulders in a dig pass.', 'In a dig pass, should you swing your arms up high?', 'yes', 'no; keep arms straight and lift from the legs', 'The child wants power and swings the arms.', 'Dig with straight arms and a small leg push.', 'Keep your arms straight and low. Push with your legs to send the ball.'],
+    ],
+    pack: {
+      SKILLS: pk('The child describes the under-arm serve (hit from below the waist with the heel of the hand) and the dig (straight joined forearms, knees bent).',
+        ['Catches and passes with two hands (Grade 4).', 'In netball, where do you look when catching?', 'at the ball'],
+        ['a light ball', 'a low net or rope', 'pictures'],
+        ['Serve: hold the ball low, swing the hand from below.', 'Dig: join hands, straight forearms.', 'Bend the knees and push up.'],
+        ['a class volleyball game', 'inter-house games'],
+        [['point', 'Join the hands with straight arms.', 'Which skill?'], ['pause', 'Wait for dig.'], ['predict', 'Where does the ball touch?'], ['reveal', 'The forearms.']],
+        [['Which part of the body hits the ball in a dig?', 'the joined forearms', 'dig'], ['In an under-arm serve, where is the ball hit from?', 'below the waist', 'serve']]),
+    },
+  },
+  {
+    key: 'CREATI.RHYTHM_AND_PATTERN_MAKIN',
+    packNotes: 'Count beats aloud; block printing with a teacher. Notes are described in words on the phone.',
+    rubric: { NOTES: ['b', 'c'], PRINTING: ['d', 'e'] },
+    fix: { M_RN_VALUE: { error: 'Gives a crotchet two beats, taking the minim\'s value.', cause: 'The minim and crotchet look alike except for the hollow head, so the child swaps them.' } },
+    pre: {
+      NOTES: [[`${G5}CREATI.RHYTHM.VALUES`, 'Note values to the minim (Grade 5) are counted in three-beat bars here.']],
+      PRINTING: [[`${G3}CREATI.RHYTHM_AND_PATTERN_MAKIN.d`, 'A random repeat pattern with found objects (Grade 3) is the first printing; a block makes a full repeat.'], ['MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS', 'Patterns of squares, rectangles and triangles (Grade 4 Maths) are the geometric motifs printed here.']],
+    },
+    mis: [
+      ['NOTES', 'M_CA6_RN_DOTTED', 'Thinks a dotted minim lasts two beats like a plain minim.', 'How many beats does a dotted minim last?', 'two', 'three', 'The child does not know the dot adds half the value.', 'Clap a minim (2) then add half (1).', 'A dot adds half the note\'s value. A dotted minim lasts three beats.'],
+      ['PRINTING', 'M_CA6_BP_MIRROR', 'Cuts a letter on the block the right way round, so it prints backwards.', 'You cut the letter K on a block. How will it print?', 'the right way round', 'backwards, as a mirror image', 'The child does not know a print is a mirror of the block.', 'Print a block with a cut letter and look.', 'A block prints a mirror image. Cut letters backwards.'],
+    ],
+    pack: {
+      NOTES: pk('The child gives note and rest values (semibreve 4, dotted minim 3, minim 2, crotchet 1, quaver half) and groups them in three-beat bars.',
+        ['Knows values to the minim (Grade 5).', 'How many beats does a minim last?', 'two'],
+        ['notes in words and drawn', 'claps', 'bar lines'],
+        ['Count 1 2 3.', 'Fill each bar with three beats.', 'Draw the bar line after beat three.'],
+        ['a waltz-time song', 'a class drum pattern'],
+        [['count', 'Count STRONG 2 3.'], ['predict', 'A minim and what fills the bar?'], ['pause', 'Wait for a crotchet.'], ['reveal', '2 + 1 = 3.']],
+        [['How many beats in each bar of three-beat time?', 'three', 'bars'], ['A minim plus how many crotchets fill a three-beat bar?', 'one', 'grouping']]),
+      PRINTING: pk('The child orders block printing (draw a motif, cut the block, ink it, press, repeat in rows) and says a full repeat fills the area evenly.',
+        ['Knows patterns of shapes (Grade 4 Maths).', 'Continue: square, triangle, square, ...', 'triangle'],
+        ['a potato or foam block', 'ink or paint', 'paper with a grid'],
+        ['Draw a geometric motif.', 'Cut away the background.', 'Ink and press.', 'Repeat along the grid.'],
+        ['printing wrapping paper', 'a class cloth banner'],
+        [['write', 'Write the steps out of order.'], ['point', 'Point at "press".', 'What comes before it?'], ['pause', 'Wait for ink.'], ['write', 'Number them.']],
+        [['What is a full repeat pattern?', 'the motif printed again and again in rows to fill the space', 'repeat'], ['Which part of the block prints?', 'the raised part', 'relief']]),
+    },
+  },
+  {
+    key: 'CREATI.WEAVING',
+    packNotes: 'Use a card loom with serrated edges; the phone describes over-under patterns in words.',
+    rubric: { PLAIN_WEAVE: ['b', 'c'] },
+    pre: {
+      PLAIN_WEAVE: [[`${G3}CREATI.WEAVING.a`, 'The plain paper weave (Grade 3) is the same over-under pattern done on a loom.'], [`${G5}PERFOR.ATHLETICS.PLAITING`, 'Plaiting strands evenly (Grade 5) builds the even tension weaving needs.', 'helpful']],
+    },
+    mis: [
+      ['PLAIN_WEAVE', 'M_CA6_WV_PULL_TIGHT', 'Pulls the weft so tight that the edges of the mat curve inward.', 'Why must the weft not be pulled too tight?', 'tight is always stronger', 'it pulls the edges in and the mat loses its shape', 'The child thinks tighter is always better.', 'Weave two rows, one too tight; see the waist form.', 'Lay the weft gently so the edges stay straight.'],
+    ],
+    pack: {
+      PLAIN_WEAVE: pk('The child says the warp runs lengthwise on the loom, the weft goes across over one and under one, and the next row starts opposite.',
+        ['Made a plain paper weave (Grade 3).', 'In a paper weave, does each strip go over every strip?', 'no, over one, under one'],
+        ['a serrated card loom', 'yarn or sisal', 'a sample mat'],
+        ['Thread the warp lengthwise.', 'Weave the weft over one, under one.', 'Start the next row opposite.', 'Push rows close gently.'],
+        ['weaving a mat for gymnastics', 'a table mat'],
+        [['point', 'Show row one: over, under.', 'How does row two start?'], ['pause', 'Wait for under.'], ['reveal', 'Opposite to row one.'], ['write', 'Label warp and weft.']],
+        [['Which threads run lengthwise on the loom?', 'the warp', 'warp'], ['In plain weave, if row one starts over, how does row two start?', 'under', 'alternating']]),
+    },
+  },
+  {
+    key: 'CREATI.GYMNASTICS',
+    packNotes: 'Cartwheels on mats only, with a teacher spotting.',
+    rubric: { CARTWHEEL: ['b', 'c'] },
+    pre: {
+      CARTWHEEL: [[`${G4}PERFOR.GYMNASTICS.GYMSAFE`, 'Gymnastics safety (Grade 4) comes before any inverted move.'], [`${G3}PERFOR.FORWARD_ROLL_AND_V_BALAN.c`, 'The forward roll (Grade 3) is part of the three-action sequence.']],
+    },
+    mis: [
+      ['CARTWHEEL', 'M_CA6_CW_HANDS_TOGETHER', 'Places both hands down at the same time in a cartwheel.', 'In a cartwheel, do both hands go down together?', 'yes', 'no; one hand, then the other', 'The child copies a handstand.', 'Walk through hand, hand, foot, foot on lines.', 'In a cartwheel the hands go down one after the other: hand, hand, foot, foot.'],
+    ],
+    pack: {
+      CARTWHEEL: pk('The child describes the cartwheel (hand, hand, foot, foot in a line, legs straight) and orders a cartwheel, forward roll and swan balance sequence.',
+        ['Knows gymnastics safety (Grade 4).', 'Where should gymnastics be done?', 'on a mat'],
+        ['a mat with a straight line', 'pictures', 'step cards'],
+        ['Start facing the line, arms up.', 'Hand, hand, foot, foot along the line.', 'Join the sequence smoothly: cartwheel, roll, balance.'],
+        ['a PE lesson', 'a sports day display'],
+        [['write', 'Write hand, foot, hand, foot.'], ['predict', 'Is that the right order?'], ['pause', 'Wait for no.'], ['reveal', 'Hand, hand, foot, foot.']],
+        [['What is the order of contact in a cartwheel?', 'hand, hand, foot, foot', 'order'], ['Should the legs be straight or bent?', 'straight', 'form']]),
+    },
+  },
+  {
+    key: 'CREATI.MELODY',
+    packNotes: 'Sing the ladder from doh to doh\' with hand signs. The phone describes signs in words.',
+    rubric: { SOLFA: ['a', 'b', 'd', 'e'] },
+    fix: { M_ML_SIGN: { error: 'Shows doh as a finger pointing up, mixing it with the sign for ti.', cause: 'Ti\'s pointing finger is the newest sign learnt, so the child uses it for doh.' } },
+    pre: {
+      SOLFA: [[`${G5}CREATI.MELODY.SIGNS`, 'The signs for d r m f s (Grade 5) are extended with l, t and doh\'.']],
+    },
+    mis: [
+      ['SOLFA', 'M_CA6_ML_TOP_DOH_LOW', 'Thinks the top doh\' is lower than doh.', 'Is doh\' higher or lower than doh?', 'lower', 'higher, the same note eight steps up', 'The child sees the same name and expects the same height, or lower.', 'Sing up the ladder and land on doh\'.', 'Doh\' is the high doh, eight steps above doh.'],
+    ],
+    pack: {
+      SOLFA: pk('The child says the sol-fa ladder d r m f s l t d\' up and down and reads the signs for l (relaxed hand hanging) and t (finger pointing up).',
+        ['Reads the signs for d r m f s (Grade 5).', 'Which sign has the thumb pointing down?', 'f'],
+        ['an eight-rung ladder', 'singing', 'hand signs'],
+        ['Sing up d to d\'.', 'Sing down d\' to d.', 'Add signs for l and t.'],
+        ['a choir warm-up', 'learning a new melody'],
+        [['draw', 'Draw eight rungs with d at the bottom.'], ['predict', 'What comes after s?'], ['pause', 'Wait for l.'], ['reveal', 'l, t, then d\'.']],
+        [['Which comes just below doh\'?', 'ti', 'order'], ['Going down, what comes after s?', 'f', 'descending']]),
+    },
+  },
+  {
+    key: 'PERFOR.ATHLETICS',
+    packNotes: 'Jumps into a sand pit or onto mats with a teacher; rake the sand first.',
+    rubric: { JUMPS: ['b', 'c'] },
+    pre: {
+      JUMPS: [[`${G4}PERFOR.ATHLETICS.SPRINT`, 'A fast, controlled run-up (Grade 4 sprinting) is the first phase of both jumps.'], ['MATH.G4.MEASUR.LENGTH.MEASURE_CM', 'Measuring length (Grade 4 Maths) is how a jump is measured.', 'helpful']],
+    },
+    mis: [
+      ['JUMPS', 'M_CA6_AJ_TWO_FEET', 'Takes off from both feet in the long jump.', 'In the long jump, do you take off from one foot or two?', 'two feet', 'one foot', 'Standing jumps use two feet, so the child expects the same.', 'Run up and take off from the strong foot on the board.', 'Take off from one foot after the run-up.'],
+    ],
+    pack: {
+      JUMPS: pk('The child describes the long jump (run-up, one-foot take-off, sail, land) and the high jump scissors (angled run, lift the inside leg then the outer).',
+        ['Sprints with good form (Grade 4).', 'Where should a sprinter look?', 'ahead'],
+        ['a sand pit or mats', 'a take-off board', 'pictures of the phases'],
+        ['Run up fast.', 'Take off from one foot.', 'Sail with legs forward.', 'Land feet first, fall forward.'],
+        ['sports day long jump', 'a class high jump'],
+        [['write', 'Write run-up, land, take-off, flight.'], ['predict', 'What comes after take-off?'], ['pause', 'Wait for flight.'], ['reveal', 'Then land.']],
+        [['Where is a long jump measured from?', 'the take-off board to the nearest mark in the sand', 'measuring'], ['In the scissors high jump, which leg goes over first?', 'the leg nearest the bar', 'scissors']]),
+    },
+  },
+  {
+    key: 'PERFOR.DESCANT_RECORDER',
+    packNotes: 'Low C needs every hole covered gently. Fingerings are described in words.',
+    rubric: { TECHNIQUE: ['a', 'b', 'c'] },
+    pre: {
+      TECHNIQUE: [[`${G5}PERFOR.DESCANT_RECORDER.TECHNIQUE`, 'Tonguing and steady breath (Grade 5) are needed for the low notes.']],
+    },
+    mis: [
+      ['TECHNIQUE', 'M_CA6_DR_LOW_C_BLOW_HARD', 'Blows harder for low C.', 'How should you blow for low C?', 'harder', 'very gently, with every hole sealed', 'The child thinks a big note needs big breath.', 'Play low C gently and then hard; hear the squeak.', 'Low notes need very gentle breath and every hole sealed.'],
+    ],
+    pack: {
+      TECHNIQUE: pk('The child says how to hold and play: left hand on top, right below, finger pads seal holes, gentle breath (softest for low notes), tongue each note.',
+        ['Tongues notes with "doo" (Grade 5).', 'What starts a note?', 'the tongue'],
+        ['a recorder', 'a fingering chart in words', 'a mirror'],
+        ['Left hand on top.', 'Seal holes with the pads.', 'Blow gently; softer for low notes.'],
+        ['playing the National Anthem melody', 'a class concert'],
+        [['predict', 'One hole not sealed for low C.', 'What happens?'], ['pause', 'Wait for "a squeak".'], ['reveal', 'Seal all holes.'], ['write', 'Write the points.']],
+        [['Which hand goes at the top of the recorder?', 'the left hand', 'hands'], ['Low notes need harder or gentler breath?', 'gentler', 'breath']]),
+    },
+  },
+  {
+    key: 'PERFOR.INDIGENOUS_KENYAN_INSTRU',
+    packNotes: 'Ensembles need everyone listening. Community examples are for a teacher to confirm.',
+    rubric: { ENSEMBLE: ['c'] },
+    pre: {
+      ENSEMBLE: [['INSTRUMENTS', 'Naming string instruments (Grade 6) is needed to sort ensembles.'], [`${G4}CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY`, 'Melodic and non-melodic percussion (Grade 4) are sorted again in an ensemble.']],
+    },
+    mis: [
+      ['ENSEMBLE', 'M_CA6_EN_NO_LEADER', 'Thinks an ensemble needs no leader or starting signal.', 'How does an ensemble start together?', 'everyone starts when they want', 'a leader gives a signal', 'The child thinks each player plays their own part freely.', 'Start a class clap on a count of four.', 'An ensemble starts together on a leader\'s signal.'],
+    ],
+    pack: {
+      ENSEMBLE: pk('The child names kinds of Kenyan ensembles (percussion, string, wind, mixed) and what players do: watch the leader, keep the tempo, balance loudness.',
+        ['Names string instruments.', 'Is the litungu string or wind?', 'string'],
+        ['instrument pictures', 'class percussion', 'a leader\'s signal'],
+        ['Sort the instruments in the group.', 'Name the ensemble kind.', 'Watch the leader and keep together.'],
+        ['a school music festival', 'a cultural celebration'],
+        [['point', 'A group has drums, a nyatiti and a horn.', 'Which kind?'], ['pause', 'Wait for mixed.'], ['predict', 'Who gives the start?'], ['reveal', 'The leader.']],
+        [['A group of drums only is which kind of ensemble?', 'a percussion ensemble', 'categories'], ['Why should players balance loudness?', 'so all parts are heard', 'balance']]),
+    },
+  },
+  {
+    key: 'PERFOR.INDIGENOUS_KENYAN_CRAFT_',
+    packNotes: 'Clay work on boards; dry pieces slowly in the shade.',
+    rubric: { SLAB: ['b', 'c'] },
+    pre: {
+      SLAB: [[`${G4}CREATI.MELODY.CLAY`, 'Slab and coil steps (Grade 4 melody plaques) are used again for a vase.'], [`${G3}PERFOR.MODELLING_AND_ORNAMENT_M.c`, 'Decorating modelled beads (Grade 3) is the first decoration of clay.', 'helpful']],
+    },
+    mis: [
+      ['SLAB', 'M_CA6_PS_UNEVEN_SLAB', 'Rolls slabs thick in one place and thin in another.', 'Why use two guide sticks when rolling a slab?', 'they are not needed', 'to keep the slab the same thickness', 'The child rolls by eye.', 'Roll with guide sticks and cut to show even thickness.', 'Use guide sticks so the slab is the same thickness all over.'],
+    ],
+    pack: {
+      SLAB: pk('The child orders the slab method: wedge, roll an even slab with guide sticks, cut pieces, score and join with slip, decorate, dry slowly.',
+        ['Knows Grade 4 slab steps.', 'What joins two pieces of clay?', 'slip'],
+        ['clay and guide sticks', 'a card template', 'a sample vase'],
+        ['Wedge the clay.', 'Roll an even slab.', 'Cut, score and join with slip.', 'Decorate; dry slowly.'],
+        ['modelling a vase', 'a pencil holder'],
+        [['write', 'Write the steps out of order.'], ['point', 'Point at "join".', 'What comes before it?'], ['pause', 'Wait for "score".'], ['write', 'Number them.']],
+        [['Why are edges scored before joining?', 'so the slip grips and the join holds', 'scoring'], ['Where should a clay vase dry?', 'slowly in the shade', 'drying']]),
+    },
+  },
+  {
+    key: 'PERFOR.SWIMMING',
+    packNotes: 'Pool work only with a trained adult; questions ask for body position and actions.',
+    rubric: { BREASTSTROKE: ['b_'] },
+    pre: {
+      BREASTSTROKE: [[`${G5}PERFOR.SWIMMING.CRAWL`, 'The flat body position of the front crawl (Grade 5) is also used in breaststroke.'], [`${G5}PERFOR.SWIMMING.POOL_SAFETY`, 'Pool safety (Grade 5) comes before every stroke.']],
+    },
+    mis: [
+      ['BREASTSTROKE', 'M_CA6_SW_ARMS_PAST_HIPS', 'Pulls the arms all the way back to the hips in breaststroke.', 'In breaststroke, how far back do the arms pull?', 'to the hips', 'to the shoulders, then forward again', 'The child copies the long pull of front crawl.', 'Practise a small heart-shaped pull on land.', 'In breaststroke the arms pull to the shoulders, then shoot forward.'],
+    ],
+    pack: {
+      BREASTSTROKE: pk('The child describes breaststroke: body flat and face down, arms pull round to the shoulders together, frog kick, breathe as the arms pull, glide.',
+        ['Describes the front crawl (Grade 5).', 'In front crawl, do the arms move together?', 'no, one after another'],
+        ['pictures', 'land practice', 'a float board'],
+        ['Body flat, face down.', 'Arms pull out and round together.', 'Frog kick.', 'Glide.'],
+        ['a swimming lesson', 'a swimming gala'],
+        [['predict', 'Do the arms move together in breaststroke?'], ['pause', 'Wait for yes.'], ['reveal', 'Together, round to the shoulders.'], ['write', 'Write the order: pull, breathe, kick, glide.']],
+        [['Which kick is used in breaststroke?', 'the frog (whip) kick', 'kick'], ['When do you breathe in breaststroke?', 'as the arms pull', 'breathing']]),
+    },
+  },
+  {
+    key: 'APPREC.ANALYSIS_OF_CREATIVE_ART',
+    packNotes: 'Use a class exhibition and a familiar song.',
+    rubric: { CATALOGUE: ['a'] },
+    fix: { M_AC_ENTRY: { error: 'Puts the visitor\'s name in a catalogue entry instead of the title and the artist.', cause: 'The child mixes a catalogue with a visitors\' book, both kept at an exhibition.' } },
+    pre: {
+      ELEMENTS: [[`${G4}PERFOR.SONGS.PERFTERMS`, 'Pitch, tempo and dynamics (Grade 4) are the elements of music named here.']],
+      CATALOGUE: [[`${G4}APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO`, 'Labelling work with name, title and date (Grade 4 portfolio) is a catalogue entry.']],
+    },
+    mis: [
+      ['ELEMENTS', 'M_CA6_AE_DYNAMICS_SPEED', 'Calls a change in speed a change in dynamics.', 'A song gets faster. Which element changed?', 'dynamics', 'tempo', 'Both make a song feel more exciting.', 'Sing louder, then faster; name each.', 'Speed is tempo. Loudness is dynamics.'],
+      ['CATALOGUE', 'M_CA6_AC_ORDER', 'Lists catalogue entries in any order with no numbers.', 'Why are catalogue entries numbered?', 'they do not need numbers', 'so visitors can match each entry to the work on display', 'The child thinks a catalogue is only a list of names.', 'Number the works and the entries to match.', 'Number entries to match the numbers beside the works.'],
+    ],
+    pack: {
+      ELEMENTS: pk('The child names elements of music in a song (pitch, tempo, dynamics, rhythm, melody) and says the message the song carries.',
+        ['Uses pitch, tempo and dynamics (Grade 4).', 'What does tempo mean?', 'how fast or slow'],
+        ['a familiar song', 'element cards', 'the song lyrics'],
+        ['Listen once for speed and loudness.', 'Listen for high and low.', 'Read the words for the message.'],
+        ['a school song', 'a patriotic song at assembly'],
+        [['predict', 'Sing softly then loudly.', 'Which element changed?'], ['pause', 'Wait for dynamics.'], ['reveal', 'Dynamics.'], ['write', 'Write the elements and the message.']],
+        [['Loud and soft in music is called...', 'dynamics', 'element'], ['Where do you find a song\'s message?', 'in its words', 'message']]),
+      CATALOGUE: pk('The child says a catalogue lists each exhibited work with a number, title, artist, medium and date, so visitors can find and know the works.',
+        ['Labels work with name, title and date (Grade 4).', 'What goes on a portfolio label?', 'name, title and date'],
+        ['a class exhibition', 'a sample catalogue page', 'number cards'],
+        ['Number each work.', 'Write title, artist, medium, date.', 'Match the numbers to the display.'],
+        ['an end of term exhibition', 'a parents\' open day'],
+        [['point', 'Show an entry with no artist.', 'What is missing?'], ['pause', 'Wait for the artist.'], ['write', 'Write a full entry.'], ['reveal', 'Compare with the sample.']],
+        [['Name two details in a catalogue entry.', 'any two of: number, title, artist, medium, date', 'entry'], ['What is a catalogue for?', 'to tell visitors about each work on display', 'purpose']]),
+    },
+  },
+];

@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/creative_arts/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g6-non-question-outcomes-2026-11-12.md"};
+export const MAP_SOURCE = {"source":"curriculum/creative_arts/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g6-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g6)"};
 export const SUBSTRANDS = {
  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN": {
   "name": "String Musical Instruments and Drawing",
@@ -392,7 +392,8 @@ export const SKILLS = {
   "mis": [
    "M_SM_WIND_AS_STRING",
    "M_SM_PLAY",
-   "M_SM_COMMUNITY"
+   "M_SM_COMMUNITY",
+   "M_CA6_SM_OBOKANO_SMALL"
   ]
  },
  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS": {
@@ -408,7 +409,8 @@ export const SKILLS = {
   "mis": [
    "M_SP_BODY",
    "M_SP_PEG",
-   "M_SP_TIGHT"
+   "M_SP_TIGHT",
+   "M_CA6_SP_THICK_HIGH"
   ]
  },
  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING": {
@@ -424,7 +426,8 @@ export const SKILLS = {
   "mis": [
    "M_ST_LINES",
    "M_ST_DARK",
-   "M_ST_SMEAR"
+   "M_ST_SMEAR",
+   "M_CA6_ST_BIG_BLOBS"
   ]
  },
  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL": {
@@ -438,7 +441,8 @@ export const SKILLS = {
   "mis": [
    "M_CW_SECONDARY_PRIMARY",
    "M_CW_MIX",
-   "M_CW_WARM"
+   "M_CW_WARM",
+   "M_CA6_CW_TERTIARY_TWO_SECONDARY"
   ]
  },
  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES": {
@@ -456,7 +460,8 @@ export const SKILLS = {
   "mis": [
    "M_PT_STILL",
    "M_PT_MAT",
-   "M_PT_COLLAGE"
+   "M_PT_COLLAGE",
+   "M_CA6_PT_COLLAGE_ONE_MATERIAL"
   ]
  },
  "CREA.G6.CREATI.VOLLEYBALL.SKILLS": {
@@ -470,7 +475,8 @@ export const SKILLS = {
   "mis": [
    "M_VB_FEET",
    "M_VB_DIG",
-   "M_VB_SERVE"
+   "M_VB_SERVE",
+   "M_CA6_VB_SWING_ARMS"
   ]
  },
  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES": {
@@ -485,7 +491,8 @@ export const SKILLS = {
   "mis": [
    "M_RN_VALUE",
    "M_RN_REST",
-   "M_RN_BAR"
+   "M_RN_BAR",
+   "M_CA6_RN_DOTTED"
   ]
  },
  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING": {
@@ -502,7 +509,8 @@ export const SKILLS = {
   "mis": [
    "M_BP_ORDER",
    "M_BP_INK",
-   "M_BP_REPEAT"
+   "M_BP_REPEAT",
+   "M_CA6_BP_MIRROR"
   ]
  },
  "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE": {
@@ -517,7 +525,8 @@ export const SKILLS = {
   "mis": [
    "M_WV_WARP",
    "M_WV_PATTERN",
-   "M_WV_SAME_ROW"
+   "M_WV_SAME_ROW",
+   "M_CA6_WV_PULL_TIGHT"
   ]
  },
  "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL": {
@@ -532,7 +541,8 @@ export const SKILLS = {
   "mis": [
    "M_CW_ORDER",
    "M_CW_BENT",
-   "M_CW_SEQUENCE"
+   "M_CW_SEQUENCE",
+   "M_CA6_CW_HANDS_TOGETHER"
   ]
  },
  "CREA.G6.CREATI.MELODY.SOLFA": {
@@ -548,7 +558,8 @@ export const SKILLS = {
   "mis": [
    "M_ML_ORDER",
    "M_ML_DOWN",
-   "M_ML_SIGN"
+   "M_ML_SIGN",
+   "M_CA6_ML_TOP_DOH_LOW"
   ]
  },
  "CREA.G6.PERFOR.ATHLETICS.JUMPS": {
@@ -562,7 +573,8 @@ export const SKILLS = {
   "mis": [
    "M_AJ_TAKEOFF",
    "M_AJ_ORDER",
-   "M_AJ_MEASURE"
+   "M_AJ_MEASURE",
+   "M_CA6_AJ_TWO_FEET"
   ]
  },
  "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE": {
@@ -577,7 +589,8 @@ export const SKILLS = {
   "mis": [
    "M_DR_BLOW",
    "M_DR_HOLE",
-   "M_DR_HAND"
+   "M_DR_HAND",
+   "M_CA6_DR_LOW_C_BLOW_HARD"
   ]
  },
  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE": {
@@ -588,11 +601,14 @@ export const SKILLS = {
    "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.a",
    "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.b"
   ],
-  "pre": [],
+  "pre": [
+   "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS"
+  ],
   "mis": [
    "M_EN_CAT",
    "M_EN_LOUD",
-   "M_EN_SOLO"
+   "M_EN_SOLO",
+   "M_CA6_EN_NO_LEADER"
   ]
  },
  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB": {
@@ -607,7 +623,8 @@ export const SKILLS = {
   "mis": [
    "M_PS_COIL",
    "M_PS_JOIN",
-   "M_PS_DRY"
+   "M_PS_DRY",
+   "M_CA6_PS_UNEVEN_SLAB"
   ]
  },
  "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE": {
@@ -621,7 +638,8 @@ export const SKILLS = {
   "mis": [
    "M_SW_BACK",
    "M_SW_KICK",
-   "M_SW_SAFETY"
+   "M_SW_SAFETY",
+   "M_CA6_SW_ARMS_PAST_HIPS"
   ]
  },
  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS": {
@@ -636,7 +654,8 @@ export const SKILLS = {
   "mis": [
    "M_AE_TEMPO",
    "M_AE_PITCH",
-   "M_AE_MESSAGE"
+   "M_AE_MESSAGE",
+   "M_CA6_AE_DYNAMICS_SPEED"
   ]
  },
  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE": {
@@ -652,7 +671,8 @@ export const SKILLS = {
   "mis": [
    "M_AC_STORY",
    "M_AC_ENTRY",
-   "M_AC_PURPOSE"
+   "M_AC_PURPOSE",
+   "M_CA6_AC_ORDER"
   ]
  }
 };
@@ -666,49 +686,67 @@ export const MIS_FEEDBACK = {
  "M_ST_LINES": "Stippling uses only dots. Hatching uses lines.",
  "M_ST_DARK": "Dots packed close together look dark. Dots spaced apart look light.",
  "M_ST_SMEAR": "Stippling is made of dots, not smudges.",
+ "M_CA6_SM_OBOKANO_SMALL": "The obokano of the Gusii is a large lyre, not a small fiddle.",
+ "M_CA6_SP_THICK_HIGH": "A thicker string vibrates more slowly and gives a lower note.",
+ "M_CA6_ST_BIG_BLOBS": "Use small dots. Put them closer together where it is darker.",
  "M_CW_SECONDARY_PRIMARY": "The primary colours are red, yellow and blue. They cannot be made by mixing.",
  "M_CW_MIX": "Yellow and blue make green. Red and yellow make orange. Blue and red make violet.",
  "M_CW_WARM": "Red, orange and yellow are warm. Blue, green and violet are cool.",
  "M_PT_STILL": "A still life shows objects that stay still, like fruit in a bowl.",
  "M_PT_MAT": "In mounting, a mat is the card border put round a painting for display.",
  "M_PT_COLLAGE": "A collage is made by gluing pieces of paper, cloth or other materials on a surface.",
+ "M_CA6_CW_TERTIARY_TWO_SECONDARY": "A tertiary colour is a primary mixed with the secondary next to it, such as yellow-green.",
+ "M_CA6_PT_COLLAGE_ONE_MATERIAL": "A collage can use many materials, such as paper, fabric, seeds and leaves.",
  "M_VB_FEET": "In volleyball a player hits the ball. It is never caught or held.",
  "M_VB_DIG": "A dig pass lifts a low ball with the joined forearms or with one hand.",
  "M_VB_SERVE": "In an under-arm serve the ball is struck from below the waist.",
+ "M_CA6_VB_SWING_ARMS": "Keep your arms straight and low. Push with your legs to send the ball.",
  "M_RN_VALUE": "A crotchet is one beat, a minim is two, a semibreve four and a quaver half a beat.",
  "M_RN_REST": "A rest is a silence of the same length as its note.",
  "M_RN_BAR": "A three-beat bar adds up to three beats, whatever notes are in it.",
  "M_BP_ORDER": "First draw and cut the motif, then ink the block, then press it on the paper.",
  "M_BP_INK": "The ink goes on the block, and the block is pressed on the paper.",
  "M_BP_REPEAT": "A repeat pattern uses the same motif over and over in even rows.",
+ "M_CA6_RN_DOTTED": "A dot adds half the note's value. A dotted minim lasts three beats.",
+ "M_CA6_BP_MIRROR": "A block prints a mirror image. Cut letters backwards.",
  "M_WV_WARP": "The warp is held tight on the loom. The weft is woven across it.",
  "M_WV_PATTERN": "A plain weave goes over one and under one. The next row does the opposite.",
  "M_WV_SAME_ROW": "The second row goes under where the first went over, so the weave holds.",
+ "M_CA6_WV_PULL_TIGHT": "Lay the weft gently so the edges stay straight.",
  "M_CW_ORDER": "In a cartwheel the hands touch first, then the feet.",
  "M_CW_BENT": "The arms stay straight and the legs wide in a cartwheel.",
  "M_CW_SEQUENCE": "The sequence is cartwheel, forward roll, swan balance.",
+ "M_CA6_CW_HANDS_TOGETHER": "In a cartwheel the hands go down one after the other: hand, hand, foot, foot.",
  "M_ML_ORDER": "Going up the order is doh, re, mi, fah, soh, lah, ti, doh1. After soh comes lah.",
  "M_ML_DOWN": "Going down from doh1 the order is ti, lah, soh, fah, mi, re, doh.",
  "M_ML_SIGN": "The sign for doh is a closed fist. The sign for ti is a finger pointing up.",
+ "M_CA6_ML_TOP_DOH_LOW": "Doh' is the high doh, eight steps above doh.",
  "M_AJ_TAKEOFF": "In the long jump and the high jump the athlete takes off from one foot.",
  "M_AJ_ORDER": "The order is run-up, take-off, flight, landing.",
  "M_AJ_MEASURE": "The long jump is measured from the take-off line to the nearest mark in the sand.",
+ "M_CA6_AJ_TWO_FEET": "Take off from one foot after the run-up.",
  "M_DR_BLOW": "Blow gently and steadily. Blowing hard makes a squeaky sound.",
  "M_DR_HOLE": "Cover the holes fully with the finger pads.",
  "M_DR_HAND": "The left hand is on the top holes and the right hand is below.",
+ "M_CA6_DR_LOW_C_BLOW_HARD": "Low notes need very gentle breath and every hole sealed.",
  "M_EN_CAT": "The nyatiti is a string instrument. Drums and shakers are percussion. Flutes and horns are wind.",
  "M_EN_LOUD": "In an ensemble, players balance their loudness so that all can be heard.",
  "M_EN_SOLO": "Players in an ensemble keep a steady beat together and listen to each other.",
+ "M_CA6_EN_NO_LEADER": "An ensemble starts together on a leader's signal.",
  "M_PS_COIL": "A slab is a flat sheet of clay rolled to an even thickness.",
  "M_PS_JOIN": "Scratch (score) the edges, add slip and press them together.",
  "M_PS_DRY": "Dry clay slowly, because clay dried too fast cracks.",
+ "M_CA6_PS_UNEVEN_SLAB": "Use guide sticks so the slab is the same thickness all over.",
  "M_SW_BACK": "In breaststroke the body lies flat and face down.",
  "M_SW_KICK": "Breaststroke uses a frog kick.",
  "M_SW_SAFETY": "A child swims only with a trained adult watching.",
+ "M_CA6_SW_ARMS_PAST_HIPS": "In breaststroke the arms pull to the shoulders, then shoot forward.",
  "M_AE_TEMPO": "Tempo is how fast or slow. Dynamics is how loud or soft.",
  "M_AE_PITCH": "Pitch is how high or low a sound is.",
  "M_AE_MESSAGE": "The message is what the words of the song teach or say.",
  "M_AC_STORY": "A catalogue is a list of the artworks, with their details.",
  "M_AC_ENTRY": "An entry gives the number, the title, the artist, the material and the size.",
- "M_AC_PURPOSE": "A catalogue helps visitors find and understand the works."
+ "M_AC_PURPOSE": "A catalogue helps visitors find and understand the works.",
+ "M_CA6_AE_DYNAMICS_SPEED": "Speed is tempo. Loudness is dynamics.",
+ "M_CA6_AC_ORDER": "Number entries to match the numbers beside the works."
 };
