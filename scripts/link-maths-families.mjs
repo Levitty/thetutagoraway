@@ -3,6 +3,7 @@
 //   node scripts/link-maths-families.mjs 7|8 [sub-strand key]
 //   Grade 7 (17 Nov 2026): g7_num_alg.js, g7_measure.js, g7_geo_data.js, gaps.js, labelFixes.js
 //   Grade 8 (18 Nov 2026): g8_num_alg.js, g8_measure_geo.js, g8_cov.js, gaps.js, labelFixes.js
+//   Grade 9 (18 Nov 2026): g9_num_alg.js, g9_measure.js, g9_geo_data.js, gaps.js, labelFixes.js
 // One linker for both grades (18 Nov 2026): scripts/link-maths-g7-families.mjs is kept as the old command.
 // A link is  familyId: [skill suffix, outcome letter, wrong-option codes, mis for a working, options, reveals]
 // (scripts/data/maths-g<grade>/<sub>.mjs, `links`).
@@ -17,8 +18,8 @@
 // Idempotent: a family that already has a cskill is skipped.
 import { readFileSync, writeFileSync } from 'node:fs';
 const GRADE = Number(process.argv[2]);
-const FILES = { 7: ['g7_num_alg.js', 'g7_measure.js', 'g7_geo_data.js', 'gaps.js', 'labelFixes.js'], 8: ['g8_num_alg.js', 'g8_measure_geo.js', 'g8_cov.js', 'gaps.js', 'labelFixes.js'] }[GRADE];
-if (!FILES) { console.error('usage: node scripts/link-maths-families.mjs 7|8 [sub-strand key]'); process.exit(1); }
+const FILES = { 7: ['g7_num_alg.js', 'g7_measure.js', 'g7_geo_data.js', 'gaps.js', 'labelFixes.js'], 8: ['g8_num_alg.js', 'g8_measure_geo.js', 'g8_cov.js', 'gaps.js', 'labelFixes.js'], 9: ['g9_num_alg.js', 'g9_measure.js', 'g9_geo_data.js', 'gaps.js', 'labelFixes.js'] }[GRADE];
+if (!FILES) { console.error('usage: node scripts/link-maths-families.mjs 7|8|9 [sub-strand key]'); process.exit(1); }
 const { SUBS } = await import(`./data/maths-g${GRADE}/index.mjs`);
 const DIR = new URL('../src/ai-tutor/content/families/', import.meta.url);
 const only = process.argv[3];
@@ -70,9 +71,10 @@ for (const d of SUBS) {
     }
     if (mis) {
       const expr = /^[A-Z0-9_]+$/.test(mis) ? `'${mis}'` : mis;
-      const i = block.indexOf('fix:');
-      if (i < 0) { problems.push(`${id}: no fix: for mis`); continue; }
-      block = block.slice(0, i) + `mis: ${expr},\n        ` + block.slice(i);
+      // fix: written out, or the shorthand `working, fix,` (Grade 9's spot families): mis goes just before it
+      const i = block.indexOf('fix:'), j = block.search(/\bfix,/);
+      if (i < 0 && j < 0) { problems.push(`${id}: no fix: for mis`); continue; }
+      block = i >= 0 ? block.slice(0, i) + `mis: ${expr},\n        ` + block.slice(i) : block.slice(0, j) + `mis: ${expr}, ` + block.slice(j);
     }
     src[file] = s.slice(0, start) + block + s.slice(end); done++;
   }

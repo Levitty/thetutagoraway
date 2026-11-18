@@ -24,27 +24,27 @@ const cell = (v) => v.toPrecision(4);
 
 // ---------------------------------------------------------------- INTEGERS
 const INTEGERS = [
-  fam({ id: 'g9.int.lift-basement', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.c', rung: 2, form: 'word', allowNegative: true,
+  fam({ id: 'g9.int.lift-basement', skill: 'G9_INTEGERS_COMBINED', outcome: 'MATH.G9.NUMBER.INTEGERS.c', cskill: 'MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT', rung: 2, form: 'word', allowNegative: true,
     draw: () => { const s = randInt(2, 4), u = randInt(4, 9), dn = randInt(5, 10); const a = -s + u - dn; return uniq(a, s + u - dn, -s + u + dn, -(s + u - dn)) && a !== -s ? { s, u, dn } : null; },
     make: ({ s, u, dn }) => ({
       question: `A lift in a Nairobi building starts at floor −${s}. Floor 0 is the ground floor. Floors below it have negative numbers. The lift goes up ${u} floors, then down ${dn} floors. At which floor does it stop?`,
       answer: -s + u - dn,
-      wrong: [[s + u - dn, `The lift starts below the ground floor, so it starts at a negative number, not a positive one.`], [-s + u + dn, 'Going down makes the floor number smaller. Take the floors away.'], [-(s + u - dn), 'Count the moves one by one from the starting floor. Do not change the sign at the end.']],
+      wrong: [[s + u - dn, `The lift starts below the ground floor, so it starts at a negative number, not a positive one.`, 'M_START_SIGN_DROPPED'], [-s + u + dn, 'Going down makes the floor number smaller. Take the floors away.', 'M_DOWN_AS_UP'], [-(s + u - dn), 'Count the moves one by one from the starting floor. Do not change the sign at the end.', 'M_SIGN_FLIPPED_AT_END']],
       hints: ['Draw a vertical number line with the ground floor at 0.', 'Start at the starting floor, then move up, then move down.'],
       steps: [`Start at −${s}. Going up ${u} floors: −${s} + ${u} = ${fm(-s + u)}.`, `Going down ${dn} floors: ${fm(-s + u)} − ${dn} = ${fm(-s + u - dn)}.`],
     }),
     check: ({ s, u, dn }, a) => a + dn - u === -s }),
-  fam({ id: 'g9.int.overdraft-shop', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.c', rung: 2, form: 'word', allowNegative: true,
+  fam({ id: 'g9.int.overdraft-shop', skill: 'G9_INTEGERS_COMBINED', outcome: 'MATH.G9.NUMBER.INTEGERS.c', cskill: 'MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT', rung: 2, form: 'word', allowNegative: true,
     draw: () => { const o = randInt(2, 9) * 500, p = randInt(3, 12) * 1000, q = randInt(2, 11) * 1000; const a = -o + p - q; return a !== 0 && uniq(a, o + p - q, -o + p + q, p - q) ? { o, p, q, who: person() } : null; },
     make: ({ o, p, q, who }) => ({
       question: `The bank balance of ${who.name}'s shop is −${sh(o)}. This means the account is overdrawn: the shop owes the bank ${sh(o)}. ${who.She} pays in ${sh(p)}. Then ${who.she} pays out ${sh(q)} for stock. What is the balance now? Write a negative number if the account is still overdrawn.`,
       answer: -o + p - q,
-      wrong: [[o + p - q, 'The account started overdrawn. That is a negative number, not money in the bank.'], [-o + p + q, 'Paying out lowers the balance. It does not raise it.'], [p - q, 'The overdraft did not disappear. It was already part of the balance at the start.']],
+      wrong: [[o + p - q, 'The account started overdrawn. That is a negative number, not money in the bank.', 'M_OVERDRAFT_AS_POSITIVE'], [-o + p + q, 'Paying out lowers the balance. It does not raise it.', 'M_PAYOUT_ADDED'], [p - q, 'The overdraft did not disappear. It was already part of the balance at the start.', 'M_OPENING_BALANCE_LEFT_OUT']],
       hints: ['Start from the negative balance.', 'Paying in adds. Paying out takes away.'],
       steps: [`After paying in: −${commas(o)} + ${commas(p)} = ${fm(-o + p)}.`, `After paying out: ${fm(-o + p)} − ${commas(q)} = ${fm(-o + p - q)}.`],
     }),
     check: ({ o, p, q }, a) => a + q - p + o === 0 }),
-  fam({ id: 'g9.int.altitude-table', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.c', rung: 2, form: 'table',
+  fam({ id: 'g9.int.altitude-table', skill: 'G9_INTEGERS_COMBINED', outcome: 'MATH.G9.NUMBER.INTEGERS.c', cskill: 'MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE', rung: 2, form: 'table',
     draw: () => {
       const rows = [['Hilltop viewpoint', randInt(2, 6) * 100], ['Kite in the air', randInt(2, 5) * 10 + 500], ['Diver in a dam', -randInt(1, 4) * 10], ['Borehole bottom', -randInt(5, 12) * 10], ['Salt mine floor', -randInt(15, 30) * 10]];
       const take = rows.sort(() => Math.random() - 0.5).slice(0, 4);
@@ -55,12 +55,12 @@ const INTEGERS = [
       question: 'The table shows the altitude of four places in metres above sea level. A negative altitude means below sea level. How many metres higher is the highest place than the lowest place?',
       model: { type: 'table', data: { head: ['Place', 'Altitude (m)'], rows: take.map(([label, v]) => ({ label, value: fm(v) })) } },
       answer: hi - lo,
-      wrong: [[hi + lo, 'The lowest place is below sea level. Its distance below zero adds to the height above zero.'], [Math.abs(lo), 'That is only the depth of the lowest place below sea level. Add the height above it.'], [hi, 'That is the altitude of the highest place alone. The question asks for the gap between two places.']],
+      wrong: [[hi + lo, 'The lowest place is below sea level. Its distance below zero adds to the height above zero.', 'M_DEPTH_SUBTRACTED'], [Math.abs(lo), 'That is only the depth of the lowest place below sea level. Add the height above it.', 'M_ONE_SIDE_ONLY'], [hi, 'That is the altitude of the highest place alone. The question asks for the gap between two places.', 'M_HIGHEST_ALONE']],
       hints: ['Find the largest and the smallest altitude in the table.', 'Count from the lowest altitude up to 0, then from 0 up to the highest.'],
       steps: [`Highest: ${hi} m. Lowest: ${fm(lo)} m.`, `Gap: ${hi} − (${fm(lo)}) = ${hi} + ${-lo} = ${hi - lo} m.`],
     }),
     check: ({ hi, lo }, a) => lo + a === hi, allowNegative: false }),
-  fam({ id: 'g9.int.spot-minus-negative', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.b', rung: 2, form: 'spot',
+  fam({ id: 'g9.int.spot-minus-negative', skill: 'G9_INTEGERS_COMBINED', outcome: 'MATH.G9.NUMBER.INTEGERS.b', cskill: 'MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS', rung: 2, form: 'spot',
     draw: () => ({ x: randInt(2, 9), y: randInt(2, 8), z: randInt(2, 6), type: pick(['product', 'rewrite', 'arith']), who: person() }),
     make: ({ x, y, z, type, who }) => {
       const P = type === 'product' ? y * z : -y * z;
@@ -73,33 +73,33 @@ const INTEGERS = [
         { text: `${x} ${Q < 0 ? '−' : '+'} ${Math.abs(Q)} = ${fm(V)}`, ok: V === x + Q },
       ];
       const fix = { product: 'A negative number times a positive number is negative, so the product in Step 1 is negative.', rewrite: 'Subtracting a negative number is the same as adding its positive. The sign in Step 2 should change to plus.', arith: `In Step 3 the sum ${x} ${Q < 0 ? '−' : '+'} ${Math.abs(Q)} was worked out the wrong way round.` }[type];
-      return { question: `${who.name} worked out ${x} − (−${y}) × ${z}. Which step has the mistake?`, working, fix,
+      return { question: `${who.name} worked out ${x} − (−${y}) × ${z}. Which step has the mistake?`, working, mis: { product: 'M_NEG_TIMES_POS_POSITIVE', rewrite: 'M_MINUS_NEGATIVE_STAYS_MINUS', arith: 'SLIP' }[type], fix,
         steps: [`Multiply first: (−${y}) × ${z} = −${y * z}.`, `${x} − (−${y * z}) = ${x} + ${y * z}.`, `${x} + ${y * z} = ${x + y * z}.`] };
     } }),
-  fam({ id: 'g9.int.why-order', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.b', rung: 2, form: 'why',
+  fam({ id: 'g9.int.why-order', skill: 'G9_INTEGERS_COMBINED', outcome: 'MATH.G9.NUMBER.INTEGERS.b', cskill: 'MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS', rung: 2, form: 'why',
     draw: () => { const a = randInt(3, 9), b = randInt(2, 6), c = randInt(2, 5); return a !== b && uniq(a + b * c, (a - b) * -c) ? { a, b, c, who: person() } : null; },
     make: ({ a, b, c, who }) => ({
       question: `${who.name} worked out ${a} − ${b} × (−${c}) and got ${fm((a - b) * -c)}. ${who.She} did ${a} − ${b} first, which is ${fm(a - b)}. Then ${who.she} did ${fm(a - b)} × (−${c}). Why is this wrong?`,
       options: [
         { text: `Multiplication comes before subtraction: ${a} − (−${b * c}) = ${a + b * c}`, right: true },
-        { text: 'Nothing is wrong. Operations are always done from left to right', right: false, why: 'Left to right applies only to operations of the same rank. Multiplication ranks above subtraction.' },
-        { text: `The sign of the last answer is wrong. A negative number times a positive number is positive`, right: false, why: 'A negative number times a positive number is negative. The problem is the order of the steps.' },
-        { text: 'The negative sign means the subtraction must be done last, as an addition of all the numbers', right: false, why: 'A negative sign does not change the order of operations.' },
+        { text: 'Nothing is wrong. Operations are always done from left to right', right: false, why: 'Left to right applies only to operations of the same rank. Multiplication ranks above subtraction.', mis: 'M_LEFT_TO_RIGHT_ALWAYS' },
+        { text: `The sign of the last answer is wrong. A negative number times a positive number is positive`, right: false, why: 'A negative number times a positive number is negative. The problem is the order of the steps.', mis: 'M_NEG_TIMES_POS_POSITIVE' },
+        { text: 'The negative sign means the subtraction must be done last, as an addition of all the numbers', right: false, why: 'A negative sign does not change the order of operations.', mis: 'M_NEGATIVE_CHANGES_ORDER' },
       ],
       hints: ['Which operation ranks higher: multiplication or subtraction?', 'Do that one first, then use what is left.'],
       steps: [`Multiplication first: ${b} × (−${c}) = −${b * c}.`, `Then ${a} − (−${b * c}) = ${a} + ${b * c} = ${a + b * c}.`],
     }) }),
-  fam({ id: 'g9.int.steps-brackets', skill: 'G9_INTEGERS_COMBINED', outcome: 'G9.INTEGERS.b', rung: 2, form: 'steps',
+  fam({ id: 'g9.int.steps-brackets', skill: 'G9_INTEGERS_COMBINED', outcome: 'MATH.G9.NUMBER.INTEGERS.b', cskill: 'MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED', rung: 2, form: 'steps',
     draw: () => { const a = randInt(1, 9), b = randInt(1, 9), c = randInt(2, 6), e = randInt(2, 5), d = e * randInt(2, 6); const A = -a + b; return A !== 0 && uniq(A, A * -c) ? { a, b, c, d, e, A } : null; },
     make: ({ a, b, c, d, e, A }) => {
       const prod = A * -c, quo = d / -e, res = prod - quo;
       return {
         question: `A learner must find the value of (−${a} + ${b}) × (−${c}) − ${d} ÷ (−${e}). Follow the steps below.`,
         parts: [
-          { prompt: `What is (−${a} + ${b})?`, answer: A, hint: 'Brackets first. Start at −' + a + ' and add ' + b + '.', wrong: [[-a - b, 'Adding a positive number moves up the number line, not down.'], [Math.abs(A), 'Check the sign. Which of the two numbers is larger, and is it positive?']] },
-          { prompt: `Now work out ${fm(A)} × (−${c}).`, answer: prod, hint: 'Same signs give a positive answer. Different signs give a negative answer.', wrong: [[-prod, 'Check the rule for the sign of a product.'], [A - c, 'The sign × means multiply, not subtract.']] },
-          { prompt: `Work out ${d} ÷ (−${e}).`, answer: quo, hint: 'A positive number divided by a negative number gives a negative answer.', wrong: [[d / e, 'A positive divided by a negative is negative.'], [-d * e, 'This is a division. Divide, do not multiply.']] },
-          { prompt: `Finish: ${fm(prod)} − (${fm(quo)}).`, answer: res, hint: 'Subtracting a negative number is the same as adding its positive.', wrong: [[prod + quo, 'You subtracted a negative number. That is like adding.'], [-prod + quo, 'Check the signs again.']] },
+          { prompt: `What is (−${a} + ${b})?`, answer: A, hint: 'Brackets first. Start at −' + a + ' and add ' + b + '.', wrong: [[-a - b, 'Adding a positive number moves up the number line, not down.', 'M_ADD_POSITIVE_MOVES_DOWN'], [Math.abs(A), 'Check the sign. Which of the two numbers is larger, and is it positive?', 'M_SIGN_OF_SUM_LOST']] },
+          { prompt: `Now work out ${fm(A)} × (−${c}).`, answer: prod, hint: 'Same signs give a positive answer. Different signs give a negative answer.', wrong: [[-prod, 'Check the rule for the sign of a product.', 'M_PRODUCT_SIGN_WRONG'], [A - c, 'The sign × means multiply, not subtract.', 'M_TIMES_AS_SUBTRACT']] },
+          { prompt: `Work out ${d} ÷ (−${e}).`, answer: quo, hint: 'A positive number divided by a negative number gives a negative answer.', wrong: [[d / e, 'A positive divided by a negative is negative.', 'M_QUOTIENT_SIGN_WRONG'], [-d * e, 'This is a division. Divide, do not multiply.', 'M_DIVIDE_AS_MULTIPLY']] },
+          { prompt: `Finish: ${fm(prod)} − (${fm(quo)}).`, answer: res, hint: 'Subtracting a negative number is the same as adding its positive.', wrong: [[prod + quo, 'You subtracted a negative number. That is like adding.', 'M_MINUS_NEGATIVE_STAYS_MINUS'], [-prod + quo, 'Check the signs again.', 'M_SIGNS_SWAPPED_AT_END']] },
         ],
         steps: [`(−${a} + ${b}) = ${fm(A)}.`, `${fm(A)} × (−${c}) = ${fm(prod)} and ${d} ÷ (−${e}) = ${fm(quo)}.`, `${fm(prod)} − (${fm(quo)}) = ${fm(prod)} + ${-quo} = ${fm(res)}.`],
       };

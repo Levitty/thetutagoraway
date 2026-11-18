@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 9,
  "source": "KICD KICD-Grade9-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: NUMBER.CUBES_AND_CUBE_ROOTS, NUMBER.INDICES_AND_LOGARITHMS, NUMBER.COMPOUND_PROPORTIONS_AND, ALGEBR.MATRICES, ALGEBR.EQUATIONS_OF_A_STRAIGHT_, ALGEBR.LINEAR_INEQUALITIES, MEASUR.AREA, MEASUR.VOLUME_OF_SOLIDS, MEASUR.MASS_VOLUME_WEIGHT_AND_D, MEASUR.TIME_DISTANCE_AND_SPEED, MEASUR.MONEY, MEASUR.APPROXIMATIONS_AND_ERROR, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.SIMILARITY_AND_ENLARGEME, GEOMET.TRIGONOMETRY, DATA_H.DATA_INTERPRETATION_GROU, DATA_H.PROBABILITY",
  "totals": {
   "strands": 5,
   "sub_strands": 19,
   "outcomes": 119,
   "lessons": 155,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 6,
+  "prerequisites": 18,
+  "misconceptions": 29
  },
  "sub_strands": [
   {
@@ -38,7 +38,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to c are tested; d (use IT) and e (appreciate) are not questions. Grade 8 stopped at adding and subtracting on the number line and repeated changes; Grade 9 adds the sign rules for multiplying and dividing (a), the order of operations with integers, with and without brackets (b), and balances, lifts and altitudes (c). Teacher to confirm: whether KICD's 'basic operations' in Grade 9 expects the sign rules to be learnt from patterns (3 x -2, 2 x -2, 1 x -2 ...) as written here, or stated.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
     "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
@@ -79,8 +79,716 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+     "name": "Add and subtract integers, including subtracting a negative number",
+     "outcomes": [
+      "MATH.G9.NUMBER.INTEGERS.a"
+     ],
+     "mastery": "The child adds and subtracts any two integers without a number line, knowing that subtracting a negative number is the same as adding its positive (5 - (-3) = 8) and adding a negative is the same as subtracting (4 + (-9) = -5), and gives the sign of the result correctly.",
+     "question_forms": [
+      "work out",
+      "subtract a negative",
+      "fill the missing integer",
+      "find the mistake"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_INTEGERS_COMBINED",
+      "G6_INTEGERS_ADD_SUB"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Moving on the number line is what the rules shorten.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The gap across zero is a subtraction of a negative number.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Knowing which of two integers is larger decides the sign of a sum.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "name": "Multiply and divide integers using the sign rules",
+     "outcomes": [
+      "MATH.G9.NUMBER.INTEGERS.a"
+     ],
+     "mastery": "The child multiplies and divides integers, giving a positive answer when the signs are the same and a negative answer when they differ: (-4) x 6 = -24, (-4) x (-6) = 24, 18 / (-3) = -6, (-18) / (-3) = 6, and can explain the rule from a pattern of products.",
+     "question_forms": [
+      "work out the product",
+      "divide",
+      "which sign",
+      "complete the pattern"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_INTEGERS_COMBINED",
+      "G7_INTEGERS_MUL_DIV"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A repeated change (a fall of 3 m a month for 4 months) is a product of integers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.MULT_LARGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Multiplying whole numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Dividing whole numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+     "name": "Work out combined operations on integers in the right order",
+     "outcomes": [
+      "MATH.G9.NUMBER.INTEGERS.b"
+     ],
+     "mastery": "The child works out an expression such as 7 - 3 x (-4) or -12 / 4 + 5 by doing multiplication and division before addition and subtraction, and left to right within the same rank, keeping the sign of every term: 7 - 3 x (-4) = 7 + 12 = 19.",
+     "question_forms": [
+      "work out",
+      "which step is wrong",
+      "why is this wrong",
+      "which is done first"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_INTEGERS_COMBINED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Every product and quotient needs its sign.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The order of operations with whole numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The last steps are additions and subtractions of integers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED",
+     "name": "Work out combined operations on integers with brackets, step by step",
+     "outcomes": [
+      "MATH.G9.NUMBER.INTEGERS.b"
+     ],
+     "mastery": "The child works out an expression with brackets such as (-5 + 2) x (-4) - 18 / (-3) in steps: the bracket first, then each product and quotient with its sign, then the subtraction, changing minus a negative into plus: (-3) x (-4) = 12, 18 / (-3) = -6, 12 - (-6) = 18.",
+     "question_forms": [
+      "work out in steps",
+      "complete the working",
+      "value of the expression",
+      "find the mistake"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G9_INTEGERS_COMBINED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Brackets come first, then the usual order.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.ORDER_OF_OPERATIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Brackets with whole numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The bracket often holds a sum of a negative and a positive.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "name": "Use integers for balances, lifts and other changes in real life",
+     "outcomes": [
+      "MATH.G9.NUMBER.INTEGERS.c"
+     ],
+     "mastery": "The child writes a real situation as integers (an overdraft as a negative balance, a basement floor as a negative floor), starts from the opening value, applies every change with its sign in order, and says what the final integer means in the story (still overdrawn, below the ground floor).",
+     "question_forms": [
+      "balance after",
+      "which floor",
+      "how much is owed",
+      "is the account still overdrawn"
+     ],
+     "thinking": [
+      "modelling",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G9_INTEGERS_COMBINED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Running balances with money in and out.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Each change is an addition or subtraction of an integer.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Writing a situation below zero as a negative integer.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE",
+     "name": "Find the difference between heights or temperatures above and below zero",
+     "outcomes": [
+      "MATH.G9.NUMBER.INTEGERS.c"
+     ],
+     "mastery": "The child reads altitudes or temperatures from a table, picks the highest and the lowest, and finds the gap as highest minus lowest with signs: 450 - (-120) = 570 m, counting the part below zero and the part above it.",
+     "question_forms": [
+      "how many metres higher",
+      "difference in temperature",
+      "from the table",
+      "how far below"
+     ],
+     "thinking": [
+      "procedure",
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G9_INTEGERS_COMBINED"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The difference of two integers across zero.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Subtracting a negative number is adding.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.TEMPERATURE.TEMP_COMPARE_DIFFERENCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Temperature differences below zero.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_MINUS_NEGATIVE_STAYS_MINUS",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+     "error": "Treats subtracting a negative number as subtracting its size.",
+     "example": {
+      "question": "5 - (-3)",
+      "wrong_answer": "2",
+      "correct_answer": "8"
+     },
+     "cause": "Sees two minus signs and keeps only one subtraction.",
+     "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+     "help": "Taking away a debt makes you richer: 5 - (-3) = 5 + 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_ADD_NEGATIVE_AS_ADD",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+     "error": "Adds the size of a negative number as if it were positive.",
+     "example": {
+      "question": "4 + (-9)",
+      "wrong_answer": "13",
+      "correct_answer": "-5"
+     },
+     "cause": "Ignores the sign inside the bracket.",
+     "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+     "help": "Adding -9 moves 9 steps left: 4 + (-9) = 4 - 9 = -5.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_SIGN_OF_LARGER_IGNORED",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+     "error": "Gets the size right but gives the sign of the first number, not of the larger one.",
+     "example": {
+      "question": "-3 + 10",
+      "wrong_answer": "-7",
+      "correct_answer": "7"
+     },
+     "cause": "Copies the first sign into the answer.",
+     "reveals": "The answer -7 as a wrong option, with a reason that names the idea.",
+     "help": "The answer takes the sign of the number further from zero.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_TWO_NEGATIVES_POSITIVE_SUM",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+     "error": "Uses the multiplication rule for adding: two negatives make a positive.",
+     "example": {
+      "question": "-6 + (-4)",
+      "wrong_answer": "10",
+      "correct_answer": "-10"
+     },
+     "cause": "Mixes up \"two negatives make a positive\" (for products) with sums.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "Two debts added together are a bigger debt: -6 + (-4) = -10.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_ADD_POSITIVE_MOVES_DOWN",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+     "error": "Moves down the number line when adding a positive number to a negative one.",
+     "example": {
+      "question": "-5 + 3",
+      "wrong_answer": "-8",
+      "correct_answer": "-2"
+     },
+     "cause": "Thinks a negative start means every move is downward.",
+     "reveals": "The answer -8 as a wrong option, with a reason that names the idea.",
+     "help": "Adding a positive number always moves up (right), whatever the start.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_NEG_TIMES_POS_POSITIVE",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "error": "Gives a positive answer when a negative and a positive number are multiplied.",
+     "example": {
+      "question": "(-4) x 6",
+      "wrong_answer": "24",
+      "correct_answer": "-24"
+     },
+     "cause": "Drops the sign or thinks only like signs matter.",
+     "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+     "help": "Four falls of 6 m each is a fall of 24 m: different signs give a negative.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_NEG_TIMES_NEG_NEGATIVE",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "error": "Gives a negative answer when two negative numbers are multiplied.",
+     "example": {
+      "question": "(-4) x (-6)",
+      "wrong_answer": "-24",
+      "correct_answer": "24"
+     },
+     "cause": "Thinks a negative in the question means a negative answer.",
+     "reveals": "The answer -24 as a wrong option, with a reason that names the idea.",
+     "help": "Continue the pattern 2 x -6 = -12, 1 x -6 = -6, 0 x -6 = 0, -1 x -6 = 6: same signs give a positive.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_PRODUCT_SIGN_WRONG",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "error": "Gets the size of a product right but the sign the wrong way round.",
+     "example": {
+      "question": "(-3) x (-5)",
+      "wrong_answer": "-15",
+      "correct_answer": "15"
+     },
+     "cause": "Guesses the sign after multiplying the sizes.",
+     "reveals": "The answer -15 as a wrong option, with a reason that names the idea.",
+     "help": "Decide the sign first: same signs positive, different signs negative.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_QUOTIENT_SIGN_WRONG",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "error": "Gives a positive answer when a positive number is divided by a negative one.",
+     "example": {
+      "question": "18 / (-3)",
+      "wrong_answer": "6",
+      "correct_answer": "-6"
+     },
+     "cause": "Thinks the sign rules are only for multiplying.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Division follows the same sign rules: -6 x -3 = 18, so 18 / (-3) = -6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_TIMES_AS_SUBTRACT",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "error": "Subtracts when the sign between the numbers is a multiplication.",
+     "example": {
+      "question": "(-3) x (-4)",
+      "wrong_answer": "1",
+      "correct_answer": "12"
+     },
+     "cause": "Reads the minus signs and forgets the operation.",
+     "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+     "help": "Read the operation sign between the brackets first: x means multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_DIVIDE_AS_MULTIPLY",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+     "error": "Multiplies when the question is a division.",
+     "example": {
+      "question": "24 / (-4)",
+      "wrong_answer": "-96",
+      "correct_answer": "-6"
+     },
+     "cause": "Remembers the sign rule and loses the operation.",
+     "reveals": "The answer -96 as a wrong option, with a reason that names the idea.",
+     "help": "Check the sign between the numbers: / means share or divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT_ALWAYS",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+     "error": "Works every expression from left to right, adding before multiplying.",
+     "example": {
+      "question": "7 - 3 x (-4)",
+      "wrong_answer": "-16",
+      "correct_answer": "19"
+     },
+     "cause": "Reads like a sentence and ignores the order of operations.",
+     "reveals": "The answer -16 as a wrong option, with a reason that names the idea.",
+     "help": "Multiplication and division come before addition and subtraction.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_NEGATIVE_CHANGES_ORDER",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+     "error": "Believes a negative number changes which operation is done first.",
+     "example": {
+      "question": "-12 / 4 + 5",
+      "wrong_answer": "-12 / 9",
+      "correct_answer": "2"
+     },
+     "cause": "Thinks the minus sign is an operation to be done last.",
+     "reveals": "The answer -12 / 9 as a wrong option, with a reason that names the idea.",
+     "help": "A negative sign belongs to its number; the order of operations stays the same.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_SIGN_LOST_IN_PRODUCT",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+     "error": "Works out the product first but drops its sign before the next step.",
+     "example": {
+      "question": "10 + 2 x (-3)",
+      "wrong_answer": "16",
+      "correct_answer": "4"
+     },
+     "cause": "Writes only the size of each product.",
+     "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+     "help": "Write each product with its sign before going on: 2 x (-3) = -6.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_MINUS_TIMES_NEG_DOUBLED",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+     "error": "Changes minus a negative product into plus and then changes the sign again.",
+     "example": {
+      "question": "8 - 2 x (-5)",
+      "wrong_answer": "-2",
+      "correct_answer": "18"
+     },
+     "cause": "Applies the sign rule twice to the same sign.",
+     "reveals": "The answer -2 as a wrong option, with a reason that names the idea.",
+     "help": "Find 2 x (-5) = -10 first, then 8 - (-10) = 18: one change, once.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_BRACKET_NOT_FIRST",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED",
+     "error": "Multiplies into the bracket before working it out, using only one number in it.",
+     "example": {
+      "question": "(-5 + 2) x (-4)",
+      "wrong_answer": "22",
+      "correct_answer": "12"
+     },
+     "cause": "Multiplies the last number in the bracket only.",
+     "reveals": "The answer 22 as a wrong option, with a reason that names the idea.",
+     "help": "Work out the whole bracket first: -5 + 2 = -3, then -3 x -4 = 12.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_SIGN_OF_SUM_LOST",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED",
+     "error": "Writes the size of the bracket and drops its negative sign.",
+     "example": {
+      "question": "(-9 + 4) x 2",
+      "wrong_answer": "10",
+      "correct_answer": "-10"
+     },
+     "cause": "Subtracts the smaller from the larger and forgets which was negative.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "The bracket takes the sign of the number further from zero: -9 + 4 = -5.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_SIGNS_SWAPPED_AT_END",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED",
+     "error": "Gets each part right but changes the sign of a part when putting them together.",
+     "example": {
+      "question": "12 - (-6)",
+      "wrong_answer": "-18",
+      "correct_answer": "18"
+     },
+     "cause": "Copies the parts across and flips a sign by mistake.",
+     "reveals": "The answer -18 as a wrong option, with a reason that names the idea.",
+     "help": "Copy each part with its own sign, then change only minus a negative into plus.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_DIVIDE_BEFORE_BRACKET",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED",
+     "error": "Divides only the first number in the bracket instead of the whole bracket.",
+     "example": {
+      "question": "(-8 + 2) / 2",
+      "wrong_answer": "-2",
+      "correct_answer": "-3"
+     },
+     "cause": "Does the division as soon as it sees a number next to it, before the bracket is finished.",
+     "reveals": "The answer -2 as a wrong option, with a reason that names the idea.",
+     "help": "Finish the bracket to one number (-6), then divide it: -6 / 2 = -3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_OVERDRAFT_AS_POSITIVE",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "error": "Treats an overdrawn balance as money in the account.",
+     "example": {
+      "question": "Balance -2,000 shillings; pay in 5,000. Balance now?",
+      "wrong_answer": "7,000",
+      "correct_answer": "3,000"
+     },
+     "cause": "Reads the amount and ignores what \"overdrawn\" means.",
+     "reveals": "The answer 7,000 as a wrong option, with a reason that names the idea.",
+     "help": "Overdrawn means the shop owes the bank: start below zero.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_PAYOUT_ADDED",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "error": "Adds money paid out instead of taking it away.",
+     "example": {
+      "question": "Balance 3,000; pay out 4,500. Balance now?",
+      "wrong_answer": "7,500",
+      "correct_answer": "-1,500"
+     },
+     "cause": "Adds every amount in the story.",
+     "reveals": "The answer 7,500 as a wrong option, with a reason that names the idea.",
+     "help": "Money out lowers the balance: subtract it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_OPENING_BALANCE_LEFT_OUT",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "error": "Works only with the changes and forgets the starting balance or floor.",
+     "example": {
+      "question": "Balance -1,500; pay in 6,000; pay out 2,000. Balance?",
+      "wrong_answer": "4,000",
+      "correct_answer": "2,500"
+     },
+     "cause": "Thinks the story starts at zero.",
+     "reveals": "The answer 4,000 as a wrong option, with a reason that names the idea.",
+     "help": "Write the opening balance first, then each change.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_START_SIGN_DROPPED",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "error": "Starts a lift or a balance at the positive number when the story starts below zero.",
+     "example": {
+      "question": "A lift at floor -3 goes up 5 floors. Floor?",
+      "wrong_answer": "8",
+      "correct_answer": "2"
+     },
+     "cause": "Reads the number without its minus sign.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "Floor -3 is three floors below the ground floor: start there.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_DOWN_AS_UP",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "error": "Adds a downward move instead of subtracting it.",
+     "example": {
+      "question": "A lift at floor 2 goes down 6 floors. Floor?",
+      "wrong_answer": "8",
+      "correct_answer": "-4"
+     },
+     "cause": "Adds every number in the story.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "Down means take away: 2 - 6 = -4.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_SIGN_FLIPPED_AT_END",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+     "error": "Gets the right size but changes the sign of the final answer.",
+     "example": {
+      "question": "Floor -3, up 4, down 6. Floor?",
+      "wrong_answer": "5",
+      "correct_answer": "-5"
+     },
+     "cause": "Changes the sign at the end to \"tidy\" the answer.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Track each move from the start; the sign you land on is the answer.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_DEPTH_SUBTRACTED",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE",
+     "error": "Subtracts the depth below sea level from the height above it instead of adding.",
+     "example": {
+      "question": "Hill 450 m, mine floor -120 m. How much higher is the hill?",
+      "wrong_answer": "330 m",
+      "correct_answer": "570 m"
+     },
+     "cause": "Sees two numbers and takes the smaller away.",
+     "reveals": "The answer 330 m as a wrong option, with a reason that names the idea.",
+     "help": "The gap goes down to zero and on below it: 450 - (-120) = 450 + 120.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_ONE_SIDE_ONLY",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE",
+     "error": "Counts only the part of the gap on one side of sea level.",
+     "example": {
+      "question": "Hill 450 m, borehole bottom -80 m. Gap?",
+      "wrong_answer": "80 m",
+      "correct_answer": "530 m"
+     },
+     "cause": "Starts or stops counting at zero.",
+     "reveals": "The answer 80 m as a wrong option, with a reason that names the idea.",
+     "help": "Count from the lowest up to zero, then from zero to the highest, and add.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_HIGHEST_ALONE",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE",
+     "error": "Gives the altitude of the highest place as the gap.",
+     "example": {
+      "question": "Highest 300 m, lowest -50 m. How much higher?",
+      "wrong_answer": "300 m",
+      "correct_answer": "350 m"
+     },
+     "cause": "Answers \"how high\" instead of \"how much higher than\".",
+     "reveals": "The answer 300 m as a wrong option, with a reason that names the idea.",
+     "help": "A gap needs two places: highest minus lowest.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_WRONG_PAIR_CHOSEN",
+     "skill": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE",
+     "error": "Uses the first and last rows of the table instead of the highest and lowest values.",
+     "example": {
+      "question": "Altitudes 200, -30, 520, -10. Highest minus lowest?",
+      "wrong_answer": "210",
+      "correct_answer": "550"
+     },
+     "cause": "Takes rows by position, not by value.",
+     "reveals": "The answer 210 as a wrong option, with a reason that names the idea.",
+     "help": "Sort the values first; pick the largest and the smallest.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS",

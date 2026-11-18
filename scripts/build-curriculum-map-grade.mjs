@@ -3,14 +3,14 @@
 //   src/ai-tutor/content/curriculumMap.g<grade>.js        light: sub-strands, official outcomes, skills with HOREB ids, prerequisites
 //   engine/data/curriculum/g<grade>.misconceptions.json   heavy: the misconception library (checks and the review pack only)
 //   engine/data/curriculum/g<grade>.detail.json           heavy: outcome texts, mastery limits and question forms
-//   node scripts/build-curriculum-map-grade.mjs 6      (or 7, or 8: 18 Nov 2026)
+//   node scripts/build-curriculum-map-grade.mjs 6      (or 7, or 8 and 9: 18 Nov 2026)
 // Same shape as the Grade 5 map (scripts/build-curriculum-map.mjs). `primary` is the first HOREB skill a skill names.
 // One script for both grades (17 Nov 2026): Grade 7 adds no second copy. A skill's `pre` lists the earlier-grade skills it builds on.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 const GRADE = Number(process.argv[2] || process.env.MATHS_GRADE);
-const BELOW = { 6: [5], 7: [5, 6], 8: [5, 6, 7] }[GRADE];
-if (!BELOW) { console.error('usage: node scripts/build-curriculum-map-grade.mjs 6|7|8'); process.exit(1); }
+const BELOW = { 6: [5], 7: [5, 6], 8: [5, 6, 7], 9: [5, 6, 7, 8] }[GRADE];
+if (!BELOW) { console.error('usage: node scripts/build-curriculum-map-grade.mjs 6|7|8|9'); process.exit(1); }
 const load = (g) => JSON.parse(readFileSync(new URL(`../curriculum/mathematics/g${g}.json`, import.meta.url), 'utf8'));
 const cur = load(GRADE);
 const P = `MATH.G${GRADE}.`;
