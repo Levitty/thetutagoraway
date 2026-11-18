@@ -1,0 +1,371 @@
+{
+ "sub_strand": "SCIE.G6.LIVING.FUNGI",
+ "title": "Fungi",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Grow moulds first: a slice of damp bread and an orange peel in a closed clear bag for a week (never opened, thrown away sealed). Bring market mushrooms, a packet of baker's yeast and a sachet of yeast with sugar in warm water so the child sees the froth.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+   "key_step": "The child names a fungus from its description or picture (mushroom, toadstool, puffball, yeast, mould) and counts yeast and moulds as fungi.",
+   "floor": {
+    "prerequisite": "Knows plants are living things that make their own food.",
+    "question": "Where does a plant make its food?",
+    "answer": "in its leaves"
+   },
+   "representations": [
+    "market mushrooms and a sealed bag of mouldy bread",
+    "yeast froth in warm sugary water",
+    "a picture chart of five fungi"
+   ],
+   "steps": [
+    "Look at each: mushroom, toadstool, puffball, yeast, mould.",
+    "Note what they share: no green colour, grow on food or dead matter.",
+    "Yeast froths; mould is fuzzy on food.",
+    "Name each one."
+   ],
+   "contexts": [
+    "mushrooms in a forest after rain",
+    "mould on old ugali",
+    "yeast for mandazi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mushroom, a fuzzy patch on bread and a cup of froth."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the fuzzy patch.",
+     "say": "Is this dirt or a living thing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"mould, a fungus\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_PLANT",
+     "listen_for": [
+      "a mushroom is a plant"
+     ],
+     "ask": "Is a mushroom green? Does it have leaves?",
+     "repair": "Fungi are not plants: no green colour, no leaves."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_MOULD_DIRT",
+     "listen_for": [
+      "the bread is dirty"
+     ],
+     "ask": "Did the fuzzy patch grow bigger each day?",
+     "repair": "Mould is a living fungus that grows."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_YEAST_NOT_LIVING",
+     "listen_for": [
+      "yeast is a powder"
+     ],
+     "ask": "Why does yeast froth in warm sugary water?",
+     "repair": "Yeast is a living fungus that feeds and makes gas."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_ALL_MUSHROOMS_ONE_KIND",
+     "listen_for": [
+      "only mushrooms are fungi"
+     ],
+     "ask": "What do mould, yeast and mushrooms share?",
+     "repair": "Fungi include yeast, moulds and puffballs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two fungi other than mushrooms.",
+     "answer": "any two: yeast, bread mould, puffball, toadstool",
+     "shows": "identify"
+    },
+    {
+     "question": "Is yeast a living thing?",
+     "answer": "Yes: it is a fungus",
+     "shows": "yeast"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
+   "key_step": "The child says how fungi differ from green plants: no chlorophyll, so they cannot make food; they feed on dead or living matter; no roots, stems or leaves; they reproduce by spores.",
+   "floor": {
+    "prerequisite": "Can name common fungi.",
+    "question": "Name one fungus.",
+    "answer": "for example a mushroom or yeast"
+   },
+   "representations": [
+    "a mushroom cut in half",
+    "a spore print on paper",
+    "a table: plants and fungi"
+   ],
+   "steps": [
+    "Colour: plants green, fungi not.",
+    "Food: plants make it, fungi take it from what they grow on.",
+    "Body: no roots, stems or leaves; threads instead.",
+    "New fungi grow from spores."
+   ],
+   "contexts": [
+    "mushrooms on a rotting log",
+    "mould on a tomato",
+    "spores on a mushroom cap"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: plant and fungus, rows colour, food, parts, new ones from."
+    },
+    {
+     "beat": "write",
+     "do": "Fill in the plant column."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the fungus food row.",
+     "say": "Where does a mushroom get its food?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"from the log it grows on\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_GREEN_FOOD",
+     "listen_for": [
+      "it makes food with sunlight"
+     ],
+     "ask": "Is a mushroom green? Can it make food without green?",
+     "repair": "Fungi cannot make food; they feed on other things."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ROOTS_LEAVES",
+     "listen_for": [
+      "the stalk is a stem"
+     ],
+     "ask": "Does the mushroom have leaves to make food?",
+     "repair": "Fungi have no true roots, stems or leaves."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ALL_EDIBLE",
+     "listen_for": [
+      "all mushrooms are food"
+     ],
+     "ask": "Why are some mushrooms called poisonous?",
+     "repair": "Some fungi are poisonous; never eat wild mushrooms."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_SPORES_SEEDS",
+     "listen_for": [
+      "the dust is seeds"
+     ],
+     "ask": "Does the dust have a store of food like a bean?",
+     "repair": "Fungi make spores, not seeds."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why can a mushroom grow in a dark place where plants cannot?",
+     "answer": "it does not make its own food, so it does not need light",
+     "shows": "no chlorophyll"
+    },
+    {
+     "question": "How do fungi reproduce?",
+     "answer": "by spores",
+     "shows": "spores"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+   "key_step": "The child describes how fungi are useful (food, baking and brewing with yeast, medicine such as penicillin, rotting dead matter into soil) and harmful (food spoilage, plant and human diseases).",
+   "floor": {
+    "prerequisite": "Knows fungi feed on other things.",
+    "question": "What do fungi feed on?",
+    "answer": "dead or living matter"
+   },
+   "representations": [
+    "dough rising with yeast",
+    "a compost heap",
+    "a chart: helpful, harmful"
+   ],
+   "steps": [
+    "Food: edible mushrooms.",
+    "Yeast makes gas that raises dough.",
+    "Fungi rot dead things into soil.",
+    "Some cause disease (ringworm, crop rusts) and spoil food."
+   ],
+   "contexts": [
+    "baking mandazi",
+    "a mushroom farm",
+    "rust on wheat leaves"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw dough before and after an hour with yeast."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what made the dough bigger."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw bubbles in the dough and write \"gas from yeast\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_YEAST_GAS",
+     "listen_for": [
+      "the heat makes it rise"
+     ],
+     "ask": "What are the holes in bread?",
+     "repair": "Yeast makes a gas that raises dough."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_ALL_HARMFUL",
+     "listen_for": [
+      "fungi are bad"
+     ],
+     "ask": "Which fungus do we eat? Which helps bread?",
+     "repair": "Many fungi are useful."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_DECAY_USELESS",
+     "listen_for": [
+      "rotting is only bad"
+     ],
+     "ask": "What would happen to fallen leaves with no fungi?",
+     "repair": "Fungi rot dead things into soil."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_MEDICINE_NOT_FUNGI",
+     "listen_for": [
+      "medicine comes from plants"
+     ],
+     "ask": "Where did penicillin come from?",
+     "repair": "Some medicines come from fungi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two uses of fungi.",
+     "answer": "any two: food, baking, medicine, rotting dead matter",
+     "shows": "helpful"
+    },
+    {
+     "question": "Give one harmful effect of fungi.",
+     "answer": "spoil food, cause diseases in people or crops",
+     "shows": "harmful"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+   "key_step": "The child says mould grows from spores in the air on damp, warm food, and prevents it by keeping food dry, cool, covered and eating it in time.",
+   "floor": {
+    "prerequisite": "Knows mould is a fungus.",
+    "question": "Is the fuzz on old bread living?",
+    "answer": "yes"
+   },
+   "representations": [
+    "sealed bags: damp bread, dry bread, bread in a cool place",
+    "a results table over a week",
+    "a picture of spores in the air"
+   ],
+   "steps": [
+    "Spores are always in the air.",
+    "They grow on food that is damp and warm.",
+    "Dry, cool, covered food grows less mould.",
+    "Throw mouldy food away; scraping is not safe."
+   ],
+   "contexts": [
+    "storing ugali overnight",
+    "drying maize before storage",
+    "a lunch box left in the sun"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three sealed bags: damp bread, dry bread, bread in a cool place."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will grow the most mould."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Shade the damp bread bag the most."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_DRY_BEST",
+     "listen_for": [
+      "dry food in the sun goes mouldy"
+     ],
+     "ask": "Which bag grew the most mould?",
+     "repair": "Mould grows best on damp, warm food."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_SCRAPE_SAFE",
+     "listen_for": [
+      "scrape it off and eat it"
+     ],
+     "ask": "Can the mould threads go deep into the bread?",
+     "repair": "Mould spreads inside; throw the food away."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_AIR_ONLY",
+     "listen_for": [
+      "the food makes the mould"
+     ],
+     "ask": "Where did the spores come from?",
+     "repair": "Spores come from the air and land on food."
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_FRIDGE_KILLS",
+     "listen_for": [
+      "the fridge kills mould"
+     ],
+     "ask": "Did the fridge bread go mouldy in the end?",
+     "repair": "Cold slows mould; it does not kill it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two conditions that help mould grow on food.",
+     "answer": "dampness and warmth",
+     "shows": "conditions"
+    },
+    {
+     "question": "Give one way to stop mould growing on stored maize.",
+     "answer": "dry it well before storing, or keep it dry and cool",
+     "shows": "prevention"
+    }
+   ]
+  }
+ ]
+}

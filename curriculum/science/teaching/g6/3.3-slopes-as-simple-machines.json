@@ -1,0 +1,188 @@
+{
+ "sub_strand": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE",
+ "title": "Slopes as simple machines",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A plank against a pile of books, a toy car or a brick with a spring balance (or a rubber band to show the pull), a ramp at the school, a wedge (an axe head picture, a door stop) and a screw. The child compares the pull up two slopes before any rule is given.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+   "key_step": "The child identifies slopes used as simple machines (ramps, inclined planes such as winding roads and staircases, wedges such as an axe or a knife, screws) by a sloping surface.",
+   "floor": {
+    "prerequisite": "Knows levers are simple machines.",
+    "question": "Is a bottle opener a simple machine?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a plank on books",
+    "a paper triangle wound round a pencil",
+    "pictures of an axe, a ramp and a winding road"
+   ],
+   "steps": [
+    "Look for a sloping surface.",
+    "Ramp or inclined plane: a flat slope.",
+    "Wedge: two slopes back to back (axe, knife).",
+    "Screw: a slope wound round a rod."
+   ],
+   "contexts": [
+    "a ramp into a lorry at a market",
+    "the road up the escarpment",
+    "splitting firewood with an axe"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ramp, an axe head and a screw."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the axe.",
+     "say": "Where are the slopes on an axe?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the two sides of the blade\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"wedge\" under the axe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_PULLEY",
+     "listen_for": [
+      "a pulley is a slope"
+     ],
+     "ask": "Does a pulley have a sloping surface?",
+     "repair": "Pulleys and see-saws are not slopes."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_FLAT_ROAD",
+     "listen_for": [
+      "a flat road is a slope"
+     ],
+     "ask": "Does a flat road go up?",
+     "repair": "A slope rises from low to high."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_WEDGE",
+     "listen_for": [
+      "an axe is not a slope"
+     ],
+     "ask": "Look at the side of the blade: is it sloping?",
+     "repair": "A wedge is two slopes."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_SCREW_NOT_SLOPE",
+     "listen_for": [
+      "a screw is a nail"
+     ],
+     "ask": "What did the paper triangle make round the pencil?",
+     "repair": "A screw thread is a wound slope."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a knife blade a kind of slope?",
+     "answer": "Yes: it is a wedge",
+     "shows": "wedge"
+    },
+    {
+     "question": "Give one example of an inclined plane.",
+     "answer": "a ramp, a winding road or a staircase",
+     "shows": "inclined plane"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
+   "key_step": "The child explains a slope makes it easier to raise a load: a gentler, longer slope needs less effort, but the load is moved a longer distance, so the work is not reduced.",
+   "floor": {
+    "prerequisite": "Can identify slopes.",
+    "question": "Is a ramp a slope?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a brick pulled up a steep and a gentle plank with a rubber band",
+    "a drawing of two ramps to the same height",
+    "a table: slope, pull, distance"
+   ],
+   "steps": [
+    "Lift the brick straight up: big pull.",
+    "Pull it up a steep plank: less.",
+    "Pull it up a gentle, longer plank: least.",
+    "The distance pulled is longer each time."
+   ],
+   "contexts": [
+    "pushing a wheelchair up a ramp",
+    "rolling a drum onto a lorry",
+    "a road zigzagging up a hill"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two ramps to the same height: one steep and short, one gentle and long."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which needs less effort."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"gentle: less effort, longer distance\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_STEEP_EASIER",
+     "listen_for": [
+      "steeper is easier"
+     ],
+     "ask": "Which plank stretched the rubber band less?",
+     "repair": "A gentler slope needs less effort."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_LIGHTER",
+     "listen_for": [
+      "the load gets lighter"
+     ],
+     "ask": "Did the brick change its weight?",
+     "repair": "The load is the same; the effort is less."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_SHORTER_WAY",
+     "listen_for": [
+      "a slope is shorter"
+     ],
+     "ask": "Which is longer: up the ramp or straight up?",
+     "repair": "A slope is a longer way."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_SLOPE_LESS_WORK",
+     "listen_for": [
+      "less work"
+     ],
+     "ask": "Is the pull less but the distance more?",
+     "repair": "Less effort over a longer distance."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which needs less effort to raise a load: a steep slope or a gentle one?",
+     "answer": "a gentle one",
+     "shows": "effort"
+    },
+    {
+     "question": "Why do roads up steep hills wind from side to side?",
+     "answer": "a longer, gentler slope needs less effort",
+     "shows": "application"
+    }
+   ]
+  }
+ ]
+}

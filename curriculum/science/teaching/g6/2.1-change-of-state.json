@@ -1,0 +1,283 @@
+{
+ "sub_strand": "SCIE.G6.MATTER.CHANGE_OF_STATE",
+ "title": "Change of State",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Demonstrations done safely: an ice cube melting on a plate, a wet cloth drying in the sun, a cold glass from the fridge forming drops, candle wax melting and setting (the teacher lights it), water frozen in a freezer if the school has one. Sublimation is shown with a picture of mothballs shrinking (not handled).",
+ "skills": [
+  {
+   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+   "key_step": "The child names each change by its start and end states: melting (solid to liquid), freezing (liquid to solid), evaporation (liquid to gas), condensation (gas to liquid), sublimation (solid to gas), deposition (gas to solid).",
+   "floor": {
+    "prerequisite": "Can sort substances into solids, liquids and gases.",
+    "question": "Is ice a solid, a liquid or a gas?",
+    "answer": "a solid"
+   },
+   "representations": [
+    "an ice cube melting",
+    "a cold glass with drops on the outside",
+    "a triangle chart: solid, liquid, gas with arrows"
+   ],
+   "steps": [
+    "Write the three states at the corners of a triangle.",
+    "Name each arrow by the start and end state.",
+    "Match a real event to each arrow.",
+    "Check: is there a liquid stage?"
+   ],
+   "contexts": [
+    "ice melting in a drink",
+    "dew on grass in the morning",
+    "wet clothes drying"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a triangle with solid, liquid and gas at the corners."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw an arrow from liquid to gas."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "What is this change called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"evaporation\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to name the other arrows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_MELT_DISSOLVE",
+     "listen_for": [
+      "sugar melts in tea"
+     ],
+     "ask": "Is the sugar turning to liquid by heat, or spreading in the tea?",
+     "repair": "Melting is a solid becoming a liquid by heat; dissolving is mixing into a liquid."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_EVAP_BOIL",
+     "listen_for": [
+      "water only evaporates when it boils"
+     ],
+     "ask": "How do clothes dry in the sun without boiling?",
+     "repair": "Evaporation happens at any temperature."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_CONDENSE_MIXUP",
+     "listen_for": [
+      "the water came through the glass"
+     ],
+     "ask": "Does a cold empty glass also get drops?",
+     "repair": "Drops on a cold glass are water vapour from the air condensing."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_SUBLIMATION_MELT",
+     "listen_for": [
+      "the mothball melted"
+     ],
+     "ask": "Was there any liquid?",
+     "repair": "Solid straight to gas is sublimation."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the change from gas to liquid called?",
+     "answer": "condensation",
+     "shows": "name"
+    },
+    {
+     "question": "Ice turns into water. What is this called?",
+     "answer": "melting",
+     "shows": "melting"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+   "key_step": "The child says heat is gained in melting, evaporation and sublimation, and lost in freezing, condensation and deposition, and that boiling water stays at the same temperature.",
+   "floor": {
+    "prerequisite": "Can name the changes of state.",
+    "question": "What is the change from liquid to solid called?",
+    "answer": "freezing"
+   },
+   "representations": [
+    "ice in a warm hand",
+    "water in a freezer",
+    "a chart: change, heat gained or lost"
+   ],
+   "steps": [
+    "Ask: does the substance need warming or cooling to change?",
+    "Warming: melting, evaporation, sublimation.",
+    "Cooling: freezing, condensation, deposition.",
+    "At boiling, the heat goes into making steam."
+   ],
+   "contexts": [
+    "making ice lollies",
+    "boiling water for tea",
+    "butter left in the sun"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw ice in a hand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hand.",
+     "say": "Which way is heat moving: hand to ice or ice to hand?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"hand to ice\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"melting: heat gained\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_COLD_MELTS",
+     "listen_for": [
+      "the ice takes in cold"
+     ],
+     "ask": "Is the air warmer or colder than the ice?",
+     "repair": "Ice melts by gaining heat from the warmer air."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_FREEZE_HEAT",
+     "listen_for": [
+      "you heat water to freeze it"
+     ],
+     "ask": "Where do we put water to make ice?",
+     "repair": "Freezing needs heat to be taken away."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_STEAM_SMOKE",
+     "listen_for": [
+      "the cloud is the gas"
+     ],
+     "ask": "Can you see the gas right at the spout?",
+     "repair": "Steam is invisible; the cloud is tiny drops."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_BOILING_HOTTER",
+     "listen_for": [
+      "it keeps getting hotter"
+     ],
+     "ask": "What did the thermometer show every two minutes?",
+     "repair": "Boiling water stays at boiling point."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is heat gained or lost when water freezes?",
+     "answer": "lost",
+     "shows": "freezing"
+    },
+    {
+     "question": "Is heat gained or lost when water evaporates?",
+     "answer": "gained",
+     "shows": "evaporation"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+   "key_step": "The child describes daily uses of changes of state and names the change: drying clothes and grain (evaporation), getting salt from sea water (evaporation), making ice (freezing), melting wax or metal to shape it, rain (condensation).",
+   "floor": {
+    "prerequisite": "Can name the changes of state.",
+    "question": "What is the change from liquid to gas called?",
+    "answer": "evaporation"
+   },
+   "representations": [
+    "clothes on a line",
+    "salt pans at the coast (picture)",
+    "a chart: use, change"
+   ],
+   "steps": [
+    "Name the use.",
+    "Say the start and end state.",
+    "Name the change.",
+    "Say whether heat is gained or lost."
+   ],
+   "contexts": [
+    "salt making at Magarini",
+    "a jua kali worker melting metal",
+    "rain from clouds"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cloud over a lake, with arrows up from the lake."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrows.",
+     "say": "What change makes water rise into the air?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"evaporation\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw how the water comes back down and name that change."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOTHES_SOAK",
+     "listen_for": [
+      "the water goes into the rope"
+     ],
+     "ask": "Is the rope wet after the clothes dry?",
+     "repair": "The water evaporates into the air."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOUD_SMOKE",
+     "listen_for": [
+      "clouds are smoke"
+     ],
+     "ask": "What forms on a cold glass from the air?",
+     "repair": "Clouds are tiny drops of condensed water."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_SALT_SEA",
+     "listen_for": [
+      "freeze the sea water"
+     ],
+     "ask": "What is left when salty water dries?",
+     "repair": "Salt is got by evaporating the water."
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_PERFUME_GONE",
+     "listen_for": [
+      "the water disappears"
+     ],
+     "ask": "What formed inside the cup over the wet patch?",
+     "repair": "The water evaporates into the air."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which change of state is used to dry maize?",
+     "answer": "evaporation",
+     "shows": "use"
+    },
+    {
+     "question": "How do clouds form?",
+     "answer": "water vapour in the air cools and condenses into tiny drops",
+     "shows": "condensation"
+    }
+   ]
+  }
+ ]
+}

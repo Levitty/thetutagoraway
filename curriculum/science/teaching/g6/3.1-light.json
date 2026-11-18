@@ -1,0 +1,561 @@
+{
+ "sub_strand": "SCIE.G6.FORCE_.LIGHT",
+ "title": "Light",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A torch in a darkened room with a sheet of clear plastic, wax paper and cardboard; a ball and a torch for shadows and eclipses; a plane mirror with a protractor for reflection; a glass of water or a garden hose spray in the sun for a rainbow. Never look at the Sun, even in an eclipse.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+   "key_step": "The child tests a material with light and classifies it: transparent (light passes and things are seen clearly), translucent (some light passes, things not seen clearly), opaque (no light passes).",
+   "floor": {
+    "prerequisite": "Knows sources of light.",
+    "question": "Is a torch a source of light?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a torch with clear plastic, wax paper and cardboard",
+    "a window, a frosted glass and a wall",
+    "a three-column table"
+   ],
+   "steps": [
+    "Shine a torch at the material.",
+    "Does light pass? Can you see clearly through it?",
+    "Clear view: transparent. Some light: translucent. None: opaque.",
+    "Test the real piece; thickness matters."
+   ],
+   "contexts": [
+    "a glass window",
+    "a frosted bathroom window",
+    "a wooden door"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a torch and three sheets: clear, cloudy, solid."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how much light gets through each."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's predictions."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw full rays, few rays, no rays behind each sheet."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_COLOUR_OPAQUE",
+     "listen_for": [
+      "coloured glass is opaque"
+     ],
+     "ask": "Can you see through a coloured bottle?",
+     "repair": "Coloured glass can be transparent."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_TRANSLUCENT_TRANSPARENT",
+     "listen_for": [
+      "frosted glass is transparent"
+     ],
+     "ask": "Can you see clearly through frosted glass?",
+     "repair": "Translucent lets light through but not a clear view."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_GLASS_ALWAYS",
+     "listen_for": [
+      "all paper is opaque"
+     ],
+     "ask": "Test it: does light pass through tissue?",
+     "repair": "Test each material; not all of one kind behaves the same."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_THICKNESS_IGNORED",
+     "listen_for": [
+      "paper blocks light"
+     ],
+     "ask": "What happens with one sheet and with a pile?",
+     "repair": "Thickness matters."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a clear glass window transparent, translucent or opaque?",
+     "answer": "transparent",
+     "shows": "classify"
+    },
+    {
+     "question": "Light passes through wax paper but you cannot see clearly. What kind of material is it?",
+     "answer": "translucent",
+     "shows": "translucent"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+   "key_step": "The child explains that a shadow forms where an opaque object blocks light travelling in straight lines, falls on the side away from the light, and grows bigger as the object moves closer to the light.",
+   "floor": {
+    "prerequisite": "Can classify materials as opaque.",
+    "question": "Is cardboard opaque?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a torch, a toy and a wall",
+    "shadows on the school ground at 8 am and noon",
+    "a ray drawing"
+   ],
+   "steps": [
+    "Light travels in straight lines.",
+    "An opaque object blocks it.",
+    "The dark area behind is the shadow.",
+    "Closer to the light: bigger shadow."
+   ],
+   "contexts": [
+    "a tree's shadow at noon",
+    "shadow puppets",
+    "a goat resting in the shade"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a torch, a ball and a wall."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw straight rays from the torch past the edges of the ball."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the shadow if the ball moves nearer the torch."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the bigger shadow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_MADE_BY_OBJECT",
+     "listen_for": [
+      "the shadow comes from the ball"
+     ],
+     "ask": "What happens to the shadow if we switch off the torch?",
+     "repair": "A shadow is blocked light, not part of the object."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIDE",
+     "listen_for": [
+      "the shadow is by the torch"
+     ],
+     "ask": "Which side of the ball is the light blocked?",
+     "repair": "The shadow falls on the side away from the light."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIZE",
+     "listen_for": [
+      "closer makes it smaller"
+     ],
+     "ask": "What did the shadow do as the ball moved nearer?",
+     "repair": "Closer to the light, the shadow grows."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SHADOW_COLOUR",
+     "listen_for": [
+      "a red shadow"
+     ],
+     "ask": "What colour were the shadows of the red and blue balls?",
+     "repair": "Shadows are dark, whatever the object's colour."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why does an opaque object make a shadow?",
+     "answer": "it blocks light, which travels in straight lines",
+     "shows": "formation"
+    },
+    {
+     "question": "A toy is moved closer to a torch. What happens to its shadow?",
+     "answer": "it gets bigger",
+     "shows": "size"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
+   "key_step": "The child explains a solar eclipse as the Moon between the Sun and the Earth, casting its shadow on the Earth, and a lunar eclipse as the Earth between the Sun and the Moon, casting its shadow on the Moon, and knows eclipses are rare.",
+   "floor": {
+    "prerequisite": "Knows how shadows form.",
+    "question": "What makes a shadow?",
+    "answer": "an opaque object blocking light"
+   },
+   "representations": [
+    "a torch (Sun), a globe (Earth) and a small ball (Moon)",
+    "two line drawings",
+    "a pinhole viewer"
+   ],
+   "steps": [
+    "Line up Sun, Moon, Earth: the Moon's shadow on the Earth is a solar eclipse.",
+    "Line up Sun, Earth, Moon: the Earth's shadow on the Moon is a lunar eclipse.",
+    "The line-up is exact only now and then.",
+    "Never look at the Sun; use a pinhole viewer."
+   ],
+   "contexts": [
+    "an eclipse seen across Kenya",
+    "a full moon turning reddish",
+    "a pinhole viewer made at school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the Sun, the Moon and the Earth in a line, Moon in the middle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Earth.",
+     "say": "Whose shadow falls here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the Moon's\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"solar eclipse\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what order gives a lunar eclipse."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_CLOUD",
+     "listen_for": [
+      "clouds cover the Sun"
+     ],
+     "ask": "Can there be an eclipse on a clear day?",
+     "repair": "An eclipse is a shadow of the Moon or the Earth."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SWAP",
+     "listen_for": [
+      "the Earth is in the middle in a solar eclipse"
+     ],
+     "ask": "Which body hides the Sun?",
+     "repair": "Solar: Moon in the middle. Lunar: Earth in the middle."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SAFE",
+     "listen_for": [
+      "dark glasses are enough"
+     ],
+     "ask": "What can sunlight do to the eye?",
+     "repair": "Never look at the Sun; use a pinhole viewer."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_EVERY_MONTH",
+     "listen_for": [
+      "every month"
+     ],
+     "ask": "Is the Moon always exactly on the line?",
+     "repair": "The exact line-up is rare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a lunar eclipse, which body is in the middle?",
+     "answer": "the Earth",
+     "shows": "lunar"
+    },
+    {
+     "question": "Why must you never look straight at a solar eclipse?",
+     "answer": "the Sun's light can damage the eyes",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+   "key_step": "The child applies the law of reflection: the angle of incidence equals the angle of reflection, both measured from the normal drawn at 90 degrees to the mirror.",
+   "floor": {
+    "prerequisite": "Knows light travels in straight lines.",
+    "question": "Does light travel in straight or curved lines?",
+    "answer": "straight"
+   },
+   "representations": [
+    "a mirror, a torch with a slit and a protractor",
+    "a ray diagram with the normal dashed",
+    "a ball bounced off a wall"
+   ],
+   "steps": [
+    "Draw the mirror and the point where the ray hits.",
+    "Draw the normal at 90 degrees.",
+    "Measure the incoming angle from the normal.",
+    "The reflected ray leaves at the same angle on the other side."
+   ],
+   "contexts": [
+    "a car side mirror",
+    "a periscope made from a box",
+    "a mirror in a salon"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mirror line and a ray hitting it."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the normal dashed at 90 degrees."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"30 degrees\" between the ray and the normal."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the angle of the reflected ray will be."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"30 degrees\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the reflected ray."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_NOT_EQUAL",
+     "listen_for": [
+      "it leaves at a different angle"
+     ],
+     "ask": "What did the protractor show for both angles?",
+     "repair": "The angles are equal."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_FROM_SURFACE",
+     "listen_for": [
+      "measure from the mirror"
+     ],
+     "ask": "Where is the normal?",
+     "repair": "Measure from the normal."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_ABSORB",
+     "listen_for": [
+      "the mirror takes some light"
+     ],
+     "ask": "Does light come out behind a mirror?",
+     "repair": "A plane mirror reflects light; it does not pass through."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_NORMAL_ON_MIRROR",
+     "listen_for": [
+      "the normal is along the mirror"
+     ],
+     "ask": "What angle does the normal make with the mirror?",
+     "repair": "The normal stands at 90 degrees."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A ray hits a mirror at 40 degrees to the normal. What is the angle of reflection?",
+     "answer": "40 degrees",
+     "shows": "law"
+    },
+    {
+     "question": "From what line are the angles measured?",
+     "answer": "the normal",
+     "shows": "normal"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+   "key_step": "The child describes the image in a plane mirror: the same size as the object, upright, as far behind the mirror as the object is in front, left and right swapped, and not able to be caught on a screen.",
+   "floor": {
+    "prerequisite": "Knows the law of reflection.",
+    "question": "Are the angles of incidence and reflection equal?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a mirror and a printed word",
+    "two pencils: one in front, one where the image seems to be",
+    "the word AMBULANCE written backwards"
+   ],
+   "steps": [
+    "Size: same as the object.",
+    "Distance: as far behind as the object is in front.",
+    "Upright, but left and right swapped.",
+    "It cannot be caught on paper."
+   ],
+   "contexts": [
+    "AMBULANCE written backwards on the front of an ambulance",
+    "combing hair in a mirror",
+    "a shop mirror"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mirror line and a person 2 m in front."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how far behind the mirror the image is."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"2 m\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the image 2 m behind, the same size."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_SIZE",
+     "listen_for": [
+      "the image is smaller"
+     ],
+     "ask": "Measure your hand and its image.",
+     "repair": "The image is the same size."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_DISTANCE",
+     "listen_for": [
+      "the image is on the glass"
+     ],
+     "ask": "If you step back, does the image move too?",
+     "repair": "The image is as far behind as you are in front."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_UPSIDE",
+     "listen_for": [
+      "it is upside down"
+     ],
+     "ask": "Raise your right hand: which hand does the image raise?",
+     "repair": "The image is upright with left and right swapped."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_REAL_BEHIND",
+     "listen_for": [
+      "it is behind the mirror"
+     ],
+     "ask": "What appeared on the paper behind the mirror?",
+     "repair": "The image cannot be caught on a screen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You stand 3 m from a plane mirror. How far is your image from the mirror?",
+     "answer": "3 m",
+     "shows": "distance"
+    },
+    {
+     "question": "Why is AMBULANCE written backwards on the front of an ambulance?",
+     "answer": "drivers in front read it the right way in their mirrors, which swap left and right",
+     "shows": "lateral inversion"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
+   "key_step": "The child explains a rainbow forms when sunlight passes through drops of water and is split into seven colours, seen with the Sun behind you, in the order red, orange, yellow, green, blue, indigo, violet.",
+   "floor": {
+    "prerequisite": "Knows light can pass through transparent materials.",
+    "question": "Is water transparent?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a hose spray in sunlight",
+    "a glass of water on a sunny window sill",
+    "a strip of the seven colours"
+   ],
+   "steps": [
+    "Sunlight is a mix of colours.",
+    "Drops of water split it into colours.",
+    "Stand with the Sun behind you and look at the drops.",
+    "Order: red, orange, yellow, green, blue, indigo, violet."
+   ],
+   "contexts": [
+    "a rainbow after an afternoon shower",
+    "a hose watering the school garden",
+    "spray near a waterfall"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the Sun, a person and rain in front of the person."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Sun.",
+     "say": "Is it in front of or behind the person?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"behind\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the colours in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_PAINT",
+     "listen_for": [
+      "the rainbow is a thing in the sky"
+     ],
+     "ask": "Can you walk to the end of a rainbow?",
+     "repair": "A rainbow is light split by drops; it is not an object."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_SUN_FRONT",
+     "listen_for": [
+      "look towards the Sun"
+     ],
+     "ask": "Where was the Sun when we saw the hose rainbow?",
+     "repair": "The Sun must be behind you."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_COLOUR_ORDER",
+     "listen_for": [
+      "blue is at the top"
+     ],
+     "ask": "Which colour is on the outside of the arc?",
+     "repair": "Red is on the outside, violet inside."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_ONLY_RAIN",
+     "listen_for": [
+      "only rain makes rainbows"
+     ],
+     "ask": "What did the hose spray show?",
+     "repair": "Any drops in sunlight can make a rainbow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where must the Sun be for you to see a rainbow?",
+     "answer": "behind you",
+     "shows": "position"
+    },
+    {
+     "question": "How many colours does a rainbow show, and which is on the outside?",
+     "answer": "seven, red on the outside",
+     "shows": "colours"
+    }
+   ]
+  }
+ ]
+}

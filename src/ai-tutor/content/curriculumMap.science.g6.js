@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/science/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/science/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/science/teaching/g6)"};
 export const SUBSTRANDS = {
  "SCIE.G6.LIVING.FUNGI": {
   "name": "Fungi",
@@ -237,7 +237,8 @@ export const SKILLS = {
   "mis": [
    "M_FI_PLANT",
    "M_FI_MOULD_DIRT",
-   "M_FI_YEAST_NOT_LIVING"
+   "M_FI_YEAST_NOT_LIVING",
+   "M_FI_ALL_MUSHROOMS_ONE_KIND"
   ]
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES": {
@@ -253,7 +254,8 @@ export const SKILLS = {
   "mis": [
    "M_FF_GREEN_FOOD",
    "M_FF_ROOTS_LEAVES",
-   "M_FF_ALL_EDIBLE"
+   "M_FF_ALL_EDIBLE",
+   "M_FF_SPORES_SEEDS"
   ]
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE": {
@@ -269,7 +271,8 @@ export const SKILLS = {
   "mis": [
    "M_FM_YEAST_GAS",
    "M_FM_ALL_HARMFUL",
-   "M_FM_DECAY_USELESS"
+   "M_FM_DECAY_USELESS",
+   "M_FM_MEDICINE_NOT_FUNGI"
   ]
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH": {
@@ -285,7 +288,8 @@ export const SKILLS = {
   "mis": [
    "M_FG_DRY_BEST",
    "M_FG_SCRAPE_SAFE",
-   "M_FG_AIR_ONLY"
+   "M_FG_AIR_ONLY",
+   "M_FG_FRIDGE_KILLS"
   ]
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY": {
@@ -299,7 +303,8 @@ export const SKILLS = {
   "mis": [
    "M_II_SPIDER_INSECT",
    "M_II_WORM_NOT_ANIMAL_GROUP",
-   "M_II_CRAB_FISH"
+   "M_II_CRAB_FISH",
+   "M_II_MILLIPEDE_INSECT"
   ]
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS": {
@@ -315,7 +320,8 @@ export const SKILLS = {
   "mis": [
    "M_IC_LEG_COUNT",
    "M_IC_ALL_SMALL",
-   "M_IC_ALL_LEGS"
+   "M_IC_ALL_LEGS",
+   "M_IC_SNAIL_SHELL_BONE"
   ]
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE": {
@@ -331,7 +337,8 @@ export const SKILLS = {
   "mis": [
    "M_IM_ALL_PESTS",
    "M_IM_MOSQUITO_WRONG",
-   "M_IM_WORMS_HARM"
+   "M_IM_WORMS_HARM",
+   "M_IM_BEES_ONLY_HONEY"
   ]
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING": {
@@ -347,7 +354,8 @@ export const SKILLS = {
   "mis": [
    "M_IH_BARE_HANDS",
    "M_IH_CRUSH",
-   "M_IH_NO_WASH"
+   "M_IH_NO_WASH",
+   "M_IH_JAR_NO_AIR"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS": {
@@ -361,7 +369,8 @@ export const SKILLS = {
   "mis": [
    "M_CP_LUNGS_IN",
    "M_CP_HEART_PRODUCES",
-   "M_CP_VESSEL_NAMES"
+   "M_CP_VESSEL_NAMES",
+   "M_CP_ONLY_HEART"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS": {
@@ -377,7 +386,8 @@ export const SKILLS = {
   "mis": [
    "M_HP_POSITION",
    "M_HP_UPPER_PUMP",
-   "M_HP_ONE_ROOM"
+   "M_HP_ONE_ROOM",
+   "M_HP_HEART_SHAPE_LOVE"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS": {
@@ -393,7 +403,8 @@ export const SKILLS = {
   "mis": [
    "M_CV_SWAP",
    "M_CV_ONE_WAY",
-   "M_CV_CAPILLARY_BIG"
+   "M_CV_CAPILLARY_BIG",
+   "M_CV_VEINS_BLUE_BLOOD"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS": {
@@ -409,7 +420,8 @@ export const SKILLS = {
   "mis": [
    "M_BC_WHITE_OXYGEN",
    "M_BC_PLATELETS",
-   "M_BC_ALL_RED"
+   "M_BC_ALL_RED",
+   "M_BC_PLASMA_WATER_ONLY"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS": {
@@ -425,7 +437,8 @@ export const SKILLS = {
   "mis": [
    "M_CC_CATCHING",
    "M_CC_ARTERY_SOFT",
-   "M_CC_BP_MEANING"
+   "M_CC_BP_MEANING",
+   "M_CC_HEART_ATTACK_ONLY_OLD"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION": {
@@ -441,7 +454,8 @@ export const SKILLS = {
   "mis": [
    "M_CR_REST_ONLY",
    "M_CR_OLD_ONLY",
-   "M_CR_SALT_FAT"
+   "M_CR_SALT_FAT",
+   "M_CR_THIN_SAFE"
   ]
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE": {
@@ -457,7 +471,8 @@ export const SKILLS = {
   "mis": [
    "M_CR_WATER_SKIP",
    "M_CR_ONE_HABIT",
-   "M_CR_SMOKE_SAFE"
+   "M_CR_SMOKE_SAFE",
+   "M_CR_WEEKEND_EXERCISE"
   ]
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES": {
@@ -471,7 +486,8 @@ export const SKILLS = {
   "mis": [
    "M_SN_MELT_DISSOLVE",
    "M_SN_EVAP_BOIL",
-   "M_SN_CONDENSE_MIXUP"
+   "M_SN_CONDENSE_MIXUP",
+   "M_SN_SUBLIMATION_MELT"
   ]
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT": {
@@ -487,7 +503,8 @@ export const SKILLS = {
   "mis": [
    "M_SH_COLD_MELTS",
    "M_SH_FREEZE_HEAT",
-   "M_SH_STEAM_SMOKE"
+   "M_SH_STEAM_SMOKE",
+   "M_SH_BOILING_HOTTER"
   ]
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS": {
@@ -503,7 +520,8 @@ export const SKILLS = {
   "mis": [
    "M_SA_CLOTHES_SOAK",
    "M_SA_CLOUD_SMOKE",
-   "M_SA_SALT_SEA"
+   "M_SA_SALT_SEA",
+   "M_SA_PERFUME_GONE"
   ]
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS": {
@@ -517,7 +535,8 @@ export const SKILLS = {
   "mis": [
    "M_AC_MOSTLY_OXYGEN",
    "M_AC_ONE_GAS",
-   "M_AC_CANDLE_ALL"
+   "M_AC_CANDLE_ALL",
+   "M_AC_CO2_MOST"
   ]
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES": {
@@ -533,7 +552,8 @@ export const SKILLS = {
   "mis": [
    "M_AU_CO2_ONLY_OUT",
    "M_AU_OXYGEN_FUEL",
-   "M_AU_N_USELESS"
+   "M_AU_N_USELESS",
+   "M_AU_PLANTS_NEED_O2_ONLY"
   ]
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS": {
@@ -549,7 +569,8 @@ export const SKILLS = {
   "mis": [
    "M_AP_ONLY_FACTORY",
    "M_AP_ONLY_SMELL",
-   "M_AP_DUST_NOT"
+   "M_AP_DUST_NOT",
+   "M_AP_INDOOR_CLEAN"
   ]
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS": {
@@ -565,7 +586,8 @@ export const SKILLS = {
   "mis": [
    "M_AE_ONLY_NEAR",
    "M_AE_PLANTS_FINE",
-   "M_AE_WARM_GOOD"
+   "M_AE_WARM_GOOD",
+   "M_AE_SMOG_ONLY_TOWNS"
   ]
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE": {
@@ -581,7 +603,8 @@ export const SKILLS = {
   "mis": [
    "M_AR_BURN_RUBBISH",
    "M_AR_TALL_CHIMNEY",
-   "M_AR_TREES_NOT"
+   "M_AR_TREES_NOT",
+   "M_AR_MASK_FIXES"
   ]
  },
  "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS": {
@@ -595,7 +618,8 @@ export const SKILLS = {
   "mis": [
    "M_LM_COLOUR_OPAQUE",
    "M_LM_TRANSLUCENT_TRANSPARENT",
-   "M_LM_GLASS_ALWAYS"
+   "M_LM_GLASS_ALWAYS",
+   "M_LM_THICKNESS_IGNORED"
   ]
  },
  "SCIE.G6.FORCE_.LIGHT.SHADOWS": {
@@ -611,7 +635,8 @@ export const SKILLS = {
   "mis": [
    "M_SD_MADE_BY_OBJECT",
    "M_SD_SIDE",
-   "M_SD_SIZE"
+   "M_SD_SIZE",
+   "M_SD_SHADOW_COLOUR"
   ]
  },
  "SCIE.G6.FORCE_.LIGHT.ECLIPSES": {
@@ -627,7 +652,8 @@ export const SKILLS = {
   "mis": [
    "M_EC_CLOUD",
    "M_EC_SWAP",
-   "M_EC_SAFE"
+   "M_EC_SAFE",
+   "M_EC_EVERY_MONTH"
   ]
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE": {
@@ -643,7 +669,8 @@ export const SKILLS = {
   "mis": [
    "M_MR_NOT_EQUAL",
    "M_MR_FROM_SURFACE",
-   "M_MR_ABSORB"
+   "M_MR_ABSORB",
+   "M_MR_NORMAL_ON_MIRROR"
   ]
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE": {
@@ -659,7 +686,8 @@ export const SKILLS = {
   "mis": [
    "M_MI_SIZE",
    "M_MI_DISTANCE",
-   "M_MI_UPSIDE"
+   "M_MI_UPSIDE",
+   "M_MI_REAL_BEHIND"
   ]
  },
  "SCIE.G6.FORCE_.LIGHT.RAINBOW": {
@@ -675,7 +703,8 @@ export const SKILLS = {
   "mis": [
    "M_RB_PAINT",
    "M_RB_SUN_FRONT",
-   "M_RB_COLOUR_ORDER"
+   "M_RB_COLOUR_ORDER",
+   "M_RB_ONLY_RAIN"
   ]
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY": {
@@ -689,7 +718,8 @@ export const SKILLS = {
   "mis": [
    "M_LI_LADDER",
    "M_LI_ONLY_LONG",
-   "M_LI_MORE_ENERGY"
+   "M_LI_MORE_ENERGY",
+   "M_LI_HANDLE_ANY"
   ]
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS": {
@@ -705,7 +735,8 @@ export const SKILLS = {
   "mis": [
    "M_LP_LOAD_EFFORT",
    "M_LP_FULCRUM_HANDLE",
-   "M_LP_MOVES"
+   "M_LP_MOVES",
+   "M_LP_FULCRUM_ALWAYS_MIDDLE"
   ]
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER": {
@@ -722,7 +753,8 @@ export const SKILLS = {
   "mis": [
    "M_LE_FAR_FROM_LOAD",
    "M_LE_SHORT_ARM",
-   "M_LE_FREE_WORK"
+   "M_LE_FREE_WORK",
+   "M_LE_LONGER_HARDER"
   ]
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS": {
@@ -738,7 +770,8 @@ export const SKILLS = {
   "mis": [
    "M_LC_FIRST_ALWAYS",
    "M_LC_USE_SIZE",
-   "M_LC_THIRD_SECOND"
+   "M_LC_THIRD_SECOND",
+   "M_LC_SCISSORS_SECOND"
   ]
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES": {
@@ -754,7 +787,8 @@ export const SKILLS = {
   "mis": [
    "M_ST_PULLEY",
    "M_ST_FLAT_ROAD",
-   "M_ST_WEDGE"
+   "M_ST_WEDGE",
+   "M_ST_SCREW_NOT_SLOPE"
   ]
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER": {
@@ -770,7 +804,8 @@ export const SKILLS = {
   "mis": [
    "M_SE_STEEP_EASIER",
    "M_SE_LIGHTER",
-   "M_SE_SHORTER_WAY"
+   "M_SE_SHORTER_WAY",
+   "M_SE_SLOPE_LESS_WORK"
   ]
  }
 };
@@ -787,6 +822,10 @@ export const MIS_FEEDBACK = {
  "M_FG_DRY_BEST": "Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.",
  "M_FG_SCRAPE_SAFE": "Mould spreads inside food as thin threads. Mouldy food should be thrown away, not scraped.",
  "M_FG_AIR_ONLY": "Mould grows from tiny spores in the air that land on damp food and grow when it is warm.",
+ "M_FI_ALL_MUSHROOMS_ONE_KIND": "Fungi include mushrooms, toadstools, puffballs, yeast and moulds.",
+ "M_FF_SPORES_SEEDS": "Fungi make spores, not seeds. Spores are tiny and have no stored food.",
+ "M_FM_MEDICINE_NOT_FUNGI": "Some medicines come from fungi. Penicillin comes from a mould.",
+ "M_FG_FRIDGE_KILLS": "Cold slows mould growth but does not kill it. Food still goes bad in time.",
  "M_II_SPIDER_INSECT": "A spider is not an insect. It has eight legs, while an insect has six.",
  "M_II_WORM_NOT_ANIMAL_GROUP": "A snail, a worm and a starfish have no backbone. They are all invertebrates.",
  "M_II_CRAB_FISH": "A crab, an octopus and a starfish have no backbone. They are sea invertebrates, not fish.",
@@ -799,6 +838,10 @@ export const MIS_FEEDBACK = {
  "M_IH_BARE_HANDS": "Some small animals sting or bite. Use a jar or a spoon, or watch and do not touch.",
  "M_IH_CRUSH": "Handle animals gently and put them back where you found them. Every animal has a place in nature.",
  "M_IH_NO_WASH": "Always wash your hands with soap and water after handling animals, soil or waste.",
+ "M_II_MILLIPEDE_INSECT": "Insects have six legs and three body parts. A millipede has many legs and many parts.",
+ "M_IC_SNAIL_SHELL_BONE": "A snail's shell is outside its soft body. It has no backbone, so it is an invertebrate.",
+ "M_IM_BEES_ONLY_HONEY": "Bees carry pollen between flowers, so crops make more fruit. Honey is a second gift.",
+ "M_IH_JAR_NO_AIR": "Small animals need air and food. Study them for a short time, then put them back.",
  "M_CP_LUNGS_IN": "The circulatory system is the heart, the blood vessels and the blood. The stomach and lungs belong to other systems.",
  "M_CP_HEART_PRODUCES": "The heart pumps blood round the body. Blood is made in the bones, not in the heart.",
  "M_CP_VESSEL_NAMES": "The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.",
@@ -820,6 +863,13 @@ export const MIS_FEEDBACK = {
  "M_CR_WATER_SKIP": "Plenty of clean water is part of a healthy routine. Soft drinks have a lot of sugar.",
  "M_CR_ONE_HABIT": "A healthy routine has several parts: water, activity, healthy meals and enough sleep.",
  "M_CR_SMOKE_SAFE": "Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.",
+ "M_CP_ONLY_HEART": "The circulatory system has three parts: the heart, the blood vessels and the blood.",
+ "M_HP_HEART_SHAPE_LOVE": "The heart is a muscle about the size of your fist, in your chest between the lungs.",
+ "M_CV_VEINS_BLUE_BLOOD": "All blood is red. Blood in veins is a darker red; it only looks blue through the skin.",
+ "M_BC_PLASMA_WATER_ONLY": "Plasma is the liquid part of blood. It carries digested food, waste and the blood cells.",
+ "M_CC_HEART_ATTACK_ONLY_OLD": "Chest pain spreading to the arm, sweating and breathlessness are warning signs. Get help at once.",
+ "M_CR_THIN_SAFE": "Anyone can get high blood pressure. Too much salt, smoking and little exercise raise it.",
+ "M_CR_WEEKEND_EXERCISE": "The heart stays healthy with some exercise every day, not one big effort now and then.",
  "M_SN_MELT_DISSOLVE": "Melting is a solid changing into a liquid when heated. Dissolving is a solid mixing into a liquid.",
  "M_SN_EVAP_BOIL": "Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.",
  "M_SN_CONDENSE_MIXUP": "Condensation is a gas turning into a liquid. The drops come from water vapour in the air.",
@@ -829,6 +879,9 @@ export const MIS_FEEDBACK = {
  "M_SA_CLOTHES_SOAK": "The water in clothes changes into water vapour and goes into the air. This is evaporation.",
  "M_SA_CLOUD_SMOKE": "Clouds form when water vapour cools and condenses into tiny drops of water.",
  "M_SA_SALT_SEA": "In salt pans the sun makes the water evaporate. The salt stays behind.",
+ "M_SN_SUBLIMATION_MELT": "A solid turning straight into a gas, with no liquid, is sublimation. Melting makes a liquid.",
+ "M_SH_BOILING_HOTTER": "Boiling water stays at the same temperature. The extra heat changes it into steam.",
+ "M_SA_PERFUME_GONE": "Drying water does not vanish. It evaporates into the air as water vapour.",
  "M_AC_MOSTLY_OXYGEN": "Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.",
  "M_AC_ONE_GAS": "Air is a mixture of gases: nitrogen, oxygen, carbon dioxide and others.",
  "M_AC_CANDLE_ALL": "The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.",
@@ -844,6 +897,11 @@ export const MIS_FEEDBACK = {
  "M_AR_BURN_RUBBISH": "Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.",
  "M_AR_TALL_CHIMNEY": "A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.",
  "M_AR_TREES_NOT": "Trees take in carbon dioxide and give out oxygen, and their leaves trap dust.",
+ "M_AC_CO2_MOST": "Nitrogen is most of the air. Oxygen is about one fifth. Carbon dioxide is a very small part.",
+ "M_AU_PLANTS_NEED_O2_ONLY": "Plants use carbon dioxide from the air to make their food in the leaves.",
+ "M_AP_INDOOR_CLEAN": "Smoke inside the house is air pollution too. Keep windows open and cook where smoke can escape.",
+ "M_AE_SMOG_ONLY_TOWNS": "Smoke and dust harm people in villages as well as towns.",
+ "M_AR_MASK_FIXES": "A mask protects one person. Stopping burning and using cleaner stoves reduces the pollution itself.",
  "M_LM_COLOUR_OPAQUE": "Colour does not decide. The test is how much light passes through: all (transparent), some (translucent) or none (opaque).",
  "M_LM_TRANSLUCENT_TRANSPARENT": "Transparent lets nearly all light through so you see clearly. Translucent lets some through so you see only a blur.",
  "M_LM_GLASS_ALWAYS": "The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.",
@@ -862,6 +920,12 @@ export const MIS_FEEDBACK = {
  "M_RB_PAINT": "A rainbow is light spread into colours by drops of water. It is not a solid thing.",
  "M_RB_SUN_FRONT": "To see a rainbow, the Sun is behind you and the raindrops are in front.",
  "M_RB_COLOUR_ORDER": "The seven colours are red, orange, yellow, green, blue, indigo and violet, with red on the outside.",
+ "M_LM_THICKNESS_IGNORED": "Test the actual sheet. Thin paper lets some light through (translucent); a thick pile does not.",
+ "M_SD_SHADOW_COLOUR": "A shadow is where light is blocked, so it is dark whatever colour the object is.",
+ "M_EC_EVERY_MONTH": "The Sun, Moon and Earth line up exactly only now and then, so eclipses are rare.",
+ "M_MR_NORMAL_ON_MIRROR": "The normal stands at 90 degrees to the mirror. Angles are measured from it.",
+ "M_MI_REAL_BEHIND": "The image only seems to be behind the mirror. No light reaches there, so it cannot be caught on paper.",
+ "M_RB_ONLY_RAIN": "Any drops of water in sunlight can split light into colours, even from a hose.",
  "M_LI_LADDER": "A lever is a bar that turns about a fixed point. A ladder does not turn about a point.",
  "M_LI_ONLY_LONG": "A lever can be short or long. Scissors, tweezers and a bottle opener are levers.",
  "M_LI_MORE_ENERGY": "A lever makes work easier by changing the effort needed. It does not make energy.",
@@ -874,10 +938,16 @@ export const MIS_FEEDBACK = {
  "M_LC_FIRST_ALWAYS": "A wheelbarrow has the load in the middle. It is a second class lever.",
  "M_LC_USE_SIZE": "First class: fulcrum in the middle. Second: load in the middle. Third: effort in the middle.",
  "M_LC_THIRD_SECOND": "In tweezers the effort is in the middle, so they are third class levers.",
+ "M_LI_HANDLE_ANY": "A lever is a rigid bar that turns on a fixed point. A handle alone does not make a lever.",
+ "M_LP_FULCRUM_ALWAYS_MIDDLE": "The fulcrum is the point the lever turns on. In a wheelbarrow it is the wheel, at one end.",
+ "M_LE_LONGER_HARDER": "The further the effort is from the fulcrum, the less effort is needed.",
+ "M_LC_SCISSORS_SECOND": "Scissors have the fulcrum in the middle, so they are first-class levers.",
  "M_ST_PULLEY": "A slope is a tilted flat surface. A ramp is a slope; a see-saw is a lever.",
  "M_ST_FLAT_ROAD": "A slope must be tilted. A flat road is not a slope.",
  "M_ST_WEDGE": "An axe or a knife is a wedge, which is two slopes joined together.",
  "M_SE_STEEP_EASIER": "A longer and gentler slope needs less effort, but it is longer to travel.",
  "M_SE_LIGHTER": "The weight does not change. The slope only reduces the effort.",
- "M_SE_SHORTER_WAY": "A ramp is longer than the straight lift. We trade a longer path for less effort."
+ "M_SE_SHORTER_WAY": "A ramp is longer than the straight lift. We trade a longer path for less effort.",
+ "M_ST_SCREW_NOT_SLOPE": "A screw thread is a slope wound round a rod, like a winding road up a hill.",
+ "M_SE_SLOPE_LESS_WORK": "A slope lets you use less effort, but you push further. The work is not reduced."
 };

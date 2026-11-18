@@ -227,6 +227,66 @@
    "source": "Leach, Driver, Scott and Wood-Robinson (1996), International Journal of Science Education 18: children think decay and mould arise by themselves."
   }
  },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_ALL_MUSHROOMS_ONE_KIND": {
+  "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+  "error": "Thinks only mushrooms are fungi, so yeast, moulds and puffballs are something else.",
+  "example": {
+   "question": "Which of these is a fungus: bread mould, a fern, moss?",
+   "wrong_answer": "None of them; only mushrooms are fungi",
+   "correct_answer": "Bread mould"
+  },
+  "cause": "Has learnt \"fungus\" from mushrooms and has not seen it used for moulds or yeast.",
+  "reveals": "Offer \"None of them; only mushrooms are fungi\" next to the right answer and ask the question again in a new context.",
+  "help": "Put a mushroom, a mouldy bread slice (sealed) and yeast froth side by side: all feed on other things and grow from spores.",
+  "feedback": "Fungi include mushrooms, toadstools, puffballs, yeast and moulds.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_SPORES_SEEDS": {
+  "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
+  "error": "Thinks the spores of a mushroom are seeds, like a plant's.",
+  "example": {
+   "question": "A mushroom cap drops fine brown dust on paper. What is the dust?",
+   "wrong_answer": "Seeds",
+   "correct_answer": "Spores"
+  },
+  "cause": "Knows plants spread by seeds and expects the same from fungi.",
+  "reveals": "Offer \"Seeds\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a spore print on white paper and look with a hand lens: dust, not seeds with food stores.",
+  "feedback": "Fungi make spores, not seeds. Spores are tiny and have no stored food.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_MEDICINE_NOT_FUNGI": {
+  "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+  "error": "Does not know that some medicines, such as penicillin, come from fungi.",
+  "example": {
+   "question": "Where does the medicine penicillin come from?",
+   "wrong_answer": "From a plant leaf",
+   "correct_answer": "From a mould (a fungus)"
+  },
+  "cause": "Links medicines with herbs and plants only.",
+  "reveals": "Offer \"From a plant leaf\" next to the right answer and ask the question again in a new context.",
+  "help": "Tell the story of Fleming finding a mould killing germs on a dish.",
+  "feedback": "Some medicines come from fungi. Penicillin comes from a mould.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_FRIDGE_KILLS": {
+  "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+  "error": "Thinks keeping food in a fridge kills mould for ever.",
+  "example": {
+   "question": "Bread kept in a fridge for two weeks grows mould. Why?",
+   "wrong_answer": "It cannot; the fridge kills mould",
+   "correct_answer": "Cold slows mould down but does not stop it for ever"
+  },
+  "cause": "Thinks cold destroys living things.",
+  "reveals": "Offer \"It cannot; the fridge kills mould\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare bread in a warm cupboard and in a fridge over two weeks.",
+  "feedback": "Cold slows mould growth but does not kill it. Food still goes bad in time.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_SPIDER_INSECT": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
   "error": "Thinks a spider is an insect.",
@@ -454,6 +514,66 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_MILLIPEDE_INSECT": {
+  "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+  "error": "Thinks a millipede or a centipede is an insect.",
+  "example": {
+   "question": "Is a millipede an insect?",
+   "wrong_answer": "Yes, it is a small crawling animal",
+   "correct_answer": "No: it has many body parts and many legs, not three parts and six legs"
+  },
+  "cause": "Calls every small crawling animal an insect.",
+  "reveals": "Offer \"Yes, it is a small crawling animal\" next to the right answer and ask the question again in a new context.",
+  "help": "Count the legs of an ant and a millipede with a hand lens.",
+  "feedback": "Insects have six legs and three body parts. A millipede has many legs and many parts.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_SNAIL_SHELL_BONE": {
+  "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
+  "error": "Thinks a snail's shell is its skeleton inside, like a backbone.",
+  "example": {
+   "question": "Is the shell of a snail a backbone?",
+   "wrong_answer": "Yes, it is its bone",
+   "correct_answer": "No: it is a hard cover outside the soft body; a snail has no backbone"
+  },
+  "cause": "Equates \"hard part\" with \"bone\".",
+  "reveals": "Offer \"Yes, it is its bone\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at an empty snail shell: it is a hollow outside cover.",
+  "feedback": "A snail's shell is outside its soft body. It has no backbone, so it is an invertebrate.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_BEES_ONLY_HONEY": {
+  "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+  "error": "Thinks the only use of bees is honey, and does not know they pollinate crops.",
+  "example": {
+   "question": "Why do some farmers keep bees near their passion fruit?",
+   "wrong_answer": "Only to get honey",
+   "correct_answer": "Bees pollinate the flowers, so more fruit forms"
+  },
+  "cause": "Knows the product, not the service.",
+  "reveals": "Offer \"Only to get honey\" next to the right answer and ask the question again in a new context.",
+  "help": "Link back to Grade 5 pollination: no bees, fewer passion fruits.",
+  "feedback": "Bees carry pollen between flowers, so crops make more fruit. Honey is a second gift.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_JAR_NO_AIR": {
+  "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
+  "error": "Thinks a small animal can be kept in a closed jar with no air holes and no food for days.",
+  "example": {
+   "question": "A learner keeps a grasshopper in a closed jar for a week. What is wrong?",
+   "wrong_answer": "Nothing, it will be fine",
+   "correct_answer": "It needs air, food and to be put back where it was found"
+  },
+  "cause": "Does not think of small animals' needs.",
+  "reveals": "Offer \"Nothing, it will be fine\" next to the right answer and ask the question again in a new context.",
+  "help": "List what the grasshopper needs (air, food, its home) and set a time limit for study.",
+  "feedback": "Small animals need air and food. Study them for a short time, then put them back.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_LUNGS_IN": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
@@ -854,6 +974,111 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_ONLY_HEART": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+  "error": "Thinks the circulatory system is the heart alone, leaving out the blood and the blood vessels.",
+  "example": {
+   "question": "Name the parts of the circulatory system.",
+   "wrong_answer": "The heart",
+   "correct_answer": "The heart, the blood vessels and the blood"
+  },
+  "cause": "Hears \"heart\" most and forgets what it pumps and where.",
+  "reveals": "Offer \"The heart\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace a drop of blood: what pumps it (heart), what carries it (vessels), what it is (blood).",
+  "feedback": "The circulatory system has three parts: the heart, the blood vessels and the blood.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_HEART_SHAPE_LOVE": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+  "error": "Draws or describes the heart as the shape on cards (a symmetrical love shape) and places it in the middle of the belly.",
+  "example": {
+   "question": "What is the real heart like?",
+   "wrong_answer": "A pointed love shape in the belly",
+   "correct_answer": "A muscle about the size of a fist, in the chest between the lungs, slightly to the left"
+  },
+  "cause": "Takes the picture symbol for the real organ.",
+  "reveals": "Offer \"A pointed love shape in the belly\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a fist: that is about the size of your heart. Feel the beat in the chest.",
+  "feedback": "The heart is a muscle about the size of your fist, in your chest between the lungs.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_VEINS_BLUE_BLOOD": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+  "error": "Thinks the blood in veins is blue because veins look blue through the skin.",
+  "example": {
+   "question": "What colour is the blood in your veins?",
+   "wrong_answer": "Blue",
+   "correct_answer": "Dark red"
+  },
+  "cause": "Sees veins as blue under the skin.",
+  "reveals": "Offer \"Blue\" next to the right answer and ask the question again in a new context.",
+  "help": "When blood is taken from a vein at a clinic, it is dark red in the tube.",
+  "feedback": "All blood is red. Blood in veins is a darker red; it only looks blue through the skin.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_PLASMA_WATER_ONLY": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+  "error": "Thinks plasma is just water with nothing in it.",
+  "example": {
+   "question": "What does plasma carry around the body?",
+   "wrong_answer": "Nothing, it is only water",
+   "correct_answer": "Digested food, waste and carbon dioxide dissolved in it, and the blood cells"
+  },
+  "cause": "Sees a clear yellowish liquid and thinks it is plain.",
+  "reveals": "Offer \"Nothing, it is only water\" next to the right answer and ask the question again in a new context.",
+  "help": "Link to Grade 4 digestion: digested food goes into the blood; plasma carries it.",
+  "feedback": "Plasma is the liquid part of blood. It carries digested food, waste and the blood cells.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_HEART_ATTACK_ONLY_OLD": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+  "error": "Thinks a heart attack has no warning signs, or that chest pain in an adult can be ignored.",
+  "example": {
+   "question": "An adult has sudden pain in the chest and left arm and is sweating. What should be done?",
+   "wrong_answer": "Let them rest and wait",
+   "correct_answer": "Call for help at once and get them to a health facility"
+  },
+  "cause": "Has not learnt the warning signs.",
+  "reveals": "Offer \"Let them rest and wait\" next to the right answer and ask the question again in a new context.",
+  "help": "Learn the signs of a heart attack and the rule: get help fast.",
+  "feedback": "Chest pain spreading to the arm, sweating and breathlessness are warning signs. Get help at once.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_THIN_SAFE": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+  "error": "Thinks a thin person cannot get high blood pressure or heart problems.",
+  "example": {
+   "question": "Can a thin person who eats very salty food and smokes get high blood pressure?",
+   "wrong_answer": "No, only fat people get it",
+   "correct_answer": "Yes: salt, smoking and stress raise blood pressure in anyone"
+  },
+  "cause": "Links heart problems only with body size.",
+  "reveals": "Offer \"No, only fat people get it\" next to the right answer and ask the question again in a new context.",
+  "help": "List the causes: salt, smoking, little exercise, stress; size is only one of them.",
+  "feedback": "Anyone can get high blood pressure. Too much salt, smoking and little exercise raise it.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_WEEKEND_EXERCISE": {
+  "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
+  "error": "Thinks a lot of exercise once a week is as good as some exercise every day.",
+  "example": {
+   "question": "Which is better for the heart: a long run once a month, or walking or playing every day?",
+   "wrong_answer": "One long run a month",
+   "correct_answer": "Some exercise every day"
+  },
+  "cause": "Thinks the total is what counts, not the habit.",
+  "reveals": "Offer \"One long run a month\" next to the right answer and ask the question again in a new context.",
+  "help": "Plan a week: 30 to 60 minutes of play or walking each day.",
+  "feedback": "The heart stays healthy with some exercise every day, not one big effort now and then.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_MELT_DISSOLVE": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
   "error": "Confuses melting with dissolving.",
@@ -1024,6 +1249,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_SUBLIMATION_MELT": {
+  "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+  "error": "Calls a solid turning straight into a gas \"melting\".",
+  "example": {
+   "question": "Mothballs in a cupboard slowly get smaller and leave no liquid. What is this change called?",
+   "wrong_answer": "Melting",
+   "correct_answer": "Sublimation"
+  },
+  "cause": "Uses \"melting\" for any solid that disappears.",
+  "reveals": "Offer \"Melting\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: was there a liquid stage? No liquid means sublimation.",
+  "feedback": "A solid turning straight into a gas, with no liquid, is sublimation. Melting makes a liquid.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_BOILING_HOTTER": {
+  "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+  "error": "Thinks water keeps getting hotter the longer it boils.",
+  "example": {
+   "question": "Water has been boiling for ten minutes. Is it hotter than when it started to boil?",
+   "wrong_answer": "Yes, it gets hotter and hotter",
+   "correct_answer": "No: it stays at boiling point; the heat turns water into steam"
+  },
+  "cause": "Thinks more heating always means a higher temperature.",
+  "reveals": "Offer \"Yes, it gets hotter and hotter\" next to the right answer and ask the question again in a new context.",
+  "help": "The teacher measures boiling water with a thermometer every two minutes: it stays at about 100 degrees.",
+  "feedback": "Boiling water stays at the same temperature. The extra heat changes it into steam.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_PERFUME_GONE": {
+  "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+  "error": "Thinks perfume or a wet floor \"disappears\" when it dries, instead of turning into a gas in the air.",
+  "example": {
+   "question": "A wet floor dries. Where does the water go?",
+   "wrong_answer": "It disappears",
+   "correct_answer": "It evaporates into the air as water vapour"
+  },
+  "cause": "Cannot see the gas, so thinks the water is gone.",
+  "reveals": "Offer \"It disappears\" next to the right answer and ask the question again in a new context.",
+  "help": "Cover a wet patch with a clear cup: drops form inside the cup.",
+  "feedback": "Drying water does not vanish. It evaporates into the air as water vapour.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_MOSTLY_OXYGEN": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
@@ -1309,6 +1579,81 @@
    "mark": "doubtful",
    "why": "Children are told from early on that trees clean the air; a held belief that trees do not help is unlikely. Likely only a wrong guess."
   }
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_CO2_MOST": {
+  "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+  "error": "Thinks carbon dioxide is the largest part of air because it is spoken of most.",
+  "example": {
+   "question": "Which gas makes up the largest part of air?",
+   "wrong_answer": "Carbon dioxide",
+   "correct_answer": "Nitrogen (about four fifths)"
+  },
+  "cause": "Hears most about carbon dioxide and oxygen and assumes they are biggest.",
+  "reveals": "Offer \"Carbon dioxide\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the pie chart: nitrogen about 78 out of 100 parts, oxygen 21, the rest small.",
+  "feedback": "Nitrogen is most of the air. Oxygen is about one fifth. Carbon dioxide is a very small part.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_PLANTS_NEED_O2_ONLY": {
+  "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
+  "error": "Thinks plants take in only oxygen from the air, not carbon dioxide for making food.",
+  "example": {
+   "question": "Which gas from the air do plants use to make food?",
+   "wrong_answer": "Oxygen",
+   "correct_answer": "Carbon dioxide"
+  },
+  "cause": "Knows people need oxygen and assumes plants need the same.",
+  "reveals": "Offer \"Oxygen\" next to the right answer and ask the question again in a new context.",
+  "help": "Link to Grade 4: leaves make food; the raw gas for it is carbon dioxide.",
+  "feedback": "Plants use carbon dioxide from the air to make their food in the leaves.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_INDOOR_CLEAN": {
+  "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+  "error": "Thinks the air indoors is always clean, so smoke from a jiko or a paraffin lamp in a closed room is not air pollution.",
+  "example": {
+   "question": "Is smoke from a jiko inside a closed kitchen air pollution?",
+   "wrong_answer": "No, it is inside the house",
+   "correct_answer": "Yes: indoor smoke pollutes the air people breathe"
+  },
+  "cause": "Thinks pollution happens outdoors.",
+  "reveals": "Offer \"No, it is inside the house\" next to the right answer and ask the question again in a new context.",
+  "help": "Talk about stinging eyes and coughing in a smoky kitchen.",
+  "feedback": "Smoke inside the house is air pollution too. Keep windows open and cook where smoke can escape.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_SMOG_ONLY_TOWNS": {
+  "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+  "error": "Thinks air pollution cannot harm people in rural areas.",
+  "example": {
+   "question": "Can burning grass and smoky kitchens harm people in a village?",
+   "wrong_answer": "No, villages have clean air",
+   "correct_answer": "Yes: smoke causes coughs, chest illness and sore eyes anywhere"
+  },
+  "cause": "Links pollution only with towns and factories.",
+  "reveals": "Offer \"No, villages have clean air\" next to the right answer and ask the question again in a new context.",
+  "help": "List smoke sources in a village: burning grass, firewood kitchens, dusty roads.",
+  "feedback": "Smoke and dust harm people in villages as well as towns.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_MASK_FIXES": {
+  "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
+  "error": "Thinks wearing a mask is enough to stop air pollution.",
+  "example": {
+   "question": "What is the best way to reduce smoke in a village?",
+   "wrong_answer": "Everyone wears a mask",
+   "correct_answer": "Stop burning rubbish, use cleaner stoves and plant trees"
+  },
+  "cause": "Confuses protecting yourself with stopping the cause.",
+  "reveals": "Offer \"Everyone wears a mask\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort ideas into \"protects me\" and \"stops the pollution\".",
+  "feedback": "A mask protects one person. Stopping burning and using cleaner stoves reduces the pollution itself.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_COLOUR_OPAQUE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
@@ -1652,6 +1997,96 @@
    "why": "This is recall of a list, not a misconception about how rainbows work. Keep the colour-order items but do not report it as a misconception."
   }
  },
+ "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_THICKNESS_IGNORED": {
+  "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+  "error": "Thinks the same material is always the same kind, whatever its thickness: one sheet of paper and a thick book both opaque.",
+  "example": {
+   "question": "Is one thin sheet of tissue paper transparent, translucent or opaque?",
+   "wrong_answer": "Opaque, paper blocks light",
+   "correct_answer": "Translucent: some light passes through"
+  },
+  "cause": "Classifies by the material's name, not by testing.",
+  "reveals": "Offer \"Opaque, paper blocks light\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a torch behind one sheet of tissue, then behind a thick pile.",
+  "feedback": "Test the actual sheet. Thin paper lets some light through (translucent); a thick pile does not.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SHADOW_COLOUR": {
+  "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+  "error": "Thinks a red object makes a red shadow.",
+  "example": {
+   "question": "A red ball is lit by a torch. What colour is its shadow?",
+   "wrong_answer": "Red",
+   "correct_answer": "Dark (grey or black): it is where light is blocked"
+  },
+  "cause": "Thinks the shadow is a copy of the object.",
+  "reveals": "Offer \"Red\" next to the right answer and ask the question again in a new context.",
+  "help": "Shine a torch on a red and a blue ball: both shadows are dark.",
+  "feedback": "A shadow is where light is blocked, so it is dark whatever colour the object is.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_EVERY_MONTH": {
+  "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
+  "error": "Thinks a solar eclipse happens every month at new moon.",
+  "example": {
+   "question": "Why do we not see a solar eclipse every month?",
+   "wrong_answer": "We do see one every month",
+   "correct_answer": "The Moon usually passes a little above or below the line from the Sun to the Earth"
+  },
+  "cause": "Has learnt the line-up and thinks it happens each orbit.",
+  "reveals": "Offer \"We do see one every month\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold the ball (Moon) a little higher than the torch-to-globe line: no shadow on the globe.",
+  "feedback": "The Sun, Moon and Earth line up exactly only now and then, so eclipses are rare.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_NORMAL_ON_MIRROR": {
+  "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+  "error": "Draws the normal along the mirror instead of at right angles to it.",
+  "example": {
+   "question": "Where is the normal drawn at a plane mirror?",
+   "wrong_answer": "Along the mirror surface",
+   "correct_answer": "At right angles (90 degrees) to the mirror where the ray hits"
+  },
+  "cause": "Mixes up \"normal\" with the mirror line itself.",
+  "reveals": "Offer \"Along the mirror surface\" next to the right answer and ask the question again in a new context.",
+  "help": "Stand a set square on the mirror: the normal is its upright side.",
+  "feedback": "The normal stands at 90 degrees to the mirror. Angles are measured from it.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_REAL_BEHIND": {
+  "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+  "error": "Thinks the image is a real picture that could be caught on a screen behind the mirror.",
+  "example": {
+   "question": "Can you catch the image in a plane mirror on a paper held behind the mirror?",
+   "wrong_answer": "Yes, it is there behind the mirror",
+   "correct_answer": "No: the image only appears to be behind the mirror; no light goes there"
+  },
+  "cause": "Sees the image \"behind\" and expects something to be there.",
+  "reveals": "Offer \"Yes, it is there behind the mirror\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold paper behind the mirror: nothing appears.",
+  "feedback": "The image only seems to be behind the mirror. No light reaches there, so it cannot be caught on paper.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_ONLY_RAIN": {
+  "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
+  "error": "Thinks rainbows come only from rain and cannot be made with a hose spray or a glass of water.",
+  "example": {
+   "question": "Can you make a rainbow on a sunny day at school?",
+   "wrong_answer": "No, only rain makes rainbows",
+   "correct_answer": "Yes: spray water with a hose with the Sun behind you"
+  },
+  "cause": "Links the rainbow only with the word \"rain\".",
+  "reveals": "Offer \"No, only rain makes rainbows\" next to the right answer and ask the question again in a new context.",
+  "help": "Spray a fine mist with the Sun at your back and look into the spray.",
+  "feedback": "Any drops of water in sunlight can split light into colours, even from a hose.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_LADDER": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
   "error": "Calls a ladder, a wheel or a pot a lever.",
@@ -1880,6 +2315,66 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_HANDLE_ANY": {
+  "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+  "error": "Thinks any object with a handle is a lever, such as a cup or a bucket.",
+  "example": {
+   "question": "Is a bucket with a handle a lever?",
+   "wrong_answer": "Yes, it has a handle",
+   "correct_answer": "No: it does not turn about a fixed point to move a load"
+  },
+  "cause": "Links levers with handles.",
+  "reveals": "Offer \"Yes, it has a handle\" next to the right answer and ask the question again in a new context.",
+  "help": "Test: does the tool turn on a fixed point (fulcrum) to move a load?",
+  "feedback": "A lever is a rigid bar that turns on a fixed point. A handle alone does not make a lever.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_FULCRUM_ALWAYS_MIDDLE": {
+  "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+  "error": "Thinks the fulcrum is always in the middle, like a see-saw.",
+  "example": {
+   "question": "Where is the fulcrum of a wheelbarrow?",
+   "wrong_answer": "In the middle of the handles",
+   "correct_answer": "At the wheel"
+  },
+  "cause": "Has learnt levers from a see-saw.",
+  "reveals": "Offer \"In the middle of the handles\" next to the right answer and ask the question again in a new context.",
+  "help": "Lift a wheelbarrow: what does it turn on?",
+  "feedback": "The fulcrum is the point the lever turns on. In a wheelbarrow it is the wheel, at one end.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_LONGER_HARDER": {
+  "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+  "error": "Thinks a longer handle makes it harder to lift a load.",
+  "example": {
+   "question": "Is it easier to lift a stone with a short bar or a long bar?",
+   "wrong_answer": "A short bar, less to hold",
+   "correct_answer": "A long bar, with the effort far from the fulcrum"
+  },
+  "cause": "Thinks a longer bar is heavier and harder.",
+  "reveals": "Offer \"A short bar, less to hold\" next to the right answer and ask the question again in a new context.",
+  "help": "Try lifting a heavy box with a short stick and a long stick on the same stone fulcrum.",
+  "feedback": "The further the effort is from the fulcrum, the less effort is needed.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_SCISSORS_SECOND": {
+  "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
+  "error": "Puts a pair of scissors or pliers in the second class because they cut or grip.",
+  "example": {
+   "question": "In which class is a pair of scissors?",
+   "wrong_answer": "Second class",
+   "correct_answer": "First class: the fulcrum (the pivot) is in the middle"
+  },
+  "cause": "Classifies by what the tool does instead of by the middle part.",
+  "reveals": "Offer \"Second class\" next to the right answer and ask the question again in a new context.",
+  "help": "Mark F, E and L on the scissors: the pivot is between the handles and the blades.",
+  "feedback": "Scissors have the fulcrum in the middle, so they are first-class levers.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_PULLEY": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
   "error": "Calls a pulley or a see-saw a slope.",
@@ -1993,5 +2488,35 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_SCREW_NOT_SLOPE": {
+  "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+  "error": "Does not see a screw or a winding road as a slope.",
+  "example": {
+   "question": "Is a screw a kind of slope?",
+   "wrong_answer": "No, it is a nail with lines",
+   "correct_answer": "Yes: its thread is a slope wound round a rod"
+  },
+  "cause": "Does not see the slope in a curled shape.",
+  "reveals": "Offer \"No, it is a nail with lines\" next to the right answer and ask the question again in a new context.",
+  "help": "Wind a paper triangle round a pencil: the edge makes a screw thread.",
+  "feedback": "A screw thread is a slope wound round a rod, like a winding road up a hill.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_SLOPE_LESS_WORK": {
+  "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
+  "error": "Thinks a slope reduces the work done, not only the effort.",
+  "example": {
+   "question": "Does using a ramp to load a drum onto a lorry mean less work is done?",
+   "wrong_answer": "Yes, less work",
+   "correct_answer": "No: less effort is needed, but over a longer distance"
+  },
+  "cause": "Feels the push is easier and thinks the whole job is smaller.",
+  "reveals": "Offer \"Yes, less work\" next to the right answer and ask the question again in a new context.",
+  "help": "Measure: a longer ramp, less pull, more distance pushed.",
+  "feedback": "A slope lets you use less effort, but you push further. The work is not reduced.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  }
 }
