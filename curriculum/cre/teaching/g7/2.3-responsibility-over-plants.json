@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN",
+ "title": "Responsibility over Plants",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS",
+   "key_step": "The learner describes the responsibilities God gave people over plants (Genesis 1:29; 2:15: food, care, cultivation), applies them to conservation (planting trees, not burning), and discusses how responsible use of plants grows the economy (cash crops, timber, fruit, jobs).",
+   "floor": {
+    "prerequisite": "Knows people were given work in the garden.",
+    "question": "What does Genesis 2:15 ask people to do?",
+    "answer": "Work the garden and take care of it"
+   },
+   "representations": [
+    "Genesis 1:29 written large",
+    "a chart: plant, use, income",
+    "a tree nursery picture"
+   ],
+   "steps": [
+    "Read Genesis 1:29 and 2:15.",
+    "List uses of plants.",
+    "Name cash crops in the area.",
+    "Plan a planting at school."
+   ],
+   "contexts": [
+    "tea farms in Kericho",
+    "charcoal burning",
+    "a school tree nursery"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree and its uses around it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"charcoal\".",
+     "say": "What happens if we cut without planting?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say the trees run out, soil erodes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"cut one, plant two\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_WASTE",
+     "listen_for": [
+      "Nothing: there are many trees"
+     ],
+     "ask": "A family cuts trees for charcoal every month. What does stewardship ask?",
+     "repair": "Show the cost: a tree takes years to grow. Plan a \"cut one, plant two\" rule for the school."
+    },
+    {
+     "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_FOOD",
+     "listen_for": [
+      "Only to make the earth beautiful"
+     ],
+     "ask": "Why did God give plants, according to Genesis 1:29?",
+     "repair": "Read Genesis 1:29 and 2:9: plants for food and beauty."
+    },
+    {
+     "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_INCOME",
+     "listen_for": [
+      "It cannot; plants are only food"
+     ],
+     "ask": "How can responsible use of plants help the economy?",
+     "repair": "Name crops grown for sale in the area and what the money pays for."
+    },
+    {
+     "code": "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS.M_CR7_SP_BURN_BUSH",
+     "listen_for": [
+      "Yes, it is the quickest way"
+     ],
+     "ask": "A farmer burns the bush to clear land every year. Is this responsible use of plants?",
+     "repair": "List effects of burning on soil and wildlife; compare with clearing and composting."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why did God give plants, according to Genesis 1:29?",
+     "answer": "For food",
+     "shows": "purpose"
+    },
+    {
+     "question": "How can plants help the economy?",
+     "answer": "Cash crops and timber bring income and jobs",
+     "shows": "economy"
+    }
+   ]
+  }
+ ]
+}

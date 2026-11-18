@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI",
+ "title": "Selected Forms of Worship",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS",
+   "key_step": "The learner outlines teachings on praise and thanksgiving (Psalm 100; 1 Thessalonians 5:18), discusses the importance of prayer and fasting, and explains Jesus' teaching (Matthew 6:5-18: pray and fast in secret, not to be seen).",
+   "floor": {
+    "prerequisite": "Knows the Lord's Prayer.",
+    "question": "What does the Lord's Prayer say about forgiveness?",
+    "answer": "Forgive us as we forgive others"
+   },
+   "representations": [
+    "four parts of prayer on cards",
+    "Matthew 6:6 and 6:17-18 written large",
+    "Psalm 100 read aloud"
+   ],
+   "steps": [
+    "Read Psalm 100: praise and thanks.",
+    "Read Matthew 6:5-6: prayer in secret.",
+    "Read Matthew 6:16-18: fasting in secret.",
+    "Say why prayer and fasting matter."
+   ],
+   "contexts": [
+    "a school prayer day",
+    "a family thanksgiving service",
+    "a church fast before a big decision"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the four parts of prayer: praise, confession, thanksgiving, asking."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"thanksgiving\".",
+     "say": "When should we give thanks?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say in all circumstances."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Matthew 6:6 and 6:18."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_FASTING",
+     "listen_for": [
+      "Showing everyone"
+     ],
+     "ask": "How should one fast, as Jesus taught?",
+     "repair": "Read Matthew 6:16-18: wash your face; fast for your Father who sees in secret."
+    },
+    {
+     "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_PRAYER",
+     "listen_for": [
+      "Only asking for things"
+     ],
+     "ask": "What is prayer?",
+     "repair": "List four parts of prayer: praise, confession, thanksgiving, asking."
+    },
+    {
+     "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_THANKS",
+     "listen_for": [
+      "Only when things go well"
+     ],
+     "ask": "When should Christians give thanks, according to 1 Thessalonians 5:18?",
+     "repair": "Read Psalm 100:4 and 1 Thessalonians 5:18: thank God in all circumstances."
+    },
+    {
+     "code": "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS.M_CR7_WF_FAST_DIET",
+     "listen_for": [
+      "Skipping meals to lose weight"
+     ],
+     "ask": "What is Christian fasting?",
+     "repair": "Read Matthew 6:16-18 and Acts 13:2-3: fasting with prayer and worship."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did Jesus teach people to fast?",
+     "answer": "Quietly, without showing off",
+     "shows": "fasting"
+    },
+    {
+     "question": "What is prayer?",
+     "answer": "Talking with God: praise, confession, thanks and asking",
+     "shows": "prayer"
+    }
+   ]
+  }
+ ]
+}

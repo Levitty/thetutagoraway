@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION",
+ "title": "Accounts of Creation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO",
+   "key_step": "The learner narrates the two creation accounts (Genesis 1:1-2:4a: six days by God's word, people last, in God's image, rest on the seventh day; Genesis 2:4b-25: man from dust, the garden, animals named, woman from the rib), compares them, and identifies attributes of God (creator, all-powerful, orderly, good, caring).",
+   "floor": {
+    "prerequisite": "Knows God rested on the seventh day.",
+    "question": "Why did God rest on the seventh day?",
+    "answer": "He had finished his work"
+   },
+   "representations": [
+    "two columns: Genesis 1 and Genesis 2",
+    "six day boxes",
+    "attribute cards"
+   ],
+   "steps": [
+    "Read Genesis 1 day by day.",
+    "Read Genesis 2:4-25.",
+    "List similarities and differences.",
+    "Name attributes of God the accounts show."
+   ],
+   "contexts": [
+    "a sunrise over the Rift Valley",
+    "naming animals at a game park",
+    "a family garden"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: Genesis 1 and Genesis 2."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the detail \"man formed from dust\".",
+     "say": "Which account is this from?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Genesis 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the similarities and differences."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_SEVEN",
+     "listen_for": [
+      "Seven days of work"
+     ],
+     "ask": "In how many days did God create in Genesis 1, before resting?",
+     "repair": "Number Genesis 1 day by day on the board; stop at day six; write \"rest\" on day seven."
+    },
+    {
+     "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_DUST",
+     "listen_for": [
+      "The first account in Genesis 1"
+     ],
+     "ask": "In which account is man formed from the dust?",
+     "repair": "Make two columns, Genesis 1 and Genesis 2, and write where each detail comes from."
+    },
+    {
+     "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_ATTRIBUTE",
+     "listen_for": [
+      "God forgives sins"
+     ],
+     "ask": "Which attribute of God is shown in Genesis 1 by \"God said... and it was so\"?",
+     "repair": "For each attribute, ask for the verse in Genesis 1-2 that shows it."
+    },
+    {
+     "code": "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO.M_CR7_CT_ORDER_MAN",
+     "listen_for": [
+      "On the first day"
+     ],
+     "ask": "In Genesis 1, on which day were human beings made?",
+     "repair": "Write Genesis 1 in six boxes and Genesis 2 as a separate story; note the difference as one of the points to discuss."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In Genesis 1, on which day were people made?",
+     "answer": "The sixth day",
+     "shows": "order"
+    },
+    {
+     "question": "Name one attribute of God shown in creation.",
+     "answer": "Creator (all-powerful, orderly, good)",
+     "shows": "attribute"
+    }
+   ]
+  }
+ ]
+}

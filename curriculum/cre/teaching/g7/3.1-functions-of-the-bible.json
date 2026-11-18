@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE",
+ "title": "Functions of the Bible",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS",
+   "key_step": "The learner explains the importance of the Bible today (guidance, comfort, teaching, law, worship), how it promotes holistic growth (spiritual, mental, physical, social), and how God's word inspires Christian services (hospitals, schools, charity).",
+   "floor": {
+    "prerequisite": "Knows the Bible is God-breathed.",
+    "question": "What is Scripture useful for, in 2 Timothy 3:16?",
+    "answer": "Teaching, rebuking, correcting and training"
+   },
+   "representations": [
+    "a person drawn in four parts",
+    "a list of Christian services",
+    "Matthew 25:35-36 written large"
+   ],
+   "steps": [
+    "List functions of the Bible.",
+    "Show holistic growth.",
+    "Name services it inspires.",
+    "Find a verse behind each."
+   ],
+   "contexts": [
+    "a mission hospital",
+    "a church-sponsored school",
+    "a prison ministry"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a person with four labelled parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"social\".",
+     "say": "How does the Bible help with relationships?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to give a verse or teaching."
+    },
+    {
+     "beat": "reveal",
+     "do": "List services the Bible inspires."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_STORY_ONLY",
+     "listen_for": [
+      "Only tells old stories"
+     ],
+     "ask": "What does the Bible do for people?",
+     "repair": "Show other parts: law, songs, wisdom, letters, prophecy. Ask what each does today."
+    },
+    {
+     "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_CHURCH_ONLY",
+     "listen_for": [
+      "Only church leaders"
+     ],
+     "ask": "Who may read the Bible?",
+     "repair": "Show family devotions and school assemblies: everyone may read."
+    },
+    {
+     "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_SERVICE",
+     "listen_for": [
+      "Only to make money"
+     ],
+     "ask": "Why do many churches run hospitals and children's homes?",
+     "repair": "Name services inspired by the Bible: hospitals, schools, children's homes, prison visits (Matthew 25:35-36)."
+    },
+    {
+     "code": "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS.M_CR7_BF_SPIRIT_ONLY",
+     "listen_for": [
+      "It helps only the soul"
+     ],
+     "ask": "How does the Bible promote holistic growth?",
+     "repair": "Draw a person with four parts (spiritual, mental, physical, social) and find a verse for each."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who may read the Bible?",
+     "answer": "Everyone",
+     "shows": "access"
+    },
+    {
+     "question": "Name a service inspired by the Bible.",
+     "answer": "Hospitals (schools, children's homes)",
+     "shows": "service"
+    }
+   ]
+  }
+ ]
+}

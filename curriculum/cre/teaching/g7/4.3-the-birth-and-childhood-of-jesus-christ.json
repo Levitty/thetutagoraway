@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_",
+ "title": "The Birth and Childhood of Jesus Christ",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dedication practices differ between churches (dedication, infant baptism). Ask only what Luke 2:22-38 says; how churches do it today is shared, not marked (FAITH).",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH",
+   "key_step": "The learner elaborates the annunciation and birth of Jesus (Luke 1:26-38; 2:1-7), describes the dedication in the temple (Luke 2:22-38: offering of two doves, Simeon and Anna), and relates it to similar practices in churches today (dedication or infant baptism, as each church does it).",
+   "floor": {
+    "prerequisite": "Knows the prophecies about the Messiah.",
+    "question": "Which town did Micah 5:2 name?",
+    "answer": "Bethlehem"
+   },
+   "representations": [
+    "a map: Nazareth, Bethlehem, Jerusalem",
+    "Luke 2:22-38 in a sequence strip",
+    "pictures of Simeon and Anna"
+   ],
+   "steps": [
+    "Gabriel comes to Mary.",
+    "Jesus is born in Bethlehem.",
+    "He is dedicated in the temple.",
+    "Simeon and Anna praise God."
+   ],
+   "contexts": [
+    "a baby dedication at church",
+    "Christmas celebrations",
+    "thanking God for a new baby"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a map with Nazareth, Bethlehem and Jerusalem."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Jerusalem.",
+     "say": "What happened here when Jesus was a baby?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say he was dedicated in the temple."
+    },
+    {
+     "beat": "reveal",
+     "do": "Add Simeon and Anna to the picture."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_PLACE",
+     "listen_for": [
+      "Nazareth"
+     ],
+     "ask": "Where was Jesus born?",
+     "repair": "Read Luke 2:4-7: from Nazareth to Bethlehem for the census."
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_ANGEL",
+     "listen_for": [
+      "Michael"
+     ],
+     "ask": "Which angel told Mary she would bear Jesus?",
+     "repair": "Read Luke 1:26: Gabriel. He also went to Zechariah."
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_DEDICATION",
+     "listen_for": [
+      "In the River Jordan"
+     ],
+     "ask": "Where was baby Jesus dedicated?",
+     "repair": "Read Luke 2:22-24: in the temple at Jerusalem, with an offering of two doves. Jesus' baptism came at about thirty."
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH.M_CR7_JBR_SIMEON",
+     "listen_for": [
+      "The high priest Caiaphas"
+     ],
+     "ask": "Who took baby Jesus in his arms in the temple and praised God (Luke 2:25-28)?",
+     "repair": "Read Luke 2:25-38 and draw Simeon and Anna with the baby."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was Jesus born?",
+     "answer": "Bethlehem",
+     "shows": "place"
+    },
+    {
+     "question": "Where was Jesus dedicated?",
+     "answer": "In the temple at Jerusalem",
+     "shows": "dedication"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE",
+   "key_step": "The learner narrates Luke 2:41-52: at twelve Jesus goes to Jerusalem for the Passover, stays behind, is found after three days among the teachers listening and asking questions, says he must be in his Father's house, goes home and obeys his parents; values: obedience, love for God's word, wisdom.",
+   "floor": {
+    "prerequisite": "Knows Jesus was dedicated in the temple.",
+    "question": "Who praised God holding baby Jesus?",
+    "answer": "Simeon"
+   },
+   "representations": [
+    "a road from Jerusalem to Nazareth drawn",
+    "Luke 2:49 and 2:51 on cards",
+    "a values list"
+   ],
+   "steps": [
+    "Passover in Jerusalem at twelve.",
+    "Jesus stays behind.",
+    "Found after three days with the teachers.",
+    "Goes home and obeys his parents."
+   ],
+   "contexts": [
+    "a young person asking questions in Bible study",
+    "obeying parents",
+    "a family trip to the city"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the temple with teachers sitting and a boy among them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boy.",
+     "say": "What was Jesus doing with the teachers?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say listening and asking questions."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the values from the story."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_AGE",
+     "listen_for": [
+      "Six"
+     ],
+     "ask": "How old was Jesus when He stayed in the Temple?",
+     "repair": "Read Luke 2:42: twelve years old, going up for the Passover."
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_DAYS",
+     "listen_for": [
+      "One day"
+     ],
+     "ask": "After how many days did His parents find Him?",
+     "repair": "Read 2:44-46: a day's journey before they noticed, then three days searching."
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_HOME",
+     "listen_for": [
+      "Stayed in the Temple"
+     ],
+     "ask": "What did Jesus do after being found?",
+     "repair": "Read 2:51: he went down with them to Nazareth and was obedient to them."
+    },
+    {
+     "code": "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE.M_CR7_JT_TEACHING",
+     "listen_for": [
+      "Preaching a sermon to the crowd"
+     ],
+     "ask": "What was Jesus doing in the temple courts (Luke 2:46)?",
+     "repair": "Read Luke 2:46-47 and underline \"listening\" and \"asking questions\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How old was Jesus when he stayed in the temple?",
+     "answer": "Twelve",
+     "shows": "age"
+    },
+    {
+     "question": "What did Jesus do after being found?",
+     "answer": "Went home and obeyed his parents",
+     "shows": "obedience"
+    }
+   ]
+  }
+ ]
+}

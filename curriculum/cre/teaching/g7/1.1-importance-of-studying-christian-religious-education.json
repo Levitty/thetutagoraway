@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C",
+ "title": "Importance of Studying Christian Religious Education",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE",
+   "key_step": "The learner analyses why CRE is studied (to know God, grow in sound moral and religious values, live responsibly, respect others), how it promotes values, and compiles five values for responsible living (honesty, respect, responsibility, love, integrity).",
+   "floor": {
+    "prerequisite": "Knows the values in the Ten Commandments.",
+    "question": "Which value does \"do not steal\" teach?",
+    "answer": "Honesty"
+   },
+   "representations": [
+    "a web: why we study CRE",
+    "value cards with an action each",
+    "a reflection journal page"
+   ],
+   "steps": [
+    "Say what CRE is.",
+    "List reasons for studying it.",
+    "Compile five values.",
+    "Say how each shows at home and school."
+   ],
+   "contexts": [
+    "a learner returning extra change",
+    "respecting a teacher's instruction",
+    "helping a new learner settle"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a web with \"CRE\" in the middle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty arm of the web.",
+     "say": "Why do we study CRE?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to give a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "Compile five values on the board."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE.M_CR7_CV_MARKS",
+     "listen_for": [
+      "Only to pass exams"
+     ],
+     "ask": "Why do we learn CRE?",
+     "repair": "Ask learners to write how one CRE lesson changed what they did that week."
+    },
+    {
+     "code": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE.M_CR7_CV_CHURCH_ONLY",
+     "listen_for": [
+      "Only in church"
+     ],
+     "ask": "Where should we show the values learnt in CRE?",
+     "repair": "List places values are needed: home, school, the matatu, online. Match a value to each."
+    },
+    {
+     "code": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE.M_CR7_CV_VALUE_MIX",
+     "listen_for": [
+      "Getting your own way at any cost"
+     ],
+     "ask": "Which is a value learnt in CRE?",
+     "repair": "Sort cards into values and vices; give each value an action that shows it."
+    },
+    {
+     "code": "CRES.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.CRE_VALUE.M_CR7_CV_RULES_ONLY",
+     "listen_for": [
+      "Learning rules so as to avoid punishment"
+     ],
+     "ask": "What is Christian Religious Education mainly about?",
+     "repair": "Ask what each lesson taught about God, then what it taught about living. Both together are CRE."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one reason for studying CRE.",
+     "answer": "To grow in good values (to know God)",
+     "shows": "importance"
+    },
+    {
+     "question": "Compile five values for responsible living.",
+     "answer": "Honesty, respect, responsibility, love, integrity",
+     "shows": "values"
+    }
+   ]
+  }
+ ]
+}

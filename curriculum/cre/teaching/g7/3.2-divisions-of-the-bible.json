@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE",
+ "title": "Divisions of the Bible",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS",
+   "key_step": "The learner identifies the two divisions of the Bible (Old Testament, before Jesus; New Testament, from Jesus) and categorises books into their groups (Law, History, Poetry and Wisdom, Prophets; Gospels, Acts, Letters, Revelation).",
+   "floor": {
+    "prerequisite": "Can sort books into the two Testaments.",
+    "question": "Is Acts in the Old or New Testament?",
+    "answer": "New Testament"
+   },
+   "representations": [
+    "a library drawn with labelled shelves",
+    "book cards",
+    "the contents page"
+   ],
+   "steps": [
+    "Name the two divisions.",
+    "Name the groups in each.",
+    "Place books on shelves.",
+    "Check with the contents page."
+   ],
+   "contexts": [
+    "finding a reading quickly in church",
+    "a Bible quiz",
+    "a family devotion plan"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two bookcases: Old Testament and New Testament, with labelled shelves."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"Romans\".",
+     "say": "Which shelf does Romans go on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say New Testament letters."
+    },
+    {
+     "beat": "reveal",
+     "do": "Place the other cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_NUMBER",
+     "listen_for": [
+      "Three"
+     ],
+     "ask": "How many divisions has the Bible?",
+     "repair": "Name the two divisions; note that some Bibles add the deuterocanonical books, which the learner's church will explain."
+    },
+    {
+     "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_SORT_OT",
+     "listen_for": [
+      "The New Testament"
+     ],
+     "ask": "In which Testament is Genesis?",
+     "repair": "Remember: Old Testament before Jesus, New Testament from Jesus. Genesis is the start of the Old."
+    },
+    {
+     "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_SORT_NT",
+     "listen_for": [
+      "The Old Testament"
+     ],
+     "ask": "In which Testament is Matthew?",
+     "repair": "Matthew opens the New Testament with Jesus' family line. Open the Bible to show it."
+    },
+    {
+     "code": "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS.M_CR7_BD_GROUPS",
+     "listen_for": [
+      "The Prophets"
+     ],
+     "ask": "In which group of books is Psalms?",
+     "repair": "Draw a library: Law, History, Poetry and Wisdom, Prophets; Gospels, Acts, Letters, Revelation. Place books on shelves."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many divisions has the Bible?",
+     "answer": "Two: the Old and New Testament",
+     "shows": "divisions"
+    },
+    {
+     "question": "In which group of books is Psalms?",
+     "answer": "Poetry and Wisdom",
+     "shows": "groups"
+    }
+   ]
+  }
+ ]
+}

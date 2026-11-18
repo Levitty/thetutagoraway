@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL",
+ "title": "Leadership in Israel",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED",
+   "key_step": "The learner describes how God prepared Moses (saved as a baby, raised in Pharaoh's palace, flight to Midian, shepherd for Jethro, call at the burning bush, Aaron as spokesman) and his roles in the Exodus (spokesman before Pharaoh, leader through the Red Sea, receiver of the law, intercessor, judge).",
+   "floor": {
+    "prerequisite": "Knows the call of Moses.",
+    "question": "What did God send Moses to do?",
+    "answer": "Bring Israel out of Egypt"
+   },
+   "representations": [
+    "Moses' life in three parts drawn",
+    "Exodus 3:10 and 4:14-16 on cards",
+    "a roles list"
+   ],
+   "steps": [
+    "Saved as a baby.",
+    "Raised in the palace.",
+    "Shepherd in Midian.",
+    "Called and sent; roles in the Exodus."
+   ],
+   "contexts": [
+    "a youth leader trained over years",
+    "a prefect who learns by serving",
+    "leaders who listen to God"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a time line: palace, Midian, burning bush, Egypt, Red Sea, Sinai."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Midian.",
+     "say": "What did Moses do here, and how did it prepare him?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say shepherd, learning care and patience."
+    },
+    {
+     "beat": "reveal",
+     "do": "List his roles in the Exodus."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_PALACE",
+     "listen_for": [
+      "In a village of Israel"
+     ],
+     "ask": "Where did Moses grow up?",
+     "repair": "Read Exodus 2:10: he became the son of Pharaoh's daughter. God prepared him in the palace."
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_BUSH",
+     "listen_for": [
+      "At the Red Sea"
+     ],
+     "ask": "Where did God call Moses?",
+     "repair": "Order the events: palace, flight to Midian, the burning bush (call), back to Egypt, the Red Sea."
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_AARON",
+     "listen_for": [
+      "Joshua"
+     ],
+     "ask": "Who helped Moses speak to Pharaoh?",
+     "repair": "Read Exodus 4:14-16: Aaron to speak for Moses. Joshua led the fighting men later."
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED.M_CR7_MP_MIDIAN",
+     "listen_for": [
+      "He ruled as a prince"
+     ],
+     "ask": "What did Moses do in Midian before God called him (Exodus 3:1)?",
+     "repair": "Draw Moses' life in three parts: palace, shepherd in Midian, leader. Ask what a shepherd learns."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where did Moses grow up?",
+     "answer": "In Pharaoh's palace",
+     "shows": "preparation"
+    },
+    {
+     "question": "Who spoke for Moses before Pharaoh?",
+     "answer": "Aaron",
+     "shows": "helper"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES",
+   "key_step": "The learner outlines leadership qualities to emulate from Moses (humility, obedience to God, patience, courage, honesty, sharing responsibility, prayer for the people) and how to use them in school and church.",
+   "floor": {
+    "prerequisite": "Knows how God prepared Moses.",
+    "question": "What did Moses do in Midian?",
+    "answer": "Looked after Jethro's flock"
+   },
+   "representations": [
+    "quality cards with a verse each",
+    "Exodus 18:21 written large",
+    "situation cards for prefects"
+   ],
+   "steps": [
+    "Name a quality.",
+    "Find where Moses showed it.",
+    "Say how a learner leader shows it.",
+    "Choose one to practise."
+   ],
+   "contexts": [
+    "class prefect elections",
+    "a youth group leader",
+    "a team captain"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Exodus 18:21."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"trustworthy\".",
+     "say": "Which qualities does this verse ask of leaders?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to name them."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match each quality with an event in Moses' life."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_PRIDE",
+     "listen_for": [
+      "Pride"
+     ],
+     "ask": "Which quality did Moses show?",
+     "repair": "Read Numbers 12:3: Moses was very humble. List his qualities from the story."
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_LEADER",
+     "listen_for": [
+      "Clever enough to bend the truth"
+     ],
+     "ask": "Exodus 18:21 says leaders should be...",
+     "repair": "Compare Moses' honesty and fairness (Exodus 18:21: trustworthy men who hate dishonest gain) with leaders who cheat."
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_FEAR",
+     "listen_for": [
+      "Nobody helped him"
+     ],
+     "ask": "Who helped Moses lead?",
+     "repair": "Read Exodus 18:17-24: Jethro advised Moses to share the work."
+    },
+    {
+     "code": "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES.M_CR7_MQ_NEVER_AFRAID",
+     "listen_for": [
+      "Gladly and without fear"
+     ],
+     "ask": "How did Moses first answer God's call (Exodus 4:10-13)?",
+     "repair": "Read Exodus 4:10-13. God used Moses even with his fears: obedience grows."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which quality did Moses show, according to Numbers 12:3?",
+     "answer": "Humility",
+     "shows": "quality"
+    },
+    {
+     "question": "Did Moses lead alone?",
+     "answer": "No: Aaron, Jethro's advice and judges helped",
+     "shows": "sharing"
+    }
+   ]
+  }
+ ]
+}

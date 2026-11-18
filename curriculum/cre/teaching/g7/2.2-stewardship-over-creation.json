@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO",
+ "title": "Stewardship over Creation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS",
+   "key_step": "The learner explains the responsibilities God gave people over animals, fish and birds (Genesis 1:26-28; 2:19-20: rule as caretakers, name them) and discusses ways to protect them (no cruelty, no poaching, clean rivers, safe nests, feeding and treating livestock).",
+   "floor": {
+    "prerequisite": "Knows the work God gave people in Genesis 2:15.",
+    "question": "What did God tell Adam to do in the garden?",
+    "answer": "Work it and take care of it"
+   },
+   "representations": [
+    "Genesis 1:28 and Psalm 24:1 written large",
+    "a chart: harm and caring choice",
+    "pictures of livestock, fish and wildlife"
+   ],
+   "steps": [
+    "Read Genesis 1:28 and 2:19-20.",
+    "Rule means care.",
+    "List harms to animals.",
+    "Give a caring choice for each."
+   ],
+   "contexts": [
+    "herding cattle in Kajiado",
+    "fishing on Lake Victoria",
+    "a school pet rabbit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Psalm 24:1: \"The earth is the Lord's\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the picture of a fish in a polluted river.",
+     "say": "What does good stewardship ask here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say keep the river clean."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the harm and caring-choice chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_RULE_HARM",
+     "listen_for": [
+      "People may treat animals any way they like"
+     ],
+     "ask": "What does \"rule over the fish, the birds and every living creature\" mean?",
+     "repair": "Read Genesis 1:28 with 2:15: rule as God's caretaker who will answer to him."
+    },
+    {
+     "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_PROTECT",
+     "listen_for": [
+      "Yes, there are many birds"
+     ],
+     "ask": "Boys kill birds with a catapult for fun. Is this good stewardship?",
+     "repair": "List daily acts that harm animals and the caring choice for each."
+    },
+    {
+     "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_NOT_MINE",
+     "listen_for": [
+      "To people to use as they wish"
+     ],
+     "ask": "To whom does creation belong?",
+     "repair": "Read Psalm 24:1: the earth is the Lord's. We care for what is his."
+    },
+    {
+     "code": "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS.M_CR7_SA_POACH_OK",
+     "listen_for": [
+      "It is fine because he is poor"
+     ],
+     "ask": "A man kills elephants for their tusks to feed his family. What does stewardship teach?",
+     "repair": "Discuss honest work and the Kenya Wildlife Service; God's care for creatures (Genesis 1:21-22)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does \"rule over the animals\" mean?",
+     "answer": "Care for them as God's caretakers",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name a way to protect fish.",
+     "answer": "Keep rivers and lakes clean (do not overfish)",
+     "shows": "protection"
+    }
+   ]
+  }
+ ]
+}

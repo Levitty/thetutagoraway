@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.THE_BI.BIBLE_TRANSLATION",
+ "title": "Bible Translation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION",
+   "key_step": "The learner identifies versions used today (such as the Good News Bible, New International Version, King James, Biblia Habari Njema), discusses why the Bible was translated, describes translation from Hebrew, Aramaic and Greek into local languages, and examines its social and economic effects (literacy, written languages, schools, printing jobs).",
+   "floor": {
+    "prerequisite": "Knows why the Bible is translated into local languages.",
+    "question": "Name an advantage of a Bible in your own language.",
+    "answer": "You understand it better"
+   },
+   "representations": [
+    "a chain: Hebrew and Greek, English, Kiswahili, local language",
+    "two versions of one verse",
+    "an effects chart"
+   ],
+   "steps": [
+    "Name versions.",
+    "Name the original languages.",
+    "Describe the chain of translation.",
+    "List social and economic effects."
+   ],
+   "contexts": [
+    "the Bible Society of Kenya",
+    "a church using a Kikuyu Bible",
+    "early mission schools"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chain from Hebrew and Greek to a Kenyan language."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first link.",
+     "say": "In which languages was the Bible first written?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say Hebrew, Aramaic and Greek."
+    },
+    {
+     "beat": "reveal",
+     "do": "List effects of translation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_LANGUAGE",
+     "listen_for": [
+      "Latin"
+     ],
+     "ask": "In which language was most of the New Testament first written?",
+     "repair": "Write the three original languages: Hebrew (most of the Old Testament), Aramaic (parts), Greek (New Testament)."
+    },
+    {
+     "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_WHY",
+     "listen_for": [
+      "To make the church leaders important"
+     ],
+     "ask": "Why is the Bible translated into Kenyan languages?",
+     "repair": "Ask: who can read Greek? Translation is so everyone can read in their own language."
+    },
+    {
+     "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_EFFECT",
+     "listen_for": [
+      "None outside church"
+     ],
+     "ask": "Which is a social effect of translating the Bible into local languages?",
+     "repair": "List effects: literacy, schools, written local languages, preserved culture, jobs in printing."
+    },
+    {
+     "code": "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION.M_CR7_BT_VERSION_DIFFERENT_BIBLE",
+     "listen_for": [
+      "A different Bible with a different message"
+     ],
+     "ask": "What is a Bible version?",
+     "repair": "Read John 3:16 in two English versions: same meaning, different words."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which language was most of the New Testament first written?",
+     "answer": "Greek",
+     "shows": "language"
+    },
+    {
+     "question": "Name a social effect of translation.",
+     "answer": "Literacy (local languages written down)",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

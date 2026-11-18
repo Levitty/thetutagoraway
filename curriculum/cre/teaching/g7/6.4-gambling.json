@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G7.CHRIST.GAMBLING",
+ "title": "Gambling",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Betting is common around many learners (phones, football). Avoid naming real betting companies. A learner whose family is affected is never singled out.",
+ "skills": [
+  {
+   "skill": "CRES.G7.CHRIST.GAMBLING.GAMBLING",
+   "key_step": "The learner identifies types of gambling in Kenya (sports betting, lotteries, casinos, card games for money), discusses causes (wish for quick money, peer pressure, adverts, idleness, poverty) and examines effects on individuals and families (debt, theft, quarrels, school drop-out, addiction).",
+   "floor": {
+    "prerequisite": "Knows good and poor uses of leisure.",
+    "question": "Which is a good use of free time: gambling or reading?",
+    "answer": "Reading"
+   },
+   "representations": [
+    "a chart: type, cause, effect",
+    "1 Corinthians 6:12 written large",
+    "a simple \"most players lose\" diagram"
+   ],
+   "steps": [
+    "List types.",
+    "List causes.",
+    "Examine effects on self and family.",
+    "Read 1 Corinthians 6:12."
+   ],
+   "contexts": [
+    "betting adverts during football",
+    "a youth borrowing to bet",
+    "a family without food money after betting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three columns: type, cause, effect."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"sports betting on a phone\".",
+     "say": "Name a cause and an effect."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Corinthians 6:12 at the bottom."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_TYPE",
+     "listen_for": [
+      "Playing cards for money with friends is just a game"
+     ],
+     "ask": "Which of these is gambling?",
+     "repair": "List types in Kenya: sports betting on phones, lotteries, casinos, card games for money, pool for money."
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_EFFECT",
+     "listen_for": [
+      "Savings grow"
+     ],
+     "ask": "Which is an effect of gambling?",
+     "repair": "Show the maths: most players lose. List effects on the gambler and family."
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_WEALTH",
+     "listen_for": [
+      "Working hard"
+     ],
+     "ask": "What does 1 Timothy 6:10 warn about?",
+     "repair": "Read 1 Timothy 6:10 in full and underline \"the love of\"."
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.GAMBLING.M_CR7_GM_ONE_BET",
+     "listen_for": [
+      "None: one bet cannot harm"
+     ],
+     "ask": "Kip places one small bet with his pocket money and wins. What is the danger?",
+     "repair": "Discuss how habits begin; read 1 Corinthians 6:12: \"I will not be mastered by anything\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is gambling: farming or betting on a game?",
+     "answer": "Betting on a game",
+     "shows": "type"
+    },
+    {
+     "question": "Name an effect of gambling on a family.",
+     "answer": "Debt and quarrels",
+     "shows": "effect"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES",
+   "key_step": "The learner outlines the scriptures on money and true riches: love of money is the danger (1 Timothy 6:10); honest money grows little by little (Proverbs 13:11); haste to be rich brings trouble (Proverbs 28:20-22); work honestly and share (Ephesians 4:28); be content (Hebrews 13:5); store treasures in heaven by good deeds (Matthew 6:19-21; 1 Timothy 6:17-19).",
+   "floor": {
+    "prerequisite": "Knows the effects of gambling.",
+    "question": "Name one effect of gambling on a family.",
+    "answer": "Debt (quarrels, hunger)"
+   },
+   "representations": [
+    "verse cards with a key phrase each",
+    "two columns: earthly riches, true riches",
+    "a savings chart: little by little against one bet"
+   ],
+   "steps": [
+    "Read 1 Timothy 6:10 and Proverbs 13:11.",
+    "Read Ephesians 4:28 and Hebrews 13:5.",
+    "Read Matthew 6:19-21 and 1 Timothy 6:17-19.",
+    "Sort earthly and true riches."
+   ],
+   "contexts": [
+    "a betting advert on a phone",
+    "a chama saving weekly",
+    "a youth who wins once and loses more"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: earthly riches and true riches."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"generous to the needy\".",
+     "say": "Which column, and which verse says so?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to say true riches, 1 Timothy 6:18."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in both columns from the verses."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_MONEY_EVIL",
+     "listen_for": [
+      "Money"
+     ],
+     "ask": "What does 1 Timothy 6:10 say is a root of all kinds of evil?",
+     "repair": "Read the whole verse and underline \"the love of\". Money can be used well; loving it is the danger."
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_QUICK_RICH",
+     "listen_for": [
+      "It is too slow and wasted effort"
+     ],
+     "ask": "What does Proverbs 13:11 say about money gathered little by little?",
+     "repair": "Compare two savers on a chart: little by little each week against one big bet. Read Proverbs 28:20."
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_TREASURE_BANK",
+     "listen_for": [
+      "Money kept safe in a bank"
+     ],
+     "ask": "What are treasures in heaven, in Matthew 6:19-21?",
+     "repair": "Read 1 Timothy 6:18 beside Matthew 6:20: be rich in good deeds, generous and willing to share."
+    },
+    {
+     "code": "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES.M_CR7_MR_THIEF_KEEP",
+     "listen_for": [
+      "Only stop stealing"
+     ],
+     "ask": "According to Ephesians 4:28, what should a former thief do?",
+     "repair": "Read Ephesians 4:28 in three parts and write them as three steps."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does 1 Timothy 6:10 warn against?",
+     "answer": "The love of money",
+     "shows": "verse"
+    },
+    {
+     "question": "What are treasures in heaven?",
+     "answer": "Good deeds and a life given to God",
+     "shows": "true riches"
+    }
+   ]
+  }
+ ]
+}

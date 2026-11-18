@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES",
+ "title": "Use of Natural Resources",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE",
+   "key_step": "The learner explains uses and misuses of natural resources (water, soil, forests, minerals, wildlife), explores effects of misuse (erosion, drought, pollution, disease, loss of wildlife), and discusses biblical teaching on good use (Genesis 1:28; 2:15; Psalm 24:1; Leviticus 25:23-24 rest for the land).",
+   "floor": {
+    "prerequisite": "Knows the responsibilities over plants.",
+    "question": "What should we do when we cut a tree?",
+    "answer": "Plant another"
+   },
+   "representations": [
+    "a chart: resource, use, misuse, effect",
+    "a picture of a bare hillside",
+    "Psalm 24:1 written large"
+   ],
+   "steps": [
+    "Name resources.",
+    "Give a use and a misuse.",
+    "Give the effect of the misuse.",
+    "Say what the Bible teaches."
+   ],
+   "contexts": [
+    "the Mau forest",
+    "sand harvesting in a river bed",
+    "a borehole shared by a village"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a chart with four columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the row \"water\".",
+     "say": "Name one misuse of water and its effect."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the learner to answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the other rows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_MISUSE",
+     "listen_for": [
+      "Good use: the river carries it away"
+     ],
+     "ask": "A factory pours waste into a river. What is this?",
+     "repair": "Follow the waste: river, fish, people downstream who drink it."
+    },
+    {
+     "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_EFFECT",
+     "listen_for": [
+      "More rain forever"
+     ],
+     "ask": "Which is an effect of cutting trees without replanting?",
+     "repair": "Show a picture of a bare hillside after rain: gullies, mud in the river."
+    },
+    {
+     "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_GOOD",
+     "listen_for": [
+      "Sweeping it bare so it looks tidy"
+     ],
+     "ask": "Which is good use of soil?",
+     "repair": "Show soil cover (mulch, crops) and explain it holds the soil in rain."
+    },
+    {
+     "code": "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE.M_CR7_RU_ENDLESS",
+     "listen_for": [
+      "No, God made them endless"
+     ],
+     "ask": "Can natural resources such as water and forests run out?",
+     "repair": "Show a dried river or a cleared forest in Kenya; read Genesis 2:15 as a call to care."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an effect of cutting trees without replanting.",
+     "answer": "Soil erosion (drought)",
+     "shows": "effect"
+    },
+    {
+     "question": "Which is good use of soil?",
+     "answer": "Keeping it covered with crops or mulch",
+     "shows": "use"
+    }
+   ]
+  }
+ ]
+}
