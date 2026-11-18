@@ -7,7 +7,7 @@
    "wrong_answer": "Feeling angry today",
    "correct_answer": "Being patient"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "People say \"he is angry\" both for a moment and for a habit, so the child does not separate the two.",
   "reveals": "Offer \"Feeling angry today\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask: is it how you usually are, or how you are right now?",
   "feedback": "A trait is how a person usually is (patient). A feeling comes and goes (angry today).",
@@ -22,7 +22,7 @@
    "wrong_answer": "No, traits never change",
    "correct_answer": "Yes, with effort and good habits"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Adults often say \"that is just how she is\", so traits sound permanent.",
   "reveals": "Offer \"No, traits never change\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask the child about a habit they have changed.",
   "feedback": "Traits can grow and change with effort, good values and practice.",
@@ -37,11 +37,26 @@
    "wrong_answer": "They do not affect traits",
    "correct_answer": "They guide how a person acts and so shape traits"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Values are taught as rules to follow, not as what slowly shapes a person.",
   "reveals": "Offer \"They do not affect traits\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what an honest value does to what a person does.",
   "feedback": "Values guide actions, and repeated actions shape traits.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_LOOKS": {
+  "skill": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY",
+  "error": "Judges a person's personality traits from how they look or dress.",
+  "example": {
+   "question": "A learner wears old shoes. What can you tell about his personality?",
+   "wrong_answer": "He is lazy",
+   "correct_answer": "Nothing; traits show in what a person does"
+  },
+  "cause": "The child links appearance with character from stories and gossip.",
+  "reveals": "Offer \"He is lazy\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the learner actually does in class and at play.",
+  "feedback": "Personality shows in how a person acts, not in how they look.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_PRIDE": {
@@ -52,7 +67,7 @@
    "wrong_answer": "Boasting about yourself",
    "correct_answer": "How you value and respect yourself"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "People who talk about themselves loudly are called \"confident\", so the child mixes self-esteem with boasting.",
   "reveals": "Offer \"Boasting about yourself\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask: can a person be confident and still kind?",
   "feedback": "Self-esteem is how you value yourself. It does not mean boasting.",
@@ -67,7 +82,7 @@
    "wrong_answer": "Nothing, it has no effect",
    "correct_answer": "Giving up easily and staying away from others"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Low self-esteem is a feeling the child cannot see, so it seems to change nothing.",
   "reveals": "Offer \"Nothing, it has no effect\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask how a child who thinks they cannot do anything behaves.",
   "feedback": "Low self-esteem can lead to giving up, staying away, and being easily bullied.",
@@ -82,22 +97,37 @@
    "wrong_answer": "Healthy self-esteem",
    "correct_answer": "Inflated self-esteem"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child has heard \"believe in yourself\" and thinks more is always better.",
   "reveals": "Offer \"Healthy self-esteem\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask how his classmates feel.",
   "feedback": "Looking down on others is inflated self-esteem. Healthy self-esteem respects others too.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_MARKS_ONLY": {
+  "skill": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM",
+  "error": "Thinks self-esteem depends only on exam marks.",
+  "example": {
+   "question": "Achieng did badly in one test. Must her self-esteem be low?",
+   "wrong_answer": "Yes, marks show your worth",
+   "correct_answer": "No, her worth does not depend on one test"
+  },
+  "cause": "Marks are praised loudly at school.",
+  "reveals": "Offer \"Yes, marks show your worth\" next to the right answer and ask the question again in a new context.",
+  "help": "List other things Achieng does well.",
+  "feedback": "Your worth is more than a mark. One test does not decide it.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_ORDER": {
   "skill": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
-  "error": "Puts the steps of a project in the wrong order.",
+  "error": "Starts with carrying out the work, before identifying the community problem and designing a solution.",
   "example": {
    "question": "What comes first in a community service project?",
    "wrong_answer": "Carry out the work",
    "correct_answer": "Identify a problem in the community"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Doing feels like the real project, so the child jumps to action.",
   "reveals": "Offer \"Carry out the work\" next to the right answer in a new question and ask the child to choose.",
   "help": "Write the steps on cards and put them in order.",
   "feedback": "First identify the problem, then design, plan, carry out, and report.",
@@ -112,7 +142,7 @@
    "wrong_answer": "Nothing, start at once",
    "correct_answer": "Plan who does what, with what, and when"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child thinks a good idea is enough and that planning wastes time.",
   "reveals": "Offer \"Nothing, start at once\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens when a team starts without a plan.",
   "feedback": "A plan says who, what, when and with what. Without it a project falls apart.",
@@ -127,22 +157,37 @@
    "wrong_answer": "Before the work begins",
    "correct_answer": "After the work is done"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child mixes the report with the plan, both written documents.",
   "reveals": "Offer \"Before the work begins\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what a report would say if the work has not happened.",
   "feedback": "A report tells what was done and learned, so it comes at the end.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_DESIGN_PLAN": {
+  "skill": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+  "error": "Treats designing a solution and planning as the same step.",
+  "example": {
+   "question": "What is the difference between designing a solution and planning?",
+   "wrong_answer": "They are the same",
+   "correct_answer": "Designing chooses what to do; planning says who, when and with what"
+  },
+  "cause": "Both happen before the work.",
+  "reveals": "Offer \"They are the same\" next to the right answer and ask the question again in a new context.",
+  "help": "Design: \"build a rack for bins\". Plan: \"who builds it, when, with what wood\".",
+  "feedback": "Designing decides what to do. Planning decides who, when and with what.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_ORDER": {
   "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
-  "error": "Puts the early humans in the wrong order.",
+  "error": "Puts Homo sapiens first and Australopithecus last, reading the list as newest-first.",
   "example": {
    "question": "Which early human came first?",
    "wrong_answer": "Homo sapiens",
    "correct_answer": "Australopithecus"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child knows Homo sapiens (people today) best and puts them at the start.",
   "reveals": "Offer \"Homo sapiens\" next to the right answer in a new question and ask the child to choose.",
   "help": "Put the names on a timeline.",
   "feedback": "The order is Australopithecus, Homo habilis, Homo erectus, Homo sapiens.",
@@ -157,7 +202,7 @@
    "wrong_answer": "Humans came from the monkeys we see today",
    "correct_answer": "Humans and apes share earlier ancestors and changed over millions of years"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Pictures often show a monkey turning into a man, so the child thinks today's monkeys became people.",
   "reveals": "Offer \"Humans came from the monkeys we see today\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask: do your grandparents come from your cousins?",
   "feedback": "The theory says humans and today's apes share distant ancestors. Humans did not come from living monkeys.",
@@ -172,7 +217,7 @@
    "wrong_answer": "A few hundred years",
    "correct_answer": "Millions of years"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child cannot picture millions of years and thinks in lifetimes.",
   "reveals": "Offer \"A few hundred years\" next to the right answer in a new question and ask the child to choose.",
   "help": "Show a long timeline.",
   "feedback": "The changes took millions of years.",
@@ -187,7 +232,7 @@
    "wrong_answer": "Because it is the biggest continent",
    "correct_answer": "Because the oldest fossils of early humans were found there"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child links \"cradle\" with being important, and importance with size or wealth.",
   "reveals": "Offer \"Because it is the biggest continent\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what evidence tells us where people began.",
   "feedback": "Africa is the cradle because the oldest human fossils have been found there.",
@@ -196,13 +241,13 @@
  },
  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_PLACE": {
   "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
-  "error": "Puts a famous site in the wrong country.",
+  "error": "Puts Olduvai Gorge in Kenya because it is in the Rift Valley near Kenya.",
   "example": {
    "question": "Where is Olduvai Gorge?",
    "wrong_answer": "Kenya",
    "correct_answer": "Tanzania"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Kenyan fossil sites are taught alongside Olduvai and the child places them all in Kenya.",
   "reveals": "Offer \"Kenya\" next to the right answer in a new question and ask the child to choose.",
   "help": "Find the sites on a map.",
   "feedback": "Olduvai Gorge is in Tanzania. Koobi Fora, near Lake Turkana, is in Kenya.",
@@ -211,28 +256,58 @@
  },
  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_PRESERVE": {
   "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
-  "error": "Picks a way that would damage the remains.",
+  "error": "Picks taking fossils home or selling them as a way of keeping them.",
   "example": {
    "question": "Which helps to preserve early human remains?",
    "wrong_answer": "Take them home to show friends",
    "correct_answer": "Keep them in a museum with records"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Keeping something safe at home feels like caring for it.",
   "reveals": "Offer \"Take them home to show friends\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens to a fossil handled by many hands.",
   "feedback": "Fossils are kept in museums and protected sites with careful records.",
   "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
   "status": "draft"
  },
+ "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_TOOLS_LATE": {
+  "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+  "error": "Thinks early humans made no tools until modern times.",
+  "example": {
+   "question": "Which early humans first made simple stone tools?",
+   "wrong_answer": "Only Homo sapiens in modern times",
+   "correct_answer": "Homo habilis"
+  },
+  "cause": "Tools are pictured as modern machines.",
+  "reveals": "Offer \"Only Homo sapiens in modern times\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a photo of a stone hand axe.",
+  "feedback": "Homo habilis, \"handy man\", made early stone tools.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_TURKANA_BOY_TANZANIA": {
+  "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
+  "error": "Places the Turkana Boy fossil in Tanzania.",
+  "example": {
+   "question": "Where was the Turkana Boy fossil found?",
+   "wrong_answer": "Tanzania",
+   "correct_answer": "Near Lake Turkana in Kenya"
+  },
+  "cause": "Fossil sites of the region blur.",
+  "reveals": "Offer \"Tanzania\" next to the right answer and ask the question again in a new context.",
+  "help": "Pin Olduvai and Lake Turkana on the map.",
+  "feedback": "The Turkana Boy was found near Lake Turkana in Kenya.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_WHERE": {
   "skill": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
-  "error": "Puts a Swahili city-state in the wrong place.",
+  "error": "Names Timbuktu or another inland West African city as a Swahili city-state.",
   "example": {
    "question": "Which of these was a Swahili city-state?",
    "wrong_answer": "Timbuktu",
    "correct_answer": "Kilwa"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Timbuktu is another famous old trading city and the child groups all ancient trade towns together.",
   "reveals": "Offer \"Timbuktu\" next to the right answer in a new question and ask the child to choose.",
   "help": "Find the coast on a map.",
   "feedback": "Mombasa, Malindi, Lamu, Kilwa and Zanzibar were Swahili city-states on the coast. Timbuktu is in West Africa.",
@@ -247,7 +322,7 @@
    "wrong_answer": "First with Europe",
    "correct_answer": "With Arabia, Persia, India and China"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Europeans are the traders the child hears about most in African history.",
   "reveals": "Offer \"First with Europe\" next to the right answer in a new question and ask the child to choose.",
   "help": "Look at the monsoon winds on a map.",
   "feedback": "The monsoon winds carried dhows between the East African coast and Arabia, Persia, India and China.",
@@ -262,11 +337,26 @@
    "wrong_answer": "The Arabic language",
    "correct_answer": "A Bantu language with some Arabic words"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Kiswahili has many Arabic words, so the child thinks it is Arabic.",
   "reveals": "Offer \"The Arabic language\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask which words are Bantu and which came from trade.",
   "feedback": "Kiswahili is a Bantu language that took in Arabic words through trade.",
   "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_HOUSES_MUD": {
+  "skill": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
+  "error": "Thinks Swahili towns were built only of mud and grass.",
+  "example": {
+   "question": "What were many Swahili houses and mosques built of?",
+   "wrong_answer": "Mud and grass only",
+   "correct_answer": "Coral stone"
+  },
+  "cause": "The child pictures all old houses as mud huts.",
+  "reveals": "Offer \"Mud and grass only\" next to the right answer and ask the question again in a new context.",
+  "help": "Show photos of coral-stone buildings in Lamu and Gedi.",
+  "feedback": "Swahili towns had houses and mosques of coral stone.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_ROUTE": {
@@ -277,7 +367,7 @@
    "wrong_answer": "By ship",
    "correct_answer": "By camel caravans"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The Indian Ocean and Atlantic trades used ships, so the child thinks all slave trades did.",
   "reveals": "Offer \"By ship\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what travels over a desert.",
   "feedback": "The Trans-Saharan trade crossed the desert by camel caravans.",
@@ -286,13 +376,13 @@
  },
  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_FACTOR": {
   "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
-  "error": "Names a factor that did not cause the trade.",
+  "error": "Names railways or motor lorries as a factor in the Trans-Saharan trade, centuries before they existed.",
   "example": {
    "question": "Which factor helped the Trans-Saharan trade grow?",
    "wrong_answer": "Railways across the desert",
    "correct_answer": "The camel and a demand for labour in North Africa"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child pictures desert crossing with modern transport.",
   "reveals": "Offer \"Railways across the desert\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what the traders had to cross the desert.",
   "feedback": "The camel, the desert routes, and demand for labour helped the trade grow.",
@@ -301,17 +391,32 @@
  },
  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_EFFECT": {
   "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
-  "error": "Names an effect that did not happen.",
+  "error": "Says villages grew larger and richer from the trade, missing the loss of people and broken families.",
   "example": {
    "question": "Which was an effect of the Trans-Saharan slave trade?",
    "wrong_answer": "Villages grew larger and richer",
    "correct_answer": "Families were broken and villages emptied"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Trade is usually taught as bringing wealth, so the child expects good effects.",
   "reveals": "Offer \"Villages grew larger and richer\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens to a village when its young people are taken.",
   "feedback": "The trade took many lives, broke families and emptied villages.",
   "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_OASIS_NONE": {
+  "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
+  "error": "Does not see why oases mattered to the caravans.",
+  "example": {
+   "question": "Why did caravans stop at oases?",
+   "wrong_answer": "For no reason",
+   "correct_answer": "To get water and rest in the desert"
+  },
+  "cause": "The child does not know what an oasis is.",
+  "reveals": "Offer \"For no reason\" next to the right answer and ask the question again in a new context.",
+  "help": "Show an oasis photo and the route linking them.",
+  "feedback": "Oases gave caravans water and rest on the long desert crossing.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_CAUSE": {
@@ -322,7 +427,7 @@
    "wrong_answer": "More deaths than births",
    "correct_answer": "More births than deaths"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child mixes up birth rate and death rate, both \"rates\" in the lesson.",
   "reveals": "Offer \"More deaths than births\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens when births are more than deaths.",
   "feedback": "A population grows when there are more births than deaths, and when people move in.",
@@ -337,7 +442,7 @@
    "wrong_answer": "Only moving to another country",
    "correct_answer": "Moving from the countryside to a town"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Migration is often shown as people crossing borders on the news.",
   "reveals": "Offer \"Only moving to another country\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask where people in your area have moved to.",
   "feedback": "Migration includes rural-urban movement and moving between countries, forced or by choice.",
@@ -352,11 +457,26 @@
    "wrong_answer": "Plenty of jobs and land for all",
    "correct_answer": "Pressure on land, food, houses and jobs"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "More people sounds like more workers and more strength.",
   "reveals": "Offer \"Plenty of jobs and land for all\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask how a small plot feeds a growing family.",
   "feedback": "Rapid growth puts pressure on land, food, houses, schools and jobs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_HEALTH_NONE": {
+  "skill": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION",
+  "error": "Does not link better health care to population growth.",
+  "example": {
+   "question": "How does better health care make a population grow?",
+   "wrong_answer": "It does not",
+   "correct_answer": "Fewer people die young, so more live longer"
+  },
+  "cause": "Health care is seen only as treating sickness.",
+  "reveals": "Offer \"It does not\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a family with and without vaccines.",
+  "feedback": "Better health care lowers deaths, so the population grows.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_ONE_CULTURE": {
@@ -367,7 +487,7 @@
    "wrong_answer": "Only one",
    "correct_answer": "More than forty communities with their own cultures"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child hears \"Kenyan culture\" spoken of as one thing.",
   "reveals": "Offer \"Only one\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask the child to name three communities and a food from each.",
   "feedback": "Kenya has more than forty communities with their own languages, foods and customs.",
@@ -382,7 +502,7 @@
    "wrong_answer": "See ours as better than theirs",
    "correct_answer": "Respect and learn from them"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Pride in one's own culture slides into thinking it is the best.",
   "reveals": "Offer \"See ours as better than theirs\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what we gain from learning about another culture.",
   "feedback": "No culture is better. We respect and learn from all.",
@@ -397,7 +517,7 @@
    "wrong_answer": "By feeling better than others",
    "correct_answer": "By being proud of our own culture and respecting others"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Self-esteem is confused with feeling above others.",
   "reveals": "Offer \"By feeling better than others\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask: can I be proud of my culture and still respect yours?",
   "feedback": "Healthy self-esteem grows by being proud of yourself and respecting others.",
@@ -412,7 +532,7 @@
    "wrong_answer": "Give in to be liked",
    "correct_answer": "Say no clearly and walk away"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Being liked by friends feels very important at this age.",
   "reveals": "Offer \"Give in to be liked\" next to the right answer in a new question and ask the child to choose.",
   "help": "Role play the refusal.",
   "feedback": "Say no clearly, give a reason, and walk away. A real friend respects it.",
@@ -427,7 +547,7 @@
    "wrong_answer": "Hide it for ever",
    "correct_answer": "Name it and talk to a trusted person"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child has been told to \"be strong\" and not show feelings.",
   "reveals": "Offer \"Hide it for ever\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask who they can talk to.",
   "feedback": "Naming a feeling and talking to a trusted person helps.",
@@ -442,11 +562,41 @@
    "wrong_answer": "Hit the person at once",
    "correct_answer": "Pause, breathe and then talk calmly"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Acting at once feels like standing up for yourself.",
   "reveals": "Offer \"Hit the person at once\" next to the right answer in a new question and ask the child to choose.",
   "help": "Practise a pause and a calm sentence.",
   "feedback": "Pause, breathe and talk calmly. Acting at once can hurt.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_RELIGION_ONE": {
+  "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+  "error": "Thinks all Kenyans follow one religion.",
+  "example": {
+   "question": "How many religions are practised in Kenya?",
+   "wrong_answer": "Only one",
+   "correct_answer": "Several, such as Christianity, Islam, Hinduism and African traditional religion"
+  },
+  "cause": "The child knows their own faith best.",
+  "reveals": "Offer \"Only one\" next to the right answer and ask the question again in a new context.",
+  "help": "List places of worship in the town.",
+  "feedback": "Kenyans practise several religions.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_GOOD_PRESSURE": {
+  "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE",
+  "error": "Thinks all peer pressure is bad.",
+  "example": {
+   "question": "Friends encourage Juma to join the reading club. Is this peer pressure bad?",
+   "wrong_answer": "Yes, all peer pressure is bad",
+   "correct_answer": "No, this is positive peer pressure"
+  },
+  "cause": "Peer pressure is taught with bad examples.",
+  "reveals": "Offer \"Yes, all peer pressure is bad\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort examples into positive and negative pressure.",
+  "feedback": "Peer pressure can be positive when friends push you to do good.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_WIN": {
@@ -457,7 +607,7 @@
    "wrong_answer": "To win the argument",
    "correct_answer": "To understand each other and make peace"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Arguments at home often end with someone \"winning\", so the child sees that as the aim.",
   "reveals": "Offer \"To win the argument\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens when one side wins and the other is hurt.",
   "feedback": "The aim is peace, not winning.",
@@ -472,7 +622,7 @@
    "wrong_answer": "Not speaking to each other for months",
    "correct_answer": "Talking calmly and listening"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Not speaking stops the shouting, so it looks like peace.",
   "reveals": "Offer \"Not speaking to each other for months\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask how silence changes the problem.",
   "feedback": "Talking calmly and listening resolves conflict. Silence leaves it unsolved.",
@@ -481,17 +631,32 @@
  },
  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_FIGHT": {
   "skill": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
-  "error": "Thinks shouting or hitting solves a conflict.",
+  "error": "Picks asking an elder for help as the non-peaceful choice, so treats shouting and hitting as acceptable.",
   "example": {
    "question": "Which is NOT a peaceful way?",
    "wrong_answer": "Asking an elder to help",
    "correct_answer": "Shouting and hitting"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child has seen shouting end quarrels at home and reads the question the wrong way round.",
   "reveals": "Offer \"Asking an elder to help\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask who is hurt when people shout and hit.",
   "feedback": "Shouting and hitting make a conflict worse.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_YOU_STATEMENT": {
+  "skill": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
+  "error": "Thinks blaming words (\"You always...\") help solve a family conflict.",
+  "example": {
+   "question": "Which sentence helps solve a quarrel with a sibling?",
+   "wrong_answer": "\"You always take my things!\"",
+   "correct_answer": "\"I feel upset when my things are taken. Please ask first.\""
+  },
+  "cause": "The child expresses feelings by blaming.",
+  "reveals": "Offer \"\"You always take my things!\"\" next to the right answer and ask the question again in a new context.",
+  "help": "Rewrite blaming sentences as I-statements.",
+  "feedback": "I-statements say how you feel without blaming. They help solve conflicts.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_KEY": {
@@ -502,7 +667,7 @@
    "wrong_answer": "The direction of north",
    "correct_answer": "What the signs on the map mean"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The key and the north arrow sit together in the margin.",
   "reveals": "Offer \"The direction of north\" next to the right answer in a new question and ask the child to choose.",
   "help": "Look at the key of a real map.",
   "feedback": "The key explains the signs. The north arrow shows direction.",
@@ -517,7 +682,7 @@
    "wrong_answer": "7 square kilometres",
    "correct_answer": "12 square kilometres"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child adds the two sides as for perimeter instead of multiplying for area.",
   "reveals": "Offer \"7 square kilometres\" next to the right answer in a new question and ask the child to choose.",
   "help": "Draw the squares and count them.",
   "feedback": "Area is length times width in squares: 4 times 3 is 12 square kilometres.",
@@ -526,17 +691,32 @@
  },
  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_RELIEF": {
   "skill": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
-  "error": "Names a wrong way relief is shown.",
+  "error": "Names the scale or the key as a way of showing relief, instead of contours, spot heights or hill shading.",
   "example": {
    "question": "Which shows relief on a topographical map?",
    "wrong_answer": "The scale",
    "correct_answer": "Contours"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "All margin items are learnt in one list, so the child picks any of them.",
   "reveals": "Offer \"The scale\" next to the right answer in a new question and ask the child to choose.",
   "help": "Look at a real map for the lines that join heights.",
   "feedback": "Contours, spot heights and hill shading show relief. The scale shows distance.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_CONTOUR_ROAD": {
+  "skill": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
+  "error": "Reads a brown contour line as a road or a path.",
+  "example": {
+   "question": "A brown curved line on a topographical map joins points of the same height. What is it?",
+   "wrong_answer": "A road",
+   "correct_answer": "A contour"
+  },
+  "cause": "Lines on maps are usually roads.",
+  "reveals": "Offer \"A road\" next to the right answer and ask the question again in a new context.",
+  "help": "Check the key: contours are brown lines labelled with heights.",
+  "feedback": "Contours join places of the same height.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_LAT": {
@@ -547,7 +727,7 @@
    "wrong_answer": "Only latitude",
    "correct_answer": "Latitude, altitude, distance from the sea, currents and winds"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Latitude is the first factor taught and the easiest to see on a map.",
   "reveals": "Offer \"Only latitude\" next to the right answer in a new question and ask the child to choose.",
   "help": "Compare Nairobi and Mombasa.",
   "feedback": "Many factors affect climate, not latitude alone.",
@@ -562,7 +742,7 @@
    "wrong_answer": "It rises",
    "correct_answer": "It falls"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Higher places are closer to the sun, so the child thinks they are hotter.",
   "reveals": "Offer \"It rises\" next to the right answer in a new question and ask the child to choose.",
   "help": "Think of the snow on Mount Kenya at the equator.",
   "feedback": "Temperature falls about 6.5 degrees Celsius for every 1000 metres of height.",
@@ -571,28 +751,103 @@
  },
  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_REGION": {
   "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
-  "error": "Puts the wrong climate in a region.",
+  "error": "Calls the desert climate hot and wet all year, swapping it with the equatorial climate.",
   "example": {
    "question": "Which climate has hot, wet weather all year?",
    "wrong_answer": "Desert",
    "correct_answer": "Equatorial"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Both are \"hot\" climates and the child matches by temperature only.",
   "reveals": "Offer \"Desert\" next to the right answer in a new question and ask the child to choose.",
   "help": "Link the Congo basin with rain every day.",
   "feedback": "The equatorial climate is hot and wet all year. The desert is hot and dry.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_CURRENT_NONE": {
+  "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+  "error": "Does not know ocean currents affect climate.",
+  "example": {
+   "question": "How can a cold ocean current affect a coast?",
+   "wrong_answer": "It cannot",
+   "correct_answer": "It cools the air and makes the coast drier"
+  },
+  "cause": "Oceans seem far from weather on land.",
+  "reveals": "Offer \"It cannot\" next to the right answer and ask the question again in a new context.",
+  "help": "Use the Namib desert next to the cold Benguela current (to confirm).",
+  "feedback": "A cold current cools the coast and brings little rain.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_WEATHER_SAME": {
+  "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE",
+  "error": "Thinks one hot day or one heavy storm is climate change.",
+  "example": {
+   "question": "Is one very hot day proof of climate change?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, climate change is a change in the usual weather over many years"
+  },
+  "cause": "Weather and climate are confused again.",
+  "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a temperature line over 50 years, not one day.",
+  "feedback": "Climate change is a long-term change, not one day's weather.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_TREES_CAUSE": {
+  "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE",
+  "error": "Thinks planting trees causes climate change.",
+  "example": {
+   "question": "Which action can make climate change worse?",
+   "wrong_answer": "Planting trees",
+   "correct_answer": "Cutting forests and burning fuels"
+  },
+  "cause": "The child links any change in nature with harm.",
+  "reveals": "Offer \"Planting trees\" next to the right answer and ask the question again in a new context.",
+  "help": "Show trees taking in carbon dioxide.",
+  "feedback": "Cutting forests and burning fuels make climate change worse. Planting trees helps.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_FARMERS_NONE": {
+  "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE",
+  "error": "Thinks climate change does not affect farmers.",
+  "example": {
+   "question": "How can unreliable rain affect farmers?",
+   "wrong_answer": "It does not",
+   "correct_answer": "Crops fail and animals lack pasture"
+  },
+  "cause": "The child sees climate as distant.",
+  "reveals": "Offer \"It does not\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to maize when the rains fail.",
+  "feedback": "Unreliable rain makes crops fail and pasture dry up.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_NOTHING_TO_DO": {
+  "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE",
+  "error": "Thinks individuals can do nothing about climate change.",
+  "example": {
+   "question": "Give one thing a learner can do about climate change.",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Plant trees, save energy and avoid waste"
+  },
+  "cause": "The problem seems too big for one person.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "List small actions and add up a whole school doing them.",
+  "feedback": "Small actions like planting trees and saving energy help.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_REGION": {
   "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
-  "error": "Puts the wrong vegetation in a region.",
+  "error": "Puts desert scrub in the Congo basin, matching vegetation to the wrong climate.",
   "example": {
    "question": "Which vegetation grows in the Congo basin?",
    "wrong_answer": "Desert scrub",
    "correct_answer": "Tropical rainforest"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child has not linked the wettest region to the thickest forest.",
   "reveals": "Offer \"Desert scrub\" next to the right answer in a new question and ask the child to choose.",
   "help": "Link rainfall with the thickness of the trees.",
   "feedback": "The Congo basin has hot, wet weather and tropical rainforest.",
@@ -601,13 +856,13 @@
  },
  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_FACTOR": {
   "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
-  "error": "Names only one factor, or a factor that does not apply.",
+  "error": "Names something unrelated, such as the colour of the sky, as a factor of vegetation.",
   "example": {
    "question": "Which factor affects vegetation?",
    "wrong_answer": "The colour of the sky",
    "correct_answer": "Rainfall"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child guesses without linking plants to rain, heat, height and soil.",
   "reveals": "Offer \"The colour of the sky\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what plants need to grow.",
   "feedback": "Rainfall, temperature, altitude and soil affect vegetation.",
@@ -616,28 +871,43 @@
  },
  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_CONSERVE": {
   "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
-  "error": "Picks a method that destroys vegetation.",
+  "error": "Picks burning bushes to clear land as a way of conserving vegetation.",
   "example": {
    "question": "Which method conserves vegetation?",
    "wrong_answer": "Burning bushes to clear land",
    "correct_answer": "Planting trees and protecting forests"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Burning is seen to bring fresh grass, so it seems to help plants.",
   "reveals": "Offer \"Burning bushes to clear land\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens to the soil when a forest is cut.",
   "feedback": "Planting trees, protecting forests and controlled grazing conserve vegetation.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_MED_EAST": {
+  "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
+  "error": "Places Mediterranean vegetation in East Africa.",
+  "example": {
+   "question": "Where is Mediterranean vegetation found in Africa?",
+   "wrong_answer": "East Africa",
+   "correct_answer": "The far north and far south (North Africa and the Cape)"
+  },
+  "cause": "The name is unfamiliar.",
+  "reveals": "Offer \"East Africa\" next to the right answer and ask the question again in a new context.",
+  "help": "Shade the two Mediterranean areas on the map.",
+  "feedback": "Mediterranean vegetation grows in the far north and far south of Africa.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_PLACE": {
   "skill": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
-  "error": "Places a site in the wrong country.",
+  "error": "Puts Great Zimbabwe in Egypt, linking every ancient stone monument to Egypt.",
   "example": {
    "question": "In which country is Great Zimbabwe?",
    "wrong_answer": "Egypt",
    "correct_answer": "Zimbabwe"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Egypt's pyramids are the best-known monuments, so the child places other great stone works there.",
   "reveals": "Offer \"Egypt\" next to the right answer in a new question and ask the child to choose.",
   "help": "Find the sites on a map of Africa.",
   "feedback": "Great Zimbabwe is in Zimbabwe. The Pyramids of Giza are in Egypt.",
@@ -652,7 +922,7 @@
    "wrong_answer": "They have no use today",
    "correct_answer": "They show our history and bring visitors"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Old places look unused, so the child thinks they serve no purpose.",
   "reveals": "Offer \"They have no use today\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what we would lose without them.",
   "feedback": "Sites show a people's history and attract visitors.",
@@ -667,22 +937,37 @@
    "wrong_answer": "Climb the walls and write names",
    "correct_answer": "Follow the guide and leave things as they are"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Visitors are sometimes seen climbing or writing on walls.",
   "reveals": "Offer \"Climb the walls and write names\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens when everyone writes on a wall.",
   "feedback": "Visitors follow the rules and leave a site as they found it.",
   "source": "To confirm by a teacher: history and the accounts of early humans and peoples are told differently by different sources; the author wrote the commonly taught version.",
   "status": "draft"
  },
+ "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_TIMBUKTU_EAST": {
+  "skill": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
+  "error": "Places Timbuktu in East Africa.",
+  "example": {
+   "question": "In which country is Timbuktu?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Mali, in West Africa"
+  },
+  "cause": "The name is famous but unplaced.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Pin it on the Africa map.",
+  "feedback": "Timbuktu is in Mali, West Africa.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_ARM": {
   "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
-  "error": "Gives a task to the wrong arm of government.",
+  "error": "Says the Legislature interprets the law and settles disputes, giving the Judiciary's work to Parliament.",
   "example": {
    "question": "Which arm interprets the law and settles disputes?",
    "wrong_answer": "The Legislature",
    "correct_answer": "The Judiciary"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Parliament debates laws, so the child thinks it also explains and judges them.",
   "reveals": "Offer \"The Legislature\" next to the right answer in a new question and ask the child to choose.",
   "help": "Link each arm to one verb: make, carry out, interpret.",
   "feedback": "The Legislature makes laws, the Executive carries them out, and the Judiciary interprets them.",
@@ -691,13 +976,13 @@
  },
  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_CHAPTER": {
   "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
-  "error": "Gives the wrong chapter.",
+  "error": "Says the Bill of Rights is Chapter 6, swapping it with Leadership and Integrity.",
   "example": {
    "question": "Which chapter is the Bill of Rights?",
    "wrong_answer": "Chapter 6",
    "correct_answer": "Chapter 4"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Chapters 4 and 6 are both taught in this sub-strand and the numbers swap.",
   "reveals": "Offer \"Chapter 6\" next to the right answer in a new question and ask the child to choose.",
   "help": "Look at the table of contents.",
   "feedback": "The Bill of Rights is Chapter 4 and Leadership and Integrity is Chapter 6.",
@@ -706,17 +991,32 @@
  },
  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_PRINCIPLE": {
   "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
-  "error": "Picks a quality that is not a principle of leadership.",
+  "error": "Picks selection by tribe as a principle of leadership, instead of selection on merit.",
   "example": {
    "question": "Which is a principle of leadership and integrity?",
    "wrong_answer": "Selection on tribe",
    "correct_answer": "Selection on merit"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child has heard leaders chosen by community and thinks it is the rule.",
   "reveals": "Offer \"Selection on tribe\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what a fair leader looks for.",
   "feedback": "Leaders are chosen on merit, and serve selflessly with integrity and accountability.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_EXEC_LAWS": {
+  "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
+  "error": "Thinks the Executive makes laws because the President signs them.",
+  "example": {
+   "question": "The President signs a bill into law. Which arm made the law?",
+   "wrong_answer": "The Executive",
+   "correct_answer": "The Legislature (Parliament)"
+  },
+  "cause": "The signing is the visible moment.",
+  "reveals": "Offer \"The Executive\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace a bill: debated and passed in Parliament, then signed.",
+  "feedback": "Parliament makes laws. The President signs them so they can take effect.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_DUTY": {
@@ -727,7 +1027,7 @@
    "wrong_answer": "Nothing, rights are free of duties",
    "correct_answer": "A responsibility to respect the rights of others"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Rights are taught as what you are owed, so duties seem separate.",
   "reveals": "Offer \"Nothing, rights are free of duties\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what happens if everyone uses their right to noise.",
   "feedback": "Every right comes with a responsibility to respect others' rights.",
@@ -742,7 +1042,7 @@
    "wrong_answer": "No, only adults",
    "correct_answer": "Yes, such as education, health care and protection"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Children are told to obey adults, so they think rights belong to adults.",
   "reveals": "Offer \"No, only adults\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask the child to name a right they have.",
   "feedback": "Children have rights, including free basic education, health care and protection.",
@@ -757,11 +1057,86 @@
    "wrong_answer": "Keep quiet to avoid trouble",
    "correct_answer": "Tell a trusted adult or call Childline 116"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Children are often told not to share family matters and fear getting into trouble.",
   "reveals": "Offer \"Keep quiet to avoid trouble\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask who they could tell.",
   "feedback": "Report to a trusted adult, the chief, the police or call Childline Kenya 116.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_EDU_FEES": {
+  "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS",
+  "error": "Thinks basic education is a right only for children whose parents pay.",
+  "example": {
+   "question": "Is free and compulsory basic education a right of every child in Kenya?",
+   "wrong_answer": "Only for those who pay",
+   "correct_answer": "Yes, every child"
+  },
+  "cause": "The child hears about fees.",
+  "reveals": "Offer \"Only for those who pay\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the right from the Bill of Rights.",
+  "feedback": "Every child has a right to free and compulsory basic education.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_RUMOUR": {
+  "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE",
+  "error": "Thinks spreading the news as a rumour is a way to raise a rights issue.",
+  "example": {
+   "question": "You learn a neighbour's child is kept from school to work. What is the right way to raise it?",
+   "wrong_answer": "Tell everyone in the village as gossip",
+   "correct_answer": "Tell a teacher, the chief or the children's office with the facts"
+  },
+  "cause": "Talking about it feels like doing something.",
+  "reveals": "Offer \"Tell everyone in the village as gossip\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare what gossip does with what a report to the chief does.",
+  "feedback": "Raise a rights issue with the right person, calmly and with facts.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_SHOUT": {
+  "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE",
+  "error": "Thinks shouting and threats make people listen on a rights issue.",
+  "example": {
+   "question": "Which is the most effective way to raise a rights issue with a leader?",
+   "wrong_answer": "Shout and threaten",
+   "correct_answer": "Speak clearly and calmly and give the facts"
+  },
+  "cause": "Loud protests on the news seem to get results.",
+  "reveals": "Offer \"Shout and threaten\" next to the right answer and ask the question again in a new context.",
+  "help": "Role-play both ways and ask which the leader would act on.",
+  "feedback": "Calm, clear words with facts are heard and acted on.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_NO_FOLLOWUP": {
+  "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE",
+  "error": "Thinks the job is finished once the issue is reported.",
+  "example": {
+   "question": "You reported a rights issue a month ago and nothing happened. What next?",
+   "wrong_answer": "Forget it",
+   "correct_answer": "Follow up politely or go to another office"
+  },
+  "cause": "Reporting feels like the end.",
+  "reveals": "Offer \"Forget it\" next to the right answer and ask the question again in a new context.",
+  "help": "Add \"follow up\" as the last step on the board.",
+  "feedback": "Follow up if nothing happens, or take it to another office.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_WRONG_CHANNEL": {
+  "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE",
+  "error": "Takes a rights issue to someone who cannot act on it.",
+  "example": {
+   "question": "A child is being abused at home. Who should you tell?",
+   "wrong_answer": "A friend at school who keeps secrets",
+   "correct_answer": "A trusted adult such as a teacher, or Childline 116"
+  },
+  "cause": "Friends are the people the child talks to most.",
+  "reveals": "Offer \"A friend at school who keeps secrets\" next to the right answer and ask the question again in a new context.",
+  "help": "List people who can act: teacher, chief, police, children's office, Childline.",
+  "feedback": "Tell someone who can act, like a teacher or Childline 116.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_LOCAL": {
@@ -772,7 +1147,7 @@
    "wrong_answer": "Caring only about my own country",
    "correct_answer": "Respecting other cultures and caring for the environment"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "Loyalty to one's country is mixed up with caring only for it.",
   "reveals": "Offer \"Caring only about my own country\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what a river polluted upstream does downstream.",
   "feedback": "A global citizen respects others and cares for the shared world.",
@@ -781,13 +1156,13 @@
  },
  "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_EAC": {
   "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
-  "error": "Names a country that is not in the East African Community.",
+  "error": "Names Egypt as an East African Community member because it shares the Nile with East Africa.",
   "example": {
    "question": "Which country is a member of the East African Community?",
    "wrong_answer": "Egypt",
    "correct_answer": "Rwanda"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child links the Nile countries together.",
   "reveals": "Offer \"Egypt\" next to the right answer in a new question and ask the child to choose.",
   "help": "Look at a map of East Africa.",
   "feedback": "Members include Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, the Democratic Republic of the Congo and Somalia.",
@@ -796,17 +1171,32 @@
  },
  "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_HARMONY": {
   "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
-  "error": "Names a factor that does not help harmony.",
+  "error": "Picks looking down on other groups as a factor of harmony.",
   "example": {
    "question": "Which helps citizens of East Africa live in harmony?",
    "wrong_answer": "Looking down on other groups",
    "correct_answer": "Respect and a shared language, Kiswahili"
   },
-  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "cause": "The child misreads the question or thinks pride in one's own group brings order.",
   "reveals": "Offer \"Looking down on other groups\" next to the right answer in a new question and ask the child to choose.",
   "help": "Ask what unites a market in a border town.",
   "feedback": "Respect, trade, and a shared language such as Kiswahili help people live in harmony.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_NOBEL_SPORT": {
+  "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
+  "error": "Thinks the Nobel Peace Prize is a sports award.",
+  "example": {
+   "question": "Why did Wangari Maathai win the Nobel Peace Prize?",
+   "wrong_answer": "For winning a race",
+   "correct_answer": "For the Green Belt Movement, planting trees and standing up for justice"
+  },
+  "cause": "Kenya is famous for athletics prizes.",
+  "reveals": "Offer \"For winning a race\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a photo of tree planting with the Green Belt Movement.",
+  "feedback": "Wangari Maathai won the Nobel Peace Prize in 2004 for her work on the environment and justice.",
+  "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  }
 }

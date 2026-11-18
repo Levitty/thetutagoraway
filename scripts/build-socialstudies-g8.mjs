@@ -9,6 +9,8 @@
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/socialstudies-g8-skills.mjs';
+import { SUBS as DEPTH } from './data/socialstudies-depth/g8.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/social_studies/g8.json', import.meta.url);
 const g8 = JSON.parse(readFileSync(path, 'utf8'));
@@ -47,8 +49,13 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
   const sub = subOf(subKey), skillCode = codeOf(subKey, skill);
   sub.misconceptions.push({ code: `${skillCode}.${short}`, skill: skillCode, error, example: { question: q, wrong_answer: wrong, correct_answer: right }, cause, reveals: `Offer "${wrong}" next to the right answer in a new question and ask the child to choose.`, help, feedback, source, status: 'draft' });
 }
-for (const [, key] of D.SKILLS) if (!D.MIS.some(m => m[0] === key)) throw new Error(`skill ${key} has no misconception`);
+// Skills added in the depth pass (18 Nov 2026) take all their misconceptions from scripts/data/socialstudies-depth/g8.mjs;
+// tests/socialstudies-g8.test.mjs checks every skill has four or more.
 g8.totals = { ...g8.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
 g8.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g8-non-question-outcomes-2026-11-13.md";
+// Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g8.mjs adds prerequisites, misconceptions to four per skill (with a real
+// cause for each first-pass one) and the teaching pack in curriculum/social_studies/teaching/g8/, through scripts/science-depth.mjs.
+const depth = applyDepth(g8, DEPTH, { dir: 'social_studies', grade: 8, prefix: P, derive: true });
+g8.status = g8.status.replace(/; depth pass 18 Nov 2026.*$/, '') + '; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g8)';
 writeFileSync(path, JSON.stringify(g8, null, 1) + '\n');
-console.log(`social studies g8: ${D.SKILLS.length} skills, ${nPre} prerequisites (${nAdded} added to honour Grade 7 links), ${D.MIS.length} misconceptions over ${g8.sub_strands.filter(s => s.skills.length).length} sub-strands`);
+console.log(`social studies g8: ${g8.totals.skills} skills, ${g8.totals.prerequisites} prerequisites, ${g8.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR",
+ "title": "Population Growth in Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use Kenya's census figures (teacher to supply) for a demographic trend line. Births minus deaths plus people moving in is growth.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION",
+   "key_step": "The child gives the causes and effects of population growth and tells the types of migration.",
+   "floor": {
+    "prerequisite": "Gives effects of high population density.",
+    "question": "Give one effect of high density.",
+    "answer": "any effect such as land shortage"
+   },
+   "representations": [
+    "a births and deaths sum",
+    "a census trend line",
+    "migration type cards"
+   ],
+   "steps": [
+    "Births more than deaths: growth.",
+    "Name causes: high birth rate, fewer deaths.",
+    "Name effects on land and services.",
+    "Name types of migration."
+   ],
+   "contexts": [
+    "young people moving to Nairobi",
+    "refugees fleeing war",
+    "families moving to new farmland"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: births 30, deaths 10, moved in 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the numbers.",
+     "say": "By how many did the population grow?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 25."
+    },
+    {
+     "beat": "write",
+     "do": "Write growth = births minus deaths plus moved in."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_CAUSE",
+     "listen_for": [
+      "More deaths than births"
+     ],
+     "ask": "Which helps the population to grow?",
+     "repair": "Ask what happens when births are more than deaths."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_MIGRATION",
+     "listen_for": [
+      "Only moving to another country"
+     ],
+     "ask": "Which is a type of migration?",
+     "repair": "Ask where people in your area have moved to."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_EFFECT",
+     "listen_for": [
+      "Plenty of jobs and land for all"
+     ],
+     "ask": "What is an effect of rapid population growth?",
+     "repair": "Ask how a small plot feeds a growing family."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION.M_G8_PG_HEALTH_NONE",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does better health care make a population grow?",
+     "repair": "Compare a family with and without vaccines."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which helps a population grow?",
+     "answer": "more births than deaths",
+     "shows": "cause"
+    },
+    {
+     "question": "Give one type of migration.",
+     "answer": "any of: rural-urban, between countries, forced, voluntary",
+     "shows": "migration"
+    }
+   ]
+  }
+ ]
+}

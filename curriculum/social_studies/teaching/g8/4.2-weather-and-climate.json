@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE",
+ "title": "Weather and Climate",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Temperature falls about 6.5 degrees Celsius per 1000 metres. Climate change: rising temperatures, unreliable rain, longer droughts, heavier floods; responses include tree planting, water harvesting and drought-resistant crops.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA",
+   "key_step": "The child names the factors that influence climate in Africa and describes its major climatic regions.",
+   "floor": {
+    "prerequisite": "Describes the climatic regions of Eastern Africa.",
+    "question": "Describe the equatorial climate.",
+    "answer": "hot and wet all year"
+   },
+   "representations": [
+    "a climate map of Africa",
+    "factor cards",
+    "a mountain temperature drawing"
+   ],
+   "steps": [
+    "Name the factor.",
+    "Say how it changes climate.",
+    "Name the region.",
+    "Describe its weather and place."
+   ],
+   "contexts": [
+    "the Congo basin rain",
+    "the Sahara's dryness",
+    "cold Kilimanjaro peak"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mountain 3000 metres high, 25 degrees at the bottom."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top.",
+     "say": "About how cold is the top?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for about 5 to 6 degrees."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"6.5 degrees cooler per 1000 m\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_LAT",
+     "listen_for": [
+      "Only latitude"
+     ],
+     "ask": "Which factors affect climate?",
+     "repair": "Compare Nairobi and Mombasa."
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_ALT",
+     "listen_for": [
+      "It rises"
+     ],
+     "ask": "What happens to temperature as you climb a mountain?",
+     "repair": "Think of the snow on Mount Kenya at the equator."
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_REGION",
+     "listen_for": [
+      "Desert"
+     ],
+     "ask": "Which climate has hot, wet weather all year?",
+     "repair": "Link the Congo basin with rain every day."
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA.M_G8_CL_CURRENT_NONE",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can a cold ocean current affect a coast?",
+     "repair": "Use the Namib desert next to the cold Benguela current (to confirm)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give three factors that influence climate.",
+     "answer": "any three of: latitude, altitude, distance from the sea, ocean currents, winds, relief",
+     "shows": "factors"
+    },
+    {
+     "question": "What happens to temperature as you climb?",
+     "answer": "it falls",
+     "shows": "altitude"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE",
+   "key_step": "The child says what climate change is, its causes and effects on the environment and people, and picks ways to address it.",
+   "floor": {
+    "prerequisite": "Says how weather matters to people.",
+    "question": "Give one way weather affects farming.",
+    "answer": "planting and harvest depend on rain"
+   },
+   "representations": [
+    "a 50-year temperature line",
+    "cause, effect and response cards",
+    "photos of drought and floods"
+   ],
+   "steps": [
+    "Say what climate change is.",
+    "Name causes.",
+    "Name effects on land and people.",
+    "Pick responses."
+   ],
+   "contexts": [
+    "longer droughts in the north",
+    "floods in Budalang'i",
+    "tree planting on a national tree day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line rising slowly over many years."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Is this one day's weather or a change in climate?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for climate."
+    },
+    {
+     "beat": "write",
+     "do": "Write two causes and two responses."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_WEATHER_SAME",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is one very hot day proof of climate change?",
+     "repair": "Show a temperature line over 50 years, not one day."
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_TREES_CAUSE",
+     "listen_for": [
+      "Planting trees"
+     ],
+     "ask": "Which action can make climate change worse?",
+     "repair": "Show trees taking in carbon dioxide."
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_FARMERS_NONE",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How can unreliable rain affect farmers?",
+     "repair": "Ask what happens to maize when the rains fail."
+    },
+    {
+     "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE.M_G8_CC_NOTHING_TO_DO",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "Give one thing a learner can do about climate change.",
+     "repair": "List small actions and add up a whole school doing them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one effect of climate change on people.",
+     "answer": "any of: crop failure, loss of pasture, floods, water shortage, disease",
+     "shows": "effect"
+    },
+    {
+     "question": "Give one way to address climate change.",
+     "answer": "any of: planting trees, saving energy, water harvesting, drought-resistant crops, early warning",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

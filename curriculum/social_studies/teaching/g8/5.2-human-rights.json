@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G8.POLITI.HUMAN_RIGHTS",
+ "title": "Human Rights",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Childline Kenya 116 on the board. Disclosures go to the teacher privately under the school's safeguarding policy. Effective communication: facts, the right channel, calm clear words, listen, follow up.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS",
+   "key_step": "The child names the rights of the child in Kenya, who protects them, and that rights come with responsibilities.",
+   "floor": {
+    "prerequisite": "Classifies human rights.",
+    "question": "Which group is the right to education in?",
+    "answer": "economic, social and cultural"
+   },
+   "representations": [
+    "a rights of the child chart",
+    "protector cards",
+    "Childline 116 poster"
+   ],
+   "steps": [
+    "Name the right.",
+    "Name a way it can be broken.",
+    "Name who protects it.",
+    "Name the responsibility that goes with it."
+   ],
+   "contexts": [
+    "a girl kept from school to work",
+    "a child without a birth certificate",
+    "a child facing abuse at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"the right to free basic education\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the right.",
+     "say": "Who protects it if a child is kept home?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the chief, the children's office or a teacher."
+    },
+    {
+     "beat": "write",
+     "do": "Write the responsibility: attend and learn."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_DUTY",
+     "listen_for": [
+      "Nothing, rights are free of duties"
+     ],
+     "ask": "What comes with a right?",
+     "repair": "Ask what happens if everyone uses their right to noise."
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_CHILD",
+     "listen_for": [
+      "No, only adults"
+     ],
+     "ask": "Do children have rights in Kenya?",
+     "repair": "Ask the child to name a right they have."
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_REPORT",
+     "listen_for": [
+      "Keep quiet to avoid trouble"
+     ],
+     "ask": "A child is being abused. What should a person do?",
+     "repair": "Ask who they could tell."
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS.M_G8_HR8_EDU_FEES",
+     "listen_for": [
+      "Only for those who pay"
+     ],
+     "ask": "Is free and compulsory basic education a right of every child in Kenya?",
+     "repair": "Read the right from the Bill of Rights."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two rights of the child in Kenya.",
+     "answer": "any two of: a name and nationality, free basic education, health care, food and shelter, protection from abuse and child labour",
+     "shows": "rights"
+    },
+    {
+     "question": "A child is being abused. What should a person do?",
+     "answer": "tell a trusted adult or call Childline 116",
+     "shows": "report"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE",
+   "key_step": "The child orders the steps of raising a rights issue, names the right channels and picks calm, clear, assertive language.",
+   "floor": {
+    "prerequisite": "Uses assertive communication.",
+    "question": "What does it mean to be assertive?",
+    "answer": "to say what you need clearly and with respect"
+   },
+   "representations": [
+    "step cards",
+    "channel cards",
+    "a role play of reporting"
+   ],
+   "steps": [
+    "Get the facts.",
+    "Choose the right person or office.",
+    "Say it clearly and calmly with evidence.",
+    "Listen, then follow up."
+   ],
+   "contexts": [
+    "reporting child labour to the chief",
+    "telling a teacher about bullying",
+    "writing to the county about a blocked water point"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"choose the right office\".",
+     "say": "What should come before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"get the facts\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_RUMOUR",
+     "listen_for": [
+      "Tell everyone in the village as gossip"
+     ],
+     "ask": "You learn a neighbour's child is kept from school to work. What is the right way to raise it?",
+     "repair": "Compare what gossip does with what a report to the chief does."
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_SHOUT",
+     "listen_for": [
+      "Shout and threaten"
+     ],
+     "ask": "Which is the most effective way to raise a rights issue with a leader?",
+     "repair": "Role-play both ways and ask which the leader would act on."
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_NO_FOLLOWUP",
+     "listen_for": [
+      "Forget it"
+     ],
+     "ask": "You reported a rights issue a month ago and nothing happened. What next?",
+     "repair": "Add \"follow up\" as the last step on the board."
+    },
+    {
+     "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE.M_G8_HC_WRONG_CHANNEL",
+     "listen_for": [
+      "A friend at school who keeps secrets"
+     ],
+     "ask": "A child is being abused at home. Who should you tell?",
+     "repair": "List people who can act: teacher, chief, police, children's office, Childline."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order: say it calmly, get the facts, follow up, choose the right office.",
+     "answer": "get the facts, choose the right office, say it calmly, follow up",
+     "shows": "process"
+    },
+    {
+     "question": "Name two channels for reporting a child rights issue.",
+     "answer": "any two of: a teacher, the chief, the police, the children's department, Childline 116, the KNCHR",
+     "shows": "channels"
+    }
+   ]
+  }
+ ]
+}

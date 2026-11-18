@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_",
+ "title": "Scientific Theory about Human Origin",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the scientific theory as science and respect the faith and traditional accounts from Grade 7. Facts (to confirm): Olduvai Gorge (Tanzania), Koobi Fora and the Turkana Boy (Kenya), the Leakey family.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION",
+   "key_step": "The child describes the scientific theory of human origin, orders the early humans and names the changes and evidence.",
+   "floor": {
+    "prerequisite": "Names archaeological sources such as fossils.",
+    "question": "What kind of source is a fossil?",
+    "answer": "archaeological"
+   },
+   "representations": [
+    "a timeline strip",
+    "skull drawings",
+    "change cards"
+   ],
+   "steps": [
+    "Say what the theory says.",
+    "Order the early humans.",
+    "Name the changes.",
+    "Name the evidence."
+   ],
+   "contexts": [
+    "skulls in the Nairobi National Museum",
+    "stone tools at Olorgesailie",
+    "fossils at Koobi Fora"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a timeline with four marks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first mark.",
+     "say": "Which early human goes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Australopithecus."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the rest and one change each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_ORDER",
+     "listen_for": [
+      "Homo sapiens"
+     ],
+     "ask": "Which early human came first?",
+     "repair": "Put the names on a timeline."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_MONKEY",
+     "listen_for": [
+      "Humans came from the monkeys we see today"
+     ],
+     "ask": "What does the scientific theory say about human origin?",
+     "repair": "Ask: do your grandparents come from your cousins?"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_FAST",
+     "listen_for": [
+      "A few hundred years"
+     ],
+     "ask": "How long did the changes take?",
+     "repair": "Show a long timeline."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION.M_G8_EV_TOOLS_LATE",
+     "listen_for": [
+      "Only Homo sapiens in modern times"
+     ],
+     "ask": "Which early humans first made simple stone tools?",
+     "repair": "Show a photo of a stone hand axe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order from earliest: Homo erectus, Australopithecus, Homo sapiens.",
+     "answer": "Australopithecus, Homo erectus, Homo sapiens",
+     "shows": "order"
+    },
+    {
+     "question": "How long did the changes take?",
+     "answer": "millions of years",
+     "shows": "time"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA",
+   "key_step": "The child says why Africa is the cradle of humanity and how remains are preserved.",
+   "floor": {
+    "prerequisite": "Describes the scientific theory of human origin.",
+    "question": "Which early human came first?",
+    "answer": "Australopithecus"
+   },
+   "representations": [
+    "a map of fossil sites",
+    "a museum photo",
+    "action cards"
+   ],
+   "steps": [
+    "Name the evidence: oldest fossils.",
+    "Name the sites.",
+    "Name who found them.",
+    "Choose how to keep them safe."
+   ],
+   "contexts": [
+    "Olduvai Gorge",
+    "Koobi Fora",
+    "the Nairobi National Museum"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw East Africa with two dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dot near Lake Turkana.",
+     "say": "Which famous fossil was found here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Turkana Boy."
+    },
+    {
+     "beat": "write",
+     "do": "Write why Africa is the cradle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_WHY",
+     "listen_for": [
+      "Because it is the biggest continent"
+     ],
+     "ask": "Why is Africa called the cradle of humanity?",
+     "repair": "Ask what evidence tells us where people began."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_PLACE",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "Where is Olduvai Gorge?",
+     "repair": "Find the sites on a map."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_PRESERVE",
+     "listen_for": [
+      "Take them home to show friends"
+     ],
+     "ask": "Which helps to preserve early human remains?",
+     "repair": "Ask what happens to a fossil handled by many hands."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA.M_G8_CR_TURKANA_BOY_TANZANIA",
+     "listen_for": [
+      "Tanzania"
+     ],
+     "ask": "Where was the Turkana Boy fossil found?",
+     "repair": "Pin Olduvai and Lake Turkana on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is Africa called the cradle of humanity?",
+     "answer": "the oldest fossils of early humans were found there",
+     "shows": "reason"
+    },
+    {
+     "question": "Give one way of preserving early human remains.",
+     "answer": "any of: protected sites, careful digging, museums, records",
+     "shows": "preserve"
+    }
+   ]
+  }
+ ]
+}

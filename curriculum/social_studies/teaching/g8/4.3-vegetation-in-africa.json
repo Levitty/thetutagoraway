@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA",
+ "title": "Vegetation in Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Overlay the vegetation map on the climate map; the child sees vegetation follow rainfall.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION",
+   "key_step": "The child gives the factors of vegetation, describes and locates Africa's vegetation regions, and picks ways to conserve them.",
+   "floor": {
+    "prerequisite": "Names vegetation types of Eastern Africa.",
+    "question": "What vegetation covers the Maasai Mara?",
+    "answer": "savanna"
+   },
+   "representations": [
+    "vegetation and climate maps",
+    "region cards",
+    "conservation cards"
+   ],
+   "steps": [
+    "Name the factor.",
+    "Match region to climate.",
+    "Place it.",
+    "Pick a conservation method."
+   ],
+   "contexts": [
+    "the Congo rainforest",
+    "the Sahara",
+    "the Cape shrubs"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Africa with the equator."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Congo basin.",
+     "say": "What vegetation grows here, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for rainforest, much rain."
+    },
+    {
+     "beat": "write",
+     "do": "Label three more regions."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_REGION",
+     "listen_for": [
+      "Desert scrub"
+     ],
+     "ask": "Which vegetation grows in the Congo basin?",
+     "repair": "Link rainfall with the thickness of the trees."
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_FACTOR",
+     "listen_for": [
+      "The colour of the sky"
+     ],
+     "ask": "Which factor affects vegetation?",
+     "repair": "Ask what plants need to grow."
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_CONSERVE",
+     "listen_for": [
+      "Burning bushes to clear land"
+     ],
+     "ask": "Which method conserves vegetation?",
+     "repair": "Ask what happens to the soil when a forest is cut."
+    },
+    {
+     "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION.M_G8_VG_MED_EAST",
+     "listen_for": [
+      "East Africa"
+     ],
+     "ask": "Where is Mediterranean vegetation found in Africa?",
+     "repair": "Shade the two Mediterranean areas on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which vegetation grows in the Congo basin?",
+     "answer": "tropical rainforest",
+     "shows": "region"
+    },
+    {
+     "question": "Give one method of conserving vegetation.",
+     "answer": "any of: planting trees, protecting forests, controlled grazing, energy-saving jikos",
+     "shows": "conserve"
+    }
+   ]
+  }
+ ]
+}

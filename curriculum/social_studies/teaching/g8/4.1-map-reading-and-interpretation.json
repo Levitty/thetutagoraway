@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE",
+ "title": "Map Reading and Interpretation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a Survey of Kenya topographical sheet if the school has one. Area: count full squares, then half squares as halves.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS",
+   "key_step": "The child reads marginal information, calculates areas by squares and names the ways relief is shown.",
+   "floor": {
+    "prerequisite": "Describes Africa's features and uses latitude and longitude.",
+    "question": "Which line is 0 degrees latitude?",
+    "answer": "the equator"
+   },
+   "representations": [
+    "a topographical sheet",
+    "a grid overlay",
+    "relief method cards"
+   ],
+   "steps": [
+    "Read the margin: title, scale, key, north, sheet number.",
+    "Count squares for area.",
+    "Find contours and spot heights.",
+    "Name other relief methods."
+   ],
+   "contexts": [
+    "a survey map of a county",
+    "a lake shown over grid squares",
+    "contours round a hill"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 4 by 3 grid with a lake covering it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the grid.",
+     "say": "How many squares does the lake cover?"
+    },
+    {
+     "beat": "count",
+     "do": "Count 4 times 3 with the child."
+    },
+    {
+     "beat": "write",
+     "do": "Write 12 square kilometres."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_KEY",
+     "listen_for": [
+      "The direction of north"
+     ],
+     "ask": "What does the key (legend) of a map show?",
+     "repair": "Look at the key of a real map."
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_AREA",
+     "listen_for": [
+      "7 square kilometres"
+     ],
+     "ask": "A lake covers 4 grid squares by 3 grid squares of 1 square kilometre each. What is its area?",
+     "repair": "Draw the squares and count them."
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_RELIEF",
+     "listen_for": [
+      "The scale"
+     ],
+     "ask": "Which shows relief on a topographical map?",
+     "repair": "Look at a real map for the lines that join heights."
+    },
+    {
+     "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS.M_G8_TM_CONTOUR_ROAD",
+     "listen_for": [
+      "A road"
+     ],
+     "ask": "A brown curved line on a topographical map joins points of the same height. What is it?",
+     "repair": "Check the key: contours are brown lines labelled with heights."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A lake covers 5 by 2 grid squares of 1 square km each. What is its area?",
+     "answer": "10 square kilometres",
+     "shows": "area"
+    },
+    {
+     "question": "Give one way relief is shown on a topographical map.",
+     "answer": "any of: contours, spot heights, trigonometrical stations, hill shading, layer colouring",
+     "shows": "relief"
+    }
+   ]
+  }
+ ]
+}

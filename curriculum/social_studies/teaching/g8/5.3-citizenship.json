@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.POLITI.CITIZENSHIP",
+ "title": "Citizenship",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm with current membership): EAC members; Wangari Maathai, Nobel Peace Prize 2004 (Green Belt Movement).",
+ "skills": [
+  {
+   "skill": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP",
+   "key_step": "The child names qualities of a global citizen, a Nobel laureate's response to injustice, and factors of harmony in East Africa.",
+   "floor": {
+    "prerequisite": "Names qualities of a global citizen.",
+    "question": "Give one quality of a global citizen.",
+    "answer": "any quality such as respect for other cultures"
+   },
+   "representations": [
+    "quality cards",
+    "an EAC map",
+    "a Wangari Maathai story"
+   ],
+   "steps": [
+    "Name the quality.",
+    "Name how a laureate responded to injustice.",
+    "Name EAC members.",
+    "Name factors of harmony."
+   ],
+   "contexts": [
+    "the Green Belt Movement",
+    "Kiswahili across East Africa",
+    "traders crossing EAC borders"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Wangari Maathai, 2004\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the name.",
+     "say": "What did she do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for tree planting and justice."
+    },
+    {
+     "beat": "write",
+     "do": "Write two factors of harmony."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_LOCAL",
+     "listen_for": [
+      "Caring only about my own country"
+     ],
+     "ask": "Which is a quality of a global citizen?",
+     "repair": "Ask what a river polluted upstream does downstream."
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_EAC",
+     "listen_for": [
+      "Egypt"
+     ],
+     "ask": "Which country is a member of the East African Community?",
+     "repair": "Look at a map of East Africa."
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_HARMONY",
+     "listen_for": [
+      "Looking down on other groups"
+     ],
+     "ask": "Which helps citizens of East Africa live in harmony?",
+     "repair": "Ask what unites a market in a border town."
+    },
+    {
+     "code": "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP.M_G8_CZ8_NOBEL_SPORT",
+     "listen_for": [
+      "For winning a race"
+     ],
+     "ask": "Why did Wangari Maathai win the Nobel Peace Prize?",
+     "repair": "Show a photo of tree planting with the Green Belt Movement."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which country is a member of the East African Community: Rwanda or Egypt?",
+     "answer": "Rwanda",
+     "shows": "EAC"
+    },
+    {
+     "question": "Give one factor that helps East African citizens live in harmony.",
+     "answer": "any of: respect, Kiswahili, trade, the EAC, shared culture",
+     "shows": "harmony"
+    }
+   ]
+  }
+ ]
+}

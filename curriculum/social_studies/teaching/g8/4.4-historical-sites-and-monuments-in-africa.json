@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON",
+ "title": "Historical Sites and Monuments in Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Pyramids of Giza, Great Zimbabwe, Lalibela, Timbuktu, Fort Jesus, Olduvai Gorge.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES",
+   "key_step": "The child places historical sites in Africa, says why they matter and picks ways to conserve them.",
+   "floor": {
+    "prerequisite": "Explains why historic sites matter.",
+    "question": "Give one reason a historic site is important.",
+    "answer": "it teaches history"
+   },
+   "representations": [
+    "an Africa map with pins",
+    "site cards",
+    "conservation cards"
+   ],
+   "steps": [
+    "Name the site.",
+    "Name the country.",
+    "Say why it matters.",
+    "Pick a way to conserve it."
+   ],
+   "contexts": [
+    "the Pyramids of Giza",
+    "Lalibela",
+    "Fort Jesus"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Great Zimbabwe, Lalibela, Timbuktu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Lalibela.",
+     "say": "Which country?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Ethiopia."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_PLACE",
+     "listen_for": [
+      "Egypt"
+     ],
+     "ask": "In which country is Great Zimbabwe?",
+     "repair": "Find the sites on a map of Africa."
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_USELESS",
+     "listen_for": [
+      "They have no use today"
+     ],
+     "ask": "Why are historical sites important?",
+     "repair": "Ask what we would lose without them."
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_CONSERVE",
+     "listen_for": [
+      "Climb the walls and write names"
+     ],
+     "ask": "How should visitors behave at a historical site?",
+     "repair": "Ask what happens when everyone writes on a wall."
+    },
+    {
+     "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES.M_G8_HS_TIMBUKTU_EAST",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is Timbuktu?",
+     "repair": "Pin it on the Africa map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which country is Great Zimbabwe?",
+     "answer": "Zimbabwe",
+     "shows": "place"
+    },
+    {
+     "question": "How should visitors behave at a historical site?",
+     "answer": "follow the guide and leave things as they are",
+     "shows": "conserve"
+    }
+   ]
+  }
+ ]
+}

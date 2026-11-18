@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY",
+ "title": "The Constitution of Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: 18 chapters; Chapter 4 the Bill of Rights; Chapter 6 Leadership and Integrity; Chapter 8 the Legislature, 9 the Executive, 10 the Judiciary (to confirm). Three arms: Legislature makes laws, Executive carries them out, Judiciary interprets them.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION",
+   "key_step": "The child says what the Constitution contains, links the three arms to their work and chapters, and names principles of leadership and integrity.",
+   "floor": {
+    "prerequisite": "Says why the Constitution matters.",
+    "question": "When was the Constitution promulgated?",
+    "answer": "27 August 2010"
+   },
+   "representations": [
+    "the chapter list",
+    "three arm boxes",
+    "principle cards"
+   ],
+   "steps": [
+    "Name the chapters that matter here: 4 and 6.",
+    "Give each arm its work.",
+    "Link each arm to its chapter.",
+    "Name principles of leadership."
+   ],
+   "contexts": [
+    "a bill passed by Parliament",
+    "a court ruling",
+    "a leader stepping aside over integrity"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Chapter 4 and Chapter 6."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Chapter 6.",
+     "say": "What is Chapter 6 about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Leadership and Integrity."
+    },
+    {
+     "beat": "write",
+     "do": "Write three principles: merit, honesty, accountability."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_ARM",
+     "listen_for": [
+      "The Legislature"
+     ],
+     "ask": "Which arm interprets the law and settles disputes?",
+     "repair": "Link each arm to one verb: make, carry out, interpret."
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_CHAPTER",
+     "listen_for": [
+      "Chapter 6"
+     ],
+     "ask": "Which chapter is the Bill of Rights?",
+     "repair": "Look at the table of contents."
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_PRINCIPLE",
+     "listen_for": [
+      "Selection on tribe"
+     ],
+     "ask": "Which is a principle of leadership and integrity?",
+     "repair": "Ask what a fair leader looks for."
+    },
+    {
+     "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION.M_G8_CN_EXEC_LAWS",
+     "listen_for": [
+      "The Executive"
+     ],
+     "ask": "The President signs a bill into law. Which arm made the law?",
+     "repair": "Trace a bill: debated and passed in Parliament, then signed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which arm interprets the law and settles disputes?",
+     "answer": "the Judiciary",
+     "shows": "arm"
+    },
+    {
+     "question": "Which chapter of the Constitution is the Bill of Rights?",
+     "answer": "Chapter 4",
+     "shows": "chapter"
+    }
+   ]
+  }
+ ]
+}

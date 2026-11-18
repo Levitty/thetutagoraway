@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU",
+ "title": "Peaceful Conflict Resolution",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Families differ; use story families only. Practise I-statements (\"I feel... when... I would like...\").",
+ "skills": [
+  {
+   "skill": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT",
+   "key_step": "The child names causes of family conflict, peaceful ways to resolve them and good communication habits.",
+   "floor": {
+    "prerequisite": "Orders the steps of peaceful conflict resolution.",
+    "question": "What is the first step?",
+    "answer": "stay calm and listen to each side"
+   },
+   "representations": [
+    "cause cards",
+    "I-statement frames",
+    "a family story role play"
+   ],
+   "steps": [
+    "Name the cause.",
+    "Choose a peaceful way.",
+    "Use an I-statement.",
+    "Agree and forgive."
+   ],
+   "contexts": [
+    "siblings quarrelling over chores",
+    "a quarrel over land in a family",
+    "a parent and teenager disagreeing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"You never help!\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"You never\".",
+     "say": "How can we say this without blaming?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an I-statement."
+    },
+    {
+     "beat": "write",
+     "do": "Write the I-statement."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_WIN",
+     "listen_for": [
+      "To win the argument"
+     ],
+     "ask": "What is the aim of resolving a family conflict?",
+     "repair": "Ask what happens when one side wins and the other is hurt."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_SILENCE",
+     "listen_for": [
+      "Not speaking to each other for months"
+     ],
+     "ask": "Which is a peaceful way to resolve a conflict?",
+     "repair": "Ask how silence changes the problem."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_FIGHT",
+     "listen_for": [
+      "Asking an elder to help"
+     ],
+     "ask": "Which is NOT a peaceful way?",
+     "repair": "Ask who is hurt when people shout and hit."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT.M_G8_FC_YOU_STATEMENT",
+     "listen_for": [
+      "\"You always take my things!\""
+     ],
+     "ask": "Which sentence helps solve a quarrel with a sibling?",
+     "repair": "Rewrite blaming sentences as I-statements."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one cause of family conflict.",
+     "answer": "any of: poverty, favouritism, disrespect, poor communication, property, chores, alcohol",
+     "shows": "cause"
+    },
+    {
+     "question": "What is the aim of resolving a family conflict?",
+     "answer": "to understand each other and make peace",
+     "shows": "aim"
+    }
+   ]
+  }
+ ]
+}

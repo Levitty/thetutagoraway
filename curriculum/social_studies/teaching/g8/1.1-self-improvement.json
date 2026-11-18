@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT",
+ "title": "Self-Improvement",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep it personal and kind: learners describe their own traits in a private journal, never label each other.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY",
+   "key_step": "The child names traits from what a person usually does, tells a trait from a feeling, and says values shape traits that can change.",
+   "floor": {
+    "prerequisite": "Chooses personal values.",
+    "question": "Which is a personal value: honesty or a phone?",
+    "answer": "honesty"
+   },
+   "representations": [
+    "trait and feeling cards",
+    "short stories of learners",
+    "a private journal page"
+   ],
+   "steps": [
+    "Read what the person does again and again.",
+    "Name the trait.",
+    "Check: is it how they usually are or only now?",
+    "Say which value shapes it."
+   ],
+   "contexts": [
+    "a learner who always finishes work",
+    "a learner who is nervous only on exam day",
+    "a friend who keeps promises"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Otieno finishes his work every day.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"every day\".",
+     "say": "Is this a trait or a feeling?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for trait."
+    },
+    {
+     "beat": "write",
+     "do": "Write perseverance and the value that shapes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_TRAIT_FEELING",
+     "listen_for": [
+      "Feeling angry today"
+     ],
+     "ask": "Which is a personality trait?",
+     "repair": "Ask: is it how you usually are, or how you are right now?"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_TRAIT_FIXED",
+     "listen_for": [
+      "No, traits never change"
+     ],
+     "ask": "Can a person change an unhelpful trait?",
+     "repair": "Ask the child about a habit they have changed."
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_VALUE_TRAIT",
+     "listen_for": [
+      "They do not affect traits"
+     ],
+     "ask": "How do values shape a person?",
+     "repair": "Ask what an honest value does to what a person does."
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_IMPROVEMENT.PERSONALITY.M_G8_PT_LOOKS",
+     "listen_for": [
+      "He is lazy"
+     ],
+     "ask": "A learner wears old shoes. What can you tell about his personality?",
+     "repair": "Ask what the learner actually does in class and at play."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a trait: being patient, or feeling hungry at noon?",
+     "answer": "being patient",
+     "shows": "trait vs feeling"
+    },
+    {
+     "question": "Can a trait such as impatience change?",
+     "answer": "Yes, with effort and good habits",
+     "shows": "traits change"
+    }
+   ]
+  }
+ ]
+}
