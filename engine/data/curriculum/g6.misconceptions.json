@@ -3037,6 +3037,230 @@
   "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
   "status": "draft"
  },
+ "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT.M_CAPACITY_UNIT_FOR_MASS": {
+  "skill": "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT",
+  "error": "Chooses a unit of capacity (litres) for the mass of a heavy load.",
+  "example": {
+   "question": "Which unit is best for the mass of a lorry load of maize?",
+   "wrong_answer": "litres",
+   "correct_answer": "tonnes"
+  },
+  "cause": "Mixes up \"how much it holds\" with \"how heavy it is\".",
+  "reveals": "A capacity unit among the choices.",
+  "help": "Mass answers \"how heavy?\": g, kg or t. Litres answer \"how much does it hold?\".",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES.M_SMALL_PIECES_NEVER_TONNES": {
+  "skill": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES",
+  "error": "Believes a load of small, light things cannot be measured in tonnes.",
+  "example": {
+   "question": "Which is measured in tonnes: a tomato, a crate of tomatoes or a lorry load of tomatoes?",
+   "wrong_answer": "none: tomatoes are light",
+   "correct_answer": "a lorry load of tomatoes"
+  },
+  "cause": "Judges by one piece, not by the whole load.",
+  "reveals": "The answer \"none\" among the choices.",
+  "help": "Ask how many crates fill a lorry: many light things together can be very heavy.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES.M_LIQUID_HAS_NO_MASS": {
+  "skill": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES",
+  "error": "Believes a liquid load is measured only in litres and cannot have a mass in tonnes.",
+  "example": {
+   "question": "Can a tanker carrying 10,000 l of milk be weighed in tonnes?",
+   "wrong_answer": "No, milk is measured in litres",
+   "correct_answer": "Yes: about 10 t (1 l of milk is about 1 kg)"
+  },
+  "cause": "Has met liquids only with capacity units.",
+  "reveals": "A no among the choices.",
+  "help": "A full jerrycan is heavy to carry: liquids have mass too. 1 litre of water is about 1 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP.M_SACKS_MULTIPLIED": {
+  "skill": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP",
+  "error": "Multiplies instead of dividing to find how many sacks make a tonne.",
+  "example": {
+   "question": "How many 50 kg sacks make a tonne?",
+   "wrong_answer": "50,000",
+   "correct_answer": "20"
+  },
+  "cause": "Sees 1,000 and 50 and multiplies.",
+  "reveals": "The product as an option.",
+  "help": "How many 50s are in 1,000? Count in fifties or divide 1,000 by 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP.M_PART_TONNE_FROM_100": {
+  "skill": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP",
+  "error": "Works out a part of a tonne from 100 kg.",
+  "example": {
+   "question": "How many kg is a quarter of a tonne?",
+   "wrong_answer": "25 kg",
+   "correct_answer": "250 kg"
+  },
+  "cause": "Thinks of a tonne as 100 kg, as a metre is 100 cm.",
+  "reveals": "An answer ten times too small as an option.",
+  "help": "A tonne is 1,000 kg: a quarter of 1,000 is 250.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES.M_ESTIMATE_TEN_TIMES_OFF": {
+  "skill": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES",
+  "error": "Gives an estimate ten times too big or too small.",
+  "example": {
+   "question": "A lorry carries 200 bags of 50 kg. About how many tonnes?",
+   "wrong_answer": "100 t",
+   "correct_answer": "10 t"
+  },
+  "cause": "Loses or adds a zero when changing kg to t.",
+  "reveals": "An estimate ten times off as an option.",
+  "help": "Twenty 50 kg bags make a tonne; how many twenties are in 200?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES.M_ONE_ITEM_FOR_LOAD": {
+  "skill": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES",
+  "error": "Gives the mass of one item as the estimate for the whole load.",
+  "example": {
+   "question": "A lorry carries 200 bags of 50 kg. About how heavy is the load?",
+   "wrong_answer": "about 50 kg",
+   "correct_answer": "about 10 t"
+  },
+  "cause": "Reads the mass of one bag off the story.",
+  "reveals": "The mass of one item as an option.",
+  "help": "Ask: is the lorry as heavy as one bag, or as all the bags together?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES.M_KG_PLACE_HOLDER_LOST": {
+  "skill": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES",
+  "error": "Joins the tonnes and kilogrammes without the zero, so the kg part is in the wrong places.",
+  "example": {
+   "question": "2 t 45 kg in kg",
+   "wrong_answer": "2,450 kg",
+   "correct_answer": "2,045 kg"
+  },
+  "cause": "Writes the digits as they are said.",
+  "reveals": "The joined digits as an option.",
+  "help": "The kg part always takes three places: 2 t 045 kg = 2,045 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES.M_KG_TO_T_MULTIPLY": {
+  "skill": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES",
+  "error": "Multiplies by 1,000 to change kg to tonnes.",
+  "example": {
+   "question": "3,000 kg in tonnes",
+   "wrong_answer": "3,000,000 t",
+   "correct_answer": "3 t"
+  },
+  "cause": "Multiplies whenever 1,000 appears.",
+  "reveals": "A huge answer as an option.",
+  "help": "A bigger unit needs fewer of them: divide by 1,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.ADD_TONNES_KG.M_RENAMED_TONNE_NOT_ADDED": {
+  "skill": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG",
+  "error": "Renames 1,000 kg as a tonne but does not add that tonne.",
+  "example": {
+   "question": "2 t 300 kg + 3 t 900 kg",
+   "wrong_answer": "5 t 200 kg",
+   "correct_answer": "6 t 200 kg"
+  },
+  "cause": "Takes 1,000 off the kg and forgets where it goes.",
+  "reveals": "An answer one tonne short.",
+  "help": "Write the new tonne above the tonne column and add it in.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.ADD_TONNES_KG.M_NUMBERS_ADDED_UNITS_IGNORED": {
+  "skill": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG",
+  "error": "Adds the numbers of a tonnes amount and a kg amount as if they were the same unit.",
+  "example": {
+   "question": "3 t + 450 kg",
+   "wrong_answer": "453 kg",
+   "correct_answer": "3 t 450 kg (3,450 kg)"
+  },
+  "cause": "Adds the numbers it sees.",
+  "reveals": "The plain sum of the numbers as an option.",
+  "help": "Change both to kg first: 3,000 kg + 450 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG.M_TONNE_AS_100_KG": {
+  "skill": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG",
+  "error": "Renames 1 tonne as 100 kg when there are too few kg.",
+  "example": {
+   "question": "6 t 50 kg - 2 t 80 kg",
+   "wrong_answer": "3 t 70 kg (5 t 150 kg - 2 t 80 kg)",
+   "correct_answer": "3 t 970 kg"
+  },
+  "cause": "Uses 100 for the rename, as with metres and centimetres.",
+  "reveals": "An answer from renaming with 100.",
+  "help": "1 t is 1,000 kg: 6 t 50 kg becomes 5 t 1,050 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG.M_KG_COPIED_FROM_NOTHING": {
+  "skill": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG",
+  "error": "Takes kg from whole tonnes by taking a tonne off and copying the kg.",
+  "example": {
+   "question": "4 t - 350 kg",
+   "wrong_answer": "3 t 350 kg",
+   "correct_answer": "3 t 650 kg"
+  },
+  "cause": "Has no kg to take from, so writes the 350 down.",
+  "reveals": "The answer with the kg copied.",
+  "help": "Rename one tonne: 4 t = 3 t 1,000 kg; 1,000 - 350 = 650.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG.M_RENAMED_T_NOT_ADDED_MULT": {
+  "skill": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG",
+  "error": "Renames the kg product but drops the tonnes it makes.",
+  "example": {
+   "question": "2 t 600 kg x 4",
+   "wrong_answer": "8 t 400 kg",
+   "correct_answer": "10 t 400 kg"
+  },
+  "cause": "Writes the leftover kg and forgets the new tonnes.",
+  "reveals": "An answer two tonnes short.",
+  "help": "Write the new tonnes above the tonne column and add them.",
+  "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG.M_KG_RENAMED_BY_100": {
+  "skill": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG",
+  "error": "Renames kg as tonnes by dividing by 100.",
+  "example": {
+   "question": "2 t 600 kg x 4",
+   "wrong_answer": "32 t (2,400 kg taken as 24 t)",
+   "correct_answer": "10 t 400 kg"
+  },
+  "cause": "Uses 100 instead of 1,000.",
+  "reveals": "A far too heavy answer as an option.",
+  "help": "1,000 kg make a tonne: 2,400 kg is 2 t 400 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG.M_SHARE_KG_ONLY": {
+  "skill": "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG",
+  "error": "Divides the kg and keeps the tonnes as they were.",
+  "example": {
+   "question": "8 t 400 kg shared equally by 4 lorries",
+   "wrong_answer": "8 t 100 kg",
+   "correct_answer": "2 t 100 kg"
+  },
+  "cause": "Divides one part only.",
+  "reveals": "The answer with the tonnes not divided.",
+  "help": "Every part is shared: 8 t / 4 and 400 kg / 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_NOON_IS_AM": {
   "skill": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
   "error": "Believes the hours just before and after noon are both a.m.",
