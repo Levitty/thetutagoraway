@@ -104,6 +104,14 @@
    ],
    "mastery": "The child says iron rusts when it meets both air (oxygen) and water, and rusting weakens metal, and that painting, oiling, galvanising and plating keep air and water away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says pure water is colourless, odourless and tasteless, boils at 100 degrees Celsius and freezes at 0 degrees Celsius at sea level, has a density of about 1 g per cm3, expands when it freezes (so ice floats) and dissolves many substances, and uses these to tell pure water from impure water. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT": {
    "forms": [
     "pick the right answer",
@@ -199,6 +207,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says a concave mirror curves inwards and converges light, a convex mirror curves outwards and spreads it, and that a convex mirror always forms a small, upright, virtual image. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child uses two rays from the top of the object (one parallel to the principal axis, reflected through the focus F, or away from it for a convex mirror; one through the centre of curvature C, reflected back on itself) and says where they meet is the image: for a concave mirror with the object beyond C the image is between F and C, real, inverted and smaller; with the object between F and the mirror the image is behind the mirror, virtual, upright and larger; a convex mirror always gives a virtual, upright, smaller image behind it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES": {
    "forms": [

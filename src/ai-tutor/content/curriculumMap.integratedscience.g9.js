@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/integrated_science/g9.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Integrated Science teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/integrated_science/g9.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting an Integrated Science teacher's review; depth pass 18 Nov 2026 (own cause and repair for every misconception, two new skills for outcomes 1.3 a and 3.1 b, prerequisites to Grades 4-8, four misconceptions per skill, teaching pack in curriculum/integrated_science/teaching/g9)"};
 export const SUBSTRANDS = {
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM": {
   "name": "Structure of the atom",
@@ -303,7 +303,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_AP_ELECTRON",
    "M_IS9_AP_CHARGE",
-   "M_IS9_AP_PROTON"
+   "M_IS9_AP_PROTON",
+   "M_IS9_AP_ATOM_CHARGED"
   ]
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER": {
@@ -319,7 +320,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_MN_ADD",
    "M_IS9_MN_ELECTRON",
-   "M_IS9_MN_ATOMIC"
+   "M_IS9_MN_ATOMIC",
+   "M_IS9_MN_NEUTRONS_FROM_MASS"
   ]
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR": {
@@ -335,7 +337,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_EA_FIRST",
    "M_IS9_EA_SODIUM",
-   "M_IS9_EA_SECOND"
+   "M_IS9_EA_SECOND",
+   "M_IS9_EA_SKIP_SHELL"
   ]
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL": {
@@ -351,7 +354,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_MM_CARBON",
    "M_IS9_MM_COPPER",
-   "M_IS9_MM_CONDUCT"
+   "M_IS9_MM_CONDUCT",
+   "M_IS9_MM_SOLID_IS_METAL"
   ]
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS": {
@@ -368,7 +372,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_MP_MALLEABLE",
    "M_IS9_MP_DUCTILE",
-   "M_IS9_MP_USE"
+   "M_IS9_MP_USE",
+   "M_IS9_MP_ALL_MAGNETIC"
   ]
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS": {
@@ -385,7 +390,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_AL_MEANING",
    "M_IS9_AL_BRASS",
-   "M_IS9_AL_STEEL"
+   "M_IS9_AL_STEEL",
+   "M_IS9_AL_WEAKER"
   ]
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING": {
@@ -401,7 +407,23 @@ export const SKILLS = {
   "mis": [
    "M_IS9_RU_NEED",
    "M_IS9_RU_PREVENT",
-   "M_IS9_RU_EFFECT"
+   "M_IS9_RU_EFFECT",
+   "M_IS9_RU_ALL_METALS"
+  ]
+ },
+ "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES": {
+  "name": "Describe the physical properties of pure water",
+  "sub": "INTE.G9.MIXTUR.WATER_HARDNESS",
+  "outcome": "INTE.G9.MIXTUR.WATER_HARDNESS.a",
+  "outcomes": [
+   "INTE.G9.MIXTUR.WATER_HARDNESS.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_IS9_WA_BOIL_ANY",
+   "M_IS9_WA_ICE_HEAVIER",
+   "M_IS9_WA_PURE_TASTE",
+   "M_IS9_WA_DISSOLVES_NOTHING"
   ]
  },
  "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT": {
@@ -413,11 +435,14 @@ export const SKILLS = {
    "INTE.G9.MIXTUR.WATER_HARDNESS.c",
    "INTE.G9.MIXTUR.WATER_HARDNESS.d"
   ],
-  "pre": [],
+  "pre": [
+   "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES"
+  ],
   "mis": [
    "M_IS9_HS_LATHER",
    "M_IS9_HS_SCALE",
-   "M_IS9_HS_SOFTEN"
+   "M_IS9_HS_SOFTEN",
+   "M_IS9_HS_HARD_DIRTY"
   ]
  },
  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS": {
@@ -432,7 +457,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_LP_STOMATA",
    "M_IS9_LP_CHLORO",
-   "M_IS9_LP_BROAD"
+   "M_IS9_LP_BROAD",
+   "M_IS9_LP_VEINS_BLOOD"
   ]
  },
  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS": {
@@ -449,7 +475,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_PS_GAS",
    "M_IS9_PS_PRODUCT",
-   "M_IS9_PS_TEST"
+   "M_IS9_PS_TEST",
+   "M_IS9_PS_SOIL_FOOD"
   ]
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION": {
@@ -464,7 +491,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_AN_HERBI",
    "M_IS9_AN_CARNI",
-   "M_IS9_AN_OMNI"
+   "M_IS9_AN_OMNI",
+   "M_IS9_AN_ONLY_THREE"
   ]
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH": {
@@ -480,7 +508,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_TE_CANINE",
    "M_IS9_TE_INCISOR",
-   "M_IS9_TE_MOLAR"
+   "M_IS9_TE_MOLAR",
+   "M_IS9_TE_ALL_SAME"
   ]
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION": {
@@ -496,7 +525,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_DG_START",
    "M_IS9_DG_ABSORB",
-   "M_IS9_DG_WATER"
+   "M_IS9_DG_WATER",
+   "M_IS9_DG_STOMACH_ABSORBS_ALL"
   ]
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS": {
@@ -504,13 +534,15 @@ export const SKILLS = {
   "sub": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS",
   "outcome": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a",
   "outcomes": [
-   "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a"
+   "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a",
+   "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.f"
   ],
   "pre": [],
   "mis": [
    "M_IS9_FP_STAMEN",
    "M_IS9_FP_CARPEL",
-   "M_IS9_FP_PETAL"
+   "M_IS9_FP_PETAL",
+   "M_IS9_FP_ONLY_BEAUTY"
   ]
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION": {
@@ -527,7 +559,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_PL_MEANING",
    "M_IS9_PL_WIND",
-   "M_IS9_PL_INSECT"
+   "M_IS9_PL_INSECT",
+   "M_IS9_PL_SELF_NEVER"
   ]
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL": {
@@ -544,7 +577,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_FD_FRUIT",
    "M_IS9_FD_SEED",
-   "M_IS9_FD_WIND"
+   "M_IS9_FD_WIND",
+   "M_IS9_FD_WATER_ANY"
   ]
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC": {
@@ -558,7 +592,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_BA_LIGHT",
    "M_IS9_BA_PLANT",
-   "M_IS9_BA_WATER"
+   "M_IS9_BA_WATER",
+   "M_IS9_BA_DEAD_ABIOTIC_NEVER"
   ]
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS": {
@@ -575,7 +610,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_FC_START",
    "M_IS9_FC_ARROW",
-   "M_IS9_FC_HUMAN"
+   "M_IS9_FC_HUMAN",
+   "M_IS9_FC_REMOVE_NO_EFFECT"
   ]
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS": {
@@ -590,7 +626,25 @@ export const SKILLS = {
   "mis": [
    "M_IS9_CV_CONCAVE",
    "M_IS9_CV_CONVEX",
-   "M_IS9_CV_IMAGE"
+   "M_IS9_CV_IMAGE",
+   "M_IS9_CV_CONCAVE_ALWAYS_BIG"
+  ]
+ },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS": {
+  "name": "Use the rules of ray diagrams to locate the image in a concave or convex mirror",
+  "sub": "INTE.G9.FORCE_.CURVED_MIRRORS",
+  "outcome": "INTE.G9.FORCE_.CURVED_MIRRORS.b",
+  "outcomes": [
+   "INTE.G9.FORCE_.CURVED_MIRRORS.b"
+  ],
+  "pre": [
+   "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS"
+  ],
+  "mis": [
+   "M_IS9_RD_ONE_RAY",
+   "M_IS9_RD_PARALLEL_RULE",
+   "M_IS9_RD_CONVEX_REAL",
+   "M_IS9_RD_CLOSE_INVERTED"
   ]
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES": {
@@ -606,7 +660,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_MU_DRIVING",
    "M_IS9_MU_SHAVING",
-   "M_IS9_MU_SECURITY"
+   "M_IS9_MU_SECURITY",
+   "M_IS9_MU_TORCH_CONVEX"
   ]
  },
  "INTE.G9.FORCE_.WAVES.WAVE_TYPES": {
@@ -621,7 +676,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_WT_SOUND",
    "M_IS9_WT_WATER",
-   "M_IS9_WT_DIR"
+   "M_IS9_WT_DIR",
+   "M_IS9_WT_WATER_TRAVELS"
   ]
  },
  "INTE.G9.FORCE_.WAVES.WAVE_PARTS": {
@@ -639,7 +695,8 @@ export const SKILLS = {
   "mis": [
    "M_IS9_WP_CREST",
    "M_IS9_WP_FREQ",
-   "M_IS9_WP_LENGTH"
+   "M_IS9_WP_LENGTH",
+   "M_IS9_WP_AMPLITUDE_SPEED"
   ]
  }
 };
@@ -656,6 +713,10 @@ export const MIS_FEEDBACK = {
  "M_IS9_MM_CARBON": "Carbon is a non-metal.",
  "M_IS9_MM_COPPER": "Copper is a metal.",
  "M_IS9_MM_CONDUCT": "Metals conduct electricity.",
+ "M_IS9_AP_ATOM_CHARGED": "An atom has equal numbers of protons and electrons, so it has no overall charge.",
+ "M_IS9_MN_NEUTRONS_FROM_MASS": "Neutrons = mass number - atomic number. For sodium, 23 - 11 = 12.",
+ "M_IS9_EA_SKIP_SHELL": "Shells fill from the inside: the first shell takes 2 before any go into the second.",
+ "M_IS9_MM_SOLID_IS_METAL": "Some non-metals are solids, such as sulphur and carbon. Sort by properties, not by state.",
  "M_IS9_MP_MALLEABLE": "Malleable metals can be hammered into sheets.",
  "M_IS9_MP_DUCTILE": "Ductile metals can be drawn into wires.",
  "M_IS9_MP_USE": "Copper conducts electricity well.",
@@ -665,15 +726,25 @@ export const MIS_FEEDBACK = {
  "M_IS9_RU_NEED": "Iron needs both air and water to rust.",
  "M_IS9_RU_PREVENT": "Painting or oiling keeps air and water away.",
  "M_IS9_RU_EFFECT": "Rust weakens iron.",
+ "M_IS9_MP_ALL_MAGNETIC": "Most metals are not magnetic. Aluminium is a metal because it shines, bends and conducts.",
+ "M_IS9_AL_WEAKER": "Alloys are made to be stronger, harder or last longer than the pure metal.",
+ "M_IS9_RU_ALL_METALS": "Only iron and steel rust. Other metals can tarnish or corrode but do not form rust.",
  "M_IS9_HS_LATHER": "Soft water lathers easily.",
  "M_IS9_HS_SCALE": "Hard water leaves scale.",
  "M_IS9_HS_SOFTEN": "Boiling softens temporary hard water.",
+ "M_IS9_WA_BOIL_ANY": "Pure water boils at 100 degrees Celsius at sea level.",
+ "M_IS9_WA_ICE_HEAVIER": "Ice is less dense than water, so it floats.",
+ "M_IS9_WA_PURE_TASTE": "Pure water has no colour, smell or taste.",
+ "M_IS9_WA_DISSOLVES_NOTHING": "Water dissolves many substances, solids and gases.",
+ "M_IS9_HS_HARD_DIRTY": "Hard water has dissolved salts. It can be clean and safe; it only lathers poorly and leaves scale.",
  "M_IS9_LP_STOMATA": "Stomata let gases in and out.",
  "M_IS9_LP_CHLORO": "Chlorophyll is in chloroplasts in the leaves.",
  "M_IS9_LP_BROAD": "A broad, thin leaf catches light.",
  "M_IS9_PS_GAS": "Plants use carbon dioxide.",
  "M_IS9_PS_PRODUCT": "Photosynthesis gives off oxygen.",
  "M_IS9_PS_TEST": "Iodine turns blue-black with starch.",
+ "M_IS9_LP_VEINS_BLOOD": "Leaf veins carry water and minerals in and food out. They also hold the leaf open.",
+ "M_IS9_PS_SOIL_FOOD": "Plants make their own food in their leaves. Roots take in water and minerals, not food.",
  "M_IS9_AN_HERBI": "A herbivore eats plants only.",
  "M_IS9_AN_CARNI": "A carnivore eats flesh.",
  "M_IS9_AN_OMNI": "An omnivore eats both.",
@@ -683,6 +754,9 @@ export const MIS_FEEDBACK = {
  "M_IS9_DG_START": "Digestion starts in the mouth.",
  "M_IS9_DG_ABSORB": "Digested food is absorbed in the small intestine.",
  "M_IS9_DG_WATER": "Water is absorbed in the large intestine.",
+ "M_IS9_AN_ONLY_THREE": "Some animals are parasites: they feed on another living animal, like a tick on a cow.",
+ "M_IS9_TE_ALL_SAME": "Teeth suit the food. Herbivores have broad grinding teeth; carnivores have big canines for tearing.",
+ "M_IS9_DG_STOMACH_ABSORBS_ALL": "The stomach starts protein digestion, but digestion is completed and food absorbed in the small intestine.",
  "M_IS9_FP_STAMEN": "The stamen is the male part.",
  "M_IS9_FP_CARPEL": "The carpel is the female part.",
  "M_IS9_FP_PETAL": "Petals attract insects.",
@@ -692,22 +766,35 @@ export const MIS_FEEDBACK = {
  "M_IS9_FD_FRUIT": "The ovary becomes the fruit.",
  "M_IS9_FD_SEED": "The ovule becomes the seed.",
  "M_IS9_FD_WIND": "Wind-dispersed seeds have wings or hairs.",
+ "M_IS9_FP_ONLY_BEAUTY": "Flowers make seeds for new plants, and give food to insects, birds and people.",
+ "M_IS9_PL_SELF_NEVER": "Self-pollination is pollen reaching a stigma of the same flower or plant; cross-pollination is from another plant.",
+ "M_IS9_FD_WATER_ANY": "Water-dispersed fruits float, like the coconut with its air-filled husk.",
  "M_IS9_BA_LIGHT": "Sunlight is non-living.",
  "M_IS9_BA_PLANT": "A plant is living.",
  "M_IS9_BA_WATER": "Water is non-living.",
  "M_IS9_FC_START": "A food chain starts with a producer.",
  "M_IS9_FC_ARROW": "Arrows show energy moving to the eater.",
  "M_IS9_FC_HUMAN": "Cutting forests upsets food webs.",
+ "M_IS9_BA_DEAD_ABIOTIC_NEVER": "Dead plants and animals are part of the living web: decomposers feed on them and return minerals to the soil.",
+ "M_IS9_FC_REMOVE_NO_EFFECT": "In a food web one change spreads: fewer snakes can mean more rats and more damage to crops.",
  "M_IS9_CV_CONCAVE": "A concave mirror curves inwards.",
  "M_IS9_CV_CONVEX": "A convex mirror curves outwards.",
  "M_IS9_CV_IMAGE": "A convex mirror forms a small, upright, virtual image.",
  "M_IS9_MU_DRIVING": "Driving mirrors are convex for a wide view.",
  "M_IS9_MU_SHAVING": "A shaving mirror is concave for a larger image.",
  "M_IS9_MU_SECURITY": "Convex mirrors give a wide view.",
+ "M_IS9_RD_ONE_RAY": "Two rays are needed; the image is where they cross.",
+ "M_IS9_RD_PARALLEL_RULE": "A ray parallel to the axis reflects through F.",
+ "M_IS9_RD_CONVEX_REAL": "A convex mirror always forms a virtual image behind it.",
+ "M_IS9_RD_CLOSE_INVERTED": "Close to a concave mirror, the image is upright, larger and virtual.",
+ "M_IS9_CV_CONCAVE_ALWAYS_BIG": "A concave mirror magnifies only when you are close. From far away the image is upside down and smaller.",
+ "M_IS9_MU_TORCH_CONVEX": "A torch uses a concave mirror. The bulb at the focus gives a strong, parallel beam.",
  "M_IS9_WT_SOUND": "Sound is a longitudinal wave.",
  "M_IS9_WT_WATER": "Water waves are transverse.",
  "M_IS9_WT_DIR": "Transverse particles move at right angles.",
  "M_IS9_WP_CREST": "The crest is the highest point.",
  "M_IS9_WP_FREQ": "Frequency is measured in hertz.",
- "M_IS9_WP_LENGTH": "The distance between two crests is the wavelength."
+ "M_IS9_WP_LENGTH": "The distance between two crests is the wavelength.",
+ "M_IS9_WT_WATER_TRAVELS": "A wave carries energy, not the water. The leaf only bobs up and down as the wave passes.",
+ "M_IS9_WP_AMPLITUDE_SPEED": "Amplitude is the height of the wave and shows its energy. It does not change the speed in the same rope."
 };

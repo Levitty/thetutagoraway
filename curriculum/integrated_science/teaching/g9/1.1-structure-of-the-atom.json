@@ -1,0 +1,371 @@
+{
+ "sub_strand": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM",
+ "title": "Structure of the atom",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Build atoms with bottle tops: one colour each for protons, neutrons and electrons, the nucleus in the middle and the shells as rings of string on the desk. Dot-and-cross drawings come after the model. The periodic table is used only for the first twenty elements.",
+ "skills": [
+  {
+   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+   "key_step": "The child places protons (positive) and neutrons (no charge) in the nucleus and electrons (negative) in shells around it, and says the atom is neutral because protons and electrons are equal in number.",
+   "floor": {
+    "prerequisite": "Knows an atom is the smallest particle of an element.",
+    "question": "What is an element made of?",
+    "answer": "one kind of atom"
+   },
+   "representations": [
+    "a bottle-top atom on the desk",
+    "a labelled drawing of a carbon atom",
+    "a table: particle, charge, where"
+   ],
+   "steps": [
+    "The nucleus: protons and neutrons.",
+    "The shells: electrons.",
+    "Charges: proton +, electron -, neutron none.",
+    "Equal protons and electrons: no overall charge."
+   ],
+   "contexts": [
+    "carbon in charcoal",
+    "oxygen in the air",
+    "a model in the science room"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a nucleus with 6 + and 6 neutral dots and a ring of 6 electrons."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ring.",
+     "say": "Which particles are here, and what charge do they have?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"electrons, negative\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the overall charge of the atom is."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_ELECTRON",
+     "listen_for": [
+      "electrons are in the nucleus"
+     ],
+     "ask": "What is on the rings around the nucleus?",
+     "repair": "Electrons are in shells around the nucleus."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_CHARGE",
+     "listen_for": [
+      "the neutron is positive"
+     ],
+     "ask": "What does \"neutral\" mean?",
+     "repair": "Neutrons have no charge."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_PROTON",
+     "listen_for": [
+      "the proton is negative"
+     ],
+     "ask": "Proton and positive: what letter do they share?",
+     "repair": "Protons are positive."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_ATOM_CHARGED",
+     "listen_for": [
+      "the atom is positive"
+     ],
+     "ask": "What do +6 and -6 add to?",
+     "repair": "Equal charges cancel; the atom is neutral."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which particles are in the nucleus?",
+     "answer": "protons and neutrons",
+     "shows": "nucleus"
+    },
+    {
+     "question": "Why is an atom neutral?",
+     "answer": "it has equal numbers of protons and electrons",
+     "shows": "neutral"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
+   "key_step": "The child works out the mass number as protons plus neutrons, the atomic number as protons, and the neutrons as mass number minus atomic number.",
+   "floor": {
+    "prerequisite": "Knows the particles in the nucleus.",
+    "question": "Which particles are in the nucleus?",
+    "answer": "protons and neutrons"
+   },
+   "representations": [
+    "an element box: symbol with mass number on top and atomic number below",
+    "counters for protons and neutrons",
+    "a table of the first twenty elements"
+   ],
+   "steps": [
+    "Atomic number: count the protons.",
+    "Mass number: protons + neutrons.",
+    "Neutrons: mass number - atomic number.",
+    "Check with counters."
+   ],
+   "contexts": [
+    "carbon-12",
+    "sodium in salt",
+    "the periodic table on the classroom wall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Na with 23 above and 11 below."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 11.",
+     "say": "What does this number count?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"protons\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how many neutrons sodium has."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ADD",
+     "listen_for": [
+      "6 - 6 = 0"
+     ],
+     "ask": "What is in the nucleus that adds to the mass?",
+     "repair": "Mass number = protons + neutrons."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ELECTRON",
+     "listen_for": [
+      "protons and electrons"
+     ],
+     "ask": "How heavy is an electron compared with a proton?",
+     "repair": "Electrons are left out of the mass number."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ATOMIC",
+     "listen_for": [
+      "the atomic number is neutrons"
+     ],
+     "ask": "Which number is the smaller one in the box?",
+     "repair": "The atomic number counts protons."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_NEUTRONS_FROM_MASS",
+     "listen_for": [
+      "23 + 11 = 34"
+     ],
+     "ask": "Mass number = protons + ? Cover the neutrons.",
+     "repair": "Neutrons = mass number - atomic number."
+    }
+   ],
+   "checks": [
+    {
+     "question": "An atom has 8 protons and 8 neutrons. What is its mass number?",
+     "answer": "16",
+     "shows": "add"
+    },
+    {
+     "question": "Chlorine has mass number 35 and atomic number 17. How many neutrons?",
+     "answer": "18",
+     "shows": "subtract"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
+   "key_step": "The child writes the electron arrangement of the first twenty elements by filling shells from the inside (2, then 8, then 8, then 2) and draws it as dots or crosses on rings.",
+   "floor": {
+    "prerequisite": "Knows the atomic number counts protons, and an atom has as many electrons.",
+    "question": "How many electrons does an atom with atomic number 11 have?",
+    "answer": "11"
+   },
+   "representations": [
+    "rings of string and counters",
+    "dot-and-cross drawings",
+    "a table of arrangements"
+   ],
+   "steps": [
+    "Count the electrons (= atomic number).",
+    "Fill the first shell: up to 2.",
+    "Then the second: up to 8; then the third: up to 8.",
+    "Write it: sodium 2, 8, 1."
+   ],
+   "contexts": [
+    "sodium in table salt",
+    "chlorine in water treatment",
+    "neon in a sign"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three rings around a nucleus."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"chlorine, 17 electrons\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how many go in each shell."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"2, 8, 7\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the dots."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_FIRST",
+     "listen_for": [
+      "8 in the first shell"
+     ],
+     "ask": "How many does helium have, and is its first shell full?",
+     "repair": "The first shell holds 2."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SODIUM",
+     "listen_for": [
+      "2, 9"
+     ],
+     "ask": "How many can the second shell hold?",
+     "repair": "Sodium is 2, 8, 1."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SECOND",
+     "listen_for": [
+      "18 in the second shell"
+     ],
+     "ask": "What is neon's arrangement?",
+     "repair": "The second shell holds 8."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SKIP_SHELL",
+     "listen_for": [
+      "1, 2"
+     ],
+     "ask": "Which shell fills first?",
+     "repair": "Fill from the inside out."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the electron arrangement of magnesium (12 electrons).",
+     "answer": "2, 8, 2",
+     "shows": "arrangement"
+    },
+    {
+     "question": "How many electrons can the second shell hold?",
+     "answer": "8",
+     "shows": "shell rule"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+   "key_step": "The child sorts elements into metals (shiny, conduct heat and electricity, malleable, ductile: iron, copper, zinc, aluminium) and non-metals (mostly dull, brittle, poor conductors: carbon, sulphur, oxygen, chlorine) by their properties.",
+   "floor": {
+    "prerequisite": "Knows uses of common elements.",
+    "question": "Which element is used in electric wires?",
+    "answer": "copper"
+   },
+   "representations": [
+    "samples: a nail, copper wire, foil, charcoal",
+    "a bulb circuit to test conduction",
+    "a sorting table"
+   ],
+   "steps": [
+    "Look: shiny or dull?",
+    "Test: does it conduct in the circuit?",
+    "Bend or hammer: does it bend or break?",
+    "Sort by most properties."
+   ],
+   "contexts": [
+    "iron sheets on a roof",
+    "charcoal in a jiko",
+    "sulphur in a farm spray"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bulb circuit with a gap."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether the bulb lights with a nail and with charcoal in the gap."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"nail: lights (metal); charcoal: dim or not (non-metal)\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_CARBON",
+     "listen_for": [
+      "carbon is a metal"
+     ],
+     "ask": "Does charcoal bend or break?",
+     "repair": "Carbon is a non-metal."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_COPPER",
+     "listen_for": [
+      "copper is a non-metal"
+     ],
+     "ask": "Does copper wire bend and conduct?",
+     "repair": "Copper is a metal."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_CONDUCT",
+     "listen_for": [
+      "non-metals conduct"
+     ],
+     "ask": "Which one lit the bulb?",
+     "repair": "Metals conduct electricity."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_SOLID_IS_METAL",
+     "listen_for": [
+      "solids are metals"
+     ],
+     "ask": "Is sulphur shiny or malleable?",
+     "repair": "Sort by properties, not by state."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is sulphur a metal or a non-metal?",
+     "answer": "a non-metal",
+     "shows": "sort"
+    },
+    {
+     "question": "Give two properties of metals.",
+     "answer": "any two: shiny, conduct heat and electricity, malleable, ductile",
+     "shows": "properties"
+    }
+   ]
+  }
+ ]
+}

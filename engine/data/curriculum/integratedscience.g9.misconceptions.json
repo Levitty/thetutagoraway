@@ -1,375 +1,555 @@
 {
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_ELECTRON": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
-  "error": "Puts electrons in the nucleus.",
+  "error": "Puts the electrons in the nucleus with the protons and neutrons.",
   "example": {
    "question": "Where are electrons found?",
    "wrong_answer": "In the nucleus",
    "correct_answer": "In shells around the nucleus"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Pictures the atom as one solid ball with everything packed in the middle.",
   "reveals": "Offer \"In the nucleus\" next to the right answer and ask the question again in a new situation.",
-  "help": "Electrons move in shells around the nucleus.",
+  "help": "Draw the nucleus as a dot and the shells as rings; place each particle on the drawing.",
   "feedback": "Electrons move in shells around the nucleus.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_CHARGE": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
-  "error": "Gives neutrons a charge.",
+  "error": "Gives the neutron a positive charge, like the proton beside it in the nucleus.",
   "example": {
    "question": "Which particle has no charge?",
    "wrong_answer": "Proton",
    "correct_answer": "Neutron"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Learns the two nucleus particles together and gives them the same charge.",
   "reveals": "Offer \"Proton\" next to the right answer and ask the question again in a new situation.",
-  "help": "Neutrons have no charge.",
+  "help": "Link the word: neutron, neutral, no charge.",
   "feedback": "Neutrons have no charge.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_PROTON": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
-  "error": "Gives protons a negative charge.",
+  "error": "Gives the proton a negative charge and the electron a positive one.",
   "example": {
    "question": "Which particle is positive?",
    "wrong_answer": "Electron",
    "correct_answer": "Proton"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the two charged particles because both are learnt in one sentence.",
   "reveals": "Offer \"Electron\" next to the right answer and ask the question again in a new situation.",
-  "help": "Protons are positive.",
+  "help": "Proton, positive: both start with P.",
   "feedback": "Protons are positive.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ADD": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
-  "error": "Subtracts instead of adding.",
+  "error": "Subtracts the neutrons from the protons to get the mass number (6 - 6 = 0).",
   "example": {
    "question": "An atom has 6 protons and 6 neutrons. What is the mass number?",
    "wrong_answer": "0",
    "correct_answer": "12"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Has met \"neutrons = mass number - atomic number\" and uses subtraction the wrong way round.",
   "reveals": "Offer \"0\" next to the right answer and ask the question again in a new situation.",
-  "help": "Add the protons and neutrons.",
+  "help": "Count the particles in the nucleus: every proton and every neutron adds to the mass.",
   "feedback": "Add the protons and neutrons.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ELECTRON": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
-  "error": "Counts electrons in the mass number.",
+  "error": "Adds the electrons into the mass number.",
   "example": {
    "question": "The mass number counts which particles?",
    "wrong_answer": "Protons and electrons",
    "correct_answer": "Protons and neutrons"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks every particle of the atom must count towards its mass.",
   "reveals": "Offer \"Protons and electrons\" next to the right answer and ask the question again in a new situation.",
-  "help": "The mass number counts protons and neutrons.",
+  "help": "Electrons are so light that they are left out; the mass is in the nucleus.",
   "feedback": "The mass number counts protons and neutrons.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_ATOMIC": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
-  "error": "Mixes atomic and mass number.",
+  "error": "Says the atomic number is the number of neutrons.",
   "example": {
    "question": "The atomic number is the number of...",
    "wrong_answer": "neutrons",
    "correct_answer": "protons"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes the two numbers, which are taught on one line of the table.",
   "reveals": "Offer \"neutrons\" next to the right answer and ask the question again in a new situation.",
-  "help": "The atomic number is the number of protons.",
+  "help": "Atomic number: protons only. Mass number: protons and neutrons.",
   "feedback": "The atomic number is the number of protons.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_FIRST": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
-  "error": "Puts 8 in the first shell.",
+  "error": "Puts 8 electrons in the first shell.",
   "example": {
    "question": "How many electrons can the first shell hold?",
    "wrong_answer": "8",
    "correct_answer": "2"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Remembers 8 from the second shell and uses it for every shell.",
   "reveals": "Offer \"8\" next to the right answer and ask the question again in a new situation.",
-  "help": "The first shell holds up to 2 electrons.",
+  "help": "Draw the shells for helium (2) and neon (2, 8) side by side.",
   "feedback": "The first shell holds up to 2 electrons.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SODIUM": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
-  "error": "Gives the wrong sodium arrangement.",
+  "error": "Writes sodium (11 electrons) as 2, 9, putting more than 8 in the second shell.",
   "example": {
    "question": "What is the electron arrangement of sodium (11 electrons)?",
    "wrong_answer": "2, 9",
    "correct_answer": "2, 8, 1"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Fills two shells only and does not open a third when the second is full.",
   "reveals": "Offer \"2, 9\" next to the right answer and ask the question again in a new situation.",
-  "help": "Sodium is 2, 8, 1.",
+  "help": "Fill shell by shell: 2, then up to 8, then start the next.",
   "feedback": "Sodium is 2, 8, 1.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SECOND": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
-  "error": "Puts 18 in the second shell.",
+  "error": "Puts 18 electrons in the second shell.",
   "example": {
    "question": "How many electrons can the second shell hold?",
    "wrong_answer": "18",
    "correct_answer": "8"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Has seen 18 for a later shell in a book and moves it to the second.",
   "reveals": "Offer \"18\" next to the right answer and ask the question again in a new situation.",
-  "help": "The second shell holds up to 8 electrons.",
+  "help": "For the first twenty elements: 2, 8, 8, 2.",
   "feedback": "The second shell holds up to 8 electrons.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_CARBON": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
-  "error": "Calls carbon a metal.",
+  "error": "Calls carbon (charcoal, graphite) a metal because graphite is shiny and conducts.",
   "example": {
    "question": "Which is a non-metal?",
    "wrong_answer": "Iron",
    "correct_answer": "Carbon"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Graphite in a pencil is grey and shiny, so it looks like a metal.",
   "reveals": "Offer \"Iron\" next to the right answer and ask the question again in a new situation.",
-  "help": "Carbon is a non-metal.",
+  "help": "Sort by most properties: carbon is brittle and not malleable, so it is a non-metal (graphite is an odd one that conducts).",
   "feedback": "Carbon is a non-metal.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_COPPER": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
-  "error": "Calls copper a non-metal.",
+  "error": "Calls copper a non-metal because it is reddish, not silver.",
   "example": {
    "question": "Which is a metal?",
    "wrong_answer": "Sulphur",
    "correct_answer": "Copper"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Expects every metal to be silver-grey.",
   "reveals": "Offer \"Sulphur\" next to the right answer and ask the question again in a new situation.",
-  "help": "Copper is a metal.",
+  "help": "Test copper wire: it bends, shines and conducts, so it is a metal.",
   "feedback": "Copper is a metal.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_CONDUCT": {
   "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
-  "error": "Says non-metals conduct.",
+  "error": "Says metals are dull and brittle and non-metals conduct electricity.",
   "example": {
    "question": "Which property do metals usually have?",
    "wrong_answer": "They are dull and brittle",
    "correct_answer": "They conduct electricity"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the two property lists learnt side by side.",
   "reveals": "Offer \"They are dull and brittle\" next to the right answer and ask the question again in a new situation.",
-  "help": "Metals conduct electricity.",
+  "help": "Hold a nail and a lump of charcoal in a circuit with a bulb: only the nail lights it.",
   "feedback": "Metals conduct electricity.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS.M_IS9_AP_ATOM_CHARGED": {
+  "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ATOM_PARTS",
+  "error": "Thinks a whole atom has a charge because it has charged particles in it.",
+  "example": {
+   "question": "An atom has 6 protons and 6 electrons. What is its overall charge?",
+   "wrong_answer": "Positive, it has protons",
+   "correct_answer": "None: the 6 positive and 6 negative charges cancel"
+  },
+  "cause": "Counts only one kind of charged particle.",
+  "reveals": "Offer \"Positive, it has protons\" next to the right answer and ask the question again in a new context.",
+  "help": "Put +6 and -6 counters together: they add to zero.",
+  "feedback": "An atom has equal numbers of protons and electrons, so it has no overall charge.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER.M_IS9_MN_NEUTRONS_FROM_MASS": {
+  "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER",
+  "error": "Finds the number of neutrons by adding the atomic number to the mass number instead of subtracting.",
+  "example": {
+   "question": "Sodium has mass number 23 and atomic number 11. How many neutrons?",
+   "wrong_answer": "34",
+   "correct_answer": "12"
+  },
+  "cause": "Knows both numbers are needed but not which operation.",
+  "reveals": "Offer \"34\" next to the right answer and ask the question again in a new context.",
+  "help": "Write mass number = protons + neutrons, then cover the neutrons: 23 = 11 + ?",
+  "feedback": "Neutrons = mass number - atomic number. For sodium, 23 - 11 = 12.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR.M_IS9_EA_SKIP_SHELL": {
+  "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR",
+  "error": "Starts filling the second shell before the first is full, writing hydrogen-like gaps (lithium as 1, 2).",
+  "example": {
+   "question": "What is the electron arrangement of lithium (3 electrons)?",
+   "wrong_answer": "1, 2",
+   "correct_answer": "2, 1"
+  },
+  "cause": "Does not know shells fill from the inside out.",
+  "reveals": "Offer \"1, 2\" next to the right answer and ask the question again in a new context.",
+  "help": "Fill shells with counters from the nucleus outwards: the first takes 2.",
+  "feedback": "Shells fill from the inside: the first shell takes 2 before any go into the second.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL.M_IS9_MM_SOLID_IS_METAL": {
+  "skill": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL",
+  "error": "Thinks every solid element is a metal and every gas a non-metal, so sulphur and carbon are metals.",
+  "example": {
+   "question": "Sulphur is a yellow solid. Is it a metal?",
+   "wrong_answer": "Yes, it is a solid",
+   "correct_answer": "No: it is dull, brittle and does not conduct, so it is a non-metal"
+  },
+  "cause": "Sorts by state instead of by properties.",
+  "reveals": "Offer \"Yes, it is a solid\" next to the right answer and ask the question again in a new context.",
+  "help": "Test a piece of sulphur (picture) against the list of metal properties.",
+  "feedback": "Some non-metals are solids, such as sulphur and carbon. Sort by properties, not by state.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_MALLEABLE": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
-  "error": "Mixes malleable and ductile.",
+  "error": "Calls hammering a metal into sheets \"ductile\".",
   "example": {
    "question": "Which means can be hammered into sheets?",
    "wrong_answer": "Ductile",
    "correct_answer": "Malleable"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Two new words for two similar properties are learnt together.",
   "reveals": "Offer \"Ductile\" next to the right answer and ask the question again in a new situation.",
-  "help": "Malleable metals can be hammered into sheets.",
+  "help": "Mabati sheets are made by hammering and rolling: malleable. Wire is drawn: ductile.",
   "feedback": "Malleable metals can be hammered into sheets.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_DUCTILE": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
-  "error": "Mixes ductile and malleable.",
+  "error": "Calls drawing a metal into wires \"malleable\".",
   "example": {
    "question": "Which means can be drawn into wires?",
    "wrong_answer": "Malleable",
    "correct_answer": "Ductile"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The same pair of words, swapped the other way.",
   "reveals": "Offer \"Malleable\" next to the right answer and ask the question again in a new situation.",
-  "help": "Ductile metals can be drawn into wires.",
+  "help": "Ductile, like a duct or a tube: long and thin, a wire.",
   "feedback": "Ductile metals can be drawn into wires.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_USE": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
-  "error": "Gives the wrong use of copper.",
+  "error": "Thinks copper is used for wires because it is cheap or strong, not because it conducts electricity well.",
   "example": {
    "question": "Why is copper used for wires?",
    "wrong_answer": "It does not conduct",
    "correct_answer": "It conducts electricity well"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Gives an everyday reason (price, strength) instead of the property.",
   "reveals": "Offer \"It does not conduct\" next to the right answer and ask the question again in a new situation.",
-  "help": "Copper conducts electricity well.",
+  "help": "Ask what a wire must do: carry electricity. Then pick the property.",
   "feedback": "Copper conducts electricity well.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_MEANING": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
-  "error": "Thinks an alloy is a pure metal.",
+  "error": "Thinks an alloy is a pure metal, so steel is just iron.",
   "example": {
    "question": "What is an alloy?",
    "wrong_answer": "A pure metal",
    "correct_answer": "A mixture of a metal with other elements"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Steel and brass look like single metals.",
   "reveals": "Offer \"A pure metal\" next to the right answer and ask the question again in a new situation.",
-  "help": "An alloy is a mixture.",
+  "help": "Steel is iron with a little carbon; brass is copper with zinc: both are mixtures.",
   "feedback": "An alloy is a mixture.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_BRASS": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
-  "error": "Gives the wrong metals for brass.",
+  "error": "Gives copper and tin (bronze) as the metals in brass.",
   "example": {
    "question": "Brass is made of copper and...",
    "wrong_answer": "tin",
    "correct_answer": "zinc"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes brass and bronze, both copper alloys.",
   "reveals": "Offer \"tin\" next to the right answer and ask the question again in a new situation.",
-  "help": "Brass is copper and zinc.",
+  "help": "Brass: copper and zinc. Bronze: copper and tin.",
   "feedback": "Brass is copper and zinc.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_STEEL": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
-  "error": "Gives the wrong metals for steel.",
+  "error": "Says steel is iron with copper, not iron with a little carbon.",
   "example": {
    "question": "Steel is iron with a little...",
    "wrong_answer": "copper",
    "correct_answer": "carbon"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks every alloy is two metals.",
   "reveals": "Offer \"copper\" next to the right answer and ask the question again in a new situation.",
-  "help": "Steel is iron with a little carbon.",
+  "help": "An alloy can be a metal with a non-metal: steel is iron with carbon.",
   "feedback": "Steel is iron with a little carbon.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_NEED": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
-  "error": "Says rust needs only water.",
+  "error": "Says iron needs only water to rust, not air too.",
   "example": {
    "question": "What does iron need to rust?",
    "wrong_answer": "Water only",
    "correct_answer": "Air and water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Sees rust on wet things and links it with water only.",
   "reveals": "Offer \"Water only\" next to the right answer and ask the question again in a new situation.",
-  "help": "Iron needs both air and water to rust.",
+  "help": "Set up three nails: in boiled water under oil (no air), in dry air, in air and water. Only the last rusts.",
   "feedback": "Iron needs both air and water to rust.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_PREVENT": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
-  "error": "Names a wrong prevention.",
+  "error": "Thinks keeping iron wet or washing it often prevents rusting.",
   "example": {
    "question": "Which prevents rusting?",
    "wrong_answer": "Leaving it wet",
    "correct_answer": "Painting or oiling it"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks cleaning stops all damage.",
   "reveals": "Offer \"Leaving it wet\" next to the right answer and ask the question again in a new situation.",
-  "help": "Painting or oiling keeps air and water away.",
+  "help": "Ask what rust needs; then pick the method that keeps both away.",
   "feedback": "Painting or oiling keeps air and water away.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_EFFECT": {
   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
-  "error": "Says rust strengthens metal.",
+  "error": "Says rust is a coat that makes iron stronger.",
   "example": {
    "question": "What does rust do to iron?",
    "wrong_answer": "Makes it stronger",
    "correct_answer": "Weakens it"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Sees rust as a layer like paint.",
   "reveals": "Offer \"Makes it stronger\" next to the right answer and ask the question again in a new situation.",
-  "help": "Rust weakens iron.",
+  "help": "Scrape a rusty nail: the rust flakes off and the nail gets thinner.",
   "feedback": "Rust weakens iron.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_ALL_MAGNETIC": {
+  "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+  "error": "Thinks a magnet test shows whether something is a metal, so aluminium and copper are not metals.",
+  "example": {
+   "question": "A magnet does not pick up an aluminium sufuria. Is aluminium a metal?",
+   "wrong_answer": "No, a magnet would pick it up",
+   "correct_answer": "Yes: it is shiny, conducts and is malleable; only some metals are magnetic"
+  },
+  "cause": "Uses magnetism as the test for a metal.",
+  "reveals": "Offer \"No, a magnet would pick it up\" next to the right answer and ask the question again in a new context.",
+  "help": "Test foil for shine, bending and conduction; then with a magnet.",
+  "feedback": "Most metals are not magnetic. Aluminium is a metal because it shines, bends and conducts.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_WEAKER": {
+  "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
+  "error": "Thinks mixing a metal with another element makes it weaker, so alloys are worse than pure metals.",
+  "example": {
+   "question": "Why is steel used for building instead of pure iron?",
+   "wrong_answer": "It is cheaper but weaker",
+   "correct_answer": "It is harder and stronger than pure iron"
+  },
+  "cause": "Thinks \"pure\" always means better.",
+  "reveals": "Offer \"It is cheaper but weaker\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a soft iron nail bent by hand with a steel spoon that does not bend.",
+  "feedback": "Alloys are made to be stronger, harder or last longer than the pure metal.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_ALL_METALS": {
+  "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
+  "error": "Thinks all metals rust, including aluminium and copper.",
+  "example": {
+   "question": "Does an aluminium sufuria rust?",
+   "wrong_answer": "Yes, all metals rust",
+   "correct_answer": "No: only iron and steel rust; other metals may corrode in other ways"
+  },
+  "cause": "Uses \"rust\" for any damage to a metal.",
+  "reveals": "Offer \"Yes, all metals rust\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare an old iron nail and an old aluminium pot left outside.",
+  "feedback": "Only iron and steel rust. Other metals can tarnish or corrode but do not form rust.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_LATHER": {
   "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
-  "error": "Says hard water lathers easily.",
+  "error": "Says hard water lathers easily with soap.",
   "example": {
    "question": "Which water lathers easily with soap?",
    "wrong_answer": "Hard water",
    "correct_answer": "Soft water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks \"hard\" means strong, so it should clean well.",
   "reveals": "Offer \"Hard water\" next to the right answer and ask the question again in a new situation.",
-  "help": "Soft water lathers easily.",
+  "help": "Shake soap with rain water and with borehole water: compare the lather.",
   "feedback": "Soft water lathers easily.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_SCALE": {
   "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
-  "error": "Says soft water forms scale.",
+  "error": "Says soft water leaves scale in a kettle.",
   "example": {
    "question": "Which leaves scale in a kettle?",
    "wrong_answer": "Soft water",
    "correct_answer": "Hard water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the two kinds of water.",
   "reveals": "Offer \"Soft water\" next to the right answer and ask the question again in a new situation.",
-  "help": "Hard water leaves scale.",
+  "help": "Look inside a kettle used with borehole water: the white crust comes from hard water.",
   "feedback": "Hard water leaves scale.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_SOFTEN": {
   "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
-  "error": "Names a wrong softening method.",
+  "error": "Thinks freezing or filtering hard water softens it.",
   "example": {
    "question": "Which can soften hard water?",
    "wrong_answer": "Freezing it",
    "correct_answer": "Boiling it"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks any treatment that cleans water also softens it.",
   "reveals": "Offer \"Freezing it\" next to the right answer and ask the question again in a new situation.",
-  "help": "Boiling softens temporary hard water.",
+  "help": "Hardness is dissolved salts: boiling (temporary hardness) or washing soda removes them; filtering does not.",
   "feedback": "Boiling softens temporary hard water.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_BOIL_ANY": {
+  "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES",
+  "error": "Thinks pure water boils at any temperature as long as it bubbles, not at a fixed 100 degrees Celsius at sea level.",
+  "example": {
+   "question": "At what temperature does pure water boil at sea level?",
+   "wrong_answer": "It depends on how big the pot is",
+   "correct_answer": "100 degrees Celsius"
+  },
+  "cause": "Links boiling with bubbles seen, not with a fixed temperature.",
+  "reveals": "Offer \"It depends on how big the pot is\" next to the right answer and ask the question again in a new situation.",
+  "help": "Boil water in a small and a large pot (teacher) with a thermometer: both read 100.",
+  "feedback": "Pure water boils at 100 degrees Celsius at sea level.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_ICE_HEAVIER": {
+  "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES",
+  "error": "Thinks ice is heavier than water, so it should sink.",
+  "example": {
+   "question": "Why does ice float on water?",
+   "wrong_answer": "It does not; ice sinks",
+   "correct_answer": "Water expands when it freezes, so ice is less dense than water"
+  },
+  "cause": "Thinks solids are always heavier than their liquids.",
+  "reveals": "Offer \"It does not; ice sinks\" next to the right answer and ask the question again in a new situation.",
+  "help": "Put ice in a glass of water; then fill a bottle with water and freeze it: it bulges or cracks.",
+  "feedback": "Ice is less dense than water, so it floats.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_PURE_TASTE": {
+  "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES",
+  "error": "Thinks pure water has a sweet or fresh taste and a colour.",
+  "example": {
+   "question": "Which describes pure water?",
+   "wrong_answer": "Sweet and slightly blue",
+   "correct_answer": "Colourless, odourless and tasteless"
+  },
+  "cause": "Has tasted spring or borehole water with dissolved minerals.",
+  "reveals": "Offer \"Sweet and slightly blue\" next to the right answer and ask the question again in a new situation.",
+  "help": "Taste distilled water (from a pharmacy, if safe) beside tap water: distilled tastes of nothing.",
+  "feedback": "Pure water has no colour, smell or taste.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_DISSOLVES_NOTHING": {
+  "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES",
+  "error": "Thinks water dissolves only sugar and salt, not gases or other substances.",
+  "example": {
+   "question": "Fish breathe oxygen dissolved in water. Can water dissolve a gas?",
+   "wrong_answer": "No, only solids dissolve",
+   "correct_answer": "Yes: water dissolves many substances, including gases such as oxygen"
+  },
+  "cause": "Has seen only solids dissolve in class.",
+  "reveals": "Offer \"No, only solids dissolve\" next to the right answer and ask the question again in a new situation.",
+  "help": "Open a soda: the gas was dissolved in the water.",
+  "feedback": "Water dissolves many substances, solids and gases.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_HARD_DIRTY": {
+  "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
+  "error": "Thinks hard water is dirty or unsafe water.",
+  "example": {
+   "question": "Is hard water unsafe to drink?",
+   "wrong_answer": "Yes, it is dirty water",
+   "correct_answer": "Not because it is hard: hard water has dissolved calcium and magnesium salts and can be clean and safe"
+  },
+  "cause": "Thinks \"hard\" means bad.",
+  "reveals": "Offer \"Yes, it is dirty water\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare clear borehole water that lathers poorly with muddy rain water that lathers well.",
+  "feedback": "Hard water has dissolved salts. It can be clean and safe; it only lathers poorly and leaves scale.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_STOMATA": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
-  "error": "Gives the wrong job of stomata.",
+  "error": "Thinks stomata make sugar, instead of letting gases in and out.",
   "example": {
    "question": "What do stomata do?",
    "wrong_answer": "Make sugar",
    "correct_answer": "Let gases in and out"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Gives every leaf part the leaf's main job, making food.",
   "reveals": "Offer \"Make sugar\" next to the right answer and ask the question again in a new situation.",
-  "help": "Stomata let gases in and out.",
+  "help": "Look at a leaf peel under a microscope: stomata are tiny openings.",
   "feedback": "Stomata let gases in and out.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -382,24 +562,24 @@
    "wrong_answer": "In the roots",
    "correct_answer": "In chloroplasts in leaves"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks the plant takes its food in through its roots.",
   "reveals": "Offer \"In the roots\" next to the right answer and ask the question again in a new situation.",
-  "help": "Chlorophyll is in chloroplasts in the leaves.",
+  "help": "Chlorophyll is green; look for the green parts of the plant.",
   "feedback": "Chlorophyll is in chloroplasts in the leaves.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_BROAD": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
-  "error": "Says a narrow leaf catches the most light.",
+  "error": "Says a narrow, thick leaf catches the most light.",
   "example": {
    "question": "Why is a leaf broad and thin?",
    "wrong_answer": "To hide from light",
    "correct_answer": "To catch light and let gases in"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Does not link the shape of the leaf to its job.",
   "reveals": "Offer \"To hide from light\" next to the right answer and ask the question again in a new situation.",
-  "help": "A broad, thin leaf catches light.",
+  "help": "Compare a broad banana leaf in shade with a narrow one: more surface catches more light.",
   "feedback": "A broad, thin leaf catches light.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -412,69 +592,99 @@
    "wrong_answer": "Oxygen",
    "correct_answer": "Carbon dioxide"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks plants breathe like animals and use the same gas for food.",
   "reveals": "Offer \"Oxygen\" next to the right answer and ask the question again in a new situation.",
-  "help": "Plants use carbon dioxide.",
+  "help": "Write the word equation: carbon dioxide + water gives glucose + oxygen.",
   "feedback": "Plants use carbon dioxide.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_PRODUCT": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
-  "error": "Gives the wrong product.",
+  "error": "Says photosynthesis gives off carbon dioxide.",
   "example": {
    "question": "What does photosynthesis give off?",
    "wrong_answer": "Carbon dioxide",
    "correct_answer": "Oxygen"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the gas taken in and the gas given off.",
   "reveals": "Offer \"Carbon dioxide\" next to the right answer and ask the question again in a new situation.",
-  "help": "Photosynthesis gives off oxygen.",
+  "help": "Watch bubbles of oxygen rise from a water plant in sunlight.",
   "feedback": "Photosynthesis gives off oxygen.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_TEST": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
-  "error": "Gives the wrong starch test.",
+  "error": "Thinks salt water or vinegar, not iodine, tests for starch.",
   "example": {
    "question": "What turns blue-black with starch?",
    "wrong_answer": "Salt water",
    "correct_answer": "Iodine"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Has not done the starch test and guesses a household liquid.",
   "reveals": "Offer \"Salt water\" next to the right answer and ask the question again in a new situation.",
-  "help": "Iodine turns blue-black with starch.",
+  "help": "Drop iodine on a slice of potato (teacher): it turns blue-black.",
   "feedback": "Iodine turns blue-black with starch.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_VEINS_BLOOD": {
+  "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+  "error": "Thinks the veins of a leaf carry blood or are only for strength.",
+  "example": {
+   "question": "What do the veins in a leaf carry?",
+   "wrong_answer": "Blood, like ours",
+   "correct_answer": "Water and minerals in, and food out to the rest of the plant"
+  },
+  "cause": "Gives the leaf the body's parts.",
+  "reveals": "Offer \"Blood, like ours\" next to the right answer and ask the question again in a new context.",
+  "help": "Stand a white flower or celery in coloured water: the colour travels up the veins.",
+  "feedback": "Leaf veins carry water and minerals in and food out. They also hold the leaf open.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_SOIL_FOOD": {
+  "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
+  "error": "Thinks a plant gets its food from the soil, so photosynthesis is not how it feeds.",
+  "example": {
+   "question": "Where does a maize plant get most of its food from?",
+   "wrong_answer": "From the soil through its roots",
+   "correct_answer": "It makes it in its leaves by photosynthesis"
+  },
+  "cause": "Sees roots in the soil as mouths.",
+  "reveals": "Offer \"From the soil through its roots\" next to the right answer and ask the question again in a new context.",
+  "help": "Weigh soil in a pot before and after a seedling grows for months: it hardly changes.",
+  "feedback": "Plants make their own food in their leaves. Roots take in water and minerals, not food.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_HERBI": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
-  "error": "Mixes herbivore and carnivore.",
+  "error": "Says a herbivore eats flesh.",
   "example": {
    "question": "What does a herbivore eat?",
    "wrong_answer": "Flesh only",
    "correct_answer": "Plants only"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps herbivore and carnivore, learnt as a pair.",
   "reveals": "Offer \"Flesh only\" next to the right answer and ask the question again in a new situation.",
-  "help": "A herbivore eats plants only.",
+  "help": "Herb is a plant: a herbivore eats plants.",
   "feedback": "A herbivore eats plants only.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_CARNI": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
-  "error": "Mixes carnivore and herbivore.",
+  "error": "Says a carnivore eats plants.",
   "example": {
    "question": "What does a carnivore eat?",
    "wrong_answer": "Plants only",
    "correct_answer": "Flesh only"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The same pair, swapped the other way.",
   "reveals": "Offer \"Plants only\" next to the right answer and ask the question again in a new situation.",
-  "help": "A carnivore eats flesh.",
+  "help": "Carne means meat (as in nyama choma): a carnivore eats flesh.",
   "feedback": "A carnivore eats flesh.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -487,189 +697,234 @@
    "wrong_answer": "Plants only",
    "correct_answer": "Plants and animals"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Does not know the word \"omni\" means all.",
   "reveals": "Offer \"Plants only\" next to the right answer and ask the question again in a new situation.",
-  "help": "An omnivore eats both.",
+  "help": "People eat ugali and meat: we are omnivores.",
   "feedback": "An omnivore eats both.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_CANINE": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
-  "error": "Mixes canines and incisors.",
+  "error": "Gives the incisors the job of tearing flesh.",
   "example": {
    "question": "Which teeth tear flesh?",
    "wrong_answer": "Incisors",
    "correct_answer": "Canines"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The front teeth are the ones the child sees biting.",
   "reveals": "Offer \"Incisors\" next to the right answer and ask the question again in a new situation.",
-  "help": "Canines tear flesh.",
+  "help": "Look at a dog's long pointed canines: they hold and tear.",
   "feedback": "Canines tear flesh.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_INCISOR": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
-  "error": "Gives incisors the wrong job.",
+  "error": "Gives the molars the job of cutting food.",
   "example": {
    "question": "Which teeth cut food?",
    "wrong_answer": "Molars",
    "correct_answer": "Incisors"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks the big teeth must do the cutting.",
   "reveals": "Offer \"Molars\" next to the right answer and ask the question again in a new situation.",
-  "help": "Incisors cut food.",
+  "help": "Bite an apple: the front teeth (incisors) cut it.",
   "feedback": "Incisors cut food.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_MOLAR": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
-  "error": "Gives molars the wrong job.",
+  "error": "Gives the canines the job of grinding food.",
   "example": {
    "question": "Which teeth grind food?",
    "wrong_answer": "Canines",
    "correct_answer": "Molars"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes the names of the back and side teeth.",
   "reveals": "Offer \"Canines\" next to the right answer and ask the question again in a new situation.",
-  "help": "Molars grind food.",
+  "help": "Chew maize: the broad back teeth (molars) grind it.",
   "feedback": "Molars grind food.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_START": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
-  "error": "Starts digestion in the stomach only.",
+  "error": "Says digestion begins in the stomach, leaving out the mouth.",
   "example": {
    "question": "Where does digestion begin?",
    "wrong_answer": "In the stomach",
    "correct_answer": "In the mouth"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks chewing is only breaking up food, not digesting.",
   "reveals": "Offer \"In the stomach\" next to the right answer and ask the question again in a new situation.",
-  "help": "Digestion starts in the mouth.",
+  "help": "Chew a piece of bread for a long time: it tastes sweet as saliva digests the starch.",
   "feedback": "Digestion starts in the mouth.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_ABSORB": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
-  "error": "Places absorption in the stomach.",
+  "error": "Says digested food is absorbed in the stomach or the mouth.",
   "example": {
    "question": "Where is digested food absorbed?",
    "wrong_answer": "In the mouth",
    "correct_answer": "In the small intestine"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks food goes into the body as soon as it is swallowed.",
   "reveals": "Offer \"In the mouth\" next to the right answer and ask the question again in a new situation.",
-  "help": "Digested food is absorbed in the small intestine.",
+  "help": "Trace the path on a chart: absorption is in the long small intestine.",
   "feedback": "Digested food is absorbed in the small intestine.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_WATER": {
   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
-  "error": "Places water absorption wrongly.",
+  "error": "Says most water is absorbed in the oesophagus or the stomach.",
   "example": {
    "question": "Where is most water absorbed?",
    "wrong_answer": "In the oesophagus",
    "correct_answer": "In the large intestine"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks water is taken in where it is first swallowed.",
   "reveals": "Offer \"In the oesophagus\" next to the right answer and ask the question again in a new situation.",
-  "help": "Water is absorbed in the large intestine.",
+  "help": "Link to Grade 4: the large intestine takes in water, leaving waste.",
   "feedback": "Water is absorbed in the large intestine.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_ONLY_THREE": {
+  "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+  "error": "Thinks herbivore, carnivore and omnivore are the only modes of nutrition, leaving out parasites (ticks, tapeworms) and saprophytes.",
+  "example": {
+   "question": "How does a tick get its food from a cow?",
+   "wrong_answer": "It is a herbivore",
+   "correct_answer": "It is a parasite: it feeds on the living cow's blood"
+  },
+  "cause": "Has learnt only the three diet words.",
+  "reveals": "Offer \"It is a herbivore\" next to the right answer and ask the question again in a new context.",
+  "help": "List animals that feed on others while they live: ticks, fleas, tapeworms.",
+  "feedback": "Some animals are parasites: they feed on another living animal, like a tick on a cow.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_ALL_SAME": {
+  "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+  "error": "Thinks all mammals have the same teeth as people, so a goat has big canines like a dog.",
+  "example": {
+   "question": "Why does a goat have no large canines?",
+   "wrong_answer": "It does; all mammals have the same teeth",
+   "correct_answer": "It is a herbivore: it needs broad grinding teeth, not tearing canines"
+  },
+  "cause": "Thinks of teeth as the same in every mammal.",
+  "reveals": "Offer \"It does; all mammals have the same teeth\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare pictures of a goat skull and a dog skull.",
+  "feedback": "Teeth suit the food. Herbivores have broad grinding teeth; carnivores have big canines for tearing.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_STOMACH_ABSORBS_ALL": {
+  "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
+  "error": "Thinks the stomach is where all digestion and absorption happen.",
+  "example": {
+   "question": "Where is most digestion completed?",
+   "wrong_answer": "In the stomach",
+   "correct_answer": "In the small intestine"
+  },
+  "cause": "Feels food \"in the stomach\" and thinks it all happens there.",
+  "reveals": "Offer \"In the stomach\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace a meal: mouth (starch begins), stomach (protein begins), small intestine (finished and absorbed).",
+  "feedback": "The stomach starts protein digestion, but digestion is completed and food absorbed in the small intestine.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_STAMEN": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
-  "error": "Calls the stamen female.",
+  "error": "Calls the stamen the female part of the flower.",
   "example": {
    "question": "Which part is the male part of a flower?",
    "wrong_answer": "Carpel",
    "correct_answer": "Stamen"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps stamen and carpel, learnt as a pair.",
   "reveals": "Offer \"Carpel\" next to the right answer and ask the question again in a new situation.",
-  "help": "The stamen is the male part.",
+  "help": "The stamen makes pollen, which carries the male cell.",
   "feedback": "The stamen is the male part.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_CARPEL": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
-  "error": "Calls the carpel male.",
+  "error": "Calls the carpel the male part of the flower.",
   "example": {
    "question": "Which part is the female part of a flower?",
    "wrong_answer": "Stamen",
    "correct_answer": "Carpel"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The same pair, swapped the other way.",
   "reveals": "Offer \"Stamen\" next to the right answer and ask the question again in a new situation.",
-  "help": "The carpel is the female part.",
+  "help": "The carpel holds the ovary with the ovules, which become seeds.",
   "feedback": "The carpel is the female part.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_PETAL": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
-  "error": "Gives petals the wrong job.",
+  "error": "Thinks petals make seeds.",
   "example": {
    "question": "What do petals do?",
    "wrong_answer": "Make seeds",
    "correct_answer": "Attract insects"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Sees petals as the main part of the flower and gives them the main job.",
   "reveals": "Offer \"Make seeds\" next to the right answer and ask the question again in a new situation.",
-  "help": "Petals attract insects.",
+  "help": "Watch a flower turn into a fruit: the petals fall off; the ovary makes the seeds.",
   "feedback": "Petals attract insects.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_MEANING": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
-  "error": "Mixes pollination and fertilisation.",
+  "error": "Calls the joining of the male and female cells \"pollination\".",
   "example": {
    "question": "What is pollination?",
    "wrong_answer": "Joining of male and female cells",
    "correct_answer": "Transfer of pollen to a stigma"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes pollination with fertilisation, which follows it.",
   "reveals": "Offer \"Joining of male and female cells\" next to the right answer and ask the question again in a new situation.",
-  "help": "Pollination is the transfer of pollen to a stigma.",
+  "help": "Order the events: pollination (pollen lands), then fertilisation (cells join).",
   "feedback": "Pollination is the transfer of pollen to a stigma.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_WIND": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
-  "error": "Gives wind flowers bright petals.",
+  "error": "Gives wind-pollinated flowers bright petals and nectar.",
   "example": {
    "question": "Which is a feature of a wind-pollinated flower?",
    "wrong_answer": "Bright petals and nectar",
    "correct_answer": "Feathery stigma and light pollen"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks all flowers look like insect flowers.",
   "reveals": "Offer \"Bright petals and nectar\" next to the right answer and ask the question again in a new situation.",
-  "help": "Wind flowers have feathery stigmas.",
+  "help": "Look at a maize tassel and grass flowers: no bright petals, lots of light pollen.",
   "feedback": "Wind flowers have feathery stigmas.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_INSECT": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
-  "error": "Gives insect flowers light pollen only.",
+  "error": "Gives insect-pollinated flowers feathery stigmas and light, dusty pollen.",
   "example": {
    "question": "Which is a feature of an insect-pollinated flower?",
    "wrong_answer": "Feathery stigma",
    "correct_answer": "Bright petals and scent"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the features of the two kinds.",
   "reveals": "Offer \"Feathery stigma\" next to the right answer and ask the question again in a new situation.",
-  "help": "Insect flowers have bright petals and scent.",
+  "help": "Ask what would draw an insect: colour, scent and nectar.",
   "feedback": "Insect flowers have bright petals and scent.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -682,9 +937,9 @@
    "wrong_answer": "The ovule",
    "correct_answer": "The ovary"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes ovule and ovary, which sound alike.",
   "reveals": "Offer \"The ovule\" next to the right answer and ask the question again in a new situation.",
-  "help": "The ovary becomes the fruit.",
+  "help": "Cut a bean pod: the pod was the ovary, the beans were the ovules.",
   "feedback": "The ovary becomes the fruit.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -697,219 +952,384 @@
    "wrong_answer": "The ovary",
    "correct_answer": "The ovule"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The same pair, swapped the other way.",
   "reveals": "Offer \"The ovary\" next to the right answer and ask the question again in a new situation.",
-  "help": "The ovule becomes the seed.",
+  "help": "One ovary, many ovules: one pod, many beans.",
   "feedback": "The ovule becomes the seed.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_WIND": {
   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
-  "error": "Gives wind seeds hooks.",
+  "error": "Gives wind-dispersed seeds hooks.",
   "example": {
    "question": "Which seeds are carried by wind?",
    "wrong_answer": "Seeds with hooks",
    "correct_answer": "Seeds with wings or hairs"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes the features of animal-dispersed and wind-dispersed seeds.",
   "reveals": "Offer \"Seeds with hooks\" next to the right answer and ask the question again in a new situation.",
-  "help": "Wind-dispersed seeds have wings or hairs.",
+  "help": "Hooks catch on fur (blackjack); wings and hairs float on wind (jacaranda, Sodom apple).",
   "feedback": "Wind-dispersed seeds have wings or hairs.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_ONLY_BEAUTY": {
+  "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+  "error": "Thinks the only role of flowers in nature is beauty, not reproduction and food for animals.",
+  "example": {
+   "question": "What is the main role of flowers in a plant's life?",
+   "wrong_answer": "To make the plant beautiful",
+   "correct_answer": "To make seeds so new plants grow; they also feed insects and give us fruit"
+  },
+  "cause": "Sees flowers as decoration, as at weddings.",
+  "reveals": "Offer \"To make the plant beautiful\" next to the right answer and ask the question again in a new context.",
+  "help": "Follow a bean flower to a pod of seeds.",
+  "feedback": "Flowers make seeds for new plants, and give food to insects, birds and people.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_SELF_NEVER": {
+  "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+  "error": "Thinks pollen must always come from another plant, so self-pollination is impossible.",
+  "example": {
+   "question": "Can pollen from a flower land on the stigma of the same flower?",
+   "wrong_answer": "No, it must come from another plant",
+   "correct_answer": "Yes: that is self-pollination; from another plant is cross-pollination"
+  },
+  "cause": "Has learnt cross-pollination with bees as the only example.",
+  "reveals": "Offer \"No, it must come from another plant\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a bean flower, which often pollinates itself.",
+  "feedback": "Self-pollination is pollen reaching a stigma of the same flower or plant; cross-pollination is from another plant.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_WATER_ANY": {
+  "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
+  "error": "Thinks any heavy fruit is dispersed by water.",
+  "example": {
+   "question": "How is a coconut dispersed?",
+   "wrong_answer": "By animals, because it is heavy",
+   "correct_answer": "By water: its fibrous husk lets it float"
+  },
+  "cause": "Does not link the feature (a floating husk) with the agent.",
+  "reveals": "Offer \"By animals, because it is heavy\" next to the right answer and ask the question again in a new context.",
+  "help": "Float a dry coconut husk in a basin.",
+  "feedback": "Water-dispersed fruits float, like the coconut with its air-filled husk.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_LIGHT": {
   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
-  "error": "Calls light biotic.",
+  "error": "Calls sunlight a biotic factor because living things need it.",
   "example": {
    "question": "Which is an abiotic factor?",
    "wrong_answer": "A tree",
    "correct_answer": "Sunlight"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks anything that supports life must be living.",
   "reveals": "Offer \"A tree\" next to the right answer and ask the question again in a new situation.",
-  "help": "Sunlight is non-living.",
+  "help": "Ask: is it alive? Sunlight does not grow, feed or reproduce.",
   "feedback": "Sunlight is non-living.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_PLANT": {
   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
-  "error": "Calls a plant abiotic.",
+  "error": "Calls a plant an abiotic factor because it does not move about.",
   "example": {
    "question": "Which is a biotic factor?",
    "wrong_answer": "Soil",
    "correct_answer": "A plant"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Uses movement as the sign of life.",
   "reveals": "Offer \"Soil\" next to the right answer and ask the question again in a new situation.",
-  "help": "A plant is living.",
+  "help": "Go back to the signs of life from Grade 4: plants grow, reproduce and respond.",
   "feedback": "A plant is living.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_WATER": {
   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
-  "error": "Calls water biotic.",
+  "error": "Calls water biotic because it flows and is found in living things.",
   "example": {
    "question": "Which is an abiotic factor?",
    "wrong_answer": "A frog",
    "correct_answer": "Water"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks moving water is alive.",
   "reveals": "Offer \"A frog\" next to the right answer and ask the question again in a new situation.",
-  "help": "Water is non-living.",
+  "help": "Water moves but does not grow, feed or reproduce: it is non-living.",
   "feedback": "Water is non-living.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_START": {
   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
-  "error": "Starts a chain with an animal.",
+  "error": "Starts a food chain with an animal, not a green plant.",
   "example": {
    "question": "What does a food chain start with?",
    "wrong_answer": "A herbivore",
    "correct_answer": "A producer"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks the first animal eaten starts the chain.",
   "reveals": "Offer \"A herbivore\" next to the right answer and ask the question again in a new situation.",
-  "help": "A food chain starts with a producer.",
+  "help": "Ask where the herbivore's energy came from: a green plant, the producer.",
   "feedback": "A food chain starts with a producer.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_ARROW": {
   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
-  "error": "Points the arrow at the eaten.",
+  "error": "Points the arrows from the eater to the eaten (lion to zebra to grass).",
   "example": {
-   "question": "In grass to zebra, what does the arrow show?",
-   "wrong_answer": "Zebra eats grass wrongly",
-   "correct_answer": "The direction of energy to the zebra"
+   "question": "In the food chain grass, zebra, lion, which way do the arrows point?",
+   "wrong_answer": "From the lion to the zebra to the grass",
+   "correct_answer": "From the grass to the zebra to the lion"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
-  "reveals": "Offer \"Zebra eats grass wrongly\" next to the right answer and ask the question again in a new situation.",
-  "help": "Arrows show energy moving to the eater.",
+  "cause": "Reads the arrow as \"eats\" pointing at the food.",
+  "reveals": "Offer \"From the lion to the zebra to the grass\" next to the right answer and ask the question again in a new situation.",
+  "help": "Read each arrow as \"is eaten by\" or \"gives energy to\".",
   "feedback": "Arrows show energy moving to the eater.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_HUMAN": {
   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
-  "error": "Thinks human activity has no effect.",
+  "error": "Thinks cutting down a forest affects only the trees, not the animals in the food web.",
   "example": {
    "question": "What does cutting forests do to food webs?",
    "wrong_answer": "Nothing",
    "correct_answer": "Upsets them"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Does not follow the links from the trees to the animals.",
   "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new situation.",
-  "help": "Cutting forests upsets food webs.",
+  "help": "Follow the web: no trees, no leaves for the herbivores, then no food for the carnivores.",
   "feedback": "Cutting forests upsets food webs.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_DEAD_ABIOTIC_NEVER": {
+  "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+  "error": "Thinks a dead leaf or a log is abiotic and has nothing to do with living things.",
+  "example": {
+   "question": "A rotting log in a forest: is it part of the biotic or abiotic environment?",
+   "wrong_answer": "Abiotic, it is dead",
+   "correct_answer": "It came from a living thing and is food for decomposers such as fungi and termites, so it belongs with the biotic factors"
+  },
+  "cause": "Uses \"alive now\" as the only test.",
+  "reveals": "Offer \"Abiotic, it is dead\" next to the right answer and ask the question again in a new context.",
+  "help": "Look under a rotting log: termites, fungi and beetles live off it.",
+  "feedback": "Dead plants and animals are part of the living web: decomposers feed on them and return minerals to the soil.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_REMOVE_NO_EFFECT": {
+  "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+  "error": "Thinks removing one animal from a food web affects only the animal that eats it.",
+  "example": {
+   "question": "Snakes in an area are all killed. What may happen to the number of rats and to the crops?",
+   "wrong_answer": "Only the hawks that eat snakes are affected",
+   "correct_answer": "Rats may increase and eat more crops"
+  },
+  "cause": "Follows only one link in the web.",
+  "reveals": "Offer \"Only the hawks that eat snakes are affected\" next to the right answer and ask the question again in a new context.",
+  "help": "Follow every arrow from and to the snake on the web.",
+  "feedback": "In a food web one change spreads: fewer snakes can mean more rats and more damage to crops.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONCAVE": {
   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
-  "error": "Mixes concave and convex.",
+  "error": "Calls a mirror that curves inwards (like a cave) convex.",
   "example": {
    "question": "Which mirror curves inwards?",
    "wrong_answer": "Convex",
    "correct_answer": "Concave"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the two names, learnt as a pair.",
   "reveals": "Offer \"Convex\" next to the right answer and ask the question again in a new situation.",
-  "help": "A concave mirror curves inwards.",
+  "help": "Concave curves in, like the mouth of a cave; look into a shiny spoon's bowl.",
   "feedback": "A concave mirror curves inwards.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONVEX": {
   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
-  "error": "Mixes convex and concave.",
+  "error": "Calls a mirror that bulges outwards concave.",
   "example": {
    "question": "Which mirror curves outwards?",
    "wrong_answer": "Concave",
    "correct_answer": "Convex"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "The same pair, swapped the other way.",
   "reveals": "Offer \"Concave\" next to the right answer and ask the question again in a new situation.",
-  "help": "A convex mirror curves outwards.",
+  "help": "Look at the back of a shiny spoon: it bulges out, convex.",
   "feedback": "A convex mirror curves outwards.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_IMAGE": {
   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
-  "error": "Says a convex mirror magnifies.",
+  "error": "Says a convex mirror forms a large, real image.",
   "example": {
    "question": "What image does a convex mirror form?",
    "wrong_answer": "Large and real",
    "correct_answer": "Small, upright and virtual"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks every curved mirror magnifies.",
   "reveals": "Offer \"Large and real\" next to the right answer and ask the question again in a new situation.",
-  "help": "A convex mirror forms a small, upright, virtual image.",
+  "help": "Look into the back of a spoon: you see yourself small and upright.",
   "feedback": "A convex mirror forms a small, upright, virtual image.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_DRIVING": {
   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
-  "error": "Gives driving mirrors as concave.",
+  "error": "Says driving mirrors are concave.",
   "example": {
    "question": "Which mirror is used as a driving mirror?",
    "wrong_answer": "Concave",
    "correct_answer": "Convex"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks drivers need a bigger image, not a wider view.",
   "reveals": "Offer \"Concave\" next to the right answer and ask the question again in a new situation.",
-  "help": "Driving mirrors are convex for a wide view.",
+  "help": "Ask what a driver needs to see behind: as much of the road as possible.",
   "feedback": "Driving mirrors are convex for a wide view.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_SHAVING": {
   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
-  "error": "Gives shaving mirrors as convex.",
+  "error": "Says shaving and make-up mirrors are convex.",
   "example": {
    "question": "Which mirror is used for shaving?",
    "wrong_answer": "Convex",
    "correct_answer": "Concave"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Does not link a larger image with a concave mirror used close up.",
   "reveals": "Offer \"Convex\" next to the right answer and ask the question again in a new situation.",
-  "help": "A shaving mirror is concave for a larger image.",
+  "help": "Hold a shiny spoon bowl close to your face: the image is bigger.",
   "feedback": "A shaving mirror is concave for a larger image.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_SECURITY": {
   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
-  "error": "Gives security mirrors as concave.",
+  "error": "Says shop security mirrors are concave.",
   "example": {
    "question": "Which mirror gives a wide view in a shop?",
    "wrong_answer": "Concave",
    "correct_answer": "Convex"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks a security mirror must make things look bigger.",
   "reveals": "Offer \"Concave\" next to the right answer and ask the question again in a new situation.",
-  "help": "Convex mirrors give a wide view.",
+  "help": "A convex mirror shows a wide area, small: the guard sees the whole shop.",
   "feedback": "Convex mirrors give a wide view.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_ONE_RAY": {
+  "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS",
+  "error": "Draws only one ray and marks the image where it hits the axis.",
+  "example": {
+   "question": "How many rays are needed to locate an image in a ray diagram?",
+   "wrong_answer": "One",
+   "correct_answer": "Two: the image is where they meet"
+  },
+  "cause": "Thinks one line from the object shows where the image is.",
+  "reveals": "Offer \"One\" next to the right answer and ask the question again in a new situation.",
+  "help": "Draw one ray: it could cross anywhere; draw a second and see the single meeting point.",
+  "feedback": "Two rays are needed; the image is where they cross.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_PARALLEL_RULE": {
+  "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS",
+  "error": "Reflects the ray parallel to the axis back parallel, not through the focus.",
+  "example": {
+   "question": "In a concave mirror, a ray parallel to the principal axis is reflected...",
+   "wrong_answer": "Back parallel to the axis",
+   "correct_answer": "Through the principal focus F"
+  },
+  "cause": "Uses the plane-mirror habit of bouncing straight back.",
+  "reveals": "Offer \"Back parallel to the axis\" next to the right answer and ask the question again in a new situation.",
+  "help": "Shine a torch beam parallel onto a shiny spoon bowl: the light gathers at one point, F.",
+  "feedback": "A ray parallel to the axis reflects through F.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_CONVEX_REAL": {
+  "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS",
+  "error": "Says a convex mirror can form a real image in front of it.",
+  "example": {
+   "question": "Where is the image formed by a convex mirror?",
+   "wrong_answer": "In front of the mirror, real",
+   "correct_answer": "Behind the mirror, virtual"
+  },
+  "cause": "Uses the concave mirror result for both mirrors.",
+  "reveals": "Offer \"In front of the mirror, real\" next to the right answer and ask the question again in a new situation.",
+  "help": "Draw the reflected rays of a convex mirror: they spread out, so they only seem to meet behind it.",
+  "feedback": "A convex mirror always forms a virtual image behind it.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_CLOSE_INVERTED": {
+  "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS",
+  "error": "Says an object very close to a concave mirror (between F and the mirror) gives an inverted, small image.",
+  "example": {
+   "question": "An object is placed between F and a concave mirror. What is its image like?",
+   "wrong_answer": "Inverted and smaller",
+   "correct_answer": "Upright, larger and virtual, behind the mirror"
+  },
+  "cause": "Uses the far-object result for every position.",
+  "reveals": "Offer \"Inverted and smaller\" next to the right answer and ask the question again in a new situation.",
+  "help": "Hold a spoon bowl very close to your eye and then far away: the image flips.",
+  "feedback": "Close to a concave mirror, the image is upright, larger and virtual.",
+  "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONCAVE_ALWAYS_BIG": {
+  "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+  "error": "Thinks a concave mirror always gives a larger, upright image.",
+  "example": {
+   "question": "You look into a concave make-up mirror from across the room. What image do you see?",
+   "wrong_answer": "Larger and upright",
+   "correct_answer": "Upside down and smaller (a real image)"
+  },
+  "cause": "Has used a make-up mirror only close up.",
+  "reveals": "Offer \"Larger and upright\" next to the right answer and ask the question again in a new context.",
+  "help": "Look into a spoon bowl close up and then at arm's length.",
+  "feedback": "A concave mirror magnifies only when you are close. From far away the image is upside down and smaller.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_TORCH_CONVEX": {
+  "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
+  "error": "Says a torch or a car headlamp uses a convex reflector.",
+  "example": {
+   "question": "What kind of mirror is behind the bulb in a torch?",
+   "wrong_answer": "Convex, to spread the light",
+   "correct_answer": "Concave: with the bulb at its focus it sends out a parallel beam"
+  },
+  "cause": "Thinks spreading light out is the goal.",
+  "reveals": "Offer \"Convex, to spread the light\" next to the right answer and ask the question again in a new context.",
+  "help": "Look into a torch reflector: it curves in like a bowl.",
+  "feedback": "A torch uses a concave mirror. The bulb at the focus gives a strong, parallel beam.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_SOUND": {
   "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
-  "error": "Calls sound transverse.",
+  "error": "Calls sound a transverse wave.",
   "example": {
    "question": "Which wave is longitudinal?",
    "wrong_answer": "Water wave",
    "correct_answer": "Sound wave"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Draws every wave as an up-and-down line, so thinks all are transverse.",
   "reveals": "Offer \"Water wave\" next to the right answer and ask the question again in a new situation.",
-  "help": "Sound is a longitudinal wave.",
+  "help": "Push and pull a slinky spring along its length: the coils bunch and spread like sound.",
   "feedback": "Sound is a longitudinal wave.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
@@ -922,71 +1342,101 @@
    "wrong_answer": "Sound wave",
    "correct_answer": "Water wave"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the two examples learnt together.",
   "reveals": "Offer \"Sound wave\" next to the right answer and ask the question again in a new situation.",
-  "help": "Water waves are transverse.",
+  "help": "Watch a floating leaf on a pond: it bobs up and down while the wave moves along.",
   "feedback": "Water waves are transverse.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_DIR": {
   "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
-  "error": "Mixes the directions.",
+  "error": "Says the particles in a transverse wave move along the direction of travel.",
   "example": {
    "question": "In a transverse wave, particles move...",
    "wrong_answer": "Along the direction of travel",
    "correct_answer": "At right angles to the direction of travel"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Thinks the water itself travels with the wave.",
   "reveals": "Offer \"Along the direction of travel\" next to the right answer and ask the question again in a new situation.",
-  "help": "Transverse particles move at right angles.",
+  "help": "Shake a rope up and down: the wave travels along, the rope moves up and down.",
   "feedback": "Transverse particles move at right angles.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_CREST": {
   "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
-  "error": "Mixes crest and trough.",
+  "error": "Calls the highest point of a wave the trough.",
   "example": {
    "question": "What is the highest point of a wave?",
    "wrong_answer": "Trough",
    "correct_answer": "Crest"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Swaps the two names.",
   "reveals": "Offer \"Trough\" next to the right answer and ask the question again in a new situation.",
-  "help": "The crest is the highest point.",
+  "help": "A trough holds water for cattle: it is low. The crest is the top.",
   "feedback": "The crest is the highest point.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_FREQ": {
   "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
-  "error": "Gives the wrong unit.",
+  "error": "Gives metres, not hertz, as the unit of frequency.",
   "example": {
    "question": "In what unit is frequency measured?",
    "wrong_answer": "Metres",
    "correct_answer": "Hertz"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes frequency with wavelength, which is measured in metres.",
   "reveals": "Offer \"Metres\" next to the right answer and ask the question again in a new situation.",
-  "help": "Frequency is measured in hertz.",
+  "help": "Frequency counts waves per second: per second is hertz. Wavelength is a length: metres.",
   "feedback": "Frequency is measured in hertz.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_LENGTH": {
   "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
-  "error": "Mixes wavelength and amplitude.",
+  "error": "Calls the distance between two crests the amplitude.",
   "example": {
    "question": "What is the distance between two crests?",
    "wrong_answer": "Amplitude",
    "correct_answer": "Wavelength"
   },
-  "cause": "The child mixes up two rules that are taught close together.",
+  "cause": "Mixes the two distances marked on a wave drawing.",
   "reveals": "Offer \"Amplitude\" next to the right answer and ask the question again in a new situation.",
-  "help": "The distance between two crests is the wavelength.",
+  "help": "Amplitude is the height from the middle line; wavelength is crest to crest.",
   "feedback": "The distance between two crests is the wavelength.",
   "source": "To confirm by an Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_WATER_TRAVELS": {
+  "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+  "error": "Thinks the water itself travels across the pond with a wave.",
+  "example": {
+   "question": "A leaf floats on a pond as waves pass. What does the leaf do?",
+   "wrong_answer": "It is carried to the edge with the wave",
+   "correct_answer": "It bobs up and down in about the same place"
+  },
+  "cause": "Sees the wave move and thinks the water moves with it.",
+  "reveals": "Offer \"It is carried to the edge with the wave\" next to the right answer and ask the question again in a new context.",
+  "help": "Drop a stone near a floating leaf and watch it bob.",
+  "feedback": "A wave carries energy, not the water. The leaf only bobs up and down as the wave passes.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_AMPLITUDE_SPEED": {
+  "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
+  "error": "Thinks a wave with a bigger amplitude travels faster.",
+  "example": {
+   "question": "Two waves in the same rope have different amplitudes. Which travels faster?",
+   "wrong_answer": "The one with the bigger amplitude",
+   "correct_answer": "They travel at the same speed; amplitude shows the energy, not the speed"
+  },
+  "cause": "Links \"bigger\" with \"faster\".",
+  "reveals": "Offer \"The one with the bigger amplitude\" next to the right answer and ask the question again in a new context.",
+  "help": "Send a small and a large shake down the same rope: they arrive at the far end together.",
+  "feedback": "Amplitude is the height of the wave and shows its energy. It does not change the speed in the same rope.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  }
 }
