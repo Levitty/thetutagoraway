@@ -435,7 +435,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ MONEY
-  fam({ id: 'g8.money.compound-two-years', skill: 'G8_SIMPLE_INTEREST', outcome: 'G8.MONEY.c', rung: 2, form: 'word',
+  fam({ id: 'g8.money.compound-two-years', skill: 'G8_SIMPLE_INTEREST', outcome: 'MATH.G8.MEASUR.MONEY.c', cskill: 'MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST', rung: 2, form: 'word',
     draw: () => {
       const r = pick([5, 10, 20]), P = r === 5 ? pick([4000, 8000, 12000, 16000, 20000]) : pick([5000, 10000, 20000, 25000, 40000]);
       const A = (P * (100 + r) * (100 + r)) / 10000;
@@ -446,13 +446,13 @@ export const FAMILIES = [
     make: ({ r, P, A, simple, one, p }) => ({
       question: `${p.name} puts ${sh(P)} into a SACCO account. The SACCO pays compound interest of ${r}% a year. ${p.She} takes nothing out. How much is in the account after 2 years?`,
       answer: A,
-      wrong: [[simple, 'That is simple interest: the same interest each year on the first amount. Compound interest in year 2 is worked out on the new amount.'], [one, 'That is the amount after 1 year only. The money stays in for 2 years.'], [A - P, 'That is only the interest earned. The question asks for all the money in the account.']],
+      wrong: [[simple, 'That is simple interest: the same interest each year on the first amount. Compound interest in year 2 is worked out on the new amount.', 'M_COMPOUND_AS_SIMPLE'], [one, 'That is the amount after 1 year only. The money stays in for 2 years.', 'M_ONE_YEAR_ONLY'], [A - P, 'That is only the interest earned. The question asks for all the money in the account.', 'M_INTEREST_FOR_AMOUNT']],
       hints: ['After year 1, the interest is added to the money. Year 2 starts with the bigger amount.', 'Find the amount after year 1. Then find the interest on that amount.'],
       steps: [`Year 1: ${P} × ${(100 + r) / 100} = ${one}.`, `Year 2: ${one} × ${(100 + r) / 100} = ${A}.`, `The account holds ${sh(A)}.`],
     }),
     check: ({ r, P }, a) => near((a * 100 * 100) / ((100 + r) * (100 + r)), P) }),
 
-  fam({ id: 'g8.money.compound-steps', skill: 'G8_SIMPLE_INTEREST', outcome: 'G8.MONEY.c', rung: 3, form: 'steps',
+  fam({ id: 'g8.money.compound-steps', skill: 'G8_SIMPLE_INTEREST', outcome: 'MATH.G8.MEASUR.MONEY.c', cskill: 'MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST', rung: 3, form: 'steps',
     draw: () => {
       const r = pick([5, 10, 20]), P = r === 5 ? pick([4000, 8000, 16000]) : pick([5000, 10000, 20000]);
       const A1 = (P * (100 + r)) / 100, I2 = (A1 * r) / 100, A2 = A1 + I2;
@@ -461,30 +461,30 @@ export const FAMILIES = [
     make: ({ r, P, A1, I2, A2 }) => ({
       question: `A chama invests ${sh(P)} for 2 years. It earns compound interest of ${r}% a year, and the interest is added to the money at the end of each year.`,
       parts: [
-        { prompt: 'How much money is there at the end of year 1, in shillings?', answer: A1, unit: 'sh', hint: 'Add the first year\'s interest to the money put in.', wrong: [[(P * r) / 100, 'That is the interest only. The money put in stays in the account.']] },
-        { prompt: 'How much interest is earned in year 2, in shillings?', answer: I2, unit: 'sh', hint: 'Year 2 interest is worked out on the money at the end of year 1.', wrong: [[(P * r) / 100, 'That is the interest on the first amount. In year 2 the money is bigger.']] },
-        { prompt: 'How much money is there at the end of year 2, in shillings?', answer: A2, unit: 'sh', hint: 'Add the year 2 interest to the money at the end of year 1.', wrong: [[P + 2 * ((P * r) / 100), 'That is simple interest. Year 2 earned more than year 1.']] },
-        { prompt: 'How much compound interest was earned altogether, in shillings?', answer: A2 - P, unit: 'sh', hint: 'Compare the final amount with the amount first put in.', wrong: [[A2, 'That is all the money. Take away what was put in.']] },
+        { prompt: 'How much money is there at the end of year 1, in shillings?', answer: A1, unit: 'sh', hint: 'Add the first year\'s interest to the money put in.', wrong: [[(P * r) / 100, 'That is the interest only. The money put in stays in the account.', 'M_INTEREST_FOR_AMOUNT']] },
+        { prompt: 'How much interest is earned in year 2, in shillings?', answer: I2, unit: 'sh', hint: 'Year 2 interest is worked out on the money at the end of year 1.', wrong: [[(P * r) / 100, 'That is the interest on the first amount. In year 2 the money is bigger.', 'M_YEAR2_ON_PRINCIPAL']] },
+        { prompt: 'How much money is there at the end of year 2, in shillings?', answer: A2, unit: 'sh', hint: 'Add the year 2 interest to the money at the end of year 1.', wrong: [[P + 2 * ((P * r) / 100), 'That is simple interest. Year 2 earned more than year 1.', 'M_COMPOUND_AS_SIMPLE']] },
+        { prompt: 'How much compound interest was earned altogether, in shillings?', answer: A2 - P, unit: 'sh', hint: 'Compare the final amount with the amount first put in.', wrong: [[A2, 'That is all the money. Take away what was put in.', 'M_AMOUNT_FOR_INTEREST']] },
       ],
       steps: [`Year 1: ${P} × ${(100 + r) / 100} = ${A1}.`, `Year 2 interest: ${r}% of ${A1} = ${I2}.`, `End of year 2: ${A1} + ${I2} = ${A2}.`, `Interest altogether: ${A2} − ${P} = ${A2 - P}.`],
     }),
     check: ({ r, P }, v) => v[0] === P + (P * r) / 100 && v[1] === (v[0] * r) / 100 && v[2] === v[0] + v[1] && v[3] + P === v[2] }),
 
-  fam({ id: 'g8.money.compound-why', skill: 'G8_SIMPLE_INTEREST', outcome: 'G8.MONEY.c', rung: 3, form: 'why',
+  fam({ id: 'g8.money.compound-why', skill: 'G8_SIMPLE_INTEREST', outcome: 'MATH.G8.MEASUR.MONEY.c', cskill: 'MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST', rung: 3, form: 'why',
     draw: () => { const P = pick([10000, 20000, 30000, 50000]), [a, b] = twoPeople(); return { P, a, b, simple: P * 1.3, comp: P * 1.331 }; },
     make: ({ P, a, b, simple, comp }) => ({
       question: `${a.name} and ${b.name} each save ${sh(P)} for 3 years at 10% a year. ${a.name}'s account pays simple interest and ends with ${sh(simple)}. ${b.name}'s account pays compound interest and ends with ${sh(comp)}. Why does ${b.name} end with more?`,
       options: [
         { text: `Each year's interest is added and earns interest too`, right: true },
-        { text: `${b.Her} account has a higher rate than ${a.her} account`, right: false, why: 'Both accounts pay 10% a year. The rate is the same. It is the way the interest is worked out that differs.' },
-        { text: `Simple interest is only paid in the first year`, right: false, why: 'Simple interest is paid every year, but always on the amount first saved.' },
-        { text: `Compound interest is paid each month, not each year`, right: false, why: 'Here the interest is paid once a year in both accounts. The difference is what the interest is worked out on.' },
+        { text: `${b.Her} account has a higher rate than ${a.her} account`, right: false, why: 'Both accounts pay 10% a year. The rate is the same. It is the way the interest is worked out that differs.', mis: 'M_HIGHER_RATE_ASSUMED' },
+        { text: `Simple interest is only paid in the first year`, right: false, why: 'Simple interest is paid every year, but always on the amount first saved.', mis: 'M_SIMPLE_ONCE_ONLY' },
+        { text: `Compound interest is paid each month, not each year`, right: false, why: 'Here the interest is paid once a year in both accounts. The difference is what the interest is worked out on.', mis: 'M_COMPOUND_MEANS_MONTHLY' },
       ],
       hints: ['Both accounts have the same rate and the same time. What is different about how the interest is worked out?', 'Look at what the interest in year 2 is calculated on.'],
       steps: [`Simple interest: 10% of ${sh(P)} each year, always the same.`, `Compound interest: year 2 interest is 10% of the larger amount from year 1.`, 'The interest earns interest, so the compound account grows faster.'],
     }) }),
 
-  fam({ id: 'g8.money.depreciate-motorcycle', skill: 'G8_PROFIT_LOSS', outcome: 'G8.MONEY.d', rung: 2, form: 'word',
+  fam({ id: 'g8.money.depreciate-motorcycle', skill: 'G8_PROFIT_LOSS', outcome: 'MATH.G8.MEASUR.MONEY.d', cskill: 'MATH.G8.MEASUR.MONEY.DEPRECIATION', rung: 2, form: 'word',
     draw: () => {
       const P = price('motorcycle'), r = pick([10, 20]), V = (P * (100 - r) * (100 - r)) / 10000;
       if (!Number.isInteger(V)) return null;
@@ -494,13 +494,13 @@ export const FAMILIES = [
     make: ({ P, r, V, simple, one, p }) => ({
       question: `${p.name} buys a boda boda motorcycle for ${sh(P)}. The motorcycle loses ${r}% of its value each year. What is its value after 2 years?`,
       answer: V,
-      wrong: [[simple, `Taking ${r}% of the first price twice is not right. The second ${r}% is taken from the smaller value after year 1.`], [one, 'That is the value after 1 year. The question asks about 2 years.'], [P - V, 'That is how much value has been lost. The question asks for what is left.']],
+      wrong: [[simple, `Taking ${r}% of the first price twice is not right. The second ${r}% is taken from the smaller value after year 1.`, 'M_DEPRECIATION_ON_FIRST_PRICE'], [one, 'That is the value after 1 year. The question asks about 2 years.', 'M_ONE_YEAR_ONLY_DEP'], [P - V, 'That is how much value has been lost. The question asks for what is left.', 'M_LOSS_FOR_VALUE']],
       hints: ['Find the value after year 1. Year 2 starts from that smaller value.', `Each year the motorcycle keeps ${100 - r}% of its value.`],
       steps: [`Year 1: ${P} × ${(100 - r) / 100} = ${one}.`, `Year 2: ${one} × ${(100 - r) / 100} = ${V}.`],
     }),
     check: ({ P, r }, a) => near((a * 10000) / ((100 - r) * (100 - r)), P) }),
 
-  fam({ id: 'g8.money.depreciate-table', skill: 'G8_PROFIT_LOSS', outcome: 'G8.MONEY.d', rung: 3, form: 'table',
+  fam({ id: 'g8.money.depreciate-table', skill: 'G8_PROFIT_LOSS', outcome: 'MATH.G8.MEASUR.MONEY.d', cskill: 'MATH.G8.MEASUR.MONEY.DEPRECIATION', rung: 3, form: 'table',
     draw: () => {
       const P = pick([40000, 50000, 60000, 64000, 80000]), r = pick([10, 20, 25]), k = (100 - r) / 100;
       const V1 = P * k, V2 = V1 * k, V3 = V2 * k;
@@ -512,27 +512,27 @@ export const FAMILIES = [
       question: 'The table shows the value of a fridge as it gets older. The value falls by the same per cent each year. What is its value after 3 years, in shillings?',
       model: { type: 'table', data: { head: ['Age of the fridge', 'Value (sh)'], rows: [{ label: 'New', value: commas(P) }, { label: 'After 1 year', value: commas(V1) }, { label: 'After 2 years', value: commas(V2) }, { label: 'After 3 years', value: '?' }] } },
       answer: V3,
-      wrong: [[w[0], 'The value does not fall by the same amount each year. It falls by the same per cent, so the fall gets smaller.'], [w[1], 'Each year\'s fall is a per cent of that year\'s value. The fall is smaller in year 3 than in year 2.'], [w[2], 'The per cent is taken from the value at the start of year 3, not from the price when new.']],
+      wrong: [[w[0], 'The value does not fall by the same amount each year. It falls by the same per cent, so the fall gets smaller.', 'M_SAME_AMOUNT_EACH_YEAR'], [w[1], 'Each year\'s fall is a per cent of that year\'s value. The fall is smaller in year 3 than in year 2.', 'M_LAST_FALL_REPEATED'], [w[2], 'The per cent is taken from the value at the start of year 3, not from the price when new.', 'M_DEPRECIATION_ON_FIRST_PRICE']],
       hints: ['First find the per cent by which the value falls: compare year 1 with new.', 'Then take that per cent off the value after 2 years.'],
       steps: [`${V1} ÷ ${P} = ${V1 / P}, so the fridge keeps ${(V1 / P) * 100}% of its value each year.`, `After 3 years: ${V2} × ${V1 / P} = ${V3}.`],
     }),
     check: ({ P, V1, V3 }, a) => near(a * P * P, V1 * V1 * V1) && V3 > 0 }),
 
-  fam({ id: 'g8.money.depreciate-why', skill: 'G8_PROFIT_LOSS', outcome: 'G8.MONEY.d', rung: 3, form: 'why',
+  fam({ id: 'g8.money.depreciate-why', skill: 'G8_PROFIT_LOSS', outcome: 'MATH.G8.MEASUR.MONEY.d', cskill: 'MATH.G8.MEASUR.MONEY.DEPRECIATION', rung: 3, form: 'why',
     draw: () => { const r = pick([10, 20, 30]), P = 10000, V2 = (P * (100 - r) * (100 - r)) / 10000; return { r, P, V2, tot: 2 * r, real: 2 * r - (r * r) / 100, wrongUp: 2 * r + (r * r) / 100, p: person() }; },
     make: ({ r, P, V2, tot, real, wrongUp, p }) => ({
       question: `A phone costs ${sh(P)} new. It loses ${r}% of its value in year 1 and another ${r}% of its value in year 2. ${p.name} says it has lost ${tot}% of its price altogether. Why is that wrong?`,
       options: [
         { text: `The second ${r}% is taken from a smaller value, so the loss is ${real}%`, right: true },
-        { text: `The loss should be ${wrongUp}%, because the second ${r}% is taken from a bigger value`, right: false, why: 'After a fall, the value is smaller, not bigger. The second year\'s loss is taken from the smaller value.' },
-        { text: `The phone only loses value in the first year`, right: false, why: 'The question says it loses value in year 2 as well.' },
-        { text: `Per cent changes can never be added`, right: false, why: 'They can be added when they are all taken from the same starting value. Here the starting value changes.' },
+        { text: `The loss should be ${wrongUp}%, because the second ${r}% is taken from a bigger value`, right: false, why: 'After a fall, the value is smaller, not bigger. The second year\'s loss is taken from the smaller value.', mis: 'M_SECOND_FROM_BIGGER' },
+        { text: `The phone only loses value in the first year`, right: false, why: 'The question says it loses value in year 2 as well.', mis: 'M_LOSS_FIRST_YEAR_ONLY' },
+        { text: `Per cent changes can never be added`, right: false, why: 'They can be added when they are all taken from the same starting value. Here the starting value changes.', mis: 'M_PERCENTS_NEVER_ADD' },
       ],
       hints: [`Work out the value after year 1, then the value after year 2, in shillings.`, 'Compare the total loss in shillings with the price when new.'],
       steps: [`Year 1: ${P} − ${r}% = ${(P * (100 - r)) / 100}.`, `Year 2: ${(P * (100 - r)) / 100} − ${r}% = ${V2}.`, `Loss: ${P - V2} out of ${P} is ${real}%, not ${tot}%.`],
     }) }),
 
-  fam({ id: 'g8.money.hp-extra', skill: 'G8_PROFIT_LOSS', outcome: 'G8.MONEY.e', rung: 2, form: 'word',
+  fam({ id: 'g8.money.hp-extra', skill: 'G8_PROFIT_LOSS', outcome: 'MATH.G8.MEASUR.MONEY.e', cskill: 'MATH.G8.MEASUR.MONEY.HIRE_PURCHASE', rung: 2, form: 'word',
     draw: () => {
       const item = pick(['television', 'fridge', 'sewing machine']), C = price(item), D = C * pick([0.2, 0.25, 0.1]), n = pick([6, 8, 10, 12]);
       if (!Number.isInteger(D)) return null;
@@ -542,13 +542,13 @@ export const FAMILIES = [
     make: ({ item, C, D, n, m, T, p }) => ({
       question: `A ${item} has a cash price of ${sh(C)}. ${p.name} buys it on hire purchase. ${p.She} pays a deposit of ${sh(D)}, then ${n} monthly instalments of ${sh(m)}. How much more than the cash price does ${p.she} pay altogether?`,
       answer: T - C,
-      wrong: [[T, 'That is the total paid. The question asks how much MORE than the cash price.'], [C - D, 'That is the balance after the deposit, not the extra that hire purchase costs.'], [n * m, 'That is the instalments only. The deposit is paid too.']],
+      wrong: [[T, 'That is the total paid. The question asks how much MORE than the cash price.', 'M_TOTAL_FOR_EXTRA'], [C - D, 'That is the balance after the deposit, not the extra that hire purchase costs.', 'M_BALANCE_FOR_EXTRA'], [n * m, 'That is the instalments only. The deposit is paid too.', 'M_DEPOSIT_LEFT_OUT']],
       hints: ['Find the total paid on hire purchase: the deposit and all the instalments.', 'Compare that total with the cash price.'],
       steps: [`Instalments: ${n} × ${m} = ${n * m}.`, `Total paid: ${D} + ${n * m} = ${T}.`, `Extra: ${T} − ${C} = ${T - C}.`],
     }),
     check: ({ C, D, n, m }, a) => C + a === D + n * m }),
 
-  fam({ id: 'g8.money.hp-plans', skill: 'G8_PROFIT_LOSS', outcome: 'G8.MONEY.e', rung: 3, form: 'table',
+  fam({ id: 'g8.money.hp-plans', skill: 'G8_PROFIT_LOSS', outcome: 'MATH.G8.MEASUR.MONEY.e', cskill: 'MATH.G8.MEASUR.MONEY.HIRE_PURCHASE', misMapped: false, reveals: ['M_DEPOSIT_LEFT_OUT', 'M_LOWEST_INSTALMENT_CHOSEN'], rung: 3, form: 'table',
     draw: () => {
       for (let t = 0; t < 3000; t++) {
         const C = price('television'), plans = [0, 1, 2].map(() => {

@@ -689,6 +689,69 @@
     "part squares"
    ],
    "mastery": "The child counts whole squares, counts part squares as half each, adds, and multiplies by the area of one square when the grid is to scale: 20 whole and 10 part squares of 5 m by 5 m give 25 × 25 = 625 m²."
+  },
+  "MATH.G8.MEASUR.MONEY.INTEREST_TERMS": {
+   "forms": [
+    "which is the principal",
+    "what is the interest",
+    "the amount at the end",
+    "who pays"
+   ],
+   "mastery": "The child names the principal (the money saved or borrowed), the interest (the extra paid for it), the rate (per cent a year), the time and the amount (principal plus interest) in a story about a bank, SACCO or loan, and says who pays the interest."
+  },
+  "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST": {
+   "forms": [
+    "simple interest for",
+    "the amount after",
+    "time in months",
+    "a loan"
+   ],
+   "mastery": "The child uses I = P × R × T / 100 with the time in years (months divided by 12), and adds the interest to the principal for the amount: 20,000 shillings at 8% for 3 years earns 4,800 shillings, an amount of 24,800 shillings."
+  },
+  "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK": {
+   "forms": [
+    "find the rate",
+    "how many years",
+    "how much was borrowed",
+    "interest for one year"
+   ],
+   "mastery": "The child rearranges I = PRT/100 (or uses the interest for one year) to find the missing quantity: interest of 3,000 shillings on 15,000 shillings over 2 years is 1,500 a year, which is 10% a year."
+  },
+  "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST": {
+   "forms": [
+    "amount after 2 years",
+    "complete the table",
+    "compound interest earned",
+    "why does she end with more"
+   ],
+   "mastery": "The child works out each year's interest on the amount at the start of that year, adds it on, and repeats, then gives the amount or the interest as asked: 10,000 shillings at 10% compound becomes 11,000 then 12,100 after 2 years, interest 2,100; and explains why this beats simple interest at the same rate."
+  },
+  "MATH.G8.MEASUR.MONEY.DEPRECIATION": {
+   "forms": [
+    "value after 2 years",
+    "complete the table",
+    "how much value is lost",
+    "why is the total not 40%"
+   ],
+   "mastery": "The child takes the percentage off the value at the start of each year (not off the new price), so the fall gets smaller each year: a motorcycle of 120,000 shillings losing 20% a year is worth 96,000 then 76,800 after 2 years."
+  },
+  "MATH.G8.MEASUR.MONEY.APPRECIATION": {
+   "forms": [
+    "value of land after",
+    "appreciate or depreciate",
+    "which is worth buying",
+    "complete the table"
+   ],
+   "mastery": "The child adds the percentage of the value at the start of each year, and sorts goods into ones that usually gain value (land, a plot in a growing town) and ones that lose it (phones, vehicles, furniture): land of 500,000 shillings appreciating 10% a year is worth 605,000 after 2 years."
+  },
+  "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE": {
+   "forms": [
+    "how much more than the cash price",
+    "which plan costs least",
+    "total hire purchase price",
+    "the balance after the deposit"
+   ],
+   "mastery": "The child adds the deposit to all the instalments (number times each instalment) for the hire purchase price, subtracts the cash price for the extra paid, and compares plans by their totals: a deposit of 5,000 and 10 instalments of 2,000 cost 25,000 against a cash price of 21,000, so 4,000 more."
   }
  }
 }

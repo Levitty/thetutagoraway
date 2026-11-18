@@ -4436,5 +4436,537 @@
   "help": "Each square stands for 25 m².",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_PRINCIPAL_AS_INTEREST": {
+  "skill": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS",
+  "error": "Calls the money saved the interest.",
+  "example": {
+   "question": "Wanjiru saves 20,000 and gets back 21,600. The interest?",
+   "wrong_answer": "20,000",
+   "correct_answer": "1,600"
+  },
+  "cause": "Thinks \"interest\" is the money in the account.",
+  "reveals": "The answer 20,000 as a wrong option, with a reason that names the idea.",
+  "help": "Interest is the extra on top of the principal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_AMOUNT_AS_INTEREST": {
+  "skill": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS",
+  "error": "Calls the amount at the end the interest.",
+  "example": {
+   "question": "Saves 20,000, gets back 21,600. The interest?",
+   "wrong_answer": "21,600",
+   "correct_answer": "1,600"
+  },
+  "cause": "Mixes the amount and the interest.",
+  "reveals": "The answer 21,600 as a wrong option, with a reason that names the idea.",
+  "help": "Amount = principal + interest.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_RATE_AS_SHILLINGS": {
+  "skill": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS",
+  "error": "Reads the rate as a number of shillings.",
+  "example": {
+   "question": "8% a year on 20,000. Interest for one year?",
+   "wrong_answer": "8",
+   "correct_answer": "1,600"
+  },
+  "cause": "Reads 8% as 8 shillings.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "8% means 8 out of every 100 shillings.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_BORROWER_EARNS": {
+  "skill": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS",
+  "error": "Believes the borrower is paid the interest on a loan.",
+  "example": {
+   "question": "Otieno borrows from a bank. Who pays the interest?",
+   "wrong_answer": "the bank",
+   "correct_answer": "Otieno"
+  },
+  "cause": "Links interest only with saving.",
+  "reveals": "The answer the bank as a wrong option, with a reason that names the idea.",
+  "help": "On a loan, the borrower pays interest to the lender.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_RATE_NOT_DIVIDED_BY_100": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST",
+  "error": "Multiplies by the rate without dividing by 100.",
+  "example": {
+   "question": "20,000 at 8% for 3 years. Interest?",
+   "wrong_answer": "480,000",
+   "correct_answer": "4,800"
+  },
+  "cause": "Forgets per cent means per hundred.",
+  "reveals": "The answer 480,000 as a wrong option, with a reason that names the idea.",
+  "help": "I = P × R × T ÷ 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_TIME_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST",
+  "error": "Gives the interest for one year when several years are asked.",
+  "example": {
+   "question": "20,000 at 8% for 3 years. Interest?",
+   "wrong_answer": "1,600",
+   "correct_answer": "4,800"
+  },
+  "cause": "Leaves out T.",
+  "reveals": "The answer 1,600 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by the 3 years.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_MONTHS_AS_YEARS": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST",
+  "error": "Uses a time in months as if it were in years.",
+  "example": {
+   "question": "12,000 at 10% for 6 months. Interest?",
+   "wrong_answer": "7,200",
+   "correct_answer": "600"
+  },
+  "cause": "Puts 6 for T.",
+  "reveals": "The answer 7,200 as a wrong option, with a reason that names the idea.",
+  "help": "6 months = 6/12 of a year.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_SI_INTEREST_FOR_AMOUNT": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST",
+  "error": "Gives the interest when the amount is asked.",
+  "example": {
+   "question": "20,000 at 8% for 3 years. Amount?",
+   "wrong_answer": "4,800",
+   "correct_answer": "24,800"
+  },
+  "cause": "Stops at the interest.",
+  "reveals": "The answer 4,800 as a wrong option, with a reason that names the idea.",
+  "help": "Amount = principal + interest.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_WORKBACK_MULTIPLIED": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK",
+  "error": "Multiplies the interest by the rate and time to find the principal.",
+  "example": {
+   "question": "Interest 3,000 at 10% for 2 years. Principal?",
+   "wrong_answer": "600",
+   "correct_answer": "15,000"
+  },
+  "cause": "Uses the forward formula.",
+  "reveals": "The answer 600 as a wrong option, with a reason that names the idea.",
+  "help": "P = 100 × I ÷ (R × T).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_AMOUNT_USED_AS_INTEREST": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK",
+  "error": "Uses the amount instead of the interest to find the rate.",
+  "example": {
+   "question": "15,000 grows to 18,000 in 2 years. Rate?",
+   "wrong_answer": "60%",
+   "correct_answer": "10%"
+  },
+  "cause": "Takes the final number as the interest.",
+  "reveals": "The answer 60% as a wrong option, with a reason that names the idea.",
+  "help": "Interest = 18,000 - 15,000 = 3,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_RATE_AS_DECIMAL": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK",
+  "error": "Gives the rate as a decimal, not a percentage.",
+  "example": {
+   "question": "Interest 1,500 a year on 15,000. Rate?",
+   "wrong_answer": "0.1",
+   "correct_answer": "10%"
+  },
+  "cause": "Does not multiply by 100.",
+  "reveals": "The answer 0.1 as a wrong option, with a reason that names the idea.",
+  "help": "Rate = 1,500 ÷ 15,000 × 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_TIME_NOT_DIVIDED": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK",
+  "error": "Uses the whole interest as one year's interest when finding the rate.",
+  "example": {
+   "question": "Interest 3,000 on 15,000 over 2 years. Rate?",
+   "wrong_answer": "20%",
+   "correct_answer": "10%"
+  },
+  "cause": "Forgets the interest is for 2 years.",
+  "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+  "help": "One year: 3,000 ÷ 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_COMPOUND_AS_SIMPLE": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Works out the interest on the first amount every year.",
+  "example": {
+   "question": "10,000 at 10% compound for 2 years. Amount?",
+   "wrong_answer": "12,000",
+   "correct_answer": "12,100"
+  },
+  "cause": "Uses simple interest.",
+  "reveals": "The answer 12,000 as a wrong option, with a reason that names the idea.",
+  "help": "Year 2 interest is on 11,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_ONE_YEAR_ONLY": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Gives the amount after one year.",
+  "example": {
+   "question": "10,000 at 10% compound for 2 years. Amount?",
+   "wrong_answer": "11,000",
+   "correct_answer": "12,100"
+  },
+  "cause": "Stops after the first year.",
+  "reveals": "The answer 11,000 as a wrong option, with a reason that names the idea.",
+  "help": "Repeat for year 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_INTEREST_FOR_AMOUNT": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Gives the interest when the whole amount is asked.",
+  "example": {
+   "question": "10,000 at 10% compound for 2 years. Amount?",
+   "wrong_answer": "2,100",
+   "correct_answer": "12,100"
+  },
+  "cause": "Answers a different question.",
+  "reveals": "The answer 2,100 as a wrong option, with a reason that names the idea.",
+  "help": "Amount = principal + interest.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_YEAR2_ON_PRINCIPAL": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Works out year 2's interest on the first principal.",
+  "example": {
+   "question": "Year 1: 10,000 to 11,000 at 10%. Year 2 interest?",
+   "wrong_answer": "1,000",
+   "correct_answer": "1,100"
+  },
+  "cause": "Does not use the new amount.",
+  "reveals": "The answer 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "Interest is on the amount at the start of the year.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_AMOUNT_FOR_INTEREST": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Gives the amount when the interest is asked.",
+  "example": {
+   "question": "10,000 at 10% compound for 2 years. Interest?",
+   "wrong_answer": "12,100",
+   "correct_answer": "2,100"
+  },
+  "cause": "Stops at the amount.",
+  "reveals": "The answer 12,100 as a wrong option, with a reason that names the idea.",
+  "help": "Take away what was put in.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_YEAR_INTEREST_NOT_ADDED": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Gives the year's interest as the amount at the end of the year.",
+  "example": {
+   "question": "Start of year 2: 11,000 at 10%. Amount at the end of year 2?",
+   "wrong_answer": "1,100",
+   "correct_answer": "12,100"
+  },
+  "cause": "Forgets to add the interest on.",
+  "reveals": "The answer 1,100 as a wrong option, with a reason that names the idea.",
+  "help": "Add it to the 11,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_HIGHER_RATE_ASSUMED": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Believes compound interest ends higher because its rate is higher.",
+  "example": {
+   "question": "Both pay 10%. Why does compound end with more?",
+   "wrong_answer": "a higher rate",
+   "correct_answer": "interest earns interest"
+  },
+  "cause": "Looks for a difference in the numbers.",
+  "reveals": "The answer a higher rate as a wrong option, with a reason that names the idea.",
+  "help": "The rate is the same; the interest is added and earns interest.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_SIMPLE_ONCE_ONLY": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Believes simple interest is paid only in the first year.",
+  "example": {
+   "question": "Simple interest of 10% on 10,000 for 3 years. Interest?",
+   "wrong_answer": "1,000",
+   "correct_answer": "3,000"
+  },
+  "cause": "Thinks \"simple\" means one payment.",
+  "reveals": "The answer 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "Simple interest is paid every year, on the first amount.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_COMPOUND_MEANS_MONTHLY": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "error": "Believes compound means the interest is paid each month.",
+  "example": {
+   "question": "Is compound interest paid monthly?",
+   "wrong_answer": "yes, always",
+   "correct_answer": "it depends on the account; the difference is what it is worked on"
+  },
+  "cause": "Confuses how often with what the interest is on.",
+  "reveals": "The answer yes, always as a wrong option, with a reason that names the idea.",
+  "help": "Compound means the interest is worked on the growing amount.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_DEPRECIATION_ON_FIRST_PRICE": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Takes the percentage off the new price every year.",
+  "example": {
+   "question": "120,000 losing 20% a year. Value after 2 years?",
+   "wrong_answer": "72,000",
+   "correct_answer": "76,800"
+  },
+  "cause": "Uses simple depreciation.",
+  "reveals": "The answer 72,000 as a wrong option, with a reason that names the idea.",
+  "help": "Year 2 loses 20% of 96,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_ONE_YEAR_ONLY_DEP": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Gives the value after one year.",
+  "example": {
+   "question": "120,000 losing 20% a year. Value after 2 years?",
+   "wrong_answer": "96,000",
+   "correct_answer": "76,800"
+  },
+  "cause": "Stops after the first year.",
+  "reveals": "The answer 96,000 as a wrong option, with a reason that names the idea.",
+  "help": "Repeat for year 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_LOSS_FOR_VALUE": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Gives the value lost when the value left is asked.",
+  "example": {
+   "question": "120,000 losing 20% a year. Value after 2 years?",
+   "wrong_answer": "43,200",
+   "correct_answer": "76,800"
+  },
+  "cause": "Answers the loss.",
+  "reveals": "The answer 43,200 as a wrong option, with a reason that names the idea.",
+  "help": "Value left = price - loss.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_SAME_AMOUNT_EACH_YEAR": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Takes the same amount off each year as in the first year.",
+  "example": {
+   "question": "Fridge: 40,000, then 32,000. Same per cent each year. After 3 years?",
+   "wrong_answer": "16,000",
+   "correct_answer": "20,480"
+  },
+  "cause": "Sees the first fall and repeats it.",
+  "reveals": "The answer 16,000 as a wrong option, with a reason that names the idea.",
+  "help": "The same per cent of a smaller value is a smaller fall.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_LAST_FALL_REPEATED": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Repeats the previous year's fall instead of working the new one.",
+  "example": {
+   "question": "40,000, 32,000, 25,600. After 3 years?",
+   "wrong_answer": "19,200",
+   "correct_answer": "20,480"
+  },
+  "cause": "Takes off 6,400 again.",
+  "reveals": "The answer 19,200 as a wrong option, with a reason that names the idea.",
+  "help": "20% of 25,600 is 5,120.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_SECOND_FROM_BIGGER": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Believes the second year's percentage is taken from a bigger value, so the total loss is more than the two per cents added.",
+  "example": {
+   "question": "A phone loses 20% then another 20%. Total loss?",
+   "wrong_answer": "44%",
+   "correct_answer": "36%"
+  },
+  "cause": "Mixes up depreciation with compound growth.",
+  "reveals": "The answer 44% as a wrong option, with a reason that names the idea.",
+  "help": "After a fall the value is smaller: 20% of 80% is 16%, so 20 + 16 = 36%.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_LOSS_FIRST_YEAR_ONLY": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Believes things lose value only in the first year.",
+  "example": {
+   "question": "Does a phone keep losing value after year 1?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes"
+  },
+  "cause": "Thinks value drops once when used.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "Depreciation goes on each year.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_PERCENTS_NEVER_ADD": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "error": "Believes percentage changes can never be added.",
+  "example": {
+   "question": "5% and 3% of the same price: total per cent?",
+   "wrong_answer": "cannot be added",
+   "correct_answer": "8%"
+  },
+  "cause": "Over-learns the compound rule.",
+  "reveals": "The answer cannot be added as a wrong option, with a reason that names the idea.",
+  "help": "They add when taken from the same starting value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.APPRECIATION.M_APPRECIATION_SUBTRACTED": {
+  "skill": "MATH.G8.MEASUR.MONEY.APPRECIATION",
+  "error": "Takes the percentage off for an item that appreciates.",
+  "example": {
+   "question": "Land of 500,000 appreciates 10% a year. After 1 year?",
+   "wrong_answer": "450,000",
+   "correct_answer": "550,000"
+  },
+  "cause": "Confuses appreciate and depreciate.",
+  "reveals": "The answer 450,000 as a wrong option, with a reason that names the idea.",
+  "help": "Appreciate means the value goes up.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.APPRECIATION.M_APPRECIATION_ON_FIRST_VALUE": {
+  "skill": "MATH.G8.MEASUR.MONEY.APPRECIATION",
+  "error": "Adds the percentage of the first value every year.",
+  "example": {
+   "question": "Land of 500,000 at 10% a year. After 2 years?",
+   "wrong_answer": "600,000",
+   "correct_answer": "605,000"
+  },
+  "cause": "Uses simple growth.",
+  "reveals": "The answer 600,000 as a wrong option, with a reason that names the idea.",
+  "help": "Year 2 adds 10% of 550,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.APPRECIATION.M_GAIN_FOR_VALUE": {
+  "skill": "MATH.G8.MEASUR.MONEY.APPRECIATION",
+  "error": "Gives the gain when the value is asked.",
+  "example": {
+   "question": "Land of 500,000 at 10% a year. Value after 2 years?",
+   "wrong_answer": "105,000",
+   "correct_answer": "605,000"
+  },
+  "cause": "Stops at the gain.",
+  "reveals": "The answer 105,000 as a wrong option, with a reason that names the idea.",
+  "help": "Value = first value + gain.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.APPRECIATION.M_WHAT_APPRECIATES": {
+  "skill": "MATH.G8.MEASUR.MONEY.APPRECIATION",
+  "error": "Believes vehicles and phones usually gain value and land loses it.",
+  "example": {
+   "question": "Which usually appreciates: a phone or a plot of land?",
+   "wrong_answer": "a phone",
+   "correct_answer": "a plot of land"
+  },
+  "cause": "Thinks new things are worth more.",
+  "reveals": "The answer a phone as a wrong option, with a reason that names the idea.",
+  "help": "Most goods lose value with use; land in a growing town usually gains.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_TOTAL_FOR_EXTRA": {
+  "skill": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE",
+  "error": "Gives the total hire purchase price when the extra is asked.",
+  "example": {
+   "question": "Cash 21,000; deposit 5,000 and 10 × 2,000. How much more?",
+   "wrong_answer": "25,000",
+   "correct_answer": "4,000"
+  },
+  "cause": "Answers a different question.",
+  "reveals": "The answer 25,000 as a wrong option, with a reason that names the idea.",
+  "help": "Extra = hire purchase total - cash price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_BALANCE_FOR_EXTRA": {
+  "skill": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE",
+  "error": "Gives the balance after the deposit as the extra.",
+  "example": {
+   "question": "Cash 21,000; deposit 5,000 and 10 × 2,000. How much more?",
+   "wrong_answer": "16,000",
+   "correct_answer": "4,000"
+  },
+  "cause": "Takes the deposit from the cash price.",
+  "reveals": "The answer 16,000 as a wrong option, with a reason that names the idea.",
+  "help": "Add up everything paid, then compare.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_DEPOSIT_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE",
+  "error": "Leaves the deposit out of the total paid.",
+  "example": {
+   "question": "Deposit 5,000 and 10 × 2,000. Total paid?",
+   "wrong_answer": "20,000",
+   "correct_answer": "25,000"
+  },
+  "cause": "Counts the instalments only.",
+  "reveals": "The answer 20,000 as a wrong option, with a reason that names the idea.",
+  "help": "The deposit is paid too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_LOWEST_INSTALMENT_CHOSEN": {
+  "skill": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE",
+  "error": "Picks the plan with the smallest monthly instalment as the cheapest.",
+  "example": {
+   "question": "Plan A: 12 × 2,500, deposit 5,000. Plan B: 6 × 4,000, deposit 4,000. Cheaper?",
+   "wrong_answer": "A",
+   "correct_answer": "B (28,000 against 35,000)"
+  },
+  "cause": "Looks at one payment only.",
+  "reveals": "The answer A as a wrong option, with a reason that names the idea.",
+  "help": "Find each total: deposit + all instalments.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_HP_CHEAPER_THAN_CASH": {
+  "skill": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE",
+  "error": "Believes hire purchase costs less than paying cash.",
+  "example": {
+   "question": "Is hire purchase usually more or less than the cash price?",
+   "wrong_answer": "less, you pay a little at a time",
+   "correct_answer": "more"
+  },
+  "cause": "Feels the small payments are cheap.",
+  "reveals": "The answer less, you pay a little at a time as a wrong option, with a reason that names the idea.",
+  "help": "Add the payments: hire purchase usually costs more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

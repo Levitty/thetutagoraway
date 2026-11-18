@@ -8354,6 +8354,973 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.MEASUR.AREA",
   "sub_strand_name": "Area",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.INTEREST_TERMS": {
+  "skill": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS",
+  "key_step": "The child points at the principal first and says interest is only the extra on top.",
+  "floor": {
+   "prerequisite": "Finds a percentage of an amount.",
+   "question": "8% of 20,000",
+   "answer": "1,600"
+  },
+  "representations": [
+   "a SACCO passbook",
+   "a bar: principal plus interest",
+   "the words principal, interest, amount"
+  ],
+  "steps": [
+   "Find the money put in or borrowed: principal.",
+   "Find the extra: interest.",
+   "Principal plus interest: amount.",
+   "Rate is per cent a year; time is in years."
+  ],
+  "contexts": [
+   "a SACCO savings account",
+   "a loan for a posho mill",
+   "a chama"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of 20,000 and a small piece of 1,600 on the end."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the small piece.",
+    "say": "What is this part called?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say interest."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the whole bar.",
+    "say": "And all of it together?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_PRINCIPAL_AS_INTEREST",
+    "listen_for": [
+     "20,000 is the interest"
+    ],
+    "ask": "Is that what she put in or the extra?",
+    "repair": "Interest is the extra.",
+    "error": "Calls the money saved the interest.",
+    "example": {
+     "question": "Wanjiru saves 20,000 and gets back 21,600. The interest?",
+     "wrong_answer": "20,000",
+     "correct_answer": "1,600"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_AMOUNT_AS_INTEREST",
+    "listen_for": [
+     "21,600"
+    ],
+    "ask": "Does that include what she put in?",
+    "repair": "Amount = principal + interest.",
+    "error": "Calls the amount at the end the interest.",
+    "example": {
+     "question": "Saves 20,000, gets back 21,600. The interest?",
+     "wrong_answer": "21,600",
+     "correct_answer": "1,600"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_RATE_AS_SHILLINGS",
+    "listen_for": [
+     "8 shillings"
+    ],
+    "ask": "What does 8% mean?",
+    "repair": "8 out of every 100.",
+    "error": "Reads the rate as a number of shillings.",
+    "example": {
+     "question": "8% a year on 20,000. Interest for one year?",
+     "wrong_answer": "8",
+     "correct_answer": "1,600"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.INTEREST_TERMS.M_BORROWER_EARNS",
+    "listen_for": [
+     "the bank pays"
+    ],
+    "ask": "Who is using whose money?",
+    "repair": "The borrower pays.",
+    "error": "Believes the borrower is paid the interest on a loan.",
+    "example": {
+     "question": "Otieno borrows from a bank. Who pays the interest?",
+     "wrong_answer": "the bank",
+     "correct_answer": "Otieno"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Amina saves 30,000 and gets back 33,000. The interest?",
+    "answer": "3,000 shillings",
+    "shows": "interest"
+   },
+   {
+    "question": "In the same story, what is the principal?",
+    "answer": "30,000 shillings",
+    "shows": "principal"
+   }
+  ],
+  "name": "Identify principal, interest, rate, time and amount",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST",
+  "key_step": "The child writes P, R and T with T in years before putting them into I = PRT/100.",
+  "floor": {
+   "prerequisite": "Finds a percentage.",
+   "question": "8% of 20,000",
+   "answer": "1,600"
+  },
+  "representations": [
+   "a table year by year with the same interest",
+   "the formula",
+   "the amount"
+  ],
+  "steps": [
+   "Write P, R, T (years).",
+   "I = P × R × T ÷ 100.",
+   "Amount = P + I.",
+   "Check the size."
+  ],
+  "contexts": [
+   "a bank loan for a matatu",
+   "saving school fees",
+   "a SACCO loan"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table with three years, each earning 1,600."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three 1,600s.",
+    "say": "What is the interest altogether?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4,800."
+   },
+   {
+    "beat": "write",
+    "do": "Write I = 20,000 × 8 × 3 ÷ 100."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_RATE_NOT_DIVIDED_BY_100",
+    "listen_for": [
+     "480,000"
+    ],
+    "ask": "Can the interest be more than the loan?",
+    "repair": "Divide by 100.",
+    "error": "Multiplies by the rate without dividing by 100.",
+    "example": {
+     "question": "20,000 at 8% for 3 years. Interest?",
+     "wrong_answer": "480,000",
+     "correct_answer": "4,800"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_TIME_LEFT_OUT",
+    "listen_for": [
+     "1,600"
+    ],
+    "ask": "Is that for one year or three?",
+    "repair": "Times 3.",
+    "error": "Gives the interest for one year when several years are asked.",
+    "example": {
+     "question": "20,000 at 8% for 3 years. Interest?",
+     "wrong_answer": "1,600",
+     "correct_answer": "4,800"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_MONTHS_AS_YEARS",
+    "listen_for": [
+     "7,200"
+    ],
+    "ask": "Is 6 months 6 years?",
+    "repair": "Half a year.",
+    "error": "Uses a time in months as if it were in years.",
+    "example": {
+     "question": "12,000 at 10% for 6 months. Interest?",
+     "wrong_answer": "7,200",
+     "correct_answer": "600"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST.M_SI_INTEREST_FOR_AMOUNT",
+    "listen_for": [
+     "4,800"
+    ],
+    "ask": "Interest or amount?",
+    "repair": "Add the principal.",
+    "error": "Gives the interest when the amount is asked.",
+    "example": {
+     "question": "20,000 at 8% for 3 years. Amount?",
+     "wrong_answer": "4,800",
+     "correct_answer": "24,800"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Simple interest on 15,000 shillings at 6% a year for 4 years?",
+    "answer": "3,600 shillings",
+    "shows": "interest"
+   },
+   {
+    "question": "The amount on 24,000 shillings at 5% a year for 9 months?",
+    "answer": "24,900 shillings",
+    "shows": "months"
+   }
+  ],
+  "name": "Calculate simple interest and the amount",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK": {
+  "skill": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK",
+  "key_step": "The child finds the interest for one year first, then compares it with the principal.",
+  "floor": {
+   "prerequisite": "Finds simple interest.",
+   "question": "15,000 at 10% for 2 years",
+   "answer": "3,000"
+  },
+  "representations": [
+   "a table of years",
+   "interest for one year",
+   "the rearranged formula"
+  ],
+  "steps": [
+   "Find the interest (amount - principal).",
+   "Find one year's interest.",
+   "Rate = one year's interest ÷ principal × 100.",
+   "Check forwards."
+  ],
+  "contexts": [
+   "a loan from a SACCO",
+   "a fixed deposit",
+   "a chama loan"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 15,000 grows to 18,000 in 2 years."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 18,000.",
+    "say": "How much of this is interest?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3,000."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: how much interest in one year?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_WORKBACK_MULTIPLIED",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "Is the principal smaller than the interest?",
+    "repair": "Rearrange the formula.",
+    "error": "Multiplies the interest by the rate and time to find the principal.",
+    "example": {
+     "question": "Interest 3,000 at 10% for 2 years. Principal?",
+     "wrong_answer": "600",
+     "correct_answer": "15,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_AMOUNT_USED_AS_INTEREST",
+    "listen_for": [
+     "60%"
+    ],
+    "ask": "Is 18,000 the interest?",
+    "repair": "Take away the principal.",
+    "error": "Uses the amount instead of the interest to find the rate.",
+    "example": {
+     "question": "15,000 grows to 18,000 in 2 years. Rate?",
+     "wrong_answer": "60%",
+     "correct_answer": "10%"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_RATE_AS_DECIMAL",
+    "listen_for": [
+     "0.1"
+    ],
+    "ask": "Is the rate a per cent?",
+    "repair": "Times 100.",
+    "error": "Gives the rate as a decimal, not a percentage.",
+    "example": {
+     "question": "Interest 1,500 a year on 15,000. Rate?",
+     "wrong_answer": "0.1",
+     "correct_answer": "10%"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.SIMPLE_INTEREST_WORK_BACK.M_TIME_NOT_DIVIDED",
+    "listen_for": [
+     "20%"
+    ],
+    "ask": "Is 3,000 for one year?",
+    "repair": "Divide by 2.",
+    "error": "Uses the whole interest as one year's interest when finding the rate.",
+    "example": {
+     "question": "Interest 3,000 on 15,000 over 2 years. Rate?",
+     "wrong_answer": "20%",
+     "correct_answer": "10%"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "20,000 shillings earns 4,000 shillings simple interest in 4 years. Rate?",
+    "answer": "5%",
+    "shows": "rate"
+   },
+   {
+    "question": "At 8% a year, 12,000 shillings earns 2,880 shillings. How many years?",
+    "answer": "3 years",
+    "shows": "time"
+   }
+  ],
+  "name": "Find the principal, rate or time from simple interest",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST": {
+  "skill": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST",
+  "key_step": "The child writes the amount at the start of each year on its own line and works that year's interest on it.",
+  "floor": {
+   "prerequisite": "Finds simple interest for one year.",
+   "question": "10% of 11,000",
+   "answer": "1,100"
+  },
+  "representations": [
+   "a SACCO table row by row",
+   "a growing bar",
+   "the amount and interest"
+  ],
+  "steps": [
+   "Year 1: interest on the principal; add it.",
+   "Year 2: interest on the new amount; add it.",
+   "Year 3 the same.",
+   "Interest = final amount - principal."
+  ],
+  "contexts": [
+   "a SACCO account",
+   "a chama investment",
+   "savings for secondary school"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: year, start, interest, end."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills year 1: 10,000, 1,000, 11,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the start of year 2.",
+    "say": "What goes here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 11,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_COMPOUND_AS_SIMPLE",
+    "listen_for": [
+     "12,000"
+    ],
+    "ask": "Is year 2 interest on 10,000 or 11,000?",
+    "repair": "On 11,000.",
+    "error": "Works out the interest on the first amount every year.",
+    "example": {
+     "question": "10,000 at 10% compound for 2 years. Amount?",
+     "wrong_answer": "12,000",
+     "correct_answer": "12,100"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_ONE_YEAR_ONLY",
+    "listen_for": [
+     "11,000"
+    ],
+    "ask": "How many years?",
+    "repair": "Do year 2.",
+    "error": "Gives the amount after one year.",
+    "example": {
+     "question": "10,000 at 10% compound for 2 years. Amount?",
+     "wrong_answer": "11,000",
+     "correct_answer": "12,100"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_INTEREST_FOR_AMOUNT",
+    "listen_for": [
+     "2,100 as the amount"
+    ],
+    "ask": "Is that all the money?",
+    "repair": "Add the principal.",
+    "error": "Gives the interest when the whole amount is asked.",
+    "example": {
+     "question": "10,000 at 10% compound for 2 years. Amount?",
+     "wrong_answer": "2,100",
+     "correct_answer": "12,100"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_YEAR2_ON_PRINCIPAL",
+    "listen_for": [
+     "1,000 in year 2"
+    ],
+    "ask": "How much is in the account at the start of year 2?",
+    "repair": "11,000.",
+    "error": "Works out year 2's interest on the first principal.",
+    "example": {
+     "question": "Year 1: 10,000 to 11,000 at 10%. Year 2 interest?",
+     "wrong_answer": "1,000",
+     "correct_answer": "1,100"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_AMOUNT_FOR_INTEREST",
+    "listen_for": [
+     "12,100 as interest"
+    ],
+    "ask": "How much did they put in?",
+    "repair": "Take it away.",
+    "error": "Gives the amount when the interest is asked.",
+    "example": {
+     "question": "10,000 at 10% compound for 2 years. Interest?",
+     "wrong_answer": "12,100",
+     "correct_answer": "2,100"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_YEAR_INTEREST_NOT_ADDED",
+    "listen_for": [
+     "1,100 as the end"
+    ],
+    "ask": "Is the interest the whole amount?",
+    "repair": "Add it on.",
+    "error": "Gives the year's interest as the amount at the end of the year.",
+    "example": {
+     "question": "Start of year 2: 11,000 at 10%. Amount at the end of year 2?",
+     "wrong_answer": "1,100",
+     "correct_answer": "12,100"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_HIGHER_RATE_ASSUMED",
+    "listen_for": [
+     "higher rate"
+    ],
+    "ask": "What rate does each pay?",
+    "repair": "The same: 10%.",
+    "error": "Believes compound interest ends higher because its rate is higher.",
+    "example": {
+     "question": "Both pay 10%. Why does compound end with more?",
+     "wrong_answer": "a higher rate",
+     "correct_answer": "interest earns interest"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_SIMPLE_ONCE_ONLY",
+    "listen_for": [
+     "only the first year"
+    ],
+    "ask": "Is simple interest paid every year?",
+    "repair": "Yes, on the first amount.",
+    "error": "Believes simple interest is paid only in the first year.",
+    "example": {
+     "question": "Simple interest of 10% on 10,000 for 3 years. Interest?",
+     "wrong_answer": "1,000",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.COMPOUND_INTEREST.M_COMPOUND_MEANS_MONTHLY",
+    "listen_for": [
+     "monthly"
+    ],
+    "ask": "What is the interest worked on?",
+    "repair": "The growing amount.",
+    "error": "Believes compound means the interest is paid each month.",
+    "example": {
+     "question": "Is compound interest paid monthly?",
+     "wrong_answer": "yes, always",
+     "correct_answer": "it depends on the account; the difference is what it is worked on"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "20,000 shillings at 10% compound interest for 2 years. Amount?",
+    "answer": "24,200 shillings",
+    "shows": "two years"
+   },
+   {
+    "question": "10,000 shillings at 10% compound for 3 years. Interest earned?",
+    "answer": "3,310 shillings",
+    "shows": "three years"
+   }
+  ],
+  "name": "Calculate compound interest year by year up to three years",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.DEPRECIATION": {
+  "skill": "MATH.G8.MEASUR.MONEY.DEPRECIATION",
+  "key_step": "The child takes the percentage off the value at the start of each year and sees the fall getting smaller.",
+  "floor": {
+   "prerequisite": "Finds a percentage decrease.",
+   "question": "20% off 120,000",
+   "answer": "96,000"
+  },
+  "representations": [
+   "a table of value by year",
+   "a shrinking bar",
+   "the value left"
+  ],
+  "steps": [
+   "Year 1: take r% of the price off.",
+   "Year 2: take r% of the new value off.",
+   "Year 3 the same.",
+   "Answer the value or the loss as asked."
+  ],
+  "contexts": [
+   "a boda boda motorcycle",
+   "a fridge in a duka",
+   "a phone"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: year, value at start, loss, value at end."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills year 1 for 120,000 at 20%."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the start of year 2.",
+    "say": "Is the loss 24,000 again?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_DEPRECIATION_ON_FIRST_PRICE",
+    "listen_for": [
+     "72,000"
+    ],
+    "ask": "Year 2: 20% of which value?",
+    "repair": "Of 96,000.",
+    "error": "Takes the percentage off the new price every year.",
+    "example": {
+     "question": "120,000 losing 20% a year. Value after 2 years?",
+     "wrong_answer": "72,000",
+     "correct_answer": "76,800"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_ONE_YEAR_ONLY_DEP",
+    "listen_for": [
+     "96,000"
+    ],
+    "ask": "How many years?",
+    "repair": "Two.",
+    "error": "Gives the value after one year.",
+    "example": {
+     "question": "120,000 losing 20% a year. Value after 2 years?",
+     "wrong_answer": "96,000",
+     "correct_answer": "76,800"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_LOSS_FOR_VALUE",
+    "listen_for": [
+     "43,200"
+    ],
+    "ask": "Lost or left?",
+    "repair": "Left.",
+    "error": "Gives the value lost when the value left is asked.",
+    "example": {
+     "question": "120,000 losing 20% a year. Value after 2 years?",
+     "wrong_answer": "43,200",
+     "correct_answer": "76,800"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_SAME_AMOUNT_EACH_YEAR",
+    "listen_for": [
+     "16,000"
+    ],
+    "ask": "Is the fall the same amount each year?",
+    "repair": "Same per cent, smaller amount.",
+    "error": "Takes the same amount off each year as in the first year.",
+    "example": {
+     "question": "Fridge: 40,000, then 32,000. Same per cent each year. After 3 years?",
+     "wrong_answer": "16,000",
+     "correct_answer": "20,480"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_LAST_FALL_REPEATED",
+    "listen_for": [
+     "19,200"
+    ],
+    "ask": "What is 20% of 25,600?",
+    "repair": "5,120.",
+    "error": "Repeats the previous year's fall instead of working the new one.",
+    "example": {
+     "question": "40,000, 32,000, 25,600. After 3 years?",
+     "wrong_answer": "19,200",
+     "correct_answer": "20,480"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_SECOND_FROM_BIGGER",
+    "listen_for": [
+     "44%"
+    ],
+    "ask": "After year 1, is the phone worth more or less?",
+    "repair": "Less: the second loss is smaller.",
+    "error": "Believes the second year's percentage is taken from a bigger value, so the total loss is more than the two per cents added.",
+    "example": {
+     "question": "A phone loses 20% then another 20%. Total loss?",
+     "wrong_answer": "44%",
+     "correct_answer": "36%"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_LOSS_FIRST_YEAR_ONLY",
+    "listen_for": [
+     "only year 1"
+    ],
+    "ask": "Does a phone keep getting older?",
+    "repair": "It keeps losing value.",
+    "error": "Believes things lose value only in the first year.",
+    "example": {
+     "question": "Does a phone keep losing value after year 1?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.DEPRECIATION.M_PERCENTS_NEVER_ADD",
+    "listen_for": [
+     "cannot add"
+    ],
+    "ask": "Are both taken from the same price?",
+    "repair": "Then they add.",
+    "error": "Believes percentage changes can never be added.",
+    "example": {
+     "question": "5% and 3% of the same price: total per cent?",
+     "wrong_answer": "cannot be added",
+     "correct_answer": "8%"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A motorcycle of 150,000 shillings loses 10% a year. Value after 2 years?",
+    "answer": "121,500 shillings",
+    "shows": "two years"
+   },
+   {
+    "question": "A phone of 20,000 shillings loses 25% a year. Value after 3 years?",
+    "answer": "8,437.50 shillings",
+    "shows": "three years"
+   }
+  ],
+  "name": "Work out depreciation year by year up to three years",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.APPRECIATION": {
+  "skill": "MATH.G8.MEASUR.MONEY.APPRECIATION",
+  "key_step": "The child adds the percentage of the value at the start of each year, and first says whether the item gains or loses value.",
+  "floor": {
+   "prerequisite": "Finds a percentage increase.",
+   "question": "10% more than 500,000",
+   "answer": "550,000"
+  },
+  "representations": [
+   "a table of value by year",
+   "a growing bar",
+   "goods sorted into two columns"
+  ],
+  "steps": [
+   "Decide: appreciate or depreciate.",
+   "Year 1: add r% of the value.",
+   "Year 2: add r% of the new value.",
+   "Answer the value or the gain."
+  ],
+  "contexts": [
+   "a plot in Kitengela",
+   "a dairy cow",
+   "shares in a chama business"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two columns: gains value, loses value."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child puts land, a phone, a car and a plot in the columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at land.",
+    "say": "If it gains 10% a year, what is 500,000 worth after a year?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 550,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.APPRECIATION.M_APPRECIATION_SUBTRACTED",
+    "listen_for": [
+     "450,000"
+    ],
+    "ask": "Does appreciate mean up or down?",
+    "repair": "Up.",
+    "error": "Takes the percentage off for an item that appreciates.",
+    "example": {
+     "question": "Land of 500,000 appreciates 10% a year. After 1 year?",
+     "wrong_answer": "450,000",
+     "correct_answer": "550,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.APPRECIATION.M_APPRECIATION_ON_FIRST_VALUE",
+    "listen_for": [
+     "600,000"
+    ],
+    "ask": "Year 2: 10% of which value?",
+    "repair": "Of 550,000.",
+    "error": "Adds the percentage of the first value every year.",
+    "example": {
+     "question": "Land of 500,000 at 10% a year. After 2 years?",
+     "wrong_answer": "600,000",
+     "correct_answer": "605,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.APPRECIATION.M_GAIN_FOR_VALUE",
+    "listen_for": [
+     "105,000"
+    ],
+    "ask": "Gain or value?",
+    "repair": "Add the first value.",
+    "error": "Gives the gain when the value is asked.",
+    "example": {
+     "question": "Land of 500,000 at 10% a year. Value after 2 years?",
+     "wrong_answer": "105,000",
+     "correct_answer": "605,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.APPRECIATION.M_WHAT_APPRECIATES",
+    "listen_for": [
+     "a phone"
+    ],
+    "ask": "Is a two-year-old phone worth more than a new one?",
+    "repair": "Less: it depreciates.",
+    "error": "Believes vehicles and phones usually gain value and land loses it.",
+    "example": {
+     "question": "Which usually appreciates: a phone or a plot of land?",
+     "wrong_answer": "a phone",
+     "correct_answer": "a plot of land"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Land worth 800,000 shillings appreciates 5% a year. Value after 2 years?",
+    "answer": "882,000 shillings",
+    "shows": "appreciation"
+   },
+   {
+    "question": "A plot worth 1,000,000 gains 10% a year. Gain after 3 years?",
+    "answer": "331,000 shillings",
+    "shows": "gain"
+   }
+  ],
+  "name": "Work out appreciation year by year and say what appreciates",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE": {
+  "skill": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE",
+  "key_step": "The child writes deposit + number × instalment as the hire purchase total before comparing with anything.",
+  "floor": {
+   "prerequisite": "Multiplies and adds money.",
+   "question": "5,000 + 10 × 2,000",
+   "answer": "25,000"
+  },
+  "representations": [
+   "a shop poster of plans",
+   "a table of totals",
+   "the extra paid"
+  ],
+  "steps": [
+   "Total = deposit + instalments × number.",
+   "Extra = total - cash price.",
+   "To compare plans, find each total.",
+   "Say which is cheaper and by how much."
+  ],
+  "contexts": [
+   "a television in a Nairobi shop",
+   "a fridge for a kiosk",
+   "a solar panel paid monthly"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a poster: cash 21,000, or deposit 5,000 and 10 × 2,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the instalments.",
+    "say": "How much are all ten together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 20,000."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child adds the deposit and compares with the cash price."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_TOTAL_FOR_EXTRA",
+    "listen_for": [
+     "25,000"
+    ],
+    "ask": "Is that the extra or the total?",
+    "repair": "Take off the cash price.",
+    "error": "Gives the total hire purchase price when the extra is asked.",
+    "example": {
+     "question": "Cash 21,000; deposit 5,000 and 10 × 2,000. How much more?",
+     "wrong_answer": "25,000",
+     "correct_answer": "4,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_BALANCE_FOR_EXTRA",
+    "listen_for": [
+     "16,000"
+    ],
+    "ask": "What did she pay altogether?",
+    "repair": "Add everything first.",
+    "error": "Gives the balance after the deposit as the extra.",
+    "example": {
+     "question": "Cash 21,000; deposit 5,000 and 10 × 2,000. How much more?",
+     "wrong_answer": "16,000",
+     "correct_answer": "4,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_DEPOSIT_LEFT_OUT",
+    "listen_for": [
+     "20,000"
+    ],
+    "ask": "What did she pay on the first day?",
+    "repair": "Add the deposit.",
+    "error": "Leaves the deposit out of the total paid.",
+    "example": {
+     "question": "Deposit 5,000 and 10 × 2,000. Total paid?",
+     "wrong_answer": "20,000",
+     "correct_answer": "25,000"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_LOWEST_INSTALMENT_CHOSEN",
+    "listen_for": [
+     "plan A"
+    ],
+    "ask": "What does each plan cost in total?",
+    "repair": "Compare totals.",
+    "error": "Picks the plan with the smallest monthly instalment as the cheapest.",
+    "example": {
+     "question": "Plan A: 12 × 2,500, deposit 5,000. Plan B: 6 × 4,000, deposit 4,000. Cheaper?",
+     "wrong_answer": "A",
+     "correct_answer": "B (28,000 against 35,000)"
+    }
+   },
+   {
+    "code": "MATH.G8.MEASUR.MONEY.HIRE_PURCHASE.M_HP_CHEAPER_THAN_CASH",
+    "listen_for": [
+     "hire purchase is cheaper"
+    ],
+    "ask": "Add up the payments: more or less than cash?",
+    "repair": "Usually more.",
+    "error": "Believes hire purchase costs less than paying cash.",
+    "example": {
+     "question": "Is hire purchase usually more or less than the cash price?",
+     "wrong_answer": "less, you pay a little at a time",
+     "correct_answer": "more"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Cash price 40,000. Hire purchase: deposit 8,000 and 12 instalments of 3,000. How much more?",
+    "answer": "4,000 shillings",
+    "shows": "extra"
+   },
+   {
+    "question": "Plan A: deposit 3,000 and 6 × 2,500. Plan B: deposit 5,000 and 4 × 3,000. Cheaper plan?",
+    "answer": "B (17,000 against 18,000)",
+    "shows": "compare"
+   }
+  ],
+  "name": "Work out hire purchase costs and compare plans",
+  "sub_strand": "MATH.G8.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;
