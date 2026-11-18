@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/social_studies/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/social_studies/g4.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g4)"};
 export const SUBSTRANDS = {
  "SOCI.G4.NATURA.COMPASS_DIRECTION": {
   "name": "Compass Direction",
@@ -493,7 +493,8 @@ export const SKILLS = {
   "mis": [
    "M_CD_OPPOSITE",
    "M_CD_LEFT_RIGHT",
-   "M_CD_SUN"
+   "M_CD_SUN",
+   "M_CD_UP_NORTH"
   ]
  },
  "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS": {
@@ -508,7 +509,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CD_REVERSE",
-   "M_CD_TURN"
+   "M_CD_TURN",
+   "M_CD_TOP_ALWAYS_NORTH",
+   "M_CD_LEFT_IS_WEST"
   ]
  },
  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY": {
@@ -522,7 +525,8 @@ export const SKILLS = {
   "mis": [
    "M_LS_SUB_BIGGER",
    "M_LS_ORDER",
-   "M_LS_NEIGHBOUR_SUB"
+   "M_LS_NEIGHBOUR_SUB",
+   "M_LS_WARD_COUNTY"
   ]
  },
  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION": {
@@ -538,7 +542,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_LS_DIR_REVERSE",
-   "M_LS_NOT_TOUCHING"
+   "M_LS_NOT_TOUCHING",
+   "M_LS_INSIDE_NEIGHBOUR",
+   "M_LS_ONE_NEIGHBOUR_PER_SIDE"
   ]
  },
  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE": {
@@ -553,7 +559,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_LS_POP_SIZE",
-   "M_LS_DIGIT"
+   "M_LS_DIGIT",
+   "M_LS_LOOKS_BIGGER",
+   "M_LS_UNIT_IGNORED"
   ]
  },
  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS": {
@@ -567,7 +575,8 @@ export const SKILLS = {
   "mis": [
    "M_PH_HILL_MOUNTAIN",
    "M_PH_RIVER_LAKE",
-   "M_PH_PLAIN_VALLEY"
+   "M_PH_PLAIN_VALLEY",
+   "M_PH_MAN_MADE_FEATURE"
   ]
  },
  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE": {
@@ -583,7 +592,8 @@ export const SKILLS = {
   "mis": [
    "M_PH_NO_USE",
    "M_PH_WRONG_USE",
-   "M_PH_HARM_ONLY"
+   "M_PH_HARM_ONLY",
+   "M_PH_SWAMP_USELESS"
   ]
  },
  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES": {
@@ -597,7 +607,8 @@ export const SKILLS = {
   "mis": [
    "M_SE_FOREIGN_NAMES",
    "M_SE_COLD_RAIN",
-   "M_SE_DAY_SEASON"
+   "M_SE_DAY_SEASON",
+   "M_SE_SAME_EVERYWHERE"
   ]
  },
  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES": {
@@ -613,7 +624,8 @@ export const SKILLS = {
   "mis": [
    "M_SE_PLANT_DRY",
    "M_SE_ACT_MISMATCH",
-   "M_SE_NO_EFFECT"
+   "M_SE_NO_EFFECT",
+   "M_SE_HARVEST_RAIN"
   ]
  },
  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD": {
@@ -629,7 +641,8 @@ export const SKILLS = {
   "mis": [
    "M_SE_RUN_ACROSS",
    "M_SE_FLOOD_CROSS",
-   "M_SE_RAIN_SAFER"
+   "M_SE_RAIN_SAFER",
+   "M_SE_UMBRELLA_SEEN"
   ]
  },
  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS": {
@@ -643,7 +656,8 @@ export const SKILLS = {
   "mis": [
    "M_HB_MUSEUM_MONUMENT",
    "M_HB_NEW_IS_HISTORIC",
-   "M_HB_CENTRE_MARKET"
+   "M_HB_CENTRE_MARKET",
+   "M_HB_RUINS_RUBBISH"
   ]
  },
  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE": {
@@ -658,7 +672,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_HB_OLD_USELESS",
-   "M_HB_MONEY_ONLY"
+   "M_HB_MONEY_ONLY",
+   "M_HB_ONLY_TOURISTS",
+   "M_HB_WRITE_ON_WALLS"
   ]
  },
  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS": {
@@ -672,7 +688,8 @@ export const SKILLS = {
   "mis": [
    "M_ID_SELF_SUFFICIENT",
    "M_ID_ONE_WAY",
-   "M_ID_SERVICE_MATCH"
+   "M_ID_SERVICE_MATCH",
+   "M_ID_RICH_INDEPENDENT"
   ]
  },
  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS": {
@@ -687,7 +704,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_ID_WEAKNESS",
-   "M_ID_MONEY_ONLY"
+   "M_ID_MONEY_ONLY",
+   "M_ID_TOWN_ONLY",
+   "M_ID_JOBS_NONE"
   ]
  },
  "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS": {
@@ -703,7 +722,8 @@ export const SKILLS = {
   "mis": [
    "M_PD_TOTAL",
    "M_PD_DENSE_BIG",
-   "M_PD_REASON_REVERSE"
+   "M_PD_REASON_REVERSE",
+   "M_PD_EVEN_SPREAD"
   ]
  },
  "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS": {
@@ -717,7 +737,8 @@ export const SKILLS = {
   "mis": [
    "M_TC_MIX_ASPECT",
    "M_TC_PAST_ONLY",
-   "M_TC_ONE_CULTURE"
+   "M_TC_ONE_CULTURE",
+   "M_TC_BAD_OLD"
   ]
  },
  "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES": {
@@ -730,7 +751,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_SC_VALUE_MIX",
-   "M_SC_RULES_ONLY"
+   "M_SC_RULES_ONLY",
+   "M_SC_WATCHED_ONLY",
+   "M_SC_MOTTO_VALUE"
   ]
  },
  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES": {
@@ -747,7 +770,8 @@ export const SKILLS = {
   "mis": [
    "M_EA_MADE_NATURAL",
    "M_EA_NOT_ECONOMIC",
-   "M_EA_ACT_RESOURCE"
+   "M_EA_ACT_RESOURCE",
+   "M_EA_RESOURCE_ACTIVITY_SAME"
   ]
  },
  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE": {
@@ -762,7 +786,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_EA_RICH_ONLY",
-   "M_EA_FOOD_ONLY"
+   "M_EA_FOOD_ONLY",
+   "M_EA_COUNTY_NOTHING",
+   "M_EA_ONE_ACTIVITY"
   ]
  },
  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS": {
@@ -777,7 +803,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_IN_RAW_PRODUCT",
-   "M_IN_SHOP_INDUSTRY"
+   "M_IN_SHOP_INDUSTRY",
+   "M_IN_HANDMADE_NOT",
+   "M_IN_PRODUCT_RAW_TEA"
   ]
  },
  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS": {
@@ -793,7 +821,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_IN_OWNER_ONLY",
-   "M_IN_POLLUTION_BENEFIT"
+   "M_IN_POLLUTION_BENEFIT",
+   "M_IN_FARMER_NO_GAIN",
+   "M_IN_BENEFIT_HARM_SAME"
   ]
  },
  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE": {
@@ -809,7 +839,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_IN_ANYWHERE",
-   "M_IN_RAW_FAR"
+   "M_IN_RAW_FAR",
+   "M_IN_NO_ROAD",
+   "M_IN_HOMES_INSIDE"
   ]
  },
  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS": {
@@ -824,7 +856,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_EP_UNSUITABLE",
-   "M_EP_NO_PLAN"
+   "M_EP_NO_PLAN",
+   "M_EP_BIGGEST_BEST",
+   "M_EP_NO_MARKET"
   ]
  },
  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS": {
@@ -840,7 +874,8 @@ export const SKILLS = {
   "mis": [
    "M_EP_PROFIT_SELF",
    "M_EP_HIDE_LOSS",
-   "M_EP_ONE_PERSON"
+   "M_EP_ONE_PERSON",
+   "M_EP_NO_RECORD"
   ]
  },
  "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES": {
@@ -856,7 +891,8 @@ export const SKILLS = {
   "mis": [
    "M_GC_CLEVER_ONLY",
    "M_GC_OBEY_ONLY",
-   "M_GC_REPORT_BAD"
+   "M_GC_REPORT_BAD",
+   "M_GC_RICH_GOOD"
   ]
  },
  "SOCI.G4.CITIZE.PEACE.PE_FACTORS": {
@@ -872,7 +908,8 @@ export const SKILLS = {
   "mis": [
    "M_PE_NO_DISAGREE",
    "M_PE_THREAT",
-   "M_PE_GOSSIP"
+   "M_PE_GOSSIP",
+   "M_PE_SAME_FRIENDS"
   ]
  },
  "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES": {
@@ -888,7 +925,8 @@ export const SKILLS = {
   "mis": [
    "M_PE_FIGHT_BACK",
    "M_PE_AVOID",
-   "M_PE_ORDER"
+   "M_PE_ORDER",
+   "M_PE_ADULT_FIRST_ALWAYS"
   ]
  },
  "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS": {
@@ -902,7 +940,8 @@ export const SKILLS = {
   "mis": [
    "M_CR_DISCIPLINE",
    "M_CR_WORK_OK",
-   "M_CR_ONLY_BEATING"
+   "M_CR_ONLY_BEATING",
+   "M_CR_STRANGER_ONLY"
   ]
  },
  "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES": {
@@ -917,7 +956,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CR_CHILD_FAULT",
-   "M_CR_TRADITION_OK"
+   "M_CR_TRADITION_OK",
+   "M_CR_POOR_ONLY",
+   "M_CR_ALCOHOL_EXCUSE"
   ]
  },
  "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS": {
@@ -933,7 +974,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CR_NO_EFFECT",
-   "M_CR_SECRET"
+   "M_CR_SECRET",
+   "M_CR_PHYSICAL_ONLY_EFFECT",
+   "M_CR_TELL_NOBODY_HELPS"
   ]
  },
  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES": {
@@ -949,7 +992,8 @@ export const SKILLS = {
   "mis": [
    "M_DS_APPOINT",
    "M_DS_ORDER",
-   "M_DS_LOUD_WINS"
+   "M_DS_LOUD_WINS",
+   "M_DS_OPEN_VOTE"
   ]
  },
  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS": {
@@ -964,7 +1008,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_DS_MINORITY_IGNORED",
-   "M_DS_SLOW_BAD"
+   "M_DS_SLOW_BAD",
+   "M_DS_WINNER_ALL",
+   "M_DS_MAJORITY_ALWAYS_RIGHT"
   ]
  },
  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION": {
@@ -979,7 +1025,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CG_TEACHERS_ONLY",
-   "M_CG_APPOINTED"
+   "M_CG_APPOINTED",
+   "M_CG_TOP_MARKS",
+   "M_CG_FOREVER"
   ]
  },
  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS": {
@@ -994,7 +1042,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CG_PUNISH",
-   "M_CG_RUN_SCHOOL"
+   "M_CG_RUN_SCHOOL",
+   "M_CG_FOR_TEACHERS",
+   "M_CG_ONLY_ORDER"
   ]
  },
  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS": {
@@ -1010,7 +1060,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CL_POLITICIAN_ONLY",
-   "M_CL_DUTY_SWAP"
+   "M_CL_DUTY_SWAP",
+   "M_CL_ADULT_MEN_ONLY",
+   "M_CL_CHIEF_ELECTED"
   ]
  },
  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES": {
@@ -1027,7 +1079,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CL_STRONG_RICH",
-   "M_CL_OWN_BENEFIT"
+   "M_CL_OWN_BENEFIT",
+   "M_CL_STRICT_BEST",
+   "M_CL_FAVOUR_OWN"
   ]
  },
  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE": {
@@ -1038,11 +1092,14 @@ export const SKILLS = {
    "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.a"
   ],
   "pre": [
-   "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS"
+   "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS",
+   "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY"
   ],
   "mis": [
    "M_CO_NATIONAL",
-   "M_CO_ASSEMBLY_MIX"
+   "M_CO_ASSEMBLY_MIX",
+   "M_CO_TWO_ARMS",
+   "M_CO_SPEAKER_EXECUTIVE"
   ]
  },
  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR": {
@@ -1053,11 +1110,14 @@ export const SKILLS = {
    "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.b"
   ],
   "pre": [
-   "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE"
+   "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+   "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY"
   ],
   "mis": [
    "M_CO_GOV_LAWS",
-   "M_CO_GOV_PRESIDENT"
+   "M_CO_GOV_PRESIDENT",
+   "M_CO_GOV_FOREVER",
+   "M_CO_GOV_APPOINTED"
   ]
  },
  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA": {
@@ -1068,11 +1128,14 @@ export const SKILLS = {
    "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.c"
   ],
   "pre": [
-   "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE"
+   "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+   "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY"
   ],
   "mis": [
    "M_CO_MCA_ENFORCES",
-   "M_CO_MCA_WHOLE"
+   "M_CO_MCA_WHOLE",
+   "M_CO_MCA_APPOINTED",
+   "M_CO_MCA_BUDGET_NONE"
   ]
  }
 };
@@ -1082,6 +1145,9 @@ export const MIS_FEEDBACK = {
  "M_CD_SUN": "The sun rises in the east and sets in the west.",
  "M_CD_REVERSE": "If the school is north of the market, then the market is south of the school. Turn the direction round.",
  "M_CD_TURN": "Facing east, a turn to the left faces north. A turn to the right would face south.",
+ "M_CD_UP_NORTH": "North is a direction along the ground, not up. On a flat map it is at the top.",
+ "M_CD_TOP_ALWAYS_NORTH": "Always look at the north arrow first. North is where the arrow points.",
+ "M_CD_LEFT_IS_WEST": "Left and right change when you turn. Compass points stay where they are.",
  "M_LS_SUB_BIGGER": "A county is divided into sub-counties. Many sub-counties make one county, so the county is bigger.",
  "M_LS_ORDER": "A county is the biggest. It has sub-counties, and each sub-county has wards. A ward is the smallest.",
  "M_LS_NEIGHBOUR_SUB": "A neighbouring county is a different county. Sub-counties are only the parts inside one county.",
@@ -1089,12 +1155,19 @@ export const MIS_FEEDBACK = {
  "M_LS_NOT_TOUCHING": "A neighbour shares a boundary with the county. A county with another county between is not a neighbour.",
  "M_LS_POP_SIZE": "Size is the area of the land in square kilometres. The number of people tells how crowded it is, not how big it is.",
  "M_LS_DIGIT": "Compare the whole numbers. 3,000 is more than 800, so County B has the larger area.",
+ "M_LS_WARD_COUNTY": "A county holds sub-counties, and each sub-county holds wards. A ward is the smallest.",
+ "M_LS_INSIDE_NEIGHBOUR": "A neighbour county is outside your county and shares its boundary.",
+ "M_LS_ONE_NEIGHBOUR_PER_SIDE": "A county can have more than one neighbour on the same side.",
+ "M_LS_LOOKS_BIGGER": "Use the numbers in square kilometres, not how big a picture looks.",
+ "M_LS_UNIT_IGNORED": "Read the whole number with its word. 3 thousand is 3,000.",
  "M_PH_HILL_MOUNTAIN": "A mountain is much higher than a hill. A hill is lower and usually rounded.",
  "M_PH_RIVER_LAKE": "A river flows along a channel. A lake is water that stays in a hollow, with land all round it.",
  "M_PH_PLAIN_VALLEY": "A plain is wide, flat land. A valley is low land between hills or mountains.",
  "M_PH_NO_USE": "Physical features are useful. Rivers give water and fish, mountains bring rain and visitors, plains give farmland.",
  "M_PH_WRONG_USE": "Fish live in water, so lakes, rivers and the sea give fish. Plains are flat dry land, good for farming.",
  "M_PH_HARM_ONLY": "Mountains help us. Rain falls on them and feeds rivers, they grow tea and trees, and visitors come to climb them.",
+ "M_PH_MAN_MADE_FEATURE": "Physical features are made by nature: hills, rivers, lakes, valleys. Roads and buildings are made by people.",
+ "M_PH_SWAMP_USELESS": "Swamps store water, give reeds for mats and baskets and are homes for birds and fish.",
  "M_SE_FOREIGN_NAMES": "Our seasons are hot, cold, dry and rainy. Autumn and winter belong to places far from the equator.",
  "M_SE_COLD_RAIN": "No rain for many days is the dry season. Long rains come about March to May and short rains about October to December.",
  "M_SE_DAY_SEASON": "One rainy day is weather. A season is the weather that comes for many weeks, month after month.",
@@ -1104,49 +1177,77 @@ export const MIS_FEEDBACK = {
  "M_SE_RUN_ACROSS": "Never run across a road. Rain makes roads slippery and drivers cannot see well. Wait and cross when it is clear.",
  "M_SE_FLOOD_CROSS": "Never cross flooded water. It may be deep, strong and hide holes. Wait or find another way with an adult.",
  "M_SE_RAIN_SAFER": "Rain makes roads slippery, so a vehicle takes longer to stop. A driver must go slowly.",
+ "M_SE_SAME_EVERYWHERE": "Seasons come at different times in different parts of Kenya.",
+ "M_SE_HARVEST_RAIN": "Farmers plant when the rains start and dry their harvest in the dry season.",
+ "M_SE_UMBRELLA_SEEN": "In rain, wear bright clothes and walk facing the traffic so drivers see you.",
  "M_HB_MUSEUM_MONUMENT": "A museum keeps and shows old objects. A monument is a structure built to remember a person or an event.",
  "M_HB_NEW_IS_HISTORIC": "A historic place is old and tells about the past. A new mall is not historic, however big it is.",
  "M_HB_CENTRE_MARKET": "A cultural centre shows the traditions of communities, such as dance, food, dress and crafts.",
  "M_HB_OLD_USELESS": "Historic places cannot be rebuilt once they are gone. They teach history and keep our identity, so we protect them.",
  "M_HB_MONEY_ONLY": "Visitors bring income, but the first reasons are learning about the past and keeping the identity of the community.",
+ "M_HB_RUINS_RUBBISH": "Ruins are old buildings left from long ago. They tell us how people lived.",
+ "M_HB_ONLY_TOURISTS": "Historic places are for all of us. They teach us our own history.",
+ "M_HB_WRITE_ON_WALLS": "We care for old places by keeping them clean and leaving them as we found them.",
  "M_ID_SELF_SUFFICIENT": "No family can do everything. People depend on farmers, traders, health workers and many others.",
  "M_ID_ONE_WAY": "Each needs the other. The farmer needs a market, and the shopkeeper needs goods to sell.",
  "M_ID_SERVICE_MATCH": "A hospital gives care for the sick. A farm gives food, and a place of worship gives spiritual guidance.",
  "M_ID_WEAKNESS": "Depending on each other is a strength. We get what we cannot make and share what we can.",
  "M_ID_MONEY_ONLY": "People get goods, services, skills, income and friendship. Money is only one benefit.",
+ "M_ID_RICH_INDEPENDENT": "Money only helps because other people grow, make and sell things. Everyone depends on others.",
+ "M_ID_TOWN_ONLY": "In villages and towns, people depend on each other for goods, services and help.",
+ "M_ID_JOBS_NONE": "When people depend on each other, both sides gain. The driver gets work and pay.",
  "M_PD_TOTAL": "Distribution is how people are spread over the area. The total number is a different thing.",
  "M_PD_DENSE_BIG": "Dense means many people in a small space. Sparse means few people spread over a large space.",
  "M_PD_REASON_REVERSE": "People live where they can get water, food, work, roads and safety. Dry, steep, flooded or unsafe places have few people.",
+ "M_PD_EVEN_SPREAD": "People are not spread evenly. Many live where there is water, work and good land.",
  "M_TC_MIX_ASPECT": "A kiondo is made by hand, so it is an artefact. Clothes are dressing, ugali is food, a manyatta is housing.",
  "M_TC_PAST_ONLY": "Culture is alive. People still practise many traditions, in food, dress, songs, games and ceremonies.",
  "M_TC_ONE_CULTURE": "Communities differ in dress, food, houses and ceremonies, and respecting the differences keeps us at peace.",
+ "M_TC_BAD_OLD": "Many parts of traditional culture are good and alive today. Only harmful customs should stop.",
  "M_SC_VALUE_MIX": "Handing in what is not yours is honesty. Respect is speaking and acting kindly to others.",
  "M_SC_RULES_ONLY": "A value is a belief about what is good, such as respect or honesty. Rules and punishments are different.",
+ "M_SC_WATCHED_ONLY": "A value is what you do because it is right, even when no one is watching.",
+ "M_SC_MOTTO_VALUE": "A motto is a short guiding saying. Values are qualities. Rules say what to do.",
  "M_EA_MADE_NATURAL": "Natural resources are given by nature: soil, water, forests, minerals and wildlife. Roads and buildings are made by people.",
  "M_EA_NOT_ECONOMIC": "An economic activity gives goods, services or an income, such as farming, fishing and trading.",
  "M_EA_ACT_RESOURCE": "Fishing uses water, in lakes, rivers or the sea. Mining uses minerals, and lumbering uses forests.",
  "M_EA_RICH_ONLY": "Many people gain: the farmer, the worker, the trader and every person who buys food.",
  "M_EA_FOOD_ONLY": "Activities give jobs, income and raw materials, and some give food. Mining gives jobs and minerals.",
+ "M_EA_RESOURCE_ACTIVITY_SAME": "A resource is the thing from nature. The activity is what people do with it.",
+ "M_EA_COUNTY_NOTHING": "Economic activities help families and the county, which collects fees and taxes for services.",
+ "M_EA_ONE_ACTIVITY": "A county is better off with many economic activities, not just one.",
  "M_IN_RAW_PRODUCT": "The raw material goes in. Sugarcane goes into the factory and sugar comes out.",
  "M_IN_SHOP_INDUSTRY": "An industry makes or processes goods. A shop only sells goods and a farm grows the raw materials.",
  "M_IN_OWNER_ONLY": "Workers get jobs, farmers get a market, shoppers get goods and the county gets money.",
  "M_IN_POLLUTION_BENEFIT": "Jobs, income and goods are benefits. Smoke and waste are problems that industries must control.",
  "M_IN_ANYWHERE": "Factories are placed near raw materials, workers, roads, water and a market, so that costs are lower.",
  "M_IN_RAW_FAR": "Milk goes bad quickly, so the factory is near the farms, on a good road.",
+ "M_IN_HANDMADE_NOT": "An industry turns raw materials into goods, big or small.",
+ "M_IN_PRODUCT_RAW_TEA": "A factory changes the raw material. Green leaves go in, made tea comes out.",
+ "M_IN_FARMER_NO_GAIN": "A factory is a market for farmers. They sell to it and earn money.",
+ "M_IN_BENEFIT_HARM_SAME": "Jobs and income are benefits. Smoke and noise are problems to manage.",
+ "M_IN_NO_ROAD": "Factories need roads to bring raw materials and take goods to buyers.",
+ "M_IN_HOMES_INSIDE": "Factories are put near workers and roads but away from homes because of noise and smoke.",
  "M_EP_UNSUITABLE": "Choose a project that suits your land, water, money and people. Fish need water.",
  "M_EP_NO_PLAN": "A project needs a plan: what to do, the materials, the people, the cost and the time.",
  "M_EP_PROFIT_SELF": "Project money belongs to the project and the school. Keep it safe and record every shilling.",
  "M_EP_HIDE_LOSS": "Honest groups report their mistakes and lose less over time. Hiding them breaks trust.",
  "M_EP_ONE_PERSON": "Teams share the work and the decisions, so everyone takes part and feels the project belongs to them.",
+ "M_EP_BIGGEST_BEST": "Choose a project that fits the land, water, money and people the school has.",
+ "M_EP_NO_MARKET": "A project needs buyers. Find out who will buy before you start.",
+ "M_EP_NO_RECORD": "Write every sale and cost in the record book. Records keep everyone honest and sure.",
  "M_GC_CLEVER_ONLY": "A good citizen shows qualities such as respect, honesty and helpfulness. Marks are different from character.",
  "M_GC_OBEY_ONLY": "A good citizen follows fair rules, cares for others, and politely speaks up when something is wrong.",
  "M_GC_REPORT_BAD": "Telling a teacher about harm is not telling tales. A good citizen helps keep everyone safe.",
+ "M_GC_RICH_GOOD": "Good citizenship is how you behave, not what you own.",
  "M_PE_NO_DISAGREE": "People will sometimes disagree. Peace is settling it with respect and without harm.",
  "M_PE_THREAT": "Peace grows from respect, fairness, sharing and forgiveness, not from fear.",
  "M_PE_GOSSIP": "Rumours and name-calling break peace. Listening, honesty and kind words keep it.",
  "M_PE_FIGHT_BACK": "Hitting back makes a quarrel bigger. Stay calm, talk, and ask a teacher to help if needed.",
  "M_PE_AVOID": "Silence does not settle a quarrel. Talk, listen, say sorry and forgive.",
  "M_PE_ORDER": "First calm down and listen. Then talk about it, say sorry and forgive. A mediator can help.",
+ "M_PE_SAME_FRIENDS": "Peace grows when we accept and welcome people who are different from us.",
+ "M_PE_ADULT_FIRST_ALWAYS": "Try talking calmly first. Ask a teacher for help if it is serious or talk does not work.",
  "M_CR_DISCIPLINE": "Hurting a child is abuse. Discipline teaches without harming the child.",
  "M_CR_WORK_OK": "Light chores that do not stop school or harm the child are fine. Heavy or dangerous work that stops school is child labour.",
  "M_CR_ONLY_BEATING": "Child abuse takes many forms: forced marriage, labour, trafficking, neglect and sexual abuse, as well as beating.",
@@ -1154,23 +1255,45 @@ export const MIS_FEEDBACK = {
  "M_CR_TRADITION_OK": "No custom makes harm to a child right. Many customs are good, but harmful ones must stop.",
  "M_CR_NO_EFFECT": "Abuse can injure, frighten and make a child sad, sick or leave school.",
  "M_CR_SECRET": "Never keep harm secret. Tell a trusted adult, or call Childline on 116, which is free.",
+ "M_CR_STRANGER_ONLY": "Anyone who hurts a child is wrong, even someone known. Tell a trusted adult.",
+ "M_CR_POOR_ONLY": "Abuse can happen in any family. Poverty is one cause among many.",
+ "M_CR_ALCOHOL_EXCUSE": "Alcohol can lead to abuse, but the adult is still responsible.",
+ "M_CR_PHYSICAL_ONLY_EFFECT": "Abuse hurts feelings too. A child can feel afraid or sad after the body heals.",
+ "M_CR_TELL_NOBODY_HELPS": "Telling a trusted adult is the right thing. Call Childline on 116 for free.",
  "M_DS_APPOINT": "In an election all voters have a say. A teacher choosing alone is appointing.",
  "M_DS_ORDER": "The order is nomination, campaign, voting, counting and announcing the winner.",
  "M_DS_LOUD_WINS": "The winner is the candidate with the most votes, counted fairly.",
  "M_DS_MINORITY_IGNORED": "The majority choice is followed, but everyone's views are respected.",
  "M_DS_SLOW_BAD": "Democracy gives everyone a voice, is fair and builds peace, even if it takes a little time.",
+ "M_DS_OPEN_VOTE": "A secret vote lets everyone choose freely, without fear.",
+ "M_DS_WINNER_ALL": "An elected leader serves everyone and follows the rules.",
+ "M_DS_MAJORITY_ALWAYS_RIGHT": "The majority decides, but it must still respect everyone's rights.",
  "M_CG_TEACHERS_ONLY": "The Children's Government is made of learners chosen by learners, with a teacher patron to guide them.",
  "M_CG_APPOINTED": "Learners vote for their leaders, so that the leaders speak for them.",
  "M_CG_PUNISH": "The Children's Government helps keep order but does not punish. Teachers handle punishment.",
  "M_CG_RUN_SCHOOL": "The Children's Government speaks for learners and helps. The head teacher runs the school.",
+ "M_CG_TOP_MARKS": "Learners elect members for good conduct and leadership, not only for marks.",
+ "M_CG_FOREVER": "Members serve for a set time. Then learners vote again.",
+ "M_CG_FOR_TEACHERS": "The Children's Government speaks for learners and takes their views to the teachers.",
+ "M_CG_ONLY_ORDER": "The Children's Government organises activities, keeps the school clean and speaks for learners.",
  "M_CL_POLITICIAN_ONLY": "Leaders in the community include religious leaders, clan leaders, village elders and the chief.",
  "M_CL_DUTY_SWAP": "Religious leaders guide in faith, elders settle disputes and the chief keeps law and order.",
  "M_CL_STRONG_RICH": "A good leader is honest, fair and listens. Strength and wealth do not make a leader good.",
  "M_CL_OWN_BENEFIT": "A good leader serves everyone and is honest with what belongs to the community.",
+ "M_CL_ADULT_MEN_ONLY": "Women and men can both be community leaders.",
+ "M_CL_CHIEF_ELECTED": "A chief is appointed by the national government. An MCA is elected.",
+ "M_CL_STRICT_BEST": "A good leader listens and is fair. People follow because they trust, not because they fear.",
+ "M_CL_FAVOUR_OWN": "A good leader serves everyone fairly, not only their own family.",
  "M_CO_NATIONAL": "The county executive has the Governor, Deputy Governor and executive committee. The President belongs to the national government.",
  "M_CO_ASSEMBLY_MIX": "The assembly is made of the MCAs and the Speaker. The Governor heads the executive.",
  "M_CO_GOV_LAWS": "The assembly makes county laws. The Governor sees that they are carried out.",
  "M_CO_GOV_PRESIDENT": "The Governor leads the county. The President leads the whole country.",
  "M_CO_MCA_ENFORCES": "The MCA makes county laws, approves the budget and checks the executive. The county executive carries out the work.",
- "M_CO_MCA_WHOLE": "An MCA is elected by a ward and speaks for its people. Members of Parliament sit in the National Assembly."
+ "M_CO_MCA_WHOLE": "An MCA is elected by a ward and speaks for its people. Members of Parliament sit in the National Assembly.",
+ "M_CO_TWO_ARMS": "The county government has two parts: the executive, led by the Governor, and the county assembly.",
+ "M_CO_SPEAKER_EXECUTIVE": "The Speaker belongs to the county assembly and chairs its meetings.",
+ "M_CO_GOV_FOREVER": "A Governor is elected for five years at a time.",
+ "M_CO_GOV_APPOINTED": "The people of the county elect their Governor.",
+ "M_CO_MCA_APPOINTED": "The people of each ward elect their MCA.",
+ "M_CO_MCA_BUDGET_NONE": "The county assembly approves the budget. The executive then spends it."
 };

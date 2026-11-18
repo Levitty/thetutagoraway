@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC",
+ "title": "Enterprise Project at School",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "If the school has a kitchen garden or poultry unit, teach beside it. Keep a simple class record book for any project.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+   "key_step": "The child picks a project that fits what the school has (land, water, money, people, buyers) and says it needs a plan.",
+   "floor": {
+    "prerequisite": "Has made or seen a kitchen garden.",
+    "question": "What does a kitchen garden need to grow?",
+    "answer": "soil, water, seeds and care"
+   },
+   "representations": [
+    "project cards with their needs",
+    "a tick chart of what the school has",
+    "the school's own garden or poultry unit"
+   ],
+   "steps": [
+    "List what the school has.",
+    "List what each project needs.",
+    "Pick the project whose needs the school has.",
+    "Plan who does what and who will buy."
+   ],
+   "contexts": [
+    "a tree nursery for the county's tree-planting day",
+    "a poultry unit selling eggs to parents",
+    "making liquid soap for the school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three projects: fish pond, kitchen garden, liquid soap."
+    },
+    {
+     "beat": "point",
+     "do": "Point at fish pond.",
+     "say": "Our school has no water tap near the field. Can we start a fish pond?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no, and the reason."
+    },
+    {
+     "beat": "write",
+     "do": "Tick the projects that fit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_UNSUITABLE",
+     "listen_for": [
+      "Fish farming"
+     ],
+     "ask": "A school has a dry field and no water tank. Which project suits it best?",
+     "repair": "List what each project needs and tick what the school has."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_NO_PLAN",
+     "listen_for": [
+      "Start at once with no plan"
+     ],
+     "ask": "What should a school do before starting a project?",
+     "repair": "Plan a class lunch together: who brings what, and what does it cost?"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_BIGGEST_BEST",
+     "listen_for": [
+      "A large dairy farm"
+     ],
+     "ask": "A school has a small piece of land and little money. Which project fits best?",
+     "repair": "List what each project needs and tick what the school has."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_NO_MARKET",
+     "listen_for": [
+      "Nothing; just plant them"
+     ],
+     "ask": "Before starting to grow cabbages to sell, what should the class find out?",
+     "repair": "Ask what happens to fifty cabbages nobody buys."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A school has no water near its land. Which project should it not choose: a fish pond or making liquid soap?",
+     "answer": "a fish pond",
+     "shows": "fits what the school has"
+    },
+    {
+     "question": "What must the class do before starting a project?",
+     "answer": "make a plan",
+     "shows": "projects need plans"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS",
+   "key_step": "The child says project money is recorded and belongs to the project, work and decisions are shared, and mistakes are reported.",
+   "floor": {
+    "prerequisite": "Names a responsibility at school.",
+    "question": "Give one responsibility of a learner on duty.",
+    "answer": "any duty such as sweeping or watering"
+   },
+   "representations": [
+    "a class record book",
+    "a duty rota on the wall",
+    "story cards of good and bad project behaviour"
+   ],
+   "steps": [
+    "Read the story.",
+    "Ask whether the action is honest and shared.",
+    "Say what should happen instead if it is not.",
+    "Say why it keeps the project going."
+   ],
+   "contexts": [
+    "selling kitchen garden spinach to the school kitchen",
+    "counting eggs from the poultry unit",
+    "a group sharing the cost of seeds"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"The treasurer kept 100 shillings from the egg money.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kept\".",
+     "say": "Was this right? Whose money is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the project's\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"record it and give it to the project\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_PROFIT_SELF",
+     "listen_for": [
+      "Keep it for himself"
+     ],
+     "ask": "The class sold vegetables and made 500 shillings. What should the treasurer do?",
+     "repair": "Role play the treasurer with a record book and a locked box."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_HIDE_LOSS",
+     "listen_for": [
+      "Hide it so no one is blamed"
+     ],
+     "ask": "A group loses some money by mistake. What is right?",
+     "repair": "Practise saying \"we lost it, and here is what we will do\"."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_ONE_PERSON",
+     "listen_for": [
+      "The leader decides everything alone"
+     ],
+     "ask": "How should a project team decide?",
+     "repair": "Ask the team to decide where to keep the tools, then compare it with one person deciding."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_NO_RECORD",
+     "listen_for": [
+      "No, we trust each other"
+     ],
+     "ask": "The poultry project sold eggs for 600 shillings. Should the class write it down?",
+     "repair": "Ask the class to remember last month's sales without a book."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who does the money from a school project belong to?",
+     "answer": "the project and the school",
+     "shows": "project money"
+    },
+    {
+     "question": "Some seedlings died because a learner forgot to water them. What should the group do?",
+     "answer": "Report it honestly and plan a better rota",
+     "shows": "mistakes reported"
+    }
+   ]
+  }
+ ]
+}

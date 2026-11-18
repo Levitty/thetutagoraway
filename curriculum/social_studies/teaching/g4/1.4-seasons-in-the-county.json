@@ -1,0 +1,291 @@
+{
+ "sub_strand": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY",
+ "title": "Seasons in the County",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep a class weather chart for two weeks before this sub-strand and use it. The seasons are named as the county knows them; long and short rains differ across Kenya, so the teacher confirms the months for the school's county.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES",
+   "key_step": "The child names the four local seasons (hot, cold, dry, rainy) from their weather and knows a season lasts many weeks.",
+   "floor": {
+    "prerequisite": "Can name the weather today.",
+    "question": "What is the weather like now?",
+    "answer": "any of: sunny, rainy, cloudy, windy, cold"
+   },
+   "representations": [
+    "the class weather chart for two weeks",
+    "a circle calendar with the months",
+    "pictures of each season in the county"
+   ],
+   "steps": [
+    "Read the weather of many days on the chart.",
+    "Group days of the same weather into weeks.",
+    "Name the season the weeks make.",
+    "Place it on the calendar."
+   ],
+   "contexts": [
+    "the long rains around March to May",
+    "a cold July morning in the highlands",
+    "dust and heat before the rains in the lowlands"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle split into twelve months."
+    },
+    {
+     "beat": "point",
+     "do": "Point at March to May.",
+     "say": "What weather do many counties get in these months?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the long rains."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"rainy\" on those months."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which months come before: wet or dry?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_FOREIGN_NAMES",
+     "listen_for": [
+      "Autumn"
+     ],
+     "ask": "Which of these is a season in our county?",
+     "repair": "Ask the child to name the weather of each month of the school year, then give each stretch its own name."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_COLD_RAIN",
+     "listen_for": [
+      "The rainy season"
+     ],
+     "ask": "When there is little rain and no clouds for many days, which season is it?",
+     "repair": "Make a weather chart over a week and name the season from what it shows."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_DAY_SEASON",
+     "listen_for": [
+      "It is now the rainy season"
+     ],
+     "ask": "It rained on Tuesday. What can we say?",
+     "repair": "Ask what the weather was every day of one month, then name the season."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_SAME_EVERYWHERE",
+     "listen_for": [
+      "Yes, it rains at the same time everywhere"
+     ],
+     "ask": "Is the rainy season in the same months in every part of Kenya?",
+     "repair": "Compare the class chart with a chart from another region read out by the teacher."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the four seasons in the county.",
+     "answer": "hot, cold, dry and rainy",
+     "shows": "names the seasons"
+    },
+    {
+     "question": "It rained heavily on one day in January. Is January the rainy season?",
+     "answer": "No: one rainy day is weather, a season lasts many weeks",
+     "shows": "season is not one day"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES",
+   "key_step": "The child links each season to what people do: plant at the start of the rains, harvest and dry in the dry season, wear warm clothes in the cold.",
+   "floor": {
+    "prerequisite": "Names the four seasons and their weather.",
+    "question": "Which season has the most rain?",
+    "answer": "the rainy season"
+   },
+   "representations": [
+    "a season wheel with activities drawn on it",
+    "a farmer's year in pictures",
+    "a sort: activity cards into season boxes"
+   ],
+   "steps": [
+    "Name the season.",
+    "Say what the weather does.",
+    "Say what people need or can do in that weather.",
+    "Check the activity fits the weather."
+   ],
+   "contexts": [
+    "planting maize when the long rains begin",
+    "selling cold drinks at a hot bus stage",
+    "wearing sweaters in the cold season in Nyandarua"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a farmer with a jembe and clouds above."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the clouds.",
+     "say": "Is this a good time to plant? Why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the rain wets the soil."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw maize drying on a mat in the sun."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"dry season: dry and store the harvest\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_PLANT_DRY",
+     "listen_for": [
+      "In the dry season"
+     ],
+     "ask": "When do farmers plant maize?",
+     "repair": "Plant two cups of beans, water one, and compare after a week."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_ACT_MISMATCH",
+     "listen_for": [
+      "Light cotton shirts only"
+     ],
+     "ask": "What do people wear in the cold season?",
+     "repair": "Ask what the child wears on a cold morning and what on a hot afternoon."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_NO_EFFECT",
+     "listen_for": [
+      "No, people do the same all year"
+     ],
+     "ask": "Do seasons change what people do?",
+     "repair": "Ask what changes at home when the rains start: crops, roads, clothes, school trips."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_HARVEST_RAIN",
+     "listen_for": [
+      "In the rainy season"
+     ],
+     "ask": "When do farmers dry and store their maize?",
+     "repair": "Ask what happens to maize left out to dry in the rain: it rots."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why do farmers plant at the start of the rainy season?",
+     "answer": "The rain wets the soil so seeds can grow",
+     "shows": "planting with the rains"
+    },
+    {
+     "question": "Which activity fits the cold season: drying maize, wearing warm clothes, swimming?",
+     "answer": "wearing warm clothes",
+     "shows": "activity fits season"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD",
+   "key_step": "The child says how rain makes roads dangerous and picks the safe action: wait, never cross flood water, never run, be seen.",
+   "floor": {
+    "prerequisite": "Knows basic road signs and safety on the road.",
+    "question": "Where should you cross a road?",
+    "answer": "at a zebra crossing or where you can see both ways, after looking right, left and right again"
+   },
+   "representations": [
+    "a picture of a wet road with a puddle and a matatu",
+    "a role play of crossing in the rain",
+    "a safe-or-unsafe sort of actions"
+   ],
+   "steps": [
+    "Say what the rain does to the road: slippery, muddy, flooded.",
+    "Say what it does to seeing: hard for drivers and walkers.",
+    "Pick the safe action.",
+    "Say why the unsafe one is dangerous."
+   ],
+   "contexts": [
+    "a flooded drift on the way home",
+    "a busy road in an evening storm",
+    "a bodaboda skidding on mud"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road with water running across it and a child at the edge."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the water.",
+     "say": "Should the child walk through it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer and give a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show that moving water can be deeper and stronger than it looks."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"wait and find an adult\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_RUN_ACROSS",
+     "listen_for": [
+      "Run across fast to get out of the rain"
+     ],
+     "ask": "It is raining. What should Njeri do at the road?",
+     "repair": "Role play crossing in the rain: slow, look both ways, hold a friend's hand."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_FLOOD_CROSS",
+     "listen_for": [
+      "Cross if the water looks shallow"
+     ],
+     "ask": "A road has water flowing across it after heavy rain. What should you do?",
+     "repair": "Show a picture of a drift in flood; ask what is hidden under the water."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_RAIN_SAFER",
+     "listen_for": [
+      "Faster, to get out of the rain"
+     ],
+     "ask": "How should a driver drive in heavy rain?",
+     "repair": "Ask how long it takes to stop on a slippery floor when you run."
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_UMBRELLA_SEEN",
+     "listen_for": [
+      "Dark clothes and an umbrella over the face"
+     ],
+     "ask": "It is raining heavily in the evening. What helps drivers see a walker?",
+     "repair": "In a dim room, hold up a dark cloth and a bright one: which do you see first?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Flood water covers the road home. It looks shallow. What should you do?",
+     "answer": "Wait in a safe place or find an adult; never cross",
+     "shows": "never cross flood water"
+    },
+    {
+     "question": "Why must drivers slow down in the rain?",
+     "answer": "The road is slippery and it is hard to see",
+     "shows": "rain and road danger"
+    }
+   ]
+  }
+ ]
+}

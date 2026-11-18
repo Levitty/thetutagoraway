@@ -3,15 +3,15 @@
  "subject_key": "social_studies",
  "grade": 4,
  "source": "KICD Social Studies, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g4)",
  "totals": {
   "strands": 5,
   "sub_strands": 19,
   "outcomes": 72,
   "lessons": 90,
   "skills": 39,
-  "prerequisites": 38,
-  "misconceptions": 96
+  "prerequisites": 83,
+  "misconceptions": 156
  },
  "sub_strands": [
   {
@@ -88,7 +88,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Watching where the sun is in the morning and evening (Grade 1) is how the child finds east and west. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "North, east, south and west are each a quarter turn apart; the child needs quarter and half turns. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS"
      ],
@@ -118,6 +133,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Naming features between home and school (Grade 1) is the first map of real places the child gives directions on. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -208,6 +230,54 @@
      "feedback": "Facing east, a turn to the left faces north. A turn to the right would face south.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_UP_NORTH",
+     "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS",
+     "error": "Thinks north means \"up\" in the sky or uphill, so points at the ceiling or up a slope when asked to face north.",
+     "example": {
+      "question": "Stand up and face north. Where do you point?",
+      "wrong_answer": "Up at the sky",
+      "correct_answer": "Along the ground, to the left of the morning sun"
+     },
+     "cause": "Maps hang on the wall with north at the top, so the child reads \"top of the map\" as \"up\".",
+     "reveals": "Offer \"Up at the sky\" next to the right answer and ask the question again in a new context.",
+     "help": "Lay the map flat on the desk, then on the floor, and turn it so north on the map points along the ground to north.",
+     "feedback": "North is a direction along the ground, not up. On a flat map it is at the top.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_TOP_ALWAYS_NORTH",
+     "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS",
+     "error": "Reads \"north\" as the top of whatever is drawn, even when the map shows a north arrow pointing another way.",
+     "example": {
+      "question": "On a map the north arrow points to the right. The well is on the right of the school. Where is the well from the school?",
+      "wrong_answer": "East, because the right is east",
+      "correct_answer": "North, because the arrow shows north is on the right"
+     },
+     "cause": "Most maps in class have north at the top, so the child never looks at the arrow.",
+     "reveals": "Offer \"East, because the right is east\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the same village twice, once with the arrow up and once with the arrow to the right, and ask each time where north is.",
+     "feedback": "Always look at the north arrow first. North is where the arrow points.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_LEFT_IS_WEST",
+     "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS",
+     "error": "Says \"left\" means west whichever way the person faces.",
+     "example": {
+      "question": "Achieng faces south. She turns her head to her left. Which direction is she looking?",
+      "wrong_answer": "West",
+      "correct_answer": "East"
+     },
+     "cause": "The child learnt \"facing north, west is on the left\" and uses it for every way of facing.",
+     "reveals": "Offer \"West\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand facing south with the class and point: the left hand now points east. Turn and do it for each direction.",
+     "feedback": "Left and right change when you turn. Compass points stay where they are.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -295,7 +365,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing the community around home (Grade 3) is the smallest piece the child fits inside a ward and a sub-county. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Locating the local market (Grade 2) is the child's first sense that places sit inside a bigger area. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [],
      "status": "proposed"
     },
@@ -331,6 +416,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Using features on the way to the market (Grade 2) is the first time the child says where one place is from another. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -362,6 +454,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Comparing county areas means ordering whole numbers by their size, not their first digit. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -481,6 +580,86 @@
      "feedback": "Compare the whole numbers. 3,000 is more than 800, so County B has the larger area.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_WARD_COUNTY",
+     "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+     "error": "Thinks the ward is the same as the county because both elect someone (an MCA and a Governor).",
+     "example": {
+      "question": "Which is smaller: a ward or a county?",
+      "wrong_answer": "They are the same size",
+      "correct_answer": "A ward; many wards make a sub-county and many sub-counties make a county"
+     },
+     "cause": "The child links each area to a leader and sees two leaders as two equal places.",
+     "reveals": "Offer \"They are the same size\" next to the right answer and ask the question again in a new context.",
+     "help": "Fit the puzzle: wards into a sub-county, sub-counties into the county, and count the pieces.",
+     "feedback": "A county holds sub-counties, and each sub-county holds wards. A ward is the smallest.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_INSIDE_NEIGHBOUR",
+     "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION",
+     "error": "Thinks a town inside the county is a neighbouring county.",
+     "example": {
+      "question": "Kibo Town is inside Mlima County. Is Kibo Town a neighbour county of Mlima?",
+      "wrong_answer": "Yes, it is close by",
+      "correct_answer": "No, it is inside Mlima County, not beside it"
+     },
+     "cause": "The child uses \"near\" as the test of a neighbour, and a town inside is very near.",
+     "reveals": "Offer \"Yes, it is close by\" next to the right answer and ask the question again in a new context.",
+     "help": "On the cut-out map, put a dot for the town inside the county and colour the counties that share the edge.",
+     "feedback": "A neighbour county is outside your county and shares its boundary.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_ONE_NEIGHBOUR_PER_SIDE",
+     "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION",
+     "error": "Thinks a county can have only one neighbour in each direction.",
+     "example": {
+      "question": "Two counties both lie to the north of Mlima County and touch it. How many northern neighbours does Mlima have?",
+      "wrong_answer": "One; only one county can be north",
+      "correct_answer": "Two"
+     },
+     "cause": "Simple maps in class show one neighbour on each side, like a cross.",
+     "reveals": "Offer \"One; only one county can be north\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a county with two counties along its northern edge and count them.",
+     "feedback": "A county can have more than one neighbour on the same side.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_LOOKS_BIGGER",
+     "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE",
+     "error": "Judges size by how big a county looks on two maps of different scales.",
+     "example": {
+      "question": "Map A shows Ziwa County large on a full page. Map B shows Mlima County small in a corner. The table says Ziwa is 2,000 square kilometres and Mlima 6,000. Which is bigger?",
+      "wrong_answer": "Ziwa, it looks bigger",
+      "correct_answer": "Mlima, 6,000 is more than 2,000 square kilometres"
+     },
+     "cause": "The child trusts the picture and does not know two maps can be drawn to different sizes.",
+     "reveals": "Offer \"Ziwa, it looks bigger\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the same classroom on a big sheet and on a small card: the room did not change size.",
+     "feedback": "Use the numbers in square kilometres, not how big a picture looks.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_UNIT_IGNORED",
+     "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE",
+     "error": "Compares the numbers and ignores the units, so 3 thousand square kilometres looks smaller than 900.",
+     "example": {
+      "question": "Ziwa County is 3 thousand square kilometres. Mlima is 900 square kilometres. Which is bigger?",
+      "wrong_answer": "Mlima, 900 is more than 3",
+      "correct_answer": "Ziwa, 3 thousand is 3,000, which is more than 900"
+     },
+     "cause": "The child reads the digit and skips the word \"thousand\".",
+     "reveals": "Offer \"Mlima, 900 is more than 3\" next to the right answer and ask the question again in a new context.",
+     "help": "Write both as full numbers, 3,000 and 900, and line up the digits by place value.",
+     "feedback": "Read the whole number with its word. 3 thousand is 3,000.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -572,7 +751,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Grade 1 named the features between home and school; Grade 4 sorts them into kinds. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Naming features on the way to market (Grade 2) gives the child real hills and rivers to sort. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES"
      ],
@@ -602,6 +796,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G1.RESOUR.WATER.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing sources of water (Grade 1) is the root of \"rivers and lakes give water\". Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -704,6 +905,38 @@
      "help": "Trace a river from its source on a mountain to the farms below.",
      "feedback": "Mountains help us. Rain falls on them and feeds rivers, they grow tea and trees, and visitors come to climb them.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_MAN_MADE_FEATURE",
+     "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS",
+     "error": "Counts a dam, a road or a building as a physical feature.",
+     "example": {
+      "question": "Which of these is a physical feature: a hill, a road, a school?",
+      "wrong_answer": "A road",
+      "correct_answer": "A hill"
+     },
+     "cause": "The child takes \"physical\" to mean anything you can see and touch.",
+     "reveals": "Offer \"A road\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort pictures into \"made by nature\" and \"made by people\": only nature's go in the physical features box.",
+     "feedback": "Physical features are made by nature: hills, rivers, lakes, valleys. Roads and buildings are made by people.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_SWAMP_USELESS",
+     "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE",
+     "error": "Thinks a swamp or wetland is only a dirty, useless place to be drained.",
+     "example": {
+      "question": "What is a swamp good for?",
+      "wrong_answer": "Nothing; it should be filled in",
+      "correct_answer": "It holds water, gives papyrus and reeds and is home to fish and birds"
+     },
+     "cause": "The child knows swamps as muddy places with mosquitoes and has never seen what they give.",
+     "reveals": "Offer \"Nothing; it should be filled in\" next to the right answer and ask the question again in a new context.",
+     "help": "Show papyrus mats or baskets and ask where the papyrus grows.",
+     "feedback": "Swamps store water, give reeds for mats and baskets and are homes for birds and fish.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -814,6 +1047,13 @@
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.NATURA.WEATHER.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Telling the weather at different times of day (Grade 2) comes before seeing a season as many weeks of weather. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -845,6 +1085,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.WEATHER.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Responding to bad weather (Grade 3) is the child's first link between weather and what people do. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -882,6 +1129,13 @@
        "kind": "outcome",
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.WEATHER.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "The dangers of bad weather (Grade 3) lead straight into rain on roads. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1035,6 +1289,54 @@
      "feedback": "Rain makes roads slippery, so a vehicle takes longer to stop. A driver must go slowly.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_SAME_EVERYWHERE",
+     "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES",
+     "error": "Thinks every county has its rains in the same months and the same seasons as their own.",
+     "example": {
+      "question": "Is the rainy season in the same months in every part of Kenya?",
+      "wrong_answer": "Yes, it rains at the same time everywhere",
+      "correct_answer": "No, the months of the rains differ from place to place"
+     },
+     "cause": "The child has only lived through one county's calendar.",
+     "reveals": "Offer \"Yes, it rains at the same time everywhere\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the class chart with a chart from another region read out by the teacher.",
+     "feedback": "Seasons come at different times in different parts of Kenya.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_HARVEST_RAIN",
+     "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES",
+     "error": "Thinks crops are harvested and dried in the rainy season.",
+     "example": {
+      "question": "When do farmers dry and store their maize?",
+      "wrong_answer": "In the rainy season",
+      "correct_answer": "In the dry season"
+     },
+     "cause": "The child knows rain makes crops grow and links rain with the whole farming year.",
+     "reveals": "Offer \"In the rainy season\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to maize left out to dry in the rain: it rots.",
+     "feedback": "Farmers plant when the rains start and dry their harvest in the dry season.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_UMBRELLA_SEEN",
+     "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD",
+     "error": "Thinks holding an umbrella or wearing dark clothes in heavy rain makes a walker easy for drivers to see.",
+     "example": {
+      "question": "It is raining heavily in the evening. What helps drivers see a walker?",
+      "wrong_answer": "Dark clothes and an umbrella over the face",
+      "correct_answer": "Bright or reflective clothes and walking facing the traffic"
+     },
+     "cause": "The child thinks only about keeping dry, not about being seen.",
+     "reveals": "Offer \"Dark clothes and an umbrella over the face\" next to the right answer and ask the question again in a new context.",
+     "help": "In a dim room, hold up a dark cloth and a bright one: which do you see first?",
+     "feedback": "In rain, wear bright clothes and walk facing the traffic so drivers see you.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1137,6 +1439,13 @@
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Seeing that cultural events keep a community together (Grade 3) is the root of why places that keep culture matter. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1168,6 +1477,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Sorting events by how they help a community (Grade 3) is the same thinking applied to places. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1256,6 +1572,54 @@
      "help": "Brainstorm three reasons for keeping a place; mark which are about learning and which about income.",
      "feedback": "Visitors bring income, but the first reasons are learning about the past and keeping the identity of the community.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_RUINS_RUBBISH",
+     "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS",
+     "error": "Thinks ruins are broken rubbish and not a historic site because the buildings are not whole.",
+     "example": {
+      "question": "Gede has old broken walls with no roofs. Is it a historic built environment?",
+      "wrong_answer": "No, it is only broken stones",
+      "correct_answer": "Yes, it is ruins of an old town that tell us how people lived"
+     },
+     "cause": "The child judges a place by whether it looks good now.",
+     "reveals": "Offer \"No, it is only broken stones\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a photo of Gede and a drawing of what the town looked like; ask what the walls tell us.",
+     "feedback": "Ruins are old buildings left from long ago. They tell us how people lived.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_ONLY_TOURISTS",
+     "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE",
+     "error": "Thinks historic places are only for foreign tourists, not for local people.",
+     "example": {
+      "question": "Who can learn from a museum in the county?",
+      "wrong_answer": "Only visitors from other countries",
+      "correct_answer": "Everyone: learners, families and visitors"
+     },
+     "cause": "The child has seen tourists at such places on television and not local families.",
+     "reveals": "Offer \"Only visitors from other countries\" next to the right answer and ask the question again in a new context.",
+     "help": "Plan a class visit or show a photo of a school group in a museum.",
+     "feedback": "Historic places are for all of us. They teach us our own history.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_WRITE_ON_WALLS",
+     "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE",
+     "error": "Thinks writing names on an old wall or taking a stone home shows love for the place.",
+     "example": {
+      "question": "Which shows care for a historic site?",
+      "wrong_answer": "Writing your name on the wall to remember the visit",
+      "correct_answer": "Keeping it clean and leaving everything as you found it"
+     },
+     "cause": "The child copies what they have seen visitors do and thinks it is a way of remembering.",
+     "reveals": "Offer \"Writing your name on the wall to remember the visit\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what the wall would look like if every visitor wrote on it.",
+     "feedback": "We care for old places by keeping them clean and leaving them as we found them.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1354,7 +1718,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G1.SOCIAL.OUR_MARKET.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "The roles of people in a market (Grade 1) are the first ways the child sees people depend on each other. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Places where family needs are met (Grade 2) show that the family gets its needs from others. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT"
      ],
@@ -1384,6 +1763,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "How emotional needs are met by others (Grade 3) is one benefit of depending on each other beyond money. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1472,6 +1858,54 @@
      "help": "Ask what a neighbour who lends a tool gives that is not money.",
      "feedback": "People get goods, services, skills, income and friendship. Money is only one benefit.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_RICH_INDEPENDENT",
+     "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS",
+     "error": "Thinks a rich person does not depend on anyone because they can pay.",
+     "example": {
+      "question": "A rich trader has lots of money. Does she depend on other people?",
+      "wrong_answer": "No, money means she needs nobody",
+      "correct_answer": "Yes, she needs farmers, drivers, doctors and workers"
+     },
+     "cause": "The child sees money as the thing that meets needs, not the people money pays.",
+     "reveals": "Offer \"No, money means she needs nobody\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what she can buy if every farmer and shopkeeper stopped working.",
+     "feedback": "Money only helps because other people grow, make and sell things. Everyone depends on others.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_TOWN_ONLY",
+     "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS",
+     "error": "Thinks people depend on each other only in towns, and village families live alone.",
+     "example": {
+      "question": "Do people in a village depend on each other?",
+      "wrong_answer": "No, village families do everything alone",
+      "correct_answer": "Yes, they share work, trade at the market and help at weddings and funerals"
+     },
+     "cause": "The child pictures a village home growing its own food and misses the sharing.",
+     "reveals": "Offer \"No, village families do everything alone\" next to the right answer and ask the question again in a new context.",
+     "help": "List what a village family gets from others: the posho mill, the market, the clinic, help at harvest.",
+     "feedback": "In villages and towns, people depend on each other for goods, services and help.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_JOBS_NONE",
+     "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS",
+     "error": "Does not see that depending on each other creates jobs.",
+     "example": {
+      "question": "Farmers need lorries to take milk to the factory. What does this give the lorry driver?",
+      "wrong_answer": "Nothing, the farmer gains",
+      "correct_answer": "A job and an income"
+     },
+     "cause": "The child sees only the person who needs help gaining.",
+     "reveals": "Offer \"Nothing, the farmer gains\" next to the right answer and ask the question again in a new context.",
+     "help": "Act it out: the farmer pays the driver; who has money now?",
+     "feedback": "When people depend on each other, both sides gain. The driver gets work and pay.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1563,6 +1997,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Sorting places as safe and unsafe (Grade 3) is one reason people settle in some places and avoid others. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -1616,6 +2057,22 @@
      "help": "Ask what the family needs each day and where they find it.",
      "feedback": "People live where they can get water, food, work, roads and safety. Dry, steep, flooded or unsafe places have few people.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_EVEN_SPREAD",
+     "skill": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS",
+     "error": "Thinks people are spread evenly over a county, the same number on every piece of land.",
+     "example": {
+      "question": "Is the number of people the same in every part of a county?",
+      "wrong_answer": "Yes, people spread out evenly",
+      "correct_answer": "No, some parts are crowded and others have few people"
+     },
+     "cause": "The child pictures the county map as one colour.",
+     "reveals": "Offer \"Yes, people spread out evenly\" next to the right answer and ask the question again in a new context.",
+     "help": "Drop beans on the map where the class thinks people live; the beans bunch up.",
+     "feedback": "People are not spread evenly. Many live where there is water, work and good land.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1710,6 +2167,13 @@
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.c",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Grade 3 classified cultural events; Grade 4 sorts the wider aspects of culture. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1766,6 +2230,22 @@
      "help": "Ask each learner to name one dish, dance or dress from their own community.",
      "feedback": "Communities differ in dress, food, houses and ceremonies, and respecting the differences keeps us at peace.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_BAD_OLD",
+     "skill": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+     "error": "Thinks traditional culture is backward and should all be dropped.",
+     "example": {
+      "question": "A learner says all traditional culture is backward. What is a good reply?",
+      "wrong_answer": "Yes, it should all be stopped",
+      "correct_answer": "No: much of it, like songs, food and respect for elders, is still good today"
+     },
+     "cause": "The child has heard harmful customs criticised and puts all culture with them.",
+     "reveals": "Offer \"Yes, it should all be stopped\" next to the right answer and ask the question again in a new context.",
+     "help": "List good parts of culture the class still enjoys: food, songs, games, respect for elders.",
+     "feedback": "Many parts of traditional culture are good and alive today. Only harmful customs should stop.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1855,7 +2335,22 @@
       "reasoning"
      ],
      "horeb_skill_ids": [],
-     "prerequisites": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Rights and responsibilities at school (Grade 2) are where the child first meets doing right by others. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Keeping the school clean (Grade 2) is the child's lived example of the value of cleanliness and responsibility. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      }
+     ],
      "leads_to": [
       "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS"
      ],
@@ -1885,14 +2380,46 @@
      "error": "Thinks values are the same as rules or punishments.",
      "example": {
       "question": "Which is a value of a school?",
-      "wrong_answer": "The school gate",
+      "wrong_answer": "The cane",
       "correct_answer": "Respect"
      },
      "cause": "The child links school with rules and punishments.",
-     "reveals": "Offer \"The school gate\" next to the right answer and ask the question again in a new context.",
+     "reveals": "Offer \"The cane\" next to the right answer and ask the question again in a new context.",
      "help": "Ask the child what a value is: a good idea that guides us, even without a teacher watching.",
      "feedback": "A value is a belief about what is good, such as respect or honesty. Rules and punishments are different.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_WATCHED_ONLY",
+     "skill": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES",
+     "error": "Thinks a value matters only when a teacher is watching.",
+     "example": {
+      "question": "Juma picks up litter when no teacher is near. Is he showing a value?",
+      "wrong_answer": "No, nobody saw it",
+      "correct_answer": "Yes, he shows responsibility and cleanliness"
+     },
+     "cause": "The child links values to praise or punishment from a teacher.",
+     "reveals": "Offer \"No, nobody saw it\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask whether the compound is cleaner whether or not a teacher saw it.",
+     "feedback": "A value is what you do because it is right, even when no one is watching.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_MOTTO_VALUE",
+     "skill": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES",
+     "error": "Thinks the school motto is the same as a school value or a rule.",
+     "example": {
+      "question": "Our motto is \"Strive to excel\". Is the motto a school rule?",
+      "wrong_answer": "Yes, it is a rule we are punished for breaking",
+      "correct_answer": "No: a motto is a short saying that guides the school; values are qualities we show"
+     },
+     "cause": "Motto, values and rules are all written on the same notice board.",
+     "reveals": "Offer \"Yes, it is a rule we are punished for breaking\" next to the right answer and ask the question again in a new context.",
+     "help": "Read the notice board together and sort: motto, values, rules.",
+     "feedback": "A motto is a short guiding saying. Values are qualities. Rules say what to do.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1997,6 +2524,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.ANIMALS.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "The importance of domestic animals (Grade 3) is the first resource the child sees earning a living (milk, eggs). Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2030,6 +2564,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Making money from waste (Grade 3) shows that an activity gives income, not only food. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2116,6 +2657,54 @@
      "help": "Make a table of five activities and what each gives.",
      "feedback": "Activities give jobs, income and raw materials, and some give food. Mining gives jobs and minerals.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_RESOURCE_ACTIVITY_SAME",
+     "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES",
+     "error": "Calls the activity a resource (says fishing is a resource and the lake is the activity).",
+     "example": {
+      "question": "In \"people fish in Lake Victoria\", which is the resource?",
+      "wrong_answer": "Fishing",
+      "correct_answer": "The lake and its fish"
+     },
+     "cause": "The two words are always taught together and the child does not hold the difference.",
+     "reveals": "Offer \"Fishing\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: which one can you touch and which one do people do?",
+     "feedback": "A resource is the thing from nature. The activity is what people do with it.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_COUNTY_NOTHING",
+     "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+     "error": "Thinks economic activities help only the family that does them and give the county nothing.",
+     "example": {
+      "question": "How does a busy market help the whole county?",
+      "wrong_answer": "It does not; only the traders gain",
+      "correct_answer": "Traders pay market fees that the county uses for services"
+     },
+     "cause": "The child sees only the person who earns.",
+     "reveals": "Offer \"It does not; only the traders gain\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a market fee receipt and ask where the money goes.",
+     "feedback": "Economic activities help families and the county, which collects fees and taxes for services.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_ONE_ACTIVITY",
+     "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+     "error": "Thinks a county should do only one economic activity, the one it is known for.",
+     "example": {
+      "question": "Mlima County is known for tea. Should its people do only tea farming?",
+      "wrong_answer": "Yes, only tea",
+      "correct_answer": "No: many activities, like dairy, trade and tourism, give more jobs and income"
+     },
+     "cause": "The child hears a county named by one crop and thinks it is the only one.",
+     "reveals": "Offer \"Yes, only tea\" next to the right answer and ask the question again in a new context.",
+     "help": "List three things people in a tea area also do for a living.",
+     "feedback": "A county is better off with many economic activities, not just one.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2214,6 +2803,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.RESOUR.ANIMALS.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Relating food items to the animals they come from (Grade 2) is the root of raw material and product. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2244,6 +2840,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Making income from waste (Grade 3) shows that making things gives jobs and money. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2281,6 +2884,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_MARKET.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Locating the market with features (Grade 2) is the first time the child places a building on the land. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2384,6 +2994,102 @@
      "feedback": "Milk goes bad quickly, so the factory is near the farms, on a good road.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_HANDMADE_NOT",
+     "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS",
+     "error": "Thinks only big factories with machines are industries, not a small jaggery mill or a basket-making group.",
+     "example": {
+      "question": "A women's group makes baskets from sisal to sell. Is this an industry?",
+      "wrong_answer": "No, only big factories are industries",
+      "correct_answer": "Yes, a small industry that makes goods from a raw material"
+     },
+     "cause": "The word industry is shown with pictures of big factories.",
+     "reveals": "Offer \"No, only big factories are industries\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a big sugar factory and a jaggery mill: both turn sugarcane into a product.",
+     "feedback": "An industry turns raw materials into goods, big or small.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_PRODUCT_RAW_TEA",
+     "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS",
+     "error": "Names the factory by what it buys, not what it makes, so calls a tea factory a \"leaf factory\" and says it sells leaves.",
+     "example": {
+      "question": "A tea factory buys green tea leaves from farmers. What does it sell?",
+      "wrong_answer": "Green leaves",
+      "correct_answer": "Made tea, ready to drink"
+     },
+     "cause": "The child sees the leaves go in and assumes the same thing comes out.",
+     "reveals": "Offer \"Green leaves\" next to the right answer and ask the question again in a new context.",
+     "help": "Show green leaves and a packet of tea side by side.",
+     "feedback": "A factory changes the raw material. Green leaves go in, made tea comes out.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_FARMER_NO_GAIN",
+     "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS",
+     "error": "Thinks a factory takes from farmers and gives them nothing.",
+     "example": {
+      "question": "How does a milk factory help dairy farmers?",
+      "wrong_answer": "It does not; it takes their milk",
+      "correct_answer": "It buys their milk, so they have a sure market and income"
+     },
+     "cause": "The child sees milk leaving the farm and not the payment coming back.",
+     "reveals": "Offer \"It does not; it takes their milk\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the milk going to the factory and the money going back to the farmer.",
+     "feedback": "A factory is a market for farmers. They sell to it and earn money.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_BENEFIT_HARM_SAME",
+     "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS",
+     "error": "Lists a problem caused by an industry as a benefit (more lorries on the road, smoke).",
+     "example": {
+      "question": "Which is a benefit of a factory: jobs, smoke, noise?",
+      "wrong_answer": "Smoke, it shows the factory is busy",
+      "correct_answer": "Jobs"
+     },
+     "cause": "The child connects smoke and noise with a working factory and so with something good.",
+     "reveals": "Offer \"Smoke, it shows the factory is busy\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort cards into \"helps people\" and \"harms people\".",
+     "feedback": "Jobs and income are benefits. Smoke and noise are problems to manage.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_NO_ROAD",
+     "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE",
+     "error": "Places a factory far from any road because land is cheaper there.",
+     "example": {
+      "question": "Where should a new milk factory go: next to the dairy farms by the main road, or on a far hill with no road?",
+      "wrong_answer": "On the far hill, land is cheap",
+      "correct_answer": "By the dairy farms and the main road"
+     },
+     "cause": "The child thinks only of the land, not of moving milk and workers.",
+     "reveals": "Offer \"On the far hill, land is cheap\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how lorries will bring milk to the far hill.",
+     "feedback": "Factories need roads to bring raw materials and take goods to buyers.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_HOMES_INSIDE",
+     "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE",
+     "error": "Thinks a noisy factory is best built in the middle of homes so workers are close.",
+     "example": {
+      "question": "Where is the best place for a noisy, smoky factory?",
+      "wrong_answer": "In the middle of the houses",
+      "correct_answer": "Near the town but away from homes, with roads and water"
+     },
+     "cause": "The child thinks only about how far workers walk.",
+     "reveals": "Offer \"In the middle of the houses\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how families would sleep next to the noise and smoke.",
+     "feedback": "Factories are put near workers and roads but away from homes because of noise and smoke.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2475,6 +3181,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.PLANTS.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Making a kitchen garden (Grade 3) is a school project the child has already done. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2504,6 +3217,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Carrying out responsibilities at school (Grade 2) is the root of shared, honest work. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2590,6 +3310,54 @@
      "help": "Ask the team to decide where to keep the tools, then compare it with one person deciding.",
      "feedback": "Teams share the work and the decisions, so everyone takes part and feels the project belongs to them.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_BIGGEST_BEST",
+     "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+     "error": "Picks the biggest or most expensive project as the best one, whatever the school has.",
+     "example": {
+      "question": "A school has a small piece of land and little money. Which project fits best?",
+      "wrong_answer": "A large dairy farm",
+      "correct_answer": "A kitchen garden or a tree nursery"
+     },
+     "cause": "The child thinks a bigger project earns more and ignores what it needs.",
+     "reveals": "Offer \"A large dairy farm\" next to the right answer and ask the question again in a new context.",
+     "help": "List what each project needs and tick what the school has.",
+     "feedback": "Choose a project that fits the land, water, money and people the school has.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_NO_MARKET",
+     "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+     "error": "Chooses a project without thinking who will buy what it makes.",
+     "example": {
+      "question": "Before starting to grow cabbages to sell, what should the class find out?",
+      "wrong_answer": "Nothing; just plant them",
+      "correct_answer": "Who will buy them, such as the school kitchen or parents"
+     },
+     "cause": "The child stops at making the product.",
+     "reveals": "Offer \"Nothing; just plant them\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to fifty cabbages nobody buys.",
+     "feedback": "A project needs buyers. Find out who will buy before you start.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_NO_RECORD",
+     "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS",
+     "error": "Thinks money from a project need not be written down if everyone trusts each other.",
+     "example": {
+      "question": "The poultry project sold eggs for 600 shillings. Should the class write it down?",
+      "wrong_answer": "No, we trust each other",
+      "correct_answer": "Yes, in the record book, so everyone can see the money"
+     },
+     "cause": "The child thinks records are only for people who might steal.",
+     "reveals": "Offer \"No, we trust each other\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask the class to remember last month's sales without a book.",
+     "feedback": "Write every sale and cost in the record book. Records keep everyone honest and sure.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2682,6 +3450,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Child rights and responsibilities at school (Grade 2) are the base of good school citizenship. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -2737,6 +3512,22 @@
      "help": "Ask: is it gossip to tell a teacher that someone is being hurt?",
      "feedback": "Telling a teacher about harm is not telling tales. A good citizen helps keep everyone safe.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_RICH_GOOD",
+     "skill": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES",
+     "error": "Thinks a learner with new shoes, a new bag or rich parents is a better citizen.",
+     "example": {
+      "question": "Who is a good citizen in school: a learner with a new bag, or a learner who helps others and keeps the class clean?",
+      "wrong_answer": "The learner with the new bag",
+      "correct_answer": "The learner who helps others and keeps the class clean"
+     },
+     "cause": "The child confuses being admired with being good.",
+     "reveals": "Offer \"The learner with the new bag\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what each learner does for the school.",
+     "feedback": "Good citizenship is how you behave, not what you own.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2828,6 +3619,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.c",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Labelling the emotions of self and others (Grade 3) comes before listening and calming a quarrel. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2857,6 +3655,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Saying how people express feelings (Grade 3) is what the child does when talking a quarrel through. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2892,7 +3697,7 @@
      },
      "cause": "The child links order with punishment.",
      "reveals": "Offer \"Fear of strict punishment\" next to the right answer and ask the question again in a new context.",
-     "help": "Compare a class that is quiet through fear and a class that is kind by choice.",
+     "help": "Compare a class that is quiet for the cane and a class that is kind by choice.",
      "feedback": "Peace grows from respect, fairness, sharing and forgiveness, not from fear.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -2959,6 +3764,38 @@
      "help": "Write the steps on cards and order them: calm, listen, talk, say sorry, forgive.",
      "feedback": "First calm down and listen. Then talk about it, say sorry and forgive. A mediator can help.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_SAME_FRIENDS",
+     "skill": "SOCI.G4.CITIZE.PEACE.PE_FACTORS",
+     "error": "Thinks peace means only playing with learners who are just like you.",
+     "example": {
+      "question": "Which helps peace in school: playing only with your own group, or welcoming learners who are different?",
+      "wrong_answer": "Playing only with your own group",
+      "correct_answer": "Welcoming learners who are different"
+     },
+     "cause": "The child feels safe with the familiar and thinks avoiding others prevents quarrels.",
+     "reveals": "Offer \"Playing only with your own group\" next to the right answer and ask the question again in a new context.",
+     "help": "Mix groups for a game and talk about what each learner brought.",
+     "feedback": "Peace grows when we accept and welcome people who are different from us.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_ADULT_FIRST_ALWAYS",
+     "skill": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES",
+     "error": "Thinks every small quarrel must go straight to the head teacher, never talked through first.",
+     "example": {
+      "question": "Two friends argue over whose turn it is on the swing. What should they try first?",
+      "wrong_answer": "Go straight to the head teacher",
+      "correct_answer": "Calm down, listen to each other and take turns"
+     },
+     "cause": "The child has learnt \"tell a teacher\" for serious things and uses it for everything.",
+     "reveals": "Offer \"Go straight to the head teacher\" next to the right answer and ask the question again in a new context.",
+     "help": "Act a small quarrel and solve it with talk; then act a fight and see when an adult is needed.",
+     "feedback": "Try talking calmly first. Ask a teacher for help if it is serious or talk does not work.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3068,6 +3905,13 @@
        "reason": "Grade 3 Environmental Activities taught the idea first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Child rights (Grade 2) come before knowing when those rights are broken. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3097,6 +3941,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Ways of keeping safe in the community (Grade 3) are the other side of knowing what puts a child in danger. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3128,6 +3979,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "How emotional needs are met (Grade 3) helps the child see that abuse hurts feelings as well as bodies. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3249,6 +4107,86 @@
      "feedback": "Never keep harm secret. Tell a trusted adult, or call Childline on 116, which is free.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_STRANGER_ONLY",
+     "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS",
+     "error": "Thinks abuse is done only by strangers, never by people the child knows.",
+     "example": {
+      "question": "Can a child be abused by someone they know?",
+      "wrong_answer": "No, only strangers abuse children",
+      "correct_answer": "Yes, sometimes by someone they know, so the child must tell a trusted adult"
+     },
+     "cause": "The child is taught \"stranger danger\" and not that people known to them can harm.",
+     "reveals": "Offer \"No, only strangers abuse children\" next to the right answer and ask the question again in a new context.",
+     "help": "Say plainly that anyone who hurts a child is wrong, whoever they are, and the child should tell a trusted adult.",
+     "feedback": "Anyone who hurts a child is wrong, even someone known. Tell a trusted adult.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_POOR_ONLY",
+     "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES",
+     "error": "Thinks abuse happens only in poor families.",
+     "example": {
+      "question": "Does child abuse happen only in poor homes?",
+      "wrong_answer": "Yes, only in poor homes",
+      "correct_answer": "No, it can happen in any home"
+     },
+     "cause": "Poverty is taught as a cause, and the child takes it as the only one.",
+     "reveals": "Offer \"Yes, only in poor homes\" next to the right answer and ask the question again in a new context.",
+     "help": "List several causes together: drugs, harmful customs, greed, ignorance.",
+     "feedback": "Abuse can happen in any family. Poverty is one cause among many.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_ALCOHOL_EXCUSE",
+     "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES",
+     "error": "Thinks an adult who was drunk is not to blame for hurting a child.",
+     "example": {
+      "question": "A drunk adult hit a child. Is the adult to blame?",
+      "wrong_answer": "No, it was the alcohol",
+      "correct_answer": "Yes, the adult is responsible, and drinking is a cause, not an excuse"
+     },
+     "cause": "The child hears adults excuse behaviour with \"he was drunk\".",
+     "reveals": "Offer \"No, it was the alcohol\" next to the right answer and ask the question again in a new context.",
+     "help": "Separate cause from blame: alcohol can lead to it, the adult still chose to drink and to hit.",
+     "feedback": "Alcohol can lead to abuse, but the adult is still responsible.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_PHYSICAL_ONLY_EFFECT",
+     "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS",
+     "error": "Thinks abuse only hurts the body and leaves no hurt once a wound heals.",
+     "example": {
+      "question": "A child's bruise has healed. Can the child still be hurt by the abuse?",
+      "wrong_answer": "No, the bruise is gone",
+      "correct_answer": "Yes, the child can still feel fear, sadness or shame"
+     },
+     "cause": "The child can see bruises and cannot see feelings.",
+     "reveals": "Offer \"No, the bruise is gone\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about how a child might feel afraid or sad long after, using a story character.",
+     "feedback": "Abuse hurts feelings too. A child can feel afraid or sad after the body heals.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_TELL_NOBODY_HELPS",
+     "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS",
+     "error": "Thinks telling an adult will only make things worse, so nothing can help.",
+     "example": {
+      "question": "A child is being hurt. Who can help?",
+      "wrong_answer": "Nobody; telling makes it worse",
+      "correct_answer": "A trusted adult such as a teacher, a parent or Childline on 116"
+     },
+     "cause": "The child may have been told to keep quiet or fears trouble.",
+     "reveals": "Offer \"Nobody; telling makes it worse\" next to the right answer and ask the question again in a new context.",
+     "help": "Name the helpers: a teacher, a parent, a chief, a nurse, Childline 116. Practise what to say.",
+     "feedback": "Telling a trusted adult is the right thing. Call Childline on 116 for free.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3345,6 +4283,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Knowing a child has rights at school (Grade 2) includes the right to be heard, the root of voting. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3376,6 +4321,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Seeing how shared events bring a community together (Grade 3) is the same idea as shared decisions. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3464,6 +4416,54 @@
      "help": "Compare a lunch menu chosen by one person with one chosen by the class.",
      "feedback": "Democracy gives everyone a voice, is fair and builds peace, even if it takes a little time.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_OPEN_VOTE",
+     "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES",
+     "error": "Thinks voting by a show of hands in front of the candidates is the same as a secret ballot.",
+     "example": {
+      "question": "Why do we put votes in a closed box instead of raising hands?",
+      "wrong_answer": "There is no reason; both are the same",
+      "correct_answer": "So each learner can vote freely without fear"
+     },
+     "cause": "The child has used hands to vote for games and sees no difference.",
+     "reveals": "Offer \"There is no reason; both are the same\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask whether a learner might vote differently if the big boy candidate is watching.",
+     "feedback": "A secret vote lets everyone choose freely, without fear.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_WINNER_ALL",
+     "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS",
+     "error": "Thinks the winner of an election can do whatever they like.",
+     "example": {
+      "question": "A class prefect was elected. Can she make any rule she likes?",
+      "wrong_answer": "Yes, she won",
+      "correct_answer": "No: she must serve all learners and follow the school rules"
+     },
+     "cause": "The child thinks winning gives power, not duty.",
+     "reveals": "Offer \"Yes, she won\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what the prefect promised in her campaign and who she serves.",
+     "feedback": "An elected leader serves everyone and follows the rules.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_MAJORITY_ALWAYS_RIGHT",
+     "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS",
+     "error": "Thinks whatever most learners vote for must be right, even if it hurts some learners.",
+     "example": {
+      "question": "Most of the class votes that one learner may not play in games. Is that fair?",
+      "wrong_answer": "Yes, most people voted for it",
+      "correct_answer": "No: a vote cannot take away another learner's rights"
+     },
+     "cause": "The child has learnt the majority decides and stretches it to everything.",
+     "reveals": "Offer \"Yes, most people voted for it\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how the left-out learner feels and what the school rules say about everyone being included.",
+     "feedback": "The majority decides, but it must still respect everyone's rights.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3566,6 +4566,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "The rights of children at school (Grade 2) are what the Children's Government speaks for. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3595,6 +4602,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Ways of keeping the school clean (Grade 2) are one job the Children's Government organises. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3641,11 +4655,11 @@
      "error": "Thinks the Children's Government can punish or cane learners.",
      "example": {
       "question": "Which is NOT a duty of the Children's Government?",
-      "wrong_answer": "Punishing learners who are late",
+      "wrong_answer": "Caning learners who are late",
       "correct_answer": "Passing learners' worries to the teachers"
      },
      "cause": "The child links prefects with punishing.",
-     "reveals": "Offer \"Punishing learners who are late\" next to the right answer and ask the question again in a new context.",
+     "reveals": "Offer \"Caning learners who are late\" next to the right answer and ask the question again in a new context.",
      "help": "Ask what a prefect can do kindly: remind, report, help.",
      "feedback": "The Children's Government helps keep order but does not punish. Teachers handle punishment.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
@@ -3665,6 +4679,70 @@
      "help": "Draw who reports to whom.",
      "feedback": "The Children's Government speaks for learners and helps. The head teacher runs the school.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_TOP_MARKS",
+     "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION",
+     "error": "Thinks only the learners with the top marks can be in the Children's Government.",
+     "example": {
+      "question": "Who can be elected to the Children's Government?",
+      "wrong_answer": "Only the top learners in exams",
+      "correct_answer": "Any learner chosen by classmates for good conduct and leadership"
+     },
+     "cause": "The child sees prizes go to top learners and thinks every honour does.",
+     "reveals": "Offer \"Only the top learners in exams\" next to the right answer and ask the question again in a new context.",
+     "help": "Name a real member who leads well but is not top in class, if the school has one.",
+     "feedback": "Learners elect members for good conduct and leadership, not only for marks.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_FOREVER",
+     "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION",
+     "error": "Thinks members stay in office until they leave the school.",
+     "example": {
+      "question": "How long does a Children's Government member serve?",
+      "wrong_answer": "Until they leave the school",
+      "correct_answer": "For a set term, then a new election is held"
+     },
+     "cause": "The child has seen the same prefects for a long time.",
+     "reveals": "Offer \"Until they leave the school\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the school's election calendar.",
+     "feedback": "Members serve for a set time. Then learners vote again.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_FOR_TEACHERS",
+     "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS",
+     "error": "Thinks the Children's Government only carries out teachers' orders and does not speak for learners.",
+     "example": {
+      "question": "Learners want a covered place to eat lunch. What can the Children's Government do?",
+      "wrong_answer": "Nothing; it only obeys teachers",
+      "correct_answer": "Take the learners' request to the teachers and the head teacher"
+     },
+     "cause": "The child sees prefects passing on teachers' orders.",
+     "reveals": "Offer \"Nothing; it only obeys teachers\" next to the right answer and ask the question again in a new context.",
+     "help": "Act out a minister taking a learners' request to the head teacher.",
+     "feedback": "The Children's Government speaks for learners and takes their views to the teachers.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_ONLY_ORDER",
+     "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS",
+     "error": "Thinks its only job is keeping learners quiet.",
+     "example": {
+      "question": "Which is a job of the Children's Government: organising a tree-planting day, or only keeping learners quiet?",
+      "wrong_answer": "Only keeping learners quiet",
+      "correct_answer": "Organising a tree-planting day"
+     },
+     "cause": "The child sees prefects most often when they are asking for silence.",
+     "reveals": "Offer \"Only keeping learners quiet\" next to the right answer and ask the question again in a new context.",
+     "help": "List what each minister does: environment, health, games, library.",
+     "feedback": "The Children's Government organises activities, keeps the school clean and speaks for learners.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3767,6 +4845,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Ways of keeping safe in the community (Grade 3) show the child the people who keep order there. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -3807,6 +4892,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Rights and responsibilities (Grade 2) are what a good leader protects. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3879,6 +4971,70 @@
      "help": "Discuss why trust matters to a leader.",
      "feedback": "A good leader serves everyone and is honest with what belongs to the community.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_ADULT_MEN_ONLY",
+     "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS",
+     "error": "Thinks only men can be leaders in the community.",
+     "example": {
+      "question": "Can a woman be a community leader?",
+      "wrong_answer": "No, only men lead",
+      "correct_answer": "Yes, women lead as chiefs, elders, religious leaders and group chairpersons"
+     },
+     "cause": "The child has mostly seen men in leadership roles.",
+     "reveals": "Offer \"No, only men lead\" next to the right answer and ask the question again in a new context.",
+     "help": "Name women leaders in the community, such as a women's group chairperson or a chief.",
+     "feedback": "Women and men can both be community leaders.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_CHIEF_ELECTED",
+     "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS",
+     "error": "Thinks the chief is elected by the villagers like an MCA.",
+     "example": {
+      "question": "How does a person become a chief?",
+      "wrong_answer": "The villagers vote for them",
+      "correct_answer": "The national government appoints them"
+     },
+     "cause": "The child knows other leaders are elected and assumes the chief is too.",
+     "reveals": "Offer \"The villagers vote for them\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare: the MCA is voted for; the chief is appointed by the government.",
+     "feedback": "A chief is appointed by the national government. An MCA is elected.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_STRICT_BEST",
+     "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES",
+     "error": "Thinks a good leader is one who shouts and punishes the most.",
+     "example": {
+      "question": "Which leader is better: one who shouts at people, or one who listens and treats everyone fairly?",
+      "wrong_answer": "The one who shouts, people fear him",
+      "correct_answer": "The one who listens and is fair"
+     },
+     "cause": "The child links fear with control and control with good leading.",
+     "reveals": "Offer \"The one who shouts, people fear him\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which leader people would bring a problem to.",
+     "feedback": "A good leader listens and is fair. People follow because they trust, not because they fear.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_FAVOUR_OWN",
+     "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES",
+     "error": "Thinks a good leader should help their own family and clan first.",
+     "example": {
+      "question": "A leader gives jobs only to his relatives. Is this good leadership?",
+      "wrong_answer": "Yes, family comes first",
+      "correct_answer": "No: a good leader treats everyone fairly"
+     },
+     "cause": "The child sees caring for family as good and does not see the unfairness to others.",
+     "reveals": "Offer \"Yes, family comes first\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how the other families feel when only relatives get jobs.",
+     "feedback": "A good leader serves everyone fairly, not only their own family.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3976,6 +5132,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing the county is made of sub-counties and wards is needed to see that MCAs are elected from wards. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -4008,6 +5171,20 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The Governor serves the whole county, which the child must see as one area made of sub-counties. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b",
+       "kind": "outcome",
+       "strength": "helpful",
+       "reason": "Naming national events (Grade 2) is the child's first idea of a national level above the county. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -4037,6 +5214,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "An MCA is elected by one ward; the child must know what a ward is. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -4139,6 +5323,102 @@
      "help": "Mark a ward on a sketch and name the MCA.",
      "feedback": "An MCA is elected by a ward and speaks for its people. Members of Parliament sit in the National Assembly.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_TWO_ARMS",
+     "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+     "error": "Thinks the county government is one person, the Governor.",
+     "example": {
+      "question": "Is the county government only the Governor?",
+      "wrong_answer": "Yes, the Governor is the county government",
+      "correct_answer": "No: it is the county executive and the county assembly"
+     },
+     "cause": "The Governor is the face of the county on news and posters.",
+     "reveals": "Offer \"Yes, the Governor is the county government\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the two boxes and fill them with all the people in each.",
+     "feedback": "The county government has two parts: the executive, led by the Governor, and the county assembly.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_SPEAKER_EXECUTIVE",
+     "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+     "error": "Puts the Speaker of the County Assembly in the county executive.",
+     "example": {
+      "question": "Is the Speaker of the County Assembly part of the county executive?",
+      "wrong_answer": "Yes, with the Governor",
+      "correct_answer": "No, the Speaker leads the meetings of the county assembly"
+     },
+     "cause": "Both sound like senior offices, so the child puts them together.",
+     "reveals": "Offer \"Yes, with the Governor\" next to the right answer and ask the question again in a new context.",
+     "help": "Put the Speaker's card in the assembly box and say what the Speaker does there.",
+     "feedback": "The Speaker belongs to the county assembly and chairs its meetings.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_FOREVER",
+     "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR",
+     "error": "Thinks a Governor stays in office for life.",
+     "example": {
+      "question": "How long is a Governor's term?",
+      "wrong_answer": "For life",
+      "correct_answer": "Five years, then there is an election"
+     },
+     "cause": "The child does not connect leaders with terms and elections.",
+     "reveals": "Offer \"For life\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the general election cycle: every five years.",
+     "feedback": "A Governor is elected for five years at a time.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_APPOINTED",
+     "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR",
+     "error": "Thinks the President appoints the Governor.",
+     "example": {
+      "question": "Who chooses the Governor of a county?",
+      "wrong_answer": "The President",
+      "correct_answer": "The voters of the county, in an election"
+     },
+     "cause": "The child thinks every senior office is filled by the President.",
+     "reveals": "Offer \"The President\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who votes in the county at a general election.",
+     "feedback": "The people of the county elect their Governor.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_APPOINTED",
+     "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA",
+     "error": "Thinks MCAs are chosen by the Governor.",
+     "example": {
+      "question": "Who chooses the Member of the County Assembly for a ward?",
+      "wrong_answer": "The Governor",
+      "correct_answer": "The voters of the ward"
+     },
+     "cause": "The child thinks the Governor, as county head, picks everyone below.",
+     "reveals": "Offer \"The Governor\" next to the right answer and ask the question again in a new context.",
+     "help": "Name what is on the ballot at a general election, including the MCA.",
+     "feedback": "The people of each ward elect their MCA.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_BUDGET_NONE",
+     "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA",
+     "error": "Thinks the Governor alone decides how the county spends money, with no role for the assembly.",
+     "example": {
+      "question": "Who approves the county budget?",
+      "wrong_answer": "The Governor alone",
+      "correct_answer": "The county assembly, made up of MCAs"
+     },
+     "cause": "The child sees the Governor as the one who spends.",
+     "reveals": "Offer \"The Governor alone\" next to the right answer and ask the question again in a new context.",
+     "help": "Act a budget: the executive proposes, the MCAs debate and vote.",
+     "feedback": "The county assembly approves the budget. The executive then spends it.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

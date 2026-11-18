@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G4.SOCIAL.THE_SCHOOL",
+ "title": "The School",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school's own motto, values and stories. The teacher supplies the school's values; questions use common ones.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES",
+   "key_step": "The child names the value a school situation shows (respect, honesty, responsibility, hard work, unity, cleanliness) and says why it matters.",
+   "floor": {
+    "prerequisite": "Names a responsibility of a learner at school.",
+    "question": "Give one responsibility you have at school.",
+    "answer": "any of: keep the class clean, do homework, respect others"
+   },
+   "representations": [
+    "short story cards of school situations",
+    "the school notice board with values and motto",
+    "a value badge for the week"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Ask what the learner did.",
+    "Match it to the value.",
+    "Say how the school is better for it."
+   ],
+   "contexts": [
+    "returning a lost pencil case",
+    "helping a new learner find the classroom",
+    "sweeping the class on duty day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Wanjiru found 50 shillings and gave it to the teacher.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"gave it to the teacher\".",
+     "say": "Which value is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for honesty."
+    },
+    {
+     "beat": "write",
+     "do": "Write honesty and one reason it matters."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_VALUE_MIX",
+     "listen_for": [
+      "Hard work"
+     ],
+     "ask": "Wekesa finds a lost shilling coin and hands it to the teacher. Which value does he show?",
+     "repair": "Make cards of the value words and match them to six short scenes."
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_RULES_ONLY",
+     "listen_for": [
+      "The cane"
+     ],
+     "ask": "Which is a value of a school?",
+     "repair": "Ask the child what a value is: a good idea that guides us, even without a teacher watching."
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_WATCHED_ONLY",
+     "listen_for": [
+      "No, nobody saw it"
+     ],
+     "ask": "Juma picks up litter when no teacher is near. Is he showing a value?",
+     "repair": "Ask whether the compound is cleaner whether or not a teacher saw it."
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_MOTTO_VALUE",
+     "listen_for": [
+      "Yes, it is a rule we are punished for breaking"
+     ],
+     "ask": "Our motto is \"Strive to excel\". Is the motto a school rule?",
+     "repair": "Read the notice board together and sort: motto, values, rules."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A learner owns up to breaking a window. Which value does this show?",
+     "answer": "honesty",
+     "shows": "names a value"
+    },
+    {
+     "question": "Is a value the same as a punishment?",
+     "answer": "No: a value is a quality we show; a punishment follows breaking a rule",
+     "shows": "value is not a rule"
+    }
+   ]
+  }
+ ]
+}

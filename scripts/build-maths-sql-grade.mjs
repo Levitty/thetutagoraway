@@ -10,14 +10,16 @@ import { readFileSync, writeFileSync } from 'node:fs';
 //   node scripts/build-maths-sql-grade.mjs science 4      node scripts/build-maths-sql-grade.mjs integrated_science 7
 const SUBJECT_DIR = /^[a-z_]+$/.test(process.argv[2] || '') ? process.argv[2] : 'mathematics';
 const GRADE = Number(SUBJECT_DIR === 'mathematics' ? (process.argv[2] || 7) : process.argv[3]);
-const SCIENCE = { science: 'Science and Technology', integrated_science: 'Integrated Science' }[SUBJECT_DIR];
+// Social Studies Grades 4-9 too (18 Nov 2026):  node scripts/build-maths-sql-grade.mjs social_studies 4
+const SCIENCE = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies' }[SUBJECT_DIR];
+const DAY = SUBJECT_DIR === 'social_studies' ? '20261123' : '20261122';
 const LABEL = SCIENCE || 'Maths';
-const RUN = SCIENCE ? { file: `20261122_${SUBJECT_DIR}_g${GRADE}_skills_misconceptions.sql`, when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (the five curriculum tables); prerequisites may name skills of the grade below, with no foreign key on them', why: `${SCIENCE} Grade ${GRADE} skills and misconceptions were in the repository (curriculum/${SUBJECT_DIR}/g${GRADE}.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 brought every skill to two or more prerequisites and four misconceptions, with a teaching pack.` } : {
+const RUN = SCIENCE ? { file: `${DAY}_${SUBJECT_DIR}_g${GRADE}_skills_misconceptions.sql`, when: 'owner, 18 Nov 2026', after: '20261110_curriculum.sql (the five curriculum tables); prerequisites may name skills of the grade below, with no foreign key on them', why: `${SCIENCE} Grade ${GRADE} skills and misconceptions were in the repository (curriculum/${SUBJECT_DIR}/g${GRADE}.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 brought every skill to two or more prerequisites and four misconceptions, with a teaching pack.` } : {
   7: { file: '20261119_maths_g7_skills_misconceptions.sql', when: 'owner, 17 Nov 2026', after: '20261118_map_review_misconceptions.sql', why: `Grade 7 Maths had outcomes only.` },
   6: { file: '20261120_maths_g6_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261118_map_review_misconceptions.sql', why: `Grade 6 Maths skills and misconceptions were in the repository (curriculum/mathematics/g6.json) but no HOREB migration loaded them; the depth pass of 18 Nov 2026 added prerequisites, misconceptions and a teaching pack.` },
   8: { file: '20261121_maths_g8_skills_misconceptions.sql', when: 'owner, 18 Nov 2026', after: '20261119_maths_g7_skills_misconceptions.sql and 20261120_maths_g6_skills_misconceptions.sql (Grade 8 prerequisites name Grade 6 and 7 skills; there is no foreign key on them, so the order is for the reviewer only)', why: `Grade 8 Maths had outcomes only; mapped on 18 Nov 2026 to the depth standard of Grades 6 and 7 (two prerequisites and four misconceptions per skill, a teaching pack).` },
 }[GRADE];
-if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 6|7|8, or science 4|5|6, or integrated_science 7|8|9'); process.exit(1); }
+if (!RUN || !GRADE) { console.error('usage: node scripts/build-maths-sql-grade.mjs 6|7|8, or science 4|5|6, or integrated_science 7|8|9, or social_studies 4-9'); process.exit(1); }
 const cur = JSON.parse(readFileSync(new URL(`../curriculum/${SUBJECT_DIR}/g${GRADE}.json`, import.meta.url), 'utf8'));
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 const arr = (a) => `ARRAY[${a.map(q).join(', ')}]::text[]`;

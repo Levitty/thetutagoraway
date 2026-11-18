@@ -1,0 +1,198 @@
+{
+ "sub_strand": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE",
+ "title": "Physical features in the County",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Build features in a sand tray or with soil on the floor: a hill, a mountain, a valley between them, water poured to make a river and a lake. The child names each feature on the model before on a picture.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS",
+   "key_step": "The child names a feature from what it looks like (height, shape, water) and keeps hills, mountains, valleys, plains, rivers and lakes apart.",
+   "floor": {
+    "prerequisite": "Can name features seen between home and school.",
+    "question": "Name one thing made by nature that you pass on the way to school.",
+    "answer": "any feature such as a hill, river or valley"
+   },
+   "representations": [
+    "a sand tray model",
+    "a cross-section picture: hill, valley, mountain",
+    "photos of a river and a lake side by side"
+   ],
+   "steps": [
+    "Ask: is it high land, low land, flat land or water?",
+    "High: a hill is low and rounded, a mountain much higher.",
+    "Low between highs: a valley. Wide and flat: a plain.",
+    "Water: flowing in a channel is a river; still with land all round is a lake."
+   ],
+   "contexts": [
+    "Mount Kenya seen from Nyeri on a clear morning",
+    "the Rift Valley seen from a viewpoint",
+    "a river children cross on the way to school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two humps with a low dip between them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dip.",
+     "say": "What do we call low land between hills?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for valley."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw water flowing along the dip."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the water is called before writing river."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_HILL_MOUNTAIN",
+     "listen_for": [
+      "A hill"
+     ],
+     "ask": "Which is higher, a hill or a mountain?",
+     "repair": "Compare Mount Kenya with a small hill near school: describe the height of each."
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_RIVER_LAKE",
+     "listen_for": [
+      "A lake"
+     ],
+     "ask": "Which one is water that flows along in a channel?",
+     "repair": "Ask: does the water stay in one place or move on to the sea or a lake?"
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_PLAIN_VALLEY",
+     "listen_for": [
+      "A valley"
+     ],
+     "ask": "Which is wide flat land?",
+     "repair": "Show a bowl and a flat table: a valley lies between high land on both sides, a plain is wide and flat."
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_MAN_MADE_FEATURE",
+     "listen_for": [
+      "A road"
+     ],
+     "ask": "Which of these is a physical feature: a hill, a road, a school?",
+     "repair": "Sort pictures into \"made by nature\" and \"made by people\": only nature's go in the physical features box."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Water that flows along a channel to a lake or the sea is called a...",
+     "answer": "river",
+     "shows": "tells a river from a lake"
+    },
+    {
+     "question": "Which is higher, a hill or a mountain?",
+     "answer": "a mountain",
+     "shows": "orders high features"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE",
+   "key_step": "The child matches each feature to what it gives people: water and fish, rain and forests, flat land for farming and building, ports and tourism.",
+   "floor": {
+    "prerequisite": "Names the main kinds of physical features.",
+    "question": "What do we call water with land all around it?",
+    "answer": "a lake"
+   },
+   "representations": [
+    "a picture map with features and people using them",
+    "a matching table: feature and use",
+    "objects: a fish, a papyrus mat, a cup of water"
+   ],
+   "steps": [
+    "Pick the feature.",
+    "Ask what people get from it or do there.",
+    "Check the use fits: no fishing on a plain.",
+    "Add a second use if there is one."
+   ],
+   "contexts": [
+    "fishing on Lake Victoria",
+    "farming on the Kano plains",
+    "tourists climbing Mount Kenya"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a lake with a boat and a hill with trees."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the boat.",
+     "say": "What are the people on the lake doing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for fishing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the trees on the hill.",
+     "say": "Why do hills often get more rain and trees?"
+    },
+    {
+     "beat": "write",
+     "do": "Write one use beside each feature."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_NO_USE",
+     "listen_for": [
+      "It is only nice to look at"
+     ],
+     "ask": "Why is a river important to people near it?",
+     "repair": "Ask each learner to name one thing in the day that comes from water or land near home."
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_WRONG_USE",
+     "listen_for": [
+      "A plain"
+     ],
+     "ask": "Which feature is best for fishing?",
+     "repair": "Match each feature to what it is made of: water, high ground, flat land. Then ask what each can give."
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_HARM_ONLY",
+     "listen_for": [
+      "It only blocks the road"
+     ],
+     "ask": "How does a mountain help people?",
+     "repair": "Trace a river from its source on a mountain to the farms below."
+    },
+    {
+     "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_SWAMP_USELESS",
+     "listen_for": [
+      "Nothing; it should be filled in"
+     ],
+     "ask": "What is a swamp good for?",
+     "repair": "Show papyrus mats or baskets and ask where the papyrus grows."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one way a lake helps people.",
+     "answer": "any of: fish, water, transport, tourism",
+     "shows": "feature to use"
+    },
+    {
+     "question": "A learner says mountains are useless because nothing grows on them. Give one use of a mountain.",
+     "answer": "any of: they bring rain, forests grow on them, rivers start there, tourism",
+     "shows": "mountains have uses"
+    }
+   ]
+  }
+ ]
+}

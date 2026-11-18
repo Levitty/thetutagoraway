@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T",
+ "title": "Economic activities in the County",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "List what parents and neighbours do for a living, without naming anyone's income. Sort activities by the resource they use.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES",
+   "key_step": "The child names a natural resource, matches it to the activity that uses it, and knows an economic activity earns a living.",
+   "floor": {
+    "prerequisite": "Knows why domestic animals matter to people.",
+    "question": "What do we get from a cow?",
+    "answer": "milk, meat or hides"
+   },
+   "representations": [
+    "resource and activity cards to pair",
+    "a picture map of a county with resources",
+    "a list of what local people do for a living"
+   ],
+   "steps": [
+    "Name the resource from nature.",
+    "Ask what people do with it to earn a living.",
+    "Pair them.",
+    "Check: does the activity earn money or goods? Then it is economic."
+   ],
+   "contexts": [
+    "fishing on Lake Turkana",
+    "tea farming in Kericho",
+    "sand harvesting from a river bed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a forest and a lake."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the forest.",
+     "say": "What do people do with a forest to earn money?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for lumbering or bee-keeping."
+    },
+    {
+     "beat": "write",
+     "do": "Write the pair forest to lumbering."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what pairs with the lake."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_MADE_NATURAL",
+     "listen_for": [
+      "A road"
+     ],
+     "ask": "Which is a natural resource?",
+     "repair": "Sort a list into things that were here before people and things people built."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_NOT_ECONOMIC",
+     "listen_for": [
+      "Playing football after school"
+     ],
+     "ask": "Which is an economic activity?",
+     "repair": "Ask whether the activity gives food, goods or an income."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_ACT_RESOURCE",
+     "listen_for": [
+      "Forests"
+     ],
+     "ask": "Which resource does fishing use?",
+     "repair": "Ask: what does the activity bring in? Then ask where it comes from."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_RESOURCE_ACTIVITY_SAME",
+     "listen_for": [
+      "Fishing"
+     ],
+     "ask": "In \"people fish in Lake Victoria\", which is the resource?",
+     "repair": "Ask: which one can you touch and which one do people do?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which activity uses soil as its resource?",
+     "answer": "farming",
+     "shows": "resource to activity"
+    },
+    {
+     "question": "Is playing football in the evening an economic activity?",
+     "answer": "No: it does not earn a living",
+     "shows": "what makes an activity economic"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+   "key_step": "The child says what economic activities give: food, income, jobs, raw materials and money for county services.",
+   "floor": {
+    "prerequisite": "Matches resources to economic activities.",
+    "question": "Which activity uses a lake?",
+    "answer": "fishing"
+   },
+   "representations": [
+    "a chart: activity and what it gives",
+    "a story of a dairy farmer, a driver and a factory worker",
+    "a market fee receipt"
+   ],
+   "steps": [
+    "Name the activity.",
+    "Ask who gets food or goods.",
+    "Ask who gets a job or money.",
+    "Ask what the county gets."
+   ],
+   "contexts": [
+    "dairy farming in a highland county",
+    "a fish market at the lake shore",
+    "a tourist hotel near a game park"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a dairy cow."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cow.",
+     "say": "Who gets something from this cow?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for answers: farmer, family, milk buyer, driver."
+    },
+    {
+     "beat": "write",
+     "do": "Write food, jobs, income beside the cow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_RICH_ONLY",
+     "listen_for": [
+      "Only rich people"
+     ],
+     "ask": "Who gains from farming in a county?",
+     "repair": "Trace a loaf of bread from the farm to the table and name the people who gain at each step."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_FOOD_ONLY",
+     "listen_for": [
+      "It gives food"
+     ],
+     "ask": "Which is a reason that mining matters to a county?",
+     "repair": "Make a table of five activities and what each gives."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_COUNTY_NOTHING",
+     "listen_for": [
+      "It does not; only the traders gain"
+     ],
+     "ask": "How does a busy market help the whole county?",
+     "repair": "Show a market fee receipt and ask where the money goes."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_ONE_ACTIVITY",
+     "listen_for": [
+      "Yes, only tea"
+     ],
+     "ask": "Mlima County is known for tea. Should its people do only tea farming?",
+     "repair": "List three things people in a tea area also do for a living."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways farming helps a county.",
+     "answer": "any two of: food, jobs, income, raw materials for industries, county fees",
+     "shows": "importance"
+    },
+    {
+     "question": "A learner says farming only gives food. Give one other thing it gives.",
+     "answer": "any of: jobs, income, raw materials",
+     "shows": "more than food"
+    }
+   ]
+  }
+ ]
+}

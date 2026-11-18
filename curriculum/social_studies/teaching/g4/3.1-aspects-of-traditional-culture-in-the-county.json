@@ -1,0 +1,103 @@
+{
+ "sub_strand": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C",
+ "title": "Aspects of Traditional Culture in the County.",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Ask learners to bring or describe an object, food or song from home. Treat every community's culture with respect and never rank them.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+   "key_step": "The child sorts examples into the aspects of traditional culture (dressing, food, housing, artefacts, sports and games, festivals and ceremonies) and knows culture is alive and differs between communities.",
+   "floor": {
+    "prerequisite": "Names a cultural event in the community.",
+    "question": "Name one ceremony held in your community.",
+    "answer": "any ceremony such as a wedding or a naming"
+   },
+   "representations": [
+    "objects and pictures from home",
+    "six boxes labelled with the aspects",
+    "a song or a game from a community"
+   ],
+   "steps": [
+    "Hold up the example.",
+    "Ask: is it worn, eaten, lived in, made, played or celebrated?",
+    "Put it in the box.",
+    "Ask whether people still use it today."
+   ],
+   "contexts": [
+    "a beaded necklace from a Maasai home",
+    "mursik served at a ceremony",
+    "a bao game under a tree"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the six aspects across the board."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"artefacts\".",
+     "say": "Is a drum worn, eaten or made by hand?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"made\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write drum under artefacts."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where a wedding dance goes before writing it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_MIX_ASPECT",
+     "listen_for": [
+      "Dressing"
+     ],
+     "ask": "Under which aspect of culture is a kiondo (a sisal basket)?",
+     "repair": "Make six boxes, one for each aspect, and sort a pile of picture cards."
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_PAST_ONLY",
+     "listen_for": [
+      "No, it is finished"
+     ],
+     "ask": "Is traditional culture still practised today?",
+     "repair": "Ask which dishes, songs and ceremonies the family still shares."
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_ONE_CULTURE",
+     "listen_for": [
+      "Yes, they all do the same things"
+     ],
+     "ask": "Do all the communities in a county have the same traditions?",
+     "repair": "Ask each learner to name one dish, dance or dress from their own community."
+    },
+    {
+     "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_BAD_OLD",
+     "listen_for": [
+      "Yes, it should all be stopped"
+     ],
+     "ask": "A learner says all traditional culture is backward. What is a good reply?",
+     "repair": "List good parts of culture the class still enjoys: food, songs, games, respect for elders."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Under which aspect does a traditional stool go?",
+     "answer": "artefacts",
+     "shows": "sorts an example"
+    },
+    {
+     "question": "Do all communities in a county have the same traditions?",
+     "answer": "No, communities have their own traditions",
+     "shows": "culture differs"
+    }
+   ]
+  }
+ ]
+}

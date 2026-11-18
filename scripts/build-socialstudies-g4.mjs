@@ -4,9 +4,13 @@
 //   node scripts/build-socialstudies-g4.mjs      then  npm run subject:map -- socialstudies 4 --dir social_studies --title "Social Studies"
 // Idempotent: skills, prerequisites and misconceptions are rebuilt from scripts/data/socialstudies-g4-skills.mjs every run.
 // Forward links: every Grade 5 skill that requires a Grade 4 outcome is listed on the Grade 4 skill that teaches that outcome (leads_to).
+// Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g4.mjs adds prerequisites, misconceptions to four per skill and the
+// teaching pack (curriculum/social_studies/teaching/g4/) through scripts/science-depth.mjs, the pass Science uses.
 // ============================================================================
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import * as D from './data/socialstudies-g4-skills.mjs';
+import { SUBS as DEPTH } from './data/socialstudies-depth/g4.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/social_studies/g4.json', import.meta.url);
 const g4 = JSON.parse(readFileSync(path, 'utf8'));
@@ -47,6 +51,7 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
   sub.misconceptions.push({ code: `${skillCode}.${short}`, skill: skillCode, error, example: { question: q, wrong_answer: wrong, correct_answer: right }, cause, reveals: `Offer "${wrong}" next to the right answer and ask the question again in a new context.`, help, feedback, source: source || D.TCF, status: 'draft' });
 }
 g4.totals = { ...g4.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
-g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review";
+const depth = applyDepth(g4, DEPTH, { dir: 'social_studies', grade: 4, prefix: P, derive: true });
+g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g4)";
 writeFileSync(path, JSON.stringify(g4, null, 1) + '\n');
-console.log(`social studies g4: ${D.SKILLS.length} skills, ${nPre} prerequisites, ${D.MIS.length} misconceptions, ${nLead} forward links to Grade 5 skills`);
+console.log(`social studies g4: ${g4.totals.skills} skills, ${g4.totals.prerequisites} prerequisites, ${g4.totals.misconceptions} misconceptions, ${nLead} forward links to Grade 5 skills; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.pack} teaching pack entries)`);

@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.PEACE",
+ "title": "Peace",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the steps of settling a quarrel with a role play: stop, calm down, listen, talk, agree, forgive. Peer mediators, if the school has them, can lead.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.PEACE.PE_FACTORS",
+   "key_step": "The child names what promotes peace in school (respect, sharing, listening, fairness, forgiveness, accepting differences) and says peace means settling disagreements without harm.",
+   "floor": {
+    "prerequisite": "Can label emotions in self and others.",
+    "question": "A learner is shouting and red in the face. What feeling might this be?",
+    "answer": "anger"
+   },
+   "representations": [
+    "a peace tree with a quality on each leaf",
+    "story cards",
+    "a class peace pledge"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Ask whether it brings people together or apart.",
+    "Name the quality that helps.",
+    "Say what the school would be like with it."
+   ],
+   "contexts": [
+    "sharing a reading book",
+    "forgiving a friend who broke a ruler",
+    "listening at a class meeting"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tree with empty leaves."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a leaf.",
+     "say": "What is one thing we do that keeps peace in class?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer such as sharing."
+    },
+    {
+     "beat": "write",
+     "do": "Write it on the leaf."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_NO_DISAGREE",
+     "listen_for": [
+      "Nobody ever disagrees"
+     ],
+     "ask": "What does peace mean in school?",
+     "repair": "Ask for a time when two friends disagreed and still stayed friends."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_THREAT",
+     "listen_for": [
+      "Fear of strict punishment"
+     ],
+     "ask": "What keeps a school peaceful?",
+     "repair": "Compare a class that is quiet for the cane and a class that is kind by choice."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_GOSSIP",
+     "listen_for": [
+      "Listening to both sides"
+     ],
+     "ask": "Which action breaks peace?",
+     "repair": "Pass a message along a line and watch it change."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_SAME_FRIENDS",
+     "listen_for": [
+      "Playing only with your own group"
+     ],
+     "ask": "Which helps peace in school: playing only with your own group, or welcoming learners who are different?",
+     "repair": "Mix groups for a game and talk about what each learner brought."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two things that promote peace in school.",
+     "answer": "any two of: respect, sharing, honesty, listening, fairness, forgiveness, accepting differences",
+     "shows": "factors"
+    },
+    {
+     "question": "Does peace mean nobody ever disagrees?",
+     "answer": "No: people disagree but settle it without hurting anyone",
+     "shows": "peace allows disagreement"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES",
+   "key_step": "The child chooses peaceful ways to settle a quarrel and puts them in order: calm down, listen, talk, agree, forgive, and get help if needed.",
+   "floor": {
+    "prerequisite": "Names things that promote peace.",
+    "question": "Give one thing that promotes peace in school.",
+    "answer": "any such as sharing or listening"
+   },
+   "representations": [
+    "step cards to put in order",
+    "a role play of a quarrel",
+    "a peace corner with a talking stone"
+   ],
+   "steps": [
+    "Stop and calm down.",
+    "Each one listens while the other speaks.",
+    "Agree on a fair answer.",
+    "Say sorry and forgive; ask a teacher if it is serious."
+   ],
+   "contexts": [
+    "two learners arguing over a seat",
+    "a game where someone was pushed",
+    "a borrowed book returned torn"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps out of order: forgive, calm down, listen, agree."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the steps.",
+     "say": "Which must come first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for calm down."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps in order."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to do if talking does not work."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_FIGHT_BACK",
+     "listen_for": [
+      "Push back harder"
+     ],
+     "ask": "A classmate pushes you by mistake. What is the peaceful reply?",
+     "repair": "Role play both: what happens after a push back, and after a calm word?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_AVOID",
+     "listen_for": [
+      "Never speak to each other again"
+     ],
+     "ask": "Two friends quarrelled. What is the best way to settle it?",
+     "repair": "Ask how the friendship feels after a week of silence."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_ORDER",
+     "listen_for": [
+      "Shout until the other gives in"
+     ],
+     "ask": "What comes first when settling a quarrel?",
+     "repair": "Write the steps on cards and order them: calm, listen, talk, say sorry, forgive."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_ADULT_FIRST_ALWAYS",
+     "listen_for": [
+      "Go straight to the head teacher"
+     ],
+     "ask": "Two friends argue over whose turn it is on the swing. What should they try first?",
+     "repair": "Act a small quarrel and solve it with talk; then act a fight and see when an adult is needed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Your friend pushed you in a game. Which is a peaceful way: push back, or tell them how you felt and listen?",
+     "answer": "tell them how you felt and listen",
+     "shows": "peaceful choice"
+    },
+    {
+     "question": "Put in order: agree, calm down, listen.",
+     "answer": "calm down, listen, agree",
+     "shows": "order of steps"
+    }
+   ]
+  }
+ ]
+}

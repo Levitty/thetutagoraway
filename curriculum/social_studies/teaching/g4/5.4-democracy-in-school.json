@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL",
+ "title": "Democracy in school",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Run a real class election with a ballot box made from a carton. Name the steps as they happen.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES",
+   "key_step": "The child names democratic processes in school (secret ballot, class meetings, debates, suggestion box) and orders the election steps.",
+   "floor": {
+    "prerequisite": "Knows a child has rights at school.",
+    "question": "Name one right a child has at school.",
+    "answer": "any such as to learn, to be heard, to be safe"
+   },
+   "representations": [
+    "a carton ballot box",
+    "step cards: nomination, campaign, voting, counting, announcing",
+    "a suggestion box"
+   ],
+   "steps": [
+    "Nominate candidates.",
+    "Candidates campaign.",
+    "Learners vote in secret.",
+    "Votes are counted and the winner announced."
+   ],
+   "contexts": [
+    "electing a class prefect",
+    "a class meeting on cleaning duties",
+    "a suggestion box for the school library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps in a mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at voting and campaign.",
+     "say": "Which comes first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for campaign."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens right after voting."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_APPOINT",
+     "listen_for": [
+      "The teacher picks a favourite"
+     ],
+     "ask": "Which way of choosing a head prefect is democratic?",
+     "repair": "Compare: who chose? how many people had a say?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_ORDER",
+     "listen_for": [
+      "Counting the votes"
+     ],
+     "ask": "Which comes first in a school election?",
+     "repair": "Order the steps on cards: nominate, campaign, vote, count, announce."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_LOUD_WINS",
+     "listen_for": [
+      "The loudest learner wins"
+     ],
+     "ask": "How should a winner be decided?",
+     "repair": "Hold a vote on a class song and count each hand."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_OPEN_VOTE",
+     "listen_for": [
+      "There is no reason; both are the same"
+     ],
+     "ask": "Why do we put votes in a closed box instead of raising hands?",
+     "repair": "Ask whether a learner might vote differently if the big boy candidate is watching."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order: voting, nomination, counting, campaign.",
+     "answer": "nomination, campaign, voting, counting",
+     "shows": "orders steps"
+    },
+    {
+     "question": "The teacher picks the class prefect without a vote. Is this an election?",
+     "answer": "No: it is an appointment",
+     "shows": "appointment is not election"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS",
+   "key_step": "The child says democracy gives everyone a voice, is fair and builds peace, and that the majority decides while others' views are respected.",
+   "floor": {
+    "prerequisite": "Orders the steps of a school election.",
+    "question": "What comes after the campaign?",
+    "answer": "voting"
+   },
+   "representations": [
+    "a story of a class that voted on a trip",
+    "benefit cards",
+    "a class meeting"
+   ],
+   "steps": [
+    "Say what was decided and how.",
+    "Ask who had a say.",
+    "Name the benefit.",
+    "Ask how the losing side is treated."
+   ],
+   "contexts": [
+    "a class voting where to go for a trip",
+    "choosing a games captain",
+    "a debate on keeping the class clean"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"20 learners voted for the museum, 12 for the farm.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at 12.",
+     "say": "Does the view of these 12 learners still matter?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"majority decides; everyone is respected\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_MINORITY_IGNORED",
+     "listen_for": [
+      "They are ignored"
+     ],
+     "ask": "After a vote, what happens to the views of those who lost?",
+     "repair": "After a class vote, ask the losers to say one idea that could still be used."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_SLOW_BAD",
+     "listen_for": [
+      "It is not, one person is quicker"
+     ],
+     "ask": "Why is democracy good for a school?",
+     "repair": "Compare a lunch menu chosen by one person with one chosen by the class."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_WINNER_ALL",
+     "listen_for": [
+      "Yes, she won"
+     ],
+     "ask": "A class prefect was elected. Can she make any rule she likes?",
+     "repair": "Ask what the prefect promised in her campaign and who she serves."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_MAJORITY_ALWAYS_RIGHT",
+     "listen_for": [
+      "Yes, most people voted for it"
+     ],
+     "ask": "Most of the class votes that one learner may not play in games. Is that fair?",
+     "repair": "Ask how the left-out learner feels and what the school rules say about everyone being included."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one benefit of democracy in school.",
+     "answer": "any of: everyone has a say, it is fair, it brings peace, decisions are accepted",
+     "shows": "benefit"
+    },
+    {
+     "question": "A learner lost the vote for prefect. Should the class stop listening to her ideas?",
+     "answer": "No: her views are still respected",
+     "shows": "minority respected"
+    }
+   ]
+  }
+ ]
+}

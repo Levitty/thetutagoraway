@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.CHILD_RIGHTS",
+ "title": "Child Rights",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Handle gently: some learners may be living with abuse. Give Childline 116 and the name of a trusted teacher. No learner shares personal experiences in class; any disclosure is followed up privately by the teacher under the school's safeguarding policy.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS",
+   "key_step": "The child names forms of child abuse (beating that injures, neglect, child labour, early marriage, FGM, sexual abuse, trafficking) and tells light chores from child labour.",
+   "floor": {
+    "prerequisite": "Names a child right.",
+    "question": "Name one right of a child.",
+    "answer": "any of: education, food, shelter, protection, health care, play"
+   },
+   "representations": [
+    "story cards of safe and unsafe situations",
+    "a rights chart",
+    "a list of trusted adults in school"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Ask whether a child's right is being broken.",
+    "Name the form of abuse if it is.",
+    "Name who the child can tell."
+   ],
+   "contexts": [
+    "a girl kept home to sell at the market every school day",
+    "a boy working long hours in a quarry",
+    "a child left alone without food"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two sentences: \"Ali helps wash the dishes.\" and \"Ali breaks stones at a quarry all day instead of going to school.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at each sentence.",
+     "say": "Which is child labour?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the second and the reason."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"light chore\" and \"child labour\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_DISCIPLINE",
+     "listen_for": [
+      "No, it is only discipline"
+     ],
+     "ask": "A teacher beats a learner until he is hurt. Is this child abuse?",
+     "repair": "Ask: does discipline teach with care or hurt? Discuss other ways, such as talking and fair consequences."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_WORK_OK",
+     "listen_for": [
+      "Washing a plate after supper"
+     ],
+     "ask": "Which is child labour?",
+     "repair": "Sort examples by: safe, short, does not stop school, does not harm."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_ONLY_BEATING",
+     "listen_for": [
+      "Only beating a child"
+     ],
+     "ask": "Which of these is child abuse?",
+     "repair": "List six forms and ask: how does each harm the child?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_STRANGER_ONLY",
+     "listen_for": [
+      "No, only strangers abuse children"
+     ],
+     "ask": "Can a child be abused by someone they know?",
+     "repair": "Say plainly that anyone who hurts a child is wrong, whoever they are, and the child should tell a trusted adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A girl of 13 is married off. Which form of abuse is this?",
+     "answer": "early marriage",
+     "shows": "names a form"
+    },
+    {
+     "question": "Is helping to sweep the house child labour?",
+     "answer": "No: it is a light chore",
+     "shows": "chores are not labour"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES",
+   "key_step": "The child gives causes of child abuse (poverty, ignorance, harmful customs, greed, drugs and alcohol) and says it is never the child's fault.",
+   "floor": {
+    "prerequisite": "Names forms of child abuse.",
+    "question": "Name one form of child abuse.",
+    "answer": "any form such as child labour"
+   },
+   "representations": [
+    "cause cards",
+    "a story with the cause hidden",
+    "a \"never the child's fault\" poster"
+   ],
+   "steps": [
+    "Name the abuse.",
+    "Ask what led the adult to do it.",
+    "Name the cause.",
+    "Say the child is not to blame."
+   ],
+   "contexts": [
+    "a family sending a child to work because there is no money",
+    "a custom of early marriage",
+    "an adult drinking and hitting a child"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A child was sent to work in a house in town because the family had no money.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"no money\".",
+     "say": "What caused this abuse?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for poverty."
+    },
+    {
+     "beat": "write",
+     "do": "Write poverty, then add: it is not the child's fault."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_CHILD_FAULT",
+     "listen_for": [
+      "The child behaved badly"
+     ],
+     "ask": "Why was a child abused by an adult?",
+     "repair": "Ask: can anything a child does make it right for an adult to hurt him or her?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_TRADITION_OK",
+     "listen_for": [
+      "It is fine if it is a tradition"
+     ],
+     "ask": "Some say a harmful custom is fine because it is old. What is right?",
+     "repair": "Discuss that culture changes, and that keeping children safe is also a tradition."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_POOR_ONLY",
+     "listen_for": [
+      "Yes, only in poor homes"
+     ],
+     "ask": "Does child abuse happen only in poor homes?",
+     "repair": "List several causes together: drugs, harmful customs, greed, ignorance."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_ALCOHOL_EXCUSE",
+     "listen_for": [
+      "No, it was the alcohol"
+     ],
+     "ask": "A drunk adult hit a child. Is the adult to blame?",
+     "repair": "Separate cause from blame: alcohol can lead to it, the adult still chose to drink and to hit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two causes of child abuse.",
+     "answer": "any two of: poverty, ignorance, harmful customs, greed, drugs and alcohol, war",
+     "shows": "causes"
+    },
+    {
+     "question": "A learner says a child was beaten because she was naughty, so it was her fault. Is this right?",
+     "answer": "No: abuse is never the child's fault",
+     "shows": "not the child's fault"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS",
+   "key_step": "The child names effects of abuse (injury, fear, sadness, dropping out, poor health) and says a hurt child tells a trusted adult or calls Childline 116.",
+   "floor": {
+    "prerequisite": "Names forms of child abuse.",
+    "question": "Is beating a child until they are hurt a form of abuse?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a feelings face chart",
+    "a helpers list with Childline 116",
+    "a story of a child who got help"
+   ],
+   "steps": [
+    "Name the abuse.",
+    "Name the effect on the body.",
+    "Name the effect on feelings and school.",
+    "Name who can help."
+   ],
+   "contexts": [
+    "a girl who drops out after early marriage",
+    "a boy who is afraid to go home",
+    "a friend who tells you a secret about being hurt"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sad face and a schoolbag."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the schoolbag.",
+     "say": "What can happen to a child's schooling after abuse?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dropping out or poor marks."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"tell a trusted adult or call 116\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_NO_EFFECT",
+     "listen_for": [
+      "Nothing, children forget"
+     ],
+     "ask": "What can child abuse do to a child?",
+     "repair": "List ways a bad experience at school changes how a learner feels."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_SECRET",
+     "listen_for": [
+      "Keep it a secret"
+     ],
+     "ask": "A friend tells you an adult is hurting him. What should you do?",
+     "repair": "Make a list of the adults who keep children safe and practise saying \"I need to tell you something\"."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_PHYSICAL_ONLY_EFFECT",
+     "listen_for": [
+      "No, the bruise is gone"
+     ],
+     "ask": "A child's bruise has healed. Can the child still be hurt by the abuse?",
+     "repair": "Talk about how a child might feel afraid or sad long after, using a story character."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_TELL_NOBODY_HELPS",
+     "listen_for": [
+      "Nobody; telling makes it worse"
+     ],
+     "ask": "A child is being hurt. Who can help?",
+     "repair": "Name the helpers: a teacher, a parent, a chief, a nurse, Childline 116. Practise what to say."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one effect of child abuse.",
+     "answer": "any of: injury, fear, sadness, dropping out of school, poor health",
+     "shows": "effects"
+    },
+    {
+     "question": "Your friend tells you someone is hurting her and asks you to keep it secret. What should you do?",
+     "answer": "Tell a trusted adult such as a teacher",
+     "shows": "harm is not kept secret"
+    }
+   ]
+  }
+ ]
+}

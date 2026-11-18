@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME",
+ "title": "Historic Built Environments in the County",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use photos of places the class may know: Fort Jesus, Gede Ruins, the Nairobi National Museum, Bomas of Kenya, a local cultural centre or a memorial in the county town. A visit or a visitor beats any picture.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS",
+   "key_step": "The child tells a museum (keeps old objects), a monument (built to remember) and a cultural centre (shows a way of life) apart, and knows a place is historic because of its age and meaning.",
+   "floor": {
+    "prerequisite": "Names a cultural event in the community.",
+    "question": "Name one cultural event held in your community.",
+    "answer": "any event such as a wedding, a harvest festival or a naming ceremony"
+   },
+   "representations": [
+    "photos of a museum, a monument and a cultural centre",
+    "a sort card: keeps, remembers, shows",
+    "an old object brought from home"
+   ],
+   "steps": [
+    "Ask: what does the place do?",
+    "Keeps and shows old things and records: a museum.",
+    "Built to remember a person or event: a monument.",
+    "Shows how communities live: a cultural centre."
+   ],
+   "contexts": [
+    "Fort Jesus in Mombasa",
+    "a statue in a county town",
+    "Bomas of Kenya with homes of many communities"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a statue on a stand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the statue.",
+     "say": "Why do people build a statue?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to remember someone\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write monument."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what a building full of old pots and spears is called."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_MUSEUM_MONUMENT",
+     "listen_for": [
+      "A monument"
+     ],
+     "ask": "Which place keeps and shows old objects and records?",
+     "repair": "Ask: where do you go inside to see old tools and pictures, and what do you pass in a town square that remembers a person?"
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_NEW_IS_HISTORIC",
+     "listen_for": [
+      "A new shopping mall"
+     ],
+     "ask": "Which is a historic built environment?",
+     "repair": "Ask for the date of each place and what it tells about the past."
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_CENTRE_MARKET",
+     "listen_for": [
+      "A place to buy and sell goods"
+     ],
+     "ask": "What is a cultural centre?",
+     "repair": "Ask what you might see and do at a cultural centre: dances, houses, crafts, food."
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_RUINS_RUBBISH",
+     "listen_for": [
+      "No, it is only broken stones"
+     ],
+     "ask": "Gede has old broken walls with no roofs. Is it a historic built environment?",
+     "repair": "Show a photo of Gede and a drawing of what the town looked like; ask what the walls tell us."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A building that keeps old objects and shows them to visitors is a...",
+     "answer": "museum",
+     "shows": "museum"
+    },
+    {
+     "question": "A new shopping mall is the biggest building in town. Is it a historic built environment?",
+     "answer": "No: it is new; historic places are old and have meaning",
+     "shows": "historic means old and meaningful"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE",
+   "key_step": "The child gives reasons historic places matter (they teach history, keep identity, bring visitors and income) and says how to care for them.",
+   "floor": {
+    "prerequisite": "Tells a museum, a monument and a cultural centre apart.",
+    "question": "What is a monument built for?",
+    "answer": "to remember a person or an event"
+   },
+   "representations": [
+    "a list of reasons on cards",
+    "a before-and-after photo of a cared-for site",
+    "a class visitor from a local museum"
+   ],
+   "steps": [
+    "Name the place.",
+    "Ask what we learn there.",
+    "Ask what it gives the community.",
+    "Say one way to care for it."
+   ],
+   "contexts": [
+    "a school trip to Fort Jesus",
+    "Gede Ruins visited by learners from Kilifi",
+    "a county museum keeping old tools"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an old wall with a child beside it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wall.",
+     "say": "What can this wall teach us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an idea about how people lived."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"teaches history\" and \"brings visitors\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_OLD_USELESS",
+     "listen_for": [
+      "Pull it down and build a new shop"
+     ],
+     "ask": "An old fort is crumbling. What should the county do?",
+     "repair": "Ask what a grandmother's stories give that a new book does not, then link this to old places."
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_MONEY_ONLY",
+     "listen_for": [
+      "Only to earn money from visitors"
+     ],
+     "ask": "Why do we keep museums and monuments?",
+     "repair": "Brainstorm three reasons for keeping a place; mark which are about learning and which about income."
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_ONLY_TOURISTS",
+     "listen_for": [
+      "Only visitors from other countries"
+     ],
+     "ask": "Who can learn from a museum in the county?",
+     "repair": "Plan a class visit or show a photo of a school group in a museum."
+    },
+    {
+     "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_WRITE_ON_WALLS",
+     "listen_for": [
+      "Writing your name on the wall to remember the visit"
+     ],
+     "ask": "Which shows care for a historic site?",
+     "repair": "Ask what the wall would look like if every visitor wrote on it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one reason a museum is important.",
+     "answer": "any of: teaches history, keeps culture, brings visitors and income",
+     "shows": "importance"
+    },
+    {
+     "question": "A learner says an old fort should be pulled down for a new road. What would be lost?",
+     "answer": "The history it teaches and the visitors it brings",
+     "shows": "old is not useless"
+    }
+   ]
+  }
+ ]
+}
