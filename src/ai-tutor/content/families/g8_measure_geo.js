@@ -643,7 +643,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ COORDINATES AND GRAPHS
-  fam({ id: 'g8.graphs.shop-point', skill: 'G8_COORDINATES', outcome: 'G8.GRAPHS.b', rung: 2, form: 'word',
+  fam({ id: 'g8.graphs.shop-point', skill: 'G8_COORDINATES', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES', rung: 2, form: 'word',
     draw: () => {
       const x = randInt(1, 6), y = randInt(1, 6), dx = randInt(2, 5), dy = randInt(2, 5), pt = (a, b) => `(${a}, ${b})`;
       const right = pt(x + dx, y + dy), w = [pt(y + dy, x + dx), pt(dx, dy), pt(x + dx, y)];
@@ -651,26 +651,26 @@ export const FAMILIES = [
     },
     make: ({ x, y, dx, dy, right, w, p }) => ({
       question: `On a map grid, ${p.name}'s school is at the point (${x}, ${y}). The shop is ${dx} units to the right of the school and ${dy} units above it. Which point shows the shop?`,
-      options: [{ text: right, right: true }, { text: w[0], right: false, why: 'The first number is how far across, the second is how far up. These two have been swapped.' }, { text: w[1], right: false, why: 'Those are the moves only. The shop is found by starting at the school.' }, { text: w[2], right: false, why: 'The shop is also above the school. Move up as well as across.' }],
+      options: [{ text: right, right: true }, { text: w[0], right: false, why: 'The first number is how far across, the second is how far up. These two have been swapped.', mis: 'M_X_Y_SWAPPED' }, { text: w[1], right: false, why: 'Those are the moves only. The shop is found by starting at the school.', mis: 'M_MOVES_FOR_POINT' }, { text: w[2], right: false, why: 'The shop is also above the school. Move up as well as across.', mis: 'M_ONE_DIRECTION_ONLY' }],
       hints: ['Start at the school. Move across first, then up.', 'Add the move across to the first number, and the move up to the second number.'],
       steps: [`Across: ${x} + ${dx} = ${x + dx}.`, `Up: ${y} + ${dy} = ${y + dy}.`, `The shop is at ${right}.`],
     }) }),
 
-  fam({ id: 'g8.graphs.rectangle-corners', skill: 'G8_COORDINATES', outcome: 'G8.GRAPHS.b', rung: 2, form: 'steps',
+  fam({ id: 'g8.graphs.rectangle-corners', skill: 'G8_COORDINATES', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES', rung: 2, form: 'steps',
     draw: () => ({ x0: randInt(1, 3), y0: randInt(1, 3), W: randInt(4, 8), H: randInt(3, 6) }),
     make: ({ x0, y0, W, H }) => ({
       question: `A rectangular plot ABCD is drawn on a grid. The corner A is at (${x0}, ${y0}), B is at (${x0 + W}, ${y0}) and C is at (${x0 + W}, ${y0 + H}). Each unit on the grid is 1 m. D is the fourth corner.`,
       parts: [
-        { prompt: 'What is the first number (across) of the point D?', answer: x0, hint: 'D is straight above A, so it is the same distance across.', wrong: [[x0 + W, 'That is the first number of B and C. D is above A.']] },
-        { prompt: 'What is the second number (up) of the point D?', answer: y0 + H, hint: 'D is level with C, so it is the same height.', wrong: [[y0, 'That is the height of A and B. D is level with C.']] },
-        { prompt: 'What is the perimeter of the plot, in metres?', answer: 2 * (W + H), unit: 'm', hint: 'Find the length AB and the length BC from the coordinates.', wrong: [[W + H, 'The perimeter goes all the way round: both pairs of sides.']] },
-        { prompt: 'What is the area of the plot, in m²?', answer: W * H, unit: 'm²', hint: 'Area = length × width.', wrong: [[2 * (W + H), 'That is the perimeter. Area is length × width.']] },
+        { prompt: 'What is the first number (across) of the point D?', answer: x0, hint: 'D is straight above A, so it is the same distance across.', wrong: [[x0 + W, 'That is the first number of B and C. D is above A.', 'M_WRONG_CORNER_COORDINATE']] },
+        { prompt: 'What is the second number (up) of the point D?', answer: y0 + H, hint: 'D is level with C, so it is the same height.', wrong: [[y0, 'That is the height of A and B. D is level with C.', 'M_WRONG_CORNER_COORDINATE']] },
+        { prompt: 'What is the perimeter of the plot, in metres?', answer: 2 * (W + H), unit: 'm', hint: 'Find the length AB and the length BC from the coordinates.', wrong: [[W + H, 'The perimeter goes all the way round: both pairs of sides.', 'M_HALF_PERIMETER']] },
+        { prompt: 'What is the area of the plot, in m²?', answer: W * H, unit: 'm²', hint: 'Area = length × width.', wrong: [[2 * (W + H), 'That is the perimeter. Area is length × width.', 'M_PERIMETER_FOR_AREA_GRID']] },
       ],
       steps: [`D is above A, so across is ${x0}.`, `D is level with C, so up is ${y0 + H}.`, `AB = ${W} m and BC = ${H} m. Perimeter = 2 × (${W} + ${H}) = ${2 * (W + H)} m.`, `Area = ${W} × ${H} = ${W * H} m².`],
     }),
     check: ({ x0, y0, W, H }, v) => v[0] === x0 && v[1] === y0 + H && v[2] === 2 * W + 2 * H && v[3] * 2 === 2 * W * H }),
 
-  fam({ id: 'g8.graphs.table-pattern', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.d', rung: 3, form: 'table',
+  fam({ id: 'g8.graphs.table-pattern', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES', rung: 3, form: 'table',
     draw: () => {
       const m = randInt(2, 5), c = randInt(1, 5), y = (x) => m * x + c, w = [6 * m, 2 * y(3), y(4)];
       return uniq(y(6), ...w) ? { m, c, y, w } : null;
@@ -679,13 +679,13 @@ export const FAMILIES = [
       question: 'The table shows points on a straight line. The line has an equation of the form y = mx + c. Use the pattern in the table to find y when x = 6.',
       model: { type: 'table', data: { head: ['x', '0', '1', '2', '3'], rows: [{ cells: ['y', ...[0, 1, 2, 3].map(x => String(y(x)))] }] } },
       answer: y(6),
-      wrong: [[w[0], 'You used the step in y but forgot where the line starts, the value of y when x is 0.'], [w[1], 'Doubling x does not double y, because the line does not start at 0.'], [w[2], 'That is y when x is 4, the next column of the pattern. Carry on to x = 6.']],
+      wrong: [[w[0], 'You used the step in y but forgot where the line starts, the value of y when x is 0.', 'M_INTERCEPT_LEFT_OUT'], [w[1], 'Doubling x does not double y, because the line does not start at 0.', 'M_Y_PROPORTIONAL_TO_X'], [w[2], 'That is y when x is 4, the next column of the pattern. Carry on to x = 6.', 'M_WRONG_COLUMN_READ']],
       hints: ['Look at how much y goes up each time x goes up by 1.', 'The value of y when x = 0 is where the line starts.'],
       steps: [`y goes up by ${m} each time, so m = ${m}.`, `When x = 0, y = ${c}, so c = ${c}.`, `y = ${m} × 6 + ${c} = ${y(6)}.`],
     }),
     check: ({ m, c }, a) => (a - c) / m === 6 }),
 
-  fam({ id: 'g8.graphs.spot-negative-x', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.d', rung: 2, form: 'spot',
+  fam({ id: 'g8.graphs.spot-negative-x', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES', rung: 2, form: 'spot',
     draw: () => ({ m: randInt(2, 4), c: randInt(1, 6), x: -randInt(1, 4), k: pick([0, 1]), p: person() }),
     make: ({ m, c, x, k, p }) => {
       const mx = m * x, y = mx - c;
@@ -698,12 +698,13 @@ export const FAMILIES = [
           { text: k === 1 ? `y = ${s2} − ${c} = ${s2 - c + 2 * c}` : `y = ${s2} − ${c} = ${s3}`, ok: k === 1 ? false : true },
           { text: `So the point (${x}, ${k === 1 ? s2 - c + 2 * c : s3}) is on the line`, ok: true },
         ],
+        mis: k === 0 ? 'M_POS_TIMES_NEG_POSITIVE' : 'M_CONSTANT_SIGN_FLIPPED',
         fix: k === 0 ? `A positive number times a negative number is negative. Step 2 gave ${-mx} instead of ${mx}.` : `Taking ${c} away from ${s2} makes the number smaller still. Step 3 added ${c} instead of taking it away.`,
         steps: [`${m} × (${x}) = ${mx}.`, `y = ${mx} − ${c} = ${y}.`, `The point is (${x}, ${y}).`],
       };
     } }),
 
-  fam({ id: 'g8.graphs.scale-why', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.e', rung: 2, form: 'why',
+  fam({ id: 'g8.graphs.scale-why', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.e', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE', rung: 2, form: 'why',
     draw: () => {
       const s = pick([2, 5, 10]), V = s === 2 ? pick([30, 36, 40]) : s === 5 ? pick([60, 70, 80]) : pick([120, 150, 180]);
       return { s, V, p: person() };
@@ -712,15 +713,15 @@ export const FAMILIES = [
       question: `${p.name} wants to graph values up to ${V}. The vertical axis has 10 big squares. ${p.She} chooses a scale of 1 big square to ${s} units. Why is this scale not suitable?`,
       options: [
         { text: `The axis reaches only ${10 * s}, so ${V} will not fit`, right: true },
-        { text: `${s} is too small a number to use as a scale`, right: false, why: 'The size of the number does not matter by itself. What matters is whether the largest value fits on the axis.' },
-        { text: 'A scale must always be 1 big square to 1 unit', right: false, why: 'Scales are chosen to fit the data. 1 big square to 1 unit would only fit tiny values.' },
-        { text: `A scale must always be bigger than ${V} units`, right: false, why: 'A scale is how many units one square stands for. It is never as large as the biggest value.' },
+        { text: `${s} is too small a number to use as a scale`, right: false, why: 'The size of the number does not matter by itself. What matters is whether the largest value fits on the axis.', mis: 'M_SCALE_NUMBER_TOO_SMALL' },
+        { text: 'A scale must always be 1 big square to 1 unit', right: false, why: 'Scales are chosen to fit the data. 1 big square to 1 unit would only fit tiny values.', mis: 'M_SCALE_ALWAYS_ONE' },
+        { text: `A scale must always be bigger than ${V} units`, right: false, why: 'A scale is how many units one square stands for. It is never as large as the biggest value.', mis: 'M_SCALE_BIGGER_THAN_DATA' },
       ],
       hints: ['Find how far the axis reaches: the number of big squares times the units in each.', 'Compare that with the largest value to be shown.'],
       steps: [`The axis reaches 10 × ${s} = ${10 * s}.`, `${V} is bigger than ${10 * s}, so the largest value is off the graph.`],
     }) }),
 
-  fam({ id: 'g8.graphs.scale-number', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.e', rung: 1, form: 'word',
+  fam({ id: 'g8.graphs.scale-number', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.e', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE', rung: 1, form: 'word',
     draw: () => {
       const L = pick([8, 10, 12, 20]), s = pick([2, 5, 10, 20, 50]), V = L * s;
       return uniq(s, V - L, L / V) ? { L, s, V, what: pick(['the kilograms of maize sold', 'the number of learners present', 'the litres of water used']), p: person() } : null;
@@ -728,13 +729,13 @@ export const FAMILIES = [
     make: ({ L, s, V, what, p }) => ({
       question: `${p.name} draws a graph of ${what}. The vertical axis is ${L} cm long and runs from 0 to ${V}. What scale does ${p.she} use? Give the number of units that 1 cm stands for.`,
       answer: s,
-      wrong: [[V - L, 'Do not take away. The scale says how many units each centimetre stands for.'], [round(L / V, 2), 'You divided the wrong way round. Divide the units by the centimetres.'], [V, 'That is the whole axis in units. Share it between the centimetres.']],
+      wrong: [[V - L, 'Do not take away. The scale says how many units each centimetre stands for.', 'M_SCALE_SUBTRACTED'], [round(L / V, 2), 'You divided the wrong way round. Divide the units by the centimetres.', 'M_SCALE_INVERTED'], [V, 'That is the whole axis in units. Share it between the centimetres.', 'M_WHOLE_AXIS_AS_SCALE']],
       hints: ['How many units does the whole axis show? How many cm is the axis?', 'Share the units equally between the centimetres.'],
       steps: [`The axis shows ${V} units over ${L} cm.`, `${V} ÷ ${L} = ${s} units for each cm.`],
     }),
     check: ({ L, V }, a) => a * L === V }),
 
-  fam({ id: 'g8.graphs.scale-choose', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.e', rung: 2, form: 'table',
+  fam({ id: 'g8.graphs.scale-choose', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.e', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE', rung: 2, form: 'table',
     draw: () => {
       const NICE = [1, 2, 5, 10, 20, 50, 100], i = pick([2, 3, 4]), r = NICE[i], prev = NICE[i - 1];
       const M = r * 10 - 5 * pick([0, 1, 2]) * (r >= 10 ? 1 : 0);
@@ -747,17 +748,17 @@ export const FAMILIES = [
       question: 'The table shows the rainfall measured in four months. The vertical axis of a graph has 10 big squares. What is the smallest scale, in mm for each big square, that lets every value fit?',
       model: { type: 'table', data: { head: ['Month', 'Rainfall (mm)'], rows: vals.map((v, j) => ({ label: ['March', 'April', 'May', 'June'][j], value: String(v) })) } },
       options: [
-        { text: `1 big square to ${prev} mm`, right: false, why: `10 big squares of ${prev} mm reach only ${10 * prev} mm, so the largest value does not fit.` },
+        { text: `1 big square to ${prev} mm`, right: false, why: `10 big squares of ${prev} mm reach only ${10 * prev} mm, so the largest value does not fit.`, mis: 'M_SCALE_TOO_SMALL_TO_FIT' },
         { text: `1 big square to ${r} mm`, right: true },
-        { text: `1 big square to ${nx} mm`, right: false, why: `That fits, but it is not the smallest scale that fits. A smaller scale also fits.` },
-        { text: `1 big square to ${nx2} mm`, right: false, why: 'That fits, but the graph would be squashed into a small corner. A smaller scale also fits.' },
+        { text: `1 big square to ${nx} mm`, right: false, why: `That fits, but it is not the smallest scale that fits. A smaller scale also fits.`, mis: 'M_SCALE_NOT_SMALLEST' },
+        { text: `1 big square to ${nx2} mm`, right: false, why: 'That fits, but the graph would be squashed into a small corner. A smaller scale also fits.', mis: 'M_SCALE_SQUASHED' },
       ],
       story: true,
       hints: ['Find the largest value in the table.', 'The axis reaches 10 times the scale. It must reach at least the largest value.'],
       steps: [`The largest value is ${M} mm.`, `10 squares of ${prev} mm reach ${10 * prev}, which is too small.`, `10 squares of ${r} mm reach ${10 * r}, which fits.`],
     }) }),
 
-  fam({ id: 'g8.graphs.hall-hire-graph', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.g', rung: 2, form: 'graph',
+  fam({ id: 'g8.graphs.hall-hire-graph', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY', rung: 2, form: 'graph',
     draw: () => {
       const m1 = pick([50, 100, 150]), m2 = pick([200, 250, 300]), b = pick([0, 100, 200]), x0 = pick([2, 4, 6]);
       const a = b + (m2 - m1) * x0, y0 = a + m1 * x0;
@@ -770,13 +771,13 @@ export const FAMILIES = [
       return { question: 'Two halls can be hired for a harambee. The graph shows the cost in shillings of each hall for different numbers of hours. The two lines meet at one point. For how many hours is the cost of the two halls the same?',
         model: { type: 'line-graph', data: { lines: [A, B], xTicks: xs, yTicks, xLabel: 'Hours of hire', yLabel: 'Cost (sh)' } },
         answer: x0,
-        wrong: [[y0, 'That is the cost where the lines meet, read up the side. The question asks for the hours, read along the bottom.'], [x0 + 2, 'At that time the lines have already crossed and one hall is dearer. Read where they meet.'], [x0 - 2, 'The lines have not yet met at that time. Read along from where they cross.']],
+        wrong: [[y0, 'That is the cost where the lines meet, read up the side. The question asks for the hours, read along the bottom.', 'M_COST_FOR_HOURS'], [x0 + 2, 'At that time the lines have already crossed and one hall is dearer. Read where they meet.', 'SLIP'], [x0 - 2, 'The lines have not yet met at that time. Read along from where they cross.', 'SLIP']],
         hints: ['The cost is the same where the two lines meet.', 'From the meeting point, go straight down to the axis along the bottom.'],
         steps: ['Find the point where the two lines cross.', `Go down to the hours axis: ${x0} hours.`, `At that time both halls cost ${sh(y0)}.`] };
     },
     check: ({ m1, m2, a, b }, v) => a + m1 * v === b + m2 * v }),
 
-  fam({ id: 'g8.graphs.table-meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.g', rung: 2, form: 'table',
+  fam({ id: 'g8.graphs.table-meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY', rung: 2, form: 'table',
     draw: () => {
       const m1 = pick([50, 100]), m2 = pick([150, 200, 250]), b = pick([0, 100]), x0 = pick([2, 3, 4]);
       const a = b + (m2 - m1) * x0, y0 = a + m1 * x0;
@@ -786,13 +787,13 @@ export const FAMILIES = [
       question: 'The table shows the cost of hiring two public address systems for different numbers of hours. If the two cost lines were drawn on a graph, at how many hours would they meet?',
       model: { type: 'table', data: { head: ['Hours', '0', '1', '2', '3', '4', '5'], rows: [{ cells: ['System A (sh)', ...[0, 1, 2, 3, 4, 5].map(x => commas(a + m1 * x))] }, { cells: ['System B (sh)', ...[0, 1, 2, 3, 4, 5].map(x => commas(b + m2 * x))] }] } },
       answer: x0,
-      wrong: [[y0, 'That is the cost at the meeting point. The question asks for the number of hours.'], [x0 + 1, 'At that time the costs have already crossed over. Find the column where the two costs are equal.'], [x0 - 1, 'At that time the two costs are still different. Find the column where they are equal.']],
+      wrong: [[y0, 'That is the cost at the meeting point. The question asks for the number of hours.', 'M_COST_FOR_HOURS'], [x0 + 1, 'At that time the costs have already crossed over. Find the column where the two costs are equal.', 'SLIP'], [x0 - 1, 'At that time the two costs are still different. Find the column where they are equal.', 'SLIP']],
       hints: ['The lines meet where both systems cost the same.', 'Look along the two rows for a column where the numbers match.'],
       steps: ['Compare the two rows column by column.', `They match in the column for ${x0} hours: both are ${commas(y0)}.`],
     }),
     check: ({ m1, m2, a, b }, v) => a + m1 * v === b + m2 * v }),
 
-  fam({ id: 'g8.graphs.cross-why', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.g', rung: 3, form: 'why',
+  fam({ id: 'g8.graphs.cross-why', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY', rung: 3, form: 'why',
     draw: () => { const x0 = randInt(1, 5), y0 = randInt(2, 8), c1 = y0 - x0, c2 = y0 + x0; return c1 === 0 ? null : { x0, y0, c1, c2, p: person() }; },
     make: ({ x0, y0, c1, c2, p }) => {
       const e1 = `y = x ${c1 < 0 ? '−' : '+'} ${Math.abs(c1)}`, e2 = `y = −x + ${c2}`;
@@ -800,9 +801,9 @@ export const FAMILIES = [
         question: `${p.name} draws the lines ${e1} and ${e2} on one graph. They cross at the point (${x0}, ${y0}). ${p.She} says that x = ${x0} and y = ${y0} solve the two equations together. Why is that right?`,
         options: [
           { text: `The crossing point is on both lines, so it fits both`, right: true },
-          { text: 'The lines cross where each one meets the y-axis', right: false, why: 'The lines cross each other at one point. That point is not on the y-axis here.' },
-          { text: `The crossing point is where both equations equal zero`, right: false, why: 'Check by putting the numbers in. Neither equation gives zero at the crossing point.' },
-          { text: 'Every point on one line also fits the other equation', right: false, why: 'Different lines have different points. Only the crossing point is shared by both.' },
+          { text: 'The lines cross where each one meets the y-axis', right: false, why: 'The lines cross each other at one point. That point is not on the y-axis here.', mis: 'M_CROSS_AT_Y_AXIS' },
+          { text: `The crossing point is where both equations equal zero`, right: false, why: 'Check by putting the numbers in. Neither equation gives zero at the crossing point.', mis: 'M_CROSS_WHERE_ZERO' },
+          { text: 'Every point on one line also fits the other equation', right: false, why: 'Different lines have different points. Only the crossing point is shared by both.', mis: 'M_ALL_POINTS_SHARED' },
         ],
         hints: ['A point on a line fits that line\'s equation.', 'Which point is on both lines?'],
         steps: [`Put x = ${x0} into ${e1}: y = ${y0}.`, `Put x = ${x0} into ${e2}: y = ${y0}.`, 'Both give the same y, so the crossing point fits both equations.'],

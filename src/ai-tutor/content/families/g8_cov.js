@@ -333,7 +333,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ COORDINATES AND GRAPHS
-  cov({ id: 'g8c.graph.point-description', skill: 'G8_COORDINATES', outcome: 'G8.GRAPHS.c', form: 'direct', rung: 2,
+  cov({ id: 'g8c.graph.point-description', skill: 'G8_COORDINATES', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS', misMapped: false, reveals: ['M_X_Y_SWAPPED_PLOT', 'M_X_SIGN_DIRECTION', 'M_Y_SIGN_DIRECTION'], form: 'direct', rung: 2,
     gen: () => {
       const x = pick([-6, -5, -4, -3, -2, 2, 3, 4, 5, 6]), y = pick([-5, -4, -3, -2, 2, 3, 4, 5]);
       if (Math.abs(x) === Math.abs(y)) return null;
@@ -346,7 +346,7 @@ export const FAMILIES = [
         steps: [`The first number is ${x}: move ${Math.abs(x)} ${x > 0 ? 'right' : 'left'}.`, `The second number is ${y}: move ${Math.abs(y)} ${y > 0 ? 'up' : 'down'}.`] };
     } }),
 
-  cov({ id: 'g8c.graph.point-after-moves', skill: 'G8_COORDINATES', outcome: 'G8.GRAPHS.c', form: 'word', rung: 3,
+  cov({ id: 'g8c.graph.point-after-moves', skill: 'G8_COORDINATES', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS', misMapped: false, reveals: ['M_X_Y_SWAPPED_PLOT', 'M_X_SIGN_DIRECTION', 'M_Y_SIGN_DIRECTION'], form: 'word', rung: 3,
     gen: () => {
       const a = randInt(2, 7), b = randInt(1, 6), dx = Math.random() < 0.5 ? -a : a, dy = Math.random() < 0.5 ? -b : b;
       if (a === b) return null;
@@ -357,7 +357,7 @@ export const FAMILIES = [
         steps: [`Across: ${dx < 0 ? 'left' : 'right'} ${a} gives x = ${sgn(dx)}.`, `Up or down: ${dy < 0 ? 'down' : 'up'} ${b} gives y = ${sgn(dy)}. The point is ${f(dx, dy)}.`] };
     } }),
 
-  cov({ id: 'g8c.graph.boda-meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.h', form: 'steps', rung: 3,
+  cov({ id: 'g8c.graph.boda-meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.h', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT', misMapped: false, reveals: ['M_DIFFERENCE_NOT_DIVIDED_GRAPH', 'M_RATES_ADDED', 'M_FIXED_ADDED'], form: 'steps', rung: 3,
     gen: () => {
       const r1 = randInt(10, 20), r2 = r1 + randInt(5, 10), x = randInt(2, 8), f2 = 10 * randInt(2, 8), f1 = f2 + (r2 - r1) * x;
       if (f1 % 10 !== 0 && f1 % 5 !== 0) return null;

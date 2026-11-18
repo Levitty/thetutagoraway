@@ -824,6 +824,78 @@
     "the biggest circle that fits"
    ],
    "mastery": "The child bisects two angles, takes the meeting point as the centre, draws a perpendicular from it to one side to get the radius, and explains that every point on an angle bisector is the same distance from the two sides of the angle."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE": {
+   "forms": [
+    "label the axes",
+    "where is the origin",
+    "which quadrant",
+    "equal steps"
+   ],
+   "mastery": "The child draws the x-axis across and the y-axis up, crossing at the origin (0, 0), numbers both with equal steps including negative numbers to the left and below, and labels the axes x and y."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES": {
+   "forms": [
+    "coordinates of the point",
+    "the fourth corner",
+    "read the fare at",
+    "which point shows the shop"
+   ],
+   "mastery": "The child reads a point as (across, up) from the origin, finds a point from another by moving across then up, gives the missing corner of a shape from its sides, and reads the height of a point on a graph at a given value across."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS": {
+   "forms": [
+    "plot the point",
+    "how do you reach",
+    "start at the origin and move",
+    "which point is"
+   ],
+   "mastery": "The child starts at the origin, moves along the x-axis first (right for positive, left for negative) and then parallel to the y-axis (up for positive, down for negative), and marks the point where the grid lines cross."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES": {
+   "forms": [
+    "complete the table",
+    "which step has the mistake",
+    "use the pattern",
+    "y when x is"
+   ],
+   "mastery": "The child substitutes each x, negative ones included, into y = mx + c, multiplying before adding, and checks that the y values go up (or down) by the same step: y = 2x - 3 gives -7, -5, -3, -1, 1 for x = -2 to 2."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE": {
+   "forms": [
+    "what scale",
+    "why is this scale not suitable",
+    "the smallest scale that fits",
+    "units for each centimetre"
+   ],
+   "mastery": "The child divides the largest value by the number of squares (or centimetres) on the axis and picks the smallest convenient scale that fits (1, 2, 5, 10 or 20 units a square), so the graph uses most of the paper."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH": {
+   "forms": [
+    "draw the line",
+    "which point is wrong",
+    "is it a straight line",
+    "extend the line"
+   ],
+   "mastery": "The child plots every point from the table, checks they lie in a straight line (a point off the line means a mistake in the table), and draws one straight line with a ruler through them across the whole range."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY": {
+   "forms": [
+    "where do the lines meet",
+    "for how many hours is the cost the same",
+    "why is the crossing the solution",
+    "read the solution"
+   ],
+   "mastery": "The child draws both lines on one set of axes, reads the crossing point as (x, y), gives both values as the solution, explains that the crossing is the only point on both lines, and checks it in both equations."
+  },
+  "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT": {
+   "forms": [
+    "where the costs are equal",
+    "which company is cheaper",
+    "the distance where the lines meet",
+    "compare two plans"
+   ],
+   "mastery": "The child forms a cost line for each choice (a fixed charge plus a rate), finds where they meet (by the graph or by setting the costs equal), and says which choice is cheaper before and after that point: 200 + 30d and 100 + 50d meet at d = 5 km."
   }
  }
 }

@@ -10364,6 +10364,1160 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
   "sub_strand_name": "Geometrical Constructions",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+  "key_step": "The child draws the across axis first, then the upright one, numbers both from the origin in equal steps, negatives included, and labels them x and y.",
+  "floor": {
+   "prerequisite": "Draws a number line with negatives.",
+   "question": "Mark -3 to 3",
+   "answer": "a line with 0 in the middle"
+  },
+  "representations": [
+   "two number lines crossing",
+   "graph paper",
+   "labelled axes"
+  ],
+  "steps": [
+   "Draw the x-axis across.",
+   "Draw the y-axis up through 0.",
+   "Number both with equal steps, negatives too.",
+   "Label x, y and the origin."
+  ],
+  "contexts": [
+   "a map grid of a town",
+   "seats in a hall",
+   "a chess board"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two number lines crossing at 0."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the across line.",
+    "say": "Which letter names this axis?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say x."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child numbers both axes from -5 to 5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_AXES_LABELS_SWAPPED",
+    "listen_for": [
+     "up is x"
+    ],
+    "ask": "Which way is x?",
+    "repair": "Across.",
+    "error": "Labels the upright axis x and the across axis y.",
+    "example": {
+     "question": "Which axis is the x-axis?",
+     "wrong_answer": "the upright one",
+     "correct_answer": "the one across"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_UNEQUAL_AXIS_STEPS",
+    "listen_for": [
+     "0, 1, 2, 5"
+    ],
+    "ask": "Is each gap worth the same?",
+    "repair": "Equal steps.",
+    "error": "Numbers an axis with unequal gaps.",
+    "example": {
+     "question": "Marks at 0, 1, 2, 5, 10 equally spaced: is that right?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: equal gaps need equal steps"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_NEGATIVES_MISSING_AXES",
+    "listen_for": [
+     "starts at 0"
+    ],
+    "ask": "Where would (-3, 2) go?",
+    "repair": "Extend the axes.",
+    "error": "Draws the axes from zero only, with no negative side.",
+    "example": {
+     "question": "Can (-3, 2) be plotted on axes that start at 0?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: the x-axis must go left of 0"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_ORIGIN_NOT_ZERO",
+    "listen_for": [
+     "1 at the middle"
+    ],
+    "ask": "What number is where the axes cross?",
+    "repair": "0.",
+    "error": "Starts the numbering of an axis at 1 at the origin.",
+    "example": {
+     "question": "The axes cross at which number?",
+     "wrong_answer": "1",
+     "correct_answer": "0"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What are the coordinates of the origin?",
+    "answer": "(0, 0)",
+    "shows": "origin"
+   },
+   {
+    "question": "In which quadrant is (-2, -3)?",
+    "answer": "the third (bottom left)",
+    "shows": "quadrants"
+   }
+  ],
+  "name": "Draw and label a Cartesian plane",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+  "key_step": "The child reads across first, then up, and writes (across, up).",
+  "floor": {
+   "prerequisite": "Reads a number line.",
+   "question": "What number is 3 marks right of 0?",
+   "answer": "3"
+  },
+  "representations": [
+   "a map grid",
+   "finger moves along then up",
+   "the pair (x, y)"
+  ],
+  "steps": [
+   "Start at the origin.",
+   "Read across: x.",
+   "Read up: y.",
+   "Write (x, y)."
+  ],
+  "contexts": [
+   "a school and a shop on a town map",
+   "corners of a plot",
+   "a boda boda fare graph"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a grid and mark a school at (2, 3)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the school.",
+    "say": "How far across, and how far up?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child moves 4 right and 1 up and marks the shop."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_X_Y_SWAPPED",
+    "listen_for": [
+     "(2, 4)"
+    ],
+    "ask": "Which comes first, across or up?",
+    "repair": "Across.",
+    "error": "Writes the up value first and the across value second.",
+    "example": {
+     "question": "A point 4 across and 2 up. Coordinates?",
+     "wrong_answer": "(2, 4)",
+     "correct_answer": "(4, 2)"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_MOVES_FOR_POINT",
+    "listen_for": [
+     "(4, 1)"
+    ],
+    "ask": "Where did you start?",
+    "repair": "From the school.",
+    "error": "Gives the moves from a point as the new point.",
+    "example": {
+     "question": "School at (2, 3). The shop is 4 right and 1 up. Shop?",
+     "wrong_answer": "(4, 1)",
+     "correct_answer": "(6, 4)"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_ONE_DIRECTION_ONLY",
+    "listen_for": [
+     "(6, 3)"
+    ],
+    "ask": "Did you move up as well?",
+    "repair": "Both moves.",
+    "error": "Makes only one of the two moves.",
+    "example": {
+     "question": "School at (2, 3). The shop is 4 right and 1 up. Shop?",
+     "wrong_answer": "(6, 3)",
+     "correct_answer": "(6, 4)"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_WRONG_CORNER_COORDINATE",
+    "listen_for": [
+     "(5, 4)"
+    ],
+    "ask": "Is D above A or above B?",
+    "repair": "Above A.",
+    "error": "Copies a coordinate from the wrong corner.",
+    "example": {
+     "question": "Rectangle A(1, 1), B(5, 1), C(5, 4). D?",
+     "wrong_answer": "(5, 4)",
+     "correct_answer": "(1, 4)"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_HALF_PERIMETER",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Did you go all the way round?",
+    "repair": "Both pairs of sides.",
+    "error": "Adds one length and one width for the perimeter.",
+    "example": {
+     "question": "A rectangle 4 m by 3 m on a grid. Perimeter?",
+     "wrong_answer": "7 m",
+     "correct_answer": "14 m"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_PERIMETER_FOR_AREA_GRID",
+    "listen_for": [
+     "14 m²"
+    ],
+    "ask": "Area or perimeter?",
+    "repair": "Length × width.",
+    "error": "Gives the perimeter when the area is asked.",
+    "example": {
+     "question": "A rectangle 4 m by 3 m on a grid. Area?",
+     "wrong_answer": "14 m²",
+     "correct_answer": "12 m²"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_FIXED_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Where does the line start?",
+    "repair": "At 50: read the height.",
+    "error": "Reads only the rate part of a line that does not start at zero.",
+    "example": {
+     "question": "Fare: 50 shillings plus 20 a km. Read the fare at 5 km.",
+     "wrong_answer": "100",
+     "correct_answer": "150"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_NEXT_POINT_READ",
+    "listen_for": [
+     "the 7 km fare"
+    ],
+    "ask": "Which distance is asked?",
+    "repair": "Go up from 5.",
+    "error": "Reads the point next to the one asked for.",
+    "example": {
+     "question": "Read the fare at 5 km.",
+     "wrong_answer": "the fare at 7 km",
+     "correct_answer": "the fare at 5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_INTERCEPT_READ",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Is that at 5 km?",
+    "repair": "Read at 5 km.",
+    "error": "Reads where the line starts instead of the value asked.",
+    "example": {
+     "question": "Fare: 50 plus 20 a km. Read the fare at 5 km.",
+     "wrong_answer": "50",
+     "correct_answer": "150"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A is at (1, 2). B is 3 right and 4 up from A. Coordinates of B?",
+    "answer": "(4, 6)",
+    "shows": "moves"
+   },
+   {
+    "question": "Rectangle P(0, 0), Q(6, 0), R(6, 3). The fourth corner?",
+    "answer": "(0, 3)",
+    "shows": "corner"
+   }
+  ],
+  "name": "Identify the coordinates of points on the Cartesian plane",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+  "key_step": "The child moves along the x-axis by the first number (sign gives left or right) before moving up or down by the second.",
+  "floor": {
+   "prerequisite": "Reads coordinates.",
+   "question": "A point 2 across and 5 up",
+   "answer": "(2, 5)"
+  },
+  "representations": [
+   "a finger walking on the grid",
+   "arrows for each move",
+   "the plotted point"
+  ],
+  "steps": [
+   "Start at the origin.",
+   "First number: right if positive, left if negative.",
+   "Second number: up if positive, down if negative.",
+   "Mark where the lines cross."
+  ],
+  "contexts": [
+   "marking trees on a school map",
+   "a treasure hunt",
+   "seats in a stadium"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw axes from -5 to 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the origin.",
+    "say": "For (-3, 2), which way first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3 left."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child moves 3 left and 2 up and marks the point."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_X_Y_SWAPPED_PLOT",
+    "listen_for": [
+     "2 left, 3 up"
+    ],
+    "ask": "Which number is across?",
+    "repair": "The first.",
+    "error": "Plots the up value along the x-axis.",
+    "example": {
+     "question": "How do you reach (3, -2)?",
+     "wrong_answer": "2 left, 3 up",
+     "correct_answer": "3 right, 2 down"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_X_SIGN_DIRECTION",
+    "listen_for": [
+     "3 right"
+    ],
+    "ask": "Is -3 left or right?",
+    "repair": "Left.",
+    "error": "Moves the wrong way across for the sign of x.",
+    "example": {
+     "question": "How do you reach (-3, 2)?",
+     "wrong_answer": "3 right, 2 up",
+     "correct_answer": "3 left, 2 up"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_Y_SIGN_DIRECTION",
+    "listen_for": [
+     "2 up for -2"
+    ],
+    "ask": "Is -2 up or down?",
+    "repair": "Down.",
+    "error": "Moves the wrong way up or down for the sign of y.",
+    "example": {
+     "question": "How do you reach (3, -2)?",
+     "wrong_answer": "3 right, 2 up",
+     "correct_answer": "3 right, 2 down"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_PLOTTED_IN_SQUARE",
+    "listen_for": [
+     "in the square"
+    ],
+    "ask": "Where do the lines from 2 and 1 meet?",
+    "repair": "Mark the crossing.",
+    "error": "Marks the point in the middle of a square instead of where grid lines cross.",
+    "example": {
+     "question": "Where is (2, 1) marked?",
+     "wrong_answer": "in the square right of 2",
+     "correct_answer": "where the lines from 2 and 1 cross"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How do you reach (-4, -1) from the origin?",
+    "answer": "4 left, 1 down",
+    "shows": "signs"
+   },
+   {
+    "question": "Start at the origin, move 2 left and 5 up. Coordinates?",
+    "answer": "(-2, 5)",
+    "shows": "moves to point"
+   }
+  ],
+  "name": "Plot points on the Cartesian plane, in all four quadrants",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+  "key_step": "The child writes each x in brackets in y = mx + c, multiplies first, then adds or takes away, and checks the steady step.",
+  "floor": {
+   "prerequisite": "Substitutes a negative value.",
+   "question": "3 × (-2)",
+   "answer": "-6"
+  },
+  "representations": [
+   "a table with x across the top",
+   "each substitution written out",
+   "the steady step"
+  ],
+  "steps": [
+   "Write x values in the top row.",
+   "For each, work m × x.",
+   "Then add or take away c.",
+   "Check the y values change by the same step."
+  ],
+  "contexts": [
+   "a taxi fare table",
+   "a mobile data bundle cost",
+   "a growing plant"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table for y = 3x - 2 with x = -2, -1, 0, 1, 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at x = -2.",
+    "say": "What is 3 times -2?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for -6."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills the row and checks the step of 3."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_INTERCEPT_LEFT_OUT",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "What is y when x is 0?",
+    "repair": "Start there.",
+    "error": "Uses the step in y but forgets where the line starts.",
+    "example": {
+     "question": "x 0, 1, 2; y 3, 5, 7. y when x = 6?",
+     "wrong_answer": "12",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_Y_PROPORTIONAL_TO_X",
+    "listen_for": [
+     "18"
+    ],
+    "ask": "Does the line go through the origin?",
+    "repair": "So doubling does not work.",
+    "error": "Doubles y when x doubles, for a line that does not start at 0.",
+    "example": {
+     "question": "x 3 gives y 9 on y = 2x + 3. y when x = 6?",
+     "wrong_answer": "18",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_WRONG_COLUMN_READ",
+    "listen_for": [
+     "13"
+    ],
+    "ask": "Which x is asked?",
+    "repair": "Carry on.",
+    "error": "Gives the value for a neighbouring x.",
+    "example": {
+     "question": "y = 2x + 3: y when x = 6?",
+     "wrong_answer": "13 (the value for x = 5)",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_POS_TIMES_NEG_POSITIVE",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Positive times negative?",
+    "repair": "Negative.",
+    "error": "Gives a positive product for a positive times a negative.",
+    "example": {
+     "question": "y = 3x - 2, x = -2: 3x?",
+     "wrong_answer": "6",
+     "correct_answer": "-6"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_CONSTANT_SIGN_FLIPPED",
+    "listen_for": [
+     "-4"
+    ],
+    "ask": "Is it - 2 or + 2?",
+    "repair": "Take 2 away.",
+    "error": "Adds the number when the equation takes it away.",
+    "example": {
+     "question": "y = 3x - 2, x = -2",
+     "wrong_answer": "-4",
+     "correct_answer": "-8"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_COEFF_ADDED_TO_X",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Does 3x mean 3 + x?",
+    "repair": "3 times x.",
+    "error": "Adds the coefficient to x instead of multiplying.",
+    "example": {
+     "question": "y = 3x + 1, x = 4",
+     "wrong_answer": "8",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_CONSTANT_LEFT_OUT",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "What about the + 1?",
+    "repair": "Add it.",
+    "error": "Forgets to add or take away the constant.",
+    "example": {
+     "question": "y = 3x + 1, x = 4",
+     "wrong_answer": "12",
+     "correct_answer": "13"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "y = 2x - 3. Find y when x = -1.",
+    "answer": "-5",
+    "shows": "negative x"
+   },
+   {
+    "question": "y = 4x + 1. Complete y for x = 0, 1, 2.",
+    "answer": "1, 5, 9",
+    "shows": "table"
+   }
+  ],
+  "name": "Generate a table of values for a linear equation",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+  "key_step": "The child divides the largest value by the number of squares and rounds up to a convenient scale.",
+  "floor": {
+   "prerequisite": "Divides and rounds up.",
+   "question": "170 ÷ 10, rounded up to a round number",
+   "answer": "20"
+  },
+  "representations": [
+   "an axis with 10 big squares",
+   "the largest value marked",
+   "the scale written as 1 square to n"
+  ],
+  "steps": [
+   "Find the largest value.",
+   "Divide by the number of squares.",
+   "Round up to 1, 2, 5, 10 or 20 times a power of 10.",
+   "Check the largest value fits."
+  ],
+  "contexts": [
+   "rainfall in Kakamega over four months",
+   "school fees collected",
+   "a fare graph"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an axis with 10 big squares and mark 170 mm as the largest value."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the top of the axis.",
+    "say": "If each square is 10 mm, where does the axis end?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict 100."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child tries 20 mm a square."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_NUMBER_TOO_SMALL",
+    "listen_for": [
+     "too small a number"
+    ],
+    "ask": "How far does the axis reach?",
+    "repair": "Check the largest value fits.",
+    "error": "Rejects a scale because the number is small, not because the data does not fit.",
+    "example": {
+     "question": "Values up to 80; 10 squares; 1 square to 5. Why not suitable?",
+     "wrong_answer": "5 is too small a number",
+     "correct_answer": "the axis reaches only 50"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_ALWAYS_ONE",
+    "listen_for": [
+     "1 to 1"
+    ],
+    "ask": "Would 80 fit on 10 squares?",
+    "repair": "Choose to fit.",
+    "error": "Believes a scale must be 1 square to 1 unit.",
+    "example": {
+     "question": "Values up to 80 on 10 squares: scale?",
+     "wrong_answer": "1 to 1",
+     "correct_answer": "1 to 10"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_BIGGER_THAN_DATA",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "What does one square stand for?",
+    "repair": "Part of the range.",
+    "error": "Believes a scale must be bigger than the largest value.",
+    "example": {
+     "question": "Values up to 80: scale?",
+     "wrong_answer": "1 square to 100",
+     "correct_answer": "1 square to 10"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_SUBTRACTED",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Do we share or take away?",
+    "repair": "Share: divide.",
+    "error": "Takes the length of the axis from the largest value.",
+    "example": {
+     "question": "An axis 10 cm long runs 0 to 50. Units per cm?",
+     "wrong_answer": "40",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_INVERTED",
+    "listen_for": [
+     "0.2"
+    ],
+    "ask": "Units per cm: which on top?",
+    "repair": "Units.",
+    "error": "Divides the centimetres by the units.",
+    "example": {
+     "question": "An axis 10 cm long runs 0 to 50. Units per cm?",
+     "wrong_answer": "0.2",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_WHOLE_AXIS_AS_SCALE",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Is that for one cm?",
+    "repair": "Divide by 10.",
+    "error": "Gives the whole range as the scale for one centimetre.",
+    "example": {
+     "question": "An axis 10 cm long runs 0 to 50. Units per cm?",
+     "wrong_answer": "50",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_TOO_SMALL_TO_FIT",
+    "listen_for": [
+     "10 mm"
+    ],
+    "ask": "Does 170 fit?",
+    "repair": "No: use 20.",
+    "error": "Picks a scale that does not reach the largest value.",
+    "example": {
+     "question": "Rainfall up to 170 mm on 10 squares: smallest scale?",
+     "wrong_answer": "10 mm",
+     "correct_answer": "20 mm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_NOT_SMALLEST",
+    "listen_for": [
+     "25 mm"
+    ],
+    "ask": "Does 20 fit too?",
+    "repair": "Use the smallest.",
+    "error": "Picks a scale that fits but is not the smallest that fits.",
+    "example": {
+     "question": "Rainfall up to 170 mm on 10 squares: smallest scale?",
+     "wrong_answer": "25 mm",
+     "correct_answer": "20 mm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_SQUASHED",
+    "listen_for": [
+     "50 mm"
+    ],
+    "ask": "How much of the paper is used?",
+    "repair": "Too little.",
+    "error": "Picks a very large scale that squashes the graph.",
+    "example": {
+     "question": "Rainfall up to 170 mm on 10 squares: scale?",
+     "wrong_answer": "50 mm",
+     "correct_answer": "20 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "An axis 12 cm long must show 0 to 60. Units for each cm?",
+    "answer": "5",
+    "shows": "scale"
+   },
+   {
+    "question": "Values up to 340 on 10 squares. Smallest of 20, 40, 50 that fits?",
+    "answer": "40",
+    "shows": "smallest that fits"
+   }
+  ],
+  "name": "Determine an appropriate scale for a graph",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+  "key_step": "The child checks that the plotted points line up before ruling one straight line through all of them.",
+  "floor": {
+   "prerequisite": "Plots points.",
+   "question": "Plot (0, 1), (1, 3), (2, 5)",
+   "answer": "three points in a line"
+  },
+  "representations": [
+   "the table",
+   "the points on graph paper",
+   "one ruled line"
+  ],
+  "steps": [
+   "Plot every point from the table.",
+   "Check they lie in a line.",
+   "Fix any point that does not.",
+   "Rule one line across the grid."
+  ],
+  "contexts": [
+   "a fare line",
+   "a phone bundle cost",
+   "water in a tank filling steadily"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Plot five points of y = 2x + 1, one of them wrong."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the odd point.",
+    "say": "Is this point on the line with the others?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child checks that point in the table and rules the line."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_POINTS_JOINED_ZIGZAG",
+    "listen_for": [
+     "dot to dot"
+    ],
+    "ask": "Is a linear graph bent?",
+    "repair": "One straight line.",
+    "error": "Joins the points one to the next freehand instead of drawing one ruled line.",
+    "example": {
+     "question": "How are the points of y = 2x + 1 joined?",
+     "wrong_answer": "dot to dot",
+     "correct_answer": "one straight line with a ruler"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_LINE_STOPS_AT_POINTS",
+    "listen_for": [
+     "stop at the ends"
+    ],
+    "ask": "Is there a y for x = 4?",
+    "repair": "Extend the line.",
+    "error": "Stops the line at the first and last points.",
+    "example": {
+     "question": "Should the line of y = 2x + 1 go past the table values?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes, across the grid"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_OFF_POINT_KEPT",
+    "listen_for": [
+     "bend it"
+    ],
+    "ask": "Can a straight line pass through all five?",
+    "repair": "Check the odd one.",
+    "error": "Bends the line to pass through a point that is off it.",
+    "example": {
+     "question": "Four points line up and one does not. What now?",
+     "wrong_answer": "draw through all five",
+     "correct_answer": "check that point in the table"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_LINE_THROUGH_ORIGIN_FORCED",
+    "listen_for": [
+     "through 0"
+    ],
+    "ask": "What is y when x = 0?",
+    "repair": "1.",
+    "error": "Draws the line through the origin whatever the equation.",
+    "example": {
+     "question": "Does y = 2x + 1 pass through (0, 0)?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: it passes through (0, 1)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "The points of y = x + 2 are plotted. Where does the line cross the y-axis?",
+    "answer": "(0, 2)",
+    "shows": "intercept"
+   },
+   {
+    "question": "Points (0, 1), (1, 3), (2, 6), (3, 7). Which is wrong for y = 2x + 1?",
+    "answer": "(2, 6): it should be (2, 5)",
+    "shows": "odd point"
+   }
+  ],
+  "name": "Draw a linear graph from a table of values",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+  "key_step": "The child reads the crossing point as a pair (x, y) and checks it in both equations.",
+  "floor": {
+   "prerequisite": "Reads coordinates.",
+   "question": "A point 4 across and 2,000 up",
+   "answer": "(4, 2,000)"
+  },
+  "representations": [
+   "two lines on one grid",
+   "the crossing ringed",
+   "the check in both equations"
+  ],
+  "steps": [
+   "Draw both lines.",
+   "Find where they cross.",
+   "Read x along and y up.",
+   "Check in both equations."
+  ],
+  "contexts": [
+   "hiring a hall for a harambee",
+   "two PA systems",
+   "two phone plans"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw y = x + 1 and y = 3 - x on one grid."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the crossing.",
+    "say": "What are its coordinates?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for (1, 2)."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child checks (1, 2) in both equations."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_COST_FOR_HOURS",
+    "listen_for": [
+     "2,000"
+    ],
+    "ask": "Hours or shillings?",
+    "repair": "Read along the bottom.",
+    "error": "Reads the up value of the crossing when the across value is asked.",
+    "example": {
+     "question": "Two hall costs meet at (4, 2,000). For how many hours is the cost the same?",
+     "wrong_answer": "2,000",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_CROSS_AT_Y_AXIS",
+    "listen_for": [
+     "y-axis"
+    ],
+    "ask": "Is the crossing on the y-axis here?",
+    "repair": "No: on both lines.",
+    "error": "Believes the lines cross where each meets the y-axis.",
+    "example": {
+     "question": "Why is the crossing point the solution?",
+     "wrong_answer": "it is on the y-axis",
+     "correct_answer": "it is on both lines"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_CROSS_WHERE_ZERO",
+    "listen_for": [
+     "zero"
+    ],
+    "ask": "Put (1, 2) in: do you get zero?",
+    "repair": "It fits both.",
+    "error": "Believes the crossing is where both equations equal zero.",
+    "example": {
+     "question": "Why is the crossing point the solution?",
+     "wrong_answer": "both equations are zero there",
+     "correct_answer": "it fits both equations"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_ALL_POINTS_SHARED",
+    "listen_for": [
+     "every point"
+    ],
+    "ask": "Is (0, 1) on both lines?",
+    "repair": "Only the crossing.",
+    "error": "Believes every point on one line fits the other equation.",
+    "example": {
+     "question": "Do the lines share every point?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, only the crossing"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_POINT_ON_ONE_LINE",
+    "listen_for": [
+     "(2, 3)"
+    ],
+    "ask": "Does it fit the second equation?",
+    "repair": "Check both.",
+    "error": "Gives a point on only one of the lines.",
+    "example": {
+     "question": "y = x + 1 and y = 3 - x meet at?",
+     "wrong_answer": "(2, 3)",
+     "correct_answer": "(1, 2)"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_ONE_COORDINATE_ONLY",
+    "listen_for": [
+     "x = 1"
+    ],
+    "ask": "What is y there?",
+    "repair": "Give the pair.",
+    "error": "Gives only the x value as the solution.",
+    "example": {
+     "question": "Solve y = x + 1 and y = 3 - x graphically.",
+     "wrong_answer": "x = 1",
+     "correct_answer": "x = 1, y = 2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "y = 2x and y = x + 3 cross where?",
+    "answer": "(3, 6)",
+    "shows": "crossing"
+   },
+   {
+    "question": "Why is the crossing point the solution of both equations?",
+    "answer": "it lies on both lines, so it fits both",
+    "shows": "reason"
+   }
+  ],
+  "name": "Solve simultaneous linear equations graphically",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT": {
+  "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT",
+  "key_step": "The child writes a cost line for each choice and sets the costs equal to find the meeting point, then says which is cheaper on each side of it.",
+  "floor": {
+   "prerequisite": "Forms a cost expression.",
+   "question": "200 shillings plus 30 a km for d km",
+   "answer": "200 + 30d"
+  },
+  "representations": [
+   "two fare lines",
+   "a table of costs",
+   "the equation 200 + 30d = 100 + 50d"
+  ],
+  "steps": [
+   "Write each cost in d.",
+   "Set them equal.",
+   "Solve for d.",
+   "Say which is cheaper before and after."
+  ],
+  "contexts": [
+   "two boda boda companies",
+   "two hall hire plans",
+   "two water vendors"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table of cost for A (200 + 30d) and B (100 + 50d) at d = 0 to 6."
+   },
+   {
+    "beat": "point",
+    "do": "Point at d = 5.",
+    "say": "What do A and B cost here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 350 and 350."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: which is cheaper at 10 km?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_DIFFERENCE_NOT_DIVIDED_GRAPH",
+    "listen_for": [
+     "100 km"
+    ],
+    "ask": "How much does the gap close each km?",
+    "repair": "Divide by 20.",
+    "error": "Gives the difference in fixed charges as the meeting distance.",
+    "example": {
+     "question": "A: 200 + 30 a km. B: 100 + 50 a km. Meet at?",
+     "wrong_answer": "100 km",
+     "correct_answer": "5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_RATES_ADDED",
+    "listen_for": [
+     "1.25 km"
+    ],
+    "ask": "Does the gap close by 80 a km?",
+    "repair": "By 50 - 30.",
+    "error": "Adds the rates instead of taking one from the other.",
+    "example": {
+     "question": "A: 200 + 30 a km. B: 100 + 50 a km. Meet at?",
+     "wrong_answer": "1.25 km",
+     "correct_answer": "5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_FIXED_ADDED",
+    "listen_for": [
+     "15 km"
+    ],
+    "ask": "Is the gap 300 at the start?",
+    "repair": "200 - 100.",
+    "error": "Adds the fixed charges instead of taking one from the other.",
+    "example": {
+     "question": "A: 200 + 30 a km. B: 100 + 50 a km. Meet at?",
+     "wrong_answer": "15 km",
+     "correct_answer": "5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_CHEAPER_SIDE_WRONG",
+    "listen_for": [
+     "B always"
+    ],
+    "ask": "What happens after 5 km?",
+    "repair": "The lines swap.",
+    "error": "Says the plan with the lower fixed charge is cheaper for every distance.",
+    "example": {
+     "question": "A: 200 + 30 a km. B: 100 + 50 a km. Cheaper for 10 km?",
+     "wrong_answer": "B",
+     "correct_answer": "A (500 against 600)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A: 300 + 20 a km. B: 100 + 60 a km. Distance where the costs are equal?",
+    "answer": "5 km",
+    "shows": "meet"
+   },
+   {
+    "question": "In that story, which is cheaper for 8 km?",
+    "answer": "A (460 against 580)",
+    "shows": "after the meeting point"
+   }
+  ],
+  "name": "Apply simultaneous equations and their graphs in real life",
+  "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

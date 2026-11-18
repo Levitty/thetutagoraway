@@ -408,19 +408,19 @@ export const CORE_FAMILIES = [
     check: ({ vals }, a) => vals[0] + a === vals[2] }),
 
   // ---- G8_LINEAR_GRAPHS: tables of values and meeting points, with a graph
-  fx({ id: 'g8.graphs.table-complete', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.d', rung: 1, form: 'table',
+  fx({ id: 'g8.graphs.table-complete', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES', rung: 1, form: 'table',
     draw: () => { const m = randInt(2, 4), c = randInt(-3, 5); const x = pick([2, 3, 4]), v = [m + x + c, m * x, m * (x - 1) + c]; return c === 0 || new Set(v).size < 3 || v.includes(m * x + c) ? null : { m, c, x }; },
     make: ({ m, c, x }) => {
       const y = (t) => m * t + c, eq = `y = ${m}x ${c < 0 ? '−' : '+'} ${Math.abs(c)}`;
       return { question: `Here is part of a table for ${eq}. What goes in the empty box, where x = ${x}?`, story: false,
         model: { type: 'table', data: { head: ['x', 'y'], rows: [{ label: '0', value: String(y(0)) }, { label: '1', value: String(y(1)) }, { label: String(x), value: '?' }] } },
         answer: y(x),
-        wrong: [[m + x + c, `${m}x means ${m} times x. Multiply before adding.`], [m * x, `You have not yet done the ${c < 0 ? '−' : '+'} ${Math.abs(c)}.`], [y(x - 1), 'That is the value for the x before it.']],
+        wrong: [[m + x + c, `${m}x means ${m} times x. Multiply before adding.`, 'M_COEFF_ADDED_TO_X'], [m * x, `You have not yet done the ${c < 0 ? '−' : '+'} ${Math.abs(c)}.`, 'M_CONSTANT_LEFT_OUT'], [y(x - 1), 'That is the value for the x before it.', 'M_WRONG_COLUMN_READ']],
         hints: [`Put x = ${x} into the equation.`, `${m} × ${x} first.`], allowNegative: true,
         steps: [`y = ${m} × ${x} ${c < 0 ? '−' : '+'} ${Math.abs(c)}`, `y = ${m * x} ${c < 0 ? '−' : '+'} ${Math.abs(c)} = ${y(x)}.`] };
     },
     check: ({ m, c, x }, a) => (a - c) / m === x }),
-  fx({ id: 'g8.graphs.fare-graph', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.b', rung: 2, form: 'graph',
+  fx({ id: 'g8.graphs.fare-graph', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES', rung: 2, form: 'graph',
     draw: () => ({ rate: pick([20, 30, 40, 50]), fix: pick([50, 100]) , km: pick([2, 4, 6]) }),
     make: ({ rate, fix, km }) => {
       const y = (x) => fix + rate * x;
@@ -429,12 +429,12 @@ export const CORE_FAMILIES = [
       return { question: `The graph shows a boda boda fare in shillings for each distance in km. Read the point at ${km} km. What is the fare?`,
         model: { type: 'line-graph', data: { points: ticks.map(x => ({ x, y: y(x) })), xTicks: ticks, yTicks, xLabel: 'Distance (km)', yLabel: 'Fare (sh)' } },
         answer: y(km),
-        wrong: [[rate * km, 'The line does not start at 0. Read the height of the point, which includes the fixed charge.'], [y(km + 2), 'That is the next point along. Go up from the distance asked for.'], [fix, 'That is the fare before any distance. Read at the distance asked for.']],
+        wrong: [[rate * km, 'The line does not start at 0. Read the height of the point, which includes the fixed charge.', 'M_FIXED_CHARGE_LEFT_OUT'], [y(km + 2), 'That is the next point along. Go up from the distance asked for.', 'M_NEXT_POINT_READ'], [fix, 'That is the fare before any distance. Read at the distance asked for.', 'M_INTERCEPT_READ']],
         hints: [`Find ${km} on the distance axis.`, 'Go straight up to the line, then across to the fare axis.'],
         steps: [`At ${km} km, go up to the line.`, `Read across: the fare is sh ${y(km)}.`] };
     },
     check: ({ rate, fix, km }, a) => (a - fix) / rate === km }),
-  fx({ id: 'g8.graphs.meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'G8.GRAPHS.g', rung: 3, form: 'graph',
+  fx({ id: 'g8.graphs.meet', skill: 'G8_LINEAR_GRAPHS', outcome: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY', rung: 3, form: 'graph',
     draw: () => { const x0 = randInt(1, 4), y0 = randInt(2, 8), m1 = pick([1, 2]), m2 = pick([-1, -2]); const c1 = y0 - m1 * x0, c2 = y0 - m2 * x0; return x0 === y0 ? null : { x0, y0, m1, m2, c1, c2 }; },
     make: ({ x0, y0, m1, m2, c1, c2 }) => {
       const eq = (m, c) => `y = ${m === 1 ? '' : m === -1 ? '−' : m < 0 ? `−${-m}` : m}x${c === 0 ? '' : c < 0 ? ` − ${-c}` : ` + ${c}`}`;
@@ -446,7 +446,7 @@ export const CORE_FAMILIES = [
       const pt = (x, y) => `(${x}, ${y})`;
       return { question: `The lines ${eq(m1, c1)} and ${eq(m2, c2)} are drawn on the graph. At which point do they meet?`, story: false,
         model: { type: 'line-graph', data: { lines: [ys(m1, c1), ys(m2, c2)], xTicks: xs, yTicks, xLabel: 'x', yLabel: 'y' } },
-        options: [{ text: pt(x0, y0), right: true }, { text: pt(y0, x0), right: false, why: 'That swaps x and y. x is read along, y is read up.' }, { text: pt(x0 + 1, m1 * (x0 + 1) + c1), right: false, why: 'That point is on only one of the lines.' }, { text: pt(x0, m2 * x0 + c2 + 1), right: false, why: 'Check that the point fits both equations.' }],
+        options: [{ text: pt(x0, y0), right: true }, { text: pt(y0, x0), right: false, why: 'That swaps x and y. x is read along, y is read up.', mis: 'M_X_Y_SWAPPED' }, { text: pt(x0 + 1, m1 * (x0 + 1) + c1), right: false, why: 'That point is on only one of the lines.', mis: 'M_POINT_ON_ONE_LINE' }, { text: pt(x0, m2 * x0 + c2 + 1), right: false, why: 'Check that the point fits both equations.', mis: 'SLIP' }],
         hints: ['The meeting point lies on both lines.', 'Try each point in both equations.'],
         steps: [`At x = ${x0}, ${eq(m1, c1)} gives y = ${y0}.`, `At x = ${x0}, ${eq(m2, c2)} gives y = ${y0}.`, `Both agree, so they meet at ${pt(x0, y0)}.`] };
     } }),

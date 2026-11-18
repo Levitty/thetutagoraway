@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 8,
  "source": "KICD KICD-Grade8-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: GEOMET.SCALE_DRAWING, GEOMET.COMMON_SOLIDS, DATA_H.DATA_PRESENTATION_AND_IN, DATA_H.PROBABILITY",
  "totals": {
   "strands": 5,
   "sub_strands": 16,
   "outcomes": 121,
   "lessons": 150,
-  "skills": 78,
-  "prerequisites": 178,
-  "misconceptions": 394
+  "skills": 86,
+  "prerequisites": 195,
+  "misconceptions": 441
  },
  "sub_strands": [
   {
@@ -9965,7 +9965,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to h are tested; i (use IT) and j (reflect) are not questions. Coordinates are written (horizontal value, vertical value) on a Cartesian plane with all four quadrants. Drawing the axes (a) and drawing the line from a table (f) are done on graph paper; a phone question tests the labels, the steps and what a correct line looks like, and the drawing itself is for the teacher to see. Reading a fixed charge plus a rate from a fare graph is filed under reading points (b). Where a family's wrong answer is a point read just before or after the crossing, it is marked SLIP (a reading slip, not a misconception). Drawing the axes (a) and drawing the line (f) have no family yet.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
     "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
@@ -10037,8 +10037,1020 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+     "name": "Draw and label a Cartesian plane",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.a"
+     ],
+     "mastery": "The child draws the x-axis across and the y-axis up, crossing at the origin (0, 0), numbers both with equal steps including negative numbers to the left and below, and labels the axes x and y.",
+     "question_forms": [
+      "label the axes",
+      "where is the origin",
+      "which quadrant",
+      "equal steps"
+     ],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G8_COORDINATES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Each axis is a number line.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Equal steps on an axis.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "name": "Identify the coordinates of points on the Cartesian plane",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.b"
+     ],
+     "mastery": "The child reads a point as (across, up) from the origin, finds a point from another by moving across then up, gives the missing corner of a shape from its sides, and reads the height of a point on a graph at a given value across.",
+     "question_forms": [
+      "coordinates of the point",
+      "the fourth corner",
+      "read the fare at",
+      "which point shows the shop"
+     ],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G8_COORDINATES",
+      "G8_LINEAR_GRAPHS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The axes and origin.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Reading a line graph.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+     "name": "Plot points on the Cartesian plane, in all four quadrants",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.c"
+     ],
+     "mastery": "The child starts at the origin, moves along the x-axis first (right for positive, left for negative) and then parallel to the y-axis (up for positive, down for negative), and marks the point where the grid lines cross.",
+     "question_forms": [
+      "plot the point",
+      "how do you reach",
+      "start at the origin and move",
+      "which point is"
+     ],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G8_COORDINATES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The axes and origin.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The sign gives the direction.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "name": "Generate a table of values for a linear equation",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.d"
+     ],
+     "mastery": "The child substitutes each x, negative ones included, into y = mx + c, multiplying before adding, and checks that the y values go up (or down) by the same step: y = 2x - 3 gives -7, -5, -3, -1, 1 for x = -2 to 2.",
+     "question_forms": [
+      "complete the table",
+      "which step has the mistake",
+      "use the pattern",
+      "y when x is"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G8_LINEAR_GRAPHS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.ALGEBR.ALGEBRAIC_EXPRESSIONS.SUBSTITUTE_NEGATIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Substituting negative values.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.SEQ_EXTEND_RULE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A steady step in a sequence.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "name": "Determine an appropriate scale for a graph",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.e"
+     ],
+     "mastery": "The child divides the largest value by the number of squares (or centimetres) on the axis and picks the smallest convenient scale that fits (1, 2, 5, 10 or 20 units a square), so the graph uses most of the paper.",
+     "question_forms": [
+      "what scale",
+      "why is this scale not suitable",
+      "the smallest scale that fits",
+      "units for each centimetre"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G8_LINEAR_GRAPHS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 scales.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Dividing to find the scale.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+     "name": "Draw a linear graph from a table of values",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.f"
+     ],
+     "mastery": "The child plots every point from the table, checks they lie in a straight line (a point off the line means a mistake in the table), and draws one straight line with a ruler through them across the whole range.",
+     "question_forms": [
+      "draw the line",
+      "which point is wrong",
+      "is it a straight line",
+      "extend the line"
+     ],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G8_LINEAR_GRAPHS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The table comes first.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Plotting the points.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A scale that fits.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "name": "Solve simultaneous linear equations graphically",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.g"
+     ],
+     "mastery": "The child draws both lines on one set of axes, reads the crossing point as (x, y), gives both values as the solution, explains that the crossing is the only point on both lines, and checks it in both equations.",
+     "question_forms": [
+      "where do the lines meet",
+      "for how many hours is the cost the same",
+      "why is the crossing the solution",
+      "read the solution"
+     ],
+     "thinking": [
+      "representation",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G8_LINEAR_GRAPHS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drawing each line.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.SOLVE_BY_ELIMINATION",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The same answer by algebra.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT",
+     "name": "Apply simultaneous equations and their graphs in real life",
+     "outcomes": [
+      "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.h"
+     ],
+     "mastery": "The child forms a cost line for each choice (a fixed charge plus a rate), finds where they meet (by the graph or by setting the costs equal), and says which choice is cheaper before and after that point: 200 + 30d and 100 + 50d meet at d = 5 km.",
+     "question_forms": [
+      "where the costs are equal",
+      "which company is cheaper",
+      "the distance where the lines meet",
+      "compare two plans"
+     ],
+     "thinking": [
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G8_LINEAR_GRAPHS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reading the crossing.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.ALGEBR.LINEAR_EQUATIONS.FORM_SIMULTANEOUS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Forming the two equations.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_AXES_LABELS_SWAPPED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+     "error": "Labels the upright axis x and the across axis y.",
+     "example": {
+      "question": "Which axis is the x-axis?",
+      "wrong_answer": "the upright one",
+      "correct_answer": "the one across"
+     },
+     "cause": "Has no picture of the convention.",
+     "reveals": "The answer the upright one as a wrong option, with a reason that names the idea.",
+     "help": "x goes across, y goes up.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_UNEQUAL_AXIS_STEPS",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+     "error": "Numbers an axis with unequal gaps.",
+     "example": {
+      "question": "Marks at 0, 1, 2, 5, 10 equally spaced: is that right?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No: equal gaps need equal steps"
+     },
+     "cause": "Writes the numbers needed, not a scale.",
+     "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+     "help": "Each square stands for the same amount.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_NEGATIVES_MISSING_AXES",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+     "error": "Draws the axes from zero only, with no negative side.",
+     "example": {
+      "question": "Can (-3, 2) be plotted on axes that start at 0?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No: the x-axis must go left of 0"
+     },
+     "cause": "Has only drawn graphs of positive data.",
+     "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+     "help": "Extend both axes past the origin.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE.M_ORIGIN_NOT_ZERO",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CARTESIAN_PLANE",
+     "error": "Starts the numbering of an axis at 1 at the origin.",
+     "example": {
+      "question": "The axes cross at which number?",
+      "wrong_answer": "1",
+      "correct_answer": "0"
+     },
+     "cause": "Counts from 1.",
+     "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+     "help": "The origin is (0, 0).",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_X_Y_SWAPPED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Writes the up value first and the across value second.",
+     "example": {
+      "question": "A point 4 across and 2 up. Coordinates?",
+      "wrong_answer": "(2, 4)",
+      "correct_answer": "(4, 2)"
+     },
+     "cause": "Reads the graph in the wrong order.",
+     "reveals": "The answer (2, 4) as a wrong option, with a reason that names the idea.",
+     "help": "Along the corridor, then up the stairs: (x, y).",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_MOVES_FOR_POINT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Gives the moves from a point as the new point.",
+     "example": {
+      "question": "School at (2, 3). The shop is 4 right and 1 up. Shop?",
+      "wrong_answer": "(4, 1)",
+      "correct_answer": "(6, 4)"
+     },
+     "cause": "Forgets to start from the school.",
+     "reveals": "The answer (4, 1) as a wrong option, with a reason that names the idea.",
+     "help": "Add the moves to the starting point.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_ONE_DIRECTION_ONLY",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Makes only one of the two moves.",
+     "example": {
+      "question": "School at (2, 3). The shop is 4 right and 1 up. Shop?",
+      "wrong_answer": "(6, 3)",
+      "correct_answer": "(6, 4)"
+     },
+     "cause": "Stops after the first move.",
+     "reveals": "The answer (6, 3) as a wrong option, with a reason that names the idea.",
+     "help": "Move across and up.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_WRONG_CORNER_COORDINATE",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Copies a coordinate from the wrong corner.",
+     "example": {
+      "question": "Rectangle A(1, 1), B(5, 1), C(5, 4). D?",
+      "wrong_answer": "(5, 4)",
+      "correct_answer": "(1, 4)"
+     },
+     "cause": "Does not picture where D is.",
+     "reveals": "The answer (5, 4) as a wrong option, with a reason that names the idea.",
+     "help": "D is above A and level with C.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_HALF_PERIMETER",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Adds one length and one width for the perimeter.",
+     "example": {
+      "question": "A rectangle 4 m by 3 m on a grid. Perimeter?",
+      "wrong_answer": "7 m",
+      "correct_answer": "14 m"
+     },
+     "cause": "Goes halfway round.",
+     "reveals": "The answer 7 m as a wrong option, with a reason that names the idea.",
+     "help": "Both pairs of sides.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_PERIMETER_FOR_AREA_GRID",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Gives the perimeter when the area is asked.",
+     "example": {
+      "question": "A rectangle 4 m by 3 m on a grid. Area?",
+      "wrong_answer": "14 m²",
+      "correct_answer": "12 m²"
+     },
+     "cause": "Mixes perimeter and area.",
+     "reveals": "The answer 14 m² as a wrong option, with a reason that names the idea.",
+     "help": "Area = length × width.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_FIXED_CHARGE_LEFT_OUT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Reads only the rate part of a line that does not start at zero.",
+     "example": {
+      "question": "Fare: 50 shillings plus 20 a km. Read the fare at 5 km.",
+      "wrong_answer": "100",
+      "correct_answer": "150"
+     },
+     "cause": "Assumes the line starts at 0.",
+     "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+     "help": "Read the height of the point: it includes the fixed charge.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_NEXT_POINT_READ",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Reads the point next to the one asked for.",
+     "example": {
+      "question": "Read the fare at 5 km.",
+      "wrong_answer": "the fare at 7 km",
+      "correct_answer": "the fare at 5 km"
+     },
+     "cause": "Loses the place on the axis.",
+     "reveals": "The answer the fare at 7 km as a wrong option, with a reason that names the idea.",
+     "help": "Go straight up from 5 on the bottom axis.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES.M_INTERCEPT_READ",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+     "error": "Reads where the line starts instead of the value asked.",
+     "example": {
+      "question": "Fare: 50 plus 20 a km. Read the fare at 5 km.",
+      "wrong_answer": "50",
+      "correct_answer": "150"
+     },
+     "cause": "Reads the start of the line.",
+     "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+     "help": "Read at the distance asked for.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_X_Y_SWAPPED_PLOT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+     "error": "Plots the up value along the x-axis.",
+     "example": {
+      "question": "How do you reach (3, -2)?",
+      "wrong_answer": "2 left, 3 up",
+      "correct_answer": "3 right, 2 down"
+     },
+     "cause": "Does the moves in the wrong order.",
+     "reveals": "The answer 2 left, 3 up as a wrong option, with a reason that names the idea.",
+     "help": "First number across, second up or down.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_X_SIGN_DIRECTION",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+     "error": "Moves the wrong way across for the sign of x.",
+     "example": {
+      "question": "How do you reach (-3, 2)?",
+      "wrong_answer": "3 right, 2 up",
+      "correct_answer": "3 left, 2 up"
+     },
+     "cause": "Ignores the minus sign across.",
+     "reveals": "The answer 3 right, 2 up as a wrong option, with a reason that names the idea.",
+     "help": "Negative x goes left.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_Y_SIGN_DIRECTION",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+     "error": "Moves the wrong way up or down for the sign of y.",
+     "example": {
+      "question": "How do you reach (3, -2)?",
+      "wrong_answer": "3 right, 2 up",
+      "correct_answer": "3 right, 2 down"
+     },
+     "cause": "Ignores the minus sign up and down.",
+     "reveals": "The answer 3 right, 2 up as a wrong option, with a reason that names the idea.",
+     "help": "Negative y goes down.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS.M_PLOTTED_IN_SQUARE",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS",
+     "error": "Marks the point in the middle of a square instead of where grid lines cross.",
+     "example": {
+      "question": "Where is (2, 1) marked?",
+      "wrong_answer": "in the square right of 2",
+      "correct_answer": "where the lines from 2 and 1 cross"
+     },
+     "cause": "Treats coordinates like map squares.",
+     "reveals": "The answer in the square right of 2 as a wrong option, with a reason that names the idea.",
+     "help": "Points sit on the crossing of grid lines.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_INTERCEPT_LEFT_OUT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Uses the step in y but forgets where the line starts.",
+     "example": {
+      "question": "x 0, 1, 2; y 3, 5, 7. y when x = 6?",
+      "wrong_answer": "12",
+      "correct_answer": "15"
+     },
+     "cause": "Multiplies the step by x only.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "y = 2x + 3: the 3 is there at x = 0.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_Y_PROPORTIONAL_TO_X",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Doubles y when x doubles, for a line that does not start at 0.",
+     "example": {
+      "question": "x 3 gives y 9 on y = 2x + 3. y when x = 6?",
+      "wrong_answer": "18",
+      "correct_answer": "15"
+     },
+     "cause": "Treats every line as direct proportion.",
+     "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+     "help": "Only lines through the origin double like that.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_WRONG_COLUMN_READ",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Gives the value for a neighbouring x.",
+     "example": {
+      "question": "y = 2x + 3: y when x = 6?",
+      "wrong_answer": "13 (the value for x = 5)",
+      "correct_answer": "15"
+     },
+     "cause": "Stops one column early.",
+     "reveals": "The answer 13 (the value for x = 5) as a wrong option, with a reason that names the idea.",
+     "help": "Carry on to the x asked.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_POS_TIMES_NEG_POSITIVE",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Gives a positive product for a positive times a negative.",
+     "example": {
+      "question": "y = 3x - 2, x = -2: 3x?",
+      "wrong_answer": "6",
+      "correct_answer": "-6"
+     },
+     "cause": "Drops the sign.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Positive times negative is negative.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_CONSTANT_SIGN_FLIPPED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Adds the number when the equation takes it away.",
+     "example": {
+      "question": "y = 3x - 2, x = -2",
+      "wrong_answer": "-4",
+      "correct_answer": "-8"
+     },
+     "cause": "Treats - 2 as + 2 after a negative.",
+     "reveals": "The answer -4 as a wrong option, with a reason that names the idea.",
+     "help": "Taking 2 away from -6 makes it smaller still.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_COEFF_ADDED_TO_X",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Adds the coefficient to x instead of multiplying.",
+     "example": {
+      "question": "y = 3x + 1, x = 4",
+      "wrong_answer": "8",
+      "correct_answer": "13"
+     },
+     "cause": "Reads 3x as 3 + x.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "3x means 3 times x.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES.M_CONSTANT_LEFT_OUT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.TABLE_OF_VALUES",
+     "error": "Forgets to add or take away the constant.",
+     "example": {
+      "question": "y = 3x + 1, x = 4",
+      "wrong_answer": "12",
+      "correct_answer": "13"
+     },
+     "cause": "Stops after multiplying.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "Do the + 1 as well.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_NUMBER_TOO_SMALL",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Rejects a scale because the number is small, not because the data does not fit.",
+     "example": {
+      "question": "Values up to 80; 10 squares; 1 square to 5. Why not suitable?",
+      "wrong_answer": "5 is too small a number",
+      "correct_answer": "the axis reaches only 50"
+     },
+     "cause": "Judges the scale by its size.",
+     "reveals": "The answer 5 is too small a number as a wrong option, with a reason that names the idea.",
+     "help": "Check: 10 squares × 5 = 50, so 80 will not fit.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_ALWAYS_ONE",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Believes a scale must be 1 square to 1 unit.",
+     "example": {
+      "question": "Values up to 80 on 10 squares: scale?",
+      "wrong_answer": "1 to 1",
+      "correct_answer": "1 to 10"
+     },
+     "cause": "Has seen only that scale.",
+     "reveals": "The answer 1 to 1 as a wrong option, with a reason that names the idea.",
+     "help": "Choose the scale to fit the data.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_BIGGER_THAN_DATA",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Believes a scale must be bigger than the largest value.",
+     "example": {
+      "question": "Values up to 80: scale?",
+      "wrong_answer": "1 square to 100",
+      "correct_answer": "1 square to 10"
+     },
+     "cause": "Thinks one square must hold everything.",
+     "reveals": "The answer 1 square to 100 as a wrong option, with a reason that names the idea.",
+     "help": "A scale is what one square stands for.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_SUBTRACTED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Takes the length of the axis from the largest value.",
+     "example": {
+      "question": "An axis 10 cm long runs 0 to 50. Units per cm?",
+      "wrong_answer": "40",
+      "correct_answer": "5"
+     },
+     "cause": "Subtracts the two numbers.",
+     "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+     "help": "Share 50 among 10 cm: divide.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_INVERTED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Divides the centimetres by the units.",
+     "example": {
+      "question": "An axis 10 cm long runs 0 to 50. Units per cm?",
+      "wrong_answer": "0.2",
+      "correct_answer": "5"
+     },
+     "cause": "Divides the wrong way round.",
+     "reveals": "The answer 0.2 as a wrong option, with a reason that names the idea.",
+     "help": "Units ÷ centimetres.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_WHOLE_AXIS_AS_SCALE",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Gives the whole range as the scale for one centimetre.",
+     "example": {
+      "question": "An axis 10 cm long runs 0 to 50. Units per cm?",
+      "wrong_answer": "50",
+      "correct_answer": "5"
+     },
+     "cause": "Forgets to share.",
+     "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+     "help": "Divide by the 10 cm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_TOO_SMALL_TO_FIT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Picks a scale that does not reach the largest value.",
+     "example": {
+      "question": "Rainfall up to 170 mm on 10 squares: smallest scale?",
+      "wrong_answer": "10 mm",
+      "correct_answer": "20 mm"
+     },
+     "cause": "Chooses the nearest round number below.",
+     "reveals": "The answer 10 mm as a wrong option, with a reason that names the idea.",
+     "help": "10 squares × 10 = 100: too short.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_NOT_SMALLEST",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Picks a scale that fits but is not the smallest that fits.",
+     "example": {
+      "question": "Rainfall up to 170 mm on 10 squares: smallest scale?",
+      "wrong_answer": "25 mm",
+      "correct_answer": "20 mm"
+     },
+     "cause": "Stops at the first one that fits.",
+     "reveals": "The answer 25 mm as a wrong option, with a reason that names the idea.",
+     "help": "Try each scale from small to big.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE.M_SCALE_SQUASHED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.CHOOSE_SCALE",
+     "error": "Picks a very large scale that squashes the graph.",
+     "example": {
+      "question": "Rainfall up to 170 mm on 10 squares: scale?",
+      "wrong_answer": "50 mm",
+      "correct_answer": "20 mm"
+     },
+     "cause": "Plays safe.",
+     "reveals": "The answer 50 mm as a wrong option, with a reason that names the idea.",
+     "help": "Use most of the paper: the smallest scale that fits.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_POINTS_JOINED_ZIGZAG",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+     "error": "Joins the points one to the next freehand instead of drawing one ruled line.",
+     "example": {
+      "question": "How are the points of y = 2x + 1 joined?",
+      "wrong_answer": "dot to dot",
+      "correct_answer": "one straight line with a ruler"
+     },
+     "cause": "Treats it like a line graph of data.",
+     "reveals": "The answer dot to dot as a wrong option, with a reason that names the idea.",
+     "help": "A linear equation gives one straight line.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_LINE_STOPS_AT_POINTS",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+     "error": "Stops the line at the first and last points.",
+     "example": {
+      "question": "Should the line of y = 2x + 1 go past the table values?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes, across the grid"
+     },
+     "cause": "Thinks the line is only where points are.",
+     "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+     "help": "Every x has a y: extend the line.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_OFF_POINT_KEPT",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+     "error": "Bends the line to pass through a point that is off it.",
+     "example": {
+      "question": "Four points line up and one does not. What now?",
+      "wrong_answer": "draw through all five",
+      "correct_answer": "check that point in the table"
+     },
+     "cause": "Trusts every point.",
+     "reveals": "The answer draw through all five as a wrong option, with a reason that names the idea.",
+     "help": "A point off the line is a mistake in the table.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH.M_LINE_THROUGH_ORIGIN_FORCED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINEAR_GRAPH",
+     "error": "Draws the line through the origin whatever the equation.",
+     "example": {
+      "question": "Does y = 2x + 1 pass through (0, 0)?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No: it passes through (0, 1)"
+     },
+     "cause": "Thinks every graph starts at 0.",
+     "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+     "help": "At x = 0, y = 1.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_COST_FOR_HOURS",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "error": "Reads the up value of the crossing when the across value is asked.",
+     "example": {
+      "question": "Two hall costs meet at (4, 2,000). For how many hours is the cost the same?",
+      "wrong_answer": "2,000",
+      "correct_answer": "4"
+     },
+     "cause": "Reads the wrong axis.",
+     "reveals": "The answer 2,000 as a wrong option, with a reason that names the idea.",
+     "help": "Hours are along the bottom.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_CROSS_AT_Y_AXIS",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "error": "Believes the lines cross where each meets the y-axis.",
+     "example": {
+      "question": "Why is the crossing point the solution?",
+      "wrong_answer": "it is on the y-axis",
+      "correct_answer": "it is on both lines"
+     },
+     "cause": "Mixes intercepts with the crossing.",
+     "reveals": "The answer it is on the y-axis as a wrong option, with a reason that names the idea.",
+     "help": "The lines cross each other, usually away from the axis.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_CROSS_WHERE_ZERO",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "error": "Believes the crossing is where both equations equal zero.",
+     "example": {
+      "question": "Why is the crossing point the solution?",
+      "wrong_answer": "both equations are zero there",
+      "correct_answer": "it fits both equations"
+     },
+     "cause": "Thinks solving means getting zero.",
+     "reveals": "The answer both equations are zero there as a wrong option, with a reason that names the idea.",
+     "help": "Put the numbers in: they fit both equations.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_ALL_POINTS_SHARED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "error": "Believes every point on one line fits the other equation.",
+     "example": {
+      "question": "Do the lines share every point?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, only the crossing"
+     },
+     "cause": "Does not picture two different lines.",
+     "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+     "help": "Different lines share only one point.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_POINT_ON_ONE_LINE",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "error": "Gives a point on only one of the lines.",
+     "example": {
+      "question": "y = x + 1 and y = 3 - x meet at?",
+      "wrong_answer": "(2, 3)",
+      "correct_answer": "(1, 2)"
+     },
+     "cause": "Checks only one equation.",
+     "reveals": "The answer (2, 3) as a wrong option, with a reason that names the idea.",
+     "help": "Check the point in both equations.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY.M_ONE_COORDINATE_ONLY",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SOLVE_GRAPHICALLY",
+     "error": "Gives only the x value as the solution.",
+     "example": {
+      "question": "Solve y = x + 1 and y = 3 - x graphically.",
+      "wrong_answer": "x = 1",
+      "correct_answer": "x = 1, y = 2"
+     },
+     "cause": "Thinks one number is the answer.",
+     "reveals": "The answer x = 1 as a wrong option, with a reason that names the idea.",
+     "help": "A solution is a pair: x and y.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_DIFFERENCE_NOT_DIVIDED_GRAPH",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT",
+     "error": "Gives the difference in fixed charges as the meeting distance.",
+     "example": {
+      "question": "A: 200 + 30 a km. B: 100 + 50 a km. Meet at?",
+      "wrong_answer": "100 km",
+      "correct_answer": "5 km"
+     },
+     "cause": "Stops after one subtraction.",
+     "reveals": "The answer 100 km as a wrong option, with a reason that names the idea.",
+     "help": "Divide by the difference in rates: 100 ÷ 20.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_RATES_ADDED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT",
+     "error": "Adds the rates instead of taking one from the other.",
+     "example": {
+      "question": "A: 200 + 30 a km. B: 100 + 50 a km. Meet at?",
+      "wrong_answer": "1.25 km",
+      "correct_answer": "5 km"
+     },
+     "cause": "Combines the two rates.",
+     "reveals": "The answer 1.25 km as a wrong option, with a reason that names the idea.",
+     "help": "The gap closes by 50 - 30 each km.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_FIXED_ADDED",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT",
+     "error": "Adds the fixed charges instead of taking one from the other.",
+     "example": {
+      "question": "A: 200 + 30 a km. B: 100 + 50 a km. Meet at?",
+      "wrong_answer": "15 km",
+      "correct_answer": "5 km"
+     },
+     "cause": "Adds the two fixed amounts.",
+     "reveals": "The answer 15 km as a wrong option, with a reason that names the idea.",
+     "help": "Take one fixed charge from the other.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT.M_CHEAPER_SIDE_WRONG",
+     "skill": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.SIMULTANEOUS_GRAPH_CONTEXT",
+     "error": "Says the plan with the lower fixed charge is cheaper for every distance.",
+     "example": {
+      "question": "A: 200 + 30 a km. B: 100 + 50 a km. Cheaper for 10 km?",
+      "wrong_answer": "B",
+      "correct_answer": "A (500 against 600)"
+     },
+     "cause": "Looks only at the start of the lines.",
+     "reveals": "The answer B as a wrong option, with a reason that names the idea.",
+     "help": "After the meeting point the lines swap over.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G8.GEOMET.SCALE_DRAWING",
