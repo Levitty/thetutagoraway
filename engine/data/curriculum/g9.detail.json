@@ -1,0 +1,1250 @@
+{
+ "outcomes": {
+  "MATH.G9.NUMBER.INTEGERS.a": "perform basic operations on Integers in different situations",
+  "MATH.G9.NUMBER.INTEGERS.b": "work out combined Operations on Integers in different situations",
+  "MATH.G9.NUMBER.INTEGERS.c": "apply Integers to real life situations",
+  "MATH.G9.NUMBER.INTEGERS.d": "use IT or other resources to learn more on integers",
+  "MATH.G9.NUMBER.INTEGERS.e": "appreciate use of integers in real life situations",
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.a": "Work out cubes of numbers by multiplication in real life situations",
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.b": "Determine cubes of numbers from mathematical tables in different situations",
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.c": "Determine cube roots of numbers by factor method in different situations",
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.d": "Determine cube roots of numbers from mathematical tables in different situations",
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.e": "Apply cubes and cube roots in real life situations",
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.f": "Work out cubes and cube roots using IT devices",
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.a": "Express numbers in index form in different situations",
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.b": "Generate the laws of Indices in different situations",
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.c": "Apply the laws of indices in different situations",
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.d": "Relate Powers of 10 to common logarithms in different situations",
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.e": "Use IT to learn more on indices and common logarithms",
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.f": "Appreciate use of indices and logarithms in real life situations",
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.a": "divide quantities into proportional parts in real life situations",
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.b": "relate different ratios in real life situations",
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c": "work out compound proportions using ratio method in different situations",
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.d": "calculate rates of work in real life situations",
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.e": "use IT devices to learn more on Compound proportions and rates of work",
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.f": "appreciate use of Compound proportions and rates of work in real life situations",
+  "MATH.G9.ALGEBR.MATRICES.a": "identify a matrix in different situations",
+  "MATH.G9.ALGEBR.MATRICES.b": "determine the order of a matrix in different situations",
+  "MATH.G9.ALGEBR.MATRICES.c": "determine the position of items in a matrix in different situations",
+  "MATH.G9.ALGEBR.MATRICES.d": "determine compatibility of matrices in addition and subtraction",
+  "MATH.G9.ALGEBR.MATRICES.e": "carry out addition and subtraction of matrices in real life situations",
+  "MATH.G9.ALGEBR.MATRICES.f": "reflect on the use of matrices in real life situations",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.a": "identify the gradient in real life situations",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.b": "determine the gradient of a line from two known points",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.c": "determine the equation of a straight line given two points",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.d": "determine the equation of a straight line from a known point and a gradient",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.e": "express the equation of a straight line in the form of 𝑦 = 𝑚𝑥 + 𝑐",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.f": "interpret the equation 𝑦 = 𝑚𝑥 + 𝑐 in different situations",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.g": "determine the x and y intercepts of a straight line",
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.h": "recognize the use of equations of straight lines in real life",
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.a": "solve linear inequalities in one unknown",
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.b": "represent linear inequalities in one unknown graphically",
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.c": "represent linear inequality in two unknowns graphically",
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.d": "apply linear inequalities to real life situations",
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.e": "reflect on the use of linear inequalities in real life",
+  "MATH.G9.MEASUR.AREA.a": "calculate the area of a pentagon and a hexagon in different situations",
+  "MATH.G9.MEASUR.AREA.b": "work out the surface area of triangular and rectangular based prisms",
+  "MATH.G9.MEASUR.AREA.c": "work out the surface area of triangular, rectangular and square based pyramids",
+  "MATH.G9.MEASUR.AREA.d": "calculate the area of a sector and segment of a circle",
+  "MATH.G9.MEASUR.AREA.e": "work out the surface area of a cone in real life situations",
+  "MATH.G9.MEASUR.AREA.f": "calculate the surface area of a sphere in real life situations",
+  "MATH.G9.MEASUR.AREA.g": "recognize the use of area in real life situations",
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.a": "work out the volume of a triangular and rectangular based prisms",
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.b": "calculate the volume of a triangular, rectangular and squares based pyramids",
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.c": "work out the volume of a cone in real life situations",
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.d": "determine the volume of a frustum in real life situations",
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.e": "calculate the volume of a sphere in real life situations",
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.f": "promote use of volume and capacity of different containers in real life situations",
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.a": "convert units of mass from one form to another in different situations",
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.b": "relate mass and weight in real life situations",
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.c": "determine mass, volume and density in different situations",
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.d": "apply density to real life situations",
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.e": "recognize the use of density in daily life",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.a": "work out speed in km/h and m/s in real life situations",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.b": "work out average speed in real life situations",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.c": "determine velocity in real life situations",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d": "work out acceleration in real life situations",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.e": "identify the longitudes on the globe",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.f": "relate longitudes to time on the globe",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.g": "determine local time of places on the earth along different longitudes",
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.h": "appreciate use of time and distance in real life situations",
+  "MATH.G9.MEASUR.MONEY.a": "identify currencies that are used in different countries",
+  "MATH.G9.MEASUR.MONEY.b": "convert currency from one form to another in real life situations",
+  "MATH.G9.MEASUR.MONEY.c": "work out import and export duties charged on goods and services",
+  "MATH.G9.MEASUR.MONEY.d": "work out excise duty charged on goods and services",
+  "MATH.G9.MEASUR.MONEY.e": "determine value added tax charged on goods and services",
+  "MATH.G9.MEASUR.MONEY.f": "appreciate use of money in day to day activities",
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.a": "approximate quantities in measurements in different situations",
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.b": "determine errors using estimations and actual measurements of quantities",
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c": "determine percentage errors using actual measurements of quantities",
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.d": "appreciate approximations and errors in real life situations",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.a": "plot out points on a Cartesian plane",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.b": "draw a straight line graph given an equation",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.c": "draw parallel lines on the Cartesian plane",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.d": "relate the gradients of parallel lines",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.e": "draw perpendicular lines on the Cartesian plane",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.f": "relate the gradients of perpendicular lines",
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.g": "apply graphs of straight line in real life situation",
+  "MATH.G9.GEOMET.SCALE_DRAWING.a": "identify compass and true bearings in real life situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.b": "determine the bearing of one point from another in real life situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.c": "locate a point using bearing and distance in real life situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.d": "identify angles of elevation in real life situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.e": "determine angles of elevation in different situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.f": "identify angles of depression in real life situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.g": "determine angles of depression in different situations",
+  "MATH.G9.GEOMET.SCALE_DRAWING.h": "apply scale drawing in simple surveying",
+  "MATH.G9.GEOMET.SCALE_DRAWING.i": "appreciate the use of scale drawing in real life situations",
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.a": "identify similar figures and their properties",
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.b": "draw similar figures in different situations",
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.c": "determine properties of enlargement of different figures",
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.d": "apply properties of enlargement to draw similar objects and their images",
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.e": "determine the linear scale factor of similar figures",
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.f": "promote use of similarity and enlargement in real life situations",
+  "MATH.G9.GEOMET.TRIGONOMETRY.a": "identify angles and sides of right angled triangles in different situations",
+  "MATH.G9.GEOMET.TRIGONOMETRY.b": "identify Sine, Cosine and Tangent ratios from a right angled triangle in different situations",
+  "MATH.G9.GEOMET.TRIGONOMETRY.c": "read tables of trigonometric ratios for acute angles",
+  "MATH.G9.GEOMET.TRIGONOMETRY.d": "determine trigonometric ratios of acute angles using calculators",
+  "MATH.G9.GEOMET.TRIGONOMETRY.e": "apply trigonometric ratios to calculate lengths and angles of right angled triangles in different situations",
+  "MATH.G9.GEOMET.TRIGONOMETRY.f": "appreciate use of trigonometric ratios in real life situations",
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.a": "determine appropriate class width for grouping data",
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.b": "draw frequency distribution tables of grouped data",
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.c": "identify the modal class of grouped data",
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.d": "calculate the mean of a grouped data from real life situations",
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.e": "determine the median of a grouped data from real life situations",
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.f": "appreciate data interpretation in real life situations",
+  "MATH.G9.DATA_H.PROBABILITY.a": "perform experiments involving equally and likely outcomes in different situations",
+  "MATH.G9.DATA_H.PROBABILITY.b": "determine the range of probability of an event",
+  "MATH.G9.DATA_H.PROBABILITY.c": "identify mutually exclusive events in real life situations",
+  "MATH.G9.DATA_H.PROBABILITY.d": "perform experiments of single chance involving mutually exclusive events",
+  "MATH.G9.DATA_H.PROBABILITY.e": "perform experiments involving independent events in different situations",
+  "MATH.G9.DATA_H.PROBABILITY.f": "draw a tree diagram for a single outcome",
+  "MATH.G9.DATA_H.PROBABILITY.g": "appreciate the probability of events occurring in real life situations"
+ },
+ "skills": {
+  "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES": {
+   "forms": [
+    "work out",
+    "subtract a negative",
+    "fill the missing integer",
+    "find the mistake"
+   ],
+   "mastery": "The child adds and subtracts any two integers without a number line, knowing that subtracting a negative number is the same as adding its positive (5 - (-3) = 8) and adding a negative is the same as subtracting (4 + (-9) = -5), and gives the sign of the result correctly."
+  },
+  "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES": {
+   "forms": [
+    "work out the product",
+    "divide",
+    "which sign",
+    "complete the pattern"
+   ],
+   "mastery": "The child multiplies and divides integers, giving a positive answer when the signs are the same and a negative answer when they differ: (-4) x 6 = -24, (-4) x (-6) = 24, 18 / (-3) = -6, (-18) / (-3) = 6, and can explain the rule from a pattern of products."
+  },
+  "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS": {
+   "forms": [
+    "work out",
+    "which step is wrong",
+    "why is this wrong",
+    "which is done first"
+   ],
+   "mastery": "The child works out an expression such as 7 - 3 x (-4) or -12 / 4 + 5 by doing multiplication and division before addition and subtraction, and left to right within the same rank, keeping the sign of every term: 7 - 3 x (-4) = 7 + 12 = 19."
+  },
+  "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED": {
+   "forms": [
+    "work out in steps",
+    "complete the working",
+    "value of the expression",
+    "find the mistake"
+   ],
+   "mastery": "The child works out an expression with brackets such as (-5 + 2) x (-4) - 18 / (-3) in steps: the bracket first, then each product and quotient with its sign, then the subtraction, changing minus a negative into plus: (-3) x (-4) = 12, 18 / (-3) = -6, 12 - (-6) = 18."
+  },
+  "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT": {
+   "forms": [
+    "balance after",
+    "which floor",
+    "how much is owed",
+    "is the account still overdrawn"
+   ],
+   "mastery": "The child writes a real situation as integers (an overdraft as a negative balance, a basement floor as a negative floor), starts from the opening value, applies every change with its sign in order, and says what the final integer means in the story (still overdrawn, below the ground floor)."
+  },
+  "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE": {
+   "forms": [
+    "how many metres higher",
+    "difference in temperature",
+    "from the table",
+    "how far below"
+   ],
+   "mastery": "The child reads altitudes or temperatures from a table, picks the highest and the lowest, and finds the gap as highest minus lowest with signs: 450 - (-120) = 570 m, counting the part below zero and the part above it."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_MULTIPLICATION": {
+   "forms": [
+    "work out the cube",
+    "which is a cube number",
+    "cube of a decimal",
+    "find the mistake"
+   ],
+   "mastery": "The child works out the cube of a whole number, a negative number, a decimal or a fraction by multiplying it by itself three times (2.5 x 2.5 x 2.5 = 15.625, (-4) x (-4) x (-4) = -64, (2/3) cubed = 8/27), and recognises the cube numbers up to 1,000."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_FROM_TABLE": {
+   "forms": [
+    "read from the table",
+    "row and column",
+    "use the table for a larger number",
+    "to 4 significant figures"
+   ],
+   "mastery": "The child reads the cube of a number such as 2.37 from the table (row 2.3, column 7) to 4 significant figures, and for a number outside 1 to 10 writes it as a number from the table times a power of 10 and multiplies the table value by that power cubed: 23.7 cubed = 2.37 cubed x 1,000."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_BY_FACTORS": {
+   "forms": [
+    "cube root by prime factors",
+    "complete the working",
+    "how many 2s",
+    "find the mistake"
+   ],
+   "mastery": "The child writes a perfect cube as a product of prime factors, puts the factors in groups of three equal primes, takes one prime from each group and multiplies them: 2,744 = (2x2x2)(7x7x7), so the cube root is 2 x 7 = 14."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.PERFECT_CUBE_MULTIPLIER": {
+   "forms": [
+    "smallest number to multiply by",
+    "make it a perfect cube",
+    "which factors are missing",
+    "smallest divisor"
+   ],
+   "mastery": "The child writes the number in prime factors, counts how many of each prime are short of a full group of three, and multiplies those missing primes: 72 = 2 x 2 x 2 x 3 x 3 needs one more 3, so the smallest multiplier is 3 and 216 = 6 cubed."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_FROM_TABLE": {
+   "forms": [
+    "read the cube root",
+    "row and column",
+    "cube root of a large number",
+    "which power of 10"
+   ],
+   "mastery": "The child reads the cube root of a number from 1 to 10 from the table, and for a larger number writes it as a number from the table times 1,000 or 1,000,000 so the cube root is the table value times 10 or 100: the cube root of 4,500 = cube root of 4.5 x 10."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_VOLUME_CONTEXT": {
+   "forms": [
+    "how many litres",
+    "how many small cubes fit",
+    "what happens to the volume",
+    "why is this wrong"
+   ],
+   "mastery": "The child finds the volume of a cube from its edge (edge x edge x edge), changes m cubed to litres (1 m cubed = 1,000 litres), finds how many small cubes fill a large one (cubes along an edge, cubed), and explains that doubling the edge makes the volume 8 times as big."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_ROOT_CONTEXT": {
+   "forms": [
+    "length of one edge",
+    "side of the tank",
+    "what size box",
+    "check your answer"
+   ],
+   "mastery": "The child finds the edge of a cube-shaped box or tank from its volume by taking the cube root (a box holding 3,375 cubic cm has edge 15 cm), by factors or a table, and checks by cubing the answer."
+  },
+  "MATH.G9.NUMBER.CUBES_AND_CUBE_ROOTS.CUBE_BY_CALCULATOR": {
+   "forms": [
+    "use a calculator",
+    "which key",
+    "round the display",
+    "is the answer sensible"
+   ],
+   "mastery": "The child uses the cube key (x cubed or x^y with 3) and the cube root key on a calculator, puts a negative number in brackets, rounds the display to the accuracy asked (4 significant figures, 2 decimal places), and checks the answer against an estimate: the cube root of 50 is between 3 and 4 because 27 < 50 < 64."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM": {
+   "forms": [
+    "write in index form",
+    "work out the power",
+    "base and index",
+    "after n rounds"
+   ],
+   "mastery": "The child names the base and the index, writes a repeated product in index form (2 x 2 x 2 x 2 x 2 = 2 to the power 5, 72 = 2 cubed x 3 squared) and works out a power by repeated multiplication (3 to the power 4 = 81), including growth that multiplies by the same number each step."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE": {
+   "forms": [
+    "simplify",
+    "which law",
+    "use the table",
+    "how many pieces"
+   ],
+   "mastery": "The child shows from repeated factors that a to the m times a to the n is a to the (m + n) and a to the m divided by a to the n is a to the (m - n), keeps the base unchanged, and uses the laws to simplify and to work out values: 2 to the 5 x 2 to the 3 = 2 to the 8 = 256; 5 to the 7 divided by 5 to the 4 = 125."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER": {
+   "forms": [
+    "why is a to the 0 equal to 1",
+    "simplify the power of a power",
+    "which is true",
+    "find the value"
+   ],
+   "mastery": "The child explains from the division law that any non-zero number to the power 0 is 1 (7 to the 3 divided by 7 to the 3 = 7 to the 0 = 1), and that a power of a power multiplies the indices: (2 cubed) squared = 2 to the 6."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED": {
+   "forms": [
+    "simplify",
+    "find n",
+    "which step is wrong",
+    "write as a single power"
+   ],
+   "mastery": "The child simplifies an expression such as (x cubed) to the 4 x x squared divided by x to the 5 in steps, one law at a time (x to the 12, x to the 14, x to the 9), works with numbers in front of the letters (2x cubed x 3x squared = 6x to the 5), and finds an unknown index by writing an equation for the indices."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10": {
+   "forms": [
+    "write as a power of 10",
+    "find log",
+    "continue the pattern",
+    "which number has log"
+   ],
+   "mastery": "The child writes a power of 10 such as 10,000 = 10 to the 4 and says its common logarithm is the index (log 10,000 = 4), continues the pattern below 1 (log 0.01 = -2) and knows log 1 = 0 and log 10 = 1."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS": {
+   "forms": [
+    "simplify without a calculator",
+    "given log 2 and log 3, find",
+    "which step is wrong",
+    "write as one log"
+   ],
+   "mastery": "The child adds logs of numbers whose product is a power of 10 (log 25 + log 40 = log 1,000 = 3) and subtracts them for a quotient, using log of a product = sum of logs because indices add when powers multiply, and uses given logs to find others (log 6 = log 2 + log 3)."
+  },
+  "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT": {
+   "forms": [
+    "how many times larger",
+    "magnitude",
+    "each step on the scale",
+    "compare two readings"
+   ],
+   "mastery": "The child reads a scale where each step of 1 multiplies the size by 10 (a tremor of magnitude 5 moves the ground 100 times as much as one of magnitude 3), writing each reading back as a power of 10 and dividing."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS": {
+   "forms": [
+    "share in the ratio",
+    "how much does each get",
+    "from the table",
+    "find the mistake"
+   ],
+   "mastery": "The child shares an amount in a ratio of two or three parts by adding the parts, finding the value of one part (amount divided by the total parts) and multiplying by each share: 36,000 shillings in the ratio 2:3:4 gives one part 4,000 and shares 8,000, 12,000 and 16,000, which add back to 36,000."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN": {
+   "forms": [
+    "combine the ratios",
+    "how many hens",
+    "why is this wrong",
+    "write as a:b:c"
+   ],
+   "mastery": "The child links a:b and b:c by making the shared term equal (multiply each ratio so the b values match, using the LCM), then writes a:b:c and uses it: cows:goats = 2:3 and goats:hens = 4:5 give cows:goats:hens = 8:12:15."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION": {
+   "forms": [
+    "how many kg",
+    "how many days",
+    "find the mistake",
+    "more or fewer"
+   ],
+   "mastery": "The child handles two changes at once (machines and hours, workers and shambas) by asking for each change whether it increases or decreases the answer and multiplying by the matching ratio, or by finding the amount for one unit of each first: 4 machines grind 1,200 kg in 6 hours, so 6 machines in 5 hours grind 1,200 x 6/4 x 5/6 = 1,500 kg."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION": {
+   "forms": [
+    "how many days",
+    "direct or inverse",
+    "find the constant",
+    "complete the table"
+   ],
+   "mastery": "The child sees that more workers take fewer days (workers x days stays the same), checks a table by multiplying x and y in each row (inverse) or dividing (direct), and finds a missing value from the constant product: 6 workers take 10 days, so 60 worker-days, so 4 workers take 15 days."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER": {
+   "forms": [
+    "how long together",
+    "how many days to finish",
+    "why is the average wrong",
+    "what fraction in one hour"
+   ],
+   "mastery": "The child turns each time into the part of the job done in one unit of time (a tap that fills a tank in 4 hours fills 1/4 an hour), adds the parts for people working together, and turns the total back into a time; for a job finished by one person, takes the work done together from the whole and divides the rest by that person's rate."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING": {
+   "forms": [
+    "how long to fill",
+    "pipe and leak",
+    "part filled in one hour",
+    "will it ever fill"
+   ],
+   "mastery": "The child finds the part filled in one hour by the pipe and the part emptied by the leak, subtracts the leak's part, and turns what is left back into a time: a pipe fills in 3 hours and a leak empties in 6 hours, so 1/3 - 1/6 = 1/6 a tank an hour, 6 hours."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_IDENTIFY": {
+   "forms": [
+    "which is a matrix",
+    "write the table as a matrix",
+    "what does row 2 show",
+    "how many rows"
+   ],
+   "mastery": "The child recognises a matrix as numbers arranged in rows and columns inside brackets, writes the numbers of a table (marks of learners in subjects, items sold by two shops on three days) as a matrix in the same order, and says what a row and a column stand for."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_ORDER": {
+   "forms": [
+    "what is the order",
+    "rows by columns",
+    "a square matrix",
+    "which has order 3 x 1"
+   ],
+   "mastery": "The child gives the order of a matrix as the number of rows by the number of columns (a matrix with 2 rows and 3 columns has order 2 x 3), knows that 2 x 3 and 3 x 2 are different orders, and names row, column and square matrices."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_ELEMENT_POSITION": {
+   "forms": [
+    "element in row 2, column 3",
+    "which position",
+    "name the element",
+    "read from the table"
+   ],
+   "mastery": "The child finds the element in row i and column j by counting rows from the top and columns from the left (row first), and names the position of a given element: in a marks matrix, row 2 column 3 is the second learner's mark in the third subject."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_COMPATIBILITY": {
+   "forms": [
+    "can A and B be added",
+    "which two can be added",
+    "why not",
+    "find the mistake"
+   ],
+   "mastery": "The child compares the orders of two matrices and says they can be added or subtracted only when the orders are the same (same rows and same columns), not just the same number of elements, and picks the compatible pair from a list of orders."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_ADD_SUBTRACT": {
+   "forms": [
+    "add the matrices",
+    "subtract",
+    "total sales",
+    "find the mistake"
+   ],
+   "mastery": "The child adds or subtracts matching elements of two matrices of the same order, keeping the order of subtraction (first minus second) and the signs of negative elements, and uses it for real totals and differences: sales of two weeks added, stock left after sales subtracted."
+  },
+  "MATH.G9.ALGEBR.MATRICES.MATRIX_UNKNOWN_ELEMENTS": {
+   "forms": [
+    "find x and y",
+    "find x + y",
+    "which element",
+    "solve"
+   ],
+   "mastery": "The child matches the elements in the same position on each side of a matrix sum, writes a small equation for each unknown and solves it: [x 3; 2 y] + [4 1; 5 2] = [9 4; 7 6] gives x + 4 = 9, so x = 5, and y + 2 = 6, so y = 4."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_REAL_LIFE": {
+   "forms": [
+    "which is steepest",
+    "how far does it rise",
+    "gradient as a percentage",
+    "rise and run"
+   ],
+   "mastery": "The child finds the steepness of a road, roof or ramp as vertical rise divided by horizontal run, compares slopes by their gradients (not by the rise alone), and uses a gradient given as a percentage: a 6% road rises 6 m for every 100 m across, so 450 m across rises 27 m."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.GRADIENT_TWO_POINTS": {
+   "forms": [
+    "find the gradient",
+    "which step is wrong",
+    "positive or negative",
+    "from the graph"
+   ],
+   "mastery": "The child works out the change in y over the change in x, taking both changes in the same order ((y2 - y1)/(x2 - x1)), with negative coordinates handled correctly, and says that a line going down to the right has a negative gradient: (1, 7) and (4, 1) give -6/3 = -2."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_TWO_POINTS": {
+   "forms": [
+    "find the equation",
+    "complete the steps",
+    "what is the mistake",
+    "check the other point"
+   ],
+   "mastery": "The child finds m from the two points, then c by putting one point into y = mx + c and solving (c = y - mx, not the y of the point), and writes the equation: (2, 7) and (5, 13) give m = 2, 7 = 4 + c, so y = 2x + 3; and checks it with the second point."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.EQUATION_POINT_GRADIENT": {
+   "forms": [
+    "find the equation",
+    "which step is wrong",
+    "find c",
+    "write y = mx + c"
+   ],
+   "mastery": "The child puts the gradient and the point into y = mx + c, multiplies m by x, takes it from y to find c, and writes the equation with the sign of c correct: gradient -3 through (2, 1) gives 1 = -6 + c, c = 7, y = -3x + 7."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.REARRANGE_Y_MX_C": {
+   "forms": [
+    "make y the subject",
+    "write in the form y = mx + c",
+    "find m and c",
+    "find the mistake"
+   ],
+   "mastery": "The child makes y the subject of an equation such as 3x + 2y = 8 by moving the x term to the other side (changing its sign) and dividing every term by the number in front of y: y = -3/2 x + 4, then reads m and c."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERPRET_M_AND_C": {
+   "forms": [
+    "what does m mean",
+    "what is the fixed charge",
+    "which line is steeper",
+    "cost of each extra km"
+   ],
+   "mastery": "The child reads m as the gradient (how much y changes for each 1 added to x) and c as the value of y where x = 0 (the y-intercept), and says what they mean in a story: in a boda boda fare y = 40x + 100, 40 shillings a km and a fixed charge of 100 shillings."
+  },
+  "MATH.G9.ALGEBR.EQUATIONS_OF_A_STRAIGHT_.INTERCEPTS": {
+   "forms": [
+    "where does it meet the x-axis",
+    "find the intercepts",
+    "when is it empty",
+    "why can this not be right"
+   ],
+   "mastery": "The child finds where a line meets the y-axis by putting x = 0 and the x-axis by putting y = 0, writes them as points ((0, c) and (x, 0)), and uses them in context: a drum emptying by y = 60 - 4x is empty when y = 0, after 15 minutes; the area of the triangle the line makes with the axes is half the product of the intercepts."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.SOLVE_ONE_UNKNOWN": {
+   "forms": [
+    "solve",
+    "why does the sign change",
+    "find the mistake",
+    "largest whole number"
+   ],
+   "mastery": "The child solves an inequality such as 7 - 3x > 19 like an equation, taking the same away from both sides, and reverses the sign when multiplying or dividing both sides by a negative number (x < -4), and explains why with a pair of numbers (2 < 5 but -2 > -5)."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.NUMBER_LINE_ONE_UNKNOWN": {
+   "forms": [
+    "show on the number line",
+    "which inequality is shown",
+    "open or solid circle",
+    "why is the circle wrong"
+   ],
+   "mastery": "The child marks the boundary number with an open circle for < or > (not included) and a solid circle for less than or equal to or greater than or equal to (included), shades towards smaller numbers for < and towards bigger numbers for >, and reads an inequality from a number line."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_BOUNDARY_LINE": {
+   "forms": [
+    "solid or dashed",
+    "draw the boundary",
+    "why is this correct",
+    "which line is the boundary"
+   ],
+   "mastery": "The child draws the line y = mx + c for an inequality such as y < 2x + 1, solid when the sign includes \"equal to\" and dashed when it does not, and knows the line style says whether the boundary is in the region, not which side to shade."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_REGION": {
+   "forms": [
+    "which point lies in the region",
+    "shade the region",
+    "test a point",
+    "is (2, 3) in the region"
+   ],
+   "mastery": "The child tests a point not on the line (often the origin) in the inequality to decide which side to shade, and says whether a given point is in the region by putting its x into the line and comparing the y values: for y > 2x + 1, the point (1, 5) is in the region because 5 > 3."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_MOST": {
+   "forms": [
+    "the most that can be bought",
+    "how many sacks at most",
+    "how much spare room",
+    "write the inequality"
+   ],
+   "mastery": "The child writes an inequality for a limit (cost at most the budget, load at most the limit, counting fixed amounts like the driver and tools), solves it, and gives the largest whole number that fits, rounding down: 1,000 shillings at 45 a book is at most 22 books."
+  },
+  "MATH.G9.ALGEBR.LINEAR_INEQUALITIES.INEQ_AT_LEAST": {
+   "forms": [
+    "the smallest number",
+    "at least",
+    "how many must come",
+    "write the inequality"
+   ],
+   "mastery": "The child writes an inequality for a target (money left at least an amount after a cost), adds the fixed cost to the target before dividing, solves, and gives the smallest whole number that fits, rounding up: a bus of 6,000 and at least 1,500 left at 350 a learner needs at least 22 learners."
+  },
+  "MATH.G9.MEASUR.AREA.AREA_REGULAR_POLYGON": {
+   "forms": [
+    "area of the hexagon",
+    "why is the centre angle 72 degrees",
+    "which step is wrong",
+    "area of a paving slab"
+   ],
+   "mastery": "The child joins the centre of a regular pentagon or hexagon to each corner, making 5 or 6 equal triangles with a centre angle of 360 / n degrees, finds one triangle as half base times height (the height from the centre to the middle of a side) and multiplies by the number of sides."
+  },
+  "MATH.G9.MEASUR.AREA.AREA_COMPOSITE_PENTAGON": {
+   "forms": [
+    "area of the plot",
+    "complete the steps",
+    "area of the gable end",
+    "split the shape"
+   ],
+   "mastery": "The child splits an irregular pentagon or hexagon (a plot, a gable wall) into a rectangle and triangles, finds each area (length x width; half base x height) and adds them, leaving no part out and counting no part twice."
+  },
+  "MATH.G9.MEASUR.AREA.SA_PRISM": {
+   "forms": [
+    "area to be painted",
+    "metal for an open trough",
+    "surface area in steps",
+    "which faces"
+   ],
+   "mastery": "The child lists every face of the prism (two equal ends and one rectangle for each side of the end), finds each area, and adds them, leaving out faces that are open (a trough with no top): a triangular prism with ends 3, 4, 5 cm and length 10 cm has 2 x 6 + (3 + 4 + 5) x 10 = 132 square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SA_PYRAMID": {
+   "forms": [
+    "slant height",
+    "surface area of the pyramid",
+    "cost of painting the roof",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds the slant height of a square-based pyramid from the vertical height and half the base by Pythagoras, finds each triangular face as half base times slant height, and adds the base when it is there: base 6 cm, height 4 cm, slant 5 cm, so 4 x 15 + 36 = 96 square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SECTOR_AREA": {
+   "forms": [
+    "area of the sector",
+    "what is the angle",
+    "area lit by a lamp",
+    "a slice of cake"
+   ],
+   "mastery": "The child finds a sector as angle/360 of the circle (pi r squared), and works back from a sector's area to its angle by dividing by the whole circle and multiplying by 360: radius 7 cm, 90 degrees, 38.5 square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SEGMENT_AREA": {
+   "forms": [
+    "area of the segment",
+    "complete the steps",
+    "flower bed",
+    "area between the chord and the arc"
+   ],
+   "mastery": "The child finds a segment as the sector minus the triangle made by the two radii and the chord, for a right angle at the centre the triangle being half of r times r: radius 7 m, 90 degrees: 38.5 - 24.5 = 14 square m."
+  },
+  "MATH.G9.MEASUR.AREA.SA_CONE": {
+   "forms": [
+    "curved surface area",
+    "total surface area",
+    "slant height",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds the slant height l from the radius and the vertical height by Pythagoras, the curved surface as pi r l, and adds the base pi r squared for a closed cone: r = 3 cm, h = 4 cm, l = 5 cm, 15 pi + 9 pi = 24 pi square cm."
+  },
+  "MATH.G9.MEASUR.AREA.SA_SPHERE": {
+   "forms": [
+    "surface area of the sphere",
+    "paint for a tank",
+    "a solid hemisphere",
+    "curved surface"
+   ],
+   "mastery": "The child uses 4 pi r squared for a sphere, half of it for the curved part of a hemisphere, and adds the flat circle for a solid hemisphere (3 pi r squared), and uses the area for paint or plating: a tank of radius 7 m has 616 square m, so at 14 square m a litre it needs 44 litres."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM": {
+   "forms": [
+    "how many litres",
+    "volume of the pool",
+    "which step is wrong",
+    "area of the end times the length"
+   ],
+   "mastery": "The child finds the area of the end (a triangle, rectangle or trapezium) and multiplies by the length, then changes cubic cm to litres (divide by 1,000) or cubic m to litres (multiply by 1,000): a trough with triangular ends of base 40 cm and height 30 cm, 150 cm long, holds 90,000 cubic cm = 90 litres."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID": {
+   "forms": [
+    "volume of the pyramid",
+    "how tall",
+    "how many litres",
+    "compared with the cuboid"
+   ],
+   "mastery": "The child finds a pyramid as one third of base area times height (one third of the prism on the same base and height), and works back to the height by multiplying the volume by 3 and dividing by the base area."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE": {
+   "forms": [
+    "volume of the heap",
+    "how many trips",
+    "how many litres",
+    "one third"
+   ],
+   "mastery": "The child finds a cone as one third of pi r squared times h, using the radius (half the diameter), and uses the volume for loads and capacity: a heap of sand of radius 3.5 m and height 2 m is about 25.7 cubic m, so a lorry of 6 cubic m needs 5 trips."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM": {
+   "forms": [
+    "capacity of the bucket",
+    "volume of the cut-off cone",
+    "complete the steps",
+    "what is left"
+   ],
+   "mastery": "The child finds the volume of a frustum (a bucket, a lampshade) as the whole cone minus the small cone cut off, each with its own radius and height, and changes it to litres; when the small cone is a scale copy, uses the cube of the scale factor."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE": {
+   "forms": [
+    "volume of the bowl",
+    "how many small spheres",
+    "why 8 times",
+    "capacity in litres"
+   ],
+   "mastery": "The child uses four thirds pi r cubed for a sphere and two thirds pi r cubed for a hemisphere, uses the radius three times, and compares volumes of spheres by the cube of the radius: melting a sphere of radius 6 cm gives 8 spheres of radius 3 cm."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_UNITS": {
+   "forms": [
+    "mass of the load in tonnes",
+    "total mass from the table",
+    "change to kg",
+    "how many bags"
+   ],
+   "mastery": "The child changes between milligrams, grams, kilograms and tonnes (1 tonne = 1,000 kg, 1 kg = 1,000 g, 1 g = 1,000 mg), puts masses in the same unit before adding or subtracting, and finds a load as the gross mass minus the empty lorry: 12.4 tonnes - 7,850 kg = 4.55 tonnes."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.MASS_WEIGHT": {
+   "forms": [
+    "weight in newtons",
+    "mass on the Moon",
+    "which statement is true",
+    "mass or weight"
+   ],
+   "mastery": "The child says mass (kg) is the amount of matter and stays the same everywhere, while weight (newtons) is the pull of gravity and changes from place to place, and works out weight = mass x g (a 50 kg sack weighs 500 N where g = 10 N/kg) and mass from weight."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_CALCULATE": {
+   "forms": [
+    "find the density",
+    "find the mass",
+    "find the volume",
+    "which sample is densest"
+   ],
+   "mastery": "The child uses density = mass / volume and its rearrangements (mass = density x volume, volume = mass / density), finds the volume of a regular solid first when needed, compares densities rather than masses, and reads density as the gradient of a mass-volume graph."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_UNITS": {
+   "forms": [
+    "write in kg per cubic m",
+    "write in g per cubic cm",
+    "which is larger",
+    "convert"
+   ],
+   "mastery": "The child knows 1 g/cm cubed = 1,000 kg/m cubed (1,000 g in a kg and 1,000,000 cubic cm in a cubic m), so multiplies by 1,000 to go to kg/m cubed and divides by 1,000 to come back: 7.8 g/cm cubed = 7,800 kg/m cubed."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_FLOAT_SINK": {
+   "forms": [
+    "float or sink",
+    "choose the best explanation",
+    "volume of the ice",
+    "why does a ship float"
+   ],
+   "mastery": "The child compares an object's density with the liquid's (less dense floats, denser sinks), not its mass or size alone, and uses density to find how much space a mass takes: 450 g of water (1 g/cm cubed) freezes to 500 cubic cm of ice (0.9 g/cm cubed)."
+  },
+  "MATH.G9.MEASUR.MASS_VOLUME_WEIGHT_AND_D.DENSITY_APPLY": {
+   "forms": [
+    "density of the stone",
+    "mean density of the mixture",
+    "mass of a chip of the same stone",
+    "complete the steps"
+   ],
+   "mastery": "The child finds the volume of an irregular stone by the rise in water level in a measuring cylinder, then its density; finds the mean density of a mixture as total mass over total volume (not the average of the densities); and uses a known density to find the mass of another piece."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS": {
+   "forms": [
+    "speed in km/h",
+    "change to m/s",
+    "speed on a stage",
+    "from the table"
+   ],
+   "mastery": "The child finds speed as distance over time with the time in hours for km/h (45 minutes = 0.75 h) or in seconds for m/s, and changes km/h to m/s by dividing by 3.6 and m/s to km/h by multiplying by 3.6: 72 km/h = 20 m/s."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_MEETING": {
+   "forms": [
+    "when do they meet",
+    "how far from",
+    "closing speed",
+    "complete the steps"
+   ],
+   "mastery": "The child adds the two speeds for vehicles moving towards each other (the gap closes at v1 + v2), finds the time to meet as the distance over that sum, and the meeting place from either vehicle's distance: 240 km apart at 50 and 70 km/h, they meet after 2 h, 100 km from the first town."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED": {
+   "forms": [
+    "average speed for the whole journey",
+    "including the stop",
+    "there and back",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds average speed as total distance over total time, counting rests and stops in the time, counting both ways of a there-and-back trip in the distance, and does not average the speeds of parts that take different times: 120 km at 60 km/h and 120 km at 40 km/h is 240 / 5 = 48 km/h."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY": {
+   "forms": [
+    "size of the average velocity",
+    "why is the velocity zero",
+    "velocity north",
+    "speed or velocity"
+   ],
+   "mastery": "The child tells velocity (displacement in a direction over time) from speed (distance over time), finds the displacement of a two-leg trip at right angles by Pythagoras, says a round trip has zero average velocity, and gives velocity with its direction: 30 km east then 40 km north in 2 h is 25 km/h."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION": {
+   "forms": [
+    "find the acceleration",
+    "from the table",
+    "from the graph",
+    "how long to stop"
+   ],
+   "mastery": "The child finds acceleration as change in velocity over time (from a table, a graph or a story), in m/s squared, uses the change between the two readings asked, changes km/h to m/s before using m/s squared, and finds the time to stop as speed over deceleration: 54 km/h = 15 m/s, at 3 m/s squared it stops in 5 s."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.DISTANCE_FROM_VT_GRAPH": {
+   "forms": [
+    "how far in the first 20 s",
+    "area under the graph",
+    "distance while speeding up",
+    "which shapes"
+   ],
+   "mastery": "The child splits the area under a velocity-time graph into a triangle (speeding up from rest) and a rectangle (constant velocity) and adds them: up to 12 m/s in 6 s, then 12 m/s to 20 s, is 36 + 168 = 204 m."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_IDENTIFY": {
+   "forms": [
+    "what is a longitude",
+    "east or west",
+    "the prime meridian",
+    "longitude of the place"
+   ],
+   "mastery": "The child describes longitudes as half-circles from the North Pole to the South Pole, measured in degrees east or west of the Greenwich meridian (0 degrees) up to 180 degrees, and gives the longitude of a place with E or W (Nairobi about 37 degrees E, Lima about 77 degrees W)."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LONGITUDE_TIME": {
+   "forms": [
+    "how many minutes apart",
+    "find the longitude",
+    "difference in longitude",
+    "degrees to minutes"
+   ],
+   "mastery": "The child finds the difference in longitude (subtract when both are east or both west, add when on opposite sides of 0 degrees) and turns it into time at 4 minutes a degree (15 degrees an hour), and works back from a time difference to a longitude: 2 h 20 min = 140 minutes = 35 degrees."
+  },
+  "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.LOCAL_TIME": {
+   "forms": [
+    "local time in",
+    "what time does the plane land",
+    "which step is wrong",
+    "ahead or behind"
+   ],
+   "mastery": "The child finds the time difference from the longitudes, adds it for a place to the east (ahead) and takes it away for a place to the west (behind), keeps the leftover minutes, and for a flight adds the flight time first and then changes to the local time at the arrival city."
+  },
+  "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY": {
+   "forms": [
+    "which currency",
+    "currency of Uganda",
+    "write the amount",
+    "what does the rate mean"
+   ],
+   "mastery": "The child names the currency of Kenya's neighbours and main trading partners (Uganda and Tanzania shillings, US dollar, euro, pound sterling, rand) and writes amounts with their names or symbols, and knows a rate compares one unit of a currency with shillings."
+  },
+  "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL": {
+   "forms": [
+    "how many shillings",
+    "which rate",
+    "from the rate board",
+    "cost of the trip"
+   ],
+   "mastery": "The child picks the bureau's buying rate when a customer sells foreign money to it and the selling rate when the customer buys foreign money from it, multiplies the number of units by the rate, and works out the net cost of a trip when unused money is sold back."
+  },
+  "MATH.G9.MEASUR.MONEY.CROSS_RATE": {
+   "forms": [
+    "how many Ugandan shillings",
+    "through US dollars",
+    "two steps",
+    "how many dollars first"
+   ],
+   "mastery": "The child changes shillings to dollars (divide by the shillings for one dollar) and then dollars to Ugandan shillings (multiply by USh for one dollar), keeping the two steps in order."
+  },
+  "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ": {
+   "forms": [
+    "what rate does the graph show",
+    "shillings for one dollar",
+    "read the graph",
+    "how many shillings for"
+   ],
+   "mastery": "The child reads a point on a straight-line conversion graph and divides the shillings by the foreign units at that point to get the rate for one unit, and uses the rate the right way round."
+  },
+  "MATH.G9.MEASUR.MONEY.IMPORT_DUTY": {
+   "forms": [
+    "import duty",
+    "what percentage is the duty",
+    "duty on the whole shipment",
+    "complete the steps"
+   ],
+   "mastery": "The child finds import duty as a percentage of the customs value, finds the rate as duty over customs value times 100, and for a shipment works out each kind of goods at its own rate before adding."
+  },
+  "MATH.G9.MEASUR.MONEY.EXCISE_DUTY": {
+   "forms": [
+    "excise duty",
+    "factory price",
+    "duty per litre",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds excise duty as a percentage of the right base (the factory price, or customs value plus import duty for imports) or as an amount per litre (changing ml to litres first), and works back from a price including excise to the factory price by dividing by 1 + rate."
+  },
+  "MATH.G9.MEASUR.MONEY.VAT": {
+   "forms": [
+    "VAT on the bill",
+    "price without VAT",
+    "why is this wrong",
+    "which items carry VAT"
+   ],
+   "mastery": "The child finds VAT at 16% of the price before VAT, adds only the items that carry VAT on a bill, and works back from a price with VAT included by dividing by 1.16 (the VAT inside 2,320 shillings is 320, not 16% of 2,320)."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE": {
+   "forms": [
+    "estimate by rounding",
+    "round to 1 significant figure",
+    "is the answer sensible",
+    "complete the steps"
+   ],
+   "mastery": "The child rounds each number by its own digit (to the nearest ten, or to 1 significant figure) before working out, gives the estimate as the answer, and uses it to check an exact answer: 47.3 x 62.6 is about 50 x 60 = 3,000."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE": {
+   "forms": [
+    "what is the error",
+    "how far out",
+    "too big or too small",
+    "difference"
+   ],
+   "mastery": "The child finds the error as the difference between the estimate (or measured value) and the actual value, always positive, and says whether the estimate was too big or too small: estimate 12,000, exact 11,280, error 720."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR": {
+   "forms": [
+    "greatest possible error",
+    "measured to the nearest",
+    "how far out can it be",
+    "half the step"
+   ],
+   "mastery": "The child says a reading to the nearest unit of the measuring step can be out by at most half that step (to the nearest 10 m: 5 m), whatever the size of the reading."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS": {
+   "forms": [
+    "greatest possible area",
+    "upper bound",
+    "lower bound",
+    "smallest possible length"
+   ],
+   "mastery": "The child gives the lower and upper bounds of a measurement (reading minus and plus half the step: 12 m to the nearest metre lies from 11.5 m to 12.5 m), and finds the greatest possible area by multiplying the two upper bounds."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR": {
+   "forms": [
+    "percentage error",
+    "which measurement is better",
+    "greatest percentage error",
+    "from the table"
+   ],
+   "mastery": "The child finds percentage error as error over the actual value times 100 (a bag of 80 kg estimated at 84 kg: 4 / 80 x 100 = 5%), and compares two measurements by their percentage errors, not by the size of the error alone or its unit."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS": {
+   "forms": [
+    "plot the point",
+    "which quadrant",
+    "read the coordinates",
+    "which point is at"
+   ],
+   "mastery": "The child plots and reads points with negative coordinates, x first (across) then y (up or down), and names the quadrant: (-3, 2) is 3 left and 2 up."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION": {
+   "forms": [
+    "complete the table",
+    "draw the line",
+    "does the point lie on the line",
+    "choose a scale"
+   ],
+   "mastery": "The child makes a table of at least three values of x, works out y for each from the equation (including negative x), plots the points, and joins them with one straight line, checking that the third point lies on it."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR": {
+   "forms": [
+    "draw a parallel line",
+    "draw a perpendicular line",
+    "through the point",
+    "which line is parallel"
+   ],
+   "mastery": "The child draws a line parallel to a given line through a point by keeping the same rise and run, and a perpendicular line by swapping the rise and run and changing one sign (a run of 3 and rise of 2 becomes a run of 2 and a fall of 3)."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS": {
+   "forms": [
+    "which line is parallel",
+    "find k",
+    "same gradient",
+    "complete the steps"
+   ],
+   "mastery": "The child says parallel lines have the same gradient whatever their c, picks the parallel line from a list of equations (y = 3x - 4 is parallel to y = 3x + 1), and uses equal gradients to find an unknown coordinate on a parallel line."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS": {
+   "forms": [
+    "gradient of the perpendicular line",
+    "equation of the perpendicular line",
+    "why is this wrong",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds the perpendicular gradient by turning the gradient upside down and changing its sign (2/3 becomes -3/2), checks that the two multiply to -1, and finds the equation of a perpendicular line through a point."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED": {
+   "forms": [
+    "charge for each km",
+    "fixed charge",
+    "how many units",
+    "from the graph"
+   ],
+   "mastery": "The child reads the fixed charge where the line meets the charge axis (distance 0) and the rate as the rise for each unit across, finds the rate from two rows of a table before the fixed charge, and works back from a bill to the units used: (bill - fixed) / rate."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING": {
+   "forms": [
+    "for what distance",
+    "which is cheaper",
+    "where do the lines meet",
+    "same charge"
+   ],
+   "mastery": "The child reads the point where two charge lines cross, gives the distance along the bottom axis (both charge the same there), and says which is cheaper on each side of it."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.COMPASS_TRUE_BEARINGS": {
+   "forms": [
+    "write as a true bearing",
+    "new bearing after the turn",
+    "compass bearing",
+    "which direction is 135 degrees"
+   ],
+   "mastery": "The child writes a true bearing as three figures measured clockwise from north (east is 090 degrees, south-west is 225 degrees), turns a compass bearing such as S40W into a true bearing (220 degrees), and finds a new bearing after a turn, taking 360 away when it passes north."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.BEARING_ONE_FROM_ANOTHER": {
+   "forms": [
+    "bearing of the school from the church",
+    "back bearing",
+    "which step is wrong",
+    "due north and due south"
+   ],
+   "mastery": "The child measures the bearing of B from A at A, clockwise from A's north line, and finds the back bearing (A from B) by adding 180 degrees if the bearing is under 180 and taking 180 away if it is over: 070 degrees gives 250 degrees."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.LOCATE_BEARING_DISTANCE": {
+   "forms": [
+    "how far from the start",
+    "in which direction",
+    "mark the point",
+    "draw the journey"
+   ],
+   "mastery": "The child draws a north line, measures the bearing clockwise and marks the distance to scale, follows a two-leg journey leg by leg, and finds how far the end is from the start (by measuring, or by Pythagoras when the legs meet at a right angle)."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_ELEVATION": {
+   "forms": [
+    "height of the mast",
+    "angle of elevation",
+    "from the eye",
+    "draw to scale"
+   ],
+   "mastery": "The child marks the angle of elevation from the horizontal up to the line of sight at the observer's eye, draws the triangle to scale (or uses the equal sides at 45 degrees), and adds the eye height above the ground to get the full height: at 45 degrees and 20 m away with the eye 1.5 m up, the mast is 21.5 m."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.ANGLE_OF_DEPRESSION": {
+   "forms": [
+    "angle of depression",
+    "why are the angles equal",
+    "how far is the canoe",
+    "from the top of the tower"
+   ],
+   "mastery": "The child marks the angle of depression from the horizontal down to the line of sight, knows it equals the angle of elevation from the object back up (alternate angles between parallel horizontals), and finds distances from a height by scale drawing or at 45 degrees by equal sides."
+  },
+  "MATH.G9.GEOMET.SCALE_DRAWING.SIMPLE_SURVEYING": {
+   "forms": [
+    "draw the plot",
+    "from the field book",
+    "area of the plot",
+    "offsets"
+   ],
+   "mastery": "The child reads a field book (distances along a baseline and offsets to the left and right), draws the plot to scale, and finds the area by splitting it into triangles and trapeziums."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_IDENTIFY": {
+   "forms": [
+    "are they similar",
+    "why is this wrong",
+    "which pairs are similar",
+    "equal angles and ratios"
+   ],
+   "mastery": "The child says two figures are similar when their angles are equal and all their sides are in the same ratio (each side multiplied by one scale factor), checks this for rectangles and triangles, and knows that adding the same length to every side does not give a similar figure."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.SIMILAR_MISSING_SIDE": {
+   "forms": [
+    "find the missing side",
+    "how tall is the tree",
+    "from the table",
+    "which step is wrong"
+   ],
+   "mastery": "The child matches the corresponding sides (shortest with shortest), finds the scale factor from one pair, and multiplies (small to large) or divides (large to small) the partner of the missing side; uses similar triangles of shadows to find a height."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.DRAW_SIMILAR": {
+   "forms": [
+    "draw a similar triangle",
+    "scale factor 2",
+    "on squared paper",
+    "check it is similar"
+   ],
+   "mastery": "The child multiplies every side of a figure by the same scale factor and keeps every angle, drawing the new figure with a ruler and protractor (or on squared paper), and checks it with the ratio of two pairs of sides."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_PROPERTIES": {
+   "forms": [
+    "image of the point",
+    "centre of enlargement",
+    "then translate",
+    "scale factor"
+   ],
+   "mastery": "The child knows an enlargement from a centre multiplies the distance of each point from the centre by the scale factor (from the origin it multiplies the coordinates), finds the centre by joining object and image points and extending the lines, and combines an enlargement with a translation in order."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.ENLARGEMENT_DRAW": {
+   "forms": [
+    "draw the image",
+    "centre and scale factor",
+    "mark the image points",
+    "on the grid"
+   ],
+   "mastery": "The child draws lines from the centre through each vertex, measures each distance from the centre, multiplies it by the scale factor along the same line, and joins the image points; the image is similar to the object."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.LINEAR_SCALE_FACTOR": {
+   "forms": [
+    "find the scale factor",
+    "which step is wrong",
+    "image over object",
+    "from a pair of sides"
+   ],
+   "mastery": "The child finds the linear scale factor as a length on the image over the matching length on the object (large over small for an enlargement), and uses it the right way: multiply to go from small to large."
+  },
+  "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME.AREA_VOLUME_SCALE_FACTOR": {
+   "forms": [
+    "area of the enlarged photo",
+    "how many litres",
+    "area of the label",
+    "why is this wrong"
+   ],
+   "mastery": "The child uses the square of the linear scale factor for areas and its cube for volumes and capacities (a tank twice as wide holds 8 times as much), and works back from a volume factor to the linear factor by the cube root and on to the area factor by squaring."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES": {
+   "forms": [
+    "which side is opposite",
+    "name the hypotenuse",
+    "adjacent to the angle",
+    "from the other angle"
+   ],
+   "mastery": "The child names the hypotenuse (opposite the right angle, the longest side), the opposite side (across from the given angle) and the adjacent side (next to the given angle, not the hypotenuse), and renames them when the other acute angle is used."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY": {
+   "forms": [
+    "which fraction is sin A",
+    "write cos B",
+    "which step is wrong",
+    "find the side"
+   ],
+   "mastery": "The child writes sin = opposite / hypotenuse, cos = adjacent / hypotenuse and tan = opposite / adjacent for a given angle, picks the right fraction from a triangle with known sides, and uses the ratio to set up the side asked: opposite = hypotenuse x sin."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES": {
+   "forms": [
+    "use the table of sines",
+    "find the angle",
+    "rise and horizontal length",
+    "how high up the wall"
+   ],
+   "mastery": "The child reads sin, cos or tan of an angle from the right column and row of the table, uses it to find a side (multiplying by the hypotenuse for the rise and run of a path), and reads the table backwards to find the angle whose ratio is given."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR": {
+   "forms": [
+    "use a calculator",
+    "which key",
+    "find the angle",
+    "round to 4 decimal places"
+   ],
+   "mastery": "The child sets the calculator to degrees, keys sin, cos or tan then the angle, uses the inverse key (sin to the -1) to find an angle from a ratio, rounds to the accuracy asked, and checks against a known value (sin 30 = 0.5, tan 45 = 1)."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH": {
+   "forms": [
+    "height of the building",
+    "which ratio",
+    "length of the ramp",
+    "which step is wrong"
+   ],
+   "mastery": "The child sketches the right-angled triangle, marks the known and wanted sides from the angle, chooses the one ratio that joins them, rearranges (multiply when the unknown is on top, divide when it is underneath), and adds an eye height when an angle of elevation is measured from the eye: 40 m away at 35 degrees with the eye 1.5 m up gives 40 x 0.7002 + 1.5 = 29.5 m."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE": {
+   "forms": [
+    "find the angle of the ramp",
+    "angle of elevation",
+    "which ratio",
+    "from two sides"
+   ],
+   "mastery": "The child writes the ratio of the two known sides for the angle (a ramp rising 1.2 m over 5 m: tan x = 0.24), then finds the angle from the table or the inverse key (13.5 degrees), and checks the angle is sensible."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CLASS_WIDTH": {
+   "forms": [
+    "choose a class width",
+    "how many classes",
+    "range of the data",
+    "write the classes"
+   ],
+   "mastery": "The child finds the range (largest minus smallest), chooses a class width that gives about 5 to 10 classes (a range of 47 with width 10 gives 5 classes), and writes the class limits so that every value fits in exactly one class."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_FREQUENCY_TABLE": {
+   "forms": [
+    "complete the table",
+    "tally the marks",
+    "which class does 40 go in",
+    "total frequency"
+   ],
+   "mastery": "The child tallies each value into its class (a value on a boundary into the higher class, as agreed), totals the frequencies, and checks that the total equals the number of values."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.MODAL_CLASS": {
+   "forms": [
+    "which is the modal class",
+    "how many more in the modal class",
+    "from the bar graph",
+    "from the table"
+   ],
+   "mastery": "The child picks the class with the highest frequency (the tallest bar), not the class with the highest values, and compares it with the next highest class by subtraction when asked how many more."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEAN": {
+   "forms": [
+    "mean mass",
+    "complete the table of fx",
+    "which step is wrong",
+    "why is this wrong"
+   ],
+   "mastery": "The child finds each class midpoint (halfway between its limits), multiplies by the frequency, adds the products, and divides by the total frequency (not by the number of classes): sum of fx 1,240 over 40 sacks is 31 kg."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.GROUPED_MEDIAN": {
+   "forms": [
+    "estimate the median",
+    "which is the median class",
+    "how many below it",
+    "complete the steps"
+   ],
+   "mastery": "The child finds the total frequency and the position n/2, adds frequencies until the class that holds it (the median class), counts those below it, and moves into the class in proportion: median = lower limit + ((n/2 - frequency below) / class frequency) x class width."
+  },
+  "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU.CUMULATIVE_FREQUENCY": {
+   "forms": [
+    "how many scored between",
+    "how many under",
+    "read the graph",
+    "cumulative frequency"
+   ],
+   "mastery": "The child reads \"how many under a value\" straight from a cumulative frequency graph and finds how many lie between two values by subtracting the two readings: under 40 minus under 20."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY": {
+   "forms": [
+    "list the outcomes",
+    "probability of an even number",
+    "are they equally likely",
+    "fair or not"
+   ],
+   "mastery": "The child lists all the equally likely outcomes of a fair coin, die or spinner (a die has 6), finds the probability of an event as favourable outcomes over all outcomes (an even number on a die: 3/6), and knows a spinner with unequal sectors does not give equally likely outcomes."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE": {
+   "forms": [
+    "most likely bag",
+    "about how many will grow",
+    "between 0 and 1",
+    "impossible or certain"
+   ],
+   "mastery": "The child places probabilities from 0 (impossible) to 1 (certain), compares likelihoods as fractions of the whole (red out of all beads, not the number of reds), and finds an expected number as probability times the number of trials (0.85 of 200 seeds is about 170)."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY": {
+   "forms": [
+    "are these mutually exclusive",
+    "why is the method wrong",
+    "can both happen",
+    "give an example"
+   ],
+   "mastery": "The child says two events are mutually exclusive when they cannot happen together (taking road A or road B on one trip), and not when they can overlap (playing football and playing netball), and explains why adding probabilities fails when there is an overlap."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD": {
+   "forms": [
+    "probability of either",
+    "probability of neither",
+    "from the table",
+    "which step is wrong"
+   ],
+   "mastery": "The child adds the probabilities of mutually exclusive events for \"either A or B\" (a raffle ticket winning a radio or a bag: 3/200 + 7/200 = 0.05) and finds \"neither\" as 1 minus that sum."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS": {
+   "forms": [
+    "probability of both",
+    "head and a 3",
+    "expected number of winners",
+    "complete the steps"
+   ],
+   "mastery": "The child says two events are independent when one does not change the chance of the other (a coin and a spinner, the bus on Monday and on Tuesday), multiplies for \"A and B\" (0.5 x 1/6 = 1/12), and finds expected winners as probability times players."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT": {
+   "forms": [
+    "both red, with replacement",
+    "both girls, without replacement",
+    "why does the chance change",
+    "simplest form"
+   ],
+   "mastery": "The child keeps the same chances on the second draw when the first is put back (with replacement: (3/8) x (3/8)), and reduces both the favourable count and the total by one when it is not put back ((3/8) x (2/7)), and explains why."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM": {
+   "forms": [
+    "probability that exactly one",
+    "both the same colour",
+    "complete the tree",
+    "which paths"
+   ],
+   "mastery": "The child draws a tree with the outcomes of each stage on branches, writes each branch probability (changed on the second stage without replacement), multiplies along a path, and adds the paths that make the event (\"exactly one grows\" is two paths)."
+  }
+ }
+}

@@ -1,0 +1,607 @@
+{
+ "sub_strand": "MATH.G9.NUMBER.INTEGERS",
+ "title": "INTEGERS",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to c are tested; d (use IT) and e (appreciate) are not questions. Grade 8 stopped at adding and subtracting on the number line and repeated changes; Grade 9 adds the sign rules for multiplying and dividing (a), the order of operations with integers, with and without brackets (b), and balances, lifts and altitudes (c). Teacher to confirm: whether KICD's 'basic operations' in Grade 9 expects the sign rules to be learnt from patterns (3 x -2, 2 x -2, 1 x -2 ...) as written here, or stated.",
+ "skills": [
+  {
+   "skill": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES",
+   "key_step": "The child rewrites every subtraction of a negative as an addition, and every addition of a negative as a subtraction, before working it out.",
+   "floor": {
+    "prerequisite": "Adds and subtracts on the number line.",
+    "question": "Start at -2 and move 5 right.",
+    "answer": "3"
+   },
+   "representations": [
+    "a number line",
+    "money and debts",
+    "the rewritten sum"
+   ],
+   "steps": [
+    "Look at the sign inside the bracket.",
+    "Minus a negative becomes plus; plus a negative becomes minus.",
+    "Work out the new sum on the number line or in your head.",
+    "Check the sign: which number is further from zero?"
+   ],
+   "contexts": [
+    "a debt of 300 shillings cancelled by a friend",
+    "temperature on Mount Kenya",
+    "scores with minus marks in a quiz"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5 - (-3)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bracket.",
+     "say": "If someone takes away a debt of 3 shillings from you, are you richer or poorer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say richer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5 - (-3) = 5 + 3 = 8."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_MINUS_NEGATIVE_STAYS_MINUS",
+     "listen_for": [
+      "2",
+      "5 minus 3"
+     ],
+     "ask": "If a debt of 3 is taken away, do you have more or less?",
+     "repair": "More: minus a negative is plus."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_ADD_NEGATIVE_AS_ADD",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "Which way does adding -9 move you?",
+     "repair": "Left: 4 - 9 = -5."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_SIGN_OF_LARGER_IGNORED",
+     "listen_for": [
+      "-7"
+     ],
+     "ask": "Which number is further from zero, -3 or 10?",
+     "repair": "The answer takes its sign: 7."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_TWO_NEGATIVES_POSITIVE_SUM",
+     "listen_for": [
+      "10",
+      "two negatives make a positive"
+     ],
+     "ask": "Is that rule for adding or for multiplying?",
+     "repair": "For multiplying. Two debts add to a bigger debt."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ADD_SUB_RULES.M_ADD_POSITIVE_MOVES_DOWN",
+     "listen_for": [
+      "-8"
+     ],
+     "ask": "Does adding 3 move up or down?",
+     "repair": "Up: -5 + 3 = -2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out -7 - (-10).",
+     "answer": "3",
+     "shows": "minus a negative"
+    },
+    {
+     "question": "Work out 6 + (-11).",
+     "answer": "-5",
+     "shows": "plus a negative"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES",
+   "key_step": "The child decides the sign first from the two signs (same gives positive, different gives negative), then multiplies or divides the sizes.",
+   "floor": {
+    "prerequisite": "Multiplies whole numbers.",
+    "question": "4 x 6",
+    "answer": "24"
+   },
+   "representations": [
+    "a pattern of products",
+    "repeated falls on a number line",
+    "a sign table"
+   ],
+   "steps": [
+    "Look at the two signs.",
+    "Same signs: positive. Different signs: negative.",
+    "Multiply or divide the sizes.",
+    "Write the sign in front."
+   ],
+   "contexts": [
+    "a borehole level falling 3 m a month",
+    "a matatu losing 200 shillings a day on repairs",
+    "temperature dropping each hour"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3 x -2 = -6, 2 x -2 = -4, 1 x -2 = -2, 0 x -2 = 0."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the answers going up by 2 each line.",
+     "say": "What comes next: -1 x -2?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the next answer before you write it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write -1 x -2 = 2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_NEG_TIMES_POS_POSITIVE",
+     "listen_for": [
+      "24 for (-4) x 6"
+     ],
+     "ask": "Four falls of 6 m: higher or lower?",
+     "repair": "Lower: -24."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_NEG_TIMES_NEG_NEGATIVE",
+     "listen_for": [
+      "-24 for (-4) x (-6)"
+     ],
+     "ask": "What does the pattern give after 0 x -6?",
+     "repair": "It keeps rising: positive."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_PRODUCT_SIGN_WRONG",
+     "listen_for": [
+      "the sign the wrong way round"
+     ],
+     "ask": "Are the signs the same or different?",
+     "repair": "Same is positive; different is negative."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_QUOTIENT_SIGN_WRONG",
+     "listen_for": [
+      "6 for 18 / (-3)"
+     ],
+     "ask": "What times -3 gives 18?",
+     "repair": "-6, so the answer is -6."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_TIMES_AS_SUBTRACT",
+     "listen_for": [
+      "1",
+      "took them away"
+     ],
+     "ask": "What is the sign between the brackets?",
+     "repair": "Times: multiply."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_MUL_DIV_RULES.M_DIVIDE_AS_MULTIPLY",
+     "listen_for": [
+      "-96"
+     ],
+     "ask": "Is the sign x or /?",
+     "repair": "Divide: -6."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out (-7) x (-3).",
+     "answer": "21",
+     "shows": "same signs"
+    },
+    {
+     "question": "Work out (-36) / 4.",
+     "answer": "-9",
+     "shows": "different signs"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS",
+   "key_step": "The child underlines every multiplication and division, works those out with their signs, and only then adds and subtracts.",
+   "floor": {
+    "prerequisite": "Uses the order of operations with whole numbers.",
+    "question": "7 + 3 x 4",
+    "answer": "19"
+   },
+   "representations": [
+    "underlining the products",
+    "a working in lines",
+    "BODMAS"
+   ],
+   "steps": [
+    "Underline each x and /.",
+    "Work them out with their signs.",
+    "Rewrite the expression with the results.",
+    "Add and subtract from left to right."
+   ],
+   "contexts": [
+    "marks in a test with minus marks for wrong answers",
+    "a farmer's gains and losses over weeks",
+    "a cooperative account"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 7 - 3 x (-4)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3 x (-4).",
+     "say": "Which part do we work out first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 7 - (-12)."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write = 7 + 12 = 19."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT_ALWAYS",
+     "listen_for": [
+      "-16",
+      "did 7 - 3 first"
+     ],
+     "ask": "Which ranks higher: x or -?",
+     "repair": "Multiply first."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_NEGATIVE_CHANGES_ORDER",
+     "listen_for": [
+      "did the addition first because of the minus"
+     ],
+     "ask": "Does a minus sign on a number change the order?",
+     "repair": "No, it belongs to the number."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_SIGN_LOST_IN_PRODUCT",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "What is the sign of 2 x (-3)?",
+     "repair": "Negative: 10 - 6 = 4."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ORDER_OF_OPERATIONS.M_MINUS_TIMES_NEG_DOUBLED",
+     "listen_for": [
+      "-2"
+     ],
+     "ask": "How many times did you change the sign?",
+     "repair": "Once only: 8 + 10 = 18."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out 9 + 4 x (-2).",
+     "answer": "1",
+     "shows": "multiply first"
+    },
+    {
+     "question": "Work out -20 / 5 - 3.",
+     "answer": "-7",
+     "shows": "divide first"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED",
+   "key_step": "The child finishes the bracket to one integer, then works out each product and quotient with its sign, then the last subtraction.",
+   "floor": {
+    "prerequisite": "Works out a bracket with integers.",
+    "question": "-5 + 2",
+    "answer": "-3"
+   },
+   "representations": [
+    "a working in steps",
+    "a number line for the bracket",
+    "the sign table"
+   ],
+   "steps": [
+    "Work out the bracket.",
+    "Do each x and / with its sign.",
+    "Write the parts with their signs.",
+    "Change minus a negative into plus and finish."
+   ],
+   "contexts": [
+    "a chama's gains and losses",
+    "temperatures at a weather station",
+    "a game with points won and lost"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write (-5 + 2) x (-4) - 18 / (-3)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bracket.",
+     "say": "What is -5 + 2?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for -3."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the next line: -3 x -4 and 18 / -3."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12 - (-6) = 18."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_BRACKET_NOT_FIRST",
+     "listen_for": [
+      "22"
+     ],
+     "ask": "What is inside the bracket altogether?",
+     "repair": "Finish the bracket first."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_SIGN_OF_SUM_LOST",
+     "listen_for": [
+      "10",
+      "the bracket is 5"
+     ],
+     "ask": "Which is further from zero, -9 or 4?",
+     "repair": "The bracket is -5."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_SIGNS_SWAPPED_AT_END",
+     "listen_for": [
+      "-18"
+     ],
+     "ask": "What sign did each part have on the line before?",
+     "repair": "Copy each with its own sign."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BRACKETS_COMBINED.M_DIVIDE_BEFORE_BRACKET",
+     "listen_for": [
+      "shared each number"
+     ],
+     "ask": "What single number does the bracket make?",
+     "repair": "Finish it, then divide."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Work out (-6 + 1) x (-3) - 12 / (-4).",
+     "answer": "18",
+     "shows": "in steps"
+    },
+    {
+     "question": "Work out (2 - 9) x 2 + 10 / (-5).",
+     "answer": "-16",
+     "shows": "in steps"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT",
+   "key_step": "The child writes the opening value with its sign, then each change with its sign, and says in words what the final integer means.",
+   "floor": {
+    "prerequisite": "Keeps a running total.",
+    "question": "Start 500; +200; -150.",
+    "answer": "550"
+   },
+   "representations": [
+    "a bank statement",
+    "a vertical number line for a lift",
+    "a number sentence"
+   ],
+   "steps": [
+    "Write the start with its sign.",
+    "Write each change: in or up is plus, out or down is minus.",
+    "Work it out in order.",
+    "Say what the answer means."
+   ],
+   "contexts": [
+    "a duka account at the bank",
+    "a lift in a Nairobi office block with basements",
+    "a boda boda rider's week of income and repairs"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a vertical line with 0 for the ground floor and -1, -2, -3 below."
+    },
+    {
+     "beat": "point",
+     "do": "Point at -3.",
+     "say": "The lift goes up 5. Where does it stop?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the 5 floors up with the child, saying zero."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write -3 + 5 = 2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_OVERDRAFT_AS_POSITIVE",
+     "listen_for": [
+      "7,000"
+     ],
+     "ask": "Does the shop have money in the bank or owe the bank?",
+     "repair": "It owes: start at -2,000."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_PAYOUT_ADDED",
+     "listen_for": [
+      "7,500"
+     ],
+     "ask": "Did the money go in or out?",
+     "repair": "Out: subtract."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_OPENING_BALANCE_LEFT_OUT",
+     "listen_for": [
+      "4,000"
+     ],
+     "ask": "What was the balance before any of this?",
+     "repair": "Start from it."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_START_SIGN_DROPPED",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Is the lift above or below the ground floor at the start?",
+     "repair": "Below: -3."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_DOWN_AS_UP",
+     "listen_for": [
+      "8 after going down"
+     ],
+     "ask": "Down: higher or lower floor number?",
+     "repair": "Lower: subtract."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_BALANCE_CONTEXT.M_SIGN_FLIPPED_AT_END",
+     "listen_for": [
+      "5 instead of -5"
+     ],
+     "ask": "Where did the last move end, above or below 0?",
+     "repair": "Below: keep the minus."
+    }
+   ],
+   "checks": [
+    {
+     "question": "An account is at -3,000 shillings. 8,000 is paid in and 6,500 paid out. Balance?",
+     "answer": "-1,500 shillings (still overdrawn)",
+     "shows": "running balance"
+    },
+    {
+     "question": "A lift at floor -2 goes up 7 floors, then down 9 floors. Which floor?",
+     "answer": "-4",
+     "shows": "moves in order"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE",
+   "key_step": "The child picks the highest and lowest values by size, then works out highest minus lowest with the signs kept.",
+   "floor": {
+    "prerequisite": "Finds a difference across zero.",
+    "question": "From -4 up to 9?",
+    "answer": "13"
+   },
+   "representations": [
+    "a vertical line with sea level at 0",
+    "a table of altitudes",
+    "the subtraction with signs"
+   ],
+   "steps": [
+    "Find the highest and lowest values.",
+    "Write highest - (lowest).",
+    "Minus a negative becomes plus.",
+    "Give the answer in metres."
+   ],
+   "contexts": [
+    "Mount Kenya and the Indian Ocean floor",
+    "a borehole near Kitui",
+    "the salt mine at Lake Magadi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a vertical line with sea level at 0, a hill at 450 and a mine floor at -120."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mine floor.",
+     "say": "How far is it up to sea level?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 120."
+    },
+    {
+     "beat": "point",
+     "do": "Point at sea level.",
+     "say": "And from here to the hilltop?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 450 - (-120) = 570 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_DEPTH_SUBTRACTED",
+     "listen_for": [
+      "330"
+     ],
+     "ask": "Is the mine above or below sea level?",
+     "repair": "Below: the two parts add."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_ONE_SIDE_ONLY",
+     "listen_for": [
+      "80"
+     ],
+     "ask": "Did you count the part above sea level?",
+     "repair": "Add both parts."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_HIGHEST_ALONE",
+     "listen_for": [
+      "300"
+     ],
+     "ask": "Higher than what?",
+     "repair": "Take away the lowest."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INTEGERS.INT_ALTITUDE_DIFFERENCE.M_WRONG_PAIR_CHOSEN",
+     "listen_for": [
+      "210"
+     ],
+     "ask": "Is the last row the lowest?",
+     "repair": "Sort the values first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Altitudes: 320 m, -45 m, 610 m, -150 m. How much higher is the highest than the lowest?",
+     "answer": "760 m",
+     "shows": "highest minus lowest"
+    },
+    {
+     "question": "At night it is -6 degrees, at noon 14 degrees. Rise?",
+     "answer": "20 degrees",
+     "shows": "across zero"
+    }
+   ]
+  }
+ ]
+}

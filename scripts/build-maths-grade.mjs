@@ -2,6 +2,7 @@
 // into curriculum/mathematics/g<grade>.json, which HOREB owns, and writes the teaching pack (curriculum/mathematics/teaching/g<grade>/*.json).
 //   Grade 7 (17 Nov 2026)  scripts/data/maths-g7/   at least 1 prerequisite and 2 misconceptions per skill
 //   Grade 8 (18 Nov 2026)  scripts/data/maths-g8/   the depth standard: at least 2 prerequisites and 4 misconceptions per skill
+//   Grade 9 (18 Nov 2026)  scripts/data/maths-g9/   the same depth standard; prerequisites may name Grade 5 to 8 skills
 // Official outcomes are never touched. A sub-strand with no data file is left as it was (no skills yet) and listed at the end.
 //   node scripts/build-maths-grade.mjs 8     then:  node scripts/build-curriculum-map-grade.mjs 8  and  node scripts/build-teaching-pack.mjs
 // One builder for Grades 7 and 8 (18 Nov 2026): scripts/build-maths-g7.mjs is kept as the old command (Grade 7 output unchanged).
@@ -17,8 +18,10 @@ const RULES = {
     pack: 'draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
   8: { below: [5, 6, 7], minPre: 2, minMis: 4, when: '18 Nov 2026',
     pack: 'draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
+  9: { below: [5, 6, 7, 8], minPre: 2, minMis: 4, when: '18 Nov 2026',
+    pack: 'draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
 }[GRADE];
-if (!RULES) { console.error('usage: node scripts/build-maths-grade.mjs 7|8'); process.exit(1); }
+if (!RULES) { console.error('usage: node scripts/build-maths-grade.mjs 7|8|9'); process.exit(1); }
 const { SUBS } = await import(`./data/maths-g${GRADE}/index.mjs`);
 const G = `G${GRADE}`;
 const FILE = new URL(`../curriculum/mathematics/g${GRADE}.json`, import.meta.url);

@@ -3,8 +3,8 @@
  "draws": 40,
  "counts": {
   "shared": 227,
-  "nearmiss": 82,
-  "reason": 118
+  "nearmiss": 109,
+  "reason": 124
  },
  "families": {
   "shared": [
@@ -318,7 +318,34 @@
    "g8.prob.expected-times",
    "g8.ratio.rope-units",
    "g8.solids.ant-two-faces",
-   "g8.solids.edges-euler"
+   "g8.solids.edges-euler",
+   "g9.approx.percent-error",
+   "g9.bearings.distance-from-start",
+   "g9.cubes.smallest-multiplier",
+   "g9.cubes.table-read",
+   "g9.cubes.which-cube",
+   "g9.data.mean-from-table",
+   "g9.density.liquid-mix",
+   "g9.enlarge.find-centre",
+   "g9.ind.rope-pieces",
+   "g9.ineq.at-least-tickets",
+   "g9.ineq.budget-max",
+   "g9.int.lift-basement",
+   "g9.line.drain-negative",
+   "g9.line.tank-meets-axis",
+   "g9.mat.solve-unknown",
+   "g9.mat.table-position",
+   "g9.prop.table-workers",
+   "g9.similar.pole-and-tree",
+   "g9.similar.table-missing-side",
+   "g9.speed.accel-graph",
+   "g9.speed.accel-table",
+   "g9.speed.average",
+   "g9.speed.find-longitude",
+   "g9.speed.velocity-two-legs",
+   "g9.trig.table-find-angle",
+   "g9.vol.pyramid-height",
+   "g9.work.tap-and-leak"
   ],
   "reason": [
    "g5c.add.chk.compare",
@@ -438,7 +465,13 @@
    "g8.graphs.cross-why",
    "g8.graphs.meet",
    "g8.sector.find-angle",
-   "g8.solids.edges-euler"
+   "g8.solids.edges-euler",
+   "g9.area.prism-trough",
+   "g9.cubes.root-table-scale",
+   "g9.ind.growth-power",
+   "g9.log.table-pattern",
+   "g9.var.table-type",
+   "g9.vol.cone-sand"
   ]
  }
 }

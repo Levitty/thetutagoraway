@@ -1,0 +1,707 @@
+{
+ "sub_strand": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS",
+ "title": "INDICES AND LOGARITHMS",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to d are tested; e (use IT) and f (appreciate) are not questions. Index form and evaluating powers (a), the laws generated from repeated multiplication (b) and applied (c), and common logarithms as the index of a power of 10 (d). Two existing families (g9.log.spot-laws, g9.log.given-values) use the laws of logarithms (log of a product is the sum of the logs); KICD's Grade 9 wording only says to relate powers of 10 to common logarithms, so a teacher should confirm these belong in Grade 9 or move them to Grade 10. g9.ind.table-powers was written under outcome a but asks for the multiplication law, so it is filed under c.",
+ "skills": [
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM",
+   "key_step": "The child writes out the repeated factors and counts them before writing the index.",
+   "floor": {
+    "prerequisite": "Knows a cube as three equal factors.",
+    "question": "4 cubed",
+    "answer": "64"
+   },
+   "representations": [
+    "repeated factors written out",
+    "a growth table round by round",
+    "a factor tree"
+   ],
+   "steps": [
+    "Write out the factors.",
+    "Count how many are the same.",
+    "Write base and index.",
+    "Work out the value if asked."
+   ],
+   "contexts": [
+    "a message shared on a WhatsApp group",
+    "bacteria doubling in milk",
+    "prime factors of a number of chairs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 3 x 3 x 3 x 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 3s one by one.",
+     "say": "How many 3s are multiplied?"
+    },
+    {
+     "beat": "count",
+     "do": "Count them aloud with the child."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 to the power 4 = 81."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_POWER_AS_PRODUCT",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Is 3 to the 4 the same as 3 x 4?",
+     "repair": "No: four 3s multiplied."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_BASE_INDEX_SWAPPED",
+     "listen_for": [
+      "25"
+     ],
+     "ask": "Which number is repeated?",
+     "repair": "The base, 2."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_INDEX_OFF_BY_ONE",
+     "listen_for": [
+      "27"
+     ],
+     "ask": "Write a row for each round. How many rows?",
+     "repair": "Four rows: 3 to the 4."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_INDEX_FORM_ADDS",
+     "listen_for": [
+      "5 x 3"
+     ],
+     "ask": "Is it 5 + 5 + 5 or 5 x 5 x 5?",
+     "repair": "Multiplied: 5 cubed."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.INDEX_FORM.M_PRIMES_NOT_GROUPED",
+     "listen_for": [
+      "2 x 2 x 2 x 3 x 3"
+     ],
+     "ask": "How many 2s and how many 3s?",
+     "repair": "2 cubed x 3 squared."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 2 x 2 x 2 x 7 x 7 in index form.",
+     "answer": "2 cubed x 7 squared",
+     "shows": "grouping"
+    },
+    {
+     "question": "Work out 2 to the power 6.",
+     "answer": "64",
+     "shows": "repeated multiplication"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE",
+   "key_step": "The child writes the factors out once, sees how many there are after multiplying or cancelling, and then states the law.",
+   "floor": {
+    "prerequisite": "Writes a power as repeated factors.",
+    "question": "2 to the 3",
+    "answer": "2 x 2 x 2"
+   },
+   "representations": [
+    "factors written out",
+    "a fraction with cancelling",
+    "a table of powers"
+   ],
+   "steps": [
+    "Check the bases are the same.",
+    "Multiplying: add the indices.",
+    "Dividing: subtract the indices.",
+    "Keep the base; work out the value if asked."
+   ],
+   "contexts": [
+    "cutting a rope into equal pieces",
+    "packing boxes inside boxes",
+    "a table of powers of 2"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 to the 3 x 2 to the 4 as (2 x 2 x 2)(2 x 2 x 2 x 2)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 2s.",
+     "say": "How many 2s altogether?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for seven."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2 to the 7: the indices 3 + 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_INDICES_MULTIPLIED_FOR_PRODUCT",
+     "listen_for": [
+      "2 to the 12"
+     ],
+     "ask": "Count the 2s written out. Twelve or seven?",
+     "repair": "Seven: add."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_BASES_MULTIPLIED",
+     "listen_for": [
+      "9 to the 6"
+     ],
+     "ask": "Are the factors 9s or 3s?",
+     "repair": "3s: the base stays 3."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_BASES_ADDED",
+     "listen_for": [
+      "10 to the 5"
+     ],
+     "ask": "Where do bases ever get added?",
+     "repair": "Never."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_INDEX_AS_REPEATED_ADDITION",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Is 2 to the 5 equal to 2 x 5?",
+     "repair": "No: 32."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_DIVIDE_INDICES_ADDED",
+     "listen_for": [
+      "2 to the 14"
+     ],
+     "ask": "Does dividing make the number bigger?",
+     "repair": "No: subtract."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_DIVIDE_INDICES_MULTIPLIED",
+     "listen_for": [
+      "2 to the 40"
+     ],
+     "ask": "What cancels when you divide?",
+     "repair": "Four 2s: 10 - 4."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_MULTIPLY_DIVIDE.M_INDEX_GIVEN_AS_VALUE",
+     "listen_for": [
+      "4 pieces"
+     ],
+     "ask": "Is 4 the number of pieces or the index?",
+     "repair": "The index: 2 to the 4 = 16."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Simplify 5 to the 6 divided by 5 to the 4 and find its value.",
+     "answer": "25",
+     "shows": "subtract indices"
+    },
+    {
+     "question": "Simplify 3 squared x 3 to the 5.",
+     "answer": "3 to the 7",
+     "shows": "add indices"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER",
+   "key_step": "The child divides a power by itself both ways (as a number and by the law) to see a to the 0 = 1, and writes a power of a power out as repeated powers.",
+   "floor": {
+    "prerequisite": "Divides powers by subtracting indices.",
+    "question": "7 to the 5 divided by 7 to the 2",
+    "answer": "7 cubed"
+   },
+   "representations": [
+    "a power divided by itself",
+    "a pattern 2 cubed, 2 squared, 2 to the 1, 2 to the 0",
+    "repeated powers written out"
+   ],
+   "steps": [
+    "Divide a power by itself.",
+    "As a number it is 1.",
+    "By the law it is the base to the 0.",
+    "For a power of a power, multiply the indices."
+   ],
+   "contexts": [
+    "a halving pattern of chapati pieces",
+    "stacked boxes",
+    "a table of powers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 8, 4, 2, ... with 2 cubed, 2 squared, 2 to the 1 beneath."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap after 2.",
+     "say": "Halve 2 again. What comes next?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the next number and its index."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2 to the 0 = 1."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_ZERO_INDEX_IS_ZERO",
+     "listen_for": [
+      "0"
+     ],
+     "ask": "What is 7 cubed divided by 7 cubed?",
+     "repair": "1, which is 7 to the 0."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_ZERO_INDEX_IS_BASE",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Which index leaves the number unchanged?",
+     "repair": "1, not 0."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_ZERO_INDEX_UNDEFINED",
+     "listen_for": [
+      "no value"
+     ],
+     "ask": "What does the halving pattern give?",
+     "repair": "1."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_POWER_OF_POWER_ADDED",
+     "listen_for": [
+      "2 to the 5"
+     ],
+     "ask": "Write (2 cubed) squared as two powers multiplied.",
+     "repair": "2 cubed x 2 cubed = 2 to the 6."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.ZERO_INDEX_POWER_OF_POWER.M_POWER_OF_POWER_BASE_RAISED",
+     "listen_for": [
+      "27 squared"
+     ],
+     "ask": "Is the whole power cubed or only the 3?",
+     "repair": "The whole power: multiply indices."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 15 to the power 0?",
+     "answer": "1",
+     "shows": "zero index"
+    },
+    {
+     "question": "Simplify (5 squared) to the 4.",
+     "answer": "5 to the 8",
+     "shows": "power of a power"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED",
+   "key_step": "The child uses one law per line, naming the law, and handles numbers in front separately from the indices.",
+   "floor": {
+    "prerequisite": "Uses the multiplication and division laws.",
+    "question": "x to the 3 x x to the 5",
+    "answer": "x to the 8"
+   },
+   "representations": [
+    "a working in lines",
+    "an equation for the indices",
+    "numbers and letters in separate columns"
+   ],
+   "steps": [
+    "Do any power of a power first.",
+    "Then multiply (add indices).",
+    "Then divide (subtract indices).",
+    "Multiply the numbers in front separately."
+   ],
+   "contexts": [
+    "simplifying a formula for a box",
+    "a puzzle with an unknown index",
+    "checking a friend's working"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write (x cubed) to the 4 x x squared divided by x to the 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bracket.",
+     "say": "Which law first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say multiply the indices."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the next two lines."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write x to the 9."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_DIVIDE_INDICES_DIVIDED",
+     "listen_for": [
+      "x cubed"
+     ],
+     "ask": "Does dividing powers divide the indices?",
+     "repair": "It subtracts them."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_UNKNOWN_INDEX_TOTAL_GIVEN",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Write the equation for the indices.",
+     "repair": "n + 3 = 8."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_UNKNOWN_INDEX_ADDED_BACK",
+     "listen_for": [
+      "11"
+     ],
+     "ask": "Does 11 + 3 give 8?",
+     "repair": "No: n = 5."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_COEFFICIENTS_ADDED",
+     "listen_for": [
+      "5x to the 5"
+     ],
+     "ask": "Do the numbers in front add or multiply?",
+     "repair": "Multiply: 6."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LAWS_COMBINED.M_COEFFICIENT_GIVEN_INDEX",
+     "listen_for": [
+      "x to the 9"
+     ],
+     "ask": "Where did the 4 go?",
+     "repair": "It stays in front: 4x to the 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Simplify a to the 7 x a cubed divided by a to the 4.",
+     "answer": "a to the 6",
+     "shows": "combined laws"
+    },
+    {
+     "question": "Find n if (y to the n) cubed = y to the 12.",
+     "answer": "4",
+     "shows": "unknown index"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10",
+   "key_step": "The child writes the number as 10 to some power and reads the index as the logarithm.",
+   "floor": {
+    "prerequisite": "Writes numbers as powers of 10.",
+    "question": "1,000 as a power of 10",
+    "answer": "10 cubed"
+   },
+   "representations": [
+    "a table of powers of 10 and their logs",
+    "place value chart",
+    "a number line of logs"
+   ],
+   "steps": [
+    "Write the number as a power of 10.",
+    "The logarithm is the index.",
+    "Below 1 the index is negative.",
+    "Check with the pattern."
+   ],
+   "contexts": [
+    "sizes of populations in Kenyan towns",
+    "shillings in tens, hundreds, thousands",
+    "a science table of very small sizes"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: 1,000 | 100 | 10 | 1 | 0.1 with 3, 2, 1, __, __ beneath."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the blank under 1.",
+     "say": "The logs go down by 1 each time. What goes here?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child fills both blanks."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 0 and -1."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_DIGIT_COUNT",
+     "listen_for": [
+      "5 for 10,000"
+     ],
+     "ask": "How many zeros after the 1?",
+     "repair": "Four: log 4."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_SIGN_DROPPED",
+     "listen_for": [
+      "3 for 0.001"
+     ],
+     "ask": "Is 0.001 bigger or smaller than 1?",
+     "repair": "Smaller: negative log."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_ZEROS_ONLY",
+     "listen_for": [
+      "-2 for 0.001"
+     ],
+     "ask": "Which decimal place is the 1 in?",
+     "repair": "The third: -3."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_TIMES_TEN",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "Is the log the index or ten times it?",
+     "repair": "The index: 5."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_POWERS_OF_10.M_LOG_ONE_IS_ONE",
+     "listen_for": [
+      "log 1 = 1"
+     ],
+     "ask": "1 is 10 to which power?",
+     "repair": "0."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Find log 1,000,000.",
+     "answer": "6",
+     "shows": "power of 10"
+    },
+    {
+     "question": "Find log 0.0001.",
+     "answer": "-4",
+     "shows": "below 1"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS",
+   "key_step": "The child turns a sum of logs into the log of a product (and a difference into a quotient), because indices add when powers multiply.",
+   "floor": {
+    "prerequisite": "Finds log of a power of 10.",
+    "question": "log 1,000",
+    "answer": "3"
+   },
+   "representations": [
+    "logs as indices",
+    "a product of numbers",
+    "given log values in a table"
+   ],
+   "steps": [
+    "Write the number as a product or quotient of known numbers.",
+    "Product: add the logs. Quotient: top minus bottom.",
+    "Use each repeated factor as many times as it appears.",
+    "Work out the value."
+   ],
+   "contexts": [
+    "a calculator without a log key",
+    "checking a working",
+    "a table of given logs"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write log 25 + log 40."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 25 and 40.",
+     "say": "What is 25 x 40?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1,000."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write = log 1,000 = 3."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_PRODUCT_AS_PRODUCT",
+     "listen_for": [
+      "0.1436"
+     ],
+     "ask": "When powers multiply, do indices multiply or add?",
+     "repair": "Add: 0.7781."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_REPEATED_FACTOR_ONCE",
+     "listen_for": [
+      "log 2 + log 3 for log 18"
+     ],
+     "ask": "How many 3s are in 18?",
+     "repair": "Two: add log 3 twice."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_QUOTIENT_ORDER",
+     "listen_for": [
+      "log 3 - log 2 for log (2/3)"
+     ],
+     "ask": "Which number is on top?",
+     "repair": "2: log 2 - log 3."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_QUOTIENT_AS_QUOTIENT",
+     "listen_for": [
+      "1.585"
+     ],
+     "ask": "Does dividing numbers divide indices?",
+     "repair": "It subtracts them."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_LAWS.M_LOG_AS_TENTH",
+     "listen_for": [
+      "100 for log 1,000"
+     ],
+     "ask": "Which power of 10 is 1,000?",
+     "repair": "The third: 3."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Without a calculator: log 50 + log 20.",
+     "answer": "3",
+     "shows": "sum of logs"
+    },
+    {
+     "question": "Given log 2 = 0.3010, find log 8.",
+     "answer": "0.9030",
+     "shows": "repeated factor"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT",
+   "key_step": "The child writes each reading back as a power of 10 and divides the powers, so each step of 1 is a factor of 10.",
+   "floor": {
+    "prerequisite": "Divides powers of 10.",
+    "question": "10 to the 5 divided by 10 cubed",
+    "answer": "100"
+   },
+   "representations": [
+    "a scale with arrows labelled x 10",
+    "powers of 10",
+    "a table of magnitudes"
+   ],
+   "steps": [
+    "Write each reading as A = 10 to that power.",
+    "Divide the larger by the smaller.",
+    "Subtract the indices.",
+    "Say how many times larger."
+   ],
+   "contexts": [
+    "tremors in the Rift Valley",
+    "sound levels near a matatu stage",
+    "acidity of soil on a farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a scale 3, 4, 5 with an arrow and x 10 between each step."
+    },
+    {
+     "beat": "point",
+     "do": "Point from 3 to 5.",
+     "say": "How many x 10 arrows?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the two arrows with the child."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 10 x 10 = 100 times larger."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_LOG_DIFFERENCE_AS_RATIO",
+     "listen_for": [
+      "2 times"
+     ],
+     "ask": "What does one step on the scale do to the size?",
+     "repair": "Multiplies it by 10."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_TEN_TIMES_DIFFERENCE",
+     "listen_for": [
+      "30"
+     ],
+     "ask": "Three steps of x 10: 10 + 10 + 10 or 10 x 10 x 10?",
+     "repair": "Multiply: 1,000."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_LOGS_DIVIDED",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Are the readings the sizes or the powers?",
+     "repair": "The powers."
+    },
+    {
+     "code": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS.LOG_SCALE_CONTEXT.M_SCALE_LINEAR",
+     "listen_for": [
+      "the same increase"
+     ],
+     "ask": "Is 10 to 100 the same jump as 100 to 1,000?",
+     "repair": "No: each step is ten times more."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tremors of magnitude 2 and 5. How many times larger is the ground movement of the stronger?",
+     "answer": "1,000",
+     "shows": "steps of 10"
+    },
+    {
+     "question": "A reading goes up by 1 on the scale. By how much is the size multiplied?",
+     "answer": "10",
+     "shows": "one step"
+    }
+   ]
+  }
+ ]
+}

@@ -16,9 +16,10 @@ import { SKILLS_G4, OUTCOMES_G4, horebOf4 } from '../../src/ai-tutor/content/cur
 import { SKILLS_G6, OUTCOMES_G6, horebOf6 } from '../../src/ai-tutor/content/curriculumMap.g6.js';
 import { SKILLS_G7, OUTCOMES_G7, horebOf7 } from '../../src/ai-tutor/content/curriculumMap.g7.js';
 import { SKILLS_G8, OUTCOMES_G8, horebOf8 } from '../../src/ai-tutor/content/curriculumMap.g8.js';
+import { SKILLS_G9, OUTCOMES_G9, horebOf9 } from '../../src/ai-tutor/content/curriculumMap.g9.js';
 // Maths: Grade 4, 5 and 6 curriculum maps side by side (codes carry the grade, so they never clash).
-const SKILLS_M = { ...SKILLS_G4, ...SKILLS_G5, ...SKILLS_G6, ...SKILLS_G7, ...SKILLS_G8 }, OUTCOMES_M = { ...OUTCOMES_G4, ...OUTCOMES_G5, ...OUTCOMES_G6, ...OUTCOMES_G7, ...OUTCOMES_G8 };
-const horebOfM = (c) => (SKILLS_G8[c] ? horebOf8(c) : SKILLS_G7[c] ? horebOf7(c) : SKILLS_G6[c] ? horebOf6(c) : SKILLS_G4[c] ? horebOf4(c) : horebOf(c));
+const SKILLS_M = { ...SKILLS_G4, ...SKILLS_G5, ...SKILLS_G6, ...SKILLS_G7, ...SKILLS_G8, ...SKILLS_G9 }, OUTCOMES_M = { ...OUTCOMES_G4, ...OUTCOMES_G5, ...OUTCOMES_G6, ...OUTCOMES_G7, ...OUTCOMES_G8, ...OUTCOMES_G9 };
+const horebOfM = (c) => (SKILLS_G9[c] ? horebOf9(c) : SKILLS_G8[c] ? horebOf8(c) : SKILLS_G7[c] ? horebOf7(c) : SKILLS_G6[c] ? horebOf6(c) : SKILLS_G4[c] ? horebOf4(c) : horebOf(c));
 const gradeOfCskill = (c) => Number(/^MATH\.G(\d)\./.exec(String(c || ''))?.[1] || 5);
 import { entryOfFamily, entryOfCskill } from '../../src/ai-tutor/content/subjects/registry.js';   // every subject beyond Maths: its map, outcomes and name come from its registry entry
 import { readFileSync } from 'node:fs';

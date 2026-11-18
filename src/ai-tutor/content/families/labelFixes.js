@@ -68,40 +68,40 @@ export const CORE_FAMILIES = [
     } }),
 
   // ---- G9_APPROX_ERRORS: approximations and errors, not percentage change
-  fx({ id: 'g9.approx.percent-error', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.c', rung: 2, form: 'word',
+  fx({ id: 'g9.approx.percent-error', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR', rung: 2, form: 'word',
     draw: () => { const actual = pick([50, 80, 90, 120, 160, 200, 250]); const est = actual + pick([-1, 1]) * pick([2, 4, 5, 8, 10]); const e = Math.abs(est - actual), pct = (e / actual) * 100; const v = [round((e / est) * 100, 1), e, round((est / actual) * 100, 1)]; return Number.isInteger(pct * 10) && new Set(v).size === 3 && !v.includes(round(pct, 1)) ? { actual, est } : null; },
     make: ({ actual, est }) => {
       const e = Math.abs(est - actual), pct = round((e / actual) * 100, 1);
       return { question: `A bag of maize has a true mass of ${actual} kg. A trader estimates it as ${est} kg. Find the percentage error.`,
         answer: pct,
-        wrong: [[round((e / est) * 100, 1), 'Percentage error divides by the true value, not by the estimate.'], [e, 'That is the error in kg. Now write it as a percentage of the true mass.'], [round((est / actual) * 100, 1), 'That compares the estimate with the true value. First find the error: the difference between them.']],
+        wrong: [[round((e / est) * 100, 1), 'Percentage error divides by the true value, not by the estimate.', 'M_DIVIDE_BY_ESTIMATE'], [e, 'That is the error in kg. Now write it as a percentage of the true mass.', 'M_ERROR_NOT_PERCENT'], [round((est / actual) * 100, 1), 'That compares the estimate with the true value. First find the error: the difference between them.', 'M_ESTIMATE_OVER_ACTUAL']],
         hints: ['Error = the difference between the estimate and the true value.', `Percentage error = error ÷ true value × 100.`],
         steps: [`Error = ${Math.max(est, actual)} − ${Math.min(est, actual)} = ${e} kg.`, `Percentage error = ${e} ÷ ${actual} × 100 = ${pct}%.`] };
     },
     check: ({ actual, est }, a) => Math.abs((a / 100) * actual - Math.abs(est - actual)) < 0.06 }),
-  fx({ id: 'g9.approx.greatest-error', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.b', rung: 1, form: 'word',
+  fx({ id: 'g9.approx.greatest-error', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.b', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR', rung: 1, form: 'word',
     draw: () => (() => { const c = pick([{ unit: 'cm', step: 1, label: 'the nearest cm', what: 'A plank' }, { unit: 'kg', step: 1, label: 'the nearest kg', what: 'A sack of potatoes' }, { unit: 'm', step: 10, label: 'the nearest 10 m', what: 'A school field' }, { unit: 'g', step: 100, label: 'the nearest 100 g', what: 'A bag of beans' }, { unit: 'cm', step: 0.1, label: 'the nearest 0.1 cm', what: 'A nail' }]); return { ...c, n: randInt(3, 40) }; })(),
     make: ({ unit, step, label, what, n }) => {
       const value = round(n * step, 1);
       return { question: `${what} is recorded as ${value} ${unit}, measured to ${label}. What is the greatest possible error, in ${unit}?`,
         answer: round(step / 2, 2),
-        wrong: [[step, 'That is the whole measuring step. The true value can be at most half a step away.'], [round(value / 2, 2), 'The error depends on the step used to measure, not on the size of the reading.'], [round(step / 4, 3), 'The greatest error is half of the step, not a quarter.']],
+        wrong: [[step, 'That is the whole measuring step. The true value can be at most half a step away.', 'M_WHOLE_STEP_ERROR'], [round(value / 2, 2), 'The error depends on the step used to measure, not on the size of the reading.', 'M_HALF_THE_READING'], [round(step / 4, 3), 'The greatest error is half of the step, not a quarter.', 'M_QUARTER_STEP']],
         hints: ['A reading is rounded to the closest mark of the measuring step.', 'How far can a true value be from the closest mark?'],
         steps: [`The measuring step is ${step} ${unit}.`, `The greatest possible error is half of that: ${step} ÷ 2 = ${round(step / 2, 2)} ${unit}.`] };
     },
     check: ({ step }, a) => Math.abs(a * 2 - step) < 1e-9 }),
-  fx({ id: 'g9.approx.estimate-product', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.a', rung: 1, form: 'direct',
+  fx({ id: 'g9.approx.estimate-product', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.a', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE', rung: 1, form: 'direct',
     draw: () => { const a = randInt(21, 89), b = randInt(21, 89); return a % 10 >= 2 && a % 10 <= 8 && b % 10 >= 2 && b % 10 <= 8 && a % 10 !== 5 && b % 10 !== 5 ? { a: a + pick([0.3, 0.7]), b: b + pick([0.2, 0.6]) } : null; },
     make: ({ a, b }) => {
       const ra = Math.round(a / 10) * 10, rb = Math.round(b / 10) * 10;
       return { question: `Estimate ${a} × ${b} by rounding each number to the nearest ten.`, story: false,
         answer: ra * rb,
-        wrong: [[round(a * b, 2), 'That is the exact product. An estimate rounds first, then multiplies.'], [(Math.floor(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Both numbers were rounded down. Look at the units digit to decide.'], [(Math.ceil(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Both numbers were rounded up. Look at the units digit to decide.'], [(Math.floor(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.'], [(Math.ceil(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.'], [ra + rb, 'The question is a multiplication, so multiply the rounded numbers.']],
+        wrong: [[round(a * b, 2), 'That is the exact product. An estimate rounds first, then multiplies.', 'M_EXACT_NOT_ESTIMATE'], [(Math.floor(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Both numbers were rounded down. Look at the units digit to decide.', 'M_BOTH_ROUNDED_DOWN'], [(Math.ceil(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Both numbers were rounded up. Look at the units digit to decide.', 'M_BOTH_ROUNDED_UP'], [(Math.floor(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.', 'M_ROUNDING_DIRECTIONS_SWAPPED'], [(Math.ceil(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.', 'SLIP'], [ra + rb, 'The question is a multiplication, so multiply the rounded numbers.', 'M_ROUNDED_ADDED']],
         hints: ['Round first, then multiply.', `${a} is closest to which ten?`],
         steps: [`${a} rounds to ${ra} and ${b} rounds to ${rb}.`, `${ra} × ${rb} = ${commas(ra * rb)}.`] };
     },
     check: ({ a, b }, v) => Math.abs(v - a * b) < 0.2 * a * b + 200 && v % 100 === 0 }),
-  fx({ id: 'g9.approx.better-measure', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.c', rung: 3, form: 'why',
+  fx({ id: 'g9.approx.better-measure', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR', misMapped: false, reveals: ['M_BIGGEST_ERROR_WORST', 'M_UNIT_CHANGES_ERROR', 'M_SMALL_ERROR_ENOUGH'], rung: 3, form: 'why',
     draw: () => { const m1 = pick([50, 100, 200, 250]), e1 = pick([1, 2, 5]), m2 = pick([2, 4, 5, 10]), e2 = pick([100, 200, 500]); const p1 = e1 / m1, p2 = (e2 / 1000) / m2; return p1 !== p2 ? { m1, e1, m2, e2, p1: p1 * 100, p2: p2 * 100 } : null; },
     make: ({ m1, e1, m2, e2, p1, p2 }) => {
       const firstBetter = p1 < p2;
@@ -478,86 +478,86 @@ export const CORE_FAMILIES = [
     check: ({ pr, ps }, a) => Math.abs(a / ps - pr) < 1e-6 }),
 
   // ---- G9_SPEED_VELOCITY: velocity, acceleration, average speed (alias removed)
-  fx({ id: 'g9.speed.acceleration', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.d', rung: 1, form: 'word',
+  fx({ id: 'g9.speed.acceleration', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.d', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.ACCELERATION', rung: 1, form: 'word',
     draw: () => { const t = pick([4, 5, 8, 10, 12]), acc = pick([1, 1.5, 2, 2.5, 3]); return { t, acc, what: pick(['A motorbike', 'A matatu', 'A train']) }; },
     make: ({ t, acc, what }) => ({
       question: `${what} starts from rest and reaches ${acc * t} m/s in ${t} s. Find its acceleration in m/s².`,
       answer: acc,
-      wrong: [[acc * t * t, 'Acceleration is the change in velocity divided by the time, so divide.'], [acc * t + t, 'Acceleration divides the change in velocity by the time.'], [acc * t, 'That is the final velocity. How much does it change each second?']],
+      wrong: [[acc * t * t, 'Acceleration is the change in velocity divided by the time, so divide.', 'M_ACCEL_SQUARED_TIME'], [acc * t + t, 'Acceleration divides the change in velocity by the time.', 'M_TIME_ADDED_ACCEL'], [acc * t, 'That is the final velocity. How much does it change each second?', 'M_CHANGE_NOT_DIVIDED']],
       hints: ['Acceleration = change in velocity ÷ time.', `It went from 0 to ${acc * t} m/s.`],
       steps: [`Change in velocity: ${acc * t} − 0 = ${acc * t} m/s.`, `Acceleration: ${acc * t} ÷ ${t} = ${acc} m/s².`],
     }),
     check: ({ t, acc }, a) => a * t === acc * t }),
-  fx({ id: 'g9.speed.convert-kmh', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.a', rung: 1, form: 'direct',
+  fx({ id: 'g9.speed.convert-kmh', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.a', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.SPEED_KMH_MS', rung: 1, form: 'direct',
     draw: () => { const ms = pick([5, 10, 15, 20, 25, 30]); return { ms }; },
     make: ({ ms }) => ({
       question: `Change ${ms * 3.6} km/h to m/s.`, story: false,
       answer: ms,
-      wrong: [[ms * 3.6 * 3.6, 'To change km/h to m/s, divide by 3.6.'], [ms * 3.6 * 1000, 'Multiplying by 1,000 changes km to m but ignores the hours.'], [ms * 3.6 / 60, 'An hour has 3,600 seconds, not 60.']],
+      wrong: [[ms * 3.6 * 3.6, 'To change km/h to m/s, divide by 3.6.', 'M_MULTIPLY_FOR_MS'], [ms * 3.6 * 1000, 'Multiplying by 1,000 changes km to m but ignores the hours.', 'M_KM_ONLY_CONVERTED'], [ms * 3.6 / 60, 'An hour has 3,600 seconds, not 60.', 'M_SIXTY_SECONDS_HOUR']],
       hints: ['1 km = 1,000 m and 1 hour = 3,600 s.', 'So divide by 3.6.'],
       steps: [`${ms * 3.6} km in 1 hour is ${ms * 3600} m in 3,600 s.`, `${ms * 3600} ÷ 3,600 = ${ms} m/s.`],
     }),
     check: ({ ms }, a) => round(a * 3.6, 3) === round(ms * 3.6, 3) }),
-  fx({ id: 'g9.speed.average', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.b', rung: 2, form: 'word',
+  fx({ id: 'g9.speed.average', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.b', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.AVERAGE_SPEED', rung: 2, form: 'word',
     draw: () => { const d1 = pick([60, 120, 180, 240]), v1 = pick([40, 60, 80]), v2 = pick([30, 40, 60]); const d2 = pick([60, 120, 180]); const T = d1 / v1 + d2 / v2; const av = (d1 + d2) / T; return v1 !== v2 && Number.isInteger(av * 10) ? { d1, v1, d2, v2 } : null; },
     make: ({ d1, v1, d2, v2 }) => {
       const t1 = d1 / v1, t2 = d2 / v2, av = round((d1 + d2) / (t1 + t2), 1);
       return { question: `Two stretches of road: ${d1} km driven at ${v1} km/h and ${d2} km driven at ${v2} km/h. Find the average speed over both stretches, in km/h.`,
         answer: av,
-        wrong: [[(v1 + v2) / 2, 'The two parts take different times, so you cannot just average the speeds. Use total distance ÷ total time.'], [d1 + d2, 'That is the total distance. Divide it by the total time.'], [round(t1 + t2, 2), 'That is the total time. Average speed is distance ÷ time.']],
+        wrong: [[(v1 + v2) / 2, 'The two parts take different times, so you cannot just average the speeds. Use total distance ÷ total time.', 'M_SPEEDS_AVERAGED'], [d1 + d2, 'That is the total distance. Divide it by the total time.', 'M_DISTANCE_FOR_SPEED'], [round(t1 + t2, 2), 'That is the total time. Average speed is distance ÷ time.', 'M_TIME_FOR_AVERAGE']],
         hints: ['Average speed = total distance ÷ total time.', 'Find the time for each stretch first.'],
         steps: [`Time: ${d1} ÷ ${v1} = ${round(t1, 2)} h and ${d2} ÷ ${v2} = ${round(t2, 2)} h.`, `Total distance: ${d1 + d2} km. Total time: ${round(t1 + t2, 2)} h.`, `Average speed: ${d1 + d2} ÷ ${round(t1 + t2, 2)} = ${av} km/h.`] };
     },
     check: ({ d1, v1, d2, v2 }, a) => Math.abs(a * (d1 / v1 + d2 / v2) - (d1 + d2)) < 0.5 }),
-  fx({ id: 'g9.speed.velocity-out-back', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.c', rung: 3, form: 'why',
+  fx({ id: 'g9.speed.velocity-out-back', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY', rung: 3, form: 'why',
     draw: () => { const d = pick([10, 15, 20, 30, 40]), T = pick([0.5, 1, 2]); return { d, T, p: person() }; },
     make: ({ d, T, p }) => ({
       question: `${p.name} cycles ${d} km east along a straight road and straight back to the start. The whole trip takes ${T} h. Why is ${p.her} average velocity 0, even though ${p.her} average speed is ${(2 * d) / T} km/h?`,
-      options: [{ text: 'Velocity uses the change in position, which is zero', right: true }, { text: 'Velocity ignores time, so it cannot be worked out', right: false, why: 'Velocity is displacement divided by time, so time counts.' }, { text: 'A bicycle cannot have a velocity, only a car can', right: false, why: 'Anything moving has a velocity.' }, { text: 'Velocity and speed are always the same thing, so one is wrong', right: false, why: 'Speed uses total distance. Velocity uses how far you end up from the start, and the direction.' }],
+      options: [{ text: 'Velocity uses the change in position, which is zero', right: true }, { text: 'Velocity ignores time, so it cannot be worked out', right: false, why: 'Velocity is displacement divided by time, so time counts.', mis: 'M_VELOCITY_IGNORES_TIME' }, { text: 'A bicycle cannot have a velocity, only a car can', right: false, why: 'Anything moving has a velocity.', mis: 'M_VELOCITY_ONLY_SOME_THINGS' }, { text: 'Velocity and speed are always the same thing, so one is wrong', right: false, why: 'Speed uses total distance. Velocity uses how far you end up from the start, and the direction.', mis: 'M_VELOCITY_AS_SPEED' }],
       hints: ['Speed uses the distance travelled.', 'Velocity uses how far you end up from where you began, in a direction.'],
       steps: [`Total distance: ${2 * d} km, so average speed = ${(2 * d) / T} km/h.`, 'Displacement: 0, because the trip ends at the start. So average velocity = 0.'],
     }) }),
-  fx({ id: 'g9.speed.velocity-direction', skill: 'G9_SPEED_VELOCITY', outcome: 'G9.SPEED.c', rung: 2, form: 'word',
+  fx({ id: 'g9.speed.velocity-direction', skill: 'G9_SPEED_VELOCITY', outcome: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.c', cskill: 'MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED.VELOCITY', rung: 2, form: 'word',
     draw: () => { const d = pick([120, 150, 180, 240, 300]), t = pick([2, 3, 4, 5, 6]); return Number.isInteger(d / t) ? { d, t } : null; },
     make: ({ d, t }) => ({
       question: `Going straight north without turning, a lorry ends ${d} km from where it began, ${t} hours later. How big is its velocity, in km/h?`,
       answer: d / t,
-      wrong: [[d * t, 'Velocity is displacement divided by time, so divide.'], [d - t, 'Divide the distance by the time.'], [t / d, 'That is the wrong way up: displacement ÷ time.']],
+      wrong: [[d * t, 'Velocity is displacement divided by time, so divide.', 'M_VELOCITY_TIMES_TIME'], [d - t, 'Divide the distance by the time.', 'M_TIME_SUBTRACTED'], [t / d, 'That is the wrong way up: displacement ÷ time.', 'M_VELOCITY_UPSIDE_DOWN']],
       hints: ['On a straight road in one direction, the displacement equals the distance.', 'Velocity = displacement ÷ time.'],
       steps: [`Displacement: ${d} km north.`, `Velocity: ${d} ÷ ${t} = ${d / t} km/h north.`],
     }),
     check: ({ d, t }, a) => a * t === d }),
 
   // ---- G9_PROBABILITY_ADV: with and without replacement
-  fx({ id: 'g9.prob.with-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 2, form: 'word',
+  fx({ id: 'g9.prob.with-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT', rung: 2, form: 'word',
     draw: () => { const r = randInt(2, 6), b = randInt(2, 6); return { r, b }; },
     make: ({ r, b }) => {
       const n = r + b, num = r * r, den = n * n, g = gcdOf(num, den), ans = `${num / g}/${den / g}`;
       return { question: `A bag has ${r} red and ${b} blue counters. One is taken, its colour noted, and it is put back. A second is taken. Find the probability that both are red, as a fraction in its simplest form.`,
         instruction: 'Give the answer as a fraction in its simplest form.',
         answer: ans,
-        wrong: [[`${r}/${n}`, 'That is for one counter. There are two draws: multiply.'], [`${r * (r - 1) / gcdOf(r * (r - 1), n * (n - 1))}/${n * (n - 1) / gcdOf(r * (r - 1), n * (n - 1))}`, 'The counter was put back, so the second draw has the same chances as the first.'], [`${2 * r}/${n}`, 'Along a path you multiply probabilities, not add them.']],
+        wrong: [[`${r}/${n}`, 'That is for one counter. There are two draws: multiply.', 'M_ONE_DRAW_ONLY'], [`${r * (r - 1) / gcdOf(r * (r - 1), n * (n - 1))}/${n * (n - 1) / gcdOf(r * (r - 1), n * (n - 1))}`, 'The counter was put back, so the second draw has the same chances as the first.', 'M_REPLACED_TREATED_AS_NOT'], [`${2 * r}/${n}`, 'Along a path you multiply probabilities, not add them.', 'M_PROBS_ADDED_ALONG']],
         hints: ['The counter goes back, so both draws are the same.', `Each draw has ${n} counters.`],
         steps: [`P(red on one draw) = ${r}/${n}.`, `Both red: ${r}/${n} × ${r}/${n} = ${num}/${den} = ${ans}.`] };
     },
     check: ({ r, b }, a) => { const [x, y] = String(a).split('/').map(Number); return Math.abs(x / y - (r / (r + b)) ** 2) < 1e-9 && gcdOf(x, y) === 1; } }),
-  fx({ id: 'g9.prob.without-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 3, form: 'word',
+  fx({ id: 'g9.prob.without-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT', rung: 3, form: 'word',
     draw: () => { const g = randInt(3, 8), b = randInt(2, 7); return { g, b }; },
     make: ({ g, b }) => {
       const n = g + b, num = g * (g - 1), den = n * (n - 1), k = gcdOf(num, den), ans = `${num / k}/${den / k}`;
       return { question: `A class list has ${g} girls and ${b} boys. The teacher picks one learner to lead and then another to help. A learner cannot be picked twice. Find the probability that both are girls, as a fraction in its simplest form.`,
         instruction: 'Give the answer as a fraction in its simplest form.',
         answer: ans,
-        wrong: [[`${g * g / gcdOf(g * g, n * n)}/${n * n / gcdOf(g * g, n * n)}`, 'After the first pick there is one fewer learner, and one fewer girl.'], [`${g / gcdOf(g, n)}/${n / gcdOf(g, n)}`, 'That is for one pick. Two picks: multiply.'], [`${(g - 1) / gcdOf(g - 1, n - 1)}/${(n - 1) / gcdOf(g - 1, n - 1)}`, 'That is only the second pick. Multiply it by the first.']],
+        wrong: [[`${g * g / gcdOf(g * g, n * n)}/${n * n / gcdOf(g * g, n * n)}`, 'After the first pick there is one fewer learner, and one fewer girl.', 'M_NOT_REPLACED_TREATED_AS_REPLACED'], [`${g / gcdOf(g, n)}/${n / gcdOf(g, n)}`, 'That is for one pick. Two picks: multiply.', 'M_ONE_DRAW_ONLY'], [`${(g - 1) / gcdOf(g - 1, n - 1)}/${(n - 1) / gcdOf(g - 1, n - 1)}`, 'That is only the second pick. Multiply it by the first.', 'M_SECOND_PICK_ONLY']],
         hints: ['After the first girl is picked, what changes?', `Second pick: ${g - 1} girls out of ${n - 1}.`],
         steps: [`First pick: ${g}/${n}.`, `Second pick: ${g - 1}/${n - 1}.`, `Both: ${g}/${n} × ${g - 1}/${n - 1} = ${num}/${den} = ${ans}.`] };
     },
     check: ({ g, b }, a) => { const [x, y] = String(a).split('/').map(Number); const n = g + b; return Math.abs(x / y - (g / n) * ((g - 1) / (n - 1))) < 1e-9; } }),
-  fx({ id: 'g9.prob.replace-or-not', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 1, form: 'why',
+  fx({ id: 'g9.prob.replace-or-not', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT', rung: 1, form: 'why',
     draw: () => { const r = randInt(3, 7), b = randInt(2, 6); return { r, b, p: person() }; },
     make: ({ r, b, p }) => ({
       question: `A bag has ${r} red and ${b} blue beads. ${p.name} takes out a red bead and keeps it. Why is the chance of red on the next draw now ${r - 1}/${r + b - 1}, and not ${r}/${r + b}?`,
-      options: [{ text: 'One red has gone, so reds and all beads are one fewer', right: true }, { text: 'Taking a bead makes red more likely next time', right: false, why: 'With one red gone, red is less likely, not more.' }, { text: 'The chance of red never changes in a bag of beads', right: false, why: 'It stays the same only if the bead is put back.' }, { text: 'Only the number of blue beads changes in the bag', right: false, why: 'Blue beads are untouched. Look at what left the bag.' }],
+      options: [{ text: 'One red has gone, so reds and all beads are one fewer', right: true }, { text: 'Taking a bead makes red more likely next time', right: false, why: 'With one red gone, red is less likely, not more.', mis: 'M_TAKING_RAISES_CHANCE' }, { text: 'The chance of red never changes in a bag of beads', right: false, why: 'It stays the same only if the bead is put back.', mis: 'M_NOT_REPLACED_TREATED_AS_REPLACED' }, { text: 'Only the number of blue beads changes in the bag', right: false, why: 'Blue beads are untouched. Look at what left the bag.', mis: 'M_WRONG_COLOUR_REDUCED' }],
       hints: ['Count what is left in the bag.', 'How many reds now? How many beads altogether?'],
       steps: [`Reds left: ${r - 1}. Beads left: ${r + b - 1}.`, `So the chance is ${r - 1}/${r + b - 1}.`],
     }) }),
