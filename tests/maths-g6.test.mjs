@@ -97,7 +97,7 @@ const packs = loadSources(6);
 const deepened = source.sub_strands.filter(s => packs.some(p => p.sub_strand === s.code));
 
 test('a deepened sub-strand gives every skill two prerequisites and four misconceptions, each with its own example', () => {
-  assert.ok(deepened.length >= 1);
+  assert.equal(deepened.length, source.sub_strands.length, 'every Grade 6 sub-strand has its teaching pack file');
   for (const s of deepened) for (const k of s.skills) {
     assert.ok(k.prerequisites.length >= 2 && k.prerequisites.every(p => p.reason.length > 10), `${k.code}: prerequisites`);
     assert.equal(new Set(k.prerequisites.map(p => p.requires)).size, k.prerequisites.length, `${k.code}: a prerequisite twice`);
