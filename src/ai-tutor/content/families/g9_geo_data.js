@@ -767,7 +767,7 @@ export const FAMILIES = [
     check: ({ cf }, a) => cf[2] + a === cf[4] }),
 
   // =========================== PROBABILITY ===========================
-  fam({ id: 'g9.prob.raffle-either', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.c', rung: 2, form: 'word',
+  fam({ id: 'g9.prob.raffle-either', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.d', cskill: 'MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD', rung: 2, form: 'word',
     draw: () => {
       const N = pick([20, 25, 40, 50]), a = randInt(2, 8), b = randInt(2, 8), [x, y] = mix(['a school bag', 'a hen', 'a radio', 'a sack of potatoes']).slice(0, 2);
       if (a === b) return null;
@@ -778,20 +778,20 @@ export const FAMILIES = [
     make: ({ N, a, b, x, y, ans }) => ({
       question: `A harambee raffle has ${N} tickets. ${a} tickets win ${x}, ${b} tickets win ${y}, and the rest win nothing. A ticket wins at most one prize. One ticket is drawn. What is the probability that it wins either ${x} or ${y}? Give a decimal.`,
       answer: ans,
-      wrong: [[round((a * b) / (N * N), 4), 'A ticket cannot win both prizes, so these events cannot both happen. For "either … or" you add, not multiply.'], [round(a / N, 4), `That is the chance of ${x} alone. The question also allows the other prize.`], [round(1 - ans, 4), 'That is the chance of winning neither prize. The question asks for either prize.']],
+      wrong: [[round((a * b) / (N * N), 4), 'A ticket cannot win both prizes, so these events cannot both happen. For "either … or" you add, not multiply.', 'M_OR_MULTIPLIED'], [round(a / N, 4), `That is the chance of ${x} alone. The question also allows the other prize.`, 'M_ONE_EVENT_ONLY'], [round(1 - ans, 4), 'That is the chance of winning neither prize. The question asks for either prize.', 'M_NEITHER_FOR_EITHER']],
       hints: ['A ticket wins at most one prize, so the two events cannot both happen.', 'For events that cannot both happen, add their probabilities.'],
       steps: [`P(${x}) = ${a}/${N}. P(${y}) = ${b}/${N}.`, `The events cannot both happen, so P(either) = (${a} + ${b}) ÷ ${N} = ${ans}.`],
     }),
     check: ({ N, a, b }, v) => Math.abs(v * N - (a + b)) < 1e-6 }),
 
-  fam({ id: 'g9.prob.football-netball-why', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.c', rung: 3, form: 'why',
+  fam({ id: 'g9.prob.football-netball-why', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.c', cskill: 'MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY', rung: 3, form: 'why',
     draw: () => { const N = pick([40, 30, 50]), f = randInt(Math.floor(N * 0.4), Math.floor(N * 0.6)), b = pick([4, 6, 8]); return { N, f, n: N - f, b, k: randInt(0, 3), p: person() }; },
     make: ({ N, f, n, b, k, p }) => {
       const opts = [
         { text: `${b} learners play both, so they were counted twice. The events are not mutually exclusive`, right: true },
-        { text: 'Football and netball are mutually exclusive, so adding the two probabilities is correct', right: false, why: `Mutually exclusive events cannot both happen. Here ${b} learners play both games.` },
-        { text: 'The probability of "or" must be found by multiplying', right: false, why: 'Multiplying is used for "and" with independent events, not for "or".' },
-        { text: 'A probability cannot be found from numbers of learners', right: false, why: 'Probabilities are often found from counts. The mistake is in how they were combined.' },
+        { text: 'Football and netball are mutually exclusive, so adding the two probabilities is correct', right: false, why: `Mutually exclusive events cannot both happen. Here ${b} learners play both games.`, mis: 'M_OVERLAP_IGNORED' },
+        { text: 'The probability of "or" must be found by multiplying', right: false, why: 'Multiplying is used for "and" with independent events, not for "or".', mis: 'M_OR_MULTIPLIED' },
+        { text: 'A probability cannot be found from numbers of learners', right: false, why: 'Probabilities are often found from counts. The mistake is in how they were combined.', mis: 'M_COUNTS_NOT_PROBABILITY' },
       ];
       return { question: `In a class of ${N} learners, ${f} play football and ${n} play netball. ${p.name} says the chance that a learner chosen at random plays football or netball is ${f}/${N} + ${n}/${N} = 1. But ${b} learners play both games. Why is ${p.name}'s method wrong?`,
         options: turn(opts, k), fixedOrder: true,
@@ -799,7 +799,7 @@ export const FAMILIES = [
         steps: [`${b} learners are in both groups, so they are counted in both ${f} and ${n}.`, `Football or netball: (${f} + ${n} − ${b}) ÷ ${N}. Adding without taking away ${b} counts them twice.`] };
     } }),
 
-  fam({ id: 'g9.prob.way-to-school-table', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.c', rung: 2, form: 'table',
+  fam({ id: 'g9.prob.way-to-school-table', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.d', cskill: 'MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD', rung: 2, form: 'table',
     draw: () => {
       const N = pick([20, 25, 40, 50]), cuts = [randInt(2, N / 2), randInt(2, N / 2), randInt(2, N / 2)];
       const last = N - cuts.reduce((a, b) => a + b, 0);
@@ -814,13 +814,13 @@ export const FAMILIES = [
       question: `The table shows how the learners of a class come to school. Each learner uses one way only. One learner is chosen at random. What is the probability that the learner comes either by ${ways[i].toLowerCase()} or by ${ways[j].toLowerCase()}? Give a decimal.`,
       model: { type: 'table', data: { head: ['Way to school', 'Learners'], rows: ways.map((w, t) => ({ label: w, value: String(f[t]) })) } },
       answer: ans,
-      wrong: [[round((x * y) / (N * N), 4), 'A learner uses one way only, so the two events cannot both happen. For "either … or", add the probabilities.'], [round(x / N, 4), 'That is only one of the two ways. Include the other too.'], [round(1 - ans, 4), 'That is the chance of coming by neither way. The question asks for either.']],
+      wrong: [[round((x * y) / (N * N), 4), 'A learner uses one way only, so the two events cannot both happen. For "either … or", add the probabilities.', 'M_OR_MULTIPLIED'], [round(x / N, 4), 'That is only one of the two ways. Include the other too.', 'M_ONE_EVENT_ONLY'], [round(1 - ans, 4), 'That is the chance of coming by neither way. The question asks for either.', 'M_NEITHER_FOR_EITHER']],
       hints: ['Find how many learners are in the class altogether.', 'Add the learners for the two ways, then divide by the total.'],
       steps: [`Total learners = ${f.join(' + ')} = ${N}.`, `Either way: (${x} + ${y}) ÷ ${N} = ${ans}.`],
     }),
     check: ({ N, x, y }, v) => Math.abs(v * N - (x + y)) < 1e-6 }),
 
-  fam({ id: 'g9.prob.neither-road-spot', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.c', rung: 2, form: 'spot',
+  fam({ id: 'g9.prob.neither-road-spot', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.d', cskill: 'MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD', rung: 2, form: 'spot',
     draw: () => {
       const pa = pick([0.15, 0.2, 0.25, 0.3, 0.35, 0.4]), pb = pick([0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45]);
       if (pa === pb || pa + pb > 0.8) return null;
@@ -838,10 +838,11 @@ export const FAMILIES = [
       ];
       const fixes = { times: 'For events that cannot both happen, "A or B" is found by adding the probabilities, not multiplying.', skip: 'P(A or B) is the chance of taking one of the roads. The chance of neither is 1 minus that.', slip: `${pa} + ${pb} is ${sum}, not ${val}.` };
       return { question: `${p.name} knows that a boda boda rider takes road A with probability ${pa} and road B with probability ${pb}. The rider takes only one road each day. ${p.She} finds the probability that the rider takes neither road. Which step has the mistake?`,
-        working, fix: fixes[kind], steps: [`P(A or B) = ${pa} + ${pb} = ${sum}.`, `P(neither) = 1 − ${sum} = ${round(1 - sum, 2)}.`] };
+        working, mis: { times: 'M_OR_MULTIPLIED', skip: 'M_NEITHER_NOT_FROM_ONE', slip: 'SLIP' }[kind],
+        fix: fixes[kind], steps: [`P(A or B) = ${pa} + ${pb} = ${sum}.`, `P(neither) = 1 − ${sum} = ${round(1 - sum, 2)}.`] };
     } }),
 
-  fam({ id: 'g9.prob.late-matatu-independent', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 2, form: 'word',
+  fam({ id: 'g9.prob.late-matatu-independent', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS', rung: 2, form: 'word',
     draw: () => {
       const pa = pick([0.1, 0.2, 0.3, 0.4, 0.5]), pb = pick([0.1, 0.2, 0.3, 0.4, 0.5, 0.6]);
       const ans = round(pa * pb, 4);
@@ -851,27 +852,27 @@ export const FAMILIES = [
     make: ({ pa, pb, ans }) => ({
       question: `The probability that the school bus is late on Monday is ${pa}. The probability that it is late on Tuesday is ${pb}. Whether it is late on one day does not change the chance on the other day. What is the probability that it is late on both days?`,
       answer: ans,
-      wrong: [[round(pa + pb, 4), 'Adding would give more than either chance alone. For "and" with independent events, multiply.'], [round(pa * (1 - pb), 4), 'That is late on Monday and on time on Tuesday.'], [round(1 - ans, 4), 'That is the chance that it is not late on both days. The question asks for late on both.']],
+      wrong: [[round(pa + pb, 4), 'Adding would give more than either chance alone. For "and" with independent events, multiply.', 'M_AND_ADDED'], [round(pa * (1 - pb), 4), 'That is late on Monday and on time on Tuesday.', 'M_WRONG_PATH_INDEP'], [round(1 - ans, 4), 'That is the chance that it is not late on both days. The question asks for late on both.', 'M_COMPLEMENT_GIVEN']],
       hints: ['The two days are independent.', 'For "and" with independent events, multiply the probabilities.'],
       steps: [`P(late Monday) = ${pa} and P(late Tuesday) = ${pb}.`, `Both: ${pa} × ${pb} = ${ans}.`],
     }),
     check: ({ pa, pb }, a) => Math.abs(a / pb - pa) < 1e-6 }),
 
-  fam({ id: 'g9.prob.coin-and-spinner', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 3, form: 'steps',
+  fam({ id: 'g9.prob.coin-and-spinner', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS', rung: 3, form: 'steps',
     draw: () => ({ n: pick([4, 5, 10, 20]), T: 200, num: randInt(1, 3) }),
     make: ({ n, T, num }) => ({
       question: `At a school fete, a game uses a fair coin and a fair spinner with ${n} equal sectors numbered 1 to ${n}. A player wins by getting a head on the coin and ${num} on the spinner. The coin and the spinner are independent of each other.`,
       parts: [
-        { prompt: 'Find the probability of a head.', answer: 0.5, hint: 'A fair coin has two equally likely sides.', wrong: [[1, 'There are two sides, so one of them has half of the chance.']] },
-        { prompt: `Find the probability that the spinner shows ${num}, as a decimal.`, answer: round(1 / n, 4), hint: `${n} equal sectors, one of them is ${num}.`, wrong: [[n, 'A probability is the number of favourable sectors out of all of them, not the number of sectors.']] },
-        { prompt: 'Find the probability of winning.', answer: round(0.5 / n, 4), hint: 'The two events are independent, so multiply.', wrong: [[round(0.5 + 1 / n, 4), 'For "and" with independent events, multiply, do not add.']] },
-        { prompt: `If ${T} players each have one turn, about how many are expected to win?`, answer: round((T * 0.5) / n, 2), hint: 'Expected number = probability of winning × number of players.', wrong: [[round(0.5 / n, 4), 'That is the probability of winning. Multiply it by the number of players.']] },
+        { prompt: 'Find the probability of a head.', answer: 0.5, hint: 'A fair coin has two equally likely sides.', wrong: [[1, 'There are two sides, so one of them has half of the chance.', 'M_CERTAIN_FOR_HALF']] },
+        { prompt: `Find the probability that the spinner shows ${num}, as a decimal.`, answer: round(1 / n, 4), hint: `${n} equal sectors, one of them is ${num}.`, wrong: [[n, 'A probability is the number of favourable sectors out of all of them, not the number of sectors.', 'M_SECTORS_AS_PROBABILITY']] },
+        { prompt: 'Find the probability of winning.', answer: round(0.5 / n, 4), hint: 'The two events are independent, so multiply.', wrong: [[round(0.5 + 1 / n, 4), 'For "and" with independent events, multiply, do not add.', 'M_AND_ADDED']] },
+        { prompt: `If ${T} players each have one turn, about how many are expected to win?`, answer: round((T * 0.5) / n, 2), hint: 'Expected number = probability of winning × number of players.', wrong: [[round(0.5 / n, 4), 'That is the probability of winning. Multiply it by the number of players.', 'M_EXPECTED_NOT_SCALED']] },
       ],
       steps: [`P(head) = 0.5 and P(${num}) = 1 ÷ ${n} = ${round(1 / n, 4)}.`, `P(win) = 0.5 × ${round(1 / n, 4)} = ${round(0.5 / n, 4)}.`, `Expected wins = ${T} × ${round(0.5 / n, 4)} = ${round((T * 0.5) / n, 2)}.`],
     }),
     check: ({ T }, v) => v[2] === round(v[0] * v[1], 4) && Math.abs(v[3] / T - v[2]) < 1e-6 }),
 
-  fam({ id: 'g9.prob.tree-table-one-grows', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.f', rung: 2, form: 'table',
+  fam({ id: 'g9.prob.tree-table-one-grows', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.f', cskill: 'MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM', rung: 2, form: 'table',
     draw: () => {
       const p = pick([0.5, 0.6, 0.7, 0.8, 0.9]), q = pick([0.5, 0.6, 0.7, 0.8, 0.9]);
       const ans = round(p * (1 - q) + (1 - p) * q, 4);
@@ -882,28 +883,28 @@ export const FAMILIES = [
       question: 'The table gives the branches of a tree diagram for two seedlings planted on a shamba. The seedlings grow independently of each other. What is the probability that exactly one of the two seedlings grows?',
       model: { type: 'table', data: { head: ['Seedling', 'Branch', 'Probability'], rows: [{ cells: ['First', 'Grows', String(p)] }, { cells: ['First', 'Does not grow', String(round(1 - p, 4))] }, { cells: ['Second', 'Grows', String(q)] }, { cells: ['Second', 'Does not grow', String(round(1 - q, 4))] }] } },
       answer: ans,
-      wrong: [[round(p * q, 4), 'That is the path where both seedlings grow.'], [round(p * (1 - q), 4), 'That is one path only. Exactly one grows can happen in two ways.'], [round(1 - (1 - p) * (1 - q), 4), 'That is the chance that at least one grows, which includes both growing.']],
+      wrong: [[round(p * q, 4), 'That is the path where both seedlings grow.', 'M_BOTH_PATH_FOR_EXACTLY_ONE'], [round(p * (1 - q), 4), 'That is one path only. Exactly one grows can happen in two ways.', 'M_ONE_PATH_ONLY'], [round(1 - (1 - p) * (1 - q), 4), 'That is the chance that at least one grows, which includes both growing.', 'M_AT_LEAST_FOR_EXACTLY']],
       hints: ['Exactly one growing can happen in two ways: first grows and second does not, or the other way round.', 'Multiply along each path, then add the two paths.'],
       steps: [`Path 1: first grows, second does not: ${p} × ${round(1 - q, 4)} = ${round(p * (1 - q), 4)}.`, `Path 2: first does not grow, second grows: ${round(1 - p, 4)} × ${q} = ${round((1 - p) * q, 4)}.`, `Add the two paths: ${ans}.`],
     }),
     check: ({ p, q }, a) => Math.abs(a - (p + q - 2 * p * q)) < 1e-6 }),
 
-  fam({ id: 'g9.prob.tree-without-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.f', rung: 3, form: 'steps',
+  fam({ id: 'g9.prob.tree-without-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.f', cskill: 'MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM', rung: 3, form: 'steps',
     draw: () => { const r = randInt(1, 4); return { r, b: 5 - r, c1: pick(['blue', 'green']), c2: pick(['black', 'red']), what: pick(['pens', 'crayons']) }; },
     make: ({ r, b, c1, c2, what }) => {
       const one = round(r / 5, 4), two = round(b / 4, 4), mix1 = round((r * b) / 20, 4), same = round((r * (r - 1) + b * (b - 1)) / 20, 4);
       return { question: `A box holds 5 ${what}: ${r} ${c1} and ${b} ${c2}. Two are taken one after the other, and the first is not put back. Think of a tree diagram for the two picks.`,
         parts: [
-          { prompt: `Find the probability that the first one is ${c1}, as a decimal.`, answer: one, hint: `${r} of the 5 are ${c1}.`, wrong: [[round(b / 5, 4), `That is the chance of ${c2}.`]] },
-          { prompt: `The first one was ${c1} and is not put back. Find the probability that the second is ${c2}.`, answer: two, hint: 'How many are left in the box, and how many of them are ' + c2 + '?', wrong: [[round(b / 5, 4), 'The first one was not put back, so there are only 4 left.']] },
-          { prompt: `Find the probability of ${c1} first and then ${c2}.`, answer: mix1, hint: 'Multiply along the branches of the tree.', wrong: [[round(one + two, 4), 'Along a path you multiply, you do not add.']] },
-          { prompt: 'Find the probability that both are the same colour.', answer: same, hint: `Add the path for two ${c1} and the path for two ${c2}.`, wrong: [[round((r * (r - 1)) / 20, 4), `That is only the path for two ${c1}. Add the path for two ${c2} too.`]] },
+          { prompt: `Find the probability that the first one is ${c1}, as a decimal.`, answer: one, hint: `${r} of the 5 are ${c1}.`, wrong: [[round(b / 5, 4), `That is the chance of ${c2}.`, 'M_OTHER_OUTCOME_GIVEN']] },
+          { prompt: `The first one was ${c1} and is not put back. Find the probability that the second is ${c2}.`, answer: two, hint: 'How many are left in the box, and how many of them are ' + c2 + '?', wrong: [[round(b / 5, 4), 'The first one was not put back, so there are only 4 left.', 'M_TOTAL_NOT_REDUCED']] },
+          { prompt: `Find the probability of ${c1} first and then ${c2}.`, answer: mix1, hint: 'Multiply along the branches of the tree.', wrong: [[round(one + two, 4), 'Along a path you multiply, you do not add.', 'M_BRANCHES_ADDED_TREE']] },
+          { prompt: 'Find the probability that both are the same colour.', answer: same, hint: `Add the path for two ${c1} and the path for two ${c2}.`, wrong: [[round((r * (r - 1)) / 20, 4), `That is only the path for two ${c1}. Add the path for two ${c2} too.`, 'M_ONE_PATH_ONLY']] },
         ],
         steps: [`First ${c1}: ${r}/5 = ${one}. Then ${c2}: ${b}/4 = ${two}.`, `${c1} then ${c2}: ${one} × ${two} = ${mix1}.`, `Same colour: ${r}/5 × ${r - 1}/4 + ${b}/5 × ${b - 1}/4 = ${same}.`] };
     },
     check: ({ r, b }, v) => Math.abs(v[0] * v[1] - v[2]) < 1e-3 && Math.abs(v[3] - (r * (r - 1) + b * (b - 1)) / 20) < 1e-3 }),
 
-  fam({ id: 'g9.prob.least-likely-table', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.b', rung: 2, form: 'table',
+  fam({ id: 'g9.prob.least-likely-table', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.b', cskill: 'MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE', misMapped: false, reveals: ['M_COUNT_NOT_FRACTION'], rung: 2, form: 'table',
     draw: () => {
       const bags = Array.from({ length: 3 }, () => { const t = pick([8, 10, 12, 15, 20]); return { red: randInt(2, t - 2), all: t }; });
       const share = (x) => x.red / x.all, least = Math.random() < 0.5;
@@ -939,7 +940,7 @@ export const FAMILIES = [
     }),
     check: ({ F, r, B }, a) => F + r * a === B }),
 
-  fam({ id: 'g9.prob.seeds-expected', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.b', rung: 2, form: 'word',
+  fam({ id: 'g9.prob.seeds-expected', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.b', cskill: 'MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE', rung: 2, form: 'word',
     draw: () => {
       const pr = pick([0.6, 0.7, 0.8, 0.9]), n = pick([150, 200, 250, 300]), ans = round(pr * n, 2);
       if (!Number.isInteger(ans) || !allDistinct(ans, round(n * (1 - pr), 2), round(n / pr, 2), pr)) return null;
@@ -948,7 +949,7 @@ export const FAMILIES = [
     make: ({ pr, n, ans, p }) => ({
       question: `The probability that a maize seed grows is ${pr}. ${p.name} plants ${n} seeds on a shamba. About how many seeds should grow?`,
       answer: ans,
-      wrong: [[round(n * (1 - pr), 2), 'That is the number that should not grow. The question asks for the seeds that grow.'], [round(n / pr, 2), 'A probability is less than 1, so the number that grow is less than the number planted. Multiply, do not divide.'], [round(n + pr, 2), 'Multiply the number of seeds by the probability. Do not add.']],
+      wrong: [[round(n * (1 - pr), 2), 'That is the number that should not grow. The question asks for the seeds that grow.', 'M_EXPECTED_COMPLEMENT'], [round(n / pr, 2), 'A probability is less than 1, so the number that grow is less than the number planted. Multiply, do not divide.', 'M_EXPECTED_DIVIDED'], [round(n + pr, 2), 'Multiply the number of seeds by the probability. Do not add.', 'M_EXPECTED_ADDED']],
       hints: ['The expected number is the probability times the number of trials.', 'Multiply the probability by the number of seeds.'],
       steps: [`Expected number = ${pr} × ${n}.`, `${pr} × ${n} = ${ans} seeds.`],
     }),

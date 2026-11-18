@@ -17,4 +17,5 @@ import * as scale from './scale.mjs';
 import * as similar from './similar.mjs';
 import * as trig from './trig.mjs';
 import * as data from './data.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed, money, approx, graphs, scale, similar, trig, data];
+import * as probability from './probability.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed, money, approx, graphs, scale, similar, trig, data, probability];

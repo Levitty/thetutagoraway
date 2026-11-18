@@ -529,35 +529,35 @@ export const CORE_FAMILIES = [
     check: ({ d, t }, a) => a * t === d }),
 
   // ---- G9_PROBABILITY_ADV: with and without replacement
-  fx({ id: 'g9.prob.with-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 2, form: 'word',
+  fx({ id: 'g9.prob.with-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT', rung: 2, form: 'word',
     draw: () => { const r = randInt(2, 6), b = randInt(2, 6); return { r, b }; },
     make: ({ r, b }) => {
       const n = r + b, num = r * r, den = n * n, g = gcdOf(num, den), ans = `${num / g}/${den / g}`;
       return { question: `A bag has ${r} red and ${b} blue counters. One is taken, its colour noted, and it is put back. A second is taken. Find the probability that both are red, as a fraction in its simplest form.`,
         instruction: 'Give the answer as a fraction in its simplest form.',
         answer: ans,
-        wrong: [[`${r}/${n}`, 'That is for one counter. There are two draws: multiply.'], [`${r * (r - 1) / gcdOf(r * (r - 1), n * (n - 1))}/${n * (n - 1) / gcdOf(r * (r - 1), n * (n - 1))}`, 'The counter was put back, so the second draw has the same chances as the first.'], [`${2 * r}/${n}`, 'Along a path you multiply probabilities, not add them.']],
+        wrong: [[`${r}/${n}`, 'That is for one counter. There are two draws: multiply.', 'M_ONE_DRAW_ONLY'], [`${r * (r - 1) / gcdOf(r * (r - 1), n * (n - 1))}/${n * (n - 1) / gcdOf(r * (r - 1), n * (n - 1))}`, 'The counter was put back, so the second draw has the same chances as the first.', 'M_REPLACED_TREATED_AS_NOT'], [`${2 * r}/${n}`, 'Along a path you multiply probabilities, not add them.', 'M_PROBS_ADDED_ALONG']],
         hints: ['The counter goes back, so both draws are the same.', `Each draw has ${n} counters.`],
         steps: [`P(red on one draw) = ${r}/${n}.`, `Both red: ${r}/${n} × ${r}/${n} = ${num}/${den} = ${ans}.`] };
     },
     check: ({ r, b }, a) => { const [x, y] = String(a).split('/').map(Number); return Math.abs(x / y - (r / (r + b)) ** 2) < 1e-9 && gcdOf(x, y) === 1; } }),
-  fx({ id: 'g9.prob.without-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 3, form: 'word',
+  fx({ id: 'g9.prob.without-replacement', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT', rung: 3, form: 'word',
     draw: () => { const g = randInt(3, 8), b = randInt(2, 7); return { g, b }; },
     make: ({ g, b }) => {
       const n = g + b, num = g * (g - 1), den = n * (n - 1), k = gcdOf(num, den), ans = `${num / k}/${den / k}`;
       return { question: `A class list has ${g} girls and ${b} boys. The teacher picks one learner to lead and then another to help. A learner cannot be picked twice. Find the probability that both are girls, as a fraction in its simplest form.`,
         instruction: 'Give the answer as a fraction in its simplest form.',
         answer: ans,
-        wrong: [[`${g * g / gcdOf(g * g, n * n)}/${n * n / gcdOf(g * g, n * n)}`, 'After the first pick there is one fewer learner, and one fewer girl.'], [`${g / gcdOf(g, n)}/${n / gcdOf(g, n)}`, 'That is for one pick. Two picks: multiply.'], [`${(g - 1) / gcdOf(g - 1, n - 1)}/${(n - 1) / gcdOf(g - 1, n - 1)}`, 'That is only the second pick. Multiply it by the first.']],
+        wrong: [[`${g * g / gcdOf(g * g, n * n)}/${n * n / gcdOf(g * g, n * n)}`, 'After the first pick there is one fewer learner, and one fewer girl.', 'M_NOT_REPLACED_TREATED_AS_REPLACED'], [`${g / gcdOf(g, n)}/${n / gcdOf(g, n)}`, 'That is for one pick. Two picks: multiply.', 'M_ONE_DRAW_ONLY'], [`${(g - 1) / gcdOf(g - 1, n - 1)}/${(n - 1) / gcdOf(g - 1, n - 1)}`, 'That is only the second pick. Multiply it by the first.', 'M_SECOND_PICK_ONLY']],
         hints: ['After the first girl is picked, what changes?', `Second pick: ${g - 1} girls out of ${n - 1}.`],
         steps: [`First pick: ${g}/${n}.`, `Second pick: ${g - 1}/${n - 1}.`, `Both: ${g}/${n} × ${g - 1}/${n - 1} = ${num}/${den} = ${ans}.`] };
     },
     check: ({ g, b }, a) => { const [x, y] = String(a).split('/').map(Number); const n = g + b; return Math.abs(x / y - (g / n) * ((g - 1) / (n - 1))) < 1e-9; } }),
-  fx({ id: 'g9.prob.replace-or-not', skill: 'G9_PROBABILITY_ADV', outcome: 'G9.PROB.e', rung: 1, form: 'why',
+  fx({ id: 'g9.prob.replace-or-not', skill: 'G9_PROBABILITY_ADV', outcome: 'MATH.G9.DATA_H.PROBABILITY.e', cskill: 'MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT', rung: 1, form: 'why',
     draw: () => { const r = randInt(3, 7), b = randInt(2, 6); return { r, b, p: person() }; },
     make: ({ r, b, p }) => ({
       question: `A bag has ${r} red and ${b} blue beads. ${p.name} takes out a red bead and keeps it. Why is the chance of red on the next draw now ${r - 1}/${r + b - 1}, and not ${r}/${r + b}?`,
-      options: [{ text: 'One red has gone, so reds and all beads are one fewer', right: true }, { text: 'Taking a bead makes red more likely next time', right: false, why: 'With one red gone, red is less likely, not more.' }, { text: 'The chance of red never changes in a bag of beads', right: false, why: 'It stays the same only if the bead is put back.' }, { text: 'Only the number of blue beads changes in the bag', right: false, why: 'Blue beads are untouched. Look at what left the bag.' }],
+      options: [{ text: 'One red has gone, so reds and all beads are one fewer', right: true }, { text: 'Taking a bead makes red more likely next time', right: false, why: 'With one red gone, red is less likely, not more.', mis: 'M_TAKING_RAISES_CHANCE' }, { text: 'The chance of red never changes in a bag of beads', right: false, why: 'It stays the same only if the bead is put back.', mis: 'M_NOT_REPLACED_TREATED_AS_REPLACED' }, { text: 'Only the number of blue beads changes in the bag', right: false, why: 'Blue beads are untouched. Look at what left the bag.', mis: 'M_WRONG_COLOUR_REDUCED' }],
       hints: ['Count what is left in the bag.', 'How many reds now? How many beads altogether?'],
       steps: [`Reds left: ${r - 1}. Beads left: ${r + b - 1}.`, `So the chance is ${r - 1}/${r + b - 1}.`],
     }) }),

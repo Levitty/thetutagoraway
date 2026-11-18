@@ -16829,6 +16829,948 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.DATA_H.DATA_INTERPRETATION_GROU",
   "sub_strand_name": "Data Interpretation (Grouped Data)",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY",
+  "key_step": "The child lists every outcome, checks they are equally likely, then counts favourable over all.",
+  "floor": {
+   "prerequisite": "Writes a probability as a fraction.",
+   "question": "One red of 4 equal sectors",
+   "answer": "1/4"
+  },
+  "representations": [
+   "a list of outcomes",
+   "a fair spinner and an unfair one",
+   "a die"
+  ],
+  "steps": [
+   "List all outcomes.",
+   "Check they are equally likely.",
+   "Count the favourable ones.",
+   "Favourable over all."
+  ],
+  "contexts": [
+   "a board game at home",
+   "a spinner at a school fete",
+   "tossing a coin to start a football match"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a spinner: one half red, two quarters blue and green."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the red half.",
+    "say": "Are red, blue and green equally likely?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write P(red) = 1/2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY.M_UNEQUAL_SECTORS_EQUAL",
+    "listen_for": [
+     "1/3"
+    ],
+    "ask": "Are the sectors the same size?",
+    "repair": "No: red is half.",
+    "error": "Treats outcomes as equally likely when the sectors are unequal.",
+    "example": {
+     "question": "A spinner with one half red and two quarters blue and green. P(red)?",
+     "wrong_answer": "1/3",
+     "correct_answer": "1/2"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY.M_OUTCOMES_MISCOUNTED",
+    "listen_for": [
+     "1 to 5"
+    ],
+    "ask": "How many faces has a die?",
+    "repair": "Six.",
+    "error": "Leaves out or repeats outcomes when listing.",
+    "example": {
+     "question": "Outcomes of a die?",
+     "wrong_answer": "1 to 5",
+     "correct_answer": "1, 2, 3, 4, 5, 6"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY.M_FAVOURABLE_OVER_UNFAVOURABLE",
+    "listen_for": [
+     "3/3"
+    ],
+    "ask": "Over all or over the others?",
+    "repair": "Over all: 3/6.",
+    "error": "Divides favourable by unfavourable outcomes.",
+    "example": {
+     "question": "P(even) on a die?",
+     "wrong_answer": "3/3",
+     "correct_answer": "3/6"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY.M_RECENT_RESULTS_CHANGE",
+    "listen_for": [
+     "tails is due"
+    ],
+    "ask": "Does a coin remember?",
+    "repair": "No: 1/2.",
+    "error": "Thinks past results change the chance of the next.",
+    "example": {
+     "question": "A coin showed heads 4 times. P(tail next)?",
+     "wrong_answer": "more than 1/2",
+     "correct_answer": "1/2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "P(a number less than 3) on a fair die?",
+    "answer": "1/3",
+    "shows": "favourable over all"
+   },
+   {
+    "question": "List the outcomes of tossing one coin.",
+    "answer": "head, tail",
+    "shows": "listing"
+   }
+  ],
+  "name": "Perform experiments with equally likely outcomes and list them",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE",
+  "key_step": "The child writes each chance as a fraction of the whole before comparing, and multiplies probability by trials for an expected number.",
+  "floor": {
+   "prerequisite": "Writes a probability as a decimal.",
+   "question": "17 of 20",
+   "answer": "0.85"
+  },
+  "representations": [
+   "a probability line from 0 to 1",
+   "fractions with a common denominator",
+   "expected = p x n"
+  ],
+  "steps": [
+   "Write each chance as a fraction of the whole.",
+   "Compare on the 0 to 1 line.",
+   "Expected number = probability x trials.",
+   "Check it is less than the trials."
+  ],
+  "contexts": [
+   "maize seeds on a shamba",
+   "beads in bags",
+   "rain in the long rains"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line from 0 to 1 with impossible and certain at the ends."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 0.85.",
+    "say": "If 200 seeds are planted, about how many grow?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 170."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 0.85 x 200 = 170."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE.M_COUNT_NOT_FRACTION",
+    "listen_for": [
+     "B"
+    ],
+    "ask": "What fraction of each bag is red?",
+    "repair": "3/5 and 4/10.",
+    "error": "Compares bags by the number of red beads, not red out of all.",
+    "example": {
+     "question": "Bag A: 3 red of 5. Bag B: 4 red of 10. More likely red?",
+     "wrong_answer": "B",
+     "correct_answer": "A"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE.M_EXPECTED_COMPLEMENT",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Is that the seeds that grow?",
+    "repair": "No: 170.",
+    "error": "Gives the number expected not to happen.",
+    "example": {
+     "question": "P(grow) = 0.85, 200 seeds. About how many grow?",
+     "wrong_answer": "30",
+     "correct_answer": "170"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE.M_EXPECTED_DIVIDED",
+    "listen_for": [
+     "235"
+    ],
+    "ask": "Can more grow than were planted?",
+    "repair": "No: multiply.",
+    "error": "Divides by the probability instead of multiplying.",
+    "example": {
+     "question": "P(grow) = 0.85, 200 seeds. Grow?",
+     "wrong_answer": "235",
+     "correct_answer": "170"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE.M_EXPECTED_ADDED",
+    "listen_for": [
+     "200.85"
+    ],
+    "ask": "Add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the probability to the number of trials.",
+    "example": {
+     "question": "P(grow) = 0.85, 200 seeds. Grow?",
+     "wrong_answer": "200.85",
+     "correct_answer": "170"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE.M_PROBABILITY_ABOVE_ONE",
+    "listen_for": [
+     "7/5"
+    ],
+    "ask": "Can anything be more than certain?",
+    "repair": "No.",
+    "error": "Gives a probability bigger than 1.",
+    "example": {
+     "question": "P(rain) = 7/5?",
+     "wrong_answer": "possible",
+     "correct_answer": "impossible: probabilities are 0 to 1"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "P(grow) = 0.9; 50 seeds planted. About how many grow?",
+    "answer": "45",
+    "shows": "expected"
+   },
+   {
+    "question": "Bag A: 2 red of 8. Bag B: 3 red of 9. More likely red?",
+    "answer": "B",
+    "shows": "compare fractions"
+   }
+  ],
+  "name": "Determine the range of probability and expected numbers",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY",
+  "key_step": "The child asks \"can both happen at once?\"; if yes, the events are not mutually exclusive.",
+  "floor": {
+   "prerequisite": "Describes events.",
+   "question": "Taking road A or road B on one trip",
+   "answer": "one road only"
+  },
+  "representations": [
+   "a Venn diagram with or without overlap",
+   "examples and non-examples",
+   "counts of people"
+  ],
+  "steps": [
+   "Ask: can both happen together?",
+   "No: mutually exclusive.",
+   "Yes: there is an overlap.",
+   "Adding works only when there is no overlap."
+  ],
+  "contexts": [
+   "learners playing football and netball",
+   "roads a boda boda takes",
+   "ways learners come to school"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two circles, football and netball, overlapping."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the overlap.",
+    "say": "Who is here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for learners who play both."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write not mutually exclusive: they were counted twice."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY.M_OVERLAP_IGNORED",
+    "listen_for": [
+     "mutually exclusive"
+    ],
+    "ask": "Can a learner play both?",
+    "repair": "Yes: not exclusive.",
+    "error": "Calls events mutually exclusive when they can both happen.",
+    "example": {
+     "question": "Some learners play football and netball. Mutually exclusive?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY.M_COUNTS_NOT_PROBABILITY",
+    "listen_for": [
+     "cannot use counts"
+    ],
+    "ask": "What is 15 out of 40?",
+    "repair": "A probability.",
+    "error": "Says a probability cannot be found from counts of people.",
+    "example": {
+     "question": "Can P(football) be found from 15 of 40 learners?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes: 15/40"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY.M_EXCLUSIVE_AS_INDEPENDENT",
+    "listen_for": [
+     "exclusive"
+    ],
+    "ask": "Can a head and a 6 both happen?",
+    "repair": "Yes: independent, not exclusive.",
+    "error": "Mixes up mutually exclusive and independent.",
+    "example": {
+     "question": "Head on a coin and a 6 on a die: mutually exclusive?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: they can both happen; they are independent"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY.M_SUM_OVER_ONE_FINE",
+    "listen_for": [
+     "1.2"
+    ],
+    "ask": "Can a probability be over 1?",
+    "repair": "No: an overlap.",
+    "error": "Accepts a total probability over 1 from adding overlapping events.",
+    "example": {
+     "question": "P(football) + P(netball) = 1.2. Possible?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: the events overlap"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A learner walks or rides a bus to school, one way each day. Mutually exclusive?",
+    "answer": "Yes",
+    "shows": "cannot both happen"
+   },
+   {
+    "question": "Being a girl and being in Grade 9. Mutually exclusive?",
+    "answer": "No",
+    "shows": "can both happen"
+   }
+  ],
+  "name": "Identify mutually exclusive events in real life",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD",
+  "key_step": "The child checks the events cannot both happen, adds for \"either\", and takes the sum from 1 for \"neither\".",
+  "floor": {
+   "prerequisite": "Adds decimals.",
+   "question": "0.015 + 0.035",
+   "answer": "0.05"
+  },
+  "representations": [
+   "a table of counts",
+   "P(A or B) = P(A) + P(B)",
+   "a whole bar split into A, B and neither"
+  ],
+  "steps": [
+   "Check they cannot both happen.",
+   "Either: add.",
+   "Neither: 1 minus the sum.",
+   "Check the answer is between 0 and 1."
+  ],
+  "contexts": [
+   "a harambee raffle",
+   "ways to come to school",
+   "roads a boda boda takes"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of 200 tickets: 3 radio, 7 bag, rest nothing."
+   },
+   {
+    "beat": "point",
+    "do": "Point at radio and bag.",
+    "say": "Can one ticket win both?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write (3 + 7) / 200 = 0.05."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD.M_OR_MULTIPLIED",
+    "listen_for": [
+     "0.000525"
+    ],
+    "ask": "Either or both?",
+    "repair": "Either: add.",
+    "error": "Multiplies the probabilities for \"either A or B\".",
+    "example": {
+     "question": "P(radio) = 0.015, P(bag) = 0.035. Either?",
+     "wrong_answer": "0.000525",
+     "correct_answer": "0.05"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD.M_ONE_EVENT_ONLY",
+    "listen_for": [
+     "0.015"
+    ],
+    "ask": "Does the bag count?",
+    "repair": "Yes: add it.",
+    "error": "Uses only one of the two events.",
+    "example": {
+     "question": "P(radio) = 0.015, P(bag) = 0.035. Either?",
+     "wrong_answer": "0.015",
+     "correct_answer": "0.05"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD.M_NEITHER_FOR_EITHER",
+    "listen_for": [
+     "0.95"
+    ],
+    "ask": "Is that either or neither?",
+    "repair": "Neither.",
+    "error": "Gives the probability of neither.",
+    "example": {
+     "question": "P(either) is 0.05. Answer for either?",
+     "wrong_answer": "0.95",
+     "correct_answer": "0.05"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD.M_NEITHER_NOT_FROM_ONE",
+    "listen_for": [
+     "0.7"
+    ],
+    "ask": "Was neither asked?",
+    "repair": "1 - 0.7.",
+    "error": "Gives the probability of either when neither is asked.",
+    "example": {
+     "question": "P(A or B) = 0.7. P(neither)?",
+     "wrong_answer": "0.7",
+     "correct_answer": "0.3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "P(walk) = 0.45, P(bus) = 0.3, one way each. Walk or bus?",
+    "answer": "0.75",
+    "shows": "add"
+   },
+   {
+    "question": "Then P(neither)?",
+    "answer": "0.25",
+    "shows": "1 minus"
+   }
+  ],
+  "name": "Find probabilities of mutually exclusive events by adding",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS",
+  "key_step": "The child checks one event does not change the other, then multiplies for \"and\".",
+  "floor": {
+   "prerequisite": "Multiplies fractions.",
+   "question": "1/2 x 1/6",
+   "answer": "1/12"
+  },
+  "representations": [
+   "a two-way table of outcomes",
+   "P(A and B) = P(A) x P(B)",
+   "a coin and a spinner"
+  ],
+  "steps": [
+   "Check independence.",
+   "Find each probability.",
+   "Multiply for \"and\".",
+   "Expected = probability x trials."
+  ],
+  "contexts": [
+   "a coin and spinner game at a fete",
+   "a school bus on two days",
+   "two seeds in a shamba"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a grid: coin H, T across; spinner 1 to 6 down."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the H-3 cell.",
+    "say": "How many cells in all?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write P(H and 3) = 1/12 = 1/2 x 1/6."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS.M_AND_ADDED",
+    "listen_for": [
+     "0.5"
+    ],
+    "ask": "Is \"and\" more likely than each alone?",
+    "repair": "No: multiply.",
+    "error": "Adds the probabilities for \"A and B\".",
+    "example": {
+     "question": "P(late Mon) = 0.2, P(late Tue) = 0.3. Both?",
+     "wrong_answer": "0.5",
+     "correct_answer": "0.06"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS.M_WRONG_PATH_INDEP",
+    "listen_for": [
+     "0.14"
+    ],
+    "ask": "Is 0.7 late or on time?",
+    "repair": "On time: use 0.3.",
+    "error": "Multiplies the wrong pair (one event and the other's complement).",
+    "example": {
+     "question": "Late Mon 0.2, late Tue 0.3. Both late?",
+     "wrong_answer": "0.14 (0.2 x 0.7)",
+     "correct_answer": "0.06"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS.M_COMPLEMENT_GIVEN",
+    "listen_for": [
+     "0.94"
+    ],
+    "ask": "Is that both late?",
+    "repair": "No: 0.06.",
+    "error": "Gives 1 minus the answer.",
+    "example": {
+     "question": "Both late is 0.06. Answer?",
+     "wrong_answer": "0.94",
+     "correct_answer": "0.06"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS.M_CERTAIN_FOR_HALF",
+    "listen_for": [
+     "1"
+    ],
+    "ask": "Is a head certain?",
+    "repair": "No: 1/2.",
+    "error": "Gives 1 for the probability of a head.",
+    "example": {
+     "question": "P(head) on a fair coin?",
+     "wrong_answer": "1",
+     "correct_answer": "0.5"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS.M_SECTORS_AS_PROBABILITY",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Can a probability be 6?",
+    "repair": "No: 1/6.",
+    "error": "Gives the number of sectors as the probability.",
+    "example": {
+     "question": "A spinner with 6 equal sectors. P(3)?",
+     "wrong_answer": "6",
+     "correct_answer": "1/6"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS.M_EXPECTED_NOT_SCALED",
+    "listen_for": [
+     "1/12"
+    ],
+    "ask": "How many players?",
+    "repair": "Multiply by 60.",
+    "error": "Gives the probability as the expected number of winners.",
+    "example": {
+     "question": "P(win) = 1/12, 60 players. Expected winners?",
+     "wrong_answer": "1/12",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "P(rain) = 0.4 and P(matatu late) = 0.25, independent. Both?",
+    "answer": "0.1",
+    "shows": "multiply"
+   },
+   {
+    "question": "A fair coin and a die. P(tail and an even number)?",
+    "answer": "1/4",
+    "shows": "multiply"
+   }
+  ],
+  "name": "Perform experiments involving independent events and multiply probabilities",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT",
+  "key_step": "The child writes the second fraction after asking \"was it put back?\": the same bag, or one fewer of that colour and one fewer in all.",
+  "floor": {
+   "prerequisite": "Multiplies fractions.",
+   "question": "3/8 x 2/7",
+   "answer": "6/56 = 3/28"
+  },
+  "representations": [
+   "a bag drawn before and after",
+   "two fractions in a row",
+   "counters"
+  ],
+  "steps": [
+   "First draw: favourable over all.",
+   "Put back: same fraction again.",
+   "Not put back: one fewer of that kind, one fewer in all.",
+   "Multiply and simplify."
+  ],
+  "contexts": [
+   "counters in a bag",
+   "picking two class leaders",
+   "beads in a jar"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bag of 3 red and 5 blue."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a red taken out and kept.",
+    "say": "How many reds now, and how many beads?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2 and 7."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3/8 x 2/7 = 3/28."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_ONE_DRAW_ONLY",
+    "listen_for": [
+     "3/8"
+    ],
+    "ask": "How many draws?",
+    "repair": "Two: multiply.",
+    "error": "Gives the probability of one draw when two are made.",
+    "example": {
+     "question": "3 red of 8; two draws with replacement. Both red?",
+     "wrong_answer": "3/8",
+     "correct_answer": "9/64"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_REPLACED_TREATED_AS_NOT",
+    "listen_for": [
+     "6/56"
+    ],
+    "ask": "Was it put back?",
+    "repair": "Yes: 3/8 again.",
+    "error": "Reduces the counts on the second draw although the counter was put back.",
+    "example": {
+     "question": "3 red of 8, put back. Both red?",
+     "wrong_answer": "6/56",
+     "correct_answer": "9/64"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_PROBS_ADDED_ALONG",
+    "listen_for": [
+     "6/8"
+    ],
+    "ask": "Add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the two draws' probabilities.",
+    "example": {
+     "question": "3/8 and 3/8. Both red?",
+     "wrong_answer": "6/8",
+     "correct_answer": "9/64"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_NOT_REPLACED_TREATED_AS_REPLACED",
+    "listen_for": [
+     "25/144"
+    ],
+    "ask": "Can the same girl be picked twice?",
+    "repair": "No: 4/11.",
+    "error": "Keeps the same chances on the second draw although the first was not put back.",
+    "example": {
+     "question": "5 girls of 12, no repeats. Both girls?",
+     "wrong_answer": "25/144",
+     "correct_answer": "5/33"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_SECOND_PICK_ONLY",
+    "listen_for": [
+     "4/11"
+    ],
+    "ask": "What about the first pick?",
+    "repair": "Times 5/12.",
+    "error": "Gives only the second pick's probability.",
+    "example": {
+     "question": "5 girls of 12, no repeats. Both girls?",
+     "wrong_answer": "4/11",
+     "correct_answer": "5/33"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_TAKING_RAISES_CHANCE",
+    "listen_for": [
+     "more likely"
+    ],
+    "ask": "Are there more reds or fewer?",
+    "repair": "Fewer.",
+    "error": "Thinks taking out a red makes red more likely next.",
+    "example": {
+     "question": "A red is taken and kept. Red next?",
+     "wrong_answer": "more likely",
+     "correct_answer": "less likely"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT.M_WRONG_COLOUR_REDUCED",
+    "listen_for": [
+     "blue changes"
+    ],
+    "ask": "Which bead left?",
+    "repair": "A red.",
+    "error": "Reduces the wrong colour on the second draw.",
+    "example": {
+     "question": "A red is kept. What changes?",
+     "wrong_answer": "blue beads",
+     "correct_answer": "reds and the total"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "4 red and 6 blue. Two drawn without replacement. Both red?",
+    "answer": "2/15",
+    "shows": "without"
+   },
+   {
+    "question": "Same bag, with replacement. Both red?",
+    "answer": "4/25",
+    "shows": "with"
+   }
+  ],
+  "name": "Find probabilities with and without replacement",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM": {
+  "skill": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM",
+  "key_step": "The child writes every branch probability, multiplies along each path, and adds the paths the event needs.",
+  "floor": {
+   "prerequisite": "Multiplies probabilities.",
+   "question": "0.8 x 0.3",
+   "answer": "0.24"
+  },
+  "representations": [
+   "a tree with two stages",
+   "a table of branches",
+   "paths highlighted"
+  ],
+  "steps": [
+   "Draw the first stage branches.",
+   "Draw the second stage from each (change it if not replaced).",
+   "Multiply along each path.",
+   "Add the paths for the event."
+  ],
+  "contexts": [
+   "two seedlings on a shamba",
+   "beads drawn from a box",
+   "two matches in a tournament"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tree: grow 0.8, not 0.2; then grow 0.7, not 0.3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the grow-not path.",
+    "say": "What is this path?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 0.8 x 0.3 = 0.24."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child finds the not-grow path."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write exactly one = 0.24 + 0.14 = 0.38."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM.M_BOTH_PATH_FOR_EXACTLY_ONE",
+    "listen_for": [
+     "0.56"
+    ],
+    "ask": "Is that one or both?",
+    "repair": "Both.",
+    "error": "Gives the \"both\" path for \"exactly one\".",
+    "example": {
+     "question": "p = 0.8, q = 0.7. Exactly one grows?",
+     "wrong_answer": "0.56",
+     "correct_answer": "0.38"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM.M_ONE_PATH_ONLY",
+    "listen_for": [
+     "0.24"
+    ],
+    "ask": "Is there another way for exactly one?",
+    "repair": "Yes: add 0.14.",
+    "error": "Uses one path when the event happens on two paths.",
+    "example": {
+     "question": "Exactly one grows?",
+     "wrong_answer": "0.24 (one path)",
+     "correct_answer": "0.38 (two paths)"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM.M_AT_LEAST_FOR_EXACTLY",
+    "listen_for": [
+     "0.94"
+    ],
+    "ask": "Does that include both growing?",
+    "repair": "Yes: leave it out.",
+    "error": "Gives \"at least one\" when \"exactly one\" is asked.",
+    "example": {
+     "question": "p = 0.8, q = 0.7. Exactly one?",
+     "wrong_answer": "0.94",
+     "correct_answer": "0.38"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM.M_OTHER_OUTCOME_GIVEN",
+    "listen_for": [
+     "2/5"
+    ],
+    "ask": "How many red?",
+    "repair": "3 of 5.",
+    "error": "Gives the probability of the other outcome on a branch.",
+    "example": {
+     "question": "3 red of 5. P(red first)?",
+     "wrong_answer": "2/5",
+     "correct_answer": "3/5"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM.M_TOTAL_NOT_REDUCED",
+    "listen_for": [
+     "2/5"
+    ],
+    "ask": "How many are left?",
+    "repair": "4.",
+    "error": "Keeps the total at 5 on the second stage without replacement.",
+    "example": {
+     "question": "3 red, 2 blue; red taken. P(blue second)?",
+     "wrong_answer": "2/5",
+     "correct_answer": "2/4"
+    }
+   },
+   {
+    "code": "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM.M_BRANCHES_ADDED_TREE",
+    "listen_for": [
+     "1.1"
+    ],
+    "ask": "Can a probability be over 1?",
+    "repair": "No: multiply.",
+    "error": "Adds along a path instead of multiplying.",
+    "example": {
+     "question": "3/5 then 2/4. Red then blue?",
+     "wrong_answer": "1.1",
+     "correct_answer": "0.3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "P(pass Maths) = 0.7, P(pass English) = 0.8, independent. Exactly one pass?",
+    "answer": "0.38",
+    "shows": "two paths"
+   },
+   {
+    "question": "3 red and 2 blue, two without replacement. Both the same colour?",
+    "answer": "0.4",
+    "shows": "two paths added"
+   }
+  ],
+  "name": "Draw and use a tree diagram for two stages",
+  "sub_strand": "MATH.G9.DATA_H.PROBABILITY",
+  "sub_strand_name": "Probability",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

@@ -1182,6 +1182,69 @@
     "cumulative frequency"
    ],
    "mastery": "The child reads \"how many under a value\" straight from a cumulative frequency graph and finds how many lie between two values by subtracting the two readings: under 40 minus under 20."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.EQUALLY_LIKELY": {
+   "forms": [
+    "list the outcomes",
+    "probability of an even number",
+    "are they equally likely",
+    "fair or not"
+   ],
+   "mastery": "The child lists all the equally likely outcomes of a fair coin, die or spinner (a die has 6), finds the probability of an event as favourable outcomes over all outcomes (an even number on a die: 3/6), and knows a spinner with unequal sectors does not give equally likely outcomes."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.PROBABILITY_RANGE": {
+   "forms": [
+    "most likely bag",
+    "about how many will grow",
+    "between 0 and 1",
+    "impossible or certain"
+   ],
+   "mastery": "The child places probabilities from 0 (impossible) to 1 (certain), compares likelihoods as fractions of the whole (red out of all beads, not the number of reds), and finds an expected number as probability times the number of trials (0.85 of 200 seeds is about 170)."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_IDENTIFY": {
+   "forms": [
+    "are these mutually exclusive",
+    "why is the method wrong",
+    "can both happen",
+    "give an example"
+   ],
+   "mastery": "The child says two events are mutually exclusive when they cannot happen together (taking road A or road B on one trip), and not when they can overlap (playing football and playing netball), and explains why adding probabilities fails when there is an overlap."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.MUTUALLY_EXCLUSIVE_ADD": {
+   "forms": [
+    "probability of either",
+    "probability of neither",
+    "from the table",
+    "which step is wrong"
+   ],
+   "mastery": "The child adds the probabilities of mutually exclusive events for \"either A or B\" (a raffle ticket winning a radio or a bag: 3/200 + 7/200 = 0.05) and finds \"neither\" as 1 minus that sum."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.INDEPENDENT_EVENTS": {
+   "forms": [
+    "probability of both",
+    "head and a 3",
+    "expected number of winners",
+    "complete the steps"
+   ],
+   "mastery": "The child says two events are independent when one does not change the chance of the other (a coin and a spinner, the bus on Monday and on Tuesday), multiplies for \"A and B\" (0.5 x 1/6 = 1/12), and finds expected winners as probability times players."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.WITH_WITHOUT_REPLACEMENT": {
+   "forms": [
+    "both red, with replacement",
+    "both girls, without replacement",
+    "why does the chance change",
+    "simplest form"
+   ],
+   "mastery": "The child keeps the same chances on the second draw when the first is put back (with replacement: (3/8) x (3/8)), and reduces both the favourable count and the total by one when it is not put back ((3/8) x (2/7)), and explains why."
+  },
+  "MATH.G9.DATA_H.PROBABILITY.TREE_DIAGRAM": {
+   "forms": [
+    "probability that exactly one",
+    "both the same colour",
+    "complete the tree",
+    "which paths"
+   ],
+   "mastery": "The child draws a tree with the outcomes of each stage on branches, writes each branch probability (changed on the second stage without replacement), multiplies along a path, and adds the paths that make the event (\"exactly one grows\" is two paths)."
   }
  }
 }
