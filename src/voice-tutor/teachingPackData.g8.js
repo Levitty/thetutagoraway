@@ -3413,6 +3413,1416 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.NUMBER.SQUARES_AND_SQUARE_ROOTS",
   "sub_strand_name": "Squares and Square roots",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+  "key_step": "The child says the rate in words with \"per\" and divides the first quantity by the second.",
+  "floor": {
+   "prerequisite": "Divides to share equally.",
+   "question": "45 shared by 3",
+   "answer": "15"
+  },
+  "representations": [
+   "a shop price label",
+   "a table of packs",
+   "amount ÷ units"
+  ],
+  "steps": [
+   "Name the two quantities.",
+   "Write amount per one unit.",
+   "Divide.",
+   "For a best buy, compare each per 1 kg."
+  ],
+  "contexts": [
+   "sugar at three dukas",
+   "a cyclist from Thika to Nairobi",
+   "a typist in a cyber cafe"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three sugar packs: 2 kg for 280, 5 kg for 650, 1 kg for 145."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2 kg pack.",
+    "say": "What does 1 kg cost here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 140."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes the price per kg under each pack."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_RATE_MULTIPLIED",
+    "listen_for": [
+     "1,920"
+    ],
+    "ask": "Is the rate for one minute bigger than the total?",
+    "repair": "Divide.",
+    "error": "Multiplies the amount by the units instead of dividing.",
+    "example": {
+     "question": "240 litres in 8 minutes: litres per minute?",
+     "wrong_answer": "1,920",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_RATE_INVERTED",
+    "listen_for": [
+     "0.033"
+    ],
+    "ask": "Litres per minute: which goes on top?",
+    "repair": "Litres ÷ minutes.",
+    "error": "Divides the units by the amount.",
+    "example": {
+     "question": "240 litres in 8 minutes: litres per minute?",
+     "wrong_answer": "0.033",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_RATE_ADDED",
+    "listen_for": [
+     "48"
+    ],
+    "ask": "How far in one hour?",
+    "repair": "Share 45 among 3.",
+    "error": "Adds or subtracts the two amounts for a rate.",
+    "example": {
+     "question": "45 km in 3 hours: km per hour?",
+     "wrong_answer": "48",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_CHEAPEST_PACK_CHOSEN",
+    "listen_for": [
+     "the cheapest pack"
+    ],
+    "ask": "How much sugar is in it?",
+    "repair": "Compare 1 kg prices.",
+    "error": "Picks the pack with the lowest price as the best buy.",
+    "example": {
+     "question": "2 kg for 280 or 5 kg for 650: cheaper per kg?",
+     "wrong_answer": "2 kg for 280",
+     "correct_answer": "5 kg for 650"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A tank fills with 360 litres in 9 minutes. Litres per minute?",
+    "answer": "40",
+    "shows": "rate"
+   },
+   {
+    "question": "3 kg for 420 shillings or 4 kg for 540 shillings: cheaper per kg?",
+    "answer": "4 kg for 540 (135 a kg)",
+    "shows": "best buy"
+   }
+  ],
+  "name": "Identify a rate and work it out as an amount for one unit",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "key_step": "The child writes the amount for one unit on its own line before scaling up or dividing.",
+  "floor": {
+   "prerequisite": "Finds a rate.",
+   "question": "120 km in 3 hours: km an hour",
+   "answer": "40"
+  },
+  "representations": [
+   "a road with hour marks",
+   "a tank with litres marked",
+   "the unitary method"
+  ],
+  "steps": [
+   "Find the amount for 1 unit.",
+   "Multiply for many units.",
+   "For a time, divide what is still needed by the rate.",
+   "Check the units of the answer."
+  ],
+  "contexts": [
+   "a boda boda ride to Machakos",
+   "a pump filling a school tank",
+   "a posho mill grinding maize"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a road split into 3 hour sections, 120 km in all."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one section.",
+    "say": "How far in one hour?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 40."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child adds two more hours of 40 km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_TRIP_AS_UNIT_RATE",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "Is 120 km for 1 hour?",
+    "repair": "Find 1 hour first.",
+    "error": "Uses the distance for the whole first trip as if it were for one hour.",
+    "example": {
+     "question": "120 km in 3 hours; at the same rate, km in 5 hours?",
+     "wrong_answer": "600",
+     "correct_answer": "200"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_UNIT_RATE_GIVEN",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is that for 5 hours?",
+    "repair": "Multiply by 5.",
+    "error": "Gives the rate for one unit when the amount for several is asked.",
+    "example": {
+     "question": "120 km in 3 hours; km in 5 hours?",
+     "wrong_answer": "40",
+     "correct_answer": "200"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_RATE_UNITS_ADDED",
+    "listen_for": [
+     "125"
+    ],
+    "ask": "Can you add hours to km?",
+    "repair": "Use the rate.",
+    "error": "Adds hours to kilometres.",
+    "example": {
+     "question": "120 km in 3 hours; km in 5 hours?",
+     "wrong_answer": "125",
+     "correct_answer": "200"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_FULL_NOT_NEEDED",
+    "listen_for": [
+     "25 minutes"
+    ],
+    "ask": "Is the tank empty?",
+    "repair": "Use what is still needed.",
+    "error": "Uses the full capacity instead of what is still needed.",
+    "example": {
+     "question": "A 1,000 litre tank has 400 litres; pump 40 litres a minute. Minutes to fill?",
+     "wrong_answer": "25",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_TOTAL_FOR_RATE",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "Is that for 1 minute?",
+    "repair": "Divide by 5.",
+    "error": "Gives the amount in the whole time when the rate per minute is asked.",
+    "example": {
+     "question": "The pump puts in 200 litres in 5 minutes. Litres a minute?",
+     "wrong_answer": "200",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_TIME_MULTIPLIED",
+    "listen_for": [
+     "24,000"
+    ],
+    "ask": "Is that a sensible number of minutes?",
+    "repair": "Divide by the rate.",
+    "error": "Multiplies the litres needed by the rate to find the time.",
+    "example": {
+     "question": "600 litres needed at 40 litres a minute. Minutes?",
+     "wrong_answer": "24,000",
+     "correct_answer": "15"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A boda covers 75 km in 3 hours. At that rate, how far in 4 hours?",
+    "answer": "100 km",
+    "shows": "scale up"
+   },
+   {
+    "question": "A 2,000 litre tank has 500 litres. A pump adds 50 litres a minute. Minutes to fill?",
+    "answer": "30 minutes",
+    "shows": "still needed"
+   }
+  ],
+  "name": "Use a rate to find an amount or a time",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO",
+  "key_step": "The child finds the other part (whole minus the part) before writing part : part in the question's order.",
+  "floor": {
+   "prerequisite": "Simplifies a fraction.",
+   "question": "12/15",
+   "answer": "4/5"
+  },
+  "representations": [
+   "counters in two colours",
+   "a bar split into parts",
+   "the ratio"
+  ],
+  "steps": [
+   "Find both parts.",
+   "Write them in the order asked.",
+   "Divide both by the HCF.",
+   "Check by adding the parts."
+  ],
+  "contexts": [
+   "boys and girls in Grade 8 classes",
+   "tea and milk in chai",
+   "maize and beans on a shamba"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 5 counters, 2 red for girls and 3 blue for boys."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the blue counters.",
+    "say": "If 2/5 are girls, how many fifths are boys?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write girls : boys = 2 : 3."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_FRACTION_AS_PART_PART",
+    "listen_for": [
+     "2 : 5"
+    ],
+    "ask": "Is 5 the boys or the whole class?",
+    "repair": "Boys are 3 parts.",
+    "error": "Writes a fraction of the whole as the part-to-part ratio directly.",
+    "example": {
+     "question": "2/5 of a class are girls. Girls : boys?",
+     "wrong_answer": "2 : 5",
+     "correct_answer": "2 : 3"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_RATIO_ORDER_SWAPPED",
+    "listen_for": [
+     "4 : 5"
+    ],
+    "ask": "Which comes first in the question?",
+    "repair": "Follow the order.",
+    "error": "Writes the ratio in the opposite order to the question.",
+    "example": {
+     "question": "15 boys and 12 girls. Boys : girls?",
+     "wrong_answer": "4 : 5",
+     "correct_answer": "5 : 4"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_RATIO_NOT_SIMPLIFIED",
+    "listen_for": [
+     "15 : 12"
+    ],
+    "ask": "Can both be divided by 3?",
+    "repair": "Simplify.",
+    "error": "Leaves the ratio not in its simplest form.",
+    "example": {
+     "question": "15 boys and 12 girls in simplest form",
+     "wrong_answer": "15 : 12",
+     "correct_answer": "5 : 4"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_RATIO_SIMPLIFIED_UNEQUALLY",
+    "listen_for": [
+     "9 : 4"
+    ],
+    "ask": "Did both numbers get divided by the same?",
+    "repair": "Same number both sides.",
+    "error": "Divides the two terms by different numbers.",
+    "example": {
+     "question": "18 : 12 in simplest form",
+     "wrong_answer": "9 : 4",
+     "correct_answer": "3 : 2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3/8 of a herd are goats, the rest sheep. Goats : sheep?",
+    "answer": "3 : 5",
+    "shows": "part : part"
+   },
+   {
+    "question": "A class has 18 boys and 24 girls. Girls : boys in simplest form?",
+    "answer": "4 : 3",
+    "shows": "order and simplify"
+   }
+  ],
+  "name": "Express fractions and quantities as ratios in their simplest form",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE",
+  "key_step": "The child makes one term equal in both ratios (or writes each as a fraction of its whole) before comparing.",
+  "floor": {
+   "prerequisite": "Compares fractions.",
+   "question": "2/5 or 3/8: which is bigger?",
+   "answer": "2/5"
+  },
+  "representations": [
+   "bags of cement and sand drawn",
+   "equal ratios with the same sand",
+   "fractions of the whole"
+  ],
+  "steps": [
+   "Choose a term to make equal.",
+   "Scale both ratios.",
+   "Compare the other term.",
+   "Say what it means in the story."
+  ],
+  "contexts": [
+   "mortar for a classroom wall",
+   "girls in two Grade 8 classes",
+   "juice concentrate and water"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw mix A: 2 cement bags, 5 sand bags; mix B: 3 cement, 8 sand."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the sand bags.",
+    "say": "How can we make the sand the same in both?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to suggest 40 bags."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes 16 : 40 and 15 : 40."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_FIRST_TERMS_ONLY",
+    "listen_for": [
+     "3 is more"
+    ],
+    "ask": "Is the sand the same in both?",
+    "repair": "Make the sand equal first.",
+    "error": "Compares one term of each ratio and ignores the other.",
+    "example": {
+     "question": "Cement : sand 2 : 5 or 3 : 8. More cement per bag of sand?",
+     "wrong_answer": "3 : 8",
+     "correct_answer": "2 : 5"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_BATCH_SIZE_COMPARED",
+    "listen_for": [
+     "bigger batch"
+    ],
+    "ask": "What does the question ask about?",
+    "repair": "Cement for each bag of sand.",
+    "error": "Compares the total size of the batches instead of the ratio.",
+    "example": {
+     "question": "2 : 5 or 3 : 8: more cement per bag of sand?",
+     "wrong_answer": "3 : 8, it is a bigger batch",
+     "correct_answer": "2 : 5"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_SAME_ORDER_SAME_RATIO",
+    "listen_for": [
+     "the same"
+    ],
+    "ask": "Do 2 : 5 and 3 : 8 simplify to the same?",
+    "repair": "No.",
+    "error": "Believes two ratios are equal because the second term is bigger in both.",
+    "example": {
+     "question": "Are 2 : 5 and 3 : 8 the same?",
+     "wrong_answer": "Yes, both have more sand",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_SHARE_BY_PART_NOT_WHOLE",
+    "listen_for": [
+     "8B has more girls"
+    ],
+    "ask": "Girls out of how many in each class?",
+    "repair": "Compare with the whole.",
+    "error": "Compares a part with the other part instead of with the whole class.",
+    "example": {
+     "question": "Girls : boys 2 : 3 in 8A and 3 : 5 in 8B. Bigger share of girls?",
+     "wrong_answer": "8B",
+     "correct_answer": "8A"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Cement : sand 1 : 3 or 2 : 7. Which has more cement per bag of sand?",
+    "answer": "1 : 3",
+    "shows": "same sand"
+   },
+   {
+    "question": "Girls : boys 3 : 4 in 8A and 4 : 5 in 8B. Bigger share of girls?",
+    "answer": "8B (4/9 > 3/7)",
+    "shows": "fraction of the whole"
+   }
+  ],
+  "name": "Compare two or more ratios",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "key_step": "The child adds the parts, finds one part, and writes each share as parts times one part.",
+  "floor": {
+   "prerequisite": "Divides a total equally.",
+   "question": "9,000 ÷ 9",
+   "answer": "1,000"
+  },
+  "representations": [
+   "a bar split into the parts",
+   "one part labelled",
+   "each share"
+  ],
+  "steps": [
+   "Add the parts.",
+   "Find one part.",
+   "Multiply for each share.",
+   "Answer what is asked: a share, a difference or a total."
+  ],
+  "contexts": [
+   "a chama sharing profit",
+   "goats and sheep on a farm",
+   "a harambee shared between projects"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar in 9 equal parts: 2 for Wanjiru, 3 for Otieno, 4 for Amina."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one part.",
+    "say": "The total is 9,000. What is one part worth?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes each share."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_SHARE_FOR_DIFFERENCE",
+    "listen_for": [
+     "4,000"
+    ],
+    "ask": "Is that her share or how much more?",
+    "repair": "Subtract the shares.",
+    "error": "Gives one share when the difference between two shares is asked.",
+    "example": {
+     "question": "9,000 in 2 : 3 : 4. How much more does the third get than the first?",
+     "wrong_answer": "4,000",
+     "correct_answer": "2,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_PARTS_NOT_VALUED",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Two parts of what?",
+    "repair": "Each part is 1,000.",
+    "error": "Gives the difference in parts, not in shillings.",
+    "example": {
+     "question": "9,000 in 2 : 3 : 4. How much more does the third get than the first?",
+     "wrong_answer": "2",
+     "correct_answer": "2,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_WRONG_PEOPLE_COMPARED",
+    "listen_for": [
+     "1,000"
+    ],
+    "ask": "Which two people does the question name?",
+    "repair": "Check the names.",
+    "error": "Compares the wrong two shares.",
+    "example": {
+     "question": "9,000 in 2 : 3 : 4. Third more than first?",
+     "wrong_answer": "1,000",
+     "correct_answer": "2,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_DIVIDE_BY_OWN_PART",
+    "listen_for": [
+     "2,250"
+    ],
+    "ask": "How many parts in all?",
+    "repair": "Divide by 9.",
+    "error": "Divides the total by one person's parts instead of all the parts.",
+    "example": {
+     "question": "9,000 in 2 : 3 : 4. Share of the third?",
+     "wrong_answer": "2,250",
+     "correct_answer": "4,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_ONE_GROUP_ONLY",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Is that all the animals?",
+    "repair": "Add the sheep.",
+    "error": "Gives one group when the total is asked.",
+    "example": {
+     "question": "Goats : sheep = 3 : 4 and there are 20 sheep. Animals altogether?",
+     "wrong_answer": "15",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_RATIO_NUMBER_AS_COUNT",
+    "listen_for": [
+     "23"
+    ],
+    "ask": "Are there really 3 goats?",
+    "repair": "Find one part.",
+    "error": "Uses the ratio number as the actual number.",
+    "example": {
+     "question": "Goats : sheep = 3 : 4, 20 sheep. Altogether?",
+     "wrong_answer": "23",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_GIVEN_AMOUNT_AS_PART",
+    "listen_for": [
+     "140"
+    ],
+    "ask": "How many parts are the 20 sheep?",
+    "repair": "4 parts.",
+    "error": "Treats the known share as one part.",
+    "example": {
+     "question": "Goats : sheep = 3 : 4, 20 sheep. Altogether?",
+     "wrong_answer": "140",
+     "correct_answer": "35"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Share 12,000 shillings in the ratio 1 : 2 : 3. Largest share?",
+    "answer": "6,000 shillings",
+    "shows": "share"
+   },
+   {
+    "question": "Boys : girls = 5 : 6 and there are 30 girls. Learners altogether?",
+    "answer": "55",
+    "shows": "one share known"
+   }
+  ],
+  "name": "Divide a quantity in a given ratio",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT",
+  "key_step": "The child changes both quantities to the same unit before writing the ratio.",
+  "floor": {
+   "prerequisite": "Changes metres to centimetres.",
+   "question": "3 m in cm",
+   "answer": "300 cm"
+  },
+  "representations": [
+   "a rope drawn with both pieces",
+   "both lengths in cm",
+   "the ratio simplified"
+  ],
+  "steps": [
+   "Same units.",
+   "Order as asked.",
+   "Simplify.",
+   "For 1 : n, divide both by the first."
+  ],
+  "contexts": [
+   "a rope cut for a goat",
+   "a map and a road",
+   "a mother and a child's heights"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 3 m rope with a 25 cm piece cut off."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the long piece.",
+    "say": "How long is it in cm?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 275."
+   },
+   {
+    "beat": "write",
+    "do": "Write 25 : 275 and divide both by 25."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_PART_TO_WHOLE",
+    "listen_for": [
+     "1 : 12"
+    ],
+    "ask": "Is 300 the long piece or the whole rope?",
+    "repair": "Use the long piece.",
+    "error": "Compares a part with the whole instead of with the other part.",
+    "example": {
+     "question": "A 3 m rope cut so the short piece is 25 cm. Short : long as 1 : n?",
+     "wrong_answer": "1 : 12",
+     "correct_answer": "1 : 11"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_CM_IN_M_WRONG",
+    "listen_for": [
+     "3,000"
+    ],
+    "ask": "How many cm in a metre?",
+    "repair": "100.",
+    "error": "Uses 1,000 cm in a metre.",
+    "example": {
+     "question": "3 m in centimetres",
+     "wrong_answer": "3,000",
+     "correct_answer": "300"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_LENGTH_FOR_RATIO",
+    "listen_for": [
+     "275"
+    ],
+    "ask": "Is that a ratio?",
+    "repair": "Divide by 25.",
+    "error": "Gives a length when the ratio is asked.",
+    "example": {
+     "question": "Short 25 cm, long 275 cm: find n in 1 : n",
+     "wrong_answer": "275",
+     "correct_answer": "11"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_UNITS_NOT_MATCHED",
+    "listen_for": [
+     "25 : 1"
+    ],
+    "ask": "Are the units the same?",
+    "repair": "Change to cm.",
+    "error": "Writes a ratio of quantities in different units without converting.",
+    "example": {
+     "question": "50 cm to 2 m as a ratio",
+     "wrong_answer": "25 : 1",
+     "correct_answer": "1 : 4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 40 cm to 2 m in the form 1 : n.",
+    "answer": "1 : 5",
+    "shows": "units"
+   },
+   {
+    "question": "2 : 7 = 6 : x. Find x.",
+    "answer": "21",
+    "shows": "missing term"
+   }
+  ],
+  "name": "Work out the ratio of two quantities in the same units",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "key_step": "The child writes new : old above the numbers and multiplies by new over old.",
+  "floor": {
+   "prerequisite": "Multiplies a number by a fraction.",
+   "question": "600 × 5/3",
+   "answer": "1,000"
+  },
+  "representations": [
+   "a bar of the old amount in parts",
+   "new and old labelled",
+   "the multiplication"
+  ],
+  "steps": [
+   "Read new : old.",
+   "Divide the old amount by the old number.",
+   "Multiply by the new number.",
+   "Check: increase gives more, decrease less."
+  ],
+  "contexts": [
+   "flour for a big order of mandazi",
+   "a landlord in Kayole lowering rent",
+   "a matatu fare rise"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 600 g of flour as 3 equal parts."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one part.",
+    "say": "What is one part worth?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 200 g."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: the new amount is 5 parts. More or less than 600?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_RATIO_FLIPPED",
+    "listen_for": [
+     "360"
+    ],
+    "ask": "Should an increase give more?",
+    "repair": "Multiply by 5/3.",
+    "error": "Multiplies by the ratio the wrong way up, so an increase becomes a decrease.",
+    "example": {
+     "question": "Increase 600 g in the ratio 5 : 3",
+     "wrong_answer": "360 g",
+     "correct_answer": "1,000 g"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_RATIO_ADDED",
+    "listen_for": [
+     "605"
+    ],
+    "ask": "Does 5 : 3 mean add 5?",
+    "repair": "It means times 5/3.",
+    "error": "Adds or takes away a ratio number from the quantity.",
+    "example": {
+     "question": "Increase 600 g in the ratio 5 : 3",
+     "wrong_answer": "605 g",
+     "correct_answer": "1,000 g"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_NOT_DIVIDED_BY_OLD",
+    "listen_for": [
+     "3,000"
+    ],
+    "ask": "What is one part?",
+    "repair": "Divide by 3 first.",
+    "error": "Multiplies by the new number without dividing by the old.",
+    "example": {
+     "question": "Increase 600 g in the ratio 5 : 3",
+     "wrong_answer": "3,000 g",
+     "correct_answer": "1,000 g"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_ONE_PART_ONLY",
+    "listen_for": [
+     "3,000 rent"
+    ],
+    "ask": "How many parts is the new rent?",
+    "repair": "3 parts.",
+    "error": "Gives the value of one part as the new amount.",
+    "example": {
+     "question": "Decrease a rent of 12,000 in the ratio 3 : 4",
+     "wrong_answer": "3,000",
+     "correct_answer": "9,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_ONE_PART_MULTIPLIED",
+    "listen_for": [
+     "320"
+    ],
+    "ask": "To find one part, multiply or divide?",
+    "repair": "Divide.",
+    "error": "Multiplies by the old number to find one part.",
+    "example": {
+     "question": "A fare of 80 increased 5 : 4. One part?",
+     "wrong_answer": "320",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_DIVIDED_TWICE",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is 40 sensible for an increase of 600?",
+    "repair": "Divide by old, times new.",
+    "error": "Divides by both ratio numbers.",
+    "example": {
+     "question": "Increase 600 in the ratio 5 : 3",
+     "wrong_answer": "40",
+     "correct_answer": "1,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Increase 450 in the ratio 4 : 3.",
+    "answer": "600",
+    "shows": "increase"
+   },
+   {
+    "question": "Decrease a rent of 8,000 shillings in the ratio 3 : 4.",
+    "answer": "6,000 shillings",
+    "shows": "decrease"
+   }
+  ],
+  "name": "Increase or decrease a quantity in a given ratio",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+  "key_step": "The child divides the change by the original amount, the one before the change, and multiplies by 100.",
+  "floor": {
+   "prerequisite": "Writes a fraction as a percentage.",
+   "question": "20/80 as a percentage",
+   "answer": "25%"
+  },
+  "representations": [
+   "a bar of the old amount as 100%",
+   "the change marked",
+   "change ÷ original × 100"
+  ],
+  "steps": [
+   "Find the change.",
+   "Divide by the original.",
+   "Times 100.",
+   "Say increase or decrease."
+  ],
+  "contexts": [
+   "matatu fares Nairobi to Thika",
+   "school enrolment each January",
+   "the price of unga"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar for the old fare 80, and a longer bar for 100."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the extra piece.",
+    "say": "What is the change, and what do we compare it with?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the old fare."
+   },
+   {
+    "beat": "write",
+    "do": "Write 20 ÷ 80 × 100."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_CHANGE_NOT_PERCENT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Shillings or percent?",
+    "repair": "Compare with the old fare.",
+    "error": "Gives the change in shillings, not as a percentage.",
+    "example": {
+     "question": "A fare goes from 80 to 100 shillings. Percentage increase?",
+     "wrong_answer": "20",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_PCT_OF_NEW",
+    "listen_for": [
+     "20%"
+    ],
+    "ask": "Which fare did we start with?",
+    "repair": "Divide by the old.",
+    "error": "Divides the change by the new amount.",
+    "example": {
+     "question": "A fare goes from 80 to 100. Percentage increase?",
+     "wrong_answer": "20%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_NEW_AS_PERCENT",
+    "listen_for": [
+     "125%"
+    ],
+    "ask": "Is the fare 125% more?",
+    "repair": "Take away 100%.",
+    "error": "Gives the new amount as a percentage of the old as the change.",
+    "example": {
+     "question": "80 to 100. Percentage increase?",
+     "wrong_answer": "125%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_DECIMAL_NOT_PERCENT",
+    "listen_for": [
+     "0.25"
+    ],
+    "ask": "Is 0.25 a percentage?",
+    "repair": "Times 100.",
+    "error": "Leaves the change as a decimal.",
+    "example": {
+     "question": "80 to 100. Percentage increase?",
+     "wrong_answer": "0.25",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_BIGGEST_RISE_FOR_PCT",
+    "listen_for": [
+     "the biggest rise"
+    ],
+    "ask": "Compared with how many at the start?",
+    "repair": "Divide each rise by its start.",
+    "error": "Picks the biggest rise in number as the biggest percentage rise.",
+    "example": {
+     "question": "School A grew from 100 to 140 learners, school B from 400 to 460. Which had the greater percentage increase?",
+     "wrong_answer": "B, it gained 60",
+     "correct_answer": "A (40% against 15%)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A price falls from 250 to 200 shillings. Percentage decrease?",
+    "answer": "20%",
+    "shows": "decrease"
+   },
+   {
+    "question": "Enrolment rises from 400 to 460. Percentage increase?",
+    "answer": "15%",
+    "shows": "increase"
+   }
+  ],
+  "name": "Work out the percentage increase or decrease of a quantity",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+  "key_step": "The child says what percentage of the original the new amount is (100% plus or minus the change) before dividing.",
+  "floor": {
+   "prerequisite": "Finds 1% of an amount.",
+   "question": "1% of 800",
+   "answer": "8"
+  },
+  "representations": [
+   "a bar of 100% and a bar of 120%",
+   "1% found",
+   "the original"
+  ],
+  "steps": [
+   "Write the new amount as a percentage of the old.",
+   "Divide to find 1%.",
+   "Times 100.",
+   "Check by working forwards."
+  ],
+  "contexts": [
+   "a bus fare after a rise",
+   "a salary after a cut",
+   "a phone after a sale"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar for the old price split into 10 tenths, and 2 more tenths added."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the long bar.",
+    "say": "The new price 960 is how many tenths of the old?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child finds one tenth: 80."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_REVERSE_PCT_OF_NEW",
+    "listen_for": [
+     "768"
+    ],
+    "ask": "Was the 20% of 960 or of the old price?",
+    "repair": "960 is 120%.",
+    "error": "Takes the percentage of the new price and subtracts or adds it.",
+    "example": {
+     "question": "After a 20% rise a price is 960. Price before?",
+     "wrong_answer": "768",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_PCT_AS_SHILLINGS",
+    "listen_for": [
+     "940"
+    ],
+    "ask": "Is 20% the same as 20 shillings?",
+    "repair": "It is a share.",
+    "error": "Treats the percentage as a number of shillings.",
+    "example": {
+     "question": "After a 20% rise a price is 960. Price before?",
+     "wrong_answer": "940",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_CHANGE_FOR_ORIGINAL",
+    "listen_for": [
+     "160"
+    ],
+    "ask": "Is that the old price or the rise?",
+    "repair": "The whole old price.",
+    "error": "Gives the amount of the change as the original price.",
+    "example": {
+     "question": "After a 20% rise a price is 960. Price before?",
+     "wrong_answer": "160",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_PCT_DIVIDED_BY_PCT",
+    "listen_for": [
+     "48"
+    ],
+    "ask": "Is 48 shillings a sensible old price?",
+    "repair": "Divide by 120, times 100.",
+    "error": "Divides the new price by the percentage change.",
+    "example": {
+     "question": "After a 20% rise a price is 960. Price before?",
+     "wrong_answer": "48",
+     "correct_answer": "800"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "After a 25% rise a fare is 150 shillings. Fare before?",
+    "answer": "120 shillings",
+    "shows": "increase reversed"
+   },
+   {
+    "question": "After a 10% cut a salary is 27,000 shillings. Salary before?",
+    "answer": "30,000 shillings",
+    "shows": "decrease reversed"
+   }
+  ],
+  "name": "Find the amount before a percentage change",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY",
+  "key_step": "The child doubles the first quantity in their head and says what happens to the second.",
+  "floor": {
+   "prerequisite": "Uses a rate.",
+   "question": "Pens at 20 shillings each: cost of 4",
+   "answer": "80"
+  },
+  "representations": [
+   "a two-row table",
+   "arrows for doubling",
+   "the words direct, inverse, neither"
+  ],
+  "steps": [
+   "Double the first quantity.",
+   "Does the second double? Direct.",
+   "Does it halve? Inverse.",
+   "Neither? No proportion."
+  ],
+  "contexts": [
+   "workers building a wall",
+   "a matatu from Nakuru to Eldoret",
+   "sugar at the duka"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: workers 2, 4; days ?, ?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 4.",
+    "say": "Twice as many workers: what happens to the days?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write: half the days, so inverse."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_DIRECT_AS_INVERSE",
+    "listen_for": [
+     "inverse for sugar"
+    ],
+    "ask": "Twice the sugar: what happens to the cost?",
+    "repair": "It doubles: direct.",
+    "error": "Calls a direct proportion inverse, or the other way round.",
+    "example": {
+     "question": "Kilograms of sugar and the cost: direct or inverse?",
+     "wrong_answer": "inverse",
+     "correct_answer": "direct"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_ANY_LINK_AS_PROPORTION",
+    "listen_for": [
+     "age and height direct"
+    ],
+    "ask": "Does height double when age doubles?",
+    "repair": "No rule: neither.",
+    "error": "Calls two quantities in proportion just because both grow.",
+    "example": {
+     "question": "The age of a child and the height of the child",
+     "wrong_answer": "direct proportion",
+     "correct_answer": "neither"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_DECREASE_AS_INVERSE",
+    "listen_for": [
+     "petrol inverse"
+    ],
+    "ask": "Does the product stay the same?",
+    "repair": "Neither.",
+    "error": "Calls it inverse when one quantity goes down, whatever the rule.",
+    "example": {
+     "question": "Litres of petrol used and litres left in a 50 litre tank",
+     "wrong_answer": "inverse proportion",
+     "correct_answer": "neither"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_UNLINKED_AS_PROPORTION",
+    "listen_for": [
+     "learners and room height"
+    ],
+    "ask": "Does one change the other at all?",
+    "repair": "Neither.",
+    "error": "Gives a proportion for two quantities that are not linked at all.",
+    "example": {
+     "question": "Learners in a class and the height of the classroom",
+     "wrong_answer": "direct",
+     "correct_answer": "neither"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "The number of taps filling a tank and the time to fill it: direct, inverse or neither?",
+    "answer": "inverse",
+    "shows": "doubling test"
+   },
+   {
+    "question": "The litres of petrol bought and the cost: direct, inverse or neither?",
+    "answer": "direct",
+    "shows": "doubling test"
+   }
+  ],
+  "name": "Identify direct and inverse proportion",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE",
+  "key_step": "The child finds the fixed total (workers × days) for inverse proportion, or the amount for one unit for direct, before answering.",
+  "floor": {
+   "prerequisite": "Multiplies and divides whole numbers.",
+   "question": "6 × 10, then ÷ 4",
+   "answer": "15"
+  },
+  "representations": [
+   "workers drawn as people",
+   "a table of workers and days",
+   "the total work"
+  ],
+  "steps": [
+   "Decide direct or inverse.",
+   "Inverse: total = workers × days.",
+   "Share the total by the new workers.",
+   "Check it is sensible: fewer workers, more days."
+  ],
+  "contexts": [
+   "a school fence",
+   "a wall at a church",
+   "machines ploughing a shamba"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 6 workers and a calendar of 10 days."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the workers.",
+    "say": "How many worker-days of work is the fence?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 60."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: with 4 workers, more or fewer days?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_INVERSE_AS_DIRECT",
+    "listen_for": [
+     "6.7"
+    ],
+    "ask": "Should fewer workers take less time?",
+    "repair": "Inverse: use the total.",
+    "error": "Uses direct proportion for an inverse situation.",
+    "example": {
+     "question": "6 workers take 10 days. 4 workers take?",
+     "wrong_answer": "6.7 days",
+     "correct_answer": "15 days"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_TOTAL_WORK_GIVEN",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is 60 days or worker-days?",
+    "repair": "Share among 4.",
+    "error": "Gives the total worker-days as the answer.",
+    "example": {
+     "question": "6 workers take 10 days. 4 workers take?",
+     "wrong_answer": "60",
+     "correct_answer": "15 days"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_PROPORTION_ADDED",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Do workers and days add?",
+    "repair": "They multiply to a total.",
+    "error": "Adds or subtracts the change in workers to the days.",
+    "example": {
+     "question": "6 workers take 10 days. 4 workers take?",
+     "wrong_answer": "8",
+     "correct_answer": "15 days"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_PRODUCT_ROW_CHECK_MISSED",
+    "listen_for": [
+     "8 workers"
+    ],
+    "ask": "What is workers × days in each row?",
+    "repair": "Find the row that differs.",
+    "error": "Checks a table of inverse proportion by differences instead of products.",
+    "example": {
+     "question": "Workers 2, 4, 5, 8; days 20, 10, 9, 5. Which row is wrong?",
+     "wrong_answer": "8 workers",
+     "correct_answer": "5 workers (5 × 9 = 45, not 40)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "8 workers take 9 days to build a wall. How many days for 12 workers?",
+    "answer": "6 days",
+    "shows": "inverse"
+   },
+   {
+    "question": "5 kg of rice cost 750 shillings. Cost of 8 kg?",
+    "answer": "1,200 shillings",
+    "shows": "direct"
+   }
+  ],
+  "name": "Work out direct and inverse proportion problems",
+  "sub_strand": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_",
+  "sub_strand_name": "Rates, Ratio, Proportions and Percentages",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

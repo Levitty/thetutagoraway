@@ -1790,5 +1790,733 @@
   "help": "Look at the next digit: 8 rounds up.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_RATE_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+  "error": "Multiplies the amount by the units instead of dividing.",
+  "example": {
+   "question": "240 litres in 8 minutes: litres per minute?",
+   "wrong_answer": "1,920",
+   "correct_answer": "30"
+  },
+  "cause": "Combines the two numbers by multiplying.",
+  "reveals": "The answer 1,920 as a wrong option, with a reason that names the idea.",
+  "help": "A rate is the amount for one unit: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_RATE_INVERTED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+  "error": "Divides the units by the amount.",
+  "example": {
+   "question": "240 litres in 8 minutes: litres per minute?",
+   "wrong_answer": "0.033",
+   "correct_answer": "30"
+  },
+  "cause": "Divides the smaller by the larger.",
+  "reveals": "The answer 0.033 as a wrong option, with a reason that names the idea.",
+  "help": "Litres per minute: litres ÷ minutes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_RATE_ADDED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+  "error": "Adds or subtracts the two amounts for a rate.",
+  "example": {
+   "question": "45 km in 3 hours: km per hour?",
+   "wrong_answer": "48",
+   "correct_answer": "15"
+  },
+  "cause": "Does not know a rate compares by dividing.",
+  "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+  "help": "Share the 45 km among the 3 hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT.M_CHEAPEST_PACK_CHOSEN": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+  "error": "Picks the pack with the lowest price as the best buy.",
+  "example": {
+   "question": "2 kg for 280 or 5 kg for 650: cheaper per kg?",
+   "wrong_answer": "2 kg for 280",
+   "correct_answer": "5 kg for 650"
+  },
+  "cause": "Looks at the price, not the price per kg.",
+  "reveals": "The answer 2 kg for 280 as a wrong option, with a reason that names the idea.",
+  "help": "Find the price of 1 kg in each: 140 and 130.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_TRIP_AS_UNIT_RATE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "error": "Uses the distance for the whole first trip as if it were for one hour.",
+  "example": {
+   "question": "120 km in 3 hours; at the same rate, km in 5 hours?",
+   "wrong_answer": "600",
+   "correct_answer": "200"
+  },
+  "cause": "Skips finding the rate for one hour.",
+  "reveals": "The answer 600 as a wrong option, with a reason that names the idea.",
+  "help": "First find km in 1 hour: 120 ÷ 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_UNIT_RATE_GIVEN": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "error": "Gives the rate for one unit when the amount for several is asked.",
+  "example": {
+   "question": "120 km in 3 hours; km in 5 hours?",
+   "wrong_answer": "40",
+   "correct_answer": "200"
+  },
+  "cause": "Stops after the first step.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply the rate by the 5 hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_RATE_UNITS_ADDED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "error": "Adds hours to kilometres.",
+  "example": {
+   "question": "120 km in 3 hours; km in 5 hours?",
+   "wrong_answer": "125",
+   "correct_answer": "200"
+  },
+  "cause": "Combines the numbers in the story.",
+  "reveals": "The answer 125 as a wrong option, with a reason that names the idea.",
+  "help": "Use the rate: km in 1 hour times hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_FULL_NOT_NEEDED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "error": "Uses the full capacity instead of what is still needed.",
+  "example": {
+   "question": "A 1,000 litre tank has 400 litres; pump 40 litres a minute. Minutes to fill?",
+   "wrong_answer": "25",
+   "correct_answer": "15"
+  },
+  "cause": "Forgets the water already in the tank.",
+  "reveals": "The answer 25 as a wrong option, with a reason that names the idea.",
+  "help": "Needed = 1,000 - 400 = 600 litres.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_TOTAL_FOR_RATE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "error": "Gives the amount in the whole time when the rate per minute is asked.",
+  "example": {
+   "question": "The pump puts in 200 litres in 5 minutes. Litres a minute?",
+   "wrong_answer": "200",
+   "correct_answer": "40"
+  },
+  "cause": "Reads the total as the rate.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the minutes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE.M_TIME_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+  "error": "Multiplies the litres needed by the rate to find the time.",
+  "example": {
+   "question": "600 litres needed at 40 litres a minute. Minutes?",
+   "wrong_answer": "24,000",
+   "correct_answer": "15"
+  },
+  "cause": "Uses the operation that worked for the amount.",
+  "reveals": "The answer 24,000 as a wrong option, with a reason that names the idea.",
+  "help": "Time = litres ÷ litres a minute.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_FRACTION_AS_PART_PART": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO",
+  "error": "Writes a fraction of the whole as the part-to-part ratio directly.",
+  "example": {
+   "question": "2/5 of a class are girls. Girls : boys?",
+   "wrong_answer": "2 : 5",
+   "correct_answer": "2 : 3"
+  },
+  "cause": "Uses the denominator as the other part.",
+  "reveals": "The answer 2 : 5 as a wrong option, with a reason that names the idea.",
+  "help": "The other part is 5 - 2 = 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_RATIO_ORDER_SWAPPED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO",
+  "error": "Writes the ratio in the opposite order to the question.",
+  "example": {
+   "question": "15 boys and 12 girls. Boys : girls?",
+   "wrong_answer": "4 : 5",
+   "correct_answer": "5 : 4"
+  },
+  "cause": "Writes the smaller number first.",
+  "reveals": "The answer 4 : 5 as a wrong option, with a reason that names the idea.",
+  "help": "Follow the order in the question.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_RATIO_NOT_SIMPLIFIED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO",
+  "error": "Leaves the ratio not in its simplest form.",
+  "example": {
+   "question": "15 boys and 12 girls in simplest form",
+   "wrong_answer": "15 : 12",
+   "correct_answer": "5 : 4"
+  },
+  "cause": "Stops once the ratio is written.",
+  "reveals": "The answer 15 : 12 as a wrong option, with a reason that names the idea.",
+  "help": "Divide both by their HCF, 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO.M_RATIO_SIMPLIFIED_UNEQUALLY": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO",
+  "error": "Divides the two terms by different numbers.",
+  "example": {
+   "question": "18 : 12 in simplest form",
+   "wrong_answer": "9 : 4",
+   "correct_answer": "3 : 2"
+  },
+  "cause": "Halves one and thirds the other.",
+  "reveals": "The answer 9 : 4 as a wrong option, with a reason that names the idea.",
+  "help": "Divide both by the same number.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_FIRST_TERMS_ONLY": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE",
+  "error": "Compares one term of each ratio and ignores the other.",
+  "example": {
+   "question": "Cement : sand 2 : 5 or 3 : 8. More cement per bag of sand?",
+   "wrong_answer": "3 : 8",
+   "correct_answer": "2 : 5"
+  },
+  "cause": "Thinks a bigger number means more.",
+  "reveals": "The answer 3 : 8 as a wrong option, with a reason that names the idea.",
+  "help": "Make the sand the same: 16 : 40 and 15 : 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_BATCH_SIZE_COMPARED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE",
+  "error": "Compares the total size of the batches instead of the ratio.",
+  "example": {
+   "question": "2 : 5 or 3 : 8: more cement per bag of sand?",
+   "wrong_answer": "3 : 8, it is a bigger batch",
+   "correct_answer": "2 : 5"
+  },
+  "cause": "Answers a different question.",
+  "reveals": "The answer 3 : 8, it is a bigger batch as a wrong option, with a reason that names the idea.",
+  "help": "The question is cement for each bag of sand.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_SAME_ORDER_SAME_RATIO": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE",
+  "error": "Believes two ratios are equal because the second term is bigger in both.",
+  "example": {
+   "question": "Are 2 : 5 and 3 : 8 the same?",
+   "wrong_answer": "Yes, both have more sand",
+   "correct_answer": "No"
+  },
+  "cause": "Compares the order of the terms only.",
+  "reveals": "The answer Yes, both have more sand as a wrong option, with a reason that names the idea.",
+  "help": "Equal ratios simplify to the same pair.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE.M_SHARE_BY_PART_NOT_WHOLE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE",
+  "error": "Compares a part with the other part instead of with the whole class.",
+  "example": {
+   "question": "Girls : boys 2 : 3 in 8A and 3 : 5 in 8B. Bigger share of girls?",
+   "wrong_answer": "8B",
+   "correct_answer": "8A"
+  },
+  "cause": "Thinks the bigger girl number gives the bigger share.",
+  "reveals": "The answer 8B as a wrong option, with a reason that names the idea.",
+  "help": "Girls out of the whole: 2/5 and 3/8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_SHARE_FOR_DIFFERENCE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Gives one share when the difference between two shares is asked.",
+  "example": {
+   "question": "9,000 in 2 : 3 : 4. How much more does the third get than the first?",
+   "wrong_answer": "4,000",
+   "correct_answer": "2,000"
+  },
+  "cause": "Stops at the share.",
+  "reveals": "The answer 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Take the first share from the third.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_PARTS_NOT_VALUED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Gives the difference in parts, not in shillings.",
+  "example": {
+   "question": "9,000 in 2 : 3 : 4. How much more does the third get than the first?",
+   "wrong_answer": "2",
+   "correct_answer": "2,000"
+  },
+  "cause": "Forgets each part has a value.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "One part is 9,000 ÷ 9 = 1,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_WRONG_PEOPLE_COMPARED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Compares the wrong two shares.",
+  "example": {
+   "question": "9,000 in 2 : 3 : 4. Third more than first?",
+   "wrong_answer": "1,000",
+   "correct_answer": "2,000"
+  },
+  "cause": "Reads the neighbouring share.",
+  "reveals": "The answer 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "Check which two people the question names.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_DIVIDE_BY_OWN_PART": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Divides the total by one person's parts instead of all the parts.",
+  "example": {
+   "question": "9,000 in 2 : 3 : 4. Share of the third?",
+   "wrong_answer": "2,250",
+   "correct_answer": "4,000"
+  },
+  "cause": "Uses only that person's number.",
+  "reveals": "The answer 2,250 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by all the parts: 2 + 3 + 4 = 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_ONE_GROUP_ONLY": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Gives one group when the total is asked.",
+  "example": {
+   "question": "Goats : sheep = 3 : 4 and there are 20 sheep. Animals altogether?",
+   "wrong_answer": "15",
+   "correct_answer": "35"
+  },
+  "cause": "Finds the goats and stops.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Add the sheep.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_RATIO_NUMBER_AS_COUNT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Uses the ratio number as the actual number.",
+  "example": {
+   "question": "Goats : sheep = 3 : 4, 20 sheep. Altogether?",
+   "wrong_answer": "23",
+   "correct_answer": "35"
+  },
+  "cause": "Thinks 3 goats because the ratio says 3.",
+  "reveals": "The answer 23 as a wrong option, with a reason that names the idea.",
+  "help": "One part = 20 ÷ 4 = 5, so 15 goats.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE.M_GIVEN_AMOUNT_AS_PART": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE",
+  "error": "Treats the known share as one part.",
+  "example": {
+   "question": "Goats : sheep = 3 : 4, 20 sheep. Altogether?",
+   "wrong_answer": "140",
+   "correct_answer": "35"
+  },
+  "cause": "Multiplies the known amount by all the parts.",
+  "reveals": "The answer 140 as a wrong option, with a reason that names the idea.",
+  "help": "The 20 sheep are 4 parts: find one part first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_PART_TO_WHOLE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT",
+  "error": "Compares a part with the whole instead of with the other part.",
+  "example": {
+   "question": "A 3 m rope cut so the short piece is 25 cm. Short : long as 1 : n?",
+   "wrong_answer": "1 : 12",
+   "correct_answer": "1 : 11"
+  },
+  "cause": "Uses the whole rope as the second term.",
+  "reveals": "The answer 1 : 12 as a wrong option, with a reason that names the idea.",
+  "help": "The long piece is 300 - 25 = 275 cm.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_CM_IN_M_WRONG": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT",
+  "error": "Uses 1,000 cm in a metre.",
+  "example": {
+   "question": "3 m in centimetres",
+   "wrong_answer": "3,000",
+   "correct_answer": "300"
+  },
+  "cause": "Mixes up cm with mm.",
+  "reveals": "The answer 3,000 as a wrong option, with a reason that names the idea.",
+  "help": "100 cm make 1 m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_LENGTH_FOR_RATIO": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT",
+  "error": "Gives a length when the ratio is asked.",
+  "example": {
+   "question": "Short 25 cm, long 275 cm: find n in 1 : n",
+   "wrong_answer": "275",
+   "correct_answer": "11"
+  },
+  "cause": "Stops at the length of the other piece.",
+  "reveals": "The answer 275 as a wrong option, with a reason that names the idea.",
+  "help": "Divide both by 25.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT.M_UNITS_NOT_MATCHED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT",
+  "error": "Writes a ratio of quantities in different units without converting.",
+  "example": {
+   "question": "50 cm to 2 m as a ratio",
+   "wrong_answer": "25 : 1",
+   "correct_answer": "1 : 4"
+  },
+  "cause": "Uses the numbers as they are.",
+  "reveals": "The answer 25 : 1 as a wrong option, with a reason that names the idea.",
+  "help": "Change both to cm: 50 : 200.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_RATIO_FLIPPED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "error": "Multiplies by the ratio the wrong way up, so an increase becomes a decrease.",
+  "example": {
+   "question": "Increase 600 g in the ratio 5 : 3",
+   "wrong_answer": "360 g",
+   "correct_answer": "1,000 g"
+  },
+  "cause": "Does not check which number is new.",
+  "reveals": "The answer 360 g as a wrong option, with a reason that names the idea.",
+  "help": "New : old = 5 : 3, so multiply by 5/3: more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_RATIO_ADDED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "error": "Adds or takes away a ratio number from the quantity.",
+  "example": {
+   "question": "Increase 600 g in the ratio 5 : 3",
+   "wrong_answer": "605 g",
+   "correct_answer": "1,000 g"
+  },
+  "cause": "Treats the ratio like an amount.",
+  "reveals": "The answer 605 g as a wrong option, with a reason that names the idea.",
+  "help": "A ratio says how many times, not how many more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_NOT_DIVIDED_BY_OLD": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "error": "Multiplies by the new number without dividing by the old.",
+  "example": {
+   "question": "Increase 600 g in the ratio 5 : 3",
+   "wrong_answer": "3,000 g",
+   "correct_answer": "1,000 g"
+  },
+  "cause": "Leaves out finding one part.",
+  "reveals": "The answer 3,000 g as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 3 first: 200 g a part.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_ONE_PART_ONLY": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "error": "Gives the value of one part as the new amount.",
+  "example": {
+   "question": "Decrease a rent of 12,000 in the ratio 3 : 4",
+   "wrong_answer": "3,000",
+   "correct_answer": "9,000"
+  },
+  "cause": "Stops after dividing.",
+  "reveals": "The answer 3,000 as a wrong option, with a reason that names the idea.",
+  "help": "The new rent is 3 parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_ONE_PART_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "error": "Multiplies by the old number to find one part.",
+  "example": {
+   "question": "A fare of 80 increased 5 : 4. One part?",
+   "wrong_answer": "320",
+   "correct_answer": "20"
+  },
+  "cause": "Picks the wrong operation for one part.",
+  "reveals": "The answer 320 as a wrong option, with a reason that names the idea.",
+  "help": "One part = old ÷ its parts: 80 ÷ 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE.M_DIVIDED_TWICE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE",
+  "error": "Divides by both ratio numbers.",
+  "example": {
+   "question": "Increase 600 in the ratio 5 : 3",
+   "wrong_answer": "40",
+   "correct_answer": "1,000"
+  },
+  "cause": "Uses both numbers the same way.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the old, multiply by the new.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_CHANGE_NOT_PERCENT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+  "error": "Gives the change in shillings, not as a percentage.",
+  "example": {
+   "question": "A fare goes from 80 to 100 shillings. Percentage increase?",
+   "wrong_answer": "20",
+   "correct_answer": "25%"
+  },
+  "cause": "Stops at the difference.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Compare the change with the old fare out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_PCT_OF_NEW": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+  "error": "Divides the change by the new amount.",
+  "example": {
+   "question": "A fare goes from 80 to 100. Percentage increase?",
+   "wrong_answer": "20%",
+   "correct_answer": "25%"
+  },
+  "cause": "Uses the last number met.",
+  "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+  "help": "Percentage change is against the original.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_NEW_AS_PERCENT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+  "error": "Gives the new amount as a percentage of the old as the change.",
+  "example": {
+   "question": "80 to 100. Percentage increase?",
+   "wrong_answer": "125%",
+   "correct_answer": "25%"
+  },
+  "cause": "Forgets to take away 100%.",
+  "reveals": "The answer 125% as a wrong option, with a reason that names the idea.",
+  "help": "125% of the old means 25% more.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_DECIMAL_NOT_PERCENT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+  "error": "Leaves the change as a decimal.",
+  "example": {
+   "question": "80 to 100. Percentage increase?",
+   "wrong_answer": "0.25",
+   "correct_answer": "25%"
+  },
+  "cause": "Does not multiply by 100.",
+  "reveals": "The answer 0.25 as a wrong option, with a reason that names the idea.",
+  "help": "Times 100 for a percentage.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE.M_BIGGEST_RISE_FOR_PCT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+  "error": "Picks the biggest rise in number as the biggest percentage rise.",
+  "example": {
+   "question": "School A grew from 100 to 140 learners, school B from 400 to 460. Which had the greater percentage increase?",
+   "wrong_answer": "B, it gained 60",
+   "correct_answer": "A (40% against 15%)"
+  },
+  "cause": "Compares the rises, not the rises against the start.",
+  "reveals": "The answer B, it gained 60 as a wrong option, with a reason that names the idea.",
+  "help": "Divide each rise by the number at its start.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_REVERSE_PCT_OF_NEW": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+  "error": "Takes the percentage of the new price and subtracts or adds it.",
+  "example": {
+   "question": "After a 20% rise a price is 960. Price before?",
+   "wrong_answer": "768",
+   "correct_answer": "800"
+  },
+  "cause": "Treats the new price as the original.",
+  "reveals": "The answer 768 as a wrong option, with a reason that names the idea.",
+  "help": "960 is 120% of the old price: 1% is 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_PCT_AS_SHILLINGS": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+  "error": "Treats the percentage as a number of shillings.",
+  "example": {
+   "question": "After a 20% rise a price is 960. Price before?",
+   "wrong_answer": "940",
+   "correct_answer": "800"
+  },
+  "cause": "Reads 20% as 20 shillings.",
+  "reveals": "The answer 940 as a wrong option, with a reason that names the idea.",
+  "help": "20% is a share of the price, not 20 shillings.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_CHANGE_FOR_ORIGINAL": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+  "error": "Gives the amount of the change as the original price.",
+  "example": {
+   "question": "After a 20% rise a price is 960. Price before?",
+   "wrong_answer": "160",
+   "correct_answer": "800"
+  },
+  "cause": "Stops at the change.",
+  "reveals": "The answer 160 as a wrong option, with a reason that names the idea.",
+  "help": "The question asks for the whole price before.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE.M_PCT_DIVIDED_BY_PCT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+  "error": "Divides the new price by the percentage change.",
+  "example": {
+   "question": "After a 20% rise a price is 960. Price before?",
+   "wrong_answer": "48",
+   "correct_answer": "800"
+  },
+  "cause": "Divides by the only other number.",
+  "reveals": "The answer 48 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 120 to find 1%, then times 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_DIRECT_AS_INVERSE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY",
+  "error": "Calls a direct proportion inverse, or the other way round.",
+  "example": {
+   "question": "Kilograms of sugar and the cost: direct or inverse?",
+   "wrong_answer": "inverse",
+   "correct_answer": "direct"
+  },
+  "cause": "Does not test what happens when one doubles.",
+  "reveals": "The answer inverse as a wrong option, with a reason that names the idea.",
+  "help": "Double the sugar: the cost doubles, so direct.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_ANY_LINK_AS_PROPORTION": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY",
+  "error": "Calls two quantities in proportion just because both grow.",
+  "example": {
+   "question": "The age of a child and the height of the child",
+   "wrong_answer": "direct proportion",
+   "correct_answer": "neither"
+  },
+  "cause": "Thinks \"both go up\" is enough.",
+  "reveals": "The answer direct proportion as a wrong option, with a reason that names the idea.",
+  "help": "Proportion needs a fixed rule: double one, double the other.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_DECREASE_AS_INVERSE": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY",
+  "error": "Calls it inverse when one quantity goes down, whatever the rule.",
+  "example": {
+   "question": "Litres of petrol used and litres left in a 50 litre tank",
+   "wrong_answer": "inverse proportion",
+   "correct_answer": "neither"
+  },
+  "cause": "Thinks \"one up, one down\" means inverse.",
+  "reveals": "The answer inverse proportion as a wrong option, with a reason that names the idea.",
+  "help": "Inverse means the product stays the same: double one, halve the other.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY.M_UNLINKED_AS_PROPORTION": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY",
+  "error": "Gives a proportion for two quantities that are not linked at all.",
+  "example": {
+   "question": "Learners in a class and the height of the classroom",
+   "wrong_answer": "direct",
+   "correct_answer": "neither"
+  },
+  "cause": "Assumes every pair in a question is linked.",
+  "reveals": "The answer direct as a wrong option, with a reason that names the idea.",
+  "help": "Ask: does changing one change the other at all?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_INVERSE_AS_DIRECT": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE",
+  "error": "Uses direct proportion for an inverse situation.",
+  "example": {
+   "question": "6 workers take 10 days. 4 workers take?",
+   "wrong_answer": "6.7 days",
+   "correct_answer": "15 days"
+  },
+  "cause": "Multiplies by the ratio of workers.",
+  "reveals": "The answer 6.7 days as a wrong option, with a reason that names the idea.",
+  "help": "Fewer workers take more days: total work 60 worker-days.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_TOTAL_WORK_GIVEN": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE",
+  "error": "Gives the total worker-days as the answer.",
+  "example": {
+   "question": "6 workers take 10 days. 4 workers take?",
+   "wrong_answer": "60",
+   "correct_answer": "15 days"
+  },
+  "cause": "Stops after finding the total work.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Share the 60 worker-days among 4 workers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_PROPORTION_ADDED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE",
+  "error": "Adds or subtracts the change in workers to the days.",
+  "example": {
+   "question": "6 workers take 10 days. 4 workers take?",
+   "wrong_answer": "8",
+   "correct_answer": "15 days"
+  },
+  "cause": "Links the numbers by adding.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Workers and days multiply to a fixed total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE.M_PRODUCT_ROW_CHECK_MISSED": {
+  "skill": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE",
+  "error": "Checks a table of inverse proportion by differences instead of products.",
+  "example": {
+   "question": "Workers 2, 4, 5, 8; days 20, 10, 9, 5. Which row is wrong?",
+   "wrong_answer": "8 workers",
+   "correct_answer": "5 workers (5 × 9 = 45, not 40)"
+  },
+  "cause": "Looks for a steady difference.",
+  "reveals": "The answer 8 workers as a wrong option, with a reason that names the idea.",
+  "help": "In inverse proportion, workers × days is the same in every row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

@@ -111,7 +111,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ RATES, RATIO, PROPORTION
-  cov({ id: 'g8c.rate.per-unit', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.b', form: 'word', rung: 2,
+  cov({ id: 'g8c.rate.per-unit', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT', misMapped: false, reveals: ['M_RATE_MULTIPLIED', 'M_RATE_INVERTED', 'M_RATE_ADDED'], form: 'word', rung: 2,
     gen: () => {
       const kind = pick([['A cyclist rides from Thika to Nairobi, 45 km, in 3 hours. What is the average rate in kilometres per hour?', 'km', 'hours'], ['A tank fills with 240 litres of water in 8 minutes. What is the rate in litres per minute?', 'litres', 'minutes'], ['A trader paid for sacks of potatoes and a fixed mass of potatoes. What was the price per kilogram, in shillings?', 'sh', 'kg'], ['A typist types words in a fixed time. What is her rate in words per minute?', 'words', 'minutes']]);
       const unit = randInt(4, 15), t = randInt(3, 9), tot = unit * t, p = person();
@@ -128,7 +128,7 @@ export const FAMILIES = [
         steps: [`Rate = amount ÷ number of units.`, `${amount} ÷ ${t} = ${right}.`], chk: (a) => a * t === amount };
     } }),
 
-  cov({ id: 'g8c.ratio.compare-two', skill: 'G6_RATIOS', outcome: 'G8.RATES.d', form: 'why', rung: 3,
+  cov({ id: 'g8c.ratio.compare-two', skill: 'G6_RATIOS', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.d', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE', misMapped: false, reveals: ['M_SHARE_BY_PART_NOT_WHOLE', 'M_SAME_ORDER_SAME_RATIO'], form: 'why', rung: 3,
     gen: () => {
       const a = randInt(1, 5), b = randInt(a + 1, 9), equal = Math.random() < 0.25, k = randInt(2, 3);
       let c, d;
@@ -142,7 +142,7 @@ export const FAMILIES = [
         steps: [`Class 8A: ${a} out of ${a + b} are girls. Class 8B: ${c} out of ${c + d} are girls.`, `${a}/${a + b} and ${c}/${c + d}: ${equal ? 'they are equal' : s1 > s2 ? 'the first is bigger' : 'the second is bigger'}. The answer is ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.pct.change-amount', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.h', form: 'word', rung: 2,
+  cov({ id: 'g8c.pct.change-amount', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE', misMapped: false, reveals: ['M_CHANGE_NOT_PERCENT', 'M_PCT_OF_NEW', 'M_NEW_AS_PERCENT', 'M_DECIMAL_NOT_PERCENT'], form: 'word', rung: 2,
     gen: () => {
       const up = Math.random() < 0.55, pct = pick([10, 20, 25, 30, 40, 50]), base = pick([2000, 2500, 3000, 3500, 4000, 5000, 8000, 12000]);
       const ch = (base * pct) / 100, nw = up ? base + ch : base - ch;
@@ -154,7 +154,7 @@ export const FAMILIES = [
         steps: [`Change = ${commas(Math.max(base, nw))} − ${commas(Math.min(base, nw))} = ${commas(ch)}.`, `${commas(ch)} ÷ ${commas(base)} × 100 = ${pct}%.`], chk: (a) => Math.abs(base * (1 + (up ? 1 : -1) * a / 100) - nw) < 1e-6 };
     } }),
 
-  cov({ id: 'g8c.pct.which-method', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.h', form: 'why', rung: 3,
+  cov({ id: 'g8c.pct.which-method', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE', misMapped: false, reveals: ['M_PCT_OF_NEW', 'M_NEW_AS_PERCENT'], form: 'why', rung: 3,
     gen: () => {
       const base = pick([2400, 3000, 4500, 6000]), nw = base + pick([300, 600, 900, 1200]), p = person();
       const right = `(${commas(nw)} − ${commas(base)}) ÷ ${commas(base)} × 100`;
@@ -164,7 +164,7 @@ export const FAMILIES = [
         steps: ['Find the increase by taking the old amount from the new amount.', `Divide by the original and multiply by 100: ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.prop.direct-or-inverse', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.i', form: 'direct', rung: 2,
+  cov({ id: 'g8c.prop.direct-or-inverse', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.i', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY', misMapped: false, reveals: ['M_DIRECT_AS_INVERSE', 'M_UNLINKED_AS_PROPORTION'], form: 'direct', rung: 2,
     gen: () => {
       const direct = ['The number of exercise books bought and the total cost, when each book costs the same', 'The litres of petrol bought and the cost, at a fixed price per litre', 'The kilograms of sugar bought and the cost of the sugar', 'The distance a bus travels and the time taken, at a steady speed', 'The number of mandazi bought and the money paid'];
       const inverse = ['The number of workers building a wall and the days they need', 'The speed of a matatu and the time it takes to go from Nakuru to Eldoret', 'The number of taps filling a tank and the time to fill it', 'The number of learners sharing 60 sweets and the number each learner gets', 'The number of machines ploughing a shamba and the hours they need'];

@@ -329,31 +329,31 @@ export const FAMILIES = [
     check: ({ s, rate }, a) => Math.abs(Math.sqrt(a / rate) - s) < 1e-9 }),
 
   // ======================================================== RATES, RATIO, PERCENTAGE, PROPORTION
-  fam({ id: 'g8.rates.boda-same-rate', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.a', rung: 1, form: 'word',
+  fam({ id: 'g8.rates.boda-same-rate', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE', rung: 1, form: 'word',
     draw: () => { const v = pick([20, 30, 40, 50, 60]), h1 = pick([1.5, 2.5]), h2 = pick([3, 4, 5, 6]); return { v, h1, h2, km1: v * h1, p: person() }; },
     make: ({ v, h1, h2, km1, p }) => ({
       question: `${p.name} rides a boda boda for ${h1} hours and covers ${km1} km. At the same rate, how many km does ${p.she} cover in ${h2} hours?`,
       answer: v * h2,
-      wrong: [[km1 * h2, 'The distance in the first trip is not the distance in one hour. Find the distance for 1 hour first.'], [v, 'That is the distance for 1 hour only. The ride lasts longer.'], [km1 + h2, 'Distance is not found by adding hours to kilometres. Use the rate.']],
+      wrong: [[km1 * h2, 'The distance in the first trip is not the distance in one hour. Find the distance for 1 hour first.', 'M_TRIP_AS_UNIT_RATE'], [v, 'That is the distance for 1 hour only. The ride lasts longer.', 'M_UNIT_RATE_GIVEN'], [km1 + h2, 'Distance is not found by adding hours to kilometres. Use the rate.', 'M_RATE_UNITS_ADDED']],
       hints: ['Find how far the rider goes in 1 hour.', 'Then multiply by the number of hours.'],
       steps: [`In 1 hour: ${km1} ÷ ${h1} = ${v} km.`, `In ${h2} hours: ${v} × ${h2} = ${v * h2} km.`],
     }),
     check: ({ km1, h1, h2 }, a) => a / h2 === km1 / h1 }),
 
-  fam({ id: 'g8.rates.pump-steps', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.a', rung: 2, form: 'steps',
+  fam({ id: 'g8.rates.pump-steps', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE', rung: 2, form: 'steps',
     draw: () => { const r = pick([10, 12, 15, 20, 25]), t0 = pick([3, 4, 5]), k = randInt(8, 30), have = randInt(2, 12) * 50; return { r, t0, k, have, need: r * k, C: have + r * k }; },
     make: ({ r, t0, k, have, need, C }) => ({
       question: `A pump fills a water tank at a steady rate. The tank holds ${commas(C)} litres and has ${have} litres in it now. In ${t0} minutes the pump puts in ${r * t0} litres.`,
       parts: [
-        { prompt: 'How many more litres are needed to fill the tank?', answer: need, unit: 'litres', hint: 'Take what is in the tank from what it holds.', wrong: [[C, 'The tank already has some water. Take that away.']] },
-        { prompt: 'What is the rate of the pump, in litres per minute?', answer: r, unit: 'litres per minute', hint: `Share the litres by the minutes: ${r * t0} ÷ ${t0}.`, wrong: [[r * t0, 'That is the litres in the whole time. How many in 1 minute?']] },
-        { prompt: 'How many minutes does the pump need to fill the tank?', answer: k, unit: 'minutes', hint: 'Litres needed ÷ litres each minute.', wrong: [[need * r, 'To find the time you divide the litres by the rate.'], [C / r, 'The tank is not empty. Use the litres still needed.']] },
+        { prompt: 'How many more litres are needed to fill the tank?', answer: need, unit: 'litres', hint: 'Take what is in the tank from what it holds.', wrong: [[C, 'The tank already has some water. Take that away.', 'M_FULL_NOT_NEEDED']] },
+        { prompt: 'What is the rate of the pump, in litres per minute?', answer: r, unit: 'litres per minute', hint: `Share the litres by the minutes: ${r * t0} ÷ ${t0}.`, wrong: [[r * t0, 'That is the litres in the whole time. How many in 1 minute?', 'M_TOTAL_FOR_RATE']] },
+        { prompt: 'How many minutes does the pump need to fill the tank?', answer: k, unit: 'minutes', hint: 'Litres needed ÷ litres each minute.', wrong: [[need * r, 'To find the time you divide the litres by the rate.', 'M_TIME_MULTIPLIED'], [C / r, 'The tank is not empty. Use the litres still needed.', 'M_FULL_NOT_NEEDED']] },
       ],
       steps: [`Litres needed: ${commas(C)} − ${have} = ${commas(need)}.`, `Rate: ${r * t0} ÷ ${t0} = ${r} litres per minute.`, `Time: ${commas(need)} ÷ ${r} = ${k} minutes.`],
     }),
     check: ({ C, have, r, t0 }, v) => v[0] + have === C && v[1] * t0 === r * t0 && v[2] * v[1] === v[0] }),
 
-  fam({ id: 'g8.rates.sugar-table', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.a', rung: 2, form: 'table',
+  fam({ id: 'g8.rates.sugar-table', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.b', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT', misMapped: false, reveals: ['M_CHEAPEST_PACK_CHOSEN', 'M_RATE_INVERTED'], rung: 2, form: 'table',
     draw: () => {
       const us = [150, 160, 170, 180, 190, 200]; const u = []; while (u.length < 3) { const x = pick(us); if (!u.includes(x)) u.push(x); }
       const kg = [2, 5, 10].sort(() => Math.random() - 0.5);
@@ -370,7 +370,7 @@ export const FAMILIES = [
         steps: names.map((n, i) => `${n}: ${commas(tot[i])} ÷ ${kg[i]} = sh ${u[i]} per kg.`).concat([`The lowest is ${names[best]}.`]) };
     } }),
 
-  fam({ id: 'g8.ratio.class-table', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.c', rung: 2, form: 'table',
+  fam({ id: 'g8.ratio.class-table', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.c', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO', misMapped: false, reveals: ['M_RATIO_ORDER_SWAPPED', 'M_RATIO_NOT_SIMPLIFIED'], rung: 2, form: 'table',
     draw: () => {
       const [a, b] = pick([[2, 3], [3, 5], [3, 4], [4, 5], [2, 5], [3, 7]]);
       const ks = []; while (ks.length < 3) { const k = randInt(3, 9); if (!ks.includes(k)) ks.push(k); }
@@ -389,7 +389,7 @@ export const FAMILIES = [
         steps: rows.map(([x, y], i) => `${names[i]}: ${x} : ${y} = ${x / gcd(x, y)} : ${y / gcd(x, y)}.`).concat([`The class with ${a}:${b} is the answer.`]) };
     } }),
 
-  fam({ id: 'g8.ratio.mix-why', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.c', rung: 3, form: 'why',
+  fam({ id: 'g8.ratio.mix-why', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.d', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE', rung: 3, form: 'why',
     draw: () => {
       const a = randInt(4, 9), c = randInt(a + 2, 12), b = randInt(2, a - 1), d = randInt(3, c - 1);
       const L = (c * d) / gcd(c, d);
@@ -401,26 +401,26 @@ export const FAMILIES = [
       return { question: `Cement and sand are mixed for mortar. Mix A has cement to sand in the ratio ${a}:${c}. Mix B has the ratio ${b}:${d}. Which mix has more cement for each bag of sand, and why?`,
         options: [
           { text: `Mix ${strong}. With ${L} bags of sand each, it has more cement`, right: strong === (sa > sb ? 'A' : 'B') },
-          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because its cement number is the bigger one`, right: false, why: 'That compares the cement only. The sand is different in each mix, so the ratios must be compared on the same amount of sand.' },
-          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because it makes the bigger batch of mortar`, right: false, why: 'The size of the batch is not what is asked. The question is how much cement for each bag of sand.' },
-          { text: 'Both are the same, because each has more sand than cement', right: false, why: 'Make the sand equal in both mixes and the cement amounts are different.' },
+          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because its cement number is the bigger one`, right: false, why: 'That compares the cement only. The sand is different in each mix, so the ratios must be compared on the same amount of sand.', mis: 'M_FIRST_TERMS_ONLY' },
+          { text: `Mix ${strong === 'A' ? 'B' : 'A'}, because it makes the bigger batch of mortar`, right: false, why: 'The size of the batch is not what is asked. The question is how much cement for each bag of sand.', mis: 'M_BATCH_SIZE_COMPARED' },
+          { text: 'Both are the same, because each has more sand than cement', right: false, why: 'Make the sand equal in both mixes and the cement amounts are different.', mis: 'M_SAME_ORDER_SAME_RATIO' },
         ],
         hints: ['Make the sand the same amount in both mixes.', 'Then compare the bags of cement.'],
         steps: [`Both ratios can be written with ${L} bags of sand: ${a}:${c} = ${sa}:${L} and ${b}:${d} = ${sb}:${L}.`, `Compare the cement: ${sa} and ${sb}.`] };
     } }),
 
-  fam({ id: 'g8.ratio.rope-units', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.c', rung: 2, form: 'word',
+  fam({ id: 'g8.ratio.rope-units', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.f', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT', rung: 2, form: 'word',
     draw: () => { const m = pick([2, 3, 4, 5]), s = pick([20, 25, 40, 50]); if ((100 * m) % s !== 0 || (100 * m) / s < 4) return null; const n = (100 * m) / s - 1; return { m, s, n, p: person() }; },
     make: ({ m, s, n, p }) => ({
       question: `${p.name} cuts a ${m} m rope into two pieces. The short piece is ${s} cm. The ratio of the short piece to the long piece is 1 : n. Find n.`,
       answer: n,
-      wrong: [[n + 1, 'That compares the short piece with the whole rope. The long piece is what is left.'], [round((1000 * m - s) / s, 2), 'There are 100 cm in 1 m, not 1,000.'], [100 * m - s, 'That is the length of the long piece in cm. The ratio compares it with the short piece.']],
+      wrong: [[n + 1, 'That compares the short piece with the whole rope. The long piece is what is left.', 'M_PART_TO_WHOLE'], [round((1000 * m - s) / s, 2), 'There are 100 cm in 1 m, not 1,000.', 'M_CM_IN_M_WRONG'], [100 * m - s, 'That is the length of the long piece in cm. The ratio compares it with the short piece.', 'M_LENGTH_FOR_RATIO']],
       hints: ['Change the metres to centimetres first.', `Find the long piece, then divide it by ${s}.`],
       steps: [`${m} m = ${100 * m} cm.`, `Long piece: ${100 * m} − ${s} = ${100 * m - s} cm.`, `${100 * m - s} ÷ ${s} = ${n}, so the ratio is 1 : ${n}.`],
     }),
     check: ({ m, s }, a) => s * (1 + a) === 100 * m }),
 
-  fam({ id: 'g8.ratio.three-way-share', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.e', rung: 2, form: 'word',
+  fam({ id: 'g8.ratio.three-way-share', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.e', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE', rung: 2, form: 'word',
     draw: () => {
       const r = pick([[2, 3, 5], [1, 2, 3], [2, 3, 4], [3, 4, 5], [1, 3, 4]]), u = randInt(2, 9) * 100;
       const [a, b] = twoPeople(); let c = person(); while (c.name === a.name || c.name === b.name) c = person();
@@ -429,74 +429,74 @@ export const FAMILIES = [
     make: ({ r, u, total, a, b, c }) => ({
       question: `${a.name}, ${b.name} and ${c.name} start a chama business. They share the profit of sh ${commas(total)} in the ratio ${r[0]}:${r[1]}:${r[2]}. How much more than ${a.name} does ${c.name} get, in shillings?`,
       answer: u * (r[2] - r[0]),
-      wrong: [[u * r[2], `That is ${c.name}'s share. The question asks how much more than ${a.name}.`], [r[2] - r[0], 'That is the difference in parts. Each part is worth some shillings.'], [u * (r[2] - r[1]), `That compares ${c.name} with ${b.name}.`], [total / r[2], `${c.name} gets ${r[2]} parts, not 1 part.`]],
+      wrong: [[u * r[2], `That is ${c.name}'s share. The question asks how much more than ${a.name}.`, 'M_SHARE_FOR_DIFFERENCE'], [r[2] - r[0], 'That is the difference in parts. Each part is worth some shillings.', 'M_PARTS_NOT_VALUED'], [u * (r[2] - r[1]), `That compares ${c.name} with ${b.name}.`, 'M_WRONG_PEOPLE_COMPARED'], [total / r[2], `${c.name} gets ${r[2]} parts, not 1 part.`, 'M_DIVIDE_BY_OWN_PART']],
       hints: ['Add the parts of the ratio to find how many equal shares there are.', 'Find the value of one part, then the two shares.'],
       steps: [`Parts: ${r[0]} + ${r[1]} + ${r[2]} = ${r[0] + r[1] + r[2]}.`, `One part: ${commas(total)} ÷ ${r[0] + r[1] + r[2]} = sh ${u}.`, `Difference: (${r[2]} − ${r[0]}) × ${u} = sh ${commas(u * (r[2] - r[0]))}.`],
     }),
     check: ({ r, total }, x) => x * (r[0] + r[1] + r[2]) === total * (r[2] - r[0]) }),
 
-  fam({ id: 'g8.ratio.one-part-known', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.e', rung: 2, form: 'word',
+  fam({ id: 'g8.ratio.one-part-known', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.e', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE', rung: 2, form: 'word',
     draw: () => { const [g, s] = pick([[3, 5], [2, 5], [3, 4], [2, 3], [4, 7]]), k = randInt(3, 12); return { g, s, k, p: person() }; },
     make: ({ g, s, k, p }) => ({
       question: `${p.name} keeps goats and sheep in the ratio ${g}:${s}. There are ${s * k} sheep. How many animals does ${p.she} keep altogether?`,
       answer: (g + s) * k,
-      wrong: [[g * k, 'That is the number of goats only. Add the sheep.'], [s * k + g, 'The ratio number for goats is not the number of goats. Find what one part is worth.'], [(g + s) * s * k, 'The sheep are already counted in the amount given. Find one part first.']],
+      wrong: [[g * k, 'That is the number of goats only. Add the sheep.', 'M_ONE_GROUP_ONLY'], [s * k + g, 'The ratio number for goats is not the number of goats. Find what one part is worth.', 'M_RATIO_NUMBER_AS_COUNT'], [(g + s) * s * k, 'The sheep are already counted in the amount given. Find one part first.', 'M_GIVEN_AMOUNT_AS_PART']],
       hints: ['Find how many animals are in one part of the ratio.', 'Then count all the parts.'],
       steps: [`${s} parts are ${s * k} sheep, so 1 part is ${s * k} ÷ ${s} = ${k} animals.`, `Altogether there are ${g} + ${s} = ${g + s} parts.`, `${g + s} × ${k} = ${(g + s) * k} animals.`],
     }),
     check: ({ g, s, k }, a) => a * s === (g + s) * s * k }),
 
-  fam({ id: 'g8.ratio.increase-flour', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.f', rung: 2, form: 'word',
+  fam({ id: 'g8.ratio.increase-flour', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.g', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE', rung: 2, form: 'word',
     draw: () => { const [big, small] = pick([[5, 4], [3, 2], [7, 5], [6, 5], [4, 3]]), k = randInt(2, 9) * 10; return { big, small, base: small * k, p: person() }; },
     make: ({ big, small, base, p }) => ({
       question: `${p.name} bakes with ${base} g of flour. For a big order ${p.she} increases the flour in the ratio ${big}:${small}, new amount to old amount. How many grams of flour does ${p.she} now use?`,
       answer: (base * big) / small,
-      wrong: [[(base * small) / big, 'That makes the amount smaller. An increase gives more, so the bigger ratio number goes on top.'], [base + big, 'A ratio is not a number to add. It tells how many times as much, new to old.'], [base * big, 'First divide by the old number, to find what one part is.']],
+      wrong: [[(base * small) / big, 'That makes the amount smaller. An increase gives more, so the bigger ratio number goes on top.', 'M_RATIO_FLIPPED'], [base + big, 'A ratio is not a number to add. It tells how many times as much, new to old.', 'M_RATIO_ADDED'], [base * big, 'First divide by the old number, to find what one part is.', 'M_NOT_DIVIDED_BY_OLD']],
       hints: ['New : old is the same as the bigger number : the smaller number.', 'Find one part of the old amount, then multiply by the new number.'],
       steps: [`Old amount = ${small} parts, so 1 part = ${base} ÷ ${small} = ${base / small} g.`, `New amount = ${big} parts = ${big} × ${base / small} = ${(base * big) / small} g.`],
     }),
     check: ({ base, big, small }, a) => a * small === base * big }),
 
-  fam({ id: 'g8.ratio.decrease-rent', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.f', rung: 2, form: 'word',
+  fam({ id: 'g8.ratio.decrease-rent', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.g', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE', rung: 2, form: 'word',
     draw: () => { const [nw, old] = pick([[5, 6], [4, 5], [3, 4], [7, 8], [9, 10]]), rent = old * pick([500, 1000, 1500, 2000]); return rent >= 6000 && rent <= 30000 ? { nw, old, rent } : null; },
     make: ({ nw, old, rent }) => ({
       question: `A landlord decreases a rent of ${sh(rent)} a month in the ratio ${nw}:${old}. This is the new rent to the old rent. What is the new rent, in shillings?`,
       answer: (rent * nw) / old,
-      wrong: [[(rent * old) / nw, 'That would make the rent go up. A decrease means the new rent is smaller.'], [rent / old, `That is the value of 1 part. The new rent is ${nw} parts.`], [rent - (old - nw), 'The ratio does not take shillings away. It says how many parts of the old rent are left.']],
+      wrong: [[(rent * old) / nw, 'That would make the rent go up. A decrease means the new rent is smaller.', 'M_RATIO_FLIPPED'], [rent / old, `That is the value of 1 part. The new rent is ${nw} parts.`, 'M_ONE_PART_ONLY'], [rent - (old - nw), 'The ratio does not take shillings away. It says how many parts of the old rent are left.', 'M_RATIO_ADDED']],
       hints: [`The old rent is ${old} parts.`, `The new rent is ${nw} of those parts.`],
       steps: [`1 part = ${commas(rent)} ÷ ${old} = ${commas(rent / old)}.`, `New rent = ${nw} × ${commas(rent / old)} = ${commas((rent * nw) / old)}.`],
     }),
     check: ({ rent, nw, old }, a) => a * old === rent * nw }),
 
-  fam({ id: 'g8.ratio.fare-steps', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.f', rung: 3, form: 'steps',
+  fam({ id: 'g8.ratio.fare-steps', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.g', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE', rung: 3, form: 'steps',
     draw: () => { const [big, small] = pick([[7, 5], [6, 5], [5, 4], [3, 2]]), u = randInt(2, 8) * 4; return { big, small, u, old: small * u }; },
     make: ({ big, small, u, old }) => ({
       question: `A matatu fare is sh ${old}. The company increases it in the ratio ${big}:${small}, new fare to old fare.`,
       parts: [
-        { prompt: `The old fare is ${small} parts. How many shillings is 1 part?`, answer: u, unit: 'sh', hint: `${old} ÷ ${small}`, wrong: [[old * small, 'To find one part, divide the old fare by its number of parts.']] },
-        { prompt: 'What is the new fare?', answer: u * big, unit: 'sh', hint: `The new fare is ${big} parts.`, wrong: [[old + big, 'The new fare is parts of the old one, not the old fare plus the ratio number.']] },
-        { prompt: 'By how many shillings has the fare gone up?', answer: u * (big - small), unit: 'sh', hint: 'New fare take away old fare.', wrong: [[big - small, 'That is the rise in parts. What is each part worth?']] },
-        { prompt: 'What is the percentage increase?', answer: (100 * (big - small)) / small, unit: '%', hint: 'Rise ÷ old fare × 100.', wrong: [[(100 * (big - small)) / big, 'The rise is measured against the old fare, not the new one.']] },
+        { prompt: `The old fare is ${small} parts. How many shillings is 1 part?`, answer: u, unit: 'sh', hint: `${old} ÷ ${small}`, wrong: [[old * small, 'To find one part, divide the old fare by its number of parts.', 'M_ONE_PART_MULTIPLIED']] },
+        { prompt: 'What is the new fare?', answer: u * big, unit: 'sh', hint: `The new fare is ${big} parts.`, wrong: [[old + big, 'The new fare is parts of the old one, not the old fare plus the ratio number.', 'M_RATIO_ADDED']] },
+        { prompt: 'By how many shillings has the fare gone up?', answer: u * (big - small), unit: 'sh', hint: 'New fare take away old fare.', wrong: [[big - small, 'That is the rise in parts. What is each part worth?', 'M_PARTS_NOT_VALUED']] },
+        { prompt: 'What is the percentage increase?', answer: (100 * (big - small)) / small, unit: '%', hint: 'Rise ÷ old fare × 100.', wrong: [[(100 * (big - small)) / big, 'The rise is measured against the old fare, not the new one.', 'M_PCT_OF_NEW']] },
       ],
       steps: [`1 part = ${old} ÷ ${small} = ${u}.`, `New fare = ${big} × ${u} = ${u * big}.`, `Rise = ${u * big} − ${old} = ${u * (big - small)}.`, `Increase = ${u * (big - small)} ÷ ${old} × 100 = ${(100 * (big - small)) / small}%.`],
     }),
     check: ({ big, small, old }, v) => v[0] * small === old && v[1] * small === old * big && v[2] + old === v[1] && Math.abs(old * (1 + v[3] / 100) - v[1]) < 1e-9 }),
 
-  fam({ id: 'g8.ratio.increase-why', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.f', rung: 3, form: 'why',
+  fam({ id: 'g8.ratio.increase-why', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.g', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE', rung: 3, form: 'why',
     draw: () => { const [big, small] = pick([[7, 6], [5, 4], [4, 3], [6, 5]]); return { big, small, base: small * randInt(5, 20), p: person() }; },
     make: ({ big, small, base, p }) => ({
       question: `${p.name} must increase ${base} in the ratio ${big}:${small}. ${p.She} works out ${base} × ${small}/${big}. Why is that wrong?`,
       options: [
         { text: `An increase must give more than ${base}, so multiply by ${big}/${small}`, right: big > small },
-        { text: `${base} × ${small}/${big} is correct, because it uses the ratio`, right: false, why: `It gives a number smaller than ${base}. An increase must give a bigger number.` },
-        { text: `${p.She} should add ${big} to ${base}, because the ratio is ${big}:${small}`, right: false, why: 'A ratio is not a number to add. It says what to multiply by.' },
-        { text: `${p.She} should divide ${base} by ${big} and then by ${small}`, right: false, why: 'That divides twice and makes the number far too small.' },
+        { text: `${base} × ${small}/${big} is correct, because it uses the ratio`, right: false, why: `It gives a number smaller than ${base}. An increase must give a bigger number.`, mis: 'M_RATIO_FLIPPED' },
+        { text: `${p.She} should add ${big} to ${base}, because the ratio is ${big}:${small}`, right: false, why: 'A ratio is not a number to add. It says what to multiply by.', mis: 'M_RATIO_ADDED' },
+        { text: `${p.She} should divide ${base} by ${big} and then by ${small}`, right: false, why: 'That divides twice and makes the number far too small.', mis: 'M_DIVIDED_TWICE' },
       ],
       hints: ['Will the answer be more than or less than the starting number?', 'For an increase, the bigger ratio number goes on top.'],
       steps: [`Increase means the new amount is bigger, so multiply by ${big}/${small}.`, `${base} × ${big}/${small} = ${(base * big) / small}.`],
     }) }),
 
-  fam({ id: 'g8.pct.fare-change', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.g', rung: 2, form: 'word',
+  fam({ id: 'g8.pct.fare-change', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE', rung: 2, form: 'word',
     draw: () => {
       const old = pick([80, 120, 160, 200, 240, 300, 400]), pc = pick([10, 15, 20, 25, 30, 40, 50]), up = Math.random() < 0.5;
       const nw = old * (up ? 100 + pc : 100 - pc) / 100;
@@ -506,13 +506,13 @@ export const FAMILIES = [
     make: ({ old, nw, pc, up, diff }) => ({
       question: `A matatu fare from Nairobi to Thika ${up ? 'goes up' : 'comes down'} from ${sh(old)} to ${sh(nw)}. What is the percentage ${up ? 'increase' : 'decrease'}?`,
       answer: pc,
-      wrong: [[diff, `That is the change in shillings. A percentage compares the change with the old fare, out of 100.`], [round((diff / nw) * 100, 1), 'A percentage change is measured against the fare you started with, not the new one.'], [round((nw / old) * 100, 1), 'That is the new fare as a percentage of the old fare. Take 100% away to get the change.']],
+      wrong: [[diff, `That is the change in shillings. A percentage compares the change with the old fare, out of 100.`, 'M_CHANGE_NOT_PERCENT'], [round((diff / nw) * 100, 1), 'A percentage change is measured against the fare you started with, not the new one.', 'M_PCT_OF_NEW'], [round((nw / old) * 100, 1), 'That is the new fare as a percentage of the old fare. Take 100% away to get the change.', 'M_NEW_AS_PERCENT']],
       hints: ['First find the change in shillings.', 'Divide the change by the fare you started with, then multiply by 100.'],
       steps: [`Change: ${Math.abs(nw - old)} shillings.`, `${Math.abs(nw - old)} ÷ ${old} × 100 = ${pc}%.`],
     }),
     check: ({ old, nw, up }, a) => Math.abs(old * (up ? 1 + a / 100 : 1 - a / 100) - nw) < 1e-9 }),
 
-  fam({ id: 'g8.pct.before-change', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.g', rung: 3, form: 'word',
+  fam({ id: 'g8.pct.before-change', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE', rung: 3, form: 'word',
     draw: () => {
       const up = Math.random() < 0.5, pc = pick([10, 20, 25, 30, 40]), item = up ? 'bicycle' : 'school bag', orig = price(item);
       const final = (orig * (up ? 100 + pc : 100 - pc)) / 100;
@@ -522,13 +522,13 @@ export const FAMILIES = [
     make: ({ up, pc, item, orig, final, wrongA, wrongB, wrongC }) => ({
       question: `${up ? `After a price rise of ${pc}%` : `In a sale, a ${pc}% discount is taken off a ${item}. It now costs`} ${up ? `a ${item} costs` : ''} ${sh(final)}. What was the price before the ${up ? 'rise' : 'sale'}, in shillings?`.replace(/\s+/g, ' ').replace(' .', '.'),
       answer: orig,
-      wrong: [[wrongA, `The ${pc}% was taken from the old price, not from ${up ? 'this' : 'the new'} price. Do not ${up ? 'take' : 'add'} ${pc}% of the new price.`], [wrongB, `The ${pc}% is a percentage of the price. It is not ${pc} shillings.`], [wrongC, 'That is only the amount of the change. The question asks for the whole price before.']],
+      wrong: [[wrongA, `The ${pc}% was taken from the old price, not from ${up ? 'this' : 'the new'} price. Do not ${up ? 'take' : 'add'} ${pc}% of the new price.`, 'M_REVERSE_PCT_OF_NEW'], [wrongB, `The ${pc}% is a percentage of the price. It is not ${pc} shillings.`, 'M_PCT_AS_SHILLINGS'], [wrongC, 'That is only the amount of the change. The question asks for the whole price before.', 'M_CHANGE_FOR_ORIGINAL']],
       hints: [`The new price is ${up ? 100 + pc : 100 - pc}% of the old price.`, `Divide the new price by ${up ? 100 + pc : 100 - pc}, then multiply by 100.`],
       steps: [`New price = ${up ? 100 + pc : 100 - pc}% of the old price.`, `1% = ${commas(final)} ÷ ${up ? 100 + pc : 100 - pc} = ${commas(final / (up ? 100 + pc : 100 - pc))}.`, `100% = ${commas(final / (up ? 100 + pc : 100 - pc))} × 100 = ${commas(orig)}.`],
     }),
     check: ({ up, pc, final }, a) => Math.abs(a * (up ? 100 + pc : 100 - pc) / 100 - final) < 1e-9 }),
 
-  fam({ id: 'g8.pct.enrolment-table', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'G8.RATES.g', rung: 3, form: 'table',
+  fam({ id: 'g8.pct.enrolment-table', skill: 'G8_PERCENTAGE_CHANGE', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.h', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE', misMapped: false, reveals: ['M_BIGGEST_RISE_FOR_PCT'], rung: 3, form: 'table',
     draw: () => {
       const v0 = randInt(10, 30) * 10, d = [randInt(1, 15) * 10, randInt(1, 15) * 10, randInt(1, 15) * 10];
       const v = [v0, v0 + d[0], v0 + d[0] + d[1], v0 + d[0] + d[1] + d[2]];
@@ -545,7 +545,7 @@ export const FAMILIES = [
         steps: [0, 1, 2].map(i => `${yrs[i]} to ${yrs[i + 1]}: ${d[i]} ÷ ${v[i]} × 100 = ${round((d[i] / v[i]) * 100, 1)}%.`).concat([`The greatest is ${yrs[bestP]} to ${yrs[bestP + 1]}.`]) };
     } }),
 
-  fam({ id: 'g8.prop.workers-days', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.j', rung: 2, form: 'word',
+  fam({ id: 'g8.prop.workers-days', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.j', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE', rung: 2, form: 'word',
     draw: () => {
       const w = pick([4, 6, 8, 10, 12, 15]), d = randInt(3, 12), w2 = pick([2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 30]);
       if (w2 === w || (w * d) % w2 !== 0) return null;
@@ -554,13 +554,13 @@ export const FAMILIES = [
     make: ({ w, d, w2 }) => ({
       question: `${w} workers build a school fence in ${d} days. They all work at the same speed. How many days would ${w2} workers take to build the same fence?`,
       answer: (w * d) / w2,
-      wrong: [[round((d * w2) / w, 1), 'More workers take fewer days, and fewer workers take more days. These go the opposite way, so do not multiply by the ratio of workers.'], [w * d, 'That is the total work in worker-days. Share it between the new number of workers.'], [d + w2 - w, 'Days and workers are not linked by adding. Find the total work first.']],
+      wrong: [[round((d * w2) / w, 1), 'More workers take fewer days, and fewer workers take more days. These go the opposite way, so do not multiply by the ratio of workers.', 'M_INVERSE_AS_DIRECT'], [w * d, 'That is the total work in worker-days. Share it between the new number of workers.', 'M_TOTAL_WORK_GIVEN'], [d + w2 - w, 'Days and workers are not linked by adding. Find the total work first.', 'M_PROPORTION_ADDED']],
       hints: ['Find the total work: workers × days.', 'Share that work between the new number of workers.'],
       steps: [`Total work: ${w} × ${d} = ${w * d} worker-days.`, `With ${w2} workers: ${w * d} ÷ ${w2} = ${(w * d) / w2} days.`],
     }),
     check: ({ w, d, w2 }, a) => a * w2 === w * d }),
 
-  fam({ id: 'g8.prop.which-inverse', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.j', rung: 2, form: 'why',
+  fam({ id: 'g8.prop.which-inverse', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.i', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY', misMapped: false, reveals: ['M_DIRECT_AS_INVERSE', 'M_ANY_LINK_AS_PROPORTION', 'M_UNLINKED_AS_PROPORTION'], rung: 2, form: 'why',
     draw: () => {
       const inv = [['The number of workers and the days they take to do one job', 'More workers finish the same job in fewer days.'], ['The speed of a matatu and the time it takes for the same journey', 'A faster matatu takes less time for the same road.'], ['The number of friends sharing a fixed bill and what each pays', 'More friends means each pays less of the same bill.']];
       const dir = [['The kilograms of sugar bought and the cost', 'Twice the sugar costs twice as much, so this is direct proportion.'], ['The number of pens bought and the cost, at one price each', 'Twice the pens cost twice as much, so this is direct proportion.'], ['The age of a child and the height of the child', 'Neither doubles when the other doubles, so this is not in proportion.'], ['The number of learners in a class and the height of the classroom', 'These are not linked, so this is not in proportion.']];
@@ -574,7 +574,7 @@ export const FAMILIES = [
       steps: [`${r[1]}`, 'So when one doubles, the other halves: inverse proportion.'],
     }) }),
 
-  fam({ id: 'g8.prop.wall-table', skill: 'G8_RATIO_PROPORTION', outcome: 'G8.RATES.j', rung: 3, form: 'table',
+  fam({ id: 'g8.prop.wall-table', skill: 'G8_RATIO_PROPORTION', outcome: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.j', cskill: 'MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE', misMapped: false, reveals: ['M_PRODUCT_ROW_CHECK_MISSED'], rung: 3, form: 'table',
     draw: () => {
       const P = pick([60, 120, 240]); const ds = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20].filter(x => P % x === 0 && P / x <= 60);
       const ws = ds.sort(() => Math.random() - 0.5).slice(0, 4).sort((a, b) => a - b); const bad = randInt(0, 3), off = pick([1, 2, 3, -1]);

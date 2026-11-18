@@ -356,6 +356,105 @@
     "check by squaring"
    ],
    "mastery": "The child uses the square root key, rounds the display to the decimal places asked, and uses a root to find the side of a square from its area: a plot of 200 m² has a side of 14.1 m to 1 d.p."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT": {
+   "forms": [
+    "rate in km per hour",
+    "price per kg",
+    "which shop is cheapest per kg",
+    "words per minute"
+   ],
+   "mastery": "The child names a rate in words with its two units (km per hour, litres per minute, shillings per kg), works it out by dividing the amount by the number of units, and compares rates (best buy) by finding each one per single unit."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE": {
+   "forms": [
+    "at the same rate",
+    "how long to fill",
+    "how far in",
+    "litres still needed"
+   ],
+   "mastery": "The child finds the rate for one unit and multiplies to get the amount for several units, or divides what is still needed by the rate to get the time: 120 km in 3 hours is 40 km an hour, so 5 hours gives 200 km; a tank needing 600 more litres at 40 litres a minute takes 15 minutes."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.FRACTION_AS_RATIO": {
+   "forms": [
+    "fraction to ratio",
+    "boys to girls",
+    "which class has the ratio",
+    "simplest form"
+   ],
+   "mastery": "The child writes a part-part ratio from a fraction of a whole (2/5 of a class are girls gives girls : boys = 2 : 3), writes a ratio in the order the question gives, and simplifies it by the HCF."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_COMPARE": {
+   "forms": [
+    "which mix has more",
+    "which class has the bigger share",
+    "are the ratios equal",
+    "why"
+   ],
+   "mastery": "The child compares ratios by making one term the same (the same amount of sand) or by changing each to a fraction of its whole, never by comparing one term alone: cement : sand 2 : 5 has less cement per bag of sand than 3 : 7."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_SHARE": {
+   "forms": [
+    "share in the ratio",
+    "how much more than",
+    "one share is known",
+    "how many altogether"
+   ],
+   "mastery": "The child adds the parts, finds the value of one part, and multiplies by each share; when one share is known instead of the total, finds one part from it first: 9,000 shillings in 2 : 3 : 4 gives 1,000 a part, so 2,000, 3,000 and 4,000."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT": {
+   "forms": [
+    "ratio of the short to the long piece",
+    "in the form 1 : n",
+    "missing term",
+    "change units first"
+   ],
+   "mastery": "The child changes both quantities to the same unit, writes them in the order asked and simplifies, including to the form 1 : n, and finds a missing term of equal ratios: 25 cm to 3 m is 25 : 300 = 1 : 12."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_INCREASE_DECREASE": {
+   "forms": [
+    "increase in the ratio",
+    "decrease the rent",
+    "new fare",
+    "why is that wrong"
+   ],
+   "mastery": "The child reads the ratio as new : old, divides the quantity by the old number and multiplies by the new, and checks that an increase gives more and a decrease less: 600 g increased in the ratio 5 : 3 is 1,000 g."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE": {
+   "forms": [
+    "percentage increase",
+    "percentage decrease",
+    "which calculation",
+    "which year had the greatest increase"
+   ],
+   "mastery": "The child finds the change, divides it by the original amount (not the new one) and multiplies by 100: a fare going from 80 to 100 shillings is a 25% increase."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE": {
+   "forms": [
+    "price before the rise",
+    "salary before the cut",
+    "which is the original",
+    "find the old price"
+   ],
+   "mastery": "The child writes the new amount as a percentage of the original (after a 20% increase it is 120%), finds 1% and then 100%: a price of 960 shillings after a 20% rise was 800 shillings, not 960 minus 20% of 960."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_IDENTIFY": {
+   "forms": [
+    "direct, inverse or neither",
+    "which pair is inverse",
+    "what happens when it doubles",
+    "give an example"
+   ],
+   "mastery": "The child imagines the first quantity doubling: if the second doubles it is direct proportion, if it halves it is inverse, and if there is no such rule it is neither."
+  },
+  "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PROPORTION_SOLVE": {
+   "forms": [
+    "how many days for",
+    "cost of",
+    "which row is wrong",
+    "more workers"
+   ],
+   "mastery": "The child uses the unitary method: for direct proportion finds one unit and multiplies; for inverse proportion finds the total (workers × days) and shares it: 6 workers take 10 days, so 4 workers take 60 ÷ 4 = 15 days."
   }
  }
 }
