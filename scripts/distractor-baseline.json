@@ -3,7 +3,7 @@
  "draws": 40,
  "counts": {
   "shared": 227,
-  "nearmiss": 63,
+  "nearmiss": 64,
   "reason": 114
  },
  "families": {
@@ -291,6 +291,7 @@
    "g5c.whole.hp.ribbon",
    "g5c.whole.pv.digit-in",
    "g5c.whole.rh.list",
+   "g7.angles.polygon-sum-table",
    "g7.circ.table-pattern",
    "g7.factors.div-baskets",
    "g7.factors.div-six-table",

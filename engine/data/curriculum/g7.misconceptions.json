@@ -6579,6 +6579,594 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_GIVEN_AS_ANGLE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "error": "Gives the value of x as the angle.",
+  "example": {
+   "question": "(3x + 10) and (2x + 20) on a line: larger angle",
+   "wrong_answer": "30",
+   "correct_answer": "100"
+  },
+  "cause": "Stops after solving for x.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Put x back into each angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_TERMS_NOT_COLLECTED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "error": "Uses only one of the x terms.",
+  "example": {
+   "question": "(3x + 10) and (2x + 20) on a line: find x",
+   "wrong_answer": "50",
+   "correct_answer": "30"
+  },
+  "cause": "Sees 3x and divides by 3.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "There are 3x and 2x: 5x in all.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_LINE_SUM_360": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "error": "Uses 360 for angles on a straight line.",
+  "example": {
+   "question": "One angle on a line is 70: the other",
+   "wrong_answer": "290",
+   "correct_answer": "110"
+  },
+  "cause": "Mixes the line with a full turn.",
+  "reveals": "The answer 290 as a wrong option, with a reason that names the idea.",
+  "help": "A straight line is a half turn: 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_AS_SUPPLEMENTARY": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "error": "Takes the opposite angle from 180.",
+  "example": {
+   "question": "Two lines cross; one angle is 50: the opposite angle",
+   "wrong_answer": "130",
+   "correct_answer": "50"
+  },
+  "cause": "Uses the straight-line rule for the opposite angle.",
+  "reveals": "The answer 130 as a wrong option, with a reason that names the idea.",
+  "help": "The angle beside it is 130; the one across is 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_FROM_FULL_TURN": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "error": "Takes the opposite angle from 360.",
+  "example": {
+   "question": "Two lines cross; one angle is 50: the opposite angle",
+   "wrong_answer": "310",
+   "correct_answer": "50"
+  },
+  "cause": "Uses the rule for angles at a point.",
+  "reveals": "The answer 310 as a wrong option, with a reason that names the idea.",
+  "help": "Two opposite angles are not the whole turn.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_CROSSING_ALWAYS_RIGHT_ANGLE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "error": "Believes two crossing lines always make right angles.",
+  "example": {
+   "question": "Two lines cross; one angle is 50: the opposite angle",
+   "wrong_answer": "90",
+   "correct_answer": "50"
+  },
+  "cause": "Has seen crossing lines drawn square.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Lines can cross at any angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_KNOWN_SUM_AS_ANSWER": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+  "error": "Gives the sum of the known angles as the missing one.",
+  "example": {
+   "question": "Angles 80, 90 and 100 at a point: the fourth",
+   "wrong_answer": "270",
+   "correct_answer": "90"
+  },
+  "cause": "Adds what is given and stops.",
+  "reveals": "The answer 270 as a wrong option, with a reason that names the idea.",
+  "help": "Take the sum from 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_POINT_AS_STRAIGHT_LINE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+  "error": "Uses 180 for the angles round a point.",
+  "example": {
+   "question": "Angles 80, 90 and 100 at a point: the fourth",
+   "wrong_answer": "100 (from 180 - 80)",
+   "correct_answer": "90"
+  },
+  "cause": "Uses the straight-line total.",
+  "reveals": "The answer 100 (from 180 - 80) as a wrong option, with a reason that names the idea.",
+  "help": "Round a point is a full turn: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_EQUAL_PAIR_AS_SUPPLEMENTARY": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Takes an alternate or corresponding angle from 180.",
+  "example": {
+   "question": "Alternate to a 62 degree angle",
+   "wrong_answer": "118",
+   "correct_answer": "62"
+  },
+  "cause": "Thinks every pair on parallel lines adds to 180.",
+  "reveals": "The answer 118 as a wrong option, with a reason that names the idea.",
+  "help": "Alternate and corresponding angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_AS_EQUAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Believes co-interior angles are equal.",
+  "example": {
+   "question": "Co-interior to a 62 degree angle",
+   "wrong_answer": "62",
+   "correct_answer": "118"
+  },
+  "cause": "Thinks every pair on parallel lines is equal.",
+  "reveals": "The answer 62 as a wrong option, with a reason that names the idea.",
+  "help": "Co-interior angles add to 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_ALTERNATE_CORRESPONDING_MIXED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Gives the right size but names alternate for corresponding or the other way.",
+  "example": {
+   "question": "x is in the matching place at the other crossing",
+   "wrong_answer": "alternate angles",
+   "correct_answer": "corresponding angles"
+  },
+  "cause": "Both are equal, so the names blur.",
+  "reveals": "The answer alternate angles as a wrong option, with a reason that names the idea.",
+  "help": "Alternate: opposite sides, between the lines (a Z). Corresponding: the same place at each crossing (an F).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_VERTICAL_ACROSS_CROSSINGS": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Calls angles at two different crossings vertically opposite.",
+  "example": {
+   "question": "x is at the other crossing",
+   "wrong_answer": "vertically opposite",
+   "correct_answer": "alternate"
+  },
+  "cause": "Thinks any equal angles are vertically opposite.",
+  "reveals": "The answer vertically opposite as a wrong option, with a reason that names the idea.",
+  "help": "Vertically opposite angles are at one crossing.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_WRONG_TOTAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Uses 360 or 90 as the total of co-interior angles.",
+  "example": {
+   "question": "Co-interior to 70: x",
+   "wrong_answer": "290",
+   "correct_answer": "110"
+  },
+  "cause": "Mixes the rule with angles at a point or a right angle.",
+  "reveals": "The answer 290 as a wrong option, with a reason that names the idea.",
+  "help": "Co-interior angles make a straight angle: 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COMPLEMENT_USED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Takes the angle from 90.",
+  "example": {
+   "question": "Alternate to a 60 degree angle",
+   "wrong_answer": "30",
+   "correct_answer": "60"
+  },
+  "cause": "Uses a right angle as the total.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Alternate angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_POINT_RULE_FOR_PARALLEL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Uses the 360 at a point for angles that are at different places.",
+  "example": {
+   "question": "Why do co-interior angles 70 and 110 fit?",
+   "wrong_answer": "angles round a point add to 360",
+   "correct_answer": "co-interior angles add to 180"
+  },
+  "cause": "Reaches for the rule that has a total in it.",
+  "reveals": "The answer angles round a point add to 360 as a wrong option, with a reason that names the idea.",
+  "help": "These angles do not meet at one point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_OPPOSITE_NEIGHBOUR_MIXED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Takes the opposite angle of a parallelogram from 180.",
+  "example": {
+   "question": "Parallelogram, angle P = 70: angle R (opposite)",
+   "wrong_answer": "110",
+   "correct_answer": "70"
+  },
+  "cause": "Mixes up opposite and neighbouring corners.",
+  "reveals": "The answer 110 as a wrong option, with a reason that names the idea.",
+  "help": "Opposite angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_ANGLES_EQUAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Believes neighbouring angles of a parallelogram are equal.",
+  "example": {
+   "question": "Parallelogram, angle P = 70: angle Q (next to P)",
+   "wrong_answer": "70",
+   "correct_answer": "110"
+  },
+  "cause": "Thinks all the angles of a parallelogram match.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Neighbours are co-interior: they add to 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_FROM_FULL_TURN": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Takes the neighbouring angle from 360.",
+  "example": {
+   "question": "Parallelogram, angle P = 70: angle Q",
+   "wrong_answer": "290",
+   "correct_answer": "110"
+  },
+  "cause": "Uses the 360 of the whole shape for two angles.",
+  "reveals": "The answer 290 as a wrong option, with a reason that names the idea.",
+  "help": "Two neighbours add to 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_QUAD_SUM_180": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Believes the angles of a quadrilateral add to 180.",
+  "example": {
+   "question": "The four angles of a parallelogram add to?",
+   "wrong_answer": "180",
+   "correct_answer": "360"
+  },
+  "cause": "Carries the triangle total over.",
+  "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+  "help": "A quadrilateral is two triangles: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_PARALLELOGRAM_RIGHT_ANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Believes a parallelogram has right angles.",
+  "example": {
+   "question": "Parallelogram, angle A = 70: angle B",
+   "wrong_answer": "90",
+   "correct_answer": "110"
+  },
+  "cause": "Pictures a rectangle.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Only a rectangle has right angles; a parallelogram can lean.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_DIAGONAL_RIGHT_ANGLE_USED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Gives 90 because the diagonals of a rhombus cross at right angles.",
+  "example": {
+   "question": "Rhombus, angle ABC = 100: angle BAC",
+   "wrong_answer": "90",
+   "correct_answer": "40"
+  },
+  "cause": "Uses a true fact about the wrong angle.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Look at the angle asked for, in triangle ABC.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_BASE_ANGLES_NOT_SHARED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Gives both base angles together as each one.",
+  "example": {
+   "question": "Isosceles roof, top angle 40: each base angle",
+   "wrong_answer": "140",
+   "correct_answer": "70"
+  },
+  "cause": "Stops after taking the top angle from 180.",
+  "reveals": "The answer 140 as a wrong option, with a reason that names the idea.",
+  "help": "The two base angles share what is left.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_TOP_ANGLE_HALVED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Halves the given angle for the base angles.",
+  "example": {
+   "question": "Isosceles roof, top angle 40: each base angle",
+   "wrong_answer": "20",
+   "correct_answer": "70"
+  },
+  "cause": "Shares the wrong angle.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Take the top angle from 180, then halve.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ALL_ANGLES_EQUAL_ISOSCELES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Believes all three angles of an isosceles triangle are equal.",
+  "example": {
+   "question": "Isosceles roof, top angle 40: each base angle",
+   "wrong_answer": "40",
+   "correct_answer": "70"
+  },
+  "cause": "Mixes isosceles with equilateral.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Only the two base angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_LIKE_TERMS_MULTIPLIED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Multiplies the plain numbers when collecting terms.",
+  "example": {
+   "question": "x + (x + 10) + (2x + 30): the plain number",
+   "wrong_answer": "300",
+   "correct_answer": "40"
+  },
+  "cause": "Combines numbers by multiplying.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "The angles are added: 10 + 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_NOT_REMOVED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Divides 180 by the number of x without taking the plain number off first.",
+  "example": {
+   "question": "4x + 40 = 180",
+   "wrong_answer": "45",
+   "correct_answer": "35"
+  },
+  "cause": "Divides straight away.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "Take 40 from both sides first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_LEFT_OFF": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Works out 2x but leaves the plain number off the angle.",
+  "example": {
+   "question": "x = 35: the angle (2x + 30)",
+   "wrong_answer": "70",
+   "correct_answer": "100"
+  },
+  "cause": "Stops after 2x.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Add the 30 too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_EXTERIOR_ADDED_NOT_SUBTRACTED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Adds the exterior angle and the known far angle.",
+  "example": {
+   "question": "Exterior angle 120, angle A = 50: angle B",
+   "wrong_answer": "170",
+   "correct_answer": "70"
+  },
+  "cause": "Knows the rule has an addition in it.",
+  "reveals": "The answer 170 as a wrong option, with a reason that names the idea.",
+  "help": "Exterior = A + B, so B = 120 - 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ADJACENT_INTERIOR_GIVEN": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Gives the interior angle beside the exterior angle.",
+  "example": {
+   "question": "Exterior angle 120, angle A = 50: angle B",
+   "wrong_answer": "60",
+   "correct_answer": "70"
+  },
+  "cause": "Finds the angle on the straight line and stops.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "B is at a different corner.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_ALL_CORNERS_RIGHT_ANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Believes every quadrilateral has four right angles.",
+  "example": {
+   "question": "Why do a trapezium's angles add to 360?",
+   "wrong_answer": "four corners of 90",
+   "correct_answer": "two triangles of 180"
+  },
+  "cause": "Pictures a rectangle.",
+  "reveals": "The answer four corners of 90 as a wrong option, with a reason that names the idea.",
+  "help": "The corners can be different; the triangles always make 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_CORNERS_AS_POINT": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Treats the corners of a shape as angles round one point.",
+  "example": {
+   "question": "Why do a quadrilateral's angles add to 360?",
+   "wrong_answer": "angles at a point add to 360",
+   "correct_answer": "two triangles of 180"
+  },
+  "cause": "Remembers the number 360 from angles at a point.",
+  "reveals": "The answer angles at a point add to 360 as a wrong option, with a reason that names the idea.",
+  "help": "The corners are in four places, not round one point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_MUST_BE_EQUAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Believes the two triangles a diagonal makes must be the same.",
+  "example": {
+   "question": "Why do a quadrilateral's angles add to 360?",
+   "wrong_answer": "the diagonal makes two equal triangles",
+   "correct_answer": "two triangles of 180"
+  },
+  "cause": "Has seen a rectangle cut in half.",
+  "reveals": "The answer the diagonal makes two equal triangles as a wrong option, with a reason that names the idea.",
+  "help": "Any two triangles: each is 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_EQUAL_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Uses as many triangles as sides.",
+  "example": {
+   "question": "Angle sum of a hexagon",
+   "wrong_answer": "1,080",
+   "correct_answer": "720"
+  },
+  "cause": "Counts one triangle per side.",
+  "reveals": "The answer 1,080 as a wrong option, with a reason that names the idea.",
+  "help": "From one corner: 2 fewer triangles than sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_ONE_FEWER": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Uses one fewer triangle than sides.",
+  "example": {
+   "question": "Angle sum of a hexagon",
+   "wrong_answer": "900",
+   "correct_answer": "720"
+  },
+  "cause": "Misreads the pattern in the table.",
+  "reveals": "The answer 900 as a wrong option, with a reason that names the idea.",
+  "help": "Count again: a quadrilateral has 2 triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_AS_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Gives the number of triangles as the number of sides.",
+  "example": {
+   "question": "Angle sum 720: sides",
+   "wrong_answer": "4",
+   "correct_answer": "6"
+  },
+  "cause": "Stops after dividing by 180.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Sides are 2 more than triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_RIGHT_ANGLES_AS_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Divides the sum by 90 to count the sides.",
+  "example": {
+   "question": "Angle sum 720: sides",
+   "wrong_answer": "8",
+   "correct_answer": "6"
+  },
+  "cause": "Counts right angles.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 180 to count triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_EXTERIOR_AS_INTERIOR": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "error": "Gives 360 divided by the sides as the interior angle.",
+  "example": {
+   "question": "Each interior angle of a regular hexagon",
+   "wrong_answer": "60",
+   "correct_answer": "120"
+  },
+  "cause": "Shares the full turn among the corners.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "360 / n is the exterior angle; interior = 180 - exterior.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_INTERIOR_FROM_180_SHARED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "error": "Shares 180 among the corners for each interior angle.",
+  "example": {
+   "question": "Each interior angle of a regular hexagon",
+   "wrong_answer": "30",
+   "correct_answer": "120"
+  },
+  "cause": "Uses the triangle total for the whole shape.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "The hexagon is 4 triangles: 720 shared by 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_SUM_SHARED_BY_TRIANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "error": "Divides the angle sum by the number of triangles for each angle.",
+  "example": {
+   "question": "Hexagon sum 720: each angle",
+   "wrong_answer": "180",
+   "correct_answer": "120"
+  },
+  "cause": "Divides by the wrong count.",
+  "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+  "help": "Share among the corners: 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_SUM_180": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "error": "Uses 180 as the total of the exterior angles.",
+  "example": {
+   "question": "Regular polygon, exterior angle 60: sides",
+   "wrong_answer": "3",
+   "correct_answer": "6"
+  },
+  "cause": "Uses a half turn.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "The exterior angles make a full turn: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_INTERIOR_USED_AS_EXTERIOR": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "error": "Divides 360 by the interior angle.",
+  "example": {
+   "question": "Regular polygon, interior angle 120: sides",
+   "wrong_answer": "3",
+   "correct_answer": "6"
+  },
+  "cause": "Skips finding the exterior angle.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Exterior = 180 - 120 = 60 first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_ANGLE_AS_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "error": "Gives the exterior angle as the number of sides.",
+  "example": {
+   "question": "Regular polygon, interior angle 120: sides",
+   "wrong_answer": "60",
+   "correct_answer": "6"
+  },
+  "cause": "Stops after one step.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Divide 360 by it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE_READ": {
   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
   "error": "Reads the scale that does not start at zero on the arm.",

@@ -13,6 +13,7 @@ import * as area from "./area.mjs";
 import * as temperature from "./temperature.mjs";
 import * as money from "./money.mjs";
 import * as construction from "./construction.mjs";
+import * as angles from "./angles.mjs";
 import * as speed from "./speed.mjs";
 import * as volume from "./volume.mjs";
-export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, inequalities, pythagoras, length, area, temperature, construction, speed, volume, money];
+export const SUBS = [whole, factors, fractions, decimals, squares, expressions, equations, inequalities, pythagoras, length, area, temperature, angles, construction, speed, volume, money];

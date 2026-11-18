@@ -4,7 +4,7 @@
 // pictographs, pie charts, line graphs, travel graphs).
 // ============================================================================
 import { randInt, pick } from '../schema.js';
-import { family, round, commas } from './core.js';
+import { family, round, commas, oneCodeEach } from './core.js';
 import { person, sh } from './kenya.js';
 
 const fam = (def) => family({ reviewed: false, ...def });
@@ -26,7 +26,7 @@ const THINGS = [{ t: 'kilograms of maize', u: 'kg' }, { t: 'litres of milk', u: 
 
 export const FAMILIES = [
   // ================================================================ ANGLES
-  fam({ id: 'g7.angles.point-cake', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.a', rung: 1, form: 'word',
+  fam({ id: 'g7.angles.point-cake', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.b', cskill: 'MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT', rung: 1, form: 'word',
     draw: () => {
       const a = randInt(12, 20) * 5, b = randInt(12, 20) * 5, c = randInt(12, 20) * 5;
       const d4 = 360 - a - b - c;
@@ -37,13 +37,13 @@ export const FAMILIES = [
     make: ({ a, b, c, what, p }) => ({
       question: `${p.name} cuts a ${what} into 4 pieces. All the cuts start at the centre. Three pieces have angles of ${a}°, ${b}° and ${c}° at the centre. What is the angle of the fourth piece, in degrees?`,
       answer: 360 - a - b - c,
-      wrong: [[a + b + c, 'That is the three angles added together. Together with the fourth they make a full turn.'], [360 - a - b, 'You took away only two of the three known angles.'], [180 - a, 'Angles on a straight line add to 180°. The pieces fill a whole circle, which is a bigger turn.']],
+      wrong: [[a + b + c, 'That is the three angles added together. Together with the fourth they make a full turn.', 'M_KNOWN_SUM_AS_ANSWER'], [360 - a - b, 'You took away only two of the three known angles.', 'SLIP'], [180 - a, 'Angles on a straight line add to 180°. The pieces fill a whole circle, which is a bigger turn.', 'M_POINT_AS_STRAIGHT_LINE']],
       hints: ['The pieces meet at one point and fill the whole circle.', 'Angles at a point add up to a full turn. Take the known angles away from it.'],
       steps: ['Angles at a point add up to 360°.', `Known angles: ${a} + ${b} + ${c} = ${a + b + c}°.`, `Fourth piece: 360 − ${a + b + c} = ${360 - a - b - c}°.`],
     }),
     check: ({ a, b, c }, v) => a + b + c + v === 360 }),
 
-  fam({ id: 'g7.angles.line-algebra', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.a', rung: 3, form: 'word',
+  fam({ id: 'g7.angles.line-algebra', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.a', cskill: 'MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE', rung: 3, form: 'word',
     draw: () => {
       const x = pick([20, 25, 30, 35]), p = pick([10, 15, 20]);
       const q = 180 - 5 * x - p;
@@ -54,27 +54,27 @@ export const FAMILIES = [
     make: ({ x, p, q, A, B }) => ({
       question: `Two angles on a straight line are (3x + ${p})° and (2x + ${q})°. What is the size of the larger angle, in degrees?`,
       answer: Math.max(A, B),
-      wrong: [[Math.min(A, B), 'That is the smaller angle. Compare both angles once you know x.'], [x, 'That is the value of x. Put it back into the angles.'], [(180 - p - q) / 3, 'There are 5 lots of x altogether (3x and 2x), not 3.']],
+      wrong: [[Math.min(A, B), 'That is the smaller angle. Compare both angles once you know x.', 'SLIP'], [x, 'That is the value of x. Put it back into the angles.', 'M_X_GIVEN_AS_ANGLE'], [(180 - p - q) / 3, 'There are 5 lots of x altogether (3x and 2x), not 3.', 'M_X_TERMS_NOT_COLLECTED']],
       hints: ['Angles on a straight line add up to a fixed total. Write an equation.', 'Collect the x terms and the plain numbers, solve for x, then work out both angles.'],
       steps: [`3x + ${p} + 2x + ${q} = 180, so 5x + ${p + q} = 180.`, `5x = ${180 - p - q}, so x = ${x}.`, `The angles are ${A}° and ${B}°. The larger is ${Math.max(A, B)}°.`],
     }),
     check: ({ p, q }, v) => { const A2 = (v - p) / 3, B2 = (v - q) / 2; return [A2, B2].some(t => Number.isInteger(t) && 3 * t + p + 2 * t + q === 180); } }),
 
-  fam({ id: 'g7.angles.opposite-why', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.a', rung: 2, form: 'why',
+  fam({ id: 'g7.angles.opposite-why', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.a', cskill: 'MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE', rung: 2, form: 'why',
     draw: () => { const a = pick([35, 40, 50, 55, 65, 70, 75, 110, 115, 125, 130, 145]); return { a, k: randInt(0, 3), p: person() }; },
     make: ({ a, k, p }) => ({
       question: `Two straight lines cross. One of the angles is ${a}°. ${p.name} says the angle directly opposite it is ${180 - a}°. Why is ${p.she} wrong?`,
       options: rot([
         { text: `Opposite angles are equal, so it is ${a}°`, right: true },
-        { text: 'She is right, because angles on a straight line add up to 180°'.replace('She', p.She), right: false, why: 'Angles add up to 180° when they are side by side on one line. An opposite angle is across the crossing, not beside it.' },
-        { text: `It should be ${360 - a}°, because angles at a point add up to 360°`, right: false, why: 'The four angles together make 360°. A pair of opposite angles is not the whole turn.' },
-        { text: 'It must be 90°, because two lines that cross are always at right angles', right: false, why: 'Lines can cross at any angle. Only some crossings are right angles.' },
+        { text: 'She is right, because angles on a straight line add up to 180°'.replace('She', p.She), right: false, why: 'Angles add up to 180° when they are side by side on one line. An opposite angle is across the crossing, not beside it.', mis: 'M_OPPOSITE_AS_SUPPLEMENTARY' },
+        { text: `It should be ${360 - a}°, because angles at a point add up to 360°`, right: false, why: 'The four angles together make 360°. A pair of opposite angles is not the whole turn.', mis: 'M_OPPOSITE_FROM_FULL_TURN' },
+        { text: 'It must be 90°, because two lines that cross are always at right angles', right: false, why: 'Lines can cross at any angle. Only some crossings are right angles.', mis: 'M_CROSSING_ALWAYS_RIGHT_ANGLE' },
       ], k),
       hints: ['Opposite angles face each other across the crossing.', 'Compare an opposite angle with the angle beside it. Which one is it equal to?'],
       steps: ['Opposite angles at a crossing are equal (vertically opposite angles).', `So the angle opposite ${a}° is also ${a}°.`, `The angle beside it on the line is ${180 - a}°, and that is the one ${p.name} found.`],
     }) }),
 
-  fam({ id: 'g7.angles.transversal-reason', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.c', rung: 2, form: 'why',
+  fam({ id: 'g7.angles.transversal-reason', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.c', cskill: 'MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS', rung: 2, form: 'why',
     draw: () => ({ a: pick([48, 52, 62, 68, 72, 74, 108, 112, 118, 124]), type: pick(['alt', 'corr', 'coint']), k: randInt(0, 3) }),
     make: ({ a, type, k }) => {
       const R = {
@@ -89,7 +89,9 @@ export const FAMILIES = [
         coint: 'Co-interior angles lie between the parallel lines on the same side of the transversal. Check where angle x is.',
         vert: 'Vertically opposite angles are across a single crossing. Angle x is at the other crossing.',
       };
-      const opts = ['alt', 'corr', 'coint', 'vert'].map(t => ({ text: `${R[t].val}°, because ${R[t].reason}`, right: t === type, why: t === type ? undefined : wrongWhy[t] }));
+      // the pair chosen says what went wrong: an equal pair taken as adding to 180, co-interior taken as equal, the two equal pairs mixed, or one crossing taken for two
+      const code = (t) => (t === 'vert' ? 'M_VERTICAL_ACROSS_CROSSINGS' : type === 'coint' ? 'M_COINTERIOR_AS_EQUAL' : t === 'coint' ? 'M_EQUAL_PAIR_AS_SUPPLEMENTARY' : 'M_ALTERNATE_CORRESPONDING_MIXED');
+      const opts = oneCodeEach(['alt', 'corr', 'coint', 'vert'].map(t => ({ text: `${R[t].val}°, because ${R[t].reason}`, right: t === type, why: t === type ? undefined : wrongWhy[t], mis: t === type ? undefined : code(t) })));
       return {
         question: `Line AB is parallel to line CD. The transversal EF crosses both. ${R[type].where} What is angle x, and what is the reason?`,
         options: rot(opts, k),
@@ -98,20 +100,20 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g7.angles.gate-brace', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.c', rung: 2, form: 'steps',
+  fam({ id: 'g7.angles.gate-brace', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.c', cskill: 'MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS', rung: 2, form: 'steps',
     draw: () => ({ a: pick([48, 52, 56, 58, 62, 64, 68, 72, 118, 122]), p: person() }),
     make: ({ a, p }) => ({
       question: `${p.name} is looking at a gate. The top bar and the bottom bar are parallel. A brace crosses both bars. Below the top bar and to the left of the brace, the brace makes an angle of ${a}° with the top bar.`,
       parts: [
-        { prompt: 'Above the bottom bar and to the right of the brace, the angle is alternate to the first angle. What is its size, in degrees?', answer: a, unit: '°', hint: 'Alternate angles between parallel lines are equal.', wrong: [[180 - a, 'Alternate angles are equal. They do not add up to 180°.']] },
-        { prompt: 'Above the bottom bar and to the left of the brace, the angle is co-interior to the first angle. What is its size, in degrees?', answer: 180 - a, unit: '°', hint: 'Co-interior angles lie on the same side and add up to a straight angle.', wrong: [[a, 'Co-interior angles are not equal. They add up to a straight angle.']] },
-        { prompt: 'Above the top bar and to the right of the brace, the angle is vertically opposite to the first angle. What is its size, in degrees?', answer: a, unit: '°', hint: 'Vertically opposite angles are across one crossing and are equal.', wrong: [[180 - a, 'That is the angle beside it. The opposite angle is across the crossing.']] },
+        { prompt: 'Above the bottom bar and to the right of the brace, the angle is alternate to the first angle. What is its size, in degrees?', answer: a, unit: '°', hint: 'Alternate angles between parallel lines are equal.', wrong: [[180 - a, 'Alternate angles are equal. They do not add up to 180°.', 'M_EQUAL_PAIR_AS_SUPPLEMENTARY']] },
+        { prompt: 'Above the bottom bar and to the left of the brace, the angle is co-interior to the first angle. What is its size, in degrees?', answer: 180 - a, unit: '°', hint: 'Co-interior angles lie on the same side and add up to a straight angle.', wrong: [[a, 'Co-interior angles are not equal. They add up to a straight angle.', 'M_COINTERIOR_AS_EQUAL']] },
+        { prompt: 'Above the top bar and to the right of the brace, the angle is vertically opposite to the first angle. What is its size, in degrees?', answer: a, unit: '°', hint: 'Vertically opposite angles are across one crossing and are equal.', wrong: [[180 - a, 'That is the angle beside it. The opposite angle is across the crossing.', 'M_OPPOSITE_AS_SUPPLEMENTARY']] },
       ],
       steps: [`Alternate angles are equal: ${a}°.`, `Co-interior angles add up to 180°: 180 − ${a} = ${180 - a}°.`, `Vertically opposite angles are equal: ${a}°.`],
     }),
     check: ({ a }, v) => v[0] === a && v[0] + v[1] === 180 && v[2] === v[0] }),
 
-  fam({ id: 'g7.angles.spot-cointerior', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.c', rung: 3, form: 'spot',
+  fam({ id: 'g7.angles.spot-cointerior', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.c', cskill: 'MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS', rung: 3, form: 'spot',
     draw: () => {
       const a = pick([52, 58, 64, 68, 72, 76, 82]); const kind = pick(['rule', 'rule', 'arith']);
       const R = kind === 'rule' ? pick([360, 90]) : 180;
@@ -129,24 +131,25 @@ export const FAMILIES = [
           { text: `x = ${R} − ${a} = ${v}.`, ok: v === R - a },
           { text: `So angle x is ${v}°.`, ok: true },
         ],
+        mis: kind === 'rule' ? 'M_COINTERIOR_WRONG_TOTAL' : 'SLIP',
         fix: kind === 'rule' ? `Co-interior angles add up to 180°, not ${R}°. That makes x = ${right}°.` : `The subtraction is wrong: 180 − ${a} = ${right}, not ${v}.`,
         hints: ['Check the rule used, then check the sums that follow.', 'Co-interior angles lie between parallel lines on the same side of the transversal.'],
         steps: [`Co-interior angles add up to 180°.`, `x = 180 − ${a} = ${right}°.`],
       };
     } }),
 
-  fam({ id: 'g7.angles.gable-isosceles', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.d', rung: 2, form: 'word',
+  fam({ id: 'g7.angles.gable-isosceles', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.e', cskill: 'MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES', rung: 2, form: 'word',
     draw: () => { const t = pick([20, 30, 40, 50, 80, 100, 120]); return { t, p: person() }; },
     make: ({ t, p }) => ({
       question: `The gable end of ${p.name}'s house is an isosceles triangle. The angle at the top is ${t}°. What is the size of each base angle, in degrees?`,
       answer: (180 - t) / 2,
-      wrong: [[180 - t, 'That is both base angles together. They are equal, so share it between the two.'], [t / 2, 'That is half of the top angle. The base angles come from what is left of 180°.'], [t, 'The top angle is different from the base angles. The two base angles are the equal ones.']],
+      wrong: [[180 - t, 'That is both base angles together. They are equal, so share it between the two.', 'M_BASE_ANGLES_NOT_SHARED'], [t / 2, 'That is half of the top angle. The base angles come from what is left of 180°.', 'M_TOP_ANGLE_HALVED'], [t, 'The top angle is different from the base angles. The two base angles are the equal ones.', 'M_ALL_ANGLES_EQUAL_ISOSCELES']],
       hints: ['The three angles of a triangle add up to a fixed total.', 'The two base angles of an isosceles triangle are equal.'],
       steps: [`Angles of a triangle add up to 180°, so the two base angles together are 180 − ${t} = ${180 - t}°.`, `They are equal: ${180 - t} ÷ 2 = ${(180 - t) / 2}° each.`],
     }),
     check: ({ t }, a) => 2 * a + t === 180 }),
 
-  fam({ id: 'g7.angles.triangle-algebra', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.d', rung: 3, form: 'steps',
+  fam({ id: 'g7.angles.triangle-algebra', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.e', cskill: 'MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES', rung: 3, form: 'steps',
     draw: () => {
       const x = pick([20, 25, 30, 35, 40]), p = pick([10, 20]);
       const q = 180 - 4 * x - p;
@@ -156,78 +159,78 @@ export const FAMILIES = [
     make: ({ x, p, q }) => ({
       question: `The three angles of a triangle are x°, (x + ${p})° and (2x + ${q})°.`,
       parts: [
-        { prompt: 'The angles add up to 180°. Write 4x + ? = 180. What is the number in the place of ?', answer: p + q, hint: `Add the plain numbers ${p} and ${q}.`, wrong: [[q - p, 'The angles are added together. Add the plain numbers.'], [p * q, 'Add the plain numbers. Do not multiply.']] },
-        { prompt: 'Find x.', answer: x, hint: 'Take the plain number from 180, then divide by 4.', wrong: [[180 / 4, 'Take the plain number away from 180 before dividing.'], [(180 - p - q) / 2, 'There are 4 lots of x in all (x, x and 2x). Divide by 4.']] },
-        { prompt: 'What is the size of the largest angle, in degrees?', answer: Math.max(x, x + p, 2 * x + q), unit: '°', hint: 'Work out all three angles, then pick the largest.', wrong: [[x + p, 'Check the third angle too.'], [2 * x, 'You have not added the plain number to 2x.']] },
+        { prompt: 'The angles add up to 180°. Write 4x + ? = 180. What is the number in the place of ?', answer: p + q, hint: `Add the plain numbers ${p} and ${q}.`, wrong: [[q - p, 'The angles are added together. Add the plain numbers.', 'SLIP'], [p * q, 'Add the plain numbers. Do not multiply.', 'M_LIKE_TERMS_MULTIPLIED']] },
+        { prompt: 'Find x.', answer: x, hint: 'Take the plain number from 180, then divide by 4.', wrong: [[180 / 4, 'Take the plain number away from 180 before dividing.', 'M_CONSTANT_NOT_REMOVED'], [(180 - p - q) / 2, 'There are 4 lots of x in all (x, x and 2x). Divide by 4.', 'M_X_TERMS_NOT_COLLECTED']] },
+        { prompt: 'What is the size of the largest angle, in degrees?', answer: Math.max(x, x + p, 2 * x + q), unit: '°', hint: 'Work out all three angles, then pick the largest.', wrong: [[x + p, 'Check the third angle too.', 'SLIP'], [2 * x, 'You have not added the plain number to 2x.', 'M_CONSTANT_LEFT_OFF']] },
       ],
       steps: [`x + x + 2x = 4x and ${p} + ${q} = ${p + q}, so 4x + ${p + q} = 180.`, `4x = ${180 - p - q}, so x = ${x}.`, `The angles are ${x}°, ${x + p}° and ${2 * x + q}°.`],
     }),
     check: ({ p, q }, v) => v[0] === p + q && 4 * v[1] + v[0] === 180 && v[1] + (v[1] + p) + (2 * v[1] + q) === 180 && v[2] === Math.max(v[1], v[1] + p, 2 * v[1] + q) }),
 
-  fam({ id: 'g7.angles.exterior-triangle', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.d', rung: 2, form: 'word',
+  fam({ id: 'g7.angles.exterior-triangle', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.e', cskill: 'MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES', rung: 2, form: 'word',
     draw: () => { const e = randInt(20, 30) * 5, pA = randInt(7, 14) * 5; return e - pA >= 25 && uniq(e - pA, e + pA, 180 - e, pA) ? { e, pA } : null; },
     make: ({ e, pA }) => ({
       question: `In triangle ABC, the side BC is extended to D. The exterior angle ACD is ${e}° and angle A is ${pA}°. What is angle B, in degrees?`,
       answer: e - pA,
-      wrong: [[e + pA, 'The exterior angle is the sum of the two far angles. So the other far angle is found by taking away.'], [180 - e, 'That is angle ACB, the angle beside the exterior angle. Angle B is a different corner.'], [pA, 'That is angle A, which you were given.']],
+      wrong: [[e + pA, 'The exterior angle is the sum of the two far angles. So the other far angle is found by taking away.', 'M_EXTERIOR_ADDED_NOT_SUBTRACTED'], [180 - e, 'That is angle ACB, the angle beside the exterior angle. Angle B is a different corner.', 'M_ADJACENT_INTERIOR_GIVEN'], [pA, 'That is angle A, which you were given.', 'SLIP']],
       hints: ['An exterior angle equals the sum of the two interior opposite angles.', 'The two interior opposite angles to angle ACD are angle A and angle B.'],
       steps: [`Exterior angle ACD = angle A + angle B.`, `${e} = ${pA} + angle B, so angle B = ${e} − ${pA} = ${e - pA}°.`],
     }),
     check: ({ e, pA }, a) => a + pA + (180 - e) === 180 }),
 
-  fam({ id: 'g7.angles.quad-why', skill: 'G7_ANGLES', outcome: 'G7.ANGLES.d', rung: 3, form: 'why',
+  fam({ id: 'g7.angles.quad-why', skill: 'G7_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.e', cskill: 'MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM', rung: 3, form: 'why',
     draw: () => ({ shape: pick(['trapezium', 'four-sided field with no equal sides', 'quadrilateral with no equal sides', 'four-sided plot that is not a rectangle']), k: randInt(0, 3) }),
     make: ({ shape, k }) => ({
       question: `Why do the four angles of any ${shape} add up to 360°?`,
       options: rot([
         { text: 'A diagonal cuts it into two triangles of 180° each', right: true },
-        { text: 'It has four corners, and every corner is 90°', right: false, why: 'Only a rectangle or square has four right angles. The corners of this shape can be different sizes.' },
-        { text: 'All four corners meet at one point, and angles at a point add up to 360°', right: false, why: 'The corners are at four different places. The 360° at a point is about angles around one point.' },
-        { text: 'A diagonal always cuts it into two triangles that are exactly the same', right: false, why: 'The two triangles need not be equal. What matters is that there are two triangles.' },
+        { text: 'It has four corners, and every corner is 90°', right: false, why: 'Only a rectangle or square has four right angles. The corners of this shape can be different sizes.', mis: 'M_ALL_CORNERS_RIGHT_ANGLES' },
+        { text: 'All four corners meet at one point, and angles at a point add up to 360°', right: false, why: 'The corners are at four different places. The 360° at a point is about angles around one point.', mis: 'M_CORNERS_AS_POINT' },
+        { text: 'A diagonal always cuts it into two triangles that are exactly the same', right: false, why: 'The two triangles need not be equal. What matters is that there are two triangles.', mis: 'M_TRIANGLES_MUST_BE_EQUAL' },
       ], k),
       hints: ['Draw a line from one corner to the opposite corner.', 'How many triangles do you get? What do the angles of each triangle add up to?'],
       steps: ['One diagonal splits the shape into two triangles.', 'The angles of each triangle add up to 180°, and the angles of the two triangles together make the angles of the shape: 2 × 180° = 360°.'],
     }) }),
 
-  fam({ id: 'g7.angles.parallelogram-steps', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.e', rung: 2, form: 'steps',
+  fam({ id: 'g7.angles.parallelogram-steps', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.d', cskill: 'MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES', rung: 2, form: 'steps',
     draw: () => ({ a: pick([50, 55, 60, 65, 70, 75, 105, 110, 115, 120, 125]), p: person() }),
     make: ({ a, p }) => ({
       question: `${p.name} draws a parallelogram PQRS. Angle P is ${a}°.`,
       parts: [
-        { prompt: 'What is angle R, the opposite angle? (degrees)', answer: a, unit: '°', hint: 'Opposite angles of a parallelogram are equal.', wrong: [[180 - a, 'That is the angle at a neighbouring corner. R is opposite P.']] },
-        { prompt: 'What is angle Q, next to P? (degrees)', answer: 180 - a, unit: '°', hint: 'Angles next to each other in a parallelogram add up to a straight angle.', wrong: [[a, 'Neighbouring angles of a parallelogram are not equal, unless it is a rectangle.'], [360 - a, 'Angles at neighbouring corners add up to half of that.']] },
-        { prompt: 'What do the four angles P, Q, R and S add up to? (degrees)', answer: 360, unit: '°', hint: 'Use the angles you found, or the rule for any quadrilateral.', wrong: [[180, 'That is only two neighbouring angles.'], [2 * a, 'That adds up only P and R.']] },
+        { prompt: 'What is angle R, the opposite angle? (degrees)', answer: a, unit: '°', hint: 'Opposite angles of a parallelogram are equal.', wrong: [[180 - a, 'That is the angle at a neighbouring corner. R is opposite P.', 'M_OPPOSITE_NEIGHBOUR_MIXED']] },
+        { prompt: 'What is angle Q, next to P? (degrees)', answer: 180 - a, unit: '°', hint: 'Angles next to each other in a parallelogram add up to a straight angle.', wrong: [[a, 'Neighbouring angles of a parallelogram are not equal, unless it is a rectangle.', 'M_NEIGHBOUR_ANGLES_EQUAL'], [360 - a, 'Angles at neighbouring corners add up to half of that.', 'M_NEIGHBOUR_FROM_FULL_TURN']] },
+        { prompt: 'What do the four angles P, Q, R and S add up to? (degrees)', answer: 360, unit: '°', hint: 'Use the angles you found, or the rule for any quadrilateral.', wrong: [[180, 'That is only two neighbouring angles.', 'M_QUAD_SUM_180'], [2 * a, 'That adds up only P and R.', 'SLIP']] },
       ],
       steps: [`Opposite angles are equal: angle R = ${a}°.`, `Neighbouring angles add up to 180°: angle Q = 180 − ${a} = ${180 - a}°.`, `All four: ${a} + ${180 - a} + ${a} + ${180 - a} = 360°.`],
     }),
     check: ({ a }, v) => v[0] === a && v[1] === 180 - a && v[2] === v[0] + v[1] + v[0] + v[1] }),
 
-  fam({ id: 'g7.angles.parallelogram-why', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.e', rung: 3, form: 'why',
+  fam({ id: 'g7.angles.parallelogram-why', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.d', cskill: 'MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES', rung: 3, form: 'why',
     draw: () => ({ a: pick([55, 60, 65, 70, 75, 105, 110, 115, 120]), k: randInt(0, 3) }),
     make: ({ a, k }) => ({
       question: `In parallelogram ABCD, angle A is ${a}°. Which statement about angle B is correct?`,
       options: rot([
         { text: `Angle B is ${180 - a}°, because A and B are co-interior angles`, right: true },
-        { text: `Angle B is ${a}°, because opposite angles of a parallelogram are equal`, right: false, why: 'Opposite angles are equal, but B is next to A. The angle opposite A is C.' },
-        { text: `Angle B is ${360 - a}°, because angles at a point add up to 360°`, right: false, why: 'Angles A and B are not all the way round one point. They sit between parallel sides.' },
-        { text: 'Angle B is 90°, because a parallelogram has right angles', right: false, why: 'Only a rectangle has right angles. A parallelogram can be slanted.' },
+        { text: `Angle B is ${a}°, because opposite angles of a parallelogram are equal`, right: false, why: 'Opposite angles are equal, but B is next to A. The angle opposite A is C.', mis: 'M_NEIGHBOUR_ANGLES_EQUAL' },
+        { text: `Angle B is ${360 - a}°, because angles at a point add up to 360°`, right: false, why: 'Angles A and B are not all the way round one point. They sit between parallel sides.', mis: 'M_NEIGHBOUR_FROM_FULL_TURN' },
+        { text: 'Angle B is 90°, because a parallelogram has right angles', right: false, why: 'Only a rectangle has right angles. A parallelogram can be slanted.', mis: 'M_PARALLELOGRAM_RIGHT_ANGLES' },
       ], k),
       hints: ['Which side is the transversal for angles A and B?', 'Angles on the same side of a transversal, between parallel lines, are co-interior.'],
       steps: ['AD and BC are parallel, and AB crosses them.', `Angles A and B are co-interior, so they add up to 180°: B = 180 − ${a} = ${180 - a}°.`],
     }) }),
 
-  fam({ id: 'g7.angles.rhombus-diagonal', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.e', rung: 3, form: 'word',
+  fam({ id: 'g7.angles.rhombus-diagonal', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.d', cskill: 'MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES', rung: 3, form: 'word',
     draw: () => { const b = pick([40, 50, 70, 80, 100, 110, 120, 140]); return { b, p: person() }; },
     make: ({ b }) => ({
       question: `ABCD is a rhombus. Angle ABC is ${b}°. All four sides are equal, so triangle ABC is isosceles with AB = BC. What is angle BAC, in degrees?`,
       answer: (180 - b) / 2,
-      wrong: [[180 - b, 'That is both equal base angles together. Share it between the two.'], [b / 2, 'That is half of the angle you were given. Use the angle sum of the triangle.'], [90, 'The diagonals of a rhombus cross at 90°, but angle BAC is a different angle.']],
+      wrong: [[180 - b, 'That is both equal base angles together. Share it between the two.', 'M_BASE_ANGLES_NOT_SHARED'], [b / 2, 'That is half of the angle you were given. Use the angle sum of the triangle.', 'M_TOP_ANGLE_HALVED'], [90, 'The diagonals of a rhombus cross at 90°, but angle BAC is a different angle.', 'M_DIAGONAL_RIGHT_ANGLE_USED']],
       hints: ['Look only at triangle ABC.', 'In an isosceles triangle the angles opposite equal sides are equal.'],
       steps: [`In triangle ABC the angles add up to 180°, so angles BAC and BCA together are 180 − ${b} = ${180 - b}°.`, `They are equal, so BAC = ${180 - b} ÷ 2 = ${(180 - b) / 2}°.`],
     }),
     check: ({ b }, a) => 2 * a + b === 180 }),
 
-  fam({ id: 'g7.angles.polygon-sum-table', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.f', rung: 2, form: 'table',
+  fam({ id: 'g7.angles.polygon-sum-table', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.f', cskill: 'MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM', rung: 2, form: 'table',
     draw: () => ({ known: pick([5, 6]), type: pick(['sum', 'sides']) }),
     make: ({ known, type }) => {
       const name = { 3: 'Triangle', 4: 'Quadrilateral', 5: 'Pentagon', 6: 'Hexagon' };
@@ -241,42 +244,42 @@ export const FAMILIES = [
         ...common, story: false,
         question: `The table shows how the angle sum of a polygon grows. Use it to find the sum of the interior angles of the ${name[target].toLowerCase()}, in degrees.`,
         answer: S,
-        wrong: [[target * 180, 'The polygon splits into 2 fewer triangles than it has sides.'], [(target - 1) * 180, 'Look at the pattern in the table: how many fewer triangles than sides?'], [(target - 3) * 180, 'Count the triangles again. The table shows the pattern.']],
+        wrong: [[target * 180, 'The polygon splits into 2 fewer triangles than it has sides.', 'M_TRIANGLES_EQUAL_SIDES'], [(target - 1) * 180, 'Look at the pattern in the table: how many fewer triangles than sides?', 'M_TRIANGLES_ONE_FEWER'], [(target - 3) * 180, 'Count the triangles again. The table shows the pattern.', 'SLIP']],
         hints: ['Look at how the number of triangles changes with the number of sides.', 'Each triangle has an angle sum of 180°.'],
         steps: [`The number of triangles is 2 fewer than the number of sides: ${target} − 2 = ${target - 2}.`, `${target - 2} × 180 = ${S}°.`],
       } : {
         ...common, story: false,
         question: `The table shows how the angle sum of a polygon grows. The interior angles of one more polygon add up to ${S}°. How many sides does it have?`,
         answer: target,
-        wrong: [[S / 180, 'That is the number of triangles. The polygon has 2 more sides than triangles.'], [S / 180 + 1, 'Look at the table: sides are always 2 more than triangles.'], [S / 90, 'Divide the sum by 180° to count triangles, then use the table pattern.']],
+        wrong: [[S / 180, 'That is the number of triangles. The polygon has 2 more sides than triangles.', 'M_TRIANGLES_AS_SIDES'], [S / 180 + 1, 'Look at the table: sides are always 2 more than triangles.', 'M_TRIANGLES_ONE_FEWER'], [S / 90, 'Divide the sum by 180° to count triangles, then use the table pattern.', 'M_RIGHT_ANGLES_AS_SIDES']],
         hints: ['How many triangles of 180° fit in the sum?', 'In the table, how many more sides than triangles are there?'],
         steps: [`${S} ÷ 180 = ${S / 180} triangles.`, `Sides = triangles + 2 = ${target}.`],
       };
     },
     check: ({ type }, a) => (type === 'sum' ? a % 180 === 0 && a / 180 + 2 >= 5 : (a - 2) * 180 >= 540) }),
 
-  fam({ id: 'g7.angles.exterior-sides', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.f', rung: 2, form: 'word',
+  fam({ id: 'g7.angles.exterior-sides', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.g', cskill: 'MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE', rung: 2, form: 'word',
     draw: () => { const n = pick([3, 4, 5, 6]), kind = pick(['ext', 'int']); return n === 4 ? null : { n, kind, p: person() }; },
     make: ({ n, kind, p }) => {
       const ext = 360 / n, int = 180 - ext;
       if (kind === 'ext') return {
         question: `${p.name} cuts tiles in the shape of a regular polygon. Each exterior angle of a tile is ${ext}°. How many sides does a tile have?`,
         answer: n,
-        wrong: [[n - 2, 'Exterior angles do not use the angle sum rule. Share one full turn among equal exterior angles.'], [round(180 / ext, 1), 'The exterior angles go all the way round the shape, which is a full turn, not a half turn.'], [n + 2, 'Divide a full turn by one exterior angle.']],
+        wrong: [[n - 2, 'Exterior angles do not use the angle sum rule. Share one full turn among equal exterior angles.', 'SLIP'], [round(180 / ext, 1), 'The exterior angles go all the way round the shape, which is a full turn, not a half turn.', 'M_EXTERIOR_SUM_180'], [n + 2, 'Divide a full turn by one exterior angle.', 'SLIP']],
         hints: ['The exterior angles of any polygon add up to one full turn.', 'How many equal exterior angles make a full turn?'],
         steps: ['Exterior angles of a polygon add up to 360°.', `Number of sides = 360 ÷ ${ext} = ${n}.`],
       };
       return {
         question: `${p.name} cuts tiles in the shape of a regular polygon. Each interior angle of a tile is ${int}°. How many sides does a tile have?`,
         answer: n,
-        wrong: [[round(360 / int, 1), 'You divided a full turn by the interior angle. Find the exterior angle first.'], [ext, 'That is the exterior angle. The question asks for the number of sides.'], [round(180 / ext, 1), 'The exterior angles add up to a full turn, not a half turn.']],
+        wrong: [[round(360 / int, 1), 'You divided a full turn by the interior angle. Find the exterior angle first.', 'M_INTERIOR_USED_AS_EXTERIOR'], [ext, 'That is the exterior angle. The question asks for the number of sides.', 'M_EXTERIOR_ANGLE_AS_SIDES'], [round(180 / ext, 1), 'The exterior angles add up to a full turn, not a half turn.', 'M_EXTERIOR_SUM_180']],
         hints: ['The interior angle and the exterior angle at a corner lie on a straight line.', 'Find the exterior angle, then see how many fit in a full turn.'],
         steps: [`Exterior angle = 180 − ${int} = ${ext}°.`, `Exterior angles add up to 360°, so sides = 360 ÷ ${ext} = ${n}.`],
       };
     },
     check: ({ n, kind }, a) => (kind === 'ext' ? a * (360 / n) === 360 : a * (180 - (180 - 360 / n)) === 360) }),
 
-  fam({ id: 'g7.angles.hexagon-why', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.f', rung: 3, form: 'why',
+  fam({ id: 'g7.angles.hexagon-why', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.f', cskill: 'MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION', rung: 3, form: 'why',
     draw: () => ({ n: pick([5, 6]), p: person(), k: randInt(0, 3) }),
     make: ({ n, p, k }) => {
       const shape = n === 5 ? 'pentagon' : 'hexagon', ext = 360 / n, int = 180 - ext;
@@ -284,16 +287,16 @@ export const FAMILIES = [
         question: `${p.name} says each interior angle of a regular ${shape} is ${ext}°, because 360 ÷ ${n} = ${ext}. Why is that wrong?`,
         options: rot([
           { text: `360 ÷ ${n} gives the exterior angle, not the interior angle`, right: true },
-          { text: `The interior angle should be 180° ÷ ${n}, not 360° ÷ ${n}`, right: false, why: '180° is the angle sum of one triangle only. It is not shared among the corners.' },
-          { text: `Nothing is wrong, because angles at a point add up to 360°`, right: false, why: 'The interior angles are at different corners, not around one point.' },
-          { text: `The sum of the interior angles must be divided by ${n - 2}`, right: false, why: 'The sum is found from the number of triangles, and then shared among the corners, one angle for each corner.' },
+          { text: `The interior angle should be 180° ÷ ${n}, not 360° ÷ ${n}`, right: false, why: '180° is the angle sum of one triangle only. It is not shared among the corners.', mis: 'M_INTERIOR_FROM_180_SHARED' },
+          { text: `Nothing is wrong, because angles at a point add up to 360°`, right: false, why: 'The interior angles are at different corners, not around one point.', mis: 'M_CORNERS_AS_POINT' },
+          { text: `The sum of the interior angles must be divided by ${n - 2}`, right: false, why: 'The sum is found from the number of triangles, and then shared among the corners, one angle for each corner.', mis: 'M_SUM_SHARED_BY_TRIANGLES' },
         ], k),
         hints: ['What do the exterior angles of a polygon add up to?', 'How is an interior angle related to the exterior angle at the same corner?'],
         steps: [`360 ÷ ${n} = ${ext}° is the exterior angle at each corner.`, `The interior angle lies on a straight line with it: 180 − ${ext} = ${int}°.`],
       };
     } }),
 
-  fam({ id: 'g7.angles.polygon-spot', skill: 'G8_POLYGON_ANGLES', outcome: 'G7.ANGLES.f', rung: 3, form: 'spot',
+  fam({ id: 'g7.angles.polygon-spot', skill: 'G8_POLYGON_ANGLES', outcome: 'MATH.G7.GEOMET.ANGLES.g', cskill: 'MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE', rung: 3, form: 'spot',
     draw: () => { const n = pick([5, 6]); const t = pick([n, n - 1]); return { n, t, p: person() }; },
     make: ({ n, t, p }) => {
       const shape = n === 5 ? 'pentagon' : 'hexagon';
@@ -306,6 +309,7 @@ export const FAMILIES = [
           { text: `The angle sum is ${t} × 180 = ${commas(total)}°.`, ok: total === t * 180 },
           { text: `Each interior angle is ${commas(total)} ÷ ${n} = ${each}°.`, ok: each * n === total },
         ],
+        mis: t === n ? 'M_TRIANGLES_EQUAL_SIDES' : 'M_TRIANGLES_ONE_FEWER',
         fix: `Splitting from one corner gives ${n - 2} triangles, 2 fewer than the sides. The angle sum is ${commas((n - 2) * 180)}°, so each angle is ${((n - 2) * 180) / n}°.`,
         hints: ['Check each step against the one before it.', 'Draw lines from one corner to the others. How many triangles are there?'],
         steps: [`Triangles = ${n} − 2 = ${n - 2}.`, `Sum = ${(n - 2) * 180}°, each angle = ${((n - 2) * 180) / n}°.`],

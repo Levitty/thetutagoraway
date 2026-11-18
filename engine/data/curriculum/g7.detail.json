@@ -1204,6 +1204,88 @@
    ],
    "mastery": "The child finds the charge for each send or withdrawal from its own row of a table, adds the charges for separate transactions, and finds the balance left after the amount and the charge both leave the account."
   },
+  "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE": {
+   "forms": [
+    "missing angle on a line",
+    "angles in x",
+    "which is the larger angle",
+    "why they add to 180"
+   ],
+   "mastery": "The child uses the fact that angles side by side on a straight line add to 180 degrees, finds a missing angle, and with angles such as (3x + 10) and (2x + 20) forms 5x + 30 = 180, solves for x and puts it back to find each angle."
+  },
+  "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE": {
+   "forms": [
+    "opposite angle",
+    "why opposite angles are equal",
+    "all four angles from one",
+    "beside or opposite"
+   ],
+   "mastery": "The child says that where two straight lines cross the opposite angles are equal and the angles beside each other add to 180, and finds all four angles from one."
+  },
+  "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT": {
+   "forms": [
+    "missing angle at a point",
+    "pieces of a round cake",
+    "angles in x at a point",
+    "full turn"
+   ],
+   "mastery": "The child uses the fact that the angles round a point make a full turn of 360 degrees and finds a missing angle by taking all the known angles from 360."
+  },
+  "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS": {
+   "forms": [
+    "name the pair",
+    "angle and reason",
+    "gate with a brace",
+    "road across a railway",
+    "find the wrong step"
+   ],
+   "mastery": "The child names alternate, corresponding and co-interior angles from where they sit, says that alternate and corresponding angles are equal and co-interior angles add to 180, finds each angle, and gives the reason."
+  },
+  "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES": {
+   "forms": [
+    "all four angles from one",
+    "angle next to a given angle",
+    "why neighbours add to 180",
+    "rhombus and its diagonal"
+   ],
+   "mastery": "The child says opposite angles of a parallelogram are equal and neighbouring angles add to 180 (they are co-interior), finds all four angles from one, and in a rhombus uses the isosceles triangle a diagonal makes."
+  },
+  "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES": {
+   "forms": [
+    "base angles of an isosceles roof",
+    "angles in x",
+    "exterior angle",
+    "largest angle"
+   ],
+   "mastery": "The child uses the angle sum of 180, the equal base angles of an isosceles triangle, and the exterior angle that equals the two far interior angles, and solves a triangle whose angles are written in x."
+  },
+  "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM": {
+   "forms": [
+    "why a quadrilateral is 360",
+    "angle sum of a pentagon",
+    "sides from a sum",
+    "table of sides and triangles"
+   ],
+   "mastery": "The child splits a polygon from one corner into triangles, two fewer than the sides, says why any quadrilateral adds to 360, and finds the angle sum (n - 2) x 180 or the number of sides from a sum."
+  },
+  "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION": {
+   "forms": [
+    "interior from exterior",
+    "why 360 divided by n is the exterior",
+    "exterior angles make a turn",
+    "interior plus exterior"
+   ],
+   "mastery": "The child says the exterior angles of a polygon make one full turn (360), that an interior and exterior angle at a corner add to 180, and that 360 divided by the sides of a regular polygon gives its exterior angle, not its interior one."
+  },
+  "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE": {
+   "forms": [
+    "each angle of a regular hexagon",
+    "sides from an exterior angle",
+    "sides from an interior angle",
+    "find the wrong step"
+   ],
+   "mastery": "The child finds each interior angle of a regular pentagon or hexagon from the angle sum, finds the number of sides from an exterior or interior angle, and spots a working that splits a polygon into the wrong number of triangles."
+  },
   "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
    "forms": [
     "read the angle",

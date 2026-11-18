@@ -145,7 +145,8 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       const bad = (p.workingTruth || []).filter(ok => !ok).length;
       if (bad !== 1) fail(`working has ${bad} false steps, must have exactly 1: ${p.shownSteps?.join(' / ')}`);
       if ((p.shownSteps || []).length < 3) fail('a working needs at least 3 steps');
-      if (mapped) { if (!(p.mis || []).length) fail('a working names no misconception (mis)'); else for (const c of p.mis) if (!codes.near.has(c)) fail(`"${c}" is not a misconception of ${def.cskill} or its sub-strand`); }
+      // a working whose wrong step is an arithmetic slip names 'SLIP', as a wrong option can (18 Nov 2026)
+      if (mapped) { if (!(p.mis || []).length) fail('a working names no misconception (mis)'); else for (const c of p.mis) if (c !== 'SLIP' && !codes.near.has(c)) fail(`"${c}" is not a misconception of ${def.cskill} or its sub-strand`); }
       if (!p.explain) fail('a working needs fix: what went wrong');
       continue;
     }
