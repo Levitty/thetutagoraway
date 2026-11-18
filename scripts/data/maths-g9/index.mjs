@@ -11,4 +11,5 @@ import * as volume from './volume.mjs';
 import * as density from './density.mjs';
 import * as speed from './speed.mjs';
 import * as money from './money.mjs';
-export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed, money];
+import * as approx from './approx.mjs';
+export const SUBS = [integers, cubes, indices, proportion, matrices, line, inequalities, area, volume, density, speed, money, approx];

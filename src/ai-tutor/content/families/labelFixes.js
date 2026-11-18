@@ -68,40 +68,40 @@ export const CORE_FAMILIES = [
     } }),
 
   // ---- G9_APPROX_ERRORS: approximations and errors, not percentage change
-  fx({ id: 'g9.approx.percent-error', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.c', rung: 2, form: 'word',
+  fx({ id: 'g9.approx.percent-error', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR', rung: 2, form: 'word',
     draw: () => { const actual = pick([50, 80, 90, 120, 160, 200, 250]); const est = actual + pick([-1, 1]) * pick([2, 4, 5, 8, 10]); const e = Math.abs(est - actual), pct = (e / actual) * 100; const v = [round((e / est) * 100, 1), e, round((est / actual) * 100, 1)]; return Number.isInteger(pct * 10) && new Set(v).size === 3 && !v.includes(round(pct, 1)) ? { actual, est } : null; },
     make: ({ actual, est }) => {
       const e = Math.abs(est - actual), pct = round((e / actual) * 100, 1);
       return { question: `A bag of maize has a true mass of ${actual} kg. A trader estimates it as ${est} kg. Find the percentage error.`,
         answer: pct,
-        wrong: [[round((e / est) * 100, 1), 'Percentage error divides by the true value, not by the estimate.'], [e, 'That is the error in kg. Now write it as a percentage of the true mass.'], [round((est / actual) * 100, 1), 'That compares the estimate with the true value. First find the error: the difference between them.']],
+        wrong: [[round((e / est) * 100, 1), 'Percentage error divides by the true value, not by the estimate.', 'M_DIVIDE_BY_ESTIMATE'], [e, 'That is the error in kg. Now write it as a percentage of the true mass.', 'M_ERROR_NOT_PERCENT'], [round((est / actual) * 100, 1), 'That compares the estimate with the true value. First find the error: the difference between them.', 'M_ESTIMATE_OVER_ACTUAL']],
         hints: ['Error = the difference between the estimate and the true value.', `Percentage error = error ÷ true value × 100.`],
         steps: [`Error = ${Math.max(est, actual)} − ${Math.min(est, actual)} = ${e} kg.`, `Percentage error = ${e} ÷ ${actual} × 100 = ${pct}%.`] };
     },
     check: ({ actual, est }, a) => Math.abs((a / 100) * actual - Math.abs(est - actual)) < 0.06 }),
-  fx({ id: 'g9.approx.greatest-error', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.b', rung: 1, form: 'word',
+  fx({ id: 'g9.approx.greatest-error', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.b', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR', rung: 1, form: 'word',
     draw: () => (() => { const c = pick([{ unit: 'cm', step: 1, label: 'the nearest cm', what: 'A plank' }, { unit: 'kg', step: 1, label: 'the nearest kg', what: 'A sack of potatoes' }, { unit: 'm', step: 10, label: 'the nearest 10 m', what: 'A school field' }, { unit: 'g', step: 100, label: 'the nearest 100 g', what: 'A bag of beans' }, { unit: 'cm', step: 0.1, label: 'the nearest 0.1 cm', what: 'A nail' }]); return { ...c, n: randInt(3, 40) }; })(),
     make: ({ unit, step, label, what, n }) => {
       const value = round(n * step, 1);
       return { question: `${what} is recorded as ${value} ${unit}, measured to ${label}. What is the greatest possible error, in ${unit}?`,
         answer: round(step / 2, 2),
-        wrong: [[step, 'That is the whole measuring step. The true value can be at most half a step away.'], [round(value / 2, 2), 'The error depends on the step used to measure, not on the size of the reading.'], [round(step / 4, 3), 'The greatest error is half of the step, not a quarter.']],
+        wrong: [[step, 'That is the whole measuring step. The true value can be at most half a step away.', 'M_WHOLE_STEP_ERROR'], [round(value / 2, 2), 'The error depends on the step used to measure, not on the size of the reading.', 'M_HALF_THE_READING'], [round(step / 4, 3), 'The greatest error is half of the step, not a quarter.', 'M_QUARTER_STEP']],
         hints: ['A reading is rounded to the closest mark of the measuring step.', 'How far can a true value be from the closest mark?'],
         steps: [`The measuring step is ${step} ${unit}.`, `The greatest possible error is half of that: ${step} ÷ 2 = ${round(step / 2, 2)} ${unit}.`] };
     },
     check: ({ step }, a) => Math.abs(a * 2 - step) < 1e-9 }),
-  fx({ id: 'g9.approx.estimate-product', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.a', rung: 1, form: 'direct',
+  fx({ id: 'g9.approx.estimate-product', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.a', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE', rung: 1, form: 'direct',
     draw: () => { const a = randInt(21, 89), b = randInt(21, 89); return a % 10 >= 2 && a % 10 <= 8 && b % 10 >= 2 && b % 10 <= 8 && a % 10 !== 5 && b % 10 !== 5 ? { a: a + pick([0.3, 0.7]), b: b + pick([0.2, 0.6]) } : null; },
     make: ({ a, b }) => {
       const ra = Math.round(a / 10) * 10, rb = Math.round(b / 10) * 10;
       return { question: `Estimate ${a} × ${b} by rounding each number to the nearest ten.`, story: false,
         answer: ra * rb,
-        wrong: [[round(a * b, 2), 'That is the exact product. An estimate rounds first, then multiplies.'], [(Math.floor(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Both numbers were rounded down. Look at the units digit to decide.'], [(Math.ceil(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Both numbers were rounded up. Look at the units digit to decide.'], [(Math.floor(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.'], [(Math.ceil(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.'], [ra + rb, 'The question is a multiplication, so multiply the rounded numbers.']],
+        wrong: [[round(a * b, 2), 'That is the exact product. An estimate rounds first, then multiplies.', 'M_EXACT_NOT_ESTIMATE'], [(Math.floor(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Both numbers were rounded down. Look at the units digit to decide.', 'M_BOTH_ROUNDED_DOWN'], [(Math.ceil(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Both numbers were rounded up. Look at the units digit to decide.', 'M_BOTH_ROUNDED_UP'], [(Math.floor(a / 10) * 10) * (Math.ceil(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.', 'M_ROUNDING_DIRECTIONS_SWAPPED'], [(Math.ceil(a / 10) * 10) * (Math.floor(b / 10) * 10), 'Each number is rounded by its own units digit, not both the same way.', 'SLIP'], [ra + rb, 'The question is a multiplication, so multiply the rounded numbers.', 'M_ROUNDED_ADDED']],
         hints: ['Round first, then multiply.', `${a} is closest to which ten?`],
         steps: [`${a} rounds to ${ra} and ${b} rounds to ${rb}.`, `${ra} × ${rb} = ${commas(ra * rb)}.`] };
     },
     check: ({ a, b }, v) => Math.abs(v - a * b) < 0.2 * a * b + 200 && v % 100 === 0 }),
-  fx({ id: 'g9.approx.better-measure', skill: 'G9_APPROX_ERRORS', outcome: 'G9.APPROX.c', rung: 3, form: 'why',
+  fx({ id: 'g9.approx.better-measure', skill: 'G9_APPROX_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR', misMapped: false, reveals: ['M_BIGGEST_ERROR_WORST', 'M_UNIT_CHANGES_ERROR', 'M_SMALL_ERROR_ENOUGH'], rung: 3, form: 'why',
     draw: () => { const m1 = pick([50, 100, 200, 250]), e1 = pick([1, 2, 5]), m2 = pick([2, 4, 5, 10]), e2 = pick([100, 200, 500]); const p1 = e1 / m1, p2 = (e2 / 1000) / m2; return p1 !== p2 ? { m1, e1, m2, e2, p1: p1 * 100, p2: p2 * 100 } : null; },
     make: ({ m1, e1, m2, e2, p1, p2 }) => {
       const firstBetter = p1 < p2;

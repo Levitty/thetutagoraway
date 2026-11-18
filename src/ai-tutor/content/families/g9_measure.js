@@ -932,19 +932,19 @@ export const FAMILIES = [
     } }),
 
   // ======================================================== APPROXIMATIONS AND ERRORS
-  fam({ id: 'g9.approx.upper-bound-area', skill: 'G9_ERRORS', outcome: 'G9.APPROX.b', rung: 3, form: 'word',
+  fam({ id: 'g9.approx.upper-bound-area', skill: 'G9_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.b', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS', rung: 3, form: 'word',
     draw: () => ({ l: pick([12, 15, 20, 24]), w: pick([6, 8, 9, 10]), who: person() }),
     make: ({ l, w, who }) => {
       const up = (l + 0.5) * (w + 0.5);
       return { question: `${who.name} measures a vegetable garden. The length is ${l} m and the width is ${w} m. Each is correct to the nearest metre. What is the greatest possible area of the garden, in m²?`,
         answer: up,
-        wrong: [[l * w, 'That uses the measurements as they are. The greatest area comes from the largest possible length and width.'], [(l + 1) * (w + 1), 'Each measurement can be at most half a metre too small, not a whole metre.'], [(l - 0.5) * (w - 0.5), 'That is the smallest possible area. You need the greatest.'], [round(up + 0.5 * 0.5, 2), 'Both the length and the width go up by half a metre. Multiply the two upper bounds.']].filter(w2 => w2[0] !== up),
+        wrong: [[l * w, 'That uses the measurements as they are. The greatest area comes from the largest possible length and width.', 'M_MEASURED_VALUES_USED'], [(l + 1) * (w + 1), 'Each measurement can be at most half a metre too small, not a whole metre.', 'M_WHOLE_STEP_ADDED'], [(l - 0.5) * (w - 0.5), 'That is the smallest possible area. You need the greatest.', 'M_LOWER_FOR_UPPER'], [round(up + 0.5 * 0.5, 2), 'Both the length and the width go up by half a metre. Multiply the two upper bounds.', 'M_HALF_SQUARED_ADDED']].filter(w2 => w2[0] !== up),
         hints: ['A length given to the nearest metre can be up to half a metre more.', 'Use the upper bound of the length and the upper bound of the width.'],
         steps: [`Upper bound of the length: ${l + 0.5} m. Upper bound of the width: ${w + 0.5} m.`, `Greatest area: ${l + 0.5} × ${w + 0.5} = ${T(up)} m².`] };
     },
     check: ({ l, w }, a) => Math.abs(a / (w + 0.5) - (l + 0.5)) < 1e-6 }),
 
-  fam({ id: 'g9.approx.error-table', skill: 'G9_ERRORS', outcome: 'G9.APPROX.c', rung: 3, form: 'table',
+  fam({ id: 'g9.approx.error-table', skill: 'G9_ERRORS', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.c', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR', misMapped: false, reveals: ['M_BIGGEST_ERROR_WORST', 'M_DIVIDE_BY_ESTIMATE'], rung: 3, form: 'table',
     draw: () => {
       const names = ['Sack of maize', 'Bag of sugar', 'Packet of salt', 'Tin of cooking fat'].sort(() => Math.random() - 0.5).slice(0, 3);
       const rows = names.map(n => { const t = pick([1, 2, 5, 10, 50, 90]); const e = pick([0.1, 0.2, 0.5, 1, 2, 4]); return { n, t, m: round(t + pick([-1, 1]) * e, 2), e, pc: (e / t) * 100 }; });
@@ -959,14 +959,14 @@ export const FAMILIES = [
       hints: ['Percentage error = error ÷ true value × 100.', 'Work it out for each row.'],
       steps: rows.map(r => `${r.n}: ${T(r.e)} ÷ ${r.t} × 100 = ${T(round(r.pc, 2))}%.`).concat([`The greatest is ${top.n}.`]) }) }),
 
-  fam({ id: 'g9.approx.estimate-then-check', skill: 'G9_ROUNDING', outcome: 'G9.APPROX.a', rung: 2, form: 'steps',
+  fam({ id: 'g9.approx.estimate-then-check', skill: 'G9_ROUNDING', outcome: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.a', cskill: 'MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE', rung: 2, form: 'steps',
     draw: () => { const n = pick([18, 24, 32, 48, 52, 63, 76]), p = pick([800, 1200, 1400, 1900, 2300, 2500]); const r1 = (x) => { const k = 10 ** (String(Math.abs(x)).length - 1); return Math.round(x / k) * k; }; const est = r1(n) * r1(p), exact = n * p; return est !== exact && distinct(est, exact, Math.abs(est - exact)) ? { n, p, est, exact, a: r1(n), b: r1(p), who: person() } : null; },
     make: ({ n, p, est, exact, a, b, who }) => ({
       question: `A school wants to buy ${n} school bags. Each bag costs ${sh(p)}. ${who.name} estimates the total cost by rounding both numbers to 1 significant figure.`,
       parts: [
-        { prompt: 'The estimate of the total cost, in shillings:', answer: est, unit: 'sh', hint: 'Round the number of bags and the price to 1 significant figure, then multiply.', wrong: [[n * p, 'That is the exact cost. An estimate uses the rounded numbers.'], [a + b, 'Multiply the two rounded numbers.']] },
-        { prompt: 'The exact total cost, in shillings:', answer: exact, unit: 'sh', hint: 'Multiply the real numbers.', wrong: [[est, 'That is the estimate. Use the real numbers.']] },
-        { prompt: 'By how many shillings is the estimate different from the exact cost? (Give the size of the difference.)', answer: Math.abs(est - exact), unit: 'sh', hint: 'Subtract the smaller from the larger.', wrong: [[est + exact, 'The difference comes from subtracting.']] },
+        { prompt: 'The estimate of the total cost, in shillings:', answer: est, unit: 'sh', hint: 'Round the number of bags and the price to 1 significant figure, then multiply.', wrong: [[n * p, 'That is the exact cost. An estimate uses the rounded numbers.', 'M_EXACT_NOT_ESTIMATE'], [a + b, 'Multiply the two rounded numbers.', 'M_ROUNDED_ADDED']] },
+        { prompt: 'The exact total cost, in shillings:', answer: exact, unit: 'sh', hint: 'Multiply the real numbers.', wrong: [[est, 'That is the estimate. Use the real numbers.', 'M_ESTIMATE_FOR_EXACT']] },
+        { prompt: 'By how many shillings is the estimate different from the exact cost? (Give the size of the difference.)', answer: Math.abs(est - exact), unit: 'sh', hint: 'Subtract the smaller from the larger.', wrong: [[est + exact, 'The difference comes from subtracting.', 'M_ERROR_AS_SUM']] },
       ],
       hints: ['Round first, multiply second.'],
       steps: [`${n} rounds to ${a} and ${commas(p)} rounds to ${commas(b)}. ${a} × ${commas(b)} = ${commas(est)}.`, `Exact: ${n} × ${commas(p)} = ${commas(exact)}.`, `Difference: ${commas(Math.abs(est - exact))}.`] }),

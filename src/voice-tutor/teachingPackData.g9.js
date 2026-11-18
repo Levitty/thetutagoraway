@@ -11807,6 +11807,652 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.MEASUR.MONEY",
   "sub_strand_name": "Money",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE": {
+  "skill": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE",
+  "key_step": "The child rounds each number by looking at its own next digit, writes the rounded calculation, and works that out.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest ten.",
+   "question": "47.3 to the nearest ten",
+   "answer": "50"
+  },
+  "representations": [
+   "a number line between two tens",
+   "the rounded sum written out",
+   "a check against the exact answer"
+  ],
+  "steps": [
+   "Round each number on its own.",
+   "Write the rounded calculation.",
+   "Work it out.",
+   "Use it to check the exact answer."
+  ],
+  "contexts": [
+   "school bags for a class",
+   "cement bags for a building",
+   "a market trader's takings"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line from 40 to 50 and mark 47.3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 47.3.",
+    "say": "Which ten is it nearer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 50."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 50 x 60 = 3,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE.M_EXACT_NOT_ESTIMATE",
+    "listen_for": [
+     "2,960.98"
+    ],
+    "ask": "Was an estimate asked?",
+    "repair": "Round first.",
+    "error": "Works out the exact answer when an estimate is asked.",
+    "example": {
+     "question": "Estimate 47.3 x 62.6 to the nearest ten.",
+     "wrong_answer": "2,960.98",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE.M_BOTH_ROUNDED_DOWN",
+    "listen_for": [
+     "2,400"
+    ],
+    "ask": "Is 47.3 nearer 40 or 50?",
+    "repair": "50.",
+    "error": "Rounds every number down.",
+    "example": {
+     "question": "Estimate 47.3 x 62.6 to the nearest ten.",
+     "wrong_answer": "2,400 (40 x 60)",
+     "correct_answer": "3,000 (50 x 60)"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE.M_BOTH_ROUNDED_UP",
+    "listen_for": [
+     "3,500"
+    ],
+    "ask": "Is 42.3 nearer 40 or 50?",
+    "repair": "40.",
+    "error": "Rounds every number up.",
+    "example": {
+     "question": "Estimate 42.3 x 63.6 to the nearest ten.",
+     "wrong_answer": "3,500 (50 x 70)",
+     "correct_answer": "2,400 (40 x 60)"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE.M_ROUNDING_DIRECTIONS_SWAPPED",
+    "listen_for": [
+     "2,800"
+    ],
+    "ask": "Look at each units digit on its own.",
+    "repair": "47.3 up, 62.6 down.",
+    "error": "Rounds one number the wrong way.",
+    "example": {
+     "question": "Estimate 47.3 x 62.6.",
+     "wrong_answer": "2,800 (40 x 70)",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE.M_ROUNDED_ADDED",
+    "listen_for": [
+     "110"
+    ],
+    "ask": "Is the question a product?",
+    "repair": "Yes: multiply.",
+    "error": "Adds the rounded numbers in a product.",
+    "example": {
+     "question": "Estimate 47.3 x 62.6.",
+     "wrong_answer": "110",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE.M_ESTIMATE_FOR_EXACT",
+    "listen_for": [
+     "10,000"
+    ],
+    "ask": "Is that exact?",
+    "repair": "Use 48 and 235.",
+    "error": "Gives the estimate when the exact answer is asked.",
+    "example": {
+     "question": "48 bags at 235 shillings: exact cost?",
+     "wrong_answer": "10,000",
+     "correct_answer": "11,280"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 38.6 x 71.2 by rounding to the nearest ten.",
+    "answer": "2,800",
+    "shows": "round then multiply"
+   },
+   {
+    "question": "Estimate 412 x 29 to 1 significant figure.",
+    "answer": "12,000",
+    "shows": "significant figures"
+   }
+  ],
+  "name": "Approximate quantities by rounding before calculating",
+  "sub_strand": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
+  "sub_strand_name": "Approximations and Errors",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE": {
+  "skill": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE",
+  "key_step": "The child subtracts the smaller from the larger and then says which one was bigger.",
+  "floor": {
+   "prerequisite": "Subtracts large numbers.",
+   "question": "11,280 - 10,000",
+   "answer": "1,280"
+  },
+  "representations": [
+   "a number line with both values",
+   "a table estimate, exact, error",
+   "words: too big, too small"
+  ],
+  "steps": [
+   "Write the estimate and the exact value.",
+   "Larger minus smaller.",
+   "That is the error.",
+   "Say if the estimate was too big or too small."
+  ],
+  "contexts": [
+   "estimating the cost of bags",
+   "guessing the mass of a sack",
+   "estimating a crowd at a match"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line with 10,000 and 11,280."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the gap.",
+    "say": "How far apart are they?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 1,280."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write error 1,280; the estimate was too small."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE.M_ERROR_AS_SUM",
+    "listen_for": [
+     "21,280"
+    ],
+    "ask": "Is the error the total or the gap?",
+    "repair": "The gap.",
+    "error": "Adds the estimate and the exact value to get the error.",
+    "example": {
+     "question": "Estimate 10,000, exact 11,280. Error?",
+     "wrong_answer": "21,280",
+     "correct_answer": "1,280"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE.M_ERROR_NEGATIVE",
+    "listen_for": [
+     "-1,280"
+    ],
+    "ask": "Can a gap be negative?",
+    "repair": "No: 1,280.",
+    "error": "Gives the error as a negative number.",
+    "example": {
+     "question": "Estimate 10,000, exact 11,280. Error?",
+     "wrong_answer": "-1,280",
+     "correct_answer": "1,280"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE.M_ESTIMATE_GIVEN_AS_ERROR",
+    "listen_for": [
+     "10,000"
+    ],
+    "ask": "Is 10,000 the gap?",
+    "repair": "No: subtract.",
+    "error": "Gives the estimate as the error.",
+    "example": {
+     "question": "Estimate 10,000, exact 11,280. Error?",
+     "wrong_answer": "10,000",
+     "correct_answer": "1,280"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE.M_TOO_BIG_TOO_SMALL_SWAPPED",
+    "listen_for": [
+     "too big"
+    ],
+    "ask": "Which is bigger, 10,000 or 11,280?",
+    "repair": "11,280: the estimate was small.",
+    "error": "Says an estimate below the exact value is too big.",
+    "example": {
+     "question": "Estimate 10,000, exact 11,280. Too big or too small?",
+     "wrong_answer": "too big",
+     "correct_answer": "too small"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Estimate 6,000; exact 5,742. Error?",
+    "answer": "258",
+    "shows": "difference"
+   },
+   {
+    "question": "Was the estimate too big or too small?",
+    "answer": "too big",
+    "shows": "direction"
+   }
+  ],
+  "name": "Determine the error between an estimate and an actual measurement",
+  "sub_strand": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
+  "sub_strand_name": "Approximations and Errors",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR": {
+  "skill": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR",
+  "key_step": "The child finds the measuring step and halves it.",
+  "floor": {
+   "prerequisite": "Rounds to the nearest unit.",
+   "question": "23.4 to the nearest whole",
+   "answer": "23"
+  },
+  "representations": [
+   "a ruler with marks",
+   "a number line between two marks",
+   "half the step"
+  ],
+  "steps": [
+   "Find the measuring step.",
+   "The true value is nearest that mark.",
+   "At most half a step away.",
+   "Give the unit."
+  ],
+  "contexts": [
+   "a plank in a timber yard",
+   "a school field measured to 10 m",
+   "flour weighed to 100 g"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two marks 10 m apart with a reading of 340 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point between the marks.",
+    "say": "How far from 340 could the true length be and still round to 340?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5 m."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write greatest error = 10 / 2 = 5 m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR.M_WHOLE_STEP_ERROR",
+    "listen_for": [
+     "10 m"
+    ],
+    "ask": "Would 350 round to 340?",
+    "repair": "No: at most 5 away.",
+    "error": "Gives the whole measuring step as the greatest error.",
+    "example": {
+     "question": "Measured to the nearest 10 m. Greatest error?",
+     "wrong_answer": "10 m",
+     "correct_answer": "5 m"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR.M_HALF_THE_READING",
+    "listen_for": [
+     "170"
+    ],
+    "ask": "Does the error grow with the reading?",
+    "repair": "No: it is half the step.",
+    "error": "Halves the reading instead of the step.",
+    "example": {
+     "question": "A field 340 m to the nearest 10 m. Greatest error?",
+     "wrong_answer": "170 m",
+     "correct_answer": "5 m"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR.M_QUARTER_STEP",
+    "listen_for": [
+     "25 g"
+    ],
+    "ask": "Half or a quarter of the step?",
+    "repair": "Half.",
+    "error": "Takes a quarter of the step.",
+    "example": {
+     "question": "To the nearest 100 g. Greatest error?",
+     "wrong_answer": "25 g",
+     "correct_answer": "50 g"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR.M_ERROR_IN_WRONG_UNIT",
+    "listen_for": [
+     "0.005"
+    ],
+    "ask": "Which unit was asked?",
+    "repair": "cm: 0.5.",
+    "error": "Gives the error in a different unit from the reading.",
+    "example": {
+     "question": "Measured to the nearest cm. Greatest error in cm?",
+     "wrong_answer": "0.005",
+     "correct_answer": "0.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A sack is weighed to the nearest kg as 50 kg. Greatest error?",
+    "answer": "0.5 kg",
+    "shows": "half the step"
+   },
+   {
+    "question": "A road is 2.4 km to the nearest 0.1 km. Greatest error?",
+    "answer": "0.05 km",
+    "shows": "half the step"
+   }
+  ],
+  "name": "Find the greatest possible error of a measurement",
+  "sub_strand": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
+  "sub_strand_name": "Approximations and Errors",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS": {
+  "skill": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS",
+  "key_step": "The child writes each measurement's lower and upper bound first, then multiplies the bounds asked for.",
+  "floor": {
+   "prerequisite": "Finds the greatest possible error.",
+   "question": "To the nearest metre",
+   "answer": "0.5 m"
+  },
+  "representations": [
+   "a number line from lower to upper bound",
+   "a rectangle with bounds on each side",
+   "a table"
+  ],
+  "steps": [
+   "Lower bound = reading - half the step.",
+   "Upper bound = reading + half the step.",
+   "Greatest area: upper x upper.",
+   "Smallest area: lower x lower."
+  ],
+  "contexts": [
+   "a vegetable garden",
+   "a classroom floor for tiles",
+   "a plot for a house"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle 12 m by 8 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 12 m.",
+    "say": "What is the most it could really be?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 12.5."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 12.5 x 8.5 = 106.25."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS.M_MEASURED_VALUES_USED",
+    "listen_for": [
+     "96"
+    ],
+    "ask": "Could the sides be a little longer?",
+    "repair": "Yes: use the upper bounds.",
+    "error": "Uses the measured values for the greatest area.",
+    "example": {
+     "question": "12 m by 8 m, each to the nearest m. Greatest area?",
+     "wrong_answer": "96",
+     "correct_answer": "106.25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS.M_WHOLE_STEP_ADDED",
+    "listen_for": [
+     "117"
+    ],
+    "ask": "Could 12 m really be 13 m?",
+    "repair": "No: at most 12.5.",
+    "error": "Adds a whole step to each measurement.",
+    "example": {
+     "question": "12 m by 8 m to the nearest m. Greatest area?",
+     "wrong_answer": "117 (13 x 9)",
+     "correct_answer": "106.25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS.M_LOWER_FOR_UPPER",
+    "listen_for": [
+     "86.25"
+    ],
+    "ask": "Greatest or smallest?",
+    "repair": "Greatest: upper bounds.",
+    "error": "Uses the lower bounds when the greatest value is asked.",
+    "example": {
+     "question": "12 m by 8 m to the nearest m. Greatest area?",
+     "wrong_answer": "86.25 (11.5 x 7.5)",
+     "correct_answer": "106.25"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS.M_HALF_SQUARED_ADDED",
+    "listen_for": [
+     "96.25"
+    ],
+    "ask": "Does each side grow by 0.5?",
+    "repair": "Yes: 12.5 x 8.5.",
+    "error": "Adds 0.5 x 0.5 to the measured area.",
+    "example": {
+     "question": "12 m by 8 m. Greatest area?",
+     "wrong_answer": "96.25",
+     "correct_answer": "106.25"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A plot is 20 m by 15 m, each to the nearest metre. Greatest possible area?",
+    "answer": "318.75 square m",
+    "shows": "upper bounds"
+   },
+   {
+    "question": "Smallest possible area of that plot?",
+    "answer": "281.75 square m",
+    "shows": "lower bounds"
+   }
+  ],
+  "name": "Find the smallest and largest possible values of a measurement and of an area",
+  "sub_strand": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
+  "sub_strand_name": "Approximations and Errors",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR": {
+  "skill": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR",
+  "key_step": "The child finds the error, divides by the actual value (not the estimate), and multiplies by 100.",
+  "floor": {
+   "prerequisite": "Writes one amount as a percentage of another.",
+   "question": "4 out of 80",
+   "answer": "5%"
+  },
+  "representations": [
+   "a table: actual, measured, error, percentage",
+   "error / actual x 100",
+   "a bar comparing two errors"
+  ],
+  "steps": [
+   "Error = difference.",
+   "Divide by the actual value.",
+   "Times 100.",
+   "Smaller percentage is the better measurement."
+  ],
+  "contexts": [
+   "a trader guessing the mass of maize",
+   "a shopkeeper's scale",
+   "two learners weighing a sack and a packet"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write actual 80 kg, estimate 84 kg."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 84 and 80.",
+    "say": "What is the error?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 4 / 80 x 100 = 5%."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR.M_DIVIDE_BY_ESTIMATE",
+    "listen_for": [
+     "4.8"
+    ],
+    "ask": "Which is the true value?",
+    "repair": "80: divide by it.",
+    "error": "Divides the error by the estimate instead of the actual value.",
+    "example": {
+     "question": "Actual 80 kg, estimate 84 kg. Percentage error?",
+     "wrong_answer": "4.8",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR.M_ERROR_NOT_PERCENT",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Is 4 a percentage?",
+    "repair": "It is kg: divide by 80.",
+    "error": "Gives the error itself as the percentage error.",
+    "example": {
+     "question": "Actual 80 kg, estimate 84 kg. Percentage error?",
+     "wrong_answer": "4",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR.M_ESTIMATE_OVER_ACTUAL",
+    "listen_for": [
+     "105"
+    ],
+    "ask": "Did you find the error first?",
+    "repair": "84 - 80 = 4.",
+    "error": "Writes the estimate as a percentage of the actual value.",
+    "example": {
+     "question": "Actual 80, estimate 84. Percentage error?",
+     "wrong_answer": "105",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR.M_BIGGEST_ERROR_WORST",
+    "listen_for": [
+     "the sack"
+    ],
+    "ask": "What is each error as a percentage?",
+    "repair": "1% and 10%.",
+    "error": "Takes the biggest error in units as the worst measurement.",
+    "example": {
+     "question": "A sack 200 kg off by 2 kg; a packet 2 kg off by 0.2 kg. Worse?",
+     "wrong_answer": "the sack",
+     "correct_answer": "the packet (10% against 1%)"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR.M_UNIT_CHANGES_ERROR",
+    "listen_for": [
+     "0.2 kg is smaller"
+    ],
+    "ask": "Is 200 g the same mass as 0.2 kg?",
+    "repair": "Yes.",
+    "error": "Thinks writing an error in a smaller unit makes it smaller.",
+    "example": {
+     "question": "An error of 200 g or 0.2 kg: which is smaller?",
+     "wrong_answer": "0.2 kg",
+     "correct_answer": "They are the same"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR.M_SMALL_ERROR_ENOUGH",
+    "listen_for": [
+     "1 kg is small"
+    ],
+    "ask": "Is 1 kg small for a packet of sugar?",
+    "repair": "No: compare with the size.",
+    "error": "Thinks any small error makes a measurement good, whatever was measured.",
+    "example": {
+     "question": "An error of 1 kg: good or bad?",
+     "wrong_answer": "Good, 1 kg is small",
+     "correct_answer": "It depends on what was weighed"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "True length 250 cm, measured 240 cm. Percentage error?",
+    "answer": "4%",
+    "shows": "error over actual"
+   },
+   {
+    "question": "A: 100 kg off by 2 kg. B: 5 kg off by 0.5 kg. Which is better?",
+    "answer": "A (2% against 10%)",
+    "shows": "compare percentages"
+   }
+  ],
+  "name": "Determine percentage error using actual measurements",
+  "sub_strand": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
+  "sub_strand_name": "Approximations and Errors",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

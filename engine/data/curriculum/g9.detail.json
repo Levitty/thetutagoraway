@@ -849,6 +849,51 @@
     "which items carry VAT"
    ],
    "mastery": "The child finds VAT at 16% of the price before VAT, adds only the items that carry VAT on a bill, and works back from a price with VAT included by dividing by 1.16 (the VAT inside 2,320 shillings is 320, not 16% of 2,320)."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.APPROX_ESTIMATE": {
+   "forms": [
+    "estimate by rounding",
+    "round to 1 significant figure",
+    "is the answer sensible",
+    "complete the steps"
+   ],
+   "mastery": "The child rounds each number by its own digit (to the nearest ten, or to 1 significant figure) before working out, gives the estimate as the answer, and uses it to check an exact answer: 47.3 x 62.6 is about 50 x 60 = 3,000."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.ERROR_FROM_ESTIMATE": {
+   "forms": [
+    "what is the error",
+    "how far out",
+    "too big or too small",
+    "difference"
+   ],
+   "mastery": "The child finds the error as the difference between the estimate (or measured value) and the actual value, always positive, and says whether the estimate was too big or too small: estimate 12,000, exact 11,280, error 720."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.GREATEST_POSSIBLE_ERROR": {
+   "forms": [
+    "greatest possible error",
+    "measured to the nearest",
+    "how far out can it be",
+    "half the step"
+   ],
+   "mastery": "The child says a reading to the nearest unit of the measuring step can be out by at most half that step (to the nearest 10 m: 5 m), whatever the size of the reading."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.MEASUREMENT_BOUNDS": {
+   "forms": [
+    "greatest possible area",
+    "upper bound",
+    "lower bound",
+    "smallest possible length"
+   ],
+   "mastery": "The child gives the lower and upper bounds of a measurement (reading minus and plus half the step: 12 m to the nearest metre lies from 11.5 m to 12.5 m), and finds the greatest possible area by multiplying the two upper bounds."
+  },
+  "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR.PERCENTAGE_ERROR": {
+   "forms": [
+    "percentage error",
+    "which measurement is better",
+    "greatest percentage error",
+    "from the table"
+   ],
+   "mastery": "The child finds percentage error as error over the actual value times 100 (a bag of 80 kg estimated at 84 kg: 4 / 80 x 100 = 5%), and compares two measurements by their percentage errors, not by the size of the error alone or its unit."
   }
  }
 }
