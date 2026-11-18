@@ -1,0 +1,362 @@
+{
+ "sub_strand": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS",
+ "title": "Wind Musical Instruments (Drawing)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring a whistle, a flute or a bottle to blow across. Community names are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY",
+   "key_step": "The child names Kenyan wind instruments (such as the bung'o, the nzumari and the abu horn) and says they are blown.",
+   "floor": {
+    "prerequisite": "Sorts instruments by how they are played (Grade 4).",
+    "question": "How is a drum played?",
+    "answer": "it is hit"
+   },
+   "representations": [
+    "picture cards",
+    "a whistle and a bottle",
+    "three columns: hit, plucked, blown"
+   ],
+   "steps": [
+    "Ask how the sound is made.",
+    "Blown means wind.",
+    "Name the community."
+   ],
+   "contexts": [
+    "a cultural festival",
+    "a horn at a celebration"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a horn and a nyatiti.",
+     "say": "Which is wind?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the horn."
+    },
+    {
+     "beat": "predict",
+     "do": "How is it played?"
+    },
+    {
+     "beat": "reveal",
+     "do": "It is blown."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_STRING_AS_WIND",
+     "listen_for": [
+      "The nyatiti"
+     ],
+     "ask": "Which of these is a wind instrument?",
+     "repair": "Ask: what do you do to make the sound? Blow, pluck, or hit? Sort five instruments by that one question."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_DRUM_AS_WIND",
+     "listen_for": [
+      "The ngoma drum"
+     ],
+     "ask": "Which of these is a wind instrument?",
+     "repair": "Ask who makes the sound happen: the player's breath, or the player's hand on a skin?"
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_PLAY_PLUCK",
+     "listen_for": [
+      "By plucking its strings"
+     ],
+     "ask": "How is the nzumari played?",
+     "repair": "Sort pictures into blow, pluck and hit, then ask again."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY.M_WI_COMMUNITY_MIX",
+     "listen_for": [
+      "The Luo of Nyanza"
+     ],
+     "ask": "The nzumari is a wind instrument played mainly by which people?",
+     "repair": "Use a map of Kenya: find the coast and say which instruments come from there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How are wind instruments played?",
+     "answer": "by blowing",
+     "shows": "meaning"
+    },
+    {
+     "question": "Is the orutu a wind instrument?",
+     "answer": "No, it is a string instrument",
+     "shows": "sorting"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS",
+   "key_step": "The child says the air column vibrates to make the sound, the mouthpiece directs the breath, and covering holes makes the air column longer and the note lower.",
+   "floor": {
+    "prerequisite": "Knows sound comes from vibration.",
+    "question": "What makes a drum sound?",
+    "answer": "the skin vibrating"
+   },
+   "representations": [
+    "a bottle to blow across",
+    "a whistle",
+    "a recorder with holes"
+   ],
+   "steps": [
+    "Blow into the mouthpiece.",
+    "The air inside vibrates.",
+    "Cover more holes: longer air column, lower note."
+   ],
+   "contexts": [
+    "making a bottle flute",
+    "playing a recorder"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Cover one more hole.",
+     "say": "Higher or lower?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for lower."
+    },
+    {
+     "beat": "reveal",
+     "do": "Play it: lower."
+    },
+    {
+     "beat": "write",
+     "do": "Write each part and its job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_WOOD_SINGS",
+     "listen_for": [
+      "The wood of the instrument"
+     ],
+     "ask": "What vibrates to make the sound in a wind instrument?",
+     "repair": "Block the end of a pipe with a finger and blow: no sound. The air inside is the singer."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_MORE_HOLES_HIGHER",
+     "listen_for": [
+      "It gets higher"
+     ],
+     "ask": "A player covers more finger holes. What happens to the sound?",
+     "repair": "Cover holes one by one on a bottle-top whistle or recorder and listen to each step go lower."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_MOUTHPIECE_OUT",
+     "listen_for": [
+      "The open end at the bottom"
+     ],
+     "ask": "Which part of a wind instrument does the player blow into?",
+     "repair": "Point to where the air goes in and where the sound goes out, using a flute or straw."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS.M_WI_HOLES_FOR_AIR",
+     "listen_for": [
+      "They let the air out so the player can breathe"
+     ],
+     "ask": "What do the finger holes of a flute do?",
+     "repair": "Play three notes by covering holes in turn and ask what changed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What vibrates inside a wind instrument?",
+     "answer": "the air",
+     "shows": "air column"
+    },
+    {
+     "question": "Covering more holes makes the note higher or lower?",
+     "answer": "lower",
+     "shows": "pitch"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE",
+   "key_step": "The child cares for a wind instrument: rinse mouth first, no sharing, wipe and dry it, store it dry in a case.",
+   "floor": {
+    "prerequisite": "Cares for a recorder (Grade 4).",
+    "question": "Where is a recorder kept?",
+    "answer": "in its case"
+   },
+   "representations": [
+    "a wind instrument",
+    "a soft cloth",
+    "a care chart"
+   ],
+   "steps": [
+    "Rinse your mouth before playing.",
+    "Wipe and dry after.",
+    "Store dry, in a case."
+   ],
+   "contexts": [
+    "after a music lesson",
+    "during a long holiday"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The flute is stored wet in a bag.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it goes mouldy or cracks\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Dry it first."
+    },
+    {
+     "beat": "write",
+     "do": "Write three care steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_WI_SHARE_UNCLEANED",
+     "listen_for": [
+      "Zawadi hands it over at once"
+     ],
+     "ask": "Zawadi has just played the flute. Wanjiru wants a turn. What should happen first?",
+     "repair": "Link to sharing a cup: germs travel by mouth."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_WI_STORE_DAMP",
+     "listen_for": [
+      "In a wet cloth so it stays fresh"
+     ],
+     "ask": "Where should a wooden flute be kept after use?",
+     "repair": "Show a damp wooden stick with mould beside a dry one."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_WI_ROUGH_HANDLING",
+     "listen_for": [
+      "Yes, wood is strong"
+     ],
+     "ask": "Baraka taps the flute on the desk to the beat. Is this good care?",
+     "repair": "Ask what happens to a clay pot or a gourd when it is knocked."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE.M_CA5_WI_BLOW_FOOD",
+     "listen_for": [
+      "play it straight away"
+     ],
+     "ask": "You have just eaten mandazi. What should you do before playing your flute?",
+     "repair": "Show crumbs on a mouthpiece; they block and dirty it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should players not share a mouthpiece?",
+     "answer": "germs pass from one mouth to another",
+     "shows": "hygiene"
+    },
+    {
+     "question": "How should a wind instrument be stored?",
+     "answer": "dry, in a case",
+     "shows": "storage"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING",
+   "key_step": "The child orders crayon etching (bright layer, dark top layer, scratch the drawing) and says cross-hatching crosses lines to make dark areas.",
+   "floor": {
+    "prerequisite": "Shades with charcoal (Grade 4).",
+    "question": "How do you make a charcoal area darker?",
+    "answer": "press harder"
+   },
+   "representations": [
+    "crayons",
+    "a scratching tool",
+    "a sample etching"
+   ],
+   "steps": [
+    "Colour bright crayon all over.",
+    "Cover with dark crayon.",
+    "Scratch the drawing through.",
+    "Cross-hatch for dark parts."
+   ],
+   "contexts": [
+    "drawing a wind instrument",
+    "a festival poster"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"scratch\".",
+     "say": "What must come before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the dark layer."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_WI_HATCH_ONE_DIRECTION",
+     "listen_for": [
+      "Lines drawn side by side in one direction"
+     ],
+     "ask": "What is cross-hatching?",
+     "repair": "Draw one set of lines, then add a second set across it, and compare the dark."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_WI_ETCH_DRAW_ON",
+     "listen_for": [
+      "Draw it on top with a pen"
+     ],
+     "ask": "How do you make the picture in crayon etching?",
+     "repair": "Show a scratched dark layer with bright colour underneath."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_WI_ETCH_ORDER",
+     "listen_for": [
+      "The dark crayon"
+     ],
+     "ask": "What goes on the paper first in crayon etching?",
+     "repair": "Ask: what do we want to see after we scratch? It must already be there."
+    },
+    {
+     "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING.M_CA5_WI_ETCH_LIGHT_TOP",
+     "listen_for": [
+      "a light colour"
+     ],
+     "ask": "Which colour goes on top in crayon etching?",
+     "repair": "Scratch a dark top over bright colours and a light top over bright colours; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which layer goes first in crayon etching?",
+     "answer": "bright colours",
+     "shows": "order"
+    },
+    {
+     "question": "What is cross-hatching?",
+     "answer": "lines crossing each other to make a darker area",
+     "shows": "hatching"
+    }
+   ]
+  }
+ ]
+}

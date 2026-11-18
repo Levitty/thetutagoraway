@@ -1,0 +1,274 @@
+{
+ "sub_strand": "CREA.G5.PERFOR.FABRIC_DECORATION",
+ "title": "Fabric Decoration",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dyeing uses gloves and an adult for hot water. Questions ask for names, order and reasons.",
+ "skills": [
+  {
+   "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES",
+   "key_step": "The child names fabric decoration techniques: tie and dye (tying then dyeing), appliqué (sewing shapes on), and printing.",
+   "floor": {
+    "prerequisite": "Arranges cut pieces into a picture.",
+    "question": "What is a montage?",
+    "answer": "many pictures pasted together on a theme"
+   },
+   "representations": [
+    "decorated fabric samples",
+    "picture cards",
+    "labels"
+   ],
+   "steps": [
+    "Look for tied rings or lines.",
+    "Look for shapes sewn on.",
+    "Look for stamped patterns."
+   ],
+   "contexts": [
+    "a school uniform badge",
+    "a cultural day outfit"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a cloth with sewn-on shapes.",
+     "say": "Which technique?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for appliqué."
+    },
+    {
+     "beat": "reveal",
+     "do": "Appliqué."
+    },
+    {
+     "beat": "write",
+     "do": "Write each technique and its sign."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_TD_APPLIQUE_SWAP",
+     "listen_for": [
+      "Tie and dye"
+     ],
+     "ask": "Which technique sews cut shapes of cloth onto another cloth?",
+     "repair": "Show a sample of each."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_APPLIQUE_PAINT",
+     "listen_for": [
+      "Painting a pattern on cloth"
+     ],
+     "ask": "What is appliqué?",
+     "repair": "Hold up a painted cloth and an appliqué cloth."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_FD_TIE_DYE_WAX",
+     "listen_for": [
+      "Batik"
+     ],
+     "ask": "Which technique uses tying to keep dye out?",
+     "repair": "Show a tied cloth and a wax cloth."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES.M_CA5_FD_PRINT_IS_DYE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A pattern is stamped on cloth with a block. Is it tie and dye?",
+     "repair": "Show a tie-dye cloth and a printed one side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which technique sews shapes onto cloth?",
+     "answer": "appliqué",
+     "shows": "naming"
+    },
+    {
+     "question": "Which technique ties the cloth before dyeing?",
+     "answer": "tie and dye",
+     "shows": "naming"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE",
+   "key_step": "The child orders tie and dye: wash, tie tightly, dye, fix with salt, rinse, untie and dry, and says tied parts stay light.",
+   "floor": {
+    "prerequisite": "Knows light and dark values.",
+    "question": "What colour is a part the dye cannot reach?",
+    "answer": "light, the cloth's own colour"
+   },
+   "representations": [
+    "white cotton",
+    "string and rubber bands",
+    "dye and salt (with an adult)"
+   ],
+   "steps": [
+    "Wash and wet the cloth.",
+    "Tie tightly.",
+    "Dye, add salt to fix.",
+    "Rinse, untie, dry."
+   ],
+   "contexts": [
+    "making a class banner",
+    "decorating a T-shirt"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"untie\".",
+     "say": "What must come before it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for rinse."
+    },
+    {
+     "beat": "write",
+     "do": "Number them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_FD_TD_UNTIE_FIRST",
+     "listen_for": [
+      "Before dyeing"
+     ],
+     "ask": "When is the cloth untied in tie and dye?",
+     "repair": "Untie too early on a sample."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_FD_TD_TIED_DARK",
+     "listen_for": [
+      "The darkest dye colour"
+     ],
+     "ask": "What colour are the tied parts after dyeing?",
+     "repair": "Dye a tied sample and open it."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_FD_TD_NO_FIXER",
+     "listen_for": [
+      "It is not needed"
+     ],
+     "ask": "Why is a fastener such as salt used?",
+     "repair": "Wash a fixed and an unfixed sample."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE.M_CA5_FD_TD_DRY_CLOTH",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "What do you do to the cloth before dyeing it?",
+     "repair": "Dye a washed and an unwashed strip."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why do tied parts stay light?",
+     "answer": "the dye cannot reach them",
+     "shows": "resist"
+    },
+    {
+     "question": "What is salt used for in dyeing?",
+     "answer": "to fix the dye",
+     "shows": "fixing"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE",
+   "key_step": "The child describes appliqué: draw and cut shapes from contrasting cloth, pin them, sew round the edges.",
+   "floor": {
+    "prerequisite": "Prepares materials for a collage (Grade 3).",
+    "question": "What do you need for a collage?",
+    "answer": "pieces of material, glue and a base"
+   },
+   "representations": [
+    "cloth scraps",
+    "pins, needle and thread",
+    "a sample"
+   ],
+   "steps": [
+    "Draw and cut the shapes.",
+    "Pin them onto the background.",
+    "Sew round the edges."
+   ],
+   "contexts": [
+    "a cushion cover",
+    "a classroom banner"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Shapes sewn without pins.",
+     "say": "What happens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they move\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Pin first."
+    },
+    {
+     "beat": "write",
+     "do": "Write the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_FD_APP_CUT_BACKGROUND",
+     "listen_for": [
+      "Shapes are cut out of it"
+     ],
+     "ask": "What happens to the background cloth in appliqué?",
+     "repair": "Show a finished appliqué from the back."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_FD_APP_LOOSE",
+     "listen_for": [
+      "They stay loose"
+     ],
+     "ask": "How are the shapes held on?",
+     "repair": "Shake a loose and a stitched sample."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_FD_APP_NO_PIN",
+     "listen_for": [
+      "Nothing, start sewing"
+     ],
+     "ask": "What should be done before sewing the shapes?",
+     "repair": "Sew with and without pinning."
+    },
+    {
+     "code": "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE.M_CA5_FD_APP_SAME_COLOUR",
+     "listen_for": [
+      "it does not matter"
+     ],
+     "ask": "Why choose a different colour for appliqué pieces?",
+     "repair": "Pin a same-colour shape and a contrasting one; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What holds the shapes in place before sewing?",
+     "answer": "pins",
+     "shows": "pinning"
+    },
+    {
+     "question": "Is appliqué glued or sewn?",
+     "answer": "sewn",
+     "shows": "method"
+    }
+   ]
+  }
+ ]
+}

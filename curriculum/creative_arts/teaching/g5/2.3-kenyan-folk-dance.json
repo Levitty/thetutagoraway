@@ -1,0 +1,362 @@
+{
+ "sub_strand": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE",
+ "title": "Kenyan Folk Dance",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Dances belong to communities: speak about each with respect. Community facts are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND",
+   "key_step": "The child gives the background of a folk dance: the community, the occasion and what it means.",
+   "floor": {
+    "prerequisite": "Names aspects of traditional culture.",
+    "question": "Name one aspect.",
+    "answer": "any of: songs, dances, dress, food"
+   },
+   "representations": [
+    "descriptions of dances",
+    "a map of Kenya",
+    "pictures"
+   ],
+   "steps": [
+    "Name the community.",
+    "Name the occasion.",
+    "Say what it means."
+   ],
+   "contexts": [
+    "a music festival",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Read a dance description.",
+     "say": "Which community?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "predict",
+     "do": "What occasion is it for?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Read on to check."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_COMMUNITY_MIX",
+     "listen_for": [
+      "The Maasai"
+     ],
+     "ask": "The isukuti is a dance of which community?",
+     "repair": "Place each dance on a map of Kenya."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_SOLOIST_CHORUS_SWAP",
+     "listen_for": [
+      "The chorus"
+     ],
+     "ask": "Who leads the song in a call-and-response dance?",
+     "repair": "Perform a call-and-response song."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_FN_OCCASION_SAME",
+     "listen_for": [
+      "Only funerals"
+     ],
+     "ask": "Chakacha is danced mostly at which occasion?",
+     "repair": "List an occasion for each dance."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND.M_CA5_FN_DANCE_NEW",
+     "listen_for": [
+      "a dancer made it up last year"
+     ],
+     "ask": "Where does a Kenyan folk dance come from?",
+     "repair": "Ask an elder or read where the dance comes from."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What three things make up the background of a folk dance?",
+     "answer": "the community, the occasion, the meaning",
+     "shows": "background"
+    },
+    {
+     "question": "Is a folk dance new or passed down?",
+     "answer": "passed down",
+     "shows": "origin"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS",
+   "key_step": "The child names the components: costume, ornaments, props, instruments, formation, soloist and chorus.",
+   "floor": {
+    "prerequisite": "Names parts of a folk song performance (Grade 4).",
+    "question": "Who leads in a folk song?",
+    "answer": "the soloist"
+   },
+   "representations": [
+    "component cards",
+    "pictures",
+    "a class dance"
+   ],
+   "steps": [
+    "Look at the dress: costume and ornaments.",
+    "Look at what is held: props.",
+    "Look at how they stand: formation."
+   ],
+   "contexts": [
+    "a music festival",
+    "a wedding dance"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Dancers stand in a circle.",
+     "say": "Which component?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for formation."
+    },
+    {
+     "beat": "reveal",
+     "do": "Formation."
+    },
+    {
+     "beat": "write",
+     "do": "Write each component."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_FN_ORNAMENT_COSTUME",
+     "listen_for": [
+      "Costume"
+     ],
+     "ask": "Beads worn on the neck are which component?",
+     "repair": "Sort pictures into clothes and beads."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_FN_PROP_INSTRUMENT",
+     "listen_for": [
+      "Props"
+     ],
+     "ask": "A drum belongs to which component?",
+     "repair": "Sort items into those that make music and those that are carried."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_FN_FORMATION_WORN",
+     "listen_for": [
+      "A costume worn by dancers"
+     ],
+     "ask": "What is a formation in a dance?",
+     "repair": "Ask the class to stand in a circle and a line."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS.M_CA5_FN_COSTUME_DAILY",
+     "listen_for": [
+      "school uniform"
+     ],
+     "ask": "What is a costume in a folk dance?",
+     "repair": "Show pictures of dance costumes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a formation?",
+     "answer": "the pattern dancers stand or move in",
+     "shows": "formation"
+    },
+    {
+     "question": "Is a fly whisk a prop or a costume?",
+     "answer": "a prop",
+     "shows": "props"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES",
+   "key_step": "The child explains roles of folk dance: celebrating, teaching values, passing on history, uniting people, and entertaining.",
+   "floor": {
+    "prerequisite": "Names song types by occasion (Grade 4).",
+    "question": "When is a lullaby sung?",
+    "answer": "to put a baby to sleep"
+   },
+   "representations": [
+    "occasion cards",
+    "a roles chart",
+    "a story"
+   ],
+   "steps": [
+    "Name the occasion.",
+    "Say what the dance does there.",
+    "Name the role."
+   ],
+   "contexts": [
+    "a harvest celebration",
+    "a wedding"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A dance at a wedding.",
+     "say": "What role?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for celebrating."
+    },
+    {
+     "beat": "reveal",
+     "do": "Celebrating and uniting."
+    },
+    {
+     "beat": "write",
+     "do": "Write three roles."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_FN_ROLE_FUN_ONLY",
+     "listen_for": [
+      "Only to pass time"
+     ],
+     "ask": "Which is a role of folk dance?",
+     "repair": "Ask a grandparent why a dance is done."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_FN_ROLE_OLD_ONLY",
+     "listen_for": [
+      "Only old people"
+     ],
+     "ask": "Who takes part in folk dances?",
+     "repair": "List who dances in each folk dance."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_FN_ROLE_NO_WORK",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can folk dance help a community economically?",
+     "repair": "Ask about paid cultural groups."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES.M_CA5_FN_ROLE_ONE",
+     "listen_for": [
+      "there is none"
+     ],
+     "ask": "Name a role of folk dance in the community other than fun.",
+     "repair": "List occasions where dance is used."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name one role of folk dance.",
+     "answer": "any of: celebrating, teaching, history, unity, entertainment",
+     "shows": "roles"
+    },
+    {
+     "question": "Can a dance pass on history?",
+     "answer": "Yes",
+     "shows": "history"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY",
+   "key_step": "The child keeps safe and respectful in dance: warm up, keep space, use props with control, never mock another community.",
+   "floor": {
+    "prerequisite": "Knows PE safety (Grade 4).",
+    "question": "Why warm up?",
+    "answer": "to avoid injury"
+   },
+   "representations": [
+    "an open space",
+    "props",
+    "a rules chart"
+   ],
+   "steps": [
+    "Warm up.",
+    "Keep space.",
+    "Props with control.",
+    "Respect every community."
+   ],
+   "contexts": [
+    "a dance practice",
+    "a festival rehearsal"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A learner laughs at a dance from another community.",
+     "say": "Right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Respect every culture."
+    },
+    {
+     "beat": "write",
+     "do": "Write the rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_FN_NO_WARMUP",
+     "listen_for": [
+      "Start straight away"
+     ],
+     "ask": "What should dancers do before dancing?",
+     "repair": "Compare stretched and unstretched dancers."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_FN_MOCK_OTHER",
+     "listen_for": [
+      "Laugh at the steps"
+     ],
+     "ask": "A group performs a dance of another community. What is the respectful action?",
+     "repair": "Ask how it feels when people laugh at your culture."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_FN_CROWDED_SPACE",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What should be done to the dancing space?",
+     "repair": "Walk the space together before dancing."
+    },
+    {
+     "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY.M_CA5_FN_PROPS_SWING",
+     "listen_for": [
+      "swing them as hard as you can"
+     ],
+     "ask": "How should props be used in a dance?",
+     "repair": "Practise prop moves slowly in spaces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why keep space when dancing?",
+     "answer": "so dancers do not hit each other",
+     "shows": "space"
+    },
+    {
+     "question": "How should we speak about another community's dance?",
+     "answer": "with respect",
+     "shows": "respect"
+    }
+   ]
+  }
+ ]
+}

@@ -3,9 +3,15 @@
 // (curriculum/creative_arts/g5.json); the official outcomes, the KICD rubrics and the sub-strand text are never touched.
 //   node scripts/build-creativearts-g5.mjs      then  npm run subject:map -- creativearts 5 --dir creative_arts --title "Creative Arts"
 // Idempotent: skills, prerequisites and misconceptions are rebuilt from scripts/data/creativearts-g5-skills.mjs every run.
+// Depth pass (18 Nov 2026): scripts/data/creativearts-depth/g5.mjs adds prerequisites, misconceptions to four per skill, the
+// teaching pack (curriculum/creative_arts/teaching/g5/) through scripts/science-depth.mjs, and the practical outcomes each
+// knowledge skill supports (teacher_rubric: marked by the teacher with the KICD rubric, never a phone question).
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/creativearts-g5-skills.mjs';
+import { SUBS as DEPTH } from './data/creativearts-depth/g5.mjs';
+import { applyRubric } from './data/creativearts-depth/lib.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const load = (p) => JSON.parse(readFileSync(new URL(`../curriculum/${p}.json`, import.meta.url), 'utf8'));
 const path = new URL('../curriculum/creative_arts/g5.json', import.meta.url);
@@ -43,6 +49,8 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
   sub.misconceptions.push({ code: `${skillCode}.${short}`, skill: skillCode, error, example: { question: q, wrong_answer: wrong, correct_answer: right }, cause, reveals: `Offer "${wrong}" next to the right answer and ask the question again in a new context.`, help, feedback, source: source || 'To confirm by a teacher: a common classroom error, not traced to a study by the author.', status: 'draft' });
 }
 g5.totals = { ...g5.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
-g5.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g5-non-question-outcomes-2026-11-12.md";
+const nRubric = applyRubric(g5, DEPTH, P);
+const depth = applyDepth(g5, DEPTH, { dir: 'creative_arts', grade: 5, prefix: P, derive: true });
+g5.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/creativearts-g5-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/creative_arts/teaching/g5)";
 writeFileSync(path, JSON.stringify(g5, null, 1) + '\n');
-console.log(`creative arts g5: ${D.SKILLS.length} skills, ${nPre} prerequisites, ${D.MIS.length} misconceptions`);
+console.log(`creative arts g5: ${g5.totals.skills} skills, ${g5.totals.prerequisites} prerequisites, ${g5.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries, ${nRubric} practical outcomes to the teacher's rubric)`);

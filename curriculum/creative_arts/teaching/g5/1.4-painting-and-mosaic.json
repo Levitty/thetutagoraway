@@ -1,0 +1,367 @@
+{
+ "sub_strand": "CREA.G5.CREATI.PAINTING_AND_MOSAIC",
+ "title": "Painting and Mosaic",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Mix paint where the class can see; let learners predict colours before mixing.",
+ "skills": [
+  {
+   "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL",
+   "key_step": "The child places red, yellow and blue as primaries on the wheel and each secondary between the two primaries that make it.",
+   "floor": {
+    "prerequisite": "Classifies primary and secondary colours (Grade 4).",
+    "question": "Is orange primary or secondary?",
+    "answer": "secondary"
+   },
+   "representations": [
+    "a blank colour wheel",
+    "paint",
+    "colour cards"
+   ],
+   "steps": [
+    "Put the three primaries far apart.",
+    "Put each secondary between its two primaries.",
+    "Check by mixing."
+   ],
+   "contexts": [
+    "painting a colour wheel chart",
+    "choosing colours for a mural"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle with red, yellow and blue."
+    },
+    {
+     "beat": "predict",
+     "do": "What goes between red and yellow?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for orange."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write orange there."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_GREEN_PRIMARY",
+     "listen_for": [
+      "Green"
+     ],
+     "ask": "Which of these is a primary colour?",
+     "repair": "Mix blue and yellow to make green, so green is made and not basic."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_BLACK_WHITE_PRIMARY",
+     "listen_for": [
+      "Black, white and red"
+     ],
+     "ask": "Which colours are the primary colours?",
+     "repair": "Show that black and white are not on the colour wheel."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_SECONDARY_MAKES_PRIMARY",
+     "listen_for": [
+      "Red can be made by mixing orange and yellow"
+     ],
+     "ask": "Which statement is true?",
+     "repair": "Try to mix red from every pair on the wheel."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_PM_ORANGE_PRIMARY",
+     "listen_for": [
+      "Yellow"
+     ],
+     "ask": "Which of these is a secondary colour?",
+     "repair": "Mix red and yellow to make orange, then say \"made, so secondary\"."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL.M_CA5_PM_SECONDARY_NEXT",
+     "listen_for": [
+      "next to orange"
+     ],
+     "ask": "On the colour wheel, where is green?",
+     "repair": "Draw the wheel and place each secondary between its two parents."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What colour goes between blue and yellow?",
+     "answer": "green",
+     "shows": "wheel"
+    },
+    {
+     "question": "Is black on the colour wheel as a primary?",
+     "answer": "No",
+     "shows": "primaries"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING",
+   "key_step": "The child says which two primaries make each secondary, and that mixing all three makes a dull brown.",
+   "floor": {
+    "prerequisite": "Knows the colour pairs (Grade 4).",
+    "question": "What do red and yellow make?",
+    "answer": "orange"
+   },
+   "representations": [
+    "paint and palette",
+    "colour sums",
+    "the colour wheel"
+   ],
+   "steps": [
+    "Name the colour needed.",
+    "Find its parents on the wheel.",
+    "Mix only those two."
+   ],
+   "contexts": [
+    "mixing paint for a scenery",
+    "painting fruits"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Blue and red?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for purple."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mix: purple."
+    },
+    {
+     "beat": "write",
+     "do": "Write the three sums."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_PM_MIX_RY_GREEN",
+     "listen_for": [
+      "Blue and yellow"
+     ],
+     "ask": "Which two colours make orange?",
+     "repair": "Paint each pair on a strip and label the result."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_PM_MIX_BY_PURPLE",
+     "listen_for": [
+      "Blue and yellow"
+     ],
+     "ask": "Which two colours make purple?",
+     "repair": "Paint each pair on a strip and label the result."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_PM_MIX_BROWN",
+     "listen_for": [
+      "Brown"
+     ],
+     "ask": "What colour do red and blue make?",
+     "repair": "Mix only two primaries and watch the clean secondary colour appear."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING.M_CA5_PM_MIX_ALL_THREE",
+     "listen_for": [
+      "a bright orange"
+     ],
+     "ask": "Red, yellow and blue are mixed together. What do you get?",
+     "repair": "Mix all three on a palette and look."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which two colours make purple?",
+     "answer": "red and blue",
+     "shows": "mixing"
+    },
+    {
+     "question": "What do all three primaries make together?",
+     "answer": "a dull brown",
+     "shows": "too many colours"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH",
+   "key_step": "The child describes a wash: damp paper, watery paint, a broad brush, light colours first, details after it dries.",
+   "floor": {
+    "prerequisite": "Knows white makes colours lighter (Grade 4).",
+    "question": "What does adding white do?",
+    "answer": "makes it lighter"
+   },
+   "representations": [
+    "a broad brush",
+    "water and paint",
+    "a sample scenery"
+   ],
+   "steps": [
+    "Wet the paper lightly.",
+    "Load a broad brush with watery paint.",
+    "Sweep across for the sky.",
+    "Add details when dry."
+   ],
+   "contexts": [
+    "painting the sky over the hills",
+    "a lake scenery"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Thick paint on dry paper: smooth or streaky?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for streaky."
+    },
+    {
+     "beat": "reveal",
+     "do": "Use watery paint on damp paper."
+    },
+    {
+     "beat": "write",
+     "do": "Write the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_PM_WASH_THICK",
+     "listen_for": [
+      "Thick paint straight from the tube"
+     ],
+     "ask": "What kind of paint is used for a wash?",
+     "repair": "Paint a strip with thick paint and one with water-thinned paint and compare."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_PM_WASH_DETAIL_FIRST",
+     "listen_for": [
+      "The sky"
+     ],
+     "ask": "In a wash scenery, what is painted last?",
+     "repair": "Paint the sky first on one page and the details first on another and compare."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_PM_WASH_SMALL_BRUSH",
+     "listen_for": [
+      "The smallest, thin brush"
+     ],
+     "ask": "Which brush suits a wash over a large area?",
+     "repair": "Cover a page with a thin brush and a large brush and time both."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH.M_CA5_PM_WASH_DRY_PAPER",
+     "listen_for": [
+      "use thick paint on dry paper"
+     ],
+     "ask": "How do you get a smooth wash?",
+     "repair": "Paint a wash on dry and on damp paper; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which brush is used for a wash: broad or fine?",
+     "answer": "broad",
+     "shows": "tool"
+    },
+    {
+     "question": "When are details painted?",
+     "answer": "after the wash dries",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC",
+   "key_step": "The child says a mosaic is made of small pieces (tesserae) set close with small even gaps, after planning the picture.",
+   "floor": {
+    "prerequisite": "Has made a montage (Grade 4).",
+    "question": "What is a montage made from?",
+    "answer": "many cut pictures pasted together"
+   },
+   "representations": [
+    "coloured paper squares, seeds or bottle tops",
+    "a pencil sketch",
+    "glue"
+   ],
+   "steps": [
+    "Sketch the picture.",
+    "Sort pieces by colour.",
+    "Stick them close with small even gaps."
+   ],
+   "contexts": [
+    "a mosaic of a bird",
+    "a class name board"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a mosaic with overlapping pieces.",
+     "say": "What is wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for overlap."
+    },
+    {
+     "beat": "reveal",
+     "do": "Pieces sit side by side."
+    },
+    {
+     "beat": "write",
+     "do": "Write: plan, sort, stick, gaps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_PM_MOSAIC_PAINTED",
+     "listen_for": [
+      "By painting tiny dots"
+     ],
+     "ask": "How is a mosaic picture made?",
+     "repair": "Show a mosaic made of paper bits and seeds."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_PM_MOSAIC_OVERLAP",
+     "listen_for": [
+      "On top of each other"
+     ],
+     "ask": "How should the pieces be placed in a mosaic?",
+     "repair": "Compare one mosaic with stacked pieces and one with small gaps."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_PM_MOSAIC_NO_PLAN",
+     "listen_for": [
+      "Glue the whole board at once"
+     ],
+     "ask": "What should be done before sticking the pieces?",
+     "repair": "Show a mosaic with and without an outline."
+    },
+    {
+     "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC.M_CA5_PM_MOSAIC_NO_GAPS",
+     "listen_for": [
+      "yes, no gaps"
+     ],
+     "ask": "In a mosaic, should the pieces touch with no gaps?",
+     "repair": "Show a mosaic: the gaps make the pattern clear."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first step of a mosaic?",
+     "answer": "sketch the picture",
+     "shows": "planning"
+    },
+    {
+     "question": "Do mosaic pieces overlap?",
+     "answer": "No, they sit side by side with small gaps",
+     "shows": "mosaic"
+    }
+   ]
+  }
+ ]
+}

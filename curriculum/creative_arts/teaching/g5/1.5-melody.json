@@ -1,0 +1,273 @@
+{
+ "sub_strand": "CREA.G5.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sing the ladder with hand signs; the phone describes the signs in words.",
+ "skills": [
+  {
+   "skill": "CREA.G5.CREATI.MELODY.SOLFA",
+   "key_step": "The child orders d r m f s from low to high and back down.",
+   "floor": {
+    "prerequisite": "Orders d r m (Grade 4).",
+    "question": "Which is highest of d, r and m?",
+    "answer": "m"
+   },
+   "representations": [
+    "a ladder with five rungs",
+    "singing",
+    "hand signs"
+   ],
+   "steps": [
+    "Sing d r m f s up.",
+    "Sing s f m r d down.",
+    "Point on the ladder."
+   ],
+   "contexts": [
+    "a choir warm-up",
+    "learning a new song"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw five rungs with d at the bottom."
+    },
+    {
+     "beat": "predict",
+     "do": "What goes on rung four?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for f."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write f, then s."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_ML_FIRST_HIGHEST",
+     "listen_for": [
+      "d"
+     ],
+     "ask": "Which of d r m f s is the highest sound?",
+     "repair": "Sing d r m f s as steps climbing up a ladder."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_ML_ORDER_SCRAMBLED",
+     "listen_for": [
+      "d m r f s"
+     ],
+     "ask": "Which is the right order going up?",
+     "repair": "Sing and show with the hand going up step by step."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_ML_DOWN_UP_SAME",
+     "listen_for": [
+      "s f m r d"
+     ],
+     "ask": "Which is the order going down from s?",
+     "repair": "Walk down steps while singing the syllables backwards."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SOLFA.M_CA5_ML_F_AFTER_S",
+     "listen_for": [
+      "s"
+     ],
+     "ask": "Going up, which comes after m: f or s?",
+     "repair": "Sing d r m f s slowly with the ladder."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which comes just after m going up?",
+     "answer": "f",
+     "shows": "order"
+    },
+    {
+     "question": "Which is the highest of d r m f s?",
+     "answer": "s",
+     "shows": "range"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.MELODY.SIGNS",
+   "key_step": "The child reads the Kodaly signs: d fist, r slanting hand, m flat hand down, f thumb pointing down, s flat hand facing in, each higher.",
+   "floor": {
+    "prerequisite": "Reads d r m signs (Grade 4).",
+    "question": "Which sign is a fist?",
+    "answer": "d"
+   },
+   "representations": [
+    "the teacher's hands",
+    "a chart in words",
+    "singing"
+   ],
+   "steps": [
+    "Show each sign.",
+    "Raise the hand as the pitch rises.",
+    "Sing as you sign."
+   ],
+   "contexts": [
+    "a choir warm-up",
+    "a copy-me game"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a thumb pointing down.",
+     "say": "Which syllable?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for f."
+    },
+    {
+     "beat": "predict",
+     "do": "What comes next going up?"
+    },
+    {
+     "beat": "reveal",
+     "do": "s: flat hand facing in."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_ML_SIGN_FA_UP",
+     "listen_for": [
+      "m"
+     ],
+     "ask": "Which sol-fa syllable is shown by the thumb pointing down?",
+     "repair": "Show the sign and say \"fa\" with the thumb down."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_ML_SIGN_D_OPEN",
+     "listen_for": [
+      "An open, flat hand"
+     ],
+     "ask": "How does the hand look for the syllable d?",
+     "repair": "Make a fist for d at waist height, then show how the hand opens as notes rise."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_ML_SIGN_SAME_HEIGHT",
+     "listen_for": [
+      "It stays the same"
+     ],
+     "ask": "As you go from d to s, how does the hand height change?",
+     "repair": "Sing d r m f s while the hand rises step by step."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.SIGNS.M_CA5_ML_S_FIST",
+     "listen_for": [
+      "d"
+     ],
+     "ask": "Which syllable is a flat hand facing you?",
+     "repair": "Show d (fist) low and s (flat hand facing you) higher."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which syllable has the thumb pointing down?",
+     "answer": "f",
+     "shows": "sign"
+    },
+    {
+     "question": "Is s shown higher or lower than m?",
+     "answer": "higher",
+     "shows": "height"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.CREATI.MELODY.TECHNIQUES",
+   "key_step": "The child names the techniques in a short melody: step, leap, repetition, and ending on d.",
+   "floor": {
+    "prerequisite": "Knows qualities of a good melody (Grade 4).",
+    "question": "Name one quality.",
+    "answer": "any of: moves by step, ends on d, repeats an idea"
+   },
+   "representations": [
+    "short melodies on the board in sol-fa",
+    "singing",
+    "a checklist"
+   ],
+   "steps": [
+    "Find steps (next-door notes).",
+    "Find leaps (skips).",
+    "Find repeats.",
+    "Check the ending."
+   ],
+   "contexts": [
+    "writing a melody for a class poem",
+    "a melody card"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write d r m s m r d."
+    },
+    {
+     "beat": "point",
+     "do": "Point at m to s.",
+     "say": "Step or leap?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for leap."
+    },
+    {
+     "beat": "reveal",
+     "do": "It skips f, so a leap."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_ML_STEP_LEAP",
+     "listen_for": [
+      "Stepwise motion"
+     ],
+     "ask": "The melody goes d m. What is this?",
+     "repair": "Sing d r m and d m and show the missing r."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_ML_REPEAT_NEW",
+     "listen_for": [
+      "Stepwise motion"
+     ],
+     "ask": "The melody goes m m m. What technique is used?",
+     "repair": "Sing the same note three times and clap each."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_ML_END_SHORT",
+     "listen_for": [
+      "On a short, quick note"
+     ],
+     "ask": "How does a good melody usually end?",
+     "repair": "Sing a tune ending short and again ending long and ask which feels finished."
+    },
+    {
+     "code": "CREA.G5.CREATI.MELODY.TECHNIQUES.M_CA5_ML_NO_END_HOME",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "A melody ends d r m f. Does it sound finished?",
+     "repair": "Sing it ending on f and ending on d; compare."
+    }
+   ],
+   "checks": [
+    {
+     "question": "d to r is a step or a leap?",
+     "answer": "a step",
+     "shows": "step"
+    },
+    {
+     "question": "Which note should a short melody end on?",
+     "answer": "d",
+     "shows": "ending"
+    }
+   ]
+  }
+ ]
+}

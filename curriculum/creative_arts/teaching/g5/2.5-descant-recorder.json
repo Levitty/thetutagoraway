@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G5.PERFOR.DESCANT_RECORDER",
+ "title": "Descant Recorder",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Creative Arts; not yet checked by a CBC Creative Arts teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Each learner uses their own recorder. Fingerings are described in words.",
+ "skills": [
+  {
+   "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES",
+   "key_step": "The child orders G A B C' D' from low to high: fewer fingers give higher notes; C' is thumb and second finger, D' second finger only.",
+   "floor": {
+    "prerequisite": "Plays B, A, G (Grade 4).",
+    "question": "Which is lowest: B, A or G?",
+    "answer": "G"
+   },
+   "representations": [
+    "a recorder",
+    "a fingering chart in words",
+    "singing the notes"
+   ],
+   "steps": [
+    "G: thumb and three fingers.",
+    "A: two; B: one.",
+    "C': thumb and second finger.",
+    "D': second finger, no thumb."
+   ],
+   "contexts": [
+    "playing a class tune",
+    "Kenya anthem practice"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Fewer fingers: higher or lower?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for higher."
+    },
+    {
+     "beat": "point",
+     "do": "Play B, then C'."
+    },
+    {
+     "beat": "reveal",
+     "do": "C' is higher."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_ALPHABET_ORDER",
+     "listen_for": [
+      "A"
+     ],
+     "ask": "Which is the lowest of G, A and B?",
+     "repair": "Play the notes and listen."
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_MORE_HOLES_HIGHER",
+     "listen_for": [
+      "B"
+     ],
+     "ask": "Which of G, A and B covers the most holes?",
+     "repair": "Cover and uncover holes and listen."
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_DR_HIGH_C_LOW",
+     "listen_for": [
+      "G"
+     ],
+     "ask": "Which note is higher than B?",
+     "repair": "Sing G A B C D going up."
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES.M_CA5_DR_D_ALL_HOLES",
+     "listen_for": [
+      "cover all the holes"
+     ],
+     "ask": "How do you play the high D' on a descant recorder?",
+     "repair": "Play D' with one finger and listen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is highest: G, B or D'?",
+     "answer": "D'",
+     "shows": "order"
+    },
+    {
+     "question": "Which fingers play C'?",
+     "answer": "left thumb and second finger",
+     "shows": "fingering"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+   "key_step": "The child describes good technique: finger pads, gentle steady breath, tonguing each note with \"doo\", a clear tone.",
+   "floor": {
+    "prerequisite": "Knows recorder posture (Grade 4).",
+    "question": "How should you sit to play?",
+    "answer": "tall"
+   },
+   "representations": [
+    "a recorder",
+    "a mirror",
+    "a checklist"
+   ],
+   "steps": [
+    "Cover holes with pads.",
+    "Blow gently and steadily.",
+    "Tongue each note with \"doo\"."
+   ],
+   "contexts": [
+    "a class performance",
+    "practising at home"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Puffed cheeks.",
+     "say": "Good tone?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Steady gentle breath."
+    },
+    {
+     "beat": "write",
+     "do": "Write the points."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_BLOW_HARD",
+     "listen_for": [
+      "As hard as you can"
+     ],
+     "ask": "How should you blow into the recorder?",
+     "repair": "Blow hard and gently and compare."
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_FINGER_TIPS",
+     "listen_for": [
+      "With the tip of the finger"
+     ],
+     "ask": "How should the holes be covered?",
+     "repair": "Cover the hole with each and listen."
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_DR_NO_TONGUE",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What does tonguing do?",
+     "repair": "Play with and without tonguing."
+    },
+    {
+     "code": "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA5_DR_PUFF_CHEEKS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Should your cheeks puff out when you play the recorder?",
+     "repair": "Play while looking in a mirror."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What starts each note?",
+     "answer": "the tongue saying \"doo\"",
+     "shows": "tonguing"
+    },
+    {
+     "question": "What does a squeak usually mean?",
+     "answer": "blowing too hard or a hole not covered",
+     "shows": "tone"
+    }
+   ]
+  }
+ ]
+}
