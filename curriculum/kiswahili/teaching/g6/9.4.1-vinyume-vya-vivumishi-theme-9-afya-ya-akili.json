@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH",
+ "title": "Vinyume vya Vivumishi (Theme 9: Afya ya akili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI",
+   "key_step": "The child gives the adjective of the opposite meaning, with the same class prefix as the original (mti mrefu -> mti mfupi).",
+   "floor": {
+    "prerequisite": "Knows noun opposites.",
+    "question": "Kinyume cha mchana ni?",
+    "answer": "usiku"
+   },
+   "representations": [
+    "opposite pair cards",
+    "pictures (tall/short, wide/narrow)",
+    "class prefix chart"
+   ],
+   "steps": [
+    "Read the adjective.",
+    "Find the opposite stem.",
+    "Keep the class prefix.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "mental health (afya ya akili): mwenye furaha / mwenye huzuni",
+    "describing classmates",
+    "shopping"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "njia pana -> njia ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"pana\".",
+     "say": "Kinyume chake ni nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"njia nyembamba\" and two more pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M_VINY_SAME",
+     "listen_for": [
+      "mzito"
+     ],
+     "ask": "Soma tena: \"Mfuko huu ni mzito lakini ule ni ___.\" Kwa nini \"mzito\" si jibu sahihi?",
+     "repair": "Kinyume ni neno la maana ya upande wa pili, si neno lilelile."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M_VINY_OTHER",
+     "listen_for": [
+      "mdogo"
+     ],
+     "ask": "Soma tena: \"Mti huu ni mrefu lakini ule ni ___.\" Kwa nini \"mdogo\" si jibu sahihi?",
+     "repair": "Kinyume cha mrefu ni mfupi. Mdogo ni kinyume cha mkubwa."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M_VINY_NO_AGREE",
+     "listen_for": [
+      "kilaini"
+     ],
+     "ask": "Soma tena: \"Kiti hiki ni kigumu lakini kile ni ___.\" Kwa nini \"kilaini\" si jibu sahihi?",
+     "repair": "Vivumishi vingi huchukua kiambishi cha nomino (mjinga, wachache). Vingine hubaki kama vilivyo (laini, moto)."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI.M6_VINY_NEGATE",
+     "listen_for": [
+      "si mrefu"
+     ],
+     "ask": "Kuna neno moja lenye maana kinyume?",
+     "repair": "Kinyume cha kivumishi ni kivumishi kingine: mfupi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"mzito\" ni?",
+     "answer": "mwepesi",
+     "shows": "opposite"
+    },
+    {
+     "question": "Kinyume cha \"kitabu kipya\" ni?",
+     "answer": "kitabu kikuukuu",
+     "shows": "with prefix"
+    }
+   ]
+  }
+ ]
+}

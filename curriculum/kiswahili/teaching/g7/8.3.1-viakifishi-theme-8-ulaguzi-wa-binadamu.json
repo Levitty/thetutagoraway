@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T8_VIAKIFISHI",
+ "title": "Viakifishi (Theme 8: Ulaguzi wa binadamu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA",
+   "key_step": "The child ends a question with ?, puts a comma after Je and after a greeting word, and separates items in a list with commas.",
+   "floor": {
+    "prerequisite": "Uses capitals and full stops.",
+    "question": "Andika vizuri: nimefika",
+    "answer": "Nimefika."
+   },
+   "representations": [
+    "question and list sentences",
+    "a mark chart",
+    "a checklist"
+   ],
+   "steps": [
+    "Is it a question?",
+    "Je, + ?",
+    "Commas in lists and after greetings.",
+    "Read it aloud."
+   ],
+   "contexts": [
+    "human trafficking: questions to ask a stranger's offer",
+    "a shopping list",
+    "a letter greeting"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "je umemwambia mzazi wako kuhusu kazi hiyo"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"je\".",
+     "say": "Tunahitaji alama gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Je, umemwambia mzazi wako kuhusu kazi hiyo?\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M_KS7_KK_KIKOMO",
+     "listen_for": [
+      "kikomo"
+     ],
+     "ask": "Soma tena: \"Swali huisha kwa nini?\" Kwa nini \"kikomo\" si jibu sahihi?",
+     "repair": "Swali huisha kwa kiulizi (?)."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M_KS7_KK_KOMA",
+     "listen_for": [
+      "Nilinunua, mkate maziwa na sukari."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ina koma sahihi?\" Kwa nini \"Nilinunua, mkate maziwa na sukari.\" si jibu sahihi?",
+     "repair": "Koma hutenganisha vitu katika orodha."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M_KS7_KK_SALAMU",
+     "listen_for": [
+      "Mpendwa rafiki yangu"
+     ],
+     "ask": "Soma tena: \"Ni salamu ipi ina koma?\" Kwa nini \"Mpendwa rafiki yangu\" si jibu sahihi?",
+     "repair": "Salamu ya barua huishia kwa koma."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T8_VIAKIFISHI.KIULIZI_KOMA.M7_KK_JE_COMMA",
+     "listen_for": [
+      "Je umefika nyumbani?"
+     ],
+     "ask": "Kuna koma baada ya \"Je\"?",
+     "repair": "Baada ya \"Je\" weka koma: Je, umefika?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: nilinunua mkate maziwa na sukari",
+     "answer": "Nilinunua mkate, maziwa na sukari.",
+     "shows": "commas"
+    },
+    {
+     "question": "Andika vizuri: je utakuja kesho",
+     "answer": "Je, utakuja kesho?",
+     "shows": "question"
+    }
+   ]
+  }
+ ]
+}

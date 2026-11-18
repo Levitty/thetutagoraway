@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO",
+ "title": "Maamkuzi na Maagano (Theme 2: Nidhamu mezani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI",
+   "key_step": "The child decides who is greeted, at what time and whether arriving or leaving, then chooses the greeting and its reply.",
+   "floor": {
+    "prerequisite": "Greets a classmate.",
+    "question": "Rafiki anasema \"Hujambo?\" Unajibu?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a chart of greetings and replies",
+    "role cards: elder, friend, teacher",
+    "a clock for time of day"
+   ],
+   "steps": [
+    "Who is it?",
+    "What time is it?",
+    "Arriving or leaving?",
+    "Say the greeting and wait for the reply."
+   ],
+   "contexts": [
+    "meeting grandmother at the gate",
+    "arriving at school",
+    "leaving a friend's home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Shikamoo! - ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Shikamoo\".",
+     "say": "Mzee anajibu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts out greeting an elder and a friend, with the right reply each time."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M4_MAA_REPLY",
+     "listen_for": [
+      "Hujambo"
+     ],
+     "ask": "Soma tena: \"Mtu akikusalimia \"Hujambo?\", unajibu \"___.\"\" Kwa nini \"Hujambo\" si jibu sahihi?",
+     "repair": "Hujambo hujibiwa kwa \"Sijambo\". Shikamoo hujibiwa kwa \"Marahaba\"."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M4_MAA_TIME",
+     "listen_for": [
+      "Habari za asubuhi"
+     ],
+     "ask": "Soma tena: \"Kabla ya kulala usiku unamwambia mama, \"___.\"\" Kwa nini \"Habari za asubuhi\" si jibu sahihi?",
+     "repair": "\"Habari za asubuhi\" ni ya asubuhi. \"Usiku mwema\" husemwa usiku kabla ya kulala."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M4_MAA_ELDER",
+     "listen_for": [
+      "Hujambo"
+     ],
+     "ask": "Soma tena: \"Unamsalimia babu yako kwa kusema \"___.\"\" Kwa nini \"Hujambo\" si jibu sahihi?",
+     "repair": "Mdogo humsalimia mkubwa kwa \"Shikamoo\", na mkubwa hujibu \"Marahaba\". \"Hujambo\" ni ya rika moja."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI.M4_MAA_FAREWELL",
+     "listen_for": [
+      "Hujambo shangazi!"
+     ],
+     "ask": "Unafika au unaondoka?",
+     "repair": "Unapoondoka unaaga: Kwaheri, usiku mwema."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mzee akikusalimu \"Shikamoo\" ni wewe unayesema, yeye hujibu nini?",
+     "answer": "Marahaba",
+     "shows": "reply"
+    },
+    {
+     "question": "Jioni unamuaga mwalimu. Unasema?",
+     "answer": "Kwaheri mwalimu, jioni njema",
+     "shows": "farewell"
+    }
+   ]
+  }
+ ]
+}

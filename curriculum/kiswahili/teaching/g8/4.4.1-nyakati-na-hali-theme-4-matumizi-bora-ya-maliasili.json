@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI",
+ "title": "Nyakati na Hali (Theme 4: Matumizi bora ya maliasili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.MAZOEA_TIMILIFU",
+   "key_step": "The child uses hu- (no person prefix) for a habit and -me- for an action complete and still true now, and uses them in a passage.",
+   "floor": {
+    "prerequisite": "Uses -li-, -na-, -ta-.",
+    "question": "Jaza: Jana ni___soma.",
+    "answer": "nilisoma"
+   },
+   "representations": [
+    "a habit calendar",
+    "a finished-task picture",
+    "a short passage with gaps"
+   ],
+   "steps": [
+    "Read the time words.",
+    "Habit: hu-.",
+    "Complete now: person + -me-.",
+    "Fill the passage."
+   ],
+   "contexts": [
+    "good use of natural resources",
+    "daily routine",
+    "a farm diary"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wakulima ___ (panda) miti kila mwaka."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kila mwaka\".",
+     "say": "Ni mazoea au timilifu?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"hupanda\" and \"Wamepanda miti mia moja mwaka huu.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_KS8_MT_HU",
+     "listen_for": [
+      "timilifu"
+     ],
+     "ask": "Soma tena: \"Katika \"Huenda sokoni kila siku\", hali ni ipi?\" Kwa nini \"timilifu\" si jibu sahihi?",
+     "repair": "Hu- huonyesha mazoea."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_KS8_MT_ME",
+     "listen_for": [
+      "ya mazoea"
+     ],
+     "ask": "Soma tena: \"Katika \"Amefika\", hali ni ipi?\" Kwa nini \"ya mazoea\" si jibu sahihi?",
+     "repair": "-me- huonyesha tendo lililokamilika."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_KS8_MT_LI",
+     "listen_for": [
+      "timilifu"
+     ],
+     "ask": "Soma tena: \"Katika \"Alifika\", ni hali gani?\" Kwa nini \"timilifu\" si jibu sahihi?",
+     "repair": "-li- ni wakati uliopita rahisi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M8_MT_HU_NEG_TIME",
+     "listen_for": [
+      "tulifua"
+     ],
+     "ask": "Ni jambo la mara moja au la mazoea?",
+     "repair": "Jambo la mazoea hutumia hu-: kila Jumamosi hufua."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Tayari mvua ___ (anza).",
+     "answer": "imeanza",
+     "shows": "perfect"
+    },
+    {
+     "question": "Jaza: Ng'ombe ___ (kunywa) maji jioni kila siku.",
+     "answer": "hunywa",
+     "shows": "habit"
+    }
+   ]
+  }
+ ]
+}

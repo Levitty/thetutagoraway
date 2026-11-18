@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI",
+ "title": "Vitenzi Vishirikishi (Theme 7: Kuhudumia jamii shuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI",
+   "key_step": "The child uses the linking verb that fits: ni / si for identity, -ko/-po/-mo for place by class (yuko, kiko), and ndi- + class for emphasis.",
+   "floor": {
+    "prerequisite": "Uses verbs with person prefixes.",
+    "question": "Juma ___ (ni/yuko) mwanafunzi.",
+    "answer": "ni"
+   },
+   "representations": [
+    "ni/si cards",
+    "a place table by class (yuko, kiko, liko)",
+    "ndi- forms by class"
+   ],
+   "steps": [
+    "Identity or place?",
+    "Identity: ni or si.",
+    "Place: class + -ko/-po/-mo.",
+    "Emphasis: ndi- + class."
+   ],
+   "contexts": [
+    "community service at school",
+    "finding things in the classroom",
+    "a school map"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kitabu ___ mezani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kitabu\" and \"mezani\".",
+     "say": "Ni mahali; kitabu kiko katika ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Kitabu kiko mezani\" and \"Kitabu hiki ndicho changu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M_KS7_VS_NI_SI",
+     "listen_for": [
+      "ni"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kishirikishi kipi cha kukanusha?\" Kwa nini \"ni\" si jibu sahihi?",
+     "repair": "Si ni kishirikishi cha kukanusha; ni cha kuthibitisha."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M_KS7_VS_YUKO",
+     "listen_for": [
+      "yuko"
+     ],
+     "ask": "Soma tena: \"Kamilisha: Wanafunzi ___ darasani.\" Kwa nini \"yuko\" si jibu sahihi?",
+     "repair": "Wanafunzi ni wengi, kwa hiyo tunasema wako."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M_KS7_VS_SIO",
+     "listen_for": [
+      "kuthibitisha"
+     ],
+     "ask": "Soma tena: \"Neno sio katika \"Huyu sio mwalimu\" linaonyesha nini?\" Kwa nini \"kuthibitisha\" si jibu sahihi?",
+     "repair": "Sio ni kishirikishi cha kukanusha."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T7_VITENZI_VISHIRIKISHI.VISHIRIKISHI.M7_VS_NDIYE_CLASS",
+     "listen_for": [
+      "ndiye"
+     ],
+     "ask": "Kitabu kiko katika ngeli ipi?",
+     "repair": "Kishirikishi ndi- hupatana na nomino: kitabu ndicho."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Wanafunzi ___ darasani.",
+     "answer": "wako / wamo",
+     "shows": "place"
+    },
+    {
+     "question": "Kanusha: \"Yeye ni daktari.\"",
+     "answer": "Yeye si daktari.",
+     "shows": "si"
+    }
+   ]
+  }
+ ]
+}

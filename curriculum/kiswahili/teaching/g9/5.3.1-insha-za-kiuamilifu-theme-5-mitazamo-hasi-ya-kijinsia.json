@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU",
+ "title": "Insha za Kiuamilifu (Theme 5: Mitazamo hasi ya kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA",
+   "key_step": "The child explains a diary and its features: the date, first person, the events and feelings of the day, and the kinds (ya kibinafsi, ya kazi).",
+   "floor": {
+    "prerequisite": "Writes in the first person.",
+    "question": "Andika sentensi moja kuhusu siku yako.",
+    "answer": "Leo nimeamka mapema."
+   },
+   "representations": [
+    "a model entry",
+    "a feature checklist",
+    "two kinds side by side"
+   ],
+   "steps": [
+    "Find the date.",
+    "Find the first person.",
+    "Find events and feelings.",
+    "Name the kind."
+   ],
+   "contexts": [
+    "negative gender attitudes",
+    "a school diary",
+    "a work planner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jumatatu, 3 Machi 2026. Leo..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the date.",
+     "say": "Kwa nini tarehe ni muhimu?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the features of the entry."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M_KS9_SJ_MAANA",
+     "listen_for": [
+      "barua kwa rafiki"
+     ],
+     "ask": "Soma tena: \"Shajara ni nini?\" Kwa nini \"barua kwa rafiki\" si jibu sahihi?",
+     "repair": "Shajara ni kumbukumbu ya kila siku."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M_KS9_SJ_NAFSI",
+     "listen_for": [
+      "ya tatu"
+     ],
+     "ask": "Soma tena: \"Shajara huandikwa kwa nafsi ipi?\" Kwa nini \"ya tatu\" si jibu sahihi?",
+     "repair": "Shajara huandikwa kwa nafsi ya kwanza."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M_KS9_SJ_TAREHE",
+     "listen_for": [
+      "jina la rafiki"
+     ],
+     "ask": "Soma tena: \"Kila ingizo la shajara huanza kwa nini?\" Kwa nini \"jina la rafiki\" si jibu sahihi?",
+     "repair": "Ingizo huanza kwa tarehe."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M9_SJ_PUBLIC",
+     "listen_for": [
+      "kwa ajili ya mwalimu na wazazi"
+     ],
+     "ask": "Nani atasoma shajara yako?",
+     "repair": "Shajara ya kibinafsi ni ya mwandishi; huonyesha hisia zake."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kila ingizo la shajara huanza na nini?",
+     "answer": "tarehe",
+     "shows": "date"
+    },
+    {
+     "question": "Shajara ya kibinafsi huandikwa kwa nafsi gani?",
+     "answer": "nafsi ya kwanza",
+     "shows": "person"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.KUANDIKA_SHAJARA",
+   "key_step": "The child plans shajara before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "siku niliyopinga mtazamo hasi",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Siku Niliyopinga Mtazamo Hasi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Siku Niliyopinga Mtazamo Hasi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.KUANDIKA_SHAJARA.M9_INS_NODATE_S_T5",
+     "listen_for": [
+      "anwani ya insha"
+     ],
+     "ask": "Jambo hili liliandikwa lini?",
+     "repair": "Kila ingizo la shajara huanza na tarehe."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.KUANDIKA_SHAJARA.M9_INS_PERSON_S_T5",
+     "listen_for": [
+      "nafsi ya tatu: yeye"
+     ],
+     "ask": "Ni nani anaandika shajara hii?",
+     "repair": "Shajara ya kibinafsi huandikwa kwa nafsi ya kwanza."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.KUANDIKA_SHAJARA.M9_INS_TYPE_S_T5",
+     "listen_for": [
+      "ya kibinafsi"
+     ],
+     "ask": "Ingizo hili linahusu hisia au shughuli za kazi?",
+     "repair": "Shajara ya kazi huandika shughuli na miadi; ya kibinafsi huandika hisia na matukio ya mtu."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.KUANDIKA_SHAJARA.M9_INS_LETTER_S_T5",
+     "listen_for": [
+      "Mpendwa rafiki,"
+     ],
+     "ask": "Unamwandikia nani?",
+     "repair": "Shajara haina salamu wala hitimisho la barua."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika shajara kuhusu \"Siku Niliyopinga Mtazamo Hasi\"?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "type"
+    },
+    {
+     "question": "Shajara ina sehemu zipi?",
+     "answer": "tarehe, ingizo kwa nafsi ya kwanza",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

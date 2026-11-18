@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA",
+ "title": "Vivumishi vya Sifa (Theme 1: Viungo vya mwili vya ndani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA",
+   "key_step": "The child finds the noun, then gives the adjective of quality the prefix of the noun's class (moyo mzuri, mapafu mazuri).",
+   "floor": {
+    "prerequisite": "Knows noun classes.",
+    "question": "Moyo uko katika ngeli ipi?",
+    "answer": "U-I"
+   },
+   "representations": [
+    "organ pictures (moyo, mapafu, figo)",
+    "adjective stems (-zuri, -kubwa, -dogo)",
+    "a class prefix table"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Find its class.",
+    "Add the class prefix to the adjective.",
+    "Put the adjective after the noun."
+   ],
+   "contexts": [
+    "internal organs (viungo vya mwili vya ndani)",
+    "the school clinic",
+    "a biology chart"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mapafu ___ (-safi)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mapafu\".",
+     "say": "Kivumishi kitachukua kiambishi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"mapafu masafi\" and \"moyo safi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M_SIFA_NUMBER",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Soma tena: \"Wanafunzi ___ walipata zawadi.\" Kwa nini \"mzuri\" si jibu sahihi?",
+     "repair": "Kivumishi cha sifa hubadilika kulingana na idadi ya nomino. Wanafunzi wengi, kwa hiyo wazuri."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M_SIFA_NO_AGREE",
+     "listen_for": [
+      "mkubwa"
+     ],
+     "ask": "Soma tena: \"Kitabu ___ kiko mezani.\" Kwa nini \"mkubwa\" si jibu sahihi?",
+     "repair": "Kivumishi huchukua kiambishi kinacholingana na ngeli ya nomino, kama kitabu kikubwa."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M_SIFA_NOT_ADJ",
+     "listen_for": [
+      "ukarimu"
+     ],
+     "ask": "Soma tena: \"Mkulima ___ alipanda mahindi mengi.\" Kwa nini \"ukarimu\" si jibu sahihi?",
+     "repair": "Kivumishi cha sifa huelezea nomino. Ukarimu ni jina la tabia, si kivumishi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA.M6_SIFA_ORDER",
+     "listen_for": [
+      "mrefu mti"
+     ],
+     "ask": "Neno lipi ni jina, na linakaa wapi?",
+     "repair": "Kivumishi hufuata nomino: mti mrefu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: figo ___ (-zima)",
+     "answer": "nzima",
+     "shows": "agreement"
+    },
+    {
+     "question": "Ni kivumishi cha sifa kipi: \"Ana moyo mkubwa.\"",
+     "answer": "mkubwa",
+     "shows": "identify"
+    }
+   ]
+  }
+ ]
+}

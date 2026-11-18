@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
+ "title": "Kusikiliza na Kujibu (Theme 1: Usafi wa sehemu za umma)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a mahojiano.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "usafi wa sehemu za umma",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "usafi wa soko la mji"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short mahojiano on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO.M8_ORL_CLOSEDQ_T1",
+     "listen_for": [
+      "Unapenda kazi yako?"
+     ],
+     "ask": "Swali hili litampa mhojiwa nafasi ya kueleza?",
+     "repair": "Uliza maswali yanayomfanya mhojiwa aeleze."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO.M8_ORL_NOINTRO_T1",
+     "listen_for": [
+      "swali la kwanza moja kwa moja"
+     ],
+     "ask": "Mhojiwa anajua wewe ni nani?",
+     "repair": "Anza kwa salamu, jitambulishe, eleza lengo."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO.M8_ORL_INTERRUPT_T1",
+     "listen_for": [
+      "mkatize ili usisahau"
+     ],
+     "ask": "Mwenzako amemaliza?",
+     "repair": "Msikilize mzungumzaji hadi amalize."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO.M8_ORL_SLANG_T1",
+     "listen_for": [
+      "Ma-guys, hii issue ni serious."
+     ],
+     "ask": "Ni maneno yapi si ya Kiswahili sanifu?",
+     "repair": "Tumia Kiswahili sanifu katika mazungumzo rasmi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni swali lipi bora la mahojiano?",
+     "answer": "Kazi yako ya kusafisha mji ina changamoto zipi?",
+     "shows": "mahojiano"
+    },
+    {
+     "question": "Mahojiano huanza vipi?",
+     "answer": "salamu, kujitambulisha na kueleza lengo",
+     "shows": "mahojiano, second feature"
+    }
+   ]
+  }
+ ]
+}

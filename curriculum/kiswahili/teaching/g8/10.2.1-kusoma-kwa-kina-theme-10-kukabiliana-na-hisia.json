@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 10: Kukabiliana na hisia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA.TAMTHILIA_WAHUSIKA",
+   "key_step": "The child names the wahusika with the right term, proves each point with a line or event from \"Kilio cha Msitu\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class tamthilia \"Kilio cha Msitu\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "kukabiliana na hisia",
+    "the class tamthilia",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kilio cha Msitu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Bi. Zuhura ana sifa gani, na tunajuaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA.TAMTHILIA_WAHUSIKA.M8_FAS_MAINMINOR_T10",
+     "listen_for": [
+      "Kazungu"
+     ],
+     "ask": "Kazi hii inafuatilia tatizo la nani?",
+     "repair": "Mhusika mkuu ni yule ambaye kazi inamhusu tangu mwanzo hadi mwisho."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA.TAMTHILIA_WAHUSIKA.M8_FAS_NOEVIDENCE_T10",
+     "listen_for": [
+      "ni jasiri kwa sababu ni mhusika mzuri"
+     ],
+     "ask": "Ni kitendo gani kinaonyesha sifa hii?",
+     "repair": "Kila sifa ithibitishwe kwa kitendo cha mhusika katika kazi."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA.TAMTHILIA_WAHUSIKA.M8_FAS_LOOKS_T10",
+     "listen_for": [
+      "mrefu na mwembamba"
+     ],
+     "ask": "Hii ni sura au tabia?",
+     "repair": "Sifa za kitabia ni kama ukarimu, uchoyo, ujasiri; si urefu."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA.TAMTHILIA_WAHUSIKA.M8_FAS_LESSON_T10",
+     "listen_for": [
+      "tufanye kama yeye ili tufanikiwe"
+     ],
+     "ask": "Mwishoni mhusika huyu alipata nini?",
+     "repair": "Tunajifunza kuepuka tabia mbaya kwa kuona matokeo yake."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mhusika mkuu katika \"Kilio cha Msitu\" ni nani?",
+     "answer": "Bi. Zuhura",
+     "shows": "wahusika"
+    },
+    {
+     "question": "Bi. Zuhura ni jasiri. Ni ushahidi upi unaothibitisha?",
+     "answer": "alisimama mbele ya malori ya mbao akakataa yapite",
+     "shows": "wahusika, second form"
+    }
+   ]
+  }
+ ]
+}

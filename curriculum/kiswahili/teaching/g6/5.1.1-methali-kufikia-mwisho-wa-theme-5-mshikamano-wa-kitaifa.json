@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS",
+ "title": "Methali Kufikia mwisho wa (Theme 5: Mshikamano wa kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI",
+   "key_step": "The child gives the hidden lesson of a methali on unity and uses it where a group succeeds or fails together.",
+   "floor": {
+    "prerequisite": "Explains a methali on hard work.",
+    "question": "Haba na haba hujaza kibaba?",
+    "answer": "kidogo kidogo hujaza kingi"
+   },
+   "representations": [
+    "methali halves",
+    "situation cards on group work",
+    "a chart literal/hidden"
+   ],
+   "steps": [
+    "Read the methali.",
+    "Say the picture.",
+    "Say the lesson.",
+    "Match to a situation."
+   ],
+   "contexts": [
+    "national unity (mshikamano wa kitaifa)",
+    "a harambee",
+    "a class project"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Umoja ni nguvu, utengano ni udhaifu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"utengano\".",
+     "say": "Tukitengana tunakuwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the lesson and a situation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M_MET_LITERAL",
+     "listen_for": [
+      "Anayekaa juani hulia"
+     ],
+     "ask": "Soma tena: \"Mchumia juani hulia kivulini. Maana yake ni nini?\" Kwa nini \"Anayekaa juani hulia\" si jibu sahihi?",
+     "repair": "Methali haisemi maana yake wazi. Mchumia juani hulia kivulini ina maana kwamba anayefanya kazi kwa bidii atapumzika na kufurahia matunda yake."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M_MET_WRONG_LESSON",
+     "listen_for": [
+      "Umoja ni nguvu"
+     ],
+     "ask": "Soma tena: \"Haba na haba hujaza kibaba. Maana yake ni nini?\" Kwa nini \"Umoja ni nguvu\" si jibu sahihi?",
+     "repair": "Kila methali ina funzo lake. Haba na haba hujaza kibaba inafundisha kwamba kidogo kidogo hujaza."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M_MET_WRONG_END",
+     "listen_for": [
+      "chupa"
+     ],
+     "ask": "Soma tena: \"Haba na haba hujaza ___.\" Kwa nini \"chupa\" si jibu sahihi?",
+     "repair": "Methali hubaki jinsi ilivyo. Mwisho sahihi ni kibaba: haba na haba hujaza kibaba."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.METHALI.M6_MET_OPPOSITE_LESSON",
+     "listen_for": [
+      "mtu mmoja anaweza kufanya kazi yote"
+     ],
+     "ask": "Kidole kimoja kinaweza kuvunja chawa?",
+     "repair": "Methali hii inafunza ushirikiano: mtu mmoja hawezi peke yake."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kamilisha: Kidole kimoja ___",
+     "answer": "hakivunji chawa",
+     "shows": "complete"
+    },
+    {
+     "question": "Maana ya \"Umoja ni nguvu\" ni?",
+     "answer": "tukiungana tunafanikiwa",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

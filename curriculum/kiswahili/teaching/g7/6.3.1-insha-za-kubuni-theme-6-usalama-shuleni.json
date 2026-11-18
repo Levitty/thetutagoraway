@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 6: Usalama shuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.KUBUNI_PICHA",
+   "key_step": "The child plans insha ya kubuni before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "moto katika maabara ya shule",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Moto Katika Maabara ya Shule"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Moto Katika Maabara ya Shule\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.KUBUNI_PICHA.M7_INS_PICHA_T6",
+     "listen_for": [
+      "Siku ya Kuzaliwa Kwangu"
+     ],
+     "ask": "Ni nini unachokiona katika picha?",
+     "repair": "Anwani na kisa vitokane na picha uliyopewa."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.KUBUNI_PICHA.M7_INS_MANDHARI_T6",
+     "listen_for": [
+      "Kisa hiki kilitokea."
+     ],
+     "ask": "Kisa kilitokea lini na wapi?",
+     "repair": "Onyesha mandhari: lini, wapi na hali gani."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.KUBUNI_PICHA.M7_INS_DETAIL_T6",
+     "listen_for": [
+      "Kulikuwa na moto."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T6_INSHA_ZA_KUBUNI.KUBUNI_PICHA.M7_INS_ORDER_T6",
+     "listen_for": [
+      "wazima moto walifika, wanafunzi walitoka kwa mpangilio, kengele ililia, moto uli"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya kubuni kuhusu \"Moto Katika Maabara ya Shule\"?",
+     "answer": "Moshi mzito mweusi ulifuka kutoka dirisha la maabara huku wanafunzi wakikimbia nje.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya kubuni ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

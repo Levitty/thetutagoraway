@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN",
+ "title": "Mnyambuliko wa Vitenzi (Theme 8: Ndege wa porini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO",
+   "key_step": "The child changes the verb end to show done for someone (-ewa/-iwa), can be done (-eka/-ika) or done to each other (-ana).",
+   "floor": {
+    "prerequisite": "Uses kutendea and kutendwa.",
+    "question": "Kauli ya kutendea ya \"pika\" ni?",
+    "answer": "pikia"
+   },
+   "representations": [
+    "three cards: pikiwa, pikika, pikana",
+    "pictures: a gift given to a child, a bird seen easily, friends greeting each other",
+    "a vowel rule chart"
+   ],
+   "steps": [
+    "Find the verb stem.",
+    "Ask: done for, can be done, or to each other?",
+    "Choose the ending by the stem vowel.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "wild birds (ndege wa porini)",
+    "friends greeting",
+    "a game in the field"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ndege wanasalimi___ asubuhi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two birds.",
+     "say": "Wanafanyiana nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"wanasalimiana\" and one sentence with the -eka form."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M_MNY_MIX_FORMS",
+     "listen_for": [
+      "kilivunjiwa"
+     ],
+     "ask": "Soma tena: \"Kikombe kilianguka na ___.\" Kwa nini \"kilivunjiwa\" si jibu sahihi?",
+     "repair": "Kutendeka huonyesha kitu kinaweza kutendwa au kinatendeka chenyewe, kama kuvunjika. Kutendewa huonyesha kitendo kimefanyiwa mtu, kama kupikiwa."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M_MNY_TENDANA_ONE",
+     "listen_for": [
+      "wanasalimu"
+     ],
+     "ask": "Soma tena: \"Marafiki wawili ___ kila asubuhi.\" Kwa nini \"wanasalimu\" si jibu sahihi?",
+     "repair": "Kutendana huonyesha watu wawili au zaidi wanafanyiana kitendo kimoja: kusalimiana, kupendana, kusaidiana."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M_MNY_NO_CHANGE",
+     "listen_for": [
+      "alipika"
+     ],
+     "ask": "Soma tena: \"Mama alimpikia mtoto uji. Mtoto ___ uji na mama.\" Kwa nini \"alipika\" si jibu sahihi?",
+     "repair": "Hapa kitenzi lazima kibadilike kwa kiambishi ili kuonyesha kinachotokea: mama alipikiwa chakula."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M5_MNY_TENDEKA_E",
+     "listen_for": [
+      "somika"
+     ],
+     "ask": "Irabu ya mwisho ya mzizi ni ipi?",
+     "repair": "Kitenzi chenye o au e kwenye mzizi huchukua -eka: someka."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kauli ya kutendana ya \"penda\" ni?",
+     "answer": "pendana",
+     "shows": "reciprocal"
+    },
+    {
+     "question": "Kauli ya kutendewa ya \"andika\" ni?",
+     "answer": "andikiwa",
+     "shows": "prepositional passive"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 6: Bendera ya taifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA",
+   "key_step": "The child reads the article for its parts (title, paragraphs, picture) and gives its main message in one sentence.",
+   "floor": {
+    "prerequisite": "Answers questions on a story.",
+    "question": "Hadithi ilimhusu nani?",
+    "answer": "mhusika"
+   },
+   "representations": [
+    "a short article with a picture",
+    "the parts labelled",
+    "a one-sentence message strip"
+   ],
+   "steps": [
+    "Read the title and look at the picture.",
+    "Read each paragraph.",
+    "Underline the main sentence of each.",
+    "Say the message."
+   ],
+   "contexts": [
+    "the national flag",
+    "a newspaper for children",
+    "a school notice board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bendera Yetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title and the first paragraph.",
+     "say": "Makala haya yanahusu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the message of the article in one sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA.M4_MAK_OUTSIDE",
+     "listen_for": [
+      "dakika tano"
+     ],
+     "ask": "Soma tena: \"Kwa mujibu wa makala, maji yachemshwe kwa muda gani?\" Kwa nini \"dakika tano\" si jibu sahihi?",
+     "repair": "Jibu la swali la makala liko ndani ya makala. Tafuta sentensi inayolisema."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA.M4_MAK_DETAIL_AS_MAIN",
+     "listen_for": [
+      "Maji huchemshwa kwa moto."
+     ],
+     "ask": "Soma tena: \"Ujumbe mkuu wa makala ni upi?\" Kwa nini \"Maji huchemshwa kwa moto.\" si jibu sahihi?",
+     "repair": "Ujumbe mkuu unatokana na makala nzima, si sentensi moja."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA.M4_MAK_DETAIL_MIX",
+     "listen_for": [
+      "jikoni"
+     ],
+     "ask": "Soma tena: \"Makala inasema maji yawekwe wapi baada ya kuchemshwa?\" Kwa nini \"jikoni\" si jibu sahihi?",
+     "repair": "Soma swali tena na utafute sehemu ya makala inayolijibu."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA.M4_MAK_TITLE",
+     "listen_for": [
+      "Bendera Yetu"
+     ],
+     "ask": "Mwandishi anataka ufanye nini baada ya kusoma?",
+     "repair": "Anwani hutaja mada; ujumbe ni kile mwandishi anataka ujue au ufanye."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Makala yana sehemu zipi?",
+     "answer": "anwani, aya na picha",
+     "shows": "parts"
+    },
+    {
+     "question": "Ujumbe wa makala ni nini?",
+     "answer": "wazo kuu la makala yote",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

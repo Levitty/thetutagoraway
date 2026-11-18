@@ -339,6 +339,7 @@ for (const entry of SUBJECT_GRADES.filter(e => e.checks === 'family')) {
   const sciMis = entry.misconceptionsFile ? JSON.parse(readFileSync(resolve(root, entry.misconceptionsFile), 'utf8')) : {};
   const fails = [], sciSoft = [], sciRows = [], revealed = new Set();
   for (const [code, k] of Object.entries(SKILLS_X)) {
+    if ((entry.awaiting || []).includes(code)) { sciSoft.push(`${code}: no family yet (awaiting)`); continue; }   // a deeper map's skill with no family yet (Kiswahili, 18 Nov 2026)
     const fams = sciFams.filter(f => f.cskill === code);
     const texts = [], keys = new Set(), qs = new Set(), forms = new Set(fams.map(f => f.form));
     for (const f of fams) for (let i = 0; i < 30; i++) {

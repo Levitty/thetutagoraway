@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU",
+ "title": "Ngeli ya KU-KU (Theme 7: Elimu ya mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU",
+   "key_step": "The child knows verbal nouns (kusoma, kuimba) are in KU-KU and take ku- in the singular and the plural.",
+   "floor": {
+    "prerequisite": "Forms a verbal noun.",
+    "question": "Kitenzi-jina cha \"soma\" ni?",
+    "answer": "kusoma"
+   },
+   "representations": [
+    "activity cards",
+    "sentence frames with ku-",
+    "a ku- prefix card"
+   ],
+   "steps": [
+    "Find the verbal noun.",
+    "It stays the same.",
+    "Give the verb ku-.",
+    "Read it aloud."
+   ],
+   "contexts": [
+    "environment education: kupanda miti",
+    "sports",
+    "chores"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kupanda miti ___ (kunasaidia)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kupanda\".",
+     "say": "Kitenzi kitachukua kiambishi kipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Kupanda miti kunasaidia mazingira.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M_KUKU_AGR_A",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Soma tena: \"Kusoma ___napendeza.\" Kwa nini \"a\" si jibu sahihi?",
+     "repair": "Nomino za KU-KU hupatana na ku-: kusoma kunapendeza. A- ni ya mtu mmoja."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M_KUKU_AGR_U",
+     "listen_for": [
+      "u"
+     ],
+     "ask": "Soma tena: \"Kucheza ___nafurahisha.\" Kwa nini \"u\" si jibu sahihi?",
+     "repair": "Kitenzi-jina hupatana na ku-, kama kinavyoanza: kucheza kunafurahisha."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M_KUKU_PLURAL",
+     "listen_for": [
+      "makusoma"
+     ],
+     "ask": "Soma tena: \"Wingi wa \"kusoma\" ni ___.\" Kwa nini \"makusoma\" si jibu sahihi?",
+     "repair": "Nomino za KU-KU hazina wingi tofauti. Kusoma hubaki kusoma."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T7_NGELI_YA_KU_KU.KU_KU.M5_KUKU_POSS",
+     "listen_for": [
+      "yake"
+     ],
+     "ask": "Kimilikishi kinapatana na nomino ipi hapa?",
+     "repair": "Kitenzi-jina huchukua kw- katika kimilikishi: kuimba kwake."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kuimba kwake ___ (kunapendeza).",
+     "answer": "kunapendeza",
+     "shows": "agreement"
+    },
+    {
+     "question": "Kitenzi-jina kiko katika ngeli ipi?",
+     "answer": "KU-KU",
+     "shows": "class"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T5_METHALI",
+ "title": "Methali (Theme 5: Ushauri-nasaha)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T5_METHALI.METHALI",
+   "key_step": "The child gives the hidden lesson of a methali on upbringing, not its words, and says when it is used.",
+   "floor": {
+    "prerequisite": "Explains a simple saying.",
+    "question": "Haraka haraka haina baraka. Inafunza nini?",
+    "answer": "tusifanye mambo kwa haraka"
+   },
+   "representations": [
+    "a methali on a strip, cut in two halves",
+    "a situation card",
+    "a literal and a hidden meaning side by side"
+   ],
+   "steps": [
+    "Read the whole methali.",
+    "Say what the words say.",
+    "Ask what it teaches about life.",
+    "Match it to a situation."
+   ],
+   "contexts": [
+    "a grandparent advising a child",
+    "a teacher at assembly",
+    "a story about a lazy child"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Samaki mkunje angali mbichi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mkunje angali mbichi\".",
+     "say": "Methali hii inahusu malezi vipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the lesson (teach a child while young) and gives a situation where it fits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.METHALI.M4_MET_LITERAL",
+     "listen_for": [
+      "Samaki hukunjwa akiwa mbichi"
+     ],
+     "ask": "Soma tena: \"Methali \"Samaki mkunje angali mbichi\" ina maana gani?\" Kwa nini \"Samaki hukunjwa akiwa mbichi\" si jibu sahihi?",
+     "repair": "Methali hutumia maneno ya picha ili kutoa funzo. Maana yake ni funzo, si maneno yenyewe."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.METHALI.M4_MET_OTHER",
+     "listen_for": [
+      "Mtoto afundishwe angali mdogo"
+     ],
+     "ask": "Soma tena: \"Methali \"Mtoto umleavyo ndivyo akuavyo\" ina maana gani?\" Kwa nini \"Mtoto afundishwe angali mdogo\" si jibu sahihi?",
+     "repair": "Kila methali ina funzo lake. Soma maneno yake kwa makini kabla ya kuchagua maana."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.METHALI.M4_MET_NOT",
+     "listen_for": [
+      "Mtoto alicheza uwanjani"
+     ],
+     "ask": "Soma tena: \"Ni methali ipi?\" Kwa nini \"Mtoto alicheza uwanjani\" si jibu sahihi?",
+     "repair": "Methali ni maneno machache yanayotoa funzo la maisha."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T5_METHALI.METHALI.M4_MET_WORDS",
+     "listen_for": [
+      "akiwa"
+     ],
+     "ask": "Soma tena: \"Samaki mkunje ___ mbichi.\" Kwa nini \"akiwa\" si jibu sahihi?",
+     "repair": "Methali husemwa kwa maneno yale yale: \"Samaki mkunje angali mbichi\". Tukibadilisha neno, haitambuliki."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maana ya \"Mtoto umleavyo ndivyo akuavyo\" ni?",
+     "answer": "mtoto hukua kwa jinsi alivyolelewa",
+     "shows": "hidden meaning"
+    },
+    {
+     "question": "Kamilisha: Samaki mkunje ___",
+     "answer": "angali mbichi",
+     "shows": "complete"
+    }
+   ]
+  }
+ ]
+}

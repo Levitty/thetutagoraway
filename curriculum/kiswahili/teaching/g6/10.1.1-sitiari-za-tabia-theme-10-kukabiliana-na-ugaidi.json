@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA",
+ "title": "Sitiari za Tabia (Theme 10: Kukabiliana na ugaidi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI",
+   "key_step": "The child calls a person the animal that stands for the trait (Yeye ni simba = brave), without kama, and knows it is not literal.",
+   "floor": {
+    "prerequisite": "Uses similes of character.",
+    "question": "mjanja kama ___",
+    "answer": "sungura"
+   },
+   "representations": [
+    "folk-tale animal chart",
+    "simile and metaphor pairs",
+    "description cards"
+   ],
+   "steps": [
+    "Name the trait.",
+    "Find the animal for it.",
+    "Say \"X ni Y\" without kama.",
+    "Explain it is not literal."
+   ],
+   "contexts": [
+    "fighting terrorism: a brave police officer",
+    "folk tales",
+    "a sports hero"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Askari yule ni simba."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"simba\".",
+     "say": "Askari ana tabia gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains the sitiari and writes one for a kind person."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M_SIT_WRONG_ANIMAL",
+     "listen_for": [
+      "kobe"
+     ],
+     "ask": "Soma tena: \"Kamau hufanya kazi kutwa nzima bila kuchoka. Kamau ni ___.\" Kwa nini \"kobe\" si jibu sahihi?",
+     "repair": "Kila mnyama hutumika kuonyesha tabia: nyuki (bidii), simba (ujasiri), kobe (polepole), kinyonga (kubadilika), mbweha (ujanja), tausi (kujionyesha)."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M_SIT_TASHBIHI",
+     "listen_for": [
+      "Mwalimu ni kama simba."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi iliyo sitiari.\" Kwa nini \"Mwalimu ni kama simba.\" si jibu sahihi?",
+     "repair": "Tashbihi hulinganisha kwa kutumia \"kama\". Sitiari husema moja ni lingine bila \"kama\"."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M_SIT_LITERAL",
+     "listen_for": [
+      "Mwalimu ana simba."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi iliyo sitiari.\" Kwa nini \"Mwalimu ana simba.\" si jibu sahihi?",
+     "repair": "Sitiari haisemi mtu ana mnyama. Inasema mtu ni mnyama kwa tabia yake."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI.M6_SIT_WRONG_TRAIT",
+     "listen_for": [
+      "Yeye ni fisi."
+     ],
+     "ask": "Katika hadithi, fisi ana tabia gani?",
+     "repair": "Fisi huwakilisha ulafi; njiwa huwakilisha upole."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Badilisha tashbihi kuwa sitiari: \"Ni mpole kama njiwa.\"",
+     "answer": "Yeye ni njiwa.",
+     "shows": "form"
+    },
+    {
+     "question": "\"Mwalimu wetu ni simba\" maana yake ni?",
+     "answer": "ni shujaa au jasiri",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

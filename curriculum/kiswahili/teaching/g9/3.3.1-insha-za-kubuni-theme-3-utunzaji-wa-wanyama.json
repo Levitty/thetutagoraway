@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T3_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 3: Utunzaji wa wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T3_INSHA_ZA_KUBUNI.KUBUNI_UJUMBE",
+   "key_step": "The child plans insha ya kubuni before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "mbwa aliyeokoa familia",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mbwa Aliyeokoa Familia"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Mbwa Aliyeokoa Familia\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T3_INSHA_ZA_KUBUNI.KUBUNI_UJUMBE.M9_INS_PARAS_T3",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T3_INSHA_ZA_KUBUNI.KUBUNI_UJUMBE.M9_INS_WAHUSIKA_T3",
+     "listen_for": [
+      "Mtu mmoja alikuja."
+     ],
+     "ask": "Msomaji anamwona mhusika huyu?",
+     "repair": "Wape wahusika majina, sura na tabia zinazoonekana kwa matendo yao."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T3_INSHA_ZA_KUBUNI.KUBUNI_UJUMBE.M9_INS_END_T3",
+     "listen_for": [
+      "Mwisho."
+     ],
+     "ask": "Msomaji anajifunza nini katika aya ya mwisho?",
+     "repair": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T3_INSHA_ZA_KUBUNI.KUBUNI_UJUMBE.M9_INS_OFFTOPIC_T3",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya kubuni kuhusu \"Mbwa Aliyeokoa Familia\"?",
+     "answer": "Mbwa Simba, mwenye macho ya kahawia, alisimama mlangoni akibweka bila kukoma.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya kubuni ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

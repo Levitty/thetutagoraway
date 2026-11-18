@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT",
+ "title": "Kusoma kwa Kina Tamthilia (Theme 8: Uhalifu wa mtandaoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MANDHARI",
+   "key_step": "The child names the mandhari with the right term, proves each point with a line or event from \"Kilio cha Msitu\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class tamthilia \"Kilio cha Msitu\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "uhalifu wa mtandaoni",
+    "the class tamthilia",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kilio cha Msitu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni mandhari gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MANDHARI.M8_FAS_PLACEONLY_T8",
+     "listen_for": [
+      "kijiji cha Msitu Mweusi"
+     ],
+     "ask": "Matukio yalitokea lini, na katika hali gani?",
+     "repair": "Mandhari ni mahali, wakati na hali ambamo matukio yanatokea."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MANDHARI.M8_FAS_PLOT_LIST_T8",
+     "listen_for": [
+      "orodha ya wahusika: Bi. Zuhura na Kazungu"
+     ],
+     "ask": "Ni tukio lipi lilisababisha lingine?",
+     "repair": "Ploti ni msuko wa matukio na jinsi yanavyofuatana."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MANDHARI.M8_FAS_PLOT_ORDER_T8",
+     "listen_for": [
+      "Zuhura anazuia malori ya mbao"
+     ],
+     "ask": "Tukio hili liko sura au onyesho gani?",
+     "repair": "Fuata mpangilio wa matukio kama yalivyo katika kazi."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MANDHARI.M8_FAS_NOUSE_T8",
+     "listen_for": [
+      "ni mahali tu hadithi ilipotokea"
+     ],
+     "ask": "Hadithi hii ingetokea vivyo hivyo mahali pengine?",
+     "repair": "Mandhari hujenga hali, huonyesha maudhui na huathiri matendo ya wahusika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mandhari ya \"Kilio cha Msitu\" ni yapi?",
+     "answer": "kijiji cha Msitu Mweusi, wakati wa kampeni za uchaguzi",
+     "shows": "mandhari"
+    },
+    {
+     "question": "Ploti ya \"Kilio cha Msitu\" ni nini?",
+     "answer": "mfuatano wa matukio tangu mwanzo hadi mwisho",
+     "shows": "mandhari, second form"
+    }
+   ]
+  }
+ ]
+}

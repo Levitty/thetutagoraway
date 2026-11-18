@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 5: Kukabiliana na umaskini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
+   "key_step": "The child counts mizani by syllables (every syllable ends in a vowel) and finds vina at the middle and the end of each line.",
+   "floor": {
+    "prerequisite": "Splits a word into syllables.",
+    "question": "Silabi za \"bidii\" ni?",
+    "answer": "bi-di-i"
+   },
+   "representations": [
+    "a line with syllables marked",
+    "vina coloured at the middle and end",
+    "clapping"
+   ],
+   "steps": [
+    "Read the line.",
+    "Split it into syllables.",
+    "Count them (mizani).",
+    "Find the last syllable of each half (vina)."
+   ],
+   "contexts": [
+    "facing poverty: a poem on hard work",
+    "a poetry festival",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bidii ni kazi yetu, tufanye bila uvivu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"tu\" and \"vu\".",
+     "say": "Vina vya mshororo huu ni vipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child counts the mizani of two lines and marks the vina."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_COUNT_WORDS",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Soma tena: \"Mshororo \"Mama anapika\" una mizani mingapi?\" Kwa nini \"2\" si jibu sahihi?",
+     "repair": "Mizani ni silabi, yaani sehemu za sauti. Hesabu silabi (ma-ma a-na-pi-ka), si maneno."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_COUNT_LETTERS",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Soma tena: \"Mshororo \"Nenda shule\" una mizani mingapi?\" Kwa nini \"10\" si jibu sahihi?",
+     "repair": "Mizani si herufi. Kwa kawaida kila irabu huanza silabi: ne-nda shu-le ni mizani 5."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_VINA_START",
+     "listen_for": [
+      "ma-"
+     ],
+     "ask": "Soma tena: \"Vina vya mishororo hii ni vipi?\" Kwa nini \"ma-\" si jibu sahihi?",
+     "repair": "Vina ni sauti za mwisho zinazofanana katika mishororo. Tazama mwisho wa kila mshororo."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_VINA_WORD",
+     "listen_for": [
+      "hakuna"
+     ],
+     "ask": "Soma tena: \"Mishororo \"shambani\" na \"nyumbani\" ina vina vipi?\" Kwa nini \"hakuna\" si jibu sahihi?",
+     "repair": "Vina ni sauti za mwisho zinazofanana, si neno lilelile. Shambani na nyumbani zina vina -ani."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M_SHA_MISCOUNT",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Soma tena: \"Mshororo \"Soma kwa bidii\" una mizani mingapi?\" Kwa nini \"5\" si jibu sahihi?",
+     "repair": "Kila irabu ni silabi tofauti: bidii ni bi-di-i, yaani mizani 3. Hesabu kila irabu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mizani ya \"Kazi ni uhai\" ni mingapi?",
+     "answer": "6",
+     "shows": "counting"
+    },
+    {
+     "question": "Vina hupatikana wapi katika mshororo?",
+     "answer": "mwisho wa kipande cha kwanza na cha pili",
+     "shows": "vina"
+    }
+   ]
+  }
+ ]
+}

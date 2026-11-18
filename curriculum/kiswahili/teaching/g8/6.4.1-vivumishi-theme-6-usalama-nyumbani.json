@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T6_VIVUMISHI",
+ "title": "Vivumishi (Theme 6: Usalama nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T6_VIVUMISHI.VIVUMISHI_SIFA",
+   "key_step": "The child uses adjectives of quality and demonstratives with the class prefix, and knows the loan adjectives that never change.",
+   "floor": {
+    "prerequisite": "Uses adjectives of quality.",
+    "question": "kitabu ___ (-zuri)",
+    "answer": "kizuri"
+   },
+   "representations": [
+    "a class prefix table",
+    "loan adjective list",
+    "sentence frames"
+   ],
+   "steps": [
+    "Find the noun and its class.",
+    "Does the adjective change?",
+    "Add the prefix or leave it.",
+    "Add the demonstrative after."
+   ],
+   "contexts": [
+    "home safety: a sharp knife",
+    "a market",
+    "a classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kisu ___ (-kali) ___ (huu/hiki)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kisu\".",
+     "say": "Kisu kiko katika ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kisu kikali hiki\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T6_VIVUMISHI.VIVUMISHI_SIFA.M_KS8_VS_SIFA",
+     "listen_for": [
+      "huyu"
+     ],
+     "ask": "Soma tena: \"Ni kivumishi cha sifa kipi?\" Kwa nini \"huyu\" si jibu sahihi?",
+     "repair": "Mzuri ni kivumishi cha sifa."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T6_VIVUMISHI.VIVUMISHI_SIFA.M_KS8_VS_ASHIRIA",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Soma tena: \"Ni kivumishi cha kuashiria kipi?\" Kwa nini \"mzuri\" si jibu sahihi?",
+     "repair": "Huyu ni kivumishi cha kuashiria."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T6_VIVUMISHI.VIVUMISHI_SIFA.M_KS8_VS_NAFASI",
+     "listen_for": [
+      "Mzuri mtoto"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi imepangwa sawa?\" Kwa nini \"Mzuri mtoto\" si jibu sahihi?",
+     "repair": "Kivumishi hufuata nomino."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T6_VIVUMISHI.VIVUMISHI_SIFA.M8_VS_LOAN_AGREE",
+     "listen_for": [
+      "nghali"
+     ],
+     "ask": "Kivumishi hiki hubadilika kwa ngeli?",
+     "repair": "Baadhi ya vivumishi havibadiliki: dawa ghali, kitabu ghali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: viatu ___ (-pya) ___ (vile/wale)",
+     "answer": "vipya vile",
+     "shows": "quality + demonstrative"
+    },
+    {
+     "question": "Jaza: Mwalimu ___ (hodari)",
+     "answer": "hodari",
+     "shows": "loan adjective"
+    }
+   ]
+  }
+ ]
+}

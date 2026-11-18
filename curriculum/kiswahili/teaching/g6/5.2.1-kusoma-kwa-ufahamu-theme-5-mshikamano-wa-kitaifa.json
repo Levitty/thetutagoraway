@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 5: Mshikamano wa kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA",
+   "key_step": "The child counts the mishororo of an ubeti to name the kind (2 tathnia, 3 tathlitha, 4 tarbia), finds ukwapi and utao, and reads the poem for its message.",
+   "floor": {
+    "prerequisite": "Counts mizani and finds vina.",
+    "question": "Vina viko wapi?",
+    "answer": "mwisho wa vipande"
+   },
+   "representations": [
+    "three stanzas of 2, 3 and 4 lines",
+    "ukwapi and utao coloured",
+    "a kind chart"
+   ],
+   "steps": [
+    "Count the lines in one ubeti.",
+    "Name the kind.",
+    "Mark ukwapi and utao.",
+    "Read and give the message."
+   ],
+   "contexts": [
+    "national unity (mshikamano wa kitaifa)",
+    "a poetry festival",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ubeti wenye mishororo 4"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the four lines.",
+     "say": "Shairi hili ni la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names three stanzas and marks ukwapi and utao in one line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_AINA_SWAP",
+     "listen_for": [
+      "tathlitha"
+     ],
+     "ask": "Soma tena: \"Ubeti wenye mishororo miwili huitwa ___.\" Kwa nini \"tathlitha\" si jibu sahihi?",
+     "repair": "Tathnia ni mishororo miwili, tathlitha mitatu na tarbia minne. Jina linaonyesha idadi."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_AINA_COUNT",
+     "listen_for": [
+      "tathlitha"
+     ],
+     "ask": "Soma tena: \"Ubeti huu ni wa aina gani? \"Mvua imenyesha, / Mito imejaa.\"\" Kwa nini \"tathlitha\" si jibu sahihi?",
+     "repair": "Hesabu mishororo kwanza. Mistari miwili ni tathnia, mitatu ni tathlitha, minne ni tarbia."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_UKWAPI_SWAP",
+     "listen_for": [
+      "utao"
+     ],
+     "ask": "Soma tena: \"Kipande cha kwanza cha mshororo wa shairi huitwa ___.\" Kwa nini \"utao\" si jibu sahihi?",
+     "repair": "Mshororo hugawanyika katika sehemu mbili: ukwapi ni ya kwanza, utao ni ya pili."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA.M_SHA_PART_MIX",
+     "listen_for": [
+      "vina"
+     ],
+     "ask": "Soma tena: \"Kipande cha pili cha mshororo wa shairi huitwa ___.\" Kwa nini \"vina\" si jibu sahihi?",
+     "repair": "Vina ni sauti za mwisho zinazofanana, na mizani ni silabi. Vipande vya mshororo ni ukwapi na utao."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ubeti wenye mishororo mitatu ni?",
+     "answer": "tathlitha",
+     "shows": "kind"
+    },
+    {
+     "question": "Kipande cha kwanza cha mshororo huitwa?",
+     "answer": "ukwapi",
+     "shows": "part"
+    }
+   ]
+  }
+ ]
+}

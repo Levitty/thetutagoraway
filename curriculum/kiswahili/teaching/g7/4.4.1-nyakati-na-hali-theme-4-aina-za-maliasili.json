@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI",
+ "title": "Nyakati na Hali; (Theme 4: Aina za maliasili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI",
+   "key_step": "The child reads the time words and gives the tense marker (-li-, -na-, -ta-), keeping ku- with one-syllable verbs.",
+   "floor": {
+    "prerequisite": "Finds the verb.",
+    "question": "Kitenzi ni kipi: \"Tulipanda miti.\"",
+    "answer": "tulipanda"
+   },
+   "representations": [
+    "a timeline",
+    "marker cards",
+    "one-syllable verb list (la, nywa, ja)"
+   ],
+   "steps": [
+    "Find the time word.",
+    "Choose the marker.",
+    "Keep ku- for a one-syllable verb.",
+    "Read it."
+   ],
+   "contexts": [
+    "natural resources (aina za maliasili)",
+    "a school calendar",
+    "a journey"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jana tu___ (nywa) maji ya mto."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Jana\" and \"nywa\".",
+     "say": "Kiambishi ni kipi, na ku- inabaki?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"tulikunywa\" and the future \"tutakunywa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M_KS7_NY_LI",
+     "listen_for": [
+      "ujao"
+     ],
+     "ask": "Soma tena: \"Katika \"Juma alicheza jana\", wakati ni upi?\" Kwa nini \"ujao\" si jibu sahihi?",
+     "repair": "Kiambishi -li- huonyesha wakati uliopita."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M_KS7_NY_NA",
+     "listen_for": [
+      "uliopita"
+     ],
+     "ask": "Soma tena: \"Katika \"Mama anapika sasa\", wakati ni upi?\" Kwa nini \"uliopita\" si jibu sahihi?",
+     "repair": "Kiambishi -na- huonyesha wakati uliopo."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M_KS7_NY_TA",
+     "listen_for": [
+      "uliopo"
+     ],
+     "ask": "Soma tena: \"Katika \"Tutasafiri kesho\", wakati ni upi?\" Kwa nini \"uliopo\" si jibu sahihi?",
+     "repair": "Kiambishi -ta- huonyesha wakati ujao."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T4_NYAKATI_NA_HALI.NYAKATI_MSINGI.M7_NY_TA_KW",
+     "listen_for": [
+      "tutala"
+     ],
+     "ask": "Kitenzi \"la\" kina silabi ngapi?",
+     "repair": "Vitenzi vya silabi moja huhifadhi ku-: tutakula."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kesho wa___ (ja) shuleni.",
+     "answer": "watakuja",
+     "shows": "future"
+    },
+    {
+     "question": "Kiambishi cha wakati katika \"anapanda\" ni?",
+     "answer": "-na-",
+     "shows": "identify"
+    }
+   ]
+  }
+ ]
+}

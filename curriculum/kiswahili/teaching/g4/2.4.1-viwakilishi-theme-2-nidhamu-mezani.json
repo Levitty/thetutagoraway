@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T2_VIWAKILISHI",
+ "title": "Viwakilishi (Theme 2: Nidhamu mezani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI",
+   "key_step": "The child replaces a noun already named with the pronoun that matches its person and number.",
+   "floor": {
+    "prerequisite": "Uses yeye and wao.",
+    "question": "Juma na Ali ni ___ .",
+    "answer": "wao"
+   },
+   "representations": [
+    "a person chart: mimi, wewe, yeye; sisi, nyinyi, wao",
+    "pointing gestures near and far",
+    "a short text with repeated names to replace"
+   ],
+   "steps": [
+    "Find the noun that repeats.",
+    "Ask: one or many? me, you, or another?",
+    "Choose the pronoun.",
+    "Read the sentence again."
+   ],
+   "contexts": [
+    "a family introducing itself",
+    "a class register",
+    "friends at play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Amina amefika. Amina ni rafiki yangu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second \"Amina\".",
+     "say": "Tunaweza kusema nini badala yake?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rewrites the second sentence with \"Yeye\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI.M4_PRON_NOUN",
+     "listen_for": [
+      "Wanjiru"
+     ],
+     "ask": "Unaweza kutumia neno gani badala ya kurudia jina?",
+     "repair": "Badala ya kurudia jina, tumia kiwakilishi: yeye, wao."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI.M4_PRON_NUMBER",
+     "listen_for": [
+      "Yeye"
+     ],
+     "ask": "Soma tena: \"Juma na Otieno ni marafiki. ___ wanacheza pamoja.\" Kwa nini \"Yeye\" si jibu sahihi?",
+     "repair": "\"Yeye\" ni mtu mmoja. \"Wao\" ni watu wengi. Juma na Otieno ni wawili, kwa hiyo ni \"wao\"."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI.M4_PRON_PERSON",
+     "listen_for": [
+      "Wao"
+     ],
+     "ask": "Soma tena: \"Mimi na wewe ni marafiki. ___ tunasoma pamoja.\" Kwa nini \"Wao\" si jibu sahihi?",
+     "repair": "\"Sisi\" ni mimi na wengine. \"Wao\" ni watu wengine, bila mimi."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI.M4_PRON_DIST",
+     "listen_for": [
+      "Yule"
+     ],
+     "ask": "Soma tena: \"Angalia, ___ ni mwalimu wetu, ameketi karibu nami.\" Kwa nini \"Yule\" si jibu sahihi?",
+     "repair": "\"Huyu\" na \"hawa\" hutumika kwa walio karibu. \"Yule\" na \"wale\" hutumika kwa walio mbali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mimi na wewe ni ___ .",
+     "answer": "sisi",
+     "shows": "person and number"
+    },
+    {
+     "question": "Jaza: Kitabu kile ni chako; ___ hapa ni changu.",
+     "answer": "hiki",
+     "shows": "near and far"
+    }
+   ]
+  }
+ ]
+}

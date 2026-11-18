@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO",
+ "title": "Ukanushaji wa Maneno (Theme 11: Ushuru)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI",
+   "key_step": "The child negates -ki- with -sipo- (usiposoma), -nge- with -singe- (asingekuja) and -ngali- with -singali-.",
+   "floor": {
+    "prerequisite": "Uses condition markers.",
+    "question": "Jaza: U___soma, utapita.",
+    "answer": "Ukisoma"
+   },
+   "representations": [
+    "positive and negative pairs",
+    "marker cards -ki- / -sipo-, -nge- / -singe-",
+    "a sentence frame"
+   ],
+   "steps": [
+    "Find the condition marker.",
+    "Choose its negative.",
+    "Keep the person prefix.",
+    "Negate the result too if needed."
+   ],
+   "contexts": [
+    "taxes (ushuru): asipolipa ushuru",
+    "study habits",
+    "road safety"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ukisoma -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"-ki-\".",
+     "say": "Tukikanusha inakuwa nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Usiposoma\" and the negative of \"Angekuja\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M_UKM_SI_ONLY",
+     "listen_for": [
+      "Usikisoma"
+     ],
+     "ask": "Soma tena: \"Neno \"Ukisoma\" likikanushwa huwa ___.\" Kwa nini \"Usikisoma\" si jibu sahihi?",
+     "repair": "Katika ukanushaji wa masharti, ki- hubadilika kuwa -sipo-: Ukisoma, Usiposoma."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M_UKM_KEEP_KI",
+     "listen_for": [
+      "Hakija"
+     ],
+     "ask": "Soma tena: \"Neno \"Akija\" likikanushwa huwa ___.\" Kwa nini \"Hakija\" si jibu sahihi?",
+     "repair": "Ha- haikanushi -ki-. Ki- hubadilika kuwa -sipo-."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M_UKM_COMMAND",
+     "listen_for": [
+      "Usisome"
+     ],
+     "ask": "Soma tena: \"Neno \"Ukisoma\" likikanushwa huwa ___.\" Kwa nini \"Usisome\" si jibu sahihi?",
+     "repair": "Usisome ni amri ya kutosoma. Sharti hasi la Ukisoma ni Usiposoma."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI.M6_UKM_NGE_NEG",
+     "listen_for": [
+      "Hangekuja, hatungefurahi."
+     ],
+     "ask": "Kiambishi cha kukanusha -nge- ni kipi?",
+     "repair": "Hali ya -nge- hukanushwa kwa -singe-: asingekuja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Wakicheza",
+     "answer": "Wasipocheza",
+     "shows": "-sipo-"
+    },
+    {
+     "question": "Kanusha: Ningejua",
+     "answer": "Nisingejua",
+     "shows": "-singe-"
+    }
+   ]
+  }
+ ]
+}

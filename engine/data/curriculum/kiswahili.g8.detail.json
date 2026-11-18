@@ -243,6 +243,14 @@
   "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.d": "kuchangamkia matumizi ya usemi halisi na usemi wa taarifa katika mawasiliano"
  },
  "skills": {
+  "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO": {
+   "forms": [
+    "chagua jibu bora",
+    "tambua kosa la mzungumzaji",
+    "igiza (mwalimu anasikiliza)"
+   ],
+   "mastery": "Names the features to keep in this kind of talk (mahojiano), picks the better of two ways to listen or reply in a situation on usafi wa soko la mji, and takes part in one in standard Kiswahili, judged by the teacher with the KICD rubric; in the app, 8 of 10 new items right."
+  },
   "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI": {
    "forms": [
     "chagua jibu sahihi",
@@ -287,6 +295,15 @@
    ],
    "mastery": "Mtoto hutambua viwakilishi vya nafsi (mimi, wewe, yeye, sisi, ninyi, wao), vionyeshi (huyu, huyo, yule) na vya idadi (wawili, watatu), na huvitumia badala ya nomino. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI": {
+   "forms": [
+    "chagua neno ulilosikia",
+    "chagua maana ya neno",
+    "jaza pengo kwa neno sahihi",
+    "tambua kitanzandimi"
+   ],
+   "mastery": "Hears, says and writes the right sound in syllables and words with /gh/ na /g/ (ghali and gali, lugha and luga), picks the word that matches the meaning, and tells a real kitanzandimi from an ordinary sentence, in 8 of 10 new items."
+  },
   "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE": {
    "forms": [
     "chagua jibu sahihi",
@@ -302,6 +319,15 @@
    ],
    "mastery": "Mtoto hueleza kuwa barua ya shukrani huonyesha kuthamini wema na hutambua vipengele vyake (anwani, tarehe, salamu, ujumbe, hitimisho, jina). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI.KUANDIKA_SHUKRANI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells barua ya kirafiki from other kinds of writing and its parts, and writes a friendly letter with the address, date, greeting, asking after the friend, the news, and a friendly closing; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T2_VIWAKILISHI.VIW_ULIZI": {
    "forms": [
     "chagua jibu sahihi",
@@ -310,6 +336,33 @@
    ],
    "mastery": "Mtoto hutambua viwakilishi viulizi (nani, nini, lipi, kipi, ngapi) vinavyouliza, na vya sifa vinavyochukua nafasi ya nomino na sifa yake (mrefu amefika). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSIKI.T3_HADITHI.MIGHANI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa mfano",
+    "tambua kosa",
+    "wasilisha (mwalimu anasikiliza)"
+   ],
+   "mastery": "Explains the maana of hadithi (mighani, visasili) with the right terms and examples, gives evidence or a reason for each point, and presents one with its formula, voice, gestures and audience part (presentation scored by the teacher), in 8 of 10 new items."
+  },
+  "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA.TAMTHILIA_UTANZU": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa ushahidi kutoka kazi",
+    "tambua kosa katika uchambuzi",
+    "jibu fupi la kuandika"
+   ],
+   "mastery": "Explains the utanzu of a tamthilia read in class (\"Kilio cha Msitu\") with a correct term, gives evidence from the text for every point, and says why it matters to the work, in 8 of 10 new items (longer written answers marked by the teacher)."
+  },
+  "KISW.G8.KUANDI.T3_INSHA_ZA_KUBUNI.KUBUNI_WAZO_KUU": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya kubuni from other kinds of writing and its parts, and writes a creative story built paragraph by paragraph, with characters, a setting and vivid language; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T3_VIWAKILISHI.VIW_MILIKISHI": {
    "forms": [
     "chagua jibu sahihi",
@@ -317,6 +370,32 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua kimilikishi (changu, chake, chetu, vyao) kinachoonyesha umiliki na kisisitizi (mwenyewe, wenyewe) kinachosisitiza mtu au kitu. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUSIKI.T4_HADITHI.VISASILI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa mfano",
+    "tambua kosa",
+    "wasilisha (mwalimu anasikiliza)"
+   ],
+   "mastery": "Explains the uwasilishaji of hadithi (visasili, mighani) with the right terms and examples, gives evidence or a reason for each point, and presents one with its formula, voice, gestures and audience part (presentation scored by the teacher), in 8 of 10 new items."
+  },
+  "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Reads a short passage aloud at a speaking pace, pauses at the koma and the kikomo, raises the voice for a question and shows feeling for an exclamation, says every sound clearly (no l for r), and uses a matching gesture, judged by the teacher with the KICD rubric; in the app picks the better reading of a line in 8 of 10 new items."
+  },
+  "KISW.G8.KUANDI.T4_INSHA_ZA_KUBUNI.KUBUNI_MBINU": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya kubuni from other kinds of writing and its parts, and writes a creative story built paragraph by paragraph, with characters, a setting and vivid language; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.MAZOEA_TIMILIFU": {
    "forms": [
@@ -340,6 +419,15 @@
    ],
    "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUANDI.T5_INSHA_YA_MAELEKEZO.MAELEKEZO": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelekezo from other kinds of writing and its parts, and writes instructions with their purpose, the materials, the steps in order as commands, and safety warnings; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.TIMILIFU_WAKATI": {
    "forms": [
     "chagua jibu sahihi",
@@ -355,6 +443,24 @@
    ],
    "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MAUDHUI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa ushahidi kutoka kazi",
+    "tambua kosa katika uchambuzi",
+    "jibu fupi la kuandika"
+   ],
+   "mastery": "Explains the maudhui of a tamthilia read in class (\"Kilio cha Msitu\") with a correct term, gives evidence from the text for every point, and says why it matters to the work, in 8 of 10 new items (longer written answers marked by the teacher)."
+  },
+  "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.MDOKEZO": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya mdokezo from other kinds of writing and its parts, and writes a story that starts or ends with the exact words given and leads to them; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T6_VIVUMISHI.VIVUMISHI_SIFA": {
    "forms": [
     "chagua jibu sahihi",
@@ -363,6 +469,31 @@
    ],
    "mastery": "Mtoto hutambua kivumishi cha sifa (mzuri, refu) kinachoeleza nomino na kivumishi cha kuashiria (huyu, huo, ile) kinachoonyesha nomino. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSIKI.T7_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI": {
+   "forms": [
+    "chagua jibu bora",
+    "tambua kosa la mzungumzaji",
+    "igiza (mwalimu anasikiliza)"
+   ],
+   "mastery": "Names the features to keep in this kind of talk (husishi), picks the better of two ways to listen or reply in a situation on kumsaidia mwanafunzi mwenye ulemavu, and takes part in one in standard Kiswahili, judged by the teacher with the KICD rubric; in the app, 8 of 10 new items right."
+  },
+  "KISW.G8.KUSOMA.T7_.KUFUPISHA": {
+   "forms": [
+    "chagua hoja kuu",
+    "tambua kisichofaa katika ufupisho",
+    "andika ufupisho (mwalimu anasahihisha)"
+   ],
+   "mastery": "Explains what a summary is, picks the main points of a passage on the theme (not the examples), and writes them in his own words, in order, within the word limit and without his own opinion; written summaries are marked by the teacher, and in the app the child picks the right point in 8 of 10 new items."
+  },
+  "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI.MAELEZO_TAMATHALI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelezo from other kinds of writing and its parts, and writes a description or explanation with exact vocabulary, ordered paragraphs and vivid language; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T7_VIVUMISHI.VIVUMISHI_MILIKI": {
    "forms": [
     "chagua jibu sahihi",
@@ -370,6 +501,23 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua kivumishi kimilikishi (kitabu changu, nyumba yake) na cha idadi (watoto wawili, vitabu vitatu) kinachofuata nomino. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.PAPO_KWA_HAPO": {
+   "forms": [
+    "chagua jibu bora",
+    "tambua kosa la mzungumzaji",
+    "igiza (mwalimu anasikiliza)"
+   ],
+   "mastery": "Names the features to keep in this kind of talk (papo), picks the better of two ways to listen or reply in a situation on jinsi ya kujikinga na wezi wa mtandaoni, and takes part in one in standard Kiswahili, judged by the teacher with the KICD rubric; in the app, 8 of 10 new items right."
+  },
+  "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MANDHARI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa ushahidi kutoka kazi",
+    "tambua kosa katika uchambuzi",
+    "jibu fupi la kuandika"
+   ],
+   "mastery": "Explains the mandhari of a tamthilia read in class (\"Kilio cha Msitu\") with a correct term, gives evidence from the text for every point, and says why it matters to the work, in 8 of 10 new items (longer written answers marked by the teacher)."
   },
   "KISW.G8.KUANDI.T8_VIAKIFISHI.MTAJO_MSHAZARI": {
    "forms": [
@@ -387,12 +535,30 @@
    ],
    "mastery": "Mtoto hutambua nomino za I-ZI (nyumba, meza, ndege, barua) na hutumia viambishi i- (umoja) na zi- (wingi): nyumba inapendeza, nyumba zinapendeza. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI": {
+   "forms": [
+    "chagua neno ulilosikia",
+    "chagua maana ya neno",
+    "jaza pengo kwa neno sahihi",
+    "tambua kitanzandimi"
+   ],
+   "mastery": "Hears, says and writes the right sound in syllables and words with /ch/ na /sh/ (chaka and shaka, chali and shali), picks the word that matches the meaning, and tells a real kitanzandimi from an ordinary sentence, in 8 of 10 new items."
+  },
   "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI": {
    "forms": [
     "chagua jibu sahihi",
     "chagua jibu katika matini ya pili"
    ],
    "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI.KUBUNI_AYA": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya kubuni from other kinds of writing and its parts, and writes a creative story built paragraph by paragraph, with characters, a setting and vivid language; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_UU_UYA": {
    "forms": [
@@ -402,6 +568,24 @@
    ],
    "mastery": "Mtoto hutambua nomino za U-U (uji, ugali, unga, upendo) zinazotumia u-: uji umeiva, na za U-YA (ugonjwa, magonjwa) zinazotumia u- na ya-: ugonjwa unaumiza, magonjwa yanaumiza. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSIKI.T10_HADITHI.HURAFA_HEKAYA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa mfano",
+    "tambua kosa",
+    "wasilisha (mwalimu anasikiliza)"
+   ],
+   "mastery": "Explains the maana of hadithi (hurafa, hekaya) with the right terms and examples, gives evidence or a reason for each point, and presents one with its formula, voice, gestures and audience part (presentation scored by the teacher), in 8 of 10 new items."
+  },
+  "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA.TAMTHILIA_WAHUSIKA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa ushahidi kutoka kazi",
+    "tambua kosa katika uchambuzi",
+    "jibu fupi la kuandika"
+   ],
+   "mastery": "Explains the wahusika of a tamthilia read in class (\"Kilio cha Msitu\") with a correct term, gives evidence from the text for every point, and says why it matters to the work, in 8 of 10 new items (longer written answers marked by the teacher)."
+  },
   "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAADA": {
    "forms": [
     "chagua jibu sahihi",
@@ -410,6 +594,15 @@
    ],
    "mastery": "Mtoto hutambua vipengele vya barua rasmi (anwani mbili, tarehe, salamu rasmi, kichwa, ujumbe, hitimisho) na kuwa lugha yake ni ya heshima. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_MSAADA": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells barua rasmi from other kinds of writing and its parts, and writes an official letter with two addresses, the date, a formal greeting, a KUH: line, the message and Wako mtiifu with a signature; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.VINYUME_VITENZI": {
    "forms": [
     "chagua jibu sahihi",
@@ -417,6 +610,32 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hueleza kinyume ni neno lenye maana kinyume na hutambua vinyume vya vitenzi (fungua na funga, nunua na uza) na vya vielezi (juu na chini, mbele na nyuma, polepole na haraka). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.VIDOKEZO": {
+   "forms": [
+    "chagua jibu bora",
+    "tambua kosa la mzungumzaji",
+    "igiza (mwalimu anasikiliza)"
+   ],
+   "mastery": "Names the features to keep in this kind of talk (vidokezo), picks the better of two ways to listen or reply in a situation on haki ya mtoto kupata elimu, and takes part in one in standard Kiswahili, judged by the teacher with the KICD rubric; in the app, 8 of 10 new items right."
+  },
+  "KISW.G8.KUSOMA.T11_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA": {
+   "forms": [
+    "chagua matini ifaayo",
+    "chagua ujumbe",
+    "tambua aina ya matini",
+    "eleza maana ya neno"
+   ],
+   "mastery": "Chooses a text that suits his reading level and interest from its title, blurb and first page (not from the cover alone), tells the kind of text (hadithi, shairi, makala, gazeti), says its message in one sentence, and works out a new word from the sentence around it, in 8 of 10 new items."
+  },
+  "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_VIPENGELE": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelezo from other kinds of writing and its parts, and writes a description or explanation with exact vocabulary, ordered paragraphs and vivid language; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDEKA": {
    "forms": [
@@ -433,6 +652,23 @@
    ],
    "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Reads a short passage aloud at a speaking pace, pauses at the koma and the kikomo, raises the voice for a question and shows feeling for an exclamation, says every sound clearly (no l for r), and uses a matching gesture, judged by the teacher with the KICD rubric; in the app picks the better reading of a line in 8 of 10 new items."
+  },
+  "KISW.G8.KUANDI.T12_INSHA_ZA_KIUAMILIFU.HOTUBA_UFAFANUZI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells hotuba from other kinds of writing and its parts, and writes a speech with the itifaki, words spoken to the audience, facts the listener can use and a closing with thanks; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_CHANGAMANO": {
    "forms": [
     "chagua jibu sahihi",
@@ -440,6 +676,33 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hueleza sentensi changamano ina kishazi huru (kinachojitegemea) na kishazi tegemezi (kisichojitegemea), kama \"Mtoto aliyeshinda alipewa zawadi\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUSIKI.T13_HADITHI.WAHUSIKA_HADITHI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa mfano",
+    "tambua kosa",
+    "wasilisha (mwalimu anasikiliza)"
+   ],
+   "mastery": "Explains the wahusika of hadithi (hurafa, ngano) with the right terms and examples, gives evidence or a reason for each point, and presents one with its formula, voice, gestures and audience part (presentation scored by the teacher), in 8 of 10 new items."
+  },
+  "KISW.G8.KUSOMA.T13_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MBINU": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa ushahidi kutoka kazi",
+    "tambua kosa katika uchambuzi",
+    "jibu fupi la kuandika"
+   ],
+   "mastery": "Explains the mbinu of a tamthilia read in class (\"Kilio cha Msitu\") with a correct term, gives evidence from the text for every point, and says why it matters to the work, in 8 of 10 new items (longer written answers marked by the teacher)."
+  },
+  "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_MAHALI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelezo from other kinds of writing and its parts, and writes a description or explanation with exact vocabulary, ordered paragraphs and vivid language; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI_TIMILIFU": {
    "forms": [
@@ -449,12 +712,30 @@
    ],
    "mastery": "Mtoto hukanusha hali timilifu kwa ha-ja- (amefika, hajafika) na hali ya mazoea kwa kuondoa hu- (hufika, hafiki). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G8.KUSIKI.T14_HADITHI.LUGHA_HADITHI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "toa mfano",
+    "tambua kosa",
+    "wasilisha (mwalimu anasikiliza)"
+   ],
+   "mastery": "Explains the lugha of hadithi (hurafa, ngano) with the right terms and examples, gives evidence or a reason for each point, and presents one with its formula, voice, gestures and audience part (presentation scored by the teacher), in 8 of 10 new items."
+  },
   "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA": {
    "forms": [
     "chagua jibu sahihi",
     "chagua jibu katika matini ya pili"
    ],
    "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO.MAELEKEZO": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelekezo from other kinds of writing and its parts, and writes instructions with their purpose, the materials, the steps in order as commands, and safety warnings; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.UDOGO": {
    "forms": [
@@ -463,6 +744,14 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua kijiji (mji mdogo), kijiti (mti mdogo), kijumba (nyumba ndogo) na kitoto (mtoto mdogo), na kuwa ki- na kiambishi chake huonyesha udogo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI.USIKILIZAJI_HUSISHI_2": {
+   "forms": [
+    "chagua jibu bora",
+    "tambua kosa la mzungumzaji",
+    "igiza (mwalimu anasikiliza)"
+   ],
+   "mastery": "Names the features to keep in this kind of talk (husishi), picks the better of two ways to listen or reply in a situation on rafiki aliyekosewa na wenzake, and takes part in one in standard Kiswahili, judged by the teacher with the KICD rubric; in the app, 8 of 10 new items right."
   },
   "KISW.G8.KUSOMA.T15_UFUPISHO.UFUPISHO": {
    "forms": [
@@ -486,6 +775,15 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua anwani ya mpokeaji, kichwa cha habari (mada), salamu, ujumbe, hitimisho na jina la mwandishi, na kuwa lugha ni rasmi na fupi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.KUANDIKA_BARUAPEPE_KIOFISI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells baruapepe from other kinds of writing and its parts, and writes an email with the receiver's address, a short subject, a greeting, the message in correct Kiswahili and a closing; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_TAARIFA": {
    "forms": [

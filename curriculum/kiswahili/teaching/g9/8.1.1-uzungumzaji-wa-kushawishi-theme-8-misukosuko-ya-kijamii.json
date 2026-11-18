@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T8_UZUNGUMZAJI_WA_KUSHA",
+ "title": "Uzungumzaji wa Kushawishi (Theme 8: Misukosuko ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T8_UZUNGUMZAJI_WA_KUSHA.KUSHAWISHI",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a kushawishi.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "misukosuko ya kijamii",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kujiunga na klabu ya amani shuleni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short kushawishi on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T8_UZUNGUMZAJI_WA_KUSHA.KUSHAWISHI.M9_ORL_NOREASONS_T8",
+     "listen_for": [
+      "Jiungeni! Jiungeni! Jiungeni!"
+     ],
+     "ask": "Kwa nini wakukubalie?",
+     "repair": "Kushawishi kunahitaji sababu na faida kwa msikilizaji."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T8_UZUNGUMZAJI_WA_KUSHA.KUSHAWISHI.M9_ORL_THREAT_T8",
+     "listen_for": [
+      "Msipojiunga mtaona!"
+     ],
+     "ask": "Msikilizaji atahisije?",
+     "repair": "Shawishi kwa hoja na heshima, si vitisho."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T8_UZUNGUMZAJI_WA_KUSHA.KUSHAWISHI.M9_ORL_SLANG_T8",
+     "listen_for": [
+      "Ma-guys, hii issue ni serious."
+     ],
+     "ask": "Ni maneno yapi si ya Kiswahili sanifu?",
+     "repair": "Tumia Kiswahili sanifu katika mazungumzo rasmi."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T8_UZUNGUMZAJI_WA_KUSHA.KUSHAWISHI.M9_ORL_OFFTOPIC_T8",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unawashawishi wenzako wajiunge na klabu ya mazingira. Ni lipi bora?",
+     "answer": "Jiungeni kwa sababu tutapanda miti, tutajifunza na tutashinda tuzo.",
+     "shows": "kushawishi"
+    },
+    {
+     "question": "Ni lipi ni ushawishi unaofaa?",
+     "answer": "Mkijiunga, mtafaidika kwa njia hizi...",
+     "shows": "kushawishi, second feature"
+    }
+   ]
+  }
+ ]
+}

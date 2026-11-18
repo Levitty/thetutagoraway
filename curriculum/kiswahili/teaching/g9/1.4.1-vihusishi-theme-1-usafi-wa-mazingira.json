@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T1_VIHUSISHI",
+ "title": "Vihusishi (Theme 1: Usafi wa mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI",
+   "key_step": "The child chooses the relating word by what it relates: place (juu ya, chini ya, kando ya, ndani ya) or time (kabla ya, baada ya, tangu, hadi).",
+   "floor": {
+    "prerequisite": "Uses place relating words.",
+    "question": "Paka yuko ___ ya meza.",
+    "answer": "chini"
+   },
+   "representations": [
+    "objects placed around a box",
+    "a timeline",
+    "two sorting columns"
+   ],
+   "steps": [
+    "Place or time?",
+    "Choose the word.",
+    "Add ya (or -a of agreement).",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "environmental cleanliness: taka ndani ya mto",
+    "a school timetable",
+    "a map"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Tusafishe mtaro ___ mvua kunyesha."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Ni wakati au mahali?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kabla ya\" and one sentence of place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M_KS9_VM_MAHALI",
+     "listen_for": [
+      "baada ya"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi cha mahali?\" Kwa nini \"baada ya\" si jibu sahihi?",
+     "repair": "Mbele ya ni kihusishi cha mahali."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M_KS9_VM_WAKATI",
+     "listen_for": [
+      "karibu na"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi cha wakati?\" Kwa nini \"karibu na\" si jibu sahihi?",
+     "repair": "Kabla ya ni kihusishi cha wakati."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M_KS9_VM_SENTENSI",
+     "listen_for": [
+      "Kitabu kiko juu meza."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Kitabu kiko juu meza.\" si jibu sahihi?",
+     "repair": "Vihusishi vingi hufuatwa na ya."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M9_VH_TIME_PLACE",
+     "listen_for": [
+      "juu ya"
+     ],
+     "ask": "Hapa tunazungumzia mahali au wakati?",
+     "repair": "Kwa wakati tunatumia kabla ya, baada ya, tangu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Takataka zimetupwa ___ ya mto.",
+     "answer": "kando / ndani",
+     "shows": "place"
+    },
+    {
+     "question": "Jaza: Tumesoma ___ asubuhi.",
+     "answer": "tangu",
+     "shows": "time"
+    }
+   ]
+  }
+ ]
+}

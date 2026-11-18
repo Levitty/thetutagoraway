@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH",
+ "title": "Vinyume vya Vihusishi (Theme 10: Kukabiliana na msongo wa mawazo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI",
+   "key_step": "The child gives the relating word of the opposite meaning (juu ya / chini ya, kabla ya / baada ya) and uses it in a passage.",
+   "floor": {
+    "prerequisite": "Uses relating words of place and time.",
+    "question": "Jaza: Paka yuko ___ ya kitanda.",
+    "answer": "chini"
+   },
+   "representations": [
+    "pair cards",
+    "objects to place",
+    "a passage with gaps"
+   ],
+   "steps": [
+    "Read the relating word.",
+    "Find its opposite.",
+    "Use it.",
+    "Check the meaning."
+   ],
+   "contexts": [
+    "coping with stress: kabla ya mtihani / baada ya mtihani",
+    "a map",
+    "a timetable"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mbele ya darasa -> ___ ya darasa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mbele\".",
+     "say": "Kinyume chake ni nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"nyuma ya\" and two more pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M_KS9_VH_JUU",
+     "listen_for": [
+      "mbele ya"
+     ],
+     "ask": "Soma tena: \"Kinyume cha juu ya ni kipi?\" Kwa nini \"mbele ya\" si jibu sahihi?",
+     "repair": "Kinyume cha juu ya ni chini ya."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M_KS9_VH_NDANI",
+     "listen_for": [
+      "juu ya"
+     ],
+     "ask": "Soma tena: \"Kinyume cha ndani ya ni kipi?\" Kwa nini \"juu ya\" si jibu sahihi?",
+     "repair": "Kinyume cha ndani ya ni nje ya."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M_KS9_VH_KABLA",
+     "listen_for": [
+      "wakati wa"
+     ],
+     "ask": "Soma tena: \"Kinyume cha kabla ya ni kipi?\" Kwa nini \"wakati wa\" si jibu sahihi?",
+     "repair": "Kinyume cha kabla ya ni baada ya."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M9_VV_NEGATE",
+     "listen_for": [
+      "si ndani ya"
+     ],
+     "ask": "Kuna kihusishi chenye maana kinyume?",
+     "repair": "Kinyume cha kihusishi ni kihusishi kingine: nje ya."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"kabla ya\" ni?",
+     "answer": "baada ya",
+     "shows": "time"
+    },
+    {
+     "question": "Kinyume cha \"karibu na\" ni?",
+     "answer": "mbali na",
+     "shows": "place"
+    }
+   ]
+  }
+ ]
+}

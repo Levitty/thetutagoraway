@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T7_NAHAU",
+ "title": "Nahau (Theme 7: Matunda na mimea)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T7_NAHAU.NAHAU",
+   "key_step": "The child gives the meaning of the whole nahau, not of its words, and uses it in a sentence about good conduct.",
+   "floor": {
+    "prerequisite": "Explains a methali.",
+    "question": "Haraka haraka haina baraka?",
+    "answer": "usifanye mambo kwa haraka"
+   },
+   "representations": [
+    "nahau cards with a picture of the literal meaning",
+    "a matching game nahau/maana",
+    "a situation strip"
+   ],
+   "steps": [
+    "Read the whole nahau.",
+    "Notice the literal picture is wrong.",
+    "Give the hidden meaning.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "a class with a talkative pupil",
+    "a market argument",
+    "helping at a funeral"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kupiga moyo konde"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"moyo konde\".",
+     "say": "Je, mtu anapiga moyo wake kweli?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the meaning (to take courage) and writes a sentence with it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.NAHAU.M4_NAH_LITERAL",
+     "listen_for": [
+      "kupiga moyo kwa fimbo"
+     ],
+     "ask": "Soma tena: \"Nahau \"kupiga moyo konde\" ina maana gani?\" Kwa nini \"kupiga moyo kwa fimbo\" si jibu sahihi?",
+     "repair": "Nahau ni maneno yenye maana tofauti na maneno yenyewe."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.NAHAU.M4_NAH_OTHER",
+     "listen_for": [
+      "kuvumilia shida"
+     ],
+     "ask": "Soma tena: \"Nahau \"kula kiapo\" ina maana gani?\" Kwa nini \"kuvumilia shida\" si jibu sahihi?",
+     "repair": "Kila nahau ina maana yake. Linganisha maneno ya nahau na maana kabla ya kuchagua."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.NAHAU.M4_NAH_NOT",
+     "listen_for": [
+      "Haba na haba hujaza kibaba"
+     ],
+     "ask": "Soma tena: \"Ni nahau ipi?\" Kwa nini \"Haba na haba hujaza kibaba\" si jibu sahihi?",
+     "repair": "Nahau ni kifungu kifupi chenye maana maalum. Methali ni sentensi nzima yenye funzo."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T7_NAHAU.NAHAU.M4_NAH_WORDS",
+     "listen_for": [
+      "kubwa"
+     ],
+     "ask": "Soma tena: \"Alipiga moyo ___ akaendelea kusoma.\" Kwa nini \"kubwa\" si jibu sahihi?",
+     "repair": "Nahau hutumia maneno yale yale: kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maana ya \"kuvunja mbavu\" ni?",
+     "answer": "kuchekesha sana",
+     "shows": "meaning"
+    },
+    {
+     "question": "Tumia \"kupiga moyo konde\" katika sentensi.",
+     "answer": "Alipiga moyo konde akaendelea na mtihani.",
+     "shows": "use"
+    }
+   ]
+  }
+ ]
+}

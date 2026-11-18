@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 2: Nidhamu mezani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
+   "key_step": "The child orders words by the first letter, then the second, then the third, and finds the word to read its meaning.",
+   "floor": {
+    "prerequisite": "Says the alphabet in order.",
+    "question": "Herufi inayofuata \"d\" ni?",
+    "answer": "e"
+   },
+   "representations": [
+    "an alphabet strip",
+    "word cards to order",
+    "a real Kiswahili children's dictionary"
+   ],
+   "steps": [
+    "Look at the first letter.",
+    "If the same, look at the second.",
+    "Open the dictionary near that letter.",
+    "Read the meaning and use it."
+   ],
+   "contexts": [
+    "meal-time manners (nidhamu mezani)",
+    "the school library",
+    "a homework task"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "meza, mkate, maji"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second letters.",
+     "say": "Ni neno lipi linakuja kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the three words (maji, meza, mkate) and finds one in the dictionary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M4_KAM_FIRST_ONLY",
+     "listen_for": [
+      "samaki"
+     ],
+     "ask": "Soma tena: \"Kati ya \"samaki\", \"sahani\" na \"sufuria\", neno linalokuja kwanza ni ___.\" Kwa nini \"samaki\" si jibu sahihi?",
+     "repair": "Maneno yakianza kwa herufi moja, tazama herufi ya pili, kisha ya tatu."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M4_KAM_LENGTH",
+     "listen_for": [
+      "ua"
+     ],
+     "ask": "Soma tena: \"Kati ya \"ua\", \"ardhi\" na \"wali\", neno linalokuja kwanza ni ___.\" Kwa nini \"ua\" si jibu sahihi?",
+     "repair": "Kamusi hupanga maneno kwa mpangilio wa alfabeti, si kwa urefu wa neno."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M4_KAM_REVERSE",
+     "listen_for": [
+      "zeze"
+     ],
+     "ask": "Soma tena: \"Kati ya \"baba\", \"mto\" na \"zeze\", neno linalokuja kwanza ni ___.\" Kwa nini \"zeze\" si jibu sahihi?",
+     "repair": "Alfabeti huanza na a na kuishia na z. Neno lenye herufi ya mwanzo karibu na a hutangulia."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M4_KAM_PURPOSE",
+     "listen_for": [
+      "picha"
+     ],
+     "ask": "Soma tena: \"Kamusi hutusaidia kupata ___ ya neno.\" Kwa nini \"picha\" si jibu sahihi?",
+     "repair": "Kamusi ni kitabu chenye maneno na maana zake, yaliyopangwa kwa mpangilio wa alfabeti."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Panga: sahani, chai, kijiko",
+     "answer": "chai, kijiko, sahani",
+     "shows": "alphabetical order"
+    },
+    {
+     "question": "Kamusi inatusaidia nini?",
+     "answer": "kujua maana ya maneno",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

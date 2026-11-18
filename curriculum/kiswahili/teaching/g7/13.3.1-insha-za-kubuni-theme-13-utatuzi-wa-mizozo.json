@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 13: Utatuzi wa mizozo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_SIFA_MTU",
+   "key_step": "The child plans insha ya wasifu before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "mpatanishi wa kijiji chetu",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpatanishi wa Kijiji Chetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Mpatanishi wa Kijiji Chetu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_SIFA_MTU.M7_INS_STORY_T13",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya wasifu hueleza jinsi kitu au mtu alivyo, si matukio ya siku moja."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_SIFA_MTU.M7_INS_DETAIL_T13",
+     "listen_for": [
+      "Mzee Kiprono ni mzuri."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_SIFA_MTU.M7_INS_AGREE_T13",
+     "listen_for": [
+      "Ana tabia mwema."
+     ],
+     "ask": "Nomino hii iko katika ngeli gani?",
+     "repair": "Kivumishi hupatana na nomino yake: bendera nzuri, miti mirefu, mtoto mzuri."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_SIFA_MTU.M7_INS_OFFTOPIC_T13",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T13_INSHA_ZA_KUBUNI.MAELEZO_SIFA_MTU.M7_INS_LUGHA_T13",
+     "listen_for": [
+      "Mzee Kiprono ni mzuri."
+     ],
+     "ask": "Sentensi hii inajenga picha gani?",
+     "repair": "Tumia tashbihi, sitiari, methali au nahau kufanya insha iwe hai."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya wasifu kuhusu \"Mpatanishi wa Kijiji Chetu\"?",
+     "answer": "Mzee Kiprono, mwenye sauti tulivu na macho ya upole, husikiliza pande zote kabla ya kusema neno.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya wasifu ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

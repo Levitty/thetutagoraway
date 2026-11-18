@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2",
+ "title": "Ukubwa na Udogo wa Nomino (Theme 11: Uwekezaji)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N",
+   "key_step": "The child drops the n- or ny- of the noun and adds ji-/ju- for the big form and ki- for the small form, then gives LI-YA or KI-VI agreement.",
+   "floor": {
+    "prerequisite": "Makes big forms of m- nouns.",
+    "question": "Ukubwa wa mti ni?",
+    "answer": "jiti"
+   },
+   "representations": [
+    "drawings: a house, a mansion, a hut",
+    "n- noun cards (nyumba, ndege, ng'ombe)",
+    "prefix cards ji-, ki-"
+   ],
+   "steps": [
+    "Drop n- or ny-.",
+    "Add ji- (big) or ki- (small).",
+    "Change the agreement.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "investment: a big building in town",
+    "birds (ndege) small and big",
+    "cattle at the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "nyumba -> ___ (udogo)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ny-\".",
+     "say": "Udogo wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kijumba\" and \"Kijumba kimejengwa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N.M_UKN_KEEP_N",
+     "listen_for": [
+      "jinyumba"
+     ],
+     "ask": "Soma tena: \"Ukubwa wa \"nyumba\" ni ___.\" Kwa nini \"jinyumba\" si jibu sahihi?",
+     "repair": "Nomino za n- hubadilika kwa kuondoa sauti ya mwanzo: nyumba - jumba, kijumba. Baadhi huongeza ji- (mbwa - jibwa)."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N.M_UKN_SWAP",
+     "listen_for": [
+      "jumba"
+     ],
+     "ask": "Soma tena: \"Udogo wa \"nyumba\" ni ___.\" Kwa nini \"jumba\" si jibu sahihi?",
+     "repair": "Ki- huonyesha udogo: kijumba. Ukubwa huonyeshwa na ji- au umbo la pekee kama jumba."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N.M5_UKN_JU",
+     "listen_for": [
+      "jinyumba"
+     ],
+     "ask": "Herufi ny- inabaki katika ukubwa?",
+     "repair": "Ukubwa wa nyumba ni jumba."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_N.M5_UKN_AGREE",
+     "listen_for": [
+      "imejengwa"
+     ],
+     "ask": "Jumba liko katika ngeli ipi?",
+     "repair": "Jumba ni la LI-YA: jumba limejengwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ukubwa wa \"nyumba\" ni?",
+     "answer": "jumba",
+     "shows": "big"
+    },
+    {
+     "question": "Udogo wa \"ndege\" ni?",
+     "answer": "kidege",
+     "shows": "small"
+    }
+   ]
+  }
+ ]
+}

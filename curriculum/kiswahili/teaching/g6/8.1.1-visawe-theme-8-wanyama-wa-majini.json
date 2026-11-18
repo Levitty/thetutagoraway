@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T8_VISAWE",
+ "title": "Visawe (Theme 8: Wanyama wa majini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE",
+   "key_step": "The child finds more than three words of the same meaning by testing each in the same sentence, and uses one in place of another.",
+   "floor": {
+    "prerequisite": "Finds three synonyms.",
+    "question": "Pesa, fedha, ___",
+    "answer": "hela"
+   },
+   "representations": [
+    "word groups with one intruder",
+    "a sentence frame",
+    "water animal pictures"
+   ],
+   "steps": [
+    "Read the group.",
+    "Put each into the sentence.",
+    "Keep those that keep the meaning.",
+    "Use one in a new sentence."
+   ],
+   "contexts": [
+    "water animals (wanyama wa majini)",
+    "the market",
+    "the library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "pesa / ___ / ___ / ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"pesa\".",
+     "say": "Ni maneno gani yana maana sawa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes fedha, hela, darahimu and uses one in a sentence about selling fish."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_OPPOSITE",
+     "listen_for": [
+      "huzuni"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"furaha\" ni ___.\" Kwa nini \"huzuni\" si jibu sahihi?",
+     "repair": "Visawe ni maneno yenye maana sawa. Furaha na huzuni ni vinyume, si visawe."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_RELATED",
+     "listen_for": [
+      "kilio"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"huzuni\" ni ___.\" Kwa nini \"kilio\" si jibu sahihi?",
+     "repair": "Neno linalohusiana na jingine si lazima liwe na maana sawa nalo. Kisawe cha huzuni ni simanzi."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_LOOKALIKE",
+     "listen_for": [
+      "harufu"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"haraka\" ni ___.\" Kwa nini \"harufu\" si jibu sahihi?",
+     "repair": "Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T8_VISAWE.VISAWE.M_VIS_MIXED",
+     "listen_for": [
+      "bashasha, huzuni, raha, tabasamu"
+     ],
+     "ask": "Soma tena: \"Ni kundi lipi lina maneno yote yenye maana sawa na \"furaha\"?\" Kwa nini \"bashasha, huzuni, raha, tabasamu\" si jibu sahihi?",
+     "repair": "Kila neno la kundi lazima liwe na maana sawa. Huzuni ni kinyume cha furaha."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kisawe cha \"mwana\" ni?",
+     "answer": "mtoto",
+     "shows": "synonym"
+    },
+    {
+     "question": "Maneno \"pesa, fedha, hela, darahimu\" ni?",
+     "answer": "visawe",
+     "shows": "term"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T7_VIVUMISHI",
+ "title": "Vivumishi (Theme 7: Kuhudumia wenye mahitaji maalum)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T7_VIVUMISHI.VIVUMISHI_MILIKI",
+   "key_step": "The child uses the possessive and the number after the noun, both with its class prefix, usually possessive first (vitabu vyangu vitatu).",
+   "floor": {
+    "prerequisite": "Uses possessives and numbers.",
+    "question": "vitabu ___ (mimi)",
+    "answer": "vyangu"
+   },
+   "representations": [
+    "noun, possessive and number cards",
+    "a class table",
+    "sentence frames"
+   ],
+   "steps": [
+    "Find the noun and its class.",
+    "Add the possessive.",
+    "Add the number with its prefix.",
+    "Check the order."
+   ],
+   "contexts": [
+    "serving those with special needs: viti vyetu vitatu vya magurudumu",
+    "a family",
+    "a team"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "viti ___ (sisi) ___ (3)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"viti\".",
+     "say": "Ngeli yake ni ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"viti vyetu vitatu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T7_VIVUMISHI.VIVUMISHI_MILIKI.M_KS8_VK_MILIKI",
+     "listen_for": [
+      "wawili"
+     ],
+     "ask": "Soma tena: \"Ni kivumishi kimilikishi kipi?\" Kwa nini \"wawili\" si jibu sahihi?",
+     "repair": "Wangu ni kivumishi kimilikishi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T7_VIVUMISHI.VIVUMISHI_MILIKI.M_KS8_VK_IDADI",
+     "listen_for": [
+      "wangu"
+     ],
+     "ask": "Soma tena: \"Ni kivumishi cha idadi kipi?\" Kwa nini \"wangu\" si jibu sahihi?",
+     "repair": "Watatu ni kivumishi cha idadi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T7_VIVUMISHI.VIVUMISHI_MILIKI.M_KS8_VK_NAFASI",
+     "listen_for": [
+      "Wawili watoto"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi imepangwa sawa?\" Kwa nini \"Wawili watoto\" si jibu sahihi?",
+     "repair": "Kivumishi hufuata nomino."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T7_VIVUMISHI.VIVUMISHI_MILIKI.M8_VK_ORDER_BOTH",
+     "listen_for": [
+      "watoto wawili wangu"
+     ],
+     "ask": "Kimilikishi kinakaa wapi?",
+     "repair": "Kwa kawaida kimilikishi hutangulia idadi: watoto wangu wawili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: miti ___ (yeye) ___ (2)",
+     "answer": "yake miwili",
+     "shows": "order and agreement"
+    },
+    {
+     "question": "Jaza: ng'ombe ___ (wao) ___ (8)",
+     "answer": "wao wanane",
+     "shows": "animal class"
+    }
+   ]
+  }
+ ]
+}

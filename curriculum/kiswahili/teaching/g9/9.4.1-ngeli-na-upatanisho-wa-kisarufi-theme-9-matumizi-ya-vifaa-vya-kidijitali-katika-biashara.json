@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_",
+ "title": "Ngeli na Upatanisho wa Kisarufi (Theme 9: Matumizi ya vifaa vya kidijitali katika biashara)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU",
+   "key_step": "The child tells KU of verbal nouns (kucheza kwake kunapendeza) from KU of place (shuleni kunapendeza) and uses pa-, ku-, mu- by place.",
+   "floor": {
+    "prerequisite": "Uses KU-KU and PA-KU-MU.",
+    "question": "Jaza: Kuimba ___ (pendeza).",
+    "answer": "kunapendeza"
+   },
+   "representations": [
+    "activity and place cards",
+    "colour for each ku-",
+    "sentence frames"
+   ],
+   "steps": [
+    "Activity or place?",
+    "Activity: KU-KU.",
+    "Place: pa-, ku- or mu-.",
+    "Agree every word."
+   ],
+   "contexts": [
+    "digital devices in business: kununua mtandaoni kunarahisisha",
+    "a market",
+    "a shop"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mtandaoni ___ (kuna/mna) bidhaa nyingi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mtandaoni\".",
+     "say": "Ni ndani au mahali kwa jumla?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kuna\" and one KU-KU sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M_KS9_GK_KUSOMA",
+     "listen_for": [
+      "Kusoma kinafurahisha."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Kusoma kinafurahisha.\" si jibu sahihi?",
+     "repair": "Vitenzi-jina hutumia ku-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M_KS9_GK_PA",
+     "listen_for": [
+      "Hapa kuzuri."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Hapa kuzuri.\" si jibu sahihi?",
+     "repair": "Mahali karibu hutumia pa-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M_KS9_GK_MU",
+     "listen_for": [
+      "Humu pazuri."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Humu pazuri.\" si jibu sahihi?",
+     "repair": "Ndani hutumia mu-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M9_GK_VERBAL_PLACE",
+     "listen_for": [
+      "mahali (PA-KU-MU)"
+     ],
+     "ask": "Neno hili ni shughuli au mahali?",
+     "repair": "Kitenzi-jina ni shughuli; ku- ya mahali huonyesha mahali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kuuza kwake ___ (-zuri).",
+     "answer": "kuzuri",
+     "shows": "KU-KU"
+    },
+    {
+     "question": "Jaza: Dukani ___ watu wengi (ndani).",
+     "answer": "mna",
+     "shows": "mu-"
+    }
+   ]
+  }
+ ]
+}

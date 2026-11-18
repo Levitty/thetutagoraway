@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN",
+ "title": "Mnyambuliko wa Vitenzi Kauli ya: (Theme 11: Majukumu ya watoto)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI",
+   "key_step": "The child changes the verb end for doing (-a), doing for someone (-ia/-ea) and being done to (-wa), choosing the vowel by the stem.",
+   "floor": {
+    "prerequisite": "Finds the verb stem.",
+    "question": "Mzizi wa \"anapika\" ni?",
+    "answer": "pik-"
+   },
+   "representations": [
+    "three cards: pika, pikia, pikwa",
+    "a vowel chart",
+    "picture sentences"
+   ],
+   "steps": [
+    "Find the stem.",
+    "Doer, for someone, or done to?",
+    "Add the ending by the vowel rule.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "children's duties (majukumu ya watoto)",
+    "chores at home",
+    "a class rota"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Chakula ki___ (pika) na mama."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"na mama\".",
+     "say": "Chakula kilifanywa nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kimepikwa\" and \"Mama amenipikia\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M_KS7_KA_KUTENDEA",
+     "listen_for": [
+      "pikwa"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi katika kauli ya kutendea?\" Kwa nini \"pikwa\" si jibu sahihi?",
+     "repair": "Kutendea huonyesha kwa ajili ya nani, kama pikia."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M_KS7_KA_KUTENDWA",
+     "listen_for": [
+      "pikia"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi katika kauli ya kutendwa?\" Kwa nini \"pikia\" si jibu sahihi?",
+     "repair": "Kutendwa huonyesha anayepokea tendo, kama pikwa."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M_KS7_KA_KUTENDA",
+     "listen_for": [
+      "pikwa"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi katika kauli ya kutenda?\" Kwa nini \"pikwa\" si jibu sahihi?",
+     "repair": "Kutenda ni umbo la kawaida, kama pika."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI.M7_KA_IWA_EWA",
+     "listen_for": [
+      "somiwa"
+     ],
+     "ask": "Irabu ya mzizi ni ipi?",
+     "repair": "Kutendwa kwa \"soma\" ni \"somwa\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kutendea kwa \"andika\" ni?",
+     "answer": "andikia",
+     "shows": "applied"
+    },
+    {
+     "question": "Kutendwa kwa \"fagia\" ni?",
+     "answer": "fagiwa",
+     "shows": "passive"
+    }
+   ]
+  }
+ ]
+}

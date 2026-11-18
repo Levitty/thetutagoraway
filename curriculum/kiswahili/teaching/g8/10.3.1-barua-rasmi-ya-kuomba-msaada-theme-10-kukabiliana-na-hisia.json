@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB",
+ "title": "Barua Rasmi ya Kuomba Msaada (Theme 10: Kukabiliana na hisia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAADA",
+   "key_step": "The child finds the parts of an official letter asking for help and its message: the problem in brief, the request, and thanks.",
+   "floor": {
+    "prerequisite": "Knows the parts of an official letter.",
+    "question": "Barua rasmi ina anwani ngapi?",
+    "answer": "mbili"
+   },
+   "representations": [
+    "a model letter",
+    "part cards",
+    "a three-part message plan"
+   ],
+   "steps": [
+    "Find the parts.",
+    "Find the problem.",
+    "Find the request.",
+    "Find the closing."
+   ],
+   "contexts": [
+    "coping with emotions: asking for counselling",
+    "a letter to the chief",
+    "a letter to a bursary office"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "KUH: OMBI LA MSAADA"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the KUH: line.",
+     "say": "Barua hii inaomba nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the parts and the request."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAADA.M_KS8_BA_ANWANI",
+     "listen_for": [
+      "moja"
+     ],
+     "ask": "Soma tena: \"Barua rasmi ina anwani ngapi?\" Kwa nini \"moja\" si jibu sahihi?",
+     "repair": "Barua rasmi ina anwani mbili."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAADA.M_KS8_BA_KICHWA",
+     "listen_for": [
+      "hakuna kitu"
+     ],
+     "ask": "Soma tena: \"Barua rasmi huwa na nini kabla ya ujumbe?\" Kwa nini \"hakuna kitu\" si jibu sahihi?",
+     "repair": "Barua rasmi ina kichwa cha barua."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAADA.M_KS8_BA_LUGHA",
+     "listen_for": [
+      "ya mtaani"
+     ],
+     "ask": "Soma tena: \"Lugha ya barua rasmi ni ipi?\" Kwa nini \"ya mtaani\" si jibu sahihi?",
+     "repair": "Barua rasmi hutumia lugha ya heshima."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_MSAADA.M8_BA_NOREQUEST",
+     "listen_for": [
+      "Nimekuwa na matatizo mengi nyumbani na shuleni."
+     ],
+     "ask": "Unaomba nini hasa?",
+     "repair": "Barua ya kuomba msaada hueleza wazi msaada unaoombwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sehemu ipi hueleza msaada unaoombwa?",
+     "answer": "kiini cha barua",
+     "shows": "message"
+    },
+    {
+     "question": "Barua rasmi huanza kwa salamu ipi?",
+     "answer": "Kwa..., au Mheshimiwa,",
+     "shows": "greeting"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_MSAADA",
+   "key_step": "The child plans barua rasmi before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "ombi la msaada wa ushauri nasaha",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ombi la Msaada wa Ushauri Nasaha"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Ombi la Msaada wa Ushauri Nasaha\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_MSAADA.M8_INS_ONEADDR_T10",
+     "listen_for": [
+      "moja, ya mwandishi"
+     ],
+     "ask": "Barua hii itamfikia nani? Anwani yake iko wapi?",
+     "repair": "Barua rasmi ina anwani mbili: ya mwandishi kulia juu, ya mpokeaji kushoto chini yake."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_MSAADA.M8_INS_NOREF_T10",
+     "listen_for": [
+      "Nimeandika barua hii kwa sababu ninataka kukueleza mambo mengi."
+     ],
+     "ask": "Msomaji atajuaje barua inahusu nini bila kuisoma yote?",
+     "repair": "Kichwa cha barua rasmi huanza KUH: au YAH: na huandikwa kwa herufi kubwa, kwa ufupi."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_MSAADA.M8_INS_CASUAL_T10",
+     "listen_for": [
+      "Hujambo mwalimu wangu mpendwa!"
+     ],
+     "ask": "Ungemsalimu Mwalimu Mkuu hivi katika mkutano rasmi?",
+     "repair": "Barua rasmi hutumia lugha rasmi: Kwa Mwalimu Mkuu, Wako mtiifu."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_MSAADA.M8_INS_SIGNOFF_T10",
+     "listen_for": [
+      "Ni mimi rafiki yako, Wanjiku"
+     ],
+     "ask": "Mpokeaji atajuaje ni nani hasa aliyeandika?",
+     "repair": "Barua rasmi humalizika kwa \"Wako mtiifu,\" sahihi na jina kamili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua rasmi kuhusu \"Ombi la Msaada wa Ushauri Nasaha\"?",
+     "answer": "Kwa Mshauri wa Wanafunzi,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua rasmi ina sehemu zipi?",
+     "answer": "anwani mbili, tarehe, salamu rasmi, kichwa, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

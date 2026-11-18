@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_",
+ "title": "Kivumishi Kirejeshi (amba-) (Theme 2: Michezo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA",
+   "key_step": "The child gives amba- the ending of the noun's class and number (ambaye, ambao, ambacho, ambavyo, ambalo, ambayo) and does not repeat the relative in the verb.",
+   "floor": {
+    "prerequisite": "Uses demonstratives by class.",
+    "question": "kitabu ___ (karibu)",
+    "answer": "hiki"
+   },
+   "representations": [
+    "a class table of amba- endings",
+    "two-sentence joining strips",
+    "team photos"
+   ],
+   "steps": [
+    "Find the noun before amba-.",
+    "Find its class and number.",
+    "Give amba- its ending.",
+    "Keep the verb plain."
+   ],
+   "contexts": [
+    "games: the player who scored",
+    "the school team",
+    "a sports report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpira ___ ulipotea umepatikana."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mpira\".",
+     "say": "Mpira uko katika ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"ambao\" and joins two sentences with amba-."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M_AMBA_CLASS",
+     "listen_for": [
+      "ambaye"
+     ],
+     "ask": "Soma tena: \"Kitabu ___ nilinunua ni kizuri.\" Kwa nini \"ambaye\" si jibu sahihi?",
+     "repair": "Amba- huchukua mwisho unaolingana na ngeli ya nomino: kitabu ambacho, mwalimu ambaye."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M_AMBA_NUMBER",
+     "listen_for": [
+      "ambaye"
+     ],
+     "ask": "Soma tena: \"Watoto ___ wanasoma ni werevu.\" Kwa nini \"ambaye\" si jibu sahihi?",
+     "repair": "Mtu mmoja: ambaye. Watu wengi: ambao."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M_AMBA_NO_END",
+     "listen_for": [
+      "amba"
+     ],
+     "ask": "Soma tena: \"Mama ___ anauza mboga ni shangazi yangu.\" Kwa nini \"amba\" si jibu sahihi?",
+     "repair": "Amba- haitumiki peke yake. Ina mwisho: ambaye, ambao, ambacho, ambayo."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA.M6_AMBA_DOUBLE",
+     "listen_for": [
+      "Mtoto ambaye aliyeshinda amepewa zawadi."
+     ],
+     "ask": "Neno \"ambaye\" na \"-ye-\" vina kazi moja?",
+     "repair": "Tumia amba- au -ye- katika kitenzi, si vyote viwili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Vitabu ___ nilinunua ni vipya.",
+     "answer": "ambavyo",
+     "shows": "class"
+    },
+    {
+     "question": "Jaza: Wachezaji ___ walishinda walizawadiwa.",
+     "answer": "ambao",
+     "shows": "number"
+    }
+   ]
+  }
+ ]
+}

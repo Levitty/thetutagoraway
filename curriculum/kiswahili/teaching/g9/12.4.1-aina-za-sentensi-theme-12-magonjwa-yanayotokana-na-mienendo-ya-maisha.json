@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI",
+ "title": "Aina za Sentensi (Theme 12: Magonjwa yanayotokana na mienendo ya maisha)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA",
+   "key_step": "The child finds the word or structure that makes a sentence ambiguous, gives every meaning, and rewrites it with one meaning.",
+   "floor": {
+    "prerequisite": "Knows words with several meanings.",
+    "question": "\"Kaa\" lina maana zipi?",
+    "answer": "kuketi, mnyama wa majini, makaa"
+   },
+   "representations": [
+    "ambiguous sentence cards",
+    "two drawings per sentence",
+    "rewrite frames"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "Find the word or structure with two meanings.",
+    "Give each meaning.",
+    "Rewrite with one meaning."
+   ],
+   "contexts": [
+    "lifestyle diseases: \"Daktari alimwandikia dawa\"",
+    "a news headline",
+    "a riddle"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Juma aliona kaa."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kaa\".",
+     "say": "Neno hili lina maana zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives three meanings and rewrites one clearly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M_KS9_SZ_MAANA",
+     "listen_for": [
+      "maana moja tu"
+     ],
+     "ask": "Soma tena: \"Sentensi tata ina nini?\" Kwa nini \"maana moja tu\" si jibu sahihi?",
+     "repair": "Sentensi tata ina maana zaidi ya moja."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M_KS9_SZ_KISAHILI",
+     "listen_for": [
+      "Mama anapika."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ni tata?\" Kwa nini \"Mama anapika.\" si jibu sahihi?",
+     "repair": "Sentensi tata inaweza kufasiriwa kwa njia mbili."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M_KS9_SZ_SABABU",
+     "listen_for": [
+      "matumizi ya herufi kubwa"
+     ],
+     "ask": "Soma tena: \"Sentensi tata hutokana na nini?\" Kwa nini \"matumizi ya herufi kubwa\" si jibu sahihi?",
+     "repair": "Muundo huleta maana mbili."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M9_ST_ONE_MEANING",
+     "listen_for": [
+      "moja"
+     ],
+     "ask": "Kuna njia nyingine ya kuielewa sentensi hii?",
+     "repair": "Sentensi tata ina maana zaidi ya moja: eleza zote."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Wanafunzi walikula mbuzi\" ina utata gani?",
+     "answer": "nyama ya mbuzi au mbuzi mzima (au majina)",
+     "shows": "ambiguity"
+    },
+    {
+     "question": "Ondoa utata: \"Alimpa barua yake.\"",
+     "answer": "Alimpa barua ya Juma. (au: barua ya mwandishi)",
+     "shows": "rewrite"
+    }
+   ]
+  }
+ ]
+}

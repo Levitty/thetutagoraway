@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI",
+ "title": "Nyakati na Hali (Theme 4: Utunzaji wa maliasili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA",
+   "key_step": "The child uses -ki- for a condition or \"while\" (akifika, tutaondoka) and -ka- for actions that follow one another after a -li- verb (alifika akaketi).",
+   "floor": {
+    "prerequisite": "Uses -ki- of condition.",
+    "question": "Jaza: U___soma utapita.",
+    "answer": "Ukisoma"
+   },
+   "representations": [
+    "a chain of actions on cards",
+    "-ki- and -ka- cards",
+    "a short story to fill"
+   ],
+   "steps": [
+    "Is it a condition or a chain?",
+    "Condition: -ki-.",
+    "Chain after -li-: -ka-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "natural resources: alipanda mti akaumwagilia",
+    "a morning routine",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mkulima alilima, ___ (panda), ___ (mwagilia)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"alilima\".",
+     "say": "Matendo yanayofuata yatachukua kiambishi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"akapanda, akamwagilia\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M_KS9_KK_KI",
+     "listen_for": [
+      "kufuatana"
+     ],
+     "ask": "Soma tena: \"Katika \"Ukisoma utafaulu\", -ki- inaonyesha nini?\" Kwa nini \"kufuatana\" si jibu sahihi?",
+     "repair": "-ki- hapa inaonyesha sharti."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M_KS9_KK_KA",
+     "listen_for": [
+      "sharti"
+     ],
+     "ask": "Soma tena: \"Katika \"Alifika akaketi\", -ka- inaonyesha nini?\" Kwa nini \"sharti\" si jibu sahihi?",
+     "repair": "-ka- inaonyesha tendo linalofuata."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M_KS9_KK_MATUMIZI",
+     "listen_for": [
+      "akioga"
+     ],
+     "ask": "Soma tena: \"Kamilisha: Aliamka ___oga.\" Kwa nini \"akioga\" si jibu sahihi?",
+     "repair": "Tendo linalofuata hutumia -ka-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M9_KK_KA_NEW_SUBJECT",
+     "listen_for": [
+      "alioga, alivaa"
+     ],
+     "ask": "Matendo haya yanafuatana?",
+     "repair": "Matendo yanayofuatana baada ya -li- huchukua -ka-: akaoga, akavaa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: U___ (fika) mapema, tutaanza.",
+     "answer": "Ukifika",
+     "shows": "-ki-"
+    },
+    {
+     "question": "Jaza: Tulikula, ___ (lala).",
+     "answer": "tukalala",
+     "shows": "-ka-"
+    }
+   ]
+  }
+ ]
+}

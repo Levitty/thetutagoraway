@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T6_VIELEZI",
+ "title": "Vielezi (Theme 6: Usalama barabarani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA",
+   "key_step": "The child uses adverbs of manner (vizuri, kwa uangalifu, polepole) and of time (jana, mapema, sasa) after the verb they describe.",
+   "floor": {
+    "prerequisite": "Uses adverbs of time and place.",
+    "question": "Kielezi ni kipi: \"Tulifika jana.\"",
+    "answer": "jana"
+   },
+   "representations": [
+    "action mimes",
+    "vi- and kwa + noun cards",
+    "time words"
+   ],
+   "steps": [
+    "Find the verb.",
+    "How? -> manner. When? -> time.",
+    "Form the adverb.",
+    "Put it after the verb."
+   ],
+   "contexts": [
+    "road safety: endesha polepole",
+    "a race",
+    "a recipe"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Watoto wavuke barabara ___ (uangalifu)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wavuke\".",
+     "say": "Wavuke vipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kwa uangalifu\" and one adverb of time."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M_KS9_VN_NAMNA",
+     "listen_for": [
+      "jana"
+     ],
+     "ask": "Soma tena: \"Ni kielezi kipi cha namna?\" Kwa nini \"jana\" si jibu sahihi?",
+     "repair": "Polepole ni kielezi cha namna."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M_KS9_VN_WAKATI",
+     "listen_for": [
+      "polepole"
+     ],
+     "ask": "Soma tena: \"Ni kielezi kipi cha wakati?\" Kwa nini \"polepole\" si jibu sahihi?",
+     "repair": "Kesho ni kielezi cha wakati."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M_KS9_VN_SWALI",
+     "listen_for": [
+      "Lini?"
+     ],
+     "ask": "Soma tena: \"Kielezi cha namna hujibu swali gani?\" Kwa nini \"Lini?\" si jibu sahihi?",
+     "repair": "Kielezi cha namna hujibu \"vipi?\"."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M9_VE_ADJ_FORM",
+     "listen_for": [
+      "mzuri"
+     ],
+     "ask": "Neno hili linaeleza nomino au kitendo?",
+     "repair": "Kielezi cha namna: vizuri, vibaya, kwa uangalifu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Alisoma ___ (-zuri).",
+     "answer": "vizuri",
+     "shows": "manner"
+    },
+    {
+     "question": "Ni kielezi cha wakati kipi: haraka, mapema, vizuri?",
+     "answer": "mapema",
+     "shows": "time"
+    }
+   ]
+  }
+ ]
+}

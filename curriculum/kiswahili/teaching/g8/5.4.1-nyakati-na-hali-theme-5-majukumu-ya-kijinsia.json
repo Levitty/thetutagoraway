@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI",
+ "title": "Nyakati na Hali (Theme 5: Majukumu ya kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.TIMILIFU_WAKATI",
+   "key_step": "The child forms the past perfect (alikuwa amefika) and the future perfect (atakuwa amefika): the time on kuwa, -me- on the main verb.",
+   "floor": {
+    "prerequisite": "Forms the continuous with kuwa.",
+    "question": "Jaza: Jana ni___kuwa ni___soma.",
+    "answer": "nilikuwa nikisoma"
+   },
+   "representations": [
+    "a timeline with two events",
+    "two-verb cards",
+    "colour for each part"
+   ],
+   "steps": [
+    "Which event came first?",
+    "Put the time on kuwa.",
+    "Put -me- on the main verb.",
+    "Read it."
+   ],
+   "contexts": [
+    "gender roles: the meal had been cooked",
+    "a match report",
+    "a travel plan"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kesho saa nne ___ (maliza) mtihani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kesho saa nne\".",
+     "say": "Kitendo kitakuwa kimekamilika?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"nitakuwa nimemaliza\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.TIMILIFU_WAKATI.M_KS8_TW_PAST",
+     "listen_for": [
+      "Atakuwa amefika"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi iko katika uliopita timilifu?\" Kwa nini \"Atakuwa amefika\" si jibu sahihi?",
+     "repair": "Alikuwa amefika ni uliopita timilifu."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.TIMILIFU_WAKATI.M_KS8_TW_FUT",
+     "listen_for": [
+      "Alikuwa amefika"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi iko katika ujao timilifu?\" Kwa nini \"Alikuwa amefika\" si jibu sahihi?",
+     "repair": "Atakuwa amefika ni ujao timilifu."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.TIMILIFU_WAKATI.M_KS8_TW_SIMPLE",
+     "listen_for": [
+      "Alifika jana"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ni timilifu?\" Kwa nini \"Alifika jana\" si jibu sahihi?",
+     "repair": "Timilifu ina ame- baada ya alikuwa."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.TIMILIFU_WAKATI.M8_TW_MARKER_BOTH",
+     "listen_for": [
+      "alikuwa alifika"
+     ],
+     "ask": "Ni kitenzi kipi kinabeba wakati?",
+     "repair": "Wakati hukaa kwenye \"kuwa\", na -me- kwenye kitenzi kikuu: alikuwa amefika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Tulipofika, basi ___ (ondoka).",
+     "answer": "lilikuwa limeondoka",
+     "shows": "past perfect"
+    },
+    {
+     "question": "Jaza: Kufikia Desemba, ___ (jenga) nyumba.",
+     "answer": "tutakuwa tumejenga",
+     "shows": "future perfect"
+    }
+   ]
+  }
+ ]
+}

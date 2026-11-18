@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T3_SEMI",
+ "title": "Semi (Theme 3: Utunzaji wa wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T3_SEMI.SEMI_TASHBIHI",
+   "key_step": "The child places the semi in its kind and occasion, explains its maana with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Mkulima huyu ni simba wa shamba\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its maana with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "utunzaji wa wanyama",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mkulima huyu ni simba wa shamba"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni semi ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T3_SEMI.SEMI_TASHBIHI.M9_FSI_KIND_T3",
+     "listen_for": [
+      "sitiari"
+     ],
+     "ask": "Hutumika lini, na kwa lengo gani?",
+     "repair": "\"Mkulima huyu ni simba wa shamba\" ni tashbihi: mkulima ana nguvu na ujasiri mkubwa kazini."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T3_SEMI.SEMI_TASHBIHI.M9_FSI_WRITTEN_T3",
+     "listen_for": [
+      "fasihi andishi"
+     ],
+     "ask": "Ilipokezwa kwa maandishi au kwa mdomo?",
+     "repair": "Semi ni fasihi simulizi: hupokezwa kwa mdomo."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T3_SEMI.SEMI_TASHBIHI.M9_FSI_OCCASION_T3",
+     "listen_for": [
+      "wakati wowote"
+     ],
+     "ask": "Ni mazingira gani yanafaa?",
+     "repair": "Tashbihi hutumika kusifu au kukosoa tabia katika mazungumzo na hadithi."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T3_SEMI.SEMI_TASHBIHI.M9_FSI_MESSAGE_T3",
+     "listen_for": [
+      "Mkulima huyu ni simba wa shamba"
+     ],
+     "ask": "Mtunzi alitaka tujifunze nini?",
+     "repair": "Ujumbe ni funzo kwa maneno yako mwenyewe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Mkulima huyu ni simba wa shamba\" ni semi ya aina gani?",
+     "answer": "tashbihi",
+     "shows": "maana"
+    },
+    {
+     "question": "Tashbihi hutumika lini?",
+     "answer": "kusifu au kukosoa tabia katika mazungumzo na hadithi",
+     "shows": "maana, use"
+    }
+   ]
+  }
+ ]
+}

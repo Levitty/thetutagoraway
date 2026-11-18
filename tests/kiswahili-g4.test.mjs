@@ -48,7 +48,7 @@ test('skills and the misconception library are proposed or draft, with the field
 test('every Kiswahili skill has families in at least two different structures, and every family passes its checks', () => {
   const bad = textFailures(120).filter(f => /kiswahili|KISW/.test(f));
   assert.deepEqual(bad, [], `\n${bad.slice(0, 40).join('\n')}\n`);
-  assert.deepEqual(checkTextForms(FAMILIES, SKILLS), []);
+  assert.deepEqual(checkTextForms(FAMILIES, SKILLS, entry.awaiting), []);   // a skill of the deeper map with no family yet is listed in entry.awaiting
 });
 
 test('Kiswahili families stay off for children until a native speaker signs them off, and stay out of the Maths bank', () => {
@@ -140,7 +140,11 @@ test('the KICD rubrics are kept as they were', () => {
 
 test('every skill has a family, every non-attitude Q outcome of a skill is covered, and the families are in the registry entry', () => {
   const skillsWith = new Set(FAMILIES.map(f => f.cskill));
-  for (const c of Object.keys(SKILLS)) assert.ok(skillsWith.has(c), `${c}: no family`);
+  for (const c of Object.keys(SKILLS)) assert.ok(skillsWith.has(c) || entry.awaiting.includes(c), `${c}: no family and not listed as awaiting one`);
   assert.equal(new Set(FAMILIES.map(f => f.id)).size, FAMILIES.length);
   assert.equal(entry.familyFiles.length, 6);
 });
+
+// The Grade 5 Maths standard for this grade (18 Nov 2026): tests/lib/kiswahili-depth.mjs
+import { depthTests } from './lib/kiswahili-depth.mjs';
+depthTests(4);

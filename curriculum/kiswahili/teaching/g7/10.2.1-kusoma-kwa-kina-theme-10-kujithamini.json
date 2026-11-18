@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 10: Kujithamini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.NOVELA_WAHUSIKA",
+   "key_step": "The child names the wahusika with the right term, proves each point with a line or event from \"Kisima cha Matumaini\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class novela \"Kisima cha Matumaini\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "kujithamini",
+    "the class novela",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kisima cha Matumaini"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Neema ana sifa gani, na tunajuaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.NOVELA_WAHUSIKA.M7_FAS_MAINMINOR_T10",
+     "listen_for": [
+      "Baraka"
+     ],
+     "ask": "Kazi hii inafuatilia tatizo la nani?",
+     "repair": "Mhusika mkuu ni yule ambaye kazi inamhusu tangu mwanzo hadi mwisho."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.NOVELA_WAHUSIKA.M7_FAS_NOEVIDENCE_T10",
+     "listen_for": [
+      "ni jasiri kwa sababu ni mhusika mzuri"
+     ],
+     "ask": "Ni kitendo gani kinaonyesha sifa hii?",
+     "repair": "Kila sifa ithibitishwe kwa kitendo cha mhusika katika kazi."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.NOVELA_WAHUSIKA.M7_FAS_LOOKS_T10",
+     "listen_for": [
+      "mrefu na mwembamba"
+     ],
+     "ask": "Hii ni sura au tabia?",
+     "repair": "Sifa za kitabia ni kama ukarimu, uchoyo, ujasiri; si urefu."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T10_KUSOMA_KWA_KINA.NOVELA_WAHUSIKA.M7_FAS_LESSON_T10",
+     "listen_for": [
+      "tufanye kama yeye ili tufanikiwe"
+     ],
+     "ask": "Mwishoni mhusika huyu alipata nini?",
+     "repair": "Tunajifunza kuepuka tabia mbaya kwa kuona matokeo yake."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mhusika mkuu katika \"Kisima cha Matumaini\" ni nani?",
+     "answer": "Neema",
+     "shows": "wahusika"
+    },
+    {
+     "question": "Neema ni jasiri. Ni ushahidi upi unaothibitisha?",
+     "answer": "alienda kwa chifu peke yake kuripoti wizi wa maji",
+     "shows": "wahusika, second form"
+    }
+   ]
+  }
+ ]
+}

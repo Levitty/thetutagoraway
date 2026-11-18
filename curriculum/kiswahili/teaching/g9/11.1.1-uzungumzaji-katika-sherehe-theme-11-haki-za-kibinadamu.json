@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T11_UZUNGUMZAJI_KATIKA_S",
+ "title": "Uzungumzaji Katika Sherehe (Theme 11: Haki za kibinadamu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T11_UZUNGUMZAJI_KATIKA_S.SHEREHE",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a sherehe.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "haki za kibinadamu",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "sherehe ya kuhitimu darasa la tisa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short sherehe on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T11_UZUNGUMZAJI_KATIKA_S.SHEREHE.M9_ORL_PROTOCOL_T11",
+     "listen_for": [
+      "Habari zenu?"
+     ],
+     "ask": "Ni nani mgeni mkuu hapa?",
+     "repair": "Anza kwa itifaki: mgeni rasmi kwanza, kisha wengine."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T11_UZUNGUMZAJI_KATIKA_S.SHEREHE.M9_ORL_WRONGMSG_T11",
+     "listen_for": [
+      "pole kwa msiba"
+     ],
+     "ask": "Hii ni sherehe ya aina gani?",
+     "repair": "Ujumbe ulingane na sherehe."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T11_UZUNGUMZAJI_KATIKA_S.SHEREHE.M9_ORL_SLANG_T11",
+     "listen_for": [
+      "Ma-guys, hii issue ni serious."
+     ],
+     "ask": "Ni maneno yapi si ya Kiswahili sanifu?",
+     "repair": "Tumia Kiswahili sanifu katika mazungumzo rasmi."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T11_UZUNGUMZAJI_KATIKA_S.SHEREHE.M9_ORL_EYES_T11",
+     "listen_for": [
+      "kuangalia chini muda wote"
+     ],
+     "ask": "Mzungumzaji anajuaje unamsikiliza?",
+     "repair": "Mwangalie mzungumzaji ili aone unamsikiliza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unatoa hotuba katika sherehe. Unaanza vipi?",
+     "answer": "Mheshimiwa mgeni rasmi, walimu, wazazi na wanafunzi wenzangu, hamjambo?",
+     "shows": "sherehe"
+    },
+    {
+     "question": "Ni ujumbe upi unafaa katika sherehe ya kuhitimu?",
+     "answer": "hongera na heri katika masomo yajayo",
+     "shows": "sherehe, second feature"
+    }
+   ]
+  }
+ ]
+}

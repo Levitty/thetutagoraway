@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T6_USHAIRI",
+ "title": "Ushairi (Theme 6: Maadili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T6_USHAIRI.USHAIRI_MAADILI",
+   "key_step": "The child recites with the beat of the mizani and finds every answer and word meaning in the lines of the poem.",
+   "floor": {
+    "prerequisite": "Counts the mizani of a line.",
+    "question": "Mshororo \"Heshima ni kitu bora\" una mizani mingapi?",
+    "answer": "9"
+   },
+   "representations": [
+    "the poem on a chart, beti numbered",
+    "claps for the beat",
+    "a two-meaning card for one word"
+   ],
+   "steps": [
+    "Read the poem twice.",
+    "Clap the beat of one line.",
+    "Find the word in its line and test its meaning.",
+    "Answer from the line and say the message."
+   ],
+   "contexts": [
+    "values (maadili): respect for elders",
+    "a music festival",
+    "a church or mosque youth group"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Adabu ni taji la mtoto"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"taji\".",
+     "say": "Taji hapa lina maana gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child recites the ubeti with the claps and says the meaning of \"taji\" in this line."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T6_USHAIRI.USHAIRI_MAADILI.M5_USH_LINE_MESSAGE",
+     "listen_for": [
+      "Heshima ni kitu bora"
+     ],
+     "ask": "Ukifunga shairi, unaweza kueleza funzo lake?",
+     "repair": "Ujumbe ni funzo la shairi lote kwa maneno yako mwenyewe."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T6_USHAIRI.USHAIRI_MAADILI.M5_USH_RECITE_FLAT",
+     "listen_for": [
+      "kusoma maneno yote kwa kasi moja bila kusimama"
+     ],
+     "ask": "Mapigo ya mshororo huu ni mangapi?",
+     "repair": "Kariri kwa mahadhi: fuata mapigo ya mizani na usimame mwisho wa ubeti."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T6_USHAIRI.USHAIRI_MAADILI.M5_USH_WORD_OUTSIDE",
+     "listen_for": [
+      "kofia ya mfalme ya dhahabu"
+     ],
+     "ask": "Mtoto anavaa taji kweli kichwani?",
+     "repair": "Katika shairi, neno linaweza kuwa na maana ya picha: taji hapa ni fahari."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T6_USHAIRI.USHAIRI_MAADILI.M5_USH_OUTSIDE",
+     "listen_for": [
+      "kwa sababu ni matajiri"
+     ],
+     "ask": "Ni mshororo upi unaotoa jibu hilo?",
+     "repair": "Jibu swali kwa kutumia maneno ya shairi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ujumbe wa shairi kuhusu heshima ni?",
+     "answer": "tuwaheshimu watu wote",
+     "shows": "message"
+    },
+    {
+     "question": "Unakariri shairi kwa kufuata nini?",
+     "answer": "mahadhi na mapigo ya mizani",
+     "shows": "recitation"
+    }
+   ]
+  }
+ ]
+}

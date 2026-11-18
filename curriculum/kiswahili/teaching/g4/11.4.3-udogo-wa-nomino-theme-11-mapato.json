@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO",
+ "title": "Udogo wa Nomino (Theme 11: Mapato)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.UDOGO",
+   "key_step": "The child turns an m- noun with a one-syllable root into its small form with kiji- (mto -> kijito) and gives it KI-VI agreement.",
+   "floor": {
+    "prerequisite": "Knows KI-VI agreement.",
+    "question": "Kiti ___ vunjika.",
+    "answer": "kimevunjika"
+   },
+   "representations": [
+    "a small and a huge drawing",
+    "root cards",
+    "prefix card kiji-"
+   ],
+   "steps": [
+    "Take off m-.",
+    "Add kiji- to a one-syllable root.",
+    "Use ki- / vi- agreement.",
+    "Read it."
+   ],
+   "contexts": [
+    "a stream behind the school",
+    "a small village",
+    "a tiny child in a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mto -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at m- and -to.",
+     "say": "Tunaongeza nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kijito\" and \"Kijito kimejaa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.UDOGO.M4_UDO_JI",
+     "listen_for": [
+      "jiji"
+     ],
+     "ask": "Soma tena: \"Mji mdogo sana huitwa ___.\" Kwa nini \"jiji\" si jibu sahihi?",
+     "repair": "Udogo wa nomino hutumia ki-: kijiti, kijito, kijiji. Ukubwa hutumia ji-."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.UDOGO.M4_UDO_SAME",
+     "listen_for": [
+      "mto"
+     ],
+     "ask": "Soma tena: \"Mto mdogo sana huitwa ___.\" Kwa nini \"mto\" si jibu sahihi?",
+     "repair": "Kuonyesha udogo, nomino yenyewe hubadilika: mto-kijito."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.UDOGO.M4_UDO_PL",
+     "listen_for": [
+      "kijiti"
+     ],
+     "ask": "Soma tena: \"Miti midogo sana huitwa ___.\" Kwa nini \"kijiti\" si jibu sahihi?",
+     "repair": "Wingi wa udogo hutumia vi-: vijiti, vijito, vijiji, vijitu."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.UDOGO.M4_UDO_AGREE",
+     "listen_for": [
+      "umejaa"
+     ],
+     "ask": "Kijito kiko katika ngeli ipi?",
+     "repair": "Nomino ya udogo huchukua upatanisho wa KI-VI: kijito kimejaa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Udogo wa \"mji\" ni?",
+     "answer": "kijiji",
+     "shows": "small form"
+    },
+    {
+     "question": "Jaza: Vijiti ___ vunjika.",
+     "answer": "vimevunjika",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

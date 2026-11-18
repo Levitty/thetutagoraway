@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSOMA.T7_UFUPISHO",
+ "title": "Ufupisho (Theme 7: Kuhudumia jamii shuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO",
+   "key_step": "The child explains a summary, picks the main point of each paragraph and writes them in order in his own words without losing the meaning.",
+   "floor": {
+    "prerequisite": "Finds the main idea of a paragraph.",
+    "question": "Wazo kuu la aya hii ni?",
+    "answer": "the main sentence"
+   },
+   "representations": [
+    "a passage with paragraphs numbered",
+    "colours for main points and examples",
+    "a word-count box"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Mark the main point of each paragraph.",
+    "Keep their order.",
+    "Write in your own words."
+   ],
+   "contexts": [
+    "serving the school community",
+    "a newspaper article",
+    "a textbook page"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Aya 1: ... Aya 2: ... Aya 3: ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at paragraph 2.",
+     "say": "Wazo kuu la aya hii ni lipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the main point of each paragraph in order."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M_KS7_UF_NAKALA",
+     "listen_for": [
+      "kunakili habari yote"
+     ],
+     "ask": "Soma tena: \"Ufupisho ni nini?\" Kwa nini \"kunakili habari yote\" si jibu sahihi?",
+     "repair": "Ufupisho ni kutoa habari kuu bila kupoteza maana."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M_KS7_UF_MAANA",
+     "listen_for": [
+      "upoteze maana ya habari"
+     ],
+     "ask": "Soma tena: \"Ufupisho unapaswa kuwa vipi?\" Kwa nini \"upoteze maana ya habari\" si jibu sahihi?",
+     "repair": "Ufupisho huhifadhi maana ya habari."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M_KS7_UF_HABARI_KUU",
+     "listen_for": [
+      "mfano mdogo uliotolewa"
+     ],
+     "ask": "Soma tena: \"Habari kuu ya aya ni ipi?\" Kwa nini \"mfano mdogo uliotolewa\" si jibu sahihi?",
+     "repair": "Habari kuu ni wazo kuu la aya nzima."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO.M7_UF_ORDER",
+     "listen_for": [
+      "kama zinavyokujia"
+     ],
+     "ask": "Hoja hii iko aya gani ya kifungu?",
+     "repair": "Panga hoja za ufupisho kama zilivyo katika kifungu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ufupisho ni nini?",
+     "answer": "kutoa habari kuu kwa ufupi bila kupoteza maana",
+     "shows": "definition"
+    },
+    {
+     "question": "Hoja za ufupisho zipangwe vipi?",
+     "answer": "kwa mpangilio wa kifungu",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

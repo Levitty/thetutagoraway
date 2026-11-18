@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 6: Usalama barabarani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA.RP_SHAIRI",
+   "key_step": "The child explains maudhui and dhamira, finds them in a poem with a line as evidence, and explains a word of the poem from its line.",
+   "floor": {
+    "prerequisite": "Reads a poem for its message.",
+    "question": "Ujumbe wa shairi ni upi?",
+    "answer": "funzo la shairi lote"
+   },
+   "representations": [
+    "a road-safety poem with lines numbered",
+    "a two-column chart: maudhui / dhamira",
+    "a word-in-line card"
+   ],
+   "steps": [
+    "Read the poem.",
+    "Name the issue (maudhui).",
+    "Name the poet's aim (dhamira).",
+    "Prove each with a line."
+   ],
+   "contexts": [
+    "road safety (usalama barabarani)",
+    "a poetry festival",
+    "a class anthology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Dereva punguza mwendo, uhai si mchezo"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Suala ni lipi na lengo ni lipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the chart with a line for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA.RP_SHAIRI.M_KS9_RP_SHAIRI_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA.RP_SHAIRI.M_KS9_RP_SHAIRI_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA.RP_SHAIRI.M_KS9_RP_SHAIRI_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA.RP_SHAIRI.M9_RP_DHAMIRA_SWAP",
+     "listen_for": [
+      "maudhui"
+     ],
+     "ask": "Ni suala au ni lengo la mshairi?",
+     "repair": "Dhamira ni lengo la mshairi; maudhui ni suala linalozungumziwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maudhui ni nini?",
+     "answer": "masuala yanayozungumziwa katika kazi",
+     "shows": "term"
+    },
+    {
+     "question": "Dhamira ya shairi la usalama barabarani inaweza kuwa?",
+     "answer": "kuwahimiza watumiaji wa barabara kuwa waangalifu",
+     "shows": "aim"
+    }
+   ]
+  }
+ ]
+}

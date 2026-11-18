@@ -8,6 +8,7 @@ import { FAMILIES as B } from '../families/kiswahili_g7_b.js';
 import { FAMILIES as C } from '../families/kiswahili_g7_c.js';
 import { FAMILIES as RD } from '../families/kiswahili_g7_reading.js';
 import { SIGNED } from '../families/kiswahili_g7_signed.js';
+import { AWAITING } from '../families/kiswahili_g7_awaiting.js';
 
 export default {
   subject: 'kiswahili', grade: 7, prefix: 'KISW',
@@ -17,6 +18,7 @@ export default {
   families: [...A, ...B, ...C, ...RD],                          // add each family file you write: [...A, ...B]
   familyFiles: ['kiswahili_g7_a.js', 'kiswahili_g7_b.js', 'kiswahili_g7_c.js', 'kiswahili_g7_reading.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'kiswahili_g7_signed.js',
+  awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: 'family',                            // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'kiswahili7.',          // every family id starts with this
   marker: null,                              // 'text' when answers are marked as words by answerCheckText.js

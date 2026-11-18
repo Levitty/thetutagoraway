@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 8: Wanyama wa majini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+   "key_step": "The child names the features of a play, reads his part fluently with the directions, and answers and summarises from the play.",
+   "floor": {
+    "prerequisite": "Reads a part in a play.",
+    "question": "Maelekezo husomwa kwa sauti?",
+    "answer": "hapana"
+   },
+   "representations": [
+    "a short play",
+    "role cards",
+    "a summary frame"
+   ],
+   "steps": [
+    "Name the features (wahusika, maelekezo, mazungumzo).",
+    "Read your part with feeling.",
+    "Answer from the play.",
+    "Summarise in three sentences."
+   ],
+   "contexts": [
+    "water animals (wanyama wa majini)",
+    "a drama festival",
+    "a radio play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "PWEZA: (kwa huzuni) Bahari imechafuka."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"(kwa huzuni)\".",
+     "say": "Pweza anasemaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the line sadly and summarises the scene."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_STAGE_AS_SPEECH",
+     "listen_for": [
+      "Mama: Nenda sokoni."
+     ],
+     "ask": "Soma tena: \"Maelekezo ya jukwaani katika igizo ni yapi?\" Kwa nini \"Mama: Nenda sokoni.\" si jibu sahihi?",
+     "repair": "Maneno yaliyo kwenye mabano ni maelekezo ya kitendo, si maneno ya mhusika. Hayasomwi kama mazungumzo."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_STORY",
+     "listen_for": [
+      "Wanjiru alienda sokoni."
+     ],
+     "ask": "Soma tena: \"Ni kipi kati ya hivi ni igizo?\" Kwa nini \"Wanjiru alienda sokoni.\" si jibu sahihi?",
+     "repair": "Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_WRONG_SPEAKER",
+     "listen_for": [
+      "Baba"
+     ],
+     "ask": "Soma tena: \"Nani alisema \"Nitakuletea maji\"?\" Kwa nini \"Baba\" si jibu sahihi?",
+     "repair": "Jina lililo mbele ya nukta mbili ndilo la mtu anayesema maneno yaliyofuata."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_DETAIL",
+     "listen_for": [
+      "jikoni"
+     ],
+     "ask": "Soma tena: \"Akinyi alienda wapi?\" Kwa nini \"jikoni\" si jibu sahihi?",
+     "repair": "Rudi kwenye igizo na utafute mstari unaotaja jibu."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M_IGI_VOCAB",
+     "listen_for": [
+      "kukimbia peke yake"
+     ],
+     "ask": "Soma tena: \"Neno \"kuandamana\" lina maana gani katika igizo?\" Kwa nini \"kukimbia peke yake\" si jibu sahihi?",
+     "repair": "Maana ya neno hutokana na mstari lilimotumika katika igizo. Soma mstari huo tena."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Taja sifa moja ya mchezo wa kuigiza.",
+     "answer": "una wahusika wanaozungumza",
+     "shows": "feature"
+    },
+    {
+     "question": "Muhtasari wa mchezo una nini?",
+     "answer": "matukio makuu tu",
+     "shows": "summary"
+    }
+   ]
+  }
+ ]
+}

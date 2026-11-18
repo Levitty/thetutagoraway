@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2",
+ "title": "Aina za Nomino (Theme 2: Huduma ya kwanza)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA",
+   "key_step": "The child uses the ku- form of a verb as the name of the activity (kusoma, kuogelea) in the place of a noun.",
+   "floor": {
+    "prerequisite": "Finds the verb.",
+    "question": "Kitenzi ni kipi: \"Wanacheza mpira.\"",
+    "answer": "wanacheza"
+   },
+   "representations": [
+    "activity cards: kusoma, kuimba, kuogelea",
+    "a sentence frame \"___ kunafurahisha\"",
+    "a verb and verbal noun pair"
+   ],
+   "steps": [
+    "Name the activity.",
+    "Put ku- before the stem.",
+    "Use it where a noun goes.",
+    "Agree the verb with ku-."
+   ],
+   "contexts": [
+    "first aid: kupumua, kufunga jeraha",
+    "sports day",
+    "chores at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "___ ni kuzuri kwa afya."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Ni shughuli gani ni nzuri kwa afya?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Kuogelea ni kuzuri kwa afya\" and one sentence of his own."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M_VJ_NO_KU",
+     "listen_for": [
+      "Soma"
+     ],
+     "ask": "Soma tena: \"___ kunafurahisha.\" Kwa nini \"Soma\" si jibu sahihi?",
+     "repair": "Nomino ya kitenzi-jina huanza na ku-: kusoma, kucheza, kulima. Shina la kitenzi peke yake haliwezi kuwa nomino hapa."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M_VJ_CONJUGATED",
+     "listen_for": [
+      "Anasoma"
+     ],
+     "ask": "Soma tena: \"___ ni muhimu kwa kila mtoto.\" Kwa nini \"Anasoma\" si jibu sahihi?",
+     "repair": "Anasoma ni kitenzi chenye mtu na wakati. Kitenzi-jina ni kusoma, kinachotumika kama nomino bila mtu wala wakati."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M_VJ_DOER",
+     "listen_for": [
+      "Msomaji"
+     ],
+     "ask": "Soma tena: \"___ kunakuza akili.\" Kwa nini \"Msomaji\" si jibu sahihi?",
+     "repair": "Msomaji ni mtu anayesoma. Kitenzi-jina hutaja kitendo chenyewe: kusoma."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO_2.VITENZI_JINA.M5_VJ_AGREE",
+     "listen_for": [
+      "anafurahisha"
+     ],
+     "ask": "Kitenzi-jina hiki kinaanza kwa nini?",
+     "repair": "Kitenzi-jina huchukua ku-: kucheza kunafurahisha."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kitenzi-jina kipi: msomaji, kusoma, anasoma?",
+     "answer": "kusoma",
+     "shows": "identify"
+    },
+    {
+     "question": "Jaza: ___ (imba) kwake kunapendeza.",
+     "answer": "Kuimba",
+     "shows": "form"
+    }
+   ]
+  }
+ ]
+}

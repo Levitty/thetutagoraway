@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 14: Matumizi ya kodi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA",
+   "key_step": "The child finds both sides of the debate in the passage and states each with its reason.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "matumizi ya kodi",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "matumizi ya kodi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M_KS9_RS_MJADALA_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M_KS9_RS_MJADALA_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M_KS9_RS_MJADALA_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA.M9_MJD_RS_MJADALA",
+     "listen_for": [
+      "mtazamo wa upande mmoja tu"
+     ],
+     "ask": "Upande wa pili unasema nini?",
+     "repair": "Mjadala una pande mbili; taja mitazamo ya pande zote."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kifungu kina mitazamo ipi kuhusu suala hili?",
+     "answer": "mitazamo ya pande zote mbili",
+     "shows": "mjadala"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

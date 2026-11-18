@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T15_KUSIKILIZA_KWA_KUTAT",
+ "title": "Kusikiliza kwa Kutathmini (Theme 15: Maadili ya kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T15_KUSIKILIZA_KWA_KUTAT.KUTATHMINI",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a kutathmini.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "maadili ya kitaifa",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mchango wa vijana katika kudumisha amani"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short kutathmini on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T15_KUSIKILIZA_KWA_KUTAT.KUTATHMINI.M9_ORL_ACCEPTALL_T15",
+     "listen_for": [
+      "kukubali"
+     ],
+     "ask": "Ushahidi wa hoja hii ni upi?",
+     "repair": "Tathmini hoja kwa ushahidi kabla ya kukubali."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T15_KUSIKILIZA_KWA_KUTAT.KUTATHMINI.M9_ORL_BIAS_T15",
+     "listen_for": [
+      "nani anazungumza"
+     ],
+     "ask": "Ungekubali hoja hii kama ingesemwa na mtu mwingine?",
+     "repair": "Tathmini hoja, si mtu."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T15_KUSIKILIZA_KWA_KUTAT.KUTATHMINI.M9_ORL_OFFTOPIC_T15",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T15_KUSIKILIZA_KWA_KUTAT.KUTATHMINI.M9_ORL_INTERRUPT_T15",
+     "listen_for": [
+      "mkatize ili usisahau"
+     ],
+     "ask": "Mwenzako amemaliza?",
+     "repair": "Msikilize mzungumzaji hadi amalize."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mzungumzaji anasema: \"Kila mtu anajua dawa hii hutibu magonjwa yote.\" Ufanye nini?",
+     "answer": "kuuliza ushahidi na chanzo cha habari hiyo",
+     "shows": "kutathmini"
+    },
+    {
+     "question": "Unatathmini mazungumzo. Unazingatia nini?",
+     "answer": "hoja, ushahidi na lugha iliyotumika",
+     "shows": "kutathmini, second feature"
+    }
+   ]
+  }
+ ]
+}

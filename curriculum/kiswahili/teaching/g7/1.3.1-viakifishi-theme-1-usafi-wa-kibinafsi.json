@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T1_VIAKIFISHI",
+ "title": "Viakifishi (Theme 1: Usafi wa kibinafsi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA",
+   "key_step": "The child gives every sentence a capital and an end mark, every proper noun and title-with-name a capital, and abbreviations their capital and full stop.",
+   "floor": {
+    "prerequisite": "Uses capitals and full stops.",
+    "question": "Andika vizuri: tunapenda shule",
+    "answer": "Tunapenda shule."
+   },
+   "representations": [
+    "a paragraph with no capitals",
+    "an abbreviation list",
+    "a checklist"
+   ],
+   "steps": [
+    "Read each sentence.",
+    "Capital at the start, mark at the end.",
+    "Capitals for names and titles with names.",
+    "Check abbreviations."
+   ],
+   "contexts": [
+    "personal hygiene (usafi wa kibinafsi)",
+    "a school notice",
+    "a letter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "dkt. wambui alitufundisha kuhusu usafi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"dkt.\" and \"wambui\".",
+     "say": "Zinahitaji nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child corrects the paragraph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M_KS7_HK_JINA",
+     "listen_for": [
+      "tuliona nairobi jana."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi imeandikwa sawa?\" Kwa nini \"tuliona nairobi jana.\" si jibu sahihi?",
+     "repair": "Sentensi huanza kwa herufi kubwa, na majina ya pekee pia."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M_KS7_HK_KIKOMO",
+     "listen_for": [
+      "kiulizi"
+     ],
+     "ask": "Soma tena: \"Sentensi ya kawaida huisha kwa nini?\" Kwa nini \"kiulizi\" si jibu sahihi?",
+     "repair": "Sentensi ya kawaida huisha kwa kikomo (.)."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M_KS7_HK_KATIKATI",
+     "listen_for": [
+      "Mama alinunua Mkate."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ina herufi kubwa isiyofaa?\" Kwa nini \"Mama alinunua Mkate.\" si jibu sahihi?",
+     "repair": "Herufi kubwa si kwa nomino ya kawaida katikati ya sentensi."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA.M7_HK_ABBREV",
+     "listen_for": [
+      "bw Otieno, s.l.p 20"
+     ],
+     "ask": "Kifupisho hiki kinasimama badala ya neno gani?",
+     "repair": "Vifupisho huandikwa kwa herufi kubwa na kikomo: Bw., S.L.P."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: bi. amina anaishi eldoret",
+     "answer": "Bi. Amina anaishi Eldoret.",
+     "shows": "capitals"
+    },
+    {
+     "question": "Kifupisho cha \"Bwana\" huandikwaje?",
+     "answer": "Bw.",
+     "shows": "abbreviation"
+    }
+   ]
+  }
+ ]
+}

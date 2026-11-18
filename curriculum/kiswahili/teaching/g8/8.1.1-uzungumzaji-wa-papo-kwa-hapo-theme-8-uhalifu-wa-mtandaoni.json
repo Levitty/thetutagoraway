@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_",
+ "title": "Uzungumzaji wa Papo kwa Hapo (Theme 8: Uhalifu wa mtandaoni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.PAPO_KWA_HAPO",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a papo.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "uhalifu wa mtandaoni",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "jinsi ya kujikinga na wezi wa mtandaoni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short papo on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.PAPO_KWA_HAPO.M8_ORL_NOPLAN_T8",
+     "listen_for": [
+      "anza kuzungumza mara moja"
+     ],
+     "ask": "Hoja zako kuu ni zipi?",
+     "repair": "Panga hoja chache kichwani kabla ya kuanza."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.PAPO_KWA_HAPO.M8_ORL_FILLERS_T8",
+     "listen_for": [
+      "kusema \"ee... aa...\" kila mara"
+     ],
+     "ask": "Umesema \"ee\" mara ngapi?",
+     "repair": "Ni bora kunyamaza kidogo kuliko kusema \"ee\" kila mara."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.PAPO_KWA_HAPO.M8_ORL_OFFTOPIC_T8",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.PAPO_KWA_HAPO.M8_ORL_SLANG_T8",
+     "listen_for": [
+      "Ma-guys, hii issue ni serious."
+     ],
+     "ask": "Ni maneno yapi si ya Kiswahili sanifu?",
+     "repair": "Tumia Kiswahili sanifu katika mazungumzo rasmi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Umepewa mada ghafla. Ufanye nini kwanza?",
+     "answer": "fikiri hoja tatu kwa sekunde chache, kisha anza",
+     "shows": "papo"
+    },
+    {
+     "question": "Ni lipi bora unapotafuta neno?",
+     "answer": "kunyamaza kidogo, kisha kuendelea",
+     "shows": "papo, second feature"
+    }
+   ]
+  }
+ ]
+}

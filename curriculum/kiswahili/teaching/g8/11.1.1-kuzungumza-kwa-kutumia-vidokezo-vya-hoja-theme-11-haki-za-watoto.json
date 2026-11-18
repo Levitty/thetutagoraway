@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM",
+ "title": "Kuzungumza kwa Kutumia Vidokezo vya Hoja (Theme 11: Haki za watoto)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.VIDOKEZO",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a vidokezo.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "haki za watoto",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "haki ya mtoto kupata elimu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short vidokezo on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.VIDOKEZO.M8_ORL_READOUT_T11",
+     "listen_for": [
+      "kusomwa neno kwa neno"
+     ],
+     "ask": "Unawaangalia wasikilizaji au karatasi?",
+     "repair": "Vidokezo ni maneno machache ya kukumbusha, si hotuba ya kusoma."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.VIDOKEZO.M8_ORL_NOTEORDER_T11",
+     "listen_for": [
+      "kama zinavyokujia"
+     ],
+     "ask": "Hoja inayofuata ni ipi?",
+     "repair": "Fuata mpangilio wa vidokezo vyako."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.VIDOKEZO.M8_ORL_EYES_T11",
+     "listen_for": [
+      "kuangalia chini muda wote"
+     ],
+     "ask": "Mzungumzaji anajuaje unamsikiliza?",
+     "repair": "Mwangalie mzungumzaji ili aone unamsikiliza."
+    },
+    {
+     "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.VIDOKEZO.M8_ORL_OFFTOPIC_T11",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Vidokezo vya hoja hutumiwaje?",
+     "answer": "kukumbusha hoja huku ukizungumza na hadhira",
+     "shows": "vidokezo"
+    },
+    {
+     "question": "Hoja zako zifuate mpangilio gani?",
+     "answer": "mpangilio wa vidokezo ulivyoandaa",
+     "shows": "vidokezo, second feature"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO",
+ "title": "Aina za nomino (Theme 1: Mapishi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE",
+   "key_step": "The child asks \"is this the name of one particular person, place or thing?\" and writes it with a capital.",
+   "floor": {
+    "prerequisite": "Finds the noun in a sentence.",
+    "question": "Nomino ni ipi: \"Mama anapika.\"",
+    "answer": "Mama"
+   },
+   "representations": [
+    "a map of Kenya with towns and rivers",
+    "name cards: Tana / mto, Kisumu / mji",
+    "a capital-letter checklist"
+   ],
+   "steps": [
+    "Find the nouns.",
+    "Ask: is it the name of one particular one?",
+    "If yes, it is pekee.",
+    "Write it with a capital."
+   ],
+   "contexts": [
+    "cooking (mapishi): Mama Wanjiru's kitchen",
+    "a trip to Mombasa",
+    "names of rivers and lakes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mto Tana, mji Kisumu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Tana\" and \"mto\".",
+     "say": "Lipi ni jina la mto mmoja maalum?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts six words into pekee and kawaida and writes two sentences with a capital for each pekee."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M_PEKEE_GENERAL",
+     "listen_for": [
+      "maji"
+     ],
+     "ask": "Soma tena: \"Mto ___ ni mrefu kuliko mito yote nchini Kenya.\" Kwa nini \"maji\" si jibu sahihi?",
+     "repair": "Neno hilo ni jina la jumla la kitu cha aina hiyo. Nomino ya pekee ni jina la kipekee, kama Tana au Nairobi."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M_PEKEE_ROLE",
+     "listen_for": [
+      "mwalimu"
+     ],
+     "ask": "Soma tena: \"Mwalimu mkuu wetu anaitwa ___.\" Kwa nini \"mwalimu\" si jibu sahihi?",
+     "repair": "Mwalimu ni cheo au kazi, na watu wengi wanaweza kuwa walimu. Jina la mtu, kama Kamau, ndiyo nomino ya pekee."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M_PEKEE_START",
+     "listen_for": [
+      "Mwalimu"
+     ],
+     "ask": "Soma tena: \"Mwalimu alimpa Wanjiru kitabu. Nomino ya pekee ni ipi?\" Kwa nini \"Mwalimu\" si jibu sahihi?",
+     "repair": "Kila sentensi huanza kwa herufi kubwa, hata kama neno la kwanza ni nomino ya kawaida. Tafuta jina la mtu au mahali."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO.PEKEE.M5_PEKEE_LOWER",
+     "listen_for": [
+      "Tulisafiri hadi nairobi."
+     ],
+     "ask": "Neno \"nairobi\" ni jina la mahali gani? Linaanzaje?",
+     "repair": "Nomino ya pekee huanza kwa herufi kubwa popote ilipo katika sentensi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ipi ya pekee: mji, Nakuru, soko?",
+     "answer": "Nakuru",
+     "shows": "proper noun"
+    },
+    {
+     "question": "Andika vizuri: rafiki yangu ni otieno.",
+     "answer": "Rafiki yangu ni Otieno.",
+     "shows": "capital"
+    }
+   ]
+  }
+ ]
+}

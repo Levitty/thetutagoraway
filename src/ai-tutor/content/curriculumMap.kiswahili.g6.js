@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/kiswahili/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (13 Nov 2026) are proposed or draft, written offline by Claude, awaiting a native Kiswahili teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/kiswahili/g6.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a native Kiswahili teacher's review"};
 export const SUBSTRANDS = {
  "KISW.G6.KUSIKI.T1_MATAMSHI_BORA": {
   "name": "Matamshi Bora (Theme 1: Viungo vya mwili vya ndani)",
@@ -1291,6 +1291,24 @@ export const OUTCOMES = {
  }
 };
 export const SKILLS = {
+ "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI": {
+  "name": "Tofautisha sauti d/nd, ch/sh, j/nj na g/ng katika silabi, maneno na vitanzandimi",
+  "sub": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA",
+  "outcome": "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.a",
+  "outcomes": [
+   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.a",
+   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.b",
+   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M6_MAT_SWAP_T1",
+   "M6_MAT_SPELL_T1",
+   "M6_MAT_SAME_T1",
+   "M6_MAT_TWISTER_T1",
+   "M6_MAT_SYLL_T1"
+  ]
+ },
  "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI": {
   "name": "Elewa maana ya msamiati katika kifungu",
   "sub": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
@@ -1303,7 +1321,8 @@ export const SKILLS = {
   "mis": [
    "M_MSA_LOOKALIKE",
    "M_MSA_NEARBY",
-   "M_MSA_OPPOSITE"
+   "M_MSA_OPPOSITE",
+   "M6_MSA_BODY_GENERAL"
   ]
  },
  "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI": {
@@ -1324,6 +1343,25 @@ export const SKILLS = {
    "M_UFA_DETAIL_MIX"
   ]
  },
+ "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU": {
+  "name": "Tambua na andika insha ya wasifu",
+  "sub": "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU",
+  "outcome": "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.a",
+   "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU"
+  ],
+  "mis": [
+   "M6_INS_STORY_T1",
+   "M6_INS_DETAIL_T1",
+   "M6_INS_AGREE_T1",
+   "M6_INS_OFFTOPIC_T1",
+   "M6_INS_PARAS_T1"
+  ]
+ },
  "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA": {
   "name": "Tambua na tumia vivumishi vya sifa",
   "sub": "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA",
@@ -1337,7 +1375,8 @@ export const SKILLS = {
   "mis": [
    "M_SIFA_NUMBER",
    "M_SIFA_NO_AGREE",
-   "M_SIFA_NOT_ADJ"
+   "M_SIFA_NOT_ADJ",
+   "M6_SIFA_ORDER"
   ]
  },
  "KISW.G6.SARUFI.T1_VIVUMISHI_VIASHIRIA.VIASHIRIA": {
@@ -1355,7 +1394,8 @@ export const SKILLS = {
   "mis": [
    "M_VIASH_NUMBER",
    "M_VIASH_CLASS",
-   "M_VIASH_FAR"
+   "M_VIASH_FAR",
+   "M6_VIASH_BEFORE"
   ]
  },
  "KISW.G6.SARUFI.T1_VIVUMISHI_VIMILIKISH.VIMILIKISHI": {
@@ -1373,7 +1413,8 @@ export const SKILLS = {
   "mis": [
    "M_VIMIL_CLASS",
    "M_VIMIL_NUMBER",
-   "M_VIMIL_PERSON"
+   "M_VIMIL_PERSON",
+   "M6_VIMIL_WA_ONLY"
   ]
  },
  "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI": {
@@ -1382,7 +1423,8 @@ export const SKILLS = {
   "outcome": "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.a",
   "outcomes": [
    "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.a",
-   "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.b"
+   "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.b",
+   "KISW.G6.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.c"
   ],
   "pre": [],
   "mis": [
@@ -1404,7 +1446,27 @@ export const SKILLS = {
   "mis": [
    "M_KAM_LENGTH",
    "M_KAM_FIRST_ONLY",
-   "M_KAM_REVERSE"
+   "M_KAM_REVERSE",
+   "M6_KAM_INFO"
+  ]
+ },
+ "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.INSHA_MASIMULIZI": {
+  "name": "Tambua na andika insha ya masimulizi",
+  "sub": "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI",
+  "outcome": "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.a",
+   "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA"
+  ],
+  "mis": [
+   "M6_INS_FACTS_T2",
+   "M6_INS_TENSE_T2",
+   "M6_INS_ORDER_T2",
+   "M6_INS_END_T2",
+   "M6_INS_VIDOKEZO_T2"
   ]
  },
  "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI": {
@@ -1422,7 +1484,8 @@ export const SKILLS = {
   "mis": [
    "M_IDADI_CLASS",
    "M_IDADI_NO_PREFIX",
-   "M_IDADI_SIX_PLUS"
+   "M_IDADI_SIX_PLUS",
+   "M6_IDADI_ORDINAL"
   ]
  },
  "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI": {
@@ -1435,12 +1498,14 @@ export const SKILLS = {
    "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.c"
   ],
   "pre": [
-   "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA"
+   "KISW.G6.SARUFI.T1_VIVUMISHI_VYA_SIFA.SIFA",
+   "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI"
   ],
   "mis": [
    "M_VIUL_CLASS",
    "M_VIUL_NUMBER",
-   "M_VIUL_KIND"
+   "M_VIUL_KIND",
+   "M6_VIUL_NO_QMARK"
   ]
  },
  "KISW.G6.SARUFI.T2_KIVUMISHI_KIREJESHI_.AMBA": {
@@ -1458,7 +1523,8 @@ export const SKILLS = {
   "mis": [
    "M_AMBA_CLASS",
    "M_AMBA_NUMBER",
-   "M_AMBA_NO_END"
+   "M_AMBA_NO_END",
+   "M6_AMBA_DOUBLE"
   ]
  },
  "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI": {
@@ -1466,7 +1532,8 @@ export const SKILLS = {
   "sub": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA",
   "outcome": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.a",
   "outcomes": [
-   "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.a"
+   "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.a",
+   "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.b"
   ],
   "pre": [],
   "mis": [
@@ -1488,7 +1555,29 @@ export const SKILLS = {
   "mis": [
    "M_UFS_SPEED",
    "M_UFS_LOUD",
-   "M_UFS_IGNORE_MARKS"
+   "M_UFS_IGNORE_MARKS",
+   "M6_UFS_FEELING"
+  ]
+ },
+ "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+  "name": "Soma kifungu kwa sauti kwa matamshi bora, kasi ifaayo, sauti ifaayo na ishara",
+  "sub": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA",
+  "outcome": "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.b",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.b",
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.c",
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.d",
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.e"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE"
+  ],
+  "mis": [
+   "M6_UFS_WORDBYWORD_T3",
+   "M6_UFS_RACE_T3",
+   "M6_UFS_FLAT_T3",
+   "M6_UFS_NOPAUSE_T3",
+   "M6_UFS_SOUND_T3"
   ]
  },
  "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI": {
@@ -1502,7 +1591,25 @@ export const SKILLS = {
   "mis": [
    "M_TAR6_MIX",
    "M_TAR6_CAPS",
-   "M_TAR6_ICON"
+   "M_TAR6_ICON",
+   "M6_TAR6_SYMBOL"
+  ]
+ },
+ "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_MITINDO": {
+  "name": "Andika kifungu kwa tarakilishi ukitumia mitindo mbalimbali ya maandishi",
+  "sub": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL",
+  "outcome": "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.b",
+  "outcomes": [
+   "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T3_KUANDIKA_KWA_TARAKIL.MAANDISHI_TARAKILISHI"
+  ],
+  "mis": [
+   "M6_CHM_ALL_BOLD",
+   "M6_CHM_NO_SELECT",
+   "M6_CHM_WRONG_STYLE",
+   "M6_CHM_UNSAVED_CHANGES"
   ]
  },
  "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI": {
@@ -1517,7 +1624,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_NAFSI_PERSON",
-   "M_NAFSI_NUMBER"
+   "M_NAFSI_NUMBER",
+   "M6_NAFSI_SUBJECT",
+   "M6_NAFSI_OBJECT"
   ]
  },
  "KISW.G6.SARUFI.T3_VIWAKILISHI_VIASHIRI.VIWAKILISHI_VIASHIRIA": {
@@ -1535,7 +1644,8 @@ export const SKILLS = {
   "mis": [
    "M_VWASH_CLASS",
    "M_VWASH_NUMBER",
-   "M_VWASH_ADJ"
+   "M_VWASH_ADJ",
+   "M6_VWASH_DIST"
   ]
  },
  "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.VIWAKILISHI_IDADI": {
@@ -1548,11 +1658,14 @@ export const SKILLS = {
    "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_IDAD.c"
   ],
   "pre": [
-   "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI"
+   "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI",
+   "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI"
   ],
   "mis": [
    "M_VWID_CLASS",
-   "M_VWID_NO_PREFIX"
+   "M_VWID_NO_PREFIX",
+   "M6_VWID_SIX",
+   "M6_VWID_AGREE_VERB"
   ]
  },
  "KISW.G6.SARUFI.T3_UAKIFISHI.ALAMA": {
@@ -1567,7 +1680,8 @@ export const SKILLS = {
   "mis": [
    "M_UAK6_HISI",
    "M_UAK6_RITIFAA",
-   "M_UAK6_KOLONI"
+   "M_UAK6_KOLONI",
+   "M6_UAK6_RITIFAA_PLACE"
   ]
  },
  "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA": {
@@ -1581,7 +1695,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_HESH_MISUSE",
-   "M_HESH_RUDE"
+   "M_HESH_RUDE",
+   "M6_HESH_TITLE",
+   "M6_HESH_YOU_PLURAL"
   ]
  },
  "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI": {
@@ -1596,7 +1712,27 @@ export const SKILLS = {
   "mis": [
    "M_DIG_SHARE",
    "M_DIG_LINK",
-   "M_DIG_UNSAFE_SITE"
+   "M_DIG_UNSAFE_SITE",
+   "M6_DIG_FAKE"
+  ]
+ },
+ "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI": {
+  "name": "Fungua faili, sakura kwenye tovuti salama na usome matini ya kidijitali",
+  "sub": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA",
+  "outcome": "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.b",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.b",
+   "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.c"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI"
+  ],
+  "mis": [
+   "M6_KID_FOLDER_T4",
+   "M6_KID_SEARCH_T4",
+   "M6_KID_POPUP_T4",
+   "M6_KID_SITE_T4",
+   "M6_KID_ORDER_T4"
   ]
  },
  "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI": {
@@ -1613,6 +1749,23 @@ export const SKILLS = {
    "M_BAR6_POSITION",
    "M_BAR6_FRIENDLY",
    "M_BAR6_ORDER"
+  ]
+ },
+ "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI": {
+  "name": "Andika barua rasmi kwa muundo na lugha ifaayo",
+  "sub": "KISW.G6.KUANDI.T4_BARUA_RASMI",
+  "outcome": "KISW.G6.KUANDI.T4_BARUA_RASMI.c",
+  "outcomes": [
+   "KISW.G6.KUANDI.T4_BARUA_RASMI.c"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI"
+  ],
+  "mis": [
+   "M6_INS_ONEADDR_T4",
+   "M6_INS_NOREF_T4",
+   "M6_INS_CASUAL_T4",
+   "M6_INS_SIGNOFF_T4"
   ]
  },
  "KISW.G6.SARUFI.T4_NGELI_YA_YA_YA.YA_YA": {
@@ -1638,13 +1791,15 @@ export const SKILLS = {
   "outcome": "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.a",
   "outcomes": [
    "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.a",
-   "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.b"
+   "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.b",
+   "KISW.G6.KUSIKI.T5_METHALI_KUFIKIA_MWIS.c"
   ],
   "pre": [],
   "mis": [
    "M_MET_LITERAL",
    "M_MET_WRONG_LESSON",
-   "M_MET_WRONG_END"
+   "M_MET_WRONG_END",
+   "M6_MET_OPPOSITE_LESSON"
   ]
  },
  "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI_AINA": {
@@ -1653,7 +1808,8 @@ export const SKILLS = {
   "outcome": "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
   "outcomes": [
    "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
-   "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b"
+   "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b",
+   "KISW.G6.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c"
   ],
   "pre": [],
   "mis": [
@@ -1674,7 +1830,26 @@ export const SKILLS = {
   "mis": [
    "M_INS_WASIFU_STORY",
    "M_INS_MAELEZO_STORY",
-   "M_INS_STORY_WASIFU"
+   "M_INS_STORY_WASIFU",
+   "M6_INS_MAELEZO_WASIFU"
+  ]
+ },
+ "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO": {
+  "name": "Tambua na andika insha ya maelezo",
+  "sub": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO",
+  "outcome": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.b",
+  "outcomes": [
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA"
+  ],
+  "mis": [
+   "M6_INS_STORY_T5",
+   "M6_INS_DETAIL_T5",
+   "M6_INS_STEPS_T5",
+   "M6_INS_OFFTOPIC_T5",
+   "M6_INS_PARAS_T5"
   ]
  },
  "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U": {
@@ -1690,7 +1865,47 @@ export const SKILLS = {
   "mis": [
    "M_UU_PLURAL",
    "M_UU_OTHER",
-   "M_UU_NOUN"
+   "M_UU_NOUN",
+   "M6_UU_UYA"
+  ]
+ },
+ "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.SHAIRI_USAWA": {
+  "name": "Kariri shairi kwa matamshi bora na ueleze msamiati na ujumbe wake",
+  "sub": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA",
+  "outcome": "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.a",
+  "outcomes": [
+   "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.a",
+   "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.b",
+   "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.c",
+   "KISW.G6.KUSIKI.T6_MATAMSHI_BORA.d"
+  ],
+  "pre": [
+   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI"
+  ],
+  "mis": [
+   "M6_SHU_SOUND",
+   "M6_SHU_GENDER_LITERAL",
+   "M6_SHU_WORD",
+   "M6_SHU_OUTSIDE"
+  ]
+ },
+ "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA": {
+  "name": "Chagua makala maktabani kwa vigezo na uyasome kupata ujumbe",
+  "sub": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA",
+  "outcome": "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.a",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.a",
+   "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.b",
+   "KISW.G6.KUSOMA.T6_KUSOMA_KWA_KINA.c"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI"
+  ],
+  "mis": [
+   "M6_MAK_CRITERIA",
+   "M6_MAK_OLD",
+   "M6_MAK_EXAMPLE",
+   "M6_MAK_OPINION"
   ]
  },
  "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU": {
@@ -1702,7 +1917,29 @@ export const SKILLS = {
   ],
   "pre": [],
   "mis": [
-   "M_INS6_PART"
+   "M_INS6_PART",
+   "M6_MW_INTRO_DETAIL",
+   "M6_MW_ORDER_FEATURES",
+   "M6_MW_NO_CLOSE"
+  ]
+ },
+ "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU": {
+  "name": "Tambua na andika insha ya wasifu",
+  "sub": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU",
+  "outcome": "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.b",
+  "outcomes": [
+   "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU",
+   "KISW.G6.KUANDI.T6_INSHA_YA_WASIFU.MUUNDO_WASIFU"
+  ],
+  "mis": [
+   "M6_INS_STORY_T6",
+   "M6_INS_DETAIL_T6",
+   "M6_INS_AGREE_T6",
+   "M6_INS_OFFTOPIC_T6",
+   "M6_INS_PARAS_T6"
   ]
  },
  "KISW.G6.SARUFI.T6_NGELI_YA_I_I.I_I": {
@@ -1714,11 +1951,14 @@ export const SKILLS = {
    "KISW.G6.SARUFI.T6_NGELI_YA_I_I.b",
    "KISW.G6.SARUFI.T6_NGELI_YA_I_I.c"
   ],
-  "pre": [],
+  "pre": [
+   "KISW.G6.SARUFI.T5_NGELI_YA_U_U.U_U"
+  ],
   "mis": [
    "M_II_PLURAL",
    "M_II_OTHER",
-   "M_II_NOUN"
+   "M_II_NOUN",
+   "M6_II_IZI"
   ]
  },
  "KISW.G6.KUSIKI.T7_NAHAU.NAHAU": {
@@ -1727,13 +1967,56 @@ export const SKILLS = {
   "outcome": "KISW.G6.KUSIKI.T7_NAHAU.a",
   "outcomes": [
    "KISW.G6.KUSIKI.T7_NAHAU.a",
-   "KISW.G6.KUSIKI.T7_NAHAU.b"
+   "KISW.G6.KUSIKI.T7_NAHAU.b",
+   "KISW.G6.KUSIKI.T7_NAHAU.c"
   ],
   "pre": [],
   "mis": [
    "M_NAH_LITERAL",
    "M_NAH_WRONG_MEANING",
-   "M_NAH_WRONG_WORD"
+   "M_NAH_WRONG_WORD",
+   "M6_NAH_USE"
+  ]
+ },
+ "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA": {
+  "name": "Chagua matini ya kusoma na ueleze ujumbe wake",
+  "sub": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA",
+  "outcome": "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.a",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.a",
+   "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.b",
+   "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.c"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI"
+  ],
+  "mis": [
+   "M6_MAP_COVER_T7",
+   "M6_MAP_LEVEL_T7",
+   "M6_MAP_TITLEMSG_T7",
+   "M6_MAP_DETAIL_T7",
+   "M6_MAP_KIND_T7",
+   "M6_MAP_WORD_T7"
+  ]
+ },
+ "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.INSHA_MAELEZO": {
+  "name": "Tambua na andika insha ya maelezo",
+  "sub": "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO",
+  "outcome": "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.a",
+   "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO",
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA"
+  ],
+  "mis": [
+   "M6_INS_STORY_T7",
+   "M6_INS_DETAIL_T7",
+   "M6_INS_STEPS_T7",
+   "M6_INS_OFFTOPIC_T7",
+   "M6_INS_PARAS_T7"
   ]
  },
  "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU": {
@@ -1747,7 +2030,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_PKM_MIX",
-   "M_PKM_CLASS"
+   "M_PKM_CLASS",
+   "M6_PKM_NI",
+   "M6_PKM_MU_INSIDE"
   ]
  },
  "KISW.G6.KUSIKI.T8_VISAWE.VISAWE": {
@@ -1755,7 +2040,8 @@ export const SKILLS = {
   "sub": "KISW.G6.KUSIKI.T8_VISAWE",
   "outcome": "KISW.G6.KUSIKI.T8_VISAWE.a",
   "outcomes": [
-   "KISW.G6.KUSIKI.T8_VISAWE.a"
+   "KISW.G6.KUSIKI.T8_VISAWE.a",
+   "KISW.G6.KUSIKI.T8_VISAWE.b"
   ],
   "pre": [],
   "mis": [
@@ -1771,7 +2057,8 @@ export const SKILLS = {
   "outcome": "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.a",
   "outcomes": [
    "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.a",
-   "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.c"
+   "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.c",
+   "KISW.G6.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.b"
   ],
   "pre": [],
   "mis": [
@@ -1780,6 +2067,26 @@ export const SKILLS = {
    "M_IGI_WRONG_SPEAKER",
    "M_IGI_DETAIL",
    "M_IGI_VOCAB"
+  ]
+ },
+ "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.INSHA_MASIMULIZI": {
+  "name": "Tambua na andika insha ya masimulizi",
+  "sub": "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI",
+  "outcome": "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.a",
+   "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.INSHA_MASIMULIZI",
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA"
+  ],
+  "mis": [
+   "M6_INS_FACTS_T8",
+   "M6_INS_TENSE_T8",
+   "M6_INS_ORDER_T8",
+   "M6_INS_END_T8",
+   "M6_INS_DIALOGUE_T8"
   ]
  },
  "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO": {
@@ -1794,7 +2101,8 @@ export const SKILLS = {
   "mis": [
    "M_MNY_BASE",
    "M_MNY_ONEWAY",
-   "M_MNY_WRONG_FORM"
+   "M_MNY_WRONG_FORM",
+   "M6_MNY_TENDUA_ALL"
   ]
  },
  "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA": {
@@ -1809,7 +2117,49 @@ export const SKILLS = {
   "mis": [
    "M_MUK_MIX",
    "M_MUK_INFORMAL",
-   "M_MUK_FORMAL_FRIEND"
+   "M_MUK_FORMAL_FRIEND",
+   "M6_MUK_PHONE"
+  ]
+ },
+ "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA": {
+  "name": "Chagua matini ya kusoma na ueleze ujumbe wake",
+  "sub": "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA",
+  "outcome": "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.a",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.a",
+   "KISW.G6.KUSOMA.T9_KUSOMA_KWA_MAPANA.b"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T7_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA",
+   "KISW.G6.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI"
+  ],
+  "mis": [
+   "M6_MAP_COVER_T9",
+   "M6_MAP_LEVEL_T9",
+   "M6_MAP_TITLEMSG_T9",
+   "M6_MAP_DETAIL_T9",
+   "M6_MAP_KIND_T9",
+   "M6_MAP_WORD_T9"
+  ]
+ },
+ "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.INSHA_MAELEZO": {
+  "name": "Tambua na andika insha ya maelezo",
+  "sub": "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO",
+  "outcome": "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.a",
+   "KISW.G6.KUANDI.T9_INSHA_ZA_MAELEZO.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T7_INSHA_ZA_MAELEZO.INSHA_MAELEZO",
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA"
+  ],
+  "mis": [
+   "M6_INS_STORY_T9",
+   "M6_INS_DETAIL_T9",
+   "M6_INS_STEPS_T9",
+   "M6_INS_OFFTOPIC_T9",
+   "M6_INS_PARAS_T9"
   ]
  },
  "KISW.G6.SARUFI.T9_VINYUME_VYA_VIVUMISH.VINYUME_VIVUMISHI": {
@@ -1826,7 +2176,8 @@ export const SKILLS = {
   "mis": [
    "M_VINY_SAME",
    "M_VINY_OTHER",
-   "M_VINY_NO_AGREE"
+   "M_VINY_NO_AGREE",
+   "M6_VINY_NEGATE"
   ]
  },
  "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.SITIARI": {
@@ -1835,13 +2186,54 @@ export const SKILLS = {
   "outcome": "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.a",
   "outcomes": [
    "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.a",
-   "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.b"
+   "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.b",
+   "KISW.G6.KUSIKI.T10_SITIARI_ZA_TABIA.c"
   ],
   "pre": [],
   "mis": [
    "M_SIT_WRONG_ANIMAL",
    "M_SIT_TASHBIHI",
-   "M_SIT_LITERAL"
+   "M_SIT_LITERAL",
+   "M6_SIT_WRONG_TRAIT"
+  ]
+ },
+ "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI": {
+  "name": "Fungua faili, sakura kwenye tovuti salama na usome matini ya kidijitali",
+  "sub": "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA",
+  "outcome": "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA.a",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T10_KUSOMA_KWA_MAPANA.a"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI",
+   "KISW.G6.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI"
+  ],
+  "mis": [
+   "M6_KID_FOLDER_T10",
+   "M6_KID_SEARCH_T10",
+   "M6_KID_POPUP_T10",
+   "M6_KID_SITE_T10",
+   "M6_KID_ORDER_T10"
+  ]
+ },
+ "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.INSHA_MASIMULIZI": {
+  "name": "Tambua na andika insha ya masimulizi",
+  "sub": "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI",
+  "outcome": "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.a",
+   "KISW.G6.KUANDI.T10_INSHA_ZA_MASIMULIZI.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T8_INSHA_ZA_MASIMULIZI.INSHA_MASIMULIZI",
+   "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA"
+  ],
+  "mis": [
+   "M6_INS_FACTS_T10",
+   "M6_INS_TENSE_T10",
+   "M6_INS_ORDER_T10",
+   "M6_INS_END_T10",
+   "M6_INS_OFFTOPIC_T10"
   ]
  },
  "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI": {
@@ -1860,6 +2252,66 @@ export const SKILLS = {
    "M_MASH_ID_PERSON"
   ]
  },
+ "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.KUJIELEZA": {
+  "name": "Sikiliza masimulizi kwa ujumbe na usimulie kwa ishara zifaazo",
+  "sub": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH",
+  "outcome": "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.a",
+  "outcomes": [
+   "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.a",
+   "KISW.G6.KUSIKI.T11_KUJIELEZA_KWA_UFASAH.b"
+  ],
+  "pre": [
+   "KISW.G6.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MUKTADHA"
+  ],
+  "mis": [
+   "M6_MSM_DETAIL_T11",
+   "M6_MSM_ORDER_T11",
+   "M6_MSM_GESTURE_T11",
+   "M6_MSM_MIX_T11",
+   "M6_MSM_OFFTOPIC_T11"
+  ]
+ },
+ "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+  "name": "Soma kifungu kwa sauti kwa matamshi bora, kasi ifaayo, sauti ifaayo na ishara",
+  "sub": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA",
+  "outcome": "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.b",
+  "outcomes": [
+   "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.b",
+   "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.c",
+   "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.d",
+   "KISW.G6.KUSOMA.T11_KUSOMA_KWA_UFASAHA.e"
+  ],
+  "pre": [
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+   "KISW.G6.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE"
+  ],
+  "mis": [
+   "M6_UFS_WORDBYWORD_T11",
+   "M6_UFS_RACE_T11",
+   "M6_UFS_FLAT_T11",
+   "M6_UFS_NOPAUSE_T11",
+   "M6_UFS_SOUND_T11"
+  ]
+ },
+ "KISW.G6.KUANDI.T11_BARUA_RASMI.KUANDIKA_BARUA_RASMI": {
+  "name": "Andika barua rasmi kwa muundo na lugha ifaayo",
+  "sub": "KISW.G6.KUANDI.T11_BARUA_RASMI",
+  "outcome": "KISW.G6.KUANDI.T11_BARUA_RASMI.a",
+  "outcomes": [
+   "KISW.G6.KUANDI.T11_BARUA_RASMI.a",
+   "KISW.G6.KUANDI.T11_BARUA_RASMI.b"
+  ],
+  "pre": [
+   "KISW.G6.KUANDI.T4_BARUA_RASMI.KUANDIKA_BARUA_RASMI",
+   "KISW.G6.KUANDI.T4_BARUA_RASMI.BARUA_RASMI"
+  ],
+  "mis": [
+   "M6_INS_ONEADDR_T11",
+   "M6_INS_NOREF_T11",
+   "M6_INS_CASUAL_T11",
+   "M6_INS_SIGNOFF_T11"
+  ]
+ },
  "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO.UKANUSHAJI_MASHARTI": {
   "name": "Kanusha viambishi vya hali ya masharti",
   "sub": "KISW.G6.SARUFI.T11_UKANUSHAJI_WA_MANENO",
@@ -1874,7 +2326,8 @@ export const SKILLS = {
   "mis": [
    "M_UKM_SI_ONLY",
    "M_UKM_KEEP_KI",
-   "M_UKM_COMMAND"
+   "M_UKM_COMMAND",
+   "M6_UKM_NGE_NEG"
   ]
  },
  "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI": {
@@ -1893,9 +2346,33 @@ export const SKILLS = {
    "M_UKUB_NO_CHANGE",
    "M_UKUB_SINGULAR"
   ]
+ },
+ "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_JI": {
+  "name": "Badilisha nomino za ji- kuwa ukubwa na udogo",
+  "sub": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2",
+  "outcome": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.a",
+  "outcomes": [
+   "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.a",
+   "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.b",
+   "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.c"
+  ],
+  "pre": [
+   "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_KI"
+  ],
+  "mis": [
+   "M6_UKJ_DROP_JI",
+   "M6_UKJ_SAME_BIG",
+   "M6_UKJ_AGREE",
+   "M6_UKJ_PLURAL"
+  ]
  }
 };
 export const MIS_FEEDBACK = {
+ "M6_MAT_SWAP_T1": "Sikiliza tena: \"jaa\" ina sauti /j/. \"njaa\" ni neno lingine lenye maana nyingine.",
+ "M6_MAT_SPELL_T1": "Neno lenye maana ya \"a chart\" ni \"chati\". \"shati\" lina maana ya \"a shirt\".",
+ "M6_MAT_SAME_T1": "Hapana. \"chati\" ni a chart, na \"shati\" ni a shirt.",
+ "M6_MAT_TWISTER_T1": "Kitanzandimi hurudia sauti zinazokaribiana, kama d/nd, ch/sh, j/nj na g/ng, ili kiwe kigumu kutamka.",
+ "M6_MAT_SYLL_T1": "Kila silabi ya Kiswahili huishia kwa irabu: nja-a.",
  "M_MSA_LOOKALIKE": "Maana ya neno hutokana na sentensi lilimo, si na jinsi linavyofanana na neno lingine.",
  "M_MSA_NEARBY": "Rudi kwenye sentensi lenyewe lenye neno hilo. Maana inatoka hapo, si kutoka sentensi ya karibu.",
  "M_MSA_OPPOSITE": "Kinyume cha neno si maana yake. Soma tena sentensi.",
@@ -1904,15 +2381,24 @@ export const MIS_FEEDBACK = {
  "M_UFA_DETAIL_AS_MAIN": "Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake.",
  "M_UFA_ORDER": "Matukio hupangwa kwa jinsi yalivyotokea katika hadithi. Soma tena kila tukio.",
  "M_UFA_DETAIL_MIX": "Kifungu kinataja vitu vingi. Rudi kwenye sentensi sahihi ujue jibu linalolingana na swali.",
+ "M6_MSA_BODY_GENERAL": "Eleza kazi yake: figo huchuja damu.",
+ "M6_INS_STORY_T1": "Insha ya wasifu hueleza jinsi kitu au mtu alivyo, si matukio ya siku moja.",
+ "M6_INS_DETAIL_T1": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha.",
+ "M6_INS_AGREE_T1": "Kivumishi hupatana na nomino yake: bendera nzuri, miti mirefu, mtoto mzuri.",
+ "M6_INS_OFFTOPIC_T1": "Kila sentensi ya insha inapaswa kuhusu anwani.",
+ "M6_INS_PARAS_T1": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho.",
  "M_SIFA_NUMBER": "Kivumishi cha sifa hubadilika kulingana na idadi ya nomino. Wanafunzi wengi, kwa hiyo wazuri.",
  "M_SIFA_NO_AGREE": "Kivumishi huchukua kiambishi kinacholingana na ngeli ya nomino, kama kitabu kikubwa.",
  "M_SIFA_NOT_ADJ": "Kivumishi cha sifa huelezea nomino. Ukarimu ni jina la tabia, si kivumishi.",
+ "M6_SIFA_ORDER": "Kivumishi hufuata nomino: mti mrefu.",
  "M_VIASH_NUMBER": "Kivumishi kiashiria hubadilika kulingana na idadi: kitabu hiki, vitabu hivi.",
  "M_VIASH_CLASS": "Kivumishi kiashiria huchukua ngeli ya nomino. Mawe ni ya LI-YA, kwa hiyo haya.",
  "M_VIASH_FAR": "Kilicho karibu huonyeshwa kwa huyu, hiki; kilicho mbali kwa yule, kile.",
+ "M6_VIASH_BEFORE": "Kwa kawaida kiashiria hufuata nomino: kitabu hiki.",
  "M_VIMIL_CLASS": "Kivumishi kimilikishi hufuata ngeli ya kitu kinachomilikiwa, si ya mwenye kitu.",
  "M_VIMIL_NUMBER": "Kitu kikiwa wengi, kivumishi hubadilika: kitabu changu, vitabu vyangu.",
  "M_VIMIL_PERSON": "Mwenye kitu anaonyeshwa na mwisho: -angu (mimi), -ako (wewe), -ake (yeye), -etu (sisi), -enu (ninyi), -ao (wao).",
+ "M6_VIMIL_WA_ONLY": "Kimilikishi hupatana na kitu kinachomilikiwa: kitabu changu.",
  "M_MAA_NUMBER": "Kwa mtu mmoja tunasema Hujambo na Kwaheri. Kwa watu wengi tunasema Hamjambo na Kwa herini.",
  "M_MAA_TIME": "Asubuhi tunasema Habari za asubuhi. Usiku tunasema Lala salama au Usiku mwema.",
  "M_MAA_FAREWELL": "Tunasalimia tunapokutana (Hujambo) na tunaaga tunapoondoka (Kwaheri).",
@@ -1920,15 +2406,24 @@ export const MIS_FEEDBACK = {
  "M_KAM_LENGTH": "Kamusi hupanga maneno kwa herufi za alfabeti, si kwa urefu wa neno.",
  "M_KAM_FIRST_ONLY": "Maneno yanapoanza kwa herufi moja, tazama herufi ya pili, kisha ya tatu: sahani huja kabla ya samaki.",
  "M_KAM_REVERSE": "Alfabeti huanza na A na kuishia na Z. Neno la mwisho kwenye kamusi huanza na herufi ya mwisho zaidi.",
+ "M6_KAM_INFO": "Kamusi huonyesha aina ya neno, ngeli na wingi pia.",
+ "M6_INS_FACTS_T2": "Masimulizi husimulia matukio yaliyotokea: nani, wapi, nini kilitokea.",
+ "M6_INS_TENSE_T2": "Jambo lililotokea husimuliwa kwa wakati uliopita: -li-.",
+ "M6_INS_ORDER_T2": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye.",
+ "M6_INS_END_T2": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu.",
+ "M6_INS_VIDOKEZO_T2": "Kila kidokezo kinapaswa kusaidia kusimulia kisa cha anwani.",
  "M_IDADI_CLASS": "Nambari moja hadi tano huchukua kiambishi cha ngeli ya nomino: vitabu vitatu.",
  "M_IDADI_NO_PREFIX": "Nambari moja hadi tano huchukua kiambishi cha ngeli ya nomino. Miti minne.",
  "M_IDADI_SIX_PLUS": "Kuanzia sita, nambari haichukui kiambishi cha ngeli: ng'ombe sita, vitabu saba.",
+ "M6_IDADI_ORDINAL": "Nafasi hutumia -a: wa tatu, ya tatu; idadi haina: watatu.",
  "M_VIUL_CLASS": "Kivumishi kiulizi huchukua ngeli ya nomino: wanafunzi wangapi, vitabu vingapi.",
  "M_VIUL_NUMBER": "Kitabu kimoja: kipi. Vitabu vingi: vipi.",
  "M_VIUL_KIND": "-ngapi huuliza idadi, -pi huuliza ni ipi kati ya nyingi, gani huuliza aina.",
+ "M6_VIUL_NO_QMARK": "Sentensi yenye kiulizi huishia kwa alama ya kuuliza (?).",
  "M_AMBA_CLASS": "Amba- huchukua mwisho unaolingana na ngeli ya nomino: kitabu ambacho, mwalimu ambaye.",
  "M_AMBA_NUMBER": "Mtu mmoja: ambaye. Watu wengi: ambao.",
  "M_AMBA_NO_END": "Amba- haitumiki peke yake. Ina mwisho: ambaye, ambao, ambacho, ambayo.",
+ "M6_AMBA_DOUBLE": "Tumia amba- au -ye- katika kitenzi, si vyote viwili.",
  "M_VIT_METHALI": "Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo.",
  "M_VIT_NAHAU": "Nahau ni maneno yenye maana maalum. Kitendawili huuliza kwa mafumbo na kina jibu la kutegua.",
  "M_VIT_PLAIN": "Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo. Sentensi ya kawaida inataja wazi.",
@@ -1936,28 +2431,57 @@ export const MIS_FEEDBACK = {
  "M_UFS_SPEED": "Kusoma kwa ufasaha si kusoma haraka sana. Kasi ifaayo ni ya wastani, ili msikilizaji aelewe kila neno.",
  "M_UFS_LOUD": "Sauti ipasavyo ni ile inayosikika wazi bila kupiga kelele wala kunong'ona.",
  "M_UFS_IGNORE_MARKS": "Alama za uakifishi zinatuonyesha mahali pa kupumzika: kidogo kwenye koma na kwa muda mrefu zaidi kwenye kikomo.",
+ "M6_UFS_WORDBYWORD_T3": "Usomaji wa ufasaha husoma kundi la maneno kwa pamoja, kama tunavyozungumza.",
+ "M6_UFS_RACE_T3": "Kasi ifaayo ni ile ya kuzungumza: si haraka mno, si polepole mno.",
+ "M6_UFS_FLAT_T3": "Kiulizi (?) hupandisha sauti mwishoni; alama ya hisi (!) huonyesha hisia.",
+ "M6_UFS_NOPAUSE_T3": "Simama kidogo kwenye koma, na zaidi kwenye kikomo.",
+ "M6_UFS_SOUND_T3": "Tamka \"urafiki\" kama lilivyoandikwa; \"ulafiki\" ni neno jingine au si neno.",
+ "M6_UFS_FEELING": "Sauti hubadilika kulingana na hisia za matini.",
  "M_TAR6_MIX": "Herufi nzito zimenenepeshwa, herufi mlazo huegemea upande, saizi ni ukubwa wa herufi.",
  "M_TAR6_CAPS": "Herufi kubwa ni za mwanzo wa sentensi na majina. Herufi nzito ni zilizonenepeshwa, zinaweza kuwa ndogo au kubwa.",
  "M_TAR6_ICON": "Kuhifadhi ni kuweka kazi salama. Kuchapisha ni kutoa karatasi. Kufuta huondoa kazi.",
+ "M6_CHM_ALL_BOLD": "Tumia herufi nzito kwa anwani au neno muhimu tu.",
+ "M6_CHM_NO_SELECT": "Chagua maandishi kwanza, kisha chagua mtindo.",
+ "M6_CHM_WRONG_STYLE": "Majina ya vitabu huandikwa kwa mlazo.",
+ "M6_CHM_UNSAVED_CHANGES": "Hifadhi kila unapobadilisha kazi.",
+ "M6_TAR6_SYMBOL": "Alama @ hutumika katika anwani ya baruapepe.",
  "M_NAFSI_PERSON": "Aliye anasema ni mimi, aliye anaambiwa ni wewe, anayezungumziwa ni yeye.",
  "M_NAFSI_NUMBER": "Wewe ni mmoja, ninyi ni wengi. Mimi ni mmoja, sisi ni wengi.",
+ "M6_NAFSI_SUBJECT": "Kiambishi cha kitenzi hupatana na nafsi: sisi tunacheza.",
+ "M6_NAFSI_OBJECT": "Kitenzi hubeba nafsi ya mtendewa ndani yake: alinisifu.",
  "M_VWASH_CLASS": "Kiwakilishi kiashiria hufuata ngeli ya kitu kinachoonyeshwa: mti, huu.",
  "M_VWASH_NUMBER": "Kitu kimoja: hiki. Vitu vingi: hivi.",
  "M_VWASH_ADJ": "Kiwakilishi husimama mahali pa nomino. Kikifuata nomino, ni kivumishi.",
+ "M6_VWASH_DIST": "Kitu kilicho mbali huonyeshwa kwa yule, ule, kile.",
  "M_VWID_CLASS": "Kiwakilishi cha idadi huchukua kiambishi cha nomino iliyoachwa: watu, wawili.",
  "M_VWID_NO_PREFIX": "Nambari moja hadi tano huchukua kiambishi cha nomino, hata ikisimama peke yake.",
+ "M6_VWID_SIX": "Sita, saba, tisa na kumi hazichukui kiambishi.",
+ "M6_VWID_AGREE_VERB": "Kitenzi hupatana na nomino inayowakilishwa: vitatu vimepotea.",
  "M_UAK6_HISI": "Mshangao, furaha na amri kali huisha kwa alama ya hisi (!).",
  "M_UAK6_RITIFAA": "Ritifaa (') huandikwa baada ya ng katika ng'ombe, ng'ambo, ng'ang'ana.",
  "M_UAK6_KOLONI": "Koloni (:) huja kabla ya orodha au maelezo yanayofuata.",
+ "M6_UAK6_RITIFAA_PLACE": "Ritifaa hukaa baada ya ng: ng'ombe, ng'ambo.",
  "M_HESH_MISUSE": "Tafadhali ni kuomba, asante ni kushukuru, samahani ni kuomba msamaha, pole ni kufariji, karibu ni kukaribisha.",
  "M_HESH_RUDE": "Ombi la heshima lina maneno kama tafadhali, naomba, samahani na asante.",
+ "M6_HESH_TITLE": "Tumia cheo sahihi: Bwana Chifu, Mheshimiwa, Daktari.",
+ "M6_HESH_YOU_PLURAL": "Kwa wazee wengi tunasema \"Shikamooni\".",
  "M_DIG_SHARE": "Nenosiri ni siri yako. Usimpe mtu mwingine, hata rafiki, ila mzazi au mlezi.",
  "M_DIG_LINK": "Viungo kutoka kwa watu usiowajua vinaweza kuwa hatari. Mwonyeshe mtu mzima kabla ya kuvifungua.",
  "M_DIG_UNSAFE_SITE": "Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi, na usitoe maelezo yako binafsi.",
+ "M6_KID_FOLDER_T4": "Faili huhifadhiwa ndani ya folda; fungua folda kwanza, kisha faili.",
+ "M6_KID_SEARCH_T4": "Andika maneno mawili au matatu muhimu tu, na uyaandike kwa tahajia sahihi.",
+ "M6_KID_POPUP_T4": "Ujumbe wa zawadi usiotarajiwa ni mtego; usiubonyeze.",
+ "M6_KID_SITE_T4": "Usimpe mtu yeyote mtandaoni jina lako kamili, shule yako wala nambari ya simu.",
+ "M6_KID_ORDER_T4": "Washa kifaa, fungua kivinjari, andika maneno muhimu, chagua tovuti salama, soma.",
+ "M6_DIG_FAKE": "Thibitisha habari kwa chanzo rasmi kabla ya kuamini au kusambaza.",
  "M_BAR6_PART": "Kichwa hutaja mada, salamu humwamkia mwandikiwa, mwili una ujumbe, na mwisho una sahihi na jina.",
  "M_BAR6_POSITION": "Anwani ya mwandikaji iko juu kulia. Anwani ya mwandikiwa iko kushoto, chini ya tarehe.",
  "M_BAR6_FRIENDLY": "Barua rasmi hutumia lugha na maneno ya heshima, kama \"Wako mwaminifu,\".",
  "M_BAR6_ORDER": "Barua huanza na anwani na tarehe juu, kisha salamu, kichwa, mwili na mwisho chini.",
+ "M6_INS_ONEADDR_T4": "Barua rasmi ina anwani mbili: ya mwandishi kulia juu, ya mpokeaji kushoto chini yake.",
+ "M6_INS_NOREF_T4": "Kichwa cha barua rasmi huanza KUH: au YAH: na huandikwa kwa herufi kubwa, kwa ufupi.",
+ "M6_INS_CASUAL_T4": "Barua rasmi hutumia lugha rasmi: Kwa Mwalimu Mkuu, Wako mtiifu.",
+ "M6_INS_SIGNOFF_T4": "Barua rasmi humalizika kwa \"Wako mtiifu,\" sahihi na jina kamili.",
  "M_YAYA_LI": "Maji ni ya ngeli ya YA-YA. Hupatana na ya-: maji yameisha.",
  "M_YAYA_OTHER": "Nomino za YA-YA hupatana na ya- tu.",
  "M_YAYA_A": "A- ni ya watu na wanyama. Maziwa ni kitu, na hupatana na ya-.",
@@ -1965,6 +2489,7 @@ export const MIS_FEEDBACK = {
  "M_MET_LITERAL": "Methali haisemi maana yake wazi. Mchumia juani hulia kivulini ina maana kwamba anayefanya kazi kwa bidii atapumzika na kufurahia matunda yake.",
  "M_MET_WRONG_LESSON": "Kila methali ina funzo lake. Haba na haba hujaza kibaba inafundisha kwamba kidogo kidogo hujaza.",
  "M_MET_WRONG_END": "Methali hubaki jinsi ilivyo. Mwisho sahihi ni kibaba: haba na haba hujaza kibaba.",
+ "M6_MET_OPPOSITE_LESSON": "Methali hii inafunza ushirikiano: mtu mmoja hawezi peke yake.",
  "M_SHA_AINA_SWAP": "Tathnia ni mishororo miwili, tathlitha mitatu na tarbia minne. Jina linaonyesha idadi.",
  "M_SHA_AINA_COUNT": "Hesabu mishororo kwanza. Mistari miwili ni tathnia, mitatu ni tathlitha, minne ni tarbia.",
  "M_SHA_UKWAPI_SWAP": "Mshororo hugawanyika katika sehemu mbili: ukwapi ni ya kwanza, utao ni ya pili.",
@@ -1972,18 +2497,56 @@ export const MIS_FEEDBACK = {
  "M_INS_WASIFU_STORY": "Insha ya wasifu humwelezea mtu: sura yake, tabia yake na maisha yake. Masimulizi husimulia matukio.",
  "M_INS_MAELEZO_STORY": "Insha ya maelezo hueleza jambo au jinsi ya kufanya kitu. Masimulizi husimulia tukio lililotokea.",
  "M_INS_STORY_WASIFU": "Masimulizi husimulia matukio kwa mpangilio. Wasifu humwelezea mtu mwenyewe.",
+ "M6_INS_STORY_T5": "Insha ya maelezo hueleza jambo lilivyo au jinsi linavyofanywa, si matukio ya siku moja.",
+ "M6_INS_DETAIL_T5": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha.",
+ "M6_INS_STEPS_T5": "Maelezo ya jinsi ya kufanya jambo hufuata hatua kwa mpangilio.",
+ "M6_INS_OFFTOPIC_T5": "Kila sentensi ya insha inapaswa kuhusu anwani.",
+ "M6_INS_PARAS_T5": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho.",
+ "M6_INS_MAELEZO_WASIFU": "Maelezo hufafanua jinsi ya kufanya jambo; wasifu hueleza jinsi kitu au mtu alivyo.",
  "M_UU_PLURAL": "Nomino za U-U hazina wingi, kwa hiyo hupatana na u- tu: uji umetiwa sukari.",
  "M_UU_OTHER": "Nomino za U-U hupatana na u-: ugali umeiva.",
  "M_UU_NOUN": "Nomino za U-U hupatana na u- na hazina wingi, kama uji.",
+ "M6_UU_UYA": "Nomino za U-U hazina wingi: umoja wetu, uji umepikwa.",
+ "M6_SHU_SOUND": "Tamka sauti ya pua wazi: njia, si jia.",
+ "M6_SHU_GENDER_LITERAL": "Shairi linafunza kwamba kazi ni ya wote.",
+ "M6_SHU_WORD": "Bega kwa bega hapa ni kushirikiana pamoja kwa usawa.",
+ "M6_SHU_OUTSIDE": "Jibu kutokana na maneno ya shairi.",
+ "M6_MAK_CRITERIA": "Chagua makala kwa mada yake na kiwango cha lugha.",
+ "M6_MAK_OLD": "Kwa habari mpya, angalia tarehe ya makala.",
+ "M6_MAK_EXAMPLE": "Mfano huonyesha wazo kuu; si wazo kuu lenyewe.",
+ "M6_MAK_OPINION": "Maoni ni kile mtu anachofikiri; ukweli unaweza kuthibitishwa.",
  "M_INS6_PART": "Insha ina kichwa juu, kisha utangulizi (mwanzo), mwili (katikati) na hitimisho (mwisho).",
+ "M6_INS_STORY_T6": "Insha ya wasifu hueleza jinsi kitu au mtu alivyo, si matukio ya siku moja.",
+ "M6_INS_DETAIL_T6": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha.",
+ "M6_INS_AGREE_T6": "Kivumishi hupatana na nomino yake: bendera nzuri, miti mirefu, mtoto mzuri.",
+ "M6_INS_OFFTOPIC_T6": "Kila sentensi ya insha inapaswa kuhusu anwani.",
+ "M6_INS_PARAS_T6": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho.",
+ "M6_MW_INTRO_DETAIL": "Utangulizi hutambulisha kwa ufupi; kiini hueleza sifa kwa kina.",
+ "M6_MW_ORDER_FEATURES": "Panga sifa kwa makundi: sura, tabia, kazi.",
+ "M6_MW_NO_CLOSE": "Hitimisho hufunga kwa kueleza umuhimu wa mtu au kitu.",
  "M_II_PLURAL": "Nomino za I-I hazihesabiki, kwa hiyo hupatana na i-: afya imeimarika.",
  "M_II_OTHER": "Nomino za I-I hupatana na i-: njaa inauma.",
  "M_II_NOUN": "Nomino za I-I ni hali au mawazo yasiyohesabika, kama afya na njaa.",
+ "M6_II_IZI": "Nomino za I-I hazina wingi: sukari imeisha.",
  "M_NAH_LITERAL": "Nahau ina maana tofauti na maneno yake. \"Kukata tamaa\" ni kuacha kuwa na matumaini.",
  "M_NAH_WRONG_MEANING": "Kila nahau ina maana yake. \"Kula chumvi\" ni kuwa na uzoefu wa miaka mingi.",
  "M_NAH_WRONG_WORD": "Nahau hazibadiliki: kukata tamaa, kupiga moyo konde. Neno moja likibadilika, maana hupotea.",
+ "M6_NAH_USE": "Kujifunga kibwebwe ni kujiandaa kufanya kazi kwa bidii.",
+ "M6_MAP_COVER_T7": "Anwani, maelezo ya nyuma ya kitabu na ukurasa wa kwanza hukuambia kitabu kinahusu nini.",
+ "M6_MAP_LEVEL_T7": "Matini ifaayo ni ile unayoweza kuisoma na kuielewa ukiwa peke yako.",
+ "M6_MAP_TITLEMSG_T7": "Anwani hutaja mada; ujumbe ni funzo au wazo kuu ambalo mwandishi anataka ulipate.",
+ "M6_MAP_DETAIL_T7": "Ujumbe unahusu matini yote; jambo moja dogo ni maelezo tu.",
+ "M6_MAP_KIND_T7": "Shairi lina beti na mishororo; hadithi ina aya; gazeti lina habari na tarehe.",
+ "M6_MAP_WORD_T7": "Soma sentensi nzima: \"tahadhari\" hapa ni onyo la mapema kuhusu hatari.",
+ "M6_INS_STORY_T7": "Insha ya maelezo hueleza jambo lilivyo au jinsi linavyofanywa, si matukio ya siku moja.",
+ "M6_INS_DETAIL_T7": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha.",
+ "M6_INS_STEPS_T7": "Maelezo ya jinsi ya kufanya jambo hufuata hatua kwa mpangilio.",
+ "M6_INS_OFFTOPIC_T7": "Kila sentensi ya insha inapaswa kuhusu anwani.",
+ "M6_INS_PARAS_T7": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho.",
  "M_PKM_MIX": "Pale huchukua pa-, kule huchukua ku-, humu na mle huchukua mu- (m-).",
  "M_PKM_CLASS": "Katika ngeli ya mahali, kitenzi hupatana na mahali (pa-, ku-, mu-), si na nomino.",
+ "M6_PKM_NI": "Mahali (-ni) huchukua pa-, ku- au mu-: shuleni kumesafishwa.",
+ "M6_PKM_MU_INSIDE": "Ndani ya kitu tunatumia mu-: chumbani mna giza.",
  "M_VIS_OPPOSITE": "Visawe ni maneno yenye maana sawa. Furaha na huzuni ni vinyume, si visawe.",
  "M_VIS_RELATED": "Neno linalohusiana na jingine si lazima liwe na maana sawa nalo. Kisawe cha huzuni ni simanzi.",
  "M_VIS_LOOKALIKE": "Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi.",
@@ -1993,27 +2556,76 @@ export const MIS_FEEDBACK = {
  "M_IGI_WRONG_SPEAKER": "Jina lililo mbele ya nukta mbili ndilo la mtu anayesema maneno yaliyofuata.",
  "M_IGI_DETAIL": "Rudi kwenye igizo na utafute mstari unaotaja jibu.",
  "M_IGI_VOCAB": "Maana ya neno hutokana na mstari lilimotumika katika igizo. Soma mstari huo tena.",
+ "M6_INS_FACTS_T8": "Masimulizi husimulia matukio yaliyotokea: nani, wapi, nini kilitokea.",
+ "M6_INS_TENSE_T8": "Jambo lililotokea husimuliwa kwa wakati uliopita: -li-.",
+ "M6_INS_ORDER_T8": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye.",
+ "M6_INS_END_T8": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu.",
+ "M6_INS_DIALOGUE_T8": "Maneno halisi ya msemaji huwekwa ndani ya alama za usemi: \"Njoo hapa.\"",
  "M_MNY_BASE": "Kitenzi cha kawaida hakionyeshi kwamba kila mmoja anamtendea mwenzake. Kutendeana: hupikiana.",
  "M_MNY_ONEWAY": "Wawili wakitendeana, kitenzi huishia -ana: huandikiana.",
  "M_MNY_WRONG_FORM": "-ana ni kila mmoja kwa mwenzake, -isha ni kumfanya mtu atende, na -ua ni kufanya kinyume.",
+ "M6_MNY_TENDUA_ALL": "Kutendua hubadilisha tendo kuwa kinyume chake: funga -> fungua; si kila kitenzi kina kutendua.",
  "M_MUK_MIX": "Lugha rasmi ni ya heshima na ya viongozi. Lugha isiyo rasmi ni ya marafiki na nyumbani.",
  "M_MUK_INFORMAL": "Kwa mwalimu, kiongozi au mkutano rasmi tunatumia maneno ya heshima.",
  "M_MUK_FORMAL_FRIEND": "Kwa rafiki au ndugu nyumbani, lugha ya kawaida inafaa. Lugha rasmi kupita kiasi inasikika ya ajabu.",
+ "M6_MUK_PHONE": "Kwa simu rasmi: salimu, jitambulishe, eleza sababu, shukuru.",
+ "M6_MAP_COVER_T9": "Anwani, maelezo ya nyuma ya kitabu na ukurasa wa kwanza hukuambia kitabu kinahusu nini.",
+ "M6_MAP_LEVEL_T9": "Matini ifaayo ni ile unayoweza kuisoma na kuielewa ukiwa peke yako.",
+ "M6_MAP_TITLEMSG_T9": "Anwani hutaja mada; ujumbe ni funzo au wazo kuu ambalo mwandishi anataka ulipate.",
+ "M6_MAP_DETAIL_T9": "Ujumbe unahusu matini yote; jambo moja dogo ni maelezo tu.",
+ "M6_MAP_KIND_T9": "Shairi lina beti na mishororo; hadithi ina aya; gazeti lina habari na tarehe.",
+ "M6_MAP_WORD_T9": "Soma sentensi nzima: \"msongo\" hapa ni mawazo mengi yanayomlemea mtu.",
+ "M6_INS_STORY_T9": "Insha ya maelezo hueleza jambo lilivyo au jinsi linavyofanywa, si matukio ya siku moja.",
+ "M6_INS_DETAIL_T9": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha.",
+ "M6_INS_STEPS_T9": "Maelezo ya jinsi ya kufanya jambo hufuata hatua kwa mpangilio.",
+ "M6_INS_OFFTOPIC_T9": "Kila sentensi ya insha inapaswa kuhusu anwani.",
+ "M6_INS_PARAS_T9": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho.",
  "M_VINY_SAME": "Kinyume ni neno la maana ya upande wa pili, si neno lilelile.",
  "M_VINY_OTHER": "Kinyume cha mrefu ni mfupi. Mdogo ni kinyume cha mkubwa.",
  "M_VINY_NO_AGREE": "Vivumishi vingi huchukua kiambishi cha nomino (mjinga, wachache). Vingine hubaki kama vilivyo (laini, moto).",
+ "M6_VINY_NEGATE": "Kinyume cha kivumishi ni kivumishi kingine: mfupi.",
  "M_SIT_WRONG_ANIMAL": "Kila mnyama hutumika kuonyesha tabia: nyuki (bidii), simba (ujasiri), kobe (polepole), kinyonga (kubadilika), mbweha (ujanja), tausi (kujionyesha).",
  "M_SIT_TASHBIHI": "Tashbihi hulinganisha kwa kutumia \"kama\". Sitiari husema moja ni lingine bila \"kama\".",
  "M_SIT_LITERAL": "Sitiari haisemi mtu ana mnyama. Inasema mtu ni mnyama kwa tabia yake.",
+ "M6_SIT_WRONG_TRAIT": "Fisi huwakilisha ulafi; njiwa huwakilisha upole.",
+ "M6_KID_FOLDER_T10": "Faili huhifadhiwa ndani ya folda; fungua folda kwanza, kisha faili.",
+ "M6_KID_SEARCH_T10": "Andika maneno mawili au matatu muhimu tu, na uyaandike kwa tahajia sahihi.",
+ "M6_KID_POPUP_T10": "Ujumbe wa zawadi usiotarajiwa ni mtego; usiubonyeze.",
+ "M6_KID_SITE_T10": "Usimpe mtu yeyote mtandaoni jina lako kamili, shule yako wala nambari ya simu.",
+ "M6_KID_ORDER_T10": "Washa kifaa, fungua kivinjari, andika maneno muhimu, chagua tovuti salama, soma.",
+ "M6_INS_FACTS_T10": "Masimulizi husimulia matukio yaliyotokea: nani, wapi, nini kilitokea.",
+ "M6_INS_TENSE_T10": "Jambo lililotokea husimuliwa kwa wakati uliopita: -li-.",
+ "M6_INS_ORDER_T10": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye.",
+ "M6_INS_END_T10": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu.",
+ "M6_INS_OFFTOPIC_T10": "Kila sentensi ya insha inapaswa kuhusu anwani.",
  "M_MASH_TENSE": "Sharti linaonyeshwa kwa -ki-, -sipo- au -nge-, si kwa -li-, -na- au -ta-.",
  "M_MASH_NEG": "Soma sentensi nzima. Kama matokeo ni mazuri, sharti ni la kufanya (-ki-).",
  "M_MASH_ID_TENSE": "Ta- huonyesha wakati ujao. Ki- huonyesha sharti.",
  "M_MASH_ID_PERSON": "Kiambishi cha mtu (u-, a-, ni-) hakionyeshi sharti. Sharti ni -ki-, -sipo-, -nge-.",
+ "M6_MSM_DETAIL_T11": "Ujumbe ni funzo la masimulizi yote; jambo moja ni maelezo tu.",
+ "M6_MSM_ORDER_T11": "Simulia kwa mpangilio: mwanzo, kati, mwisho.",
+ "M6_MSM_GESTURE_T11": "Ishara na sura yako ziendane na unachosema.",
+ "M6_MSM_MIX_T11": "Simulia kwa Kiswahili sanifu: kisha, nyumbani, nzuri.",
+ "M6_MSM_OFFTOPIC_T11": "Masimulizi yako yahusu mada uliyopewa.",
+ "M6_UFS_WORDBYWORD_T11": "Usomaji wa ufasaha husoma kundi la maneno kwa pamoja, kama tunavyozungumza.",
+ "M6_UFS_RACE_T11": "Kasi ifaayo ni ile ya kuzungumza: si haraka mno, si polepole mno.",
+ "M6_UFS_FLAT_T11": "Kiulizi (?) hupandisha sauti mwishoni; alama ya hisi (!) huonyesha hisia.",
+ "M6_UFS_NOPAUSE_T11": "Simama kidogo kwenye koma, na zaidi kwenye kikomo.",
+ "M6_UFS_SOUND_T11": "Tamka \"serikali\" kama lilivyoandikwa; \"selikali\" ni neno jingine au si neno.",
+ "M6_INS_ONEADDR_T11": "Barua rasmi ina anwani mbili: ya mwandishi kulia juu, ya mpokeaji kushoto chini yake.",
+ "M6_INS_NOREF_T11": "Kichwa cha barua rasmi huanza KUH: au YAH: na huandikwa kwa herufi kubwa, kwa ufupi.",
+ "M6_INS_CASUAL_T11": "Barua rasmi hutumia lugha rasmi: Kwa Mwalimu Mkuu, Wako mtiifu.",
+ "M6_INS_SIGNOFF_T11": "Barua rasmi humalizika kwa \"Wako mtiifu,\" sahihi na jina kamili.",
  "M_UKM_SI_ONLY": "Katika ukanushaji wa masharti, ki- hubadilika kuwa -sipo-: Ukisoma, Usiposoma.",
  "M_UKM_KEEP_KI": "Ha- haikanushi -ki-. Ki- hubadilika kuwa -sipo-.",
  "M_UKM_COMMAND": "Usisome ni amri ya kutosoma. Sharti hasi la Ukisoma ni Usiposoma.",
+ "M6_UKM_NGE_NEG": "Hali ya -nge- hukanushwa kwa -singe-: asingekuja.",
  "M_UKUB_SWAP": "Ukubwa hupata ji-, udogo hupata kiji-. Kijitabu ni kitabu kidogo.",
  "M_UKUB_PLURAL": "Vitabu ni wingi wa kitabu. Kitabu kikubwa sana ni jitabu.",
  "M_UKUB_NO_CHANGE": "Ukubwa na udogo hubadilisha mwanzo wa nomino: kisu, kijisu.",
- "M_UKUB_SINGULAR": "Wingi wa jitabu ni majitabu."
+ "M_UKUB_SINGULAR": "Wingi wa jitabu ni majitabu.",
+ "M6_UKJ_DROP_JI": "Kwa nomino za ji- kama jiwe, ji- inabaki: kijiwe.",
+ "M6_UKJ_SAME_BIG": "Jicho ni hali ya wastani; ukubwa wake ni jijicho.",
+ "M6_UKJ_AGREE": "Udogo huchukua KI-VI: kijiwe kimeanguka.",
+ "M6_UKJ_PLURAL": "Wingi wa kijiwe ni vijiwe."
 };

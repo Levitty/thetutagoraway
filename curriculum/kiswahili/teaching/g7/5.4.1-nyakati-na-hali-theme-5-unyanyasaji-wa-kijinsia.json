@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI",
+ "title": "Nyakati na Hali (Theme 5: Unyanyasaji wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA",
+   "key_step": "The child puts the time on kuwa (-li-, -ta-) and the continuing action on the main verb with -ki- or -na-.",
+   "floor": {
+    "prerequisite": "Uses -li-, -na-, -ta-.",
+    "question": "Jaza: Jana ni___soma.",
+    "answer": "nilisoma"
+   },
+   "representations": [
+    "a timeline with a long arrow",
+    "two-verb cards",
+    "colour for each part"
+   ],
+   "steps": [
+    "Find when it happened.",
+    "Mark time on kuwa.",
+    "Give the main verb -ki- or -na-.",
+    "Read it."
+   ],
+   "contexts": [
+    "gender-based violence (unyanyasaji wa kijinsia): reporting what was happening",
+    "a match report",
+    "a diary"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kesho saa tatu ___ (soma)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kesho saa tatu\".",
+     "say": "Kitendo kitakuwa kinaendelea?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"nitakuwa nikisoma\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M_KS7_NK_AKISOMA",
+     "listen_for": [
+      "Alikuwa akisoma jana"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi iko katika ujao hali ya kuendelea?\" Kwa nini \"Alikuwa akisoma jana\" si jibu sahihi?",
+     "repair": "Ujao hali ya kuendelea hutumia atakuwa akisoma."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M_KS7_NK_ALIKUWA",
+     "listen_for": [
+      "Alimaliza kupika"
+     ],
+     "ask": "Soma tena: \"Alikuwa akipika humaanisha nini?\" Kwa nini \"Alimaliza kupika\" si jibu sahihi?",
+     "repair": "Alikuwa akipika ni uliopita hali ya kuendelea: tendo lilikuwa likiendelea."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M_KS7_NK_PAST_SIMPLE",
+     "listen_for": [
+      "Alisoma jana"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ni uliopita hali ya kuendelea?\" Kwa nini \"Alisoma jana\" si jibu sahihi?",
+     "repair": "Walikuwa wakicheza ni uliopita hali ya kuendelea."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA.M7_NK_KUWA_FORM",
+     "listen_for": [
+      "nilikuwa nilisoma"
+     ],
+     "ask": "Ni kitenzi kipi kinabeba wakati?",
+     "repair": "Wakati hukaa kwenye \"kuwa\": nilikuwa nikisoma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Jana mvua ___ (nyesha) tulipofika.",
+     "answer": "ilikuwa ikinyesha",
+     "shows": "past continuous"
+    },
+    {
+     "question": "Badilisha kuwa ujao hali ya kuendelea: \"Alikuwa akipika.\"",
+     "answer": "Atakuwa akipika.",
+     "shows": "future continuous"
+    }
+   ]
+  }
+ ]
+}

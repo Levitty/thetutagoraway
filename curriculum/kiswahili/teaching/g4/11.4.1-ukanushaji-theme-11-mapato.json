@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T11_UKANUSHAJI",
+ "title": "Ukanushaji (Theme 11: Mapato)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
+   "key_step": "The child changes the person prefix to its negative and the tense marker to its negative form (-na- drops and -a becomes -i; -li- becomes -ku-; -ta- stays).",
+   "floor": {
+    "prerequisite": "Uses -li-, -na-, -ta-.",
+    "question": "Jaza: Jana ni___fika.",
+    "answer": "nilifika"
+   },
+   "representations": [
+    "a table: ninasoma / sisomi, nilisoma / sikusoma, nitasoma / sitasoma",
+    "prefix cards ni-/si-, a-/ha-, wa-/hawa-",
+    "a positive and negative sentence pair"
+   ],
+   "steps": [
+    "Find the person.",
+    "Change the person to the negative.",
+    "Change the tense marker.",
+    "Check the ending (-i in the present)."
+   ],
+   "contexts": [
+    "chores at home",
+    "a class rule",
+    "a visit to the clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ninacheza -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ni-\" and \"-na-\".",
+     "say": "Zinabadilikaje tukikanusha?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Sichezi\" and the negatives of \"Nilicheza\" and \"Nitacheza\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M4_NEG_HA_ONLY",
+     "listen_for": [
+      "Mimi sinasoma"
+     ],
+     "ask": "Ukikanusha \"anasoma\", -na- inabaki?",
+     "repair": "Wakati uliopo hukanushwa hivi: hasomi, si hanasoma."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M4_NEG_KEEP_LI",
+     "listen_for": [
+      "Wanjiru halipika"
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Wanjiru alipika.\"\" Kwa nini \"Wanjiru halipika\" si jibu sahihi?",
+     "repair": "Wakati uliopita ukikanushwa, -li- hubadilika kuwa -ku-: alipika-hakupika."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M4_NEG_TENSE",
+     "listen_for": [
+      "Wanafunzi hawakuimba"
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Wanafunzi wanaimba.\"\" Kwa nini \"Wanafunzi hawakuimba\" si jibu sahihi?",
+     "repair": "Ukanushaji huhifadhi wakati: uliopita hawakuimba, uliopo hawaimbi, ujao hawataimba."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M4_NEG_NOT_NEG",
+     "listen_for": [
+      "anasoma"
+     ],
+     "ask": "Soma tena: \"Ni neno lipi limekanushwa?\" Kwa nini \"anasoma\" si jibu sahihi?",
+     "repair": "Neno lililokanushwa linaonyesha kwamba kitendo hakifanyiki: hasomi, hakusoma, hatasoma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Walikula.",
+     "answer": "Hawakula",
+     "shows": "past negative"
+    },
+    {
+     "question": "Kanusha: Anaimba.",
+     "answer": "Haimbi",
+     "shows": "present negative"
+    }
+   ]
+  }
+ ]
+}

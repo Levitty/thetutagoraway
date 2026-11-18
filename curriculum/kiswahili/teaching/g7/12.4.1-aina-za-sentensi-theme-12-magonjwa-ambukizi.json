@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI",
+ "title": "Aina za Sentensi (Theme 12: Magonjwa ambukizi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI",
+   "key_step": "The child counts the ideas (verbs with their subjects): one idea is sahili; two joined by na, lakini, au, ila is ambatano.",
+   "floor": {
+    "prerequisite": "Uses joining words.",
+    "question": "Jaza: Alikuja ___ hakukaa.",
+    "answer": "lakini"
+   },
+   "representations": [
+    "sentence strips to join",
+    "joining word cards",
+    "colour for each idea"
+   ],
+   "steps": [
+    "Find the verbs and their subjects.",
+    "Count the ideas.",
+    "Is there a joining word?",
+    "Name the kind."
+   ],
+   "contexts": [
+    "infectious diseases: Alikohoa lakini hakwenda hospitali",
+    "a news report",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Alikohoa lakini hakwenda hospitali."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"lakini\".",
+     "say": "Sentensi hii ina mawazo mangapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels three sentences and joins two simple ones."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M_KS7_ST_AMBATANO_MOJA",
+     "listen_for": [
+      "Wazo moja tu"
+     ],
+     "ask": "Soma tena: \"Sentensi ambatano ina nini?\" Kwa nini \"Wazo moja tu\" si jibu sahihi?",
+     "repair": "Sentensi ambatano huunganisha mawazo mawili au zaidi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M_KS7_ST_KIUNGANISHI",
+     "listen_for": [
+      "Mama anapika."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ni ambatano?\" Kwa nini \"Mama anapika.\" si jibu sahihi?",
+     "repair": "Kiunganishi na huunganisha mawazo mawili."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M_KS7_ST_SAHILI_NYINGI",
+     "listen_for": [
+      "Alikuja lakini aliondoka."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ni sahili?\" Kwa nini \"Alikuja lakini aliondoka.\" si jibu sahihi?",
+     "repair": "Sentensi sahili ina wazo moja, hata ikiwa ndefu."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI.M7_ST_COMMA_SPLICE",
+     "listen_for": [
+      "Mama alipika, baba alilima."
+     ],
+     "ask": "Kiunganishi kiko wapi?",
+     "repair": "Sentensi ambatano huunganishwa kwa kiunganishi: na, lakini, au."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi ni sahili?",
+     "answer": "Wanafunzi walinawa mikono.",
+     "shows": "simple"
+    },
+    {
+     "question": "Unganisha: \"Ninapenda chai. Sipendi kahawa.\"",
+     "answer": "Ninapenda chai lakini sipendi kahawa.",
+     "shows": "compound"
+    }
+   ]
+  }
+ ]
+}

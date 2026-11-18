@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT",
+ "title": "Kusoma kwa Kina Tamthilia (Theme 6: Usalama nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MAUDHUI",
+   "key_step": "The child names the maudhui with the right term, proves each point with a line or event from \"Kilio cha Msitu\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class tamthilia \"Kilio cha Msitu\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "usalama nyumbani",
+    "the class tamthilia",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kilio cha Msitu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni maudhui gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MAUDHUI.M8_FAS_SWAP_T6",
+     "listen_for": [
+      "maudhui"
+     ],
+     "ask": "Huu ni suala lililozungumziwa au ni lengo la mwandishi?",
+     "repair": "Maudhui ni masuala yanayoshughulikiwa; dhamira ni lengo la mwandishi."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MAUDHUI.M8_FAS_TITLE_T6",
+     "listen_for": [
+      "Kilio cha Msitu"
+     ],
+     "ask": "Wahusika wanakabiliana na suala gani?",
+     "repair": "Anwani hutaja kazi; maudhui ni masuala yanayoshughulikiwa ndani yake."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MAUDHUI.M8_FAS_EVENT_T6",
+     "listen_for": [
+      "Zuhura anazuia malori ya mbao"
+     ],
+     "ask": "Tukio hili linaonyesha suala gani?",
+     "repair": "Tukio huonyesha maudhui; si maudhui lenyewe."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.TAMTHILIA_MAUDHUI.M8_FAS_OUTSIDE_T6",
+     "listen_for": [
+      "kutuhimiza tuende kanisani au msikitini kila wiki"
+     ],
+     "ask": "Ni sehemu gani ya kazi inaonyesha hili?",
+     "repair": "Dhamira lazima itokane na kazi yenyewe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Katika \"Kilio cha Msitu\", \"kuhimiza jamii kutunza msitu na kupinga ufisadi\" ni maudhui au dhamira?",
+     "answer": "dhamira",
+     "shows": "maudhui"
+    },
+    {
+     "question": "Ni ipi ni maudhui katika \"Kilio cha Msitu\"?",
+     "answer": "uharibifu wa mazingira na ufisadi",
+     "shows": "maudhui, second form"
+    }
+   ]
+  }
+ ]
+}

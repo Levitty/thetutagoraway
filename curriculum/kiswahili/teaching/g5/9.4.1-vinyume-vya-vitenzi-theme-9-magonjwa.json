@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI",
+ "title": "Vinyume vya Vitenzi (Theme 9: Magonjwa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME",
+   "key_step": "The child gives the verb of the opposite action, by -ua where it applies (funga/fungua) or by another verb (ingia/toka).",
+   "floor": {
+    "prerequisite": "Knows noun opposites.",
+    "question": "Kinyume cha mchana ni?",
+    "answer": "usiku"
+   },
+   "representations": [
+    "action pairs acted out (open/close, enter/leave)",
+    "verb pair cards",
+    "two sorting boxes: -ua / neno jingine"
+   ],
+   "steps": [
+    "Act the verb.",
+    "Act the opposite.",
+    "Say its verb.",
+    "Check it is not just a negative."
+   ],
+   "contexts": [
+    "diseases (magonjwa): ingia hospitali / toka hospitali",
+    "dressing and undressing",
+    "opening the classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "funga -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the closed door.",
+     "say": "Tukifanya kinyume tunasema nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"fungua\" and two more pairs, one without -ua."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M_VIN_NEGATE",
+     "listen_for": [
+      "kutofunga"
+     ],
+     "ask": "Soma tena: \"Kinyume cha \"kufunga\" ni ___.\" Kwa nini \"kutofunga\" si jibu sahihi?",
+     "repair": "Kinyume cha kitenzi ni kitenzi kingine chenye maana ya kutengua kitendo, kama kufunga - kufungua. Si \"kutofunga\"."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M_VIN_WRONG_SUFFIX",
+     "listen_for": [
+      "kuvaua"
+     ],
+     "ask": "Soma tena: \"Kinyume cha \"kuvaa\" ni ___.\" Kwa nini \"kuvaua\" si jibu sahihi?",
+     "repair": "Vitenzi vingine vinabadilika kwa njia tofauti. Kinyume cha kuvaa ni kuvua."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M_VIN_SYNONYM",
+     "listen_for": [
+      "kuingilia"
+     ],
+     "ask": "Soma tena: \"Kinyume cha \"kuingia\" ni ___.\" Kwa nini \"kuingilia\" si jibu sahihi?",
+     "repair": "Kinyume kina maana ya upande wa pili. Kuingia na kutoka ni vinyume."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T9_VINYUME_VYA_VITENZI.VINYUME.M5_VIN_UA_STEM",
+     "listen_for": [
+      "pandua"
+     ],
+     "ask": "Kuna neno lingine lenye maana kinyume?",
+     "repair": "Kinyume cha panda (mlima) ni shuka; si kila kitenzi hutumia -ua."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"ingia\" ni?",
+     "answer": "toka",
+     "shows": "opposite"
+    },
+    {
+     "question": "Kinyume cha \"vaa\" ni?",
+     "answer": "vua",
+     "shows": "-ua"
+    }
+   ]
+  }
+ ]
+}

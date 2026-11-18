@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T1_VITENZI",
+ "title": "Vitenzi (Theme 1: Nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T1_VITENZI.VITENZI",
+   "key_step": "The child finds the word that says what someone or something does or is doing.",
+   "floor": {
+    "prerequisite": "Acts out actions on command.",
+    "question": "Fanya: ruka, keti, simama.",
+    "answer": "the child acts each one"
+   },
+   "representations": [
+    "action cards acted out",
+    "the verb circled in a sentence",
+    "verbs with their tense markers coloured"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "Ask: what is being done?",
+    "Find the word that says it.",
+    "Check it changes with time (-li-, -na-, -ta-)."
+   ],
+   "contexts": [
+    "games at break time",
+    "chores at home",
+    "a sports day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Watoto wanacheza mpira uwanjani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wanacheza\".",
+     "say": "Watoto wanafanya nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts the verb and writes two more sentences with a different verb."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.VITENZI.M4_VERB_NOUN",
+     "listen_for": [
+      "uwanja"
+     ],
+     "ask": "Soma tena: \"Juma ___ mpira uwanjani.\" Kwa nini \"uwanja\" si jibu sahihi?",
+     "repair": "Kitenzi kinaonyesha kitendo: anacheza. \"Uwanja\" ni nomino, ni jina la mahali."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.VITENZI.M4_VERB_ADJ",
+     "listen_for": [
+      "kitamu"
+     ],
+     "ask": "Soma tena: \"Mama ___ chakula jikoni.\" Kwa nini \"kitamu\" si jibu sahihi?",
+     "repair": "Kitenzi kinaonyesha kitendo. \"Kitamu\" ni kivumishi, kinaeleza chakula kikoje."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.VITENZI.M4_VERB_OTHER",
+     "listen_for": [
+      "mapema"
+     ],
+     "ask": "Soma tena: \"Wakulima ___ mahindi shambani.\" Kwa nini \"mapema\" si jibu sahihi?",
+     "repair": "\"Mapema\" ni kielezi cha wakati. Kitenzi ni neno la kitendo, kama \"wanapanda\"."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VITENZI.VITENZI.M4_VERB_KU_NOUN",
+     "listen_for": [
+      "Kuogelea"
+     ],
+     "ask": "Sentensi inasema nini kinatokea?",
+     "repair": "Kuogelea hapa ni jina la jambo; kitenzi ni kunafurahisha."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kitenzi kipi: mpira, cheza, mzuri?",
+     "answer": "cheza",
+     "shows": "verb among word kinds"
+    },
+    {
+     "question": "Taja kitenzi: \"Bibi analima shamba.\"",
+     "answer": "analima",
+     "shows": "verb in a sentence"
+    }
+   ]
+  }
+ ]
+}

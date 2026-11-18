@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 5: Ushauri-nasaha)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI",
+   "key_step": "The child tells a poem by its shape (beti and mishororo), counts them, and reads it line by line for its message.",
+   "floor": {
+    "prerequisite": "Reads a short paragraph.",
+    "question": "Aya hii ina sentensi ngapi?",
+    "answer": "tatu"
+   },
+   "representations": [
+    "a poem and a paragraph side by side",
+    "beti numbered, mishororo underlined",
+    "a clapped reading"
+   ],
+   "steps": [
+    "Look at the shape.",
+    "Count the beti.",
+    "Count the mishororo in one ubeti.",
+    "Read it line by line and say the message."
+   ],
+   "contexts": [
+    "advice from a counsellor (ushauri-nasaha)",
+    "a poem at a music festival",
+    "a poem in a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ubeti 1: mishororo 4"
+    },
+    {
+     "beat": "point",
+     "do": "Point at one line.",
+     "say": "Huu ni ubeti au mshororo?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child counts the beti and mishororo of the poem and reads one ubeti aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M4_SHA_UBETI_MIX",
+     "listen_for": [
+      "ubeti"
+     ],
+     "ask": "Soma tena: \"Mstari mmoja wa shairi huitwa ___.\" Kwa nini \"ubeti\" si jibu sahihi?",
+     "repair": "Mshororo ni mstari mmoja wa shairi. Ubeti ni kundi la mishororo."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M4_SHA_COUNT",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Soma tena: \"Ubeti wa pili wa shairi hili una mishororo mingapi?\" Kwa nini \"12\" si jibu sahihi?",
+     "repair": "Ubeti ni kundi moja la mishororo. Hesabu mishororo ya ubeti huo tu."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M4_SHA_PARAGRAPH",
+     "listen_for": [
+      "Aya moja ndefu inayoendelea hadi mwisho wa ukurasa"
+     ],
+     "ask": "Soma tena: \"Ni maandishi yapi ni shairi?\" Kwa nini \"Aya moja ndefu inayoendelea hadi mwisho wa ukurasa\" si jibu sahihi?",
+     "repair": "Shairi lina mishororo mifupi iliyopangwa katika beti. Kifungu cha kawaida kina aya ndefu."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.SHAIRI.M4_SHA_READ_PROSE",
+     "listen_for": [
+      "mwisho wa shairi tu"
+     ],
+     "ask": "Mshororo huu unaishia wapi?",
+     "repair": "Shairi husomwa mshororo kwa mshororo, ukisimama kidogo mwisho wa kila mmoja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kikundi cha mishororo huitwa?",
+     "answer": "ubeti",
+     "shows": "term"
+    },
+    {
+     "question": "Shairi lenye beti 3 za mishororo 4 lina mishororo mingapi?",
+     "answer": "12",
+     "shows": "counting"
+    }
+   ]
+  }
+ ]
+}

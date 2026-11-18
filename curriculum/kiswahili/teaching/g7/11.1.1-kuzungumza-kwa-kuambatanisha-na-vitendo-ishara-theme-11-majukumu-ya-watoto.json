@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB",
+ "title": "Kuzungumza kwa Kuambatanisha na Vitendo/Ishara (Theme 11: Majukumu ya watoto)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.ISHARA",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a ishara.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "majukumu ya watoto (children's duties)",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "majukumu ya watoto nyumbani"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short ishara on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.ISHARA.M7_ORL_MISMATCH_T11",
+     "listen_for": [
+      "kutikisa kichwa kushoto kulia"
+     ],
+     "ask": "Ishara yako inasema nini?",
+     "repair": "Ishara ziendane na maneno."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.ISHARA.M7_ORL_TOOMANY_T11",
+     "listen_for": [
+      "kusogeza mikono kila neno"
+     ],
+     "ask": "Ishara zako zinasisitiza nini?",
+     "repair": "Tumia ishara chache zenye maana."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.ISHARA.M7_ORL_EYES_T11",
+     "listen_for": [
+      "kuangalia chini muda wote"
+     ],
+     "ask": "Mzungumzaji anajuaje unamsikiliza?",
+     "repair": "Mwangalie mzungumzaji ili aone unamsikiliza."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T11_KUZUNGUMZA_KWA_KUAMB.ISHARA.M7_ORL_SLANG_T11",
+     "listen_for": [
+      "Ma-guys, hii issue ni serious."
+     ],
+     "ask": "Ni maneno yapi si ya Kiswahili sanifu?",
+     "repair": "Tumia Kiswahili sanifu katika mazungumzo rasmi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unasema \"Ndiyo, nimekubali.\" Ishara ipi inafaa?",
+     "answer": "kutikisa kichwa juu chini",
+     "shows": "ishara"
+    },
+    {
+     "question": "Ni lipi bora unapozungumza?",
+     "answer": "ishara chache zinazosisitiza hoja muhimu",
+     "shows": "ishara, second feature"
+    }
+   ]
+  }
+ ]
+}

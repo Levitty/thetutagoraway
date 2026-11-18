@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T3_VIHUSISHI",
+ "title": "Vihusishi (Theme 3: Mavazi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T3_VIHUSISHI.VIHUSISHI",
+   "key_step": "The child shows where a thing is or how two things are related with the right relating word, and the -a of agreement that suits the noun.",
+   "floor": {
+    "prerequisite": "Uses juu ya and ndani ya.",
+    "question": "Kitabu kiko ___ ya meza.",
+    "answer": "juu"
+   },
+   "representations": [
+    "a box and a ball placed in, on, under, beside",
+    "a table of -a forms (wa, cha, la, ya, za)",
+    "picture of a room"
+   ],
+   "steps": [
+    "Look at where the thing is.",
+    "Choose the place word.",
+    "Choose the -a form for the first noun.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "tidying the classroom",
+    "a bedroom at home",
+    "the school bus park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpira uko ___ ya kiti."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ball under the chair.",
+     "say": "Mpira uko wapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child places the ball three ways and writes a sentence for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.VIHUSISHI.M4_PREP_NOT",
+     "listen_for": [
+      "meza"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi katika sentensi: \"Kitabu kiko juu ya meza.\"\" Kwa nini \"meza\" si jibu sahihi?",
+     "repair": "Kihusishi hueleza uhusiano wa nomino na neno lingine, kama \"juu ya\", \"chini ya\" na \"ndani ya\". \"Meza\" ni nomino."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.VIHUSISHI.M4_PREP_A_CLASS",
+     "listen_for": [
+      "wa"
+     ],
+     "ask": "Soma tena: \"Kitabu ___ mwalimu kiko mezani.\" Kwa nini \"wa\" si jibu sahihi?",
+     "repair": "Kihusishi cha \"a\" hubadilika kulingana na ngeli: kitabu cha, vitabu vya, mlango wa, milango ya, jina la, majina ya, nyumba ya."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.VIHUSISHI.M4_PREP_SWAP",
+     "listen_for": [
+      "juu"
+     ],
+     "ask": "Soma tena: \"Samaki wanaishi ___ ya maji, si nje yake.\" Kwa nini \"juu\" si jibu sahihi?",
+     "repair": "\"Ndani ya\" na \"nje ya\" ni vinyume. \"Juu ya\" na \"chini ya\" ni vinyume pia."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHUSISHI.VIHUSISHI.M4_PREP_KWA_NA",
+     "listen_for": [
+      "na"
+     ],
+     "ask": "Kalamu ni mtu aliyeandamana naye au ni chombo?",
+     "repair": "Chombo cha kufanyia kazi huchukua kwa: kwa kalamu. Mtu aliyeandamana huchukua na: na mama."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: kitabu ___ mwalimu.",
+     "answer": "cha",
+     "shows": "agreement of -a"
+    },
+    {
+     "question": "Jaza: Paka amelala ___ ya kitanda.",
+     "answer": "chini",
+     "shows": "place word"
+    }
+   ]
+  }
+ ]
+}

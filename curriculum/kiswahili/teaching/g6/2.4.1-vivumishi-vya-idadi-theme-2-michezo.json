@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI",
+ "title": "Vivumishi vya Idadi (Theme 2: Michezo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI",
+   "key_step": "The child adds the noun's class prefix to the numbers one to five and eight (wawili, vitatu), leaves six, seven, nine and ten bare, and uses -a for position.",
+   "floor": {
+    "prerequisite": "Gives plurals.",
+    "question": "Wingi wa mchezaji ni?",
+    "answer": "wachezaji"
+   },
+   "representations": [
+    "counters and team cards",
+    "a prefix table for numbers",
+    "a race podium"
+   ],
+   "steps": [
+    "Find the noun and its class.",
+    "Is the number 1-5 or 8? Add the prefix.",
+    "Six, seven, nine, ten: no prefix.",
+    "Position: -a + number."
+   ],
+   "contexts": [
+    "games (michezo): a football team",
+    "a race",
+    "a class count"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "wachezaji ___ (2)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wachezaji\".",
+     "say": "Namba itachukua kiambishi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"wachezaji wawili\" and \"mipira sita\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M_IDADI_CLASS",
+     "listen_for": [
+      "watatu"
+     ],
+     "ask": "Soma tena: \"Vitabu ___ viko mezani.\" Kwa nini \"watatu\" si jibu sahihi?",
+     "repair": "Nambari moja hadi tano huchukua kiambishi cha ngeli ya nomino: vitabu vitatu."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M_IDADI_NO_PREFIX",
+     "listen_for": [
+      "nne"
+     ],
+     "ask": "Soma tena: \"Miti ___ imekatwa.\" Kwa nini \"nne\" si jibu sahihi?",
+     "repair": "Nambari moja hadi tano huchukua kiambishi cha ngeli ya nomino. Miti minne."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M_IDADI_SIX_PLUS",
+     "listen_for": [
+      "wasita"
+     ],
+     "ask": "Soma tena: \"Baba ana ng'ombe ___.\" Kwa nini \"wasita\" si jibu sahihi?",
+     "repair": "Kuanzia sita, nambari haichukui kiambishi cha ngeli: ng'ombe sita, vitabu saba."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VYA_IDADI.IDADI.M6_IDADI_ORDINAL",
+     "listen_for": [
+      "watatu"
+     ],
+     "ask": "Unahesabu wangapi au unataja nafasi?",
+     "repair": "Nafasi hutumia -a: wa tatu, ya tatu; idadi haina: watatu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: mipira ___ (3)",
+     "answer": "mitatu",
+     "shows": "prefix"
+    },
+    {
+     "question": "Jaza: timu ___ (6)",
+     "answer": "sita",
+     "shows": "no prefix"
+    }
+   ]
+  }
+ ]
+}

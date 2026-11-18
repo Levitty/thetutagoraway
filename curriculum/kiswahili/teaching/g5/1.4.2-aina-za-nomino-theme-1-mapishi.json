@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2",
+ "title": "Aina za nomino (Theme 1: Mapishi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA",
+   "key_step": "The child names the kind of thing with a common noun and writes it with a small letter, unless it starts the sentence.",
+   "floor": {
+    "prerequisite": "Tells a proper noun.",
+    "question": "Ni lipi ni jina maalum: mji, Eldoret?",
+    "answer": "Eldoret"
+   },
+   "representations": [
+    "kitchen objects (sufuria, mwiko, jiko)",
+    "a sentence with each word on a card",
+    "a two-column chart pekee/kawaida"
+   ],
+   "steps": [
+    "Find the nouns.",
+    "Ask: the name of one, or of the kind?",
+    "Kind: kawaida.",
+    "Check the small letter."
+   ],
+   "contexts": [
+    "cooking (mapishi)",
+    "the market",
+    "the classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama anapika wali kwa sufuria."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"wali\" and \"sufuria\".",
+     "say": "Haya ni majina ya aina ya vitu au ya kitu kimoja maalum?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two sentences with common nouns from the kitchen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA.M_KAWAIDA_NAME",
+     "listen_for": [
+      "Juma"
+     ],
+     "ask": "Soma tena: \"Chagua nomino ya kawaida: \"Juma alienda Mombasa kwa basi.\"\" Kwa nini \"Juma\" si jibu sahihi?",
+     "repair": "Juma na Mombasa ni majina ya pekee. Nomino ya kawaida ni jina la jumla la aina ya kitu au mtu, kama basi."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA.M_KAWAIDA_NOT_NOUN",
+     "listen_for": [
+      "analia"
+     ],
+     "ask": "Soma tena: \"Mtoto mdogo analia. Nomino ni ipi?\" Kwa nini \"analia\" si jibu sahihi?",
+     "repair": "Neno hilo si nomino. Nomino hutaja mtu, mahali, mnyama au kitu. Kitenzi hutaja kitendo, na kivumishi huelezea nomino."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA.M5_KAWAIDA_CAPITAL",
+     "listen_for": [
+      "Mama alinunua Sufuria mpya."
+     ],
+     "ask": "Sufuria ni jina la sufuria moja maalum au la aina ya chombo?",
+     "repair": "Nomino ya kawaida huandikwa kwa herufi ndogo isipokuwa mwanzoni mwa sentensi."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T1_AINA_ZA_NOMINO_2.KAWAIDA.M5_KAWAIDA_PRONOUN",
+     "listen_for": [
+      "Yeye"
+     ],
+     "ask": "Neno hili linataja aina ya kitu?",
+     "repair": "Yeye ni kiwakilishi; wali ni jina la aina ya chakula: nomino ya kawaida."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ya kawaida ipi: Otieno, kalamu, Kisumu?",
+     "answer": "kalamu",
+     "shows": "common noun"
+    },
+    {
+     "question": "Ni nomino gani za kawaida katika \"Baba alinunua unga sokoni\"?",
+     "answer": "Baba, unga, soko",
+     "shows": "several"
+    }
+   ]
+  }
+ ]
+}

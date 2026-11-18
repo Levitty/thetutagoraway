@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI",
+   "key_step": "The child sets a riddle with the formula and clear sounds, and solves one by testing every clue.",
+   "floor": {
+    "prerequisite": "Solves a simple riddle.",
+    "question": "Kila nikienda ananifuata?",
+    "answer": "kivuli"
+   },
+   "representations": [
+    "riddles on relationships",
+    "clue strips",
+    "the formula card"
+   ],
+   "steps": [
+    "Say \"Kitendawili!\" and wait for \"Tega!\".",
+    "Give the riddle clearly.",
+    "Listen to the answers.",
+    "Give the answer if they fail (\"Nipe mji\")."
+   ],
+   "contexts": [
+    "relationships (mahusiano): family riddles",
+    "the evening fire",
+    "a cultural festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kamba yangu ndefu lakini haifungi kuni."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ndefu\" and \"haifungi kuni\".",
+     "say": "Ni kitu gani kirefu kama kamba lakini hakifungi kitu?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers \"barabara (njia)\" and sets one riddle of his own."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_METHALI",
+     "listen_for": [
+      "Haba na haba hujaza kibaba"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Haba na haba hujaza kibaba\" si jibu sahihi?",
+     "repair": "Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_NAHAU",
+     "listen_for": [
+      "Kukata tamaa"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Kukata tamaa\" si jibu sahihi?",
+     "repair": "Nahau ni maneno yenye maana maalum. Kitendawili huuliza kwa mafumbo na kina jibu la kutegua."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_PLAIN",
+     "listen_for": [
+      "Yai ni chakula kizuri"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Yai ni chakula kizuri\" si jibu sahihi?",
+     "repair": "Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo. Sentensi ya kawaida inataja wazi."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T3_MATAMSHI_BORA.VITENDAWILI.M_VIT_WRONG_ANSWER",
+     "listen_for": [
+      "mbwa"
+     ],
+     "ask": "Soma tena: \"\"Popote niendapo hunifuata.\" Jibu ni nini?\" Kwa nini \"mbwa\" si jibu sahihi?",
+     "repair": "Jibu la kitendawili lazima lilingane na kila sehemu yake. Hiyo si jibu sahihi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Baada ya \"Kitendawili!\" msikilizaji husema?",
+     "answer": "Tega!",
+     "shows": "formula"
+    },
+    {
+     "question": "Akishindwa kutegua, msikilizaji husema nini?",
+     "answer": "Nipe mji",
+     "shows": "formula"
+    }
+   ]
+  }
+ ]
+}

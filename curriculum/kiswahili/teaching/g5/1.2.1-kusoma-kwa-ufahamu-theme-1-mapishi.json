@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 1: Mapishi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
+   "key_step": "The child reads the sentence around a cooking word and explains it in Kiswahili, then uses it in a sentence.",
+   "floor": {
+    "prerequisite": "Explains a word from the passage.",
+    "question": "\"Sebule\" ni nini?",
+    "answer": "chumba cha kukaa"
+   },
+   "representations": [
+    "the passage with cooking words in bold",
+    "pictures of cooking ways",
+    "word cards with sentences"
+   ],
+   "steps": [
+    "Find the word.",
+    "Read the sentence around it.",
+    "Explain in Kiswahili.",
+    "Use it in your sentence."
+   ],
+   "contexts": [
+    "cooking (mapishi)",
+    "the school kitchen",
+    "a family meal"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama alikaanga samaki kwa mafuta."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"alikaanga\".",
+     "say": "Mama alipikaje samaki?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains \"kukaanga\" and writes a sentence with it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_LOOKALIKE",
+     "listen_for": [
+      "kuchemka kwa maji"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, \"kuchemsha\" maana yake ni nini?\" Kwa nini \"kuchemka kwa maji\" si jibu sahihi?",
+     "repair": "Maana ya neno hutokana na sentensi lilimo, si na jinsi linavyofanana na neno lingine."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_NEARBY",
+     "listen_for": [
+      "kuchuma majani ya chai"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, \"kuchemsha\" maana yake ni nini?\" Kwa nini \"kuchuma majani ya chai\" si jibu sahihi?",
+     "repair": "Rudi kwenye sentensi lenyewe lenye neno hilo. Maana inatoka hapo, si kutoka sentensi ya karibu."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_OPPOSITE",
+     "listen_for": [
+      "kupoza maji"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, \"kuchemsha\" maana yake ni nini?\" Kwa nini \"kupoza maji\" si jibu sahihi?",
+     "repair": "Kinyume cha neno si maana yake. Soma tena sentensi."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M5_MSA_ENGLISH",
+     "listen_for": [
+      "fry"
+     ],
+     "ask": "Unaweza kueleza kwa Kiswahili?",
+     "repair": "Eleza maana kwa Kiswahili: kukaanga ni kupika kwa mafuta."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Kuchemsha\" ni nini?",
+     "answer": "kupika kwa maji yanayotokota",
+     "shows": "meaning"
+    },
+    {
+     "question": "Tumia \"kiungo\" (cha chakula) katika sentensi.",
+     "answer": "Mama aliweka kiungo cha tangawizi katika chai.",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+   "key_step": "The child answers who, where and what from the passage only, orders the events and gives the message of the whole story.",
+   "floor": {
+    "prerequisite": "Answers who from a story.",
+    "question": "Hadithi inamhusu nani?",
+    "answer": "mhusika mkuu"
+   },
+   "representations": [
+    "the story with paragraphs numbered",
+    "event cards to order",
+    "a message strip"
+   ],
+   "steps": [
+    "Read the question.",
+    "Find the paragraph.",
+    "Answer from the passage.",
+    "Order the events and say the message."
+   ],
+   "contexts": [
+    "cooking (mapishi)",
+    "a family celebration",
+    "a market day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wanjiru alimsaidia bibi kupika."
+    },
+    {
+     "beat": "point",
+     "do": "Point at paragraph 2.",
+     "say": "Bibi alimwita Wanjiru kufanya nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders three events and writes the message."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_WRONG_PERSON",
+     "listen_for": [
+      "mwalimu"
+     ],
+     "ask": "Soma tena: \"Nani alimsaidia Wanjiru?\" Kwa nini \"mwalimu\" si jibu sahihi?",
+     "repair": "Rudi kwenye kifungu uone ni nani hasa alifanya kitendo hicho."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_OUTSIDE",
+     "listen_for": [
+      "ugali"
+     ],
+     "ask": "Soma tena: \"Walipika chakula gani?\" Kwa nini \"ugali\" si jibu sahihi?",
+     "repair": "Jibu liko katika kifungu. Tumia kilichoandikwa, si kile unachokijua kutoka nyumbani."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_AS_MAIN",
+     "listen_for": [
+      "Wanjiru alikuwa na sufuria nyekundu."
+     ],
+     "ask": "Soma tena: \"Ujumbe mkuu wa hadithi ni upi?\" Kwa nini \"Wanjiru alikuwa na sufuria nyekundu.\" si jibu sahihi?",
+     "repair": "Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_ORDER",
+     "listen_for": [
+      "D, A, C, B"
+     ],
+     "ask": "Soma tena: \"Panga matukio kwa mpangilio.\" Kwa nini \"D, A, C, B\" si jibu sahihi?",
+     "repair": "Matukio hupangwa kwa jinsi yalivyotokea katika hadithi. Soma tena kila tukio."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_MIX",
+     "listen_for": [
+      "kikombe"
+     ],
+     "ask": "Soma tena: \"Wanjiru alichemsha maji katika nini?\" Kwa nini \"kikombe\" si jibu sahihi?",
+     "repair": "Kifungu kinataja vitu vingi. Rudi kwenye sentensi sahihi ujue jibu linalolingana na swali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    },
+    {
+     "question": "Panga: kupika, kununua, kula",
+     "answer": "kununua, kupika, kula",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

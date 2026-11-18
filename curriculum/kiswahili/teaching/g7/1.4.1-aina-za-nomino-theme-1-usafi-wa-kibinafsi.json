@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO",
+ "title": "Aina za nomino (Theme 1: Usafi wa kibinafsi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE",
+   "key_step": "The child decides whether a word names one particular person, place or thing (pekee, capital) or a kind (kawaida, small letter), including titles joined to names.",
+   "floor": {
+    "prerequisite": "Tells pekee from kawaida.",
+    "question": "Ni nomino ya pekee ipi: mto, Nzoia?",
+    "answer": "Nzoia"
+   },
+   "representations": [
+    "a news paragraph with names",
+    "a two-column chart",
+    "title + name cards"
+   ],
+   "steps": [
+    "Find the nouns.",
+    "One particular, or the kind?",
+    "Is a title joined to a name?",
+    "Write capitals where they belong."
+   ],
+   "contexts": [
+    "personal hygiene (usafi wa kibinafsi): a visit to Dkt. Wambui",
+    "a school register",
+    "a news report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "daktari / Daktari Wambui"
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Lipi ni sehemu ya jina?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two sentences: one with the title alone, one with title + name."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M_KS7_NP_KAWAIDA_KUBWA",
+     "listen_for": [
+      "mji"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya pekee?\" Kwa nini \"mji\" si jibu sahihi?",
+     "repair": "Nomino ya pekee ni jina mahususi la mtu au mahali, kama Kisumu."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M_KS7_NP_PEKEE_NDOGO",
+     "listen_for": [
+      "Herufi ndogo"
+     ],
+     "ask": "Soma tena: \"Nomino ya pekee huandikwa kwa herufi gani mwanzoni?\" Kwa nini \"Herufi ndogo\" si jibu sahihi?",
+     "repair": "Nomino ya pekee huanza kwa herufi kubwa."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M_KS7_NP_JINA_JUMLA",
+     "listen_for": [
+      "Wanjiru"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya kawaida?\" Kwa nini \"Wanjiru\" si jibu sahihi?",
+     "repair": "Nomino ya kawaida ni jina la jumla, kama kijiji."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T1_AINA_ZA_NOMINO.NOMINO_PEKEE.M7_NP_TITLE_NAME",
+     "listen_for": [
+      "Tulimwona daktari Otieno jana."
+     ],
+     "ask": "Cheo hiki kimeambatana na jina la mtu?",
+     "repair": "Cheo kinapotangulia jina huanza kwa herufi kubwa: Daktari Otieno."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: tulikutana na mwalimu mkuu bi. akinyi.",
+     "answer": "Tulikutana na Mwalimu Mkuu Bi. Akinyi.",
+     "shows": "capitals"
+    },
+    {
+     "question": "Ni nomino ya kawaida ipi: Mombasa, bandari, Jumamosi?",
+     "answer": "bandari",
+     "shows": "common"
+    }
+   ]
+  }
+ ]
+}

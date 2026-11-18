@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA",
+ "title": "Kusoma kwa Ufasaha (Theme 11: Mapato)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+   "key_step": "The child reads a phrase as one breath, lets the marks set the pauses and the voice, and checks the listener understood.",
+   "floor": {
+    "prerequisite": "Reads short words with every sound clear.",
+    "question": "Soma: \"Mama anapika.\"",
+    "answer": "Mama anapika."
+   },
+   "representations": [
+    "the passage with phrase slashes",
+    "the marks . , ? ! circled in colour",
+    "a recording of the child played back"
+   ],
+   "steps": [
+    "Read the sentence silently first.",
+    "Find the marks.",
+    "Read phrase by phrase aloud.",
+    "Ask a listener one question about it."
+   ],
+   "contexts": [
+    "mapato (income)",
+    "reading at the school assembly",
+    "reading a story to a younger sibling"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, umeweka akiba yako wapi?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kiulizi.",
+     "say": "Sauti yako inafanya nini hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the sentence aloud twice: once as a statement, once as the question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_WORDBYWORD_T11",
+     "listen_for": [
+      "Baba ... aliuza ... mahindi ... na ... kuweka ... pesa ... benki."
+     ],
+     "ask": "Ukisoma neno moja moja, msikilizaji anaelewa sentensi?",
+     "repair": "Usomaji wa ufasaha husoma kundi la maneno kwa pamoja, kama tunavyozungumza."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_RACE_T11",
+     "listen_for": [
+      "haraka iwezekanavyo"
+     ],
+     "ask": "Wasikilizaji waliweza kuelewa uliposoma haraka hivyo?",
+     "repair": "Kasi ifaayo ni ile ya kuzungumza: si haraka mno, si polepole mno."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_FLAT_T11",
+     "listen_for": [
+      "kwa sauti ileile ya sentensi ya kawaida"
+     ],
+     "ask": "Alama iliyo mwishoni mwa sentensi hii ni ipi?",
+     "repair": "Kiulizi (?) hupandisha sauti mwishoni; alama ya hisi (!) huonyesha hisia."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_NOPAUSE_T11",
+     "listen_for": [
+      "hapana mahali, unasoma moja kwa moja"
+     ],
+     "ask": "Koma inakuambia ufanye nini unaposoma?",
+     "repair": "Simama kidogo kwenye koma, na zaidi kwenye kikomo."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_SOUND_T11",
+     "listen_for": [
+      "biashala"
+     ],
+     "ask": "Sikiliza tofauti kati ya maneno haya mawili. Yanatofautiana wapi?",
+     "repair": "Tamka \"biashara\" kama lilivyoandikwa; \"biashala\" ni neno jingine au si neno."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sentensi \"Hongera, umepata faida kubwa!\" inasomwa kwa hisia kwa sababu ya alama ipi?",
+     "answer": "alama ya hisi",
+     "shows": "marks"
+    },
+    {
+     "question": "Kasi ifaayo ya kusoma ni ipi?",
+     "answer": "kasi ya kuzungumza",
+     "shows": "pace"
+    }
+   ]
+  }
+ ]
+}

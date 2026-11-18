@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI",
+ "title": "Hotuba ya Kushawishi (Theme 12: Magonjwa yanayotokana na mienendo ya maisha)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI",
+   "key_step": "The child names the features of a persuasive speech: itifaki, a clear stand, reasons with facts and examples, a call to act, and thanks.",
+   "floor": {
+    "prerequisite": "Knows the parts of a speech.",
+    "question": "Hotuba huanza na?",
+    "answer": "itifaki"
+   },
+   "representations": [
+    "a model persuasive speech",
+    "a claim-fact-benefit frame",
+    "persuasive words list"
+   ],
+   "steps": [
+    "Find the itifaki.",
+    "Find the stand.",
+    "Find the reasons with facts.",
+    "Find the call to act."
+   ],
+   "contexts": [
+    "lifestyle diseases",
+    "a school assembly",
+    "a community baraza"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wenzangu, tuchague maji badala ya soda kwa sababu..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kwa sababu\".",
+     "say": "Hoja hii ina ushahidi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the features and adds one fact to a weak point."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M_KS9_HK_LENGO",
+     "listen_for": [
+      "kuburudisha tu"
+     ],
+     "ask": "Soma tena: \"Hotuba ya kushawishi hulenga nini?\" Kwa nini \"kuburudisha tu\" si jibu sahihi?",
+     "repair": "Hotuba ya kushawishi hulenga kushawishi."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M_KS9_HK_MWANZO",
+     "listen_for": [
+      "wito"
+     ],
+     "ask": "Soma tena: \"Hotuba huanza kwa nini?\" Kwa nini \"wito\" si jibu sahihi?",
+     "repair": "Hotuba huanza kwa salamu na utangulizi."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M_KS9_HK_HOJA",
+     "listen_for": [
+      "hoja na mifano"
+     ],
+     "ask": "Soma tena: \"Hotuba ya kushawishi hutumia nini kuunga wazo?\" Kwa nini \"hoja na mifano\" si jibu sahihi?",
+     "repair": "Hutumia hoja na mifano."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M9_HK_ONESIDED",
+     "listen_for": [
+      "Vyakula hivi ni vibaya sana sana!"
+     ],
+     "ask": "Ushahidi wa hoja yako ni upi?",
+     "repair": "Hotuba ya kushawishi hutumia ukweli na mifano, si hisia tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Hotuba ya kushawishi humalizika vipi?",
+     "answer": "kwa wito wa kuchukua hatua na shukrani",
+     "shows": "closing"
+    },
+    {
+     "question": "Hoja ya kushawishi huhitaji nini?",
+     "answer": "sababu, ukweli au mfano",
+     "shows": "evidence"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.KUANDIKA_HOTUBA_KUSHAWISHI",
+   "key_step": "The child plans hotuba before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "tuepuke vyakula visivyo na afya",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Tuepuke Vyakula Visivyo na Afya"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Tuepuke Vyakula Visivyo na Afya\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.KUANDIKA_HOTUBA_KUSHAWISHI.M9_INS_ITIFAKI_T12",
+     "listen_for": [
+      "moja kwa moja na hoja ya kwanza"
+     ],
+     "ask": "Unazungumza na nani?",
+     "repair": "Hotuba huanza kwa itifaki."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.KUANDIKA_HOTUBA_KUSHAWISHI.M9_INS_ESSAY_T12",
+     "listen_for": [
+      "Wanafunzi wanapaswa kunawa mikono."
+     ],
+     "ask": "Unazungumza nao au kuwahusu?",
+     "repair": "Hotuba huzungumza na hadhira moja kwa moja."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.KUANDIKA_HOTUBA_KUSHAWISHI.M9_INS_NOTHANKS_T12",
+     "listen_for": [
+      "kwa hoja ya mwisho tu"
+     ],
+     "ask": "Hadhira itajuaje umemaliza?",
+     "repair": "Funga hotuba kwa muhtasari na shukrani."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.KUANDIKA_HOTUBA_KUSHAWISHI.M9_INS_FACTLESS_T12",
+     "listen_for": [
+      "Ugonjwa huu ni mbaya sana."
+     ],
+     "ask": "Msikilizaji atajua nini cha kufanya?",
+     "repair": "Hotuba ya kupasha habari hutoa ukweli muhimu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika hotuba kuhusu \"Tuepuke Vyakula Visivyo na Afya\"?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "type"
+    },
+    {
+     "question": "Hotuba ina sehemu zipi?",
+     "answer": "itifaki, utangulizi, kiini, hitimisho na shukrani",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

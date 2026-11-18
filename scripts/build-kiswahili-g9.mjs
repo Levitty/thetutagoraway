@@ -1,3 +1,5 @@
+// FIRST PASS ONLY (18 Nov 2026): build Grade 9 with `node scripts/build-kiswahili-grade.mjs 9`, which runs this file and then adds
+// the depth layer (scripts/data/kiswahili-g9/). Run alone, this file leaves the JSON without the depth layer.
 // KISWAHILI GRADE 9: merge the authored skills and misconceptions into curriculum/kiswahili/g9.json (HOREB owns it).
 //   node scripts/build-kiswahili-g9.mjs   then   npm run subject:map -- kiswahili 9 --dir kiswahili --title "Kiswahili"
 // Idempotent. Official outcomes and sub-strand text are never touched. Skills 'proposed', misconceptions 'draft'.

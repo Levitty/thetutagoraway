@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 6: Usalama nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.MDOKEZO",
+   "key_step": "The child plans insha ya mdokezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "nilipofungua mlango, moshi mzito ulinikaribisha.",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nilipofungua mlango, moshi mzito ulinikaribisha."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Nilipofungua mlango, moshi mzito ulinikaribisha.\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.MDOKEZO.M8_INS_CHANGE_T6",
+     "listen_for": [
+      "anza kwa sentensi yako inayofanana nayo"
+     ],
+     "ask": "Maneno uliyopewa yako wapi katika insha yako?",
+     "repair": "Tumia maneno uliyopewa kama yalivyo."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.MDOKEZO.M8_INS_PLACE_T6",
+     "listen_for": [
+      "katikati ya insha"
+     ],
+     "ask": "Mdokezo huu ni wa kuanzia au kumalizia?",
+     "repair": "Mdokezo wa kumalizia huwekwa mwishoni."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.MDOKEZO.M8_INS_NOLEAD_T6",
+     "listen_for": [
+      "kisa chochote kisha kuweka maneno hayo mwishoni"
+     ],
+     "ask": "Je, kisa chako kinaeleza kwa nini mwisho huu ulitokea?",
+     "repair": "Matukio ya insha yaelekee mdokezo uliotolewa."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.MDOKEZO.M8_INS_TENSE_M_T6",
+     "listen_for": [
+      "katika wakati uliopo"
+     ],
+     "ask": "Mdokezo uko katika wakati gani?",
+     "repair": "Fuata wakati wa mdokezo uliopewa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya mdokezo kuhusu \"Nilipofungua mlango, moshi mzito ulinikaribisha.\"?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya mdokezo ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

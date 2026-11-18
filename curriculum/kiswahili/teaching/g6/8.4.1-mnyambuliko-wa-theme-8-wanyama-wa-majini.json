@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA",
+ "title": "Mnyambuliko wa (Theme 8: Wanyama wa majini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO",
+   "key_step": "The child extends the verb for each other (-eana: pikiana), causing (-esha/-isha: somesha) and undoing (-ua: fungua), choosing by meaning.",
+   "floor": {
+    "prerequisite": "Uses -ewa, -eka, -ana.",
+    "question": "Kauli ya kutendana ya \"penda\" ni?",
+    "answer": "pendana"
+   },
+   "representations": [
+    "three cards: andikiana, andikisha, (fungua)",
+    "pictures of each meaning",
+    "a vowel rule chart"
+   ],
+   "steps": [
+    "Find the verb stem.",
+    "Ask: for each other, cause, or undo?",
+    "Add the ending.",
+    "Check it is a real word."
+   ],
+   "contexts": [
+    "water animals (wanyama wa majini): fish caught and released",
+    "friends writing letters",
+    "a teacher making pupils read"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwalimu anatu___ (soma) kitabu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mwalimu\" and \"tu\".",
+     "say": "Mwalimu anatufanya tufanye nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"anatusomesha\" and one sentence with -eana."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M_MNY_BASE",
+     "listen_for": [
+      "hupika"
+     ],
+     "ask": "Soma tena: \"Majirani hao ___ chakula kila Jumapili. (kila mmoja humpikia mwenzake)\" Kwa nini \"hupika\" si jibu sahihi?",
+     "repair": "Kitenzi cha kawaida hakionyeshi kwamba kila mmoja anamtendea mwenzake. Kutendeana: hupikiana."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M_MNY_ONEWAY",
+     "listen_for": [
+      "huandikia"
+     ],
+     "ask": "Soma tena: \"Otieno na Achieng ___ barua kila mwezi.\" Kwa nini \"huandikia\" si jibu sahihi?",
+     "repair": "Wawili wakitendeana, kitenzi huishia -ana: huandikiana."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M_MNY_WRONG_FORM",
+     "listen_for": [
+      "huimbiana"
+     ],
+     "ask": "Soma tena: \"Mwalimu ___ watoto kuimba wimbo mpya. (huwafanya waimbe)\" Kwa nini \"huimbiana\" si jibu sahihi?",
+     "repair": "-ana ni kila mmoja kwa mwenzake, -isha ni kumfanya mtu atende, na -ua ni kufanya kinyume."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T8_MNYAMBULIKO_WA.MNYAMBULIKO.M6_MNY_TENDUA_ALL",
+     "listen_for": [
+      "fungana"
+     ],
+     "ask": "Kamusi ina neno hili?",
+     "repair": "Kutendua hubadilisha tendo kuwa kinyume chake: funga -> fungua; si kila kitenzi kina kutendua."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kauli ya kutendesha ya \"lala\" ni?",
+     "answer": "laza",
+     "shows": "causative"
+    },
+    {
+     "question": "Kauli ya kutendeana ya \"andika\" ni?",
+     "answer": "andikiana",
+     "shows": "reciprocal applied"
+    }
+   ]
+  }
+ ]
+}

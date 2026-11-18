@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO",
+ "title": "Lugha katika Nyimbo (Theme 14: Matumizi ya pesa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.LUGHA_NYIMBO",
+   "key_step": "The child places the nyimbo in its kind and occasion, explains its lugha with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Senti senti hujaza kibubu, tuweke akiba\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its lugha with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "matumizi ya pesa",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Senti senti hujaza kibubu, tuweke akiba"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Hii ni nyimbo ya aina gani, na inatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.LUGHA_NYIMBO.M7_FSI_DEVICE_T14",
+     "listen_for": [
+      "kosa la lugha"
+     ],
+     "ask": "Kwa nini mtunzi ametumia hivi?",
+     "repair": "Ni takriri na methali: husisitiza kuweka akiba kidogo kidogo"
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.LUGHA_NYIMBO.M7_FSI_LITERAL_T14",
+     "listen_for": [
+      "maana ya maneno kama yalivyo"
+     ],
+     "ask": "Je, hili linaweza kuwa kweli?",
+     "repair": "Lugha ya picha ina maana iliyofichika."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.LUGHA_NYIMBO.M7_FSI_USE_T14",
+     "listen_for": [
+      "kinapamba tu"
+     ],
+     "ask": "Kipengele hiki kinamsaidiaje msikilizaji?",
+     "repair": "Eleza kazi ya kipengele: kinasisitiza, kinajenga picha, kinaburudisha."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T14_LUGHA_KATIKA_NYIMBO.LUGHA_NYIMBO.M7_FSI_AUDIENCE_T14",
+     "listen_for": [
+      "kelele zisizo na maana"
+     ],
+     "ask": "Hadhira ina kazi gani hapa?",
+     "repair": "Fasihi simulizi huishirikisha hadhira."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"senti senti hujaza kibubu\" ni kipengele gani cha lugha?",
+     "answer": "takriri na methali",
+     "shows": "lugha"
+    },
+    {
+     "question": "Kipengele cha takriri na methali kina umuhimu gani?",
+     "answer": "husisitiza kuweka akiba kidogo kidogo",
+     "shows": "lugha, use"
+    }
+   ]
+  }
+ ]
+}

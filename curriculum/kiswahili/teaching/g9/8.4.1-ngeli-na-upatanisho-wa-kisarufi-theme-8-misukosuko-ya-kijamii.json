@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_",
+ "title": "Ngeli na Upatanisho wa Kisarufi (Theme 8: Misukosuko ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA",
+   "key_step": "The child puts u- nouns with a zi- plural (ukuta/kuta) in U-ZI and ma- nouns with no singular (maji, mafuta) in YA-YA, and agrees every word.",
+   "floor": {
+    "prerequisite": "Sorts U-U and U-YA nouns.",
+    "question": "Wingi wa \"ugonjwa\" ni?",
+    "answer": "magonjwa"
+   },
+   "representations": [
+    "noun cards",
+    "a plural test chart",
+    "agreement chains"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Find its plural (or none).",
+    "Name the class.",
+    "Agree every word."
+   ],
+   "contexts": [
+    "social unrest: kuta zilichorwa",
+    "a building site",
+    "a kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ukuta ___ (-refu) ___ (anguka)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Ukuta\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ukuta mrefu umeanguka\" and \"Kuta ndefu zimeanguka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M_KS9_GU_UKUTA",
+     "listen_for": [
+      "Ukuta yameanguka."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Ukuta yameanguka.\" si jibu sahihi?",
+     "repair": "Ukuta ni wa U-ZI na hutumia u-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M_KS9_GU_KUTA",
+     "listen_for": [
+      "Kuta umeanguka."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi kwa wingi.\" Kwa nini \"Kuta umeanguka.\" si jibu sahihi?",
+     "repair": "Wingi wa U-ZI hutumia zi-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M_KS9_GU_MAJI",
+     "listen_for": [
+      "Maji zimemwagika."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Maji zimemwagika.\" si jibu sahihi?",
+     "repair": "Maji ni ya YA-YA na hutumia ya-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M9_GU_UZI_PLURAL",
+     "listen_for": [
+      "makuta"
+     ],
+     "ask": "Wingi huu una ma-?",
+     "repair": "Wingi wa ukuta ni kuta: U-ZI."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Maji ___ (chafuka).",
+     "answer": "yamechafuka",
+     "shows": "YA-YA"
+    },
+    {
+     "question": "Wingi wa \"ufunguo\" ni?",
+     "answer": "funguo",
+     "shows": "U-ZI"
+    }
+   ]
+  }
+ ]
+}

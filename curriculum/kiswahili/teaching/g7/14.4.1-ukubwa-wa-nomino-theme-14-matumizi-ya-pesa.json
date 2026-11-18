@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO",
+ "title": "Ukubwa wa Nomino (Theme 14: Matumizi ya pesa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA",
+   "key_step": "The child makes the big form (ji- / j- / ma- for the plural) and gives it LI-YA agreement (jibwa limebweka, majibwa yamebweka).",
+   "floor": {
+    "prerequisite": "Makes big forms of ki- nouns.",
+    "question": "Ukubwa wa \"kitabu\" ni?",
+    "answer": "jitabu"
+   },
+   "representations": [
+    "pictures of ordinary and huge things",
+    "a rule card per noun type",
+    "LI-YA agreement chart"
+   ],
+   "steps": [
+    "Look at the noun's prefix.",
+    "Make the big form.",
+    "Use LI-YA agreement.",
+    "Make the plural with ma-."
+   ],
+   "contexts": [
+    "use of money: a huge building in town",
+    "a folk tale with a giant dog",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mbwa -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mbwa\".",
+     "say": "Ukubwa wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"jibwa\", \"Jibwa limebweka\" and \"Majibwa yamebweka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M_KS7_UB_UDOGO",
+     "listen_for": [
+      "mbwa mdogo"
+     ],
+     "ask": "Soma tena: \"Jibwa ni nini?\" Kwa nini \"mbwa mdogo\" si jibu sahihi?",
+     "repair": "Jibwa ni mbwa mkubwa: hali ya ukubwa."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M_KS7_UB_KIAMBISHI",
+     "listen_for": [
+      "ki-"
+     ],
+     "ask": "Soma tena: \"Ni kiambishi kipi cha ukubwa?\" Kwa nini \"ki-\" si jibu sahihi?",
+     "repair": "Kiambishi cha ukubwa ni ji-, kama jitu."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M_KS7_UB_JUMBA",
+     "listen_for": [
+      "nyumba ndogo"
+     ],
+     "ask": "Soma tena: \"Jumba ni nini?\" Kwa nini \"nyumba ndogo\" si jibu sahihi?",
+     "repair": "Jumba ni nyumba kubwa."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA.M7_UB_PLURAL",
+     "listen_for": [
+      "mbwa wakubwa"
+     ],
+     "ask": "Jibwa liko katika ngeli ipi?",
+     "repair": "Wingi wa nomino ya ukubwa huchukua ma-: majibwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ukubwa wa \"nyumba\" ni?",
+     "answer": "jumba",
+     "shows": "big form"
+    },
+    {
+     "question": "Jaza: Majumba ___ (jengwa).",
+     "answer": "yamejengwa",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

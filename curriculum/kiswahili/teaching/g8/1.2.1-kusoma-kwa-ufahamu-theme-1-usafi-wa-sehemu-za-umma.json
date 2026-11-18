@@ -1,0 +1,369 @@
+{
+ "sub_strand": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 1: Usafi wa sehemu za umma)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI",
+   "key_step": "The child finds the answer in the passage and checks it fits the question word (nini, nani, wapi, lini, kwa nini).",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "usafi wa sehemu za umma",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "usafi wa sehemu za umma"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M_KS8_RS_HABARI_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M_KS8_RS_HABARI_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M_KS8_RS_HABARI_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI.M8_HAB_RS_HABARI",
+     "listen_for": [
+      "alikimbia nyumbani"
+     ],
+     "ask": "Swali linauliza nini hasa?",
+     "repair": "Swali la \"kwa nini\" hujibiwa kwa sababu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kwa nini mhusika alikimbia nyumbani?",
+     "answer": "kwa sababu aliogopa mbwa wa jirani",
+     "shows": "habari"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO",
+   "key_step": "The child numbers the events in the margin of the passage and orders them by the passage, not by the options.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "usafi wa sehemu za umma",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "usafi wa sehemu za umma"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M_KS8_RS_MATUKIO_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M_KS8_RS_MATUKIO_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M_KS8_RS_MATUKIO_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO.M8_MAT_RS_MATUKIO",
+     "listen_for": [
+      "tukio lililotajwa kwanza katika swali"
+     ],
+     "ask": "Tukio hili liko aya ipi?",
+     "repair": "Fuata mpangilio wa matukio katika kifungu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni tukio lipi lilitokea kwanza katika kifungu?",
+     "answer": "tukio la kwanza katika kifungu",
+     "shows": "matukio"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI",
+   "key_step": "The child finds a clue in the passage and says what is likely to happen next because of it.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "usafi wa sehemu za umma",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "usafi wa sehemu za umma"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M_KS8_RS_UTABIRI_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M_KS8_RS_UTABIRI_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M_KS8_RS_UTABIRI_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI.M8_UTB_RS_UTABIRI",
+     "listen_for": [
+      "mhusika atakuwa tajiri sana"
+     ],
+     "ask": "Ni kidokezo gani katika kifungu kinaonyesha hivyo?",
+     "repair": "Utabiri hutokana na vidokezo vya kifungu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kutokana na kifungu, nini kitatokea baadaye?",
+     "answer": "jibu linalotokana na vidokezo vya kifungu",
+     "shows": "utabiri"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI",
+   "key_step": "The child reads the sentence around the word and tests each meaning in it.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "usafi wa sehemu za umma",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "usafi wa sehemu za umma"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M_KS8_RS_MSAMIATI_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M_KS8_RS_MSAMIATI_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M_KS8_RS_MSAMIATI_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI.M8_MSM_RS_MSAMIATI",
+     "listen_for": [
+      "kumpiga mtu"
+     ],
+     "ask": "Ukiweka maana hii katika sentensi, inaleta maana?",
+     "repair": "Maana ya neno hutegemea sentensi lilimo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Katika kifungu, neno \"kupiga\" katika \"alipiga simu\" lina maana gani?",
+     "answer": "kuwasiliana kwa simu",
+     "shows": "msamiati"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

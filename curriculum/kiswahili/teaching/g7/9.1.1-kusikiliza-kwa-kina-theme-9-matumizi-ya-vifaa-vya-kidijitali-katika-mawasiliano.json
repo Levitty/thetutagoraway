@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA",
+ "title": "Kusikiliza kwa Kina (Theme 9: Matumizi ya vifaa vya kidijitali katika mawasiliano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI",
+   "key_step": "The child hears the one feature that separates /d/ na /nd/ and checks the meaning of the word before writing it.",
+   "floor": {
+    "prerequisite": "Says the five vowels and reads open syllables (ba, be, bi, bo, bu).",
+    "question": "Soma: do-a",
+    "answer": "doa"
+   },
+   "representations": [
+    "a pair card: doa / ndoa",
+    "a hand on the throat to feel the voice (or the lips for a nasal)",
+    "a picture for each meaning (a stain, a marriage)"
+   ],
+   "steps": [
+    "Listen to the whole word.",
+    "Ask: which sound, /d/ or /nd/?",
+    "Think of the meaning in the sentence.",
+    "Write it and read it back."
+   ],
+   "contexts": [
+    "vifaa vya kidijitali (digital devices)",
+    "a class reading aloud",
+    "a word game in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "doa - ndoa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter of each word.",
+     "say": "Neno lipi lina maana ya \"a stain\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both words under their pictures and says each one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SWAP_T9",
+     "listen_for": [
+      "ndoa"
+     ],
+     "ask": "Neno \"doa\" lina maana gani, na \"ndoa\" lina maana gani?",
+     "repair": "\"doa\" ni a stain; \"ndoa\" ni a marriage. Sauti moja hubadilisha maana."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SPELL_T9",
+     "listen_for": [
+      "ndama"
+     ],
+     "ask": "Ukiandika \"ndama\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"draughts (the board game)\" ni \"dama\". \"ndama\" lina maana ya \"a calf\"."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SAME_T9",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
+     "repair": "Hapana. \"dama\" ni draughts (the board game), na \"ndama\" ni a calf."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_TWISTER_T9",
+     "listen_for": [
+      "Simu yangu mpya ina kamera nzuri."
+     ],
+     "ask": "Ni sauti gani zinarudiwa katika sentensi hii?",
+     "repair": "Kitanzandimi hurudia sauti zinazokaribiana, kama /d/ na /nd/, ili kiwe kigumu kutamka."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T9_KUSIKILIZA_KWA_KINA.MATAMSHI.M7_MAT_SYLL_T9",
+     "listen_for": [
+      "n-doa"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: ndo-a."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika neno lenye maana ya \"a calf\".",
+     "answer": "ndama",
+     "shows": "spelling by meaning"
+    },
+    {
+     "question": "Ni kipi ni kitanzandimi?",
+     "answer": "Ndege wa Dadi alidondoka ndani ya ndoo ya dada.",
+     "shows": "kitanzandimi"
+    }
+   ]
+  }
+ ]
+}

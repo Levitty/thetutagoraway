@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2",
+ "title": "Ukubwa na Udogo wa Nomino (Theme 11: Ushuru)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_JI",
+   "key_step": "The child keeps the ji- that belongs to the noun, adds ki- for small (kijiwe) or ji- for big, and changes the agreement to KI-VI or LI-YA.",
+   "floor": {
+    "prerequisite": "Makes big and small forms of ki- nouns.",
+    "question": "Udogo wa \"kitabu\" ni?",
+    "answer": "kijitabu"
+   },
+   "representations": [
+    "stones of three sizes",
+    "cards: jiwe, jicho, jino",
+    "prefix cards ki-, ji-"
+   ],
+   "steps": [
+    "Check the noun starts with ji- that is part of it.",
+    "Keep ji-.",
+    "Add ki- (small) or ji- (big).",
+    "Change the agreement."
+   ],
+   "contexts": [
+    "taxes (ushuru): a small stone on a toll road",
+    "a story of a giant's eye",
+    "a dentist visit (jino)"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "jiwe -> ___ (udogo)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ji-\".",
+     "say": "Tunaiondoa ji- au tunaibakiza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kijiwe\" and \"Kijiwe kimeanguka\" and the plural \"Vijiwe vimeanguka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_JI.M6_UKJ_DROP_JI",
+     "listen_for": [
+      "kiwe"
+     ],
+     "ask": "Ukiondoa ji-, kinabaki neno lenye maana?",
+     "repair": "Kwa nomino za ji- kama jiwe, ji- inabaki: kijiwe."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_JI.M6_UKJ_SAME_BIG",
+     "listen_for": [
+      "jicho"
+     ],
+     "ask": "Jicho ni jicho la kawaida au jicho kubwa sana?",
+     "repair": "Jicho ni hali ya wastani; ukubwa wake ni jijicho."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_JI.M6_UKJ_AGREE",
+     "listen_for": [
+      "limeanguka"
+     ],
+     "ask": "Kijiwe kiko katika ngeli ipi?",
+     "repair": "Udogo huchukua KI-VI: kijiwe kimeanguka."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N_2.UKUBWA_JI.M6_UKJ_PLURAL",
+     "listen_for": [
+      "makijiwe"
+     ],
+     "ask": "Kijiwe kiko katika ngeli ipi? Wingi wake huanza na nini?",
+     "repair": "Wingi wa kijiwe ni vijiwe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Udogo wa \"jino\" ni?",
+     "answer": "kijino",
+     "shows": "small form"
+    },
+    {
+     "question": "Jaza: Vijiwe ___ (vimetupwa / yametupwa).",
+     "answer": "vimetupwa",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

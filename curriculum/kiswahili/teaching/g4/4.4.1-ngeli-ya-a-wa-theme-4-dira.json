@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA",
+ "title": "Ngeli ya A-WA (Theme 4: Dira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA",
+   "key_step": "The child knows A-WA is the class of people and animals and gives one person a- and many wa-.",
+   "floor": {
+    "prerequisite": "Tells one from many.",
+    "question": "Mtoto mmoja, watoto ___ .",
+    "answer": "wawili"
+   },
+   "representations": [
+    "picture cards of people and animals",
+    "a table: mtoto anacheza / watoto wanacheza",
+    "coloured prefixes"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Is it a person or an animal?",
+    "One: a-; many: wa-.",
+    "Check the verb and the adjective agree."
+   ],
+   "contexts": [
+    "a family at home",
+    "animals at the farm",
+    "pupils on the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mtoto ___ cheza."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mtoto\".",
+     "say": "Ni mmoja au wengi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Mtoto anacheza\" and \"Watoto wanacheza\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA.M4_AWA_PL",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Soma tena: \"Watoto wawili ___naimba.\" Kwa nini \"a\" si jibu sahihi?",
+     "repair": "Nomino za ngeli ya A-WA hutumia a- kwa umoja na wa- kwa wingi: mtoto anaimba, watoto wanaimba."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA.M4_AWA_ANIMAL",
+     "listen_for": [
+      "zi"
+     ],
+     "ask": "Soma tena: \"Ndege watatu ___naruka juu.\" Kwa nini \"zi\" si jibu sahihi?",
+     "repair": "Watu na wanyama wote wako katika ngeli ya A-WA: paka anaruka, ndege wanaruka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA.M4_AWA_NOT",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya A-WA?\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Ngeli ya A-WA ni ya watu na wanyama. Kitabu ni kitu, kiko katika ngeli ya KI-VI."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA.M4_AWA_PLNOUN",
+     "listen_for": [
+      "vitoto"
+     ],
+     "ask": "Soma tena: \"Mtoto mmoja, ___ wawili.\" Kwa nini \"vitoto\" si jibu sahihi?",
+     "repair": "Wingi wa mtoto ni watoto, wa mwalimu ni walimu: m- hubadilika kuwa wa-."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Ng'ombe ___ kula nyasi (wengi).",
+     "answer": "wanakula",
+     "shows": "animals in A-WA"
+    },
+    {
+     "question": "Jaza: Mwalimu ___ fundisha.",
+     "answer": "anafundisha",
+     "shows": "singular agreement"
+    }
+   ]
+  }
+ ]
+}

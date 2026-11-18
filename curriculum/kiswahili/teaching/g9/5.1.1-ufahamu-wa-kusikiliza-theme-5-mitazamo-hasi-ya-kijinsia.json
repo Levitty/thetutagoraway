@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ",
+ "title": "Ufahamu wa Kusikiliza (Theme 5: Mitazamo hasi ya kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a ufahamu.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "mitazamo hasi ya kijinsia",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kazi za nyumbani kwa wavulana na wasichana"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short ufahamu on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M9_ORL_NOTNOTE_T5",
+     "listen_for": [
+      "jaribu kukumbuka kila neno"
+     ],
+     "ask": "Ni maneno gani muhimu umesikia?",
+     "repair": "Andika hoja muhimu unaposikiliza."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M9_ORL_ANSWEROUT_T5",
+     "listen_for": [
+      "jibu la jumla analolijua"
+     ],
+     "ask": "Mzungumzaji alisema hivyo?",
+     "repair": "Jibu kutokana na ulichosikia."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M9_ORL_INTERRUPT_T5",
+     "listen_for": [
+      "mkatize ili usisahau"
+     ],
+     "ask": "Mwenzako amemaliza?",
+     "repair": "Msikilize mzungumzaji hadi amalize."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T5_UFAHAMU_WA_KUSIKILIZ.UFAHAMU_KUSIKILIZA.M9_ORL_OFFTOPIC_T5",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unasikiliza habari ndefu. Ufanye nini?",
+     "answer": "andika maneno muhimu unaposikiliza",
+     "shows": "ufahamu"
+    },
+    {
+     "question": "Kwa mujibu wa ulichosikiliza kuhusu kazi za nyumbani kwa wavulana na wasichana, ni lipi jibu?",
+     "answer": "jibu lililotajwa katika kifungu",
+     "shows": "ufahamu, second feature"
+    }
+   ]
+  }
+ ]
+}

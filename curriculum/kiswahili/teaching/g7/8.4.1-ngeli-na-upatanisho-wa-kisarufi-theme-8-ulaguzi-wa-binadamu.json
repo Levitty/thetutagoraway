@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_",
+ "title": "Ngeli na Upatanisho wa Kisarufi (Theme 8: Ulaguzi wa binadamu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI",
+   "key_step": "The child puts people and animals in A-WA (a-/wa-) whatever their prefix, and trees, plants and many m- things in U-I (u-/i-).",
+   "floor": {
+    "prerequisite": "Uses A-WA and U-I agreement.",
+    "question": "Mti ___ (anguka).",
+    "answer": "umeanguka"
+   },
+   "representations": [
+    "animal and tree pictures",
+    "a class table",
+    "agreement chains (noun - adjective - verb)"
+   ],
+   "steps": [
+    "Is it a person or animal?",
+    "If so, A-WA.",
+    "If a tree or m-/mi- thing, U-I.",
+    "Agree every word."
+   ],
+   "contexts": [
+    "human trafficking (ulaguzi wa binadamu): wahasiriwa",
+    "a farm",
+    "a forest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ng'ombe ___ (-dogo) ___ (potea)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Ng'ombe\".",
+     "say": "Ni kiumbe hai, kwa hiyo ngeli gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ng'ombe mdogo amepotea\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M_KS7_GA_MTI_AWA",
+     "listen_for": [
+      "A-WA"
+     ],
+     "ask": "Soma tena: \"Mti ni wa ngeli gani?\" Kwa nini \"A-WA\" si jibu sahihi?",
+     "repair": "Mti ni wa ngeli ya U-I; wingi wake ni miti."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M_KS7_GA_MTOTO_UI",
+     "listen_for": [
+      "U-I"
+     ],
+     "ask": "Soma tena: \"Mtoto ni wa ngeli gani?\" Kwa nini \"U-I\" si jibu sahihi?",
+     "repair": "Mtoto ni mtu, kwa hiyo ni wa ngeli ya A-WA."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M_KS7_GA_UPATANISHO",
+     "listen_for": [
+      "Mti unakua na mtoto anakua zinakua"
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Mti unakua na mtoto anakua zinakua\" si jibu sahihi?",
+     "repair": "A-WA: a-, wa-. U-I: u-, i-."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_AWA_UI.M7_GA_ANIMAL_THING",
+     "listen_for": [
+      "imeumwa"
+     ],
+     "ask": "Mbwa ni kiumbe hai au kitu?",
+     "repair": "Wanyama wote huchukua upatanisho wa A-WA: mbwa ameumwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Miti ___ (mirefu) ___ (katwa).",
+     "answer": "mirefu imekatwa",
+     "shows": "U-I chain"
+    },
+    {
+     "question": "Jaza: Kuku ___ (taga).",
+     "answer": "ametaga",
+     "shows": "animal A-WA"
+    }
+   ]
+  }
+ ]
+}

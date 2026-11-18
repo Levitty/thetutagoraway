@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI",
+ "title": "Vivumishi Viulizi (Theme 2: Michezo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI",
+   "key_step": "The child gives -ngapi the noun's class prefix (mangapi, wangapi, vingapi), uses -pi for which one (lipi, kipi) and gani for what kind.",
+   "floor": {
+    "prerequisite": "Uses number prefixes.",
+    "question": "mabao ___ (3)",
+    "answer": "matatu"
+   },
+   "representations": [
+    "question cards",
+    "a prefix table for -ngapi and -pi",
+    "team pictures"
+   ],
+   "steps": [
+    "Find the noun and its class.",
+    "How many? -ngapi with the prefix.",
+    "Which? -pi with the prefix.",
+    "End with ?"
+   ],
+   "contexts": [
+    "games: asking about a match",
+    "a quiz",
+    "a shop"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mlifunga mabao ___?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mabao\".",
+     "say": "Tunauliza idadi kwa neno gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"mangapi\" and a question with \"kipi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M_VIUL_CLASS",
+     "listen_for": [
+      "wangapi"
+     ],
+     "ask": "Soma tena: \"Vitabu ___ vimepotea?\" Kwa nini \"wangapi\" si jibu sahihi?",
+     "repair": "Kivumishi kiulizi huchukua ngeli ya nomino: wanafunzi wangapi, vitabu vingapi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M_VIUL_NUMBER",
+     "listen_for": [
+      "vipi"
+     ],
+     "ask": "Soma tena: \"Kitabu ___ ni chako?\" Kwa nini \"vipi\" si jibu sahihi?",
+     "repair": "Kitabu kimoja: kipi. Vitabu vingi: vipi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M_VIUL_KIND",
+     "listen_for": [
+      "wangapi"
+     ],
+     "ask": "Soma tena: \"Ulikula chakula ___ jana?\" Kwa nini \"wangapi\" si jibu sahihi?",
+     "repair": "-ngapi huuliza idadi, -pi huuliza ni ipi kati ya nyingi, gani huuliza aina."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T2_VIVUMISHI_VIULIZI.VIULIZI.M6_VIUL_NO_QMARK",
+     "listen_for": [
+      "Mlifunga mabao mangapi."
+     ],
+     "ask": "Sentensi hii inauliza?",
+     "repair": "Sentensi yenye kiulizi huishia kwa alama ya kuuliza (?)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Wachezaji ___ walifika? (-ngapi)",
+     "answer": "wangapi",
+     "shows": "prefix"
+    },
+    {
+     "question": "Jaza: Ulichagua mpira ___? (-pi)",
+     "answer": "upi",
+     "shows": "which"
+    }
+   ]
+  }
+ ]
+}

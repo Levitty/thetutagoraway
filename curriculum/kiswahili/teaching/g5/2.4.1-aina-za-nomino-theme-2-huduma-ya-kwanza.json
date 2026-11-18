@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO",
+ "title": "Aina za nomino (Theme 2: Huduma ya kwanza)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI",
+   "key_step": "The child knows nouns of wingi (maji, mafuta, maziwa, mate) name things that are not counted one by one and stay in the plural.",
+   "floor": {
+    "prerequisite": "Gives the plural of a noun.",
+    "question": "Wingi wa kitabu ni?",
+    "answer": "vitabu"
+   },
+   "representations": [
+    "a jug of water and cups",
+    "cards: maji, mafuta, maziwa, manukato",
+    "a sentence with mengi"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Ask: can I count it one by one?",
+    "If not, it is a noun of wingi.",
+    "Use it with mengi or a measure."
+   ],
+   "contexts": [
+    "first aid (huduma ya kwanza): water and oil",
+    "the kitchen",
+    "a milk kiosk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "maji / glasi mbili za maji"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the jug.",
+     "say": "Tunahesabu maji au glasi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two sentences: \"Maji ni mengi\" and one with a measure."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M_WINGI_UNCHANGED",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Kitabu kimoja, vitabu viwili. Andika wingi wa \"kitabu\".\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Wingi wa nomino nyingi hubadilisha mwanzo wa neno, si mwisho. Kitabu kimoja, vitabu viwili."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M_WINGI_WRONG_PREFIX",
+     "listen_for": [
+      "vitoto"
+     ],
+     "ask": "Soma tena: \"Wingi wa \"mtoto\" ni ___.\" Kwa nini \"vitoto\" si jibu sahihi?",
+     "repair": "Kiambishi cha wingi hutegemea ngeli ya nomino. Watu hupewa wa- (watoto), na vitu kama kitabu hupewa vi- (vitabu)."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M_WINGI_DOUBLE",
+     "listen_for": [
+      "mimiti"
+     ],
+     "ask": "Soma tena: \"Wingi wa \"mti\" ni ___.\" Kwa nini \"mimiti\" si jibu sahihi?",
+     "repair": "Nomino ina kiambishi kimoja cha wingi tu. Mti mmoja, miti miwili."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T2_AINA_ZA_NOMINO.WINGI.M5_WINGI_COUNT",
+     "listen_for": [
+      "Nimekunywa maji mawili."
+     ],
+     "ask": "Unaweza kuhesabu maji moja moja?",
+     "repair": "Nomino za wingi kama maji hazihesabiki: maji mengi, glasi mbili za maji."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ipi ya wingi: kitabu, maziwa, kiti?",
+     "answer": "maziwa",
+     "shows": "identify"
+    },
+    {
+     "question": "Jaza: Mafuta ___ (yamemwagika / limemwagika).",
+     "answer": "yamemwagika",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

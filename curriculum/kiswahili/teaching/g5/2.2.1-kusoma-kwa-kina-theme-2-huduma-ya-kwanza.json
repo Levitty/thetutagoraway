@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 2: Huduma ya kwanza)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI",
+   "key_step": "The child orders words by first, second and third letter, finds the root of a verb, and reads the meaning that fits the passage.",
+   "floor": {
+    "prerequisite": "Orders words by first letter.",
+    "question": "Panga: sahani, chai, kijiko",
+    "answer": "chai, kijiko, sahani"
+   },
+   "representations": [
+    "a children's Kiswahili dictionary",
+    "word cards to order",
+    "a verb with its parts coloured"
+   ],
+   "steps": [
+    "Find the root.",
+    "Order by letters.",
+    "Open near the first letter.",
+    "Choose the meaning that fits."
+   ],
+   "contexts": [
+    "first aid (huduma ya kwanza) words",
+    "the library",
+    "homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "bandeji, dawa, damu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second letters of \"dawa\" and \"damu\".",
+     "say": "Lipi linakuja kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the words and finds \"bandeji\" in the dictionary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_LENGTH",
+     "listen_for": [
+      "mti"
+     ],
+     "ask": "Soma tena: \"Neno gani huja kwanza kwenye kamusi?\" Kwa nini \"mti\" si jibu sahihi?",
+     "repair": "Kamusi hupanga maneno kwa herufi za alfabeti, si kwa urefu wa neno."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_FIRST_ONLY",
+     "listen_for": [
+      "samaki"
+     ],
+     "ask": "Soma tena: \"Neno gani huja kwanza kwenye kamusi?\" Kwa nini \"samaki\" si jibu sahihi?",
+     "repair": "Maneno yanapoanza kwa herufi moja, tazama herufi ya pili, kisha ya tatu: sahani huja kabla ya samaki."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M_KAM_REVERSE",
+     "listen_for": [
+      "ndizi"
+     ],
+     "ask": "Soma tena: \"Neno gani huja mwisho kwenye kamusi?\" Kwa nini \"ndizi\" si jibu sahihi?",
+     "repair": "Alfabeti huanza na A na kuishia na Z. Neno la mwisho kwenye kamusi huanza na herufi ya mwisho zaidi."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T2_KUSOMA_KWA_KINA.KAMUSI.M5_KAM_FORM",
+     "listen_for": [
+      "wanaosoma"
+     ],
+     "ask": "Mzizi wa kitenzi hiki ni upi?",
+     "repair": "Kamusi huorodhesha mzizi wa kitenzi: tafuta \"soma\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Panga: jeraha, jasho, jicho",
+     "answer": "jasho, jeraha, jicho",
+     "shows": "order"
+    },
+    {
+     "question": "Utatafuta neno lipi kwa \"walimfunga\"?",
+     "answer": "funga",
+     "shows": "root"
+    }
+   ]
+  }
+ ]
+}

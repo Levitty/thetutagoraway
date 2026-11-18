@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM",
+ "title": "Usemi Halisi na Usemi wa Taarifa (Theme 15: Maadili ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_TAARIFA",
+   "key_step": "The child applies the rules of reporting: marks removed, kwamba/kuwa added (not before a question word), person, tense, time and place words changed, questions ending with a full stop.",
+   "floor": {
+    "prerequisite": "Changes person and tense when reporting.",
+    "question": "Badilisha: Juma alisema, \"Nimechoka.\"",
+    "answer": "Juma alisema kwamba alikuwa amechoka."
+   },
+   "representations": [
+    "a rules chart",
+    "statement and question pairs",
+    "colour for each change"
+   ],
+   "steps": [
+    "Remove the marks.",
+    "Add kwamba (not before a question word).",
+    "Change person, tense, time, place.",
+    "End with a full stop."
+   ],
+   "contexts": [
+    "social values (maadili ya kijamii)",
+    "a court report",
+    "a newspaper interview"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwalimu aliuliza, \"Mmemaliza kazi?\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"?\".",
+     "say": "Itabaki katika usemi wa taarifa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Mwalimu aliuliza kama tulikuwa tumemaliza kazi.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_TAARIFA.M_KS8_UTA_ALAMA",
+     "listen_for": [
+      "Baba alisema, \"Nimechoka.\""
+     ],
+     "ask": "Soma tena: \"Ni usemi upi ni wa taarifa?\" Kwa nini \"Baba alisema, \"Nimechoka.\"\" si jibu sahihi?",
+     "repair": "Usemi wa taarifa hauna alama za usemi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_TAARIFA.M_KS8_UTA_HALISI",
+     "listen_for": [
+      "Baba alisema kwamba amechoka."
+     ],
+     "ask": "Soma tena: \"Ni usemi upi ni halisi?\" Kwa nini \"Baba alisema kwamba amechoka.\" si jibu sahihi?",
+     "repair": "Usemi halisi una alama za usemi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_TAARIFA.M_KS8_UTA_MTU",
+     "listen_for": [
+      "Juma alisema kwamba mimi ni mgonjwa."
+     ],
+     "ask": "Soma tena: \"Juma alisema, \"Mimi ni mgonjwa.\" Taarifa ni ipi?\" Kwa nini \"Juma alisema kwamba mimi ni mgonjwa.\" si jibu sahihi?",
+     "repair": "Mtu hubadilika: mimi huwa yeye."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_TAARIFA.M8_UTA_QUESTION",
+     "listen_for": [
+      "Mama aliuliza kwamba utakuja lini?"
+     ],
+     "ask": "Sentensi ya taarifa ni swali tena?",
+     "repair": "Swali katika usemi wa taarifa huishia kwa kikomo: Mama aliuliza ningekuja lini."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Badilisha: Baba alisema, \"Nitarudi kesho.\"",
+     "answer": "Baba alisema kwamba angerudi siku iliyofuata.",
+     "shows": "statement"
+    },
+    {
+     "question": "Swali la usemi wa taarifa huishia kwa alama gani?",
+     "answer": "kikomo",
+     "shows": "question"
+    }
+   ]
+  }
+ ]
+}

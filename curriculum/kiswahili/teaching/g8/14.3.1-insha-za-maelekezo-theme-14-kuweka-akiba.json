@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO",
+ "title": "Insha za Maelekezo (Theme 14: Kuweka akiba)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO.MAELEKEZO",
+   "key_step": "The child plans insha ya maelekezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "jinsi ya kuweka akiba kwa simu",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jinsi ya Kuweka Akiba kwa Simu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Jinsi ya Kuweka Akiba kwa Simu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO.MAELEKEZO.M8_INS_NOVIFAA_T14",
+     "listen_for": [
+      "hatua ya kwanza moja kwa moja"
+     ],
+     "ask": "Msomaji atajuaje anahitaji nini?",
+     "repair": "Anza kwa lengo na vifaa vinavyohitajika."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO.MAELEKEZO.M8_INS_STORYFORM_T14",
+     "listen_for": [
+      "Nilichukua sufuria nikaweka maji."
+     ],
+     "ask": "Sentensi hii inamwelekeza msomaji au inasimulia?",
+     "repair": "Maelekezo hutumia amri au hali ya kuagiza: chukua, weka."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO.MAELEKEZO.M8_INS_ORDER_M_T14",
+     "listen_for": [
+      "kagua salio, hamisha kiasi kidogo kila wiki, weka namba ya siri, fungua huduma y"
+     ],
+     "ask": "Unaweza kufanya hatua hii kabla ya ile?",
+     "repair": "Fuata mpangilio wa hatua na utumie maneno ya mpangilio."
+    },
+    {
+     "code": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO.MAELEKEZO.M8_INS_NOWARN_T14",
+     "listen_for": [
+      "anwani"
+     ],
+     "ask": "Kuna hatari katika hatua hii?",
+     "repair": "Ongeza tahadhari pale panapohitajika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya maelekezo kuhusu \"Jinsi ya Kuweka Akiba kwa Simu\"?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya maelekezo ina sehemu zipi?",
+     "answer": "anwani, lengo, vifaa, hatua, tahadhari",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

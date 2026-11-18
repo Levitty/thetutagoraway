@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU",
+ "title": "Ngeli ya PA-KU-MU (Theme 7: Majanga na jinsi ya kuyazuia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU",
+   "key_step": "The child chooses pa- for an exact place, ku- for a general or far place and mu- for inside, with place nouns in -ni.",
+   "floor": {
+    "prerequisite": "Uses vihusishi of place.",
+    "question": "Paka yuko ___ ya meza.",
+    "answer": "chini"
+   },
+   "representations": [
+    "a box, a spot on the floor, the playground",
+    "cards pa-, ku-, mu-",
+    "sentence frames with -ni"
+   ],
+   "steps": [
+    "Is it a place (-ni or mahali)?",
+    "Exact spot, general area, or inside?",
+    "Choose pa-, ku- or mu-.",
+    "Read it."
+   ],
+   "contexts": [
+    "disasters (majanga): inside a flooded house",
+    "the school compound",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nyumbani ___ (kuna/pana/mna) wageni."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the house.",
+     "say": "Wageni wako ndani ya nyumba?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Nyumbani mna wageni\" and \"Mahali hapa pana maji\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU.M_PKM_MIX",
+     "listen_for": [
+      "pana"
+     ],
+     "ask": "Soma tena: \"Kule shambani ___ mazao mengi.\" Kwa nini \"pana\" si jibu sahihi?",
+     "repair": "Pale huchukua pa-, kule huchukua ku-, humu na mle huchukua mu- (m-)."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU.M_PKM_CLASS",
+     "listen_for": [
+      "ina"
+     ],
+     "ask": "Soma tena: \"Kule shambani ___ mazao mengi.\" Kwa nini \"ina\" si jibu sahihi?",
+     "repair": "Katika ngeli ya mahali, kitenzi hupatana na mahali (pa-, ku-, mu-), si na nomino."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU.M6_PKM_NI",
+     "listen_for": [
+      "imesafishwa"
+     ],
+     "ask": "Neno hili linataja kitu au mahali?",
+     "repair": "Mahali (-ni) huchukua pa-, ku- au mu-: shuleni kumesafishwa."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T7_NGELI_YA_PA_KU_MU.PA_KU_MU.M6_PKM_MU_INSIDE",
+     "listen_for": [
+      "pana"
+     ],
+     "ask": "Giza liko ndani au mahali fulani tu?",
+     "repair": "Ndani ya kitu tunatumia mu-: chumbani mna giza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mahali hapa ___ (safi).",
+     "answer": "pasafi / ni pasafi",
+     "shows": "pa-"
+    },
+    {
+     "question": "Jaza: Darasani ___ wanafunzi (ndani).",
+     "answer": "mna",
+     "shows": "mu-"
+    }
+   ]
+  }
+ ]
+}

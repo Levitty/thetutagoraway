@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE",
+ "title": "Hali ya Masharti (nge,ngali na ki) (Theme 10: Kukabiliana na ugaidi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI",
+   "key_step": "The child uses -ki- for a real condition (ukisoma utapita), -nge- for an unlikely one now (ningekuwa na pesa ningenunua) and -ngali- for a past one that did not happen.",
+   "floor": {
+    "prerequisite": "Uses tense markers.",
+    "question": "Jaza: Kesho ni___soma.",
+    "answer": "nitasoma"
+   },
+   "representations": [
+    "three condition cards -ki-, -nge-, -ngali-",
+    "a two-part sentence frame",
+    "a timeline"
+   ],
+   "steps": [
+    "Read the condition.",
+    "Real (-ki-), unlikely now (-nge-), or past (-ngali-)?",
+    "Put the marker in both verbs as needed.",
+    "Read it."
+   ],
+   "contexts": [
+    "fighting terrorism: ukiona kitu cha kutiliwa shaka, ripoti",
+    "study habits",
+    "a farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "U___soma kwa bidii, utapita."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Ni sharti la kweli au la kufikirika?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ukisoma\" and one sentence with -nge-."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_TENSE",
+     "listen_for": [
+      "Ulisoma"
+     ],
+     "ask": "Soma tena: \"___ kwa bidii, utafaulu mtihani.\" Kwa nini \"Ulisoma\" si jibu sahihi?",
+     "repair": "Sharti linaonyeshwa kwa -ki-, -sipo- au -nge-, si kwa -li-, -na- au -ta-."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_NEG",
+     "listen_for": [
+      "wasipofanya"
+     ],
+     "ask": "Soma tena: \"Wanafunzi ___ pamoja, watamaliza kazi haraka.\" Kwa nini \"wasipofanya\" si jibu sahihi?",
+     "repair": "Soma sentensi nzima. Kama matokeo ni mazuri, sharti ni la kufanya (-ki-)."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_ID_TENSE",
+     "listen_for": [
+      "-ta-"
+     ],
+     "ask": "Soma tena: \"Ni kiambishi kipi cha masharti katika \"Ukisoma, utafaulu\"?\" Kwa nini \"-ta-\" si jibu sahihi?",
+     "repair": "Ta- huonyesha wakati ujao. Ki- huonyesha sharti."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T10_HALI_YA_MASHARTI_NGE.MASHARTI.M_MASH_ID_PERSON",
+     "listen_for": [
+      "-a-"
+     ],
+     "ask": "Soma tena: \"Ni kiambishi kipi cha masharti katika \"Angekuja, angeona\"?\" Kwa nini \"-a-\" si jibu sahihi?",
+     "repair": "Kiambishi cha mtu (u-, a-, ni-) hakionyeshi sharti. Sharti ni -ki-, -sipo-, -nge-."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Ni___kuwa ndege, ni___ruka.",
+     "answer": "Ningekuwa, ningeruka",
+     "shows": "-nge-"
+    },
+    {
+     "question": "Kiambishi cha masharti katika \"akija\" ni?",
+     "answer": "-ki-",
+     "shows": "identify"
+    }
+   ]
+  }
+ ]
+}

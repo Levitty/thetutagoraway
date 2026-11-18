@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 5: Unyanyasaji wa kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5",
+   "key_step": "The child finds the answer, explains briefly in his own words, and works out new words from the sentence.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "unyanyasaji wa kijinsia",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "unyanyasaji wa kijinsia"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M_KS7_RS_UFAHAMU5_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M_KS7_RS_UFAHAMU5_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M_KS7_RS_UFAHAMU5_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5.M7_UFH_RS_UFAHAMU5",
+     "listen_for": [
+      "kunakili aya yote"
+     ],
+     "ask": "Ukifunga kitabu, unaweza kueleza wazo kuu?",
+     "repair": "Kueleza kwa ufupi ni kutoa wazo kuu kwa maneno yako."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Eleza kwa ufupi aya ya pili inahusu nini.",
+     "answer": "sentensi moja yenye wazo kuu la aya",
+     "shows": "ufahamu"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL",
+ "title": "Kuandika kwa Tarakilishi (Theme 3: Mapambo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI",
+   "key_step": "The child names each part used for typing and printing and says its job, including the special keys.",
+   "floor": {
+    "prerequisite": "Names the keyboard, mouse and screen.",
+    "question": "Tunaandikia kwa nini?",
+    "answer": "kibodi"
+   },
+   "representations": [
+    "a computer with Kiswahili labels",
+    "part/job cards",
+    "a printer"
+   ],
+   "steps": [
+    "Point at the part.",
+    "Say its name.",
+    "Say its job.",
+    "Use it."
+   ],
+   "contexts": [
+    "decorations: typing a list",
+    "the lab",
+    "a cyber café"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Shift, Enter, Backspace, nafasi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Shift.",
+     "say": "Kitufe hiki kinatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels six parts and matches each to its job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M_TAR_MIX_PARTS",
+     "listen_for": [
+      "kipanya"
+     ],
+     "ask": "Soma tena: \"Sehemu ya kupigia herufi ni ipi?\" Kwa nini \"kipanya\" si jibu sahihi?",
+     "repair": "Kibodi ina vitufe vya herufi vya kupigia chapa. Kipanya hutumika kusogeza kielekezi, na skrini huonyesha kilichoandikwa."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M_TAR_FUNCTION",
+     "listen_for": [
+      "Huonyesha maandishi"
+     ],
+     "ask": "Soma tena: \"Kichapishi hufanya nini?\" Kwa nini \"Huonyesha maandishi\" si jibu sahihi?",
+     "repair": "Kichapishi huchapisha kwenye karatasi. Skrini ndiyo huonyesha maandishi."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M5_TAR_KEYS",
+     "listen_for": [
+      "Enter"
+     ],
+     "ask": "Ukibonyeza Enter, kinatokea nini?",
+     "repair": "Shift huandika herufi kubwa; Enter huanzisha mstari mpya."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M5_TAR_PRINTER",
+     "listen_for": [
+      "huonyesha kazi"
+     ],
+     "ask": "Karatasi inatoka wapi?",
+     "repair": "Skrini huonyesha kazi; kichapishi huitoa kwenye karatasi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kichapishi hufanya nini?",
+     "answer": "hutoa nakala kwenye karatasi",
+     "shows": "job"
+    },
+    {
+     "question": "Kitufe kipi huanzisha mstari mpya?",
+     "answer": "Enter",
+     "shows": "keys"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_TARAKILISHI",
+   "key_step": "The child places the cursor at the mistake, fixes only that, formats by selecting first, and saves in his own folder with a clear name.",
+   "floor": {
+    "prerequisite": "Types a sentence and saves it.",
+    "question": "Ni kitufe kipi huanzisha mstari mpya?",
+    "answer": "Enter"
+   },
+   "representations": [
+    "a real computer",
+    "a sample text with three mistakes",
+    "the Save window on the board"
+   ],
+   "steps": [
+    "Type the text.",
+    "Find and fix each mistake.",
+    "Select and format the title.",
+    "Save in your folder with a clear name."
+   ],
+   "contexts": [
+    "decorations (mapambo)",
+    "the computer lab",
+    "a class newsletter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mapanbo ya harusi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wrong letter.",
+     "say": "Tutasahihishaje bila kufuta yote?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes the word, makes the title bold and saves the file."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_TARAKILISHI.M5_CHP_DELETE_ALL",
+     "listen_for": [
+      "futa sentensi yote na uanze upya"
+     ],
+     "ask": "Kishale kiko wapi sasa?",
+     "repair": "Weka kishale mahali pa kosa na ufute herufi hiyo tu."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_TARAKILISHI.M5_CHP_SAVE_AS",
+     "listen_for": [
+      "popote, kwa jina \"insha\""
+     ],
+     "ask": "Utaipataje kazi hii kesho?",
+     "repair": "Chagua folda yako na uandike jina linaloeleza kazi."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_TARAKILISHI.M5_CHP_BOLD",
+     "listen_for": [
+      "iandike mara mbili"
+     ],
+     "ask": "Umechagua neno kabla ya kubonyeza?",
+     "repair": "Chagua neno kwanza, kisha bonyeza B."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T3_KUANDIKA_KWA_TARAKIL.CHAPA_TARAKILISHI.M5_CHP_SPACE_PUNCT",
+     "listen_for": [
+      "Shanga ,bangili na hereni ."
+     ],
+     "ask": "Nafasi iko kabla au baada ya koma?",
+     "repair": "Alama hukaa karibu na neno lililotangulia; nafasi hufuata alama."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kitufe kipi hufuta herufi kabla ya kishale?",
+     "answer": "Backspace",
+     "shows": "keys"
+    },
+    {
+     "question": "Unafanya nini kwanza kabla ya kubonyeza B?",
+     "answer": "kuchagua neno",
+     "shows": "formatting"
+    }
+   ]
+  }
+ ]
+}

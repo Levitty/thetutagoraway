@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 8: Wanyama wa porini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO",
+   "key_step": "The child tells a play by its names before each line and the directions in brackets, and reads each part in the voice of its speaker.",
+   "floor": {
+    "prerequisite": "Tells a story from a poem.",
+    "question": "Shairi lina beti?",
+    "answer": "ndiyo"
+   },
+   "representations": [
+    "a short play with names in bold and directions in brackets",
+    "name cards for each character",
+    "a play read in parts"
+   ],
+   "steps": [
+    "Find the characters' names.",
+    "Find the directions in brackets.",
+    "Read only your part aloud.",
+    "Answer from the play."
+   ],
+   "contexts": [
+    "animals of the wild",
+    "a class drama day",
+    "a radio play"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "SIMBA: (kwa hasira) Nani amechukua chakula changu?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"(kwa hasira)\".",
+     "say": "Maneno haya yanasemwa au yanaeleza jinsi ya kusema?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads Simba's line in an angry voice without reading the brackets aloud."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M4_IGI_STORY",
+     "listen_for": [
+      "Juma aliingia dukani na kusalimia."
+     ],
+     "ask": "Soma tena: \"Ni kipi kati ya hivi kinatoka kwenye mchezo wa kuigiza?\" Kwa nini \"Juma aliingia dukani na kusalimia.\" si jibu sahihi?",
+     "repair": "Igizo huonyesha jina la mhusika, nukta mbili, kisha maneno anayosema. Hadithi huelezwa na msimulizi."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M4_IGI_DIRECTION",
+     "listen_for": [
+      "Hujambo, mzee?"
+     ],
+     "ask": "Soma tena: \"Ni maelekezo ya jukwaani yapi?\" Kwa nini \"Hujambo, mzee?\" si jibu sahihi?",
+     "repair": "Maelekezo ya jukwaani yako kwenye mabano. Yanamwonyesha muigizaji afanye nini, si aseme nini."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M4_IGI_WRONG_SPEAKER",
+     "listen_for": [
+      "Mzee Juma"
+     ],
+     "ask": "Soma tena: \"Nani alisema, \"Nipe kilo mbili za unga\"?\" Kwa nini \"Mzee Juma\" si jibu sahihi?",
+     "repair": "Jina lililo mbele ya nukta mbili ndilo la mhusika anayesema mstari huo."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T8_KUSOMA_KWA_UFAHAMU.IGIZO.M4_IGI_OUTSIDE",
+     "listen_for": [
+      "sukari"
+     ],
+     "ask": "Soma tena: \"Atieno alinunua nini dukani?\" Kwa nini \"sukari\" si jibu sahihi?",
+     "repair": "Jibu la swali la igizo liko ndani ya igizo. Tafuta mstari unaolisema."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maneno yaliyo katika mabano ni nini?",
+     "answer": "maelekezo",
+     "shows": "directions"
+    },
+    {
+     "question": "Nani anasema mstari unaoanza \"SUNGURA:\"?",
+     "answer": "Sungura",
+     "shows": "speaker"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB",
+ "title": "Barua Rasmi ya Kuomba Kazi (Theme 10: Kukabiliana na msongo wa mawazo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI",
+   "key_step": "The child names the features of a job application: the post in the KUH: line, qualifications, why he fits, contact details, and a formal closing.",
+   "floor": {
+    "prerequisite": "Knows the parts of an official letter.",
+    "question": "Barua rasmi ina anwani ngapi?",
+    "answer": "mbili"
+   },
+   "representations": [
+    "a model application letter",
+    "a feature checklist",
+    "a job advert"
+   ],
+   "steps": [
+    "Read the advert.",
+    "Name the post in KUH:.",
+    "List qualifications.",
+    "Close formally with contacts."
+   ],
+   "contexts": [
+    "coping with stress: a holiday job",
+    "a job advert in the newspaper",
+    "a school prefect application"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "KUH: OMBI LA KAZI YA MSAIDIZI WA MAKTABA"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the KUH: line.",
+     "say": "Barua hii inaomba nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the features of the model letter."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M_KS9_BK_ANWANI",
+     "listen_for": [
+      "moja"
+     ],
+     "ask": "Soma tena: \"Barua ya kuomba kazi ina anwani ngapi?\" Kwa nini \"moja\" si jibu sahihi?",
+     "repair": "Ina anwani mbili."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M_KS9_BK_KICHWA",
+     "listen_for": [
+      "hakuna kitu"
+     ],
+     "ask": "Soma tena: \"Barua ya kuomba kazi huwa na nini kabla ya ujumbe?\" Kwa nini \"hakuna kitu\" si jibu sahihi?",
+     "repair": "Ina kichwa cha barua."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M_KS9_BK_SIFA",
+     "listen_for": [
+      "rangi yake anayopenda"
+     ],
+     "ask": "Soma tena: \"Barua ya kuomba kazi hutaja nini kuhusu mwombaji?\" Kwa nini \"rangi yake anayopenda\" si jibu sahihi?",
+     "repair": "Hutaja sifa za mwombaji."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M9_BK_NOQUAL",
+     "listen_for": [
+      "Ninahitaji pesa sana."
+     ],
+     "ask": "Kwa nini mwajiri akuchague?",
+     "repair": "Barua ya kuomba kazi hueleza sifa na ujuzi wa mwombaji."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Barua ya kuomba kazi hueleza nini kuhusu mwombaji?",
+     "answer": "sifa, elimu na ujuzi wake",
+     "shows": "qualifications"
+    },
+    {
+     "question": "Kichwa cha barua ya kuomba kazi kinataja nini?",
+     "answer": "kazi inayoombwa",
+     "shows": "heading"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_BARUA_KAZI",
+   "key_step": "The child plans barua rasmi before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "ombi la kazi ya muda likizoni",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ombi la Kazi ya Muda Likizoni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Ombi la Kazi ya Muda Likizoni\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_BARUA_KAZI.M9_INS_ONEADDR_T10",
+     "listen_for": [
+      "moja, ya mwandishi"
+     ],
+     "ask": "Barua hii itamfikia nani? Anwani yake iko wapi?",
+     "repair": "Barua rasmi ina anwani mbili: ya mwandishi kulia juu, ya mpokeaji kushoto chini yake."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_BARUA_KAZI.M9_INS_NOREF_T10",
+     "listen_for": [
+      "Nimeandika barua hii kwa sababu ninataka kukueleza mambo mengi."
+     ],
+     "ask": "Msomaji atajuaje barua inahusu nini bila kuisoma yote?",
+     "repair": "Kichwa cha barua rasmi huanza KUH: au YAH: na huandikwa kwa herufi kubwa, kwa ufupi."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_BARUA_KAZI.M9_INS_CASUAL_T10",
+     "listen_for": [
+      "Hujambo mwalimu wangu mpendwa!"
+     ],
+     "ask": "Ungemsalimu Mwalimu Mkuu hivi katika mkutano rasmi?",
+     "repair": "Barua rasmi hutumia lugha rasmi: Kwa Mwalimu Mkuu, Wako mtiifu."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.KUANDIKA_BARUA_KAZI.M9_INS_SIGNOFF_T10",
+     "listen_for": [
+      "Ni mimi rafiki yako, Wanjiku"
+     ],
+     "ask": "Mpokeaji atajuaje ni nani hasa aliyeandika?",
+     "repair": "Barua rasmi humalizika kwa \"Wako mtiifu,\" sahihi na jina kamili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua rasmi kuhusu \"Ombi la Kazi ya Muda Likizoni\"?",
+     "answer": "Kwa Meneja,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua rasmi ina sehemu zipi?",
+     "answer": "anwani mbili, tarehe, salamu rasmi, kichwa, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

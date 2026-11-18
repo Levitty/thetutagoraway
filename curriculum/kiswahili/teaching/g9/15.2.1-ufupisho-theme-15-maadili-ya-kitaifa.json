@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T15_UFUPISHO",
+ "title": "Ufupisho (Theme 15: Maadili ya kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO",
+   "key_step": "The child keeps the main point of each paragraph and drops examples, in his own words.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "maadili ya kitaifa",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "maadili ya kitaifa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M_KS9_UF_NAKALA",
+     "listen_for": [
+      "kunakili kifungu chote"
+     ],
+     "ask": "Soma tena: \"Ufupisho ni nini?\" Kwa nini \"kunakili kifungu chote\" si jibu sahihi?",
+     "repair": "Ufupisho si kunakili."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M_KS9_UF_MANENO",
+     "listen_for": [
+      "ya mwandishi pekee"
+     ],
+     "ask": "Soma tena: \"Ufupisho huandikwa kwa maneno ya nani?\" Kwa nini \"ya mwandishi pekee\" si jibu sahihi?",
+     "repair": "Hutumia maneno ya mfupishaji."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M_KS9_UF_MTIRIRIKO",
+     "listen_for": [
+      "hubadilisha mpangilio"
+     ],
+     "ask": "Soma tena: \"Ufupisho huhifadhi nini cha habari?\" Kwa nini \"hubadilisha mpangilio\" si jibu sahihi?",
+     "repair": "Huhifadhi mtiririko."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M9_UFU_UFUPISHO",
+     "listen_for": [
+      "mfano mmoja wa kifungu"
+     ],
+     "ask": "Hili ni hoja kuu au mfano?",
+     "repair": "Ufupisho una hoja kuu tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni lipi liingie katika ufupisho wa kifungu?",
+     "answer": "hoja kuu ya kila aya",
+     "shows": "ufupisho"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUSOMA.T15_UFUPISHO.RS_UFUPISHO",
+   "key_step": "The child keeps the main point of each paragraph and drops examples, in his own words.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "maadili ya kitaifa",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "maadili ya kitaifa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M_KS9_RS_UFUPISHO_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M_KS9_RS_UFUPISHO_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M_KS9_RS_UFUPISHO_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T15_UFUPISHO.RS_UFUPISHO.M9_UFU_RS_UFUPISHO",
+     "listen_for": [
+      "mfano mmoja wa kifungu"
+     ],
+     "ask": "Hili ni hoja kuu au mfano?",
+     "repair": "Ufupisho una hoja kuu tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni lipi liingie katika ufupisho wa kifungu?",
+     "answer": "hoja kuu ya kila aya",
+     "shows": "ufupisho"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

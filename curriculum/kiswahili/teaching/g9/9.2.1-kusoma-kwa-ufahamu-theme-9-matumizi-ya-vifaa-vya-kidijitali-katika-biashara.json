@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 9: Matumizi ya vifaa vya kidijitali katika biashara)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI",
+   "key_step": "The child separates what the writer proves from the words that push the reader.",
+   "floor": {
+    "prerequisite": "Reads a short passage and answers who and what.",
+    "question": "Kifungu kinamhusu nani?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the passage with paragraphs numbered",
+    "question words highlighted",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Read the question and its question word.",
+    "Find the paragraph with the answer.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "vifaa vya kidijitali katika biashara",
+    "a newspaper article",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "vifaa vya kidijitali katika biashara"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M_KS9_RS_USHAWISHI_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M_KS9_RS_USHAWISHI_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M_KS9_RS_USHAWISHI_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI.M9_USH_RS_USHAWISHI",
+     "listen_for": [
+      "ukweli uliothibitishwa"
+     ],
+     "ask": "Kuna ushahidi wa dai hili?",
+     "repair": "Maneno kama \"kila mtu\" na \"bora zaidi\" ni mbinu za ushawishi, si ushahidi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Katika kifungu, \"Kila mtu mwenye busara hutumia simu hii\" ni nini?",
+     "answer": "mbinu ya ushawishi",
+     "shows": "ushawishi"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

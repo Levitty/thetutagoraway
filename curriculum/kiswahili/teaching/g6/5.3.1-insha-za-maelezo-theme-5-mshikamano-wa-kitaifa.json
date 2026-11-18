@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO",
+ "title": "Insha za Maelezo (Theme 5: Mshikamano wa kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA",
+   "key_step": "The child tells a maelezo (explains a process or topic) from a wasifu (describes) and a masimulizi (tells events).",
+   "floor": {
+    "prerequisite": "Sorts kinds of writing.",
+    "question": "Insha inayosimulia ni?",
+    "answer": "masimulizi"
+   },
+   "representations": [
+    "model texts of each kind",
+    "a sorting chart",
+    "signal words (kwanza, kisha; siku moja; ni mrefu)"
+   ],
+   "steps": [
+    "Read the text.",
+    "Look for signal words.",
+    "Name the kind.",
+    "Find its parts."
+   ],
+   "contexts": [
+    "national unity: a maelezo on unity",
+    "a class magazine",
+    "a newspaper"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kwanza, kisha, mwishowe..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the signal words.",
+     "say": "Matini hii ni ya aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts three texts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M_INS_WASIFU_STORY",
+     "listen_for": [
+      "masimulizi"
+     ],
+     "ask": "Soma tena: \"Kifungu kinaelezea sura, tabia na maisha ya mtu. Ni insha ya aina gani?\" Kwa nini \"masimulizi\" si jibu sahihi?",
+     "repair": "Insha ya wasifu humwelezea mtu: sura yake, tabia yake na maisha yake. Masimulizi husimulia matukio."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M_INS_MAELEZO_STORY",
+     "listen_for": [
+      "masimulizi"
+     ],
+     "ask": "Soma tena: \"Kifungu kinaeleza hatua za kupika uji. Ni insha ya aina gani?\" Kwa nini \"masimulizi\" si jibu sahihi?",
+     "repair": "Insha ya maelezo hueleza jambo au jinsi ya kufanya kitu. Masimulizi husimulia tukio lililotokea."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M_INS_STORY_WASIFU",
+     "listen_for": [
+      "wasifu"
+     ],
+     "ask": "Soma tena: \"Kifungu kinasimulia kilichotokea Jumamosi kijijini. Ni insha ya aina gani?\" Kwa nini \"wasifu\" si jibu sahihi?",
+     "repair": "Masimulizi husimulia matukio kwa mpangilio. Wasifu humwelezea mtu mwenyewe."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.AINA_ZA_INSHA.M6_INS_MAELEZO_WASIFU",
+     "listen_for": [
+      "wasifu"
+     ],
+     "ask": "Matini hii inaeleza kitu kilivyo au jinsi ya kufanya?",
+     "repair": "Maelezo hufafanua jinsi ya kufanya jambo; wasifu hueleza jinsi kitu au mtu alivyo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Matini yenye \"Kwanza... kisha...\" mara nyingi ni ya aina gani?",
+     "answer": "maelezo",
+     "shows": "signal"
+    },
+    {
+     "question": "Insha ya wasifu hueleza nini?",
+     "answer": "jinsi mtu au kitu kilivyo",
+     "shows": "kind"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO",
+   "key_step": "The child plans insha ya maelezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "jinsi ya kudumisha umoja shuleni",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jinsi ya Kudumisha Umoja Shuleni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Jinsi ya Kudumisha Umoja Shuleni\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO.M6_INS_STORY_T5",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya maelezo hueleza jambo lilivyo au jinsi linavyofanywa, si matukio ya siku moja."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO.M6_INS_DETAIL_T5",
+     "listen_for": [
+      "Umoja ni mzuri."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO.M6_INS_STEPS_T5",
+     "listen_for": [
+      "tatua migogoro kwa amani, heshimu tamaduni, shirikiana katika kazi, wakaribishe "
+     ],
+     "ask": "Unaweza kufanya hatua hii kabla ya ile?",
+     "repair": "Maelezo ya jinsi ya kufanya jambo hufuata hatua kwa mpangilio."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO.M6_INS_OFFTOPIC_T5",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G6.KUANDI.T5_INSHA_ZA_MAELEZO.INSHA_MAELEZO.M6_INS_PARAS_T5",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya maelezo kuhusu \"Jinsi ya Kudumisha Umoja Shuleni\"?",
+     "answer": "Kwanza, tuwakaribishe wanafunzi wapya kutoka jamii zote.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya maelezo ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

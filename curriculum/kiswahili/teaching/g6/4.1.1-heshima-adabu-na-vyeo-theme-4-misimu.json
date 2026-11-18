@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE",
+ "title": "Heshima, Adabu na Vyeo (Theme 4: Misimu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA",
+   "key_step": "The child uses the right respectful word or title for the person and the number (Shikamoo/Shikamooni, Bwana Chifu, Mheshimiwa).",
+   "floor": {
+    "prerequisite": "Uses kinship words.",
+    "question": "Dada wa baba ni?",
+    "answer": "shangazi"
+   },
+   "representations": [
+    "title cards",
+    "a role play of a visit to an office",
+    "a greeting chart for one and many"
+   ],
+   "steps": [
+    "Who is it, and how many?",
+    "What title or word of respect?",
+    "Say it.",
+    "Wait for the reply."
+   ],
+   "contexts": [
+    "seasons (misimu): a farmers' meeting with the chief",
+    "a hospital",
+    "the MP's visit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Shikamooni wazee!"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two elders.",
+     "say": "Kwa nini \"Shikamooni\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child greets one and then two elders, and an official by title."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA.M_HESH_MISUSE",
+     "listen_for": [
+      "asante"
+     ],
+     "ask": "Soma tena: \"Ukimwomba mwalimu kalamu unasema, \"Mwalimu, nipe kalamu, ___.\"\" Kwa nini \"asante\" si jibu sahihi?",
+     "repair": "Tafadhali ni kuomba, asante ni kushukuru, samahani ni kuomba msamaha, pole ni kufariji, karibu ni kukaribisha."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA.M_HESH_RUDE",
+     "listen_for": [
+      "Nisaidie kubeba mzigo huu!"
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ina heshima zaidi?\" Kwa nini \"Nisaidie kubeba mzigo huu!\" si jibu sahihi?",
+     "repair": "Ombi la heshima lina maneno kama tafadhali, naomba, samahani na asante."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA.M6_HESH_TITLE",
+     "listen_for": [
+      "Habari mwalimu?"
+     ],
+     "ask": "Mtu huyu ana cheo gani?",
+     "repair": "Tumia cheo sahihi: Bwana Chifu, Mheshimiwa, Daktari."
+    },
+    {
+     "code": "KISW.G6.KUSIKI.T4_HESHIMA_ADABU_NA_VYE.HESHIMA.M6_HESH_YOU_PLURAL",
+     "listen_for": [
+      "Shikamoo"
+     ],
+     "ask": "Unawasalimu mzee mmoja au wengi?",
+     "repair": "Kwa wazee wengi tunasema \"Shikamooni\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mbunge huitwaje kwa heshima?",
+     "answer": "Mheshimiwa",
+     "shows": "title"
+    },
+    {
+     "question": "Jibu la \"Shikamooni\" ni?",
+     "answer": "Marahabani",
+     "shows": "reply"
+    }
+   ]
+  }
+ ]
+}

@@ -127,7 +127,9 @@ export function checkEnglishFamily(def, draws = ENGLISH_DRAWS) {
 }
 
 // Within a skill: every family has its own structure (kind), and there are at least two.
-export function checkTextForms(families = ENGLISH_FAMILIES, skills = null) {
+// awaiting: skills of a deeper curriculum map that have no family yet (an entry's `awaiting`, e.g. Kiswahili 18 Nov 2026);
+// they are listed for the family writers and not reported as missing; a skill with some families is still checked in full.
+export function checkTextForms(families = ENGLISH_FAMILIES, skills = null, awaiting = []) {
   const out = [], ids = new Set(), by = new Map();
   for (const f of families) {
     if (ids.has(f.id)) out.push(`${f.id}: duplicate id`);
@@ -139,11 +141,11 @@ export function checkTextForms(families = ENGLISH_FAMILIES, skills = null) {
     for (const k of new Set(kinds.filter((x, i) => kinds.indexOf(x) !== i))) out.push(`${skill}: two families share the structure "${k}"`);
     if (new Set(kinds).size < 2) out.push(`${skill}: needs at least two families of different structure`);
   }
-  for (const c of Object.keys(skills || {})) if (!by.has(c)) out.push(`${c}: a skill with no family`);
+  for (const c of Object.keys(skills || {})) if (!by.has(c) && !awaiting.includes(c)) out.push(`${c}: a skill with no family`);
   return out;
 }
 export const checkEnglishForms = (families = ENGLISH_FAMILIES) => checkTextForms(families, TEXT_ENTRIES.find(e => e.subject === 'english')?.map.skills);
 
 /** Every failure of every word-answer subject-grade in the registry. */
-export const textFailures = (draws = ENGLISH_DRAWS) => TEXT_ENTRIES.flatMap(e => [...checkTextForms(e.families, e.map.skills), ...e.families.flatMap(f => checkEnglishFamily(f, draws))]);
+export const textFailures = (draws = ENGLISH_DRAWS) => TEXT_ENTRIES.flatMap(e => [...checkTextForms(e.families, e.map.skills, e.awaiting || []), ...e.families.flatMap(f => checkEnglishFamily(f, draws))]);
 export const englishFailures = textFailures;

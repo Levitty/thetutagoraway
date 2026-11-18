@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_",
+ "title": "Ngeli na Upatanisho wa Kisarufi (Theme 9: Matumizi ya vifaa vya kidijitali katika mawasiliano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA",
+   "key_step": "The child puts ki-/ch- nouns in KI-VI (kitabu, chakula) and ji-/ø nouns with a ma- plural in LI-YA (jiwe, gari), and agrees every word.",
+   "floor": {
+    "prerequisite": "Uses KI-VI and LI-YA agreement.",
+    "question": "Kiti ___ (vunjika).",
+    "answer": "kimevunjika"
+   },
+   "representations": [
+    "classroom objects",
+    "plural pairs (chumba/vyumba, gari/magari)",
+    "a class table"
+   ],
+   "steps": [
+    "Find the noun and its plural.",
+    "ki-/vi- or ch-/vy-: KI-VI.",
+    "ma- plural: LI-YA.",
+    "Agree every word."
+   ],
+   "contexts": [
+    "digital devices: kifaa, kibodi, simu",
+    "a garage",
+    "the school store"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Chumba ___ (safi)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Chumba\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Chumba ni kisafi\" and \"Vyumba ni visafi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M_KS7_GK_KITABU",
+     "listen_for": [
+      "LI-YA"
+     ],
+     "ask": "Soma tena: \"Kitabu ni cha ngeli gani?\" Kwa nini \"LI-YA\" si jibu sahihi?",
+     "repair": "Kitabu ni cha ngeli ya KI-VI; wingi wake ni vitabu."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M_KS7_GK_JIWE",
+     "listen_for": [
+      "KI-VI"
+     ],
+     "ask": "Soma tena: \"Jiwe ni la ngeli gani?\" Kwa nini \"KI-VI\" si jibu sahihi?",
+     "repair": "Jiwe ni la ngeli ya LI-YA; wingi wake ni mawe."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M_KS7_GK_UPATANISHO",
+     "listen_for": [
+      "Kitabu kimeanguka na vitabu limeanguka"
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Kitabu kimeanguka na vitabu limeanguka\" si jibu sahihi?",
+     "repair": "KI-VI: ki-, vi-. LI-YA: li-, ya-."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA.M7_GK_CH_NOUNS",
+     "listen_for": [
+      "imeiva"
+     ],
+     "ask": "Wingi wa chakula ni upi?",
+     "repair": "Chakula ni KI-VI (vyakula): chakula kimeiva."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Gari ___ (haribika).",
+     "answer": "limeharibika",
+     "shows": "LI-YA"
+    },
+    {
+     "question": "Jaza: Vyakula ___ (pikwa).",
+     "answer": "vimepikwa",
+     "shows": "KI-VI"
+    }
+   ]
+  }
+ ]
+}

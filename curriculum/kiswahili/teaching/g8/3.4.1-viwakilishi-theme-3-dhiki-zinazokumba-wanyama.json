@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T3_VIWAKILISHI",
+ "title": "Viwakilishi (Theme 3: Dhiki zinazokumba wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T3_VIWAKILISHI.VIW_MILIKISHI",
+   "key_step": "The child uses the possessive standing alone (changu, lako) with the prefix of the thing owned, and the emphatic pronoun (-enyewe) for \"self\".",
+   "floor": {
+    "prerequisite": "Uses possessive adjectives.",
+    "question": "kitabu ___ (mimi)",
+    "answer": "changu"
+   },
+   "representations": [
+    "owner and owned cards",
+    "a class table",
+    "sentence frames"
+   ],
+   "steps": [
+    "Find what is owned and its class.",
+    "Find the owner.",
+    "Join prefix and owner stem.",
+    "Use it alone in the sentence."
+   ],
+   "contexts": [
+    "animals in distress: \"Ng'ombe wetu ni wetu\"",
+    "school property",
+    "a family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kalamu hii ni ___ (wewe)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kalamu\".",
+     "say": "Kalamu iko katika ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"yako\" and \"Yako imepotea\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T3_VIWAKILISHI.VIW_MILIKISHI.M_KS8_VM_MILIKI",
+     "listen_for": [
+      "mwenyewe"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kimilikishi kipi?\" Kwa nini \"mwenyewe\" si jibu sahihi?",
+     "repair": "Changu ni kimilikishi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T3_VIWAKILISHI.VIW_MILIKISHI.M_KS8_VM_SISITIZI",
+     "listen_for": [
+      "changu"
+     ],
+     "ask": "Soma tena: \"Ni kiwakilishi kisisitizi kipi?\" Kwa nini \"changu\" si jibu sahihi?",
+     "repair": "Mwenyewe ni kisisitizi."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T3_VIWAKILISHI.VIW_MILIKISHI.M_KS8_VM_UPATANISHO",
+     "listen_for": [
+      "wangu"
+     ],
+     "ask": "Soma tena: \"Kamilisha: kitabu ___ (changu/wangu)\" Kwa nini \"wangu\" si jibu sahihi?",
+     "repair": "Kitabu hupatana na changu."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T3_VIWAKILISHI.VIW_MILIKISHI.M8_VM_STANDALONE",
+     "listen_for": [
+      "Angu"
+     ],
+     "ask": "Kimilikishi hiki kinasimama badala ya nini?",
+     "repair": "Kimilikishi kinachosimama peke yake huhifadhi kiambishi: Changu kimepotea."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza (vitabu, sisi): ___ ni vipya.",
+     "answer": "Vyetu",
+     "shows": "possessive pronoun"
+    },
+    {
+     "question": "Jaza: Mwalimu ___ alituambia.",
+     "answer": "mwenyewe",
+     "shows": "emphatic"
+    }
+   ]
+  }
+ ]
+}

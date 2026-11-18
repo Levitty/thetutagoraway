@@ -33,7 +33,7 @@ test('skills and the misconception library are proposed or draft, with the field
       assert.equal(k.status, 'proposed');
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
-      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS[p.requires] || (p.grade < 6 && /^KISW\.G\d\./.test(p.requires)), `${k.code}: unknown prerequisite ${p.requires}`);   // a skill of a grade below: checked in tests/lib/kiswahili-depth.mjs
     }
     for (const m of s.misconceptions) {
       assert.equal(m.status, 'draft');
@@ -47,7 +47,7 @@ test('skills and the misconception library are proposed or draft, with the field
 test('every Kiswahili skill has families in at least two different structures, and every family passes its checks', () => {
   const bad = textFailures(120).filter(f => /kiswahili|KISW/.test(f));
   assert.deepEqual(bad, [], `\n${bad.slice(0, 40).join('\n')}\n`);
-  assert.deepEqual(checkTextForms(FAMILIES, SKILLS), []);
+  assert.deepEqual(checkTextForms(FAMILIES, SKILLS, entry.awaiting), []);   // a skill of the deeper map with no family yet is listed in entry.awaiting
 });
 
 test('Kiswahili families stay off for children until a native speaker signs them off, and stay out of the Maths bank', () => {
@@ -108,3 +108,7 @@ test('no Islamic or English-only checks leak into the child-facing Kiswahili: no
     assert.ok(!/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u.test(all), `${f.id}: emoji`);
   }
 });
+
+// The Grade 5 Maths standard for this grade (18 Nov 2026): tests/lib/kiswahili-depth.mjs
+import { depthTests } from './lib/kiswahili-depth.mjs';
+depthTests(6);

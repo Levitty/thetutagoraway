@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA",
+ "title": "Kusoma kwa Mapana (Theme 4: Saa na majira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI",
+   "key_step": "The child keeps private details private, avoids unknown links and strangers, and uses the device for a short time in good light.",
+   "floor": {
+    "prerequisite": "Knows what personal details are.",
+    "question": "Jina lako kamili ni siri?",
+    "answer": "ni jambo la faragha"
+   },
+   "representations": [
+    "safe/unsafe message cards",
+    "a timer",
+    "a \"tell an adult\" card"
+   ],
+   "steps": [
+    "Read the message.",
+    "Do I know the sender?",
+    "Do not open or share.",
+    "Tell an adult; rest the eyes."
+   ],
+   "contexts": [
+    "time and seasons: screen time",
+    "the computer lab",
+    "a phone at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nenosiri ni siri."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the unsafe message.",
+     "say": "Ufanye nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts eight cards into safe and unsafe."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_SHARE",
+     "listen_for": [
+      "Kumpa rafiki nenosiri langu"
+     ],
+     "ask": "Soma tena: \"Ni hatua ipi ya kiusalama?\" Kwa nini \"Kumpa rafiki nenosiri langu\" si jibu sahihi?",
+     "repair": "Nenosiri ni siri yako. Usimpe mtu mwingine, hata rafiki, ila mzazi au mlezi."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_LINK",
+     "listen_for": [
+      "Nikifungue haraka"
+     ],
+     "ask": "Soma tena: \"Ujumbe usiojulikana una kiungo cha zawadi. Ufanye nini?\" Kwa nini \"Nikifungue haraka\" si jibu sahihi?",
+     "repair": "Viungo kutoka kwa watu usiowajua vinaweza kuwa hatari. Mwonyeshe mtu mzima kabla ya kuvifungua."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M_DIG_UNSAFE_SITE",
+     "listen_for": [
+      "Tovuti inayotaka jina na nambari ya simu yangu"
+     ],
+     "ask": "Soma tena: \"Unatafuta kifungu cha kusoma. Utumie tovuti ipi?\" Kwa nini \"Tovuti inayotaka jina na nambari ya simu yangu\" si jibu sahihi?",
+     "repair": "Tumia tovuti salama zilizopendekezwa na mwalimu au mzazi, na usitoe maelezo yako binafsi."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.USALAMA_DIJITALI.M5_DIG_TIME",
+     "listen_for": [
+      "kukitumia gizani kwa saa nyingi"
+     ],
+     "ask": "Umetumia kifaa kwa muda gani?",
+     "repair": "Tumia kifaa kwa muda mfupi, mahali penye mwanga, na upumzishe macho."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mtu usiyemjua anaomba picha yako. Ufanye nini?",
+     "answer": "usimtumie; mwambie mzazi",
+     "shows": "stranger"
+    },
+    {
+     "question": "Unapaswa kutumia kifaa kwa muda gani?",
+     "answer": "muda mfupi, kisha kupumzika",
+     "shows": "health"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI",
+   "key_step": "The child opens the folder before the file and searches with two or three key words on a safe site.",
+   "floor": {
+    "prerequisite": "Switches a computer or tablet on and off safely.",
+    "question": "Ni kitufe kipi huwasha tarakilishi?",
+    "answer": "kitufe cha kuwasha"
+   },
+   "representations": [
+    "a real box file with papers (folder and file)",
+    "step cards",
+    "two screenshots: a real page and a trap"
+   ],
+   "steps": [
+    "Open the folder.",
+    "Double-click the file.",
+    "Search with key words on a safe site.",
+    "Read and say the message."
+   ],
+   "contexts": [
+    "the school computer lab (saa na majira)",
+    "a tablet at home",
+    "a cyber café"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kiswahili > Majira ya Mwaka"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the folder.",
+     "say": "Tutafungua nini kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child opens the folder and the file on a real device or in order on cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI.M5_KID_FOLDER_T4",
+     "listen_for": [
+      "bonyeza \"Majira ya Mwaka\" kwenye skrini ya mwanzo"
+     ],
+     "ask": "Faili hii iko ndani ya nini?",
+     "repair": "Faili huhifadhiwa ndani ya folda; fungua folda kwanza, kisha faili."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI.M5_KID_SEARCH_T4",
+     "listen_for": [
+      "naomba unipe habari zote kuhusu saa na majira tafadhali"
+     ],
+     "ask": "Ni maneno gani muhimu katika swali hili?",
+     "repair": "Andika maneno mawili au matatu muhimu tu, na uyaandike kwa tahajia sahihi."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI.M5_KID_POPUP_T4",
+     "listen_for": [
+      "bonyeza ili kupokea simu"
+     ],
+     "ask": "Je, ulishiriki shindano lolote? Kwa nini ushinde simu?",
+     "repair": "Ujumbe wa zawadi usiotarajiwa ni mtego; usiubonyeze."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI.M5_KID_SITE_T4",
+     "listen_for": [
+      "jaza ili usome hadithi"
+     ],
+     "ask": "Kwa nini tovuti ya hadithi ihitaji nambari ya simu?",
+     "repair": "Usimpe mtu yeyote mtandaoni jina lako kamili, shule yako wala nambari ya simu."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI.M5_KID_ORDER_T4",
+     "listen_for": [
+      "andika maneno ya kutafutia"
+     ],
+     "ask": "Unaweza kutafuta kabla ya kufungua kivinjari?",
+     "repair": "Washa kifaa, fungua kivinjari, andika maneno muhimu, chagua tovuti salama, soma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika maneno muhimu ya kutafuta habari kuhusu saa na majira.",
+     "answer": "majira mvua kiangazi Kenya",
+     "shows": "key words"
+    },
+    {
+     "question": "Ujumbe \"Umeshinda!\" ukitokea, ufanye nini?",
+     "answer": "usibonyeze; umwambie mwalimu",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

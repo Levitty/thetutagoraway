@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI",
+ "title": "Ngeli ya I-ZI (Theme 4: Saa na majira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI",
+   "key_step": "The child knows nouns of I-ZI (often n- nouns like nyumba, meza, kalamu) keep one form and take i- for one and zi- for many.",
+   "floor": {
+    "prerequisite": "Uses A-WA agreement.",
+    "question": "Mtoto ___ lala.",
+    "answer": "amelala"
+   },
+   "representations": [
+    "pictures: nyumba, saa, meza",
+    "one and many sentence pairs",
+    "prefix cards i- and zi-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Notice it does not change in the plural.",
+    "One: i-; many: zi-.",
+    "Check the adjective too."
+   ],
+   "contexts": [
+    "time and seasons (saa na majira): clocks",
+    "houses in the village",
+    "tables in the dining hall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Saa ___ simama."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Saa\".",
+     "say": "Ni moja au nyingi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Saa imesimama\" and \"Saa zimesimama\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_SG_ZI",
+     "listen_for": [
+      "zi"
+     ],
+     "ask": "Soma tena: \"Nyumba moja ___meanguka.\" Kwa nini \"zi\" si jibu sahihi?",
+     "repair": "Nyumba moja ni umoja. Kiambishi cha umoja cha ngeli ya I-ZI ni i-: nyumba imeanguka."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_PL_I",
+     "listen_for": [
+      "i"
+     ],
+     "ask": "Soma tena: \"Nyumba nyingi ___meanguka.\" Kwa nini \"i\" si jibu sahihi?",
+     "repair": "Nomino za I-ZI zina umbo moja katika umoja na wingi. Maneno mengine ya sentensi, kama \"nyingi\", yanaonyesha ni wingi, kwa hiyo tunatumia zi-."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_KI_VI",
+     "listen_for": [
+      "vi"
+     ],
+     "ask": "Soma tena: \"Meza mbili ___mevunjika.\" Kwa nini \"vi\" si jibu sahihi?",
+     "repair": "Si kila kitu hutumia ki-/vi-. Meza, nyumba na barabara ni za ngeli ya I-ZI, kwa hiyo wingi hutumia zi-."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T4_NGELI_YA_I_ZI.I_ZI.M_IZI_ADD_MA",
+     "listen_for": [
+      "Manyumba ni makubwa."
+     ],
+     "ask": "Soma tena: \"Wingi wa \"Nyumba ni kubwa\" ni ___.\" Kwa nini \"Manyumba ni makubwa.\" si jibu sahihi?",
+     "repair": "Nomino za I-ZI haziongezi kiambishi katika wingi. Tunabadilisha viambishi vya upatanisho: nyumba zote ni kubwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Nyumba ___ jengwa (nyingi).",
+     "answer": "zimejengwa",
+     "shows": "plural"
+    },
+    {
+     "question": "Wingi wa meza ni?",
+     "answer": "meza",
+     "shows": "unchanged noun"
+    }
+   ]
+  }
+ ]
+}

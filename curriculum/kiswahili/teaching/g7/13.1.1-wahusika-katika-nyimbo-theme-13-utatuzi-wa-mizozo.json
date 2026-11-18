@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM",
+ "title": "Wahusika katika Nyimbo (Theme 13: Utatuzi wa mizozo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.WAHUSIKA_NYIMBO",
+   "key_step": "The child places the nyimbo in its kind and occasion, explains its wahusika with an example, and presents it with the audience taking part.",
+   "floor": {
+    "prerequisite": "Tells a riddle or a story with the formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "a recording or a performance of \"Sungura mjanja aliwapatanisha Tembo na Kiboko\"",
+    "a chart: aina, tukio, lengo",
+    "a point-and-example frame"
+   ],
+   "steps": [
+    "Listen to or read the text.",
+    "Name its kind and occasion.",
+    "Explain its wahusika with an example.",
+    "Present it with the audience."
+   ],
+   "contexts": [
+    "utatuzi wa mizozo",
+    "a cultural festival",
+    "an evening of stories at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sungura mjanja aliwapatanisha Tembo na Kiboko"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Sungura ana sifa gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child presents a short piece with the class responding."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.WAHUSIKA_NYIMBO.M7_FSI_MAIN_T13",
+     "listen_for": [
+      "mhusika aliyetajwa mara moja"
+     ],
+     "ask": "Utungo unamhusu nani tangu mwanzo hadi mwisho?",
+     "repair": "Mhusika mkuu ni yule ambaye utungo unamhusu."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.WAHUSIKA_NYIMBO.M7_FSI_NOEVID_T13",
+     "listen_for": [
+      "kwa sababu ni mzuri"
+     ],
+     "ask": "Ni kitendo gani kinaonyesha sifa hii?",
+     "repair": "Thibitisha sifa kwa kitendo au maneno ya mhusika."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.WAHUSIKA_NYIMBO.M7_FSI_ANIMAL_T13",
+     "listen_for": [
+      "mnyama wa porini tu"
+     ],
+     "ask": "Unamjua mtu mwenye tabia kama hii?",
+     "repair": "Wahusika wanyama huwakilisha tabia za watu."
+    },
+    {
+     "code": "KISW.G7.KUSIKI.T13_WAHUSIKA_KATIKA_NYIM.WAHUSIKA_NYIMBO.M7_FSI_LESSON_T13",
+     "listen_for": [
+      "tuwe wajanja ili tushinde"
+     ],
+     "ask": "Mwishoni alipata nini?",
+     "repair": "Funzo hutokana na matokeo ya matendo ya mhusika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mhusika mkuu katika nyimbo hii ni nani?",
+     "answer": "Sungura",
+     "shows": "wahusika"
+    },
+    {
+     "question": "Katika nyimbo, Sungura anawakilisha nini?",
+     "answer": "watu wenye tabia kama zake katika jamii",
+     "shows": "wahusika, use"
+    }
+   ]
+  }
+ ]
+}

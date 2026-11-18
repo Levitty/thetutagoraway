@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI",
+ "title": "Ngeli ya LI-LI (Theme 7: Matunda na mimea)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.LI_LI",
+   "key_step": "The child knows the few LI-LI nouns (jua, giza, tunda as a crop of one) keep li- with no plural form.",
+   "floor": {
+    "prerequisite": "Uses LI-YA agreement.",
+    "question": "Jiwe ___ anguka.",
+    "answer": "limeanguka"
+   },
+   "representations": [
+    "a picture of the sun and the dark",
+    "a LI-YA and LI-LI side by side",
+    "prefix card li-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Ask: does it have a ma- plural?",
+    "If not, keep li-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "morning at the shamba",
+    "a power cut at night",
+    "a hot afternoon"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Giza ___ ingia."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Giza\".",
+     "say": "Lina wingi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Giza limeingia\" and explains why it has no plural."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.LI_LI.M4_LILI_YA",
+     "listen_for": [
+      "ya"
+     ],
+     "ask": "Soma tena: \"Jua ___metoka asubuhi.\" Kwa nini \"ya\" si jibu sahihi?",
+     "repair": "Jua na giza ni nomino za ngeli ya LI-LI: kiambishi ni li-: jua limetoka, giza limeingia."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.LI_LI.M4_LILI_OTHER",
+     "listen_for": [
+      "u"
+     ],
+     "ask": "Soma tena: \"Giza ___meingia haraka.\" Kwa nini \"u\" si jibu sahihi?",
+     "repair": "Jua na giza ni LI-LI: vinatumia li-."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.LI_LI.M4_LILI_NOT",
+     "listen_for": [
+      "mti"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya LI-LI?\" Kwa nini \"mti\" si jibu sahihi?",
+     "repair": "Kati ya nomino hizi, jua na giza ndizo za LI-LI. Mti uko U-I."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_LI_LI.LI_LI.M4_LILI_PLURAL",
+     "listen_for": [
+      "majua"
+     ],
+     "ask": "Kuna jua ngapi angani?",
+     "repair": "Nomino za LI-LI hazibadiliki katika wingi: jua limewaka."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Jua ___ chomoza.",
+     "answer": "limechomoza",
+     "shows": "agreement"
+    },
+    {
+     "question": "Wingi wa \"giza\" ni upi?",
+     "answer": "giza",
+     "shows": "no plural"
+    }
+   ]
+  }
+ ]
+}

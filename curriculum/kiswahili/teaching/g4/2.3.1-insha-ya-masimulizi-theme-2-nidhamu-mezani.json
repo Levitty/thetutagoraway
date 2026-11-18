@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI",
+ "title": "Insha ya Masimulizi (Theme 2: Nidhamu mezani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI",
+   "key_step": "The child plans insha ya masimulizi before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "siku nilipokula na wageni",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Siku Nilipokula na Wageni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Siku Nilipokula na Wageni\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M4_INS_FACTS_T2",
+     "listen_for": [
+      "Watu wengi hula mara tatu kwa siku."
+     ],
+     "ask": "Ni nani anafanya nini katika sentensi hii?",
+     "repair": "Masimulizi husimulia matukio yaliyotokea: nani, wapi, nini kilitokea."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M4_INS_TENSE_T2",
+     "listen_for": [
+      "Jana jioni tunakula chakula pamoja na wageni wetu."
+     ],
+     "ask": "Jambo hili lilitokea lini? Kitenzi kinaonyesha wakati gani?",
+     "repair": "Jambo lililotokea husimuliwa kwa wakati uliopita: -li-."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M4_INS_ORDER_T2",
+     "listen_for": [
+      "tulishukuru, tulikula, tuliketi mezani, tulinawa mikono"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M4_INS_END_T2",
+     "listen_for": [
+      "Mwisho."
+     ],
+     "ask": "Msomaji anajifunza nini katika aya ya mwisho?",
+     "repair": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya masimulizi kuhusu \"Siku Nilipokula na Wageni\"?",
+     "answer": "Jana jioni tulikula chakula pamoja na wageni wetu.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya masimulizi ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

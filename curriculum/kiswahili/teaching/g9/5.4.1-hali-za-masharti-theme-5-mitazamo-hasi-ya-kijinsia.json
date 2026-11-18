@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI",
+ "title": "Hali za Masharti (Theme 5: Mitazamo hasi ya kijinsia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI",
+   "key_step": "The child uses -nge- in both halves for an unlikely condition now and -ngali- for a past one that did not happen.",
+   "floor": {
+    "prerequisite": "Uses -ki- and -ka-.",
+    "question": "Jaza: U___soma utapita.",
+    "answer": "Ukisoma"
+   },
+   "representations": [
+    "condition cards",
+    "a timeline",
+    "two-half sentence strips"
+   ],
+   "steps": [
+    "Is the condition possible now, unlikely, or past?",
+    "Unlikely: -nge- both halves.",
+    "Past and unreal: -ngali-.",
+    "Read it."
+   ],
+   "contexts": [
+    "negative gender attitudes: Kama wasichana wangalipewa nafasi...",
+    "a story",
+    "a debate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ki___ (ja) mapema, ki___ (pata) basi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two blanks.",
+     "say": "Ni jambo la kweli au la kufikirika la zamani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Angalikuja mapema, angalipata basi.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M_KS9_NN_MAANA",
+     "listen_for": [
+      "ukweli uliotimia"
+     ],
+     "ask": "Soma tena: \"Hali ya masharti ya -nge- huonyesha nini?\" Kwa nini \"ukweli uliotimia\" si jibu sahihi?",
+     "repair": "-nge- huonyesha sharti ambalo halikutimia."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M_KS9_NN_NGE",
+     "listen_for": [
+      "Angalijua angalikuja."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ina -nge-?\" Kwa nini \"Angalijua angalikuja.\" si jibu sahihi?",
+     "repair": "Angejua ina -nge-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M_KS9_NN_NGALI",
+     "listen_for": [
+      "Angejua angekuja."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ina -ngali-?\" Kwa nini \"Angejua angekuja.\" si jibu sahihi?",
+     "repair": "Angalijua ina -ngali-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M9_NN_ONEVERB",
+     "listen_for": [
+      "Ningekuwa ... nitajenga"
+     ],
+     "ask": "Sehemu ya pili inaonyesha jambo la kweli au la kufikirika?",
+     "repair": "Masharti ya kufikirika huchukua -nge- pande zote: ningekuwa, ningejenga."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Tu___ (jua), tu___ (kuja).",
+     "answer": "Tungejua, tungekuja",
+     "shows": "-nge-"
+    },
+    {
+     "question": "Kiambishi -ngali- huonyesha nini?",
+     "answer": "sharti la zamani lisilotimia",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

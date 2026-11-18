@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T14_INSHA_ZA_KIUAMILIFU",
+ "title": "Insha za Kiuamilifu (Theme 14: Matumizi ya kodi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T14_INSHA_ZA_KIUAMILIFU.AINA_ZA_SHAJARA",
+   "key_step": "The child plans shajara before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "matumizi ya kodi kijijini",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Matumizi ya Kodi Kijijini"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Matumizi ya Kodi Kijijini\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T14_INSHA_ZA_KIUAMILIFU.AINA_ZA_SHAJARA.M9_INS_NODATE_S_T14",
+     "listen_for": [
+      "anwani ya insha"
+     ],
+     "ask": "Jambo hili liliandikwa lini?",
+     "repair": "Kila ingizo la shajara huanza na tarehe."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T14_INSHA_ZA_KIUAMILIFU.AINA_ZA_SHAJARA.M9_INS_PERSON_S_T14",
+     "listen_for": [
+      "nafsi ya tatu: yeye"
+     ],
+     "ask": "Ni nani anaandika shajara hii?",
+     "repair": "Shajara ya kibinafsi huandikwa kwa nafsi ya kwanza."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T14_INSHA_ZA_KIUAMILIFU.AINA_ZA_SHAJARA.M9_INS_TYPE_S_T14",
+     "listen_for": [
+      "ya kibinafsi"
+     ],
+     "ask": "Ingizo hili linahusu hisia au shughuli za kazi?",
+     "repair": "Shajara ya kazi huandika shughuli na miadi; ya kibinafsi huandika hisia na matukio ya mtu."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T14_INSHA_ZA_KIUAMILIFU.AINA_ZA_SHAJARA.M9_INS_LETTER_S_T14",
+     "listen_for": [
+      "Mpendwa rafiki,"
+     ],
+     "ask": "Unamwandikia nani?",
+     "repair": "Shajara haina salamu wala hitimisho la barua."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika shajara kuhusu \"Matumizi ya Kodi Kijijini\"?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "type"
+    },
+    {
+     "question": "Shajara ina sehemu zipi?",
+     "answer": "tarehe, ingizo kwa nafsi ya kwanza",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

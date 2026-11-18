@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS",
+ "title": "Viwakilishi vya Nafsi (Theme 3: Mahusiano)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI",
+   "key_step": "The child chooses the pronoun by person and number and matches it with the verb prefix (sisi tu-) and, for the object, the marker inside the verb (-ni-, -ku-, -m-).",
+   "floor": {
+    "prerequisite": "Uses yeye and wao.",
+    "question": "Juma na Ali ni ___",
+    "answer": "wao"
+   },
+   "representations": [
+    "a person table with verb prefixes",
+    "pointing to self, listener and others",
+    "verbs with markers coloured"
+   ],
+   "steps": [
+    "Who speaks, who listens, who is talked about?",
+    "One or many?",
+    "Choose the pronoun.",
+    "Match the verb prefix and object marker."
+   ],
+   "contexts": [
+    "relationships (mahusiano): family",
+    "a class discussion",
+    "a team talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sisi ___ (penda) shule."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Sisi\".",
+     "say": "Kitenzi kitaanza kwa kiambishi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"tunapenda\" and \"Mama anatupenda\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI.M_NAFSI_PERSON",
+     "listen_for": [
+      "Mimi"
+     ],
+     "ask": "Soma tena: \"Juma anamwambia Akinyi, \"___ ni rafiki yangu.\"\" Kwa nini \"Mimi\" si jibu sahihi?",
+     "repair": "Aliye anasema ni mimi, aliye anaambiwa ni wewe, anayezungumziwa ni yeye."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI.M_NAFSI_NUMBER",
+     "listen_for": [
+      "Ninyi"
+     ],
+     "ask": "Soma tena: \"Mama anamwambia mtoto, \"___ unastahili sifa.\"\" Kwa nini \"Ninyi\" si jibu sahihi?",
+     "repair": "Wewe ni mmoja, ninyi ni wengi. Mimi ni mmoja, sisi ni wengi."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI.M6_NAFSI_SUBJECT",
+     "listen_for": [
+      "wanacheza"
+     ],
+     "ask": "Sisi ni nafsi ipi? Kitenzi kianze na nini?",
+     "repair": "Kiambishi cha kitenzi hupatana na nafsi: sisi tunacheza."
+    },
+    {
+     "code": "KISW.G6.SARUFI.T3_VIWAKILISHI_VYA_NAFS.NAFSI.M6_NAFSI_OBJECT",
+     "listen_for": [
+      "Mwalimu alisifu mimi."
+     ],
+     "ask": "Ni nani alisifiwa? Tunamwonyeshaje ndani ya kitenzi?",
+     "repair": "Kitenzi hubeba nafsi ya mtendewa ndani yake: alinisifu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Nyinyi ___ (fika) mapema.",
+     "answer": "mmefika",
+     "shows": "person agreement"
+    },
+    {
+     "question": "Badilisha: \"Mwalimu alisaidia mimi.\"",
+     "answer": "Mwalimu alinisaidia.",
+     "shows": "object marker"
+    }
+   ]
+  }
+ ]
+}

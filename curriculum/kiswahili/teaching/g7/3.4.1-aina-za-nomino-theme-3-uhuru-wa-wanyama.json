@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO",
+ "title": "Aina za nomino (Theme 3: Uhuru wa wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI",
+   "key_step": "The child knows nouns of wingi (maji, mafuta) are not counted and verbal nouns (kuimba) name an activity in KU-KU.",
+   "floor": {
+    "prerequisite": "Uses nouns of wingi.",
+    "question": "Ni nomino ya wingi ipi: maji, jiwe?",
+    "answer": "maji"
+   },
+   "representations": [
+    "a jug of water",
+    "activity cards",
+    "KU-KU agreement chart"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Is it counted? Is it an activity with ku-?",
+    "Name its kind.",
+    "Agree the verb."
+   ],
+   "contexts": [
+    "wildlife freedom (uhuru wa wanyama): kuwinda ni hatia",
+    "a sports day",
+    "the kitchen"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kuwinda ___ (kumepigwa marufuku)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kuwinda\".",
+     "say": "Hii ni nomino ya aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the sentence and one with a noun of wingi."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M_KS7_NW_KITENZI_JINA",
+     "listen_for": [
+      "mwimbaji"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi-jina kipi?\" Kwa nini \"mwimbaji\" si jibu sahihi?",
+     "repair": "Kitenzi-jina huanza kwa ku-, kama kuimba."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M_KS7_NW_MAJI_MOJA",
+     "listen_for": [
+      "kiti"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ya wingi?\" Kwa nini \"kiti\" si jibu sahihi?",
+     "repair": "Maji ni nomino ya wingi; haina umoja."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M_KS7_NW_KUSOMA",
+     "listen_for": [
+      "kitenzi kikuu"
+     ],
+     "ask": "Soma tena: \"Neno kusoma katika \"Kusoma ni muhimu\" ni nini?\" Kwa nini \"kitenzi kikuu\" si jibu sahihi?",
+     "repair": "Hapa kusoma ni jina la jambo, kwa hiyo ni kitenzi-jina."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T3_AINA_ZA_NOMINO.NOMINO_WINGI.M7_NW_KU_AGREE",
+     "listen_for": [
+      "anapendeza"
+     ],
+     "ask": "Nomino kuu ni kuimba au mwimbaji?",
+     "repair": "Kitenzi-jina huchukua ku-: kuimba kwake kunapendeza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kitenzi-jina kipi: mwindaji, kuwinda, aliwinda?",
+     "answer": "kuwinda",
+     "shows": "identify"
+    },
+    {
+     "question": "Jaza: Mate ___ (yamemtoka / limemtoka).",
+     "answer": "yamemtoka",
+     "shows": "wingi agreement"
+    }
+   ]
+  }
+ ]
+}

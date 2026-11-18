@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA",
+ "title": "Hotuba ya Kupasha Habari (Theme 12: Magonjwa ambukizi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.HOTUBA_KUPASHA",
+   "key_step": "The child plans hotuba before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "chanjo dhidi ya surua",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Chanjo Dhidi ya Surua"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Chanjo Dhidi ya Surua\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.HOTUBA_KUPASHA.M7_INS_ITIFAKI_T12",
+     "listen_for": [
+      "moja kwa moja na hoja ya kwanza"
+     ],
+     "ask": "Unazungumza na nani?",
+     "repair": "Hotuba huanza kwa itifaki."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.HOTUBA_KUPASHA.M7_INS_ESSAY_T12",
+     "listen_for": [
+      "Wanafunzi wanapaswa kunawa mikono."
+     ],
+     "ask": "Unazungumza nao au kuwahusu?",
+     "repair": "Hotuba huzungumza na hadhira moja kwa moja."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.HOTUBA_KUPASHA.M7_INS_NOTHANKS_T12",
+     "listen_for": [
+      "kwa hoja ya mwisho tu"
+     ],
+     "ask": "Hadhira itajuaje umemaliza?",
+     "repair": "Funga hotuba kwa muhtasari na shukrani."
+    },
+    {
+     "code": "KISW.G7.KUANDI.T12_HOTUBA_YA_KUPASHA_HA.HOTUBA_KUPASHA.M7_INS_FACTLESS_T12",
+     "listen_for": [
+      "Ugonjwa huu ni mbaya sana."
+     ],
+     "ask": "Msikilizaji atajua nini cha kufanya?",
+     "repair": "Hotuba ya kupasha habari hutoa ukweli muhimu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika hotuba kuhusu \"Chanjo Dhidi ya Surua\"?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "type"
+    },
+    {
+     "question": "Hotuba ina sehemu zipi?",
+     "answer": "itifaki, utangulizi, kiini, hitimisho na shukrani",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

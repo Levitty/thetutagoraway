@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T3_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 3: Utunzaji wa wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T3_KUSOMA_KWA_KINA.SHAIRI_UTANZU",
+   "key_step": "The child names the utanzu with the right term, proves each point with a line or event from \"Sauti ya Mama Dunia\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class shairi \"Sauti ya Mama Dunia\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "utunzaji wa wanyama",
+    "the class shairi",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sauti ya Mama Dunia"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni utanzu gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T3_KUSOMA_KWA_KINA.SHAIRI_UTANZU.M9_FAS_GENRE_T3",
+     "listen_for": [
+      "huandikwa kwa aya ndefu bila mpangilio"
+     ],
+     "ask": "Sifa hii inapatikana katika shairi au katika wimbo?",
+     "repair": "Shairi lina beti, mishororo, vina na mizani."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T3_KUSOMA_KWA_KINA.SHAIRI_UTANZU.M9_FAS_ORAL_T3",
+     "listen_for": [
+      "fasihi simulizi"
+     ],
+     "ask": "Kazi hii ina mwandishi anayejulikana?",
+     "repair": "Shairi ni fasihi andishi: imeandikwa na mwandishi anayejulikana."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T3_KUSOMA_KWA_KINA.SHAIRI_UTANZU.M9_FAS_ONEFEATURE_T3",
+     "listen_for": [
+      "ni maneno yenye vina"
+     ],
+     "ask": "Maana yako inataja muundo na lengo pia?",
+     "repair": "Maana kamili ya shairi hutaja aina yake, muundo wake na lengo lake."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T3_KUSOMA_KWA_KINA.SHAIRI_UTANZU.M9_FAS_AUTHOR_T3",
+     "listen_for": [
+      "Mama Dunia (nafsineni)"
+     ],
+     "ask": "Jina la mwandishi liko wapi kitabuni?",
+     "repair": "Mwandishi ni mtunzi; msimulizi na wahusika ni sehemu ya kazi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sifa ipi ni ya shairi?",
+     "answer": "huwa na beti, mishororo, vina na mizani",
+     "shows": "utanzu"
+    },
+    {
+     "question": "Shairi ni utanzu wa fasihi ipi?",
+     "answer": "fasihi andishi",
+     "shows": "utanzu, second form"
+    }
+   ]
+  }
+ ]
+}

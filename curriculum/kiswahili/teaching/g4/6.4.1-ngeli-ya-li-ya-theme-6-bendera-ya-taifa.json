@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA",
+ "title": "Ngeli ya LI- YA (Theme 6: Bendera ya taifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA",
+   "key_step": "The child knows nouns of LI-YA take li- for one and ya- for many (jiwe limeanguka, mawe yameanguka).",
+   "floor": {
+    "prerequisite": "Uses U-I agreement.",
+    "question": "Mti ___ kua.",
+    "answer": "umekua"
+   },
+   "representations": [
+    "stones, eggs and leaves in a basket",
+    "singular and plural cards (jicho/macho)",
+    "prefix cards li- and ya-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Find its plural (often ma-).",
+    "One: li-; many: ya-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "collecting eggs",
+    "the vegetable market",
+    "a football match"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Yai ___ vunjika."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Yai\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Yai limevunjika\" and \"Mayai yamevunjika\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA.M4_LIYA_SG_YA",
+     "listen_for": [
+      "ya"
+     ],
+     "ask": "Soma tena: \"Jiwe moja ___meanguka.\" Kwa nini \"ya\" si jibu sahihi?",
+     "repair": "Nomino za LI-YA hutumia li- kwa umoja: jiwe limeanguka. Hutumia ya- kwa wingi: mawe yameanguka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA.M4_LIYA_PL_LI",
+     "listen_for": [
+      "li"
+     ],
+     "ask": "Soma tena: \"Mawe mawili ___meanguka.\" Kwa nini \"li\" si jibu sahihi?",
+     "repair": "Wingi wa jiwe ni mawe, na kiambishi ni ya-: mawe yameanguka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA.M4_LIYA_PLNOUN",
+     "listen_for": [
+      "majicho"
+     ],
+     "ask": "Soma tena: \"Jicho moja, ___ mawili.\" Kwa nini \"majicho\" si jibu sahihi?",
+     "repair": "Nomino za LI-YA zinazoanza na ji- hupoteza ji- katika wingi: jiwe-mawe, jicho-macho. Nyingine hupata ma-: tunda-matunda."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA.M4_LIYA_NOT",
+     "listen_for": [
+      "kiti"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya LI-YA?\" Kwa nini \"kiti\" si jibu sahihi?",
+     "repair": "Kiti kiko katika ngeli ya KI-VI (viti). Jiwe liko LI-YA (mawe)."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA.M4_LIYA_OTHER",
+     "listen_for": [
+      "ki"
+     ],
+     "ask": "Soma tena: \"Jiwe moja ___meanguka.\" Kwa nini \"ki\" si jibu sahihi?",
+     "repair": "Nomino za LI-YA hutumia li- kwa umoja na ya- kwa wingi, si ki-, vi-, u- wala i-."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Majani ___ kauka.",
+     "answer": "yamekauka",
+     "shows": "plural"
+    },
+    {
+     "question": "Wingi wa jicho ni upi?",
+     "answer": "macho",
+     "shows": "plural noun"
+    }
+   ]
+  }
+ ]
+}

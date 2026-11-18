@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T8_VIAKIFISHI",
+ "title": "Viakifishi (Theme 8: Misukosuko ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI",
+   "key_step": "The child uses mabano for extra information or stage directions and the kistari kifupi for ranges, some compound words and a word broken at the line end.",
+   "floor": {
+    "prerequisite": "Uses alama za mtajo.",
+    "question": "Andika jina la kitabu ipasavyo.",
+    "answer": "\"Kisima cha Matumaini\""
+   },
+   "representations": [
+    "sentences with extra information",
+    "ranges and compounds",
+    "a mark chart"
+   ],
+   "steps": [
+    "Extra information? Mabano.",
+    "A range or compound? Kistari kifupi.",
+    "Check spaces.",
+    "Read it."
+   ],
+   "contexts": [
+    "social unrest: (tazama ukurasa 5)",
+    "a timetable",
+    "a play script"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mkutano utafanyika (saa nne ___ saa sita) ukumbini."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Alama ipi inaonyesha masafa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"saa nne-saa sita\" and one sentence with mabano."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M_KS9_MK_MABANO",
+     "listen_for": [
+      "kistari kifupi"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi huweka maelezo ya ziada?\" Kwa nini \"kistari kifupi\" si jibu sahihi?",
+     "repair": "Mabano huweka maelezo ya ziada."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M_KS9_MK_KISTARI",
+     "listen_for": [
+      "mabano"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi inatumika kati ya tarakimu kama kurasa 5 hadi 10?\" Kwa nini \"mabano\" si jibu sahihi?",
+     "repair": "Kistari kifupi hutumika kati ya tarakimu."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M_KS9_MK_NENO",
+     "listen_for": [
+      "koloni"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi hutumika kuvunja neno mwishoni mwa mstari?\" Kwa nini \"koloni\" si jibu sahihi?",
+     "repair": "Kistari kifupi huvunja neno."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M9_MK_DASH_HYPHEN",
+     "listen_for": [
+      "Masomo ni kuanzia ukurasa 10 20."
+     ],
+     "ask": "Kuna masafa au neno ambatani hapa?",
+     "repair": "Kistari kifupi huunganisha masafa kama 10-20."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: miaka 2020 2026",
+     "answer": "miaka 2020-2026",
+     "shows": "range"
+    },
+    {
+     "question": "Maelekezo ya jukwaa katika tamthilia huwekwa ndani ya?",
+     "answer": "mabano",
+     "shows": "brackets"
+    }
+   ]
+  }
+ ]
+}

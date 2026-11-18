@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T3_VIHISISHI",
+ "title": "Vihisishi (Theme 3: Mavazi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T3_VIHISISHI.VIHISISHI",
+   "key_step": "The child names the feeling first and then chooses the exclamation and the alama ya hisi that show it.",
+   "floor": {
+    "prerequisite": "Names feelings: furaha, huzuni, mshangao.",
+    "question": "Unajisikiaje ukipewa zawadi?",
+    "answer": "furaha"
+   },
+   "representations": [
+    "feeling faces",
+    "a chart of exclamations by feeling",
+    "the ! drawn large"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Name the feeling.",
+    "Choose the exclamation.",
+    "Write it with !"
+   ],
+   "contexts": [
+    "a friend who falls down",
+    "winning a race",
+    "a surprise visitor"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Rafiki ameanguka: ___!"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sad face.",
+     "say": "Unamwambia nini rafiki yako?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Pole!\" and one more exclamation for a happy event."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.VIHISISHI.M4_INT_SWAP",
+     "listen_for": [
+      "Hongera"
+     ],
+     "ask": "Soma tena: \"Mwenzako ameanguka na kuumia. Utasema ___!\" Kwa nini \"Hongera\" si jibu sahihi?",
+     "repair": "Kihisishi huonyesha hisia: \"Pole!\" kwa huzuni, \"Hongera!\" kwa mafanikio, \"Samahani!\" ukikosea, \"Karibu!\" kwa mgeni."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.VIHISISHI.M4_INT_NOT",
+     "listen_for": [
+      "Juma"
+     ],
+     "ask": "Soma tena: \"Hongera! Juma ameshinda mbio za shule. Ni kihisishi kipi?\" Kwa nini \"Juma\" si jibu sahihi?",
+     "repair": "Kihisishi kinaonyesha hisia na huandikwa pamoja na alama ya hisi (!). \"Juma\" ni nomino."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.VIHISISHI.M4_INT_NO_MARK",
+     "listen_for": [
+      "Lo. Umependeza."
+     ],
+     "ask": "Neno hili linaonyesha hisia? Linafuatwa na alama gani?",
+     "repair": "Kihisishi hufuatwa na alama ya hisi: Lo!"
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIHISISHI.VIHISISHI.M4_INT_ENGLISH",
+     "listen_for": [
+      "Wow!"
+     ],
+     "ask": "Neno hili ni la lugha gani?",
+     "repair": "Kwa Kiswahili tunasema Lo! au Ala! kwa mshangao."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Rafiki ameshinda mbio. Unasema nini?",
+     "answer": "Hongera!",
+     "shows": "feeling match"
+    },
+    {
+     "question": "Ni alama ipi hufuata kihisishi?",
+     "answer": "!",
+     "shows": "mark"
+    }
+   ]
+  }
+ ]
+}

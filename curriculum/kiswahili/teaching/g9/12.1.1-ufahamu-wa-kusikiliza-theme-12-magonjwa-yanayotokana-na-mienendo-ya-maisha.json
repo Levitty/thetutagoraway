@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ",
+ "title": "Ufahamu wa Kusikiliza (Theme 12: Magonjwa yanayotokana na mienendo ya maisha)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ.LS_UFAHAMU",
+   "key_step": "The child answers from notes taken while listening.",
+   "floor": {
+    "prerequisite": "Listens to a short talk and says who and what.",
+    "question": "Mzungumzaji alizungumzia nini?",
+    "answer": "the topic or the main person"
+   },
+   "representations": [
+    "the recording or a reading by the teacher",
+    "a note grid while listening",
+    "a point-and-evidence frame"
+   ],
+   "steps": [
+    "Listen to the end, noting key words.",
+    "Read the question and its question word.",
+    "Find the answer in your notes.",
+    "Answer and check it fits the question."
+   ],
+   "contexts": [
+    "magonjwa yanayotokana na mienendo ya maisha",
+    "a radio news bulletin",
+    "a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "magonjwa yanayotokana na mienendo ya maisha"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the question word.",
+     "say": "Swali hili linataka jibu la aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers and shows where in the text or notes the answer came from."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ.LS_UFAHAMU.M_KS9_LS_UFAHAMU_DETAIL",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lijibu swali lote, si jambo moja dogo."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ.LS_UFAHAMU.M_KS9_LS_UFAHAMU_OPPOSITE",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatane na matini, si kinyume chake."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ.LS_UFAHAMU.M_KS9_LS_UFAHAMU_NOTSAID",
+     "listen_for": [
+      "jibu lisilopatana na matini"
+     ],
+     "ask": "Soma tena: \"Ni jibu lipi linalopatana na matini?\" Kwa nini \"jibu lisilopatana na matini\" si jibu sahihi?",
+     "repair": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ.LS_UFAHAMU.M9_LSF_LS_UFAHAMU",
+     "listen_for": [
+      "kwa sababu ya wadudu"
+     ],
+     "ask": "Mzungumzaji alisema hivyo?",
+     "repair": "Jibu kutokana na ulichosikia."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kwa mujibu wa ulichosikiliza, kwa nini mazao yalikauka?",
+     "answer": "jibu lililotajwa katika habari",
+     "shows": "ls_ufahamu"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika ulichosikia",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

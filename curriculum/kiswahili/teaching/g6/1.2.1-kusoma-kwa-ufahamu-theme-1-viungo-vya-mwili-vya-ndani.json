@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 1: Viungo vya mwili vya ndani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
+   "key_step": "The child works out a theme word from its sentence and explains it by what it is and does, in Kiswahili.",
+   "floor": {
+    "prerequisite": "Explains a cooking word.",
+    "question": "\"Kukaanga\" ni nini?",
+    "answer": "kupika kwa mafuta"
+   },
+   "representations": [
+    "an organ chart",
+    "the passage with words in bold",
+    "a \"ni nini + kazi\" frame"
+   ],
+   "steps": [
+    "Find the word.",
+    "Read its sentence.",
+    "Say what it is and does.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "internal organs",
+    "the school clinic",
+    "a health talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mapafu husaidia kupumua."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mapafu\".",
+     "say": "Kazi yake ni ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains \"mapafu\" and uses it in a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_LOOKALIKE",
+     "listen_for": [
+      "kuchemka kwa maji"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, \"kuchemsha\" maana yake ni nini?\" Kwa nini \"kuchemka kwa maji\" si jibu sahihi?",
+     "repair": "Maana ya neno hutokana na sentensi lilimo, si na jinsi linavyofanana na neno lingine."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_NEARBY",
+     "listen_for": [
+      "kuchuma majani ya chai"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, \"kuchemsha\" maana yake ni nini?\" Kwa nini \"kuchuma majani ya chai\" si jibu sahihi?",
+     "repair": "Rudi kwenye sentensi lenyewe lenye neno hilo. Maana inatoka hapo, si kutoka sentensi ya karibu."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M_MSA_OPPOSITE",
+     "listen_for": [
+      "kupoza maji"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, \"kuchemsha\" maana yake ni nini?\" Kwa nini \"kupoza maji\" si jibu sahihi?",
+     "repair": "Kinyume cha neno si maana yake. Soma tena sentensi."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M6_MSA_BODY_GENERAL",
+     "listen_for": [
+      "sehemu ya mwili"
+     ],
+     "ask": "Ni sehemu gani hasa, na kazi yake ni ipi?",
+     "repair": "Eleza kazi yake: figo huchuja damu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Moyo\" hufanya kazi gani?",
+     "answer": "husukuma damu mwilini",
+     "shows": "meaning"
+    },
+    {
+     "question": "Tumia \"ini\" katika sentensi.",
+     "answer": "Ini husaidia kusafisha damu.",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+   "key_step": "The child answers from the passage, writes a short summary of the main events, and gives the message.",
+   "floor": {
+    "prerequisite": "Orders events of a story.",
+    "question": "Panga: kununua, kupika, kula",
+    "answer": "kununua, kupika, kula"
+   },
+   "representations": [
+    "a passage with paragraphs numbered",
+    "a summary frame (nani, nini, matokeo)",
+    "event cards"
+   ],
+   "steps": [
+    "Read the question.",
+    "Find the paragraph.",
+    "Answer from the passage.",
+    "Write a three-sentence summary."
+   ],
+   "contexts": [
+    "internal organs: a hospital visit",
+    "a family story",
+    "a school trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Muhtasari: Nani? Nini? Matokeo?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the frame.",
+     "say": "Hadithi inamhusu nani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a three-sentence summary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_WRONG_PERSON",
+     "listen_for": [
+      "mwalimu"
+     ],
+     "ask": "Soma tena: \"Nani alimsaidia Wanjiru?\" Kwa nini \"mwalimu\" si jibu sahihi?",
+     "repair": "Rudi kwenye kifungu uone ni nani hasa alifanya kitendo hicho."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_OUTSIDE",
+     "listen_for": [
+      "ugali"
+     ],
+     "ask": "Soma tena: \"Walipika chakula gani?\" Kwa nini \"ugali\" si jibu sahihi?",
+     "repair": "Jibu liko katika kifungu. Tumia kilichoandikwa, si kile unachokijua kutoka nyumbani."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_AS_MAIN",
+     "listen_for": [
+      "Wanjiru alikuwa na sufuria nyekundu."
+     ],
+     "ask": "Soma tena: \"Ujumbe mkuu wa hadithi ni upi?\" Kwa nini \"Wanjiru alikuwa na sufuria nyekundu.\" si jibu sahihi?",
+     "repair": "Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_ORDER",
+     "listen_for": [
+      "D, A, C, B"
+     ],
+     "ask": "Soma tena: \"Panga matukio kwa mpangilio.\" Kwa nini \"D, A, C, B\" si jibu sahihi?",
+     "repair": "Matukio hupangwa kwa jinsi yalivyotokea katika hadithi. Soma tena kila tukio."
+    },
+    {
+     "code": "KISW.G6.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M_UFA_DETAIL_MIX",
+     "listen_for": [
+      "kikombe"
+     ],
+     "ask": "Soma tena: \"Wanjiru alichemsha maji katika nini?\" Kwa nini \"kikombe\" si jibu sahihi?",
+     "repair": "Kifungu kinataja vitu vingi. Rudi kwenye sentensi sahihi ujue jibu linalolingana na swali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Muhtasari una nini?",
+     "answer": "mambo makuu tu",
+     "shows": "summary"
+    },
+    {
+     "question": "Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T1_NOMINO",
+ "title": "Nomino (Theme 1: Nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T1_NOMINO.NOMINO",
+   "key_step": "The child asks \"is it the name of a person, animal, place or thing?\" before calling a word a noun.",
+   "floor": {
+    "prerequisite": "Names things in the classroom.",
+    "question": "Taja vitu vitatu darasani.",
+    "answer": "meza, kiti, ubao"
+   },
+   "representations": [
+    "real objects with name cards",
+    "a sentence with each word on a card",
+    "a sorting chart: nomino / si nomino"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "For each word ask: is it a name?",
+    "Check it is not an action or a describing word.",
+    "Say the noun."
+   ],
+   "contexts": [
+    "the kitchen at home",
+    "the school compound",
+    "the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama anapika chakula jikoni."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each word in turn.",
+     "say": "Ni maneno yapi ni majina?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles the three nouns and says what each names."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.NOMINO.M4_NOM_VERB",
+     "listen_for": [
+      "anapika"
+     ],
+     "ask": "Soma tena: \"Mama ananunua ___ sokoni.\" Kwa nini \"anapika\" si jibu sahihi?",
+     "repair": "Nomino ni jina la mtu, mnyama, mahali au kitu. \"Anapika\" ni kitenzi, kinaonyesha kitendo."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.NOMINO.M4_NOM_ADJ",
+     "listen_for": [
+      "kubwa"
+     ],
+     "ask": "Soma tena: \"Ni neno lipi ni nomino?\" Kwa nini \"kubwa\" si jibu sahihi?",
+     "repair": "Nomino ni jina la kitu chenyewe. \"Kubwa\" ni kivumishi, kinaeleza kitu kikoje."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.NOMINO.M4_NOM_ADV",
+     "listen_for": [
+      "haraka"
+     ],
+     "ask": "Soma tena: \"Ni neno lipi ni nomino?\" Kwa nini \"haraka\" si jibu sahihi?",
+     "repair": "\"Haraka\" na \"jana\" ni vielezi: vinaonyesha jinsi au wakati. Nomino hutaja mtu, mnyama, mahali au kitu."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_NOMINO.NOMINO.M4_NOM_PRONOUN",
+     "listen_for": [
+      "Yeye"
+     ],
+     "ask": "Neno hili ni jina la mtu au ni neno linalosimama badala ya jina?",
+     "repair": "Yeye ni kiwakilishi: kinasimama badala ya jina. Nomino ni jina: mtoto, chakula."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ipi: kimbia, ndizi, haraka?",
+     "answer": "ndizi",
+     "shows": "noun among word kinds"
+    },
+    {
+     "question": "Taja nomino katika sentensi: \"Juma ana kalamu.\"",
+     "answer": "Juma, kalamu",
+     "shows": "nouns in a sentence"
+    }
+   ]
+  }
+ ]
+}

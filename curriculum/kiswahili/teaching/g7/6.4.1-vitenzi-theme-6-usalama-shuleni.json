@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T6_VITENZI",
+ "title": "Vitenzi (Theme 6: Usalama shuleni)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU",
+   "key_step": "The child finds the verb that carries the action (kikuu) and the one that only carries time or mood before it (kisaidizi).",
+   "floor": {
+    "prerequisite": "Finds the verb in a sentence.",
+    "question": "Kitenzi ni kipi: \"Tulicheza.\"",
+    "answer": "tulicheza"
+   },
+   "representations": [
+    "two-verb sentence strips",
+    "colour for each verb",
+    "a list of helping verbs (kuwa, kwisha, kuweza)"
+   ],
+   "steps": [
+    "Find all verbs.",
+    "Which carries the action?",
+    "Which comes before and helps?",
+    "Label them."
+   ],
+   "contexts": [
+    "school safety (usalama shuleni)",
+    "a match commentary",
+    "a recipe"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wanafunzi walikuwa wakicheza."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"walikuwa\".",
+     "say": "Kitenzi hiki kinabeba tendo au kinasaidia?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels both verbs and writes one sentence with \"anaweza\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M_KS7_VV_KISAIDIZI_KUU",
+     "listen_for": [
+      "alikuwa"
+     ],
+     "ask": "Soma tena: \"Katika \"Alikuwa akisoma\", kitenzi kikuu ni kipi?\" Kwa nini \"alikuwa\" si jibu sahihi?",
+     "repair": "Kitenzi kikuu hubeba tendo: akisoma."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M_KS7_VV_KUU_KISAIDIZI",
+     "listen_for": [
+      "akifanya"
+     ],
+     "ask": "Soma tena: \"Katika \"Atakuwa akifanya kazi\", kitenzi kisaidizi ni kipi?\" Kwa nini \"akifanya\" si jibu sahihi?",
+     "repair": "Kitenzi kisaidizi hutangulia kikuu: atakuwa."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M_KS7_VV_SENTENSI",
+     "listen_for": [
+      "kimoja"
+     ],
+     "ask": "Soma tena: \"Katika \"Walikuwa wakicheza\", kuna vitenzi vingapi?\" Kwa nini \"kimoja\" si jibu sahihi?",
+     "repair": "Sentensi hii ina kisaidizi na kikuu."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU.M7_VV_KUWA_MAIN",
+     "listen_for": [
+      "kisaidizi"
+     ],
+     "ask": "Kuna kitenzi kingine katika sentensi hii?",
+     "repair": "Kuwa ni kisaidizi tu kinapotangulia kitenzi kingine."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kitenzi kikuu katika \"Ameweza kuruka\" ni?",
+     "answer": "kuruka",
+     "shows": "main verb"
+    },
+    {
+     "question": "Kitenzi kisaidizi katika \"Tutakuwa tukila\" ni?",
+     "answer": "tutakuwa",
+     "shows": "helping verb"
+    }
+   ]
+  }
+ ]
+}

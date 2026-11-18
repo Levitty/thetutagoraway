@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T7_NAHAU",
+ "title": "Nahau (Theme 7: Elimu ya mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU",
+   "key_step": "The child gives the meaning of the whole nahau on cleanliness and the environment and uses it where that meaning fits.",
+   "floor": {
+    "prerequisite": "Explains a nahau of conduct.",
+    "question": "Kupiga moyo konde?",
+    "answer": "kujipa moyo"
+   },
+   "representations": [
+    "nahau cards with pictures",
+    "a matching game",
+    "sentence frames"
+   ],
+   "steps": [
+    "Read the nahau.",
+    "Say its meaning.",
+    "Picture where it is used.",
+    "Write a sentence with it."
+   ],
+   "contexts": [
+    "environment education: cleaning the compound",
+    "a clean-up day",
+    "caring for a river"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kupiga deki"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mop picture.",
+     "say": "Ina maana gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a sentence with \"kupiga deki\" and one with \"kutia maji\" (to water)."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M_NAH_LITERAL",
+     "listen_for": [
+      "kukata kamba ya tamaa"
+     ],
+     "ask": "Soma tena: \"\"Kukata tamaa\" maana yake ni nini?\" Kwa nini \"kukata kamba ya tamaa\" si jibu sahihi?",
+     "repair": "Nahau ina maana tofauti na maneno yake. \"Kukata tamaa\" ni kuacha kuwa na matumaini."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_MEANING",
+     "listen_for": [
+      "kuwa na hamu ya kula"
+     ],
+     "ask": "Soma tena: \"\"Kula chumvi\" maana yake ni nini?\" Kwa nini \"kuwa na hamu ya kula\" si jibu sahihi?",
+     "repair": "Kila nahau ina maana yake. \"Kula chumvi\" ni kuwa na uzoefu wa miaka mingi."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M_NAH_WRONG_WORD",
+     "listen_for": [
+      "kamba"
+     ],
+     "ask": "Soma tena: \"Usikate ___ ukishindwa mara moja.\" Kwa nini \"kamba\" si jibu sahihi?",
+     "repair": "Nahau hazibadiliki: kukata tamaa, kupiga moyo konde. Neno moja likibadilika, maana hupotea."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T7_NAHAU.NAHAU.M5_NAH_USE",
+     "listen_for": [
+      "Mvuvi alipiga deki mto."
+     ],
+     "ask": "Mto unasafishwa kwa kupigwa deki?",
+     "repair": "Kupiga deki ni kusafisha sakafu kwa maji; inatumiwa kwa sakafu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maana ya \"kupiga deki\" ni?",
+     "answer": "kusafisha sakafu kwa maji",
+     "shows": "meaning"
+    },
+    {
+     "question": "Tumia \"kupiga pasi\" katika sentensi.",
+     "answer": "Alipiga pasi nguo zake za shule.",
+     "shows": "use"
+    }
+   ]
+  }
+ ]
+}

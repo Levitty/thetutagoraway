@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_",
+ "title": "Vinyume vya Vitenzi na Vielezi (Theme 10: Kukabiliana na hisia)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.VINYUME_VITENZI",
+   "key_step": "The child gives verbs and adverbs of the opposite meaning (nunua/uza, mapema/kuchelewa) and uses them in a passage.",
+   "floor": {
+    "prerequisite": "Gives verb opposites.",
+    "question": "Kinyume cha \"funga\" ni?",
+    "answer": "fungua"
+   },
+   "representations": [
+    "opposite pair cards",
+    "action mimes",
+    "a passage with gaps"
+   ],
+   "steps": [
+    "Read the word.",
+    "Find its opposite word.",
+    "Keep its form (tense, person).",
+    "Use it."
+   ],
+   "contexts": [
+    "coping with emotions: cheka/lia",
+    "a market",
+    "a race"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Alicheka -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Alicheka\".",
+     "say": "Kinyume chake ni nini, na wakati uleule?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Alilia\" and two adverb pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.VINYUME_VITENZI.M_KS8_VT_KITENZI",
+     "listen_for": [
+      "nunua"
+     ],
+     "ask": "Soma tena: \"Kinyume cha fungua ni kipi?\" Kwa nini \"nunua\" si jibu sahihi?",
+     "repair": "Kinyume cha fungua ni funga."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.VINYUME_VITENZI.M_KS8_VT_KIELEZI",
+     "listen_for": [
+      "chini"
+     ],
+     "ask": "Soma tena: \"Kinyume cha polepole ni kipi?\" Kwa nini \"chini\" si jibu sahihi?",
+     "repair": "Kinyume cha polepole ni haraka."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.VINYUME_VITENZI.M_KS8_VT_NUNUA",
+     "listen_for": [
+      "pika"
+     ],
+     "ask": "Soma tena: \"Kinyume cha nunua ni kipi?\" Kwa nini \"pika\" si jibu sahihi?",
+     "repair": "Kinyume cha nunua ni uza."
+    },
+    {
+     "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.VINYUME_VITENZI.M8_VT_NEGATE",
+     "listen_for": [
+      "si haraka"
+     ],
+     "ask": "Kuna neno moja lenye maana kinyume?",
+     "repair": "Kinyume ni neno lingine lenye maana kinyume: polepole."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"juu\" ni?",
+     "answer": "chini",
+     "shows": "adverb"
+    },
+    {
+     "question": "Kinyume cha \"anapanda\" ni?",
+     "answer": "anashuka",
+     "shows": "verb with tense"
+    }
+   ]
+  }
+ ]
+}

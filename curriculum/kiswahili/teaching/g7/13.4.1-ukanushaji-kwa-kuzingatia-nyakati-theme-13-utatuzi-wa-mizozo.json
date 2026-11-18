@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN",
+ "title": "Ukanushaji kwa Kuzingatia Nyakati (Theme 13: Utatuzi wa mizozo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI",
+   "key_step": "The child explains negation, names the tense of the verb, and negates it: -na- -> -i ending, -li- -> -ku-, -ta- stays, -me- -> -ja-.",
+   "floor": {
+    "prerequisite": "Negates by person.",
+    "question": "Kanusha: Ninasoma.",
+    "answer": "Sisomi"
+   },
+   "representations": [
+    "a negation table by tense",
+    "positive/negative pairs",
+    "colour for person and tense"
+   ],
+   "steps": [
+    "Name the tense.",
+    "Negate the person.",
+    "Change the tense part.",
+    "Check the ending."
+   ],
+   "contexts": [
+    "conflict resolution (utatuzi wa mizozo)",
+    "class rules",
+    "a match report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Watapigana -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"-ta-\".",
+     "say": "Inabaki tukikanusha?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Hawatapigana\" and the negatives of the other tenses."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M_KS7_UK_ULIOPO",
+     "listen_for": [
+      "Hakusoma"
+     ],
+     "ask": "Soma tena: \"Kanusha: Anasoma.\" Kwa nini \"Hakusoma\" si jibu sahihi?",
+     "repair": "Ukanushaji wa uliopo ni hasomi."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M_KS7_UK_ULIOPITA",
+     "listen_for": [
+      "Hasomi"
+     ],
+     "ask": "Soma tena: \"Kanusha: Alisoma.\" Kwa nini \"Hasomi\" si jibu sahihi?",
+     "repair": "Ukanushaji wa uliopita ni hakusoma."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M_KS7_UK_UJAO",
+     "listen_for": [
+      "Hakusoma"
+     ],
+     "ask": "Soma tena: \"Kanusha: Atasoma.\" Kwa nini \"Hakusoma\" si jibu sahihi?",
+     "repair": "Ukanushaji wa ujao ni hatasoma."
+    },
+    {
+     "code": "KISW.G7.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.UKANUSHAJI.M7_UK_ME_JA",
+     "listen_for": [
+      "Hakusoma kitabu."
+     ],
+     "ask": "Sentensi hii ni ya -li- au -me-?",
+     "repair": "-me- hukanushwa kwa -ja-: hajasoma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Tumeelewana.",
+     "answer": "Hatujaelewana",
+     "shows": "-me- negative"
+    },
+    {
+     "question": "Wakati wa \"hawakusoma\" ni upi?",
+     "answer": "uliopita",
+     "shows": "identify tense"
+    }
+   ]
+  }
+ ]
+}

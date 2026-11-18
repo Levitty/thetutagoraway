@@ -31,3 +31,7 @@ test('every family is a draft, nothing is signed, and the skill codes begin KISW
   for (const f of entry.families) assert.ok(f.id.startsWith('kiswahili8.') && f.reviewed !== true, f.id);
   for (const k of Object.keys(SKILLS)) assert.ok(k.startsWith('KISW.G8.'), k);
 });
+
+// The Grade 5 Maths standard for this grade (18 Nov 2026): tests/lib/kiswahili-depth.mjs
+import { depthTests } from './lib/kiswahili-depth.mjs';
+depthTests(8);
