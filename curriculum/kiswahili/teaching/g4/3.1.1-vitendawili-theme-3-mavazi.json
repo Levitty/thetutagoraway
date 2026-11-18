@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T3_VITENDAWILI",
+ "title": "Vitendawili (Theme 3: Mavazi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI",
+   "key_step": "The child knows the riddle formula (Kitendawili! Tega!) and checks every clue against the answer before giving it.",
+   "floor": {
+    "prerequisite": "Names everyday things.",
+    "question": "Kitu gani huvaliwa miguuni?",
+    "answer": "viatu"
+   },
+   "representations": [
+    "the formula on a card",
+    "clue strips for one riddle",
+    "object pictures to test against the clues"
+   ],
+   "steps": [
+    "Say \"Tega!\".",
+    "Listen to the whole riddle.",
+    "Test each clue against an answer.",
+    "Give the answer that fits every clue."
+   ],
+   "contexts": [
+    "evening riddles with grandparents",
+    "a class riddle game",
+    "a school cultural day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kitendawili! - Tega!"
+    },
+    {
+     "beat": "point",
+     "do": "Point at each clue of \"Nyumba yangu haina mlango.\"",
+     "say": "Ni kitu gani kinachofaa dalili zote?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers \"yai\" and makes one riddle of his own with the formula."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M4_VIT_METHALI",
+     "listen_for": [
+      "Mtoto umleavyo ndivyo akuavyo"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Mtoto umleavyo ndivyo akuavyo\" si jibu sahihi?",
+     "repair": "Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M4_VIT_NAHAU",
+     "listen_for": [
+      "kupiga moyo konde"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"kupiga moyo konde\" si jibu sahihi?",
+     "repair": "Nahau ni maneno yenye maana maalum. Kitendawili kina jibu la kutegua."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M4_VIT_PLAIN",
+     "listen_for": [
+      "Yai ni chakula kizuri"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Yai ni chakula kizuri\" si jibu sahihi?",
+     "repair": "Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M4_VIT_FORMULA",
+     "listen_for": [
+      "Karibu"
+     ],
+     "ask": "Soma tena: \"Mtegaji husema \"Kitendawili!\" Mtegua hujibu \"___!\"\" Kwa nini \"Karibu\" si jibu sahihi?",
+     "repair": "Mtegaji husema \"Kitendawili!\" na mtegua hujibu \"Tega!\". Akishindwa husema \"Nipe mji.\""
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M4_VIT_WRONG_ANSWER",
+     "listen_for": [
+      "mbwa"
+     ],
+     "ask": "Soma tena: \"\"Popote niendapo hunifuata.\" Jibu ni nini?\" Kwa nini \"mbwa\" si jibu sahihi?",
+     "repair": "Jibu la kitendawili lazima lilingane na kila sehemu yake."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mtu akisema \"Kitendawili!\", unajibu?",
+     "answer": "Tega!",
+     "shows": "formula"
+    },
+    {
+     "question": "Nyumba yangu haina mlango. Ni nini?",
+     "answer": "yai",
+     "shows": "solving"
+    }
+   ]
+  }
+ ]
+}

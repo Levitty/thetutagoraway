@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT",
+ "title": "Mazungumzo ya Kimuktadha (Theme 9: Afya bora)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO",
+   "key_step": "The child names the setting and the listener, then chooses words that fit: friendly with friends, respectful with elders, even informally.",
+   "floor": {
+    "prerequisite": "Uses greetings for the time of day.",
+    "question": "Asubuhi unamsalimuje rafiki?",
+    "answer": "Habari za asubuhi"
+   },
+   "representations": [
+    "setting cards (playground, home, market)",
+    "speaker and listener role cards",
+    "a talking object for turns"
+   ],
+   "steps": [
+    "Where are you?",
+    "Who are you talking to?",
+    "Choose words that fit.",
+    "Take turns."
+   ],
+   "contexts": [
+    "chatting at break time",
+    "supper with the family",
+    "buying at the kiosk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Uwanjani na marafiki"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the setting card.",
+     "say": "Ni lugha gani inafaa hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts a short chat with a friend and then with an elder."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO.M4_MAZ_FORMAL",
+     "listen_for": [
+      "hotuba ya mwalimu mkuu kwenye gwaride"
+     ],
+     "ask": "Soma tena: \"Ni mazungumzo yapi si rasmi?\" Kwa nini \"hotuba ya mwalimu mkuu kwenye gwaride\" si jibu sahihi?",
+     "repair": "Mazungumzo yasiyo rasmi ni ya marafiki, nyumbani au wakati wa kucheza. Hotuba na mahojiano ni rasmi."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO.M4_MAZ_REGISTER",
+     "listen_for": [
+      "Mabibi na mabwana, hamjambo?"
+     ],
+     "ask": "Soma tena: \"Unamsalimia rafiki yako uwanjani. Utasema ___.\" Kwa nini \"Mabibi na mabwana, hamjambo?\" si jibu sahihi?",
+     "repair": "Kwa rafiki tunatumia lugha ya kawaida, kama \"Mambo vipi?\". Hotuba hutumia lugha rasmi."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO.M4_MAZ_SHENG_HOME",
+     "listen_for": [
+      "Mambo vipi, mzee?"
+     ],
+     "ask": "Unazungumza na nani?",
+     "repair": "Hata nyumbani, mzee husalimiwa kwa heshima: Shikamoo babu."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.MAZUNGUMZO.M4_MAZ_TURN",
+     "listen_for": [
+      "zungumza kwa sauti juu yao"
+     ],
+     "ask": "Mwenzako alikuwa amemaliza kuzungumza?",
+     "repair": "Hata mazungumzo yasiyo rasmi yana adabu: subiri zamu yako."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni muktadha upi si rasmi: mkutano wa wazazi, mchezo na marafiki?",
+     "answer": "mchezo na marafiki",
+     "shows": "setting"
+    },
+    {
+     "question": "Unamsalimu bibi nyumbani. Unasemaje?",
+     "answer": "Shikamoo bibi",
+     "shows": "respect in informal setting"
+    }
+   ]
+  }
+ ]
+}

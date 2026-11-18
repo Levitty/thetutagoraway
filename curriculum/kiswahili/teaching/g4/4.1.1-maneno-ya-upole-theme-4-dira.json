@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE",
+ "title": "Maneno ya Upole (Theme 4: Dira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.UPOLE",
+   "key_step": "The child asks, thanks and says sorry with the polite word and a polite form of the sentence (naomba, tafadhali, asante, samahani).",
+   "floor": {
+    "prerequisite": "Greets politely.",
+    "question": "Unamsalimuje mwalimu asubuhi?",
+    "answer": "Habari za asubuhi, mwalimu"
+   },
+   "representations": [
+    "situation cards",
+    "a chart: tafadhali, naomba, asante, samahani, pole",
+    "role play in pairs"
+   ],
+   "steps": [
+    "Read the situation.",
+    "Ask: asking, thanking or saying sorry?",
+    "Choose the polite word.",
+    "Say the whole sentence politely."
+   ],
+   "contexts": [
+    "asking for salt at the table",
+    "borrowing a pencil",
+    "bumping into someone in a queue"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Umemkanyaga mwenzako: ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the situation picture.",
+     "say": "Unasema nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says \"Samahani!\" and acts out two more situations."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.UPOLE.M4_UPO_RUDE",
+     "listen_for": [
+      "Nipe maji!"
+     ],
+     "ask": "Soma tena: \"Chagua sentensi yenye upole.\" Kwa nini \"Nipe maji!\" si jibu sahihi?",
+     "repair": "Tunapoomba kitu tunatumia \"tafadhali\" na \"naomba\", si amri."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.UPOLE.M4_UPO_SWAP",
+     "listen_for": [
+      "Asante"
+     ],
+     "ask": "Soma tena: \"Umemgonga mwenzako kwa bahati mbaya. Utasema \"___.\"\" Kwa nini \"Asante\" si jibu sahihi?",
+     "repair": "\"Samahani\" husemwa ukikosea. \"Asante\" husemwa ukipewa kitu. \"Pole\" husemwa kwa aliyeumia."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.UPOLE.M4_UPO_NOT",
+     "listen_for": [
+      "Nimekuja."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi ina neno la upole?\" Kwa nini \"Nimekuja.\" si jibu sahihi?",
+     "repair": "Maneno ya upole ni kama tafadhali, samahani, asante, pole na naomba."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T4_MANENO_YA_UPOLE.UPOLE.M4_UPO_TAFADHALI_END",
+     "listen_for": [
+      "Lete maji sasa hivi, tafadhali!"
+     ],
+     "ask": "Ombi lako linasikikaje kwa anayesikia?",
+     "repair": "Upole ni maneno yote: Tafadhali, naomba unipe maji."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Umepewa zawadi. Unasema?",
+     "answer": "Asante",
+     "shows": "thanks"
+    },
+    {
+     "question": "Unataka kuazima kalamu. Unasemaje?",
+     "answer": "Tafadhali, naomba unitazime kalamu yako",
+     "shows": "request"
+    }
+   ]
+  }
+ ]
+}

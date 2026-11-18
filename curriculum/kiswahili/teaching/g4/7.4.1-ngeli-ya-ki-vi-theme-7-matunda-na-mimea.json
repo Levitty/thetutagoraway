@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI",
+ "title": "Ngeli ya KI-VI (Theme 7: Matunda na mimea)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI",
+   "key_step": "The child knows nouns of KI-VI take ki- for one and vi- for many, and that the noun itself changes ki- to vi- (kiti, viti).",
+   "floor": {
+    "prerequisite": "Uses LI-YA agreement.",
+    "question": "Jiwe ___ anguka.",
+    "answer": "limeanguka"
+   },
+   "representations": [
+    "classroom objects: kiti, kitabu, kikombe",
+    "a plural chain kitabu -> vitabu",
+    "prefix cards ki- and vi-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Change ki- to vi- for many.",
+    "Give the verb ki- or vi-.",
+    "Read it aloud."
+   ],
+   "contexts": [
+    "the classroom",
+    "the kitchen",
+    "a shop"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kikombe ___ vunjika."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kikombe\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the singular and plural sentences."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI.M4_KIVI_SG_VI",
+     "listen_for": [
+      "vi"
+     ],
+     "ask": "Soma tena: \"Kiti kimoja ___meanguka.\" Kwa nini \"vi\" si jibu sahihi?",
+     "repair": "Nomino za KI-VI hutumia ki- kwa umoja: kiti kimeanguka. Hutumia vi- kwa wingi: viti vimeanguka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI.M4_KIVI_PL_KI",
+     "listen_for": [
+      "ki"
+     ],
+     "ask": "Soma tena: \"Viti viwili ___meanguka.\" Kwa nini \"ki\" si jibu sahihi?",
+     "repair": "Wingi wa kiti ni viti, na kiambishi ni vi-: viti vimeanguka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI.M4_KIVI_PLNOUN",
+     "listen_for": [
+      "vikitabu"
+     ],
+     "ask": "Soma tena: \"Kitabu kimoja, ___ viwili.\" Kwa nini \"vikitabu\" si jibu sahihi?",
+     "repair": "Katika wingi, ki- hubadilika kuwa vi-: kitabu-vitabu, kiatu-viatu, kikombe-vikombe."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI.M4_KIVI_NOT",
+     "listen_for": [
+      "jiwe"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya KI-VI?\" Kwa nini \"jiwe\" si jibu sahihi?",
+     "repair": "Kikombe-vikombe ni KI-VI. Jiwe-mawe ni LI-YA."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI.M4_KIVI_OTHER",
+     "listen_for": [
+      "li"
+     ],
+     "ask": "Soma tena: \"Kiti kimoja ___meanguka.\" Kwa nini \"li\" si jibu sahihi?",
+     "repair": "Nomino za KI-VI hutumia ki- kwa umoja na vi- kwa wingi, si li-, ya-, u- wala i-."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Viatu ___ chafuka.",
+     "answer": "vimechafuka",
+     "shows": "plural"
+    },
+    {
+     "question": "Wingi wa kitanda ni upi?",
+     "answer": "vitanda",
+     "shows": "plural noun"
+    }
+   ]
+  }
+ ]
+}

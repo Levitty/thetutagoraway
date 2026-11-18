@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T1_VIVUMISHI",
+ "title": "Vivumishi (Theme 1: Nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T1_VIVUMISHI.VIVUMISHI",
+   "key_step": "The child finds the noun first, then the word that tells more about it, in the form that agrees with the noun.",
+   "floor": {
+    "prerequisite": "Finds the noun in a sentence.",
+    "question": "Nomino ni ipi: \"Kiti kipya kimefika.\"",
+    "answer": "kiti"
+   },
+   "representations": [
+    "picture cards of big/small, old/new things",
+    "noun and adjective cards that must agree",
+    "a table of prefixes (m-/wa-, ki-/vi-)"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Ask: what kind? how many? what colour?",
+    "Give the adjective the noun's prefix.",
+    "Put the adjective after the noun."
+   ],
+   "contexts": [
+    "describing a new school uniform",
+    "the market stalls",
+    "animals at the farm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kiti ___ (kubwa)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kiti\".",
+     "say": "Kiti ni cha ngeli ipi? Kivumishi kitakuwaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kiti kikubwa\" and \"viti vikubwa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.VIVUMISHI.M4_ADJ_NOUN",
+     "listen_for": [
+      "mwalimu"
+     ],
+     "ask": "Soma tena: \"Mtoto ___ anacheza uwanjani.\" Kwa nini \"mwalimu\" si jibu sahihi?",
+     "repair": "Kivumishi kinaeleza nomino ikoje, kama \"mdogo\". \"Mwalimu\" ni nomino."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.VIVUMISHI.M4_ADJ_VERB",
+     "listen_for": [
+      "inaonekana"
+     ],
+     "ask": "Soma tena: \"Nyumba ___ ina bustani.\" Kwa nini \"inaonekana\" si jibu sahihi?",
+     "repair": "Kivumishi kinaeleza nomino ikoje: nyumba nzuri. \"Inaonekana\" ni kitenzi."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.VIVUMISHI.M4_ADJ_AGREE",
+     "listen_for": [
+      "mdogo"
+     ],
+     "ask": "Soma tena: \"Watoto ___ wanacheza.\" Kwa nini \"mdogo\" si jibu sahihi?",
+     "repair": "Kivumishi hubadilika kulingana na nomino: mtoto mdogo, watoto wadogo; kiti kikubwa, viti vikubwa."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T1_VIVUMISHI.VIVUMISHI.M4_ADJ_ENG_ORDER",
+     "listen_for": [
+      "mzuri mtoto"
+     ],
+     "ask": "Ni neno lipi ni jina, na linakaa wapi?",
+     "repair": "Katika Kiswahili, nomino hutangulia kivumishi: mtoto mzuri, nyumba kubwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: mtoto ___ (dogo).",
+     "answer": "mdogo",
+     "shows": "agreement"
+    },
+    {
+     "question": "Ni kivumishi kipi: \"Ana kalamu nyekundu.\"",
+     "answer": "nyekundu",
+     "shows": "adjective in a sentence"
+    }
+   ]
+  }
+ ]
+}

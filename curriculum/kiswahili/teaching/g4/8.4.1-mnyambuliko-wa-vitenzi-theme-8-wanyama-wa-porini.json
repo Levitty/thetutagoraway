@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN",
+ "title": "Mnyambuliko wa Vitenzi (Theme 8: Wanyama wa porini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO",
+   "key_step": "The child changes the end of the verb to show doing (-a), doing for someone (-ia/-ea) or being done to (-wa).",
+   "floor": {
+    "prerequisite": "Finds the verb.",
+    "question": "Kitenzi ni kipi: \"Juma anapika.\"",
+    "answer": "anapika"
+   },
+   "representations": [
+    "three cards: pika, pikia, pikwa",
+    "a picture story: Mama anampikia mtoto; chakula kinapikwa",
+    "verb endings coloured"
+   ],
+   "steps": [
+    "Find the verb.",
+    "Ask: does, does for, or is done to?",
+    "Change the ending.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "cooking at home",
+    "a letter to grandmother",
+    "cleaning the classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mama anampik__ mtoto chakula."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mtoto\".",
+     "say": "Mama anapika kwa ajili ya nani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"anampikia\" and then the -wa form \"Chakula kinapikwa na mama\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M4_MNY_NO_FOR",
+     "listen_for": [
+      "anaandika"
+     ],
+     "ask": "Soma tena: \"Mwalimu ___ wanafunzi barua.\" Kwa nini \"anaandika\" si jibu sahihi?",
+     "repair": "Kauli ya kutendea huonyesha kitendo kinafanyiwa mtu: anawaandikia, anampikia, anamsomea."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M4_MNY_NO_BY",
+     "listen_for": [
+      "imeandika"
+     ],
+     "ask": "Soma tena: \"Barua ___ na mwalimu.\" Kwa nini \"imeandika\" si jibu sahihi?",
+     "repair": "Kauli ya kutendwa huonyesha kitu kimefanyiwa kitendo: barua imeandikwa, chai imepikwa."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M4_MNY_MIX",
+     "listen_for": [
+      "inasomea"
+     ],
+     "ask": "Soma tena: \"Hadithi ___ na watoto wote.\" Kwa nini \"inasomea\" si jibu sahihi?",
+     "repair": "Kutendea (-ia, -ea) ni \"kwa ajili ya mtu\". Kutendwa (-wa) ni \"kinatendwa na mtu\"."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO.M4_MNY_WA_AGENT",
+     "listen_for": [
+      "kwa"
+     ],
+     "ask": "Ni nani aliandika barua? Tunamtaja kwa neno gani?",
+     "repair": "Mtendaji wa kitenzi chenye -wa hutajwa kwa \"na\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Barua imeandik__ na Ali.",
+     "answer": "imeandikwa",
+     "shows": "passive"
+    },
+    {
+     "question": "Jaza: Baba ananiandik__ barua.",
+     "answer": "ananiandikia",
+     "shows": "applied"
+    }
+   ]
+  }
+ ]
+}

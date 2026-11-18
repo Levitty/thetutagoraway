@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU",
+ "title": "Insha ya Wasifu (Theme 6: Bendera ya taifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU",
+   "key_step": "The child plans insha ya wasifu before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "bendera ya taifa letu",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bendera ya Taifa Letu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Bendera ya Taifa Letu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M4_INS_STORY_T6",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya wasifu hueleza jinsi kitu au mtu alivyo, si matukio ya siku moja."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M4_INS_DETAIL_T6",
+     "listen_for": [
+      "Bendera yetu ni nzuri."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M4_INS_AGREE_T6",
+     "listen_for": [
+      "Bendera yetu ni mzuri sana."
+     ],
+     "ask": "Nomino hii iko katika ngeli gani?",
+     "repair": "Kivumishi hupatana na nomino yake: bendera nzuri, miti mirefu, mtoto mzuri."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU.M4_INS_OFFTOPIC_T6",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya wasifu kuhusu \"Bendera ya Taifa Letu\"?",
+     "answer": "Bendera yetu ina rangi nne: nyeusi, nyekundu, kijani na nyeupe.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya wasifu ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

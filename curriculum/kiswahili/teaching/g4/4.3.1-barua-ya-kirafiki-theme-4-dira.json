@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI",
+ "title": "Barua ya Kirafiki (Theme 4: Dira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA",
+   "key_step": "The child places the parts of a friendly letter in order on the page: address and date on the right, greeting, body, closing and name.",
+   "floor": {
+    "prerequisite": "Writes his school address.",
+    "question": "Shule yako iko wapi?",
+    "answer": "S.L.P. 30, Kitale"
+   },
+   "representations": [
+    "a model letter with the parts labelled",
+    "part cards to order on a blank page",
+    "a real envelope"
+   ],
+   "steps": [
+    "Write the address and date at the top right.",
+    "Write the greeting on the left.",
+    "Write the news.",
+    "Close and sign."
+   ],
+   "contexts": [
+    "directions (dira) to a friend's home",
+    "a pen pal in another county",
+    "a thank-you to a cousin"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "S.L.P. 30, Kitale. 12 Machi 2026."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top right.",
+     "say": "Ni sehemu gani hii?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the part cards on a blank page."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA.M4_BAR_ORDER",
+     "listen_for": [
+      "hitimisho"
+     ],
+     "ask": "Soma tena: \"Barua ya kirafiki huanza kwa anwani ya mwandishi, kisha tarehe, kisha ___.\" Kwa nini \"hitimisho\" si jibu sahihi?",
+     "repair": "Barua ya kirafiki ina anwani ya mwandishi, tarehe, salamu, mwili, hitimisho na jina."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA.M4_BAR_GREETING",
+     "listen_for": [
+      "Wako mtiifu"
+     ],
+     "ask": "Soma tena: \"Hitimisho la barua ya kirafiki ni \"___ \".\" Kwa nini \"Wako mtiifu\" si jibu sahihi?",
+     "repair": "Barua ya kirafiki huanza kwa \"Mpendwa...\" na kuisha kwa \"Rafiki yako\". \"Wako mtiifu\" ni ya barua rasmi."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA.M4_BAR_PLACE",
+     "listen_for": [
+      "kushoto"
+     ],
+     "ask": "Soma tena: \"Anwani ya mwandishi huandikwa upande wa ___ juu.\" Kwa nini \"kushoto\" si jibu sahihi?",
+     "repair": "Anwani ya mwandishi huandikwa upande wa kulia juu, kisha tarehe chini yake."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA.M4_BAR_NO_CLOSING",
+     "listen_for": [
+      "kwa habari ya mwisho tu"
+     ],
+     "ask": "Rafiki atajuaje barua imetoka kwa nani?",
+     "repair": "Malizia barua kwa hitimisho na jina lako."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Anwani ya mwandishi huandikwa wapi?",
+     "answer": "upande wa kulia juu",
+     "shows": "layout"
+    },
+    {
+     "question": "Ni salamu ipi ya barua ya kirafiki?",
+     "answer": "Mpendwa rafiki yangu,",
+     "shows": "greeting"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA",
+   "key_step": "The child plans barua ya kirafiki before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "dira (directions)",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwelekeo wa Nyumbani Kwetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Mwelekeo wa Nyumbani Kwetu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_FORMAL_T4",
+     "listen_for": [
+      "Mheshimiwa Bwana,"
+     ],
+     "ask": "Unamwandikia nani? Ungezungumza naye hivi?",
+     "repair": "Barua ya kirafiki hutumia lugha ya kirafiki: Mpendwa rafiki, Wako akupendaye."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_NOASK_T4",
+     "listen_for": [
+      "Nataka kukueleza kuhusu safari yetu."
+     ],
+     "ask": "Umemuuliza rafiki yako hali yake?",
+     "repair": "Baada ya salamu, uliza hali ya rafiki yako kabla ya kueleza ujumbe."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_DATE_T4",
+     "listen_for": [
+      "mwishoni, baada ya jina"
+     ],
+     "ask": "Rafiki atajuaje barua iliandikwa lini?",
+     "repair": "Tarehe huandikwa chini ya anwani ya mwandishi, juu upande wa kulia."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_SIGN_T4",
+     "listen_for": [
+      "Wako mtiifu, Bw. Juma Hamisi"
+     ],
+     "ask": "Rafiki yako anakuita kwa jina gani?",
+     "repair": "Barua ya kirafiki humalizika kwa \"Ni mimi rafiki yako,\" na jina la kwanza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua ya kirafiki kuhusu \"Mwelekeo wa Nyumbani Kwetu\"?",
+     "answer": "Mpendwa rafiki yangu Amina,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua ya kirafiki ina sehemu zipi?",
+     "answer": "anwani au kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

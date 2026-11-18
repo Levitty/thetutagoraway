@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T8_VISAWE",
+ "title": "Visawe (Theme 8: Wanyama wa porini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T8_VISAWE.VISAWE",
+   "key_step": "The child tests a synonym by putting it in the sentence in place of the word: the meaning must not change.",
+   "floor": {
+    "prerequisite": "Knows an opposite pair.",
+    "question": "Kinyume cha \"juu\" ni?",
+    "answer": "chini"
+   },
+   "representations": [
+    "synonym pair cards",
+    "a sentence with a gap for either word",
+    "a word web"
+   ],
+   "steps": [
+    "Read the word in its sentence.",
+    "Think of another word with the same meaning.",
+    "Put it in the sentence.",
+    "Check the meaning is the same."
+   ],
+   "contexts": [
+    "animals of the forest",
+    "a visit to the game park",
+    "a story at the library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mnyama mkubwa / ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mkubwa\".",
+     "say": "Neno gani lina maana sawa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"mnene\" or \"mkubwa\" in the sentence and reads it both ways."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.VISAWE.M4_VIS_OPPOSITE",
+     "listen_for": [
+      "huzuni"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"furaha\" ni ___.\" Kwa nini \"huzuni\" si jibu sahihi?",
+     "repair": "Kisawe ni neno lenye maana sawa. Kinyume cha furaha ni huzuni, si kisawe."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.VISAWE.M4_VIS_LOOKALIKE",
+     "listen_for": [
+      "harufu"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"haraka\" ni ___.\" Kwa nini \"harufu\" si jibu sahihi?",
+     "repair": "Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.VISAWE.M4_VIS_RELATED",
+     "listen_for": [
+      "mfanyabiashara"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"tajiri\" ni ___.\" Kwa nini \"mfanyabiashara\" si jibu sahihi?",
+     "repair": "Kisawe kinaweza kuchukua mahali pa neno bila kubadilisha maana. Tajiri na mkwasi wana maana sawa."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T8_VISAWE.VISAWE.M4_VIS_WRONG_KIND",
+     "listen_for": [
+      "kuishi"
+     ],
+     "ask": "Ukiweka neno hili badala ya \"nyumba\", sentensi inabaki sahihi?",
+     "repair": "Kisawe kinaweza kuchukua nafasi ya neno katika sentensi ileile: nyumba / makazi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kisawe cha \"rafiki\" ni?",
+     "answer": "sahibu",
+     "shows": "synonym"
+    },
+    {
+     "question": "Kisawe cha \"haraka\" ni?",
+     "answer": "upesi",
+     "shows": "synonym"
+    }
+   ]
+  }
+ ]
+}

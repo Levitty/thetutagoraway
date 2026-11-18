@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA",
+ "title": "Matamshi Bora (Theme 1: Nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI",
+   "key_step": "The child hears the one feature that separates p/b, t/d, k/g na ch/j and checks the meaning of the word before writing it.",
+   "floor": {
+    "prerequisite": "Says the five vowels and reads open syllables (ba, be, bi, bo, bu).",
+    "question": "Soma: ta-mu",
+    "answer": "tamu"
+   },
+   "representations": [
+    "a pair card: tamu / damu",
+    "a hand on the throat to feel the voice (or the lips for a nasal)",
+    "a picture for each meaning (sweet, blood)"
+   ],
+   "steps": [
+    "Listen to the whole word.",
+    "Ask: which sound, /t/ or /d/?",
+    "Think of the meaning in the sentence.",
+    "Write it and read it back."
+   ],
+   "contexts": [
+    "nyumbani (home)",
+    "a class reading aloud",
+    "a word game in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "tamu - damu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter of each word.",
+     "say": "Neno lipi lina maana ya \"sweet\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both words under their pictures and says each one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI.M4_MAT_SWAP_T1",
+     "listen_for": [
+      "damu"
+     ],
+     "ask": "Neno \"tamu\" lina maana gani, na \"damu\" lina maana gani?",
+     "repair": "\"tamu\" ni sweet; \"damu\" ni blood. Sauti moja hubadilisha maana."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI.M4_MAT_SPELL_T1",
+     "listen_for": [
+      "goti"
+     ],
+     "ask": "Ukiandika \"goti\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"a coat\" ni \"koti\". \"goti\" lina maana ya \"a knee\"."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI.M4_MAT_SAME_T1",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
+     "repair": "Hapana. \"koti\" ni a coat, na \"goti\" ni a knee."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI.M4_MAT_TWISTER_T1",
+     "listen_for": [
+      "Mama amerudi nyumbani jioni."
+     ],
+     "ask": "Ni sauti gani zinarudiwa katika sentensi hii?",
+     "repair": "Kitanzandimi hurudia sauti zinazokaribiana, kama p/b, t/d, k/g na ch/j, ili kiwe kigumu kutamka."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI.M4_MAT_SYLL_T1",
+     "listen_for": [
+      "t-amu"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: ta-mu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika neno lenye maana ya \"a knee\".",
+     "answer": "goti",
+     "shows": "spelling by meaning"
+    },
+    {
+     "question": "Ni kipi ni kitanzandimi?",
+     "answer": "Baba na bibi wanapika pilau na pombe ya bibi bila pilipili.",
+     "shows": "kitanzandimi"
+    }
+   ]
+  }
+ ]
+}

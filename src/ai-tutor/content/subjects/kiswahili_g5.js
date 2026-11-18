@@ -10,6 +10,7 @@ import { FAMILIES as D } from '../families/kiswahili_g5_d.js';
 import { FAMILIES as E } from '../families/kiswahili_g5_e.js';
 import { FAMILIES as F } from '../families/kiswahili_g5_f.js';
 import { SIGNED } from '../families/kiswahili_g5_signed.js';
+import { AWAITING } from '../families/kiswahili_g5_awaiting.js';
 
 export default {
   subject: 'kiswahili', grade: 5, prefix: 'KISW', order: 3,
@@ -19,6 +20,7 @@ export default {
   families: [...A, ...B, ...C, ...D, ...E, ...F],                          // add each family file you write: [...A, ...B]
   familyFiles: ['kiswahili_g5_a.js', 'kiswahili_g5_b.js', 'kiswahili_g5_c.js', 'kiswahili_g5_d.js', 'kiswahili_g5_e.js', 'kiswahili_g5_f.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'kiswahili_g5_signed.js',
+  awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: 'text',                            // word answers (marker 'text'): checked by english_checks.mjs, which is language-neutral except the reading-level rule (skipped for Kiswahili)
   idPrefix: 'kiswahili5.',          // every family id starts with this
   marker: 'text',                            // 'text' when answers are marked as words by answerCheckText.js

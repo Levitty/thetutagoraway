@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T2_VIELEZI",
+ "title": "Vielezi (Theme 2: Nidhamu mezani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T2_VIELEZI.VIELEZI",
+   "key_step": "The child asks which question the word answers (lini? wapi? vipi?) about the action.",
+   "floor": {
+    "prerequisite": "Finds the verb in a sentence.",
+    "question": "Kitenzi ni kipi: \"Tulifika jana.\"",
+    "answer": "tulifika"
+   },
+   "representations": [
+    "three question cards: lini, wapi, vipi",
+    "actions done slowly and quickly",
+    "a sentence strip with the adverb covered"
+   ],
+   "steps": [
+    "Find the verb.",
+    "Ask lini, wapi or vipi about it.",
+    "The word that answers is the adverb.",
+    "Check its kind (time, place, manner)."
+   ],
+   "contexts": [
+    "a race at sports day",
+    "travel to the shamba",
+    "singing at assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mtoto anaandika polepole."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"polepole\".",
+     "say": "Anaandikaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes two sentences: one with an adverb of time, one of place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.VIELEZI.M4_ADV_ADJ",
+     "listen_for": [
+      "nzuri"
+     ],
+     "ask": "Soma tena: \"Wanafunzi wanaimba ___ darasani.\" Kwa nini \"nzuri\" si jibu sahihi?",
+     "repair": "Kielezi kinaonyesha jinsi kitendo kinavyofanyika: wanaimba vizuri. \"Nzuri\" ni kivumishi cha nomino."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.VIELEZI.M4_ADV_NOUN",
+     "listen_for": [
+      "barabara"
+     ],
+     "ask": "Soma tena: \"Mtoto alikimbia ___ kuelekea nyumbani.\" Kwa nini \"barabara\" si jibu sahihi?",
+     "repair": "\"Haraka\" ni kielezi cha jinsi. \"Barabara\" ni nomino."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.VIELEZI.M4_ADV_TYPE",
+     "listen_for": [
+      "mahali"
+     ],
+     "ask": "Soma tena: \"Kielezi \"jana\" kinaonyesha ___.\" Kwa nini \"mahali\" si jibu sahihi?",
+     "repair": "Vielezi vya wakati (jana, kesho), mahali (hapa, mbali) na jinsi (polepole, haraka) vinajibu \"lini\", \"wapi\" na \"vipi\"."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T2_VIELEZI.VIELEZI.M4_ADV_PLACE_NOUN",
+     "listen_for": [
+      "nomino"
+     ],
+     "ask": "Neno hili linajibu swali gani?",
+     "repair": "Shuleni hujibu swali \"wapi?\": ni kielezi cha mahali."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kielezi kipi: \"Wanacheza nje sasa.\"",
+     "answer": "nje, sasa",
+     "shows": "adverbs"
+    },
+    {
+     "question": "Jaza: Anaimba ___ (zuri).",
+     "answer": "vizuri",
+     "shows": "manner form"
+    }
+   ]
+  }
+ ]
+}

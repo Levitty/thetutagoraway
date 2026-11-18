@@ -47,7 +47,7 @@ test('skills and the misconception library are proposed or draft, with the field
 test('every Kiswahili skill has families in at least two different structures, and every family passes its checks', () => {
   const bad = textFailures(120).filter(f => /kiswahili|KISW/.test(f));
   assert.deepEqual(bad, [], `\n${bad.slice(0, 40).join('\n')}\n`);
-  assert.deepEqual(checkTextForms(FAMILIES, SKILLS), []);
+  assert.deepEqual(checkTextForms(FAMILIES, SKILLS, entry.awaiting), []);   // a skill of the deeper map with no family yet is listed in entry.awaiting
 });
 
 test('Kiswahili families stay off for children until a native speaker signs them off, and stay out of the Maths bank', () => {

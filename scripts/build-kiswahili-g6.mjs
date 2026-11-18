@@ -1,3 +1,5 @@
+// FIRST PASS ONLY (18 Nov 2026): build Grade 6 with `node scripts/build-kiswahili-grade.mjs 6`, which runs this file and then adds
+// the depth layer (scripts/data/kiswahili-g6/). Run alone, this file leaves the JSON without the depth layer.
 // ============================================================================
 // KISWAHILI GRADE 6: merge the authored skills and misconception library into the file HOREB owns
 // (curriculum/kiswahili/g6.json). Then run: npm run subject:map -- kiswahili 6 --dir kiswahili --title "Kiswahili"

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T10_TASHBIHI",
+ "title": "Tashbihi (Theme 10: Kukabiliana na uhalifu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T10_TASHBIHI.TASHBIHI",
+   "key_step": "The child links the quality to the thing that has it most (mrefu kama twiga, mnene kama tembo) and keeps \"kama\".",
+   "floor": {
+    "prerequisite": "Uses describing words of size.",
+    "question": "Kinyume cha mrefu ni?",
+    "answer": "mfupi"
+   },
+   "representations": [
+    "pictures of a giraffe, an elephant, a thin stick",
+    "a chart quality - thing",
+    "simile strips with kama coloured"
+   ],
+   "steps": [
+    "Find the quality.",
+    "Find the thing that has it most.",
+    "Join them with kama.",
+    "Use it to describe someone."
+   ],
+   "contexts": [
+    "describing a basketball player",
+    "a story of a giant",
+    "a tall building in town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mnene kama ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the elephant.",
+     "say": "Ni mnyama yupi ni mnene sana?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"mnene kama tembo\" and one more simile of height."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.TASHBIHI.M4_TASH_WRONG_ANIMAL",
+     "listen_for": [
+      "sungura"
+     ],
+     "ask": "Soma tena: \"Mtu mrefu sana ni mrefu kama ___.\" Kwa nini \"sungura\" si jibu sahihi?",
+     "repair": "Tashbihi hutumia ulinganisho wa kawaida: mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.TASHBIHI.M4_TASH_NO_KAMA",
+     "listen_for": [
+      "Yeye ni twiga"
+     ],
+     "ask": "Soma tena: \"Ni tashbihi ipi?\" Kwa nini \"Yeye ni twiga\" si jibu sahihi?",
+     "repair": "Tashbihi hulinganisha kwa kutumia kama: mrefu kama twiga. \"Yeye ni twiga\" ni sitiari."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.TASHBIHI.M4_TASH_LITERAL",
+     "listen_for": [
+      "Baba ni twiga"
+     ],
+     "ask": "Soma tena: \"\"Baba ni mrefu kama twiga\" maana yake nini?\" Kwa nini \"Baba ni twiga\" si jibu sahihi?",
+     "repair": "Tashbihi inaelezea kwa kulinganisha. \"Mrefu kama twiga\" ina maana mtu ni mrefu sana."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T10_TASHBIHI.TASHBIHI.M4_TASH_QUALITY",
+     "listen_for": [
+      "nyoka"
+     ],
+     "ask": "Mnyama huyu ni mrefu au mfupi?",
+     "repair": "Twiga ni mrefu, kwa hiyo tunasema mrefu kama twiga."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kamilisha: mweusi kama ___",
+     "answer": "mkaa",
+     "shows": "complete a simile"
+    },
+    {
+     "question": "Ni ipi ni tashbihi: \"Yeye ni twiga\" au \"Ni mrefu kama twiga\"?",
+     "answer": "Ni mrefu kama twiga",
+     "shows": "kama"
+    }
+   ]
+  }
+ ]
+}

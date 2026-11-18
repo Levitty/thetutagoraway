@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO",
+ "title": "Ukubwa wa Nomino (Theme 11: Mapato)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA",
+   "key_step": "The child turns an m- noun with a one-syllable root into its big form with ji- (mti -> jiti) and gives it LI-YA agreement.",
+   "floor": {
+    "prerequisite": "Knows LI-YA agreement.",
+    "question": "Jiwe ___ anguka.",
+    "answer": "limeanguka"
+   },
+   "representations": [
+    "a small and a huge drawing of the same thing",
+    "root cards (-ti, -to, -tu)",
+    "prefix card ji-"
+   ],
+   "steps": [
+    "Take off m-.",
+    "Is the root one syllable? Add ji-.",
+    "Use li- / ya- agreement.",
+    "Read it."
+   ],
+   "contexts": [
+    "a giant in a folk tale",
+    "a huge tree in the forest",
+    "a big river after rain"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mti -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at m- and -ti.",
+     "say": "Tunaongeza nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"jiti\" and \"Jiti limeanguka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA.M4_UKU_KI",
+     "listen_for": [
+      "kijiti"
+     ],
+     "ask": "Soma tena: \"Mti mkubwa sana huitwa ___.\" Kwa nini \"kijiti\" si jibu sahihi?",
+     "repair": "Ukubwa wa nomino hutumia ji-: jiti, jito, jiji. Udogo hutumia ki-: kijiti, kijito, kijiji."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA.M4_UKU_SAME",
+     "listen_for": [
+      "mji"
+     ],
+     "ask": "Soma tena: \"Mji mkubwa sana huitwa ___.\" Kwa nini \"mji\" si jibu sahihi?",
+     "repair": "Kuonyesha ukubwa, nomino yenyewe hubadilika: mji-jiji."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA.M4_UKU_PL",
+     "listen_for": [
+      "jiti"
+     ],
+     "ask": "Soma tena: \"Miti mikubwa sana huitwa ___.\" Kwa nini \"jiti\" si jibu sahihi?",
+     "repair": "Wingi wa ukubwa hutumia ma-: majiti, majito, majiji, majitu."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T11_UKUBWA_WA_NOMINO.UKUBWA.M4_UKU_AGREE",
+     "listen_for": [
+      "anakuja"
+     ],
+     "ask": "Jitu liko katika ngeli ipi?",
+     "repair": "Nomino ya ukubwa huchukua upatanisho wa LI-YA: jitu linakuja."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ukubwa wa \"mtu\" ni?",
+     "answer": "jitu",
+     "shows": "big form"
+    },
+    {
+     "question": "Jaza: Majiti ___ anguka.",
+     "answer": "yameanguka",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

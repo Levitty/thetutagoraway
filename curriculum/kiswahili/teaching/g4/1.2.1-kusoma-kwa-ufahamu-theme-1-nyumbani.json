@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+ "title": "Kusoma kwa Ufahamu (Theme 1: Nyumbani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI",
+   "key_step": "The child reads the sentence around a new word and gives its meaning in Kiswahili, then uses it in a sentence of his own.",
+   "floor": {
+    "prerequisite": "Names rooms and things at home.",
+    "question": "Tunapikia wapi nyumbani?",
+    "answer": "jikoni"
+   },
+   "representations": [
+    "the passage with the target words in bold",
+    "pictures of the home",
+    "a word card with its sentence"
+   ],
+   "steps": [
+    "Find the word in the passage.",
+    "Read the sentence around it.",
+    "Say the meaning in Kiswahili.",
+    "Use it in your own sentence."
+   ],
+   "contexts": [
+    "home and family",
+    "a visit to grandmother",
+    "cleaning the house on Saturday"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wageni waliketi sebuleni."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"sebuleni\".",
+     "say": "Wageni walikaa wapi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child explains the word and writes a sentence with it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M4_MSA_LOOKALIKE",
+     "listen_for": [
+      "mchele"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, neno \"mche\" lina maana gani?\" Kwa nini \"mchele\" si jibu sahihi?",
+     "repair": "Maneno yanaweza kufanana kwa umbo na yasiwe na maana sawa. Mche ni mmea mchanga wa kupanda, si mchele."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M4_MSA_NEARBY",
+     "listen_for": [
+      "kumimina uji vikombeni"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, neno \"kuchemsha\" lina maana gani?\" Kwa nini \"kumimina uji vikombeni\" si jibu sahihi?",
+     "repair": "Jaribu kila maana mahali pa neno hilo. Maana sahihi ndiyo inayofaa sentensi nzima."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M4_MSA_OPPOSITE",
+     "listen_for": [
+      "unga laini"
+     ],
+     "ask": "Soma tena: \"Katika kifungu, neno \"madonge\" lina maana gani?\" Kwa nini \"unga laini\" si jibu sahihi?",
+     "repair": "Maana ya neno hutegemea sentensi lilimotumika. Madonge ni vipande vilivyoshikana, si unga laini."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI.M4_MSA_ENGLISH",
+     "listen_for": [
+      "sitting room"
+     ],
+     "ask": "Unaweza kueleza maana hiyo kwa Kiswahili?",
+     "repair": "Eleza maana kwa Kiswahili: sebule ni chumba cha kukaa na wageni."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Jikoni\" ni mahali gani?",
+     "answer": "chumba cha kupikia",
+     "shows": "meaning"
+    },
+    {
+     "question": "Tumia \"sebule\" katika sentensi.",
+     "answer": "Tulitazama runinga sebuleni.",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI",
+   "key_step": "The child answers only from the passage and gives the message of the whole story, not one detail.",
+   "floor": {
+    "prerequisite": "Answers who and where.",
+    "question": "Hadithi inamhusu nani?",
+    "answer": "mhusika mkuu"
+   },
+   "representations": [
+    "the story with its paragraphs numbered",
+    "a who/where/what/message card",
+    "three event pictures to order"
+   ],
+   "steps": [
+    "Read the question.",
+    "Find the paragraph with the answer.",
+    "Answer in the passage's words.",
+    "Say the message of the whole story."
+   ],
+   "contexts": [
+    "a family story",
+    "a day at the shamba",
+    "a birthday at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kwa nini Amina alifurahi?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at paragraph 2.",
+     "say": "Jibu liko wapi katika hadithi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child underlines the sentence that answers and says the message."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M4_UFA_WRONG_PERSON",
+     "listen_for": [
+      "mama yake"
+     ],
+     "ask": "Soma tena: \"Nani alimwita Achieng sokoni?\" Kwa nini \"mama yake\" si jibu sahihi?",
+     "repair": "Kifungu kinasema nani alifanya kitendo hicho. Soma sentensi hiyo tena."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M4_UFA_OUTSIDE",
+     "listen_for": [
+      "maziwa"
+     ],
+     "ask": "Soma tena: \"Achieng alinunua nini sokoni?\" Kwa nini \"maziwa\" si jibu sahihi?",
+     "repair": "Jibu la swali la ufahamu liko kwenye kifungu. Tafuta sentensi inayolisema."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M4_UFA_DETAIL_MIX",
+     "listen_for": [
+      "asubuhi"
+     ],
+     "ask": "Soma tena: \"Mvua ilinyesha lini?\" Kwa nini \"asubuhi\" si jibu sahihi?",
+     "repair": "Maneno ya swali (nani, lini, wapi, nini) yanaonyesha jibu la aina gani. Soma kifungu tena."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M4_UFA_DETAIL_AS_MAIN",
+     "listen_for": [
+      "Achieng alinunua nyanya."
+     ],
+     "ask": "Soma tena: \"Ujumbe mkuu wa hadithi ni upi?\" Kwa nini \"Achieng alinunua nyanya.\" si jibu sahihi?",
+     "repair": "Ujumbe mkuu ni funzo la hadithi nzima, si jambo moja dogo ndani yake."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.UFAHAMU_HADITHI.M4_UFA_ORDER",
+     "listen_for": [
+      "D, C, B, A"
+     ],
+     "ask": "Soma tena: \"Matukio manne yamechanganywa. Yalitokea kwa mpangilio gani?\" Kwa nini \"D, C, B, A\" si jibu sahihi?",
+     "repair": "Hadithi inasimulia matukio kwa mpangilio. Maneno kama \"kisha\" na \"baadaye\" husaidia."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Swali: Nani alipika? Jibu linatoka wapi?",
+     "answer": "katika kifungu",
+     "shows": "text evidence"
+    },
+    {
+     "question": "Ujumbe ni jambo moja dogo au funzo la hadithi yote?",
+     "answer": "funzo la hadithi yote",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

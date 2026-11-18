@@ -212,6 +212,15 @@
   "KISW.G4.SARUFI.T11_UDOGO_WA_NOMINO.f": "kufurahia kutumia nomino katika hali ya udogo ili kuimarisha mawasiliano"
  },
  "skills": {
+  "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI": {
+   "forms": [
+    "chagua neno ulilosikia",
+    "chagua maana ya neno",
+    "jaza pengo kwa neno sahihi",
+    "tambua kitanzandimi"
+   ],
+   "mastery": "Hears, says and writes the right sound in syllables and words with p/b, t/d, k/g na ch/j (tamu and damu, koti and goti), picks the word that matches the meaning, and tells a real kitanzandimi from an ordinary sentence, in 8 of 10 new items."
+  },
   "KISW.G4.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.MSAMIATI": {
    "forms": [
     "choose the meaning",
@@ -235,6 +244,15 @@
     "spot the mistake"
    ],
    "mastery": "Names the kind of insha from a short text (wasifu describes a person or thing, masimulizi tells what happened in order, maelezo explains) and the part of an insha (utangulizi, kiini, hitimisho), in 8 of 10 new items."
+  },
+  "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya wasifu from other kinds of writing and its parts, and writes a description of a person, place or thing with describing words that agree with their nouns and no story of events; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G4.SARUFI.T1_NOMINO.NOMINO": {
    "forms": [
@@ -276,6 +294,15 @@
    ],
    "mastery": "Puts words in the order of the alphabet (using the second and third letters when the first match) and says what a dictionary is for, in 8 of 10 new items."
   },
+  "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya masimulizi from other kinds of writing and its parts, and writes a story of events in the past tense, in order, with a title, an opening, a middle and a closing that gives the lesson; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G4.SARUFI.T2_VIWAKILISHI.VIWAKILISHI": {
    "forms": [
     "choose the pronoun",
@@ -308,6 +335,14 @@
    ],
    "mastery": "Names what a fluent reader does (good pronunciation, a fitting voice, a fitting speed, a rest at the marks, signs that fit), without taking fast or loud for good, in 8 of 10 new items. Reading aloud itself is for a teacher to hear."
   },
+  "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Reads a short passage aloud at a speaking pace, pauses at the koma and the kikomo, raises the voice for a question and shows feeling for an exclamation, says every sound clearly (no l for r), and uses a matching gesture, judged by the teacher with the KICD rubric; in the app picks the better reading of a line in 8 of 10 new items."
+  },
   "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI": {
    "forms": [
     "choose the part",
@@ -323,6 +358,15 @@
     "spot the mistake"
    ],
    "mastery": "Chooses the sentence with the right capital letter, kikomo (full stop), kiulizi (question mark), koma and alama ya hisi (!), and finds the one mistake in a short note, in 8 of 10 new sentences."
+  },
+  "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.KAZI_TARAKILISHI": {
+   "forms": [
+    "panga hatua",
+    "chagua kitufe sahihi",
+    "tambua kosa",
+    "kazi ya vitendo (mwalimu anaangalia)"
+   ],
+   "mastery": "Switches the computer on and off in the right way, opens a word processor, types a short text on the theme with spaces and capital letters, and saves it with a clear file name where he can find it again, in 8 of 10 new items or tasks."
   },
   "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI": {
    "forms": [
@@ -364,6 +408,15 @@
    ],
    "mastery": "Picks the safe step for a phone, tablet or computer (keep the password secret, show an adult an unknown link, give no home address to a stranger, log out, use a safe site) and not the risky one, in 8 of 10 new situations."
   },
+  "KISW.G4.KUSOMA.T4_KUSOMA_KWA_MAPANA.KUSOMA_KIDIJITALI": {
+   "forms": [
+    "chagua hatua sahihi",
+    "panga hatua",
+    "chagua maneno ya kutafutia",
+    "tambua kosa"
+   ],
+   "mastery": "Opens a saved file with the passage (finds the folder, double-clicks the file), searches a safe site with two or three key words, ignores pop-ups and adverts, and reads the passage for its message, in 8 of 10 new items or tasks."
+  },
   "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.BARUA": {
    "forms": [
     "choose the part",
@@ -371,6 +424,15 @@
     "spot the mistake"
    ],
    "mastery": "Names the parts of a friendly letter in their order (anwani ya mwandishi, tarehe, salamu, mwili, hitimisho, jina) and what each holds, in 8 of 10 new items. Writing the letter is composition marking."
+  },
+  "KISW.G4.KUANDI.T4_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells barua ya kirafiki from other kinds of writing and its parts, and writes a friendly letter with the address, date, greeting, asking after the friend, the news, and a friendly closing; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G4.SARUFI.T4_NGELI_YA_A_WA.A_WA": {
    "forms": [
@@ -396,6 +458,15 @@
    ],
    "mastery": "Says what a shairi, an ubeti and a mshororo are, counts the beti and the mishororo in a short poem, and tells a poem from a paragraph by its shape, in 8 of 10 new items."
   },
+  "KISW.G4.KUANDI.T5_INSHA_YA_MAELEZO.INSHA_MAELEZO": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelezo from other kinds of writing and its parts, and writes an explanation or description on the topic, in order, with detail that makes a picture and no point off the topic; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I": {
    "forms": [
     "choose the prefix",
@@ -420,6 +491,15 @@
    ],
    "mastery": "Answers questions about a short article (makala) from what it says, and gives its main message, without choosing a detail for the message or an answer from outside the article, in 8 of 10 new questions."
   },
+  "KISW.G4.KUANDI.T6_INSHA_YA_WASIFU.INSHA_WASIFU": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya wasifu from other kinds of writing and its parts, and writes a description of a person, place or thing with describing words that agree with their nouns and no story of events; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G4.SARUFI.T6_NGELI_YA_LI_YA.LI_YA": {
    "forms": [
     "choose the prefix",
@@ -435,6 +515,24 @@
     "fill the gap"
    ],
    "mastery": "Tells a nahau from other sayings and gives what it means (kupiga moyo konde, kujikaza kisabuni, kula kiapo, kukata tamaa), without taking it word for word, in 8 of 10 new items. Using it aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T7_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA": {
+   "forms": [
+    "chagua matini ifaayo",
+    "chagua ujumbe",
+    "tambua aina ya matini",
+    "eleza maana ya neno"
+   ],
+   "mastery": "Chooses a text that suits his reading level and interest from its title, blurb and first page (not from the cover alone), tells the kind of text (hadithi, shairi, makala, gazeti), says its message in one sentence, and works out a new word from the sentence around it, in 8 of 10 new items."
+  },
+  "KISW.G4.KUANDI.T7_INSHA_YA_MAELEZO.INSHA_MAELEZO": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelezo from other kinds of writing and its parts, and writes an explanation or description on the topic, in order, with detail that makes a picture and no point off the topic; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G4.SARUFI.T7_NGELI_YA_KI_VI.KI_VI": {
    "forms": [
@@ -468,6 +566,15 @@
    ],
    "mastery": "Tells a short play (igizo) from a story by its shape (the name of the speaker, a colon, the words said), names the speaker of a line, and finds the stage direction in brackets, in 8 of 10 new items."
   },
+  "KISW.G4.KUANDI.T8_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya masimulizi from other kinds of writing and its parts, and writes a story of events in the past tense, in order, with a title, an opening, a middle and a closing that gives the lesson; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G4.SARUFI.T8_MNYAMBULIKO_WA_VITEN.MNYAMBULIKO": {
    "forms": [
     "choose the verb form",
@@ -483,6 +590,24 @@
     "spot the mistake"
    ],
    "mastery": "Tells an informal setting (with a friend, at play, at home) from a formal one (a speech, an interview, a meeting) and picks the words that fit it, in 8 of 10 new items. Using them aloud is a teacher's check."
+  },
+  "KISW.G4.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA": {
+   "forms": [
+    "chagua matini ifaayo",
+    "chagua ujumbe",
+    "tambua aina ya matini",
+    "eleza maana ya neno"
+   ],
+   "mastery": "Chooses a text that suits his reading level and interest from its title, blurb and first page (not from the cover alone), tells the kind of text (hadithi, shairi, makala, gazeti), says its message in one sentence, and works out a new word from the sentence around it, in 8 of 10 new items."
+  },
+  "KISW.G4.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya maelezo from other kinds of writing and its parts, and writes an explanation or description on the topic, in order, with detail that makes a picture and no point off the topic; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO": {
    "forms": [
@@ -500,6 +625,24 @@
    ],
    "mastery": "Gives the usual comparison for height, size and shape (mrefu kama twiga, mnene kama kiboko, mkubwa kama ndovu) and says it is a simile because of kama, without taking it word for word, in 8 of 10 new items. Using it aloud is a teacher's check."
   },
+  "KISW.G4.KUSOMA.T10_KUSOMA_KIDIJITALI.KUSOMA_KIDIJITALI": {
+   "forms": [
+    "chagua hatua sahihi",
+    "panga hatua",
+    "chagua maneno ya kutafutia",
+    "tambua kosa"
+   ],
+   "mastery": "Opens a saved file with the passage (finds the folder, double-clicks the file), searches a safe site with two or three key words, ignores pop-ups and adverts, and reads the passage for its message, in 8 of 10 new items or tasks."
+  },
+  "KISW.G4.KUANDI.T10_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells insha ya masimulizi from other kinds of writing and its parts, and writes a story of events in the past tense, in order, with a title, an opening, a middle and a closing that gives the lesson; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
+  },
   "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI": {
    "forms": [
     "choose the verb",
@@ -507,6 +650,32 @@
     "spot the mistake"
    ],
    "mastery": "Uses -li- for what happened before (jana alisoma), -na- for now (anasoma) and -ta- for what will happen (atasoma), following the time word, and gives the right person prefix, in 8 of 10 new items."
+  },
+  "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI": {
+   "forms": [
+    "chagua ujumbe",
+    "panga matukio uliyosikia",
+    "chagua ishara ifaayo",
+    "kusimulia (mwalimu anasikiliza)"
+   ],
+   "mastery": "Listens to a short narration and gives its message (not a detail), retells it in order, and tells his own story on the topic in Kiswahili sanifu with gestures that match the words; the teacher scores the telling with the KICD rubric, and in the app the child picks the message, order or gesture in 8 of 10 new items."
+  },
+  "KISW.G4.KUSOMA.T11_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI": {
+   "forms": [
+    "chagua usomaji bora",
+    "tambua kosa la usomaji",
+    "kusoma kwa sauti (mwalimu anasikiliza)"
+   ],
+   "mastery": "Reads a short passage aloud at a speaking pace, pauses at the koma and the kikomo, raises the voice for a question and shows feeling for an exclamation, says every sound clearly (no l for r), and uses a matching gesture, judged by the teacher with the KICD rubric; in the app picks the better reading of a line in 8 of 10 new items."
+  },
+  "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA": {
+   "forms": [
+    "chagua sentensi ifaayo",
+    "panga sehemu au matukio",
+    "tambua kosa katika insha",
+    "kuandika (mwalimu anasahihisha)"
+   ],
+   "mastery": "Tells barua ya kirafiki from other kinds of writing and its parts, and writes a friendly letter with the address, date, greeting, asking after the friend, the news, and a friendly closing; the teacher marks the writing with the KICD rubric, and in the app the child picks the right sentence, order or part in 8 of 10 new items."
   },
   "KISW.G4.SARUFI.T11_UKANUSHAJI.UKANUSHAJI": {
    "forms": [

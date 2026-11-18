@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T5_NGELI_YA_U_I",
+ "title": "Ngeli ya U-I (Theme 5: Ushauri-nasaha)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I",
+   "key_step": "The child knows nouns of U-I take u- for one and i- for many (mti umeanguka, miti imeanguka).",
+   "floor": {
+    "prerequisite": "Uses A-WA agreement.",
+    "question": "Mtoto ___ lala.",
+    "answer": "amelala"
+   },
+   "representations": [
+    "real trees, rivers, mountains in pictures",
+    "a table of m-/mi- nouns",
+    "prefix cards u- and i-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Is it a tree, plant or other U-I noun?",
+    "One: u-; many: i-.",
+    "Read the whole sentence."
+   ],
+   "contexts": [
+    "the school garden",
+    "a walk by the river",
+    "planting trees on a national tree-planting day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mti ___ anguka."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Mti\".",
+     "say": "Mti ni wa ngeli ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the singular and plural sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I.M4_UI_SG_I",
+     "listen_for": [
+      "i"
+     ],
+     "ask": "Soma tena: \"Mti mmoja ___meanguka.\" Kwa nini \"i\" si jibu sahihi?",
+     "repair": "Nomino za U-I hutumia u- kwa umoja: mti umeanguka. Hutumia i- kwa wingi: miti imeanguka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I.M4_UI_PL_U",
+     "listen_for": [
+      "u"
+     ],
+     "ask": "Soma tena: \"Miti miwili ___meanguka.\" Kwa nini \"u\" si jibu sahihi?",
+     "repair": "Wingi wa mti ni miti, na kiambishi ni i-: miti imeanguka."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I.M4_UI_PEOPLE",
+     "listen_for": [
+      "a"
+     ],
+     "ask": "Soma tena: \"Mlango mmoja ___mefunguka.\" Kwa nini \"a\" si jibu sahihi?",
+     "repair": "Mti na mlango ni vitu, si watu. Vinatumia u- na i-, si a- na wa-."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I.M4_UI_NOT",
+     "listen_for": [
+      "mtoto"
+     ],
+     "ask": "Soma tena: \"Ni nomino ipi ni ya ngeli ya U-I?\" Kwa nini \"mtoto\" si jibu sahihi?",
+     "repair": "Mtoto ni mtu, kwa hiyo yuko A-WA. Mti ni kitu na uko U-I."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T5_NGELI_YA_U_I.U_I.M4_UI_PLNOUN",
+     "listen_for": [
+      "mamti"
+     ],
+     "ask": "Soma tena: \"Mti mmoja, ___ miwili.\" Kwa nini \"mamti\" si jibu sahihi?",
+     "repair": "Wingi wa nomino za U-I huanza kwa mi-: mti-miti, mlango-milango, mkono-mikono, mguu-miguu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Miti ___ ota.",
+     "answer": "imeota",
+     "shows": "plural agreement"
+    },
+    {
+     "question": "Jaza: Mlango ___ funguliwa.",
+     "answer": "umefunguliwa",
+     "shows": "singular agreement"
+    }
+   ]
+  }
+ ]
+}

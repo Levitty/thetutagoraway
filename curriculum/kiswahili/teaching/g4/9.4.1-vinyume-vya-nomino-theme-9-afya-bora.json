@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO",
+ "title": "Vinyume vya Nomino (Theme 9: Afya bora)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO",
+   "key_step": "The child gives the noun of the opposite meaning, not a related word and not a negative.",
+   "floor": {
+    "prerequisite": "Knows opposites of action words.",
+    "question": "Kinyume cha \"panda\" ni?",
+    "answer": "shuka"
+   },
+   "representations": [
+    "opposite pair cards",
+    "pictures: day/night, beginning/end",
+    "a matching game"
+   ],
+   "steps": [
+    "Read the noun.",
+    "Think of its meaning.",
+    "Find the noun with the opposite meaning.",
+    "Check it is not a near word."
+   ],
+   "contexts": [
+    "day and night at home",
+    "a race: start and finish",
+    "guests and hosts at a party"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mchana - ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the day picture.",
+     "say": "Kinyume cha mchana ni nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"usiku\" and two more pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO.M4_VNOM_RELATED",
+     "listen_for": [
+      "jioni"
+     ],
+     "ask": "Soma tena: \"Kinyume cha \"usiku\" ni ___.\" Kwa nini \"jioni\" si jibu sahihi?",
+     "repair": "Kinyume ni neno lenye maana kinyume kabisa: usiku-mchana. \"Jioni\" iko karibu na usiku lakini si kinyume."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO.M4_VNOM_SAME",
+     "listen_for": [
+      "raha"
+     ],
+     "ask": "Soma tena: \"Kinyume cha \"furaha\" ni ___.\" Kwa nini \"raha\" si jibu sahihi?",
+     "repair": "\"Raha\" ina maana sawa na furaha. Kinyume cha furaha ni huzuni."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO.M4_VNOM_ONE_SIDE",
+     "listen_for": [
+      "rafiki"
+     ],
+     "ask": "Soma tena: \"Kinyume cha \"mgeni\" ni ___.\" Kwa nini \"rafiki\" si jibu sahihi?",
+     "repair": "Mgeni ni anayetembelea, na mwenyeji ni anayepokea. Ni vinyume."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T9_VINYUME_VYA_NOMINO.VINYUME_NOMINO.M4_VNOM_NEGATE",
+     "listen_for": [
+      "sirafiki"
+     ],
+     "ask": "Je, \"sirafiki\" ni neno la Kiswahili?",
+     "repair": "Kinyume cha nomino ni nomino nyingine: rafiki, adui."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kinyume cha \"mwanzo\" ni?",
+     "answer": "mwisho",
+     "shows": "opposite"
+    },
+    {
+     "question": "Kinyume cha \"furaha\" ni?",
+     "answer": "huzuni",
+     "shows": "opposite of an abstract noun"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "sub_strand": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL",
+ "title": "Kuandika kwa Tarakilishi (Theme 3: Mavazi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI",
+   "key_step": "The child names each part used for typing (kibodi, kipanya, skrini, kitengo kikuu) and says its job.",
+   "floor": {
+    "prerequisite": "Names objects in the classroom.",
+    "question": "Hiki ni nini? (kiti)",
+    "answer": "kiti"
+   },
+   "representations": [
+    "a real computer with Kiswahili labels",
+    "part and job cards to match",
+    "a drawing to label"
+   ],
+   "steps": [
+    "Point at the part.",
+    "Say its Kiswahili name.",
+    "Say its job.",
+    "Use it."
+   ],
+   "contexts": [
+    "the computer lab",
+    "a cyber café",
+    "a tablet at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kibodi - kuandika"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mouse.",
+     "say": "Jina lake ni nini na kazi yake ni ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the four parts on a drawing and matches each to its job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M4_TAR_MIX_PARTS",
+     "listen_for": [
+      "kipanya"
+     ],
+     "ask": "Soma tena: \"Tunatumia ___ kupigia herufi na nambari.\" Kwa nini \"kipanya\" si jibu sahihi?",
+     "repair": "Kibodi ina vitufe vya herufi na nambari. Kipanya husogeza kielekezi. Skrini huonyesha. Kichapishi huchapisha."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M4_TAR_FUNCTION",
+     "listen_for": [
+      "Huchapisha kwenye karatasi"
+     ],
+     "ask": "Soma tena: \"Skrini hufanya nini?\" Kwa nini \"Huchapisha kwenye karatasi\" si jibu sahihi?",
+     "repair": "Kila sehemu ya tarakilishi ina kazi yake: skrini huonyesha, kichapishi huchapisha kwenye karatasi."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M4_TAR_CPU_SCREEN",
+     "listen_for": [
+      "skrini"
+     ],
+     "ask": "Skrini ikizimwa, kazi inapotea?",
+     "repair": "Kitengo kikuu ndicho hufanya kazi; skrini huonyesha tu."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.SEHEMU_TARAKILISHI.M4_TAR_ENGLISH_NAMES",
+     "listen_for": [
+      "keyboard"
+     ],
+     "ask": "Jina la Kiswahili la sehemu hii ni lipi?",
+     "repair": "Kwa Kiswahili: kibodi, kipanya, skrini, kitengo kikuu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Tunaandikia kwa sehemu ipi?",
+     "answer": "kibodi",
+     "shows": "part"
+    },
+    {
+     "question": "Kipanya hutumika kufanya nini?",
+     "answer": "kusogeza mshale na kubofya",
+     "shows": "job"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI",
+   "key_step": "The child reads the sentence, decides what kind it is (statement, question, feeling) and gives it a capital at the start and the right mark at the end, with commas in a list.",
+   "floor": {
+    "prerequisite": "Writes a capital letter.",
+    "question": "Andika \"a\" kwa herufi kubwa.",
+    "answer": "A"
+   },
+   "representations": [
+    "sentence strips with no marks",
+    "a mark chart . , ? !",
+    "a list of three things"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "Is it a statement, question or feeling?",
+    "Capital at the start, mark at the end.",
+    "Commas between things in a list."
+   ],
+   "contexts": [
+    "clothes (mavazi)",
+    "a shopping list",
+    "a note to a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "je utavaa sare kesho"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first and last word.",
+     "say": "Sentensi hii ni swali? Inahitaji nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Je, utavaa sare kesho?\" and one more sentence with a list."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI.M4_UAK_CAPITAL",
+     "listen_for": [
+      "unaenda wapi?"
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"unaenda wapi?\" si jibu sahihi?",
+     "repair": "Sentensi huanza kwa herufi kubwa, na majina ya pekee pia: Wanjiru, Nairobi."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI.M4_UAK_FULLSTOP",
+     "listen_for": [
+      "Unaenda wapi."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Unaenda wapi.\" si jibu sahihi?",
+     "repair": "Sentensi ya swali huisha kwa kiulizi (?). Sentensi ya kawaida huisha kwa kikomo (.)."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI.M4_UAK_KOMA",
+     "listen_for": [
+      "Nilinunua maembe machungwa na ndizi."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Nilinunua maembe machungwa na ndizi.\" si jibu sahihi?",
+     "repair": "Koma hutenganisha vitu katika orodha: maembe, machungwa na ndizi."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI.M4_UAK_MARK",
+     "listen_for": [
+      "Hongera?"
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Hongera?\" si jibu sahihi?",
+     "repair": "Alama ya hisi (!) huonyesha hisia kama furaha au mshangao: Hongera! Kiulizi (?) huuliza."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.UAKIFISHI.M4_UAK_NO_END",
+     "listen_for": [
+      "Wanjiru alienda Mombasa jana"
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Wanjiru alienda Mombasa jana\" si jibu sahihi?",
+     "repair": "Kila sentensi huisha kwa alama: kikomo (.), kiulizi (?) au alama ya hisi (!)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: lo umependeza",
+     "answer": "Lo! Umependeza.",
+     "shows": "marks"
+    },
+    {
+     "question": "Andika vizuri: nimenunua shati kaptula na soksi",
+     "answer": "Nimenunua shati, kaptula na soksi.",
+     "shows": "commas"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.KAZI_TARAKILISHI",
+   "key_step": "The child follows the order: switch on, open the program, type with spaces and Shift for capitals, save with a clear name, shut down from the menu.",
+   "floor": {
+    "prerequisite": "Names the keyboard, mouse and screen.",
+    "question": "Tunaandikia kwa kifaa gani?",
+    "answer": "kibodi"
+   },
+   "representations": [
+    "step cards for the whole task",
+    "a keyboard with four keys labelled",
+    "a real computer in the lab"
+   ],
+   "steps": [
+    "Switch on and open the program.",
+    "Type with spaces and capitals.",
+    "Save with a clear name.",
+    "Shut down from the menu."
+   ],
+   "contexts": [
+    "clothes (mavazi) text",
+    "the school computer lab",
+    "a typing task at a cyber"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Enter, Shift, Backspace, nafasi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Shift.",
+     "say": "Kitufe hiki kinatumika lini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child types \"Sare yangu ni safi.\" with a capital and saves it as \"Mavazi - jina\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.KAZI_TARAKILISHI.M4_TAK_OFF_PLUG",
+     "listen_for": [
+      "chomoa waya wa umeme"
+     ],
+     "ask": "Kazi yako itakuwa wapi ukichomoa waya?",
+     "repair": "Hifadhi kazi kwanza, kisha zima tarakilishi kupitia menyu."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.KAZI_TARAKILISHI.M4_TAK_NO_SAVE",
+     "listen_for": [
+      "Document1"
+     ],
+     "ask": "Kesho utaitafutaje kazi hii?",
+     "repair": "Hifadhi kazi kwa jina linaloeleza kilicho ndani."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.KAZI_TARAKILISHI.M4_TAK_SPACE",
+     "listen_for": [
+      "kitufe cha nafasi mara nyingi"
+     ],
+     "ask": "Kitufe hiki kinafanya nini?",
+     "repair": "Enter huanzisha mstari mpya; nafasi hutenganisha maneno."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T3_KUANDIKA_KWA_TARAKIL.KAZI_TARAKILISHI.M4_TAK_CAPS",
+     "listen_for": [
+      "washa Caps Lock na uandike sentensi yote"
+     ],
+     "ask": "Sentensi yako yote imekuwa ya herufi kubwa?",
+     "repair": "Tumia Shift kwa herufi kubwa moja; Caps Lock hufanya herufi zote kuwa kubwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni hatua ipi huja kabla ya kuzima tarakilishi?",
+     "answer": "kuhifadhi kazi",
+     "shows": "order"
+    },
+    {
+     "question": "Kitufe kipi hufuta herufi ya mwisho?",
+     "answer": "Backspace",
+     "shows": "keys"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T6_SHAIRI",
+ "title": "Shairi (Theme 6: Bendera ya taifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI",
+   "key_step": "The child recites with clear words and the beat of the poem, works out a word from its line, and says what the poet wants the reader to do.",
+   "floor": {
+    "prerequisite": "Reads a short line aloud.",
+    "question": "Soma mshororo huu kwa sauti.",
+    "answer": "the child reads it clearly"
+   },
+   "representations": [
+    "the poem on a chart, stanzas numbered",
+    "flag colours with their meanings",
+    "a clapped beat for each line"
+   ],
+   "steps": [
+    "Read the stanza aloud with its beat.",
+    "Find the hard word.",
+    "Use the line to say its meaning.",
+    "Say the message of the poem."
+   ],
+   "contexts": [
+    "the national flag at assembly",
+    "a music festival recitation",
+    "Madaraka Day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nyeusi ni ya watu, nyekundu ni damu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"damu\".",
+     "say": "Rangi nyekundu inawakilisha nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child recites the stanza with the beat and says one thing the poem asks of us."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI.M4_SMS_LOOKALIKE",
+     "listen_for": [
+      "nafaka"
+     ],
+     "ask": "Soma tena: \"Neno \"taifa\" lina maana gani?\" Kwa nini \"nafaka\" si jibu sahihi?",
+     "repair": "Maneno yanaweza kusikika sawa na yasiwe na maana sawa. Taifa ni nchi na watu wake."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI.M4_SMS_NEARBY",
+     "listen_for": [
+      "wimbo wa nchi"
+     ],
+     "ask": "Soma tena: \"Neno \"bendera\" lina maana gani?\" Kwa nini \"wimbo wa nchi\" si jibu sahihi?",
+     "repair": "Bendera ni kitambaa chenye rangi kinachoonyesha nchi. Wimbo wa taifa ni wimbo rasmi wa nchi."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI.M4_SMS_OPPOSITE",
+     "listen_for": [
+      "vita"
+     ],
+     "ask": "Soma tena: \"Neno \"amani\" lina maana gani?\" Kwa nini \"vita\" si jibu sahihi?",
+     "repair": "Amani ni hali ya utulivu bila vita. Vita ni kinyume cha amani."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T6_SHAIRI.SHAIRI_MSAMIATI.M4_SMS_MESSAGE",
+     "listen_for": [
+      "bendera"
+     ],
+     "ask": "Mshairi anataka tufanye nini?",
+     "repair": "Mada ni bendera; ujumbe ni kile mshairi anataka tufanye: tuiheshimu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Rangi nyeupe katika bendera ya Kenya inawakilisha nini?",
+     "answer": "amani",
+     "shows": "vocabulary of the poem"
+    },
+    {
+     "question": "Ujumbe wa shairi la bendera ni?",
+     "answer": "tuipende na kuiheshimu bendera",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

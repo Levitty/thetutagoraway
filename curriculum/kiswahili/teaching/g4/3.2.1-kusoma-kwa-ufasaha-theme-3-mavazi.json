@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA",
+ "title": "Kusoma kwa Ufasaha (Theme 3: Mavazi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE",
+   "key_step": "The child names the four features of fluent reading: clear sounds, a fitting voice, a speaking pace, and gestures with eye contact.",
+   "floor": {
+    "prerequisite": "Reads a short sentence aloud.",
+    "question": "Soma: \"Tunapenda kusoma.\"",
+    "answer": "Tunapenda kusoma."
+   },
+   "representations": [
+    "a checklist of four features",
+    "two recordings to compare",
+    "a reading at assembly"
+   ],
+   "steps": [
+    "Listen to a reading.",
+    "Tick each feature heard.",
+    "Name the one missing.",
+    "Say how to improve it."
+   ],
+   "contexts": [
+    "clothes (mavazi) passage",
+    "reading in assembly",
+    "a reading competition"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "matamshi, sauti, kasi, ishara"
+    },
+    {
+     "beat": "point",
+     "do": "Point at each feature.",
+     "say": "Msomaji huyu amesahau kipengele kipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child listens to two readings and names the missing feature in each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M4_UFS_SPEED",
+     "listen_for": [
+      "Kusoma haraka iwezekanavyo"
+     ],
+     "ask": "Soma tena: \"Ni nini kinachoonyesha kusoma kwa ufasaha?\" Kwa nini \"Kusoma haraka iwezekanavyo\" si jibu sahihi?",
+     "repair": "Kasi ifaayo si haraka sana wala polepole sana: msikilizaji aelewe kila neno."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M4_UFS_LOUD",
+     "listen_for": [
+      "Kupiga kelele"
+     ],
+     "ask": "Soma tena: \"Sauti ipasavyo wakati wa kusoma ni ipi?\" Kwa nini \"Kupiga kelele\" si jibu sahihi?",
+     "repair": "Sauti ipasavyo inasikika wazi bila kupiga kelele wala kunong'ona."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M4_UFS_IGNORE_MARKS",
+     "listen_for": [
+      "Niendelee bila kupumzika"
+     ],
+     "ask": "Soma tena: \"Ukifika kwenye koma, ufanye nini?\" Kwa nini \"Niendelee bila kupumzika\" si jibu sahihi?",
+     "repair": "Alama za uakifishi zinaonyesha mahali pa kupumzika: koma kidogo, kikomo muda mrefu zaidi."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.UFASAHA_VIPENGELE.M4_UFS_NO_GESTURE",
+     "listen_for": [
+      "kuangalia kitabu tu bila kuwaangalia wasikilizaji"
+     ],
+     "ask": "Wasikilizaji wanakuona ukisoma?",
+     "repair": "Msomaji mzuri huwaangalia wasikilizaji na kutumia ishara zifaazo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Taja vipengele viwili vya kusoma kwa ufasaha.",
+     "answer": "matamshi bora na kasi ifaayo",
+     "shows": "features"
+    },
+    {
+     "question": "Kusoma haraka sana ni ufasaha?",
+     "answer": "hapana",
+     "shows": "pace"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI",
+   "key_step": "The child reads a phrase as one breath, lets the marks set the pauses and the voice, and checks the listener understood.",
+   "floor": {
+    "prerequisite": "Reads short words with every sound clear.",
+    "question": "Soma: \"Mama anapika.\"",
+    "answer": "Mama anapika."
+   },
+   "representations": [
+    "the passage with phrase slashes",
+    "the marks . , ? ! circled in colour",
+    "a recording of the child played back"
+   ],
+   "steps": [
+    "Read the sentence silently first.",
+    "Find the marks.",
+    "Read phrase by phrase aloud.",
+    "Ask a listener one question about it."
+   ],
+   "contexts": [
+    "mavazi (clothes)",
+    "reading at the school assembly",
+    "reading a story to a younger sibling"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Je, umevaa koti lako leo?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kiulizi.",
+     "say": "Sauti yako inafanya nini hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the sentence aloud twice: once as a statement, once as the question."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_WORDBYWORD_T3",
+     "listen_for": [
+      "Mama ... alinunua ... sare ... mpya ... ya ... shule ... sokoni."
+     ],
+     "ask": "Ukisoma neno moja moja, msikilizaji anaelewa sentensi?",
+     "repair": "Usomaji wa ufasaha husoma kundi la maneno kwa pamoja, kama tunavyozungumza."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_RACE_T3",
+     "listen_for": [
+      "haraka iwezekanavyo"
+     ],
+     "ask": "Wasikilizaji waliweza kuelewa uliposoma haraka hivyo?",
+     "repair": "Kasi ifaayo ni ile ya kuzungumza: si haraka mno, si polepole mno."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_FLAT_T3",
+     "listen_for": [
+      "kwa sauti ileile ya sentensi ya kawaida"
+     ],
+     "ask": "Alama iliyo mwishoni mwa sentensi hii ni ipi?",
+     "repair": "Kiulizi (?) hupandisha sauti mwishoni; alama ya hisi (!) huonyesha hisia."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_NOPAUSE_T3",
+     "listen_for": [
+      "hapana mahali, unasoma moja kwa moja"
+     ],
+     "ask": "Koma inakuambia ufanye nini unaposoma?",
+     "repair": "Simama kidogo kwenye koma, na zaidi kwenye kikomo."
+    },
+    {
+     "code": "KISW.G4.KUSOMA.T3_KUSOMA_KWA_UFASAHA.KUSOMA_KWA_SAUTI.M4_UFS_SOUND_T3",
+     "listen_for": [
+      "langi"
+     ],
+     "ask": "Sikiliza tofauti kati ya maneno haya mawili. Yanatofautiana wapi?",
+     "repair": "Tamka \"rangi\" kama lilivyoandikwa; \"langi\" ni neno jingine au si neno."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sentensi \"Lo, viatu vyako vinang'aa sana!\" inasomwa kwa hisia kwa sababu ya alama ipi?",
+     "answer": "alama ya hisi",
+     "shows": "marks"
+    },
+    {
+     "question": "Kasi ifaayo ya kusoma ni ipi?",
+     "answer": "kasi ya kuzungumza",
+     "shows": "pace"
+    }
+   ]
+  }
+ ]
+}

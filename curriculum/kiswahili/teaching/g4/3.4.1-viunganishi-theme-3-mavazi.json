@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T3_VIUNGANISHI",
+ "title": "Viunganishi (Theme 3: Mavazi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI",
+   "key_step": "The child reads both parts and chooses the joining word by what the second part does to the first (adds, opposes, gives a reason, gives a result).",
+   "floor": {
+    "prerequisite": "Writes two short sentences.",
+    "question": "Andika sentensi mbili kuhusu chakula.",
+    "answer": "Ninapenda wali. Sipendi samaki."
+   },
+   "representations": [
+    "two sentence strips joined by a card",
+    "an arrow for cause and result",
+    "a chart: na, lakini, kwa sababu, kwa hiyo, au"
+   ],
+   "steps": [
+    "Read the two parts.",
+    "Ask: adds, opposes, reason or result?",
+    "Choose the joining word.",
+    "Read the joined sentence."
+   ],
+   "contexts": [
+    "getting dressed for school",
+    "a rainy day",
+    "shopping at the duka"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ninapenda chai ___ sipendi kahawa."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two parts.",
+     "say": "Sehemu ya pili inakubaliana au inapinga?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child chooses \"lakini\" and writes one sentence with \"kwa sababu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI.M4_CONJ_SWAP",
+     "listen_for": [
+      "kwa sababu"
+     ],
+     "ask": "Soma tena: \"Alitaka kuogelea, ___ ziwa lilikuwa na mawimbi makali.\" Kwa nini \"kwa sababu\" si jibu sahihi?",
+     "repair": "Kila kiunganishi kina kazi: \"lakini\" kinaonyesha kinyume, \"kwa sababu\" kinatoa sababu, \"ili\" kinaonyesha kusudi, \"na\" kinaongeza."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI.M4_CONJ_NOT",
+     "listen_for": [
+      "rafiki"
+     ],
+     "ask": "Soma tena: \"Juma ___ Otieno ni marafiki.\" Kwa nini \"rafiki\" si jibu sahihi?",
+     "repair": "Kiunganishi huunganisha maneno au sentensi, kama \"na\", \"lakini\" na \"kwa sababu\". Si nomino wala kitenzi."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI.M4_CONJ_NA_ALL",
+     "listen_for": [
+      "na"
+     ],
+     "ask": "Sehemu ya pili inakubaliana au inapingana na ya kwanza?",
+     "repair": "Sehemu ya pili inapingana na ya kwanza, kwa hiyo tumia lakini."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T3_VIUNGANISHI.VIUNGANISHI.M4_CONJ_REASON_RESULT",
+     "listen_for": [
+      "kwa hiyo"
+     ],
+     "ask": "Ni lipi lilitokea kwanza: kuugua au kutokuja?",
+     "repair": "Kuwa mgonjwa ni sababu, kwa hiyo tumia kwa sababu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Mvua ilinyesha ___ tukakaa ndani.",
+     "answer": "kwa hiyo",
+     "shows": "result"
+    },
+    {
+     "question": "Jaza: Chagua chai ___ maziwa.",
+     "answer": "au",
+     "shows": "choice"
+    }
+   ]
+  }
+ ]
+}

@@ -25,7 +25,7 @@ setFamilyMode('all');
 let failures;
 if (entry.checks === 'text') {
   const { checkEnglishFamily, checkTextForms } = await import(resolve(root, 'engine/scripts/english_checks.mjs'));
-  failures = [...checkTextForms(entry.families, entry.map.skills), ...entry.families.flatMap(f => checkEnglishFamily(f, 150))];
+  failures = [...checkTextForms(entry.families, entry.map.skills, entry.awaiting || []), ...entry.families.flatMap(f => checkEnglishFamily(f, 150))];
 } else {
   const { checkFamily } = await import(resolve(root, 'engine/scripts/family_checks.mjs'));
   failures = entry.families.flatMap(f => checkFamily(f));

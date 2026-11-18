@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI",
+ "title": "Barua ya Kirafiki (Theme 11: Mapato)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA",
+   "key_step": "The child plans barua ya kirafiki before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "mapato (income)",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Biashara Yangu Ndogo"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Biashara Yangu Ndogo\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_FORMAL_T11",
+     "listen_for": [
+      "Mheshimiwa Bwana,"
+     ],
+     "ask": "Unamwandikia nani? Ungezungumza naye hivi?",
+     "repair": "Barua ya kirafiki hutumia lugha ya kirafiki: Mpendwa rafiki, Wako akupendaye."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_NOASK_T11",
+     "listen_for": [
+      "Nataka kukueleza kuhusu safari yetu."
+     ],
+     "ask": "Umemuuliza rafiki yako hali yake?",
+     "repair": "Baada ya salamu, uliza hali ya rafiki yako kabla ya kueleza ujumbe."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_DATE_T11",
+     "listen_for": [
+      "mwishoni, baada ya jina"
+     ],
+     "ask": "Rafiki atajuaje barua iliandikwa lini?",
+     "repair": "Tarehe huandikwa chini ya anwani ya mwandishi, juu upande wa kulia."
+    },
+    {
+     "code": "KISW.G4.KUANDI.T11_BARUA_YA_KIRAFIKI.KUANDIKA_BARUA.M4_INS_SIGN_T11",
+     "listen_for": [
+      "Wako mtiifu, Bw. Juma Hamisi"
+     ],
+     "ask": "Rafiki yako anakuita kwa jina gani?",
+     "repair": "Barua ya kirafiki humalizika kwa \"Ni mimi rafiki yako,\" na jina la kwanza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua ya kirafiki kuhusu \"Biashara Yangu Ndogo\"?",
+     "answer": "Mpendwa rafiki yangu Otieno,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua ya kirafiki ina sehemu zipi?",
+     "answer": "anwani au kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

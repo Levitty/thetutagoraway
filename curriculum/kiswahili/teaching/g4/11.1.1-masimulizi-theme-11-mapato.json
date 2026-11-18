@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G4.KUSIKI.T11_MASIMULIZI",
+ "title": "Masimulizi (Theme 11: Mapato)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI",
+   "key_step": "The child listens for what the narration teaches, then tells his own in order with gestures that fit.",
+   "floor": {
+    "prerequisite": "Answers who and what after hearing a short story.",
+    "question": "Hadithi ilimhusu nani?",
+    "answer": "mhusika mkuu"
+   },
+   "representations": [
+    "a short narration read aloud",
+    "three picture cards to order",
+    "a mirror or a partner for gestures"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Say the message in one sentence.",
+    "Plan your story in three parts.",
+    "Tell it with matching gestures."
+   ],
+   "contexts": [
+    "mapato (income)",
+    "telling a story at the evening fire",
+    "the class sharing time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mama aliyeuza mboga sokoni na kuweka akiba"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the three picture cards.",
+     "say": "Ni kipi kilitokea kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the cards and retells the story with one gesture for each part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI.M4_MSM_DETAIL_T11",
+     "listen_for": [
+      "Mama aliuza sukumawiki sokoni."
+     ],
+     "ask": "Msimulizi alitaka tujifunze nini?",
+     "repair": "Ujumbe ni funzo la masimulizi yote; jambo moja ni maelezo tu."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI.M4_MSM_ORDER_T11",
+     "listen_for": [
+      "sehemu ya kusisimua zaidi"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Simulia kwa mpangilio: mwanzo, kati, mwisho."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI.M4_MSM_GESTURE_T11",
+     "listen_for": [
+      "kukunja uso na kuinamisha kichwa"
+     ],
+     "ask": "Uso wako unaonyesha hisia gani hapa?",
+     "repair": "Ishara na sura yako ziendane na unachosema."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI.M4_MSM_MIX_T11",
+     "listen_for": [
+      "Then tukaenda home, ilikuwa poa sana."
+     ],
+     "ask": "Ni neno lipi si la Kiswahili?",
+     "repair": "Simulia kwa Kiswahili sanifu: kisha, nyumbani, nzuri."
+    },
+    {
+     "code": "KISW.G4.KUSIKI.T11_MASIMULIZI.MASIMULIZI.M4_MSM_OFFTOPIC_T11",
+     "listen_for": [
+      "Siku nilipotazama mechi ya mpira"
+     ],
+     "ask": "Hadithi yako inahusianaje na mada?",
+     "repair": "Masimulizi yako yahusu mada uliyopewa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ujumbe wa masimulizi kuhusu mama aliyeuza mboga sokoni na kuweka akiba ni upi?",
+     "answer": "Tukiweka akiba kidogo kidogo, tunaweza kutimiza mahitaji yetu.",
+     "shows": "message"
+    },
+    {
+     "question": "Unaposimulia, unaanza na nini?",
+     "answer": "mwanzo: nani, wapi, lini",
+     "shows": "order"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI",
+ "title": "Nyakati na hali. (Theme 10: Kukabiliana na uhalifu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI",
+   "key_step": "The child reads the time word and gives the verb the matching marker: -li- past, -na- now, -ta- future.",
+   "floor": {
+    "prerequisite": "Finds the verb.",
+    "question": "Kitenzi ni kipi: \"Ninasoma.\"",
+    "answer": "ninasoma"
+   },
+   "representations": [
+    "a timeline: jana, leo, kesho",
+    "a verb with its marker coloured",
+    "three cards -li- -na- -ta-"
+   ],
+   "steps": [
+    "Find the time word.",
+    "Choose the marker.",
+    "Keep the person prefix.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "a school timetable",
+    "a journey to grandmother",
+    "market day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jana ni___soma."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Jana\".",
+     "say": "Ni wakati gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Jana nilisoma\" and the same with leo and kesho."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI.M4_NYA_NA_ALL",
+     "listen_for": [
+      "na"
+     ],
+     "ask": "Soma tena: \"Jana, Juma a___soma kitabu.\" Kwa nini \"na\" si jibu sahihi?",
+     "repair": "Wakati uliopita unatumia -li-: jana alisoma. Uliopo -na-: sasa anasoma. Ujao -ta-: kesho atasoma."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI.M4_NYA_SWAP",
+     "listen_for": [
+      "li"
+     ],
+     "ask": "Soma tena: \"Kesho, Wanjiru a___soma kitabu.\" Kwa nini \"li\" si jibu sahihi?",
+     "repair": "-li- ni kwa yaliyotokea. -ta- ni kwa yatakayotokea."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI.M4_NYA_PERSON",
+     "listen_for": [
+      "walisafiri"
+     ],
+     "ask": "Soma tena: \"Chagua kitenzi: Jana sisi ___ kwa basi.\" Kwa nini \"walisafiri\" si jibu sahihi?",
+     "repair": "Kitenzi kinahitaji nafsi na wakati: sisi tulisafiri, wao walisafiri, mimi nilisafiri."
+    },
+    {
+     "code": "KISW.G4.SARUFI.T10_NYAKATI_NA_HALI.NYAKATI.M4_NYA_TIME_WORD",
+     "listen_for": [
+      "alienda"
+     ],
+     "ask": "Neno gani linaonyesha wakati katika sentensi hii?",
+     "repair": "Kesho ni wakati ujao: -ta-. Atakwenda."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Sasa tu___cheza.",
+     "answer": "tunacheza",
+     "shows": "present"
+    },
+    {
+     "question": "Jaza: Kesho wa___fika.",
+     "answer": "watafika",
+     "shows": "future"
+    }
+   ]
+  }
+ ]
+}
