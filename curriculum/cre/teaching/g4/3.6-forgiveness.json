@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.FORGIVENESS",
+ "title": "Forgiveness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Forgiving never means a child must stay in danger: always add \"and tell a trusted adult\".",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE",
+   "key_step": "The child says why we forgive (God forgives us; it brings peace), that Matthew 5:39 teaches not to repay evil with evil, and that forgiving means letting go of revenge, not pretending, and still telling an adult when unsafe.",
+   "floor": {
+    "prerequisite": "Knows the story of the unforgiving servant.",
+    "question": "What did the unforgiving servant refuse to do?",
+    "answer": "Forgive a small debt"
+   },
+   "representations": [
+    "two hands: one tight fist (revenge), one open (forgive)",
+    "Matthew 5:39 written large",
+    "a story card of a playground quarrel"
+   ],
+   "steps": [
+    "Someone wrongs you.",
+    "Do not pay back evil with evil.",
+    "Let go of the wish to get even.",
+    "If it is unsafe, tell an adult."
+   ],
+   "contexts": [
+    "a classmate who spoils your drawing",
+    "a brother who takes your toy",
+    "a bully at break time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tight fist and an open hand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the fist.",
+     "say": "What does revenge do? What does the verse ask instead?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say do not pay back."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Matthew 5:39 under the open hand."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_REVENGE",
+     "listen_for": [
+      "Hit back so they learn"
+     ],
+     "ask": "Someone hits you. According to Matthew 5:39, what should you do?",
+     "repair": "Role-play walking away and telling the teacher."
+    },
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_WEAK",
+     "listen_for": [
+      "Yes, strong children hit back"
+     ],
+     "ask": "Is forgiving a sign of weakness?",
+     "repair": "Say that forgiving is a choice and that telling a teacher keeps you safe."
+    },
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_FORGET",
+     "listen_for": [
+      "To pretend it never happened"
+     ],
+     "ask": "What does it mean to forgive someone?",
+     "repair": "Ask what changes in us when we stop planning revenge."
+    },
+    {
+     "code": "CRES.G4.THE_LI.FORGIVENESS.FORGIVE.M_C4_FOR_CHEEK_LITERAL",
+     "listen_for": [
+      "Stand still and let him keep hitting"
+     ],
+     "ask": "What does \"turn the other cheek\" (Matthew 5:39) ask a child to do when hit by a bully?",
+     "repair": "Explain: the verse is about not paying back. A child still goes to a safe place and tells a teacher."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Someone hits you. What does Matthew 5:39 teach?",
+     "answer": "Do not pay back evil with evil",
+     "shows": "non-revenge"
+    },
+    {
+     "question": "Does forgiving mean pretending it never happened?",
+     "answer": "No: it means letting go of revenge",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

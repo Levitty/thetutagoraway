@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G4.THE_CH.THE_EARLY_CHURCH",
+ "title": "The Early Church",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES",
+   "key_step": "The child names the twelve disciples of Matthew 10:2-4 in pairs (Peter and Andrew, James and John, Philip and Bartholomew, Thomas and Matthew, James son of Alphaeus and Thaddaeus, Simon the Zealot and Judas Iscariot) and knows Paul was not one of them.",
+   "floor": {
+    "prerequisite": "Knows Jesus called fishermen.",
+    "question": "Whom did Jesus call by the lake?",
+    "answer": "Peter and Andrew (fishermen)"
+   },
+   "representations": [
+    "twelve name cards in six pairs",
+    "Matthew 10:2-4 written large",
+    "a counting song"
+   ],
+   "steps": [
+    "Read Matthew 10:2-4.",
+    "Say the names in pairs.",
+    "Count to twelve.",
+    "Say who is not in the list (Paul)."
+   ],
+   "contexts": [
+    "a Sunday school name game",
+    "a church named after an apostle",
+    "a class of twelve learners"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write six pairs of boxes on the board."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first pair.",
+     "say": "Who were the two brothers called first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Peter and Andrew."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the other pairs together and count to twelve."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_PAUL",
+     "listen_for": [
+      "Paul"
+     ],
+     "ask": "Who was one of the twelve disciples?",
+     "repair": "Read the list in Matthew 10:2-4 and look for Paul."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_BROTHERS",
+     "listen_for": [
+      "John's"
+     ],
+     "ask": "Whose brother was Andrew?",
+     "repair": "Read Matthew 10:2: \"Simon called Peter and his brother Andrew\"."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_COUNT",
+     "listen_for": [
+      "Seven"
+     ],
+     "ask": "How many disciples did Jesus choose?",
+     "repair": "Count the names in Matthew 10:2-4."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES.M_C4_TD_MATTHEW_FISHER",
+     "listen_for": [
+      "A fisherman"
+     ],
+     "ask": "What was Matthew's work before he followed Jesus (Matthew 10:3)?",
+     "repair": "Read Matthew 10:3 and 9:9. Make two groups: fishermen (Peter, Andrew, James, John) and Matthew the tax collector."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many disciples did Jesus choose?",
+     "answer": "Twelve",
+     "shows": "count"
+    },
+    {
+     "question": "Was Paul one of the twelve?",
+     "answer": "No",
+     "shows": "list"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS",
+   "key_step": "The child describes Acts 2:38-41: after the Holy Spirit came, Peter preached, told the people to repent and be baptised for the forgiveness of sins, and about three thousand joined the believers in Jerusalem.",
+   "floor": {
+    "prerequisite": "Knows the Holy Spirit came at Pentecost.",
+    "question": "What happened on the day of Pentecost?",
+    "answer": "The Holy Spirit came on the disciples"
+   },
+   "representations": [
+    "a crowd drawn around Peter",
+    "Acts 2:38 written large",
+    "the number 3,000 in big digits"
+   ],
+   "steps": [
+    "The Holy Spirit comes.",
+    "Peter preaches to the crowd.",
+    "He says repent and be baptised.",
+    "About three thousand believe."
+   ],
+   "contexts": [
+    "a crusade in a town stadium",
+    "a new church starting in an estate",
+    "a baptism class"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a crowd and Peter standing up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Peter.",
+     "say": "What did Peter tell them to do first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say repent."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Acts 2:38 and the number 3,000."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_WHO",
+     "listen_for": [
+      "Jesus"
+     ],
+     "ask": "Who preached to the crowd in Acts 2?",
+     "repair": "Read Acts 2:14 and 2:38."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_NUMBER",
+     "listen_for": [
+      "Twelve"
+     ],
+     "ask": "About how many people joined the believers that day?",
+     "repair": "Read Acts 2:41."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_ONLY_BAPTISM",
+     "listen_for": [
+      "Only to be baptised"
+     ],
+     "ask": "What did Peter tell the people to do first, in Acts 2:38?",
+     "repair": "Read the verse and note the first word, repent."
+    },
+    {
+     "code": "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS.M_C4_CB_PLACE",
+     "listen_for": [
+      "Rome"
+     ],
+     "ask": "In which city did the church begin on the day of Pentecost (Acts 2)?",
+     "repair": "Read Acts 2:5 (\"staying in Jerusalem\") and mark Jerusalem on a map. Antioch comes later."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who preached on the day of Pentecost?",
+     "answer": "Peter",
+     "shows": "preacher"
+    },
+    {
+     "question": "About how many joined the believers?",
+     "answer": "Three thousand",
+     "shows": "number"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA",
+ "title": "Healing of Blind Bartimaeus Healing of",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS",
+   "key_step": "The child retells Mark 10:46-52: blind Bartimaeus by the road out of Jericho shouts \"Jesus, Son of David, have mercy on me\", shouts louder when told to be quiet, throws off his cloak, asks to see, is healed by his faith and follows Jesus.",
+   "floor": {
+    "prerequisite": "Knows God heals.",
+    "question": "Who healed Naaman?",
+    "answer": "God"
+   },
+   "representations": [
+    "a road out of Jericho with a man by the side",
+    "a cloak thrown aside",
+    "Mark 10:52 written large"
+   ],
+   "steps": [
+    "Where was Bartimaeus sitting?",
+    "What did he shout, and what did the crowd say?",
+    "What did Jesus ask him?",
+    "What happened and what did he do next?"
+   ],
+   "contexts": [
+    "a child who keeps asking for help",
+    "a clinic visit when someone is sick",
+    "praying for a sick grandparent"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a road with a crowd and a man sitting by it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the crowd.",
+     "say": "The crowd says be quiet. What does Bartimaeus do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he shouts louder."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"Your faith has healed you\" (Mark 10:52)."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_QUIET",
+     "listen_for": [
+      "He kept quiet"
+     ],
+     "ask": "What did Bartimaeus do when many people told him to be quiet?",
+     "repair": "Read Mark 10:48 and find the word \"louder\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_TOUCH",
+     "listen_for": [
+      "He touched his eyes"
+     ],
+     "ask": "How did Jesus heal Bartimaeus, according to Mark 10:52?",
+     "repair": "Read Mark 10:52 and look for any touching."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_WENT_HOME",
+     "listen_for": [
+      "Went home to his family"
+     ],
+     "ask": "What did Bartimaeus do after he could see?",
+     "repair": "Read the last words of Mark 10:52."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS.M_C4_BART_TOWN",
+     "listen_for": [
+      "In Nazareth"
+     ],
+     "ask": "Where was Jesus when he healed Bartimaeus (Mark 10:46)?",
+     "repair": "Read Mark 10:46 and point at Jericho on a map; say \"blind beggar by the Jericho road\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Bartimaeus do when told to be quiet?",
+     "answer": "He shouted louder",
+     "shows": "faith"
+    },
+    {
+     "question": "What did he do after he could see?",
+     "answer": "Followed Jesus along the road",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

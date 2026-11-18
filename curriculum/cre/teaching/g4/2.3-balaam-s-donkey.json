@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_HO.BALAAM_S_DONKEY",
+ "title": "Balaam’s Donkey",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM",
+   "key_step": "The child retells Numbers 22: Balak sends for Balaam to curse Israel, God says no, the donkey sees the angel three times and is beaten, the Lord opens her mouth and then Balaam's eyes, and Balaam says only what God tells him.",
+   "floor": {
+    "prerequisite": "Knows a story where someone disobeyed God and was stopped.",
+    "question": "What happened to Jonah when he ran away from God?",
+    "answer": "He was swallowed by a big fish"
+   },
+   "representations": [
+    "a road drawn with three places where the donkey stopped",
+    "pictures of the donkey, the angel and Balaam",
+    "Numbers 22:28 and 22:31 on cards"
+   ],
+   "steps": [
+    "Who sent for Balaam and why?",
+    "What did the donkey see that Balaam did not?",
+    "What did Balaam do to the donkey, and what did the Lord do?",
+    "What did Balaam learn: say only what God says."
+   ],
+   "contexts": [
+    "a child who will not listen to a warning",
+    "a bodaboda rider ignoring a road sign",
+    "kindness to animals at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a narrow road between two walls with an angel standing in it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the angel.",
+     "say": "Who saw the angel first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the donkey."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Numbers 22:31: the Lord opened Balaam's eyes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_SAW_FIRST",
+     "listen_for": [
+      "Balaam"
+     ],
+     "ask": "Who saw the angel of the Lord first?",
+     "repair": "Read Numbers 22:23 and 22:31 side by side."
+    },
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_CURSE_OK",
+     "listen_for": [
+      "Curse them, for money"
+     ],
+     "ask": "What was Balaam told to do about the Israelites?",
+     "repair": "Read Numbers 22:12 and 22:20 aloud."
+    },
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_STUBBORN",
+     "listen_for": [
+      "Because she was stubborn"
+     ],
+     "ask": "Why did the donkey turn aside and lie down?",
+     "repair": "Read Numbers 22:33 where the angel explains."
+    },
+    {
+     "code": "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM.M_C4_BAL_DONKEY_SELF",
+     "listen_for": [
+      "Donkeys could talk in those days"
+     ],
+     "ask": "How was the donkey able to speak to Balaam (Numbers 22:28)?",
+     "repair": "Read Numbers 22:28: \"the Lord opened the donkey's mouth\". It was a miracle, not a fable."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who saw the angel of the Lord first?",
+     "answer": "The donkey",
+     "shows": "story detail"
+    },
+    {
+     "question": "What did God tell Balaam about the Israelites?",
+     "answer": "Not to curse them, and to say only what God told him",
+     "shows": "obedience"
+    }
+   ]
+  }
+ ]
+}

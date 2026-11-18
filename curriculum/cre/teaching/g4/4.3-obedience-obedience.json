@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE",
+ "title": "Obedience Obedience",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE",
+   "key_step": "The child reads Exodus 20:12 and gives its promise (a long life in the land), says why children obey parents, teachers and school rules, and names results of disobedience even when no one sees.",
+   "floor": {
+    "prerequisite": "Knows reasons for obeying teachers.",
+    "question": "Why do we obey the teacher at school?",
+    "answer": "To learn safely (it keeps order)"
+   },
+   "representations": [
+    "Exodus 20:12 written large",
+    "a chart: rule, why it helps, what happens if broken",
+    "school rules on a poster"
+   ],
+   "steps": [
+    "Read Exodus 20:12.",
+    "Say the promise.",
+    "Pick a school rule and say why it helps.",
+    "Say what follows when it is broken."
+   ],
+   "contexts": [
+    "the school bell rule",
+    "helping at home when asked",
+    "a road safety rule"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Exodus 20:12 and underline \"honour\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the school rules poster.",
+     "say": "Pick one rule. What happens if it is broken?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to give a result."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the chart together."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_IF_AGREE",
+     "listen_for": [
+      "Only when I agree with them"
+     ],
+     "ask": "When should a child obey his parents and teachers?",
+     "repair": "Read Exodus 20:12 and Ephesians 6:1."
+    },
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_NO_RESULT",
+     "listen_for": [
+      "Nothing, if the teacher is not looking"
+     ],
+     "ask": "What may follow disobeying school rules?",
+     "repair": "List the results: danger, lost trust, punishment."
+    },
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_RULES_HOME",
+     "listen_for": [
+      "Only those from my parents"
+     ],
+     "ask": "Whose instructions should a child follow at school?",
+     "repair": "Link school rules with safe, orderly learning."
+    },
+    {
+     "code": "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE.M_C4_OB_PROMISE",
+     "listen_for": [
+      "That they will be rich"
+     ],
+     "ask": "What does Exodus 20:12 promise to those who honour their parents?",
+     "repair": "Read the second half of Exodus 20:12 aloud twice and underline \"live long\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Exodus 20:12 promise?",
+     "answer": "A long life in the land",
+     "shows": "promise"
+    },
+    {
+     "question": "Name one result of disobeying a school rule.",
+     "answer": "Getting hurt (being punished, losing trust)",
+     "shows": "result"
+    }
+   ]
+  }
+ ]
+}

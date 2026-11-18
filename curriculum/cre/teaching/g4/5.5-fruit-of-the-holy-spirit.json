@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT",
+ "title": "Fruit of the Holy Spirit",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT",
+   "key_step": "The child lists the nine fruit of the Spirit (Galatians 5:22-23) and describes how each can show at home, school and church.",
+   "floor": {
+    "prerequisite": "Can name five fruit of the Spirit.",
+    "question": "Name three fruit of the Spirit.",
+    "answer": "love, joy, peace (any three)"
+   },
+   "representations": [
+    "a tree with nine fruit labelled",
+    "Galatians 5:22-23 written large",
+    "situation cards"
+   ],
+   "steps": [
+    "Read Galatians 5:22-23.",
+    "Count the nine fruit.",
+    "Pick a situation card.",
+    "Say which fruit fits and how it shows."
+   ],
+   "contexts": [
+    "sharing a snack",
+    "waiting your turn at the tap",
+    "being gentle with a younger sibling"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree with nine empty fruit."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first fruit.",
+     "say": "What is the first fruit of the Spirit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say love."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the other eight from the verse."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_FOOD",
+     "listen_for": [
+      "Mangoes and bananas"
+     ],
+     "ask": "What are the fruit of the Spirit in Galatians 5:22-23?",
+     "repair": "Say that fruit here means what grows in a person's life."
+    },
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_BAD",
+     "listen_for": [
+      "Jealousy"
+     ],
+     "ask": "Which of these is a fruit of the Spirit?",
+     "repair": "Sort cards into fruit and not fruit."
+    },
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_CHURCH_ONLY",
+     "listen_for": [
+      "Only in church"
+     ],
+     "ask": "Where should the fruit of the Spirit show?",
+     "repair": "Give examples at a football game."
+    },
+    {
+     "code": "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT.M_C4_FR_COUNT",
+     "listen_for": [
+      "Five"
+     ],
+     "ask": "How many fruit of the Spirit are named in Galatians 5:22-23?",
+     "repair": "Count them on the fingers from the verse: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the fruit of the Spirit that means waiting without getting angry.",
+     "answer": "Patience",
+     "shows": "fruit"
+    },
+    {
+     "question": "Where should the fruit of the Spirit show?",
+     "answer": "Everywhere: home, school and church",
+     "shows": "application"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD",
+ "title": "The Inspired Word of God",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring a Bible with a contents page for every pair. Sing a books-of-the-Bible song the church uses locally (teacher to choose).",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS",
+   "key_step": "The child sorts well-known books into the Old Testament (Genesis, Exodus, Psalms, Isaiah) and the New Testament (Matthew, Luke, John, Acts), knows Genesis opens the Bible and Matthew the New Testament, and finds a book from the contents page.",
+   "floor": {
+    "prerequisite": "Can name the four Gospels.",
+    "question": "Name the four Gospels.",
+    "answer": "Matthew, Mark, Luke and John"
+   },
+   "representations": [
+    "a Bible contents page",
+    "two shelves drawn on the board: Old Testament, New Testament",
+    "book name cards"
+   ],
+   "steps": [
+    "Open the contents page.",
+    "Find where the New Testament starts (Matthew).",
+    "Sort the cards onto two shelves.",
+    "Say: Genesis first, Revelation last."
+   ],
+   "contexts": [
+    "a Sunday school Bible quiz",
+    "finding a reading in church",
+    "a family Bible at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two shelves: Old Testament and New Testament."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"Psalms\".",
+     "say": "Which shelf does Psalms go on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the contents page to check."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_NT_IN_OT",
+     "listen_for": [
+      "Matthew"
+     ],
+     "ask": "Which book is in the Old Testament?",
+     "repair": "Draw the Bible in two halves and sort book names on cards."
+    },
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_OT_IN_NT",
+     "listen_for": [
+      "Psalms"
+     ],
+     "ask": "Which book is in the New Testament?",
+     "repair": "Sort the cards again and say which half each belongs to."
+    },
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_FIRST",
+     "listen_for": [
+      "Matthew"
+     ],
+     "ask": "Which is the first book of the Bible?",
+     "repair": "Open a Bible together at the first page."
+    },
+    {
+     "code": "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS.M_C4_BK_COUNT",
+     "listen_for": [
+      "27"
+     ],
+     "ask": "How many books are in the Old Testament in the Protestant Bible?",
+     "repair": "Remember: the Old Testament is the older, longer part: 39. The New Testament: 27. Check on the contents page."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is Acts in the Old or the New Testament?",
+     "answer": "New Testament",
+     "shows": "sorting"
+    },
+    {
+     "question": "Which is the first book of the Bible?",
+     "answer": "Genesis",
+     "shows": "first book"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION",
+ "title": "Samson kills a Lion",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON",
+   "key_step": "The child retells Judges 14:5-9: on the way to Timnah a young lion roars at Samson, the Spirit of the Lord comes on him, he tears it with his bare hands, tells no one, and later finds bees and honey in it; his strength came from God.",
+   "floor": {
+    "prerequisite": "Knows a story of God's power to save.",
+    "question": "Who saved the three Hebrew men in the fire?",
+    "answer": "God"
+   },
+   "representations": [
+    "a road to Timnah drawn with a lion by the vineyard",
+    "Judges 14:6 written large",
+    "a honeycomb picture"
+   ],
+   "steps": [
+    "Where was Samson going?",
+    "What attacked him?",
+    "What came upon him and what did he do?",
+    "What did he find later, and did he tell?"
+   ],
+   "contexts": [
+    "a herder in Samburu facing a wild animal",
+    "a child facing a hard exam",
+    "a family facing a long drought"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Judges 14:6: \"The Spirit of the Lord came powerfully upon him\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words \"Spirit of the Lord\".",
+     "say": "Where did Samson's strength come from?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say from God's Spirit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: bare hands, God's power."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_WEAPON",
+     "listen_for": [
+      "With a sword"
+     ],
+     "ask": "How did Samson kill the lion in Judges 14?",
+     "repair": "Read Judges 14:6 and look for any weapon."
+    },
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_OWN_STRENGTH",
+     "listen_for": [
+      "From his own muscles alone"
+     ],
+     "ask": "Where did Samson's strength come from in this story?",
+     "repair": "Read the words \"the Spirit of the Lord came powerfully upon him\"."
+    },
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_TOLD",
+     "listen_for": [
+      "He told them everything at once"
+     ],
+     "ask": "What did Samson tell his parents about the lion?",
+     "repair": "Read Judges 14:6 to the end of the verse."
+    },
+    {
+     "code": "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON.M_C4_SAM_HONEY_TOLD",
+     "listen_for": [
+      "That it came from the dead lion"
+     ],
+     "ask": "When Samson gave his parents honey (Judges 14:9), what did he tell them?",
+     "repair": "Read Judges 14:9 slowly; stop at \"he did not tell them\". Ask what the verse says, not what he should have done."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did Samson kill the lion?",
+     "answer": "With his bare hands",
+     "shows": "story detail"
+    },
+    {
+     "question": "Where did Samson's strength come from?",
+     "answer": "The Spirit of the Lord",
+     "shows": "God's power"
+    }
+   ]
+  }
+ ]
+}

@@ -24,10 +24,11 @@ function allCodes() {
 }
 
 // dir: 'science' | 'integrated_science'; subject: 'science' | 'integratedscience'; noFamilies: skill codes known to have no family yet.
-export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5 }) {
+// notTested: the subject's own rule for outcomes seen in class rather than asked (Social Studies adds practical tasks, 18 Nov 2026).
+export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = [], minDown = 0.5, notTested = NOT_TESTED }) {
   const source = J(`curriculum/${dir}/g${grade}.json`);
   const lib = J(`engine/data/curriculum/${subject}.g${grade}.misconceptions.json`);
-  const own = `${source.sub_strands[0].code.split('.').slice(0, 2).join('.')}.`;
+  const own = `${(source.sub_strands.find(s => s.skills?.length)?.skills[0].code || source.sub_strands[0].code).split('.').slice(0, 2).join('.')}.`;   // the skills' own prefix (CRE skills are CRES.G<n>.)
   const packDir = new URL(`curriculum/${dir}/teaching/g${grade}/`, ROOT);
   const packs = readdirSync(packDir).filter(f => f.endsWith('.json')).map(f => J(`curriculum/${dir}/teaching/g${grade}/${f}`));
   const skills = source.sub_strands.flatMap(s => s.skills);
@@ -50,7 +51,7 @@ export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = 
   test(`${label}: every testable official outcome has a skill; only attitude outcomes are left out`, () => {
     for (const s of source.sub_strands) {
       const covered = new Set(s.skills.flatMap(k => k.outcomes));
-      const left = s.outcomes.filter(o => !covered.has(o.code) && !NOT_TESTED.test(o.text));
+      const left = s.outcomes.filter(o => !covered.has(o.code) && !notTested.test(o.text.trim()));
       assert.deepEqual(left.map(o => o.code), [], `${s.code}: outcomes with no skill`);
       assert.ok(s.skills.length, `${s.code}: no skills`);
     }

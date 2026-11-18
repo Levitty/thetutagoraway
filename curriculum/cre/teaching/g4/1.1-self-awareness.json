@@ -1,0 +1,279 @@
+{
+ "sub_strand": "CRE.G4.CREATI.SELF_AWARENESS",
+ "title": "Self-awareness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep it personal and kind: a child who is sad or angry at home is not asked to share in front of the class. Psalm 139:13-14 and Genesis 1:27 on the board all week.",
+ "skills": [
+  {
+   "skill": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION",
+   "key_step": "The child says that God made him or her on purpose (Psalm 139:13-14), in God's image (Genesis 1:27), and that every other child is special in the same way.",
+   "floor": {
+    "prerequisite": "Knows God made Adam and Eve.",
+    "question": "Who made the first man and woman?",
+    "answer": "God"
+   },
+   "representations": [
+    "Psalm 139:13-14 written large",
+    "a hand-print wall where no two prints are the same",
+    "a picture of a potter shaping a pot"
+   ],
+   "steps": [
+    "Read Psalm 139:13-14 together.",
+    "Ask who knit the child together.",
+    "Read Genesis 1:27: made in God's image.",
+    "Say: special does not mean better than others."
+   ],
+   "contexts": [
+    "a class hand-print wall",
+    "twins in the class who are still different",
+    "a newborn baby in a family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"fearfully and wonderfully made\" (Psalm 139:14)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hand-prints on the wall.",
+     "say": "Are any two the same? Who made each of us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God made each one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: God made me, and God made you."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_BETTER",
+     "listen_for": [
+      "You are better than other children"
+     ],
+     "ask": "What does it mean that you are God's special creation?",
+     "repair": "Say that every child is special in the same way, and ask each child to name one thing that makes a classmate special."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_ACCIDENT",
+     "listen_for": [
+      "By chance, with no plan"
+     ],
+     "ask": "According to Psalm 139:13-14, how did God make you?",
+     "repair": "Read Psalm 139:13-14 slowly and ask who is doing the knitting."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_FIRST_ONLY",
+     "listen_for": [
+      "God made only the first man and woman, and I came from my parents only"
+     ],
+     "ask": "Who made you, according to the Bible?",
+     "repair": "Link Genesis 1:27 (\"God created mankind in his own image\") to Psalm 139:13 about each person."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION.M_C4_UNIQ_LOOKS",
+     "listen_for": [
+      "People have the same face as God"
+     ],
+     "ask": "What does it mean that people are made in the image of God (Genesis 1:27)?",
+     "repair": "Show a photo and then a kind act: we show God's image by how we love, not by our faces. Every skin colour carries God's image."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who made you, according to Psalm 139:13?",
+     "answer": "God",
+     "shows": "creator"
+    },
+    {
+     "question": "Does being God's special creation make you better than other children?",
+     "answer": "No: God made every child special",
+     "shows": "equal worth"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS",
+   "key_step": "The child names good thoughts and feelings, says that anger is not itself a sin but must not lead to sin or be kept overnight (Ephesians 4:26), and that Christians rejoice in the Lord always (Philippians 4:4).",
+   "floor": {
+    "prerequisite": "Can say how he or she feels when happy or sad.",
+    "question": "Name one feeling you have when you are given a gift.",
+    "answer": "happy (glad, thankful)"
+   },
+   "representations": [
+    "faces showing happy, sad, angry and calm",
+    "Ephesians 4:26 and Philippians 4:4 on flash cards",
+    "a sun going down drawn on the board"
+   ],
+   "steps": [
+    "Name feelings from the faces.",
+    "Read Ephesians 4:26: anger is not a sin, but do not sin in anger.",
+    "Settle anger the same day.",
+    "Read Philippians 4:4: rejoice in the Lord always, not only on good days."
+   ],
+   "contexts": [
+    "a quarrel at break time",
+    "a lost game in a football match",
+    "a sad day when a pet dies"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"In your anger do not sin\" (Ephesians 4:26) and draw a setting sun."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sun.",
+     "say": "What should you do with anger before the sun goes down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say make peace, settle it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: feel it, do not sin, settle it today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_ANGER_SIN",
+     "listen_for": [
+      "Never feel angry at all"
+     ],
+     "ask": "What does Ephesians 4:26 say about anger?",
+     "repair": "Read the verse: it says \"in your anger do not sin\". Ask what the angry child can do instead of hitting or shouting."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_KEEP_ANGER",
+     "listen_for": [
+      "Keep it and pay the person back later"
+     ],
+     "ask": "What should you do about anger, according to Ephesians 4:26?",
+     "repair": "Role-play saying sorry or forgiving before bedtime."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_JOY_GOOD_TIMES",
+     "listen_for": [
+      "Rejoice only when things go well"
+     ],
+     "ask": "What does Philippians 4:4 tell us to do?",
+     "repair": "Ask whether we can be thankful to God even on a hard day, and why."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS.M_C4_FEEL_SUN",
+     "listen_for": [
+      "Go to bed before sunset"
+     ],
+     "ask": "What does \"do not let the sun go down while you are still angry\" (Ephesians 4:26) teach?",
+     "repair": "Ask: what happens at sunset? The day ends. So the verse says end your anger before the day ends."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is it a sin to feel angry, according to Ephesians 4:26?",
+     "answer": "No, but we must not sin when angry",
+     "shows": "anger and sin"
+    },
+    {
+     "question": "When does Philippians 4:4 say we should rejoice in the Lord?",
+     "answer": "Always",
+     "shows": "rejoice always"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES",
+   "key_step": "The child lists choices a child makes each day, gives the result of each, and chooses by asking what pleases God, even when friends choose differently.",
+   "floor": {
+    "prerequisite": "Can say what Adam and Eve chose and what followed.",
+    "question": "What happened after Adam and Eve disobeyed God?",
+    "answer": "They were sent out of the garden (they hid, they suffered)"
+   },
+   "representations": [
+    "a choice and its result as two linked boxes",
+    "a \"road with two paths\" drawing",
+    "story cards of children choosing"
+   ],
+   "steps": [
+    "List choices a child makes in one day.",
+    "For each, say what follows.",
+    "Ask: would God be pleased?",
+    "Choose the right path even if friends choose another."
+   ],
+   "contexts": [
+    "being asked to skip class",
+    "finding money on the school path",
+    "choosing a friend at break time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a road that splits into two paths."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the place where the road splits.",
+     "say": "Your friends go left to skip class. Which path pleases God?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose and give a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the result at the end of each path."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_NO_RESULT",
+     "listen_for": [
+      "There is no result because nobody saw"
+     ],
+     "ask": "Kamau takes a pencil that is not his and nobody sees. What is true?",
+     "repair": "List the results of one choice: for the child, for the owner, and before God."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_FRIENDS",
+     "listen_for": [
+      "Do what my friends do"
+     ],
+     "ask": "Your friends tell you to skip class. How do you choose what to do?",
+     "repair": "Role-play a polite NO and walking to class."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_ONLY_BIG",
+     "listen_for": [
+      "Only deciding which school to attend"
+     ],
+     "ask": "Which of these is a choice a child makes?",
+     "repair": "Make a list of the choices in one school morning."
+    },
+    {
+     "code": "CRES.G4.CREATI.SELF_AWARENESS.CHOICES.M_C4_CHO_LUCK",
+     "listen_for": [
+      "Bad luck"
+     ],
+     "ask": "Achieng did not study and failed her test. Why did she fail?",
+     "repair": "Draw two arrows from one choice to its result. Ask the child to finish three such pairs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kamau takes a pencil that is not his and nobody sees. Is there a result?",
+     "answer": "Yes: he did wrong and he knows it",
+     "shows": "results"
+    },
+    {
+     "question": "How should you choose when friends choose wrong?",
+     "answer": "Choose what pleases God",
+     "shows": "guided choice"
+    }
+   ]
+  }
+ ]
+}

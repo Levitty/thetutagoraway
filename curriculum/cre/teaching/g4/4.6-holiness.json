@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.CHRIST.HOLINESS",
+ "title": "Holiness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.CHRIST.HOLINESS.HOLINESS",
+   "key_step": "The child says that the body is a temple of the Holy Spirit (1 Corinthians 6:19-20) and gives ways to honour God with it: clean words, good places, kind hands, keeping away from what leads to sin.",
+   "floor": {
+    "prerequisite": "Knows the Holy Spirit helps a Christian.",
+    "question": "Name one work of the Holy Spirit.",
+    "answer": "Guides (teaches, comforts)"
+   },
+   "representations": [
+    "a body outline with labels",
+    "1 Corinthians 6:19 written large",
+    "a picture of a clean church building"
+   ],
+   "steps": [
+    "Read 1 Corinthians 6:19.",
+    "The temple here is your body.",
+    "Name ways to honour God with hands, mouth, feet.",
+    "Keep away from places that lead to sin."
+   ],
+   "contexts": [
+    "a place where older boys smoke",
+    "kind words at home",
+    "washing and caring for oneself"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a body outline and write \"temple\" across it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mouth.",
+     "say": "How can you honour God with your mouth?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say kind, true words."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write good uses beside the hands and feet too."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_MY_BODY",
+     "listen_for": [
+      "It is mine, to do what I want"
+     ],
+     "ask": "What does 1 Corinthians 6:19-20 say about your body?",
+     "repair": "Read the verse and the words \"you are not your own\"."
+    },
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_BUILDING",
+     "listen_for": [
+      "The church building"
+     ],
+     "ask": "In 1 Corinthians 6:19, what is the temple?",
+     "repair": "Read the verse again: \"your bodies are temples\"."
+    },
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_TEST",
+     "listen_for": [
+      "Go along and just watch"
+     ],
+     "ask": "Your friends go to a place where children smoke. What is wise?",
+     "repair": "Link with Joseph, who ran."
+    },
+    {
+     "code": "CRES.G4.CHRIST.HOLINESS.HOLINESS.M_C4_HOL_FOOD_ONLY",
+     "listen_for": [
+      "Only eating well"
+     ],
+     "ask": "Which of these honours God with your body?",
+     "repair": "Make a body outline and write good uses beside each part: hands to help, mouth to speak kindly, feet to go to good places."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In 1 Corinthians 6:19, what is the temple of the Holy Spirit?",
+     "answer": "Your body",
+     "shows": "verse"
+    },
+    {
+     "question": "Your friends go where children smoke. What is wise?",
+     "answer": "Keep away",
+     "shows": "holiness"
+    }
+   ]
+  }
+ ]
+}

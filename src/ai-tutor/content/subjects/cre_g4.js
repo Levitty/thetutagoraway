@@ -8,6 +8,7 @@ import { FAMILIES as B } from '../families/cre_g4_b.js';
 import { FAMILIES as Cc } from '../families/cre_g4_c.js';
 import { FAMILIES as D } from '../families/cre_g4_d.js';
 import { SIGNED } from '../families/cre_g4_signed.js';
+import { AWAITING } from '../families/cre_g4_awaiting.js';
 
 export default {
   subject: 'cre', grade: 4, prefix: 'CRES',
@@ -17,6 +18,7 @@ export default {
   families: [...A, ...B, ...Cc, ...D],                          // add each family file you write: [...A, ...B]
   familyFiles: ['cre_g4_a.js', 'cre_g4_b.js', 'cre_g4_c.js', 'cre_g4_d.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'cre_g4_signed.js',
+  awaiting: AWAITING,                        // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: 'family',                          // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'cre4.',          // every family id starts with this
   marker: null,                            // 'text' when answers are marked as words by answerCheckText.js

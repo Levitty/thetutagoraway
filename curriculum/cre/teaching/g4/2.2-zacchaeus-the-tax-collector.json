@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC",
+ "title": "Zacchaeus the Tax Collector",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS",
+   "key_step": "The child retells Luke 19:2-10: a rich chief tax collector climbs a tree to see Jesus, Jesus goes to his house, the people grumble, Zacchaeus gives half to the poor and pays back four times what he cheated; repenting means turning from wrong.",
+   "floor": {
+    "prerequisite": "Knows that taking what belongs to others is wrong.",
+    "question": "Is it right to keep money that belongs to someone else?",
+    "answer": "No"
+   },
+   "representations": [
+    "a drawing of a crowd and a man in a tree",
+    "a two-column chart: Zacchaeus before and after",
+    "Luke 19:8 on a card"
+   ],
+   "steps": [
+    "Who was Zacchaeus and why was he disliked?",
+    "Why did he climb the tree?",
+    "What did Jesus say and what did the people say?",
+    "What did Zacchaeus promise: half to the poor, four times back."
+   ],
+   "contexts": [
+    "a market trader who overcharges",
+    "a child who returns change wrongly given",
+    "a matatu tout who keeps a passenger's change"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a crowd and a tree."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the man in the tree.",
+     "say": "Why is he up there?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he was short and wanted to see Jesus."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"before\" and \"after\" and fill in how he changed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_NUMBERS",
+     "listen_for": [
+      "All that he owned"
+     ],
+     "ask": "What did Zacchaeus promise to give to the poor?",
+     "repair": "Read Luke 19:8 and underline half and four times."
+    },
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_CROWD_GLAD",
+     "listen_for": [
+      "They were glad and thanked Jesus"
+     ],
+     "ask": "What did the people say when Jesus went to Zacchaeus' house?",
+     "repair": "Read Luke 19:7 and ask why they grumbled."
+    },
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_SORRY_ONLY",
+     "listen_for": [
+      "To say sorry in words and go on as before"
+     ],
+     "ask": "What does it mean to repent?",
+     "repair": "Ask what Zacchaeus did that showed he meant it."
+    },
+    {
+     "code": "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS.M_C4_ZAC_TREE_WHY",
+     "listen_for": [
+      "To hide from Jesus"
+     ],
+     "ask": "Why did Zacchaeus climb the sycamore-fig tree (Luke 19:3-4)?",
+     "repair": "Read Luke 19:3-4 aloud and act it: a short child behind a crowd cannot see. Zacchaeus wanted to see Jesus."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How much did Zacchaeus promise to pay back to anyone he cheated?",
+     "answer": "Four times the amount",
+     "shows": "story detail"
+    },
+    {
+     "question": "What does it mean to repent?",
+     "answer": "To be sorry and turn away from the wrong",
+     "shows": "repentance"
+    }
+   ]
+  }
+ ]
+}

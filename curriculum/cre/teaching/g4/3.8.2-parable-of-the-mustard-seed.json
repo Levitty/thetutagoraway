@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S",
+ "title": "Parable of the mustard seed",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD",
+   "key_step": "The child retells Luke 13:18-19: a man plants a mustard seed that grows into a tree where birds perch; God's kingdom starts small and grows, and every Christian, children too, helps it grow.",
+   "floor": {
+    "prerequisite": "Knows the boy with five loaves and two fish.",
+    "question": "How many loaves did the boy give?",
+    "answer": "Five"
+   },
+   "representations": [
+    "a real small seed and a picture of a tree",
+    "a growth line: seed, shoot, tree, birds",
+    "Luke 13:18 written large"
+   ],
+   "steps": [
+    "Jesus asks what the kingdom is like.",
+    "A tiny seed is planted.",
+    "It grows into a tree.",
+    "Birds rest in it: the kingdom grows and shelters many."
+   ],
+   "contexts": [
+    "a church that began in a classroom",
+    "a Sunday school that grew",
+    "a child inviting a friend to church"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a seed, then a tree with birds."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the seed.",
+     "say": "What does the small seed show about God's kingdom?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it starts small and grows."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: I can help it grow by telling others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_BIG_START",
+     "listen_for": [
+      "With a very big and powerful start"
+     ],
+     "ask": "How does God's kingdom begin, in the parable of the mustard seed?",
+     "repair": "Plant a seed in the school compound and watch."
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_BIRDS",
+     "listen_for": [
+      "They ate the seed"
+     ],
+     "ask": "What happened to the birds in the parable?",
+     "repair": "Read Luke 13:19."
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_ADULTS_ONLY",
+     "listen_for": [
+      "Only pastors and adults"
+     ],
+     "ask": "Who can help God's kingdom grow?",
+     "repair": "List what a child can do: pray, be kind, invite a friend to church."
+    },
+    {
+     "code": "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD.M_C4_MUS_REAL_FARMING",
+     "listen_for": [
+      "How to plant mustard"
+     ],
+     "ask": "What is the parable of the mustard seed about (Luke 13:18-19)?",
+     "repair": "Ask Jesus' own question first: \"What is the kingdom of God like?\" The seed is a picture of the kingdom."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How does the kingdom of God begin, in the parable?",
+     "answer": "Very small, like a seed",
+     "shows": "meaning"
+    },
+    {
+     "question": "Who can help the kingdom grow?",
+     "answer": "Every Christian, including children",
+     "shows": "contribution"
+    }
+   ]
+  }
+ ]
+}

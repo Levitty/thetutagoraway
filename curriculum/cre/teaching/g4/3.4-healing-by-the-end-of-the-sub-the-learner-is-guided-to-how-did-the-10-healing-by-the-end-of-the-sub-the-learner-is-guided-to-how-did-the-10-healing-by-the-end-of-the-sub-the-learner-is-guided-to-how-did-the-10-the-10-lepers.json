@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH",
+ "title": "Healing By the end of the sub- The learner is guided to: How did the 10 Healing By the end of the sub- The learner is guided to: How did the 10 Healing By the end of the sub- The learner is guided to: How did the 10 the 10 Lepers",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS",
+   "key_step": "The child narrates Luke 17:11-19: ten lepers call to Jesus from a distance, he sends them to the priests, they are healed on the way, only one, a Samaritan, returns to thank God, and the child names ways of thanking God each day.",
+   "floor": {
+    "prerequisite": "Knows why we say thank you.",
+    "question": "Why should we thank people who help us?",
+    "answer": "Because they were kind (it shows we value them)"
+   },
+   "representations": [
+    "ten figures drawn, one turning back",
+    "a thank-you list on the board",
+    "Luke 17:15-16 on a card"
+   ],
+   "steps": [
+    "Ten lepers call from far off.",
+    "Jesus sends them to the priests.",
+    "They are healed as they go.",
+    "One, a Samaritan, comes back to thank."
+   ],
+   "contexts": [
+    "thanking the cook at school",
+    "saying grace before a meal",
+    "a thanksgiving service after harvest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw ten figures walking away and one turning back."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the one turning back.",
+     "say": "Who was he and why did he come back?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say a Samaritan, to thank God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write three ways to thank God today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_COUNT",
+     "listen_for": [
+      "All ten"
+     ],
+     "ask": "How many of the ten lepers came back to thank Jesus?",
+     "repair": "Read Luke 17:15 and 17:17: \"Where are the other nine?\""
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_WHO",
+     "listen_for": [
+      "A priest"
+     ],
+     "ask": "Who was the man who came back to thank Jesus?",
+     "repair": "Read Luke 17:16: \"and he was a Samaritan\"."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_THANKS_NEED",
+     "listen_for": [
+      "Only when we need help"
+     ],
+     "ask": "When should we thank God?",
+     "repair": "List five things to thank God for today."
+    },
+    {
+     "code": "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS.M_C4_LEP_HEALED_THERE",
+     "listen_for": [
+      "As soon as Jesus touched them"
+     ],
+     "ask": "When were the ten lepers healed (Luke 17:14)?",
+     "repair": "Read Luke 17:14: \"as they went, they were cleansed\". Act walking away and being healed on the road."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many lepers came back to thank Jesus?",
+     "answer": "One",
+     "shows": "count"
+    },
+    {
+     "question": "Name one way to thank God every day.",
+     "answer": "Pray a thank-you prayer (sing, share, help others)",
+     "shows": "gratitude"
+    }
+   ]
+  }
+ ]
+}

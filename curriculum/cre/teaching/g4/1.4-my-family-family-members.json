@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS",
+ "title": "My Family Family members",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Protection is taught as body safety with a trusted adult named. Never ask a child to tell the class about abuse; follow the school safeguarding policy if a child discloses. Childline Kenya is 116.",
+ "skills": [
+  {
+   "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY",
+   "key_step": "The child sorts family members into nuclear (parents and children) and extended (grandparents, aunts, uncles, cousins) and says that Ephesians 6:1-3 asks children to honour parents, with the promise that it will go well with them.",
+   "floor": {
+    "prerequisite": "Can name the people at home.",
+    "question": "Name two people in your family.",
+    "answer": "mother and father (any two)"
+   },
+   "representations": [
+    "a family tree with two rings: nuclear inside, extended outside",
+    "name cards to place on the tree",
+    "Ephesians 6:1-3 written large"
+   ],
+   "steps": [
+    "Put parents and children in the inner ring.",
+    "Put grandparents, aunts, uncles and cousins in the outer ring.",
+    "Read Ephesians 6:1-3.",
+    "Say the promise: that it may go well with you."
+   ],
+   "contexts": [
+    "a family visit to grandparents at Christmas",
+    "a cousin who comes for the school holidays",
+    "helping parents at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two rings and write \"nuclear\" in the inner ring."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the outer ring.",
+     "say": "Where does your grandmother go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place her in the extended family."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Ephesians 6:2: honour your father and mother."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_NUC_EXT",
+     "listen_for": [
+      "Only mother, father and children"
+     ],
+     "ask": "Who belongs to the extended family?",
+     "repair": "Draw a small circle for the home and a bigger circle around it for relatives."
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_HOUSE_ONLY",
+     "listen_for": [
+      "Only those who live in my house"
+     ],
+     "ask": "Who counts as your family?",
+     "repair": "Ask the child to name a relative who lives far away and how they keep in touch."
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_HONOUR_IF",
+     "listen_for": [
+      "Only when they give me what I want"
+     ],
+     "ask": "When should a child honour his parents, according to Ephesians 6:1-3?",
+     "repair": "Read Ephesians 6:1-3 and note the word \"right\" and the promise at the end."
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY.M_C4_FAM_HONOUR_OBEY_WRONG",
+     "listen_for": [
+      "Yes, I must obey every adult"
+     ],
+     "ask": "An adult relative tells you to steal from a shop. Does honouring your family mean you must do it?",
+     "repair": "Ephesians 6:1 says obey parents \"in the Lord\": in what is right. Practise saying no politely to a wrong request."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is an aunt in the nuclear or the extended family?",
+     "answer": "extended",
+     "shows": "sorting"
+    },
+    {
+     "question": "What promise comes with honouring parents in Ephesians 6:3?",
+     "answer": "That it may go well with you and you may live long",
+     "shows": "promise"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION",
+   "key_step": "The child says NO, goes away and tells a trusted adult if touched wrongly; knows it is never the child's fault, that a secret about touching must be told, and that people a child knows can also do wrong.",
+   "floor": {
+    "prerequisite": "Can name people he or she trusts.",
+    "question": "Name one adult at school you can tell when something is wrong.",
+    "answer": "the class teacher (any trusted adult)"
+   },
+   "representations": [
+    "the three steps: say NO, go away, tell",
+    "a hand with five trusted adults, one on each finger",
+    "Childline Kenya 116 on a card"
+   ],
+   "steps": [
+    "Say NO in a strong voice.",
+    "Go away to a safe place.",
+    "Tell a trusted adult at once.",
+    "Keep telling until someone helps."
+   ],
+   "contexts": [
+    "walking home from school",
+    "a visitor at home",
+    "a phone call from someone the child knows"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the three steps: NO, GO, TELL."
+    },
+    {
+     "beat": "point",
+     "do": "Point at TELL.",
+     "say": "Someone says \"keep it a secret\". What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say tell a trusted adult."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the names of the child's five trusted adults on a hand."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_SECRET",
+     "listen_for": [
+      "Keep the secret so I do not get in trouble"
+     ],
+     "ask": "An adult touches you in a way that feels wrong and says \"keep it a secret\". What should you do?",
+     "repair": "Say clearly: a secret about touching is never to be kept. Practise telling a teacher or parent."
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_STRANGER_ONLY",
+     "listen_for": [
+      "Only strangers"
+     ],
+     "ask": "Who might touch a child in a wrong way?",
+     "repair": "Teach the rule: private parts are private, whoever asks."
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_BLAME_SELF",
+     "listen_for": [
+      "The child's fault, so she should say nothing"
+     ],
+     "ask": "A child was touched wrongly. Whose fault is it?",
+     "repair": "Say it slowly: it is never your fault. Name the adults who will believe and help."
+    },
+    {
+     "code": "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION.M_C4_PRO_ONCE_ONLY",
+     "listen_for": [
+      "No, it was only once"
+     ],
+     "ask": "A person touched you wrongly once and said sorry. Should you still tell a trusted adult?",
+     "repair": "Repeat the rule with no exceptions: say no, go away, tell. Name three trusted adults the child could tell."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Whose fault is it if a child is touched wrongly?",
+     "answer": "Never the child's",
+     "shows": "not to blame"
+    },
+    {
+     "question": "An adult asks you to keep a touching secret. What do you do?",
+     "answer": "Say no, go away and tell a trusted adult",
+     "shows": "tell"
+    }
+   ]
+  }
+ ]
+}
