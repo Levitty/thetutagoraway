@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES",
+ "title": "Creative Writing: Descriptive Writing (Theme 14: Sports: olympics)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION",
+   "assessed_by": "composition",
+   "key_step": "The child gathers exact words for each sense and describes one subject in a set order with fitting figures of speech.",
+   "floor": {
+    "prerequisite": "Writes Grade 7 descriptions.",
+    "question": "Describe a market in three words.",
+    "answer": "exact words"
+   },
+   "steps": [
+    "Gather words.",
+    "Plan order.",
+    "Write by the senses.",
+    "Similes and metaphors."
+   ],
+   "contexts": [
+    "the Olympic stadium",
+    "an athlete"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: see, hear, smell, feel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hear.",
+     "say": "What do you hear?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes the sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M8_X_DC_NARRATES",
+     "listen_for": [
+      "We went and watched the race."
+     ],
+     "ask": "What is it like?",
+     "repair": "Describe."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M8_X_DC_VAGUE",
+     "listen_for": [
+      "The runner was good."
+     ],
+     "ask": "Exact?",
+     "repair": "Lean, tireless."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M8_X_DC_ONE_SENSE",
+     "listen_for": [
+      "it was big"
+     ],
+     "ask": "Other senses?",
+     "repair": "Add them."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T14_CREATIVE_WRITING_DES.DESCRIPTIVE_COMPOSITION.M8_X_DC_NO_ORDER",
+     "listen_for": [
+      "track, gate, track, stands"
+     ],
+     "ask": "Direction?",
+     "repair": "One way."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Improve: The runner was good.",
+     "answer": "The runner was lean and tireless.",
+     "shows": "words"
+    },
+    {
+     "question": "Narrative or description: \"We watched the race\"?",
+     "answer": "narrative",
+     "shows": "description"
+    }
+   ]
+  }
+ ]
+}

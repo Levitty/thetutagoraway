@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T",
+ "title": "Functional Writing: Thank you and Congratulatory notes (Theme 10: Art)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES",
+   "assessed_by": "composition",
+   "key_step": "The child writes a short dated note that names the reason and closes warmly, then critiques one.",
+   "floor": {
+    "prerequisite": "Writes letters.",
+    "question": "Closing to a friend?",
+    "answer": "Your friend,"
+   },
+   "steps": [
+    "Date and greeting.",
+    "Reason.",
+    "Personal line.",
+    "Closing and name."
+   ],
+   "contexts": [
+    "thanking for an art set",
+    "congratulating an artist"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Thank you for ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at for.",
+     "say": "For what?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a congratulatory note."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES.M8_X_TN_NO_REASON",
+     "listen_for": [
+      "Thank you."
+     ],
+     "ask": "For what?",
+     "repair": "Name it."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES.M8_X_TN_TOO_LONG",
+     "listen_for": [
+      "two pages"
+     ],
+     "ask": "Note or letter?",
+     "repair": "Short."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES.M8_X_TN_CONGRATS_WRONG",
+     "listen_for": [
+      "Congratulations on everything."
+     ],
+     "ask": "On what?",
+     "repair": "Name it."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T10_FUNCTIONAL_WRITING_T.THANK_YOU_NOTES.M8_X_TN_CRITIQUE",
+     "listen_for": [
+      "The writing is untidy."
+     ],
+     "ask": "Parts and relevance?",
+     "repair": "Check them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Thank you note length?",
+     "answer": "a few lines",
+     "shows": "length"
+    },
+    {
+     "question": "Congratulations on ...?",
+     "answer": "the specific achievement",
+     "shows": "reason"
+    }
+   ]
+  }
+ ]
+}

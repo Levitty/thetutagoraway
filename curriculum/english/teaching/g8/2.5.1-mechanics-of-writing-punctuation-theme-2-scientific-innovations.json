@@ -1,0 +1,100 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing: Punctuation (Theme 2: Scientific innovations)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION",
+   "assessed_by": "questions",
+   "key_step": "The child uses apostrophes only for owners and missing letters, commas for lists and pauses, and never a comma alone between sentences.",
+   "floor": {
+    "prerequisite": "Uses end marks.",
+    "question": "End: Watch out",
+    "answer": "Watch out!"
+   },
+   "steps": [
+    "Apostrophe: owner or missing letter.",
+    "Plural: no apostrophe.",
+    "Comma for lists.",
+    "No comma splice."
+   ],
+   "contexts": [
+    "innovation reports"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: mango's for sale"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the apostrophe.",
+     "say": "Owner or plural?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes a comma splice."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_APOS_PLURAL",
+     "listen_for": [
+      "mango's"
+     ],
+     "ask": "Plural?",
+     "repair": "No apostrophe."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_APOS_POSS",
+     "listen_for": [
+      "boy's"
+     ],
+     "ask": "Many owners?",
+     "repair": "Boys'."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_COMMA_LIST",
+     "listen_for": [
+      "(no comma)"
+     ],
+     "ask": "List?",
+     "repair": "Commas."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_PN_ITS",
+     "listen_for": [
+      "it's"
+     ],
+     "ask": "It is?",
+     "repair": "Its."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION.M8_X_PN_COMMA_SPLICE",
+     "listen_for": [
+      "The rain stopped, we went out."
+     ],
+     "ask": "Two sentences?",
+     "repair": "Add so."
+    }
+   ],
+   "checks": [
+    {
+     "question": "the ___ (boys) bags (many boys)",
+     "answer": "boys'",
+     "shows": "plural owner"
+    },
+    {
+     "question": "Fix: It rained, we stayed in.",
+     "answer": "It rained, so we stayed in.",
+     "shows": "splice"
+    }
+   ]
+  }
+ ]
+}

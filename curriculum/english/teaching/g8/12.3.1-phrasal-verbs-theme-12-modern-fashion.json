@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS",
+ "title": "Phrasal Verbs (Theme 12: Modern fashion)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS",
+   "assessed_by": "questions",
+   "key_step": "The child learns each phrasal verb as one unit and knows which can be split.",
+   "floor": {
+    "prerequisite": "Uses phrasal verbs.",
+    "question": "give up means?",
+    "answer": "stop trying"
+   },
+   "steps": [
+    "Meaning.",
+    "Particle.",
+    "Separable or not."
+   ],
+   "contexts": [
+    "fashion"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: She looked the children after."
+    },
+    {
+     "beat": "point",
+     "do": "Point at after.",
+     "say": "Can it move?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_PV_MEANING",
+     "listen_for": [
+      "He gave it to someone"
+     ],
+     "ask": "Meaning?",
+     "repair": "Stopped."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_PV_PARTICLE",
+     "listen_for": [
+      "turn on"
+     ],
+     "ask": "On or off?",
+     "repair": "Off."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_PV_LITERAL",
+     "listen_for": [
+      "It was broken into pieces"
+     ],
+     "ask": "Literal?",
+     "repair": "Stopped working."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS.M8_X_PV_SPLIT",
+     "listen_for": [
+      "looked the children after"
+     ],
+     "ask": "Can it split?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "turn ___ the light (switch off)",
+     "answer": "off",
+     "shows": "particle"
+    },
+    {
+     "question": "look after: separable?",
+     "answer": "No",
+     "shows": "split"
+    }
+   ]
+  }
+ ]
+}

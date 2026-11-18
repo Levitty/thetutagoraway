@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T15_POEMS",
+ "title": "Poems (Theme 15: Tourist attraction sites: africa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE",
+   "assessed_by": "questions",
+   "key_step": "The child says what the poem wants the reader to think or feel, which may be a picture or feeling, not always a moral.",
+   "floor": {
+    "prerequisite": "Finds poem meaning.",
+    "question": "Subject?",
+    "answer": "a subject"
+   },
+   "steps": [
+    "Read all.",
+    "What does it want you to think or feel?",
+    "State it."
+   ],
+   "contexts": [
+    "tourist site poems"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: a sunset poem."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the last line.",
+     "say": "Message?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child states it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_RP_MESSAGE_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_RP_MESSAGE_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_RP_MESSAGE_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_X_RPM_MORAL_ONLY",
+     "listen_for": [
+      "we should work hard"
+     ],
+     "ask": "A moral?",
+     "repair": "Maybe a feeling."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Message of a sunset poem?",
+     "answer": "the beauty of nature",
+     "shows": "message"
+    },
+    {
+     "question": "Does every poem teach a moral?",
+     "answer": "No",
+     "shows": "message"
+    }
+   ]
+  }
+ ]
+}

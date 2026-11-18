@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN",
+ "title": "Word Classes: Pronouns (Theme 7: Natural resources: wildlife)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE",
+   "assessed_by": "questions",
+   "key_step": "The child uses -self only when the doer and receiver are the same, and singular verbs with indefinite pronouns.",
+   "floor": {
+    "prerequisite": "Uses pronouns.",
+    "question": "Me or I?",
+    "answer": "correct choice"
+   },
+   "steps": [
+    "Same person: -self.",
+    "Subject: I.",
+    "Everyone: singular verb."
+   ],
+   "contexts": [
+    "wildlife"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Wanjiru and myself went."
+    },
+    {
+     "beat": "point",
+     "do": "Point at myself.",
+     "say": "Subject?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_IR_HISSELF",
+     "listen_for": [
+      "theirselves"
+     ],
+     "ask": "Theirselves?",
+     "repair": "Themselves."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_IR_OURSELF",
+     "listen_for": [
+      "ourself"
+     ],
+     "ask": "Many?",
+     "repair": "Ourselves."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_IR_EVERYONE_PLURAL",
+     "listen_for": [
+      "are"
+     ],
+     "ask": "Everyone one?",
+     "repair": "Is."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE.M8_X_IR_MYSELF_SUBJECT",
+     "listen_for": [
+      "myself"
+     ],
+     "ask": "Subject?",
+     "repair": "I."
+    }
+   ],
+   "checks": [
+    {
+     "question": "They hurt ___.",
+     "answer": "themselves",
+     "shows": "reflexive"
+    },
+    {
+     "question": "Everyone ___ (is/are) here.",
+     "answer": "is",
+     "shows": "singular"
+    }
+   ]
+  }
+ ]
+}

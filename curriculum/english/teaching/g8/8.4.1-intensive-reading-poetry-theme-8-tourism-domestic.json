@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2",
+ "title": "Intensive Reading: Poetry (Theme 8: Tourism: domestic)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS",
+   "assessed_by": "questions",
+   "key_step": "The child finds the non-living thing given human actions and describes its trait from those words.",
+   "floor": {
+    "prerequisite": "Knows personification.",
+    "question": "\"The wind whispered\" is ...",
+    "answer": "personification"
+   },
+   "steps": [
+    "Find non-living things.",
+    "Find human actions.",
+    "Name the trait."
+   ],
+   "contexts": [
+    "poems on domestic tourism"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The mountain watched over the village."
+    },
+    {
+     "beat": "point",
+     "do": "Point at watched over.",
+     "say": "What trait?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS.M8_X_IC_ANIMALS",
+     "listen_for": [
+      "the lion"
+     ],
+     "ask": "Alive?",
+     "repair": "Inanimate is not alive."
+    },
+    {
+     "code": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS.M8_X_IC_LITERAL",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Really?",
+     "repair": "Personification."
+    },
+    {
+     "code": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS.M8_X_IC_TRAIT_WRONG",
+     "listen_for": [
+      "cruel"
+     ],
+     "ask": "What does the verb show?",
+     "repair": "Use it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T8_INTENSIVE_READING_PO_2.INANIMATE_CHARACTERS.M8_X_IC_MISSES",
+     "listen_for": [
+      "none"
+     ],
+     "ask": "Things acting like people?",
+     "repair": "Find them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Inanimate: lion or river?",
+     "answer": "river",
+     "shows": "inanimate"
+    },
+    {
+     "question": "\"The sun smiled.\" Trait?",
+     "answer": "friendly, warm",
+     "shows": "trait"
+    }
+   ]
+  }
+ ]
+}

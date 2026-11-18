@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C",
+ "title": "Creative Narrative Composition: Idioms (Theme 13: Consumer protection)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT",
+   "assessed_by": "questions",
+   "key_step": "The child uses the sentence around the idiom to work out its meaning and chooses fitting idioms.",
+   "floor": {
+    "prerequisite": "Knows idioms.",
+    "question": "spill the beans means?",
+    "answer": "tell a secret"
+   },
+   "steps": [
+    "Read the context.",
+    "Meaning.",
+    "Choose for a situation."
+   ],
+   "contexts": [
+    "consumer protection"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: It cost an arm and a leg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at arm and a leg.",
+     "say": "Meaning?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child uses it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT.M8_X_IC2_LITERAL",
+     "listen_for": [
+      "a hidden prayer"
+     ],
+     "ask": "Literal?",
+     "repair": "Context."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT.M8_X_IC2_OPPOSITE",
+     "listen_for": [
+      "cheap"
+     ],
+     "ask": "Cheap or expensive?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT.M8_X_IC2_WRONG_FIT",
+     "listen_for": [
+      "a piece of cake"
+     ],
+     "ask": "Fits?",
+     "repair": "Match."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T13_CREATIVE_NARRATIVE_C.IDIOMS_CONTEXT.M8_X_IC2_CHANGED",
+     "listen_for": [
+      "hand"
+     ],
+     "ask": "Fixed?",
+     "repair": "Leg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"a blessing in disguise\" means ...",
+     "answer": "a bad thing that turns out good",
+     "shows": "meaning"
+    },
+    {
+     "question": "A trader cheats: idiom?",
+     "answer": "take someone for a ride",
+     "shows": "fit"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G8.WRITIN.T9_CREATIVE_WRITING_NAR.NARRATIVE_COMPOSITION"
+ ]
+}

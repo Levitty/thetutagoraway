@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN",
+ "title": "Assessment of writing (Theme 8: Tourism: domestic)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING",
+   "assessed_by": "teacher",
+   "key_step": "The child reads slowly, marks errors by type, suggests corrections and gives one strength and one improvement.",
+   "floor": {
+    "prerequisite": "Assesses narratives.",
+    "question": "First step?",
+    "answer": "reread"
+   },
+   "steps": [
+    "Reread.",
+    "Mark errors.",
+    "Suggest corrections.",
+    "Comment kindly."
+   ],
+   "contexts": [
+    "peer essays on tourism"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a paragraph with three errors."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"have went\".",
+     "say": "Error? Correction?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child marks the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING.M8_X_AW_SPELLING_ONLY",
+     "listen_for": [
+      "Five spellings wrong."
+     ],
+     "ask": "Only spelling?",
+     "repair": "Content too."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING.M8_X_AW_NO_CORRECTION",
+     "listen_for": [
+      "wrong"
+     ],
+     "ask": "Correction?",
+     "repair": "Suggest it."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING.M8_X_AW_HARSH",
+     "listen_for": [
+      "This is terrible."
+     ],
+     "ask": "Kind?",
+     "repair": "Strength first."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T8_ASSESSMENT_OF_WRITIN.ASSESS_WRITING.M8_X_AW_MISSES_GRAMMAR",
+     "listen_for": [
+      "none"
+     ],
+     "ask": "Verbs?",
+     "repair": "Check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"recieve\": mark and correct.",
+     "answer": "receive",
+     "shows": "correction"
+    },
+    {
+     "question": "Feedback: strength and ...",
+     "answer": "an improvement",
+     "shows": "feedback"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN",
+ "title": "Word Classes: Compound Sentences (Theme 13: Consumer protection)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES",
+   "assessed_by": "questions",
+   "key_step": "The child joins two main clauses with a comma and and, but, or or so.",
+   "floor": {
+    "prerequisite": "Writes simple sentences.",
+    "question": "Is this a sentence?",
+    "answer": "yes or no"
+   },
+   "steps": [
+    "Two main clauses.",
+    "Comma + and, but, or, so."
+   ],
+   "contexts": [
+    "consumer protection"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The price rose, ___ we bought less."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Which joiner?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes another."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_CS_COMMA_SPLICE",
+     "listen_for": [
+      ","
+     ],
+     "ask": "Comma alone?",
+     "repair": "Add so."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_CS_NO_COMMA",
+     "listen_for": [
+      "(no comma)"
+     ],
+     "ask": "Before so?",
+     "repair": "Comma."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_CS_WRONG_CONJ",
+     "listen_for": [
+      "but"
+     ],
+     "ask": "Result?",
+     "repair": "So."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES.M8_X_CS_FANBOYS",
+     "listen_for": [
+      "because"
+     ],
+     "ask": "And or because?",
+     "repair": "And."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Fix: It rained, we stayed in.",
+     "answer": "It rained, so we stayed in.",
+     "shows": "splice"
+    },
+    {
+     "question": "Compound joiner: and or because?",
+     "answer": "and",
+     "shows": "coordinating"
+    }
+   ]
+  }
+ ]
+}

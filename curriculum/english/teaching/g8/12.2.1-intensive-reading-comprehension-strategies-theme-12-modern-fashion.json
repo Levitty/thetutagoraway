@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO",
+ "title": "Intensive Reading: Comprehension Strategies (Theme 12: Modern fashion)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES",
+   "assessed_by": "questions",
+   "key_step": "The child finds the image, names the sense and pictures the scene from all the words.",
+   "floor": {
+    "prerequisite": "Visualises.",
+    "question": "What do you see?",
+    "answer": "a picture"
+   },
+   "steps": [
+    "Find the image.",
+    "Which sense?",
+    "Picture it."
+   ],
+   "contexts": [
+    "fashion stories"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The air was thick with smoke."
+    },
+    {
+     "beat": "point",
+     "do": "Point at thick.",
+     "say": "Which sense?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child finds another image."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_RS_IMAGES_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_RS_IMAGES_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_RS_IMAGES_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_X_RSI_SENSE",
+     "listen_for": [
+      "sight"
+     ],
+     "ask": "Which sense?",
+     "repair": "Smell."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The drums thundered.\" Sense?",
+     "answer": "hearing",
+     "shows": "sense"
+    },
+    {
+     "question": "Picture the scene.",
+     "answer": "a description from all words",
+     "shows": "image"
+    }
+   ]
+  }
+ ]
+}

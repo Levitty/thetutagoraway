@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS",
+ "title": "Listening Comprehension (Theme 3: Pollution)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE",
+   "assessed_by": "questions",
+   "key_step": "The child listens for because, so and as a result to tell the cause from the effect.",
+   "floor": {
+    "prerequisite": "Listens and responds.",
+    "question": "What issue did it raise?",
+    "answer": "an issue"
+   },
+   "steps": [
+    "Listen for signal words.",
+    "Cause first.",
+    "Effect after."
+   ],
+   "contexts": [
+    "a talk on pollution"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Cause -> Effect."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Cause.",
+     "say": "What made it happen?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child names the effect."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_LS_CAUSE_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_LS_CAUSE_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_LS_CAUSE_NOTSAID",
+     "listen_for": [
+      "an answer that is something not said"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_X_LSC_EFFECT_AS_CAUSE",
+     "listen_for": [
+      "flooding"
+     ],
+     "ask": "Which came first?",
+     "repair": "The cause."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Plastics block drains, so it floods. Cause?",
+     "answer": "plastics blocking drains",
+     "shows": "cause"
+    },
+    {
+     "question": "Effect?",
+     "answer": "flooding",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "sub_strand": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS",
+ "title": "Word Classes: Adverbs (Theme 6: Rehabilitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE",
+   "assessed_by": "questions",
+   "key_step": "The child places frequency adverbs before the main verb and degree adverbs and enough correctly.",
+   "floor": {
+    "prerequisite": "Uses adverb kinds.",
+    "question": "Kind of \"always\"?",
+    "answer": "frequency"
+   },
+   "steps": [
+    "Frequency before the main verb.",
+    "Very and too.",
+    "Enough after an adjective."
+   ],
+   "contexts": [
+    "rehabilitation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: He comes always late."
+    },
+    {
+     "beat": "point",
+     "do": "Point at always.",
+     "say": "Where?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fixes enough."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_FD_PLACE",
+     "listen_for": [
+      "comes always"
+     ],
+     "ask": "Before the verb?",
+     "repair": "Always comes."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_FD_TOO_VERY",
+     "listen_for": [
+      "too"
+     ],
+     "ask": "More than wanted?",
+     "repair": "Very."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_FD_NEVER_NOT",
+     "listen_for": [
+      "does not never"
+     ],
+     "ask": "Two negatives?",
+     "repair": "Never."
+    },
+    {
+     "code": "ENGL.G8.GRAMMA.T6_WORD_CLASSES_ADVERBS.FREQUENCY_DEGREE.M8_X_FD_ENOUGH",
+     "listen_for": [
+      "enough warm"
+     ],
+     "ask": "After the adjective?",
+     "repair": "Warm enough."
+    }
+   ],
+   "checks": [
+    {
+     "question": "She ___ (never) lies.",
+     "answer": "never lies",
+     "shows": "position"
+    },
+    {
+     "question": "warm ___",
+     "answer": "enough",
+     "shows": "enough"
+    }
+   ]
+  }
+ ]
+}

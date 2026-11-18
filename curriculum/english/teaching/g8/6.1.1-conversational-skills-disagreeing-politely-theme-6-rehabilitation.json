@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL",
+ "title": "Conversational Skills: Disagreeing politely (Theme 6: Rehabilitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY",
+   "assessed_by": "questions",
+   "key_step": "The child acknowledges the other view, disagrees with the idea and gives a reason, calmly.",
+   "floor": {
+    "prerequisite": "Uses opinion phrases.",
+    "question": "Give an opinion.",
+    "answer": "I believe that ..."
+   },
+   "steps": [
+    "Acknowledge: I see your point,",
+    "Disagree: but ...",
+    "Reason: because ...",
+    "Calm tone."
+   ],
+   "contexts": [
+    "debates on rehabilitation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: I see your point, but ... because ..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at but.",
+     "say": "Disagree with \"fines stop littering\"."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds a reason."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY.M8_X_DP_ATTACK_PERSON",
+     "listen_for": [
+      "You are foolish."
+     ],
+     "ask": "Idea or person?",
+     "repair": "The idea."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY.M8_X_DP_NO_REASON",
+     "listen_for": [
+      "No."
+     ],
+     "ask": "Why?",
+     "repair": "Because ..."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY.M8_X_DP_SHOUT",
+     "listen_for": [
+      "louder than the other person"
+     ],
+     "ask": "Volume?",
+     "repair": "Calm."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T6_CONVERSATIONAL_SKILL.DISAGREE_POLITELY.M8_X_DP_AGREE_ANYWAY",
+     "listen_for": [
+      "Yes, it is good."
+     ],
+     "ask": "Do you agree?",
+     "repair": "Say so politely."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Polite disagreement?",
+     "answer": "I see your point, but ...",
+     "shows": "phrase"
+    },
+    {
+     "question": "Is \"You are foolish\" polite?",
+     "answer": "No",
+     "shows": "person"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G8.LISTEN.T2_ORAL_PRESENTATIONS_S.PERFORM_ORAL"
+ ]
+}

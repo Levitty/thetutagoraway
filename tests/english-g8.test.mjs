@@ -2,6 +2,7 @@
 // All draft and off for children until a Kenyan English teacher signs them off.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { depthFailures } from '../scripts/lib/english-depth.mjs';
 import { readFileSync } from 'node:fs';
 import { textFailures } from '../engine/scripts/english_checks.mjs';
 import { SKILLS, OUTCOMES, MIS_FEEDBACK } from '../src/ai-tutor/content/curriculumMap.english.g8.js';
@@ -51,4 +52,20 @@ test('misconception codes are unique to Grade 8 (M8_) so the joined English maps
   const others = ['g4', 'g5', 'g6'].flatMap(g => JSON.parse(readFileSync(new URL(`../curriculum/english/${g}.json`, import.meta.url), 'utf8')).sub_strands.flatMap(s => s.misconceptions || []).map(m => m.code.split('.').pop()));
   const set = new Set(others);
   assert.deepEqual(codes.filter(c => set.has(c)), [], 'a Grade 8 code is also a Grade 4, 5 or 6 code');
+});
+
+// Depth pass (18 Nov 2026, Tuta Workspace/HOREB_MAPPING_PLAN.md): the Grade 5 Maths standard. Every testable outcome has a skill,
+// every skill two prerequisites, four misconceptions and a teaching pack entry (curriculum/english/teaching/g8/), and the SQL loads it all.
+test('Grade 8 English is at the depth standard: skills, prerequisites, misconceptions and teaching pack', () => {
+  assert.deepEqual(depthFailures(8), []);
+});
+
+test('the Grade 8 English SQL loads every skill, prerequisite and misconception (run node scripts/build-maths-sql-grade.mjs english 8)', () => {
+  const doc = JSON.parse(readFileSync(new URL('../curriculum/english/g8.json', import.meta.url), 'utf8'));
+  const sql = readFileSync(new URL('../supabase/migrations/20261130_english_g8_skills_misconceptions.sql', import.meta.url), 'utf8');
+  const count = (re) => (sql.match(re) || []).length;
+  assert.equal(count(/^INSERT INTO public\.curriculum_skills /gm), doc.totals.skills);
+  assert.equal(count(/^INSERT INTO public\.curriculum_prerequisites /gm), doc.totals.prerequisites);
+  assert.equal(count(/^INSERT INTO public\.curriculum_misconceptions /gm), doc.totals.misconceptions);
+  assert.ok(/^BEGIN;$/m.test(sql) && /^COMMIT;$/m.test(sql) && /ON CONFLICT \(code\) DO UPDATE/.test(sql), 'not one idempotent transaction');
 });

@@ -1,0 +1,94 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN",
+ "title": "Extensive Reading: Independent Reading (Theme 1: Human rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING",
+   "assessed_by": "teacher",
+   "key_step": "The child finds interesting print and non-print texts, reads widely and logs each with a reason.",
+   "floor": {
+    "prerequisite": "Reads independently.",
+    "question": "What did you read last?",
+    "answer": "a title"
+   },
+   "steps": [
+    "Find texts that interest you.",
+    "Read a range.",
+    "Log each.",
+    "Recommend with a reason."
+   ],
+   "contexts": [
+    "human rights books",
+    "career magazines",
+    "websites"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a log."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Why read it.",
+     "say": "Why recommend it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds an online text."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M8_X_IR_NONPRINT_IGNORED",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Only books?",
+     "repair": "Non-print counts."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M8_X_IR_ONE_KIND",
+     "listen_for": [
+      "more novels"
+     ],
+     "ask": "Variety?",
+     "repair": "Add non-fiction."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M8_X_IR_NO_LOG",
+     "listen_for": [
+      "I remember"
+     ],
+     "ask": "Recorded?",
+     "repair": "Log it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_EXTENSIVE_READING_IN.INDEPENDENT_READING.M8_X_IR_NO_REASON",
+     "listen_for": [
+      "It is good."
+     ],
+     "ask": "Why?",
+     "repair": "A reason."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does an online article count?",
+     "answer": "Yes",
+     "shows": "non-print"
+    },
+    {
+     "question": "Your log has only novels. Add?",
+     "answer": "non-fiction",
+     "shows": "range"
+    }
+   ]
+  }
+ ]
+}

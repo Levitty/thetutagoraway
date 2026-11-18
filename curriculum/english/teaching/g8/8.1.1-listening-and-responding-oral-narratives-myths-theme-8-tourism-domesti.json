@@ -1,0 +1,96 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON",
+ "title": "Listening and Responding: Oral Narratives - Myths (Theme 8: Tourism: domestic)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS",
+   "assessed_by": "questions",
+   "key_step": "The child names the characters, narrates the events in order and says what the myth explains or teaches.",
+   "floor": {
+    "prerequisite": "Knows trickster narratives.",
+    "question": "Who is the trickster?",
+    "answer": "the hare"
+   },
+   "steps": [
+    "Characters (gods, spirits, people).",
+    "Events in order.",
+    "What it explains.",
+    "Lesson."
+   ],
+   "contexts": [
+    "myths of domestic tourist sites",
+    "creation myths"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Characters / Events / Explains / Lesson."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Explains.",
+     "say": "What does the myth explain?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child gives the lesson."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS.M8_X_MY_LEGEND_MYTH",
+     "listen_for": [
+      "legend"
+     ],
+     "ask": "Hero or origin?",
+     "repair": "Origin: myth."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS.M8_X_MY_ORDER",
+     "listen_for": [
+      "starts with the ending"
+     ],
+     "ask": "What came first?",
+     "repair": "In order."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS.M8_X_MY_LITERAL_LESSON",
+     "listen_for": [
+      "why antelopes run fast"
+     ],
+     "ask": "For people?",
+     "repair": "The lesson."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T8_LISTENING_AND_RESPON.MYTHS.M8_X_MY_CHARACTER_TYPE",
+     "listen_for": [
+      "an old man"
+     ],
+     "ask": "God or man?",
+     "repair": "God."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A story of how the first people came is a ...",
+     "answer": "myth",
+     "shows": "myth"
+    },
+    {
+     "question": "Lesson of the greedy hunter?",
+     "answer": "greed brings loss",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RELATE_TO_LIFE"
+ ]
+}

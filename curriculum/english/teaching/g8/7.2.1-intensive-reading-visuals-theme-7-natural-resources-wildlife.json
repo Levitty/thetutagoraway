@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI",
+ "title": "Intensive Reading: Visuals (Theme 7: Natural resources: wildlife)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS",
+   "assessed_by": "questions",
+   "key_step": "The child names the visual, reads title, labels and key, states the trend and links it to the text.",
+   "floor": {
+    "prerequisite": "Reads visuals.",
+    "question": "What does the title show?",
+    "answer": "the topic"
+   },
+   "steps": [
+    "Name the type.",
+    "Title, labels, key.",
+    "Trend or point.",
+    "Link to the text."
+   ],
+   "contexts": [
+    "wildlife statistics"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a line graph of elephant numbers rising."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "What happens overall?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child links it to a sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS.M8_X_RV_TYPE",
+     "listen_for": [
+      "bar graph"
+     ],
+     "ask": "Parts of a whole?",
+     "repair": "Pie chart."
+    },
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS.M8_X_RV_KEY_IGNORED",
+     "listen_for": [
+      "a guess"
+     ],
+     "ask": "Key?",
+     "repair": "Read it."
+    },
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS.M8_X_RV_NO_LINK",
+     "listen_for": [
+      "Tourists like Mombasa."
+     ],
+     "ask": "Which sentence?",
+     "repair": "Same data."
+    },
+    {
+     "code": "ENGL.G8.READIN.T7_INTENSIVE_READING_VI.READ_VISUALS.M8_X_RV_TREND",
+     "listen_for": [
+      "in 2010 there were 300"
+     ],
+     "ask": "Whole line?",
+     "repair": "Trend."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Circle in parts with percentages?",
+     "answer": "pie chart",
+     "shows": "type"
+    },
+    {
+     "question": "Overall the line goes up. Trend?",
+     "answer": "numbers rose",
+     "shows": "trend"
+    }
+   ]
+  }
+ ]
+}

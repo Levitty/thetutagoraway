@@ -1,0 +1,178 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC",
+ "title": "Paragraphing: Sequencing of Ideas (Theme 3: Pollution)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS",
+   "assessed_by": "questions",
+   "key_step": "The child finds connectors at the start of sentences and uses them to order a paragraph.",
+   "floor": {
+    "prerequisite": "Uses conjunctions.",
+    "question": "Join with although.",
+    "answer": "Although ..."
+   },
+   "steps": [
+    "Find connectors.",
+    "Sequence: first, next, finally.",
+    "Result: as a result.",
+    "Order by connectors."
+   ],
+   "contexts": [
+    "pollution",
+    "consumer roles"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write jumbled sentences with First, Then, Finally."
+    },
+    {
+     "beat": "point",
+     "do": "Point at First.",
+     "say": "Where does it go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS.M8_X_PC_WRONG_CONNECTOR",
+     "listen_for": [
+      "However"
+     ],
+     "ask": "Contrast or sequence?",
+     "repair": "Next."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS.M8_X_PC_FINALLY_FIRST",
+     "listen_for": [
+      "in the second sentence"
+     ],
+     "ask": "Last step?",
+     "repair": "Finally."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS.M8_X_PC_MISS_CONNECTOR",
+     "listen_for": [
+      "river"
+     ],
+     "ask": "Start of the sentence?",
+     "repair": "There."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_CONNECTORS.M8_X_PC_ORDER_IGNORED",
+     "listen_for": [
+      "Then ..., First ..."
+     ],
+     "ask": "What do the connectors say?",
+     "repair": "Use them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "First ... ___ we recycled. (However / Next)",
+     "answer": "Next",
+     "shows": "sequence"
+    },
+    {
+     "question": "Where does Finally go?",
+     "answer": "the last step",
+     "shows": "finally"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING",
+   "assessed_by": "composition",
+   "key_step": "The child writes a topic sentence, sequenced linked ideas with evidence, and a closing.",
+   "floor": {
+    "prerequisite": "Uses connectors.",
+    "question": "Order these sentences.",
+    "answer": "an order"
+   },
+   "steps": [
+    "Topic sentence.",
+    "Ideas with connectors.",
+    "Evidence for traits.",
+    "Closing."
+   ],
+   "contexts": [
+    "pollution",
+    "characters in a class reader"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Plastic waste is choking our rivers."
+    },
+    {
+     "beat": "point",
+     "do": "Point at it.",
+     "say": "Next idea, with a connector?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child closes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING.M8_X_PW_NO_TOPIC",
+     "listen_for": [
+      "with a detail"
+     ],
+     "ask": "Main idea?",
+     "repair": "Topic sentence."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING.M8_X_PW_OVERUSE_AND",
+     "listen_for": [
+      "and ... and ... and"
+     ],
+     "ask": "Another connector?",
+     "repair": "Vary."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING.M8_X_PW_CHARACTER_NO_EVIDENCE",
+     "listen_for": [
+      "Baraka is brave."
+     ],
+     "ask": "Prove it?",
+     "repair": "Evidence."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T3_PARAGRAPHING_SEQUENC.PARAGRAPH_WRITING.M8_X_PW_NO_CLOSE",
+     "listen_for": [
+      "with another detail"
+     ],
+     "ask": "End?",
+     "repair": "Sum up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Improve: and ... and ... and",
+     "answer": "vary connectors",
+     "shows": "linking"
+    },
+    {
+     "question": "Character paragraph: trait plus?",
+     "answer": "evidence",
+     "shows": "evidence"
+    }
+   ]
+  }
+ ]
+}

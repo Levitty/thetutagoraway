@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN",
+ "title": "Study Skills-Reference Materials (Theme 5: Relationships: peers)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE",
+   "assessed_by": "questions",
+   "key_step": "The child chooses the reference for the task and uses its contents, index, guide words or search.",
+   "floor": {
+    "prerequisite": "Knows book parts.",
+    "question": "Where is the index?",
+    "answer": "at the back"
+   },
+   "steps": [
+    "Task.",
+    "Choose the reference.",
+    "Use index, guide words or search.",
+    "Check reliability."
+   ],
+   "contexts": [
+    "a project on peer relationships"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: dictionary, thesaurus, encyclopaedia, atlas."
+    },
+    {
+     "beat": "point",
+     "do": "Point at thesaurus.",
+     "say": "What is it for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child matches tasks."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE.M8_X_RU_THESAURUS_DICTIONARY",
+     "listen_for": [
+      "an atlas"
+     ],
+     "ask": "Synonyms?",
+     "repair": "Thesaurus."
+    },
+    {
+     "code": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE.M8_X_RU_INDEX_CONTENTS",
+     "listen_for": [
+      "contents page"
+     ],
+     "ask": "Small topic?",
+     "repair": "Index."
+    },
+    {
+     "code": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE.M8_X_RU_UNRELIABLE_SITE",
+     "listen_for": [
+      "a random blog"
+     ],
+     "ask": "Who wrote it?",
+     "repair": "Check."
+    },
+    {
+     "code": "ENGL.G8.READIN.T5_STUDY_SKILLS_REFEREN.REFERENCE_USE.M8_X_RU_WRONG_BOOK",
+     "listen_for": [
+      "an atlas"
+     ],
+     "ask": "Meaning?",
+     "repair": "Dictionary."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Another word for \"angry\"?",
+     "answer": "a thesaurus",
+     "shows": "thesaurus"
+    },
+    {
+     "question": "Every page on a topic?",
+     "answer": "the index",
+     "shows": "index"
+    }
+   ]
+  }
+ ]
+}

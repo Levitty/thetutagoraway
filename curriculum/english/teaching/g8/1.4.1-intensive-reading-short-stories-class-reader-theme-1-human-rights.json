@@ -1,0 +1,259 @@
+{
+ "sub_strand": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
+ "title": "Intensive Reading: Short Stories (Class Reader) (Theme 1: Human rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE",
+   "assessed_by": "questions",
+   "key_step": "The child uses time clues to order events by when they happened, including flashbacks.",
+   "floor": {
+    "prerequisite": "Orders story events.",
+    "question": "What came first?",
+    "answer": "the first event"
+   },
+   "steps": [
+    "Find time clues.",
+    "Order the events.",
+    "Check flashbacks."
+   ],
+   "contexts": [
+    "short stories on human rights"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write four events, one a flashback."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"years earlier\".",
+     "say": "Where does it go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_RS_SEQUENCE_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_RS_SEQUENCE_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_RS_SEQUENCE_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_X_RSS_TOLD_ORDER",
+     "listen_for": [
+      "the hospital visit"
+     ],
+     "ask": "When did it happen?",
+     "repair": "Use time clues."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order four episodes.",
+     "answer": "the correct order",
+     "shows": "order"
+    },
+    {
+     "question": "A flashback told second happened ...",
+     "answer": "first",
+     "shows": "flashback"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT",
+   "assessed_by": "questions",
+   "key_step": "The child tries a meaning in the word's place and checks the sentence still makes sense.",
+   "floor": {
+    "prerequisite": "Uses context clues.",
+    "question": "Clue for \"weary\"?",
+    "answer": "walked all day"
+   },
+   "steps": [
+    "Find the word.",
+    "Read around it.",
+    "Try a meaning in its place.",
+    "Check."
+   ],
+   "contexts": [
+    "pollution texts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: The poachers were apprehended at the gate."
+    },
+    {
+     "beat": "point",
+     "do": "Point at apprehended.",
+     "say": "What word can replace it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child checks the sentence."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_RS_CONTEXT_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_RS_CONTEXT_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_RS_CONTEXT_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_X_RSC_WHOLE_SENTENCE",
+     "listen_for": [
+      "at the gate"
+     ],
+     "ask": "Can it replace the word?",
+     "repair": "Try it in its place."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"The river was polluted; fish died.\" Polluted means ...",
+     "answer": "made dirty",
+     "shows": "context"
+    },
+    {
+     "question": "Does \"at the gate\" mean apprehended?",
+     "answer": "No",
+     "shows": "replace"
+    }
+   ]
+  },
+  {
+   "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS",
+   "assessed_by": "questions",
+   "key_step": "The child reads the question and its instruction, finds the evidence and answers in the form asked.",
+   "floor": {
+    "prerequisite": "Answers factual and inference questions.",
+    "question": "Why did she run?",
+    "answer": "a reason from clues"
+   },
+   "steps": [
+    "Read the instruction.",
+    "Find evidence.",
+    "Answer in the form asked.",
+    "Judge information with reasons."
+   ],
+   "contexts": [
+    "texts on pollution and tourism"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: In one word, how did he feel?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"In one word\".",
+     "say": "What form?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_RS_QUESTIONS_DETAIL",
+     "listen_for": [
+      "an answer that is a small detail"
+     ],
+     "ask": "Does that answer the question, or is it a detail nearby?",
+     "repair": "Find the exact answer in the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_RS_QUESTIONS_OPPOSITE",
+     "listen_for": [
+      "an answer that is the opposite"
+     ],
+     "ask": "Does the text say that, or the opposite?",
+     "repair": "Read the sentence again."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_RS_QUESTIONS_NOTSAID",
+     "listen_for": [
+      "an answer that is something not in the text"
+     ],
+     "ask": "Can you point to where the text says it?",
+     "repair": "Answer only from the text."
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_X_RSQ_WRONG_FORM",
+     "listen_for": [
+      "He felt very sad because his dog had run away."
+     ],
+     "ask": "What form does it ask?",
+     "repair": "Follow it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Answer in one word.",
+     "answer": "one word",
+     "shows": "form"
+    },
+    {
+     "question": "Is the information in the advert reliable? Why?",
+     "answer": "a judgement with a reason",
+     "shows": "judge"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE",
+ "title": "Polite Language: Telephone Etiquette (Theme 1: Human rights)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE",
+   "assessed_by": "questions",
+   "key_step": "The child greets and names himself or herself, asks politely, offers to take a message and closes with thanks.",
+   "floor": {
+    "prerequisite": "Introduces people politely.",
+    "question": "Introduce your friend to the teacher.",
+    "answer": "Madam, may I introduce ..."
+   },
+   "steps": [
+    "Greet and name yourself.",
+    "Ask politely.",
+    "Take or leave a message.",
+    "Close with thanks."
+   ],
+   "contexts": [
+    "a call about human rights club",
+    "calling a relative"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Good morning, this is ... speaking."
+    },
+    {
+     "beat": "point",
+     "do": "Point at speaking.",
+     "say": "Answer the phone like this."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes a message."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE.M8_X_TE_WHO_ARE_YOU",
+     "listen_for": [
+      "Who is this?"
+     ],
+     "ask": "Did you greet first?",
+     "repair": "Greet and name yourself."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE.M8_X_TE_DEMAND_PERSON",
+     "listen_for": [
+      "Give the phone to Auntie."
+     ],
+     "ask": "Is it a request?",
+     "repair": "May I speak to ..."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE.M8_X_TE_NO_MESSAGE",
+     "listen_for": [
+      "He is not here. Bye."
+     ],
+     "ask": "Can you help the caller?",
+     "repair": "Offer a message."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T1_POLITE_LANGUAGE_TELE.TELEPHONE_ETIQUETTE.M8_X_TE_HANG_UP",
+     "listen_for": [
+      "press the red button"
+     ],
+     "ask": "How do you end?",
+     "repair": "Thank you. Goodbye."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Your mother is out. Say ...",
+     "answer": "She is out at the moment. May I take a message?",
+     "shows": "message"
+    },
+    {
+     "question": "Ask for Mr Otieno.",
+     "answer": "May I speak to Mr Otieno, please?",
+     "shows": "asking"
+    }
+   ]
+  }
+ ]
+}

@@ -140,7 +140,7 @@ export async function applyDepth(grade, doc, { families = null } = {}) {
     if (allShort.has(short)) throw new Error(`${short}: code already used in English`);
     allShort.add(short);
     if (wrong === right) throw new Error(`${short}: the wrong answer is the right one`);
-    for (const [f, v] of Object.entries({ error, question, wrong, right, cause, help })) if (!v || String(v).length < 2) throw new Error(`${short}: ${f} empty`);
+    for (const [f, v] of Object.entries({ error, question, wrong, right, cause, help })) if (!v || !String(v).trim()) throw new Error(`${short}: ${f} empty`);
     s.misconceptions.push({ code: `${k.code}.${short}`, skill: k.code, error, example: { question, wrong_answer: wrong, correct_answer: right }, cause, reveals: `Offer "${wrong}" beside "${right}" in a fresh sentence or text and ask again; picking it again shows the error is still there.`, help, feedback: help, source: SOURCE, status: 'draft' });
   }
   // ---- families and the no_family mark

@@ -1,0 +1,92 @@
+{
+ "sub_strand": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL",
+ "title": "Conversational Skills: interviews (Theme 11: Choosing a career)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE",
+   "assessed_by": "questions",
+   "key_step": "The child opens with thanks, asks open polite questions, follows up and closes with thanks.",
+   "floor": {
+    "prerequisite": "Knows interview speaking.",
+    "question": "Answer: Why do you want to join?",
+    "answer": "a reasoned answer"
+   },
+   "steps": [
+    "Greet and thank.",
+    "Open questions.",
+    "Follow up.",
+    "Thank and close."
+   ],
+   "contexts": [
+    "interviewing a career guest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Could you tell us ...?"
+    },
+    {
+     "beat": "point",
+     "do": "Point at Could you tell us.",
+     "say": "Ask about her career."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child follows up."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE.M8_X_IP_CLOSED_QUESTIONS",
+     "listen_for": [
+      "Do you like your job?"
+     ],
+     "ask": "Yes or no?",
+     "repair": "Open it."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE.M8_X_IP_NO_THANKS",
+     "listen_for": [
+      "Okay, bye."
+     ],
+     "ask": "Thanks?",
+     "repair": "Thank the guest."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE.M8_X_IP_BLUNT",
+     "listen_for": [
+      "How much do they pay you?"
+     ],
+     "ask": "Too direct?",
+     "repair": "Would you mind ..."
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T11_CONVERSATIONAL_SKILL.INTERVIEW_POLITE.M8_X_IP_NO_FOLLOW_UP",
+     "listen_for": [
+      "read the next question"
+     ],
+     "ask": "What did she say?",
+     "repair": "Follow up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Open question?",
+     "answer": "Could you tell us how you started?",
+     "shows": "open"
+    },
+    {
+     "question": "Close the interview.",
+     "answer": "Thank you for your time.",
+     "shows": "close"
+    }
+   ]
+  }
+ ]
+}

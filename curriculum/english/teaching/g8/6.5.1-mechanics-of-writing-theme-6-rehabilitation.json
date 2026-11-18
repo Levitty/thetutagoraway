@@ -1,0 +1,95 @@
+{
+ "sub_strand": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING",
+ "title": "Mechanics of Writing (Theme 6: Rehabilitation)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 English; not yet checked by a Kenyan English teacher; not loaded by the live tutor",
+ "notes": "",
+ "skills": [
+  {
+   "skill": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING",
+   "assessed_by": "questions",
+   "key_step": "The child finds the tricky part of the word and applies the rule (ie and ei, double letters, silent vowels).",
+   "floor": {
+    "prerequisite": "Spells misspelt words.",
+    "question": "Spell: separate",
+    "answer": "separate"
+   },
+   "steps": [
+    "Say slowly.",
+    "Tricky part.",
+    "Rule.",
+    "Check."
+   ],
+   "contexts": [
+    "rehabilitation"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: frend."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Silent letter?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child spells receive."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_SP_MISSPELT",
+     "listen_for": [
+      "seperate"
+     ],
+     "ask": "Sep-a-rate?",
+     "repair": "Separate."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_SP_IE_EI",
+     "listen_for": [
+      "recieve"
+     ],
+     "ask": "After c?",
+     "repair": "Ei."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_SP_DOUBLE",
+     "listen_for": [
+      "acommodate"
+     ],
+     "ask": "Two c, two m?",
+     "repair": "Accommodate."
+    },
+    {
+     "code": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING.M8_X_SP_SILENT_VOWEL",
+     "listen_for": [
+      "frend"
+     ],
+     "ask": "Silent i?",
+     "repair": "Friend."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Spell: accommodate",
+     "answer": "accommodate",
+     "shows": "double"
+    },
+    {
+     "question": "Spell: friend",
+     "answer": "friend",
+     "shows": "silent vowel"
+    }
+   ]
+  }
+ ],
+ "also_taught_by": [
+  "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES"
+ ]
+}
