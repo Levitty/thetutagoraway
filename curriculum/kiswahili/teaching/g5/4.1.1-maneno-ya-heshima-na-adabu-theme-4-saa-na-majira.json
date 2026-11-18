@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA",
+ "title": "Maneno ya Heshima na Adabu (Theme 4: Saa na majira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA",
+   "key_step": "The child places the relative on a family tree, then uses the kinship word of respect for that place (shangazi, mjomba, binamu, babu, mkwe).",
+   "floor": {
+    "prerequisite": "Greets an elder.",
+    "question": "Mtoto anamsalimuje bibi?",
+    "answer": "Shikamoo bibi"
+   },
+   "representations": [
+    "a family tree with photos",
+    "kinship cards",
+    "a role play of a family visit"
+   ],
+   "steps": [
+    "Find the person on the tree.",
+    "Which side: father or mother?",
+    "Choose the word.",
+    "Use it with respect."
+   ],
+   "contexts": [
+    "time and seasons: a family gathering",
+    "a wedding",
+    "visiting grandparents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "dada wa baba = ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the father's sister.",
+     "say": "Tunamwitaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"shangazi\" and labels three more places on the tree."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M_HES_SIDE",
+     "listen_for": [
+      "mjomba"
+     ],
+     "ask": "Soma tena: \"Dada ya baba yako anaitwaje?\" Kwa nini \"mjomba\" si jibu sahihi?",
+     "repair": "Dada ya baba ni shangazi. Kaka wa mama ni mjomba."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M_HES_GREETING",
+     "listen_for": [
+      "marahaba"
+     ],
+     "ask": "Soma tena: \"Mtoto humsalimia babu kwa kusema ___.\" Kwa nini \"marahaba\" si jibu sahihi?",
+     "repair": "Mdogo humsalimia mkubwa kwa \"shikamoo\", na mkubwa hujibu \"marahaba\"."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M_HES_COUSIN",
+     "listen_for": [
+      "kaka"
+     ],
+     "ask": "Soma tena: \"Mtoto wa shangazi yako anaitwaje?\" Kwa nini \"kaka\" si jibu sahihi?",
+     "repair": "Mtoto wa shangazi au mjomba ni binamu, si kaka wala dada."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T4_MANENO_YA_HESHIMA_NA.HESHIMA.M5_HES_IN_LAW",
+     "listen_for": [
+      "mama"
+     ],
+     "ask": "Mtu huyu ni nani kwako katika familia?",
+     "repair": "Mama wa mke huitwa mama mkwe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kaka wa mama ni nani kwako?",
+     "answer": "mjomba",
+     "shows": "kinship"
+    },
+    {
+     "question": "Mtoto wa shangazi ni nani kwako?",
+     "answer": "binamu",
+     "shows": "kinship"
+    }
+   ]
+  }
+ ]
+}

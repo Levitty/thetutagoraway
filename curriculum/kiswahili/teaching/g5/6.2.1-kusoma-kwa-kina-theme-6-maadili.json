@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T6_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 6: Maadili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA",
+   "key_step": "The child finds an article on the right shelf, reads it fully, and tells its main point from the examples that support it.",
+   "floor": {
+    "prerequisite": "Reads an article for its message.",
+    "question": "Makala haya yanahusu nini?",
+    "answer": "the topic"
+   },
+   "representations": [
+    "the library shelves labelled",
+    "an article with its paragraphs numbered",
+    "a point/example sorting strip"
+   ],
+   "steps": [
+    "Go to the right shelf.",
+    "Choose by title and headings.",
+    "Read every paragraph.",
+    "Say the main point and one example."
+   ],
+   "contexts": [
+    "values (maadili): honesty",
+    "the school library",
+    "a children's magazine"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Faida za Uaminifu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the headings.",
+     "say": "Makala haya yatahusu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the article and writes its main point and one example."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M5_MAK_STORY",
+     "listen_for": [
+      "Hadithi ya Sungura na Fisi"
+     ],
+     "ask": "Matini hii ina wahusika na kisa, au inaeleza jambo?",
+     "repair": "Makala hueleza jambo kwa ukweli; hadithi husimulia kisa cha wahusika."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M5_MAK_SHELF",
+     "listen_for": [
+      "kwenye rafu ya hadithi za watoto"
+     ],
+     "ask": "Rafu hii ina vitabu vya aina gani?",
+     "repair": "Makala hupatikana katika magazeti, majarida na vitabu vya maarifa."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M5_MAK_MAINPOINT",
+     "listen_for": [
+      "Kijana mmoja alirudisha pochi iliyopotea."
+     ],
+     "ask": "Sentensi hii ni wazo kuu au ni mfano?",
+     "repair": "Mfano huonyesha wazo kuu; si wazo kuu lenyewe."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T6_KUSOMA_KWA_KINA.MAKALA_MAKTABA.M5_MAK_SKIM",
+     "listen_for": [
+      "jibu kutoka anwani"
+     ],
+     "ask": "Jibu hili liko aya gani?",
+     "repair": "Soma makala yote kabla ya kujibu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni ipi ni makala: shairi la heshima, makala ya \"Faida za Usafi\"?",
+     "answer": "makala ya \"Faida za Usafi\"",
+     "shows": "kind"
+    },
+    {
+     "question": "Wazo kuu hutofautianaje na mfano?",
+     "answer": "wazo kuu ni jambo kuu; mfano unalionyesha",
+     "shows": "point vs example"
+    }
+   ]
+  }
+ ]
+}

@@ -33,7 +33,7 @@ test('skills and the misconception library are proposed or draft, with the field
       assert.equal(k.status, 'proposed');
       assert.ok(k.mastery && k.question_forms.length >= 2 && k.thinking.length, `${k.code}: mastery, forms or thinking missing`);
       assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES[o]), `${k.code}: unknown outcome`);
-      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS[p.requires], `${k.code}: unknown prerequisite ${p.requires}`);
+      for (const p of k.prerequisites) assert.ok(p.kind === 'outcome' || SKILLS[p.requires] || (p.grade < 6 && /^KISW\.G\d\./.test(p.requires)), `${k.code}: unknown prerequisite ${p.requires}`);   // a skill of a grade below: checked in tests/lib/kiswahili-depth.mjs
     }
     for (const m of s.misconceptions) {
       assert.equal(m.status, 'draft');

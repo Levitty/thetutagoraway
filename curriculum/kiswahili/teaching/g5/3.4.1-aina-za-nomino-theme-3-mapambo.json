@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO",
+ "title": "Aina za Nomino (Theme 3: Mapambo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI",
+   "key_step": "The child gives the special group word (umati, kundi, chane, kicha) and agrees the verb with it, not with the members.",
+   "floor": {
+    "prerequisite": "Gives plurals.",
+    "question": "Wingi wa ng'ombe ni?",
+    "answer": "ng'ombe"
+   },
+   "representations": [
+    "pictures of groups: a crowd, a herd, a bunch",
+    "group word cards",
+    "sentence frames"
+   ],
+   "steps": [
+    "Look at the group.",
+    "Say the group word.",
+    "Find its ngeli.",
+    "Agree the verb with the group word."
+   ],
+   "contexts": [
+    "decorations (mapambo): a bunch of flowers",
+    "a herd at the river",
+    "a crowd at a rally"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "umati wa watu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"umati\".",
+     "say": "Kitenzi kitapatana na neno lipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Umati wa watu umekusanyika.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI.M_MAK_WRONG_GROUP",
+     "listen_for": [
+      "umati"
+     ],
+     "ask": "Soma tena: \"Mama alinunua ___ wa ndizi sokoni.\" Kwa nini \"umati\" si jibu sahihi?",
+     "repair": "Kila kundi lina jina lake la kawaida: umati wa watu, jeshi la askari, msafara wa magari, mkungu wa ndizi, tita la kuni."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI.M_MAK_SINGLE",
+     "listen_for": [
+      "mtu"
+     ],
+     "ask": "Soma tena: \"Alipofika sokoni, aliona ___ wa watu wengi.\" Kwa nini \"mtu\" si jibu sahihi?",
+     "repair": "Nomino ya kundi hutaja wengi kwa pamoja, kama umati wa watu. \"Mtu\" ni mmoja tu."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI.M5_MAK_PLURAL",
+     "listen_for": [
+      "ndizi nyingi"
+     ],
+     "ask": "Kuna neno maalum la kundi hili?",
+     "repair": "Kundi la ndizi zilizoshikana huitwa chane."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO.MAKUNDI.M5_MAK_AGREE",
+     "listen_for": [
+      "wanakula"
+     ],
+     "ask": "Nomino kuu katika sentensi hii ni ipi?",
+     "repair": "Kitenzi hupatana na kundi: kundi linakula."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kundi la ng'ombe huitwa?",
+     "answer": "kundi au mfugo",
+     "shows": "group word"
+    },
+    {
+     "question": "Jaza: Umati wa watu ___ (umefika / wamefika).",
+     "answer": "umefika",
+     "shows": "agreement"
+    }
+   ]
+  }
+ ]
+}

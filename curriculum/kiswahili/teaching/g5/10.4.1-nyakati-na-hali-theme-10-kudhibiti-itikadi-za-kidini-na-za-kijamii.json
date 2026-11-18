@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI",
+ "title": "Nyakati na Hali (Theme 10: Kudhibiti itikadi za kidini na za kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU",
+   "key_step": "The child uses hu- for what is always done (with no person prefix: husoma) and -me- for what is complete and still true now (amesoma).",
+   "floor": {
+    "prerequisite": "Uses -li-, -na-, -ta-.",
+    "question": "Jaza: Jana ni___soma.",
+    "answer": "nilisoma"
+   },
+   "representations": [
+    "a habit calendar: kila siku",
+    "a finished task shown (a closed book)",
+    "cards hu- and -me-"
+   ],
+   "steps": [
+    "Read the time words (kila siku, tayari).",
+    "Habit: hu- alone.",
+    "Finished now: person + -me-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "controlling harmful beliefs: always telling the truth",
+    "daily school routine",
+    "a finished homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kila siku Juma ___ (amka) mapema."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kila siku\".",
+     "say": "Ni jambo la mazoea au limekamilika?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Juma huamka mapema\" and \"Juma ameamka.\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_NYK_HU_SUBJECT",
+     "listen_for": [
+      "anahunywa"
+     ],
+     "ask": "Soma tena: \"Kila asubuhi Juma ___ maji.\" Kwa nini \"anahunywa\" si jibu sahihi?",
+     "repair": "Katika hali ya mazoea, hu- hubeba wakati na hakuna kiambishi cha mtu: Juma hunywa maji."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_NYK_ME_PAST",
+     "listen_for": [
+      "alimaliza"
+     ],
+     "ask": "Soma tena: \"Mama ___ kupika chakula (sasa kiko tayari).\" Kwa nini \"alimaliza\" si jibu sahihi?",
+     "repair": "-me- huonyesha kitendo kimekamilika na matokeo yake yapo sasa. -li- huonyesha kitendo cha zamani kilichopita."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M_NYK_NA_HABIT",
+     "listen_for": [
+      "anafua"
+     ],
+     "ask": "Soma tena: \"Kila Jumamosi Wanjiru ___ nguo.\" Kwa nini \"anafua\" si jibu sahihi?",
+     "repair": "Kitendo kinachofanyika kila mara huandikwa kwa hu-: Wanjiru hufua nguo."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T10_NYAKATI_NA_HALI.MAZOEA_TIMILIFU.M5_NYK_ME_FUTURE",
+     "listen_for": [
+      "nimemaliza"
+     ],
+     "ask": "Jambo hili limeshatokea au litatokea?",
+     "repair": "-me- huonyesha jambo limekamilika sasa; kwa wakati ujao tunasema nitakuwa nimemaliza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kila jioni bibi ___ (simulia) hadithi.",
+     "answer": "husimulia",
+     "shows": "habit"
+    },
+    {
+     "question": "Jaza: Tayari mama ___ (pika) chakula.",
+     "answer": "amepika",
+     "shows": "perfect"
+    }
+   ]
+  }
+ ]
+}

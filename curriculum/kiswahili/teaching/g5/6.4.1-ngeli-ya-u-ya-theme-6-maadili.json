@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA",
+ "title": "Ngeli ya U-YA (Theme 6: Maadili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA",
+   "key_step": "The child knows nouns of U-YA take u- for one and ya- for many, and their plural takes ma- (ugonjwa -> magonjwa, uso -> nyuso is not U-YA).",
+   "floor": {
+    "prerequisite": "Uses U-ZI agreement.",
+    "question": "Ukuta ___ anguka.",
+    "answer": "umeanguka"
+   },
+   "representations": [
+    "pairs: ugonjwa/magonjwa, unyoya/manyoya",
+    "a U-ZI and U-YA sorting chart",
+    "prefix cards u- and ya-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Make the plural: ma-?",
+    "If so, U-YA: u- and ya-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "values (maadili): good deeds",
+    "feathers of birds",
+    "illnesses at the clinic"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Unyoya ___ anguka."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Unyoya\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Unyoya umeanguka\" and \"Manyoya yameanguka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M_UYA_AGR_ZI",
+     "listen_for": [
+      "zi"
+     ],
+     "ask": "Soma tena: \"Manyoya ___meanguka.\" Kwa nini \"zi\" si jibu sahihi?",
+     "repair": "Nomino za U-YA zina wingi wenye ma-, na zinapatana na ya-: manyoya yameanguka."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M_UYA_PL_FORM",
+     "listen_for": [
+      "minyoya"
+     ],
+     "ask": "Soma tena: \"Wingi wa \"unyoya\" ni ___.\" Kwa nini \"minyoya\" si jibu sahihi?",
+     "repair": "Wingi wa nomino za U-YA huundwa kwa ma-: unyoya - manyoya, ugonjwa - magonjwa, uchungu - machungu."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M_UYA_SG_WRONG",
+     "listen_for": [
+      "ya"
+     ],
+     "ask": "Soma tena: \"Ugonjwa wake ___meisha.\" Kwa nini \"ya\" si jibu sahihi?",
+     "repair": "Umoja wa ngeli ya U-YA hupatana na u-: ugonjwa umepona."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T6_NGELI_YA_U_YA.U_YA.M5_UYA_CLASS",
+     "listen_for": [
+      "zimeenea"
+     ],
+     "ask": "Wingi wa ugonjwa una ma-?",
+     "repair": "Ugonjwa ni wa U-YA: wingi ni magonjwa, na kitenzi huchukua ya-."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Manyoya ___ (yamepeperushwa / zimepeperushwa).",
+     "answer": "yamepeperushwa",
+     "shows": "plural"
+    },
+    {
+     "question": "Wingi wa ugonjwa ni?",
+     "answer": "magonjwa",
+     "shows": "plural noun"
+    }
+   ]
+  }
+ ]
+}

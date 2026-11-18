@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T10_TASHBIHI",
+ "title": "Tashbihi (Theme 10: Kudhibiti itikadi za kidini na za kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI",
+   "key_step": "The child links a character trait to the animal or thing that stands for it in Kenyan stories (mjanja kama sungura, mpole kama njiwa) and keeps kama.",
+   "floor": {
+    "prerequisite": "Uses similes of size.",
+    "question": "mrefu kama ___",
+    "answer": "twiga"
+   },
+   "representations": [
+    "folk-tale animal cards with their traits",
+    "simile strips",
+    "a description task about a person"
+   ],
+   "steps": [
+    "Name the trait.",
+    "Recall the animal with it.",
+    "Join with kama.",
+    "Use it to describe someone."
+   ],
+   "contexts": [
+    "controlling harmful beliefs: a kind neighbour",
+    "folk tales of Sungura and Fisi",
+    "a class prefect"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mpole kama ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dove.",
+     "say": "Ni mnyama yupi ni mpole?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"mpole kama njiwa\" and a sentence describing a person."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M_TASH_WRONG_ANIMAL",
+     "listen_for": [
+      "sungura"
+     ],
+     "ask": "Soma tena: \"Baba yetu ni mkali kama ___.\" Kwa nini \"sungura\" si jibu sahihi?",
+     "repair": "Tashbihi hutumia ulinganisho wa kawaida: mkali kama simba, mwoga kama sungura, mpole kama kondoo."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M_TASH_NO_KAMA",
+     "listen_for": [
+      "Yeye ni simba"
+     ],
+     "ask": "Soma tena: \"Ni tashbihi ipi?\" Kwa nini \"Yeye ni simba\" si jibu sahihi?",
+     "repair": "Tashbihi hulinganisha kwa kutumia kama au mithili ya: mkali kama simba. Kusema \"yeye ni simba\" ni sitiari."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M_TASH_LITERAL",
+     "listen_for": [
+      "Juma ni sungura"
+     ],
+     "ask": "Soma tena: \"\"Juma ni mwoga kama sungura\" maana yake nini?\" Kwa nini \"Juma ni sungura\" si jibu sahihi?",
+     "repair": "Tashbihi inaelezea tabia kwa kulinganisha. \"Mwoga kama sungura\" ina maana mtu ana hofu sana."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T10_TASHBIHI.TASHBIHI.M5_TASH_OPPOSITE",
+     "listen_for": [
+      "kondoo"
+     ],
+     "ask": "Katika hadithi, sungura ana tabia gani?",
+     "repair": "Sungura ni mjanja katika hadithi, kwa hiyo mjanja kama sungura."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kamilisha: mlafi kama ___",
+     "answer": "fisi",
+     "shows": "trait"
+    },
+    {
+     "question": "Tunga sentensi yenye tashbihi ya tabia.",
+     "answer": "Juma ni mjanja kama sungura.",
+     "shows": "use"
+    }
+   ]
+  }
+ ]
+}

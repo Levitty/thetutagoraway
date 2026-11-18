@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T11_UKANUSHAJI",
+ "title": "Ukanushaji (Theme 11: Uwekezaji)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI",
+   "key_step": "The child changes the person to its negative (ni- si-, a- ha-, wa- hawa-) and the tense to its negative form (-na- to -i ending, -li- to -ku-, -me- to -ja-, -ta- stays).",
+   "floor": {
+    "prerequisite": "Uses -li-, -na-, -ta-, -me-.",
+    "question": "Jaza: Tayari ni___soma.",
+    "answer": "nimesoma"
+   },
+   "representations": [
+    "a negation table by person and tense",
+    "colour for person and tense parts",
+    "positive/negative sentence pairs"
+   ],
+   "steps": [
+    "Find the person part.",
+    "Make it negative.",
+    "Change the tense part.",
+    "Check the ending."
+   ],
+   "contexts": [
+    "investment (uwekezaji): saving money",
+    "class rules",
+    "farm work"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Nimelipa -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"-me-\".",
+     "say": "Tukikanusha, -me- inakuwa nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Sijalipa\" and the negatives of \"Ninalipa\" and \"Nililipa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_SI_ONLY",
+     "listen_for": [
+      "Si ninasoma kitabu."
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Ninasoma kitabu.\"\" Kwa nini \"Si ninasoma kitabu.\" si jibu sahihi?",
+     "repair": "Kitenzi kinakanushwa kwa kubadili kiambishi cha mtu na wakati ndani yake, si kwa kuweka \"si\" mbele. Ninasoma - sisomi."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_KEEP_TENSE",
+     "listen_for": [
+      "Hamesoma kitabu."
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Amesoma kitabu.\"\" Kwa nini \"Hamesoma kitabu.\" si jibu sahihi?",
+     "repair": "Katika ukanusho, -me- hubadilika kuwa -ja-: amesoma - hajasoma. -li- hubadilika kuwa -ku-: alisoma - hakusoma."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_PERSON",
+     "listen_for": [
+      "Tusitasoma kesho."
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Tutasoma kesho.\"\" Kwa nini \"Tusitasoma kesho.\" si jibu sahihi?",
+     "repair": "Viambishi vya nafsi hubadilika katika ukanusho: ni- - si-, u- - hu-, a- - ha-, tu- - hatu-, m- - ham-, wa- - hawa-."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_KEEP_NA",
+     "listen_for": [
+      "Hanasoma kitabu."
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Anasoma kitabu.\"\" Kwa nini \"Hanasoma kitabu.\" si jibu sahihi?",
+     "repair": "Wakati uliopo hukanushwa bila -na-, na kitenzi humalizika kwa -i: anasoma - hasomi."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKANUSHAJI.UKANUSHAJI.M_NEG_WRONG_TENSE",
+     "listen_for": [
+      "Hasomi kitabu."
+     ],
+     "ask": "Soma tena: \"Kanusha: \"Amesoma kitabu.\"\" Kwa nini \"Hasomi kitabu.\" si jibu sahihi?",
+     "repair": "Ukanusho wa kila wakati una kiambishi chake: -na- hukanushwa bila kiambishi (hasomi), -me- huwa -ja- (hajasoma), -li- huwa -ku- (hakusoma), -ta- hubaki -ta- (hatasoma)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Tumeweka akiba.",
+     "answer": "Hatujaweka akiba",
+     "shows": "perfect negative"
+    },
+    {
+     "question": "Kanusha: Utanunua.",
+     "answer": "Hutanunua",
+     "shows": "future negative"
+    }
+   ]
+  }
+ ]
+}

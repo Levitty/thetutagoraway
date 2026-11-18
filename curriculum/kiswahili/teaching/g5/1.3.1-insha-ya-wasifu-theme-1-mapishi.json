@@ -1,0 +1,197 @@
+{
+ "sub_strand": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU",
+ "title": "Insha ya wasifu (Theme 1: Mapishi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA",
+   "key_step": "The child names the kind of writing from what it does and how it is laid out: tells events, describes, explains, or writes to someone.",
+   "floor": {
+    "prerequisite": "Sorts masimulizi from maelezo.",
+    "question": "Matini inayosimulia matukio ni?",
+    "answer": "masimulizi"
+   },
+   "representations": [
+    "four model texts (wasifu, masimulizi, maelezo, barua)",
+    "a sorting chart",
+    "the layout of each"
+   ],
+   "steps": [
+    "Look at the layout.",
+    "Ask: tells, describes, explains, or writes to someone?",
+    "Name the kind.",
+    "Find its parts."
+   ],
+   "contexts": [
+    "cooking (mapishi)",
+    "a class magazine",
+    "a newspaper"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpendwa rafiki yangu,"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the greeting.",
+     "say": "Matini hii ni ya aina gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child sorts four texts into the chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M_INS_WASIFU_STORY",
+     "listen_for": [
+      "masimulizi"
+     ],
+     "ask": "Soma tena: \"Kifungu kinaelezea sura, tabia na maisha ya mtu. Ni insha ya aina gani?\" Kwa nini \"masimulizi\" si jibu sahihi?",
+     "repair": "Insha ya wasifu humwelezea mtu: sura yake, tabia yake na maisha yake. Masimulizi husimulia matukio."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M_INS_MAELEZO_STORY",
+     "listen_for": [
+      "masimulizi"
+     ],
+     "ask": "Soma tena: \"Kifungu kinaeleza hatua za kupika uji. Ni insha ya aina gani?\" Kwa nini \"masimulizi\" si jibu sahihi?",
+     "repair": "Insha ya maelezo hueleza jambo au jinsi ya kufanya kitu. Masimulizi husimulia tukio lililotokea."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M_INS_STORY_WASIFU",
+     "listen_for": [
+      "wasifu"
+     ],
+     "ask": "Soma tena: \"Kifungu kinasimulia kilichotokea Jumamosi kijijini. Ni insha ya aina gani?\" Kwa nini \"wasifu\" si jibu sahihi?",
+     "repair": "Masimulizi husimulia matukio kwa mpangilio. Wasifu humwelezea mtu mwenyewe."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.AINA_ZA_INSHA.M5_INS_LETTER",
+     "listen_for": [
+      "insha ya masimulizi"
+     ],
+     "ask": "Matini hii inaanza na kuishaje?",
+     "repair": "Salamu na hitimisho la barua huonyesha ni barua, si insha."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Insha inayoeleza jinsi mtu alivyo ni ya aina gani?",
+     "answer": "wasifu",
+     "shows": "kind"
+    },
+    {
+     "question": "Barua hutofautianaje na insha?",
+     "answer": "ina anwani, salamu na hitimisho la barua",
+     "shows": "layout"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU",
+   "key_step": "The child plans insha ya wasifu before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "mpishi hodari wa kijiji chetu",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpishi Hodari wa Kijiji Chetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Mpishi Hodari wa Kijiji Chetu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU.M5_INS_STORY_T1",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya wasifu hueleza jinsi kitu au mtu alivyo, si matukio ya siku moja."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU.M5_INS_DETAIL_T1",
+     "listen_for": [
+      "Mama Neema ni mzuri sana."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU.M5_INS_AGREE_T1",
+     "listen_for": [
+      "Ana vyakula mitamu."
+     ],
+     "ask": "Nomino hii iko katika ngeli gani?",
+     "repair": "Kivumishi hupatana na nomino yake: bendera nzuri, miti mirefu, mtoto mzuri."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU.M5_INS_OFFTOPIC_T1",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU.M5_INS_PARAS_T1",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya wasifu kuhusu \"Mpishi Hodari wa Kijiji Chetu\"?",
+     "answer": "Mama Neema ni mfupi, mnene kiasi, na ana tabasamu pana kila wakati.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya wasifu ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

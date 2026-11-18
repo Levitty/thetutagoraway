@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T5_METHALI",
+ "title": "Methali: (Theme 5: Kukabiliana na umaskini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T5_METHALI.METHALI",
+   "key_step": "The child gives the hidden lesson of a methali on hard work and matches it to a situation with the same lesson.",
+   "floor": {
+    "prerequisite": "Explains a methali on upbringing.",
+    "question": "Samaki mkunje angali mbichi?",
+    "answer": "mfunze mtoto angali mdogo"
+   },
+   "representations": [
+    "methali halves to join",
+    "situation cards",
+    "a literal/hidden meaning chart"
+   ],
+   "steps": [
+    "Read the methali.",
+    "Say the literal picture.",
+    "Say the hidden lesson.",
+    "Match it to a situation."
+   ],
+   "contexts": [
+    "facing poverty: hard work",
+    "a farmer in the dry season",
+    "saving pocket money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Bandu bandu huisha gogo."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"huisha gogo\".",
+     "say": "Kazi ndogo ndogo zikiendelea, hutokea nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child says the lesson and tells a situation where it fits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T5_METHALI.METHALI.M_MET_LITERAL",
+     "listen_for": [
+      "Anayekaa juani hulia"
+     ],
+     "ask": "Soma tena: \"Mchumia juani hulia kivulini. Maana yake ni nini?\" Kwa nini \"Anayekaa juani hulia\" si jibu sahihi?",
+     "repair": "Methali haisemi maana yake wazi. Mchumia juani hulia kivulini ina maana kwamba anayefanya kazi kwa bidii atapumzika na kufurahia matunda yake."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T5_METHALI.METHALI.M_MET_WRONG_LESSON",
+     "listen_for": [
+      "Umoja ni nguvu"
+     ],
+     "ask": "Soma tena: \"Haba na haba hujaza kibaba. Maana yake ni nini?\" Kwa nini \"Umoja ni nguvu\" si jibu sahihi?",
+     "repair": "Kila methali ina funzo lake. Haba na haba hujaza kibaba inafundisha kwamba kidogo kidogo hujaza."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T5_METHALI.METHALI.M_MET_WRONG_END",
+     "listen_for": [
+      "chupa"
+     ],
+     "ask": "Soma tena: \"Haba na haba hujaza ___.\" Kwa nini \"chupa\" si jibu sahihi?",
+     "repair": "Methali hubaki jinsi ilivyo. Mwisho sahihi ni kibaba: haba na haba hujaza kibaba."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T5_METHALI.METHALI.M5_MET_USE",
+     "listen_for": [
+      "Haba na haba hujaza kibaba"
+     ],
+     "ask": "Kisa hiki kinafunza nini?",
+     "repair": "Chagua methali yenye funzo linalolingana na kisa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Maana ya \"Haba na haba hujaza kibaba\" ni?",
+     "answer": "kidogo kidogo hukusanya kingi",
+     "shows": "meaning"
+    },
+    {
+     "question": "Kamilisha: Mtaka cha mvunguni ___",
+     "answer": "sharti ainame",
+     "shows": "complete"
+    }
+   ]
+  }
+ ]
+}

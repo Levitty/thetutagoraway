@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO",
+ "title": "Insha ya Maelezo (Theme 9: Magonjwa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO",
+   "key_step": "The child plans insha ya maelezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "jinsi ya kujikinga na malaria",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jinsi ya Kujikinga na Malaria"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Jinsi ya Kujikinga na Malaria\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO.M5_INS_STORY_T9",
+     "listen_for": [
+      "Siku moja tulienda sokoni tukapotea."
+     ],
+     "ask": "Sentensi hii inaeleza au inasimulia?",
+     "repair": "Insha ya maelezo hueleza jambo lilivyo au jinsi linavyofanywa, si matukio ya siku moja."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO.M5_INS_DETAIL_T9",
+     "listen_for": [
+      "Malaria ni ugonjwa mbaya."
+     ],
+     "ask": "Msomaji anaona nini akisoma sentensi hii?",
+     "repair": "Tumia vivumishi na maelezo ya rangi, umbo, ukubwa na sauti ili msomaji aone picha."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO.M5_INS_STEPS_T9",
+     "listen_for": [
+      "nenda kliniki ukiugua, lala ndani ya chandarua, fukia madimbwi, fyeka nyasi"
+     ],
+     "ask": "Unaweza kufanya hatua hii kabla ya ile?",
+     "repair": "Maelezo ya jinsi ya kufanya jambo hufuata hatua kwa mpangilio."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO.M5_INS_OFFTOPIC_T9",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T9_INSHA_YA_MAELEZO.INSHA_MAELEZO.M5_INS_PARAS_T9",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya maelezo kuhusu \"Jinsi ya Kujikinga na Malaria\"?",
+     "answer": "Kwanza, lala ndani ya chandarua kilichotiwa dawa kila usiku.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya maelezo ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

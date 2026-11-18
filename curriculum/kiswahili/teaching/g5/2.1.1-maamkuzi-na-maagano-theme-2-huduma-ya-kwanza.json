@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO",
+ "title": "Maamkuzi na Maagano (Theme 2: Huduma ya kwanza)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI_MIKTADHA",
+   "key_step": "The child asks who, when and where before choosing the greeting or farewell, and knows which side says which part.",
+   "floor": {
+    "prerequisite": "Greets and replies to a friend.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "situation cards (hospital, journey, elder, morning)",
+    "a clock face with farewells",
+    "pairs for role play"
+   ],
+   "steps": [
+    "Who is it, and how old?",
+    "What time is it?",
+    "Where are we and how is the person?",
+    "Say the greeting and wait for the reply."
+   ],
+   "contexts": [
+    "first aid (huduma ya kwanza): visiting the injured",
+    "a bus journey",
+    "a family visit"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Pole sana! - Asante."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hospital card.",
+     "say": "Tunamwambia nini mgonjwa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts a hospital visit with the greeting, the reply and the farewell \"Ugua pole\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI_MIKTADHA.M5_MAA_SICK",
+     "listen_for": [
+      "Habari yako? Nzuri sana!"
+     ],
+     "ask": "Mtu huyu yuko katika hali gani?",
+     "repair": "Mgonjwa husalimiwa kwa \"Pole\" na kuagwa kwa \"Ugua pole\"."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI_MIKTADHA.M5_MAA_REPLY_MARAHABA",
+     "listen_for": [
+      "Marahaba"
+     ],
+     "ask": "Ni nani mdogo kati yenu?",
+     "repair": "Mdogo husema \"Shikamoo\", mkubwa hujibu \"Marahaba\"."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI_MIKTADHA.M5_MAA_TIME",
+     "listen_for": [
+      "Usiku mwema!"
+     ],
+     "ask": "Sasa ni wakati gani wa siku?",
+     "repair": "Agano hufuata wakati: asubuhi tunasema siku njema; usiku tunasema usiku mwema."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI_MIKTADHA.M5_MAA_ENGLISH",
+     "listen_for": [
+      "Niaje mzee?"
+     ],
+     "ask": "Neno \"Niaje\" ni la Kiswahili sanifu?",
+     "repair": "Kwa Kiswahili sanifu tunasema Hujambo au Shikamoo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Unamuaga mgonjwa. Unasema?",
+     "answer": "Ugua pole",
+     "shows": "farewell to the sick"
+    },
+    {
+     "question": "Mzee akijibu \"Marahaba\", mtoto alisema nini?",
+     "answer": "Shikamoo",
+     "shows": "pair"
+    }
+   ]
+  }
+ ]
+}

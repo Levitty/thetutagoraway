@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G5.KUANDI.T4_BARUAPEPE",
+ "title": "Baruapepe (Theme 4: Saa na majira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE",
+   "key_step": "The child names the parts of an email (Kwa, Kichwa, salamu, ujumbe, hitimisho, kiambatisho) and what each holds.",
+   "floor": {
+    "prerequisite": "Knows the parts of a friendly letter.",
+    "question": "Barua huanza na nini?",
+    "answer": "anwani na tarehe"
+   },
+   "representations": [
+    "an email screen on the board",
+    "part cards",
+    "a printed email"
+   ],
+   "steps": [
+    "Find the Kwa box.",
+    "Find the Kichwa box.",
+    "Find the message.",
+    "Find the attachment button."
+   ],
+   "contexts": [
+    "time and seasons (saa na majira)",
+    "the lab",
+    "a school club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kwa: mwalimu@shule.ac.ke"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kwa\".",
+     "say": "Kisanduku hiki kinaandikwa nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child labels the parts of an email screen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M_BAR_LETTER_FORM",
+     "listen_for": [
+      "Kona ya juu kulia"
+     ],
+     "ask": "Soma tena: \"Anwani ya mpokeaji kwenye baruapepe huandikwa wapi?\" Kwa nini \"Kona ya juu kulia\" si jibu sahihi?",
+     "repair": "Baruapepe ina sehemu ya \"Kwa\" kwa anwani ya mpokeaji, na sehemu ya mada. Si kama barua ya karatasi yenye anwani kona."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M_BAR_NO_SUBJECT",
+     "listen_for": [
+      "Ujumbe wote"
+     ],
+     "ask": "Soma tena: \"Sehemu ya mada huandikwa nini?\" Kwa nini \"Ujumbe wote\" si jibu sahihi?",
+     "repair": "Mada ni kichwa kifupi cha baruapepe. Ujumbe wote huandikwa katika mwili wa baruapepe."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M_BAR_ORDER",
+     "listen_for": [
+      "Salamu ya mwanzo"
+     ],
+     "ask": "Soma tena: \"Baruapepe huisha na nini?\" Kwa nini \"Salamu ya mwanzo\" si jibu sahihi?",
+     "repair": "Mpangilio wa baruapepe: anayepokea, mada, salamu, ujumbe, hitimisho, jina la mwandishi."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.BARUAPEPE.M5_BAR_ATTACH",
+     "listen_for": [
+      "eleza picha kwenye ujumbe"
+     ],
+     "ask": "Picha itamfikia mwalimu ukiieleza tu?",
+     "repair": "Faili au picha hutumwa kama kiambatisho kwa kubonyeza alama ya pini."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kisanduku cha \"Kichwa\" ni cha nini?",
+     "answer": "kueleza ujumbe unahusu nini kwa ufupi",
+     "shows": "subject"
+    },
+    {
+     "question": "Picha hutumwaje kwa baruapepe?",
+     "answer": "kama kiambatisho",
+     "shows": "attachment"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G5.KUANDI.T4_BARUAPEPE.KUANDIKA_BARUAPEPE",
+   "key_step": "The child plans baruapepe before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "saa ya mkutano wa klabu",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Saa ya Mkutano wa Klabu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Saa ya Mkutano wa Klabu\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_NOSUBJ_T4",
+     "listen_for": [
+      "ujumbe wote"
+     ],
+     "ask": "Mpokeaji ataona nini kwanza kwenye sanduku lake?",
+     "repair": "Kichwa cha baruapepe ni maneno machache yanayoeleza ujumbe unahusu nini."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_ADDR_T4",
+     "listen_for": [
+      "S.L.P. 120, Nakuru, na tarehe juu kulia"
+     ],
+     "ask": "Kifaa kinaonyesha tarehe wapi?",
+     "repair": "Baruapepe haina anwani ya posta wala tarehe juu; kifaa huziweka chenyewe."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_TOFIELD_T4",
+     "listen_for": [
+      "Amina Otieno"
+     ],
+     "ask": "Anwani ya baruapepe ina alama gani?",
+     "repair": "Kisanduku cha \"Kwa\" huandikwa anwani ya baruapepe ya mpokeaji, yenye @."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T4_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_TEXTSPEAK_T4",
+     "listen_for": [
+      "Poa, tutaonana 2moro."
+     ],
+     "ask": "Maneno haya yangeeleweka na kila mtu?",
+     "repair": "Baruapepe huandikwa kwa lugha sahihi, na humalizika kwa hitimisho na jina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika baruapepe kuhusu \"Saa ya Mkutano wa Klabu\"?",
+     "answer": "Habari Juma,",
+     "shows": "type"
+    },
+    {
+     "question": "Baruapepe ina sehemu zipi?",
+     "answer": "anwani au kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

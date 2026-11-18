@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T3_VITENDAWILI",
+ "title": "Vitendawili (Theme 3: Mapambo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI",
+   "key_step": "The child tells a riddle from a methali or nahau, gives the formula, and tests every clue before answering.",
+   "floor": {
+    "prerequisite": "Uses the riddle formula.",
+    "question": "Kitendawili! - ?",
+    "answer": "Tega!"
+   },
+   "representations": [
+    "riddles about decorations (shanga, hereni)",
+    "clue strips",
+    "a methali, a nahau and a riddle to sort"
+   ],
+   "steps": [
+    "Hear \"Kitendawili!\" and say \"Tega!\".",
+    "Listen to every clue.",
+    "Test an answer against each clue.",
+    "Say the answer; set a riddle back."
+   ],
+   "contexts": [
+    "decorations (mapambo)",
+    "riddles at the evening fire",
+    "a cultural day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Popoo mbili zavuka mto."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Popoo mbili\".",
+     "say": "Ni kitu gani kiko viwili na kinavuka?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child answers \"macho\" and sets one riddle of his own with the formula."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_METHALI",
+     "listen_for": [
+      "Haba na haba hujaza kibaba"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Haba na haba hujaza kibaba\" si jibu sahihi?",
+     "repair": "Kitendawili huficha jibu na humtaka mtu kukitegua. Methali hutoa funzo."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_NAHAU",
+     "listen_for": [
+      "Kukata tamaa"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Kukata tamaa\" si jibu sahihi?",
+     "repair": "Nahau ni maneno yenye maana maalum. Kitendawili huuliza kwa mafumbo na kina jibu la kutegua."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_PLAIN",
+     "listen_for": [
+      "Yai ni chakula kizuri"
+     ],
+     "ask": "Soma tena: \"Ni kitendawili kipi?\" Kwa nini \"Yai ni chakula kizuri\" si jibu sahihi?",
+     "repair": "Kitendawili hakitaji kitu moja kwa moja; hukielezea kwa fumbo. Sentensi ya kawaida inataja wazi."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T3_VITENDAWILI.VITENDAWILI.M_VIT_WRONG_ANSWER",
+     "listen_for": [
+      "mbwa"
+     ],
+     "ask": "Soma tena: \"\"Popote niendapo hunifuata.\" Jibu ni nini?\" Kwa nini \"mbwa\" si jibu sahihi?",
+     "repair": "Jibu la kitendawili lazima lilingane na kila sehemu yake. Hiyo si jibu sahihi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni kipi ni kitendawili: \"Haraka haraka haina baraka\" au \"Kila nikienda ananifuata\"?",
+     "answer": "Kila nikienda ananifuata",
+     "shows": "genre"
+    },
+    {
+     "question": "Kila nikienda ananifuata. Ni nini?",
+     "answer": "kivuli",
+     "shows": "solve"
+    }
+   ]
+  }
+ ]
+}

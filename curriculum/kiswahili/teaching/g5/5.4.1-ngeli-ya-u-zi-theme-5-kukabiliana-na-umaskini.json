@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI",
+ "title": "Ngeli ya U-ZI (Theme 5: Kukabiliana na umaskini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI",
+   "key_step": "The child knows nouns of U-ZI take u- in the singular and zi- in the plural, and that the plural noun drops u- (ufunguo -> funguo).",
+   "floor": {
+    "prerequisite": "Uses I-ZI agreement.",
+    "question": "Meza ___ vunjika.",
+    "answer": "imevunjika"
+   },
+   "representations": [
+    "real keys and walls in pictures",
+    "singular/plural pairs",
+    "prefix cards u- and zi-"
+   ],
+   "steps": [
+    "Find the noun.",
+    "Make its plural (drop u-).",
+    "One: u-; many: zi-.",
+    "Read the sentence."
+   ],
+   "contexts": [
+    "facing poverty (kukabiliana na umaskini): building walls",
+    "keys of the school store",
+    "a broom (ufagio) at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ufunguo ___ potea."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Ufunguo\".",
+     "say": "Wingi wake ni upi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Ufunguo umepotea\" and \"Funguo zimepotea\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M_UZI_PL_MA",
+     "listen_for": [
+      "mikuta"
+     ],
+     "ask": "Soma tena: \"Wingi wa \"ukuta\" ni ___.\" Kwa nini \"mikuta\" si jibu sahihi?",
+     "repair": "Katika ngeli ya U-ZI, tunaondoa u- au kubadili herufi za mwanzo: ukuta - kuta, wimbo - nyimbo, ubao - mbao."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M_UZI_AGR_I",
+     "listen_for": [
+      "i"
+     ],
+     "ask": "Soma tena: \"Kuta mbili ___meanguka.\" Kwa nini \"i\" si jibu sahihi?",
+     "repair": "Wingi wa nomino za U-ZI hupatana na zi-: kuta zimeanguka. Mi- ni ya ngeli nyingine, kama miti."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M_UZI_AGR_SG",
+     "listen_for": [
+      "i"
+     ],
+     "ask": "Soma tena: \"Ukuta ___meanguka.\" Kwa nini \"i\" si jibu sahihi?",
+     "repair": "Umoja wa ngeli ya U-ZI hupatana na u-: ukuta umeanguka."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T5_NGELI_YA_U_ZI.U_ZI.M5_UZI_PL_NOUN",
+     "listen_for": [
+      "mikuta"
+     ],
+     "ask": "Ni nini kinatoka katika wingi wa nomino hii?",
+     "repair": "Wingi wa ukuta ni kuta: u- inaondoka."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Kuta ___ (zimepakwa / imepakwa) rangi.",
+     "answer": "zimepakwa",
+     "shows": "plural"
+    },
+    {
+     "question": "Wingi wa \"ufagio\" ni?",
+     "answer": "fagio",
+     "shows": "plural noun"
+    }
+   ]
+  }
+ ]
+}

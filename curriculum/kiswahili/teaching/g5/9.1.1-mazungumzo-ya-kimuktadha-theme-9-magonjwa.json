@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT",
+ "title": "Mazungumzo ya Kimuktadha (Theme 9: Magonjwa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.LUGHA_RASMI",
+   "key_step": "The child names the setting by its place and purpose, then speaks in standard Kiswahili with titles, politeness and turn-taking.",
+   "floor": {
+    "prerequisite": "Uses informal language with friends.",
+    "question": "Unamsalimuje rafiki uwanjani?",
+    "answer": "Hujambo rafiki"
+   },
+   "representations": [
+    "setting cards: clinic, office, assembly, home",
+    "title cards",
+    "a mock meeting with a chair"
+   ],
+   "steps": [
+    "Where are we, and why?",
+    "Who is the official, and his title?",
+    "Choose standard, polite words.",
+    "Wait for your turn."
+   ],
+   "contexts": [
+    "diseases (magonjwa): at the clinic",
+    "the school office",
+    "a chief's baraza"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kliniki: Daktari, ninaumwa na tumbo."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Daktari\".",
+     "say": "Kwa nini tunatumia cheo hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child acts a clinic visit telling the symptoms clearly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.LUGHA_RASMI.M5_RAS_SETTING",
+     "listen_for": [
+      "kuzungumza na binamu nyumbani"
+     ],
+     "ask": "Mahali hapa ni pa kazi rasmi?",
+     "repair": "Muktadha rasmi una kazi maalum na mahali rasmi: kliniki, ofisi, mkutano."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.LUGHA_RASMI.M5_RAS_SHENG",
+     "listen_for": [
+      "Niko poa tu daktari, ni ka-homa."
+     ],
+     "ask": "Daktari ataelewa \"ka-homa\" kwa usahihi?",
+     "repair": "Kwa daktari tunaeleza wazi kwa Kiswahili sanifu."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.LUGHA_RASMI.M5_RAS_TITLE",
+     "listen_for": [
+      "Habari Wanjiku!"
+     ],
+     "ask": "Mtu huyu ana cheo gani?",
+     "repair": "Katika muktadha rasmi tunatumia cheo: Mwalimu Mkuu, Daktari."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T9_MAZUNGUMZO_YA_KIMUKT.LUGHA_RASMI.M5_RAS_INTERRUPT",
+     "listen_for": [
+      "uliza mara moja hata kama mwenzako anazungumza"
+     ],
+     "ask": "Umeruhusiwa kuzungumza?",
+     "repair": "Katika mkutano rasmi, omba nafasi kabla ya kuzungumza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni muktadha upi ni rasmi: harusi ya binamu, mkutano wa wazazi shuleni?",
+     "answer": "mkutano wa wazazi shuleni",
+     "shows": "setting"
+    },
+    {
+     "question": "Unamwelezaje daktari tatizo lako?",
+     "answer": "Ninaumwa na kichwa tangu jana.",
+     "shows": "language"
+    }
+   ]
+  }
+ ]
+}

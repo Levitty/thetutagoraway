@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUANDI.T11_BARUAPEPE",
+ "title": "Baruapepe (Theme 11: Uwekezaji)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUANDI.T11_BARUAPEPE.KUANDIKA_BARUAPEPE",
+   "key_step": "The child plans baruapepe before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "mpango wa kuweka akiba",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mpango wa Kuweka Akiba"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Mpango wa Kuweka Akiba\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T11_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_NOSUBJ_T11",
+     "listen_for": [
+      "ujumbe wote"
+     ],
+     "ask": "Mpokeaji ataona nini kwanza kwenye sanduku lake?",
+     "repair": "Kichwa cha baruapepe ni maneno machache yanayoeleza ujumbe unahusu nini."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T11_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_ADDR_T11",
+     "listen_for": [
+      "S.L.P. 120, Nakuru, na tarehe juu kulia"
+     ],
+     "ask": "Kifaa kinaonyesha tarehe wapi?",
+     "repair": "Baruapepe haina anwani ya posta wala tarehe juu; kifaa huziweka chenyewe."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T11_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_TOFIELD_T11",
+     "listen_for": [
+      "Amina Otieno"
+     ],
+     "ask": "Anwani ya baruapepe ina alama gani?",
+     "repair": "Kisanduku cha \"Kwa\" huandikwa anwani ya baruapepe ya mpokeaji, yenye @."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T11_BARUAPEPE.KUANDIKA_BARUAPEPE.M5_INS_TEXTSPEAK_T11",
+     "listen_for": [
+      "Poa, tutaonana 2moro."
+     ],
+     "ask": "Maneno haya yangeeleweka na kila mtu?",
+     "repair": "Baruapepe huandikwa kwa lugha sahihi, na humalizika kwa hitimisho na jina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika baruapepe kuhusu \"Mpango wa Kuweka Akiba\"?",
+     "answer": "Habari Mwalimu Otieno,",
+     "shows": "type"
+    },
+    {
+     "question": "Baruapepe ina sehemu zipi?",
+     "answer": "anwani au kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

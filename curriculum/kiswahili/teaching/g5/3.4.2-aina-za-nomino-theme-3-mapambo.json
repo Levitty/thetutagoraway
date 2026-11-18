@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2",
+ "title": "Aina za Nomino (Theme 3: Mapambo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA",
+   "key_step": "The child knows a compound noun joins two words into one new name with its own meaning, written as the dictionary writes it.",
+   "floor": {
+    "prerequisite": "Finds nouns.",
+    "question": "Nomino ni zipi: \"Mwana wa mfalme.\"",
+    "answer": "mwana, mfalme"
+   },
+   "representations": [
+    "word-part cards: mwana + funzi, mwana + sheria",
+    "a dictionary",
+    "pairs to sort: compound / noun with adjective"
+   ],
+   "steps": [
+    "Look at the two parts.",
+    "Ask: do they make one new name?",
+    "Check how the dictionary writes it.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "decorations: a goldsmith (mfua dhahabu)",
+    "professions at a career day",
+    "family names (mwanamume, mwanamke)"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mwana + nchi = ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at both parts.",
+     "say": "Neno jipya ni lipi na maana yake?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"mwananchi\" and a sentence with it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA.M_AMBATA_SIMPLE",
+     "listen_for": [
+      "mwalimu"
+     ],
+     "ask": "Soma tena: \"Mtoto anayesoma shuleni ni ___.\" Kwa nini \"mwalimu\" si jibu sahihi?",
+     "repair": "Nomino ambata huundwa kwa kuunganisha maneno mawili, kama mwana + funzi = mwanafunzi. Mwalimu si ambata."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA.M_AMBATA_SPLIT",
+     "listen_for": [
+      "mwana funzi"
+     ],
+     "ask": "Soma tena: \"Mtoto anayesoma shuleni ni ___.\" Kwa nini \"mwana funzi\" si jibu sahihi?",
+     "repair": "Nomino ambata huandikwa kama neno moja: mwanafunzi, si \"mwana funzi\"."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA.M5_AMBATA_HYPHEN",
+     "listen_for": [
+      "mwana-funzi"
+     ],
+     "ask": "Kamusi inaandikaje neno hili?",
+     "repair": "Mwanafunzi huandikwa kama neno moja."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_2.AMBATA.M5_AMBATA_PHRASE",
+     "listen_for": [
+      "nyumba kubwa"
+     ],
+     "ask": "Maneno haya mawili yanaunda jina jipya?",
+     "repair": "Nomino ambata ni jina moja jipya lenye maana yake: mwanasheria, mwanamke."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ambata ipi: mwanariadha, kiti kikubwa?",
+     "answer": "mwanariadha",
+     "shows": "identify"
+    },
+    {
+     "question": "Unganisha: mwana + mke",
+     "answer": "mwanamke",
+     "shows": "form"
+    }
+   ]
+  }
+ ]
+}

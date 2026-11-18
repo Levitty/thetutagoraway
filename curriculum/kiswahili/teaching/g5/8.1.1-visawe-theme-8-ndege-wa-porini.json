@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T8_VISAWE",
+ "title": "Visawe (Theme 8: Ndege wa porini)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE",
+   "key_step": "The child tests each word in the same sentence: three synonyms keep the meaning, a related word changes it.",
+   "floor": {
+    "prerequisite": "Finds a pair of synonyms.",
+    "question": "Kisawe cha haraka ni?",
+    "answer": "upesi"
+   },
+   "representations": [
+    "word sets of three with one intruder",
+    "a sentence frame",
+    "bird pictures for the theme"
+   ],
+   "steps": [
+    "Read the words.",
+    "Put each into the sentence.",
+    "Keep those that do not change it.",
+    "Use one in a new sentence."
+   ],
+   "contexts": [
+    "wild birds (ndege wa porini)",
+    "a nature walk",
+    "the library"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mtoto ___ ameketi kitandani."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Ni maneno yapi yanafaa hapa kwa maana ileile?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child chooses \"mtoto, mwana\" and explains why a third word does not fit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M_VIS_OPPOSITE",
+     "listen_for": [
+      "huzuni"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"furaha\" ni ___.\" Kwa nini \"huzuni\" si jibu sahihi?",
+     "repair": "Visawe ni maneno yenye maana sawa. Furaha na huzuni ni vinyume, si visawe."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M_VIS_RELATED",
+     "listen_for": [
+      "kilio"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"huzuni\" ni ___.\" Kwa nini \"kilio\" si jibu sahihi?",
+     "repair": "Neno linalohusiana na jingine si lazima liwe na maana sawa nalo. Kisawe cha huzuni ni simanzi."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M_VIS_LOOKALIKE",
+     "listen_for": [
+      "harufu"
+     ],
+     "ask": "Soma tena: \"Kisawe cha \"haraka\" ni ___.\" Kwa nini \"harufu\" si jibu sahihi?",
+     "repair": "Maneno yanaweza kuanza kwa herufi zilezile na yasiwe na maana sawa. Kisawe cha haraka ni upesi."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T8_VISAWE.VISAWE.M5_VIS_THREE",
+     "listen_for": [
+      "pesa, fedha, mfuko"
+     ],
+     "ask": "Ukiweka \"mfuko\" badala ya \"pesa\", sentensi ina maana ileile?",
+     "repair": "Mfuko ni mahali pa kuweka pesa, si jina lingine la pesa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kisawe cha \"nyumba\" ni?",
+     "answer": "makazi au maskani",
+     "shows": "synonym"
+    },
+    {
+     "question": "Maneno \"pesa, fedha, hela\" ni?",
+     "answer": "visawe",
+     "shows": "term"
+    }
+   ]
+  }
+ ]
+}

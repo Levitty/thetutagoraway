@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T3_UAKIFISHI",
+ "title": "Uakifishi (Theme 3: Mapambo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI",
+   "key_step": "The child decides what kind of sentence it is and gives it a capital at the start, the right end mark, capitals on names and commas in lists.",
+   "floor": {
+    "prerequisite": "Writes a sentence with a full stop.",
+    "question": "Andika: tunapenda shule",
+    "answer": "Tunapenda shule."
+   },
+   "representations": [
+    "sentences with no marks",
+    "a marks chart . , ? and capitals",
+    "a list sentence"
+   ],
+   "steps": [
+    "Read the sentence.",
+    "Statement or question?",
+    "Capital at the start and on names.",
+    "Commas in lists, mark at the end."
+   ],
+   "contexts": [
+    "decorations (mapambo): shanga, bangili, hereni",
+    "a party invitation",
+    "a shopping list"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "je wanjiru amenunua shanga bangili na hereni"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first word and the list.",
+     "say": "Tunahitaji alama zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Je, Wanjiru amenunua shanga, bangili na hereni?\""
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_NO_CAPITAL",
+     "listen_for": [
+      "wanjiru alienda sokoni."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"wanjiru alienda sokoni.\" si jibu sahihi?",
+     "repair": "Sentensi huanza kwa herufi kubwa, na majina ya watu na mahali pia huandikwa kwa herufi kubwa."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_WRONG_MARK",
+     "listen_for": [
+      "Unaenda wapi."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Unaenda wapi.\" si jibu sahihi?",
+     "repair": "Swali humalizika kwa kiulizi (?). Sentensi ya kawaida humalizika kwa kikomo (.)."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_NO_COMMA",
+     "listen_for": [
+      "Mama alinunua mchele sukari na chumvi."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Mama alinunua mchele sukari na chumvi.\" si jibu sahihi?",
+     "repair": "Koma hutenganisha vitu katika orodha. Weka koma baada ya kila kitu isipokuwa kabla ya \"na\" ya mwisho."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_UAKIFISHI.UAKIFISHI.M_UAK_CAPITAL_COMMON",
+     "listen_for": [
+      "Tulienda Shule asubuhi."
+     ],
+     "ask": "Soma tena: \"Chagua sentensi sahihi.\" Kwa nini \"Tulienda Shule asubuhi.\" si jibu sahihi?",
+     "repair": "Herufi kubwa hutumika mwanzo wa sentensi na kwa majina ya pekee tu. Nomino ya kawaida katikati ya sentensi huandikwa kwa herufi ndogo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika vizuri: amina anaishi kisumu",
+     "answer": "Amina anaishi Kisumu.",
+     "shows": "capitals"
+    },
+    {
+     "question": "Sentensi inayouliza huishia kwa alama gani?",
+     "answer": "?",
+     "shows": "kiulizi"
+    }
+   ]
+  }
+ ]
+}

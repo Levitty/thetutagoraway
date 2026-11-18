@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3",
+ "title": "Aina za Nomino (Theme 3: Mapambo)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA",
+   "key_step": "The child names an idea, feeling or quality that cannot be touched (upendo, furaha, uzuri) and forms it from an adjective or verb.",
+   "floor": {
+    "prerequisite": "Uses describing words.",
+    "question": "Kinyume cha mrefu ni?",
+    "answer": "mfupi"
+   },
+   "representations": [
+    "two columns: can touch / cannot touch",
+    "cards mzuri -> uzuri, penda -> upendo",
+    "a feelings chart"
+   ],
+   "steps": [
+    "Read the word.",
+    "Ask: can I touch it?",
+    "If not, it may be abstract.",
+    "Form it with u- or from the verb."
+   ],
+   "contexts": [
+    "decorations: beauty (uzuri) of a kanga",
+    "friendship",
+    "honesty at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mkarimu -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"mkarimu\".",
+     "say": "Jina la tabia hii ni lipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"ukarimu\" and a sentence with it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M_DHA_CONCRETE",
+     "listen_for": [
+      "kitabu"
+     ],
+     "ask": "Soma tena: \"Nomino ya dhahania ni ipi?\" Kwa nini \"kitabu\" si jibu sahihi?",
+     "repair": "Kitabu kinaweza kushikwa kwa mkono. Nomino ya dhahania haishikiki: ni wazo au hisia, kama upendo."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M_DHA_VERB",
+     "listen_for": [
+      "kupenda"
+     ],
+     "ask": "Soma tena: \"Mama ana moyo wa ___.\" Kwa nini \"kupenda\" si jibu sahihi?",
+     "repair": "Kupenda ni kitenzi. Nomino ya dhahania inayotokana nacho ni upendo."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M_DHA_PERSON",
+     "listen_for": [
+      "mkarimu"
+     ],
+     "ask": "Soma tena: \"Bibi yetu ana ___ mwingi.\" Kwa nini \"mkarimu\" si jibu sahihi?",
+     "repair": "Mkarimu ni mtu mwenye tabia hiyo. Nomino ya dhahania ni ukarimu, yaani tabia yenyewe."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T3_AINA_ZA_NOMINO_3.DHAHANIA.M5_DHA_FEELING_ADJ",
+     "listen_for": [
+      "Mzuri"
+     ],
+     "ask": "Neno hili ni jina la wazo au linaeleza mtu?",
+     "repair": "Kutoka kivumishi: mzuri -> uzuri (nomino ya dhahania)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni nomino ya dhahania ipi: meza, upendo, mti?",
+     "answer": "upendo",
+     "shows": "identify"
+    },
+    {
+     "question": "Badilisha: mrefu -> ___",
+     "answer": "urefu",
+     "shows": "form"
+    }
+   ]
+  }
+ ]
+}

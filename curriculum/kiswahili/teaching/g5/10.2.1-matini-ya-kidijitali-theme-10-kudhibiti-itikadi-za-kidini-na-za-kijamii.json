@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI",
+ "title": "Matini ya Kidijitali (Theme 10: Kudhibiti itikadi za kidini na za kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI.KUSOMA_KIDIJITALI",
+   "key_step": "The child opens the folder before the file and searches with two or three key words on a safe site.",
+   "floor": {
+    "prerequisite": "Switches a computer or tablet on and off safely.",
+    "question": "Ni kitufe kipi huwasha tarakilishi?",
+    "answer": "kitufe cha kuwasha"
+   },
+   "representations": [
+    "a real box file with papers (folder and file)",
+    "step cards",
+    "two screenshots: a real page and a trap"
+   ],
+   "steps": [
+    "Open the folder.",
+    "Double-click the file.",
+    "Search with key words on a safe site.",
+    "Read and say the message."
+   ],
+   "contexts": [
+    "the school computer lab (itikadi za kidini na za kijamii)",
+    "a tablet at home",
+    "a cyber café"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kiswahili > Itikadi Potovu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the folder.",
+     "say": "Tutafungua nini kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child opens the folder and the file on a real device or in order on cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI.KUSOMA_KIDIJITALI.M5_KID_FOLDER_T10",
+     "listen_for": [
+      "bonyeza \"Itikadi Potovu\" kwenye skrini ya mwanzo"
+     ],
+     "ask": "Faili hii iko ndani ya nini?",
+     "repair": "Faili huhifadhiwa ndani ya folda; fungua folda kwanza, kisha faili."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI.KUSOMA_KIDIJITALI.M5_KID_SEARCH_T10",
+     "listen_for": [
+      "naomba unipe habari zote kuhusu itikadi za kidini na za kijamii tafadhali"
+     ],
+     "ask": "Ni maneno gani muhimu katika swali hili?",
+     "repair": "Andika maneno mawili au matatu muhimu tu, na uyaandike kwa tahajia sahihi."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI.KUSOMA_KIDIJITALI.M5_KID_POPUP_T10",
+     "listen_for": [
+      "bonyeza ili kupokea simu"
+     ],
+     "ask": "Je, ulishiriki shindano lolote? Kwa nini ushinde simu?",
+     "repair": "Ujumbe wa zawadi usiotarajiwa ni mtego; usiubonyeze."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI.KUSOMA_KIDIJITALI.M5_KID_SITE_T10",
+     "listen_for": [
+      "jaza ili usome hadithi"
+     ],
+     "ask": "Kwa nini tovuti ya hadithi ihitaji nambari ya simu?",
+     "repair": "Usimpe mtu yeyote mtandaoni jina lako kamili, shule yako wala nambari ya simu."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T10_MATINI_YA_KIDIJITALI.KUSOMA_KIDIJITALI.M5_KID_ORDER_T10",
+     "listen_for": [
+      "andika maneno ya kutafutia"
+     ],
+     "ask": "Unaweza kutafuta kabla ya kufungua kivinjari?",
+     "repair": "Washa kifaa, fungua kivinjari, andika maneno muhimu, chagua tovuti salama, soma."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika maneno muhimu ya kutafuta habari kuhusu itikadi za kidini na za kijamii.",
+     "answer": "itikadi potovu watoto hadithi",
+     "shows": "key words"
+    },
+    {
+     "question": "Ujumbe \"Umeshinda!\" ukitokea, ufanye nini?",
+     "answer": "usibonyeze; umwambie mwalimu",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

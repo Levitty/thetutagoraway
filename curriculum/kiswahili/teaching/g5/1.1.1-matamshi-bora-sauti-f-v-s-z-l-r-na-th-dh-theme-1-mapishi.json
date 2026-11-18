@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_",
+ "title": "Matamshi Bora Sauti f/v, s/z, l/r/ na th/dh (Theme 1: Mapishi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI",
+   "key_step": "The child hears the one feature that separates f/v, s/z, l/r na th/dh and checks the meaning of the word before writing it.",
+   "floor": {
+    "prerequisite": "Says the five vowels and reads open syllables (ba, be, bi, bo, bu).",
+    "question": "Soma: ku-la",
+    "answer": "kula"
+   },
+   "representations": [
+    "a pair card: kula / kura",
+    "a hand on the throat to feel the voice (or the lips for a nasal)",
+    "a picture for each meaning (to eat, a vote)"
+   ],
+   "steps": [
+    "Listen to the whole word.",
+    "Ask: which sound, /l/ or /r/?",
+    "Think of the meaning in the sentence.",
+    "Write it and read it back."
+   ],
+   "contexts": [
+    "mapishi (cooking)",
+    "a class reading aloud",
+    "a word game in the playground"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kula - kura"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first letter of each word.",
+     "say": "Neno lipi lina maana ya \"to eat\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes both words under their pictures and says each one."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI.M5_MAT_SWAP_T1",
+     "listen_for": [
+      "kura"
+     ],
+     "ask": "Neno \"kula\" lina maana gani, na \"kura\" lina maana gani?",
+     "repair": "\"kula\" ni to eat; \"kura\" ni a vote. Sauti moja hubadilisha maana."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI.M5_MAT_SPELL_T1",
+     "listen_for": [
+      "vua"
+     ],
+     "ask": "Ukiandika \"vua\", msomaji ataelewa nini?",
+     "repair": "Neno lenye maana ya \"to wash clothes\" ni \"fua\". \"vua\" lina maana ya \"to take off or to fish\"."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI.M5_MAT_SAME_T1",
+     "listen_for": [
+      "ndiyo"
+     ],
+     "ask": "Ukibadilisha neno moja kwa jingine katika sentensi, maana inabaki ileile?",
+     "repair": "Hapana. \"fua\" ni to wash clothes, na \"vua\" ni to take off or to fish."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI.M5_MAT_TWISTER_T1",
+     "listen_for": [
+      "Mama alipika wali na maharagwe jana."
+     ],
+     "ask": "Ni sauti gani zinarudiwa katika sentensi hii?",
+     "repair": "Kitanzandimi hurudia sauti zinazokaribiana, kama f/v, s/z, l/r na th/dh, ili kiwe kigumu kutamka."
+    },
+    {
+     "code": "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI.M5_MAT_SYLL_T1",
+     "listen_for": [
+      "k-ula"
+     ],
+     "ask": "Kila silabi inaishia kwa herufi gani?",
+     "repair": "Kila silabi ya Kiswahili huishia kwa irabu: ku-la."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Andika neno lenye maana ya \"to take off or to fish\".",
+     "answer": "vua",
+     "shows": "spelling by meaning"
+    },
+    {
+     "question": "Ni kipi ni kitanzandimi?",
+     "answer": "Fatuma alifua viatu vya Vivian vilivyofifia.",
+     "shows": "kitanzandimi"
+    }
+   ]
+  }
+ ]
+}

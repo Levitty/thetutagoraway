@@ -1,0 +1,115 @@
+{
+ "sub_strand": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA",
+ "title": "Kusoma kwa Mapana (Theme 9: Magonjwa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA",
+   "key_step": "The child judges a text by its title, blurb and first page, then reads it for one message.",
+   "floor": {
+    "prerequisite": "Reads a short story and answers who and what.",
+    "question": "Hadithi hii inamhusu nani?",
+    "answer": "mhusika mkuu"
+   },
+   "representations": [
+    "three real books from the class library",
+    "the five-finger check on one page",
+    "a one-sentence message strip"
+   ],
+   "steps": [
+    "Read the title and the back.",
+    "Read the first page; count unknown words.",
+    "Read it all.",
+    "Say the message in one sentence."
+   ],
+   "contexts": [
+    "the class library corner (magonjwa)",
+    "the county library",
+    "a newspaper at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Malaria Haina Nafasi Kwetu"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title and the back cover.",
+     "say": "Kitabu hiki kinahusu nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child reads the first page and shows the five-finger check."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA.M5_MAP_COVER_T9",
+     "listen_for": [
+      "kwa picha nzuri ya jalada"
+     ],
+     "ask": "Jalada linakuambia nini kuhusu maneno yaliyo ndani?",
+     "repair": "Anwani, maelezo ya nyuma ya kitabu na ukurasa wa kwanza hukuambia kitabu kinahusu nini."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA.M5_MAP_LEVEL_T9",
+     "listen_for": [
+      "endelea tu hata kama huelewi"
+     ],
+     "ask": "Ni maneno mangapi kwenye ukurasa huu ambayo hujui?",
+     "repair": "Matini ifaayo ni ile unayoweza kuisoma na kuielewa ukiwa peke yako."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA.M5_MAP_TITLEMSG_T9",
+     "listen_for": [
+      "Malaria Haina Nafasi Kwetu"
+     ],
+     "ask": "Mwandishi anataka ujifunze nini baada ya kusoma?",
+     "repair": "Anwani hutaja mada; ujumbe ni funzo au wazo kuu ambalo mwandishi anataka ulipate."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA.M5_MAP_DETAIL_T9",
+     "listen_for": [
+      "Mama alinunua chandarua kipya sokoni."
+     ],
+     "ask": "Je, jambo hili linahusu matini yote au sehemu moja tu?",
+     "repair": "Ujumbe unahusu matini yote; jambo moja dogo ni maelezo tu."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA.M5_MAP_KIND_T9",
+     "listen_for": [
+      "hadithi"
+     ],
+     "ask": "Matini hii imepangwa kwa aya au kwa beti?",
+     "repair": "Shairi lina beti na mishororo; hadithi ina aya; gazeti lina habari na tarehe."
+    },
+    {
+     "code": "KISW.G5.KUSOMA.T9_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA.M5_MAP_WORD_T9",
+     "listen_for": [
+      "dawa ya ugonjwa"
+     ],
+     "ask": "Sentensi inayozunguka neno hili inakuambia nini?",
+     "repair": "Soma sentensi nzima: \"dalili\" hapa ni ishara zinazoonyesha ugonjwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni ipi ni ujumbe wa matini kuhusu magonjwa: \"Mama alinunua chandarua kipya sokoni.\" au \"Tukilala ndani ya chandarua na kufukia madimbwi, tunajikinga na malaria.\"?",
+     "answer": "Tukilala ndani ya chandarua na kufukia madimbwi, tunajikinga na malaria.",
+     "shows": "message"
+    },
+    {
+     "question": "Matini yenye beti ni ya aina gani?",
+     "answer": "shairi",
+     "shows": "kind of text"
+    }
+   ]
+  }
+ ]
+}

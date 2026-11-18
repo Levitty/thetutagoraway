@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N",
+ "title": "Ukubwa na Udogo wa Nomino (Theme 11: Uwekezaji)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M",
+   "key_step": "The child makes the big form with ji- (mtoto -> jitoto) and the small form with ki- (mtoto -> kitoto) for m- nouns with a two-syllable root, and changes the agreement to LI-YA or KI-VI.",
+   "floor": {
+    "prerequisite": "Uses LI-YA and KI-VI agreement.",
+    "question": "Kiti ___ vunjika.",
+    "answer": "kimevunjika"
+   },
+   "representations": [
+    "drawings: an ordinary, a huge and a tiny child",
+    "root cards (-toto, -kono)",
+    "prefix cards ji- and ki-"
+   ],
+   "steps": [
+    "Take off m-.",
+    "Check the root has two syllables.",
+    "Big: ji-; small: ki-.",
+    "Change the agreement."
+   ],
+   "contexts": [
+    "investment: a big shop and a small kiosk",
+    "a folk tale with a giant",
+    "a baby animal"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "mkono -> ___ (ukubwa)"
+    },
+    {
+     "beat": "point",
+     "do": "Point at m- and -kono.",
+     "say": "Tunaongeza nini kwa ukubwa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"jikono\" and \"kikono\" with a sentence for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M_UKM_SWAP",
+     "listen_for": [
+      "jitoto"
+     ],
+     "ask": "Soma tena: \"Udogo wa \"mtoto\" ni ___.\" Kwa nini \"jitoto\" si jibu sahihi?",
+     "repair": "Ki- huonyesha udogo (kitoto, kijiji) na ji- huonyesha ukubwa (jitoto, jiji)."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M_UKM_KEEP_M",
+     "listen_for": [
+      "jimtoto"
+     ],
+     "ask": "Soma tena: \"Ukubwa wa \"mtoto\" ni ___.\" Kwa nini \"jimtoto\" si jibu sahihi?",
+     "repair": "M- ya mwanzo huondolewa kabla ya kuongeza kiambishi cha ukubwa au udogo: mtoto - jitoto, kitoto."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M_UKM_ONE_SYLLABLE",
+     "listen_for": [
+      "kimji"
+     ],
+     "ask": "Soma tena: \"Udogo wa \"mji\" ni ___.\" Kwa nini \"kimji\" si jibu sahihi?",
+     "repair": "Nomino zenye shina la silabi moja zinaongeza ji- kabla ya ki-: mji - kijiji, mto - kijito, mti - kijiti."
+    },
+    {
+     "code": "KISW.G5.SARUFI.T11_UKUBWA_NA_UDOGO_WA_N.UKUBWA_M.M5_UKM_AGREE",
+     "listen_for": [
+      "analia"
+     ],
+     "ask": "Kitoto kiko katika ngeli ipi sasa?",
+     "repair": "Udogo huchukua upatanisho wa KI-VI: kitoto kinalia."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ukubwa wa \"mtoto\" ni?",
+     "answer": "jitoto",
+     "shows": "big"
+    },
+    {
+     "question": "Udogo wa \"mkono\" ni?",
+     "answer": "kikono",
+     "shows": "small"
+    }
+   ]
+  }
+ ]
+}

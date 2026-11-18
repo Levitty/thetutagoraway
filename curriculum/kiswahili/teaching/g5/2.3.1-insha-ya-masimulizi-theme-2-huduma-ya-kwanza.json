@@ -1,0 +1,107 @@
+{
+ "sub_strand": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI",
+ "title": "Insha ya masimulizi (Theme 2: Huduma ya kwanza)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI",
+   "key_step": "The child plans insha ya masimulizi before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "siku nilipomsaidia majeruhi",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Siku Nilipomsaidia Majeruhi"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Siku Nilipomsaidia Majeruhi\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M5_INS_FACTS_T2",
+     "listen_for": [
+      "Huduma ya kwanza ni msaada unaotolewa kabla ya daktari kufika."
+     ],
+     "ask": "Ni nani anafanya nini katika sentensi hii?",
+     "repair": "Masimulizi husimulia matukio yaliyotokea: nani, wapi, nini kilitokea."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M5_INS_TENSE_T2",
+     "listen_for": [
+      "Ninamwona mvulana ameanguka kutoka kwenye baiskeli."
+     ],
+     "ask": "Jambo hili lilitokea lini? Kitenzi kinaonyesha wakati gani?",
+     "repair": "Jambo lililotokea husimuliwa kwa wakati uliopita: -li-."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M5_INS_ORDER_T2",
+     "listen_for": [
+      "nilimwita mwalimu, nilisafisha jeraha, nilimsaidia kuketi, niliona ajali"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M5_INS_END_T2",
+     "listen_for": [
+      "Mwisho."
+     ],
+     "ask": "Msomaji anajifunza nini katika aya ya mwisho?",
+     "repair": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu."
+    },
+    {
+     "code": "KISW.G5.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI.M5_INS_MIX_T2",
+     "listen_for": [
+      "Mathe alinipea form ya kujaza."
+     ],
+     "ask": "Ni neno lipi hapa si la Kiswahili sanifu?",
+     "repair": "Insha huandikwa kwa Kiswahili sanifu, bila maneno ya Kiingereza wala Sheng."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya masimulizi kuhusu \"Siku Nilipomsaidia Majeruhi\"?",
+     "answer": "Nilimwona mvulana ameanguka kutoka kwenye baiskeli.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya masimulizi ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}
