@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA",
+ "title": "Resources in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Start with the school compound: soil, water, trees, sunshine. Then widen to Kenya.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES",
+   "key_step": "The child names the natural resources of Kenya (land, soil, water, minerals, forests, wildlife, fish, sunshine, wind) and tells them from things people make.",
+   "floor": {
+    "prerequisite": "Names natural resources in the county.",
+    "question": "Name one natural resource in your county.",
+    "answer": "any of: soil, water, forest, minerals, wildlife"
+   },
+   "representations": [
+    "picture cards: natural or made",
+    "a walk round the compound",
+    "a map of Kenya's resources"
+   ],
+   "steps": [
+    "Name the thing.",
+    "Ask: did nature give it or did people make it?",
+    "If nature, it is a natural resource.",
+    "Say how it is used."
+   ],
+   "contexts": [
+    "tea growing on Kericho soil",
+    "wind turbines near Lake Turkana",
+    "fish in Lake Victoria"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write soil, a road, a forest, a building."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a road.",
+     "say": "Is a road a natural resource?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Circle the natural ones."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES.M_RK_MONEY_ONLY",
+     "listen_for": [
+      "Money in a bank"
+     ],
+     "ask": "Which of these is a natural resource of Kenya?",
+     "repair": "Ask what people used before they had money."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES.M_RK_BUILT_NATURAL",
+     "listen_for": [
+      "A school building"
+     ],
+     "ask": "Which of these is a natural resource?",
+     "repair": "Sort cards into made by nature or made by people."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES.M_RK_PEOPLE_NOT",
+     "listen_for": [
+      "No, resources are only things from nature"
+     ],
+     "ask": "Are skilled people a resource for Kenya?",
+     "repair": "List what a nurse or a fundi gives the country."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES.M_RK_SUN_NOT",
+     "listen_for": [
+      "No, you cannot hold it"
+     ],
+     "ask": "Is wind a resource?",
+     "repair": "Show the wind farm at Lake Turkana or a solar panel on a roof."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a natural resource: a forest or a bridge?",
+     "answer": "a forest",
+     "shows": "natural vs made"
+    },
+    {
+     "question": "Give two natural resources found in Kenya.",
+     "answer": "any two of: land, soil, water, minerals, forests, wildlife, fish, sunshine, wind",
+     "shows": "names resources"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE",
+   "key_step": "The child says prudent use means using resources carefully so they last and picks sustainable actions.",
+   "floor": {
+    "prerequisite": "Names Kenya's natural resources.",
+    "question": "Name one natural resource.",
+    "answer": "any resource such as water"
+   },
+   "representations": [
+    "action cards: lasts or runs out",
+    "a leaking tap and a bucket",
+    "a tree nursery"
+   ],
+   "steps": [
+    "Name the resource.",
+    "Name the action.",
+    "Ask: will the resource last?",
+    "Choose the better action."
+   ],
+   "contexts": [
+    "replanting trees after cutting",
+    "fishing with the right net size",
+    "mending a leaking tap at school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a forest with three trees cut down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the stumps.",
+     "say": "What should be done so the forest lasts?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"plant new trees\"."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw seedlings by the stumps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE.M_RK_CONSERVE_NO_USE",
+     "listen_for": [
+      "Never use it"
+     ],
+     "ask": "What does it mean to use a resource prudently?",
+     "repair": "Compare a family that uses water carefully with one that wastes it."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE.M_RK_UNLIMITED",
+     "listen_for": [
+      "The forest grows back at once"
+     ],
+     "ask": "If people cut all the trees in a forest without planting new ones, what happens?",
+     "repair": "Compare how long a tree takes to grow with how fast it can be cut."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE.M_RK_RECYCLE_SAME_REUSE",
+     "listen_for": [
+      "Recycling"
+     ],
+     "ask": "A family uses an empty jerrycan to store water. Is this reusing or recycling?",
+     "repair": "Sort examples: a jar used again, plastic melted into a bucket."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE.M_RK_WATER_ENDLESS",
+     "listen_for": [
+      "No, it always rains again"
+     ],
+     "ask": "Can Kenya run short of water?",
+     "repair": "Talk about a drought year and dry boreholes in the county."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way of using water prudently.",
+     "answer": "any of: mend leaks, close taps, harvest rainwater, reuse water",
+     "shows": "prudent use"
+    },
+    {
+     "question": "Can forests run out if many trees are cut?",
+     "answer": "Yes, unless new trees are planted",
+     "shows": "resources are limited"
+    }
+   ]
+  }
+ ]
+}

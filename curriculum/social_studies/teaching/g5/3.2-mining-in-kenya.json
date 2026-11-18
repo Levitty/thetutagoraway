@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.RESOUR.MINING_IN_KENYA",
+ "title": "Mining in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm by the teacher): soda ash at Lake Magadi, fluorspar in the Kerio Valley, titanium in Kwale, gemstones in Taita Taveta, limestone at the coast and Athi River, gold in Kakamega and Migori, oil in Turkana.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES",
+   "key_step": "The child names Kenya's major minerals and where each is mined.",
+   "floor": {
+    "prerequisite": "Places Kenya's main features on a map.",
+    "question": "Where is the Rift Valley?",
+    "answer": "running north to south through the middle of Kenya"
+   },
+   "representations": [
+    "a minerals map with symbols",
+    "mineral and place cards",
+    "samples or photos: soda ash, limestone, gemstones"
+   ],
+   "steps": [
+    "Name the mineral.",
+    "Find its place on the map.",
+    "Match the pair.",
+    "Check it with the key."
+   ],
+   "contexts": [
+    "soda ash at Lake Magadi",
+    "titanium in Kwale",
+    "gold in Migori"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write soda ash, titanium, fluorspar."
+    },
+    {
+     "beat": "point",
+     "do": "Point at fluorspar.",
+     "say": "Where is fluorspar mined?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Kerio Valley."
+    },
+    {
+     "beat": "write",
+     "do": "Write each place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES.M_MK_PLACE_MIX",
+     "listen_for": [
+      "The Kerio Valley"
+     ],
+     "ask": "Where in Kenya is soda ash mined?",
+     "repair": "Link each to a story: soda ash is taken from the lake water at Magadi; fluorspar is dug in the Kerio Valley."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES.M_MK_NOT_MINERAL",
+     "listen_for": [
+      "Coffee"
+     ],
+     "ask": "Which of these is a mineral found in Kenya?",
+     "repair": "Ask whether it was dug from the ground or grown from a seed."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES.M_MK_MAGADI_NAKURU",
+     "listen_for": [
+      "Lake Nakuru"
+     ],
+     "ask": "At which lake is soda ash mined?",
+     "repair": "Put both on the map: Magadi (mining) in the south, Nakuru (flamingos, park) in the centre."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES.M_MK_OIL_COAST",
+     "listen_for": [
+      "At the coast near Mombasa"
+     ],
+     "ask": "Where was oil found in Kenya?",
+     "repair": "Show Turkana on the map and the planned pipeline to the coast."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is soda ash mined in Kenya?",
+     "answer": "Lake Magadi",
+     "shows": "mineral to place"
+    },
+    {
+     "question": "Which mineral is mined in Kwale?",
+     "answer": "titanium",
+     "shows": "place to mineral"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE",
+   "key_step": "The child gives the uses of minerals and the gains and harms of mining.",
+   "floor": {
+    "prerequisite": "Names minerals and where they are mined.",
+    "question": "Where is limestone mined?",
+    "answer": "at the coast and Athi River"
+   },
+   "representations": [
+    "use cards",
+    "a bag of cement and a glass jar",
+    "a T-chart: gains and harms"
+   ],
+   "steps": [
+    "Name the mineral.",
+    "Say its use.",
+    "Name a gain of mining it.",
+    "Name a harm and how to reduce it."
+   ],
+   "contexts": [
+    "a cement factory at Athi River",
+    "a gemstone sold abroad",
+    "an old quarry pit"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a T-chart: gains and harms."
+    },
+    {
+     "beat": "point",
+     "do": "Point at gains.",
+     "say": "What does mining give people?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for jobs or money."
+    },
+    {
+     "beat": "write",
+     "do": "Fill both sides with the child."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE.M_MK_USE_MIX",
+     "listen_for": [
+      "Jewellery"
+     ],
+     "ask": "What is limestone used to make?",
+     "repair": "Trace the road from a mineral to a product people see: limestone to cement, gemstone to a ring."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE.M_MK_NO_HARM",
+     "listen_for": [
+      "None, mining is always good"
+     ],
+     "ask": "What harm can mining cause if it is not controlled?",
+     "repair": "Describe an open pit left after mining and ask what it does to farmland."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE.M_MK_ONLY_MONEY",
+     "listen_for": [
+      "Nothing, it is sold abroad"
+     ],
+     "ask": "What is limestone used for in Kenya?",
+     "repair": "Show a bag of cement and trace it back to limestone."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE.M_MK_HOLES_LEFT",
+     "listen_for": [
+      "Leave it as it is"
+     ],
+     "ask": "What should happen to a quarry after mining ends?",
+     "repair": "Show a photo of a fenced, refilled quarry and an open water-filled pit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is soda ash used for?",
+     "answer": "making glass and soap",
+     "shows": "mineral use"
+    },
+    {
+     "question": "Give one harm of mining.",
+     "answer": "any of: open pits, dust, destroyed land, polluted water",
+     "shows": "harm"
+    }
+   ]
+  }
+ ]
+}

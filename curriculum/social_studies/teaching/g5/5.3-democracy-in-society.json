@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY",
+ "title": "Democracy in Society",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a class vote for both types: a show of hands on a trip (direct) and electing a class monitor who then decides (representative).",
+ "skills": [
+  {
+   "skill": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES",
+   "key_step": "The child tells direct democracy (people decide themselves) from representative democracy (people elect leaders to decide) and does not call rule by one person democracy.",
+   "floor": {
+    "prerequisite": "Knows the arms of government and who sits in Parliament.",
+    "question": "Who are the members of the National Assembly?",
+    "answer": "elected Members of Parliament"
+   },
+   "representations": [
+    "a show-of-hands vote",
+    "a class monitor election",
+    "example cards to sort"
+   ],
+   "steps": [
+    "Read the example.",
+    "Ask: did the people decide themselves?",
+    "If yes, it is direct; if they chose someone, representative.",
+    "If one person decides alone, it is not democracy."
+   ],
+   "contexts": [
+    "a class voting on a trip",
+    "voters electing an MP",
+    "a referendum on a new constitution"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: direct and representative."
+    },
+    {
+     "beat": "point",
+     "do": "Point at representative.",
+     "say": "Electing an MP who makes laws for us goes where?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for representative."
+    },
+    {
+     "beat": "write",
+     "do": "Sort three examples."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES.M_DM_TYPE_MIX",
+     "listen_for": [
+      "Representative democracy"
+     ],
+     "ask": "The class votes by raising hands to choose a game. What type of democracy is this?",
+     "repair": "Ask: did each person decide, or did chosen people decide for them?"
+    },
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES.M_DM_NOT_DEMOCRACY",
+     "listen_for": [
+      "A leader who rules for life without elections"
+     ],
+     "ask": "Which one is a democracy?",
+     "repair": "Ask who chose the leader and who can remove him."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES.M_DM_REFERENDUM",
+     "listen_for": [
+      "Representative democracy"
+     ],
+     "ask": "In a referendum all voters decide on a law themselves. What type of democracy is this?",
+     "repair": "Compare: electing an MP (someone decides for you) and a referendum (you decide)."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES.M_DM_VOTING_ONLY",
+     "listen_for": [
+      "No, democracy is only voting"
+     ],
+     "ask": "Is speaking at a public meeting about a new road part of democracy?",
+     "repair": "List other ways people take part: meetings, petitions, peaceful protest."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which type of democracy do people elect leaders to decide for them?",
+     "answer": "representative democracy",
+     "shows": "type"
+    },
+    {
+     "question": "A class votes with a show of hands on where to go for a trip. Which type is this?",
+     "answer": "direct democracy",
+     "shows": "type"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE",
+   "key_step": "The child gives benefits of democracy and the fair way to practise it (free choice, secret ballot, same rules, accepting the result, respecting the minority).",
+   "floor": {
+    "prerequisite": "Tells direct from representative democracy.",
+    "question": "Electing a class monitor is which type of democracy?",
+    "answer": "representative"
+   },
+   "representations": [
+    "a class election",
+    "fair and unfair campaign cards",
+    "a benefits chart"
+   ],
+   "steps": [
+    "Name the practice.",
+    "Ask: is the choice free and the rule the same for all?",
+    "Name the benefit.",
+    "Say what happens after the vote."
+   ],
+   "contexts": [
+    "a secret ballot at school",
+    "a fair campaign speech",
+    "a losing candidate congratulating the winner"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A candidate gives sweets for votes.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Is this fair?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no and the reason."
+    },
+    {
+     "beat": "write",
+     "do": "Write the fair way: campaign with ideas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE.M_DM_MAJORITY_ALL",
+     "listen_for": [
+      "The 8 learners are ignored"
+     ],
+     "ask": "After the vote, 12 learners chose football and 8 chose netball. What is fair?",
+     "repair": "Ask how the 8 can still get a turn another day."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE.M_DM_LOUDEST",
+     "listen_for": [
+      "The loudest learner is chosen"
+     ],
+     "ask": "What is the fair way to choose a class monitor?",
+     "repair": "Run a mock election with secret ballots."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE.M_DM_BRIBE_FAIR",
+     "listen_for": [
+      "Yes, it helps people"
+     ],
+     "ask": "A candidate gives voters money for their votes. Is this fair?",
+     "repair": "Ask whether people would vote for the best leader or for the money."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE.M_DM_RESULT_FIGHT",
+     "listen_for": [
+      "Fight the winner"
+     ],
+     "ask": "A candidate lost. What is the fair way to respond?",
+     "repair": "Discuss the peaceful ways to complain: courts, the electoral body."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two benefits of democracy.",
+     "answer": "any two of: everyone has a voice, leaders answer to people, peaceful change, fair decisions",
+     "shows": "benefits"
+    },
+    {
+     "question": "Why is a secret ballot used?",
+     "answer": "So each voter chooses freely without fear",
+     "shows": "fair practice"
+    }
+   ]
+  }
+ ]
+}

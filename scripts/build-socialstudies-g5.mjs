@@ -6,6 +6,8 @@
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/socialstudies-g5-skills.mjs';
+import { SUBS as DEPTH } from './data/socialstudies-depth/g5.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/social_studies/g5.json', import.meta.url);
 const g5 = JSON.parse(readFileSync(path, 'utf8'));
@@ -43,5 +45,9 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
 const nSkills = D.SKILLS.length;
 g5.totals = { ...g5.totals, skills: nSkills, prerequisites: nPre, misconceptions: D.MIS.length };
 g5.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review";
+// Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g5.mjs adds prerequisites, misconceptions to four per skill (with a real
+// cause for each first-pass one) and the teaching pack in curriculum/social_studies/teaching/g5/, through scripts/science-depth.mjs.
+const depth = applyDepth(g5, DEPTH, { dir: 'social_studies', grade: 5, prefix: P, derive: true });
+g5.status = g5.status.replace(/; depth pass 18 Nov 2026.*$/, '') + '; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g5)';
 writeFileSync(path, JSON.stringify(g5, null, 1) + '\n');
-console.log(`social studies g5: ${nSkills} skills, ${nPre} prerequisites, ${D.MIS.length} misconceptions`);
+console.log(`social studies g5: ${g5.totals.skills} skills, ${g5.totals.prerequisites} prerequisites, ${g5.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);

@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI",
+ "title": "Location, Position and Size of Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a large outline map of Kenya and its neighbours. The child traces Kenya's border with a finger and names each country it touches. Facts: five land neighbours (Ethiopia, South Sudan, Uganda, Tanzania, Somalia) and the Indian Ocean.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS",
+   "key_step": "The child names the five countries that share a land border with Kenya and knows the Indian Ocean is water, not a country.",
+   "floor": {
+    "prerequisite": "Knows a neighbour shares a boundary.",
+    "question": "Does a county that does not touch yours count as a neighbour?",
+    "answer": "no"
+   },
+   "representations": [
+    "an outline map of Kenya and its neighbours",
+    "country cards to place round Kenya",
+    "a finger trace along the border"
+   ],
+   "steps": [
+    "Trace Kenya's border.",
+    "Name each country the border touches.",
+    "Count them: five.",
+    "Name the water on the south-east: the Indian Ocean."
+   ],
+   "contexts": [
+    "a lorry from Mombasa to Kampala crossing into Uganda",
+    "travellers at the Namanga border with Tanzania",
+    "the Moyale crossing to Ethiopia"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya as a shape with five spaces round it and water on the south-east."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the space on the west.",
+     "say": "Which country is here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Uganda."
+    },
+    {
+     "beat": "write",
+     "do": "Write the five names as the child gives them."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether Rwanda goes in a space."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS.M_LP_NEAR_NOT_BORDER",
+     "listen_for": [
+      "Rwanda"
+     ],
+     "ask": "Which country shares a border with Kenya?",
+     "repair": "Trace the border on a described map: which countries touch Kenya at a line? Rwanda lies behind Uganda and Tanzania."
+    },
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS.M_LP_OCEAN_AS_COUNTRY",
+     "listen_for": [
+      "The Indian Ocean"
+     ],
+     "ask": "Which of these is a country that borders Kenya?",
+     "repair": "Ask: can a person have a passport from the ocean? Sort touching things into countries and water."
+    },
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS.M_LP_EAC_ALL_NEIGHBOURS",
+     "listen_for": [
+      "Yes, all EAC countries border Kenya"
+     ],
+     "ask": "Rwanda is in the East African Community. Does it share a border with Kenya?",
+     "repair": "On the outline map, trace Kenya's border and check whether it touches Rwanda."
+    },
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS.M_LP_ERITREA",
+     "listen_for": [
+      "Sudan"
+     ],
+     "ask": "Which of these shares a border with Kenya: Eritrea, Ethiopia, Sudan?",
+     "repair": "Point at Sudan on the map: South Sudan lies between it and Kenya."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many countries share a land border with Kenya?",
+     "answer": "five",
+     "shows": "number of neighbours"
+    },
+    {
+     "question": "Is the Indian Ocean a neighbouring country of Kenya?",
+     "answer": "No, it is an ocean",
+     "shows": "ocean is not a country"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS",
+   "key_step": "The child gives the direction of each neighbour from Kenya and turns it round to give Kenya's direction from the neighbour.",
+   "floor": {
+    "prerequisite": "Names Kenya's five neighbours.",
+    "question": "Name one country that borders Kenya.",
+    "answer": "any of: Ethiopia, South Sudan, Uganda, Tanzania, Somalia"
+   },
+   "representations": [
+    "the outline map with a compass rose",
+    "arrows from Kenya to each neighbour",
+    "a class chart: neighbour and direction"
+   ],
+   "steps": [
+    "Put a finger on Kenya.",
+    "Move it to the neighbour.",
+    "Name the direction it moved.",
+    "For the way back, give the opposite."
+   ],
+   "contexts": [
+    "a bus from Nairobi going south to Arusha",
+    "a herder crossing north into Ethiopia",
+    "a train going west towards Uganda"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya with a compass rose."
+    },
+    {
+     "beat": "point",
+     "do": "Point north of Kenya.",
+     "say": "Which country lies to the north?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Ethiopia."
+    },
+    {
+     "beat": "write",
+     "do": "Write Ethiopia N, then ask for south."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS.M_LP_EAST_WEST_SWAP",
+     "listen_for": [
+      "East"
+     ],
+     "ask": "In which direction from Kenya does Uganda lie?",
+     "repair": "Use the sea: the Indian Ocean is on the east side, so Somalia is east and Uganda is the other side."
+    },
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS.M_LP_NORTH_SOUTH_SWAP",
+     "listen_for": [
+      "Ethiopia"
+     ],
+     "ask": "Which country lies to the south of Kenya?",
+     "repair": "Use Mount Kilimanjaro: it looks over Amboseli, in the south, from Tanzania. Ethiopia is up toward the Horn of Africa."
+    },
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS.M_LP_DIRECTION_FROM_WHO",
+     "listen_for": [
+      "East"
+     ],
+     "ask": "In which direction is Uganda from Kenya?",
+     "repair": "Put a finger on Kenya first, then move it to Uganda and name the way it moved."
+    },
+    {
+     "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS.M_LP_OCEAN_WEST",
+     "listen_for": [
+      "West"
+     ],
+     "ask": "On which side of Kenya is the Indian Ocean?",
+     "repair": "Trace the coast with a finger from Lamu to Vanga and name the direction."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which direction is Tanzania from Kenya?",
+     "answer": "south",
+     "shows": "neighbour direction"
+    },
+    {
+     "question": "Uganda is west of Kenya. In which direction is Kenya from Uganda?",
+     "answer": "east",
+     "shows": "reverses a direction"
+    }
+   ]
+  }
+ ]
+}

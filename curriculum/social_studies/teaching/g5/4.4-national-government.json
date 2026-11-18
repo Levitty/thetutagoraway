@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT",
+ "title": "National Government",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Three arms as three boxes: the Legislature makes laws, the Executive carries them out, the Judiciary interprets them and settles disputes. Name offices, never office holders or parties.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES",
+   "key_step": "The child says what each arm does: the Legislature makes laws, the Executive carries them out, the Judiciary interprets them and settles disputes.",
+   "floor": {
+    "prerequisite": "Knows the county executive and county assembly.",
+    "question": "Which part of the county government makes county laws?",
+    "answer": "the county assembly"
+   },
+   "representations": [
+    "three boxes on the board",
+    "duty cards",
+    "a role play: making, carrying out and judging a rule"
+   ],
+   "steps": [
+    "Name the three arms.",
+    "Give each its duty.",
+    "Read a duty card.",
+    "Place it in the right arm."
+   ],
+   "contexts": [
+    "Parliament passing a law on plastic bags",
+    "the Executive enforcing the ban",
+    "a court hearing a case about it"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: Legislature, Executive, Judiciary."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Judiciary.",
+     "say": "What does this arm do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"settles disputes\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write a duty in each box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES.M_NG_ARM_MIX",
+     "listen_for": [
+      "The Judiciary"
+     ],
+     "ask": "Which arm of government makes laws?",
+     "repair": "Use one verb per arm: runs, makes, explains."
+    },
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES.M_NG_PRESIDENT_ALL",
+     "listen_for": [
+      "The President alone"
+     ],
+     "ask": "Who makes laws for Kenya?",
+     "repair": "Show that each arm checks the others."
+    },
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES.M_NG_TWO_ARMS",
+     "listen_for": [
+      "Two: the President and Parliament"
+     ],
+     "ask": "How many arms does the National Government have?",
+     "repair": "Draw the three boxes and put a judge's gavel in the third."
+    },
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES.M_NG_POLICE_JUDGE",
+     "listen_for": [
+      "The police"
+     ],
+     "ask": "Who decides whether a person accused of stealing is guilty?",
+     "repair": "Act it: the police arrest, the magistrate hears both sides and decides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which arm makes laws?",
+     "answer": "the Legislature (Parliament)",
+     "shows": "legislature duty"
+    },
+    {
+     "question": "Which arm settles disputes?",
+     "answer": "the Judiciary (the courts)",
+     "shows": "judiciary duty"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS",
+   "key_step": "The child places people and bodies in the right arm and keeps county offices out of the national arms.",
+   "floor": {
+    "prerequisite": "Says what each arm does.",
+    "question": "Which arm carries out the laws?",
+    "answer": "the Executive"
+   },
+   "representations": [
+    "office cards",
+    "the three boxes",
+    "a county box at the side"
+   ],
+   "steps": [
+    "Read the office.",
+    "Ask what that person does.",
+    "Match the duty to the arm.",
+    "If it is a county office, place it in the county box."
+   ],
+   "contexts": [
+    "a judge in the High Court",
+    "a Senator debating a bill",
+    "a Cabinet Secretary opening a project"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write President, Senator, magistrate, Governor."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Governor.",
+     "say": "Is the Governor in the National Government?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, the county government\"."
+    },
+    {
+     "beat": "write",
+     "do": "Place the others in their arms."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS.M_NG_MEMBER_MIX",
+     "listen_for": [
+      "The Executive"
+     ],
+     "ask": "To which arm do judges belong?",
+     "repair": "Place each title in one of three boxes by its job."
+    },
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS.M_NG_COUNTY_NATIONAL",
+     "listen_for": [
+      "A county governor"
+     ],
+     "ask": "Which of these is part of the National Government's Executive?",
+     "repair": "Draw two levels: county and national."
+    },
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS.M_NG_SENATE_JUDICIARY",
+     "listen_for": [
+      "The Judiciary"
+     ],
+     "ask": "In which arm is the Senate?",
+     "repair": "Place the Senate card next to the National Assembly card in the Legislature box."
+    },
+    {
+     "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS.M_NG_CABINET_PARLIAMENT",
+     "listen_for": [
+      "Yes, they sit in Parliament"
+     ],
+     "ask": "Are Cabinet Secretaries members of Parliament?",
+     "repair": "Sort each office into the three boxes again with the rule: who carries out the law?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which arm is a magistrate?",
+     "answer": "the Judiciary",
+     "shows": "places a member"
+    },
+    {
+     "question": "Is a Member of the County Assembly part of the National Legislature?",
+     "answer": "No, the county assembly",
+     "shows": "county vs national"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "sub_strand": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE",
+ "title": "Weather and Climate",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Set up a school weather station (rain gauge from a bottle, wind vane from card) and record for two weeks. Facts: the arid north and north-east, the hot humid coast, the cool highlands, the warm wet Lake Victoria basin.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS",
+   "key_step": "The child names the elements of weather, matches each to its instrument, and tells weather (a day) from climate (many years).",
+   "floor": {
+    "prerequisite": "Names the seasons and their weather.",
+    "question": "Which season has the most rain?",
+    "answer": "the rainy season"
+   },
+   "representations": [
+    "a school weather station",
+    "instrument cards to match",
+    "a two-week weather record"
+   ],
+   "steps": [
+    "Name the element: temperature, rainfall, wind, humidity, cloud, sunshine.",
+    "Match the instrument.",
+    "Read today's record: that is weather.",
+    "Look at many years: that is climate."
+   ],
+   "contexts": [
+    "the rain gauge in the school garden",
+    "a weather report on the radio",
+    "a farmer deciding when to plant"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write thermometer, rain gauge, wind vane."
+    },
+    {
+     "beat": "point",
+     "do": "Point at rain gauge.",
+     "say": "What does it measure?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for rainfall."
+    },
+    {
+     "beat": "write",
+     "do": "Write the element beside each."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether today's rain tells us the climate."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS.M_WC_WEATHER_CLIMATE",
+     "listen_for": [
+      "It rained heavily this morning."
+     ],
+     "ask": "Which statement is about climate and not weather?",
+     "repair": "Ask \"how long did we watch?\" One day is weather. Many years is climate."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS.M_WC_INSTRUMENT_MIX",
+     "listen_for": [
+      "A thermometer"
+     ],
+     "ask": "Which instrument measures the amount of rain?",
+     "repair": "Match each instrument to a unit: degrees, millimetres, direction."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS.M_WC_WIND_VANE_SPEED",
+     "listen_for": [
+      "How fast the wind is blowing"
+     ],
+     "ask": "What does a wind vane show?",
+     "repair": "Make a card vane and watch it turn to face the wind; then spin a cup anemometer."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS.M_WC_CLOUD_RAIN_ALWAYS",
+     "listen_for": [
+      "Rainy"
+     ],
+     "ask": "The sky is full of clouds but no rain falls. What is the weather?",
+     "repair": "Record cloud cover and rainfall in separate columns for a week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which instrument measures temperature?",
+     "answer": "a thermometer",
+     "shows": "instrument"
+    },
+    {
+     "question": "Is \"it rained in Kisumu this morning\" weather or climate?",
+     "answer": "weather",
+     "shows": "weather vs climate"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES",
+   "key_step": "The child places Kenya's climate regions: arid north and north-east, hot humid coast, cool highlands, warm wet Lake Victoria basin.",
+   "floor": {
+    "prerequisite": "Places Kenya's main features on a map.",
+    "question": "Where is Mount Kenya?",
+    "answer": "in the centre of Kenya"
+   },
+   "representations": [
+    "a climate map of Kenya in four colours",
+    "town cards to place",
+    "rainfall bars for four towns"
+   ],
+   "steps": [
+    "Find the high land: the highlands are cool.",
+    "Find the coast: hot and humid.",
+    "Find the north and north-east: hot and dry.",
+    "Find the lake basin: warm and wet."
+   ],
+   "contexts": [
+    "camels in Wajir",
+    "tea in the cool Kericho highlands",
+    "coconut palms in Kilifi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya and split it into four zones."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the north.",
+     "say": "What is the climate here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for hot and dry."
+    },
+    {
+     "beat": "write",
+     "do": "Write the climate in each zone with one town."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES.M_WC_REGION_MIX",
+     "listen_for": [
+      "The area around Mount Kenya"
+     ],
+     "ask": "Which part of Kenya has an arid climate, with very little rain?",
+     "repair": "Match three towns to rain: Nyeri (much rain), Mombasa (humid), Lodwar (very little)."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES.M_WC_COAST_DRY",
+     "listen_for": [
+      "Hot and dry with very little rain"
+     ],
+     "ask": "Which description fits Mombasa on the coast?",
+     "repair": "Hot has two kinds: dry (Lodwar) and humid (Mombasa). Ask about the sea air."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES.M_WC_NAIROBI_COAST",
+     "listen_for": [
+      "The hot humid coast"
+     ],
+     "ask": "Which climate region is Nairobi closest to?",
+     "repair": "Compare Nairobi's cool mornings with Mombasa's warm nights on a temperature chart."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES.M_WC_LAKE_ARID",
+     "listen_for": [
+      "Hot and dry arid"
+     ],
+     "ask": "Which climate region is around Lake Victoria?",
+     "repair": "Show the rainfall bars for Kisumu and Lodwar side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which climate region is Mandera?",
+     "answer": "the hot, dry arid region",
+     "shows": "places a town"
+    },
+    {
+     "question": "Which region has a hot and humid climate?",
+     "answer": "the coast",
+     "shows": "names a region"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS",
+   "key_step": "The child describes each region's temperature and rain and explains that high places are cooler even near the equator.",
+   "floor": {
+    "prerequisite": "Places Kenya's climate regions.",
+    "question": "Which region is in the north?",
+    "answer": "the arid region"
+   },
+   "representations": [
+    "a table of temperature and rain for four towns",
+    "photos of each region",
+    "a hill drawing with temperatures getting cooler up the slope"
+   ],
+   "steps": [
+    "Name the region.",
+    "Say how hot it is and how much rain falls.",
+    "Give the reason: height, the sea, the lake.",
+    "Say how people live there."
+   ],
+   "contexts": [
+    "snow on Mount Kenya near the equator",
+    "humid nights in Mombasa",
+    "afternoon storms in Kisumu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mountain with a thermometer at the bottom and one at the top."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top thermometer.",
+     "say": "Is it warmer or cooler up here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cooler."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"higher is cooler\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS.M_WC_EQUATOR_HOT",
+     "listen_for": [
+      "It is not cold there."
+     ],
+     "ask": "Mount Kenya is on the equator. Why is it cold at the top?",
+     "repair": "Ask: is it colder at the top of a high hill than at its foot? Then link to the mountain."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS.M_WC_HUMID_DRY",
+     "listen_for": [
+      "The air is very dry."
+     ],
+     "ask": "What does it mean when the coast is humid?",
+     "repair": "Use clothes that do not dry on a humid day."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS.M_WC_HIGHLAND_HOT",
+     "listen_for": [
+      "Nyeri is far from the sun"
+     ],
+     "ask": "Why is Nyeri cooler than Mombasa?",
+     "repair": "Show photos of snow on Mount Kenya: the highest place is the coldest."
+    },
+    {
+     "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS.M_WC_ARID_NO_PEOPLE",
+     "listen_for": [
+      "Nobody lives there"
+     ],
+     "ask": "How do many people in the arid north earn a living?",
+     "repair": "Show a photo of a pastoralist family with camels in Marsabit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is the top of Mount Kenya cold although it is near the equator?",
+     "answer": "It is very high, and high places are cooler",
+     "shows": "height and temperature"
+    },
+    {
+     "question": "Describe the climate of the coast.",
+     "answer": "hot and humid with plenty of rain",
+     "shows": "coast climate"
+    }
+   ]
+  }
+ ]
+}

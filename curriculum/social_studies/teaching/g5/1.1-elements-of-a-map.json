@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP",
+ "title": "Elements of a Map",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Draw a map of the classroom or school compound with the class first: they choose the title, draw the frame, invent symbols for a key, add a north arrow and pace out a scale. Then read a printed map.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS",
+   "key_step": "The child names the five elements of a map (title, frame, key, scale, compass) and says what each one is for.",
+   "floor": {
+    "prerequisite": "Names the four cardinal points.",
+    "question": "Which point is opposite north?",
+    "answer": "south"
+   },
+   "representations": [
+    "a map of the classroom drawn together",
+    "a printed map with each element circled",
+    "element cards to match to their jobs"
+   ],
+   "steps": [
+    "Find the title: what is the map about?",
+    "Find the frame: the border round the map.",
+    "Find the key: what the symbols mean.",
+    "Find the scale and the compass: how far and which way."
+   ],
+   "contexts": [
+    "a map of the school in the office",
+    "a county map in the atlas",
+    "a sketch map to a relative's home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box with a small tree symbol inside and a little box in the corner."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the corner box.",
+     "say": "What goes here to tell us what the tree symbol means?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the key\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write title on top, then add scale and a north arrow."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which element tells us how far."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS.M_EM_SCALE_KEY",
+     "listen_for": [
+      "The key"
+     ],
+     "ask": "Which part of a map shows how far apart two towns are on the ground?",
+     "repair": "Use a described map: the key lists symbols, the scale turns a ruler distance into ground distance. Ask for one job each."
+    },
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS.M_EM_FRAME_TITLE",
+     "listen_for": [
+      "The frame"
+     ],
+     "ask": "Which element tells you what the map is about?",
+     "repair": "Cover the title and ask what the map is about; then ask what the border is for."
+    },
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS.M_EM_COMPASS_ROLE",
+     "listen_for": [
+      "The symbols used on the map"
+     ],
+     "ask": "What does the compass drawn on a map show?",
+     "repair": "Ask the child to find north on the page before using any place name."
+    },
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS.M_EM_KEY_IS_LIST",
+     "listen_for": [
+      "The names of all the towns"
+     ],
+     "ask": "What does the key of a map show?",
+     "repair": "Cover the words in a key and ask what each little drawing means on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which element of a map tells you what each symbol means?",
+     "answer": "the key",
+     "shows": "key"
+    },
+    {
+     "question": "Which element tells you the distance on the ground?",
+     "answer": "the scale",
+     "shows": "scale"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING",
+   "key_step": "The child reads a symbol from the key, turns a map distance into a ground distance with the scale, and gives a direction with the compass.",
+   "floor": {
+    "prerequisite": "Measures a length in centimetres.",
+    "question": "How long is this line in centimetres? (a 4 cm line)",
+    "answer": "4 cm"
+   },
+   "representations": [
+    "a described map with a key",
+    "a ruler and a scale line",
+    "a walk on the floor with one step for each centimetre"
+   ],
+   "steps": [
+    "Find the symbol in the key.",
+    "Measure the map distance in centimetres.",
+    "Multiply by the scale.",
+    "Use the compass for the direction."
+   ],
+   "contexts": [
+    "finding the dispensary on a village map",
+    "working out how far the market is",
+    "an atlas map of a game park"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two dots 4 cm apart and write \"1 cm to 2 km\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "How many centimetres apart are the dots?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the centimetres with the child: 1, 2, 3, 4."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how many kilometres that makes before writing 8 km."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING.M_EM_SYMBOL_GUESS",
+     "listen_for": [
+      "A tent"
+     ],
+     "ask": "The key shows a small triangle for a school. A triangle also looks like a tent. What does the triangle on this map stand for?",
+     "repair": "Change the key so a triangle means a church, then a school, and ask again each time."
+    },
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING.M_EM_SCALE_IGNORE",
+     "listen_for": [
+      "2 km"
+     ],
+     "ask": "On a map, 3 cm stands for 30 km. How far apart are two towns that are 2 cm apart on this map?",
+     "repair": "Make a scale line on paper and read it together before measuring anything."
+    },
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING.M_EM_SCALE_BIGGER_NUMBER",
+     "listen_for": [
+      "3 km"
+     ],
+     "ask": "On a map with the scale 1 cm to 5 km, two towns are 3 cm apart. How far apart are they on the ground?",
+     "repair": "Walk it: mark 3 steps on the floor and say \"each step is 5 km\": count 5, 10, 15."
+    },
+    {
+     "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING.M_EM_SYMBOL_ANY_COLOUR",
+     "listen_for": [
+      "A road"
+     ],
+     "ask": "A map key shows a blue line for a river and a red line for a road. What is the blue line across the plain?",
+     "repair": "Point at the key every time before naming a line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The scale is 1 cm to 10 km. Two places are 2 cm apart on the map. How far apart are they?",
+     "answer": "20 km",
+     "shows": "uses the scale"
+    },
+    {
+     "question": "The key shows a cross for a church. What is the cross north of the river?",
+     "answer": "a church",
+     "shows": "reads the key"
+    }
+   ]
+  }
+ ]
+}

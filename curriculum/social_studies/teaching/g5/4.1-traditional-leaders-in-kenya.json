@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K",
+ "title": "Traditional Leaders in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Mekatilili wa Menza (Giriama, resisted forced labour), Koitalel Arap Samoei (Nandi, resisted the railway), Nabongo Mumia (Wanga), Waiyaki wa Hinga (Agikuyu, Dagoretti), Wangu wa Makeri (Agikuyu, a woman headman).",
+ "skills": [
+  {
+   "skill": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS",
+   "key_step": "The child matches selected traditional leaders to their community and what they did.",
+   "floor": {
+    "prerequisite": "Names communities and their language groups.",
+    "question": "In which language group are the Nandi?",
+    "answer": "Nilotic (Kalenjin)"
+   },
+   "representations": [
+    "leader cards with community and deed",
+    "a map with each community",
+    "the Mekatilili statue photo"
+   ],
+   "steps": [
+    "Name the leader.",
+    "Name the community.",
+    "Say what they did.",
+    "Say whether they resisted or worked with the British."
+   ],
+   "contexts": [
+    "the Giriama resisting forced labour",
+    "the Nandi resisting the railway",
+    "the Wanga kingdom at Mumias"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Koitalel, Mekatilili, Mumia."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Koitalel.",
+     "say": "Which community did he lead?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Nandi."
+    },
+    {
+     "beat": "write",
+     "do": "Write community and deed beside each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS.M_TL_COMMUNITY_MIX",
+     "listen_for": [
+      "The Maasai"
+     ],
+     "ask": "Mekatilili wa Menza led which community?",
+     "repair": "Link each leader with a map place: Mekatilili at the coast, Koitalel in the Nandi hills."
+    },
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS.M_TL_ROLE_MIX",
+     "listen_for": [
+      "Nabongo Mumia"
+     ],
+     "ask": "Which leader of the Nandi resisted the building of the railway?",
+     "repair": "Compare two leaders: one resisted, one welcomed visitors."
+    },
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS.M_TL_MEKATILILI_MAN",
+     "listen_for": [
+      "A man"
+     ],
+     "ask": "Was Mekatilili wa Menza a man or a woman?",
+     "repair": "Show the statue of Mekatilili in Malindi."
+    },
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS.M_TL_ALL_RESISTED",
+     "listen_for": [
+      "Yes, all leaders fought them"
+     ],
+     "ask": "Did Nabongo Mumia fight the British?",
+     "repair": "Sort leaders: resisted or worked with."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which community did Mekatilili wa Menza belong to?",
+     "answer": "the Giriama",
+     "shows": "leader to community"
+    },
+    {
+     "question": "What is Koitalel Arap Samoei known for?",
+     "answer": "leading the Nandi resistance against the railway and British rule",
+     "shows": "leader to deed"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES",
+   "key_step": "The child names the qualities shown by traditional leaders from what they did and says what elders do today.",
+   "floor": {
+    "prerequisite": "Matches leaders to communities and deeds.",
+    "question": "What is Mekatilili known for?",
+    "answer": "resisting forced labour"
+   },
+   "representations": [
+    "quality cards",
+    "deed stories",
+    "an elder's visit"
+   ],
+   "steps": [
+    "Read the deed.",
+    "Ask what kind of person does that.",
+    "Name the quality.",
+    "Say where we need it today."
+   ],
+   "contexts": [
+    "an elder settling a land quarrel",
+    "a leader uniting communities",
+    "a woman leader standing up for her people"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a deed: \"She united the Giriama against forced labour.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"united\".",
+     "say": "What quality does uniting people show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for unity or leadership."
+    },
+    {
+     "beat": "write",
+     "do": "Write the quality."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES.M_TL_FEAR_LEADER",
+     "listen_for": [
+      "Making people afraid"
+     ],
+     "ask": "Which quality makes a good traditional leader?",
+     "repair": "Ask whom a villager would go to for help and why."
+    },
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES.M_TL_NO_ROLE_TODAY",
+     "listen_for": [
+      "Nothing, they have no role"
+     ],
+     "ask": "What do elders still do in many communities today?",
+     "repair": "Ask who settles a quarrel between neighbours first."
+    },
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES.M_TL_QUALITY_DEED_MIX",
+     "listen_for": [
+      "Wealth"
+     ],
+     "ask": "Mekatilili spoke against forced labour though she could be punished. Which quality does this show?",
+     "repair": "Ask: what did she risk? What do we call facing risk for others?"
+    },
+    {
+     "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES.M_TL_ELDERS_ONLY_OLD",
+     "listen_for": [
+      "Nothing, they only tell stories"
+     ],
+     "ask": "What do elders do in many communities today?",
+     "repair": "Invite an elder to say what they did this month."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one quality shown by traditional leaders.",
+     "answer": "any of: courage, wisdom, honesty, fairness, unity",
+     "shows": "quality"
+    },
+    {
+     "question": "Give one role of elders today.",
+     "answer": "any of: settle disputes, guide ceremonies, teach values",
+     "shows": "role today"
+    }
+   ]
+  }
+ ]
+}

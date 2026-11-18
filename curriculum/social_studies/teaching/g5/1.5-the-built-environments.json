@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS",
+ "title": "The Built Environments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: Fort Jesus in Mombasa (built by the Portuguese, 1590s), Lamu Old Town, Gedi Ruins near Malindi, Thimlich Ohinga in Migori, the Nairobi National Museum. Use photos and a map.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES",
+   "key_step": "The child names Kenya's main historic built environments, says where each is and tells built sites from natural features.",
+   "floor": {
+    "prerequisite": "Tells a museum, a monument and a cultural centre apart.",
+    "question": "What does a museum do?",
+    "answer": "keeps and shows old objects"
+   },
+   "representations": [
+    "a map of Kenya with site pins",
+    "photos of each site",
+    "a sort: built or natural"
+   ],
+   "steps": [
+    "Name the site.",
+    "Ask: was it built by people?",
+    "Say where it is.",
+    "Say one thing it teaches."
+   ],
+   "contexts": [
+    "Fort Jesus on the Mombasa shore",
+    "the narrow streets of Lamu Old Town",
+    "stone walls at Thimlich Ohinga"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Fort Jesus, Mount Kenya, Gedi Ruins."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Mount Kenya.",
+     "say": "Was this built by people?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Cross it out and write the town beside the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES.M_BE_NATURAL_AS_BUILT",
+     "listen_for": [
+      "Mount Kenya"
+     ],
+     "ask": "Which of these is a historic built environment?",
+     "repair": "Sort cards: made by people, or made by nature?"
+    },
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES.M_BE_PLACE_MIX",
+     "listen_for": [
+      "Lamu"
+     ],
+     "ask": "In which town is Fort Jesus?",
+     "repair": "Tell the stories: the Portuguese built Fort Jesus at Mombasa; Lamu Old Town is a town of coral stone houses."
+    },
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES.M_BE_FORT_KENYAN_BUILT",
+     "listen_for": [
+      "The British"
+     ],
+     "ask": "Who built Fort Jesus?",
+     "repair": "Put the Portuguese arrival (1500s) and the British (1890s) on a timeline with Fort Jesus."
+    },
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES.M_BE_THIMLICH_COAST",
+     "listen_for": [
+      "At the coast"
+     ],
+     "ask": "Where is Thimlich Ohinga?",
+     "repair": "Mark both Gedi and Thimlich Ohinga on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which town is Fort Jesus?",
+     "answer": "Mombasa",
+     "shows": "places a site"
+    },
+    {
+     "question": "Is Lake Nakuru a historic built environment?",
+     "answer": "No, it is a natural feature",
+     "shows": "built vs natural"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION",
+   "key_step": "The child picks actions that keep a historic site for later generations and rejects actions that harm it.",
+   "floor": {
+    "prerequisite": "Names historic sites in Kenya.",
+    "question": "Name one historic built environment at the coast.",
+    "answer": "any of: Fort Jesus, Gedi Ruins, Lamu Old Town"
+   },
+   "representations": [
+    "action cards: keeps or harms",
+    "visitor rules at a site",
+    "a before-and-after photo"
+   ],
+   "steps": [
+    "Read the action.",
+    "Ask what it does to the site.",
+    "Sort it: keeps or harms.",
+    "Say who can do the good action."
+   ],
+   "contexts": [
+    "a school trip to Gedi",
+    "tourists at Fort Jesus",
+    "a community near Thimlich Ohinga"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Climb the old wall for a photo.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Does this keep or harm the site?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for harm and the reason."
+    },
+    {
+     "beat": "write",
+     "do": "Write a keeping action instead."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION.M_BE_KEEP_OUT",
+     "listen_for": [
+      "Pull it down and build a new one"
+     ],
+     "ask": "What is the best way to conserve an old fort?",
+     "repair": "Ask what a grandparent would lose if a home photo album were thrown away."
+    },
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION.M_BE_TOUCH_TAKE",
+     "listen_for": [
+      "It is only a small stone, so it is fine."
+     ],
+     "ask": "A visitor wants a small stone from an old wall. What should you say?",
+     "repair": "Ask what happens when 100 visitors each take one stone."
+    },
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION.M_BE_NEW_PAINT",
+     "listen_for": [
+      "Yes, it makes it look new"
+     ],
+     "ask": "Is painting Fort Jesus bright blue a good way to conserve it?",
+     "repair": "Show a photo of a careful repair that matches the old stone."
+    },
+    {
+     "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION.M_BE_GOVT_ONLY",
+     "listen_for": [
+      "Only the government"
+     ],
+     "ask": "Who can help conserve historic sites?",
+     "repair": "List what a learner can do: not litter, tell others, report damage."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way a visitor can help conserve a historic site.",
+     "answer": "any of: follow rules, do not write on walls, do not take stones, do not litter, report damage",
+     "shows": "conserving"
+    },
+    {
+     "question": "Should an old fort be pulled down to build a hotel?",
+     "answer": "No: it would be lost for ever",
+     "shows": "protects sites"
+    }
+   ]
+  }
+ ]
+}

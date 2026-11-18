@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E",
+ "title": "Early forms of Governm ent in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Maasai laibon, age-sets and morans; Ameru Njuri Ncheke and the Mugwe; Agikuyu kiama; Wanga kingdom under the Nabongo.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS",
+   "key_step": "The child describes early forms of government in Kenya (councils of elders, age-sets, spiritual leaders, clan heads, the Wanga king).",
+   "floor": {
+    "prerequisite": "Names community leaders and their duties.",
+    "question": "What do elders do?",
+    "answer": "settle disputes and guard customs"
+   },
+   "representations": [
+    "a chart of communities and their governments",
+    "role cards",
+    "a story of a council meeting"
+   ],
+   "steps": [
+    "Name the community.",
+    "Name who led it.",
+    "Say how decisions were made.",
+    "Say whether it had a king."
+   ],
+   "contexts": [
+    "the Agikuyu kiama",
+    "the Maasai age-sets",
+    "the Wanga kingdom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write council of elders, age-set, king."
+    },
+    {
+     "beat": "point",
+     "do": "Point at king.",
+     "say": "Which Kenyan community had a king?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Wanga."
+    },
+    {
+     "beat": "write",
+     "do": "Write a community beside each form."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS.M_EG_NO_GOVT",
+     "listen_for": [
+      "They had no government"
+     ],
+     "ask": "How were communities governed before colonial rule?",
+     "repair": "Ask who settled disputes and made rules in a village before colonial rule."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS.M_EG_KING_ALL",
+     "listen_for": [
+      "The Maasai"
+     ],
+     "ask": "Which of these communities was ruled by a king?",
+     "repair": "Compare the Wanga kingdom with the council-ruled Ameru."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS.M_EG_AGE_SET_SCHOOL",
+     "listen_for": [
+      "A class at school"
+     ],
+     "ask": "What was an age-set?",
+     "repair": "Compare: your class learns together; an age-set had duties together, like defending the community."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS.M_EG_KING_WANGA_ALL",
+     "listen_for": [
+      "None did"
+     ],
+     "ask": "Which Kenyan community had a king?",
+     "repair": "Show Mumias and the Nabongo title."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Did Kenyan communities have government before colonial rule?",
+     "answer": "Yes, councils of elders, age-sets and some kings",
+     "shows": "early government existed"
+    },
+    {
+     "question": "What was an age-set?",
+     "answer": "a group initiated at the same time with duties for their age",
+     "shows": "age-set"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU",
+   "key_step": "The child compares Maasai and Ameru early government: both used councils of elders and age-sets; the Maasai had the laibon and the morans, the Ameru the Njuri Ncheke and the Mugwe.",
+   "floor": {
+    "prerequisite": "Describes early forms of government.",
+    "question": "Name one early form of government.",
+    "answer": "any form such as a council of elders"
+   },
+   "representations": [
+    "a two-column chart",
+    "title cards to place",
+    "a picture of morans and elders"
+   ],
+   "steps": [
+    "Draw the two columns.",
+    "Place the shared parts: elders and age-sets.",
+    "Place the titles: laibon and morans; Njuri Ncheke and Mugwe.",
+    "Say what each did."
+   ],
+   "contexts": [
+    "Maasai elders under a tree",
+    "the Njuri Ncheke shrine in Meru",
+    "morans guarding cattle"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: Maasai and Ameru."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Ameru column.",
+     "say": "What was their council of elders called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Njuri Ncheke."
+    },
+    {
+     "beat": "write",
+     "do": "Fill both columns."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU.M_EG_SAME_NAMES",
+     "listen_for": [
+      "Laibon"
+     ],
+     "ask": "What was the council of elders of the Ameru called?",
+     "repair": "Link the Maasai laibon to the spiritual leader and the Njuri Ncheke to the Ameru elders."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU.M_EG_ONE_RULER",
+     "listen_for": [
+      "He ruled alone as a king"
+     ],
+     "ask": "How was the Maasai laibon different from a king?",
+     "repair": "Ask who made decisions about cattle raids and grazing."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU.M_EG_MORAN_RULE",
+     "listen_for": [
+      "To rule the community"
+     ],
+     "ask": "What was the main duty of Maasai morans?",
+     "repair": "Sort duties: elders decided, morans defended, the laibon guided."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU.M_EG_NJURI_COURT_NONE",
+     "listen_for": [
+      "Only led dances"
+     ],
+     "ask": "What did the Njuri Ncheke do?",
+     "repair": "Read a short story of the council settling a land case."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was the spiritual leader of the Maasai called?",
+     "answer": "the laibon",
+     "shows": "Maasai title"
+    },
+    {
+     "question": "What was the council of elders of the Ameru called?",
+     "answer": "the Njuri Ncheke",
+     "shows": "Ameru title"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS",
+   "key_step": "The child picks good practices from early government and links each to today.",
+   "floor": {
+    "prerequisite": "Describes early forms of government.",
+    "question": "What did a council of elders do?",
+    "answer": "made decisions and settled disputes"
+   },
+   "representations": [
+    "practice and today cards to pair",
+    "a class meeting",
+    "a story of mediation"
+   ],
+   "steps": [
+    "Name the early practice.",
+    "Ask: is it still good today?",
+    "Find the modern practice like it.",
+    "Say why it helps."
+   ],
+   "contexts": [
+    "elders consulting the community",
+    "youth given duties",
+    "quarrels settled by talking"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"elders asked the community before deciding\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "What do we call this in government today?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for public participation."
+    },
+    {
+     "beat": "write",
+     "do": "Write the pair."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS.M_EG_OLD_USELESS",
+     "listen_for": [
+      "None of them"
+     ],
+     "ask": "Which practice from early government is still useful today?",
+     "repair": "Match each old practice to a modern office."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS.M_EG_COPY_ALL",
+     "listen_for": [
+      "Consulting elders"
+     ],
+     "ask": "Which old practice should NOT be copied today?",
+     "repair": "Sort practices into keep and leave behind with reasons."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS.M_EG_LESSON_MATCH",
+     "listen_for": [
+      "Elections"
+     ],
+     "ask": "Elders settled quarrels by listening to both sides. Which modern practice is like this?",
+     "repair": "Match practice and today in pairs on the board."
+    },
+    {
+     "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS.M_EG_YOUTH_NO_ROLE",
+     "listen_for": [
+      "None; only elders mattered"
+     ],
+     "ask": "Which duty did young people have in many early Kenyan communities?",
+     "repair": "Link age-set duties to youth service and youth leaders today."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one good practice from early government that is used today.",
+     "answer": "any of: consulting elders, settling quarrels by talk, leaders serving the people, duties for youth",
+     "shows": "lesson"
+    },
+    {
+     "question": "Should harsh punishments from long ago be used today?",
+     "answer": "No; only good practices that respect rights",
+     "shows": "chooses with care"
+    }
+   ]
+  }
+ ]
+}

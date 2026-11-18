@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA",
+ "title": "Citizenship in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts from the 2010 Constitution (to confirm by the teacher): citizenship by birth and by registration (marriage after seven years, lawful residence for seven years); dual citizenship allowed.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN",
+   "key_step": "The child says a person is a Kenyan citizen by birth or by registration, and that the ID card or passport shows citizenship but does not make it.",
+   "floor": {
+    "prerequisite": "Names qualities of a good citizen in school.",
+    "question": "Give one quality of a good citizen.",
+    "answer": "any quality such as honesty"
+   },
+   "representations": [
+    "two boxes: by birth and by registration",
+    "story cards",
+    "a photo of an ID card"
+   ],
+   "steps": [
+    "Read the story.",
+    "Ask: was the person born a citizen?",
+    "If not, did they register?",
+    "Place the story."
+   ],
+   "contexts": [
+    "a baby born in Kitui to Kenyan parents",
+    "a woman who married a Kenyan and registered after seven years",
+    "a child born abroad to a Kenyan father"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: by birth, by registration."
+    },
+    {
+     "beat": "point",
+     "do": "Point at by birth.",
+     "say": "A baby is born abroad to a Kenyan mother. Which box?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for by birth."
+    },
+    {
+     "beat": "write",
+     "do": "Write the story in the box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_BORN_IN_KENYA_ONLY",
+     "listen_for": [
+      "No, she was not born in Kenya"
+     ],
+     "ask": "Aisha was born abroad. Her mother is a Kenyan citizen. Is Aisha a Kenyan citizen by birth?",
+     "repair": "Use two stories: one born in Kenya, one born abroad to a Kenyan parent."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_ID_MAKES",
+     "listen_for": [
+      "Having an ID card"
+     ],
+     "ask": "What makes a person a citizen?",
+     "repair": "Ask: is a baby a citizen? Does she have an ID?"
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_MARRIAGE_INSTANT",
+     "listen_for": [
+      "The same day"
+     ],
+     "ask": "A foreign woman marries a Kenyan man. When can she apply for citizenship by registration?",
+     "repair": "Tell the story with the years in order."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN.M_CZ_LIVE_LONG_AUTO",
+     "listen_for": [
+      "Yes, automatically"
+     ],
+     "ask": "A trader from another country has lived in Kenya for ten years. Is she now a Kenyan citizen?",
+     "repair": "Read the rule: lawful residence for seven years lets a person apply to be registered."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the two ways of becoming a Kenyan citizen.",
+     "answer": "by birth and by registration",
+     "shows": "two ways"
+    },
+    {
+     "question": "Does getting an ID card make a person a citizen?",
+     "answer": "No, it shows they are a citizen",
+     "shows": "ID shows, does not make"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL",
+   "key_step": "The child says dual citizenship means being a citizen of Kenya and another country, that the 2010 Constitution allows it, and that a citizen by birth does not lose Kenyan citizenship.",
+   "floor": {
+    "prerequisite": "Says how a person becomes a citizen.",
+    "question": "How does a baby become a citizen of Kenya?",
+    "answer": "by birth to a Kenyan parent"
+   },
+   "representations": [
+    "two flags",
+    "a story of a dual citizen",
+    "true-false cards"
+   ],
+   "steps": [
+    "Say what dual means: two.",
+    "Name the two countries.",
+    "Say the 2010 Constitution allows it.",
+    "Say what duties stay the same."
+   ],
+   "contexts": [
+    "a Kenyan who also became a citizen of another country",
+    "a child born to a Kenyan and a Ugandan parent",
+    "a Kenyan athlete living abroad"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two flags joined by a plus sign."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the plus sign.",
+     "say": "What do we call being a citizen of both?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dual citizenship."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"allowed by the 2010 Constitution\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL.M_CZ_ONE_PASSPORT",
+     "listen_for": [
+      "No, Kenya does not allow it"
+     ],
+     "ask": "Can a Kenyan citizen also be a citizen of another country?",
+     "repair": "Ask: what year is the Constitution?"
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL.M_CZ_DUAL_LOSE",
+     "listen_for": [
+      "She loses it"
+     ],
+     "ask": "A Kenyan by birth takes the citizenship of another country. What happens to her Kenyan citizenship?",
+     "repair": "Use a two-flag picture: two homes, one family."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL.M_CZ_DUAL_TWO_KENYAS",
+     "listen_for": [
+      "Being from two counties"
+     ],
+     "ask": "What does dual citizenship mean?",
+     "repair": "Write county and country and say each with a map."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL.M_CZ_DUAL_ANY_DUTY",
+     "listen_for": [
+      "No, they belong to another country too"
+     ],
+     "ask": "Does a dual citizen have to obey Kenya's laws?",
+     "repair": "Ask what happens when a dual citizen drives in Nairobi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is dual citizenship?",
+     "answer": "being a citizen of Kenya and another country at the same time",
+     "shows": "meaning"
+    },
+    {
+     "question": "Does Kenya allow dual citizenship?",
+     "answer": "Yes, since the 2010 Constitution",
+     "shows": "allowed"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN",
+   "key_step": "The child picks actions of a good citizen and knows citizens have duties as well as rights.",
+   "floor": {
+    "prerequisite": "Says how a person becomes a citizen.",
+    "question": "Name one way to become a Kenyan citizen.",
+    "answer": "by birth or by registration"
+   },
+   "representations": [
+    "action cards",
+    "a rights and duties chart",
+    "a community clean-up photo"
+   ],
+   "steps": [
+    "Read the action.",
+    "Ask whether it helps the country.",
+    "Name the duty it shows.",
+    "Say what right it matches."
+   ],
+   "contexts": [
+    "a family planting trees on Mazingira Day",
+    "a learner returning lost money",
+    "an adult voting"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a scale: rights on one side, duties on the other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at duties.",
+     "say": "What duty goes with the right to a clean environment?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for keeping it clean."
+    },
+    {
+     "beat": "write",
+     "do": "Write the pair."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN.M_CZ_ONLY_VOTING",
+     "listen_for": [
+      "Waiting until age 18 to do anything"
+     ],
+     "ask": "Which action shows good citizenship for a child?",
+     "repair": "List things a ten-year-old can do for the school and the village."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN.M_CZ_RIGHTS_NO_DUTY",
+     "listen_for": [
+      "To do whatever one likes"
+     ],
+     "ask": "Which is a duty of a citizen?",
+     "repair": "Pair every right with a duty in a two-column list."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN.M_CZ_ADULTS_ONLY",
+     "listen_for": [
+      "No, only adults"
+     ],
+     "ask": "Can a Grade 5 learner be a good citizen?",
+     "repair": "List what a learner did this week that helps the country."
+    },
+    {
+     "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN.M_CZ_REPORT_WRONG_SELF",
+     "listen_for": [
+      "Beat the thief"
+     ],
+     "ask": "You see someone stealing a bicycle. What does a good citizen do?",
+     "repair": "Discuss why only the police and courts decide punishment."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two duties of a good citizen.",
+     "answer": "any two of: obey the law, respect others, keep the environment clean, take part in community work, vote when eligible, report wrongdoing",
+     "shows": "duties"
+    },
+    {
+     "question": "Do citizens have only rights?",
+     "answer": "No, rights come with duties",
+     "shows": "rights and duties"
+    }
+   ]
+  }
+ ]
+}
