@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
+ "title": "Kusikiliza na Kujibu (Theme 1: Usafi wa mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA",
+   "key_step": "The child plans what to say, listens to the end, and replies on the topic in standard Kiswahili with the features of a mjadala.",
+   "floor": {
+    "prerequisite": "Greets and replies politely.",
+    "question": "Hujambo? - ?",
+    "answer": "Sijambo"
+   },
+   "representations": [
+    "a short recorded talk",
+    "a checklist of features",
+    "role cards"
+   ],
+   "steps": [
+    "Listen to the end.",
+    "Show you understood.",
+    "Reply on the topic with a reason.",
+    "Keep the language and the turn-taking right."
+   ],
+   "contexts": [
+    "usafi wa mazingira",
+    "a class meeting",
+    "a community event"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "kupiga marufuku mifuko ya plastiki"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the checklist.",
+     "say": "Kipengele kipi tutakizingatia kwanza?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child takes part in a short mjadala on the topic while a partner ticks the checklist."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA.M9_ORL_NOREASON_T1",
+     "listen_for": [
+      "Nakubali."
+     ],
+     "ask": "Kwa nini unasema hivyo?",
+     "repair": "Toa hoja, sababu na mfano."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA.M9_ORL_ATTACK_T1",
+     "listen_for": [
+      "Wewe hujui unachosema!"
+     ],
+     "ask": "Unapinga hoja au mtu?",
+     "repair": "Pinga hoja kwa heshima, si mtu."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA.M9_ORL_INTERRUPT_T1",
+     "listen_for": [
+      "mkatize ili usisahau"
+     ],
+     "ask": "Mwenzako amemaliza?",
+     "repair": "Msikilize mzungumzaji hadi amalize."
+    },
+    {
+     "code": "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA.M9_ORL_OFFTOPIC_T1",
+     "listen_for": [
+      "Jana nilitazama filamu nzuri sana."
+     ],
+     "ask": "Mchango wako unahusianaje na mada?",
+     "repair": "Changia kuhusu mada inayojadiliwa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Katika mjadala kuhusu kupiga marufuku mifuko ya plastiki, ni mchango upi bora?",
+     "answer": "Nakubali kwa sababu... kwa mfano...",
+     "shows": "mjadala"
+    },
+    {
+     "question": "Hukubaliani na hoja ya mwenzako. Unasemaje?",
+     "answer": "Naheshimu hoja yako, lakini...",
+     "shows": "mjadala, second feature"
+    }
+   ]
+  }
+ ]
+}

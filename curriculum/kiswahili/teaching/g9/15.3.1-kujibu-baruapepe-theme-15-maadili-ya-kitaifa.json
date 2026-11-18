@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T15_KUJIBU_BARUAPEPE",
+ "title": "Kujibu Baruapepe (Theme 15: Maadili ya kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T15_KUJIBU_BARUAPEPE.KUJIBU_BARUAPEPE",
+   "key_step": "The child plans baruapepe before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "jibu: kongamano la maadili ya kitaifa",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jibu: Kongamano la Maadili ya Kitaifa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Jibu: Kongamano la Maadili ya Kitaifa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T15_KUJIBU_BARUAPEPE.KUJIBU_BARUAPEPE.M9_INS_NOSUBJ_T15",
+     "listen_for": [
+      "ujumbe wote"
+     ],
+     "ask": "Mpokeaji ataona nini kwanza kwenye sanduku lake?",
+     "repair": "Kichwa cha baruapepe ni maneno machache yanayoeleza ujumbe unahusu nini."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T15_KUJIBU_BARUAPEPE.KUJIBU_BARUAPEPE.M9_INS_ADDR_T15",
+     "listen_for": [
+      "S.L.P. 120, Nakuru, na tarehe juu kulia"
+     ],
+     "ask": "Kifaa kinaonyesha tarehe wapi?",
+     "repair": "Baruapepe haina anwani ya posta wala tarehe juu; kifaa huziweka chenyewe."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T15_KUJIBU_BARUAPEPE.KUJIBU_BARUAPEPE.M9_INS_TOFIELD_T15",
+     "listen_for": [
+      "Amina Otieno"
+     ],
+     "ask": "Anwani ya baruapepe ina alama gani?",
+     "repair": "Kisanduku cha \"Kwa\" huandikwa anwani ya baruapepe ya mpokeaji, yenye @."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T15_KUJIBU_BARUAPEPE.KUJIBU_BARUAPEPE.M9_INS_TEXTSPEAK_T15",
+     "listen_for": [
+      "Poa, tutaonana 2moro."
+     ],
+     "ask": "Maneno haya yangeeleweka na kila mtu?",
+     "repair": "Baruapepe huandikwa kwa lugha sahihi, na humalizika kwa hitimisho na jina."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika baruapepe kuhusu \"Jibu: Kongamano la Maadili ya Kitaifa\"?",
+     "answer": "Bw. Mratibu,",
+     "shows": "type"
+    },
+    {
+     "question": "Baruapepe ina sehemu zipi?",
+     "answer": "anwani ya mpokeaji, kichwa, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

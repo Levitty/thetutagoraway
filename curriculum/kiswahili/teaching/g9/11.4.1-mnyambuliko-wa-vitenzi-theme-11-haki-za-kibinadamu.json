@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN",
+ "title": "Mnyambuliko wa Vitenzi (Theme 11: Haki za kibinadamu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA",
+   "key_step": "The child forms kutendana (-ana), kutendeana (-eana/-iana) and kutendesha (-esha/-isha, or the special form) by meaning.",
+   "floor": {
+    "prerequisite": "Forms -eka and -ewa.",
+    "question": "Kutendewa kwa \"pika\" ni?",
+    "answer": "pikiwa"
+   },
+   "representations": [
+    "three cards: saidiana, saidiana (for), saidisha",
+    "irregular causatives list",
+    "picture sentences"
+   ],
+   "steps": [
+    "Find the stem.",
+    "Each other, for each other, or cause?",
+    "Choose the form.",
+    "Check irregulars."
+   ],
+   "contexts": [
+    "human rights: waheshimiane",
+    "a team",
+    "a family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wananchi wanapaswa kuheshimi___."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Wananchi\".",
+     "say": "Wanaheshimu nani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kuheshimiana\" and one causative."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M_KS9_KN_TENDANA",
+     "listen_for": [
+      "somesha"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi kiko katika kauli ya kutendana?\" Kwa nini \"somesha\" si jibu sahihi?",
+     "repair": "Pigana ni kutendana."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M_KS9_KN_TENDESHA",
+     "listen_for": [
+      "pigana"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi kiko katika kauli ya kutendesha?\" Kwa nini \"pigana\" si jibu sahihi?",
+     "repair": "Somesha ni kutendesha."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M_KS9_KN_TENDEANA",
+     "listen_for": [
+      "somesha"
+     ],
+     "ask": "Soma tena: \"Ni kitenzi kipi kiko katika kauli ya kutendeana?\" Kwa nini \"somesha\" si jibu sahihi?",
+     "repair": "Pigiana ni kutendeana."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M9_KTD_CAUSE_FORM",
+     "listen_for": [
+      "lalisha"
+     ],
+     "ask": "Kamusi inaonyesha kutendesha kwa kitenzi hiki?",
+     "repair": "Baadhi ya vitenzi vina kutendesha maalum: lala -> laza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kutendesha kwa \"pona\" ni?",
+     "answer": "ponya",
+     "shows": "irregular causative"
+    },
+    {
+     "question": "Kutendeana kwa \"andika\" ni?",
+     "answer": "andikiana",
+     "shows": "reciprocal applied"
+    }
+   ]
+  }
+ ]
+}

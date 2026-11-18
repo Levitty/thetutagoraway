@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU",
+ "title": "Insha za Kiuamilifu (Theme 2: Mazoezi ya viungo vya mwili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA",
+   "key_step": "The child reads the letter received, lists its questions and points, and plans a reply that answers each in the friendly layout.",
+   "floor": {
+    "prerequisite": "Writes a friendly letter.",
+    "question": "Barua ya kirafiki huanza na?",
+    "answer": "anwani na tarehe"
+   },
+   "representations": [
+    "a letter received with questions underlined",
+    "a reply plan",
+    "a model reply"
+   ],
+   "steps": [
+    "Read the letter received.",
+    "List its questions.",
+    "Plan an answer for each.",
+    "Keep the layout and tone."
+   ],
+   "contexts": [
+    "physical exercise",
+    "a pen pal",
+    "a cousin abroad"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Umeuliza kuhusu... ; Kuhusu..."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first question in the letter.",
+     "say": "Jibu lako litaanzaje?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child lists the questions and plans the reply."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M_KS9_JB_SHUKRANI",
+     "listen_for": [
+      "malalamiko"
+     ],
+     "ask": "Soma tena: \"Jibu la barua huanza kwa nini?\" Kwa nini \"malalamiko\" si jibu sahihi?",
+     "repair": "Jibu huanza kwa shukrani."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M_KS9_JB_MASWALI",
+     "listen_for": [
+      "huyapuuza"
+     ],
+     "ask": "Soma tena: \"Jibu la barua hufanya nini kuhusu maswali?\" Kwa nini \"huyapuuza\" si jibu sahihi?",
+     "repair": "Jibu hujibu maswali ya mwandishi."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M_KS9_JB_LUGHA",
+     "listen_for": [
+      "ya kiofisi kali"
+     ],
+     "ask": "Soma tena: \"Lugha ya kujibu barua ya kirafiki ni ipi?\" Kwa nini \"ya kiofisi kali\" si jibu sahihi?",
+     "repair": "Lugha ni ya kirafiki na heshima."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M9_JB_IGNORE",
+     "listen_for": [
+      "Nataka kukueleza kuhusu sherehe yetu."
+     ],
+     "ask": "Rafiki yako aliuliza nini?",
+     "repair": "Jibu la barua hujibu maswali na hoja za barua iliyopokelewa."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jibu la barua huanza baada ya salamu kwa nini?",
+     "answer": "kushukuru kwa barua na kujibu maswali yake",
+     "shows": "opening"
+    },
+    {
+     "question": "Lugha ya kujibu barua ya kirafiki iweje?",
+     "answer": "ya kirafiki na ya heshima",
+     "shows": "tone"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.KUJIBU_BARUA",
+   "key_step": "The child plans barua ya kirafiki before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "jibu kuhusu mazoezi ya viungo",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Jibu kuhusu Mazoezi ya Viungo"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Jibu kuhusu Mazoezi ya Viungo\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.KUJIBU_BARUA.M9_INS_FORMAL_T2",
+     "listen_for": [
+      "Mheshimiwa Bwana,"
+     ],
+     "ask": "Unamwandikia nani? Ungezungumza naye hivi?",
+     "repair": "Barua ya kirafiki hutumia lugha ya kirafiki: Mpendwa rafiki, Wako akupendaye."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.KUJIBU_BARUA.M9_INS_NOASK_T2",
+     "listen_for": [
+      "Nataka kukueleza kuhusu safari yetu."
+     ],
+     "ask": "Umemuuliza rafiki yako hali yake?",
+     "repair": "Baada ya salamu, uliza hali ya rafiki yako kabla ya kueleza ujumbe."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.KUJIBU_BARUA.M9_INS_DATE_T2",
+     "listen_for": [
+      "mwishoni, baada ya jina"
+     ],
+     "ask": "Rafiki atajuaje barua iliandikwa lini?",
+     "repair": "Tarehe huandikwa chini ya anwani ya mwandishi, juu upande wa kulia."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.KUJIBU_BARUA.M9_INS_SIGN_T2",
+     "listen_for": [
+      "Wako mtiifu, Bw. Juma Hamisi"
+     ],
+     "ask": "Rafiki yako anakuita kwa jina gani?",
+     "repair": "Barua ya kirafiki humalizika kwa \"Ni mimi rafiki yako,\" na jina la kwanza."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika barua ya kirafiki kuhusu \"Jibu kuhusu Mazoezi ya Viungo\"?",
+     "answer": "Mpendwa rafiki yangu Wanjiku,",
+     "shows": "type"
+    },
+    {
+     "question": "Barua ya kirafiki ina sehemu zipi?",
+     "answer": "anwani, tarehe, salamu, ujumbe, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

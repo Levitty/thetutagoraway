@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N",
+ "title": "Udogo na Ukubwa wa Nomino (Theme 14: Matumizi ya kodi)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA",
+   "key_step": "The child turns a noun into its big and small forms and changes the whole agreement chain (LI-YA for big, KI-VI for small).",
+   "floor": {
+    "prerequisite": "Makes big and small forms.",
+    "question": "Ukubwa wa \"mtu\" ni?",
+    "answer": "jitu"
+   },
+   "representations": [
+    "three-size pictures",
+    "rule cards",
+    "agreement chains"
+   ],
+   "steps": [
+    "Make the form.",
+    "Find its class (LI-YA or KI-VI).",
+    "Change adjective and verb.",
+    "Make the plural."
+   ],
+   "contexts": [
+    "use of taxes: jumba kubwa la serikali",
+    "a folk tale",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Kitoto ___ (-dogo) ___ (lia)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Kitoto\".",
+     "say": "Ngeli yake ni ipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Kitoto kidogo kinalia\" and the big form."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M_KS9_UU_UDOGO",
+     "listen_for": [
+      "mji mkubwa"
+     ],
+     "ask": "Soma tena: \"Kijiji ni nini?\" Kwa nini \"mji mkubwa\" si jibu sahihi?",
+     "repair": "Kijiji ni mji mdogo."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M_KS9_UU_UKUBWA",
+     "listen_for": [
+      "mtu mdogo"
+     ],
+     "ask": "Soma tena: \"Jitu ni nini?\" Kwa nini \"mtu mdogo\" si jibu sahihi?",
+     "repair": "Jitu ni mtu mkubwa."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M_KS9_UU_KIAMBISHI",
+     "listen_for": [
+      "ji-"
+     ],
+     "ask": "Soma tena: \"Ni kiambishi kipi cha udogo?\" Kwa nini \"ji-\" si jibu sahihi?",
+     "repair": "Udogo hutumia ki-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M9_UU_BOTH_AGREE",
+     "listen_for": [
+      "mkubwa anabweka"
+     ],
+     "ask": "Jibwa liko katika ngeli ipi?",
+     "repair": "Ukubwa na udogo hubadilisha upatanisho wote: jibwa kubwa linabweka."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ukubwa wa \"mkono\" ni?",
+     "answer": "jikono / kono",
+     "shows": "big form"
+    },
+    {
+     "question": "Jaza: Vitoto ___ (-dogo) ___ (cheza).",
+     "answer": "vidogo vinacheza",
+     "shows": "small chain"
+    }
+   ]
+  }
+ ]
+}

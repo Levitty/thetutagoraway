@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T2_VIHUSISHI",
+ "title": "Vihusishi (Theme 2: Mazoezi ya viungo vya mwili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU",
+   "key_step": "The child gives -a unganifu the prefix of the first noun (kitabu cha, vitabu vya, nyumba ya) and uses relating words of cause (kwa sababu ya, kutokana na).",
+   "floor": {
+    "prerequisite": "Uses -a of agreement.",
+    "question": "kitabu ___ mwalimu",
+    "answer": "cha"
+   },
+   "representations": [
+    "noun pairs",
+    "a class table of -a forms",
+    "cause sentences"
+   ],
+   "steps": [
+    "Find the first noun.",
+    "Find its class.",
+    "Choose the -a form.",
+    "For cause: kwa sababu ya, kutokana na."
+   ],
+   "contexts": [
+    "physical exercise (mazoezi ya viungo)",
+    "a health talk",
+    "a sports report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Alichoka ___ mazoezi mengi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Tunaeleza sababu kwa kihusishi gani?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kwa sababu ya\" and \"viungo vya mwili\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M_KS9_VS_UNGANIFU",
+     "listen_for": [
+      "kwa sababu ya"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi cha -a unganifu?\" Kwa nini \"kwa sababu ya\" si jibu sahihi?",
+     "repair": "Cha ni kihusishi cha -a unganifu."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M_KS9_VS_SABABU",
+     "listen_for": [
+      "cha"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi cha sababu?\" Kwa nini \"cha\" si jibu sahihi?",
+     "repair": "Kwa sababu ya ni kihusishi cha sababu."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M_KS9_VS_UPATANISHO",
+     "listen_for": [
+      "wa"
+     ],
+     "ask": "Soma tena: \"Kamilisha: kitabu ___ mwalimu.\" Kwa nini \"wa\" si jibu sahihi?",
+     "repair": "Kitabu hupatana na cha."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M9_VH_A_CLASS",
+     "listen_for": [
+      "ya"
+     ],
+     "ask": "Nomino ya kwanza iko katika ngeli ipi?",
+     "repair": "Kiunganishi -a hupatana na nomino ya kwanza: viungo vya mwili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: mapafu ___ mwanariadha",
+     "answer": "ya",
+     "shows": "-a of agreement"
+    },
+    {
+     "question": "Jaza: Alishindwa ___ jeraha.",
+     "answer": "kwa sababu ya / kutokana na",
+     "shows": "cause"
+    }
+   ]
+  }
+ ]
+}

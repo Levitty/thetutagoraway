@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T11_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 11: Haki za kibinadamu)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_MTAZAMO",
+   "key_step": "The child plans insha ya maelezo before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "haki ya mtoto kusikilizwa",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Haki ya Mtoto Kusikilizwa"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Haki ya Mtoto Kusikilizwa\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_MTAZAMO.M9_INS_MTAZAMO_T11",
+     "listen_for": [
+      "kuanza \"nilikwenda...\" kisha \"alikwenda...\" kwa msimulizi yuleyule"
+     ],
+     "ask": "Ni nani anasimulia kisa hiki?",
+     "repair": "Dumisha nafsi na mtazamo mmoja wa msimulizi."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_MTAZAMO.M9_INS_OFFTOPIC_T11",
+     "listen_for": [
+      "Rafiki yangu ana baiskeli mpya ya rangi ya bluu."
+     ],
+     "ask": "Sentensi hii inahusiana vipi na anwani?",
+     "repair": "Kila sentensi ya insha inapaswa kuhusu anwani."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_MTAZAMO.M9_INS_PARAS_T11",
+     "listen_for": [
+      "aya moja ndefu"
+     ],
+     "ask": "Aya yako ya kwanza inafanya kazi gani?",
+     "repair": "Insha ina utangulizi, kiini chenye aya kadhaa, na hitimisho."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T11_INSHA_ZA_KUBUNI.MAELEZO_MTAZAMO.M9_INS_MSAMIATI_T11",
+     "listen_for": [
+      "Haki ni nzuri."
+     ],
+     "ask": "Neno mahususi zaidi ni lipi?",
+     "repair": "Tumia neno mahususi badala ya maneno ya jumla."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya maelezo kuhusu \"Haki ya Mtoto Kusikilizwa\"?",
+     "answer": "Kwa mtazamo wangu kama mwanafunzi, mtoto akisikilizwa hujiamini na hujifunza kuwajibika.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya maelezo ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

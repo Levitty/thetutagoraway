@@ -17,7 +17,7 @@ export function depthTests(grade) {
   const skills = subs.flatMap(s => s.skills);
   const lib = json(`engine/data/curriculum/kiswahili.g${grade}.misconceptions.json`);
   const below = {};
-  for (const g of [grade - 1, grade - 2, grade - 3].filter(g => g >= 1)) {
+  for (let g = 1; g < grade; g++) {
     const j = json(`curriculum/kiswahili/g${g}.json`);
     below[g] = new Set([...j.sub_strands.flatMap(s => (s.skills || []).map(k => k.code)), ...j.sub_strands.flatMap(s => s.outcomes.map(o => o.code))]);
   }

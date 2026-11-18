@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T7_",
+ "title": " (Theme 7: Huduma katika asasi za kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T7_.KUFUPISHA",
+   "key_step": "The child underlines the main point of each paragraph, crosses out examples, and writes the points in his own words within the limit.",
+   "floor": {
+    "prerequisite": "Finds the main idea of a paragraph.",
+    "question": "Wazo kuu la aya hii ni lipi?",
+    "answer": "the main sentence"
+   },
+   "representations": [
+    "a passage with paragraphs numbered",
+    "two colours: hoja kuu / mfano",
+    "a word-count box"
+   ],
+   "steps": [
+    "Read the whole passage.",
+    "Underline the main point of each paragraph.",
+    "Cross out examples.",
+    "Write in your words and count."
+   ],
+   "contexts": [
+    "huduma katika asasi za kijamii",
+    "a newspaper article",
+    "a textbook chapter"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Asasi za kijamii huwasaidia wazee, yatima na wagonjwa kupata huduma muhimu."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"kwa mfano\" in paragraph 2.",
+     "say": "Hili liingie katika ufupisho?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes a 80-word summary of the passage."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T7_.KUFUPISHA.M9_UFP_COPY_T7",
+     "listen_for": [
+      "kunakili sentensi muhimu kutoka kifungu"
+     ],
+     "ask": "Sentensi hii ni yako au ya mwandishi?",
+     "repair": "Fupisha kwa maneno yako mwenyewe."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T7_.KUFUPISHA.M9_UFP_EXAMPLE_T7",
+     "listen_for": [
+      "Kwa mfano, kituo cha Upendo kiliwapa wazee hamsini chakula mwezi uliopita."
+     ],
+     "ask": "Hili ni hoja kuu au ni mfano?",
+     "repair": "Ufupisho hubeba hoja kuu tu, si mifano."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T7_.KUFUPISHA.M9_UFP_OPINION_T7",
+     "listen_for": [
+      "Asasi za kijamii huwasaidia wazee, yatima na wagonjwa kupata huduma muhimu."
+     ],
+     "ask": "Mwandishi alisema hivi?",
+     "repair": "Usiongeze maoni yako katika ufupisho."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T7_.KUFUPISHA.M9_UFP_LENGTH_T7",
+     "listen_for": [
+      "andika zaidi ili usiache kitu"
+     ],
+     "ask": "Umeandika maneno mangapi?",
+     "repair": "Zingatia idadi ya maneno: 80."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni lipi liingie katika ufupisho: hoja kuu au mfano?",
+     "answer": "hoja kuu",
+     "shows": "main points"
+    },
+    {
+     "question": "Ufupisho huandikwa kwa maneno ya nani?",
+     "answer": "ya mwanafunzi mwenyewe",
+     "shows": "own words"
+    }
+   ]
+  }
+ ]
+}

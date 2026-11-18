@@ -54,7 +54,7 @@ const cur = load(GRADE);
 const { ADD, NEW, NOTES = {} } = await import(`./data/kiswahili-g${GRADE}/index.mjs`);
 const P = `KISW.G${GRADE}.`;
 const below = {};
-for (const g of [GRADE - 1, GRADE - 2, GRADE - 3].filter(g => g >= 1)) {
+for (let g = 1; g < GRADE; g++) {
   const j = load(g);
   below[g] = { skills: new Set(j.sub_strands.flatMap(s => (s.skills || []).map(k => k.code))), outcomes: new Set(j.sub_strands.flatMap(s => s.outcomes.map(o => o.code))) };
 }

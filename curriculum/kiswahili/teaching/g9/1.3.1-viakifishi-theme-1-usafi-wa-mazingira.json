@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T1_VIAKIFISHI",
+ "title": "Viakifishi (Theme 1: Usafi wa mazingira)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI",
+   "key_step": "The child uses the koloni before a list or an explanation and the semi koloni between two complete sentences that belong together.",
+   "floor": {
+    "prerequisite": "Uses commas and full stops.",
+    "question": "Andika vizuri: mkate maziwa na chai",
+    "answer": "mkate, maziwa na chai"
+   },
+   "representations": [
+    "sentence pairs",
+    "a mark chart",
+    "a list sentence"
+   ],
+   "steps": [
+    "Is a list or explanation coming? Koloni.",
+    "Two complete linked sentences? Semi koloni.",
+    "Otherwise: comma or full stop.",
+    "Read it."
+   ],
+   "contexts": [
+    "environmental cleanliness: vifaa vinavyohitajika: fagio, glavu na mifuko",
+    "a notice",
+    "a report"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Tulihitaji vifaa vitatu ___ fagio, glavu na mifuko."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gap.",
+     "say": "Alama ipi inafaa kabla ya orodha?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds the koloni and writes one sentence with a semi koloni."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M_KS9_KO_KOLONI",
+     "listen_for": [
+      "semi koloni"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi huleta orodha?\" Kwa nini \"semi koloni\" si jibu sahihi?",
+     "repair": "Koloni huleta orodha."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M_KS9_KO_SEMI",
+     "listen_for": [
+      "koloni"
+     ],
+     "ask": "Soma tena: \"Ni alama ipi hutenganisha sentensi mbili zinazohusiana?\" Kwa nini \"koloni\" si jibu sahihi?",
+     "repair": "Semi koloni hutenganisha sentensi zinazohusiana."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M_KS9_KO_MFANO",
+     "listen_for": [
+      "Nilinunua: mkate maziwa sukari."
+     ],
+     "ask": "Soma tena: \"Ni sentensi ipi imetumia koloni sawa?\" Kwa nini \"Nilinunua: mkate maziwa sukari.\" si jibu sahihi?",
+     "repair": "Koloni hufuata maelezo kisha orodha."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M9_KOL_SEMI_COMMA",
+     "listen_for": [
+      "Tulifika mapema, walimu walikuwa bado hawajafika."
+     ],
+     "ask": "Kila upande unaweza kusimama kama sentensi kamili?",
+     "repair": "Semi koloni huunganisha sentensi mbili kamili zinazohusiana."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Alama ipi huunganisha sentensi kamili mbili zinazohusiana?",
+     "answer": "semi koloni (;)",
+     "shows": "semicolon"
+    },
+    {
+     "question": "Andika vizuri: Mahitaji ni haya maji chakula na makazi.",
+     "answer": "Mahitaji ni haya: maji, chakula na makazi.",
+     "shows": "colon"
+    }
+   ]
+  }
+ ]
+}

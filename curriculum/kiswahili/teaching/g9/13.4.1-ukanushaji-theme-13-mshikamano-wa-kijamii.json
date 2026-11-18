@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T13_UKANUSHAJI",
+ "title": "Ukanushaji (Theme 13: Mshikamano wa kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI",
+   "key_step": "The child negates every condition: -ki- with -sipo-, -nge- with -singe-, -ngali- with -singali-, in both halves.",
+   "floor": {
+    "prerequisite": "Uses -nge- and -ngali-.",
+    "question": "Jaza: Tu___ (jua), tu___ (kuja).",
+    "answer": "Tungejua, tungekuja"
+   },
+   "representations": [
+    "a negation table for conditions",
+    "sentence pairs",
+    "colour for markers"
+   ],
+   "steps": [
+    "Find the condition marker.",
+    "Choose its negative.",
+    "Negate both halves if needed.",
+    "Read it."
+   ],
+   "contexts": [
+    "social cohesion: Tusiposhirikiana...",
+    "a debate",
+    "a story"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Ukisoma -> ___"
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"-ki-\".",
+     "say": "Kanusho lake ni nini?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Usiposoma\" and the negatives of \"Ningejua\" and \"Angalikuja\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M_KS9_UM_NGE",
+     "listen_for": [
+      "Hangekuja"
+     ],
+     "ask": "Soma tena: \"Kanusha: Angekuja.\" Kwa nini \"Hangekuja\" si jibu sahihi?",
+     "repair": "-nge- hukanushwa kwa -singe-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M_KS9_UM_NGALI",
+     "listen_for": [
+      "Hangalisoma"
+     ],
+     "ask": "Soma tena: \"Kanusha: Angalisoma.\" Kwa nini \"Hangalisoma\" si jibu sahihi?",
+     "repair": "-ngali- hukanushwa kwa -singali-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M_KS9_UM_KI",
+     "listen_for": [
+      "Hakisoma"
+     ],
+     "ask": "Soma tena: \"Kanusha: Akisoma.\" Kwa nini \"Hakisoma\" si jibu sahihi?",
+     "repair": "-ki- hukanushwa kwa -sipo-."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M9_UM_NGALI",
+     "listen_for": [
+      "Hangalikuja, hatungalifurahi."
+     ],
+     "ask": "Kiambishi cha kukanusha -ngali- ni kipi?",
+     "repair": "-ngali- hukanushwa kwa -singali-."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Kanusha: Wangekubali",
+     "answer": "Wasingekubali",
+     "shows": "-singe-"
+    },
+    {
+     "question": "Kanusha: Akifika",
+     "answer": "Asipofika",
+     "shows": "-sipo-"
+    }
+   ]
+  }
+ ]
+}

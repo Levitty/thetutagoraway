@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 6: Usalama barabarani)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI",
+   "key_step": "The child explains an insha ya methali: the whole methali as the title, a story whose events prove it, and a closing that returns to it.",
+   "floor": {
+    "prerequisite": "Explains a methali.",
+    "question": "Maana ya \"Haraka haraka haina baraka\"?",
+    "answer": "tusifanye mambo kwa pupa"
+   },
+   "representations": [
+    "a model insha ya methali",
+    "a plan: methali, kisa, kilele, hitimisho",
+    "methali cards"
+   ],
+   "steps": [
+    "Write the whole methali.",
+    "Plan a story that proves it.",
+    "Build to the moment it comes true.",
+    "Close by returning to it."
+   ],
+   "contexts": [
+    "road safety",
+    "a story competition",
+    "a class anthology"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Mwenda pole hajikwai"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the methali.",
+     "say": "Kisa gani kinaweza kuithibitisha?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child plans a story for the methali."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M_KS9_IM_MAANA",
+     "listen_for": [
+      "kichekesho"
+     ],
+     "ask": "Soma tena: \"Methali ni nini?\" Kwa nini \"kichekesho\" si jibu sahihi?",
+     "repair": "Methali ni msemo wenye hekima."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M_KS9_IM_KAZI",
+     "listen_for": [
+      "husimulia hadithi yoyote"
+     ],
+     "ask": "Soma tena: \"Insha ya methali hufanya nini?\" Kwa nini \"husimulia hadithi yoyote\" si jibu sahihi?",
+     "repair": "Insha ya methali hufafanua maana."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M_KS9_IM_MFANO",
+     "listen_for": [
+      "Fanya kila kitu upesi"
+     ],
+     "ask": "Soma tena: \"Methali \"Haraka haraka haina baraka\" inafundisha nini?\" Kwa nini \"Fanya kila kitu upesi\" si jibu sahihi?",
+     "repair": "Haraka kupita kiasi huleta hasara."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M9_IM_HALF",
+     "listen_for": [
+      "Haraka Haraka"
+     ],
+     "ask": "Methali nzima ni ipi?",
+     "repair": "Anwani ya insha ya methali ni methali nzima kama ilivyo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Anwani ya insha ya methali ni?",
+     "answer": "methali nzima",
+     "shows": "title"
+    },
+    {
+     "question": "Hitimisho la insha ya methali hufanya nini?",
+     "answer": "hurudia na kuthibitisha methali",
+     "shows": "closing"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.KUANDIKA_INSHA_METHALI",
+   "key_step": "The child plans insha ya kubuni before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "haraka haraka haina baraka",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Haraka Haraka Haina Baraka"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Haraka Haraka Haina Baraka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.KUANDIKA_INSHA_METHALI.M9_INS_METHALI_T6",
+     "listen_for": [
+      "maelezo ya maana ya methali na mifano mingi"
+     ],
+     "ask": "Kisa chako kinaonyesha methali ikitimia?",
+     "repair": "Insha ya methali husimulia kisa kinachothibitisha methali."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.KUANDIKA_INSHA_METHALI.M9_INS_END_T6",
+     "listen_for": [
+      "Mwisho."
+     ],
+     "ask": "Msomaji anajifunza nini katika aya ya mwisho?",
+     "repair": "Hitimisho hufunga insha kwa kueleza funzo au hisia, si kwa neno \"Mwisho\" tu."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.KUANDIKA_INSHA_METHALI.M9_INS_ORDER_T6",
+     "listen_for": [
+      "alichelewa zaidi, ajali ilitokea, alipuuza ishara, dereva aliharakisha"
+     ],
+     "ask": "Ni jambo lipi lilitokea kwanza?",
+     "repair": "Panga matukio yanavyofuatana, na utumie maneno kama kwanza, kisha na hatimaye."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.KUANDIKA_INSHA_METHALI.M9_INS_LUGHA_T6",
+     "listen_for": [
+      "Gari lilianguka."
+     ],
+     "ask": "Sentensi hii inajenga picha gani?",
+     "repair": "Tumia tashbihi, sitiari, methali au nahau kufanya insha iwe hai."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya kubuni kuhusu \"Haraka Haraka Haina Baraka\"?",
+     "answer": "Gari lilipaa kama tai juu ya kilima kabla ya kugonga ukingo.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya kubuni ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}

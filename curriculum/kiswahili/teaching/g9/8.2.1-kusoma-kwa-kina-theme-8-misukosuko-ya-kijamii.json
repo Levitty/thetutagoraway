@@ -1,0 +1,189 @@
+{
+ "sub_strand": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA",
+ "title": "Kusoma kwa Kina (Theme 8: Misukosuko ya kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MANDHARI",
+   "key_step": "The child names the mandhari with the right term, proves each point with a line or event from \"Sauti ya Mama Dunia\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class shairi \"Sauti ya Mama Dunia\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "misukosuko ya kijamii",
+    "the class shairi",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sauti ya Mama Dunia"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni mandhari gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MANDHARI.M9_FAS_PLACEONLY_T8",
+     "listen_for": [
+      "msitu unaokatwa"
+     ],
+     "ask": "Matukio yalitokea lini, na katika hali gani?",
+     "repair": "Mandhari ni mahali, wakati na hali ambamo matukio yanatokea."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MANDHARI.M9_FAS_PLOT_LIST_T8",
+     "listen_for": [
+      "orodha ya wahusika: Mama Dunia (nafsineni) na Mkata Miti"
+     ],
+     "ask": "Ni tukio lipi lilisababisha lingine?",
+     "repair": "Ploti ni msuko wa matukio na jinsi yanavyofuatana."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MANDHARI.M9_FAS_PLOT_ORDER_T8",
+     "listen_for": [
+      "Mkata Miti anaangusha mti wa mwisho"
+     ],
+     "ask": "Tukio hili liko sura au onyesho gani?",
+     "repair": "Fuata mpangilio wa matukio kama yalivyo katika kazi."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MANDHARI.M9_FAS_NOUSE_T8",
+     "listen_for": [
+      "ni mahali tu hadithi ilipotokea"
+     ],
+     "ask": "Hadithi hii ingetokea vivyo hivyo mahali pengine?",
+     "repair": "Mandhari hujenga hali, huonyesha maudhui na huathiri matendo ya wahusika."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mandhari ya \"Sauti ya Mama Dunia\" ni yapi?",
+     "answer": "msitu unaokatwa, wakati wa ukame",
+     "shows": "mandhari"
+    },
+    {
+     "question": "Ploti ya \"Sauti ya Mama Dunia\" ni nini?",
+     "answer": "mfuatano wa matukio tangu mwanzo hadi mwisho",
+     "shows": "mandhari, second form"
+    }
+   ]
+  },
+  {
+   "skill": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MUUNDO",
+   "key_step": "The child names the muundo with the right term, proves each point with a line or event from \"Sauti ya Mama Dunia\", and says what it does in the work.",
+   "floor": {
+    "prerequisite": "Answers comprehension questions from a passage.",
+    "question": "Jibu linatoka wapi?",
+    "answer": "katika matini"
+   },
+   "representations": [
+    "the class shairi \"Sauti ya Mama Dunia\" with key pages marked",
+    "a point-evidence-importance frame (hoja, ushahidi, umuhimu)",
+    "a chart of terms"
+   ],
+   "steps": [
+    "Read the question and the term.",
+    "Find the part of the work.",
+    "Write the point with its evidence.",
+    "Say why it matters."
+   ],
+   "contexts": [
+    "misukosuko ya kijamii",
+    "the class shairi",
+    "a school drama or poetry festival"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Sauti ya Mama Dunia"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chosen page.",
+     "say": "Ni muundo gani linajitokeza hapa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes one point with its evidence and its importance in the frame."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MUUNDO.M9_FAS_UBETI_T8M",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "Ubeti mmoja unaishia wapi?",
+     "repair": "Ubeti mmoja una mishororo yake; usihesabu shairi lote."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MUUNDO.M9_FAS_VINA_T8M",
+     "listen_for": [
+      "mwanzoni mwa mshororo"
+     ],
+     "ask": "Silabi ya mwisho ya kipande cha kwanza ni ipi?",
+     "repair": "Vina vya kati viko mwishoni mwa ukwapi; vya mwisho mwishoni mwa utao."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MUUNDO.M9_FAS_MIZANI_T8M",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Kila silabi inaishia kwa irabu?",
+     "repair": "Mizani ni idadi ya silabi: E-li-mu-ni-u-fu-ngu-o ni mizani 8."
+    },
+    {
+     "code": "KISW.G9.KUSOMA.T8_KUSOMA_KWA_KINA.SHAIRI_MUUNDO.M9_FAS_KIBWAGIZO_T8M",
+     "listen_for": [
+      "kiitikio cha wimbo tu"
+     ],
+     "ask": "Ni mshororo gani unarudiwa?",
+     "repair": "Kibwagizo hurudiwa kila ubeti kusisitiza ujumbe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Shairi lina beti 4 za mishororo 4. Kila ubeti una mishororo mingapi?",
+     "answer": "4",
+     "shows": "muundo"
+    },
+    {
+     "question": "Vina vya kati hupatikana wapi?",
+     "answer": "mwishoni mwa ukwapi (kipande cha kwanza)",
+     "shows": "muundo, second form"
+    }
+   ]
+  }
+ ]
+}

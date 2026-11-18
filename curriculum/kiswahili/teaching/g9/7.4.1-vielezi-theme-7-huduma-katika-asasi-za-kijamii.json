@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T7_VIELEZI",
+ "title": "Vielezi (Theme 7: Huduma katika asasi za kijamii)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI",
+   "key_step": "The child uses adverbs of place (hapa, kule, humu, nyumbani) by distance and inside or outside, and adverbs of number (mara mbili, mara kwa mara).",
+   "floor": {
+    "prerequisite": "Uses adverbs of manner.",
+    "question": "Jaza: Alisoma ___ (-zuri).",
+    "answer": "vizuri"
+   },
+   "representations": [
+    "near/far/inside cards",
+    "mara cards",
+    "a school map"
+   ],
+   "steps": [
+    "Where? Near, far or inside?",
+    "Choose hapa / kule / humu.",
+    "How many times? mara + number.",
+    "Read it."
+   ],
+   "contexts": [
+    "social services: alitembelea zahanati mara tatu",
+    "the school compound",
+    "a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Wagonjwa wanasubiri ___ (ndani ya chumba hiki)."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"ndani ya chumba hiki\".",
+     "say": "Kielezi kipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"humu\" and one sentence with \"mara mbili\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M_KS9_VE_MAHALI",
+     "listen_for": [
+      "mara mbili"
+     ],
+     "ask": "Soma tena: \"Ni kielezi kipi cha mahali?\" Kwa nini \"mara mbili\" si jibu sahihi?",
+     "repair": "Pale ni kielezi cha mahali."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M_KS9_VE_IDADI",
+     "listen_for": [
+      "huku"
+     ],
+     "ask": "Soma tena: \"Ni kielezi kipi cha idadi?\" Kwa nini \"huku\" si jibu sahihi?",
+     "repair": "Mara mbili ni kielezi cha idadi."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M_KS9_VE_SWALI",
+     "listen_for": [
+      "Lini?"
+     ],
+     "ask": "Soma tena: \"Kielezi cha mahali hujibu swali gani?\" Kwa nini \"Lini?\" si jibu sahihi?",
+     "repair": "Kielezi cha mahali hujibu \"wapi?\"."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M9_VE_MARA",
+     "listen_for": [
+      "wawili"
+     ],
+     "ask": "Tunahesabu watu au mara?",
+     "repair": "Kielezi cha idadi: mara mbili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Tafadhali keti ___ (karibu).",
+     "answer": "hapa",
+     "shows": "place"
+    },
+    {
+     "question": "Jaza: Alikohoa ___ (3).",
+     "answer": "mara tatu",
+     "shows": "number"
+    }
+   ]
+  }
+ ]
+}

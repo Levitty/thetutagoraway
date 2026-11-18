@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T3_VIHUSISHI",
+ "title": "Vihusishi (Theme 3: Utunzaji wa wanyama)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI",
+   "key_step": "The child compares with kuliko or zaidi ya (more), kama or sawa na (equal), and uses na for \"with/and\" correctly.",
+   "floor": {
+    "prerequisite": "Uses relating words of place.",
+    "question": "Paka yuko ___ ya kitanda.",
+    "answer": "chini"
+   },
+   "representations": [
+    "pictures of animals of different sizes",
+    "comparison cards",
+    "sentence frames"
+   ],
+   "steps": [
+    "Are they equal or not?",
+    "Choose kuliko / zaidi ya or kama / sawa na.",
+    "Keep the adjective's prefix.",
+    "Read it."
+   ],
+   "contexts": [
+    "animal care: kulinganisha wanyama",
+    "a market",
+    "sports scores"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Twiga ni mrefu ___ punda milia."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two animals.",
+     "say": "Wako sawa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"kuliko\" and one sentence with \"sawa na\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M_KS9_VL_KULIKO",
+     "listen_for": [
+      "pamoja na"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi kinalinganisha?\" Kwa nini \"pamoja na\" si jibu sahihi?",
+     "repair": "Kuliko hulinganisha."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M_KS9_VL_NA",
+     "listen_for": [
+      "ulinganisho"
+     ],
+     "ask": "Soma tena: \"Katika \"Alikuja na rafiki yake\", na inaonyesha nini?\" Kwa nini \"ulinganisho\" si jibu sahihi?",
+     "repair": "Na hapa inaonyesha pamoja."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M_KS9_VL_KAMA",
+     "listen_for": [
+      "kwa ajili ya"
+     ],
+     "ask": "Soma tena: \"Ni kihusishi kipi kinalinganisha vitu viwili?\" Kwa nini \"kwa ajili ya\" si jibu sahihi?",
+     "repair": "Kama hulinganisha vitu viwili."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M9_VH_KULIKO_ZAIDI",
+     "listen_for": [
+      "kama"
+     ],
+     "ask": "Ni sawa au mmoja ni zaidi?",
+     "repair": "Tunalinganisha kwa kuliko au zaidi ya: mkubwa kuliko kiboko."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Jaza: Juma ni hodari ___ kaka yake. (sawa)",
+     "answer": "sawa na",
+     "shows": "equal"
+    },
+    {
+     "question": "Jaza: Mbwa wangu ni mkubwa ___ wako.",
+     "answer": "kuliko",
+     "shows": "more"
+    }
+   ]
+  }
+ ]
+}

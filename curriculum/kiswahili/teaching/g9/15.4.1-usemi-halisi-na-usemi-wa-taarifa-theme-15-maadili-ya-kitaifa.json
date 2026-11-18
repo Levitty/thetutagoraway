@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM",
+ "title": "Usemi Halisi na Usemi wa Taarifa (Theme 15: Maadili ya kitaifa)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_KANUNI",
+   "key_step": "The child names the kind of speech (statement, question, command), applies its rule, and moves person, tense, time and place in both directions.",
+   "floor": {
+    "prerequisite": "Reports statements and questions.",
+    "question": "Badilisha: Mama aliuliza, \"Utakuja lini?\"",
+    "answer": "Mama aliuliza ningekuja lini."
+   },
+   "representations": [
+    "a full rules chart",
+    "statement, question and command cards",
+    "a passage with both kinds"
+   ],
+   "steps": [
+    "Name the kind of speech.",
+    "Apply its rule.",
+    "Move person, tense, time, place.",
+    "Check the punctuation."
+   ],
+   "contexts": [
+    "national values (maadili ya kitaifa): a speech by a leader reported",
+    "a newspaper",
+    "a court record"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Rais alisema, \"Tutadumisha amani.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Tutadumisha\".",
+     "say": "Kitabadilikaje katika usemi wa taarifa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes \"Rais alisema kwamba wangedumisha amani\" and one reported command."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_KANUNI.M9_USK_COMMAND",
+     "listen_for": [
+      "Mwalimu alisema kwamba fungua dirisha."
+     ],
+     "ask": "Haya ni maelezo, swali au amri?",
+     "repair": "Amri katika usemi wa taarifa hutumia hali ya kuagiza: aliniambia nifungue."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_KANUNI.M9_USK_TENSE_BACK",
+     "listen_for": [
+      "Juma alisema kwamba anaumwa."
+     ],
+     "ask": "Maneno haya yalisemwa lini?",
+     "repair": "Katika usemi wa taarifa, wakati husogea nyuma: alikuwa akiumwa."
+    },
+    {
+     "code": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_KANUNI.M9_USK_BACK_TO_DIRECT",
+     "listen_for": [
+      "Juma alisema, \"Yeye angekuja.\""
+     ],
+     "ask": "Juma mwenyewe angesemaje?",
+     "repair": "Usemi halisi hurudisha maneno ya msemaji kama alivyoyasema: \"Nitakuja.\""
+    },
+    {
+     "code": "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI_KANUNI.M9_USK_PUNCT",
+     "listen_for": [
+      "Mama aliuliza \"umekula\"?"
+     ],
+     "ask": "Kiulizi ni sehemu ya maneno ya msemaji?",
+     "repair": "Koma kabla ya alama za mtajo, herufi kubwa ndani, na alama ya mwisho ndani."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Badilisha: Daktari alisema, \"Kunywa maji mengi.\"",
+     "answer": "Daktari aliniambia ninywe maji mengi.",
+     "shows": "command"
+    },
+    {
+     "question": "Badilisha kuwa usemi halisi: Amina alisema kwamba alikuwa amechoka.",
+     "answer": "Amina alisema, \"Nimechoka.\"",
+     "shows": "reverse"
+    }
+   ]
+  }
+ ]
+}

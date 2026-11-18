@@ -1,0 +1,99 @@
+{
+ "sub_strand": "KISW.G9.KUANDI.T4_INSHA_ZA_KUBUNI",
+ "title": "Insha za Kubuni (Theme 4: Utunzaji wa maliasili)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Kiswahili; not yet checked by a native Kiswahili teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "KISW.G9.KUANDI.T4_INSHA_ZA_KUBUNI.KUBUNI_TAMATHALI",
+   "key_step": "The child plans insha ya kubuni before writing: the parts in order, then one idea at a time, then checks it against the type.",
+   "floor": {
+    "prerequisite": "Writes a correct sentence with a capital letter and a kikomo.",
+    "question": "Andika sentensi moja kuhusu shule yako.",
+    "answer": "Shule yetu ina madarasa kumi."
+   },
+   "representations": [
+    "a model text with its parts labelled",
+    "a three-box plan (mwanzo, kiini, mwisho)",
+    "a checklist for the type"
+   ],
+   "steps": [
+    "Read the title and say the type.",
+    "Plan the parts.",
+    "Write one idea per paragraph.",
+    "Check against the checklist and correct."
+   ],
+   "contexts": [
+    "chemchemi iliyokauka",
+    "the class magazine",
+    "a letter or story for a family member"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Chemchemi Iliyokauka"
+    },
+    {
+     "beat": "point",
+     "do": "Point at the title.",
+     "say": "Insha hii ni ya aina gani, na itakuwa na sehemu zipi?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to answer before saying anything."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child fills the three-box plan for \"Chemchemi Iliyokauka\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "KISW.G9.KUANDI.T4_INSHA_ZA_KUBUNI.KUBUNI_TAMATHALI.M9_INS_LUGHA_T4",
+     "listen_for": [
+      "Chemchemi ilikauka."
+     ],
+     "ask": "Sentensi hii inajenga picha gani?",
+     "repair": "Tumia tashbihi, sitiari, methali au nahau kufanya insha iwe hai."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T4_INSHA_ZA_KUBUNI.KUBUNI_TAMATHALI.M9_INS_WAHUSIKA_T4",
+     "listen_for": [
+      "Mtu mmoja alikuja."
+     ],
+     "ask": "Msomaji anamwona mhusika huyu?",
+     "repair": "Wape wahusika majina, sura na tabia zinazoonekana kwa matendo yao."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T4_INSHA_ZA_KUBUNI.KUBUNI_TAMATHALI.M9_INS_MANDHARI_T4",
+     "listen_for": [
+      "Kisa hiki kilitokea."
+     ],
+     "ask": "Kisa kilitokea lini na wapi?",
+     "repair": "Onyesha mandhari: lini, wapi na hali gani."
+    },
+    {
+     "code": "KISW.G9.KUANDI.T4_INSHA_ZA_KUBUNI.KUBUNI_TAMATHALI.M9_INS_HISIA_T4",
+     "listen_for": [
+      "Nilihuzunika."
+     ],
+     "ask": "Msomaji angeonaje huzuni hii?",
+     "repair": "Onyesha hisia kwa vitendo na picha, si kwa neno moja tu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ni sentensi ipi inafaa katika insha ya kubuni kuhusu \"Chemchemi Iliyokauka\"?",
+     "answer": "Chemchemi iliyokuwa ikicheka kwa sauti ya maji sasa ilinyamaza kama kaburi.",
+     "shows": "type"
+    },
+    {
+     "question": "Insha ya kubuni ina sehemu zipi?",
+     "answer": "utangulizi, kiini, hitimisho",
+     "shows": "parts"
+    }
+   ]
+  }
+ ]
+}
