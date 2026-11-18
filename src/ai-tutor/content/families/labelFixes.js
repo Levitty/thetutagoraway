@@ -383,25 +383,25 @@ export const CORE_FAMILIES = [
     } }),
 
   // ---- G7_DATA_REPRESENT: bar and line, not only pie
-  fx({ id: 'g7.data.bar-read', skill: 'G7_DATA_REPRESENT', outcome: 'G7.DATA.f', rung: 2, form: 'graph',
+  fx({ id: 'g7.data.bar-read', skill: 'G7_DATA_REPRESENT', outcome: 'MATH.G7.DATA_H.DATA_HANDLING.g', cskill: 'MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET', rung: 2, form: 'graph',
     draw: () => { const keys = ['Maize', 'Beans', 'Sugar', 'Rice']; const vals = keys.map(() => randInt(2, 9) * 10); const s = [...vals].sort((a, b) => b - a); return s[0] !== s[1] && s[3] !== s[2] ? { keys, vals } : null; },
     make: ({ keys, vals }) => {
       const hi = Math.max(...vals), lo = Math.min(...vals), hk = keys[vals.indexOf(hi)], lk = keys[vals.indexOf(lo)];
       return { question: `The bar graph shows the kilograms a duka sold in one week. How many more kilograms of ${hk.toLowerCase()} than ${lk.toLowerCase()} were sold?`,
         model: { type: 'bar-chart', data: { bars: keys.map((label, i) => ({ label, value: vals[i] })) } },
         answer: hi - lo,
-        wrong: [[hi + lo, '"How many more" asks for the difference, so subtract.'], [hi, `That is the ${hk.toLowerCase()} bar alone.`], [lo, `That is the ${lk.toLowerCase()} bar alone.`]],
+        wrong: [[hi + lo, '"How many more" asks for the difference, so subtract.', 'M_MORE_AS_TOTAL'], [hi, `That is the ${hk.toLowerCase()} bar alone.`, 'M_ONE_BAR_ONLY'], [lo, `That is the ${lk.toLowerCase()} bar alone.`, 'SLIP']],
         hints: ['Read the top of each bar against the scale.', `Find the ${hk.toLowerCase()} bar and the ${lk.toLowerCase()} bar, then compare.`],
         steps: [`${hk}: ${hi} kg. ${lk}: ${lo} kg.`, `Difference: ${hi} − ${lo} = ${hi - lo} kg.`] };
     },
     check: ({ vals }, a) => Math.min(...vals) + a === Math.max(...vals) }),
-  fx({ id: 'g7.data.line-rise', skill: 'G7_DATA_REPRESENT', outcome: 'G7.DATA.j', rung: 2, form: 'graph',
+  fx({ id: 'g7.data.line-rise', skill: 'G7_DATA_REPRESENT', outcome: 'MATH.G7.DATA_H.DATA_HANDLING.j', cskill: 'MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH', rung: 2, form: 'graph',
     draw: () => { const vals = [randInt(14, 18), randInt(19, 23), randInt(24, 28), randInt(25, 30), randInt(18, 24)]; return { vals, hours: [8, 10, 12, 14, 16] }; },
     make: ({ vals, hours }) => {
       return { question: `The line graph shows the temperature in °C at a school in Thika during one day. By how many degrees did it rise from ${hours[0]}:00 to ${hours[2]}:00?`,
         model: { type: 'line-graph', data: { points: hours.map((x, j) => ({ x, y: vals[j] })), xTicks: hours, yTicks: [10, 15, 20, 25, 30], xLabel: 'Time of day (hours)', yLabel: 'Temperature (°C)' } },
         answer: vals[2] - vals[0],
-        wrong: [[vals[2], 'That is the temperature at the later time. The question asks for the rise.'], [vals[0] + vals[2], 'A rise is a difference, so subtract.'], [vals[1] - vals[0], 'That is the rise only up to the first mark after the start. Read the later time asked for.']],
+        wrong: [[vals[2], 'That is the temperature at the later time. The question asks for the rise.', 'M_READING_FOR_RISE'], [vals[0] + vals[2], 'A rise is a difference, so subtract.', 'M_RISE_ADDED'], [vals[1] - vals[0], 'That is the rise only up to the first mark after the start. Read the later time asked for.', 'SLIP']],
         hints: [`Read the graph at ${hours[0]}:00, and at ${hours[2]}:00.`, 'Subtract the earlier reading from the later one.'],
         steps: [`At ${hours[0]}:00 it is ${vals[0]} °C. At ${hours[2]}:00 it is ${vals[2]} °C.`, `Rise: ${vals[2]} − ${vals[0]} = ${vals[2] - vals[0]} degrees.`] };
     },

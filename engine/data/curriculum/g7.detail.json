@@ -1330,6 +1330,115 @@
     "draw a circle of diameter 6 cm"
    ],
    "mastery": "The child sets the compasses to the radius (half the diameter), places the point at the centre, and draws a circle, and says that every point on it is the same distance from the centre."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT": {
+   "forms": [
+    "what is data",
+    "is this data",
+    "a question to collect data",
+    "record each answer once"
+   ],
+   "mastery": "The child says data is facts or numbers collected to answer a question (the fruit learners choose is data, as well as their heights), plans a question whose answers can be counted, and records each answer once, for example with a tally."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD": {
+   "forms": [
+    "frequency from a tally",
+    "missing frequency",
+    "the most common value",
+    "two rows together"
+   ],
+   "mastery": "The child counts tallies in fives (a gate of four strokes and one across is 5), writes each frequency, finds a missing frequency from the total, and reads the most common value from the row with the biggest frequency."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE": {
+   "forms": [
+    "total number of items",
+    "percentage of learners",
+    "rows that fit",
+    "value times frequency"
+   ],
+   "mastery": "The child multiplies each value by its frequency and adds to find a total (goals, books), adds the rows a question asks about, and writes that count as a percentage of the total frequency."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE": {
+   "forms": [
+    "scale for a bar graph",
+    "value of one symbol",
+    "will it fit the axis",
+    "half symbols"
+   ],
+   "mastery": "The child divides the largest value by each scale to see how many squares the tallest bar needs, picks the smallest scale that still fits the axis, and for a pictograph picks a symbol value that shows every number with whole and half symbols and keeps the longest row short enough."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH": {
+   "forms": [
+    "how many more",
+    "value of a row",
+    "half symbols",
+    "draw a row"
+   ],
+   "mastery": "The child counts whole and half symbols in a row, multiplies by what one symbol stands for, and answers \"how many more\" by the difference of two rows."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW": {
+   "forms": [
+    "draw the bars",
+    "number the axis",
+    "label the graph",
+    "check a drawn graph"
+   ],
+   "mastery": "The child labels both axes, numbers the vertical axis in equal steps from 0, draws bars of equal width with equal gaps, and makes each bar the height of its value."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET": {
+   "forms": [
+    "two busiest days",
+    "how many more",
+    "highest and lowest",
+    "total of some bars"
+   ],
+   "mastery": "The child reads each bar against the scale, picks out the bars a question asks about (the two busiest days, the highest and the lowest), and adds or subtracts them as the question asks."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE": {
+   "forms": [
+    "which graph is best",
+    "why this graph",
+    "groups, time or parts",
+    "wrong graph for the data"
+   ],
+   "mastery": "The child says a bar graph compares separate groups, a line graph shows one measurement changing over time, and a pie chart shows how one whole is shared into parts, and matches the data to the graph."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW": {
+   "forms": [
+    "missing angle",
+    "angle from a count",
+    "count from an angle",
+    "check they make 360"
+   ],
+   "mastery": "The child says the sectors of a pie chart make a full turn of 360 degrees, finds a missing angle by taking the others from 360, and works an angle out from a count (count / total x 360) and back."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET": {
+   "forms": [
+    "percentage from an angle",
+    "count from an angle",
+    "two schools, same angle",
+    "the rest of the chart"
+   ],
+   "mastery": "The child turns a sector angle into a percentage (angle / 360 x 100) or a count (angle / 360 x total), and explains that the same angle in two charts with different totals stands for different numbers."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH": {
+   "forms": [
+    "biggest rise",
+    "rise between two times",
+    "halfway between two points",
+    "plot the points"
+   ],
+   "mastery": "The child plots the points and joins them in order, reads a rise or fall as the difference of two readings, finds the steepest rise, and reads a value halfway between two points on a straight part."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH": {
+   "forms": [
+    "how long was the stop",
+    "speed of one part",
+    "average speed with the stop",
+    "when do they meet",
+    "find the wrong step"
+   ],
+   "mastery": "On a distance-time graph the child reads a flat part as a stop, finds the speed of each part from its own distance and time, finds the average speed with the stop included (total distance / total time), and reads the time where two lines cross as when they meet."
   }
  }
 }

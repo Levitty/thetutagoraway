@@ -15423,6 +15423,1448 @@ export const TEACHING_PACK_G7 = {
   "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
   "sub_strand_name": "Geometrical Constructions",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT",
+  "key_step": "The child says what question the data answers and records each answer once.",
+  "floor": {
+   "prerequisite": "Tallies data.",
+   "question": "Tally 7",
+   "answer": "||||/ ||"
+  },
+  "representations": [
+   "a question and its answers",
+   "a tally sheet",
+   "a class list"
+  ],
+  "steps": [
+   "Choose a question.",
+   "Choose the groups.",
+   "Record each answer once.",
+   "Check the total."
+  ],
+  "contexts": [
+   "fruit at break",
+   "how learners travel",
+   "books read in a week"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: Which fruit do you like best?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at the question.",
+    "say": "Are the answers to this data?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write a tally sheet with four fruits."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_DATA_ONLY_NUMBERS",
+    "listen_for": [
+     "no numbers, not data"
+    ],
+    "ask": "Can we count how many chose mango?",
+    "repair": "Yes: it is data.",
+    "error": "Believes data must be numbers.",
+    "example": {
+     "question": "Is the list of fruits learners chose data?",
+     "wrong_answer": "no, it has no numbers",
+     "correct_answer": "yes"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_RECORDED_TWICE",
+    "listen_for": [
+     "33 for 30 learners"
+    ],
+    "ask": "How many learners did you ask?",
+    "repair": "30: check again.",
+    "error": "Records an answer more than once, or misses some, when collecting.",
+    "example": {
+     "question": "30 learners asked, tally shows 33",
+     "wrong_answer": "keep the tally",
+     "correct_answer": "count again: each learner once"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is the colour of each learner's bag data?",
+    "answer": "Yes",
+    "shows": "meaning"
+   },
+   {
+    "question": "30 learners asked; the tally totals 28. What next?",
+    "answer": "find the 2 not recorded",
+    "shows": "each once"
+   }
+  ],
+  "name": "Say what data is and collect it",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "key_step": "The child counts a gate as 5 and checks that the frequencies add to the total.",
+  "floor": {
+   "prerequisite": "Counts tallies.",
+   "question": "||||/ |||",
+   "answer": "8"
+  },
+  "representations": [
+   "a tally chart",
+   "a frequency table",
+   "a total row"
+  ],
+  "steps": [
+   "Count tallies in fives.",
+   "Write each frequency.",
+   "Missing = total - others.",
+   "Most common = value with the biggest frequency."
+  ],
+  "contexts": [
+   "fruit at break",
+   "books read",
+   "cups of tea at a kiosk"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw ||||/ ||||/ ||."
+   },
+   {
+    "beat": "count",
+    "do": "Count the strokes with the child, in fives.",
+    "say": "How many?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child says what a gate is worth."
+   },
+   {
+    "beat": "write",
+    "do": "Write 12."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_ALL_CATEGORIES_COUNTED",
+    "listen_for": [
+     "all the rows"
+    ],
+    "ask": "Which fruits does the question ask about?",
+    "repair": "Only two.",
+    "error": "Adds every row when the question asks about some.",
+    "example": {
+     "question": "Mango 8, banana 6, orange 5, pawpaw 4: mango or banana",
+     "wrong_answer": "23",
+     "correct_answer": "14"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TALLY_GATE_COUNTED_AS_FOUR",
+    "listen_for": [
+     "four in a gate"
+    ],
+    "ask": "Count the stroke across too.",
+    "repair": "Five.",
+    "error": "Counts a tally group of five as four.",
+    "example": {
+     "question": "||||/ ||||/ ||",
+     "wrong_answer": "10",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TOTAL_AS_MISSING",
+    "listen_for": [
+     "the total"
+    ],
+    "ask": "Is one row the whole total?",
+    "repair": "No.",
+    "error": "Gives the total as the missing frequency.",
+    "example": {
+     "question": "Total 40; other rows 7, 9, 8, 6",
+     "wrong_answer": "40",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_OTHERS_SUM_AS_MISSING",
+    "listen_for": [
+     "the others added"
+    ],
+    "ask": "What is left from the total?",
+    "repair": "Subtract.",
+    "error": "Gives the sum of the other rows as the missing frequency.",
+    "example": {
+     "question": "Total 40; other rows 7, 9, 8, 6",
+     "wrong_answer": "30",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_FREQUENCY_FOR_MODE_VALUE",
+    "listen_for": [
+     "9 books"
+    ],
+    "ask": "Is 9 the books or the learners?",
+    "repair": "Learners: the value is 2.",
+    "error": "Gives the biggest frequency instead of its value.",
+    "example": {
+     "question": "Books read: 1 (4), 2 (9), 3 (5): most common",
+     "wrong_answer": "9",
+     "correct_answer": "2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "||||/ ||||/ |||| is how many?",
+    "answer": "14",
+    "shows": "gates"
+   },
+   {
+    "question": "Total 40; others 7, 9, 8, 6: missing?",
+    "answer": "10",
+    "shows": "missing"
+   }
+  ],
+  "name": "Make a frequency table from a tally and complete a missing frequency",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "key_step": "The child multiplies each value by its frequency before adding, and writes a count over the total for a percentage.",
+  "floor": {
+   "prerequisite": "Multiplies.",
+   "question": "2 goals in 4 matches",
+   "answer": "8"
+  },
+  "representations": [
+   "a frequency table with a product column",
+   "a bar of 100%",
+   "rows highlighted"
+  ],
+  "steps": [
+   "Value x frequency.",
+   "Add the products.",
+   "Rows that fit.",
+   "Count / total x 100."
+  ],
+  "contexts": [
+   "goals in matches",
+   "books read",
+   "learners who walk"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write rows: 0 goals (3), 1 goal (5), 2 goals (4)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2 goals (4).",
+    "say": "How many goals is that row?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0 + 5 + 8 = 13."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FREQUENCIES_ADDED_FOR_TOTAL",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Is that matches or goals?",
+    "repair": "Matches.",
+    "error": "Adds the frequencies to find the total number of items.",
+    "example": {
+     "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+     "wrong_answer": "12",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_VALUES_ADDED_ONCE",
+    "listen_for": [
+     "0 + 1 + 2"
+    ],
+    "ask": "How many matches had 2 goals?",
+    "repair": "4.",
+    "error": "Adds the values in the first column once each.",
+    "example": {
+     "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+     "wrong_answer": "3",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_LARGEST_VALUE_FOR_ALL",
+    "listen_for": [
+     "12 x 2"
+    ],
+    "ask": "Did every match have 2 goals?",
+    "repair": "No.",
+    "error": "Multiplies the total frequency by the largest value.",
+    "example": {
+     "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+     "wrong_answer": "24",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COUNT_FOR_PERCENT",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Out of how many?",
+    "repair": "40.",
+    "error": "Gives the count as the percentage.",
+    "example": {
+     "question": "12 of 40 learners: percentage",
+     "wrong_answer": "12",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COMPLEMENT_ROWS_USED",
+    "listen_for": [
+     "the other rows"
+    ],
+    "ask": "Which rows does \"at least 3\" mean?",
+    "repair": "3 and more.",
+    "error": "Uses the rows that do not fit the question.",
+    "example": {
+     "question": "At least 3 books: rows 3, 4, 5",
+     "wrong_answer": "rows 1 and 2",
+     "correct_answer": "rows 3, 4 and 5"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FRACTION_NOT_TIMES_100",
+    "listen_for": [
+     "0.3"
+    ],
+    "ask": "What makes it a percentage?",
+    "repair": "Times 100.",
+    "error": "Gives the fraction or decimal as the percentage.",
+    "example": {
+     "question": "12 of 40 learners: percentage",
+     "wrong_answer": "0.3",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Books read: 1 (6), 2 (8), 3 (6): total books?",
+    "answer": "40",
+    "shows": "products"
+   },
+   {
+    "question": "12 of 40 learners walk: percentage?",
+    "answer": "30%",
+    "shows": "percentage"
+   }
+  ],
+  "name": "Use a frequency table to find a total or a percentage",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "key_step": "The child divides the largest value by each scale and keeps the smallest one that fits.",
+  "floor": {
+   "prerequisite": "Divides.",
+   "question": "160 / 20",
+   "answer": "8"
+  },
+  "representations": [
+   "squares on an axis",
+   "a table of scales",
+   "half symbols"
+  ],
+  "steps": [
+   "Largest value.",
+   "Divide by each scale.",
+   "Must fit the axis.",
+   "Smallest that fits."
+  ],
+  "contexts": [
+   "maize sold by shops",
+   "bottles sold",
+   "milk from a dairy"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: axis 10 squares, tallest 160."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a scale of 10.",
+    "say": "How many squares would the tallest bar need?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 16: too tall. Try 20: 8 squares."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_BAR_OFF_AXIS",
+    "listen_for": [
+     "off the paper"
+    ],
+    "ask": "Does 16 squares fit on 10?",
+    "repair": "No.",
+    "error": "Chooses a scale that makes the tallest bar too tall for the axis.",
+    "example": {
+     "question": "Axis 10 squares, tallest 160: 1 square = 10?",
+     "wrong_answer": "yes",
+     "correct_answer": "no, it needs 16 squares"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_SCALE_FITS_ANY",
+    "listen_for": [
+     "short bars"
+    ],
+    "ask": "Could a smaller scale still fit?",
+    "repair": "Yes: use it.",
+    "error": "Chooses a scale that fits but leaves the bars short.",
+    "example": {
+     "question": "Axis 10 squares, tallest 160: best scale",
+     "wrong_answer": "1 square = 50",
+     "correct_answer": "1 square = 20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_HALF_SYMBOL_NOT_CHECKED",
+    "listen_for": [
+     "70 with 40s"
+    ],
+    "ask": "Can 70 be whole and half 40s?",
+    "repair": "No.",
+    "error": "Chooses a symbol value that some numbers cannot be shown with.",
+    "example": {
+     "question": "Values 30, 50, 70; whole and half symbols only: one symbol =",
+     "wrong_answer": "40",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_ROW_LENGTH_NOT_CHECKED",
+    "listen_for": [
+     "16 symbols"
+    ],
+    "ask": "How long is the longest row?",
+    "repair": "Too long.",
+    "error": "Chooses a symbol value that makes the longest row too long.",
+    "example": {
+     "question": "Longest value 160, at most 8 symbols: one symbol =",
+     "wrong_answer": "10",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Axis 12 squares, tallest 450: best of 20, 50, 100, 200?",
+    "answer": "50",
+    "shows": "fits"
+   },
+   {
+    "question": "Values 30, 50, 70; whole and half symbols; at most 4 symbols in a row. One symbol =",
+    "answer": "20",
+    "shows": "symbol"
+   }
+  ],
+  "name": "Choose a suitable scale for a graph or a pictograph symbol",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "key_step": "The child counts symbols, including halves, and multiplies by what one stands for.",
+  "floor": {
+   "prerequisite": "Multiplies.",
+   "question": "4 x 10",
+   "answer": "40"
+  },
+  "representations": [
+   "a pictograph with a key",
+   "a row of symbols",
+   "half a symbol"
+  ],
+  "steps": [
+   "Read the key.",
+   "Count each row.",
+   "Times the key.",
+   "Difference for \"how many more\"."
+  ],
+  "contexts": [
+   "how learners travel",
+   "books borrowed",
+   "eggs collected"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two rows of dots: 6 and 4, key 1 dot = 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the key.",
+    "say": "How many learners is one dot?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write (6 - 4) x 10 = 20."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_SYMBOLS_NOT_SCALED",
+    "listen_for": [
+     "2 learners"
+    ],
+    "ask": "What does one dot stand for?",
+    "repair": "10.",
+    "error": "Gives the difference in symbols as the difference in learners.",
+    "example": {
+     "question": "Each symbol = 10; rows of 6 and 4 symbols: how many more",
+     "wrong_answer": "2",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_MORE_AS_TOTAL",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Is that how many more?",
+    "repair": "Subtract.",
+    "error": "Adds the two rows when asked \"how many more\".",
+    "example": {
+     "question": "Rows 60 and 40: how many more",
+     "wrong_answer": "100",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_ONE_ROW_GIVEN",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Compare it with what?",
+    "repair": "The other row.",
+    "error": "Gives one row as the answer to \"how many more\".",
+    "example": {
+     "question": "Rows 60 and 40: how many more",
+     "wrong_answer": "60",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_HALF_SYMBOL_AS_WHOLE",
+    "listen_for": [
+     "half counted as whole"
+    ],
+    "ask": "Is half a dot 10?",
+    "repair": "5.",
+    "error": "Counts a half symbol as a whole one.",
+    "example": {
+     "question": "Each symbol = 10; a row of 3 and a half symbols",
+     "wrong_answer": "40",
+     "correct_answer": "35"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Key 1 = 20; rows 5 and 3 symbols: how many more?",
+    "answer": "40",
+    "shows": "difference"
+   },
+   {
+    "question": "Key 1 = 10; a row of 3 and a half symbols",
+    "answer": "35",
+    "shows": "half"
+   }
+  ],
+  "name": "Draw and read a pictograph",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW",
+  "key_step": "The child numbers the axis in equal steps and makes only the height show the value.",
+  "floor": {
+   "prerequisite": "Reads a bar graph.",
+   "question": "A bar up to 40",
+   "answer": "40"
+  },
+  "representations": [
+   "squared paper",
+   "equal steps on the axis",
+   "bars with equal gaps"
+  ],
+  "steps": [
+   "Label the axes.",
+   "Number in equal steps from 0.",
+   "Equal widths and gaps.",
+   "Height = value."
+  ],
+  "contexts": [
+   "sales at a duka",
+   "learners in clubs",
+   "rain in a month"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an axis numbered 0, 10, 20, 50."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the gap from 20 to 50.",
+    "say": "Is this step the same as the others?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0, 10, 20, 30, 40, 50."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_UNEVEN_SCALE",
+    "listen_for": [
+     "0, 10, 20, 50"
+    ],
+    "ask": "Are the steps equal?",
+    "repair": "Make them equal.",
+    "error": "Numbers the axis in uneven steps.",
+    "example": {
+     "question": "Axis numbered 0, 10, 20, 50, 100",
+     "wrong_answer": "fine",
+     "correct_answer": "steps must be equal"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_BAR_WIDTHS_VARIED",
+    "listen_for": [
+     "wider bar"
+    ],
+    "ask": "What shows the value?",
+    "repair": "Only the height.",
+    "error": "Draws bars of different widths, as if width showed the value.",
+    "example": {
+     "question": "A wider bar for the biggest value",
+     "wrong_answer": "fine",
+     "correct_answer": "all bars the same width"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Number an axis for values up to 70 in 7 squares",
+    "answer": "0, 10, 20, ... 70",
+    "shows": "equal steps"
+   },
+   {
+    "question": "Should the biggest bar be wider?",
+    "answer": "No: same width",
+    "shows": "height only"
+   }
+  ],
+  "name": "Draw a bar graph with a suitable scale",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "key_step": "The child picks out the bars the question asks about and does the operation the words say.",
+  "floor": {
+   "prerequisite": "Reads a bar.",
+   "question": "A bar up to 60",
+   "answer": "60"
+  },
+  "representations": [
+   "a bar graph",
+   "bars ranked",
+   "the question's key words"
+  ],
+  "steps": [
+   "Read each bar.",
+   "Which bars are asked?",
+   "Together: add; how many more: subtract."
+  ],
+  "contexts": [
+   "eggs from a farm",
+   "tomatoes sold",
+   "milk from a dairy"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw bars 40, 60, 20, 50, 30."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two tallest.",
+    "say": "Which two are the busiest days?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 60 + 50 = 110."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ALL_BARS_ADDED",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "How many days are asked about?",
+    "repair": "Two.",
+    "error": "Adds all the bars when the question asks about some.",
+    "example": {
+     "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+     "wrong_answer": "200",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ONE_BAR_ONLY",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is that both days?",
+    "repair": "Add the second.",
+    "error": "Gives one bar when two are asked about.",
+    "example": {
+     "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+     "wrong_answer": "60",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_DIFFERENCE_FOR_TOGETHER",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "What does together mean?",
+    "repair": "Add.",
+    "error": "Subtracts when the question says together.",
+    "example": {
+     "question": "Bars 60 and 50 together",
+     "wrong_answer": "10",
+     "correct_answer": "110"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bars 70, 40, 90, 60: the two busiest together?",
+    "answer": "160",
+    "shows": "together"
+   },
+   {
+    "question": "How many more on the busiest than the quietest?",
+    "answer": "50",
+    "shows": "difference"
+   }
+  ],
+  "name": "Read and interpret a bar graph",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "key_step": "The child asks whether the data is separate groups, a change over time, or parts of one whole.",
+  "floor": {
+   "prerequisite": "Knows a bar graph.",
+   "question": "Learners in clubs",
+   "answer": "a bar graph"
+  },
+  "representations": [
+   "three small graphs",
+   "sorting cards",
+   "a question to ask"
+  ],
+  "steps": [
+   "Groups: bar graph.",
+   "Over time: line graph.",
+   "Parts of a whole: pie chart."
+  ],
+  "contexts": [
+   "a school budget",
+   "temperature in a day",
+   "goals by team"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write three kinds: groups, over time, parts of a whole."
+   },
+   {
+    "beat": "point",
+    "do": "Point at \"temperature every two hours\".",
+    "say": "Which kind is it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write: over time, a line graph."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_BAR_FOR_ANY_DATA",
+    "listen_for": [
+     "always a bar graph"
+    ],
+    "ask": "Does it change over time?",
+    "repair": "A line graph.",
+    "error": "Chooses a bar graph for data that changes over time or shares a whole.",
+    "example": {
+     "question": "Temperature every two hours",
+     "wrong_answer": "a bar graph",
+     "correct_answer": "a line graph"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_LINE_FOR_CATEGORIES",
+    "listen_for": [
+     "line for clubs"
+    ],
+    "ask": "Is there anything between two clubs?",
+    "repair": "No: bars.",
+    "error": "Joins separate groups with a line graph.",
+    "example": {
+     "question": "Learners in five clubs",
+     "wrong_answer": "a line graph",
+     "correct_answer": "a bar graph"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_PIE_FOR_NON_PARTS",
+    "listen_for": [
+     "pie for heights"
+    ],
+    "ask": "Is it one whole shared?",
+    "repair": "No.",
+    "error": "Chooses a pie chart for data that is not parts of one whole.",
+    "example": {
+     "question": "Height of a sunflower each week",
+     "wrong_answer": "a pie chart",
+     "correct_answer": "a line graph"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How a farmer shares an acre between crops",
+    "answer": "a pie chart",
+    "shows": "parts"
+   },
+   {
+    "question": "Height of a sunflower each week",
+    "answer": "a line graph",
+    "shows": "over time"
+   }
+  ],
+  "name": "Choose the right graph for a set of data",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "key_step": "The child makes the sectors add to 360 and turns a count into an angle by count / total x 360.",
+  "floor": {
+   "prerequisite": "Angles at a point.",
+   "question": "360 - 270",
+   "answer": "90"
+  },
+  "representations": [
+   "a circle cut into sectors",
+   "a table of counts and angles",
+   "a protractor"
+  ],
+  "steps": [
+   "Angles make 360.",
+   "Missing = 360 - others.",
+   "Angle = count / total x 360.",
+   "Count = angle / 360 x total."
+  ],
+  "contexts": [
+   "how learners travel",
+   "a budget",
+   "clubs chosen"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle with sectors 90, 108 and 72."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the empty sector.",
+    "say": "What do all the sectors make together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 360 - 270 = 90."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_PIE_TOTAL_180",
+    "listen_for": [
+     "from 180"
+    ],
+    "ask": "Is a circle a half turn?",
+    "repair": "A full turn.",
+    "error": "Uses 180 for the angles of a pie chart.",
+    "example": {
+     "question": "Sectors 90, 108 and 72: the fourth",
+     "wrong_answer": "-90 or 0",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_OTHER_ANGLES_SUM_GIVEN",
+    "listen_for": [
+     "270"
+    ],
+    "ask": "Is that the empty one?",
+    "repair": "Take it from 360.",
+    "error": "Gives the sum of the other angles as the missing angle.",
+    "example": {
+     "question": "Sectors 90, 108 and 72: the fourth",
+     "wrong_answer": "270",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_ANGLE_AS_COUNT",
+    "listen_for": [
+     "90 learners"
+    ],
+    "ask": "Is 90 degrees or learners?",
+    "repair": "Degrees.",
+    "error": "Gives the angle as the number of learners.",
+    "example": {
+     "question": "90 degrees of 240 learners: how many",
+     "wrong_answer": "90",
+     "correct_answer": "60"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Sectors 120, 90, 60: the fourth?",
+    "answer": "90",
+    "shows": "missing"
+   },
+   {
+    "question": "60 of 240 learners: angle?",
+    "answer": "90",
+    "shows": "count to angle"
+   }
+  ],
+  "name": "Draw a pie chart: the angles of its sectors",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "key_step": "The child reads an angle as a share of 360 and takes that share of its own chart's total.",
+  "floor": {
+   "prerequisite": "A fraction as a percentage.",
+   "question": "1/4",
+   "answer": "25%"
+  },
+  "representations": [
+   "a sector as a fraction",
+   "two charts side by side",
+   "a 100 square"
+  ],
+  "steps": [
+   "Angle / 360.",
+   "Times 100 for a percentage.",
+   "Times the total for a count.",
+   "Each chart has its own total."
+  ],
+  "contexts": [
+   "clubs in Grade 7",
+   "two schools",
+   "a family budget"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two pie charts with the same 90 degree sector."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two totals, 120 and 480.",
+    "say": "Is 90 degrees the same number of learners in both?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 30 and 120."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_ANGLE_AS_PERCENT",
+    "listen_for": [
+     "90%"
+    ],
+    "ask": "Is the whole circle 100 degrees?",
+    "repair": "360.",
+    "error": "Gives the angle as the percentage.",
+    "example": {
+     "question": "A 90 degree sector: percentage",
+     "wrong_answer": "90%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_REST_OF_TOTAL_GIVEN",
+    "listen_for": [
+     "75%"
+    ],
+    "ask": "Which sector is asked?",
+    "repair": "This one.",
+    "error": "Gives the share of everyone else.",
+    "example": {
+     "question": "A 90 degree sector: percentage",
+     "wrong_answer": "75%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_SAME_ANGLE_SAME_COUNT",
+    "listen_for": [
+     "the same number"
+    ],
+    "ask": "Are the totals the same?",
+    "repair": "No.",
+    "error": "Believes equal angles in two pie charts mean equal numbers.",
+    "example": {
+     "question": "90 degrees in a school of 120 and in a school of 480",
+     "wrong_answer": "the same number",
+     "correct_answer": "30 and 120"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_BIGGER_TOTAL_BIGGER_ANGLE",
+    "listen_for": [
+     "bigger school, bigger angle"
+    ],
+    "ask": "What decides the angle?",
+    "repair": "The share.",
+    "error": "Believes a bigger total must give a bigger angle.",
+    "example": {
+     "question": "A school of 480 and one of 120: which sector is bigger?",
+     "wrong_answer": "the bigger school",
+     "correct_answer": "it depends on the share"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 72 degree sector: percentage?",
+    "answer": "20%",
+    "shows": "share"
+   },
+   {
+    "question": "90 degrees in a school of 480: how many learners?",
+    "answer": "120",
+    "shows": "own total"
+   }
+  ],
+  "name": "Interpret a pie chart as shares of its own total",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "key_step": "The child reads a rise as later minus earlier, and a value between points along the straight line.",
+  "floor": {
+   "prerequisite": "Reads a point.",
+   "question": "The point at week 3",
+   "answer": "60"
+  },
+  "representations": [
+   "a line graph",
+   "rises as steps",
+   "halfway on a line"
+  ],
+  "steps": [
+   "Read the two points.",
+   "Rise = later - earlier.",
+   "Steepest climb: biggest rise.",
+   "Halfway: halfway between the heights."
+  ],
+  "contexts": [
+   "tomato prices",
+   "a sunflower",
+   "temperature in Thika"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line from 40 at week 2 to 60 at week 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point halfway along the line.",
+    "say": "What height is halfway between 40 and 60?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 50."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_FALL_READ_AS_RISE",
+    "listen_for": [
+     "a fall"
+    ],
+    "ask": "Does the line go up there?",
+    "repair": "No: it falls.",
+    "error": "Chooses a part where the line goes down as a rise.",
+    "example": {
+     "question": "Prices 80, 120, 100: where is the biggest rise?",
+     "wrong_answer": "week 2 to week 3",
+     "correct_answer": "week 1 to week 2"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_ANY_RISE_CHOSEN",
+    "listen_for": [
+     "the first rise"
+    ],
+    "ask": "Is there a steeper climb?",
+    "repair": "Compare.",
+    "error": "Chooses a rise that is not the biggest.",
+    "example": {
+     "question": "Rises of 20, 40 and 10: the biggest",
+     "wrong_answer": "the first rise",
+     "correct_answer": "the rise of 40"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_PLOTTED_POINT_READ",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is that halfway or the start?",
+    "repair": "The start.",
+    "error": "Gives a plotted point when the value between points is asked.",
+    "example": {
+     "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+     "wrong_answer": "40",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_GROWTH_FOR_HEIGHT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Is that a height?",
+    "repair": "No: a growth.",
+    "error": "Gives the growth in the week instead of the height.",
+    "example": {
+     "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+     "wrong_answer": "20",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_READING_FOR_RISE",
+    "listen_for": [
+     "26"
+    ],
+    "ask": "Is that the rise or the reading?",
+    "repair": "The reading.",
+    "error": "Gives the later reading as the rise.",
+    "example": {
+     "question": "16 at 8:00 and 26 at 12:00: the rise",
+     "wrong_answer": "26",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_RISE_ADDED",
+    "listen_for": [
+     "42"
+    ],
+    "ask": "Is a rise an addition?",
+    "repair": "Subtract.",
+    "error": "Adds the two readings for a rise.",
+    "example": {
+     "question": "16 at 8:00 and 26 at 12:00: the rise",
+     "wrong_answer": "42",
+     "correct_answer": "10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "16 °C at 8:00 and 26 °C at 12:00: rise?",
+    "answer": "10 degrees",
+    "shows": "rise"
+   },
+   {
+    "question": "Heights 30 cm and 50 cm a week apart: halfway?",
+    "answer": "40 cm",
+    "shows": "between"
+   }
+  ],
+  "name": "Draw and read a line graph, including between the points",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "key_step": "The child uses each part's own distance and time, and the whole time, stop included, for the average.",
+  "floor": {
+   "prerequisite": "Speed from distance and time.",
+   "question": "80 km in 2 h",
+   "answer": "40 km/h"
+  },
+  "representations": [
+   "a distance-time graph",
+   "a table of parts",
+   "two crossing lines"
+  ],
+  "steps": [
+   "Flat part: a stop.",
+   "Each part: distance / time.",
+   "Average: total distance / total time.",
+   "Meeting: where the lines cross, read the time."
+  ],
+  "contexts": [
+   "a bus journey",
+   "two matatus",
+   "a cyclist"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line rising to 80 km at 2 h, flat to 3 h, rising to 200 km at 5 h."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the flat part.",
+    "say": "What is the bus doing here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write average = 200 / 5 = 40 km/h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_MOVING_TIME_FOR_STOP",
+    "listen_for": [
+     "2 hours"
+    ],
+    "ask": "Is the line flat there?",
+    "repair": "No.",
+    "error": "Reads a sloping part as the stop.",
+    "example": {
+     "question": "Line rises for 2 hours, flat for 1 hour: the stop",
+     "wrong_answer": "2 hours",
+     "correct_answer": "1 hour"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_SPEED",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "Is that km or km/h?",
+    "repair": "Divide by the time.",
+    "error": "Gives the distance of a part as its speed.",
+    "example": {
+     "question": "80 km in 2 hours: speed",
+     "wrong_answer": "80",
+     "correct_answer": "40 km/h"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_WHOLE_JOURNEY_FOR_PART",
+    "listen_for": [
+     "200 / 5"
+    ],
+    "ask": "Which part is asked?",
+    "repair": "The first.",
+    "error": "Uses the whole journey for the speed of one part.",
+    "example": {
+     "question": "First part 80 km in 2 h; whole 200 km in 5 h: first part speed",
+     "wrong_answer": "40 from 200 / 5",
+     "correct_answer": "40 from 80 / 2"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_TOTAL_DISTANCE_FOR_PART",
+    "listen_for": [
+     "200 / 2"
+    ],
+    "ask": "How far was the last part?",
+    "repair": "120 km.",
+    "error": "Divides the total distance by the time of the last part.",
+    "example": {
+     "question": "Total 200 km, last part 120 km in 2 h: speed",
+     "wrong_answer": "100",
+     "correct_answer": "60 km/h"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_SPEEDS_AVERAGED",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Did the bus stop?",
+    "repair": "Use the total time.",
+    "error": "Averages the speeds of the parts.",
+    "example": {
+     "question": "40 km/h for 2 h, 60 km/h for 2 h, a 1 h stop: average",
+     "wrong_answer": "50",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_STOP_LEFT_OUT_OF_TIME",
+    "listen_for": [
+     "4 hours"
+    ],
+    "ask": "Is the stop part of the journey?",
+    "repair": "Yes.",
+    "error": "Leaves the stop out of the total time.",
+    "example": {
+     "question": "200 km, 4 h moving and a 1 h stop: average speed",
+     "wrong_answer": "50",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_TIME_READ",
+    "listen_for": [
+     "120"
+    ],
+    "ask": "Which axis is time?",
+    "repair": "Read down.",
+    "error": "Reads the distance where the lines cross instead of the time.",
+    "example": {
+     "question": "Lines cross at 3 hours, 120 km: when do they meet?",
+     "wrong_answer": "120",
+     "correct_answer": "3 hours"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_ONE_JOURNEY_FOR_MEETING",
+    "listen_for": [
+     "4 hours"
+    ],
+    "ask": "Is one matatu going the whole way?",
+    "repair": "They meet sooner.",
+    "error": "Works out how long one matatu needs for the whole road.",
+    "example": {
+     "question": "Road 240 km, speeds 60 and 20: when do they meet?",
+     "wrong_answer": "4 hours",
+     "correct_answer": "3 hours"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "120 km in 2 h, a 1 h stop, 80 km in 2 h: average speed?",
+    "answer": "40 km/h",
+    "shows": "stop included"
+   },
+   {
+    "question": "Lines cross at 3 h and 150 km: when do they meet?",
+    "answer": "3 hours",
+    "shows": "read time"
+   }
+  ],
+  "name": "Interpret a travel graph",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G7;

@@ -7460,5 +7460,705 @@
   "help": "The point is the centre: it must not move.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_DATA_ONLY_NUMBERS": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT",
+  "error": "Believes data must be numbers.",
+  "example": {
+   "question": "Is the list of fruits learners chose data?",
+   "wrong_answer": "no, it has no numbers",
+   "correct_answer": "yes"
+  },
+  "cause": "Has met data only as numbers in tables.",
+  "reveals": "The answer no, it has no numbers as a wrong option, with a reason that names the idea.",
+  "help": "Data is facts collected to answer a question; we count them.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_RECORDED_TWICE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT",
+  "error": "Records an answer more than once, or misses some, when collecting.",
+  "example": {
+   "question": "30 learners asked, tally shows 33",
+   "wrong_answer": "keep the tally",
+   "correct_answer": "count again: each learner once"
+  },
+  "cause": "Does not check the total against the number asked.",
+  "reveals": "The answer keep the tally as a wrong option, with a reason that names the idea.",
+  "help": "Tick each person as you record them; the total must match.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_ALL_CATEGORIES_COUNTED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Adds every row when the question asks about some.",
+  "example": {
+   "question": "Mango 8, banana 6, orange 5, pawpaw 4: mango or banana",
+   "wrong_answer": "23",
+   "correct_answer": "14"
+  },
+  "cause": "Adds all the frequencies by habit.",
+  "reveals": "The answer 23 as a wrong option, with a reason that names the idea.",
+  "help": "Only the rows asked about.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TALLY_GATE_COUNTED_AS_FOUR": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Counts a tally group of five as four.",
+  "example": {
+   "question": "||||/ ||||/ ||",
+   "wrong_answer": "10",
+   "correct_answer": "12"
+  },
+  "cause": "Counts the four upright strokes only.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "The stroke across is the fifth.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TOTAL_AS_MISSING": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Gives the total as the missing frequency.",
+  "example": {
+   "question": "Total 40; other rows 7, 9, 8, 6",
+   "wrong_answer": "40",
+   "correct_answer": "10"
+  },
+  "cause": "Reads the total from the question.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Missing = total - the others.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_OTHERS_SUM_AS_MISSING": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Gives the sum of the other rows as the missing frequency.",
+  "example": {
+   "question": "Total 40; other rows 7, 9, 8, 6",
+   "wrong_answer": "30",
+   "correct_answer": "10"
+  },
+  "cause": "Stops after adding.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Take the sum from the total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_FREQUENCY_FOR_MODE_VALUE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Gives the biggest frequency instead of its value.",
+  "example": {
+   "question": "Books read: 1 (4), 2 (9), 3 (5): most common",
+   "wrong_answer": "9",
+   "correct_answer": "2"
+  },
+  "cause": "Mixes up the two columns.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "The answer is the value in that row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FREQUENCIES_ADDED_FOR_TOTAL": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Adds the frequencies to find the total number of items.",
+  "example": {
+   "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+   "wrong_answer": "12",
+   "correct_answer": "13"
+  },
+  "cause": "Counts the matches, not the goals.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Value x frequency for each row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_VALUES_ADDED_ONCE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Adds the values in the first column once each.",
+  "example": {
+   "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+   "wrong_answer": "3",
+   "correct_answer": "13"
+  },
+  "cause": "Ignores the frequency column.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Each value happened as often as its frequency.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_LARGEST_VALUE_FOR_ALL": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Multiplies the total frequency by the largest value.",
+  "example": {
+   "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+   "wrong_answer": "24",
+   "correct_answer": "13"
+  },
+  "cause": "Uses one value for every row.",
+  "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+  "help": "Each row has its own value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COUNT_FOR_PERCENT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Gives the count as the percentage.",
+  "example": {
+   "question": "12 of 40 learners: percentage",
+   "wrong_answer": "12",
+   "correct_answer": "30"
+  },
+  "cause": "Stops after counting.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Out of 40, then out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COMPLEMENT_ROWS_USED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Uses the rows that do not fit the question.",
+  "example": {
+   "question": "At least 3 books: rows 3, 4, 5",
+   "wrong_answer": "rows 1 and 2",
+   "correct_answer": "rows 3, 4 and 5"
+  },
+  "cause": "Misreads \"at least\" or \"more than\".",
+  "reveals": "The answer rows 1 and 2 as a wrong option, with a reason that names the idea.",
+  "help": "Read which rows the words allow.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FRACTION_NOT_TIMES_100": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Gives the fraction or decimal as the percentage.",
+  "example": {
+   "question": "12 of 40 learners: percentage",
+   "wrong_answer": "0.3",
+   "correct_answer": "30"
+  },
+  "cause": "Stops after dividing.",
+  "reveals": "The answer 0.3 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_BAR_OFF_AXIS": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a scale that makes the tallest bar too tall for the axis.",
+  "example": {
+   "question": "Axis 10 squares, tallest 160: 1 square = 10?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, it needs 16 squares"
+  },
+  "cause": "Picks the easiest scale without dividing.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Divide the tallest value by the scale first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_SCALE_FITS_ANY": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a scale that fits but leaves the bars short.",
+  "example": {
+   "question": "Axis 10 squares, tallest 160: best scale",
+   "wrong_answer": "1 square = 50",
+   "correct_answer": "1 square = 20"
+  },
+  "cause": "Thinks any scale that fits is best.",
+  "reveals": "The answer 1 square = 50 as a wrong option, with a reason that names the idea.",
+  "help": "The smallest scale that still fits uses the paper well.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_HALF_SYMBOL_NOT_CHECKED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a symbol value that some numbers cannot be shown with.",
+  "example": {
+   "question": "Values 30, 50, 70; whole and half symbols only: one symbol =",
+   "wrong_answer": "40",
+   "correct_answer": "20"
+  },
+  "cause": "Checks only the biggest number.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Every number must be whole or half symbols.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_ROW_LENGTH_NOT_CHECKED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a symbol value that makes the longest row too long.",
+  "example": {
+   "question": "Longest value 160, at most 8 symbols: one symbol =",
+   "wrong_answer": "10",
+   "correct_answer": "20"
+  },
+  "cause": "Checks the halves but not the length.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "Divide the longest value by it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_SYMBOLS_NOT_SCALED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Gives the difference in symbols as the difference in learners.",
+  "example": {
+   "question": "Each symbol = 10; rows of 6 and 4 symbols: how many more",
+   "wrong_answer": "2",
+   "correct_answer": "20"
+  },
+  "cause": "Forgets what one symbol stands for.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Times by 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_MORE_AS_TOTAL": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Adds the two rows when asked \"how many more\".",
+  "example": {
+   "question": "Rows 60 and 40: how many more",
+   "wrong_answer": "100",
+   "correct_answer": "20"
+  },
+  "cause": "Sees two numbers and adds.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "\"How many more\" is a difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_ONE_ROW_GIVEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Gives one row as the answer to \"how many more\".",
+  "example": {
+   "question": "Rows 60 and 40: how many more",
+   "wrong_answer": "60",
+   "correct_answer": "20"
+  },
+  "cause": "Stops after reading one row.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Take one row from the other.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_HALF_SYMBOL_AS_WHOLE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Counts a half symbol as a whole one.",
+  "example": {
+   "question": "Each symbol = 10; a row of 3 and a half symbols",
+   "wrong_answer": "40",
+   "correct_answer": "35"
+  },
+  "cause": "Counts the shapes, not their size.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "A half symbol is half of 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_UNEVEN_SCALE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW",
+  "error": "Numbers the axis in uneven steps.",
+  "example": {
+   "question": "Axis numbered 0, 10, 20, 50, 100",
+   "wrong_answer": "fine",
+   "correct_answer": "steps must be equal"
+  },
+  "cause": "Writes the values that appear in the data.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "Equal steps from 0.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_BAR_WIDTHS_VARIED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW",
+  "error": "Draws bars of different widths, as if width showed the value.",
+  "example": {
+   "question": "A wider bar for the biggest value",
+   "wrong_answer": "fine",
+   "correct_answer": "all bars the same width"
+  },
+  "cause": "Makes the big value look big in every way.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "Only the height shows the value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ALL_BARS_ADDED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "error": "Adds all the bars when the question asks about some.",
+  "example": {
+   "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+   "wrong_answer": "200",
+   "correct_answer": "110"
+  },
+  "cause": "Adds everything on the graph.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Pick the two tallest bars.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ONE_BAR_ONLY": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "error": "Gives one bar when two are asked about.",
+  "example": {
+   "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+   "wrong_answer": "60",
+   "correct_answer": "110"
+  },
+  "cause": "Stops after the tallest bar.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Add the second tallest too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_DIFFERENCE_FOR_TOGETHER": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "error": "Subtracts when the question says together.",
+  "example": {
+   "question": "Bars 60 and 50 together",
+   "wrong_answer": "10",
+   "correct_answer": "110"
+  },
+  "cause": "Thinks comparing means subtracting.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "Together means add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_BAR_FOR_ANY_DATA": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "error": "Chooses a bar graph for data that changes over time or shares a whole.",
+  "example": {
+   "question": "Temperature every two hours",
+   "wrong_answer": "a bar graph",
+   "correct_answer": "a line graph"
+  },
+  "cause": "Knows bar graphs best.",
+  "reveals": "The answer a bar graph as a wrong option, with a reason that names the idea.",
+  "help": "Ask: groups, time, or parts of a whole?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_LINE_FOR_CATEGORIES": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "error": "Joins separate groups with a line graph.",
+  "example": {
+   "question": "Learners in five clubs",
+   "wrong_answer": "a line graph",
+   "correct_answer": "a bar graph"
+  },
+  "cause": "Thinks any data in order can be joined.",
+  "reveals": "The answer a line graph as a wrong option, with a reason that names the idea.",
+  "help": "A line means it changes between the points; clubs do not.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_PIE_FOR_NON_PARTS": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "error": "Chooses a pie chart for data that is not parts of one whole.",
+  "example": {
+   "question": "Height of a sunflower each week",
+   "wrong_answer": "a pie chart",
+   "correct_answer": "a line graph"
+  },
+  "cause": "Likes the picture.",
+  "reveals": "The answer a pie chart as a wrong option, with a reason that names the idea.",
+  "help": "A pie chart is for one whole shared into parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_PIE_TOTAL_180": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "error": "Uses 180 for the angles of a pie chart.",
+  "example": {
+   "question": "Sectors 90, 108 and 72: the fourth",
+   "wrong_answer": "-90 or 0",
+   "correct_answer": "90"
+  },
+  "cause": "Uses the straight-line total.",
+  "reveals": "The answer -90 or 0 as a wrong option, with a reason that names the idea.",
+  "help": "A circle is a full turn: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_OTHER_ANGLES_SUM_GIVEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "error": "Gives the sum of the other angles as the missing angle.",
+  "example": {
+   "question": "Sectors 90, 108 and 72: the fourth",
+   "wrong_answer": "270",
+   "correct_answer": "90"
+  },
+  "cause": "Stops after adding.",
+  "reveals": "The answer 270 as a wrong option, with a reason that names the idea.",
+  "help": "Take the sum from 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_ANGLE_AS_COUNT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "error": "Gives the angle as the number of learners.",
+  "example": {
+   "question": "90 degrees of 240 learners: how many",
+   "wrong_answer": "90",
+   "correct_answer": "60"
+  },
+  "cause": "Reads the angle as a count.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Angle / 360 of the learners.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_ANGLE_AS_PERCENT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Gives the angle as the percentage.",
+  "example": {
+   "question": "A 90 degree sector: percentage",
+   "wrong_answer": "90%",
+   "correct_answer": "25%"
+  },
+  "cause": "Reads degrees as per cent.",
+  "reveals": "The answer 90% as a wrong option, with a reason that names the idea.",
+  "help": "Out of 360, then out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_REST_OF_TOTAL_GIVEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Gives the share of everyone else.",
+  "example": {
+   "question": "A 90 degree sector: percentage",
+   "wrong_answer": "75%",
+   "correct_answer": "25%"
+  },
+  "cause": "Works out the other part.",
+  "reveals": "The answer 75% as a wrong option, with a reason that names the idea.",
+  "help": "Read which sector is asked about.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_SAME_ANGLE_SAME_COUNT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Believes equal angles in two pie charts mean equal numbers.",
+  "example": {
+   "question": "90 degrees in a school of 120 and in a school of 480",
+   "wrong_answer": "the same number",
+   "correct_answer": "30 and 120"
+  },
+  "cause": "Reads an angle as a count.",
+  "reveals": "The answer the same number as a wrong option, with a reason that names the idea.",
+  "help": "An angle is a share of its own total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_BIGGER_TOTAL_BIGGER_ANGLE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Believes a bigger total must give a bigger angle.",
+  "example": {
+   "question": "A school of 480 and one of 120: which sector is bigger?",
+   "wrong_answer": "the bigger school",
+   "correct_answer": "it depends on the share"
+  },
+  "cause": "Mixes the count with the share.",
+  "reveals": "The answer the bigger school as a wrong option, with a reason that names the idea.",
+  "help": "The share decides the angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_FALL_READ_AS_RISE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Chooses a part where the line goes down as a rise.",
+  "example": {
+   "question": "Prices 80, 120, 100: where is the biggest rise?",
+   "wrong_answer": "week 2 to week 3",
+   "correct_answer": "week 1 to week 2"
+  },
+  "cause": "Looks at the size of the change, not its direction.",
+  "reveals": "The answer week 2 to week 3 as a wrong option, with a reason that names the idea.",
+  "help": "A rise goes up.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_ANY_RISE_CHOSEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Chooses a rise that is not the biggest.",
+  "example": {
+   "question": "Rises of 20, 40 and 10: the biggest",
+   "wrong_answer": "the first rise",
+   "correct_answer": "the rise of 40"
+  },
+  "cause": "Stops at the first rise seen.",
+  "reveals": "The answer the first rise as a wrong option, with a reason that names the idea.",
+  "help": "Compare all the rises.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_PLOTTED_POINT_READ": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Gives a plotted point when the value between points is asked.",
+  "example": {
+   "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+   "wrong_answer": "40",
+   "correct_answer": "50"
+  },
+  "cause": "Reads only the marked points.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Halfway along the line is halfway between the heights.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_GROWTH_FOR_HEIGHT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Gives the growth in the week instead of the height.",
+  "example": {
+   "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+   "wrong_answer": "20",
+   "correct_answer": "50"
+  },
+  "cause": "Finds a difference and stops.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "The question asks for a height.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_READING_FOR_RISE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Gives the later reading as the rise.",
+  "example": {
+   "question": "16 at 8:00 and 26 at 12:00: the rise",
+   "wrong_answer": "26",
+   "correct_answer": "10"
+  },
+  "cause": "Reads one point.",
+  "reveals": "The answer 26 as a wrong option, with a reason that names the idea.",
+  "help": "A rise is a difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_RISE_ADDED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Adds the two readings for a rise.",
+  "example": {
+   "question": "16 at 8:00 and 26 at 12:00: the rise",
+   "wrong_answer": "42",
+   "correct_answer": "10"
+  },
+  "cause": "Sees two numbers and adds.",
+  "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+  "help": "Subtract the earlier from the later.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_MOVING_TIME_FOR_STOP": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Reads a sloping part as the stop.",
+  "example": {
+   "question": "Line rises for 2 hours, flat for 1 hour: the stop",
+   "wrong_answer": "2 hours",
+   "correct_answer": "1 hour"
+  },
+  "cause": "Reads the first time on the graph.",
+  "reveals": "The answer 2 hours as a wrong option, with a reason that names the idea.",
+  "help": "A stop is where the line is flat.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_SPEED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Gives the distance of a part as its speed.",
+  "example": {
+   "question": "80 km in 2 hours: speed",
+   "wrong_answer": "80",
+   "correct_answer": "40 km/h"
+  },
+  "cause": "Reads the distance off the graph.",
+  "reveals": "The answer 80 as a wrong option, with a reason that names the idea.",
+  "help": "Speed = distance / time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_WHOLE_JOURNEY_FOR_PART": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Uses the whole journey for the speed of one part.",
+  "example": {
+   "question": "First part 80 km in 2 h; whole 200 km in 5 h: first part speed",
+   "wrong_answer": "40 from 200 / 5",
+   "correct_answer": "40 from 80 / 2"
+  },
+  "cause": "Uses the biggest numbers.",
+  "reveals": "The answer 40 from 200 / 5 as a wrong option, with a reason that names the idea.",
+  "help": "Only that part.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_TOTAL_DISTANCE_FOR_PART": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Divides the total distance by the time of the last part.",
+  "example": {
+   "question": "Total 200 km, last part 120 km in 2 h: speed",
+   "wrong_answer": "100",
+   "correct_answer": "60 km/h"
+  },
+  "cause": "Reads the distance at the end of the graph.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "The last part is 200 - 80 = 120 km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_SPEEDS_AVERAGED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Averages the speeds of the parts.",
+  "example": {
+   "question": "40 km/h for 2 h, 60 km/h for 2 h, a 1 h stop: average",
+   "wrong_answer": "50",
+   "correct_answer": "40"
+  },
+  "cause": "Treats each part as equal and forgets the stop.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "Total distance / total time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_STOP_LEFT_OUT_OF_TIME": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Leaves the stop out of the total time.",
+  "example": {
+   "question": "200 km, 4 h moving and a 1 h stop: average speed",
+   "wrong_answer": "50",
+   "correct_answer": "40"
+  },
+  "cause": "Counts only moving time.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "The stop is part of the journey.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_TIME_READ": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Reads the distance where the lines cross instead of the time.",
+  "example": {
+   "question": "Lines cross at 3 hours, 120 km: when do they meet?",
+   "wrong_answer": "120",
+   "correct_answer": "3 hours"
+  },
+  "cause": "Reads the wrong axis.",
+  "reveals": "The answer 120 as a wrong option, with a reason that names the idea.",
+  "help": "Read straight down to the time axis.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_ONE_JOURNEY_FOR_MEETING": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Works out how long one matatu needs for the whole road.",
+  "example": {
+   "question": "Road 240 km, speeds 60 and 20: when do they meet?",
+   "wrong_answer": "4 hours",
+   "correct_answer": "3 hours"
+  },
+  "cause": "Divides the whole road by one speed.",
+  "reveals": "The answer 4 hours as a wrong option, with a reason that names the idea.",
+  "help": "They meet where the lines cross.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
