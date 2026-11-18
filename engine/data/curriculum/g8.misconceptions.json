@@ -1,0 +1,436 @@
+{
+ "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_FRACTION_AS_INTEGER": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
+  "error": "Counts fractions and decimals as integers.",
+  "example": {
+   "question": "Which of -3, 2.5, 0 and 7 are integers?",
+   "wrong_answer": "-3, 2.5, 0 and 7",
+   "correct_answer": "-3, 0 and 7"
+  },
+  "cause": "Thinks any number with or without a sign is an integer.",
+  "reveals": "The answer -3, 2.5, 0 and 7 as a wrong option, with a reason that names the idea.",
+  "help": "Integers are whole numbers and their negatives: no parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_ZERO_NOT_INTEGER": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
+  "error": "Leaves zero out of the integers, or calls it negative.",
+  "example": {
+   "question": "Is 0 an integer?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes"
+  },
+  "cause": "Thinks integers must be positive or negative.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "Zero sits between the negatives and the positives and is an integer.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_LOSS_WRITTEN_POSITIVE": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
+  "error": "Writes a loss, a fall or a depth with no minus sign.",
+  "example": {
+   "question": "A trader loses 200 shillings. Write it as an integer.",
+   "wrong_answer": "200",
+   "correct_answer": "-200"
+  },
+  "cause": "Writes the size of the amount and forgets which side of zero it is.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Decide the direction first: below zero, out or down gets a minus sign.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY.M_OPPOSITE_SAME_SIGN": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
+  "error": "Gives the opposite of a number with the same sign.",
+  "example": {
+   "question": "What is the opposite of -6?",
+   "wrong_answer": "-6",
+   "correct_answer": "6"
+  },
+  "cause": "Thinks the opposite means a different number on the same side.",
+  "reveals": "The answer -6 as a wrong option, with a reason that names the idea.",
+  "help": "The opposite is the same distance from zero on the other side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_DIGIT_SIZE_BELOW_ZERO": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+  "error": "Orders negative numbers by the size of the digits, so -2 is smaller than -9.",
+  "example": {
+   "question": "Which is smaller, -9 or -2?",
+   "wrong_answer": "-2",
+   "correct_answer": "-9"
+  },
+  "cause": "Uses the rule for positive numbers below zero as well.",
+  "reveals": "The answer -2 as a wrong option, with a reason that names the idea.",
+  "help": "Below zero, the further from zero, the smaller: -9 is left of -2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_NEGATIVES_NOT_COMPARABLE": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+  "error": "Believes negative numbers cannot be compared with each other.",
+  "example": {
+   "question": "Put < or > between -4 and -7.",
+   "wrong_answer": "They cannot be compared",
+   "correct_answer": "-4 > -7"
+  },
+  "cause": "Has only met comparing counting numbers.",
+  "reveals": "The answer They cannot be compared as a wrong option, with a reason that names the idea.",
+  "help": "Every integer has its own place on the number line; the one further left is smaller.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_SAME_SIGN_EQUAL": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+  "error": "Treats two negative numbers as equal because both have a minus sign.",
+  "example": {
+   "question": "Is -3 equal to -8?",
+   "wrong_answer": "Yes, both are negative",
+   "correct_answer": "No, -8 < -3"
+  },
+  "cause": "Looks only at the sign.",
+  "reveals": "The answer Yes, both are negative as a wrong option, with a reason that names the idea.",
+  "help": "The sign says which side of zero; the digits say how far.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE.M_ORDER_IGNORES_SIGN": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE",
+  "error": "Orders a mixed list by size of the digits, ignoring signs.",
+  "example": {
+   "question": "Order -5, 3, -1, 0 from smallest",
+   "wrong_answer": "0, -1, 3, -5",
+   "correct_answer": "-5, -1, 0, 3"
+  },
+  "cause": "Drops the signs and sorts the digits.",
+  "reveals": "The answer 0, -1, 3, -5 as a wrong option, with a reason that names the idea.",
+  "help": "Place each number on the number line first, then read from left to right.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_NEGATIVES_ON_RIGHT": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE",
+  "error": "Puts negative numbers to the right of zero.",
+  "example": {
+   "question": "Mark -3 on a number line from -5 to 5.",
+   "wrong_answer": "three steps right of zero",
+   "correct_answer": "three steps left of zero"
+  },
+  "cause": "Writes numbers in the order they are read, not by value.",
+  "reveals": "The answer three steps right of zero as a wrong option, with a reason that names the idea.",
+  "help": "Negative numbers go left of zero (or below it on a vertical line).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_NEGATIVE_LINE_ORDER_REVERSED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE",
+  "error": "Numbers the left side -1, -2, -3 from the far end instead of from zero.",
+  "example": {
+   "question": "Complete: -3, __, -1, 0",
+   "wrong_answer": "-4",
+   "correct_answer": "-2"
+  },
+  "cause": "Counts the negative side from the left like the positive side.",
+  "reveals": "The answer -4 as a wrong option, with a reason that names the idea.",
+  "help": "Count out from zero both ways: -1 is next to zero.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_UNEQUAL_STEPS": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE",
+  "error": "Spaces the marks unequally, so the numbers do not match the distances.",
+  "example": {
+   "question": "On a line where each mark is 2, the arrow is 3 marks left of zero.",
+   "wrong_answer": "-3",
+   "correct_answer": "-6"
+  },
+  "cause": "Counts marks instead of using the step size.",
+  "reveals": "The answer -3 as a wrong option, with a reason that names the idea.",
+  "help": "Find the step between marks, then multiply by the marks counted.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE.M_ZERO_LEFT_OUT": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE",
+  "error": "Draws the number line with no zero, jumping from -1 to 1.",
+  "example": {
+   "question": "Complete: -2, -1, __, 1, 2",
+   "wrong_answer": "1",
+   "correct_answer": "0"
+  },
+  "cause": "Thinks zero is not a number with a place on the line.",
+  "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+  "help": "Zero is the point that separates the two sides; it gets its own mark.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_SIGN_DROPPED_BELOW_ZERO": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+  "error": "Gives the answer as a positive number when the move ends below zero.",
+  "example": {
+   "question": "A lift at floor 3 goes down 7 floors.",
+   "wrong_answer": "4",
+   "correct_answer": "-4"
+  },
+  "cause": "Subtracts the smaller number from the larger and loses the sign.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Move along the line: past zero you are on the negative side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_DOWN_AS_ADD": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+  "error": "Moves the wrong way: adds when going down or subtracts when going up.",
+  "example": {
+   "question": "A lift at floor -2 goes up 5 floors.",
+   "wrong_answer": "-7",
+   "correct_answer": "3"
+  },
+  "cause": "Ties the minus sign of the start to the direction of the move.",
+  "reveals": "The answer -7 as a wrong option, with a reason that names the idea.",
+  "help": "Up or add moves right; down or subtract moves left, whatever the start.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_START_IGNORED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+  "error": "Gives the size of the move as the answer, ignoring where it started.",
+  "example": {
+   "question": "A lift at floor 2 goes down 6 floors.",
+   "wrong_answer": "-6",
+   "correct_answer": "-4"
+  },
+  "cause": "Reads only the second number.",
+  "reveals": "The answer -6 as a wrong option, with a reason that names the idea.",
+  "help": "Start at the first number, then move.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_ZERO_SKIPPED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+  "error": "Skips zero when counting steps across it, so the answer is one out.",
+  "example": {
+   "question": "Start at 2 and move 5 steps left.",
+   "wrong_answer": "-4",
+   "correct_answer": "-3"
+  },
+  "cause": "Counts from 1 to -1 as one step.",
+  "reveals": "The answer -4 as a wrong option, with a reason that names the idea.",
+  "help": "Zero is a mark like any other: count the step onto it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_WRONG_SIDE_OF_ZERO": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
+  "error": "Gets the right distance from zero but the wrong side.",
+  "example": {
+   "question": "-6 + 4",
+   "wrong_answer": "2",
+   "correct_answer": "-2"
+  },
+  "cause": "Works out 6 - 4 and gives the sign of the second number.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Check where the move ends: 4 steps right from -6 is still left of zero.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_SUBTRACT_ACROSS_ZERO": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+  "error": "Subtracts the sizes when the two numbers are on opposite sides of zero.",
+  "example": {
+   "question": "How much warmer is 9 degrees than -4 degrees?",
+   "wrong_answer": "5",
+   "correct_answer": "13"
+  },
+  "cause": "Ignores the minus sign and finds 9 - 4.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Count up to zero (4) and on to 9 (9 more): add the two parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_ONLY_ONE_SIDE_COUNTED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+  "error": "Counts only the part on one side of zero.",
+  "example": {
+   "question": "From -4 degrees up to 9 degrees: how much warmer?",
+   "wrong_answer": "9",
+   "correct_answer": "13"
+  },
+  "cause": "Starts counting at zero.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Start at the lower number, not at zero.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_DIFFERENCE_NEGATIVE": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+  "error": "Gives a difference or a distance as a negative number.",
+  "example": {
+   "question": "How far apart are -3 and 5?",
+   "wrong_answer": "-8",
+   "correct_answer": "8"
+  },
+  "cause": "Subtracts in the wrong order and keeps the sign.",
+  "reveals": "The answer -8 as a wrong option, with a reason that names the idea.",
+  "help": "A distance apart is always positive: larger minus smaller.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE.M_SEA_LEVEL_DEPTH_ADDED_WRONG": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE",
+  "error": "Subtracts a depth below sea level from a height above it instead of adding.",
+  "example": {
+   "question": "A hill 120 m above sea level and a well 30 m below. Height from the bottom of the well to the top?",
+   "wrong_answer": "90 m",
+   "correct_answer": "150 m"
+  },
+  "cause": "Sees two numbers and takes the smaller away.",
+  "reveals": "The answer 90 m as a wrong option, with a reason that names the idea.",
+  "help": "Draw the vertical line: the well is below zero, the hill above, so the two parts add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_OPENING_BALANCE_LEFT_OUT": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Adds up the changes and leaves out the starting balance.",
+  "example": {
+   "question": "Start 500 shillings; changes +200, -150, -100. Balance?",
+   "wrong_answer": "-50",
+   "correct_answer": "450"
+  },
+  "cause": "Treats the changes as the whole story.",
+  "reveals": "The answer -50 as a wrong option, with a reason that names the idea.",
+  "help": "Start from the opening balance and apply each change.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_MINUS_ADDED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Adds amounts with a minus sign as if they were money in.",
+  "example": {
+   "question": "Start 500; changes +200, -150, -100. Balance?",
+   "wrong_answer": "950",
+   "correct_answer": "450"
+  },
+  "cause": "Ignores the signs in the table.",
+  "reveals": "The answer 950 as a wrong option, with a reason that names the idea.",
+  "help": "A minus sign means money went out: take it away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_ONLY_GAINS_COUNTED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Uses only the positive changes and drops the negative ones.",
+  "example": {
+   "question": "Start 500; changes +200, -150, -100. Balance?",
+   "wrong_answer": "700",
+   "correct_answer": "450"
+  },
+  "cause": "Thinks the minus amounts do not count.",
+  "reveals": "The answer 700 as a wrong option, with a reason that names the idea.",
+  "help": "Every change in the table counts, in or out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_SIGN_OF_CHANGE_DROPPED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Writes a fall or a drop as a positive change.",
+  "example": {
+   "question": "The temperature falls 18 degrees in 6 hours. Change each hour?",
+   "wrong_answer": "3",
+   "correct_answer": "-3"
+  },
+  "cause": "Gives the size of the change only.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "A fall is a negative change: keep the minus sign.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_FINAL_FOR_CHANGE": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Divides the final reading by the number of steps instead of the total change.",
+  "example": {
+   "question": "From 6 degrees it falls the same each hour for 4 hours to -10 degrees. Change each hour?",
+   "wrong_answer": "-2.5",
+   "correct_answer": "-4"
+  },
+  "cause": "Uses the reading at the end as if it were the change.",
+  "reveals": "The answer -2.5 as a wrong option, with a reason that names the idea.",
+  "help": "Find the total change first (end minus start), then share it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_TOTAL_NOT_SHARED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Gives the whole change when the change for each step is asked.",
+  "example": {
+   "question": "A fall of 16 degrees over 4 hours. Change each hour?",
+   "wrong_answer": "-16",
+   "correct_answer": "-4"
+  },
+  "cause": "Stops after finding the total.",
+  "reveals": "The answer -16 as a wrong option, with a reason that names the idea.",
+  "help": "Each hour gets an equal share: divide by the hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_STEPS_ADDED_NOT_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Adds the number of steps to the change instead of multiplying.",
+  "example": {
+   "question": "The level falls 3 m a month for 5 months. Total change?",
+   "wrong_answer": "-8",
+   "correct_answer": "-15"
+  },
+  "cause": "Combines the two numbers by adding.",
+  "reveals": "The answer -8 as a wrong option, with a reason that names the idea.",
+  "help": "5 months of -3 each is 5 lots of -3: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_DEEPER_AS_LESS_NEGATIVE": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Makes a level less negative when it goes further down.",
+  "example": {
+   "question": "A level at -4 m falls 6 m. New level?",
+   "wrong_answer": "2",
+   "correct_answer": "-10"
+  },
+  "cause": "Adds the fall to the negative number as if it moved up.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Going down moves left on the line: -4 - 6 = -10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_START_NOT_REMOVED": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Works out how many steps a total takes without first taking away the starting amount.",
+  "example": {
+   "question": "Water at 10 m deep falls 4 m a month. Months until it is 30 m deep?",
+   "wrong_answer": "7.5",
+   "correct_answer": "5"
+  },
+  "cause": "Divides the final depth by the change each month.",
+  "reveals": "The answer 7.5 as a wrong option, with a reason that names the idea.",
+  "help": "The extra depth is 30 - 10; divide that by 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT.M_RATE_OPERATION_WRONG": {
+  "skill": "MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT",
+  "error": "Adds or subtracts the number of steps where it should divide or multiply by it.",
+  "example": {
+   "question": "A fall of 12 degrees over 4 hours. Change each hour?",
+   "wrong_answer": "-8",
+   "correct_answer": "-3"
+  },
+  "cause": "Picks the operation from the size of the numbers.",
+  "reveals": "The answer -8 as a wrong option, with a reason that names the idea.",
+  "help": "Ask: is the total shared out (divide) or built up (multiply)?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ }
+}

@@ -19,32 +19,32 @@ const signed = (c) => (c < 0 ? `− ${-c}` : `+ ${c}`);
 
 export const FAMILIES = [
   // ======================================================== INTEGERS
-  fam({ id: 'g8.int.lift-floors', skill: 'G6_INTEGERS_INTRO', outcome: 'G8.INTEGERS.a', rung: 2, form: 'word', allowNegative: true,
+  fam({ id: 'g8.int.lift-floors', skill: 'G6_INTEGERS_INTRO', outcome: 'MATH.G8.NUMBER.INTEGERS.c', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE', rung: 2, form: 'word', allowNegative: true,
     draw: () => { const s = randInt(1, 6); return { s, d: s + randInt(2, 8), p: person() }; },
     make: ({ s, d }) => ({
       question: `A lift in a Nairobi office block is at floor ${s}. The ground floor is 0. The basement floors are −1, −2, −3 and so on. The lift goes down ${d} floors. Which floor does it reach?`,
       answer: s - d,
-      wrong: [[d - s, 'That treats the answer as above the ground. Going down further than the ground floor takes you into the basement.'], [s + d, 'Going down takes floors away. Start at the floor the lift is on and count downwards.'], [-d, 'That ignores where the lift started.'], [s - d + 1, 'Floor 0 counts as a floor. Count it when you go down past the ground.']],
+      wrong: [[d - s, 'That treats the answer as above the ground. Going down further than the ground floor takes you into the basement.', 'M_SIGN_DROPPED_BELOW_ZERO'], [s + d, 'Going down takes floors away. Start at the floor the lift is on and count downwards.', 'M_DOWN_AS_ADD'], [-d, 'That ignores where the lift started.', 'M_START_IGNORED'], [s - d + 1, 'Floor 0 counts as a floor. Count it when you go down past the ground.', 'M_ZERO_SKIPPED']],
       hints: ['Draw a number line standing up, with floor 0 in the middle.', 'Start at the floor the lift is on and move down, one floor at a time.'],
       steps: [`The lift starts at floor ${s}.`, `Going down ${d} floors: ${s} − ${d} = ${neg(s - d)}.`, `The lift is at floor ${neg(s - d)}, in the basement.`],
     }),
     check: ({ s, d }, a) => a + d === s }),
 
-  fam({ id: 'g8.int.order-why', skill: 'G6_INTEGERS_INTRO', outcome: 'G8.INTEGERS.a', rung: 1, form: 'why',
+  fam({ id: 'g8.int.order-why', skill: 'G6_INTEGERS_INTRO', outcome: 'MATH.G8.NUMBER.INTEGERS.a', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_ORDER_COMPARE', rung: 1, form: 'why',
     draw: () => { const lo = -randInt(6, 20), hi = -randInt(1, 5); return { lo, hi, p: person() }; },
     make: ({ lo, hi, p }) => ({
       question: `Because ${-hi} is smaller than ${-lo}, ${p.name} says ${neg(hi)} is smaller than ${neg(lo)}. Why is this wrong?`,
       options: [
         { text: `${neg(lo)} is further left of zero, so it is smaller`, right: lo < hi },
-        { text: 'Negative numbers cannot be compared with each other', right: false, why: 'They can. Every integer has its own place on the number line.' },
-        { text: `${p.name} is right: the number with the smaller digit is the smaller number`, right: false, why: 'That is true above zero only. Below zero, the further a number is from zero, the smaller it is.' },
-        { text: 'The two numbers are equal because both have a minus sign', right: false, why: 'The minus sign only says which side of zero. The digits still tell how far from zero.' },
+        { text: 'Negative numbers cannot be compared with each other', right: false, why: 'They can. Every integer has its own place on the number line.', mis: 'M_NEGATIVES_NOT_COMPARABLE' },
+        { text: `${p.name} is right: the number with the smaller digit is the smaller number`, right: false, why: 'That is true above zero only. Below zero, the further a number is from zero, the smaller it is.', mis: 'M_DIGIT_SIZE_BELOW_ZERO' },
+        { text: 'The two numbers are equal because both have a minus sign', right: false, why: 'The minus sign only says which side of zero. The digits still tell how far from zero.', mis: 'M_SAME_SIGN_EQUAL' },
       ],
       hints: ['Mark both numbers on a number line.', 'On a number line, smaller numbers are further to the left.'],
       steps: [`On the number line, ${neg(lo)} is ${-lo} places left of zero and ${neg(hi)} is ${-hi} places left of zero.`, `${neg(lo)} is further left, so ${neg(lo)} < ${neg(hi)}.`],
     }) }),
 
-  fam({ id: 'g8.int.distance-spot', skill: 'G6_INTEGERS_INTRO', outcome: 'G8.INTEGERS.a', rung: 2, form: 'spot',
+  fam({ id: 'g8.int.distance-spot', skill: 'G6_INTEGERS_INTRO', outcome: 'MATH.G8.NUMBER.INTEGERS.c', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_DIFFERENCE', rung: 2, form: 'spot',
     draw: () => { const a = randInt(3, 9), b = randInt(a + 1, 14); return { a, b, p: person() }; },
     make: ({ a, b, p }) => {
       const shown = b - a;
@@ -55,11 +55,12 @@ export const FAMILIES = [
           { text: `Rise: ${b} − ${a} = ${shown}.`, ok: shown === a + b },
           { text: `So the temperature rises by ${shown} degrees.`, ok: true },
         ],
+        mis: 'M_SUBTRACT_ACROSS_ZERO',
         fix: `The two parts are one after the other, so they are added: ${a} + ${b} = ${a + b}, not ${b} − ${a}.`,
         steps: ['Count up to zero first.', 'Then count on from zero to the warmer temperature.', 'Add the two parts.'] };
     } }),
 
-  fam({ id: 'g8.int.balance-table', skill: 'G6_INTEGERS_ADD_SUB', outcome: 'G8.INTEGERS.b', rung: 2, form: 'table', allowNegative: true,
+  fam({ id: 'g8.int.balance-table', skill: 'G6_INTEGERS_ADD_SUB', outcome: 'MATH.G8.NUMBER.INTEGERS.c', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT', rung: 2, form: 'table', allowNegative: true,
     draw: () => {
       const start = pick([200, 300, 400, 500]); const ch = []; for (let i = 0; i < 5; i++) ch.push(pick([-1, 1]) * randInt(1, 7) * 100);
       const total = start + ch.reduce((a, b) => a + b, 0);
@@ -74,31 +75,31 @@ export const FAMILIES = [
       return { question: 'A shop starts the week with money in its account. The table shows the change each day in shillings. A minus sign means money went out. What is the balance on Friday evening, in shillings?',
         model: { type: 'table', data: { head: ['Day', 'Change (sh)'], rows: [{ label: 'Start of week', value: `${start}` }, ...ch.map((c, i) => ({ label: days[i], value: `${c < 0 ? '−' : '+'}${Math.abs(c)}` }))] } },
         answer: total,
-        wrong: [[total - start, 'The week began with money already in the account. Include the starting amount.'], [start + absSum, 'Money that went out must be taken away. A minus sign means subtract.'], [start + pos, 'You added only the money coming in. The minus amounts take money away too.']],
+        wrong: [[total - start, 'The week began with money already in the account. Include the starting amount.', 'M_OPENING_BALANCE_LEFT_OUT'], [start + absSum, 'Money that went out must be taken away. A minus sign means subtract.', 'M_MINUS_ADDED'], [start + pos, 'You added only the money coming in. The minus amounts take money away too.', 'M_ONLY_GAINS_COUNTED']],
         hints: ['Start from the balance at the start of the week.', 'Add the plus amounts and take away the minus amounts, day by day.'],
         steps: [`Start: ${start}.`, `Money in: ${pos}. Money out: ${absSum - pos}.`, `${start} + ${pos} − ${absSum - pos} = ${neg(total)}.`] };
     },
     check: ({ start, ch }, a) => start + ch.reduce((s, c) => s + c, 0) === a }),
 
-  fam({ id: 'g8.int.mountain-rate', skill: 'G7_INTEGERS_MUL_DIV', outcome: 'G8.INTEGERS.b', rung: 2, form: 'word', allowNegative: true,
+  fam({ id: 'g8.int.mountain-rate', skill: 'G7_INTEGERS_MUL_DIV', outcome: 'MATH.G8.NUMBER.INTEGERS.c', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT', rung: 2, form: 'word', allowNegative: true,
     draw: () => { const h = randInt(3, 8), per = randInt(2, 5), start = randInt(2, 8); return { h, per, start }; },
     make: ({ h, per, start }) => ({
       question: `At noon on Mount Kenya it is ${start} °C. It then falls at the same rate each hour for ${h} hours, and is ${neg(start - per * h)} °C at the end. By how many degrees does the temperature change each hour? Write it as a negative integer.`,
       answer: -per,
-      wrong: [[per, 'The temperature goes down, so the change each hour is negative.'], [(start - per * h) / h, 'You divided the final temperature by the hours. Divide the total change instead.'], [-(per * h), 'That is the whole change over all the hours. How much is it each hour?'], [h - per * h, 'The total change has to be shared out equally over the hours. Divide it.']],
+      wrong: [[per, 'The temperature goes down, so the change each hour is negative.', 'M_SIGN_OF_CHANGE_DROPPED'], [(start - per * h) / h, 'You divided the final temperature by the hours. Divide the total change instead.', 'M_FINAL_FOR_CHANGE'], [-(per * h), 'That is the whole change over all the hours. How much is it each hour?', 'M_TOTAL_NOT_SHARED'], [h - per * h, 'The total change has to be shared out equally over the hours. Divide it.', 'M_RATE_OPERATION_WRONG']],
       hints: ['First find the total change from noon to the end.', 'Share the total change equally over the hours: use ÷.'],
       steps: [`Total change: ${neg(start - per * h)} − ${start} = ${neg(-per * h)} °C.`, `Change each hour: ${neg(-per * h)} ÷ ${h} = ${neg(-per)} °C.`],
     }),
     check: ({ h, start, per }, a) => start + a * h === start - per * h }),
 
-  fam({ id: 'g8.int.borehole-steps', skill: 'G7_INTEGERS_MUL_DIV', outcome: 'G8.INTEGERS.b', rung: 3, form: 'steps', allowNegative: true,
+  fam({ id: 'g8.int.borehole-steps', skill: 'G7_INTEGERS_MUL_DIV', outcome: 'MATH.G8.NUMBER.INTEGERS.c', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_COMBINED_CONTEXT', rung: 3, form: 'steps', allowNegative: true,
     draw: () => { const a = randInt(6, 14), f = randInt(2, 5), n = randInt(2, 4), k = n + randInt(2, 4); return { a, f, n, k }; },
     make: ({ a, f, n, k }) => ({
       question: `The water in a borehole is ${a} m below the ground. A pump lowers the water by ${f} m every month. Levels below the ground are written as negative numbers, for example −2 m.`,
       parts: [
-        { prompt: `What is the change in the level after ${n} months, in metres?`, answer: -f * n, unit: 'm', hint: `Each month the change is −${f}. Multiply by ${n}.`, wrong: [[f * n, 'The level goes down, so the change is negative.'], [-f - n, 'Months of change are multiplied, not added.']] },
-        { prompt: `What is the water level after ${n} months, in metres?`, answer: -a - f * n, unit: 'm', hint: `Start at −${a} and add the change from the step before.`, wrong: [[-a + f * n, 'Moving down makes the level more negative.'], [-f * n, 'Start from the first level, not from the ground.']] },
-        { prompt: `After how many months from the start is the level −${a + f * k} m?`, answer: k, unit: 'months', hint: `How far must the level fall from −${a}? Divide by the fall each month.`, wrong: [[(a + f * k) / f, 'The pump started at a depth already. Take the starting depth away first.'], [a + f * k - f, 'Divide the extra fall by the fall each month.']] },
+        { prompt: `What is the change in the level after ${n} months, in metres?`, answer: -f * n, unit: 'm', hint: `Each month the change is −${f}. Multiply by ${n}.`, wrong: [[f * n, 'The level goes down, so the change is negative.', 'M_SIGN_OF_CHANGE_DROPPED'], [-f - n, 'Months of change are multiplied, not added.', 'M_STEPS_ADDED_NOT_MULTIPLIED']] },
+        { prompt: `What is the water level after ${n} months, in metres?`, answer: -a - f * n, unit: 'm', hint: `Start at −${a} and add the change from the step before.`, wrong: [[-a + f * n, 'Moving down makes the level more negative.', 'M_DEEPER_AS_LESS_NEGATIVE'], [-f * n, 'Start from the first level, not from the ground.', 'M_START_IGNORED']] },
+        { prompt: `After how many months from the start is the level −${a + f * k} m?`, answer: k, unit: 'months', hint: `How far must the level fall from −${a}? Divide by the fall each month.`, wrong: [[(a + f * k) / f, 'The pump started at a depth already. Take the starting depth away first.', 'M_START_NOT_REMOVED'], [a + f * k - f, 'Divide the extra fall by the fall each month.', 'M_RATE_OPERATION_WRONG']] },
       ],
       steps: [`Change: −${f} × ${n} = ${neg(-f * n)} m.`, `Level: ${neg(-a)} + ${neg(-f * n)} = ${neg(-a - f * n)} m.`, `Fall needed: ${a + f * k} − ${a} = ${f * k} m. Months: ${f * k} ÷ ${f} = ${k}.`],
     }),

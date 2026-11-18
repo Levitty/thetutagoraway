@@ -33,6 +33,7 @@ import { isSigned } from '../ai-tutor/content/families/core.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
 import { SKILLS_G6 } from '../ai-tutor/content/curriculumMap.g6.js';
 import { SKILLS_G7 } from '../ai-tutor/content/curriculumMap.g7.js';
+import { SKILLS_G8 } from '../ai-tutor/content/curriculumMap.g8.js';
 import { subjectOfCskill, SUBJECT_PREFIXES } from '../learner/subject.js';
 import { recheckSlots } from '../learner/recheck.js';
 import { publicItem, markItem, step, sittingView, resultsFor } from './homeworkSitting.js';
@@ -80,8 +81,8 @@ for (const f of [...FAMILIES, ...familiesOutsideBank()]) if (usable(f)) { if (!B
 export const familiesForSkill = (cskill) => BY_CSKILL.get(cskill) || [];
 
 // The curriculum map of each subject: the skill codes a homework may name.
-// Maths: the Grade 5, 6 and 7 maps side by side (codes carry the grade, so they never clash), so a misconception code resolves in any of them.
-const MAPS = { math: { skills: { ...SKILLS_G5, ...SKILLS_G6, ...SKILLS_G7 }, substrands: null }, ...Object.fromEntries(SUBJECT_ORDER.map(id => [id, { skills: skillMapOf(id), substrands: substrandsOf(id) }])) };
+// Maths: the Grade 5 to 8 maps side by side (codes carry the grade, so they never clash), so a misconception code resolves in any of them.
+const MAPS = { math: { skills: { ...SKILLS_G5, ...SKILLS_G6, ...SKILLS_G7, ...SKILLS_G8 }, substrands: null }, ...Object.fromEntries(SUBJECT_ORDER.map(id => [id, { skills: skillMapOf(id), substrands: substrandsOf(id) }])) };
 const mapOf = (code) => MAPS[subjectOfCskill(code)]?.skills || {};
 const isReviewed = isSigned;   // the one rule: signed off (core or reviewed) is the only way a family reaches a child
 /**
@@ -90,7 +91,7 @@ const isReviewed = isSigned;   // the one rule: signed off (core or reviewed) is
  */
 export const isCurriculumSkill = (code) => {
   const subject = subjectOfCskill(code);
-  if (subject === 'math') return !!(SKILLS_G5[code] || SKILLS_G7[code]);
+  if (subject === 'math') return !!(SKILLS_G5[code] || SKILLS_G7[code] || SKILLS_G8[code]);
   if (subject && subject !== 'math') return !!mapOf(code)[code] && familiesForSkill(code).some(isSigned);
   return false;
 };
