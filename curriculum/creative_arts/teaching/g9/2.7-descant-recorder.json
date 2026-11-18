@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G9.CREATI.DESCANT_RECORDER",
+ "title": "Descant Recorder",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Read the fingering chart for the class recorders (Baroque or German) before teaching B flat.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING",
+   "key_step": "The child says the F major scale is F G A B-flat C D E F, low F uses both hands, B flat has a cross-fingering, and the flat in the key signature applies to every B.",
+   "floor": {
+    "prerequisite": "Explains recorder technique and directions (Grade 8).",
+    "question": "What does p mean?",
+    "answer": "soft"
+   },
+   "representations": [
+    "the class recorders",
+    "a fingering chart",
+    "an F major scale on the staff"
+   ],
+   "steps": [
+    "Check the key signature: one flat.",
+    "Play low F gently with both hands.",
+    "Use the cross-fingering for B flat.",
+    "Go up to F and back."
+   ],
+   "contexts": [
+    "an F major solo for a concert",
+    "sight reading in class"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the flat on the middle line.",
+     "say": "Which note does it change?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for B."
+    },
+    {
+     "beat": "predict",
+     "do": "Same fingering as B?"
+    },
+    {
+     "beat": "reveal",
+     "do": "No: cross-fingering."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_B_FOR_BFLAT",
+     "listen_for": [
+      "with the B fingering"
+     ],
+     "ask": "How do you play B flat on the recorder?",
+     "repair": "Play B, then B flat with the cross-fingering; hear the difference."
+    },
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_LOW_F_LEFT",
+     "listen_for": [
+      "no, only the left hand"
+     ],
+     "ask": "Does low F need the right hand?",
+     "repair": "Play low F slowly, covering the right-hand holes."
+    },
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_IGNORE_KEY",
+     "listen_for": [
+      "B"
+     ],
+     "ask": "A piece in F major has a B on the middle line. What do you play?",
+     "repair": "Circle every B before playing."
+    },
+    {
+     "code": "CREA.G9.CREATI.DESCANT_RECORDER.F_FINGERING.M_CA9_FF_BLOW_LOW",
+     "listen_for": [
+      "hard"
+     ],
+     "ask": "How should you blow for low F?",
+     "repair": "Play low F gently and then hard."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which note in F major has a special cross-fingering?",
+     "answer": "B flat",
+     "shows": "B flat"
+    },
+    {
+     "question": "Does low F need the right hand?",
+     "answer": "Yes",
+     "shows": "low F"
+    }
+   ]
+  }
+ ]
+}

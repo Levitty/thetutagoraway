@@ -1,0 +1,187 @@
+{
+ "sub_strand": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS",
+ "title": "Indigenous Kenyan Crafts",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clay prepared and dried in the shade; frame looms from wood or strong card.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY",
+   "key_step": "The child orders coil pottery: prepare and wedge clay, roll even coils, score and join with slip, smooth the inside, decorate by incising when slightly dry, dry in shade.",
+   "floor": {
+    "prerequisite": "Knows the slab method (Grade 6).",
+    "question": "What joins two pieces of clay?",
+    "answer": "slip, after scoring"
+   },
+   "representations": [
+    "clay",
+    "a guide stick",
+    "a sample coil pot"
+   ],
+   "steps": [
+    "Remove impurities, knead and wedge.",
+    "Roll even coils.",
+    "Score, slip and join; smooth inside.",
+    "Incise, then dry in shade."
+   ],
+   "contexts": [
+    "making a water pot in the indigenous style",
+    "a vessel for a class display"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps out of order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"decorate\".",
+     "say": "When is it done?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"when slightly dry\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_NO_WEDGE",
+     "listen_for": [
+      "it is not needed"
+     ],
+     "ask": "Why is clay wedged before making coils?",
+     "repair": "Cut a lump of unwedged clay and show the air pockets."
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_UNEVEN",
+     "listen_for": [
+      "it does not matter"
+     ],
+     "ask": "Why roll coils of even thickness?",
+     "repair": "Roll coils against a guide stick."
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_NO_SLIP",
+     "listen_for": [
+      "just press them together"
+     ],
+     "ask": "How are coils joined firmly?",
+     "repair": "Join two coils with and without slip; let them dry and test."
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.COIL_POTTERY.M_CA9_CP_DRY_SUN",
+     "listen_for": [
+      "in hot sun"
+     ],
+     "ask": "Where should a coil pot dry?",
+     "repair": "Compare a pot dried in sun (cracks) with one in shade."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is clay wedged?",
+     "answer": "to remove air bubbles",
+     "shows": "wedging"
+    },
+    {
+     "question": "How is a coil pot decorated?",
+     "answer": "by incising when it is slightly dry",
+     "shows": "decoration"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL",
+   "key_step": "The child describes a frame loom (warp stretched tight on a frame) and the 2/1 twill (weft over two, under one, moving one thread each row to form diagonals).",
+   "floor": {
+    "prerequisite": "Knows plain weave (Grade 6).",
+    "question": "In plain weave, how does the weft pass the warp?",
+    "answer": "over one, under one"
+   },
+   "representations": [
+    "a frame loom",
+    "yarn",
+    "a twill sample"
+   ],
+   "steps": [
+    "Wind the warp tight.",
+    "Row 1: over two, under one.",
+    "Row 2: move one thread along.",
+    "Repeat to build diagonals."
+   ],
+   "contexts": [
+    "weaving a table runner",
+    "a class display of woven fabric"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a twill sample.",
+     "say": "What pattern do you see?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for diagonal lines."
+    },
+    {
+     "beat": "predict",
+     "do": "Why?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Each row moves one thread."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_PLAIN",
+     "listen_for": [
+      "over one, under one"
+     ],
+     "ask": "In a 2/1 twill, how does the weft pass the warp?",
+     "repair": "Weave three rows of each and compare."
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_NO_SHIFT",
+     "listen_for": [
+      "it does not"
+     ],
+     "ask": "Why does a twill show diagonal lines?",
+     "repair": "Weave four rows, shifting one thread each time."
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_WARP_WEFT",
+     "listen_for": [
+      "the weft"
+     ],
+     "ask": "What are the threads stretched tight on a frame loom called?",
+     "repair": "Warp goes on the loom first; weft goes across."
+    },
+    {
+     "code": "CREA.G9.CREATI.INDIGENOUS_KENYAN_CRAFTS.TWILL.M_CA9_TW_LOOSE_WARP",
+     "listen_for": [
+      "it does not matter"
+     ],
+     "ask": "Why must the warp be tight on a frame loom?",
+     "repair": "Weave on a loose warp and a tight one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a 2/1 twill, the weft goes over how many and under how many warp threads?",
+     "answer": "over two, under one",
+     "shows": "twill"
+    },
+    {
+     "question": "Which threads are stretched on the loom?",
+     "answer": "the warp",
+     "shows": "warp"
+    }
+   ]
+  }
+ ]
+}

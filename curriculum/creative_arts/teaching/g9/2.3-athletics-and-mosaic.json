@@ -1,0 +1,275 @@
+{
+ "sub_strand": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC",
+ "title": "Athletics and Mosaic",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Triple jump into a raked pit; long runs on a measured course with water and shade. Mosaic from paper, seeds or stones.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP",
+   "key_step": "The child orders the triple jump (approach, hop, step, jump, landing), says which foot lands each phase, and how it is measured.",
+   "floor": {
+    "prerequisite": "Describes the long jump (Grade 6).",
+    "question": "Do you take off from one foot or two in the long jump?",
+    "answer": "one foot"
+   },
+   "representations": [
+    "a sand pit with a board",
+    "chalk marks",
+    "a tape measure"
+   ],
+   "steps": [
+    "Approach run.",
+    "Hop: land on the take-off foot.",
+    "Step: land on the other foot.",
+    "Jump into the pit."
+   ],
+   "contexts": [
+    "sports day field events",
+    "a county athletics meet"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write jump, hop, step."
+    },
+    {
+     "beat": "predict",
+     "do": "What is the right order?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for hop, step, jump."
+    },
+    {
+     "beat": "reveal",
+     "do": "Hop, step, jump."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_HOP_OTHER_FOOT",
+     "listen_for": [
+      "the other foot"
+     ],
+     "ask": "In the triple jump, which foot does the hop land on?",
+     "repair": "Chalk the pattern: right, right, left, both (for a right-foot take-off)."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_ORDER",
+     "listen_for": [
+      "jump, step, hop"
+     ],
+     "ask": "What is the order of the triple jump phases?",
+     "repair": "Say \"hop, step, jump\" while walking through it."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_BIG_HOP",
+     "listen_for": [
+      "yes, the bigger the better"
+     ],
+     "ask": "Should the hop be as big as possible?",
+     "repair": "Measure three jumps: one with a huge hop, one balanced."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.TRIPLE_JUMP.M_CA9_TJ_MEASURE",
+     "listen_for": [
+      "from where the last jump starts"
+     ],
+     "ask": "Where is a triple jump measured from?",
+     "repair": "Lay a tape from the board to the pit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which foot does the hop land on?",
+     "answer": "the take-off foot",
+     "shows": "hop"
+    },
+    {
+     "question": "Where is the triple jump measured from?",
+     "answer": "the take-off board",
+     "shows": "measure"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE",
+   "key_step": "The child names long distance races (5 000 m, 10 000 m, marathon, cross-country) and their technique: even pace, relaxed arms, short stride, steady breathing, a finishing kick.",
+   "floor": {
+    "prerequisite": "Describes middle distance races (Grade 8).",
+    "question": "Name a middle distance race.",
+    "answer": "800 m or 1 500 m"
+   },
+   "representations": [
+    "race cards",
+    "a measured course",
+    "a stopwatch"
+   ],
+   "steps": [
+    "Start at an even pace.",
+    "Keep arms relaxed and stride short.",
+    "Breathe steadily.",
+    "Kick at the finish."
+   ],
+   "contexts": [
+    "Kenyan marathon runners",
+    "a school cross-country race"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A runner sprints the first lap of 5 000 m.",
+     "say": "Good plan?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Even pace."
+    },
+    {
+     "beat": "write",
+     "do": "Write the five techniques."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_800",
+     "listen_for": [
+      "800 m"
+     ],
+     "ask": "Which is a long distance race?",
+     "repair": "Sort 100, 800, 1 500, 5 000 and 10 000 m."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_FAST_START",
+     "listen_for": [
+      "as fast as possible"
+     ],
+     "ask": "How should a long distance race be started?",
+     "repair": "Run two laps flat out from the start and two at even pace; compare."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_LONG_STRIDE",
+     "listen_for": [
+      "long bounding strides"
+     ],
+     "ask": "Which stride suits a long distance race?",
+     "repair": "Run 400 m bounding, then with short relaxed strides."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.LONG_DISTANCE.M_CA9_LD_NO_WATER",
+     "listen_for": [
+      "no, it slows them"
+     ],
+     "ask": "Should runners drink water in a long race?",
+     "repair": "Talk about water points in the marathon."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a long distance race.",
+     "answer": "any of: 5 000 m, 10 000 m, marathon, cross-country",
+     "shows": "races"
+    },
+    {
+     "question": "Why do long distance runners pace themselves?",
+     "answer": "to save energy for the whole race",
+     "shows": "pace"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC",
+   "key_step": "The child names the characteristics of a mosaic: small pieces (tesserae) of one material, close with small even gaps, following a planned design, colour showing shape and light.",
+   "floor": {
+    "prerequisite": "Knows mosaic materials and steps (Grade 5).",
+    "question": "Do mosaic pieces overlap?",
+    "answer": "no"
+   },
+   "representations": [
+    "sample mosaics",
+    "seeds, paper squares or stones",
+    "a sketch"
+   ],
+   "steps": [
+    "Sketch the design.",
+    "Sort pieces by colour.",
+    "Place them close with even gaps.",
+    "Use colour for shape and light."
+   ],
+   "contexts": [
+    "a mosaic of a runner for sports day",
+    "a school name board"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a mosaic.",
+     "say": "Name one characteristic."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "predict",
+     "do": "Why the small gaps?"
+    },
+    {
+     "beat": "reveal",
+     "do": "They show the pattern clearly."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_PAINT",
+     "listen_for": [
+      "by painting small dots"
+     ],
+     "ask": "How is a mosaic made?",
+     "repair": "Compare a stippled drawing with a seed mosaic."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_RANDOM",
+     "listen_for": [
+      "nothing; place them anywhere"
+     ],
+     "ask": "What comes before placing the mosaic pieces?",
+     "repair": "Show a planned and an unplanned mosaic."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_MIXED_MATERIALS",
+     "listen_for": [
+      "many, like a collage"
+     ],
+     "ask": "Is a mosaic usually made of one kind of material or many?",
+     "repair": "Compare a seed mosaic with a mixed collage."
+    },
+    {
+     "code": "CREA.G9.CREATI.ATHLETICS_AND_MOSAIC.MOSAIC.M_CA9_MS_BIG_PIECES",
+     "listen_for": [
+      "they are cheaper"
+     ],
+     "ask": "Why are mosaic pieces small?",
+     "repair": "Make the same shape with big and small pieces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What are the small pieces of a mosaic called?",
+     "answer": "tesserae",
+     "shows": "tesserae"
+    },
+    {
+     "question": "What is done before placing the pieces?",
+     "answer": "sketch the design and plan the colours",
+     "shows": "planning"
+    }
+   ]
+  }
+ ]
+}

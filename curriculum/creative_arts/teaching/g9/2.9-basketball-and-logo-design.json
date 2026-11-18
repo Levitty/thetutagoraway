@@ -1,0 +1,186 @@
+{
+ "sub_strand": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI",
+ "title": "Basketball and Logo Design",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Passing and dribbling on a court with a coach; logos sketched by hand before any device.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL",
+   "key_step": "The child describes chest, bounce and overhead passes and when to use each, high and low dribbling, and the travelling and double dribble rules.",
+   "floor": {
+    "prerequisite": "Describes netball passes (Grade 8).",
+    "question": "How long may a netball player hold the ball?",
+    "answer": "three seconds"
+   },
+   "representations": [
+    "a basketball",
+    "a court",
+    "pictures"
+   ],
+   "steps": [
+    "Choose the pass for the defender.",
+    "Dribble high in space, low near a defender.",
+    "Do not walk with the ball or dribble twice."
+   ],
+   "contexts": [
+    "a PE basketball game",
+    "an inter-school tournament"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A player stops, then dribbles again.",
+     "say": "Allowed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Double dribble."
+    },
+    {
+     "beat": "write",
+     "do": "Write the passes and the two rules."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_TRAVEL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "May you walk with the basketball in your hands?",
+     "repair": "Walk with the ball and blow the whistle: travelling."
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_DOUBLE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "After you stop dribbling, may you dribble again?",
+     "repair": "Dribble, catch, then try again: whistle."
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_HIGH_LOW",
+     "listen_for": [
+      "a high dribble"
+     ],
+     "ask": "Which dribble protects the ball near a defender?",
+     "repair": "Dribble high past a defender, then low; who keeps it?"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.BASKETBALL.M_CA9_BB_PASS_CHOICE",
+     "listen_for": [
+      "the chest pass"
+     ],
+     "ask": "Which pass goes over a defender with raised arms?",
+     "repair": "Pass to a team mate behind a defender with raised arms."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which dribble protects the ball near a defender?",
+     "answer": "a low dribble",
+     "shows": "dribble"
+    },
+    {
+     "question": "What is travelling?",
+     "answer": "walking with the ball without dribbling",
+     "shows": "rule"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO",
+   "key_step": "The child says a good team logo is simple, easy to recognise, uses few colours, works small and large, and links to the team's name or spirit.",
+   "floor": {
+    "prerequisite": "Knows colour contrast (Grade 8).",
+    "question": "What is the complement of blue?",
+    "answer": "orange"
+   },
+   "representations": [
+    "sample logos",
+    "pencil and paper",
+    "two or three colours"
+   ],
+   "steps": [
+    "Brainstorm the team name and spirit.",
+    "Sketch simple ideas.",
+    "Choose few colours.",
+    "Test it small."
+   ],
+   "contexts": [
+    "a logo for the school basketball team",
+    "a logo for a class club"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a busy logo shrunk small.",
+     "say": "Can you read it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Simple works better."
+    },
+    {
+     "beat": "write",
+     "do": "Write four qualities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_DETAIL",
+     "listen_for": [
+      "detailed, with many pictures"
+     ],
+     "ask": "Is a good logo simple or detailed?",
+     "repair": "Shrink a busy logo and a simple one to stamp size."
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_MANY_COLOURS",
+     "listen_for": [
+      "as many as possible"
+     ],
+     "ask": "How many colours should a team logo usually use?",
+     "repair": "Print a logo in black only: does it still work?"
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_NO_MEANING",
+     "listen_for": [
+      "any picture you like"
+     ],
+     "ask": "What should a team logo show?",
+     "repair": "Brainstorm the team name and what it stands for first."
+    },
+    {
+     "code": "CREA.G9.CREATI.BASKETBALL_AND_LOGO_DESI.LOGO.M_CA9_LG_COPY",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "May you copy a famous club's logo for your team?",
+     "repair": "Discuss why every team needs its own identity."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a quality of a good logo.",
+     "answer": "any of: simple, recognisable, few colours, meaningful, works small",
+     "shows": "qualities"
+    },
+    {
+     "question": "Why use few colours?",
+     "answer": "it is clearer and easier to print",
+     "shows": "colour"
+    }
+   ]
+  }
+ ]
+}

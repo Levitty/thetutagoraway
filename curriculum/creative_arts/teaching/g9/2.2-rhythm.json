@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G9.CREATI.RHYTHM",
+ "title": "Rhythm",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Clap dotted rhythms against a steady beat; dictation in class. Notes are named in words on the phone.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION",
+   "key_step": "The child describes note extension: a dot adds half the value, a tie joins same-pitch notes, giving long-short patterns that move the stress.",
+   "floor": {
+    "prerequisite": "Groups notes in three-four (Grade 8).",
+    "question": "How many beats is a dotted minim?",
+    "answer": "three"
+   },
+   "representations": [
+    "claps",
+    "a monotone line",
+    "a drum"
+   ],
+   "steps": [
+    "Keep a steady beat.",
+    "Hold a dotted note half as long again.",
+    "Hold tied notes as one.",
+    "Feel the long-short pattern."
+   ],
+   "contexts": [
+    "the rhythm of a familiar hymn",
+    "a drum pattern for a dance"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count 1 2 3 4 and clap crotchets."
+    },
+    {
+     "beat": "predict",
+     "do": "Now a dotted crotchet and a quaver: even or long-short?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for long-short."
+    },
+    {
+     "beat": "reveal",
+     "do": "Clap it: long-short."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_DOTTED_EVEN",
+     "listen_for": [
+      "two even notes"
+     ],
+     "ask": "How does a dotted crotchet followed by a quaver sound?",
+     "repair": "Say \"taa-i te\" and clap long-short."
+    },
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_TIE_SOUND_TWICE",
+     "listen_for": [
+      "twice"
+     ],
+     "ask": "How many times do you sound two tied notes?",
+     "repair": "Clap a tied pair as one long clap."
+    },
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_DOT_REST",
+     "listen_for": [
+      "adds a short silence"
+     ],
+     "ask": "What does a dot after a note do?",
+     "repair": "Clap a crotchet, then a dotted crotchet; hear it held longer."
+    },
+    {
+     "code": "CREA.G9.CREATI.RHYTHM.NOTE_EXTENSION.M_CA9_NE_NO_EFFECT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Does adding dots change how a rhythm feels?",
+     "repair": "Clap a plain and a dotted version of one bar."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a dot after a note do?",
+     "answer": "adds half the note's value",
+     "shows": "dot"
+    },
+    {
+     "question": "How many times do you sound tied notes?",
+     "answer": "once",
+     "shows": "tie"
+    }
+   ]
+  }
+ ]
+}

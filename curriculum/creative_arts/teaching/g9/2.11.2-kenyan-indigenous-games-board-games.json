@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_",
+ "title": "Kenyan Indigenous Games Board games",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Boards can be pits in the ground or carved wood; seeds or pebbles as counters. Game names are for a teacher to confirm.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES",
+   "key_step": "The child names indigenous board games (bao and other sowing games), says how a turn is played (sow one seed per pit, capture) and what they build.",
+   "floor": {
+    "prerequisite": "Describes tagging games (Grade 8).",
+    "question": "What happens when a runner is tagged?",
+    "answer": "the runner becomes the chaser"
+   },
+   "representations": [
+    "a bao board or pits in the ground",
+    "seeds or pebbles",
+    "background music"
+   ],
+   "steps": [
+    "Pick up the seeds from a pit.",
+    "Sow one into each pit in turn.",
+    "Follow the capture rule.",
+    "Plan ahead."
+   ],
+   "contexts": [
+    "a cultural day",
+    "a break-time game under a tree"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Sow four seeds: 1, 2, 3, 4."
+    },
+    {
+     "beat": "predict",
+     "do": "Where does the last seed land?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Count the pits to check."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_CHESS",
+     "listen_for": [
+      "chess"
+     ],
+     "ask": "Which is an indigenous Kenyan board game?",
+     "repair": "Compare a chess board with a bao board of pits."
+    },
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_LUCK",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does winning at bao depend only on luck?",
+     "repair": "Play a round and plan two moves ahead."
+    },
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_BENEFIT",
+     "listen_for": [
+      "none; you sit still"
+     ],
+     "ask": "Name a benefit of indigenous board games.",
+     "repair": "List what the mind does in one game."
+    },
+    {
+     "code": "CREA.G9.CREATI.KENYAN_INDIGENOUS_GAMES_.BOARD_GAMES.M_CA9_BG_SOW_SKIP",
+     "listen_for": [
+      "as many as you like"
+     ],
+     "ask": "When sowing in bao, how many seeds go in each pit?",
+     "repair": "Sow slowly, counting one per pit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an indigenous board game.",
+     "answer": "bao or another sowing game",
+     "shows": "name"
+    },
+    {
+     "question": "Name a benefit of board games.",
+     "answer": "any of: counting, planning, patience, mental health",
+     "shows": "benefit"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "sub_strand": "CREA.G9.CREATI.DRAWING_AND_PAINTING",
+ "title": "Drawing and Painting",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Paint analogous strips first; landscapes and seascapes from the surroundings.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY",
+   "key_step": "The child says harmony (unity) is when all parts belong together, made by repeating similar colours, shapes, lines or textures, unlike contrast or dominance.",
+   "floor": {
+    "prerequisite": "Knows dominance (Grade 8).",
+    "question": "What is dominance?",
+    "answer": "the main feature that catches the eye first"
+   },
+   "representations": [
+    "landscape pictures",
+    "a woven mat",
+    "colour swatches"
+   ],
+   "steps": [
+    "Look for repeated colours or shapes.",
+    "Ask: does everything belong together?",
+    "Name how unity is made."
+   ],
+   "contexts": [
+    "a landscape of tea fields",
+    "a seascape at the coast"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Show a picture in greens and blues.",
+     "say": "Harmony or contrast?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for harmony."
+    },
+    {
+     "beat": "predict",
+     "do": "What creates it?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Similar, neighbouring colours."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_ALL_SAME",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does harmony mean everything in a picture is identical?",
+     "repair": "Show a landscape in greens and blues with varied shapes."
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_CONTRAST",
+     "listen_for": [
+      "red and green"
+     ],
+     "ask": "Which colours give harmony: red and green, or yellow and orange?",
+     "repair": "Paint both pairs and ask which feels calm."
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_DOMINANCE",
+     "listen_for": [
+      "harmony"
+     ],
+     "ask": "A picture has one big bright feature that catches the eye. Which principle is that?",
+     "repair": "Ask: does one thing stand out, or does everything belong together?"
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.HARMONY.M_CA9_HM_REPEAT_BAD",
+     "listen_for": [
+      "never repeat any shape"
+     ],
+     "ask": "How can an artist create unity in a picture?",
+     "repair": "Find repeated shapes in a woven mat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is harmony in a picture?",
+     "answer": "when all parts look as if they belong together",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name one way to create unity.",
+     "answer": "repeat similar colours, shapes, lines or textures",
+     "shows": "how"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS",
+   "key_step": "The child classifies analogous colours (neighbours on the wheel) and tells them from complementary colours (opposites).",
+   "floor": {
+    "prerequisite": "Names complementary colours (Grade 8).",
+    "question": "What is the complement of red?",
+    "answer": "green"
+   },
+   "representations": [
+    "a twelve-part colour wheel",
+    "paint",
+    "a gradation strip"
+   ],
+   "steps": [
+    "Pick a colour on the wheel.",
+    "Take the colours on either side.",
+    "Check they touch."
+   ],
+   "contexts": [
+    "painting a sunset in yellows and oranges",
+    "a forest in greens"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at yellow-orange.",
+     "say": "Name its neighbours."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yellow and orange."
+    },
+    {
+     "beat": "reveal",
+     "do": "An analogous group."
+    },
+    {
+     "beat": "write",
+     "do": "Write two analogous groups."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_OPPOSITE",
+     "listen_for": [
+      "opposite each other"
+     ],
+     "ask": "Where are analogous colours on the colour wheel?",
+     "repair": "Point at three neighbours on the wheel."
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_PAIR",
+     "listen_for": [
+      "blue and orange"
+     ],
+     "ask": "Which group is analogous?",
+     "repair": "Find each colour on the wheel and check if they touch."
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_ANY_THREE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are red, yellow and blue analogous?",
+     "repair": "Mark red, yellow and blue on the wheel: they are far apart."
+    },
+    {
+     "code": "CREA.G9.CREATI.DRAWING_AND_PAINTING.ANALOGOUS.M_CA9_AN_MOOD",
+     "listen_for": [
+      "loud and clashing"
+     ],
+     "ask": "What effect do analogous colours usually give?",
+     "repair": "Compare an analogous strip with a complementary strip."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Are analogous colours neighbours or opposites?",
+     "answer": "neighbours",
+     "shows": "position"
+    },
+    {
+     "question": "Name an analogous group.",
+     "answer": "any three neighbours, such as blue, blue-green and green",
+     "shows": "example"
+    }
+   ]
+  }
+ ]
+}

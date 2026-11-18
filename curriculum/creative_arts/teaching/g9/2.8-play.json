@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G9.CREATI.PLAY",
+ "title": "Play",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Read a short Kenyan play script; learners write and act a one-act play on a societal issue.",
+ "skills": [
+  {
+   "skill": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT",
+   "key_step": "The child names the parts of a script: title, cast list, acts and scenes, the character's name before each speech, dialogue without quotation marks, stage directions in brackets.",
+   "floor": {
+    "prerequisite": "Describes the elements of a play.",
+    "question": "What is dialogue?",
+    "answer": "what the characters say"
+   },
+   "representations": [
+    "a sample script",
+    "a story page to compare",
+    "highlighters"
+   ],
+   "steps": [
+    "Title and cast list.",
+    "Act and scene headings.",
+    "NAME: words spoken.",
+    "(Stage directions in brackets.)"
+   ],
+   "contexts": [
+    "a one-act play on drug abuse",
+    "a school drama festival entry"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Mama said, \"Come home.\""
+    },
+    {
+     "beat": "predict",
+     "do": "How would a script write it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"MAMA: Come home.\""
+    },
+    {
+     "beat": "reveal",
+     "do": "Write it as a script."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_QUOTES",
+     "listen_for": [
+      "in quotation marks, like a story"
+     ],
+     "ask": "How is dialogue written in a play script?",
+     "repair": "Show a story page and a script page side by side."
+    },
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_DIRECTIONS_PLAIN",
+     "listen_for": [
+      "as ordinary lines"
+     ],
+     "ask": "How are stage directions shown in a script?",
+     "repair": "Underline every stage direction in a sample script."
+    },
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_NO_CAST",
+     "listen_for": [
+      "the first line of dialogue"
+     ],
+     "ask": "What comes at the start of a play script, after the title?",
+     "repair": "Read the first page of a published play."
+    },
+    {
+     "code": "CREA.G9.CREATI.PLAY.SCRIPT_FORMAT.M_CA9_SF_SCENE_ACT",
+     "listen_for": [
+      "a scene"
+     ],
+     "ask": "Which is bigger: an act or a scene?",
+     "repair": "Show a contents page: Act 1, Scenes 1-3."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How are stage directions shown?",
+     "answer": "in brackets or italics",
+     "shows": "directions"
+    },
+    {
+     "question": "What comes first in a script after the title?",
+     "answer": "the cast list",
+     "shows": "cast"
+    }
+   ]
+  }
+ ]
+}
