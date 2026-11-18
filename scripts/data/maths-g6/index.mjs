@@ -9,4 +9,5 @@ import * as mult from './multiplication.mjs';
 import * as div from './division.mjs';
 import * as ineq from './inequalities.mjs';
 import * as frac from './fractions.mjs';
-export const DEPTH = [whole, mult, div, ineq, frac];
+import * as dec from './decimals.mjs';
+export const DEPTH = [whole, mult, div, ineq, frac, dec];

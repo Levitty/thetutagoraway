@@ -2848,6 +2848,1020 @@ export const TEACHING_PACK_G6 = {
   "sub_strand_name": "Fractions",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS",
+  "key_step": "The child names each place after the point in order (tenths, hundredths, thousandths, ten-thousandths), counting zeros, and gives a digit's value as a fraction.",
+  "floor": {
+   "prerequisite": "Names tenths, hundredths and thousandths.",
+   "question": "In 0.375 which place is the 7 in?",
+   "answer": "hundredths"
+  },
+  "representations": [
+   "a metre stick split into tenths, hundredths and thousandths",
+   "a place value chart that runs past the point",
+   "the digit's value as a fraction"
+  ],
+  "steps": [
+   "Find the point.",
+   "Name the places after it in order: tenths, hundredths, thousandths, ten-thousandths.",
+   "Count every digit, zeros too.",
+   "Give the value: the digit over 10, 100, 1,000 or 10,000."
+  ],
+  "contexts": [
+   "the thickness of a sheet of paper in metres",
+   "a race time in seconds",
+   "a medicine dose in litres"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a chart: ones, point, tenths, hundredths, thousandths, ten-thousandths."
+   },
+   {
+    "beat": "write",
+    "do": "Write 2.0471 in it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 4.",
+    "say": "Which column is the 4 in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to name it."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write \"4 hundredths = 4/100\"."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS.M_PLACE_NAME_SHIFT",
+    "listen_for": [
+     "thousandths",
+     "third place"
+    ],
+    "ask": "Count the places after the point with me: which number is the 5?",
+    "repair": "The second place after the point is hundredths.",
+    "error": "Names the second place after the point as thousandths, or counts the places one off.",
+    "example": {
+     "question": "Which place is the 5 in 0.3524?",
+     "wrong_answer": "thousandths",
+     "correct_answer": "hundredths"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS.M_TH_SOUNDS_LIKE_WHOLE",
+    "listen_for": [
+     "0.007",
+     "three places"
+    ],
+    "ask": "How many places after the point is ten-thousandths?",
+    "repair": "Ten-thousandths is the fourth place: 0.0007.",
+    "error": "Confuses \"ten-thousandths\" with \"thousands\" so writes the wrong number of places.",
+    "example": {
+     "question": "Write 7 ten-thousandths",
+     "wrong_answer": "0.007",
+     "correct_answer": "0.0007"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS.M_ONETHS",
+    "listen_for": [
+     "oneths",
+     "the first one is ones"
+    ],
+    "ask": "Where is the ones place on the chart?",
+    "repair": "The ones place is before the point; the first place after it is tenths.",
+    "error": "Names the first place after the point \"ones\" (or \"oneths\"), as if the places mirrored round the point, so every place after it is one off.",
+    "example": {
+     "question": "In 2.0471 which place is the 4 in?",
+     "wrong_answer": "tenths",
+     "correct_answer": "hundredths"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS.M_ZERO_AFTER_POINT_SKIPPED",
+    "listen_for": [
+     "thousandths",
+     "start at the 3"
+    ],
+    "ask": "What is in the tenths column of 0.0306?",
+    "repair": "Zeros after the point take their place: the 6 is in the fourth place.",
+    "error": "Skips a zero just after the point, so names the later digits one place too high.",
+    "example": {
+     "question": "In 0.0306 which place is the 6 in?",
+     "wrong_answer": "thousandths",
+     "correct_answer": "ten-thousandths"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "In 0.3524 which place is the 5 in?",
+    "answer": "hundredths",
+    "shows": "second place"
+   },
+   {
+    "question": "Write 7 ten-thousandths as a decimal.",
+    "answer": "0.0007",
+    "shows": "four places"
+   }
+  ],
+  "name": "Identify decimals up to ten-thousandths",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP",
+  "key_step": "The child counts the places asked for, draws a line after them, and looks once at the next digit to decide.",
+  "floor": {
+   "prerequisite": "Rounds whole numbers to the nearest ten.",
+   "question": "Round 47 to the nearest ten.",
+   "answer": "50"
+  },
+  "representations": [
+   "a number line between two hundredths",
+   "the decimal with a line after the last place to keep",
+   "a race time or a price rounded"
+  ],
+  "steps": [
+   "Count the decimal places asked for and draw a line.",
+   "Look at the next digit only.",
+   "5 or more: add one to the last kept digit, carrying across a 9.",
+   "Write the answer with exactly the places asked for."
+  ],
+  "contexts": [
+   "race times at sports day",
+   "the mass of a parcel in kg",
+   "rainfall in a county"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2.3678 and a line after the 6."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 7.",
+    "say": "Is this digit 5 or more?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to decide."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child to say the rounded number."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2.37."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP.M_DROP_DIGITS",
+    "listen_for": [
+     "2.36",
+     "cut it off"
+    ],
+    "ask": "What is the digit after the line?",
+    "repair": "Look at the next digit: 7 is 5 or more, so round up.",
+    "error": "Cuts the extra digits off without looking at the next digit.",
+    "example": {
+     "question": "Round 2.3678 to 2 decimal places",
+     "wrong_answer": "2.36",
+     "correct_answer": "2.37"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP.M_NINE_CARRY",
+    "listen_for": [
+     "4.9910",
+     "ten in one place"
+    ],
+    "ask": "Can one place hold 10?",
+    "repair": "Carry the 1 to the next place to the left.",
+    "error": "Rounds up a 9 by writing 10 in one place instead of carrying.",
+    "example": {
+     "question": "Round 4.9976 to 3 decimal places",
+     "wrong_answer": "4.9910 (the 10 written in one place)",
+     "correct_answer": "4.998"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP.M_ROUND_TO_WRONG_PLACES",
+    "listen_for": [
+     "6.43",
+     "two places"
+    ],
+    "ask": "How many digits are after the point in your answer?",
+    "repair": "Three decimal places means three digits after the point.",
+    "error": "Rounds to the wrong number of decimal places.",
+    "example": {
+     "question": "Round 6.4283 to 3 decimal places.",
+     "wrong_answer": "6.43",
+     "correct_answer": "6.428"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP.M_ROUND_IN_STEPS_DECIMAL",
+    "listen_for": [
+     "3.45",
+     "first the 9"
+    ],
+    "ask": "Which one digit tells us, and what is it?",
+    "repair": "Look only at the digit after the second place: 4, so round down.",
+    "error": "Rounds from the right one place at a time, so a digit that should round down is pushed up.",
+    "example": {
+     "question": "Round 3.4449 to 2 decimal places.",
+     "wrong_answer": "3.45 (3.4449 to 3.445 to 3.45)",
+     "correct_answer": "3.44"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Round 2.3678 to 2 decimal places.",
+    "answer": "2.37",
+    "shows": "one look at the next digit"
+   },
+   {
+    "question": "Round 4.9996 to 3 decimal places.",
+    "answer": "5.000",
+    "shows": "carry across nines"
+   }
+  ],
+  "name": "Round decimals to up to 3 decimal places",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION",
+  "key_step": "The child reads the decimal aloud by its last place (35 hundredths), writes it over 10, 100 or 1,000 and simplifies.",
+  "floor": {
+   "prerequisite": "Simplifies fractions.",
+   "question": "Simplify 25/100.",
+   "answer": "1/4"
+  },
+  "representations": [
+   "a hundred square shaded",
+   "the decimal read aloud with its place name",
+   "the fraction simplified step by step"
+  ],
+  "steps": [
+   "Read the decimal aloud: 0.35 is 35 hundredths.",
+   "Write it as a fraction over 10, 100 or 1,000.",
+   "Keep the whole number part as a whole.",
+   "Simplify."
+  ],
+  "contexts": [
+   "a rainfall figure",
+   "the mass of a packet of tea",
+   "a share of a harvest"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a hundred square."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0.35."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 5.",
+    "say": "Which place is the last digit in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for hundredths."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to shade 35 hundredths."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 35/100 = 7/20."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION.M_DENOMINATOR_TEN_ALWAYS",
+    "listen_for": [
+     "35/10",
+     "over ten"
+    ],
+    "ask": "Which place is the last digit of 0.35 in?",
+    "repair": "The last place decides the denominator: hundredths, so over 100.",
+    "error": "Always uses 10 as the denominator whatever the number of decimal places.",
+    "example": {
+     "question": "0.35 as a fraction",
+     "wrong_answer": "35/10",
+     "correct_answer": "7/20"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION.M_POINT_DROPPED_THEN_ONE",
+    "listen_for": [
+     "25/2",
+     "two digits"
+    ],
+    "ask": "Read 0.25 aloud. How many hundredths?",
+    "repair": "The denominator is 100 for two places, not the number of digits.",
+    "error": "Writes the digits after the point as a fraction over the number of digits.",
+    "example": {
+     "question": "0.25 as a fraction",
+     "wrong_answer": "25/2",
+     "correct_answer": "1/4"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION.M_DECIMAL_FRACTION_NOT_SIMPLIFIED",
+    "listen_for": [
+     "35/100"
+    ],
+    "ask": "Can 35 and 100 both be divided by 5?",
+    "repair": "Simplify fully: 7/20.",
+    "error": "Writes the decimal over 10, 100 or 1,000 but does not simplify when the simplest form is asked.",
+    "example": {
+     "question": "0.35 as a fraction in simplest form",
+     "wrong_answer": "35/100",
+     "correct_answer": "7/20"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION.M_WHOLE_PART_DROPPED",
+    "listen_for": [
+     "3/5",
+     "just the six"
+    ],
+    "ask": "Read 2.6 aloud. What happened to the two?",
+    "repair": "Keep the whole number: 2 6/10 = 2 3/5.",
+    "error": "Drops the whole number part when changing a decimal more than 1 to a fraction.",
+    "example": {
+     "question": "2.6 as a mixed number in simplest form",
+     "wrong_answer": "3/5",
+     "correct_answer": "2 3/5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 0.35 as a fraction in simplest form.",
+    "answer": "7/20",
+    "shows": "hundredths then simplify"
+   },
+   {
+    "question": "Write 2.6 as a mixed number in simplest form.",
+    "answer": "2 3/5",
+    "shows": "whole kept"
+   }
+  ],
+  "name": "Convert decimals to fractions",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+  "key_step": "The child renames the fraction with a denominator of 10, 100 or 1,000 by multiplying top and bottom by the same number, or divides the numerator by the denominator.",
+  "floor": {
+   "prerequisite": "Writes equivalent fractions.",
+   "question": "Write 1/4 with denominator 100.",
+   "answer": "25/100"
+  },
+  "representations": [
+   "a hundred square shaded",
+   "the equivalent fraction over 100",
+   "the division of the numerator by the denominator"
+  ],
+  "steps": [
+   "Find what times the denominator gives 10, 100 or 1,000.",
+   "Multiply the numerator by the same number.",
+   "Write the digits in the places the denominator says.",
+   "Or divide the numerator by the denominator."
+  ],
+  "contexts": [
+   "a quarter of a kilogramme of meat",
+   "three fifths of a litre of milk",
+   "a share of shillings"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3/20."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 20.",
+    "say": "What times 20 makes 100?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to multiply the 3 by 5 too."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 15/100 = 0.15."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_NUMERATOR_POINT_DENOMINATOR",
+    "listen_for": [
+     "3.4",
+     "three point four"
+    ],
+    "ask": "Is 3/4 less than 1 or more than 3?",
+    "repair": "The fraction is a division: 3 / 4 = 0.75.",
+    "error": "Writes the numerator, a point and the denominator as a decimal.",
+    "example": {
+     "question": "3/4 as a decimal",
+     "wrong_answer": "3.4",
+     "correct_answer": "0.75"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_DIVIDE_THE_WRONG_WAY",
+    "listen_for": [
+     "4",
+     "four divided by one"
+    ],
+    "ask": "Is a quarter more or less than 1?",
+    "repair": "Divide the numerator by the denominator: 1 / 4.",
+    "error": "Divides the denominator by the numerator.",
+    "example": {
+     "question": "1/4 as a decimal",
+     "wrong_answer": "4",
+     "correct_answer": "0.25"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_HUNDREDTHS_AS_TENTHS",
+    "listen_for": [
+     "0.7",
+     "point seven"
+    ],
+    "ask": "How many places after the point does hundredths need?",
+    "repair": "7/100 = 0.07.",
+    "error": "Writes hundredths in the tenths place.",
+    "example": {
+     "question": "7/100 as a decimal",
+     "wrong_answer": "0.7",
+     "correct_answer": "0.07"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_SCALE_BOTTOM_ONLY",
+    "listen_for": [
+     "0.03",
+     "three hundredths"
+    ],
+    "ask": "Is 3/100 the same size as 3/20?",
+    "repair": "Multiply the top by 5 too: 15/100.",
+    "error": "Makes the denominator 100 but leaves the numerator as it was.",
+    "example": {
+     "question": "3/20 as a decimal",
+     "wrong_answer": "0.03 (3 over 100)",
+     "correct_answer": "0.15"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 3/4 as a decimal.",
+    "answer": "0.75",
+    "shows": "rename or divide"
+   },
+   {
+    "question": "Write 3/20 as a decimal.",
+    "answer": "0.15",
+    "shows": "top and bottom by the same number"
+   }
+  ],
+  "name": "Convert fractions to decimals",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT",
+  "key_step": "The child multiplies by 100 by moving every digit two places to the left and says that 1 whole is 100%.",
+  "floor": {
+   "prerequisite": "Multiplies decimals by 100.",
+   "question": "What is 0.45 x 100?",
+   "answer": "45"
+  },
+  "representations": [
+   "a hundred square: 1 whole is 100 squares",
+   "the decimal on a chart, digits moved two places",
+   "a percentage bar going past 100%"
+  ],
+  "steps": [
+   "Multiply by 100: move every digit two places left.",
+   "Fill any empty place with 0.",
+   "Keep the whole number part: 1 whole is 100%.",
+   "Write the % sign."
+  ],
+  "contexts": [
+   "the share of a class present",
+   "a price rise",
+   "a crop that grew more than last year"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a hundred square."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0.45."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the hundred square.",
+    "say": "How many of the hundred squares is 0.45?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 45."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 0.45 = 45%."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT.M_MOVE_ONE_PLACE",
+    "listen_for": [
+     "4.5%",
+     "one place"
+    ],
+    "ask": "How many places does times 100 move the digits?",
+    "repair": "Two places: 0.45 x 100 = 45.",
+    "error": "Moves the decimal point one place, not two.",
+    "example": {
+     "question": "0.45 as a percentage",
+     "wrong_answer": "4.5%",
+     "correct_answer": "45%"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT.M_SMALL_DECIMAL_WRONG",
+    "listen_for": [
+     "50%",
+     "point zero five is fifty"
+    ],
+    "ask": "Is 0.05 more or less than one tenth?",
+    "repair": "0.05 is 5 hundredths: 5%.",
+    "error": "Writes 0.05 as 50% (or 0.5 as 5%) by losing a zero.",
+    "example": {
+     "question": "0.05 as a percentage",
+     "wrong_answer": "50%",
+     "correct_answer": "5%"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT.M_PERCENT_SIGN_ONLY",
+    "listen_for": [
+     "0.45%"
+    ],
+    "ask": "Is 0.45% less than one out of a hundred?",
+    "repair": "Multiply by 100 before writing the sign.",
+    "error": "Puts a percent sign on the decimal without multiplying by 100.",
+    "example": {
+     "question": "0.45 as a percentage",
+     "wrong_answer": "0.45%",
+     "correct_answer": "45%"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT.M_PERCENT_CAPPED_AT_100",
+    "listen_for": [
+     "35%",
+     "drop the one"
+    ],
+    "ask": "What is 1 whole as a percentage?",
+    "repair": "1 whole is 100%, so 1.35 is 135%.",
+    "error": "Drops the whole number part, believing a percentage cannot be more than 100.",
+    "example": {
+     "question": "1.35 as a percentage",
+     "wrong_answer": "35%",
+     "correct_answer": "135%"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 0.45 as a percentage.",
+    "answer": "45%",
+    "shows": "two places"
+   },
+   {
+    "question": "Write 1.35 as a percentage.",
+    "answer": "135%",
+    "shows": "more than one whole"
+   }
+  ],
+  "name": "Convert decimals to percentages",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL",
+  "key_step": "The child divides by 100 by moving every digit two places to the right, filling places with zeros, and checks that 100% is 1.",
+  "floor": {
+   "prerequisite": "Divides by 100.",
+   "question": "What is 35 / 100?",
+   "answer": "0.35"
+  },
+  "representations": [
+   "a hundred square",
+   "the percentage on a chart, digits moved two places right",
+   "a number line with 100% at 1"
+  ],
+  "steps": [
+   "Divide by 100: move every digit two places right.",
+   "Fill empty places after the point with zeros.",
+   "Check: less than 100% gives less than 1, more than 100% gives more than 1.",
+   "Write the decimal."
+  ],
+  "contexts": [
+   "interest on savings",
+   "VAT on a receipt",
+   "the share of rain that fell in a week"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 7%."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 7.",
+    "say": "Divided by 100, how many places does the 7 move?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for two."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write 0.07, filling the tenths with 0."
+   },
+   {
+    "beat": "write",
+    "do": "Write 7% = 0.07."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL.M_PERCENT_AS_WHOLE",
+    "listen_for": [
+     "0.7",
+     "point seven"
+    ],
+    "ask": "Is 7 out of 100 the same as 7 tenths?",
+    "repair": "Two places: 7% = 0.07.",
+    "error": "Writes the percentage number with a decimal point in front of it only when two digits, or writes 7% as 0.7.",
+    "example": {
+     "question": "7% as a decimal",
+     "wrong_answer": "0.7",
+     "correct_answer": "0.07"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL.M_DIVIDE_BY_TEN",
+    "listen_for": [
+     "3.5",
+     "divide by ten"
+    ],
+    "ask": "Is 35% more or less than one whole?",
+    "repair": "Per cent is per hundred: divide by 100.",
+    "error": "Divides by 10, not 100.",
+    "example": {
+     "question": "35% as a decimal",
+     "wrong_answer": "3.5",
+     "correct_answer": "0.35"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL.M_HALF_PERCENT",
+    "listen_for": [
+     "0.05",
+     "point zero five"
+    ],
+    "ask": "Is 0.5% more or less than 1%?",
+    "repair": "Move every digit two places: 0.005.",
+    "error": "Writes a percentage less than 1 with the point moved only one place, or as if it were whole.",
+    "example": {
+     "question": "0.5% as a decimal",
+     "wrong_answer": "0.05",
+     "correct_answer": "0.005"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL.M_OVER_100_PERCENT_DECIMAL",
+    "listen_for": [
+     "0.120",
+     "zero point"
+    ],
+    "ask": "Is 120% more or less than 1 whole?",
+    "repair": "100% is 1, so 120% is 1.2.",
+    "error": "Puts the point in front of every percentage, so a percentage over 100 becomes less than 1.",
+    "example": {
+     "question": "120% as a decimal",
+     "wrong_answer": "0.120",
+     "correct_answer": "1.2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 7% as a decimal.",
+    "answer": "0.07",
+    "shows": "zero in the tenths"
+   },
+   {
+    "question": "Write 120% as a decimal.",
+    "answer": "1.2",
+    "shows": "more than one whole"
+   }
+  ],
+  "name": "Convert percentages to decimals",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP",
+  "key_step": "The child lines up the decimal points, fills empty places with zeros, and adds column by column carrying as in whole numbers.",
+  "floor": {
+   "prerequisite": "Adds decimals with the same number of places.",
+   "question": "What is 2.35 + 1.42?",
+   "answer": "3.77"
+  },
+  "representations": [
+   "shillings and cents laid out",
+   "numbers written with the points in a line on squared paper",
+   "zeros written to make the places equal"
+  ],
+  "steps": [
+   "Write the numbers with the points in a line.",
+   "Fill the empty places with zeros.",
+   "Add from the right, carrying across the point when needed.",
+   "Put the point in the answer under the other points."
+  ],
+  "contexts": [
+   "adding masses on a scale",
+   "lengths of cloth in metres",
+   "race times"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3.5 above 2.125, with the points in a line."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the space under the 5.",
+    "say": "What can we write in the empty places?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for zeros."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write 3.500 and add."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 5.625."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP.M_RIGHT_ALIGN",
+    "listen_for": [
+     "2.160",
+     "line up the right"
+    ],
+    "ask": "Where are the decimal points?",
+    "repair": "Line up the points, not the last digits.",
+    "error": "Lines the digits up on the right instead of lining up the decimal points.",
+    "example": {
+     "question": "3.5 + 2.125",
+     "wrong_answer": "2.160 (35 + 2,125 added as whole numbers)",
+     "correct_answer": "5.625"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP.M_CARRY_ACROSS_POINT",
+    "listen_for": [
+     "0.2100",
+     "no carry"
+    ],
+    "ask": "What happens to the 1 from 12 tenths?",
+    "repair": "Carry it across the point into the ones.",
+    "error": "Does not carry across the decimal point, or treats the digits after the point as a separate whole number.",
+    "example": {
+     "question": "0.7500 + 0.4600",
+     "wrong_answer": "0.2100 (the 1 was not carried across the point)",
+     "correct_answer": "1.2100"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP.M_WHOLE_NUMBER_UNDER_DECIMALS",
+    "listen_for": [
+     "0.279",
+     "four at the end"
+    ],
+    "ask": "Where is the point in 4?",
+    "repair": "4 = 4.000: its point goes in line with the others.",
+    "error": "Writes a whole number under the decimal places when adding it to a decimal.",
+    "example": {
+     "question": "4 + 0.275",
+     "wrong_answer": "0.279",
+     "correct_answer": "4.275"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP.M_COLUMN_TOTALS_WRITTEN",
+    "listen_for": [
+     "0.1212",
+     "twelve and twelve"
+    ],
+    "ask": "Can one place hold 12?",
+    "repair": "Carry the ten into the next place.",
+    "error": "Writes the full total of each column instead of carrying.",
+    "example": {
+     "question": "0.47 + 0.85",
+     "wrong_answer": "0.1212 (7 + 5 = 12 and 4 + 8 = 12, written side by side)",
+     "correct_answer": "1.32"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 3.5 + 2.125?",
+    "answer": "5.625",
+    "shows": "points in line"
+   },
+   {
+    "question": "What is 4 + 0.275 + 1.0603?",
+    "answer": "5.3353",
+    "shows": "a whole number and three addends"
+   }
+  ],
+  "name": "Add decimals up to 4 decimal places",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP": {
+  "skill": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP",
+  "key_step": "The child lines up the points, writes zeros in the empty places of the top number, and renames across zeros (each zero becomes 9 except the last).",
+  "floor": {
+   "prerequisite": "Subtracts decimals with the same number of places.",
+   "question": "What is 4.75 - 1.32?",
+   "answer": "3.43"
+  },
+  "representations": [
+   "shillings and cents: change from a note",
+   "the numbers on squared paper with the points in a line",
+   "renaming shown with crossed-out digits"
+  ],
+  "steps": [
+   "Write the points in a line.",
+   "Fill the empty places of the top number with zeros.",
+   "Subtract from the right, renaming across zeros.",
+   "Check by adding the answer to the number taken away."
+  ],
+  "contexts": [
+   "change from a shopping trip",
+   "rain this week minus last week",
+   "cloth left after cutting"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5.0000 above 1.2345."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the last 0.",
+    "say": "Can we take 5 from 0?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "write",
+    "do": "Rename 5 ones as 4 ones, 9 tenths, 9 hundredths, 9 thousandths and 10 ten-thousandths."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to subtract each column."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3.7655."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP.M_SMALLER_FROM_LARGER_DIGIT",
+    "listen_for": [
+     "4.2345",
+     "take the smaller"
+    ],
+    "ask": "Which number is on top in each column?",
+    "repair": "The top number is the one taken from: rename when its digit is smaller.",
+    "error": "Subtracts the smaller digit from the larger in every column, whichever is on top.",
+    "example": {
+     "question": "5.0000 - 1.2345",
+     "wrong_answer": "4.2345 (the smaller digit taken from the bigger in each column)",
+     "correct_answer": "3.7655"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP.M_UNEQUAL_LENGTH_LEFT",
+    "listen_for": [
+     "2.225",
+     "copied the 2 and 5"
+    ],
+    "ask": "What is in the empty places of 2.5?",
+    "repair": "Write 2.500 before subtracting.",
+    "error": "Subtracts a shorter decimal without writing zeros, so lines up the wrong digits.",
+    "example": {
+     "question": "2.5 - 0.325",
+     "wrong_answer": "2.225 (the empty places were left blank and the 2 and 5 copied down)",
+     "correct_answer": "2.175"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP.M_WHOLE_MINUS_DECIMAL_COPIED",
+    "listen_for": [
+     "4.45",
+     "copy the .45"
+    ],
+    "ask": "What is 6 written with two decimal places?",
+    "repair": "6 = 6.00: rename and subtract.",
+    "error": "Takes a decimal from a whole number by copying the decimal digits down.",
+    "example": {
+     "question": "6 - 2.45",
+     "wrong_answer": "4.45",
+     "correct_answer": "3.55"
+    }
+   },
+   {
+    "code": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP.M_ZEROS_NOT_NINES",
+    "listen_for": [
+     "3.8765",
+     "all tens"
+    ],
+    "ask": "When a zero gives one away, what is left?",
+    "repair": "Each middle zero becomes 9; only the last place gets 10.",
+    "error": "Renames across zeros by making each zero 10 without taking 1 from it, so the answer is too big.",
+    "example": {
+     "question": "5.0000 - 1.2345",
+     "wrong_answer": "3.8765",
+     "correct_answer": "3.7655"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 5.0000 - 1.2345?",
+    "answer": "3.7655",
+    "shows": "renaming across zeros"
+   },
+   {
+    "question": "What is 2.5 - 0.325?",
+    "answer": "2.175",
+    "shows": "zeros in empty places"
+   }
+  ],
+  "name": "Subtract decimals up to 4 decimal places",
+  "sub_strand": "MATH.G6.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY": {
   "skill": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY",
   "key_step": "The child decides whether the boundary number is allowed and which side is allowed, and then chooses the symbol.",

@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: NUMBER.DECIMALS, MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 151,
-  "misconceptions": 235
+  "prerequisites": 154,
+  "misconceptions": 251
  },
  "sub_strands": [
   {
@@ -2840,6 +2840,13 @@
        "strength": "essential",
        "reason": "A percentage is a fraction out of 100.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Multiplying by 100 moves each digit two places to the left; Grade 5 multiplies decimals by 10, 100 and 1,000.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2870,6 +2877,13 @@
        "strength": "essential",
        "reason": "The reverse conversion.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.DIV_BY_1000",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Dividing by 100 moves each digit two places to the right; Grade 5 divides by 10, 100 and 1,000.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -2899,6 +2913,13 @@
        "kind": "skill",
        "strength": "essential",
        "reason": "Adding decimals with different numbers of places.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Lining up the digits needs each place named.",
        "status": "proposed"
       }
      ],
@@ -3180,6 +3201,246 @@
      "cause": "Leaves the empty places blank and subtracts the 5 from the 3.",
      "reveals": "Decimals of unequal length.",
      "help": "Add zeros so both numbers have the same number of places.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS.M_ONETHS",
+     "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS",
+     "error": "Names the first place after the point \"ones\" (or \"oneths\"), as if the places mirrored round the point, so every place after it is one off.",
+     "example": {
+      "question": "In 2.0471 which place is the 4 in?",
+      "wrong_answer": "tenths",
+      "correct_answer": "hundredths"
+     },
+     "cause": "Believes the places after the point mirror the whole number places, ones included.",
+     "reveals": "The place one to the left as an option.",
+     "help": "The ones place is the middle of the chart; the first place after the point is tenths.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS.M_ZERO_AFTER_POINT_SKIPPED",
+     "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS",
+     "error": "Skips a zero just after the point, so names the later digits one place too high.",
+     "example": {
+      "question": "In 0.0306 which place is the 6 in?",
+      "wrong_answer": "thousandths",
+      "correct_answer": "ten-thousandths"
+     },
+     "cause": "Treats zeros after the point as empty and starts counting at the first digit that is not zero.",
+     "reveals": "The place one too high as an option.",
+     "help": "Write the number on the chart: every digit after the point, zeros too, has its own column.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP.M_ROUND_TO_WRONG_PLACES",
+     "skill": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP",
+     "error": "Rounds to the wrong number of decimal places.",
+     "example": {
+      "question": "Round 6.4283 to 3 decimal places.",
+      "wrong_answer": "6.43",
+      "correct_answer": "6.428"
+     },
+     "cause": "Counts the places in the answer wrongly, or counts from the end of the number.",
+     "reveals": "The answer rounded to one place fewer as an option.",
+     "help": "Count three digits after the point, draw a line, then look at the next digit.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP.M_ROUND_IN_STEPS_DECIMAL",
+     "skill": "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP",
+     "error": "Rounds from the right one place at a time, so a digit that should round down is pushed up.",
+     "example": {
+      "question": "Round 3.4449 to 2 decimal places.",
+      "wrong_answer": "3.45 (3.4449 to 3.445 to 3.45)",
+      "correct_answer": "3.44"
+     },
+     "cause": "Believes each rounding step feeds the next.",
+     "reveals": "The rounded-up answer as an option.",
+     "help": "Look once at the digit after the place you round to: here 4, so round down.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION.M_DECIMAL_FRACTION_NOT_SIMPLIFIED",
+     "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION",
+     "error": "Writes the decimal over 10, 100 or 1,000 but does not simplify when the simplest form is asked.",
+     "example": {
+      "question": "0.35 as a fraction in simplest form",
+      "wrong_answer": "35/100",
+      "correct_answer": "7/20"
+     },
+     "cause": "Stops at the first fraction.",
+     "reveals": "The unsimplified fraction as an option.",
+     "help": "Divide the top and the bottom by the same number until nothing else divides both.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION.M_WHOLE_PART_DROPPED",
+     "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION",
+     "error": "Drops the whole number part when changing a decimal more than 1 to a fraction.",
+     "example": {
+      "question": "2.6 as a mixed number in simplest form",
+      "wrong_answer": "3/5",
+      "correct_answer": "2 3/5"
+     },
+     "cause": "Looks only at the digits after the point.",
+     "reveals": "The fraction part alone as an option.",
+     "help": "Read 2.6 aloud: two and six tenths. The two wholes stay.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_HUNDREDTHS_AS_TENTHS",
+     "skill": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+     "error": "Writes hundredths in the tenths place.",
+     "example": {
+      "question": "7/100 as a decimal",
+      "wrong_answer": "0.7",
+      "correct_answer": "0.07"
+     },
+     "cause": "Writes the numerator straight after the point whatever the denominator.",
+     "reveals": "The answer ten times too big as an option.",
+     "help": "Hundredths fill two places after the point: 7 hundredths is 0.07.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_SCALE_BOTTOM_ONLY",
+     "skill": "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+     "error": "Makes the denominator 100 but leaves the numerator as it was.",
+     "example": {
+      "question": "3/20 as a decimal",
+      "wrong_answer": "0.03 (3 over 100)",
+      "correct_answer": "0.15"
+     },
+     "cause": "Changes the denominator to a power of ten and forgets the numerator.",
+     "reveals": "An answer that is far too small as an option.",
+     "help": "Multiply the top and the bottom by the same number: 3/20 = 15/100 = 0.15.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT.M_PERCENT_SIGN_ONLY",
+     "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT",
+     "error": "Puts a percent sign on the decimal without multiplying by 100.",
+     "example": {
+      "question": "0.45 as a percentage",
+      "wrong_answer": "0.45%",
+      "correct_answer": "45%"
+     },
+     "cause": "Thinks a percentage is a decimal with a sign.",
+     "reveals": "The decimal with a percent sign as an option.",
+     "help": "Ask: is 0.45 of the whole less than half or less than one hundredth?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT.M_PERCENT_CAPPED_AT_100",
+     "skill": "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT",
+     "error": "Drops the whole number part, believing a percentage cannot be more than 100.",
+     "example": {
+      "question": "1.35 as a percentage",
+      "wrong_answer": "35%",
+      "correct_answer": "135%"
+     },
+     "cause": "Has only seen percentages of a part of something.",
+     "reveals": "The answer with the whole lost as an option.",
+     "help": "One whole is 100%; 1.35 is one whole and 35 hundredths, so 135%.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL.M_HALF_PERCENT",
+     "skill": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL",
+     "error": "Writes a percentage less than 1 with the point moved only one place, or as if it were whole.",
+     "example": {
+      "question": "0.5% as a decimal",
+      "wrong_answer": "0.05",
+      "correct_answer": "0.005"
+     },
+     "cause": "Does not move the point two places when the percentage already has a point.",
+     "reveals": "The answer ten times too big as an option.",
+     "help": "Divide by 100 by moving every digit two places right: 0.5 becomes 0.005.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL.M_OVER_100_PERCENT_DECIMAL",
+     "skill": "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL",
+     "error": "Puts the point in front of every percentage, so a percentage over 100 becomes less than 1.",
+     "example": {
+      "question": "120% as a decimal",
+      "wrong_answer": "0.120",
+      "correct_answer": "1.2"
+     },
+     "cause": "Thinks every percentage turns into a decimal starting 0.",
+     "reveals": "An answer below 1 for a percentage above 100.",
+     "help": "100% is 1 whole, so 120% is more than 1: 1.2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP.M_WHOLE_NUMBER_UNDER_DECIMALS",
+     "skill": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP",
+     "error": "Writes a whole number under the decimal places when adding it to a decimal.",
+     "example": {
+      "question": "4 + 0.275",
+      "wrong_answer": "0.279",
+      "correct_answer": "4.275"
+     },
+     "cause": "Lines up a whole number on the right, as if its point were missing.",
+     "reveals": "An answer with the whole number added to the last decimal digit.",
+     "help": "A whole number has its point after the ones: 4 = 4.000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP.M_COLUMN_TOTALS_WRITTEN",
+     "skill": "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP",
+     "error": "Writes the full total of each column instead of carrying.",
+     "example": {
+      "question": "0.47 + 0.85",
+      "wrong_answer": "0.1212 (7 + 5 = 12 and 4 + 8 = 12, written side by side)",
+      "correct_answer": "1.32"
+     },
+     "cause": "Does not carry the ten into the next place.",
+     "reveals": "An answer with two-digit column totals as an option.",
+     "help": "Each place holds one digit: 12 hundredths is 1 tenth and 2 hundredths.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP.M_WHOLE_MINUS_DECIMAL_COPIED",
+     "skill": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP",
+     "error": "Takes a decimal from a whole number by copying the decimal digits down.",
+     "example": {
+      "question": "6 - 2.45",
+      "wrong_answer": "4.45",
+      "correct_answer": "3.55"
+     },
+     "cause": "Sees nothing to take the .45 from and writes it down.",
+     "reveals": "The answer with the decimal digits copied as an option.",
+     "help": "Write 6 as 6.00, then rename across the zeros.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP.M_ZEROS_NOT_NINES",
+     "skill": "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP",
+     "error": "Renames across zeros by making each zero 10 without taking 1 from it, so the answer is too big.",
+     "example": {
+      "question": "5.0000 - 1.2345",
+      "wrong_answer": "3.8765",
+      "correct_answer": "3.7655"
+     },
+     "cause": "Each zero \"borrows\" ten, but none of them gives one away.",
+     "reveals": "The answer from renaming every zero as 10.",
+     "help": "Rename 5 ones as 4 ones, 9 tenths, 9 hundredths, 9 thousandths and 10 ten-thousandths.",
      "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
      "status": "draft"
     }
