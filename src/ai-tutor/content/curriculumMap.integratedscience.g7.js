@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/integrated_science/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/integrated_science/g7.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/integrated_science/teaching/g7)"};
 export const SUBSTRANDS = {
  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT": {
   "name": "Introduction to Integrated Science",
@@ -263,7 +263,8 @@ export const SKILLS = {
   "mis": [
    "M_SC_SEPARATE",
    "M_SC_BIO_PLANTS",
-   "M_SC_CHEM_LAB"
+   "M_SC_CHEM_LAB",
+   "M_SC_PHYSICS_MATHS"
   ]
  },
  "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE": {
@@ -279,7 +280,8 @@ export const SKILLS = {
   "mis": [
    "M_SM_LAB_ONLY",
    "M_SM_HEALTH_ONLY",
-   "M_SM_NO_CAREER"
+   "M_SM_NO_CAREER",
+   "M_SM_FARM_NOT_SCIENCE"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS": {
@@ -293,7 +295,8 @@ export const SKILLS = {
   "mis": [
    "M_HS_FLAME_FIRE",
    "M_HS_SKULL_DEAD",
-   "M_HS_CORROSIVE_TOXIC"
+   "M_HS_CORROSIVE_TOXIC",
+   "M_HS_NO_SYMBOL_SAFE"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS": {
@@ -309,7 +312,8 @@ export const SKILLS = {
   "mis": [
    "M_LA_TASTE_SAFE",
    "M_LA_POINT_TUBE",
-   "M_LA_CARELESS_ONLY"
+   "M_LA_CARELESS_ONLY",
+   "M_LA_RUN_EXIT"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID": {
@@ -325,7 +329,8 @@ export const SKILLS = {
   "mis": [
    "M_FA_BUTTER_BURN",
    "M_FA_VOMIT",
-   "M_FA_CUT_WASH"
+   "M_FA_CUT_WASH",
+   "M_FA_EYE_RUB"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS": {
@@ -341,7 +346,8 @@ export const SKILLS = {
   "mis": [
    "M_SS_PREDICT_RESULT",
    "M_SS_OBSERVE_EYES",
-   "M_SS_CONCLUSION_GUESS"
+   "M_SS_CONCLUSION_GUESS",
+   "M_SS_ONE_TEST_ENOUGH"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE": {
@@ -358,7 +364,8 @@ export const SKILLS = {
   "mis": [
    "M_AU_BEAKER_EXACT",
    "M_AU_READ_TOP",
-   "M_AU_YELLOW_FLAME"
+   "M_AU_YELLOW_FLAME",
+   "M_AU_THERMOMETER_SHAKE_READ"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE": {
@@ -374,7 +381,8 @@ export const SKILLS = {
   "mis": [
    "M_SB_GRAM",
    "M_SB_MASS_WEIGHT",
-   "M_SB_CELSIUS_SI"
+   "M_SB_CELSIUS_SI",
+   "M_SB_MINUTE_SI"
   ]
  },
  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED": {
@@ -390,7 +398,8 @@ export const SKILLS = {
   "mis": [
    "M_SD_LITRE_SI",
    "M_SD_AREA_M",
-   "M_SD_SPEED_M"
+   "M_SD_SPEED_M",
+   "M_SD_DENSITY_UNIT"
   ]
  },
  "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION": {
@@ -404,7 +413,8 @@ export const SKILLS = {
   "mis": [
    "M_HM_DISAPPEAR",
    "M_HM_MUDDY_SOLUTION",
-   "M_HM_SOLVENT_SOLUTE"
+   "M_HM_SOLVENT_SOLUTE",
+   "M_HM_SOLUTION_ONLY_WATER"
   ]
  },
  "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE": {
@@ -420,7 +430,8 @@ export const SKILLS = {
   "mis": [
    "M_SE_FILTER_SALT",
    "M_SE_EVAP_DISTIL",
-   "M_SE_CHROMA_COLOUR"
+   "M_SE_CHROMA_COLOUR",
+   "M_SE_DISTIL_DESTROYS_SALT"
   ]
  },
  "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES": {
@@ -436,7 +447,8 @@ export const SKILLS = {
   "mis": [
    "M_SU_SALT_FILTER",
    "M_SU_OIL_ONE",
-   "M_SU_SCIENTISTS_ONLY"
+   "M_SU_SCIENTISTS_ONLY",
+   "M_SU_CHROMA_USELESS"
   ]
  },
  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY": {
@@ -453,7 +465,8 @@ export const SKILLS = {
   "mis": [
    "M_LC_BLUE_BASE",
    "M_LC_NEUTRAL_ACID",
-   "M_LC_TASTE_TEST"
+   "M_LC_TASTE_TEST",
+   "M_LC_SAME_PAPER_BOTH"
   ]
  },
  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT": {
@@ -469,7 +482,8 @@ export const SKILLS = {
   "mis": [
    "M_IP_ONLY_LITMUS",
    "M_IP_SAME_COLOUR",
-   "M_IP_STRONG_CHEM"
+   "M_IP_STRONG_CHEM",
+   "M_IP_ANY_LEAF"
   ]
  },
  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES": {
@@ -486,7 +500,8 @@ export const SKILLS = {
   "mis": [
    "M_AP_BASE_SWEET",
    "M_AP_ALL_BURN",
-   "M_AP_BASE_OPPOSITE"
+   "M_AP_BASE_OPPOSITE",
+   "M_AP_ACID_ALWAYS_LIQUID"
   ]
  },
  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES": {
@@ -502,7 +517,8 @@ export const SKILLS = {
   "mis": [
    "M_AU2_ANTACID_ACID",
    "M_AU2_SOIL_ASH",
-   "M_AU2_STRONGER"
+   "M_AU2_STRONGER",
+   "M_AU2_BLEACH_FOOD"
   ]
  },
  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE": {
@@ -517,7 +533,8 @@ export const SKILLS = {
   "mis": [
    "M_RM_TESTIS_URINE",
    "M_RM_URETHRA_ONE",
-   "M_RM_SCROTUM"
+   "M_RM_SCROTUM",
+   "M_RM_SPERM_DUCT_BLADDER"
   ]
  },
  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE": {
@@ -534,7 +551,8 @@ export const SKILLS = {
   "mis": [
    "M_RF_STOMACH_BABY",
    "M_RF_OVARY_UTERUS",
-   "M_RF_CERVIX_VAGINA"
+   "M_RF_CERVIX_VAGINA",
+   "M_RF_EGG_EVERY_DAY"
   ]
  },
  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES": {
@@ -551,7 +569,8 @@ export const SKILLS = {
   "mis": [
    "M_AC_BOYS_ONLY",
    "M_AC_SAME_AGE",
-   "M_AC_PERIOD_ILLNESS"
+   "M_AC_PERIOD_ILLNESS",
+   "M_AC_VOICE_GIRLS_NONE"
   ]
  },
  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING": {
@@ -567,7 +586,8 @@ export const SKILLS = {
   "mis": [
    "M_AC2_SQUEEZE",
    "M_AC2_KEEP_QUIET",
-   "M_AC2_PADS"
+   "M_AC2_PADS",
+   "M_AC2_SKIP_MEALS"
   ]
  },
  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS": {
@@ -582,7 +602,8 @@ export const SKILLS = {
   "mis": [
    "M_EO_FAECES",
    "M_EO_LUNGS_O2",
-   "M_EO_SKIN_ONLY_COOL"
+   "M_EO_SKIN_ONLY_COOL",
+   "M_EO_LIVER_NONE"
   ]
  },
  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS": {
@@ -598,7 +619,8 @@ export const SKILLS = {
   "mis": [
    "M_SK_EPIDERMIS_SWEAT",
    "M_SK_PORE_BLOOD",
-   "M_SK_HAIR_EPI"
+   "M_SK_HAIR_EPI",
+   "M_SK_SKIN_ONE_LAYER"
   ]
  },
  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS": {
@@ -614,7 +636,8 @@ export const SKILLS = {
   "mis": [
    "M_UP_KIDNEY_STORE",
    "M_UP_DRINK_BLADDER",
-   "M_UP_URETER_URETHRA"
+   "M_UP_URETER_URETHRA",
+   "M_UP_ONE_KIDNEY"
   ]
  },
  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH": {
@@ -632,7 +655,8 @@ export const SKILLS = {
   "mis": [
    "M_KH_STONES_CATCH",
    "M_KH_LESS_WATER",
-   "M_KH_SKIN_RARE"
+   "M_KH_SKIN_RARE",
+   "M_KH_PAINKILLERS_SAFE"
   ]
  },
  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES": {
@@ -646,7 +670,8 @@ export const SKILLS = {
   "mis": [
    "M_ES_SOCKET",
    "M_ES_STORED_WIRE",
-   "M_ES_HYDRO_GEO"
+   "M_ES_HYDRO_GEO",
+   "M_ES_SOLAR_NIGHT"
   ]
  },
  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS": {
@@ -662,7 +687,8 @@ export const SKILLS = {
   "mis": [
    "M_CB_ONE_WIRE",
    "M_CB_USED_UP",
-   "M_CB_SWITCH_OPEN"
+   "M_CB_SWITCH_OPEN",
+   "M_CB_CELL_ONE_END"
   ]
  },
  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL": {
@@ -673,12 +699,14 @@ export const SKILLS = {
    "INTE.G7.FORCE_.ELECTRICAL_ENERGY.b"
   ],
   "pre": [
-   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS"
+   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES"
   ],
   "mis": [
    "M_SP_SERIES_STAY",
    "M_SP_PARALLEL_DIM",
-   "M_SP_HOUSE_SERIES"
+   "M_SP_HOUSE_SERIES",
+   "M_SP_MORE_BULBS_BRIGHTER"
   ]
  },
  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES": {
@@ -694,7 +722,8 @@ export const SKILLS = {
   "mis": [
    "M_AP2_MAKES_ELEC",
    "M_AP2_RADIO_NONE",
-   "M_AP2_FRIDGE_COLD"
+   "M_AP2_FRIDGE_COLD",
+   "M_AP2_IRON_LIGHT"
   ]
  },
  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY": {
@@ -710,7 +739,8 @@ export const SKILLS = {
   "mis": [
    "M_ESF_WET_HANDS",
    "M_ESF_UNPLUG_PULL",
-   "M_ESF_OVERLOAD"
+   "M_ESF_OVERLOAD",
+   "M_ESF_KITE_POWERLINE"
   ]
  },
  "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES": {
@@ -724,7 +754,8 @@ export const SKILLS = {
   "mis": [
    "M_MP_LIKE_ATTRACT",
    "M_MP_MIDDLE",
-   "M_MP_ONE_POLE"
+   "M_MP_ONE_POLE",
+   "M_MP_THROUGH_NOTHING"
   ]
  },
  "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS": {
@@ -740,7 +771,8 @@ export const SKILLS = {
   "mis": [
    "M_MM_ALL_METALS",
    "M_MM_SHINY",
-   "M_MM_HEAVY"
+   "M_MM_HEAVY",
+   "M_MM_COIN_ALL"
   ]
  },
  "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES": {
@@ -757,7 +789,8 @@ export const SKILLS = {
   "mis": [
    "M_MU_COMPASS_SUN",
    "M_MU_FRIDGE_GLUE",
-   "M_MU_PICK_ALL"
+   "M_MU_PICK_ALL",
+   "M_MU_ELEC_NO_MAGNET"
   ]
  }
 };
@@ -768,6 +801,8 @@ export const MIS_FEEDBACK = {
  "M_SM_LAB_ONLY": "Science is in daily life: cooking, farming, healing and travelling all use it.",
  "M_SM_HEALTH_ONLY": "Science helps in farming, industry, transport, food and clothing, as well as health.",
  "M_SM_NO_CAREER": "Many careers use science: nurse, engineer, farmer, pilot, laboratory technician and more.",
+ "M_SC_PHYSICS_MATHS": "Physics studies energy and forces, such as friction in a brake. It uses maths, but it is science.",
+ "M_SM_FARM_NOT_SCIENCE": "Science is used on farms every day: tested seed, fertiliser, soil tests and pest control.",
  "M_HS_FLAME_FIRE": "The flame symbol warns that the substance is flammable: it catches fire easily and must be kept from flames.",
  "M_HS_SKULL_DEAD": "A skull and crossbones means toxic: the substance is poisonous and can kill.",
  "M_HS_CORROSIVE_TOXIC": "Corrosive means it eats away skin, cloth and metal. Toxic means poisonous. They are different warnings.",
@@ -777,6 +812,9 @@ export const MIS_FEEDBACK = {
  "M_FA_BUTTER_BURN": "Cool the burn with cool running water. Creams, butter and toothpaste trap heat and can cause infection.",
  "M_FA_VOMIT": "Do not make the child vomit. Get an adult, say what was swallowed and take the child to hospital.",
  "M_FA_CUT_WASH": "Pressing on the cut with a clean cloth stops the bleeding. Raise the hurt part and get help.",
+ "M_HS_NO_SYMBOL_SAFE": "Never taste, smell or use anything that is not labelled. Tell the teacher.",
+ "M_LA_RUN_EXIT": "In an emergency walk quickly and calmly to the exit. Running causes falls and more accidents.",
+ "M_FA_EYE_RUB": "Rinse the eye with lots of clean running water. Never rub it. Tell the teacher at once.",
  "M_SS_PREDICT_RESULT": "A prediction is said before the test. The result is what happened.",
  "M_SS_OBSERVE_EYES": "Observing uses your senses safely. Never taste or smell unknown chemicals.",
  "M_SS_CONCLUSION_GUESS": "A conclusion says what the results show. A guess made before testing is a prediction.",
@@ -789,6 +827,10 @@ export const MIS_FEEDBACK = {
  "M_SD_LITRE_SI": "The SI unit of volume is the cubic metre. The litre is a common smaller unit.",
  "M_SD_AREA_M": "Area is length times width, so the unit is square metres, m2.",
  "M_SD_SPEED_M": "Speed is distance divided by time, so its unit is metres per second, m/s.",
+ "M_SS_ONE_TEST_ENOUGH": "One test is not enough. Repeat with different samples before you conclude.",
+ "M_AU_THERMOMETER_SHAKE_READ": "Read a thermometer while its bulb is still in the liquid. In the air the reading changes.",
+ "M_SB_MINUTE_SI": "The SI unit of time is the second. Minutes and hours are made from seconds.",
+ "M_SD_DENSITY_UNIT": "Density is mass divided by volume, so its unit is kg/m³.",
  "M_HM_DISAPPEAR": "The salt has not gone. It is spread through the water. Evaporate the water and it comes back.",
  "M_HM_MUDDY_SOLUTION": "Muddy water is a heterogeneous mixture. A solution looks the same all through and the solute does not settle.",
  "M_HM_SOLVENT_SOLUTE": "The solvent does the dissolving (water). The solute is what dissolves (sugar).",
@@ -798,6 +840,9 @@ export const MIS_FEEDBACK = {
  "M_SU_SALT_FILTER": "The Sun evaporates the water in shallow pans and the salt is left.",
  "M_SU_OIL_ONE": "Crude oil is a mixture. Fractional distillation separates it using the different boiling points.",
  "M_SU_SCIENTISTS_ONLY": "Separating mixtures is used at home, on farms and in industry as well as in the laboratory.",
+ "M_HM_SOLUTION_ONLY_WATER": "Water is the commonest solvent, but others such as paraffin and spirit dissolve things water cannot.",
+ "M_SE_DISTIL_DESTROYS_SALT": "In distillation the water boils off and is collected; the salt stays in the flask.",
+ "M_SU_CHROMA_USELESS": "Chromatography is used to test dyes in food and inks, and in hospitals and crime labs.",
  "M_LC_BLUE_BASE": "Blue litmus turns red in an acid. Red litmus turns blue in a base.",
  "M_LC_NEUTRAL_ACID": "A liquid that changes neither paper is neutral. It is neither an acid nor a base.",
  "M_LC_TASTE_TEST": "Never taste to test. Use litmus paper or an indicator.",
@@ -810,6 +855,10 @@ export const MIS_FEEDBACK = {
  "M_AU2_ANTACID_ACID": "An antacid is a base. It cancels some of the extra stomach acid.",
  "M_AU2_SOIL_ASH": "Lime and ash are bases. They cancel the extra acid in the soil.",
  "M_AU2_STRONGER": "Strong acids and bases burn. Weak ones are used in food and cleaning.",
+ "M_LC_SAME_PAPER_BOTH": "Blue staying blue only rules out an acid. Use red litmus to tell a base from neutral.",
+ "M_IP_ANY_LEAF": "A good indicator changes colour in acids and bases. Red cabbage does; most green leaves do not.",
+ "M_AP_ACID_ALWAYS_LIQUID": "Some acids are solids. They show acid properties when dissolved in water.",
+ "M_AU2_BLEACH_FOOD": "Bleach is for surfaces, not food. Wash fruit in clean water.",
  "M_RM_TESTIS_URINE": "The testes make sperm. The bladder only stores urine.",
  "M_RM_URETHRA_ONE": "In males the urethra is a shared passage: it carries urine and sperm, never both together.",
  "M_RM_SCROTUM": "The testes are in the scrotum. It is cooler outside the body, which is better for making sperm.",
@@ -822,6 +871,10 @@ export const MIS_FEEDBACK = {
  "M_AC2_SQUEEZE": "Wash gently each day and do not squeeze pimples.",
  "M_AC2_KEEP_QUIET": "Talk to a trusted adult. Moods change in adolescence and help is there.",
  "M_AC2_PADS": "Use a clean pad and change it often. Girls can go to school.",
+ "M_RM_SPERM_DUCT_BLADDER": "The sperm duct carries sperm from the testes. Urine comes from the bladder. Both leave by the urethra, at different times.",
+ "M_RF_EGG_EVERY_DAY": "An egg is usually released about once a month, as part of the monthly cycle.",
+ "M_AC_VOICE_GIRLS_NONE": "Girls change in many ways: growth, breasts, wider hips, body hair, as well as periods.",
+ "M_AC2_SKIP_MEALS": "Growing bodies need balanced meals. Eat well and stay active; do not skip meals.",
  "M_EO_FAECES": "Excretion removes waste made by cells, such as urea and carbon dioxide. Faeces are undigested food.",
  "M_EO_LUNGS_O2": "The lungs remove carbon dioxide and water vapour when we breathe out.",
  "M_EO_SKIN_ONLY_COOL": "Sweat removes water and salts and also cools the body.",
@@ -834,6 +887,10 @@ export const MIS_FEEDBACK = {
  "M_KH_STONES_CATCH": "Kidney stones are not caught from other people. They can form when too little water is drunk.",
  "M_KH_LESS_WATER": "Drinking enough clean water helps the kidneys wash out waste.",
  "M_KH_SKIN_RARE": "Washing every day keeps the skin healthy because sweat and germs build up.",
+ "M_EO_LIVER_NONE": "The liver also helps excretion: it breaks down wastes and old red blood cells.",
+ "M_SK_SKIN_ONE_LAYER": "Skin has two main layers: the epidermis outside and the dermis below with glands and vessels.",
+ "M_UP_ONE_KIDNEY": "Most people have two kidneys, at the back of the abdomen.",
+ "M_KH_PAINKILLERS_SAFE": "Take medicines only as advised. Too many painkillers can harm the kidneys.",
  "M_ES_SOCKET": "A socket only passes electricity on. A cell or a generator makes it.",
  "M_ES_STORED_WIRE": "Wires only carry electricity. It is made at a power station by a generator.",
  "M_ES_HYDRO_GEO": "Steam from underground heat is geothermal. Hydroelectric power uses falling water.",
@@ -849,6 +906,11 @@ export const MIS_FEEDBACK = {
  "M_ESF_WET_HANDS": "Wet hands let electricity pass through the body. Dry them first.",
  "M_ESF_UNPLUG_PULL": "Switch off and pull on the plug, not the cable. Leave mending to an electrician.",
  "M_ESF_OVERLOAD": "Too many appliances on one socket can overheat the wire and start a fire.",
+ "M_ES_SOLAR_NIGHT": "A solar panel makes electricity only in daylight. At night the light comes from a battery it charged.",
+ "M_CB_CELL_ONE_END": "A circuit must go from one end of the cell, through the bulb, back to the other end.",
+ "M_SP_MORE_BULBS_BRIGHTER": "In series the bulbs share the push of the cell, so each is dimmer.",
+ "M_AP2_IRON_LIGHT": "An electric iron changes electricity mainly into heat.",
+ "M_ESF_KITE_POWERLINE": "Never play near power lines. A kite or a branch can carry a deadly shock.",
  "M_MP_LIKE_ATTRACT": "Like poles repel and unlike poles attract.",
  "M_MP_MIDDLE": "The pins stick at the poles. A magnet is strongest at its two poles.",
  "M_MP_ONE_POLE": "Each piece of a cut magnet has its own north and south poles.",
@@ -857,5 +919,8 @@ export const MIS_FEEDBACK = {
  "M_MM_HEAVY": "Weight does not decide it. The material does.",
  "M_MU_COMPASS_SUN": "A compass needle is a small magnet that lines up north and south.",
  "M_MU_FRIDGE_GLUE": "The door seal has a magnet that pulls on the steel body.",
- "M_MU_PICK_ALL": "A magnet picks out only iron and steel. Aluminium and copper stay."
+ "M_MU_PICK_ALL": "A magnet picks out only iron and steel. Aluminium and copper stay.",
+ "M_MP_THROUGH_NOTHING": "Magnetic force passes through non-magnetic materials such as paper and plastic.",
+ "M_MM_COIN_ALL": "Only iron, steel, nickel and cobalt are magnetic. Test each coin; do not assume.",
+ "M_MU_ELEC_NO_MAGNET": "Speakers, motors and generators all use magnets with coils of wire."
 };

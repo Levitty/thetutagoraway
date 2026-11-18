@@ -1,0 +1,369 @@
+{
+ "sub_strand": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM",
+ "title": "Human Excretory System",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Diagrams of the skin layers and the urinary system; a sheep's kidney from the butcher cut by the teacher if possible. Link each organ to the waste it removes. Health statements are to be confirmed by a teacher or a health worker.",
+ "skills": [
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+   "key_step": "The child names the organs of excretion and the waste each removes: kidneys (urea, excess water and salts in urine), lungs (carbon dioxide and water vapour), skin (sweat: water, salts, some urea), liver (breaks down wastes), and knows faeces are not excretion.",
+   "floor": {
+    "prerequisite": "Knows what the lungs give out.",
+    "question": "Which gas do we breathe out more of?",
+    "answer": "carbon dioxide"
+   },
+   "representations": [
+    "a chart: organ, waste",
+    "a breath on a mirror",
+    "a body outline with the organs"
+   ],
+   "steps": [
+    "Excretion removes waste made by the body's cells.",
+    "Kidneys: urine. Lungs: carbon dioxide. Skin: sweat.",
+    "Liver: breaks down wastes.",
+    "Faeces are undigested food: egestion, not excretion."
+   ],
+   "contexts": [
+    "sweating in the sun",
+    "breathing on a cold mirror",
+    "a clinic urine test"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a body with kidneys, lungs and skin."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lungs.",
+     "say": "Which waste do the lungs remove?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"carbon dioxide\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write the waste for each organ."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_FAECES",
+     "listen_for": [
+      "faeces are excretion"
+     ],
+     "ask": "Was the food in faeces ever used by the cells?",
+     "repair": "Faeces are undigested food, not excreted waste."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_LUNGS_O2",
+     "listen_for": [
+      "lungs only take in air"
+     ],
+     "ask": "What do the lungs give out?",
+     "repair": "Lungs remove carbon dioxide."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_SKIN_ONLY_COOL",
+     "listen_for": [
+      "sweat only cools"
+     ],
+     "ask": "Why does sweat taste salty?",
+     "repair": "Sweat also removes water and salts."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_LIVER_NONE",
+     "listen_for": [
+      "the stomach removes waste"
+     ],
+     "ask": "Which organ breaks down old red cells?",
+     "repair": "The liver helps excretion."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which organ removes urea in urine?",
+     "answer": "the kidneys",
+     "shows": "kidneys"
+    },
+    {
+     "question": "Are faeces excreted waste?",
+     "answer": "No: they are undigested food (egestion)",
+     "shows": "not excretion"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+   "key_step": "The child names the parts of the skin (epidermis, dermis, sweat gland, sweat pore, hair follicle, blood vessels, fat layer) and what each does.",
+   "floor": {
+    "prerequisite": "Knows the skin removes sweat.",
+    "question": "What does the skin give out?",
+    "answer": "sweat"
+   },
+   "representations": [
+    "a diagram of the skin cut through",
+    "a hand lens on the back of the hand",
+    "labels to match"
+   ],
+   "steps": [
+    "Epidermis: the outer protective layer.",
+    "Dermis: holds sweat glands, hair follicles and blood vessels.",
+    "Sweat gland makes sweat; it leaves through a pore.",
+    "Fat layer below keeps heat in."
+   ],
+   "contexts": [
+    "sweating after PE",
+    "goose bumps on a cold morning",
+    "a cut that bleeds"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the skin as two layers with a coiled gland in the lower one."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the coiled gland.",
+     "say": "What does this make?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"sweat\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the tube to the pore."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_EPIDERMIS_SWEAT",
+     "listen_for": [
+      "the epidermis makes sweat"
+     ],
+     "ask": "Which layer holds the sweat gland?",
+     "repair": "Sweat glands are in the dermis."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_PORE_BLOOD",
+     "listen_for": [
+      "pores go to the blood"
+     ],
+     "ask": "Does blood come out of a pore?",
+     "repair": "A pore is the opening of a sweat duct."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_HAIR_EPI",
+     "listen_for": [
+      "hair grows from the top layer"
+     ],
+     "ask": "Where is the hair follicle?",
+     "repair": "Hair grows from follicles in the dermis."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_SKIN_ONE_LAYER",
+     "listen_for": [
+      "skin is one layer"
+     ],
+     "ask": "How many layers did the diagram show?",
+     "repair": "Skin has two main layers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the two main layers of the skin.",
+     "answer": "epidermis and dermis",
+     "shows": "layers"
+    },
+    {
+     "question": "Where is sweat made?",
+     "answer": "in the sweat gland in the dermis",
+     "shows": "sweat gland"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+   "key_step": "The child names the parts of the urinary system (two kidneys, ureters, bladder, urethra) in the order urine passes and says what each does.",
+   "floor": {
+    "prerequisite": "Knows the kidneys remove urea.",
+    "question": "What do the kidneys make?",
+    "answer": "urine"
+   },
+   "representations": [
+    "a diagram of the urinary system",
+    "cards to put in order",
+    "a sheep's kidney (teacher)"
+   ],
+   "steps": [
+    "Kidneys filter the blood and make urine.",
+    "Ureters carry urine to the bladder.",
+    "The bladder stores urine.",
+    "The urethra carries urine out of the body."
+   ],
+   "contexts": [
+    "drinking water on a hot day",
+    "a clinic urine test",
+    "a butcher's kidney"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two kidneys, two tubes to a bag, one tube out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tubes from the kidneys.",
+     "say": "What are these called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"ureters\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label the bladder and the urethra."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_KIDNEY_STORE",
+     "listen_for": [
+      "the kidneys store urine"
+     ],
+     "ask": "Which part stores urine until we go to the toilet?",
+     "repair": "The bladder stores urine."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_DRINK_BLADDER",
+     "listen_for": [
+      "a drink goes straight to the bladder"
+     ],
+     "ask": "What carries the water from the gut to the kidneys?",
+     "repair": "Water goes into the blood first; the kidneys filter it."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_URETER_URETHRA",
+     "listen_for": [
+      "the urethra comes from the kidney"
+     ],
+     "ask": "Which tube joins the kidney to the bladder?",
+     "repair": "Ureters come from the kidneys; the urethra leaves the bladder."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_ONE_KIDNEY",
+     "listen_for": [
+      "one kidney"
+     ],
+     "ask": "How many kidneys did the diagram show?",
+     "repair": "Most people have two kidneys."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which tube carries urine from a kidney to the bladder?",
+     "answer": "the ureter",
+     "shows": "ureter"
+    },
+    {
+     "question": "Put in order: bladder, kidney, urethra, ureter.",
+     "answer": "kidney, ureter, bladder, urethra",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH",
+   "key_step": "The child says what causes common kidney disorders (too little water, too much salt, misuse of painkillers, untreated infections, high blood pressure) and which habits protect the kidneys and the skin (drink water, less salt, medicines as advised, daily washing, sun protection).",
+   "floor": {
+    "prerequisite": "Can name the parts of the urinary system.",
+    "question": "Which part stores urine?",
+    "answer": "the bladder"
+   },
+   "representations": [
+    "a chart: habit, protects kidneys or skin",
+    "a painkiller packet label",
+    "a water-drinking log"
+   ],
+   "steps": [
+    "Drink enough clean water.",
+    "Eat less salt.",
+    "Take medicines only as advised.",
+    "Wash the skin daily and treat cuts; see a health worker for pain when urinating."
+   ],
+   "contexts": [
+    "a hot day at the school field",
+    "a relative with kidney stones",
+    "a farmer working in the sun"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"kidney stones\" and draw an arrow from \"too little water\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "Why does too little water help stones form?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add two habits that protect the kidneys."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_STONES_CATCH",
+     "listen_for": [
+      "you catch kidney problems"
+     ],
+     "ask": "Are kidney stones caused by germs from another person?",
+     "repair": "Kidney disorders are not caught from others."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_LESS_WATER",
+     "listen_for": [
+      "drink less water"
+     ],
+     "ask": "What does more water do to urine?",
+     "repair": "Drinking enough water protects the kidneys."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_SKIN_RARE",
+     "listen_for": [
+      "wash only when dirty"
+     ],
+     "ask": "What builds up on skin each day?",
+     "repair": "Wash the skin daily."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_PAINKILLERS_SAFE",
+     "listen_for": [
+      "painkillers are safe any time"
+     ],
+     "ask": "What does the packet warn?",
+     "repair": "Take medicines only as advised."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one habit that protects the kidneys.",
+     "answer": "drink enough water, eat less salt, take medicines as advised",
+     "shows": "kidneys"
+    },
+    {
+     "question": "Give one habit that keeps the skin healthy.",
+     "answer": "wash daily, treat cuts, protect from strong sun",
+     "shows": "skin"
+    }
+   ]
+  }
+ ]
+}

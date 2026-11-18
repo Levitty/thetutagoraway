@@ -1,0 +1,380 @@
+{
+ "sub_strand": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO",
+ "title": "Acids, Bases and Indicators",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Safe household solutions only: lemon juice, vinegar, soap solution, baking soda, wood-ash water (dilute), tap water. The indicator is made from red cabbage or purple flowers soaked in warm water and strained (with an adult). Nothing is tasted.",
+ "skills": [
+  {
+   "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+   "key_step": "The child uses both litmus papers: acids turn blue litmus red, bases turn red litmus blue, neutral solutions change neither.",
+   "floor": {
+    "prerequisite": "Knows what a solution is.",
+    "question": "Is lemon juice a solution?",
+    "answer": "yes"
+   },
+   "representations": [
+    "red and blue litmus strips",
+    "a results table",
+    "safe household solutions"
+   ],
+   "steps": [
+    "Dip blue litmus: red means acid.",
+    "Dip red litmus: blue means base.",
+    "No change in either: neutral.",
+    "Record and never taste."
+   ],
+   "contexts": [
+    "lemon juice",
+    "soapy water",
+    "tap water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: solution, blue litmus, red litmus, type."
+    },
+    {
+     "beat": "write",
+     "do": "Fill in lemon juice: blue to red, red stays red."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the type column.",
+     "say": "What is lemon juice?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"an acid\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in soap and water."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_BLUE_BASE",
+     "listen_for": [
+      "blue litmus goes more blue in a base"
+     ],
+     "ask": "Which paper changes in a base?",
+     "repair": "Bases turn red litmus blue."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_NEUTRAL_ACID",
+     "listen_for": [
+      "no change means acid"
+     ],
+     "ask": "Did water change either paper?",
+     "repair": "No change in both means neutral."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_TASTE_TEST",
+     "listen_for": [
+      "taste it"
+     ],
+     "ask": "Is it safe to taste in a laboratory?",
+     "repair": "Never taste; use an indicator."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_SAME_PAPER_BOTH",
+     "listen_for": [
+      "blue stayed blue so it is a base"
+     ],
+     "ask": "What would red litmus show?",
+     "repair": "Use both papers to decide."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Blue litmus turns red in a solution. What is the solution?",
+     "answer": "an acid",
+     "shows": "acid"
+    },
+    {
+     "question": "Neither red nor blue litmus changes. What is the solution?",
+     "answer": "neutral",
+     "shows": "neutral"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT",
+   "key_step": "The child says how to make a plant indicator (crush strongly coloured petals or red cabbage, soak in warm water, strain) and reads its colour change in acids and bases.",
+   "floor": {
+    "prerequisite": "Can use litmus paper.",
+    "question": "What does red litmus do in a base?",
+    "answer": "it turns blue"
+   },
+   "representations": [
+    "red cabbage extract in three cups",
+    "a colour key",
+    "the steps written as a flow chart"
+   ],
+   "steps": [
+    "Crush red cabbage or purple petals.",
+    "Soak in warm water (with an adult).",
+    "Strain through a cloth.",
+    "Add drops to test solutions and read the colour."
+   ],
+   "contexts": [
+    "red cabbage from the market",
+    "bougainvillea petals",
+    "vinegar and soap at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three cups of purple extract."
+    },
+    {
+     "beat": "write",
+     "do": "Write vinegar, water, soap under them."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what colour each cup will turn."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's predictions."
+    },
+    {
+     "beat": "reveal",
+     "do": "Colour them pink, purple and green."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_ONLY_LITMUS",
+     "listen_for": [
+      "only litmus is an indicator"
+     ],
+     "ask": "What did the cabbage juice do?",
+     "repair": "Plant extracts can be indicators."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_SAME_COLOUR",
+     "listen_for": [
+      "it stays purple"
+     ],
+     "ask": "What colour was it in vinegar and in soap?",
+     "repair": "An indicator changes colour."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_STRONG_CHEM",
+     "listen_for": [
+      "you need strong chemicals"
+     ],
+     "ask": "What did we use: water and a cabbage?",
+     "repair": "Warm water is enough."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_ANY_LEAF",
+     "listen_for": [
+      "any green leaf works"
+     ],
+     "ask": "Did sukuma juice change colour?",
+     "repair": "Use strongly coloured plants."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give the steps for making an indicator from red cabbage.",
+     "answer": "crush, soak in warm water, strain",
+     "shows": "steps"
+    },
+    {
+     "question": "Why is red cabbage extract a good indicator?",
+     "answer": "it changes colour in acids and bases",
+     "shows": "colour change"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+   "key_step": "The child describes acids (sour taste in foods, turn blue litmus red, strong ones corrosive) and bases (bitter, soapy feel, turn red litmus blue, strong ones corrosive), and knows not to taste or touch laboratory ones.",
+   "floor": {
+    "prerequisite": "Can test a solution with litmus.",
+    "question": "Is soap water an acid or a base?",
+    "answer": "a base"
+   },
+   "representations": [
+    "a table: acid, base, property",
+    "household examples",
+    "hazard symbols on strong ones"
+   ],
+   "steps": [
+    "Food acids taste sour (lemon, vinegar); never taste lab ones.",
+    "Bases feel soapy; strong ones burn.",
+    "Litmus: acid red, base blue.",
+    "Acids and bases can be solids or liquids."
+   ],
+   "contexts": [
+    "lemon juice on a cut",
+    "soap in the hand",
+    "battery acid warning"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: acids, bases."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"sour\" in acids."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bases column.",
+     "say": "How does soap feel in your hand?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"soapy, slippery\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add a litmus row."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_BASE_SWEET",
+     "listen_for": [
+      "bases taste sweet"
+     ],
+     "ask": "How does soap taste if it gets in your mouth?",
+     "repair": "Bases taste bitter; never taste lab ones."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_ALL_BURN",
+     "listen_for": [
+      "all acids burn"
+     ],
+     "ask": "Does lemon juice burn your skin?",
+     "repair": "Weak acids do not burn; strong ones do."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_BASE_OPPOSITE",
+     "listen_for": [
+      "a base is a poison"
+     ],
+     "ask": "Is soap a poison?",
+     "repair": "Bases are a group of substances; many are safe."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_ACID_ALWAYS_LIQUID",
+     "listen_for": [
+      "acids are liquids"
+     ],
+     "ask": "What did the citric acid powder do to blue litmus?",
+     "repair": "Some acids are solids."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one property of acids.",
+     "answer": "sour taste in foods, turn blue litmus red, strong ones corrosive",
+     "shows": "acid property"
+    },
+    {
+     "question": "Give one property of bases.",
+     "answer": "bitter taste, soapy feel, turn red litmus blue",
+     "shows": "base property"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES",
+   "key_step": "The child describes uses of acids, bases and indicators: antacids (bases) for heartburn, lime or ash for acidic soils, vinegar and lemon in food, soap and cleaners (bases), indicators to test soil, and uses each in the right amount.",
+   "floor": {
+    "prerequisite": "Knows properties of acids and bases.",
+    "question": "Does an acid turn blue litmus red?",
+    "answer": "yes"
+   },
+   "representations": [
+    "an antacid packet",
+    "a soil test with indicator",
+    "a chart: use, acid or base"
+   ],
+   "steps": [
+    "Health: antacids (bases) settle stomach acid.",
+    "Farming: lime or ash corrects acidic soil.",
+    "Home: vinegar, lemon; soap and cleaners.",
+    "Use the right amount; read the label."
+   ],
+   "contexts": [
+    "heartburn after a big meal",
+    "a tea farm with acidic soil",
+    "cleaning a sink"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a stomach with acid and a tablet going in."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tablet.",
+     "say": "Is an antacid an acid or a base?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a base\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"base settles the acid\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_ANTACID_ACID",
+     "listen_for": [
+      "an acid cures heartburn"
+     ],
+     "ask": "Is there too much acid or too little in heartburn?",
+     "repair": "A base (antacid) settles the extra acid."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_SOIL_ASH",
+     "listen_for": [
+      "ash only feeds the soil"
+     ],
+     "ask": "What does ash water do to litmus?",
+     "repair": "Ash is a base that corrects acidic soil."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_STRONGER",
+     "listen_for": [
+      "stronger is better"
+     ],
+     "ask": "What can a strong acid do to skin and surfaces?",
+     "repair": "Use the right strength and amount."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_BLEACH_FOOD",
+     "listen_for": [
+      "wash fruit in bleach"
+     ],
+     "ask": "What does the bleach label say about food?",
+     "repair": "Wash fruit in clean water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why do people take antacids for heartburn?",
+     "answer": "they are bases that settle extra stomach acid",
+     "shows": "antacid"
+    },
+    {
+     "question": "Why do some farmers add lime to their soil?",
+     "answer": "the soil is too acidic; lime is a base",
+     "shows": "farming"
+    }
+   ]
+  }
+ ]
+}

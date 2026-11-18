@@ -1,0 +1,384 @@
+{
+ "sub_strand": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND",
+ "title": "Laboratory apparatus and instruments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Real apparatus on a tray: a beaker, a measuring cylinder, a test tube and holder, a thermometer, a metre rule, a balance and a stopwatch (or a phone timer). The child reads a measuring cylinder at eye level at the bottom of the curve. Bunsen burners and spirit lamps are lit only by the teacher.",
+ "skills": [
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+   "key_step": "The child names and uses the science skills in order (observe, measure, classify, predict, test, record, communicate, conclude) and keeps a prediction apart from a result and a conclusion.",
+   "floor": {
+    "prerequisite": "Has predicted and tested in Grade 5 (floating and sinking).",
+    "question": "Does a plasticine boat float?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a fair-test sheet with headings",
+    "a floating test repeated with several objects",
+    "skill cards to order"
+   ],
+   "steps": [
+    "Observe with all safe senses and instruments.",
+    "Predict before testing.",
+    "Test, measure and record.",
+    "Conclude from several results; communicate in a table or chart."
+   ],
+   "contexts": [
+    "testing which soil holds most water",
+    "timing seeds sprouting",
+    "a science fair project"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"Prediction\" and \"Result\" as two headings."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"the stone will float\" under Prediction."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Result.",
+     "say": "What goes here, and when is it written?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"what happened, after the test\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write a conclusion from three results."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_PREDICT_RESULT",
+     "listen_for": [
+      "the prediction is what happened"
+     ],
+     "ask": "When do we write the prediction: before or after?",
+     "repair": "A prediction comes before the test; the result after."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_OBSERVE_EYES",
+     "listen_for": [
+      "observing is looking"
+     ],
+     "ask": "How can you observe a sound or a smell safely?",
+     "repair": "Observing uses all safe senses and instruments."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_CONCLUSION_GUESS",
+     "listen_for": [
+      "a conclusion is a guess"
+     ],
+     "ask": "Is a conclusion made before or after the results?",
+     "repair": "A conclusion comes from the results."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_ONE_TEST_ENOUGH",
+     "listen_for": [
+      "one test is enough"
+     ],
+     "ask": "Did all five stones sink?",
+     "repair": "Repeat before you conclude."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the difference between a prediction and a result?",
+     "answer": "a prediction is said before the test; a result is what happened",
+     "shows": "skill"
+    },
+    {
+     "question": "Why should a test be repeated?",
+     "answer": "to make sure the result is reliable before concluding",
+     "shows": "repeat"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+   "key_step": "The child says what common apparatus is for, uses it correctly (measuring cylinder at eye level at the bottom of the curve, thermometer read in the liquid, balance zeroed) and looks after it.",
+   "floor": {
+    "prerequisite": "Can measure in litres and kilograms.",
+    "question": "How many millilitres are in one litre?",
+    "answer": "1,000"
+   },
+   "representations": [
+    "the apparatus tray",
+    "a drawing of the meniscus at eye level",
+    "a chart: apparatus, use, care"
+   ],
+   "steps": [
+    "Name the apparatus and its job.",
+    "Use it the right way (eye level, bulb in liquid, zero the balance).",
+    "Clean, dry and store it.",
+    "Report broken glass to the teacher."
+   ],
+   "contexts": [
+    "measuring water for an experiment",
+    "taking the temperature of tea",
+    "weighing seeds on a balance"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a measuring cylinder with a curved water surface."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw an eye level with the curve."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the curve.",
+     "say": "Do we read at the top or the bottom of the curve?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the bottom\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the reading at the bottom of the curve."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_BEAKER_EXACT",
+     "listen_for": [
+      "the beaker measures exactly"
+     ],
+     "ask": "Which has finer marks: the beaker or the cylinder?",
+     "repair": "Use a measuring cylinder for exact volumes."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_READ_TOP",
+     "listen_for": [
+      "read the top of the curve"
+     ],
+     "ask": "Where should your eye be?",
+     "repair": "Read at eye level at the bottom of the curve."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_YELLOW_FLAME",
+     "listen_for": [
+      "the yellow flame is hottest"
+     ],
+     "ask": "Which flame is used for heating: blue or yellow?",
+     "repair": "The blue flame (air hole open) is the hottest."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_THERMOMETER_SHAKE_READ",
+     "listen_for": [
+      "take it out to read"
+     ],
+     "ask": "What happened to the reading in the air?",
+     "repair": "Read the thermometer in the liquid."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which apparatus measures the volume of a liquid most exactly: a beaker or a measuring cylinder?",
+     "answer": "a measuring cylinder",
+     "shows": "choice"
+    },
+    {
+     "question": "Where do you read the level of water in a measuring cylinder?",
+     "answer": "at eye level, at the bottom of the curve",
+     "shows": "reading"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+   "key_step": "The child gives the SI unit of each basic quantity: length (metre), mass (kilogram), time (second), temperature (kelvin), electric current (ampere), and keeps mass apart from weight.",
+   "floor": {
+    "prerequisite": "Knows the metre and the centimetre.",
+    "question": "How many centimetres are in a metre?",
+    "answer": "100"
+   },
+   "representations": [
+    "a chart of quantities and units",
+    "a metre rule, a 1 kg bag of sugar, a stopwatch",
+    "unit cards to match"
+   ],
+   "steps": [
+    "Length: metre (m).",
+    "Mass: kilogram (kg); weight is a force, in newtons.",
+    "Time: second (s).",
+    "Temperature: kelvin (K); current: ampere (A)."
+   ],
+   "contexts": [
+    "a 1 kg packet of sugar",
+    "a 100 m race",
+    "a phone charger label in amperes"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: quantity, SI unit, symbol."
+    },
+    {
+     "beat": "write",
+     "do": "Fill in length."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mass row.",
+     "say": "Is the SI unit the gram or the kilogram?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the kilogram\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in the other rows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_GRAM",
+     "listen_for": [
+      "the gram"
+     ],
+     "ask": "Which unit is on a packet of sugar: 1 kg or 1,000 g? Which is the SI unit?",
+     "repair": "The SI unit of mass is the kilogram."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_MASS_WEIGHT",
+     "listen_for": [
+      "weight in kilograms"
+     ],
+     "ask": "Is weight a pull of gravity (a force)?",
+     "repair": "Mass is in kilograms; weight, a force, is in newtons."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_CELSIUS_SI",
+     "listen_for": [
+      "degrees Celsius"
+     ],
+     "ask": "What unit do scientists use for temperature in SI?",
+     "repair": "The SI unit of temperature is the kelvin."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_MINUTE_SI",
+     "listen_for": [
+      "the minute"
+     ],
+     "ask": "Which is the smallest of second, minute, hour?",
+     "repair": "The SI unit of time is the second."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the SI unit of length?",
+     "answer": "the metre",
+     "shows": "length"
+    },
+    {
+     "question": "What is the SI unit of electric current?",
+     "answer": "the ampere",
+     "shows": "current"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED",
+   "key_step": "The child builds derived units from base units: area (m²), volume (m³), speed (m/s), density (kg/m³), by following the formula.",
+   "floor": {
+    "prerequisite": "Knows the base SI units.",
+    "question": "What is the SI unit of time?",
+    "answer": "the second"
+   },
+   "representations": [
+    "a square metre marked on the floor",
+    "a cube of 1 m drawn",
+    "formula to unit chart"
+   ],
+   "steps": [
+    "Write the formula (area = length x width).",
+    "Put units in place of the quantities (m x m).",
+    "Simplify (m²).",
+    "Check: speed = distance / time gives m/s."
+   ],
+   "contexts": [
+    "the area of a classroom floor",
+    "the speed of a matatu",
+    "the volume of a water tank"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"speed = distance / time\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the unit of speed will be."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"m/s\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"density = mass / volume\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to build the unit of density."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_LITRE_SI",
+     "listen_for": [
+      "the litre"
+     ],
+     "ask": "What is the SI unit of length? What is length cubed?",
+     "repair": "The SI unit of volume is the cubic metre."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_AREA_M",
+     "listen_for": [
+      "area in metres"
+     ],
+     "ask": "What is metres times metres?",
+     "repair": "Area is in square metres (m²)."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_SPEED_M",
+     "listen_for": [
+      "speed in metres"
+     ],
+     "ask": "What two quantities make speed?",
+     "repair": "Speed is in metres per second."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_DENSITY_UNIT",
+     "listen_for": [
+      "density in kg"
+     ],
+     "ask": "What is divided by what in density?",
+     "repair": "Density is kg/m³."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the SI unit of area?",
+     "answer": "the square metre (m²)",
+     "shows": "area"
+    },
+    {
+     "question": "What is the SI unit of speed?",
+     "answer": "metres per second (m/s)",
+     "shows": "speed"
+    }
+   ]
+  }
+ ]
+}
