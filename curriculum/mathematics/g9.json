@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 9,
  "source": "KICD KICD-Grade9-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: MEASUR.MONEY, MEASUR.APPROXIMATIONS_AND_ERROR, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.SIMILARITY_AND_ENLARGEME, GEOMET.TRIGONOMETRY, DATA_H.DATA_INTERPRETATION_GROU, DATA_H.PROBABILITY",
+ "status": "outcomes from KICD's text, word for word; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026); no skills yet for: MEASUR.APPROXIMATIONS_AND_ERROR, GEOMET.COORDINATES_AND_GRAPHS, GEOMET.SCALE_DRAWING, GEOMET.SIMILARITY_AND_ENLARGEME, GEOMET.TRIGONOMETRY, DATA_H.DATA_INTERPRETATION_GROU, DATA_H.PROBABILITY",
  "totals": {
   "strands": 5,
   "sub_strands": 19,
   "outcomes": 119,
   "lessons": 155,
-  "skills": 74,
-  "prerequisites": 196,
-  "misconceptions": 425
+  "skills": 81,
+  "prerequisites": 213,
+  "misconceptions": 475
  },
  "sub_strands": [
   {
@@ -10414,7 +10414,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "",
+   "design_notes": "Official outcomes a to e are tested; f (appreciate) is not a question. Currencies of other countries (a), changing money at a bureau with buying and selling rates, through a third currency, and reading a rate from a graph (b), import duty (c), excise duty, including duty per litre and working back to the factory price (d), and VAT at 16%, including the price before VAT (e). The rates in the families are for practice ('in this question'), not today's rates. Identifying currencies (a) has no family. Teacher to confirm: that Grade 9 learners work with the layered order import duty, then excise on value plus duty, then VAT on everything, as three families do; and the 16% VAT rate.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
     "design": "KICD-Grade9-Mathematics-Curriculum-Design.pdf",
@@ -10462,8 +10462,1046 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+     "name": "Identify currencies used in different countries",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.a"
+     ],
+     "mastery": "The child names the currency of Kenya's neighbours and main trading partners (Uganda and Tanzania shillings, US dollar, euro, pound sterling, rand) and writes amounts with their names or symbols, and knows a rate compares one unit of a currency with shillings.",
+     "question_forms": [
+      "which currency",
+      "currency of Uganda",
+      "write the amount",
+      "what does the rate mean"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Money in everyday Kenyan use.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A rate is an amount for one unit.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "name": "Convert currency at a bureau using its buying and selling rates",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.b"
+     ],
+     "mastery": "The child picks the bureau's buying rate when a customer sells foreign money to it and the selling rate when the customer buys foreign money from it, multiplies the number of units by the rate, and works out the net cost of a trip when unused money is sold back.",
+     "question_forms": [
+      "how many shillings",
+      "which rate",
+      "from the rate board",
+      "cost of the trip"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What a rate means.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_USE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Using a rate.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.NUMBER.DECIMALS.MULT_DEC_BY_WHOLE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Multiplying by a decimal rate.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE",
+     "name": "Convert between two foreign currencies through a third",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.b"
+     ],
+     "mastery": "The child changes shillings to dollars (divide by the shillings for one dollar) and then dollars to Ugandan shillings (multiply by USh for one dollar), keeping the two steps in order.",
+     "question_forms": [
+      "how many Ugandan shillings",
+      "through US dollars",
+      "two steps",
+      "how many dollars first"
+     ],
+     "thinking": [
+      "procedure",
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "One conversion with a rate.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATIO_WORK_OUT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Chaining two rates.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ",
+     "name": "Read an exchange rate from a graph or table",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.b"
+     ],
+     "mastery": "The child reads a point on a straight-line conversion graph and divides the shillings by the foreign units at that point to get the rate for one unit, and uses the rate the right way round.",
+     "question_forms": [
+      "what rate does the graph show",
+      "shillings for one dollar",
+      "read the graph",
+      "how many shillings for"
+     ],
+     "thinking": [
+      "representation",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS.READ_COORDINATES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reading a point on a graph.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.RATE_PER_UNIT",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "A rate for one unit.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "name": "Work out import duty on goods",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.c"
+     ],
+     "mastery": "The child finds import duty as a percentage of the customs value, finds the rate as duty over customs value times 100, and for a shipment works out each kind of goods at its own rate before adding.",
+     "question_forms": [
+      "import duty",
+      "what percentage is the duty",
+      "duty on the whole shipment",
+      "complete the steps"
+     ],
+     "thinking": [
+      "procedure",
+      "modelling"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Percentages of an amount.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "One amount as a percentage of another.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "name": "Work out excise duty on goods and services",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.d"
+     ],
+     "mastery": "The child finds excise duty as a percentage of the right base (the factory price, or customs value plus import duty for imports) or as an amount per litre (changing ml to litres first), and works back from a price including excise to the factory price by dividing by 1 + rate.",
+     "question_forms": [
+      "excise duty",
+      "factory price",
+      "duty per litre",
+      "which step is wrong"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Duty as a percentage.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Working back from a price after a percentage increase.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.VOLUME_TO_LITRES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Millilitres to litres.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT",
+     "name": "Determine value added tax on goods and services",
+     "outcomes": [
+      "MATH.G9.MEASUR.MONEY.e"
+     ],
+     "mastery": "The child finds VAT at 16% of the price before VAT, adds only the items that carry VAT on a bill, and works back from a price with VAT included by dividing by 1.16 (the VAT inside 2,320 shillings is 320, not 16% of 2,320).",
+     "question_forms": [
+      "VAT on the bill",
+      "price without VAT",
+      "why is this wrong",
+      "which items carry VAT"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G9_COMMERCIAL_ARITH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G8.NUMBER.RATES_RATIO_PROPORTIONS_.PERCENT_CHANGE_REVERSE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Working back from an increased price.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reading a bill.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Taxes added in layers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_SHILLING_SAME_EVERYWHERE",
+     "skill": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+     "error": "Thinks a Ugandan or Tanzanian shilling is worth the same as a Kenyan shilling.",
+     "example": {
+      "question": "Is 1 Ugandan shilling worth 1 Kenyan shilling?",
+      "wrong_answer": "Yes, both are shillings",
+      "correct_answer": "No"
+     },
+     "cause": "Goes by the name.",
+     "reveals": "The answer Yes, both are shillings as a wrong option, with a reason that names the idea.",
+     "help": "Same name, different money: each has its own rate.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_CURRENCY_COUNTRY_MIXED",
+     "skill": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+     "error": "Matches a currency with the wrong country.",
+     "example": {
+      "question": "Currency of South Africa?",
+      "wrong_answer": "the naira",
+      "correct_answer": "the rand"
+     },
+     "cause": "Has met the names but not their countries.",
+     "reveals": "The answer the naira as a wrong option, with a reason that names the idea.",
+     "help": "Learn the pairs: South Africa, rand; Nigeria, naira.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_RATE_MEANING_SWAPPED",
+     "skill": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+     "error": "Reads a rate as foreign units per shilling.",
+     "example": {
+      "question": "1 US dollar = sh 130. What does 130 mean?",
+      "wrong_answer": "130 dollars for a shilling",
+      "correct_answer": "130 shillings for a dollar"
+     },
+     "cause": "Reads the rate the wrong way round.",
+     "reveals": "The answer 130 dollars for a shilling as a wrong option, with a reason that names the idea.",
+     "help": "The rate says how many shillings one unit is worth.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_BIGGER_NUMBER_STRONGER",
+     "skill": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+     "error": "Thinks a currency with bigger numbers is worth more.",
+     "example": {
+      "question": "1 US dollar = USh 3,700 and sh 130. Which shilling is worth more?",
+      "wrong_answer": "the Ugandan shilling",
+      "correct_answer": "the Kenyan shilling"
+     },
+     "cause": "Thinks bigger numbers mean more value.",
+     "reveals": "The answer the Ugandan shilling as a wrong option, with a reason that names the idea.",
+     "help": "More units for a dollar means each unit is worth less.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_SELL_RATE_WHEN_BUREAU_BUYS",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Uses the selling rate when the bureau buys from the customer.",
+     "example": {
+      "question": "A bureau buys at 128 and sells at 132. Sell it 100 dollars. Shillings?",
+      "wrong_answer": "13,200",
+      "correct_answer": "12,800"
+     },
+     "cause": "Thinks \"I am selling\" means the selling rate.",
+     "reveals": "The answer 13,200 as a wrong option, with a reason that names the idea.",
+     "help": "The rates are the bureau's: it buys from you at its buying rate.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_BUY_RATE_WHEN_BUREAU_SELLS",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Uses the buying rate when the bureau sells to the customer.",
+     "example": {
+      "question": "Buy 200 dollars; bureau sells at 132. Cost?",
+      "wrong_answer": "25,600 (at 128)",
+      "correct_answer": "26,400"
+     },
+     "cause": "Thinks \"I am buying\" means the buying rate.",
+     "reveals": "The answer 25,600 (at 128) as a wrong option, with a reason that names the idea.",
+     "help": "The bureau sells to you at its selling rate.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_DIVIDE_FOR_SHILLINGS",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Divides by the rate to change foreign money to shillings.",
+     "example": {
+      "question": "100 dollars at 128. Shillings?",
+      "wrong_answer": "0.78",
+      "correct_answer": "12,800"
+     },
+     "cause": "Does not know which way the rate works.",
+     "reveals": "The answer 0.78 as a wrong option, with a reason that names the idea.",
+     "help": "Each dollar is worth 128 shillings: multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_RATES_AVERAGED",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Uses the average of the buying and selling rates.",
+     "example": {
+      "question": "Buys at 128, sells at 132. Sell 100 dollars.",
+      "wrong_answer": "13,000",
+      "correct_answer": "12,800"
+     },
+     "cause": "Splits the difference.",
+     "reveals": "The answer 13,000 as a wrong option, with a reason that names the idea.",
+     "help": "Use one rate: the one for what the bureau is doing.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_RATE_ADDED",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Adds the rate to the number of units.",
+     "example": {
+      "question": "100 dollars at 128. Shillings?",
+      "wrong_answer": "228",
+      "correct_answer": "12,800"
+     },
+     "cause": "Combines by adding.",
+     "reveals": "The answer 228 as a wrong option, with a reason that names the idea.",
+     "help": "Each unit is worth the rate: multiply.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_RETURN_ADDED",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Adds the money from selling back to the cost of the trip.",
+     "example": {
+      "question": "Bought for 26,400; sold back for 3,840. Net cost?",
+      "wrong_answer": "30,240",
+      "correct_answer": "22,560"
+     },
+     "cause": "Adds both amounts.",
+     "reveals": "The answer 30,240 as a wrong option, with a reason that names the idea.",
+     "help": "Money back reduces the cost.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_ONE_RATE_FOR_BOTH",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Uses one rate for both buying and selling back.",
+     "example": {
+      "question": "Buy 200 dollars at 132, sell back 30 at 128. Net cost?",
+      "wrong_answer": "170 x 132",
+      "correct_answer": "200 x 132 - 30 x 128"
+     },
+     "cause": "Thinks the rate is fixed.",
+     "reveals": "The answer 170 x 132 as a wrong option, with a reason that names the idea.",
+     "help": "Buying and selling back use different rates.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_WRONG_ROW_CURRENCY",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Uses the rate of another currency on the board.",
+     "example": {
+      "question": "Change euros using the board.",
+      "wrong_answer": "the dollar row",
+      "correct_answer": "the euro row"
+     },
+     "cause": "Loses place on the board.",
+     "reveals": "The answer the dollar row as a wrong option, with a reason that names the idea.",
+     "help": "Find the row of the currency first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_WRONG_RATE_COLUMN",
+     "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+     "error": "Reads the wrong column (buys or sells) on a rate board.",
+     "example": {
+      "question": "Board: euro buys 138, sells 142. A customer buys 50 euros from the bureau.",
+      "wrong_answer": "50 x 138",
+      "correct_answer": "50 x 142"
+     },
+     "cause": "Picks the first column it sees.",
+     "reveals": "The answer 50 x 138 as a wrong option, with a reason that names the idea.",
+     "help": "Ask what the bureau is doing; read that column.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_DIRECT_MULTIPLY_CROSS",
+     "skill": "MATH.G9.MEASUR.MONEY.CROSS_RATE",
+     "error": "Multiplies the shillings by the Ugandan rate directly.",
+     "example": {
+      "question": "sh 13,000 to USh (1 dollar = sh 130 = USh 3,700).",
+      "wrong_answer": "48,100,000",
+      "correct_answer": "370,000"
+     },
+     "cause": "Skips the dollar step.",
+     "reveals": "The answer 48,100,000 as a wrong option, with a reason that names the idea.",
+     "help": "First shillings to dollars: 13,000 / 130 = 100.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_DIRECT_DIVIDE_CROSS",
+     "skill": "MATH.G9.MEASUR.MONEY.CROSS_RATE",
+     "error": "Divides the shillings by the Ugandan rate.",
+     "example": {
+      "question": "sh 13,000 to USh.",
+      "wrong_answer": "3.5",
+      "correct_answer": "370,000"
+     },
+     "cause": "Uses one rate the wrong way.",
+     "reveals": "The answer 3.5 as a wrong option, with a reason that names the idea.",
+     "help": "Go through dollars: divide by 130, then times 3,700.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_STOPPED_AT_DOLLARS",
+     "skill": "MATH.G9.MEASUR.MONEY.CROSS_RATE",
+     "error": "Stops at the number of dollars.",
+     "example": {
+      "question": "sh 13,000 to USh.",
+      "wrong_answer": "100",
+      "correct_answer": "370,000"
+     },
+     "cause": "Forgets the second step.",
+     "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+     "help": "Now change the 100 dollars to USh.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_CROSS_ADDED",
+     "skill": "MATH.G9.MEASUR.MONEY.CROSS_RATE",
+     "error": "Adds the shillings to the result.",
+     "example": {
+      "question": "sh 13,000 to USh.",
+      "wrong_answer": "383,000",
+      "correct_answer": "370,000"
+     },
+     "cause": "Combines by adding.",
+     "reveals": "The answer 383,000 as a wrong option, with a reason that names the idea.",
+     "help": "Conversions multiply or divide; they never add.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_TOTAL_FOR_RATE",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ",
+     "error": "Gives the shillings for many units as the rate.",
+     "example": {
+      "question": "The graph shows 40 dollars = sh 5,200. Rate?",
+      "wrong_answer": "5,200",
+      "correct_answer": "130"
+     },
+     "cause": "Reads the point and stops.",
+     "reveals": "The answer 5,200 as a wrong option, with a reason that names the idea.",
+     "help": "Divide by 40 for one dollar.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_RATE_UPSIDE_DOWN",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ",
+     "error": "Divides the foreign units by the shillings.",
+     "example": {
+      "question": "40 dollars = sh 5,200. Rate?",
+      "wrong_answer": "0.0077",
+      "correct_answer": "130"
+     },
+     "cause": "Divides the smaller by the larger.",
+     "reveals": "The answer 0.0077 as a wrong option, with a reason that names the idea.",
+     "help": "Shillings for one dollar: 5,200 / 40.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_SUBTRACT_FOR_RATE",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ",
+     "error": "Subtracts instead of dividing.",
+     "example": {
+      "question": "40 dollars = sh 5,200. Rate?",
+      "wrong_answer": "5,160",
+      "correct_answer": "130"
+     },
+     "cause": "Picks the wrong operation.",
+     "reveals": "The answer 5,160 as a wrong option, with a reason that names the idea.",
+     "help": "A rate is a division.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_WRONG_POINT_READ",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ",
+     "error": "Reads a different point and divides by the wrong number of units.",
+     "example": {
+      "question": "At 10 dollars the graph shows 1,300. Rate?",
+      "wrong_answer": "1,300",
+      "correct_answer": "130"
+     },
+     "cause": "Reads the point but not its units.",
+     "reveals": "The answer 1,300 as a wrong option, with a reason that names the idea.",
+     "help": "Divide the shillings by the dollars at the same point.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_DUTY_OVER_TOTAL",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Divides the duty by the value plus the duty.",
+     "example": {
+      "question": "Value 50,000, duty 12,500. Rate?",
+      "wrong_answer": "20%",
+      "correct_answer": "25%"
+     },
+     "cause": "Uses the total paid as the base.",
+     "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+     "help": "The duty is a percentage of the customs value alone.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_DUTY_PER_ITEM",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Divides the duty by the number of items.",
+     "example": {
+      "question": "10 items, duty 12,500. Rate?",
+      "wrong_answer": "1,250",
+      "correct_answer": "25%"
+     },
+     "cause": "Finds a share instead of a percentage.",
+     "reveals": "The answer 1,250 as a wrong option, with a reason that names the idea.",
+     "help": "Percentage = duty / value x 100.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_PERCENT_UPSIDE_DOWN",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Divides the value by the duty.",
+     "example": {
+      "question": "Value 50,000, duty 12,500. Rate?",
+      "wrong_answer": "4",
+      "correct_answer": "25%"
+     },
+     "cause": "Puts the bigger number on top.",
+     "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+     "help": "Duty on top: 12,500 / 50,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_DIVIDE_BY_100_ONLY",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Divides the duty by 100 only.",
+     "example": {
+      "question": "Value 50,000, duty 12,500. Rate?",
+      "wrong_answer": "125",
+      "correct_answer": "25%"
+     },
+     "cause": "Half remembers the percentage step.",
+     "reveals": "The answer 125 as a wrong option, with a reason that names the idea.",
+     "help": "Divide by the value, then times 100.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_RATES_ADDED",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Adds the rates of all rows and applies them to the total value.",
+     "example": {
+      "question": "Goods at 10%, 25% and 35%. Duty on the whole shipment?",
+      "wrong_answer": "total x 70%",
+      "correct_answer": "each row at its own rate"
+     },
+     "cause": "Treats the rates like amounts.",
+     "reveals": "The answer total x 70% as a wrong option, with a reason that names the idea.",
+     "help": "Each kind has its own rate: work row by row.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_VALUE_FOR_DUTY",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Gives the total customs value as the duty.",
+     "example": {
+      "question": "Total value 300,000. Duty?",
+      "wrong_answer": "300,000",
+      "correct_answer": "the sum of the duties"
+     },
+     "cause": "Stops after adding values.",
+     "reveals": "The answer 300,000 as a wrong option, with a reason that names the idea.",
+     "help": "Find the duty on each row.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_ONE_ROW_ONLY",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Works out the duty on one kind of goods only.",
+     "example": {
+      "question": "Three kinds of goods. Duty?",
+      "wrong_answer": "one row's duty",
+      "correct_answer": "all three rows"
+     },
+     "cause": "Stops early.",
+     "reveals": "The answer one row's duty as a wrong option, with a reason that names the idea.",
+     "help": "Add the duty of every row.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_HIGHEST_RATE_ALL",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Applies the highest rate to everything.",
+     "example": {
+      "question": "Rates 10%, 25%, 35%. Duty?",
+      "wrong_answer": "total x 35%",
+      "correct_answer": "each row at its own rate"
+     },
+     "cause": "Simplifies to one rate.",
+     "reveals": "The answer total x 35% as a wrong option, with a reason that names the idea.",
+     "help": "Each kind has its own rate.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_VALUE_WITH_DUTY_GIVEN",
+     "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+     "error": "Gives the value with the duty added when the duty alone is asked.",
+     "example": {
+      "question": "Value 40,000 at 25% duty. Duty?",
+      "wrong_answer": "50,000",
+      "correct_answer": "10,000"
+     },
+     "cause": "Adds the duty on.",
+     "reveals": "The answer 50,000 as a wrong option, with a reason that names the idea.",
+     "help": "The duty is the 25% itself.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_EXCISE_ON_VALUE_ONLY",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Works out excise on the customs value alone instead of value plus import duty.",
+     "example": {
+      "question": "Value 40,000, import duty 10,000, excise 20%. Excise?",
+      "wrong_answer": "8,000",
+      "correct_answer": "10,000"
+     },
+     "cause": "Uses the first value given.",
+     "reveals": "The answer 8,000 as a wrong option, with a reason that names the idea.",
+     "help": "Excise is on 40,000 + 10,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_PER_BOTTLE",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Charges the per-litre rate on each bottle.",
+     "example": {
+      "question": "5,000 bottles of 500 ml at sh 10 a litre. Excise?",
+      "wrong_answer": "50,000",
+      "correct_answer": "25,000"
+     },
+     "cause": "Ignores the bottle size.",
+     "reveals": "The answer 50,000 as a wrong option, with a reason that names the idea.",
+     "help": "Find the litres first: 2,500.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_ML_NOT_LITRES",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Multiplies the millilitres by the rate per litre.",
+     "example": {
+      "question": "5,000 bottles of 500 ml at sh 10 a litre. Excise?",
+      "wrong_answer": "25,000,000",
+      "correct_answer": "25,000"
+     },
+     "cause": "Forgets to change ml to litres.",
+     "reveals": "The answer 25,000,000 as a wrong option, with a reason that names the idea.",
+     "help": "1,000 ml = 1 litre.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_LITRES_FOR_DUTY",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Gives the number of litres as the duty.",
+     "example": {
+      "question": "2,500 litres at sh 10 a litre. Excise?",
+      "wrong_answer": "2,500",
+      "correct_answer": "25,000"
+     },
+     "cause": "Stops before multiplying.",
+     "reveals": "The answer 2,500 as a wrong option, with a reason that names the idea.",
+     "help": "Multiply by the rate.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_ML_FACTOR_WRONG",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Uses 100 ml in a litre.",
+     "example": {
+      "question": "500 ml bottles: litres in 5,000 bottles?",
+      "wrong_answer": "25,000",
+      "correct_answer": "2,500"
+     },
+     "cause": "Uses the factor for cm and m.",
+     "reveals": "The answer 25,000 as a wrong option, with a reason that names the idea.",
+     "help": "1,000 ml in a litre.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_PERCENT_OFF_SELLING",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Takes the excise percentage off the selling price to find the factory price.",
+     "example": {
+      "question": "Sold at 1,200 with 20% excise added. Factory price?",
+      "wrong_answer": "960",
+      "correct_answer": "1,000"
+     },
+     "cause": "Thinks taking off undoes adding on.",
+     "reveals": "The answer 960 as a wrong option, with a reason that names the idea.",
+     "help": "The 20% was of the smaller factory price: divide by 1.2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_PERCENT_AS_SHILLINGS",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Takes the rate off as shillings.",
+     "example": {
+      "question": "Sold at 1,200 with 20% excise. Factory price?",
+      "wrong_answer": "1,180",
+      "correct_answer": "1,000"
+     },
+     "cause": "Reads 20% as 20 shillings.",
+     "reveals": "The answer 1,180 as a wrong option, with a reason that names the idea.",
+     "help": "A percentage is a part of the price.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_DIVIDE_BY_RATE_ONLY",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Divides by the rate as a decimal (0.2) instead of by 1.2.",
+     "example": {
+      "question": "Sold at 1,200 with 20% excise. Factory price?",
+      "wrong_answer": "6,000",
+      "correct_answer": "1,000"
+     },
+     "cause": "Forgets the 100% of the factory price.",
+     "reveals": "The answer 6,000 as a wrong option, with a reason that names the idea.",
+     "help": "Price = 120% of factory price: divide by 1.2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_DUTY_ADDED_AGAIN",
+     "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+     "error": "Adds the excise again to a price that already includes it.",
+     "example": {
+      "question": "Sold at 1,200 including 20% excise. Factory price?",
+      "wrong_answer": "1,440",
+      "correct_answer": "1,000"
+     },
+     "cause": "Applies the percentage forwards.",
+     "reveals": "The answer 1,440 as a wrong option, with a reason that names the idea.",
+     "help": "Go back: divide by 1.2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_ON_VALUE_ONLY",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Works out VAT on the customs value alone instead of value plus both duties.",
+     "example": {
+      "question": "Value 40,000, duty 10,000, excise 10,000. VAT 16%?",
+      "wrong_answer": "6,400",
+      "correct_answer": "9,600"
+     },
+     "cause": "Uses the first value given.",
+     "reveals": "The answer 6,400 as a wrong option, with a reason that names the idea.",
+     "help": "VAT is on everything so far: 60,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_BASE_MISSING_EXCISE",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Leaves the excise duty out of the VAT base.",
+     "example": {
+      "question": "Value 40,000, duty 10,000, excise 10,000. VAT 16%?",
+      "wrong_answer": "8,000",
+      "correct_answer": "9,600"
+     },
+     "cause": "Adds the import duty but forgets excise.",
+     "reveals": "The answer 8,000 as a wrong option, with a reason that names the idea.",
+     "help": "Add both duties before the VAT.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_LEFT_OUT",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Leaves the VAT out of the total cost.",
+     "example": {
+      "question": "Value 40,000, duty 10,000, excise 10,000, VAT 9,600. Total?",
+      "wrong_answer": "60,000",
+      "correct_answer": "69,600"
+     },
+     "cause": "Stops before the last tax.",
+     "reveals": "The answer 60,000 as a wrong option, with a reason that names the idea.",
+     "help": "Add the VAT as well.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_OFF_SELLING",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Takes 16% off the price with VAT to find the price before VAT.",
+     "example": {
+      "question": "2,320 with 16% VAT included. Before VAT?",
+      "wrong_answer": "1,948.80",
+      "correct_answer": "2,000"
+     },
+     "cause": "Thinks taking off undoes adding on.",
+     "reveals": "The answer 1,948.80 as a wrong option, with a reason that names the idea.",
+     "help": "The price is 116% of the original: divide by 1.16.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_AS_SHILLINGS",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Takes VAT as 16 shillings.",
+     "example": {
+      "question": "2,320 with 16% VAT. Before VAT?",
+      "wrong_answer": "2,304",
+      "correct_answer": "2,000"
+     },
+     "cause": "Reads 16% as 16 shillings.",
+     "reveals": "The answer 2,304 as a wrong option, with a reason that names the idea.",
+     "help": "VAT is a percentage of the price.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_OF_SELLING",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Finds 16% of the price with VAT as the VAT.",
+     "example": {
+      "question": "2,320 with 16% VAT. VAT inside it?",
+      "wrong_answer": "371.20",
+      "correct_answer": "320"
+     },
+     "cause": "Uses the wrong base.",
+     "reveals": "The answer 371.20 as a wrong option, with a reason that names the idea.",
+     "help": "VAT is 16% of the price before VAT: 2,000.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_DIVIDE_BY_1_6",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Divides by 1.6 instead of 1.16.",
+     "example": {
+      "question": "2,320 with 16% VAT. Before VAT?",
+      "wrong_answer": "1,450",
+      "correct_answer": "2,000"
+     },
+     "cause": "Writes 16% as 0.6.",
+     "reveals": "The answer 1,450 as a wrong option, with a reason that names the idea.",
+     "help": "116% is 1.16.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_ON_ALL_ITEMS",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Charges VAT on items marked as not carrying it.",
+     "example": {
+      "question": "A bill: VAT only on items marked Yes. VAT?",
+      "wrong_answer": "16% of the whole bill",
+      "correct_answer": "16% of the Yes items"
+     },
+     "cause": "Ignores the column.",
+     "reveals": "The answer 16% of the whole bill as a wrong option, with a reason that names the idea.",
+     "help": "Add only the Yes items first.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_PRICE_FOR_VAT",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Gives the total of the VAT items as the VAT.",
+     "example": {
+      "question": "Yes items total 2,500. VAT?",
+      "wrong_answer": "2,500",
+      "correct_answer": "400"
+     },
+     "cause": "Stops before taking 16%.",
+     "reveals": "The answer 2,500 as a wrong option, with a reason that names the idea.",
+     "help": "16% of 2,500.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_PRICE_WITH_VAT_FOR_VAT",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Gives the price with VAT as the VAT.",
+     "example": {
+      "question": "Yes items 2,500. VAT?",
+      "wrong_answer": "2,900",
+      "correct_answer": "400"
+     },
+     "cause": "Answers the price with VAT.",
+     "reveals": "The answer 2,900 as a wrong option, with a reason that names the idea.",
+     "help": "The VAT alone is 16%.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_ON_NO_ITEMS",
+     "skill": "MATH.G9.MEASUR.MONEY.VAT",
+     "error": "Charges VAT on the wrong items.",
+     "example": {
+      "question": "VAT only on Yes items. Which items?",
+      "wrong_answer": "the No items",
+      "correct_answer": "the Yes items"
+     },
+     "cause": "Reads the column the wrong way.",
+     "reveals": "The answer the No items as a wrong option, with a reason that names the idea.",
+     "help": "Yes means VAT is charged.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",

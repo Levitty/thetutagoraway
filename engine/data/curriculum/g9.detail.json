@@ -786,6 +786,69 @@
     "ahead or behind"
    ],
    "mastery": "The child finds the time difference from the longitudes, adds it for a place to the east (ahead) and takes it away for a place to the west (behind), keeps the leftover minutes, and for a flight adds the flight time first and then changes to the local time at the arrival city."
+  },
+  "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY": {
+   "forms": [
+    "which currency",
+    "currency of Uganda",
+    "write the amount",
+    "what does the rate mean"
+   ],
+   "mastery": "The child names the currency of Kenya's neighbours and main trading partners (Uganda and Tanzania shillings, US dollar, euro, pound sterling, rand) and writes amounts with their names or symbols, and knows a rate compares one unit of a currency with shillings."
+  },
+  "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL": {
+   "forms": [
+    "how many shillings",
+    "which rate",
+    "from the rate board",
+    "cost of the trip"
+   ],
+   "mastery": "The child picks the bureau's buying rate when a customer sells foreign money to it and the selling rate when the customer buys foreign money from it, multiplies the number of units by the rate, and works out the net cost of a trip when unused money is sold back."
+  },
+  "MATH.G9.MEASUR.MONEY.CROSS_RATE": {
+   "forms": [
+    "how many Ugandan shillings",
+    "through US dollars",
+    "two steps",
+    "how many dollars first"
+   ],
+   "mastery": "The child changes shillings to dollars (divide by the shillings for one dollar) and then dollars to Ugandan shillings (multiply by USh for one dollar), keeping the two steps in order."
+  },
+  "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ": {
+   "forms": [
+    "what rate does the graph show",
+    "shillings for one dollar",
+    "read the graph",
+    "how many shillings for"
+   ],
+   "mastery": "The child reads a point on a straight-line conversion graph and divides the shillings by the foreign units at that point to get the rate for one unit, and uses the rate the right way round."
+  },
+  "MATH.G9.MEASUR.MONEY.IMPORT_DUTY": {
+   "forms": [
+    "import duty",
+    "what percentage is the duty",
+    "duty on the whole shipment",
+    "complete the steps"
+   ],
+   "mastery": "The child finds import duty as a percentage of the customs value, finds the rate as duty over customs value times 100, and for a shipment works out each kind of goods at its own rate before adding."
+  },
+  "MATH.G9.MEASUR.MONEY.EXCISE_DUTY": {
+   "forms": [
+    "excise duty",
+    "factory price",
+    "duty per litre",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds excise duty as a percentage of the right base (the factory price, or customs value plus import duty for imports) or as an amount per litre (changing ml to litres first), and works back from a price including excise to the factory price by dividing by 1 + rate."
+  },
+  "MATH.G9.MEASUR.MONEY.VAT": {
+   "forms": [
+    "VAT on the bill",
+    "price without VAT",
+    "why is this wrong",
+    "which items carry VAT"
+   ],
+   "mastery": "The child finds VAT at 16% of the price before VAT, adds only the items that carry VAT on a bill, and works back from a price with VAT included by dividing by 1.16 (the VAT inside 2,320 shillings is 320, not 16% of 2,320)."
   }
  }
 }

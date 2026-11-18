@@ -10673,6 +10673,1140 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.MEASUR.TIME_DISTANCE_AND_SPEED",
   "sub_strand_name": "Time, Distance and Speed",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY": {
+  "skill": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY",
+  "key_step": "The child names the currency with its country and reads a rate as shillings for one unit.",
+  "floor": {
+   "prerequisite": "Uses a rate for one unit.",
+   "question": "sh 50 for 1 kg; 3 kg?",
+   "answer": "sh 150"
+  },
+  "representations": [
+   "a map of East Africa with currencies",
+   "a bureau board",
+   "notes and coins"
+  ],
+  "steps": [
+   "Name the country.",
+   "Name its currency.",
+   "Read the rate: shillings for one unit.",
+   "Say which is worth more for one unit."
+  ],
+  "contexts": [
+   "a trader crossing at Busia",
+   "relatives in the UK sending pounds",
+   "a tourist from the USA in Maasai Mara"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a map with Kenya, Uganda and Tanzania."
+   },
+   {
+    "beat": "point",
+    "do": "Point at Uganda.",
+    "say": "What money do they use?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for Ugandan shillings."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 1 US dollar = sh 130 = USh 3,700."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_SHILLING_SAME_EVERYWHERE",
+    "listen_for": [
+     "same as ours"
+    ],
+    "ask": "How many Ugandan shillings for one dollar?",
+    "repair": "3,700: worth less each.",
+    "error": "Thinks a Ugandan or Tanzanian shilling is worth the same as a Kenyan shilling.",
+    "example": {
+     "question": "Is 1 Ugandan shilling worth 1 Kenyan shilling?",
+     "wrong_answer": "Yes, both are shillings",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_CURRENCY_COUNTRY_MIXED",
+    "listen_for": [
+     "naira for South Africa"
+    ],
+    "ask": "Which country uses the naira?",
+    "repair": "Nigeria.",
+    "error": "Matches a currency with the wrong country.",
+    "example": {
+     "question": "Currency of South Africa?",
+     "wrong_answer": "the naira",
+     "correct_answer": "the rand"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_RATE_MEANING_SWAPPED",
+    "listen_for": [
+     "dollars for a shilling"
+    ],
+    "ask": "Is one dollar worth more or less than one shilling?",
+    "repair": "More: 130 shillings.",
+    "error": "Reads a rate as foreign units per shilling.",
+    "example": {
+     "question": "1 US dollar = sh 130. What does 130 mean?",
+     "wrong_answer": "130 dollars for a shilling",
+     "correct_answer": "130 shillings for a dollar"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CURRENCIES_IDENTIFY.M_BIGGER_NUMBER_STRONGER",
+    "listen_for": [
+     "the Ugandan shilling"
+    ],
+    "ask": "More units for one dollar: is each worth more or less?",
+    "repair": "Less.",
+    "error": "Thinks a currency with bigger numbers is worth more.",
+    "example": {
+     "question": "1 US dollar = USh 3,700 and sh 130. Which shilling is worth more?",
+     "wrong_answer": "the Ugandan shilling",
+     "correct_answer": "the Kenyan shilling"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Currency of Tanzania?",
+    "answer": "Tanzanian shilling",
+    "shows": "naming"
+   },
+   {
+    "question": "1 euro = sh 140. What does 140 mean?",
+    "answer": "140 Kenyan shillings for one euro",
+    "shows": "reading a rate"
+   }
+  ],
+  "name": "Identify currencies used in different countries",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL": {
+  "skill": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL",
+  "key_step": "The child asks what the bureau is doing (buying from or selling to the customer) and uses that rate.",
+  "floor": {
+   "prerequisite": "Uses a rate.",
+   "question": "100 units at 128 shillings each",
+   "answer": "12,800"
+  },
+  "representations": [
+   "a bureau board with BUYS and SELLS",
+   "arrows showing who hands what",
+   "a two-row table"
+  ],
+  "steps": [
+   "Who is buying the foreign money: the bureau or the customer?",
+   "Bureau buys: use the buying rate. Bureau sells: the selling rate.",
+   "Multiply units by the rate.",
+   "For a trip, take the money back from the cost."
+  ],
+  "contexts": [
+   "a bureau on Moi Avenue",
+   "a relative back from Dubai",
+   "a school trip to Kampala"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bureau board: USD buys 128, sells 132."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the customer handing over dollars.",
+    "say": "Is the bureau buying or selling?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for buying."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 100 x 128 = 12,800."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_SELL_RATE_WHEN_BUREAU_BUYS",
+    "listen_for": [
+     "13,200"
+    ],
+    "ask": "Is the bureau buying your dollars?",
+    "repair": "Yes: the buying rate.",
+    "error": "Uses the selling rate when the bureau buys from the customer.",
+    "example": {
+     "question": "A bureau buys at 128 and sells at 132. Sell it 100 dollars. Shillings?",
+     "wrong_answer": "13,200",
+     "correct_answer": "12,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_BUY_RATE_WHEN_BUREAU_SELLS",
+    "listen_for": [
+     "25,600"
+    ],
+    "ask": "Is the bureau selling to you?",
+    "repair": "Yes: 132.",
+    "error": "Uses the buying rate when the bureau sells to the customer.",
+    "example": {
+     "question": "Buy 200 dollars; bureau sells at 132. Cost?",
+     "wrong_answer": "25,600 (at 128)",
+     "correct_answer": "26,400"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_DIVIDE_FOR_SHILLINGS",
+    "listen_for": [
+     "0.78"
+    ],
+    "ask": "Is one dollar worth more than a shilling?",
+    "repair": "Yes: multiply.",
+    "error": "Divides by the rate to change foreign money to shillings.",
+    "example": {
+     "question": "100 dollars at 128. Shillings?",
+     "wrong_answer": "0.78",
+     "correct_answer": "12,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_RATES_AVERAGED",
+    "listen_for": [
+     "13,000"
+    ],
+    "ask": "Does a bureau use an average?",
+    "repair": "No: one rate.",
+    "error": "Uses the average of the buying and selling rates.",
+    "example": {
+     "question": "Buys at 128, sells at 132. Sell 100 dollars.",
+     "wrong_answer": "13,000",
+     "correct_answer": "12,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_RATE_ADDED",
+    "listen_for": [
+     "228"
+    ],
+    "ask": "Add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the rate to the number of units.",
+    "example": {
+     "question": "100 dollars at 128. Shillings?",
+     "wrong_answer": "228",
+     "correct_answer": "12,800"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_RETURN_ADDED",
+    "listen_for": [
+     "30,240"
+    ],
+    "ask": "Did selling back cost more or give money back?",
+    "repair": "Money back: subtract.",
+    "error": "Adds the money from selling back to the cost of the trip.",
+    "example": {
+     "question": "Bought for 26,400; sold back for 3,840. Net cost?",
+     "wrong_answer": "30,240",
+     "correct_answer": "22,560"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_ONE_RATE_FOR_BOTH",
+    "listen_for": [
+     "one rate"
+    ],
+    "ask": "Is selling back at 132?",
+    "repair": "No: 128.",
+    "error": "Uses one rate for both buying and selling back.",
+    "example": {
+     "question": "Buy 200 dollars at 132, sell back 30 at 128. Net cost?",
+     "wrong_answer": "170 x 132",
+     "correct_answer": "200 x 132 - 30 x 128"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_WRONG_ROW_CURRENCY",
+    "listen_for": [
+     "the dollar row"
+    ],
+    "ask": "Which currency is it?",
+    "repair": "Find its row.",
+    "error": "Uses the rate of another currency on the board.",
+    "example": {
+     "question": "Change euros using the board.",
+     "wrong_answer": "the dollar row",
+     "correct_answer": "the euro row"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL.M_WRONG_RATE_COLUMN",
+    "listen_for": [
+     "the other column"
+    ],
+    "ask": "Is the bureau buying or selling here?",
+    "repair": "Read that column.",
+    "error": "Reads the wrong column (buys or sells) on a rate board.",
+    "example": {
+     "question": "Board: euro buys 138, sells 142. A customer buys 50 euros from the bureau.",
+     "wrong_answer": "50 x 138",
+     "correct_answer": "50 x 142"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A bureau buys pounds at 165 and sells at 170. Sell it 50 pounds. Shillings?",
+    "answer": "8,250",
+    "shows": "buying rate"
+   },
+   {
+    "question": "Buy 300 dollars at 132; sell back 40 at 128. Net cost?",
+    "answer": "34,480 shillings",
+    "shows": "net cost"
+   }
+  ],
+  "name": "Convert currency at a bureau using its buying and selling rates",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.CROSS_RATE": {
+  "skill": "MATH.G9.MEASUR.MONEY.CROSS_RATE",
+  "key_step": "The child writes two arrows (shillings to dollars, dollars to USh) and does one step at a time.",
+  "floor": {
+   "prerequisite": "Converts with one rate.",
+   "question": "sh 13,000 at 130 a dollar",
+   "answer": "100 dollars"
+  },
+  "representations": [
+   "a chain of arrows",
+   "two-step working",
+   "a table of rates"
+  ],
+  "steps": [
+   "Shillings to dollars: divide by the shillings for one dollar.",
+   "Dollars to USh: multiply by USh for one dollar.",
+   "Check the size: USh numbers are big.",
+   "Give the unit."
+  ],
+  "contexts": [
+   "a trader buying goods in Kampala",
+   "a student travelling to Dar es Salaam",
+   "sending money to Rwanda"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw sh -> dollars -> USh."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first arrow.",
+    "say": "How many dollars is sh 13,000?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 100."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 100 x 3,700 = USh 370,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_DIRECT_MULTIPLY_CROSS",
+    "listen_for": [
+     "48,100,000"
+    ],
+    "ask": "Did you go through the dollars?",
+    "repair": "Divide by 130 first.",
+    "error": "Multiplies the shillings by the Ugandan rate directly.",
+    "example": {
+     "question": "sh 13,000 to USh (1 dollar = sh 130 = USh 3,700).",
+     "wrong_answer": "48,100,000",
+     "correct_answer": "370,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_DIRECT_DIVIDE_CROSS",
+    "listen_for": [
+     "3.5"
+    ],
+    "ask": "Is USh 3.5 a lot of Ugandan money?",
+    "repair": "No: go through dollars.",
+    "error": "Divides the shillings by the Ugandan rate.",
+    "example": {
+     "question": "sh 13,000 to USh.",
+     "wrong_answer": "3.5",
+     "correct_answer": "370,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_STOPPED_AT_DOLLARS",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Is that USh?",
+    "repair": "Dollars: one more step.",
+    "error": "Stops at the number of dollars.",
+    "example": {
+     "question": "sh 13,000 to USh.",
+     "wrong_answer": "100",
+     "correct_answer": "370,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.CROSS_RATE.M_CROSS_ADDED",
+    "listen_for": [
+     "383,000"
+    ],
+    "ask": "Do conversions add?",
+    "repair": "No.",
+    "error": "Adds the shillings to the result.",
+    "example": {
+     "question": "sh 13,000 to USh.",
+     "wrong_answer": "383,000",
+     "correct_answer": "370,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1 dollar = sh 130 = TSh 2,600. Change sh 6,500 to TSh.",
+    "answer": "TSh 130,000",
+    "shows": "two steps"
+   },
+   {
+    "question": "Change USh 740,000 to Kenyan shillings (1 dollar = USh 3,700 = sh 130).",
+    "answer": "sh 26,000",
+    "shows": "two steps back"
+   }
+  ],
+  "name": "Convert between two foreign currencies through a third",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ": {
+  "skill": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ",
+  "key_step": "The child reads one clear point and divides its shillings by its foreign units.",
+  "floor": {
+   "prerequisite": "Reads a point on a graph.",
+   "question": "The point above 40",
+   "answer": "5,200"
+  },
+  "representations": [
+   "a conversion graph",
+   "a table from the graph",
+   "shillings / units"
+  ],
+  "steps": [
+   "Pick a point on a grid line.",
+   "Read the units and the shillings.",
+   "Divide shillings by units.",
+   "That is the rate for one unit."
+  ],
+  "contexts": [
+   "a bureau's rate graph",
+   "a newspaper chart",
+   "a phone app"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a straight line through (40, 5,200)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the point.",
+    "say": "How many shillings for 40 dollars?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5,200."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 5,200 / 40 = 130 shillings for one dollar."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_TOTAL_FOR_RATE",
+    "listen_for": [
+     "5,200"
+    ],
+    "ask": "Is that for one dollar?",
+    "repair": "For 40: divide.",
+    "error": "Gives the shillings for many units as the rate.",
+    "example": {
+     "question": "The graph shows 40 dollars = sh 5,200. Rate?",
+     "wrong_answer": "5,200",
+     "correct_answer": "130"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_RATE_UPSIDE_DOWN",
+    "listen_for": [
+     "0.0077"
+    ],
+    "ask": "Shillings for one dollar or dollars for one shilling?",
+    "repair": "Shillings for a dollar.",
+    "error": "Divides the foreign units by the shillings.",
+    "example": {
+     "question": "40 dollars = sh 5,200. Rate?",
+     "wrong_answer": "0.0077",
+     "correct_answer": "130"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_SUBTRACT_FOR_RATE",
+    "listen_for": [
+     "5,160"
+    ],
+    "ask": "Is a rate a difference?",
+    "repair": "A division.",
+    "error": "Subtracts instead of dividing.",
+    "example": {
+     "question": "40 dollars = sh 5,200. Rate?",
+     "wrong_answer": "5,160",
+     "correct_answer": "130"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ.M_WRONG_POINT_READ",
+    "listen_for": [
+     "1,300"
+    ],
+    "ask": "How many dollars at that point?",
+    "repair": "10: divide by 10.",
+    "error": "Reads a different point and divides by the wrong number of units.",
+    "example": {
+     "question": "At 10 dollars the graph shows 1,300. Rate?",
+     "wrong_answer": "1,300",
+     "correct_answer": "130"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A graph shows 20 euros = sh 2,800. Rate?",
+    "answer": "140 shillings for one euro",
+    "shows": "divide"
+   },
+   {
+    "question": "Using that rate, 15 euros?",
+    "answer": "sh 2,100",
+    "shows": "use the rate"
+   }
+  ],
+  "name": "Read an exchange rate from a graph or table",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.IMPORT_DUTY": {
+  "skill": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY",
+  "key_step": "The child writes duty = rate x customs value, row by row, and for a rate divides the duty by the customs value alone.",
+  "floor": {
+   "prerequisite": "Finds a percentage of an amount.",
+   "question": "25% of 40,000",
+   "answer": "10,000"
+  },
+  "representations": [
+   "a customs table",
+   "value and duty in columns",
+   "percentage = part / whole x 100"
+  ],
+  "steps": [
+   "Find the customs value.",
+   "Duty = rate x value for each kind.",
+   "Add the duties.",
+   "For a rate: duty / value x 100."
+  ],
+  "contexts": [
+   "bicycles imported through Mombasa port",
+   "a shipment of phones and cables",
+   "a second-hand car from Japan"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: goods, value, rate, duty."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the first row.",
+    "say": "What is the duty on this row?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills each duty."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write the total duty."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_DUTY_OVER_TOTAL",
+    "listen_for": [
+     "20%"
+    ],
+    "ask": "Is the duty a percentage of the value or of the value with duty?",
+    "repair": "Of the value.",
+    "error": "Divides the duty by the value plus the duty.",
+    "example": {
+     "question": "Value 50,000, duty 12,500. Rate?",
+     "wrong_answer": "20%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_DUTY_PER_ITEM",
+    "listen_for": [
+     "1,250"
+    ],
+    "ask": "Was a percentage asked?",
+    "repair": "Yes: divide by the value.",
+    "error": "Divides the duty by the number of items.",
+    "example": {
+     "question": "10 items, duty 12,500. Rate?",
+     "wrong_answer": "1,250",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_PERCENT_UPSIDE_DOWN",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Which is the part?",
+    "repair": "The duty.",
+    "error": "Divides the value by the duty.",
+    "example": {
+     "question": "Value 50,000, duty 12,500. Rate?",
+     "wrong_answer": "4",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_DIVIDE_BY_100_ONLY",
+    "listen_for": [
+     "125"
+    ],
+    "ask": "Did you divide by the value?",
+    "repair": "Divide, then times 100.",
+    "error": "Divides the duty by 100 only.",
+    "example": {
+     "question": "Value 50,000, duty 12,500. Rate?",
+     "wrong_answer": "125",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_RATES_ADDED",
+    "listen_for": [
+     "70%"
+    ],
+    "ask": "Do the rates add?",
+    "repair": "No: row by row.",
+    "error": "Adds the rates of all rows and applies them to the total value.",
+    "example": {
+     "question": "Goods at 10%, 25% and 35%. Duty on the whole shipment?",
+     "wrong_answer": "total x 70%",
+     "correct_answer": "each row at its own rate"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_VALUE_FOR_DUTY",
+    "listen_for": [
+     "the total value"
+    ],
+    "ask": "Is that the duty?",
+    "repair": "Find each duty.",
+    "error": "Gives the total customs value as the duty.",
+    "example": {
+     "question": "Total value 300,000. Duty?",
+     "wrong_answer": "300,000",
+     "correct_answer": "the sum of the duties"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_ONE_ROW_ONLY",
+    "listen_for": [
+     "one row"
+    ],
+    "ask": "How many kinds of goods?",
+    "repair": "Three: add.",
+    "error": "Works out the duty on one kind of goods only.",
+    "example": {
+     "question": "Three kinds of goods. Duty?",
+     "wrong_answer": "one row's duty",
+     "correct_answer": "all three rows"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_HIGHEST_RATE_ALL",
+    "listen_for": [
+     "35% of all"
+    ],
+    "ask": "Do all goods pay 35%?",
+    "repair": "No: each its own.",
+    "error": "Applies the highest rate to everything.",
+    "example": {
+     "question": "Rates 10%, 25%, 35%. Duty?",
+     "wrong_answer": "total x 35%",
+     "correct_answer": "each row at its own rate"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.IMPORT_DUTY.M_VALUE_WITH_DUTY_GIVEN",
+    "listen_for": [
+     "50,000"
+    ],
+    "ask": "Is that the duty or the value plus duty?",
+    "repair": "Value plus duty.",
+    "error": "Gives the value with the duty added when the duty alone is asked.",
+    "example": {
+     "question": "Value 40,000 at 25% duty. Duty?",
+     "wrong_answer": "50,000",
+     "correct_answer": "10,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Goods worth 80,000 shillings pay 25% import duty. Duty?",
+    "answer": "20,000 shillings",
+    "shows": "duty"
+   },
+   {
+    "question": "Duty of 9,000 shillings on goods worth 60,000. Rate?",
+    "answer": "15%",
+    "shows": "rate"
+   }
+  ],
+  "name": "Work out import duty on goods",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.EXCISE_DUTY": {
+  "skill": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY",
+  "key_step": "The child names the base first (factory price, or value plus import duty, or litres) and works on that base only.",
+  "floor": {
+   "prerequisite": "Finds a percentage increase.",
+   "question": "20% more than 1,000",
+   "answer": "1,200"
+  },
+  "representations": [
+   "a layered bar: value, import duty, excise",
+   "a table of bottles and litres",
+   "price = factory x 1.2"
+  ],
+  "steps": [
+   "Find the base.",
+   "Excise = rate x base (or rate per litre x litres).",
+   "Working back: price / (1 + rate).",
+   "Check by going forwards again."
+  ],
+  "contexts": [
+   "a soda bottler in Nairobi",
+   "mobile phone airtime",
+   "an imported machine"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: sold at 1,200 including 20% excise."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 1,200.",
+    "say": "Is 1,200 the factory price or the factory price plus 20%?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for plus 20%."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 1,200 / 1.2 = 1,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_EXCISE_ON_VALUE_ONLY",
+    "listen_for": [
+     "8,000"
+    ],
+    "ask": "What is the excise charged on?",
+    "repair": "Value plus import duty.",
+    "error": "Works out excise on the customs value alone instead of value plus import duty.",
+    "example": {
+     "question": "Value 40,000, import duty 10,000, excise 20%. Excise?",
+     "wrong_answer": "8,000",
+     "correct_answer": "10,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_PER_BOTTLE",
+    "listen_for": [
+     "50,000"
+    ],
+    "ask": "Is the rate per bottle or per litre?",
+    "repair": "Per litre.",
+    "error": "Charges the per-litre rate on each bottle.",
+    "example": {
+     "question": "5,000 bottles of 500 ml at sh 10 a litre. Excise?",
+     "wrong_answer": "50,000",
+     "correct_answer": "25,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_ML_NOT_LITRES",
+    "listen_for": [
+     "25,000,000"
+    ],
+    "ask": "Is 500 ml a litre?",
+    "repair": "Half a litre.",
+    "error": "Multiplies the millilitres by the rate per litre.",
+    "example": {
+     "question": "5,000 bottles of 500 ml at sh 10 a litre. Excise?",
+     "wrong_answer": "25,000,000",
+     "correct_answer": "25,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_LITRES_FOR_DUTY",
+    "listen_for": [
+     "2,500"
+    ],
+    "ask": "Did you multiply by the rate?",
+    "repair": "Times 10.",
+    "error": "Gives the number of litres as the duty.",
+    "example": {
+     "question": "2,500 litres at sh 10 a litre. Excise?",
+     "wrong_answer": "2,500",
+     "correct_answer": "25,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_ML_FACTOR_WRONG",
+    "listen_for": [
+     "25,000"
+    ],
+    "ask": "How many ml in a litre?",
+    "repair": "1,000.",
+    "error": "Uses 100 ml in a litre.",
+    "example": {
+     "question": "500 ml bottles: litres in 5,000 bottles?",
+     "wrong_answer": "25,000",
+     "correct_answer": "2,500"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_PERCENT_OFF_SELLING",
+    "listen_for": [
+     "960"
+    ],
+    "ask": "Was the 20% of 1,200 or of the factory price?",
+    "repair": "Of the factory price.",
+    "error": "Takes the excise percentage off the selling price to find the factory price.",
+    "example": {
+     "question": "Sold at 1,200 with 20% excise added. Factory price?",
+     "wrong_answer": "960",
+     "correct_answer": "1,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_PERCENT_AS_SHILLINGS",
+    "listen_for": [
+     "1,180"
+    ],
+    "ask": "Is 20% 20 shillings?",
+    "repair": "No.",
+    "error": "Takes the rate off as shillings.",
+    "example": {
+     "question": "Sold at 1,200 with 20% excise. Factory price?",
+     "wrong_answer": "1,180",
+     "correct_answer": "1,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_DIVIDE_BY_RATE_ONLY",
+    "listen_for": [
+     "6,000"
+    ],
+    "ask": "Is the factory price more than the selling price?",
+    "repair": "No: divide by 1.2.",
+    "error": "Divides by the rate as a decimal (0.2) instead of by 1.2.",
+    "example": {
+     "question": "Sold at 1,200 with 20% excise. Factory price?",
+     "wrong_answer": "6,000",
+     "correct_answer": "1,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.EXCISE_DUTY.M_DUTY_ADDED_AGAIN",
+    "listen_for": [
+     "1,440"
+    ],
+    "ask": "Is the duty already in 1,200?",
+    "repair": "Yes: go back.",
+    "error": "Adds the excise again to a price that already includes it.",
+    "example": {
+     "question": "Sold at 1,200 including 20% excise. Factory price?",
+     "wrong_answer": "1,440",
+     "correct_answer": "1,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "10,000 bottles of 300 ml, excise sh 12 a litre. Excise?",
+    "answer": "36,000 shillings",
+    "shows": "per litre"
+   },
+   {
+    "question": "A phone sells at 11,500 including 15% excise. Factory price?",
+    "answer": "10,000 shillings",
+    "shows": "working back"
+   }
+  ],
+  "name": "Work out excise duty on goods and services",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.MEASUR.MONEY.VAT": {
+  "skill": "MATH.G9.MEASUR.MONEY.VAT",
+  "key_step": "The child takes 16% of the price before VAT, and to go back divides the price with VAT by 1.16.",
+  "floor": {
+   "prerequisite": "Works back from a percentage increase.",
+   "question": "After a 20% rise the price is 1,200. Before?",
+   "answer": "1,000"
+  },
+  "representations": [
+   "a receipt with a VAT column",
+   "price = original x 1.16",
+   "a layered bar of taxes"
+  ],
+  "steps": [
+   "Find the base: only items with VAT; for imports, value plus both duties.",
+   "VAT = 16% of the base.",
+   "Price with VAT = base x 1.16.",
+   "Back: price / 1.16."
+  ],
+  "contexts": [
+   "a supermarket receipt in Kisumu",
+   "a phone with VAT included",
+   "an imported machine at the port"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2,320 with 16% VAT included."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2,320.",
+    "say": "Is this 100% or 116% of the price before VAT?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 116%."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2,320 / 1.16 = 2,000; VAT = 320."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_ON_VALUE_ONLY",
+    "listen_for": [
+     "6,400"
+    ],
+    "ask": "Is VAT on the value alone?",
+    "repair": "On value plus both duties.",
+    "error": "Works out VAT on the customs value alone instead of value plus both duties.",
+    "example": {
+     "question": "Value 40,000, duty 10,000, excise 10,000. VAT 16%?",
+     "wrong_answer": "6,400",
+     "correct_answer": "9,600"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_BASE_MISSING_EXCISE",
+    "listen_for": [
+     "8,000"
+    ],
+    "ask": "Did you add the excise?",
+    "repair": "Add it.",
+    "error": "Leaves the excise duty out of the VAT base.",
+    "example": {
+     "question": "Value 40,000, duty 10,000, excise 10,000. VAT 16%?",
+     "wrong_answer": "8,000",
+     "correct_answer": "9,600"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_LEFT_OUT",
+    "listen_for": [
+     "60,000"
+    ],
+    "ask": "Is the VAT paid too?",
+    "repair": "Yes: add it.",
+    "error": "Leaves the VAT out of the total cost.",
+    "example": {
+     "question": "Value 40,000, duty 10,000, excise 10,000, VAT 9,600. Total?",
+     "wrong_answer": "60,000",
+     "correct_answer": "69,600"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_OFF_SELLING",
+    "listen_for": [
+     "1,948.80"
+    ],
+    "ask": "Was the 16% of 2,320?",
+    "repair": "Of the smaller price.",
+    "error": "Takes 16% off the price with VAT to find the price before VAT.",
+    "example": {
+     "question": "2,320 with 16% VAT included. Before VAT?",
+     "wrong_answer": "1,948.80",
+     "correct_answer": "2,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_AS_SHILLINGS",
+    "listen_for": [
+     "2,304"
+    ],
+    "ask": "Is 16% 16 shillings?",
+    "repair": "No.",
+    "error": "Takes VAT as 16 shillings.",
+    "example": {
+     "question": "2,320 with 16% VAT. Before VAT?",
+     "wrong_answer": "2,304",
+     "correct_answer": "2,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_OF_SELLING",
+    "listen_for": [
+     "371.20"
+    ],
+    "ask": "Which price is the 16% taken from?",
+    "repair": "The price before VAT.",
+    "error": "Finds 16% of the price with VAT as the VAT.",
+    "example": {
+     "question": "2,320 with 16% VAT. VAT inside it?",
+     "wrong_answer": "371.20",
+     "correct_answer": "320"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_DIVIDE_BY_1_6",
+    "listen_for": [
+     "1,450"
+    ],
+    "ask": "Is 116% 1.6?",
+    "repair": "1.16.",
+    "error": "Divides by 1.6 instead of 1.16.",
+    "example": {
+     "question": "2,320 with 16% VAT. Before VAT?",
+     "wrong_answer": "1,450",
+     "correct_answer": "2,000"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_ON_ALL_ITEMS",
+    "listen_for": [
+     "all items"
+    ],
+    "ask": "Which items carry VAT?",
+    "repair": "The Yes items.",
+    "error": "Charges VAT on items marked as not carrying it.",
+    "example": {
+     "question": "A bill: VAT only on items marked Yes. VAT?",
+     "wrong_answer": "16% of the whole bill",
+     "correct_answer": "16% of the Yes items"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_PRICE_FOR_VAT",
+    "listen_for": [
+     "2,500"
+    ],
+    "ask": "Is that the VAT?",
+    "repair": "16% of it.",
+    "error": "Gives the total of the VAT items as the VAT.",
+    "example": {
+     "question": "Yes items total 2,500. VAT?",
+     "wrong_answer": "2,500",
+     "correct_answer": "400"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_PRICE_WITH_VAT_FOR_VAT",
+    "listen_for": [
+     "2,900"
+    ],
+    "ask": "Is that the VAT alone?",
+    "repair": "No: 400.",
+    "error": "Gives the price with VAT as the VAT.",
+    "example": {
+     "question": "Yes items 2,500. VAT?",
+     "wrong_answer": "2,900",
+     "correct_answer": "400"
+    }
+   },
+   {
+    "code": "MATH.G9.MEASUR.MONEY.VAT.M_VAT_ON_NO_ITEMS",
+    "listen_for": [
+     "the No items"
+    ],
+    "ask": "What does Yes mean?",
+    "repair": "VAT is charged.",
+    "error": "Charges VAT on the wrong items.",
+    "example": {
+     "question": "VAT only on Yes items. Which items?",
+     "wrong_answer": "the No items",
+     "correct_answer": "the Yes items"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A radio costs 3,480 with 16% VAT included. Price without VAT?",
+    "answer": "3,000 shillings",
+    "shows": "divide by 1.16"
+   },
+   {
+    "question": "VAT items on a bill total 1,500 shillings. VAT at 16%?",
+    "answer": "240 shillings",
+    "shows": "VAT on the base"
+   }
+  ],
+  "name": "Determine value added tax on goods and services",
+  "sub_strand": "MATH.G9.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

@@ -764,30 +764,30 @@ export const FAMILIES = [
     check: ({ dep, dur, d }, v) => v[0] === Math.abs(d) && v[1] === 4 * v[0] && v[2] === Number(clock24(dep + dur * 60 + (d > 0 ? v[1] : -v[1])).replace(':', '')) }),
 
   // ======================================================== MONEY
-  fam({ id: 'g9.money.bureau-sell', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.b', rung: 1, form: 'word',
+  fam({ id: 'g9.money.bureau-sell', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.b', cskill: 'MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL', rung: 1, form: 'word',
     draw: () => { const cur = pick(Object.keys(CUR)), r = rate(cur); return { cur, ...r, n: pick([50, 100, 150, 200, 250, 400]), who: person() }; },
     make: ({ cur, buy, sell, n, who }) => ({
       question: `${who.name} comes home with ${n} ${cur} and takes them to a forex bureau to change into Kenyan shillings. The board says the bureau buys at sh ${buy} and sells at sh ${sell}. How many shillings does ${who.she} receive?`,
       answer: n * buy,
-      wrong: [[n * sell, `The bureau is buying, so it uses its lower buying rate. The selling rate is for when it sells to a customer.`], [round(n / buy, 2), 'Each unit of foreign money is worth some shillings. Multiply, do not divide.'], [n * (buy + sell) / 2, 'Use one rate only. Which rate does a bureau use when it buys?'], [n + buy, 'Each unit is worth the rate in shillings. Multiply by the number of units.']],
+      wrong: [[n * sell, `The bureau is buying, so it uses its lower buying rate. The selling rate is for when it sells to a customer.`, 'M_SELL_RATE_WHEN_BUREAU_BUYS'], [round(n / buy, 2), 'Each unit of foreign money is worth some shillings. Multiply, do not divide.', 'M_DIVIDE_FOR_SHILLINGS'], [n * (buy + sell) / 2, 'Use one rate only. Which rate does a bureau use when it buys?', 'M_RATES_AVERAGED'], [n + buy, 'Each unit is worth the rate in shillings. Multiply by the number of units.', 'M_RATE_ADDED']],
       hints: ['A bureau buys foreign money at the lower rate and sells at the higher rate.', 'Multiply the amount by the rate that applies.'],
       steps: [`The bureau is buying, so it uses the buying rate: sh ${buy}.`, `${n} × ${buy} = ${sh(n * buy)}.`] }),
     check: ({ buy, n }, a) => a / n === buy }),
 
-  fam({ id: 'g9.money.bureau-trip', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.b', rung: 3, form: 'steps',
+  fam({ id: 'g9.money.bureau-trip', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.b', cskill: 'MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL', rung: 3, form: 'steps',
     draw: () => { const cur = pick(Object.keys(CUR)), r = rate(cur), n = pick([200, 300, 400, 500]), left = pick([20, 40, 50, 60, 80]); return { cur, ...r, n, left, who: person() }; },
     make: ({ cur, buy, sell, n, left, who }) => ({
       question: `Before a trip, ${who.name} buys ${n} ${cur} from a bureau. The bureau sells at sh ${sell} and buys at sh ${buy}. After the trip ${who.she} has ${left} ${cur} left and sells them back to the same bureau.`,
       parts: [
-        { prompt: `How many shillings does ${who.name} pay for the foreign money?`, answer: n * sell, unit: 'sh', hint: 'The bureau is selling to the customer, so it uses its selling rate.', wrong: [[n * buy, 'When the bureau sells to a customer it uses the higher selling rate.']] },
-        { prompt: `How many shillings does ${who.name} get for the money sold back?`, answer: left * buy, unit: 'sh', hint: 'Now the bureau is buying.', wrong: [[left * sell, 'When the bureau buys it uses the lower buying rate.']] },
-        { prompt: `How many shillings does the trip cost ${who.herObj} in the end?`, answer: n * sell - left * buy, unit: 'sh', hint: 'What was paid, take away what came back.', wrong: [[n * sell + left * buy, 'What came back reduces the cost.'], [(n - left) * sell, 'The money sold back was bought at a different rate from the one it was sold at.']] },
+        { prompt: `How many shillings does ${who.name} pay for the foreign money?`, answer: n * sell, unit: 'sh', hint: 'The bureau is selling to the customer, so it uses its selling rate.', wrong: [[n * buy, 'When the bureau sells to a customer it uses the higher selling rate.', 'M_BUY_RATE_WHEN_BUREAU_SELLS']] },
+        { prompt: `How many shillings does ${who.name} get for the money sold back?`, answer: left * buy, unit: 'sh', hint: 'Now the bureau is buying.', wrong: [[left * sell, 'When the bureau buys it uses the lower buying rate.', 'M_SELL_RATE_WHEN_BUREAU_BUYS']] },
+        { prompt: `How many shillings does the trip cost ${who.herObj} in the end?`, answer: n * sell - left * buy, unit: 'sh', hint: 'What was paid, take away what came back.', wrong: [[n * sell + left * buy, 'What came back reduces the cost.', 'M_RETURN_ADDED'], [(n - left) * sell, 'The money sold back was bought at a different rate from the one it was sold at.', 'M_ONE_RATE_FOR_BOTH']] },
       ],
       hints: ['A bureau sells at the higher rate and buys at the lower rate.'],
       steps: [`She buys at the selling rate: ${n} × ${sell} = ${sh(n * sell)}.`, `She sells back at the buying rate: ${left} × ${buy} = ${sh(left * buy)}.`, `Cost: ${sh(n * sell)} − ${sh(left * buy)} = ${sh(n * sell - left * buy)}.`] }),
     check: ({ sell, buy, n, left }, v) => v[0] / n === sell && v[1] / left === buy && v[0] - v[1] === v[2] }),
 
-  fam({ id: 'g9.money.rate-board', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.b', rung: 2, form: 'table',
+  fam({ id: 'g9.money.rate-board', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.b', cskill: 'MATH.G9.MEASUR.MONEY.BUREAU_BUY_SELL', rung: 2, form: 'table',
     draw: () => { const names = Object.keys(CUR); const rows = names.map(n => ({ n, ...rate(n) })); const k = pick(rows), toKes = pick([true, false]); return { rows, k, toKes, amt: pick([50, 100, 200, 250, 500]), who: person() }; },
     make: ({ rows, k, toKes, amt, who }) => {
       const other = rows.find(r => r !== k);
@@ -796,33 +796,33 @@ export const FAMILIES = [
         : `The board at a forex bureau shows its rates in Kenyan shillings for one unit of each currency. The board is an example only. ${who.name} pays Kenyan shillings to buy ${amt} ${k.n}. How many shillings does ${who.she} pay?`,
         model: { type: 'table', data: { head: ['Currency', 'Bureau buys at (sh)', 'Bureau sells at (sh)'], rows: rows.map(r => ({ cells: [r.n[0].toUpperCase() + r.n.slice(1), String(r.buy), String(r.sell)] })) } },
         answer: amt * (toKes ? k.buy : k.sell),
-        wrong: [[amt * (toKes ? k.sell : k.buy), toKes ? 'The bureau is buying from her, so read the "buys" column.' : 'The bureau is selling to him or her, so read the "sells" column.'], [amt * (toKes ? other.buy : other.sell), 'That row is for a different currency.'], [round(amt / (toKes ? k.buy : k.sell), 2), 'Each unit is worth that many shillings. Multiply, do not divide.']],
+        wrong: [[amt * (toKes ? k.sell : k.buy), toKes ? 'The bureau is buying from her, so read the "buys" column.' : 'The bureau is selling to him or her, so read the "sells" column.', 'M_WRONG_RATE_COLUMN'], [amt * (toKes ? other.buy : other.sell), 'That row is for a different currency.', 'M_WRONG_ROW_CURRENCY'], [round(amt / (toKes ? k.buy : k.sell), 2), 'Each unit is worth that many shillings. Multiply, do not divide.', 'M_DIVIDE_FOR_SHILLINGS']],
         hints: ['Decide: is the bureau buying or selling the foreign money?', 'Use the matching column and the right row.'],
         steps: [toKes ? `The bureau buys ${k.n} from ${who.herObj}, so use the "buys" rate: sh ${k.buy}.` : `The bureau sells ${k.n}, so use the "sells" rate: sh ${k.sell}.`, `${amt} × ${toKes ? k.buy : k.sell} = ${sh(amt * (toKes ? k.buy : k.sell))}.`] };
     },
     check: ({ k, toKes, amt }, a) => a / amt === (toKes ? k.buy : k.sell) }),
 
-  fam({ id: 'g9.money.cross-ush', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.b', rung: 3, form: 'word',
+  fam({ id: 'g9.money.cross-ush', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.b', cskill: 'MATH.G9.MEASUR.MONEY.CROSS_RATE', rung: 3, form: 'word',
     draw: () => { const usd = pick([125, 128, 130]), ush = pick([3500, 3600, 3640, 3750]); const k = pick([10, 20, 40, 50]); const sh0 = usd * k; const out = ush * k; return Number.isInteger(out) ? { usd, ush, k, sh0, out, who: person() } : null; },
     make: ({ usd, ush, k, sh0, out, who }) => ({
       question: `${who.name} is going to Kampala to buy goods and changes Kenyan shillings into Ugandan shillings (USh) by way of US dollars. In this question, 1 US dollar buys sh ${usd} and 1 US dollar buys USh ${commas(ush)}. ${who.name} changes ${sh(sh0)}. How many Ugandan shillings does ${who.she} get?`,
       answer: out,
-      wrong: [[sh0 * ush, 'First change the Kenyan shillings to dollars, then the dollars to Ugandan shillings.'], [round(sh0 / ush, 3), 'You must go through the dollars: shillings to dollars, then dollars to USh.'], [round(sh0 / usd, 2), 'That is the number of dollars. Now change the dollars to USh.'], [out + sh0, 'Change the dollars to USh by multiplying by the rate. Do not add.']].filter(w => w[0] !== out),
+      wrong: [[sh0 * ush, 'First change the Kenyan shillings to dollars, then the dollars to Ugandan shillings.', 'M_DIRECT_MULTIPLY_CROSS'], [round(sh0 / ush, 3), 'You must go through the dollars: shillings to dollars, then dollars to USh.', 'M_DIRECT_DIVIDE_CROSS'], [round(sh0 / usd, 2), 'That is the number of dollars. Now change the dollars to USh.', 'M_STOPPED_AT_DOLLARS'], [out + sh0, 'Change the dollars to USh by multiplying by the rate. Do not add.', 'M_CROSS_ADDED']].filter(w => w[0] !== out),
       hints: ['Two steps: Kenyan shillings to dollars, then dollars to Ugandan shillings.', 'Shillings to dollars: divide by the number of shillings one dollar buys.'],
       steps: [`Dollars: ${commas(sh0)} ÷ ${usd} = ${k}.`, `USh: ${k} × ${commas(ush)} = ${commas(out)}.`] }),
     check: ({ usd, ush, sh0 }, a) => Math.abs((a / ush) * usd - sh0) < 0.5 }),
 
-  fam({ id: 'g9.money.duty-rate', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.c', rung: 2, form: 'word',
+  fam({ id: 'g9.money.duty-rate', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.c', cskill: 'MATH.G9.MEASUR.MONEY.IMPORT_DUTY', rung: 2, form: 'word',
     draw: () => { const item = pick(['television', 'radio', 'mobile phone', 'solar panel', 'sewing machine']), n = pick([4, 5, 8, 10]), rt = pick([10, 25, 35]); const V = price(item) * n; const D = (V * rt) / 100; return Number.isInteger(D) ? { item, n, rt, V, D, who: person() } : null; },
     make: ({ item, n, rt, V, D, who }) => ({
       question: `${who.name} imports ${n} ${item}s. The customs value of the whole load is ${sh(V)}. The customs officer charges import duty of ${sh(D)}. What percentage of the customs value is the duty?`,
       answer: rt,
-      wrong: [[round((D / (V + D)) * 100, 1), 'The duty is a percentage of the customs value, which is the value before the duty is added.'], [round(D / n, 1), 'That is the duty on one item, in shillings. The question asks for a percentage.'], [round(V / D, 1), 'That divides the wrong way round. Percentage = duty ÷ value × 100.'], [round(D / 100, 1), 'Divide the duty by the customs value, then multiply by 100.']],
+      wrong: [[round((D / (V + D)) * 100, 1), 'The duty is a percentage of the customs value, which is the value before the duty is added.', 'M_DUTY_OVER_TOTAL'], [round(D / n, 1), 'That is the duty on one item, in shillings. The question asks for a percentage.', 'M_DUTY_PER_ITEM'], [round(V / D, 1), 'That divides the wrong way round. Percentage = duty ÷ value × 100.', 'M_PERCENT_UPSIDE_DOWN'], [round(D / 100, 1), 'Divide the duty by the customs value, then multiply by 100.', 'M_DIVIDE_BY_100_ONLY']],
       hints: ['Percentage = duty ÷ customs value × 100.', 'The customs value is the amount before duty.'],
       steps: [`Duty ÷ value = ${commas(D)} ÷ ${commas(V)}.`, `× 100 = ${rt}%.`] }),
     check: ({ V, D }, a) => Math.abs((V * a) / 100 - D) < 0.01 }),
 
-  fam({ id: 'g9.money.duty-shipment', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.c', rung: 2, form: 'table',
+  fam({ id: 'g9.money.duty-shipment', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.c', cskill: 'MATH.G9.MEASUR.MONEY.IMPORT_DUTY', rung: 2, form: 'table',
     draw: () => {
       const goods = [['Radios', 0], ['Phones', 0], ['Solar panels', 0], ['School textbooks', 0], ['Bicycles', 0]].sort(() => Math.random() - 0.5).slice(0, 3);
       const rows = goods.map(([g]) => ({ g, v: pick([100000, 200000, 250000, 400000, 500000]), r: pick([0, 10, 25, 35]) }));
@@ -833,48 +833,48 @@ export const FAMILIES = [
       question: 'A trading company brings in three kinds of goods in one shipment. The table shows the customs value of each and the rate of import duty on it. How much import duty must the company pay on the whole shipment?',
       model: { type: 'table', data: { head: ['Goods', 'Customs value (sh)', 'Import duty rate (%)'], rows: rows.map(x => ({ cells: [x.g, commas(x.v), String(x.r)] })) } },
       answer: tot,
-      wrong: [[round(rows.reduce((a, x) => a + x.v, 0) * (rows.reduce((a, x) => a + x.r, 0) / 100), 0), 'The rates are different for each kind of goods. Work out the duty on each row, then add.'], [round(rows.reduce((a, x) => a + x.v, 0), 0), 'That is the total customs value. Work out the duty on each row.'], [round(Math.max(...rows.map(x => (x.v * x.r) / 100)), 0), 'That is the duty on one kind of goods only. The whole shipment has three.'], [round((rows.reduce((a, x) => a + x.v, 0) * Math.max(...rows.map(x => x.r))) / 100, 0), 'Each kind of goods has its own rate. Do not use the highest rate for all of them.']],
+      wrong: [[round(rows.reduce((a, x) => a + x.v, 0) * (rows.reduce((a, x) => a + x.r, 0) / 100), 0), 'The rates are different for each kind of goods. Work out the duty on each row, then add.', 'M_RATES_ADDED'], [round(rows.reduce((a, x) => a + x.v, 0), 0), 'That is the total customs value. Work out the duty on each row.', 'M_VALUE_FOR_DUTY'], [round(Math.max(...rows.map(x => (x.v * x.r) / 100)), 0), 'That is the duty on one kind of goods only. The whole shipment has three.', 'M_ONE_ROW_ONLY'], [round((rows.reduce((a, x) => a + x.v, 0) * Math.max(...rows.map(x => x.r))) / 100, 0), 'Each kind of goods has its own rate. Do not use the highest rate for all of them.', 'M_HIGHEST_RATE_ALL']],
       hints: ['Find the duty on each row: value × rate ÷ 100.', 'Add the duties together.'],
       steps: [...rows.map(x => `${x.g}: ${commas(x.v)} × ${x.r}% = ${commas((x.v * x.r) / 100)}.`), `Total duty: ${sh(tot)}.`] }),
     check: ({ rows }, a) => Math.abs(a - rows.map(x => x.v * x.r).reduce((p, c) => p + c, 0) / 100) < 0.01 }),
 
-  fam({ id: 'g9.money.duty-excise-vat-steps', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.c', rung: 3, form: 'steps',
+  fam({ id: 'g9.money.duty-excise-vat-steps', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.c', cskill: 'MATH.G9.MEASUR.MONEY.IMPORT_DUTY', rung: 3, form: 'steps',
     draw: () => { const V = pick([20000, 40000, 50000, 60000, 80000]), du = pick([10, 25]), ex = pick([10, 20]); const D = (V * du) / 100, E = ((V + D) * ex) / 100, Vt = ((V + D + E) * 16) / 100; return [D, E, Vt].every(Number.isInteger) ? { V, du, ex, D, E, Vt, who: person() } : null; },
     make: ({ V, du, ex, D, E, Vt, who }) => ({
       question: `${who.name} imports a machine. Its customs value is ${sh(V)}. Import duty is ${du}% of the customs value. Excise duty is ${ex}% of the customs value plus the import duty. VAT is 16% of the total after the excise duty has been added.`,
       parts: [
-        { prompt: 'Import duty, in shillings:', answer: D, unit: 'sh', hint: `${du}% of the customs value.`, wrong: [[V + D, 'That is the value with the duty added. The duty alone is the percentage.']] },
-        { prompt: 'Excise duty, in shillings:', answer: E, unit: 'sh', hint: `${ex}% of the value plus the import duty.`, wrong: [[(V * ex) / 100, 'Excise is charged on the customs value plus the import duty, not on the customs value alone.']] },
-        { prompt: 'VAT, in shillings:', answer: Vt, unit: 'sh', hint: '16% of the value plus both duties.', wrong: [[((V + D) * 16) / 100, 'VAT is charged after the excise duty has been added too.'], [(V * 16) / 100, 'VAT is charged on the value plus both duties.']] },
-        { prompt: 'Total cost to the importer, in shillings:', answer: V + D + E + Vt, unit: 'sh', hint: 'Add the customs value and all three taxes.', wrong: [[V + D + E, 'VAT must be added as well.']] },
+        { prompt: 'Import duty, in shillings:', answer: D, unit: 'sh', hint: `${du}% of the customs value.`, wrong: [[V + D, 'That is the value with the duty added. The duty alone is the percentage.', 'M_VALUE_WITH_DUTY_GIVEN']] },
+        { prompt: 'Excise duty, in shillings:', answer: E, unit: 'sh', hint: `${ex}% of the value plus the import duty.`, wrong: [[(V * ex) / 100, 'Excise is charged on the customs value plus the import duty, not on the customs value alone.', 'M_EXCISE_ON_VALUE_ONLY']] },
+        { prompt: 'VAT, in shillings:', answer: Vt, unit: 'sh', hint: '16% of the value plus both duties.', wrong: [[((V + D) * 16) / 100, 'VAT is charged after the excise duty has been added too.', 'M_VAT_BASE_MISSING_EXCISE'], [(V * 16) / 100, 'VAT is charged on the value plus both duties.', 'M_VAT_ON_VALUE_ONLY']] },
+        { prompt: 'Total cost to the importer, in shillings:', answer: V + D + E + Vt, unit: 'sh', hint: 'Add the customs value and all three taxes.', wrong: [[V + D + E, 'VAT must be added as well.', 'M_VAT_LEFT_OUT']] },
       ],
       hints: ['Each tax is worked out on a bigger amount than the one before.'],
       steps: [`Duty: ${du}% of ${commas(V)} = ${commas(D)}.`, `Excise: ${ex}% of ${commas(V + D)} = ${commas(E)}.`, `VAT: 16% of ${commas(V + D + E)} = ${commas(Vt)}.`, `Total: ${commas(V + D + E + Vt)}.`] }),
     check: ({ V, du, ex }, v) => v[0] * 100 === V * du && v[1] * 100 === (V + v[0]) * ex && v[2] * 100 === (V + v[0] + v[1]) * 16 && v[3] === V + v[0] + v[1] + v[2] }),
 
-  fam({ id: 'g9.money.excise-per-litre', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.d', rung: 2, form: 'word',
+  fam({ id: 'g9.money.excise-per-litre', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.d', cskill: 'MATH.G9.MEASUR.MONEY.EXCISE_DUTY', rung: 2, form: 'word',
     draw: () => ({ n: pick([2000, 4000, 5000, 8000]), ml: pick([300, 500]), rt: pick([5, 10, 15]), who: person() }),
     make: ({ n, ml, rt, who }) => {
       const L = (n * ml) / 1000;
       return { question: `A bottling company makes ${commas(n)} bottles of soda. Each bottle holds ${ml} ml. In this question, excise duty on soda is sh ${rt} for every litre. How much excise duty does the company pay?`,
         answer: L * rt,
-        wrong: [[n * rt, 'The excise duty is for each litre, not each bottle. Find the number of litres first.'], [n * ml * rt, 'That uses millilitres. The rate is for each litre.'], [L, 'That is the number of litres. Multiply by the rate for each litre.'], [round((n * ml * rt) / 100, 1), 'There are 1,000 ml in a litre.']].filter(w => w[0] !== L * rt),
+        wrong: [[n * rt, 'The excise duty is for each litre, not each bottle. Find the number of litres first.', 'M_PER_BOTTLE'], [n * ml * rt, 'That uses millilitres. The rate is for each litre.', 'M_ML_NOT_LITRES'], [L, 'That is the number of litres. Multiply by the rate for each litre.', 'M_LITRES_FOR_DUTY'], [round((n * ml * rt) / 100, 1), 'There are 1,000 ml in a litre.', 'M_ML_FACTOR_WRONG']].filter(w => w[0] !== L * rt),
         hints: ['Find the total volume in litres.', '1,000 ml = 1 litre.'],
         steps: [`Volume: ${commas(n)} × ${ml} ml = ${commas(n * ml)} ml = ${commas(L)} litres.`, `Excise: ${commas(L)} × ${rt} = ${sh(L * rt)}.`] };
     },
     check: ({ n, ml, rt }, a) => (a / rt) * 1000 === n * ml }),
 
-  fam({ id: 'g9.money.excise-find-factory', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.d', rung: 3, form: 'word',
+  fam({ id: 'g9.money.excise-find-factory', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.d', cskill: 'MATH.G9.MEASUR.MONEY.EXCISE_DUTY', rung: 3, form: 'word',
     draw: () => { const F = pick([500, 800, 1000, 1200, 2000, 2500]), r = pick([10, 20, 25]); return { F, r, P: F + (F * r) / 100, what: pick(['box of tea', 'carton of juice', 'pack of biscuits']) }; },
     make: ({ F, r, P, what }) => ({
       question: `A ${what} is sold for ${sh(P)} after excise duty of ${r}% of the factory price has been added. What was the factory price of the ${what}, before the excise duty?`,
       answer: F,
-      wrong: [[round(P * (1 - r / 100), 2), `The duty is ${r}% of the factory price, which is less than the selling price. Taking the same percentage off the selling price takes off too much.`], [round(P - r, 2), 'The duty is a percentage, not a number of shillings.'], [round(P / (r / 100), 2), 'The price is 100% plus the duty rate. Divide by that, as a decimal.'], [round(P * (1 + r / 100), 2), 'The duty was already added. You need to go back to the price before it.']],
+      wrong: [[round(P * (1 - r / 100), 2), `The duty is ${r}% of the factory price, which is less than the selling price. Taking the same percentage off the selling price takes off too much.`, 'M_PERCENT_OFF_SELLING'], [round(P - r, 2), 'The duty is a percentage, not a number of shillings.', 'M_PERCENT_AS_SHILLINGS'], [round(P / (r / 100), 2), 'The price is 100% plus the duty rate. Divide by that, as a decimal.', 'M_DIVIDE_BY_RATE_ONLY'], [round(P * (1 + r / 100), 2), 'The duty was already added. You need to go back to the price before it.', 'M_DUTY_ADDED_AGAIN']],
       hints: ['The selling price is the factory price plus the duty, so it is more than 100% of the factory price.', `Selling price = factory price × ${1 + r / 100}.`],
       steps: [`Selling price = ${100 + r}% of the factory price.`, `Factory price = ${commas(P)} ÷ ${1 + r / 100} = ${sh(F)}.`] }),
     check: ({ r, P }, a) => Math.abs(a * (1 + r / 100) - P) < 0.01 }),
 
-  fam({ id: 'g9.money.layered-tax-spot', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.d', rung: 3, form: 'spot',
+  fam({ id: 'g9.money.layered-tax-spot', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.d', cskill: 'MATH.G9.MEASUR.MONEY.EXCISE_DUTY', rung: 3, form: 'spot',
     draw: () => { const V = pick([20000, 40000, 50000, 80000]), du = pick([10, 25]), ex = pick([10, 20]), kind = pick(['excise', 'vat']); const D = (V * du) / 100, E = ((V + D) * ex) / 100; return Number.isInteger(E) && Number.isInteger(((V + D + E) * 16) / 100) && Number.isInteger((V * ex) / 100) ? { V, du, ex, kind, D, who: person() } : null; },
     make: ({ V, du, ex, kind, D, who }) => {
       const E = kind === 'excise' ? (V * ex) / 100 : ((V + D) * ex) / 100, Vt = kind === 'vat' ? (V * 16) / 100 : ((V + D + E) * 16) / 100, tot = V + D + E + Vt;
@@ -885,21 +885,22 @@ export const FAMILIES = [
           { text: kind === 'vat' ? `VAT = 16% of ${commas(V)} = ${commas(Vt)}` : `VAT = 16% of ${commas(V + D + E)} = ${commas(Vt)}`, ok: Vt === ((V + D + E) * 16) / 100 },
           { text: `Total = ${commas(V)} + ${commas(D)} + ${commas(E)} + ${commas(Vt)} = ${commas(tot)}`, ok: tot === V + D + E + Vt },
         ],
+        mis: kind === 'excise' ? 'M_EXCISE_ON_VALUE_ONLY' : 'M_VAT_ON_VALUE_ONLY',
         fix: kind === 'excise' ? 'Excise duty is worked out on the customs value plus the import duty, not on the customs value alone.' : 'VAT is worked out on the customs value plus the import duty and the excise duty, not on the customs value alone.',
         steps: [`Duty: ${commas(D)}. Excise is on ${commas(V + D)}.`, `VAT is on the value with both duties added.`] };
     } }),
 
-  fam({ id: 'g9.money.vat-find-price', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.e', rung: 3, form: 'word',
+  fam({ id: 'g9.money.vat-find-price', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.e', cskill: 'MATH.G9.MEASUR.MONEY.VAT', rung: 3, form: 'word',
     draw: () => { const item = pick(['radio', 'mobile phone', 'solar panel', 'bicycle', 'television']); const F = price(item); return { item, F, P: round(F * 1.16, 2) }; },
     make: ({ item, F, P }) => ({
       question: `The label on a ${item} says ${sh(P)}, with a note: "16% VAT included". What would the ${item} cost without the VAT?`,
       answer: F,
-      wrong: [[round(P * 0.84, 2), 'The 16% is of the price before VAT, which is smaller than the selling price. Taking 16% off the selling price takes off too much.'], [round(P - 16, 2), 'VAT is a percentage, not 16 shillings.'], [round(P * 0.16, 2), 'That is 16% of the selling price, which is not the VAT either. The selling price is 116% of the original.'], [round(P / 1.6, 2), 'The selling price is 116% of the original price. Divide by 1.16.']],
+      wrong: [[round(P * 0.84, 2), 'The 16% is of the price before VAT, which is smaller than the selling price. Taking 16% off the selling price takes off too much.', 'M_VAT_OFF_SELLING'], [round(P - 16, 2), 'VAT is a percentage, not 16 shillings.', 'M_VAT_AS_SHILLINGS'], [round(P * 0.16, 2), 'That is 16% of the selling price, which is not the VAT either. The selling price is 116% of the original.', 'M_VAT_OF_SELLING'], [round(P / 1.6, 2), 'The selling price is 116% of the original price. Divide by 1.16.', 'M_DIVIDE_BY_1_6']],
       hints: ['The price with VAT is 116% of the price before VAT.', 'Divide by 1.16 to go back.'],
       steps: [`Price with VAT = 116% of the price before VAT.`, `${commas(P)} ÷ 1.16 = ${sh(F)}.`] }),
     check: ({ P }, a) => Math.abs(a * 1.16 - P) < 0.01 }),
 
-  fam({ id: 'g9.money.vat-receipt', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.e', rung: 2, form: 'table',
+  fam({ id: 'g9.money.vat-receipt', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.e', cskill: 'MATH.G9.MEASUR.MONEY.VAT', rung: 2, form: 'table',
     draw: () => {
       const items = ['radio', 'mobile phone', 'solar panel', 'bicycle', 'sewing machine'].sort(() => Math.random() - 0.5).slice(0, 4);
       const rows = items.map(n => ({ n, p: price(n), v: Math.random() < 0.7 }));
@@ -910,21 +911,21 @@ export const FAMILIES = [
       question: 'A shop prints a bill. VAT of 16% is charged only on the items marked Yes in the last column. How much VAT is charged on the whole bill?',
       model: { type: 'table', data: { head: ['Item', 'Price before VAT (sh)', 'VAT charged?'], rows: rows.map(r => ({ cells: [r.n[0].toUpperCase() + r.n.slice(1), commas(r.p), r.v ? 'Yes' : 'No'] })) } },
       answer: round(tot * 0.16, 2),
-      wrong: [[round(rows.reduce((a, r) => a + r.p, 0) * 0.16, 2), 'Items marked No have no VAT. Leave them out of the sum.'], [tot, 'That is the total price of the items with VAT, before the tax. Find 16% of it.'], [round(tot * 1.16, 2), 'That is the price with VAT included. The question asks for the VAT only.'], [round(rows.filter(r => !r.v).reduce((a, r) => a + r.p, 0) * 0.16, 2), 'VAT is charged on the Yes items, not the No items.']].filter(w => w[0] !== round(tot * 0.16, 2)),
+      wrong: [[round(rows.reduce((a, r) => a + r.p, 0) * 0.16, 2), 'Items marked No have no VAT. Leave them out of the sum.', 'M_VAT_ON_ALL_ITEMS'], [tot, 'That is the total price of the items with VAT, before the tax. Find 16% of it.', 'M_PRICE_FOR_VAT'], [round(tot * 1.16, 2), 'That is the price with VAT included. The question asks for the VAT only.', 'M_PRICE_WITH_VAT_FOR_VAT'], [round(rows.filter(r => !r.v).reduce((a, r) => a + r.p, 0) * 0.16, 2), 'VAT is charged on the Yes items, not the No items.', 'M_VAT_ON_NO_ITEMS']].filter(w => w[0] !== round(tot * 0.16, 2)),
       hints: ['Add up only the prices of the items marked Yes.', 'Then find 16% of that total.'],
       steps: [`Items with VAT: ${rows.filter(r => r.v).map(r => commas(r.p)).join(' + ')} = ${commas(tot)}.`, `VAT: 16% of ${commas(tot)} = ${sh(round(tot * 0.16, 2))}.`] }),
     check: ({ rows }, a) => Math.abs(a * 100 - 16 * rows.filter(r => r.v).reduce((p, r) => p + r.p, 0)) < 0.5 }),
 
-  fam({ id: 'g9.money.vat-base-why', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.e', rung: 3, form: 'why',
+  fam({ id: 'g9.money.vat-base-why', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.e', cskill: 'MATH.G9.MEASUR.MONEY.VAT', rung: 3, form: 'why',
     draw: () => { const F = pick([1000, 2000, 2500, 5000, 8000]); return { F, P: round(F * 1.16, 2), who: person() }; },
     make: ({ F, P, who }) => {
       const wrongVat = round(P * 0.16, 2), vat = round(F * 0.16, 2);
       return { question: `A phone costs ${sh(P)} with VAT of 16% included. ${who.name} says the VAT in the price is 16% of ${commas(P)}, which is ${sh(wrongVat)}. Why is this wrong?`,
         options: [
           { text: `The 16% is worked out on the price before VAT, so the VAT is ${sh(vat)}`, right: true },
-          { text: `The VAT is 16 shillings for each phone`, right: false, why: 'VAT is a percentage of a price, not a fixed amount in shillings.' },
-          { text: `The VAT should be worked out on the price with VAT, but ${who.name} did the sum wrongly`, right: false, why: 'The sum is right. The mistake is which price the percentage is taken from.' },
-          { text: `The VAT is found by taking 16% off, so the VAT is ${sh(round(P * 0.84, 2))}`, right: false, why: 'Taking 16% off the price gives a smaller price, not the VAT. VAT is a share of the price before VAT.' },
+          { text: `The VAT is 16 shillings for each phone`, right: false, why: 'VAT is a percentage of a price, not a fixed amount in shillings.', mis: 'M_VAT_AS_SHILLINGS' },
+          { text: `The VAT should be worked out on the price with VAT, but ${who.name} did the sum wrongly`, right: false, why: 'The sum is right. The mistake is which price the percentage is taken from.', mis: 'M_VAT_OF_SELLING' },
+          { text: `The VAT is found by taking 16% off, so the VAT is ${sh(round(P * 0.84, 2))}`, right: false, why: 'Taking 16% off the price gives a smaller price, not the VAT. VAT is a share of the price before VAT.', mis: 'M_VAT_OFF_SELLING' },
         ],
         hints: ['VAT is added to the price before VAT.', 'The price with VAT is 116% of the price before it.'],
         steps: [`The price with VAT is 116% of the price before VAT: ${commas(P)} ÷ 1.16 = ${commas(F)}.`, `VAT = 16% of ${commas(F)} = ${sh(vat)}.`] };
@@ -972,14 +973,14 @@ export const FAMILIES = [
     check: ({ n, p }, v) => v[1] === n * p && Math.abs(v[0] - v[1]) === v[2] }),
 
   // ======================================================== MORE PICTURES AND REASONS
-  fam({ id: 'g9.money.rate-graph', skill: 'G9_COMMERCIAL_ARITH', outcome: 'G9.MONEY.b', rung: 2, form: 'graph',
+  fam({ id: 'g9.money.rate-graph', skill: 'G9_COMMERCIAL_ARITH', outcome: 'MATH.G9.MEASUR.MONEY.b', cskill: 'MATH.G9.MEASUR.MONEY.EXCHANGE_RATE_READ', rung: 2, form: 'graph',
     draw: () => { const [cur, r] = pick([['US dollars', 125], ['US dollars', 130], ['euros', 140], ['euros', 150], ['pounds', 160], ['pounds', 170]]); return { r, cur }; },
     make: ({ r, cur }) => {
       const xs = [0, 10, 20, 30, 40], yTicks = []; for (let y = 0; y <= r * 40 + 1000; y += 1000) yTicks.push(y);
       return { question: `The line graph shows how many shillings a bureau pays for different amounts of ${cur}. The line is straight. What exchange rate does the graph show, in shillings for 1 ${cur.replace('US dollars', 'US dollar').replace('euros', 'euro').replace('pounds', 'pound')}?`,
         model: { type: 'line-graph', data: { points: xs.map(x => ({ x, y: r * x })), xTicks: xs, yTicks, xLabel: cur[0].toUpperCase() + cur.slice(1), yLabel: 'Shillings' } },
         answer: r,
-        wrong: [[r * 40, 'That is the number of shillings for 40 of them. The rate is for just one.'], [round(40 / (r * 40), 4), 'That is units of foreign money for one shilling, the wrong way up.'], [r * 40 - 40, 'Divide the shillings by the dollars. Do not subtract.'], [r * 10, 'That is the number of shillings for 10 of them. Divide by 10.']],
+        wrong: [[r * 40, 'That is the number of shillings for 40 of them. The rate is for just one.', 'M_TOTAL_FOR_RATE'], [round(40 / (r * 40), 4), 'That is units of foreign money for one shilling, the wrong way up.', 'M_RATE_UPSIDE_DOWN'], [r * 40 - 40, 'Divide the shillings by the dollars. Do not subtract.', 'M_SUBTRACT_FOR_RATE'], [r * 10, 'That is the number of shillings for 10 of them. Divide by 10.', 'M_WRONG_POINT_READ']],
         hints: ['Pick a point on the line and read both numbers.', 'Rate = shillings ÷ dollars.'],
         steps: [`At 40 the line shows ${commas(r * 40)} shillings.`, `Rate: ${commas(r * 40)} ÷ 40 = ${r} shillings for 1.`] };
     },
