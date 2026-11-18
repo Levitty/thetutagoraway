@@ -442,17 +442,17 @@ export const TEACHING_PACK_G8 = {
     }
    },
    {
-    "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_ZERO_SKIPPED",
+    "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_START_COUNTED_AS_STEP",
     "listen_for": [
-     "-4 when it should be -3",
-     "one out"
+     "-2 when it should be -3",
+     "one short"
     ],
-    "ask": "Did you count the step onto zero?",
-    "repair": "Zero is a step.",
-    "error": "Skips zero when counting steps across it, so the answer is one out.",
+    "ask": "Where does the first jump land?",
+    "repair": "Count jumps, not marks.",
+    "error": "Counts the starting number as the first step, so lands one step short.",
     "example": {
      "question": "Start at 2 and move 5 steps left.",
-     "wrong_answer": "-4",
+     "wrong_answer": "-2",
      "correct_answer": "-3"
     }
    },
@@ -812,6 +812,742 @@ export const TEACHING_PACK_G8 = {
   "name": "Use integer operations for balances and repeated changes in real life",
   "sub_strand": "MATH.G8.NUMBER.INTEGERS",
   "sub_strand_name": "Integers",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS",
+  "key_step": "The child circles the division or multiplication and works it first, turning the divisor upside down, before any adding or subtracting.",
+  "floor": {
+   "prerequisite": "Divides by a fraction.",
+   "question": "1/2 ÷ 1/4",
+   "answer": "2"
+  },
+  "representations": [
+   "strips cut into parts",
+   "the question with the first step circled",
+   "the working line by line"
+  ],
+  "steps": [
+   "Find any × or ÷.",
+   "Work it first (÷ means multiply by the reciprocal).",
+   "Then add or subtract.",
+   "Simplify."
+  ],
+  "contexts": [
+   "sharing chapati",
+   "mixing juice",
+   "measuring flour"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3/4 - 1/2 ÷ 2/3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ÷ sign.",
+    "say": "Which part do we work first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child circles 1/2 ÷ 2/3 and works it."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT",
+    "listen_for": [
+     "3/4 take away 1/2 first"
+    ],
+    "ask": "Which comes first, divide or subtract?",
+    "repair": "Divide first.",
+    "error": "Works from left to right, subtracting before dividing.",
+    "example": {
+     "question": "3/4 - 1/2 ÷ 2",
+     "wrong_answer": "1/8",
+     "correct_answer": "1/2"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_DIVIDE_NOT_INVERTED",
+    "listen_for": [
+     "times 2/3"
+    ],
+    "ask": "What do we do to the second fraction when we divide?",
+    "repair": "Turn it over: times 3/2.",
+    "error": "Multiplies by the divisor as it is instead of by its reciprocal.",
+    "example": {
+     "question": "1/2 ÷ 2/3",
+     "wrong_answer": "1/3",
+     "correct_answer": "3/4"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_WRONG_ONE_INVERTED",
+    "listen_for": [
+     "15/8"
+    ],
+    "ask": "Which fraction are we dividing by?",
+    "repair": "Only that one turns over.",
+    "error": "Turns the first fraction upside down instead of the divisor.",
+    "example": {
+     "question": "2/5 ÷ 3/4",
+     "wrong_answer": "15/8",
+     "correct_answer": "8/15"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_ADD_TOPS_AND_BOTTOMS",
+    "listen_for": [
+     "2/5"
+    ],
+    "ask": "Are the pieces the same size?",
+    "repair": "Common denominator first.",
+    "error": "Adds or subtracts numerators and denominators straight across.",
+    "example": {
+     "question": "1/2 + 1/3",
+     "wrong_answer": "2/5",
+     "correct_answer": "5/6"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_NOT_SIMPLIFIED",
+    "listen_for": [
+     "6/16"
+    ],
+    "ask": "Can top and bottom both be divided?",
+    "repair": "Simplify.",
+    "error": "Leaves the answer not in its simplest form.",
+    "example": {
+     "question": "1/4 + 1/4 × 1/2 in simplest form",
+     "wrong_answer": "6/16",
+     "correct_answer": "3/8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Work out 5/6 - 1/3 ÷ 2.",
+    "answer": "2/3",
+    "shows": "divide first"
+   },
+   {
+    "question": "Work out 1/4 + 2/3 × 3/8.",
+    "answer": "1/2",
+    "shows": "multiply first"
+   }
+  ],
+  "name": "Work out combined operations on fractions in the correct order",
+  "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF",
+  "key_step": "The child works the bracket to a single fraction first and reads \"of\" as a multiplication done before adding.",
+  "floor": {
+   "prerequisite": "Multiplies fractions.",
+   "question": "2/3 × 3/4",
+   "answer": "1/2"
+  },
+  "representations": [
+   "a bar model",
+   "brackets circled",
+   "the working"
+  ],
+  "steps": [
+   "Work the bracket.",
+   "Change \"of\" to ×.",
+   "Multiply or divide.",
+   "Add or subtract last."
+  ],
+  "contexts": [
+   "a family farm shared",
+   "a jerrican of milk",
+   "a school budget"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write (1/2 + 1/3) × 3/5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the bracket.",
+    "say": "What is 1/2 + 1/3?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 5/6."
+   },
+   {
+    "beat": "write",
+    "do": "Write 5/6 × 3/5 underneath."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_BRACKET_IGNORED",
+    "listen_for": [
+     "7/10"
+    ],
+    "ask": "What do brackets tell us?",
+    "repair": "Work them first.",
+    "error": "Works the question without doing the bracket first.",
+    "example": {
+     "question": "(1/2 + 1/3) × 3/5",
+     "wrong_answer": "7/10",
+     "correct_answer": "1/2"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_OF_AS_ADD",
+    "listen_for": [
+     "17/12"
+    ],
+    "ask": "What does 2/3 of 12 mean?",
+    "repair": "Of means multiply.",
+    "error": "Treats \"of\" as adding or as taking away.",
+    "example": {
+     "question": "2/3 of 3/4",
+     "wrong_answer": "17/12",
+     "correct_answer": "1/2"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_OF_DONE_LAST",
+    "listen_for": [
+     "2/3"
+    ],
+    "ask": "Is \"of\" a multiplication?",
+    "repair": "So it comes before adding.",
+    "error": "Does the addition before the \"of\".",
+    "example": {
+     "question": "2/3 of 3/4 + 1/4",
+     "wrong_answer": "2/3",
+     "correct_answer": "3/4"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_BRACKET_PARTLY_MULTIPLIED",
+    "listen_for": [
+     "19/30"
+    ],
+    "ask": "Did both fractions in the bracket get multiplied?",
+    "repair": "Make the bracket one fraction first.",
+    "error": "Multiplies only the first fraction in the bracket.",
+    "example": {
+     "question": "3/5 × (1/2 + 1/3)",
+     "wrong_answer": "3/10 + 1/3 = 19/30",
+     "correct_answer": "1/2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Work out (2/3 - 1/6) × 4/9.",
+    "answer": "2/9",
+    "shows": "bracket first"
+   },
+   {
+    "question": "Work out 1/2 of 4/5 + 1/5.",
+    "answer": "3/5",
+    "shows": "of before add"
+   }
+  ],
+  "name": "Work out combined operations on fractions with brackets and \"of\"",
+  "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED",
+  "key_step": "The child rewrites every mixed number as an improper fraction before multiplying or dividing.",
+  "floor": {
+   "prerequisite": "Changes a mixed number to an improper fraction.",
+   "question": "1 3/4 as an improper fraction",
+   "answer": "7/4"
+  },
+  "representations": [
+   "whole circles and parts",
+   "improper fractions",
+   "the mixed number answer"
+  ],
+  "steps": [
+   "Change mixed numbers to improper fractions.",
+   "Work in the right order.",
+   "Simplify.",
+   "Change back to a mixed number."
+  ],
+  "contexts": [
+   "bags of maize flour",
+   "metres of kitenge cloth",
+   "litres of milk"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw one whole circle and a half circle for 1 1/2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the circles.",
+    "say": "How many halves are there in all?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 3."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 1/2 = 3/2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_WHOLE_AND_FRACTION_SEPARATE_MULTIPLY",
+    "listen_for": [
+     "2 1/6"
+    ],
+    "ask": "Did the 1 get multiplied by the 1/3?",
+    "repair": "Change to improper fractions first.",
+    "error": "Multiplies whole parts together and fractions together.",
+    "example": {
+     "question": "1 1/2 × 2 1/3",
+     "wrong_answer": "2 1/6",
+     "correct_answer": "3 1/2"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_WHOLE_PART_DROPPED",
+    "listen_for": [
+     "1/3"
+    ],
+    "ask": "Where did the 1 go?",
+    "repair": "Keep it: 3/2.",
+    "error": "Leaves out the whole number part of a mixed number.",
+    "example": {
+     "question": "1 1/2 × 2/3",
+     "wrong_answer": "1/3",
+     "correct_answer": "1"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_IMPROPER_WRONG",
+    "listen_for": [
+     "3/3"
+    ],
+    "ask": "How many thirds in 2 wholes?",
+    "repair": "6, plus 1: 7/3.",
+    "error": "Changes a mixed number to an improper fraction wrongly (adds the whole to the numerator).",
+    "example": {
+     "question": "2 1/3 as an improper fraction",
+     "wrong_answer": "3/3",
+     "correct_answer": "7/3"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_ANSWER_LEFT_IMPROPER",
+    "listen_for": [
+     "5/4"
+    ],
+    "ask": "How many wholes in 5/4?",
+    "repair": "1 and 1/4.",
+    "error": "Leaves the answer as an improper fraction when a mixed number is asked.",
+    "example": {
+     "question": "Give 1 1/2 × 2/3 + 1/4 as a mixed number",
+     "wrong_answer": "5/4",
+     "correct_answer": "1 1/4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Work out 2 1/2 × 1/5 + 1/2.",
+    "answer": "1",
+    "shows": "improper first"
+   },
+   {
+    "question": "Work out 1 1/3 ÷ 2/3 - 1/2.",
+    "answer": "1 1/2",
+    "shows": "divide then subtract"
+   }
+  ],
+  "name": "Work out combined operations that include mixed numbers",
+  "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE",
+  "key_step": "The child adds the fractions used, takes the sum from one whole, and only then finds that fraction of the quantity in the unit asked.",
+  "floor": {
+   "prerequisite": "Adds unlike fractions.",
+   "question": "1/3 + 1/4",
+   "answer": "7/12"
+  },
+  "representations": [
+   "a shamba divided into plots",
+   "a bar of 12 parts",
+   "the calculation"
+  ],
+  "steps": [
+   "Add the fractions used.",
+   "Take the sum from 1.",
+   "Change the whole to the unit asked.",
+   "Find the fraction of it."
+  ],
+  "contexts": [
+   "a shamba with maize, beans and grass",
+   "a school day",
+   "a salary spent on rent and food"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle for the shamba split into 12 equal plots."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child shades 1/3 for maize and 1/4 for beans."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the unshaded plots.",
+    "say": "What fraction is grass?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_PARTS_GIVEN_FOR_REST",
+    "listen_for": [
+     "7 acres"
+    ],
+    "ask": "Is that the crops or the grass?",
+    "repair": "The grass is what is left.",
+    "error": "Gives the part used as the answer for the part left.",
+    "example": {
+     "question": "A shamba of 12 acres: 1/3 maize, 1/4 beans. Acres of grass?",
+     "wrong_answer": "7",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_ONE_PART_TAKEN_AWAY",
+    "listen_for": [
+     "8 acres"
+    ],
+    "ask": "What about the beans?",
+    "repair": "Take away both.",
+    "error": "Takes away only one of the fractions used.",
+    "example": {
+     "question": "A shamba of 12 acres: 1/3 maize, 1/4 beans. Acres of grass?",
+     "wrong_answer": "8",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_FRACTIONS_OF_SAME_WHOLE_MULTIPLIED",
+    "listen_for": [
+     "multiplied 4 by 3"
+    ],
+    "ask": "Are both fractions of the same shamba?",
+    "repair": "Add them.",
+    "error": "Multiplies two fractions or amounts of the same whole instead of adding them.",
+    "example": {
+     "question": "12 acres: 1/3 maize, 1/4 beans. Acres with crops?",
+     "wrong_answer": "12",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_UNIT_NOT_CONVERTED",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Minutes or hours?",
+    "repair": "Change to minutes first.",
+    "error": "Gives the answer in the wrong unit (hours when minutes are asked).",
+    "example": {
+     "question": "A day of 8 hours; 1/4 is left for clubs. Minutes for clubs?",
+     "wrong_answer": "2",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_REST_AS_FRACTION_ONLY",
+    "listen_for": [
+     "5/12"
+    ],
+    "ask": "How many acres is 5/12 of 12?",
+    "repair": "Find the amount.",
+    "error": "Gives the fraction left when the amount is asked.",
+    "example": {
+     "question": "12 acres; 5/12 is grass. How many acres?",
+     "wrong_answer": "5/12",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 20 acre farm: 2/5 tea, 1/4 maize, the rest bananas. Acres of bananas?",
+    "answer": "7 acres",
+    "shows": "rest"
+   },
+   {
+    "question": "A 6 hour trip: 1/2 driving, 1/3 resting, the rest eating. Minutes eating?",
+    "answer": "60 minutes",
+    "shows": "unit"
+   }
+  ],
+  "name": "Find the part left after fractions of the same whole are used",
+  "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER",
+  "key_step": "The child writes what is left after the first step and points to it as the new whole before taking the next fraction.",
+  "floor": {
+   "prerequisite": "Finds a fraction of a quantity.",
+   "question": "3/4 of 6,000",
+   "answer": "4,500"
+  },
+  "representations": [
+   "a tank drawn with water level",
+   "a bar for the remainder",
+   "the steps"
+  ],
+  "steps": [
+   "Find the first amount.",
+   "Find what is there now.",
+   "Take the next fraction of that.",
+   "Answer what is asked: used or left."
+  ],
+  "contexts": [
+   "a school water tank",
+   "a sack of maize",
+   "pocket money spent in two shops"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tank 3/4 full of water."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the water.",
+    "say": "How many litres is this?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: the school uses 1/3 of this water. Of the water, or of the tank?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_EMPTY_SPACE_FOR_CONTENTS",
+    "listen_for": [
+     "1,500"
+    ],
+    "ask": "Is that the water or the empty part?",
+    "repair": "3/4 is water.",
+    "error": "Gives the empty part when the amount in the container is asked.",
+    "example": {
+     "question": "A 6,000 litre tank is 3/4 full. Litres in it?",
+     "wrong_answer": "1,500",
+     "correct_answer": "4,500"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_FRACTION_OF_WHOLE_NOT_REMAINDER",
+    "listen_for": [
+     "2,000"
+    ],
+    "ask": "A third of what?",
+    "repair": "Of the water that is there.",
+    "error": "Takes the second fraction of the whole instead of what is left.",
+    "example": {
+     "question": "6,000 litres, 3/4 full; 1/3 of the water is used. Litres used?",
+     "wrong_answer": "2,000",
+     "correct_answer": "1,500"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_USED_FOR_LEFT",
+    "listen_for": [
+     "1,500 left"
+    ],
+    "ask": "Is that used or left?",
+    "repair": "Left = there minus used.",
+    "error": "Gives the amount used when the amount left is asked.",
+    "example": {
+     "question": "4,500 litres; 1/3 is used. Litres left?",
+     "wrong_answer": "1,500",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_FRACTIONS_SUBTRACTED",
+    "listen_for": [
+     "5/12"
+    ],
+    "ask": "Is 1/3 of the water the same as 1/3 of the tank?",
+    "repair": "1/3 of 3/4 is 1/4.",
+    "error": "Subtracts the two fractions as if they were of the same whole.",
+    "example": {
+     "question": "3/4 full, then 1/3 of the water used. Fraction of the tank left?",
+     "wrong_answer": "5/12",
+     "correct_answer": "1/2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 90 kg sack: 1/3 sold, then 1/2 of the rest eaten. Kg left?",
+    "answer": "30 kg",
+    "shows": "remainder"
+   },
+   {
+    "question": "A 2,000 litre tank is 4/5 full; 1/4 of the water is used. Litres used?",
+    "answer": "400 litres",
+    "shows": "fraction of the water"
+   }
+  ],
+  "name": "Find a fraction of what is left, step by step",
+  "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT",
+  "key_step": "The child asks whether the story builds up a cost (multiply) or counts how many fit (divide) before calculating.",
+  "floor": {
+   "prerequisite": "Divides a whole number by a fraction.",
+   "question": "3 ÷ 1/2",
+   "answer": "6"
+  },
+  "representations": [
+   "a tape measure",
+   "packets drawn",
+   "the calculation"
+  ],
+  "steps": [
+   "Read what is asked.",
+   "Cost of part: multiply.",
+   "How many fit: divide.",
+   "Whole pieces only: drop the part."
+  ],
+  "contexts": [
+   "buying meat at the butchery",
+   "cutting kitenge for school uniforms",
+   "packing sugar in 1/4 kg packets"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 6 m strip of cloth."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the strip.",
+    "say": "If each piece is 3/4 m, will there be more or fewer than 6 pieces?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child marks 3/4 m pieces along the strip."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_DIVIDE_FOR_COST",
+    "listen_for": [
+     "800"
+    ],
+    "ask": "Should 3/4 kg cost more or less than 1 kg?",
+    "repair": "Less: multiply.",
+    "error": "Divides the price by the fraction to find the cost of part of a unit.",
+    "example": {
+     "question": "3/4 kg of meat at 600 shillings a kg",
+     "wrong_answer": "800",
+     "correct_answer": "450"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_MULTIPLY_FOR_HOW_MANY",
+    "listen_for": [
+     "4 1/2"
+    ],
+    "ask": "Will small pieces give more or fewer pieces?",
+    "repair": "More: divide.",
+    "error": "Multiplies to find how many fractional pieces fit.",
+    "example": {
+     "question": "6 m of cloth cut into pieces of 3/4 m. How many?",
+     "wrong_answer": "4 1/2",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_REMAINDER_PIECE_COUNTED",
+    "listen_for": [
+     "8 pieces"
+    ],
+    "ask": "Is the last piece a full piece?",
+    "repair": "Only whole pieces.",
+    "error": "Counts a part piece as a whole piece.",
+    "example": {
+     "question": "5 m of ribbon into pieces of 2/3 m. Whole pieces?",
+     "wrong_answer": "8",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_SHARE_BY_DENOMINATOR",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "Is that one fifth or two fifths?",
+    "repair": "Take two fifths.",
+    "error": "Divides by the denominator only when sharing by a fraction.",
+    "example": {
+     "question": "A trader keeps 2/5 of 1,000 shillings. How much?",
+     "wrong_answer": "200",
+     "correct_answer": "400"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Sugar at 160 shillings a kg. Cost of 3/4 kg?",
+    "answer": "120 shillings",
+    "shows": "multiply"
+   },
+   {
+    "question": "How many 1/4 kg packets from 5 kg of sugar?",
+    "answer": "20",
+    "shows": "divide"
+   }
+  ],
+  "name": "Use operations on fractions for buying, pricing and sharing",
+  "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
+  "sub_strand_name": "Fractions",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };

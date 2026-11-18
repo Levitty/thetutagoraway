@@ -209,17 +209,17 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
- "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_ZERO_SKIPPED": {
+ "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_START_COUNTED_AS_STEP": {
   "skill": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE",
-  "error": "Skips zero when counting steps across it, so the answer is one out.",
+  "error": "Counts the starting number as the first step, so lands one step short.",
   "example": {
    "question": "Start at 2 and move 5 steps left.",
-   "wrong_answer": "-4",
+   "wrong_answer": "-2",
    "correct_answer": "-3"
   },
-  "cause": "Counts from 1 to -1 as one step.",
-  "reveals": "The answer -4 as a wrong option, with a reason that names the idea.",
-  "help": "Zero is a mark like any other: count the step onto it.",
+  "cause": "Counts marks touched instead of jumps made.",
+  "reveals": "The answer -2 as a wrong option, with a reason that names the idea.",
+  "help": "Count jumps, not marks: the first jump goes from 2 to 1.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
@@ -430,6 +430,370 @@
   "cause": "Picks the operation from the size of the numbers.",
   "reveals": "The answer -8 as a wrong option, with a reason that names the idea.",
   "help": "Ask: is the total shared out (divide) or built up (multiply)?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_LEFT_TO_RIGHT": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS",
+  "error": "Works from left to right, subtracting before dividing.",
+  "example": {
+   "question": "3/4 - 1/2 ÷ 2",
+   "wrong_answer": "1/8",
+   "correct_answer": "1/2"
+  },
+  "cause": "Reads the question like a sentence.",
+  "reveals": "The answer 1/8 as a wrong option, with a reason that names the idea.",
+  "help": "Divide and multiply first, then add and subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_DIVIDE_NOT_INVERTED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS",
+  "error": "Multiplies by the divisor as it is instead of by its reciprocal.",
+  "example": {
+   "question": "1/2 ÷ 2/3",
+   "wrong_answer": "1/3",
+   "correct_answer": "3/4"
+  },
+  "cause": "Remembers \"multiply\" but not \"turn the second one upside down\".",
+  "reveals": "The answer 1/3 as a wrong option, with a reason that names the idea.",
+  "help": "Dividing by 2/3 is multiplying by 3/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_WRONG_ONE_INVERTED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS",
+  "error": "Turns the first fraction upside down instead of the divisor.",
+  "example": {
+   "question": "2/5 ÷ 3/4",
+   "wrong_answer": "15/8",
+   "correct_answer": "8/15"
+  },
+  "cause": "Inverts whichever fraction comes first.",
+  "reveals": "The answer 15/8 as a wrong option, with a reason that names the idea.",
+  "help": "Only the fraction you divide by is turned over.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_ADD_TOPS_AND_BOTTOMS": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS",
+  "error": "Adds or subtracts numerators and denominators straight across.",
+  "example": {
+   "question": "1/2 + 1/3",
+   "wrong_answer": "2/5",
+   "correct_answer": "5/6"
+  },
+  "cause": "Copies the rule for multiplying.",
+  "reveals": "The answer 2/5 as a wrong option, with a reason that names the idea.",
+  "help": "Use a common denominator, then add the numerators.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS.M_NOT_SIMPLIFIED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS",
+  "error": "Leaves the answer not in its simplest form.",
+  "example": {
+   "question": "1/4 + 1/4 × 1/2 in simplest form",
+   "wrong_answer": "6/16",
+   "correct_answer": "3/8"
+  },
+  "cause": "Stops after the last operation.",
+  "reveals": "The answer 6/16 as a wrong option, with a reason that names the idea.",
+  "help": "Divide top and bottom by their HCF.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_BRACKET_IGNORED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF",
+  "error": "Works the question without doing the bracket first.",
+  "example": {
+   "question": "(1/2 + 1/3) × 3/5",
+   "wrong_answer": "7/10",
+   "correct_answer": "1/2"
+  },
+  "cause": "Applies multiplication first everywhere.",
+  "reveals": "The answer 7/10 as a wrong option, with a reason that names the idea.",
+  "help": "Brackets come before everything else.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_OF_AS_ADD": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF",
+  "error": "Treats \"of\" as adding or as taking away.",
+  "example": {
+   "question": "2/3 of 3/4",
+   "wrong_answer": "17/12",
+   "correct_answer": "1/2"
+  },
+  "cause": "Reads \"of\" as \"and\".",
+  "reveals": "The answer 17/12 as a wrong option, with a reason that names the idea.",
+  "help": "\"Of\" means multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_OF_DONE_LAST": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF",
+  "error": "Does the addition before the \"of\".",
+  "example": {
+   "question": "2/3 of 3/4 + 1/4",
+   "wrong_answer": "2/3",
+   "correct_answer": "3/4"
+  },
+  "cause": "Thinks \"of\" is the last step because it is a word.",
+  "reveals": "The answer 2/3 as a wrong option, with a reason that names the idea.",
+  "help": "\"Of\" is multiplication: it comes before adding.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF.M_BRACKET_PARTLY_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF",
+  "error": "Multiplies only the first fraction in the bracket.",
+  "example": {
+   "question": "3/5 × (1/2 + 1/3)",
+   "wrong_answer": "3/10 + 1/3 = 19/30",
+   "correct_answer": "1/2"
+  },
+  "cause": "Treats the bracket as if it were not there.",
+  "reveals": "The answer 3/10 + 1/3 = 19/30 as a wrong option, with a reason that names the idea.",
+  "help": "Work out the bracket to one fraction first, then multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_WHOLE_AND_FRACTION_SEPARATE_MULTIPLY": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED",
+  "error": "Multiplies whole parts together and fractions together.",
+  "example": {
+   "question": "1 1/2 × 2 1/3",
+   "wrong_answer": "2 1/6",
+   "correct_answer": "3 1/2"
+  },
+  "cause": "Treats a mixed number as two separate numbers.",
+  "reveals": "The answer 2 1/6 as a wrong option, with a reason that names the idea.",
+  "help": "Change both to improper fractions first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_WHOLE_PART_DROPPED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED",
+  "error": "Leaves out the whole number part of a mixed number.",
+  "example": {
+   "question": "1 1/2 × 2/3",
+   "wrong_answer": "1/3",
+   "correct_answer": "1"
+  },
+  "cause": "Works only with the fraction.",
+  "reveals": "The answer 1/3 as a wrong option, with a reason that names the idea.",
+  "help": "The whole part counts: 1 1/2 is 3/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_IMPROPER_WRONG": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED",
+  "error": "Changes a mixed number to an improper fraction wrongly (adds the whole to the numerator).",
+  "example": {
+   "question": "2 1/3 as an improper fraction",
+   "wrong_answer": "3/3",
+   "correct_answer": "7/3"
+  },
+  "cause": "Adds instead of multiplying the whole by the denominator.",
+  "reveals": "The answer 3/3 as a wrong option, with a reason that names the idea.",
+  "help": "Whole times denominator, plus the numerator.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED.M_ANSWER_LEFT_IMPROPER": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED",
+  "error": "Leaves the answer as an improper fraction when a mixed number is asked.",
+  "example": {
+   "question": "Give 1 1/2 × 2/3 + 1/4 as a mixed number",
+   "wrong_answer": "5/4",
+   "correct_answer": "1 1/4"
+  },
+  "cause": "Stops once the arithmetic is done.",
+  "reveals": "The answer 5/4 as a wrong option, with a reason that names the idea.",
+  "help": "Divide the numerator by the denominator: the remainder is the fraction.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_PARTS_GIVEN_FOR_REST": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE",
+  "error": "Gives the part used as the answer for the part left.",
+  "example": {
+   "question": "A shamba of 12 acres: 1/3 maize, 1/4 beans. Acres of grass?",
+   "wrong_answer": "7",
+   "correct_answer": "5"
+  },
+  "cause": "Finds the fractions used and stops.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "The rest is the whole minus what is used.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_ONE_PART_TAKEN_AWAY": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE",
+  "error": "Takes away only one of the fractions used.",
+  "example": {
+   "question": "A shamba of 12 acres: 1/3 maize, 1/4 beans. Acres of grass?",
+   "wrong_answer": "8",
+   "correct_answer": "5"
+  },
+  "cause": "Forgets that each activity uses its own share.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Take away every part used.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_FRACTIONS_OF_SAME_WHOLE_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE",
+  "error": "Multiplies two fractions or amounts of the same whole instead of adding them.",
+  "example": {
+   "question": "12 acres: 1/3 maize, 1/4 beans. Acres with crops?",
+   "wrong_answer": "12",
+   "correct_answer": "7"
+  },
+  "cause": "Sees two fractions and multiplies.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Both are fractions of the same shamba: add them.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_UNIT_NOT_CONVERTED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE",
+  "error": "Gives the answer in the wrong unit (hours when minutes are asked).",
+  "example": {
+   "question": "A day of 8 hours; 1/4 is left for clubs. Minutes for clubs?",
+   "wrong_answer": "2",
+   "correct_answer": "120"
+  },
+  "cause": "Works with the number given and forgets the unit asked.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Change 8 hours to 480 minutes first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE.M_REST_AS_FRACTION_ONLY": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE",
+  "error": "Gives the fraction left when the amount is asked.",
+  "example": {
+   "question": "12 acres; 5/12 is grass. How many acres?",
+   "wrong_answer": "5/12",
+   "correct_answer": "5"
+  },
+  "cause": "Stops at the fraction.",
+  "reveals": "The answer 5/12 as a wrong option, with a reason that names the idea.",
+  "help": "Find that fraction of the whole quantity.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_EMPTY_SPACE_FOR_CONTENTS": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER",
+  "error": "Gives the empty part when the amount in the container is asked.",
+  "example": {
+   "question": "A 6,000 litre tank is 3/4 full. Litres in it?",
+   "wrong_answer": "1,500",
+   "correct_answer": "4,500"
+  },
+  "cause": "Takes the fraction away instead of finding it.",
+  "reveals": "The answer 1,500 as a wrong option, with a reason that names the idea.",
+  "help": "3/4 full means 3/4 of 6,000 is water.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_FRACTION_OF_WHOLE_NOT_REMAINDER": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER",
+  "error": "Takes the second fraction of the whole instead of what is left.",
+  "example": {
+   "question": "6,000 litres, 3/4 full; 1/3 of the water is used. Litres used?",
+   "wrong_answer": "2,000",
+   "correct_answer": "1,500"
+  },
+  "cause": "Does not see that \"of the water\" means of what is there.",
+  "reveals": "The answer 2,000 as a wrong option, with a reason that names the idea.",
+  "help": "Find what is there first, then the fraction of it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_USED_FOR_LEFT": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER",
+  "error": "Gives the amount used when the amount left is asked.",
+  "example": {
+   "question": "4,500 litres; 1/3 is used. Litres left?",
+   "wrong_answer": "1,500",
+   "correct_answer": "3,000"
+  },
+  "cause": "Stops after the first calculation.",
+  "reveals": "The answer 1,500 as a wrong option, with a reason that names the idea.",
+  "help": "Left = what was there minus what was used.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER.M_FRACTIONS_SUBTRACTED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER",
+  "error": "Subtracts the two fractions as if they were of the same whole.",
+  "example": {
+   "question": "3/4 full, then 1/3 of the water used. Fraction of the tank left?",
+   "wrong_answer": "5/12",
+   "correct_answer": "1/2"
+  },
+  "cause": "Treats 1/3 of the water as 1/3 of the tank.",
+  "reveals": "The answer 5/12 as a wrong option, with a reason that names the idea.",
+  "help": "1/3 of 3/4 is 1/4 of the tank; 3/4 - 1/4 = 1/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_DIVIDE_FOR_COST": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT",
+  "error": "Divides the price by the fraction to find the cost of part of a unit.",
+  "example": {
+   "question": "3/4 kg of meat at 600 shillings a kg",
+   "wrong_answer": "800",
+   "correct_answer": "450"
+  },
+  "cause": "Picks the operation that makes the number bigger.",
+  "reveals": "The answer 800 as a wrong option, with a reason that names the idea.",
+  "help": "Part of a kilogram costs part of the price: multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_MULTIPLY_FOR_HOW_MANY": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT",
+  "error": "Multiplies to find how many fractional pieces fit.",
+  "example": {
+   "question": "6 m of cloth cut into pieces of 3/4 m. How many?",
+   "wrong_answer": "4 1/2",
+   "correct_answer": "8"
+  },
+  "cause": "Sees \"pieces of\" and multiplies.",
+  "reveals": "The answer 4 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "How many fit means divide: 6 ÷ 3/4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_REMAINDER_PIECE_COUNTED": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT",
+  "error": "Counts a part piece as a whole piece.",
+  "example": {
+   "question": "5 m of ribbon into pieces of 2/3 m. Whole pieces?",
+   "wrong_answer": "8",
+   "correct_answer": "7"
+  },
+  "cause": "Rounds up the answer.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Only whole pieces count: 7 1/2 gives 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT.M_SHARE_BY_DENOMINATOR": {
+  "skill": "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT",
+  "error": "Divides by the denominator only when sharing by a fraction.",
+  "example": {
+   "question": "A trader keeps 2/5 of 1,000 shillings. How much?",
+   "wrong_answer": "200",
+   "correct_answer": "400"
+  },
+  "cause": "Finds one fifth and stops.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Find one fifth, then take two of them.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  }

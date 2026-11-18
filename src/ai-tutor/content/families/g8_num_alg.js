@@ -24,7 +24,7 @@ export const FAMILIES = [
     make: ({ s, d }) => ({
       question: `A lift in a Nairobi office block is at floor ${s}. The ground floor is 0. The basement floors are −1, −2, −3 and so on. The lift goes down ${d} floors. Which floor does it reach?`,
       answer: s - d,
-      wrong: [[d - s, 'That treats the answer as above the ground. Going down further than the ground floor takes you into the basement.', 'M_SIGN_DROPPED_BELOW_ZERO'], [s + d, 'Going down takes floors away. Start at the floor the lift is on and count downwards.', 'M_DOWN_AS_ADD'], [-d, 'That ignores where the lift started.', 'M_START_IGNORED'], [s - d + 1, 'Floor 0 counts as a floor. Count it when you go down past the ground.', 'M_ZERO_SKIPPED']],
+      wrong: [[d - s, 'That treats the answer as above the ground. Going down further than the ground floor takes you into the basement.', 'M_SIGN_DROPPED_BELOW_ZERO'], [s + d, 'Going down takes floors away. Start at the floor the lift is on and count downwards.', 'M_DOWN_AS_ADD'], [-d, 'That ignores where the lift started.', 'M_START_IGNORED'], [s - d + 1, 'Floor 0 counts as a floor. Count it when you go down past the ground.', 'M_START_COUNTED_AS_STEP']],
       hints: ['Draw a number line standing up, with floor 0 in the middle.', 'Start at the floor the lift is on and move down, one floor at a time.'],
       steps: [`The lift starts at floor ${s}.`, `Going down ${d} floors: ${s} − ${d} = ${neg(s - d)}.`, `The lift is at floor ${neg(s - d)}, in the basement.`],
     }),
@@ -106,7 +106,7 @@ export const FAMILIES = [
     check: ({ a, f, n, k }, v) => v[0] === -f * n && v[1] === -a + v[0] && -a - f * v[2] === -(a + f * k) }),
 
   // ======================================================== FRACTIONS
-  fam({ id: 'g8.frac.shamba-share', skill: 'G8_FRACTIONS_COMBINED', outcome: 'G8.FRAC.b', rung: 2, form: 'word',
+  fam({ id: 'g8.frac.shamba-share', skill: 'G8_FRACTIONS_COMBINED', outcome: 'MATH.G8.NUMBER.FRACTIONS.b', cskill: 'MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE', rung: 2, form: 'word',
     draw: () => {
       const [a, b, c, d] = pick([[1, 3, 1, 4], [1, 2, 1, 5], [2, 5, 1, 4], [1, 2, 1, 3], [3, 8, 1, 4], [1, 3, 2, 5], [1, 4, 1, 6]]);
       const l = (b * d) / gcd(b, d); const A = l * randInt(1, Math.max(1, Math.floor(80 / l)));
@@ -117,26 +117,26 @@ export const FAMILIES = [
     make: ({ a, b, c, d, A, m, be, rest, p }) => ({
       question: `${p.name}'s shamba is ${A} acres. ${a}/${b} of the shamba has maize and ${c}/${d} of the shamba has beans. The rest is grass. How many acres are grass?`,
       answer: rest,
-      wrong: [[m + be, 'That is the land with crops. The grass is what is left after the crops.'], [A - m, 'You took away the maize only. The beans take land too.'], [m * be, 'The two fractions are of the same shamba, so you do not multiply the amounts.']],
+      wrong: [[m + be, 'That is the land with crops. The grass is what is left after the crops.', 'M_PARTS_GIVEN_FOR_REST'], [A - m, 'You took away the maize only. The beans take land too.', 'M_ONE_PART_TAKEN_AWAY'], [m * be, 'The two fractions are of the same shamba, so you do not multiply the amounts.', 'M_FRACTIONS_OF_SAME_WHOLE_MULTIPLIED']],
       hints: ['Find the acres for maize and for beans.', 'Take both away from the whole shamba.'],
       steps: [`Maize: ${a}/${b} of ${A} = ${m} acres.`, `Beans: ${c}/${d} of ${A} = ${be} acres.`, `Grass: ${A} − ${m} − ${be} = ${rest} acres.`],
     }),
     check: ({ A, m, be }, x) => x + m + be === A }),
 
-  fam({ id: 'g8.frac.tank-steps', skill: 'G8_FRACTIONS_COMBINED', outcome: 'G8.FRAC.b', rung: 2, form: 'steps',
+  fam({ id: 'g8.frac.tank-steps', skill: 'G8_FRACTIONS_COMBINED', outcome: 'MATH.G8.NUMBER.FRACTIONS.b', cskill: 'MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER', rung: 2, form: 'steps',
     draw: () => { const [n1, d1] = pick([[3, 5], [2, 3], [3, 4], [5, 6]]), d2 = pick([2, 3, 4]); const C = d1 * d2 * randInt(4, 12); const now = (C * n1) / d1, used = now / d2; return Number.isInteger(now) && Number.isInteger(used) ? { n1, d1, d2, C, now, used } : null; },
     make: ({ n1, d1, d2, C, now, used }) => ({
       question: `A water tank holds ${commas(C)} litres when full. It is ${n1}/${d1} full. A school then uses 1/${d2} of the water in the tank.`,
       parts: [
-        { prompt: 'How many litres are in the tank at first?', answer: now, unit: 'litres', hint: `Find ${n1}/${d1} of the full tank.`, wrong: [[C - now, 'That is the empty space, not the water.']] },
-        { prompt: 'How many litres does the school use?', answer: used, unit: 'litres', hint: `Take 1/${d2} of the water in the tank, not of the full tank.`, wrong: [[C / d2, `That is 1/${d2} of the full tank. The school uses a fraction of the water that is there.`]] },
-        { prompt: 'How many litres are left in the tank?', answer: now - used, unit: 'litres', hint: 'Take the litres used away from the litres at first.', wrong: [[used, 'That is what was used. The question asks what is left.']] },
+        { prompt: 'How many litres are in the tank at first?', answer: now, unit: 'litres', hint: `Find ${n1}/${d1} of the full tank.`, wrong: [[C - now, 'That is the empty space, not the water.', 'M_EMPTY_SPACE_FOR_CONTENTS']] },
+        { prompt: 'How many litres does the school use?', answer: used, unit: 'litres', hint: `Take 1/${d2} of the water in the tank, not of the full tank.`, wrong: [[C / d2, `That is 1/${d2} of the full tank. The school uses a fraction of the water that is there.`, 'M_FRACTION_OF_WHOLE_NOT_REMAINDER']] },
+        { prompt: 'How many litres are left in the tank?', answer: now - used, unit: 'litres', hint: 'Take the litres used away from the litres at first.', wrong: [[used, 'That is what was used. The question asks what is left.', 'M_USED_FOR_LEFT']] },
       ],
       steps: [`At first: ${n1}/${d1} of ${commas(C)} = ${commas(now)} litres.`, `Used: 1/${d2} of ${commas(now)} = ${commas(used)} litres.`, `Left: ${commas(now)} − ${commas(used)} = ${commas(now - used)} litres.`],
     }),
     check: ({ C, d1, d2, n1 }, v) => v[0] * d1 === C * n1 && v[1] * d2 === v[0] && v[2] + v[1] === v[0] }),
 
-  fam({ id: 'g8.frac.divide-first-spot', skill: 'G8_FRACTIONS_COMBINED', outcome: 'G8.FRAC.a', rung: 3, form: 'spot',
+  fam({ id: 'g8.frac.divide-first-spot', skill: 'G8_FRACTIONS_COMBINED', outcome: 'MATH.G8.NUMBER.FRACTIONS.a', cskill: 'MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS', rung: 3, form: 'spot',
     draw: () => {
       const [a, b] = pick([[3, 4], [5, 6], [4, 5], [2, 3], [7, 8], [5, 4], [3, 2]]), [c, d] = pick([[1, 2], [1, 3], [2, 3], [3, 4], [1, 4]]), [e, f] = pick([[2, 3], [3, 2], [4, 3], [3, 5], [5, 3], [2, 5]]);
       if (e === f || a === b) return null;
@@ -155,11 +155,12 @@ export const FAMILIES = [
         { text: `${a}/${b} − ${wn}/${wd} = ${sn}/${sd}`, ok: simp(a * wd - wn * b, b * wd).join('/') === `${sn}/${sd}` },
         { text: `Answer: ${sn}/${sd}`, ok: true },
       ],
-      fix: `To divide by ${e}/${f}, turn it upside down and multiply by ${f}/${e}. The child multiplied by ${e}/${f}.`,
+      mis: 'M_DIVIDE_NOT_INVERTED',
+        fix: `To divide by ${e}/${f}, turn it upside down and multiply by ${f}/${e}. The child multiplied by ${e}/${f}.`,
       steps: ['Do the division before the subtraction.', 'To divide by a fraction, multiply by its reciprocal.'],
     }) }),
 
-  fam({ id: 'g8.frac.day-table', skill: 'G8_FRACTIONS_COMBINED', outcome: 'G8.FRAC.a', rung: 2, form: 'table',
+  fam({ id: 'g8.frac.day-table', skill: 'G8_FRACTIONS_COMBINED', outcome: 'MATH.G8.NUMBER.FRACTIONS.a', cskill: 'MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE', rung: 2, form: 'table',
     draw: () => {
       const fr = [pick([[1, 2], [1, 3], [2, 5], [3, 8], [1, 4]]), pick([[1, 12], [1, 10], [1, 8], [1, 6]]), pick([[1, 12], [1, 10], [1, 8], [1, 16]])];
       if (fr[1][1] === fr[2][1]) return null;
@@ -173,7 +174,7 @@ export const FAMILIES = [
       return { question: 'A school day is 8 hours long. The table shows the fraction of the day for each activity. The rest of the day is for clubs. How many minutes are for clubs?',
         model: { type: 'table', data: { head: ['Activity', 'Fraction of the day'], rows: [{ label: 'Lessons', value: `${fr[0][0]}/${fr[0][1]}` }, { label: 'Games', value: `${fr[1][0]}/${fr[1][1]}` }, { label: 'Meals and breaks', value: `${fr[2][0]}/${fr[2][1]}` }, { label: 'Clubs', value: 'the rest' }] } },
         answer: mins,
-        wrong: [[minsUsed, 'That is the time used by the three activities. Clubs have the rest.'], [round(8 * (1 - used), 2), 'The answer must be in minutes. Change the 8 hours to minutes first.'], [Math.round(480 * (1 - fr[0][0] / fr[0][1] - fr[1][0] / fr[1][1])), 'Meals and breaks take time too. Take that fraction away as well.']],
+        wrong: [[minsUsed, 'That is the time used by the three activities. Clubs have the rest.', 'M_PARTS_GIVEN_FOR_REST'], [round(8 * (1 - used), 2), 'The answer must be in minutes. Change the 8 hours to minutes first.', 'M_UNIT_NOT_CONVERTED'], [Math.round(480 * (1 - fr[0][0] / fr[0][1] - fr[1][0] / fr[1][1])), 'Meals and breaks take time too. Take that fraction away as well.', 'M_ONE_PART_TAKEN_AWAY']],
         hints: ['Change 8 hours to minutes.', 'Find the three fractions in minutes, then take them from the whole day.'],
         steps: ['8 hours = 480 minutes.', `Lessons: ${round(480 * fr[0][0] / fr[0][1], 2)} min. Games: ${round(480 * fr[1][0] / fr[1][1], 2)} min. Meals and breaks: ${round(480 * fr[2][0] / fr[2][1], 2)} min.`, `Clubs: 480 − ${minsUsed} = ${mins} minutes.`] };
     },

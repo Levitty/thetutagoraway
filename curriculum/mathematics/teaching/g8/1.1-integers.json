@@ -3,7 +3,7 @@
  "title": "Integers",
  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
  "sources": [],
- "notes": "Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it).",
+ "notes": "Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. The lift family's feedback for the one-short answer says floor 0 was not counted, but the number it gives is the one a child gets by counting the starting floor as a step; tagged M_START_COUNTED_AS_STEP, feedback wording for a teacher to confirm. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it).",
  "skills": [
   {
    "skill": "MATH.G8.NUMBER.INTEGERS.INT_IDENTIFY",
@@ -343,13 +343,13 @@
      "repair": "Start from the first number."
     },
     {
-     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_ZERO_SKIPPED",
+     "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_START_COUNTED_AS_STEP",
      "listen_for": [
-      "-4 when it should be -3",
-      "one out"
+      "-2 when it should be -3",
+      "one short"
      ],
-     "ask": "Did you count the step onto zero?",
-     "repair": "Zero is a step."
+     "ask": "Where does the first jump land?",
+     "repair": "Count jumps, not marks."
     },
     {
      "code": "MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE.M_WRONG_SIDE_OF_ZERO",

@@ -176,6 +176,60 @@
     "how many months until"
    ],
    "mastery": "The child keeps a running total of money in and out (a minus sign means money out), starting from the opening balance, and handles a change repeated over several steps: a fall of 3 m a month for 4 months is a change of -12 m, and a total change of -18 degrees over 6 hours is -3 degrees an hour."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_ORDER_OF_OPERATIONS": {
+   "forms": [
+    "work out",
+    "which step has the mistake",
+    "which is done first",
+    "simplest form"
+   ],
+   "mastery": "The child works out a combined question such as 3/4 - 1/2 ÷ 2/3 by dividing or multiplying before adding or subtracting, turns the divisor upside down to divide, and simplifies the answer."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_BRACKETS_AND_OF": {
+   "forms": [
+    "work out the bracket",
+    "of means",
+    "which step first",
+    "simplify"
+   ],
+   "mastery": "The child works out the bracket first, treats \"of\" as multiplication done before adding or subtracting, and finishes in the right order: (1/2 + 1/3) × 3/5 = 1/2, and 2/3 of 3/4 + 1/4 = 3/4."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_MIXED_COMBINED": {
+   "forms": [
+    "mixed numbers in a combined question",
+    "change to improper fractions",
+    "answer as a mixed number",
+    "find the mistake"
+   ],
+   "mastery": "The child changes each mixed number to an improper fraction before multiplying or dividing, keeps whole parts and fractions together when adding, and writes the final answer as a mixed number in its simplest form: 1 1/2 × 2/3 + 1/4 = 1 1/4."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_REST_OF_WHOLE": {
+   "forms": [
+    "how many acres are left",
+    "minutes for clubs",
+    "what fraction is left",
+    "the rest is"
+   ],
+   "mastery": "The child adds the fractions used of one whole (a shamba, a school day), takes the sum from 1, and finds that fraction of the whole quantity in the unit asked: a day of 8 hours with 1/4, 1/3 and 1/6 used leaves 1/4 of 480 minutes = 120 minutes."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_OF_REMAINDER": {
+   "forms": [
+    "what is left after",
+    "a fraction of the rest",
+    "how much was used",
+    "water left in the tank"
+   ],
+   "mastery": "The child finds what is left after the first fraction, then takes the second fraction of that remainder (not of the whole): a tank of 6,000 litres is 3/4 full, a school uses 1/3 of the water, so 4,500 - 1,500 = 3,000 litres remain."
+  },
+  "MATH.G8.NUMBER.FRACTIONS.FRAC_SHOPPING_CONTEXT": {
+   "forms": [
+    "cost of a fraction of a kg",
+    "how many pieces",
+    "packets of",
+    "what each gets"
+   ],
+   "mastery": "The child works out the cost of a fraction of a kilogram or metre, how many fractional pieces or packets can be cut or filled, and shares an amount by fractions, choosing to multiply or divide from the story: 3/4 kg at 120 shillings a kg costs 90 shillings; 6 m cut into 3/4 m pieces gives 8 pieces."
   }
  }
 }
