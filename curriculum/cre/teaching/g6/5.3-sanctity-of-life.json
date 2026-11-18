@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.CHRIST.SANCTITY_OF_LIFE",
+ "title": "Sanctity of Life",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "If a child speaks of harming himself or others, follow the safeguarding policy at once.",
+ "skills": [
+  {
+   "skill": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
+   "key_step": "The child identifies practices that violate the right to life (murder, mob justice, abortion, drugs, reckless driving), outlines their effects, explains the teaching (Exodus 20:13; Matthew 5:21-22: anger matters too) and lists virtues that protect life (love, self-control, forgiveness, respect).",
+   "floor": {
+    "prerequisite": "Knows God is the source of life.",
+    "question": "Who is the source of life?",
+    "answer": "God"
+   },
+   "representations": [
+    "Exodus 20:13 and Matthew 5:21-22 written large",
+    "a chart: practice, effect",
+    "virtue cards"
+   ],
+   "steps": [
+    "Read Exodus 20:13.",
+    "Read Matthew 5:21-22.",
+    "Name practices that harm life.",
+    "Name virtues that protect it."
+   ],
+   "contexts": [
+    "a crowd beating a suspected thief",
+    "a fight at a football match",
+    "careless driving on the highway"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Exodus 20:13 and Matthew 5:22."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Matthew 5:22.",
+     "say": "What does Jesus add to \"do not murder\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say anger and insults matter too."
+    },
+    {
+     "beat": "reveal",
+     "do": "List virtues that protect life."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SAN6_OWN",
+     "listen_for": [
+      "From ourselves alone"
+     ],
+     "ask": "Where does life come from?",
+     "repair": "Read Genesis 2:7: God breathed life into the man. Life is a gift we care for."
+    },
+    {
+     "code": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SAN6_MOB",
+     "listen_for": [
+      "Join in, he deserves it"
+     ],
+     "ask": "A crowd catches a thief and wants to beat him. What is right?",
+     "repair": "Ask: who has the right to judge? The police and courts. Every life, even a thief's, is sacred."
+    },
+    {
+     "code": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SAN6_ANGER",
+     "listen_for": [
+      "Anger is harmless"
+     ],
+     "ask": "What does Jesus teach about anger (Matthew 5:21-22)?",
+     "repair": "Read Matthew 5:21-22: Jesus names anger and insults too. Deal with anger early."
+    },
+    {
+     "code": "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_C6_SAN_SELF_HARM",
+     "listen_for": [
+      "No, it is only my own life"
+     ],
+     "ask": "Does taking drugs or reckless dares go against the sacredness of life?",
+     "repair": "Read 1 Corinthians 6:19-20: your body is not your own. Protect your own life as well as others'."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A crowd wants to beat a thief. What is right?",
+     "answer": "Hand him to the police",
+     "shows": "mob justice"
+    },
+    {
+     "question": "Name a virtue that protects life.",
+     "answer": "Love (self-control, forgiveness)",
+     "shows": "virtue"
+    }
+   ]
+  }
+ ]
+}

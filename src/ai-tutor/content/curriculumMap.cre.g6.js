@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/cre/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (13 Nov 2026) are proposed or draft, written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched."};
+export const MAP_SOURCE = {"source":"curriculum/cre/g6.json","status":"outcomes from KICD's text, word for word; skills and prerequisites proposed, misconceptions draft, teaching pack draft; first pass 12 and 13 Nov 2026, deepened to the Grade 5 Maths standard on 18 Nov 2026 (two prerequisites and four misconceptions per skill); written offline by Claude, awaiting a CRE teacher's review. Rubrics from KICD, untouched."};
 export const SUBSTRANDS = {
  "CRE.G6.CREATI.MY_PURPOSE": {
   "name": "My Purpose",
@@ -573,7 +573,8 @@ export const SKILLS = {
   "mis": [
    "M_TAL6_SOURCE",
    "M_TAL6_SHOW",
-   "M_TAL6_VERSE"
+   "M_TAL6_VERSE",
+   "M_C6_TAL_ONLY_SCHOOL"
   ]
  },
  "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE": {
@@ -587,7 +588,8 @@ export const SKILLS = {
   "mis": [
    "M_MAR6_ORIGIN",
    "M_MAR6_LEAVE",
-   "M_MAR6_SLEEP"
+   "M_MAR6_SLEEP",
+   "M_C6_MAR_ADAM_NAMED"
   ]
  },
  "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE": {
@@ -605,7 +607,8 @@ export const SKILLS = {
   "mis": [
    "M_EM6_BENEFIT",
    "M_EM6_RIGHT",
-   "M_EM6_KEEP_QUIET"
+   "M_EM6_KEEP_QUIET",
+   "M_C6_EM_BOYS_FINE"
   ]
  },
  "CRES.G6.CREATI.LEISURE.LEISURE_REST": {
@@ -620,7 +623,8 @@ export const SKILLS = {
   "mis": [
    "M_LEI6_TIRED",
    "M_LEI6_IDLE",
-   "M_LEI6_DAY"
+   "M_LEI6_DAY",
+   "M_C6_LEI_SABBATH_LAZY"
   ]
  },
  "CRES.G6.CREATI.LEISURE.LEISURE_USE": {
@@ -637,7 +641,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_LEI6_MISUSE",
-   "M_LEI6_NO_LIMIT"
+   "M_LEI6_NO_LIMIT",
+   "M_C6_LEI_PHONE_ALL_DAY",
+   "M_C6_LEI_ONLY_PLAY"
   ]
  },
  "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED": {
@@ -652,7 +658,8 @@ export const SKILLS = {
   "mis": [
    "M_INS6_ONE",
    "M_INS6_HUMAN",
-   "M_INS6_USE"
+   "M_INS6_USE",
+   "M_C6_INS_AUTHORS_WRONG"
   ]
  },
  "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION": {
@@ -670,7 +677,8 @@ export const SKILLS = {
   "mis": [
    "M_TRA6_CHANGE",
    "M_TRA6_ENGLISH",
-   "M_TRA6_COST"
+   "M_TRA6_COST",
+   "M_C6_TRA_NEW_BOOKS"
   ]
  },
  "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE": {
@@ -684,7 +692,8 @@ export const SKILLS = {
   "mis": [
    "M_TEN6_OTHER_LAW",
    "M_TEN6_INVENTED",
-   "M_TEN6_WRONG_MATCH"
+   "M_TEN6_WRONG_MATCH",
+   "M_C6_TEN_WHERE"
   ]
  },
  "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES": {
@@ -701,7 +710,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_TEN6_VALUE",
-   "M_TEN6_RELIGIOUS_ONLY"
+   "M_TEN6_RELIGIOUS_ONLY",
+   "M_C6_TEN_COVET",
+   "M_C6_TEN_OLD_ONLY"
   ]
  },
  "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON": {
@@ -717,7 +728,8 @@ export const SKILLS = {
   "mis": [
    "M_SAM6_OWN",
    "M_SAM6_WEAPON",
-   "M_SAM6_NUMBER"
+   "M_SAM6_NUMBER",
+   "M_C6_SAM_ROPES"
   ]
  },
  "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA": {
@@ -733,7 +745,8 @@ export const SKILLS = {
   "mis": [
    "M_ELI6_SWIM",
    "M_ELI6_OWNER",
-   "M_ELI6_SMALL"
+   "M_ELI6_SMALL",
+   "M_C6_ELI_RIVER"
   ]
  },
  "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB": {
@@ -750,7 +763,8 @@ export const SKILLS = {
   "mis": [
    "M_JAC6_WON",
    "M_JAC6_NAME",
-   "M_JAC6_PLACE"
+   "M_JAC6_PLACE",
+   "M_C6_JAC_HIP"
   ]
  },
  "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES": {
@@ -765,7 +779,8 @@ export const SKILLS = {
   "mis": [
    "M_DIS6_JOB",
    "M_DIS6_WORDS",
-   "M_DIS6_ONLY_CLERGY"
+   "M_DIS6_ONLY_CLERGY",
+   "M_C6_DIS_DELAYED"
   ]
  },
  "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS": {
@@ -781,7 +796,8 @@ export const SKILLS = {
   "mis": [
    "M_TEM6_GAVE_IN",
    "M_TEM6_FIRST",
-   "M_TEM6_ALONE"
+   "M_TEM6_ALONE",
+   "M_C6_TEM_SCRIPTURE_ANSWER"
   ]
  },
  "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER": {
@@ -797,7 +813,8 @@ export const SKILLS = {
   "mis": [
    "M_ROM6_WHO",
    "M_ROM6_WENT",
-   "M_ROM6_FAITH"
+   "M_ROM6_FAITH",
+   "M_C6_ROM_JEW"
   ]
  },
  "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN": {
@@ -817,7 +834,8 @@ export const SKILLS = {
    "M_BLE6_DOCTORS",
    "M_BLE6_YEARS",
    "M_BLE6_WORDS",
-   "M_BLE6_HELP"
+   "M_BLE6_HELP",
+   "M_C6_BLE_HIDDEN"
   ]
  },
  "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED": {
@@ -835,7 +853,8 @@ export const SKILLS = {
   "mis": [
    "M_LAZ6_WEPT",
    "M_LAZ6_DAYS",
-   "M_LAZ6_WORDS"
+   "M_LAZ6_WORDS",
+   "M_C6_LAZ_SISTERS"
   ]
  },
  "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE": {
@@ -851,7 +870,8 @@ export const SKILLS = {
   "mis": [
    "M_HID6_RICH",
    "M_HID6_KEEP",
-   "M_HID6_PLACE"
+   "M_HID6_PLACE",
+   "M_C6_HID_STEAL"
   ]
  },
  "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN": {
@@ -867,7 +887,8 @@ export const SKILLS = {
   "mis": [
    "M_RIC6_WEALTH",
    "M_RIC6_SAME",
-   "M_RIC6_CHASM"
+   "M_RIC6_CHASM",
+   "M_C6_RIC_SEND_LAZARUS"
   ]
  },
  "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING": {
@@ -883,7 +904,8 @@ export const SKILLS = {
   "mis": [
    "M_CRE6_OTHER",
    "M_CRE6_BIBLE",
-   "M_CRE6_ORDER"
+   "M_CRE6_ORDER",
+   "M_C6_CRE_PILATE"
   ]
  },
  "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY": {
@@ -900,7 +922,8 @@ export const SKILLS = {
   "mis": [
    "M_TRI6_THREE_GODS",
    "M_TRI6_MEMBER",
-   "M_TRI6_ROLE"
+   "M_TRI6_ROLE",
+   "M_C6_TRI_SON_LATER"
   ]
  },
  "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING": {
@@ -916,7 +939,8 @@ export const SKILLS = {
   "mis": [
    "M_PAU6_PUNISH",
    "M_PAU6_LIST",
-   "M_PAU6_VIRTUE"
+   "M_PAU6_VIRTUE",
+   "M_C6_PAU_GAVE_UP"
   ]
  },
  "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY": {
@@ -932,7 +956,8 @@ export const SKILLS = {
   "mis": [
    "M_UNI6_SAME",
    "M_UNI6_BUILDING",
-   "M_UNI6_RANK"
+   "M_UNI6_RANK",
+   "M_C6_UNI_DENOMINATION"
   ]
  },
  "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP": {
@@ -948,7 +973,8 @@ export const SKILLS = {
   "mis": [
    "M_FRI6_POPULAR",
    "M_FRI6_BAD",
-   "M_FRI6_GOSSIP"
+   "M_FRI6_GOSSIP",
+   "M_C6_FRI_WISE_FOOL"
   ]
  },
  "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE": {
@@ -963,7 +989,8 @@ export const SKILLS = {
   "mis": [
    "M_SEX6_BODY",
    "M_SEX6_TEMPT",
-   "M_SEX6_SECRET"
+   "M_SEX6_SECRET",
+   "M_C6_SEX_MEDIA_NORMAL"
   ]
  },
  "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS": {
@@ -980,7 +1007,8 @@ export const SKILLS = {
   "mis": [
    "M_SEX6_PRESSURE",
    "M_SEX6_GIFT",
-   "M_SEX6_CAUSE"
+   "M_SEX6_CAUSE",
+   "M_C6_SEX_CANNOT_SAY_NO"
   ]
  },
  "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE": {
@@ -993,11 +1021,14 @@ export const SKILLS = {
    "CRE.G6.CHRIST.SANCTITY_OF_LIFE.c",
    "CRE.G6.CHRIST.SANCTITY_OF_LIFE.d"
   ],
-  "pre": [],
+  "pre": [
+   "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE"
+  ],
   "mis": [
    "M_SAN6_OWN",
    "M_SAN6_MOB",
-   "M_SAN6_ANGER"
+   "M_SAN6_ANGER",
+   "M_C6_SAN_SELF_HARM"
   ]
  },
  "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE": {
@@ -1012,7 +1043,8 @@ export const SKILLS = {
   "mis": [
    "M_DRU6_MEDICINE",
    "M_DRU6_TRY",
-   "M_DRU6_VERSE"
+   "M_DRU6_VERSE",
+   "M_C6_DRU_ADULTS_FINE"
   ]
  },
  "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT": {
@@ -1030,7 +1062,8 @@ export const SKILLS = {
   "mis": [
    "M_DRP6_AGENCY",
    "M_DRP6_HIDE",
-   "M_DRP6_SAYNO"
+   "M_DRP6_SAYNO",
+   "M_C6_DRP_POLICE_ONLY"
   ]
  }
 };
@@ -1038,87 +1071,118 @@ export const MIS_FEEDBACK = {
  "M_TAL6_SOURCE": "Exodus 31:3 says God gave Bezalel his skill. Talents are gifts from God.",
  "M_TAL6_SHOW": "Romans 12:4 shows that each part of the body serves the whole. Talents are for serving others.",
  "M_TAL6_VERSE": "Romans 12:4 compares us to one body with many parts. Exodus 31:3 is about God filling Bezalel with skill.",
+ "M_C6_TAL_ONLY_SCHOOL": "Talents are many: singing, drawing, crafts, kindness, leading. God gives them all to serve others.",
  "M_MAR6_ORIGIN": "Genesis 2:21-22 says God took one of the man's ribs and made the woman.",
  "M_MAR6_LEAVE": "Genesis 2:24 says a man leaves his father and mother and is united to his wife.",
  "M_MAR6_SLEEP": "Genesis 2:21 says God caused the man to fall into a deep sleep.",
  "M_EM6_BENEFIT": "Early marriage often ends school, brings early pregnancy and its risks, and deepens poverty.",
  "M_EM6_RIGHT": "The law in Kenya says a person must be 18 to marry.",
  "M_EM6_KEEP_QUIET": "A child at risk should tell a safe adult. Help is available, including Childline Kenya 116.",
+ "M_C6_MAR_ADAM_NAMED": "The man said, \"This is now bone of my bones... she shall be called woman.\"",
+ "M_C6_EM_BOYS_FINE": "Early marriage harms boys too. The law says 18 for everyone.",
  "M_LEI6_TIRED": "Genesis 2:2-3 says God finished his work, rested, blessed the day and made it holy.",
  "M_LEI6_IDLE": "1 Timothy 5:13 warns against idleness that leads to gossip and meddling. Rest itself is good.",
  "M_LEI6_DAY": "Genesis 2:2 says God rested on the seventh day.",
  "M_LEI6_MISUSE": "Gambling, drugs and endless phone time waste time and can harm. Reading, sport and helping are good uses.",
  "M_LEI6_NO_LIMIT": "Self-control and responsibility help us use free time well.",
+ "M_C6_LEI_SABBATH_LAZY": "God rested from the work of creating. He never stops caring for his world.",
+ "M_C6_LEI_PHONE_ALL_DAY": "Phones are not bad, but a whole day on one crowds out rest, family and growing. Use leisure wisely.",
+ "M_C6_LEI_ONLY_PLAY": "Leisure can be play, but also reading, hobbies, sport and helping others.",
  "M_INS6_ONE": "Many people, such as Moses, David and Paul, wrote the books of the Bible as God inspired them.",
  "M_INS6_HUMAN": "2 Timothy 3:16 says all Scripture is God-breathed.",
  "M_INS6_USE": "2 Timothy 3:16 says Scripture is useful for teaching, rebuking, correcting and training in righteousness.",
  "M_TRA6_CHANGE": "Translators carry the same message into a new language so that more people can understand.",
  "M_TRA6_ENGLISH": "People understand best in the language of the heart. That is why the Bible is translated.",
  "M_TRA6_COST": "The advantage is better understanding and more readers, not a shorter Bible.",
+ "M_C6_INS_AUTHORS_WRONG": "Moses, David and Paul are among those who wrote the Bible. Jesus' words were written down by others.",
+ "M_C6_TRA_NEW_BOOKS": "Translation puts the same books into another language. Nothing new is added.",
  "M_TEN6_OTHER_LAW": "The command to honour parents is in Exodus 20. Giving a tenth is a different law.",
  "M_TEN6_INVENTED": "The Ten Commandments in Exodus 20:3-17 do not set the number of daily prayers.",
  "M_TEN6_WRONG_MATCH": "Taking what belongs to someone else breaks the command not to steal.",
  "M_TEN6_VALUE": "Honouring parents teaches respect.",
  "M_TEN6_RELIGIOUS_ONLY": "Some commands are about God and some about how we treat other people.",
+ "M_C6_TEN_WHERE": "God gave the Ten Commandments to Moses for Israel at Mount Sinai.",
+ "M_C6_TEN_COVET": "Wanting what is someone else's so much that it rules you is coveting. Be content and thankful.",
+ "M_C6_TEN_OLD_ONLY": "They still guide us today: love God, respect parents, be honest, protect life.",
  "M_SAM6_OWN": "Judges 15:14 says the Spirit of the Lord came on him in power.",
  "M_SAM6_WEAPON": "Judges 15:15 says he found a fresh jawbone of a donkey.",
  "M_SAM6_NUMBER": "Judges 15:15 says he killed a thousand men.",
+ "M_C6_SAM_ROPES": "When the Spirit of the Lord came on Samson, the ropes became like burnt flax and fell off.",
  "M_ELI6_SWIM": "2 Kings 6:6 says Elisha cut a stick, threw it in and the iron floated.",
  "M_ELI6_OWNER": "2 Kings 6:5 says the man cried out, \"It was borrowed!\"",
  "M_ELI6_SMALL": "God cared about a borrowed axe head. We can take small needs to him.",
+ "M_C6_ELI_RIVER": "They were cutting trees by the River Jordan when the axe head fell in.",
  "M_JAC6_WON": "Jacob was blessed because he refused to let go until he was blessed, not because he was stronger.",
  "M_JAC6_NAME": "Genesis 32:28 says his name was changed to Israel.",
  "M_JAC6_PLACE": "Genesis 32:22 says they crossed the ford of the Jabbok.",
+ "M_C6_JAC_HIP": "Jacob's hip was put out of joint and he limped, but he held on until he was blessed.",
  "M_DIS6_JOB": "Mark 1:16 says they were fishermen casting a net.",
  "M_DIS6_WORDS": "Mark 1:17 records \"Follow me, and I will make you fishers of men\".",
  "M_DIS6_ONLY_CLERGY": "God calls people to serve him as teachers, nurses, parents, farmers and pastors.",
+ "M_C6_DIS_DELAYED": "They left their nets at once and followed Jesus.",
  "M_TEM6_GAVE_IN": "Jesus did not give in. He answered with Scripture.",
  "M_TEM6_FIRST": "Luke 4:3 says the devil first told Jesus to turn a stone into bread.",
  "M_TEM6_ALONE": "Jesus used God's word. We can pray, remember the word and ask for help.",
+ "M_C6_TEM_SCRIPTURE_ANSWER": "Jesus answered each time with God's word, \"It is written\". We can use God's word too.",
  "M_ROM6_WHO": "Matthew 8:6 says the officer's servant was paralysed.",
  "M_ROM6_WENT": "The officer said Jesus need only say the word, and the servant was healed that hour.",
  "M_ROM6_FAITH": "Matthew 8:10 says Jesus was amazed and said he had not found such great faith.",
+ "M_C6_ROM_JEW": "He was a Roman officer, not a Jew. Jesus praised his great faith.",
  "M_BLE6_DOCTORS": "Luke 8:43 says she had spent all on doctors and none could heal her. Jesus healed her.",
  "M_BLE6_YEARS": "Luke 8:43 says she had bled for twelve years.",
  "M_BLE6_WORDS": "Luke 8:48 records \"Daughter, your faith has healed you. Go in peace.\"",
  "M_BLE6_HELP": "The church and the government both run hospitals and clinics and care for the sick.",
+ "M_C6_BLE_HIDDEN": "She came trembling, knelt and told everyone what happened. Jesus called her \"Daughter\".",
  "M_LAZ6_WEPT": "John 11:35, the shortest verse, says Jesus wept.",
  "M_LAZ6_DAYS": "John 11:39 says he had been dead four days.",
  "M_LAZ6_WORDS": "John 11:43 records \"Lazarus, come out!\"",
+ "M_C6_LAZ_SISTERS": "Mary and Martha were Lazarus' sisters, at Bethany.",
  "M_HID6_RICH": "The treasure stands for the kingdom of heaven, worth more than anything we own.",
  "M_HID6_KEEP": "Matthew 13:44 says he sold all he had and bought the field.",
  "M_HID6_PLACE": "Matthew 13:44 says the treasure was hidden in a field.",
+ "M_C6_HID_STEAL": "He did not steal it. He sold all he had and bought the field with joy.",
  "M_RIC6_WEALTH": "The parable condemns the rich man for ignoring the needy Lazarus.",
  "M_RIC6_SAME": "In the parable Lazarus is a beggar. The Lazarus of John 11 was the brother of Mary and Martha.",
  "M_RIC6_CHASM": "Luke 16:26 says a great chasm had been fixed between them.",
+ "M_C6_RIC_SEND_LAZARUS": "Abraham said they had Moses and the Prophets to listen to. We have God's word now.",
  "M_CRE6_OTHER": "The creed says Jesus was born of the Virgin Mary.",
  "M_CRE6_BIBLE": "The creed is a short statement of Christian belief. It is not a book of the Bible.",
  "M_CRE6_ORDER": "The creed begins with God the Father Almighty, maker of heaven and earth.",
  "M_TRI6_THREE_GODS": "Christians believe in one God, Father, Son and Holy Spirit.",
  "M_TRI6_MEMBER": "The three persons are the Father, the Son and the Holy Spirit.",
  "M_TRI6_ROLE": "The Father is the creator, the Son is the saviour, and the Holy Spirit is the helper.",
+ "M_C6_CRE_PILATE": "The creed says Jesus suffered under Pontius Pilate, the Roman governor.",
+ "M_C6_TRI_SON_LATER": "Father, Son and Holy Spirit are one God. The Son is not a smaller god.",
  "M_PAU6_PUNISH": "Paul listed these hardships as part of faithful service, not as punishment.",
  "M_PAU6_LIST": "2 Corinthians 6:5 lists beatings, imprisonments, riots, hard work, sleepless nights and hunger.",
  "M_PAU6_VIRTUE": "2 Corinthians 6:6 names purity, understanding, patience, kindness and sincere love.",
+ "M_C6_PAU_GAVE_UP": "Paul kept serving God through every hardship, with patience and kindness.",
  "M_UNI6_SAME": "1 Corinthians 12:12 says one body has many different parts. Unity is not sameness.",
  "M_UNI6_BUILDING": "Jesus said \"I will build my church\", which means his people, not only a building.",
  "M_UNI6_RANK": "Galatians 3:28 says all are one in Christ Jesus.",
+ "M_C6_UNI_DENOMINATION": "All who follow Christ are one body, even in different churches.",
  "M_FRI6_POPULAR": "A good friend is honest, kind and helps you do right.",
  "M_FRI6_BAD": "1 Corinthians 15:33 warns that bad company corrupts good character.",
  "M_FRI6_GOSSIP": "Proverbs 16:28 says a gossip separates close friends.",
+ "M_C6_FRI_WISE_FOOL": "Walk with the wise and you become wise; a companion of fools suffers harm.",
  "M_SEX6_BODY": "1 Corinthians 6:19 says the body is a temple of the Holy Spirit.",
  "M_SEX6_TEMPT": "James 1:14-15 says desire gives birth to sin when it is acted on. Being tempted is not itself a sin.",
  "M_SEX6_SECRET": "A trusted adult can help. Hiding a worry makes it harder.",
  "M_SEX6_PRESSURE": "Assertiveness and refusal skills help a young person say no.",
  "M_SEX6_GIFT": "Gifts offered for favours are a trap. Refuse and tell a trusted adult.",
  "M_SEX6_CAUSE": "Peer pressure, harmful content, idleness and too little guidance are causes.",
+ "M_C6_SEX_MEDIA_NORMAL": "Films do not decide what is right. God teaches us to keep sex for marriage and honour him with our bodies.",
+ "M_C6_SEX_CANNOT_SAY_NO": "You can always say no to what is wrong or unsafe, even to an older person, and tell a trusted adult.",
  "M_SAN6_OWN": "Life is a gift from God, so we protect it.",
  "M_SAN6_MOB": "Mob justice violates the right to life. Hand a suspect to the police.",
  "M_SAN6_ANGER": "In Matthew 5:21-22 Jesus teaches that anger toward a brother is also serious.",
+ "M_C6_SAN_SELF_HARM": "Your own life is God's gift too. Protect it, as you protect others'.",
  "M_DRU6_MEDICINE": "Medicine taken as a health worker directs is not abuse. Sniffing glue is.",
  "M_DRU6_TRY": "Trying once can lead to addiction.",
  "M_DRU6_VERSE": "Ephesians 5:18 says do not get drunk, but be filled with the Spirit.",
  "M_DRP6_AGENCY": "NACADA is the National Authority for the Campaign Against Alcohol and Drug Abuse.",
  "M_DRP6_HIDE": "Christians care for those who struggle and help them get counselling and treatment.",
- "M_DRP6_SAYNO": "Saying no firmly takes courage. Walk away and tell an adult."
+ "M_DRP6_SAYNO": "Saying no firmly takes courage. Walk away and tell an adult.",
+ "M_C6_DRU_ADULTS_FINE": "Ephesians 5:18 says do not get drunk. It is for adults too.",
+ "M_C6_DRP_POLICE_ONLY": "Everyone has a part: families, churches, schools, NACADA, the police and you."
 };

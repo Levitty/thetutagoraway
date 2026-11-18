@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_CH.CHURCH_UNITY",
+ "title": "Church Unity",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY",
+   "key_step": "The child explains church unity (different people one in Christ) and the teaching of 1 Corinthians 12:12 (one body, many parts), Galatians 3:28 (all one in Christ) and Matthew 16:18 (Jesus builds his church), and how unity brings harmony.",
+   "floor": {
+    "prerequisite": "Knows how the early church lived in unity.",
+    "question": "What did the early believers devote themselves to?",
+    "answer": "The apostles' teaching, fellowship, breaking bread and prayer"
+   },
+   "representations": [
+    "a body outline with many parts",
+    "the three verses on cards",
+    "cards of groups in a church"
+   ],
+   "steps": [
+    "Read 1 Corinthians 12:12.",
+    "Read Galatians 3:28.",
+    "Read Matthew 16:18.",
+    "Say how unity brings harmony."
+   ],
+   "contexts": [
+    "a church with many tribes",
+    "Christians of different churches at a joint service",
+    "a choir of many voices"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a body with many parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hand and the foot.",
+     "say": "Are these the same? Are they one body?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say different parts, one body."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Corinthians 12:12."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_UNI6_SAME",
+     "listen_for": [
+      "Everyone is exactly the same"
+     ],
+     "ask": "What does unity in the church mean?",
+     "repair": "Read 1 Corinthians 12:12: one body, many parts. A body needs different parts."
+    },
+    {
+     "code": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_UNI6_BUILDING",
+     "listen_for": [
+      "Hall"
+     ],
+     "ask": "In Matthew 16:18 Jesus says \"I will build my...\"",
+     "repair": "Read Matthew 16:18 and ask: can a building be built on a person's faith? The church is the people."
+    },
+    {
+     "code": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_UNI6_RANK",
+     "listen_for": [
+      "Some are more important than others"
+     ],
+     "ask": "What does Galatians 3:28 say about tribe or status?",
+     "repair": "Read Galatians 3:28 and list groups: tribe, rich and poor, men and women: all one in Christ."
+    },
+    {
+     "code": "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY.M_C6_UNI_DENOMINATION",
+     "listen_for": [
+      "No, only my church is"
+     ],
+     "ask": "Are Christians in a different church from yours part of the body of Christ?",
+     "repair": "Read 1 Corinthians 12:12-13: one body. Name churches in the area and say what they share."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Galatians 3:28 say about status?",
+     "answer": "All are one in Christ Jesus",
+     "shows": "teaching"
+    },
+    {
+     "question": "What does church unity mean?",
+     "answer": "Different people working together as one in Christ",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

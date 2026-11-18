@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF",
+ "title": "Bible Stories Samson defeats the Philistines",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON",
+   "key_step": "The child retells Judges 15:14-17: bound and handed over at Lehi, Samson is freed when the Spirit of the Lord comes on him, the ropes fall like burnt flax, he strikes a thousand Philistines with a donkey's jawbone; outlines how Christians depend on God in challenges.",
+   "floor": {
+    "prerequisite": "Knows Samson killed a lion by God's power.",
+    "question": "Where did Samson's strength come from in Judges 14?",
+    "answer": "The Spirit of the Lord"
+   },
+   "representations": [
+    "ropes drawn falling like burnt thread",
+    "a jawbone picture",
+    "Judges 15:14 written large"
+   ],
+   "steps": [
+    "Samson is bound and handed over.",
+    "The Spirit comes on him; the ropes fall off.",
+    "He takes a donkey's jawbone.",
+    "He strikes a thousand men."
+   ],
+   "contexts": [
+    "a learner facing bullying",
+    "a family facing a long illness",
+    "praying before a hard task"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Judges 15:14 and draw ropes falling."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ropes.",
+     "say": "Who made the ropes fall off?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the Spirit of the Lord."
+    },
+    {
+     "beat": "reveal",
+     "do": "List ways Christians depend on God today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_SAM6_OWN",
+     "listen_for": [
+      "His own muscles"
+     ],
+     "ask": "What gave Samson power against the Philistines (Judges 15:14)?",
+     "repair": "Read Judges 15:14: \"the Spirit of the Lord came powerfully upon him\". Compare with Judges 14:6 in Grade 4."
+    },
+    {
+     "code": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_SAM6_WEAPON",
+     "listen_for": [
+      "A sword"
+     ],
+     "ask": "What did Samson use to strike the Philistines (Judges 15:15)?",
+     "repair": "Read 15:15 and show a picture of a jawbone: God used something weak and ordinary."
+    },
+    {
+     "code": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_SAM6_NUMBER",
+     "listen_for": [
+      "One hundred"
+     ],
+     "ask": "How many men did Samson kill with it (Judges 15:15)?",
+     "repair": "Read 15:16 where Samson himself says \"a thousand men\"."
+    },
+    {
+     "code": "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON.M_C6_SAM_ROPES",
+     "listen_for": [
+      "He cut them with a knife"
+     ],
+     "ask": "How did the ropes on Samson's arms come off (Judges 15:14)?",
+     "repair": "Read 15:14 and act burnt thread falling apart. God freed him."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did Samson use to strike the Philistines?",
+     "answer": "The jawbone of a donkey",
+     "shows": "detail"
+    },
+    {
+     "question": "What gave Samson power?",
+     "answer": "The Spirit of the Lord",
+     "shows": "source"
+    }
+   ]
+  }
+ ]
+}

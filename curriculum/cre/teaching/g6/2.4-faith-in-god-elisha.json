@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_BI.FAITH_IN_GOD_ELISHA",
+ "title": "Faith in God Elisha",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA",
+   "key_step": "The child describes 2 Kings 6:1-7: the prophets go to the Jordan to cut poles, a borrowed axe head falls into the water, Elisha throws in a stick and the iron floats, and the man lifts it out; God cares even about small needs, so trust him in challenges.",
+   "floor": {
+    "prerequisite": "Knows God rescued Peter from prison.",
+    "question": "How did Peter get out of prison?",
+    "answer": "An angel freed him"
+   },
+   "representations": [
+    "a river with an axe head floating",
+    "2 Kings 6:6 written large",
+    "a list of small and big needs"
+   ],
+   "steps": [
+    "The prophets cut poles at the Jordan.",
+    "A borrowed axe head falls into the water.",
+    "Elisha throws a stick in.",
+    "The iron floats and is lifted out."
+   ],
+   "contexts": [
+    "a learner who loses borrowed money",
+    "a lost school book",
+    "praying about a small worry"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a river with an axe head under the water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the axe head.",
+     "say": "Why was the man so upset?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it was borrowed."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the iron floating and write 2 Kings 6:6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_ELI6_SWIM",
+     "listen_for": [
+      "Elisha dived in and found it"
+     ],
+     "ask": "How was the axe head recovered (2 Kings 6:6)?",
+     "repair": "Read 2 Kings 6:6: Elisha threw a stick and the iron floated. Iron sinks; only God could make it float."
+    },
+    {
+     "code": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_ELI6_OWNER",
+     "listen_for": [
+      "Elisha's"
+     ],
+     "ask": "Whose axe head fell into the water (2 Kings 6:5)?",
+     "repair": "Read 6:5: \"It was borrowed!\" The worry was a poor prophet's debt."
+    },
+    {
+     "code": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_ELI6_SMALL",
+     "listen_for": [
+      "God cares only about big problems"
+     ],
+     "ask": "What does the story teach about small problems?",
+     "repair": "Ask: why did the man cry out? A borrowed axe was a big worry for him. God cared."
+    },
+    {
+     "code": "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA.M_C6_ELI_RIVER",
+     "listen_for": [
+      "At the Sea of Galilee"
+     ],
+     "ask": "Where were the prophets cutting trees when the axe head fell (2 Kings 6:2-4)?",
+     "repair": "Read 6:2 and 6:4: they went to the Jordan. Mark it on a map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How was the axe head recovered?",
+     "answer": "Elisha threw in a stick and the iron floated",
+     "shows": "miracle"
+    },
+    {
+     "question": "What does the story teach about small problems?",
+     "answer": "We can take even small needs to God",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

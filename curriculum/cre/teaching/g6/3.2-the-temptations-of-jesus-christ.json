@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS",
+ "title": "The Temptations of Jesus Christ",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS",
+   "key_step": "The child narrates Luke 4:1-13: led by the Spirit into the wilderness for forty days, Jesus is tempted to turn a stone into bread, to worship the devil for the kingdoms, and to throw himself from the temple, and answers each with Scripture; and names temptations young people face and how to overcome them.",
+   "floor": {
+    "prerequisite": "Knows Jesus was baptised.",
+    "question": "What came down on Jesus at his baptism?",
+    "answer": "The Holy Spirit, like a dove"
+   },
+   "representations": [
+    "three boxes: bread, kingdoms, temple",
+    "Luke 4:4 written large",
+    "temptation cards for today"
+   ],
+   "steps": [
+    "Forty days in the wilderness.",
+    "Bread: \"Man shall not live on bread alone\".",
+    "Kingdoms: \"Worship the Lord your God\".",
+    "Temple: \"Do not put the Lord your God to the test\"."
+   ],
+   "contexts": [
+    "being tempted to cheat in an exam",
+    "pressure to steal from a shop",
+    "a dare to try alcohol"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three boxes for the three temptations."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first box.",
+     "say": "What was the first temptation, and how did Jesus answer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say bread, \"It is written\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Jesus' answer in each box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_TEM6_GAVE_IN",
+     "listen_for": [
+      "He gave in to the second temptation"
+     ],
+     "ask": "How did Jesus respond to the devil (Luke 4:1-13)?",
+     "repair": "Read each answer of Jesus with its \"It is written\"; he never gave in."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_TEM6_FIRST",
+     "listen_for": [
+      "To jump from the temple"
+     ],
+     "ask": "What was the first temptation (Luke 4:3)?",
+     "repair": "Number Luke 4:3, 4:5 and 4:9 on the board: bread first."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_TEM6_ALONE",
+     "listen_for": [
+      "Give in so as not to look weak"
+     ],
+     "ask": "What can a young person do when tempted to cheat?",
+     "repair": "Show Jesus used God's word; a young person can use God's word, prayer and a trusted adult."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS.M_C6_TEM_SCRIPTURE_ANSWER",
+     "listen_for": [
+      "By doing a miracle to scare the devil"
+     ],
+     "ask": "How did Jesus answer each temptation in Luke 4?",
+     "repair": "Underline \"It is written\" three times in Luke 4:4, 8 and 12. A child can learn verses too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was the first temptation in Luke 4?",
+     "answer": "To turn a stone into bread",
+     "shows": "order"
+    },
+    {
+     "question": "How did Jesus answer the devil?",
+     "answer": "With Scripture, \"It is written\"",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}

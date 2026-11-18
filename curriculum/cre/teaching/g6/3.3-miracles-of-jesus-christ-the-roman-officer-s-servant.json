@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST",
+ "title": "Miracles of Jesus Christ (The Roman Officer’s servant)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER",
+   "key_step": "The child narrates Matthew 8:5-13: in Capernaum a Roman officer asks Jesus to heal his paralysed servant, says \"just say the word\", Jesus praises his great faith and the servant is healed at that hour; lessons: faith, humility, caring for others, praying for the sick.",
+   "floor": {
+    "prerequisite": "Knows the healing of the paralysed man.",
+    "question": "Whose faith did Jesus see when the man was lowered through the roof?",
+    "answer": "The faith of the man and his friends"
+   },
+   "representations": [
+    "a soldier drawn speaking to Jesus",
+    "Matthew 8:8 written large",
+    "a lessons list"
+   ],
+   "steps": [
+    "The officer asks for his servant.",
+    "Jesus offers to come.",
+    "\"Just say the word.\"",
+    "Jesus praises his faith; the servant is healed."
+   ],
+   "contexts": [
+    "praying for a sick classmate",
+    "a boss who cares for a worker",
+    "a church praying for the hospital"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Matthew 8:8: \"just say the word, and my servant will be healed\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"just say the word\".",
+     "say": "Why did the officer not need Jesus to come?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he believed Jesus' word had power."
+    },
+    {
+     "beat": "reveal",
+     "do": "List lessons below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_ROM6_WHO",
+     "listen_for": [
+      "His son"
+     ],
+     "ask": "Who was sick in Matthew 8:6?",
+     "repair": "Read Matthew 8:6: \"my servant\". Ask why an officer would care so much for a servant."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_ROM6_WENT",
+     "listen_for": [
+      "Jesus went to the house and laid hands on him"
+     ],
+     "ask": "How was the servant healed (Matthew 8:8-13)?",
+     "repair": "Read 8:8 and 8:13: \"just say the word\"; healed at that hour, far away."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_ROM6_FAITH",
+     "listen_for": [
+      "It was too small"
+     ],
+     "ask": "What did Jesus say about the officer's faith?",
+     "repair": "Read 8:10: Jesus was amazed: no one in Israel had such great faith."
+    },
+    {
+     "code": "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER.M_C6_ROM_JEW",
+     "listen_for": [
+      "A Jewish priest"
+     ],
+     "ask": "Who was the man who asked Jesus to heal his servant (Matthew 8:5)?",
+     "repair": "Read 8:5 and 8:10: a Roman soldier, an outsider, had greater faith than many in Israel."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who was sick in Matthew 8:6?",
+     "answer": "The officer's servant",
+     "shows": "detail"
+    },
+    {
+     "question": "How was the servant healed?",
+     "answer": "Jesus spoke and he was healed at that hour",
+     "shows": "faith"
+    }
+   ]
+  }
+ ]
+}

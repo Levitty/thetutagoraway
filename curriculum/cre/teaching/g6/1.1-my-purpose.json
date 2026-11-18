@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.CREATI.MY_PURPOSE",
+ "title": "My Purpose",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.CREATI.MY_PURPOSE.TALENTS",
+   "key_step": "The child explains Exodus 31:3 (God filled Bezalel with skill) and Romans 12:4 (one body, many parts with different work), says talents are God's gifts for serving others, and names values that grow them (practice, patience, discipline, humility).",
+   "floor": {
+    "prerequisite": "Knows the parable of the talents.",
+    "question": "What did the faithful servants do with their talents?",
+    "answer": "Used them and gained more"
+   },
+   "representations": [
+    "a body outline with parts labelled by job",
+    "Exodus 31:3 and Romans 12:4 on cards",
+    "a values ladder"
+   ],
+   "steps": [
+    "Read Exodus 31:3.",
+    "Read Romans 12:4.",
+    "Name your gift and how it serves.",
+    "Name values that help it grow."
+   ],
+   "contexts": [
+    "a learner who plays the drum in church",
+    "a carpenter making school desks",
+    "a class prefect leading assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a body and label hands, eyes and feet with their jobs."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hands.",
+     "say": "What does Romans 12:4 teach with this picture?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say many parts, different work, one body."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write gifts beside the parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_TAL6_SOURCE",
+     "listen_for": [
+      "From luck"
+     ],
+     "ask": "Where do talents and abilities come from?",
+     "repair": "Read Exodus 31:3: God filled Bezalel with skill. Ask the child to name a gift and say who gave it."
+    },
+    {
+     "code": "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_TAL6_SHOW",
+     "listen_for": [
+      "To show off"
+     ],
+     "ask": "What are talents given for?",
+     "repair": "Link 1 Peter 4:10 with Romans 12:4: each part of the body works for the whole. Ask how a singer serves the church."
+    },
+    {
+     "code": "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_TAL6_VERSE",
+     "listen_for": [
+      "Exodus 31:3"
+     ],
+     "ask": "Which verse says the body has many parts with different work?",
+     "repair": "Give each verse a picture: Exodus 31:3, a craftsman; Romans 12:4, a body with many parts."
+    },
+    {
+     "code": "CRES.G6.CREATI.MY_PURPOSE.TALENTS.M_C6_TAL_ONLY_SCHOOL",
+     "listen_for": [
+      "Only being top in exams"
+     ],
+     "ask": "Which of these is a God-given talent?",
+     "repair": "List gifts in the class; Bezalel's gift was craftwork (Exodus 31:3). Every gift serves."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where do talents come from, according to Exodus 31:3?",
+     "answer": "From God",
+     "shows": "source"
+    },
+    {
+     "question": "Name a value that helps a talent grow.",
+     "answer": "Practice (patience, discipline, humility)",
+     "shows": "values"
+    }
+   ]
+  }
+ ]
+}

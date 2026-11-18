@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_LI.THE_HIDDEN_TREASURE",
+ "title": "The Hidden Treasure",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE",
+   "key_step": "The child retells Matthew 13:44: a man finds treasure hidden in a field, hides it again, and in his joy sells all he has to buy the field; the kingdom of heaven is worth more than everything, so commit your life to Christ.",
+   "floor": {
+    "prerequisite": "Knows the parable of the mustard seed.",
+    "question": "How does God's kingdom begin in that parable?",
+    "answer": "Very small, like a seed"
+   },
+   "representations": [
+    "a field with treasure drawn underground",
+    "Matthew 13:44 written large",
+    "a scale: everything I have, the kingdom"
+   ],
+   "steps": [
+    "A man finds treasure in a field.",
+    "He hides it again.",
+    "In joy he sells all he has.",
+    "He buys the field."
+   ],
+   "contexts": [
+    "a farmer who finds good soil",
+    "choosing God first",
+    "a young person giving time to church"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a field with a box underground."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the box.",
+     "say": "What did the man do after he found it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he sold all he had and bought the field."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"the kingdom of heaven is worth more than everything\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_HID6_RICH",
+     "listen_for": [
+      "How to get rich quickly"
+     ],
+     "ask": "What is the lesson of the hidden treasure (Matthew 13:44)?",
+     "repair": "Begin with Jesus' words: \"The kingdom of heaven is like\". Ask what is worth more than everything."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_HID6_KEEP",
+     "listen_for": [
+      "He kept what he had and took the treasure"
+     ],
+     "ask": "What did the man do after finding the treasure?",
+     "repair": "Read 13:44: \"in his joy he sold all he had\". Ask why selling everything was a joy."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_HID6_PLACE",
+     "listen_for": [
+      "In a house"
+     ],
+     "ask": "Where was the treasure hidden (Matthew 13:44)?",
+     "repair": "Read 13:44 and draw a field with the treasure underground."
+    },
+    {
+     "code": "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE.M_C6_HID_STEAL",
+     "listen_for": [
+      "He dug it up and ran away with it"
+     ],
+     "ask": "How did the man get the treasure (Matthew 13:44)?",
+     "repair": "Read 13:44: he bought the field. Jesus' point is how much it was worth to him."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where was the treasure hidden?",
+     "answer": "In a field",
+     "shows": "detail"
+    },
+    {
+     "question": "What is the lesson of the hidden treasure?",
+     "answer": "The kingdom of heaven is worth more than everything",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

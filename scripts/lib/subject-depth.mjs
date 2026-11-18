@@ -9,7 +9,8 @@
 //                                       'G3o:SUB.KEY.a' an official outcome of a grade below (code without the subject prefix)
 //     also  ['c', 'OTHER.SUB.c']        more official outcomes for the skill (the code's last segment, e.g. 'a_')
 //     mis   [[short, error, question, wrong, right, cause, help, feedback, source?]]  more misconceptions
-//     fix   { SHORT: [cause, help] | { error?, cause?, help?, feedback? } }  a real cause and repair for a first-pass misconception
+//     fix   { SHORT: [cause, help, error?] | { error?, cause?, help?, feedback?, question?, wrong?, right? } }  a real cause and
+//           repair (and a sharper error, or a corrected example) for a first-pass misconception
 //     pack  { key_step, floor, reps, steps, contexts, board, checks }  the teaching pack entry; each misconception's listen-for,
 //           ask and repair are the library's own wrong answer, example question and help (scripts/maths-teaching-pack-file.mjs rules)
 //   NOTES  { 'SUB.KEY': text }          the teaching pack file's notes for a sub-strand
@@ -87,8 +88,13 @@ export function deepenGrade(cur, data, o) {
     }
     for (const [short, f] of Object.entries(d.fix || {})) {
       const m = s.misconceptions.find(x => x.code === `${k.code}.${short}`) || fail(`${k.code}: fix for unknown misconception ${short}`);
-      const { error, cause, help, feedback } = Array.isArray(f) ? { cause: f[0], help: f[1] } : f;
+      const { error, cause, help, feedback, question, wrong, right } = Array.isArray(f) ? { cause: f[0], help: f[1], error: f[2] } : f;
       if (error) m.error = error; if (cause) m.cause = cause; if (help) m.help = help; if (feedback) m.feedback = feedback;
+      if (question || wrong || right) {   // a first-pass example that was wrong or unclear
+        m.example = { question: question || m.example.question, wrong_answer: wrong || m.example.wrong_answer, correct_answer: right || m.example.correct_answer };
+        if (m.example.wrong_answer === m.example.correct_answer) fail(`${short}: the wrong answer is the right one`);
+        m.reveals = `Offer "${m.example.wrong_answer}" beside "${m.example.correct_answer}" and ask the child to choose.`;
+      }
       added.fix++;
     }
     for (const [short, error, question, wrong, right, cause, help, feedback, source] of d.mis || []) {

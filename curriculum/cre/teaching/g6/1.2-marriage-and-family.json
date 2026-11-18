@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.CREATI.MARRIAGE_AND_FAMILY",
+ "title": "Marriage and Family",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Early marriage is taught for protection. A child at risk is never asked to speak in class; follow the safeguarding policy. Childline Kenya 116; the legal age to marry in Kenya is 18.",
+ "skills": [
+  {
+   "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE",
+   "key_step": "The child explains Genesis 2:21-24: God puts the man into a deep sleep, makes the woman from his rib, the man says \"bone of my bones\", and a man leaves his father and mother, is united to his wife, and the two become one; marriage is God's plan for adults.",
+   "floor": {
+    "prerequisite": "Knows what makes a family united.",
+    "question": "Name one thing that keeps a family united.",
+    "answer": "Love (forgiveness, helping)"
+   },
+   "representations": [
+    "Genesis 2:24 written large",
+    "a sequence of four boxes",
+    "a family tree with a new household"
+   ],
+   "steps": [
+    "God puts the man into a deep sleep.",
+    "God makes the woman from a rib.",
+    "\"Bone of my bones.\"",
+    "Leave, be united, become one."
+   ],
+   "contexts": [
+    "a church wedding",
+    "a new couple setting up a home",
+    "grandparents married for fifty years"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Genesis 2:24."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the word \"leave\".",
+     "say": "Whom does a man leave when he marries, and whom is he united to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say his father and mother, his wife."
+    },
+    {
+     "beat": "reveal",
+     "do": "Number the events of 2:21-24 on the board."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_MAR6_ORIGIN",
+     "listen_for": [
+      "The dust of the ground"
+     ],
+     "ask": "What did God use to make the woman (Genesis 2:21-22)?",
+     "repair": "Put Genesis 2:7 and 2:21-22 side by side: the man from dust, the woman from the man's rib."
+    },
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_MAR6_LEAVE",
+     "listen_for": [
+      "He stays with his parents"
+     ],
+     "ask": "What does Genesis 2:24 say a man does when he marries?",
+     "repair": "Explain that \"leave\" means a new household and first loyalty to the spouse, while still honouring parents."
+    },
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_MAR6_SLEEP",
+     "listen_for": [
+      "He woke the man"
+     ],
+     "ask": "What did God do before he took the rib?",
+     "repair": "Read 2:21 aloud and number the events: deep sleep, rib taken, flesh closed, woman made."
+    },
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE.M_C6_MAR_ADAM_NAMED",
+     "listen_for": [
+      "God"
+     ],
+     "ask": "Who said \"she shall be called woman\" (Genesis 2:23)?",
+     "repair": "Read 2:23 and ask who is speaking: \"bone of my bones\". It is the man."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did God use to make the woman?",
+     "answer": "A rib from the man",
+     "shows": "story detail"
+    },
+    {
+     "question": "What does Genesis 2:24 say happens in marriage?",
+     "answer": "A man leaves his parents and is united to his wife; the two become one",
+     "shows": "teaching"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE",
+   "key_step": "The child discusses results of early marriage (leaving school, early pregnancy and health risks, poverty, violence, losing childhood), knows the legal age in Kenya is 18, names values that help (self-control, patience, responsibility, courage to say no) and whom to tell.",
+   "floor": {
+    "prerequisite": "Knows marriage is for adults.",
+    "question": "What does Genesis 2:24 say a man does when he marries?",
+    "answer": "Leaves his parents and is united to his wife"
+   },
+   "representations": [
+    "a two-column chart: promised, lost",
+    "the number 18 written large",
+    "Childline 116 card"
+   ],
+   "steps": [
+    "List results of early marriage.",
+    "Say the legal age: 18.",
+    "Name values that help.",
+    "Name whom to tell."
+   ],
+   "contexts": [
+    "a girl kept home to be married",
+    "a boy told to leave school to marry",
+    "a community meeting with the chief"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: promised and lost."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the \"lost\" column.",
+     "say": "What does a girl lose in early marriage?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say school, health, childhood."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 18 and 116 at the bottom."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_EM6_BENEFIT",
+     "listen_for": [
+      "She has a better future"
+     ],
+     "ask": "What is a result of early marriage for a girl?",
+     "repair": "List what a girl loses (school, health, choice) against what is promised; read the 18-year rule."
+    },
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_EM6_RIGHT",
+     "listen_for": [
+      "14 years"
+     ],
+     "ask": "In Kenya at what age may a person marry?",
+     "repair": "Say clearly: in Kenya the law sets 18. Ask what the law protects."
+    },
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_EM6_KEEP_QUIET",
+     "listen_for": [
+      "Keep quiet to respect her elders"
+     ],
+     "ask": "A girl is told she will be married next month. What should she do?",
+     "repair": "Explain that telling a teacher or the chief is how a child stays safe and is not disrespect. Name Childline 116."
+    },
+    {
+     "code": "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE.M_C6_EM_BOYS_FINE",
+     "listen_for": [
+      "No, only for girls"
+     ],
+     "ask": "Is early marriage harmful for boys too?",
+     "repair": "List results for a boy: leaves school, must provide too early, poverty. The law is 18 for both."
+    }
+   ],
+   "checks": [
+    {
+     "question": "At what age may a person marry in Kenya?",
+     "answer": "18 years",
+     "shows": "law"
+    },
+    {
+     "question": "A girl is told she will be married next month. What should she do?",
+     "answer": "Tell a teacher, the chief or Childline 116",
+     "shows": "reporting"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.THE_CH.APOSTLES_CREED",
+ "title": "Apostles’ Creed",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Churches say the creed in slightly different words (for example \"holy catholic Church\" or \"holy universal Church\"). Use the words of the school's sponsor church; only what the words say is asked (FAITH: teacher to confirm).",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING",
+   "key_step": "The child recites the Apostles' Creed and outlines its teachings (God the Father, maker of heaven and earth; Jesus Christ his Son, born of the Virgin Mary, suffered under Pontius Pilate, crucified, rose on the third day, ascended, will judge; the Holy Spirit; the Church; forgiveness; resurrection; life everlasting) and why Christians say it.",
+   "floor": {
+    "prerequisite": "Knows the gifts and fruit of the Holy Spirit.",
+    "question": "Name one fruit of the Holy Spirit.",
+    "answer": "Love (joy, peace)"
+   },
+   "representations": [
+    "the creed in three coloured parts",
+    "line cards to order",
+    "a Bible to find each line's story"
+   ],
+   "steps": [
+    "Read the part about the Father.",
+    "Read the part about Jesus.",
+    "Read the part about the Holy Spirit and the Church.",
+    "Say why Christians say it together."
+   ],
+   "contexts": [
+    "a Sunday service",
+    "a confirmation class",
+    "a school assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the creed in three parts on the board."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second part.",
+     "say": "Whom is this part about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say Jesus Christ."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match each line to a Bible story."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_CRE6_OTHER",
+     "listen_for": [
+      "He was born in Rome"
+     ],
+     "ask": "Which line is in the Apostles' Creed?",
+     "repair": "Read the creed slowly and tick lines on a card. Only what is written there is in it."
+    },
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_CRE6_BIBLE",
+     "listen_for": [
+      "A book of the Bible"
+     ],
+     "ask": "What is the Apostles' Creed?",
+     "repair": "Show that the creed is not in the contents page; it sums up what the Bible teaches."
+    },
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_CRE6_ORDER",
+     "listen_for": [
+      "Jesus Christ"
+     ],
+     "ask": "Who does the creed call maker of heaven and earth?",
+     "repair": "Draw three parts: Father (maker), Son (Jesus, born, died, rose, will judge), Holy Spirit."
+    },
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING.M_C6_CRE_PILATE",
+     "listen_for": [
+      "King Herod"
+     ],
+     "ask": "Under whom does the creed say Jesus suffered?",
+     "repair": "Read the line \"suffered under Pontius Pilate\" and link it to the Gospel accounts of the trial."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who does the creed call maker of heaven and earth?",
+     "answer": "God the Father Almighty",
+     "shows": "teaching"
+    },
+    {
+     "question": "What is the Apostles' Creed?",
+     "answer": "A statement of Christian belief",
+     "shows": "meaning"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY",
+   "key_step": "The child lists the three persons of the Holy Trinity (God the Father, God the Son, God the Holy Spirit), one God in three persons, seen together at Jesus' baptism and named in Matthew 28:19, and says what each does.",
+   "floor": {
+    "prerequisite": "Knows the creed's three parts.",
+    "question": "Who does the creed say was born of the Virgin Mary?",
+    "answer": "Jesus Christ"
+   },
+   "representations": [
+    "a picture of Jesus' baptism with the voice and the dove",
+    "Matthew 28:19 written large",
+    "three cards: Father, Son, Holy Spirit"
+   ],
+   "steps": [
+    "Read Matthew 28:19.",
+    "Name the three persons.",
+    "Say: one God in three persons.",
+    "Say what each does."
+   ],
+   "contexts": [
+    "a baptism service",
+    "a closing blessing at church",
+    "a Sunday school song"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw the river, Jesus, the dove above and words from heaven."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dove.",
+     "say": "Which person of the Trinity is shown here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the Holy Spirit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label the Father and the Son too."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_TRI6_THREE_GODS",
+     "listen_for": [
+      "Three different gods"
+     ],
+     "ask": "The Holy Trinity is...",
+     "repair": "Read Deuteronomy 6:4 (\"the Lord is one\") and Matthew 28:19 (one name, three persons). Say: one God in three persons."
+    },
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_TRI6_MEMBER",
+     "listen_for": [
+      "The archangel Michael"
+     ],
+     "ask": "Which is the third person of the Holy Trinity?",
+     "repair": "Point to the baptism of Jesus: Father's voice, the Son, the Spirit as a dove. No angel."
+    },
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_TRI6_ROLE",
+     "listen_for": [
+      "The Holy Spirit"
+     ],
+     "ask": "Who is called the creator, in the creed?",
+     "repair": "Follow the creed's lines: \"God the Father Almighty, maker of heaven and earth\"."
+    },
+    {
+     "code": "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY.M_C6_TRI_SON_LATER",
+     "listen_for": [
+      "Yes, he is a smaller god"
+     ],
+     "ask": "Is Jesus, the Son, less God than the Father?",
+     "repair": "Read John 10:30: \"I and the Father are one\". Keep the words one God, three persons."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the three persons of the Holy Trinity.",
+     "answer": "God the Father, God the Son, God the Holy Spirit",
+     "shows": "persons"
+    },
+    {
+     "question": "Is the Trinity three gods?",
+     "answer": "No: one God in three persons",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

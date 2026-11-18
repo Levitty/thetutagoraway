@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL",
+ "title": "Jacob Wrestles an Angel",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB",
+   "key_step": "The child narrates Genesis 32:22-30: Jacob sends his family across the Jabbok, a man wrestles with him till daybreak, touches his hip, Jacob will not let go without a blessing, is renamed Israel, and calls the place Peniel; lessons: persistence in prayer, God changes people.",
+   "floor": {
+    "prerequisite": "Knows the friend at midnight kept asking.",
+    "question": "Why did the friend get up and give the loaves?",
+    "answer": "Because the man kept asking"
+   },
+   "representations": [
+    "a river ford drawn at night",
+    "name cards: Jacob, Israel",
+    "Genesis 32:26 written large"
+   ],
+   "steps": [
+    "Jacob is alone at the Jabbok.",
+    "A man wrestles with him till dawn.",
+    "His hip is hurt; he holds on.",
+    "He is blessed and named Israel."
+   ],
+   "contexts": [
+    "praying for a long time for a family need",
+    "not giving up on hard homework",
+    "a new start after a mistake"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Genesis 32:26: \"I will not let you go unless you bless me\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words \"not let you go\".",
+     "say": "What does Jacob teach us about prayer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say keep on, be persistent."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"Jacob becomes Israel\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_JAC6_WON",
+     "listen_for": [
+      "He was stronger than the man"
+     ],
+     "ask": "Why was Jacob blessed (Genesis 32:26-29)?",
+     "repair": "Read 32:25-26: the man touched his hip and Jacob still held on asking for a blessing."
+    },
+    {
+     "code": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_JAC6_NAME",
+     "listen_for": [
+      "Isaac"
+     ],
+     "ask": "What new name did Jacob receive (Genesis 32:28)?",
+     "repair": "Draw the family line: Abraham, Isaac, Jacob, then \"Israel\", Jacob's new name."
+    },
+    {
+     "code": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_JAC6_PLACE",
+     "listen_for": [
+      "The Jordan"
+     ],
+     "ask": "Which river did Jacob's family cross (Genesis 32:22)?",
+     "repair": "Read 32:22: the ford of the Jabbok. Write the name twice."
+    },
+    {
+     "code": "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB.M_C6_JAC_HIP",
+     "listen_for": [
+      "Nothing happened to it"
+     ],
+     "ask": "What happened to Jacob's hip (Genesis 32:25, 31)?",
+     "repair": "Read 32:31: he was limping because of his hip. He held on even when hurt."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What new name did Jacob receive?",
+     "answer": "Israel",
+     "shows": "name"
+    },
+    {
+     "question": "Why was Jacob blessed?",
+     "answer": "He held on and asked for a blessing",
+     "shows": "persistence"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+ "title": "Alcohol, Drugs and Substance Abuse",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE",
+   "key_step": "The child explains the Christian teaching on alcohol, drugs and substance abuse (Ephesians 5:18: do not get drunk but be filled with the Spirit; Hosea 4:11: wine takes away understanding; the body is a temple) and the dangers to body, mind, family and faith.",
+   "floor": {
+    "prerequisite": "Knows the effects of drugs.",
+    "question": "Name one effect of drug abuse.",
+    "answer": "Poor health (failing at school)"
+   },
+   "representations": [
+    "Ephesians 5:18 and Hosea 4:11 written large",
+    "a dangers web: body, mind, family, faith",
+    "sorting cards: medicine, abuse"
+   ],
+   "steps": [
+    "Read Ephesians 5:18.",
+    "Read Hosea 4:11.",
+    "List the dangers.",
+    "Say how values help avoid abuse."
+   ],
+   "contexts": [
+    "a family hurt by alcohol",
+    "glue sniffing in town",
+    "a party where alcohol is offered"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Ephesians 5:18."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"be filled with the Spirit\".",
+     "say": "What does the verse say instead of getting drunk?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say be filled with the Spirit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the dangers web."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_DRU6_MEDICINE",
+     "listen_for": [
+      "Taking medicine as the doctor directs"
+     ],
+     "ask": "Which is drug abuse?",
+     "repair": "Sort cards: medicine as the doctor directs (use); glue, bhang, alcohol for a high (abuse)."
+    },
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_DRU6_TRY",
+     "listen_for": [
+      "It is harmless"
+     ],
+     "ask": "What is true of trying a harmful drug once?",
+     "repair": "Explain addiction simply: the body asks for more. Many addicts began with \"just once\"."
+    },
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_DRU6_VERSE",
+     "listen_for": [
+      "Drink wine with joy"
+     ],
+     "ask": "What does Ephesians 5:18 say?",
+     "repair": "Read Ephesians 5:18 and Hosea 4:11: do not get drunk; wine takes away understanding."
+    },
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE.M_C6_DRU_ADULTS_FINE",
+     "listen_for": [
+      "Yes, adults may get drunk"
+     ],
+     "ask": "According to Ephesians 5:18, is getting drunk right for adults?",
+     "repair": "Read Ephesians 5:18 aloud: it is written to all believers. Name the harm drunkenness does to families."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Ephesians 5:18 say?",
+     "answer": "Do not get drunk on wine, but be filled with the Spirit",
+     "shows": "verse"
+    },
+    {
+     "question": "Is taking medicine as the doctor directs drug abuse?",
+     "answer": "No",
+     "shows": "definition"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT",
+   "key_step": "The child outlines how Christians prevent drug abuse (teaching, counselling, youth programmes, prayer, good example), analyses government measures (NACADA campaigns, police action against trafficking, laws on alcohol sale to under-18s), and uses values and skills to say no.",
+   "floor": {
+    "prerequisite": "Knows the Bible's teaching on drunkenness.",
+    "question": "What does Ephesians 5:18 say?",
+    "answer": "Do not get drunk on wine"
+   },
+   "representations": [
+    "a circle of helpers",
+    "NACADA written in full",
+    "refusal phrase cards"
+   ],
+   "steps": [
+    "Name what churches do.",
+    "Name what the government does.",
+    "Practise saying no.",
+    "Say how to help an addicted friend."
+   ],
+   "contexts": [
+    "a NACADA poster at a bus stop",
+    "a church youth programme",
+    "a friend offering cigarettes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a circle and write \"drug-free youth\" in the middle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty space on the circle.",
+     "say": "Who helps fight drug abuse?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name one helper."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the helpers and what each does."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_DRP6_AGENCY",
+     "listen_for": [
+      "The National Examinations Council"
+     ],
+     "ask": "Which authority runs campaigns against alcohol and drug abuse?",
+     "repair": "Write NACADA in full: National Authority for the Campaign Against Alcohol and Drug Abuse. Add the police."
+    },
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_DRP6_HIDE",
+     "listen_for": [
+      "Avoid him and tell no one"
+     ],
+     "ask": "A friend is addicted to drugs. What is the Christian response?",
+     "repair": "Read Galatians 6:2: carry each other's burdens. Name counsellors, pastors and rehabilitation centres."
+    },
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_DRP6_SAYNO",
+     "listen_for": [
+      "Accept so as not to look weak"
+     ],
+     "ask": "A friend offers you cigarettes. What do you do?",
+     "repair": "Practise three ways to say no and walk away. Strong people say no."
+    },
+    {
+     "code": "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT.M_C6_DRP_POLICE_ONLY",
+     "listen_for": [
+      "Only the police"
+     ],
+     "ask": "Who can help fight drug abuse?",
+     "repair": "Make a circle of helpers: family, church, school, NACADA, police, friends. Ask what each does."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which authority campaigns against alcohol and drug abuse in Kenya?",
+     "answer": "NACADA",
+     "shows": "agency"
+    },
+    {
+     "question": "A friend is addicted. What is the Christian response?",
+     "answer": "Support him and help him find a counsellor",
+     "shows": "response"
+    }
+   ]
+  }
+ ]
+}
