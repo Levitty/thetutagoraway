@@ -9321,6 +9321,1049 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.MEASUR.MONEY",
   "sub_strand_name": "Money",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR",
+  "key_step": "The child keeps the compass radius the same for the two arcs that must cross, and says why: the crossing is the same distance from both points.",
+  "floor": {
+   "prerequisite": "Bisects a line.",
+   "question": "How do you find the middle of AB with compasses?",
+   "answer": "equal arcs from A and B, join the crossings"
+  },
+  "representations": [
+   "ruler and compasses on paper",
+   "a sketch with arcs labelled",
+   "the finished lines"
+  ],
+  "steps": [
+   "Mark the point.",
+   "Draw arcs of equal radius.",
+   "Join the crossing point.",
+   "Check with a set square."
+  ],
+  "contexts": [
+   "marking out a football pitch",
+   "a fence parallel to a road",
+   "a carpenter's door frame"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line AB and a point P above it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at P.",
+    "say": "With the compass point on P, what do we draw first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say an arc cutting AB twice."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child draws the next two equal arcs."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_PERPENDICULAR_BY_EYE",
+    "listen_for": [
+     "by eye",
+     "it looks straight"
+    ],
+    "ask": "How do we know the angle is exactly 90 degrees?",
+    "repair": "Use the arcs.",
+    "error": "Draws a perpendicular by eye with a ruler instead of constructing it.",
+    "example": {
+     "question": "How do you draw a perpendicular with ruler and compasses?",
+     "wrong_answer": "line up the ruler so it looks straight",
+     "correct_answer": "arcs from the point, then join the crossing"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_ARCS_RADIUS_CHANGED",
+    "listen_for": [
+     "different radius"
+    ],
+    "ask": "Why must the arcs be the same?",
+    "repair": "Equal distances.",
+    "error": "Changes the compass radius between the two arcs that must match.",
+    "example": {
+     "question": "Arcs from A and B to bisect AB: same radius or not?",
+     "wrong_answer": "any radius each time",
+     "correct_answer": "the same radius, more than half of AB"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_PARALLEL_NOT_THROUGH_POINT",
+    "listen_for": [
+     "anywhere"
+    ],
+    "ask": "Does it pass through P?",
+    "repair": "Start at P.",
+    "error": "Draws a parallel line but not through the given point.",
+    "example": {
+     "question": "Draw a line through P parallel to AB.",
+     "wrong_answer": "a parallel line anywhere",
+     "correct_answer": "the parallel line through P"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_PERPENDICULAR_FOOT_AT_MIDPOINT",
+    "listen_for": [
+     "at the middle"
+    ],
+    "ask": "Is P above the middle of AB?",
+    "repair": "The foot is below P.",
+    "error": "Assumes the perpendicular from a point meets the line at its midpoint.",
+    "example": {
+     "question": "A perpendicular from P (not above the middle) to AB: where does it meet AB?",
+     "wrong_answer": "at the midpoint of AB",
+     "correct_answer": "directly below P"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "First step to draw a perpendicular from P to AB?",
+    "answer": "with centre P, draw an arc cutting AB at two points",
+    "shows": "plan"
+   },
+   {
+    "question": "Why must the two arcs below AB have the same radius?",
+    "answer": "so the crossing is the same distance from both points",
+    "shows": "reason"
+   }
+  ],
+  "name": "Construct parallel and perpendicular lines with ruler and compasses",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "key_step": "The child adds the ratio numbers to get the equal parts on the ray and joins the last mark to the far end.",
+  "floor": {
+   "prerequisite": "Adds the parts of a ratio.",
+   "question": "2 : 3: parts altogether",
+   "answer": "5"
+  },
+  "representations": [
+   "a ray with equal compass steps",
+   "lines parallel to the last join",
+   "the divided line"
+  ],
+  "steps": [
+   "Draw a ray from A.",
+   "Step off (a + b) equal parts with compasses.",
+   "Join the last mark to B.",
+   "Draw a parallel line through mark a."
+  ],
+  "contexts": [
+   "sharing a boundary between two plots",
+   "cutting a timber plank",
+   "a map line in a ratio"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw AB and a ray from A."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ray.",
+    "say": "For 2 : 3, how many equal steps do we mark?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child joins the fifth mark to B and draws the parallel through mark 2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_RATIO_PARTS_MULTIPLIED",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Do we add or multiply the parts?",
+    "repair": "Add.",
+    "error": "Multiplies the ratio numbers to get the number of equal parts.",
+    "example": {
+     "question": "Divide AB in the ratio 2 : 3. Equal parts on the ray?",
+     "wrong_answer": "6",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_FIRST_PART_ONLY",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Where does the 3 part go?",
+    "repair": "On the ray too.",
+    "error": "Marks only the first ratio number of parts.",
+    "example": {
+     "question": "Ratio 2 : 3. Equal parts on the ray?",
+     "wrong_answer": "2",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_SECOND_PART_ONLY",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Where does the 2 part go?",
+    "repair": "On the ray too.",
+    "error": "Marks only the second ratio number of parts.",
+    "example": {
+     "question": "Ratio 2 : 3. Equal parts on the ray?",
+     "wrong_answer": "3",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_PARALLEL_SAME_LENGTH",
+    "listen_for": [
+     "as long as AB"
+    ],
+    "ask": "What do the parallel lines do to AB?",
+    "repair": "Cut it in the ratio.",
+    "error": "Believes the parallel lines matter because they are as long as AB.",
+    "example": {
+     "question": "Why must the lines be parallel?",
+     "wrong_answer": "they are as long as AB",
+     "correct_answer": "parallel lines cut AB in the same ratio as the ray"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_PARALLEL_AS_PERPENDICULAR",
+    "listen_for": [
+     "right angles"
+    ],
+    "ask": "Do parallel lines make right angles with AB?",
+    "repair": "They copy the slope of the join.",
+    "error": "Believes parallel lines make right angles with AB.",
+    "example": {
+     "question": "Why must the lines be parallel?",
+     "wrong_answer": "they make right angles with AB",
+     "correct_answer": "they cut AB in the same ratio"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_PARALLEL_PURPOSE_UNKNOWN",
+    "listen_for": [
+     "compasses slipping"
+    ],
+    "ask": "What do the parallel lines carry to AB?",
+    "repair": "The equal parts.",
+    "error": "Gives a reason for the parallel lines that has nothing to do with the ratio.",
+    "example": {
+     "question": "Why must the lines be parallel?",
+     "wrong_answer": "to stop the compasses slipping",
+     "correct_answer": "they carry the equal parts over to AB"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "To divide a line in the ratio 3 : 4, how many equal parts on the ray?",
+    "answer": "7",
+    "shows": "add"
+   },
+   {
+    "question": "Which mark is joined to B?",
+    "answer": "the last one",
+    "shows": "method"
+   }
+  ],
+  "name": "Know the method for dividing a line proportionally and why it works",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS",
+  "key_step": "The child finds one part (length ÷ total parts) and then each piece from the named end.",
+  "floor": {
+   "prerequisite": "Shares in a ratio.",
+   "question": "15 in the ratio 2 : 3",
+   "answer": "6 and 9"
+  },
+  "representations": [
+   "a line drawn to scale",
+   "one part marked",
+   "each piece"
+  ],
+  "steps": [
+   "Add the ratio numbers.",
+   "Length ÷ total = one part.",
+   "Multiply for each piece.",
+   "Match the first number to the first end."
+  ],
+  "contexts": [
+   "a boundary between two shambas",
+   "a timber beam",
+   "a ribbon for a ceremony"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 15 cm line AB in 5 equal parts."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one part.",
+    "say": "How long is each part?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3 cm."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: how long is the piece next to A for 2 : 3?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_LENGTH_MINUS_PARTS",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "Is taking 5 away sharing into 5?",
+    "repair": "Divide.",
+    "error": "Takes the ratio numbers away from the length.",
+    "example": {
+     "question": "A 15 cm line in the ratio 2 : 3. Each equal part?",
+     "wrong_answer": "10 cm",
+     "correct_answer": "3 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_LENGTH_TIMES_PARTS",
+    "listen_for": [
+     "75"
+    ],
+    "ask": "Can a part be longer than the line?",
+    "repair": "Divide.",
+    "error": "Multiplies the length by the number of parts.",
+    "example": {
+     "question": "A 15 cm line in the ratio 2 : 3. Each equal part?",
+     "wrong_answer": "75 cm",
+     "correct_answer": "3 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_PARTS_ORDER_SWAPPED",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Which number goes with A?",
+    "repair": "The first.",
+    "error": "Gives the part for the other end of the line.",
+    "example": {
+     "question": "A 15 cm line in the ratio 2 : 3 from A. Part next to A?",
+     "wrong_answer": "9 cm",
+     "correct_answer": "6 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_WHOLE_LINE_GIVEN",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Is that the part or the whole?",
+    "repair": "Two of the five parts.",
+    "error": "Gives the whole line as a part.",
+    "example": {
+     "question": "A 15 cm line in the ratio 2 : 3 from A. Part next to A?",
+     "wrong_answer": "15 cm",
+     "correct_answer": "6 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 21 cm line is divided in the ratio 3 : 4 from A. Part next to A?",
+    "answer": "9 cm",
+    "shows": "first part"
+   },
+   {
+    "question": "A 24 cm line in the ratio 1 : 5. Longer part?",
+    "answer": "20 cm",
+    "shows": "second part"
+   }
+  ],
+  "name": "Find the lengths when a line is divided proportionally",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES",
+  "key_step": "The child splits the polygon into triangles from one corner to get the sum, then shares it for a regular polygon.",
+  "floor": {
+   "prerequisite": "Knows angles in a triangle add to 180°.",
+   "question": "Angle sum of a triangle",
+   "answer": "180°"
+  },
+  "representations": [
+   "a polygon split into triangles",
+   "a table of n, sum, one angle",
+   "the formula"
+  ],
+  "steps": [
+   "Triangles = n - 2.",
+   "Sum = (n - 2) × 180°.",
+   "Regular: one angle = sum ÷ n.",
+   "Check: exterior = 180° - interior, and 360° ÷ n."
+  ],
+  "contexts": [
+   "a hexagonal paving block",
+   "a pentagonal school badge",
+   "a stop sign"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a pentagon and the diagonals from one corner."
+   },
+   {
+    "beat": "count",
+    "do": "Count the triangles with the child."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three triangles.",
+    "say": "What do all the angles add to?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 540°."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_EXTERIOR_FOR_INTERIOR",
+    "listen_for": [
+     "72"
+    ],
+    "ask": "Is 72 inside or outside the corner?",
+    "repair": "180 - 72.",
+    "error": "Gives the exterior angle when the interior angle is asked.",
+    "example": {
+     "question": "Interior angle of a regular pentagon",
+     "wrong_answer": "72°",
+     "correct_answer": "108°"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_SUM_FOR_ONE_ANGLE",
+    "listen_for": [
+     "720"
+    ],
+    "ask": "One angle or all six?",
+    "repair": "Share by 6.",
+    "error": "Gives the angle sum when one angle is asked.",
+    "example": {
+     "question": "Interior angle of a regular hexagon",
+     "wrong_answer": "720°",
+     "correct_answer": "120°"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_SUM_AS_N_TIMES_180",
+    "listen_for": [
+     "900"
+    ],
+    "ask": "How many triangles in a pentagon?",
+    "repair": "Three.",
+    "error": "Uses n × 180° for the angle sum.",
+    "example": {
+     "question": "Angle sum of a pentagon",
+     "wrong_answer": "900°",
+     "correct_answer": "540°"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_RIGHT_ANGLES_COUNT_WRONG",
+    "listen_for": [
+     "6 right angles"
+    ],
+    "ask": "How many right angles in 720°?",
+    "repair": "Eight.",
+    "error": "Says a polygon's angles add to as many right angles as it has sides.",
+    "example": {
+     "question": "Angle sum of a hexagon in right angles",
+     "wrong_answer": "6 right angles",
+     "correct_answer": "8 right angles"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_EXTERIOR_SUM_GROWS",
+    "listen_for": [
+     "1,080"
+    ],
+    "ask": "Walking round, how much do you turn?",
+    "repair": "One full turn.",
+    "error": "Believes the exterior angles add to more as the number of sides grows.",
+    "example": {
+     "question": "Sum of the exterior angles of an octagon",
+     "wrong_answer": "1,080°",
+     "correct_answer": "360°"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Interior angle of a regular octagon?",
+    "answer": "135°",
+    "shows": "regular"
+   },
+   {
+    "question": "Angle sum of a heptagon (7 sides)?",
+    "answer": "900°",
+    "shows": "sum"
+   }
+  ],
+  "name": "Identify the angle properties of polygons",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON",
+  "key_step": "The child decides the angle to construct (at each corner or at the centre) and keeps every side the same length.",
+  "floor": {
+   "prerequisite": "Finds the interior angle of a regular polygon.",
+   "question": "Regular pentagon",
+   "answer": "108°"
+  },
+  "representations": [
+   "a circle cut into equal sectors",
+   "the polygon drawn inside",
+   "a sketch with angles"
+  ],
+  "steps": [
+   "Draw a circle.",
+   "Mark equal angles at the centre (360° ÷ n), or step the radius round for a hexagon.",
+   "Join the marks.",
+   "Check the sides are equal."
+  ],
+  "contexts": [
+   "a hexagonal honeycomb",
+   "a pentagon badge for a club",
+   "tiles for a classroom floor"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle of radius 4 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the rim.",
+    "say": "If we step 4 cm round the rim with compasses, how many steps fit?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child steps round and joins the marks."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_EQUAL_SIDES_ENOUGH",
+    "listen_for": [
+     "the rhombus is regular"
+    ],
+    "ask": "Are all its angles equal?",
+    "repair": "Sides and angles.",
+    "error": "Believes equal sides alone make a polygon regular.",
+    "example": {
+     "question": "A rhombus with sides of 5 cm: is it a regular polygon?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, its angles are not all equal"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_CENTRE_ANGLE_AT_CORNER",
+    "listen_for": [
+     "72 at the corner"
+    ],
+    "ask": "Is 72° at the centre or the corner?",
+    "repair": "Centre.",
+    "error": "Uses 360° ÷ n as the angle at each corner of the polygon.",
+    "example": {
+     "question": "Angle at each corner of a regular pentagon",
+     "wrong_answer": "72°",
+     "correct_answer": "108°"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_HEXAGON_SIDE_NOT_RADIUS",
+    "listen_for": [
+     "8 cm"
+    ],
+    "ask": "What shape is each slice of the hexagon?",
+    "repair": "Equilateral: side = radius.",
+    "error": "Does not know a regular hexagon's side equals the radius of its circle.",
+    "example": {
+     "question": "A regular hexagon in a circle of radius 4 cm: side?",
+     "wrong_answer": "8 cm",
+     "correct_answer": "4 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_INTERIOR_AT_CENTRE",
+    "listen_for": [
+     "120 at the centre"
+    ],
+    "ask": "What do the angles at the centre add to?",
+    "repair": "360: 60 each.",
+    "error": "Uses the interior angle at the centre of the circle.",
+    "example": {
+     "question": "Angle at the centre between corners of a regular hexagon",
+     "wrong_answer": "120°",
+     "correct_answer": "60°"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Angle at the centre between two corners of a regular pentagon?",
+    "answer": "72°",
+    "shows": "centre angle"
+   },
+   {
+    "question": "A regular hexagon is drawn in a circle of radius 5 cm. Side?",
+    "answer": "5 cm",
+    "shows": "hexagon"
+   }
+  ],
+  "name": "Plan the construction of regular polygons up to a hexagon",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON",
+  "key_step": "The child sketches and labels the polygon before drawing, and builds it side by side in the order of the letters.",
+  "floor": {
+   "prerequisite": "Constructs a triangle from two sides and an angle.",
+   "question": "AB 5 cm, angle A 60°, AC 4 cm: first step?",
+   "answer": "draw AB"
+  },
+  "representations": [
+   "a labelled sketch",
+   "the construction",
+   "the last side checked"
+  ],
+  "steps": [
+   "Sketch and label.",
+   "Draw the first side.",
+   "Angle at each corner, then the next side.",
+   "Check the last side."
+  ],
+  "contexts": [
+   "a plan of an irregular plot",
+   "a kite for a festival",
+   "a church window"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Sketch quadrilateral ABCD with AB 5 cm, angle B 90°, BC 4 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at B.",
+    "say": "Which angle is made at this corner?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for angle ABC."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child constructs 90° at B and marks BC."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_SIDES_ORDER_WRONG",
+    "listen_for": [
+     "CD next"
+    ],
+    "ask": "Which side starts at B?",
+    "repair": "BC.",
+    "error": "Draws the sides in a different order from the one given.",
+    "example": {
+     "question": "ABCD with AB 5 cm, BC 4 cm: after AB, which side?",
+     "wrong_answer": "CD",
+     "correct_answer": "BC"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_ANGLE_AT_WRONG_VERTEX",
+    "listen_for": [
+     "at A"
+    ],
+    "ask": "Which letter is in the middle of ABC?",
+    "repair": "B.",
+    "error": "Constructs an angle at the wrong corner.",
+    "example": {
+     "question": "Angle ABC = 60°: at which corner?",
+     "wrong_answer": "A",
+     "correct_answer": "B"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_LAST_SIDE_FORCED",
+    "listen_for": [
+     "leave it"
+    ],
+    "ask": "Does the last side match?",
+    "repair": "Check the steps.",
+    "error": "Joins the last two points without checking the last side length.",
+    "example": {
+     "question": "The last side should be 6 cm but measures 7 cm. What now?",
+     "wrong_answer": "leave it",
+     "correct_answer": "check the earlier steps"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_PROTRACTOR_WRONG_SCALE",
+    "listen_for": [
+     "110"
+    ],
+    "ask": "Is the angle smaller or bigger than a right angle?",
+    "repair": "Read the other scale.",
+    "error": "Reads the wrong scale of the protractor.",
+    "example": {
+     "question": "Measure an angle of 70°.",
+     "wrong_answer": "110°",
+     "correct_answer": "70°"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "In ABCDE, which corner has angle CDE?",
+    "answer": "D",
+    "shows": "vertex"
+   },
+   {
+    "question": "After drawing AB and the angle at B, what is marked next?",
+    "answer": "the length of BC",
+    "shows": "order"
+   }
+  ],
+  "name": "Plan the construction of irregular polygons up to a hexagon from given sides and angles",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "key_step": "The child says the centre must be the same distance from all three corners, so it lies on the perpendicular bisectors.",
+  "floor": {
+   "prerequisite": "Bisects a line with compasses.",
+   "question": "Where is the middle of a 10 cm line?",
+   "answer": "5 cm from each end"
+  },
+  "representations": [
+   "a triangular plot",
+   "two perpendicular bisectors",
+   "the circle through the corners"
+  ],
+  "steps": [
+   "Bisect two sides at right angles.",
+   "The meeting point is the centre.",
+   "Radius = centre to any corner.",
+   "Right-angled triangle: centre at the middle of the longest side."
+  ],
+  "contexts": [
+   "a water tank to serve three homes",
+   "a round fence through three trees",
+   "a triangular plot"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangle ABC."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child bisects AB and BC at right angles."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the meeting point.",
+    "say": "How far is it from A, B and C?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the same."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_DIAMETER_FOR_RADIUS_CIRCUM",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "Is the longest side the radius or the diameter?",
+    "repair": "Halve it.",
+    "error": "Gives the hypotenuse (the diameter) as the radius.",
+    "example": {
+     "question": "Right-angled triangle with sides 6, 8 and 10 cm. Radius of the circle through the corners?",
+     "wrong_answer": "10 cm",
+     "correct_answer": "5 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_SHORT_SIDES_AVERAGED",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Where is the centre for a right-angled triangle?",
+    "repair": "Middle of the longest side.",
+    "error": "Averages the two shorter sides for the radius.",
+    "example": {
+     "question": "Sides 6, 8 and 10 cm. Radius?",
+     "wrong_answer": "7 cm",
+     "correct_answer": "5 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_SHORT_SIDE_HALVED",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Which side is the diameter?",
+    "repair": "The longest.",
+    "error": "Halves a shorter side for the radius.",
+    "example": {
+     "question": "Sides 6, 8 and 10 cm. Radius?",
+     "wrong_answer": "4 cm",
+     "correct_answer": "5 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_INCENTRE_CIRCUMCENTRE_SWAPPED",
+    "listen_for": [
+     "angle bisectors"
+    ],
+    "ask": "Same distance from the corners or the sides?",
+    "repair": "Corners: perpendicular bisectors.",
+    "error": "Uses angle bisectors for the circle through the corners, or perpendicular bisectors for the circle touching the sides.",
+    "example": {
+     "question": "Circle through the three corners: which lines?",
+     "wrong_answer": "angle bisectors",
+     "correct_answer": "perpendicular bisectors of the sides"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_MEDIANS_FOR_CENTRE",
+    "listen_for": [
+     "medians"
+    ],
+    "ask": "Is that point the same distance from each corner?",
+    "repair": "Not in general.",
+    "error": "Uses the lines from corners to midpoints (medians) to find the centre.",
+    "example": {
+     "question": "Circle through the corners: centre?",
+     "wrong_answer": "where the medians meet",
+     "correct_answer": "where the perpendicular bisectors meet"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_BISECTOR_THROUGH_CORNER",
+    "listen_for": [
+     "through A"
+    ],
+    "ask": "Where does it cross AB?",
+    "repair": "At the middle.",
+    "error": "Believes a perpendicular bisector passes through a corner.",
+    "example": {
+     "question": "Where does the perpendicular bisector of AB cross AB?",
+     "wrong_answer": "at A",
+     "correct_answer": "at the midpoint of AB"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_BISECTORS_MAKE_ANGLES_EQUAL",
+    "listen_for": [
+     "angles equal"
+    ],
+    "ask": "Does drawing lines change the triangle?",
+    "repair": "No.",
+    "error": "Believes drawing the bisectors makes the triangle's angles equal.",
+    "example": {
+     "question": "Why does the construction work?",
+     "wrong_answer": "it makes every angle equal",
+     "correct_answer": "points on a bisector are the same distance from both ends"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_CONSTRUCTION_FOR_AREA",
+    "listen_for": [
+     "area"
+    ],
+    "ask": "What do we need the meeting point for?",
+    "repair": "The centre.",
+    "error": "Believes the perpendicular bisectors are drawn to find the area.",
+    "example": {
+     "question": "Why bisect two sides?",
+     "wrong_answer": "to find the area",
+     "correct_answer": "to find the centre of the circle"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A right-angled triangle has sides 5, 12 and 13 cm. Radius of the circle through its corners?",
+    "answer": "6.5 cm",
+    "shows": "right-angled"
+   },
+   {
+    "question": "Which lines find the centre of the circle through the corners?",
+    "answer": "the perpendicular bisectors of two sides",
+    "shows": "method"
+   }
+  ],
+  "name": "Construct the circle passing through the vertices of a triangle",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE",
+  "key_step": "The child says the centre must be the same distance from all three sides, so it lies on the angle bisectors, and measures the radius at a right angle to a side.",
+  "floor": {
+   "prerequisite": "Bisects an angle.",
+   "question": "How do you bisect angle A?",
+   "answer": "equal arcs on the arms, then arcs from those points; join to A"
+  },
+  "representations": [
+   "a triangular garden",
+   "two angle bisectors",
+   "the circle touching the sides"
+  ],
+  "steps": [
+   "Bisect two angles.",
+   "The meeting point is the centre.",
+   "Construct the perpendicular from it to a side.",
+   "That length is the radius."
+  ],
+  "contexts": [
+   "the biggest round tank in a triangular plot",
+   "a round mat in a corner",
+   "a badge"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangle ABC."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child bisects angles A and B."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the meeting point.",
+    "say": "How do we find the radius from here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say a perpendicular to a side."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_INCIRCLE_RADIUS_TO_CORNER",
+    "listen_for": [
+     "to a corner"
+    ],
+    "ask": "Does the circle pass through the corners?",
+    "repair": "It touches the sides.",
+    "error": "Takes the distance from the centre to a corner as the radius of the circle touching the sides.",
+    "example": {
+     "question": "The circle touching the sides: its radius is from the centre to?",
+     "wrong_answer": "a corner",
+     "correct_answer": "a side, at a right angle"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_INCIRCLE_FROM_SIDE_MIDPOINTS",
+    "listen_for": [
+     "midpoints"
+    ],
+    "ask": "Is every triangle equilateral?",
+    "repair": "It touches at the foot of the perpendicular.",
+    "error": "Draws the circle through the midpoints of the sides as the circle touching the sides.",
+    "example": {
+     "question": "Does the circle touching the sides always pass through their midpoints?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, only in an equilateral triangle"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_INCIRCLE_RADIUS_NOT_PERPENDICULAR",
+    "listen_for": [
+     "any line"
+    ],
+    "ask": "Which line to the side is shortest?",
+    "repair": "The perpendicular.",
+    "error": "Measures the radius along a slant line to a side.",
+    "example": {
+     "question": "How is the radius of the circle touching the sides measured?",
+     "wrong_answer": "any line to a side",
+     "correct_answer": "the perpendicular to a side"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_ONE_BISECTOR_ENOUGH",
+    "listen_for": [
+     "one"
+    ],
+    "ask": "Where on that line is the centre?",
+    "repair": "Where a second bisector meets it.",
+    "error": "Believes one angle bisector gives the centre.",
+    "example": {
+     "question": "How many angle bisectors are needed to find the centre?",
+     "wrong_answer": "one",
+     "correct_answer": "two (they meet at the centre)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which lines find the centre of the circle touching the sides of a triangle?",
+    "answer": "the bisectors of two angles",
+    "shows": "method"
+   },
+   {
+    "question": "How is its radius found?",
+    "answer": "the perpendicular distance from the centre to a side",
+    "shows": "radius"
+   }
+  ],
+  "name": "Construct the circle touching the sides of a triangle",
+  "sub_strand": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION",
+  "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

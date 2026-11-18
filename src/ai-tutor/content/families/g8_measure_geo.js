@@ -574,45 +574,45 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ CONSTRUCTIONS
-  fam({ id: 'g8.construct.ray-parts', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.b', rung: 1, form: 'direct',
+  fam({ id: 'g8.construct.ray-parts', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.b', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD', rung: 1, form: 'direct',
     draw: () => { const [a, b] = pick([[2, 3], [3, 4], [1, 4], [3, 5], [2, 5], [4, 5], [1, 3]]); return uniq(a + b, a * b, a, b) ? { a, b } : null; },
     make: ({ a, b }) => ({
       question: `You divide a line AB in the ratio ${a}:${b}. You draw a ray from A and mark equal parts along it with compasses. How many equal parts do you mark on the ray altogether?`, story: false,
       answer: a + b,
-      wrong: [[a * b, 'The parts of the ratio are added to make the total number of equal parts, not multiplied.'], [a, `That is only the first part of the ratio. The ray must hold both parts.`], [b, 'That is only the second part of the ratio. The ray must hold both parts.']],
+      wrong: [[a * b, 'The parts of the ratio are added to make the total number of equal parts, not multiplied.', 'M_RATIO_PARTS_MULTIPLIED'], [a, `That is only the first part of the ratio. The ray must hold both parts.`, 'M_FIRST_PART_ONLY'], [b, 'That is only the second part of the ratio. The ray must hold both parts.', 'M_SECOND_PART_ONLY']],
       hints: ['A ratio of two numbers splits a line into that many equal parts, shared between the two sides.', 'How many equal parts are in the whole line?'],
       steps: [`The ratio ${a}:${b} has ${a} parts and ${b} parts.`, `Altogether: ${a} + ${b} = ${a + b} equal parts.`],
     }),
     check: ({ a, b }, v) => v - a === b }),
 
-  fam({ id: 'g8.construct.divide-fence', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.b', rung: 2, form: 'steps',
+  fam({ id: 'g8.construct.divide-fence', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.b', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS', rung: 2, form: 'steps',
     draw: () => { const [a, b] = pick([[2, 3], [3, 4], [1, 4], [3, 2], [2, 5], [4, 1]]), k = pick([2, 3, 4, 5]); return { a, b, k, L: (a + b) * k, p: person() }; },
     make: ({ a, b, k, L, p }) => ({
       question: `On a drawing, a boundary AB is ${L} cm long. ${p.name} shares it between two plots in the ratio ${a}:${b}, using the method of equal parts.`,
       parts: [
-        { prompt: 'How many equal parts are marked on the ray?', answer: a + b, hint: 'Add the two numbers of the ratio.', wrong: [[a * b, 'Add the numbers of the ratio, do not multiply.']] },
-        { prompt: 'The equal parts cut AB into equal pieces. How long is one piece, in cm?', answer: k, unit: 'cm', hint: 'Share the length of AB equally between all the parts.', wrong: [[L - a - b, 'Divide the length by the number of parts.'], [L * (a + b), 'Divide the length by the number of parts.']] },
-        { prompt: `How far is the dividing point from A, in cm? (The part next to A has ${a} pieces.)`, answer: a * k, unit: 'cm', hint: 'Count the pieces from A up to the dividing point.', wrong: [[b * k, `The part next to A is the ${a} part of the ratio.`], [L, 'That is the whole line AB.']] },
+        { prompt: 'How many equal parts are marked on the ray?', answer: a + b, hint: 'Add the two numbers of the ratio.', wrong: [[a * b, 'Add the numbers of the ratio, do not multiply.', 'M_RATIO_PARTS_MULTIPLIED']] },
+        { prompt: 'The equal parts cut AB into equal pieces. How long is one piece, in cm?', answer: k, unit: 'cm', hint: 'Share the length of AB equally between all the parts.', wrong: [[L - a - b, 'Divide the length by the number of parts.', 'M_LENGTH_MINUS_PARTS'], [L * (a + b), 'Divide the length by the number of parts.', 'M_LENGTH_TIMES_PARTS']] },
+        { prompt: `How far is the dividing point from A, in cm? (The part next to A has ${a} pieces.)`, answer: a * k, unit: 'cm', hint: 'Count the pieces from A up to the dividing point.', wrong: [[b * k, `The part next to A is the ${a} part of the ratio.`, 'M_PARTS_ORDER_SWAPPED'], [L, 'That is the whole line AB.', 'M_WHOLE_LINE_GIVEN']] },
       ],
       steps: [`Equal parts: ${a} + ${b} = ${a + b}.`, `One piece: ${L} ÷ ${a + b} = ${k} cm.`, `Dividing point from A: ${a} × ${k} = ${a * k} cm.`],
     }),
     check: ({ a, b, k, L }, v) => v[0] === a + b && v[1] * v[0] === L && v[2] === v[1] * a }),
 
-  fam({ id: 'g8.construct.parallel-why', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.b', rung: 3, form: 'why',
+  fam({ id: 'g8.construct.parallel-why', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.b', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD', rung: 3, form: 'why',
     draw: () => { const [a, b] = pick([[2, 3], [3, 4], [1, 4], [3, 5], [2, 5]]); return { a, b, p: person() }; },
     make: ({ a, b, p }) => ({
       question: `${p.name} divides a line AB in the ratio ${a}:${b}. ${p.She} marks ${a + b} equal parts on a ray from A and joins the last mark to B. Then ${p.she} draws lines through the other marks parallel to that line. Why must these lines be parallel?`,
       options: [
         { text: 'Parallel lines cut AB in the same ratio as the ray', right: true },
-        { text: 'Parallel lines are always exactly as long as AB', right: false, why: 'The length of a parallel line has nothing to do with the ratio. What matters is where it cuts AB.' },
-        { text: 'Parallel lines make right angles with AB, so the cuts are fair', right: false, why: 'Parallel lines do not make right angles. They keep the same slope as the line to B.' },
-        { text: 'Parallel lines stop the compasses from slipping', right: false, why: 'The compasses are used earlier, to mark the equal parts. The parallel lines carry the equal parts over to AB.' },
+        { text: 'Parallel lines are always exactly as long as AB', right: false, why: 'The length of a parallel line has nothing to do with the ratio. What matters is where it cuts AB.', mis: 'M_PARALLEL_SAME_LENGTH' },
+        { text: 'Parallel lines make right angles with AB, so the cuts are fair', right: false, why: 'Parallel lines do not make right angles. They keep the same slope as the line to B.', mis: 'M_PARALLEL_AS_PERPENDICULAR' },
+        { text: 'Parallel lines stop the compasses from slipping', right: false, why: 'The compasses are used earlier, to mark the equal parts. The parallel lines carry the equal parts over to AB.', mis: 'M_PARALLEL_PURPOSE_UNKNOWN' },
       ],
       hints: ['The equal parts on the ray are easy to measure. How do we carry them across to AB?', 'Think about what keeps the pieces in proportion.'],
       steps: ['The marks on the ray are equal distances apart.', 'Lines parallel to the one that ends at B carry those equal steps across to AB.', 'So AB is cut into the same ratio as the ray.'],
     }) }),
 
-  fam({ id: 'g8.construct.circle-right-triangle', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.f', rung: 3, form: 'word',
+  fam({ id: 'g8.construct.circle-right-triangle', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.f', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE', rung: 3, form: 'word',
     draw: () => {
       const [a, b, c] = pick([[6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17], [12, 16, 20], [15, 20, 25], [10, 24, 26], [20, 21, 29]]);
       return uniq(c / 2, c, (a + b) / 2, b / 2) ? { a, b, c, p: person() } : null;
@@ -620,13 +620,13 @@ export const FAMILIES = [
     make: ({ a, b, c, p }) => ({
       question: `${p.name} draws a circle that passes through all three corners of a right-angled triangle. The two shorter sides are ${a} cm and ${b} cm. The centre of the circle is the midpoint of the longest side. What is the radius of the circle, in cm?`,
       answer: c / 2,
-      wrong: [[c, 'That is the length of the longest side. It is the whole diameter of the circle, so the radius is half of it.'], [(a + b) / 2, 'The centre is the midpoint of the longest side, not the middle of the two shorter sides.'], [b / 2, 'You halved a shorter side. The circle is built on the longest side.']],
+      wrong: [[c, 'That is the length of the longest side. It is the whole diameter of the circle, so the radius is half of it.', 'M_DIAMETER_FOR_RADIUS_CIRCUM'], [(a + b) / 2, 'The centre is the midpoint of the longest side, not the middle of the two shorter sides.', 'M_SHORT_SIDES_AVERAGED'], [b / 2, 'You halved a shorter side. The circle is built on the longest side.', 'M_SHORT_SIDE_HALVED']],
       hints: ['The longest side of a right-angled triangle is its hypotenuse. Find its length first.', 'The hypotenuse is a diameter of the circle.'],
       steps: [`Longest side: the square root of ${a}² + ${b}² = ${c} cm.`, `It is a diameter, so the radius is ${c} ÷ 2 = ${c / 2} cm.`],
     }),
     check: ({ a, b }, r) => near((2 * r) ** 2, a * a + b * b) }),
 
-  fam({ id: 'g8.construct.which-centre-lines', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.f', rung: 3, form: 'why',
+  fam({ id: 'g8.construct.which-centre-lines', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.f', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE', misMapped: false, reveals: ['M_INCENTRE_CIRCUMCENTRE_SWAPPED', 'M_MEDIANS_FOR_CENTRE'], rung: 3, form: 'why',
     draw: () => ({ inside: pick([true, false]), p: person() }),
     make: ({ inside, p }) => {
       const bis = { text: 'Bisect two of the angles. The centre is where the bisectors meet', ok: inside, why: 'Angle bisectors give a point the same distance from the sides, so they find the circle that touches the sides, not the one through the corners.' };

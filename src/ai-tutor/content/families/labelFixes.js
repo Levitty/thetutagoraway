@@ -583,20 +583,20 @@ export const CORE_FAMILIES = [
         hints: ['Compasses give 60° and 90° directly. Bisecting halves what you have.', `Which of those leads to ${a}°?`],
         steps: [`To make ${a}°: ${how.toLowerCase()}.`, 'Try it with your ruler and compasses on paper.'] };
     } }),
-  fx({ id: 'g9.construct.polygon-angle', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.c', rung: 2, form: 'direct',
+  fx({ id: 'g9.construct.polygon-angle', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.c', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES', rung: 2, form: 'direct',
     draw: () => ({ n: pick([5, 6, 8, 9, 10, 12]) }),
     make: ({ n }) => ({
       question: `To construct a regular polygon with ${n} sides you need its interior angle. What is it, in degrees?`, story: false,
       answer: ((n - 2) * 180) / n,
-      wrong: [[360 / n, 'That is the exterior angle. The interior angle is 180° minus it.'], [(n - 2) * 180, 'That is the sum of all the interior angles. Share it among the angles.'], [(n * 180) / n, 'The angle sum is (n − 2) × 180°, not n × 180°.']],
+      wrong: [[360 / n, 'That is the exterior angle. The interior angle is 180° minus it.', 'M_EXTERIOR_FOR_INTERIOR'], [(n - 2) * 180, 'That is the sum of all the interior angles. Share it among the angles.', 'M_SUM_FOR_ONE_ANGLE'], [(n * 180) / n, 'The angle sum is (n − 2) × 180°, not n × 180°.', 'M_SUM_AS_N_TIMES_180']],
       hints: ['Each exterior angle is 360° ÷ the number of sides.', 'Interior angle = 180° − exterior angle.'],
       steps: [`Exterior angle: 360 ÷ ${n} = ${360 / n}°.`, `Interior angle: 180 − ${360 / n} = ${180 - 360 / n}°.`],
     }),
     check: ({ n }, a) => Math.abs(a * n - (n - 2) * 180) < 1e-9 }),
-  fx({ id: 'g9.construct.circum-centre', skill: 'G9_CONSTRUCTION', outcome: 'G8.CONSTRUCT.f', rung: 3, form: 'why',
+  fx({ id: 'g9.construct.circum-centre', skill: 'G9_CONSTRUCTION', outcome: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.f', cskill: 'MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE', rung: 3, form: 'why',
     draw: () => ({ k: randInt(0, 3), a: randInt(6, 12), b: randInt(5, 11) }),
     make: ({ k, a, b }) => {
-      const opts = [{ text: 'Any point on the bisector is equally far from both ends', right: true }, { text: 'Perpendicular bisectors always pass through a corner', right: false, why: 'A perpendicular bisector passes through the middle of a side.' }, { text: 'They make every angle of the triangle equal', right: false, why: 'Drawing lines does not change the angles of the triangle.' }, { text: 'They are used to give the area of the triangle', right: false, why: 'Area comes from base and height.' }];
+      const opts = [{ text: 'Any point on the bisector is equally far from both ends', right: true }, { text: 'Perpendicular bisectors always pass through a corner', right: false, why: 'A perpendicular bisector passes through the middle of a side.', mis: 'M_BISECTOR_THROUGH_CORNER' }, { text: 'They make every angle of the triangle equal', right: false, why: 'Drawing lines does not change the angles of the triangle.', mis: 'M_BISECTORS_MAKE_ANGLES_EQUAL' }, { text: 'They are used to give the area of the triangle', right: false, why: 'Area comes from base and height.', mis: 'M_CONSTRUCTION_FOR_AREA' }];
       return { question: `To draw a circle through all three corners of a triangle with sides ${a} cm and ${b} cm and a third side, you bisect two sides at right angles and use the point where those lines meet as the centre. Why does this work?`, story: false, options: [...opts.slice(k), ...opts.slice(0, k)],
         hints: ['What is special about a point on a perpendicular bisector?', 'The centre must be the same distance from all three corners.'],
         steps: ['A point on a perpendicular bisector is equally far from the two ends of the side.', 'The meeting point of two such lines is equally far from all three corners, so a circle fits through them.'] };

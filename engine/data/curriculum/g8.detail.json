@@ -752,6 +752,78 @@
     "the balance after the deposit"
    ],
    "mastery": "The child adds the deposit to all the instalments (number times each instalment) for the hire purchase price, subtracts the cash price for the extra paid, and compares plans by their totals: a deposit of 5,000 and 10 instalments of 2,000 cost 25,000 against a cash price of 21,000, so 4,000 more."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR": {
+   "forms": [
+    "steps to draw a perpendicular",
+    "a line through P parallel to AB",
+    "which step is first",
+    "why the arcs must be equal"
+   ],
+   "mastery": "The child constructs a perpendicular from a point to a line and at a point on a line (arcs of the same radius, then joining the crossing), and a parallel line through a point (by copying an angle or by two perpendiculars), keeping the compass radius fixed where the method needs it."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD": {
+   "forms": [
+    "how many equal parts",
+    "why must the lines be parallel",
+    "order of the steps",
+    "which mark is joined"
+   ],
+   "mastery": "The child draws a ray from one end, marks as many equal parts as the ratio numbers added (2 : 3 needs 5), joins the last mark to the other end, and draws parallel lines through the other marks, explaining that parallel lines cut the line in the same ratio as the ray."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS": {
+   "forms": [
+    "length of the part next to A",
+    "length of each equal part",
+    "a boundary shared between plots",
+    "how many parts"
+   ],
+   "mastery": "The child adds the ratio numbers, divides the length by the total to find one part, and gives each piece in order from the named end: a line of 15 cm divided in the ratio 2 : 3 from A gives 6 cm and 9 cm."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES": {
+   "forms": [
+    "interior angle of a regular polygon",
+    "sum of the angles",
+    "right angles and sides",
+    "exterior angle"
+   ],
+   "mastery": "The child finds the angle sum as (n - 2) × 180° (or (2n - 4) right angles), the exterior angle of a regular polygon as 360° ÷ n and the interior angle as 180° minus that, and knows the exterior angles always add to 360°: a regular pentagon has interior angles of 108°."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON": {
+   "forms": [
+    "angle at each corner",
+    "angle at the centre",
+    "a hexagon with compasses",
+    "is this polygon regular"
+   ],
+   "mastery": "The child uses equal sides and the interior angle at each corner (108° for a pentagon, 120° for a hexagon), or equal angles at the centre (360° ÷ n), and knows a regular hexagon's side equals the radius of its circle, so it can be stepped round with compasses."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON": {
+   "forms": [
+    "order of construction",
+    "which angle is at B",
+    "sketch first",
+    "does the shape close"
+   ],
+   "mastery": "The child sketches and labels the polygon first, draws one side, constructs or measures each angle at the right corner, marks each side length in order, and checks the last side closes the shape."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE": {
+   "forms": [
+    "radius of the circle through the corners",
+    "which construction finds the centre",
+    "why does it work",
+    "right-angled triangle"
+   ],
+   "mastery": "The child bisects two sides at right angles, takes the meeting point as the centre and the distance to a corner as the radius, explains that every point on a perpendicular bisector is the same distance from both ends of the side, and knows that for a right-angled triangle the centre is the midpoint of the longest side."
+  },
+  "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE": {
+   "forms": [
+    "which construction finds the centre",
+    "how to find the radius",
+    "why bisect the angles",
+    "the biggest circle that fits"
+   ],
+   "mastery": "The child bisects two angles, takes the meeting point as the centre, draws a perpendicular from it to one side to get the radius, and explains that every point on an angle bisector is the same distance from the two sides of the angle."
   }
  }
 }

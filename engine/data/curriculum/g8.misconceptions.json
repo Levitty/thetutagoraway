@@ -4968,5 +4968,551 @@
   "help": "Add the payments: hire purchase usually costs more.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_PERPENDICULAR_BY_EYE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR",
+  "error": "Draws a perpendicular by eye with a ruler instead of constructing it.",
+  "example": {
+   "question": "How do you draw a perpendicular with ruler and compasses?",
+   "wrong_answer": "line up the ruler so it looks straight",
+   "correct_answer": "arcs from the point, then join the crossing"
+  },
+  "cause": "Thinks looking right is enough.",
+  "reveals": "The answer line up the ruler so it looks straight as a wrong option, with a reason that names the idea.",
+  "help": "A construction uses compass arcs so the right angle is exact.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_ARCS_RADIUS_CHANGED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR",
+  "error": "Changes the compass radius between the two arcs that must match.",
+  "example": {
+   "question": "Arcs from A and B to bisect AB: same radius or not?",
+   "wrong_answer": "any radius each time",
+   "correct_answer": "the same radius, more than half of AB"
+  },
+  "cause": "Does not see why the arcs must be equal.",
+  "reveals": "The answer any radius each time as a wrong option, with a reason that names the idea.",
+  "help": "Equal arcs give a point the same distance from both ends.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_PARALLEL_NOT_THROUGH_POINT": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR",
+  "error": "Draws a parallel line but not through the given point.",
+  "example": {
+   "question": "Draw a line through P parallel to AB.",
+   "wrong_answer": "a parallel line anywhere",
+   "correct_answer": "the parallel line through P"
+  },
+  "cause": "Forgets the point is part of the task.",
+  "reveals": "The answer a parallel line anywhere as a wrong option, with a reason that names the idea.",
+  "help": "Start the construction at P.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR.M_PERPENDICULAR_FOOT_AT_MIDPOINT": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_PARALLEL_PERPENDICULAR",
+  "error": "Assumes the perpendicular from a point meets the line at its midpoint.",
+  "example": {
+   "question": "A perpendicular from P (not above the middle) to AB: where does it meet AB?",
+   "wrong_answer": "at the midpoint of AB",
+   "correct_answer": "directly below P"
+  },
+  "cause": "Mixes it up with the perpendicular bisector.",
+  "reveals": "The answer at the midpoint of AB as a wrong option, with a reason that names the idea.",
+  "help": "The foot is where the arcs from P cut AB, bisected again.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_RATIO_PARTS_MULTIPLIED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "error": "Multiplies the ratio numbers to get the number of equal parts.",
+  "example": {
+   "question": "Divide AB in the ratio 2 : 3. Equal parts on the ray?",
+   "wrong_answer": "6",
+   "correct_answer": "5"
+  },
+  "cause": "Multiplies the two numbers in the ratio.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Add the parts: 2 + 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_FIRST_PART_ONLY": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "error": "Marks only the first ratio number of parts.",
+  "example": {
+   "question": "Ratio 2 : 3. Equal parts on the ray?",
+   "wrong_answer": "2",
+   "correct_answer": "5"
+  },
+  "cause": "Thinks only one part is drawn.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The ray holds both parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_SECOND_PART_ONLY": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "error": "Marks only the second ratio number of parts.",
+  "example": {
+   "question": "Ratio 2 : 3. Equal parts on the ray?",
+   "wrong_answer": "3",
+   "correct_answer": "5"
+  },
+  "cause": "Thinks only one part is drawn.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "The ray holds both parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_PARALLEL_SAME_LENGTH": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "error": "Believes the parallel lines matter because they are as long as AB.",
+  "example": {
+   "question": "Why must the lines be parallel?",
+   "wrong_answer": "they are as long as AB",
+   "correct_answer": "parallel lines cut AB in the same ratio as the ray"
+  },
+  "cause": "Thinks parallel means equal.",
+  "reveals": "The answer they are as long as AB as a wrong option, with a reason that names the idea.",
+  "help": "What matters is where they cut AB.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_PARALLEL_AS_PERPENDICULAR": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "error": "Believes parallel lines make right angles with AB.",
+  "example": {
+   "question": "Why must the lines be parallel?",
+   "wrong_answer": "they make right angles with AB",
+   "correct_answer": "they cut AB in the same ratio"
+  },
+  "cause": "Mixes parallel and perpendicular.",
+  "reveals": "The answer they make right angles with AB as a wrong option, with a reason that names the idea.",
+  "help": "Parallel lines keep the same slope as the line to B.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD.M_PARALLEL_PURPOSE_UNKNOWN": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_METHOD",
+  "error": "Gives a reason for the parallel lines that has nothing to do with the ratio.",
+  "example": {
+   "question": "Why must the lines be parallel?",
+   "wrong_answer": "to stop the compasses slipping",
+   "correct_answer": "they carry the equal parts over to AB"
+  },
+  "cause": "Does not know what each step does.",
+  "reveals": "The answer to stop the compasses slipping as a wrong option, with a reason that names the idea.",
+  "help": "The parallel lines carry the equal parts over to AB.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_LENGTH_MINUS_PARTS": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS",
+  "error": "Takes the ratio numbers away from the length.",
+  "example": {
+   "question": "A 15 cm line in the ratio 2 : 3. Each equal part?",
+   "wrong_answer": "10 cm",
+   "correct_answer": "3 cm"
+  },
+  "cause": "Subtracts the numbers.",
+  "reveals": "The answer 10 cm as a wrong option, with a reason that names the idea.",
+  "help": "Divide the length by the 5 parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_LENGTH_TIMES_PARTS": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS",
+  "error": "Multiplies the length by the number of parts.",
+  "example": {
+   "question": "A 15 cm line in the ratio 2 : 3. Each equal part?",
+   "wrong_answer": "75 cm",
+   "correct_answer": "3 cm"
+  },
+  "cause": "Uses the wrong operation.",
+  "reveals": "The answer 75 cm as a wrong option, with a reason that names the idea.",
+  "help": "A part is smaller than the line: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_PARTS_ORDER_SWAPPED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS",
+  "error": "Gives the part for the other end of the line.",
+  "example": {
+   "question": "A 15 cm line in the ratio 2 : 3 from A. Part next to A?",
+   "wrong_answer": "9 cm",
+   "correct_answer": "6 cm"
+  },
+  "cause": "Does not match the ratio order to the ends.",
+  "reveals": "The answer 9 cm as a wrong option, with a reason that names the idea.",
+  "help": "The first number goes with A.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS.M_WHOLE_LINE_GIVEN": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.DIVIDE_LINE_LENGTHS",
+  "error": "Gives the whole line as a part.",
+  "example": {
+   "question": "A 15 cm line in the ratio 2 : 3 from A. Part next to A?",
+   "wrong_answer": "15 cm",
+   "correct_answer": "6 cm"
+  },
+  "cause": "Answers with the length given.",
+  "reveals": "The answer 15 cm as a wrong option, with a reason that names the idea.",
+  "help": "The part is 2 of the 5 equal parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_EXTERIOR_FOR_INTERIOR": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES",
+  "error": "Gives the exterior angle when the interior angle is asked.",
+  "example": {
+   "question": "Interior angle of a regular pentagon",
+   "wrong_answer": "72°",
+   "correct_answer": "108°"
+  },
+  "cause": "Remembers 360 ÷ n.",
+  "reveals": "The answer 72° as a wrong option, with a reason that names the idea.",
+  "help": "Interior = 180° - exterior.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_SUM_FOR_ONE_ANGLE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES",
+  "error": "Gives the angle sum when one angle is asked.",
+  "example": {
+   "question": "Interior angle of a regular hexagon",
+   "wrong_answer": "720°",
+   "correct_answer": "120°"
+  },
+  "cause": "Stops at the sum.",
+  "reveals": "The answer 720° as a wrong option, with a reason that names the idea.",
+  "help": "Share the sum among the 6 angles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_SUM_AS_N_TIMES_180": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES",
+  "error": "Uses n × 180° for the angle sum.",
+  "example": {
+   "question": "Angle sum of a pentagon",
+   "wrong_answer": "900°",
+   "correct_answer": "540°"
+  },
+  "cause": "Forgets the \"minus 2\".",
+  "reveals": "The answer 900° as a wrong option, with a reason that names the idea.",
+  "help": "A pentagon splits into 3 triangles: (5 - 2) × 180°.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_RIGHT_ANGLES_COUNT_WRONG": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES",
+  "error": "Says a polygon's angles add to as many right angles as it has sides.",
+  "example": {
+   "question": "Angle sum of a hexagon in right angles",
+   "wrong_answer": "6 right angles",
+   "correct_answer": "8 right angles"
+  },
+  "cause": "Links each side to one right angle.",
+  "reveals": "The answer 6 right angles as a wrong option, with a reason that names the idea.",
+  "help": "The sum is (2n - 4) right angles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES.M_EXTERIOR_SUM_GROWS": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.POLYGON_ANGLE_PROPERTIES",
+  "error": "Believes the exterior angles add to more as the number of sides grows.",
+  "example": {
+   "question": "Sum of the exterior angles of an octagon",
+   "wrong_answer": "1,080°",
+   "correct_answer": "360°"
+  },
+  "cause": "Expects every sum to grow.",
+  "reveals": "The answer 1,080° as a wrong option, with a reason that names the idea.",
+  "help": "Walking round any polygon is one full turn: 360°.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_EQUAL_SIDES_ENOUGH": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON",
+  "error": "Believes equal sides alone make a polygon regular.",
+  "example": {
+   "question": "A rhombus with sides of 5 cm: is it a regular polygon?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, its angles are not all equal"
+  },
+  "cause": "Forgets the angles.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Regular means equal sides and equal angles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_CENTRE_ANGLE_AT_CORNER": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON",
+  "error": "Uses 360° ÷ n as the angle at each corner of the polygon.",
+  "example": {
+   "question": "Angle at each corner of a regular pentagon",
+   "wrong_answer": "72°",
+   "correct_answer": "108°"
+  },
+  "cause": "Mixes the centre angle with the corner angle.",
+  "reveals": "The answer 72° as a wrong option, with a reason that names the idea.",
+  "help": "72° is at the centre; each corner is 108°.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_HEXAGON_SIDE_NOT_RADIUS": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON",
+  "error": "Does not know a regular hexagon's side equals the radius of its circle.",
+  "example": {
+   "question": "A regular hexagon in a circle of radius 4 cm: side?",
+   "wrong_answer": "8 cm",
+   "correct_answer": "4 cm"
+  },
+  "cause": "Uses the diameter.",
+  "reveals": "The answer 8 cm as a wrong option, with a reason that names the idea.",
+  "help": "Six equilateral triangles meet at the centre: side = radius.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON.M_INTERIOR_AT_CENTRE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_REGULAR_POLYGON",
+  "error": "Uses the interior angle at the centre of the circle.",
+  "example": {
+   "question": "Angle at the centre between corners of a regular hexagon",
+   "wrong_answer": "120°",
+   "correct_answer": "60°"
+  },
+  "cause": "Uses the angle remembered for a hexagon.",
+  "reveals": "The answer 120° as a wrong option, with a reason that names the idea.",
+  "help": "At the centre: 360° ÷ 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_SIDES_ORDER_WRONG": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON",
+  "error": "Draws the sides in a different order from the one given.",
+  "example": {
+   "question": "ABCD with AB 5 cm, BC 4 cm: after AB, which side?",
+   "wrong_answer": "CD",
+   "correct_answer": "BC"
+  },
+  "cause": "Draws sides as they come to hand.",
+  "reveals": "The answer CD as a wrong option, with a reason that names the idea.",
+  "help": "Follow the letters round: AB, then BC.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_ANGLE_AT_WRONG_VERTEX": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON",
+  "error": "Constructs an angle at the wrong corner.",
+  "example": {
+   "question": "Angle ABC = 60°: at which corner?",
+   "wrong_answer": "A",
+   "correct_answer": "B"
+  },
+  "cause": "Reads the first letter.",
+  "reveals": "The answer A as a wrong option, with a reason that names the idea.",
+  "help": "The middle letter names the corner.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_LAST_SIDE_FORCED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON",
+  "error": "Joins the last two points without checking the last side length.",
+  "example": {
+   "question": "The last side should be 6 cm but measures 7 cm. What now?",
+   "wrong_answer": "leave it",
+   "correct_answer": "check the earlier steps"
+  },
+  "cause": "Thinks the shape is done once it closes.",
+  "reveals": "The answer leave it as a wrong option, with a reason that names the idea.",
+  "help": "Measure the last side: it checks the whole drawing.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON.M_PROTRACTOR_WRONG_SCALE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CONSTRUCT_IRREGULAR_POLYGON",
+  "error": "Reads the wrong scale of the protractor.",
+  "example": {
+   "question": "Measure an angle of 70°.",
+   "wrong_answer": "110°",
+   "correct_answer": "70°"
+  },
+  "cause": "Reads the outer numbers from the wrong side.",
+  "reveals": "The answer 110° as a wrong option, with a reason that names the idea.",
+  "help": "Start from the zero on the arm you are using.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_DIAMETER_FOR_RADIUS_CIRCUM": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Gives the hypotenuse (the diameter) as the radius.",
+  "example": {
+   "question": "Right-angled triangle with sides 6, 8 and 10 cm. Radius of the circle through the corners?",
+   "wrong_answer": "10 cm",
+   "correct_answer": "5 cm"
+  },
+  "cause": "Forgets the centre is the midpoint.",
+  "reveals": "The answer 10 cm as a wrong option, with a reason that names the idea.",
+  "help": "The hypotenuse is a diameter: halve it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_SHORT_SIDES_AVERAGED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Averages the two shorter sides for the radius.",
+  "example": {
+   "question": "Sides 6, 8 and 10 cm. Radius?",
+   "wrong_answer": "7 cm",
+   "correct_answer": "5 cm"
+  },
+  "cause": "Uses the shorter sides.",
+  "reveals": "The answer 7 cm as a wrong option, with a reason that names the idea.",
+  "help": "The centre is the midpoint of the longest side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_SHORT_SIDE_HALVED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Halves a shorter side for the radius.",
+  "example": {
+   "question": "Sides 6, 8 and 10 cm. Radius?",
+   "wrong_answer": "4 cm",
+   "correct_answer": "5 cm"
+  },
+  "cause": "Picks a side at random.",
+  "reveals": "The answer 4 cm as a wrong option, with a reason that names the idea.",
+  "help": "Halve the longest side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_INCENTRE_CIRCUMCENTRE_SWAPPED": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Uses angle bisectors for the circle through the corners, or perpendicular bisectors for the circle touching the sides.",
+  "example": {
+   "question": "Circle through the three corners: which lines?",
+   "wrong_answer": "angle bisectors",
+   "correct_answer": "perpendicular bisectors of the sides"
+  },
+  "cause": "Mixes the two constructions.",
+  "reveals": "The answer angle bisectors as a wrong option, with a reason that names the idea.",
+  "help": "Through corners: same distance from corners, so perpendicular bisectors.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_MEDIANS_FOR_CENTRE": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Uses the lines from corners to midpoints (medians) to find the centre.",
+  "example": {
+   "question": "Circle through the corners: centre?",
+   "wrong_answer": "where the medians meet",
+   "correct_answer": "where the perpendicular bisectors meet"
+  },
+  "cause": "Thinks any \"middle\" point works.",
+  "reveals": "The answer where the medians meet as a wrong option, with a reason that names the idea.",
+  "help": "That point balances the triangle but is not the same distance from the corners.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_BISECTOR_THROUGH_CORNER": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Believes a perpendicular bisector passes through a corner.",
+  "example": {
+   "question": "Where does the perpendicular bisector of AB cross AB?",
+   "wrong_answer": "at A",
+   "correct_answer": "at the midpoint of AB"
+  },
+  "cause": "Mixes it with a line from a corner.",
+  "reveals": "The answer at A as a wrong option, with a reason that names the idea.",
+  "help": "It crosses the side at its middle, at a right angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_BISECTORS_MAKE_ANGLES_EQUAL": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Believes drawing the bisectors makes the triangle's angles equal.",
+  "example": {
+   "question": "Why does the construction work?",
+   "wrong_answer": "it makes every angle equal",
+   "correct_answer": "points on a bisector are the same distance from both ends"
+  },
+  "cause": "Thinks constructions change the triangle.",
+  "reveals": "The answer it makes every angle equal as a wrong option, with a reason that names the idea.",
+  "help": "Lines drawn do not change the triangle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE.M_CONSTRUCTION_FOR_AREA": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.CIRCUMCIRCLE",
+  "error": "Believes the perpendicular bisectors are drawn to find the area.",
+  "example": {
+   "question": "Why bisect two sides?",
+   "wrong_answer": "to find the area",
+   "correct_answer": "to find the centre of the circle"
+  },
+  "cause": "Links lines in a triangle with area.",
+  "reveals": "The answer to find the area as a wrong option, with a reason that names the idea.",
+  "help": "Area uses base and height; the bisectors find the centre.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_INCIRCLE_RADIUS_TO_CORNER": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE",
+  "error": "Takes the distance from the centre to a corner as the radius of the circle touching the sides.",
+  "example": {
+   "question": "The circle touching the sides: its radius is from the centre to?",
+   "wrong_answer": "a corner",
+   "correct_answer": "a side, at a right angle"
+  },
+  "cause": "Uses the circumcircle radius.",
+  "reveals": "The answer a corner as a wrong option, with a reason that names the idea.",
+  "help": "It touches the sides: measure to a side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_INCIRCLE_FROM_SIDE_MIDPOINTS": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE",
+  "error": "Draws the circle through the midpoints of the sides as the circle touching the sides.",
+  "example": {
+   "question": "Does the circle touching the sides always pass through their midpoints?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, only in an equilateral triangle"
+  },
+  "cause": "Thinks \"touch\" means at the middle.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "It touches each side at the foot of the perpendicular from the centre.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_INCIRCLE_RADIUS_NOT_PERPENDICULAR": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE",
+  "error": "Measures the radius along a slant line to a side.",
+  "example": {
+   "question": "How is the radius of the circle touching the sides measured?",
+   "wrong_answer": "any line to a side",
+   "correct_answer": "the perpendicular to a side"
+  },
+  "cause": "Does not see the shortest distance is perpendicular.",
+  "reveals": "The answer any line to a side as a wrong option, with a reason that names the idea.",
+  "help": "Construct the perpendicular from the centre to a side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE.M_ONE_BISECTOR_ENOUGH": {
+  "skill": "MATH.G8.GEOMET.GEOMETRICAL_CONSTRUCTION.INCIRCLE",
+  "error": "Believes one angle bisector gives the centre.",
+  "example": {
+   "question": "How many angle bisectors are needed to find the centre?",
+   "wrong_answer": "one",
+   "correct_answer": "two (they meet at the centre)"
+  },
+  "cause": "Thinks the centre is on one line.",
+  "reveals": "The answer one as a wrong option, with a reason that names the idea.",
+  "help": "One line holds many points; two lines meet at one.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

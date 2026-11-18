@@ -9,4 +9,5 @@ import * as equations from './equations.mjs';
 import * as circles from './circles.mjs';
 import * as area from './area.mjs';
 import * as money from './money.mjs';
-export const SUBS = [integers, fractions, decimals, squares, rates, expressions, equations, circles, area, money];
+import * as construction from './construction.mjs';
+export const SUBS = [integers, fractions, decimals, squares, rates, expressions, equations, circles, area, money, construction];
