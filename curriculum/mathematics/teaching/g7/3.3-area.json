@@ -709,22 +709,6 @@
      ],
      "ask": "Is the garden part of the path?",
      "repair": "Take it away."
-    },
-    {
-     "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_RING_WIDTH_ADDED_TWICE",
-     "listen_for": [
-      "7 + 14"
-     ],
-     "ask": "How many times does the radius cross the path?",
-     "repair": "Once."
-    },
-    {
-     "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_RADIUS_USED",
-     "listen_for": [
-      "pond radius"
-     ],
-     "ask": "Which circle is the big one?",
-     "repair": "Pond and path."
     }
    ],
    "checks": [
@@ -734,9 +718,91 @@
      "shows": "outer minus inner"
     },
     {
+     "question": "Picture 30 cm by 20 cm with a 5 cm frame: area of the frame?",
+     "answer": "600 cm2",
+     "shows": "corners counted"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+   "key_step": "The child adds the path width once to the radius and takes the small circle from the big one.",
+   "floor": {
+    "prerequisite": "Area of a circle.",
+    "question": "radius 7, pi = 22/7",
+    "answer": "154"
+   },
+   "representations": [
+    "two circles, one inside the other",
+    "a well with a wall",
+    "big minus small"
+   ],
+   "steps": [
+    "Outer radius = radius + width.",
+    "Big circle area.",
+    "Small circle area.",
+    "Subtract."
+   ],
+   "contexts": [
+    "a path round a pond",
+    "the wall of a well",
+    "a round flower bed with a border"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pond of radius 7 m and a path 7 m wide round it."
+    },
+    {
+     "beat": "point",
+     "do": "Point along one radius from the centre to the outside edge.",
+     "say": "How long is the outer radius?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 616 - 154 = 462."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_WIDTH_ADDED_TWICE",
+     "listen_for": [
+      "7 + 14"
+     ],
+     "ask": "How many times does the radius cross the path?",
+     "repair": "Once."
+    },
+    {
+     "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_INNER_RADIUS_USED",
+     "listen_for": [
+      "pond radius"
+     ],
+     "ask": "Which circle is the big one?",
+     "repair": "Pond and path."
+    },
+    {
+     "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_RADII_SUBTRACTED_FIRST",
+     "listen_for": [
+      "a circle of radius 7 for the path"
+     ],
+     "ask": "Is the path a circle?",
+     "repair": "No: a ring, big minus small."
+    }
+   ],
+   "checks": [
+    {
      "question": "Pond radius 7 m, path 7 m: area of the path (pi = 22/7)?",
      "answer": "462 m2",
      "shows": "ring"
+    },
+    {
+     "question": "Pond radius 14 m, path 7 m: outer radius?",
+     "answer": "21 m",
+     "shows": "once"
     }
    ]
   },

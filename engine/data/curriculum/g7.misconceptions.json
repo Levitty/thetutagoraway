@@ -4745,8 +4745,8 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
- "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_RING_WIDTH_ADDED_TWICE": {
-  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+ "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_WIDTH_ADDED_TWICE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
   "error": "Adds the path width twice to the radius of a pond.",
   "example": {
    "question": "Pond radius 7 m, path 7 m wide: outer radius",
@@ -4759,8 +4759,8 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
- "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_RADIUS_USED": {
-  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+ "MATH.G7.MEASUR.AREA.AREA_RING.M_INNER_RADIUS_USED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
   "error": "Uses the pond radius for the big circle.",
   "example": {
    "question": "Pond radius 7 m, path 7 m: area of pond and path",
@@ -4770,6 +4770,20 @@
   "cause": "Uses the first radius in the question.",
   "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
   "help": "The big circle has the bigger radius.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_RADII_SUBTRACTED_FIRST": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+  "error": "Takes the radii away first and finds the area of a circle of that radius.",
+  "example": {
+   "question": "Pond radius 7 m, path 7 m: area of the path",
+   "wrong_answer": "154",
+   "correct_answer": "462"
+  },
+  "cause": "Treats the path as a small circle of its own width.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "Big circle minus small circle: 616 - 154.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },

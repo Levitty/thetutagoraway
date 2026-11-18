@@ -916,11 +916,20 @@
   "MATH.G7.MEASUR.AREA.AREA_BORDERS": {
    "forms": [
     "path round a garden",
-    "path round a pond",
+    "frame round a picture",
     "outer minus inner",
-    "frame round a picture"
+    "carpet with a border"
    ],
-   "mastery": "The child finds the outer shape (a rectangle grows by twice the path width each way; a circle grows by the path width on its radius), finds the inner shape, and takes the inner area from the outer area."
+   "mastery": "The child finds the outer rectangle (each side grows by twice the path width), finds the inner one, and takes the inner area from the outer area, so the corners of the path are counted."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_RING": {
+   "forms": [
+    "path round a pond",
+    "outer radius",
+    "big circle minus small circle",
+    "ring of a well"
+   ],
+   "mastery": "The child adds the path width once to the radius for the outer circle, finds both circle areas with pi = 22/7, and takes the inner from the outer (not pi times the width squared)."
   },
   "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES": {
    "forms": [

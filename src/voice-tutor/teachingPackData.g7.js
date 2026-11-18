@@ -9997,9 +9997,71 @@ export const TEACHING_PACK_G7 = {
      "wrong_answer": "140",
      "correct_answer": "44"
     }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Garden 10 m by 6 m, path 2 m wide: area of the path?",
+    "answer": "80 m2",
+    "shows": "outer minus inner"
    },
    {
-    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_RING_WIDTH_ADDED_TWICE",
+    "question": "Picture 30 cm by 20 cm with a 5 cm frame: area of the frame?",
+    "answer": "600 cm2",
+    "shows": "corners counted"
+   }
+  ],
+  "name": "Work out the area of a border or path round a rectangle",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+  "key_step": "The child adds the path width once to the radius and takes the small circle from the big one.",
+  "floor": {
+   "prerequisite": "Area of a circle.",
+   "question": "radius 7, pi = 22/7",
+   "answer": "154"
+  },
+  "representations": [
+   "two circles, one inside the other",
+   "a well with a wall",
+   "big minus small"
+  ],
+  "steps": [
+   "Outer radius = radius + width.",
+   "Big circle area.",
+   "Small circle area.",
+   "Subtract."
+  ],
+  "contexts": [
+   "a path round a pond",
+   "the wall of a well",
+   "a round flower bed with a border"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a pond of radius 7 m and a path 7 m wide round it."
+   },
+   {
+    "beat": "point",
+    "do": "Point along one radius from the centre to the outside edge.",
+    "say": "How long is the outer radius?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 616 - 154 = 462."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_WIDTH_ADDED_TWICE",
     "listen_for": [
      "7 + 14"
     ],
@@ -10013,7 +10075,7 @@ export const TEACHING_PACK_G7 = {
     }
    },
    {
-    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_RADIUS_USED",
+    "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_INNER_RADIUS_USED",
     "listen_for": [
      "pond radius"
     ],
@@ -10025,21 +10087,35 @@ export const TEACHING_PACK_G7 = {
      "wrong_answer": "154",
      "correct_answer": "616"
     }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_RADII_SUBTRACTED_FIRST",
+    "listen_for": [
+     "a circle of radius 7 for the path"
+    ],
+    "ask": "Is the path a circle?",
+    "repair": "No: a ring, big minus small.",
+    "error": "Takes the radii away first and finds the area of a circle of that radius.",
+    "example": {
+     "question": "Pond radius 7 m, path 7 m: area of the path",
+     "wrong_answer": "154",
+     "correct_answer": "462"
+    }
    }
   ],
   "checks": [
    {
-    "question": "Garden 10 m by 6 m, path 2 m wide: area of the path?",
-    "answer": "80 m2",
-    "shows": "outer minus inner"
-   },
-   {
     "question": "Pond radius 7 m, path 7 m: area of the path (pi = 22/7)?",
     "answer": "462 m2",
     "shows": "ring"
+   },
+   {
+    "question": "Pond radius 14 m, path 7 m: outer radius?",
+    "answer": "21 m",
+    "shows": "once"
    }
   ],
-  "name": "Work out the area of a border or path round a shape",
+  "name": "Work out the area of a ring: a path round a circle",
   "sub_strand": "MATH.G7.MEASUR.AREA",
   "sub_strand_name": "Area",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"

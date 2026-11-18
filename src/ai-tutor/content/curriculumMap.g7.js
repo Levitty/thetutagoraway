@@ -2659,28 +2659,45 @@ export const SKILLS_G7 = {
   ]
  },
  "MATH.G7.MEASUR.AREA.AREA_BORDERS": {
-  "name": "Work out the area of a border or path round a shape",
+  "name": "Work out the area of a border or path round a rectangle",
   "sub": "MATH.G7.MEASUR.AREA",
   "outcome": "MATH.G7.MEASUR.AREA.d",
   "outcomes": [
    "MATH.G7.MEASUR.AREA.d"
   ],
   "horeb": [
-   "G7_AREA_RECT",
-   "G7_AREA_CIRCLE"
+   "G7_AREA_RECT"
   ],
   "primary": "G7_AREA_RECT",
   "pre": [
    "MATH.G6.MEASUR.AREA.AREA_COMBINED",
-   "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
    "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC"
   ],
   "mis": [
    "M_BORDER_CORNERS_LEFT_OUT",
    "M_BORDER_WIDTH_ADDED_ONCE",
-   "M_INNER_NOT_SUBTRACTED",
+   "M_INNER_NOT_SUBTRACTED"
+  ]
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING": {
+  "name": "Work out the area of a ring: a path round a circle",
+  "sub": "MATH.G7.MEASUR.AREA",
+  "outcome": "MATH.G7.MEASUR.AREA.d",
+  "outcomes": [
+   "MATH.G7.MEASUR.AREA.d"
+  ],
+  "horeb": [
+   "G7_AREA_CIRCLE"
+  ],
+  "primary": "G7_AREA_CIRCLE",
+  "pre": [
+   "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+   "MATH.G7.MEASUR.AREA.AREA_BORDERS"
+  ],
+  "mis": [
    "M_RING_WIDTH_ADDED_TWICE",
-   "M_INNER_RADIUS_USED"
+   "M_INNER_RADIUS_USED",
+   "M_RING_RADII_SUBTRACTED_FIRST"
   ]
  },
  "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES": {

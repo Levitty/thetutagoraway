@@ -491,7 +491,7 @@ export const FAMILIES = [
       steps: [`Rectangle: ${l} × ${w} = ${l * w} m².`, `Radius = ${w / 2} m. Half circle = ½ × 22/7 × ${w / 2} × ${w / 2} = ${(11 * (w / 2) ** 2) / 7} m².`, `Total = ${l * w} + ${(11 * (w / 2) ** 2) / 7} = ${l * w + (11 * (w / 2) ** 2) / 7} m².`],
     }),
     check: ({ w, l }, v) => v[0] === l * w && v[1] * 7 * 2 === 22 * (w / 2) ** 2 && v[2] === v[0] + v[1] }),
-  fam({ id: 'g7.area.pond-path-ring', skill: 'G7_AREA_CIRCLE', outcome: 'MATH.G7.MEASUR.AREA.d', cskill: 'MATH.G7.MEASUR.AREA.AREA_BORDERS', rung: 3, form: 'steps',
+  fam({ id: 'g7.area.pond-path-ring', skill: 'G7_AREA_CIRCLE', outcome: 'MATH.G7.MEASUR.AREA.d', cskill: 'MATH.G7.MEASUR.AREA.AREA_RING', rung: 3, form: 'steps',
     draw: () => ({ r: pick([7, 14, 21, 28]), x: pick([7, 14]) }),
     make: ({ r, x }) => ({
       question: `A circular pond has a radius of ${r} m. There is a path around the pond, ${x} m wide. Take π = 22/7.`,
