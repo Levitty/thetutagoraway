@@ -1,0 +1,193 @@
+{
+ "sub_strand": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY",
+ "title": "Transformation of Energy",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Demonstrations: a pendulum (potential to kinetic), a torch (chemical to electrical to light), a solar toy, a bicycle dynamo, rubbing hands (kinetic to heat). The child writes each change as an arrow chain. Energy safety covers electrical, heat and moving parts.",
+ "skills": [
+  {
+   "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES",
+   "key_step": "The child names forms of energy (heat, light, sound, electrical, chemical, kinetic, potential) in real objects and sorts sources into renewable (sun, wind, flowing water, geothermal, biomass) and non-renewable (coal, petroleum, natural gas).",
+   "floor": {
+    "prerequisite": "Knows sources of electricity in Kenya.",
+    "question": "Name one source of electricity in Kenya.",
+    "answer": "geothermal, hydro, wind or solar"
+   },
+   "representations": [
+    "objects: a ball, a torch, food, a stretched catapult",
+    "a sorting table of sources",
+    "a map of Kenyan power sources"
+   ],
+   "steps": [
+    "Moving: kinetic. Raised or stretched: potential.",
+    "Stored in food and fuel: chemical.",
+    "Heat, light, sound, electrical.",
+    "Renewable: replaced by nature. Non-renewable: will run out."
+   ],
+   "contexts": [
+    "a matatu on the road",
+    "charcoal in a jiko",
+    "Lake Turkana wind farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: renewable, non-renewable."
+    },
+    {
+     "beat": "write",
+     "do": "Write coal, sun, petrol, wind, geothermal."
+    },
+    {
+     "beat": "point",
+     "do": "Point at coal.",
+     "say": "Will it run out?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"yes\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_RENEWABLE_COAL",
+     "listen_for": [
+      "coal is renewable"
+     ],
+     "ask": "How long does coal take to form?",
+     "repair": "Coal is non-renewable."
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_SOLAR_NONREN",
+     "listen_for": [
+      "wind can run out"
+     ],
+     "ask": "Does the sun rise every day?",
+     "repair": "Sun and wind are renewable."
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_FORM_MIX",
+     "listen_for": [
+      "a rolling ball has chemical energy"
+     ],
+     "ask": "What is the ball doing?",
+     "repair": "Moving objects have kinetic energy."
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_FOOD_NOT_ENERGY",
+     "listen_for": [
+      "food is not energy"
+     ],
+     "ask": "What lets you run after lunch?",
+     "repair": "Food stores chemical energy."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is petroleum a renewable or non-renewable source?",
+     "answer": "non-renewable",
+     "shows": "classify"
+    },
+    {
+     "question": "What form of energy does a stretched catapult have?",
+     "answer": "potential (elastic) energy",
+     "shows": "form"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM",
+   "key_step": "The child writes the energy changes in a device or event as a chain (a torch: chemical to electrical to light and heat), says energy is not created or used up but changes form, and names safety measures.",
+   "floor": {
+    "prerequisite": "Can name forms of energy.",
+    "question": "What form of energy does a moving ball have?",
+    "answer": "kinetic"
+   },
+   "representations": [
+    "a torch taken apart",
+    "a pendulum",
+    "arrow-chain cards"
+   ],
+   "steps": [
+    "Name the energy going in.",
+    "Follow each part of the device.",
+    "Write the chain with arrows.",
+    "Note wasted heat; energy is never lost, only changed."
+   ],
+   "contexts": [
+    "a solar lamp",
+    "a bicycle dynamo light",
+    "a hydro dam"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a torch: cell, wire, bulb."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cell.",
+     "say": "What energy is stored here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"chemical\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write the rest of the chain."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_KETTLE_LIGHT",
+     "listen_for": [
+      "the kettle gives light"
+     ],
+     "ask": "What does the kettle do to the water?",
+     "repair": "A kettle changes electrical energy to heat."
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_CREATED",
+     "listen_for": [
+      "the energy is used up"
+     ],
+     "ask": "Where did the energy of the falling stone go?",
+     "repair": "Energy changes form; it is not lost."
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_SOLAR",
+     "listen_for": [
+      "light to sound"
+     ],
+     "ask": "What does the panel send down the wire?",
+     "repair": "A solar panel changes light into electrical energy."
+    },
+    {
+     "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_ONE_STEP",
+     "listen_for": [
+      "chemical straight to light"
+     ],
+     "ask": "What carries the energy from the cell to the bulb?",
+     "repair": "Write each step of the chain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the energy changes in a solar lamp at night.",
+     "answer": "light to electrical (charging by day), then chemical in the battery, then electrical to light",
+     "shows": "chain"
+    },
+    {
+     "question": "What happens to energy when a ball stops rolling?",
+     "answer": "it changes into heat (and some sound); it is not lost",
+     "shows": "conservation"
+    }
+   ]
+  }
+ ]
+}

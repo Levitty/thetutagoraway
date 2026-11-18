@@ -6,7 +6,8 @@
 //   pre    { SKILL: [[ref, reason, strength?], ...] }  more prerequisites. ref is a full code (a skill of any Science,
 //          Integrated Science or Mathematics grade, or a Grade 1-3 Environmental Activities outcome) or a skill key of this grade
 //   mis    [[skill, short, error, question, wrong, right, cause, help, feedback, source?], ...]  more misconceptions
-//   fix    { SHORT: [cause, help] }  a real cause and repair for an older misconception that had a stock line
+//   fix    { SHORT: [cause, help] | { error?, cause?, help? } }  a real cause (and a sharper error or repair) for an older
+//          misconception that had a stock line
 //   (review marks in scripts/data/science-depth/reviews.json are put back on their misconceptions every build)
 //   pack   { SKILL: { key_step, floor, reps, steps, contexts, board, mis, checks } }  the teaching pack entry, written to
 //          curriculum/<dir>/teaching/g<N>/<number>-<name>.json with the Maths rules (scripts/maths-teaching-pack-file.mjs)
@@ -72,9 +73,11 @@ export function applyDepth(g, depth, { dir, grade, prefix }) {
         added.pre++;
       }
     }
-    for (const [short, [cause, help]] of Object.entries(d.fix || {})) {
+    for (const [short, f] of Object.entries(d.fix || {})) {
       const m = s.misconceptions.find(x => x.code.endsWith(`.${short}`)) || fail(`${s.code}: fix for unknown misconception ${short}`);
-      m.cause = cause; m.help = help; added.fix++;
+      const { error, cause, help } = Array.isArray(f) ? { cause: f[0], help: f[1] } : f;
+      if (error) m.error = error; if (cause) m.cause = cause; if (help) m.help = help;
+      added.fix++;
     }
     for (const [key, short, error, question, wrong, right, cause, help, feedback, source] of d.mis || []) {
       const k = mine.get(key) || fail(`${s.code}: misconception ${short} for unknown skill ${key}`);

@@ -427,6 +427,9 @@ export const SUBS = [
       ECLIPSES: [[`${S4}FORCE_.LIGHT.LIGHT_SOURCES`, 'The child must know the Moon reflects the Sun\'s light (Grade 4) to see why it can be hidden.']],
       MIRROR_IMAGE: [[`${S4}FORCE_.LIGHT.LIGHT_USES`, 'We see an image because light from the mirror enters our eyes, met in Grade 4.']],
     },
+    fix: {
+      M_RB_COLOUR_ORDER: { error: 'Puts blue or violet on the outside of the rainbow, or counts fewer than seven colours, instead of red outside and violet inside.' },
+    },
     mis: [
       ['LIGHT_MATERIALS', 'M_LM_THICKNESS_IGNORED', 'Thinks the same material is always the same kind, whatever its thickness: one sheet of paper and a thick book both opaque.', 'Is one thin sheet of tissue paper transparent, translucent or opaque?', 'Opaque, paper blocks light', 'Translucent: some light passes through', 'Classifies by the material\'s name, not by testing.', 'Hold a torch behind one sheet of tissue, then behind a thick pile.', 'Test the actual sheet. Thin paper lets some light through (translucent); a thick pile does not.'],
       ['SHADOWS', 'M_SD_SHADOW_COLOUR', 'Thinks a red object makes a red shadow.', 'A red ball is lit by a torch. What colour is its shadow?', 'Red', 'Dark (grey or black): it is where light is blocked', 'Thinks the shadow is a copy of the object.', 'Shine a torch on a red and a blue ball: both shadows are dark.', 'A shadow is where light is blocked, so it is dark whatever colour the object is.', MEM],

@@ -3719,7 +3719,7 @@
     {
      "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_COLOUR_ORDER",
      "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
-     "error": "Gives the wrong order or number of colours.",
+     "error": "Puts blue or violet on the outside of the rainbow, or counts fewer than seven colours, instead of red outside and violet inside.",
      "example": {
       "question": "What colour is at the top of the outer edge of a main rainbow?",
       "wrong_answer": "Violet",

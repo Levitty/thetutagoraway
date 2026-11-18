@@ -1,0 +1,98 @@
+{
+ "sub_strand": "INTE.G8.FORCE_.PRESSURE",
+ "title": "Pressure",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Press a finger and a pencil point into clay or soft soap with the same push; stand a bottle with three holes at different heights full of water outdoors; compare a sharp and a blunt knife on a tomato. The child predicts before each test.",
+ "skills": [
+  {
+   "skill": "INTE.G8.FORCE_.PRESSURE.PRESSURE",
+   "key_step": "The child says pressure grows with a bigger force or a smaller area (pressure = force / area), liquid pressure grows with depth, and uses this to explain applications (sharp knives, wide tyres and camel feet, dam walls thicker at the bottom).",
+   "floor": {
+    "prerequisite": "Can find the area of a rectangle.",
+    "question": "What is the area of a 2 m by 3 m floor?",
+    "answer": "6 m²"
+   },
+   "representations": [
+    "finger and pencil pressed into clay",
+    "a bottle with holes at three heights",
+    "a chart: application, more or less pressure, why"
+   ],
+   "steps": [
+    "Same force, smaller area: more pressure (a pencil point).",
+    "Same force, larger area: less pressure (wide tyres).",
+    "Liquid pressure grows with depth (lowest hole squirts furthest).",
+    "Use pressure = force / area for a simple sum."
+   ],
+   "contexts": [
+    "a sharp panga",
+    "a lorry with wide tyres on a muddy road",
+    "the wall of Masinga dam"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bottle with three holes at different heights."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which hole will squirt furthest."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the bottom jet longest and write \"pressure grows with depth\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_FORCE_ONLY",
+     "listen_for": [
+      "only the force matters"
+     ],
+     "ask": "Same push: why did the pencil sink deeper than the finger?",
+     "repair": "A smaller area gives a bigger pressure."
+    },
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_AREA_WRONG",
+     "listen_for": [
+      "a larger area gives more pressure"
+     ],
+     "ask": "Why do wide tyres not sink in mud?",
+     "repair": "A larger area spreads the force."
+    },
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_DEPTH",
+     "listen_for": [
+      "pressure is the same at all depths"
+     ],
+     "ask": "Which hole squirted furthest?",
+     "repair": "Liquid pressure grows with depth."
+    },
+    {
+     "code": "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_SHAPE_TANK",
+     "listen_for": [
+      "the wide tank has more pressure"
+     ],
+     "ask": "Did the jets from the wide and narrow bottles go the same distance?",
+     "repair": "Liquid pressure depends on depth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a dam wall thicker at the bottom?",
+     "answer": "water pressure is greatest at the bottom (it grows with depth)",
+     "shows": "liquid pressure"
+    },
+    {
+     "question": "Why does a sharp knife cut better than a blunt one?",
+     "answer": "the same force acts on a smaller area, giving more pressure",
+     "shows": "area"
+    }
+   ]
+  }
+ ]
+}

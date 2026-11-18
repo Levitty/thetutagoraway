@@ -1,0 +1,187 @@
+{
+ "sub_strand": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN",
+ "title": "Movement of Materials in and out of the cell",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Demonstrations learners can do: a drop of food colour in still water, potato strips in salty and plain water for an hour, raisins soaked overnight, perfume sprayed at the front of the room. Potassium permanganate is handled by the teacher.",
+ "skills": [
+  {
+   "skill": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS",
+   "key_step": "The child says diffusion is particles spreading from where there are many to where there are few, osmosis is water moving through a thin membrane from a weak to a strong solution, and gives their roles in living things (oxygen into blood, water into root hairs).",
+   "floor": {
+    "prerequisite": "Knows the parts of a cell, including the membrane.",
+    "question": "What does the cell membrane do?",
+    "answer": "controls what enters and leaves"
+   },
+   "representations": [
+    "dye spreading in still water",
+    "a membrane drawn with water arrows",
+    "a chart: process, what moves, example in living things"
+   ],
+   "steps": [
+    "Diffusion: many to few, until even.",
+    "Osmosis: water only, through a membrane, weak to strong solution.",
+    "Neither needs the cell's energy.",
+    "In living things: oxygen into blood, carbon dioxide out, water into roots."
+   ],
+   "contexts": [
+    "the smell of chapati from the kitchen",
+    "a wilting plant watered",
+    "oxygen entering blood in the lungs"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a membrane with few dots on one side and many on the other."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which way the dots will spread."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"from many to few\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw an arrow from many to few."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_UP_GRADIENT",
+     "listen_for": [
+      "from few to many"
+     ],
+     "ask": "Where does the perfume smell go: to the back or the front?",
+     "repair": "Particles spread from many to few."
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_OSMOSIS_SOLUTE",
+     "listen_for": [
+      "the salt moves"
+     ],
+     "ask": "What made the raisin swell?",
+     "repair": "In osmosis, water moves."
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_ENERGY",
+     "listen_for": [
+      "it needs energy"
+     ],
+     "ask": "Does the dye in a glass of water need a living cell to spread?",
+     "repair": "Diffusion needs no energy from the cell."
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_ONLY_LIQUIDS",
+     "listen_for": [
+      "only in water"
+     ],
+     "ask": "How did the smell reach the back of the room?",
+     "repair": "Diffusion happens in gases too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In diffusion, which way do particles move?",
+     "answer": "from where there are many to where there are few",
+     "shows": "diffusion"
+    },
+    {
+     "question": "What moves in osmosis?",
+     "answer": "water",
+     "shows": "osmosis"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO",
+   "key_step": "The child predicts and explains the result of a simple demonstration (dye spreading, potato strips in salty and plain water, a raisin soaking) by particles spreading or water moving through a membrane.",
+   "floor": {
+    "prerequisite": "Knows what diffusion and osmosis are.",
+    "question": "What moves in osmosis?",
+    "answer": "water"
+   },
+   "representations": [
+    "potato strips in two dishes",
+    "dye in hot and cold water",
+    "a prediction-and-result table"
+   ],
+   "steps": [
+    "Read the set-up and predict.",
+    "Look at (or recall) the result.",
+    "Explain with particles or water moving.",
+    "Check the fair test: only one thing changed."
+   ],
+   "contexts": [
+    "salting sukuma before cooking",
+    "raisins in a cake",
+    "tea leaves colouring hot water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a potato strip in salty water and one in plain water."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what each strip will be like after an hour."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the salty-water strip shorter and floppy, the plain one firm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO.M_G8_DD_SALT_INTO_POTATO",
+     "listen_for": [
+      "salt went into it"
+     ],
+     "ask": "Was the strip lighter or heavier after?",
+     "repair": "Water left the potato by osmosis."
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO.M_G8_DD_STIRRING_NEEDED",
+     "listen_for": [
+      "it stays as a drop"
+     ],
+     "ask": "What did the glass look like after an hour?",
+     "repair": "Dye spreads by itself."
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO.M_G8_DD_RAISIN_SHRINKS",
+     "listen_for": [
+      "the raisin shrinks"
+     ],
+     "ask": "What did the soaked raisin look like?",
+     "repair": "Water moves in, so it swells."
+    },
+    {
+     "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO.M_G8_DD_HOT_SLOWER",
+     "listen_for": [
+      "faster in cold water"
+     ],
+     "ask": "Which glass coloured first?",
+     "repair": "Diffusion is faster when warm."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A raw potato strip is left in plain water. What happens to it, and why?",
+     "answer": "it becomes firm and slightly longer, because water moves into it by osmosis",
+     "shows": "predict osmosis"
+    },
+    {
+     "question": "Why does tea colour spread faster in hot water?",
+     "answer": "the particles move faster when hot",
+     "shows": "temperature"
+    }
+   ]
+  }
+ ]
+}

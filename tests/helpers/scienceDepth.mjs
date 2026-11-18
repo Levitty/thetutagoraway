@@ -10,7 +10,7 @@ const ROOT = new URL('../../', import.meta.url);
 const J = (p) => JSON.parse(readFileSync(new URL(p, ROOT), 'utf8'));
 // Outcomes that are attitudes, values or interests: seen in class, not asked as questions.
 export const NOT_TESTED = /^(appreciate|show interest|develop interest|advocate|acknowledge)/i;
-const STOCK_CAUSE = 'The child mixes up two rules that are taught close together.';
+const STOCK_CAUSES = ['The child mixes up two rules that are taught close together.', 'The child mixes up two ideas that sound alike or are taught close together.'];
 
 function allCodes() {
   const codes = new Set();
@@ -81,7 +81,8 @@ export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = 
       for (const f of ['error', 'cause', 'reveals', 'help', 'feedback', 'source']) assert.ok(String(m[f] || '').length > 10, `${code}: no ${f}`);
       assert.ok(m.example.question && m.example.wrong_answer && m.example.correct_answer, `${code}: no example`);
       assert.notEqual(m.example.wrong_answer, m.example.correct_answer, `${code}: the wrong answer is the right one`);
-      assert.notEqual(m.cause, STOCK_CAUSE, `${code}: stock cause, not the child's reason`);
+      assert.ok(!STOCK_CAUSES.includes(m.cause), `${code}: stock cause, not the child's reason`);
+      assert.ok(!/^(gives|names|gets) (the|a) wrong [a-z ]+\.$/i.test(m.error), `${code}: the error must say which wrong idea, not only that it is wrong`);
       assert.ok(!/does not understand/i.test(m.error), `${code}: "does not understand" is not a misconception`);
       assert.ok(/to confirm by|to be confirmed by|literature|research|verify|cited from memory/i.test(m.source), `${code}: no source line`);
       assert.equal(m.status, 'draft');

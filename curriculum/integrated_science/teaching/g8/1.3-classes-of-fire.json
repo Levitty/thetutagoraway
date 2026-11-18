@@ -1,0 +1,188 @@
+{
+ "sub_strand": "INTE.G8.MIXTUR.CLASSES_OF_FIRE",
+ "title": "Classes of fire",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The fire triangle is drawn and a candle under a jar is shown by the teacher. Classes of fire are taught from pictures with the matching extinguisher. Learners practise the school fire drill. Fire-safety statements are to be confirmed by a teacher.",
+ "skills": [
+  {
+   "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE",
+   "key_step": "The child names the three sides of the fire triangle (heat, fuel, oxygen), says a fire spreads when all three are there and goes out when one is taken away, and names natural and human causes of fire.",
+   "floor": {
+    "prerequisite": "Knows hazard symbols such as flammable.",
+    "question": "What does the flame symbol mean?",
+    "answer": "it catches fire easily"
+   },
+   "representations": [
+    "a fire triangle drawing",
+    "a candle under a jar (teacher)",
+    "a chart of causes: natural, human"
+   ],
+   "steps": [
+    "Heat, fuel and oxygen make fire.",
+    "Take away heat: cool with water (for wood fires).",
+    "Take away fuel: clear dry grass (fire breaks).",
+    "Take away oxygen: cover or smother."
+   ],
+   "contexts": [
+    "a bush fire in the dry season",
+    "a jiko fanned for cooking",
+    "lightning striking a tree"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a triangle with heat, fuel and oxygen on its sides."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the oxygen side.",
+     "say": "What happens to a candle under a jar?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it goes out: no oxygen\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write how each side can be taken away."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_TWO_PARTS",
+     "listen_for": [
+      "heat and fuel only"
+     ],
+     "ask": "Why does the candle under the jar go out?",
+     "repair": "A fire needs oxygen too."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_WATER_ALL",
+     "listen_for": [
+      "water puts out every fire"
+     ],
+     "ask": "What does water do on burning oil?",
+     "repair": "Water is not for oil or electrical fires."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_CAUSE",
+     "listen_for": [
+      "a match is a natural cause"
+     ],
+     "ask": "What in nature can start a fire with no person?",
+     "repair": "Lightning and the hot sun on dry grass are natural causes."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_FAN_PUTS_OUT",
+     "listen_for": [
+      "fanning puts it out"
+     ],
+     "ask": "What does fanning bring to the jiko?",
+     "repair": "Fanning adds oxygen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the three things a fire needs.",
+     "answer": "heat, fuel and oxygen",
+     "shows": "triangle"
+    },
+    {
+     "question": "Why does clearing dry grass stop a bush fire spreading?",
+     "answer": "it takes away the fuel",
+     "shows": "remove fuel"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES",
+   "key_step": "The child matches a fire to its class and safe control: ordinary solids (water, sand), flammable liquids such as oil and petrol (smother, foam, powder), gases (shut off the gas), electrical (switch off, carbon dioxide or powder, never water), and raises the alarm for big fires.",
+   "floor": {
+    "prerequisite": "Knows the fire triangle.",
+    "question": "Which side does covering a fire remove?",
+    "answer": "oxygen"
+   },
+   "representations": [
+    "pictures of the classes of fire",
+    "extinguisher labels",
+    "a fire drill"
+   ],
+   "steps": [
+    "Name what is burning.",
+    "Choose the method that removes a side safely.",
+    "Never water on oil or electrical fires.",
+    "Big fire: raise the alarm and get out."
+   ],
+   "contexts": [
+    "a kitchen oil fire",
+    "a socket on fire",
+    "a fire in the school store"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pan of oil on fire."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if water is thrown on it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a lid on the pan and write \"smother\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_WATER_OIL",
+     "listen_for": [
+      "use water"
+     ],
+     "ask": "What does water do on hot oil?",
+     "repair": "Smother an oil fire."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_WATER_ELEC",
+     "listen_for": [
+      "pour water on it"
+     ],
+     "ask": "What does water do with electricity?",
+     "repair": "Switch off the power first."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_ALARM",
+     "listen_for": [
+      "fight it alone"
+     ],
+     "ask": "How fast can a fire spread?",
+     "repair": "Raise the alarm and get out."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_ONE_EXTINGUISHER",
+     "listen_for": [
+      "any extinguisher works"
+     ],
+     "ask": "What does the label say?",
+     "repair": "Use the extinguisher made for that class of fire."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should be done first in an electrical fire?",
+     "answer": "switch off the power",
+     "shows": "electrical"
+    },
+    {
+     "question": "How is a small cooking-oil fire put out?",
+     "answer": "cover it with a lid or a damp cloth to cut off the air, and turn off the heat",
+     "shows": "oil fire"
+    }
+   ]
+  }
+ ]
+}

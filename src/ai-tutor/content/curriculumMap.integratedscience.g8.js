@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/integrated_science/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, plan and attitude outcomes are listed in docs/qa/integratedscience-g8-non-question-outcomes-2026-11-13.md"};
+export const MAP_SOURCE = {"source":"curriculum/integrated_science/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, plan and attitude outcomes are listed in docs/qa/integratedscience-g8-non-question-outcomes-2026-11-13.md; depth pass 18 Nov 2026 (two new skills for outcomes 2.2 b and 2.3 b, real causes for the 13 Nov misconceptions, two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/integrated_science/teaching/g8)"};
 export const SUBSTRANDS = {
  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS": {
   "name": "Elements and Compounds",
@@ -252,7 +252,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_AE_ATOM_MOLECULE",
    "M_G8_AE_ELEMENT_COMPOUND",
-   "M_G8_AE_MIXTURE"
+   "M_G8_AE_MIXTURE",
+   "M_G8_AE_GAS_NOT_ELEMENT"
   ]
  },
  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS": {
@@ -267,7 +268,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_G8_SY_FIRST_LETTER",
-   "M_G8_SY_NAME"
+   "M_G8_SY_NAME",
+   "M_G8_SY_CAPITALS",
+   "M_G8_SY_SILVER_GOLD"
   ]
  },
  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS": {
@@ -278,12 +281,14 @@ export const SKILLS = {
    "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.c"
   ],
   "pre": [
-   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS"
+   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS",
+   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT"
   ],
   "mis": [
    "M_G8_WE_ORDER",
    "M_G8_WE_NAME",
-   "M_G8_WE_LOST"
+   "M_G8_WE_LOST",
+   "M_G8_WE_PLUS_PRODUCT"
   ]
  },
  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES": {
@@ -300,7 +305,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_EU_WRONG_USE",
    "M_G8_EU_LABEL",
-   "M_G8_EU_COMPOUND_ELEMENT"
+   "M_G8_EU_COMPOUND_ELEMENT",
+   "M_G8_EU_CHLORINE_FOOD"
   ]
  },
  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES": {
@@ -314,7 +320,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_ST_SOLID_STILL",
    "M_G8_ST_GAS_CLOSE",
-   "M_G8_ST_LIQUID_FIXED"
+   "M_G8_ST_LIQUID_FIXED",
+   "M_G8_ST_PARTICLES_EXPAND"
   ]
  },
  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES": {
@@ -330,7 +337,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_IM_LOWER_BOIL",
    "M_G8_IM_RAISE_MELT",
-   "M_G8_IM_NO_EFFECT"
+   "M_G8_IM_NO_EFFECT",
+   "M_G8_IM_PURITY_BY_LOOK"
   ]
  },
  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES": {
@@ -347,7 +355,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_CH_MELT_CHEMICAL",
    "M_G8_CH_BURN_PHYSICAL",
-   "M_G8_CH_NEW"
+   "M_G8_CH_NEW",
+   "M_G8_CH_DISSOLVE_CHEMICAL"
   ]
  },
  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE": {
@@ -362,7 +371,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_FT_TWO_PARTS",
    "M_G8_FT_WATER_ALL",
-   "M_G8_FT_CAUSE"
+   "M_G8_FT_CAUSE",
+   "M_G8_FT_FAN_PUTS_OUT"
   ]
  },
  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES": {
@@ -378,7 +388,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_FC_WATER_OIL",
    "M_G8_FC_WATER_ELEC",
-   "M_G8_FC_ALARM"
+   "M_G8_FC_ALARM",
+   "M_G8_FC_ONE_EXTINGUISHER"
   ]
  },
  "INTE.G8.LIVING.THE_CELL.CELL_PARTS": {
@@ -411,7 +422,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_MG_ADD",
    "M_G8_MG_ONE",
-   "M_G8_MG_FOUR"
+   "M_G8_MG_FOUR",
+   "M_G8_MG_REAL_SIZE"
   ]
  },
  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS": {
@@ -429,7 +441,25 @@ export const SKILLS = {
   "mis": [
    "M_G8_DO_UP_GRADIENT",
    "M_G8_DO_OSMOSIS_SOLUTE",
-   "M_G8_DO_ENERGY"
+   "M_G8_DO_ENERGY",
+   "M_G8_DO_ONLY_LIQUIDS"
+  ]
+ },
+ "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO": {
+  "name": "Predict and explain the results of simple diffusion and osmosis demonstrations",
+  "sub": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN",
+  "outcome": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.b",
+  "outcomes": [
+   "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.b"
+  ],
+  "pre": [
+   "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS"
+  ],
+  "mis": [
+   "M_G8_DD_SALT_INTO_POTATO",
+   "M_G8_DD_STIRRING_NEEDED",
+   "M_G8_DD_RAISIN_SHRINKS",
+   "M_G8_DD_HOT_SLOWER"
   ]
  },
  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL": {
@@ -443,7 +473,25 @@ export const SKILLS = {
   "mis": [
    "M_G8_MC_LENGTH",
    "M_G8_MC_OVULATION",
-   "M_G8_MC_DISEASE"
+   "M_G8_MC_DISEASE",
+   "M_G8_MC_ALWAYS_REGULAR"
+  ]
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE": {
+  "name": "Choose the parts of a plan that manage the challenges of the menstrual cycle",
+  "sub": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE",
+  "outcome": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b",
+  "outcomes": [
+   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b"
+  ],
+  "pre": [
+   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL"
+  ],
+  "mis": [
+   "M_G8_MM_STAY_HOME",
+   "M_G8_MM_ONE_PAD_DAY",
+   "M_G8_MM_SEVERE_NORMAL",
+   "M_G8_MM_SECRET"
   ]
  },
  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION": {
@@ -459,7 +507,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_FE_PLACE",
    "M_G8_FE_ORDER",
-   "M_G8_FE_ZYGOTE"
+   "M_G8_FE_ZYGOTE",
+   "M_G8_FE_MANY_SPERM"
   ]
  },
  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS": {
@@ -476,7 +525,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_STI_MYTH",
    "M_G8_STI_NO_CURE",
-   "M_G8_STI_PREVENT"
+   "M_G8_STI_PREVENT",
+   "M_G8_STI_NO_SYMPTOMS_SAFE"
   ]
  },
  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES": {
@@ -491,7 +541,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_EN_RENEWABLE_COAL",
    "M_G8_EN_SOLAR_NONREN",
-   "M_G8_EN_FORM_MIX"
+   "M_G8_EN_FORM_MIX",
+   "M_G8_EN_FOOD_NOT_ENERGY"
   ]
  },
  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM": {
@@ -508,7 +559,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_ET_KETTLE_LIGHT",
    "M_G8_ET_CREATED",
-   "M_G8_ET_SOLAR"
+   "M_G8_ET_SOLAR",
+   "M_G8_ET_ONE_STEP"
   ]
  },
  "INTE.G8.FORCE_.PRESSURE.PRESSURE": {
@@ -523,7 +575,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_PR_FORCE_ONLY",
    "M_G8_PR_AREA_WRONG",
-   "M_G8_PR_DEPTH"
+   "M_G8_PR_DEPTH",
+   "M_G8_PR_SHAPE_TANK"
   ]
  }
 };
@@ -539,6 +592,11 @@ export const MIS_FEEDBACK = {
  "M_G8_EU_WRONG_USE": "Copper is used for electric wires because it carries electricity well.",
  "M_G8_EU_LABEL": "Labels give contents, amounts, dates and safety information.",
  "M_G8_EU_COMPOUND_ELEMENT": "Water is a compound of hydrogen and oxygen. Oxygen is an element.",
+ "M_G8_AE_GAS_NOT_ELEMENT": "An element can be a solid, a liquid or a gas. Oxygen is an element.",
+ "M_G8_SY_CAPITALS": "The first letter is a capital and the second is small: Cu, Na, Fe.",
+ "M_G8_SY_SILVER_GOLD": "Gold is Au and silver is Ag.",
+ "M_G8_WE_PLUS_PRODUCT": "The product is a new substance with a new name: magnesium oxide.",
+ "M_G8_EU_CHLORINE_FOOD": "Chlorine gas is poisonous. In salt it is joined with sodium, which makes a safe compound.",
  "M_G8_ST_SOLID_STILL": "Solid particles vibrate in fixed places. They do not move around.",
  "M_G8_ST_GAS_CLOSE": "Gas particles are far apart and move freely.",
  "M_G8_ST_LIQUID_FIXED": "Liquid particles are close but slide past each other.",
@@ -548,12 +606,17 @@ export const MIS_FEEDBACK = {
  "M_G8_CH_MELT_CHEMICAL": "Melting makes no new substance, so it is physical.",
  "M_G8_CH_BURN_PHYSICAL": "Burning makes new substances and cannot be reversed, so it is chemical.",
  "M_G8_CH_NEW": "A chemical change makes a new substance.",
+ "M_G8_ST_PARTICLES_EXPAND": "When heated, particles move more and spread apart. They do not grow.",
+ "M_G8_IM_PURITY_BY_LOOK": "Pure water boils at 100 degrees at sea level. A different boiling point shows an impurity, even if it looks clear.",
+ "M_G8_CH_DISSOLVE_CHEMICAL": "Dissolving is a physical change. No new substance is made and the sugar can be got back.",
  "M_G8_FT_TWO_PARTS": "A fire needs heat, fuel and oxygen. Remove one and it goes out.",
  "M_G8_FT_WATER_ALL": "Water spreads an oil fire. It is not used on oil or electrical fires.",
  "M_G8_FT_CAUSE": "Lightning, volcanoes and the hot sun on dry grass are natural causes.",
  "M_G8_FC_WATER_OIL": "Water makes an oil fire spread. Smother it.",
  "M_G8_FC_WATER_ELEC": "Switch off the power first. Never use water on an electrical fire.",
  "M_G8_FC_ALARM": "Raise the alarm and leave safely. Only small fires are fought, by adults.",
+ "M_G8_FT_FAN_PUTS_OUT": "Fanning brings more oxygen, so a fire burns more. Blowing out a match takes away its heat.",
+ "M_G8_FC_ONE_EXTINGUISHER": "Each extinguisher is for certain classes of fire. Read the label before using it.",
  "M_G8_CP_WALL_ANIMAL": "Only plant cells have a cell wall.",
  "M_G8_CP_NUCLEUS": "The nucleus controls the cell. Chloroplasts make food.",
  "M_G8_CP_CHLORO": "Chloroplasts are found in plant cells.",
@@ -561,9 +624,15 @@ export const MIS_FEEDBACK = {
  "M_G8_MG_ADD": "Multiply the two: 10 times 40 is 400.",
  "M_G8_MG_ONE": "Both lenses magnify, so multiply: 10 times 10 is 100.",
  "M_G8_MG_FOUR": "10 times 40 is 400.",
+ "M_G8_MG_REAL_SIZE": "A microscope makes an image bigger. The cell itself does not change size.",
  "M_G8_DO_UP_GRADIENT": "Particles spread from where there are many to where there are few.",
  "M_G8_DO_OSMOSIS_SOLUTE": "Osmosis is the movement of water through a membrane.",
  "M_G8_DO_ENERGY": "Diffusion happens without the cell using energy.",
+ "M_G8_DD_SALT_INTO_POTATO": "Water left the potato, so it became soft and shorter. In osmosis it is water that moves.",
+ "M_G8_DD_STIRRING_NEEDED": "The dye spreads by itself by diffusion. Stirring only makes it faster.",
+ "M_G8_DD_RAISIN_SHRINKS": "Water moves into the raisin, where the sugar solution is stronger, so it swells.",
+ "M_G8_DD_HOT_SLOWER": "Particles move faster when warm, so diffusion is faster in hot water.",
+ "M_G8_DO_ONLY_LIQUIDS": "Diffusion happens in gases and liquids. Smells spread through air by diffusion.",
  "M_G8_MC_LENGTH": "The cycle is about 28 days. The bleeding lasts three to seven days.",
  "M_G8_MC_OVULATION": "An egg is released about the middle of the cycle.",
  "M_G8_MC_DISEASE": "Menstruation is normal and not an illness.",
@@ -573,13 +642,23 @@ export const MIS_FEEDBACK = {
  "M_G8_STI_MYTH": "STIs do not spread by hugging, shaking hands or toilet seats.",
  "M_G8_STI_NO_CURE": "Many STIs can be treated, so see a health worker early.",
  "M_G8_STI_PREVENT": "Abstinence and faithfulness to one uninfected partner prevent STIs.",
+ "M_G8_MM_STAY_HOME": "A period is no reason to miss school. Carry a spare pad and ask the school nurse or a trusted adult for help.",
+ "M_G8_MM_ONE_PAD_DAY": "Change a pad every four to six hours to stay clean and healthy.",
+ "M_G8_MM_SEVERE_NORMAL": "Some pain is common, but pain that stops you walking or very heavy bleeding needs a health worker.",
+ "M_G8_MM_SECRET": "It is good to talk to a trusted adult about periods. They can help.",
+ "M_G8_MC_ALWAYS_REGULAR": "28 days is only an average. Cycles vary, especially when periods have just started.",
+ "M_G8_FE_MANY_SPERM": "Only one sperm joins the egg to make the zygote.",
+ "M_G8_STI_NO_SYMPTOMS_SAFE": "Some STIs have no signs for a long time. Only a test at a health centre shows them.",
  "M_G8_EN_RENEWABLE_COAL": "Coal is non-renewable. Sun, wind and flowing water are renewable.",
  "M_G8_EN_SOLAR_NONREN": "Petroleum is non-renewable. Wind is renewable.",
  "M_G8_EN_FORM_MIX": "Moving objects have kinetic energy.",
  "M_G8_ET_KETTLE_LIGHT": "A kettle changes electrical energy to heat.",
  "M_G8_ET_CREATED": "Energy is never created or used up. It changes form.",
  "M_G8_ET_SOLAR": "A solar panel changes light to electrical energy.",
+ "M_G8_EN_FOOD_NOT_ENERGY": "Food stores chemical energy. The body changes it into movement and heat.",
+ "M_G8_ET_ONE_STEP": "Many devices change energy in steps. A torch: chemical, then electrical, then light and heat.",
  "M_G8_PR_FORCE_ONLY": "The same force on a smaller area gives a bigger pressure.",
  "M_G8_PR_AREA_WRONG": "A larger area spreads the force, so the pressure is smaller.",
- "M_G8_PR_DEPTH": "Liquid pressure grows with depth, so a dam wall is thicker at the bottom."
+ "M_G8_PR_DEPTH": "Liquid pressure grows with depth, so a dam wall is thicker at the bottom.",
+ "M_G8_PR_SHAPE_TANK": "Liquid pressure depends on depth, not on how much water there is."
 };
