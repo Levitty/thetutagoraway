@@ -3093,6 +3093,482 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_EQUAL_PART_MIXED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "error": "Leaves out or adds the \"or equal to\" part of the sign.",
+  "example": {
+   "question": "\"At least 18 passengers\" as an inequality",
+   "wrong_answer": "n > 18",
+   "correct_answer": "n >= 18"
+  },
+  "cause": "Sees the direction but not whether the number itself is allowed.",
+  "reveals": "The answer n > 18 as a wrong option, with a reason that names the idea.",
+  "help": "\"At least 18\" lets 18 itself in: the sign needs the line under it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_DIRECTION_REVERSED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "error": "Uses the sign that faces the wrong way.",
+  "example": {
+   "question": "\"At least 18 passengers\" as an inequality",
+   "wrong_answer": "n <= 18",
+   "correct_answer": "n >= 18"
+  },
+  "cause": "Mixes up \"at least\" and \"at most\".",
+  "reveals": "The answer n <= 18 as a wrong option, with a reason that names the idea.",
+  "help": "At least 18 means 18 or more: the big end of the sign faces n.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_KEYWORD_READ_ALONE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "error": "Takes the sign from one word and ignores \"no\", \"not\" or \"at\".",
+  "example": {
+   "question": "\"No more than 40 passengers\" as an inequality",
+   "wrong_answer": "n > 40",
+   "correct_answer": "n <= 40"
+  },
+  "cause": "Hears \"more\" and writes greater than.",
+  "reveals": "The answer n > 40 as a wrong option, with a reason that names the idea.",
+  "help": "\"No more than 40\" means 40 or fewer.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_STRICT_INCLUDES_NUMBER": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "error": "Believes a < 9 is true when a is 9.",
+  "example": {
+   "question": "a = 9: is a < 9 true?",
+   "wrong_answer": "true",
+   "correct_answer": "false"
+  },
+  "cause": "Thinks < works like <=.",
+  "reveals": "The answer true as a wrong option, with a reason that names the idea.",
+  "help": "9 is not less than 9: < leaves the number out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_SYMBOL_READ_BACKWARDS": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "error": "Reads the sign from the wrong side, so a < 7 seems true for a = 9.",
+  "example": {
+   "question": "a = 9: which is true, a < 7 or a > 7?",
+   "wrong_answer": "a < 7",
+   "correct_answer": "a > 7"
+  },
+  "cause": "Reads \"7 is less than a\" from left to right the wrong way round.",
+  "reveals": "The answer a < 7 as a wrong option, with a reason that names the idea.",
+  "help": "Read from the letter: a < 7 says a is less than 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_AT_MOST_AS_STRICT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY",
+  "error": "Writes < for \"at most\", so the limit itself is not allowed.",
+  "example": {
+   "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+   "wrong_answer": "200 + 50n < 1,000",
+   "correct_answer": "200 + 50n <= 1,000"
+  },
+  "cause": "Thinks \"at most\" means \"less than\".",
+  "reveals": "The answer 200 + 50n < 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "At most 1,000 lets the load be exactly 1,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_LIMIT_SIGN_REVERSED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY",
+  "error": "Writes >= for a limit that must not be passed.",
+  "example": {
+   "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+   "wrong_answer": "200 + 50n >= 1,000",
+   "correct_answer": "200 + 50n <= 1,000"
+  },
+  "cause": "Hears \"most\" and thinks of greater than.",
+  "reveals": "The answer 200 + 50n >= 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "The load must stay at or under the limit: <=.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_FIXED_LOAD_LEFT_OUT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY",
+  "error": "Leaves out the amount that is already there.",
+  "example": {
+   "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+   "wrong_answer": "50n <= 1,000",
+   "correct_answer": "200 + 50n <= 1,000"
+  },
+  "cause": "Writes only the part that changes.",
+  "reveals": "The answer 50n <= 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "The cement is on the pick-up too: add it to the load.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_TAKEN_ADDED_NOT_SUBTRACTED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY",
+  "error": "Adds the seats already taken to find the seats left.",
+  "example": {
+   "question": "150 seats, 40 taken: at most n more people",
+   "wrong_answer": "n <= 190",
+   "correct_answer": "n <= 110"
+  },
+  "cause": "Combines the two numbers in the story by adding.",
+  "reveals": "The answer n <= 190 as a wrong option, with a reason that names the idea.",
+  "help": "Seats left = seats - seats taken.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_DECIMAL_ANSWER_KEPT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT",
+  "error": "Gives a decimal number of items.",
+  "example": {
+   "question": "sh 500, bag sh 150, books sh 40 each: most books",
+   "wrong_answer": "8.75",
+   "correct_answer": "8"
+  },
+  "cause": "Stops at the solution of the inequality.",
+  "reveals": "The answer 8.75 as a wrong option, with a reason that names the idea.",
+  "help": "You cannot buy part of a book: take the whole numbers that fit.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_ROUNDED_UP_PAST_LIMIT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT",
+  "error": "Rounds n <= 8.75 up to 9.",
+  "example": {
+   "question": "sh 500, bag sh 150, books sh 40 each: most books",
+   "wrong_answer": "9",
+   "correct_answer": "8"
+  },
+  "cause": "Rounds to the nearest whole number as usual.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "9 books cost sh 360, more than the sh 350 left: round down.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_FIXED_COST_LEFT_OUT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT",
+  "error": "Divides all the money by the price and forgets the fixed cost.",
+  "example": {
+   "question": "sh 500, bag sh 150, books sh 40 each: most books",
+   "wrong_answer": "12",
+   "correct_answer": "8"
+  },
+  "cause": "Leaves the bag out of the inequality.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Pay for the bag first: 500 - 150 = 350 for books.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_OPEN_CLOSED_SWAPPED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Draws an open circle for <= or >= and a closed one for < or >.",
+  "example": {
+   "question": "x >= 3 on a number line",
+   "wrong_answer": "an open circle at 3",
+   "correct_answer": "a closed circle at 3"
+  },
+  "cause": "Has the two circles the wrong way round.",
+  "reveals": "The answer an open circle at 3 as a wrong option, with a reason that names the idea.",
+  "help": "Closed (filled) means the number is in: <= and >=.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_SHADED_WRONG_WAY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Shades the wrong side of the circle.",
+  "example": {
+   "question": "x > 3 on a number line",
+   "wrong_answer": "shaded to the left of 3",
+   "correct_answer": "shaded to the right of 3"
+  },
+  "cause": "Follows the way the sign points on the page.",
+  "reveals": "The answer shaded to the left of 3 as a wrong option, with a reason that names the idea.",
+  "help": "Bigger numbers are on the right: x > 3 shades to the right.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_SHADED_EXCLUDED_PART": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Shades the numbers that do not fit, with the opposite circle.",
+  "example": {
+   "question": "x > 3 on a number line",
+   "wrong_answer": "a closed circle at 3, shaded to the left",
+   "correct_answer": "an open circle at 3, shaded to the right"
+  },
+  "cause": "Marks the numbers that are ruled out.",
+  "reveals": "The answer a closed circle at 3, shaded to the left as a wrong option, with a reason that names the idea.",
+  "help": "Shade the numbers that make the inequality true.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_TYPE_FIXED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Believes the circle on a number line is always the same kind.",
+  "example": {
+   "question": "Why is a closed circle wrong for x < 5?",
+   "wrong_answer": "circles are always closed",
+   "correct_answer": "x < 5 does not include 5"
+  },
+  "cause": "Has seen only one kind of circle.",
+  "reveals": "The answer circles are always closed as a wrong option, with a reason that names the idea.",
+  "help": "Two kinds are used: the sign decides which.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_AT_ZERO": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Puts the circle at 0 instead of at the number in the inequality.",
+  "example": {
+   "question": "x > 4 on a number line: where is the circle?",
+   "wrong_answer": "at 0",
+   "correct_answer": "at 4"
+  },
+  "cause": "Starts every number line at 0.",
+  "reveals": "The answer at 0 as a wrong option, with a reason that names the idea.",
+  "help": "The circle goes at the number in the inequality.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_SHOWS_DIRECTION": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Believes the circle shows which way to shade.",
+  "example": {
+   "question": "What does the open circle in x < 5 show?",
+   "wrong_answer": "which way to shade",
+   "correct_answer": "that 5 is not included"
+  },
+  "cause": "Mixes up the two parts of the drawing.",
+  "reveals": "The answer which way to shade as a wrong option, with a reason that names the idea.",
+  "help": "The circle shows if the end number is in; the shading shows the direction.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_OPEN_CIRCLE_INCLUDED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "error": "Counts the number at an open circle as part of the answer.",
+  "example": {
+   "question": "Open circle at 4, shaded right: is 4 in the shading?",
+   "wrong_answer": "yes",
+   "correct_answer": "no"
+  },
+  "cause": "Sees the number at the start of the shading.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "An open circle leaves its number out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_INCLUSIVE_WORD_AS_STRICT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Uses < at an end where the words are \"at least\" or \"at most\".",
+  "example": {
+   "question": "At least 6 and younger than 12",
+   "wrong_answer": "6 < a < 12",
+   "correct_answer": "6 <= a < 12"
+  },
+  "cause": "Thinks every range uses <.",
+  "reveals": "The answer 6 < a < 12 as a wrong option, with a reason that names the idea.",
+  "help": "\"At least 6\" lets 6 in: <= at that end.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_STRICT_WORD_AS_INCLUSIVE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Uses <= at an end where the words are \"older than\", \"younger than\" or \"less than\".",
+  "example": {
+   "question": "Older than 6 and at most 12",
+   "wrong_answer": "6 <= a <= 12",
+   "correct_answer": "6 < a <= 12"
+  },
+  "cause": "Thinks the end numbers always belong.",
+  "reveals": "The answer 6 <= a <= 12 as a wrong option, with a reason that names the idea.",
+  "help": "\"Older than 6\" leaves 6 out: < at that end.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_SIGNS_MEANINGS_SWAPPED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Swaps < and <= at both ends.",
+  "example": {
+   "question": "At least 6 and younger than 12",
+   "wrong_answer": "6 < a <= 12",
+   "correct_answer": "6 <= a < 12"
+  },
+  "cause": "Has the two signs the wrong way round.",
+  "reveals": "The answer 6 < a <= 12 as a wrong option, with a reason that names the idea.",
+  "help": "<= keeps the end in; < leaves it out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_END_MISREAD": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Gets the sign right at one end and wrong at the other.",
+  "example": {
+   "question": "Whole numbers with 2 < x <= 6",
+   "wrong_answer": "2, 3, 4, 5",
+   "correct_answer": "3, 4, 5, 6"
+  },
+  "cause": "Checks the sign at one end only.",
+  "reveals": "The answer 2, 3, 4, 5 as a wrong option, with a reason that names the idea.",
+  "help": "Read each end on its own: is that number in?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_END_VALUE_ALWAYS_IN": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Counts the end values as allowed whatever the signs.",
+  "example": {
+   "question": "Whole numbers with 2 < x < 6",
+   "wrong_answer": "2, 3, 4, 5, 6",
+   "correct_answer": "3, 4, 5"
+  },
+  "cause": "Thinks a range includes its ends.",
+  "reveals": "The answer 2, 3, 4, 5, 6 as a wrong option, with a reason that names the idea.",
+  "help": "< leaves the end out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_END_VALUE_ALWAYS_OUT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Leaves the end values out whatever the signs.",
+  "example": {
+   "question": "Whole numbers with 2 <= x <= 6",
+   "wrong_answer": "3, 4, 5",
+   "correct_answer": "2, 3, 4, 5, 6"
+  },
+  "cause": "Thinks \"between\" never includes the ends.",
+  "reveals": "The answer 3, 4, 5 as a wrong option, with a reason that names the idea.",
+  "help": "<= keeps the end in.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_PART_TESTED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Tests a value against one end only.",
+  "example": {
+   "question": "2 < t <= 8: is 9 allowed?",
+   "wrong_answer": "yes, 9 is more than 2",
+   "correct_answer": "no, 9 is more than 8"
+  },
+  "cause": "Stops after the first part is true.",
+  "reveals": "The answer yes, 9 is more than 2 as a wrong option, with a reason that names the idea.",
+  "help": "A compound inequality has two parts: both must be true.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_OR_WRITTEN_AS_CHAIN": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Writes \"less than 2 or greater than 7\" as one chain, 7 < x < 2.",
+  "example": {
+   "question": "x less than 2 or greater than 7",
+   "wrong_answer": "7 < x < 2",
+   "correct_answer": "x < 2 or x > 7"
+  },
+  "cause": "Thinks a chain can mean outside the two numbers.",
+  "reveals": "The answer 7 < x < 2 as a wrong option, with a reason that names the idea.",
+  "help": "A chain means between; no number is more than 7 and less than 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_SIGN_ONLY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "error": "Believes an inequality can only have one sign.",
+  "example": {
+   "question": "Can 2 < x < 5 be an inequality?",
+   "wrong_answer": "no, only one sign is allowed",
+   "correct_answer": "yes, it is a compound inequality"
+  },
+  "cause": "Has only met simple inequalities.",
+  "reveals": "The answer no, only one sign is allowed as a wrong option, with a reason that names the idea.",
+  "help": "A compound inequality has two signs, one at each end.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_ONE_PART_NOT_CHANGED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND",
+  "error": "Takes the number from the middle and one end only.",
+  "example": {
+   "question": "8 < 2x + 4 <= 20: take 4 away",
+   "wrong_answer": "8 < 2x <= 16",
+   "correct_answer": "4 < 2x <= 16"
+  },
+  "cause": "Treats the chain as two separate sides.",
+  "reveals": "The answer 8 < 2x <= 16 as a wrong option, with a reason that names the idea.",
+  "help": "All three parts: what you do to one, you do to all.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_EXCLUDED_END_LISTED": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND",
+  "error": "Lists the end number that the < sign leaves out.",
+  "example": {
+   "question": "Whole numbers with 2 < x <= 8",
+   "wrong_answer": "2, 3, 4, 5, 6, 7, 8",
+   "correct_answer": "3, 4, 5, 6, 7, 8"
+  },
+  "cause": "Starts the list at the end number.",
+  "reveals": "The answer 2, 3, 4, 5, 6, 7, 8 as a wrong option, with a reason that names the idea.",
+  "help": "< next to 2 means 2 is not allowed.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_DIVIDED_ONE_PART_ONLY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND",
+  "error": "Divides the middle by the number in front of x but not the two ends.",
+  "example": {
+   "question": "4 < 2x <= 16",
+   "wrong_answer": "4 < x <= 16",
+   "correct_answer": "2 < x <= 8"
+  },
+  "cause": "Divides only where the x is.",
+  "reveals": "The answer 4 < x <= 16 as a wrong option, with a reason that names the idea.",
+  "help": "Divide all three parts by 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_CIRCLE_SIGN_MISMATCH": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE",
+  "error": "Writes <= at an open circle or < at a closed one.",
+  "example": {
+   "question": "Closed circle at 1, open circle at 5, shaded between",
+   "wrong_answer": "1 < x <= 5",
+   "correct_answer": "1 <= x < 5"
+  },
+  "cause": "Has the circles and signs the wrong way round.",
+  "reveals": "The answer 1 < x <= 5 as a wrong option, with a reason that names the idea.",
+  "help": "Closed circle: the number is in, <=.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_ONE_CIRCLE_READ": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE",
+  "error": "Reads one circle correctly and the other wrongly.",
+  "example": {
+   "question": "Closed circle at 1, closed circle at 5, shaded between",
+   "wrong_answer": "1 <= x < 5",
+   "correct_answer": "1 <= x <= 5"
+  },
+  "cause": "Looks closely at one end only.",
+  "reveals": "The answer 1 <= x < 5 as a wrong option, with a reason that names the idea.",
+  "help": "Read each circle on its own.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_ENDS_WRITTEN_BACKWARDS": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE",
+  "error": "Puts the bigger number on the left of x.",
+  "example": {
+   "question": "Shaded from 1 to 5",
+   "wrong_answer": "5 < x < 1",
+   "correct_answer": "1 < x < 5"
+  },
+  "cause": "Writes the numbers in the order they were seen.",
+  "reveals": "The answer 5 < x < 1 as a wrong option, with a reason that names the idea.",
+  "help": "Smaller number on the left, as on the number line.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_NEXT_TO_RIGHT_ANGLE": {
   "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
   "error": "Names a side that meets the right angle as the hypotenuse.",
@@ -3818,6 +4294,538 @@
   "cause": "Uses twice the width.",
   "reveals": "The answer 84 as a wrong option, with a reason that names the idea.",
   "help": "Divide one distance round by its width to find the pattern.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_M2_CM2.M_SQUARE_UNIT_FACTOR_NOT_SQUARED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_M2_CM2",
+  "error": "Uses 100 for the cm2 in a square metre.",
+  "example": {
+   "question": "3 m2 in cm2",
+   "wrong_answer": "300",
+   "correct_answer": "30,000"
+  },
+  "cause": "Uses the length conversion for an area.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "A square metre is 100 cm by 100 cm: 10,000 cm2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_M2_CM2.M_CM2_TO_M2_MULTIPLIED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_M2_CM2",
+  "error": "Multiplies by 10,000 when changing cm2 to m2.",
+  "example": {
+   "question": "50,000 cm2 in m2",
+   "wrong_answer": "500,000,000",
+   "correct_answer": "5"
+  },
+  "cause": "Always multiplies when changing units.",
+  "reveals": "The answer 500,000,000 as a wrong option, with a reason that names the idea.",
+  "help": "m2 are bigger, so there are fewer of them: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_FOR_ACRE": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "error": "Uses 10,000 m2, the hectare, for an acre.",
+  "example": {
+   "question": "3 acres in m2 (1 acre = 4,000 m2)",
+   "wrong_answer": "30,000",
+   "correct_answer": "12,000"
+  },
+  "cause": "Mixes the two land units.",
+  "reveals": "The answer 30,000 as a wrong option, with a reason that names the idea.",
+  "help": "Use the acre size the question gives.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_FACTOR_ZERO_DROPPED": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "error": "Multiplies by 400 instead of 4,000.",
+  "example": {
+   "question": "3 acres in m2 (1 acre = 4,000 m2)",
+   "wrong_answer": "1,200",
+   "correct_answer": "12,000"
+  },
+  "cause": "Loses a zero from the conversion number.",
+  "reveals": "The answer 1,200 as a wrong option, with a reason that names the idea.",
+  "help": "Write the 4,000 in full and count the zeros.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_ADDED_FACTOR": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "error": "Adds the conversion number instead of multiplying.",
+  "example": {
+   "question": "3 acres in m2 (1 acre = 4,000 m2)",
+   "wrong_answer": "4,003",
+   "correct_answer": "12,000"
+  },
+  "cause": "Combines the two numbers by adding.",
+  "reveals": "The answer 4,003 as a wrong option, with a reason that names the idea.",
+  "help": "Each acre is 4,000 m2: 3 lots of 4,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_M2_LEFT_UNCONVERTED": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "error": "Gives the area in m2 when hectares are asked.",
+  "example": {
+   "question": "A field 200 m by 150 m in hectares",
+   "wrong_answer": "30,000",
+   "correct_answer": "3"
+  },
+  "cause": "Stops after finding the area.",
+  "reveals": "The answer 30,000 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 10,000 to get hectares.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_AS_100_M2": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "error": "Believes a hectare is 100 m2.",
+  "example": {
+   "question": "A field 200 m by 150 m in hectares",
+   "wrong_answer": "300",
+   "correct_answer": "3"
+  },
+  "cause": "\"Hecto\" means a hundred, so the learner divides by 100.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "A hectare is a square 100 m by 100 m: 10,000 m2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_AS_1000_M2": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "error": "Uses 1,000 m2 for a hectare.",
+  "example": {
+   "question": "30,000 m2 in hectares",
+   "wrong_answer": "30",
+   "correct_answer": "3"
+  },
+  "cause": "Uses 1,000 as for km and kg.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "1 ha = 10,000 m2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_SLANT_SIDE_FOR_HEIGHT": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "error": "Multiplies the base by the slanting side.",
+  "example": {
+   "question": "Base 12 cm, slanting side 9 cm, height 7 cm",
+   "wrong_answer": "108",
+   "correct_answer": "84"
+  },
+  "cause": "Uses the side that is drawn, as for a rectangle.",
+  "reveals": "The answer 108 as a wrong option, with a reason that names the idea.",
+  "help": "The height meets the base at a right angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_HALF_FOR_PARALLELOGRAM": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "error": "Halves base x height as for a triangle.",
+  "example": {
+   "question": "Base 12 cm, height 7 cm",
+   "wrong_answer": "42",
+   "correct_answer": "84"
+  },
+  "cause": "Carries the triangle formula over.",
+  "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+  "help": "A parallelogram is two triangles: no half.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_PERIMETER_FOR_AREA": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "error": "Adds the sides, which gives the perimeter.",
+  "example": {
+   "question": "Base 12 cm, slanting side 9 cm",
+   "wrong_answer": "42",
+   "correct_answer": "84 (with height 7 cm)"
+  },
+  "cause": "Mixes up area and perimeter.",
+  "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+  "help": "Area counts squares inside; perimeter is the distance round.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_SLANT_THOUGHT_SHORTER": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "error": "Believes the slanting side is shorter than the height.",
+  "example": {
+   "question": "Which is longer: the slanting side or the height?",
+   "wrong_answer": "the height",
+   "correct_answer": "the slanting side"
+  },
+  "cause": "Does not see the height as the shortest distance across.",
+  "reveals": "The answer the height as a wrong option, with a reason that names the idea.",
+  "help": "The straight-across distance is the shortest one.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_RHOMBUS_DIAGONALS_NOT_HALVED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "error": "Multiplies the diagonals of a rhombus and does not halve.",
+  "example": {
+   "question": "Rhombus with diagonals 10 cm and 6 cm",
+   "wrong_answer": "60",
+   "correct_answer": "30"
+  },
+  "cause": "Treats the diagonals as the sides of a rectangle.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "The rhombus is half of that rectangle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_TRAPEZIUM_HALF_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "error": "Forgets the half in the trapezium formula.",
+  "example": {
+   "question": "Parallel sides 30 m and 50 m, 20 m apart",
+   "wrong_answer": "1,600",
+   "correct_answer": "800"
+  },
+  "cause": "Multiplies the sum by the height and stops.",
+  "reveals": "The answer 1,600 as a wrong option, with a reason that names the idea.",
+  "help": "Two trapeziums make a parallelogram: take half.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_HEIGHT_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "error": "Gives the average of the parallel sides as the area.",
+  "example": {
+   "question": "Parallel sides 30 m and 50 m, 20 m apart",
+   "wrong_answer": "40",
+   "correct_answer": "800"
+  },
+  "cause": "Stops after halving the sum.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by the height too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_ONE_PARALLEL_SIDE_USED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "error": "Uses one parallel side only.",
+  "example": {
+   "question": "Parallel sides 30 m and 50 m, 20 m apart",
+   "wrong_answer": "600",
+   "correct_answer": "800"
+  },
+  "cause": "Treats the shape as a rectangle.",
+  "reveals": "The answer 600 as a wrong option, with a reason that names the idea.",
+  "help": "Both parallel sides are added.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_HALF_NOT_UNDONE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "error": "Divides the area by the height without doubling first.",
+  "example": {
+   "question": "Area 120 m2, height 8 m: sum of parallel sides",
+   "wrong_answer": "15",
+   "correct_answer": "30"
+  },
+  "cause": "Forgets the half when working back.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Undo the half: double the area first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_KNOWN_SIDE_ADDED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "error": "Adds the known side to the sum to find the other side.",
+  "example": {
+   "question": "Sum of parallel sides 30 m, one side 12 m: the other",
+   "wrong_answer": "42",
+   "correct_answer": "18"
+  },
+  "cause": "Adds the numbers in the question.",
+  "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+  "help": "Take the known side from the sum.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_DOUBLED_NOT_HALVED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "error": "Doubles the product instead of halving it.",
+  "example": {
+   "question": "(12 + 8) x 6: then?",
+   "wrong_answer": "240",
+   "correct_answer": "60"
+  },
+  "cause": "Remembers a 2 but not what to do with it.",
+  "reveals": "The answer 240 as a wrong option, with a reason that names the idea.",
+  "help": "Half of (sum x height).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT.M_TILES_ALONG_SIDES_ADDED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT",
+  "error": "Counts the tiles along two sides and adds them.",
+  "example": {
+   "question": "Floor 4 m by 3 m, tiles 50 cm",
+   "wrong_answer": "14",
+   "correct_answer": "48"
+  },
+  "cause": "Counts round the edge, not over the floor.",
+  "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+  "help": "Rows times columns: 8 x 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT.M_AREAS_IN_DIFFERENT_UNITS": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT",
+  "error": "Gives the floor area in m2 as the number of tiles.",
+  "example": {
+   "question": "Floor 4 m by 3 m, tiles 50 cm",
+   "wrong_answer": "12",
+   "correct_answer": "48"
+  },
+  "cause": "Does not compare the floor with one tile.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Floor area divided by one tile, both in cm2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_DIAMETER_FOR_RADIUS_AREA": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "error": "Uses the diameter in place of the radius.",
+  "example": {
+   "question": "Circle diameter 14 m",
+   "wrong_answer": "616",
+   "correct_answer": "154"
+  },
+  "cause": "Forgets to halve the width.",
+  "reveals": "The answer 616 as a wrong option, with a reason that names the idea.",
+  "help": "The radius is half the diameter.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_CIRCUMFERENCE_FOR_AREA": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "error": "Works out pi x d, the distance round, for the area.",
+  "example": {
+   "question": "Circle diameter 14 m",
+   "wrong_answer": "44",
+   "correct_answer": "154"
+  },
+  "cause": "Mixes the two circle formulas.",
+  "reveals": "The answer 44 as a wrong option, with a reason that names the idea.",
+  "help": "Area = pi x r x r.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_RADIUS_NOT_SQUARED_AREA": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "error": "Multiplies pi by the radius once.",
+  "example": {
+   "question": "Circle radius 7 m",
+   "wrong_answer": "22",
+   "correct_answer": "154"
+  },
+  "cause": "Leaves out the second r.",
+  "reveals": "The answer 22 as a wrong option, with a reason that names the idea.",
+  "help": "Area has r x r.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_SEMICIRCLE_NOT_HALVED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "error": "Gives the whole circle for a half circle.",
+  "example": {
+   "question": "Half circle, straight edge 14 cm",
+   "wrong_answer": "154",
+   "correct_answer": "77"
+  },
+  "cause": "Forgets the shape is half a circle.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "Halve the full circle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_AREA_SCALES_LIKE_LENGTH": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "error": "Believes doubling the radius doubles the area.",
+  "example": {
+   "question": "Radius 7 cm and radius 14 cm: how many times the area?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "The distance round doubles, so the learner thinks the area does.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "r x r: 2 x 2 = 4 times.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_PI_AS_SCALE_FACTOR": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "error": "Believes pi changes how much the area grows.",
+  "example": {
+   "question": "Radius doubled: how many times the area?",
+   "wrong_answer": "3, because pi is about 3",
+   "correct_answer": "4"
+  },
+  "cause": "Sees pi as the number that grows.",
+  "reveals": "The answer 3, because pi is about 3 as a wrong option, with a reason that names the idea.",
+  "help": "pi is the same in both circles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE.M_CIRCUMFERENCE_HALVED_FOR_DIAMETER": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE",
+  "error": "Halves the circumference to get the diameter.",
+  "example": {
+   "question": "Circumference 88 m: diameter",
+   "wrong_answer": "44",
+   "correct_answer": "28"
+  },
+  "cause": "Mixes up halving with dividing by pi.",
+  "reveals": "The answer 44 as a wrong option, with a reason that names the idea.",
+  "help": "Circumference = pi x d: divide by 22/7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE.M_DIAMETER_DOUBLED_FOR_RADIUS": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE",
+  "error": "Doubles the diameter to get the radius.",
+  "example": {
+   "question": "Diameter 28 m: radius",
+   "wrong_answer": "56",
+   "correct_answer": "14"
+  },
+  "cause": "Has the radius and diameter the wrong way round.",
+  "reveals": "The answer 56 as a wrong option, with a reason that names the idea.",
+  "help": "The radius is the shorter one: half the diameter.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_BORDER_CORNERS_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+  "error": "Multiplies the perimeter of the garden by the path width.",
+  "example": {
+   "question": "Garden 12 m by 8 m, path 1 m wide",
+   "wrong_answer": "40",
+   "correct_answer": "44"
+  },
+  "cause": "Leaves out the four corner squares.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Outer rectangle minus the garden.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_BORDER_WIDTH_ADDED_ONCE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+  "error": "Adds the path width once to each side length.",
+  "example": {
+   "question": "Garden 12 m by 8 m, path 1 m wide",
+   "wrong_answer": "21",
+   "correct_answer": "44"
+  },
+  "cause": "Forgets the path is on both ends.",
+  "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+  "help": "Each length grows by twice the width.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_NOT_SUBTRACTED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+  "error": "Gives the area of the whole outer shape.",
+  "example": {
+   "question": "Garden 12 m by 8 m, path 1 m wide",
+   "wrong_answer": "140",
+   "correct_answer": "44"
+  },
+  "cause": "Stops after the outer shape.",
+  "reveals": "The answer 140 as a wrong option, with a reason that names the idea.",
+  "help": "Take the inner shape away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_WIDTH_ADDED_TWICE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+  "error": "Adds the path width twice to the radius of a pond.",
+  "example": {
+   "question": "Pond radius 7 m, path 7 m wide: outer radius",
+   "wrong_answer": "21",
+   "correct_answer": "14"
+  },
+  "cause": "Carries over the rectangle rule (twice the width).",
+  "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+  "help": "The radius crosses the path once.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING.M_INNER_RADIUS_USED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+  "error": "Uses the pond radius for the big circle.",
+  "example": {
+   "question": "Pond radius 7 m, path 7 m: area of pond and path",
+   "wrong_answer": "154",
+   "correct_answer": "616"
+  },
+  "cause": "Uses the first radius in the question.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "The big circle has the bigger radius.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_RADII_SUBTRACTED_FIRST": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+  "error": "Takes the radii away first and finds the area of a circle of that radius.",
+  "example": {
+   "question": "Pond radius 7 m, path 7 m: area of the path",
+   "wrong_answer": "154",
+   "correct_answer": "462"
+  },
+  "cause": "Treats the path as a small circle of its own width.",
+  "reveals": "The answer 154 as a wrong option, with a reason that names the idea.",
+  "help": "Big circle minus small circle: 616 - 154.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_SIDES_ADDED_FOR_AREA": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES",
+  "error": "Adds two sides of a rectangle for its area.",
+  "example": {
+   "question": "A rectangle 4 m by 3 m",
+   "wrong_answer": "7",
+   "correct_answer": "12"
+  },
+  "cause": "Adds instead of multiplying.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Area = length x width.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_PARTS_MULTIPLIED_NOT_ADDED": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES",
+  "error": "Multiplies the areas of the two parts.",
+  "example": {
+   "question": "Parts of 40 m2 and 12 m2",
+   "wrong_answer": "480",
+   "correct_answer": "52"
+  },
+  "cause": "Sees two numbers and multiplies.",
+  "reveals": "The answer 480 as a wrong option, with a reason that names the idea.",
+  "help": "The parts together: add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_COST_ON_PART_ONLY": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES",
+  "error": "Works out the cost for one part only.",
+  "example": {
+   "question": "Parts 40 m2 and 12 m2 at sh 100 a m2",
+   "wrong_answer": "sh 4,000",
+   "correct_answer": "sh 5,200"
+  },
+  "cause": "Uses the first area found.",
+  "reveals": "The answer sh 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Cost the whole floor.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
@@ -4899,6 +5907,1280 @@
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PROFIT_ON_ONE_UNIT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the profit on one kilogram as the whole profit.",
+  "example": {
+   "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+   "wrong_answer": "sh 20",
+   "correct_answer": "sh 600"
+  },
+  "cause": "Finds the difference in price and stops.",
+  "reveals": "The answer sh 20 as a wrong option, with a reason that names the idea.",
+  "help": "Every kilogram makes sh 20: times 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_AS_PROFIT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the money from selling as the profit.",
+  "example": {
+   "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+   "wrong_answer": "sh 2,400",
+   "correct_answer": "sh 600"
+  },
+  "cause": "Thinks all money taken in is profit.",
+  "reveals": "The answer sh 2,400 as a wrong option, with a reason that names the idea.",
+  "help": "Profit is what is left after the cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_COST_AS_PROFIT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the cost of buying as the profit.",
+  "example": {
+   "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+   "wrong_answer": "sh 1,800",
+   "correct_answer": "sh 600"
+  },
+  "cause": "Picks one of the totals worked out.",
+  "reveals": "The answer sh 1,800 as a wrong option, with a reason that names the idea.",
+  "help": "Profit = selling money - cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_BUYING_PRICE_AS_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the buying price as the loss.",
+  "example": {
+   "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+   "wrong_answer": "sh 2,500",
+   "correct_answer": "sh 300"
+  },
+  "cause": "Thinks the money paid is lost.",
+  "reveals": "The answer sh 2,500 as a wrong option, with a reason that names the idea.",
+  "help": "Only the difference is lost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_PRICE_AS_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Gives the selling price as the loss.",
+  "example": {
+   "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+   "wrong_answer": "sh 2,200",
+   "correct_answer": "sh 300"
+  },
+  "cause": "Reads the last number in the story.",
+  "reveals": "The answer sh 2,200 as a wrong option, with a reason that names the idea.",
+  "help": "Compare it with the buying price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PRICES_ADDED_FOR_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "error": "Adds the buying and selling prices.",
+  "example": {
+   "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+   "wrong_answer": "sh 4,700",
+   "correct_answer": "sh 300"
+  },
+  "cause": "Combines the two prices by adding.",
+  "reveals": "The answer sh 4,700 as a wrong option, with a reason that names the idea.",
+  "help": "A loss is a difference: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_EXTRA_COST_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS",
+  "error": "Leaves the delivery or transport cost out of the total cost.",
+  "example": {
+   "question": "40 bags at sh 700, delivery sh 1,500, sold at sh 800: profit",
+   "wrong_answer": "sh 4,000",
+   "correct_answer": "sh 2,500"
+  },
+  "cause": "Counts only the price of the goods as cost.",
+  "reveals": "The answer sh 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Every shilling spent to get the goods is a cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_ONE_ITEM_FOR_ALL": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS",
+  "error": "Gives the price of one bag as the money from selling all.",
+  "example": {
+   "question": "40 bags sold at sh 800 each: money from selling",
+   "wrong_answer": "sh 800",
+   "correct_answer": "sh 32,000"
+  },
+  "cause": "Forgets to multiply by the number sold.",
+  "reveals": "The answer sh 800 as a wrong option, with a reason that names the idea.",
+  "help": "Times the number of bags.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PERCENT_ON_SELLING_PRICE": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Takes the percentage on the selling price.",
+  "example": {
+   "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+   "wrong_answer": "20%",
+   "correct_answer": "25%"
+  },
+  "cause": "Divides by the bigger, last price.",
+  "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+  "help": "Percentage profit is on the buying price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PROFIT_AMOUNT_AS_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Gives the profit in shillings as the percentage.",
+  "example": {
+   "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+   "wrong_answer": "500",
+   "correct_answer": "25%"
+  },
+  "cause": "Stops at the profit.",
+  "reveals": "The answer 500 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the buying price and multiply by 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_SELLING_OVER_BUYING_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Writes the selling price as a percentage of the buying price.",
+  "example": {
+   "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+   "wrong_answer": "125%",
+   "correct_answer": "25%"
+  },
+  "cause": "Compares the two prices instead of the profit.",
+  "reveals": "The answer 125% as a wrong option, with a reason that names the idea.",
+  "help": "Find the profit first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_NOT_MULTIPLIED_BY_100": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Writes the decimal as the percentage.",
+  "example": {
+   "question": "500 / 2,000 = 0.25: percentage",
+   "wrong_answer": "0.25%",
+   "correct_answer": "25%"
+  },
+  "cause": "Puts a % sign on the decimal.",
+  "reveals": "The answer 0.25% as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 100 to make a percentage.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_BIGGEST_AMOUNT_AS_BIGGEST_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "error": "Chooses the item with the biggest profit in shillings as the best percentage.",
+  "example": {
+   "question": "Bag: bought 400, sold 600. Jacket: bought 2,000, sold 2,400. Best percentage?",
+   "wrong_answer": "Jacket",
+   "correct_answer": "Bag (50% against 20%)"
+  },
+  "cause": "Compares shillings, not percentages.",
+  "reveals": "The answer Jacket as a wrong option, with a reason that names the idea.",
+  "help": "Each profit over its own buying price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SUCCESSIVE_DISCOUNTS_ADDED": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Adds two discounts one after another as one percentage.",
+  "example": {
+   "question": "20% off, then 10% off the new price: total discount",
+   "wrong_answer": "30%",
+   "correct_answer": "28%"
+  },
+  "cause": "Treats both percentages as of the first price.",
+  "reveals": "The answer 30% as a wrong option, with a reason that names the idea.",
+  "help": "The second is on the smaller price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNTS_NOT_COMBINABLE": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Believes two discounts cannot be combined.",
+  "example": {
+   "question": "20% off, then 10% off: can we find the total?",
+   "wrong_answer": "no",
+   "correct_answer": "yes, 28%"
+  },
+  "cause": "Has not seen the steps done one after another.",
+  "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+  "help": "Take one off, then the other off what is left.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SECOND_DISCOUNT_IGNORED": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Leaves out the second discount.",
+  "example": {
+   "question": "20% off, then 10% off: total discount",
+   "wrong_answer": "20%",
+   "correct_answer": "28%"
+  },
+  "cause": "Thinks only the first discount counts.",
+  "reveals": "The answer 20% as a wrong option, with a reason that names the idea.",
+  "help": "The second takes money off too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNT_AS_PRICE_PAID": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "error": "Gives the discount as the price to pay.",
+  "example": {
+   "question": "Marked sh 1,000, 20% off: price paid",
+   "wrong_answer": "sh 200",
+   "correct_answer": "sh 800"
+  },
+  "cause": "Stops after finding 20%.",
+  "reveals": "The answer sh 200 as a wrong option, with a reason that names the idea.",
+  "help": "Take the discount off the marked price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_DISCOUNT_ADDED_BACK_ON_PAID": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "error": "Adds the discount percentage to the price paid.",
+  "example": {
+   "question": "Paid sh 800 after 20% off: marked price",
+   "wrong_answer": "sh 960",
+   "correct_answer": "sh 1,000"
+  },
+  "cause": "Takes 20% of the price paid instead of the marked price.",
+  "reveals": "The answer sh 960 as a wrong option, with a reason that names the idea.",
+  "help": "sh 800 is 80% of the marked price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PERCENT_AS_SHILLINGS": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "error": "Adds the percentage as shillings.",
+  "example": {
+   "question": "Paid sh 800 after 20% off: marked price",
+   "wrong_answer": "sh 820",
+   "correct_answer": "sh 1,000"
+  },
+  "cause": "Reads 20% as sh 20.",
+  "reveals": "The answer sh 820 as a wrong option, with a reason that names the idea.",
+  "help": "A percentage is a part of an amount.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PAID_AS_DISCOUNT_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "error": "Treats the price paid as the discount percentage of the marked price.",
+  "example": {
+   "question": "Paid sh 800 after 20% off: marked price",
+   "wrong_answer": "sh 4,000",
+   "correct_answer": "sh 1,000"
+  },
+  "cause": "Uses the discount rate as the paid part.",
+  "reveals": "The answer sh 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "Paid = 100% - 20% = 80%.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_ALL_SALES": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Works out commission on all the sales when it is only above a target.",
+  "example": {
+   "question": "3% on sales above sh 100,000; sales sh 250,000",
+   "wrong_answer": "sh 7,500",
+   "correct_answer": "sh 4,500"
+  },
+  "cause": "Misses the words \"above\".",
+  "reveals": "The answer sh 7,500 as a wrong option, with a reason that names the idea.",
+  "help": "Take the target off first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_BASIC_SALARY_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Gives the commission alone as the pay.",
+  "example": {
+   "question": "Basic sh 20,000 plus commission sh 4,500: pay",
+   "wrong_answer": "sh 4,500",
+   "correct_answer": "sh 24,500"
+  },
+  "cause": "Stops after the commission.",
+  "reveals": "The answer sh 4,500 as a wrong option, with a reason that names the idea.",
+  "help": "Pay = basic + commission.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_TARGET": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Works out commission on the target instead of the sales above it.",
+  "example": {
+   "question": "3% on sales above sh 100,000; sales sh 250,000",
+   "wrong_answer": "sh 3,000",
+   "correct_answer": "sh 4,500"
+  },
+  "cause": "Uses the target as the sales.",
+  "reveals": "The answer sh 3,000 as a wrong option, with a reason that names the idea.",
+  "help": "The part above the target: 250,000 - 100,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION.M_PERCENT_AS_TENTHS": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "error": "Divides the rate by 10 instead of 100.",
+  "example": {
+   "question": "5% as a decimal",
+   "wrong_answer": "0.5",
+   "correct_answer": "0.05"
+  },
+  "cause": "Moves the point one place.",
+  "reveals": "The answer 0.5 as a wrong option, with a reason that names the idea.",
+  "help": "Per cent means out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_READING_FOR_UNITS_USED": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Uses this month's meter reading as the units used.",
+  "example": {
+   "question": "Readings 2,340 and 2,420, sh 25 a unit",
+   "wrong_answer": "2,420 units",
+   "correct_answer": "80 units"
+  },
+  "cause": "Reads the meter as the month's use.",
+  "reveals": "The answer 2,420 units as a wrong option, with a reason that names the idea.",
+  "help": "Units used = new reading - old reading.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIXED_CHARGE_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Leaves the fixed charge off the bill.",
+  "example": {
+   "question": "80 units at sh 25 and a fixed charge of sh 200",
+   "wrong_answer": "sh 2,000",
+   "correct_answer": "sh 2,200"
+  },
+  "cause": "Stops after the units.",
+  "reveals": "The answer sh 2,000 as a wrong option, with a reason that names the idea.",
+  "help": "Add the fixed charge.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_BILL_PARTS_ADDED": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Adds the units, the rate and the fixed charge.",
+  "example": {
+   "question": "80 units at sh 25 and a fixed charge of sh 200",
+   "wrong_answer": "sh 305",
+   "correct_answer": "sh 2,200"
+  },
+  "cause": "Adds every number on the bill.",
+  "reveals": "The answer sh 305 as a wrong option, with a reason that names the idea.",
+  "help": "Units times the rate, then add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_TOP_RATE_FOR_ALL_UNITS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Charges every unit at the top band rate.",
+  "example": {
+   "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+   "wrong_answer": "sh 1,750",
+   "correct_answer": "sh 1,300"
+  },
+  "cause": "Uses the band the total falls in for all units.",
+  "reveals": "The answer sh 1,750 as a wrong option, with a reason that names the idea.",
+  "help": "Each band has its own rate.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIRST_RATE_FOR_ALL_UNITS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Charges every unit at the first band rate.",
+  "example": {
+   "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+   "wrong_answer": "sh 1,000",
+   "correct_answer": "sh 1,300"
+  },
+  "cause": "Uses the first rate in the table.",
+  "reveals": "The answer sh 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "Only the first 10 cost 40.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_CHARGES_NOT_TAKEN_FIRST": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Divides all the token money by the unit price.",
+  "example": {
+   "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+   "wrong_answer": "40",
+   "correct_answer": "36"
+  },
+  "cause": "Forgets the charges come off first.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Take the charges off first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_MONEY_LEFT_AS_UNITS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "error": "Gives the money left after charges as the number of units.",
+  "example": {
+   "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+   "wrong_answer": "900",
+   "correct_answer": "36"
+  },
+  "cause": "Stops before dividing.",
+  "reveals": "The answer 900 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the price of one unit.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_QUANTITY_IGNORED_ON_BILL": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "error": "Adds the prices without multiplying by the number bought.",
+  "example": {
+   "question": "2 loaves at 60 and 3 kg of sugar at 150; paid with sh 1,000",
+   "wrong_answer": "sh 790",
+   "correct_answer": "sh 430"
+  },
+  "cause": "Reads only the price column.",
+  "reveals": "The answer sh 790 as a wrong option, with a reason that names the idea.",
+  "help": "Line cost = number x price each.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_TOTAL_GIVEN_AS_CHANGE": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "error": "Gives the total of the bill as the change.",
+  "example": {
+   "question": "Total sh 570, paid with sh 1,000",
+   "wrong_answer": "sh 570",
+   "correct_answer": "sh 430"
+  },
+  "cause": "Stops after the total.",
+  "reveals": "The answer sh 570 as a wrong option, with a reason that names the idea.",
+  "help": "Change = note - total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_BILL_ADDED_TO_NOTE": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "error": "Adds the bill to the note.",
+  "example": {
+   "question": "Total sh 570, paid with sh 1,000",
+   "wrong_answer": "sh 1,570",
+   "correct_answer": "sh 430"
+  },
+  "cause": "Combines the two amounts by adding.",
+  "reveals": "The answer sh 1,570 as a wrong option, with a reason that names the idea.",
+  "help": "Change is what is left: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_LINE_TOTAL_NOT_MULTIPLIED": {
+  "skill": "MATH.G7.MEASUR.MONEY.PREPARE_BILL",
+  "error": "Writes the price of one item as the line total.",
+  "example": {
+   "question": "3 kg of rice at sh 180 a kg: line total",
+   "wrong_answer": "sh 180",
+   "correct_answer": "sh 540"
+  },
+  "cause": "Copies the price column.",
+  "reveals": "The answer sh 180 as a wrong option, with a reason that names the idea.",
+  "help": "Quantity x unit price.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_UNIT_PRICE_MISMATCHED": {
+  "skill": "MATH.G7.MEASUR.MONEY.PREPARE_BILL",
+  "error": "Multiplies a price per kilogram by a mass in grams.",
+  "example": {
+   "question": "500 g of sugar at sh 160 a kg",
+   "wrong_answer": "sh 80,000",
+   "correct_answer": "sh 80"
+  },
+  "cause": "Does not match the units.",
+  "reveals": "The answer sh 80,000 as a wrong option, with a reason that names the idea.",
+  "help": "500 g is 0.5 kg.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_PARCELS_CHARGED_TOGETHER": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Adds the masses and charges one band for parcels posted separately.",
+  "example": {
+   "question": "Parcels of 300 g, 800 g and 1.5 kg posted one after another",
+   "wrong_answer": "one charge for 2.6 kg",
+   "correct_answer": "three charges added"
+  },
+  "cause": "Treats the parcels as one.",
+  "reveals": "The answer one charge for 2.6 kg as a wrong option, with a reason that names the idea.",
+  "help": "Each parcel is charged by its own mass.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_HEAVIEST_RATE_FOR_ALL": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Charges every parcel at the rate of the heaviest.",
+  "example": {
+   "question": "Parcels of 300 g, 800 g and 1.5 kg",
+   "wrong_answer": "three times the 1.5 kg charge",
+   "correct_answer": "each parcel its own charge"
+  },
+  "cause": "Uses one band for all.",
+  "reveals": "The answer three times the 1.5 kg charge as a wrong option, with a reason that names the idea.",
+  "help": "Look up each parcel.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_CHARGE_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Charges every 100 g at the extra rate and leaves out the first charge.",
+  "example": {
+   "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+   "wrong_answer": "sh 180",
+   "correct_answer": "sh 230"
+  },
+  "cause": "Forgets the first part has its own price.",
+  "reveals": "The answer sh 180 as a wrong option, with a reason that names the idea.",
+  "help": "First 100 g: sh 80.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_RATE_FOR_ALL_PARTS": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Charges every 100 g at the first rate.",
+  "example": {
+   "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+   "wrong_answer": "sh 480",
+   "correct_answer": "sh 230"
+  },
+  "cause": "Uses the first price for all parts.",
+  "reveals": "The answer sh 480 as a wrong option, with a reason that names the idea.",
+  "help": "Only the first part costs sh 80.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_COUNTED_AS_EXTRA": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "error": "Counts the first 100 g as an extra part as well.",
+  "example": {
+   "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+   "wrong_answer": "sh 260",
+   "correct_answer": "sh 230"
+  },
+  "cause": "Counts all six parts as extra.",
+  "reveals": "The answer sh 260 as a wrong option, with a reason that names the idea.",
+  "help": "600 g has 5 extra parts after the first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_PAYBILL_TILL_CONFUSED": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "error": "Uses a till (buy goods) to pay a school fee paybill, or leaves out the account number.",
+  "example": {
+   "question": "Pay school fees to a paybill",
+   "wrong_answer": "use a till number",
+   "correct_answer": "paybill number and the learner's account number"
+  },
+  "cause": "Thinks the two pay services are the same.",
+  "reveals": "The answer use a till number as a wrong option, with a reason that names the idea.",
+  "help": "A paybill needs an account number; a till is for paying a shop.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_SEND_FOR_WITHDRAW": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "error": "Confuses sending money to a person with withdrawing cash at an agent.",
+  "example": {
+   "question": "Get cash from your account",
+   "wrong_answer": "send money to the agent",
+   "correct_answer": "withdraw at an agent"
+  },
+  "cause": "Sees both as money leaving the account.",
+  "reveals": "The answer send money to the agent as a wrong option, with a reason that names the idea.",
+  "help": "Withdraw gives you cash; send moves money to another account.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_ALL_SERVICES_FREE": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "error": "Believes every mobile money service is free.",
+  "example": {
+   "question": "Which costs a charge: sending sh 1,500 or depositing sh 1,500?",
+   "wrong_answer": "neither",
+   "correct_answer": "sending"
+  },
+  "cause": "Does not see the charge in the message.",
+  "reveals": "The answer neither as a wrong option, with a reason that names the idea.",
+  "help": "Sending and withdrawing carry charges; depositing usually does not.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_SENDS_CHARGED_TOGETHER": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Charges two separate sends as one send of the total.",
+  "example": {
+   "question": "Send sh 400, later sh 1,200: charges",
+   "wrong_answer": "one charge for sh 1,600",
+   "correct_answer": "two charges added"
+  },
+  "cause": "Adds the amounts first.",
+  "reveals": "The answer one charge for sh 1,600 as a wrong option, with a reason that names the idea.",
+  "help": "Each send has its own charge.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_ONE_CHARGE_FOR_TWO_SENDS": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Gives only the bigger send's charge.",
+  "example": {
+   "question": "Send sh 400, later sh 1,200: charges",
+   "wrong_answer": "the sh 1,200 charge only",
+   "correct_answer": "both charges"
+  },
+  "cause": "Counts one charge.",
+  "reveals": "The answer the sh 1,200 charge only as a wrong option, with a reason that names the idea.",
+  "help": "Two sends: two charges.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAW_CHARGE_LEFT_OUT": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Takes the amount withdrawn but not the charge from the balance.",
+  "example": {
+   "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+   "wrong_answer": "sh 1,800",
+   "correct_answer": "sh 1,757"
+  },
+  "cause": "Forgets the charge comes from the account.",
+  "reveals": "The answer sh 1,800 as a wrong option, with a reason that names the idea.",
+  "help": "Take both away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAWN_AMOUNT_NOT_TAKEN": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Takes only the charge from the balance.",
+  "example": {
+   "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+   "wrong_answer": "sh 2,957",
+   "correct_answer": "sh 1,757"
+  },
+  "cause": "Thinks only the charge is paid.",
+  "reveals": "The answer sh 2,957 as a wrong option, with a reason that names the idea.",
+  "help": "The cash taken out leaves the account too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_CHARGE_TAKEN_FROM_CASH": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "error": "Takes the charge from the cash withdrawn, answering how much cash is received.",
+  "example": {
+   "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43: balance",
+   "wrong_answer": "sh 1,157",
+   "correct_answer": "sh 1,757"
+  },
+  "cause": "Thinks the agent keeps the charge from the cash.",
+  "reveals": "The answer sh 1,157 as a wrong option, with a reason that names the idea.",
+  "help": "The question is the balance: start from sh 3,000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_GIVEN_AS_ANGLE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "error": "Gives the value of x as the angle.",
+  "example": {
+   "question": "(3x + 10) and (2x + 20) on a line: larger angle",
+   "wrong_answer": "30",
+   "correct_answer": "100"
+  },
+  "cause": "Stops after solving for x.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Put x back into each angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_TERMS_NOT_COLLECTED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "error": "Uses only one of the x terms.",
+  "example": {
+   "question": "(3x + 10) and (2x + 20) on a line: find x",
+   "wrong_answer": "50",
+   "correct_answer": "30"
+  },
+  "cause": "Sees 3x and divides by 3.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "There are 3x and 2x: 5x in all.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_LINE_SUM_360": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "error": "Uses 360 for angles on a straight line.",
+  "example": {
+   "question": "One angle on a line is 70: the other",
+   "wrong_answer": "290",
+   "correct_answer": "110"
+  },
+  "cause": "Mixes the line with a full turn.",
+  "reveals": "The answer 290 as a wrong option, with a reason that names the idea.",
+  "help": "A straight line is a half turn: 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_AS_SUPPLEMENTARY": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "error": "Takes the opposite angle from 180.",
+  "example": {
+   "question": "Two lines cross; one angle is 50: the opposite angle",
+   "wrong_answer": "130",
+   "correct_answer": "50"
+  },
+  "cause": "Uses the straight-line rule for the opposite angle.",
+  "reveals": "The answer 130 as a wrong option, with a reason that names the idea.",
+  "help": "The angle beside it is 130; the one across is 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_FROM_FULL_TURN": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "error": "Takes the opposite angle from 360.",
+  "example": {
+   "question": "Two lines cross; one angle is 50: the opposite angle",
+   "wrong_answer": "310",
+   "correct_answer": "50"
+  },
+  "cause": "Uses the rule for angles at a point.",
+  "reveals": "The answer 310 as a wrong option, with a reason that names the idea.",
+  "help": "Two opposite angles are not the whole turn.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_CROSSING_ALWAYS_RIGHT_ANGLE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "error": "Believes two crossing lines always make right angles.",
+  "example": {
+   "question": "Two lines cross; one angle is 50: the opposite angle",
+   "wrong_answer": "90",
+   "correct_answer": "50"
+  },
+  "cause": "Has seen crossing lines drawn square.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Lines can cross at any angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_KNOWN_SUM_AS_ANSWER": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+  "error": "Gives the sum of the known angles as the missing one.",
+  "example": {
+   "question": "Angles 80, 90 and 100 at a point: the fourth",
+   "wrong_answer": "270",
+   "correct_answer": "90"
+  },
+  "cause": "Adds what is given and stops.",
+  "reveals": "The answer 270 as a wrong option, with a reason that names the idea.",
+  "help": "Take the sum from 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_POINT_AS_STRAIGHT_LINE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+  "error": "Uses 180 for the angles round a point.",
+  "example": {
+   "question": "Angles 80, 90 and 100 at a point: the fourth",
+   "wrong_answer": "100 (from 180 - 80)",
+   "correct_answer": "90"
+  },
+  "cause": "Uses the straight-line total.",
+  "reveals": "The answer 100 (from 180 - 80) as a wrong option, with a reason that names the idea.",
+  "help": "Round a point is a full turn: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_EQUAL_PAIR_AS_SUPPLEMENTARY": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Takes an alternate or corresponding angle from 180.",
+  "example": {
+   "question": "Alternate to a 62 degree angle",
+   "wrong_answer": "118",
+   "correct_answer": "62"
+  },
+  "cause": "Thinks every pair on parallel lines adds to 180.",
+  "reveals": "The answer 118 as a wrong option, with a reason that names the idea.",
+  "help": "Alternate and corresponding angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_AS_EQUAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Believes co-interior angles are equal.",
+  "example": {
+   "question": "Co-interior to a 62 degree angle",
+   "wrong_answer": "62",
+   "correct_answer": "118"
+  },
+  "cause": "Thinks every pair on parallel lines is equal.",
+  "reveals": "The answer 62 as a wrong option, with a reason that names the idea.",
+  "help": "Co-interior angles add to 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_ALTERNATE_CORRESPONDING_MIXED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Gives the right size but names alternate for corresponding or the other way.",
+  "example": {
+   "question": "x is in the matching place at the other crossing",
+   "wrong_answer": "alternate angles",
+   "correct_answer": "corresponding angles"
+  },
+  "cause": "Both are equal, so the names blur.",
+  "reveals": "The answer alternate angles as a wrong option, with a reason that names the idea.",
+  "help": "Alternate: opposite sides, between the lines (a Z). Corresponding: the same place at each crossing (an F).",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_VERTICAL_ACROSS_CROSSINGS": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Calls angles at two different crossings vertically opposite.",
+  "example": {
+   "question": "x is at the other crossing",
+   "wrong_answer": "vertically opposite",
+   "correct_answer": "alternate"
+  },
+  "cause": "Thinks any equal angles are vertically opposite.",
+  "reveals": "The answer vertically opposite as a wrong option, with a reason that names the idea.",
+  "help": "Vertically opposite angles are at one crossing.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_WRONG_TOTAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Uses 360 or 90 as the total of co-interior angles.",
+  "example": {
+   "question": "Co-interior to 70: x",
+   "wrong_answer": "290",
+   "correct_answer": "110"
+  },
+  "cause": "Mixes the rule with angles at a point or a right angle.",
+  "reveals": "The answer 290 as a wrong option, with a reason that names the idea.",
+  "help": "Co-interior angles make a straight angle: 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COMPLEMENT_USED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Takes the angle from 90.",
+  "example": {
+   "question": "Alternate to a 60 degree angle",
+   "wrong_answer": "30",
+   "correct_answer": "60"
+  },
+  "cause": "Uses a right angle as the total.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Alternate angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_POINT_RULE_FOR_PARALLEL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "error": "Uses the 360 at a point for angles that are at different places.",
+  "example": {
+   "question": "Why do co-interior angles 70 and 110 fit?",
+   "wrong_answer": "angles round a point add to 360",
+   "correct_answer": "co-interior angles add to 180"
+  },
+  "cause": "Reaches for the rule that has a total in it.",
+  "reveals": "The answer angles round a point add to 360 as a wrong option, with a reason that names the idea.",
+  "help": "These angles do not meet at one point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_OPPOSITE_NEIGHBOUR_MIXED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Takes the opposite angle of a parallelogram from 180.",
+  "example": {
+   "question": "Parallelogram, angle P = 70: angle R (opposite)",
+   "wrong_answer": "110",
+   "correct_answer": "70"
+  },
+  "cause": "Mixes up opposite and neighbouring corners.",
+  "reveals": "The answer 110 as a wrong option, with a reason that names the idea.",
+  "help": "Opposite angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_ANGLES_EQUAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Believes neighbouring angles of a parallelogram are equal.",
+  "example": {
+   "question": "Parallelogram, angle P = 70: angle Q (next to P)",
+   "wrong_answer": "70",
+   "correct_answer": "110"
+  },
+  "cause": "Thinks all the angles of a parallelogram match.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Neighbours are co-interior: they add to 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_FROM_FULL_TURN": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Takes the neighbouring angle from 360.",
+  "example": {
+   "question": "Parallelogram, angle P = 70: angle Q",
+   "wrong_answer": "290",
+   "correct_answer": "110"
+  },
+  "cause": "Uses the 360 of the whole shape for two angles.",
+  "reveals": "The answer 290 as a wrong option, with a reason that names the idea.",
+  "help": "Two neighbours add to 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_QUAD_SUM_180": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Believes the angles of a quadrilateral add to 180.",
+  "example": {
+   "question": "The four angles of a parallelogram add to?",
+   "wrong_answer": "180",
+   "correct_answer": "360"
+  },
+  "cause": "Carries the triangle total over.",
+  "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+  "help": "A quadrilateral is two triangles: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_PARALLELOGRAM_RIGHT_ANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Believes a parallelogram has right angles.",
+  "example": {
+   "question": "Parallelogram, angle A = 70: angle B",
+   "wrong_answer": "90",
+   "correct_answer": "110"
+  },
+  "cause": "Pictures a rectangle.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Only a rectangle has right angles; a parallelogram can lean.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_DIAGONAL_RIGHT_ANGLE_USED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "error": "Gives 90 because the diagonals of a rhombus cross at right angles.",
+  "example": {
+   "question": "Rhombus, angle ABC = 100: angle BAC",
+   "wrong_answer": "90",
+   "correct_answer": "40"
+  },
+  "cause": "Uses a true fact about the wrong angle.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Look at the angle asked for, in triangle ABC.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_BASE_ANGLES_NOT_SHARED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Gives both base angles together as each one.",
+  "example": {
+   "question": "Isosceles roof, top angle 40: each base angle",
+   "wrong_answer": "140",
+   "correct_answer": "70"
+  },
+  "cause": "Stops after taking the top angle from 180.",
+  "reveals": "The answer 140 as a wrong option, with a reason that names the idea.",
+  "help": "The two base angles share what is left.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_TOP_ANGLE_HALVED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Halves the given angle for the base angles.",
+  "example": {
+   "question": "Isosceles roof, top angle 40: each base angle",
+   "wrong_answer": "20",
+   "correct_answer": "70"
+  },
+  "cause": "Shares the wrong angle.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Take the top angle from 180, then halve.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ALL_ANGLES_EQUAL_ISOSCELES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Believes all three angles of an isosceles triangle are equal.",
+  "example": {
+   "question": "Isosceles roof, top angle 40: each base angle",
+   "wrong_answer": "40",
+   "correct_answer": "70"
+  },
+  "cause": "Mixes isosceles with equilateral.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Only the two base angles are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_LIKE_TERMS_MULTIPLIED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Multiplies the plain numbers when collecting terms.",
+  "example": {
+   "question": "x + (x + 10) + (2x + 30): the plain number",
+   "wrong_answer": "300",
+   "correct_answer": "40"
+  },
+  "cause": "Combines numbers by multiplying.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "The angles are added: 10 + 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_NOT_REMOVED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Divides 180 by the number of x without taking the plain number off first.",
+  "example": {
+   "question": "4x + 40 = 180",
+   "wrong_answer": "45",
+   "correct_answer": "35"
+  },
+  "cause": "Divides straight away.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "Take 40 from both sides first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_LEFT_OFF": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Works out 2x but leaves the plain number off the angle.",
+  "example": {
+   "question": "x = 35: the angle (2x + 30)",
+   "wrong_answer": "70",
+   "correct_answer": "100"
+  },
+  "cause": "Stops after 2x.",
+  "reveals": "The answer 70 as a wrong option, with a reason that names the idea.",
+  "help": "Add the 30 too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_EXTERIOR_ADDED_NOT_SUBTRACTED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Adds the exterior angle and the known far angle.",
+  "example": {
+   "question": "Exterior angle 120, angle A = 50: angle B",
+   "wrong_answer": "170",
+   "correct_answer": "70"
+  },
+  "cause": "Knows the rule has an addition in it.",
+  "reveals": "The answer 170 as a wrong option, with a reason that names the idea.",
+  "help": "Exterior = A + B, so B = 120 - 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ADJACENT_INTERIOR_GIVEN": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "error": "Gives the interior angle beside the exterior angle.",
+  "example": {
+   "question": "Exterior angle 120, angle A = 50: angle B",
+   "wrong_answer": "60",
+   "correct_answer": "70"
+  },
+  "cause": "Finds the angle on the straight line and stops.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "B is at a different corner.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_ALL_CORNERS_RIGHT_ANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Believes every quadrilateral has four right angles.",
+  "example": {
+   "question": "Why do a trapezium's angles add to 360?",
+   "wrong_answer": "four corners of 90",
+   "correct_answer": "two triangles of 180"
+  },
+  "cause": "Pictures a rectangle.",
+  "reveals": "The answer four corners of 90 as a wrong option, with a reason that names the idea.",
+  "help": "The corners can be different; the triangles always make 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_CORNERS_AS_POINT": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Treats the corners of a shape as angles round one point.",
+  "example": {
+   "question": "Why do a quadrilateral's angles add to 360?",
+   "wrong_answer": "angles at a point add to 360",
+   "correct_answer": "two triangles of 180"
+  },
+  "cause": "Remembers the number 360 from angles at a point.",
+  "reveals": "The answer angles at a point add to 360 as a wrong option, with a reason that names the idea.",
+  "help": "The corners are in four places, not round one point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_MUST_BE_EQUAL": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Believes the two triangles a diagonal makes must be the same.",
+  "example": {
+   "question": "Why do a quadrilateral's angles add to 360?",
+   "wrong_answer": "the diagonal makes two equal triangles",
+   "correct_answer": "two triangles of 180"
+  },
+  "cause": "Has seen a rectangle cut in half.",
+  "reveals": "The answer the diagonal makes two equal triangles as a wrong option, with a reason that names the idea.",
+  "help": "Any two triangles: each is 180.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_EQUAL_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Uses as many triangles as sides.",
+  "example": {
+   "question": "Angle sum of a hexagon",
+   "wrong_answer": "1,080",
+   "correct_answer": "720"
+  },
+  "cause": "Counts one triangle per side.",
+  "reveals": "The answer 1,080 as a wrong option, with a reason that names the idea.",
+  "help": "From one corner: 2 fewer triangles than sides.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_ONE_FEWER": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Uses one fewer triangle than sides.",
+  "example": {
+   "question": "Angle sum of a hexagon",
+   "wrong_answer": "900",
+   "correct_answer": "720"
+  },
+  "cause": "Misreads the pattern in the table.",
+  "reveals": "The answer 900 as a wrong option, with a reason that names the idea.",
+  "help": "Count again: a quadrilateral has 2 triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_AS_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Gives the number of triangles as the number of sides.",
+  "example": {
+   "question": "Angle sum 720: sides",
+   "wrong_answer": "4",
+   "correct_answer": "6"
+  },
+  "cause": "Stops after dividing by 180.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Sides are 2 more than triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_RIGHT_ANGLES_AS_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "error": "Divides the sum by 90 to count the sides.",
+  "example": {
+   "question": "Angle sum 720: sides",
+   "wrong_answer": "8",
+   "correct_answer": "6"
+  },
+  "cause": "Counts right angles.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 180 to count triangles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_EXTERIOR_AS_INTERIOR": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "error": "Gives 360 divided by the sides as the interior angle.",
+  "example": {
+   "question": "Each interior angle of a regular hexagon",
+   "wrong_answer": "60",
+   "correct_answer": "120"
+  },
+  "cause": "Shares the full turn among the corners.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "360 / n is the exterior angle; interior = 180 - exterior.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_INTERIOR_FROM_180_SHARED": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "error": "Shares 180 among the corners for each interior angle.",
+  "example": {
+   "question": "Each interior angle of a regular hexagon",
+   "wrong_answer": "30",
+   "correct_answer": "120"
+  },
+  "cause": "Uses the triangle total for the whole shape.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "The hexagon is 4 triangles: 720 shared by 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_SUM_SHARED_BY_TRIANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "error": "Divides the angle sum by the number of triangles for each angle.",
+  "example": {
+   "question": "Hexagon sum 720: each angle",
+   "wrong_answer": "180",
+   "correct_answer": "120"
+  },
+  "cause": "Divides by the wrong count.",
+  "reveals": "The answer 180 as a wrong option, with a reason that names the idea.",
+  "help": "Share among the corners: 6.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_SUM_180": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "error": "Uses 180 as the total of the exterior angles.",
+  "example": {
+   "question": "Regular polygon, exterior angle 60: sides",
+   "wrong_answer": "3",
+   "correct_answer": "6"
+  },
+  "cause": "Uses a half turn.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "The exterior angles make a full turn: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_INTERIOR_USED_AS_EXTERIOR": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "error": "Divides 360 by the interior angle.",
+  "example": {
+   "question": "Regular polygon, interior angle 120: sides",
+   "wrong_answer": "3",
+   "correct_answer": "6"
+  },
+  "cause": "Skips finding the exterior angle.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Exterior = 180 - 120 = 60 first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_ANGLE_AS_SIDES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "error": "Gives the exterior angle as the number of sides.",
+  "example": {
+   "question": "Regular polygon, interior angle 120: sides",
+   "wrong_answer": "60",
+   "correct_answer": "6"
+  },
+  "cause": "Stops after one step.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Divide 360 by it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR.M_WRONG_SCALE_READ": {
   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
   "error": "Reads the scale that does not start at zero on the arm.",
@@ -5190,6 +7472,706 @@
   "cause": "Does not see the centre as fixed.",
   "reveals": "The answer it does not matter as a wrong option, with a reason that names the idea.",
   "help": "The point is the centre: it must not move.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_DATA_ONLY_NUMBERS": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT",
+  "error": "Believes data must be numbers.",
+  "example": {
+   "question": "Is the list of fruits learners chose data?",
+   "wrong_answer": "no, it has no numbers",
+   "correct_answer": "yes"
+  },
+  "cause": "Has met data only as numbers in tables.",
+  "reveals": "The answer no, it has no numbers as a wrong option, with a reason that names the idea.",
+  "help": "Data is facts collected to answer a question; we count them.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_RECORDED_TWICE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT",
+  "error": "Records an answer more than once, or misses some, when collecting.",
+  "example": {
+   "question": "30 learners asked, tally shows 33",
+   "wrong_answer": "keep the tally",
+   "correct_answer": "count again: each learner once"
+  },
+  "cause": "Does not check the total against the number asked.",
+  "reveals": "The answer keep the tally as a wrong option, with a reason that names the idea.",
+  "help": "Tick each person as you record them; the total must match.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_ALL_CATEGORIES_COUNTED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Adds every row when the question asks about some.",
+  "example": {
+   "question": "Mango 8, banana 6, orange 5, pawpaw 4: mango or banana",
+   "wrong_answer": "23",
+   "correct_answer": "14"
+  },
+  "cause": "Adds all the frequencies by habit.",
+  "reveals": "The answer 23 as a wrong option, with a reason that names the idea.",
+  "help": "Only the rows asked about.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TALLY_GATE_COUNTED_AS_FOUR": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Counts a tally group of five as four.",
+  "example": {
+   "question": "||||/ ||||/ ||",
+   "wrong_answer": "10",
+   "correct_answer": "12"
+  },
+  "cause": "Counts the four upright strokes only.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "The stroke across is the fifth.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TOTAL_AS_MISSING": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Gives the total as the missing frequency.",
+  "example": {
+   "question": "Total 40; other rows 7, 9, 8, 6",
+   "wrong_answer": "40",
+   "correct_answer": "10"
+  },
+  "cause": "Reads the total from the question.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Missing = total - the others.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_OTHERS_SUM_AS_MISSING": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Gives the sum of the other rows as the missing frequency.",
+  "example": {
+   "question": "Total 40; other rows 7, 9, 8, 6",
+   "wrong_answer": "30",
+   "correct_answer": "10"
+  },
+  "cause": "Stops after adding.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "Take the sum from the total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_FREQUENCY_FOR_MODE_VALUE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "error": "Gives the biggest frequency instead of its value.",
+  "example": {
+   "question": "Books read: 1 (4), 2 (9), 3 (5): most common",
+   "wrong_answer": "9",
+   "correct_answer": "2"
+  },
+  "cause": "Mixes up the two columns.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "The answer is the value in that row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FREQUENCIES_ADDED_FOR_TOTAL": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Adds the frequencies to find the total number of items.",
+  "example": {
+   "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+   "wrong_answer": "12",
+   "correct_answer": "13"
+  },
+  "cause": "Counts the matches, not the goals.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Value x frequency for each row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_VALUES_ADDED_ONCE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Adds the values in the first column once each.",
+  "example": {
+   "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+   "wrong_answer": "3",
+   "correct_answer": "13"
+  },
+  "cause": "Ignores the frequency column.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Each value happened as often as its frequency.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_LARGEST_VALUE_FOR_ALL": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Multiplies the total frequency by the largest value.",
+  "example": {
+   "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+   "wrong_answer": "24",
+   "correct_answer": "13"
+  },
+  "cause": "Uses one value for every row.",
+  "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+  "help": "Each row has its own value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COUNT_FOR_PERCENT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Gives the count as the percentage.",
+  "example": {
+   "question": "12 of 40 learners: percentage",
+   "wrong_answer": "12",
+   "correct_answer": "30"
+  },
+  "cause": "Stops after counting.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Out of 40, then out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COMPLEMENT_ROWS_USED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Uses the rows that do not fit the question.",
+  "example": {
+   "question": "At least 3 books: rows 3, 4, 5",
+   "wrong_answer": "rows 1 and 2",
+   "correct_answer": "rows 3, 4 and 5"
+  },
+  "cause": "Misreads \"at least\" or \"more than\".",
+  "reveals": "The answer rows 1 and 2 as a wrong option, with a reason that names the idea.",
+  "help": "Read which rows the words allow.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FRACTION_NOT_TIMES_100": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "error": "Gives the fraction or decimal as the percentage.",
+  "example": {
+   "question": "12 of 40 learners: percentage",
+   "wrong_answer": "0.3",
+   "correct_answer": "30"
+  },
+  "cause": "Stops after dividing.",
+  "reveals": "The answer 0.3 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_BAR_OFF_AXIS": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a scale that makes the tallest bar too tall for the axis.",
+  "example": {
+   "question": "Axis 10 squares, tallest 160: 1 square = 10?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, it needs 16 squares"
+  },
+  "cause": "Picks the easiest scale without dividing.",
+  "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+  "help": "Divide the tallest value by the scale first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_SCALE_FITS_ANY": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a scale that fits but leaves the bars short.",
+  "example": {
+   "question": "Axis 10 squares, tallest 160: best scale",
+   "wrong_answer": "1 square = 50",
+   "correct_answer": "1 square = 20"
+  },
+  "cause": "Thinks any scale that fits is best.",
+  "reveals": "The answer 1 square = 50 as a wrong option, with a reason that names the idea.",
+  "help": "The smallest scale that still fits uses the paper well.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_HALF_SYMBOL_NOT_CHECKED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a symbol value that some numbers cannot be shown with.",
+  "example": {
+   "question": "Values 30, 50, 70; whole and half symbols only: one symbol =",
+   "wrong_answer": "40",
+   "correct_answer": "20"
+  },
+  "cause": "Checks only the biggest number.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Every number must be whole or half symbols.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_ROW_LENGTH_NOT_CHECKED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "error": "Chooses a symbol value that makes the longest row too long.",
+  "example": {
+   "question": "Longest value 160, at most 8 symbols: one symbol =",
+   "wrong_answer": "10",
+   "correct_answer": "20"
+  },
+  "cause": "Checks the halves but not the length.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "Divide the longest value by it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_SYMBOLS_NOT_SCALED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Gives the difference in symbols as the difference in learners.",
+  "example": {
+   "question": "Each symbol = 10; rows of 6 and 4 symbols: how many more",
+   "wrong_answer": "2",
+   "correct_answer": "20"
+  },
+  "cause": "Forgets what one symbol stands for.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Times by 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_MORE_AS_TOTAL": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Adds the two rows when asked \"how many more\".",
+  "example": {
+   "question": "Rows 60 and 40: how many more",
+   "wrong_answer": "100",
+   "correct_answer": "20"
+  },
+  "cause": "Sees two numbers and adds.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "\"How many more\" is a difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_ONE_ROW_GIVEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Gives one row as the answer to \"how many more\".",
+  "example": {
+   "question": "Rows 60 and 40: how many more",
+   "wrong_answer": "60",
+   "correct_answer": "20"
+  },
+  "cause": "Stops after reading one row.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Take one row from the other.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_HALF_SYMBOL_AS_WHOLE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "error": "Counts a half symbol as a whole one.",
+  "example": {
+   "question": "Each symbol = 10; a row of 3 and a half symbols",
+   "wrong_answer": "40",
+   "correct_answer": "35"
+  },
+  "cause": "Counts the shapes, not their size.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "A half symbol is half of 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_UNEVEN_SCALE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW",
+  "error": "Numbers the axis in uneven steps.",
+  "example": {
+   "question": "Axis numbered 0, 10, 20, 50, 100",
+   "wrong_answer": "fine",
+   "correct_answer": "steps must be equal"
+  },
+  "cause": "Writes the values that appear in the data.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "Equal steps from 0.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_BAR_WIDTHS_VARIED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW",
+  "error": "Draws bars of different widths, as if width showed the value.",
+  "example": {
+   "question": "A wider bar for the biggest value",
+   "wrong_answer": "fine",
+   "correct_answer": "all bars the same width"
+  },
+  "cause": "Makes the big value look big in every way.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "Only the height shows the value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ALL_BARS_ADDED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "error": "Adds all the bars when the question asks about some.",
+  "example": {
+   "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+   "wrong_answer": "200",
+   "correct_answer": "110"
+  },
+  "cause": "Adds everything on the graph.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Pick the two tallest bars.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ONE_BAR_ONLY": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "error": "Gives one bar when two are asked about.",
+  "example": {
+   "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+   "wrong_answer": "60",
+   "correct_answer": "110"
+  },
+  "cause": "Stops after the tallest bar.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Add the second tallest too.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_DIFFERENCE_FOR_TOGETHER": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "error": "Subtracts when the question says together.",
+  "example": {
+   "question": "Bars 60 and 50 together",
+   "wrong_answer": "10",
+   "correct_answer": "110"
+  },
+  "cause": "Thinks comparing means subtracting.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "Together means add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_BAR_FOR_ANY_DATA": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "error": "Chooses a bar graph for data that changes over time or shares a whole.",
+  "example": {
+   "question": "Temperature every two hours",
+   "wrong_answer": "a bar graph",
+   "correct_answer": "a line graph"
+  },
+  "cause": "Knows bar graphs best.",
+  "reveals": "The answer a bar graph as a wrong option, with a reason that names the idea.",
+  "help": "Ask: groups, time, or parts of a whole?",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_LINE_FOR_CATEGORIES": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "error": "Joins separate groups with a line graph.",
+  "example": {
+   "question": "Learners in five clubs",
+   "wrong_answer": "a line graph",
+   "correct_answer": "a bar graph"
+  },
+  "cause": "Thinks any data in order can be joined.",
+  "reveals": "The answer a line graph as a wrong option, with a reason that names the idea.",
+  "help": "A line means it changes between the points; clubs do not.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_PIE_FOR_NON_PARTS": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "error": "Chooses a pie chart for data that is not parts of one whole.",
+  "example": {
+   "question": "Height of a sunflower each week",
+   "wrong_answer": "a pie chart",
+   "correct_answer": "a line graph"
+  },
+  "cause": "Likes the picture.",
+  "reveals": "The answer a pie chart as a wrong option, with a reason that names the idea.",
+  "help": "A pie chart is for one whole shared into parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_PIE_TOTAL_180": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "error": "Uses 180 for the angles of a pie chart.",
+  "example": {
+   "question": "Sectors 90, 108 and 72: the fourth",
+   "wrong_answer": "-90 or 0",
+   "correct_answer": "90"
+  },
+  "cause": "Uses the straight-line total.",
+  "reveals": "The answer -90 or 0 as a wrong option, with a reason that names the idea.",
+  "help": "A circle is a full turn: 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_OTHER_ANGLES_SUM_GIVEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "error": "Gives the sum of the other angles as the missing angle.",
+  "example": {
+   "question": "Sectors 90, 108 and 72: the fourth",
+   "wrong_answer": "270",
+   "correct_answer": "90"
+  },
+  "cause": "Stops after adding.",
+  "reveals": "The answer 270 as a wrong option, with a reason that names the idea.",
+  "help": "Take the sum from 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_ANGLE_AS_COUNT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "error": "Gives the angle as the number of learners.",
+  "example": {
+   "question": "90 degrees of 240 learners: how many",
+   "wrong_answer": "90",
+   "correct_answer": "60"
+  },
+  "cause": "Reads the angle as a count.",
+  "reveals": "The answer 90 as a wrong option, with a reason that names the idea.",
+  "help": "Angle / 360 of the learners.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_ANGLE_AS_PERCENT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Gives the angle as the percentage.",
+  "example": {
+   "question": "A 90 degree sector: percentage",
+   "wrong_answer": "90%",
+   "correct_answer": "25%"
+  },
+  "cause": "Reads degrees as per cent.",
+  "reveals": "The answer 90% as a wrong option, with a reason that names the idea.",
+  "help": "Out of 360, then out of 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_REST_OF_TOTAL_GIVEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Gives the share of everyone else.",
+  "example": {
+   "question": "A 90 degree sector: percentage",
+   "wrong_answer": "75%",
+   "correct_answer": "25%"
+  },
+  "cause": "Works out the other part.",
+  "reveals": "The answer 75% as a wrong option, with a reason that names the idea.",
+  "help": "Read which sector is asked about.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_SAME_ANGLE_SAME_COUNT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Believes equal angles in two pie charts mean equal numbers.",
+  "example": {
+   "question": "90 degrees in a school of 120 and in a school of 480",
+   "wrong_answer": "the same number",
+   "correct_answer": "30 and 120"
+  },
+  "cause": "Reads an angle as a count.",
+  "reveals": "The answer the same number as a wrong option, with a reason that names the idea.",
+  "help": "An angle is a share of its own total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_BIGGER_TOTAL_BIGGER_ANGLE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "error": "Believes a bigger total must give a bigger angle.",
+  "example": {
+   "question": "A school of 480 and one of 120: which sector is bigger?",
+   "wrong_answer": "the bigger school",
+   "correct_answer": "it depends on the share"
+  },
+  "cause": "Mixes the count with the share.",
+  "reveals": "The answer the bigger school as a wrong option, with a reason that names the idea.",
+  "help": "The share decides the angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_FALL_READ_AS_RISE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Chooses a part where the line goes down as a rise.",
+  "example": {
+   "question": "Prices 80, 120, 100: where is the biggest rise?",
+   "wrong_answer": "week 2 to week 3",
+   "correct_answer": "week 1 to week 2"
+  },
+  "cause": "Looks at the size of the change, not its direction.",
+  "reveals": "The answer week 2 to week 3 as a wrong option, with a reason that names the idea.",
+  "help": "A rise goes up.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_ANY_RISE_CHOSEN": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Chooses a rise that is not the biggest.",
+  "example": {
+   "question": "Rises of 20, 40 and 10: the biggest",
+   "wrong_answer": "the first rise",
+   "correct_answer": "the rise of 40"
+  },
+  "cause": "Stops at the first rise seen.",
+  "reveals": "The answer the first rise as a wrong option, with a reason that names the idea.",
+  "help": "Compare all the rises.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_PLOTTED_POINT_READ": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Gives a plotted point when the value between points is asked.",
+  "example": {
+   "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+   "wrong_answer": "40",
+   "correct_answer": "50"
+  },
+  "cause": "Reads only the marked points.",
+  "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+  "help": "Halfway along the line is halfway between the heights.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_GROWTH_FOR_HEIGHT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Gives the growth in the week instead of the height.",
+  "example": {
+   "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+   "wrong_answer": "20",
+   "correct_answer": "50"
+  },
+  "cause": "Finds a difference and stops.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "The question asks for a height.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_READING_FOR_RISE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Gives the later reading as the rise.",
+  "example": {
+   "question": "16 at 8:00 and 26 at 12:00: the rise",
+   "wrong_answer": "26",
+   "correct_answer": "10"
+  },
+  "cause": "Reads one point.",
+  "reveals": "The answer 26 as a wrong option, with a reason that names the idea.",
+  "help": "A rise is a difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_RISE_ADDED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "error": "Adds the two readings for a rise.",
+  "example": {
+   "question": "16 at 8:00 and 26 at 12:00: the rise",
+   "wrong_answer": "42",
+   "correct_answer": "10"
+  },
+  "cause": "Sees two numbers and adds.",
+  "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+  "help": "Subtract the earlier from the later.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_MOVING_TIME_FOR_STOP": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Reads a sloping part as the stop.",
+  "example": {
+   "question": "Line rises for 2 hours, flat for 1 hour: the stop",
+   "wrong_answer": "2 hours",
+   "correct_answer": "1 hour"
+  },
+  "cause": "Reads the first time on the graph.",
+  "reveals": "The answer 2 hours as a wrong option, with a reason that names the idea.",
+  "help": "A stop is where the line is flat.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_SPEED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Gives the distance of a part as its speed.",
+  "example": {
+   "question": "80 km in 2 hours: speed",
+   "wrong_answer": "80",
+   "correct_answer": "40 km/h"
+  },
+  "cause": "Reads the distance off the graph.",
+  "reveals": "The answer 80 as a wrong option, with a reason that names the idea.",
+  "help": "Speed = distance / time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_WHOLE_JOURNEY_FOR_PART": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Uses the whole journey for the speed of one part.",
+  "example": {
+   "question": "First part 80 km in 2 h; whole 200 km in 5 h: first part speed",
+   "wrong_answer": "40 from 200 / 5",
+   "correct_answer": "40 from 80 / 2"
+  },
+  "cause": "Uses the biggest numbers.",
+  "reveals": "The answer 40 from 200 / 5 as a wrong option, with a reason that names the idea.",
+  "help": "Only that part.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_TOTAL_DISTANCE_FOR_PART": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Divides the total distance by the time of the last part.",
+  "example": {
+   "question": "Total 200 km, last part 120 km in 2 h: speed",
+   "wrong_answer": "100",
+   "correct_answer": "60 km/h"
+  },
+  "cause": "Reads the distance at the end of the graph.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "The last part is 200 - 80 = 120 km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_SPEEDS_AVERAGED": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Averages the speeds of the parts.",
+  "example": {
+   "question": "40 km/h for 2 h, 60 km/h for 2 h, a 1 h stop: average",
+   "wrong_answer": "50",
+   "correct_answer": "40"
+  },
+  "cause": "Treats each part as equal and forgets the stop.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "Total distance / total time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_STOP_LEFT_OUT_OF_TIME": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Leaves the stop out of the total time.",
+  "example": {
+   "question": "200 km, 4 h moving and a 1 h stop: average speed",
+   "wrong_answer": "50",
+   "correct_answer": "40"
+  },
+  "cause": "Counts only moving time.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "The stop is part of the journey.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_TIME_READ": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Reads the distance where the lines cross instead of the time.",
+  "example": {
+   "question": "Lines cross at 3 hours, 120 km: when do they meet?",
+   "wrong_answer": "120",
+   "correct_answer": "3 hours"
+  },
+  "cause": "Reads the wrong axis.",
+  "reveals": "The answer 120 as a wrong option, with a reason that names the idea.",
+  "help": "Read straight down to the time axis.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_ONE_JOURNEY_FOR_MEETING": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "error": "Works out how long one matatu needs for the whole road.",
+  "example": {
+   "question": "Road 240 km, speeds 60 and 20: when do they meet?",
+   "wrong_answer": "4 hours",
+   "correct_answer": "3 hours"
+  },
+  "cause": "Divides the whole road by one speed.",
+  "reveals": "The answer 4 hours as a wrong option, with a reason that names the idea.",
+  "help": "They meet where the lines cross.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
  }

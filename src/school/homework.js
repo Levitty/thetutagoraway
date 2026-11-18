@@ -138,7 +138,7 @@ export function toItem(p, n) {
       options: texts.map((text, i) => {
         const right = norm(text) === norm(p.answer);
         const m = mis[norm(text)];
-        const slip = isSlip(m?.mis);
+        const slip = isSlip(m?.mis) || (p.type === 'spot-mistake' && !m?.mis && isSlip([].concat(p.mis || [])[0]));   // a working whose mistake is a slip
         return { key: LETTERS[i], text, right, ...(right ? {} : { mis: m?.mis ? misCode(p.cskill, m.mis) : (p.type === 'spot-mistake' ? workMis : null), why: m?.feedback || '', ...(slip ? { slip: true } : {}) }) };
       }) };
   }

@@ -6728,6 +6728,925 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Linear Equations",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "key_step": "The child decides first whether the number itself is allowed, then which way the sign faces.",
+  "floor": {
+   "prerequisite": "Compares two numbers.",
+   "question": "Which is bigger, 18 or 15?",
+   "answer": "18"
+  },
+  "representations": [
+   "a number line",
+   "the sign as an open mouth",
+   "a notice at a stage"
+  ],
+  "steps": [
+   "Read the words.",
+   "Is the number itself allowed?",
+   "Bigger or smaller?",
+   "Choose the sign and test a value."
+  ],
+  "contexts": [
+   "a matatu stage notice",
+   "a lift limit",
+   "ages for a club"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: at least 18."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 18.",
+    "say": "Can there be exactly 18?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write n >= 18."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_EQUAL_PART_MIXED",
+    "listen_for": [
+     "n > 18 for at least"
+    ],
+    "ask": "Is exactly 18 allowed?",
+    "repair": "Yes, so the sign needs the line: >=.",
+    "error": "Leaves out or adds the \"or equal to\" part of the sign.",
+    "example": {
+     "question": "\"At least 18 passengers\" as an inequality",
+     "wrong_answer": "n > 18",
+     "correct_answer": "n >= 18"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_DIRECTION_REVERSED",
+    "listen_for": [
+     "n <= 18"
+    ],
+    "ask": "Is 20 passengers allowed?",
+    "repair": "Yes, so the sign faces n: >=.",
+    "error": "Uses the sign that faces the wrong way.",
+    "example": {
+     "question": "\"At least 18 passengers\" as an inequality",
+     "wrong_answer": "n <= 18",
+     "correct_answer": "n >= 18"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_KEYWORD_READ_ALONE",
+    "listen_for": [
+     "more means greater"
+    ],
+    "ask": "What does the word \"no\" do?",
+    "repair": "No more than 40 means 40 or fewer.",
+    "error": "Takes the sign from one word and ignores \"no\", \"not\" or \"at\".",
+    "example": {
+     "question": "\"No more than 40 passengers\" as an inequality",
+     "wrong_answer": "n > 40",
+     "correct_answer": "n <= 40"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_STRICT_INCLUDES_NUMBER",
+    "listen_for": [
+     "9 < 9 is true"
+    ],
+    "ask": "Is 9 less than 9?",
+    "repair": "No, they are equal.",
+    "error": "Believes a < 9 is true when a is 9.",
+    "example": {
+     "question": "a = 9: is a < 9 true?",
+     "wrong_answer": "true",
+     "correct_answer": "false"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_SYMBOL_READ_BACKWARDS",
+    "listen_for": [
+     "a < 7 for 9"
+    ],
+    "ask": "Read it from the a: a is less than 7. Is 9 less than 7?",
+    "repair": "No.",
+    "error": "Reads the sign from the wrong side, so a < 7 seems true for a = 9.",
+    "example": {
+     "question": "a = 9: which is true, a < 7 or a > 7?",
+     "wrong_answer": "a < 7",
+     "correct_answer": "a > 7"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "\"At most 30 people\" for n",
+    "answer": "n <= 30",
+    "shows": "sign from words"
+   },
+   {
+    "question": "a = 12: is a >= 12 true?",
+    "answer": "Yes",
+    "shows": "or equal to"
+   }
+  ],
+  "name": "Choose the inequality sign for words and test a statement with a value",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY",
+  "key_step": "The child writes everything that counts towards the limit on one side and chooses the sign from the words of the limit.",
+  "floor": {
+   "prerequisite": "Writes an expression.",
+   "question": "sacks of 50 kg, n sacks",
+   "answer": "50n"
+  },
+  "representations": [
+   "a weighbridge",
+   "a bar model up to the limit",
+   "the inequality"
+  ],
+  "steps": [
+   "What counts towards the limit?",
+   "Write it as an expression.",
+   "Choose the sign.",
+   "Write the limit."
+  ],
+  "contexts": [
+   "a pick-up of maize",
+   "hall seats",
+   "a lift"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar up to 1,000 kg with 200 kg shaded."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 200 kg.",
+    "say": "Is this part of the load?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 200 + 50n <= 1,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_AT_MOST_AS_STRICT",
+    "listen_for": [
+     "< 1,000"
+    ],
+    "ask": "Can the load be exactly 1,000 kg?",
+    "repair": "Yes: <=.",
+    "error": "Writes < for \"at most\", so the limit itself is not allowed.",
+    "example": {
+     "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+     "wrong_answer": "200 + 50n < 1,000",
+     "correct_answer": "200 + 50n <= 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_LIMIT_SIGN_REVERSED",
+    "listen_for": [
+     ">= 1,000"
+    ],
+    "ask": "Can the load be 1,200 kg?",
+    "repair": "No: it stays under, <=.",
+    "error": "Writes >= for a limit that must not be passed.",
+    "example": {
+     "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+     "wrong_answer": "200 + 50n >= 1,000",
+     "correct_answer": "200 + 50n <= 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_FIXED_LOAD_LEFT_OUT",
+    "listen_for": [
+     "50n <= 1,000"
+    ],
+    "ask": "Where is the cement?",
+    "repair": "Add 200.",
+    "error": "Leaves out the amount that is already there.",
+    "example": {
+     "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+     "wrong_answer": "50n <= 1,000",
+     "correct_answer": "200 + 50n <= 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_TAKEN_ADDED_NOT_SUBTRACTED",
+    "listen_for": [
+     "150 + 40"
+    ],
+    "ask": "Are the taken seats free?",
+    "repair": "Take them away.",
+    "error": "Adds the seats already taken to find the seats left.",
+    "example": {
+     "question": "150 seats, 40 taken: at most n more people",
+     "wrong_answer": "n <= 190",
+     "correct_answer": "n <= 110"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A lift carries at most 600 kg. A trolley of 80 kg is in it. n boxes of 20 kg. Inequality?",
+    "answer": "80 + 20n <= 600",
+    "shows": "fixed part and sign"
+   },
+   {
+    "question": "120 seats, 35 taken, at most n more people",
+    "answer": "n <= 85",
+    "shows": "seats left"
+   }
+  ],
+  "name": "Form a simple linear inequality in one unknown from a story",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT",
+  "key_step": "The child solves like an equation and then takes the greatest whole number that still fits.",
+  "floor": {
+   "prerequisite": "Solves a two-step equation.",
+   "question": "150 + 40n = 470",
+   "answer": "n = 8"
+  },
+  "representations": [
+   "money left on a bar",
+   "the inequality",
+   "a check of one more"
+  ],
+  "steps": [
+   "Form the inequality.",
+   "Take away the fixed cost.",
+   "Divide by the price.",
+   "Greatest whole number, then check one more."
+  ],
+  "contexts": [
+   "books after a bag",
+   "bread after bus fare",
+   "chairs in a hall"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 150 + 40n <= 500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 150.",
+    "say": "What is left for books?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 40n <= 350, n <= 8.75."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_DECIMAL_ANSWER_KEPT",
+    "listen_for": [
+     "8.75 books"
+    ],
+    "ask": "Can you buy 0.75 of a book?",
+    "repair": "No: whole books.",
+    "error": "Gives a decimal number of items.",
+    "example": {
+     "question": "sh 500, bag sh 150, books sh 40 each: most books",
+     "wrong_answer": "8.75",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_ROUNDED_UP_PAST_LIMIT",
+    "listen_for": [
+     "9 books"
+    ],
+    "ask": "What do 9 books cost?",
+    "repair": "sh 360: too much.",
+    "error": "Rounds n <= 8.75 up to 9.",
+    "example": {
+     "question": "sh 500, bag sh 150, books sh 40 each: most books",
+     "wrong_answer": "9",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_FIXED_COST_LEFT_OUT",
+    "listen_for": [
+     "500 divided by 40"
+    ],
+    "ask": "Who pays for the bag?",
+    "repair": "Take it away first.",
+    "error": "Divides all the money by the price and forgets the fixed cost.",
+    "example": {
+     "question": "sh 500, bag sh 150, books sh 40 each: most books",
+     "wrong_answer": "12",
+     "correct_answer": "8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "sh 600, a bag at sh 120, books at sh 70 each: most books?",
+    "answer": "6",
+    "shows": "greatest whole number"
+   },
+   {
+    "question": "Why not 7 books?",
+    "answer": "7 x 70 + 120 = 610, more than 600",
+    "shows": "check one more"
+   }
+  ],
+  "name": "Solve a simple inequality from a story and give the greatest whole number",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "key_step": "The child draws the circle at the number, closed if the number is in, and shades the side where the answers are.",
+  "floor": {
+   "prerequisite": "Places numbers on a line.",
+   "question": "Is 7 to the left or right of 3?",
+   "answer": "right"
+  },
+  "representations": [
+   "a number line",
+   "open and closed circles",
+   "test a number"
+  ],
+  "steps": [
+   "Put the circle at the number.",
+   "Closed for <= or >=, open for < or >.",
+   "Shade towards the answers.",
+   "Test one shaded number."
+  ],
+  "contexts": [
+   "the youngest age for a club",
+   "a speed limit",
+   "a temperature"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line from 0 to 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3.",
+    "say": "For x > 3, is 3 itself an answer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw an open circle at 3 and shade to the right."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_OPEN_CLOSED_SWAPPED",
+    "listen_for": [
+     "open for >="
+    ],
+    "ask": "Is the number itself in?",
+    "repair": "In: closed.",
+    "error": "Draws an open circle for <= or >= and a closed one for < or >.",
+    "example": {
+     "question": "x >= 3 on a number line",
+     "wrong_answer": "an open circle at 3",
+     "correct_answer": "a closed circle at 3"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_SHADED_WRONG_WAY",
+    "listen_for": [
+     "shaded left for >"
+    ],
+    "ask": "Is 5 bigger than 3? Where is 5?",
+    "repair": "On the right.",
+    "error": "Shades the wrong side of the circle.",
+    "example": {
+     "question": "x > 3 on a number line",
+     "wrong_answer": "shaded to the left of 3",
+     "correct_answer": "shaded to the right of 3"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_SHADED_EXCLUDED_PART",
+    "listen_for": [
+     "the numbers that fail"
+    ],
+    "ask": "Do we shade the answers or the others?",
+    "repair": "The answers.",
+    "error": "Shades the numbers that do not fit, with the opposite circle.",
+    "example": {
+     "question": "x > 3 on a number line",
+     "wrong_answer": "a closed circle at 3, shaded to the left",
+     "correct_answer": "an open circle at 3, shaded to the right"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_TYPE_FIXED",
+    "listen_for": [
+     "always closed"
+    ],
+    "ask": "What does a closed circle say?",
+    "repair": "The number is in.",
+    "error": "Believes the circle on a number line is always the same kind.",
+    "example": {
+     "question": "Why is a closed circle wrong for x < 5?",
+     "wrong_answer": "circles are always closed",
+     "correct_answer": "x < 5 does not include 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_AT_ZERO",
+    "listen_for": [
+     "at 0"
+    ],
+    "ask": "Which number is in the inequality?",
+    "repair": "The circle goes there.",
+    "error": "Puts the circle at 0 instead of at the number in the inequality.",
+    "example": {
+     "question": "x > 4 on a number line: where is the circle?",
+     "wrong_answer": "at 0",
+     "correct_answer": "at 4"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_SHOWS_DIRECTION",
+    "listen_for": [
+     "shows the way"
+    ],
+    "ask": "What does the shading show?",
+    "repair": "The direction.",
+    "error": "Believes the circle shows which way to shade.",
+    "example": {
+     "question": "What does the open circle in x < 5 show?",
+     "wrong_answer": "which way to shade",
+     "correct_answer": "that 5 is not included"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_OPEN_CIRCLE_INCLUDED",
+    "listen_for": [
+     "4 is in"
+    ],
+    "ask": "Is the circle at 4 open or closed?",
+    "repair": "Open: 4 is out.",
+    "error": "Counts the number at an open circle as part of the answer.",
+    "example": {
+     "question": "Open circle at 4, shaded right: is 4 in the shading?",
+     "wrong_answer": "yes",
+     "correct_answer": "no"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Describe x <= 6 on a number line",
+    "answer": "closed circle at 6, shaded left",
+    "shows": "circle and side"
+   },
+   {
+    "question": "Open circle at 2, shaded right: is 2 in?",
+    "answer": "No",
+    "shows": "open circle"
+   }
+  ],
+  "name": "Show a simple inequality on a number line",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "key_step": "The child treats the two ends one at a time, choosing the sign at each end from its own words, and checks a value against both.",
+  "floor": {
+   "prerequisite": "Chooses a sign for words.",
+   "question": "\"At least 6\" for a",
+   "answer": "a >= 6"
+  },
+  "representations": [
+   "a range on a number line",
+   "a table of rides",
+   "a whole-number list"
+  ],
+  "steps": [
+   "Lower end: is it in?",
+   "Upper end: is it in?",
+   "Write lower, x, upper.",
+   "Test values at both ends."
+  ],
+  "contexts": [
+   "ages for a swimming class",
+   "a clinic fridge",
+   "rides at a show"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: at least 6 and younger than 12."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6.",
+    "say": "Can a child of 6 join?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 12.",
+    "say": "Can a child of 12 join?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child says the sign at each end."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 6 <= a < 12."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_INCLUSIVE_WORD_AS_STRICT",
+    "listen_for": [
+     "6 < a for at least 6"
+    ],
+    "ask": "Can a 6-year-old join?",
+    "repair": "Yes: <=.",
+    "error": "Uses < at an end where the words are \"at least\" or \"at most\".",
+    "example": {
+     "question": "At least 6 and younger than 12",
+     "wrong_answer": "6 < a < 12",
+     "correct_answer": "6 <= a < 12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_STRICT_WORD_AS_INCLUSIVE",
+    "listen_for": [
+     "6 <= a for older than 6"
+    ],
+    "ask": "Is a 6-year-old older than 6?",
+    "repair": "No: <.",
+    "error": "Uses <= at an end where the words are \"older than\", \"younger than\" or \"less than\".",
+    "example": {
+     "question": "Older than 6 and at most 12",
+     "wrong_answer": "6 <= a <= 12",
+     "correct_answer": "6 < a <= 12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_SIGNS_MEANINGS_SWAPPED",
+    "listen_for": [
+     "both ends swapped"
+    ],
+    "ask": "Which sign keeps the end in?",
+    "repair": "<=.",
+    "error": "Swaps < and <= at both ends.",
+    "example": {
+     "question": "At least 6 and younger than 12",
+     "wrong_answer": "6 < a <= 12",
+     "correct_answer": "6 <= a < 12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_END_MISREAD",
+    "listen_for": [
+     "one end wrong"
+    ],
+    "ask": "Did you check both ends?",
+    "repair": "Read each end.",
+    "error": "Gets the sign right at one end and wrong at the other.",
+    "example": {
+     "question": "Whole numbers with 2 < x <= 6",
+     "wrong_answer": "2, 3, 4, 5",
+     "correct_answer": "3, 4, 5, 6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_END_VALUE_ALWAYS_IN",
+    "listen_for": [
+     "ends always in"
+    ],
+    "ask": "What does < say about the end?",
+    "repair": "Out.",
+    "error": "Counts the end values as allowed whatever the signs.",
+    "example": {
+     "question": "Whole numbers with 2 < x < 6",
+     "wrong_answer": "2, 3, 4, 5, 6",
+     "correct_answer": "3, 4, 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_END_VALUE_ALWAYS_OUT",
+    "listen_for": [
+     "ends always out"
+    ],
+    "ask": "What does <= say about the end?",
+    "repair": "In.",
+    "error": "Leaves the end values out whatever the signs.",
+    "example": {
+     "question": "Whole numbers with 2 <= x <= 6",
+     "wrong_answer": "3, 4, 5",
+     "correct_answer": "2, 3, 4, 5, 6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_PART_TESTED",
+    "listen_for": [
+     "only the lower end checked"
+    ],
+    "ask": "Is it under the top end too?",
+    "repair": "Both parts.",
+    "error": "Tests a value against one end only.",
+    "example": {
+     "question": "2 < t <= 8: is 9 allowed?",
+     "wrong_answer": "yes, 9 is more than 2",
+     "correct_answer": "no, 9 is more than 8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_OR_WRITTEN_AS_CHAIN",
+    "listen_for": [
+     "7 < x < 2"
+    ],
+    "ask": "Is any number above 7 and below 2?",
+    "repair": "No: write two parts.",
+    "error": "Writes \"less than 2 or greater than 7\" as one chain, 7 < x < 2.",
+    "example": {
+     "question": "x less than 2 or greater than 7",
+     "wrong_answer": "7 < x < 2",
+     "correct_answer": "x < 2 or x > 7"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_SIGN_ONLY",
+    "listen_for": [
+     "only one sign"
+    ],
+    "ask": "How many ends has a range?",
+    "repair": "Two, so two signs.",
+    "error": "Believes an inequality can only have one sign.",
+    "example": {
+     "question": "Can 2 < x < 5 be an inequality?",
+     "wrong_answer": "no, only one sign is allowed",
+     "correct_answer": "yes, it is a compound inequality"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Older than 5 and at most 9, for age a",
+    "answer": "5 < a <= 9",
+    "shows": "sign at each end"
+   },
+   {
+    "question": "Whole numbers with -1 < x <= 3",
+    "answer": "0, 1, 2, 3",
+    "shows": "list"
+   }
+  ],
+  "name": "Form a compound inequality and list or test the values it allows",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND",
+  "key_step": "The child does each step to all three parts, then lists the whole numbers, keeping or leaving out each end by its sign.",
+  "floor": {
+   "prerequisite": "Solves a simple inequality.",
+   "question": "2x + 4 <= 20",
+   "answer": "x <= 8"
+  },
+  "representations": [
+   "three parts in a chain",
+   "a number line",
+   "a list"
+  ],
+  "steps": [
+   "Take the number away from all three parts.",
+   "Divide all three parts.",
+   "Read the two ends.",
+   "List the whole numbers."
+  ],
+  "contexts": [
+   "tickets in a range",
+   "a recipe range",
+   "scores to pass"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 8 < 2x + 4 <= 20."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three parts.",
+    "say": "What do we take away, and from which parts?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 4 < 2x <= 16, then 2 < x <= 8."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_ONE_PART_NOT_CHANGED",
+    "listen_for": [
+     "8 < 2x"
+    ],
+    "ask": "Did the 8 change too?",
+    "repair": "All three parts.",
+    "error": "Takes the number from the middle and one end only.",
+    "example": {
+     "question": "8 < 2x + 4 <= 20: take 4 away",
+     "wrong_answer": "8 < 2x <= 16",
+     "correct_answer": "4 < 2x <= 16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_EXCLUDED_END_LISTED",
+    "listen_for": [
+     "starts at 2"
+    ],
+    "ask": "Is 2 allowed with <?",
+    "repair": "No: start at 3.",
+    "error": "Lists the end number that the < sign leaves out.",
+    "example": {
+     "question": "Whole numbers with 2 < x <= 8",
+     "wrong_answer": "2, 3, 4, 5, 6, 7, 8",
+     "correct_answer": "3, 4, 5, 6, 7, 8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_DIVIDED_ONE_PART_ONLY",
+    "listen_for": [
+     "4 < x <= 16"
+    ],
+    "ask": "Were the ends divided?",
+    "repair": "Divide all three.",
+    "error": "Divides the middle by the number in front of x but not the two ends.",
+    "example": {
+     "question": "4 < 2x <= 16",
+     "wrong_answer": "4 < x <= 16",
+     "correct_answer": "2 < x <= 8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 5 < 3x + 2 <= 14",
+    "answer": "1 < x <= 4",
+    "shows": "all three parts"
+   },
+   {
+    "question": "Whole numbers in 1 < x <= 4",
+    "answer": "2, 3, 4",
+    "shows": "ends by sign"
+   }
+  ],
+  "name": "Solve a compound inequality by doing the same to all three parts",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE",
+  "key_step": "The child reads each circle on its own and writes the smaller number on the left.",
+  "floor": {
+   "prerequisite": "Reads one circle.",
+   "question": "Closed circle at 4, shaded right",
+   "answer": "x >= 4"
+  },
+  "representations": [
+   "a number line with two circles",
+   "the chain",
+   "test a number"
+  ],
+  "steps": [
+   "Smaller number on the left.",
+   "Left circle: open or closed?",
+   "Right circle: open or closed?",
+   "Write the chain."
+  ],
+  "contexts": [
+   "a fridge range",
+   "ages for a class",
+   "a speed range"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a closed circle at 1 and an open circle at 5, shaded between."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the circle at 5.",
+    "say": "Is 5 in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 <= x < 5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_CIRCLE_SIGN_MISMATCH",
+    "listen_for": [
+     "< at a closed circle"
+    ],
+    "ask": "What does a closed circle say?",
+    "repair": "In: <=.",
+    "error": "Writes <= at an open circle or < at a closed one.",
+    "example": {
+     "question": "Closed circle at 1, open circle at 5, shaded between",
+     "wrong_answer": "1 < x <= 5",
+     "correct_answer": "1 <= x < 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_ONE_CIRCLE_READ",
+    "listen_for": [
+     "one end wrong"
+    ],
+    "ask": "Did you look at both circles?",
+    "repair": "Read each.",
+    "error": "Reads one circle correctly and the other wrongly.",
+    "example": {
+     "question": "Closed circle at 1, closed circle at 5, shaded between",
+     "wrong_answer": "1 <= x < 5",
+     "correct_answer": "1 <= x <= 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_ENDS_WRITTEN_BACKWARDS",
+    "listen_for": [
+     "5 < x < 1"
+    ],
+    "ask": "Which number is on the left of the line?",
+    "repair": "The smaller one.",
+    "error": "Puts the bigger number on the left of x.",
+    "example": {
+     "question": "Shaded from 1 to 5",
+     "wrong_answer": "5 < x < 1",
+     "correct_answer": "1 < x < 5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Open circle at -2, closed circle at 3, shaded between",
+    "answer": "-2 < x <= 3",
+    "shows": "two circles"
+   },
+   {
+    "question": "Draw 0 <= x < 4",
+    "answer": "closed at 0, open at 4, shaded between",
+    "shows": "draw"
+   }
+  ],
+  "name": "Show and read a compound inequality on a number line",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
   "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
   "key_step": "The child finds the right angle first and names the side opposite it as the hypotenuse.",
@@ -8152,6 +9071,1157 @@ export const TEACHING_PACK_G7 = {
   "name": "Reason about how the circumference changes with the diameter",
   "sub_strand": "MATH.G7.MEASUR.LENGTH",
   "sub_strand_name": "Length",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_M2_CM2": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_M2_CM2",
+  "key_step": "The child says a square metre is 100 cm by 100 cm, so the factor is 10,000 and not 100.",
+  "floor": {
+   "prerequisite": "Changes m to cm.",
+   "question": "3 m in cm",
+   "answer": "300"
+  },
+  "representations": [
+   "a square metre on the floor",
+   "100 rows of 100",
+   "a conversion line"
+  ],
+  "steps": [
+   "Draw 1 m2.",
+   "Each side is 100 cm.",
+   "100 x 100 = 10,000.",
+   "m2 to cm2: x 10,000; back: divide."
+  ],
+  "contexts": [
+   "a classroom floor",
+   "a carpet",
+   "a notice board"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a square with each side marked 100 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two sides.",
+    "say": "How many cm squares fit along and down?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 m2 = 10,000 cm2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_M2_CM2.M_SQUARE_UNIT_FACTOR_NOT_SQUARED",
+    "listen_for": [
+     "100 cm2"
+    ],
+    "ask": "How many rows of 100?",
+    "repair": "100 rows: 10,000.",
+    "error": "Uses 100 for the cm2 in a square metre.",
+    "example": {
+     "question": "3 m2 in cm2",
+     "wrong_answer": "300",
+     "correct_answer": "30,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_M2_CM2.M_CM2_TO_M2_MULTIPLIED",
+    "listen_for": [
+     "multiplied"
+    ],
+    "ask": "Are m2 bigger or smaller?",
+    "repair": "Bigger: divide.",
+    "error": "Multiplies by 10,000 when changing cm2 to m2.",
+    "example": {
+     "question": "50,000 cm2 in m2",
+     "wrong_answer": "500,000,000",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "3 m2 in cm2",
+    "answer": "30,000",
+    "shows": "factor"
+   },
+   {
+    "question": "50,000 cm2 in m2",
+    "answer": "5",
+    "shows": "divide"
+   }
+  ],
+  "name": "Know the square metre and change between m2 and cm2",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE": {
+  "skill": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
+  "key_step": "The child finds the area in m2 first and then divides by 10,000 for hectares, or multiplies by the given acre size.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "200 m by 150 m",
+   "answer": "30,000 m2"
+  },
+  "representations": [
+   "a 100 m square",
+   "a land title",
+   "a conversion table"
+  ],
+  "steps": [
+   "Area in m2.",
+   "1 ha = 10,000 m2.",
+   "Divide for hectares.",
+   "Acres: use the size given."
+  ],
+  "contexts": [
+   "a shamba",
+   "a school compound",
+   "plots for sale"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a field 200 m by 150 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the area 30,000 m2.",
+    "say": "How many 10,000s are in it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3 ha."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_FOR_ACRE",
+    "listen_for": [
+     "10,000 for an acre"
+    ],
+    "ask": "What does the question say an acre is?",
+    "repair": "Use 4,000.",
+    "error": "Uses 10,000 m2, the hectare, for an acre.",
+    "example": {
+     "question": "3 acres in m2 (1 acre = 4,000 m2)",
+     "wrong_answer": "30,000",
+     "correct_answer": "12,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_FACTOR_ZERO_DROPPED",
+    "listen_for": [
+     "400"
+    ],
+    "ask": "How many zeros in 4,000?",
+    "repair": "Three.",
+    "error": "Multiplies by 400 instead of 4,000.",
+    "example": {
+     "question": "3 acres in m2 (1 acre = 4,000 m2)",
+     "wrong_answer": "1,200",
+     "correct_answer": "12,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_ADDED_FACTOR",
+    "listen_for": [
+     "plus 4,000"
+    ],
+    "ask": "Three acres, each 4,000: add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the conversion number instead of multiplying.",
+    "example": {
+     "question": "3 acres in m2 (1 acre = 4,000 m2)",
+     "wrong_answer": "4,003",
+     "correct_answer": "12,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_M2_LEFT_UNCONVERTED",
+    "listen_for": [
+     "30,000 ha"
+    ],
+    "ask": "Which unit is asked?",
+    "repair": "Hectares.",
+    "error": "Gives the area in m2 when hectares are asked.",
+    "example": {
+     "question": "A field 200 m by 150 m in hectares",
+     "wrong_answer": "30,000",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_AS_100_M2",
+    "listen_for": [
+     "300 ha"
+    ],
+    "ask": "How big is a hectare square?",
+    "repair": "100 m by 100 m.",
+    "error": "Believes a hectare is 100 m2.",
+    "example": {
+     "question": "A field 200 m by 150 m in hectares",
+     "wrong_answer": "300",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE.M_HECTARE_AS_1000_M2",
+    "listen_for": [
+     "30 ha"
+    ],
+    "ask": "Is a hectare 1,000 m2?",
+    "repair": "10,000.",
+    "error": "Uses 1,000 m2 for a hectare.",
+    "example": {
+     "question": "30,000 m2 in hectares",
+     "wrong_answer": "30",
+     "correct_answer": "3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A field 250 m by 120 m: hectares?",
+    "answer": "3",
+    "shows": "divide by 10,000"
+   },
+   {
+    "question": "5 acres in m2, with 1 acre = 4,000 m2",
+    "answer": "20,000",
+    "shows": "acre size"
+   }
+  ],
+  "name": "Use hectares and acres for land and change them to and from square metres",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS",
+  "key_step": "The child chooses the length that meets the base at a right angle as the height.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "12 by 7",
+   "answer": "84"
+  },
+  "representations": [
+   "cut and move a triangle",
+   "a set square on the height",
+   "diagonals of a rhombus"
+  ],
+  "steps": [
+   "Find the base.",
+   "Find the perpendicular height.",
+   "Base x height.",
+   "Rhombus: half the diagonals multiplied."
+  ],
+  "contexts": [
+   "a floor tile",
+   "a kite",
+   "a field"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a parallelogram with its slanting side and a dotted height."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the dotted line.",
+    "say": "Which line meets the base at a right angle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "draw",
+    "do": "Cut the triangle and move it to make a rectangle."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_SLANT_SIDE_FOR_HEIGHT",
+    "listen_for": [
+     "base x slant"
+    ],
+    "ask": "Does the slanting side meet the base square on?",
+    "repair": "Use the height.",
+    "error": "Multiplies the base by the slanting side.",
+    "example": {
+     "question": "Base 12 cm, slanting side 9 cm, height 7 cm",
+     "wrong_answer": "108",
+     "correct_answer": "84"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_HALF_FOR_PARALLELOGRAM",
+    "listen_for": [
+     "half"
+    ],
+    "ask": "Is this a triangle?",
+    "repair": "No half.",
+    "error": "Halves base x height as for a triangle.",
+    "example": {
+     "question": "Base 12 cm, height 7 cm",
+     "wrong_answer": "42",
+     "correct_answer": "84"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_PERIMETER_FOR_AREA",
+    "listen_for": [
+     "added the sides"
+    ],
+    "ask": "Is that the distance round?",
+    "repair": "Area multiplies.",
+    "error": "Adds the sides, which gives the perimeter.",
+    "example": {
+     "question": "Base 12 cm, slanting side 9 cm",
+     "wrong_answer": "42",
+     "correct_answer": "84 (with height 7 cm)"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_SLANT_THOUGHT_SHORTER",
+    "listen_for": [
+     "the height is longer"
+    ],
+    "ask": "Which is the shortest way across?",
+    "repair": "The height.",
+    "error": "Believes the slanting side is shorter than the height.",
+    "example": {
+     "question": "Which is longer: the slanting side or the height?",
+     "wrong_answer": "the height",
+     "correct_answer": "the slanting side"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS.M_RHOMBUS_DIAGONALS_NOT_HALVED",
+    "listen_for": [
+     "10 x 6 = 60"
+    ],
+    "ask": "Is the rhombus the whole rectangle?",
+    "repair": "Half of it.",
+    "error": "Multiplies the diagonals of a rhombus and does not halve.",
+    "example": {
+     "question": "Rhombus with diagonals 10 cm and 6 cm",
+     "wrong_answer": "60",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Base 15 cm, slanting side 10 cm, height 8 cm: area?",
+    "answer": "120 cm2",
+    "shows": "height"
+   },
+   {
+    "question": "Rhombus with diagonals 12 cm and 8 cm: area?",
+    "answer": "48 cm2",
+    "shows": "half the diagonals"
+   }
+  ],
+  "name": "Work out the area of a parallelogram and a rhombus",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM",
+  "key_step": "The child adds the parallel sides, multiplies by the height, then halves.",
+  "floor": {
+   "prerequisite": "Area of a triangle.",
+   "question": "base 10, height 6",
+   "answer": "30"
+  },
+  "representations": [
+   "two trapeziums make a parallelogram",
+   "the formula",
+   "a shamba drawing"
+  ],
+  "steps": [
+   "Add the parallel sides.",
+   "Multiply by the height.",
+   "Halve.",
+   "Back: double, divide, subtract."
+  ],
+  "contexts": [
+   "a shamba",
+   "a roof face",
+   "a field"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a trapezium and a copy upside down beside it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the long shape they make.",
+    "say": "What shape is it, and how much of it is one trapezium?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1/2 x (a + b) x h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_TRAPEZIUM_HALF_LEFT_OUT",
+    "listen_for": [
+     "forgot the half"
+    ],
+    "ask": "How many trapeziums make the parallelogram?",
+    "repair": "Two: take half.",
+    "error": "Forgets the half in the trapezium formula.",
+    "example": {
+     "question": "Parallel sides 30 m and 50 m, 20 m apart",
+     "wrong_answer": "1,600",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_HEIGHT_LEFT_OUT",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Where is the height?",
+    "repair": "Multiply by it.",
+    "error": "Gives the average of the parallel sides as the area.",
+    "example": {
+     "question": "Parallel sides 30 m and 50 m, 20 m apart",
+     "wrong_answer": "40",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_ONE_PARALLEL_SIDE_USED",
+    "listen_for": [
+     "one side"
+    ],
+    "ask": "How many parallel sides?",
+    "repair": "Two: add them.",
+    "error": "Uses one parallel side only.",
+    "example": {
+     "question": "Parallel sides 30 m and 50 m, 20 m apart",
+     "wrong_answer": "600",
+     "correct_answer": "800"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_HALF_NOT_UNDONE",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "What undoes a half?",
+    "repair": "Double first.",
+    "error": "Divides the area by the height without doubling first.",
+    "example": {
+     "question": "Area 120 m2, height 8 m: sum of parallel sides",
+     "wrong_answer": "15",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_KNOWN_SIDE_ADDED",
+    "listen_for": [
+     "42"
+    ],
+    "ask": "Is the other side more than the sum?",
+    "repair": "Subtract.",
+    "error": "Adds the known side to the sum to find the other side.",
+    "example": {
+     "question": "Sum of parallel sides 30 m, one side 12 m: the other",
+     "wrong_answer": "42",
+     "correct_answer": "18"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM.M_DOUBLED_NOT_HALVED",
+    "listen_for": [
+     "x 2"
+    ],
+    "ask": "Is it half or double?",
+    "repair": "Half.",
+    "error": "Doubles the product instead of halving it.",
+    "example": {
+     "question": "(12 + 8) x 6: then?",
+     "wrong_answer": "240",
+     "correct_answer": "60"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Parallel sides 30 m and 50 m, 20 m apart: area?",
+    "answer": "800 m2",
+    "shows": "formula"
+   },
+   {
+    "question": "Area 120 m2, height 8 m, one parallel side 12 m: the other?",
+    "answer": "18 m",
+    "shows": "work back"
+   }
+  ],
+  "name": "Work out the area of a trapezium and a missing parallel side",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT",
+  "key_step": "The child changes the floor and the tile to one unit and divides one area by the other.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "400 cm by 300 cm",
+   "answer": "120,000 cm2"
+  },
+  "representations": [
+   "tiles in rows and columns",
+   "a floor plan",
+   "one tile"
+  ],
+  "steps": [
+   "Floor in cm.",
+   "Floor area.",
+   "Tile area.",
+   "Divide."
+  ],
+  "contexts": [
+   "tiling a classroom",
+   "a carpet",
+   "mats on a floor"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a floor 4 m by 3 m and one tile 50 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the floor.",
+    "say": "How many 50 cm tiles fit along 4 m?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 8 x 6 = 48."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT.M_TILES_ALONG_SIDES_ADDED",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Does that cover the middle?",
+    "repair": "Rows times columns.",
+    "error": "Counts the tiles along two sides and adds them.",
+    "example": {
+     "question": "Floor 4 m by 3 m, tiles 50 cm",
+     "wrong_answer": "14",
+     "correct_answer": "48"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT.M_AREAS_IN_DIFFERENT_UNITS",
+    "listen_for": [
+     "12 tiles"
+    ],
+    "ask": "Is a tile 1 m2?",
+    "repair": "Same unit first.",
+    "error": "Gives the floor area in m2 as the number of tiles.",
+    "example": {
+     "question": "Floor 4 m by 3 m, tiles 50 cm",
+     "wrong_answer": "12",
+     "correct_answer": "48"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Floor 5 m by 4 m, tiles of 25 cm: how many?",
+    "answer": "320",
+    "shows": "same unit"
+   },
+   {
+    "question": "Why is 12 wrong for a 4 m by 3 m floor and 50 cm tiles?",
+    "answer": "a tile is not 1 m2",
+    "shows": "compare areas"
+   }
+  ],
+  "name": "Use the area of a rectangle to count tiles or cover a floor",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE",
+  "key_step": "The child halves the diameter first, then multiplies pi by the radius twice.",
+  "floor": {
+   "prerequisite": "Squares a number.",
+   "question": "7 squared",
+   "answer": "49"
+  },
+  "representations": [
+   "sectors rearranged to a rectangle",
+   "a circle with its radius",
+   "the formula"
+  ],
+  "steps": [
+   "Radius from diameter.",
+   "r x r.",
+   "Times 22/7.",
+   "Half circle: halve."
+  ],
+  "contexts": [
+   "a flower bed",
+   "a church window",
+   "a round mat"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle with a diameter of 14 m marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the diameter.",
+    "say": "What is the radius?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 22/7 x 7 x 7 = 154."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_DIAMETER_FOR_RADIUS_AREA",
+    "listen_for": [
+     "14 x 14"
+    ],
+    "ask": "What is half of 14?",
+    "repair": "Use 7.",
+    "error": "Uses the diameter in place of the radius.",
+    "example": {
+     "question": "Circle diameter 14 m",
+     "wrong_answer": "616",
+     "correct_answer": "154"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_CIRCUMFERENCE_FOR_AREA",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "Is that the distance round?",
+    "repair": "Area needs r x r.",
+    "error": "Works out pi x d, the distance round, for the area.",
+    "example": {
+     "question": "Circle diameter 14 m",
+     "wrong_answer": "44",
+     "correct_answer": "154"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_RADIUS_NOT_SQUARED_AREA",
+    "listen_for": [
+     "22/7 x 7"
+    ],
+    "ask": "How many r in the area?",
+    "repair": "Two.",
+    "error": "Multiplies pi by the radius once.",
+    "example": {
+     "question": "Circle radius 7 m",
+     "wrong_answer": "22",
+     "correct_answer": "154"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_SEMICIRCLE_NOT_HALVED",
+    "listen_for": [
+     "whole circle"
+    ],
+    "ask": "Is the window a whole circle?",
+    "repair": "Halve.",
+    "error": "Gives the whole circle for a half circle.",
+    "example": {
+     "question": "Half circle, straight edge 14 cm",
+     "wrong_answer": "154",
+     "correct_answer": "77"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_AREA_SCALES_LIKE_LENGTH",
+    "listen_for": [
+     "twice the area"
+    ],
+    "ask": "What is 14 x 14 compared with 7 x 7?",
+    "repair": "4 times.",
+    "error": "Believes doubling the radius doubles the area.",
+    "example": {
+     "question": "Radius 7 cm and radius 14 cm: how many times the area?",
+     "wrong_answer": "2",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE.M_PI_AS_SCALE_FACTOR",
+    "listen_for": [
+     "3 times"
+    ],
+    "ask": "Is pi different for the two mats?",
+    "repair": "No.",
+    "error": "Believes pi changes how much the area grows.",
+    "example": {
+     "question": "Radius doubled: how many times the area?",
+     "wrong_answer": "3, because pi is about 3",
+     "correct_answer": "4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Circle of diameter 28 m: area (pi = 22/7)?",
+    "answer": "616 m2",
+    "shows": "radius first"
+   },
+   {
+    "question": "Radius doubled: how many times the area?",
+    "answer": "4",
+    "shows": "r x r"
+   }
+  ],
+  "name": "Work out the area of a circle and a half circle",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE",
+  "key_step": "The child divides the circumference by pi for the diameter before halving.",
+  "floor": {
+   "prerequisite": "Circumference from the diameter.",
+   "question": "d = 14, pi = 22/7",
+   "answer": "44"
+  },
+  "representations": [
+   "a rope round a pond",
+   "the two formulas",
+   "a chain of steps"
+  ],
+  "steps": [
+   "Diameter = C divided by pi.",
+   "Radius = half.",
+   "Area = pi x r x r."
+  ],
+  "contexts": [
+   "a fish pond",
+   "a round field",
+   "a water tank top"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write C = 88 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 88.",
+    "say": "What do we divide by to get the diameter?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 88 divided by 22/7 = 28."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE.M_CIRCUMFERENCE_HALVED_FOR_DIAMETER",
+    "listen_for": [
+     "44"
+    ],
+    "ask": "Is the diameter half the distance round?",
+    "repair": "Divide by pi.",
+    "error": "Halves the circumference to get the diameter.",
+    "example": {
+     "question": "Circumference 88 m: diameter",
+     "wrong_answer": "44",
+     "correct_answer": "28"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE.M_DIAMETER_DOUBLED_FOR_RADIUS",
+    "listen_for": [
+     "56"
+    ],
+    "ask": "Is the radius longer than the diameter?",
+    "repair": "Half.",
+    "error": "Doubles the diameter to get the radius.",
+    "example": {
+     "question": "Diameter 28 m: radius",
+     "wrong_answer": "56",
+     "correct_answer": "14"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Circumference 44 m: area (pi = 22/7)?",
+    "answer": "154 m2",
+    "shows": "chain"
+   },
+   {
+    "question": "Circumference 88 m: diameter?",
+    "answer": "28 m",
+    "shows": "divide by pi"
+   }
+  ],
+  "name": "Find the area of a circle from the distance round it",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_BORDERS": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_BORDERS",
+  "key_step": "The child finds the outer shape with the right size and takes the inner shape away.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "14 by 10",
+   "answer": "140"
+  },
+  "representations": [
+   "a picture frame",
+   "two shapes, one inside the other",
+   "outer minus inner"
+  ],
+  "steps": [
+   "Outer size.",
+   "Outer area.",
+   "Inner area.",
+   "Subtract."
+  ],
+  "contexts": [
+   "a path round a garden",
+   "a path round a pond",
+   "a frame"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a garden 12 m by 8 m with a 1 m path round it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the outer length.",
+    "say": "How long is the outside now?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 14 x 10 - 12 x 8 = 44."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_BORDER_CORNERS_LEFT_OUT",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "What about the corners?",
+    "repair": "Outer minus inner.",
+    "error": "Multiplies the perimeter of the garden by the path width.",
+    "example": {
+     "question": "Garden 12 m by 8 m, path 1 m wide",
+     "wrong_answer": "40",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_BORDER_WIDTH_ADDED_ONCE",
+    "listen_for": [
+     "13 by 9"
+    ],
+    "ask": "Is the path on both ends?",
+    "repair": "Add 2.",
+    "error": "Adds the path width once to each side length.",
+    "example": {
+     "question": "Garden 12 m by 8 m, path 1 m wide",
+     "wrong_answer": "21",
+     "correct_answer": "44"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_BORDERS.M_INNER_NOT_SUBTRACTED",
+    "listen_for": [
+     "140"
+    ],
+    "ask": "Is the garden part of the path?",
+    "repair": "Take it away.",
+    "error": "Gives the area of the whole outer shape.",
+    "example": {
+     "question": "Garden 12 m by 8 m, path 1 m wide",
+     "wrong_answer": "140",
+     "correct_answer": "44"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Garden 10 m by 6 m, path 2 m wide: area of the path?",
+    "answer": "80 m2",
+    "shows": "outer minus inner"
+   },
+   {
+    "question": "Picture 30 cm by 20 cm with a 5 cm frame: area of the frame?",
+    "answer": "600 cm2",
+    "shows": "corners counted"
+   }
+  ],
+  "name": "Work out the area of a border or path round a rectangle",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_RING": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_RING",
+  "key_step": "The child adds the path width once to the radius and takes the small circle from the big one.",
+  "floor": {
+   "prerequisite": "Area of a circle.",
+   "question": "radius 7, pi = 22/7",
+   "answer": "154"
+  },
+  "representations": [
+   "two circles, one inside the other",
+   "a well with a wall",
+   "big minus small"
+  ],
+  "steps": [
+   "Outer radius = radius + width.",
+   "Big circle area.",
+   "Small circle area.",
+   "Subtract."
+  ],
+  "contexts": [
+   "a path round a pond",
+   "the wall of a well",
+   "a round flower bed with a border"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a pond of radius 7 m and a path 7 m wide round it."
+   },
+   {
+    "beat": "point",
+    "do": "Point along one radius from the centre to the outside edge.",
+    "say": "How long is the outer radius?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 616 - 154 = 462."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_WIDTH_ADDED_TWICE",
+    "listen_for": [
+     "7 + 14"
+    ],
+    "ask": "How many times does the radius cross the path?",
+    "repair": "Once.",
+    "error": "Adds the path width twice to the radius of a pond.",
+    "example": {
+     "question": "Pond radius 7 m, path 7 m wide: outer radius",
+     "wrong_answer": "21",
+     "correct_answer": "14"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_INNER_RADIUS_USED",
+    "listen_for": [
+     "pond radius"
+    ],
+    "ask": "Which circle is the big one?",
+    "repair": "Pond and path.",
+    "error": "Uses the pond radius for the big circle.",
+    "example": {
+     "question": "Pond radius 7 m, path 7 m: area of pond and path",
+     "wrong_answer": "154",
+     "correct_answer": "616"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_RING.M_RING_RADII_SUBTRACTED_FIRST",
+    "listen_for": [
+     "a circle of radius 7 for the path"
+    ],
+    "ask": "Is the path a circle?",
+    "repair": "No: a ring, big minus small.",
+    "error": "Takes the radii away first and finds the area of a circle of that radius.",
+    "example": {
+     "question": "Pond radius 7 m, path 7 m: area of the path",
+     "wrong_answer": "154",
+     "correct_answer": "462"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Pond radius 7 m, path 7 m: area of the path (pi = 22/7)?",
+    "answer": "462 m2",
+    "shows": "ring"
+   },
+   {
+    "question": "Pond radius 14 m, path 7 m: outer radius?",
+    "answer": "21 m",
+    "shows": "once"
+   }
+  ],
+  "name": "Work out the area of a ring: a path round a circle",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES": {
+  "skill": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES",
+  "key_step": "The child splits the shape into parts whose areas are known and adds them.",
+  "floor": {
+   "prerequisite": "Area of a rectangle.",
+   "question": "6 by 4",
+   "answer": "24"
+  },
+  "representations": [
+   "an L split into two rectangles",
+   "a rectangle with a half circle",
+   "a floor plan"
+  ],
+  "steps": [
+   "Split the shape.",
+   "Each area.",
+   "Add.",
+   "Cost: area x price."
+  ],
+  "contexts": [
+   "an L-shaped floor",
+   "a school stage",
+   "a compound"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an L-shaped floor and a dotted line splitting it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two parts.",
+    "say": "What is each area?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write the two areas and add them."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_SIDES_ADDED_FOR_AREA",
+    "listen_for": [
+     "4 + 3"
+    ],
+    "ask": "Add or multiply the sides?",
+    "repair": "Multiply.",
+    "error": "Adds two sides of a rectangle for its area.",
+    "example": {
+     "question": "A rectangle 4 m by 3 m",
+     "wrong_answer": "7",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_PARTS_MULTIPLIED_NOT_ADDED",
+    "listen_for": [
+     "40 x 12"
+    ],
+    "ask": "Are the parts put together or multiplied?",
+    "repair": "Add.",
+    "error": "Multiplies the areas of the two parts.",
+    "example": {
+     "question": "Parts of 40 m2 and 12 m2",
+     "wrong_answer": "480",
+     "correct_answer": "52"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES.M_COST_ON_PART_ONLY",
+    "listen_for": [
+     "one part"
+    ],
+    "ask": "Is the whole floor tiled?",
+    "repair": "Yes: use the total.",
+    "error": "Works out the cost for one part only.",
+    "example": {
+     "question": "Parts 40 m2 and 12 m2 at sh 100 a m2",
+     "wrong_answer": "sh 4,000",
+     "correct_answer": "sh 5,200"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Floor of two rectangles, 8 m by 5 m and 4 m by 3 m, at sh 100 a m2: cost?",
+    "answer": "sh 5,200",
+    "shows": "add then cost"
+   },
+   {
+    "question": "Rectangle 20 m by 14 m and half circle on a 14 m side (pi = 22/7): area?",
+    "answer": "357 m2",
+    "shows": "combined"
+   }
+  ],
+  "name": "Work out the area of a combined shape and the cost of covering it",
+  "sub_strand": "MATH.G7.MEASUR.AREA",
+  "sub_strand_name": "Area",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
  "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
@@ -10276,6 +12346,2577 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Temperature",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS",
+  "key_step": "The child finds the total cost and the total selling money first, then subtracts the smaller from the bigger.",
+  "floor": {
+   "prerequisite": "Subtracts money.",
+   "question": "sh 2,500 - sh 2,200",
+   "answer": "sh 300"
+  },
+  "representations": [
+   "a table of buying and selling",
+   "a bar for cost and for selling",
+   "one item then many"
+  ],
+  "steps": [
+   "Total cost.",
+   "Total selling money.",
+   "Subtract.",
+   "Say profit or loss."
+  ],
+  "contexts": [
+   "tomatoes at a market",
+   "a faulty radio",
+   "mandazi at school"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 30 kg bought at sh 60, sold at sh 80."
+   },
+   {
+    "beat": "point",
+    "do": "Point at sh 60 and sh 80.",
+    "say": "What is the cost of all 30 kg?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 2,400 - 1,800 = 600."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PROFIT_ON_ONE_UNIT",
+    "listen_for": [
+     "sh 20"
+    ],
+    "ask": "Is that for one kilogram or for all?",
+    "repair": "All 30: times 30.",
+    "error": "Gives the profit on one kilogram as the whole profit.",
+    "example": {
+     "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+     "wrong_answer": "sh 20",
+     "correct_answer": "sh 600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_AS_PROFIT",
+    "listen_for": [
+     "sh 2,400"
+    ],
+    "ask": "Did the tomatoes cost nothing?",
+    "repair": "Take the cost away.",
+    "error": "Gives the money from selling as the profit.",
+    "example": {
+     "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+     "wrong_answer": "sh 2,400",
+     "correct_answer": "sh 600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_COST_AS_PROFIT",
+    "listen_for": [
+     "sh 1,800"
+    ],
+    "ask": "Is that money in or money out?",
+    "repair": "Money out.",
+    "error": "Gives the cost of buying as the profit.",
+    "example": {
+     "question": "30 kg bought at sh 60, sold at sh 80 a kg: profit",
+     "wrong_answer": "sh 1,800",
+     "correct_answer": "sh 600"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_BUYING_PRICE_AS_LOSS",
+    "listen_for": [
+     "sh 2,500 lost"
+    ],
+    "ask": "Did she get nothing back?",
+    "repair": "Only the difference.",
+    "error": "Gives the buying price as the loss.",
+    "example": {
+     "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+     "wrong_answer": "sh 2,500",
+     "correct_answer": "sh 300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_SELLING_PRICE_AS_LOSS",
+    "listen_for": [
+     "sh 2,200"
+    ],
+    "ask": "Is that what she lost or what she got?",
+    "repair": "What she got.",
+    "error": "Gives the selling price as the loss.",
+    "example": {
+     "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+     "wrong_answer": "sh 2,200",
+     "correct_answer": "sh 300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS.M_PRICES_ADDED_FOR_LOSS",
+    "listen_for": [
+     "added"
+    ],
+    "ask": "Is a loss the two prices together?",
+    "repair": "Subtract.",
+    "error": "Adds the buying and selling prices.",
+    "example": {
+     "question": "Bought at sh 2,500, sold at sh 2,200: loss",
+     "wrong_answer": "sh 4,700",
+     "correct_answer": "sh 300"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "25 kg bought at sh 50, sold at sh 70 a kg: profit?",
+    "answer": "sh 500",
+    "shows": "totals"
+   },
+   {
+    "question": "Bought at sh 3,000, sold at sh 2,600: profit or loss, and how much?",
+    "answer": "loss of sh 400",
+    "shows": "which"
+   }
+  ],
+  "name": "Work out profit and loss from buying and selling prices",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS",
+  "key_step": "The child puts every cost, including delivery, into the total cost before subtracting.",
+  "floor": {
+   "prerequisite": "Profit from cost and selling.",
+   "question": "cost 28,000, selling 32,000",
+   "answer": "4,000"
+  },
+  "representations": [
+   "a list of costs",
+   "a bar of money in and out",
+   "a three-step table"
+  ],
+  "steps": [
+   "Goods plus extra costs.",
+   "Selling money for all.",
+   "Subtract."
+  ],
+  "contexts": [
+   "cement and delivery",
+   "sukuma and transport",
+   "soda and a crate deposit"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: 40 bags at sh 700, delivery sh 1,500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the delivery.",
+    "say": "Is the delivery part of the cost?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 28,000 + 1,500 = 29,500."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_EXTRA_COST_LEFT_OUT",
+    "listen_for": [
+     "no delivery"
+    ],
+    "ask": "Who paid the delivery?",
+    "repair": "The seller: add it.",
+    "error": "Leaves the delivery or transport cost out of the total cost.",
+    "example": {
+     "question": "40 bags at sh 700, delivery sh 1,500, sold at sh 800: profit",
+     "wrong_answer": "sh 4,000",
+     "correct_answer": "sh 2,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS.M_ONE_ITEM_FOR_ALL",
+    "listen_for": [
+     "sh 800"
+    ],
+    "ask": "How many bags were sold?",
+    "repair": "Times 40.",
+    "error": "Gives the price of one bag as the money from selling all.",
+    "example": {
+     "question": "40 bags sold at sh 800 each: money from selling",
+     "wrong_answer": "sh 800",
+     "correct_answer": "sh 32,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "40 bags at sh 700, delivery sh 1,500, sold at sh 800 each: profit?",
+    "answer": "sh 2,500",
+    "shows": "all costs"
+   },
+   {
+    "question": "50 crates at sh 900, transport sh 2,000, sold at sh 1,000: profit?",
+    "answer": "sh 3,000",
+    "shows": "all costs"
+   }
+  ],
+  "name": "Work out profit when there are extra costs such as transport",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS": {
+  "skill": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS",
+  "key_step": "The child divides the profit by the buying price, never the selling price, and multiplies by 100.",
+  "floor": {
+   "prerequisite": "A fraction as a percentage.",
+   "question": "1/4 as a percentage",
+   "answer": "25%"
+  },
+  "representations": [
+   "profit over buying price",
+   "a 100 square",
+   "a table of items"
+  ],
+  "steps": [
+   "Profit in shillings.",
+   "Over the buying price.",
+   "Times 100.",
+   "Compare percentages, not shillings."
+  ],
+  "contexts": [
+   "a school bag",
+   "a radio",
+   "three items at a stall"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: bought sh 2,000, sold sh 2,500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at sh 2,000.",
+    "say": "Which price do we compare the profit with?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 500 / 2,000 x 100 = 25%."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PERCENT_ON_SELLING_PRICE",
+    "listen_for": [
+     "over 2,500"
+    ],
+    "ask": "Which price did the trader start with?",
+    "repair": "The buying price.",
+    "error": "Takes the percentage on the selling price.",
+    "example": {
+     "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+     "wrong_answer": "20%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_PROFIT_AMOUNT_AS_PERCENT",
+    "listen_for": [
+     "500%"
+    ],
+    "ask": "Is 500 a percentage?",
+    "repair": "Divide and times 100.",
+    "error": "Gives the profit in shillings as the percentage.",
+    "example": {
+     "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+     "wrong_answer": "500",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_SELLING_OVER_BUYING_PERCENT",
+    "listen_for": [
+     "125%"
+    ],
+    "ask": "Is the profit the whole selling price?",
+    "repair": "Find the profit first.",
+    "error": "Writes the selling price as a percentage of the buying price.",
+    "example": {
+     "question": "Bought sh 2,000, sold sh 2,500: percentage profit",
+     "wrong_answer": "125%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_NOT_MULTIPLIED_BY_100",
+    "listen_for": [
+     "0.25%"
+    ],
+    "ask": "What turns 0.25 into a percentage?",
+    "repair": "Times 100.",
+    "error": "Writes the decimal as the percentage.",
+    "example": {
+     "question": "500 / 2,000 = 0.25: percentage",
+     "wrong_answer": "0.25%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS.M_BIGGEST_AMOUNT_AS_BIGGEST_PERCENT",
+    "listen_for": [
+     "the most shillings"
+    ],
+    "ask": "Out of what did it make that profit?",
+    "repair": "Its own buying price.",
+    "error": "Chooses the item with the biggest profit in shillings as the best percentage.",
+    "example": {
+     "question": "Bag: bought 400, sold 600. Jacket: bought 2,000, sold 2,400. Best percentage?",
+     "wrong_answer": "Jacket",
+     "correct_answer": "Bag (50% against 20%)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bought sh 800, sold sh 1,000: percentage profit?",
+    "answer": "25%",
+    "shows": "buying price"
+   },
+   {
+    "question": "Bought sh 1,200, sold sh 900: percentage loss?",
+    "answer": "25%",
+    "shows": "loss"
+   }
+  ],
+  "name": "Calculate percentage profit and loss",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT",
+  "key_step": "The child takes the discount off the marked price, and a second discount off the new price.",
+  "floor": {
+   "prerequisite": "A percentage of an amount.",
+   "question": "20% of 1,000",
+   "answer": "200"
+  },
+  "representations": [
+   "a price tag with a cut",
+   "start at 100",
+   "a bar cut twice"
+  ],
+  "steps": [
+   "Discount = percentage of the marked price.",
+   "Price paid = marked - discount.",
+   "A second discount: on the new price.",
+   "Percentage discount = discount / marked x 100."
+  ],
+  "contexts": [
+   "a coat in a sale",
+   "shoes at a market",
+   "a phone offer"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Start at 100. Write 20% off."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 80.",
+    "say": "What is 10% of 80?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80 - 8 = 72, so 28% off in all."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SUCCESSIVE_DISCOUNTS_ADDED",
+    "listen_for": [
+     "30%"
+    ],
+    "ask": "Is the second 10% of 100 or of 80?",
+    "repair": "Of 80.",
+    "error": "Adds two discounts one after another as one percentage.",
+    "example": {
+     "question": "20% off, then 10% off the new price: total discount",
+     "wrong_answer": "30%",
+     "correct_answer": "28%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNTS_NOT_COMBINABLE",
+    "listen_for": [
+     "cannot be combined"
+    ],
+    "ask": "Can we take one off and then the other?",
+    "repair": "Yes.",
+    "error": "Believes two discounts cannot be combined.",
+    "example": {
+     "question": "20% off, then 10% off: can we find the total?",
+     "wrong_answer": "no",
+     "correct_answer": "yes, 28%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_SECOND_DISCOUNT_IGNORED",
+    "listen_for": [
+     "only 20%"
+    ],
+    "ask": "Did the second discount take money off?",
+    "repair": "Yes.",
+    "error": "Leaves out the second discount.",
+    "example": {
+     "question": "20% off, then 10% off: total discount",
+     "wrong_answer": "20%",
+     "correct_answer": "28%"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT.M_DISCOUNT_AS_PRICE_PAID",
+    "listen_for": [
+     "sh 200 to pay"
+    ],
+    "ask": "Is that what you pay or what you save?",
+    "repair": "What you save.",
+    "error": "Gives the discount as the price to pay.",
+    "example": {
+     "question": "Marked sh 1,000, 20% off: price paid",
+     "wrong_answer": "sh 200",
+     "correct_answer": "sh 800"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Marked sh 1,500, 20% discount: price paid?",
+    "answer": "sh 1,200",
+    "shows": "off the marked price"
+   },
+   {
+    "question": "20% off, then 10% off the new price: total percentage off?",
+    "answer": "28%",
+    "shows": "second on the new price"
+   }
+  ],
+  "name": "Calculate a discount, a percentage discount and the price after it",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK": {
+  "skill": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK",
+  "key_step": "The child says what percentage of the marked price was paid and finds 1%, then 100%.",
+  "floor": {
+   "prerequisite": "A percentage of an amount.",
+   "question": "80% of 1,000",
+   "answer": "800"
+  },
+  "representations": [
+   "a bar of 100% with 20% cut off",
+   "a ratio table",
+   "check forwards"
+  ],
+  "steps": [
+   "Paid = 100% - discount.",
+   "That percentage is the price paid.",
+   "Find 1%.",
+   "Find 100%."
+  ],
+  "contexts": [
+   "a jacket in a sale",
+   "a school bag",
+   "a pair of shoes"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of 100% with 20% cut off."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the part paid.",
+    "say": "What percentage is sh 800?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80% = 800, 1% = 10, 100% = 1,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_DISCOUNT_ADDED_BACK_ON_PAID",
+    "listen_for": [
+     "sh 960"
+    ],
+    "ask": "Is 20% of 800 the same as 20% of the marked price?",
+    "repair": "No.",
+    "error": "Adds the discount percentage to the price paid.",
+    "example": {
+     "question": "Paid sh 800 after 20% off: marked price",
+     "wrong_answer": "sh 960",
+     "correct_answer": "sh 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PERCENT_AS_SHILLINGS",
+    "listen_for": [
+     "sh 820"
+    ],
+    "ask": "Is 20% the same as sh 20?",
+    "repair": "No.",
+    "error": "Adds the percentage as shillings.",
+    "example": {
+     "question": "Paid sh 800 after 20% off: marked price",
+     "wrong_answer": "sh 820",
+     "correct_answer": "sh 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK.M_PAID_AS_DISCOUNT_PERCENT",
+    "listen_for": [
+     "sh 4,000"
+    ],
+    "ask": "Was sh 800 20% or 80%?",
+    "repair": "80%.",
+    "error": "Treats the price paid as the discount percentage of the marked price.",
+    "example": {
+     "question": "Paid sh 800 after 20% off: marked price",
+     "wrong_answer": "sh 4,000",
+     "correct_answer": "sh 1,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Paid sh 1,200 after 25% off: marked price?",
+    "answer": "sh 1,600",
+    "shows": "work back"
+   },
+   {
+    "question": "Check: 25% off sh 1,600",
+    "answer": "sh 1,200",
+    "shows": "forwards"
+   }
+  ],
+  "name": "Find the marked price from the price paid after a discount",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.COMMISSION": {
+  "skill": "MATH.G7.MEASUR.MONEY.COMMISSION",
+  "key_step": "The child finds which sales earn commission, changes the rate to a decimal by dividing by 100, and adds the basic salary.",
+  "floor": {
+   "prerequisite": "A percentage as a decimal.",
+   "question": "3%",
+   "answer": "0.03"
+  },
+  "representations": [
+   "a pay slip",
+   "sales above a target line",
+   "rate x sales"
+  ],
+  "steps": [
+   "Which sales earn it?",
+   "Rate as a decimal.",
+   "Commission = rate x sales.",
+   "Pay = basic + commission."
+  ],
+  "contexts": [
+   "a phone seller",
+   "a land agent",
+   "a matatu tout"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of sales with a target line at sh 100,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point above the line.",
+    "say": "How much is above the target?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3% of 150,000 = 4,500."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_ALL_SALES",
+    "listen_for": [
+     "on all the sales"
+    ],
+    "ask": "Which part earns commission?",
+    "repair": "Above the target.",
+    "error": "Works out commission on all the sales when it is only above a target.",
+    "example": {
+     "question": "3% on sales above sh 100,000; sales sh 250,000",
+     "wrong_answer": "sh 7,500",
+     "correct_answer": "sh 4,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_BASIC_SALARY_LEFT_OUT",
+    "listen_for": [
+     "only commission"
+    ],
+    "ask": "Is there a basic salary?",
+    "repair": "Add it.",
+    "error": "Gives the commission alone as the pay.",
+    "example": {
+     "question": "Basic sh 20,000 plus commission sh 4,500: pay",
+     "wrong_answer": "sh 4,500",
+     "correct_answer": "sh 24,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_COMMISSION_ON_TARGET",
+    "listen_for": [
+     "3% of the target"
+    ],
+    "ask": "Is the target the sales above it?",
+    "repair": "No.",
+    "error": "Works out commission on the target instead of the sales above it.",
+    "example": {
+     "question": "3% on sales above sh 100,000; sales sh 250,000",
+     "wrong_answer": "sh 3,000",
+     "correct_answer": "sh 4,500"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.COMMISSION.M_PERCENT_AS_TENTHS",
+    "listen_for": [
+     "0.5 for 5%"
+    ],
+    "ask": "Per cent means out of what?",
+    "repair": "100.",
+    "error": "Divides the rate by 10 instead of 100.",
+    "example": {
+     "question": "5% as a decimal",
+     "wrong_answer": "0.5",
+     "correct_answer": "0.05"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Basic sh 20,000, 3% on sales above sh 100,000, sales sh 250,000: pay?",
+    "answer": "sh 24,500",
+    "shows": "above target"
+   },
+   {
+    "question": "5% commission on sh 300,000",
+    "answer": "sh 15,000",
+    "shows": "rate"
+   }
+  ],
+  "name": "Calculate commission, percentage commission and pay with a basic salary",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS",
+  "key_step": "The child finds the units used from two readings, charges each band at its own rate, and adds the fixed charge.",
+  "floor": {
+   "prerequisite": "Subtracts readings.",
+   "question": "2,420 - 2,340",
+   "answer": "80"
+  },
+  "representations": [
+   "a bill with its lines",
+   "a band table",
+   "a meter"
+  ],
+  "steps": [
+   "Units used.",
+   "Charge each band.",
+   "Add the fixed charge.",
+   "Tokens: charges first, then divide."
+  ],
+  "contexts": [
+   "a KPLC bill",
+   "a county water bill",
+   "tokens at a shop"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write readings 2,340 and 2,420."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two readings.",
+    "say": "How many units were used this month?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80 x 25 + 200 = 2,200."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_READING_FOR_UNITS_USED",
+    "listen_for": [
+     "2,420 units"
+    ],
+    "ask": "Did the house use all 2,420 this month?",
+    "repair": "Only the difference.",
+    "error": "Uses this month's meter reading as the units used.",
+    "example": {
+     "question": "Readings 2,340 and 2,420, sh 25 a unit",
+     "wrong_answer": "2,420 units",
+     "correct_answer": "80 units"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIXED_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "no fixed charge"
+    ],
+    "ask": "What other line is on the bill?",
+    "repair": "The fixed charge.",
+    "error": "Leaves the fixed charge off the bill.",
+    "example": {
+     "question": "80 units at sh 25 and a fixed charge of sh 200",
+     "wrong_answer": "sh 2,000",
+     "correct_answer": "sh 2,200"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_BILL_PARTS_ADDED",
+    "listen_for": [
+     "added all"
+    ],
+    "ask": "Is the rate per unit added or multiplied?",
+    "repair": "Multiplied.",
+    "error": "Adds the units, the rate and the fixed charge.",
+    "example": {
+     "question": "80 units at sh 25 and a fixed charge of sh 200",
+     "wrong_answer": "sh 305",
+     "correct_answer": "sh 2,200"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_TOP_RATE_FOR_ALL_UNITS",
+    "listen_for": [
+     "all at the top rate"
+    ],
+    "ask": "Do the first 10 cost the top rate?",
+    "repair": "No.",
+    "error": "Charges every unit at the top band rate.",
+    "example": {
+     "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+     "wrong_answer": "sh 1,750",
+     "correct_answer": "sh 1,300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_FIRST_RATE_FOR_ALL_UNITS",
+    "listen_for": [
+     "all at the first rate"
+    ],
+    "ask": "Which units cost the first rate?",
+    "repair": "The first 10.",
+    "error": "Charges every unit at the first band rate.",
+    "example": {
+     "question": "25 units: first 10 at 40, next 10 at 55, after 20 at 70",
+     "wrong_answer": "sh 1,000",
+     "correct_answer": "sh 1,300"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_CHARGES_NOT_TAKEN_FIRST",
+    "listen_for": [
+     "1,000 / 25"
+    ],
+    "ask": "What comes off first?",
+    "repair": "The charges.",
+    "error": "Divides all the token money by the unit price.",
+    "example": {
+     "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+     "wrong_answer": "40",
+     "correct_answer": "36"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS.M_MONEY_LEFT_AS_UNITS",
+    "listen_for": [
+     "900 units"
+    ],
+    "ask": "Is sh 900 the units?",
+    "repair": "Divide by 25.",
+    "error": "Gives the money left after charges as the number of units.",
+    "example": {
+     "question": "sh 1,000 tokens, sh 100 charges, sh 25 a unit",
+     "wrong_answer": "900",
+     "correct_answer": "36"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Readings 1,500 and 1,620, sh 20 a unit, fixed sh 150: bill?",
+    "answer": "sh 2,550",
+    "shows": "units used"
+   },
+   {
+    "question": "25 units: first 10 at sh 40, next 10 at sh 55, after 20 at sh 70, fixed sh 100",
+    "answer": "sh 1,400",
+    "shows": "bands"
+   }
+  ],
+  "name": "Read an electricity or water bill and work out what is paid",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL": {
+  "skill": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL",
+  "key_step": "The child multiplies each line by the number bought before adding, then subtracts from the note.",
+  "floor": {
+   "prerequisite": "Number x price.",
+   "question": "3 x 150",
+   "answer": "450"
+  },
+  "representations": [
+   "a receipt",
+   "line totals",
+   "counting up change"
+  ],
+  "steps": [
+   "Each line: number x price.",
+   "Add the lines.",
+   "Change = note - total."
+  ],
+  "contexts": [
+   "a duka receipt",
+   "a supermarket",
+   "a canteen"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write a receipt: 2 bread at 60, 3 sugar at 150."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3.",
+    "say": "What does the sugar line cost?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 120 + 450 = 570, change 430."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_QUANTITY_IGNORED_ON_BILL",
+    "listen_for": [
+     "added the prices"
+    ],
+    "ask": "How many packets of sugar?",
+    "repair": "Three: multiply.",
+    "error": "Adds the prices without multiplying by the number bought.",
+    "example": {
+     "question": "2 loaves at 60 and 3 kg of sugar at 150; paid with sh 1,000",
+     "wrong_answer": "sh 790",
+     "correct_answer": "sh 430"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_TOTAL_GIVEN_AS_CHANGE",
+    "listen_for": [
+     "sh 570"
+    ],
+    "ask": "Is that the change or the bill?",
+    "repair": "The bill.",
+    "error": "Gives the total of the bill as the change.",
+    "example": {
+     "question": "Total sh 570, paid with sh 1,000",
+     "wrong_answer": "sh 570",
+     "correct_answer": "sh 430"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL.M_BILL_ADDED_TO_NOTE",
+    "listen_for": [
+     "sh 1,570"
+    ],
+    "ask": "Do you get more than you gave?",
+    "repair": "Subtract.",
+    "error": "Adds the bill to the note.",
+    "example": {
+     "question": "Total sh 570, paid with sh 1,000",
+     "wrong_answer": "sh 1,570",
+     "correct_answer": "sh 430"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2 bread at sh 60, 3 kg sugar at sh 150, paid sh 1,000: change?",
+    "answer": "sh 430",
+    "shows": "lines"
+   },
+   {
+    "question": "4 litres of milk at sh 60: line total?",
+    "answer": "sh 240",
+    "shows": "multiply"
+   }
+  ],
+  "name": "Read a shop bill or receipt and find the total and the change",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.PREPARE_BILL": {
+  "skill": "MATH.G7.MEASUR.MONEY.PREPARE_BILL",
+  "key_step": "The child writes quantity, unit price and line total for each item, in matching units, and adds the lines.",
+  "floor": {
+   "prerequisite": "Multiplies a quantity by a price.",
+   "question": "3 x 180",
+   "answer": "540"
+  },
+  "representations": [
+   "a bill with four columns",
+   "units checked",
+   "a total line"
+  ],
+  "steps": [
+   "List the items.",
+   "Quantity and unit price.",
+   "Line totals in matching units.",
+   "Add for the total."
+  ],
+  "contexts": [
+   "a school canteen order",
+   "a tailor's bill",
+   "a hardware order"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bill with columns: item, quantity, price, total."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 500 g of sugar at sh 160 a kg.",
+    "say": "How many kilograms is 500 g?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0.5 x 160 = 80."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_LINE_TOTAL_NOT_MULTIPLIED",
+    "listen_for": [
+     "copied the price"
+    ],
+    "ask": "How many kilograms were bought?",
+    "repair": "Multiply.",
+    "error": "Writes the price of one item as the line total.",
+    "example": {
+     "question": "3 kg of rice at sh 180 a kg: line total",
+     "wrong_answer": "sh 180",
+     "correct_answer": "sh 540"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.PREPARE_BILL.M_UNIT_PRICE_MISMATCHED",
+    "listen_for": [
+     "500 x 160"
+    ],
+    "ask": "Is the price per gram or per kilogram?",
+    "repair": "Per kg: 0.5 kg.",
+    "error": "Multiplies a price per kilogram by a mass in grams.",
+    "example": {
+     "question": "500 g of sugar at sh 160 a kg",
+     "wrong_answer": "sh 80,000",
+     "correct_answer": "sh 80"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bill: 3 kg rice at sh 180, 500 g sugar at sh 160 a kg. Total?",
+    "answer": "sh 620",
+    "shows": "lines and units"
+   },
+   {
+    "question": "2 dozen eggs at sh 300 a dozen: line total?",
+    "answer": "sh 600",
+    "shows": "quantity"
+   }
+  ],
+  "name": "Prepare a bill for items bought or a service",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES": {
+  "skill": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES",
+  "key_step": "The child charges each parcel by its own mass, and counts the first 100 g once.",
+  "floor": {
+   "prerequisite": "Changes kg to g.",
+   "question": "1.5 kg in g",
+   "answer": "1,500 g"
+  },
+  "representations": [
+   "a postage table",
+   "parcels in a row",
+   "100 g parts"
+  ],
+  "steps": [
+   "Each parcel's mass.",
+   "Its band.",
+   "Add the charges.",
+   "Rates: first part, then the extra parts."
+  ],
+  "contexts": [
+   "Posta Kenya parcels",
+   "a courier",
+   "a matatu parcel service"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write sh 80 for the first 100 g, sh 30 each extra 100 g."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 600 g.",
+    "say": "How many extra 100 g parts after the first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 80 + 5 x 30 = 230."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_PARCELS_CHARGED_TOGETHER",
+    "listen_for": [
+     "one charge"
+    ],
+    "ask": "Were the parcels posted together?",
+    "repair": "No: one each.",
+    "error": "Adds the masses and charges one band for parcels posted separately.",
+    "example": {
+     "question": "Parcels of 300 g, 800 g and 1.5 kg posted one after another",
+     "wrong_answer": "one charge for 2.6 kg",
+     "correct_answer": "three charges added"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_HEAVIEST_RATE_FOR_ALL",
+    "listen_for": [
+     "all at the top"
+    ],
+    "ask": "Is the light parcel in the top band?",
+    "repair": "No.",
+    "error": "Charges every parcel at the rate of the heaviest.",
+    "example": {
+     "question": "Parcels of 300 g, 800 g and 1.5 kg",
+     "wrong_answer": "three times the 1.5 kg charge",
+     "correct_answer": "each parcel its own charge"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "no sh 80"
+    ],
+    "ask": "What does the first 100 g cost?",
+    "repair": "sh 80.",
+    "error": "Charges every 100 g at the extra rate and leaves out the first charge.",
+    "example": {
+     "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+     "wrong_answer": "sh 180",
+     "correct_answer": "sh 230"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_RATE_FOR_ALL_PARTS",
+    "listen_for": [
+     "all at sh 80"
+    ],
+    "ask": "Is every part sh 80?",
+    "repair": "Only the first.",
+    "error": "Charges every 100 g at the first rate.",
+    "example": {
+     "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+     "wrong_answer": "sh 480",
+     "correct_answer": "sh 230"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES.M_FIRST_PART_COUNTED_AS_EXTRA",
+    "listen_for": [
+     "6 extra"
+    ],
+    "ask": "Is the first 100 g extra?",
+    "repair": "No: 5 extra.",
+    "error": "Counts the first 100 g as an extra part as well.",
+    "example": {
+     "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g",
+     "wrong_answer": "sh 260",
+     "correct_answer": "sh 230"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "sh 80 for the first 100 g, sh 30 each extra 100 g: 600 g?",
+    "answer": "sh 230",
+    "shows": "first part"
+   },
+   {
+    "question": "Parcels of 300 g and 1.5 kg with bands up to 500 g sh 100, over 1 kg to 2 kg sh 300",
+    "answer": "sh 400",
+    "shows": "each its own band"
+   }
+  ],
+  "name": "Work out postal charges from a table or a rate",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES",
+  "key_step": "The child matches the task to the service and says whether it has a charge.",
+  "floor": {
+   "prerequisite": "Says how money moves digitally.",
+   "question": "How can money go from one phone to another?",
+   "answer": "send money"
+  },
+  "representations": [
+   "a menu on the phone",
+   "a list of tasks",
+   "a till and a paybill sign"
+  ],
+  "steps": [
+   "What is the task?",
+   "Which service?",
+   "What is needed (number, account)?",
+   "Is there a charge?"
+  ],
+  "contexts": [
+   "school fees",
+   "a shop",
+   "cash from an agent"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: pay school fees; buy bread at a shop; get cash."
+   },
+   {
+    "beat": "point",
+    "do": "Point at school fees.",
+    "say": "Which service, and what number goes in the account box?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write paybill and the learner's admission number."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_PAYBILL_TILL_CONFUSED",
+    "listen_for": [
+     "till for fees"
+    ],
+    "ask": "Which service asks for an account number?",
+    "repair": "Paybill.",
+    "error": "Uses a till (buy goods) to pay a school fee paybill, or leaves out the account number.",
+    "example": {
+     "question": "Pay school fees to a paybill",
+     "wrong_answer": "use a till number",
+     "correct_answer": "paybill number and the learner's account number"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_SEND_FOR_WITHDRAW",
+    "listen_for": [
+     "send to get cash"
+    ],
+    "ask": "Who gives you the cash?",
+    "repair": "The agent, by withdraw.",
+    "error": "Confuses sending money to a person with withdrawing cash at an agent.",
+    "example": {
+     "question": "Get cash from your account",
+     "wrong_answer": "send money to the agent",
+     "correct_answer": "withdraw at an agent"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES.M_ALL_SERVICES_FREE",
+    "listen_for": [
+     "all free"
+    ],
+    "ask": "Look at the message after sending: is there a charge?",
+    "repair": "Yes.",
+    "error": "Believes every mobile money service is free.",
+    "example": {
+     "question": "Which costs a charge: sending sh 1,500 or depositing sh 1,500?",
+     "wrong_answer": "neither",
+     "correct_answer": "sending"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which service pays a school fee?",
+    "answer": "paybill with an account number",
+    "shows": "service"
+   },
+   {
+    "question": "Which service gets you cash?",
+    "answer": "withdraw at an agent",
+    "shows": "service"
+   }
+  ],
+  "name": "Identify mobile money services for different transactions",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS": {
+  "skill": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS",
+  "key_step": "The child looks up each transaction in its own row and takes both the amount and its charge from the balance.",
+  "floor": {
+   "prerequisite": "Reads a table.",
+   "question": "sh 700 is in which row: 501 to 1,000?",
+   "answer": "yes"
+  },
+  "representations": [
+   "a charges table",
+   "an account balance line",
+   "the message from the phone"
+  ],
+  "steps": [
+   "Find each row.",
+   "Each charge.",
+   "Add charges for separate sends.",
+   "Balance = start - amount - charge."
+  ],
+  "contexts": [
+   "sending to an aunt",
+   "withdrawing at an agent",
+   "paying a bill"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: balance sh 3,000, withdraw sh 1,200, charge sh 43."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the charge.",
+    "say": "Where does the charge come from?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3,000 - 1,200 - 43 = 1,757."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_SENDS_CHARGED_TOGETHER",
+    "listen_for": [
+     "one charge for both"
+    ],
+    "ask": "Were they one send or two?",
+    "repair": "Two.",
+    "error": "Charges two separate sends as one send of the total.",
+    "example": {
+     "question": "Send sh 400, later sh 1,200: charges",
+     "wrong_answer": "one charge for sh 1,600",
+     "correct_answer": "two charges added"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_ONE_CHARGE_FOR_TWO_SENDS",
+    "listen_for": [
+     "only the big charge"
+    ],
+    "ask": "How many sends?",
+    "repair": "Two charges.",
+    "error": "Gives only the bigger send's charge.",
+    "example": {
+     "question": "Send sh 400, later sh 1,200: charges",
+     "wrong_answer": "the sh 1,200 charge only",
+     "correct_answer": "both charges"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAW_CHARGE_LEFT_OUT",
+    "listen_for": [
+     "no charge taken"
+    ],
+    "ask": "Does the charge leave the account?",
+    "repair": "Yes.",
+    "error": "Takes the amount withdrawn but not the charge from the balance.",
+    "example": {
+     "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+     "wrong_answer": "sh 1,800",
+     "correct_answer": "sh 1,757"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_WITHDRAWN_AMOUNT_NOT_TAKEN",
+    "listen_for": [
+     "only the charge"
+    ],
+    "ask": "Did the cash leave the account?",
+    "repair": "Yes.",
+    "error": "Takes only the charge from the balance.",
+    "example": {
+     "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43",
+     "wrong_answer": "sh 2,957",
+     "correct_answer": "sh 1,757"
+    }
+   },
+   {
+    "code": "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS.M_CHARGE_TAKEN_FROM_CASH",
+    "listen_for": [
+     "from the cash"
+    ],
+    "ask": "What does the question ask for?",
+    "repair": "The balance.",
+    "error": "Takes the charge from the cash withdrawn, answering how much cash is received.",
+    "example": {
+     "question": "sh 3,000 in the account, withdraw sh 1,200, charge sh 43: balance",
+     "wrong_answer": "sh 1,157",
+     "correct_answer": "sh 1,757"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Balance sh 2,500, withdraw sh 700, charge sh 32: balance?",
+    "answer": "sh 1,768",
+    "shows": "both leave"
+   },
+   {
+    "question": "Send sh 400 (charge sh 7) and later sh 1,200 (charge sh 25): charges?",
+    "answer": "sh 32",
+    "shows": "two charges"
+   }
+  ],
+  "name": "Work out mobile money transactions and their charges",
+  "sub_strand": "MATH.G7.MEASUR.MONEY",
+  "sub_strand_name": "Money",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+  "key_step": "The child writes the angles on a line equal to 180, solves for x, and puts x back.",
+  "floor": {
+   "prerequisite": "A missing angle on a line.",
+   "question": "180 - 70",
+   "answer": "110"
+  },
+  "representations": [
+   "a straight line with two angles",
+   "an equation",
+   "a check that adds to 180"
+  ],
+  "steps": [
+   "Angles on a line = 180.",
+   "Collect x terms and numbers.",
+   "Solve for x.",
+   "Put x back."
+  ],
+  "contexts": [
+   "a ladder on the ground",
+   "a road meeting a fence",
+   "a broken stick"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a straight line with (3x + 10) and (2x + 20) beside each other."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two angles.",
+    "say": "What do they add up to?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 5x + 30 = 180, x = 30."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_GIVEN_AS_ANGLE",
+    "listen_for": [
+     "30 degrees"
+    ],
+    "ask": "Is x the angle, or a part of it?",
+    "repair": "Put it back.",
+    "error": "Gives the value of x as the angle.",
+    "example": {
+     "question": "(3x + 10) and (2x + 20) on a line: larger angle",
+     "wrong_answer": "30",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_TERMS_NOT_COLLECTED",
+    "listen_for": [
+     "divided by 3"
+    ],
+    "ask": "How many x are there in all?",
+    "repair": "5.",
+    "error": "Uses only one of the x terms.",
+    "example": {
+     "question": "(3x + 10) and (2x + 20) on a line: find x",
+     "wrong_answer": "50",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_LINE_SUM_360",
+    "listen_for": [
+     "360"
+    ],
+    "ask": "Is a straight line a full turn?",
+    "repair": "Half: 180.",
+    "error": "Uses 360 for angles on a straight line.",
+    "example": {
+     "question": "One angle on a line is 70: the other",
+     "wrong_answer": "290",
+     "correct_answer": "110"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "(2x + 15) and (3x + 15) on a straight line: x?",
+    "answer": "30",
+    "shows": "equation"
+   },
+   {
+    "question": "One angle on a line is 65: the other?",
+    "answer": "115",
+    "shows": "line"
+   }
+  ],
+  "name": "Work out angles on a straight line, including with algebra",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+  "key_step": "The child tells the angle across the crossing (equal) from the angle beside it (adds to 180).",
+  "floor": {
+   "prerequisite": "Angles on a line.",
+   "question": "180 - 50",
+   "answer": "130"
+  },
+  "representations": [
+   "two crossing sticks",
+   "scissors opening",
+   "colour the opposite pairs"
+  ],
+  "steps": [
+   "Find the given angle.",
+   "Across: equal.",
+   "Beside: 180 minus.",
+   "Check: all four make 360."
+  ],
+  "contexts": [
+   "scissors",
+   "a road junction",
+   "crossed sticks"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two lines crossing, one angle 50 marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the angle across from it.",
+    "say": "Is it equal, or does it add to 180?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 50 across, 130 beside."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_AS_SUPPLEMENTARY",
+    "listen_for": [
+     "130 across"
+    ],
+    "ask": "Is that angle beside or across?",
+    "repair": "Across: equal.",
+    "error": "Takes the opposite angle from 180.",
+    "example": {
+     "question": "Two lines cross; one angle is 50: the opposite angle",
+     "wrong_answer": "130",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_FROM_FULL_TURN",
+    "listen_for": [
+     "310"
+    ],
+    "ask": "Are two angles the whole turn?",
+    "repair": "No.",
+    "error": "Takes the opposite angle from 360.",
+    "example": {
+     "question": "Two lines cross; one angle is 50: the opposite angle",
+     "wrong_answer": "310",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_CROSSING_ALWAYS_RIGHT_ANGLE",
+    "listen_for": [
+     "always 90"
+    ],
+    "ask": "Can scissors open a little?",
+    "repair": "Yes: any angle.",
+    "error": "Believes two crossing lines always make right angles.",
+    "example": {
+     "question": "Two lines cross; one angle is 50: the opposite angle",
+     "wrong_answer": "90",
+     "correct_answer": "50"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One angle at a crossing is 72: the opposite angle?",
+    "answer": "72",
+    "shows": "across"
+   },
+   {
+    "question": "And the angle beside it?",
+    "answer": "108",
+    "shows": "beside"
+   }
+  ],
+  "name": "Relate vertically opposite angles where two lines cross",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT": {
+  "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+  "key_step": "The child takes all the known angles from 360.",
+  "floor": {
+   "prerequisite": "Adds angles.",
+   "question": "80 + 90 + 100",
+   "answer": "270"
+  },
+  "representations": [
+   "a round cake cut from the centre",
+   "a full turn",
+   "a pie of angles"
+  ],
+  "steps": [
+   "Angles at a point = 360.",
+   "Add the known ones.",
+   "Take from 360."
+  ],
+  "contexts": [
+   "a chapati",
+   "spokes of a wheel",
+   "a clock face"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle cut from the centre into 4 pieces, three marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the centre.",
+    "say": "What do all the angles round it make?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 360 - 270 = 90."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_KNOWN_SUM_AS_ANSWER",
+    "listen_for": [
+     "270"
+    ],
+    "ask": "Is that the fourth piece or the other three?",
+    "repair": "The other three.",
+    "error": "Gives the sum of the known angles as the missing one.",
+    "example": {
+     "question": "Angles 80, 90 and 100 at a point: the fourth",
+     "wrong_answer": "270",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_POINT_AS_STRAIGHT_LINE",
+    "listen_for": [
+     "from 180"
+    ],
+    "ask": "Is the cake a half turn?",
+    "repair": "A full turn: 360.",
+    "error": "Uses 180 for the angles round a point.",
+    "example": {
+     "question": "Angles 80, 90 and 100 at a point: the fourth",
+     "wrong_answer": "100 (from 180 - 80)",
+     "correct_answer": "90"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Angles 100, 120 and 85 at a point: the fourth?",
+    "answer": "55",
+    "shows": "full turn"
+   },
+   {
+    "question": "Five equal angles at a point: each?",
+    "answer": "72",
+    "shows": "share 360"
+   }
+  ],
+  "name": "Solve angles at a point",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+  "key_step": "The child says where the angle sits (same or opposite side, between or outside the lines) before naming the pair and its rule.",
+  "floor": {
+   "prerequisite": "Knows parallel lines.",
+   "question": "Do railway lines meet?",
+   "answer": "no: parallel"
+  },
+  "representations": [
+   "Z, F and C shapes",
+   "a gate with a brace",
+   "two crossings coloured"
+  ],
+  "steps": [
+   "Where is x?",
+   "Name the pair.",
+   "Equal, or adds to 180?",
+   "Give the reason."
+  ],
+  "contexts": [
+   "a gate",
+   "a road across a railway",
+   "a ladder between shelves"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two parallel lines and a transversal; mark 62 at the top crossing."
+   },
+   {
+    "beat": "point",
+    "do": "Point at an angle at the bottom crossing, on the other side, between the lines.",
+    "say": "Which pair is this, and is it equal?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write: alternate, 62."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_EQUAL_PAIR_AS_SUPPLEMENTARY",
+    "listen_for": [
+     "118 for alternate"
+    ],
+    "ask": "Do alternate angles add to 180?",
+    "repair": "They are equal.",
+    "error": "Takes an alternate or corresponding angle from 180.",
+    "example": {
+     "question": "Alternate to a 62 degree angle",
+     "wrong_answer": "118",
+     "correct_answer": "62"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_AS_EQUAL",
+    "listen_for": [
+     "equal co-interior"
+    ],
+    "ask": "Do co-interior angles look the same size?",
+    "repair": "They add to 180.",
+    "error": "Believes co-interior angles are equal.",
+    "example": {
+     "question": "Co-interior to a 62 degree angle",
+     "wrong_answer": "62",
+     "correct_answer": "118"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_ALTERNATE_CORRESPONDING_MIXED",
+    "listen_for": [
+     "the wrong name"
+    ],
+    "ask": "Z or F?",
+    "repair": "Look at the shape.",
+    "error": "Gives the right size but names alternate for corresponding or the other way.",
+    "example": {
+     "question": "x is in the matching place at the other crossing",
+     "wrong_answer": "alternate angles",
+     "correct_answer": "corresponding angles"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_VERTICAL_ACROSS_CROSSINGS",
+    "listen_for": [
+     "vertically opposite"
+    ],
+    "ask": "Is it at the same crossing?",
+    "repair": "No.",
+    "error": "Calls angles at two different crossings vertically opposite.",
+    "example": {
+     "question": "x is at the other crossing",
+     "wrong_answer": "vertically opposite",
+     "correct_answer": "alternate"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_WRONG_TOTAL",
+    "listen_for": [
+     "360 or 90"
+    ],
+    "ask": "Together they make what?",
+    "repair": "A straight angle.",
+    "error": "Uses 360 or 90 as the total of co-interior angles.",
+    "example": {
+     "question": "Co-interior to 70: x",
+     "wrong_answer": "290",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COMPLEMENT_USED",
+    "listen_for": [
+     "90 minus"
+    ],
+    "ask": "Is there a right angle here?",
+    "repair": "No.",
+    "error": "Takes the angle from 90.",
+    "example": {
+     "question": "Alternate to a 60 degree angle",
+     "wrong_answer": "30",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_POINT_RULE_FOR_PARALLEL",
+    "listen_for": [
+     "round a point"
+    ],
+    "ask": "Do they meet at one point?",
+    "repair": "No.",
+    "error": "Uses the 360 at a point for angles that are at different places.",
+    "example": {
+     "question": "Why do co-interior angles 70 and 110 fit?",
+     "wrong_answer": "angles round a point add to 360",
+     "correct_answer": "co-interior angles add to 180"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Co-interior to 70: x and the reason?",
+    "answer": "110, co-interior angles add to 180",
+    "shows": "rule"
+   },
+   {
+    "question": "Corresponding to 55: x?",
+    "answer": "55",
+    "shows": "equal"
+   }
+  ],
+  "name": "Relate angles on a transversal across parallel lines",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+  "key_step": "The child gives opposite corners the same angle and neighbouring corners angles that add to 180.",
+  "floor": {
+   "prerequisite": "Co-interior angles.",
+   "question": "Co-interior to 70",
+   "answer": "110"
+  },
+  "representations": [
+   "a parallelogram with its pairs coloured",
+   "a leaning rectangle",
+   "a rhombus with a diagonal"
+  ],
+  "steps": [
+   "Opposite: equal.",
+   "Neighbours: 180.",
+   "All four: 360.",
+   "Rhombus: the isosceles triangle."
+  ],
+  "contexts": [
+   "a window that leans",
+   "a kite frame",
+   "a floor tile"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw parallelogram PQRS with angle P = 70."
+   },
+   {
+    "beat": "point",
+    "do": "Point at Q next to P.",
+    "say": "Which pair are P and Q?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write Q = 110, R = 70, S = 110."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_OPPOSITE_NEIGHBOUR_MIXED",
+    "listen_for": [
+     "110 opposite"
+    ],
+    "ask": "Is R next to P or across?",
+    "repair": "Across: equal.",
+    "error": "Takes the opposite angle of a parallelogram from 180.",
+    "example": {
+     "question": "Parallelogram, angle P = 70: angle R (opposite)",
+     "wrong_answer": "110",
+     "correct_answer": "70"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_ANGLES_EQUAL",
+    "listen_for": [
+     "70 next door"
+    ],
+    "ask": "Are P and Q co-interior?",
+    "repair": "Yes: 180.",
+    "error": "Believes neighbouring angles of a parallelogram are equal.",
+    "example": {
+     "question": "Parallelogram, angle P = 70: angle Q (next to P)",
+     "wrong_answer": "70",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_FROM_FULL_TURN",
+    "listen_for": [
+     "290"
+    ],
+    "ask": "Are two angles the whole shape?",
+    "repair": "No.",
+    "error": "Takes the neighbouring angle from 360.",
+    "example": {
+     "question": "Parallelogram, angle P = 70: angle Q",
+     "wrong_answer": "290",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_QUAD_SUM_180",
+    "listen_for": [
+     "180 in all"
+    ],
+    "ask": "How many triangles in a quadrilateral?",
+    "repair": "Two: 360.",
+    "error": "Believes the angles of a quadrilateral add to 180.",
+    "example": {
+     "question": "The four angles of a parallelogram add to?",
+     "wrong_answer": "180",
+     "correct_answer": "360"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_PARALLELOGRAM_RIGHT_ANGLES",
+    "listen_for": [
+     "90"
+    ],
+    "ask": "Does it lean?",
+    "repair": "Yes.",
+    "error": "Believes a parallelogram has right angles.",
+    "example": {
+     "question": "Parallelogram, angle A = 70: angle B",
+     "wrong_answer": "90",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_DIAGONAL_RIGHT_ANGLE_USED",
+    "listen_for": [
+     "90 for BAC"
+    ],
+    "ask": "Which angle is BAC?",
+    "repair": "A corner of triangle ABC.",
+    "error": "Gives 90 because the diagonals of a rhombus cross at right angles.",
+    "example": {
+     "question": "Rhombus, angle ABC = 100: angle BAC",
+     "wrong_answer": "90",
+     "correct_answer": "40"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Parallelogram, angle A = 115: angle B?",
+    "answer": "65",
+    "shows": "neighbours"
+   },
+   {
+    "question": "Rhombus, angle ABC = 100: angle BAC?",
+    "answer": "40",
+    "shows": "isosceles"
+   }
+  ],
+  "name": "Solve angles in a parallelogram and a rhombus",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES": {
+  "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+  "key_step": "The child takes what is known from 180 and shares it only between the angles that are equal.",
+  "floor": {
+   "prerequisite": "The triangle sum.",
+   "question": "60 + 70 + ?",
+   "answer": "50"
+  },
+  "representations": [
+   "a roof gable",
+   "torn corners on a line",
+   "an exterior angle"
+  ],
+  "steps": [
+   "Sum = 180.",
+   "Isosceles: base angles equal.",
+   "Exterior = far angles added.",
+   "In x: solve, then put back."
+  ],
+  "contexts": [
+   "a house gable",
+   "a roof truss",
+   "a bridge"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an isosceles roof with the top angle 40."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two base angles.",
+    "say": "What do they share?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 140 / 2 = 70."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_BASE_ANGLES_NOT_SHARED",
+    "listen_for": [
+     "140 each"
+    ],
+    "ask": "Is that one angle or two?",
+    "repair": "Two: halve.",
+    "error": "Gives both base angles together as each one.",
+    "example": {
+     "question": "Isosceles roof, top angle 40: each base angle",
+     "wrong_answer": "140",
+     "correct_answer": "70"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_TOP_ANGLE_HALVED",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Which angle is shared?",
+    "repair": "What is left of 180.",
+    "error": "Halves the given angle for the base angles.",
+    "example": {
+     "question": "Isosceles roof, top angle 40: each base angle",
+     "wrong_answer": "20",
+     "correct_answer": "70"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ALL_ANGLES_EQUAL_ISOSCELES",
+    "listen_for": [
+     "40 each"
+    ],
+    "ask": "Is the top angle one of the equal pair?",
+    "repair": "No.",
+    "error": "Believes all three angles of an isosceles triangle are equal.",
+    "example": {
+     "question": "Isosceles roof, top angle 40: each base angle",
+     "wrong_answer": "40",
+     "correct_answer": "70"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_LIKE_TERMS_MULTIPLIED",
+    "listen_for": [
+     "10 x 30"
+    ],
+    "ask": "Are angles added or multiplied?",
+    "repair": "Added.",
+    "error": "Multiplies the plain numbers when collecting terms.",
+    "example": {
+     "question": "x + (x + 10) + (2x + 30): the plain number",
+     "wrong_answer": "300",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_NOT_REMOVED",
+    "listen_for": [
+     "180 / 4"
+    ],
+    "ask": "What comes off first?",
+    "repair": "The 40.",
+    "error": "Divides 180 by the number of x without taking the plain number off first.",
+    "example": {
+     "question": "4x + 40 = 180",
+     "wrong_answer": "45",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_LEFT_OFF",
+    "listen_for": [
+     "2x only"
+    ],
+    "ask": "What else is in the angle?",
+    "repair": "The 30.",
+    "error": "Works out 2x but leaves the plain number off the angle.",
+    "example": {
+     "question": "x = 35: the angle (2x + 30)",
+     "wrong_answer": "70",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_EXTERIOR_ADDED_NOT_SUBTRACTED",
+    "listen_for": [
+     "170"
+    ],
+    "ask": "If 120 = 50 + B, what is B?",
+    "repair": "70.",
+    "error": "Adds the exterior angle and the known far angle.",
+    "example": {
+     "question": "Exterior angle 120, angle A = 50: angle B",
+     "wrong_answer": "170",
+     "correct_answer": "70"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ADJACENT_INTERIOR_GIVEN",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Which corner is B?",
+    "repair": "Not C.",
+    "error": "Gives the interior angle beside the exterior angle.",
+    "example": {
+     "question": "Exterior angle 120, angle A = 50: angle B",
+     "wrong_answer": "60",
+     "correct_answer": "70"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Isosceles triangle, top angle 80: each base angle?",
+    "answer": "50",
+    "shows": "share"
+   },
+   {
+    "question": "Exterior angle 130, one far angle 60: the other?",
+    "answer": "70",
+    "shows": "exterior"
+   }
+  ],
+  "name": "Use the angle properties of triangles",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM": {
+  "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+  "key_step": "The child splits from one corner into triangles, two fewer than the sides, each worth 180.",
+  "floor": {
+   "prerequisite": "The triangle sum.",
+   "question": "Angles of a triangle",
+   "answer": "180"
+  },
+  "representations": [
+   "diagonals from one corner",
+   "a table of sides and triangles",
+   "torn corners"
+  ],
+  "steps": [
+   "Count the sides.",
+   "Triangles = sides - 2.",
+   "Sum = triangles x 180.",
+   "Back: sum / 180 + 2."
+  ],
+  "contexts": [
+   "a plot of land",
+   "a hexagonal tile",
+   "a pentagon badge"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a pentagon and the two diagonals from one corner."
+   },
+   {
+    "beat": "count",
+    "do": "Count the triangles with the child.",
+    "say": "How many triangles?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child says what a hexagon would give."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3 x 180 = 540."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_ALL_CORNERS_RIGHT_ANGLES",
+    "listen_for": [
+     "all 90"
+    ],
+    "ask": "Is this corner a right angle?",
+    "repair": "No.",
+    "error": "Believes every quadrilateral has four right angles.",
+    "example": {
+     "question": "Why do a trapezium's angles add to 360?",
+     "wrong_answer": "four corners of 90",
+     "correct_answer": "two triangles of 180"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_CORNERS_AS_POINT",
+    "listen_for": [
+     "round a point"
+    ],
+    "ask": "Do the corners meet at one point?",
+    "repair": "No: two triangles.",
+    "error": "Treats the corners of a shape as angles round one point.",
+    "example": {
+     "question": "Why do a quadrilateral's angles add to 360?",
+     "wrong_answer": "angles at a point add to 360",
+     "correct_answer": "two triangles of 180"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_MUST_BE_EQUAL",
+    "listen_for": [
+     "equal triangles"
+    ],
+    "ask": "Does it matter if they differ?",
+    "repair": "No: each is 180.",
+    "error": "Believes the two triangles a diagonal makes must be the same.",
+    "example": {
+     "question": "Why do a quadrilateral's angles add to 360?",
+     "wrong_answer": "the diagonal makes two equal triangles",
+     "correct_answer": "two triangles of 180"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_EQUAL_SIDES",
+    "listen_for": [
+     "6 triangles"
+    ],
+    "ask": "Count them from one corner.",
+    "repair": "4.",
+    "error": "Uses as many triangles as sides.",
+    "example": {
+     "question": "Angle sum of a hexagon",
+     "wrong_answer": "1,080",
+     "correct_answer": "720"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_ONE_FEWER",
+    "listen_for": [
+     "5 triangles"
+    ],
+    "ask": "How many for a quadrilateral?",
+    "repair": "2: sides - 2.",
+    "error": "Uses one fewer triangle than sides.",
+    "example": {
+     "question": "Angle sum of a hexagon",
+     "wrong_answer": "900",
+     "correct_answer": "720"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_AS_SIDES",
+    "listen_for": [
+     "4 sides"
+    ],
+    "ask": "Is 4 the triangles or the sides?",
+    "repair": "Triangles: add 2.",
+    "error": "Gives the number of triangles as the number of sides.",
+    "example": {
+     "question": "Angle sum 720: sides",
+     "wrong_answer": "4",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_RIGHT_ANGLES_AS_SIDES",
+    "listen_for": [
+     "divided by 90"
+    ],
+    "ask": "What is each triangle worth?",
+    "repair": "180.",
+    "error": "Divides the sum by 90 to count the sides.",
+    "example": {
+     "question": "Angle sum 720: sides",
+     "wrong_answer": "8",
+     "correct_answer": "6"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Angle sum of a hexagon?",
+    "answer": "720",
+    "shows": "triangles"
+   },
+   {
+    "question": "Angle sum 540: sides?",
+    "answer": "5",
+    "shows": "back"
+   }
+  ],
+  "name": "Find the angle sum of a polygon from the triangles it splits into",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION": {
+  "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+  "key_step": "The child says 360 divided by n is the exterior angle, and the interior angle is 180 minus it.",
+  "floor": {
+   "prerequisite": "Angles on a line.",
+   "question": "180 - 60",
+   "answer": "120"
+  },
+  "representations": [
+   "walking round a shape",
+   "an extended side",
+   "a full turn"
+  ],
+  "steps": [
+   "Exterior angles make 360.",
+   "Regular: 360 / n.",
+   "Interior = 180 - exterior."
+  ],
+  "contexts": [
+   "walking round a hexagonal pen",
+   "a stop sign",
+   "honeycomb"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a regular hexagon with one side extended."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the angle outside.",
+    "say": "If you walk all the way round, how far do you turn?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 360 / 6 = 60, interior = 120."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_EXTERIOR_AS_INTERIOR",
+    "listen_for": [
+     "60 inside"
+    ],
+    "ask": "Is 60 inside or outside?",
+    "repair": "Outside.",
+    "error": "Gives 360 divided by the sides as the interior angle.",
+    "example": {
+     "question": "Each interior angle of a regular hexagon",
+     "wrong_answer": "60",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_INTERIOR_FROM_180_SHARED",
+    "listen_for": [
+     "180 / 6"
+    ],
+    "ask": "Is the hexagon one triangle?",
+    "repair": "Four.",
+    "error": "Shares 180 among the corners for each interior angle.",
+    "example": {
+     "question": "Each interior angle of a regular hexagon",
+     "wrong_answer": "30",
+     "correct_answer": "120"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_SUM_SHARED_BY_TRIANGLES",
+    "listen_for": [
+     "720 / 4"
+    ],
+    "ask": "How many corners share the sum?",
+    "repair": "6.",
+    "error": "Divides the angle sum by the number of triangles for each angle.",
+    "example": {
+     "question": "Hexagon sum 720: each angle",
+     "wrong_answer": "180",
+     "correct_answer": "120"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Regular pentagon: exterior and interior angle?",
+    "answer": "72 and 108",
+    "shows": "relation"
+   },
+   {
+    "question": "Why is 360 / 6 not the interior angle of a hexagon?",
+    "answer": "it is the exterior angle",
+    "shows": "reason"
+   }
+  ],
+  "name": "Relate interior angles, exterior angles and the number of sides",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE": {
+  "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+  "key_step": "The child goes through the exterior angle: 360 divided by it gives the sides.",
+  "floor": {
+   "prerequisite": "Divides 360.",
+   "question": "360 / 72",
+   "answer": "5"
+  },
+  "representations": [
+   "a regular polygon",
+   "a turn table",
+   "the angle sum"
+  ],
+  "steps": [
+   "Interior to exterior: 180 minus.",
+   "Sides = 360 / exterior.",
+   "Each interior = sum / n."
+  ],
+  "contexts": [
+   "tiles",
+   "a nut on a bolt",
+   "a pentagon badge"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: interior angle 120."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 120.",
+    "say": "What is the exterior angle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 360 / 60 = 6 sides."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_SUM_180",
+    "listen_for": [
+     "180 / 60"
+    ],
+    "ask": "Is walking round a half turn?",
+    "repair": "A full turn.",
+    "error": "Uses 180 as the total of the exterior angles.",
+    "example": {
+     "question": "Regular polygon, exterior angle 60: sides",
+     "wrong_answer": "3",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_INTERIOR_USED_AS_EXTERIOR",
+    "listen_for": [
+     "360 / 120"
+    ],
+    "ask": "Is 120 the outside angle?",
+    "repair": "No: 60.",
+    "error": "Divides 360 by the interior angle.",
+    "example": {
+     "question": "Regular polygon, interior angle 120: sides",
+     "wrong_answer": "3",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_ANGLE_AS_SIDES",
+    "listen_for": [
+     "60 sides"
+    ],
+    "ask": "Is 60 the sides?",
+    "repair": "Divide 360 by it.",
+    "error": "Gives the exterior angle as the number of sides.",
+    "example": {
+     "question": "Regular polygon, interior angle 120: sides",
+     "wrong_answer": "60",
+     "correct_answer": "6"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Regular polygon, interior angle 108: sides?",
+    "answer": "5",
+    "shows": "via exterior"
+   },
+   {
+    "question": "Each interior angle of a regular hexagon?",
+    "answer": "120",
+    "shows": "sum shared"
+   }
+  ],
+  "name": "Solve angles and sides of regular polygons up to the hexagon",
+  "sub_strand": "MATH.G7.GEOMET.ANGLES",
+  "sub_strand_name": "Angles",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
   "skill": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR",
   "key_step": "The child puts the centre on the corner, a base line on one arm, and reads the scale that starts at zero on that arm.",
@@ -10857,6 +15498,1448 @@ export const TEACHING_PACK_G7 = {
   "name": "Construct a circle of a given radius or diameter",
   "sub_strand": "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION",
   "sub_strand_name": "Geometrical Constructions",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT",
+  "key_step": "The child says what question the data answers and records each answer once.",
+  "floor": {
+   "prerequisite": "Tallies data.",
+   "question": "Tally 7",
+   "answer": "||||/ ||"
+  },
+  "representations": [
+   "a question and its answers",
+   "a tally sheet",
+   "a class list"
+  ],
+  "steps": [
+   "Choose a question.",
+   "Choose the groups.",
+   "Record each answer once.",
+   "Check the total."
+  ],
+  "contexts": [
+   "fruit at break",
+   "how learners travel",
+   "books read in a week"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: Which fruit do you like best?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at the question.",
+    "say": "Are the answers to this data?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write a tally sheet with four fruits."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_DATA_ONLY_NUMBERS",
+    "listen_for": [
+     "no numbers, not data"
+    ],
+    "ask": "Can we count how many chose mango?",
+    "repair": "Yes: it is data.",
+    "error": "Believes data must be numbers.",
+    "example": {
+     "question": "Is the list of fruits learners chose data?",
+     "wrong_answer": "no, it has no numbers",
+     "correct_answer": "yes"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT.M_RECORDED_TWICE",
+    "listen_for": [
+     "33 for 30 learners"
+    ],
+    "ask": "How many learners did you ask?",
+    "repair": "30: check again.",
+    "error": "Records an answer more than once, or misses some, when collecting.",
+    "example": {
+     "question": "30 learners asked, tally shows 33",
+     "wrong_answer": "keep the tally",
+     "correct_answer": "count again: each learner once"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Is the colour of each learner's bag data?",
+    "answer": "Yes",
+    "shows": "meaning"
+   },
+   {
+    "question": "30 learners asked; the tally totals 28. What next?",
+    "answer": "find the 2 not recorded",
+    "shows": "each once"
+   }
+  ],
+  "name": "Say what data is and collect it",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD",
+  "key_step": "The child counts a gate as 5 and checks that the frequencies add to the total.",
+  "floor": {
+   "prerequisite": "Counts tallies.",
+   "question": "||||/ |||",
+   "answer": "8"
+  },
+  "representations": [
+   "a tally chart",
+   "a frequency table",
+   "a total row"
+  ],
+  "steps": [
+   "Count tallies in fives.",
+   "Write each frequency.",
+   "Missing = total - others.",
+   "Most common = value with the biggest frequency."
+  ],
+  "contexts": [
+   "fruit at break",
+   "books read",
+   "cups of tea at a kiosk"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw ||||/ ||||/ ||."
+   },
+   {
+    "beat": "count",
+    "do": "Count the strokes with the child, in fives.",
+    "say": "How many?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child says what a gate is worth."
+   },
+   {
+    "beat": "write",
+    "do": "Write 12."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_ALL_CATEGORIES_COUNTED",
+    "listen_for": [
+     "all the rows"
+    ],
+    "ask": "Which fruits does the question ask about?",
+    "repair": "Only two.",
+    "error": "Adds every row when the question asks about some.",
+    "example": {
+     "question": "Mango 8, banana 6, orange 5, pawpaw 4: mango or banana",
+     "wrong_answer": "23",
+     "correct_answer": "14"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TALLY_GATE_COUNTED_AS_FOUR",
+    "listen_for": [
+     "four in a gate"
+    ],
+    "ask": "Count the stroke across too.",
+    "repair": "Five.",
+    "error": "Counts a tally group of five as four.",
+    "example": {
+     "question": "||||/ ||||/ ||",
+     "wrong_answer": "10",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_TOTAL_AS_MISSING",
+    "listen_for": [
+     "the total"
+    ],
+    "ask": "Is one row the whole total?",
+    "repair": "No.",
+    "error": "Gives the total as the missing frequency.",
+    "example": {
+     "question": "Total 40; other rows 7, 9, 8, 6",
+     "wrong_answer": "40",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_OTHERS_SUM_AS_MISSING",
+    "listen_for": [
+     "the others added"
+    ],
+    "ask": "What is left from the total?",
+    "repair": "Subtract.",
+    "error": "Gives the sum of the other rows as the missing frequency.",
+    "example": {
+     "question": "Total 40; other rows 7, 9, 8, 6",
+     "wrong_answer": "30",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD.M_FREQUENCY_FOR_MODE_VALUE",
+    "listen_for": [
+     "9 books"
+    ],
+    "ask": "Is 9 the books or the learners?",
+    "repair": "Learners: the value is 2.",
+    "error": "Gives the biggest frequency instead of its value.",
+    "example": {
+     "question": "Books read: 1 (4), 2 (9), 3 (5): most common",
+     "wrong_answer": "9",
+     "correct_answer": "2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "||||/ ||||/ |||| is how many?",
+    "answer": "14",
+    "shows": "gates"
+   },
+   {
+    "question": "Total 40; others 7, 9, 8, 6: missing?",
+    "answer": "10",
+    "shows": "missing"
+   }
+  ],
+  "name": "Make a frequency table from a tally and complete a missing frequency",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE",
+  "key_step": "The child multiplies each value by its frequency before adding, and writes a count over the total for a percentage.",
+  "floor": {
+   "prerequisite": "Multiplies.",
+   "question": "2 goals in 4 matches",
+   "answer": "8"
+  },
+  "representations": [
+   "a frequency table with a product column",
+   "a bar of 100%",
+   "rows highlighted"
+  ],
+  "steps": [
+   "Value x frequency.",
+   "Add the products.",
+   "Rows that fit.",
+   "Count / total x 100."
+  ],
+  "contexts": [
+   "goals in matches",
+   "books read",
+   "learners who walk"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write rows: 0 goals (3), 1 goal (5), 2 goals (4)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2 goals (4).",
+    "say": "How many goals is that row?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0 + 5 + 8 = 13."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FREQUENCIES_ADDED_FOR_TOTAL",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Is that matches or goals?",
+    "repair": "Matches.",
+    "error": "Adds the frequencies to find the total number of items.",
+    "example": {
+     "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+     "wrong_answer": "12",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_VALUES_ADDED_ONCE",
+    "listen_for": [
+     "0 + 1 + 2"
+    ],
+    "ask": "How many matches had 2 goals?",
+    "repair": "4.",
+    "error": "Adds the values in the first column once each.",
+    "example": {
+     "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+     "wrong_answer": "3",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_LARGEST_VALUE_FOR_ALL",
+    "listen_for": [
+     "12 x 2"
+    ],
+    "ask": "Did every match have 2 goals?",
+    "repair": "No.",
+    "error": "Multiplies the total frequency by the largest value.",
+    "example": {
+     "question": "Goals 0 (3 matches), 1 (5), 2 (4): total goals",
+     "wrong_answer": "24",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COUNT_FOR_PERCENT",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Out of how many?",
+    "repair": "40.",
+    "error": "Gives the count as the percentage.",
+    "example": {
+     "question": "12 of 40 learners: percentage",
+     "wrong_answer": "12",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_COMPLEMENT_ROWS_USED",
+    "listen_for": [
+     "the other rows"
+    ],
+    "ask": "Which rows does \"at least 3\" mean?",
+    "repair": "3 and more.",
+    "error": "Uses the rows that do not fit the question.",
+    "example": {
+     "question": "At least 3 books: rows 3, 4, 5",
+     "wrong_answer": "rows 1 and 2",
+     "correct_answer": "rows 3, 4 and 5"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE.M_FRACTION_NOT_TIMES_100",
+    "listen_for": [
+     "0.3"
+    ],
+    "ask": "What makes it a percentage?",
+    "repair": "Times 100.",
+    "error": "Gives the fraction or decimal as the percentage.",
+    "example": {
+     "question": "12 of 40 learners: percentage",
+     "wrong_answer": "0.3",
+     "correct_answer": "30"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Books read: 1 (6), 2 (8), 3 (6): total books?",
+    "answer": "40",
+    "shows": "products"
+   },
+   {
+    "question": "12 of 40 learners walk: percentage?",
+    "answer": "30%",
+    "shows": "percentage"
+   }
+  ],
+  "name": "Use a frequency table to find a total or a percentage",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE",
+  "key_step": "The child divides the largest value by each scale and keeps the smallest one that fits.",
+  "floor": {
+   "prerequisite": "Divides.",
+   "question": "160 / 20",
+   "answer": "8"
+  },
+  "representations": [
+   "squares on an axis",
+   "a table of scales",
+   "half symbols"
+  ],
+  "steps": [
+   "Largest value.",
+   "Divide by each scale.",
+   "Must fit the axis.",
+   "Smallest that fits."
+  ],
+  "contexts": [
+   "maize sold by shops",
+   "bottles sold",
+   "milk from a dairy"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: axis 10 squares, tallest 160."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a scale of 10.",
+    "say": "How many squares would the tallest bar need?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 16: too tall. Try 20: 8 squares."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_BAR_OFF_AXIS",
+    "listen_for": [
+     "off the paper"
+    ],
+    "ask": "Does 16 squares fit on 10?",
+    "repair": "No.",
+    "error": "Chooses a scale that makes the tallest bar too tall for the axis.",
+    "example": {
+     "question": "Axis 10 squares, tallest 160: 1 square = 10?",
+     "wrong_answer": "yes",
+     "correct_answer": "no, it needs 16 squares"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_SCALE_FITS_ANY",
+    "listen_for": [
+     "short bars"
+    ],
+    "ask": "Could a smaller scale still fit?",
+    "repair": "Yes: use it.",
+    "error": "Chooses a scale that fits but leaves the bars short.",
+    "example": {
+     "question": "Axis 10 squares, tallest 160: best scale",
+     "wrong_answer": "1 square = 50",
+     "correct_answer": "1 square = 20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_HALF_SYMBOL_NOT_CHECKED",
+    "listen_for": [
+     "70 with 40s"
+    ],
+    "ask": "Can 70 be whole and half 40s?",
+    "repair": "No.",
+    "error": "Chooses a symbol value that some numbers cannot be shown with.",
+    "example": {
+     "question": "Values 30, 50, 70; whole and half symbols only: one symbol =",
+     "wrong_answer": "40",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE.M_ROW_LENGTH_NOT_CHECKED",
+    "listen_for": [
+     "16 symbols"
+    ],
+    "ask": "How long is the longest row?",
+    "repair": "Too long.",
+    "error": "Chooses a symbol value that makes the longest row too long.",
+    "example": {
+     "question": "Longest value 160, at most 8 symbols: one symbol =",
+     "wrong_answer": "10",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Axis 12 squares, tallest 450: best of 20, 50, 100, 200?",
+    "answer": "50",
+    "shows": "fits"
+   },
+   {
+    "question": "Values 30, 50, 70; whole and half symbols; at most 4 symbols in a row. One symbol =",
+    "answer": "20",
+    "shows": "symbol"
+   }
+  ],
+  "name": "Choose a suitable scale for a graph or a pictograph symbol",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH",
+  "key_step": "The child counts symbols, including halves, and multiplies by what one stands for.",
+  "floor": {
+   "prerequisite": "Multiplies.",
+   "question": "4 x 10",
+   "answer": "40"
+  },
+  "representations": [
+   "a pictograph with a key",
+   "a row of symbols",
+   "half a symbol"
+  ],
+  "steps": [
+   "Read the key.",
+   "Count each row.",
+   "Times the key.",
+   "Difference for \"how many more\"."
+  ],
+  "contexts": [
+   "how learners travel",
+   "books borrowed",
+   "eggs collected"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two rows of dots: 6 and 4, key 1 dot = 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the key.",
+    "say": "How many learners is one dot?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write (6 - 4) x 10 = 20."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_SYMBOLS_NOT_SCALED",
+    "listen_for": [
+     "2 learners"
+    ],
+    "ask": "What does one dot stand for?",
+    "repair": "10.",
+    "error": "Gives the difference in symbols as the difference in learners.",
+    "example": {
+     "question": "Each symbol = 10; rows of 6 and 4 symbols: how many more",
+     "wrong_answer": "2",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_MORE_AS_TOTAL",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Is that how many more?",
+    "repair": "Subtract.",
+    "error": "Adds the two rows when asked \"how many more\".",
+    "example": {
+     "question": "Rows 60 and 40: how many more",
+     "wrong_answer": "100",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_ONE_ROW_GIVEN",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Compare it with what?",
+    "repair": "The other row.",
+    "error": "Gives one row as the answer to \"how many more\".",
+    "example": {
+     "question": "Rows 60 and 40: how many more",
+     "wrong_answer": "60",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH.M_HALF_SYMBOL_AS_WHOLE",
+    "listen_for": [
+     "half counted as whole"
+    ],
+    "ask": "Is half a dot 10?",
+    "repair": "5.",
+    "error": "Counts a half symbol as a whole one.",
+    "example": {
+     "question": "Each symbol = 10; a row of 3 and a half symbols",
+     "wrong_answer": "40",
+     "correct_answer": "35"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Key 1 = 20; rows 5 and 3 symbols: how many more?",
+    "answer": "40",
+    "shows": "difference"
+   },
+   {
+    "question": "Key 1 = 10; a row of 3 and a half symbols",
+    "answer": "35",
+    "shows": "half"
+   }
+  ],
+  "name": "Draw and read a pictograph",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW",
+  "key_step": "The child numbers the axis in equal steps and makes only the height show the value.",
+  "floor": {
+   "prerequisite": "Reads a bar graph.",
+   "question": "A bar up to 40",
+   "answer": "40"
+  },
+  "representations": [
+   "squared paper",
+   "equal steps on the axis",
+   "bars with equal gaps"
+  ],
+  "steps": [
+   "Label the axes.",
+   "Number in equal steps from 0.",
+   "Equal widths and gaps.",
+   "Height = value."
+  ],
+  "contexts": [
+   "sales at a duka",
+   "learners in clubs",
+   "rain in a month"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an axis numbered 0, 10, 20, 50."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the gap from 20 to 50.",
+    "say": "Is this step the same as the others?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0, 10, 20, 30, 40, 50."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_UNEVEN_SCALE",
+    "listen_for": [
+     "0, 10, 20, 50"
+    ],
+    "ask": "Are the steps equal?",
+    "repair": "Make them equal.",
+    "error": "Numbers the axis in uneven steps.",
+    "example": {
+     "question": "Axis numbered 0, 10, 20, 50, 100",
+     "wrong_answer": "fine",
+     "correct_answer": "steps must be equal"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW.M_BAR_WIDTHS_VARIED",
+    "listen_for": [
+     "wider bar"
+    ],
+    "ask": "What shows the value?",
+    "repair": "Only the height.",
+    "error": "Draws bars of different widths, as if width showed the value.",
+    "example": {
+     "question": "A wider bar for the biggest value",
+     "wrong_answer": "fine",
+     "correct_answer": "all bars the same width"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Number an axis for values up to 70 in 7 squares",
+    "answer": "0, 10, 20, ... 70",
+    "shows": "equal steps"
+   },
+   {
+    "question": "Should the biggest bar be wider?",
+    "answer": "No: same width",
+    "shows": "height only"
+   }
+  ],
+  "name": "Draw a bar graph with a suitable scale",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET",
+  "key_step": "The child picks out the bars the question asks about and does the operation the words say.",
+  "floor": {
+   "prerequisite": "Reads a bar.",
+   "question": "A bar up to 60",
+   "answer": "60"
+  },
+  "representations": [
+   "a bar graph",
+   "bars ranked",
+   "the question's key words"
+  ],
+  "steps": [
+   "Read each bar.",
+   "Which bars are asked?",
+   "Together: add; how many more: subtract."
+  ],
+  "contexts": [
+   "eggs from a farm",
+   "tomatoes sold",
+   "milk from a dairy"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw bars 40, 60, 20, 50, 30."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two tallest.",
+    "say": "Which two are the busiest days?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 60 + 50 = 110."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ALL_BARS_ADDED",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "How many days are asked about?",
+    "repair": "Two.",
+    "error": "Adds all the bars when the question asks about some.",
+    "example": {
+     "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+     "wrong_answer": "200",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_ONE_BAR_ONLY",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is that both days?",
+    "repair": "Add the second.",
+    "error": "Gives one bar when two are asked about.",
+    "example": {
+     "question": "Bars 40, 60, 20, 50, 30: the two busiest days",
+     "wrong_answer": "60",
+     "correct_answer": "110"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET.M_DIFFERENCE_FOR_TOGETHER",
+    "listen_for": [
+     "10"
+    ],
+    "ask": "What does together mean?",
+    "repair": "Add.",
+    "error": "Subtracts when the question says together.",
+    "example": {
+     "question": "Bars 60 and 50 together",
+     "wrong_answer": "10",
+     "correct_answer": "110"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bars 70, 40, 90, 60: the two busiest together?",
+    "answer": "160",
+    "shows": "together"
+   },
+   {
+    "question": "How many more on the busiest than the quietest?",
+    "answer": "50",
+    "shows": "difference"
+   }
+  ],
+  "name": "Read and interpret a bar graph",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE",
+  "key_step": "The child asks whether the data is separate groups, a change over time, or parts of one whole.",
+  "floor": {
+   "prerequisite": "Knows a bar graph.",
+   "question": "Learners in clubs",
+   "answer": "a bar graph"
+  },
+  "representations": [
+   "three small graphs",
+   "sorting cards",
+   "a question to ask"
+  ],
+  "steps": [
+   "Groups: bar graph.",
+   "Over time: line graph.",
+   "Parts of a whole: pie chart."
+  ],
+  "contexts": [
+   "a school budget",
+   "temperature in a day",
+   "goals by team"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write three kinds: groups, over time, parts of a whole."
+   },
+   {
+    "beat": "point",
+    "do": "Point at \"temperature every two hours\".",
+    "say": "Which kind is it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write: over time, a line graph."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_BAR_FOR_ANY_DATA",
+    "listen_for": [
+     "always a bar graph"
+    ],
+    "ask": "Does it change over time?",
+    "repair": "A line graph.",
+    "error": "Chooses a bar graph for data that changes over time or shares a whole.",
+    "example": {
+     "question": "Temperature every two hours",
+     "wrong_answer": "a bar graph",
+     "correct_answer": "a line graph"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_LINE_FOR_CATEGORIES",
+    "listen_for": [
+     "line for clubs"
+    ],
+    "ask": "Is there anything between two clubs?",
+    "repair": "No: bars.",
+    "error": "Joins separate groups with a line graph.",
+    "example": {
+     "question": "Learners in five clubs",
+     "wrong_answer": "a line graph",
+     "correct_answer": "a bar graph"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE.M_PIE_FOR_NON_PARTS",
+    "listen_for": [
+     "pie for heights"
+    ],
+    "ask": "Is it one whole shared?",
+    "repair": "No.",
+    "error": "Chooses a pie chart for data that is not parts of one whole.",
+    "example": {
+     "question": "Height of a sunflower each week",
+     "wrong_answer": "a pie chart",
+     "correct_answer": "a line graph"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How a farmer shares an acre between crops",
+    "answer": "a pie chart",
+    "shows": "parts"
+   },
+   {
+    "question": "Height of a sunflower each week",
+    "answer": "a line graph",
+    "shows": "over time"
+   }
+  ],
+  "name": "Choose the right graph for a set of data",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW",
+  "key_step": "The child makes the sectors add to 360 and turns a count into an angle by count / total x 360.",
+  "floor": {
+   "prerequisite": "Angles at a point.",
+   "question": "360 - 270",
+   "answer": "90"
+  },
+  "representations": [
+   "a circle cut into sectors",
+   "a table of counts and angles",
+   "a protractor"
+  ],
+  "steps": [
+   "Angles make 360.",
+   "Missing = 360 - others.",
+   "Angle = count / total x 360.",
+   "Count = angle / 360 x total."
+  ],
+  "contexts": [
+   "how learners travel",
+   "a budget",
+   "clubs chosen"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle with sectors 90, 108 and 72."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the empty sector.",
+    "say": "What do all the sectors make together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 360 - 270 = 90."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_PIE_TOTAL_180",
+    "listen_for": [
+     "from 180"
+    ],
+    "ask": "Is a circle a half turn?",
+    "repair": "A full turn.",
+    "error": "Uses 180 for the angles of a pie chart.",
+    "example": {
+     "question": "Sectors 90, 108 and 72: the fourth",
+     "wrong_answer": "-90 or 0",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_OTHER_ANGLES_SUM_GIVEN",
+    "listen_for": [
+     "270"
+    ],
+    "ask": "Is that the empty one?",
+    "repair": "Take it from 360.",
+    "error": "Gives the sum of the other angles as the missing angle.",
+    "example": {
+     "question": "Sectors 90, 108 and 72: the fourth",
+     "wrong_answer": "270",
+     "correct_answer": "90"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW.M_ANGLE_AS_COUNT",
+    "listen_for": [
+     "90 learners"
+    ],
+    "ask": "Is 90 degrees or learners?",
+    "repair": "Degrees.",
+    "error": "Gives the angle as the number of learners.",
+    "example": {
+     "question": "90 degrees of 240 learners: how many",
+     "wrong_answer": "90",
+     "correct_answer": "60"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Sectors 120, 90, 60: the fourth?",
+    "answer": "90",
+    "shows": "missing"
+   },
+   {
+    "question": "60 of 240 learners: angle?",
+    "answer": "90",
+    "shows": "count to angle"
+   }
+  ],
+  "name": "Draw a pie chart: the angles of its sectors",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET",
+  "key_step": "The child reads an angle as a share of 360 and takes that share of its own chart's total.",
+  "floor": {
+   "prerequisite": "A fraction as a percentage.",
+   "question": "1/4",
+   "answer": "25%"
+  },
+  "representations": [
+   "a sector as a fraction",
+   "two charts side by side",
+   "a 100 square"
+  ],
+  "steps": [
+   "Angle / 360.",
+   "Times 100 for a percentage.",
+   "Times the total for a count.",
+   "Each chart has its own total."
+  ],
+  "contexts": [
+   "clubs in Grade 7",
+   "two schools",
+   "a family budget"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two pie charts with the same 90 degree sector."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two totals, 120 and 480.",
+    "say": "Is 90 degrees the same number of learners in both?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 30 and 120."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_ANGLE_AS_PERCENT",
+    "listen_for": [
+     "90%"
+    ],
+    "ask": "Is the whole circle 100 degrees?",
+    "repair": "360.",
+    "error": "Gives the angle as the percentage.",
+    "example": {
+     "question": "A 90 degree sector: percentage",
+     "wrong_answer": "90%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_REST_OF_TOTAL_GIVEN",
+    "listen_for": [
+     "75%"
+    ],
+    "ask": "Which sector is asked?",
+    "repair": "This one.",
+    "error": "Gives the share of everyone else.",
+    "example": {
+     "question": "A 90 degree sector: percentage",
+     "wrong_answer": "75%",
+     "correct_answer": "25%"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_SAME_ANGLE_SAME_COUNT",
+    "listen_for": [
+     "the same number"
+    ],
+    "ask": "Are the totals the same?",
+    "repair": "No.",
+    "error": "Believes equal angles in two pie charts mean equal numbers.",
+    "example": {
+     "question": "90 degrees in a school of 120 and in a school of 480",
+     "wrong_answer": "the same number",
+     "correct_answer": "30 and 120"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET.M_BIGGER_TOTAL_BIGGER_ANGLE",
+    "listen_for": [
+     "bigger school, bigger angle"
+    ],
+    "ask": "What decides the angle?",
+    "repair": "The share.",
+    "error": "Believes a bigger total must give a bigger angle.",
+    "example": {
+     "question": "A school of 480 and one of 120: which sector is bigger?",
+     "wrong_answer": "the bigger school",
+     "correct_answer": "it depends on the share"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A 72 degree sector: percentage?",
+    "answer": "20%",
+    "shows": "share"
+   },
+   {
+    "question": "90 degrees in a school of 480: how many learners?",
+    "answer": "120",
+    "shows": "own total"
+   }
+  ],
+  "name": "Interpret a pie chart as shares of its own total",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH",
+  "key_step": "The child reads a rise as later minus earlier, and a value between points along the straight line.",
+  "floor": {
+   "prerequisite": "Reads a point.",
+   "question": "The point at week 3",
+   "answer": "60"
+  },
+  "representations": [
+   "a line graph",
+   "rises as steps",
+   "halfway on a line"
+  ],
+  "steps": [
+   "Read the two points.",
+   "Rise = later - earlier.",
+   "Steepest climb: biggest rise.",
+   "Halfway: halfway between the heights."
+  ],
+  "contexts": [
+   "tomato prices",
+   "a sunflower",
+   "temperature in Thika"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line from 40 at week 2 to 60 at week 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point halfway along the line.",
+    "say": "What height is halfway between 40 and 60?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 50."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_FALL_READ_AS_RISE",
+    "listen_for": [
+     "a fall"
+    ],
+    "ask": "Does the line go up there?",
+    "repair": "No: it falls.",
+    "error": "Chooses a part where the line goes down as a rise.",
+    "example": {
+     "question": "Prices 80, 120, 100: where is the biggest rise?",
+     "wrong_answer": "week 2 to week 3",
+     "correct_answer": "week 1 to week 2"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_ANY_RISE_CHOSEN",
+    "listen_for": [
+     "the first rise"
+    ],
+    "ask": "Is there a steeper climb?",
+    "repair": "Compare.",
+    "error": "Chooses a rise that is not the biggest.",
+    "example": {
+     "question": "Rises of 20, 40 and 10: the biggest",
+     "wrong_answer": "the first rise",
+     "correct_answer": "the rise of 40"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_PLOTTED_POINT_READ",
+    "listen_for": [
+     "40"
+    ],
+    "ask": "Is that halfway or the start?",
+    "repair": "The start.",
+    "error": "Gives a plotted point when the value between points is asked.",
+    "example": {
+     "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+     "wrong_answer": "40",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_GROWTH_FOR_HEIGHT",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Is that a height?",
+    "repair": "No: a growth.",
+    "error": "Gives the growth in the week instead of the height.",
+    "example": {
+     "question": "Heights 40 and 60 at weeks 2 and 3: halfway",
+     "wrong_answer": "20",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_READING_FOR_RISE",
+    "listen_for": [
+     "26"
+    ],
+    "ask": "Is that the rise or the reading?",
+    "repair": "The reading.",
+    "error": "Gives the later reading as the rise.",
+    "example": {
+     "question": "16 at 8:00 and 26 at 12:00: the rise",
+     "wrong_answer": "26",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH.M_RISE_ADDED",
+    "listen_for": [
+     "42"
+    ],
+    "ask": "Is a rise an addition?",
+    "repair": "Subtract.",
+    "error": "Adds the two readings for a rise.",
+    "example": {
+     "question": "16 at 8:00 and 26 at 12:00: the rise",
+     "wrong_answer": "42",
+     "correct_answer": "10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "16 °C at 8:00 and 26 °C at 12:00: rise?",
+    "answer": "10 degrees",
+    "shows": "rise"
+   },
+   {
+    "question": "Heights 30 cm and 50 cm a week apart: halfway?",
+    "answer": "40 cm",
+    "shows": "between"
+   }
+  ],
+  "name": "Draw and read a line graph, including between the points",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH": {
+  "skill": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH",
+  "key_step": "The child uses each part's own distance and time, and the whole time, stop included, for the average.",
+  "floor": {
+   "prerequisite": "Speed from distance and time.",
+   "question": "80 km in 2 h",
+   "answer": "40 km/h"
+  },
+  "representations": [
+   "a distance-time graph",
+   "a table of parts",
+   "two crossing lines"
+  ],
+  "steps": [
+   "Flat part: a stop.",
+   "Each part: distance / time.",
+   "Average: total distance / total time.",
+   "Meeting: where the lines cross, read the time."
+  ],
+  "contexts": [
+   "a bus journey",
+   "two matatus",
+   "a cyclist"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line rising to 80 km at 2 h, flat to 3 h, rising to 200 km at 5 h."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the flat part.",
+    "say": "What is the bus doing here?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write average = 200 / 5 = 40 km/h."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_MOVING_TIME_FOR_STOP",
+    "listen_for": [
+     "2 hours"
+    ],
+    "ask": "Is the line flat there?",
+    "repair": "No.",
+    "error": "Reads a sloping part as the stop.",
+    "example": {
+     "question": "Line rises for 2 hours, flat for 1 hour: the stop",
+     "wrong_answer": "2 hours",
+     "correct_answer": "1 hour"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_SPEED",
+    "listen_for": [
+     "80"
+    ],
+    "ask": "Is that km or km/h?",
+    "repair": "Divide by the time.",
+    "error": "Gives the distance of a part as its speed.",
+    "example": {
+     "question": "80 km in 2 hours: speed",
+     "wrong_answer": "80",
+     "correct_answer": "40 km/h"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_WHOLE_JOURNEY_FOR_PART",
+    "listen_for": [
+     "200 / 5"
+    ],
+    "ask": "Which part is asked?",
+    "repair": "The first.",
+    "error": "Uses the whole journey for the speed of one part.",
+    "example": {
+     "question": "First part 80 km in 2 h; whole 200 km in 5 h: first part speed",
+     "wrong_answer": "40 from 200 / 5",
+     "correct_answer": "40 from 80 / 2"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_TOTAL_DISTANCE_FOR_PART",
+    "listen_for": [
+     "200 / 2"
+    ],
+    "ask": "How far was the last part?",
+    "repair": "120 km.",
+    "error": "Divides the total distance by the time of the last part.",
+    "example": {
+     "question": "Total 200 km, last part 120 km in 2 h: speed",
+     "wrong_answer": "100",
+     "correct_answer": "60 km/h"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_SPEEDS_AVERAGED",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Did the bus stop?",
+    "repair": "Use the total time.",
+    "error": "Averages the speeds of the parts.",
+    "example": {
+     "question": "40 km/h for 2 h, 60 km/h for 2 h, a 1 h stop: average",
+     "wrong_answer": "50",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_STOP_LEFT_OUT_OF_TIME",
+    "listen_for": [
+     "4 hours"
+    ],
+    "ask": "Is the stop part of the journey?",
+    "repair": "Yes.",
+    "error": "Leaves the stop out of the total time.",
+    "example": {
+     "question": "200 km, 4 h moving and a 1 h stop: average speed",
+     "wrong_answer": "50",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_DISTANCE_FOR_TIME_READ",
+    "listen_for": [
+     "120"
+    ],
+    "ask": "Which axis is time?",
+    "repair": "Read down.",
+    "error": "Reads the distance where the lines cross instead of the time.",
+    "example": {
+     "question": "Lines cross at 3 hours, 120 km: when do they meet?",
+     "wrong_answer": "120",
+     "correct_answer": "3 hours"
+    }
+   },
+   {
+    "code": "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH.M_ONE_JOURNEY_FOR_MEETING",
+    "listen_for": [
+     "4 hours"
+    ],
+    "ask": "Is one matatu going the whole way?",
+    "repair": "They meet sooner.",
+    "error": "Works out how long one matatu needs for the whole road.",
+    "example": {
+     "question": "Road 240 km, speeds 60 and 20: when do they meet?",
+     "wrong_answer": "4 hours",
+     "correct_answer": "3 hours"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "120 km in 2 h, a 1 h stop, 80 km in 2 h: average speed?",
+    "answer": "40 km/h",
+    "shows": "stop included"
+   },
+   {
+    "question": "Lines cross at 3 h and 150 km: when do they meet?",
+    "answer": "3 hours",
+    "shows": "read time"
+   }
+  ],
+  "name": "Interpret a travel graph",
+  "sub_strand": "MATH.G7.DATA_H.DATA_HANDLING",
+  "sub_strand_name": "Data Handling",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };

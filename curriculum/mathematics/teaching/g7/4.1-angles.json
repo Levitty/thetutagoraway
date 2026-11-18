@@ -1,0 +1,864 @@
+{
+ "sub_strand": "MATH.G7.GEOMET.ANGLES",
+ "title": "Angles",
+ "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to g are tested; h is an attitude. Angles on a straight line add to 180 and vertically opposite angles are equal (a); angles at a point add to 360 (b); alternate and corresponding angles are equal and co-interior angles add to 180 (c); in a parallelogram opposite angles are equal and neighbouring angles add to 180 (d); angle properties of triangles and quadrilaterals, and the angle sum of a polygon from the triangles it splits into, (n - 2) x 180 (e, f); exterior angles add to 360 and an interior and exterior angle at a corner add to 180 (f); angles and sides of regular polygons up to the hexagon (g). Grade 6 found angles on a straight line and the angle sum of triangles and rectangles. The older families were filed under letters from an earlier draft; the parallelogram families are filed under d and the triangle and quadrilateral families under e.",
+ "skills": [
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE",
+   "key_step": "The child writes the angles on a line equal to 180, solves for x, and puts x back.",
+   "floor": {
+    "prerequisite": "A missing angle on a line.",
+    "question": "180 - 70",
+    "answer": "110"
+   },
+   "representations": [
+    "a straight line with two angles",
+    "an equation",
+    "a check that adds to 180"
+   ],
+   "steps": [
+    "Angles on a line = 180.",
+    "Collect x terms and numbers.",
+    "Solve for x.",
+    "Put x back."
+   ],
+   "contexts": [
+    "a ladder on the ground",
+    "a road meeting a fence",
+    "a broken stick"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a straight line with (3x + 10) and (2x + 20) beside each other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two angles.",
+     "say": "What do they add up to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 5x + 30 = 180, x = 30."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_GIVEN_AS_ANGLE",
+     "listen_for": [
+      "30 degrees"
+     ],
+     "ask": "Is x the angle, or a part of it?",
+     "repair": "Put it back."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_X_TERMS_NOT_COLLECTED",
+     "listen_for": [
+      "divided by 3"
+     ],
+     "ask": "How many x are there in all?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE.M_LINE_SUM_360",
+     "listen_for": [
+      "360"
+     ],
+     "ask": "Is a straight line a full turn?",
+     "repair": "Half: 180."
+    }
+   ],
+   "checks": [
+    {
+     "question": "(2x + 15) and (3x + 15) on a straight line: x?",
+     "answer": "30",
+     "shows": "equation"
+    },
+    {
+     "question": "One angle on a line is 65: the other?",
+     "answer": "115",
+     "shows": "line"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE",
+   "key_step": "The child tells the angle across the crossing (equal) from the angle beside it (adds to 180).",
+   "floor": {
+    "prerequisite": "Angles on a line.",
+    "question": "180 - 50",
+    "answer": "130"
+   },
+   "representations": [
+    "two crossing sticks",
+    "scissors opening",
+    "colour the opposite pairs"
+   ],
+   "steps": [
+    "Find the given angle.",
+    "Across: equal.",
+    "Beside: 180 minus.",
+    "Check: all four make 360."
+   ],
+   "contexts": [
+    "scissors",
+    "a road junction",
+    "crossed sticks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two lines crossing, one angle 50 marked."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the angle across from it.",
+     "say": "Is it equal, or does it add to 180?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 50 across, 130 beside."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_AS_SUPPLEMENTARY",
+     "listen_for": [
+      "130 across"
+     ],
+     "ask": "Is that angle beside or across?",
+     "repair": "Across: equal."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_OPPOSITE_FROM_FULL_TURN",
+     "listen_for": [
+      "310"
+     ],
+     "ask": "Are two angles the whole turn?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE.M_CROSSING_ALWAYS_RIGHT_ANGLE",
+     "listen_for": [
+      "always 90"
+     ],
+     "ask": "Can scissors open a little?",
+     "repair": "Yes: any angle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "One angle at a crossing is 72: the opposite angle?",
+     "answer": "72",
+     "shows": "across"
+    },
+    {
+     "question": "And the angle beside it?",
+     "answer": "108",
+     "shows": "beside"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT",
+   "key_step": "The child takes all the known angles from 360.",
+   "floor": {
+    "prerequisite": "Adds angles.",
+    "question": "80 + 90 + 100",
+    "answer": "270"
+   },
+   "representations": [
+    "a round cake cut from the centre",
+    "a full turn",
+    "a pie of angles"
+   ],
+   "steps": [
+    "Angles at a point = 360.",
+    "Add the known ones.",
+    "Take from 360."
+   ],
+   "contexts": [
+    "a chapati",
+    "spokes of a wheel",
+    "a clock face"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle cut from the centre into 4 pieces, three marked."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the centre.",
+     "say": "What do all the angles round it make?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 360 - 270 = 90."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_KNOWN_SUM_AS_ANSWER",
+     "listen_for": [
+      "270"
+     ],
+     "ask": "Is that the fourth piece or the other three?",
+     "repair": "The other three."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT.M_POINT_AS_STRAIGHT_LINE",
+     "listen_for": [
+      "from 180"
+     ],
+     "ask": "Is the cake a half turn?",
+     "repair": "A full turn: 360."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Angles 100, 120 and 85 at a point: the fourth?",
+     "answer": "55",
+     "shows": "full turn"
+    },
+    {
+     "question": "Five equal angles at a point: each?",
+     "answer": "72",
+     "shows": "share 360"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS",
+   "key_step": "The child says where the angle sits (same or opposite side, between or outside the lines) before naming the pair and its rule.",
+   "floor": {
+    "prerequisite": "Knows parallel lines.",
+    "question": "Do railway lines meet?",
+    "answer": "no: parallel"
+   },
+   "representations": [
+    "Z, F and C shapes",
+    "a gate with a brace",
+    "two crossings coloured"
+   ],
+   "steps": [
+    "Where is x?",
+    "Name the pair.",
+    "Equal, or adds to 180?",
+    "Give the reason."
+   ],
+   "contexts": [
+    "a gate",
+    "a road across a railway",
+    "a ladder between shelves"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two parallel lines and a transversal; mark 62 at the top crossing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an angle at the bottom crossing, on the other side, between the lines.",
+     "say": "Which pair is this, and is it equal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write: alternate, 62."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_EQUAL_PAIR_AS_SUPPLEMENTARY",
+     "listen_for": [
+      "118 for alternate"
+     ],
+     "ask": "Do alternate angles add to 180?",
+     "repair": "They are equal."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_AS_EQUAL",
+     "listen_for": [
+      "equal co-interior"
+     ],
+     "ask": "Do co-interior angles look the same size?",
+     "repair": "They add to 180."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_ALTERNATE_CORRESPONDING_MIXED",
+     "listen_for": [
+      "the wrong name"
+     ],
+     "ask": "Z or F?",
+     "repair": "Look at the shape."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_VERTICAL_ACROSS_CROSSINGS",
+     "listen_for": [
+      "vertically opposite"
+     ],
+     "ask": "Is it at the same crossing?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COINTERIOR_WRONG_TOTAL",
+     "listen_for": [
+      "360 or 90"
+     ],
+     "ask": "Together they make what?",
+     "repair": "A straight angle."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_COMPLEMENT_USED",
+     "listen_for": [
+      "90 minus"
+     ],
+     "ask": "Is there a right angle here?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS.M_POINT_RULE_FOR_PARALLEL",
+     "listen_for": [
+      "round a point"
+     ],
+     "ask": "Do they meet at one point?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Co-interior to 70: x and the reason?",
+     "answer": "110, co-interior angles add to 180",
+     "shows": "rule"
+    },
+    {
+     "question": "Corresponding to 55: x?",
+     "answer": "55",
+     "shows": "equal"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES",
+   "key_step": "The child gives opposite corners the same angle and neighbouring corners angles that add to 180.",
+   "floor": {
+    "prerequisite": "Co-interior angles.",
+    "question": "Co-interior to 70",
+    "answer": "110"
+   },
+   "representations": [
+    "a parallelogram with its pairs coloured",
+    "a leaning rectangle",
+    "a rhombus with a diagonal"
+   ],
+   "steps": [
+    "Opposite: equal.",
+    "Neighbours: 180.",
+    "All four: 360.",
+    "Rhombus: the isosceles triangle."
+   ],
+   "contexts": [
+    "a window that leans",
+    "a kite frame",
+    "a floor tile"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw parallelogram PQRS with angle P = 70."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Q next to P.",
+     "say": "Which pair are P and Q?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write Q = 110, R = 70, S = 110."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_OPPOSITE_NEIGHBOUR_MIXED",
+     "listen_for": [
+      "110 opposite"
+     ],
+     "ask": "Is R next to P or across?",
+     "repair": "Across: equal."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_ANGLES_EQUAL",
+     "listen_for": [
+      "70 next door"
+     ],
+     "ask": "Are P and Q co-interior?",
+     "repair": "Yes: 180."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_NEIGHBOUR_FROM_FULL_TURN",
+     "listen_for": [
+      "290"
+     ],
+     "ask": "Are two angles the whole shape?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_QUAD_SUM_180",
+     "listen_for": [
+      "180 in all"
+     ],
+     "ask": "How many triangles in a quadrilateral?",
+     "repair": "Two: 360."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_PARALLELOGRAM_RIGHT_ANGLES",
+     "listen_for": [
+      "90"
+     ],
+     "ask": "Does it lean?",
+     "repair": "Yes."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES.M_DIAGONAL_RIGHT_ANGLE_USED",
+     "listen_for": [
+      "90 for BAC"
+     ],
+     "ask": "Which angle is BAC?",
+     "repair": "A corner of triangle ABC."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Parallelogram, angle A = 115: angle B?",
+     "answer": "65",
+     "shows": "neighbours"
+    },
+    {
+     "question": "Rhombus, angle ABC = 100: angle BAC?",
+     "answer": "40",
+     "shows": "isosceles"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES",
+   "key_step": "The child takes what is known from 180 and shares it only between the angles that are equal.",
+   "floor": {
+    "prerequisite": "The triangle sum.",
+    "question": "60 + 70 + ?",
+    "answer": "50"
+   },
+   "representations": [
+    "a roof gable",
+    "torn corners on a line",
+    "an exterior angle"
+   ],
+   "steps": [
+    "Sum = 180.",
+    "Isosceles: base angles equal.",
+    "Exterior = far angles added.",
+    "In x: solve, then put back."
+   ],
+   "contexts": [
+    "a house gable",
+    "a roof truss",
+    "a bridge"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an isosceles roof with the top angle 40."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two base angles.",
+     "say": "What do they share?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 140 / 2 = 70."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_BASE_ANGLES_NOT_SHARED",
+     "listen_for": [
+      "140 each"
+     ],
+     "ask": "Is that one angle or two?",
+     "repair": "Two: halve."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_TOP_ANGLE_HALVED",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "Which angle is shared?",
+     "repair": "What is left of 180."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ALL_ANGLES_EQUAL_ISOSCELES",
+     "listen_for": [
+      "40 each"
+     ],
+     "ask": "Is the top angle one of the equal pair?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_LIKE_TERMS_MULTIPLIED",
+     "listen_for": [
+      "10 x 30"
+     ],
+     "ask": "Are angles added or multiplied?",
+     "repair": "Added."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_NOT_REMOVED",
+     "listen_for": [
+      "180 / 4"
+     ],
+     "ask": "What comes off first?",
+     "repair": "The 40."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_CONSTANT_LEFT_OFF",
+     "listen_for": [
+      "2x only"
+     ],
+     "ask": "What else is in the angle?",
+     "repair": "The 30."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_EXTERIOR_ADDED_NOT_SUBTRACTED",
+     "listen_for": [
+      "170"
+     ],
+     "ask": "If 120 = 50 + B, what is B?",
+     "repair": "70."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES.M_ADJACENT_INTERIOR_GIVEN",
+     "listen_for": [
+      "60"
+     ],
+     "ask": "Which corner is B?",
+     "repair": "Not C."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Isosceles triangle, top angle 80: each base angle?",
+     "answer": "50",
+     "shows": "share"
+    },
+    {
+     "question": "Exterior angle 130, one far angle 60: the other?",
+     "answer": "70",
+     "shows": "exterior"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM",
+   "key_step": "The child splits from one corner into triangles, two fewer than the sides, each worth 180.",
+   "floor": {
+    "prerequisite": "The triangle sum.",
+    "question": "Angles of a triangle",
+    "answer": "180"
+   },
+   "representations": [
+    "diagonals from one corner",
+    "a table of sides and triangles",
+    "torn corners"
+   ],
+   "steps": [
+    "Count the sides.",
+    "Triangles = sides - 2.",
+    "Sum = triangles x 180.",
+    "Back: sum / 180 + 2."
+   ],
+   "contexts": [
+    "a plot of land",
+    "a hexagonal tile",
+    "a pentagon badge"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pentagon and the two diagonals from one corner."
+    },
+    {
+     "beat": "count",
+     "do": "Count the triangles with the child.",
+     "say": "How many triangles?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child says what a hexagon would give."
+    },
+    {
+     "beat": "write",
+     "do": "Write 3 x 180 = 540."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_ALL_CORNERS_RIGHT_ANGLES",
+     "listen_for": [
+      "all 90"
+     ],
+     "ask": "Is this corner a right angle?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_CORNERS_AS_POINT",
+     "listen_for": [
+      "round a point"
+     ],
+     "ask": "Do the corners meet at one point?",
+     "repair": "No: two triangles."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_MUST_BE_EQUAL",
+     "listen_for": [
+      "equal triangles"
+     ],
+     "ask": "Does it matter if they differ?",
+     "repair": "No: each is 180."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_EQUAL_SIDES",
+     "listen_for": [
+      "6 triangles"
+     ],
+     "ask": "Count them from one corner.",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_ONE_FEWER",
+     "listen_for": [
+      "5 triangles"
+     ],
+     "ask": "How many for a quadrilateral?",
+     "repair": "2: sides - 2."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_TRIANGLES_AS_SIDES",
+     "listen_for": [
+      "4 sides"
+     ],
+     "ask": "Is 4 the triangles or the sides?",
+     "repair": "Triangles: add 2."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM.M_RIGHT_ANGLES_AS_SIDES",
+     "listen_for": [
+      "divided by 90"
+     ],
+     "ask": "What is each triangle worth?",
+     "repair": "180."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Angle sum of a hexagon?",
+     "answer": "720",
+     "shows": "triangles"
+    },
+    {
+     "question": "Angle sum 540: sides?",
+     "answer": "5",
+     "shows": "back"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION",
+   "key_step": "The child says 360 divided by n is the exterior angle, and the interior angle is 180 minus it.",
+   "floor": {
+    "prerequisite": "Angles on a line.",
+    "question": "180 - 60",
+    "answer": "120"
+   },
+   "representations": [
+    "walking round a shape",
+    "an extended side",
+    "a full turn"
+   ],
+   "steps": [
+    "Exterior angles make 360.",
+    "Regular: 360 / n.",
+    "Interior = 180 - exterior."
+   ],
+   "contexts": [
+    "walking round a hexagonal pen",
+    "a stop sign",
+    "honeycomb"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a regular hexagon with one side extended."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the angle outside.",
+     "say": "If you walk all the way round, how far do you turn?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 360 / 6 = 60, interior = 120."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_EXTERIOR_AS_INTERIOR",
+     "listen_for": [
+      "60 inside"
+     ],
+     "ask": "Is 60 inside or outside?",
+     "repair": "Outside."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_INTERIOR_FROM_180_SHARED",
+     "listen_for": [
+      "180 / 6"
+     ],
+     "ask": "Is the hexagon one triangle?",
+     "repair": "Four."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION.M_SUM_SHARED_BY_TRIANGLES",
+     "listen_for": [
+      "720 / 4"
+     ],
+     "ask": "How many corners share the sum?",
+     "repair": "6."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Regular pentagon: exterior and interior angle?",
+     "answer": "72 and 108",
+     "shows": "relation"
+    },
+    {
+     "question": "Why is 360 / 6 not the interior angle of a hexagon?",
+     "answer": "it is the exterior angle",
+     "shows": "reason"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE",
+   "key_step": "The child goes through the exterior angle: 360 divided by it gives the sides.",
+   "floor": {
+    "prerequisite": "Divides 360.",
+    "question": "360 / 72",
+    "answer": "5"
+   },
+   "representations": [
+    "a regular polygon",
+    "a turn table",
+    "the angle sum"
+   ],
+   "steps": [
+    "Interior to exterior: 180 minus.",
+    "Sides = 360 / exterior.",
+    "Each interior = sum / n."
+   ],
+   "contexts": [
+    "tiles",
+    "a nut on a bolt",
+    "a pentagon badge"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: interior angle 120."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 120.",
+     "say": "What is the exterior angle?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say."
+    },
+    {
+     "beat": "write",
+     "do": "Write 360 / 60 = 6 sides."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_SUM_180",
+     "listen_for": [
+      "180 / 60"
+     ],
+     "ask": "Is walking round a half turn?",
+     "repair": "A full turn."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_INTERIOR_USED_AS_EXTERIOR",
+     "listen_for": [
+      "360 / 120"
+     ],
+     "ask": "Is 120 the outside angle?",
+     "repair": "No: 60."
+    },
+    {
+     "code": "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE.M_EXTERIOR_ANGLE_AS_SIDES",
+     "listen_for": [
+      "60 sides"
+     ],
+     "ask": "Is 60 the sides?",
+     "repair": "Divide 360 by it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Regular polygon, interior angle 108: sides?",
+     "answer": "5",
+     "shows": "via exterior"
+    },
+    {
+     "question": "Each interior angle of a regular hexagon?",
+     "answer": "120",
+     "shows": "sum shared"
+    }
+   ]
+  }
+ ]
+}

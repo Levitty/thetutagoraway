@@ -102,21 +102,21 @@ export const FAMILIES = [
         hints: ['Find the millions digit.', 'Look at the digit straight after it.'],
         steps: [`The digit after the millions is ${Math.floor(r / 100000)}.`, `So ${commas(n)} rounds to ${commas(right)}.`] };
     } }),
-  fam({ id: 'g7.angles.road-crossing', skill: 'G8_ANGLE_RELATIONSHIPS', outcome: 'G7.ANGLES.c', rung: 2, form: 'word',
-    draw: () => { const a = randInt(35, 80); return { a, kind: pick(['alternate', 'corresponding']) }; },
+  fam({ id: 'g7.angles.road-crossing', skill: 'G8_ANGLE_RELATIONSHIPS', outcome: 'MATH.G7.GEOMET.ANGLES.c', cskill: 'MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS', rung: 2, form: 'word',
+    draw: () => { const a = randInt(35, 80); return Math.abs(90 - 2 * a) > 2 ? { a, kind: pick(['alternate', 'corresponding']) } : null; },   // 90 - a must not sit beside a
     make: ({ a, kind }) => ({
       question: `A road cuts across a railway whose two rails are parallel. Where it meets rail A, the road makes an angle of ${a}°. What size is the ${kind} angle at rail B?`,
       answer: a,
-      wrong: [[180 - a, `That would be for co-interior angles. ${kind === 'alternate' ? 'Alternate' : 'Corresponding'} angles are equal.`], [90 - a, 'These angles do not add up to 90°.'], [360 - a, 'That is the angle all the way round.']],
+      wrong: [[180 - a, `That would be for co-interior angles. ${kind === 'alternate' ? 'Alternate' : 'Corresponding'} angles are equal.`, 'M_EQUAL_PAIR_AS_SUPPLEMENTARY'], [90 - a, 'These angles do not add up to 90°.', 'M_COMPLEMENT_USED'], [360 - a, 'That is the angle all the way round.', 'M_OPPOSITE_FROM_FULL_TURN']],
       hints: ['The rails are parallel.', `What do you know about ${kind} angles on parallel lines?`],
       steps: [`On parallel lines, ${kind} angles are equal.`, `So the angle is ${a}°.`],
     }),
     check: ({ a }, v) => v + (180 - a) === 180 }),
-  fam({ id: 'g7.angles.parallel-reason', skill: 'G8_ANGLE_RELATIONSHIPS', outcome: 'G7.ANGLES.c', rung: 3, form: 'why',
+  fam({ id: 'g7.angles.parallel-reason', skill: 'G8_ANGLE_RELATIONSHIPS', outcome: 'MATH.G7.GEOMET.ANGLES.c', cskill: 'MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS', rung: 3, form: 'why',
     draw: () => { const a = randInt(50, 130); return a === 90 ? null : { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `${p.name} marks a co-interior pair of angles between parallel lines as ${a}° and ${180 - a}°. Which fact supports this?`, story: false,
-      options: [{ text: 'Co-interior angles between parallel lines add up to 180°', right: true }, { text: 'Co-interior angles between parallel lines are equal', right: false, why: 'Alternate and corresponding angles are equal. Co-interior angles are not.' }, { text: 'All angles between parallel lines add up to 90 degrees', right: false, why: 'Angles at a right angle add to 90°. These lie between parallel lines.' }, { text: 'Angles around a point add up to 360°, so these do too', right: false, why: 'That is true, but these two angles do not meet at one point.' }],
+      options: [{ text: 'Co-interior angles between parallel lines add up to 180°', right: true }, { text: 'Co-interior angles between parallel lines are equal', right: false, why: 'Alternate and corresponding angles are equal. Co-interior angles are not.', mis: 'M_COINTERIOR_AS_EQUAL' }, { text: 'All angles between parallel lines add up to 90 degrees', right: false, why: 'Angles at a right angle add to 90°. These lie between parallel lines.', mis: 'M_COINTERIOR_WRONG_TOTAL' }, { text: 'Angles around a point add up to 360°, so these do too', right: false, why: 'That is true, but these two angles do not meet at one point.', mis: 'M_POINT_RULE_FOR_PARALLEL' }],
       hints: ['Co-interior angles sit on the same side, between the lines.', 'Do they look equal, or do they fill a straight line together?'],
       steps: [`Co-interior angles add up to 180°.`, `180 − ${a} = ${180 - a}°.`],
     }) }),

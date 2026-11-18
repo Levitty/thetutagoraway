@@ -678,6 +678,70 @@
    ],
    "mastery": "The child forms an equation for a story (ages after some years, a parking charge with a fixed part, equal boxes and loose items, money left after spending), solves it, and answers the quantity the question asks for, not the unknown."
   },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS": {
+   "forms": [
+    "which sign for the words",
+    "is the statement true for this value",
+    "does the number itself count",
+    "read the sign aloud"
+   ],
+   "mastery": "The child picks <, >, <= or >= for \"at least\", \"at most\", \"fewer than\", \"no more than\", \"not less than\" and \"under\", says whether the number itself is allowed, and tests a statement such as a <= 12 by putting in a value."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY": {
+   "forms": [
+    "choose the inequality",
+    "find the wrong step",
+    "what does each part mean",
+    "write the inequality"
+   ],
+   "mastery": "From a limit in a story (a pick-up that carries at most 1,000 kg with 200 kg already on it, a hall with seats left) the child writes an inequality such as 200 + 50n <= 1,000, with the amount already there included and the sign that fits the limit."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT": {
+   "forms": [
+    "greatest number of items",
+    "whole numbers only",
+    "check one more",
+    "solve then answer"
+   ],
+   "mastery": "The child forms bag + books <= money, takes away the fixed cost, divides by the price, and gives the greatest whole number of items that fits (8.75 gives 8, not 9), checking that one more would cost too much."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE": {
+   "forms": [
+    "which line shows it",
+    "why is the circle wrong",
+    "which number is in the shading",
+    "draw it"
+   ],
+   "mastery": "The child puts a closed circle for <= or >= and an open circle for < or > at the number in the inequality, shades towards the bigger numbers for > and >= and the smaller ones for < and <=, and reads which numbers lie under the shading."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY": {
+   "forms": [
+    "ages that can join",
+    "readings that are allowed",
+    "list the whole numbers",
+    "how many rides",
+    "why is the chain wrong"
+   ],
+   "mastery": "The child writes a range with two ends, such as 6 <= a < 12, choosing the sign at each end from the words, lists the whole numbers that fit, tests a value against both ends, and writes \"less than 2 or greater than 7\" as two separate inequalities, never as 7 < x < 2."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND": {
+   "forms": [
+    "solve and list",
+    "find the wrong step",
+    "how many whole numbers",
+    "what to do first"
+   ],
+   "mastery": "The child solves 8 < 2x + 4 <= 20 by taking 4 from all three parts and dividing all three by 2, gets 2 < x <= 8, and lists the whole numbers 3 to 8 that fit, leaving out an end the sign leaves out."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE": {
+   "forms": [
+    "which inequality does the line show",
+    "draw the range",
+    "circle at each end",
+    "smaller number on the left"
+   ],
+   "mastery": "The child reads two circles and the shading between them as a compound inequality, with the smaller number on the left, <= at a closed circle and < at an open one, and draws such a line from an inequality."
+  },
   "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
    "forms": [
     "which side is the hypotenuse",
@@ -785,6 +849,96 @@
     "predict the distance round"
    ],
    "mastery": "The child says the circumference is always about 3.14 times the diameter, so doubling the diameter doubles the circumference, and finds the pattern in a table of measured circles."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_M2_CM2": {
+   "forms": [
+    "m2 to cm2",
+    "cm2 to m2",
+    "why 10,000",
+    "find the mistake"
+   ],
+   "mastery": "The child says a square metre is a square 100 cm by 100 cm, so 1 m2 = 10,000 cm2, changes m2 to cm2 by multiplying by 10,000 and cm2 to m2 by dividing, and finds the wrong step in a working that uses 100."
+  },
+  "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE": {
+   "forms": [
+    "field in hectares",
+    "acres to m2",
+    "total of plots in hectares",
+    "which unit for land"
+   ],
+   "mastery": "The child says 1 hectare is 10,000 m2 (a square 100 m by 100 m), finds a field in hectares from its length and width, totals plots in m2 and changes to hectares, and uses the acre size the question gives to change acres to m2."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_PARALLELOGRAM_RHOMBUS": {
+   "forms": [
+    "area from base and height",
+    "which length is the height",
+    "why not the slanting side",
+    "rhombus from its diagonals"
+   ],
+   "mastery": "The child multiplies the base by the perpendicular height, not the slanting side, explains that cutting a triangle off one end and moving it makes a rectangle, and finds a rhombus from base x height or half the product of its diagonals."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_TRAPEZIUM": {
+   "forms": [
+    "area of a plot",
+    "find the other parallel side",
+    "find the mistake",
+    "which sides are added"
+   ],
+   "mastery": "The child adds the two parallel sides, multiplies by the distance between them and halves, finds a missing parallel side by doubling the area, dividing by the height and taking away the known side, and spots a working that doubles instead of halving."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_RECT_IN_CONTEXT": {
+   "forms": [
+    "tiles for a floor",
+    "same unit first",
+    "how many cover the whole floor",
+    "carpet for a room"
+   ],
+   "mastery": "The child puts the floor and one tile in the same unit (cm2), divides the floor area by the area of one tile, and does not count tiles along the edges only."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_CIRCLE": {
+   "forms": [
+    "area from the diameter",
+    "half circle window",
+    "why four times",
+    "area from the radius"
+   ],
+   "mastery": "The child halves the diameter for the radius, multiplies pi x r x r with pi = 22/7, halves for a half circle, and explains that doubling the radius makes the area four times as big."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_CIRCLE_FROM_CIRCUMFERENCE": {
+   "forms": [
+    "diameter from the walk round",
+    "then the radius",
+    "then the area",
+    "which step first"
+   ],
+   "mastery": "From the circumference the child finds the diameter (divide by pi), halves it for the radius, then finds pi x r x r, keeping each step in order."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_BORDERS": {
+   "forms": [
+    "path round a garden",
+    "frame round a picture",
+    "outer minus inner",
+    "carpet with a border"
+   ],
+   "mastery": "The child finds the outer rectangle (each side grows by twice the path width), finds the inner one, and takes the inner area from the outer area, so the corners of the path are counted."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_RING": {
+   "forms": [
+    "path round a pond",
+    "outer radius",
+    "big circle minus small circle",
+    "ring of a well"
+   ],
+   "mastery": "The child adds the path width once to the radius for the outer circle, finds both circle areas with pi = 22/7, and takes the inner from the outer (not pi times the width squared)."
+  },
+  "MATH.G7.MEASUR.AREA.AREA_COMBINED_SHAPES": {
+   "forms": [
+    "L-shaped floor",
+    "rectangle and half circle",
+    "cost of tiling",
+    "split the shape"
+   ],
+   "mastery": "The child splits an L-shaped floor or a stage into rectangles and a half circle, finds each area, adds them, and multiplies the whole area by the cost of one square metre."
   },
   "MATH.G7.MEASUR.VOLUME_AND_CAPACITY.CUBIC_UNIT_CONVERT": {
    "forms": [
@@ -950,6 +1104,197 @@
    ],
    "mastery": "The child starts from the first reading, adds each rise and subtracts each fall in turn, and gives the final temperature in degrees Celsius or kelvin."
   },
+  "MATH.G7.MEASUR.MONEY.PROFIT_AND_LOSS": {
+   "forms": [
+    "profit on many kilograms",
+    "loss on a faulty item",
+    "profit or loss?",
+    "selling price from cost and profit"
+   ],
+   "mastery": "The child finds profit as selling money minus cost and loss as cost minus selling money, for one item or for many (kilograms of tomatoes), and says which it is."
+  },
+  "MATH.G7.MEASUR.MONEY.PROFIT_WITH_EXTRA_COSTS": {
+   "forms": [
+    "total cost with delivery",
+    "money from selling all",
+    "profit after transport",
+    "which costs count"
+   ],
+   "mastery": "The child adds extra costs (delivery, transport) to the cost of the goods, finds the money from selling all the items, and takes the total cost from it."
+  },
+  "MATH.G7.MEASUR.MONEY.PERCENT_PROFIT_LOSS": {
+   "forms": [
+    "percentage profit",
+    "percentage loss",
+    "find the wrong step",
+    "which item gave the best percentage"
+   ],
+   "mastery": "The child finds the profit or loss in shillings, divides it by the buying price (not the selling price) and multiplies by 100, and compares items by percentage, not by the shilling amount."
+  },
+  "MATH.G7.MEASUR.MONEY.DISCOUNT_AND_PERCENT": {
+   "forms": [
+    "discount in shillings",
+    "percentage discount",
+    "price after a discount",
+    "two discounts one after another"
+   ],
+   "mastery": "The child finds a discount as marked price minus price paid, writes it as a percentage of the marked price, takes a percentage discount off the marked price, and explains that a second discount is taken off the new, smaller price."
+  },
+  "MATH.G7.MEASUR.MONEY.DISCOUNT_WORK_BACK": {
+   "forms": [
+    "marked price from price paid",
+    "what percentage was paid",
+    "find 1% then 100%",
+    "check by taking the discount off"
+   ],
+   "mastery": "The child says that after a 20% discount the price paid is 80% of the marked price, finds 1% and then 100%, and does not add 20% of the price paid back on."
+  },
+  "MATH.G7.MEASUR.MONEY.COMMISSION": {
+   "forms": [
+    "commission on sales",
+    "commission above a target",
+    "pay with a basic salary",
+    "find the wrong step",
+    "percentage commission"
+   ],
+   "mastery": "The child changes the rate to a decimal by dividing by 100, works out commission on the right part of the sales (all, or only the part above a target), and adds the basic salary for the month's pay."
+  },
+  "MATH.G7.MEASUR.MONEY.INTERPRET_UTILITY_BILLS": {
+   "forms": [
+    "units from meter readings",
+    "water bill in bands",
+    "fixed charge",
+    "units a token buys"
+   ],
+   "mastery": "The child finds the units used as the difference of two meter readings, charges each band of units at its own rate, adds the fixed charge, and finds the units a token buys after the charges are taken."
+  },
+  "MATH.G7.MEASUR.MONEY.INTERPRET_SHOP_BILL": {
+   "forms": [
+    "change from a note",
+    "total of a receipt",
+    "cost of one line",
+    "check a receipt"
+   ],
+   "mastery": "The child multiplies each line by the number bought, adds the lines for the total, and takes the total from the note given for the change."
+  },
+  "MATH.G7.MEASUR.MONEY.PREPARE_BILL": {
+   "forms": [
+    "write a bill",
+    "line totals",
+    "price per kg for grams",
+    "total to pay"
+   ],
+   "mastery": "The child writes each item with its quantity, unit price and line total, matches units (a price per kg with a mass in kg), adds all the lines and states the total to pay."
+  },
+  "MATH.G7.MEASUR.MONEY.POSTAL_CHARGES": {
+   "forms": [
+    "three parcels from a table",
+    "first 100 g and each extra",
+    "which band",
+    "total postage"
+   ],
+   "mastery": "The child finds the band for each parcel by its own mass, adds the charge for each parcel posted, and for a rate such as sh 80 for the first 100 g and sh 30 for each extra 100 g counts one fewer extra part."
+  },
+  "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_SERVICES": {
+   "forms": [
+    "which service for this task",
+    "paybill or till",
+    "send or withdraw",
+    "which ones are charged"
+   ],
+   "mastery": "The child names the service for a task: send money to a person, withdraw cash at an agent, deposit cash, pay a school fee to a paybill with an account number, pay a shop through a till (buy goods), buy airtime, save or borrow, and says which ones carry a charge."
+  },
+  "MATH.G7.MEASUR.MONEY.MOBILE_MONEY_TRANSACTIONS": {
+   "forms": [
+    "two sends, two charges",
+    "balance after a withdrawal",
+    "charge from the table",
+    "cash received"
+   ],
+   "mastery": "The child finds the charge for each send or withdrawal from its own row of a table, adds the charges for separate transactions, and finds the balance left after the amount and the charge both leave the account."
+  },
+  "MATH.G7.GEOMET.ANGLES.ANGLES_ON_LINE": {
+   "forms": [
+    "missing angle on a line",
+    "angles in x",
+    "which is the larger angle",
+    "why they add to 180"
+   ],
+   "mastery": "The child uses the fact that angles side by side on a straight line add to 180 degrees, finds a missing angle, and with angles such as (3x + 10) and (2x + 20) forms 5x + 30 = 180, solves for x and puts it back to find each angle."
+  },
+  "MATH.G7.GEOMET.ANGLES.VERTICALLY_OPPOSITE": {
+   "forms": [
+    "opposite angle",
+    "why opposite angles are equal",
+    "all four angles from one",
+    "beside or opposite"
+   ],
+   "mastery": "The child says that where two straight lines cross the opposite angles are equal and the angles beside each other add to 180, and finds all four angles from one."
+  },
+  "MATH.G7.GEOMET.ANGLES.ANGLES_AT_POINT": {
+   "forms": [
+    "missing angle at a point",
+    "pieces of a round cake",
+    "angles in x at a point",
+    "full turn"
+   ],
+   "mastery": "The child uses the fact that the angles round a point make a full turn of 360 degrees and finds a missing angle by taking all the known angles from 360."
+  },
+  "MATH.G7.GEOMET.ANGLES.TRANSVERSAL_ANGLE_PAIRS": {
+   "forms": [
+    "name the pair",
+    "angle and reason",
+    "gate with a brace",
+    "road across a railway",
+    "find the wrong step"
+   ],
+   "mastery": "The child names alternate, corresponding and co-interior angles from where they sit, says that alternate and corresponding angles are equal and co-interior angles add to 180, finds each angle, and gives the reason."
+  },
+  "MATH.G7.GEOMET.ANGLES.PARALLELOGRAM_ANGLES": {
+   "forms": [
+    "all four angles from one",
+    "angle next to a given angle",
+    "why neighbours add to 180",
+    "rhombus and its diagonal"
+   ],
+   "mastery": "The child says opposite angles of a parallelogram are equal and neighbouring angles add to 180 (they are co-interior), finds all four angles from one, and in a rhombus uses the isosceles triangle a diagonal makes."
+  },
+  "MATH.G7.GEOMET.ANGLES.TRIANGLE_ANGLE_PROPERTIES": {
+   "forms": [
+    "base angles of an isosceles roof",
+    "angles in x",
+    "exterior angle",
+    "largest angle"
+   ],
+   "mastery": "The child uses the angle sum of 180, the equal base angles of an isosceles triangle, and the exterior angle that equals the two far interior angles, and solves a triangle whose angles are written in x."
+  },
+  "MATH.G7.GEOMET.ANGLES.POLYGON_ANGLE_SUM": {
+   "forms": [
+    "why a quadrilateral is 360",
+    "angle sum of a pentagon",
+    "sides from a sum",
+    "table of sides and triangles"
+   ],
+   "mastery": "The child splits a polygon from one corner into triangles, two fewer than the sides, says why any quadrilateral adds to 360, and finds the angle sum (n - 2) x 180 or the number of sides from a sum."
+  },
+  "MATH.G7.GEOMET.ANGLES.INTERIOR_EXTERIOR_RELATION": {
+   "forms": [
+    "interior from exterior",
+    "why 360 divided by n is the exterior",
+    "exterior angles make a turn",
+    "interior plus exterior"
+   ],
+   "mastery": "The child says the exterior angles of a polygon make one full turn (360), that an interior and exterior angle at a corner add to 180, and that 360 divided by the sides of a regular polygon gives its exterior angle, not its interior one."
+  },
+  "MATH.G7.GEOMET.ANGLES.REGULAR_POLYGON_SOLVE": {
+   "forms": [
+    "each angle of a regular hexagon",
+    "sides from an exterior angle",
+    "sides from an interior angle",
+    "find the wrong step"
+   ],
+   "mastery": "The child finds each interior angle of a regular pentagon or hexagon from the angle sum, finds the number of sides from an exterior or interior angle, and spots a working that splits a polygon into the wrong number of triangles."
+  },
   "MATH.G7.GEOMET.GEOMETRICAL_CONSTRUCTION.MEASURE_ANGLES_PROTRACTOR": {
    "forms": [
     "read the angle",
@@ -994,6 +1339,115 @@
     "draw a circle of diameter 6 cm"
    ],
    "mastery": "The child sets the compasses to the radius (half the diameter), places the point at the centre, and draws a circle, and says that every point on it is the same distance from the centre."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.DATA_MEANING_COLLECT": {
+   "forms": [
+    "what is data",
+    "is this data",
+    "a question to collect data",
+    "record each answer once"
+   ],
+   "mastery": "The child says data is facts or numbers collected to answer a question (the fruit learners choose is data, as well as their heights), plans a question whose answers can be counted, and records each answer once, for example with a tally."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_BUILD": {
+   "forms": [
+    "frequency from a tally",
+    "missing frequency",
+    "the most common value",
+    "two rows together"
+   ],
+   "mastery": "The child counts tallies in fives (a gate of four strokes and one across is 5), writes each frequency, finds a missing frequency from the total, and reads the most common value from the row with the biggest frequency."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.FREQUENCY_TABLE_USE": {
+   "forms": [
+    "total number of items",
+    "percentage of learners",
+    "rows that fit",
+    "value times frequency"
+   ],
+   "mastery": "The child multiplies each value by its frequency and adds to find a total (goals, books), adds the rows a question asks about, and writes that count as a percentage of the total frequency."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.GRAPH_SCALE": {
+   "forms": [
+    "scale for a bar graph",
+    "value of one symbol",
+    "will it fit the axis",
+    "half symbols"
+   ],
+   "mastery": "The child divides the largest value by each scale to see how many squares the tallest bar needs, picks the smallest scale that still fits the axis, and for a pictograph picks a symbol value that shows every number with whole and half symbols and keeps the longest row short enough."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.PICTOGRAPH": {
+   "forms": [
+    "how many more",
+    "value of a row",
+    "half symbols",
+    "draw a row"
+   ],
+   "mastery": "The child counts whole and half symbols in a row, multiplies by what one symbol stands for, and answers \"how many more\" by the difference of two rows."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_DRAW": {
+   "forms": [
+    "draw the bars",
+    "number the axis",
+    "label the graph",
+    "check a drawn graph"
+   ],
+   "mastery": "The child labels both axes, numbers the vertical axis in equal steps from 0, draws bars of equal width with equal gaps, and makes each bar the height of its value."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.BAR_GRAPH_INTERPRET": {
+   "forms": [
+    "two busiest days",
+    "how many more",
+    "highest and lowest",
+    "total of some bars"
+   ],
+   "mastery": "The child reads each bar against the scale, picks out the bars a question asks about (the two busiest days, the highest and the lowest), and adds or subtracts them as the question asks."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.CHOOSE_GRAPH_TYPE": {
+   "forms": [
+    "which graph is best",
+    "why this graph",
+    "groups, time or parts",
+    "wrong graph for the data"
+   ],
+   "mastery": "The child says a bar graph compares separate groups, a line graph shows one measurement changing over time, and a pie chart shows how one whole is shared into parts, and matches the data to the graph."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_DRAW": {
+   "forms": [
+    "missing angle",
+    "angle from a count",
+    "count from an angle",
+    "check they make 360"
+   ],
+   "mastery": "The child says the sectors of a pie chart make a full turn of 360 degrees, finds a missing angle by taking the others from 360, and works an angle out from a count (count / total x 360) and back."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.PIE_CHART_INTERPRET": {
+   "forms": [
+    "percentage from an angle",
+    "count from an angle",
+    "two schools, same angle",
+    "the rest of the chart"
+   ],
+   "mastery": "The child turns a sector angle into a percentage (angle / 360 x 100) or a count (angle / 360 x total), and explains that the same angle in two charts with different totals stands for different numbers."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.LINE_GRAPH": {
+   "forms": [
+    "biggest rise",
+    "rise between two times",
+    "halfway between two points",
+    "plot the points"
+   ],
+   "mastery": "The child plots the points and joins them in order, reads a rise or fall as the difference of two readings, finds the steepest rise, and reads a value halfway between two points on a straight part."
+  },
+  "MATH.G7.DATA_H.DATA_HANDLING.TRAVEL_GRAPH": {
+   "forms": [
+    "how long was the stop",
+    "speed of one part",
+    "average speed with the stop",
+    "when do they meet",
+    "find the wrong step"
+   ],
+   "mastery": "On a distance-time graph the child reads a flat part as a stop, finds the speed of each part from its own distance and time, finds the average speed with the stop included (total distance / total time), and reads the time where two lines cross as when they meet."
   }
  }
 }

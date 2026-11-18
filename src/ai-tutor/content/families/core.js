@@ -165,6 +165,11 @@ export function serveFamily(def) {
   return p;
 }
 
+// Options built by a rule (one per sign, one per end) can name the same misconception twice in one question.
+// The first keeps its code; a later one becomes 'SLIP' (counted wrong, still with its own reason, no misconception),
+// so one choice is never recorded as two pieces of evidence for the same idea (18 Nov 2026).
+export const oneCodeEach = (opts) => { const seen = new Set(); return opts.map(o => { if (!o.mis || o.mis === 'SLIP') return o; if (seen.has(o.mis)) return { ...o, mis: 'SLIP' }; seen.add(o.mis); return o; }); };
+
 export const FORMS = ['direct', 'word', 'steps', 'spot', 'why', 'table', 'graph'];
 // Reads well at the call site; the gate does the checking. `cskill` (the Grade 5
 // curriculum skill code) rides beside the HOREB `skill` and the official `outcome`.
