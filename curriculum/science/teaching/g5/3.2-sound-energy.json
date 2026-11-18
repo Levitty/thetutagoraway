@@ -1,0 +1,277 @@
+{
+ "sub_strand": "SCIE.G5.FORCE_.SOUND_ENERGY",
+ "title": "Sound Energy",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Every source of sound is touched while it sounds: a drum skin, a stretched rubber band, the throat while humming, a bottle blown across. Sound travel is tested with a string telephone and an ear on the desk while someone taps the far end.",
+ "skills": [
+  {
+   "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+   "key_step": "The child says sound is made when something vibrates, and finds the vibrating part in a source (a drum skin, a string, the air in a flute, the voice box).",
+   "floor": {
+    "prerequisite": "Knows a force can make things move.",
+    "question": "What does a force do to a still ball?",
+    "answer": "it makes it move"
+   },
+   "representations": [
+    "a drum with rice grains on the skin",
+    "a stretched rubber band plucked",
+    "a hand on the throat while humming"
+   ],
+   "steps": [
+    "Make a sound.",
+    "Find the part that moves back and forth.",
+    "Stop it moving: the sound stops.",
+    "Name the vibrating part."
+   ],
+   "contexts": [
+    "a drum at a school festival",
+    "a nyatiti or guitar string",
+    "singing in assembly"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a drum with rice grains on the skin."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the rice will do when the drum is hit."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the grains jumping and write \"the skin vibrates\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_NO_VIBRATION",
+     "listen_for": [
+      "the sound is in the drum"
+     ],
+     "ask": "What did the rice do when the drum was hit?",
+     "repair": "Sound comes from something vibrating."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_AIR_SILENT",
+     "listen_for": [
+      "the flute makes the sound, not the air"
+     ],
+     "ask": "What vibrates inside a flute?",
+     "repair": "In a flute or whistle, the air vibrates."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_HIT_ONLY",
+     "listen_for": [
+      "you must hit it"
+     ],
+     "ask": "How does a guitar or your voice make sound?",
+     "repair": "Plucking, blowing and speaking make vibrations too."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_STOP_VIBRATION_SOUND_GOES_ON",
+     "listen_for": [
+      "it keeps sounding"
+     ],
+     "ask": "What happened when the skin was held still?",
+     "repair": "Stop the vibration and the sound stops."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What makes the sound when you pluck a guitar string?",
+     "answer": "the string vibrates",
+     "shows": "vibration"
+    },
+    {
+     "question": "What vibrates when you blow a whistle?",
+     "answer": "the air inside it",
+     "shows": "air vibrates"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL",
+   "key_step": "The child says sound travels through solids, liquids and gases, travels better through solids, and cannot travel through empty space.",
+   "floor": {
+    "prerequisite": "Knows sound is made by vibrations.",
+    "question": "What vibrates in a drum?",
+    "answer": "the skin"
+   },
+   "representations": [
+    "a string telephone",
+    "an ear on the desk while someone taps the far end",
+    "a picture of astronauts using radios"
+   ],
+   "steps": [
+    "Through air: we hear each other talk.",
+    "Through solids: tap the desk with an ear on it.",
+    "Through water: fish hear boats; swimmers hear clicks.",
+    "Space has no air, so no sound."
+   ],
+   "contexts": [
+    "a string telephone in class",
+    "hearing a train through the rails",
+    "fishermen hearing a boat engine"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two tins joined by a tight string."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether a whisper will be heard at the other end."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"sound travels along the string (a solid)\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_ONLY_AIR",
+     "listen_for": [
+      "sound needs air"
+     ],
+     "ask": "How did the whisper travel along the string?",
+     "repair": "Sound travels through solids and liquids too."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_IN_SPACE",
+     "listen_for": [
+      "you can hear in space"
+     ],
+     "ask": "Is there air in space?",
+     "repair": "Sound cannot travel through empty space."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_FASTER_IN_AIR",
+     "listen_for": [
+      "air is fastest"
+     ],
+     "ask": "Why could you hear the tap better with your ear on the desk?",
+     "repair": "Sound travels faster and better through solids."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_LOUD_FASTER",
+     "listen_for": [
+      "a loud sound travels faster"
+     ],
+     "ask": "Do a shout and a whisper from far away reach you at different times?",
+     "repair": "Loudness does not change the speed of sound."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Can sound travel through water?",
+     "answer": "yes",
+     "shows": "liquids"
+    },
+    {
+     "question": "Why can astronauts not talk to each other in space without radios?",
+     "answer": "there is no air (no matter) for sound to travel through",
+     "shows": "empty space"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+   "key_step": "The child describes effects of loud sound (hearing damage that can be lasting, headaches, stress, trouble sleeping and learning) and ways to protect against it.",
+   "floor": {
+    "prerequisite": "Knows how sound travels.",
+    "question": "Does sound travel through air?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a sound map of the school: loud and quiet places",
+    "pictures of ear protectors",
+    "a chart: source, effect, protection"
+   ],
+   "steps": [
+    "Name loud sources: machines, music, vehicles.",
+    "Name effects on the body.",
+    "Hearing damage can last for life.",
+    "Protect: move away, turn down, cover the ears, limit time."
+   ],
+   "contexts": [
+    "a posho mill next to a school",
+    "loud music in a matatu",
+    "a jua kali workshop"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a matatu with loud music."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a passenger.",
+     "say": "What can loud music do to her ears over many days?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"hearing damage, headaches\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_ONLY_EARS",
+     "listen_for": [
+      "it only hurts for a moment"
+     ],
+     "ask": "Can damaged hearing come back?",
+     "repair": "Loud sound can harm hearing for life and cause headaches."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_GETS_USED",
+     "listen_for": [
+      "you get used to it"
+     ],
+     "ask": "Does getting used to it stop the damage?",
+     "repair": "Getting used to noise does not stop harm."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_MUSIC_SAFE",
+     "listen_for": [
+      "music is pleasant so it is safe"
+     ],
+     "ask": "Is loud music still loud sound?",
+     "repair": "Loud music can damage hearing too."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_LOUD_ONLY_ANNOYING",
+     "listen_for": [
+      "it is only annoying"
+     ],
+     "ask": "How do learners feel after a day by a loud mill?",
+     "repair": "Loud sound harms health and learning."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one effect of very loud sound on people.",
+     "answer": "hearing damage, headaches, stress or poor sleep",
+     "shows": "effect"
+    },
+    {
+     "question": "Give one way to protect your ears from loud sound.",
+     "answer": "move away, turn it down or cover your ears",
+     "shows": "protection"
+    }
+   ]
+  }
+ ]
+}

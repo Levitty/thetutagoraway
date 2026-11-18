@@ -5,11 +5,19 @@ import { readFileSync } from 'node:fs';
 import { checkFamily, FAMILIES } from '../engine/scripts/family_checks.mjs';
 import { isOn, setFamilyMode, drawFamily } from '../src/ai-tutor/content/families/core.js';
 import { SKILLS_SCI_G5, OUTCOMES_SCI_G5, SUBSTRANDS_SCI_G5, MIS_FEEDBACK } from '../src/ai-tutor/content/curriculumMap.science.g5.js';
+import { SUBS as DEPTH } from '../scripts/data/science-depth/g5.mjs';
+import { scienceDepthTests } from './helpers/scienceDepth.mjs';
+
+// The depth pass (18 Nov 2026, to the Grade 5 Maths standard): two prerequisites and four misconceptions per skill, a teaching pack.
+scienceDepthTests({ dir: 'science', subject: 'science', grade: 5, outcomes: 32, minDown: 0.6 });
+// Misconceptions added by the depth pass are taught through the teaching pack; the 12 Nov families do not offer them as wrong options yet.
+const DEPTH_SHORTS = new Set(DEPTH.flatMap(d => (d.mis || []).map(m => m[1])));
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/science/g5.json', import.meta.url), 'utf8'));
 const misLib = JSON.parse(readFileSync(new URL('../engine/data/curriculum/science.g5.misconceptions.json', import.meta.url), 'utf8'));
 const mine = FAMILIES.filter(f => f.subject === 'science');
 const allSkills = source.sub_strands.flatMap(s => s.skills);
+const G4 = new Set(JSON.parse(readFileSync(new URL('../curriculum/science/g4.json', import.meta.url), 'utf8')).sub_strands.flatMap(s => s.skills.map(k => k.code)));
 
 test('the in-app science map is generated from the file HOREB owns, whole', () => {
   assert.equal(Object.keys(SUBSTRANDS_SCI_G5).length, source.sub_strands.length);
@@ -28,9 +36,9 @@ test('the official outcomes are untouched and every skill names real outcomes an
   for (const k of allSkills) {
     assert.ok(k.outcomes.length && k.outcomes.every(o => OUTCOMES_SCI_G5[o]), `${k.code}: unknown outcome`);
     assert.ok(k.mastery && k.question_forms.length >= 3, `${k.code}: needs a mastery rule and question forms`);
-    assert.ok(k.prerequisites.length >= 1, `${k.code}: no prerequisite`);
-    for (const p of k.prerequisites) if (p.kind === 'skill') assert.ok(codes.has(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
-    assert.ok(SKILLS_SCI_G5[k.code].mis.length >= 2, `${k.code}: fewer than 2 misconceptions`);
+    assert.ok(k.prerequisites.length >= 2, `${k.code}: fewer than 2 prerequisites`);
+    for (const p of k.prerequisites) if (p.kind === 'skill') assert.ok(codes.has(p.requires) || G4.has(p.requires), `${k.code}: unknown prerequisite ${p.requires}`);
+    assert.ok(SKILLS_SCI_G5[k.code].mis.length >= 4, `${k.code}: fewer than 4 misconceptions`);
   }
 });
 
@@ -68,8 +76,9 @@ test('every science family passes the family checks, and every misconception is 
     for (const c of [].concat(p.mis || [])) revealed.add(c);
   }
   setFamilyMode('reviewed');
-  const unseen = Object.keys(MIS_FEEDBACK).filter(c => !revealed.has(c));
+  const unseen = Object.keys(MIS_FEEDBACK).filter(c => !revealed.has(c) && !DEPTH_SHORTS.has(c));
   assert.deepEqual(unseen, []);
+  assert.equal(DEPTH_SHORTS.size, 30);
 });
 
 test('science families stay off for children until a teacher signs them off', () => {

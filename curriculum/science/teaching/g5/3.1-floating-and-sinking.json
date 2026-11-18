@@ -1,0 +1,285 @@
+{
+ "sub_strand": "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
+ "title": "Floating and Sinking",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A basin of water and a tray of objects: a stone, a nail, a wooden spoon, a plastic bottle (empty and full), a ball of plasticine and the same plasticine shaped into a boat. The child predicts, tests and records in a table before any rule is given.",
+ "skills": [
+  {
+   "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+   "key_step": "The child tests and records whether an object floats (stays at the surface) or sinks (goes to the bottom), and predicts from what it is made of and its shape, not from its weight alone.",
+   "floor": {
+    "prerequisite": "Knows that water is a liquid.",
+    "question": "Does water take the shape of its container?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a basin and a tray of objects",
+    "a prediction-and-result table",
+    "ice in a glass"
+   ],
+   "steps": [
+    "Predict: float or sink?",
+    "Put the object gently in the water.",
+    "Watch: does it stay at the surface or go to the bottom?",
+    "Record and compare with the prediction."
+   ],
+   "contexts": [
+    "washing sufurias in a basin",
+    "a boat on Lake Victoria",
+    "leaves on a puddle"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: object, prediction, result."
+    },
+    {
+     "beat": "write",
+     "do": "Write a nail, a big log and a small stone."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will float."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's predictions."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the results: the big log floats, the nail and stone sink."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_HEAVY_SINKS",
+     "listen_for": [
+      "heavy things sink"
+     ],
+     "ask": "Which is heavier: a big log or a nail? Which floats?",
+     "repair": "Weight alone does not decide; a heavy log floats."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_MATERIAL_ALWAYS",
+     "listen_for": [
+      "all metal sinks"
+     ],
+     "ask": "Does a metal sufuria lid float if placed flat and gently?",
+     "repair": "Shape matters too; some metal objects float."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_DEEP_WATER",
+     "listen_for": [
+      "it will float in the lake"
+     ],
+     "ask": "Does a stone sink in a basin and in a lake?",
+     "repair": "The amount of water does not change floating or sinking."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_HALF_SUNK_SINKS",
+     "listen_for": [
+      "most of it is under water so it sinks"
+     ],
+     "ask": "Did it reach the bottom?",
+     "repair": "Staying at the surface is floating."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A nail is put in water. Does it float or sink?",
+     "answer": "it sinks",
+     "shows": "classifies"
+    },
+    {
+     "question": "A big log floats but a small stone sinks. Does weight alone decide?",
+     "answer": "No: the material matters",
+     "shows": "not weight"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+   "key_step": "The child names what affects floating: the material, the shape (a hollow or flat shape floats better), the load carried, and tests one factor at a time.",
+   "floor": {
+    "prerequisite": "Can tell whether an object floats or sinks.",
+    "question": "Does a stone float or sink?",
+    "answer": "it sinks"
+   },
+   "representations": [
+    "a ball of plasticine and the same plasticine as a boat",
+    "an empty and a full bottle",
+    "a fair-test table"
+   ],
+   "steps": [
+    "Change only one thing at a time.",
+    "Same plasticine, different shape: ball sinks, boat floats.",
+    "Same bottle, empty or full: empty floats higher.",
+    "Add a load to a floating boat until it sinks."
+   ],
+   "contexts": [
+    "a loaded fishing boat",
+    "a bottle used as a float",
+    "a sufuria floating in a basin"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plasticine ball sinking."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the same plasticine shaped as a boat."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether the boat will float."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the boat floating and write \"shape\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_SHAPE_NO_EFFECT",
+     "listen_for": [
+      "the boat will sink too"
+     ],
+     "ask": "What happened to the plasticine boat?",
+     "repair": "Shape matters: a hollow shape can float."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_WEIGHT_ONLY",
+     "listen_for": [
+      "heavier always sinks"
+     ],
+     "ask": "A ship is heavy. Does it float?",
+     "repair": "Material and shape matter, not weight alone."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_SIZE_ONLY",
+     "listen_for": [
+      "bigger sinks"
+     ],
+     "ask": "Does a small piece of wood float like a big one?",
+     "repair": "Pieces of the same material act the same."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_LOAD_NO_EFFECT",
+     "listen_for": [
+      "the load makes no difference"
+     ],
+     "ask": "What happened as we added coins to the boat?",
+     "repair": "Too much load makes a floater sink."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why does plasticine float as a boat but sink as a ball?",
+     "answer": "its shape changed; the hollow boat shape floats",
+     "shows": "shape"
+    },
+    {
+     "question": "A floating boat is loaded with stones until it sinks. What factor changed?",
+     "answer": "the load",
+     "shows": "load"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS",
+   "key_step": "The child explains uses of floating and sinking (boats and ships, life jackets and rings, floats on nets, anchors and net weights) by the shape or material that makes them float or sink.",
+   "floor": {
+    "prerequisite": "Knows shape and material affect floating.",
+    "question": "Does a hollow boat shape float?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a fishing net with floats and weights",
+    "a life jacket or a plastic bottle float",
+    "a chart: use, floats or sinks, why"
+   ],
+   "steps": [
+    "Boats: hollow shapes float.",
+    "Life jackets: light material or air floats and holds you up.",
+    "Net floats and weights: top up, bottom down.",
+    "Anchors: heavy, solid metal sinks to hold a boat still."
+   ],
+   "contexts": [
+    "fishermen at Lake Victoria",
+    "a ferry at Likoni",
+    "swimming lessons"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fishing net in water with floats and weights."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the floats.",
+     "say": "Why are these at the top?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to hold the net up\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"floats hold it up, weights pull it down\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_STEEL_LIGHT",
+     "listen_for": [
+      "steel is lighter than water"
+     ],
+     "ask": "Does a steel nail float?",
+     "repair": "A steel ship floats because of its hollow shape full of air."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_FLOAT_NO_WEIGHT",
+     "listen_for": [
+      "floating things weigh nothing"
+     ],
+     "ask": "Does a boat weigh nothing on the shore?",
+     "repair": "Floating things have weight; water holds them up."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_LIFE_JACKET_HEAVY",
+     "listen_for": [
+      "it is heavy"
+     ],
+     "ask": "What did the empty bottle do when you pushed it down?",
+     "repair": "Life jackets are full of light material or air."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_FISHERMEN_NO_FLOATS",
+     "listen_for": [
+      "to make the net heavier"
+     ],
+     "ask": "Where would the net be with no floats?",
+     "repair": "Floats keep the top of the net up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why does a steel ship float when a steel nail sinks?",
+     "answer": "its hollow shape holds air",
+     "shows": "shape in use"
+    },
+    {
+     "question": "Give one use of an object that sinks.",
+     "answer": "an anchor, or weights on a fishing net",
+     "shows": "sinking use"
+    }
+   ]
+  }
+ ]
+}

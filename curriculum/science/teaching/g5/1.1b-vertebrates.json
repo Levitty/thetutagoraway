@@ -1,0 +1,303 @@
+{
+ "sub_strand": "SCIE.G5.LIVING.VERTEBRATES",
+ "title": "Vertebrates",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Group real or pictured Kenyan animals: tilapia, frog, chameleon, crocodile, hen, ostrich, bat, goat, dolphin. The child checks a short list of body features (skin covering, how young are born, where they live) before naming a group.",
+ "skills": [
+  {
+   "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+   "key_step": "The child gives the shared features of vertebrates (a backbone and a skeleton inside, a skull, a body in head, trunk and often limbs or fins) and does not judge by size, legs or a hard outside.",
+   "floor": {
+    "prerequisite": "Can sort animals by whether they have a backbone.",
+    "question": "Does a snake have a backbone?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a fish skeleton from lunch",
+    "a model backbone",
+    "a table of features ticked for five animals"
+   ],
+   "steps": [
+    "All vertebrates have a backbone and a skeleton inside.",
+    "They have a skull that protects the brain.",
+    "Some are warm-blooded (mammals, birds), others are not (fish, amphibians, reptiles).",
+    "Test hard cases: snake, tiny frog, crab."
+   ],
+   "contexts": [
+    "a tilapia from the market",
+    "a snake in the bush",
+    "a crab from the coast"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fish skeleton with the backbone and skull."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the skull.",
+     "say": "What does this protect?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the brain."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether a crab has a skeleton like this inside."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_SIZE_DECIDES",
+     "listen_for": [
+      "it is too small to be a vertebrate"
+     ],
+     "ask": "Does a tiny frog have a backbone?",
+     "repair": "Size does not decide; the backbone does."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_NEEDS_LEGS",
+     "listen_for": [
+      "no legs, no backbone"
+     ],
+     "ask": "What long bone do we find in a fish?",
+     "repair": "Fish and snakes have backbones without legs."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_SHELL_IS_BACKBONE",
+     "listen_for": [
+      "the hard shell is the backbone"
+     ],
+     "ask": "Is the crab's hard part inside or outside its body?",
+     "repair": "A shell is outside; a backbone is inside."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_ALL_WARM",
+     "listen_for": [
+      "all vertebrates are warm"
+     ],
+     "ask": "Why does a lizard lie in the sun in the morning?",
+     "repair": "Fish, amphibians and reptiles change temperature with their surroundings."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two features all vertebrates share.",
+     "answer": "a backbone and a skull (a skeleton inside)",
+     "shows": "features"
+    },
+    {
+     "question": "Is a lizard warm-blooded like a goat?",
+     "answer": "No: its temperature changes with its surroundings",
+     "shows": "warm and cold"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+   "key_step": "The child puts a vertebrate in one of five groups (mammals, birds, reptiles, amphibians, fish) by its features, not by where it lives or whether it flies.",
+   "floor": {
+    "prerequisite": "Knows the shared features of vertebrates.",
+    "question": "Does a hen have a backbone?",
+    "answer": "yes"
+   },
+   "representations": [
+    "picture cards of Kenyan vertebrates",
+    "a five-column table",
+    "odd cases: bat, ostrich, dolphin, crocodile"
+   ],
+   "steps": [
+    "Feathers: bird. Fur and milk: mammal.",
+    "Dry scales, eggs on land: reptile.",
+    "Moist skin, young in water: amphibian.",
+    "Gills, fins, scales in water: fish."
+   ],
+   "contexts": [
+    "animals at Nairobi National Park",
+    "a frog pond after rain",
+    "fish at the Kisumu market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw five columns: mammal, bird, reptile, amphibian, fish."
+    },
+    {
+     "beat": "write",
+     "do": "Write bat, ostrich, crocodile, frog, dolphin under them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at bat.",
+     "say": "It flies. Which group is it in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to place the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_BAT_BIRD",
+     "listen_for": [
+      "a bat is a bird"
+     ],
+     "ask": "Does a bat have feathers or fur? Does it feed its young on milk?",
+     "repair": "A bat is a mammal."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_WATER_IS_FISH",
+     "listen_for": [
+      "it lives in water so it is a fish"
+     ],
+     "ask": "Does a hippo have gills?",
+     "repair": "Living in water does not make an animal a fish."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_REPTILE_AMPHIBIAN",
+     "listen_for": [
+      "a chameleon is an amphibian"
+     ],
+     "ask": "Is the chameleon's skin dry and scaly or moist?",
+     "repair": "Reptiles have dry scales; amphibians have moist skin."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_NOFLY_NOT_BIRD",
+     "listen_for": [
+      "an ostrich cannot fly so it is not a bird"
+     ],
+     "ask": "Does an ostrich have feathers?",
+     "repair": "Feathers make a bird, flying or not."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_EGGS_ARE_BIRDS",
+     "listen_for": [
+      "it lays eggs so it is a bird"
+     ],
+     "ask": "Do crocodiles and fish lay eggs?",
+     "repair": "Many groups lay eggs; feathers mark a bird."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which group is a crocodile in?",
+     "answer": "reptiles",
+     "shows": "grouping"
+    },
+    {
+     "question": "A dolphin lives in the sea and feeds its young on milk. Which group is it in?",
+     "answer": "mammals",
+     "shows": "not by habitat"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+   "key_step": "The child matches a body feature (fur, feathers, dry scales, moist skin, gills, milk) to the group it marks, and uses more than one feature for hard cases.",
+   "floor": {
+    "prerequisite": "Can name the five groups of vertebrates.",
+    "question": "Name the group with feathers.",
+    "answer": "birds"
+   },
+   "representations": [
+    "a feature card for each group",
+    "close-up pictures of skin coverings",
+    "a two-way table: feature by group"
+   ],
+   "steps": [
+    "Look at the body covering first.",
+    "Then how the young are born and fed.",
+    "Then how it breathes: lungs or gills.",
+    "Check with a second feature before deciding."
+   ],
+   "contexts": [
+    "a hen and her chicks",
+    "a snake skin found on a path",
+    "frogspawn in a pond"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: covering, breathing, young."
+    },
+    {
+     "beat": "write",
+     "do": "Fill in a row for the goat."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty row for the bat.",
+     "say": "What covers a bat's body?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say fur."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in the bat's row."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_SCALES_FISH_ONLY",
+     "listen_for": [
+      "only fish have scales"
+     ],
+     "ask": "What covers a snake?",
+     "repair": "Reptiles have dry scales too."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_WINGS_MEAN_BIRD",
+     "listen_for": [
+      "wings mean bird"
+     ],
+     "ask": "Does a bat or a butterfly have feathers?",
+     "repair": "Feathers, not wings, mark a bird."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_AMPHIBIAN_WATER_ONLY",
+     "listen_for": [
+      "amphibians live only in water"
+     ],
+     "ask": "Where does an adult frog sit when it is not in the pond?",
+     "repair": "Amphibians live in water when young and on land and in water as adults."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_FEATHERS_ON_BATS",
+     "listen_for": [
+      "bats have feathers"
+     ],
+     "ask": "Look at the bat's wing: feathers or skin?",
+     "repair": "Bats have fur and wings of skin."
+    },
+    {
+     "code": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_ALL_MAMMALS_LAND",
+     "listen_for": [
+      "a dolphin is a fish"
+     ],
+     "ask": "How does a dolphin feed its young?",
+     "repair": "Milk for the young marks a mammal, on land or in water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which feature is found only in birds?",
+     "answer": "feathers",
+     "shows": "unique feature"
+    },
+    {
+     "question": "An animal has moist skin and lays eggs in water. Which group is it in?",
+     "answer": "amphibians",
+     "shows": "two features"
+    }
+   ]
+  }
+ ]
+}

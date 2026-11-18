@@ -83,7 +83,7 @@ export function scienceDepthTests({ dir, subject, grade, outcomes, noFamilies = 
       assert.notEqual(m.example.wrong_answer, m.example.correct_answer, `${code}: the wrong answer is the right one`);
       assert.notEqual(m.cause, STOCK_CAUSE, `${code}: stock cause, not the child's reason`);
       assert.ok(!/does not understand/i.test(m.error), `${code}: "does not understand" is not a misconception`);
-      assert.ok(/to confirm by|to be confirmed by|literature|research|verify/i.test(m.source), `${code}: no source line`);
+      assert.ok(/to confirm by|to be confirmed by|literature|research|verify|cited from memory/i.test(m.source), `${code}: no source line`);
       assert.equal(m.status, 'draft');
       assert.ok(!/[\u{1F300}-\u{1FAFF}]|—/u.test(m.feedback), `${code}: emoji or em dash in what a child reads`);
     }

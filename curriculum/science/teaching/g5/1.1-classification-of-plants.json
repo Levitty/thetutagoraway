@@ -1,0 +1,468 @@
+{
+ "sub_strand": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+ "title": "Classification of Plants",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring real flowers: a hibiscus or a bean flower that can be cut open, a maize tassel and silk, a fern and a moss from a damp wall, a cypress cone. The child cuts a flower open with a razor held by the teacher and finds each part with a hand lens.",
+ "skills": [
+  {
+   "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+   "key_step": "The child decides by whether a plant makes flowers and seeds in fruits at some time in its life, not by whether it has a bright flower today.",
+   "floor": {
+    "prerequisite": "Knows plants reproduce.",
+    "question": "Name one way a plant makes new plants.",
+    "answer": "by seeds"
+   },
+   "representations": [
+    "a maize tassel, a bean flower, a fern and a moss",
+    "pictures of a cypress cone and a mango flower",
+    "a sorting table: flowering, non-flowering"
+   ],
+   "steps": [
+    "Ask: does this plant ever make flowers?",
+    "Look for small green flowers too (maize, grass).",
+    "Ferns and mosses never flower: they make spores.",
+    "Cypress and pine make cones, not flowers."
+   ],
+   "contexts": [
+    "a maize shamba at tasselling",
+    "ferns on a riverbank",
+    "a cypress hedge round the school"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a maize plant with a tassel and a fern."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tassel.",
+     "say": "Is this a flower?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"flowering\" under the maize."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether the fern will ever make a flower."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_SMALL_FLOWER_NOT_FLOWER",
+     "listen_for": [
+      "maize has no flowers"
+     ],
+     "ask": "What is the tassel on top of a maize plant?",
+     "repair": "Small green or yellow flowers are still flowers."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_ALL_TREES_FLOWER",
+     "listen_for": [
+      "all trees flower",
+      "cypress flowers"
+     ],
+     "ask": "What does a cypress tree make: flowers or cones?",
+     "repair": "Cypress and pine make cones; they are non-flowering."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_ALL_PLANTS_FLOWER",
+     "listen_for": [
+      "ferns have flowers"
+     ],
+     "ask": "Have you seen a fern make a flower or a seed?",
+     "repair": "Ferns and mosses reproduce by spores and never flower."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_NOT_FLOWERING_NOW",
+     "listen_for": [
+      "it has no flowers now"
+     ],
+     "ask": "Will this kale plant make flowers later?",
+     "repair": "Decide by the whole life of the plant, not one week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a fern a flowering or a non-flowering plant?",
+     "answer": "non-flowering",
+     "shows": "classifies"
+    },
+    {
+     "question": "A bean plant has no flowers this week. Is it a non-flowering plant?",
+     "answer": "No: beans flower and make pods; it is a flowering plant",
+     "shows": "whole life"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES",
+   "key_step": "The child names the sepal, petal, stamen (anther and filament) and pistil (stigma, style, ovary) on a real flower, from the outside in.",
+   "floor": {
+    "prerequisite": "Knows the roots, stem and leaves of a plant.",
+    "question": "Which part of a plant makes food?",
+    "answer": "the leaves"
+   },
+   "representations": [
+    "a hibiscus or bean flower cut open",
+    "a labelled drawing of a half flower",
+    "cards with part names to place on the drawing"
+   ],
+   "steps": [
+    "Outside: sepals (green, protect the bud).",
+    "Next: petals (bright).",
+    "Then the stamens: anther on a filament.",
+    "Middle: the pistil: stigma on top, style, ovary at the bottom."
+   ],
+   "contexts": [
+    "a hibiscus hedge at school",
+    "bean flowers in the shamba",
+    "a jacaranda tree"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a half flower with sepals, petals, stamens and a pistil."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sticky top of the middle part.",
+     "say": "What is this part called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name the stigma."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label the anther and the ovary."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_PETAL_SEPAL",
+     "listen_for": [
+      "the green ones are petals"
+     ],
+     "ask": "Which parts cover the bud before it opens?",
+     "repair": "The green parts under the flower are sepals; the bright parts are petals."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_STAMEN_PISTIL",
+     "listen_for": [
+      "the middle one is the stamen"
+     ],
+     "ask": "Which part has pollen on its tip?",
+     "repair": "Stamens carry pollen; the pistil is in the middle."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_STIGMA_ANTHER",
+     "listen_for": [
+      "the stigma is on the stamen"
+     ],
+     "ask": "Is the sticky top in the middle or on the thin stalks?",
+     "repair": "The stigma tops the pistil; the anther tops the stamen."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_OVARY_IS_FRUIT",
+     "listen_for": [
+      "that is the fruit"
+     ],
+     "ask": "Has this flower been pollinated yet?",
+     "repair": "In a fresh flower it is the ovary; it becomes the fruit later."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the part of the flower that holds the pollen.",
+     "answer": "the anther",
+     "shows": "part name"
+    },
+    {
+     "question": "Name the three parts of the pistil.",
+     "answer": "stigma, style and ovary",
+     "shows": "pistil parts"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+   "key_step": "The child gives each part its job: sepals protect the bud, petals and nectar draw insects, anthers make pollen, the stigma receives pollen, the ovary holds the ovules that become seeds.",
+   "floor": {
+    "prerequisite": "Can name the parts of a flower.",
+    "question": "Name the part at the bottom of the pistil.",
+    "answer": "the ovary"
+   },
+   "representations": [
+    "a bee at a flower in the school garden",
+    "a labelled half flower with jobs written beside it",
+    "a matching game: part and job"
+   ],
+   "steps": [
+    "Sepals: protect the bud.",
+    "Petals and nectar: draw insects.",
+    "Anther: makes pollen; stigma: receives it.",
+    "Ovary: holds ovules, which become seeds."
+   ],
+   "contexts": [
+    "bees in a sunflower field",
+    "butterflies on lantana",
+    "a pumpkin flower"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bee on a flower with pollen on its legs."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the pollen.",
+     "say": "Where did the pollen come from, and where is it going?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for anther and stigma."
+    },
+    {
+     "beat": "write",
+     "do": "Write the job beside each part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_PETAL_SEPAL_JOBS",
+     "listen_for": [
+      "sepals attract insects"
+     ],
+     "ask": "Which parts are bright and seen from far?",
+     "repair": "Petals attract insects; sepals protect the bud."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_POLLEN_IS_SEED",
+     "listen_for": [
+      "pollen is a seed"
+     ],
+     "ask": "Does pollen grow into a plant when planted?",
+     "repair": "Pollen is not a seed; it must reach a stigma first."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_OVARY_MAKES_POLLEN",
+     "listen_for": [
+      "the ovary makes pollen"
+     ],
+     "ask": "Where do you see the yellow dust: on the stamens or the pistil?",
+     "repair": "The anther makes pollen; the ovary holds the ovules."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_NECTAR_FOR_PLANT",
+     "listen_for": [
+      "nectar feeds the plant"
+     ],
+     "ask": "Who drinks the nectar?",
+     "repair": "Nectar draws insects that carry pollen."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the job of the stigma?",
+     "answer": "to receive pollen",
+     "shows": "function"
+    },
+    {
+     "question": "Why do many flowers have bright petals and nectar?",
+     "answer": "to attract insects that carry pollen",
+     "shows": "attract insects"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+   "key_step": "The child tells the order: pollen moves from an anther to a stigma (pollination), the ovary swells into the fruit, the ovules become seeds, and the petals fall.",
+   "floor": {
+    "prerequisite": "Knows the jobs of the flower parts.",
+    "question": "Which part receives pollen?",
+    "answer": "the stigma"
+   },
+   "representations": [
+    "a bean flower, a young pod and a full pod side by side",
+    "a flow chart with four boxes",
+    "a story of a bee visiting two flowers"
+   ],
+   "steps": [
+    "Pollination: pollen carried by insects or wind to a stigma.",
+    "The ovary starts to swell.",
+    "The petals dry and fall.",
+    "The ovary becomes the fruit; ovules become seeds."
+   ],
+   "contexts": [
+    "a tomato plant in a kitchen garden",
+    "maize silk catching pollen from the tassel",
+    "mango flowers turning into fruit"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four boxes in a row: flower, pollination, swelling ovary, fruit."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the second box.",
+     "say": "What carries the pollen here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for insects or wind."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw what is in the last box."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label the fruit and the seeds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_FRUIT_NOT_FROM_FLOWER",
+     "listen_for": [
+      "fruit grows from the stem"
+     ],
+     "ask": "Where on the mango tree do the mangoes appear: where the flowers were?",
+     "repair": "Fruits grow from flowers."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_POLLINATION_DISPERSAL",
+     "listen_for": [
+      "pollination spreads the seeds"
+     ],
+     "ask": "Is the bee carrying pollen or seeds?",
+     "repair": "Pollination carries pollen; dispersal spreads seeds later."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_BEES_NOT_NEEDED",
+     "listen_for": [
+      "the fruit grows anyway"
+     ],
+     "ask": "What happens if no pollen reaches the stigma?",
+     "repair": "Without pollination, most flowers make no fruit."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_PETALS_BECOME_FRUIT",
+     "listen_for": [
+      "the petals turn into the fruit"
+     ],
+     "ask": "What happened to the petals of the bean flower after a week?",
+     "repair": "Petals fall; the ovary becomes the fruit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of the flower becomes the fruit?",
+     "answer": "the ovary",
+     "shows": "ovary to fruit"
+    },
+    {
+     "question": "Put in order: fruit forms, pollen lands on stigma, ovary swells.",
+     "answer": "pollen lands on stigma, ovary swells, fruit forms",
+     "shows": "order"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS",
+   "key_step": "The child links flowers with seeds and fruits people eat, with food for bees and other insects, with honey, and with new plants, not only with beauty.",
+   "floor": {
+    "prerequisite": "Knows a flower becomes a fruit with seeds.",
+    "question": "Which part of a flower becomes the fruit?",
+    "answer": "the ovary"
+   },
+   "representations": [
+    "a plate of foods that came from flowers (beans, maize, mango)",
+    "a beehive picture",
+    "a chart: flower, what it gives"
+   ],
+   "steps": [
+    "Flowers make fruits and seeds we eat.",
+    "Seeds grow into new plants.",
+    "Nectar and pollen feed bees, which make honey.",
+    "Flowers are also sold and used for decoration."
+   ],
+   "contexts": [
+    "a beekeeper in Baringo",
+    "cut flowers grown in Naivasha",
+    "a family meal of githeri"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plate of githeri."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the beans and maize.",
+     "say": "Where did these come from on the plant?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say flowers."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"flower -> fruit/seed -> food\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_ONLY_DECORATION",
+     "listen_for": [
+      "flowers are for beauty"
+     ],
+     "ask": "What does a bean flower turn into?",
+     "repair": "Flowers give us fruits and seeds, not only beauty."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_INSECTS_HARM",
+     "listen_for": [
+      "kill the bees on the flowers"
+     ],
+     "ask": "What would happen to the mangoes if all the bees were killed?",
+     "repair": "Insects on flowers carry pollen and help make fruit."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_FOOD_NOT_FROM_FLOWERS",
+     "listen_for": [
+      "maize does not come from a flower"
+     ],
+     "ask": "What was on the maize plant before the cob filled?",
+     "repair": "Grain, beans and fruits all come from flowers."
+    },
+    {
+     "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_NO_FLOWER_NO_SEEDS_OK",
+     "listen_for": [
+      "the grain grows anyway"
+     ],
+     "ask": "What does the silk catch?",
+     "repair": "No flowers, no pollination, no grain."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways flowers are important in nature.",
+     "answer": "any two: they make fruits and seeds, feed bees and insects, give new plants",
+     "shows": "importance"
+    },
+    {
+     "question": "Why do farmers keep bees near their crops?",
+     "answer": "bees pollinate the flowers so more fruits and seeds form",
+     "shows": "pollinators"
+    }
+   ]
+  }
+ ]
+}

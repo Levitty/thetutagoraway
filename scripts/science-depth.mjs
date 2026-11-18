@@ -54,7 +54,9 @@ export function applyDepth(g, depth, { dir, grade, prefix }) {
   mkdirSync(packDir, { recursive: true });
   const written = new Set();
   let added = { pre: 0, mis: 0, fix: 0, pack: 0 };
+  let lastNumber = '0.0';
   for (const s of g.sub_strands) {
+    const number = s.number || `${lastNumber}b`; lastNumber = s.number || lastNumber;
     const d = entries.get(s.code.slice(prefix.length));
     if (!d) continue;
     const mine = new Map((s.skills || []).map(k => [k.code.slice(s.code.length + 1), k]));
@@ -87,8 +89,7 @@ export function applyDepth(g, depth, { dir, grade, prefix }) {
       const suffixes = [...mine.keys()];
       const pack = Object.fromEntries(Object.entries(d.pack).map(([key, p]) => [key, { ...p, mis: p.mis }]));
       for (const key of Object.keys(pack)) if (!mine.has(key)) fail(`${s.code}: teaching pack for unknown skill ${key}`);
-      const sx = { ...s, number: s.number || `${Math.floor(s.sequence / 100)}.0` };
-      const file = `${sx.number}-${s.sub_strand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.json`;
+      const file = `${number}-${s.sub_strand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.json`;
       const status = `draft: written 18 Nov 2026 offline for Grade ${grade} ${SUBJECT[dir]}; not yet checked by ${reviewer}; not loaded by the live tutor`;
       writeFileSync(new URL(file, packDir), packFileText(s, packEntries(s, suffixes, pack), status, d.packNotes));
       written.add(file); added.pack += suffixes.length;
