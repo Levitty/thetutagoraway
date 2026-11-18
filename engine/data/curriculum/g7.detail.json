@@ -678,6 +678,70 @@
    ],
    "mastery": "The child forms an equation for a story (ages after some years, a parking charge with a fixed part, equal boxes and loose items, money left after spending), solves it, and answers the quantity the question asks for, not the unknown."
   },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS": {
+   "forms": [
+    "which sign for the words",
+    "is the statement true for this value",
+    "does the number itself count",
+    "read the sign aloud"
+   ],
+   "mastery": "The child picks <, >, <= or >= for \"at least\", \"at most\", \"fewer than\", \"no more than\", \"not less than\" and \"under\", says whether the number itself is allowed, and tests a statement such as a <= 12 by putting in a value."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY": {
+   "forms": [
+    "choose the inequality",
+    "find the wrong step",
+    "what does each part mean",
+    "write the inequality"
+   ],
+   "mastery": "From a limit in a story (a pick-up that carries at most 1,000 kg with 200 kg already on it, a hall with seats left) the child writes an inequality such as 200 + 50n <= 1,000, with the amount already there included and the sign that fits the limit."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT": {
+   "forms": [
+    "greatest number of items",
+    "whole numbers only",
+    "check one more",
+    "solve then answer"
+   ],
+   "mastery": "The child forms bag + books <= money, takes away the fixed cost, divides by the price, and gives the greatest whole number of items that fits (8.75 gives 8, not 9), checking that one more would cost too much."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE": {
+   "forms": [
+    "which line shows it",
+    "why is the circle wrong",
+    "which number is in the shading",
+    "draw it"
+   ],
+   "mastery": "The child puts a closed circle for <= or >= and an open circle for < or > at the number in the inequality, shades towards the bigger numbers for > and >= and the smaller ones for < and <=, and reads which numbers lie under the shading."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY": {
+   "forms": [
+    "ages that can join",
+    "readings that are allowed",
+    "list the whole numbers",
+    "how many rides",
+    "why is the chain wrong"
+   ],
+   "mastery": "The child writes a range with two ends, such as 6 <= a < 12, choosing the sign at each end from the words, lists the whole numbers that fit, tests a value against both ends, and writes \"less than 2 or greater than 7\" as two separate inequalities, never as 7 < x < 2."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND": {
+   "forms": [
+    "solve and list",
+    "find the wrong step",
+    "how many whole numbers",
+    "what to do first"
+   ],
+   "mastery": "The child solves 8 < 2x + 4 <= 20 by taking 4 from all three parts and dividing all three by 2, gets 2 < x <= 8, and lists the whole numbers 3 to 8 that fit, leaving out an end the sign leaves out."
+  },
+  "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE": {
+   "forms": [
+    "which inequality does the line show",
+    "draw the range",
+    "circle at each end",
+    "smaller number on the left"
+   ],
+   "mastery": "The child reads two circles and the shading between them as a compound inequality, with the smaller number on the left, <= at a closed circle and < at an open one, and draws such a line from an inequality."
+  },
   "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
    "forms": [
     "which side is the hypotenuse",

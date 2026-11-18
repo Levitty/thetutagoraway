@@ -3,7 +3,7 @@
  "draws": 40,
  "counts": {
   "shared": 227,
-  "nearmiss": 60,
+  "nearmiss": 63,
   "reason": 114
  },
  "families": {
@@ -294,6 +294,9 @@
    "g7.circ.table-pattern",
    "g7.factors.div-baskets",
    "g7.factors.div-six-table",
+   "g7.ineq.compound-rides",
+   "g7.ineq.most-books",
+   "g7.ineq.which-in-shade",
    "g7.length.fence-posts-line",
    "g7.perim.fence-posts-round",
    "g7.vol.box-carton"

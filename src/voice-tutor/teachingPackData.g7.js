@@ -6728,6 +6728,925 @@ export const TEACHING_PACK_G7 = {
   "sub_strand_name": "Linear Equations",
   "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS",
+  "key_step": "The child decides first whether the number itself is allowed, then which way the sign faces.",
+  "floor": {
+   "prerequisite": "Compares two numbers.",
+   "question": "Which is bigger, 18 or 15?",
+   "answer": "18"
+  },
+  "representations": [
+   "a number line",
+   "the sign as an open mouth",
+   "a notice at a stage"
+  ],
+  "steps": [
+   "Read the words.",
+   "Is the number itself allowed?",
+   "Bigger or smaller?",
+   "Choose the sign and test a value."
+  ],
+  "contexts": [
+   "a matatu stage notice",
+   "a lift limit",
+   "ages for a club"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: at least 18."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 18.",
+    "say": "Can there be exactly 18?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write n >= 18."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_EQUAL_PART_MIXED",
+    "listen_for": [
+     "n > 18 for at least"
+    ],
+    "ask": "Is exactly 18 allowed?",
+    "repair": "Yes, so the sign needs the line: >=.",
+    "error": "Leaves out or adds the \"or equal to\" part of the sign.",
+    "example": {
+     "question": "\"At least 18 passengers\" as an inequality",
+     "wrong_answer": "n > 18",
+     "correct_answer": "n >= 18"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_DIRECTION_REVERSED",
+    "listen_for": [
+     "n <= 18"
+    ],
+    "ask": "Is 20 passengers allowed?",
+    "repair": "Yes, so the sign faces n: >=.",
+    "error": "Uses the sign that faces the wrong way.",
+    "example": {
+     "question": "\"At least 18 passengers\" as an inequality",
+     "wrong_answer": "n <= 18",
+     "correct_answer": "n >= 18"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_KEYWORD_READ_ALONE",
+    "listen_for": [
+     "more means greater"
+    ],
+    "ask": "What does the word \"no\" do?",
+    "repair": "No more than 40 means 40 or fewer.",
+    "error": "Takes the sign from one word and ignores \"no\", \"not\" or \"at\".",
+    "example": {
+     "question": "\"No more than 40 passengers\" as an inequality",
+     "wrong_answer": "n > 40",
+     "correct_answer": "n <= 40"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_STRICT_INCLUDES_NUMBER",
+    "listen_for": [
+     "9 < 9 is true"
+    ],
+    "ask": "Is 9 less than 9?",
+    "repair": "No, they are equal.",
+    "error": "Believes a < 9 is true when a is 9.",
+    "example": {
+     "question": "a = 9: is a < 9 true?",
+     "wrong_answer": "true",
+     "correct_answer": "false"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS.M_SYMBOL_READ_BACKWARDS",
+    "listen_for": [
+     "a < 7 for 9"
+    ],
+    "ask": "Read it from the a: a is less than 7. Is 9 less than 7?",
+    "repair": "No.",
+    "error": "Reads the sign from the wrong side, so a < 7 seems true for a = 9.",
+    "example": {
+     "question": "a = 9: which is true, a < 7 or a > 7?",
+     "wrong_answer": "a < 7",
+     "correct_answer": "a > 7"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "\"At most 30 people\" for n",
+    "answer": "n <= 30",
+    "shows": "sign from words"
+   },
+   {
+    "question": "a = 12: is a >= 12 true?",
+    "answer": "Yes",
+    "shows": "or equal to"
+   }
+  ],
+  "name": "Choose the inequality sign for words and test a statement with a value",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY",
+  "key_step": "The child writes everything that counts towards the limit on one side and chooses the sign from the words of the limit.",
+  "floor": {
+   "prerequisite": "Writes an expression.",
+   "question": "sacks of 50 kg, n sacks",
+   "answer": "50n"
+  },
+  "representations": [
+   "a weighbridge",
+   "a bar model up to the limit",
+   "the inequality"
+  ],
+  "steps": [
+   "What counts towards the limit?",
+   "Write it as an expression.",
+   "Choose the sign.",
+   "Write the limit."
+  ],
+  "contexts": [
+   "a pick-up of maize",
+   "hall seats",
+   "a lift"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar up to 1,000 kg with 200 kg shaded."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 200 kg.",
+    "say": "Is this part of the load?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 200 + 50n <= 1,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_AT_MOST_AS_STRICT",
+    "listen_for": [
+     "< 1,000"
+    ],
+    "ask": "Can the load be exactly 1,000 kg?",
+    "repair": "Yes: <=.",
+    "error": "Writes < for \"at most\", so the limit itself is not allowed.",
+    "example": {
+     "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+     "wrong_answer": "200 + 50n < 1,000",
+     "correct_answer": "200 + 50n <= 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_LIMIT_SIGN_REVERSED",
+    "listen_for": [
+     ">= 1,000"
+    ],
+    "ask": "Can the load be 1,200 kg?",
+    "repair": "No: it stays under, <=.",
+    "error": "Writes >= for a limit that must not be passed.",
+    "example": {
+     "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+     "wrong_answer": "200 + 50n >= 1,000",
+     "correct_answer": "200 + 50n <= 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_FIXED_LOAD_LEFT_OUT",
+    "listen_for": [
+     "50n <= 1,000"
+    ],
+    "ask": "Where is the cement?",
+    "repair": "Add 200.",
+    "error": "Leaves out the amount that is already there.",
+    "example": {
+     "question": "At most 1,000 kg: 200 kg on, n sacks of 50 kg",
+     "wrong_answer": "50n <= 1,000",
+     "correct_answer": "200 + 50n <= 1,000"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY.M_TAKEN_ADDED_NOT_SUBTRACTED",
+    "listen_for": [
+     "150 + 40"
+    ],
+    "ask": "Are the taken seats free?",
+    "repair": "Take them away.",
+    "error": "Adds the seats already taken to find the seats left.",
+    "example": {
+     "question": "150 seats, 40 taken: at most n more people",
+     "wrong_answer": "n <= 190",
+     "correct_answer": "n <= 110"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A lift carries at most 600 kg. A trolley of 80 kg is in it. n boxes of 20 kg. Inequality?",
+    "answer": "80 + 20n <= 600",
+    "shows": "fixed part and sign"
+   },
+   {
+    "question": "120 seats, 35 taken, at most n more people",
+    "answer": "n <= 85",
+    "shows": "seats left"
+   }
+  ],
+  "name": "Form a simple linear inequality in one unknown from a story",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT",
+  "key_step": "The child solves like an equation and then takes the greatest whole number that still fits.",
+  "floor": {
+   "prerequisite": "Solves a two-step equation.",
+   "question": "150 + 40n = 470",
+   "answer": "n = 8"
+  },
+  "representations": [
+   "money left on a bar",
+   "the inequality",
+   "a check of one more"
+  ],
+  "steps": [
+   "Form the inequality.",
+   "Take away the fixed cost.",
+   "Divide by the price.",
+   "Greatest whole number, then check one more."
+  ],
+  "contexts": [
+   "books after a bag",
+   "bread after bus fare",
+   "chairs in a hall"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 150 + 40n <= 500."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 150.",
+    "say": "What is left for books?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 40n <= 350, n <= 8.75."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_DECIMAL_ANSWER_KEPT",
+    "listen_for": [
+     "8.75 books"
+    ],
+    "ask": "Can you buy 0.75 of a book?",
+    "repair": "No: whole books.",
+    "error": "Gives a decimal number of items.",
+    "example": {
+     "question": "sh 500, bag sh 150, books sh 40 each: most books",
+     "wrong_answer": "8.75",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_ROUNDED_UP_PAST_LIMIT",
+    "listen_for": [
+     "9 books"
+    ],
+    "ask": "What do 9 books cost?",
+    "repair": "sh 360: too much.",
+    "error": "Rounds n <= 8.75 up to 9.",
+    "example": {
+     "question": "sh 500, bag sh 150, books sh 40 each: most books",
+     "wrong_answer": "9",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT.M_FIXED_COST_LEFT_OUT",
+    "listen_for": [
+     "500 divided by 40"
+    ],
+    "ask": "Who pays for the bag?",
+    "repair": "Take it away first.",
+    "error": "Divides all the money by the price and forgets the fixed cost.",
+    "example": {
+     "question": "sh 500, bag sh 150, books sh 40 each: most books",
+     "wrong_answer": "12",
+     "correct_answer": "8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "sh 600, a bag at sh 120, books at sh 70 each: most books?",
+    "answer": "6",
+    "shows": "greatest whole number"
+   },
+   {
+    "question": "Why not 7 books?",
+    "answer": "7 x 70 + 120 = 610, more than 600",
+    "shows": "check one more"
+   }
+  ],
+  "name": "Solve a simple inequality from a story and give the greatest whole number",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE",
+  "key_step": "The child draws the circle at the number, closed if the number is in, and shades the side where the answers are.",
+  "floor": {
+   "prerequisite": "Places numbers on a line.",
+   "question": "Is 7 to the left or right of 3?",
+   "answer": "right"
+  },
+  "representations": [
+   "a number line",
+   "open and closed circles",
+   "test a number"
+  ],
+  "steps": [
+   "Put the circle at the number.",
+   "Closed for <= or >=, open for < or >.",
+   "Shade towards the answers.",
+   "Test one shaded number."
+  ],
+  "contexts": [
+   "the youngest age for a club",
+   "a speed limit",
+   "a temperature"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a number line from 0 to 10."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3.",
+    "say": "For x > 3, is 3 itself an answer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw an open circle at 3 and shade to the right."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_OPEN_CLOSED_SWAPPED",
+    "listen_for": [
+     "open for >="
+    ],
+    "ask": "Is the number itself in?",
+    "repair": "In: closed.",
+    "error": "Draws an open circle for <= or >= and a closed one for < or >.",
+    "example": {
+     "question": "x >= 3 on a number line",
+     "wrong_answer": "an open circle at 3",
+     "correct_answer": "a closed circle at 3"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_SHADED_WRONG_WAY",
+    "listen_for": [
+     "shaded left for >"
+    ],
+    "ask": "Is 5 bigger than 3? Where is 5?",
+    "repair": "On the right.",
+    "error": "Shades the wrong side of the circle.",
+    "example": {
+     "question": "x > 3 on a number line",
+     "wrong_answer": "shaded to the left of 3",
+     "correct_answer": "shaded to the right of 3"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_SHADED_EXCLUDED_PART",
+    "listen_for": [
+     "the numbers that fail"
+    ],
+    "ask": "Do we shade the answers or the others?",
+    "repair": "The answers.",
+    "error": "Shades the numbers that do not fit, with the opposite circle.",
+    "example": {
+     "question": "x > 3 on a number line",
+     "wrong_answer": "a closed circle at 3, shaded to the left",
+     "correct_answer": "an open circle at 3, shaded to the right"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_TYPE_FIXED",
+    "listen_for": [
+     "always closed"
+    ],
+    "ask": "What does a closed circle say?",
+    "repair": "The number is in.",
+    "error": "Believes the circle on a number line is always the same kind.",
+    "example": {
+     "question": "Why is a closed circle wrong for x < 5?",
+     "wrong_answer": "circles are always closed",
+     "correct_answer": "x < 5 does not include 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_AT_ZERO",
+    "listen_for": [
+     "at 0"
+    ],
+    "ask": "Which number is in the inequality?",
+    "repair": "The circle goes there.",
+    "error": "Puts the circle at 0 instead of at the number in the inequality.",
+    "example": {
+     "question": "x > 4 on a number line: where is the circle?",
+     "wrong_answer": "at 0",
+     "correct_answer": "at 4"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_CIRCLE_SHOWS_DIRECTION",
+    "listen_for": [
+     "shows the way"
+    ],
+    "ask": "What does the shading show?",
+    "repair": "The direction.",
+    "error": "Believes the circle shows which way to shade.",
+    "example": {
+     "question": "What does the open circle in x < 5 show?",
+     "wrong_answer": "which way to shade",
+     "correct_answer": "that 5 is not included"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE.M_OPEN_CIRCLE_INCLUDED",
+    "listen_for": [
+     "4 is in"
+    ],
+    "ask": "Is the circle at 4 open or closed?",
+    "repair": "Open: 4 is out.",
+    "error": "Counts the number at an open circle as part of the answer.",
+    "example": {
+     "question": "Open circle at 4, shaded right: is 4 in the shading?",
+     "wrong_answer": "yes",
+     "correct_answer": "no"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Describe x <= 6 on a number line",
+    "answer": "closed circle at 6, shaded left",
+    "shows": "circle and side"
+   },
+   {
+    "question": "Open circle at 2, shaded right: is 2 in?",
+    "answer": "No",
+    "shows": "open circle"
+   }
+  ],
+  "name": "Show a simple inequality on a number line",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY",
+  "key_step": "The child treats the two ends one at a time, choosing the sign at each end from its own words, and checks a value against both.",
+  "floor": {
+   "prerequisite": "Chooses a sign for words.",
+   "question": "\"At least 6\" for a",
+   "answer": "a >= 6"
+  },
+  "representations": [
+   "a range on a number line",
+   "a table of rides",
+   "a whole-number list"
+  ],
+  "steps": [
+   "Lower end: is it in?",
+   "Upper end: is it in?",
+   "Write lower, x, upper.",
+   "Test values at both ends."
+  ],
+  "contexts": [
+   "ages for a swimming class",
+   "a clinic fridge",
+   "rides at a show"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: at least 6 and younger than 12."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6.",
+    "say": "Can a child of 6 join?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 12.",
+    "say": "Can a child of 12 join?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child says the sign at each end."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 6 <= a < 12."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_INCLUSIVE_WORD_AS_STRICT",
+    "listen_for": [
+     "6 < a for at least 6"
+    ],
+    "ask": "Can a 6-year-old join?",
+    "repair": "Yes: <=.",
+    "error": "Uses < at an end where the words are \"at least\" or \"at most\".",
+    "example": {
+     "question": "At least 6 and younger than 12",
+     "wrong_answer": "6 < a < 12",
+     "correct_answer": "6 <= a < 12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_STRICT_WORD_AS_INCLUSIVE",
+    "listen_for": [
+     "6 <= a for older than 6"
+    ],
+    "ask": "Is a 6-year-old older than 6?",
+    "repair": "No: <.",
+    "error": "Uses <= at an end where the words are \"older than\", \"younger than\" or \"less than\".",
+    "example": {
+     "question": "Older than 6 and at most 12",
+     "wrong_answer": "6 <= a <= 12",
+     "correct_answer": "6 < a <= 12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_SIGNS_MEANINGS_SWAPPED",
+    "listen_for": [
+     "both ends swapped"
+    ],
+    "ask": "Which sign keeps the end in?",
+    "repair": "<=.",
+    "error": "Swaps < and <= at both ends.",
+    "example": {
+     "question": "At least 6 and younger than 12",
+     "wrong_answer": "6 < a <= 12",
+     "correct_answer": "6 <= a < 12"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_END_MISREAD",
+    "listen_for": [
+     "one end wrong"
+    ],
+    "ask": "Did you check both ends?",
+    "repair": "Read each end.",
+    "error": "Gets the sign right at one end and wrong at the other.",
+    "example": {
+     "question": "Whole numbers with 2 < x <= 6",
+     "wrong_answer": "2, 3, 4, 5",
+     "correct_answer": "3, 4, 5, 6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_END_VALUE_ALWAYS_IN",
+    "listen_for": [
+     "ends always in"
+    ],
+    "ask": "What does < say about the end?",
+    "repair": "Out.",
+    "error": "Counts the end values as allowed whatever the signs.",
+    "example": {
+     "question": "Whole numbers with 2 < x < 6",
+     "wrong_answer": "2, 3, 4, 5, 6",
+     "correct_answer": "3, 4, 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_END_VALUE_ALWAYS_OUT",
+    "listen_for": [
+     "ends always out"
+    ],
+    "ask": "What does <= say about the end?",
+    "repair": "In.",
+    "error": "Leaves the end values out whatever the signs.",
+    "example": {
+     "question": "Whole numbers with 2 <= x <= 6",
+     "wrong_answer": "3, 4, 5",
+     "correct_answer": "2, 3, 4, 5, 6"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_PART_TESTED",
+    "listen_for": [
+     "only the lower end checked"
+    ],
+    "ask": "Is it under the top end too?",
+    "repair": "Both parts.",
+    "error": "Tests a value against one end only.",
+    "example": {
+     "question": "2 < t <= 8: is 9 allowed?",
+     "wrong_answer": "yes, 9 is more than 2",
+     "correct_answer": "no, 9 is more than 8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_OR_WRITTEN_AS_CHAIN",
+    "listen_for": [
+     "7 < x < 2"
+    ],
+    "ask": "Is any number above 7 and below 2?",
+    "repair": "No: write two parts.",
+    "error": "Writes \"less than 2 or greater than 7\" as one chain, 7 < x < 2.",
+    "example": {
+     "question": "x less than 2 or greater than 7",
+     "wrong_answer": "7 < x < 2",
+     "correct_answer": "x < 2 or x > 7"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY.M_ONE_SIGN_ONLY",
+    "listen_for": [
+     "only one sign"
+    ],
+    "ask": "How many ends has a range?",
+    "repair": "Two, so two signs.",
+    "error": "Believes an inequality can only have one sign.",
+    "example": {
+     "question": "Can 2 < x < 5 be an inequality?",
+     "wrong_answer": "no, only one sign is allowed",
+     "correct_answer": "yes, it is a compound inequality"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Older than 5 and at most 9, for age a",
+    "answer": "5 < a <= 9",
+    "shows": "sign at each end"
+   },
+   {
+    "question": "Whole numbers with -1 < x <= 3",
+    "answer": "0, 1, 2, 3",
+    "shows": "list"
+   }
+  ],
+  "name": "Form a compound inequality and list or test the values it allows",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND",
+  "key_step": "The child does each step to all three parts, then lists the whole numbers, keeping or leaving out each end by its sign.",
+  "floor": {
+   "prerequisite": "Solves a simple inequality.",
+   "question": "2x + 4 <= 20",
+   "answer": "x <= 8"
+  },
+  "representations": [
+   "three parts in a chain",
+   "a number line",
+   "a list"
+  ],
+  "steps": [
+   "Take the number away from all three parts.",
+   "Divide all three parts.",
+   "Read the two ends.",
+   "List the whole numbers."
+  ],
+  "contexts": [
+   "tickets in a range",
+   "a recipe range",
+   "scores to pass"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 8 < 2x + 4 <= 20."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the three parts.",
+    "say": "What do we take away, and from which parts?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 4 < 2x <= 16, then 2 < x <= 8."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_ONE_PART_NOT_CHANGED",
+    "listen_for": [
+     "8 < 2x"
+    ],
+    "ask": "Did the 8 change too?",
+    "repair": "All three parts.",
+    "error": "Takes the number from the middle and one end only.",
+    "example": {
+     "question": "8 < 2x + 4 <= 20: take 4 away",
+     "wrong_answer": "8 < 2x <= 16",
+     "correct_answer": "4 < 2x <= 16"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_EXCLUDED_END_LISTED",
+    "listen_for": [
+     "starts at 2"
+    ],
+    "ask": "Is 2 allowed with <?",
+    "repair": "No: start at 3.",
+    "error": "Lists the end number that the < sign leaves out.",
+    "example": {
+     "question": "Whole numbers with 2 < x <= 8",
+     "wrong_answer": "2, 3, 4, 5, 6, 7, 8",
+     "correct_answer": "3, 4, 5, 6, 7, 8"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND.M_DIVIDED_ONE_PART_ONLY",
+    "listen_for": [
+     "4 < x <= 16"
+    ],
+    "ask": "Were the ends divided?",
+    "repair": "Divide all three.",
+    "error": "Divides the middle by the number in front of x but not the two ends.",
+    "example": {
+     "question": "4 < 2x <= 16",
+     "wrong_answer": "4 < x <= 16",
+     "correct_answer": "2 < x <= 8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Solve 5 < 3x + 2 <= 14",
+    "answer": "1 < x <= 4",
+    "shows": "all three parts"
+   },
+   {
+    "question": "Whole numbers in 1 < x <= 4",
+    "answer": "2, 3, 4",
+    "shows": "ends by sign"
+   }
+  ],
+  "name": "Solve a compound inequality by doing the same to all three parts",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE": {
+  "skill": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE",
+  "key_step": "The child reads each circle on its own and writes the smaller number on the left.",
+  "floor": {
+   "prerequisite": "Reads one circle.",
+   "question": "Closed circle at 4, shaded right",
+   "answer": "x >= 4"
+  },
+  "representations": [
+   "a number line with two circles",
+   "the chain",
+   "test a number"
+  ],
+  "steps": [
+   "Smaller number on the left.",
+   "Left circle: open or closed?",
+   "Right circle: open or closed?",
+   "Write the chain."
+  ],
+  "contexts": [
+   "a fridge range",
+   "ages for a class",
+   "a speed range"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a closed circle at 1 and an open circle at 5, shaded between."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the circle at 5.",
+    "say": "Is 5 in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 <= x < 5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_CIRCLE_SIGN_MISMATCH",
+    "listen_for": [
+     "< at a closed circle"
+    ],
+    "ask": "What does a closed circle say?",
+    "repair": "In: <=.",
+    "error": "Writes <= at an open circle or < at a closed one.",
+    "example": {
+     "question": "Closed circle at 1, open circle at 5, shaded between",
+     "wrong_answer": "1 < x <= 5",
+     "correct_answer": "1 <= x < 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_ONE_CIRCLE_READ",
+    "listen_for": [
+     "one end wrong"
+    ],
+    "ask": "Did you look at both circles?",
+    "repair": "Read each.",
+    "error": "Reads one circle correctly and the other wrongly.",
+    "example": {
+     "question": "Closed circle at 1, closed circle at 5, shaded between",
+     "wrong_answer": "1 <= x < 5",
+     "correct_answer": "1 <= x <= 5"
+    }
+   },
+   {
+    "code": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE.M_ENDS_WRITTEN_BACKWARDS",
+    "listen_for": [
+     "5 < x < 1"
+    ],
+    "ask": "Which number is on the left of the line?",
+    "repair": "The smaller one.",
+    "error": "Puts the bigger number on the left of x.",
+    "example": {
+     "question": "Shaded from 1 to 5",
+     "wrong_answer": "5 < x < 1",
+     "correct_answer": "1 < x < 5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Open circle at -2, closed circle at 3, shaded between",
+    "answer": "-2 < x <= 3",
+    "shows": "two circles"
+   },
+   {
+    "question": "Draw 0 <= x < 4",
+    "answer": "closed at 0, open at 4, shaded between",
+    "shows": "draw"
+   }
+  ],
+  "name": "Show and read a compound inequality on a number line",
+  "sub_strand": "MATH.G7.ALGEBR.LINEAR_INEQUALITIES",
+  "sub_strand_name": "Linear Inequalities",
+  "status": "draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
  "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES": {
   "skill": "MATH.G7.MEASUR.PYTHAGOREAN_RELATIONSHIP.RIGHT_TRIANGLE_SIDES",
   "key_step": "The child finds the right angle first and names the side opposite it as the hypotenuse.",

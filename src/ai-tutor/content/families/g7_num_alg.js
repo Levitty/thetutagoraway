@@ -4,7 +4,7 @@
 // and inequalities. Every family is unreviewed until a person signs it off.
 // ============================================================================
 import { randInt, pick } from '../schema.js';
-import { family, round, commas } from './core.js';
+import { family, round, commas, oneCodeEach } from './core.js';
 import { person, twoPeople, sh, price } from './kenya.js';
 
 const fam = (def) => family({ reviewed: false, ...def });
@@ -832,17 +832,21 @@ export const FAMILIES = [
   // ======================================================================
   // LINEAR INEQUALITIES
   // ======================================================================
-  fam({ id: 'g7.ineq.symbol-notice', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.a', rung: 1, form: 'direct',
+  fam({ id: 'g7.ineq.symbol-notice', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.a', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS', rung: 1, form: 'direct',
     draw: () => ({ ph: pick([['at least', '≥'], ['at most', '≤'], ['fewer than', '<'], ['more than', '>'], ['no more than', '≤'], ['not less than', '≥'], ['under', '<'], ['no fewer than', '≥']]), v: randInt(10, 60) }),
     make: ({ ph, v }) => {
       const MEAN = { '<': 'less than', '>': 'greater than', '≤': 'less than or equal to', '≥': 'greater than or equal to' };
+      // the wrong sign says which idea slipped: the "or equal" part, the direction, or one word read alone ("no more" as more)
+      const incl = (s) => s === '≤' || s === '≥', up = (s) => s === '>' || s === '≥';
+      const KEY = { 'at least': '<', 'at most': '>', 'no more than': '>', 'not less than': '<', 'no fewer than': '<' };
+      const code = (s) => (up(s) === up(ph[1]) ? 'M_EQUAL_PART_MIXED' : incl(s) === incl(ph[1]) ? 'M_DIRECTION_REVERSED' : KEY[ph[0]] === s ? 'M_KEYWORD_READ_ALONE' : 'SLIP');
       return { question: `A notice at a stage says the number of passengers, n, must be ${ph[0]} ${v}. Which symbol goes in the inequality for n?`, story: false, fixedOrder: true,
-        options: ['<', '>', '≤', '≥'].map(s => ({ text: s, right: s === ph[1], why: s === ph[1] ? undefined : `${s} means ${MEAN[s]}. That does not match "${ph[0]}".` })),
+        options: ['<', '>', '≤', '≥'].map(s => ({ text: s, right: s === ph[1], why: s === ph[1] ? undefined : `${s} means ${MEAN[s]}. That does not match "${ph[0]}".`, mis: s === ph[1] ? undefined : code(s) })),
         hints: ['Decide whether the number itself is allowed.', '"Than" with no "or equal" leaves the number out. "At least" and "at most" keep it in.'],
         steps: [`"${ph[0]} ${v}" ${['≤', '≥'].includes(ph[1]) ? 'includes' : 'does not include'} ${v} itself.`, `The symbol is ${ph[1]}: n ${ph[1]} ${v}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.true-statement', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.a', rung: 2, form: 'word',
+  fam({ id: 'g7.ineq.true-statement', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.a', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.INEQUALITY_SYMBOLS', rung: 2, form: 'word',
     draw: () => {
       const v = randInt(9, 15), ops = ['<', '>', '≤', '≥'], cands = []; for (const op of ops) for (const off of [-2, -1, 0, 1, 2]) { const k = v + off; cands.push({ op, k, ok: op === '<' ? v < k : op === '>' ? v > k : op === '≤' ? v <= k : v >= k }); }
       const yes = shuffle(cands.filter(c => c.ok)), no = shuffle(cands.filter(c => !c.ok)); const pickOpts = [yes[0]]; for (const c of no) if (pickOpts.length < 4 && !pickOpts.some(o => o.op === c.op && o.k === c.k)) pickOpts.push(c);
@@ -850,24 +854,25 @@ export const FAMILIES = [
     },
     make: ({ v, opts, p }) => ({
       question: `${p.name} is ${v} years old. Let a be ${p.her} age in years. Which of these inequalities is true for ${p.herObj}?`,
-      options: shuffle(opts.map(o => ({ text: `a ${o.op} ${o.k}`, right: o.ok, why: o.ok ? undefined : `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false.` }))),
+      // a < v or a > v with a = v: the strict sign taken to include the number; any other false one reads the sign from the wrong side
+      options: shuffle(oneCodeEach(opts.map(o => ({ text: `a ${o.op} ${o.k}`, right: o.ok, why: o.ok ? undefined : o.k === v ? `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false, because ${o.op} does not include ${v} itself.` : `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false. Read the sign starting from a.`, mis: o.ok ? undefined : o.k === v ? 'M_STRICT_INCLUDES_NUMBER' : 'M_SYMBOL_READ_BACKWARDS' })))),
       hints: [`Put a = ${v} into each inequality in turn.`, 'Exactly one of them is a true statement.'],
       steps: [`Test each one with a = ${v}.`, `Only a ${opts[0].op} ${opts[0].k} is true: ${v} ${opts[0].op} ${opts[0].k}.`] }) }),
 
-  fam({ id: 'g7.ineq.form-pickup', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.b', rung: 2, form: 'word',
+  fam({ id: 'g7.ineq.form-pickup', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.b', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY', rung: 2, form: 'word',
     draw: () => ({ L: pick([1000, 1200, 1500, 2000]), c: pick([200, 300, 400, 500]), s: pick([50, 90, 100]), p: person() }),
     make: ({ L, c, s, p }) => ({
       question: `A pick-up can carry at most ${commas(L)} kg. It already carries ${c} kg of cement. ${p.name} loads n sacks of maize of ${s} kg each. Which inequality shows that the load is allowed?`,
       options: shuffle([
         { text: `${c} + ${s}n ≤ ${commas(L)}`, right: true },
-        { text: `${c} + ${s}n < ${commas(L)}`, right: false, why: '"At most" allows the load to be exactly the limit, so the symbol must include "or equal to".' },
-        { text: `${c} + ${s}n ≥ ${commas(L)}`, right: false, why: 'The total load must not go above the limit, so it cannot be "at least".' },
-        { text: `${s}n ≤ ${commas(L)}`, right: false, why: 'The cement is already on the pick-up. It counts towards the load too.' },
+        { text: `${c} + ${s}n < ${commas(L)}`, right: false, why: '"At most" allows the load to be exactly the limit, so the symbol must include "or equal to".', mis: 'M_AT_MOST_AS_STRICT' },
+        { text: `${c} + ${s}n ≥ ${commas(L)}`, right: false, why: 'The total load must not go above the limit, so it cannot be "at least".', mis: 'M_LIMIT_SIGN_REVERSED' },
+        { text: `${s}n ≤ ${commas(L)}`, right: false, why: 'The cement is already on the pick-up. It counts towards the load too.', mis: 'M_FIXED_LOAD_LEFT_OUT' },
       ]),
       hints: ['What is the total load? Add the cement and the sacks.', '"At most" means the load can be up to the limit and no more.'],
       steps: [`Total load: ${c} + ${s}n kg.`, `"At most ${commas(L)}" means ≤ ${commas(L)}.`, `So ${c} + ${s}n ≤ ${commas(L)}.`] }) }),
 
-  fam({ id: 'g7.ineq.seats-spot', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.b', rung: 3, form: 'spot',
+  fam({ id: 'g7.ineq.seats-spot', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.b', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_SIMPLE_INEQUALITY', rung: 3, form: 'spot',
     draw: () => { const T = pick([120, 150, 200, 240]), c = randInt(31, 99); return { T, c, bug: pick(['symbol', 'subtract']), p: person() }; },
     make: ({ T, c, bug, p }) => {
       const left = bug === 'subtract' ? T + c : T - c, sym = bug === 'symbol' ? '≥' : '≤';
@@ -878,47 +883,49 @@ export const FAMILIES = [
           { text: `So the symbol is ${sym}.`, ok: sym === '≤' },
           { text: `The inequality is n ${sym} ${left}.`, ok: true },
         ],
+        mis: bug === 'symbol' ? 'M_LIMIT_SIGN_REVERSED' : 'M_TAKEN_ADDED_NOT_SUBTRACTED',
         fix: bug === 'symbol' ? '"At most" and "not more than" mean ≤, not ≥. The number of people can be up to the seats left.' : `The seats left are found by taking away the seats already taken: ${T} − ${c} = ${T - c}.`,
         steps: [`Seats left: ${T} − ${c} = ${T - c}.`, `n cannot be more than ${T - c}, so n ≤ ${T - c}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.most-books', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.b', rung: 3, form: 'word',
+  fam({ id: 'g7.ineq.most-books', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.b', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_SIMPLE_IN_CONTEXT', rung: 3, form: 'word',
     draw: () => { const B = pick([500, 600, 700, 800, 1000]), g = pick([100, 120, 150, 200]), e = pick([30, 40, 60, 70, 80]), n = Math.floor((B - g) / e); return (B - g) % e !== 0 && n >= 3 && distinct(n, n + 1, Math.floor(B / e), round((B - g) / e, 2)) ? { B, g, e, n, p: person() } : null; },
     make: ({ B, g, e, n, p }) => ({
       question: `${p.name} has ${sh(B)}. ${p.She} buys a school bag for ${sh(g)} and then some exercise books at ${sh(e)} each. Form an inequality for n, the number of books, and solve it. What is the greatest number of books ${p.she} can buy?`,
       answer: n,
-      wrong: [[round((B - g) / e, 2), 'A number of books must be a whole number. Think about how many whole books fit.'], [n + 1, `That many books would cost more than the money left.`], [Math.floor(B / e), 'The bag has to be paid for first.']],
+      wrong: [[round((B - g) / e, 2), 'A number of books must be a whole number. Think about how many whole books fit.', 'M_DECIMAL_ANSWER_KEPT'], [n + 1, `That many books would cost more than the money left.`, 'M_ROUNDED_UP_PAST_LIMIT'], [Math.floor(B / e), 'The bag has to be paid for first.', 'M_FIXED_COST_LEFT_OUT']],
       hints: ['The money spent must be at most the money she has.', 'Write bag + books ≤ money, solve for n, then think about whole books.'],
       steps: [`${g} + ${e}n ≤ ${B}.`, `${e}n ≤ ${B - g}, so n ≤ ${round((B - g) / e, 2)}.`, `Whole books only: the greatest is ${n}.`] }),
     check: ({ B, g, e }, a) => g + e * a <= B && g + e * (a + 1) > B }),
 
-  fam({ id: 'g7.ineq.circle-why', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.c', rung: 3, form: 'why',
+  fam({ id: 'g7.ineq.circle-why', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.c', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE', rung: 3, form: 'why',
     draw: () => ({ sym: pick(['<', '>', '≤', '≥']), v: randInt(-5, 12), x: pick(['x', 'n', 'y']), p: person() }),
     make: ({ sym, v, x, p }) => {
       const closed = sym === '≤' || sym === '≥', vt = v < 0 ? `−${-v}` : String(v), drawn = closed ? 'open' : 'closed', needed = closed ? 'closed' : 'open';
       return { question: `${p.name} draws ${x} ${sym} ${vt} on a number line. ${p.She} puts ${circ(drawn === 'closed')} at ${vt}. Why is the circle wrong?`, story: false,
         options: shuffle([
           { text: `${x} ${sym} ${vt} ${closed ? 'includes' : 'does not include'} ${vt} itself, so the circle must be ${needed}`, right: true },
-          { text: `A circle on a number line is always ${drawn}`, right: false, why: 'Both kinds of circle are used. Which one to draw depends on the sign.' },
-          { text: `The circle should be at ${v === 0 ? '1' : '0'}, not at ${vt}`, right: false, why: `The circle goes at the number in the inequality, which is ${vt}.` },
-          { text: `The circle shows which way to shade, so it should be ${needed} to point the other way`, right: false, why: 'The circle does not show a direction. It shows whether the end number is included. The shading shows the direction.' },
+          { text: `A circle on a number line is always ${drawn}`, right: false, why: 'Both kinds of circle are used. Which one to draw depends on the sign.', mis: 'M_CIRCLE_TYPE_FIXED' },
+          { text: `The circle should be at ${v === 0 ? '1' : '0'}, not at ${vt}`, right: false, why: `The circle goes at the number in the inequality, which is ${vt}.`, mis: 'M_CIRCLE_AT_ZERO' },
+          { text: `The circle shows which way to shade, so it should be ${needed} to point the other way`, right: false, why: 'The circle does not show a direction. It shows whether the end number is included. The shading shows the direction.', mis: 'M_CIRCLE_SHOWS_DIRECTION' },
         ]),
         hints: ['Ask whether the number in the inequality is one of the answers.', 'A closed circle includes the number. An open circle leaves it out.'],
         steps: [`${sym} ${closed ? 'means "or equal to": the number is included' : 'does not include the number'}.`, `So the circle at ${vt} must be ${needed}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.match-line', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.c', rung: 2, form: 'word',
+  fam({ id: 'g7.ineq.match-line', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.c', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE', rung: 2, form: 'word',
     draw: () => ({ sym: pick(['<', '>', '≤', '≥']), v: randInt(-5, 12), x: pick(['x', 'n', 'y']) }),
     make: ({ sym, v, x }) => {
       const vt = v < 0 ? `−${-v}` : String(v), closed = sym === '≤' || sym === '≥', right = sym === '>' || sym === '≥';
       const combos = [[true, true], [true, false], [false, true], [false, false]];
       return { question: `Which number line shows ${x} ${sym} ${vt}? Each line has a circle at ${vt}; each line is shaded in one direction.`,
-        options: shuffle(combos.map(([c, r]) => ({ text: `${c ? 'A closed' : 'An open'} circle at ${vt}, shaded to the ${r ? 'right' : 'left'}`, right: c === closed && r === right, why: c === closed && r === right ? undefined : c !== closed ? `${x} ${sym} ${vt} ${closed ? 'includes' : 'does not include'} ${vt} itself, so the circle must not be ${c ? 'closed' : 'open'}.` : `${r ? 'Shading to the right' : 'Shading to the left'} shows ${r ? 'bigger' : 'smaller'} numbers than ${vt}, which does not fit ${sym}.` }))),
+        options: shuffle(combos.map(([c, r]) => ({ text: `${c ? 'A closed' : 'An open'} circle at ${vt}, shaded to the ${r ? 'right' : 'left'}`, right: c === closed && r === right, why: c === closed && r === right ? undefined : c !== closed && r !== right ? `This line shows the numbers that do not fit ${x} ${sym} ${vt}: both the circle and the side are the other way.` : c !== closed ? `${x} ${sym} ${vt} ${closed ? 'includes' : 'does not include'} ${vt} itself, so the circle must not be ${c ? 'closed' : 'open'}.` : `${r ? 'Shading to the right' : 'Shading to the left'} shows ${r ? 'bigger' : 'smaller'} numbers than ${vt}, which does not fit ${sym}.`,
+          mis: c === closed && r === right ? undefined : c !== closed && r !== right ? 'M_SHADED_EXCLUDED_PART' : c !== closed ? 'M_OPEN_CLOSED_SWAPPED' : 'M_SHADED_WRONG_WAY' }))),
         hints: ['Does the number itself belong to the answers? That decides the circle.', 'Are the answers bigger or smaller than the number? That decides the direction.'],
         steps: [`${sym} ${closed ? 'includes' : 'does not include'} ${vt}: a ${closed ? 'closed' : 'open'} circle.`, `The answers are ${right ? 'bigger' : 'smaller'} than ${vt}: shade to the ${right ? 'right' : 'left'}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.which-in-shade', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.c', rung: 3, form: 'word',
+  fam({ id: 'g7.ineq.which-in-shade', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.c', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SIMPLE_ON_NUMBER_LINE', rung: 3, form: 'word',
     draw: () => ({ closed: Math.random() < 0.5, right: Math.random() < 0.5, v: randInt(-4, 10) }),
     make: ({ closed, right, v }) => {
       const ok = (t) => (right ? (closed ? t >= v : t > v) : (closed ? t <= v : t < v));
@@ -926,55 +933,59 @@ export const FAMILIES = [
       const vals = closed ? [v, ...shuffle(fS).slice(0, 3)] : [shuffle(tS)[0], v, ...shuffle(fS).slice(0, 2)];
       const t = (n) => (n < 0 ? `−${-n}` : String(n));
       return { question: `Mwende shades a number line. The shading starts at ${circ(closed)} at ${t(v)}. It runs to the ${right ? 'right' : 'left'}. Which of these numbers lies under the shading?`,
-        options: shuffle(vals.map(n => ({ text: t(n), right: ok(n), why: ok(n) ? undefined : n === v ? `The circle at ${t(v)} is ${closed ? 'closed' : 'open'}, so ${t(v)} is ${closed ? '' : 'not '}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
+        options: shuffle(oneCodeEach(vals.map(n => ({ text: t(n), right: ok(n), why: ok(n) ? undefined : n === v ? `The circle at ${t(v)} is ${closed ? 'closed' : 'open'}, so ${t(v)} is ${closed ? '' : 'not '}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.`, mis: ok(n) ? undefined : n === v ? 'M_OPEN_CIRCLE_INCLUDED' : 'M_SHADED_WRONG_WAY' })))),
         hints: ['Which side of the circle is shaded?', 'Is the number at the circle included? Look at whether the circle is open or closed.'],
         steps: [`The shaded part is the numbers ${right ? 'greater' : 'less'} than ${t(v)}${closed ? `, and ${t(v)} itself` : ''}.`, 'Only one of the four numbers is in that part.'] };
     } }),
 
-  fam({ id: 'g7.ineq.compound-swim', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 2, form: 'word',
+  fam({ id: 'g7.ineq.compound-swim', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY', rung: 2, form: 'word',
     draw: () => { const lo = randInt(6, 12); return { lo, hi: lo + randInt(3, 8), li: Math.random() < 0.5, hi_i: Math.random() < 0.5 }; },
     make: ({ lo, hi, li, hi_i }) => {
       const LS = (b) => (b ? '≤' : '<'), txt = (a, b) => `${lo} ${LS(a)} a ${LS(b)} ${hi}`;
       return { question: `A swimming class is for children who are ${li ? 'at least' : 'older than'} ${lo} years old and ${hi_i ? 'at most' : 'younger than'} ${hi} years old. Which compound inequality shows the ages a that can join?`,
-        options: shuffle([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : a !== li ? `At the lower end, ${lo} years old ${li ? 'can' : 'cannot'} join, but this inequality ${a ? 'allows' : 'does not allow'} it.` : `At the upper end, ${hi} years old ${hi_i ? 'can' : 'cannot'} join, but this inequality ${b ? 'allows' : 'does not allow'} it.` }))),
+        options: shuffle(oneCodeEach([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : a !== li && b !== hi_i ? `Both ends are wrong. ${lo} years old ${li ? 'can' : 'cannot'} join and ${hi} years old ${hi_i ? 'can' : 'cannot'}, but this inequality says the opposite at each end.` : a !== li ? `At the lower end, ${lo} years old ${li ? 'can' : 'cannot'} join, but this inequality ${a ? 'allows' : 'does not allow'} it.` : `At the upper end, ${hi} years old ${hi_i ? 'can' : 'cannot'} join, but this inequality ${b ? 'allows' : 'does not allow'} it.`,
+          mis: a === li && b === hi_i ? undefined : a !== li && b !== hi_i ? (li === hi_i ? (li ? 'M_INCLUSIVE_WORD_AS_STRICT' : 'M_STRICT_WORD_AS_INCLUSIVE') : 'M_SIGNS_MEANINGS_SWAPPED') : li === hi_i ? 'M_ONE_END_MISREAD' : (a !== li ? li : hi_i) ? 'M_INCLUSIVE_WORD_AS_STRICT' : 'M_STRICT_WORD_AS_INCLUSIVE' })))),
         hints: ['Look at each end separately: is the number itself allowed?', '"At least" and "at most" use ≤. "Older than" and "younger than" use <.'],
         steps: [`Lower end: "${li ? 'at least' : 'older than'} ${lo}" gives ${LS(li)}.`, `Upper end: "${hi_i ? 'at most' : 'younger than'} ${hi}" gives ${LS(hi_i)}.`, `Together: ${txt(li, hi_i)}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.compound-line', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 2, form: 'word',
+  fam({ id: 'g7.ineq.compound-line', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.e', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.COMPOUND_ON_NUMBER_LINE', rung: 2, form: 'word',
     draw: () => { const lo = randInt(-4, 5); return { lo, hi: lo + randInt(3, 8), li: Math.random() < 0.5, hi_i: Math.random() < 0.5, x: pick(['x', 'n']) }; },
     make: ({ lo, hi, li, hi_i, x }) => {
       const t = (n) => (n < 0 ? `−${-n}` : String(n)), LS = (b) => (b ? '≤' : '<'), txt = (a, b) => `${t(lo)} ${LS(a)} ${x} ${LS(b)} ${t(hi)}`;
       return { question: `On a number line, ${circ(li)} is at ${t(lo)}; ${circ(hi_i)} is at ${t(hi)}. The line between the two circles is shaded. Which inequality does it show?`,
-        options: shuffle([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : a !== li ? `The circle at ${t(lo)} is ${li ? 'closed' : 'open'}, so ${t(lo)} ${li ? 'is' : 'is not'} included. This inequality ${a ? 'includes' : 'leaves out'} it.` : `The circle at ${t(hi)} is ${hi_i ? 'closed' : 'open'}, so ${t(hi)} ${hi_i ? 'is' : 'is not'} included. This inequality ${b ? 'includes' : 'leaves out'} it.` }))),
+        options: shuffle(oneCodeEach([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : a !== li && b !== hi_i ? `Both signs are the wrong way round. A closed circle means the end number is included (≤); an open circle means it is not (<).` : a !== li ? `The circle at ${t(lo)} is ${li ? 'closed' : 'open'}, so ${t(lo)} ${li ? 'is' : 'is not'} included. This inequality ${a ? 'includes' : 'leaves out'} it.` : `The circle at ${t(hi)} is ${hi_i ? 'closed' : 'open'}, so ${t(hi)} ${hi_i ? 'is' : 'is not'} included. This inequality ${b ? 'includes' : 'leaves out'} it.`,
+          mis: a === li && b === hi_i ? undefined : a !== li && b !== hi_i ? 'M_CIRCLE_SIGN_MISMATCH' : 'M_ONE_CIRCLE_READ' })))),
         hints: ['A closed circle means the end number is included (≤). An open circle means it is not (<).', 'The smaller number goes on the left of x, and the bigger number on the right.'],
         steps: [`Left end: ${circ(li)} at ${t(lo)}, so ${LS(li)}.`, `Right end: ${circ(hi_i)} at ${t(hi)}, so ${LS(hi_i)}.`, `The inequality is ${txt(li, hi_i)}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.compound-fridge', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 3, form: 'word',
+  fam({ id: 'g7.ineq.compound-fridge', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY', rung: 3, form: 'word',
     draw: () => { const lo = randInt(1, 4), hi = lo + randInt(4, 8), kind = pick(['A', 'B', 'C']); return { lo, hi, kind }; },
     make: ({ lo, hi, kind }) => {
       const li = kind === 'B', hi_i = kind === 'A', LS = (b) => (b ? '≤' : '<');
       const ok = (t) => (li ? t >= lo : t > lo) && (hi_i ? t <= hi : t < hi);
       const vals = kind === 'C' ? [lo, hi, lo + 2, hi + 1] : [lo, hi, lo - 1, hi + 1];
       return { question: `A clinic fridge must keep its temperature t, in °C, so that ${lo} ${LS(li)} t ${LS(hi_i)} ${hi}. Which of these readings is allowed?`,
-        options: shuffle(vals.map(t => ({ text: `${t} °C`, right: ok(t), why: ok(t) ? undefined : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} °C is ${li ? '' : 'not '}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} °C is ${hi_i ? '' : 'not '}included.` : `${t} °C is outside the two end values.` }))),
+        options: shuffle(oneCodeEach(vals.map(t => ({ text: `${t} °C`, right: ok(t), why: ok(t) ? undefined : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} °C is ${li ? '' : 'not '}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} °C is ${hi_i ? '' : 'not '}included.` : `${t} °C passes one part only. It is outside the two end values.`, mis: ok(t) ? undefined : t === lo || t === hi ? 'M_END_VALUE_ALWAYS_IN' : 'M_ONE_PART_TESTED' })))),
         hints: ['Test each reading in both parts of the inequality.', 'Be careful with the readings that sit exactly on an end value.'],
         steps: [`The allowed readings are bigger than ${lo}${li ? ' or equal to it' : ''}, and smaller than ${hi}${hi_i ? ' or equal to it' : ''}.`, 'Check each option against both ends. Only one passes.'] };
     } }),
 
-  fam({ id: 'g7.ineq.compound-list', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 2, form: 'word',
+  fam({ id: 'g7.ineq.compound-list', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY', rung: 2, form: 'word',
     draw: () => { const lo = randInt(-3, 3); return { lo, hi: lo + randInt(3, 5), li: Math.random() < 0.5, hi_i: Math.random() < 0.5, p: person() }; },
     make: ({ lo, hi, li, hi_i, p }) => {
       const t = (n) => (n < 0 ? `−${-n}` : String(n)), LS = (b) => (b ? '≤' : '<');
       const list = (a, b) => { const out = []; for (let k = lo; k <= hi; k++) if ((a ? k >= lo : k > lo) && (b ? k <= hi : k < hi)) out.push(t(k)); return out.join(', '); };
+      // both ends wrong the same way: ends always in, or always out; wrong in opposite ways: the signs swapped; one end wrong: that end misread
+      const code = (a, b) => (a !== li && b !== hi_i ? (a && b ? 'M_END_VALUE_ALWAYS_IN' : !a && !b ? 'M_END_VALUE_ALWAYS_OUT' : 'M_SIGNS_MEANINGS_SWAPPED') : 'M_ONE_END_MISREAD');
       return { question: `${p.name} lists the whole numbers x that satisfy the compound inequality ${t(lo)} ${LS(li)} x ${LS(hi_i)} ${t(hi)}. Which list is correct?`,
-        options: shuffle([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: list(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : `This list ${a ? 'includes' : 'leaves out'} ${t(lo)} and ${b ? 'includes' : 'leaves out'} ${t(hi)}. Check what each sign says about the end numbers.` }))),
+        options: shuffle(oneCodeEach([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: list(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? undefined : `This list ${a ? 'includes' : 'leaves out'} ${t(lo)} and ${b ? 'includes' : 'leaves out'} ${t(hi)}. Check what each sign says about the end numbers.`, mis: a === li && b === hi_i ? undefined : code(a, b) })))),
         hints: ['List the whole numbers from the left end to the right end.', '< leaves the end number out. ≤ keeps it in.'],
         steps: [`Whole numbers from ${t(lo)} to ${t(hi)}: ${list(true, true)}.`, `${LS(li)} ${li ? 'keeps' : 'removes'} ${t(lo)}, and ${LS(hi_i)} ${hi_i ? 'keeps' : 'removes'} ${t(hi)}.`] };
     } }),
 
-  fam({ id: 'g7.ineq.compound-rides', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 3, form: 'table',
+  fam({ id: 'g7.ineq.compound-rides', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY', rung: 3, form: 'table',
     draw: () => {
       const A = randInt(9, 13), k = randInt(2, 4), names = shuffle(['Ferris wheel', 'Train', 'Boat', 'Bumper cars']), fl = () => Math.random() < 0.5;
       const specs = [{ lo: A, hi: A + k, li: true, hi_i: fl() }, { lo: A - k, hi: A, li: fl(), hi_i: false }, { lo: A - randInt(1, 3), hi: A + randInt(1, 3), li: fl(), hi_i: fl() }, { lo: A + 1, hi: A + 1 + k, li: fl(), hi_i: fl() }];
@@ -986,12 +997,12 @@ export const FAMILIES = [
       question: `The table shows the ages a allowed on four rides at a show. ${p.name} is ${A} years old. On how many of the rides can ${p.she} go?`, story: false,
       model: { type: 'table', data: { head: ['Ride', 'Ages allowed'], rows: rows.map(r => ({ label: r.n, value: `${r.lo} ${r.li ? '≤' : '<'} a ${r.hi_i ? '≤' : '<'} ${r.hi}` })) } },
       answer: ans,
-      wrong: [[bothIn, 'That counts every ride where the age is inside the two ends or on one. Some of the signs are < and leave an end out.'], [bothOut, 'That counts only rides where the age is strictly between the ends. Some of the signs are ≤ and keep an end in.'], [4, 'Not every ride allows this age. Test each row.']],
+      wrong: [[bothIn, 'That counts every ride where the age is inside the two ends or on one. Some of the signs are < and leave an end out.', 'M_END_VALUE_ALWAYS_IN'], [bothOut, 'That counts only rides where the age is strictly between the ends. Some of the signs are ≤ and keep an end in.', 'M_END_VALUE_ALWAYS_OUT'], [4, 'Not every ride allows this age. Test each row.', 'SLIP']],
       hints: ['Test the age in each row, one at a time.', 'Check both ends. Look carefully at < and ≤.'],
       steps: rows.map(r => `${r.n}: ${r.lo} ${r.li ? '≤' : '<'} ${A} ${r.hi_i ? '≤' : '<'} ${r.hi} is ${(r.li ? A >= r.lo : A > r.lo) && (r.hi_i ? A <= r.hi : A < r.hi) ? 'true' : 'false'}.`).concat([`The age fits ${ans} rides.`]) }),
     check: ({ A, rows }, a) => rows.map(r => (A > r.lo || (r.li && A === r.lo)) && (A < r.hi || (r.hi_i && A === r.hi))).filter(Boolean).length === a }),
 
-  fam({ id: 'g7.ineq.compound-solve-spot', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 3, form: 'spot',
+  fam({ id: 'g7.ineq.compound-solve-spot', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.SOLVE_COMPOUND', rung: 3, form: 'spot',
     draw: () => { const a = pick([2, 3, 4]), u = randInt(1, 2), t = randInt(1, 2), h = t + randInt(3, 5); return { a, c: a * u, lo: a * (u + t), hi: a * (u + h), t, h, bug: pick(['subtract', 'list']), p: person() }; },
     make: ({ a, c, lo, hi, t, h, bug, p }) => {
       const slo = bug === 'subtract' ? lo : lo - c, shi = hi - c, L = slo / a, H = shi / a;
@@ -1005,19 +1016,20 @@ export const FAMILIES = [
           { text: `The whole numbers are ${shown.join(', ')}.`, ok: shown.join() === ints.join() },
           { text: `So there are ${shown.length} whole numbers.`, ok: true },
         ],
+        mis: bug === 'subtract' ? 'M_ONE_PART_NOT_CHANGED' : 'M_EXCLUDED_END_LISTED',
         fix: bug === 'subtract' ? `Whatever is done to one part must be done to all three. ${c} must also be taken from ${lo}.` : `${t} is not allowed: the sign next to ${t} is <, which leaves it out. The whole numbers start at ${t + 1}.`,
         steps: [`${lo - c} < ${a}x ≤ ${hi - c}, so ${t} < x ≤ ${h}.`, `The whole numbers are ${trueInts.join(', ')}: ${trueInts.length} of them.`] };
     } }),
 
-  fam({ id: 'g7.ineq.compound-or-why', skill: 'G7_INEQUALITIES_INTRO', outcome: 'G7.INEQ.d', rung: 3, form: 'why',
+  fam({ id: 'g7.ineq.compound-or-why', skill: 'G7_INEQUALITIES_INTRO', outcome: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.d', cskill: 'MATH.G7.ALGEBR.LINEAR_INEQUALITIES.FORM_COMPOUND_INEQUALITY', rung: 3, form: 'why',
     draw: () => { const lo = randInt(2, 9); return { lo, hi: lo + randInt(3, 8), p: person() }; },
     make: ({ lo, hi, p }) => ({
       question: `${p.name} wants to write "x is less than ${lo} or greater than ${hi}". ${p.She} writes ${hi} < x < ${lo}. Why is this wrong?`, story: false,
       options: shuffle([
         { text: `No number is both greater than ${hi} and less than ${lo}`, right: true },
-        { text: `${hi} < x < ${lo} is correct: it means x is outside the two numbers`, right: false, why: `A chain like ${hi} < x < ${lo} says x is between the two numbers, both at once.` },
-        { text: 'An inequality can only ever have one sign in it', right: false, why: 'A compound inequality can have two signs, for example 2 < x < 5.' },
-        { text: 'It should use ≤ instead of <, because x can equal the end numbers', right: false, why: `The words say "less than" and "greater than", so the end numbers are not included. The real problem is the order of the numbers.` },
+        { text: `${hi} < x < ${lo} is correct: it means x is outside the two numbers`, right: false, why: `A chain like ${hi} < x < ${lo} says x is between the two numbers, both at once.`, mis: 'M_OR_WRITTEN_AS_CHAIN' },
+        { text: 'An inequality can only ever have one sign in it', right: false, why: 'A compound inequality can have two signs, for example 2 < x < 5.', mis: 'M_ONE_SIGN_ONLY' },
+        { text: 'It should use ≤ instead of <, because x can equal the end numbers', right: false, why: `The words say "less than" and "greater than", so the end numbers are not included. The real problem is the order of the numbers.`, mis: 'M_STRICT_WORD_AS_INCLUSIVE' },
       ]),
       hints: ['Read the chain from left to right: x must be bigger than the first number and smaller than the last.', 'Can one number be both?'],
       steps: [`${hi} < x < ${lo} means x is greater than ${hi} and less than ${lo} at the same time.`, `${hi} is bigger than ${lo}, so no number can do both. The two conditions must be written separately: x < ${lo} or x > ${hi}.`] }) }),
