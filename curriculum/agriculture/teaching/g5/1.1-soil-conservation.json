@@ -1,0 +1,277 @@
+{
+ "sub_strand": "AGRI.G5.CONSER.SOIL_CONSERVATION",
+ "title": "Soil Conservation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Walk the school compound with the class to find bare, hard, washed or poor patches before any talk of pits. The pit is dug by older learners or the grounds staff; Grade 5 fills and cares for it.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
+   "key_step": "The child picks out sites that need soil improvement (bare, hard, eroded, pale, waterlogged or where crops grow poorly) and a good site for a waste pit (near the garden, on firm level ground, away from water sources and buildings).",
+   "floor": {
+    "prerequisite": "Knows the features of fertile soil.",
+    "question": "Is fertile soil usually dark or pale?",
+    "answer": "dark"
+   },
+   "representations": [
+    "a compound walk with a recording sheet",
+    "photos of bare, eroded and healthy patches",
+    "a sketch map of the school"
+   ],
+   "steps": [
+    "Look: is the ground bare, hard or washed away?",
+    "Feel: is it hard or soft, dry or soggy?",
+    "Check how crops grow there.",
+    "Choose a pit site: firm, near the garden, far from water."
+   ],
+   "contexts": [
+    "the school compound",
+    "a home garden",
+    "a path where rain washes soil away"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a compound with a borehole, a garden and a hollow."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hollow beside the borehole.",
+     "say": "Good site for the waste pit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer and reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the pit near the garden on level ground."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_DARK",
+     "listen_for": [
+      "Dark, crumbly soil full of rotted leaves"
+     ],
+     "ask": "Which soil is likely to be poor for growing crops?",
+     "repair": "Show two soils: dark crumbly and pale packed. Ask which holds water and which grows a seed, then ask what the colour tells."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_PIT_LOW",
+     "listen_for": [
+      "In the low place where rain water collects"
+     ],
+     "ask": "Where is the best place for the school organic waste pit?",
+     "repair": "Walk the site after rain. Ask what happens to a pit that fills with water, and what could happen to a nearby well."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_BARE_FINE",
+     "listen_for": [
+      "The ground is normal and needs nothing"
+     ],
+     "ask": "The playground edge is hard and bare and crops there turn yellow and stay small. What is this a sign of?",
+     "repair": "Plant the same seed in a bare patch and in the garden and compare after two weeks."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG5_SITE_PLANTS",
+     "listen_for": [
+      "The soil there is poor"
+     ],
+     "ask": "Thick green weeds grow in one corner of the school. What does this say about the soil?",
+     "repair": "Compare the weedy corner with a bare hard patch: which soil is dark and soft when dug?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a sign that a site needs soil improvement.",
+     "answer": "bare, hard, washed away or crops growing poorly",
+     "shows": "site"
+    },
+    {
+     "question": "Why keep a waste pit away from a borehole?",
+     "answer": "so the water is not dirtied",
+     "shows": "pit site"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+   "key_step": "The child says what goes into an organic waste pit (plant and kitchen remains, animal dung, ash in small amounts) and what stays out, how it is built (dug about a metre, filled in layers) and cared for (kept damp, turned, covered).",
+   "floor": {
+    "prerequisite": "Knows how a compost heap is built.",
+    "question": "What is put between the layers of a heap?",
+    "answer": "soil or manure"
+   },
+   "representations": [
+    "a model pit in a box",
+    "layer cards",
+    "a site plan"
+   ],
+   "steps": [
+    "Dig the pit on a good site.",
+    "Fill in layers: dry, green, dung or soil, water.",
+    "Cover it.",
+    "Keep it damp and turn it."
+   ],
+   "contexts": [
+    "the school pit",
+    "a home pit behind the kitchen",
+    "a farmer group's pit"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pit cut open."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if tins and polythene are thrown in."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they never rot\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Cross them out of the drawing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_ANYTHING",
+     "listen_for": [
+      "A polythene bag"
+     ],
+     "ask": "Which of these should NOT go into an organic waste pit?",
+     "repair": "Dig up an old pit with a teacher. Ask what rotted and what did not."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_COOKED",
+     "listen_for": [
+      "They are the best food for the pit"
+     ],
+     "ask": "Why do we keep leftover meat and oily food out of the organic waste pit?",
+     "repair": "Ask what comes to a rubbish heap with meat scraps. Then say what a pit for a school garden should attract."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_NO_CARE",
+     "listen_for": [
+      "Leave it dry and open for the whole year"
+     ],
+     "ask": "After the pit is filled, what should the school do?",
+     "repair": "Compare a damp covered heap and a dry open heap after a month."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG5_PIT_DEEP",
+     "listen_for": [
+      "Water helps the waste rot faster"
+     ],
+     "ask": "Why is an organic waste pit not dug in a waterlogged place?",
+     "repair": "Compare a jar of leaves just damp with one under water after two weeks: smell and look."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two things that can go in an organic waste pit.",
+     "answer": "any two of leaves, peelings, grass, dung",
+     "shows": "materials"
+    },
+    {
+     "question": "Why is the pit kept covered?",
+     "answer": "to keep the heat and damp in and keep animals out",
+     "shows": "care"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+   "key_step": "The child says plant remains improve soil when used as mulch (keeps water, stops erosion, rots into humus) or compost, or ploughed in, and that burning wastes them.",
+   "floor": {
+    "prerequisite": "Knows what rots on a compost heap.",
+    "question": "Do maize stalks rot?",
+    "answer": "yes"
+   },
+   "representations": [
+    "two trays of soil, one mulched",
+    "a picture of a burnt field and a mulched field",
+    "a jar of humus"
+   ],
+   "steps": [
+    "Plant remains can mulch, be composted or be dug in.",
+    "They cover the soil and keep water in.",
+    "They rot and add humus.",
+    "Burning loses all of this."
+   ],
+   "contexts": [
+    "maize stover after harvest",
+    "banana leaves in a garden",
+    "grass cut in the school compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two plots: one burnt, one mulched."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which keeps water after a week of sun."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the mulched one\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"mulch keeps water and adds humus\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG_REMAINS_BURN",
+     "listen_for": [
+      "Nothing, burning is best"
+     ],
+     "ask": "After harvest, a farmer burns the maize stalks. What does the soil lose?",
+     "repair": "Ask what the soil would receive if the stalks were rotted or dug in."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG_REMAINS_WASTE",
+     "listen_for": [
+      "Throw them away on the road"
+     ],
+     "ask": "What is a good use of the leaves and grass cleared from the school compound?",
+     "repair": "Ask where forest soil gets its food from, then link to fallen leaves."
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG5_REM_FRESH",
+     "listen_for": [
+      "At once, the same day"
+     ],
+     "ask": "Maize stalks are laid on the soil. When do they feed the soil?",
+     "repair": "Look at mulch laid last term: what has happened to the bottom layer?"
+    },
+    {
+     "code": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG5_REM_ANIMALS",
+     "listen_for": [
+      "Only feeding them to cattle"
+     ],
+     "ask": "Which is a use of plant remains for soil improvement?",
+     "repair": "Ask what happens to the soil under a mulch of dry grass in the dry season."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way plant remains improve soil.",
+     "answer": "mulch, compost or digging in",
+     "shows": "use"
+    },
+    {
+     "question": "Why is burning plant remains a waste?",
+     "answer": "the humus they would give is lost",
+     "shows": "burning"
+    }
+   ]
+  }
+ ]
+}

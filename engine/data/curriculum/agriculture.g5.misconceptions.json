@@ -151,6 +151,66 @@
    "why": "Children in farming homes know leaves and grass are used for mulch and manure; a trap option."
   }
  },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG5_SITE_PLANTS": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
+  "error": "Thinks soil where weeds grow thickly is always poor and needs improving.",
+  "example": {
+   "question": "Thick green weeds grow in one corner of the school. What does this say about the soil?",
+   "wrong_answer": "The soil there is poor",
+   "correct_answer": "The soil there is likely fertile and moist"
+  },
+  "cause": "The child sees weeds as a sign of a neglected, bad place.",
+  "reveals": "Offer \"The soil there is poor\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare the weedy corner with a bare hard patch: which soil is dark and soft when dug?",
+  "feedback": "Plants grow thickly where the soil is good. Bare, hard or washed patches need improving.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG5_PIT_DEEP": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+  "error": "Thinks the deeper the pit, the better, even if it fills with water.",
+  "example": {
+   "question": "Why is an organic waste pit not dug in a waterlogged place?",
+   "wrong_answer": "Water helps the waste rot faster",
+   "correct_answer": "The pit fills with water, the waste rots badly and smells"
+  },
+  "cause": "The child knows rotting needs water and does not see that too much water stops air reaching it.",
+  "reveals": "Offer \"Water helps the waste rot faster\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a jar of leaves just damp with one under water after two weeks: smell and look.",
+  "feedback": "Waste rots well when damp, not soaked. A pit in wet ground floods and smells.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG5_REM_FRESH": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+  "error": "Thinks fresh plant remains feed the crop the moment they are put on the soil.",
+  "example": {
+   "question": "Maize stalks are laid on the soil. When do they feed the soil?",
+   "wrong_answer": "At once, the same day",
+   "correct_answer": "Slowly, as they rot over weeks and months"
+  },
+  "cause": "The child thinks of plant remains like fertiliser poured on.",
+  "reveals": "Offer \"At once, the same day\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at mulch laid last term: what has happened to the bottom layer?",
+  "feedback": "Plant remains feed the soil slowly as they rot. Meanwhile they cover and protect it.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG5_REM_ANIMALS": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+  "error": "Thinks plant remains are only good as animal feed and give the soil nothing.",
+  "example": {
+   "question": "Which is a use of plant remains for soil improvement?",
+   "wrong_answer": "Only feeding them to cattle",
+   "correct_answer": "Using them as mulch or compost"
+  },
+  "cause": "In many homes stover goes to the animals, so the child sees no other use.",
+  "reveals": "Offer \"Only feeding them to cattle\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to the soil under a mulch of dry grass in the dry season.",
+  "feedback": "Plant remains can be mulch or compost. They keep water in and add humus to the soil.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_NOON": {
   "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
   "error": "Thinks midday is the best time to water because it is hot and the plants are thirsty.",
@@ -246,6 +306,51 @@
    "why": "Children who have felt wet mulched soil expect it to stay damp; a trap option."
   }
  },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG5_WAT_GREY": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+  "error": "Thinks used washing water can never be used in the garden.",
+  "example": {
+   "question": "Which water can be reused on garden plants?",
+   "wrong_answer": "None, garden water must be fresh",
+   "correct_answer": "Water left after washing vegetables or rinsing, without strong soap"
+  },
+  "cause": "The child thinks used water is dirty and harmful to everything.",
+  "reveals": "Offer \"None, garden water must be fresh\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour vegetable-washing water on a bed and watch the plants over a week.",
+  "feedback": "Water from washing vegetables can water the garden. Do not use water with strong soap or bleach.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG5_TEST_SURFACE": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+  "error": "Judges the soil only by its top crust, so the bare bed looks as damp as the mulched one after rain.",
+  "example": {
+   "question": "How should you check how damp the soil is in the mulching test?",
+   "wrong_answer": "Look at the top of the soil",
+   "correct_answer": "Push a finger or a stick a few centimetres into the soil and feel"
+  },
+  "cause": "The child trusts what is seen on the surface.",
+  "reveals": "Offer \"Look at the top of the soil\" next to the right answer and ask the question again in a new context.",
+  "help": "Dig a finger into both beds two days after watering: the bare one is dry below the crust.",
+  "feedback": "Feel a few centimetres down. The top can look damp while the soil below is dry.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG5_TEST_ONEDAY": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+  "error": "Reads the result after one day and calls it final.",
+  "example": {
+   "question": "When should the results of a mulching test be read?",
+   "wrong_answer": "After one day",
+   "correct_answer": "After several days, checking each day"
+  },
+  "cause": "The child wants a quick answer and does not see that change takes time.",
+  "reveals": "Offer \"After one day\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the record sheet: on day one both beds feel the same, by day five they differ.",
+  "feedback": "A fair test needs time. Check every day for several days before you decide.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_MIX": {
   "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
   "error": "Mixes up which animal does which damage.",
@@ -340,6 +445,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG5_DMG_MONKEY": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+  "error": "Thinks baboons and monkeys harm only fruit trees and never other crops or property.",
+  "example": {
+   "question": "What damage can baboons do on a farm?",
+   "wrong_answer": "Only eat fruit",
+   "correct_answer": "Uproot and eat maize, eat fruit and break into stores"
+  },
+  "cause": "The child has seen monkeys in fruit trees only.",
+  "reveals": "Offer \"Only eat fruit\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a picture of a maize field after baboons; ask what was eaten.",
+  "feedback": "Baboons and monkeys eat many crops and can break into stores, not only fruit trees.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG5_DMG_NIGHT": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+  "error": "Thinks damage found in the morning was done by domestic animals, because wild animals come only by day.",
+  "example": {
+   "question": "Crops are found eaten in the morning with holes under the fence. Who could have done it?",
+   "wrong_answer": "Only the neighbour's goats in the day",
+   "correct_answer": "A wild animal such as a porcupine at night"
+  },
+  "cause": "The child does not know many wild animals feed at night.",
+  "reveals": "Offer \"Only the neighbour's goats in the day\" next to the right answer and ask the question again in a new context.",
+  "help": "Show tracks and a porcupine quill near a damaged plot.",
+  "feedback": "Many wild animals, like porcupines and bush pigs, feed at night. Look for tracks.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG5_REP_FIRE": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+  "error": "Thinks setting the bush on fire is a good way to chase wild animals away.",
+  "example": {
+   "question": "Is burning the bush a good way to repel wild animals?",
+   "wrong_answer": "Yes, it chases them away",
+   "correct_answer": "No, it destroys their home, the soil and can burn farms and people"
+  },
+  "cause": "The child sees the animals run from fire and thinks it works.",
+  "reveals": "Offer \"Yes, it chases them away\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what else the fire burns: grass for cattle, trees, homes.",
+  "feedback": "Burning harms land, people and animals. Use safe methods like fences, noise and chilli.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_ORDER": {
   "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
@@ -493,6 +643,66 @@
    "why": "Children know seedlings need watering; a trap option."
   }
  },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG5_VEG_HARVEST": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+  "error": "Thinks vegetables are harvested by uprooting the whole plant every time.",
+  "example": {
+   "question": "How are sukuma wiki leaves harvested?",
+   "wrong_answer": "Uproot the whole plant",
+   "correct_answer": "Pick the lower mature leaves and leave the plant to grow"
+  },
+  "cause": "The child has seen root crops pulled out and thinks all crops end at harvest.",
+  "reveals": "Offer \"Uproot the whole plant\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a kale plant picked for weeks: the stem has scars of old leaves.",
+  "feedback": "Pick the older lower leaves of sukuma wiki. The plant keeps growing new ones.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG5_VEG_MANURE": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+  "error": "Leaves out manure because vegetables are small plants that need little food.",
+  "example": {
+   "question": "Should manure be added when preparing a vegetable bed?",
+   "wrong_answer": "No, vegetables are small",
+   "correct_answer": "Yes, vegetables grow fast and need rich soil"
+  },
+  "cause": "The child judges a plant's needs by its size.",
+  "reveals": "Offer \"No, vegetables are small\" next to the right answer and ask the question again in a new context.",
+  "help": "Grow kale in poor soil and in manured soil side by side.",
+  "feedback": "Vegetables grow fast and need rich soil. Add well-rotted manure.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG5_NURS_SHADE": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+  "error": "Leaves the nursery bed in full sun with no shade.",
+  "example": {
+   "question": "Why is a nursery bed given shade?",
+   "wrong_answer": "It is not needed",
+   "correct_answer": "Young seedlings dry and scorch in strong sun"
+  },
+  "cause": "The child knows plants need sun and thinks more is always better.",
+  "reveals": "Offer \"It is not needed\" next to the right answer and ask the question again in a new context.",
+  "help": "Put one tray of seedlings in the sun and one under a shade for a hot day.",
+  "feedback": "Young seedlings are tender. Light shade stops them drying out.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG5_TRANS_SMALL": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+  "error": "Transplants seedlings as soon as they come up, with one leaf.",
+  "example": {
+   "question": "When are seedlings ready to transplant?",
+   "wrong_answer": "As soon as they come up",
+   "correct_answer": "When they have four to six true leaves and are hardened"
+  },
+  "cause": "The child thinks moving them early saves time.",
+  "reveals": "Offer \"As soon as they come up\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a tiny and a ready seedling; ask which has the stronger roots.",
+  "feedback": "Transplant when seedlings have four to six true leaves and are about a pencil thick.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_COCK": {
   "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
   "error": "Thinks a cock (or any chicken) can be the source of eggs or mixes hens and cocks.",
@@ -607,6 +817,36 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG5_PROD_HONEY": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+  "error": "Thinks honey is made by flowers and bees only carry it.",
+  "example": {
+   "question": "Where does honey come from?",
+   "wrong_answer": "Flowers make it and bees carry it",
+   "correct_answer": "Bees make it from nectar they collect from flowers"
+  },
+  "cause": "The child knows flowers are involved and does not know the bees change nectar into honey.",
+  "reveals": "Offer \"Flowers make it and bees carry it\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a honeycomb: the bees store and change the nectar inside it.",
+  "feedback": "Bees make honey from flower nectar and store it in the comb.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG5_USE_CAMEL": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+  "error": "Thinks camels are kept only for carrying loads.",
+  "example": {
+   "question": "What do camels give families in northern Kenya?",
+   "wrong_answer": "Only carrying",
+   "correct_answer": "Milk, meat and carrying"
+  },
+  "cause": "The child knows the camel only as a pack animal from pictures.",
+  "reveals": "Offer \"Only carrying\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a picture of camel milk in a market in Isiolo.",
+  "feedback": "Camels give milk and meat and carry loads in dry areas.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WET": {
   "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
   "error": "Stores grain while it is still damp.",
@@ -720,6 +960,36 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG5_PRES_ASH": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+  "error": "Thinks mixing grain with ash or storage dust is done to add flavour.",
+  "example": {
+   "question": "Why do some farmers mix stored beans with ash?",
+   "wrong_answer": "To make them taste better",
+   "correct_answer": "To keep weevils away"
+  },
+  "cause": "The child has seen ash mixed with food in other cooking and links it to taste.",
+  "reveals": "Offer \"To make them taste better\" next to the right answer and ask the question again in a new context.",
+  "help": "Show weevil holes in untreated beans next to beans stored with ash.",
+  "feedback": "Ash keeps weevils from moving and laying eggs in stored beans. It is washed off before cooking.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG5_PRACT_MIXOLD": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+  "error": "Pours the new harvest on top of last season's grain in the store.",
+  "example": {
+   "question": "What should be done with old grain before storing the new harvest?",
+   "wrong_answer": "Pour the new grain on top",
+   "correct_answer": "Remove the old grain and clean the store first"
+  },
+  "cause": "The child thinks the store is simply a place to keep adding to.",
+  "reveals": "Offer \"Pour the new grain on top\" next to the right answer and ask the question again in a new context.",
+  "help": "Show weevils in old grain; ask where they go when new grain is poured on.",
+  "feedback": "Empty and clean the store before the new harvest. Old grain carries pests into the new.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_PROT_ENERGY": {
   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
@@ -968,6 +1238,51 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG5_NUT_WATER": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+  "error": "Leaves water out of what the body needs from food and drink.",
+  "example": {
+   "question": "Why does the body need water?",
+   "wrong_answer": "It does not; only food matters",
+   "correct_answer": "To carry food and waste, cool the body and help digestion"
+  },
+  "cause": "The child thinks of water as a drink, not as part of a healthy diet.",
+  "reveals": "Offer \"It does not; only food matters\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how you feel after games on a hot day with no water.",
+  "feedback": "Water carries food round the body, removes waste and keeps us cool. Drink clean water every day.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG5_DIS_RICKETS": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+  "error": "Thinks rickets (soft, bent leg bones) is caused by walking too early.",
+  "example": {
+   "question": "What causes rickets?",
+   "wrong_answer": "Walking too early",
+   "correct_answer": "Too little vitamin D and calcium (sunlight, milk, small fish)"
+  },
+  "cause": "The child sees bent legs and links them to how the child walks.",
+  "reveals": "Offer \"Walking too early\" next to the right answer and ask the question again in a new context.",
+  "help": "Show which foods and what sunlight build strong bones.",
+  "feedback": "Rickets comes from too little vitamin D and calcium. Milk, omena and sunlight help bones grow strong.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG5_PREV_SWEETS": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+  "error": "Thinks sweets and soda give the body what it needs to stay healthy because they give energy.",
+  "example": {
+   "question": "Do sweets and soda prevent nutritional diseases?",
+   "wrong_answer": "Yes, they give energy",
+   "correct_answer": "No, they give sugar but almost none of the other nutrients"
+  },
+  "cause": "The child knows sugar gives energy and thinks energy is all the body needs.",
+  "reveals": "Offer \"Yes, they give energy\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a soda with milk on a nutrient chart: which has protein and calcium?",
+  "feedback": "Sweets and soda give sugar only. Healthy bodies need all the nutrients from many foods.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DEEP_LITTLE": {
   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
   "error": "Thinks deep frying uses only a little oil.",
@@ -1101,6 +1416,21 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG5_FRY_COLDOIL": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+  "error": "Puts food into cold oil and heats them together for deep frying.",
+  "example": {
+   "question": "When is food put into the oil for deep frying?",
+   "wrong_answer": "Into cold oil, then heat",
+   "correct_answer": "When the oil is hot enough"
+  },
+  "cause": "The child does not know cold oil soaks into the food.",
+  "reveals": "Offer \"Into cold oil, then heat\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a piece fried from cold oil (greasy) with one put into hot oil (crisp).",
+  "feedback": "Wait for the oil to be hot before adding food, or the food soaks up oil and goes soggy.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_EXPENSIVE": {
   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
   "error": "Thinks good grooming needs expensive clothes or soaps.",
@@ -1195,6 +1525,51 @@
    "mark": "doubtful",
    "why": "Kenyan children are taught to greet; not greeting is mostly a trap option."
   }
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG5_GROOM_HAIR": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+  "error": "Thinks hair only needs combing for school photos and visits.",
+  "example": {
+   "question": "How often should hair be combed or brushed?",
+   "wrong_answer": "Only on special days",
+   "correct_answer": "Every day"
+  },
+  "cause": "The child links grooming with being seen by visitors.",
+  "reveals": "Offer \"Only on special days\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to uncombed hair over a week: tangles, dirt, lice.",
+  "feedback": "Comb or brush your hair every day to keep it neat and clean.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG5_DRESS_GARDEN": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+  "error": "Wears school or best clothes for digging in the garden.",
+  "example": {
+   "question": "What should you wear for gardening?",
+   "wrong_answer": "My best school uniform",
+   "correct_answer": "Old clothes or an overall, and gumboots"
+  },
+  "cause": "The child thinks neat means wearing the best clothes for everything.",
+  "reveals": "Offer \"My best school uniform\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a uniform after a gardening lesson.",
+  "feedback": "Wear old clothes or an overall for gardening. Keep your uniform clean for class.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG5_ETIQ_EAT": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+  "error": "Talks with food in the mouth and reaches across the table.",
+  "example": {
+   "question": "Which is good table manners?",
+   "wrong_answer": "Talking with a full mouth",
+   "correct_answer": "Chewing with the mouth closed and asking for food to be passed"
+  },
+  "cause": "The child eats at home without thinking about others at the table.",
+  "reveals": "Offer \"Talking with a full mouth\" next to the right answer and ask the question again in a new context.",
+  "help": "Act out two meals and ask which is pleasant to sit next to.",
+  "feedback": "Chew with your mouth closed and ask politely for food to be passed.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_CEMENT": {
   "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
@@ -1310,6 +1685,36 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG5_SURF_PLASTIC": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+  "error": "Thinks a plastic table is made of wood because it is coloured brown.",
+  "example": {
+   "question": "A brown table is light, smooth and bends a little. What is it made of?",
+   "wrong_answer": "Wood, because it is brown",
+   "correct_answer": "Plastic"
+  },
+  "cause": "The child names the material from its colour.",
+  "reveals": "Offer \"Wood, because it is brown\" next to the right answer and ask the question again in a new context.",
+  "help": "Tap a plastic and a wooden table; feel the weight and grain.",
+  "feedback": "Look at how it feels, sounds and bends, not only its colour.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG5_SURF_EARTH": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+  "error": "Thinks an earthen floor is just dirt that cannot be cleaned.",
+  "example": {
+   "question": "Can an earthen floor be kept clean?",
+   "wrong_answer": "No, it is only dirt",
+   "correct_answer": "Yes, by sweeping and smearing it"
+  },
+  "cause": "The child thinks only hard floors count as clean surfaces.",
+  "reveals": "Offer \"No, it is only dirt\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a smeared earthen floor in a rural home: smooth and swept.",
+  "feedback": "Earthen floors are swept daily and smeared to keep them smooth and clean.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_ORDER": {
   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
   "error": "Puts the laundry steps in the wrong order (ironing before washing, drying before rinsing).",
@@ -1423,6 +1828,36 @@
    "mark": "doubtful",
    "why": "Few children iron cotton cold; mostly a trap option."
   }
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG5_LAUN_SORT": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+  "error": "Skips sorting and mending, and goes straight to soaking.",
+  "example": {
+   "question": "What is the first step in laundering?",
+   "wrong_answer": "Soak everything together",
+   "correct_answer": "Sort the clothes and mend any tears"
+  },
+  "cause": "The child thinks washing starts with water.",
+  "reveals": "Offer \"Soak everything together\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a small tear that became a big hole after washing.",
+  "feedback": "Sort and mend first. Washing makes small tears bigger.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG5_CARE_WRING": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+  "error": "Twists and wrings coloured cotton hard to dry it fast.",
+  "example": {
+   "question": "How should a coloured cotton shirt be squeezed after rinsing?",
+   "wrong_answer": "Twist it as hard as possible",
+   "correct_answer": "Squeeze gently or fold and press"
+  },
+  "cause": "The child thinks harder wringing dries faster with no harm.",
+  "reveals": "Offer \"Twist it as hard as possible\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a shirt wrung hard (creased, stretched) with one squeezed gently.",
+  "feedback": "Squeeze cotton gently. Hard wringing stretches and creases it.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_SWAP": {
   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
@@ -1538,6 +1973,36 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG5_STITCH_TACK": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+  "error": "Thinks running stitch and tacking are exactly the same and both are taken out.",
+  "example": {
+   "question": "How is running stitch different from tacking?",
+   "wrong_answer": "They are the same and both are removed",
+   "correct_answer": "Running stitch is smaller and stays in; tacking is long and is removed"
+  },
+  "cause": "The child sees the same in-and-out movement.",
+  "reveals": "Offer \"They are the same and both are removed\" next to the right answer and ask the question again in a new context.",
+  "help": "Lay a tacking sample beside a running stitch sample and measure the stitches.",
+  "feedback": "Running stitch is small and permanent. Tacking is long and comes out.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG5_SEAM_RIGHT": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+  "error": "Repairs the seam on the right side of the garment so the stitches show.",
+  "example": {
+   "question": "Which side of the garment is a seam repaired from?",
+   "wrong_answer": "The right side, where it shows",
+   "correct_answer": "The wrong side, along the old seam line"
+  },
+  "cause": "The child works where the hole is seen.",
+  "reveals": "Offer \"The right side, where it shows\" next to the right answer and ask the question again in a new context.",
+  "help": "Turn a shirt inside out and show the old seam line to follow.",
+  "feedback": "Turn the garment inside out and stitch along the old seam line.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_NEED_LAND": {
   "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
   "error": "Thinks a vertical garden needs more land than a flat one.",
@@ -1632,5 +2097,50 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG5_GTYPE_TOWN": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+  "error": "Thinks innovative gardens are only for towns.",
+  "example": {
+   "question": "Who can use a sack garden?",
+   "wrong_answer": "Only people in towns",
+   "correct_answer": "Anyone with little space, water or good soil, in town or village"
+  },
+  "cause": "The child has seen sack gardens in town pictures only.",
+  "reveals": "Offer \"Only people in towns\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where a village school with rocky ground could grow kale.",
+  "feedback": "Innovative gardens help anyone short of land, water or good soil.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG5_GTYPE_TYRE": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+  "error": "Thinks a tyre garden is vertical because tyres stand up.",
+  "example": {
+   "question": "Old tyres laid flat on the ground and filled with soil make which garden?",
+   "wrong_answer": "Vertical",
+   "correct_answer": "Horizontal"
+  },
+  "cause": "The child knows tyres can stand upright and does not look at how they are laid.",
+  "reveals": "Offer \"Vertical\" next to the right answer and ask the question again in a new context.",
+  "help": "Lay a tyre flat and one stacked in a tower; ask which grows upwards.",
+  "feedback": "Tyres laid flat side by side make a horizontal garden. Stacked up, they make a vertical one.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG5_GBUILD_SUN": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
+  "error": "Puts the innovative garden in deep shade behind a building.",
+  "example": {
+   "question": "Where should a sack garden be placed?",
+   "wrong_answer": "In deep shade behind a wall",
+   "correct_answer": "Where it gets sunlight for most of the day, near water"
+  },
+  "cause": "The child thinks shade keeps the soil damp and so is best.",
+  "reveals": "Offer \"In deep shade behind a wall\" next to the right answer and ask the question again in a new context.",
+  "help": "Grow kale in one sack in shade and one in sun for three weeks.",
+  "feedback": "Vegetables need sunlight. Put the garden in the sun and near water.",
+  "source": "To confirm by a CBC Agriculture teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  }
 }

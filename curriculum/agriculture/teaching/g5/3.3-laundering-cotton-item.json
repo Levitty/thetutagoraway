@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM",
+ "title": "Laundering Cotton Item",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a handkerchief or a cotton T-shirt. A charcoal iron is used only by the teacher; children press with a cool flat iron if one is safe and supervised.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+   "key_step": "The child orders the steps of laundering cotton: sort, mend, soak, wash (whites first), rinse well, dry, iron, fold and store.",
+   "floor": {
+    "prerequisite": "Knows cleaning jobs are done in order.",
+    "question": "Which comes first: dusting or mopping?",
+    "answer": "dusting"
+   },
+   "representations": [
+    "step cards to order",
+    "a basin, soap and a cotton item",
+    "a picture chart"
+   ],
+   "steps": [
+    "Sort and mend.",
+    "Soak; wash.",
+    "Rinse until the water is clear.",
+    "Dry, iron, fold."
+   ],
+   "contexts": [
+    "washing a school shirt",
+    "a handkerchief",
+    "bedsheets at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the cards: rinse, wash, dry."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the order."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"wash, rinse, dry\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Order the cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_ORDER",
+     "listen_for": [
+      "Ironing them"
+     ],
+     "ask": "Which comes first in laundering clothes?",
+     "repair": "Lay out the steps on cards and do a real small wash in that order."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_MIX",
+     "listen_for": [
+      "There is no reason"
+     ],
+     "ask": "Why wash white and coloured clothes separately?",
+     "repair": "Soak a red cloth with a white one in a basin and look at the water."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_RINSE",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What happens if soap is left in clothes?",
+     "repair": "Feel a rinsed and an unrinsed cloth when dry."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG5_LAUN_SORT",
+     "listen_for": [
+      "Soak everything together"
+     ],
+     "ask": "What is the first step in laundering?",
+     "repair": "Show a small tear that became a big hole after washing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What comes after washing?",
+     "answer": "rinsing",
+     "shows": "order"
+    },
+    {
+     "question": "Why rinse until the water is clear?",
+     "answer": "to remove all the soap",
+     "shows": "rinse"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+   "key_step": "The child cares for white and fast-coloured cotton: warm or hot water for whites, warm for colours, gentle squeezing, whites dried in the sun and colours inside out in shade, ironed while slightly damp with a hot iron.",
+   "floor": {
+    "prerequisite": "Knows the steps of laundering.",
+    "question": "What is done before drying?",
+    "answer": "rinsing"
+   },
+   "representations": [
+    "white and coloured cotton samples",
+    "a drying line in sun and shade",
+    "a care chart"
+   ],
+   "steps": [
+    "Wash whites and colours apart.",
+    "Use the right water heat.",
+    "Squeeze gently.",
+    "Dry whites in sun, colours in shade, inside out.",
+    "Iron slightly damp."
+   ],
+   "contexts": [
+    "a white school shirt",
+    "a coloured T-shirt",
+    "a cotton tablecloth"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a coloured shirt on a line in strong sun."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the colour over many weeks."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it fades\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"colours: shade, inside out\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_HOT",
+     "listen_for": [
+      "Very hot water"
+     ],
+     "ask": "What is best for washing coloured cotton?",
+     "repair": "Wash two cloths of the same colour, one in cool and one in hot water, and look at the water."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_SUN",
+     "listen_for": [
+      "Face out in the hot sun"
+     ],
+     "ask": "How should coloured clothes be dried?",
+     "repair": "Compare an old shirt dried face out in the sun for a term with a shirt dried in the shade."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_IRON",
+     "listen_for": [
+      "With a cool iron when soaking wet"
+     ],
+     "ask": "How is cotton ironed?",
+     "repair": "Iron two pieces of cotton, one dripping and one a little damp, with a teacher."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG5_CARE_WRING",
+     "listen_for": [
+      "Twist it as hard as possible"
+     ],
+     "ask": "How should a coloured cotton shirt be squeezed after rinsing?",
+     "repair": "Compare a shirt wrung hard (creased, stretched) with one squeezed gently."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where should white cotton be dried?",
+     "answer": "in the sun",
+     "shows": "whites"
+    },
+    {
+     "question": "When is cotton easiest to iron?",
+     "answer": "when slightly damp",
+     "shows": "ironing"
+    }
+   ]
+  }
+ ]
+}

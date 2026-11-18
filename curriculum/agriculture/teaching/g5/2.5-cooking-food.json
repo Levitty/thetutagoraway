@@ -1,0 +1,188 @@
+{
+ "sub_strand": "AGRI.G5.FOOD_P.COOKING_FOOD",
+ "title": "Cooking Food",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Deep frying in class is a teacher demonstration only, children standing a metre back. Children may dry fat fry minced meat or bacon-like fatty meat under close watch.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+   "key_step": "The child describes dry fat frying (cooking fatty food in its own fat in a pan with little or no oil added: minced meat, sausages, fatty meat) and deep frying (food covered in hot oil: chips, mandazi, samosas, fish) and the foods that suit each.",
+   "floor": {
+    "prerequisite": "Knows shallow frying from Grade 4.",
+    "question": "How much oil is used in shallow frying?",
+    "answer": "a little"
+   },
+   "representations": [
+    "pictures of a dry pan with sausages and a deep pan of oil",
+    "a sorting chart",
+    "a demonstration"
+   ],
+   "steps": [
+    "Dry fat frying: the food's own fat, little or no oil.",
+    "Deep frying: food covered in hot oil.",
+    "Match the food to the method."
+   ],
+   "contexts": [
+    "mandazi for a school event",
+    "chips from a kibanda",
+    "sausages for breakfast"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a deep pot with mandazi floating in oil."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the oil.",
+     "say": "Is the food covered?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"yes\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"deep frying\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DEEP_LITTLE",
+     "listen_for": [
+      "A spoonful"
+     ],
+     "ask": "How much oil does deep frying use?",
+     "repair": "Compare a pan of mandazi frying in deep oil and eggs frying in a little oil."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DRY_LOTS",
+     "listen_for": [
+      "Deep frying"
+     ],
+     "ask": "Sausages are cooked in a pan with no added oil. Which method is this?",
+     "repair": "Warm sausages in a dry pan and watch the fat come out."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_MIX",
+     "listen_for": [
+      "Sausages"
+     ],
+     "ask": "Which food is usually deep fried?",
+     "repair": "Ask whether the food floats in oil or cooks in its own fat."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG5_FRY_COLDOIL",
+     "listen_for": [
+      "Into cold oil, then heat"
+     ],
+     "ask": "When is food put into the oil for deep frying?",
+     "repair": "Compare a piece fried from cold oil (greasy) with one put into hot oil (crisp)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which method is used for mandazi?",
+     "answer": "deep frying",
+     "shows": "match"
+    },
+    {
+     "question": "Why is little or no oil added in dry fat frying?",
+     "answer": "the food cooks in its own fat",
+     "shows": "dry fat"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+   "key_step": "The child says how to fry safely (dry the food, fill the pan only a third, lower food in gently away from you, never leave hot oil, a lid or damp cloth for an oil fire, never water) and how to serve fried food (drain on paper, serve hot, clean up).",
+   "floor": {
+    "prerequisite": "Knows the frying methods.",
+    "question": "Which method covers food in oil?",
+    "answer": "deep frying"
+   },
+   "representations": [
+    "a pan marked at one third",
+    "a lid and a dry cloth",
+    "a safety poster"
+   ],
+   "steps": [
+    "Dry the food.",
+    "Fill the pan only a third.",
+    "Lower food in gently.",
+    "Stay with the pan; lid for a fire.",
+    "Drain and serve."
+   ],
+   "contexts": [
+    "frying mandazi at home",
+    "chips at a school fair",
+    "fish in Kisumu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pan of oil with flames."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to do."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"cover it with a lid or damp cloth, turn off the heat\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"never water on an oil fire\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_WATER",
+     "listen_for": [
+      "Pour water on it"
+     ],
+     "ask": "A pan of oil catches fire. What do you do?",
+     "repair": "Show with a teacher why water and hot oil spit and spread the fire."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_WET",
+     "listen_for": [
+      "Water in the oil makes no difference"
+     ],
+     "ask": "Why should food be dry before it goes into hot oil?",
+     "repair": "Dry one piece and leave another wet, drop each into a safe test with a teacher."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_FULL",
+     "listen_for": [
+      "Right to the top"
+     ],
+     "ask": "How full should the pan be for deep frying?",
+     "repair": "Ask what happens when food goes into a full pan."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_LEAVE",
+     "listen_for": [
+      "Go and answer, the oil will wait"
+     ],
+     "ask": "Hot oil is on the stove and the phone rings. What do you do?",
+     "repair": "Ask how fast oil heats and when it smokes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is wet food dangerous in hot oil?",
+     "answer": "the water spits and the oil can burn you",
+     "shows": "wet food"
+    },
+    {
+     "question": "How full should a deep-frying pan be?",
+     "answer": "about one third",
+     "shows": "oil level"
+    }
+   ]
+  }
+ ]
+}

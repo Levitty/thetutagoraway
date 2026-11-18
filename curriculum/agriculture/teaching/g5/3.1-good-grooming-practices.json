@@ -1,0 +1,186 @@
+{
+ "sub_strand": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES",
+ "title": "Good Grooming Practices",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Grooming is about clean and neat, not costly. Never single out a child's clothes or appearance.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+   "key_step": "The child describes good grooming as a daily habit: bathing, clean teeth, combed hair, short clean nails, clean ironed clothes, clean shoes, and says it keeps us healthy and confident without costing much.",
+   "floor": {
+    "prerequisite": "Knows the personal hygiene practices.",
+    "question": "How often should we bathe?",
+    "answer": "every day"
+   },
+   "representations": [
+    "a daily routine chart",
+    "pictures of well and poorly groomed learners (cartoons)",
+    "a checklist"
+   ],
+   "steps": [
+    "Bathe and brush teeth.",
+    "Comb hair; cut nails.",
+    "Wear clean clothes and shoes.",
+    "Do it every day."
+   ],
+   "contexts": [
+    "getting ready for school",
+    "Sunday at church or mosque",
+    "a school trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"grooming: only for special days?\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the class."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, every day\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"a daily habit\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_EXPENSIVE",
+     "listen_for": [
+      "Wearing the most expensive clothes"
+     ],
+     "ask": "Which is part of good grooming?",
+     "repair": "Ask whether a clean old shirt is good grooming."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_PERFUME",
+     "listen_for": [
+      "Perfume without bathing"
+     ],
+     "ask": "Which keeps a child healthy and fresh?",
+     "repair": "Ask what scent covers and what soap removes."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_SPECIAL",
+     "listen_for": [
+      "Only on special days"
+     ],
+     "ask": "How often should a child brush teeth and bathe?",
+     "repair": "Ask when germs gather."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG5_GROOM_HAIR",
+     "listen_for": [
+      "Only on special days"
+     ],
+     "ask": "How often should hair be combed or brushed?",
+     "repair": "Ask what happens to uncombed hair over a week: tangles, dirt, lice."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two good grooming habits.",
+     "answer": "any two of bathing, combing hair, short nails, clean clothes",
+     "shows": "habits"
+    },
+    {
+     "question": "Does good grooming need costly clothes?",
+     "answer": "no, clean and neat is enough",
+     "shows": "cost"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+   "key_step": "The child chooses suitable dress for each occasion and activity (uniform for school, old clothes for gardening, sports kit for games, decent clothes for worship) and good manners (greeting, please and thank you, table manners, waiting your turn).",
+   "floor": {
+    "prerequisite": "Knows good grooming habits.",
+    "question": "Name a good grooming habit.",
+    "answer": "combing hair daily"
+   },
+   "representations": [
+    "pictures of occasions and outfits",
+    "role-play cards",
+    "a manners chart"
+   ],
+   "steps": [
+    "Name the occasion.",
+    "Choose the clothes.",
+    "Choose the manners."
+   ],
+   "contexts": [
+    "a school sports day",
+    "a wedding",
+    "meeting a visitor at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"sports day\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what to wear."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"sports kit and sports shoes\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"dress for the activity\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG_DRESS_SAME",
+     "listen_for": [
+      "Your best clothes"
+     ],
+     "ask": "What is best to wear for farm work at school?",
+     "repair": "Ask what happens to best clothes in the mud, and what a games kit is for."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG_ETIQ_GREET",
+     "listen_for": [
+      "Ignore her, she is a stranger"
+     ],
+     "ask": "A visitor comes to school. What is good manners?",
+     "repair": "Practise a greeting for a visitor in class, then ask how the visitor would feel with no greeting."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG5_DRESS_GARDEN",
+     "listen_for": [
+      "My best school uniform"
+     ],
+     "ask": "What should you wear for gardening?",
+     "repair": "Show a uniform after a gardening lesson."
+    },
+    {
+     "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG5_ETIQ_EAT",
+     "listen_for": [
+      "Talking with a full mouth"
+     ],
+     "ask": "Which is good table manners?",
+     "repair": "Act out two meals and ask which is pleasant to sit next to."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should you wear for a football match?",
+     "answer": "sports kit",
+     "shows": "dress"
+    },
+    {
+     "question": "What do you say when someone passes you food?",
+     "answer": "thank you",
+     "shows": "manners"
+    }
+   ]
+  }
+ ]
+}

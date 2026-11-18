@@ -1,0 +1,362 @@
+{
+ "sub_strand": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+ "title": "Food Nutrients",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Talk about food and illness kindly: some children in class may know hunger. Say these diseases come from food the body lacks, never from a family's fault.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+   "key_step": "The child explains what each nutrient does: carbohydrates and fats give energy, proteins build and repair the body, vitamins and minerals protect and regulate it, water carries and cools, and roughage helps digestion.",
+   "floor": {
+    "prerequisite": "Knows the three food groups.",
+    "question": "What do body-building foods do?",
+    "answer": "help us grow"
+   },
+   "representations": [
+    "a nutrient chart with food pictures",
+    "a body outline with arrows",
+    "cards: nutrient and job"
+   ],
+   "steps": [
+    "Name the nutrient.",
+    "Say its job in the body.",
+    "Name a food rich in it."
+   ],
+   "contexts": [
+    "githeri for lunch",
+    "a breakfast of tea and bread",
+    "omena and ugali"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"protein\" and \"carbohydrate\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which builds and repairs the body."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"protein\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"protein: growth and repair; carbohydrate: energy\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_PROT_ENERGY",
+     "listen_for": [
+      "Carbohydrates"
+     ],
+     "ask": "Which nutrient builds and repairs the body?",
+     "repair": "Ask what a growing child needs to make new muscle."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_VIT_ENERGY",
+     "listen_for": [
+      "Give most of the energy"
+     ],
+     "ask": "What do vitamins do in the body?",
+     "repair": "Ask which group of foods stops illness."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_FAT_BAD",
+     "listen_for": [
+      "They do nothing useful"
+     ],
+     "ask": "What is one job of fats in the body?",
+     "repair": "Ask why animals in cold places have a layer of fat."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG5_NUT_WATER",
+     "listen_for": [
+      "It does not; only food matters"
+     ],
+     "ask": "Why does the body need water?",
+     "repair": "Ask how you feel after games on a hot day with no water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the main job of proteins?",
+     "answer": "to build and repair the body",
+     "shows": "protein"
+    },
+    {
+     "question": "Which nutrient helps food pass through the gut?",
+     "answer": "roughage",
+     "shows": "roughage"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
+   "key_step": "The child sorts foods by their main nutrient: carbohydrates (maize, rice, cassava, potatoes), proteins (beans, meat, eggs, milk, fish), fats and oils, vitamins and minerals (fruits and vegetables).",
+   "floor": {
+    "prerequisite": "Knows what each nutrient does.",
+    "question": "What do carbohydrates give?",
+    "answer": "energy"
+   },
+   "representations": [
+    "food pictures to sort",
+    "a nutrient table",
+    "a market list"
+   ],
+   "steps": [
+    "Name the food.",
+    "Ask what it is mostly made of.",
+    "Put it in its nutrient group."
+   ],
+   "contexts": [
+    "the school store",
+    "a market stall",
+    "a family supper"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw five boxes for the nutrient groups."
+    },
+    {
+     "beat": "point",
+     "do": "Show cooking oil.",
+     "say": "Protein or fat?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"fat\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write oil in Fats and oils."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_PLANT_VIT",
+     "listen_for": [
+      "Foods that protect the body (vitamins)"
+     ],
+     "ask": "Which group is cassava in?",
+     "repair": "Ask what ugali, rice and cassava have in common."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_MILK_ENERGY",
+     "listen_for": [
+      "Energy foods"
+     ],
+     "ask": "Which group is an egg in?",
+     "repair": "Ask what chicks grow from."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_FILLING",
+     "listen_for": [
+      "Body-building foods (proteins)"
+     ],
+     "ask": "Which group is ugali in?",
+     "repair": "Ask what ugali is made from and what it gives for running and playing."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_BUTTER_PROT",
+     "listen_for": [
+      "Proteins"
+     ],
+     "ask": "Which nutrient is cooking oil rich in?",
+     "repair": "Ask what is left on the pan after frying."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the main nutrient in beans?",
+     "answer": "protein",
+     "shows": "sort"
+    },
+    {
+     "question": "Which group are kale and oranges in?",
+     "answer": "vitamins and minerals",
+     "shows": "sort"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+   "key_step": "The child identifies nutritional diseases and their cause: kwashiorkor (too little protein: swollen belly and legs), marasmus (too little of all food: very thin), anaemia (too little iron), goitre (too little iodine), rickets (too little vitamin D and calcium), scurvy (too little vitamin C), night blindness (too little vitamin A).",
+   "floor": {
+    "prerequisite": "Knows what each nutrient does.",
+    "question": "Which nutrient builds the body?",
+    "answer": "protein"
+   },
+   "representations": [
+    "a disease and cause chart",
+    "cards to match",
+    "a story of a clinic visit"
+   ],
+   "steps": [
+    "Name the disease.",
+    "Name the nutrient missing.",
+    "Name a sign."
+   ],
+   "contexts": [
+    "a community health talk",
+    "a clinic poster",
+    "a school health club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"goitre: a swelling in the neck\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which mineral is missing."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"iodine\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"goitre: lack of iodine\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_SWAP",
+     "listen_for": [
+      "Kwashiorkor"
+     ],
+     "ask": "A very thin child with little muscle has had too little food overall. Which disease is this?",
+     "repair": "Describe the pictures: a swollen belly and puffy legs, and a very thin wasted child."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_CATCH",
+     "listen_for": [
+      "Yes, through touch"
+     ],
+     "ask": "Can anaemia from lack of iron spread from one child to another?",
+     "repair": "Ask what two children from the same home both ate and what they both missed."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_CAUSE",
+     "listen_for": [
+      "Calcium"
+     ],
+     "ask": "A swelling at the front of the neck can come from too little of which mineral?",
+     "repair": "Match each disease with its missing nutrient on a card."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG5_DIS_RICKETS",
+     "listen_for": [
+      "Walking too early"
+     ],
+     "ask": "What causes rickets?",
+     "repair": "Show which foods and what sunlight build strong bones."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which disease is caused by too little protein?",
+     "answer": "kwashiorkor",
+     "shows": "cause"
+    },
+    {
+     "question": "Lack of iron leads to which condition?",
+     "answer": "anaemia",
+     "shows": "cause"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+   "key_step": "The child chooses foods and habits that prevent nutritional diseases: a balanced diet every day, iodised salt, fruits and vegetables, milk and small fish, breastfeeding babies, and visiting the clinic.",
+   "floor": {
+    "prerequisite": "Knows the nutritional diseases and their causes.",
+    "question": "What causes goitre?",
+    "answer": "too little iodine"
+   },
+   "representations": [
+    "a prevention chart",
+    "packets of iodised salt and plain salt",
+    "a plate model"
+   ],
+   "steps": [
+    "Name the disease.",
+    "Name the food that prevents it.",
+    "Add it to a balanced meal."
+   ],
+   "contexts": [
+    "a family menu",
+    "the school feeding programme",
+    "a market trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"night blindness\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which foods prevent it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for carrots, pawpaw, green vegetables."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"vitamin A: carrots, pawpaw, greens\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_ONE_FOOD",
+     "listen_for": [
+      "Only ugali, as much as they want"
+     ],
+     "ask": "Which meal protects a family best from nutritional diseases?",
+     "repair": "Ask which nutrients ugali alone is missing."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_SALT",
+     "listen_for": [
+      "Any salt, even if it has no iodine"
+     ],
+     "ask": "Which salt helps prevent goitre?",
+     "repair": "Check the packet for the word iodised."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_MEDICINE",
+     "listen_for": [
+      "Only with medicine"
+     ],
+     "ask": "How is kwashiorkor best prevented?",
+     "repair": "Ask what a family can do at the next meal."
+    },
+    {
+     "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG5_PREV_SWEETS",
+     "listen_for": [
+      "Yes, they give energy"
+     ],
+     "ask": "Do sweets and soda prevent nutritional diseases?",
+     "repair": "Compare a soda with milk on a nutrient chart: which has protein and calcium?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which salt prevents goitre?",
+     "answer": "iodised salt",
+     "shows": "prevent"
+    },
+    {
+     "question": "How can a family prevent kwashiorkor cheaply?",
+     "answer": "add beans, ndengu, eggs or milk to meals",
+     "shows": "cheap protein"
+    }
+   ]
+  }
+ ]
+}

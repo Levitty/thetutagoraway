@@ -1,0 +1,187 @@
+{
+ "sub_strand": "AGRI.G5.PRODUC.REPAIRING_GARMENTS",
+ "title": "Repairing Garments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Agriculture; not yet checked by a CBC Agriculture teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Practise on a cloth sample with a contrasting thread first, then on a real gaping seam. Count needles in and out.",
+ "skills": [
+  {
+   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+   "key_step": "The child identifies running stitch (small, even stitches with equal gaps) and back stitch (stitches that meet end to end with no gaps, like a machine line) and says back stitch is stronger.",
+   "floor": {
+    "prerequisite": "Knows tacking stitches.",
+    "question": "Is tacking permanent?",
+    "answer": "no"
+   },
+   "representations": [
+    "samples of both stitches",
+    "large drawings",
+    "a magnifier"
+   ],
+   "steps": [
+    "Look for gaps between stitches.",
+    "Gaps: running stitch. No gaps: back stitch.",
+    "Say which is stronger."
+   ],
+   "contexts": [
+    "mending a school shirt",
+    "a seam on a bag",
+    "a hem on a skirt"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line of stitches with gaps and a line with none."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line with no gaps.",
+     "say": "Which stitch?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"back stitch\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label both lines."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_SWAP",
+     "listen_for": [
+      "Running stitch"
+     ],
+     "ask": "Which stitch goes back to meet the last stitch, leaving no gap?",
+     "repair": "Have the child sew a short line of each on a scrap of cloth and name them from the pattern."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_RUN_STRONG",
+     "listen_for": [
+      "Running stitch"
+     ],
+     "ask": "Which stitch is stronger?",
+     "repair": "Pull two seams, one in each stitch, and see which gives way."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_BACK_GAPS",
+     "listen_for": [
+      "Back stitch"
+     ],
+     "ask": "Which stitch leaves gaps between stitches on the front?",
+     "repair": "Look at the front of both stitches on a scrap and count the gaps."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG5_STITCH_TACK",
+     "listen_for": [
+      "They are the same and both are removed"
+     ],
+     "ask": "How is running stitch different from tacking?",
+     "repair": "Lay a tacking sample beside a running stitch sample and measure the stitches."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which stitch has no gaps between stitches?",
+     "answer": "back stitch",
+     "shows": "look"
+    },
+    {
+     "question": "Which stitch is stronger for a seam?",
+     "answer": "back stitch",
+     "shows": "strength"
+    }
+   ]
+  },
+  {
+   "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+   "key_step": "The child says how to repair a gaping seam: turn inside out, pin or tack the edges, start a little before the gap and end a little after it, back stitch along the old line, secure the thread, press.",
+   "floor": {
+    "prerequisite": "Knows running and back stitch.",
+    "question": "Which stitch is stronger?",
+    "answer": "back stitch"
+   },
+   "representations": [
+    "a garment with a gaping seam",
+    "pins, needle and thread",
+    "a step card"
+   ],
+   "steps": [
+    "Turn inside out.",
+    "Pin the edges together.",
+    "Start before the gap; back stitch along the old line.",
+    "End after the gap; secure; press."
+   ],
+   "contexts": [
+    "a split trouser seam",
+    "a torn sleeve",
+    "a bag seam"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a seam with a gap in the middle."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where to start stitching."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a little before the gap\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Mark the start and end beyond the gap."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_RUN",
+     "listen_for": [
+      "Running stitch"
+     ],
+     "ask": "Which stitch repairs a gaping seam?",
+     "repair": "Repair two seams, one in each stitch, and pull them."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_START",
+     "listen_for": [
+      "Exactly at the first gap"
+     ],
+     "ask": "Where should the repair of a gaping seam start?",
+     "repair": "Pull a seam that started at the gap and one that started before it."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_TIGHT",
+     "listen_for": [
+      "As tight as possible"
+     ],
+     "ask": "How tight should the thread be pulled?",
+     "repair": "Look at a puckered seam and a flat seam side by side."
+    },
+    {
+     "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG5_SEAM_RIGHT",
+     "listen_for": [
+      "The right side, where it shows"
+     ],
+     "ask": "Which side of the garment is a seam repaired from?",
+     "repair": "Turn a shirt inside out and show the old seam line to follow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why start stitching a little before the gap?",
+     "answer": "to join into the strong old stitches",
+     "shows": "start"
+    },
+    {
+     "question": "Which stitch is used to repair a gaping seam?",
+     "answer": "back stitch",
+     "shows": "stitch"
+    }
+   ]
+  }
+ ]
+}

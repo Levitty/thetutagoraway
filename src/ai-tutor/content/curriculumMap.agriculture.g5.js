@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/agriculture/g5.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/agriculture/g5.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (a skill for every testable outcome, two or more prerequisites and four misconceptions per skill, practical outcomes marked by the teacher with the KICD rubric, teaching pack in curriculum/agriculture/teaching/g5)"};
 export const SUBSTRANDS = {
  "AGRI.G5.CONSER.SOIL_CONSERVATION": {
   "name": "Soil Conservation",
@@ -307,7 +307,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_SITE_DARK",
    "M_AG_SITE_PIT_LOW",
-   "M_AG_SITE_BARE_FINE"
+   "M_AG_SITE_BARE_FINE",
+   "M_AG5_SITE_PLANTS"
   ]
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT": {
@@ -323,7 +324,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_PIT_ANYTHING",
    "M_AG_PIT_COOKED",
-   "M_AG_PIT_NO_CARE"
+   "M_AG_PIT_NO_CARE",
+   "M_AG5_PIT_DEEP"
   ]
  },
  "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS": {
@@ -338,7 +340,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_AG_REMAINS_BURN",
-   "M_AG_REMAINS_WASTE"
+   "M_AG_REMAINS_WASTE",
+   "M_AG5_REM_FRESH",
+   "M_AG5_REM_ANIMALS"
   ]
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS": {
@@ -346,13 +350,15 @@ export const SKILLS = {
   "sub": "AGRI.G5.CONSER.WATER_CONSERVATION",
   "outcome": "AGRI.G5.CONSER.WATER_CONSERVATION.a",
   "outcomes": [
-   "AGRI.G5.CONSER.WATER_CONSERVATION.a"
+   "AGRI.G5.CONSER.WATER_CONSERVATION.a",
+   "AGRI.G5.CONSER.WATER_CONSERVATION.b"
   ],
   "pre": [],
   "mis": [
    "M_AG_WATER_NOON",
    "M_AG_WATER_MULCH_WARM",
-   "M_AG_WATER_MORE"
+   "M_AG_WATER_MORE",
+   "M_AG5_WAT_GREY"
   ]
  },
  "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST": {
@@ -367,7 +373,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_AG_TEST_UNFAIR",
-   "M_AG_TEST_RESULT"
+   "M_AG_TEST_RESULT",
+   "M_AG5_TEST_SURFACE",
+   "M_AG5_TEST_ONEDAY"
   ]
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE": {
@@ -380,7 +388,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_AG_PEST_MIX",
-   "M_AG_PEST_ALL"
+   "M_AG_PEST_ALL",
+   "M_AG5_DMG_MONKEY",
+   "M_AG5_DMG_NIGHT"
   ]
  },
  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS": {
@@ -397,7 +407,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_REPEL_KILL",
    "M_AG_REPEL_ONE",
-   "M_AG_REPEL_CLOSE"
+   "M_AG_REPEL_CLOSE",
+   "M_AG5_REP_FIRE"
   ]
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES": {
@@ -410,7 +421,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_AG_VEG_ORDER",
-   "M_AG_VEG_WATER_ONLY"
+   "M_AG_VEG_WATER_ONLY",
+   "M_AG5_VEG_HARVEST",
+   "M_AG5_VEG_MANURE"
   ]
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED": {
@@ -426,7 +439,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_NURS_COARSE",
    "M_AG_NURS_DEEP",
-   "M_AG_NURS_FLOOD"
+   "M_AG_NURS_FLOOD",
+   "M_AG5_NURS_SHADE"
   ]
  },
  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE": {
@@ -442,7 +456,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_TRANS_NOON",
    "M_AG_TRANS_DRY",
-   "M_AG_TRANS_NOWATER"
+   "M_AG_TRANS_NOWATER",
+   "M_AG5_TRANS_SMALL"
   ]
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS": {
@@ -456,7 +471,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_PROD_COCK",
    "M_AG_PROD_WOOL",
-   "M_AG_PROD_MILK_ALL"
+   "M_AG_PROD_MILK_ALL",
+   "M_AG5_PROD_HONEY"
   ]
  },
  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES": {
@@ -472,7 +488,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_USE_FOOD_ONLY",
    "M_AG_USE_DONKEY",
-   "M_AG_USE_DUNG"
+   "M_AG_USE_DUNG",
+   "M_AG5_USE_CAMEL"
   ]
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS": {
@@ -486,7 +503,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_PRES_WET",
    "M_AG_PRES_SACK",
-   "M_AG_PRES_WATER"
+   "M_AG_PRES_WATER",
+   "M_AG5_PRES_ASH"
   ]
  },
  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE": {
@@ -502,7 +520,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_PRACT_SEAL_EARLY",
    "M_AG_PRACT_GROUND",
-   "M_AG_PRACT_DRYNESS"
+   "M_AG_PRACT_DRYNESS",
+   "M_AG5_PRACT_MIXOLD"
   ]
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS": {
@@ -516,7 +535,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_NUT_PROT_ENERGY",
    "M_AG_NUT_VIT_ENERGY",
-   "M_AG_NUT_FAT_BAD"
+   "M_AG_NUT_FAT_BAD",
+   "M_AG5_NUT_WATER"
   ]
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS": {
@@ -549,7 +569,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_DIS_SWAP",
    "M_AG_DIS_CATCH",
-   "M_AG_DIS_CAUSE"
+   "M_AG_DIS_CAUSE",
+   "M_AG5_DIS_RICKETS"
   ]
  },
  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION": {
@@ -566,7 +587,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_PREV_ONE_FOOD",
    "M_AG_PREV_SALT",
-   "M_AG_PREV_MEDICINE"
+   "M_AG_PREV_MEDICINE",
+   "M_AG5_PREV_SWEETS"
   ]
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS": {
@@ -580,7 +602,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_FRY_DEEP_LITTLE",
    "M_AG_FRY_DRY_LOTS",
-   "M_AG_FRY_MIX"
+   "M_AG_FRY_MIX",
+   "M_AG5_FRY_COLDOIL"
   ]
  },
  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY": {
@@ -611,7 +634,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_GROOM_EXPENSIVE",
    "M_AG_GROOM_PERFUME",
-   "M_AG_GROOM_SPECIAL"
+   "M_AG_GROOM_SPECIAL",
+   "M_AG5_GROOM_HAIR"
   ]
  },
  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE": {
@@ -626,7 +650,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_AG_DRESS_SAME",
-   "M_AG_ETIQ_GREET"
+   "M_AG_ETIQ_GREET",
+   "M_AG5_DRESS_GARDEN",
+   "M_AG5_ETIQ_EAT"
   ]
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES": {
@@ -639,7 +665,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_AG_SURF_TILE_CEMENT",
-   "M_AG_SURF_TILE_GLASS"
+   "M_AG_SURF_TILE_GLASS",
+   "M_AG5_SURF_PLASTIC",
+   "M_AG5_SURF_EARTH"
   ]
  },
  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING": {
@@ -670,7 +698,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_LAUN_ORDER",
    "M_AG_LAUN_MIX",
-   "M_AG_LAUN_RINSE"
+   "M_AG_LAUN_RINSE",
+   "M_AG5_LAUN_SORT"
   ]
  },
  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE": {
@@ -686,7 +715,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_CARE_HOT",
    "M_AG_CARE_SUN",
-   "M_AG_CARE_IRON"
+   "M_AG_CARE_IRON",
+   "M_AG5_CARE_WRING"
   ]
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES": {
@@ -700,7 +730,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_STITCH_SWAP",
    "M_AG_STITCH_RUN_STRONG",
-   "M_AG_STITCH_BACK_GAPS"
+   "M_AG_STITCH_BACK_GAPS",
+   "M_AG5_STITCH_TACK"
   ]
  },
  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR": {
@@ -717,7 +748,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_SEAM_RUN",
    "M_AG_SEAM_START",
-   "M_AG_SEAM_TIGHT"
+   "M_AG_SEAM_TIGHT",
+   "M_AG5_SEAM_RIGHT"
   ]
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES": {
@@ -732,7 +764,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_AG_GTYPE_NEED_LAND",
-   "M_AG_GTYPE_SWAP"
+   "M_AG_GTYPE_SWAP",
+   "M_AG5_GTYPE_TOWN",
+   "M_AG5_GTYPE_TYRE"
   ]
  },
  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD": {
@@ -750,7 +784,8 @@ export const SKILLS = {
   "mis": [
    "M_AG_GBUILD_ANY_CROP",
    "M_AG_GBUILD_DRAIN",
-   "M_AG_GBUILD_NO_WATER"
+   "M_AG_GBUILD_NO_WATER",
+   "M_AG5_GBUILD_SUN"
   ]
  }
 };
@@ -763,16 +798,26 @@ export const MIS_FEEDBACK = {
  "M_AG_PIT_NO_CARE": "Rotting needs a little moisture and cover. Keep the pit damp and covered until the waste is dark and crumbly.",
  "M_AG_REMAINS_BURN": "Burning wastes the plant matter. Rotted stalks give the soil humus and plant food.",
  "M_AG_REMAINS_WASTE": "Leaves and grass can be rotted into compost or used as mulch. They are plant food in waiting.",
+ "M_AG5_SITE_PLANTS": "Plants grow thickly where the soil is good. Bare, hard or washed patches need improving.",
+ "M_AG5_PIT_DEEP": "Waste rots well when damp, not soaked. A pit in wet ground floods and smells.",
+ "M_AG5_REM_FRESH": "Plant remains feed the soil slowly as they rot. Meanwhile they cover and protect it.",
+ "M_AG5_REM_ANIMALS": "Plant remains can be mulch or compost. They keep water in and add humus to the soil.",
  "M_AG_WATER_NOON": "In the heat much of the water dries off before it soaks in. Water early or late.",
  "M_AG_WATER_MULCH_WARM": "Mulch shades the soil so water dries off slowly. That is how it saves water.",
  "M_AG_WATER_MORE": "More water can simply dry off or run away. A mulch, a cover crop or shade keeps the water in the soil.",
  "M_AG_TEST_UNFAIR": "A fair test changes only one thing. Same crop, same soil and same water, with and without mulch.",
  "M_AG_TEST_RESULT": "Mulch shades the soil and slows drying, so the mulched bed stays damp longer.",
+ "M_AG5_WAT_GREY": "Water from washing vegetables can water the garden. Do not use water with strong soap or bleach.",
+ "M_AG5_TEST_SURFACE": "Feel a few centimetres down. The top can look damp while the soil below is dry.",
+ "M_AG5_TEST_ONEDAY": "A fair test needs time. Check every day for several days before you decide.",
  "M_AG_PEST_MIX": "Birds eat grain on the plant and fruit. Warthogs and moles dig up roots and tubers.",
  "M_AG_PEST_ALL": "Bees carry pollen so crops give fruit, and owls eat rats. Many wild animals help.",
  "M_AG_REPEL_KILL": "We protect wild animals. Scare them off with a scarecrow, noise, a fence or a guard.",
  "M_AG_REPEL_ONE": "A scarecrow can scare birds, but elephants need stronger measures such as beehive fences, chilli or a trench.",
  "M_AG_REPEL_CLOSE": "Big animals are dangerous. Keep away and tell an adult or the Kenya Wildlife Service.",
+ "M_AG5_DMG_MONKEY": "Baboons and monkeys eat many crops and can break into stores, not only fruit trees.",
+ "M_AG5_DMG_NIGHT": "Many wild animals, like porcupines and bush pigs, feed at night. Look for tracks.",
+ "M_AG5_REP_FIRE": "Burning harms land, people and animals. Use safe methods like fences, noise and chilli.",
  "M_AG_VEG_ORDER": "You prepare first, sow in the nursery, then transplant the seedlings, then care and harvest.",
  "M_AG_VEG_WATER_ONLY": "Plants need weeding, mulch and protection from pests as well as water.",
  "M_AG_NURS_COARSE": "Tiny seeds need fine soil so they touch the soil and the shoot can push up.",
@@ -781,18 +826,26 @@ export const MIS_FEEDBACK = {
  "M_AG_TRANS_NOON": "The hot midday sun scorches new transplants. Evening or cloudy weather is kinder.",
  "M_AG_TRANS_DRY": "Water the bed first and lift with soil on the roots so the roots are not torn.",
  "M_AG_TRANS_NOWATER": "New transplants need water and shade for a few days, then weeding and mulching.",
+ "M_AG5_VEG_HARVEST": "Pick the older lower leaves of sukuma wiki. The plant keeps growing new ones.",
+ "M_AG5_VEG_MANURE": "Vegetables grow fast and need rich soil. Add well-rotted manure.",
+ "M_AG5_NURS_SHADE": "Young seedlings are tender. Light shade stops them drying out.",
+ "M_AG5_TRANS_SMALL": "Transplant when seedlings have four to six true leaves and are about a pencil thick.",
  "M_AG_PROD_COCK": "The hen lays eggs. The cock does not.",
  "M_AG_PROD_WOOL": "Wool comes from sheep. Goats give meat, milk and skins.",
  "M_AG_PROD_MILK_ALL": "Cows, goats and camels give milk. Hens give eggs, not milk.",
  "M_AG_USE_FOOD_ONLY": "Oxen pull ploughs and carts. Animals give work as well as food.",
  "M_AG_USE_DONKEY": "Donkeys carry loads and pull carts, which saves people carrying heavy things.",
  "M_AG_USE_DUNG": "Dung rots into manure that adds plant food and helps the soil.",
+ "M_AG5_PROD_HONEY": "Bees make honey from flower nectar and store it in the comb.",
+ "M_AG5_USE_CAMEL": "Camels give milk and meat and carry loads in dry areas.",
  "M_AG_PRES_WET": "Damp grain grows mould. Dry it fully before storing.",
  "M_AG_PRES_SACK": "An airtight container stops air and insects. Open baskets let weevils in.",
  "M_AG_PRES_WATER": "Soaked beans sprout or rot. Drying and sealed storage preserve beans.",
  "M_AG_PRACT_SEAL_EARLY": "Sealing damp grain traps the moisture and it grows mould. Dry it first.",
  "M_AG_PRACT_GROUND": "Floors and walls let in damp and rats. Raise the sacks and keep them away from the wall.",
  "M_AG_PRACT_DRYNESS": "A dry grain is hard and cracks when bitten or sounds like a rattle when shaken.",
+ "M_AG5_PRES_ASH": "Ash keeps weevils from moving and laying eggs in stored beans. It is washed off before cooking.",
+ "M_AG5_PRACT_MIXOLD": "Empty and clean the store before the new harvest. Old grain carries pests into the new.",
  "M_AG_NUT_PROT_ENERGY": "Proteins build and repair the body. Carbohydrates give energy.",
  "M_AG_NUT_VIT_ENERGY": "Vitamins protect the body. Energy comes mostly from carbohydrates and fats.",
  "M_AG_NUT_FAT_BAD": "Fats store energy and keep the body warm. A little is needed, too much is not good.",
@@ -806,6 +859,9 @@ export const MIS_FEEDBACK = {
  "M_AG_PREV_ONE_FOOD": "A varied meal gives all the nutrients. One food cannot.",
  "M_AG_PREV_SALT": "Only iodised salt carries iodine to prevent goitre.",
  "M_AG_PREV_MEDICINE": "Eating enough protein foods prevents kwashiorkor. Good food is the best protection.",
+ "M_AG5_NUT_WATER": "Water carries food round the body, removes waste and keeps us cool. Drink clean water every day.",
+ "M_AG5_DIS_RICKETS": "Rickets comes from too little vitamin D and calcium. Milk, omena and sunlight help bones grow strong.",
+ "M_AG5_PREV_SWEETS": "Sweets and soda give sugar only. Healthy bodies need all the nutrients from many foods.",
  "M_AG_FRY_DEEP_LITTLE": "In deep frying the food is covered by hot oil.",
  "M_AG_FRY_DRY_LOTS": "Dry fat frying uses the fat that melts out of the food.",
  "M_AG_FRY_MIX": "Mandazi are fried in deep oil. Sausages release their own fat in a pan.",
@@ -813,32 +869,45 @@ export const MIS_FEEDBACK = {
  "M_AG_FSAFE_WET": "Water spits in hot oil. Dry food gently with a cloth first.",
  "M_AG_FSAFE_FULL": "Oil bubbles up when food goes in. Fill the pan no more than half.",
  "M_AG_FSAFE_LEAVE": "Hot oil can catch fire. Never leave it alone.",
+ "M_AG5_FRY_COLDOIL": "Wait for the oil to be hot before adding food, or the food soaks up oil and goes soggy.",
  "M_AG_GROOM_EXPENSIVE": "Grooming is about being clean and neat, not about cost.",
  "M_AG_GROOM_PERFUME": "Bathing removes dirt and germs. Scent only covers smell.",
  "M_AG_GROOM_SPECIAL": "Good grooming is a daily habit.",
  "M_AG_DRESS_SAME": "Dress to suit the activity: old clothes and gumboots for farm work, sports wear for games, neat clothes for a visit.",
  "M_AG_ETIQ_GREET": "Greeting visitors and new people politely shows respect. Say please and thank you every day.",
+ "M_AG5_GROOM_HAIR": "Comb or brush your hair every day to keep it neat and clean.",
+ "M_AG5_DRESS_GARDEN": "Wear old clothes or an overall for gardening. Keep your uniform clean for class.",
+ "M_AG5_ETIQ_EAT": "Chew with your mouth closed and ask politely for food to be passed.",
  "M_AG_SURF_TILE_CEMENT": "Tiles are smooth, shiny squares. Cement is rough and grey.",
  "M_AG_SURF_TILE_GLASS": "Glass is see-through. Tiles shine but you cannot see through them.",
  "M_AG_CLEAN_SOAK_WOOD": "Too much water swells and rots wood. Wipe it with a damp cloth and dry it.",
  "M_AG_CLEAN_EARTH_SCRUB": "Plenty of water turns an earthen floor to mud. Sprinkle a little water to settle the dust and sweep softly.",
  "M_AG_CLEAN_WET_SLIP": "Wet tiles are slippery. Dry the floor or put up a warning sign.",
  "M_AG_CLEAN_WASH_FIRST": "Sweep or dust first, then wash. Water on dust makes mud.",
+ "M_AG5_SURF_PLASTIC": "Look at how it feels, sounds and bends, not only its colour.",
+ "M_AG5_SURF_EARTH": "Earthen floors are swept daily and smeared to keep them smooth and clean.",
  "M_AG_LAUN_ORDER": "The order is sort, soak, wash, rinse, dry, iron.",
  "M_AG_LAUN_MIX": "Colour from coloured clothes can run and stain whites, so wash them separately.",
  "M_AG_LAUN_RINSE": "Rinse until the water runs clear. Soap left in makes cloth stiff and can itch.",
  "M_AG_CARE_HOT": "Very hot water can make colours run. Use cool or warm water for coloured cotton.",
  "M_AG_CARE_SUN": "Strong sun fades colours. Dry coloured clothes inside out in the shade. White clothes may go in the sun.",
  "M_AG_CARE_IRON": "Cotton takes a hot iron and presses best while a little damp.",
+ "M_AG5_LAUN_SORT": "Sort and mend first. Washing makes small tears bigger.",
+ "M_AG5_CARE_WRING": "Squeeze cotton gently. Hard wringing stretches and creases it.",
  "M_AG_STITCH_SWAP": "Back stitch goes back to meet the last stitch. Running stitch goes in and out with gaps.",
  "M_AG_STITCH_RUN_STRONG": "Back stitch has no gaps and holds much better than running stitch.",
  "M_AG_STITCH_BACK_GAPS": "Running stitch leaves gaps. Back stitch has none on the front.",
  "M_AG_SEAM_RUN": "A seam that has split needs back stitch, because it is strong.",
  "M_AG_SEAM_START": "Start a little before the gap, sew a little past it, and fasten the thread with two small stitches.",
  "M_AG_SEAM_TIGHT": "Too tight puckers the cloth. Pull firm and even.",
+ "M_AG5_STITCH_TACK": "Running stitch is small and permanent. Tacking is long and comes out.",
+ "M_AG5_SEAM_RIGHT": "Turn the garment inside out and stitch along the old seam line.",
  "M_AG_GTYPE_NEED_LAND": "A vertical garden grows upwards, so it needs very little ground.",
  "M_AG_GTYPE_SWAP": "A sack garden grows upwards, so it is a vertical garden.",
  "M_AG_GBUILD_ANY_CROP": "Choose small crops with shallow roots such as kale, spinach, spring onions and coriander.",
  "M_AG_GBUILD_DRAIN": "The stone column spreads water through the sack. Containers also need drainage holes so extra water can leave.",
- "M_AG_GBUILD_NO_WATER": "A small garden dries quickly. Water it regularly through the stone column."
+ "M_AG_GBUILD_NO_WATER": "A small garden dries quickly. Water it regularly through the stone column.",
+ "M_AG5_GTYPE_TOWN": "Innovative gardens help anyone short of land, water or good soil.",
+ "M_AG5_GTYPE_TYRE": "Tyres laid flat side by side make a horizontal garden. Stacked up, they make a vertical one.",
+ "M_AG5_GBUILD_SUN": "Vegetables need sunlight. Put the garden in the sun and near water."
 };
