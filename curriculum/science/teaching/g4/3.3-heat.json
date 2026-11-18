@@ -1,0 +1,277 @@
+{
+ "sub_strand": "SCIE.G4.FORCE_.HEAT",
+ "title": "Heat",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Heat work is done with the teacher: a jiko or a kettle is handled only by an adult. The child feels warmth from the Sun on a dark and a white cloth, and rubs hands to feel friction heat. First-aid statements are to be confirmed by a teacher or a health worker.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+   "key_step": "The child names sources of heat (the Sun, fire from wood, charcoal, gas or paraffin, electricity, friction) and keeps a source apart from a thing that has only been warmed.",
+   "floor": {
+    "prerequisite": "Can list sources of heat at home.",
+    "question": "Name one source of heat used for cooking.",
+    "answer": "for example charcoal or gas"
+   },
+   "representations": [
+    "hands rubbed together",
+    "a cup of tea cooling down",
+    "a table: source, or only warmed"
+   ],
+   "steps": [
+    "A source makes heat: the Sun, burning fuels, electricity, rubbing.",
+    "A warm thing (tea, a stone in the sun) got its heat from a source.",
+    "Ask: does it keep making heat, or does it cool down?",
+    "Sort the list."
+   ],
+   "contexts": [
+    "a charcoal jiko",
+    "a hot stone after a sunny day",
+    "rubbing hands on a cold morning"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a jiko and a cup of tea beside it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tea.",
+     "say": "If we move the tea away, will it stay hot?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it cools."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"source\" under the jiko and \"warmed\" under the tea."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_SUN_ONLY",
+     "listen_for": [
+      "only the Sun gives heat"
+     ],
+     "ask": "What cooks the food at night?",
+     "repair": "Fires, electricity and friction are sources too."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_HOT_OBJECT_SOURCE",
+     "listen_for": [
+      "the hot tea is a source"
+     ],
+     "ask": "What happens to the tea if it is left on the table?",
+     "repair": "A warmed thing cools down; a source keeps making heat."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_RUBBING_NOT_HEAT",
+     "listen_for": [
+      "rubbing does nothing"
+     ],
+     "ask": "How do your hands feel after rubbing them hard?",
+     "repair": "Rubbing (friction) makes heat."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_COLD_HAS_COLDNESS",
+     "listen_for": [
+      "the ice gives cold"
+     ],
+     "ask": "Why does the ice melt in your hand?",
+     "repair": "Heat moves from warm to cold; cold is less heat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two sources of heat.",
+     "answer": "any two: the Sun, fire, electricity, friction, burning charcoal or gas",
+     "shows": "sources"
+    },
+    {
+     "question": "Is a cup of hot tea a source of heat?",
+     "answer": "No: it was warmed by a source and it cools down",
+     "shows": "source or warmed"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+   "key_step": "The child describes uses of heat (cooking, boiling water to make it safe, drying, warming, ironing, making things such as bricks and pots) using heat from the Sun as well as from fires.",
+   "floor": {
+    "prerequisite": "Can name sources of heat.",
+    "question": "Name one source of heat.",
+    "answer": "for example the Sun or a fire"
+   },
+   "representations": [
+    "wet cloths drying in sun and shade",
+    "a pot of water boiling (teacher)",
+    "a chart of uses at home and in the community"
+   ],
+   "steps": [
+    "Cooking and boiling water.",
+    "Drying clothes, crops and fish.",
+    "Warming people and homes.",
+    "Making things: firing pots and bricks, ironing."
+   ],
+   "contexts": [
+    "drying omena by Lake Victoria",
+    "boiling drinking water",
+    "firing clay pots"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wet shirt in the sun and one in the shade."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will dry first."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"heat from the Sun dries it\" under the sunny shirt."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_BOIL_NOT_SAFE",
+     "listen_for": [
+      "boiling does nothing"
+     ],
+     "ask": "What does boiling do to germs in water?",
+     "repair": "Boiling kills germs and makes water safer."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_DRY_IN_SHADE",
+     "listen_for": [
+      "shade dries best"
+     ],
+     "ask": "Which shirt dried first?",
+     "repair": "Heat from the Sun dries things faster."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_ONLY_COOKING",
+     "listen_for": [
+      "heat is for cooking"
+     ],
+     "ask": "How are clay pots made hard?",
+     "repair": "Heat is used for drying, warming, ironing and making things too."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_HEAT_ONLY_FIRE",
+     "listen_for": [
+      "drying needs a fire"
+     ],
+     "ask": "How do farmers dry beans?",
+     "repair": "The Sun's heat dries crops and clothes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two uses of heat at home.",
+     "answer": "any two: cooking, boiling water, drying clothes, warming, ironing",
+     "shows": "uses"
+    },
+    {
+     "question": "Why should drinking water from a river be boiled?",
+     "answer": "heat kills the germs",
+     "shows": "safe water"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+   "key_step": "The child picks safe ways of using heat (dry thick cloth for hot pots, stoves out before refilling, children away from fires, cool water on a burn) and rejects unsafe ones.",
+   "floor": {
+    "prerequisite": "Knows uses of heat at home.",
+    "question": "Name one thing heat is used for at home.",
+    "answer": "cooking"
+   },
+   "representations": [
+    "a dry and a wet cloth held to a warm (not hot) cup",
+    "a picture of a kitchen with dangers to find",
+    "a chart: danger and safe way"
+   ],
+   "steps": [
+    "Hold hot things with a dry, thick cloth.",
+    "Put out a stove or jiko before refilling it.",
+    "Keep children and curtains away from flames.",
+    "For a burn: cool running water, then an adult."
+   ],
+   "contexts": [
+    "a kitchen at supper time",
+    "refilling a paraffin stove",
+    "a small burn from a hot sufuria"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pan of oil with flames."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if water is thrown on it."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a lid on the pan and write \"cover it, turn off the heat\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_BUTTER_ON_BURN",
+     "listen_for": [
+      "put butter on it"
+     ],
+     "ask": "What does the burn need first: to cool down or to be covered in fat?",
+     "repair": "Cool a burn under clean running water, then see an adult."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_REFILL_LIT",
+     "listen_for": [
+      "refill while it burns"
+     ],
+     "ask": "What could happen if paraffin is poured on a flame?",
+     "repair": "Put out the stove and let it cool before refilling."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_WET_CLOTH",
+     "listen_for": [
+      "a wet cloth is safer"
+     ],
+     "ask": "What happens to water when it touches a hot pot?",
+     "repair": "A wet cloth turns to steam and burns; use a dry, thick cloth."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_WATER_ON_OIL_FIRE",
+     "listen_for": [
+      "throw water on it"
+     ],
+     "ask": "What does water do on burning oil?",
+     "repair": "Cover burning oil to cut off the air; never use water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should you use to hold a hot sufuria?",
+     "answer": "a dry, thick cloth or holder",
+     "shows": "safe holding"
+    },
+    {
+     "question": "What is the first thing to do for a small burn?",
+     "answer": "cool it under clean running water",
+     "shows": "first aid"
+    }
+   ]
+  }
+ ]
+}

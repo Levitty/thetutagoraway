@@ -1,0 +1,368 @@
+{
+ "sub_strand": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS",
+ "title": "Elements and Compounds",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use bottle-top or plasticine models: one colour for one kind of atom. Iron filings and sulphur mixed (separable with a magnet) next to a picture of iron sulphide (not separable) show mixture against compound. Real packets (salt, toothpaste, a soda can) give elements on labels.",
+ "skills": [
+  {
+   "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT",
+   "key_step": "The child tells the four apart with a model: an atom (one particle), an element (one kind of atom), a molecule (atoms joined) and a compound (different elements joined chemically), and keeps a compound apart from a mixture.",
+   "floor": {
+    "prerequisite": "Knows air is a mixture of gases.",
+    "question": "Name one gas in air.",
+    "answer": "nitrogen or oxygen"
+   },
+   "representations": [
+    "bottle-top or plasticine atom models",
+    "iron filings with sulphur and a magnet",
+    "a four-box chart: atom, element, molecule, compound"
+   ],
+   "steps": [
+    "An atom: one ball.",
+    "An element: many balls, all one colour.",
+    "A molecule: balls joined (two of a colour for oxygen gas, mixed colours for water).",
+    "A compound: different elements joined; not separable like a mixture."
+   ],
+   "contexts": [
+    "oxygen in the air",
+    "water in a cup",
+    "salt in a packet"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two red balls joined and one red with two white joined."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the red-and-white one.",
+     "say": "Element or compound?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"compound, different elements joined\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label \"oxygen molecule (element)\" and \"water molecule (compound)\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_ATOM_MOLECULE",
+     "listen_for": [
+      "an atom is a molecule"
+     ],
+     "ask": "Is one ball the same as two joined?",
+     "repair": "An atom is one particle; a molecule is atoms joined."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_ELEMENT_COMPOUND",
+     "listen_for": [
+      "a compound is one kind of atom"
+     ],
+     "ask": "What colours are the balls in water?",
+     "repair": "A compound has different elements joined."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_MIXTURE",
+     "listen_for": [
+      "a compound is a mixture"
+     ],
+     "ask": "Can a magnet pull iron out of iron sulphide?",
+     "repair": "In a compound the elements are joined chemically."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_GAS_NOT_ELEMENT",
+     "listen_for": [
+      "oxygen is not an element"
+     ],
+     "ask": "How many kinds of atom are in oxygen gas?",
+     "repair": "Elements can be gases."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is water an element or a compound?",
+     "answer": "a compound (hydrogen and oxygen)",
+     "shows": "compound"
+    },
+    {
+     "question": "What is a molecule?",
+     "answer": "two or more atoms joined together",
+     "shows": "molecule"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS",
+   "key_step": "The child gives the symbols of common elements with a capital first letter and a small second letter, including the Latin ones (Fe, Na, K, Cu, Ag, Au).",
+   "floor": {
+    "prerequisite": "Knows what an element is.",
+    "question": "Is iron an element?",
+    "answer": "yes"
+   },
+   "representations": [
+    "symbol cards with names on the back",
+    "a short table of elements",
+    "CO and Co written side by side"
+   ],
+   "steps": [
+    "Most: the first letter (H, O, C, N).",
+    "Some: first two letters (Ca, Mg, Al, Cl).",
+    "Latin ones: Fe (ferrum), Na (natrium), K (kalium), Cu, Ag, Au.",
+    "Capital first, small second."
+   ],
+   "contexts": [
+    "Fe on a cereal box (iron added)",
+    "Na on a salt label",
+    "Au on a gold price board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write CO and Co."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two.",
+     "say": "Are these the same?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, the small letter matters\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write the symbols for iron and sodium."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS.M_G8_SY_FIRST_LETTER",
+     "listen_for": [
+      "I for iron"
+     ],
+     "ask": "What is the Latin name for iron?",
+     "repair": "Iron is Fe, from ferrum."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS.M_G8_SY_NAME",
+     "listen_for": [
+      "K is calcium"
+     ],
+     "ask": "What is the symbol for calcium?",
+     "repair": "K is potassium; calcium is Ca."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS.M_G8_SY_CAPITALS",
+     "listen_for": [
+      "CU"
+     ],
+     "ask": "What does CO stand for?",
+     "repair": "Capital first letter, small second."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS.M_G8_SY_SILVER_GOLD",
+     "listen_for": [
+      "gold is Ag"
+     ],
+     "ask": "What is the Latin word for gold?",
+     "repair": "Gold is Au (aurum); silver is Ag."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the symbol for sodium?",
+     "answer": "Na",
+     "shows": "Latin symbol"
+    },
+    {
+     "question": "Which element has the symbol Cu?",
+     "answer": "copper",
+     "shows": "symbol to name"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS",
+   "key_step": "The child writes a word equation with the reactants on the left, an arrow, and the product named from its elements with the -ide ending (magnesium + oxygen gives magnesium oxide).",
+   "floor": {
+    "prerequisite": "Can tell an element from a compound.",
+    "question": "Is magnesium oxide an element or a compound?",
+    "answer": "a compound"
+   },
+   "representations": [
+    "burning magnesium (teacher) and the white powder",
+    "a word-equation frame: ___ + ___ -> ___",
+    "naming rule card: oxygen -> oxide"
+   ],
+   "steps": [
+    "Write what we start with (reactants), joined by +.",
+    "Draw the arrow (gives).",
+    "Name the product: metal name first, then -ide.",
+    "Check: no atoms lost."
+   ],
+   "contexts": [
+    "rust forming on a mabati roof",
+    "charcoal burning in a jiko",
+    "salt from sodium and chlorine"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"iron + sulphur ->\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the product is called."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"iron sulphide\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"iron sulphide\" after the arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_ORDER",
+     "listen_for": [
+      "product first"
+     ],
+     "ask": "What do we start with?",
+     "repair": "Reactants on the left, product on the right."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_NAME",
+     "listen_for": [
+      "iron sulphate"
+     ],
+     "ask": "How many elements are in the product?",
+     "repair": "Two elements: -ide."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_LOST",
+     "listen_for": [
+      "the atoms disappear"
+     ],
+     "ask": "What did the scale show after rusting?",
+     "repair": "Atoms rearrange; none are lost."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_PLUS_PRODUCT",
+     "listen_for": [
+      "magnesium and oxygen"
+     ],
+     "ask": "Is the white powder still shiny metal?",
+     "repair": "The product is a new compound with a new name."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the word equation for carbon burning in oxygen.",
+     "answer": "carbon + oxygen gives carbon dioxide",
+     "shows": "word equation"
+    },
+    {
+     "question": "What is made when sodium reacts with chlorine?",
+     "answer": "sodium chloride",
+     "shows": "naming"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES",
+   "key_step": "The child says what common elements are used for and why (copper for wires: conducts; aluminium for pans and foil: light; iron for building: strong; chlorine for treating water; carbon as charcoal; oxygen in hospitals) and reads elements on packaging labels.",
+   "floor": {
+    "prerequisite": "Can give the symbols of common elements.",
+    "question": "What is the symbol for copper?",
+    "answer": "Cu"
+   },
+   "representations": [
+    "objects: a copper wire, foil, a nail, charcoal",
+    "real packaging labels",
+    "a chart: element, use, property"
+   ],
+   "steps": [
+    "Name the element in the object.",
+    "Say the use.",
+    "Say the property that makes it fit.",
+    "Read labels for elements and safety notes."
+   ],
+   "contexts": [
+    "electric wiring in a house",
+    "a sufuria",
+    "a water treatment sachet"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wire, a sufuria and a nail."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wire.",
+     "say": "Which element, and why that one?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"copper, it carries electricity well\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add the element and property for the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_WRONG_USE",
+     "listen_for": [
+      "aluminium foil for wires"
+     ],
+     "ask": "Which metal is inside electric cables?",
+     "repair": "Copper is used for wires."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_LABEL",
+     "listen_for": [
+      "labels are decoration"
+     ],
+     "ask": "What does this label say about the contents and date?",
+     "repair": "Labels give contents, amounts, dates and safety."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_COMPOUND_ELEMENT",
+     "listen_for": [
+      "water is an element"
+     ],
+     "ask": "What is water made of?",
+     "repair": "Water and salt are compounds."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_CHLORINE_FOOD",
+     "listen_for": [
+      "chlorine is safe, it is in salt"
+     ],
+     "ask": "What does the chlorine label warn?",
+     "repair": "Chlorine gas is toxic; salt is a safe compound."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is copper used for electric wires?",
+     "answer": "it conducts electricity well",
+     "shows": "use and property"
+    },
+    {
+     "question": "Name one element used to treat drinking water.",
+     "answer": "chlorine",
+     "shows": "chlorine"
+    }
+   ]
+  }
+ ]
+}

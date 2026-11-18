@@ -1,0 +1,286 @@
+{
+ "sub_strand": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT",
+ "title": "Force and its Effect",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Every idea is shown with a real push or pull: a ball rolled on grass and on cement, a drawer, a stretched rubber band, a magnet with paper clips and coins. The child predicts before each demonstration.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+   "key_step": "The child names the force in a situation (push, pull, gravity, friction, magnetic) and knows non-living things can exert forces.",
+   "floor": {
+    "prerequisite": "Knows that pushing and pulling move things.",
+    "question": "Do you push or pull to open a drawer?",
+    "answer": "pull"
+   },
+   "representations": [
+    "a drawer, a door and a wheelbarrow",
+    "a magnet with pins, coins and paper clips",
+    "a table: action and type of force"
+   ],
+   "steps": [
+    "Push: away from you. Pull: towards you.",
+    "Gravity: everything is pulled down to the Earth.",
+    "Friction: rubbing surfaces slow things down.",
+    "Magnetic: magnets pull iron things, not all metals."
+   ],
+   "contexts": [
+    "pushing a wheelbarrow on a farm",
+    "a mango falling from a tree",
+    "a bicycle braking"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mango tree with a mango falling."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mango.",
+     "say": "What force pulls it down?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say gravity."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"gravity\" with an arrow down."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether a magnet will pick up a five-shilling coin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_PUSH_PULL_MIX",
+     "listen_for": [
+      "opening a drawer is a push"
+     ],
+     "ask": "Is the drawer coming towards you or going away?",
+     "repair": "Towards you is a pull; away is a push."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_MAGNET_ALL",
+     "listen_for": [
+      "magnets pick up all metal"
+     ],
+     "ask": "Did the magnet lift the aluminium sufuria lid?",
+     "repair": "Magnets attract iron and steel, not all metals."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_GRAVITY_ONLY_FALLING",
+     "listen_for": [
+      "gravity only works when it falls"
+     ],
+     "ask": "Why does a book stay on the table and not float up?",
+     "repair": "Gravity pulls on everything all the time."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_FORCE_IS_LIVING",
+     "listen_for": [
+      "only people can push"
+     ],
+     "ask": "Who pulled the pins to the magnet?",
+     "repair": "Non-living things like magnets and the Earth exert forces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What type of force makes a stone fall to the ground?",
+     "answer": "gravity",
+     "shows": "type"
+    },
+    {
+     "question": "A magnet is held near an iron nail and a copper wire. Which one moves?",
+     "answer": "the iron nail",
+     "shows": "magnetic force"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+   "key_step": "The child says a force can start movement, stop it, speed it up, slow it down, change its direction and change an object's shape.",
+   "floor": {
+    "prerequisite": "Can name pushes and pulls.",
+    "question": "Is kicking a ball a push or a pull?",
+    "answer": "a push"
+   },
+   "representations": [
+    "a football kicked, stopped and turned",
+    "plasticine squeezed",
+    "a table of effects with an example each"
+   ],
+   "steps": [
+    "Start: kick a still ball.",
+    "Stop: catch a moving ball.",
+    "Direction: hit a moving ball sideways.",
+    "Shape: squeeze plasticine or a sponge."
+   ],
+   "contexts": [
+    "a goalkeeper stopping a ball",
+    "kneading chapati dough",
+    "a ball rolling on the school field"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ball rolling to the right."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a foot hitting it from the side."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which way the ball will go now."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the new path."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_ONLY_START",
+     "listen_for": [
+      "a force only starts things"
+     ],
+     "ask": "What does the goalkeeper do to the ball?",
+     "repair": "A force can also stop movement or change its direction."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_SHAPE_NOT_EFFECT",
+     "listen_for": [
+      "squeezing is not a force effect"
+     ],
+     "ask": "What changed the shape of the dough?",
+     "repair": "Changing shape is an effect of a force."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_MOTION_NEEDS_FORCE",
+     "listen_for": [
+      "you must keep pushing it"
+     ],
+     "ask": "After the kick, is the foot still touching the ball?",
+     "repair": "A ball keeps moving after the kick until a force such as friction stops it."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_STOPPED_NO_FORCE",
+     "listen_for": [
+      "it just stopped"
+     ],
+     "ask": "Where does the ball roll further: on grass or on cement?",
+     "repair": "Friction is a force that slows and stops the ball."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two effects of a force on a ball.",
+     "answer": "any two: start it, stop it, speed up, slow down, change direction, change shape",
+     "shows": "effects"
+    },
+    {
+     "question": "What effect does a force have when you squeeze a lump of clay?",
+     "answer": "it changes its shape",
+     "shows": "shape change"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+   "key_step": "The child gives everyday uses of forces, including small ones (writing, walking) and useful friction and gravity, and knows each task needs the right amount of force.",
+   "floor": {
+    "prerequisite": "Can say the effects of a force.",
+    "question": "What can a force do to a moving ball?",
+    "answer": "stop it, slow it or change its direction"
+   },
+   "representations": [
+    "shoes with and without grip on a smooth floor",
+    "water poured from a jug (gravity)",
+    "a chart: task, force used"
+   ],
+   "steps": [
+    "List tasks in a day: walking, writing, lifting, cycling.",
+    "Name the force in each.",
+    "Find a use of friction (grip, brakes) and of gravity (pouring, falling rain).",
+    "Say how much force each needs."
+   ],
+   "contexts": [
+    "walking on a muddy path",
+    "fetching water from a well",
+    "riding a boda boda"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a shoe sole with grooves."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the grooves.",
+     "say": "Why are these here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say grip or friction."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"useful friction\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_FRICTION_BAD_ONLY",
+     "listen_for": [
+      "friction is bad"
+     ],
+     "ask": "What would happen to walking on a floor with no friction?",
+     "repair": "Friction helps us walk, write and brake."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_GRAVITY_ONLY_PROBLEM",
+     "listen_for": [
+      "gravity is a nuisance"
+     ],
+     "ask": "How would you pour water without gravity?",
+     "repair": "Gravity is useful: water flows down, rain falls, things stay on tables."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_NOT_EVERYDAY",
+     "listen_for": [
+      "writing is not using a force"
+     ],
+     "ask": "What does your hand do to the pencil?",
+     "repair": "Small tasks such as writing and walking use force too."
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_MORE_FORCE_ALWAYS_BETTER",
+     "listen_for": [
+      "press harder, it is better"
+     ],
+     "ask": "What happens to the pencil point if you press very hard?",
+     "repair": "Each task needs the right amount of force."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one use of friction in daily life.",
+     "answer": "walking without slipping, brakes, writing, striking a match",
+     "shows": "friction use"
+    },
+    {
+     "question": "How does gravity help when fetching water from a tank?",
+     "answer": "it makes the water flow down out of the tap",
+     "shows": "gravity use"
+    }
+   ]
+  }
+ ]
+}

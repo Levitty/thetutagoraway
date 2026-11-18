@@ -147,6 +147,15 @@
    ],
    "mastery": "The child says diffusion is the spreading of particles from where there are many to where there are few until they are even, osmosis is the movement of water through a thin membrane from a weak solution to a stronger one, gives examples (the smell of cooking, the uptake of water by root hairs, oxygen entering blood), and says neither needs energy from the cell. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO": {
+   "forms": [
+    "predict what a demonstration will show",
+    "explain a result in terms of particles or water moving",
+    "pick the fair way to set up the demonstration",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "Given a set-up (a drop of dye or potassium permanganate in still water, raw potato strips in salty and in plain water, a raisin or a dry bean soaked in water, a smell spreading through a room), the child predicts the result (the colour spreads until even; strips in salty water go soft and shorter, in plain water firm and longer; the raisin swells) and explains it by particles spreading from many to few or water moving through a membrane from a weak to a strong solution. The child does not say the salt moves into the potato in osmosis. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL": {
    "forms": [
     "say how long the cycle is",
@@ -155,6 +164,15 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child says the cycle is about 28 days, the bleeding (menstruation) lasts about three to seven days, an egg is released about the middle of the cycle (ovulation), the cycle is normal and not an illness, and picks healthy ways to cope (clean pads or cloths changed often, bathing, rest, warm drinks, talking to a trusted adult and seeing a health worker for severe pain). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE": {
+   "forms": [
+    "pick the healthy way to manage a named challenge",
+    "say what is missing from a learner's plan",
+    "decide when to see a health worker",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "For a named challenge (cramps, heavy bleeding, missing school, no pads, feeling moody, teasing), the child picks a healthy step (a clean pad or cloth changed every four to six hours, bathing daily, a warm drink and rest, a trusted adult or the school nurse, a spare pad in the bag, a health worker for severe pain or very heavy bleeding) and keeps going to school. The child does not say the cycle should be kept secret from every adult or treated with any medicine without advice. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION": {
    "forms": [

@@ -1,0 +1,282 @@
+{
+ "sub_strand": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH",
+ "title": "Physical and chemical changes",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Learners act out the particles: standing close and shaking (solid), close and sliding past (liquid), spread out and moving fast (gas). The teacher boils pure and salty water with a thermometer. Physical and chemical changes are sorted from real examples: melting wax, dissolving sugar, burning paper, rusting nails, cooking an egg.",
+ "skills": [
+  {
+   "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES",
+   "key_step": "The child describes the particles in each state: solid (close, in fixed places, vibrate), liquid (close, slide past one another), gas (far apart, move fast in all directions), and explains shape and flow from this.",
+   "floor": {
+    "prerequisite": "Knows the names of the changes of state.",
+    "question": "What is the change from liquid to gas called?",
+    "answer": "evaporation"
+   },
+   "representations": [
+    "learners acting out particles",
+    "three boxes of dots: packed, close and jumbled, far apart",
+    "a syringe of air squeezed and a syringe of water"
+   ],
+   "steps": [
+    "Solid: packed in rows, vibrating in place.",
+    "Liquid: close, sliding past each other.",
+    "Gas: far apart, moving fast.",
+    "Use the picture to explain: gases can be squeezed, liquids flow."
+   ],
+   "contexts": [
+    "a pumped bicycle tyre",
+    "water poured from a jug",
+    "a block of ice"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: packed dots, close jumbled dots, few scattered dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the scattered dots.",
+     "say": "Why can this be squeezed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the particles are far apart\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label solid, liquid, gas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_SOLID_STILL",
+     "listen_for": [
+      "the particles do not move"
+     ],
+     "ask": "Do the particles in our acted solid shake?",
+     "repair": "Solid particles vibrate in fixed places."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_GAS_CLOSE",
+     "listen_for": [
+      "gas particles are close"
+     ],
+     "ask": "Why can a syringe of air be pushed in?",
+     "repair": "Gas particles are far apart."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_LIQUID_FIXED",
+     "listen_for": [
+      "liquid particles are fixed"
+     ],
+     "ask": "Why does water take the shape of the jug?",
+     "repair": "Liquid particles slide past each other."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_PARTICLES_EXPAND",
+     "listen_for": [
+      "the particles get bigger"
+     ],
+     "ask": "In the acting, did anyone grow?",
+     "repair": "Particles move more and spread out; they do not grow."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why can a gas be squeezed but a solid cannot?",
+     "answer": "gas particles are far apart; solid particles are packed close",
+     "shows": "particles"
+    },
+    {
+     "question": "How do the particles in a liquid move?",
+     "answer": "they are close and slide past one another",
+     "shows": "liquid"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES",
+   "key_step": "The child says impurities raise the boiling point and lower the melting point, and uses a fixed boiling or melting point to test purity.",
+   "floor": {
+    "prerequisite": "Knows the particle picture of the states.",
+    "question": "How do the particles in a solid move?",
+    "answer": "they vibrate in fixed places"
+   },
+   "representations": [
+    "pure and salty water boiled with a thermometer (teacher)",
+    "salt on ice in a cup",
+    "a chart: pure, impure, boiling and melting"
+   ],
+   "steps": [
+    "Pure water boils at 100 degrees (at sea level) and melts at 0.",
+    "Add salt: it boils above 100.",
+    "Salt on ice: it melts below 0.",
+    "A different fixed point shows an impurity."
+   ],
+   "contexts": [
+    "salt in cooking water",
+    "salt on icy roads abroad",
+    "checking water purity in a laboratory"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two thermometers: pure water and salty water, both boiling."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which shows the higher reading."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 100 and 103 under them."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_LOWER_BOIL",
+     "listen_for": [
+      "salt lowers the boiling point"
+     ],
+     "ask": "What did the thermometer show for the salty water?",
+     "repair": "Impurities raise the boiling point."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_RAISE_MELT",
+     "listen_for": [
+      "it raises the melting point"
+     ],
+     "ask": "Why does salt melt ice on roads?",
+     "repair": "Impurities lower the melting point."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_NO_EFFECT",
+     "listen_for": [
+      "no effect"
+     ],
+     "ask": "Did the readings differ?",
+     "repair": "Impurities change boiling and melting points."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_PURITY_BY_LOOK",
+     "listen_for": [
+      "they both look clear"
+     ],
+     "ask": "Which boiled at 100 degrees?",
+     "repair": "The fixed point shows purity, not the look."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does an impurity do to the boiling point of water?",
+     "answer": "raises it",
+     "shows": "boiling"
+    },
+    {
+     "question": "How can you test whether a sample of water is pure?",
+     "answer": "check that it boils at 100 degrees (at sea level) or freezes at 0",
+     "shows": "purity test"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES",
+   "key_step": "The child tells a physical change (no new substance, often reversible: melting, dissolving, freezing) from a chemical change (new substance, hard to reverse: burning, rusting, cooking), and gives applications of changes of state.",
+   "floor": {
+    "prerequisite": "Knows the names of the changes of state.",
+    "question": "What is the change from solid to liquid called?",
+    "answer": "melting"
+   },
+   "representations": [
+    "real examples on a tray: wax, sugar, paper, an old nail, an egg",
+    "a two-column sorting table",
+    "the questions \"New substance? Can it go back?\""
+   ],
+   "steps": [
+    "Ask: is a new substance made?",
+    "Ask: can it easily go back?",
+    "No and yes: physical. Yes and no: chemical.",
+    "Signs of chemical change: gas, colour change, heat or light given out."
+   ],
+   "contexts": [
+    "cooking an egg",
+    "a nail rusting",
+    "butter melting on hot ugali"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: physical, chemical."
+    },
+    {
+     "beat": "write",
+     "do": "Write melting wax, burning paper, dissolving sugar, rusting nail."
+    },
+    {
+     "beat": "point",
+     "do": "Point at burning paper.",
+     "say": "Can the ash become paper again?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to sort the four."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_MELT_CHEMICAL",
+     "listen_for": [
+      "melting is chemical"
+     ],
+     "ask": "Is the melted wax still wax?",
+     "repair": "Melting is physical."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_BURN_PHYSICAL",
+     "listen_for": [
+      "burning is physical"
+     ],
+     "ask": "Can the ash turn back into wood?",
+     "repair": "Burning is chemical."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_NEW",
+     "listen_for": [
+      "a physical change makes something new"
+     ],
+     "ask": "Is sugar water still sugar and water?",
+     "repair": "Only a chemical change makes a new substance."
+    },
+    {
+     "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_DISSOLVE_CHEMICAL",
+     "listen_for": [
+      "the sugar is gone, so it is chemical"
+     ],
+     "ask": "What was left on the dried saucer?",
+     "repair": "Dissolving is physical."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is rusting a physical or a chemical change?",
+     "answer": "chemical",
+     "shows": "chemical change"
+    },
+    {
+     "question": "Give one sign that a chemical change has happened.",
+     "answer": "a new substance, a gas given off, a colour change, heat or light given out",
+     "shows": "signs"
+    }
+   ]
+  }
+ ]
+}

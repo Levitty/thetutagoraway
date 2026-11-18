@@ -1,0 +1,556 @@
+{
+ "sub_strand": "SCIE.G5.MATTER.MIXTURES",
+ "title": "Mixtures",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Real mixtures on the desk: maize and beans, sand and water, salt water, oil and water, iron filings and sand. Every separation is done or shown: picking, sieving, winnowing (outside), filtering through a cloth, decanting, using a magnet, evaporating (teacher heats).",
+ "skills": [
+  {
+   "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
+   "key_step": "The child says a mixture is two or more substances put together that keep their own properties and can be separated again, in any amounts, made by people or by nature.",
+   "floor": {
+    "prerequisite": "Can sort substances into solids, liquids and gases.",
+    "question": "Is salt a solid, a liquid or a gas?",
+    "answer": "a solid"
+   },
+   "representations": [
+    "maize and beans in a basin",
+    "salt water left to dry on a saucer",
+    "air and soil as natural mixtures"
+   ],
+   "steps": [
+    "Put two substances together.",
+    "Ask: is each one still there?",
+    "Can we get each one back?",
+    "Then it is a mixture, whatever the amounts."
+   ],
+   "contexts": [
+    "githeri before cooking",
+    "tea with sugar",
+    "muddy river water after rain"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a saucer of salty water in the sun."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what will be on the saucer tomorrow."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw salt crystals on the dry saucer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_CANNOT_BE_UNMIXED",
+     "listen_for": [
+      "you cannot get it back"
+     ],
+     "ask": "What was left on the dry saucer?",
+     "repair": "A mixture can be separated again."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_NATURAL_NOT_MIXTURE",
+     "listen_for": [
+      "nobody mixed the air"
+     ],
+     "ask": "Is air made of one gas or many?",
+     "repair": "Natural things like air and soil are mixtures too."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_EQUAL_PARTS",
+     "listen_for": [
+      "the amounts must be equal"
+     ],
+     "ask": "Is a spoon of sugar in a cup of tea still a mixture?",
+     "repair": "A mixture can have any amounts."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_DISSOLVED_IS_NEW",
+     "listen_for": [
+      "it is a new substance"
+     ],
+     "ask": "If we dry the tea, what is left?",
+     "repair": "Dissolved sugar is still sugar."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is soil a mixture? Why?",
+     "answer": "Yes: it holds sand, clay, water and bits of plants that can be separated",
+     "shows": "natural mixture"
+    },
+    {
+     "question": "Salt is dissolved in water. Can the salt be got back?",
+     "answer": "Yes, by evaporating the water",
+     "shows": "can be separated"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+   "key_step": "The child calls a mixture homogeneous if it looks the same all through (salt water, sugar in tea, air) and heterogeneous if the parts can be seen (soil in water, oil and water, maize and beans), whatever was done to it.",
+   "floor": {
+    "prerequisite": "Knows what a mixture is.",
+    "question": "Is tea with sugar a mixture?",
+    "answer": "yes"
+   },
+   "representations": [
+    "clear jars of salt water, muddy water and oil on water",
+    "the jars after ten minutes of standing",
+    "a two-column table"
+   ],
+   "steps": [
+    "Look at the mixture after it has stood a while.",
+    "Can you see different parts or layers?",
+    "Yes: heterogeneous. No: homogeneous.",
+    "Dissolved things are still there even if not seen."
+   ],
+   "contexts": [
+    "a glass of milk tea",
+    "a bucket of muddy water",
+    "cooking oil in a pan of water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three jars: salt water, muddy water, oil on water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the oil jar.",
+     "say": "Can you see two parts?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say yes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label each jar homogeneous or heterogeneous."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_DISSOLVED_GONE",
+     "listen_for": [
+      "the salt has gone"
+     ],
+     "ask": "What did the dried saucer show?",
+     "repair": "Dissolved salt is there; salt water is a homogeneous mixture."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_CLEAR_IS_PURE",
+     "listen_for": [
+      "clear water is pure"
+     ],
+     "ask": "Can clear water hold dissolved salt?",
+     "repair": "A clear liquid can still be a mixture."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_STIRRED_IS_HOMO",
+     "listen_for": [
+      "I stirred it so it is the same"
+     ],
+     "ask": "What do you see after the muddy water stands?",
+     "repair": "Stirring does not make soil and water homogeneous."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_TWO_LIQUIDS_ALWAYS_HOMO",
+     "listen_for": [
+      "both are liquids"
+     ],
+     "ask": "What happened when the oil and water stood?",
+     "repair": "Oil and water form layers: heterogeneous."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is muddy water homogeneous or heterogeneous?",
+     "answer": "heterogeneous",
+     "shows": "classify"
+    },
+    {
+     "question": "Is sugar dissolved in clear water homogeneous or heterogeneous?",
+     "answer": "homogeneous",
+     "shows": "dissolved"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES",
+   "key_step": "The child names a mixture by the states of its parts (solid-solid, solid-liquid, liquid-liquid, and those with gases) and gives an everyday example of each.",
+   "floor": {
+    "prerequisite": "Can sort substances into solids, liquids and gases.",
+    "question": "Is cooking oil a solid or a liquid?",
+    "answer": "a liquid"
+   },
+   "representations": [
+    "maize and beans, sand and water, oil and water",
+    "a bottle of soda",
+    "a table: mixture, part 1, part 2, type"
+   ],
+   "steps": [
+    "Name each part of the mixture.",
+    "Say the state of each part.",
+    "Join them: solid-liquid, liquid-liquid, solid-solid.",
+    "Remember gases: soda, air."
+   ],
+   "contexts": [
+    "rice mixed with small stones",
+    "milk and water",
+    "soda bubbles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: mixture, parts, type."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"muddy water\" in the first row."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the parts column.",
+     "say": "What are the two parts and their states?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for soil (solid) and water (liquid)."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"solid-liquid\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_LOOKS_LIQUID",
+     "listen_for": [
+      "salt water is liquid-liquid"
+     ],
+     "ask": "Was the salt a solid or a liquid before it dissolved?",
+     "repair": "Salt water is a solid-liquid mixture."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_THICK_IS_SOLID",
+     "listen_for": [
+      "honey is a solid"
+     ],
+     "ask": "Does honey flow and take the shape of the jar?",
+     "repair": "Thick liquids are still liquids."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_GAS_NOT_PART",
+     "listen_for": [
+      "soda is not a mixture"
+     ],
+     "ask": "What are the bubbles in soda?",
+     "repair": "Gases can be part of mixtures."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_NAME_BY_LOOK",
+     "listen_for": [
+      "muddy water is a liquid"
+     ],
+     "ask": "What settles at the bottom?",
+     "repair": "Name a mixture by its parts: soil and water, solid-liquid."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What type of mixture is sand and iron filings?",
+     "answer": "solid-solid",
+     "shows": "type"
+    },
+    {
+     "question": "Give an example of a liquid-liquid mixture.",
+     "answer": "oil and water, or milk and water",
+     "shows": "example"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+   "key_step": "The child chooses the method that fits the difference between the parts: size (sieving, picking), weight in the wind (winnowing), settling (decanting), particles that pass a filter (filtering), magnetism (magnet), dissolved solid (evaporation).",
+   "floor": {
+    "prerequisite": "Can tell homogeneous from heterogeneous mixtures.",
+    "question": "Is sand in water heterogeneous?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a sieve, a cloth filter, a magnet and a tray",
+    "a chart: difference between parts, method",
+    "real mixtures to separate"
+   ],
+   "steps": [
+    "Name the two parts.",
+    "Find how they differ: size, weight, magnetism, dissolving.",
+    "Pick the method that uses that difference.",
+    "Check which part you want to keep."
+   ],
+   "contexts": [
+    "flour with weevils",
+    "beans with chaff after threshing",
+    "muddy water for washing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"iron filings + sand\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the iron filings.",
+     "say": "What do iron filings do that sand does not?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a magnet pulls them\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"use a magnet\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which method separates beans from chaff."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_FILTER_FOR_ALL",
+     "listen_for": [
+      "just filter it"
+     ],
+     "ask": "Will filter paper stop dissolved salt?",
+     "repair": "Filtering does not remove dissolved solids."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_MAGNET_ANY_METAL",
+     "listen_for": [
+      "a magnet takes any metal"
+     ],
+     "ask": "Did the magnet lift the aluminium foil?",
+     "repair": "A magnet pulls iron and steel only."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_FUNNEL_SOLIDS",
+     "listen_for": [
+      "use a separating funnel for sand"
+     ],
+     "ask": "What does a separating funnel separate?",
+     "repair": "A separating funnel separates two liquids that do not mix."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_EVAPORATE_SAND",
+     "listen_for": [
+      "boil the water away"
+     ],
+     "ask": "Do you want to keep the water?",
+     "repair": "Filter or decant to keep the water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How would you separate small stones from rice?",
+     "answer": "pick them out by hand (or sieve if sizes differ)",
+     "shows": "method"
+    },
+    {
+     "question": "How do you get salt back from salt water?",
+     "answer": "evaporate the water",
+     "shows": "evaporation"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+   "key_step": "The child explains why a method works by naming the property it uses: the sieve lets small pieces through, the wind blows light chaff further, the filter traps undissolved bits, the magnet attracts iron, heat turns water to vapour and leaves the solid.",
+   "floor": {
+    "prerequisite": "Can choose a method for a mixture.",
+    "question": "Which method separates beans from chaff?",
+    "answer": "winnowing"
+   },
+   "representations": [
+    "a sieve with flour and lumps",
+    "a winnowing tray outside",
+    "a cloth filter over a jar"
+   ],
+   "steps": [
+    "Name the method.",
+    "Name the property it uses (size, weight, magnetism, dissolving).",
+    "Say what stays and what goes.",
+    "Check with a real try."
+   ],
+   "contexts": [
+    "sieving maize flour",
+    "winnowing millet",
+    "straining milk through a cloth"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a winnowing tray with grain and chaff in the air."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chaff.",
+     "say": "Why does the wind carry the chaff further?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it is lighter\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"light chaff blows away; heavy grain falls back\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_FILTER_REMOVES_DISSOLVED",
+     "listen_for": [
+      "the filter takes out the salt"
+     ],
+     "ask": "Does the filtered salt water still taste salty?",
+     "repair": "Dissolved bits pass through a filter."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_WINNOW_REVERSED",
+     "listen_for": [
+      "the grain blows away"
+     ],
+     "ask": "Which is lighter: the grain or the chaff?",
+     "repair": "The wind carries the light chaff; grain falls back."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_SIEVE_REVERSED",
+     "listen_for": [
+      "the small pieces stay"
+     ],
+     "ask": "Can the big lumps fit through the holes?",
+     "repair": "Small pieces fall through; big ones stay on the sieve."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_MAGNET_PULLS_SAND",
+     "listen_for": [
+      "the magnet pushes the sand"
+     ],
+     "ask": "Which part jumped to the magnet on its own?",
+     "repair": "The magnet pulls the iron; sand stays."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why does sieving separate flour from lumps?",
+     "answer": "the small flour particles pass through the holes, the big lumps do not",
+     "shows": "size"
+    },
+    {
+     "question": "Why does filtering not remove sugar from water?",
+     "answer": "the sugar is dissolved and passes through the filter",
+     "shows": "dissolved"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES",
+   "key_step": "The child gives everyday uses of separation at home, on the farm and in industry (sieving flour, winnowing, straining tea, filtering water, getting salt by evaporation at the coast).",
+   "floor": {
+    "prerequisite": "Can explain why sieving works.",
+    "question": "What passes through a sieve?",
+    "answer": "the small pieces"
+   },
+   "representations": [
+    "a tea strainer and a sieve",
+    "a picture of salt pans at Magarini",
+    "a chart: place, task, method"
+   ],
+   "steps": [
+    "At home: straining tea, sieving flour, picking stones from rice.",
+    "On the farm: winnowing, threshing.",
+    "In industry: salt from sea water, sugar from cane.",
+    "Water: filtering is a first step, then boiling."
+   ],
+   "contexts": [
+    "salt pans at the coast",
+    "a maize mill",
+    "straining tea at breakfast"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tea strainer over a cup."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the leaves left in the strainer.",
+     "say": "What kind of separation is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"filtering\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw one more separation done at home."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_ONLY_LAB",
+     "listen_for": [
+      "only in a laboratory"
+     ],
+     "ask": "What does your family do with the tea leaves?",
+     "repair": "People separate mixtures every day at home."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_FILTER_IS_SAFE",
+     "listen_for": [
+      "filtered water is safe"
+     ],
+     "ask": "Does a filter stop germs?",
+     "repair": "Filtering removes dirt; boil or treat to kill germs."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_ONLY_ONE_METHOD_FARM",
+     "listen_for": [
+      "farmers only pick"
+     ],
+     "ask": "How is chaff removed in a windy place?",
+     "repair": "Farmers winnow and sieve as well as pick."
+    },
+    {
+     "code": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_TEA_STRAINER_FILTER",
+     "listen_for": [
+      "it is just pouring"
+     ],
+     "ask": "What stays on the strainer?",
+     "repair": "A tea strainer filters the leaves from the tea."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way mixtures are separated at home.",
+     "answer": "straining tea, sieving flour, picking stones from rice",
+     "shows": "home use"
+    },
+    {
+     "question": "How is salt got from sea water at the coast?",
+     "answer": "by evaporating the water in salt pans",
+     "shows": "industry use"
+    }
+   ]
+  }
+ ]
+}

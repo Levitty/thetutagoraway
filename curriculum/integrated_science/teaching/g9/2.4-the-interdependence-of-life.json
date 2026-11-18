@@ -1,0 +1,193 @@
+{
+ "sub_strand": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L",
+ "title": "The Interdependence of Life",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A walk round the school compound listing living and non-living things in one patch, then building a food chain and a small food web from what was seen (grass, grasshopper, chicken, hawk). Human effects are taken from local examples: charcoal burning, plastic in a river, a new road.",
+ "skills": [
+  {
+   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC",
+   "key_step": "The child tells biotic factors (living things and their remains: plants, animals, fungi, bacteria) from abiotic factors (non-living: light, temperature, water, air, soil, wind) and says how each affects living things.",
+   "floor": {
+    "prerequisite": "Knows the signs of life.",
+    "question": "Give one sign that a plant is alive.",
+    "answer": "it grows, reproduces or responds"
+   },
+   "representations": [
+    "a list from a compound walk",
+    "a two-column table",
+    "a rotting log or leaf litter"
+   ],
+   "steps": [
+    "Ask: is it alive, or was it part of a living thing?",
+    "Yes: biotic. No: abiotic.",
+    "Say how each abiotic factor affects life (light for plants, water for all).",
+    "Remember decomposers and remains."
+   ],
+   "contexts": [
+    "a patch of the school field",
+    "a pond",
+    "a forest floor in Kakamega"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pond with a frog, water, sunlight, a water lily and mud."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sunlight.",
+     "say": "Biotic or abiotic?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"abiotic\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_LIGHT",
+     "listen_for": [
+      "sunlight is biotic"
+     ],
+     "ask": "Does sunlight grow or reproduce?",
+     "repair": "Sunlight is abiotic."
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_PLANT",
+     "listen_for": [
+      "a plant is abiotic"
+     ],
+     "ask": "Does a plant grow and reproduce?",
+     "repair": "Plants are biotic."
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_WATER",
+     "listen_for": [
+      "water is biotic"
+     ],
+     "ask": "Does water feed or reproduce?",
+     "repair": "Water is abiotic."
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC.M_IS9_BA_DEAD_ABIOTIC_NEVER",
+     "listen_for": [
+      "the log is just dead"
+     ],
+     "ask": "What lives off the rotting log?",
+     "repair": "Remains feed decomposers in the living web."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is temperature a biotic or abiotic factor?",
+     "answer": "abiotic",
+     "shows": "abiotic"
+    },
+    {
+     "question": "Give two biotic factors in a pond.",
+     "answer": "any two: fish, frogs, water plants, algae",
+     "shows": "biotic"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS",
+   "key_step": "The child builds and reads food chains and webs (producer first, arrows pointing to the eater, primary and secondary consumers) and describes how human activities (cutting forests, pollution, overfishing, burning) upset them.",
+   "floor": {
+    "prerequisite": "Can tell biotic from abiotic factors.",
+    "question": "Is grass biotic or abiotic?",
+    "answer": "biotic"
+   },
+   "representations": [
+    "cards of organisms to link with string",
+    "a web drawn from the compound walk",
+    "a local news story of a human effect"
+   ],
+   "steps": [
+    "Start with a producer (a green plant).",
+    "Arrow to what eats it: the primary consumer.",
+    "Then the secondary consumer.",
+    "Join chains into a web; remove one organism and follow the effects."
+   ],
+   "contexts": [
+    "grass, grasshopper, chicken, hawk",
+    "Lake Victoria fish and the Nile perch",
+    "charcoal burning in a forest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write grass, zebra, lion."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which way the arrows point."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"grass to zebra to lion\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the arrows towards the eaters."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the zebra.",
+     "say": "What happens to the lions if zebras are hunted out?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_START",
+     "listen_for": [
+      "it starts with an animal"
+     ],
+     "ask": "Where does the zebra get its energy?",
+     "repair": "A chain starts with a producer."
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_ARROW",
+     "listen_for": [
+      "the arrow points to the food"
+     ],
+     "ask": "Read the arrow as \"gives energy to\".",
+     "repair": "Arrows point to the eater."
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_HUMAN",
+     "listen_for": [
+      "cutting trees affects only trees"
+     ],
+     "ask": "Who eats the leaves of the trees?",
+     "repair": "Human activities upset whole webs."
+    },
+    {
+     "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS.M_IS9_FC_REMOVE_NO_EFFECT",
+     "listen_for": [
+      "only the hawks are affected"
+     ],
+     "ask": "What do the snakes eat?",
+     "repair": "One change spreads through the web."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first organism in every food chain?",
+     "answer": "a producer (a green plant)",
+     "shows": "producer"
+    },
+    {
+     "question": "Give one human activity that harms food webs, and how.",
+     "answer": "cutting forests (removes food and homes), pollution, overfishing or burning",
+     "shows": "human effect"
+    }
+   ]
+  }
+ ]
+}

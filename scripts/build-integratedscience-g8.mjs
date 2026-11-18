@@ -3,11 +3,14 @@
 // (curriculum/integrated_science/g8.json); the official outcomes, rubrics and sub-strand text are never touched.
 //   node scripts/build-integratedscience-g8.mjs      then  npm run subject:map -- integratedscience 8 --dir integrated_science --title "Integrated Science"
 // Idempotent: skills, prerequisites and misconceptions are rebuilt from scripts/data/integratedscience-g8-skills.mjs every run.
+// Depth pass (18 Nov 2026): scripts/data/science-depth/g8.mjs through scripts/science-depth.mjs (teaching pack in curriculum/integrated_science/teaching/g8/).
 // Grade 7 skills that lead to a Grade 8 outcome (leads_to in curriculum/integrated_science/g7.json) become prerequisites of the Grade 8
 // skills that cover it, so the Grade 7 links into Grade 8 are honoured by the build itself.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/integratedscience-g8-skills.mjs';
+import { SUBS as DEPTH } from './data/science-depth/g8.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const J = (f) => JSON.parse(readFileSync(new URL(`../curriculum/${f}.json`, import.meta.url), 'utf8'));
 const path = new URL('../curriculum/integrated_science/g8.json', import.meta.url);
@@ -54,6 +57,7 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
 }
 for (const [, key] of D.SKILLS) if (!D.MIS.some(m => m[0] === key)) throw new Error(`skill ${key} has no misconception`);
 g8.totals = { ...g8.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
-g8.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, plan and attitude outcomes are listed in docs/qa/integratedscience-g8-non-question-outcomes-2026-11-13.md";
+const depth = applyDepth(g8, DEPTH, { dir: 'integrated_science', grade: 8, prefix: P });
+g8.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, plan and attitude outcomes are listed in docs/qa/integratedscience-g8-non-question-outcomes-2026-11-13.md; depth pass 18 Nov 2026 (two new skills for outcomes 2.2 b and 2.3 b, real causes for the 13 Nov misconceptions, two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/integrated_science/teaching/g8)";
 writeFileSync(path, JSON.stringify(g8, null, 1) + '\n');
-console.log(`integrated science g8: ${D.SKILLS.length} skills, ${nPre} prerequisites (${nAdded} added to honour Grade 7 links), ${D.MIS.length} misconceptions over ${g8.sub_strands.filter(s => s.skills.length).length} sub-strands`);
+console.log(`integrated science g8: ${g8.totals.skills} skills, ${g8.totals.prerequisites} prerequisites (${nAdded} added to honour Grade 7 links), ${g8.totals.misconceptions} misconceptions over ${g8.sub_strands.filter(s => s.skills.length).length} sub-strands; depth pass ${depth.subs} of ${depth.of} (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);

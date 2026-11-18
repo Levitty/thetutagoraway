@@ -1,0 +1,189 @@
+{
+ "sub_strand": "INTE.G8.LIVING.THE_CELL",
+ "title": "The Cell",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Onion skin and a cheek cell (scraped with a clean ice-cream stick by the learner's own hand) under the school microscope, stained with iodine by the teacher. Where there is no microscope, use labelled drawings and photographs. The magnification sum is done with the numbers printed on the lenses.",
+ "skills": [
+  {
+   "skill": "INTE.G8.LIVING.THE_CELL.CELL_PARTS",
+   "key_step": "The child names the parts seen under a light microscope (cell membrane, cytoplasm, nucleus; plus cell wall, large vacuole and chloroplasts in plant cells), gives each its job and compares plant and animal cells.",
+   "floor": {
+    "prerequisite": "Knows how to use and care for laboratory apparatus.",
+    "question": "Where do you read a measuring cylinder?",
+    "answer": "at eye level, at the bottom of the curve"
+   },
+   "representations": [
+    "onion and cheek cells under a microscope",
+    "labelled drawings side by side",
+    "a comparison table"
+   ],
+   "steps": [
+    "Both: membrane (controls what enters and leaves), cytoplasm (where work happens), nucleus (controls the cell).",
+    "Plant only: cell wall (support), large vacuole (sap), chloroplasts (make food).",
+    "Compare in a table.",
+    "Draw what is seen, labelled."
+   ],
+   "contexts": [
+    "onion skin",
+    "a leaf of sukuma",
+    "a cheek cell"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box-shaped cell and a round cell."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the round cell.",
+     "say": "Does this one have a cell wall?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"no, it is an animal cell\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label the parts of both."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_WALL_ANIMAL",
+     "listen_for": [
+      "animal cells have a wall"
+     ],
+     "ask": "Which cell is box-shaped and stiff?",
+     "repair": "Only plant cells have a cell wall."
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_NUCLEUS",
+     "listen_for": [
+      "the nucleus makes food"
+     ],
+     "ask": "Which part is green and makes food?",
+     "repair": "The nucleus controls the cell."
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_CHLORO",
+     "listen_for": [
+      "animal cells have chloroplasts"
+     ],
+     "ask": "Do animals make their own food?",
+     "repair": "Chloroplasts are in plant cells."
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_MEMBRANE",
+     "listen_for": [
+      "the membrane is only the shape"
+     ],
+     "ask": "What lets water and food into the cell?",
+     "repair": "The membrane controls what enters and leaves."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two parts found in plant cells but not in animal cells.",
+     "answer": "any two: cell wall, chloroplasts, large vacuole",
+     "shows": "compare"
+    },
+    {
+     "question": "What does the nucleus do?",
+     "answer": "controls the activities of the cell",
+     "shows": "nucleus"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION",
+   "key_step": "The child works out the total magnification by multiplying the eyepiece and objective magnifications, and knows the image, not the cell, is enlarged.",
+   "floor": {
+    "prerequisite": "Can multiply by 10.",
+    "question": "What is 10 times 40?",
+    "answer": "400"
+   },
+   "representations": [
+    "the numbers printed on the microscope lenses",
+    "a hand lens over a printed letter",
+    "a table: eyepiece, objective, total"
+   ],
+   "steps": [
+    "Read the eyepiece number (x10).",
+    "Read the objective number (x4, x10, x40).",
+    "Multiply them.",
+    "Say: the image is that many times bigger."
+   ],
+   "contexts": [
+    "the school microscope",
+    "a hand lens on a leaf",
+    "a clinic microscope for malaria"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a microscope with x10 on the eyepiece and x40 on the objective."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask for the total magnification."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"400\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"10 x 40 = 400\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_ADD",
+     "listen_for": [
+      "50 times"
+     ],
+     "ask": "Does the second lens enlarge the first lens's image?",
+     "repair": "Multiply the two magnifications."
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_ONE",
+     "listen_for": [
+      "10 times"
+     ],
+     "ask": "What does the eyepiece do?",
+     "repair": "Both lenses count."
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_FOUR",
+     "listen_for": [
+      "40",
+      "140"
+     ],
+     "ask": "What is 10 times 4, and 10 times 40?",
+     "repair": "10 times 40 is 400."
+    },
+    {
+     "code": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_REAL_SIZE",
+     "listen_for": [
+      "the cell grows"
+     ],
+     "ask": "Does the letter change size without the lens?",
+     "repair": "Only the image is bigger."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The eyepiece is x10 and the objective is x10. What is the total magnification?",
+     "answer": "x100",
+     "shows": "multiply"
+    },
+    {
+     "question": "The eyepiece is x5 and the objective is x40. What is the total magnification?",
+     "answer": "x200",
+     "shows": "apply"
+    }
+   ]
+  }
+ ]
+}

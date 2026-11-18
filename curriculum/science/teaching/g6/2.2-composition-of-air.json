@@ -1,0 +1,457 @@
+{
+ "sub_strand": "SCIE.G6.MATTER.COMPOSITION_OF_AIR",
+ "title": "Composition of Air",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The burning candle in a jar over water is shown by the teacher; the child records what happens and why. A pie chart (with Mathematics) shows nitrogen about four fifths and oxygen about one fifth. Air pollution is found on a school walk: smoke, dust, exhaust.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+   "key_step": "The child names the components of air (nitrogen, oxygen, carbon dioxide, other gases, water vapour, dust) and says nitrogen is the largest part and oxygen about one fifth.",
+   "floor": {
+    "prerequisite": "Knows air is a gas that takes up space.",
+    "question": "Does air take up space?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a pie chart of air",
+    "the candle in a jar over water",
+    "a table of components and amounts"
+   ],
+   "steps": [
+    "Nitrogen: about four fifths.",
+    "Oxygen: about one fifth.",
+    "Carbon dioxide and other gases: very small parts.",
+    "Also water vapour and dust."
+   ],
+   "contexts": [
+    "breathing in a classroom",
+    "a candle going out under a jar",
+    "dust on a dry day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle for all of air."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how big the oxygen slice should be."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's guess."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw one fifth for oxygen and almost all the rest for nitrogen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_MOSTLY_OXYGEN",
+     "listen_for": [
+      "air is mostly oxygen"
+     ],
+     "ask": "How big is the oxygen slice of the pie?",
+     "repair": "Air is mostly nitrogen; oxygen is about one fifth."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_ONE_GAS",
+     "listen_for": [
+      "air is one gas"
+     ],
+     "ask": "Name two gases in air.",
+     "repair": "Air is a mixture of gases."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_CANDLE_ALL",
+     "listen_for": [
+      "the candle used all the air"
+     ],
+     "ask": "How far did the water rise: to the top or a small part?",
+     "repair": "The candle uses only part of the oxygen, not all the air."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_CO2_MOST",
+     "listen_for": [
+      "carbon dioxide is most"
+     ],
+     "ask": "What does the pie chart show?",
+     "repair": "Carbon dioxide is a very small part of air."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which gas makes up most of the air?",
+     "answer": "nitrogen",
+     "shows": "largest part"
+    },
+    {
+     "question": "About what fraction of air is oxygen?",
+     "answer": "about one fifth",
+     "shows": "oxygen share"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
+   "key_step": "The child outlines uses of the components of air: oxygen for breathing and burning, carbon dioxide for plants making food and for fire extinguishers and soda, nitrogen for plant growth (in fertilisers) and food packing.",
+   "floor": {
+    "prerequisite": "Can name the components of air.",
+    "question": "Which gas makes up most of the air?",
+    "answer": "nitrogen"
+   },
+   "representations": [
+    "a chart: gas, uses",
+    "soda bubbles",
+    "a fertiliser bag label showing N"
+   ],
+   "steps": [
+    "Oxygen: breathing, burning, hospitals.",
+    "Carbon dioxide: plants, fire extinguishers, soda.",
+    "Nitrogen: fertilisers, keeping packed food fresh.",
+    "Water vapour: rain."
+   ],
+   "contexts": [
+    "an oxygen cylinder in a hospital",
+    "a fire extinguisher at school",
+    "CAN fertiliser on a farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three boxes: oxygen, carbon dioxide, nitrogen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at carbon dioxide.",
+     "say": "Who uses this gas to make food?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"plants\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add one use in each box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_CO2_ONLY_OUT",
+     "listen_for": [
+      "carbon dioxide is useless"
+     ],
+     "ask": "What do plants need to make food?",
+     "repair": "Plants use carbon dioxide; it has other uses too."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_OXYGEN_FUEL",
+     "listen_for": [
+      "oxygen burns"
+     ],
+     "ask": "What burns in a jiko: charcoal or oxygen?",
+     "repair": "Oxygen helps fuels burn; it is not the fuel."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_N_USELESS",
+     "listen_for": [
+      "nitrogen is useless"
+     ],
+     "ask": "What does N on a fertiliser bag stand for?",
+     "repair": "Nitrogen is used in fertilisers and food packing."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_PLANTS_NEED_O2_ONLY",
+     "listen_for": [
+      "plants use oxygen to make food"
+     ],
+     "ask": "Which gas goes into the leaf to make food?",
+     "repair": "Plants use carbon dioxide to make food."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one use of oxygen.",
+     "answer": "breathing, burning, or in hospitals",
+     "shows": "oxygen use"
+    },
+    {
+     "question": "Why is carbon dioxide used in some fire extinguishers?",
+     "answer": "it does not support burning, so it puts out the fire",
+     "shows": "carbon dioxide use"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+   "key_step": "The child identifies air pollutants (smoke, dust, exhaust gases, gases from factories, smells from rotting waste, aerosol sprays) and their sources, indoors and outdoors.",
+   "floor": {
+    "prerequisite": "Knows the components of clean air.",
+    "question": "Name one gas in clean air.",
+    "answer": "nitrogen or oxygen"
+   },
+   "representations": [
+    "a school walk: list of sources",
+    "a white cloth near a road after a week",
+    "a chart: pollutant, source"
+   ],
+   "steps": [
+    "Look for smoke: burning rubbish, kitchens, vehicles.",
+    "Look for dust: roads, quarries.",
+    "Think of gases you cannot see: exhaust, factory gases.",
+    "Remember indoor sources."
+   ],
+   "contexts": [
+    "a busy matatu stage",
+    "a dusty murram road",
+    "a smoky kitchen"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road with a matatu and a kitchen with a jiko."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kitchen.",
+     "say": "Is the smoke here air pollution?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to mark each source of pollution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_FACTORY",
+     "listen_for": [
+      "only factories pollute"
+     ],
+     "ask": "What comes out of a matatu exhaust?",
+     "repair": "Vehicles, homes and burning rubbish pollute too."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_SMELL",
+     "listen_for": [
+      "it does not smell so it is clean"
+     ],
+     "ask": "Can some harmful gases have no smell?",
+     "repair": "Some pollutants cannot be smelt."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_DUST_NOT",
+     "listen_for": [
+      "dust is natural"
+     ],
+     "ask": "How do eyes and noses feel on a dusty day?",
+     "repair": "Dust and rubbish smoke are pollution."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_INDOOR_CLEAN",
+     "listen_for": [
+      "indoor air is clean"
+     ],
+     "ask": "How do your eyes feel in a smoky kitchen?",
+     "repair": "Indoor smoke is air pollution."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two sources of air pollution.",
+     "answer": "any two: vehicles, burning rubbish, factories, smoky kitchens, dusty roads",
+     "shows": "sources"
+    },
+    {
+     "question": "Is smoke from a jiko in a closed room air pollution?",
+     "answer": "Yes",
+     "shows": "indoor"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+   "key_step": "The child explains effects of air pollution on people (coughs, chest illnesses, sore eyes), on plants and animals, on buildings, and on the climate, near and far, in towns and villages.",
+   "floor": {
+    "prerequisite": "Can name air pollutants.",
+    "question": "Name one air pollutant.",
+    "answer": "smoke or dust"
+   },
+   "representations": [
+    "a chart: pollutant, effect on people, animals, plants",
+    "dusty leaves beside a road",
+    "a picture of a smoky town"
+   ],
+   "steps": [
+    "People: coughs, asthma attacks, sore eyes.",
+    "Plants: dust blocks leaves.",
+    "Animals: breathing illnesses.",
+    "The climate: some gases warm the Earth, bringing droughts and floods."
+   ],
+   "contexts": [
+    "leaves along a dusty road",
+    "a child with asthma near a quarry",
+    "droughts in northern Kenya"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a leaf covered in dust."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what dust does to the leaf's food making."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"dust blocks light: less food\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_ONLY_NEAR",
+     "listen_for": [
+      "only people next to it"
+     ],
+     "ask": "Where does wind carry smoke?",
+     "repair": "Pollution spreads far with the wind."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_PLANTS_FINE",
+     "listen_for": [
+      "plants are fine"
+     ],
+     "ask": "What did the dusty leaves look like?",
+     "repair": "Plants and animals are harmed too."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_WARM_GOOD",
+     "listen_for": [
+      "warmer is nicer"
+     ],
+     "ask": "What happens to rains when the climate changes?",
+     "repair": "Warming brings droughts and floods."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_SMOG_ONLY_TOWNS",
+     "listen_for": [
+      "villages are clean"
+     ],
+     "ask": "What smoke is there in a village?",
+     "repair": "Smoke and dust harm people in villages too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one effect of air pollution on people.",
+     "answer": "coughs, chest illness, asthma attacks or sore eyes",
+     "shows": "people"
+    },
+    {
+     "question": "How can dust from a road harm crops?",
+     "answer": "it covers leaves and blocks light so less food is made",
+     "shows": "plants"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
+   "key_step": "The child describes methods that reduce air pollution at its source (no burning rubbish, cleaner stoves and fuels, servicing vehicles, planting trees, watering dusty areas) and tells them apart from protecting oneself.",
+   "floor": {
+    "prerequisite": "Knows the effects of air pollution.",
+    "question": "Give one effect of smoke on people.",
+    "answer": "coughing or sore eyes"
+   },
+   "representations": [
+    "an energy-saving jiko",
+    "a tree-planting picture",
+    "a chart: stops the cause or protects me"
+   ],
+   "steps": [
+    "Find the source.",
+    "Stop or reduce it: compost or recycle instead of burning, cleaner stoves.",
+    "Plant trees; water dusty grounds.",
+    "Masks and open windows protect people but do not stop the source."
+   ],
+   "contexts": [
+    "a school tree-planting day",
+    "a family switching to a gas cooker",
+    "a rubbish pit instead of burning"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"burning rubbish in the school compound\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "How can the school stop this smoke?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's idea."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw one change at the source."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_BURN_RUBBISH",
+     "listen_for": [
+      "burning cleans the compound"
+     ],
+     "ask": "Where does the smoke go?",
+     "repair": "Burning rubbish pollutes the air."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TALL_CHIMNEY",
+     "listen_for": [
+      "a tall chimney removes it"
+     ],
+     "ask": "Where does the smoke go from a tall chimney?",
+     "repair": "A taller chimney only spreads smoke further."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TREES_NOT",
+     "listen_for": [
+      "trees do not help"
+     ],
+     "ask": "What do leaves catch and take in?",
+     "repair": "Trees trap dust and take in carbon dioxide."
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_MASK_FIXES",
+     "listen_for": [
+      "everyone wears a mask"
+     ],
+     "ask": "Does a mask stop the fire smoking?",
+     "repair": "Stop the cause; masks only protect."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways to reduce air pollution at school.",
+     "answer": "any two: stop burning rubbish, plant trees, water dusty grounds",
+     "shows": "reduce"
+    },
+    {
+     "question": "Does a taller chimney stop air pollution?",
+     "answer": "No, it spreads it further",
+     "shows": "chimney"
+    }
+   ]
+  }
+ ]
+}

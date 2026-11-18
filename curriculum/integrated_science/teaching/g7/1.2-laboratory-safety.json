@@ -1,0 +1,279 @@
+{
+ "sub_strand": "INTE.G7.SCIENT.LABORATORY_SAFETY",
+ "title": "Laboratory Safety",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Real labels first: bottles from home (paraffin, bleach, insecticide) with their symbols, shown closed and never opened by learners. Safety rules are role-played. First aid statements are to be confirmed by a teacher or a health worker.",
+ "skills": [
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+   "key_step": "The child reads the common hazard symbols (flammable, corrosive, toxic, radioactive, harmful or irritant) and says what each means and what to do.",
+   "floor": {
+    "prerequisite": "Knows some substances at home are dangerous.",
+    "question": "Why is a pesticide tin never reused for water?",
+    "answer": "it held poison"
+   },
+   "representations": [
+    "closed bottles from home with their labels",
+    "a symbol chart",
+    "symbol cards to match with meanings"
+   ],
+   "steps": [
+    "Flame: catches fire easily; keep away from flames.",
+    "Corrosive (liquid eating a hand): burns skin and metal.",
+    "Skull: toxic, poisonous if swallowed, breathed or touched.",
+    "No label: do not use; tell the teacher."
+   ],
+   "contexts": [
+    "a paraffin container at home",
+    "bleach in the kitchen",
+    "insecticide spray"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a flame symbol and a skull symbol."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the flame.",
+     "say": "What does this warn you about?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it catches fire easily\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the meaning under each symbol."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_FLAME_FIRE",
+     "listen_for": [
+      "it is used for fires"
+     ],
+     "ask": "What happens if you bring a flame near it?",
+     "repair": "The flame symbol means it catches fire easily."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_SKULL_DEAD",
+     "listen_for": [
+      "it is for killing pests only"
+     ],
+     "ask": "What can it do to a person?",
+     "repair": "The skull means toxic: it can poison you."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_CORROSIVE_TOXIC",
+     "listen_for": [
+      "corrosive means poison"
+     ],
+     "ask": "What does the picture show happening to the hand?",
+     "repair": "Corrosive burns skin; toxic poisons."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_NO_SYMBOL_SAFE",
+     "listen_for": [
+      "no symbol, so it is safe"
+     ],
+     "ask": "Can you tell two clear liquids apart by looking?",
+     "repair": "Never use an unlabelled substance."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does the flame hazard symbol mean?",
+     "answer": "the substance catches fire easily (flammable)",
+     "shows": "flammable"
+    },
+    {
+     "question": "What should you do with an unlabelled bottle in the laboratory?",
+     "answer": "not use it, and tell the teacher",
+     "shows": "unlabelled"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+   "key_step": "The child gives causes of laboratory accidents (running, tasting, careless heating, spills, broken glass, no supervision) and the rule that prevents each.",
+   "floor": {
+    "prerequisite": "Can read hazard symbols.",
+    "question": "What does the skull symbol mean?",
+    "answer": "toxic or poisonous"
+   },
+   "representations": [
+    "a picture of a laboratory with ten dangers",
+    "a rules poster",
+    "a fire drill"
+   ],
+   "steps": [
+    "Find the danger in a scene.",
+    "Say what could happen.",
+    "Give the rule that prevents it.",
+    "Practise the rule (drill, role-play)."
+   ],
+   "contexts": [
+    "a school laboratory",
+    "a home kitchen",
+    "a fire drill"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a test tube being heated, pointing at a neighbour."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mouth of the tube.",
+     "say": "What could happen here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it could spit hot liquid at the neighbour\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to redraw the tube pointing safely away."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_TASTE_SAFE",
+     "listen_for": [
+      "taste it to find out"
+     ],
+     "ask": "Can you know a chemical is safe before tasting it?",
+     "repair": "Never taste or smell chemicals directly."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_POINT_TUBE",
+     "listen_for": [
+      "it will not spit"
+     ],
+     "ask": "What happens when liquid boils suddenly in a tube?",
+     "repair": "Point a heated tube away from everyone."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_CARELESS_ONLY",
+     "listen_for": [
+      "only careless people have accidents"
+     ],
+     "ask": "Can a rule stop an accident before it happens?",
+     "repair": "Rules prevent most accidents."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_RUN_EXIT",
+     "listen_for": [
+      "run out fast"
+     ],
+     "ask": "What happens if people run in a crowded room?",
+     "repair": "Walk quickly and calmly to the exit."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why must you never run in the laboratory?",
+     "answer": "you could fall, break glass or knock over chemicals",
+     "shows": "rule"
+    },
+    {
+     "question": "Give one rule for heating a test tube.",
+     "answer": "point it away from people, or hold it with a holder",
+     "shows": "heating"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+   "key_step": "The child chooses the right first aid: cool burns and scalds under running water, press a clean cloth on a cut, rinse splashed eyes and skin with plenty of water, do not make a person vomit after swallowing a chemical, and tell the teacher at once.",
+   "floor": {
+    "prerequisite": "Knows the causes of laboratory accidents.",
+    "question": "Give one cause of a laboratory accident.",
+    "answer": "running, tasting, or careless heating"
+   },
+   "representations": [
+    "a first aid box opened and named",
+    "role-play cards",
+    "a chart: accident, first aid"
+   ],
+   "steps": [
+    "Tell the teacher at once.",
+    "Burns and scalds: cool under running water.",
+    "Cuts: press a clean cloth to stop bleeding.",
+    "Splashes: rinse with lots of water; swallowed chemicals: do not make them vomit, get help."
+   ],
+   "contexts": [
+    "a scald from hot water",
+    "a cut from broken glass",
+    "a splash of vinegar in the eye"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hand with a burn under a tap."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tap.",
+     "say": "Why water, and not butter?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"water cools the burn\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"cool, cover, call\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_BUTTER_BURN",
+     "listen_for": [
+      "put butter or toothpaste on it"
+     ],
+     "ask": "What does a burn need first: cooling or covering in fat?",
+     "repair": "Cool a burn under running water."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_VOMIT",
+     "listen_for": [
+      "make them vomit"
+     ],
+     "ask": "Could a corrosive chemical burn the throat again on the way up?",
+     "repair": "Do not make them vomit; get help at once."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_CUT_WASH",
+     "listen_for": [
+      "leave the cut open"
+     ],
+     "ask": "How do you stop the bleeding?",
+     "repair": "Press a clean cloth firmly on the cut."
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_EYE_RUB",
+     "listen_for": [
+      "rub the eye"
+     ],
+     "ask": "What does rubbing do to the chemical?",
+     "repair": "Rinse with running water; never rub."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first aid for a scald from hot water?",
+     "answer": "cool it under clean running water for several minutes",
+     "shows": "scald"
+    },
+    {
+     "question": "A learner swallows a chemical. Should they be made to vomit?",
+     "answer": "No: get help from the teacher or a health worker at once",
+     "shows": "swallowed"
+    }
+   ]
+  }
+ ]
+}

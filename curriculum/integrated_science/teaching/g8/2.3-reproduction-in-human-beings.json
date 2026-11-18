@@ -1,0 +1,369 @@
+{
+ "sub_strand": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE",
+ "title": "Reproduction in human beings",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Taught as the school decides, with a female and a male teacher or the guidance counsellor. Diagrams and a cycle calendar, never photographs. Health statements are to be confirmed by a teacher or a health worker; questions never ask about personal experience.",
+ "skills": [
+  {
+   "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL",
+   "key_step": "The child outlines the menstrual cycle (about 28 days on average, bleeding three to seven days, ovulation near the middle), says it is normal, and names its common challenges.",
+   "floor": {
+    "prerequisite": "Can name the parts of the female reproductive system.",
+    "question": "What do the ovaries release?",
+    "answer": "eggs"
+   },
+   "representations": [
+    "a circular cycle calendar",
+    "a labelled diagram of the uterus lining",
+    "a chart: day, what happens"
+   ],
+   "steps": [
+    "Day 1 to about day 5: the lining of the uterus is shed (menstruation).",
+    "The lining builds up again.",
+    "About day 14: ovulation.",
+    "No fertilisation: the cycle starts again. Cycles vary in length."
+   ],
+   "contexts": [
+    "a health lesson",
+    "a calendar at home",
+    "the school nurse's talk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle split into 28 days."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle of the circle.",
+     "say": "What happens about here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"ovulation\"."
+    },
+    {
+     "beat": "write",
+     "do": "Mark days 1 to 5 as menstruation."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_LENGTH",
+     "listen_for": [
+      "about 7 days"
+     ],
+     "ask": "Is that the bleeding or the whole cycle?",
+     "repair": "The cycle is about 28 days; bleeding three to seven."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_OVULATION",
+     "listen_for": [
+      "the egg comes at the start"
+     ],
+     "ask": "Where did we mark ovulation on the circle?",
+     "repair": "Ovulation is near the middle."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_DISEASE",
+     "listen_for": [
+      "it is an illness"
+     ],
+     "ask": "Is it a normal part of growing up?",
+     "repair": "Menstruation is normal."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_ALWAYS_REGULAR",
+     "listen_for": [
+      "it must be exactly 28 days"
+     ],
+     "ask": "Is 28 days a rule or an average?",
+     "repair": "Cycles vary."
+    }
+   ],
+   "checks": [
+    {
+     "question": "About how long is the menstrual cycle on average?",
+     "answer": "about 28 days",
+     "shows": "length"
+    },
+    {
+     "question": "About when in the cycle is an egg released?",
+     "answer": "about the middle (around day 14)",
+     "shows": "ovulation"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE",
+   "key_step": "The child picks the parts of a plan that manage menstrual challenges: clean pads changed every four to six hours, daily bathing, a spare pad, rest and warm drinks for cramps, talking to a trusted adult, a health worker for severe pain, and staying in school.",
+   "floor": {
+    "prerequisite": "Knows the menstrual cycle is normal.",
+    "question": "Is menstruation an illness?",
+    "answer": "no"
+   },
+   "representations": [
+    "a plan template: challenge, what I will do, who can help",
+    "a spare-pad kit picture",
+    "scenario cards"
+   ],
+   "steps": [
+    "Name the challenge.",
+    "Choose a healthy step.",
+    "Name who can help.",
+    "Know when to see a health worker."
+   ],
+   "contexts": [
+    "a period starting at school",
+    "cramps during an exam week",
+    "no pads at home"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"My period starts during a lesson\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "What should be in her plan?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a spare pad, tell the school nurse, stay in school\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add one more step to the plan."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE.M_G8_MM_STAY_HOME",
+     "listen_for": [
+      "go home for the week"
+     ],
+     "ask": "Who at school can help with a pad?",
+     "repair": "Stay in school; carry a spare pad."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE.M_G8_MM_ONE_PAD_DAY",
+     "listen_for": [
+      "one pad a day"
+     ],
+     "ask": "What happens with a pad left too long?",
+     "repair": "Change it every four to six hours."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE.M_G8_MM_SEVERE_NORMAL",
+     "listen_for": [
+      "all pain is normal"
+     ],
+     "ask": "Which pain needs a health worker?",
+     "repair": "Severe pain needs a health worker."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE.M_G8_MM_SECRET",
+     "listen_for": [
+      "keep it secret"
+     ],
+     "ask": "Who is a trusted adult at school?",
+     "repair": "Talk to a trusted adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How often should a pad be changed?",
+     "answer": "every four to six hours",
+     "shows": "hygiene"
+    },
+    {
+     "question": "When should a girl see a health worker about her period?",
+     "answer": "if pain stops her daily life, bleeding is very heavy, or a period lasts more than a week",
+     "shows": "when to seek help"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION",
+   "key_step": "The child describes the order: one sperm joins the egg in the oviduct (fertilisation) to make a zygote, which divides as it moves to the uterus and sinks into its lining (implantation).",
+   "floor": {
+    "prerequisite": "Knows the menstrual cycle.",
+    "question": "When is an egg released?",
+    "answer": "about the middle of the cycle"
+   },
+   "representations": [
+    "a diagram of the oviduct and uterus with arrows",
+    "four event cards to order",
+    "a timeline"
+   ],
+   "steps": [
+    "Egg released into the oviduct.",
+    "One sperm joins it: fertilisation, a zygote.",
+    "The zygote divides as it moves down.",
+    "It sinks into the uterus lining: implantation."
+   ],
+   "contexts": [
+    "a biology chart",
+    "a health lesson",
+    "a clinic poster"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the oviduct leading to the uterus."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the oviduct.",
+     "say": "What happens here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"fertilisation\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to mark where implantation happens."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_PLACE",
+     "listen_for": [
+      "in the uterus"
+     ],
+     "ask": "Where does the egg meet the sperm?",
+     "repair": "Fertilisation is in the oviduct."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_ORDER",
+     "listen_for": [
+      "implantation first"
+     ],
+     "ask": "Can a zygote implant before it is made?",
+     "repair": "Fertilisation, then implantation."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_ZYGOTE",
+     "listen_for": [
+      "the zygote is a baby"
+     ],
+     "ask": "How many cells is a zygote?",
+     "repair": "The zygote is the first cell."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_MANY_SPERM",
+     "listen_for": [
+      "many sperm join"
+     ],
+     "ask": "How many sperm enter the egg?",
+     "repair": "One sperm joins the egg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does fertilisation take place?",
+     "answer": "in the oviduct",
+     "shows": "place"
+    },
+    {
+     "question": "What is implantation?",
+     "answer": "the embryo sinking into the lining of the uterus",
+     "shows": "implantation"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS",
+   "key_step": "The child names symptoms of common STIs (sores, unusual discharge, pain when urinating, itching), says some have no symptoms, names prevention (abstinence, faithfulness to one uninfected partner, correct condom use, testing) and says to see a health worker early.",
+   "floor": {
+    "prerequisite": "Knows the parts of the reproductive system.",
+    "question": "Where does fertilisation happen?",
+    "answer": "in the oviduct"
+   },
+   "representations": [
+    "a myth-or-fact card sort",
+    "a chart: symptom, what to do",
+    "a health centre poster"
+   ],
+   "steps": [
+    "STIs spread through sexual contact (and some through blood or from mother to baby).",
+    "Symptoms, and that some have none.",
+    "Prevention.",
+    "See a health worker early; many can be treated."
+   ],
+   "contexts": [
+    "a youth-friendly clinic",
+    "a school health talk",
+    "a myth heard from a friend"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"hugging\", \"toilet seats\", \"unprotected sex\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the list.",
+     "say": "Which of these spreads STIs?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"unprotected sex\"."
+    },
+    {
+     "beat": "write",
+     "do": "Cross out the myths."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_MYTH",
+     "listen_for": [
+      "from hugging or toilet seats"
+     ],
+     "ask": "How do STIs spread?",
+     "repair": "Not by hugging or toilet seats."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_NO_CURE",
+     "listen_for": [
+      "they cannot be treated"
+     ],
+     "ask": "Can a health worker treat many STIs?",
+     "repair": "See a health worker early."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_PREVENT",
+     "listen_for": [
+      "wash after sex"
+     ],
+     "ask": "Can washing remove an infection inside the body?",
+     "repair": "Abstinence and faithfulness prevent STIs."
+    },
+    {
+     "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_NO_SYMPTOMS_SAFE",
+     "listen_for": [
+      "no signs, no STI"
+     ],
+     "ask": "How can a person know for sure?",
+     "repair": "Some STIs show no signs; testing shows them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one symptom of an STI.",
+     "answer": "sores, unusual discharge, pain when urinating or itching",
+     "shows": "symptom"
+    },
+    {
+     "question": "Give one way to prevent STIs.",
+     "answer": "abstinence, or faithfulness to one uninfected partner",
+     "shows": "prevention"
+    }
+   ]
+  }
+ ]
+}

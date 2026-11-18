@@ -1,11 +1,15 @@
 // ============================================================================
 // SCIENCE AND TECHNOLOGY GRADE 4: merge the authored skills and misconception library into the file HOREB owns
 // (curriculum/science/g4.json); the official outcomes, rubrics and sub-strand text are never touched.
+// Depth pass (18 Nov 2026): scripts/data/science-depth/g4.mjs adds prerequisites, misconceptions and the teaching pack
+// (curriculum/science/teaching/g4/) through scripts/science-depth.mjs.
 //   node scripts/build-science-g4.mjs      then  npm run subject:map -- science 4 --dir science --title "Science and Technology"
 // Idempotent: skills, prerequisites, leads_to and misconceptions are rebuilt from scripts/data/science-g4-skills.mjs every run.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/science-g4-skills.mjs';
+import { SUBS as DEPTH } from './data/science-depth/g4.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/science/g4.json', import.meta.url);
 const g4 = JSON.parse(readFileSync(path, 'utf8'));
@@ -55,6 +59,7 @@ const NOTES = {
 };
 for (const s of g4.sub_strands) { const k = s.code.split('.').slice(3).join('.'); if (!NOTES[k]) throw new Error(`no note for ${k}`); s.authoring_notes = NOTES[k]; }
 g4.totals = { ...g4.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
-g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review";
+const depth = applyDepth(g4, DEPTH, { dir: 'science', grade: 4, prefix: P });
+g4.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/science/teaching/g4)";
 writeFileSync(path, JSON.stringify(g4, null, 1) + '\n');
-console.log(`science g4: ${D.SKILLS.length} skills, ${nPre} prerequisites, ${nLeads} leads-to links, ${D.MIS.length} misconceptions`);
+console.log(`science g4: ${g4.totals.skills} skills, ${g4.totals.prerequisites} prerequisites, ${nLeads} leads-to links, ${g4.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.pack} teaching pack entries)`);

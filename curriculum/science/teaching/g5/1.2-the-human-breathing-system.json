@@ -1,0 +1,466 @@
+{
+ "sub_strand": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+ "title": "The Human Breathing System",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A bell-jar or plastic-bottle lung model (balloons inside, a rubber sheet at the bottom) shows the diaphragm pulling down and air rushing in. The child puts a hand on the ribs while breathing in and out. Health statements are to be confirmed by a teacher or a health worker.",
+ "skills": [
+  {
+   "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+   "key_step": "The child names and places the nose, windpipe (trachea), lungs, ribs and diaphragm, and keeps the windpipe apart from the food pipe.",
+   "floor": {
+    "prerequisite": "Knows the food pipe carries food to the stomach.",
+    "question": "Which pipe carries food to the stomach?",
+    "answer": "the oesophagus (food pipe)"
+   },
+   "representations": [
+    "a body outline with the chest drawn in",
+    "the bottle lung model",
+    "the child's own hand on the chest"
+   ],
+   "steps": [
+    "Nose: air goes in.",
+    "Windpipe: in front of the food pipe, to the chest.",
+    "Two lungs inside the ribs.",
+    "The diaphragm: a sheet of muscle under the lungs."
+   ],
+   "contexts": [
+    "running in a PE lesson",
+    "a cold that blocks the nose",
+    "choking when laughing while eating"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the chest with two lungs and the windpipe."
+    },
+    {
+     "beat": "point",
+     "do": "Point below the lungs.",
+     "say": "What is the sheet of muscle here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name the diaphragm."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the ribs round the lungs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_TRACHEA_FOOD",
+     "listen_for": [
+      "air and food go down one pipe"
+     ],
+     "ask": "Why do we choke if food goes the wrong way?",
+     "repair": "The windpipe carries air; the food pipe carries food."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_DIAPHRAGM_PLACE",
+     "listen_for": [
+      "the diaphragm is in the neck"
+     ],
+     "ask": "What is under your lungs, above your stomach?",
+     "repair": "The diaphragm is a muscle sheet under the lungs."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_LUNGS_LOCATION",
+     "listen_for": [
+      "the lungs are in the belly",
+      "there is one lung"
+     ],
+     "ask": "Where does your chest rise when you breathe in?",
+     "repair": "Two lungs sit in the chest inside the ribs."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_NOSE_MOUTH_ONLY",
+     "listen_for": [
+      "the air stays in the nose"
+     ],
+     "ask": "Why does the chest rise when you breathe in?",
+     "repair": "Air travels on down the windpipe to the lungs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the tube that carries air to the lungs.",
+     "answer": "the windpipe (trachea)",
+     "shows": "part"
+    },
+    {
+     "question": "Where is the diaphragm?",
+     "answer": "under the lungs, above the stomach",
+     "shows": "place"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+   "key_step": "The child says what each part does: the nose warms, cleans and moistens air, the windpipe carries it, the lungs take oxygen into the blood and give out carbon dioxide, ribs protect, the diaphragm helps air move.",
+   "floor": {
+    "prerequisite": "Can name the parts of the breathing system.",
+    "question": "Name the organ where air goes.",
+    "answer": "the lungs"
+   },
+   "representations": [
+    "hairs in the nose seen in a mirror",
+    "a breath on a cold mirror (water vapour)",
+    "a chart: part, job"
+   ],
+   "steps": [
+    "Nose: hairs and mucus trap dust; air is warmed.",
+    "Windpipe: carries air.",
+    "Lungs: oxygen in, carbon dioxide out.",
+    "We breathe out a mix with less oxygen and more carbon dioxide."
+   ],
+   "contexts": [
+    "dust on a dry windy day",
+    "breathing on a cold window",
+    "a smoky kitchen"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw air going into the lungs and air coming out."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"oxygen, nitrogen, carbon dioxide\" on the air going in."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what changes in the air coming out."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"less oxygen, more carbon dioxide, water vapour\" on the air coming out."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_AIR_TO_STOMACH",
+     "listen_for": [
+      "air goes to the stomach"
+     ],
+     "ask": "Which organ fills when you take a deep breath?",
+     "repair": "Breathed air goes to the lungs, not the stomach."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_LUNGS_PUSH_SELF",
+     "listen_for": [
+      "the lungs blow themselves up"
+     ],
+     "ask": "In the model, what made the balloons fill?",
+     "repair": "The diaphragm and ribs move; the lungs follow."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_NO_OXYGEN_OUT",
+     "listen_for": [
+      "we breathe out only carbon dioxide"
+     ],
+     "ask": "How can mouth-to-mouth help someone if breathed-out air had no oxygen?",
+     "repair": "Breathed-out air still has oxygen, just less."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_NOSE_ONLY_SMELL",
+     "listen_for": [
+      "the nose is for smelling"
+     ],
+     "ask": "What do the hairs in your nose catch?",
+     "repair": "The nose also cleans, warms and moistens air."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What gas does the body take in from the air in the lungs?",
+     "answer": "oxygen",
+     "shows": "gas exchange"
+    },
+    {
+     "question": "Give one job of the nose apart from smelling.",
+     "answer": "it cleans, warms or moistens the air",
+     "shows": "nose"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+   "key_step": "The child explains breathing in as ribs moving up and out and the diaphragm moving down, so the chest gets bigger and air rushes in; breathing out is the reverse.",
+   "floor": {
+    "prerequisite": "Knows where the ribs, lungs and diaphragm are.",
+    "question": "Where is the diaphragm?",
+    "answer": "under the lungs"
+   },
+   "representations": [
+    "a hand on the ribs while breathing",
+    "the bottle model with a rubber sheet",
+    "two drawings: chest in and chest out"
+   ],
+   "steps": [
+    "Put hands on the ribs and breathe in: they move up and out.",
+    "Pull the model's sheet down: balloons fill.",
+    "More room in the chest, so air rushes in.",
+    "Breathing out: ribs move down and in, diaphragm up, air pushed out."
+   ],
+   "contexts": [
+    "blowing up a balloon at a party",
+    "running a race",
+    "singing in a choir"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the bottle model with the rubber sheet flat."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what will happen to the balloons if the sheet is pulled down."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the sheet down and the balloons bigger."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sheet.",
+     "say": "Which part of the body is this like?"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_RIBS_IN",
+     "listen_for": [
+      "the chest gets smaller"
+     ],
+     "ask": "With your hands on your ribs, which way do they move as you breathe in?",
+     "repair": "Breathing in, the ribs move up and out."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_AIR_PUSHES_CHEST",
+     "listen_for": [
+      "the air pushes the ribs out"
+     ],
+     "ask": "In the model, did the air move first or the sheet?",
+     "repair": "The muscles move first; air comes in to fill the space."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_DIAPHRAGM_UP_IN",
+     "listen_for": [
+      "the diaphragm goes up"
+     ],
+     "ask": "Which way did we pull the sheet to fill the balloons?",
+     "repair": "The diaphragm moves down when we breathe in."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_BREATHE_OUT_EMPTY",
+     "listen_for": [
+      "the lungs are empty"
+     ],
+     "ask": "After a big breath out, can you still blow a little?",
+     "repair": "Some air always stays in the lungs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What happens to the diaphragm when you breathe in?",
+     "answer": "it moves down (flattens)",
+     "shows": "diaphragm"
+    },
+    {
+     "question": "Why does air rush into the lungs when the ribs move up and out?",
+     "answer": "the chest gets bigger, making more room",
+     "shows": "cause of air flow"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+   "key_step": "The child recognises signs of common breathing conditions (common cold, asthma attacks, pneumonia, TB, allergy) and says which need a health worker.",
+   "floor": {
+    "prerequisite": "Knows what the lungs do.",
+    "question": "What gas do the lungs take in?",
+    "answer": "oxygen"
+   },
+   "representations": [
+    "symptom cards to sort",
+    "a story of a child with wheezing after dust",
+    "a chart: sign, possible condition, what to do"
+   ],
+   "steps": [
+    "Common cold: runny nose, sneezing, mild cough.",
+    "Asthma: wheezing and tight chest, often after dust, smoke or exercise; not caught from others.",
+    "TB: a cough over two weeks, weight loss, night sweats.",
+    "Fast or difficult breathing: see a health worker."
+   ],
+   "contexts": [
+    "a dusty classroom floor being swept",
+    "a cold season in Nyandarua",
+    "a neighbour with a long cough"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three signs: sneezing, wheezing after dust, cough for three weeks."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the last sign.",
+     "say": "Is this just a cold?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"see a health worker\" beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_ASTHMA_CATCHING",
+     "listen_for": [
+      "you can catch asthma"
+     ],
+     "ask": "Did the dust or a person cause the wheezing?",
+     "repair": "Asthma is not passed from person to person."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_ALLERGY_IS_INFECTION",
+     "listen_for": [
+      "the sneezing is a cold"
+     ],
+     "ask": "Does it start every time the room is swept?",
+     "repair": "Sneezing from dust or pollen is an allergy, not a cold."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_ALL_SAME",
+     "listen_for": [
+      "all coughs are the same"
+     ],
+     "ask": "Is a three-week cough the same as a two-day cold?",
+     "repair": "Different conditions have different signs and causes."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_LONG_COUGH_IGNORED",
+     "listen_for": [
+      "it is just a cold"
+     ],
+     "ask": "How long has the cough lasted?",
+     "repair": "A cough over two weeks needs a health check."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one sign of an asthma attack.",
+     "answer": "wheezing, a tight chest or difficulty breathing",
+     "shows": "asthma sign"
+    },
+    {
+     "question": "A cough has lasted three weeks. What should the person do?",
+     "answer": "go to a health centre to be checked",
+     "shows": "when to seek help"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION",
+   "key_step": "The child picks ways to prevent breathing illnesses (cover coughs, wash hands, open windows, keep smoke out of rooms, avoid dust, get vaccinated) and rejects myths about cold weather and antibiotics.",
+   "floor": {
+    "prerequisite": "Can recognise signs of a cold or asthma.",
+    "question": "Give one sign of a common cold.",
+    "answer": "a runny nose or sneezing"
+   },
+   "representations": [
+    "a cough into the elbow shown",
+    "a smoky kitchen with and without a window",
+    "habit cards to sort"
+   ],
+   "steps": [
+    "Germs spread in coughs, sneezes and on hands.",
+    "Cover coughs with the elbow; wash hands.",
+    "Let fresh air in; cook where smoke can escape.",
+    "Vaccines protect against some illnesses (measles, pneumonia)."
+   ],
+   "contexts": [
+    "a crowded matatu",
+    "cooking with firewood indoors",
+    "a school assembly in the cold season"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a person sneezing with drops spreading."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the drops if the person sneezes into the elbow."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the elbow catching the sneeze."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_COLD_WEATHER",
+     "listen_for": [
+      "cold weather gives you a cold"
+     ],
+     "ask": "What spreads a cold from one person to another?",
+     "repair": "Colds are caused by germs, not by cold weather."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_ANTIBIOTICS",
+     "listen_for": [
+      "antibiotics cure a cold"
+     ],
+     "ask": "Do antibiotics work on the germs that cause colds?",
+     "repair": "Antibiotics do not cure colds or COVID-19."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_HANDS_NO_MATTER",
+     "listen_for": [
+      "hands do not matter"
+     ],
+     "ask": "What do you touch after someone sneezes on a desk?",
+     "repair": "Washing hands stops germs reaching the nose and mouth."
+    },
+    {
+     "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_SMOKE_HARMLESS",
+     "listen_for": [
+      "the smoke is fine"
+     ],
+     "ask": "Why do eyes sting in a smoky kitchen?",
+     "repair": "Smoke in a closed room harms the lungs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way to stop a cold spreading in class.",
+     "answer": "cover coughs and sneezes, or wash hands",
+     "shows": "prevention"
+    },
+    {
+     "question": "Why should a jiko not be used in a closed room?",
+     "answer": "the smoke and fumes harm the lungs",
+     "shows": "smoke"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,372 @@
+{
+ "sub_strand": "SCIE.G5.MATTER.WATER_POLLUTION",
+ "title": "Water Pollution",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use clear jars of water from the tap, a river and a puddle; add a drop of soap or a pinch of fertiliser to clear water to show pollution can be invisible. Treatment methods are shown by the teacher (boiling, a cloth filter, sunlight in a clear bottle, chlorine tablets as the label says).",
+ "skills": [
+  {
+   "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+   "key_step": "The child names pollutants in water (human and animal waste, soap and detergents, fertilisers and pesticides, oil, plastics, soil, dead animals, industrial waste) and knows clear water can be polluted.",
+   "floor": {
+    "prerequisite": "Knows ways water can be contaminated.",
+    "question": "Name one thing that makes water dirty.",
+    "answer": "for example rubbish or mud"
+   },
+   "representations": [
+    "three jars: tap, river, puddle",
+    "clear water with a drop of soap added",
+    "a map of a river with sources of pollution"
+   ],
+   "steps": [
+    "Look for things you can see: plastic, soil, oil.",
+    "Think of things you cannot see: germs, soap, fertiliser.",
+    "Find where each comes from: homes, farms, factories, animals.",
+    "Clear is not the same as clean."
+   ],
+   "contexts": [
+    "washing clothes at a river",
+    "a farm near Lake Naivasha",
+    "a matatu wash by a stream"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river with a farm, a house and a cow along it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cow.",
+     "say": "Can the cow pollute the river?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to mark each source of pollution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_ONLY_VISIBLE",
+     "listen_for": [
+      "it is clear so it is clean"
+     ],
+     "ask": "Can you see germs or soap in water?",
+     "repair": "Clear water can be polluted."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_ONLY_FACTORIES",
+     "listen_for": [
+      "only factories pollute"
+     ],
+     "ask": "What does a family's washing water carry?",
+     "repair": "Homes, farms and animals pollute water too."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_HELPFUL_THINGS_SAFE",
+     "listen_for": [
+      "soap is clean so it is fine"
+     ],
+     "ask": "What happens to fish in soapy water?",
+     "repair": "Soap and fertiliser pollute water."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_NATURAL_NEVER_POLLUTES",
+     "listen_for": [
+      "dung is natural"
+     ],
+     "ask": "What does dung carry into the water?",
+     "repair": "Natural things like dung carry germs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two pollutants that cannot be seen in water.",
+     "answer": "germs and dissolved chemicals (soap, fertiliser)",
+     "shows": "invisible pollutants"
+    },
+    {
+     "question": "Is clear water always clean?",
+     "answer": "No: it may carry germs or dissolved chemicals",
+     "shows": "clear is not clean"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+   "key_step": "The child outlines effects of water pollution on people (cholera, typhoid, stomach illness), animals and plants (fish die, water weeds spread) and on people downstream, including effects that show later.",
+   "floor": {
+    "prerequisite": "Can name pollutants in water.",
+    "question": "Name one pollutant from a farm.",
+    "answer": "fertiliser or pesticide"
+   },
+   "representations": [
+    "a river drawn from upstream to downstream",
+    "a picture of water hyacinth on Lake Victoria",
+    "a chart: pollutant, effect"
+   ],
+   "steps": [
+    "People: illnesses from germs.",
+    "Animals: fish die from chemicals, livestock fall ill.",
+    "Plants: fertiliser makes weeds grow over lakes.",
+    "The harm travels downstream and can show days later."
+   ],
+   "contexts": [
+    "water hyacinth on Lake Victoria",
+    "a cholera outbreak in a town",
+    "fish dying in a river"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river with a town upstream and a village downstream."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"waste dumped\" at the town."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask who else is harmed."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the village downstream."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw an arrow down the river to the village."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_ONLY_PEOPLE",
+     "listen_for": [
+      "only people get ill"
+     ],
+     "ask": "What happens to fish in polluted water?",
+     "repair": "Animals and plants are harmed too."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_UPSTREAM_ONLY",
+     "listen_for": [
+      "it stays where it was dumped"
+     ],
+     "ask": "Where does river water flow to?",
+     "repair": "Pollution flows downstream."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_BAD_TASTE_ONLY",
+     "listen_for": [
+      "it tastes fine"
+     ],
+     "ask": "Can germs be tasted?",
+     "repair": "Water can be harmful with no bad taste or smell."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_ILLNESS_INSTANT",
+     "listen_for": [
+      "nobody was ill"
+     ],
+     "ask": "How many days after drinking does typhoid show?",
+     "repair": "Some illnesses show days later."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one effect of water pollution on people.",
+     "answer": "illnesses such as cholera, typhoid or diarrhoea",
+     "shows": "effect on people"
+    },
+    {
+     "question": "How can fertiliser from farms harm a lake?",
+     "answer": "it makes water weeds grow and fish die",
+     "shows": "effect on life"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+   "key_step": "The child picks ways of reducing water pollution (latrines far from water, waste in bins or compost, washing away from rivers, careful use of farm chemicals, planting along river banks) and says why each helps.",
+   "floor": {
+    "prerequisite": "Knows the effects of water pollution.",
+    "question": "Name one illness from dirty water.",
+    "answer": "cholera or typhoid"
+   },
+   "representations": [
+    "a homestead plan with a well and a latrine",
+    "a slope of soil with coloured water sprayed on it",
+    "a chart: cause and how to stop it"
+   ],
+   "steps": [
+    "Keep latrines far and downhill from wells.",
+    "Put waste in bins or compost, never in rivers.",
+    "Wash clothes and cars away from rivers.",
+    "Use farm chemicals as the label says; plant grass and trees on banks."
+   ],
+   "contexts": [
+    "a homestead with a shallow well",
+    "a car wash by a stream",
+    "a farm spraying pesticide"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a well and a latrine close together on a slope."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the latrine.",
+     "say": "Where does rain carry waste from here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"into the well\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw where the latrine should be."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_RIVER_WASHES_AWAY",
+     "listen_for": [
+      "the river washes it away"
+     ],
+     "ask": "Where does the river carry the rubbish?",
+     "repair": "Rivers carry waste to people downstream."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_LATRINE_NEAR_WELL",
+     "listen_for": [
+      "the latrine near the well is fine"
+     ],
+     "ask": "Can water in the soil move from the latrine to the well?",
+     "repair": "Build latrines far from, and downhill of, wells."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_WASH_IN_RIVER",
+     "listen_for": [
+      "washing in the river is harmless"
+     ],
+     "ask": "Where does the soap go?",
+     "repair": "Wash away from rivers and pour used water on the ground far away."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_BURY_CHEMICALS_SAFE",
+     "listen_for": [
+      "the soil soaks it up"
+     ],
+     "ask": "What does rain do to chemicals on the soil?",
+     "repair": "Rain washes chemicals into rivers."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way a family can stop polluting a river.",
+     "answer": "wash clothes away from the river, or put waste in a bin or compost",
+     "shows": "prevention"
+    },
+    {
+     "question": "Why should a latrine be far from a well?",
+     "answer": "so germs from the latrine do not seep into the well water",
+     "shows": "latrine"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE",
+   "key_step": "The child chooses a treatment that matches the problem: let it settle and filter to remove dirt, then boil, use chlorine as directed or sunlight in clear bottles to kill germs.",
+   "floor": {
+    "prerequisite": "Knows filtering removes solid bits.",
+    "question": "Does filtering remove dissolved salt?",
+    "answer": "no"
+   },
+   "representations": [
+    "a cloth filter, a pot and a clear plastic bottle",
+    "a two-step chart: remove dirt, then kill germs",
+    "a chlorine sachet label"
+   ],
+   "steps": [
+    "Muddy water: let it settle, then filter.",
+    "Clear water may still have germs: boil it, add chlorine as directed, or leave it in a clear bottle in strong sun.",
+    "Do not add more chlorine than the label says.",
+    "Store treated water covered and clean."
+   ],
+   "contexts": [
+    "a borehole in a dry area",
+    "river water for a family",
+    "a school water tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw muddy water, a filter and a pot on a jiko."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the filtered water.",
+     "say": "Is this safe to drink yet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say not yet."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"boil it\" beside the pot."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_FILTER_MAKES_SAFE",
+     "listen_for": [
+      "filtered water is safe"
+     ],
+     "ask": "Can a cloth stop germs?",
+     "repair": "Filtering removes dirt; boiling or chlorine kills germs."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_BOIL_REMOVES_ALL",
+     "listen_for": [
+      "boiling removes everything"
+     ],
+     "ask": "Is the mud still there after boiling?",
+     "repair": "Boiling kills germs but does not remove dirt or chemicals."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_SOLAR_MUDDY",
+     "listen_for": [
+      "put the muddy water in the sun"
+     ],
+     "ask": "Can sunlight pass through muddy water?",
+     "repair": "Filter first; sunlight works only through clear water."
+    },
+    {
+     "code": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_MORE_CHLORINE",
+     "listen_for": [
+      "more chlorine is safer"
+     ],
+     "ask": "What does the label say about the amount?",
+     "repair": "Use the amount on the label; too much is harmful."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Muddy river water must be made safe. What should be done first?",
+     "answer": "let it settle and filter it",
+     "shows": "first step"
+    },
+    {
+     "question": "Filtered water may still have germs. Give one way to kill them.",
+     "answer": "boil it, or add chlorine as the label says",
+     "shows": "kill germs"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,371 @@
+{
+ "sub_strand": "SCIE.G5.FORCE_.HEAT_TRANSFER",
+ "title": "Heat transfer",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Heat work is done by the teacher: a metal spoon and a wooden spoon in hot water (with wax or margarine dots on the handles), smoke or potassium permanganate rising in warm water to show convection, and black and white tins in the sun for radiation.",
+ "skills": [
+  {
+   "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+   "key_step": "The child names the mode in a situation: conduction (through solids, by touch), convection (in liquids and gases, warm parts rise and cool parts sink), radiation (from the Sun or a fire, needs no air).",
+   "floor": {
+    "prerequisite": "Can name sources of heat.",
+    "question": "Name one natural source of heat.",
+    "answer": "the Sun"
+   },
+   "representations": [
+    "metal and wooden spoons in hot water (teacher)",
+    "colour rising in warm water",
+    "hands near a fire, not touching"
+   ],
+   "steps": [
+    "Touching, through solids: conduction.",
+    "Warm liquid or gas rises, cool sinks: convection.",
+    "From the Sun or a fire, through space: radiation.",
+    "Heat always moves from warm to cool."
+   ],
+   "contexts": [
+    "a sufuria handle getting hot",
+    "warm air rising from a jiko",
+    "warming hands by a fire"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pot of water on a jiko with arrows in the water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rising arrow.",
+     "say": "Why does the warm water rise?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"convection\" beside the arrows."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how heat from the Sun reaches the Earth with no air in space."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_HEAT_RISES",
+     "listen_for": [
+      "heat only goes up"
+     ],
+     "ask": "Does a spoon handle get hot sideways?",
+     "repair": "Warm air and water rise; heat itself moves in every direction."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_COLD_TRAVELS",
+     "listen_for": [
+      "the cold moves into my hand"
+     ],
+     "ask": "Which way does heat move: warm to cold or cold to warm?",
+     "repair": "Heat moves from warm to cold; cold does not flow."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_SUN_NEEDS_AIR",
+     "listen_for": [
+      "the sun heats the air first"
+     ],
+     "ask": "Is there air between the Sun and the Earth?",
+     "repair": "Radiation needs no air."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_CONVECTION_SOLID",
+     "listen_for": [
+      "convection in the spoon"
+     ],
+     "ask": "Can the parts of a solid spoon move about?",
+     "repair": "Convection happens in liquids and gases; solids conduct."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How does heat travel along a metal spoon in hot tea?",
+     "answer": "by conduction",
+     "shows": "mode"
+    },
+    {
+     "question": "How does heat from the Sun reach the Earth?",
+     "answer": "by radiation",
+     "shows": "radiation"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+   "key_step": "The child classifies materials as good conductors (metals) or poor conductors, insulators (wood, plastic, wool, air, cloth), and explains feel by heat flow, not by the material being colder.",
+   "floor": {
+    "prerequisite": "Can name the three modes of heat transfer.",
+    "question": "How does heat move through a solid?",
+    "answer": "by conduction"
+   },
+   "representations": [
+    "wax dots on metal and wooden spoon handles",
+    "a metal and a wooden table leg touched in the morning",
+    "a sorting table"
+   ],
+   "steps": [
+    "Heat the end of each spoon (teacher): which wax melts first?",
+    "Metals are good conductors.",
+    "Wood, plastic, wool, cloth and air are poor conductors (insulators).",
+    "Metal feels cold because it takes heat from your hand fast."
+   ],
+   "contexts": [
+    "a flask of tea",
+    "a wooden cooking stick",
+    "a woollen sweater in Limuru"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a metal spoon and a wooden spoon in hot water with wax dots."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which wax will melt first."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the wax melting on the metal spoon."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_METAL_COLDER",
+     "listen_for": [
+      "the metal is colder"
+     ],
+     "ask": "If both were in the room all night, are they at the same temperature?",
+     "repair": "Metal feels colder because it takes heat from your hand faster."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_WOOL_MAKES_HEAT",
+     "listen_for": [
+      "the sweater makes heat"
+     ],
+     "ask": "Does a sweater on a chair get warm by itself?",
+     "repair": "Wool keeps your own heat in; it makes none."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_CONDUCTOR_KEEPS_HEAT",
+     "listen_for": [
+      "metal keeps heat in"
+     ],
+     "ask": "Which cools faster: tea in a metal cup or a flask?",
+     "repair": "Good conductors let heat out fast."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_INSULATOR_STOPS_COLD_ONLY",
+     "listen_for": [
+      "a flask is only for hot things"
+     ],
+     "ask": "What happened to the cold water in the flask?",
+     "repair": "Insulators slow heat moving either way."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is copper a good or a poor conductor of heat?",
+     "answer": "a good conductor",
+     "shows": "classify"
+    },
+    {
+     "question": "Why are sufuria handles often made of wood or plastic?",
+     "answer": "they are poor conductors, so the handle stays cool",
+     "shows": "use of insulator"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+   "key_step": "The child explains everyday uses of heat transfer by the mode: metal pots conduct heat to food, vents high on walls let warm air out (convection), dark surfaces absorb the sun's radiation, white clothes and roofs reflect it.",
+   "floor": {
+    "prerequisite": "Can classify materials as conductors or insulators.",
+    "question": "Is plastic a good conductor of heat?",
+    "answer": "no"
+   },
+   "representations": [
+    "black and shiny tins in the sun",
+    "a picture of a house with high vents",
+    "a chart: use, mode"
+   ],
+   "steps": [
+    "Cooking pots are metal to conduct heat.",
+    "Vents and windows high up let warm air out.",
+    "Dark surfaces absorb more heat; light ones reflect it.",
+    "Insulators keep heat in: flasks, fireless cookers."
+   ],
+   "contexts": [
+    "a fireless cooker (basket with cloth)",
+    "white houses at the coast",
+    "a solar water heater"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a black tin and a white tin of water in the sun."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will be warmer after an hour."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"black absorbs more radiation\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_COLOUR_NO_EFFECT",
+     "listen_for": [
+      "colour makes no difference"
+     ],
+     "ask": "Which tin was warmer?",
+     "repair": "Dark surfaces absorb more heat from the Sun."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_VENT_LOW",
+     "listen_for": [
+      "put the vents low"
+     ],
+     "ask": "Where does warm air go?",
+     "repair": "Warm air rises, so vents go high."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_COOKING_ONLY",
+     "listen_for": [
+      "only for cooking"
+     ],
+     "ask": "Why do people at the coast paint houses white?",
+     "repair": "Heat transfer is used in building, clothing and storage too."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_BLACK_POT_SLOW",
+     "listen_for": [
+      "shiny heats faster"
+     ],
+     "ask": "Which tin felt warmer after an hour in the sun?",
+     "repair": "Black surfaces take in more of the sun's heat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are vents in a kitchen placed high on the wall?",
+     "answer": "warm air rises and escapes through them (convection)",
+     "shows": "convection use"
+    },
+    {
+     "question": "Why do solar water heaters have black panels?",
+     "answer": "black absorbs more of the sun's heat",
+     "shows": "radiation use"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+   "key_step": "The child gives safety precautions with reasons from heat transfer: hold hot pots with dry, thick insulators, pots stay hot after leaving the fire, metal handles get hot, turn handles inwards, keep children away.",
+   "floor": {
+    "prerequisite": "Knows metals are good conductors.",
+    "question": "Does a metal handle get hot on a stove?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a dry thick cloth and a wet cloth",
+    "a pot just taken off the fire (teacher)",
+    "a kitchen picture to find dangers"
+   ],
+   "steps": [
+    "Use a dry, thick cloth or holder: an insulator.",
+    "A pot off the fire is still hot.",
+    "Metal handles conduct heat; use a holder.",
+    "Turn handles inwards; keep children back."
+   ],
+   "contexts": [
+    "a kitchen at supper",
+    "lifting a sufuria of ugali",
+    "a small child near a jiko"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pot on a stove with the handle sticking out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the handle.",
+     "say": "What could happen if a child walks past?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to redraw the handle turned in."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_WET_CLOTH",
+     "listen_for": [
+      "a wet cloth is safest"
+     ],
+     "ask": "What does water become on a hot pot?",
+     "repair": "Use a dry cloth; a wet one turns to steam and scalds."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_OFF_FIRE_COOL",
+     "listen_for": [
+      "it is off the fire so it is cool"
+     ],
+     "ask": "How long does a metal pot stay hot?",
+     "repair": "Pots stay hot long after leaving the fire."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_METAL_HANDLE_OK",
+     "listen_for": [
+      "metal is strong so it is safe"
+     ],
+     "ask": "Does a metal handle conduct heat?",
+     "repair": "Metal handles get hot; use a holder."
+    },
+    {
+     "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_HANDLE_TURNED_OUT",
+     "listen_for": [
+      "turn it out to grab it"
+     ],
+     "ask": "Who could knock the handle?",
+     "repair": "Turn handles inwards."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a dry cloth better than a wet one for holding a hot pot?",
+     "answer": "a dry cloth insulates; water conducts heat and turns to steam",
+     "shows": "reason"
+    },
+    {
+     "question": "Why should a pan handle be turned inwards on a stove?",
+     "answer": "so nobody knocks the hot pan over",
+     "shows": "safety"
+    }
+   ]
+  }
+ ]
+}

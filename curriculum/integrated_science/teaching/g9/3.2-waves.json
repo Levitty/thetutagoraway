@@ -1,0 +1,193 @@
+{
+ "sub_strand": "INTE.G9.FORCE_.WAVES",
+ "title": "Waves",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A rope shaken up and down for transverse waves, a slinky spring pushed and pulled for longitudinal waves, a basin of water with a dropped stone. Remote sensing is taught with weather satellite pictures and the radio and phone signals learners use.",
+ "skills": [
+  {
+   "skill": "INTE.G9.FORCE_.WAVES.WAVE_TYPES",
+   "key_step": "The child says waves are made by vibrations and carry energy, not matter, and tells transverse waves (particles move at right angles to the direction of travel: water, light) from longitudinal waves (particles move back and forth along it: sound).",
+   "floor": {
+    "prerequisite": "Knows sound travels by vibrations.",
+    "question": "What makes sound?",
+    "answer": "vibrations"
+   },
+   "representations": [
+    "a rope shaken up and down",
+    "a slinky pushed and pulled",
+    "a floating leaf on a basin of water"
+   ],
+   "steps": [
+    "A vibration makes a wave.",
+    "The wave carries energy; the matter stays.",
+    "Transverse: up and down while the wave goes along.",
+    "Longitudinal: back and forth along the direction (squeezes and stretches)."
+   ],
+   "contexts": [
+    "ripples on Lake Naivasha",
+    "sound from a church bell",
+    "a stadium wave"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rope with an up-and-down wave and an arrow showing travel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one bit of rope.",
+     "say": "Which way does this bit move as the wave passes?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"up and down\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"transverse\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask how the coils of a slinky move for sound."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_SOUND",
+     "listen_for": [
+      "sound is transverse"
+     ],
+     "ask": "Which way did the slinky coils move?",
+     "repair": "Sound is longitudinal."
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_WATER",
+     "listen_for": [
+      "water waves are longitudinal"
+     ],
+     "ask": "Which way did the floating leaf move?",
+     "repair": "Water waves are transverse."
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_DIR",
+     "listen_for": [
+      "particles move along with the wave"
+     ],
+     "ask": "Did the bit of rope travel along?",
+     "repair": "Transverse particles move at right angles."
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_TYPES.M_IS9_WT_WATER_TRAVELS",
+     "listen_for": [
+      "the water goes to the edge"
+     ],
+     "ask": "Did the leaf reach the edge?",
+     "repair": "A wave carries energy, not water."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is sound a transverse or a longitudinal wave?",
+     "answer": "longitudinal",
+     "shows": "type"
+    },
+    {
+     "question": "What does a wave carry from place to place?",
+     "answer": "energy",
+     "shows": "energy"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.FORCE_.WAVES.WAVE_PARTS",
+   "key_step": "The child names the features of a wave (crest, trough, amplitude, wavelength, frequency in hertz, speed), and describes remote sensing and other uses of waves (radio, phones, satellites, X-rays, ultrasound).",
+   "floor": {
+    "prerequisite": "Can tell transverse from longitudinal waves.",
+    "question": "Which kind is a water wave?",
+    "answer": "transverse"
+   },
+   "representations": [
+    "a labelled wave drawing",
+    "a rope shaken slowly and quickly",
+    "satellite weather pictures"
+   ],
+   "steps": [
+    "Crest: top; trough: bottom.",
+    "Amplitude: height from the middle line.",
+    "Wavelength: crest to crest (metres); frequency: waves per second (hertz).",
+    "Uses: radio, phones, remote sensing by satellites, ultrasound scans."
+   ],
+   "contexts": [
+    "a weather forecast from satellite pictures",
+    "an FM radio station frequency",
+    "an ultrasound scan at a clinic"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wave with two crests."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the distance between two crests.",
+     "say": "What is this called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"wavelength\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to mark the amplitude."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_CREST",
+     "listen_for": [
+      "the top is the trough"
+     ],
+     "ask": "What is a cattle trough like: high or low?",
+     "repair": "The crest is the top."
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_FREQ",
+     "listen_for": [
+      "frequency in metres"
+     ],
+     "ask": "What does frequency count?",
+     "repair": "Frequency is in hertz."
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_LENGTH",
+     "listen_for": [
+      "crest to crest is amplitude"
+     ],
+     "ask": "Is amplitude a height or a length along?",
+     "repair": "Crest to crest is the wavelength."
+    },
+    {
+     "code": "INTE.G9.FORCE_.WAVES.WAVE_PARTS.M_IS9_WP_AMPLITUDE_SPEED",
+     "listen_for": [
+      "the bigger wave is faster"
+     ],
+     "ask": "Did the big and small shakes arrive together?",
+     "repair": "Amplitude does not change the speed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the unit of frequency?",
+     "answer": "hertz (Hz)",
+     "shows": "unit"
+    },
+    {
+     "question": "Give one use of waves in remote sensing.",
+     "answer": "satellites taking pictures for weather forecasts or mapping crops",
+     "shows": "remote sensing"
+    }
+   ]
+  }
+ ]
+}

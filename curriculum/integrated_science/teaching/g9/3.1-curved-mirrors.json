@@ -1,0 +1,282 @@
+{
+ "sub_strand": "INTE.G9.FORCE_.CURVED_MIRRORS",
+ "title": "Curved mirrors",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A shiny spoon (both sides), a car side mirror, a torch reflector and a make-up mirror. Ray diagrams are drawn with a ruler on squared paper; the drawing is marked by the teacher and the rules and results are tested here.",
+ "skills": [
+  {
+   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS",
+   "key_step": "The child names the types of curved mirrors (concave curves inwards and brings light together; convex curves outwards and spreads it) and describes the images: convex always small, upright and virtual; concave depends on the distance.",
+   "floor": {
+    "prerequisite": "Knows the image in a plane mirror.",
+    "question": "Is the image in a plane mirror the same size as the object?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a shiny spoon, both sides",
+    "a car side mirror and a make-up mirror",
+    "a chart: mirror, shape, image"
+   ],
+   "steps": [
+    "Concave: like the inside of a spoon or a cave.",
+    "Convex: like the back of a spoon.",
+    "Convex image: small, upright, virtual, always.",
+    "Concave image: large and upright close up; inverted far away."
+   ],
+   "contexts": [
+    "a spoon at lunch",
+    "a car side mirror",
+    "a make-up mirror"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mirror curving in and one curving out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the outward one.",
+     "say": "What does your face look like in this one?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"small and upright\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label concave and convex."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONCAVE",
+     "listen_for": [
+      "the inward one is convex"
+     ],
+     "ask": "Which is like the mouth of a cave?",
+     "repair": "Concave curves in."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONVEX",
+     "listen_for": [
+      "the outward one is concave"
+     ],
+     "ask": "Which side of the spoon bulges out?",
+     "repair": "Convex curves out."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_IMAGE",
+     "listen_for": [
+      "convex magnifies"
+     ],
+     "ask": "How big did you look in the back of the spoon?",
+     "repair": "Convex gives small, upright, virtual images."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS.M_IS9_CV_CONCAVE_ALWAYS_BIG",
+     "listen_for": [
+      "concave is always bigger"
+     ],
+     "ask": "What happened when you held the spoon far away?",
+     "repair": "Far from a concave mirror the image is inverted."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which mirror always forms a small, upright image?",
+     "answer": "convex",
+     "shows": "convex"
+    },
+    {
+     "question": "Which side of a spoon acts as a concave mirror?",
+     "answer": "the inside (the bowl)",
+     "shows": "concave"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS",
+   "key_step": "The child applies the ray rules (a ray parallel to the axis reflects through F, or away from it for convex; a ray through C reflects back on itself) with two rays, and states where the image forms and what it is like.",
+   "floor": {
+    "prerequisite": "Knows the two kinds of curved mirror.",
+    "question": "Which mirror curves inwards?",
+    "answer": "concave"
+   },
+   "representations": [
+    "squared paper, a ruler and a drawn mirror with C and F marked",
+    "a torch beam on a spoon bowl",
+    "a results table by object position"
+   ],
+   "steps": [
+    "Mark the principal axis, F and C.",
+    "Ray 1: parallel to the axis, reflected through F.",
+    "Ray 2: through C, reflected straight back.",
+    "Where they meet is the image; describe it."
+   ],
+   "contexts": [
+    "a dentist's mirror",
+    "a torch reflector",
+    "a satellite dish"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a concave mirror with C and F on the axis and an object beyond C."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the ray parallel to the axis."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where this ray goes after reflection."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"through F\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the ray through C and mark the image."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_ONE_RAY",
+     "listen_for": [
+      "one ray is enough"
+     ],
+     "ask": "Where could a single ray end?",
+     "repair": "Two rays meet at the image."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_PARALLEL_RULE",
+     "listen_for": [
+      "it bounces back parallel"
+     ],
+     "ask": "Where did the torch beam gather?",
+     "repair": "A parallel ray reflects through F."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_CONVEX_REAL",
+     "listen_for": [
+      "a convex mirror gives a real image"
+     ],
+     "ask": "Do the reflected rays from a convex mirror meet in front?",
+     "repair": "Convex images are virtual, behind the mirror."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS.M_IS9_RD_CLOSE_INVERTED",
+     "listen_for": [
+      "close up is inverted"
+     ],
+     "ask": "What did you see with the spoon very close?",
+     "repair": "Between F and the mirror: upright, larger, virtual."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a concave mirror, where does a ray parallel to the principal axis go after reflection?",
+     "answer": "through the principal focus F",
+     "shows": "ray rule"
+    },
+    {
+     "question": "An object is beyond C in front of a concave mirror. Describe its image.",
+     "answer": "real, inverted, smaller, between F and C",
+     "shows": "image position"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES",
+   "key_step": "The child says where concave mirrors are used (shaving and make-up mirrors, dentist mirrors, torch and headlamp reflectors, solar cookers) and convex mirrors (vehicle side mirrors, shop and road-bend security mirrors) and why.",
+   "floor": {
+    "prerequisite": "Knows the images curved mirrors form.",
+    "question": "What image does a convex mirror form?",
+    "answer": "small, upright, virtual"
+   },
+   "representations": [
+    "a car mirror and a torch reflector",
+    "a road-bend mirror picture",
+    "a chart: use, mirror, why"
+   ],
+   "steps": [
+    "Need a big image close up: concave.",
+    "Need a beam or to gather sunlight: concave.",
+    "Need a wide view: convex.",
+    "Match each use."
+   ],
+   "contexts": [
+    "a matatu side mirror",
+    "a solar cooker in a school",
+    "a supermarket corner mirror"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road bend with a mirror on a pole."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mirror.",
+     "say": "Concave or convex, and why?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"convex, a wide view\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add a concave mirror use."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_DRIVING",
+     "listen_for": [
+      "driving mirrors are concave"
+     ],
+     "ask": "What does a driver need to see?",
+     "repair": "Driving mirrors are convex for a wide view."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_SHAVING",
+     "listen_for": [
+      "shaving mirrors are convex"
+     ],
+     "ask": "How did your face look close to the spoon bowl?",
+     "repair": "Shaving mirrors are concave."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_SECURITY",
+     "listen_for": [
+      "security mirrors are concave"
+     ],
+     "ask": "What does a guard need to see?",
+     "repair": "Security mirrors are convex."
+    },
+    {
+     "code": "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES.M_IS9_MU_TORCH_CONVEX",
+     "listen_for": [
+      "torches use convex"
+     ],
+     "ask": "What shape is the torch reflector?",
+     "repair": "Torches use concave mirrors."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are convex mirrors used as vehicle side mirrors?",
+     "answer": "they give a wide field of view",
+     "shows": "convex use"
+    },
+    {
+     "question": "Give one use of a concave mirror.",
+     "answer": "shaving or make-up mirror, dentist mirror, torch reflector, solar cooker",
+     "shows": "concave use"
+    }
+   ]
+  }
+ ]
+}

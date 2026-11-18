@@ -1,0 +1,287 @@
+{
+ "sub_strand": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM",
+ "title": "Human Digestive System",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A long string or a rope 9 m long, marked where each part ends, shows the child how long the system is and that the small intestine is the longest part. Health statements are to be confirmed by a teacher or a health worker.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+   "key_step": "The child names each part of the digestive system and its job, and keeps the food pipe apart from the windpipe.",
+   "floor": {
+    "prerequisite": "Knows food is chewed and swallowed.",
+    "question": "What do the teeth do to food?",
+    "answer": "they chew it into small pieces"
+   },
+   "representations": [
+    "a body outline on a chart with the tube drawn in",
+    "a rope or string model laid on the floor",
+    "a table: part and job"
+   ],
+   "steps": [
+    "Start at the mouth: teeth chew, saliva wets the food.",
+    "Oesophagus: carries food to the stomach (not the windpipe, which carries air).",
+    "Stomach churns; small intestine takes digested food into the blood.",
+    "Large intestine takes in water; the anus lets waste out."
+   ],
+   "contexts": [
+    "eating a lunch of githeri",
+    "choking when someone talks while eating",
+    "drinking water after a hot day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a body outline with a mouth and a tube going down."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the windpipe in front of the food pipe."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the two tubes.",
+     "say": "Which one carries food and which carries air?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "write",
+     "do": "Label \"food pipe\" and \"windpipe\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_WINDPIPE",
+     "listen_for": [
+      "food goes down the windpipe"
+     ],
+     "ask": "What happens if food goes down the windpipe?",
+     "repair": "The windpipe carries air; the oesophagus carries food."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_STOMACH_ALL",
+     "listen_for": [
+      "the stomach digests everything"
+     ],
+     "ask": "Where does digested food go into the blood?",
+     "repair": "The stomach churns food; the small intestine finishes digestion and absorbs it."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_LARGE_INTESTINE_FOOD",
+     "listen_for": [
+      "the large intestine takes the food"
+     ],
+     "ask": "What is left to take from food by the time it reaches the large intestine?",
+     "repair": "The large intestine takes in water, leaving waste."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_FOOD_TO_LEGS",
+     "listen_for": [
+      "it goes to the legs",
+      "it fills the body"
+     ],
+     "ask": "Is the food in one tube or loose in the body?",
+     "repair": "Food stays in one long tube until digested food passes into the blood."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part takes digested food into the blood?",
+     "answer": "the small intestine",
+     "shows": "part and job"
+    },
+    {
+     "question": "Which part carries food from the mouth to the stomach?",
+     "answer": "the oesophagus (food pipe)",
+     "shows": "not the windpipe"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+   "key_step": "The child gives the path mouth, oesophagus, stomach, small intestine, large intestine, anus, and knows the small intestine is the longest part.",
+   "floor": {
+    "prerequisite": "Can name the parts of the digestive system.",
+    "question": "Name the part that churns food.",
+    "answer": "the stomach"
+   },
+   "representations": [
+    "the rope model laid out and walked",
+    "cards with part names to put in order",
+    "a flow line with arrows"
+   ],
+   "steps": [
+    "Put the mouth card first and the anus card last.",
+    "Place the food pipe and the stomach.",
+    "Small intestine next (long, narrow), then large intestine (short, wide).",
+    "Read the whole order aloud."
+   ],
+   "contexts": [
+    "following a bite of mandazi",
+    "a doctor's chart in a clinic",
+    "a 9 m rope in the school field"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"mouth\" at the top and \"anus\" at the bottom of the board."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what comes after the mouth."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say oesophagus."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in the rest in order."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the full order with arrows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_LARGE_BEFORE_SMALL",
+     "listen_for": [
+      "large then small"
+     ],
+     "ask": "Which is longer: the small or the large intestine?",
+     "repair": "The small intestine comes first, then the large intestine."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_SMALL_IS_SHORT",
+     "listen_for": [
+      "the small one is short"
+     ],
+     "ask": "On our rope, which part took most of the length?",
+     "repair": "\"Small\" means narrow; the small intestine is the longest part."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_STOMACH_FIRST",
+     "listen_for": [
+      "mouth then stomach"
+     ],
+     "ask": "How does food get from the mouth down to the stomach?",
+     "repair": "The oesophagus joins the mouth to the stomach."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_ANUS_BEFORE_LARGE",
+     "listen_for": [
+      "small intestine then anus"
+     ],
+     "ask": "Where is water taken back from waste?",
+     "repair": "The large intestine comes before the anus."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part comes after the stomach?",
+     "answer": "the small intestine",
+     "shows": "order"
+    },
+    {
+     "question": "Put in order: large intestine, mouth, stomach, anus, oesophagus, small intestine.",
+     "answer": "mouth, oesophagus, stomach, small intestine, large intestine, anus",
+     "shows": "whole path"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+   "key_step": "The child picks habits that keep the gut healthy (wash hands, safe water, a balanced meal with roughage, chewing well) and says why.",
+   "floor": {
+    "prerequisite": "Knows the three food groups.",
+    "question": "Name one food that gives energy.",
+    "answer": "for example ugali or rice"
+   },
+   "representations": [
+    "a plate drawn with a balanced meal",
+    "a hand-washing station (leaky tin)",
+    "cards of good and bad habits to sort"
+   ],
+   "steps": [
+    "Clean: wash hands before eating and after the toilet.",
+    "Safe water: boil or treat water.",
+    "Balanced meal with vegetables and fruit for roughage.",
+    "Chew well, eat at regular times, avoid too many sweets and sodas."
+   ],
+   "contexts": [
+    "a lunch queue at school",
+    "drinking water from a stream on a trip",
+    "a party with sodas and sweets"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a plate with ugali only."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the plate.",
+     "say": "What is missing to help food pass through the gut?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for vegetables or fruit."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add the missing foods."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_ONLY_WASH_FOOD",
+     "listen_for": [
+      "I washed the mango so it is fine"
+     ],
+     "ask": "Where else can germs come from when you eat with your hands?",
+     "repair": "Wash food and wash hands; both carry germs."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_SODA_FOR_WATER",
+     "listen_for": [
+      "soda is like water"
+     ],
+     "ask": "What does the body need that soda does not give?",
+     "repair": "Water and meals cannot be replaced by soda and sweets."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_UNBOILED_WATER",
+     "listen_for": [
+      "the stream water is clear so it is safe"
+     ],
+     "ask": "Can you see germs in water?",
+     "repair": "Clear water can carry germs; boil or treat it."
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_FIBRE_NOT_NEEDED",
+     "listen_for": [
+      "ugali and meat is enough"
+     ],
+     "ask": "What helps waste move through the gut?",
+     "repair": "Vegetables and fruit give roughage for a healthy gut."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one habit that stops germs getting into the digestive system.",
+     "answer": "wash hands before eating, or boil drinking water",
+     "shows": "clean habits"
+    },
+    {
+     "question": "Why should a lunch include sukuma wiki or fruit?",
+     "answer": "They give roughage that helps food and waste move through the gut",
+     "shows": "roughage"
+    }
+   ]
+  }
+ ]
+}

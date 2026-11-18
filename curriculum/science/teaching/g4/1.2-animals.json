@@ -1,0 +1,293 @@
+{
+ "sub_strand": "SCIE.G4.LIVING.ANIMALS",
+ "title": "Animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the animals of the school compound first: hens, ants, a goat, earthworms after rain, spiders in a corner. A model backbone (cotton reels on a string) helps the child feel why it bends.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+   "key_step": "The child checks an animal (any size, from an ant to a cow) against all the signs of life and does not rely on movement alone.",
+   "floor": {
+    "prerequisite": "Can name animals in the locality.",
+    "question": "Name two animals kept at home.",
+    "answer": "for example a cow and a hen"
+   },
+   "representations": [
+    "live animals in the compound: ants, a hen, a goat",
+    "pictures of animals laying eggs and giving birth",
+    "a table of signs of life ticked for each animal"
+   ],
+   "steps": [
+    "List the signs: feed, breathe, move, grow, reproduce, respond, remove waste, die.",
+    "Tick the signs for a hen, then for an ant.",
+    "Tick the signs for a river or a car: most are missing.",
+    "Say: an animal shows all the signs, whatever its size."
+   ],
+   "contexts": [
+    "a hen sitting on eggs",
+    "ants carrying food to their hole",
+    "a sleeping goat in the shade"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: signs of life down the side, hen and river across the top."
+    },
+    {
+     "beat": "write",
+     "do": "Tick every sign for the hen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the river column.",
+     "say": "Which signs does a river show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to find only movement."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"not living\" under the river."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_REPRODUCE_BIRTH_ONLY",
+     "listen_for": [
+      "animals give birth",
+      "eggs are not babies"
+     ],
+     "ask": "How do new hens come about?",
+     "repair": "Some animals give birth to live young; others, like hens and fish, lay eggs."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_STILL_NOT_ALIVE",
+     "listen_for": [
+      "it is not moving so it is dead",
+      "sleeping is like dead"
+     ],
+     "ask": "Is a sleeping goat breathing?",
+     "repair": "An animal that rests still breathes and grows: it is alive."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_INSECT_NOT_ANIMAL",
+     "listen_for": [
+      "an ant is an insect, not an animal",
+      "only big ones are animals"
+     ],
+     "ask": "Does an ant feed, move and lay eggs?",
+     "repair": "Insects, worms and fish are animals too."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_PLANTS_ARE_ANIMALS_MOVE",
+     "listen_for": [
+      "it moves so it is alive",
+      "a car is alive"
+     ],
+     "ask": "Does a river eat, breathe or grow babies?",
+     "repair": "Moving alone does not make a thing alive; check all the signs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two signs that show an ant is a living thing.",
+     "answer": "any two of: it feeds, moves, breathes, grows, lays eggs, responds, dies",
+     "shows": "signs of life in a small animal"
+    },
+    {
+     "question": "A learner says a motorbike is alive because it moves and makes smoke. What is wrong?",
+     "answer": "It does not grow, feed or reproduce, so it is not alive",
+     "shows": "movement is not enough"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+   "key_step": "The child asks one question of each animal, \"Does it have a backbone?\", and sorts it, ignoring legs, size and shells.",
+   "floor": {
+    "prerequisite": "Knows that some animals have bones.",
+    "question": "Does a cow have bones inside its body?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a model backbone made of cotton reels on a string",
+    "pictures of a fish skeleton and a snail shell",
+    "a two-column sorting table"
+   ],
+   "steps": [
+    "Feel your own backbone down the middle of your back.",
+    "For each animal ask: is there a backbone inside?",
+    "Put it in the vertebrate or invertebrate column.",
+    "Check the hard cases: snake, fish, hen (vertebrates); crab, snail, spider (invertebrates)."
+   ],
+   "contexts": [
+    "fish from Lake Victoria",
+    "a snail on the school wall after rain",
+    "a hen and her chicks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two columns: \"has a backbone\" and \"no backbone\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write snake, crab, hen, spider, tilapia under the table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the snake.",
+     "say": "No legs: does it have a backbone?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to place the other four."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_NO_LEGS_INVERT",
+     "listen_for": [
+      "a snake has no legs so no backbone"
+     ],
+     "ask": "When you eat fish, what long bone runs down the middle?",
+     "repair": "Snakes and fish have backbones even with no legs."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_LEGS_VERTEBRATE",
+     "listen_for": [
+      "a spider has legs so it is a vertebrate"
+     ],
+     "ask": "If you squash a grasshopper, do you find bones?",
+     "repair": "Legs do not mean a backbone; insects and spiders have none."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_SHELL_IS_BONE",
+     "listen_for": [
+      "the snail's shell is its bone"
+     ],
+     "ask": "Is the shell inside or outside the snail?",
+     "repair": "A backbone is inside the body; a shell is a cover outside."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_BIRD_NOT_VERTEBRATE",
+     "listen_for": [
+      "a hen is too light",
+      "feathers, not bones"
+     ],
+     "ask": "What did you find in the chicken stew?",
+     "repair": "Birds have backbones: they are vertebrates."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Sort these: tilapia, earthworm. Which is a vertebrate?",
+     "answer": "tilapia",
+     "shows": "sorts by backbone"
+    },
+    {
+     "question": "Which list holds only invertebrates: (A) crab, spider, snail (B) snake, crab, ant?",
+     "answer": "A",
+     "shows": "a snake is a vertebrate"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+   "key_step": "The child gives \"it has a backbone\" (or \"it has no backbone\") as the reason, and rejects size, legs, wings, water or softness as rules.",
+   "floor": {
+    "prerequisite": "Can sort common animals into the two groups.",
+    "question": "Is a cow a vertebrate?",
+    "answer": "yes"
+   },
+   "representations": [
+    "the cotton-reel backbone",
+    "odd pairs: a big crab and a small mouse",
+    "a list of \"rules\" to test"
+   ],
+   "steps": [
+    "State the rule: vertebrates have a backbone.",
+    "Test a wrong rule on odd pairs (big or small, legs or not).",
+    "Show where each wrong rule fails.",
+    "Keep only the backbone rule."
+   ],
+   "contexts": [
+    "a mouse in the store",
+    "a frog by the river",
+    "a millipede on the path"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the rule \"big animals are vertebrates\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a mouse and a big crab.",
+     "say": "Does the rule work for these two?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to find the mouse breaks it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Cross out the rule and write \"has a backbone\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_SMALL_INVERT",
+     "listen_for": [
+      "it is small so it is an invertebrate"
+     ],
+     "ask": "Is a baby chick a vertebrate?",
+     "repair": "Size does not decide; a mouse and a chick have backbones."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WINGS_OR_LEGS_RULE",
+     "listen_for": [
+      "it has wings",
+      "it has four legs"
+     ],
+     "ask": "A butterfly has wings. Does it have a backbone?",
+     "repair": "Wings and legs are not the rule; only the backbone is."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WATER_RULE",
+     "listen_for": [
+      "it lives in water so it is a vertebrate"
+     ],
+     "ask": "An octopus lives in water. Does it have bones?",
+     "repair": "Where an animal lives does not tell you about its backbone."
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_HARD_BODY_RULE",
+     "listen_for": [
+      "it is soft so no backbone"
+     ],
+     "ask": "Your skin is soft. Is there a backbone under it?",
+     "repair": "Soft skin can cover a backbone; ask what is inside."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a snake a vertebrate?",
+     "answer": "It has a backbone",
+     "shows": "gives the rule"
+    },
+    {
+     "question": "A learner says a millipede is a vertebrate because it has many legs. What is the correct reason to use?",
+     "answer": "Whether it has a backbone: a millipede has none, so it is an invertebrate",
+     "shows": "rejects the legs rule"
+    }
+   ]
+  }
+ ]
+}

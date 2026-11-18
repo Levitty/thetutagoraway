@@ -113,6 +113,36 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_PHYSICS_MATHS": {
+  "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+  "error": "Thinks physics is only sums and formulas, not the study of energy, forces, light and sound.",
+  "example": {
+   "question": "Which branch of science studies how a bicycle brake stops the wheel?",
+   "wrong_answer": "Mathematics",
+   "correct_answer": "Physics"
+  },
+  "cause": "Has heard physics described as a hard subject with calculations.",
+  "reveals": "Offer \"Mathematics\" next to the right answer and ask the question again in a new context.",
+  "help": "List physics topics the child already knows from Grades 4-6: force, light, sound, heat.",
+  "feedback": "Physics studies energy and forces, such as friction in a brake. It uses maths, but it is science.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_FARM_NOT_SCIENCE": {
+  "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+  "error": "Thinks farming is tradition, not science, so fertilisers, seed choice and pest control have nothing to do with science.",
+  "example": {
+   "question": "How does science help a maize farmer?",
+   "wrong_answer": "It does not; farming is done the old way",
+   "correct_answer": "Through better seed, the right fertiliser, soil testing and pest control"
+  },
+  "cause": "Sees science as a school subject separate from work at home.",
+  "reveals": "Offer \"It does not; farming is done the old way\" next to the right answer and ask the question again in a new context.",
+  "help": "Read a fertiliser bag and a certified seed packet with the class: science on the label.",
+  "feedback": "Science is used on farms every day: tested seed, fertiliser, soil tests and pest control.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_FLAME_FIRE": {
   "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
   "error": "Thinks the flame symbol on a bottle means it is used for fires or can be put on a fire.",
@@ -283,6 +313,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_NO_SYMBOL_SAFE": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+  "error": "Thinks a container with no hazard symbol is always safe to drink from or touch.",
+  "example": {
+   "question": "A bottle in the laboratory has no label at all. Is it safe to smell or taste?",
+   "wrong_answer": "Yes, there is no danger sign",
+   "correct_answer": "No: an unlabelled substance must never be smelt, tasted or used; tell the teacher"
+  },
+  "cause": "Reads \"no warning\" as \"safe\".",
+  "reveals": "Offer \"Yes, there is no danger sign\" next to the right answer and ask the question again in a new context.",
+  "help": "Show two identical clear liquids: water and a cleaning solution. They look the same.",
+  "feedback": "Never taste, smell or use anything that is not labelled. Tell the teacher.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_RUN_EXIT": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+  "error": "Thinks running is the quickest and safest way to leave the laboratory in an emergency.",
+  "example": {
+   "question": "There is a small fire in the laboratory. How should learners leave?",
+   "wrong_answer": "Run out as fast as possible",
+   "correct_answer": "Walk quickly in a line to the exit, following the teacher"
+  },
+  "cause": "Thinks speed is all that matters.",
+  "reveals": "Offer \"Run out as fast as possible\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise a fire drill: running causes falls and broken glassware.",
+  "feedback": "In an emergency walk quickly and calmly to the exit. Running causes falls and more accidents.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_EYE_RUB": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+  "error": "Thinks a chemical splashed in the eye should be rubbed out with the hand.",
+  "example": {
+   "question": "A drop of a chemical splashes into a learner's eye. What should be done first?",
+   "wrong_answer": "Rub the eye to get it out",
+   "correct_answer": "Rinse the eye with plenty of clean running water and tell the teacher"
+  },
+  "cause": "Rubs an eye by habit when something gets in it.",
+  "reveals": "Offer \"Rub the eye to get it out\" next to the right answer and ask the question again in a new context.",
+  "help": "Act out rinsing at a tap with the eye held open for several minutes.",
+  "feedback": "Rinse the eye with lots of clean running water. Never rub it. Tell the teacher at once.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_PREDICT_RESULT": {
   "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
@@ -512,6 +587,66 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_ONE_TEST_ENOUGH": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+  "error": "Thinks one test is enough to draw a conclusion.",
+  "example": {
+   "question": "A learner drops one stone in water, it sinks, and she concludes all stones sink. Is this a good conclusion?",
+   "wrong_answer": "Yes, she tested it",
+   "correct_answer": "No: test several stones (pumice floats) before concluding"
+  },
+  "cause": "Has seen one result and generalises.",
+  "reveals": "Offer \"Yes, she tested it\" next to the right answer and ask the question again in a new context.",
+  "help": "Test five different stones, including pumice if the school has one.",
+  "feedback": "One test is not enough. Repeat with different samples before you conclude.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_THERMOMETER_SHAKE_READ": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+  "error": "Takes the thermometer out of the liquid before reading it.",
+  "example": {
+   "question": "How should you read the temperature of hot water with a thermometer?",
+   "wrong_answer": "Take it out and read it in the air",
+   "correct_answer": "Read it while the bulb is still in the water"
+  },
+  "cause": "Wants to see the scale up close and does not know the reading changes in air.",
+  "reveals": "Offer \"Take it out and read it in the air\" next to the right answer and ask the question again in a new context.",
+  "help": "Read a thermometer in warm water, then lift it out and watch the reading drop.",
+  "feedback": "Read a thermometer while its bulb is still in the liquid. In the air the reading changes.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_MINUTE_SI": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+  "error": "Gives the minute or the hour as the SI unit of time.",
+  "example": {
+   "question": "What is the SI unit of time?",
+   "wrong_answer": "The minute",
+   "correct_answer": "The second"
+  },
+  "cause": "Uses the unit seen on clocks every day.",
+  "reveals": "Offer \"The minute\" next to the right answer and ask the question again in a new context.",
+  "help": "List the base units side by side: metre, kilogram, second, kelvin, ampere.",
+  "feedback": "The SI unit of time is the second. Minutes and hours are made from seconds.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_DENSITY_UNIT": {
+  "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED",
+  "error": "Gives the unit of density as kilograms only, without the volume.",
+  "example": {
+   "question": "What is the SI unit of density?",
+   "wrong_answer": "kg",
+   "correct_answer": "kg/m³ (kilograms per cubic metre)"
+  },
+  "cause": "Remembers density \"has to do with mass\" and forgets it is mass per volume.",
+  "reveals": "Offer \"kg\" next to the right answer and ask the question again in a new context.",
+  "help": "Build the unit from the formula: density = mass divided by volume, so kg divided by m³.",
+  "feedback": "Density is mass divided by volume, so its unit is kg/m³.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_DISAPPEAR": {
   "skill": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
   "error": "Thinks the salt has disappeared when it dissolves in water.",
@@ -682,6 +817,51 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_SOLUTION_ONLY_WATER": {
+  "skill": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+  "error": "Thinks only water can be a solvent.",
+  "example": {
+   "question": "Nail polish is removed with a liquid called acetone. What is the acetone here?",
+   "wrong_answer": "Not a solvent; only water is a solvent",
+   "correct_answer": "The solvent: it dissolves the nail polish"
+  },
+  "cause": "Has only seen things dissolve in water.",
+  "reveals": "Offer \"Not a solvent; only water is a solvent\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a grease stain dissolving in paraffin (teacher) but not in water.",
+  "feedback": "Water is the commonest solvent, but others such as paraffin and spirit dissolve things water cannot.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_DISTIL_DESTROYS_SALT": {
+  "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+  "error": "Thinks distillation destroys the salt and only keeps the water.",
+  "example": {
+   "question": "After simple distillation of salt water, where is the salt?",
+   "wrong_answer": "It has been burnt away",
+   "correct_answer": "It is left behind in the flask"
+  },
+  "cause": "Focuses on the clean water collected and forgets what stays behind.",
+  "reveals": "Offer \"It has been burnt away\" next to the right answer and ask the question again in a new context.",
+  "help": "Look into the flask after distillation: white salt is left.",
+  "feedback": "In distillation the water boils off and is collected; the salt stays in the flask.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_CHROMA_USELESS": {
+  "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES",
+  "error": "Thinks chromatography has no use outside school.",
+  "example": {
+   "question": "Where can chromatography be used outside school?",
+   "wrong_answer": "Nowhere, it is only a class activity",
+   "correct_answer": "To check dyes in food and inks, or test for banned substances"
+  },
+  "cause": "Has only seen it as a classroom activity with pens.",
+  "reveals": "Offer \"Nowhere, it is only a class activity\" next to the right answer and ask the question again in a new context.",
+  "help": "Show how food colours can be tested to see if they contain a banned dye.",
+  "feedback": "Chromatography is used to test dyes in food and inks, and in hospitals and crime labs.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_BLUE_BASE": {
   "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
@@ -911,6 +1091,66 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_SAME_PAPER_BOTH": {
+  "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+  "error": "Thinks one colour of litmus paper is enough to tell acids, bases and neutral solutions apart.",
+  "example": {
+   "question": "Blue litmus stays blue in a solution. What can you say?",
+   "wrong_answer": "It is a base",
+   "correct_answer": "It is not an acid: it is a base or neutral; test with red litmus too"
+  },
+  "cause": "Does not see that \"no change\" leaves two options.",
+  "reveals": "Offer \"It is a base\" next to the right answer and ask the question again in a new context.",
+  "help": "Test water and soap with blue litmus (no change for both), then with red litmus.",
+  "feedback": "Blue staying blue only rules out an acid. Use red litmus to tell a base from neutral.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_ANY_LEAF": {
+  "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT",
+  "error": "Thinks any green leaf makes a good indicator.",
+  "example": {
+   "question": "Which plant extract makes a good acid-base indicator?",
+   "wrong_answer": "Any green leaf, such as sukuma",
+   "correct_answer": "A strongly coloured one, such as red cabbage or purple flowers, that changes colour"
+  },
+  "cause": "Thinks any plant juice will show a change.",
+  "reveals": "Offer \"Any green leaf, such as sukuma\" next to the right answer and ask the question again in a new context.",
+  "help": "Test sukuma juice and red cabbage juice in vinegar and soap.",
+  "feedback": "A good indicator changes colour in acids and bases. Red cabbage does; most green leaves do not.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_ACID_ALWAYS_LIQUID": {
+  "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+  "error": "Thinks all acids are liquids, so a solid such as citric acid powder cannot be an acid.",
+  "example": {
+   "question": "Citric acid is a white powder used in cooking. Can a powder be an acid?",
+   "wrong_answer": "No, acids are liquids",
+   "correct_answer": "Yes: it dissolves to make an acidic solution"
+  },
+  "cause": "Has only seen acids as liquids in bottles.",
+  "reveals": "Offer \"No, acids are liquids\" next to the right answer and ask the question again in a new context.",
+  "help": "Dissolve a pinch of citric acid in water and test with blue litmus.",
+  "feedback": "Some acids are solids. They show acid properties when dissolved in water.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_BLEACH_FOOD": {
+  "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES",
+  "error": "Thinks a cleaning base such as bleach can be used to wash fruit to make it safer.",
+  "example": {
+   "question": "Should fruit be washed in bleach to make it safe?",
+   "wrong_answer": "Yes, bleach kills germs",
+   "correct_answer": "No: wash fruit in clean water; bleach is for cleaning surfaces"
+  },
+  "cause": "Knows bleach kills germs and applies it everywhere.",
+  "reveals": "Offer \"Yes, bleach kills germs\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the bleach label with the class: not for food.",
+  "feedback": "Bleach is for surfaces, not food. Wash fruit in clean water.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_TESTIS_URINE": {
   "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
   "error": "Thinks the testes make urine, or that sperm are made in the bladder.",
@@ -1139,6 +1379,66 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_SPERM_DUCT_BLADDER": {
+  "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+  "error": "Thinks the sperm duct carries urine from the bladder.",
+  "example": {
+   "question": "What does the sperm duct carry?",
+   "wrong_answer": "Urine from the bladder",
+   "correct_answer": "Sperm from the testes to the urethra"
+  },
+  "cause": "Knows both pass out through the urethra and mixes their paths.",
+  "reveals": "Offer \"Urine from the bladder\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace both paths on a diagram in two colours.",
+  "feedback": "The sperm duct carries sperm from the testes. Urine comes from the bladder. Both leave by the urethra, at different times.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_EGG_EVERY_DAY": {
+  "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+  "error": "Thinks an ovary releases an egg every day.",
+  "example": {
+   "question": "How often does an ovary usually release an egg?",
+   "wrong_answer": "Every day",
+   "correct_answer": "About once a month"
+  },
+  "cause": "Has not met the idea of a monthly cycle.",
+  "reveals": "Offer \"Every day\" next to the right answer and ask the question again in a new context.",
+  "help": "Use a calendar to show a cycle of about 28 days.",
+  "feedback": "An egg is usually released about once a month, as part of the monthly cycle.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_VOICE_GIRLS_NONE": {
+  "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+  "error": "Thinks girls have no physical changes except periods.",
+  "example": {
+   "question": "Name one change in girls during adolescence other than periods.",
+   "wrong_answer": "There are none",
+   "correct_answer": "Breasts develop, hips widen, hair grows under the arms, a growth spurt"
+  },
+  "cause": "Hears most about periods and forgets other changes.",
+  "reveals": "Offer \"There are none\" next to the right answer and ask the question again in a new context.",
+  "help": "List changes for boys and girls side by side.",
+  "feedback": "Girls change in many ways: growth, breasts, wider hips, body hair, as well as periods.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_SKIP_MEALS": {
+  "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING",
+  "error": "Thinks skipping meals is a good way to deal with weight gain in adolescence.",
+  "example": {
+   "question": "A learner gains weight in a growth spurt. Is skipping breakfast a good idea?",
+   "wrong_answer": "Yes, it keeps the weight down",
+   "correct_answer": "No: eat balanced meals and stay active; growth needs food"
+  },
+  "cause": "Sees weight gain as a problem to fix by eating less.",
+  "reveals": "Offer \"Yes, it keeps the weight down\" next to the right answer and ask the question again in a new context.",
+  "help": "Link to growth: the body is building bone and muscle and needs food.",
+  "feedback": "Growing bodies need balanced meals. Eat well and stay active; do not skip meals.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_FAECES": {
   "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
   "error": "Thinks faeces are excreted waste in the same way as urine and sweat.",
@@ -1366,6 +1666,66 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_LIVER_NONE": {
+  "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+  "error": "Does not count the liver as an organ that helps remove waste.",
+  "example": {
+   "question": "Which organ breaks down waste and old red cells in the body?",
+   "wrong_answer": "The stomach",
+   "correct_answer": "The liver"
+  },
+  "cause": "Has only heard of the kidneys, lungs and skin as excretory organs.",
+  "reveals": "Offer \"The stomach\" next to the right answer and ask the question again in a new context.",
+  "help": "Add the liver to the chart: it breaks down wastes so they can be removed.",
+  "feedback": "The liver also helps excretion: it breaks down wastes and old red blood cells.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_SKIN_ONE_LAYER": {
+  "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+  "error": "Thinks the skin is one thin layer like paper.",
+  "example": {
+   "question": "How many main layers does the skin have?",
+   "wrong_answer": "One",
+   "correct_answer": "Two main layers: the epidermis on top and the dermis below"
+  },
+  "cause": "Sees only the surface.",
+  "reveals": "Offer \"One\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at a diagram of the skin cut through.",
+  "feedback": "Skin has two main layers: the epidermis outside and the dermis below with glands and vessels.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_ONE_KIDNEY": {
+  "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+  "error": "Thinks people have one kidney.",
+  "example": {
+   "question": "How many kidneys does a person usually have?",
+   "wrong_answer": "One",
+   "correct_answer": "Two"
+  },
+  "cause": "Has heard \"the kidney\" in the singular.",
+  "reveals": "Offer \"One\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the diagram: two kidneys at the back of the abdomen.",
+  "feedback": "Most people have two kidneys, at the back of the abdomen.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_PAINKILLERS_SAFE": {
+  "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH",
+  "error": "Thinks painkillers can be taken as often as wanted without harming the kidneys.",
+  "example": {
+   "question": "Is it safe to take painkillers every day without a health worker's advice?",
+   "wrong_answer": "Yes, they are only for pain",
+   "correct_answer": "No: too many painkillers can harm the kidneys; take them as advised"
+  },
+  "cause": "Thinks medicines only do good.",
+  "reveals": "Offer \"Yes, they are only for pain\" next to the right answer and ask the question again in a new context.",
+  "help": "Read a painkiller packet: the dose and the warning.",
+  "feedback": "Take medicines only as advised. Too many painkillers can harm the kidneys.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  },
  "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_SOCKET": {
   "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
@@ -1652,6 +2012,81 @@
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
  },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_SOLAR_NIGHT": {
+  "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+  "error": "Thinks a solar panel makes electricity at night from the Moon or stored sunlight in the panel.",
+  "example": {
+   "question": "Does a solar panel make electricity at night?",
+   "wrong_answer": "Yes, it stores sunlight in the panel",
+   "correct_answer": "No: it makes electricity only in daylight; a battery stores some for the night"
+  },
+  "cause": "Sees solar lamps shine at night and thinks the panel is working.",
+  "reveals": "Offer \"Yes, it stores sunlight in the panel\" next to the right answer and ask the question again in a new context.",
+  "help": "Cover a small solar panel with a cloth: the fan or bulb stops.",
+  "feedback": "A solar panel makes electricity only in daylight. At night the light comes from a battery it charged.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_CELL_ONE_END": {
+  "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+  "error": "Thinks a bulb lights if both wires are joined to the same end of the cell.",
+  "example": {
+   "question": "Both wires from a bulb are joined to the positive end of a cell. Will it light?",
+   "wrong_answer": "Yes, both wires touch the cell",
+   "correct_answer": "No: one wire must go to each end to make a complete circuit"
+  },
+  "cause": "Knows the cell is needed but not that current must go round.",
+  "reveals": "Offer \"Yes, both wires touch the cell\" next to the right answer and ask the question again in a new context.",
+  "help": "Try it: then move one wire to the other end.",
+  "feedback": "A circuit must go from one end of the cell, through the bulb, back to the other end.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_MORE_BULBS_BRIGHTER": {
+  "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL",
+  "error": "Thinks adding more bulbs in series makes each bulb brighter.",
+  "example": {
+   "question": "A second bulb is added in series to a one-bulb circuit. What happens to the brightness?",
+   "wrong_answer": "Both are brighter",
+   "correct_answer": "Both are dimmer"
+  },
+  "cause": "Thinks more bulbs means more light from each.",
+  "reveals": "Offer \"Both are brighter\" next to the right answer and ask the question again in a new context.",
+  "help": "Build it and compare with the one-bulb circuit.",
+  "feedback": "In series the bulbs share the push of the cell, so each is dimmer.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_IRON_LIGHT": {
+  "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+  "error": "Thinks an electric iron changes electricity mainly into light because it glows when hot.",
+  "example": {
+   "question": "What is the main useful energy from an electric iron?",
+   "wrong_answer": "Light",
+   "correct_answer": "Heat"
+  },
+  "cause": "Sees a glowing indicator light and names the visible output.",
+  "reveals": "Offer \"Light\" next to the right answer and ask the question again in a new context.",
+  "help": "Feel the warmth from an iron (teacher holds it, away from the skin).",
+  "feedback": "An electric iron changes electricity mainly into heat.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_KITE_POWERLINE": {
+  "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY",
+  "error": "Thinks it is safe to fly a kite or climb a tree near power lines if you do not touch the wires.",
+  "example": {
+   "question": "Is it safe to fly a kite near overhead power lines?",
+   "wrong_answer": "Yes, if the kite does not touch the wires",
+   "correct_answer": "No: a kite or string can touch or come near the lines and carry a shock; play far away"
+  },
+  "cause": "Underestimates how easily things reach the wires.",
+  "reveals": "Offer \"Yes, if the kite does not touch the wires\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a picture of a kite caught on power lines; talk about calling KPLC, not pulling.",
+  "feedback": "Never play near power lines. A kite or a branch can carry a deadly shock.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_LIKE_ATTRACT": {
   "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
   "error": "Thinks like poles attract and unlike poles repel.",
@@ -1822,5 +2257,50 @@
    "mark": "plausible, to confirm by a teacher",
    "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
   }
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_THROUGH_NOTHING": {
+  "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+  "error": "Thinks a magnet's pull cannot pass through paper, plastic, wood or water.",
+  "example": {
+   "question": "Can a magnet pull a paper clip through a sheet of paper?",
+   "wrong_answer": "No, the paper blocks it",
+   "correct_answer": "Yes: magnetic force passes through paper, plastic, wood and water"
+  },
+  "cause": "Thinks a force needs direct contact.",
+  "reveals": "Offer \"No, the paper blocks it\" next to the right answer and ask the question again in a new context.",
+  "help": "Move a magnet under a sheet of paper with a paper clip on top.",
+  "feedback": "Magnetic force passes through non-magnetic materials such as paper and plastic.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_COIN_ALL": {
+  "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+  "error": "Thinks all Kenyan coins are magnetic because they are metal.",
+  "example": {
+   "question": "Will a magnet pick up every coin?",
+   "wrong_answer": "Yes, coins are metal",
+   "correct_answer": "Only coins with iron or steel in them; test each"
+  },
+  "cause": "Uses \"metal\" as the rule.",
+  "reveals": "Offer \"Yes, coins are metal\" next to the right answer and ask the question again in a new context.",
+  "help": "Test each coin with a magnet and record.",
+  "feedback": "Only iron, steel, nickel and cobalt are magnetic. Test each coin; do not assume.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_ELEC_NO_MAGNET": {
+  "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES",
+  "error": "Does not know that speakers, motors and generators use magnets.",
+  "example": {
+   "question": "Which part of a phone speaker makes it work with electricity?",
+   "wrong_answer": "Only the wires",
+   "correct_answer": "A magnet and a coil of wire"
+  },
+  "cause": "Thinks magnets are only for sticking things.",
+  "reveals": "Offer \"Only the wires\" next to the right answer and ask the question again in a new context.",
+  "help": "Take apart an old speaker (teacher): find the magnet.",
+  "feedback": "Speakers, motors and generators all use magnets with coils of wire.",
+  "source": "To confirm by a CBC Integrated Science teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
  }
 }

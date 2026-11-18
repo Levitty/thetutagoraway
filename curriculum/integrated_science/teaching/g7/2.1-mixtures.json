@@ -1,0 +1,283 @@
+{
+ "sub_strand": "INTE.G7.MIXTUR.MIXTURES",
+ "title": "Mixtures",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Builds on Grade 5 separation. The teacher shows evaporation and simple distillation (heat and steam), sublimation by picture or with the teacher, and chromatography with a felt pen dot on blotting paper or a strip of coffee filter in water, which learners can do safely.",
+ "skills": [
+  {
+   "skill": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+   "key_step": "The child tells a solution (homogeneous: solute dissolved in solvent) from a heterogeneous mixture, and names the solute, the solvent and the solution in an example.",
+   "floor": {
+    "prerequisite": "Can tell homogeneous from heterogeneous mixtures.",
+    "question": "Is salt water homogeneous?",
+    "answer": "yes"
+   },
+   "representations": [
+    "salt dissolving in water",
+    "muddy water settling",
+    "a labelled diagram: solute + solvent = solution"
+   ],
+   "steps": [
+    "The solute is what dissolves (salt).",
+    "The solvent does the dissolving (water).",
+    "Together they make a solution, the same all through.",
+    "Muddy water settles: it is not a solution."
+   ],
+   "contexts": [
+    "sugar in tea",
+    "oral rehydration salts in water",
+    "paraffin removing grease"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"salt + water ->\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the salt.",
+     "say": "Which is the solute here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"salt\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"solute + solvent = solution\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_DISAPPEAR",
+     "listen_for": [
+      "the salt disappeared"
+     ],
+     "ask": "What is left when the water dries?",
+     "repair": "The salt is dissolved, not gone."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_MUDDY_SOLUTION",
+     "listen_for": [
+      "muddy water is a solution"
+     ],
+     "ask": "What happens when muddy water stands?",
+     "repair": "Muddy water settles; it is not a solution."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_SOLVENT_SOLUTE",
+     "listen_for": [
+      "the water is the solute"
+     ],
+     "ask": "Which one dissolves into the other?",
+     "repair": "The solute dissolves; the solvent does the dissolving."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_SOLUTION_ONLY_WATER",
+     "listen_for": [
+      "only water is a solvent"
+     ],
+     "ask": "What dissolved the grease?",
+     "repair": "Other liquids can be solvents."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In sugar tea, which is the solute?",
+     "answer": "sugar",
+     "shows": "solute"
+    },
+    {
+     "question": "Is muddy water a solution?",
+     "answer": "No: the soil does not dissolve and settles out",
+     "shows": "not a solution"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+   "key_step": "The child chooses the method for a homogeneous mixture and says why: evaporation keeps the solid, simple distillation keeps the liquid (and leaves the solid), sublimation for a solid that turns straight to gas, chromatography for dyes that travel at different speeds.",
+   "floor": {
+    "prerequisite": "Knows the names of changes of state.",
+    "question": "What is the change from gas to liquid called?",
+    "answer": "condensation"
+   },
+   "representations": [
+    "a distillation drawing: flask, condenser, beaker",
+    "a chromatography strip of a black pen",
+    "a choice chart"
+   ],
+   "steps": [
+    "Ask: which part do I want to keep?",
+    "The solid only: evaporation.",
+    "The liquid too: distillation (boil, then condense).",
+    "Dyes: chromatography."
+   ],
+   "contexts": [
+    "salt from sea water",
+    "clean water from salty water at the coast",
+    "the dyes in a sweet"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a flask of salt water, a tube to a cold beaker."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tube.",
+     "say": "What happens to the steam here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it condenses\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw drops of pure water in the beaker and salt in the flask."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_FILTER_SALT",
+     "listen_for": [
+      "filter it"
+     ],
+     "ask": "Did the filtered water still taste salty?",
+     "repair": "Filtering cannot remove dissolved salt."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_EVAP_DISTIL",
+     "listen_for": [
+      "evaporation keeps the water"
+     ],
+     "ask": "Where does the water go in evaporation?",
+     "repair": "Evaporation loses the water; distillation collects it."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_CHROMA_COLOUR",
+     "listen_for": [
+      "chromatography boils the ink"
+     ],
+     "ask": "What made the colours move up the paper?",
+     "repair": "The solvent carries dyes at different speeds."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_DISTIL_DESTROYS_SALT",
+     "listen_for": [
+      "the salt is burnt"
+     ],
+     "ask": "What is left in the flask?",
+     "repair": "The salt stays in the flask."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which method gets pure water from salt water?",
+     "answer": "simple distillation",
+     "shows": "distillation"
+    },
+    {
+     "question": "Which method separates the dyes in black ink?",
+     "answer": "chromatography",
+     "shows": "chromatography"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES",
+   "key_step": "The child says where separating methods are used: salt from the sea (evaporation), drinking water at the coast and in labs (distillation), petrol and diesel from crude oil (fractional distillation), dye testing (chromatography).",
+   "floor": {
+    "prerequisite": "Can choose a method for a homogeneous mixture.",
+    "question": "Which method gets pure water from salt water?",
+    "answer": "simple distillation"
+   },
+   "representations": [
+    "a picture of salt pans",
+    "a chart of crude oil fractions",
+    "a chart: use, method"
+   ],
+   "steps": [
+    "Salt: evaporation in salt pans.",
+    "Distilled water: distillation.",
+    "Crude oil: fractional distillation into petrol, paraffin, diesel.",
+    "Dyes in food: chromatography."
+   ],
+   "contexts": [
+    "salt pans at Malindi",
+    "a petrol station",
+    "a food testing laboratory"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tall column with crude oil going in at the bottom."
+    },
+    {
+     "beat": "write",
+     "do": "Write petrol near the top and diesel lower down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the column.",
+     "say": "Is crude oil one liquid or a mixture?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a mixture\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"fractional distillation\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_SALT_FILTER",
+     "listen_for": [
+      "filter the sea"
+     ],
+     "ask": "What happens to sea water left in a shallow pan in the sun?",
+     "repair": "Salt is won by evaporation."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_OIL_ONE",
+     "listen_for": [
+      "crude oil is one liquid"
+     ],
+     "ask": "Where do petrol and diesel come from?",
+     "repair": "Crude oil is a mixture separated by fractional distillation."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_SCIENTISTS_ONLY",
+     "listen_for": [
+      "only in laboratories"
+     ],
+     "ask": "Where does the salt in your kitchen come from?",
+     "repair": "Separation is used in industry and at home."
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_CHROMA_USELESS",
+     "listen_for": [
+      "it is only a class activity"
+     ],
+     "ask": "How can food colours be checked?",
+     "repair": "Chromatography is used to test dyes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How is salt got from sea water at the coast?",
+     "answer": "by evaporation in salt pans",
+     "shows": "salt"
+    },
+    {
+     "question": "Which method separates petrol from crude oil?",
+     "answer": "fractional distillation",
+     "shows": "crude oil"
+    }
+   ]
+  }
+ ]
+}

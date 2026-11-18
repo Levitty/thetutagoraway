@@ -6,6 +6,13 @@ import { readFileSync } from 'node:fs';
 import { SKILLS, OUTCOMES, MIS_FEEDBACK } from '../src/ai-tutor/content/curriculumMap.integratedscience.g9.js';
 import entry from '../src/ai-tutor/content/subjects/integratedscience_g9.js';
 import { SIGNED } from '../src/ai-tutor/content/families/integratedscience_g9_signed.js';
+import { scienceDepthTests } from './helpers/scienceDepth.mjs';
+
+// The depth pass (18 Nov 2026, to the Grade 5 Maths standard). WATER_PROPERTIES (1.3 a) and RAY_DIAGRAMS (3.1 b) are new and have no family yet.
+scienceDepthTests({
+  dir: 'integrated_science', subject: 'integratedscience', grade: 9, outcomes: 46, minDown: 0.6,
+  noFamilies: ['INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES', 'INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS'],
+});
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/integrated_science/g9.json', import.meta.url), 'utf8'));
 const subs = source.sub_strands;

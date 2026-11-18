@@ -239,6 +239,66 @@
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
   "status": "draft"
  },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_OVARY_IS_FRUIT": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES",
+  "error": "Calls the ovary of a fresh flower the \"fruit\" or the \"seed\" before it has been pollinated.",
+  "example": {
+   "question": "In a fresh bean flower, what is the swollen part at the bottom of the pistil called?",
+   "wrong_answer": "The fruit",
+   "correct_answer": "The ovary"
+  },
+  "cause": "Has seen the ovary swell into a pod and gives the end result's name to the start.",
+  "reveals": "Offer \"The fruit\" next to the right answer and ask the question again in a new context.",
+  "help": "Cut open a fresh flower and a young pod side by side: the ovary becomes the pod later.",
+  "feedback": "In a fresh flower it is the ovary. After pollination it grows into the fruit.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_NECTAR_FOR_PLANT": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+  "error": "Thinks nectar is food for the plant itself, not a reward that draws insects.",
+  "example": {
+   "question": "What is the job of nectar in a flower?",
+   "wrong_answer": "It feeds the plant",
+   "correct_answer": "It draws insects, which carry pollen as they feed"
+  },
+  "cause": "Thinks every part of a plant must feed the plant.",
+  "reveals": "Offer \"It feeds the plant\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch a bee at a flower: it drinks nectar and leaves with pollen on its body.",
+  "feedback": "Nectar is a sweet drink for insects. While they drink, they carry pollen from flower to flower.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_PETALS_BECOME_FRUIT": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+  "error": "Thinks the petals swell and become the fruit.",
+  "example": {
+   "question": "Which part of a flower grows into the fruit?",
+   "wrong_answer": "The petals",
+   "correct_answer": "The ovary"
+  },
+  "cause": "Sees the petals as the \"main\" part of a flower and expects them to grow on.",
+  "reveals": "Offer \"The petals\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch a bean or tomato flower for a week: the petals fall off and the ovary swells.",
+  "feedback": "The petals dry and fall. The ovary grows into the fruit and the ovules become the seeds.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_NO_FLOWER_NO_SEEDS_OK": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS",
+  "error": "Thinks a farmer can get seeds or grain from a crop even if its flowers are all cut off.",
+  "example": {
+   "question": "A farmer cuts off all the tassels and silk from his maize. Will the cobs fill with grain?",
+   "wrong_answer": "Yes, the grain grows anyway",
+   "correct_answer": "No: without flowers there is no pollination, so no grain"
+  },
+  "cause": "Does not link the grain with the flower.",
+  "reveals": "Offer \"Yes, the grain grows anyway\" next to the right answer and ask the question again in a new context.",
+  "help": "Follow a maize plant: tassel and silk come first, then the grain fills the cob.",
+  "feedback": "Grain, beans and fruits come from flowers. No flowers, no seeds or fruits.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_SIZE_DECIDES": {
   "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
   "error": "Thinks big animals are vertebrates and small animals are not (or the other way round).",
@@ -402,6 +462,51 @@
   "help": "Follow the life of a frog: eggs and tadpole in water, adult hops on land.",
   "feedback": "Amphibians live part of their life in water and part on land. Tadpoles live in water; adult frogs can live on land.",
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_ALL_WARM": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+  "error": "Thinks all vertebrates are warm-blooded like people.",
+  "example": {
+   "question": "Is a lizard's body always warm like a person's?",
+   "wrong_answer": "Yes, all vertebrates are warm",
+   "correct_answer": "No: a lizard's body temperature changes with its surroundings"
+  },
+  "cause": "Generalises from mammals and birds, the vertebrates the child knows best.",
+  "reveals": "Offer \"Yes, all vertebrates are warm\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch a lizard bask on a rock in the morning: it warms up in the sun before it moves fast.",
+  "feedback": "Mammals and birds keep a steady warm body. Fish, frogs and reptiles warm up and cool down with their surroundings.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_FEATHERS_ON_BATS": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+  "error": "Thinks a bat has feathers because it has wings.",
+  "example": {
+   "question": "What covers the body of a bat?",
+   "wrong_answer": "Feathers",
+   "correct_answer": "Fur (hair); its wings are skin"
+  },
+  "cause": "Links wings with feathers.",
+  "reveals": "Offer \"Feathers\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at a picture of a bat close up: the wing is thin skin between long fingers, the body is furry.",
+  "feedback": "Only birds have feathers. A bat has fur and wings of skin, so it is a mammal.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_ALL_MAMMALS_LAND": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+  "error": "Thinks mammals live only on land, so a whale or dolphin cannot have hair or feed its young on milk.",
+  "example": {
+   "question": "A dolphin breathes air and feeds its young on milk. Which group is it in?",
+   "wrong_answer": "Fish, because it lives in water",
+   "correct_answer": "Mammals"
+  },
+  "cause": "Uses where an animal lives as the feature, not how it feeds its young.",
+  "reveals": "Offer \"Fish, because it lives in water\" next to the right answer and ask the question again in a new context.",
+  "help": "List what a dolphin does: breathes air with lungs, gives birth, feeds young on milk.",
+  "feedback": "Mammals feed their young on milk. A dolphin does, so it is a mammal, even in the sea.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_TRACHEA_FOOD": {
@@ -644,6 +749,66 @@
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
   "status": "draft"
  },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_NOSE_MOUTH_ONLY": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+  "error": "Thinks breathing happens only in the nose and mouth, with nothing going further inside.",
+  "example": {
+   "question": "Where does the air go after you breathe it in through your nose?",
+   "wrong_answer": "It stays in the nose",
+   "correct_answer": "Down the windpipe into the lungs"
+  },
+  "cause": "Feels air only at the nose and cannot see further.",
+  "reveals": "Offer \"It stays in the nose\" next to the right answer and ask the question again in a new context.",
+  "help": "Breathe in deeply with a hand on the chest: the chest rises because air goes into the lungs.",
+  "feedback": "Air goes from the nose down the windpipe into the two lungs in your chest.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_DIAPHRAGM_UP_IN": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+  "error": "Thinks the diaphragm moves up when we breathe in.",
+  "example": {
+   "question": "When you breathe in, does the diaphragm move up or down?",
+   "wrong_answer": "Up",
+   "correct_answer": "Down: it flattens and makes more room in the chest"
+  },
+  "cause": "Sees the chest rise and thinks everything moves up.",
+  "reveals": "Offer \"Up\" next to the right answer and ask the question again in a new context.",
+  "help": "Pull the rubber sheet of the bottle model down: the balloons fill.",
+  "feedback": "Breathing in, the diaphragm moves down and the ribs move up and out, so the chest gets bigger.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_BREATHE_OUT_EMPTY": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+  "error": "Thinks breathing out empties the lungs completely.",
+  "example": {
+   "question": "After you breathe out as hard as you can, are your lungs empty?",
+   "wrong_answer": "Yes, all the air is gone",
+   "correct_answer": "No: some air always stays in the lungs"
+  },
+  "cause": "Pictures the lungs as balloons that go flat.",
+  "reveals": "Offer \"Yes, all the air is gone\" next to the right answer and ask the question again in a new context.",
+  "help": "Breathe out hard, then still blow a little more on a strip of paper: air remains.",
+  "feedback": "Some air always stays in the lungs, even after a big breath out.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_LONG_COUGH_IGNORED": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+  "error": "Thinks a cough that lasts for weeks is just a normal cold that needs no check.",
+  "example": {
+   "question": "A person has coughed for three weeks and is losing weight. What should they do?",
+   "wrong_answer": "Nothing, it is just a cold",
+   "correct_answer": "Go to a health centre to be checked (it may be TB)"
+  },
+  "cause": "Has had many short colds and thinks all coughs are the same.",
+  "reveals": "Offer \"Nothing, it is just a cold\" next to the right answer and ask the question again in a new context.",
+  "help": "Talk through the signs that need a health worker: a cough over two weeks, blood, weight loss.",
+  "feedback": "A cough that lasts more than two weeks needs a check at a health centre.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_CANNOT_BE_UNMIXED": {
   "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
   "error": "Thinks that once substances are mixed they change into something new and cannot be got back.",
@@ -884,6 +1049,126 @@
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
   "status": "draft"
  },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_DISSOLVED_IS_NEW": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
+  "error": "Thinks sugar dissolved in tea has turned into a new substance (sweet tea), not a mixture.",
+  "example": {
+   "question": "Sugar is stirred into tea. What has happened?",
+   "wrong_answer": "The sugar has become a new substance",
+   "correct_answer": "The sugar is mixed in; the tea and sugar are still there"
+  },
+  "cause": "Cannot see the sugar, so thinks it has changed.",
+  "reveals": "Offer \"The sugar has become a new substance\" next to the right answer and ask the question again in a new context.",
+  "help": "Leave a saucer of sugary tea to dry: sugar crystals are left.",
+  "feedback": "Dissolved sugar is still sugar. It is mixed with the tea and can be got back by drying.",
+  "source": "Children's science research reports this idea (alternative conceptions literature). Cited from memory: verify the reference.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_TWO_LIQUIDS_ALWAYS_HOMO": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+  "error": "Thinks any two liquids poured together give a homogeneous mixture, so oil and water are the same all through.",
+  "example": {
+   "question": "Cooking oil and water are poured into a glass. What kind of mixture is it?",
+   "wrong_answer": "Homogeneous, both are liquids",
+   "correct_answer": "Heterogeneous: the oil forms a layer on top"
+  },
+  "cause": "Expects liquids to blend because both pour.",
+  "reveals": "Offer \"Homogeneous, both are liquids\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour oil onto water in a clear bottle and leave it: two layers form.",
+  "feedback": "Some liquids do not mix. Oil floats in a layer on water, so you can see two parts.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_GAS_NOT_PART": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES",
+  "error": "Leaves out gases: thinks a mixture can only be made of solids and liquids, so air or soda is not a mixture.",
+  "example": {
+   "question": "Is soda with its bubbles a mixture?",
+   "wrong_answer": "No, a mixture is only solids and liquids",
+   "correct_answer": "Yes: it is a liquid with gas (carbon dioxide) mixed in"
+  },
+  "cause": "Has only met mixtures of solids and liquids.",
+  "reveals": "Offer \"No, a mixture is only solids and liquids\" next to the right answer and ask the question again in a new context.",
+  "help": "Open a bottle of soda: the bubbles are a gas leaving the liquid.",
+  "feedback": "Gases can be part of mixtures too. Soda has gas in a liquid; air is a mixture of gases.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_NAME_BY_LOOK": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES",
+  "error": "Names a mixture by how it looks at the end (muddy water is \"a liquid\") instead of by its parts.",
+  "example": {
+   "question": "What type of mixture is muddy water?",
+   "wrong_answer": "A liquid",
+   "correct_answer": "Solid-liquid (soil and water)"
+  },
+  "cause": "Answers with the state of the whole instead of its parts.",
+  "reveals": "Offer \"A liquid\" next to the right answer and ask the question again in a new context.",
+  "help": "Leave muddy water to settle: the soil (solid) and the water (liquid) show.",
+  "feedback": "Name a mixture by its parts: soil is solid and water is liquid, so it is solid-liquid.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_EVAPORATE_SAND": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+  "error": "Chooses evaporation to get sand out of water, when filtering or decanting is quicker and keeps the water.",
+  "example": {
+   "question": "What is the best way to separate sand from water when you want to keep the water?",
+   "wrong_answer": "Boil the water away",
+   "correct_answer": "Filter it (or let it settle and pour off the water)"
+  },
+  "cause": "Knows evaporation separates things but not when it wastes a part.",
+  "reveals": "Offer \"Boil the water away\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which part is wanted: if it is the water, do not boil it away.",
+  "feedback": "If you need the water, filter or decant. Evaporation keeps the solid but loses the water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_MAGNET_PULLS_SAND": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+  "error": "Thinks a magnet separates iron filings from sand because it pulls the sand away.",
+  "example": {
+   "question": "Why does a magnet separate iron filings from sand?",
+   "wrong_answer": "It pushes the sand away",
+   "correct_answer": "Iron is attracted by a magnet and sand is not"
+  },
+  "cause": "Mixes up which part is attracted.",
+  "reveals": "Offer \"It pushes the sand away\" next to the right answer and ask the question again in a new context.",
+  "help": "Run a magnet over each part alone: only the iron filings jump to it.",
+  "feedback": "A magnet pulls iron and steel. Sand is not attracted, so it stays behind.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_ONLY_ONE_METHOD_FARM": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES",
+  "error": "Thinks farmers use only one method (picking) and do not sieve, winnow or decant at home.",
+  "example": {
+   "question": "How does a farmer separate chaff from threshed beans in a windy place?",
+   "wrong_answer": "Pick out each bean by hand only",
+   "correct_answer": "Winnow: toss them in the wind so the light chaff blows away"
+  },
+  "cause": "Has only seen picking done.",
+  "reveals": "Offer \"Pick out each bean by hand only\" next to the right answer and ask the question again in a new context.",
+  "help": "Winnow a tray of beans and chaff outside on a windy day.",
+  "feedback": "Farmers use winnowing for chaff and sieving for flour. Many separations are done at home.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_TEA_STRAINER_FILTER": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES",
+  "error": "Does not see a tea strainer or a cloth for straining as separating a mixture.",
+  "example": {
+   "question": "When you pour tea through a strainer, what are you doing?",
+   "wrong_answer": "Nothing special, just pouring",
+   "correct_answer": "Separating tea leaves from the liquid (filtering)"
+  },
+  "cause": "Thinks \"separating mixtures\" is a lab activity with special words.",
+  "reveals": "Offer \"Nothing special, just pouring\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold up a strainer and ask what stays on it.",
+  "feedback": "A tea strainer is a filter. It separates the solid leaves from the liquid tea.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_ONLY_VISIBLE": {
   "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
   "error": "Thinks water is polluted only if dirt can be seen, so clear water is clean.",
@@ -1079,6 +1364,51 @@
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
   "status": "draft"
  },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_NATURAL_NEVER_POLLUTES": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+  "error": "Thinks natural things such as animal dung or soil washed in by rain cannot pollute water.",
+  "example": {
+   "question": "Cattle drink and leave dung in a stream. Is the water polluted?",
+   "wrong_answer": "No, dung is natural",
+   "correct_answer": "Yes: dung carries germs that make people ill"
+  },
+  "cause": "Thinks \"pollution\" means only factory or plastic waste.",
+  "reveals": "Offer \"No, dung is natural\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what is in dung (germs) and who drinks downstream.",
+  "feedback": "Natural things like dung and soil can pollute water. Dung carries germs.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_ILLNESS_INSTANT": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+  "error": "Thinks polluted water makes you ill straight away, so if nobody fell ill at once the water was safe.",
+  "example": {
+   "question": "A family drank river water and nobody was ill that day. Was the water safe?",
+   "wrong_answer": "Yes, nobody was ill",
+   "correct_answer": "Not necessarily: illnesses like typhoid show days later"
+  },
+  "cause": "Expects cause and effect to be immediate.",
+  "reveals": "Offer \"Yes, nobody was ill\" next to the right answer and ask the question again in a new context.",
+  "help": "Tell how cholera and typhoid start some days after drinking dirty water.",
+  "feedback": "Some illnesses from dirty water show days later. Feeling well today does not prove the water is safe.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_BURY_CHEMICALS_SAFE": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+  "error": "Thinks pouring leftover pesticide on the ground near a river is safe because the soil will hold it.",
+  "example": {
+   "question": "A farmer has pesticide left over. Is pouring it on the ground near the river safe?",
+   "wrong_answer": "Yes, the soil soaks it up",
+   "correct_answer": "No: rain washes it into the river; follow the label for disposal"
+  },
+  "cause": "Thinks soil swallows things for good.",
+  "reveals": "Offer \"Yes, the soil soaks it up\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour coloured water on a slope of soil and spray it: the colour runs downhill.",
+  "feedback": "Rain washes chemicals from the soil into rivers. Keep chemicals away from water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_HEAVY_SINKS": {
   "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
   "error": "Thinks heavy things sink and light things float.",
@@ -1212,6 +1542,51 @@
   "help": "Weigh a block of wood that floats.",
   "feedback": "A floating object still has weight. It floats because the water pushes it up.",
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_HALF_SUNK_SINKS": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+  "error": "Thinks an object that floats low in the water, mostly under the surface, is sinking.",
+  "example": {
+   "question": "A piece of wood floats with most of it under the water. Is it floating or sinking?",
+   "wrong_answer": "Sinking, most of it is under water",
+   "correct_answer": "Floating: it stays at the surface and does not go to the bottom"
+  },
+  "cause": "Expects a floater to sit on top of the water.",
+  "reveals": "Offer \"Sinking, most of it is under water\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch ice in a glass: most of it is under the water, but it stays up.",
+  "feedback": "An object floats if it stays at the surface, even if most of it is under water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_LIFE_JACKET_HEAVY": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS",
+  "error": "Thinks a life jacket works by being heavy enough to hold a person still.",
+  "example": {
+   "question": "How does a life jacket help a person in a lake?",
+   "wrong_answer": "It is heavy and holds them still",
+   "correct_answer": "It is full of air or light material that floats, holding the person up"
+  },
+  "cause": "Does not link floating materials with being held up.",
+  "reveals": "Offer \"It is heavy and holds them still\" next to the right answer and ask the question again in a new context.",
+  "help": "Put an empty plastic bottle in a basin and push it down: feel it push back up.",
+  "feedback": "A life jacket is full of light material or air that floats, so it holds you up in water.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_FISHERMEN_NO_FLOATS": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS",
+  "error": "Does not see floats on fishing nets as an everyday use of floating.",
+  "example": {
+   "question": "Why do fishermen on Lake Victoria tie light floats to the top of their nets?",
+   "wrong_answer": "To make the net heavier",
+   "correct_answer": "So the top of the net floats and the net hangs open in the water"
+  },
+  "cause": "Has not linked floating with tools people use.",
+  "reveals": "Offer \"To make the net heavier\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a net with floats at the top and weights at the bottom.",
+  "feedback": "Floats keep the top of a net up and weights pull the bottom down, so the net hangs open.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_NO_VIBRATION": {
@@ -1362,6 +1737,36 @@
   "help": "Ask what happens to the ears at a very loud concert.",
   "feedback": "It is the loudness, not the kind of sound, that harms. Very loud music can damage hearing as well.",
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_STOP_VIBRATION_SOUND_GOES_ON": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+  "error": "Thinks a drum keeps sounding after its skin is held still.",
+  "example": {
+   "question": "A drummer hits a drum and then holds the skin still with her hand. What happens to the sound?",
+   "wrong_answer": "It goes on the same",
+   "correct_answer": "It stops, because the skin stops vibrating"
+  },
+  "cause": "Does not link the sound with the vibration.",
+  "reveals": "Offer \"It goes on the same\" next to the right answer and ask the question again in a new context.",
+  "help": "Hit a drum and touch the skin lightly, then hold it firmly: the sound stops.",
+  "feedback": "Sound comes from vibrations. Stop the vibration and the sound stops.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_LOUD_ONLY_ANNOYING": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+  "error": "Thinks loud sound is only annoying and cannot harm health or learning.",
+  "example": {
+   "question": "A school is next to a loud posho mill all day. Can the noise harm the learners?",
+   "wrong_answer": "No, it is only annoying",
+   "correct_answer": "Yes: it can damage hearing, cause headaches and make it hard to learn"
+  },
+  "cause": "Has felt noise as a bother, not as harm.",
+  "reveals": "Offer \"No, it is only annoying\" next to the right answer and ask the question again in a new context.",
+  "help": "List what happens to a person after a loud disco or a day by a loud machine.",
+  "feedback": "Loud sound can damage hearing and cause headaches and stress. Keep away from very loud places.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  },
  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_HEAT_RISES": {
@@ -1557,6 +1962,51 @@
   "help": "Put a metal and a wooden spoon in hot water and feel both handles.",
   "feedback": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle.",
   "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_INSULATOR_STOPS_COLD_ONLY": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+  "error": "Thinks a flask or a blanket only keeps cold things cold, or only hot things hot, not both.",
+  "example": {
+   "question": "Can a flask keep cold water cold?",
+   "wrong_answer": "No, a flask is only for hot tea",
+   "correct_answer": "Yes: it slows heat moving in or out, so cold stays cold too"
+  },
+  "cause": "Has only seen flasks used for hot tea.",
+  "reveals": "Offer \"No, a flask is only for hot tea\" next to the right answer and ask the question again in a new context.",
+  "help": "Put cold water in a flask and a cup; feel both after an hour.",
+  "feedback": "An insulator slows heat moving either way. A flask keeps hot things hot and cold things cold.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_BLACK_POT_SLOW": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+  "error": "Thinks a shiny pot heats faster in the sun than a black one.",
+  "example": {
+   "question": "Which water heats faster in the sun: in a black tin or a shiny tin?",
+   "wrong_answer": "The shiny tin",
+   "correct_answer": "The black tin"
+  },
+  "cause": "Links shiny with hot because shiny metal looks bright.",
+  "reveals": "Offer \"The shiny tin\" next to the right answer and ask the question again in a new context.",
+  "help": "Put water in a black and a shiny tin in the sun and feel them after an hour.",
+  "feedback": "Black surfaces take in more of the sun's heat. Shiny ones reflect it.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_HANDLE_TURNED_OUT": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+  "error": "Thinks a pan handle should point out over the edge of the stove so it is easy to grab.",
+  "example": {
+   "question": "How should the handle of a hot pan on a stove be turned?",
+   "wrong_answer": "Out over the edge, easy to reach",
+   "correct_answer": "Inwards, away from the edge, so nobody knocks it"
+  },
+  "cause": "Thinks only about easy reach.",
+  "reveals": "Offer \"Out over the edge, easy to reach\" next to the right answer and ask the question again in a new context.",
+  "help": "Act out a small child walking past a stove with a handle sticking out.",
+  "feedback": "Turn pan handles inwards so nobody knocks the hot pan over.",
+  "source": "To confirm by a CBC Science and Technology teacher: a common classroom error, not traced to a study by the author.",
   "status": "draft"
  }
 }

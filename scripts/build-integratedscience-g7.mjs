@@ -2,10 +2,13 @@
 // INTEGRATED SCIENCE GRADE 7: merge the authored skills and misconception library into the file HOREB owns
 // (curriculum/integrated_science/g7.json); the official outcomes, rubrics and sub-strand text are never touched.
 //   node scripts/build-integratedscience-g7.mjs      then  npm run subject:map -- integratedscience 7 --dir integrated_science --title "Integrated Science"
+// Depth pass (18 Nov 2026): scripts/data/science-depth/g7.mjs through scripts/science-depth.mjs (teaching pack in curriculum/integrated_science/teaching/g7/).
 // Idempotent: skills, prerequisites, leads_to and misconceptions are rebuilt from scripts/data/integratedscience-g7-skills.mjs every run.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/integratedscience-g7-skills.mjs';
+import { SUBS as DEPTH } from './data/science-depth/g7.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const J = (f) => JSON.parse(readFileSync(new URL(`../curriculum/${f}.json`, import.meta.url), 'utf8'));
 const path = new URL('../curriculum/integrated_science/g7.json', import.meta.url);
@@ -66,6 +69,7 @@ const NOTES = {
 };
 for (const s of g7.sub_strands) { const k = s.code.slice(P.length); if (!NOTES[k]) throw new Error(`no note for ${k}`); s.authoring_notes = NOTES[k]; }
 g7.totals = { ...g7.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
-g7.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review";
+const depth = applyDepth(g7, DEPTH, { dir: 'integrated_science', grade: 7, prefix: P });
+g7.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/integrated_science/teaching/g7)";
 writeFileSync(path, JSON.stringify(g7, null, 1) + '\n');
-console.log(`integrated science g7: ${D.SKILLS.length} skills, ${nPre} prerequisites, ${nLeads} leads-to links, ${D.MIS.length} misconceptions`);
+console.log(`integrated science g7: ${g7.totals.skills} skills, ${g7.totals.prerequisites} prerequisites, ${nLeads} leads-to links, ${g7.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.pack} teaching pack entries)`);

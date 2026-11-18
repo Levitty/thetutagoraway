@@ -1,0 +1,188 @@
+{
+ "sub_strand": "INTE.G9.LIVING.NUTRITION_IN_PLANTS",
+ "title": "Nutrition in Plants",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A leaf of a bean or hibiscus plant, a leaf peel under the microscope for stomata, and the starch test on a leaf done by the teacher (boiling in water and spirit are teacher-only steps). A plant kept in the dark for two days beside one in light is the investigation.",
+ "skills": [
+  {
+   "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS",
+   "key_step": "The child names the external parts of a leaf (blade, midrib, veins, petiole) and the internal ones (upper epidermis, palisade layer with many chloroplasts, spongy layer with air spaces, stomata) and says how each suits photosynthesis.",
+   "floor": {
+    "prerequisite": "Knows the parts of a plant cell.",
+    "question": "Which part of a plant cell makes food?",
+    "answer": "the chloroplast"
+   },
+   "representations": [
+    "a real leaf",
+    "a cross-section drawing",
+    "a leaf peel under a microscope"
+   ],
+   "steps": [
+    "Broad, thin blade: catches light, short path for gases.",
+    "Palisade layer near the top: many chloroplasts.",
+    "Spongy layer: air spaces for gases.",
+    "Stomata: let carbon dioxide in and oxygen out; veins carry water and food."
+   ],
+   "contexts": [
+    "a banana leaf",
+    "sukuma wiki",
+    "a bean leaf"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a leaf cross-section with layers."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tightly packed top layer.",
+     "say": "Why does this layer have the most chloroplasts?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it gets the most light\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to mark the stomata."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_STOMATA",
+     "listen_for": [
+      "stomata make sugar"
+     ],
+     "ask": "What did we see on the leaf peel?",
+     "repair": "Stomata let gases in and out."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_CHLORO",
+     "listen_for": [
+      "chlorophyll is in the roots"
+     ],
+     "ask": "Which parts of the plant are green?",
+     "repair": "Chlorophyll is in leaf chloroplasts."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_BROAD",
+     "listen_for": [
+      "a narrow leaf catches more light"
+     ],
+     "ask": "Which catches more light: a broad leaf or a narrow one?",
+     "repair": "Broad and thin catches light."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS.M_IS9_LP_VEINS_BLOOD",
+     "listen_for": [
+      "veins carry blood"
+     ],
+     "ask": "Where did the coloured water go?",
+     "repair": "Veins carry water and food."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why are most chloroplasts in the palisade layer?",
+     "answer": "it is near the top surface and gets the most light",
+     "shows": "palisade"
+    },
+    {
+     "question": "What is the job of the stomata?",
+     "answer": "let gases in and out of the leaf",
+     "shows": "stomata"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS",
+   "key_step": "The child describes photosynthesis (carbon dioxide + water gives glucose + oxygen, using light and chlorophyll), the conditions it needs, and the starch test with iodine that shows it happened.",
+   "floor": {
+    "prerequisite": "Knows carbon dioxide is a gas in air that plants use.",
+    "question": "Which gas do plants use to make food?",
+    "answer": "carbon dioxide"
+   },
+   "representations": [
+    "the word equation",
+    "a leaf tested with iodine (teacher)",
+    "a plant in light and one in the dark"
+   ],
+   "steps": [
+    "Raw materials: carbon dioxide and water.",
+    "Needs: light and chlorophyll.",
+    "Products: glucose (stored as starch) and oxygen.",
+    "Test: iodine turns starch blue-black."
+   ],
+   "contexts": [
+    "maize growing in the sun",
+    "a water plant giving off bubbles",
+    "a leaf kept under foil"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"carbon dioxide + water ->\"."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what is made."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"glucose and oxygen\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"light and chlorophyll\" over the arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_GAS",
+     "listen_for": [
+      "plants use oxygen"
+     ],
+     "ask": "Which gas goes into the leaf in the equation?",
+     "repair": "Plants use carbon dioxide."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_PRODUCT",
+     "listen_for": [
+      "it gives off carbon dioxide"
+     ],
+     "ask": "What are the bubbles from the water plant?",
+     "repair": "Photosynthesis gives off oxygen."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_TEST",
+     "listen_for": [
+      "salt water tests for starch"
+     ],
+     "ask": "What turned the leaf blue-black?",
+     "repair": "Iodine tests for starch."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS.M_IS9_PS_SOIL_FOOD",
+     "listen_for": [
+      "food from the soil"
+     ],
+     "ask": "Did the soil weigh much less after the plant grew?",
+     "repair": "Plants make food in their leaves."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the two raw materials of photosynthesis.",
+     "answer": "carbon dioxide and water",
+     "shows": "raw materials"
+    },
+    {
+     "question": "A leaf covered with foil for two days gives no blue-black colour with iodine. Why?",
+     "answer": "no light reached it, so no starch was made",
+     "shows": "condition"
+    }
+   ]
+  }
+ ]
+}

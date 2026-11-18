@@ -1,0 +1,645 @@
+{
+ "sub_strand": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM",
+ "title": "Human circulatory system",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The child finds the pulse at the wrist and counts it at rest and after skipping for a minute. A model heart from a picture or a sheep's heart from the butcher (handled by the teacher) shows the four chambers. Medical statements are to be confirmed by a teacher or a health worker.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+   "key_step": "The child names the three parts of the circulatory system (heart, blood vessels, blood) and keeps the lungs and stomach in their own systems.",
+   "floor": {
+    "prerequisite": "Knows the parts of the breathing system.",
+    "question": "Which organ takes in oxygen?",
+    "answer": "the lungs"
+   },
+   "representations": [
+    "a body outline with the heart and vessels drawn in red and blue",
+    "the pulse at the wrist",
+    "a table: system and its parts"
+   ],
+   "steps": [
+    "Heart: the pump.",
+    "Blood vessels: the tubes (arteries, veins, capillaries).",
+    "Blood: what is pumped.",
+    "Lungs and stomach belong to other systems."
+   ],
+   "contexts": [
+    "a pulse taken at a clinic",
+    "a cut finger bleeding",
+    "running a race"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a heart with tubes going out and back."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tubes.",
+     "say": "What are these called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"blood vessels\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"heart, blood vessels, blood\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_LUNGS_IN",
+     "listen_for": [
+      "the lungs are part of it"
+     ],
+     "ask": "Which system do the lungs belong to?",
+     "repair": "The lungs are in the breathing system."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_HEART_PRODUCES",
+     "listen_for": [
+      "the heart makes blood"
+     ],
+     "ask": "Does the heart make blood or pump it?",
+     "repair": "The heart pumps blood; it does not make or store it."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_VESSEL_NAMES",
+     "listen_for": [
+      "the vessels are nerves"
+     ],
+     "ask": "What flows inside a blood vessel?",
+     "repair": "Blood vessels are tubes that carry blood."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_ONLY_HEART",
+     "listen_for": [
+      "it is the heart"
+     ],
+     "ask": "What does the heart pump, and through what?",
+     "repair": "The system is the heart, the vessels and the blood."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the three parts of the circulatory system.",
+     "answer": "heart, blood vessels, blood",
+     "shows": "parts"
+    },
+    {
+     "question": "What is the job of the heart?",
+     "answer": "to pump blood round the body",
+     "shows": "heart job"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+   "key_step": "The child describes the heart as a muscle in the chest between the lungs with four chambers (two upper atria receive blood, two lower ventricles pump it out) and valves that keep blood flowing one way.",
+   "floor": {
+    "prerequisite": "Can name the parts of the circulatory system.",
+    "question": "What pumps the blood?",
+    "answer": "the heart"
+   },
+   "representations": [
+    "a fist held to the chest",
+    "a drawing of the four chambers",
+    "a sheep's heart (teacher)"
+   ],
+   "steps": [
+    "Place it: chest, between the lungs, a little to the left.",
+    "Four chambers: two atria on top, two ventricles below.",
+    "Ventricles have thick walls and pump.",
+    "Valves stop blood flowing back."
+   ],
+   "contexts": [
+    "a doctor listening with a stethoscope",
+    "counting the pulse",
+    "a butcher's sheep heart"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a heart split into four rooms."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lower rooms.",
+     "say": "Why are these walls thicker?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they pump the blood out\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label atria and ventricles."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_POSITION",
+     "listen_for": [
+      "the heart is in the stomach"
+     ],
+     "ask": "Where do you feel your heart beat?",
+     "repair": "The heart is in the chest between the lungs."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_UPPER_PUMP",
+     "listen_for": [
+      "the top ones pump"
+     ],
+     "ask": "Which walls are thickest?",
+     "repair": "The lower chambers (ventricles) pump hardest."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_ONE_ROOM",
+     "listen_for": [
+      "the heart is one space"
+     ],
+     "ask": "How many chambers did the sheep heart have?",
+     "repair": "The heart has four chambers."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_HEART_SHAPE_LOVE",
+     "listen_for": [
+      "it is shaped like a love heart"
+     ],
+     "ask": "Make a fist: is that about the size and shape?",
+     "repair": "The heart is a fist-sized muscle in the chest."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many chambers does the human heart have?",
+     "answer": "four",
+     "shows": "chambers"
+    },
+    {
+     "question": "Which chambers pump blood out of the heart?",
+     "answer": "the lower ones (ventricles)",
+     "shows": "ventricles"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+   "key_step": "The child says arteries carry blood away from the heart, veins carry it back to the heart, and capillaries are tiny vessels where food and oxygen pass to the body; blood goes round and round.",
+   "floor": {
+    "prerequisite": "Knows the heart pumps blood.",
+    "question": "Where does the heart pump blood to?",
+    "answer": "round the body"
+   },
+   "representations": [
+    "a loop drawn: heart, arteries, capillaries, veins, heart",
+    "veins seen on the back of the hand",
+    "a chart: vessel, direction, job"
+   ],
+   "steps": [
+    "Arteries: Away from the heart (A for away).",
+    "Capillaries: tiny, among the cells, where food and oxygen pass out.",
+    "Veins: back to the heart.",
+    "Round and round: a circulation."
+   ],
+   "contexts": [
+    "blood taken at a clinic",
+    "a nosebleed",
+    "pressing on a cut"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle: heart at the top."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"arteries\" on the side leaving the heart."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the vessels coming back are called."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"veins\"."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"capillaries\" at the bottom of the loop."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_SWAP",
+     "listen_for": [
+      "veins carry blood away"
+     ],
+     "ask": "A for arteries: away or back?",
+     "repair": "Arteries carry blood away from the heart; veins bring it back."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_ONE_WAY",
+     "listen_for": [
+      "the blood stays in the body"
+     ],
+     "ask": "Where does the blood go after the capillaries?",
+     "repair": "Blood goes round and back to the heart."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_CAPILLARY_BIG",
+     "listen_for": [
+      "capillaries are big"
+     ],
+     "ask": "Where are capillaries found?",
+     "repair": "Capillaries are the tiniest vessels."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_VEINS_BLUE_BLOOD",
+     "listen_for": [
+      "vein blood is blue"
+     ],
+     "ask": "What colour is blood taken from a vein at the clinic?",
+     "repair": "All blood is red."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which vessels carry blood away from the heart?",
+     "answer": "arteries",
+     "shows": "arteries"
+    },
+    {
+     "question": "Where do food and oxygen pass from the blood into the body?",
+     "answer": "through the capillaries",
+     "shows": "capillaries"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+   "key_step": "The child gives the parts of blood and their jobs: red cells carry oxygen, white cells fight germs, platelets help blood clot, plasma carries food, waste and the cells.",
+   "floor": {
+    "prerequisite": "Knows the blood vessels.",
+    "question": "Which vessels carry blood back to the heart?",
+    "answer": "veins"
+   },
+   "representations": [
+    "a picture of blood under a microscope",
+    "a cut that forms a scab",
+    "a chart: part, job"
+   ],
+   "steps": [
+    "Red cells: oxygen.",
+    "White cells: fight germs.",
+    "Platelets: clot the blood at a cut.",
+    "Plasma: the liquid that carries food, waste and the cells."
+   ],
+   "contexts": [
+    "a scab forming on a knee",
+    "a blood test for malaria",
+    "donating blood"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cut with a scab forming."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the scab.",
+     "say": "Which part of the blood made this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"platelets\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the job of each part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_WHITE_OXYGEN",
+     "listen_for": [
+      "white cells carry oxygen"
+     ],
+     "ask": "Which cells give blood its red colour?",
+     "repair": "Red cells carry oxygen; white cells fight germs."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_PLATELETS",
+     "listen_for": [
+      "platelets carry oxygen"
+     ],
+     "ask": "What stops a cut bleeding?",
+     "repair": "Platelets help blood clot."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_ALL_RED",
+     "listen_for": [
+      "blood is only red cells"
+     ],
+     "ask": "What fights germs in the blood?",
+     "repair": "Blood has red cells, white cells, platelets and plasma."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_PLASMA_WATER_ONLY",
+     "listen_for": [
+      "plasma is just water"
+     ],
+     "ask": "Where does digested food go after the small intestine?",
+     "repair": "Plasma carries digested food and waste."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of the blood fights germs?",
+     "answer": "white blood cells",
+     "shows": "white cells"
+    },
+    {
+     "question": "What is the job of platelets?",
+     "answer": "to help blood clot at a cut",
+     "shows": "platelets"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+   "key_step": "The child recognises common circulatory conditions and their signs (high blood pressure, heart attack, hardening of arteries, anaemia) and says they are not caught from other people.",
+   "floor": {
+    "prerequisite": "Knows the jobs of the heart and vessels.",
+    "question": "What do arteries do?",
+    "answer": "carry blood away from the heart"
+   },
+   "representations": [
+    "a blood-pressure cuff at a clinic (picture)",
+    "a pipe narrowed with clay as a model artery",
+    "a chart: condition, signs, cause"
+   ],
+   "steps": [
+    "High blood pressure: blood pushes hard on the vessels; often no signs; checked at a clinic.",
+    "Hardened, narrowed arteries: fat builds up inside.",
+    "Heart attack warning signs: chest pain, arm pain, sweating.",
+    "Anaemia: too few red cells; tiredness and pale skin."
+   ],
+   "contexts": [
+    "a grandparent on blood-pressure pills",
+    "a health day at the school",
+    "a pale, tired child"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an artery as a clear pipe, then one with a fat build-up inside."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to blood flow in the narrowed pipe."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write \"harder to pump, blood pressure rises\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_CATCHING",
+     "listen_for": [
+      "you can catch high blood pressure"
+     ],
+     "ask": "Do germs cause high blood pressure?",
+     "repair": "These conditions are not caught from others."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_ARTERY_SOFT",
+     "listen_for": [
+      "the arteries become soft"
+     ],
+     "ask": "What builds up inside the artery?",
+     "repair": "Arteries harden and narrow when fat builds up."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_BP_MEANING",
+     "listen_for": [
+      "too much blood"
+     ],
+     "ask": "What does the cuff measure: amount or push?",
+     "repair": "Blood pressure is how hard blood pushes on the vessel walls."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_HEART_ATTACK_ONLY_OLD",
+     "listen_for": [
+      "let them rest"
+     ],
+     "ask": "What are the warning signs?",
+     "repair": "Chest pain, arm pain and sweating: get help at once."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one sign of a heart attack.",
+     "answer": "chest pain, pain in the left arm, sweating or breathlessness",
+     "shows": "sign"
+    },
+    {
+     "question": "Can high blood pressure be caught from another person?",
+     "answer": "No",
+     "shows": "not infectious"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+   "key_step": "The child says how to prevent circulatory conditions: regular exercise, less salt, sugar and fat, eat vegetables and fruit, no smoking or alcohol, manage stress, and checks at a clinic, for people of all ages.",
+   "floor": {
+    "prerequisite": "Can recognise common circulatory conditions.",
+    "question": "What is high blood pressure?",
+    "answer": "blood pushing too hard on the vessel walls"
+   },
+   "representations": [
+    "a plate of salty fried food and a balanced plate",
+    "a pulse count after skipping",
+    "a chart: habit, why it helps"
+   ],
+   "steps": [
+    "Move every day: the heart is a muscle.",
+    "Less salt, sugar and oil.",
+    "No smoking or alcohol.",
+    "Rest, sleep and manage stress; check blood pressure."
+   ],
+   "contexts": [
+    "chips and soda every day",
+    "walking to school",
+    "a smoker in the family"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two plates: chips with lots of salt, and githeri with sukuma."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the chips.",
+     "say": "What does a lot of salt do to blood pressure?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it raises it\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to circle the heart-healthy plate."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_REST_ONLY",
+     "listen_for": [
+      "rest keeps the heart healthy"
+     ],
+     "ask": "What happens to a muscle that is never used?",
+     "repair": "Exercise keeps the heart strong."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_OLD_ONLY",
+     "listen_for": [
+      "only old people need care"
+     ],
+     "ask": "When do habits that harm the heart start?",
+     "repair": "Heart care starts young."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_SALT_FAT",
+     "listen_for": [
+      "salt and fat give energy"
+     ],
+     "ask": "What does too much salt do to blood pressure?",
+     "repair": "Too much salt, oil and sugar harms the heart."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_THIN_SAFE",
+     "listen_for": [
+      "thin people cannot get it"
+     ],
+     "ask": "Do salt and smoking harm thin people too?",
+     "repair": "Anyone can get high blood pressure."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways to keep the heart healthy.",
+     "answer": "any two: exercise, less salt, sugar and fat, no smoking, fruit and vegetables",
+     "shows": "prevention"
+    },
+    {
+     "question": "Why should a young person avoid smoking?",
+     "answer": "it damages the heart and blood vessels",
+     "shows": "smoking"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
+   "key_step": "The child picks the parts of a daily routine that keep the circulatory system healthy: daily exercise, balanced meals, water, enough sleep, no smoking, short breaks from sitting, and combines them.",
+   "floor": {
+    "prerequisite": "Knows ways to prevent heart conditions.",
+    "question": "Give one way to keep the heart healthy.",
+    "answer": "exercise or eat less salt"
+   },
+   "representations": [
+    "a blank daily timetable",
+    "a sample routine with a gap",
+    "habit cards to place in the day"
+   ],
+   "steps": [
+    "Start the day with breakfast and water.",
+    "Move: walk, play, PE.",
+    "Balanced meals; water instead of soda.",
+    "Breaks from sitting and enough sleep."
+   ],
+   "contexts": [
+    "a school day timetable",
+    "a weekend with screens",
+    "a holiday on the farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a day line from morning to night."
+    },
+    {
+     "beat": "write",
+     "do": "Write breakfast and school on it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the afternoon.",
+     "say": "What would you add here for your heart?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"play or exercise\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in the evening."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_WATER_SKIP",
+     "listen_for": [
+      "soda is enough"
+     ],
+     "ask": "What should you drink most?",
+     "repair": "Drink water every day."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_ONE_HABIT",
+     "listen_for": [
+      "exercise is enough"
+     ],
+     "ask": "If you exercise but eat salty chips every day, is the heart safe?",
+     "repair": "Combine several good habits."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_SMOKE_SAFE",
+     "listen_for": [
+      "sitting all day is fine when young"
+     ],
+     "ask": "What happens to the heart with no movement?",
+     "repair": "Long sitting and smoking harm the heart at any age."
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_WEEKEND_EXERCISE",
+     "listen_for": [
+      "one long run a month"
+     ],
+     "ask": "Which keeps the heart strong: once a month or every day?",
+     "repair": "Some exercise every day is best."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give three things a healthy daily routine for the heart includes.",
+     "answer": "any three: exercise, balanced meals, water, sleep, breaks from sitting, no smoking",
+     "shows": "routine"
+    },
+    {
+     "question": "Which is better: playing every day or one long game a month?",
+     "answer": "playing every day",
+     "shows": "daily habit"
+    }
+   ]
+  }
+ ]
+}

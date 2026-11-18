@@ -1,0 +1,461 @@
+{
+ "sub_strand": "INTE.G7.FORCE_.ELECTRICAL_ENERGY",
+ "title": "Electrical Energy",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Cells, a bulb holder, wires and a switch only (low voltage, never mains). The child builds a series circuit, removes one bulb, then builds a parallel circuit and does the same. Kenyan sources (Olkaria geothermal, Seven Forks hydro, Lake Turkana wind, solar panels on homes) are shown on a map.",
+ "skills": [
+  {
+   "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+   "key_step": "The child names sources of electricity (cells and batteries, solar panels, hydroelectric, geothermal, wind, generators) with Kenyan examples, and knows sockets and wires carry electricity but do not make it.",
+   "floor": {
+    "prerequisite": "Knows ways of lighting a house.",
+    "question": "Name one way of lighting a house at night.",
+    "answer": "electric bulbs or a solar lamp"
+   },
+   "representations": [
+    "a map of Kenyan power stations",
+    "a cell, a small solar panel and a bulb",
+    "a chart: source, how it works, example"
+   ],
+   "steps": [
+    "Cells and batteries: chemical energy.",
+    "Solar panels: sunlight.",
+    "Hydro: falling water (Seven Forks); geothermal: underground heat (Olkaria).",
+    "Wind (Lake Turkana) and generators."
+   ],
+   "contexts": [
+    "a solar panel on a homestead roof",
+    "Olkaria near Naivasha",
+    "a torch battery"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a dam, a steam well and a wind turbine."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the steam well.",
+     "say": "Which source is this, and where in Kenya?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"geothermal, Olkaria\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label each source."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_SOCKET",
+     "listen_for": [
+      "the socket makes electricity"
+     ],
+     "ask": "Where does the electricity come from before the socket?",
+     "repair": "Sockets and wires carry electricity from a source."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_STORED_WIRE",
+     "listen_for": [
+      "it is stored in the wires"
+     ],
+     "ask": "What happens to the bulb when the source is switched off?",
+     "repair": "Wires carry electricity; they do not store it."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_HYDRO_GEO",
+     "listen_for": [
+      "geothermal uses rivers"
+     ],
+     "ask": "Which uses heat from under the ground?",
+     "repair": "Hydro uses falling water; geothermal uses underground heat."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_SOLAR_NIGHT",
+     "listen_for": [
+      "the panel works at night"
+     ],
+     "ask": "What happened when the panel was covered?",
+     "repair": "Solar panels work only in daylight."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a source of electricity found in Kenya.",
+     "answer": "geothermal at Olkaria, hydro at Seven Forks, wind at Lake Turkana, or solar",
+     "shows": "Kenyan source"
+    },
+    {
+     "question": "Is a socket a source of electricity?",
+     "answer": "No: it carries electricity from a source",
+     "shows": "socket"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+   "key_step": "The child names the parts of a simple circuit (cell, wires, bulb, switch) and says the bulb lights only when there is a complete loop from one end of the cell back to the other.",
+   "floor": {
+    "prerequisite": "Knows a bulb gives light.",
+    "question": "Is a bulb a source of light?",
+    "answer": "yes (artificial)"
+   },
+   "representations": [
+    "a cell, two wires, a bulb and a switch",
+    "circuit symbols",
+    "a drawing of a broken loop"
+   ],
+   "steps": [
+    "Join a wire from the + end to the bulb.",
+    "Join a wire from the bulb back to the - end.",
+    "The loop is complete: the bulb lights.",
+    "Open the switch: the loop is broken."
+   ],
+   "contexts": [
+    "a torch",
+    "a bicycle light",
+    "a room light switch"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cell, a bulb and one wire joining them."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether the bulb will light."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the second wire to the other end and write \"complete circuit\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_ONE_WIRE",
+     "listen_for": [
+      "one wire is enough"
+     ],
+     "ask": "Is there a way back to the cell?",
+     "repair": "A circuit needs a complete loop."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_USED_UP",
+     "listen_for": [
+      "the bulb uses up the current"
+     ],
+     "ask": "Is the current the same on both sides of the bulb?",
+     "repair": "The current is not used up; energy is."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_SWITCH_OPEN",
+     "listen_for": [
+      "an open switch lets it through"
+     ],
+     "ask": "Is there a gap when the switch is open?",
+     "repair": "An open switch breaks the circuit."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_CELL_ONE_END",
+     "listen_for": [
+      "both wires on one end"
+     ],
+     "ask": "Did the bulb light with both wires on +?",
+     "repair": "One wire to each end of the cell."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why does a bulb not light if a wire is loose?",
+     "answer": "the circuit is not complete",
+     "shows": "complete circuit"
+    },
+    {
+     "question": "What does a switch do in a circuit?",
+     "answer": "opens or closes the circuit",
+     "shows": "switch"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL",
+   "key_step": "The child tells a series circuit (one loop; remove a bulb and all go out; bulbs dimmer) from a parallel circuit (separate branches; remove one and the rest stay on; bulbs as bright as one alone), and says houses are wired in parallel.",
+   "floor": {
+    "prerequisite": "Can build a complete circuit.",
+    "question": "What happens to a bulb if the switch is open?",
+    "answer": "it goes off"
+   },
+   "representations": [
+    "two-bulb series and parallel circuits built",
+    "circuit diagrams side by side",
+    "a house wiring picture"
+   ],
+   "steps": [
+    "Series: one path through both bulbs.",
+    "Remove one bulb: the path breaks, all go out.",
+    "Parallel: each bulb has its own branch.",
+    "Remove one bulb: the others stay on."
+   ],
+   "contexts": [
+    "old Christmas lights going out together",
+    "lights in a house",
+    "a torch with two cells"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a series circuit with two bulbs."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens if one bulb is removed."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Cross out both bulbs and write \"series: all go out\"."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the parallel circuit beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_SERIES_STAY",
+     "listen_for": [
+      "the other bulb stays on"
+     ],
+     "ask": "Is there still a complete loop?",
+     "repair": "In series, removing one bulb breaks the circuit."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_PARALLEL_DIM",
+     "listen_for": [
+      "parallel bulbs are dimmer"
+     ],
+     "ask": "Which circuit had the brighter bulbs?",
+     "repair": "Parallel bulbs are brighter than series ones."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_HOUSE_SERIES",
+     "listen_for": [
+      "houses are in series"
+     ],
+     "ask": "Do all the lights go off when one bulb blows at home?",
+     "repair": "Houses are wired in parallel."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_MORE_BULBS_BRIGHTER",
+     "listen_for": [
+      "more bulbs, brighter"
+     ],
+     "ask": "What happened when a second bulb was added in series?",
+     "repair": "In series, more bulbs means dimmer bulbs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which circuit do the other bulbs stay on when one is removed?",
+     "answer": "parallel",
+     "shows": "parallel"
+    },
+    {
+     "question": "Why are houses wired in parallel?",
+     "answer": "each light can be switched on and off on its own, and one blown bulb does not put out the rest",
+     "shows": "house wiring"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+   "key_step": "The child names common electrical appliances and the useful energy each gives: bulb (light), iron, kettle and cooker (heat), radio and speaker (sound), fan and blender (movement), television (light and sound).",
+   "floor": {
+    "prerequisite": "Knows heat and sound are forms of energy.",
+    "question": "What is the source of sound in a drum?",
+    "answer": "the vibrating skin"
+   },
+   "representations": [
+    "pictures of appliances",
+    "a chart: appliance, useful energy",
+    "a fan and a radio switched on (teacher)"
+   ],
+   "steps": [
+    "Name the appliance.",
+    "Ask: what does it give that we use?",
+    "Light, heat, sound or movement.",
+    "Some give more than one."
+   ],
+   "contexts": [
+    "an electric kettle",
+    "a radio in a matatu",
+    "a posho mill"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a kettle, a radio and a fan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the fan.",
+     "say": "What useful energy does it give?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"movement (kinetic)\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label the others."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_MAKES_ELEC",
+     "listen_for": [
+      "the radio makes electricity"
+     ],
+     "ask": "What happens to the radio when unplugged?",
+     "repair": "Appliances use electricity; they do not make it."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_RADIO_NONE",
+     "listen_for": [
+      "a radio gives nothing"
+     ],
+     "ask": "What do you hear from a radio?",
+     "repair": "A radio changes electricity into sound."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_FRIDGE_COLD",
+     "listen_for": [
+      "the fridge makes cold"
+     ],
+     "ask": "Why is the back of a fridge warm?",
+     "repair": "A fridge moves heat out from inside."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_IRON_LIGHT",
+     "listen_for": [
+      "an iron gives light"
+     ],
+     "ask": "What do you feel from an iron?",
+     "repair": "An iron gives mainly heat."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What useful energy does an electric kettle give?",
+     "answer": "heat",
+     "shows": "kettle"
+    },
+    {
+     "question": "Name an appliance that changes electricity into sound.",
+     "answer": "a radio, a speaker or a television",
+     "shows": "sound"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY",
+   "key_step": "The child chooses safe ways of using electricity: dry hands, pull the plug not the cable, do not overload sockets, keep water away, never touch broken wires or play near power lines, and call an adult or KPLC.",
+   "floor": {
+    "prerequisite": "Can name appliances and the energy they give.",
+    "question": "What energy does an iron give?",
+    "answer": "heat"
+   },
+   "representations": [
+    "a picture of a home with dangers",
+    "a safety rules chart",
+    "a picture of power lines"
+   ],
+   "steps": [
+    "Dry hands and keep water away.",
+    "Pull the plug, not the cable.",
+    "One appliance per socket; do not overload.",
+    "Stay away from broken wires and power lines; tell an adult."
+   ],
+   "contexts": [
+    "a multi-plug full of plugs",
+    "a broken power line after a storm",
+    "charging a phone near water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a socket with five plugs in an adaptor."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the adaptor.",
+     "say": "What could happen here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"overheating, fire\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw the safe way."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_WET_HANDS",
+     "listen_for": [
+      "wet hands are fine"
+     ],
+     "ask": "Does water carry electricity?",
+     "repair": "Never touch switches with wet hands."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_UNPLUG_PULL",
+     "listen_for": [
+      "pull the cable"
+     ],
+     "ask": "What can happen to the wires inside?",
+     "repair": "Hold the plug to pull it out; leave repairs to an electrician."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_OVERLOAD",
+     "listen_for": [
+      "the switch makes it safe"
+     ],
+     "ask": "What happens to the wires with too many plugs?",
+     "repair": "Overloading can cause a fire."
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_KITE_POWERLINE",
+     "listen_for": [
+      "it is fine if it does not touch"
+     ],
+     "ask": "What if the string blows onto the wire?",
+     "repair": "Never play near power lines."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why should you never touch a switch with wet hands?",
+     "answer": "water conducts electricity and you could get a shock",
+     "shows": "water"
+    },
+    {
+     "question": "What should you do if you see a fallen power line?",
+     "answer": "keep away and tell an adult or KPLC",
+     "shows": "power line"
+    }
+   ]
+  }
+ ]
+}

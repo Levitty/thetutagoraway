@@ -1,0 +1,282 @@
+{
+ "sub_strand": "INTE.G9.MIXTUR.METALS_AND_ALLOYS",
+ "title": "Metals and Alloys",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Real objects: a copper wire, a mabati offcut, a brass padlock or tap, a steel spoon, an aluminium sufuria. The rusting test (three nails in three conditions) runs for a week. Learners never handle acids for galvanising; it is described.",
+ "skills": [
+  {
+   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS",
+   "key_step": "The child names the physical properties of metals (shiny, good conductors of heat and electricity, malleable, ductile, strong, mostly solid with high melting points) and links each use to the property it needs.",
+   "floor": {
+    "prerequisite": "Can sort metals and non-metals.",
+    "question": "Is copper a metal?",
+    "answer": "yes"
+   },
+   "representations": [
+    "metal objects on a tray",
+    "a property chart with an object for each",
+    "a bulb circuit"
+   ],
+   "steps": [
+    "Shiny: jewellery, mirrors.",
+    "Conduct heat: sufurias; conduct electricity: wires.",
+    "Malleable: mabati sheets; ductile: wires.",
+    "Match the use to the property."
+   ],
+   "contexts": [
+    "a mabati roof",
+    "copper wiring",
+    "an aluminium sufuria"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wire, a sufuria and a sheet of mabati."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mabati.",
+     "say": "Which property let it be made into a thin sheet?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"malleable\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write the property beside the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_MALLEABLE",
+     "listen_for": [
+      "hammered into sheets is ductile"
+     ],
+     "ask": "How are mabati sheets made?",
+     "repair": "Malleable: hammered into sheets."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_DUCTILE",
+     "listen_for": [
+      "drawn into wires is malleable"
+     ],
+     "ask": "How is wire made?",
+     "repair": "Ductile: drawn into wires."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_USE",
+     "listen_for": [
+      "copper is cheap"
+     ],
+     "ask": "What must a wire do?",
+     "repair": "Copper conducts electricity well."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS.M_IS9_MP_ALL_MAGNETIC",
+     "listen_for": [
+      "aluminium is not a metal"
+     ],
+     "ask": "Does foil shine, bend and conduct?",
+     "repair": "Most metals are not magnetic."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does malleable mean?",
+     "answer": "can be hammered into sheets",
+     "shows": "malleable"
+    },
+    {
+     "question": "Why are sufurias made of aluminium?",
+     "answer": "it conducts heat well and is light",
+     "shows": "use"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS",
+   "key_step": "The child says an alloy is a mixture of a metal with other elements, names brass (copper and zinc), bronze (copper and tin) and steel (iron with a little carbon), and says alloys are made to be harder, stronger or last longer.",
+   "floor": {
+    "prerequisite": "Knows what a mixture is.",
+    "question": "Is a mixture made of one substance or more?",
+    "answer": "more than one"
+   },
+   "representations": [
+    "a brass tap, a steel spoon, a bronze medal picture",
+    "a chart: alloy, made of, use",
+    "a soft iron nail and a steel spoon to bend"
+   ],
+   "steps": [
+    "An alloy is a mixture with a metal.",
+    "Brass: copper and zinc (taps, padlocks).",
+    "Bronze: copper and tin (medals, statues).",
+    "Steel: iron and carbon (buildings, tools)."
+   ],
+   "contexts": [
+    "a brass padlock",
+    "steel rods on a building site",
+    "a bronze statue in Nairobi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: alloy, made of, use."
+    },
+    {
+     "beat": "write",
+     "do": "Fill in steel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the brass row.",
+     "say": "What is brass made of?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"copper and zinc\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in bronze."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_MEANING",
+     "listen_for": [
+      "steel is pure iron"
+     ],
+     "ask": "What is added to iron to make steel?",
+     "repair": "An alloy is a mixture."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_BRASS",
+     "listen_for": [
+      "brass is copper and tin"
+     ],
+     "ask": "Which is copper and tin: brass or bronze?",
+     "repair": "Brass is copper and zinc."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_STEEL",
+     "listen_for": [
+      "steel is iron and copper"
+     ],
+     "ask": "Can an alloy contain a non-metal?",
+     "repair": "Steel is iron with a little carbon."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS.M_IS9_AL_WEAKER",
+     "listen_for": [
+      "alloys are weaker"
+     ],
+     "ask": "Which bent more easily: the iron nail or the steel spoon?",
+     "repair": "Alloys are made to be stronger."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is an alloy?",
+     "answer": "a mixture of a metal with other elements",
+     "shows": "meaning"
+    },
+    {
+     "question": "Name the alloy made of copper and zinc.",
+     "answer": "brass",
+     "shows": "brass"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING",
+   "key_step": "The child says rusting is iron reacting with oxygen and water, that it weakens iron and steel, and that painting, oiling, greasing, galvanising and plating prevent it by keeping air and water away.",
+   "floor": {
+    "prerequisite": "Knows a chemical change makes a new substance.",
+    "question": "Is rusting a physical or chemical change?",
+    "answer": "chemical"
+   },
+   "representations": [
+    "three nails: dry air, boiled water under oil, air and water",
+    "a painted and an unpainted iron sheet",
+    "a chart: method, how it keeps air or water away"
+   ],
+   "steps": [
+    "Iron + oxygen + water gives rust.",
+    "Rust flakes and weakens the metal.",
+    "Keep air or water away: paint, oil, grease.",
+    "Coat with zinc (galvanising) or another metal (plating)."
+   ],
+   "contexts": [
+    "a rusty mabati roof",
+    "oiling a bicycle chain",
+    "a galvanised water tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three test tubes with nails: dry, water with oil on top, open water."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which nail will rust."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Shade the open-water nail brown."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_NEED",
+     "listen_for": [
+      "water only"
+     ],
+     "ask": "Why did the nail under oil not rust?",
+     "repair": "Iron needs air and water to rust."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_PREVENT",
+     "listen_for": [
+      "keep it wet"
+     ],
+     "ask": "What does rust need?",
+     "repair": "Paint or oil keeps air and water away."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_EFFECT",
+     "listen_for": [
+      "rust makes it stronger"
+     ],
+     "ask": "What happens to a nail when rust flakes off?",
+     "repair": "Rust weakens iron."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING.M_IS9_RU_ALL_METALS",
+     "listen_for": [
+      "aluminium rusts"
+     ],
+     "ask": "Which old pot went brown and flaky?",
+     "repair": "Only iron and steel rust."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What two things does iron need to rust?",
+     "answer": "oxygen (air) and water",
+     "shows": "conditions"
+    },
+    {
+     "question": "Give one way to prevent a bicycle chain rusting.",
+     "answer": "oil or grease it",
+     "shows": "prevention"
+    }
+   ]
+  }
+ ]
+}

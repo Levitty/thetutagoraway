@@ -1,0 +1,197 @@
+{
+ "sub_strand": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT",
+ "title": "Introduction to Integrated Science",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Start from the learner's own life: sort a list of everyday things (a boiling kettle, a vaccine, a bicycle, sour milk, a mobile phone) into biology, chemistry and physics, then find the ones that belong to two branches. Careers are drawn from the community: nurse, mechanic, farmer, electrician, baker.",
+ "skills": [
+  {
+   "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+   "key_step": "The child places a topic in biology (living things), chemistry (matter and how it changes) or physics (energy and forces), and sees that many topics join two branches.",
+   "floor": {
+    "prerequisite": "Knows topics from Grade 4-6 science.",
+    "question": "Name one part of the circulatory system.",
+    "answer": "the heart"
+   },
+   "representations": [
+    "topic cards to sort",
+    "three overlapping circles",
+    "a list of Grade 6 topics"
+   ],
+   "steps": [
+    "Biology: living things and the body.",
+    "Chemistry: what things are made of and how they change.",
+    "Physics: energy, forces, light, sound, electricity.",
+    "Find topics in two circles (cooking, the eye)."
+   ],
+   "contexts": [
+    "a vaccine at a clinic",
+    "sour milk (mala)",
+    "a boda boda braking"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three overlapping circles: biology, chemistry, physics."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"the heart\", \"rusting\", \"a bicycle brake\" beside them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"rusting\".",
+     "say": "Which circle does this go in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"chemistry\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to place the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_SEPARATE",
+     "listen_for": [
+      "they have nothing in common"
+     ],
+     "ask": "Where does cooking food go: chemistry or physics?",
+     "repair": "The branches overlap; many topics use two or three."
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_BIO_PLANTS",
+     "listen_for": [
+      "biology is plants and animals"
+     ],
+     "ask": "Is the human heart a living thing?",
+     "repair": "Biology includes the human body."
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_CHEM_LAB",
+     "listen_for": [
+      "chemistry is dangerous chemicals"
+     ],
+     "ask": "What happens to milk when it goes sour?",
+     "repair": "Chemistry is about all matter and how it changes."
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_PHYSICS_MATHS",
+     "listen_for": [
+      "physics is sums"
+     ],
+     "ask": "Which topics from Grade 6 are about forces and light?",
+     "repair": "Physics studies energy and forces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which branch of science studies the parts of a flower?",
+     "answer": "biology",
+     "shows": "branch"
+    },
+    {
+     "question": "Which branch studies electricity and magnets?",
+     "answer": "physics",
+     "shows": "physics"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+   "key_step": "The child describes how science is used in health, farming, industry, transport, food and clothing, and names careers in the community that use it.",
+   "floor": {
+    "prerequisite": "Can name the three branches of science.",
+    "question": "Which branch studies living things?",
+    "answer": "biology"
+   },
+   "representations": [
+    "labels from a fertiliser bag, medicine and a food packet",
+    "a chart: area of life, how science helps",
+    "a career web"
+   ],
+   "steps": [
+    "Health: vaccines, medicines, clean water.",
+    "Farming: seed, fertiliser, pest control.",
+    "Industry and transport: machines, fuels, vehicles.",
+    "Careers: nurse, mechanic, electrician, farmer, baker, engineer."
+   ],
+   "contexts": [
+    "a dispensary in the village",
+    "a maize farm",
+    "a jua kali workshop"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a web with \"science\" in the middle."
+    },
+    {
+     "beat": "write",
+     "do": "Write health, farming and transport round it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at farming.",
+     "say": "How does science help here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's example."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add a career to each branch."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_LAB_ONLY",
+     "listen_for": [
+      "only in laboratories"
+     ],
+     "ask": "Where does a mechanic use science?",
+     "repair": "Science is used everywhere, not only in laboratories."
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_HEALTH_ONLY",
+     "listen_for": [
+      "only in hospitals"
+     ],
+     "ask": "How does science help farmers and drivers?",
+     "repair": "Science helps farming, industry and transport too."
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_NO_CAREER",
+     "listen_for": [
+      "only doctors use science"
+     ],
+     "ask": "Does an electrician use science?",
+     "repair": "Many careers use science."
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_FARM_NOT_SCIENCE",
+     "listen_for": [
+      "farming is tradition"
+     ],
+     "ask": "What does the fertiliser bag tell the farmer?",
+     "repair": "Farming uses science every day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way science is used in farming.",
+     "answer": "tested seed, fertilisers, pest control or soil tests",
+     "shows": "farming"
+    },
+    {
+     "question": "Name two careers that use science.",
+     "answer": "any two: nurse, doctor, electrician, mechanic, engineer, farmer",
+     "shows": "careers"
+    }
+   ]
+  }
+ ]
+}

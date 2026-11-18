@@ -1,0 +1,374 @@
+{
+ "sub_strand": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE",
+ "title": "Human Reproductive System",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Taught with care and in the way the school decides (a female and a male teacher or the guidance counsellor). Use labelled diagrams, not photographs. Wording to be confirmed by a teacher. Questions are about body parts, changes and healthy coping, never about personal experience.",
+ "skills": [
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+   "key_step": "The child names the parts of the male reproductive system (testes, scrotum, sperm duct, urethra, penis, glands) and what each does, keeping the urinary path apart.",
+   "floor": {
+    "prerequisite": "Can name organs and their jobs in a body system.",
+    "question": "What does the heart do?",
+    "answer": "pumps blood"
+   },
+   "representations": [
+    "a labelled side-view diagram",
+    "a matching card set: part, job",
+    "two coloured paths for sperm and urine"
+   ],
+   "steps": [
+    "Testes: make sperm; the scrotum holds them outside the body.",
+    "Sperm duct: carries sperm.",
+    "Urethra: carries urine or sperm out (not at the same time).",
+    "Penis: passes sperm and urine out of the body."
+   ],
+   "contexts": [
+    "a health lesson",
+    "a school counsellor's talk",
+    "a biology chart"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the outline of the male system."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the testes.",
+     "say": "What do these make?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"sperm\"."
+    },
+    {
+     "beat": "write",
+     "do": "Label each part with its job."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_TESTIS_URINE",
+     "listen_for": [
+      "the testes make urine"
+     ],
+     "ask": "Which organ makes urine?",
+     "repair": "Testes make sperm; kidneys make urine."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_URETHRA_ONE",
+     "listen_for": [
+      "the urethra carries only urine"
+     ],
+     "ask": "What else leaves through the urethra?",
+     "repair": "The urethra carries urine or sperm."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_SCROTUM",
+     "listen_for": [
+      "the testes are in the stomach"
+     ],
+     "ask": "Where are the testes held?",
+     "repair": "The testes are in the scrotum, outside the body."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_SPERM_DUCT_BLADDER",
+     "listen_for": [
+      "the sperm duct carries urine"
+     ],
+     "ask": "Where does the sperm duct start?",
+     "repair": "The sperm duct carries sperm from the testes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part makes sperm?",
+     "answer": "the testes",
+     "shows": "testes"
+    },
+    {
+     "question": "Which tube carries both urine and sperm out of the body, at different times?",
+     "answer": "the urethra",
+     "shows": "urethra"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+   "key_step": "The child names the parts of the female reproductive system (ovaries, oviducts, uterus, cervix, vagina) and what each does, and places the uterus, not the stomach, as where a baby grows.",
+   "floor": {
+    "prerequisite": "Can name the male reproductive parts.",
+    "question": "Which part makes sperm?",
+    "answer": "the testes"
+   },
+   "representations": [
+    "a labelled front-view diagram",
+    "matching cards",
+    "a calendar of a monthly cycle"
+   ],
+   "steps": [
+    "Ovaries: release eggs, about once a month.",
+    "Oviducts: carry the egg; fertilisation happens here.",
+    "Uterus: where a baby grows.",
+    "Cervix: the neck of the uterus; the vagina leads outside."
+   ],
+   "contexts": [
+    "a health lesson",
+    "a clinic chart",
+    "a school counsellor's talk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the outline of the female system."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the uterus.",
+     "say": "What grows here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"a baby\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label the ovaries and oviducts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_STOMACH_BABY",
+     "listen_for": [
+      "the baby grows in the stomach"
+     ],
+     "ask": "Is the stomach part of the reproductive system?",
+     "repair": "A baby grows in the uterus."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_OVARY_UTERUS",
+     "listen_for": [
+      "the ovary holds the baby"
+     ],
+     "ask": "What does the ovary release?",
+     "repair": "Ovaries release eggs; the uterus holds the baby."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_CERVIX_VAGINA",
+     "listen_for": [
+      "the cervix opens outside"
+     ],
+     "ask": "Which part leads outside?",
+     "repair": "The cervix is the neck of the uterus; the vagina opens outside."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_EGG_EVERY_DAY",
+     "listen_for": [
+      "an egg every day"
+     ],
+     "ask": "How long is a monthly cycle?",
+     "repair": "About once a month."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does a baby grow?",
+     "answer": "in the uterus",
+     "shows": "uterus"
+    },
+    {
+     "question": "What do the ovaries release?",
+     "answer": "eggs (ova)",
+     "shows": "ovaries"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+   "key_step": "The child describes physical changes in boys (voice breaks, shoulders broaden, body and facial hair, growth spurt) and girls (breasts, wider hips, periods, body hair, growth spurt), and knows they start at different ages for different people.",
+   "floor": {
+    "prerequisite": "Can name the male and female reproductive parts.",
+    "question": "Where does a baby grow?",
+    "answer": "the uterus"
+   },
+   "representations": [
+    "a two-column chart: boys, girls, both",
+    "a range of ages on a line (about 9 to 16)",
+    "statement cards to sort"
+   ],
+   "steps": [
+    "Both: growth spurt, body hair, pimples, sweat.",
+    "Boys: voice breaks, broader shoulders, facial hair.",
+    "Girls: breasts, wider hips, periods.",
+    "Each person starts at their own time."
+   ],
+   "contexts": [
+    "a class with learners of different heights",
+    "a guidance session",
+    "a parent talk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three columns: boys, girls, both."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"growth spurt\" in \"both\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"girls\".",
+     "say": "Name a change other than periods."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to fill in the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_BOYS_ONLY",
+     "listen_for": [
+      "only boys grow fast"
+     ],
+     "ask": "Do girls also have a growth spurt?",
+     "repair": "Both boys and girls change in adolescence."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_SAME_AGE",
+     "listen_for": [
+      "a late one is sick"
+     ],
+     "ask": "Do all learners in class have the same height?",
+     "repair": "Changes start at different ages; that is normal."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_PERIOD_ILLNESS",
+     "listen_for": [
+      "periods are an illness"
+     ],
+     "ask": "Is a period a normal part of growing up?",
+     "repair": "Periods are normal, not an illness."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_VOICE_GIRLS_NONE",
+     "listen_for": [
+      "girls do not change except periods"
+     ],
+     "ask": "What other changes happen in girls?",
+     "repair": "Girls have many changes besides periods."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one change in boys during adolescence.",
+     "answer": "voice breaks, facial hair, broader shoulders or a growth spurt",
+     "shows": "boys"
+    },
+    {
+     "question": "Do all children begin adolescence at the same age?",
+     "answer": "No: each starts at their own time",
+     "shows": "timing"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING",
+   "key_step": "The child chooses healthy ways of coping with adolescence: wash daily with mild soap, change pads regularly and keep going to school, eat balanced meals, exercise, talk to a trusted adult, and avoid squeezing pimples.",
+   "floor": {
+    "prerequisite": "Knows the changes of adolescence.",
+    "question": "Name one change in girls.",
+    "answer": "breasts develop, or periods start"
+   },
+   "representations": [
+    "a chart: challenge, healthy way, unhealthy way",
+    "role-play cards",
+    "a list of trusted adults"
+   ],
+   "steps": [
+    "Hygiene: wash daily; change pads every few hours.",
+    "Skin: wash gently; do not squeeze pimples.",
+    "Feelings: talk to a trusted adult.",
+    "Body: eat balanced meals and exercise."
+   ],
+   "contexts": [
+    "a girl worried about missing school",
+    "a boy teased about his voice",
+    "a learner feeling moody"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"I feel worried and moody\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the words.",
+     "say": "What is a healthy thing to do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"talk to a trusted adult\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add two more healthy ways."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_SQUEEZE",
+     "listen_for": [
+      "squeeze the pimples"
+     ],
+     "ask": "What happens to the skin after squeezing?",
+     "repair": "Wash gently; do not squeeze."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_KEEP_QUIET",
+     "listen_for": [
+      "keep it to yourself"
+     ],
+     "ask": "Who can you talk to at school?",
+     "repair": "Talk to a trusted adult."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_PADS",
+     "listen_for": [
+      "one pad all day",
+      "stay home"
+     ],
+     "ask": "How often should a pad be changed?",
+     "repair": "Change pads regularly and keep going to school."
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_SKIP_MEALS",
+     "listen_for": [
+      "skip breakfast"
+     ],
+     "ask": "What does a growing body need?",
+     "repair": "Eat balanced meals."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one healthy way to cope with mood swings.",
+     "answer": "talk to a trusted adult, exercise, rest",
+     "shows": "feelings"
+    },
+    {
+     "question": "Why should a growing learner not skip meals?",
+     "answer": "the body needs food to grow",
+     "shows": "nutrition"
+    }
+   ]
+  }
+ ]
+}

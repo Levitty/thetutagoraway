@@ -1,0 +1,368 @@
+{
+ "sub_strand": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE",
+ "title": "Levers as simple machines",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A ruler on a pencil as a see-saw with coins, a bottle opener, a wheelbarrow, a jembe, a pair of tongs and a broom. The child marks the fulcrum (F), the effort (E) and the load (L) on each real tool before naming the class by what is in the middle.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+   "key_step": "The child identifies a lever as a rigid bar that turns about a fixed point to move a load, and names levers in daily life (see-saw, wheelbarrow, bottle opener, jembe, broom, tongs).",
+   "floor": {
+    "prerequisite": "Knows forces push or pull.",
+    "question": "Is lifting a box a push or a pull?",
+    "answer": "a pull (upwards)"
+   },
+   "representations": [
+    "a ruler on a pencil with coins",
+    "real tools on a table",
+    "a chart: tool, lever or not"
+   ],
+   "steps": [
+    "Look for a rigid bar.",
+    "Find the point it turns on.",
+    "Find the load it moves.",
+    "If all three are there, it is a lever."
+   ],
+   "contexts": [
+    "a wheelbarrow on a building site",
+    "opening a soda bottle",
+    "a see-saw in the playground"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a see-saw, a bucket and a bottle opener."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bucket.",
+     "say": "Does it turn on a fixed point to move a load?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to decide."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"lever\" under the see-saw and the opener."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_LADDER",
+     "listen_for": [
+      "a ladder is a lever"
+     ],
+     "ask": "Does a ladder turn on a point to lift a load?",
+     "repair": "A ladder is not a lever."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_ONLY_LONG",
+     "listen_for": [
+      "a lever must be long"
+     ],
+     "ask": "Is a bottle opener a lever?",
+     "repair": "Short tools can be levers."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_MORE_ENERGY",
+     "listen_for": [
+      "it gives more energy"
+     ],
+     "ask": "Do you still do the work?",
+     "repair": "A lever makes work easier; it gives no extra energy."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_HANDLE_ANY",
+     "listen_for": [
+      "it has a handle"
+     ],
+     "ask": "Does the bucket turn on a fixed point?",
+     "repair": "A handle alone does not make a lever."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two levers used at home.",
+     "answer": "any two: bottle opener, broom, tongs, scissors, jembe",
+     "shows": "examples"
+    },
+    {
+     "question": "Is a wheelbarrow a lever?",
+     "answer": "Yes",
+     "shows": "identify"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+   "key_step": "The child marks the fulcrum (the turning point), the effort (where force is applied) and the load (what is moved) on a real lever, wherever they are.",
+   "floor": {
+    "prerequisite": "Can identify a lever.",
+    "question": "Is a see-saw a lever?",
+    "answer": "yes"
+   },
+   "representations": [
+    "tools marked with F, E and L stickers",
+    "a drawing of a see-saw with labels",
+    "a wheelbarrow"
+   ],
+   "steps": [
+    "Find where it turns: F.",
+    "Find where you push or pull: E.",
+    "Find what is moved: L.",
+    "Check with a second tool."
+   ],
+   "contexts": [
+    "a wheelbarrow of sand",
+    "a bottle opener on a soda top",
+    "tongs lifting charcoal"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wheelbarrow."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wheel.",
+     "say": "Is this the fulcrum, the effort or the load?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the fulcrum\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to mark E and L."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_LOAD_EFFORT",
+     "listen_for": [
+      "the effort is the sand"
+     ],
+     "ask": "Where do your hands push?",
+     "repair": "Effort is your push; load is what is moved."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_FULCRUM_HANDLE",
+     "listen_for": [
+      "the fulcrum is the handle"
+     ],
+     "ask": "Where does the lever turn?",
+     "repair": "The fulcrum is the turning point."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_MOVES",
+     "listen_for": [
+      "the fulcrum moves"
+     ],
+     "ask": "Does the wheel go up with the load?",
+     "repair": "The fulcrum stays fixed while the lever turns."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_FULCRUM_ALWAYS_MIDDLE",
+     "listen_for": [
+      "the fulcrum is in the middle"
+     ],
+     "ask": "What does the wheelbarrow turn on?",
+     "repair": "The fulcrum can be at the end."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the fulcrum of a bottle opener?",
+     "answer": "the edge that rests on top of the bottle top",
+     "shows": "fulcrum"
+    },
+    {
+     "question": "What is the load when using tongs to lift charcoal?",
+     "answer": "the charcoal",
+     "shows": "load"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+   "key_step": "The child explains a lever makes work easier: less effort is needed when the effort is far from the fulcrum and the load is near it, and the work done is not reduced.",
+   "floor": {
+    "prerequisite": "Can mark the fulcrum, effort and load.",
+    "question": "What is the turning point of a lever called?",
+    "answer": "the fulcrum"
+   },
+   "representations": [
+    "a long and a short bar to lift a box",
+    "a ruler see-saw with coins at different places",
+    "a drawing with distances"
+   ],
+   "steps": [
+    "Keep the load and fulcrum fixed.",
+    "Move the effort further from the fulcrum.",
+    "Feel: less effort.",
+    "Move the load closer to the fulcrum: easier too."
+   ],
+   "contexts": [
+    "lifting a heavy stone with a bar",
+    "opening a paint tin with a spoon",
+    "carrying a load in a wheelbarrow"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bar on a stone with a box at one end."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask where to push to lift the box most easily."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a hand at the far end and write \"far from the fulcrum: less effort\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FAR_FROM_LOAD",
+     "listen_for": [
+      "put the fulcrum near my hands"
+     ],
+     "ask": "Was it easier with the fulcrum near the load or near your hands?",
+     "repair": "Fulcrum near the load means less effort."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_SHORT_ARM",
+     "listen_for": [
+      "push near the fulcrum"
+     ],
+     "ask": "Where did you push to lift it easily?",
+     "repair": "Push far from the fulcrum."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FREE_WORK",
+     "listen_for": [
+      "the load gets lighter"
+     ],
+     "ask": "Did the box weigh less?",
+     "repair": "The load is the same; less effort, longer push."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_LONGER_HARDER",
+     "listen_for": [
+      "a short bar is easier"
+     ],
+     "ask": "Which bar lifted the box with less effort?",
+     "repair": "A longer bar needs less effort."
+    }
+   ],
+   "checks": [
+    {
+     "question": "To lift a heavy load with a bar, where should the effort be?",
+     "answer": "far from the fulcrum",
+     "shows": "effort position"
+    },
+    {
+     "question": "Does a lever make the load lighter?",
+     "answer": "No: it makes the effort smaller",
+     "shows": "work not reduced"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
+   "key_step": "The child classifies a lever by the part in the middle: fulcrum in the middle (first class), load in the middle (second class), effort in the middle (third class).",
+   "floor": {
+    "prerequisite": "Can mark the fulcrum, effort and load.",
+    "question": "Where is the fulcrum of a see-saw?",
+    "answer": "in the middle"
+   },
+   "representations": [
+    "tools marked F, E, L",
+    "a \"FLE 123\" memory line: F middle 1st, L middle 2nd, E middle 3rd",
+    "a sorting table"
+   ],
+   "steps": [
+    "Mark F, E and L on the tool.",
+    "Find which one is in the middle.",
+    "F middle: first. L middle: second. E middle: third.",
+    "Check scissors, wheelbarrow and tongs."
+   ],
+   "contexts": [
+    "a see-saw",
+    "a wheelbarrow",
+    "a fishing rod or tongs"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw tongs and mark F at the hinge."
+    },
+    {
+     "beat": "point",
+     "do": "Point at where the fingers squeeze.",
+     "say": "Is this E or L, and is it in the middle?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"E, in the middle\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"third class\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_FIRST_ALWAYS",
+     "listen_for": [
+      "all levers are first class"
+     ],
+     "ask": "What is in the middle of a wheelbarrow?",
+     "repair": "The middle part decides the class."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_USE_SIZE",
+     "listen_for": [
+      "it is big so it is first class"
+     ],
+     "ask": "Which part is in the middle?",
+     "repair": "Class depends on the middle part, not size or use."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_THIRD_SECOND",
+     "listen_for": [
+      "tongs are second class"
+     ],
+     "ask": "Is the load or the effort in the middle of tongs?",
+     "repair": "Load in the middle: second. Effort in the middle: third."
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_SCISSORS_SECOND",
+     "listen_for": [
+      "scissors are second class"
+     ],
+     "ask": "Where is the pivot of the scissors?",
+     "repair": "Fulcrum in the middle: first class."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which class is a wheelbarrow?",
+     "answer": "second class",
+     "shows": "class"
+    },
+    {
+     "question": "A lever has the effort in the middle. Which class is it?",
+     "answer": "third class",
+     "shows": "rule"
+    }
+   ]
+  }
+ ]
+}

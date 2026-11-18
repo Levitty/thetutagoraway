@@ -1,0 +1,189 @@
+{
+ "sub_strand": "INTE.G9.MIXTUR.WATER_HARDNESS",
+ "title": "Water hardness",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Water samples: rain water, tap water, borehole or spring water. Shake each with the same amount of soap in a stoppered bottle and compare the lather. Look inside an old kettle for scale. Boiling is done by the teacher.",
+ "skills": [
+  {
+   "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES",
+   "key_step": "The child describes pure water (colourless, odourless, tasteless, boils at 100 degrees Celsius and freezes at 0 at sea level, expands on freezing so ice floats, dissolves many substances) and uses its fixed points to test purity.",
+   "floor": {
+    "prerequisite": "Knows impurities change boiling and melting points.",
+    "question": "What does salt do to the boiling point of water?",
+    "answer": "raises it"
+   },
+   "representations": [
+    "distilled water beside tap water",
+    "ice floating in a glass",
+    "a bottle of frozen water bulging"
+   ],
+   "steps": [
+    "Look, smell, taste (safe water only): none.",
+    "Boils at 100 and freezes at 0 (at sea level).",
+    "Expands when it freezes: ice floats.",
+    "Dissolves many solids and gases."
+   ],
+   "contexts": [
+    "ice in a cool box",
+    "a burst pipe in a cold place",
+    "fish breathing dissolved oxygen"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a glass of water with ice in it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ice.",
+     "say": "Why is the ice at the top?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it is less dense\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"water expands when it freezes\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_BOIL_ANY",
+     "listen_for": [
+      "it depends on the pot"
+     ],
+     "ask": "What did the thermometer show in both pots?",
+     "repair": "Pure water boils at 100 degrees Celsius at sea level."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_ICE_HEAVIER",
+     "listen_for": [
+      "ice sinks"
+     ],
+     "ask": "Where did the ice go in the glass?",
+     "repair": "Ice is less dense, so it floats."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_PURE_TASTE",
+     "listen_for": [
+      "pure water tastes sweet"
+     ],
+     "ask": "What does distilled water taste of?",
+     "repair": "Pure water is colourless, odourless and tasteless."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES.M_IS9_WA_DISSOLVES_NOTHING",
+     "listen_for": [
+      "only solids dissolve"
+     ],
+     "ask": "Where does the gas in soda come from?",
+     "repair": "Water dissolves gases too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "At what temperature does pure water freeze at sea level?",
+     "answer": "0 degrees Celsius",
+     "shows": "fixed point"
+    },
+    {
+     "question": "Why do pipes sometimes burst in very cold places?",
+     "answer": "water expands when it freezes",
+     "shows": "expansion"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT",
+   "key_step": "The child tells hard water (lathers poorly with soap, forms scum and scale, has dissolved calcium and magnesium salts) from soft water (lathers easily), names ways to soften it (boiling for temporary hardness, washing soda, distillation) and gives advantages and disadvantages of each.",
+   "floor": {
+    "prerequisite": "Knows pure water's properties.",
+    "question": "Is pure water a mixture?",
+    "answer": "no"
+   },
+   "representations": [
+    "three bottles of water shaken with soap",
+    "scale from an old kettle",
+    "a chart: hard and soft, good and bad"
+   ],
+   "steps": [
+    "Shake with soap: lather means soft, scum means hard.",
+    "Hardness is dissolved calcium and magnesium salts.",
+    "Soften: boil (temporary), add washing soda, or distil.",
+    "Hard water: good taste and calcium for bones; wastes soap and scales kettles."
+   ],
+   "contexts": [
+    "borehole water in Machakos",
+    "rain water from a roof tank",
+    "a scaled kettle"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two bottles after shaking with soap: one with lather, one with scum."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the scum bottle.",
+     "say": "Hard or soft?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"hard\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add one way to soften it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_LATHER",
+     "listen_for": [
+      "hard water lathers"
+     ],
+     "ask": "Which bottle had the most lather?",
+     "repair": "Soft water lathers easily."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_SCALE",
+     "listen_for": [
+      "soft water forms scale"
+     ],
+     "ask": "Which water was used in the scaled kettle?",
+     "repair": "Hard water leaves scale."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_SOFTEN",
+     "listen_for": [
+      "freeze it"
+     ],
+     "ask": "What makes water hard?",
+     "repair": "Boiling or washing soda softens it."
+    },
+    {
+     "code": "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT.M_IS9_HS_HARD_DIRTY",
+     "listen_for": [
+      "hard water is dirty"
+     ],
+     "ask": "Was the clear borehole water hard or soft?",
+     "repair": "Hard water can be clean and safe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How can you tell hard water from soft water?",
+     "answer": "shake with soap: soft water lathers easily, hard water forms scum",
+     "shows": "test"
+    },
+    {
+     "question": "Give one disadvantage of hard water.",
+     "answer": "it wastes soap, or leaves scale in kettles and pipes",
+     "shows": "disadvantage"
+    }
+   ]
+  }
+ ]
+}

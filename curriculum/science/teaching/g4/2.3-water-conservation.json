@@ -1,0 +1,278 @@
+{
+ "sub_strand": "SCIE.G4.MATTER.WATER_CONSERVATION",
+ "title": "Water Conservation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Start with a real measure: how many cups of water run away while a tap is left on for one minute (collect it in a basin and measure). Rainwater harvesting from the school roof is the second anchor.",
+ "skills": [
+  {
+   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+   "key_step": "The child says water conservation means using water carefully and keeping it from being wasted or polluted, so there is enough now and later.",
+   "floor": {
+    "prerequisite": "Knows ways water is stored at home.",
+    "question": "Name one container used to store water at home.",
+    "answer": "for example a jerrycan or a tank"
+   },
+   "representations": [
+    "a basin under a running tap for one minute",
+    "a picture of a full and an empty water tank",
+    "a word map: save, reuse, keep clean"
+   ],
+   "steps": [
+    "Run a tap into a basin for one minute and measure the water.",
+    "Ask how much was needed to wash hands.",
+    "Say: the rest was wasted.",
+    "Conserving: use only what is needed, reuse, keep it clean, all year."
+   ],
+   "contexts": [
+    "a dry season in Turkana",
+    "a school water tank",
+    "washing hands before lunch"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tank with a tap dripping."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the drip.",
+     "say": "How much water does this waste in a day?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's estimate."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"conserve = use carefully, waste none, keep clean\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_STORE_ALL",
+     "listen_for": [
+      "store it and never use it"
+     ],
+     "ask": "If we never use the tank water, what was it for?",
+     "repair": "Conserving means using water carefully, not never using it."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_WATER_NEVER_ENDS",
+     "listen_for": [
+      "rain always comes"
+     ],
+     "ask": "What happens to rivers in a long drought?",
+     "repair": "Rain does not always come; water can run short."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_ONLY_CLEAN_DRINKING",
+     "listen_for": [
+      "just keep drinking water clean"
+     ],
+     "ask": "Does a running tap waste water even if it is clean?",
+     "repair": "Conserving covers saving water as well as keeping it clean."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_ONLY_WHEN_SHORT",
+     "listen_for": [
+      "only in the drought"
+     ],
+     "ask": "Where does dry-season water come from?",
+     "repair": "Save water all year so there is enough in the dry season."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does it mean to conserve water?",
+     "answer": "to use water carefully and not waste or pollute it",
+     "shows": "meaning"
+    },
+    {
+     "question": "Should a school save water in the rainy season? Why?",
+     "answer": "Yes, so stored water lasts into the dry season",
+     "shows": "all year"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+   "key_step": "The child names ways to save water at home and school (turn off taps, fix leaks, collect rainwater, reuse water safely, use a basin not a running tap) and picks the saving way in a story.",
+   "floor": {
+    "prerequisite": "Knows what water conservation means.",
+    "question": "Is leaving a tap running a way to save water?",
+    "answer": "no"
+   },
+   "representations": [
+    "a leaking tap and a bucket under it",
+    "gutters leading to a tank",
+    "a chart of methods at home and at school"
+   ],
+   "steps": [
+    "Close taps when soaping hands or brushing teeth.",
+    "Fix or report leaks.",
+    "Harvest rainwater from roofs.",
+    "Reuse water for plants and floors, never for drinking."
+   ],
+   "contexts": [
+    "brushing teeth at home",
+    "watering the school garden",
+    "a rainy afternoon with a roof gutter"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a roof with a gutter and an empty tank."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens to the tank when it rains."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it fills."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw one more way to save water at school."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_TAP_RUNS",
+     "listen_for": [
+      "leave it running, it is quicker"
+     ],
+     "ask": "How many cups ran away in one minute?",
+     "repair": "Close the tap while you soap or brush."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_HOSE_BETTER",
+     "listen_for": [
+      "the hose is faster"
+     ],
+     "ask": "Which uses less water: a hose or a watering can?",
+     "repair": "A watering can or a basin uses less water than a running hose or tap."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_NO_RAINWATER",
+     "listen_for": [
+      "rainwater goes to the drain"
+     ],
+     "ask": "What can we put under the gutter?",
+     "repair": "Rainwater can be collected and used."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_REUSE_DIRTY_DRINK",
+     "listen_for": [
+      "use it for tea"
+     ],
+     "ask": "Which uses need clean water?",
+     "repair": "Used water is for plants and floors, not drinking or cooking."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way to save water when brushing teeth.",
+     "answer": "turn off the tap or use a cup of water",
+     "shows": "method"
+    },
+    {
+     "question": "What is a safe use for water left after washing vegetables?",
+     "answer": "watering plants",
+     "shows": "safe reuse"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
+   "key_step": "The child gives reasons to conserve water that reach beyond the family: water is limited, people, animals and plants need it, saving it means there is enough in the dry season and for others.",
+   "floor": {
+    "prerequisite": "Knows ways to save water.",
+    "question": "Name one way to save water at school.",
+    "answer": "close taps, harvest rainwater or fix leaks"
+   },
+   "representations": [
+    "a map from the river to the tap",
+    "pictures of animals and crops in a drought",
+    "a chart: who needs water"
+   ],
+   "steps": [
+    "Trace where tap water comes from.",
+    "List who needs it: people, animals, crops.",
+    "Say what happens when it runs low.",
+    "Give the reason: saving water keeps enough for all."
+   ],
+   "contexts": [
+    "cattle in a dry season",
+    "a borehole shared by a village",
+    "a water bill at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river, a pipe and a tap."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the river.",
+     "say": "What happens to the tap if the river runs low?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's answer."
+    },
+    {
+     "beat": "write",
+     "do": "Write people, animals and plants under the river."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_BILL",
+     "listen_for": [
+      "to pay less"
+     ],
+     "ask": "Would we still save water if it were free?",
+     "repair": "Saving money is one reason; there is a limited amount for everyone."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_PEOPLE",
+     "listen_for": [
+      "people need it"
+     ],
+     "ask": "What do cows and crops drink?",
+     "repair": "Animals and plants need water too."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_RAIN_ENOUGH",
+     "listen_for": [
+      "the rains fill everything"
+     ],
+     "ask": "Do the rains always come on time?",
+     "repair": "Rains can fail; saved water carries us through."
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_TAP_WATER_ENDLESS",
+     "listen_for": [
+      "the pipe makes water"
+     ],
+     "ask": "Where does the pipe get its water?",
+     "repair": "Taps bring water from rivers, dams and boreholes that can run low."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one reason why water should be conserved.",
+     "answer": "it is limited; people, animals and plants need it; so it lasts the dry season",
+     "shows": "reason"
+    },
+    {
+     "question": "Where does tap water come from?",
+     "answer": "a river, dam, borehole or tank",
+     "shows": "source"
+    }
+   ]
+  }
+ ]
+}

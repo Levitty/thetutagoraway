@@ -52,7 +52,7 @@ for (const s of design.sub_strands) {
     const short = m.code.slice(m.skill.length + 1);
     if (fb[short]) throw new Error(`duplicate misconception code ${short}`);
     out.skills[m.skill].mis.push(short);
-    mis[m.code] = { skill: m.skill, error: m.error, example: m.example, cause: m.cause, reveals: m.reveals, help: m.help, feedback: m.feedback, source: m.source, status: m.status };
+    mis[m.code] = { skill: m.skill, error: m.error, example: m.example, cause: m.cause, reveals: m.reveals, help: m.help, feedback: m.feedback, source: m.source, status: m.status, ...(m.review ? { review: m.review } : {}) };
     fb[short] = m.feedback;
   }
 }

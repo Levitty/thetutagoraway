@@ -1,0 +1,283 @@
+{
+ "sub_strand": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS",
+ "title": "Nutrition in animals",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use skulls or pictures of a goat, a dog and a human for dentition, the learner's own teeth in a mirror, and a chart of the digestive system. Chewing bread until it tastes sweet shows digestion starting in the mouth.",
+ "skills": [
+  {
+   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION",
+   "key_step": "The child names modes of nutrition in animals (herbivores, carnivores, omnivores, and parasites) and classifies animals by their diet and dentition.",
+   "floor": {
+    "prerequisite": "Can group vertebrates.",
+    "question": "Which group does a goat belong to?",
+    "answer": "mammals"
+   },
+   "representations": [
+    "animal picture cards",
+    "a sorting table: herbivore, carnivore, omnivore, parasite",
+    "skull pictures"
+   ],
+   "steps": [
+    "Herbivores: plants only (goat, cow).",
+    "Carnivores: flesh (lion, dog).",
+    "Omnivores: both (people, pigs).",
+    "Parasites: feed on a living host (tick, tapeworm)."
+   ],
+   "contexts": [
+    "cattle grazing",
+    "a lion at the Mara",
+    "ticks on a dog"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four columns: herbivore, carnivore, omnivore, parasite."
+    },
+    {
+     "beat": "write",
+     "do": "Write goat, lion, person, tick below."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tick.",
+     "say": "Which column does it go in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"parasite\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to sort the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_HERBI",
+     "listen_for": [
+      "a herbivore eats flesh"
+     ],
+     "ask": "What is a herb?",
+     "repair": "Herbivores eat plants."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_CARNI",
+     "listen_for": [
+      "a carnivore eats plants"
+     ],
+     "ask": "What does a lion eat?",
+     "repair": "Carnivores eat flesh."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_OMNI",
+     "listen_for": [
+      "omnivores eat plants only"
+     ],
+     "ask": "What do people eat?",
+     "repair": "Omnivores eat both."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION.M_IS9_AN_ONLY_THREE",
+     "listen_for": [
+      "a tick is a herbivore"
+     ],
+     "ask": "Where does a tick get its food?",
+     "repair": "Parasites feed on a living host."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a carnivore eat?",
+     "answer": "flesh (other animals)",
+     "shows": "carnivore"
+    },
+    {
+     "question": "Give an example of an omnivore.",
+     "answer": "a person or a pig",
+     "shows": "omnivore"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH",
+   "key_step": "The child names incisors (cut), canines (tear), premolars and molars (grind), describes their shape and links dentition to diet (big canines in carnivores, broad molars in herbivores).",
+   "floor": {
+    "prerequisite": "Knows teeth chew food.",
+    "question": "What do teeth do to food?",
+    "answer": "chew it into small pieces"
+   },
+   "representations": [
+    "own teeth in a mirror",
+    "goat and dog skull pictures",
+    "a chart: tooth, shape, job"
+   ],
+   "steps": [
+    "Incisors: front, chisel-shaped, cut.",
+    "Canines: pointed, tear.",
+    "Premolars and molars: broad, grind.",
+    "Diet decides which are big."
+   ],
+   "contexts": [
+    "biting a mango",
+    "a dog chewing a bone",
+    "a cow chewing grass"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a row of teeth: chisel, point, broad."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the broad teeth.",
+     "say": "What do these do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"grind\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_CANINE",
+     "listen_for": [
+      "incisors tear"
+     ],
+     "ask": "Which teeth are long and pointed?",
+     "repair": "Canines tear flesh."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_INCISOR",
+     "listen_for": [
+      "molars cut"
+     ],
+     "ask": "Which teeth bite an apple?",
+     "repair": "Incisors cut."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_MOLAR",
+     "listen_for": [
+      "canines grind"
+     ],
+     "ask": "Which teeth are broad and at the back?",
+     "repair": "Molars grind."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH.M_IS9_TE_ALL_SAME",
+     "listen_for": [
+      "a goat has big canines"
+     ],
+     "ask": "What food does a goat eat?",
+     "repair": "Teeth suit the diet."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which teeth grind food?",
+     "answer": "molars (and premolars)",
+     "shows": "molars"
+    },
+    {
+     "question": "Why do carnivores have large canines?",
+     "answer": "to hold and tear flesh",
+     "shows": "dentition"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION",
+   "key_step": "The child describes where digestion happens in a human (mouth: saliva begins starch; stomach: protein begins; small intestine: completed and absorbed; large intestine: water absorbed) in order.",
+   "floor": {
+    "prerequisite": "Knows the order of the digestive parts.",
+    "question": "What comes after the stomach?",
+    "answer": "the small intestine"
+   },
+   "representations": [
+    "a chart of the digestive system",
+    "bread chewed until sweet",
+    "a flow chart: part, what happens"
+   ],
+   "steps": [
+    "Mouth: chewing and saliva start on starch.",
+    "Stomach: acid and juices start on protein.",
+    "Small intestine: digestion finished; food absorbed into blood.",
+    "Large intestine: water absorbed; waste leaves."
+   ],
+   "contexts": [
+    "a lunch of githeri",
+    "chewing bread",
+    "a doctor's chart"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the path from the mouth to the anus."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the small intestine.",
+     "say": "What happens to digested food here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it is absorbed into the blood\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write what happens in the mouth and stomach."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_START",
+     "listen_for": [
+      "it starts in the stomach"
+     ],
+     "ask": "Why does bread taste sweet after long chewing?",
+     "repair": "Digestion starts in the mouth."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_ABSORB",
+     "listen_for": [
+      "absorbed in the mouth"
+     ],
+     "ask": "Where does food pass into the blood?",
+     "repair": "Absorption is in the small intestine."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_WATER",
+     "listen_for": [
+      "water is absorbed in the oesophagus"
+     ],
+     "ask": "Which part takes in water from waste?",
+     "repair": "The large intestine absorbs water."
+    },
+    {
+     "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION.M_IS9_DG_STOMACH_ABSORBS_ALL",
+     "listen_for": [
+      "the stomach does it all"
+     ],
+     "ask": "Where is digestion finished?",
+     "repair": "The small intestine completes digestion."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does the digestion of starch begin?",
+     "answer": "in the mouth",
+     "shows": "start"
+    },
+    {
+     "question": "Where is digested food absorbed?",
+     "answer": "in the small intestine",
+     "shows": "absorption"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "sub_strand": "SCIE.G6.LIVING.INVERTEBRATES",
+ "title": "Invertebrates",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Science and Technology; not yet checked by a CBC Science and Technology teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "A nature walk with jars and a hand lens: ants, a spider in a web (looked at, not touched), an earthworm after rain, a snail, a millipede. Counting legs and body parts on the real animal, then putting it back where it was found.",
+ "skills": [
+  {
+   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+   "key_step": "The child names the common groups of invertebrates (insects, spiders, millipedes and centipedes, crustaceans, worms, snails and slugs) with a Kenyan example of each.",
+   "floor": {
+    "prerequisite": "Can sort animals into vertebrates and invertebrates.",
+    "question": "Does an ant have a backbone?",
+    "answer": "no"
+   },
+   "representations": [
+    "animals seen on a nature walk",
+    "picture cards",
+    "a table of groups and examples"
+   ],
+   "steps": [
+    "Insects: six legs, three parts (ant, bee, butterfly).",
+    "Spiders: eight legs, two parts.",
+    "Many legs: millipede, centipede.",
+    "Soft bodies: earthworm, snail, slug; hard shell in water: crab."
+   ],
+   "contexts": [
+    "a garden after rain",
+    "a market stall with crabs at the coast",
+    "termites building a mound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an ant, a spider and a millipede."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the spider.",
+     "say": "How many legs? Is it an insect?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to count and decide."
+    },
+    {
+     "beat": "write",
+     "do": "Write the group under each animal."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_SPIDER_INSECT",
+     "listen_for": [
+      "a spider is an insect"
+     ],
+     "ask": "How many legs does a spider have?",
+     "repair": "Spiders have eight legs; insects have six."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_WORM_NOT_ANIMAL_GROUP",
+     "listen_for": [
+      "a worm is not an animal group"
+     ],
+     "ask": "Does an earthworm have a backbone? Is it an animal?",
+     "repair": "Worms and snails are invertebrate groups."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_CRAB_FISH",
+     "listen_for": [
+      "a crab is a fish"
+     ],
+     "ask": "Does a crab have fins and gills like a tilapia?",
+     "repair": "Crabs are crustaceans, not fish."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_MILLIPEDE_INSECT",
+     "listen_for": [
+      "a millipede is an insect"
+     ],
+     "ask": "How many legs did you count?",
+     "repair": "Insects have six legs; a millipede has many."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give an example of an insect and of a spider.",
+     "answer": "for example an ant and a house spider",
+     "shows": "examples"
+    },
+    {
+     "question": "To which group does an earthworm belong?",
+     "answer": "worms",
+     "shows": "group"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
+   "key_step": "The child describes the general features of invertebrates (no backbone, many with a hard outer cover or a soft body) and of each group (insects: six jointed legs, three body parts, many with wings; spiders: eight legs, two parts).",
+   "floor": {
+    "prerequisite": "Can name groups of invertebrates.",
+    "question": "Name one insect.",
+    "answer": "for example an ant"
+   },
+   "representations": [
+    "a hand lens on an ant and a spider",
+    "an empty snail shell",
+    "a table of features by group"
+   ],
+   "steps": [
+    "All: no backbone.",
+    "Insects: three body parts, six legs, often wings and feelers.",
+    "Spiders: two parts, eight legs, no feelers or wings.",
+    "Worms: soft, no legs; snails: soft with a shell outside."
+   ],
+   "contexts": [
+    "a butterfly on a flower",
+    "a snail on the school wall",
+    "a giant snail in Mombasa"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an insect with three body parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the middle part.",
+     "say": "Which parts grow from here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the legs and wings\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw a spider's two parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_LEG_COUNT",
+     "listen_for": [
+      "all of them have six legs"
+     ],
+     "ask": "Count the spider's legs again.",
+     "repair": "Insects six, spiders eight, millipedes many."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_SMALL",
+     "listen_for": [
+      "invertebrates are tiny"
+     ],
+     "ask": "How big can an octopus or a giant snail grow?",
+     "repair": "Some invertebrates are large."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_LEGS",
+     "listen_for": [
+      "they all have legs"
+     ],
+     "ask": "Does an earthworm have legs?",
+     "repair": "Worms and snails have no legs."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_SNAIL_SHELL_BONE",
+     "listen_for": [
+      "the shell is its bone"
+     ],
+     "ask": "Is the shell inside or outside the body?",
+     "repair": "A shell is outside; there is no backbone."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many body parts and legs does an insect have?",
+     "answer": "three body parts and six legs",
+     "shows": "insect features"
+    },
+    {
+     "question": "Give one feature all invertebrates share.",
+     "answer": "they have no backbone",
+     "shows": "general feature"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+   "key_step": "The child outlines helpful invertebrates (bees pollinate and give honey, earthworms mix and air the soil, silkworms give silk) and harmful ones (mosquitoes spread malaria, houseflies spread cholera, ticks, crop pests), matching each to its effect.",
+   "floor": {
+    "prerequisite": "Can name groups of invertebrates.",
+    "question": "To which group does a mosquito belong?",
+    "answer": "insects"
+   },
+   "representations": [
+    "a chart: invertebrate, helpful or harmful, how",
+    "pictures of a beehive and a mosquito net",
+    "soil with and without earthworms"
+   ],
+   "steps": [
+    "Name the invertebrate.",
+    "Say what it does.",
+    "Decide: helpful, harmful, or both.",
+    "Match pests to the disease or damage."
+   ],
+   "contexts": [
+    "beekeeping in Kitui",
+    "malaria near Lake Victoria",
+    "stalk borers in maize"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mosquito, a housefly and an earthworm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the mosquito.",
+     "say": "Which disease does it spread?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"malaria\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write helpful or harmful under each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_ALL_PESTS",
+     "listen_for": [
+      "they are all pests"
+     ],
+     "ask": "What do bees and earthworms do for farmers?",
+     "repair": "Many invertebrates are helpful."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_MOSQUITO_WRONG",
+     "listen_for": [
+      "houseflies spread malaria"
+     ],
+     "ask": "Which insect bites at night and spreads malaria?",
+     "repair": "Mosquitoes spread malaria; houseflies spread cholera and typhoid germs."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_WORMS_HARM",
+     "listen_for": [
+      "worms eat the crops"
+     ],
+     "ask": "What does soil with earthworms look like?",
+     "repair": "Earthworms mix and air the soil."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_BEES_ONLY_HONEY",
+     "listen_for": [
+      "bees are for honey"
+     ],
+     "ask": "What do bees carry between flowers?",
+     "repair": "Bees pollinate crops."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one helpful and one harmful invertebrate.",
+     "answer": "for example bee (helpful) and mosquito (harmful)",
+     "shows": "both kinds"
+    },
+    {
+     "question": "How do earthworms help a farmer?",
+     "answer": "they mix and air the soil and help dead matter rot",
+     "shows": "earthworms"
+    }
+   ]
+  },
+  {
+   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
+   "key_step": "The child chooses safe and kind ways of handling invertebrates: look with a hand lens, use a jar or gloves, never touch stinging or biting ones, wash hands after, keep them only a short time and return them.",
+   "floor": {
+    "prerequisite": "Knows some invertebrates sting or bite.",
+    "question": "Name one invertebrate that stings.",
+    "answer": "a bee or a scorpion"
+   },
+   "representations": [
+    "a jar with air holes, gloves and a hand lens",
+    "a picture of a safari ant line",
+    "a rules chart"
+   ],
+   "steps": [
+    "Look first; do not touch unknown animals.",
+    "Use a jar with air holes or gloves.",
+    "Study for a short time, then return it.",
+    "Wash hands with soap afterwards."
+   ],
+   "contexts": [
+    "a nature walk in the school compound",
+    "safari ants on a path",
+    "a hairy caterpillar on a tree"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a jar with a lid."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lid.",
+     "say": "What does a grasshopper in here need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"air holes and food\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to add air holes and a leaf."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_BARE_HANDS",
+     "listen_for": [
+      "pick it up with your hand"
+     ],
+     "ask": "What can a hairy caterpillar do to your skin?",
+     "repair": "Use a jar or gloves; some sting or bite."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_CRUSH",
+     "listen_for": [
+      "it does not matter if it dies"
+     ],
+     "ask": "Is it still living? Can we study it alive?",
+     "repair": "Handle small animals gently and return them."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_NO_WASH",
+     "listen_for": [
+      "no need to wash"
+     ],
+     "ask": "What could be on the soil and the animal?",
+     "repair": "Wash hands with soap after handling."
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_JAR_NO_AIR",
+     "listen_for": [
+      "a closed jar is fine"
+     ],
+     "ask": "What does the grasshopper need to live?",
+     "repair": "Give air and food, and return it soon."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one safe way to look at a spider.",
+     "answer": "look with a hand lens without touching, or use a jar",
+     "shows": "safe handling"
+    },
+    {
+     "question": "What should you do after handling earthworms?",
+     "answer": "wash your hands with soap and return the worms to the soil",
+     "shows": "after handling"
+    }
+   ]
+  }
+ ]
+}

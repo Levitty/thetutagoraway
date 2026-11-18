@@ -1,0 +1,279 @@
+{
+ "sub_strand": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS",
+ "title": "Reproduction in plants",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Cut real flowers open (hibiscus or a bean flower for insect pollination, maize tassel and silk or grass for wind). Collect fruits and seeds from the compound for dispersal: blackjack, jacaranda, a bean pod, a mango.",
+ "skills": [
+  {
+   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS",
+   "key_step": "The child names the parts of a flower and their functions (sepals protect, petals attract, stamen of anther and filament is male, carpel of stigma, style and ovary is female) and the role of flowers in nature (seeds, fruit, food for animals).",
+   "floor": {
+    "prerequisite": "Knows the jobs of the flower parts from Grade 5.",
+    "question": "Which part holds the pollen?",
+    "answer": "the anther"
+   },
+   "representations": [
+    "a hibiscus cut open",
+    "a labelled half-flower drawing",
+    "a chart: part, male or female, job"
+   ],
+   "steps": [
+    "Sepals and petals.",
+    "Stamen (male): anther and filament.",
+    "Carpel (female): stigma, style, ovary.",
+    "Role: seeds and fruits; food for insects, birds and people."
+   ],
+   "contexts": [
+    "a hibiscus hedge",
+    "bean flowers in a shamba",
+    "bees at a flower"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a half flower."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the central part.",
+     "say": "Male or female, and what is it called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"female, the carpel\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to label the stamen parts."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_STAMEN",
+     "listen_for": [
+      "the stamen is female"
+     ],
+     "ask": "Which part makes pollen?",
+     "repair": "The stamen is male."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_CARPEL",
+     "listen_for": [
+      "the carpel is male"
+     ],
+     "ask": "Which part holds the ovules?",
+     "repair": "The carpel is female."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_PETAL",
+     "listen_for": [
+      "petals make seeds"
+     ],
+     "ask": "What happens to the petals after pollination?",
+     "repair": "Petals attract insects."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS.M_IS9_FP_ONLY_BEAUTY",
+     "listen_for": [
+      "flowers are for beauty"
+     ],
+     "ask": "What does a bean flower become?",
+     "repair": "Flowers make seeds and feed animals."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the male part of a flower.",
+     "answer": "the stamen",
+     "shows": "male"
+    },
+    {
+     "question": "Give one role of flowers in nature.",
+     "answer": "they make seeds and fruits, or feed insects with nectar",
+     "shows": "role"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION",
+   "key_step": "The child describes pollination (pollen from an anther to a stigma, self or cross) and the adaptations of wind-pollinated flowers (small, dull, feathery stigmas, much light pollen) and insect-pollinated ones (bright petals, scent, nectar, sticky pollen).",
+   "floor": {
+    "prerequisite": "Can name the parts of a flower.",
+    "question": "Which part receives pollen?",
+    "answer": "the stigma"
+   },
+   "representations": [
+    "a maize tassel and a hibiscus side by side",
+    "a comparison table",
+    "a hand lens on pollen"
+   ],
+   "steps": [
+    "Pollination: pollen to stigma.",
+    "Self: same flower or plant; cross: another plant.",
+    "Wind flowers: feathery stigmas, light pollen, no bright petals.",
+    "Insect flowers: bright, scented, nectar, sticky pollen."
+   ],
+   "contexts": [
+    "maize tassels shedding pollen",
+    "bees on sunflowers",
+    "grass flowering"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a maize tassel and a hibiscus."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the maize silk.",
+     "say": "Why is it long and feathery?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to catch pollen from the wind\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to list the insect features of the hibiscus."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_MEANING",
+     "listen_for": [
+      "pollination is joining cells"
+     ],
+     "ask": "Which comes first: pollen landing, or cells joining?",
+     "repair": "Pollination is pollen reaching a stigma."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_WIND",
+     "listen_for": [
+      "wind flowers are bright"
+     ],
+     "ask": "Does a maize tassel have bright petals?",
+     "repair": "Wind flowers have feathery stigmas and light pollen."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_INSECT",
+     "listen_for": [
+      "insect flowers have feathery stigmas"
+     ],
+     "ask": "What draws an insect?",
+     "repair": "Insect flowers are bright and scented."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION.M_IS9_PL_SELF_NEVER",
+     "listen_for": [
+      "it must be another plant"
+     ],
+     "ask": "Can a bean flower pollinate itself?",
+     "repair": "Self-pollination is possible."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two features of a wind-pollinated flower.",
+     "answer": "any two: feathery stigma, much light pollen, small dull petals, no nectar",
+     "shows": "wind"
+    },
+    {
+     "question": "What is cross-pollination?",
+     "answer": "pollen from one plant reaching the stigma of another plant of the same kind",
+     "shows": "cross"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL",
+   "key_step": "The child explains fertilisation (a pollen tube grows to the ovule and the male cell joins the egg), says the ovule becomes the seed and the ovary the fruit, and sorts fruits and seeds by their dispersal (wind: wings, hairs; animals: hooks, juicy; water: floats; explosion: pods burst).",
+   "floor": {
+    "prerequisite": "Knows pollination.",
+    "question": "What is pollination?",
+    "answer": "pollen reaching a stigma"
+   },
+   "representations": [
+    "a collection of fruits and seeds",
+    "a flow chart from pollination to fruit",
+    "a dispersal sorting table"
+   ],
+   "steps": [
+    "Pollen tube grows down the style to the ovule.",
+    "Fertilisation: ovule becomes seed; ovary becomes fruit.",
+    "Look at the fruit or seed: wing, hair, hook, juicy, float, pod.",
+    "Name the agent of dispersal."
+   ],
+   "contexts": [
+    "blackjack seeds on socks",
+    "jacaranda seeds spinning down",
+    "coconuts at the coast"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a blackjack seed with hooks and a jacaranda seed with a wing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hooks.",
+     "say": "How is this seed carried?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"by animals, it hooks onto fur\"."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to draw a water-dispersed fruit."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_FRUIT",
+     "listen_for": [
+      "the ovule becomes the fruit"
+     ],
+     "ask": "In a bean pod, which part was the ovary?",
+     "repair": "The ovary becomes the fruit."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_SEED",
+     "listen_for": [
+      "the ovary becomes the seed"
+     ],
+     "ask": "How many beans in one pod?",
+     "repair": "Each ovule becomes a seed."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_WIND",
+     "listen_for": [
+      "wind seeds have hooks"
+     ],
+     "ask": "What do hooks catch on?",
+     "repair": "Wind seeds have wings or hairs."
+    },
+    {
+     "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL.M_IS9_FD_WATER_ANY",
+     "listen_for": [
+      "heavy fruits go by animals"
+     ],
+     "ask": "What did the coconut husk do in the basin?",
+     "repair": "Floating fruits are water-dispersed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which part of a flower becomes the seed?",
+     "answer": "the ovule",
+     "shows": "seed"
+    },
+    {
+     "question": "How are seeds with hooks dispersed?",
+     "answer": "by animals (they hook onto fur or clothes)",
+     "shows": "dispersal"
+    }
+   ]
+  }
+ ]
+}

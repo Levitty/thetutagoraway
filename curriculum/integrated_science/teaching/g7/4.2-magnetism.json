@@ -1,0 +1,281 @@
+{
+ "sub_strand": "INTE.G7.FORCE_.MAGNETISM",
+ "title": "Magnetism",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Integrated Science; not yet checked by a CBC Integrated Science teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bar magnets, iron filings in a sealed clear bag, paper clips, coins, aluminium foil, a nail, a compass. A magnet is hung on a thread to find north. Old phone speakers and fridge door seals show magnets at home.",
+ "skills": [
+  {
+   "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+   "key_step": "The child describes the properties of a magnet: it attracts magnetic materials, its pull is strongest at the poles, a freely hanging magnet points north-south, like poles repel and unlike poles attract, and its force passes through non-magnetic materials.",
+   "floor": {
+    "prerequisite": "Knows a magnet pulls some things.",
+    "question": "Does a magnet pull an iron nail?",
+    "answer": "yes"
+   },
+   "representations": [
+    "two bar magnets",
+    "iron filings in a sealed bag over a magnet",
+    "a magnet hanging on a thread"
+   ],
+   "steps": [
+    "Dip a magnet in paper clips: most stick at the ends (poles).",
+    "Hang it freely: it points north-south.",
+    "Bring two north poles together: they push apart.",
+    "North near south: they pull together."
+   ],
+   "contexts": [
+    "a fridge magnet",
+    "a compass on a hike",
+    "a magnetic school notice board"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two bar magnets with N facing N."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what they will do."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's prediction."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw arrows pushing apart and write \"like poles repel\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_LIKE_ATTRACT",
+     "listen_for": [
+      "like poles attract"
+     ],
+     "ask": "What did the two north poles do?",
+     "repair": "Like poles repel; unlike poles attract."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_MIDDLE",
+     "listen_for": [
+      "the middle is strongest"
+     ],
+     "ask": "Where did most paper clips stick?",
+     "repair": "The poles are the strongest parts."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_ONE_POLE",
+     "listen_for": [
+      "cutting gives one pole each"
+     ],
+     "ask": "What did each half do near a compass?",
+     "repair": "Every magnet has two poles, even a cut piece."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_THROUGH_NOTHING",
+     "listen_for": [
+      "paper blocks it"
+     ],
+     "ask": "Did the paper clip move with the magnet under the paper?",
+     "repair": "Magnetic force passes through paper."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What happens when a north pole is brought near a south pole?",
+     "answer": "they attract",
+     "shows": "law of poles"
+    },
+    {
+     "question": "Where is the pull of a bar magnet strongest?",
+     "answer": "at the poles (the ends)",
+     "shows": "poles"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+   "key_step": "The child sorts materials into magnetic (iron, steel, nickel, cobalt) and non-magnetic (most other metals such as copper, aluminium and brass, and all non-metals), by testing, not by looks or weight.",
+   "floor": {
+    "prerequisite": "Knows the properties of a magnet.",
+    "question": "Do like poles attract or repel?",
+    "answer": "repel"
+   },
+   "representations": [
+    "a tray of objects to test",
+    "a results table",
+    "a magnet"
+   ],
+   "steps": [
+    "Predict for each object.",
+    "Test with a magnet.",
+    "Record magnetic or not.",
+    "Find the rule: iron and steel (and nickel, cobalt)."
+   ],
+   "contexts": [
+    "sorting scrap at a jua kali yard",
+    "coins in a pocket",
+    "a sufuria and a spoon"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a table: object, prediction, result."
+    },
+    {
+     "beat": "write",
+     "do": "Write nail, aluminium foil, copper wire, steel pin."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which will be attracted."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child's predictions."
+    },
+    {
+     "beat": "reveal",
+     "do": "Tick the nail and the steel pin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_ALL_METALS",
+     "listen_for": [
+      "all metals are magnetic"
+     ],
+     "ask": "Did the foil move?",
+     "repair": "Only iron, steel, nickel and cobalt are magnetic."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_SHINY",
+     "listen_for": [
+      "shiny means magnetic"
+     ],
+     "ask": "Is the shiny foil attracted?",
+     "repair": "Shininess does not decide."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_HEAVY",
+     "listen_for": [
+      "heavier is more magnetic"
+     ],
+     "ask": "Was the heavy brass weight attracted?",
+     "repair": "Weight does not decide; the material does."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_COIN_ALL",
+     "listen_for": [
+      "all coins stick"
+     ],
+     "ask": "What did the test show for each coin?",
+     "repair": "Test each coin."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is copper magnetic?",
+     "answer": "No",
+     "shows": "copper"
+    },
+    {
+     "question": "Name two magnetic materials.",
+     "answer": "iron and steel (or nickel, cobalt)",
+     "shows": "magnetic"
+    }
+   ]
+  },
+  {
+   "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES",
+   "key_step": "The child describes uses of magnets: compasses for direction, separating iron from scrap, fridge and cupboard door seals, speakers, motors and generators, and toys.",
+   "floor": {
+    "prerequisite": "Can sort magnetic and non-magnetic materials.",
+    "question": "Is steel magnetic?",
+    "answer": "yes"
+   },
+   "representations": [
+    "a compass",
+    "an old speaker with its magnet (teacher)",
+    "a chart: use, how the magnet helps"
+   ],
+   "steps": [
+    "Direction: a compass needle points north.",
+    "Separation: lift iron from mixed scrap.",
+    "Holding: fridge door seals.",
+    "Sound and movement: speakers, motors."
+   ],
+   "contexts": [
+    "a scrap yard in Gikomba",
+    "a hiker with a compass",
+    "a phone speaker"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a scrap heap and a crane with a big magnet."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the magnet.",
+     "say": "Which metals will it lift?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"iron and steel\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"separates iron from other scrap\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_COMPASS_SUN",
+     "listen_for": [
+      "the needle points to the Sun"
+     ],
+     "ask": "Does the needle move at night?",
+     "repair": "A compass points north, along the Earth's magnetism."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_FRIDGE_GLUE",
+     "listen_for": [
+      "the door is glued"
+     ],
+     "ask": "What pulls the door shut?",
+     "repair": "A magnetic strip seals the fridge door."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_PICK_ALL",
+     "listen_for": [
+      "it picks all metals"
+     ],
+     "ask": "Will it lift aluminium tins?",
+     "repair": "A magnet lifts only iron and steel."
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_ELEC_NO_MAGNET",
+     "listen_for": [
+      "only wires"
+     ],
+     "ask": "What did we find inside the speaker?",
+     "repair": "Speakers and motors use magnets."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one use of a magnet at home.",
+     "answer": "fridge door seal, speaker, or a magnetic catch",
+     "shows": "home use"
+    },
+    {
+     "question": "How is a magnet used at a scrap yard?",
+     "answer": "to separate iron and steel from other scrap",
+     "shows": "separation"
+    }
+   ]
+  }
+ ]
+}

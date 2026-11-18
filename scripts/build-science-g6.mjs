@@ -2,10 +2,13 @@
 // SCIENCE AND TECHNOLOGY GRADE 6: merge the authored skills and misconception library into the file HOREB owns
 // (curriculum/science/g6.json); the official outcomes, rubrics and sub-strand text are never touched.
 //   node scripts/build-science-g6.mjs      then  npm run subject:map -- science 6 --dir science --title "Science and Technology"
+// Depth pass (18 Nov 2026): scripts/data/science-depth/g6.mjs through scripts/science-depth.mjs (teaching pack in curriculum/science/teaching/g6/).
 // Idempotent: skills, prerequisites, leads_to and misconceptions are rebuilt from scripts/data/science-g6-skills.mjs every run.
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/science-g6-skills.mjs';
+import { SUBS as DEPTH } from './data/science-depth/g6.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/science/g6.json', import.meta.url);
 const g6 = JSON.parse(readFileSync(path, 'utf8'));
@@ -60,6 +63,7 @@ const NOTES = {
 };
 for (const s of g6.sub_strands) { const k = s.code.split('.').slice(2).join('.'); if (!NOTES[k]) throw new Error(`no note for ${k}`); s.authoring_notes = NOTES[k]; }
 g6.totals = { ...g6.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
-g6.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review";
+const depth = applyDepth(g6, DEPTH, { dir: 'science', grade: 6, prefix: P });
+g6.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/science/teaching/g6)";
 writeFileSync(path, JSON.stringify(g6, null, 1) + '\n');
-console.log(`science g6: ${D.SKILLS.length} skills, ${nPre} prerequisites, ${nLeads} leads-to links, ${D.MIS.length} misconceptions`);
+console.log(`science g6: ${g6.totals.skills} skills, ${g6.totals.prerequisites} prerequisites, ${nLeads} leads-to links, ${g6.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.pack} teaching pack entries)`);

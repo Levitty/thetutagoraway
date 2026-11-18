@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/science/g5.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review"};
+export const MAP_SOURCE = {"source":"curriculum/science/g5.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/science/teaching/g5)"};
 export const SUBSTRANDS = {
  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS": {
   "name": "Classification of Plants",
@@ -242,7 +242,8 @@ export const SKILLS = {
   "mis": [
    "M_PN_PETAL_SEPAL",
    "M_PN_STAMEN_PISTIL",
-   "M_PN_STIGMA_ANTHER"
+   "M_PN_STIGMA_ANTHER",
+   "M_PN_OVARY_IS_FRUIT"
   ]
  },
  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS": {
@@ -258,7 +259,8 @@ export const SKILLS = {
   "mis": [
    "M_PF_PETAL_SEPAL_JOBS",
    "M_PF_POLLEN_IS_SEED",
-   "M_PF_OVARY_MAKES_POLLEN"
+   "M_PF_OVARY_MAKES_POLLEN",
+   "M_PF_NECTAR_FOR_PLANT"
   ]
  },
  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED": {
@@ -269,12 +271,14 @@ export const SKILLS = {
    "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b"
   ],
   "pre": [
-   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS"
+   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES"
   ],
   "mis": [
    "M_FS_FRUIT_NOT_FROM_FLOWER",
    "M_FS_POLLINATION_DISPERSAL",
-   "M_FS_BEES_NOT_NEEDED"
+   "M_FS_BEES_NOT_NEEDED",
+   "M_FS_PETALS_BECOME_FRUIT"
   ]
  },
  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS": {
@@ -285,12 +289,14 @@ export const SKILLS = {
    "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c"
   ],
   "pre": [
-   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED"
+   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT"
   ],
   "mis": [
    "M_IM_ONLY_DECORATION",
    "M_IM_INSECTS_HARM",
-   "M_IM_FOOD_NOT_FROM_FLOWERS"
+   "M_IM_FOOD_NOT_FROM_FLOWERS",
+   "M_IM_NO_FLOWER_NO_SEEDS_OK"
   ]
  },
  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS": {
@@ -304,7 +310,8 @@ export const SKILLS = {
   "mis": [
    "M_VC_SIZE_DECIDES",
    "M_VC_NEEDS_LEGS",
-   "M_VC_SHELL_IS_BACKBONE"
+   "M_VC_SHELL_IS_BACKBONE",
+   "M_VC_ALL_WARM"
   ]
  },
  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS": {
@@ -340,7 +347,9 @@ export const SKILLS = {
   "mis": [
    "M_VF_SCALES_FISH_ONLY",
    "M_VF_WINGS_MEAN_BIRD",
-   "M_VF_AMPHIBIAN_WATER_ONLY"
+   "M_VF_AMPHIBIAN_WATER_ONLY",
+   "M_VF_FEATHERS_ON_BATS",
+   "M_VF_ALL_MAMMALS_LAND"
   ]
  },
  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS": {
@@ -354,7 +363,8 @@ export const SKILLS = {
   "mis": [
    "M_BP_TRACHEA_FOOD",
    "M_BP_DIAPHRAGM_PLACE",
-   "M_BP_LUNGS_LOCATION"
+   "M_BP_LUNGS_LOCATION",
+   "M_BP_NOSE_MOUTH_ONLY"
   ]
  },
  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS": {
@@ -382,11 +392,14 @@ export const SKILLS = {
    "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b"
   ],
   "pre": [
-   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS"
+   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS"
   ],
   "mis": [
    "M_BI_RIBS_IN",
-   "M_BI_AIR_PUSHES_CHEST"
+   "M_BI_AIR_PUSHES_CHEST",
+   "M_BI_DIAPHRAGM_UP_IN",
+   "M_BI_BREATHE_OUT_EMPTY"
   ]
  },
  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS": {
@@ -397,12 +410,14 @@ export const SKILLS = {
    "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c"
   ],
   "pre": [
-   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS"
+   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS"
   ],
   "mis": [
    "M_BS_ASTHMA_CATCHING",
    "M_BS_ALLERGY_IS_INFECTION",
-   "M_BS_ALL_SAME"
+   "M_BS_ALL_SAME",
+   "M_BS_LONG_COUGH_IGNORED"
   ]
  },
  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION": {
@@ -433,7 +448,8 @@ export const SKILLS = {
   "mis": [
    "M_MM_CANNOT_BE_UNMIXED",
    "M_MM_NATURAL_NOT_MIXTURE",
-   "M_MM_EQUAL_PARTS"
+   "M_MM_EQUAL_PARTS",
+   "M_MM_DISSOLVED_IS_NEW"
   ]
  },
  "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS": {
@@ -449,7 +465,8 @@ export const SKILLS = {
   "mis": [
    "M_MH_DISSOLVED_GONE",
    "M_MH_CLEAR_IS_PURE",
-   "M_MH_STIRRED_IS_HOMO"
+   "M_MH_STIRRED_IS_HOMO",
+   "M_MH_TWO_LIQUIDS_ALWAYS_HOMO"
   ]
  },
  "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES": {
@@ -464,7 +481,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_MT_LOOKS_LIQUID",
-   "M_MT_THICK_IS_SOLID"
+   "M_MT_THICK_IS_SOLID",
+   "M_MT_GAS_NOT_PART",
+   "M_MT_NAME_BY_LOOK"
   ]
  },
  "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE": {
@@ -480,7 +499,8 @@ export const SKILLS = {
   "mis": [
    "M_MS_FILTER_FOR_ALL",
    "M_MS_MAGNET_ANY_METAL",
-   "M_MS_FUNNEL_SOLIDS"
+   "M_MS_FUNNEL_SOLIDS",
+   "M_MS_EVAPORATE_SAND"
   ]
  },
  "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE": {
@@ -491,12 +511,14 @@ export const SKILLS = {
    "SCIE.G5.MATTER.MIXTURES.b"
   ],
   "pre": [
-   "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE"
+   "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+   "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS"
   ],
   "mis": [
    "M_MP_FILTER_REMOVES_DISSOLVED",
    "M_MP_WINNOW_REVERSED",
-   "M_MP_SIEVE_REVERSED"
+   "M_MP_SIEVE_REVERSED",
+   "M_MP_MAGNET_PULLS_SAND"
   ]
  },
  "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES": {
@@ -507,11 +529,14 @@ export const SKILLS = {
    "SCIE.G5.MATTER.MIXTURES.c"
   ],
   "pre": [
-   "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE"
+   "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+   "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE"
   ],
   "mis": [
    "M_MU_ONLY_LAB",
-   "M_MU_FILTER_IS_SAFE"
+   "M_MU_FILTER_IS_SAFE",
+   "M_MU_ONLY_ONE_METHOD_FARM",
+   "M_MU_TEA_STRAINER_FILTER"
   ]
  },
  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY": {
@@ -525,7 +550,8 @@ export const SKILLS = {
   "mis": [
    "M_WP_ONLY_VISIBLE",
    "M_WP_ONLY_FACTORIES",
-   "M_WP_HELPFUL_THINGS_SAFE"
+   "M_WP_HELPFUL_THINGS_SAFE",
+   "M_WP_NATURAL_NEVER_POLLUTES"
   ]
  },
  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS": {
@@ -541,7 +567,8 @@ export const SKILLS = {
   "mis": [
    "M_WE_ONLY_PEOPLE",
    "M_WE_UPSTREAM_ONLY",
-   "M_WE_BAD_TASTE_ONLY"
+   "M_WE_BAD_TASTE_ONLY",
+   "M_WE_ILLNESS_INSTANT"
   ]
  },
  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION": {
@@ -557,7 +584,8 @@ export const SKILLS = {
   "mis": [
    "M_WR_RIVER_WASHES_AWAY",
    "M_WR_LATRINE_NEAR_WELL",
-   "M_WR_WASH_IN_RIVER"
+   "M_WR_WASH_IN_RIVER",
+   "M_WR_BURY_CHEMICALS_SAFE"
   ]
  },
  "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE": {
@@ -589,7 +617,8 @@ export const SKILLS = {
   "mis": [
    "M_FA_HEAVY_SINKS",
    "M_FA_MATERIAL_ALWAYS",
-   "M_FA_DEEP_WATER"
+   "M_FA_DEEP_WATER",
+   "M_FA_HALF_SUNK_SINKS"
   ]
  },
  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS": {
@@ -621,7 +650,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_FU_STEEL_LIGHT",
-   "M_FU_FLOAT_NO_WEIGHT"
+   "M_FU_FLOAT_NO_WEIGHT",
+   "M_FU_LIFE_JACKET_HEAVY",
+   "M_FU_FISHERMEN_NO_FLOATS"
   ]
  },
  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES": {
@@ -635,7 +666,8 @@ export const SKILLS = {
   "mis": [
    "M_SS_NO_VIBRATION",
    "M_SS_AIR_SILENT",
-   "M_SS_HIT_ONLY"
+   "M_SS_HIT_ONLY",
+   "M_SS_STOP_VIBRATION_SOUND_GOES_ON"
   ]
  },
  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL": {
@@ -663,12 +695,14 @@ export const SKILLS = {
    "SCIE.G5.FORCE_.SOUND_ENERGY.c"
   ],
   "pre": [
-   "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES"
+   "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+   "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL"
   ],
   "mis": [
    "M_SL_ONLY_EARS",
    "M_SL_GETS_USED",
-   "M_SL_MUSIC_SAFE"
+   "M_SL_MUSIC_SAFE",
+   "M_SL_LOUD_ONLY_ANNOYING"
   ]
  },
  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES": {
@@ -699,7 +733,8 @@ export const SKILLS = {
   "mis": [
    "M_HC_METAL_COLDER",
    "M_HC_WOOL_MAKES_HEAT",
-   "M_HC_CONDUCTOR_KEEPS_HEAT"
+   "M_HC_CONDUCTOR_KEEPS_HEAT",
+   "M_HC_INSULATOR_STOPS_COLD_ONLY"
   ]
  },
  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES": {
@@ -716,7 +751,8 @@ export const SKILLS = {
   "mis": [
    "M_HU_COLOUR_NO_EFFECT",
    "M_HU_VENT_LOW",
-   "M_HU_COOKING_ONLY"
+   "M_HU_COOKING_ONLY",
+   "M_HU_BLACK_POT_SLOW"
   ]
  },
  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY": {
@@ -732,7 +768,8 @@ export const SKILLS = {
   "mis": [
    "M_HS_WET_CLOTH",
    "M_HS_OFF_FIRE_COOL",
-   "M_HS_METAL_HANDLE_OK"
+   "M_HS_METAL_HANDLE_OK",
+   "M_HS_HANDLE_TURNED_OUT"
   ]
  }
 };
@@ -753,6 +790,10 @@ export const MIS_FEEDBACK = {
  "M_IM_ONLY_DECORATION": "Flowers are much more than decoration. They make the fruits and seeds we eat, they feed bees, and they bring in money for farmers.",
  "M_IM_INSECTS_HARM": "Bees carry pollen from flower to flower, so the plant can make seeds. They help, and they also give us honey.",
  "M_IM_FOOD_NOT_FROM_FLOWERS": "Fruits and grains grow from flowers. Mangoes, beans, tomatoes and maize all started as flowers.",
+ "M_PN_OVARY_IS_FRUIT": "In a fresh flower it is the ovary. After pollination it grows into the fruit.",
+ "M_PF_NECTAR_FOR_PLANT": "Nectar is a sweet drink for insects. While they drink, they carry pollen from flower to flower.",
+ "M_FS_PETALS_BECOME_FRUIT": "The petals dry and fall. The ovary grows into the fruit and the ovules become the seeds.",
+ "M_IM_NO_FLOWER_NO_SEEDS_OK": "Grain, beans and fruits come from flowers. No flowers, no seeds or fruits.",
  "M_VC_SIZE_DECIDES": "Size does not matter. A mouse is small but it has a backbone, so it is a vertebrate.",
  "M_VC_NEEDS_LEGS": "Legs are not needed. A snake has a long backbone, so it is a vertebrate.",
  "M_VC_SHELL_IS_BACKBONE": "A crab has a hard shell on the outside, but no backbone inside. It is an invertebrate.",
@@ -764,6 +805,9 @@ export const MIS_FEEDBACK = {
  "M_VF_SCALES_FISH_ONLY": "Fish have wet scales and live in water. Reptiles such as snakes and crocodiles have dry scales and lay their eggs on land.",
  "M_VF_WINGS_MEAN_BIRD": "Bats and insects have wings, but only birds have feathers. Feathers are found in birds and no other group.",
  "M_VF_AMPHIBIAN_WATER_ONLY": "Amphibians live part of their life in water and part on land. Tadpoles live in water; adult frogs can live on land.",
+ "M_VC_ALL_WARM": "Mammals and birds keep a steady warm body. Fish, frogs and reptiles warm up and cool down with their surroundings.",
+ "M_VF_FEATHERS_ON_BATS": "Only birds have feathers. A bat has fur and wings of skin, so it is a mammal.",
+ "M_VF_ALL_MAMMALS_LAND": "Mammals feed their young on milk. A dolphin does, so it is a mammal, even in the sea.",
  "M_BP_TRACHEA_FOOD": "There are two pipes in the neck. The windpipe, or trachea, carries air to the lungs. The food pipe carries food to the stomach.",
  "M_BP_DIAPHRAGM_PLACE": "The diaphragm is a sheet of muscle under the lungs. It is the part that moves when you breathe.",
  "M_BP_LUNGS_LOCATION": "There are two lungs, high in the chest and protected by the ribs. The stomach is lower, in the belly.",
@@ -780,6 +824,10 @@ export const MIS_FEEDBACK = {
  "M_BV_ANTIBIOTICS": "Antibiotics do not kill viruses, and a cold is caused by a virus. Rest and water help. Go to a clinic if the cough is bad or does not go away.",
  "M_BV_HANDS_NO_MATTER": "Hands pick up virus from surfaces and then touch the nose, eyes and mouth. Washing them helps to stop it.",
  "M_BV_SMOKE_HARMLESS": "Smoke irritates the nose and lungs. It can bring on coughs and asthma. A chimney or an open door lets it out.",
+ "M_BP_NOSE_MOUTH_ONLY": "Air goes from the nose down the windpipe into the two lungs in your chest.",
+ "M_BI_DIAPHRAGM_UP_IN": "Breathing in, the diaphragm moves down and the ribs move up and out, so the chest gets bigger.",
+ "M_BI_BREATHE_OUT_EMPTY": "Some air always stays in the lungs, even after a big breath out.",
+ "M_BS_LONG_COUGH_IGNORED": "A cough that lasts more than two weeks needs a check at a health centre.",
  "M_MM_CANNOT_BE_UNMIXED": "In a mixture each substance stays the same and can be separated again. Salty water dries and leaves the salt behind.",
  "M_MM_NATURAL_NOT_MIXTURE": "Mixtures can be natural. Air is a mixture of gases, and soil holds sand, clay and bits of plants.",
  "M_MM_EQUAL_PARTS": "The parts of a mixture can be in any amounts. One spoon of sand in a bucket of water is still a mixture.",
@@ -796,6 +844,14 @@ export const MIS_FEEDBACK = {
  "M_MP_SIEVE_REVERSED": "The holes of a sieve let small pieces fall through. Pieces too big for the holes stay on top.",
  "M_MU_ONLY_LAB": "People separate mixtures every day: sieving flour, picking stones from beans, straining tea, winnowing grain.",
  "M_MU_FILTER_IS_SAFE": "Filtering takes out the bits you can see, but germs and dissolved things are still there. The water must also be boiled or treated.",
+ "M_MM_DISSOLVED_IS_NEW": "Dissolved sugar is still sugar. It is mixed with the tea and can be got back by drying.",
+ "M_MH_TWO_LIQUIDS_ALWAYS_HOMO": "Some liquids do not mix. Oil floats in a layer on water, so you can see two parts.",
+ "M_MT_GAS_NOT_PART": "Gases can be part of mixtures too. Soda has gas in a liquid; air is a mixture of gases.",
+ "M_MT_NAME_BY_LOOK": "Name a mixture by its parts: soil is solid and water is liquid, so it is solid-liquid.",
+ "M_MS_EVAPORATE_SAND": "If you need the water, filter or decant. Evaporation keeps the solid but loses the water.",
+ "M_MP_MAGNET_PULLS_SAND": "A magnet pulls iron and steel. Sand is not attracted, so it stays behind.",
+ "M_MU_ONLY_ONE_METHOD_FARM": "Farmers use winnowing for chaff and sieving for flour. Many separations are done at home.",
+ "M_MU_TEA_STRAINER_FILTER": "A tea strainer is a filter. It separates the solid leaves from the liquid tea.",
  "M_WP_ONLY_VISIBLE": "Germs and many chemicals cannot be seen. Clear water can still be polluted.",
  "M_WP_ONLY_FACTORIES": "Homes, shambas and schools pollute water too: soap, rubbish, dung, fertiliser and latrines near the water.",
  "M_WP_HELPFUL_THINGS_SAFE": "Useful things pollute water when they get into it in the wrong place. Fertiliser and soap washed into a river harm the living things there.",
@@ -809,6 +865,9 @@ export const MIS_FEEDBACK = {
  "M_WT_BOIL_REMOVES_ALL": "Boiling kills germs. It does not take out chemicals, soap or oil.",
  "M_WT_SOLAR_MUDDY": "Sunlight must reach the germs. Muddy water blocks the light, so it must be settled and filtered first.",
  "M_WT_MORE_CHLORINE": "Use exactly the amount on the packet. Too much chlorine gives a bad taste and can make you ill.",
+ "M_WP_NATURAL_NEVER_POLLUTES": "Natural things like dung and soil can pollute water. Dung carries germs.",
+ "M_WE_ILLNESS_INSTANT": "Some illnesses from dirty water show days later. Feeling well today does not prove the water is safe.",
+ "M_WR_BURY_CHEMICALS_SAFE": "Rain washes chemicals from the soil into rivers. Keep chemicals away from water.",
  "M_FA_HEAVY_SINKS": "Weight alone does not decide. A heavy log floats and a small stone sinks. What matters is how heavy the object is for its size.",
  "M_FA_MATERIAL_ALWAYS": "The material alone does not decide. A metal ship floats because of its shape, and a piece of ebony wood sinks. Test each object.",
  "M_FA_DEEP_WATER": "The amount of water does not change the result. A stone that sinks in a bucket sinks in a lake.",
@@ -818,6 +877,9 @@ export const MIS_FEEDBACK = {
  "M_FF_LOAD_NO_EFFECT": "Each added load makes the boat float lower. With too much load water comes over the side and it sinks.",
  "M_FU_STEEL_LIGHT": "Steel is heavier than water. A ship floats because it is shaped like a big hollow bowl that pushes aside a lot of water.",
  "M_FU_FLOAT_NO_WEIGHT": "A floating object still has weight. It floats because the water pushes it up.",
+ "M_FA_HALF_SUNK_SINKS": "An object floats if it stays at the surface, even if most of it is under water.",
+ "M_FU_LIFE_JACKET_HEAVY": "A life jacket is full of light material or air that floats, so it holds you up in water.",
+ "M_FU_FISHERMEN_NO_FLOATS": "Floats keep the top of a net up and weights pull the bottom down, so the net hangs open.",
  "M_SS_NO_VIBRATION": "Every sound is made by something vibrating. The drum skin moves quickly to and fro, and the rice on it jumps.",
  "M_SS_AIR_SILENT": "In a flute or whistle the air inside the pipe vibrates. The vibrating air makes the sound.",
  "M_SS_HIT_ONLY": "Sound can come from plucking, blowing, rubbing or banging. What matters is that something vibrates.",
@@ -828,6 +890,8 @@ export const MIS_FEEDBACK = {
  "M_SL_ONLY_EARS": "Very loud sound can damage hearing for good. It can also cause headaches, stress and poor sleep.",
  "M_SL_GETS_USED": "Feeling used to a noise does not stop the damage. Loud noise can still harm hearing, so ear protection is needed.",
  "M_SL_MUSIC_SAFE": "It is the loudness, not the kind of sound, that harms. Very loud music can damage hearing as well.",
+ "M_SS_STOP_VIBRATION_SOUND_GOES_ON": "Sound comes from vibrations. Stop the vibration and the sound stops.",
+ "M_SL_LOUD_ONLY_ANNOYING": "Loud sound can damage hearing and cause headaches and stress. Keep away from very loud places.",
  "M_HM_HEAT_RISES": "Hot air rises, but heat is not limited to going up. In a solid, heat spreads along it from the hot end to the colder parts.",
  "M_HM_COLD_TRAVELS": "There is no flow of cold. Heat always moves from a warmer thing to a colder thing, so the hand loses heat to the drink.",
  "M_HM_SUN_NEEDS_AIR": "Radiation is heat that travels without anything to carry it. That is how the Sun's heat crosses empty space.",
@@ -840,7 +904,10 @@ export const MIS_FEEDBACK = {
  "M_HU_COOKING_ONLY": "Heat moves everywhere: when we cook, dry clothes in the sun and keep tea hot in a flask.",
  "M_HS_WET_CLOTH": "A wet cloth conducts heat to your hand and makes steam, which burns. Use a thick dry cloth.",
  "M_HS_OFF_FIRE_COOL": "Metal can stay very hot for a long time even when there is no flame or steam. Do not touch it.",
- "M_HS_METAL_HANDLE_OK": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle."
+ "M_HS_METAL_HANDLE_OK": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle.",
+ "M_HC_INSULATOR_STOPS_COLD_ONLY": "An insulator slows heat moving either way. A flask keeps hot things hot and cold things cold.",
+ "M_HU_BLACK_POT_SLOW": "Black surfaces take in more of the sun's heat. Shiny ones reflect it.",
+ "M_HS_HANDLE_TURNED_OUT": "Turn pan handles inwards so nobody knocks the hot pan over."
 };
 // Older names, kept for the families and tests written against them.
 export const SKILLS_SCI_G5 = SKILLS;
