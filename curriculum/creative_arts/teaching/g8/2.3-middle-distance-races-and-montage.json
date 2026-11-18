@@ -1,0 +1,96 @@
+{
+ "sub_strand": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN",
+ "title": "Middle Distance Races and Montage",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Races on a measured track; montage from old magazines of athletes.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE",
+   "key_step": "The child says middle distance races are the 800 m and 1 500 m, needing even pace, endurance and tactics, and a montage combines many pictures on a theme.",
+   "floor": {
+    "prerequisite": "Knows relay rules (Grade 5).",
+    "question": "Where must the baton be passed?",
+    "answer": "inside the changeover zone"
+   },
+   "representations": [
+    "a track diagram",
+    "race cards",
+    "magazines for a montage"
+   ],
+   "steps": [
+    "Name the distance.",
+    "Sort it: sprint, middle, long.",
+    "Say what the runner needs: pace and endurance."
+   ],
+   "contexts": [
+    "Kenyan athletes in the 800 m and 1 500 m",
+    "a school cross-country trial"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "Is the 1 500 m a sprint?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Middle distance."
+    },
+    {
+     "beat": "write",
+     "do": "Write the two races and what they need."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE.M_CA8_MD_RACE",
+     "listen_for": [
+      "100 metres"
+     ],
+     "ask": "Which is a middle distance race?",
+     "repair": "Sort 100, 400, 800, 1 500 and 5 000 m into sprint, middle and long."
+    },
+    {
+     "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE.M_CA8_MD_MONTAGE",
+     "listen_for": [
+      "One plain picture"
+     ],
+     "ask": "What is a montage?",
+     "repair": "Show a montage of runners cut from newspapers."
+    },
+    {
+     "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE.M_CA8_MD_PACE",
+     "listen_for": [
+      "Only a fast start"
+     ],
+     "ask": "What do middle distance runners need?",
+     "repair": "Run 800 m flat out versus at an even pace; compare the last lap."
+    },
+    {
+     "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.MIDDLE_DISTANCE.M_CA8_MD_LANE_ALL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "In the 800 m, do runners stay in lanes all the way?",
+     "repair": "Watch an 800 m start: they cut in after the break line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a middle distance race.",
+     "answer": "the 800 m or the 1 500 m",
+     "shows": "races"
+    },
+    {
+     "question": "What do middle distance runners need most?",
+     "answer": "pace and endurance",
+     "shows": "needs"
+    }
+   ]
+  }
+ ]
+}

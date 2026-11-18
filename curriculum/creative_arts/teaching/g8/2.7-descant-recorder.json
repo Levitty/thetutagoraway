@@ -1,0 +1,98 @@
+{
+ "sub_strand": "CREA.G8.CREATI.DESCANT_RECORDER",
+ "title": "Descant Recorder",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Performance directions named in words on the phone; play G major pieces in class.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH",
+   "key_step": "The child explains recorder technique (finger pads, gentle steady breath, tonguing) and reads directions: p soft, f loud, crescendo, diminuendo, repeat signs.",
+   "floor": {
+    "prerequisite": "Names what to check before playing (Grade 7).",
+    "question": "Which tells how fast to play?",
+    "answer": "tempo"
+   },
+   "representations": [
+    "a recorder",
+    "a piece with directions",
+    "direction cards"
+   ],
+   "steps": [
+    "Check the directions first.",
+    "p: soft; f: loud.",
+    "Crescendo: grow louder.",
+    "Repeat sign: go back."
+   ],
+   "contexts": [
+    "a G major piece for a concert",
+    "sight reading"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at a repeat sign.",
+     "say": "What do you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"play again\"."
+    },
+    {
+     "beat": "predict",
+     "do": "And p?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Soft."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH.M_CA8_RT_BLOW",
+     "listen_for": [
+      "As hard as possible"
+     ],
+     "ask": "How should you blow a descant recorder?",
+     "repair": "Blow hard, then gently; hear the squeak."
+    },
+    {
+     "code": "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH.M_CA8_RT_P",
+     "listen_for": [
+      "Loud"
+     ],
+     "ask": "What does p mean in music?",
+     "repair": "p for piano: soft. f for forte: loud."
+    },
+    {
+     "code": "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH.M_CA8_RT_REPEAT",
+     "listen_for": [
+      "Stop playing"
+     ],
+     "ask": "What does a repeat sign mean?",
+     "repair": "Play to the repeat sign and go back to the start."
+    },
+    {
+     "code": "CREA.G8.CREATI.DESCANT_RECORDER.RECORDER_TECH.M_CA8_RT_CRESC",
+     "listen_for": [
+      "get faster"
+     ],
+     "ask": "What does crescendo mean?",
+     "repair": "Play a scale getting louder at the same speed."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does f mean?",
+     "answer": "loud",
+     "shows": "dynamics"
+    },
+    {
+     "question": "What does a repeat sign tell you?",
+     "answer": "play the section again",
+     "shows": "repeat"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sub_strand": "CREA.G8.CREATI.MELODY",
+ "title": "Melody",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Question and answer phrases sung in pairs; write melodies in G major on the staff.",
+ "skills": [
+  {
+   "skill": "CREA.G8.CREATI.MELODY.MELODY_METHODS",
+   "key_step": "The child names methods of making a melody: repeating a short idea, sequence, steps and leaps, question and answer phrases, ending on G in G major.",
+   "floor": {
+    "prerequisite": "Knows G major (this grade).",
+    "question": "Which note is sharp in G major?",
+    "answer": "F"
+   },
+   "representations": [
+    "the staff",
+    "a recorder",
+    "phrase cards"
+   ],
+   "steps": [
+    "Write a 2-bar question ending away from G.",
+    "Answer with 2 bars ending on G.",
+    "Use mostly steps."
+   ],
+   "contexts": [
+    "writing a melody for a school poem",
+    "a call and response song"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "The question ends on D.",
+     "say": "Where should the answer end?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for G."
+    },
+    {
+     "beat": "reveal",
+     "do": "On G."
+    },
+    {
+     "beat": "write",
+     "do": "Write the methods."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.CREATI.MELODY.MELODY_METHODS.M_CA8_MY_HOME",
+     "listen_for": [
+      "C"
+     ],
+     "ask": "On which note does a melody in G major end?",
+     "repair": "Sing the melody ending on C and on G."
+    },
+    {
+     "code": "CREA.G8.CREATI.MELODY.MELODY_METHODS.M_CA8_MY_ANSWER",
+     "listen_for": [
+      "A copy of the opening phrase"
+     ],
+     "ask": "What is an answering phrase?",
+     "repair": "Sing a question phrase and answer with a similar start but a new ending on G."
+    },
+    {
+     "code": "CREA.G8.CREATI.MELODY.MELODY_METHODS.M_CA8_MY_STEP",
+     "listen_for": [
+      "Only by huge leaps"
+     ],
+     "ask": "How does a melody move?",
+     "repair": "Sing a known song and count steps and leaps."
+    },
+    {
+     "code": "CREA.G8.CREATI.MELODY.MELODY_METHODS.M_CA8_MY_QUESTION_HOME",
+     "listen_for": [
+      "on G, the home note"
+     ],
+     "ask": "Where should a question phrase usually end?",
+     "repair": "Sing a question ending on D: it wants an answer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is an answering phrase?",
+     "answer": "a phrase that replies to the opening phrase and ends at home",
+     "shows": "answer"
+    },
+    {
+     "question": "On which note does a G major melody end?",
+     "answer": "G",
+     "shows": "home"
+    }
+   ]
+  }
+ ]
+}

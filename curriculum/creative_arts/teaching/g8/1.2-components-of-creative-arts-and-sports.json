@@ -1,0 +1,448 @@
+{
+ "sub_strand": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A",
+ "title": "Components of Creative Arts and Sports",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Creative Arts and Sports; not yet checked by a CBC Creative Arts and Sports teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Draw the bass and treble staves together on the board; notes are named in words on the phone.",
+ "skills": [
+  {
+   "skill": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.VERSE_ELEMENTS",
+   "key_step": "The child names the elements of verse: line, stanza, rhyme, rhythm, refrain and imagery.",
+   "floor": {
+    "prerequisite": "Describes poem structure (Grade 7 English).",
+    "question": "What is a stanza?",
+    "answer": "a group of lines"
+   },
+   "representations": [
+    "a short poem on the board",
+    "element cards",
+    "claps"
+   ],
+   "steps": [
+    "Count lines and stanzas.",
+    "Underline rhymes.",
+    "Clap the rhythm.",
+    "Find the refrain and images."
+   ],
+   "contexts": [
+    "a verse for a school festival",
+    "a patriotic poem"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the repeated last line.",
+     "say": "Which element?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for refrain."
+    },
+    {
+     "beat": "reveal",
+     "do": "A refrain."
+    },
+    {
+     "beat": "write",
+     "do": "Label the poem."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.VERSE_ELEMENTS.M_CA8_VE_STANZA",
+     "listen_for": [
+      "One word"
+     ],
+     "ask": "What is a stanza?",
+     "repair": "Count the groups of lines in a poem: each is a stanza."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.VERSE_ELEMENTS.M_CA8_VE_RHYME",
+     "listen_for": [
+      "Same beginning sounds"
+     ],
+     "ask": "What is rhyme?",
+     "repair": "Underline the last words of two lines: cat and hat rhyme."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.VERSE_ELEMENTS.M_CA8_VE_LINE",
+     "listen_for": [
+      "The whole poem"
+     ],
+     "ask": "What is a line of verse?",
+     "repair": "Point at one row of words: that is a line."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.VERSE_ELEMENTS.M_CA8_VE_RHYTHM_RHYME",
+     "listen_for": [
+      "words that end with the same sound"
+     ],
+     "ask": "What is rhythm in a poem?",
+     "repair": "Clap a line of a poem; then underline its rhymes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is rhyme?",
+     "answer": "the same ending sound in words",
+     "shows": "rhyme"
+    },
+    {
+     "question": "What is a refrain?",
+     "answer": "a line or lines repeated in a poem",
+     "shows": "refrain"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY",
+   "key_step": "The child tells endurance (keeping going without tiring) from agility (changing direction quickly) and names activities for each.",
+   "floor": {
+    "prerequisite": "Names the components of fitness (Grade 7).",
+    "question": "Name one skill-related component.",
+    "answer": "any of: agility, balance, coordination, power, speed, reaction time"
+   },
+   "representations": [
+    "cones",
+    "a stopwatch",
+    "activity cards"
+   ],
+   "steps": [
+    "Ask: long and steady, or quick changes?",
+    "Long and steady: endurance.",
+    "Quick changes: agility."
+   ],
+   "contexts": [
+    "a PE circuit",
+    "training for netball"
+   ],
+   "board": [
+    {
+     "beat": "predict",
+     "do": "A shuttle run between cones builds...?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for agility."
+    },
+    {
+     "beat": "reveal",
+     "do": "Agility."
+    },
+    {
+     "beat": "write",
+     "do": "Write two activities for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY.M_CA8_FA_AGILITY",
+     "listen_for": [
+      "Endurance"
+     ],
+     "ask": "Which is changing direction quickly?",
+     "repair": "Zigzag between cones (agility), then jog for five minutes (endurance)."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY.M_CA8_FA_ENDURANCE",
+     "listen_for": [
+      "Agility"
+     ],
+     "ask": "Which is lasting a long time without tiring?",
+     "repair": "Ask \"how long can you keep going?\" for endurance."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY.M_CA8_FA_ACTIVITY",
+     "listen_for": [
+      "A single quick jump"
+     ],
+     "ask": "Which activity builds endurance?",
+     "repair": "Endurance needs a long, steady effort: compare one jump with a 10-minute jog."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.FITNESS_AGILITY.M_CA8_FA_AGILITY_SPEED",
+     "listen_for": [
+      "the straight sprint"
+     ],
+     "ask": "Which shows agility: a straight 100 m sprint or a zigzag run?",
+     "repair": "Time a straight run and a zigzag run."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which builds endurance: long steady running or one jump?",
+     "answer": "long steady running",
+     "shows": "endurance"
+    },
+    {
+     "question": "What is agility?",
+     "answer": "changing direction quickly",
+     "shows": "agility"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF",
+   "key_step": "The child names bass staff pitches (lines G B D F A, spaces A C E G), says the bass clef is for low sounds and writes note values on it.",
+   "floor": {
+    "prerequisite": "Reads the treble staff (Grade 7).",
+    "question": "What are the treble spaces?",
+    "answer": "F A C E"
+   },
+   "representations": [
+    "both staves drawn",
+    "the rhymes",
+    "note cards"
+   ],
+   "steps": [
+    "Find line or space.",
+    "Lines: Good Boys Do Fine Always.",
+    "Spaces: All Cows Eat Grass."
+   ],
+   "contexts": [
+    "reading a choir bass part",
+    "piano music"
+   ],
+   "board": [
+    {
+     "beat": "point",
+     "do": "Point at the bottom line of the bass staff.",
+     "say": "Which note?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for G."
+    },
+    {
+     "beat": "predict",
+     "do": "The space above?"
+    },
+    {
+     "beat": "reveal",
+     "do": "A."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF.M_CA8_BS_LINES",
+     "listen_for": [
+      "E G B D F"
+     ],
+     "ask": "What are the lines of the bass staff from the bottom?",
+     "repair": "Bass lines: Good Boys Do Fine Always (G B D F A)."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF.M_CA8_BS_SPACES",
+     "listen_for": [
+      "F A C E"
+     ],
+     "ask": "What are the spaces of the bass staff from the bottom?",
+     "repair": "Bass spaces: All Cows Eat Grass (A C E G)."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF.M_CA8_BS_CLEF",
+     "listen_for": [
+      "High sounds"
+     ],
+     "ask": "The bass clef is used for...",
+     "repair": "Sing a low note: that is the bass range."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.BASS_STAFF.M_CA8_BS_MIDDLE_C",
+     "listen_for": [
+      "on the bottom line"
+     ],
+     "ask": "Where is middle C for the bass staff?",
+     "repair": "Draw both staves: middle C sits on a ledger line between them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What are the bass staff lines from the bottom?",
+     "answer": "G B D F A",
+     "shows": "lines"
+    },
+    {
+     "question": "Is the bass clef for high or low sounds?",
+     "answer": "low",
+     "shows": "clef"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34",
+   "key_step": "The child groups notes in three-four time: three crotchet beats per bar; a dotted minim fills a bar; a minim and a crotchet make three.",
+   "floor": {
+    "prerequisite": "Groups notes in two-four (Grade 7).",
+    "question": "How many crotchet beats in a 2/4 bar?",
+    "answer": "two"
+   },
+   "representations": [
+    "notes in words and drawn",
+    "claps",
+    "bar lines"
+   ],
+   "steps": [
+    "Read the top number: 3.",
+    "Add notes to three beats.",
+    "Draw the bar line."
+   ],
+   "contexts": [
+    "a waltz song",
+    "a dance in three"
+   ],
+   "board": [
+    {
+     "beat": "count",
+     "do": "Count STRONG 2 3."
+    },
+    {
+     "beat": "predict",
+     "do": "A minim needs what to fill the bar?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a crotchet."
+    },
+    {
+     "beat": "reveal",
+     "do": "2 + 1 = 3."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34.M_CA8_T3_BEATS",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many crotchet beats are in a bar of 3/4?",
+     "repair": "Read the top number: 3 beats. Count STRONG weak weak."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34.M_CA8_T3_DOTTED",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many beats is a dotted minim?",
+     "repair": "A minim is 2, half of 2 is 1, so the dotted minim is 3."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34.M_CA8_T3_BAR",
+     "listen_for": [
+      "A minim alone"
+     ],
+     "ask": "Which fills a bar of 3/4?",
+     "repair": "Count the minim: 2. One more beat is needed."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.TIME_34.M_CA8_T3_FOUR_CROTCHETS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a bar of four crotchets correct in three-four time?",
+     "repair": "Count each bar aloud: 1 2 3, line."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many beats is a dotted minim?",
+     "answer": "three",
+     "shows": "dotted"
+    },
+    {
+     "question": "How many crotchet beats in a 3/4 bar?",
+     "answer": "three",
+     "shows": "grouping"
+    }
+   ]
+  },
+  {
+   "skill": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR",
+   "key_step": "The child builds G major: G A B C D E F-sharp G, one sharp (F sharp) on every F, home note G.",
+   "floor": {
+    "prerequisite": "Knows C major melodies (Grade 7).",
+    "question": "On which note does C major end?",
+    "answer": "C"
+   },
+   "representations": [
+    "staff on the board",
+    "a recorder",
+    "note cards"
+   ],
+   "steps": [
+    "Start on G.",
+    "Write the next seven notes in order.",
+    "Raise F to F sharp.",
+    "End on G."
+   ],
+   "contexts": [
+    "playing a G major piece",
+    "writing a scale for homework"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write G A B C D E F G."
+    },
+    {
+     "beat": "predict",
+     "do": "Which note sounds wrong?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for F."
+    },
+    {
+     "beat": "reveal",
+     "do": "Make it F sharp."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR.M_CA8_GM_SHARP",
+     "listen_for": [
+      "flat"
+     ],
+     "ask": "G major has one...",
+     "repair": "Write G A B C D E F G and play it: F needs to be raised, a sharp."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR.M_CA8_GM_NOTE",
+     "listen_for": [
+      "B"
+     ],
+     "ask": "Which note is sharp in G major?",
+     "repair": "Count the steps: the seventh note, F, must be raised."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR.M_CA8_GM_HOME",
+     "listen_for": [
+      "C"
+     ],
+     "ask": "On which note does G major begin and end?",
+     "repair": "The key name is the home note: G major starts and ends on G."
+    },
+    {
+     "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.G_MAJOR.M_CA8_GM_SHARP_ALL_F",
+     "listen_for": [
+      "only the first one"
+     ],
+     "ask": "In G major, is every F played as F sharp?",
+     "repair": "Circle every F in a short G major tune."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which note is sharp in G major?",
+     "answer": "F",
+     "shows": "sharp"
+    },
+    {
+     "question": "On which note does G major start and end?",
+     "answer": "G",
+     "shows": "home"
+    }
+   ]
+  }
+ ]
+}
