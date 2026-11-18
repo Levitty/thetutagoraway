@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME",
+ "title": "Historic Built Environments",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Stone Town (Zanzibar), Kilwa Kisiwani ruins (Tanzania), Kasubi Tombs (Uganda), rock-hewn churches of Lalibela (Ethiopia), Fort Jesus, Lamu and Gedi (Kenya).",
+ "skills": [
+  {
+   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
+   "key_step": "The child names historic built environments of Eastern Africa and the country of each.",
+   "floor": {
+    "prerequisite": "Names Kenya's historic sites.",
+    "question": "Name a historic site in Mombasa.",
+    "answer": "Fort Jesus"
+   },
+   "representations": [
+    "a regional map with pins",
+    "site photos",
+    "a table: site and country"
+   ],
+   "steps": [
+    "Name the site.",
+    "Ask: built by people?",
+    "Name the country.",
+    "Say what it was used for."
+   ],
+   "contexts": [
+    "Stone Town in Zanzibar",
+    "Lalibela's rock churches",
+    "Kasubi Tombs in Kampala"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Lalibela, Stone Town, Kasubi Tombs."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Lalibela.",
+     "say": "Which country is it in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Ethiopia."
+    },
+    {
+     "beat": "write",
+     "do": "Write each country."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_BUILT_NATURAL",
+     "listen_for": [
+      "Mount Kenya"
+     ],
+     "ask": "Which one is a historic built environment?",
+     "repair": "Ask: did people build it or was it made by nature?"
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_COUNTRY",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country are the rock-hewn churches of Lalibela?",
+     "repair": "Match sites and countries on a small table and say each aloud."
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_FORT_JESUS",
+     "listen_for": [
+      "The British"
+     ],
+     "ask": "Who built Fort Jesus in Mombasa?",
+     "repair": "Ask about the date: 1593 is before the British came."
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_KASUBI_KENYA",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country are the Kasubi Tombs?",
+     "repair": "Put a pin for each site on the regional map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which country is Stone Town?",
+     "answer": "Tanzania (Zanzibar)",
+     "shows": "site to country"
+    },
+    {
+     "question": "Is Mount Kilimanjaro a historic built environment?",
+     "answer": "No, it is natural",
+     "shows": "built vs natural"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
+   "key_step": "The child explains why historic sites matter and picks ways to conserve them.",
+   "floor": {
+    "prerequisite": "Names historic sites of the region.",
+    "question": "Name a historic site in Ethiopia.",
+    "answer": "Lalibela"
+   },
+   "representations": [
+    "value cards",
+    "action cards",
+    "a site rules board"
+   ],
+   "steps": [
+    "Name the site.",
+    "Give one thing it teaches or gives.",
+    "Name a harm.",
+    "Choose the conserving action."
+   ],
+   "contexts": [
+    "researchers at Kilwa",
+    "school trips to Gedi",
+    "tourists in Lamu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an old wall with a crack."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the crack.",
+     "say": "How should it be repaired?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for careful repair with old materials."
+    },
+    {
+     "beat": "write",
+     "do": "Write two reasons the site matters."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_NO_VALUE",
+     "listen_for": [
+      "They are useless and should be pulled down"
+     ],
+     "ask": "Why do we conserve old buildings and museums?",
+     "repair": "Ask what a visitor learns at Lamu Old Town."
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_TOUCH_ALL",
+     "listen_for": [
+      "Writing your name on the old wall"
+     ],
+     "ask": "Which action conserves a historic site?",
+     "repair": "Ask what happens to a wall when a thousand visitors write on it."
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_TOURISM_ONLY_VALUE",
+     "listen_for": [
+      "There is no other reason"
+     ],
+     "ask": "Give a reason a historic site matters besides tourism.",
+     "repair": "Ask what a learner learns on a visit."
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_MODERN_REBUILD",
+     "listen_for": [
+      "Pull it down and build a concrete one"
+     ],
+     "ask": "An old coral wall is cracking. Which is the better repair?",
+     "repair": "Compare a photo of a careful coral repair with a concrete wall."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two reasons historic sites are important.",
+     "answer": "any two of: teach history, give identity, bring tourists and income, jobs, research",
+     "shows": "value"
+    },
+    {
+     "question": "Give one way of conserving a historic site.",
+     "answer": "any of: careful repair, visitor rules, no writing on walls, guards, teaching others",
+     "shows": "conserving"
+    }
+   ]
+  }
+ ]
+}

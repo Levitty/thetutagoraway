@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.NATURA.FIELDWORK",
+ "title": "Fieldwork",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Do a small fieldwork exercise in the school compound: count vehicles at the gate, interview the cook (with permission), and find the mean, median and mode of the results.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS",
+   "key_step": "The child names the methods of collecting data and picks the best one for a task.",
+   "floor": {
+    "prerequisite": "Collects and records simple data.",
+    "question": "How would you record how many learners walk to school?",
+    "answer": "count them and write the numbers in a table"
+   },
+   "representations": [
+    "method cards",
+    "task cards",
+    "a questionnaire sample"
+   ],
+   "steps": [
+    "Read the task.",
+    "Ask: count, watch, ask one person or ask many in writing?",
+    "Pick the method.",
+    "Say why."
+   ],
+   "contexts": [
+    "counting vehicles at the gate",
+    "interviewing the school cook",
+    "a questionnaire to parents"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"find out what drivers think of the road\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"think\".",
+     "say": "Can we see what they think by watching?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no; ask them."
+    },
+    {
+     "beat": "write",
+     "do": "Write interview or questionnaire."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS.M_FW_QUESTION_OBS",
+     "listen_for": [
+      "Interview"
+     ],
+     "ask": "Counting the number of vehicles passing a gate is which method?",
+     "repair": "Ask: do we ask someone or do we watch and count?"
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS.M_FW_OPINION_OBS",
+     "listen_for": [
+      "Observation"
+     ],
+     "ask": "Which method best finds out what drivers think of the road?",
+     "repair": "Ask: can you see an opinion?"
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS.M_FW_QUESTIONNAIRE_ORAL",
+     "listen_for": [
+      "Questions asked aloud face to face"
+     ],
+     "ask": "What is a questionnaire?",
+     "repair": "Show a printed questionnaire and act an interview."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS.M_FW_ONE_METHOD",
+     "listen_for": [
+      "One method"
+     ],
+     "ask": "You want to count vehicles and know what drivers think. How many methods?",
+     "repair": "Split the task into two questions."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Counting vehicles passing a gate is which method?",
+     "answer": "observation",
+     "shows": "method"
+    },
+    {
+     "question": "Which method finds out people's opinions?",
+     "answer": "an interview or questionnaire",
+     "shows": "method"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES",
+   "key_step": "The child pairs fieldwork challenges with solutions and says to get permission first.",
+   "floor": {
+    "prerequisite": "Names data collection methods.",
+    "question": "Name one data collection method.",
+    "answer": "any method such as observation"
+   },
+   "representations": [
+    "challenge and solution cards",
+    "a fieldwork checklist",
+    "a permission letter"
+   ],
+   "steps": [
+    "Name the challenge.",
+    "Pick the solution.",
+    "Add it to the checklist.",
+    "Get permission."
+   ],
+   "contexts": [
+    "rain on the fieldwork day",
+    "a busy road to cross",
+    "a shopkeeper too busy to talk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write bad weather, busy road, unwilling respondent."
+    },
+    {
+     "beat": "point",
+     "do": "Point at unwilling respondent.",
+     "say": "What should you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"explain politely and ask permission\"."
+    },
+    {
+     "beat": "write",
+     "do": "Pair each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES.M_FW_IGNORE_RISK",
+     "listen_for": [
+      "Stand in the road"
+     ],
+     "ask": "What is the safe way to study a busy road?",
+     "repair": "Ask where a driver can see a learner clearly."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES.M_FW_NO_PERMISSION",
+     "listen_for": [
+      "Start questions at once"
+     ],
+     "ask": "What should you do before interviewing a shop owner?",
+     "repair": "Ask how the owner might feel if a stranger shouted questions."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES.M_FW_WEATHER_IGNORE",
+     "listen_for": [
+      "Do nothing"
+     ],
+     "ask": "How do you plan for rain on a fieldwork day?",
+     "repair": "Make a fieldwork checklist."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES.M_FW_MONEY_NONE",
+     "listen_for": [
+      "There is no cost"
+     ],
+     "ask": "How can a class meet the cost of a fieldwork trip?",
+     "repair": "List the costs of a trip."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What should you do before interviewing a shop owner?",
+     "answer": "greet, explain and ask permission",
+     "shows": "permission"
+    },
+    {
+     "question": "What is the safe way to study a busy road?",
+     "answer": "stay on the verge with a teacher",
+     "shows": "safety"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS",
+   "key_step": "The child finds the mean, median and mode and picks a way to show data.",
+   "floor": {
+    "prerequisite": "Finds a total and divides.",
+    "question": "What is 18 divided by 3?",
+    "answer": "6"
+   },
+   "representations": [
+    "data cards",
+    "beans to share",
+    "graph types"
+   ],
+   "steps": [
+    "Mean: add and divide.",
+    "Median: order and take the middle.",
+    "Mode: the most often.",
+    "Pick a graph."
+   ],
+   "contexts": [
+    "vehicles counted each hour",
+    "rainfall each month",
+    "learners' favourite foods"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 7, 2, 9, 4, 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the numbers.",
+     "say": "What must we do before finding the middle?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"put them in order\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write 2, 4, 5, 7, 9 and circle 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS.M_FW_MEAN_MEDIAN",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Find the median of 7, 2, 9, 4, 5.",
+     "repair": "Ask the child to write the numbers in order first."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS.M_FW_MODE_MEAN",
+     "listen_for": [
+      "The mean"
+     ],
+     "ask": "Which value occurs most often?",
+     "repair": "Ask the child to count how many times each value appears."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS.M_FW_MEAN_NO_DIVIDE",
+     "listen_for": [
+      "18"
+     ],
+     "ask": "Find the mean of 4, 6 and 8.",
+     "repair": "Share 18 beans among 3 learners."
+    },
+    {
+     "code": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS.M_FW_PIE_ANY",
+     "listen_for": [
+      "A pie chart"
+     ],
+     "ask": "Which graph best shows rainfall each month for a year?",
+     "repair": "Draw both and ask which shows the change month by month."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Find the median of 3, 8, 1, 6, 4.",
+     "answer": "4",
+     "shows": "median"
+    },
+    {
+     "question": "Find the mode of 2, 3, 3, 5, 3, 6.",
+     "answer": "3",
+     "shows": "mode"
+    }
+   ]
+  }
+ ]
+}

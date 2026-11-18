@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION",
+ "title": "School administration",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school's own staff chart; titles vary (Board of Management, Parents Association). Name posts, not people.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS",
+   "key_step": "The child names school leaders (headteacher, deputy, senior teachers, class teachers, Board of Management, prefects) and gives each one's duty.",
+   "floor": {
+    "prerequisite": "Knows who is in the Children's Government.",
+    "question": "Who chooses the Children's Government?",
+    "answer": "the learners"
+   },
+   "representations": [
+    "the school staff chart",
+    "leader and duty cards",
+    "a visit from the deputy headteacher"
+   ],
+   "steps": [
+    "Name the leader.",
+    "Say what they look after.",
+    "Match the duty.",
+    "Say who helps them."
+   ],
+   "contexts": [
+    "the headteacher at morning assembly",
+    "the class teacher marking the register",
+    "the BOM meeting about a new classroom"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write headteacher, class teacher, BOM."
+    },
+    {
+     "beat": "point",
+     "do": "Point at class teacher.",
+     "say": "What does the class teacher do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"looks after the class and the register\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the duty beside each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS.M_SA_DEPUTY_HEAD",
+     "listen_for": [
+      "The deputy headteacher"
+     ],
+     "ask": "Who is in charge of the whole school?",
+     "repair": "Ask who is in charge on a day when both are present and who helps."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS.M_SA_DUTY_MIX",
+     "listen_for": [
+      "The Board of Management"
+     ],
+     "ask": "Who takes the class register each morning?",
+     "repair": "Match each duty to the person whose desk or room it is done at."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS.M_SA_BOM_TEACHERS",
+     "listen_for": [
+      "Only the teachers"
+     ],
+     "ask": "Who is on the Board of Management?",
+     "repair": "Show the school's BOM list (posts only) and count who are not teachers."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS.M_SA_SUPPORT_NOT_STAFF",
+     "listen_for": [
+      "No, only teachers are"
+     ],
+     "ask": "Are the school cook and the guard part of the school community?",
+     "repair": "List what would happen if there were no cook or guard for a week."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who acts as the head of the school when the headteacher is away?",
+     "answer": "the deputy headteacher",
+     "shows": "deputy"
+    },
+    {
+     "question": "Who marks the class register every morning?",
+     "answer": "the class teacher",
+     "shows": "class teacher duty"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE",
+   "key_step": "The child puts school leaders in order of authority and says who reports to whom.",
+   "floor": {
+    "prerequisite": "Names school leaders and their duties.",
+    "question": "What does the headteacher do?",
+    "answer": "runs the whole school"
+   },
+   "representations": [
+    "an empty chart to fill in",
+    "post cards to place",
+    "string showing who reports to whom"
+   ],
+   "steps": [
+    "Place the headteacher at the top of the staff.",
+    "Then the deputy.",
+    "Then senior teachers and class teachers.",
+    "Then learners and their prefects."
+   ],
+   "contexts": [
+    "a prefect reporting a broken desk",
+    "a class teacher reporting to the deputy",
+    "the head reporting to the BOM"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an empty chart of four levels."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top level.",
+     "say": "Who goes at the top of the school staff?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the headteacher."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the levels with the child."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE.M_SA_ORDER_REVERSED",
+     "listen_for": [
+      "The class teachers"
+     ],
+     "ask": "On a school chart, who is placed directly under the headteacher?",
+     "repair": "Draw the chart from the top down, one level at a time."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE.M_SA_PREFECT_ABOVE",
+     "listen_for": [
+      "The headteacher"
+     ],
+     "ask": "Who reports to the class teacher?",
+     "repair": "Ask who gives prefects their duties."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE.M_SA_CLASS_TEACHER_TOP",
+     "listen_for": [
+      "The class teacher"
+     ],
+     "ask": "Who has more authority in the school: the class teacher or the headteacher?",
+     "repair": "Trace on the chart who the class teacher reports to."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE.M_SA_PARENTS_OUTSIDE",
+     "listen_for": [
+      "They do not"
+     ],
+     "ask": "How do parents take part in running a school?",
+     "repair": "Show the date of the next parents' meeting and what it decides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order from the top: class teacher, headteacher, deputy headteacher.",
+     "answer": "headteacher, deputy headteacher, class teacher",
+     "shows": "order of authority"
+    },
+    {
+     "question": "Does a prefect rank above a teacher?",
+     "answer": "No",
+     "shows": "prefects below teachers"
+    }
+   ]
+  }
+ ]
+}

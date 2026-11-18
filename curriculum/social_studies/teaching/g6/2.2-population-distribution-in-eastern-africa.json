@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_",
+ "title": "Population distribution in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a density map of the region and country areas and populations (teacher to give current figures). Density = people ÷ area.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
+   "key_step": "The child explains what makes places crowded (rain, soil, water, jobs, peace) or empty (dry, steep, forest, insecurity).",
+   "floor": {
+    "prerequisite": "Says where density is high and low in Kenya.",
+    "question": "Is the Lake Victoria basin densely or sparsely populated?",
+    "answer": "densely"
+   },
+   "representations": [
+    "a density map and a rainfall map side by side",
+    "factor cards",
+    "photos"
+   ],
+   "steps": [
+    "Find a crowded area.",
+    "Check its rain, soil and jobs.",
+    "Find an empty area.",
+    "Give the reason."
+   ],
+   "contexts": [
+    "the Ethiopian highlands",
+    "the Danakil desert",
+    "Kampala city"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two areas: one with rain clouds and farms, one with sand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sandy area.",
+     "say": "Why do few people live here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dry, no water."
+    },
+    {
+     "beat": "write",
+     "do": "Write pull and push factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_PEOPLE_DESERT",
+     "listen_for": [
+      "Land is too cheap"
+     ],
+     "ask": "Why do few people live in a desert?",
+     "repair": "Ask where a family would find water and food."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_MOUNTAIN_TOP",
+     "listen_for": [
+      "A steep, rocky mountain top"
+     ],
+     "ask": "Which place is more likely to be crowded?",
+     "repair": "Ask where it is easier to build and grow crops."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_FACTORY_REPEL",
+     "listen_for": [
+      "They do not; towns push people away"
+     ],
+     "ask": "Why do many people move to Nairobi and Kampala?",
+     "repair": "List what a town offers that a village may not."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_FOREST_DENSE",
+     "listen_for": [
+      "Yes, there is food everywhere"
+     ],
+     "ask": "Are thick rain forests densely populated?",
+     "repair": "Compare the density map with the forest map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two factors that attract many people to an area.",
+     "answer": "any two of: reliable rain, fertile soil, water, jobs, roads, peace",
+     "shows": "pull factors"
+    },
+    {
+     "question": "Why do few people live in the Chalbi Desert?",
+     "answer": "it is very dry with little water",
+     "shows": "push factor"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
+   "key_step": "The child locates crowded and empty areas of the region and keeps density apart from total population.",
+   "floor": {
+    "prerequisite": "Explains factors of population distribution.",
+    "question": "Give one reason people crowd near Lake Victoria.",
+    "answer": "good rain or fertile soil"
+   },
+   "representations": [
+    "a density map",
+    "a table of people and area",
+    "beans on a gridded map"
+   ],
+   "steps": [
+    "Read the density key.",
+    "Find the darkest areas.",
+    "Find the lightest.",
+    "Check density = people ÷ area."
+   ],
+   "contexts": [
+    "Rwanda's crowded hills",
+    "northern Kenya's sparse plains",
+    "Dar es Salaam"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: Country A 10 million people, 25,000 square km; Country B 100 million people, 1,000,000 square km."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Which has more people per square km?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for A."
+    },
+    {
+     "beat": "write",
+     "do": "Write A: 400 per square km, B: 100 per square km."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_DENSITY_TOTAL",
+     "listen_for": [
+      "The whole country"
+     ],
+     "ask": "Density is the number of people for what?",
+     "repair": "Compare two countries by people per square kilometre in a small table."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_RWANDA_EMPTY",
+     "listen_for": [
+      "Somalia"
+     ],
+     "ask": "Which country has high population density?",
+     "repair": "Give people and area for a small and a large country and divide."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_BIG_COUNTRY_DENSE",
+     "listen_for": [
+      "Ethiopia, it is bigger"
+     ],
+     "ask": "Ethiopia is much bigger than Rwanda. Which has the higher density?",
+     "repair": "Divide people by area for both, with rounded figures."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_CITY_COUNTRY",
+     "listen_for": [
+      "Yes, the whole country"
+     ],
+     "ask": "Nairobi is crowded. Is all of Kenya densely populated?",
+     "repair": "Shade Kenya on a density map: dark in some places, light in others."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name an area of high population density in Eastern Africa.",
+     "answer": "any of: the Lake Victoria basin, Kenya highlands, Ethiopian highlands, Rwanda, Burundi, a big city",
+     "shows": "dense area"
+    },
+    {
+     "question": "Does the country with the most people always have the highest density?",
+     "answer": "No, density depends on area too",
+     "shows": "density vs total"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
+   "key_step": "The child gives the effects of high population density.",
+   "floor": {
+    "prerequisite": "Locates densely populated areas.",
+    "question": "Name one densely populated country.",
+    "answer": "Rwanda or Burundi"
+   },
+   "representations": [
+    "effect cards",
+    "a drawing of a growing town",
+    "a T-chart: problems and solutions"
+   ],
+   "steps": [
+    "Name the crowded area.",
+    "Ask what happens to land, jobs and services.",
+    "Name the effect.",
+    "Suggest a way to manage it."
+   ],
+   "contexts": [
+    "small shambas in Kisii",
+    "crowded classrooms",
+    "slums in a big city"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a field split into four, then into sixteen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sixteen pieces.",
+     "say": "What has happened to each family's farm?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"smaller\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write land shortage and two more effects."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_MORE_LAND",
+     "listen_for": [
+      "Farms get bigger"
+     ],
+     "ask": "What happens to farms when families grow large in a crowded area?",
+     "repair": "Cut a paper farm among more and more children."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_SERVICES",
+     "listen_for": [
+      "They have too few learners and patients"
+     ],
+     "ask": "What pressure does a crowded area put on schools and hospitals?",
+     "repair": "Count seats in a class of 90."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_DENSE_NO_SLUMS",
+     "listen_for": [
+      "They do not"
+     ],
+     "ask": "Why do slums grow in crowded cities?",
+     "repair": "Count houses and families on a drawing of a growing town."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_FOREST_LOST",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can high population density harm forests?",
+     "repair": "Show a before-and-after photo of a cleared hill."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two effects of high population density.",
+     "answer": "any two of: land shortage, food shortage, unemployment, pressure on services, forest clearing, slums, pollution",
+     "shows": "effects"
+    },
+    {
+     "question": "Why are classrooms crowded where density is high?",
+     "answer": "many children and not enough schools",
+     "shows": "pressure on services"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "sub_strand": "SOCI.G6.RESOUR.BEEF_FARMING",
+ "title": "Beef Farming",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): beef breeds Boran and Zebu; beef areas include Laikipia, Kajiado, Narok and the Athi plains; Ankole in Uganda; Shinyanga in Tanzania. Kenya Meat Commission at Athi River.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
+   "key_step": "The child explains the factors that favour beef farming (grassland, water, suitable breeds, disease control, markets).",
+   "floor": {
+    "prerequisite": "Names natural resources.",
+    "question": "Name one natural resource on a farm.",
+    "answer": "any of: soil, water, grass"
+   },
+   "representations": [
+    "factor cards",
+    "breed photos",
+    "a ranch map"
+   ],
+   "steps": [
+    "Name the factor.",
+    "Say how it helps cattle.",
+    "Check the area has it.",
+    "Decide if beef farming will do well."
+   ],
+   "contexts": [
+    "a ranch in Laikipia",
+    "a cattle dip",
+    "a livestock market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ranch with grass, a water pan and cattle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the water pan.",
+     "say": "Why does the ranch need this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"cattle drink\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write four factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_RAIN_CROP",
+     "listen_for": [
+      "A small crop farm in a wet highland"
+     ],
+     "ask": "Which area suits beef ranching best?",
+     "repair": "Ask what cattle eat and how much land they need."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_DISEASE_NO",
+     "listen_for": [
+      "They are not important"
+     ],
+     "ask": "Why are vets important for beef farmers?",
+     "repair": "Ask what foot-and-mouth does to a herd."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_DAIRY_BEEF",
+     "listen_for": [
+      "Friesian"
+     ],
+     "ask": "Which breed is kept mainly for beef in Kenya?",
+     "repair": "Compare photos of a Friesian (milk) and a Boran (beef)."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_MARKET_NONE",
+     "listen_for": [
+      "They do not"
+     ],
+     "ask": "Why does a beef farmer need roads?",
+     "repair": "Trace cattle from a ranch to the market and the meat factory."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two factors that favour beef farming.",
+     "answer": "any two of: large grassland, water, warm climate, suitable breeds, disease control, market, roads",
+     "shows": "factors"
+    },
+    {
+     "question": "Name a beef breed.",
+     "answer": "Boran or Zebu",
+     "shows": "breed"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
+   "key_step": "The child locates the main beef farming areas of Eastern Africa.",
+   "floor": {
+    "prerequisite": "Explains factors of beef farming.",
+    "question": "Why does beef farming need large grassland?",
+    "answer": "cattle need pasture"
+   },
+   "representations": [
+    "a regional map",
+    "area cards",
+    "a vegetation map overlay"
+   ],
+   "steps": [
+    "Find large grasslands.",
+    "Name the beef area.",
+    "Say which country.",
+    "Check it fits the factors."
+   ],
+   "contexts": [
+    "Kajiado ranches",
+    "Ankole in Uganda",
+    "Shinyanga in Tanzania"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya, Uganda and Tanzania."
+    },
+    {
+     "beat": "point",
+     "do": "Point at south-western Uganda.",
+     "say": "Which beef area is here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Ankole."
+    },
+    {
+     "beat": "write",
+     "do": "Mark three areas."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_BEEF_COAST",
+     "listen_for": [
+      "The tea highlands of Kericho"
+     ],
+     "ask": "Which area is known for beef ranching in Kenya?",
+     "repair": "Ask which areas are dry grassland."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_SOMALIA",
+     "listen_for": [
+      "Fruit"
+     ],
+     "ask": "What does Somalia export from its dry lands?",
+     "repair": "Say animals feed on thorny bush and walk long distances to the port."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_HIGHLAND_ONLY",
+     "listen_for": [
+      "No, only in the highlands"
+     ],
+     "ask": "Is beef farming done on the dry plains of Kajiado?",
+     "repair": "Shade beef areas and dairy areas on the map in two colours."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_ANKOLE_KENYA",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is the Ankole cattle area?",
+     "repair": "Put Ankole on the map in south-western Uganda."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a beef farming area in Kenya.",
+     "answer": "any of: Laikipia, Kajiado, Narok, the Athi plains",
+     "shows": "Kenyan area"
+    },
+    {
+     "question": "Is the Ankole cattle area in Kenya or Uganda?",
+     "answer": "Uganda",
+     "shows": "regional area"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
+   "key_step": "The child says how beef farming helps the economy.",
+   "floor": {
+    "prerequisite": "Explains why economic activities matter.",
+    "question": "Give one way farming helps a county.",
+    "answer": "any such as jobs or income"
+   },
+   "representations": [
+    "product cards",
+    "a chain from ranch to shop",
+    "a leather shoe"
+   ],
+   "steps": [
+    "Name the product.",
+    "Name who gains.",
+    "Name what the country earns.",
+    "Name industries that use it."
+   ],
+   "contexts": [
+    "the Kenya Meat Commission",
+    "a tannery",
+    "a butcher"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow with arrows to meat, hide and manure."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the hide.",
+     "say": "What industry uses this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for leather."
+    },
+    {
+     "beat": "write",
+     "do": "Write a gain on each arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_MEAT_ONLY",
+     "listen_for": [
+      "Cooking oil"
+     ],
+     "ask": "What is made from the hides and skins of cattle?",
+     "repair": "List a product from each part of the animal."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_NO_JOBS",
+     "listen_for": [
+      "Nobody, it is just for food"
+     ],
+     "ask": "Who earns a living from the beef industry?",
+     "repair": "Name every person from ranch to shop."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_HIDES_WASTE",
+     "listen_for": [
+      "Thrown away"
+     ],
+     "ask": "What are cattle hides used for?",
+     "repair": "Show a leather shoe and trace it back to a hide."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_NO_EXPORT",
+     "listen_for": [
+      "No, it is all eaten at home"
+     ],
+     "ask": "Do Eastern African countries sell beef and live animals abroad?",
+     "repair": "Show live animals shipped from Berbera or Somalia ports (to confirm)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways beef farming helps the economy.",
+     "answer": "any two of: food, jobs, income, foreign exchange, hides for leather, manure",
+     "shows": "economy"
+    },
+    {
+     "question": "What are hides used for?",
+     "answer": "making leather",
+     "shows": "by-product"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
+   "key_step": "The child pairs the challenges of beef farming with their solutions.",
+   "floor": {
+    "prerequisite": "Says how beef farming helps the economy.",
+    "question": "Give one product from beef cattle.",
+    "answer": "meat, hides or manure"
+   },
+   "representations": [
+    "problem and solution cards",
+    "a matching game",
+    "a farmer's story"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Ask what causes it.",
+    "Pick the solution that removes the cause.",
+    "Check the pair makes sense."
+   ],
+   "contexts": [
+    "drought in Kajiado",
+    "foot-and-mouth disease",
+    "overgrazing"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write drought, disease, overgrazing."
+    },
+    {
+     "beat": "point",
+     "do": "Point at drought.",
+     "say": "What helps cattle in a drought?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for water pans or hay."
+    },
+    {
+     "beat": "write",
+     "do": "Write each solution."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_SOLUTION_SWAP",
+     "listen_for": [
+      "Dipping them"
+     ],
+     "ask": "What helps cattle during a long drought?",
+     "repair": "Ask what the cattle lack: water and food, or cure for disease?"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_GRAZE_MORE",
+     "listen_for": [
+      "Keep more cattle"
+     ],
+     "ask": "How can overgrazing be reduced?",
+     "repair": "Show a field eaten bare."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_RUSTLING_DIP",
+     "listen_for": [
+      "Dipping the cattle"
+     ],
+     "ask": "Which solution fits cattle rustling?",
+     "repair": "Pair each problem with the cause: theft needs security, ticks need dips."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_PRICE_MORE_COWS",
+     "listen_for": [
+      "Keep more cattle"
+     ],
+     "ask": "Beef prices are low. What helps farmers?",
+     "repair": "Ask what happens to price when everyone brings more cattle to market."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which solution fits foot-and-mouth disease?",
+     "answer": "vaccination",
+     "shows": "pairs"
+    },
+    {
+     "question": "Which solution fits overgrazing?",
+     "answer": "rotational grazing and fewer animals",
+     "shows": "pairs"
+    }
+   ]
+  }
+ ]
+}

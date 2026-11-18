@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.RESOUR.FISHING_IN_KENYA",
+ "title": "Fishing in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: Lake Victoria is the main inland fishing ground; Nile perch and tilapia; nets with small holes catch young fish.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS",
+   "key_step": "The child names and locates Kenya's main inland fishing grounds and tells inland from the sea.",
+   "floor": {
+    "prerequisite": "Knows lakes and rivers give fish.",
+    "question": "Name one thing people get from a lake.",
+    "answer": "fish or water"
+   },
+   "representations": [
+    "a map of Kenya with lakes and dams",
+    "fish pictures",
+    "a sort: inland or sea"
+   ],
+   "steps": [
+    "Find the water body.",
+    "Ask: is it inland or the sea?",
+    "Ask: does it have fish to catch?",
+    "Name it as a fishing ground."
+   ],
+   "contexts": [
+    "Lake Victoria fishing boats at Dunga",
+    "Lake Turkana fishers at Kalokol",
+    "fish farming in a pond in Kakamega"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya with three lakes and the coast."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the biggest lake in the west.",
+     "say": "What is this main fishing ground?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Lake Victoria."
+    },
+    {
+     "beat": "write",
+     "do": "Write inland beside the lakes and sea beside the coast."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_SEA_AS_INLAND",
+     "listen_for": [
+      "The Indian Ocean"
+     ],
+     "ask": "Which of these is an inland fishing ground?",
+     "repair": "Inland means within the country, away from the sea. Sort water bodies on a described map."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_SODA_LAKE",
+     "listen_for": [
+      "Lake Magadi"
+     ],
+     "ask": "Which lake is a main fishing ground?",
+     "repair": "Ask whether fish can live in water full of soda."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_REGION_MIX",
+     "listen_for": [
+      "In the south, near Tanzania"
+     ],
+     "ask": "Where is Lake Turkana?",
+     "repair": "Link the lake to the dry north and Lodwar town. Lake Victoria is western."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS.M_FK_RIVER_NOT",
+     "listen_for": [
+      "No, fish only come from lakes"
+     ],
+     "ask": "Can fish be farmed in Kenya?",
+     "repair": "Show a photo of a fish pond in a farmer's shamba."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is Kenya's main inland fishing ground?",
+     "answer": "Lake Victoria",
+     "shows": "main ground"
+    },
+    {
+     "question": "Is the Indian Ocean an inland fishing ground?",
+     "answer": "No, it is the sea",
+     "shows": "inland vs sea"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY",
+   "key_step": "The child says how fishing helps Kenya (food, jobs, money at home and abroad) and how to keep fish for the future.",
+   "floor": {
+    "prerequisite": "Names Kenya's inland fishing grounds.",
+    "question": "Name one inland fishing ground.",
+    "answer": "any lake such as Lake Victoria"
+   },
+   "representations": [
+    "a chain: fisher, trader, processor, buyer",
+    "two nets with different holes",
+    "a fish export story"
+   ],
+   "steps": [
+    "Name the people who gain.",
+    "Say what each gets.",
+    "Say what Kenya earns.",
+    "Say how to keep fish for later."
+   ],
+   "contexts": [
+    "fish traders at a beach market",
+    "a fish processing plant in Kisumu",
+    "closed season on Lake Victoria"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a fish with four arrows out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an arrow.",
+     "say": "Who gains from this fish?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for fisher, trader, buyer, Kenya."
+    },
+    {
+     "beat": "write",
+     "do": "Write a gain on each arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY.M_FK_FOOD_ONLY",
+     "listen_for": [
+      "It only feeds the fishing family"
+     ],
+     "ask": "How does fishing help the country as well as the family?",
+     "repair": "Follow one fish from the boat to the market, the factory and the plate."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY.M_FK_NO_SUSTAIN",
+     "listen_for": [
+      "There is no reason"
+     ],
+     "ask": "Why should fishers not catch young fish?",
+     "repair": "Compare catching all the chickens with keeping some to lay eggs."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY.M_FK_EXPORT_NONE",
+     "listen_for": [
+      "No, only in Kenya"
+     ],
+     "ask": "Is Nile perch from Lake Victoria sold abroad?",
+     "repair": "Trace the route of Nile perch fillets from Kisumu to the airport."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY.M_FK_NET_ANY",
+     "listen_for": [
+      "It is not; it catches more fish"
+     ],
+     "ask": "Why is a net with very small holes bad for fishing?",
+     "repair": "Pour beans and rice through two sieves: the fine one keeps even the smallest."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways fishing helps Kenya.",
+     "answer": "any two of: food, jobs, income, money from exports",
+     "shows": "fishing and economy"
+    },
+    {
+     "question": "Why should fishers not catch young fish?",
+     "answer": "So fish can grow and breed for the future",
+     "shows": "sustainability"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.PEOPLE.EARLY_CIVILISATION",
+ "title": "Early Civilisation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Swahili city-states Mombasa, Malindi, Lamu, Kilwa, Zanzibar; trade by monsoon dhows with Arabia, Persia, India and China; Kiswahili is a Bantu language with Arabic loan words.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI",
+   "key_step": "The child names the Swahili city-states, their trade partners and goods, and what the civilisation gave the world.",
+   "floor": {
+    "prerequisite": "Gives the factors of the Indian Ocean trade.",
+    "question": "What carried dhows across the Indian Ocean?",
+    "answer": "the monsoon winds"
+   },
+   "representations": [
+    "a coastal map",
+    "trade goods cards",
+    "photos of Lamu and Gedi"
+   ],
+   "steps": [
+    "Name a city-state.",
+    "Name its trade partners.",
+    "Name the goods.",
+    "Name its gifts: Kiswahili, coral-stone building, coastal culture."
+   ],
+   "contexts": [
+    "Lamu Old Town",
+    "Kilwa's ruins",
+    "dhows arriving with the monsoon"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the coast with five dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the southern dot.",
+     "say": "Which city-state is here, in Tanzania?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Kilwa."
+    },
+    {
+     "beat": "write",
+     "do": "Label the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_WHERE",
+     "listen_for": [
+      "Timbuktu"
+     ],
+     "ask": "Which of these was a Swahili city-state?",
+     "repair": "Find the coast on a map."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_TRADE",
+     "listen_for": [
+      "First with Europe"
+     ],
+     "ask": "With whom did the Swahili trade by dhow?",
+     "repair": "Look at the monsoon winds on a map."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_LANGUAGE",
+     "listen_for": [
+      "The Arabic language"
+     ],
+     "ask": "What is Kiswahili?",
+     "repair": "Ask which words are Bantu and which came from trade."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI.M_G8_SW_HOUSES_MUD",
+     "listen_for": [
+      "Mud and grass only"
+     ],
+     "ask": "What were many Swahili houses and mosques built of?",
+     "repair": "Show photos of coral-stone buildings in Lamu and Gedi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two Swahili city-states.",
+     "answer": "any two of: Mombasa, Malindi, Lamu, Kilwa, Zanzibar",
+     "shows": "city-states"
+    },
+    {
+     "question": "What is Kiswahili?",
+     "answer": "a Bantu language with some Arabic words",
+     "shows": "language"
+    }
+   ]
+  }
+ ]
+}

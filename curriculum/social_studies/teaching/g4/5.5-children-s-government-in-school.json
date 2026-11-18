@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN",
+ "title": "Children’s Government in school",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Posts and names in the Children's Government vary by school; use the school's own and invite a member to speak.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION",
+   "key_step": "The child says the Children's Government is made up of learners elected by classmates, with a leader and ministers, guided by a patron teacher.",
+   "floor": {
+    "prerequisite": "Knows how a school election works.",
+    "question": "How is a class prefect chosen in a democratic way?",
+    "answer": "by a vote of the class"
+   },
+   "representations": [
+    "the school's Children's Government chart",
+    "name cards of posts",
+    "a visit from a member"
+   ],
+   "steps": [
+    "Say who the members are: learners.",
+    "Say how they are chosen: elected by classmates.",
+    "Name the leader and the ministers.",
+    "Name the patron who guides them."
+   ],
+   "contexts": [
+    "the school president and deputy",
+    "a minister for the environment",
+    "the patron teacher at a meeting"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a box for the president with boxes below for ministers."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ministers.",
+     "say": "Who chose these learners?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"the learners voted\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"elected by learners\" and add the patron teacher at the side."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_TEACHERS_ONLY",
+     "listen_for": [
+      "The teachers"
+     ],
+     "ask": "Who forms the Children's Government?",
+     "repair": "Ask who voted for last year's prefects."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_APPOINTED",
+     "listen_for": [
+      "The head teacher picks them all"
+     ],
+     "ask": "How are members of the Children's Government chosen?",
+     "repair": "Walk through one election: nomination, campaign, vote."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_TOP_MARKS",
+     "listen_for": [
+      "Only the top learners in exams"
+     ],
+     "ask": "Who can be elected to the Children's Government?",
+     "repair": "Name a real member who leads well but is not top in class, if the school has one."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_FOREVER",
+     "listen_for": [
+      "Until they leave the school"
+     ],
+     "ask": "How long does a Children's Government member serve?",
+     "repair": "Show the school's election calendar."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who are the members of the Children's Government?",
+     "answer": "learners elected by their classmates",
+     "shows": "composition"
+    },
+    {
+     "question": "Who guides the Children's Government?",
+     "answer": "a patron teacher",
+     "shows": "patron"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS",
+   "key_step": "The child names what the Children's Government does (speaks for learners, helps keep order and cleanliness, organises activities) and what it does not (punish, run the school).",
+   "floor": {
+    "prerequisite": "Knows who is in the Children's Government.",
+    "question": "Who chooses members of the Children's Government?",
+    "answer": "the learners"
+   },
+   "representations": [
+    "function cards: does and does not",
+    "the minutes of a school meeting",
+    "a role play of a minister at work"
+   ],
+   "steps": [
+    "Name the job.",
+    "Ask whether it helps learners and the school.",
+    "Ask whether it belongs to the teachers instead.",
+    "Sort it."
+   ],
+   "contexts": [
+    "a minister for health checking hand-washing points",
+    "organising a games day",
+    "taking learners' worries to the head teacher"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write two jobs: \"organise a clean-up\" and \"cane a late learner\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each.",
+     "say": "Which one is a job of the Children's Government?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the clean-up."
+    },
+    {
+     "beat": "write",
+     "do": "Cross out the other and write \"only teachers handle discipline, and never by caning\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_PUNISH",
+     "listen_for": [
+      "Caning learners who are late"
+     ],
+     "ask": "Which is NOT a duty of the Children's Government?",
+     "repair": "Ask what a prefect can do kindly: remind, report, help."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_RUN_SCHOOL",
+     "listen_for": [
+      "The Children's Government"
+     ],
+     "ask": "Who runs the school?",
+     "repair": "Draw who reports to whom."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_FOR_TEACHERS",
+     "listen_for": [
+      "Nothing; it only obeys teachers"
+     ],
+     "ask": "Learners want a covered place to eat lunch. What can the Children's Government do?",
+     "repair": "Act out a minister taking a learners' request to the head teacher."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_ONLY_ORDER",
+     "listen_for": [
+      "Only keeping learners quiet"
+     ],
+     "ask": "Which is a job of the Children's Government: organising a tree-planting day, or only keeping learners quiet?",
+     "repair": "List what each minister does: environment, health, games, library."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one function of the Children's Government.",
+     "answer": "any of: speak for learners, help keep order and cleanliness, organise activities",
+     "shows": "function"
+    },
+    {
+     "question": "Can the Children's Government run the school instead of the head teacher?",
+     "answer": "No",
+     "shows": "limits of its role"
+    }
+   ]
+  }
+ ]
+}

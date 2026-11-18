@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT",
+ "title": "Development of Transport",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: the old railway from Mombasa to Kisumu was built from 1896; the Standard Gauge Railway opened Mombasa to Nairobi in 2017 and on to Naivasha in 2019. Road safety uses the school's own crossing.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT",
+   "key_step": "The child names early means of transport (people carrying, animals, canoes and dhows, caravans) and sorts them from modern ones.",
+   "floor": {
+    "prerequisite": "Knows people trade with each other.",
+    "question": "What did a farmer do with extra grain long ago?",
+    "answer": "traded it with others"
+   },
+   "representations": [
+    "a timeline of transport",
+    "picture cards: early and modern",
+    "a model dhow"
+   ],
+   "steps": [
+    "Name the means.",
+    "Ask: did it need an engine?",
+    "Place it on the timeline.",
+    "Say what it carried."
+   ],
+   "contexts": [
+    "a woman carrying firewood on her back",
+    "camels in Marsabit",
+    "dhows at Lamu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line with \"long ago\" on the left and \"today\" on the right."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the left end.",
+     "say": "What means of transport goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an early means."
+    },
+    {
+     "beat": "write",
+     "do": "Add pictures to both ends."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT.M_TR_EARLY_MODERN_MIX",
+     "listen_for": [
+      "A lorry"
+     ],
+     "ask": "Which was an early means of transport in Kenya?",
+     "repair": "Sort cards by what the grandparents' grandparents could have used."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT.M_TR_WALK_NOT_TRANSPORT",
+     "listen_for": [
+      "They did not move goods"
+     ],
+     "ask": "How did people move goods before roads and lorries?",
+     "repair": "Ask how salt reached an inland home a hundred years ago."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT.M_TR_DHOW_MODERN",
+     "listen_for": [
+      "Modern, it is still used in Lamu"
+     ],
+     "ask": "Is the dhow an early or a modern means of transport?",
+     "repair": "Put the dhow on a timeline beside the ship and the aeroplane."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT.M_TR_ANIMAL_NOT",
+     "listen_for": [
+      "No, it is just an animal"
+     ],
+     "ask": "Is a donkey carrying water a means of transport?",
+     "repair": "Ask how water reaches a home with no tap and no car."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two early means of transport.",
+     "answer": "any two of: carrying on head or back, donkeys, camels, oxen, canoes, dhows, caravans",
+     "shows": "early means"
+    },
+    {
+     "question": "Is a lorry an early means of transport?",
+     "answer": "No, it is modern",
+     "shows": "sorts early from modern"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT",
+   "key_step": "The child names the modern means of transport in Kenya and picks the best one for a job.",
+   "floor": {
+    "prerequisite": "Names early means of transport.",
+    "question": "Name one early means of transport.",
+    "answer": "any early means such as a donkey"
+   },
+   "representations": [
+    "job cards",
+    "a transport map of Kenya",
+    "a timeline from the old railway to the SGR"
+   ],
+   "steps": [
+    "Read the job.",
+    "Ask: is it on land, water, air or underground?",
+    "Ask: heavy or light, near or far?",
+    "Pick the means."
+   ],
+   "contexts": [
+    "the SGR from Mombasa to Nairobi",
+    "a ferry at Likoni",
+    "flowers flown from JKIA"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"carry fresh flowers to Europe quickly\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"quickly\".",
+     "say": "Which means is fastest over a long way?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for air."
+    },
+    {
+     "beat": "write",
+     "do": "Write air transport."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT.M_TR_MODE_MIX",
+     "listen_for": [
+      "A bicycle"
+     ],
+     "ask": "Which is the best way to carry many tonnes of fuel across the country?",
+     "repair": "Compare tonnes and speed: a big load, a long way, or a small fast parcel."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT.M_TR_SGR_FIRST",
+     "listen_for": [
+      "The Standard Gauge Railway"
+     ],
+     "ask": "Which railway was built first in Kenya?",
+     "repair": "Tell the story of the railway built from Mombasa toward Lake Victoria over 100 years ago."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT.M_TR_PIPELINE_NOT",
+     "listen_for": [
+      "Only by lorries"
+     ],
+     "ask": "How is oil moved from Mombasa to Nairobi?",
+     "repair": "Show the pipeline route on the map."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT.M_TR_AIR_HEAVY",
+     "listen_for": [
+      "An aeroplane, it is fastest"
+     ],
+     "ask": "Which is best for carrying 1,000 bags of cement from Mombasa to Nairobi?",
+     "repair": "Compare the cost of flying one bag with sending it by train."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which means would you use to cross the Likoni channel?",
+     "answer": "a ferry",
+     "shows": "picks a means"
+    },
+    {
+     "question": "Which railway came first in Kenya: the SGR or the old Mombasa to Kisumu railway?",
+     "answer": "the old Mombasa to Kisumu railway",
+     "shows": "railway history"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY",
+   "key_step": "The child picks safe actions on and near roads and says why the unsafe ones are dangerous.",
+   "floor": {
+    "prerequisite": "Knows rain makes roads more dangerous.",
+    "question": "Why must drivers slow down in the rain?",
+    "answer": "roads are slippery and it is hard to see"
+   },
+   "representations": [
+    "a school crossing",
+    "action cards: safe and unsafe",
+    "a role play of crossing"
+   ],
+   "steps": [
+    "Read the action.",
+    "Ask what could happen.",
+    "Sort safe or unsafe.",
+    "Give the safe action."
+   ],
+   "contexts": [
+    "crossing at a zebra crossing",
+    "wearing a helmet on a boda boda",
+    "waiting at the bus stop"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a road with a zebra crossing and a child in the middle of the road far from it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child.",
+     "say": "Is this child crossing safely?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no and the reason."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the child at the crossing looking both ways."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY.M_TR_CROSS_ANYWHERE",
+     "listen_for": [
+      "Anywhere, if the road looks empty"
+     ],
+     "ask": "Where is the safest place to cross the road?",
+     "repair": "Ask what a driver at speed can see around a bend."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY.M_TR_BELT_LATER",
+     "listen_for": [
+      "Only on long trips"
+     ],
+     "ask": "When should a boda boda rider and passenger wear helmets?",
+     "repair": "Ask how fast a crash can happen on a short road."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY.M_TR_PHONE_CROSS",
+     "listen_for": [
+      "Yes, if you walk fast"
+     ],
+     "ask": "Is it safe to cross the road while looking at a phone?",
+     "repair": "Act it: one learner crosses looking at a \"phone\" while another plays a car."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY.M_TR_BODABODA_THREE",
+     "listen_for": [
+      "As many as fit"
+     ],
+     "ask": "How many passengers may ride on a boda boda?",
+     "repair": "Show the rule and ask why extra people make it unstable."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the safest place to cross a busy road?",
+     "answer": "at a zebra crossing or footbridge",
+     "shows": "safe crossing"
+    },
+    {
+     "question": "Should you wear a seat belt on a short trip?",
+     "answer": "Yes, on every trip",
+     "shows": "seat belt"
+    }
+   ]
+  }
+ ]
+}

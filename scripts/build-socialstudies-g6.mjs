@@ -8,6 +8,8 @@
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/socialstudies-g6-skills.mjs';
+import { SUBS as DEPTH } from './data/socialstudies-depth/g6.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/social_studies/g6.json', import.meta.url);
 const g6 = JSON.parse(readFileSync(path, 'utf8'));
@@ -48,5 +50,9 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
 }
 g6.totals = { ...g6.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
 g6.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g6-non-question-outcomes-2026-11-12.md";
+// Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g6.mjs adds prerequisites, misconceptions to four per skill (with a real
+// cause for each first-pass one) and the teaching pack in curriculum/social_studies/teaching/g6/, through scripts/science-depth.mjs.
+const depth = applyDepth(g6, DEPTH, { dir: 'social_studies', grade: 6, prefix: P, derive: true });
+g6.status = g6.status.replace(/; depth pass 18 Nov 2026.*$/, '') + '; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g6)';
 writeFileSync(path, JSON.stringify(g6, null, 1) + '\n');
-console.log(`social studies g6: ${D.SKILLS.length} skills, ${nPre} prerequisites (${nG5} back to Grade 5 skills), ${D.MIS.length} misconceptions, ${nLead} forward links to Grade 7 outcomes`);
+console.log(`social studies g6: ${g6.totals.skills} skills, ${g6.totals.prerequisites} prerequisites, ${g6.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);

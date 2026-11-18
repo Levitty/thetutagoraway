@@ -9,6 +9,8 @@
 // ============================================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import * as D from './data/socialstudies-g7-skills.mjs';
+import { SUBS as DEPTH } from './data/socialstudies-depth/g7.mjs';
+import { applyDepth } from './science-depth.mjs';
 
 const path = new URL('../curriculum/social_studies/g7.json', import.meta.url);
 const g7 = JSON.parse(readFileSync(path, 'utf8'));
@@ -61,5 +63,9 @@ for (const [skill, short, error, q, wrong, right, cause, help, feedback, source]
 }
 g7.totals = { ...g7.totals, skills: D.SKILLS.length, prerequisites: nPre, misconceptions: D.MIS.length };
 g7.status = "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g7-non-question-outcomes-2026-11-13.md";
+// Depth pass (18 Nov 2026): scripts/data/socialstudies-depth/g7.mjs adds prerequisites, misconceptions to four per skill (with a real
+// cause for each first-pass one) and the teaching pack in curriculum/social_studies/teaching/g7/, through scripts/science-depth.mjs.
+const depth = applyDepth(g7, DEPTH, { dir: 'social_studies', grade: 7, prefix: P, derive: true });
+g7.status = g7.status.replace(/; depth pass 18 Nov 2026.*$/, '') + '; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g7)';
 writeFileSync(path, JSON.stringify(g7, null, 1) + '\n');
-console.log(`social studies g7: ${D.SKILLS.length} skills, ${nPre} prerequisites (${nG6} back to Grade 6 skills, ${nAdded} added to honour Grade 6 links), ${D.MIS.length} misconceptions, ${nLead} forward links to Grade 8 outcomes; Grade 6 links honoured: ${honoured}/${G6LEADS.length}`);
+console.log(`social studies g7: ${g7.totals.skills} skills, ${g7.totals.prerequisites} prerequisites, ${g7.totals.misconceptions} misconceptions; depth pass ${depth.subs} of ${depth.of} sub-strands (+${depth.pre} prerequisites, +${depth.mis} misconceptions, ${depth.fix} causes fixed, ${depth.pack} teaching pack entries)`);

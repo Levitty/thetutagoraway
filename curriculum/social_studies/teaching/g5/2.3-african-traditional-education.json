@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC",
+ "title": "African Traditional Education",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring a riddle, a proverb and a short story the class knows. Ask learners what elders at home taught them. Treat traditional education with respect, not as \"the old days\".",
+ "skills": [
+  {
+   "skill": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS",
+   "key_step": "The child names the methods of African traditional education (storytelling, proverbs, riddles, songs, observation, learning by doing, initiation) and says the community taught.",
+   "floor": {
+    "prerequisite": "Names aspects of traditional culture.",
+    "question": "Name one aspect of traditional culture.",
+    "answer": "any of: dressing, food, housing, artefacts, sports, ceremonies"
+   },
+   "representations": [
+    "a riddle game",
+    "a proverb on the board",
+    "a demonstration of a craft"
+   ],
+   "steps": [
+    "Name the method.",
+    "Give an example.",
+    "Say who taught it.",
+    "Say what was learnt."
+   ],
+   "contexts": [
+    "an evening story by the fire",
+    "a girl learning to make pots by watching",
+    "a boy herding with his father"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a riddle the class knows."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the riddle.",
+     "say": "What is this method of teaching called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for riddles."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more methods with examples."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS.M_TE_NO_SCHOOL",
+     "listen_for": [
+      "They did not learn anything"
+     ],
+     "ask": "How did children learn before schools with classrooms were built?",
+     "repair": "Ask how a child learned to herd or farm, and who taught her."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS.M_TE_METHOD_MIX",
+     "listen_for": [
+      "Storytelling"
+     ],
+     "ask": "A girl learns to cook by helping her aunt every day. Which method is this?",
+     "repair": "Describe three scenes and have the child name each: a story, a song, a task."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS.M_TE_TEACHER_ONLY",
+     "listen_for": [
+      "One teacher in a classroom"
+     ],
+     "ask": "Who taught children in African traditional education?",
+     "repair": "Ask learners what they learnt from a grandparent."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS.M_TE_RIDDLE_PLAY",
+     "listen_for": [
+      "Only to make children laugh"
+     ],
+     "ask": "Why did grandmothers tell stories in the evening?",
+     "repair": "Tell the hare and the hyena and ask what the story teaches."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two methods used in African traditional education.",
+     "answer": "any two of: storytelling, proverbs, riddles, songs and dances, observation, learning by doing, initiation",
+     "shows": "methods"
+    },
+    {
+     "question": "A boy learns to herd by going with his father. What method is this?",
+     "answer": "learning by doing or observation",
+     "shows": "names a method"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES",
+   "key_step": "The child links traditional teaching to the values it built (respect, honesty, hard work, sharing, courage) and applies one today.",
+   "floor": {
+    "prerequisite": "Names methods of traditional education.",
+    "question": "Give one method of traditional education.",
+    "answer": "any method such as storytelling"
+   },
+   "representations": [
+    "value cards",
+    "a proverb with its meaning",
+    "a story with a lesson"
+   ],
+   "steps": [
+    "Name the practice.",
+    "Ask what it taught children to be.",
+    "Name the value.",
+    "Say how we show it now."
+   ],
+   "contexts": [
+    "greeting elders first",
+    "sharing food with visitors",
+    "working together at harvest"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write a proverb such as \"Unity is strength\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the proverb.",
+     "say": "What value does it teach?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for unity or working together."
+    },
+    {
+     "beat": "write",
+     "do": "Write how the class can show it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES.M_TE_ONLY_SKILLS",
+     "listen_for": [
+      "Nothing else"
+     ],
+     "ask": "What did traditional education teach besides skills?",
+     "repair": "Read a proverb and ask what it teaches about behaviour."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES.M_TE_OUTDATED",
+     "listen_for": [
+      "It is not useful now"
+     ],
+     "ask": "Why is African traditional education still useful?",
+     "repair": "Pick a value the school teaches and find the same one in a proverb."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES.M_TE_BOYS_ONLY",
+     "listen_for": [
+      "No, only boys"
+     ],
+     "ask": "Did girls receive traditional education?",
+     "repair": "List skills girls learnt: cooking, farming, pottery, caring for the family."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES.M_TE_VALUE_MATCH",
+     "listen_for": [
+      "Courage"
+     ],
+     "ask": "Children were taught to share food with visitors. Which value did this teach?",
+     "repair": "Act the practice and ask what kind of person it makes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Children greeted elders with respect. Which value was taught?",
+     "answer": "respect",
+     "shows": "practice to value"
+    },
+    {
+     "question": "Give one way traditional education is still useful today.",
+     "answer": "any of: it teaches values, respect, culture, skills",
+     "shows": "still useful"
+    }
+   ]
+  }
+ ]
+}

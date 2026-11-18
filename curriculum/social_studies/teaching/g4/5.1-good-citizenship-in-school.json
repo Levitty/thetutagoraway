@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO",
+ "title": "Good Citizenship in School",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use real class situations, never naming a learner as a bad example.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES",
+   "key_step": "The child names the qualities of a good school citizen from what a learner does (respect, honesty, responsibility, helping, care for property).",
+   "floor": {
+    "prerequisite": "Knows the values of the school.",
+    "question": "Name one value of our school.",
+    "answer": "any value such as respect or honesty"
+   },
+   "representations": [
+    "story cards of school situations",
+    "a class chart \"a good citizen does...\"",
+    "a role play of welcoming a new learner"
+   ],
+   "steps": [
+    "Read what the learner did.",
+    "Ask whether it helps the school and others.",
+    "Name the quality.",
+    "Say what a good citizen would do if the action was poor."
+   ],
+   "contexts": [
+    "helping a learner who has fallen",
+    "telling a teacher about bullying",
+    "switching off a tap left running"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Otieno switched off a running tap.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Which quality does Otieno show?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for responsibility or care for property."
+    },
+    {
+     "beat": "write",
+     "do": "Write the quality and add it to the chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_CLEVER_ONLY",
+     "listen_for": [
+      "Only the learner with the top marks"
+     ],
+     "ask": "Who is a good citizen in school?",
+     "repair": "Ask what a learner can do for others even with low marks."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_OBEY_ONLY",
+     "listen_for": [
+      "The one who never speaks"
+     ],
+     "ask": "Which learner is a good citizen?",
+     "repair": "Role play a learner who sees someone bullied: what is the good action?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_REPORT_BAD",
+     "listen_for": [
+      "Say nothing, because telling tales is wrong"
+     ],
+     "ask": "You see a learner being bullied. What does a good citizen do?",
+     "repair": "Ask: is it gossip to tell a teacher that someone is being hurt?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_RICH_GOOD",
+     "listen_for": [
+      "The learner with the new bag"
+     ],
+     "ask": "Who is a good citizen in school: a learner with a new bag, or a learner who helps others and keeps the class clean?",
+     "repair": "Ask what each learner does for the school."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two qualities of a good citizen in school.",
+     "answer": "any two of: respect, honesty, responsibility, helping others, care for property, being on time",
+     "shows": "names qualities"
+    },
+    {
+     "question": "Is a learner who reports bullying to a teacher a good citizen?",
+     "answer": "Yes: they protect others",
+     "shows": "speaking up is good citizenship"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.POLITI.HUMAN_RIGHTS",
+ "title": "Human rights",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Human Rights Day is 10 December. Categories as taught: political, social, economic (to confirm the school's wording).",
+ "skills": [
+  {
+   "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
+   "key_step": "The child sorts human rights into political, social and economic.",
+   "floor": {
+    "prerequisite": "Names basic human rights.",
+    "question": "Name a basic human right.",
+    "answer": "any right such as education"
+   },
+   "representations": [
+    "three boxes",
+    "right cards",
+    "a question for each box"
+   ],
+   "steps": [
+    "Read the right.",
+    "Ask: about leaders and voting? Political.",
+    "About life with others, health, education? Social.",
+    "About money and property? Economic."
+   ],
+   "contexts": [
+    "voting in an election",
+    "going to school",
+    "owning a shamba"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write political, social, economic."
+    },
+    {
+     "beat": "point",
+     "do": "Point at economic.",
+     "say": "Where does the right to own property go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for economic."
+    },
+    {
+     "beat": "write",
+     "do": "Sort five cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_CAT_SWAP",
+     "listen_for": [
+      "Economic"
+     ],
+     "ask": "Which category is the right to vote in?",
+     "repair": "Ask: is it about running the country or earning a living?"
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_EDU",
+     "listen_for": [
+      "Political"
+     ],
+     "ask": "Which category is the right to education in?",
+     "repair": "Ask whether it is about people's welfare."
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_WORK_SOCIAL",
+     "listen_for": [
+      "Social"
+     ],
+     "ask": "Under which category is the right to work and earn fair pay?",
+     "repair": "Ask: is it about money and making a living?"
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_PROPERTY_POLITICAL",
+     "listen_for": [
+      "Political"
+     ],
+     "ask": "Under which category is the right to own property?",
+     "repair": "Ask: is it about voting and leaders, or about wealth?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which category is the right to vote?",
+     "answer": "political",
+     "shows": "political"
+    },
+    {
+     "question": "Which category is the right to education?",
+     "answer": "social",
+     "shows": "social"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
+   "key_step": "The child describes ways human rights are upheld (the Constitution, courts, the KNCHR, schools, citizens).",
+   "floor": {
+    "prerequisite": "Sorts human rights into categories.",
+    "question": "Which category is the right to vote?",
+    "answer": "political"
+   },
+   "representations": [
+    "body cards",
+    "a Human Rights Day poster",
+    "scenario cards"
+   ],
+   "steps": [
+    "Name who protects rights.",
+    "Say how.",
+    "Give a scenario.",
+    "Say what a learner can do."
+   ],
+   "contexts": [
+    "a court ruling on a case",
+    "the KNCHR report",
+    "a school rights club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Constitution, courts, KNCHR, learners."
+    },
+    {
+     "beat": "point",
+     "do": "Point at learners.",
+     "say": "How can learners uphold rights?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"respect others, report abuse\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write a way for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_ONLY_POLICE",
+     "listen_for": [
+      "Only the police"
+     ],
+     "ask": "Who helps to uphold human rights?",
+     "repair": "List five who help."
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_DAY",
+     "listen_for": [
+      "1 June"
+     ],
+     "ask": "When is Human Rights Day?",
+     "repair": "List Kenya's public holidays beside the international days, and mark 10 December as Human Rights Day."
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_KNCHR",
+     "listen_for": [
+      "The Kenya Revenue Authority"
+     ],
+     "ask": "Which body in Kenya watches over human rights?",
+     "repair": "Match bodies to their jobs on cards."
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_SELF_NONE",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can a learner uphold human rights?",
+     "repair": "List three things learners do daily that respect rights."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a body that protects human rights in Kenya.",
+     "answer": "the KNCHR or the courts",
+     "shows": "bodies"
+    },
+    {
+     "question": "When is Human Rights Day?",
+     "answer": "10 December",
+     "shows": "date"
+    }
+   ]
+  }
+ ]
+}

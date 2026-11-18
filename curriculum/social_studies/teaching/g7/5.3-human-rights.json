@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.POLITI.HUMAN_RIGHTS",
+ "title": "Human Rights",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Instruments: UDHR (1948), African Charter (1981), Chapter Four of the Constitution of Kenya. Equality vs equity: draw three learners of different heights at a fence with boxes.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY",
+   "key_step": "The child sorts rights into civil and political, economic social and cultural, and group rights, and names the human rights instruments.",
+   "floor": {
+    "prerequisite": "Sorts rights into political, social and economic.",
+    "question": "Which category is the right to vote?",
+    "answer": "political"
+   },
+   "representations": [
+    "three columns",
+    "right cards",
+    "instrument cards with dates"
+   ],
+   "steps": [
+    "Read the right.",
+    "Pick its group.",
+    "Name an instrument that lists it.",
+    "Give the date."
+   ],
+   "contexts": [
+    "the right to vote",
+    "the right to education",
+    "the right to a clean environment"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write civil and political, economic social and cultural, group."
+    },
+    {
+     "beat": "point",
+     "do": "Point at group.",
+     "say": "Where does a clean environment go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for group."
+    },
+    {
+     "beat": "write",
+     "do": "Sort more rights and name the UDHR."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY.M_HR_VOTE_SOCIAL",
+     "listen_for": [
+      "The right to education"
+     ],
+     "ask": "Which is a civil and political right?",
+     "repair": "Ask which rights relate to elections."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY.M_HR_UDHR_KENYA",
+     "listen_for": [
+      "The African Charter"
+     ],
+     "ask": "Which instrument was adopted by the United Nations in 1948?",
+     "repair": "Ask which body began with the word African."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY.M_HR_GROUP_RIGHTS",
+     "listen_for": [
+      "Civil and political"
+     ],
+     "ask": "Which group does the right to a clean environment belong to?",
+     "repair": "Add a third column to the sort."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY.M_HR_CHAPTER_FOUR",
+     "listen_for": [
+      "Chapter One"
+     ],
+     "ask": "Which chapter of the Constitution of Kenya is the Bill of Rights?",
+     "repair": "Show the chapter list."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a civil and political right: education or voting?",
+     "answer": "voting",
+     "shows": "classify"
+    },
+    {
+     "question": "Which instrument was adopted by the UN in 1948?",
+     "answer": "the Universal Declaration of Human Rights",
+     "shows": "instrument"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY",
+   "key_step": "The child tells the features of human rights and explains equity and non-discrimination.",
+   "floor": {
+    "prerequisite": "Classifies human rights.",
+    "question": "Which group is the right to education in?",
+    "answer": "economic, social and cultural"
+   },
+   "representations": [
+    "the fence and boxes drawing",
+    "feature cards",
+    "situation cards"
+   ],
+   "steps": [
+    "Name the features: universal, inalienable, indivisible, equal.",
+    "Draw equality: same box each.",
+    "Draw equity: boxes by need.",
+    "Say what discrimination is."
+   ],
+   "contexts": [
+    "ramps for wheelchair users",
+    "extra time for a learner who needs it",
+    "refusing a learner for her religion"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three learners of different heights at a fence with one box each."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the shortest.",
+     "say": "Can she see over? What is fair?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"give her more boxes\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write equity: what each needs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY.M_HR_EQUAL_EQUITY",
+     "listen_for": [
+      "Everyone gets exactly the same"
+     ],
+     "ask": "What is equity?",
+     "repair": "Ask what a learner who cannot see the board needs."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY.M_HR_EARNED",
+     "listen_for": [
+      "Yes, if a person is naughty"
+     ],
+     "ask": "Can human rights be taken away?",
+     "repair": "Ask if a child who breaks a rule loses the right to food."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY.M_HR_INALIENABLE",
+     "listen_for": [
+      "Only for citizens"
+     ],
+     "ask": "What does \"inalienable\" mean?",
+     "repair": "Break the word: in (not) + alienable (able to be taken)."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY.M_HR_DISCRIM_KIND",
+     "listen_for": [
+      "No, nobody insulted her"
+     ],
+     "ask": "A school refuses a learner because of her religion. Is this discrimination?",
+     "repair": "Discuss refusals and exclusions as discrimination."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is equity?",
+     "answer": "everyone gets what is fair for their need",
+     "shows": "equity"
+    },
+    {
+     "question": "Can human rights be taken away?",
+     "answer": "No, they are inalienable",
+     "shows": "features"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION",
+   "key_step": "The child chooses actions that promote equity and respect for human rights.",
+   "floor": {
+    "prerequisite": "Explains equity and non-discrimination.",
+    "question": "What is discrimination?",
+    "answer": "unfair treatment because of who a person is"
+   },
+   "representations": [
+    "action cards",
+    "a class rights pledge",
+    "scenario role plays"
+   ],
+   "steps": [
+    "Read the scenario.",
+    "Ask whose rights are at stake.",
+    "Pick the action.",
+    "Say who else can help."
+   ],
+   "contexts": [
+    "teasing a learner with a stick",
+    "a learner left out of a game",
+    "abuse of a classmate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Others laugh at a classmate who walks with a stick.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"laugh\".",
+     "say": "What should you do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"stand by him and say it is wrong\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write who to tell."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION.M_HR_JOIN_TEASE",
+     "listen_for": [
+      "Laugh too"
+     ],
+     "ask": "A classmate walks with a stick. Others laugh at him. What should you do?",
+     "repair": "Ask how the classmate feels."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION.M_HR_NOT_MY_BUSINESS",
+     "listen_for": [
+      "Only the police"
+     ],
+     "ask": "Who can protect human rights?",
+     "repair": "Ask what a learner can do in class."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION.M_HR_EXCLUDE_GAME",
+     "listen_for": [
+      "Yes, to win"
+     ],
+     "ask": "Is it fair to leave a slow runner out of every game?",
+     "repair": "Play a game where everyone has a role."
+    },
+    {
+     "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION.M_HR_REPORT_SNITCH",
+     "listen_for": [
+      "Say nothing, it is snitching"
+     ],
+     "ask": "You learn a classmate is being abused. What should you do?",
+     "repair": "Separate telling to get someone in trouble from telling to keep someone safe."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one action that promotes equity in school.",
+     "answer": "any of: including everyone, helping a learner with a disability, speaking against bullying, reporting abuse",
+     "shows": "action"
+    },
+    {
+     "question": "Who can protect human rights?",
+     "answer": "everyone",
+     "shows": "everyone"
+    }
+   ]
+  }
+ ]
+}

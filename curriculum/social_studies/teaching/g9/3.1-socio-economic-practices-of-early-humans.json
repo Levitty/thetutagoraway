@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES",
+ "title": "Socio-Economic Practices of Early Humans",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Olduvai Gorge (Tanzania), Olorgesailie and Kariandusi (Kenya); Early, Middle and Late Stone Age tools from heavy choppers to small blades. Draw tools rather than copy images.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE",
+   "key_step": "The child describes Stone Age ways of life and tools and names East African sites.",
+   "floor": {
+    "prerequisite": "Orders the early humans.",
+    "question": "Which early human came first?",
+    "answer": "Australopithecus"
+   },
+   "representations": [
+    "tool drawings",
+    "a Stone Age timeline",
+    "a site map"
+   ],
+   "steps": [
+    "Name the way of getting food: hunting and gathering.",
+    "Name where people lived.",
+    "Name the tools and how they changed.",
+    "Name the sites."
+   ],
+   "contexts": [
+    "hand axes at Olorgesailie",
+    "rock shelters",
+    "Olduvai Gorge"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a heavy chopper and a small sharp blade."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the blade.",
+     "say": "Was this made earlier or later than the chopper?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for later."
+    },
+    {
+     "beat": "write",
+     "do": "Write how tools changed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_FARM",
+     "listen_for": [
+      "By farming crops"
+     ],
+     "ask": "How did early Stone Age humans get food?",
+     "repair": "Put hunting and gathering, then farming, on a timeline with the Stone Age periods."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_TOOL",
+     "listen_for": [
+      "Iron"
+     ],
+     "ask": "What were Stone Age tools made of?",
+     "repair": "Compare a stone hand axe with an iron hoe and place each on a timeline."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_SITE",
+     "listen_for": [
+      "Fort Jesus"
+     ],
+     "ask": "Which is a Stone Age site in East Africa?",
+     "repair": "Sort sites by age: Stone Age sites (Olduvai, Olorgesailie) and later historic buildings (Fort Jesus)."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_FIRE_FIRST",
+     "listen_for": [
+      "Yes, from the start"
+     ],
+     "ask": "Did the earliest Stone Age humans use fire?",
+     "repair": "Place \"fire\" later on the Stone Age timeline."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did early Stone Age humans get food?",
+     "answer": "by hunting and gathering",
+     "shows": "way of life"
+    },
+    {
+     "question": "Name a Stone Age site in East Africa.",
+     "answer": "Olduvai Gorge or Olorgesailie",
+     "shows": "site"
+    }
+   ]
+  }
+ ]
+}

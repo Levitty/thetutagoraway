@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV",
+ "title": "Traditional forms of Government",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Buganda (Kabaka, Katikkiro, Lukiiko, appointed chiefs); Nyamwezi (many chiefdoms, each with a Ntemi who inherited the post, advised by elders).",
+ "skills": [
+  {
+   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
+   "key_step": "The child describes how the Buganda kingdom was governed: Kabaka, Katikkiro, Lukiiko and appointed chiefs.",
+   "floor": {
+    "prerequisite": "Describes early forms of government in Kenya.",
+    "question": "Name one Kenyan community that had a king.",
+    "answer": "the Wanga"
+   },
+   "representations": [
+    "a chart of Buganda's government",
+    "title cards",
+    "a map of Uganda"
+   ],
+   "steps": [
+    "Put the Kabaka at the top.",
+    "Add the Katikkiro (chief minister).",
+    "Add the Lukiiko (council).",
+    "Add chiefs appointed over counties."
+   ],
+   "contexts": [
+    "the Kabaka's palace at Mengo",
+    "the Lukiiko meeting",
+    "a county chief collecting tribute"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pyramid with four levels."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top.",
+     "say": "Who ruled Buganda?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Kabaka."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the levels."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KABAKA",
+     "listen_for": [
+      "Ntemi"
+     ],
+     "ask": "What was the ruler of Buganda called?",
+     "repair": "Match Buganda with Kabaka and Nyamwezi with Ntemi."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KATIKKIRO",
+     "listen_for": [
+      "The village priest"
+     ],
+     "ask": "Who was the Katikkiro?",
+     "repair": "Say the Katikkiro was the Kabaka's main helper."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_LUKIIKO_ARMY",
+     "listen_for": [
+      "The army"
+     ],
+     "ask": "What was the Lukiiko?",
+     "repair": "Write each title with its job on cards."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KABAKA_ELECTED",
+     "listen_for": [
+      "By a vote of all the people"
+     ],
+     "ask": "How did a person become Kabaka?",
+     "repair": "Compare with how a President is chosen today."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was the title of the ruler of Buganda?",
+     "answer": "the Kabaka",
+     "shows": "ruler"
+    },
+    {
+     "question": "What was the Katikkiro?",
+     "answer": "the chief minister",
+     "shows": "title"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
+   "key_step": "The child describes how the Nyamwezi were governed: many chiefdoms, each with a Ntemi advised by elders.",
+   "floor": {
+    "prerequisite": "Describes the Buganda government.",
+    "question": "Who ruled Buganda?",
+    "answer": "the Kabaka"
+   },
+   "representations": [
+    "a map with many small circles",
+    "role cards",
+    "a story of a Ntemi's court"
+   ],
+   "steps": [
+    "Draw many small chiefdoms.",
+    "Put a Ntemi in each.",
+    "Add the council of elders.",
+    "Say what the Ntemi did."
+   ],
+   "contexts": [
+    "a Ntemi judging a case",
+    "elders advising the Ntemi",
+    "the chiefdoms of central Tanzania"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw five small circles."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one circle.",
+     "say": "Who led each of these?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a Ntemi."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"advised by elders, inherited the post\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_KING",
+     "listen_for": [
+      "One large kingdom under one king"
+     ],
+     "ask": "How was the Nyamwezi land organised?",
+     "repair": "Count the chiefdoms on a sketch."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_CHOSEN",
+     "listen_for": [
+      "By a vote of all the people"
+     ],
+     "ask": "How did a person become a Ntemi?",
+     "repair": "Say the position passed in the royal family."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_ALONE",
+     "listen_for": [
+      "Nobody"
+     ],
+     "ask": "Who advised the Ntemi?",
+     "repair": "Act a Ntemi consulting elders before deciding."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NYAMWEZI_KENYA",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country do the Nyamwezi live?",
+     "repair": "Point to central Tanzania on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What was the title of a Nyamwezi chief?",
+     "answer": "Ntemi",
+     "shows": "title"
+    },
+    {
+     "question": "Did the Nyamwezi have one big kingdom?",
+     "answer": "No, many small chiefdoms",
+     "shows": "structure"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
+   "key_step": "The child compares Buganda and Nyamwezi government: alike in having a ruler and council, different in size and how chiefs were chosen.",
+   "floor": {
+    "prerequisite": "Describes both systems.",
+    "question": "Who advised the Ntemi?",
+    "answer": "a council of elders"
+   },
+   "representations": [
+    "a Venn diagram",
+    "feature cards",
+    "two drawings"
+   ],
+   "steps": [
+    "List what both had.",
+    "List what only Buganda had.",
+    "List what only the Nyamwezi had.",
+    "Fill the Venn diagram."
+   ],
+   "contexts": [
+    "Buganda's one big kingdom",
+    "Nyamwezi chiefdoms",
+    "councils in both"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two circles overlapping."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the overlap.",
+     "say": "What did both have?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a ruler and a council."
+    },
+    {
+     "beat": "write",
+     "do": "Fill each part."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_SAME_ALL",
+     "listen_for": [
+      "It did not differ"
+     ],
+     "ask": "How did the Buganda system differ from the Nyamwezi?",
+     "repair": "Say how many rulers each system had."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_NO_COUNCIL",
+     "listen_for": [
+      "Neither had advisers"
+     ],
+     "ask": "What did both have in common?",
+     "repair": "Name the council in each: Lukiiko and council of elders."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_SIZE_SWAP",
+     "listen_for": [
+      "Buganda"
+     ],
+     "ask": "Which had many small chiefdoms: Buganda or the Nyamwezi?",
+     "repair": "Draw one big circle for Buganda and many small ones for the Nyamwezi."
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_CHIEFS_INHERIT",
+     "listen_for": [
+      "They inherited them"
+     ],
+     "ask": "How did Buganda's county chiefs get their posts?",
+     "repair": "Sort \"appointed\" and \"inherited\" for each title."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one similarity between Buganda and Nyamwezi government.",
+     "answer": "both had a ruler, a council and the ruler judged cases",
+     "shows": "similarity"
+    },
+    {
+     "question": "Give one difference.",
+     "answer": "Buganda was one big kingdom with appointed chiefs; the Nyamwezi had many chiefdoms with inherited Ntemi",
+     "shows": "difference"
+    }
+   ]
+  }
+ ]
+}

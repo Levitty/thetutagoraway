@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST",
+ "title": "Earth and the Solar System",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a torch and a ball for day and night, and a tilted ball circling a lamp for seasons. The origin of the earth is taught as the scientific account; faith accounts are respected (see Human Origin).",
+ "skills": [
+  {
+   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE",
+   "key_step": "The child describes the earth's origin, shape, size and place in the solar system.",
+   "floor": {
+    "prerequisite": "Knows a sphere and lines on a globe.",
+    "question": "What shape is a ball?",
+    "answer": "a sphere"
+   },
+   "representations": [
+    "a planet chart",
+    "a ball and a lamp",
+    "evidence cards"
+   ],
+   "steps": [
+    "Say how the earth formed.",
+    "Give its shape and the evidence.",
+    "Give its place: third from the Sun.",
+    "Compare its size."
+   ],
+   "contexts": [
+    "a ship disappearing over the sea horizon",
+    "photos of the earth from space",
+    "the night sky"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the Sun with three small circles round it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the third circle.",
+     "say": "Which planet is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the earth."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"third from the Sun, almost a sphere\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE.M_ES_FLAT",
+     "listen_for": [
+      "Flat like a plate"
+     ],
+     "ask": "What is the shape of the earth?",
+     "repair": "Ask why a ship seems to sink behind the horizon."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE.M_ES_THIRD_SUN",
+     "listen_for": [
+      "The first"
+     ],
+     "ask": "Which planet from the Sun is the earth?",
+     "repair": "Ask the child to list Mercury, Venus, then the earth."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE.M_ES_EARTH_CENTRE",
+     "listen_for": [
+      "The earth"
+     ],
+     "ask": "What is at the centre of the solar system?",
+     "repair": "Act it: one learner as the Sun in the middle, others as planets."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE.M_ES_EARTH_BIGGEST",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is the earth the biggest planet?",
+     "repair": "Show planets drawn to size."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which planet from the Sun is the earth?",
+     "answer": "the third",
+     "shows": "position"
+    },
+    {
+     "question": "What is the shape of the earth?",
+     "answer": "almost a sphere",
+     "shows": "shape"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION",
+   "key_step": "The child tells rotation from revolution and their effects: day and night, time differences, leap years and seasons.",
+   "floor": {
+    "prerequisite": "Describes the earth's shape and place.",
+    "question": "What is at the centre of the solar system?",
+    "answer": "the Sun"
+   },
+   "representations": [
+    "a ball and a torch",
+    "a tilted ball circling a lamp",
+    "a motion table"
+   ],
+   "steps": [
+    "Rotation: spin on the axis in 24 hours.",
+    "Effect: day and night, time differences.",
+    "Revolution: round the Sun in 365 and a quarter days.",
+    "Effect with tilt: seasons, leap years."
+   ],
+   "contexts": [
+    "sunrise in Mombasa before Kisumu",
+    "a leap year with 29 February",
+    "winter in Europe while Kenya is warm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ball with a torch shining on one side."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dark side.",
+     "say": "What time is it here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for night."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what happens as the ball spins."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION.M_ES_SUN_MOVES",
+     "listen_for": [
+      "The Sun going round the earth"
+     ],
+     "ask": "What causes day and night?",
+     "repair": "Ask which side of the earth faces the Sun at noon."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION.M_ES_SEASON_DISTANCE",
+     "listen_for": [
+      "The earth moving closer to and away from the Sun"
+     ],
+     "ask": "What causes the seasons in many parts of the world?",
+     "repair": "Ask why it is winter in the south when it is summer in the north."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION.M_ES_LEAP_RANDOM",
+     "listen_for": [
+      "For no reason"
+     ],
+     "ask": "Why is there a leap year every four years?",
+     "repair": "Add four quarter days to make one extra day."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION.M_ES_ROTATION_YEAR",
+     "listen_for": [
+      "One year"
+     ],
+     "ask": "How long does one rotation of the earth take?",
+     "repair": "Spin a ball (rotation) and walk it round a lamp (revolution)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What causes day and night?",
+     "answer": "the earth rotating on its axis",
+     "shows": "rotation"
+    },
+    {
+     "question": "How long does the earth take to go round the Sun?",
+     "answer": "about 365 and a quarter days",
+     "shows": "revolution"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE",
+   "key_step": "The child names the layers inside the earth in order and what each is like.",
+   "floor": {
+    "prerequisite": "Knows how volcanoes and the Rift Valley formed.",
+    "question": "How did volcanic mountains form?",
+    "answer": "magma and ash poured out and piled up"
+   },
+   "representations": [
+    "a cut hard-boiled egg",
+    "a labelled cross-section",
+    "layer cards"
+   ],
+   "steps": [
+    "Start at the surface: crust.",
+    "Below: mantle with magma.",
+    "Then outer core: liquid.",
+    "Centre: inner core, solid and hottest."
+   ],
+   "contexts": [
+    "the crust we live on",
+    "magma at Mount Longonot",
+    "the hot centre of the earth"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four circles inside each other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the outer ring.",
+     "say": "What is this thin layer?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the crust."
+    },
+    {
+     "beat": "write",
+     "do": "Label the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE.M_ES_CORE_COLD",
+     "listen_for": [
+      "Cold and hollow"
+     ],
+     "ask": "What is the inner core like?",
+     "repair": "Ask what comes out of a volcano."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE.M_ES_CRUST_THICK",
+     "listen_for": [
+      "The mantle"
+     ],
+     "ask": "Which is the thinnest layer of the earth?",
+     "repair": "Ask the child to compare an apple's skin with its flesh."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE.M_ES_MAGMA_CORE",
+     "listen_for": [
+      "In the inner core"
+     ],
+     "ask": "Where does the magma that comes out of volcanoes form?",
+     "repair": "Label the layers and show magma rising from the mantle."
+    },
+    {
+     "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE.M_ES_LAYER_ORDER",
+     "listen_for": [
+      "mantle, crust, core"
+     ],
+     "ask": "Put in order from the surface: core, crust, mantle.",
+     "repair": "Cut a hard-boiled egg: shell (crust), white (mantle), yolk (core)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is the thinnest layer of the earth?",
+     "answer": "the crust",
+     "shows": "crust"
+    },
+    {
+     "question": "What is the inner core like?",
+     "answer": "solid and very hot",
+     "shows": "core"
+    }
+   ]
+  }
+ ]
+}

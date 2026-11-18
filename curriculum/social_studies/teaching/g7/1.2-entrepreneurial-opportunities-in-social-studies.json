@@ -1,0 +1,115 @@
+{
+ "sub_strand": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN",
+ "title": "Entrepreneurial Opportunities in Social Studies",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use real local enterprises: a youth group making soap, a tailor, a boda boda rider, a recycling group. A social enterprise solves a community problem and earns income.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY",
+   "key_step": "The child matches an opportunity to a personality and says what a start needs (a need, a plan, skills, capital, honesty, a customer).",
+   "floor": {
+    "prerequisite": "Chooses a school project that fits what the school has.",
+    "question": "A school has no water near its land. Should it start a fish pond?",
+    "answer": "no"
+   },
+   "representations": [
+    "personality and opportunity cards",
+    "a simple business plan sheet",
+    "a local social enterprise story"
+   ],
+   "steps": [
+    "Name the personality or talent.",
+    "Pick an opportunity that fits.",
+    "List what it needs.",
+    "Say whether it solves a community problem."
+   ],
+   "contexts": [
+    "a youth group recycling plastic",
+    "a tailor in the market",
+    "a clean water kiosk"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Wanjiru is patient and loves children.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Which opportunity fits her?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a day-care or tutoring idea."
+    },
+    {
+     "beat": "write",
+     "do": "List what she needs to start."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_CAPITAL_ONLY",
+     "listen_for": [
+      "A lot of money"
+     ],
+     "ask": "What does a good business idea need first?",
+     "repair": "Ask: if nobody wants the product, can money save the business?"
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_SOCIAL_PROFIT",
+     "listen_for": [
+      "Only makes the most profit"
+     ],
+     "ask": "What does a social entrepreneur do?",
+     "repair": "Ask what a youth group that recycles plastic into bricks gains and gives."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_COPY_ANY",
+     "listen_for": [
+      "Selling loudly at a market"
+     ],
+     "ask": "Baraka is shy but good with his hands. Which opportunity suits him best?",
+     "repair": "Match three personalities to three opportunities."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_NO_CUSTOMER",
+     "listen_for": [
+      "Nothing, just make it"
+     ],
+     "ask": "Before making 100 bags of liquid soap, what should you find out?",
+     "repair": "Ask what happens to soap no one buys."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_HONESTY_OPTIONAL",
+     "listen_for": [
+      "Yes, more profit"
+     ],
+     "ask": "A trader mixes water into milk to sell more. Is this a good business idea?",
+     "repair": "Ask whether customers would come back."
+    },
+    {
+     "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_SOCIAL_CHARITY",
+     "listen_for": [
+      "No, it charges money"
+     ],
+     "ask": "A group sells clean water cheaply to a village and earns a small income. Is it a social enterprise?",
+     "repair": "Show how the income keeps the water project running."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a social entrepreneur do?",
+     "answer": "solves a community problem through a business",
+     "shows": "social entrepreneur"
+    },
+    {
+     "question": "What should a business idea meet first?",
+     "answer": "a need that people have",
+     "shows": "need first"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA",
+ "title": "National Unity in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: the flag colours (black for the people, red for the blood shed in the struggle for independence, green for the land, white for peace and unity); the shield and spears for defending freedom; the motto Harambee.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS",
+   "key_step": "The child names Kenya's national symbols and gives the meaning of the flag's colours and parts.",
+   "floor": {
+    "prerequisite": "Knows the colours of the national flag.",
+    "question": "Name the colours of the Kenya flag.",
+    "answer": "black, red, green and white"
+   },
+   "representations": [
+    "the national flag",
+    "the coat of arms picture",
+    "symbol cards"
+   ],
+   "steps": [
+    "Name the symbol.",
+    "Say what it stands for.",
+    "For the flag, give each colour's meaning.",
+    "Say when it is used."
+   ],
+   "contexts": [
+    "the flag raised at Monday assembly",
+    "the anthem at a national day",
+    "the coat of arms on a certificate"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the flag in outline."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the green band.",
+     "say": "What does green stand for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the land."
+    },
+    {
+     "beat": "write",
+     "do": "Write the meaning of each colour."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS.M_NU_COLOUR_MEANING",
+     "listen_for": [
+      "The people of Kenya"
+     ],
+     "ask": "What does the red on the Kenyan flag stand for?",
+     "repair": "Use a sentence: black people, red blood, green land, white peace."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS.M_NU_SYMBOL_MIX",
+     "listen_for": [
+      "The Safari Rally"
+     ],
+     "ask": "Which of these is a national symbol of Kenya?",
+     "repair": "List the official symbols and ask if the rally is among them."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS.M_NU_ANTHEM_ANY_SONG",
+     "listen_for": [
+      "Any song about Kenya"
+     ],
+     "ask": "Which song is the national anthem of Kenya?",
+     "repair": "Sing the first line of the anthem and of another song and ask which is sung at the flag."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS.M_NU_SHIELD_MEANING",
+     "listen_for": [
+      "War with other countries"
+     ],
+     "ask": "What do the shield and spears on the flag stand for?",
+     "repair": "Ask what a shield does: it protects."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does black on the Kenya flag stand for?",
+     "answer": "the people of Kenya",
+     "shows": "flag colour"
+    },
+    {
+     "question": "Name two national symbols of Kenya.",
+     "answer": "any two of: the flag, the coat of arms, the national anthem, the public seal",
+     "shows": "symbols"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS",
+   "key_step": "The child gives what promotes national unity, its challenges and ways to overcome them.",
+   "floor": {
+    "prerequisite": "Names things that promote peace.",
+    "question": "Name one thing that promotes peace in school.",
+    "answer": "any such as sharing"
+   },
+   "representations": [
+    "a unity tree",
+    "challenge and solution cards",
+    "a national day photo"
+   ],
+   "steps": [
+    "Name a factor that unites.",
+    "Name a challenge.",
+    "Say how to overcome it.",
+    "Say what the class can do."
+   ],
+   "contexts": [
+    "schools mixing learners from many communities",
+    "Kiswahili at a market",
+    "a national day parade"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tree with roots labelled \"what unites\" and broken branches labelled \"challenges\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a broken branch.",
+     "say": "What can mend this challenge?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer such as dialogue or fairness."
+    },
+    {
+     "beat": "write",
+     "do": "Write the solution beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS.M_NU_UNITY_SAME",
+     "listen_for": [
+      "Everyone is the same"
+     ],
+     "ask": "What does national unity mean?",
+     "repair": "Ask whether a football team where all are the same does well."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS.M_NU_TRIBE_FIX",
+     "listen_for": [
+      "Keep communities apart"
+     ],
+     "ask": "How can we overcome tribalism?",
+     "repair": "Describe a school with mixed friends and a school with split groups."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS.M_NU_SPORTS_NO",
+     "listen_for": [
+      "They do not; they are just games"
+     ],
+     "ask": "How do athletics races help unite Kenya?",
+     "repair": "Recall a race when everyone cheered a Kenyan winner."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS.M_NU_CORRUPTION_UNITY",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can unfair sharing of resources harm unity?",
+     "repair": "Share sweets unfairly in a game and ask how the group feels."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two things that promote national unity.",
+     "answer": "any two of: national symbols, national days, Kiswahili and English, sports, mixed schools, intermarriage",
+     "shows": "factors"
+    },
+    {
+     "question": "Give one challenge to national unity.",
+     "answer": "any of: tribalism, unfair sharing of resources, corruption",
+     "shows": "challenge"
+    }
+   ]
+  }
+ ]
+}

@@ -3,15 +3,15 @@
  "subject_key": "social_studies",
  "grade": 6,
  "source": "KICD Social Studies, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g6-non-question-outcomes-2026-11-12.md",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g6-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g6)",
  "totals": {
   "strands": 5,
   "sub_strands": 22,
   "outcomes": 94,
   "lessons": 90,
   "skills": 59,
-  "prerequisites": 95,
-  "misconceptions": 131
+  "prerequisites": 131,
+  "misconceptions": 236
  },
  "sub_strands": [
   {
@@ -101,6 +101,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Telling a neighbour from a place further away (Grade 4) is the rule for a region of countries. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -138,6 +145,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Comparing size by area, not by how a map looks (Grade 4), is used again for countries. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -169,6 +183,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Latitudes and longitudes are read from a map's frame and grid, elements met in Grade 5. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -208,6 +229,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "North, south, east and west of the zero lines use the cardinal points. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -410,6 +438,70 @@
      "feedback": "We give latitude first and longitude second, so 4 N is the latitude.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_EAC_ONLY",
+     "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
+     "error": "Thinks Eastern Africa is only the East African Community members, so leaves out Ethiopia, Eritrea and Djibouti.",
+     "example": {
+      "question": "Is Ethiopia a country of Eastern Africa?",
+      "wrong_answer": "No, it is not in the EAC",
+      "correct_answer": "Yes, Ethiopia is in Eastern Africa"
+     },
+     "cause": "The child knows the EAC as \"East Africa\" and treats it as the whole region.",
+     "reveals": "Offer \"No, it is not in the EAC\" next to the right answer and ask the question again in a new context.",
+     "help": "Lay the EAC members on the map in one colour and the rest of Eastern Africa in another.",
+     "feedback": "Eastern Africa is bigger than the EAC. It includes Ethiopia, Eritrea and Djibouti.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_POPULATION_SIZE",
+     "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
+     "error": "Judges the size of a country by how many people it has.",
+     "example": {
+      "question": "Rwanda has more people than Djibouti. Which is bigger in area?",
+      "wrong_answer": "Rwanda, it has more people",
+      "correct_answer": "Rwanda is bigger, but you must use the area, not the people"
+     },
+     "cause": "The child mixes up population and area, as in Grade 4.",
+     "reveals": "Offer \"Rwanda, it has more people\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the area column and the population column in a table.",
+     "feedback": "Size means area in square kilometres, not the number of people.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_DEGREE_KM",
+     "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
+     "error": "Thinks a degree of latitude is a distance in kilometres.",
+     "example": {
+      "question": "Nairobi is about 1 degree south. Does that mean it is 1 km from the equator?",
+      "wrong_answer": "Yes, 1 degree is 1 km",
+      "correct_answer": "No, a degree is a measure of angle on the globe, about 111 km of latitude"
+     },
+     "cause": "The child reads every number on a map as a distance.",
+     "reveals": "Offer \"Yes, 1 degree is 1 km\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the degree marks round a globe and measure how far apart two lines are on the scale.",
+     "feedback": "Degrees are not kilometres. One degree of latitude is about 111 km.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_TOP_NORTH_ONLY",
+     "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
+     "error": "Thinks places at the top of a map are always north of the equator, without reading the latitude.",
+     "example": {
+      "question": "Dodoma is near the top of a map of Tanzania. Its latitude is 6 degrees S. Is it north or south of the equator?",
+      "wrong_answer": "North, it is at the top of the map",
+      "correct_answer": "South"
+     },
+     "cause": "The child uses the map position, not the latitude.",
+     "reveals": "Offer \"North, it is at the top of the map\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the equator on the map first and look at which side Dodoma is.",
+     "feedback": "Read the latitude. N means north of the equator and S means south.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -553,6 +645,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Telling a mountain, a valley and a lake apart (Grade 4) comes before saying how each formed. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -654,6 +753,38 @@
      "help": "Mark both arms of the Rift on a sketch and ask where Victoria sits.",
      "feedback": "Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_NILE_SOURCE",
+     "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
+     "error": "Thinks the River Nile starts in Egypt and flows south into Lake Victoria.",
+     "example": {
+      "question": "Where does the White Nile flow from?",
+      "wrong_answer": "From Egypt into Lake Victoria",
+      "correct_answer": "Out of Lake Victoria at Jinja, northwards to Egypt"
+     },
+     "cause": "The child knows the Nile from Egypt and pictures it flowing into the lake.",
+     "reveals": "Offer \"From Egypt into Lake Victoria\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace the Nile with a finger from Jinja northwards on the map.",
+     "feedback": "The White Nile flows out of Lake Victoria at Jinja and northwards to Egypt.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_VOLCANO_ACTIVE_ALL",
+     "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
+     "error": "Thinks every volcanic mountain could erupt at any time.",
+     "example": {
+      "question": "Is Mount Kenya an active volcano that erupts today?",
+      "wrong_answer": "Yes, all volcanoes erupt",
+      "correct_answer": "No, it is an extinct volcano"
+     },
+     "cause": "The child links \"volcanic\" with eruptions seen on television.",
+     "reveals": "Offer \"Yes, all volcanoes erupt\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare an extinct volcano (Mount Kenya) with an active one (Ol Doinyo Lengai, to confirm).",
+     "feedback": "Mount Kenya was made by a volcano long ago. It does not erupt now.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -829,6 +960,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Describing Kenya's climate regions (Grade 5) comes before linking them to how people live across the region. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -933,6 +1071,102 @@
      "feedback": "A drought is a long time without rain. It causes crop failure and hunger. Floods come from too much rain.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_ONE_COUNTRY_ONE",
+     "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
+     "error": "Thinks each country has only one climate.",
+     "example": {
+      "question": "Does Kenya have one climatic region or several?",
+      "wrong_answer": "One, the Kenyan climate",
+      "correct_answer": "Several: arid, semi-arid, tropical, highland and coastal"
+     },
+     "cause": "The child names a climate after a country.",
+     "reveals": "Offer \"One, the Kenyan climate\" next to the right answer and ask the question again in a new context.",
+     "help": "Colour the climate map: Kenya has many colours.",
+     "feedback": "One country can have several climatic regions.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_MOUNTAIN_REGION_LOW",
+     "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
+     "error": "Places the mountain climate on low plains because mountains are large.",
+     "example": {
+      "question": "Where is the mountain climate found?",
+      "wrong_answer": "On the low plains",
+      "correct_answer": "On high mountains such as Kilimanjaro and Mount Kenya"
+     },
+     "cause": "The child links the region's name to size rather than height.",
+     "reveals": "Offer \"On the low plains\" next to the right answer and ask the question again in a new context.",
+     "help": "Shade the mountains on the relief map and the mountain climate on the climate map.",
+     "feedback": "The mountain climate is on high ground.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_TROPICAL_WET_ALL",
+     "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
+     "error": "Thinks the tropical region is wet all year like the equatorial region.",
+     "example": {
+      "question": "How many main seasons does the tropical (savanna) region have?",
+      "wrong_answer": "One, wet all year",
+      "correct_answer": "Two: a wet season and a dry season"
+     },
+     "cause": "Both regions are near the equator.",
+     "reveals": "Offer \"One, wet all year\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a Kampala and a Dodoma rainfall graph.",
+     "feedback": "The tropical region has a wet and a dry season. The equatorial region is wet all year.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_ARID_COLD",
+     "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
+     "error": "Thinks deserts are always hot, so the arid region has no cool nights.",
+     "example": {
+      "question": "What are nights like in the arid region?",
+      "wrong_answer": "Hot like the day",
+      "correct_answer": "Often cool, because there are few clouds"
+     },
+     "cause": "The child thinks only of hot days.",
+     "reveals": "Offer \"Hot like the day\" next to the right answer and ask the question again in a new context.",
+     "help": "Read day and night temperatures for Lodwar.",
+     "feedback": "Desert days are hot and nights can be cool.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_TEA_DRY",
+     "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
+     "error": "Thinks tea grows best in hot, dry lowlands.",
+     "example": {
+      "question": "Where does tea grow best?",
+      "wrong_answer": "In hot, dry lowlands",
+      "correct_answer": "In cool, wet highlands"
+     },
+     "cause": "The child links tea to heat because it is drunk hot.",
+     "reveals": "Offer \"In hot, dry lowlands\" next to the right answer and ask the question again in a new context.",
+     "help": "Show Kericho on the climate map.",
+     "feedback": "Tea grows best in cool, wet highlands such as Kericho.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_NOMAD_LAZY",
+     "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
+     "error": "Thinks herders move because they do not want to farm.",
+     "example": {
+      "question": "Why do herders in the arid north move with their animals?",
+      "wrong_answer": "They do not want to settle",
+      "correct_answer": "To find water and pasture when the land dries"
+     },
+     "cause": "The child judges a way of life by their own.",
+     "reveals": "Offer \"They do not want to settle\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a dry-season map of water points.",
+     "feedback": "Herders move to find water and grass for their animals in a dry climate.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1036,6 +1270,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Vegetation follows climate; Kenya's climate regions (Grade 5) explain where each type grows. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -1065,6 +1306,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Each vegetation type's traits come from how much rain and heat its region gets. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1237,6 +1485,70 @@
      "feedback": "When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_FOREST_EVERYWHERE",
+     "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
+     "error": "Thinks most of Eastern Africa is covered in thick forest.",
+     "example": {
+      "question": "Which vegetation covers most of Eastern Africa?",
+      "wrong_answer": "Thick rain forest",
+      "correct_answer": "Savanna grassland"
+     },
+     "cause": "The child pictures Africa as a jungle from films.",
+     "reveals": "Offer \"Thick rain forest\" next to the right answer and ask the question again in a new context.",
+     "help": "Shade the vegetation map: most of it is savanna.",
+     "feedback": "Most of Eastern Africa is savanna grassland with scattered trees.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_THORNS_WHY",
+     "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
+     "error": "Thinks desert plants have thorns only to hurt animals.",
+     "example": {
+      "question": "Why do many desert plants have thorns instead of broad leaves?",
+      "wrong_answer": "Only to hurt animals",
+      "correct_answer": "To lose less water and to protect them from being eaten"
+     },
+     "cause": "The child sees only the defence.",
+     "reveals": "Offer \"Only to hurt animals\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a broad leaf and a thorny twig in the sun and compare after an hour.",
+     "feedback": "Thorns and small leaves save water. They also protect the plant.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_ONE_TREE_ENOUGH",
+     "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
+     "error": "Thinks planting one tree for every forest cut down makes up for it.",
+     "example": {
+      "question": "A company cuts 100 trees and plants one. Has it conserved the forest?",
+      "wrong_answer": "Yes, it planted a tree",
+      "correct_answer": "No, it must replant many more and let them grow"
+     },
+     "cause": "The child counts the action, not the amount.",
+     "reveals": "Offer \"Yes, it planted a tree\" next to the right answer and ask the question again in a new context.",
+     "help": "Count trees cut and planted on the board.",
+     "feedback": "Replace the trees you cut, and more, and look after them as they grow.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_GOVT_ONLY_CONSERVE",
+     "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
+     "error": "Thinks only the Kenya Forest Service can conserve vegetation.",
+     "example": {
+      "question": "What can a school do to conserve vegetation?",
+      "wrong_answer": "Nothing, it is the government's job",
+      "correct_answer": "Plant trees, keep a tree nursery and use energy-saving jikos"
+     },
+     "cause": "The child hears of forest guards and thinks it is their work alone.",
+     "reveals": "Offer \"Nothing, it is the government's job\" next to the right answer and ask the question again in a new context.",
+     "help": "Start or visit the school tree nursery.",
+     "feedback": "Everyone can conserve vegetation, including schools and families.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1380,6 +1692,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Why historic places matter (Grade 4) is applied to the region. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -1467,6 +1786,54 @@
      "help": "Ask what happens to a wall when a thousand visitors write on it.",
      "feedback": "Following the rules protects the site. Writing on walls damages them for others.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_KASUBI_KENYA",
+     "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
+     "error": "Puts the Kasubi Tombs in Kenya.",
+     "example": {
+      "question": "In which country are the Kasubi Tombs?",
+      "wrong_answer": "Kenya",
+      "correct_answer": "Uganda"
+     },
+     "cause": "The child places every famous site in Kenya first.",
+     "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a pin for each site on the regional map.",
+     "feedback": "The Kasubi Tombs are in Kampala, Uganda, burial place of Buganda kings.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_TOURISM_ONLY_VALUE",
+     "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
+     "error": "Thinks historic sites matter only for tourist money.",
+     "example": {
+      "question": "Give a reason a historic site matters besides tourism.",
+      "wrong_answer": "There is no other reason",
+      "correct_answer": "It teaches our history and gives us identity"
+     },
+     "cause": "Income is the reason heard most.",
+     "reveals": "Offer \"There is no other reason\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what a learner learns on a visit.",
+     "feedback": "Sites teach history and give identity, besides bringing visitors.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_MODERN_REBUILD",
+     "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
+     "error": "Thinks rebuilding an old site with new concrete conserves it.",
+     "example": {
+      "question": "An old coral wall is cracking. Which is the better repair?",
+      "wrong_answer": "Pull it down and build a concrete one",
+      "correct_answer": "Repair it carefully with the same kind of materials"
+     },
+     "cause": "The child thinks newer means stronger and better.",
+     "reveals": "Offer \"Pull it down and build a concrete one\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a photo of a careful coral repair with a concrete wall.",
+     "feedback": "Conserving means careful repair that keeps the old materials and look.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -1568,6 +1935,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Seeing how language groups live together in Kenya (Grade 5) leads to grouping across the region. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -1780,6 +2154,70 @@
      "feedback": "They traded, learned from each other and some intermarried. They did not all become the same.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_COUNTRY_GROUP",
+     "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+     "error": "Thinks each country has only one language group.",
+     "example": {
+      "question": "Are all Ugandans in the same language group?",
+      "wrong_answer": "Yes, one country one group",
+      "correct_answer": "No: the Baganda are Bantu and the Acholi are Nilotes"
+     },
+     "cause": "The child links a language group to a flag.",
+     "reveals": "Offer \"Yes, one country one group\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort communities from one country into all three groups.",
+     "feedback": "One country can have several language groups.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_ONE_MOVE",
+     "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
+     "error": "Thinks each group moved once, in one trip, to where it lives now.",
+     "example": {
+      "question": "Did the Bantu reach Eastern Africa in one journey?",
+      "wrong_answer": "Yes, in one trip",
+      "correct_answer": "No, they moved slowly over hundreds of years"
+     },
+     "cause": "Arrows on a map look like one journey.",
+     "reveals": "Offer \"Yes, in one trip\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the arrow in short steps with dates beside them.",
+     "feedback": "Migration happened slowly, over many generations.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_EFFECT_ONLY_BAD",
+     "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
+     "error": "Thinks migration only caused wars.",
+     "example": {
+      "question": "Give one good effect of migration.",
+      "wrong_answer": "There were none",
+      "correct_answer": "Intermarriage, trade, and the spread of farming and iron working"
+     },
+     "cause": "Conflict stories are remembered most.",
+     "reveals": "Offer \"There were none\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a T-chart and fill the good side first.",
+     "feedback": "Migration brought trade, intermarriage and new skills, as well as some conflict.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_IRON_NONE",
+     "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
+     "error": "Does not know migration spread iron working.",
+     "example": {
+      "question": "Which skill did the Bantu spread as they migrated?",
+      "wrong_answer": "Making plastic",
+      "correct_answer": "Iron working"
+     },
+     "cause": "The child thinks iron tools came with Europeans.",
+     "reveals": "Offer \"Making plastic\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of a traditional smelting furnace.",
+     "feedback": "The Bantu spread iron working and farming as they moved.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -1933,6 +2371,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DIVISION.DIV_WORD_PROBLEMS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Comparing density means dividing people by area. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -1969,6 +2414,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Where density is high (Grade 5) comes before its effects. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2072,6 +2524,102 @@
      "feedback": "Crowding puts pressure on schools and hospitals because there are too many people to serve.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_FACTORY_REPEL",
+     "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
+     "error": "Thinks factories and towns push people away because they are noisy.",
+     "example": {
+      "question": "Why do many people move to Nairobi and Kampala?",
+      "wrong_answer": "They do not; towns push people away",
+      "correct_answer": "For jobs, schools, hospitals and services"
+     },
+     "cause": "The child sees towns as crowded and unpleasant.",
+     "reveals": "Offer \"They do not; towns push people away\" next to the right answer and ask the question again in a new context.",
+     "help": "List what a town offers that a village may not.",
+     "feedback": "Jobs and services pull people to towns.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_FOREST_DENSE",
+     "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
+     "error": "Thinks thick forests are crowded with people because there is plenty of food.",
+     "example": {
+      "question": "Are thick rain forests densely populated?",
+      "wrong_answer": "Yes, there is food everywhere",
+      "correct_answer": "No, they are hard to clear and travel through, and are often protected"
+     },
+     "cause": "The child links plenty of plants with plenty of people.",
+     "reveals": "Offer \"Yes, there is food everywhere\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the density map with the forest map.",
+     "feedback": "Thick forests usually have few people.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_BIG_COUNTRY_DENSE",
+     "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
+     "error": "Thinks the biggest country must have the highest density.",
+     "example": {
+      "question": "Ethiopia is much bigger than Rwanda. Which has the higher density?",
+      "wrong_answer": "Ethiopia, it is bigger",
+      "correct_answer": "Rwanda"
+     },
+     "cause": "The child mixes size with crowding.",
+     "reveals": "Offer \"Ethiopia, it is bigger\" next to the right answer and ask the question again in a new context.",
+     "help": "Divide people by area for both, with rounded figures.",
+     "feedback": "A small country with many people, like Rwanda, can be very dense.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_CITY_COUNTRY",
+     "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
+     "error": "Thinks a whole country is crowded because its capital city is crowded.",
+     "example": {
+      "question": "Nairobi is crowded. Is all of Kenya densely populated?",
+      "wrong_answer": "Yes, the whole country",
+      "correct_answer": "No, northern Kenya is sparsely populated"
+     },
+     "cause": "The child takes the busiest place they know as the whole country.",
+     "reveals": "Offer \"Yes, the whole country\" next to the right answer and ask the question again in a new context.",
+     "help": "Shade Kenya on a density map: dark in some places, light in others.",
+     "feedback": "One crowded city does not make a whole country crowded.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_DENSE_NO_SLUMS",
+     "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
+     "error": "Does not link high density in towns to slums.",
+     "example": {
+      "question": "Why do slums grow in crowded cities?",
+      "wrong_answer": "They do not",
+      "correct_answer": "There are more people than good, cheap houses"
+     },
+     "cause": "The child has not linked housing to population.",
+     "reveals": "Offer \"They do not\" next to the right answer and ask the question again in a new context.",
+     "help": "Count houses and families on a drawing of a growing town.",
+     "feedback": "When many people crowd into a city, there may not be enough good houses, so slums grow.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_FOREST_LOST",
+     "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
+     "error": "Does not see that crowding leads people to clear forests.",
+     "example": {
+      "question": "How can high population density harm forests?",
+      "wrong_answer": "It cannot",
+      "correct_answer": "People clear forests for farms, firewood and houses"
+     },
+     "cause": "The child keeps people and forests as separate topics.",
+     "reveals": "Offer \"It cannot\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a before-and-after photo of a cleared hill.",
+     "feedback": "Many people need land and firewood, so forests get cleared.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -2172,6 +2720,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Age-sets as part of early government (Grade 5) are now studied as social organisation. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2245,6 +2800,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The aspects of traditional culture (Grade 4) are what the child sorts into keep and stop. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2347,6 +2909,102 @@
      "help": "Ask what proverbs and folktales teach.",
      "feedback": "Good customs such as respect for elders and community work should be preserved.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_GROUP_SET_SAME",
+     "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
+     "error": "Uses age-group and age-set as the same thing.",
+     "example": {
+      "question": "What is the difference between an age-group and an age-set?",
+      "wrong_answer": "There is none",
+      "correct_answer": "An age-group is people of about the same age; an age-set is those initiated together, who stay a group for life"
+     },
+     "cause": "The words sound alike.",
+     "reveals": "Offer \"There is none\" next to the right answer and ask the question again in a new context.",
+     "help": "Place cards: all the children of a village (age-group); boys initiated in one year (age-set).",
+     "feedback": "An age-set is initiated together and stays a group for life.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_ELDERS_NO_DUTY",
+     "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
+     "error": "Thinks elders had no duties in traditional society.",
+     "example": {
+      "question": "What did elders do in traditional societies?",
+      "wrong_answer": "Nothing, they rested",
+      "correct_answer": "Settled disputes, made decisions and led ceremonies"
+     },
+     "cause": "The child sees old age as rest.",
+     "reveals": "Offer \"Nothing, they rested\" next to the right answer and ask the question again in a new context.",
+     "help": "Act a council of elders hearing a case.",
+     "feedback": "Elders made decisions, settled disputes and led ceremonies.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_SAME_TRIBE",
+     "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
+     "error": "Thinks a clan is the same as a whole community or tribe.",
+     "example": {
+      "question": "Is a clan the same as the whole community?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, a community has many clans"
+     },
+     "cause": "Both are groups of related people.",
+     "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a community circle with several clan circles inside.",
+     "feedback": "A community has many clans. A clan is a group of families from one ancestor.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_NO_HELP",
+     "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
+     "error": "Does not know clans helped members in need.",
+     "example": {
+      "question": "How did a clan help a family whose house burnt down?",
+      "wrong_answer": "It did not",
+      "correct_answer": "Members helped rebuild and gave food"
+     },
+     "cause": "The child thinks only of marriage rules.",
+     "reveals": "Offer \"It did not\" next to the right answer and ask the question again in a new context.",
+     "help": "Tell a story of clan members helping after a fire.",
+     "feedback": "Clan members helped each other in hard times.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_HARM_HIDDEN",
+     "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
+     "error": "Thinks a harmful practice is fine if done secretly.",
+     "example": {
+      "question": "A family plans to carry out FGM in secret. Is it acceptable?",
+      "wrong_answer": "Yes, if nobody knows",
+      "correct_answer": "No, it is harmful and against the law, secret or not"
+     },
+     "cause": "The child thinks the wrong is in being seen.",
+     "reveals": "Offer \"Yes, if nobody knows\" next to the right answer and ask the question again in a new context.",
+     "help": "Say plainly that FGM harms girls and is against the law, and name who to tell.",
+     "feedback": "Harmful practices are wrong and against the law, even in secret. Tell a trusted adult.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_SONGS_STOP",
+     "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
+     "error": "Thinks traditional songs and dances should stop because they are old.",
+     "example": {
+      "question": "Should traditional songs and dances be kept?",
+      "wrong_answer": "No, they are old-fashioned",
+      "correct_answer": "Yes, they keep our culture and are enjoyed today"
+     },
+     "cause": "The child links old with bad.",
+     "reveals": "Offer \"No, they are old-fashioned\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch a music festival performance.",
+     "feedback": "Songs, dances and stories are good parts of culture to keep.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2452,6 +3110,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Ways people depend on each other (Grade 4) apply to a school and its community. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2482,6 +3147,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The benefits of depending on each other (Grade 4) are the benefits of collaboration. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -2552,6 +3224,70 @@
      "help": "Ask what happens if no one talks.",
      "feedback": "Open days and regular meetings keep the school and community working together.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_PARENTS_ONLY",
+     "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
+     "error": "Thinks only parents of current learners work with the school.",
+     "example": {
+      "question": "Who else in the community can work with the school besides parents?",
+      "wrong_answer": "Nobody",
+      "correct_answer": "Local leaders, religious groups, businesses, health workers and former learners"
+     },
+     "cause": "The child sees only parents at school events.",
+     "reveals": "Offer \"Nobody\" next to the right answer and ask the question again in a new context.",
+     "help": "List visitors to the school this term.",
+     "feedback": "Many people in the community can work with the school, not only parents.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_FEES_ONLY",
+     "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
+     "error": "Thinks the only way the community helps is by paying money.",
+     "example": {
+      "question": "Give a way the community helps the school without money.",
+      "wrong_answer": "There is none",
+      "correct_answer": "Giving labour, security, advice or land"
+     },
+     "cause": "The child hears about fees more than other help.",
+     "reveals": "Offer \"There is none\" next to the right answer and ask the question again in a new context.",
+     "help": "Tell how parents built the school fence on a work day.",
+     "feedback": "The community helps with labour, security and advice, not only money.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_COMMUNITY_NO_GAIN",
+     "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
+     "error": "Does not see how the community gains from the school.",
+     "example": {
+      "question": "How does a community gain from a school?",
+      "wrong_answer": "It does not",
+      "correct_answer": "Educated learners, use of the hall and field, and health days"
+     },
+     "cause": "The child sees the school as only for learners.",
+     "reveals": "Offer \"It does not\" next to the right answer and ask the question again in a new context.",
+     "help": "List community events held at school.",
+     "feedback": "The community gains educated children and can use school facilities.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_STRATEGY_OPEN_DAY",
+     "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
+     "error": "Thinks an open day is for learners only and does not help the link with parents.",
+     "example": {
+      "question": "How does an open day help the school and the community work together?",
+      "wrong_answer": "It does not",
+      "correct_answer": "Parents meet teachers, see work and plan together"
+     },
+     "cause": "The child sees the open day as a learners' show.",
+     "reveals": "Offer \"It does not\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what parents talked about with teachers at the last open day.",
+     "feedback": "Open days bring parents and teachers together to plan for learners.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -2735,6 +3471,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What an economic activity gives (Grade 4) is applied to beef farming. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -2906,6 +3649,134 @@
      "feedback": "Overgrazing is reduced by rotating grazing and keeping fewer cattle on the land.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_DAIRY_BEEF",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
+     "error": "Mixes up beef and dairy cattle, saying Friesians are the main beef breed.",
+     "example": {
+      "question": "Which breed is kept mainly for beef in Kenya?",
+      "wrong_answer": "Friesian",
+      "correct_answer": "Boran"
+     },
+     "cause": "Both are cattle and the child knows the dairy breed best.",
+     "reveals": "Offer \"Friesian\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare photos of a Friesian (milk) and a Boran (beef).",
+     "feedback": "The Boran is a beef breed. The Friesian is a dairy breed.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_MARKET_NONE",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
+     "error": "Thinks beef farming needs no market or roads.",
+     "example": {
+      "question": "Why does a beef farmer need roads?",
+      "wrong_answer": "They do not",
+      "correct_answer": "To take cattle or meat to market"
+     },
+     "cause": "The child thinks of cattle only on the farm.",
+     "reveals": "Offer \"They do not\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace cattle from a ranch to the market and the meat factory.",
+     "feedback": "Farmers need roads and markets to sell their cattle.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_HIGHLAND_ONLY",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
+     "error": "Thinks beef farming is done only in the highlands.",
+     "example": {
+      "question": "Is beef farming done on the dry plains of Kajiado?",
+      "wrong_answer": "No, only in the highlands",
+      "correct_answer": "Yes, on large grasslands"
+     },
+     "cause": "Dairy farming is in the highlands, and the child thinks all cattle are.",
+     "reveals": "Offer \"No, only in the highlands\" next to the right answer and ask the question again in a new context.",
+     "help": "Shade beef areas and dairy areas on the map in two colours.",
+     "feedback": "Beef cattle are kept on large, drier grasslands such as Kajiado and Laikipia.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_ANKOLE_KENYA",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
+     "error": "Places the Ankole cattle corridor in Kenya.",
+     "example": {
+      "question": "In which country is the Ankole cattle area?",
+      "wrong_answer": "Kenya",
+      "correct_answer": "Uganda"
+     },
+     "cause": "The child places all known cattle areas in Kenya.",
+     "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+     "help": "Put Ankole on the map in south-western Uganda.",
+     "feedback": "Ankole is in south-western Uganda.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_HIDES_WASTE",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
+     "error": "Thinks hides and skins are waste.",
+     "example": {
+      "question": "What are cattle hides used for?",
+      "wrong_answer": "Thrown away",
+      "correct_answer": "Making leather for shoes and bags"
+     },
+     "cause": "The child sees only the meat sold.",
+     "reveals": "Offer \"Thrown away\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a leather shoe and trace it back to a hide.",
+     "feedback": "Hides become leather for shoes, bags and belts.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_NO_EXPORT",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
+     "error": "Thinks Eastern African beef is never sold abroad.",
+     "example": {
+      "question": "Do Eastern African countries sell beef and live animals abroad?",
+      "wrong_answer": "No, it is all eaten at home",
+      "correct_answer": "Yes, and this earns foreign exchange"
+     },
+     "cause": "The child sees meat only at the butchery.",
+     "reveals": "Offer \"No, it is all eaten at home\" next to the right answer and ask the question again in a new context.",
+     "help": "Show live animals shipped from Berbera or Somalia ports (to confirm).",
+     "feedback": "Beef and live animals are sold abroad and earn foreign exchange.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_RUSTLING_DIP",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
+     "error": "Matches cattle rustling with dipping.",
+     "example": {
+      "question": "Which solution fits cattle rustling?",
+      "wrong_answer": "Dipping the cattle",
+      "correct_answer": "Better security and peace committees"
+     },
+     "cause": "Dips are a well-known cattle solution.",
+     "reveals": "Offer \"Dipping the cattle\" next to the right answer and ask the question again in a new context.",
+     "help": "Pair each problem with the cause: theft needs security, ticks need dips.",
+     "feedback": "Rustling is theft. It needs security and peace, not dips.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_PRICE_MORE_COWS",
+     "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
+     "error": "Thinks low prices are solved by keeping more cattle.",
+     "example": {
+      "question": "Beef prices are low. What helps farmers?",
+      "wrong_answer": "Keep more cattle",
+      "correct_answer": "Better markets, co-operatives and meat processing"
+     },
+     "cause": "More seems better.",
+     "reveals": "Offer \"Keep more cattle\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to price when everyone brings more cattle to market.",
+     "feedback": "Better markets and processing help, not just more cattle.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3051,6 +3922,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Knowing why fish must not be overcaught (Grade 5) frames which methods are fair. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3191,6 +4069,102 @@
      "feedback": "Cold rooms stop fish spoiling. Sea patrols deal with piracy.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_TANGANYIKA_KENYA",
+     "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
+     "error": "Places Lake Tanganyika in Kenya.",
+     "example": {
+      "question": "Is Lake Tanganyika in Kenya?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is on the borders of Tanzania, Burundi, DR Congo and Zambia"
+     },
+     "cause": "The name sounds like Tanzania and the child guesses East Africa means Kenya.",
+     "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Find the lake on the regional map.",
+     "feedback": "Lake Tanganyika is in the west of the region, not in Kenya.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_MARINE_MEANS_LAKE",
+     "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
+     "error": "Thinks marine means any large water body.",
+     "example": {
+      "question": "What does \"marine fishing\" mean?",
+      "wrong_answer": "Fishing in any big water",
+      "correct_answer": "Fishing in the sea or ocean"
+     },
+     "cause": "The child has not met the word marine.",
+     "reveals": "Offer \"Fishing in any big water\" next to the right answer and ask the question again in a new context.",
+     "help": "Write marine = sea beside a picture of the Indian Ocean.",
+     "feedback": "Marine means the sea. Lake fishing is inland.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_PURSE_SEINE",
+     "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
+     "error": "Thinks a purse seine is a small bag for carrying fish.",
+     "example": {
+      "question": "What is a purse seine?",
+      "wrong_answer": "A bag to carry fish home",
+      "correct_answer": "A big net that circles a shoal and is pulled closed at the bottom"
+     },
+     "cause": "The word purse makes the child think of a small bag.",
+     "reveals": "Offer \"A bag to carry fish home\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the net circling the fish and closing like a drawstring purse.",
+     "feedback": "A purse seine is a big net that circles fish and closes like a purse.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_MODERN_SMALL",
+     "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
+     "error": "Thinks modern fishing catches less than traditional fishing.",
+     "example": {
+      "question": "Which catches more fish: a trawler or a canoe with a basket?",
+      "wrong_answer": "The canoe",
+      "correct_answer": "The trawler"
+     },
+     "cause": "The child links old with plentiful.",
+     "reveals": "Offer \"The canoe\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the size of a trawler net and a basket.",
+     "feedback": "Trawlers catch far more fish than traditional methods.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_WEED_GOOD",
+     "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
+     "error": "Thinks water hyacinth helps fishing because fish hide in it.",
+     "example": {
+      "question": "How does water hyacinth on Lake Victoria affect fishing?",
+      "wrong_answer": "It helps; fish hide in it",
+      "correct_answer": "It blocks boats and reduces oxygen for fish"
+     },
+     "cause": "The child sees plants as homes for fish.",
+     "reveals": "Offer \"It helps; fish hide in it\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a photo of boats stuck in hyacinth at Kisumu.",
+     "feedback": "Water hyacinth blocks boats and harms fish.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_STORAGE_SALT",
+     "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
+     "error": "Does not see poor storage as a problem, thinking fish keep for days in the sun.",
+     "example": {
+      "question": "Why do some fishers lose fish before selling them?",
+      "wrong_answer": "They do not; fish keep for days",
+      "correct_answer": "Fish go bad quickly without ice or cold rooms"
+     },
+     "cause": "The child does not know how fast fish spoil.",
+     "reveals": "Offer \"They do not; fish keep for days\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare dried fish with fresh fish left out for a day.",
+     "feedback": "Fresh fish spoils fast. Ice, cold rooms or drying keep it.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -3302,6 +4276,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knowing Kenya's attractions (Grade 5) is the base for what draws tourists. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3369,6 +4350,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "How tourism helps the economy (Grade 5) shows what is lost when it faces problems. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3471,6 +4459,102 @@
      "help": "Ask which answer stops a poacher.",
      "feedback": "Patrols and strong laws help to stop poaching.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_ANIMALS_ONLY_FACTOR",
+     "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
+     "error": "Thinks wildlife alone is enough to bring tourists.",
+     "example": {
+      "question": "A country has many animals but no roads or hotels near the park. Will many tourists come?",
+      "wrong_answer": "Yes, animals are enough",
+      "correct_answer": "No, tourists also need roads, hotels and security"
+     },
+     "cause": "The child sees only the attraction, not the services.",
+     "reveals": "Offer \"Yes, animals are enough\" next to the right answer and ask the question again in a new context.",
+     "help": "Plan a trip: list what you need besides the animals.",
+     "feedback": "Tourists need attractions and also roads, hotels and security.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_CLIMATE_NONE",
+     "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
+     "error": "Does not see a pleasant climate as a factor in tourism.",
+     "example": {
+      "question": "Why do many tourists come in the dry season?",
+      "wrong_answer": "There is no reason",
+      "correct_answer": "Animals are easier to see and roads are easier to use"
+     },
+     "cause": "The child does not link weather to travel.",
+     "reveals": "Offer \"There is no reason\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a muddy road in the rains with a dry one.",
+     "feedback": "Good weather helps tourism: animals gather at water and roads are passable.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_NGORONGORO_KENYA",
+     "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
+     "error": "Places Ngorongoro Crater in Kenya.",
+     "example": {
+      "question": "In which country is the Ngorongoro Crater?",
+      "wrong_answer": "Kenya",
+      "correct_answer": "Tanzania"
+     },
+     "cause": "The child places the famous parks in Kenya.",
+     "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+     "help": "Pin each park on the regional map.",
+     "feedback": "Ngorongoro Crater is in Tanzania.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_PARK_SAME_ANIMALS",
+     "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
+     "error": "Thinks every park has the same animals.",
+     "example": {
+      "question": "Where in Eastern Africa can mountain gorillas be seen?",
+      "wrong_answer": "In every park",
+      "correct_answer": "In Bwindi (Uganda) and the Volcanoes National Park (Rwanda)"
+     },
+     "cause": "The child thinks all parks hold all animals.",
+     "reveals": "Offer \"In every park\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the gorilla range on the map.",
+     "feedback": "Mountain gorillas live only in a few mountain forests, like Bwindi.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_CONFLICT_KILL",
+     "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
+     "error": "Thinks killing wild animals solves human-wildlife conflict.",
+     "example": {
+      "question": "Elephants destroy crops near a park. What is a good solution?",
+      "wrong_answer": "Kill the elephants",
+      "correct_answer": "Electric fences, chilli or beehive fences and compensation"
+     },
+     "cause": "Removing the animal seems simplest.",
+     "reveals": "Offer \"Kill the elephants\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a beehive fence that keeps elephants out.",
+     "feedback": "Fences and compensation protect people and wildlife.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_ADVERT_NONE",
+     "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
+     "error": "Does not see marketing as a need for tourism.",
+     "example": {
+      "question": "How can a country bring more tourists?",
+      "wrong_answer": "Do nothing",
+      "correct_answer": "Advertise its attractions abroad and at home"
+     },
+     "cause": "The child thinks tourists find out by themselves.",
+     "reveals": "Offer \"Do nothing\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a tourism advert.",
+     "feedback": "Advertising tells people about attractions so more visit.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3637,6 +4721,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Rain and road safety (Grade 4) is one transport challenge the child already knows. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3722,6 +4813,54 @@
      "help": "Ask what happens when a car hits at high speed.",
      "feedback": "Speed limits and driver training reduce road crashes.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_TAZARA_KENYA",
+     "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+     "error": "Thinks the TAZARA railway runs through Kenya.",
+     "example": {
+      "question": "Which countries does the TAZARA railway join?",
+      "wrong_answer": "Kenya and Uganda",
+      "correct_answer": "Tanzania and Zambia"
+     },
+     "cause": "The child places every railway in Kenya.",
+     "reveals": "Offer \"Kenya and Uganda\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace TAZARA from Dar es Salaam to Zambia on the map.",
+     "feedback": "TAZARA joins Tanzania and Zambia.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_BORDER_NO_PROBLEM",
+     "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
+     "error": "Thinks border crossings never slow down goods.",
+     "example": {
+      "question": "Why do lorries sometimes wait days at a border?",
+      "wrong_answer": "They never wait",
+      "correct_answer": "Paperwork, checks and queues at the border"
+     },
+     "cause": "The child has not seen a border.",
+     "reveals": "Offer \"They never wait\" next to the right answer and ask the question again in a new context.",
+     "help": "Describe a queue of lorries at Malaba.",
+     "feedback": "Borders can slow goods. One-stop border posts help.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_VANDAL_HARMLESS",
+     "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
+     "error": "Thinks stealing railway parts or road signs is harmless.",
+     "example": {
+      "question": "How does stealing road signs affect transport?",
+      "wrong_answer": "It does not",
+      "correct_answer": "Drivers miss warnings and accidents happen"
+     },
+     "cause": "The child sees only the value of the metal.",
+     "reveals": "Offer \"It does not\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a bend with and without a warning sign.",
+     "feedback": "Vandalism puts lives in danger and costs money to repair.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -3834,6 +4973,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Early forms of communication (Grade 5) are the traditional modes. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -3864,6 +5010,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Communication challenges such as vandalism are solved like transport ones. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -3934,6 +5087,70 @@
      "help": "Ask which action stops a thief.",
      "feedback": "Laws and guards protect masts and cables. Training helps with skills.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_PHONE_MASS",
+     "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
+     "error": "Thinks a phone call is mass communication.",
+     "example": {
+      "question": "Is a phone call between two friends mass communication?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is between two people; radio and television are mass media"
+     },
+     "cause": "The child knows phones are modern and assumes they reach many.",
+     "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort modes into one-to-one and one-to-many.",
+     "feedback": "A phone call is one-to-one. Radio and television reach many.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_INTERNET_ONE",
+     "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
+     "error": "Thinks the internet is only for games.",
+     "example": {
+      "question": "Give one use of the internet for communication.",
+      "wrong_answer": "Only games",
+      "correct_answer": "Email, news and messages"
+     },
+     "cause": "The child has seen children use phones for games.",
+     "reveals": "Offer \"Only games\" next to the right answer and ask the question again in a new context.",
+     "help": "Show an email and a news website.",
+     "feedback": "The internet carries email, news and messages.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_COST_NONE",
+     "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
+     "error": "Does not see cost as a challenge to communication.",
+     "example": {
+      "question": "Why do some families not use the internet?",
+      "wrong_answer": "Everyone uses it",
+      "correct_answer": "It costs money for data and phones"
+     },
+     "cause": "The child's family may have access.",
+     "reveals": "Offer \"Everyone uses it\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the cost of data with the cost of a loaf of bread.",
+     "feedback": "Cost stops some people using phones and the internet.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_FAKE_NEWS_NONE",
+     "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
+     "error": "Does not see false news as a challenge.",
+     "example": {
+      "question": "A message says a school is closed, but it is not true. What problem is this?",
+      "wrong_answer": "No problem",
+      "correct_answer": "False news, which misleads people"
+     },
+     "cause": "The child trusts messages.",
+     "reveals": "Offer \"No problem\" next to the right answer and ask the question again in a new context.",
+     "help": "Check the message against the school's own notice.",
+     "feedback": "False news misleads people. Check with a trusted source.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -4083,6 +5300,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Mining gives raw materials that industries process (Grade 4). Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -4247,6 +5471,86 @@
      "feedback": "Refilling pits and planting trees repairs mined land, as at Haller Park.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_OIL_NOT_MINERAL",
+     "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
+     "error": "Does not count oil as a mineral resource.",
+     "example": {
+      "question": "Is the oil found in Turkana a mineral resource?",
+      "wrong_answer": "No, it is a liquid",
+      "correct_answer": "Yes, it is a mineral resource"
+     },
+     "cause": "The child pictures minerals as rocks.",
+     "reveals": "Offer \"No, it is a liquid\" next to the right answer and ask the question again in a new context.",
+     "help": "List minerals in all forms: solid (gold), liquid (oil).",
+     "feedback": "Oil is a mineral resource too.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_SODA_DREDGE",
+     "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
+     "error": "Thinks soda ash is dug from deep shafts.",
+     "example": {
+      "question": "How is soda ash taken from Lake Magadi?",
+      "wrong_answer": "From deep shafts",
+      "correct_answer": "Dredged or scooped from the lake surface"
+     },
+     "cause": "The child thinks all mining goes underground.",
+     "reveals": "Offer \"From deep shafts\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a photo of the white crust on Lake Magadi.",
+     "feedback": "Soda ash is scooped from the surface of Lake Magadi.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_OPEN_CAST_DEEP",
+     "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
+     "error": "Thinks open-cast mining means a narrow, deep tunnel.",
+     "example": {
+      "question": "What is open-cast mining?",
+      "wrong_answer": "A narrow deep tunnel",
+      "correct_answer": "Digging a big open pit from the surface"
+     },
+     "cause": "Mining is pictured as tunnels.",
+     "reveals": "Offer \"A narrow deep tunnel\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a quarry photo with a tunnel drawing.",
+     "feedback": "Open-cast mining digs a wide open pit from the surface.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_MERCURY",
+     "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
+     "error": "Does not know chemicals from mining can poison rivers.",
+     "example": {
+      "question": "How can small gold mines harm rivers?",
+      "wrong_answer": "They cannot",
+      "correct_answer": "Mercury used for gold can poison the water"
+     },
+     "cause": "The child sees mining as only digging.",
+     "reveals": "Offer \"They cannot\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of a warning sign at a polluted river.",
+     "feedback": "Chemicals like mercury from mining can poison water.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_JOBS_ONLY",
+     "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
+     "error": "Lists only good effects of mining.",
+     "example": {
+      "question": "Give one bad effect of mining.",
+      "wrong_answer": "There are none; mining gives jobs",
+      "correct_answer": "Dust, noise, open pits or polluted water"
+     },
+     "cause": "The child stops at the benefits.",
+     "reveals": "Offer \"There are none; mining gives jobs\" next to the right answer and ask the question again in a new context.",
+     "help": "Use a T-chart with both sides.",
+     "feedback": "Mining gives jobs but can harm land, air and water.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -4343,6 +5647,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The Baganda are a Bantu community; the child places them before studying their kingdom. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -4372,6 +5683,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The Nyamwezi are a Bantu community of Tanzania. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -4519,6 +5837,102 @@
      "feedback": "Both rulers were advised by a council: the Lukiiko in Buganda and elders among the Nyamwezi.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_LUKIIKO_ARMY",
+     "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
+     "error": "Thinks the Lukiiko was the Buganda army.",
+     "example": {
+      "question": "What was the Lukiiko?",
+      "wrong_answer": "The army",
+      "correct_answer": "The council (parliament) of Buganda"
+     },
+     "cause": "The child guesses from a strange word.",
+     "reveals": "Offer \"The army\" next to the right answer and ask the question again in a new context.",
+     "help": "Write each title with its job on cards.",
+     "feedback": "The Lukiiko was the council of Buganda.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KABAKA_ELECTED",
+     "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
+     "error": "Thinks the Kabaka was elected by all the people.",
+     "example": {
+      "question": "How did a person become Kabaka?",
+      "wrong_answer": "By a vote of all the people",
+      "correct_answer": "By inheriting it in the royal family"
+     },
+     "cause": "The child uses modern elections as the model.",
+     "reveals": "Offer \"By a vote of all the people\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare with how a President is chosen today.",
+     "feedback": "The Kabaka inherited the throne in the royal family.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_ALONE",
+     "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
+     "error": "Thinks the Ntemi ruled without any advisers.",
+     "example": {
+      "question": "Who advised the Ntemi?",
+      "wrong_answer": "Nobody",
+      "correct_answer": "A council of elders"
+     },
+     "cause": "The child pictures a chief as ruling alone.",
+     "reveals": "Offer \"Nobody\" next to the right answer and ask the question again in a new context.",
+     "help": "Act a Ntemi consulting elders before deciding.",
+     "feedback": "The Ntemi was advised by a council of elders.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NYAMWEZI_KENYA",
+     "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
+     "error": "Places the Nyamwezi in Kenya.",
+     "example": {
+      "question": "In which country do the Nyamwezi live?",
+      "wrong_answer": "Kenya",
+      "correct_answer": "Tanzania"
+     },
+     "cause": "The child places most communities in Kenya.",
+     "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+     "help": "Point to central Tanzania on the map.",
+     "feedback": "The Nyamwezi live in central Tanzania.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_SIZE_SWAP",
+     "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
+     "error": "Thinks the Nyamwezi had one big kingdom and Buganda had many small chiefdoms.",
+     "example": {
+      "question": "Which had many small chiefdoms: Buganda or the Nyamwezi?",
+      "wrong_answer": "Buganda",
+      "correct_answer": "The Nyamwezi"
+     },
+     "cause": "The two systems are learnt together and swapped.",
+     "reveals": "Offer \"Buganda\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw one big circle for Buganda and many small ones for the Nyamwezi.",
+     "feedback": "Buganda was one big kingdom. The Nyamwezi had many small chiefdoms.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_CHIEFS_INHERIT",
+     "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
+     "error": "Thinks Buganda's county chiefs inherited their posts like the Ntemi.",
+     "example": {
+      "question": "How did Buganda's county chiefs get their posts?",
+      "wrong_answer": "They inherited them",
+      "correct_answer": "The Kabaka appointed them"
+     },
+     "cause": "Both systems had chiefs.",
+     "reveals": "Offer \"They inherited them\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort \"appointed\" and \"inherited\" for each title.",
+     "feedback": "The Kabaka appointed Buganda's chiefs. A Ntemi inherited his post.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -4659,6 +6073,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Shared roads and railways are one benefit of the EAC. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -4692,6 +6113,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Challenges to unity and how to overcome them (Grade 5) are like those of the EAC. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -4794,6 +6222,102 @@
      "help": "Say the community is built on peace.",
      "feedback": "Disputes should be settled by talks and the EAC Court of Justice.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_ONE_COUNTRY",
+     "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
+     "error": "Thinks the EAC has already made its members into one country.",
+     "example": {
+      "question": "Are EAC members now one country?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, they are separate countries working together"
+     },
+     "cause": "Political federation is listed as an aim and taken as done.",
+     "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that each member still has its own president and flag.",
+     "feedback": "EAC members are still separate countries. One aim is to unite more closely.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_MONETARY_DONE",
+     "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
+     "error": "Thinks EAC countries already use one currency.",
+     "example": {
+      "question": "Do EAC countries use one currency today?",
+      "wrong_answer": "Yes, the same money",
+      "correct_answer": "No, each has its own; a single currency is a future aim"
+     },
+     "cause": "The child hears \"monetary union\" as done.",
+     "reveals": "Offer \"Yes, the same money\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a Kenyan shilling and a Tanzanian shilling.",
+     "feedback": "Each country has its own money. One currency is still an aim.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_DUTY_ALL",
+     "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
+     "error": "Thinks goods traded inside the EAC pay the same duty as goods from other continents.",
+     "example": {
+      "question": "Do goods made in Kenya pay customs duty in Uganda?",
+      "wrong_answer": "Yes, the same as goods from anywhere",
+      "correct_answer": "Mostly no, because of the customs union"
+     },
+     "cause": "The child does not know what a customs union does.",
+     "reveals": "Offer \"Yes, the same as goods from anywhere\" next to the right answer and ask the question again in a new context.",
+     "help": "Act a lorry crossing a border with and without duty.",
+     "feedback": "Inside the customs union, goods made in member countries mostly cross without duty.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_STUDY_NONE",
+     "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
+     "error": "Thinks a Kenyan learner cannot study in another EAC country.",
+     "example": {
+      "question": "Can a Kenyan student study at a university in Uganda?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes, many do"
+     },
+     "cause": "The child thinks borders stop study.",
+     "reveals": "Offer \"No\" next to the right answer and ask the question again in a new context.",
+     "help": "Tell of Kenyan students in Kampala universities.",
+     "feedback": "The EAC makes it easier to study and work in member countries.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_LEAVE_SOLVE",
+     "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
+     "error": "Thinks a member should leave the EAC at the first disagreement.",
+     "example": {
+      "question": "Two members disagree about trade. What is the best step?",
+      "wrong_answer": "Leave the EAC",
+      "correct_answer": "Talk it through and use the EAC's own bodies to settle it"
+     },
+     "cause": "The child sees leaving as the end of the problem.",
+     "reveals": "Offer \"Leave the EAC\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall that the first EAC collapsed in 1977 and members lost the benefits.",
+     "feedback": "Disagreements are settled by talking, not by leaving.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_UNEQUAL_FINE",
+     "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
+     "error": "Thinks unequal benefits are not a problem.",
+     "example": {
+      "question": "Why can unequal benefits harm the EAC?",
+      "wrong_answer": "They cannot",
+      "correct_answer": "Members that gain less may feel cheated and lose trust"
+     },
+     "cause": "The child does not see fairness as part of co-operation.",
+     "reveals": "Offer \"They cannot\" next to the right answer and ask the question again in a new context.",
+     "help": "Share a prize unfairly in a group game and talk about it.",
+     "feedback": "Unequal benefits cause distrust. Fair sharing helps.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -4937,6 +6461,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Qualities of a good citizen in school (Grade 4) grow into those of a citizen of Kenya. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5009,6 +6540,70 @@
      "help": "Ask whether honesty or speed matters most.",
      "feedback": "A good citizen is honest. Refusing a bribe and reporting it protects the country.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_TAX_RIGHT",
+     "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
+     "error": "Calls paying taxes a right.",
+     "example": {
+      "question": "Is paying taxes a right or a responsibility?",
+      "wrong_answer": "A right",
+      "correct_answer": "A responsibility"
+     },
+     "cause": "The child sees taxes as something citizens do and calls everything a right.",
+     "reveals": "Offer \"A right\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort: \"I may\" (right) and \"I must\" (responsibility).",
+     "feedback": "Paying taxes is a responsibility of a citizen.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_ID_AGE",
+     "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
+     "error": "Thinks a citizen gets an ID card at 16.",
+     "example": {
+      "question": "At what age does a Kenyan citizen get a national ID card?",
+      "wrong_answer": "16",
+      "correct_answer": "18"
+     },
+     "cause": "Different ages are taught for different things.",
+     "reveals": "Offer \"16\" next to the right answer and ask the question again in a new context.",
+     "help": "Write 18: vote, ID card.",
+     "feedback": "At 18 a citizen gets an ID card and can vote.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_TOLERANCE",
+     "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
+     "error": "Thinks tolerance means agreeing with everyone.",
+     "example": {
+      "question": "What does tolerance mean?",
+      "wrong_answer": "Agreeing with everyone",
+      "correct_answer": "Accepting and respecting people who are different from you"
+     },
+     "cause": "Tolerance is mixed with agreement.",
+     "reveals": "Offer \"Agreeing with everyone\" next to the right answer and ask the question again in a new context.",
+     "help": "Act two learners who disagree politely.",
+     "feedback": "Tolerance is respecting people who are different or think differently.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_PATRIOT_ONLY_SOLDIERS",
+     "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
+     "error": "Thinks only soldiers can be patriotic.",
+     "example": {
+      "question": "Can a farmer show patriotism?",
+      "wrong_answer": "No, only soldiers",
+      "correct_answer": "Yes, by working hard, paying taxes and caring for Kenya"
+     },
+     "cause": "Patriotism is linked to defending the country.",
+     "reveals": "Offer \"No, only soldiers\" next to the right answer and ask the question again in a new context.",
+     "help": "List ways different people show love for Kenya.",
+     "feedback": "Anyone can be patriotic by serving and caring for Kenya.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -5102,6 +6697,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Sorting rights from responsibilities comes before sorting rights into kinds. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -5204,17 +6806,81 @@
     {
      "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_DAY",
      "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
-     "error": "Gives the wrong date for Human Rights Day.",
+     "error": "Gives 1 June (Madaraka Day) or another national holiday as Human Rights Day, mixing it up with the public holidays the child knows.",
      "example": {
       "question": "When is Human Rights Day?",
       "wrong_answer": "1 June",
       "correct_answer": "10 December"
      },
-     "cause": "The child mixes national days.",
+     "cause": "Human Rights Day is not a public holiday in Kenya, so the child reaches for a holiday date they already know.",
      "reveals": "Offer \"1 June\" next to the right answer and ask the question again in a new context.",
-     "help": "Say 10 December is the day in 1948.",
+     "help": "List Kenya's public holidays beside the international days, and mark 10 December as Human Rights Day.",
      "feedback": "Human Rights Day is on 10 December.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_WORK_SOCIAL",
+     "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
+     "error": "Puts the right to work and fair pay among social rights.",
+     "example": {
+      "question": "Under which category is the right to work and earn fair pay?",
+      "wrong_answer": "Social",
+      "correct_answer": "Economic"
+     },
+     "cause": "Work affects family life, so the child calls it social.",
+     "reveals": "Offer \"Social\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: is it about money and making a living?",
+     "feedback": "The right to work and fair pay is an economic right.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_PROPERTY_POLITICAL",
+     "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
+     "error": "Puts the right to own property among political rights.",
+     "example": {
+      "question": "Under which category is the right to own property?",
+      "wrong_answer": "Political",
+      "correct_answer": "Economic"
+     },
+     "cause": "Property laws come from Parliament, so the child calls it political.",
+     "reveals": "Offer \"Political\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: is it about voting and leaders, or about wealth?",
+     "feedback": "Owning property is an economic right.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_KNCHR",
+     "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
+     "error": "Does not know the Kenya National Commission on Human Rights protects rights.",
+     "example": {
+      "question": "Which body in Kenya watches over human rights?",
+      "wrong_answer": "The Kenya Revenue Authority",
+      "correct_answer": "The Kenya National Commission on Human Rights"
+     },
+     "cause": "The child knows other national bodies by name.",
+     "reveals": "Offer \"The Kenya Revenue Authority\" next to the right answer and ask the question again in a new context.",
+     "help": "Match bodies to their jobs on cards.",
+     "feedback": "The KNCHR watches over human rights in Kenya.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_SELF_NONE",
+     "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
+     "error": "Thinks individuals cannot uphold human rights.",
+     "example": {
+      "question": "How can a learner uphold human rights?",
+      "wrong_answer": "They cannot",
+      "correct_answer": "By respecting others, not bullying and reporting abuse"
+     },
+     "cause": "The child sees rights as the job of bodies and courts.",
+     "reveals": "Offer \"They cannot\" next to the right answer and ask the question again in a new context.",
+     "help": "List three things learners do daily that respect rights.",
+     "feedback": "Everyone upholds rights by respecting others.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -5311,6 +6977,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.CITIZE.PEACE.PE_FACTORS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "What promotes peace (Grade 4) helps the child name what breaks it. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5343,6 +7016,13 @@
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Ways of settling a quarrel in school (Grade 4) are the small form of the methods. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [
@@ -5374,6 +7054,13 @@
        "kind": "skill",
        "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "What promotes national unity (Grade 5) also promotes peace. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -5480,6 +7167,102 @@
      "feedback": "Rumours can start or increase conflict.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_ONE_SIDE",
+     "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
+     "error": "Thinks conflicts are always caused by one bad side.",
+     "example": {
+      "question": "Two villages quarrel over a water point. What is the cause?",
+      "wrong_answer": "One village is bad",
+      "correct_answer": "Competition for scarce water"
+     },
+     "cause": "The child looks for someone to blame.",
+     "reveals": "Offer \"One village is bad\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what each village needs.",
+     "feedback": "Conflicts usually have a cause, such as scarce resources, not just a bad side.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_HATE_SPEECH_OK",
+     "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
+     "error": "Thinks hate speech is only words and cannot cause conflict.",
+     "example": {
+      "question": "Can hate speech cause conflict?",
+      "wrong_answer": "No, it is only words",
+      "correct_answer": "Yes, it spreads anger between groups"
+     },
+     "cause": "The child thinks only actions cause harm.",
+     "reveals": "Offer \"No, it is only words\" next to the right answer and ask the question again in a new context.",
+     "help": "Discuss how angry words spread and lead to fights.",
+     "feedback": "Hate speech spreads anger and can cause conflict.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_NEG_DIALOGUE",
+     "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
+     "error": "Thinks negotiation and dialogue are exactly the same.",
+     "example": {
+      "question": "Two traders bargain over a price until they agree. Is this dialogue or negotiation?",
+      "wrong_answer": "Dialogue, they are the same",
+      "correct_answer": "Negotiation"
+     },
+     "cause": "Both involve talking.",
+     "reveals": "Offer \"Dialogue, they are the same\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that negotiation is bargaining to reach a deal.",
+     "feedback": "Negotiation is bargaining to reach an agreement. Dialogue is talking to understand.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_MEDIATOR_DECIDES",
+     "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
+     "error": "Thinks a mediator makes the final decision.",
+     "example": {
+      "question": "Does a mediator decide who is right?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, a mediator helps the two sides agree; an arbitrator decides"
+     },
+     "cause": "Both are third persons.",
+     "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Act both: the mediator asks questions, the arbitrator gives a decision.",
+     "feedback": "A mediator helps. An arbitrator decides.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_SEPARATE",
+     "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
+     "error": "Thinks keeping communities apart promotes peace.",
+     "example": {
+      "question": "Which promotes peace: keeping communities apart, or sports days between them?",
+      "wrong_answer": "Keeping them apart",
+      "correct_answer": "Sports and cultural days between them"
+     },
+     "cause": "Separation seems to stop fights.",
+     "reveals": "Offer \"Keeping them apart\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how people learn to trust each other if they never meet.",
+     "feedback": "Meeting and sharing builds trust and peace.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_NYUMBA_KUMI",
+     "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
+     "error": "Does not know Nyumba Kumi helps keep peace.",
+     "example": {
+      "question": "What is Nyumba Kumi for?",
+      "wrong_answer": "Counting houses",
+      "correct_answer": "Neighbours working together for security and peace"
+     },
+     "cause": "The name means \"ten houses\" and the child takes it literally.",
+     "reveals": "Offer \"Counting houses\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain the idea: groups of neighbours look out for each other.",
+     "feedback": "Nyumba Kumi is neighbours working together to keep peace and security.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
     }
    ],
    "rubric_indicators": [
@@ -5570,6 +7353,13 @@
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
        "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "The county assembly approving a budget (Grade 4) is the first time the child meets public money. Proposed, to confirm by a CBC Social Studies teacher.",
+       "status": "proposed"
       }
      ],
      "leads_to": [],
@@ -5606,6 +7396,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "What the county executive does (Grade 4) is what county money pays for. Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -5676,6 +7473,70 @@
      "help": "List what is built with taxes.",
      "feedback": "Tax money pays for roads, schools, hospitals and security.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_VAT_INCOME",
+     "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
+     "error": "Mixes up income tax and value added tax.",
+     "example": {
+      "question": "A shopper pays a tax added to the price of soap. Which tax is this?",
+      "wrong_answer": "Income tax",
+      "correct_answer": "Value added tax (VAT)"
+     },
+     "cause": "Both are taxes the child hears about.",
+     "reveals": "Offer \"Income tax\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a receipt with VAT printed on it.",
+     "feedback": "VAT is added to the price of goods. Income tax is taken from pay.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_PRINT_MONEY",
+     "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
+     "error": "Thinks the government gets its money by printing more.",
+     "example": {
+      "question": "Where does most of the government's money come from?",
+      "wrong_answer": "Printing more money",
+      "correct_answer": "Taxes"
+     },
+     "cause": "The child knows the government makes money (notes).",
+     "reveals": "Offer \"Printing more money\" next to the right answer and ask the question again in a new context.",
+     "help": "Explain that printing too much makes prices rise; taxes are the main source.",
+     "feedback": "Most government revenue comes from taxes.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_COUNTY_DEFENCE",
+     "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
+     "error": "Thinks county governments pay for the army.",
+     "example": {
+      "question": "Which government pays for defence?",
+      "wrong_answer": "The county government",
+      "correct_answer": "The national government"
+     },
+     "cause": "The child does not sort functions by level.",
+     "reveals": "Offer \"The county government\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort spending cards into national and county boxes.",
+     "feedback": "Defence is paid for by the national government.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_DEBT_NONE",
+     "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
+     "error": "Thinks the government does not spend on paying back loans.",
+     "example": {
+      "question": "Does the government spend some revenue on paying debts?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes, it repays loans with interest"
+     },
+     "cause": "The child knows loans as revenue only.",
+     "reveals": "Offer \"No\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that a loan must be paid back, like borrowing from a friend.",
+     "feedback": "Loans must be repaid, so part of revenue goes to paying debts.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],
@@ -5766,6 +7627,13 @@
        "kind": "skill",
        "reason": "Grade 5 Social Studies taught it first. Proposed, to confirm by a teacher.",
        "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Democracy is one of the preamble's key words; the child knows its types (Grade 5). Proposed, to confirm by a CBC Social Studies teacher.",
        "status": "proposed"
       }
      ],
@@ -5878,6 +7746,70 @@
      "help": "Ask about a rock painting or a forest.",
      "feedback": "Heritage is what we receive from the past and pass to the future.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_LAW_SECTIONS",
+     "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
+     "error": "Thinks the preamble is a list of laws.",
+     "example": {
+      "question": "Is the preamble a list of laws?",
+      "wrong_answer": "Yes",
+      "correct_answer": "No, it is the opening statement of the values and aims of the people"
+     },
+     "cause": "The child thinks every part of the Constitution is a rule.",
+     "reveals": "Offer \"Yes\" next to the right answer and ask the question again in a new context.",
+     "help": "Read the preamble: it starts \"We, the people of Kenya\".",
+     "feedback": "The preamble is the opening statement of the people's values.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_WE_GOVERNMENT",
+     "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
+     "error": "Thinks \"We, the people\" means the government.",
+     "example": {
+      "question": "Who are \"We, the people of Kenya\" in the preamble?",
+      "wrong_answer": "The government",
+      "correct_answer": "All the people of Kenya"
+     },
+     "cause": "The child links the Constitution with the government.",
+     "reveals": "Offer \"The government\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who voted for the Constitution in the 2010 referendum.",
+     "feedback": "\"We, the people\" means all Kenyans.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_DIVERSITY_DIVISION",
+     "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
+     "error": "Thinks diversity means division.",
+     "example": {
+      "question": "What does diversity mean in the preamble?",
+      "wrong_answer": "Division and quarrels",
+      "correct_answer": "Our many differences, such as cultures and languages, which we respect"
+     },
+     "cause": "Diversity and division sound alike.",
+     "reveals": "Offer \"Division and quarrels\" next to the right answer and ask the question again in a new context.",
+     "help": "List the different communities in the class: that is diversity.",
+     "feedback": "Diversity means our many differences, which make Kenya rich.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_RULE_LAW",
+     "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
+     "error": "Thinks the rule of law means leaders are above the law.",
+     "example": {
+      "question": "What does the rule of law mean?",
+      "wrong_answer": "Leaders can do as they like",
+      "correct_answer": "Everyone, including leaders, must obey the law"
+     },
+     "cause": "The child links rule with rulers.",
+     "reveals": "Offer \"Leaders can do as they like\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask whether a leader may break a traffic law.",
+     "feedback": "The rule of law means everyone obeys the law, leaders too.",
+     "source": "To confirm by a CBC Social Studies teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
     }
    ],

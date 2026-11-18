@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I",
+ "title": "Main physical features in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a relief map of Kenya. Facts: Mount Kenya is Kenya's highest mountain; Kilimanjaro is in Tanzania; the Rift Valley runs north to south; the Tana is Kenya's longest river.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES",
+   "key_step": "The child names Kenya's main physical features and says what kind each is (mountain, lake, river, valley, ocean).",
+   "floor": {
+    "prerequisite": "Tells a mountain, lake, river and valley apart.",
+    "question": "What is water with land all around it?",
+    "answer": "a lake"
+   },
+   "representations": [
+    "a relief map of Kenya",
+    "feature cards with photos",
+    "a sort into kinds"
+   ],
+   "steps": [
+    "Name the feature.",
+    "Say what kind it is.",
+    "Add one fact: highest, longest, shared.",
+    "Place it on the map."
+   ],
+   "contexts": [
+    "Mount Kenya seen from Nanyuki",
+    "fishing boats on Lake Victoria",
+    "the Tana River in flood"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Mount Kenya, Lake Turkana, Tana, Rift Valley."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Tana.",
+     "say": "What kind of feature is the Tana?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for river."
+    },
+    {
+     "beat": "write",
+     "do": "Write the kind beside each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES.M_PF_KILIMANJARO",
+     "listen_for": [
+      "Mount Kilimanjaro"
+     ],
+     "ask": "What is the highest mountain in Kenya?",
+     "repair": "Show that Kilimanjaro stands on the Tanzanian side. Ask which mountain gave Kenya its name."
+    },
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES.M_PF_TYPE_MIX",
+     "listen_for": [
+      "A river"
+     ],
+     "ask": "What kind of feature is Lake Turkana?",
+     "repair": "Use the word in the name: lake or mount. Ask whether the water flows or stands."
+    },
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES.M_PF_LAKE_VICTORIA_ALL_KENYA",
+     "listen_for": [
+      "Only Kenya"
+     ],
+     "ask": "Which countries share Lake Victoria?",
+     "repair": "On the map, shade the parts of the lake in each country: Kenya has the smallest part."
+    },
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES.M_PF_RIVER_TANA_ATHI",
+     "listen_for": [
+      "Lake Victoria"
+     ],
+     "ask": "Into which water body does the Tana River flow?",
+     "repair": "Trace the Tana on the map from the highlands down to the coast."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is Kenya's highest mountain?",
+     "answer": "Mount Kenya",
+     "shows": "highest mountain"
+    },
+    {
+     "question": "What kind of feature is the Great Rift Valley?",
+     "answer": "a valley",
+     "shows": "classifies a feature"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE",
+   "key_step": "The child places Kenya's main features on a described map: Lake Victoria west, Lake Turkana north-west, Mount Kenya centre, the coast south-east, the Rift Valley running north to south.",
+   "floor": {
+    "prerequisite": "Names Kenya's main physical features.",
+    "question": "Name Kenya's longest river.",
+    "answer": "the Tana"
+   },
+   "representations": [
+    "a blank outline of Kenya",
+    "stickers for each feature",
+    "a described map in words"
+   ],
+   "steps": [
+    "Draw Kenya with the compass.",
+    "Place the big water first: the lake in the west and the ocean on the south-east.",
+    "Place Mount Kenya in the centre.",
+    "Draw the Rift Valley from north to south."
+   ],
+   "contexts": [
+    "a trip from Nairobi to Kisumu dropping into the Rift Valley",
+    "a fishing camp on Lake Turkana",
+    "a beach in Kilifi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the outline of Kenya."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the west edge.",
+     "say": "Which big lake is here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Lake Victoria."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the Rift Valley as two lines from top to bottom."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which direction the valley runs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE.M_PF_REGION_MIX",
+     "listen_for": [
+      "The east"
+     ],
+     "ask": "In which part of Kenya is Lake Victoria?",
+     "repair": "Link the feature to a neighbour: Lake Victoria is shared with Uganda and Tanzania, so it is on the west."
+    },
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE.M_PF_RIFT_DIRECTION",
+     "listen_for": [
+      "East to west"
+     ],
+     "ask": "In which direction does the Great Rift Valley run through Kenya?",
+     "repair": "Describe the Rift lakes in order: Turkana in the north, then Baringo, Nakuru, Naivasha, Magadi toward the south."
+    },
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE.M_PF_ELGON_CENTRAL",
+     "listen_for": [
+      "In central Kenya near Mount Kenya"
+     ],
+     "ask": "Where is Mount Elgon?",
+     "repair": "Put both on the map: one in the middle, one on the western border."
+    },
+    {
+     "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE.M_PF_COAST_NORTH",
+     "listen_for": [
+      "The north"
+     ],
+     "ask": "In which part of Kenya is the coast?",
+     "repair": "Trace the coast on the map and name the direction from Nairobi."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which part of Kenya is Lake Turkana?",
+     "answer": "the north-west",
+     "shows": "places a feature"
+    },
+    {
+     "question": "Does the Great Rift Valley run from east to west or north to south?",
+     "answer": "north to south",
+     "shows": "Rift direction"
+    }
+   ]
+  }
+ ]
+}

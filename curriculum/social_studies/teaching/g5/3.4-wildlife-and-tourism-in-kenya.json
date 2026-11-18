@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_",
+ "title": "Wildlife and Tourism in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Maasai Mara (Narok), Amboseli (Kajiado), Tsavo (south-east, largest park), Lake Nakuru (flamingos, rhinos), Samburu (Grevy's zebra).",
+ "skills": [
+  {
+   "skill": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES",
+   "key_step": "The child names main parks, reserves and attractions, places each on a map, and links it to what visitors see.",
+   "floor": {
+    "prerequisite": "Gives directions on a map of Kenya.",
+    "question": "In which direction is the coast from Nairobi?",
+    "answer": "south-east"
+   },
+   "representations": [
+    "a map of parks",
+    "animal and park cards",
+    "tourist brochures"
+   ],
+   "steps": [
+    "Name the park.",
+    "Place it on the map.",
+    "Name what it is famous for.",
+    "Say which county it is in."
+   ],
+   "contexts": [
+    "the wildebeest migration in the Maasai Mara",
+    "flamingos at Lake Nakuru",
+    "elephants in Amboseli under Kilimanjaro"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Maasai Mara, Lake Nakuru, Amboseli."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Lake Nakuru.",
+     "say": "What birds is it famous for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for flamingos."
+    },
+    {
+     "beat": "write",
+     "do": "Write the famous sight beside each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES.M_WT_PLACE_MIX",
+     "listen_for": [
+      "Kajiado"
+     ],
+     "ask": "In which county is the Maasai Mara?",
+     "repair": "Link them to a story: the Mara is where the wildebeest cross; Amboseli looks at Kilimanjaro."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES.M_WT_ANIMAL_MIX",
+     "listen_for": [
+      "Ostriches"
+     ],
+     "ask": "For which birds is Lake Nakuru National Park famous?",
+     "repair": "Tell the one thing each park is famous for."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES.M_WT_ONLY_ANIMALS",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Name a tourist attraction in Kenya that is not wildlife.",
+     "repair": "List attractions at the coast and in the mountains."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES.M_WT_PARK_RESERVE",
+     "listen_for": [
+      "The Kenya Wildlife Service, like every park"
+     ],
+     "ask": "Who manages the Maasai Mara National Reserve?",
+     "repair": "Compare: national parks are run by the national government (KWS); reserves by counties."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which park is famous for the wildebeest migration?",
+     "answer": "the Maasai Mara",
+     "shows": "park to attraction"
+    },
+    {
+     "question": "Name one attraction in Kenya that is not wildlife.",
+     "answer": "any of: beaches, Fort Jesus, Mount Kenya, Lamu Old Town",
+     "shows": "other attractions"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY",
+   "key_step": "The child says how tourism helps Kenya (foreign money, jobs, community income, park upkeep) and why protecting wildlife matters.",
+   "floor": {
+    "prerequisite": "Names parks and attractions.",
+    "question": "Name one national park.",
+    "answer": "any park such as Tsavo"
+   },
+   "representations": [
+    "a chain of people who earn from one tourist",
+    "a poaching news story",
+    "a craft market photo"
+   ],
+   "steps": [
+    "Name the tourist activity.",
+    "Name the people who earn.",
+    "Say what Kenya earns.",
+    "Say what harms tourism."
+   ],
+   "contexts": [
+    "a tour guide in Amboseli",
+    "a hotel worker in Diani",
+    "craft sellers at a park gate"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tourist with five arrows out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one arrow.",
+     "say": "Who earns money from this tourist?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a guide, driver or hotel worker."
+    },
+    {
+     "beat": "write",
+     "do": "Write a job on each arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY.M_WT_HOTELS_ONLY",
+     "listen_for": [
+      "No one else"
+     ],
+     "ask": "Who earns from tourism besides hotel owners?",
+     "repair": "List ten jobs on a day trip to a park."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY.M_WT_ANIMALS_NO_VALUE",
+     "listen_for": [
+      "Animals bring no benefit"
+     ],
+     "ask": "Why does Kenya protect its wildlife?",
+     "repair": "Compare the income of a park visit with a small farm's harvest."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY.M_WT_POACHING_OK",
+     "listen_for": [
+      "It does not; there are many elephants"
+     ],
+     "ask": "How does poaching elephants harm Kenya?",
+     "repair": "Show elephant numbers falling in a poaching period."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY.M_WT_FOREIGN_ONLY",
+     "listen_for": [
+      "No, tourists are only foreigners"
+     ],
+     "ask": "Can Kenyan families be tourists in Kenya?",
+     "repair": "Talk about school trips and holidays to parks."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways tourism helps Kenya.",
+     "answer": "any two of: foreign money, jobs, income for communities, money to care for parks",
+     "shows": "benefits"
+    },
+    {
+     "question": "How does poaching harm Kenya?",
+     "answer": "Fewer animals means fewer tourists and less money",
+     "shows": "poaching harm"
+    }
+   ]
+  }
+ ]
+}

@@ -59,6 +59,10 @@ export const SKILLS = [
   [WC, 'CLIMATE_AFRICA', 'Say the factors that influence climate in Africa and describe its major climatic regions', ['a', 'b'], ['G7:WE_ELEMENTS'],
     ['pick the factor for a place', 'pick the climatic region', 'say how altitude changes temperature', SPOT],
     'The child names the factors (latitude, altitude, distance from the sea, ocean currents, winds, relief), says temperature falls with height (about 6.5 degrees Celsius for every 1000 metres) and the equator is hot, and describes the equatorial (hot and wet all year, Congo basin), tropical savanna (wet and dry seasons), desert (hot and very dry, Sahara), Mediterranean (rain in winter, dry summer) and mountain regions.'],
+  // Added 18 Nov 2026 (depth pass): climate change was a testable outcome with no skill. Misconceptions and pack in socialstudies-depth/g8.mjs.
+  [WC, 'CLIMATE_CHANGE', 'Say the effects of climate change on the environment and on human activities, and choose ways to address them', ['d', 'e'], ['S:CLIMATE_AFRICA'],
+    ['pick an effect of climate change', 'pick the action that reduces it', 'link a climate to the activity it allows', SPOT],
+    'The child says climate change is a long-term change in the usual weather (rising temperatures, unreliable rain, longer droughts and heavier floods), gives causes (burning fuels, cutting forests), names effects on the environment and people (dry rivers, crop failure, loss of pasture, floods, disease), and picks responses (planting trees, saving energy, water harvesting, drought-resistant crops, early warning).'],
   [VG, 'VEGETATION', 'Say the factors that influence vegetation and describe the major vegetation regions of Africa', ['a', 'b', 'c'], ['S:CLIMATE_AFRICA'],
     ['pick the vegetation for a region', 'pick the factor', 'pick a conservation method', SPOT],
     'The child says vegetation depends on rainfall, temperature, altitude and soil, names tropical rainforest (Congo basin), savanna (grass with scattered trees, East Africa), desert vegetation (few plants, Sahara), Mediterranean shrubs and mountain vegetation in zones, and picks ways to conserve vegetation (planting trees, protecting forests, controlled grazing, agroforestry), not clearing and burning.'],
@@ -71,6 +75,10 @@ export const SKILLS = [
   [HR, 'HUMAN_RIGHTS', 'Outline the rights of the child in Kenya and who protects them', ['a', 'c', 'd'], ['G7:HR_CLASSIFY'],
     ['pick a right of the child', 'pick who protects a child', 'pick the responsible action', SPOT],
     'The child names rights of the child in Kenya (a name and nationality, free and compulsory basic education, health care, food and shelter, protection from abuse, neglect, child labour and harmful practices), names who protects them (parents, teachers, the chief, the police, the children\'s department, Childline Kenya 116) and says rights come with responsibilities.'],
+  // Added 18 Nov 2026 (depth pass): outcome b had no skill.
+  [HR, 'HR_COMMUNICATE', 'Describe the process of communicating effectively on human rights issues', ['b'], ['S:HUMAN_RIGHTS'],
+    ['put the steps of raising a rights issue in order', 'pick who to report to', 'pick the respectful way to speak up', SPOT],
+    'The child puts the steps in order (get the facts, choose the right person or office, say the issue clearly and calmly with evidence, listen to the reply, follow up), names channels (a teacher, the chief, the police, the children\'s department, Childline 116, the Kenya National Commission on Human Rights) and picks assertive, respectful language over shouting, rumours or silence.'],
   [CZ, 'CITIZENSHIP', 'Name the qualities of a global citizen and the ways East African citizens live in harmony', ['a', 'b', 'c'], ['G7:CZ_GLOBAL'],
     ['pick the quality of a global citizen', 'pick a member of the East African Community', 'pick a factor for harmony', SPOT],
     'The child names qualities (respect for others, care for the environment, concern for justice, being informed and taking part), says Wangari Maathai won the Nobel Peace Prize in 2004 for the Green Belt Movement, names members of the East African Community (Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, the Democratic Republic of the Congo and Somalia) and factors for harmony (respect, a shared language in Kiswahili, trade, peaceful talks).'],

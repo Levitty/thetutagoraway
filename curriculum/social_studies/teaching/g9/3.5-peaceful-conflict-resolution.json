@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU",
+ "title": "Peaceful Conflict Resolution",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Emotional intelligence: self-awareness, self-management, motivation, empathy, social skills. Practise a pause-breathe-speak routine.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE",
+   "key_step": "The child names types of peace and barriers to resolving conflict.",
+   "floor": {
+    "prerequisite": "Resolves family conflicts peacefully.",
+    "question": "Give one peaceful way to resolve a family conflict.",
+    "answer": "talking calmly and listening"
+   },
+   "representations": [
+    "circles from self to nation",
+    "helps and blocks cards",
+    "a community story"
+   ],
+   "steps": [
+    "Name the type of peace.",
+    "Give an example.",
+    "Name a barrier.",
+    "Say how to remove it."
+   ],
+   "contexts": [
+    "calm before an exam",
+    "two neighbours reconciling",
+    "a peace agreement between communities"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four circles inside each other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the centre.",
+     "say": "What kind of peace is inside a person?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for inner peace."
+    },
+    {
+     "beat": "write",
+     "do": "Label the rest and two barriers."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_INNER",
+     "listen_for": [
+      "Peace among nations"
+     ],
+     "ask": "What is inner peace?",
+     "repair": "Draw circles from the self outwards: inner, between people, community, national."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_BARRIER",
+     "listen_for": [
+      "Listening"
+     ],
+     "ask": "Which is a barrier to conflict resolution?",
+     "repair": "Sort cards into \"helps\" and \"blocks\" before answering."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_EQ",
+     "listen_for": [
+      "Fuelling anger"
+     ],
+     "ask": "What does emotional intelligence help with?",
+     "repair": "Define it as understanding and managing feelings, your own and others'."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_ABSENCE",
+     "listen_for": [
+      "Yes, there is no war"
+     ],
+     "ask": "A village has no fighting but people do not trust each other. Is there full peace?",
+     "repair": "Compare a quiet but divided village with a united one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is inner peace?",
+     "answer": "calmness within a person",
+     "shows": "inner peace"
+    },
+    {
+     "question": "Give one barrier to conflict resolution.",
+     "answer": "any of: anger, prejudice, mistrust, poor communication",
+     "shows": "barrier"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE",
+   "key_step": "The child names the parts of emotional intelligence, picks ways to manage strong emotions and applies them to a community conflict.",
+   "floor": {
+    "prerequisite": "Says how emotions affect people.",
+    "question": "How can anger affect others?",
+    "answer": "it can hurt or frighten them"
+   },
+   "representations": [
+    "five-part EI chart",
+    "a pause-breathe-speak card",
+    "community conflict stories"
+   ],
+   "steps": [
+    "Notice the feeling.",
+    "Pause and calm down.",
+    "See the other side.",
+    "Speak calmly and look for a solution."
+   ],
+   "contexts": [
+    "an insult at a community meeting",
+    "a dispute over a water point",
+    "a quarrel between youth groups"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Someone insults your family at a meeting.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"insults\".",
+     "say": "What do you do first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"pause and breathe\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the next two steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE.M_SS9_EP_SUPPRESS",
+     "listen_for": [
+      "Pretending you are not angry"
+     ],
+     "ask": "What does managing anger mean?",
+     "repair": "Practise naming a feeling aloud, then the pause-breathe-speak routine."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE.M_SS9_EP_EMPATHY_AGREE",
+     "listen_for": [
+      "No, empathy means agreeing"
+     ],
+     "ask": "Can you show empathy to someone you disagree with?",
+     "repair": "Role-play understanding a view without accepting it."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE.M_SS9_EP_REACT_FAST",
+     "listen_for": [
+      "Shout back at once"
+     ],
+     "ask": "At a community meeting, someone insults your family. What shows emotional intelligence?",
+     "repair": "Count to ten together, then reply."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE.M_SS9_EP_SELF_ONLY",
+     "listen_for": [
+      "None of it"
+     ],
+     "ask": "Which part of emotional intelligence is about other people's feelings?",
+     "repair": "List the five parts and mark which face outward."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two parts of emotional intelligence.",
+     "answer": "any two of: self-awareness, self-management, motivation, empathy, social skills",
+     "shows": "parts"
+    },
+    {
+     "question": "Give one way to manage anger in a conflict.",
+     "answer": "any of: pause, breathe, count, walk away, talk to a trusted person",
+     "shows": "managing"
+    }
+   ]
+  }
+ ]
+}

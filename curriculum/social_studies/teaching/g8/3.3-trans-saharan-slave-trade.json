@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD",
+ "title": "Trans Saharan Slave Trade",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Handle with care and link to today's rights. Facts: camel caravans with guides crossed the Sahara between West and Central Africa and North Africa, stopping at oases.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN",
+   "key_step": "The child says how the Trans-Saharan slave trade began, how it was organised and its effects.",
+   "floor": {
+    "prerequisite": "Locates the key features of Africa.",
+    "question": "Which is the largest hot desert in Africa?",
+    "answer": "the Sahara"
+   },
+   "representations": [
+    "a map of caravan routes",
+    "factor and effect cards",
+    "a camel caravan drawing"
+   ],
+   "steps": [
+    "Name the factors.",
+    "Describe the caravans and routes.",
+    "Name the people who ran it.",
+    "Name the effects."
+   ],
+   "contexts": [
+    "camel caravans to North Africa",
+    "oases on the routes",
+    "emptied villages"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the Sahara with a line of camels crossing it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the camels.",
+     "say": "Why were camels used?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they survive long without water\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write two factors and two effects."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_ROUTE",
+     "listen_for": [
+      "By ship"
+     ],
+     "ask": "How did traders cross the Sahara?",
+     "repair": "Ask what travels over a desert."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_FACTOR",
+     "listen_for": [
+      "Railways across the desert"
+     ],
+     "ask": "Which factor helped the Trans-Saharan trade grow?",
+     "repair": "Ask what the traders had to cross the desert."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_EFFECT",
+     "listen_for": [
+      "Villages grew larger and richer"
+     ],
+     "ask": "Which was an effect of the Trans-Saharan slave trade?",
+     "repair": "Ask what happens to a village when its young people are taken."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN.M_G8_TS_OASIS_NONE",
+     "listen_for": [
+      "For no reason"
+     ],
+     "ask": "Why did caravans stop at oases?",
+     "repair": "Show an oasis photo and the route linking them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did traders cross the Sahara?",
+     "answer": "by camel caravans",
+     "shows": "route"
+    },
+    {
+     "question": "Give one effect of the Trans-Saharan slave trade.",
+     "answer": "any of: loss of people, broken families, emptied villages, wars and raids",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

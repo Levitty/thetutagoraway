@@ -104,6 +104,14 @@
    ],
    "mastery": "The child names support systems (parents, teachers, counsellors, mentors, career talks, school clubs), and says pre-career mapping helps a learner link interests and abilities to careers. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names challenges in support systems (too few counsellors, little career information in rural schools, pressure from parents to follow a set career, costly mentorship, misinformation online) and pairs each with a sensible solution (peer mentors, career days and visits, talking openly with parents, free online and school career guidance, checking sources). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS": {
    "forms": [
     "pick the right answer",
@@ -144,6 +152,14 @@
    ],
    "mastery": "The child names the census, sample surveys and registration of births and deaths as sources, and says a developing country such as Kenya has a wide-based pyramid (many children) and a developed country such as Germany has a narrower base (older population). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child reads an age-sex pyramid (males on one side, females on the other, the youngest at the base), tells a developing country's wide base from a developed country's narrow base and wide top, works out the dependants, and says a young population needs more schools, health care for mothers and children and jobs, while an older one needs pensions and care for the aged. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE": {
    "forms": [
     "pick the right answer",
@@ -151,6 +167,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names inner peace, peace between people, community peace and national peace, and barriers (anger, prejudice, mistrust, poor communication), and says emotional intelligence helps handle anger. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the parts of emotional intelligence (knowing your own feelings, managing them, motivating yourself, empathy, social skills), picks ways to manage strong emotions (pause, breathe, count, walk away, talk to a trusted person) and applies them to a community conflict by listening, seeing the other side and speaking calmly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS": {
    "forms": [
@@ -176,6 +200,14 @@
    ],
    "mastery": "The child says tensional forces pull the crust apart and compressional forces push it together, that faulting makes rift valleys, block mountains and escarpments, that the Great Rift Valley crosses Kenya, and that faulting brings earthquakes, lakes and hot springs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says continental drift is the idea (Alfred Wegener) that the continents were once one land mass, Pangaea, that slowly split and moved apart, gives evidence (the coasts of Africa and South America fit, matching rocks and fossils), and says plate tectonics explains it: the crust is broken into plates that move on the mantle, and where plates pull apart or push together we get rift valleys, mountains, earthquakes and volcanoes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS": {
    "forms": [
     "pick the right answer",
@@ -183,6 +215,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names Aswan High Dam on the Nile, Kariba on the Zambezi, Akosombo on the Volta and the Seven Forks on the Tana, and says they give electricity, irrigation, water, flood control and fish, with challenges of high cost, displaced people and silting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child gives the conditions for the Seven Forks dams on the Tana (a permanent river with a large volume of water, steep falls and gorges for dam sites, hard rock for foundations, sparse settlement to limit displacement, a growing demand for electricity and irrigation) and pairs challenges (silting, displacement, high cost, water hyacinth, drought lowering water levels) with solutions (planting trees in the catchment, fair compensation and resettlement, loans and partnerships, clearing weeds, other power sources). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION": {
    "forms": [
@@ -231,6 +271,14 @@
     "find the false step in a learner's reason"
    ],
    "mastery": "The child names language, music, dance, dress, food and sport as elements of culture, says Kiswahili and Kenyan marathon running are recognised in the world, and says respect and dialogue promote a common humanity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names respect and tolerance for other cultures, learning other languages, cultural exchange (festivals, sport, music, exchange programmes), the media used responsibly, travel and tourism, and laws against discrimination as factors that promote healthy cultural relationships, and rejects stereotypes and mockery. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   }
  }
 }

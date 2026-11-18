@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.PEOPLE.EARLY_CIVILISATION",
+ "title": "Early Civilisation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): ancient Egypt on the Nile; Great Zimbabwe built by the ancestors of the Shona; Kongo near the Congo River mouth under the Manikongo.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS",
+   "key_step": "The child gives the factors that helped Egypt, Great Zimbabwe and Kongo grow.",
+   "floor": {
+    "prerequisite": "Names the main features of Eastern Africa.",
+    "question": "Which river flows out of Lake Victoria?",
+    "answer": "the Nile"
+   },
+   "representations": [
+    "a factor table for three kingdoms",
+    "a map of Africa",
+    "pictures"
+   ],
+   "steps": [
+    "Name the kingdom.",
+    "Name its river or resource.",
+    "Name its work and trade.",
+    "Name its rule."
+   ],
+   "contexts": [
+    "farmers by the Nile",
+    "gold traders at Great Zimbabwe",
+    "copper workers in Kongo"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three columns: Egypt, Great Zimbabwe, Kongo."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Egypt.",
+     "say": "What helped Egypt grow?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Nile floods and farming."
+    },
+    {
+     "beat": "write",
+     "do": "Fill all three."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS.M_EC_NILE_EVERY",
+     "listen_for": [
+      "The yearly floods of the Nile"
+     ],
+     "ask": "Which factor helped Great Zimbabwe grow?",
+     "repair": "Ask where the Nile flows and where Great Zimbabwe stood."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS.M_EC_WHITE_BUILT",
+     "listen_for": [
+      "Visitors from other lands"
+     ],
+     "ask": "Who built the stone walls of Great Zimbabwe?",
+     "repair": "Ask which people live around the site today."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS.M_EC_GOLD_ONLY",
+     "listen_for": [
+      "Nothing else"
+     ],
+     "ask": "Besides gold, what helped Great Zimbabwe grow?",
+     "repair": "List what people ate and traded there."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS.M_EC_KONGO_DESERT",
+     "listen_for": [
+      "A dry desert"
+     ],
+     "ask": "What kind of land helped Kongo grow?",
+     "repair": "Show the Congo basin on a vegetation map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one factor that helped ancient Egypt grow.",
+     "answer": "the fertile Nile valley and its floods, or farming",
+     "shows": "Egypt"
+    },
+    {
+     "question": "Who built Great Zimbabwe?",
+     "answer": "the ancestors of the Shona people",
+     "shows": "African builders"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE",
+   "key_step": "The child places the three kingdoms on a map of Africa.",
+   "floor": {
+    "prerequisite": "Describes the position of Africa and its features.",
+    "question": "Which sea is north of Africa?",
+    "answer": "the Mediterranean"
+   },
+   "representations": [
+    "a blank map of Africa",
+    "kingdom cards",
+    "river lines"
+   ],
+   "steps": [
+    "Find the river.",
+    "Place the kingdom by it.",
+    "Name the region of Africa.",
+    "Name today's country."
+   ],
+   "contexts": [
+    "the pyramids of Giza",
+    "stone walls in Zimbabwe",
+    "the Congo River mouth"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Africa with the Nile, Congo and Zambezi."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Nile's northern end.",
+     "say": "Which kingdom was here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Egypt."
+    },
+    {
+     "beat": "write",
+     "do": "Place the other two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE.M_EC_EGYPT_WEST",
+     "listen_for": [
+      "West Africa"
+     ],
+     "ask": "In which part of Africa was ancient Egypt?",
+     "repair": "Ask which sea lies to the north of Egypt."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE.M_EC_KONGO_NORTH",
+     "listen_for": [
+      "Near the River Congo"
+     ],
+     "ask": "Where was Great Zimbabwe?",
+     "repair": "Ask which kingdom lay at the mouth of the Congo River."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE.M_EC_ZIMBABWE_EAST",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is Great Zimbabwe on the East African coast?",
+     "repair": "Trace the trade route from Great Zimbabwe to Sofala on the coast."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE.M_EC_EGYPT_SOUTH_NILE",
+     "listen_for": [
+      "The southern end near Lake Victoria"
+     ],
+     "ask": "Which end of the Nile was ancient Egypt on?",
+     "repair": "Trace the Nile from Jinja north to Egypt."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which region of Africa was Great Zimbabwe?",
+     "answer": "southern Africa",
+     "shows": "locate"
+    },
+    {
+     "question": "Near which river was the Kingdom of Kongo?",
+     "answer": "the Congo River",
+     "shows": "locate"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB",
+   "key_step": "The child says what the three kingdoms gave the modern world.",
+   "floor": {
+    "prerequisite": "Gives the factors that helped the kingdoms grow.",
+    "question": "What helped Great Zimbabwe grow?",
+    "answer": "cattle, gold and trade"
+   },
+   "representations": [
+    "gift cards to match to kingdoms",
+    "papyrus or paper",
+    "a calendar"
+   ],
+   "steps": [
+    "Name the gift.",
+    "Name the kingdom.",
+    "Say how we use it today.",
+    "Check it is not swapped."
+   ],
+   "contexts": [
+    "paper from papyrus",
+    "stone building",
+    "copper work"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write hieroglyphs, dry-stone walls, copper work."
+    },
+    {
+     "beat": "point",
+     "do": "Point at hieroglyphs.",
+     "say": "Which kingdom gave this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Egypt."
+    },
+    {
+     "beat": "write",
+     "do": "Match the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB.M_EC_MIX_GIFT",
+     "listen_for": [
+      "Great Zimbabwe"
+     ],
+     "ask": "Which kingdom is famous for hieroglyphs and papyrus?",
+     "repair": "Ask which kingdom is famous for stone walls without mortar."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB.M_EC_NO_GIFT",
+     "listen_for": [
+      "No, they ended long ago"
+     ],
+     "ask": "Do ancient African kingdoms still matter to the world today?",
+     "repair": "Ask where the 365-day calendar began."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB.M_EC_CALENDAR_EUROPE",
+     "listen_for": [
+      "Only Europe"
+     ],
+     "ask": "Which ancient kingdom gave an early 365-day calendar?",
+     "repair": "Link the Nile flood cycle to counting the year."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB.M_EC_MORTAR_NEEDED",
+     "listen_for": [
+      "With cement"
+     ],
+     "ask": "How were the walls of Great Zimbabwe built?",
+     "repair": "Stack flat stones carefully to make a small wall without glue."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which kingdom gave hieroglyphs and papyrus?",
+     "answer": "ancient Egypt",
+     "shows": "match"
+    },
+    {
+     "question": "Do ancient African kingdoms still matter today?",
+     "answer": "Yes, their ideas are still used",
+     "shows": "legacy"
+    }
+   ]
+  }
+ ]
+}

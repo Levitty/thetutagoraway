@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/social_studies/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g8-non-question-outcomes-2026-11-13.md"};
+export const MAP_SOURCE = {"source":"curriculum/social_studies/g8.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g8-non-question-outcomes-2026-11-13.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g8)"};
 export const SUBSTRANDS = {
  "SOCI.G8.SOCIAL.SELF_IMPROVEMENT": {
   "name": "Self-Improvement",
@@ -510,7 +510,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_PT_TRAIT_FEELING",
    "M_G8_PT_TRAIT_FIXED",
-   "M_G8_PT_VALUE_TRAIT"
+   "M_G8_PT_VALUE_TRAIT",
+   "M_G8_PT_LOOKS"
   ]
  },
  "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM": {
@@ -525,7 +526,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_SA_PRIDE",
    "M_G8_SA_LOW_NO_EFFECT",
-   "M_G8_SA_HIGH_GOOD"
+   "M_G8_SA_HIGH_GOOD",
+   "M_G8_SA_MARKS_ONLY"
   ]
  },
  "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS": {
@@ -543,7 +545,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_CS_ORDER",
    "M_G8_CS_SKIP_PLAN",
-   "M_G8_CS_REPORT_END"
+   "M_G8_CS_REPORT_END",
+   "M_G8_CS_DESIGN_PLAN"
   ]
  },
  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.EVOLUTION": {
@@ -559,7 +562,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_EV_ORDER",
    "M_G8_EV_MONKEY",
-   "M_G8_EV_FAST"
+   "M_G8_EV_FAST",
+   "M_G8_EV_TOOLS_LATE"
   ]
  },
  "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.CRADLE_AFRICA": {
@@ -577,7 +581,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_CR_WHY",
    "M_G8_CR_PLACE",
-   "M_G8_CR_PRESERVE"
+   "M_G8_CR_PRESERVE",
+   "M_G8_CR_TURKANA_BOY_TANZANIA"
   ]
  },
  "SOCI.G8.PEOPLE.EARLY_CIVILISATION.SWAHILI": {
@@ -592,7 +597,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_SW_WHERE",
    "M_G8_SW_TRADE",
-   "M_G8_SW_LANGUAGE"
+   "M_G8_SW_LANGUAGE",
+   "M_G8_SW_HOUSES_MUD"
   ]
  },
  "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.TRANS_SAHARAN": {
@@ -608,7 +614,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_TS_ROUTE",
    "M_G8_TS_FACTOR",
-   "M_G8_TS_EFFECT"
+   "M_G8_TS_EFFECT",
+   "M_G8_TS_OASIS_NONE"
   ]
  },
  "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.POPULATION": {
@@ -624,7 +631,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_PG_CAUSE",
    "M_G8_PG_MIGRATION",
-   "M_G8_PG_EFFECT"
+   "M_G8_PG_EFFECT",
+   "M_G8_PG_HEALTH_NONE"
   ]
  },
  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY": {
@@ -639,7 +647,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_DV8_ONE_CULTURE",
    "M_G8_DV8_BETTER",
-   "M_G8_DV8_ESTEEM"
+   "M_G8_DV8_ESTEEM",
+   "M_G8_DV8_RELIGION_ONE"
   ]
  },
  "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE": {
@@ -656,7 +665,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_PR_GIVE_IN",
    "M_G8_PR_HIDE",
-   "M_G8_PR_ANGER"
+   "M_G8_PR_ANGER",
+   "M_G8_PR_GOOD_PRESSURE"
   ]
  },
  "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.FAMILY_CONFLICT": {
@@ -672,7 +682,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_FC_WIN",
    "M_G8_FC_SILENCE",
-   "M_G8_FC_FIGHT"
+   "M_G8_FC_FIGHT",
+   "M_G8_FC_YOU_STATEMENT"
   ]
  },
  "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.TOPO_MAPS": {
@@ -688,7 +699,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_TM_KEY",
    "M_G8_TM_AREA",
-   "M_G8_TM_RELIEF"
+   "M_G8_TM_RELIEF",
+   "M_G8_TM_CONTOUR_ROAD"
   ]
  },
  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA": {
@@ -703,7 +715,26 @@ export const SKILLS = {
   "mis": [
    "M_G8_CL_LAT",
    "M_G8_CL_ALT",
-   "M_G8_CL_REGION"
+   "M_G8_CL_REGION",
+   "M_G8_CL_CURRENT_NONE"
+  ]
+ },
+ "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE": {
+  "name": "Say the effects of climate change on the environment and on human activities, and choose ways to address them",
+  "sub": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE",
+  "outcome": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.d",
+  "outcomes": [
+   "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.d",
+   "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.e"
+  ],
+  "pre": [
+   "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_AFRICA"
+  ],
+  "mis": [
+   "M_G8_CC_WEATHER_SAME",
+   "M_G8_CC_TREES_CAUSE",
+   "M_G8_CC_FARMERS_NONE",
+   "M_G8_CC_NOTHING_TO_DO"
   ]
  },
  "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION": {
@@ -721,7 +752,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_VG_REGION",
    "M_G8_VG_FACTOR",
-   "M_G8_VG_CONSERVE"
+   "M_G8_VG_CONSERVE",
+   "M_G8_VG_MED_EAST"
   ]
  },
  "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.SITES": {
@@ -737,7 +769,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_HS_PLACE",
    "M_G8_HS_USELESS",
-   "M_G8_HS_CONSERVE"
+   "M_G8_HS_CONSERVE",
+   "M_G8_HS_TIMBUKTU_EAST"
   ]
  },
  "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION": {
@@ -753,7 +786,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_CN_ARM",
    "M_G8_CN_CHAPTER",
-   "M_G8_CN_PRINCIPLE"
+   "M_G8_CN_PRINCIPLE",
+   "M_G8_CN_EXEC_LAWS"
   ]
  },
  "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS": {
@@ -769,7 +803,25 @@ export const SKILLS = {
   "mis": [
    "M_G8_HR8_DUTY",
    "M_G8_HR8_CHILD",
-   "M_G8_HR8_REPORT"
+   "M_G8_HR8_REPORT",
+   "M_G8_HR8_EDU_FEES"
+  ]
+ },
+ "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE": {
+  "name": "Describe the process of communicating effectively on human rights issues",
+  "sub": "SOCI.G8.POLITI.HUMAN_RIGHTS",
+  "outcome": "SOCI.G8.POLITI.HUMAN_RIGHTS.b",
+  "outcomes": [
+   "SOCI.G8.POLITI.HUMAN_RIGHTS.b"
+  ],
+  "pre": [
+   "SOCI.G8.POLITI.HUMAN_RIGHTS.HUMAN_RIGHTS"
+  ],
+  "mis": [
+   "M_G8_HC_RUMOUR",
+   "M_G8_HC_SHOUT",
+   "M_G8_HC_NO_FOLLOWUP",
+   "M_G8_HC_WRONG_CHANNEL"
   ]
  },
  "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP": {
@@ -785,7 +837,8 @@ export const SKILLS = {
   "mis": [
    "M_G8_CZ8_LOCAL",
    "M_G8_CZ8_EAC",
-   "M_G8_CZ8_HARMONY"
+   "M_G8_CZ8_HARMONY",
+   "M_G8_CZ8_NOBEL_SPORT"
   ]
  }
 };
@@ -793,55 +846,81 @@ export const MIS_FEEDBACK = {
  "M_G8_PT_TRAIT_FEELING": "A trait is how a person usually is (patient). A feeling comes and goes (angry today).",
  "M_G8_PT_TRAIT_FIXED": "Traits can grow and change with effort, good values and practice.",
  "M_G8_PT_VALUE_TRAIT": "Values guide actions, and repeated actions shape traits.",
+ "M_G8_PT_LOOKS": "Personality shows in how a person acts, not in how they look.",
  "M_G8_SA_PRIDE": "Self-esteem is how you value yourself. It does not mean boasting.",
  "M_G8_SA_LOW_NO_EFFECT": "Low self-esteem can lead to giving up, staying away, and being easily bullied.",
  "M_G8_SA_HIGH_GOOD": "Looking down on others is inflated self-esteem. Healthy self-esteem respects others too.",
+ "M_G8_SA_MARKS_ONLY": "Your worth is more than a mark. One test does not decide it.",
  "M_G8_CS_ORDER": "First identify the problem, then design, plan, carry out, and report.",
  "M_G8_CS_SKIP_PLAN": "A plan says who, what, when and with what. Without it a project falls apart.",
  "M_G8_CS_REPORT_END": "A report tells what was done and learned, so it comes at the end.",
+ "M_G8_CS_DESIGN_PLAN": "Designing decides what to do. Planning decides who, when and with what.",
  "M_G8_EV_ORDER": "The order is Australopithecus, Homo habilis, Homo erectus, Homo sapiens.",
  "M_G8_EV_MONKEY": "The theory says humans and today's apes share distant ancestors. Humans did not come from living monkeys.",
  "M_G8_EV_FAST": "The changes took millions of years.",
  "M_G8_CR_WHY": "Africa is the cradle because the oldest human fossils have been found there.",
  "M_G8_CR_PLACE": "Olduvai Gorge is in Tanzania. Koobi Fora, near Lake Turkana, is in Kenya.",
  "M_G8_CR_PRESERVE": "Fossils are kept in museums and protected sites with careful records.",
+ "M_G8_EV_TOOLS_LATE": "Homo habilis, \"handy man\", made early stone tools.",
+ "M_G8_CR_TURKANA_BOY_TANZANIA": "The Turkana Boy was found near Lake Turkana in Kenya.",
  "M_G8_SW_WHERE": "Mombasa, Malindi, Lamu, Kilwa and Zanzibar were Swahili city-states on the coast. Timbuktu is in West Africa.",
  "M_G8_SW_TRADE": "The monsoon winds carried dhows between the East African coast and Arabia, Persia, India and China.",
  "M_G8_SW_LANGUAGE": "Kiswahili is a Bantu language that took in Arabic words through trade.",
+ "M_G8_SW_HOUSES_MUD": "Swahili towns had houses and mosques of coral stone.",
  "M_G8_TS_ROUTE": "The Trans-Saharan trade crossed the desert by camel caravans.",
  "M_G8_TS_FACTOR": "The camel, the desert routes, and demand for labour helped the trade grow.",
  "M_G8_TS_EFFECT": "The trade took many lives, broke families and emptied villages.",
+ "M_G8_TS_OASIS_NONE": "Oases gave caravans water and rest on the long desert crossing.",
  "M_G8_PG_CAUSE": "A population grows when there are more births than deaths, and when people move in.",
  "M_G8_PG_MIGRATION": "Migration includes rural-urban movement and moving between countries, forced or by choice.",
  "M_G8_PG_EFFECT": "Rapid growth puts pressure on land, food, houses, schools and jobs.",
+ "M_G8_PG_HEALTH_NONE": "Better health care lowers deaths, so the population grows.",
  "M_G8_DV8_ONE_CULTURE": "Kenya has more than forty communities with their own languages, foods and customs.",
  "M_G8_DV8_BETTER": "No culture is better. We respect and learn from all.",
  "M_G8_DV8_ESTEEM": "Healthy self-esteem grows by being proud of yourself and respecting others.",
  "M_G8_PR_GIVE_IN": "Say no clearly, give a reason, and walk away. A real friend respects it.",
  "M_G8_PR_HIDE": "Naming a feeling and talking to a trusted person helps.",
  "M_G8_PR_ANGER": "Pause, breathe and talk calmly. Acting at once can hurt.",
+ "M_G8_DV8_RELIGION_ONE": "Kenyans practise several religions.",
+ "M_G8_PR_GOOD_PRESSURE": "Peer pressure can be positive when friends push you to do good.",
  "M_G8_FC_WIN": "The aim is peace, not winning.",
  "M_G8_FC_SILENCE": "Talking calmly and listening resolves conflict. Silence leaves it unsolved.",
  "M_G8_FC_FIGHT": "Shouting and hitting make a conflict worse.",
+ "M_G8_FC_YOU_STATEMENT": "I-statements say how you feel without blaming. They help solve conflicts.",
  "M_G8_TM_KEY": "The key explains the signs. The north arrow shows direction.",
  "M_G8_TM_AREA": "Area is length times width in squares: 4 times 3 is 12 square kilometres.",
  "M_G8_TM_RELIEF": "Contours, spot heights and hill shading show relief. The scale shows distance.",
+ "M_G8_TM_CONTOUR_ROAD": "Contours join places of the same height.",
  "M_G8_CL_LAT": "Many factors affect climate, not latitude alone.",
  "M_G8_CL_ALT": "Temperature falls about 6.5 degrees Celsius for every 1000 metres of height.",
  "M_G8_CL_REGION": "The equatorial climate is hot and wet all year. The desert is hot and dry.",
+ "M_G8_CL_CURRENT_NONE": "A cold current cools the coast and brings little rain.",
+ "M_G8_CC_WEATHER_SAME": "Climate change is a long-term change, not one day's weather.",
+ "M_G8_CC_TREES_CAUSE": "Cutting forests and burning fuels make climate change worse. Planting trees helps.",
+ "M_G8_CC_FARMERS_NONE": "Unreliable rain makes crops fail and pasture dry up.",
+ "M_G8_CC_NOTHING_TO_DO": "Small actions like planting trees and saving energy help.",
  "M_G8_VG_REGION": "The Congo basin has hot, wet weather and tropical rainforest.",
  "M_G8_VG_FACTOR": "Rainfall, temperature, altitude and soil affect vegetation.",
  "M_G8_VG_CONSERVE": "Planting trees, protecting forests and controlled grazing conserve vegetation.",
+ "M_G8_VG_MED_EAST": "Mediterranean vegetation grows in the far north and far south of Africa.",
  "M_G8_HS_PLACE": "Great Zimbabwe is in Zimbabwe. The Pyramids of Giza are in Egypt.",
  "M_G8_HS_USELESS": "Sites show a people's history and attract visitors.",
  "M_G8_HS_CONSERVE": "Visitors follow the rules and leave a site as they found it.",
+ "M_G8_HS_TIMBUKTU_EAST": "Timbuktu is in Mali, West Africa.",
  "M_G8_CN_ARM": "The Legislature makes laws, the Executive carries them out, and the Judiciary interprets them.",
  "M_G8_CN_CHAPTER": "The Bill of Rights is Chapter 4 and Leadership and Integrity is Chapter 6.",
  "M_G8_CN_PRINCIPLE": "Leaders are chosen on merit, and serve selflessly with integrity and accountability.",
+ "M_G8_CN_EXEC_LAWS": "Parliament makes laws. The President signs them so they can take effect.",
  "M_G8_HR8_DUTY": "Every right comes with a responsibility to respect others' rights.",
  "M_G8_HR8_CHILD": "Children have rights, including free basic education, health care and protection.",
  "M_G8_HR8_REPORT": "Report to a trusted adult, the chief, the police or call Childline Kenya 116.",
+ "M_G8_HR8_EDU_FEES": "Every child has a right to free and compulsory basic education.",
+ "M_G8_HC_RUMOUR": "Raise a rights issue with the right person, calmly and with facts.",
+ "M_G8_HC_SHOUT": "Calm, clear words with facts are heard and acted on.",
+ "M_G8_HC_NO_FOLLOWUP": "Follow up if nothing happens, or take it to another office.",
+ "M_G8_HC_WRONG_CHANNEL": "Tell someone who can act, like a teacher or Childline 116.",
  "M_G8_CZ8_LOCAL": "A global citizen respects others and cares for the shared world.",
  "M_G8_CZ8_EAC": "Members include Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, the Democratic Republic of the Congo and Somalia.",
- "M_G8_CZ8_HARMONY": "Respect, trade, and a shared language such as Kiswahili help people live in harmony."
+ "M_G8_CZ8_HARMONY": "Respect, trade, and a shared language such as Kiswahili help people live in harmony.",
+ "M_G8_CZ8_NOBEL_SPORT": "Wangari Maathai won the Nobel Peace Prize in 2004 for her work on the environment and justice."
 };

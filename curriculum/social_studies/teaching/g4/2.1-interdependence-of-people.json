@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL",
+ "title": "Interdependence of people",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Start from the child's own breakfast: who grew the maize, who milked the cow, who drove the lorry, who sold it. Draw the chain on the board.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS",
+   "key_step": "The child names ways people depend on each other (trade, farming, health, transport, worship) and says each side needs the other.",
+   "floor": {
+    "prerequisite": "Names people found in a market and what they do.",
+    "question": "What does a person selling sukuma wiki at the market do?",
+    "answer": "sells vegetables to buyers"
+   },
+   "representations": [
+    "a breakfast chain drawn on the board",
+    "role cards: farmer, driver, shopkeeper, nurse",
+    "string joining people who need each other"
+   ],
+   "steps": [
+    "Pick one thing the family uses.",
+    "Ask who made, grew, carried and sold it.",
+    "Draw the chain of people.",
+    "Ask what each person gets back."
+   ],
+   "contexts": [
+    "milk from a dairy farmer reaching a Nairobi shop",
+    "a nurse caring for a farmer's child",
+    "a fundi building a house for a teacher"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a farmer and a shopkeeper with an arrow from the farmer to the shop."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "What does the farmer give the shopkeeper?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for food."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what the shopkeeper gives back before drawing an arrow the other way."
+    },
+    {
+     "beat": "write",
+     "do": "Write money on the return arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_SELF_SUFFICIENT",
+     "listen_for": [
+      "Yes, if it works hard"
+     ],
+     "ask": "Can one family grow, make and do everything it needs?",
+     "repair": "List what a family uses in one day and who made each thing."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_ONE_WAY",
+     "listen_for": [
+      "Only the farmer needs the shopkeeper"
+     ],
+     "ask": "A farmer sells vegetables to a shopkeeper. Who needs the other?",
+     "repair": "Ask what the shopkeeper sells if no farmers sell to him, and what the farmer does if there is no shop."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_SERVICE_MATCH",
+     "listen_for": [
+      "Food to eat"
+     ],
+     "ask": "What does a hospital give people?",
+     "repair": "Make a matching chart of five places and what they give."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_RICH_INDEPENDENT",
+     "listen_for": [
+      "No, money means she needs nobody"
+     ],
+     "ask": "A rich trader has lots of money. Does she depend on other people?",
+     "repair": "Ask what she can buy if every farmer and shopkeeper stopped working."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way a farmer depends on a shopkeeper.",
+     "answer": "any of: sells crops to the shop, buys tools and seeds there",
+     "shows": "two-way dependence"
+    },
+    {
+     "question": "Who does a sick farmer depend on?",
+     "answer": "a doctor or nurse",
+     "shows": "service dependence"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS",
+   "key_step": "The child says what people gain when they depend on each other: goods and services they cannot make, jobs and income, use of skills, friendship.",
+   "floor": {
+    "prerequisite": "Names ways people depend on each other.",
+    "question": "Who do we depend on for medicine?",
+    "answer": "a doctor, nurse or chemist"
+   },
+   "representations": [
+    "a chart of benefits with pictures",
+    "the class sharing tasks for a clean-up",
+    "a story of a family that tried to do everything alone"
+   ],
+   "steps": [
+    "Name the people who depend on each other.",
+    "Say what each one gets.",
+    "Sort the gains: goods, services, money, friendship.",
+    "Say why it is good for the county."
+   ],
+   "contexts": [
+    "harambee to build a classroom",
+    "neighbours helping at harvest",
+    "traders and farmers at a weekly market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ring of four people holding hands."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one person.",
+     "say": "What would this person miss if the others left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "write",
+     "do": "Write the benefit beside each person."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_WEAKNESS",
+     "listen_for": [
+      "Yes, strong people do things alone"
+     ],
+     "ask": "Is it bad to depend on other people?",
+     "repair": "Ask who made the school desk, who grew the lunch and who taught the lesson."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_MONEY_ONLY",
+     "listen_for": [
+      "Only money"
+     ],
+     "ask": "What do people get when they depend on each other?",
+     "repair": "Ask what a neighbour who lends a tool gives that is not money."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_TOWN_ONLY",
+     "listen_for": [
+      "No, village families do everything alone"
+     ],
+     "ask": "Do people in a village depend on each other?",
+     "repair": "List what a village family gets from others: the posho mill, the market, the clinic, help at harvest."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_JOBS_NONE",
+     "listen_for": [
+      "Nothing, the farmer gains"
+     ],
+     "ask": "Farmers need lorries to take milk to the factory. What does this give the lorry driver?",
+     "repair": "Act it out: the farmer pays the driver; who has money now?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two benefits of people depending on each other.",
+     "answer": "any two of: get goods and services, jobs, income, friendship, use of skills",
+     "shows": "benefits"
+    },
+    {
+     "question": "A learner says needing others shows you are weak. Is this right?",
+     "answer": "No: everyone needs others and both sides gain",
+     "shows": "dependence is not weakness"
+    }
+   ]
+  }
+ ]
+}

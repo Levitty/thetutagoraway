@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/social_studies/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g6-non-question-outcomes-2026-11-12.md"};
+export const MAP_SOURCE = {"source":"curriculum/social_studies/g6.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical, performance and attitude outcomes are listed in docs/qa/socialstudies-g6-non-question-outcomes-2026-11-12.md; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g6)"};
 export const SUBSTRANDS = {
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU": {
   "name": "Position and Size of Countries in Eastern Africa",
@@ -621,7 +621,8 @@ export const SKILLS = {
   "mis": [
    "M_PS_ADD_NEIGHBOUR",
    "M_PS_MISS_HORN",
-   "M_PS_NORTH_AFRICA"
+   "M_PS_NORTH_AFRICA",
+   "M_PS_EAC_ONLY"
   ]
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE": {
@@ -637,7 +638,8 @@ export const SKILLS = {
   "mis": [
    "M_PS_SIZE_NAME",
    "M_PS_LANDLOCKED",
-   "M_PS_DIRECTION_SWAP"
+   "M_PS_DIRECTION_SWAP",
+   "M_PS_POPULATION_SIZE"
   ]
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING": {
@@ -651,7 +653,8 @@ export const SKILLS = {
   "mis": [
    "M_LL_SWAP",
    "M_LL_ZERO_LINES",
-   "M_LL_MEASURES"
+   "M_LL_MEASURES",
+   "M_LL_DEGREE_KM"
   ]
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE": {
@@ -668,7 +671,8 @@ export const SKILLS = {
   "mis": [
    "M_LL_NORTH_SOUTH",
    "M_LL_EAST_WEST",
-   "M_LL_ORDER"
+   "M_LL_ORDER",
+   "M_LL_TOP_NORTH_ONLY"
   ]
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES": {
@@ -684,7 +688,8 @@ export const SKILLS = {
   "mis": [
    "M_PF_KILI_COUNTRY",
    "M_PF_TYPE_MIX",
-   "M_PF_VICTORIA_COUNTRY"
+   "M_PF_VICTORIA_COUNTRY",
+   "M_PF_NILE_SOURCE"
   ]
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION": {
@@ -700,7 +705,8 @@ export const SKILLS = {
   "mis": [
    "M_PF_ALL_VOLCANIC",
    "M_PF_RIFT_RIVER",
-   "M_PF_LAKE_VICTORIA_RIFT"
+   "M_PF_LAKE_VICTORIA_RIFT",
+   "M_PF_VOLCANO_ACTIVE_ALL"
   ]
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS": {
@@ -715,7 +721,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CR_ARID_EQUATOR",
-   "M_CR_HIGHLAND_PLACE"
+   "M_CR_HIGHLAND_PLACE",
+   "M_CR_ONE_COUNTRY_ONE",
+   "M_CR_MOUNTAIN_REGION_LOW"
   ]
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS": {
@@ -730,7 +738,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CR_COOL_WET",
-   "M_CR_HEIGHT_HOT"
+   "M_CR_HEIGHT_HOT",
+   "M_CR_TROPICAL_WET_ALL",
+   "M_CR_ARID_COLD"
   ]
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE": {
@@ -745,7 +755,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CR_FARM_ALL",
-   "M_CR_DROUGHT_FLOOD"
+   "M_CR_DROUGHT_FLOOD",
+   "M_CR_TEA_DRY",
+   "M_CR_NOMAD_LAZY"
   ]
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES": {
@@ -761,7 +773,8 @@ export const SKILLS = {
   "mis": [
    "M_VG_SAVANNA_WHERE",
    "M_VG_MANGROVE_PLACE",
-   "M_VG_RAINFOREST_DRY"
+   "M_VG_RAINFOREST_DRY",
+   "M_VG_FOREST_EVERYWHERE"
   ]
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS": {
@@ -772,12 +785,14 @@ export const SKILLS = {
    "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.c"
   ],
   "pre": [
-   "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES"
+   "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
+   "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS"
   ],
   "mis": [
    "M_VG_DESERT_BROAD",
    "M_VG_SAVANNA_TREES",
-   "M_VG_MOUNTAIN_SAME"
+   "M_VG_MOUNTAIN_SAME",
+   "M_VG_THORNS_WHY"
   ]
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE": {
@@ -792,7 +807,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_VG_BURN_OK",
-   "M_VG_CUT_FOR_MONEY"
+   "M_VG_CUT_FOR_MONEY",
+   "M_VG_ONE_TREE_ENOUGH",
+   "M_VG_GOVT_ONLY_CONSERVE"
   ]
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES": {
@@ -808,7 +825,8 @@ export const SKILLS = {
   "mis": [
    "M_HB_BUILT_NATURAL",
    "M_HB_COUNTRY",
-   "M_HB_FORT_JESUS"
+   "M_HB_FORT_JESUS",
+   "M_HB_KASUBI_KENYA"
   ]
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE": {
@@ -824,7 +842,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_HB_NO_VALUE",
-   "M_HB_TOUCH_ALL"
+   "M_HB_TOUCH_ALL",
+   "M_HB_TOURISM_ONLY_VALUE",
+   "M_HB_MODERN_REBUILD"
   ]
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY": {
@@ -838,7 +858,8 @@ export const SKILLS = {
   "mis": [
    "M_LG_GROUP_SWAP",
    "M_LG_SOMALI",
-   "M_LG_SUBGROUP"
+   "M_LG_SUBGROUP",
+   "M_LG_COUNTRY_GROUP"
   ]
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES": {
@@ -856,7 +877,8 @@ export const SKILLS = {
   "mis": [
    "M_LG_NO_REASON",
    "M_LG_BANTU_ORIGIN",
-   "M_LG_CUSH_DIRECTION"
+   "M_LG_CUSH_DIRECTION",
+   "M_LG_ONE_MOVE"
   ]
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS": {
@@ -871,7 +893,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_LG_NO_CONFLICT",
-   "M_LG_ALL_SAME"
+   "M_LG_ALL_SAME",
+   "M_LG_EFFECT_ONLY_BAD",
+   "M_LG_IRON_NONE"
   ]
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS": {
@@ -887,7 +911,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_PD_PEOPLE_DESERT",
-   "M_PD_MOUNTAIN_TOP"
+   "M_PD_MOUNTAIN_TOP",
+   "M_PD_FACTORY_REPEL",
+   "M_PD_FOREST_DENSE"
   ]
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS": {
@@ -903,7 +929,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_PD_DENSITY_TOTAL",
-   "M_PD_RWANDA_EMPTY"
+   "M_PD_RWANDA_EMPTY",
+   "M_PD_BIG_COUNTRY_DENSE",
+   "M_PD_CITY_COUNTRY"
   ]
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS": {
@@ -918,7 +946,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_PD_MORE_LAND",
-   "M_PD_SERVICES"
+   "M_PD_SERVICES",
+   "M_PD_DENSE_NO_SLUMS",
+   "M_PD_FOREST_LOST"
   ]
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE": {
@@ -931,7 +961,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_CS_SET_GROUP",
-   "M_CS_WARRIOR"
+   "M_CS_WARRIOR",
+   "M_CS_GROUP_SET_SAME",
+   "M_CS_ELDERS_NO_DUTY"
   ]
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN": {
@@ -946,7 +978,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CS_MARRY_CLAN",
-   "M_CS_CLAN_FAMILY"
+   "M_CS_CLAN_FAMILY",
+   "M_CS_CLAN_SAME_TRIBE",
+   "M_CS_CLAN_NO_HELP"
   ]
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE": {
@@ -961,7 +995,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CS_ALL_GOOD",
-   "M_CS_ALL_BAD"
+   "M_CS_ALL_BAD",
+   "M_CS_HARM_HIDDEN",
+   "M_CS_SONGS_STOP"
   ]
  },
  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS": {
@@ -974,7 +1010,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_SC_SCHOOL_ALONE",
-   "M_SC_ONE_WAY"
+   "M_SC_ONE_WAY",
+   "M_SC_PARENTS_ONLY",
+   "M_SC_FEES_ONLY"
   ]
  },
  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS": {
@@ -990,7 +1028,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_SC_BENEFIT_ONLY_SCHOOL",
-   "M_SC_STRATEGY_STOP"
+   "M_SC_STRATEGY_STOP",
+   "M_SC_COMMUNITY_NO_GAIN",
+   "M_SC_STRATEGY_OPEN_DAY"
   ]
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS": {
@@ -1005,7 +1045,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_BF_RAIN_CROP",
-   "M_BF_DISEASE_NO"
+   "M_BF_DISEASE_NO",
+   "M_BF_DAIRY_BEEF",
+   "M_BF_MARKET_NONE"
   ]
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES": {
@@ -1021,7 +1063,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_BF_BEEF_COAST",
-   "M_BF_SOMALIA"
+   "M_BF_SOMALIA",
+   "M_BF_HIGHLAND_ONLY",
+   "M_BF_ANKOLE_KENYA"
   ]
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY": {
@@ -1036,7 +1080,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_BF_MEAT_ONLY",
-   "M_BF_NO_JOBS"
+   "M_BF_NO_JOBS",
+   "M_BF_HIDES_WASTE",
+   "M_BF_NO_EXPORT"
   ]
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS": {
@@ -1051,7 +1097,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_BF_SOLUTION_SWAP",
-   "M_BF_GRAZE_MORE"
+   "M_BF_GRAZE_MORE",
+   "M_BF_RUSTLING_DIP",
+   "M_BF_PRICE_MORE_COWS"
   ]
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS": {
@@ -1066,7 +1114,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_FI_LAKE_SEA",
-   "M_FI_FISH_PLACE"
+   "M_FI_FISH_PLACE",
+   "M_FI_TANGANYIKA_KENYA",
+   "M_FI_MARINE_MEANS_LAKE"
   ]
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS": {
@@ -1081,7 +1131,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_FI_TRAWL",
-   "M_FI_TRAD_MODERN"
+   "M_FI_TRAD_MODERN",
+   "M_FI_PURSE_SEINE",
+   "M_FI_MODERN_SMALL"
   ]
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS": {
@@ -1097,7 +1149,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_FI_OVER_OK",
-   "M_FI_SOLUTION_MIX"
+   "M_FI_SOLUTION_MIX",
+   "M_FI_WEED_GOOD",
+   "M_FI_STORAGE_SALT"
   ]
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS": {
@@ -1110,7 +1164,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_WT_TOURIST_ROADS",
-   "M_WT_INSECURITY"
+   "M_WT_INSECURITY",
+   "M_WT_ANIMALS_ONLY_FACTOR",
+   "M_WT_CLIMATE_NONE"
   ]
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS": {
@@ -1125,7 +1181,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_WT_PARK_COUNTRY",
-   "M_WT_GORILLA"
+   "M_WT_GORILLA",
+   "M_WT_NGORONGORO_KENYA",
+   "M_WT_PARK_SAME_ANIMALS"
   ]
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS": {
@@ -1141,7 +1199,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_WT_POACH_OK",
-   "M_WT_SOLUTION_SWAP"
+   "M_WT_SOLUTION_SWAP",
+   "M_WT_CONFLICT_KILL",
+   "M_WT_ADVERT_NONE"
   ]
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS": {
@@ -1157,7 +1217,8 @@ export const SKILLS = {
   "mis": [
    "M_TR_PORT_COUNTRY",
    "M_TR_MODE_LOAD",
-   "M_TR_LANDLOCKED_PORT"
+   "M_TR_LANDLOCKED_PORT",
+   "M_TR_TAZARA_KENYA"
   ]
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS": {
@@ -1173,7 +1234,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_TR_BORDER",
-   "M_TR_CRASH_SOLVE"
+   "M_TR_CRASH_SOLVE",
+   "M_TR_BORDER_NO_PROBLEM",
+   "M_TR_VANDAL_HARMLESS"
   ]
  },
  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES": {
@@ -1186,7 +1249,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_CM_TRAD_MODERN",
-   "M_CM_MASS"
+   "M_CM_MASS",
+   "M_CM_PHONE_MASS",
+   "M_CM_INTERNET_ONE"
   ]
  },
  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS": {
@@ -1198,11 +1263,14 @@ export const SKILLS = {
    "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.c"
   ],
   "pre": [
-   "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES"
+   "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
+   "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS"
   ],
   "mis": [
    "M_CM_ELEC",
-   "M_CM_SOLUTION_SWAP"
+   "M_CM_SOLUTION_SWAP",
+   "M_CM_COST_NONE",
+   "M_CM_FAKE_NEWS_NONE"
   ]
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS": {
@@ -1218,7 +1286,8 @@ export const SKILLS = {
   "mis": [
    "M_MN_MINERAL_PLACE",
    "M_MN_TANZANITE",
-   "M_MN_NOT_MINERAL"
+   "M_MN_NOT_MINERAL",
+   "M_MN_OIL_NOT_MINERAL"
   ]
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS": {
@@ -1233,7 +1302,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_MN_METHOD_SWAP",
-   "M_MN_PANNING"
+   "M_MN_PANNING",
+   "M_MN_SODA_DREDGE",
+   "M_MN_OPEN_CAST_DEEP"
   ]
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS": {
@@ -1249,7 +1320,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_MN_NO_HARM",
-   "M_MN_REPAIR"
+   "M_MN_REPAIR",
+   "M_MN_MERCURY",
+   "M_MN_JOBS_ONLY"
   ]
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA": {
@@ -1259,10 +1332,14 @@ export const SKILLS = {
   "outcomes": [
    "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.a"
   ],
-  "pre": [],
+  "pre": [
+   "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY"
+  ],
   "mis": [
    "M_TG_KABAKA",
-   "M_TG_KATIKKIRO"
+   "M_TG_KATIKKIRO",
+   "M_TG_LUKIIKO_ARMY",
+   "M_TG_KABAKA_ELECTED"
   ]
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI": {
@@ -1272,10 +1349,14 @@ export const SKILLS = {
   "outcomes": [
    "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.a"
   ],
-  "pre": [],
+  "pre": [
+   "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY"
+  ],
   "mis": [
    "M_TG_NTEMI_KING",
-   "M_TG_NTEMI_CHOSEN"
+   "M_TG_NTEMI_CHOSEN",
+   "M_TG_NTEMI_ALONE",
+   "M_TG_NYAMWEZI_KENYA"
   ]
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE": {
@@ -1291,7 +1372,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_TG_SAME_ALL",
-   "M_TG_NO_COUNCIL"
+   "M_TG_NO_COUNCIL",
+   "M_TG_SIZE_SWAP",
+   "M_TG_CHIEFS_INHERIT"
   ]
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES": {
@@ -1306,7 +1389,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_RC_HQ",
-   "M_RC_CUSTOMS"
+   "M_RC_CUSTOMS",
+   "M_RC_ONE_COUNTRY",
+   "M_RC_MONETARY_DONE"
   ]
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS": {
@@ -1317,11 +1402,14 @@ export const SKILLS = {
    "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.b"
   ],
   "pre": [
-   "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES"
+   "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
+   "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS"
   ],
   "mis": [
    "M_RC_BENEFIT_ONE",
-   "M_RC_NO_MOVE"
+   "M_RC_NO_MOVE",
+   "M_RC_DUTY_ALL",
+   "M_RC_STUDY_NONE"
   ]
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS": {
@@ -1337,7 +1425,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_RC_PROBLEM_SOLUTION",
-   "M_RC_WAR"
+   "M_RC_WAR",
+   "M_RC_LEAVE_SOLVE",
+   "M_RC_UNEQUAL_FINE"
   ]
  },
  "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP": {
@@ -1350,7 +1440,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_CZ_RIGHT_RESP",
-   "M_CZ_VOTE_AGE"
+   "M_CZ_VOTE_AGE",
+   "M_CZ_TAX_RIGHT",
+   "M_CZ_ID_AGE"
   ]
  },
  "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES": {
@@ -1366,7 +1458,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_CZ_PATRIOT",
-   "M_CZ_CORRUPT"
+   "M_CZ_CORRUPT",
+   "M_CZ_TOLERANCE",
+   "M_CZ_PATRIOT_ONLY_SOLDIERS"
   ]
  },
  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES": {
@@ -1376,10 +1470,14 @@ export const SKILLS = {
   "outcomes": [
    "SOCI.G6.POLITI.HUMAN_RIGHTS.a"
   ],
-  "pre": [],
+  "pre": [
+   "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP"
+  ],
   "mis": [
    "M_HR_CAT_SWAP",
-   "M_HR_EDU"
+   "M_HR_EDU",
+   "M_HR_WORK_SOCIAL",
+   "M_HR_PROPERTY_POLITICAL"
   ]
  },
  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD": {
@@ -1395,7 +1493,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_HR_ONLY_POLICE",
-   "M_HR_DAY"
+   "M_HR_DAY",
+   "M_HR_KNCHR",
+   "M_HR_SELF_NONE"
   ]
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES": {
@@ -1408,7 +1508,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_PC_NO_CAUSE",
-   "M_PC_VIOLENCE_SOLVE"
+   "M_PC_VIOLENCE_SOLVE",
+   "M_PC_ONE_SIDE",
+   "M_PC_HATE_SPEECH_OK"
   ]
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS": {
@@ -1423,7 +1525,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_PC_MED_ARB",
-   "M_PC_COURT_ONLY"
+   "M_PC_COURT_ONLY",
+   "M_PC_NEG_DIALOGUE",
+   "M_PC_MEDIATOR_DECIDES"
   ]
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE": {
@@ -1438,7 +1542,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_PC_REVENGE",
-   "M_PC_RUMOUR"
+   "M_PC_RUMOUR",
+   "M_PC_SEPARATE",
+   "M_PC_NYUMBA_KUMI"
   ]
  },
  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES": {
@@ -1451,7 +1557,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_GR_LOAN_TAX",
-   "M_GR_COLLECTOR"
+   "M_GR_COLLECTOR",
+   "M_GR_VAT_INCOME",
+   "M_GR_PRINT_MONEY"
   ]
  },
  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING": {
@@ -1466,7 +1574,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_GR_LEVEL_SWAP",
-   "M_GR_TAX_WASTE"
+   "M_GR_TAX_WASTE",
+   "M_GR_COUNTY_DEFENCE",
+   "M_GR_DEBT_NONE"
   ]
  },
  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS": {
@@ -1479,7 +1589,9 @@ export const SKILLS = {
   "pre": [],
   "mis": [
    "M_PR_WHAT",
-   "M_PR_SOVEREIGN_WHO"
+   "M_PR_SOVEREIGN_WHO",
+   "M_PR_LAW_SECTIONS",
+   "M_PR_WE_GOVERNMENT"
   ]
  },
  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING": {
@@ -1494,7 +1606,9 @@ export const SKILLS = {
   ],
   "mis": [
    "M_PR_INDIVISIBLE",
-   "M_PR_HERITAGE"
+   "M_PR_HERITAGE",
+   "M_PR_DIVERSITY_DIVISION",
+   "M_PR_RULE_LAW"
   ]
  }
 };
@@ -1511,18 +1625,30 @@ export const MIS_FEEDBACK = {
  "M_LL_NORTH_SOUTH": "The letter S means south. Nairobi lies a little south of the equator.",
  "M_LL_EAST_WEST": "The letter E means east. All of Eastern Africa lies east of the Prime Meridian.",
  "M_LL_ORDER": "We give latitude first and longitude second, so 4 N is the latitude.",
+ "M_PS_EAC_ONLY": "Eastern Africa is bigger than the EAC. It includes Ethiopia, Eritrea and Djibouti.",
+ "M_PS_POPULATION_SIZE": "Size means area in square kilometres, not the number of people.",
+ "M_LL_DEGREE_KM": "Degrees are not kilometres. One degree of latitude is about 111 km.",
+ "M_LL_TOP_NORTH_ONLY": "Read the latitude. N means north of the equator and S means south.",
  "M_PF_KILI_COUNTRY": "Kilimanjaro stands in Tanzania. It can be seen from Kenya.",
  "M_PF_TYPE_MIX": "Lake Tanganyika is a lake: water with land all round it.",
  "M_PF_VICTORIA_COUNTRY": "Lake Victoria is shared by Kenya, Uganda and Tanzania. It is the largest lake in Africa.",
  "M_PF_ALL_VOLCANIC": "The Rwenzori are block mountains. They were pushed up between faults. They are not volcanoes.",
  "M_PF_RIFT_RIVER": "The Rift Valley formed when the land between faults dropped. A river did not cut it out.",
  "M_PF_LAKE_VICTORIA_RIFT": "Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.",
+ "M_PF_NILE_SOURCE": "The White Nile flows out of Lake Victoria at Jinja and northwards to Egypt.",
+ "M_PF_VOLCANO_ACTIVE_ALL": "Mount Kenya was made by a volcano long ago. It does not erupt now.",
  "M_CR_ARID_EQUATOR": "Northern Kenya is arid: very hot and very dry. The equatorial region is wet.",
  "M_CR_HIGHLAND_PLACE": "The highland climate is found on high land such as Mount Kenya, Kilimanjaro and the Ethiopian Highlands.",
  "M_CR_COOL_WET": "The arid region is very hot and very dry.",
  "M_CR_HEIGHT_HOT": "The higher you go, the colder it gets. That is why there is snow on Mount Kenya.",
  "M_CR_FARM_ALL": "Tea needs cool weather and plenty of rain, so it grows in the highlands.",
  "M_CR_DROUGHT_FLOOD": "A drought is a long time without rain. It causes crop failure and hunger. Floods come from too much rain.",
+ "M_CR_ONE_COUNTRY_ONE": "One country can have several climatic regions.",
+ "M_CR_MOUNTAIN_REGION_LOW": "The mountain climate is on high ground.",
+ "M_CR_TROPICAL_WET_ALL": "The tropical region has a wet and a dry season. The equatorial region is wet all year.",
+ "M_CR_ARID_COLD": "Desert days are hot and nights can be cool.",
+ "M_CR_TEA_DRY": "Tea grows best in cool, wet highlands such as Kericho.",
+ "M_CR_NOMAD_LAZY": "Herders move to find water and grass for their animals in a dry climate.",
  "M_VG_SAVANNA_WHERE": "Savanna is found on the Serengeti and Maasai Mara plains.",
  "M_VG_MANGROVE_PLACE": "Mangroves grow in salt water along the coast, for example near Lamu and Mombasa.",
  "M_VG_RAINFOREST_DRY": "Rain forest needs rain all year. It grows where it is hot and wet.",
@@ -1531,11 +1657,18 @@ export const MIS_FEEDBACK = {
  "M_VG_MOUNTAIN_SAME": "Vegetation changes with height. Forest is at the bottom and bare rock at the top.",
  "M_VG_BURN_OK": "Planting trees conserves vegetation. Uncontrolled fires destroy plants and soil.",
  "M_VG_CUT_FOR_MONEY": "When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.",
+ "M_VG_FOREST_EVERYWHERE": "Most of Eastern Africa is savanna grassland with scattered trees.",
+ "M_VG_THORNS_WHY": "Thorns and small leaves save water. They also protect the plant.",
+ "M_VG_ONE_TREE_ENOUGH": "Replace the trees you cut, and more, and look after them as they grow.",
+ "M_VG_GOVT_ONLY_CONSERVE": "Everyone can conserve vegetation, including schools and families.",
  "M_HB_BUILT_NATURAL": "Fort Jesus was built by people. Mount Kenya is natural.",
  "M_HB_COUNTRY": "The Lalibela churches are in Ethiopia. They were carved out of rock.",
  "M_HB_FORT_JESUS": "Fort Jesus was built by the Portuguese in the 1590s.",
  "M_HB_NO_VALUE": "Old buildings tell our history and bring tourists and income.",
  "M_HB_TOUCH_ALL": "Following the rules protects the site. Writing on walls damages them for others.",
+ "M_HB_KASUBI_KENYA": "The Kasubi Tombs are in Kampala, Uganda, burial place of Buganda kings.",
+ "M_HB_TOURISM_ONLY_VALUE": "Sites teach history and give identity, besides bringing visitors.",
+ "M_HB_MODERN_REBUILD": "Conserving means careful repair that keeps the old materials and look.",
  "M_LG_GROUP_SWAP": "The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.",
  "M_LG_SOMALI": "The Somali belong to the Cushitic group, together with the Oromo and the Afar.",
  "M_LG_SUBGROUP": "The Maasai are Plain Nilotes. The Kalenjin are Highland Nilotes.",
@@ -1544,22 +1677,42 @@ export const MIS_FEEDBACK = {
  "M_LG_CUSH_DIRECTION": "The Cushites came from the Horn of Africa in the north and moved south.",
  "M_LG_NO_CONFLICT": "Settlement could cause quarrels over land and pasture, as well as bring trade and mixing.",
  "M_LG_ALL_SAME": "They traded, learned from each other and some intermarried. They did not all become the same.",
+ "M_LG_COUNTRY_GROUP": "One country can have several language groups.",
+ "M_LG_ONE_MOVE": "Migration happened slowly, over many generations.",
+ "M_LG_EFFECT_ONLY_BAD": "Migration brought trade, intermarriage and new skills, as well as some conflict.",
+ "M_LG_IRON_NONE": "The Bantu spread iron working and farming as they moved.",
  "M_PD_PEOPLE_DESERT": "Few live in deserts because it is too dry to grow food or find water.",
  "M_PD_MOUNTAIN_TOP": "People crowd where land is gentle, soil is fertile and rain is reliable.",
  "M_PD_DENSITY_TOTAL": "Density is the number of people for each square kilometre.",
  "M_PD_RWANDA_EMPTY": "Rwanda is small but has many people on its land, so its density is high.",
  "M_PD_MORE_LAND": "In crowded areas, farms are divided into smaller plots and land becomes short.",
  "M_PD_SERVICES": "Crowding puts pressure on schools and hospitals because there are too many people to serve.",
+ "M_PD_FACTORY_REPEL": "Jobs and services pull people to towns.",
+ "M_PD_FOREST_DENSE": "Thick forests usually have few people.",
+ "M_PD_BIG_COUNTRY_DENSE": "A small country with many people, like Rwanda, can be very dense.",
+ "M_PD_CITY_COUNTRY": "One crowded city does not make a whole country crowded.",
+ "M_PD_DENSE_NO_SLUMS": "When many people crowd into a city, there may not be enough good houses, so slums grow.",
+ "M_PD_FOREST_LOST": "Many people need land and firewood, so forests get cleared.",
  "M_CS_SET_GROUP": "An age-set is people initiated together. They stay a group for life.",
  "M_CS_WARRIOR": "Warriors defended the community and its cattle.",
  "M_CS_MARRY_CLAN": "People marry outside their own clan because members are like family.",
  "M_CS_CLAN_FAMILY": "A clan is many families who trace descent from one ancestor.",
  "M_CS_ALL_GOOD": "Customs that harm people, such as early marriage of girls, should not be kept.",
  "M_CS_ALL_BAD": "Good customs such as respect for elders and community work should be preserved.",
+ "M_CS_GROUP_SET_SAME": "An age-set is initiated together and stays a group for life.",
+ "M_CS_ELDERS_NO_DUTY": "Elders made decisions, settled disputes and led ceremonies.",
+ "M_CS_CLAN_SAME_TRIBE": "A community has many clans. A clan is a group of families from one ancestor.",
+ "M_CS_CLAN_NO_HELP": "Clan members helped each other in hard times.",
+ "M_CS_HARM_HIDDEN": "Harmful practices are wrong and against the law, even in secret. Tell a trusted adult.",
+ "M_CS_SONGS_STOP": "Songs, dances and stories are good parts of culture to keep.",
  "M_SC_SCHOOL_ALONE": "Collaboration needs the community to take part, as when parents help build a classroom.",
  "M_SC_ONE_WAY": "A school gives the community its field, hall and learners who serve.",
  "M_SC_BENEFIT_ONLY_SCHOOL": "Both gain. The school gets help and the community gets better learners and shared facilities.",
  "M_SC_STRATEGY_STOP": "Open days and regular meetings keep the school and community working together.",
+ "M_SC_PARENTS_ONLY": "Many people in the community can work with the school, not only parents.",
+ "M_SC_FEES_ONLY": "The community helps with labour, security and advice, not only money.",
+ "M_SC_COMMUNITY_NO_GAIN": "The community gains educated children and can use school facilities.",
+ "M_SC_STRATEGY_OPEN_DAY": "Open days bring parents and teachers together to plan for learners.",
  "M_BF_RAIN_CROP": "Beef ranching needs large grassland and enough water.",
  "M_BF_DISEASE_NO": "Vets control diseases that can kill cattle and stop sales.",
  "M_BF_BEEF_COAST": "Laikipia and Kajiado are large grassland areas used for ranching.",
@@ -1568,27 +1721,54 @@ export const MIS_FEEDBACK = {
  "M_BF_NO_JOBS": "Many people earn a living from beef: herders, vets, butchers and factory workers.",
  "M_BF_SOLUTION_SWAP": "Water pans, boreholes and hay help in a drought. Dips control ticks.",
  "M_BF_GRAZE_MORE": "Overgrazing is reduced by rotating grazing and keeping fewer cattle on the land.",
+ "M_BF_DAIRY_BEEF": "The Boran is a beef breed. The Friesian is a dairy breed.",
+ "M_BF_MARKET_NONE": "Farmers need roads and markets to sell their cattle.",
+ "M_BF_HIGHLAND_ONLY": "Beef cattle are kept on large, drier grasslands such as Kajiado and Laikipia.",
+ "M_BF_ANKOLE_KENYA": "Ankole is in south-western Uganda.",
+ "M_BF_HIDES_WASTE": "Hides become leather for shoes, bags and belts.",
+ "M_BF_NO_EXPORT": "Beef and live animals are sold abroad and earn foreign exchange.",
+ "M_BF_RUSTLING_DIP": "Rustling is theft. It needs security and peace, not dips.",
+ "M_BF_PRICE_MORE_COWS": "Better markets and processing help, not just more cattle.",
  "M_FI_LAKE_SEA": "Marine means from the sea. The Indian Ocean coast is a marine ground.",
  "M_FI_FISH_PLACE": "Nile perch and tilapia come from lakes. Tuna and prawns come from the sea.",
  "M_FI_TRAWL": "Trawling is dragging a large net behind a boat along the sea bed.",
  "M_FI_TRAD_MODERN": "Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.",
  "M_FI_OVER_OK": "Overfishing makes fish stocks fall. Seasons and mesh rules protect them.",
  "M_FI_SOLUTION_MIX": "Cold rooms stop fish spoiling. Sea patrols deal with piracy.",
+ "M_FI_TANGANYIKA_KENYA": "Lake Tanganyika is in the west of the region, not in Kenya.",
+ "M_FI_MARINE_MEANS_LAKE": "Marine means the sea. Lake fishing is inland.",
+ "M_FI_PURSE_SEINE": "A purse seine is a big net that circles fish and closes like a purse.",
+ "M_FI_MODERN_SMALL": "Trawlers catch far more fish than traditional methods.",
+ "M_FI_WEED_GOOD": "Water hyacinth blocks boats and harms fish.",
+ "M_FI_STORAGE_SALT": "Fresh fish spoils fast. Ice, cold rooms or drying keep it.",
  "M_WT_TOURIST_ROADS": "Airports and hotels bring visitors in and give them a place to stay.",
  "M_WT_INSECURITY": "Insecurity frightens tourists away and income falls.",
  "M_WT_PARK_COUNTRY": "The Serengeti is in Tanzania. The Maasai Mara is in Kenya.",
  "M_WT_GORILLA": "Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.",
  "M_WT_POACH_OK": "Poaching kills the wildlife tourists come to see, so tourism suffers.",
  "M_WT_SOLUTION_SWAP": "Patrols and strong laws help to stop poaching.",
+ "M_WT_ANIMALS_ONLY_FACTOR": "Tourists need attractions and also roads, hotels and security.",
+ "M_WT_CLIMATE_NONE": "Good weather helps tourism: animals gather at water and roads are passable.",
+ "M_WT_NGORONGORO_KENYA": "Ngorongoro Crater is in Tanzania.",
+ "M_WT_PARK_SAME_ANIMALS": "Mountain gorillas live only in a few mountain forests, like Bwindi.",
+ "M_WT_CONFLICT_KILL": "Fences and compensation protect people and wildlife.",
+ "M_WT_ADVERT_NONE": "Advertising tells people about attractions so more visit.",
  "M_TR_PORT_COUNTRY": "Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.",
  "M_TR_MODE_LOAD": "Railways carry heavy goods cheaply. Air is for light, urgent goods.",
  "M_TR_LANDLOCKED_PORT": "Uganda is landlocked and uses Mombasa and Dar es Salaam.",
  "M_TR_BORDER": "A one-stop border post lets both countries check lorries once, so crossing is faster.",
  "M_TR_CRASH_SOLVE": "Speed limits and driver training reduce road crashes.",
+ "M_TR_TAZARA_KENYA": "TAZARA joins Tanzania and Zambia.",
+ "M_TR_BORDER_NO_PROBLEM": "Borders can slow goods. One-stop border posts help.",
+ "M_TR_VANDAL_HARMLESS": "Vandalism puts lives in danger and costs money to repair.",
  "M_CM_TRAD_MODERN": "The drum is traditional. The mobile phone is modern.",
  "M_CM_MASS": "Radio reaches many people at once. A letter reaches one.",
  "M_CM_ELEC": "Phones, radios and the internet need power, so no electricity limits communication.",
  "M_CM_SOLUTION_SWAP": "Laws and guards protect masts and cables. Training helps with skills.",
+ "M_CM_PHONE_MASS": "A phone call is one-to-one. Radio and television reach many.",
+ "M_CM_INTERNET_ONE": "The internet carries email, news and messages.",
+ "M_CM_COST_NONE": "Cost stops some people using phones and the internet.",
+ "M_CM_FAKE_NEWS_NONE": "False news misleads people. Check with a trusted source.",
  "M_MN_MINERAL_PLACE": "Soda ash is mined at Lake Magadi in Kenya.",
  "M_MN_TANZANITE": "Tanzanite is mined only in Tanzania.",
  "M_MN_NOT_MINERAL": "Limestone is a mineral dug from the ground. Coffee is a crop.",
@@ -1596,38 +1776,77 @@ export const MIS_FEEDBACK = {
  "M_MN_PANNING": "Panning washes gravel in water so the heavy mineral bits settle.",
  "M_MN_NO_HARM": "Open-cast mining leaves holes and bare land unless it is repaired.",
  "M_MN_REPAIR": "Refilling pits and planting trees repairs mined land, as at Haller Park.",
+ "M_MN_OIL_NOT_MINERAL": "Oil is a mineral resource too.",
+ "M_MN_SODA_DREDGE": "Soda ash is scooped from the surface of Lake Magadi.",
+ "M_MN_OPEN_CAST_DEEP": "Open-cast mining digs a wide open pit from the surface.",
+ "M_MN_MERCURY": "Chemicals like mercury from mining can poison water.",
+ "M_MN_JOBS_ONLY": "Mining gives jobs but can harm land, air and water.",
  "M_TG_KABAKA": "The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.",
  "M_TG_KATIKKIRO": "The Katikkiro was the chief minister who helped the Kabaka rule.",
  "M_TG_NTEMI_KING": "The Nyamwezi had many small chiefdoms, each under a Ntemi.",
  "M_TG_NTEMI_CHOSEN": "A Ntemi inherited the position and was advised by elders.",
  "M_TG_SAME_ALL": "Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.",
  "M_TG_NO_COUNCIL": "Both rulers were advised by a council: the Lukiiko in Buganda and elders among the Nyamwezi.",
+ "M_TG_LUKIIKO_ARMY": "The Lukiiko was the council of Buganda.",
+ "M_TG_KABAKA_ELECTED": "The Kabaka inherited the throne in the royal family.",
+ "M_TG_NTEMI_ALONE": "The Ntemi was advised by a council of elders.",
+ "M_TG_NYAMWEZI_KENYA": "The Nyamwezi live in central Tanzania.",
+ "M_TG_SIZE_SWAP": "Buganda was one big kingdom. The Nyamwezi had many small chiefdoms.",
+ "M_TG_CHIEFS_INHERIT": "The Kabaka appointed Buganda's chiefs. A Ntemi inherited his post.",
  "M_RC_HQ": "The EAC headquarters is in Arusha, Tanzania.",
  "M_RC_CUSTOMS": "In a customs union members trade without duty and share a tariff on goods from outside.",
  "M_RC_BENEFIT_ONE": "A common market gives all members a larger market.",
  "M_RC_NO_MOVE": "The common market allows free movement of people, goods and services.",
  "M_RC_PROBLEM_SOLUTION": "One-stop border posts reduce delays at borders.",
  "M_RC_WAR": "Disputes should be settled by talks and the EAC Court of Justice.",
+ "M_RC_ONE_COUNTRY": "EAC members are still separate countries. One aim is to unite more closely.",
+ "M_RC_MONETARY_DONE": "Each country has its own money. One currency is still an aim.",
+ "M_RC_DUTY_ALL": "Inside the customs union, goods made in member countries mostly cross without duty.",
+ "M_RC_STUDY_NONE": "The EAC makes it easier to study and work in member countries.",
+ "M_RC_LEAVE_SOLVE": "Disagreements are settled by talking, not by leaving.",
+ "M_RC_UNEQUAL_FINE": "Unequal benefits cause distrust. Fair sharing helps.",
  "M_CZ_RIGHT_RESP": "Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.",
  "M_CZ_VOTE_AGE": "A Kenyan citizen can vote at 18.",
  "M_CZ_PATRIOT": "Patriotism is love and loyalty shown in what a person does for the country.",
  "M_CZ_CORRUPT": "A good citizen is honest. Refusing a bribe and reporting it protects the country.",
+ "M_CZ_TAX_RIGHT": "Paying taxes is a responsibility of a citizen.",
+ "M_CZ_ID_AGE": "At 18 a citizen gets an ID card and can vote.",
+ "M_CZ_TOLERANCE": "Tolerance is respecting people who are different or think differently.",
+ "M_CZ_PATRIOT_ONLY_SOLDIERS": "Anyone can be patriotic by serving and caring for Kenya.",
  "M_HR_CAT_SWAP": "The right to vote is a political right.",
  "M_HR_EDU": "Education, health and housing are social rights.",
  "M_HR_ONLY_POLICE": "Courts, commissions, schools and every citizen who respects others uphold rights.",
  "M_HR_DAY": "Human Rights Day is on 10 December.",
+ "M_HR_WORK_SOCIAL": "The right to work and fair pay is an economic right.",
+ "M_HR_PROPERTY_POLITICAL": "Owning property is an economic right.",
+ "M_HR_KNCHR": "The KNCHR watches over human rights in Kenya.",
+ "M_HR_SELF_NONE": "Everyone upholds rights by respecting others.",
  "M_PC_NO_CAUSE": "Competition for land and water is a common cause of conflict.",
  "M_PC_VIOLENCE_SOLVE": "Quarrels should be settled by talking and listening.",
  "M_PC_MED_ARB": "In arbitration a third person decides. In mediation a third person helps them agree.",
  "M_PC_COURT_ONLY": "Councils of elders, such as the Njuri Ncheke of the Ameru, settle disputes peacefully.",
  "M_PC_REVENGE": "Forgiving and talking promote peace. Revenge brings more conflict.",
  "M_PC_RUMOUR": "Rumours can start or increase conflict.",
+ "M_PC_ONE_SIDE": "Conflicts usually have a cause, such as scarce resources, not just a bad side.",
+ "M_PC_HATE_SPEECH_OK": "Hate speech spreads anger and can cause conflict.",
+ "M_PC_NEG_DIALOGUE": "Negotiation is bargaining to reach an agreement. Dialogue is talking to understand.",
+ "M_PC_MEDIATOR_DECIDES": "A mediator helps. An arbitrator decides.",
+ "M_PC_SEPARATE": "Meeting and sharing builds trust and peace.",
+ "M_PC_NYUMBA_KUMI": "Nyumba Kumi is neighbours working together to keep peace and security.",
  "M_GR_LOAN_TAX": "Income tax is a tax. A loan is borrowed money that must be repaid.",
  "M_GR_COLLECTOR": "The Kenya Revenue Authority collects national taxes.",
  "M_GR_LEVEL_SWAP": "The national government pays teachers. Counties run county health services and county roads.",
  "M_GR_TAX_WASTE": "Tax money pays for roads, schools, hospitals and security.",
+ "M_GR_VAT_INCOME": "VAT is added to the price of goods. Income tax is taken from pay.",
+ "M_GR_PRINT_MONEY": "Most government revenue comes from taxes.",
+ "M_GR_COUNTY_DEFENCE": "Defence is paid for by the national government.",
+ "M_GR_DEBT_NONE": "Loans must be repaid, so part of revenue goes to paying debts.",
  "M_PR_WHAT": "The preamble is the opening statement. Pre means before.",
  "M_PR_SOVEREIGN_WHO": "In the preamble, the people of Kenya hold sovereign power.",
  "M_PR_INDIVISIBLE": "Indivisible means cannot be divided. Kenya is one nation.",
- "M_PR_HERITAGE": "Heritage is what we receive from the past and pass to the future."
+ "M_PR_HERITAGE": "Heritage is what we receive from the past and pass to the future.",
+ "M_PR_LAW_SECTIONS": "The preamble is the opening statement of the people's values.",
+ "M_PR_WE_GOVERNMENT": "\"We, the people\" means all Kenyans.",
+ "M_PR_DIVERSITY_DIVISION": "Diversity means our many differences, which make Kenya rich.",
+ "M_PR_RULE_LAW": "The rule of law means everyone obeys the law, leaders too."
 };

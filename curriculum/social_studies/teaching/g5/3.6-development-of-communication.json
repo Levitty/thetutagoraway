@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA",
+ "title": "Development of Communication",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Play a game: send a message across the field by drum, by runner and by phone, and time each.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION",
+   "key_step": "The child names early forms of communication (drums, horns, smoke, whistles, ululation, messengers) and says how they carried news.",
+   "floor": {
+    "prerequisite": "Names early means of transport.",
+    "question": "How did people carry goods long ago?",
+    "answer": "on their heads, backs or by animals"
+   },
+   "representations": [
+    "a drum and a horn",
+    "a message race on the field",
+    "a timeline"
+   ],
+   "steps": [
+    "Name the form.",
+    "Say what message it carried.",
+    "Say how far and how fast.",
+    "Compare with today."
+   ],
+   "contexts": [
+    "a horn calling elders to a meeting",
+    "ululation at a celebration",
+    "a runner carrying news"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write drum, smoke, messenger."
+    },
+    {
+     "beat": "point",
+     "do": "Point at smoke.",
+     "say": "How did smoke carry a message?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"people saw it from far\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write what each one sent."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION.M_CM_EARLY_MODERN_MIX",
+     "listen_for": [
+      "Email"
+     ],
+     "ask": "Which was an early form of communication in Kenya?",
+     "repair": "Ask what was used before electricity."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION.M_CM_EARLY_FAST",
+     "listen_for": [
+      "It is not faster"
+     ],
+     "ask": "Why is a mobile phone faster than a messenger on foot?",
+     "repair": "Time a runner and a phone call across the same distance."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION.M_CM_DRUM_MUSIC_ONLY",
+     "listen_for": [
+      "Only for dancing"
+     ],
+     "ask": "How did some communities use drums besides music?",
+     "repair": "Beat two patterns: one for \"come\" and one for \"danger\"."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION.M_CM_SMOKE_NIGHT",
+     "listen_for": [
+      "At night"
+     ],
+     "ask": "When could smoke signals be seen best?",
+     "repair": "Ask whether you can see grey smoke in the dark."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two early forms of communication.",
+     "answer": "any two of: drums, horns, smoke signals, whistles, ululation, messengers",
+     "shows": "early forms"
+    },
+    {
+     "question": "Was a messenger faster or slower than a phone call?",
+     "answer": "slower",
+     "shows": "early vs modern speed"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION",
+   "key_step": "The child names modern means of communication, picks the right one for a job and knows not everything online is true or safe.",
+   "floor": {
+    "prerequisite": "Names early forms of communication.",
+    "question": "Name one early form of communication.",
+    "answer": "any form such as drums"
+   },
+   "representations": [
+    "job cards",
+    "a radio and a newspaper",
+    "a safe-online poster"
+   ],
+   "steps": [
+    "Read the job.",
+    "Ask: sound, picture, words or a parcel?",
+    "Ask: who must it reach?",
+    "Pick the means."
+   ],
+   "contexts": [
+    "the post office sending a parcel",
+    "a radio programme for farmers",
+    "a family video call"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"tell farmers in many villages about a coming drought\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"many villages\".",
+     "say": "Which means reaches the most people?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for radio."
+    },
+    {
+     "beat": "write",
+     "do": "Write radio and the reason."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION.M_CM_MEDIUM_MIX",
+     "listen_for": [
+      "Radio"
+     ],
+     "ask": "Which means of communication shows pictures and sound together?",
+     "repair": "Describe what you can see and hear on each in a one-line list."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION.M_CM_NO_RISK",
+     "listen_for": [
+      "Share it with everyone"
+     ],
+     "ask": "You get a message that claims something shocking. What should you do first?",
+     "repair": "Practise with a made-up rumour and ask who could check it."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION.M_CM_INTERNET_EVERYWHERE",
+     "listen_for": [
+      "It is not; everyone has internet"
+     ],
+     "ask": "Why is radio still important in Kenya?",
+     "repair": "Ask how a herder far from town hears the news."
+    },
+    {
+     "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION.M_CM_SHARE_DETAILS",
+     "listen_for": [
+      "Send it, they are friendly"
+     ],
+     "ask": "Someone you do not know asks for your address on a phone app. What do you do?",
+     "repair": "Practise saying no and telling an adult."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which means would you use to send a parcel to an aunt in Kisumu?",
+     "answer": "the post office or a courier",
+     "shows": "picks a means"
+    },
+    {
+     "question": "A message on the phone says you have won money and asks for your PIN. What should you do?",
+     "answer": "Do not reply and tell a parent",
+     "shows": "online safety"
+    }
+   ]
+  }
+ ]
+}

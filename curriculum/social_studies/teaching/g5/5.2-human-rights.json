@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.GOVERN.HUMAN_RIGHTS",
+ "title": "Human Rights",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Keep Childline 116 on the board. A learner who discloses harm is followed up privately under the school's safeguarding policy.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS",
+   "key_step": "The child names basic human rights and tells a right from a want.",
+   "floor": {
+    "prerequisite": "Names child rights.",
+    "question": "Name one right of a child.",
+    "answer": "any right such as education"
+   },
+   "representations": [
+    "need and want cards",
+    "a rights chart",
+    "a story of a child denied a right"
+   ],
+   "steps": [
+    "Read the item.",
+    "Ask: does every person need it to live with dignity?",
+    "If yes, it is a right.",
+    "If not, it is a want."
+   ],
+   "contexts": [
+    "a child going to school",
+    "a family with a name and nationality for each child",
+    "a learner wanting a new phone"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write education, a toy, health care, sweets."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a toy.",
+     "say": "Is a toy a right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no, a want."
+    },
+    {
+     "beat": "write",
+     "do": "Circle the rights."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS.M_HR_WANT_AS_RIGHT",
+     "listen_for": [
+      "A new phone"
+     ],
+     "ask": "Which is a human right?",
+     "repair": "Sort cards into needs that protect life and dignity and things that are nice to have."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS.M_HR_ADULT_ONLY",
+     "listen_for": [
+      "Only adults"
+     ],
+     "ask": "Who has the right to education?",
+     "repair": "Read the children's rights list aloud."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS.M_HR_EARNED",
+     "listen_for": [
+      "Yes, rights are earned"
+     ],
+     "ask": "Does a child lose the right to education for bad behaviour?",
+     "repair": "Sort: break time football (privilege) and education (right)."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS.M_HR_RICH_MORE",
+     "listen_for": [
+      "No, rich children have more"
+     ],
+     "ask": "Do rich and poor children have the same rights?",
+     "repair": "Separate things a family can buy from rights the law gives everyone."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two basic human rights.",
+     "answer": "any two of: life, education, health care, a name and nationality, protection, play and rest",
+     "shows": "rights"
+    },
+    {
+     "question": "Is a mobile phone a basic human right?",
+     "answer": "No, it is a want",
+     "shows": "right vs want"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY",
+   "key_step": "The child pairs a right with its responsibility, says rights protect everyone, and names who helps when rights are denied.",
+   "floor": {
+    "prerequisite": "Names basic human rights.",
+    "question": "Name one basic human right.",
+    "answer": "any right such as health care"
+   },
+   "representations": [
+    "right and duty pairs",
+    "a helpers list with Childline 116",
+    "scenario cards"
+   ],
+   "steps": [
+    "Name the right.",
+    "Name the duty that goes with it.",
+    "Say how it protects others.",
+    "Say who to tell if a right is denied."
+   ],
+   "contexts": [
+    "a learner taking turns to speak in class",
+    "a girl kept from school to work",
+    "a friend who is being hurt at home"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance: right on one side, duty on the other."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"the right to be safe\".",
+     "say": "What duty goes with it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"keep others safe\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the pair and Childline 116."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY.M_HR_NO_LIMIT",
+     "listen_for": [
+      "Nothing, she may do it"
+     ],
+     "ask": "Eve says she has a right to play loud music at night. What is missing?",
+     "repair": "Ask whose rights are touched when the music is loud."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY.M_HR_NO_REPORT",
+     "listen_for": [
+      "Keep quiet because it is a family matter"
+     ],
+     "ask": "A child is beaten badly at home. What should another child do?",
+     "repair": "Practise telling a teacher and call Childline 116."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY.M_HR_DUTY_MATCH",
+     "listen_for": [
+      "Sweeping the compound"
+     ],
+     "ask": "Which responsibility goes with the right to education?",
+     "repair": "Pair each right with the duty that protects it for you and others."
+    },
+    {
+     "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY.M_HR_OTHERS_NOT",
+     "listen_for": [
+      "speak whenever you want"
+     ],
+     "ask": "Your right to speak means you should...",
+     "repair": "Run a talk where only one learner may speak, then a fair turn-taking talk."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which responsibility goes with the right to a clean environment?",
+     "answer": "keeping the environment clean",
+     "shows": "right and duty"
+    },
+    {
+     "question": "A child is kept from school to work. Who can help?",
+     "answer": "a teacher, a trusted adult, the children's office or Childline 116",
+     "shows": "protecting rights"
+    }
+   ]
+  }
+ ]
+}

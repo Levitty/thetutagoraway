@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP",
+ "title": "Community Leadership",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Invite a local leader such as a village elder or a religious leader to talk to the class. Name no politician or party.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS",
+   "key_step": "The child names community leaders (religious leaders, elders, clan leaders, the chief) and matches each to their duty.",
+   "floor": {
+    "prerequisite": "Knows ways of keeping safe in the community.",
+    "question": "Who can you go to for help if you are lost in the community?",
+    "answer": "any trusted adult such as a police officer, a chief or a teacher"
+   },
+   "representations": [
+    "leader and duty cards to match",
+    "a visit from a local leader",
+    "a picture of a baraza"
+   ],
+   "steps": [
+    "Name the leader.",
+    "Say how they come to lead.",
+    "Name their duty.",
+    "Say who they serve."
+   ],
+   "contexts": [
+    "a chief holding a baraza",
+    "elders settling a land dispute",
+    "a religious leader counselling a family"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write chief, elder, religious leader."
+    },
+    {
+     "beat": "point",
+     "do": "Point at chief.",
+     "say": "What does a chief do in the community?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"keeps law and order\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write the duty beside each leader."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_POLITICIAN_ONLY",
+     "listen_for": [
+      "Only a politician"
+     ],
+     "ask": "Which is a leader in the community?",
+     "repair": "Ask who helps settle problems in the village."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_DUTY_SWAP",
+     "listen_for": [
+      "The chief"
+     ],
+     "ask": "Who guides people in faith and prayer?",
+     "repair": "Match each leader to the duty on a chart."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_ADULT_MEN_ONLY",
+     "listen_for": [
+      "No, only men lead"
+     ],
+     "ask": "Can a woman be a community leader?",
+     "repair": "Name women leaders in the community, such as a women's group chairperson or a chief."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_CHIEF_ELECTED",
+     "listen_for": [
+      "The villagers vote for them"
+     ],
+     "ask": "How does a person become a chief?",
+     "repair": "Compare: the MCA is voted for; the chief is appointed by the government."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who keeps law and order in a location and links it to the government?",
+     "answer": "the chief",
+     "shows": "chief's duty"
+    },
+    {
+     "question": "Are leaders only politicians?",
+     "answer": "No: elders, religious leaders and chiefs are leaders too",
+     "shows": "many kinds of leader"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES",
+   "key_step": "The child names qualities of a good leader (honest, fair, listens, serves everyone, sets an example) and rejects strength, wealth or loudness as reasons.",
+   "floor": {
+    "prerequisite": "Names community leaders and their duties.",
+    "question": "What do elders do in a community?",
+    "answer": "settle disputes and guard customs"
+   },
+   "representations": [
+    "a quality ladder",
+    "two leader stories to compare",
+    "the class choosing a games captain"
+   ],
+   "steps": [
+    "Read what the leader did.",
+    "Ask whether it was fair and served everyone.",
+    "Name the quality.",
+    "Say whether people would trust the leader."
+   ],
+   "contexts": [
+    "an elder hearing both sides of a quarrel",
+    "a group chairperson sharing money openly",
+    "a chief visiting a flooded village"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Leader A is rich and loud. Leader B listens and is fair.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Which is the better leader?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for B and a reason."
+    },
+    {
+     "beat": "write",
+     "do": "Write honest, fair, listens."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_STRONG_RICH",
+     "listen_for": [
+      "The richest person"
+     ],
+     "ask": "Which person would make a good leader?",
+     "repair": "Ask which classmate you would follow and why."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_OWN_BENEFIT",
+     "listen_for": [
+      "Keep some for himself"
+     ],
+     "ask": "A leader is given money for the village well. What should he do?",
+     "repair": "Discuss why trust matters to a leader."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_STRICT_BEST",
+     "listen_for": [
+      "The one who shouts, people fear him"
+     ],
+     "ask": "Which leader is better: one who shouts at people, or one who listens and treats everyone fairly?",
+     "repair": "Ask which leader people would bring a problem to."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_FAVOUR_OWN",
+     "listen_for": [
+      "Yes, family comes first"
+     ],
+     "ask": "A leader gives jobs only to his relatives. Is this good leadership?",
+     "repair": "Ask how the other families feel when only relatives get jobs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two qualities of a good leader.",
+     "answer": "any two of: honest, fair, listens, serves all, sets an example",
+     "shows": "qualities"
+    },
+    {
+     "question": "Is the richest person always the best leader?",
+     "answer": "No: good leaders are honest and fair",
+     "shows": "wealth is not a quality"
+    }
+   ]
+  }
+ ]
+}

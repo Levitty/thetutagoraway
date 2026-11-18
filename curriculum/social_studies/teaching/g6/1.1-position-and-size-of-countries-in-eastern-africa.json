@@ -1,0 +1,373 @@
+{
+ "sub_strand": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU",
+ "title": "Position and Size of Countries in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a wall map of Eastern Africa with a grid of latitudes and longitudes. Facts (to confirm): Ethiopia is the largest country of the region, Tanzania second; the equator crosses Kenya, Uganda and Somalia; Eastern Africa lies east of the Prime Meridian.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
+   "key_step": "The child names the countries of Eastern Africa and keeps out countries of other regions.",
+   "floor": {
+    "prerequisite": "Names Kenya's five neighbours.",
+    "question": "Name the country west of Kenya.",
+    "answer": "Uganda"
+   },
+   "representations": [
+    "a wall map of Eastern Africa",
+    "country cards to sort: in or out",
+    "a colour key of regions"
+   ],
+   "steps": [
+    "Start with Kenya and its neighbours.",
+    "Add Rwanda, Burundi, Djibouti and Eritrea.",
+    "Check each card against the map.",
+    "Leave out countries of other regions."
+   ],
+   "contexts": [
+    "a lorry from Mombasa to Kigali",
+    "an athlete from Ethiopia",
+    "a trader from Burundi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya and its five neighbours as boxes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a gap beyond Uganda.",
+     "say": "Which two small countries lie here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Rwanda and Burundi."
+    },
+    {
+     "beat": "write",
+     "do": "Add Djibouti and Eritrea in the north."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_ADD_NEIGHBOUR",
+     "listen_for": [
+      "Zambia"
+     ],
+     "ask": "Which country is in Eastern Africa?",
+     "repair": "List the ten countries of the region and ask the child to find the country in the list."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_MISS_HORN",
+     "listen_for": [
+      "Kenya, Uganda, Tanzania, Rwanda"
+     ],
+     "ask": "Which list has only countries of Eastern Africa?",
+     "repair": "Ask for the countries on the Horn and ask whether they are east of Africa's middle."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_NORTH_AFRICA",
+     "listen_for": [
+      "Burundi"
+     ],
+     "ask": "Which one is NOT in Eastern Africa?",
+     "repair": "Use the compass: Egypt is on the Mediterranean in the north, far from the East coast."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_EAC_ONLY",
+     "listen_for": [
+      "No, it is not in the EAC"
+     ],
+     "ask": "Is Ethiopia a country of Eastern Africa?",
+     "repair": "Lay the EAC members on the map in one colour and the rest of Eastern Africa in another."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is Zambia a country of Eastern Africa?",
+     "answer": "No",
+     "shows": "keeps out other regions"
+    },
+    {
+     "question": "Name two countries of Eastern Africa that do not border Kenya.",
+     "answer": "any two of: Rwanda, Burundi, Djibouti, Eritrea",
+     "shows": "beyond the neighbours"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
+   "key_step": "The child describes where each country lies and compares sizes from areas, knowing which countries are landlocked.",
+   "floor": {
+    "prerequisite": "Names the countries of Eastern Africa.",
+    "question": "Name a country of Eastern Africa north of Kenya.",
+    "answer": "Ethiopia"
+   },
+   "representations": [
+    "a table of areas",
+    "a map with the coast highlighted",
+    "paper shapes cut to size"
+   ],
+   "steps": [
+    "Find the country.",
+    "Say its direction from Kenya.",
+    "Read its area.",
+    "Check whether it touches the sea."
+   ],
+   "contexts": [
+    "Uganda sending goods through Mombasa",
+    "Ethiopia's highlands",
+    "Tanzania's long coast"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Ethiopia 1,100,000, Tanzania 945,000, Kenya 580,000 square km."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Kenya.",
+     "say": "Is Kenya the largest?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no, Ethiopia is."
+    },
+    {
+     "beat": "write",
+     "do": "Mark the landlocked countries: Uganda, Rwanda, Burundi, South Sudan, Ethiopia."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_SIZE_NAME",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "Which country is the largest in Eastern Africa?",
+     "repair": "Give the areas in square kilometres and ask the child to compare the numbers."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_LANDLOCKED",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "Which country has no sea coast?",
+     "repair": "Ask which ocean Uganda touches. Then trace where its ships must go to reach the sea."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_DIRECTION_SWAP",
+     "listen_for": [
+      "North"
+     ],
+     "ask": "In which direction does Tanzania lie from Kenya?",
+     "repair": "Stand on Nairobi on a map and say which way Mombasa to Dar es Salaam runs."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_POPULATION_SIZE",
+     "listen_for": [
+      "Rwanda, it has more people"
+     ],
+     "ask": "Rwanda has more people than Djibouti. Which is bigger in area?",
+     "repair": "Compare the area column and the population column in a table."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is the largest country of Eastern Africa?",
+     "answer": "Ethiopia",
+     "shows": "largest"
+    },
+    {
+     "question": "Is Uganda landlocked?",
+     "answer": "Yes, it has no sea coast",
+     "shows": "landlocked"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
+   "key_step": "The child says latitudes run east to west and measure north or south of the equator, longitudes run north to south and measure east or west of the Prime Meridian.",
+   "floor": {
+    "prerequisite": "Names the elements of a map.",
+    "question": "What is the border round a map called?",
+    "answer": "the frame"
+   },
+   "representations": [
+    "a globe with lines",
+    "an orange with rubber bands",
+    "a grid drawn on the board"
+   ],
+   "steps": [
+    "Draw the equator, 0 degrees latitude.",
+    "Draw lines parallel to it: latitudes.",
+    "Draw the Prime Meridian, 0 degrees longitude, from pole to pole.",
+    "Draw lines through the poles: longitudes."
+   ],
+   "contexts": [
+    "the equator signpost at Nanyuki",
+    "the equator crossing at Kisumu",
+    "a globe in the library"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle with a line across the middle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "What is this line, and what is its number?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the equator, 0 degrees."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a line from top to bottom."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what this line is called."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_SWAP",
+     "listen_for": [
+      "Longitudes"
+     ],
+     "ask": "Which lines run from east to west on a map?",
+     "repair": "Draw the equator and say it is a latitude; ask which way it runs."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_ZERO_LINES",
+     "listen_for": [
+      "The Prime Meridian"
+     ],
+     "ask": "Which line is 0 degrees latitude?",
+     "repair": "Ask: which line cuts the earth into north and south? Then give it its name."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_MEASURES",
+     "listen_for": [
+      "How far east or west it is"
+     ],
+     "ask": "What does the latitude of a place tell you?",
+     "repair": "Move a finger up and down a latitude line number: the number says north or south."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_DEGREE_KM",
+     "listen_for": [
+      "Yes, 1 degree is 1 km"
+     ],
+     "ask": "Nairobi is about 1 degree south. Does that mean it is 1 km from the equator?",
+     "repair": "Show the degree marks round a globe and measure how far apart two lines are on the scale."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a latitude measure?",
+     "answer": "how far a place is north or south of the equator",
+     "shows": "latitude"
+    },
+    {
+     "question": "Which line is 0 degrees longitude?",
+     "answer": "the Prime Meridian",
+     "shows": "zero lines"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
+   "key_step": "The child reads a position as latitude then longitude and says whether a place is north or south of the equator and east or west of the Prime Meridian.",
+   "floor": {
+    "prerequisite": "Says what latitudes and longitudes are.",
+    "question": "Which line is 0 degrees latitude?",
+    "answer": "the equator"
+   },
+   "representations": [
+    "a table of towns with positions",
+    "a grid map",
+    "a finger walk along the lines"
+   ],
+   "steps": [
+    "Read the latitude first.",
+    "N or S: which side of the equator.",
+    "Read the longitude.",
+    "E or W: which side of the Prime Meridian."
+   ],
+   "contexts": [
+    "Nairobi about 1 degree S, 37 degrees E",
+    "Kampala near 0 degrees, 32 degrees E",
+    "Addis Ababa about 9 degrees N, 38 degrees E"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Addis Ababa 9 N, 38 E."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 9 N.",
+     "say": "Is Addis Ababa north or south of the equator?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for north."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"north of the equator, east of the Prime Meridian\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_NORTH_SOUTH",
+     "listen_for": [
+      "North of the equator"
+     ],
+     "ask": "Nairobi is at about 1 degree S. Which side of the equator is it?",
+     "repair": "Ask: what does S stand for? Mark the equator on a sketch and put 1 S below it."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_EAST_WEST",
+     "listen_for": [
+      "West"
+     ],
+     "ask": "Kampala is at about 32 degrees E. Which side of the Prime Meridian is it?",
+     "repair": "Read the E on the number and mark it on a sketch to the right of the 0 line."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_ORDER",
+     "listen_for": [
+      "36"
+     ],
+     "ask": "A place is written 4 N, 36 E. Which number is the latitude?",
+     "repair": "Say the rule: latitude first (up and down), longitude second (across)."
+    },
+    {
+     "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_TOP_NORTH_ONLY",
+     "listen_for": [
+      "North, it is at the top of the map"
+     ],
+     "ask": "Dodoma is near the top of a map of Tanzania. Its latitude is 6 degrees S. Is it north or south of the equator?",
+     "repair": "Draw the equator on the map first and look at which side Dodoma is."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A town is at 3 degrees S, 36 degrees E. Is it north or south of the equator?",
+     "answer": "south",
+     "shows": "reads latitude"
+    },
+    {
+     "question": "Is Eastern Africa east or west of the Prime Meridian?",
+     "answer": "east",
+     "shows": "reads longitude"
+    }
+   ]
+  }
+ ]
+}

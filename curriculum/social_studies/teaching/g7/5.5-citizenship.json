@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.POLITI.CITIZENSHIP",
+ "title": "Citizenship",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Kenya's trade examples: tea, coffee and flowers out; oil, vehicles and machines in. Global bodies: UN, AU, EAC.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP",
+   "key_step": "The child explains why countries depend on each other today.",
+   "floor": {
+    "prerequisite": "Names transport networks of Eastern Africa.",
+    "question": "Name a transport route from Mombasa.",
+    "answer": "the Northern Corridor or the SGR"
+   },
+   "representations": [
+    "a trade arrows map",
+    "export and import cards",
+    "body cards: UN, AU, EAC"
+   ],
+   "steps": [
+    "Name what Kenya sells.",
+    "Name what Kenya buys.",
+    "Say why.",
+    "Name bodies countries work through."
+   ],
+   "contexts": [
+    "tea to Pakistan and Britain",
+    "oil from the Gulf",
+    "the UN offices at Gigiri"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw Kenya with arrows out and in."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an arrow out.",
+     "say": "What does Kenya export?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for tea, coffee or flowers."
+    },
+    {
+     "beat": "write",
+     "do": "Label arrows in and out."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP.M_CZ_SELF_SUFFICIENT",
+     "listen_for": [
+      "Each makes everything it needs"
+     ],
+     "ask": "Why do countries trade?",
+     "repair": "Ask where Kenya's oil comes from."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP.M_CZ_INTERDEP_LOSS",
+     "listen_for": [
+      "A country is weak and begging"
+     ],
+     "ask": "What does interdependence mean?",
+     "repair": "Ask who gains from Kenya's tea."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP.M_CZ_UN_KENYA",
+     "listen_for": [
+      "Yes, it has offices in Nairobi"
+     ],
+     "ask": "Is the United Nations a Kenyan body?",
+     "repair": "Show the flags of member countries."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP.M_CZ_EXPORT_IMPORT_SWAP",
+     "listen_for": [
+      "Import"
+     ],
+     "ask": "Does Kenya export or import tea?",
+     "repair": "Ex = out, im = in: draw arrows."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why do countries trade?",
+     "answer": "no country has every resource or skill",
+     "shows": "reason"
+    },
+    {
+     "question": "Name a body through which countries work together.",
+     "answer": "any of: the UN, the AU, the EAC",
+     "shows": "bodies"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL",
+   "key_step": "The child tells what globalisation is and its good and bad effects.",
+   "floor": {
+    "prerequisite": "Explains interdependence.",
+    "question": "Why do countries depend on each other?",
+    "answer": "no country has everything"
+   },
+   "representations": [
+    "a T-chart",
+    "effect cards",
+    "a phone made in many countries"
+   ],
+   "steps": [
+    "Say what globalisation is.",
+    "Name a good effect.",
+    "Name a bad effect.",
+    "Say how to reduce the bad."
+   ],
+   "contexts": [
+    "cheap imported phones",
+    "local shoemakers closing",
+    "news shared across the world"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a T-chart: good and bad."
+    },
+    {
+     "beat": "point",
+     "do": "Point at bad.",
+     "say": "What can globalisation harm?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for local culture or firms."
+    },
+    {
+     "beat": "write",
+     "do": "Fill both sides."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL.M_CZ_GLOBAL_ALL_GOOD",
+     "listen_for": [
+      "Cheaper goods"
+     ],
+     "ask": "Which is a bad effect of globalisation?",
+     "repair": "Ask what happens to local shops when cheap imports flood in."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL.M_CZ_GLOBAL_ONLINE",
+     "listen_for": [
+      "Only using the internet"
+     ],
+     "ask": "What is globalisation?",
+     "repair": "Ask which other things link countries."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL.M_CZ_DISEASE_NONE",
+     "listen_for": [
+      "It cannot"
+     ],
+     "ask": "How can globalisation help a disease spread?",
+     "repair": "Recall how COVID-19 spread around the world."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL.M_CZ_LOCAL_FIRMS_GAIN",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can cheap imports harm local firms?",
+     "repair": "Compare a local shoemaker with cheap imported shoes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is globalisation?",
+     "answer": "the world becoming one connected place through trade, transport, the internet and finance",
+     "shows": "meaning"
+    },
+    {
+     "question": "Give one bad effect of globalisation.",
+     "answer": "any of: loss of local culture, local firms beaten by imports, cybercrime, spread of disease",
+     "shows": "bad"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN",
+   "key_step": "The child names qualities of a global citizen and ways to serve the world while loyal to Kenya.",
+   "floor": {
+    "prerequisite": "Tells what globalisation is.",
+    "question": "What is globalisation?",
+    "answer": "the world becoming connected"
+   },
+   "representations": [
+    "quality cards",
+    "action cards",
+    "a peacekeeping photo"
+   ],
+   "steps": [
+    "Name the quality.",
+    "Pick an action.",
+    "Say how it serves the world.",
+    "Say how it stays loyal to Kenya."
+   ],
+   "contexts": [
+    "Kenyan peacekeepers",
+    "recycling at school",
+    "buying Kenyan goods"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A Kenyan nurse works for an aid group abroad.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Can she still love Kenya?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "write",
+     "do": "Write two qualities she shows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN.M_CZ_LOYAL_LOSS",
+     "listen_for": [
+      "No, he must give up his country"
+     ],
+     "ask": "Can a global citizen love Kenya?",
+     "repair": "Ask what Kenyan peacekeepers do for the world."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN.M_CZ_ONLY_RICH",
+     "listen_for": [
+      "Only rich people who travel"
+     ],
+     "ask": "Who can be a global citizen?",
+     "repair": "Ask what a learner can do for the environment."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN.M_CZ_GLOBAL_TRAVEL",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can a learner in Kenya act as a global citizen without travelling?",
+     "repair": "List global actions done at home."
+    },
+    {
+     "code": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN.M_CZ_KENYAN_GOODS",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does buying Kenyan-made goods show loyalty to Kenya?",
+     "repair": "Trace the money from buying a Kenyan product."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two qualities of a global citizen.",
+     "answer": "any two of: respect for other cultures, care for the environment, concern for others, honesty, cooperation, being informed",
+     "shows": "qualities"
+    },
+    {
+     "question": "Can a global citizen love Kenya?",
+     "answer": "Yes",
+     "shows": "loyalty"
+    }
+   ]
+  }
+ ]
+}

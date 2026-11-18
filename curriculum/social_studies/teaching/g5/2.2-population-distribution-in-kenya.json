@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_",
+ "title": "Population distribution in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Density is people per square kilometre: use a grid of squares with beans. Real figures from the census are for the teacher to supply.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS",
+   "key_step": "The child says where density is high and low in Kenya and gives the reason from rain, soil and jobs.",
+   "floor": {
+    "prerequisite": "Tells dense from sparse.",
+    "question": "Many people live close together near a river. Is this dense or sparse?",
+    "answer": "dense"
+   },
+   "representations": [
+    "a density map of Kenya",
+    "a grid of squares with beans",
+    "a table of area and people"
+   ],
+   "steps": [
+    "Find the dark (dense) areas on the map.",
+    "Find the light (sparse) areas.",
+    "Give the reason for each.",
+    "Work out density as people ÷ area."
+   ],
+   "contexts": [
+    "crowded farms in Kisii",
+    "scattered homes in Turkana",
+    "a busy estate in Nairobi"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw four squares with 8 dots in each and four with 1 dot."
+    },
+    {
+     "beat": "point",
+     "do": "Point at a square of 8.",
+     "say": "How many people per square here?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the dots with the child."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"dense: 8 per square\" and \"sparse: 1 per square\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS.M_PD_DESERT_DENSE",
+     "listen_for": [
+      "The Mount Kenya highlands"
+     ],
+     "ask": "Which area has a low population density?",
+     "repair": "Ask what people need to farm and live: water and good soil. Then compare the two places."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS.M_PD_SIZE_DENSITY",
+     "listen_for": [
+      "Both are the same"
+     ],
+     "ask": "Area A has 600 people on 3 square kilometres. Area B has 600 people on 6 square kilometres. Which is more crowded?",
+     "repair": "Draw both areas on squared paper and place the 600 people in each."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS.M_PD_NAIROBI_ONLY",
+     "listen_for": [
+      "Neither; only Nairobi is dense"
+     ],
+     "ask": "Which of these areas is also densely populated: the Lake Victoria basin or the Chalbi Desert?",
+     "repair": "Show a density map with several dark areas."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS.M_PD_DENSITY_IS_TOTAL",
+     "listen_for": [
+      "510"
+     ],
+     "ask": "An area of 10 square kilometres has 500 people. What is its density?",
+     "repair": "Spread 500 beans over 10 squares and count how many sit on each square."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one reason the central highlands are densely populated.",
+     "answer": "any of: good rain, fertile soil, jobs",
+     "shows": "reason for dense"
+    },
+    {
+     "question": "A place of 20 square kilometres has 100 people. What is its density?",
+     "answer": "5 people per square kilometre",
+     "shows": "density by division"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS",
+   "key_step": "The child gives effects of high density (small farms, pressure on land and services, easy markets) and low density (few services, long distances, land for herding).",
+   "floor": {
+    "prerequisite": "Says where density is high and low.",
+    "question": "Is the north of Kenya densely or sparsely populated?",
+    "answer": "sparsely"
+   },
+   "representations": [
+    "two drawings: a crowded and a sparse area",
+    "effect cards",
+    "a T-chart: high and low density"
+   ],
+   "steps": [
+    "Name the area and its density.",
+    "Ask what happens to land.",
+    "Ask what happens to schools, clinics and roads.",
+    "Sort good and bad effects."
+   ],
+   "contexts": [
+    "tiny plots in a crowded county",
+    "a long walk to a clinic in a dry county",
+    "a busy market in a town"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a T-chart: high density, low density."
+    },
+    {
+     "beat": "point",
+     "do": "Point at high density.",
+     "say": "What happens to the size of farms here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"they are small\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write effects on each side."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS.M_PD_DENSE_ALL_GOOD",
+     "listen_for": [
+      "There are no problems at all"
+     ],
+     "ask": "What is a problem of a very high population density?",
+     "repair": "List both: easy markets and many schools, but small plots and crowded roads."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS.M_PD_SPARSE_NO_PROBLEM",
+     "listen_for": [
+      "Crowded schools and roads"
+     ],
+     "ask": "What is a problem of a very low population density?",
+     "repair": "Ask how far a child walks to the nearest school in a thinly settled area."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS.M_PD_DENSE_FARMS_BIG",
+     "listen_for": [
+      "Where density is low"
+     ],
+     "ask": "Where are farms usually smaller: where density is high or low?",
+     "repair": "Share a field among four families, then among twelve."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS.M_PD_SPARSE_SERVICES_EASY",
+     "listen_for": [
+      "Schools are everywhere"
+     ],
+     "ask": "Why might a child in a sparsely populated area walk far to school?",
+     "repair": "Plot schools on the bean map: few beans, few schools."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one problem of high population density.",
+     "answer": "any of: small farms, shortage of land, housing, water, crowded schools",
+     "shows": "effect of high density"
+    },
+    {
+     "question": "Give one problem of low population density.",
+     "answer": "any of: few schools and clinics, long distances, few roads",
+     "shows": "effect of low density"
+    }
+   ]
+  }
+ ]
+}

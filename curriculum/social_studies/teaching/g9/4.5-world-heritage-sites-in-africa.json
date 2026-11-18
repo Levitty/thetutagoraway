@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_",
+ "title": "World Heritage Sites in Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Kenya's UNESCO sites include Lamu Old Town, Fort Jesus, Mount Kenya, Lake Turkana National Parks, the Kenya Lake System in the Rift Valley, the Sacred Mijikenda Kaya Forests and Thimlich Ohinga.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES",
+   "key_step": "The child names World Heritage sites in Africa, says why they are kept and designs measures to conserve them.",
+   "floor": {
+    "prerequisite": "Places historical sites in Africa.",
+    "question": "In which country is Great Zimbabwe?",
+    "answer": "Zimbabwe"
+   },
+   "representations": [
+    "a site map",
+    "site cards: natural or built",
+    "conservation cards"
+   ],
+   "steps": [
+    "Name the site.",
+    "Name the country.",
+    "Say natural or built and why it is listed.",
+    "Design a conservation measure."
+   ],
+   "contexts": [
+    "Lamu Old Town",
+    "Mount Kenya",
+    "the Pyramids of Giza"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Lamu, Mount Kenya, Serengeti."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Mount Kenya.",
+     "say": "Is this site natural or built?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for natural."
+    },
+    {
+     "beat": "write",
+     "do": "Write a conservation measure for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_LAMU",
+     "listen_for": [
+      "Tanzania"
+     ],
+     "ask": "In which country is Lamu Old Town?",
+     "repair": "Pin Lamu and Stone Town on the coast map."
+    },
+    {
+     "code": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_PYRAMIDS",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country are the Pyramids of Giza?",
+     "repair": "Pin the Pyramids in Egypt on the Africa map."
+    },
+    {
+     "code": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_WHY",
+     "listen_for": [
+      "For no reason"
+     ],
+     "ask": "Why are heritage sites kept?",
+     "repair": "List what a site gives: history, identity, tourism, jobs."
+    },
+    {
+     "code": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_NATURAL_NOT",
+     "listen_for": [
+      "No, only buildings"
+     ],
+     "ask": "Can a natural place like Mount Kenya be a World Heritage site?",
+     "repair": "Show Mount Kenya and Lake Turkana on the list."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which country is Lamu Old Town?",
+     "answer": "Kenya",
+     "shows": "place"
+    },
+    {
+     "question": "Give one reason heritage sites are kept.",
+     "answer": "any of: culture, history, identity, tourism",
+     "shows": "importance"
+    }
+   ]
+  }
+ ]
+}

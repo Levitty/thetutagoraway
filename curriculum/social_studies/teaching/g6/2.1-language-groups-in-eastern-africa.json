@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE",
+ "title": "Language groups in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use arrows on the regional map for the routes as taught: Bantu from the Congo basin and west-central Africa, Nilotes from the Nile valley in South Sudan, Cushites from Ethiopia. Respect every community.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+   "key_step": "The child sorts communities of Eastern Africa into the Bantu, Nilotic and Cushitic groups.",
+   "floor": {
+    "prerequisite": "Sorts Kenyan communities into language groups.",
+    "question": "In which group are the Kikuyu?",
+    "answer": "Bantu"
+   },
+   "representations": [
+    "three boxes",
+    "community cards from across the region",
+    "a map of where groups live"
+   ],
+   "steps": [
+    "Name the community.",
+    "Recall or look up its group.",
+    "Place it.",
+    "Check with a Kenyan example of the same group."
+   ],
+   "contexts": [
+    "the Baganda of Uganda",
+    "the Oromo of Ethiopia",
+    "the Dinka of South Sudan"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Bantu, Nilotes, Cushites."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Cushites.",
+     "say": "Where do the Oromo go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Cushites."
+    },
+    {
+     "beat": "write",
+     "do": "Place three more cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_GROUP_SWAP",
+     "listen_for": [
+      "Bantu"
+     ],
+     "ask": "Which language group do the Luo belong to?",
+     "repair": "Say the language families: Bantu, Nilotic, Cushitic, and name two for each."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_SOMALI",
+     "listen_for": [
+      "Nilotic"
+     ],
+     "ask": "Which language group do the Somali belong to?",
+     "repair": "Link Cushitic with the Horn: Somali, Oromo, Afar."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_SUBGROUP",
+     "listen_for": [
+      "Highland Nilotes"
+     ],
+     "ask": "Which sub-group of the Nilotes do the Maasai belong to?",
+     "repair": "Say Plain Nilotes live on the plains and herd cattle, like the Maasai and the Turkana."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_COUNTRY_GROUP",
+     "listen_for": [
+      "Yes, one country one group"
+     ],
+     "ask": "Are all Ugandans in the same language group?",
+     "repair": "Sort communities from one country into all three groups."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which language group are the Chagga?",
+     "answer": "Bantu",
+     "shows": "Bantu"
+    },
+    {
+     "question": "In which language group are the Acholi?",
+     "answer": "Nilotes",
+     "shows": "Nilotes"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
+   "key_step": "The child gives reasons for migration and the origin and direction of each group.",
+   "floor": {
+    "prerequisite": "Sorts communities into language groups.",
+    "question": "In which group are the Somali?",
+    "answer": "Cushites"
+   },
+   "representations": [
+    "the regional map with arrows",
+    "reason cards",
+    "a timeline"
+   ],
+   "steps": [
+    "Name the group.",
+    "Show where it came from.",
+    "Show the direction it moved.",
+    "Give a reason it moved."
+   ],
+   "contexts": [
+    "Bantu moving east from the Congo basin",
+    "Nilotes moving south from the Nile valley",
+    "Cushites moving south from Ethiopia"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the region and an arrow from South Sudan southwards."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "Which group moved this way?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Nilotes."
+    },
+    {
+     "beat": "write",
+     "do": "Add the other two arrows and one reason each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_NO_REASON",
+     "listen_for": [
+      "To travel for fun"
+     ],
+     "ask": "Why did many groups move to new lands?",
+     "repair": "Ask what a herder does when the grass is gone."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_BANTU_ORIGIN",
+     "listen_for": [
+      "Ethiopia"
+     ],
+     "ask": "Where did the Bantu come from?",
+     "repair": "Match each group with its homeland in a three-row table."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_CUSH_DIRECTION",
+     "listen_for": [
+      "North"
+     ],
+     "ask": "Which way did the Cushites move into Kenya?",
+     "repair": "Find Ethiopia and Kenya on a map and say which is north."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_ONE_MOVE",
+     "listen_for": [
+      "Yes, in one trip"
+     ],
+     "ask": "Did the Bantu reach Eastern Africa in one journey?",
+     "repair": "Draw the arrow in short steps with dates beside them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where did the Cushites come from?",
+     "answer": "Ethiopia and the Horn of Africa",
+     "shows": "origin"
+    },
+    {
+     "question": "Give two reasons for migration.",
+     "answer": "any two of: pasture and water, fertile land, drought, famine, disease, wars, overcrowding, trade",
+     "shows": "reasons"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
+   "key_step": "The child gives effects of migration and settlement, good and bad.",
+   "floor": {
+    "prerequisite": "Gives reasons for migration.",
+    "question": "Give one reason people migrated.",
+    "answer": "any reason such as drought"
+   },
+   "representations": [
+    "a T-chart",
+    "effect cards",
+    "a story of two communities meeting"
+   ],
+   "steps": [
+    "Name the movement.",
+    "Ask what changed for the people already there.",
+    "Sort good and bad effects.",
+    "Say what we see today."
+   ],
+   "contexts": [
+    "Kiswahili and other shared words",
+    "intermarriage between communities",
+    "quarrels over land"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a T-chart: good and bad."
+    },
+    {
+     "beat": "point",
+     "do": "Point at good.",
+     "say": "What did communities gain when they met?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for trade or intermarriage."
+    },
+    {
+     "beat": "write",
+     "do": "Fill both sides."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_NO_CONFLICT",
+     "listen_for": [
+      "No problems at all"
+     ],
+     "ask": "What problem could settlement cause?",
+     "repair": "Ask what happens when two herds need the same water."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_ALL_SAME",
+     "listen_for": [
+      "They all became the same"
+     ],
+     "ask": "What happened when groups settled near each other?",
+     "repair": "Ask whether Kikuyu and Maasai speak the same language today."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_EFFECT_ONLY_BAD",
+     "listen_for": [
+      "There were none"
+     ],
+     "ask": "Give one good effect of migration.",
+     "repair": "Draw a T-chart and fill the good side first."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_IRON_NONE",
+     "listen_for": [
+      "Making plastic"
+     ],
+     "ask": "Which skill did the Bantu spread as they migrated?",
+     "repair": "Show a picture of a traditional smelting furnace."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one good effect of migration.",
+     "answer": "any of: intermarriage, mixing of cultures, trade, spread of farming and iron working",
+     "shows": "good effect"
+    },
+    {
+     "question": "Give one bad effect of migration.",
+     "answer": "any of: conflict over land, displacement, disease spread",
+     "shows": "bad effect"
+    }
+   ]
+  }
+ ]
+}

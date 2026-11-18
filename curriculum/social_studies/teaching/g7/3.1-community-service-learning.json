@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI",
+ "title": "Community Service Learning",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Run a real small CSL project with the class: identify a need, plan, act, report and reflect.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING",
+   "key_step": "The child explains the key terms of CSL and why it matters.",
+   "floor": {
+    "prerequisite": "Names ways a school and community work together.",
+    "question": "Give one way a school helps its community.",
+    "answer": "any example such as a clean-up"
+   },
+   "representations": [
+    "term cards",
+    "need and want sort",
+    "a CSL photo"
+   ],
+   "steps": [
+    "Say what CSL is.",
+    "Say what a CSL project is.",
+    "Find a real community need.",
+    "Say what the learners and community gain."
+   ],
+   "contexts": [
+    "planting trees at a dispensary",
+    "cleaning a market",
+    "a hand-washing station at a stage"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"a new game for learners\" and \"clean water at the school gate\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at both.",
+     "say": "Which is a community need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for clean water."
+    },
+    {
+     "beat": "write",
+     "do": "Write why."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING.M_CS_JUST_WORK",
+     "listen_for": [
+      "Free work as a punishment"
+     ],
+     "ask": "What is community service learning?",
+     "repair": "Ask what the learners learn when they plant trees in the village."
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING.M_CS_NEED_WANT",
+     "listen_for": [
+      "A new game for the learners"
+     ],
+     "ask": "Which is a community need?",
+     "repair": "Ask the child who in the community benefits from the project."
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING.M_CS_CHARITY_SAME",
+     "listen_for": [
+      "It is the same"
+     ],
+     "ask": "How is CSL different from just giving gifts?",
+     "repair": "Ask what learners learnt while planting trees."
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING.M_CS_SCHOOL_ONLY",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Can a CSL project be done outside the school?",
+     "repair": "List places near school with needs."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is community service learning?",
+     "answer": "learning by serving a real community need",
+     "shows": "meaning"
+    },
+    {
+     "question": "Give one importance of CSL.",
+     "answer": "any of: builds skills and values, solves real problems, links school and community",
+     "shows": "importance"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS",
+   "key_step": "The child orders the steps of a CSL project and says what a good plan includes.",
+   "floor": {
+    "prerequisite": "Explains what CSL is.",
+    "question": "What is CSL?",
+    "answer": "learning by serving a community need"
+   },
+   "representations": [
+    "step cards",
+    "a plan sheet",
+    "the class project"
+   ],
+   "steps": [
+    "Identify the need.",
+    "Plan: tasks, people, time, resources.",
+    "Carry out the activity.",
+    "Report and reflect."
+   ],
+   "contexts": [
+    "a tree-planting project",
+    "a litter clean-up",
+    "a reading corner for small children"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"carry out\".",
+     "say": "What must come before this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"plan\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS.M_CS_ACT_FIRST",
+     "listen_for": [
+      "Doing the activity"
+     ],
+     "ask": "What comes first in a CSL project?",
+     "repair": "Ask what might go wrong if the class started to dig before they knew what was needed."
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS.M_CS_NO_REPORT",
+     "listen_for": [
+      "Stop and forget it"
+     ],
+     "ask": "What is the last step of a CSL project?",
+     "repair": "Ask what the class can improve next time."
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS.M_CS_PLAN_VAGUE",
+     "listen_for": [
+      "Only the date"
+     ],
+     "ask": "What should a CSL plan include?",
+     "repair": "Fill in a plan sheet with four columns."
+    },
+    {
+     "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS.M_CS_REFLECT_SKIP",
+     "listen_for": [
+      "Writing the report"
+     ],
+     "ask": "What does reflecting on a CSL project mean?",
+     "repair": "Ask two questions: what did we do (report), what did we learn (reflect)?"
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first step of a CSL project?",
+     "answer": "identify the need",
+     "shows": "first"
+    },
+    {
+     "question": "What is the last step?",
+     "answer": "report and reflect",
+     "shows": "last"
+    }
+   ]
+  }
+ ]
+}

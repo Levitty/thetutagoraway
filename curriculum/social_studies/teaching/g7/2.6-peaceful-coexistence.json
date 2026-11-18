@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE",
+ "title": "Peaceful Coexistence",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use role plays and class agreements. Link to Grade 6 methods (dialogue, negotiation, mediation, arbitration).",
+ "skills": [
+  {
+   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES",
+   "key_step": "The child names the qualities of a peaceful person.",
+   "floor": {
+    "prerequisite": "Chooses ways of promoting peace.",
+    "question": "Give one way of promoting peace.",
+    "answer": "any way such as a peace club"
+   },
+   "representations": [
+    "quality cards",
+    "story cards",
+    "a peace pledge"
+   ],
+   "steps": [
+    "Read what the person did.",
+    "Name the quality.",
+    "Say how it keeps peace.",
+    "Say what a non-peaceful person would do."
+   ],
+   "contexts": [
+    "walking away from a fight",
+    "forgiving a friend",
+    "listening before speaking"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Otieno was insulted and calmly said how he felt.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"calmly\".",
+     "say": "Which quality is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for patience or self-control."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more qualities."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES.M_PE_PEACE_WEAK",
+     "listen_for": [
+      "Because he is afraid"
+     ],
+     "ask": "Why does a peaceful person walk away from a fight?",
+     "repair": "Ask whether it takes courage to forgive."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES.M_PE_REVENGE_FAIR",
+     "listen_for": [
+      "Insults him back"
+     ],
+     "ask": "Someone insulted Otieno. What does a peaceful person do?",
+     "repair": "Ask what happens after both people insult each other."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES.M_PE_AGREE_ALL",
+     "listen_for": [
+      "No, they agree with everyone"
+     ],
+     "ask": "Can a peaceful person disagree with others?",
+     "repair": "Act a calm disagreement."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES.M_PE_FORGIVE_FORGET",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does forgiving someone mean what they did was right?",
+     "repair": "Discuss forgiving while still asking the person to change."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two qualities of a peaceful person.",
+     "answer": "any two of: tolerance, forgiveness, respect, honesty, fairness, patience, kindness, listening",
+     "shows": "qualities"
+    },
+    {
+     "question": "Is a peaceful person weak?",
+     "answer": "No, they choose peace",
+     "shows": "not weak"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS",
+   "key_step": "The child chooses factors that promote peaceful coexistence.",
+   "floor": {
+    "prerequisite": "Names qualities of a peaceful person.",
+    "question": "Give one quality of a peaceful person.",
+    "answer": "any quality such as tolerance"
+   },
+   "representations": [
+    "factor cards",
+    "a peace map of a community",
+    "news stories"
+   ],
+   "steps": [
+    "Name the factor.",
+    "Say how it helps peace.",
+    "Give an example.",
+    "Say what peace lets people do."
+   ],
+   "contexts": [
+    "fair sharing of water",
+    "a peace committee",
+    "respect for the law"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"All the water is given to one village.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Will this promote peace?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write fair sharing."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS.M_PE_FAIR_SKIP",
+     "listen_for": [
+      "Giving all the resources to one group"
+     ],
+     "ask": "Which promotes peace in a community?",
+     "repair": "Ask what happens when one village is given all the water."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS.M_PE_ARMS_PEACE",
+     "listen_for": [
+      "Buying more weapons"
+     ],
+     "ask": "Which makes a community more peaceful?",
+     "repair": "Ask what dialogue between two clans can solve that a gun cannot."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS.M_PE_ELDERS_NONE",
+     "listen_for": [
+      "They do not"
+     ],
+     "ask": "How do elders promote peace in a community?",
+     "repair": "Recall elders mediating in a Grade 5 story."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS.M_PE_TOLERANCE_NONE",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "Why does respect between faiths help peace?",
+     "repair": "Show an interfaith event photo."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two factors that promote peaceful coexistence.",
+     "answer": "any two of: respect for the law, justice, fair sharing, dialogue, tolerance, good leaders, peace committees, elders",
+     "shows": "factors"
+    },
+    {
+     "question": "Why does peace matter to a community?",
+     "answer": "people can farm, trade, study and be safe",
+     "shows": "value"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE",
+   "key_step": "The child orders the steps of peaceful conflict resolution and picks the right method.",
+   "floor": {
+    "prerequisite": "Describes peaceful methods of resolving conflict.",
+    "question": "What is mediation?",
+    "answer": "a third person helping two sides agree"
+   },
+   "representations": [
+    "step cards",
+    "method cards",
+    "a role play"
+   ],
+   "steps": [
+    "Stay calm.",
+    "Listen to each side and name the problem.",
+    "Suggest solutions and agree.",
+    "Keep the agreement and reconcile."
+   ],
+   "contexts": [
+    "two learners and a broken ruler",
+    "neighbours and a boundary",
+    "a mediator at a market quarrel"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the steps in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"listen to each side\".",
+     "say": "What comes before this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"stay calm\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number the steps."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE.M_PE_TAKE_SIDES",
+     "listen_for": [
+      "Takes the side of one person"
+     ],
+     "ask": "What does a mediator do?",
+     "repair": "Ask why a referee in football should not support one team."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE.M_PE_SOLVE_FIRST",
+     "listen_for": [
+      "Decide who is guilty"
+     ],
+     "ask": "What is the first step in solving a conflict peacefully?",
+     "repair": "Ask what would happen if the teacher decided without hearing both learners."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE.M_PE_RECONCILE_START",
+     "listen_for": [
+      "First"
+     ],
+     "ask": "When does reconciliation come in solving a conflict?",
+     "repair": "Order the steps on cards."
+    },
+    {
+     "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE.M_PE_VIOLENCE_METHOD",
+     "listen_for": [
+      "Yes, the winner decides"
+     ],
+     "ask": "Is fighting a method of resolving conflict?",
+     "repair": "Ask what happens after the fight."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the first step in solving a conflict peacefully?",
+     "answer": "stay calm and listen to each side",
+     "shows": "first step"
+    },
+    {
+     "question": "Does a mediator take sides?",
+     "answer": "No",
+     "shows": "mediator role"
+    }
+   ]
+  }
+ ]
+}

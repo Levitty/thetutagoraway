@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF",
+ "title": "Vegetation in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: rain forest (Kakamega, western Uganda), savanna (Serengeti, Mara), semi-desert scrub (north Kenya), mountain vegetation in zones, mangroves at the coast. Collect leaves from the school to compare shapes.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
+   "key_step": "The child names the main vegetation types of Eastern Africa and where each grows.",
+   "floor": {
+    "prerequisite": "Names the climatic regions.",
+    "question": "Which climatic region is wet all year?",
+    "answer": "equatorial"
+   },
+   "representations": [
+    "a vegetation map",
+    "photo cards",
+    "a climate and vegetation overlay"
+   ],
+   "steps": [
+    "Read the climate of the place.",
+    "Match it to a vegetation type.",
+    "Name a place where it grows.",
+    "Check on the map."
+   ],
+   "contexts": [
+    "Kakamega Forest",
+    "the Maasai Mara grassland",
+    "mangroves at Lamu"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a coastline with trees standing in water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the trees.",
+     "say": "What vegetation grows in salty water at the coast?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for mangroves."
+    },
+    {
+     "beat": "write",
+     "do": "Write each type with a place."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_SAVANNA_WHERE",
+     "listen_for": [
+      "The Serengeti and the Maasai Mara"
+     ],
+     "ask": "Where is savanna grassland found?",
+     "repair": "Connect grassland and wildlife: ask where zebra and wildebeest live."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_MANGROVE_PLACE",
+     "listen_for": [
+      "In the desert"
+     ],
+     "ask": "Where do mangrove forests grow?",
+     "repair": "Show a picture of stilt roots in the sea water at the coast."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_RAINFOREST_DRY",
+     "listen_for": [
+      "Dry and hot"
+     ],
+     "ask": "Which climate suits rain forest?",
+     "repair": "Ask which plants need the most water."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_FOREST_EVERYWHERE",
+     "listen_for": [
+      "Thick rain forest"
+     ],
+     "ask": "Which vegetation covers most of Eastern Africa?",
+     "repair": "Shade the vegetation map: most of it is savanna."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is savanna grassland found in Kenya?",
+     "answer": "the Maasai Mara or other grasslands",
+     "shows": "savanna place"
+    },
+    {
+     "question": "Name a forest in Kenya.",
+     "answer": "Kakamega Forest or another named forest",
+     "shows": "forest place"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
+   "key_step": "The child describes each vegetation type and links its traits to climate.",
+   "floor": {
+    "prerequisite": "Names the vegetation types.",
+    "question": "Name the vegetation of the Serengeti.",
+    "answer": "savanna grassland"
+   },
+   "representations": [
+    "leaf samples",
+    "drawings of each type",
+    "a mountain cross-section with zones"
+   ],
+   "steps": [
+    "Name the type.",
+    "Describe trees and grass.",
+    "Say how it suits the rain.",
+    "Compare with another type."
+   ],
+   "contexts": [
+    "acacia trees in the savanna",
+    "tall layered trees in Kakamega",
+    "bamboo on Mount Kenya"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mountain with three bands."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom band.",
+     "say": "What grows lowest on the mountain?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for forest."
+    },
+    {
+     "beat": "write",
+     "do": "Write forest, bamboo, moorland from bottom up."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_DESERT_BROAD",
+     "listen_for": [
+      "Broad leaves and shallow roots"
+     ],
+     "ask": "Which description fits desert plants?",
+     "repair": "Ask how a plant would keep water in a hot, dry place."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_SAVANNA_TREES",
+     "listen_for": [
+      "Thick forest with tall trees close together"
+     ],
+     "ask": "Which description fits savanna?",
+     "repair": "Draw the Mara plain with a few acacia trees."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_MOUNTAIN_SAME",
+     "listen_for": [
+      "It stays the same"
+     ],
+     "ask": "How does vegetation change as you climb Mount Kenya?",
+     "repair": "Draw the mountain in four bands."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_THORNS_WHY",
+     "listen_for": [
+      "Only to hurt animals"
+     ],
+     "ask": "Why do many desert plants have thorns instead of broad leaves?",
+     "repair": "Put a broad leaf and a thorny twig in the sun and compare after an hour."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Describe savanna vegetation.",
+     "answer": "tall grass with scattered flat-topped trees",
+     "shows": "savanna traits"
+    },
+    {
+     "question": "Why does vegetation change as you climb a mountain?",
+     "answer": "it gets cooler higher up",
+     "shows": "mountain zones"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
+   "key_step": "The child picks actions that protect vegetation and rejects ones that harm it.",
+   "floor": {
+    "prerequisite": "Describes vegetation types.",
+    "question": "What vegetation grows at the coast in salty water?",
+    "answer": "mangroves"
+   },
+   "representations": [
+    "action cards",
+    "a tree nursery",
+    "a photo of a burnt hill"
+   ],
+   "steps": [
+    "Read the action.",
+    "Ask what it does to plants.",
+    "Sort: protects or harms.",
+    "Give a better choice."
+   ],
+   "contexts": [
+    "a school tree nursery",
+    "an energy-saving jiko",
+    "a forest fire"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"burn bushes to clear land\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Does this protect vegetation?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write a protecting action."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_BURN_OK",
+     "listen_for": [
+      "Burning the bush to clear it"
+     ],
+     "ask": "Which action conserves vegetation?",
+     "repair": "Ask what burning does to soil, animals and young trees."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_CUT_FOR_MONEY",
+     "listen_for": [
+      "More rain falls"
+     ],
+     "ask": "What happens when a forest is cut for charcoal?",
+     "repair": "Ask what holds the soil when the trees are gone."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_ONE_TREE_ENOUGH",
+     "listen_for": [
+      "Yes, it planted a tree"
+     ],
+     "ask": "A company cuts 100 trees and plants one. Has it conserved the forest?",
+     "repair": "Count trees cut and planted on the board."
+    },
+    {
+     "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_GOVT_ONLY_CONSERVE",
+     "listen_for": [
+      "Nothing, it is the government's job"
+     ],
+     "ask": "What can a school do to conserve vegetation?",
+     "repair": "Start or visit the school tree nursery."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways of conserving vegetation.",
+     "answer": "any two of: plant trees, replant, agroforestry, control fires, avoid overgrazing, energy-saving jikos, laws",
+     "shows": "conserving"
+    },
+    {
+     "question": "Does burning charcoal from forest trees conserve vegetation?",
+     "answer": "No, it destroys it",
+     "shows": "harm"
+    }
+   ]
+  }
+ ]
+}

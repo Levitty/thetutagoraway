@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA",
+ "title": "Language Groups in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Treat every community with respect and never rank them. Groupings are those taught in Kenyan schools (Bantu, Nilotic, Cushitic); to confirm by the teacher for local communities.",
+ "skills": [
+  {
+   "skill": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT",
+   "key_step": "The child sorts Kenyan communities into the Bantu, Nilotic and Cushitic language groups.",
+   "floor": {
+    "prerequisite": "Knows communities have their own traditions.",
+    "question": "Do all communities in Kenya have the same traditions?",
+    "answer": "no"
+   },
+   "representations": [
+    "three boxes: Bantu, Nilotic, Cushitic",
+    "community cards",
+    "a map showing where groups live"
+   ],
+   "steps": [
+    "Name the community.",
+    "Recall its language group.",
+    "Place the card.",
+    "Check with a known member of the same group."
+   ],
+   "contexts": [
+    "a Kamba and a Kikuyu learner sharing similar words",
+    "Maasai and Samburu herders",
+    "Somali traders in Garissa"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Bantu, Nilotes, Cushites as three headings."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Nilotes.",
+     "say": "Where do the Luo go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Nilotes."
+    },
+    {
+     "beat": "write",
+     "do": "Add the Luo, then ask for a Cushitic community."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT.M_LG_NILOTE_AS_BANTU",
+     "listen_for": [
+      "Bantu"
+     ],
+     "ask": "To which language group do the Luo belong?",
+     "repair": "Start with the Bantu list (Kikuyu, Luhya, Kamba), then name the Nilotes by their lake and plain homes."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT.M_LG_CUSHITE_AS_NILOTE",
+     "listen_for": [
+      "Nilotic"
+     ],
+     "ask": "To which language group do the Somali belong?",
+     "repair": "Group by language family, not by way of life: Maasai are herders and Nilotes, Somali are herders and Cushites."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT.M_LG_REGION_GROUP",
+     "listen_for": [
+      "No, they live far apart"
+     ],
+     "ask": "The Maasai live in the south and the Turkana in the north. Are they in the same language group?",
+     "repair": "Show a few shared words among Nilotic languages and their spread on the map."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT.M_LG_GROUP_IS_TRIBE",
+     "listen_for": [
+      "Yes, it is one tribe"
+     ],
+     "ask": "Is \"Bantu\" the name of one community?",
+     "repair": "List six Bantu communities under the word Bantu."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which language group are the Luhya?",
+     "answer": "Bantu",
+     "shows": "sorts a Bantu community"
+    },
+    {
+     "question": "In which language group are the Borana?",
+     "answer": "Cushitic",
+     "shows": "sorts a Cushitic community"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE",
+   "key_step": "The child gives true examples of how language groups depend on each other (trade, intermarriage, shared skills and languages).",
+   "floor": {
+    "prerequisite": "Sorts communities into language groups.",
+    "question": "Name one Nilotic community.",
+    "answer": "any of: Luo, Kalenjin, Maasai, Samburu, Turkana"
+   },
+   "representations": [
+    "an exchange web on the board",
+    "a market role play",
+    "story cards"
+   ],
+   "steps": [
+    "Name two communities.",
+    "Ask what each has that the other needs.",
+    "Name the exchange.",
+    "Say how both gain."
+   ],
+   "contexts": [
+    "herders trading milk and hides for grain",
+    "fishers trading fish for farm produce",
+    "intermarriage joining families"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow and a sack of grain with arrows between them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrows.",
+     "say": "Who gives what?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for herder and farmer."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"both gain\" under the arrows."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE.M_LG_SELF_SUFFICIENT",
+     "listen_for": [
+      "Nothing, it must fish more"
+     ],
+     "ask": "A fishing community has plenty of fish but no maize. What can it do?",
+     "repair": "Ask each group what it has and what it lacks, then join the groups."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE.M_LG_RIVALRY",
+     "listen_for": [
+      "They compete to be the strongest"
+     ],
+     "ask": "What does interdependence between communities mean?",
+     "repair": "Use a market scene where both sides gain."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE.M_LG_TRADE_ONLY",
+     "listen_for": [
+      "There is no other way"
+     ],
+     "ask": "Give a way communities depend on each other other than trade.",
+     "repair": "List what neighbouring communities share: language words, songs, marriages, farming ideas."
+    },
+    {
+     "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE.M_LG_ONE_LANGUAGE_NEEDED",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How do people from different language groups talk at a market in Kenya?",
+     "repair": "Act a market with buyers from different groups using Kiswahili."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way herding and farming communities depend on each other.",
+     "answer": "trade milk, meat or hides for grain and vegetables",
+     "shows": "exchange"
+    },
+    {
+     "question": "Can one community supply everything it needs without others?",
+     "answer": "No",
+     "shows": "interdependence"
+    }
+   ]
+  }
+ ]
+}

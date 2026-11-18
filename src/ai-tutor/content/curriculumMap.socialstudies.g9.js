@@ -2,7 +2,7 @@
 // Outcomes are official (word for word). Skills are proposed, awaiting teacher review.
 // A family carries `cskill` (a key of SKILLS), `outcome` (its official outcome) and `skill` (the same as cskill:
 // these skills are not in the practice engine's Maths graph). MIS_FEEDBACK maps a short misconception code to the line a child reads.
-export const MAP_SOURCE = {"source":"curriculum/social_studies/g9.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Social Studies teacher's review"};
+export const MAP_SOURCE = {"source":"curriculum/social_studies/g9.json","status":"outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting a Social Studies teacher's review; depth pass 18 Nov 2026 (two or more prerequisites and four misconceptions per skill, teaching pack in curriculum/social_studies/teaching/g9)"};
 export const SUBSTRANDS = {
  "SOCI.G9.SOCIAL.PATHWAY_CHOICES": {
   "name": "Pathway Choices",
@@ -558,7 +558,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_PW_NUMBER",
    "M_SS9_PW_FACTOR",
-   "M_SS9_PW_NAME"
+   "M_SS9_PW_NAME",
+   "M_SS9_PW_PRESTIGE"
   ]
  },
  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER": {
@@ -575,7 +576,27 @@ export const SKILLS = {
   "mis": [
    "M_SS9_PC_SUPPORT",
    "M_SS9_PC_MAP",
-   "M_SS9_PC_ONLY"
+   "M_SS9_PC_ONLY",
+   "M_SS9_PC_SPIRITUAL_NONE"
+  ]
+ },
+ "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES": {
+  "name": "Analyse challenges in pre-career support systems and choose solutions",
+  "sub": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE",
+  "outcome": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.b",
+  "outcomes": [
+   "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.b",
+   "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.c"
+  ],
+  "pre": [
+   "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER"
+  ],
+  "mis": [
+   "M_SS9_SC_NO_CHALLENGE",
+   "M_SS9_SC_PARENT_FORCE",
+   "M_SS9_SC_ONLINE_TRUE",
+   "M_SS9_SC_SOLUTION_MATCH",
+   "M_SS9_SC_COST_ONLY"
   ]
  },
  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS": {
@@ -591,7 +612,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_CS_ORDER",
    "M_SS9_CS_PLAN",
-   "M_SS9_CS_REPORT"
+   "M_SS9_CS_REPORT",
+   "M_SS9_CS_REPORT_CONTENT"
   ]
  },
  "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE": {
@@ -606,7 +628,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_SA_FARM",
    "M_SS9_SA_TOOL",
-   "M_SS9_SA_SITE"
+   "M_SS9_SA_SITE",
+   "M_SS9_SA_FIRE_FIRST"
   ]
  },
  "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE": {
@@ -621,7 +644,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_IK_WRITTEN",
    "M_SS9_IK_TYPE",
-   "M_SS9_IK_USE"
+   "M_SS9_IK_USE",
+   "M_SS9_IK_MODERN_REPLACE"
   ]
  },
  "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY": {
@@ -636,7 +660,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_PO_CAUSE",
    "M_SS9_PO_OVER",
-   "M_SS9_PO_GOV"
+   "M_SS9_PO_GOV",
+   "M_SS9_PO_LAZY"
   ]
  },
  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION": {
@@ -651,7 +676,26 @@ export const SKILLS = {
   "mis": [
    "M_SS9_PP_SOURCE",
    "M_SS9_PP_BASE",
-   "M_SS9_PP_GERMANY"
+   "M_SS9_PP_GERMANY",
+   "M_SS9_PP_CENSUS_YEARLY"
+  ]
+ },
+ "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS": {
+  "name": "Read age-sex pyramids and say how population structure guides the sharing of national resources",
+  "sub": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE",
+  "outcome": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.c",
+  "outcomes": [
+   "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.c",
+   "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.d"
+  ],
+  "pre": [
+   "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION"
+  ],
+  "mis": [
+   "M_SS9_PY_SIDES",
+   "M_SS9_PY_DEPENDANTS",
+   "M_SS9_PY_RESOURCE_SAME",
+   "M_SS9_PY_SCALE"
   ]
  },
  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE": {
@@ -666,7 +710,26 @@ export const SKILLS = {
   "mis": [
    "M_SS9_PE_INNER",
    "M_SS9_PE_BARRIER",
-   "M_SS9_PE_EQ"
+   "M_SS9_PE_EQ",
+   "M_SS9_PE_ABSENCE"
+  ]
+ },
+ "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.EMOTIONS_PEACE": {
+  "name": "Choose ways of managing emotions and using emotional intelligence to resolve conflict",
+  "sub": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU",
+  "outcome": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.c",
+  "outcomes": [
+   "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.c",
+   "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.d"
+  ],
+  "pre": [
+   "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE"
+  ],
+  "mis": [
+   "M_SS9_EP_SUPPRESS",
+   "M_SS9_EP_EMPATHY_AGREE",
+   "M_SS9_EP_REACT_FAST",
+   "M_SS9_EP_SELF_ONLY"
   ]
  },
  "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS": {
@@ -681,7 +744,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_RL_WAY",
    "M_SS9_RL_BARRIER",
-   "M_SS9_RL_FORGIVE"
+   "M_SS9_RL_FORGIVE",
+   "M_SS9_RL_BOUNDARY"
   ]
  },
  "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS": {
@@ -697,7 +761,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_TM_CONTOUR",
    "M_SS9_TM_SECTION",
-   "M_SS9_TM_HUMAN"
+   "M_SS9_TM_HUMAN",
+   "M_SS9_TM_ENLARGE_SCALE"
   ]
  },
  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING": {
@@ -713,7 +778,25 @@ export const SKILLS = {
   "mis": [
    "M_SS9_LF_TENSION",
    "M_SS9_LF_RIFT",
-   "M_SS9_LF_EFFECT"
+   "M_SS9_LF_EFFECT",
+   "M_SS9_LF_GEOTHERMAL"
+  ]
+ },
+ "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.PLATE_TECTONICS": {
+  "name": "Explain continental drift and plate tectonics in the formation of continents",
+  "sub": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR",
+  "outcome": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.b",
+  "outcomes": [
+   "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.b"
+  ],
+  "pre": [
+   "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING"
+  ],
+  "mis": [
+   "M_SS9_PT_FIXED",
+   "M_SS9_PT_FAST",
+   "M_SS9_PT_EVIDENCE",
+   "M_SS9_PT_PLATE_COUNTRY"
   ]
  },
  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS": {
@@ -729,7 +812,26 @@ export const SKILLS = {
   "mis": [
    "M_SS9_RV_RIVER",
    "M_SS9_RV_USE",
-   "M_SS9_RV_CHALLENGE"
+   "M_SS9_RV_CHALLENGE",
+   "M_SS9_RV_ONE_USE"
+  ]
+ },
+ "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_CONDITIONS": {
+  "name": "Outline the conditions that led to the Tana River projects and choose solutions to river project challenges",
+  "sub": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ",
+  "outcome": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.b",
+  "outcomes": [
+   "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.b",
+   "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.e"
+  ],
+  "pre": [
+   "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS"
+  ],
+  "mis": [
+   "M_SS9_RC_FLAT_SITE",
+   "M_SS9_RC_SEASONAL",
+   "M_SS9_RC_SILT_FIX",
+   "M_SS9_RC_DISPLACED"
   ]
  },
  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION": {
@@ -745,7 +847,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_ED_CAUSE",
    "M_SS9_ED_EFFECT",
-   "M_SS9_ED_ANSWER"
+   "M_SS9_ED_ANSWER",
+   "M_SS9_ED_PLASTIC_HARMLESS"
   ]
  },
  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES": {
@@ -760,7 +863,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_HS_LAMU",
    "M_SS9_HS_PYRAMIDS",
-   "M_SS9_HS_WHY"
+   "M_SS9_HS_WHY",
+   "M_SS9_HS_NATURAL_NOT"
   ]
  },
  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING": {
@@ -776,7 +880,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_CM_ORDER",
    "M_SS9_CM_PARLIAMENT",
-   "M_SS9_CM_YEAR"
+   "M_SS9_CM_YEAR",
+   "M_SS9_CM_CITIZENS_NONE"
   ]
  },
  "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT": {
@@ -794,7 +899,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_CE_ACT",
    "M_SS9_CE_PARTY",
-   "M_SS9_CE_POST"
+   "M_SS9_CE_POST",
+   "M_SS9_CE_COLLECTIVE"
   ]
  },
  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS": {
@@ -811,7 +917,8 @@ export const SKILLS = {
   "mis": [
    "M_SS9_BR_CHAPTER",
    "M_SS9_BR_RIGHT",
-   "M_SS9_BR_SPECIAL"
+   "M_SS9_BR_SPECIAL",
+   "M_SS9_BR_LIMITLESS"
   ]
  },
  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE": {
@@ -827,7 +934,25 @@ export const SKILLS = {
   "mis": [
    "M_SS9_GC_ELEMENT",
    "M_SS9_GC_KISWAHILI",
-   "M_SS9_GC_HUMANITY"
+   "M_SS9_GC_HUMANITY",
+   "M_SS9_GC_LOSE_ALL"
+  ]
+ },
+ "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.CULTURE_FACTORS": {
+  "name": "Name factors that promote healthy cultural relationships in a connected world",
+  "sub": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION",
+  "outcome": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.d",
+  "outcomes": [
+   "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.d"
+  ],
+  "pre": [
+   "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE"
+  ],
+  "mis": [
+   "M_SS9_CF_STEREOTYPE",
+   "M_SS9_CF_LANGUAGE_NONE",
+   "M_SS9_CF_MEDIA_ALL_GOOD",
+   "M_SS9_CF_EXCHANGE_NONE"
   ]
  }
 };
@@ -835,55 +960,98 @@ export const MIS_FEEDBACK = {
  "M_SS9_PW_NUMBER": "There are three pathways: STEM, Social Sciences, and Arts and Sports Science.",
  "M_SS9_PW_FACTOR": "Choose by interests, abilities and career goals.",
  "M_SS9_PW_NAME": "Social Sciences is a pathway.",
+ "M_SS9_PW_PRESTIGE": "Every pathway leads to good careers. Choose the one that fits you.",
  "M_SS9_PC_SUPPORT": "Counsellors, teachers and mentors support careers.",
  "M_SS9_PC_MAP": "Mapping links interests and abilities to careers.",
  "M_SS9_PC_ONLY": "Many people can advise.",
+ "M_SS9_PC_SPIRITUAL_NONE": "Faith leaders can give guidance and encouragement too.",
+ "M_SS9_SC_NO_CHALLENGE": "Some learners lack counsellors or career information. That is a challenge.",
+ "M_SS9_SC_PARENT_FORCE": "Talk respectfully with parents and a counsellor about your interests.",
+ "M_SS9_SC_ONLINE_TRUE": "Check career information with trusted sources.",
+ "M_SS9_SC_SOLUTION_MATCH": "Match the solution to what is missing.",
+ "M_SS9_SC_COST_ONLY": "Challenges include pressure and misinformation, not only money.",
  "M_SS9_CS_ORDER": "The first step is to identify the problem.",
  "M_SS9_CS_PLAN": "Plan before you implement.",
  "M_SS9_CS_REPORT": "The report comes last.",
+ "M_SS9_CS_REPORT_CONTENT": "A report tells the problem, the solution, what was done, the results and the lessons.",
  "M_SS9_SA_FARM": "Early humans hunted and gathered.",
  "M_SS9_SA_TOOL": "Stone Age tools were made of stone.",
  "M_SS9_SA_SITE": "Olduvai Gorge is a famous Stone Age site.",
+ "M_SS9_SA_FIRE_FIRST": "Fire was a later discovery that changed how early humans lived.",
  "M_SS9_IK_WRITTEN": "It was passed on by word of mouth.",
  "M_SS9_IK_TYPE": "Herbal medicine is indigenous knowledge.",
  "M_SS9_IK_USE": "It helped sustain life.",
+ "M_SS9_IK_MODERN_REPLACE": "Indigenous and modern knowledge can be used together to make good decisions.",
  "M_SS9_PO_CAUSE": "Unemployment causes poverty.",
  "M_SS9_PO_OVER": "Overuse can empty resources.",
  "M_SS9_PO_GOV": "Corruption can lead to poverty.",
+ "M_SS9_PO_LAZY": "Poverty has many causes, such as drought and unemployment, not only laziness.",
  "M_SS9_PP_SOURCE": "The census counts the population.",
  "M_SS9_PP_BASE": "A developing country has a wide base.",
  "M_SS9_PP_GERMANY": "A developed country has a narrower base.",
+ "M_SS9_PP_CENSUS_YEARLY": "Kenya's census is usually taken about every ten years.",
+ "M_SS9_PY_SIDES": "The youngest group is at the base. The oldest is at the top.",
+ "M_SS9_PY_DEPENDANTS": "Dependants are children and older people who rely on those of working age.",
+ "M_SS9_PY_RESOURCE_SAME": "A young population needs schools and child health care. An old one needs pensions and care.",
+ "M_SS9_PY_SCALE": "Use a scale so each bar's length matches its number.",
  "M_SS9_PE_INNER": "Inner peace is calm within a person.",
  "M_SS9_PE_BARRIER": "Prejudice is a barrier.",
  "M_SS9_PE_EQ": "It helps manage emotions.",
+ "M_SS9_PE_ABSENCE": "Peace is more than no fighting. It needs trust, fairness and cooperation.",
+ "M_SS9_EP_SUPPRESS": "Managing emotions means noticing them and choosing a calm response.",
+ "M_SS9_EP_EMPATHY_AGREE": "Empathy is understanding how someone feels, even if you disagree.",
+ "M_SS9_EP_REACT_FAST": "Pausing and replying calmly shows emotional intelligence and keeps peace.",
+ "M_SS9_EP_SELF_ONLY": "Emotional intelligence includes understanding others: empathy and social skills.",
  "M_SS9_RL_WAY": "Respect sustains relationships.",
  "M_SS9_RL_BARRIER": "Jealousy is a barrier.",
  "M_SS9_RL_FORGIVE": "Forgiveness heals relationships.",
+ "M_SS9_RL_BOUNDARY": "Setting limits kindly keeps relationships healthy.",
  "M_SS9_TM_CONTOUR": "Contour lines show height.",
  "M_SS9_TM_SECTION": "A cross-section shows the shape of the land.",
  "M_SS9_TM_HUMAN": "A railway is a human feature.",
+ "M_SS9_TM_ENLARGE_SCALE": "Enlarging two times halves the scale number: 1:50,000 becomes 1:25,000.",
  "M_SS9_LF_TENSION": "Tensional forces pull the crust apart.",
  "M_SS9_LF_RIFT": "Faulting makes rift valleys.",
  "M_SS9_LF_EFFECT": "Faulting can bring earthquakes and hot springs.",
+ "M_SS9_LF_GEOTHERMAL": "Underground heat in the Rift Valley gives geothermal power at Olkaria.",
+ "M_SS9_PT_FIXED": "The continents were once one land mass and slowly moved apart.",
+ "M_SS9_PT_FAST": "Plates move only a few centimetres a year.",
+ "M_SS9_PT_EVIDENCE": "Fitting coasts and matching rocks and fossils are evidence of drift.",
+ "M_SS9_PT_PLATE_COUNTRY": "A plate is very large. The African plate carries most of Africa.",
  "M_SS9_RV_RIVER": "The Aswan High Dam is on the Nile.",
  "M_SS9_RV_USE": "Dams produce electricity.",
  "M_SS9_RV_CHALLENGE": "People may be displaced.",
+ "M_SS9_RV_ONE_USE": "A multi-purpose project serves many uses at once.",
+ "M_SS9_RC_FLAT_SITE": "Narrow gorges with hard rock make good dam sites.",
+ "M_SS9_RC_SEASONAL": "A dam needs a permanent river with plenty of water.",
+ "M_SS9_RC_SILT_FIX": "Stop soil erosion in the catchment to reduce silting.",
+ "M_SS9_RC_DISPLACED": "Displaced families need consultation, fair compensation and good resettlement.",
  "M_SS9_ED_CAUSE": "Deforestation degrades the environment.",
  "M_SS9_ED_EFFECT": "Degradation causes soil erosion.",
  "M_SS9_ED_ANSWER": "Terracing and afforestation conserve.",
+ "M_SS9_ED_PLASTIC_HARMLESS": "Plastic lasts for many years and harms land, water and animals.",
  "M_SS9_HS_LAMU": "Lamu Old Town is in Kenya.",
  "M_SS9_HS_PYRAMIDS": "The Pyramids of Giza are in Egypt.",
  "M_SS9_HS_WHY": "They keep culture and history.",
+ "M_SS9_HS_NATURAL_NOT": "World Heritage sites can be natural places or built ones.",
  "M_SS9_CM_ORDER": "Views are collected first.",
  "M_SS9_CM_PARLIAMENT": "Parliament debates the draft.",
  "M_SS9_CM_YEAR": "The Constitution was promulgated in 2010.",
+ "M_SS9_CM_CITIZENS_NONE": "Citizens gave their views and voted in the referendum.",
  "M_SS9_CE_ACT": "Voting is a civic activity.",
  "M_SS9_CE_PARTY": "Parties field candidates.",
  "M_SS9_CE_POST": "Governor is an elected post.",
+ "M_SS9_CE_COLLECTIVE": "When a group acts together for the community, it is collective civic engagement.",
  "M_SS9_BR_CHAPTER": "The Bill of Rights is in Chapter 4.",
  "M_SS9_BR_RIGHT": "The right to life is in the Bill of Rights.",
  "M_SS9_BR_SPECIAL": "Persons with disabilities are protected.",
+ "M_SS9_BR_LIMITLESS": "Some rights have limits so they do not harm others.",
  "M_SS9_GC_ELEMENT": "Language and music are elements of culture.",
  "M_SS9_GC_KISWAHILI": "Kiswahili is recognised in the world.",
- "M_SS9_GC_HUMANITY": "Respect and dialogue promote common humanity."
+ "M_SS9_GC_HUMANITY": "Respect and dialogue promote common humanity.",
+ "M_SS9_GC_LOSE_ALL": "Sharing culture can spread and preserve it.",
+ "M_SS9_CF_STEREOTYPE": "Stereotypes spread wrong ideas. Learning about people helps.",
+ "M_SS9_CF_LANGUAGE_NONE": "Learning another language builds understanding and respect.",
+ "M_SS9_CF_MEDIA_ALL_GOOD": "Media help when used responsibly and harm when they spread stereotypes or hate.",
+ "M_SS9_CF_EXCHANGE_NONE": "Cultural exchange helps people meet, learn and respect each other."
 };

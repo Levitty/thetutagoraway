@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI",
+ "title": "Community Service Learning Project",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Grade 8 runs a fuller project than Grade 7: a solution is designed before planning. Keep a project log.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+   "key_step": "The child puts the CSL project steps in order (identify, design, plan, implement, report) and says what each does.",
+   "floor": {
+    "prerequisite": "Orders the Grade 7 CSL steps.",
+    "question": "What is the first step of a CSL project?",
+    "answer": "identify the need"
+   },
+   "representations": [
+    "step cards",
+    "a project log",
+    "the class project"
+   ],
+   "steps": [
+    "Identify a problem or gap.",
+    "Design a solution.",
+    "Plan who, what, when and resources.",
+    "Implement, then report."
+   ],
+   "contexts": [
+    "litter at a bus stage",
+    "no shade at a dispensary",
+    "a leaking tank at school"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write the five steps in mixed order."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"design a solution\".",
+     "say": "What comes just before this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"identify the problem\"."
+    },
+    {
+     "beat": "write",
+     "do": "Number all five."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_ORDER",
+     "listen_for": [
+      "Carry out the work"
+     ],
+     "ask": "What comes first in a community service project?",
+     "repair": "Write the steps on cards and put them in order."
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_SKIP_PLAN",
+     "listen_for": [
+      "Nothing, start at once"
+     ],
+     "ask": "What should be done before carrying out the solution?",
+     "repair": "Ask what happens when a team starts without a plan."
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_REPORT_END",
+     "listen_for": [
+      "Before the work begins"
+     ],
+     "ask": "When is the project report written?",
+     "repair": "Ask what a report would say if the work has not happened."
+    },
+    {
+     "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_G8_CS_DESIGN_PLAN",
+     "listen_for": [
+      "They are the same"
+     ],
+     "ask": "What is the difference between designing a solution and planning?",
+     "repair": "Design: \"build a rack for bins\". Plan: \"who builds it, when, with what wood\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What comes after designing a solution?",
+     "answer": "planning how to carry it out",
+     "shows": "order"
+    },
+    {
+     "question": "When is the project report written?",
+     "answer": "after the work is done",
+     "shows": "report last"
+    }
+   ]
+  }
+ ]
+}

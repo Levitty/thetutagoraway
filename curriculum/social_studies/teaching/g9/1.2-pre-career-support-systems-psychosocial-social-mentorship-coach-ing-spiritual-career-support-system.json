@@ -1,0 +1,197 @@
+{
+ "sub_strand": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE",
+ "title": "Pre-career Support systems (Psychosocial, social, mentorship/coach ing, spiritual, career support system)",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Support systems: psychosocial, social, mentorship and coaching, spiritual and career. Name local ones: the school counsellor, a church or mosque youth leader, a mentor, career days.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER",
+   "key_step": "The child names pre-career support systems and says why pre-career mapping matters.",
+   "floor": {
+    "prerequisite": "Names the senior school pathways.",
+    "question": "Name one senior school pathway.",
+    "answer": "any of the three"
+   },
+   "representations": [
+    "a support web",
+    "a simple career map",
+    "a counsellor visit"
+   ],
+   "steps": [
+    "Name the support system.",
+    "Say what it gives.",
+    "Link interests to careers on a map.",
+    "Say how the map can change."
+   ],
+   "contexts": [
+    "a career day at school",
+    "a mentor from the community",
+    "a counsellor session"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the learner in the middle of a web."
+    },
+    {
+     "beat": "point",
+     "do": "Point at an empty line.",
+     "say": "Who else can support a learner's career choice?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a counsellor, teacher, mentor or faith leader."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the web."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_SUPPORT",
+     "listen_for": [
+      "A rumour"
+     ],
+     "ask": "Which is a pre-career support system?",
+     "repair": "List trusted sources (counsellor, teacher, mentor, parent) and untrusted ones and sort them."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_MAP",
+     "listen_for": [
+      "Fixes the job for life"
+     ],
+     "ask": "What does pre-career mapping do?",
+     "repair": "Show that a map links interests to several careers and can change as the learner grows."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_ONLY",
+     "listen_for": [
+      "Only the parents"
+     ],
+     "ask": "Who can advise a learner on careers?",
+     "repair": "Make a support web with parents, teachers, counsellors, mentors and faith leaders."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_SPIRITUAL_NONE",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can a faith leader support a learner choosing a career?",
+     "repair": "Add faith leaders to the support web."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a pre-career support system: a rumour or a school counsellor?",
+     "answer": "a school counsellor",
+     "shows": "support"
+    },
+    {
+     "question": "What does pre-career mapping do?",
+     "answer": "links interests and abilities to careers",
+     "shows": "mapping"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES",
+   "key_step": "The child analyses challenges in pre-career support systems and pairs each with a fitting solution.",
+   "floor": {
+    "prerequisite": "Names pre-career support systems.",
+    "question": "Name a pre-career support system.",
+    "answer": "any such as a counsellor"
+   },
+   "representations": [
+    "challenge and solution cards",
+    "a problem tree",
+    "a role play with a parent"
+   ],
+   "steps": [
+    "Name the challenge.",
+    "Ask what it is missing: people, information, money or freedom.",
+    "Pick the solution that supplies it.",
+    "Say who can act."
+   ],
+   "contexts": [
+    "a rural school with no counsellor",
+    "a parent pressing for one career",
+    "false career posts online"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"no career information in a rural school\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "What solution supplies the missing information?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for career days or visits."
+    },
+    {
+     "beat": "write",
+     "do": "Pair two more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES.M_SS9_SC_NO_CHALLENGE",
+     "listen_for": [
+      "There are none"
+     ],
+     "ask": "Give one challenge a rural learner may face in getting career guidance.",
+     "repair": "Compare a town school with a career office and a rural school without one."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES.M_SS9_SC_PARENT_FORCE",
+     "listen_for": [
+      "Do what the parent says without talking"
+     ],
+     "ask": "A parent wants a learner to be a doctor, but the learner loves art. What is a good step?",
+     "repair": "Role-play a respectful talk with a parent."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES.M_SS9_SC_ONLINE_TRUE",
+     "listen_for": [
+      "Believe it"
+     ],
+     "ask": "A post says one course guarantees a big salary. What should you do?",
+     "repair": "Compare a post with the official course guide."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES.M_SS9_SC_SOLUTION_MATCH",
+     "listen_for": [
+      "Buy more textbooks"
+     ],
+     "ask": "Which solution fits \"too few counsellors in a school\"?",
+     "repair": "Ask what the problem is missing: people to talk to."
+    },
+    {
+     "code": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.SUPPORT_CHALLENGES.M_SS9_SC_COST_ONLY",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Besides money, give one challenge in pre-career support.",
+     "repair": "List challenges in three columns: money, people, information."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one challenge in pre-career support systems.",
+     "answer": "any of: too few counsellors, little information, parental pressure, cost, misinformation",
+     "shows": "challenge"
+    },
+    {
+     "question": "Which solution fits misinformation online?",
+     "answer": "checking with a counsellor or official sources",
+     "shows": "solution"
+    }
+   ]
+  }
+ ]
+}

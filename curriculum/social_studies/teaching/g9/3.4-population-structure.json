@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE",
+ "title": "Population Structure",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Draw pyramids from a small table (teacher to supply rounded census figures for Kenya and Germany). Males left, females right, youngest at the bottom.",
+ "skills": [
+  {
+   "skill": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION",
+   "key_step": "The child names sources of population data and explains why Kenya and Germany have different population structures.",
+   "floor": {
+    "prerequisite": "Gives causes of population growth.",
+    "question": "Which helps a population grow?",
+    "answer": "more births than deaths"
+   },
+   "representations": [
+    "two outline pyramids",
+    "source cards",
+    "a factor list"
+   ],
+   "steps": [
+    "Name the sources.",
+    "Look at Kenya's pyramid shape.",
+    "Look at Germany's.",
+    "Give the factors: birth rates, health care, life expectancy."
+   ],
+   "contexts": [
+    "the Kenya census",
+    "birth registration at a hospital",
+    "an older population in Europe"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wide-based and a narrow-based pyramid."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wide base.",
+     "say": "Which country has this shape, Kenya or Germany?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Kenya."
+    },
+    {
+     "beat": "write",
+     "do": "Write one factor for each shape."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_SOURCE",
+     "listen_for": [
+      "A rumour"
+     ],
+     "ask": "Which is a source of population data?",
+     "repair": "List official sources: census, sample survey, registration of births and deaths."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_BASE",
+     "listen_for": [
+      "A narrow base"
+     ],
+     "ask": "What shape has a developing country's pyramid?",
+     "repair": "Ask which country has more children per family, then make that bar longest at the base."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_GERMANY",
+     "listen_for": [
+      "A very wide base"
+     ],
+     "ask": "What shape has a developed country's pyramid?",
+     "repair": "Compare the two shapes side by side and link each to birth rates."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_CENSUS_YEARLY",
+     "listen_for": [
+      "Every year"
+     ],
+     "ask": "How often is Kenya's census usually taken?",
+     "repair": "List Kenya's census years (teacher to give)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name two sources of population data.",
+     "answer": "any two of: census, sample survey, registration of births and deaths",
+     "shows": "sources"
+    },
+    {
+     "question": "What shape is a developing country's pyramid?",
+     "answer": "a wide base narrowing to the top",
+     "shows": "shape"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS",
+   "key_step": "The child reads and builds an age-sex pyramid and says how population structure guides the sharing of national resources.",
+   "floor": {
+    "prerequisite": "Draws and reads bar graphs to a scale.",
+    "question": "A bar stands for 3 million at 1 square per million. How many squares long?",
+    "answer": "3"
+   },
+   "representations": [
+    "squared paper",
+    "a small age-sex table",
+    "needs cards"
+   ],
+   "steps": [
+    "Draw the age groups up the middle, youngest at the bottom.",
+    "Draw males left and females right to scale.",
+    "Read the shape.",
+    "Say what services the largest groups need."
+   ],
+   "contexts": [
+    "many children in a growing county",
+    "an older population in a developed country",
+    "a budget for schools and pensions"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pyramid with a long bottom bar."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom bar.",
+     "say": "Who are these people, and what do they need?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for children needing schools and health care."
+    },
+    {
+     "beat": "write",
+     "do": "Write two needs for the young and two for the old."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS.M_SS9_PY_SIDES",
+     "listen_for": [
+      "At the top"
+     ],
+     "ask": "Where is the youngest age group on a population pyramid?",
+     "repair": "Label the age groups up the side, 0 to 4 at the bottom."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS.M_SS9_PY_DEPENDANTS",
+     "listen_for": [
+      "Only children"
+     ],
+     "ask": "Which groups are dependants in a population?",
+     "repair": "Shade both the base and the top of a pyramid."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS.M_SS9_PY_RESOURCE_SAME",
+     "listen_for": [
+      "More homes for the elderly"
+     ],
+     "ask": "A country has many children. What does it most need?",
+     "repair": "Read the widest bar and ask who those people are."
+    },
+    {
+     "code": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POP_PYRAMIDS.M_SS9_PY_SCALE",
+     "listen_for": [
+      "About the same length"
+     ],
+     "ask": "Two age groups have 4 million and 2 million people. How should their bars compare?",
+     "repair": "Use squared paper: 1 square for 1 million."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the youngest age group on a population pyramid?",
+     "answer": "at the base",
+     "shows": "reading"
+    },
+    {
+     "question": "A country has a very wide base. Give one service it most needs.",
+     "answer": "any of: schools, health care for mothers and children, jobs for the young",
+     "shows": "resources"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,373 @@
+{
+ "sub_strand": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK",
+ "title": "Maps and map work",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a globe and an atlas. Time: 15 degrees = 1 hour, 1 degree = 4 minutes; east is ahead, west is behind.",
+ "skills": [
+  {
+   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA",
+   "key_step": "The child describes Africa's position, shape and size.",
+   "floor": {
+    "prerequisite": "Describes positions and sizes of Eastern African countries.",
+    "question": "Which is the largest country of Eastern Africa?",
+    "answer": "Ethiopia"
+   },
+   "representations": [
+    "a globe",
+    "an atlas map of Africa",
+    "a table of continent sizes"
+   ],
+   "steps": [
+    "Find Africa on the globe.",
+    "Name the lines that cross it.",
+    "Name the oceans and seas round it.",
+    "Compare its size."
+   ],
+   "contexts": [
+    "the equator crossing Kenya",
+    "the Atlantic coast of West Africa",
+    "the Mediterranean north of Egypt"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the outline of Africa with a line across the middle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "Which line crosses the middle of Africa?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the equator."
+    },
+    {
+     "beat": "write",
+     "do": "Add the oceans and the two tropics."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA.M_MM_BIGGEST",
+     "listen_for": [
+      "The largest"
+     ],
+     "ask": "Where does Africa rank by size among the continents?",
+     "repair": "Ask which continent is bigger than Africa."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA.M_MM_EQUATOR_SIDE",
+     "listen_for": [
+      "The Prime Meridian only"
+     ],
+     "ask": "Which line crosses the middle of Africa?",
+     "repair": "Ask which country on the equator the child knows."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA.M_MM_OCEAN_SWAP",
+     "listen_for": [
+      "The Indian Ocean"
+     ],
+     "ask": "Which ocean lies to the west of Africa?",
+     "repair": "Trace the coast of Africa on a globe naming each ocean."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA.M_MM_AFRICA_COUNTRY",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is Africa a country?",
+     "repair": "Count the countries on a political map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does Africa rank by size among continents?",
+     "answer": "second largest",
+     "shows": "size"
+    },
+    {
+     "question": "Which ocean lies east of Africa?",
+     "answer": "the Indian Ocean",
+     "shows": "position"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG",
+   "key_step": "The child uses latitude and longitude to name where a place is.",
+   "floor": {
+    "prerequisite": "Says what latitudes and longitudes are.",
+    "question": "What does latitude measure?",
+    "answer": "how far north or south of the equator"
+   },
+   "representations": [
+    "a gridded map of Africa",
+    "a table of places",
+    "a finger walk"
+   ],
+   "steps": [
+    "Read the latitude: N or S.",
+    "Read the longitude: E or W.",
+    "Find the crossing point.",
+    "Name the place and hemisphere."
+   ],
+   "contexts": [
+    "Cairo about 30 N, 31 E",
+    "Nairobi about 1 S, 37 E",
+    "Cape Town about 34 S, 18 E"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Cape Town 34 S, 18 E."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 34 S.",
+     "say": "Which hemisphere is Cape Town in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for southern."
+    },
+    {
+     "beat": "write",
+     "do": "Write east of the Prime Meridian."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG.M_MM_LAT_LON_SWAP",
+     "listen_for": [
+      "Longitude"
+     ],
+     "ask": "Which measures how far north or south a place is?",
+     "repair": "Ask which lines run east to west."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG.M_MM_NEGATIVE_HEM",
+     "listen_for": [
+      "Northern"
+     ],
+     "ask": "A town is at 5 degrees south. Which hemisphere?",
+     "repair": "Ask which side of the equator south is."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG.M_MM_LONG_FIRST",
+     "listen_for": [
+      "32 degrees E"
+     ],
+     "ask": "A table gives \"0 degrees, 32 degrees E\". Which number is the latitude?",
+     "repair": "Practise saying \"latitude first\" with a finger on the table."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG.M_MM_TROPIC_EQUATOR",
+     "listen_for": [
+      "The equator"
+     ],
+     "ask": "Which line is at about 23.5 degrees north?",
+     "repair": "Label the equator, both tropics and their degrees on the board."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A town is at 5 degrees south. Which hemisphere?",
+     "answer": "southern",
+     "shows": "hemisphere"
+    },
+    {
+     "question": "Which measures how far east or west a place is?",
+     "answer": "longitude",
+     "shows": "longitude"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME",
+   "key_step": "The child calculates the time of a place from its longitude.",
+   "floor": {
+    "prerequisite": "Uses latitude and longitude.",
+    "question": "Which line is 0 degrees longitude?",
+    "answer": "the Prime Meridian"
+   },
+   "representations": [
+    "a globe and a torch",
+    "a time-zone strip",
+    "a rule card: 15 degrees = 1 hour"
+   ],
+   "steps": [
+    "Find the difference in degrees.",
+    "Divide by 15 for hours (or times 4 for minutes).",
+    "East: add. West: subtract.",
+    "Write the new time."
+   ],
+   "contexts": [
+    "noon in London and the time in Nairobi",
+    "a phone call to a relative abroad",
+    "a football match shown live"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: noon at 0 degrees. Place at 45 degrees E."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 45.",
+     "say": "How many hours is 45 degrees?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask: add or subtract for east?"
+    },
+    {
+     "beat": "write",
+     "do": "Write 3:00 pm."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME.M_MM_EAST_BEHIND",
+     "listen_for": [
+      "10:00 am"
+     ],
+     "ask": "It is noon at Greenwich. What is the time at 30 degrees east?",
+     "repair": "Ask where the sun rises first, east or west."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME.M_MM_DEGREE_HOUR",
+     "listen_for": [
+      "1 degree"
+     ],
+     "ask": "How many degrees of longitude make one hour?",
+     "repair": "Ask: 360 degrees in 24 hours is how many degrees an hour?"
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME.M_MM_MINUTES_DEGREE",
+     "listen_for": [
+      "1 minute"
+     ],
+     "ask": "How many minutes of time is one degree of longitude?",
+     "repair": "Show 60 minutes ÷ 15 degrees = 4 minutes per degree."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME.M_MM_TIME_ADD_WEST",
+     "listen_for": [
+      "1:00 pm"
+     ],
+     "ask": "It is noon at Greenwich. What is the time at 15 degrees west?",
+     "repair": "Show the sun rising in the east: places in the west see noon later."
+    }
+   ],
+   "checks": [
+    {
+     "question": "It is noon at Greenwich. What is the time at 30 degrees east?",
+     "answer": "2:00 pm",
+     "shows": "east ahead"
+    },
+    {
+     "question": "How many degrees of longitude make one hour?",
+     "answer": "15",
+     "shows": "rule"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES",
+   "key_step": "The child locates the key features of Africa.",
+   "floor": {
+    "prerequisite": "Names features of Eastern Africa.",
+    "question": "What is Africa's highest mountain?",
+    "answer": "Mount Kilimanjaro"
+   },
+   "representations": [
+    "a relief map of Africa",
+    "feature cards",
+    "a table: feature and fact"
+   ],
+   "steps": [
+    "Name the feature.",
+    "Place it.",
+    "Give its fact: longest, largest, highest.",
+    "Name the country or countries."
+   ],
+   "contexts": [
+    "the Sahara",
+    "the Congo rain forest",
+    "the Nile at Cairo"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Nile, Sahara, Kilimanjaro, Lake Victoria."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Sahara.",
+     "say": "What is the Sahara famous for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the largest hot desert."
+    },
+    {
+     "beat": "write",
+     "do": "Write a fact for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES.M_MM_SAHARA_COLD",
+     "listen_for": [
+      "The Kalahari"
+     ],
+     "ask": "Which is the largest hot desert in Africa?",
+     "repair": "Ask which desert lies in the north of Africa."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES.M_MM_KENYA_HIGHEST",
+     "listen_for": [
+      "Mount Kenya"
+     ],
+     "ask": "Which is the highest mountain in Africa?",
+     "repair": "Ask which country holds Kilimanjaro."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES.M_MM_NILE_SOUTH",
+     "listen_for": [
+      "South"
+     ],
+     "ask": "In which direction does the Nile flow?",
+     "repair": "Trace the Nile from Lake Victoria to the Mediterranean."
+    },
+    {
+     "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES.M_MM_LARGEST_LAKE",
+     "listen_for": [
+      "Lake Tanganyika"
+     ],
+     "ask": "Which is the largest lake in Africa?",
+     "repair": "Compare areas in a table: largest by area is Victoria."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is the largest hot desert in Africa?",
+     "answer": "the Sahara",
+     "shows": "desert"
+    },
+    {
+     "question": "Which is the longest river in Africa?",
+     "answer": "the Nile",
+     "shows": "river"
+    }
+   ]
+  }
+ ]
+}

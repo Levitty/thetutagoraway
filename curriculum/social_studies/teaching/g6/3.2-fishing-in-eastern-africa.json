@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC",
+ "title": "Fishing in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: marine grounds in the Indian Ocean; inland Lake Victoria, Tanganyika, Malawi (Nyasa), Turkana; trawlers drag nets; purse seine nets circle a shoal.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
+   "key_step": "The child locates the marine and inland fishing grounds of Eastern Africa.",
+   "floor": {
+    "prerequisite": "Names Kenya's inland fishing grounds.",
+    "question": "What is Kenya's main inland fishing ground?",
+    "answer": "Lake Victoria"
+   },
+   "representations": [
+    "a regional map with lakes and coast",
+    "cards: marine or inland",
+    "fish photos"
+   ],
+   "steps": [
+    "Find the water.",
+    "Ask: sea or lake?",
+    "Sort marine or inland.",
+    "Name a fish caught there."
+   ],
+   "contexts": [
+    "Nile perch from Lake Victoria",
+    "tuna off the coast",
+    "dagaa from Lake Tanganyika"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the coast and three lakes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the coast.",
+     "say": "Is this marine or inland fishing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for marine."
+    },
+    {
+     "beat": "write",
+     "do": "Label each ground."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_LAKE_SEA",
+     "listen_for": [
+      "Lake Victoria"
+     ],
+     "ask": "Which is a marine fishing ground?",
+     "repair": "Ask whether the water is salty or fresh."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_FISH_PLACE",
+     "listen_for": [
+      "Tuna"
+     ],
+     "ask": "Which fish comes from Lake Victoria?",
+     "repair": "Match fish and water in a small table."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_TANGANYIKA_KENYA",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is Lake Tanganyika in Kenya?",
+     "repair": "Find the lake on the regional map."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_MARINE_MEANS_LAKE",
+     "listen_for": [
+      "Fishing in any big water"
+     ],
+     "ask": "What does \"marine fishing\" mean?",
+     "repair": "Write marine = sea beside a picture of the Indian Ocean."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name a marine fishing ground of Eastern Africa.",
+     "answer": "the Indian Ocean",
+     "shows": "marine"
+    },
+    {
+     "question": "Name two inland fishing grounds.",
+     "answer": "any two of: Lake Victoria, Tanganyika, Malawi, Turkana",
+     "shows": "inland"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
+   "key_step": "The child describes traditional and modern methods of marine fishing.",
+   "floor": {
+    "prerequisite": "Locates fishing grounds.",
+    "question": "Is the Indian Ocean a marine or an inland ground?",
+    "answer": "marine"
+   },
+   "representations": [
+    "net drawings",
+    "a model trawler",
+    "method cards"
+   ],
+   "steps": [
+    "Name the method.",
+    "Say how it works.",
+    "Sort traditional or modern.",
+    "Say how much it catches."
+   ],
+   "contexts": [
+    "dhows with lines at Malindi",
+    "a trawler at sea",
+    "a purse seine around sardines"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a circle of net around fish."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bottom of the net.",
+     "say": "What happens when it is pulled closed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"fish are trapped\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write purse seine and trawling."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_TRAWL",
+     "listen_for": [
+      "Fishing with a hook and line"
+     ],
+     "ask": "What is trawling?",
+     "repair": "Say trawl means to drag."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_TRAD_MODERN",
+     "listen_for": [
+      "A basket trap from a canoe"
+     ],
+     "ask": "Which is a modern method of fishing?",
+     "repair": "Ask which has an engine and a freezer."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_PURSE_SEINE",
+     "listen_for": [
+      "A bag to carry fish home"
+     ],
+     "ask": "What is a purse seine?",
+     "repair": "Draw the net circling the fish and closing like a drawstring purse."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_MODERN_SMALL",
+     "listen_for": [
+      "The canoe"
+     ],
+     "ask": "Which catches more fish: a trawler or a canoe with a basket?",
+     "repair": "Compare the size of a trawler net and a basket."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is trawling?",
+     "answer": "dragging a net along the sea or sea bed behind a boat",
+     "shows": "trawling"
+    },
+    {
+     "question": "Give one traditional fishing method.",
+     "answer": "any of: hook and line, baskets, spears, small nets from canoes",
+     "shows": "traditional"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
+   "key_step": "The child pairs fishing challenges with solutions.",
+   "floor": {
+    "prerequisite": "Describes fishing methods.",
+    "question": "Describe trawling.",
+    "answer": "dragging a net behind a boat"
+   },
+   "representations": [
+    "problem and solution cards",
+    "a hyacinth photo",
+    "a cold room picture"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Ask what causes it.",
+    "Pick the solution.",
+    "Check the pair."
+   ],
+   "contexts": [
+    "water hyacinth on Lake Victoria",
+    "overfishing",
+    "fish spoiling at a beach"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write overfishing, piracy, poor storage."
+    },
+    {
+     "beat": "point",
+     "do": "Point at poor storage.",
+     "say": "What fixes this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cold rooms or ice."
+    },
+    {
+     "beat": "write",
+     "do": "Pair each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_OVER_OK",
+     "listen_for": [
+      "More fish every year"
+     ],
+     "ask": "What does overfishing cause?",
+     "repair": "Ask what happens if you take all the eggs and young fish."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_SOLUTION_MIX",
+     "listen_for": [
+      "Sea patrols"
+     ],
+     "ask": "What helps fish keep fresh before sale?",
+     "repair": "Ask what spoils fish: thieves or heat?"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_WEED_GOOD",
+     "listen_for": [
+      "It helps; fish hide in it"
+     ],
+     "ask": "How does water hyacinth on Lake Victoria affect fishing?",
+     "repair": "Show a photo of boats stuck in hyacinth at Kisumu."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_STORAGE_SALT",
+     "listen_for": [
+      "They do not; fish keep for days"
+     ],
+     "ask": "Why do some fishers lose fish before selling them?",
+     "repair": "Compare dried fish with fresh fish left out for a day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which solution fits overfishing?",
+     "answer": "licences, fishing seasons and mesh-size rules",
+     "shows": "pairs"
+    },
+    {
+     "question": "How does water hyacinth harm fishing?",
+     "answer": "blocks boats and reduces oxygen for fish",
+     "shows": "challenge"
+    }
+   ]
+  }
+ ]
+}

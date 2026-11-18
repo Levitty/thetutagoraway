@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I",
+ "title": "The County Governments in Kenya",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the structure as two boxes: the executive does, the assembly makes laws and checks. Name offices, never office holders or parties.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+   "key_step": "The child places offices in the two parts of a county government: the executive (Governor, Deputy Governor, county executive committee) and the assembly (MCAs, Speaker).",
+   "floor": {
+    "prerequisite": "Knows the county is made of sub-counties and wards.",
+    "question": "What is the smallest of these: county, ward, sub-county?",
+    "answer": "ward"
+   },
+   "representations": [
+    "two boxes on the board",
+    "office cards to place",
+    "a county assembly photo without names"
+   ],
+   "steps": [
+    "Draw the executive box and the assembly box.",
+    "The executive carries out the work: Governor, Deputy, executive committee.",
+    "The assembly makes county laws and checks the executive: MCAs and the Speaker.",
+    "Place each office."
+   ],
+   "contexts": [
+    "the county assembly meeting on a new market law",
+    "the Governor opening a health centre",
+    "an executive committee member for agriculture"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: county executive and county assembly."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the assembly box.",
+     "say": "Who sits here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for MCAs."
+    },
+    {
+     "beat": "write",
+     "do": "Write MCAs and the Speaker in the assembly; Governor, Deputy and committee in the executive."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_NATIONAL",
+     "listen_for": [
+      "The President"
+     ],
+     "ask": "Who is in the county executive?",
+     "repair": "Make two columns: national and county, and place each leader."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_ASSEMBLY_MIX",
+     "listen_for": [
+      "The Governor"
+     ],
+     "ask": "Which one is a member of the county assembly?",
+     "repair": "Draw two boxes: executive, assembly; place each person."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_TWO_ARMS",
+     "listen_for": [
+      "Yes, the Governor is the county government"
+     ],
+     "ask": "Is the county government only the Governor?",
+     "repair": "Draw the two boxes and fill them with all the people in each."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_SPEAKER_EXECUTIVE",
+     "listen_for": [
+      "Yes, with the Governor"
+     ],
+     "ask": "Is the Speaker of the County Assembly part of the county executive?",
+     "repair": "Put the Speaker's card in the assembly box and say what the Speaker does there."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Name the two parts of a county government.",
+     "answer": "the county executive and the county assembly",
+     "shows": "structure"
+    },
+    {
+     "question": "In which part is the Governor?",
+     "answer": "the county executive",
+     "shows": "places the Governor"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR",
+   "key_step": "The child says the Governor is elected by the county for five years, heads the executive and carries out county laws, but does not make them.",
+   "floor": {
+    "prerequisite": "Knows the two parts of a county government.",
+    "question": "Which part of the county government makes county laws?",
+    "answer": "the county assembly"
+   },
+   "representations": [
+    "a duty sort: Governor or not",
+    "a timeline of a five-year term",
+    "a news story about a county project"
+   ],
+   "steps": [
+    "Say who elects the Governor.",
+    "Say how long the term is.",
+    "Name the Governor's duties.",
+    "Name what the Governor does not do: make laws, head the country."
+   ],
+   "contexts": [
+    "the Governor opening a new road",
+    "the Governor naming the executive committee",
+    "the Governor reporting to the county assembly"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three duties: makes county laws, heads the county executive, heads the country."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each.",
+     "say": "Which is the Governor's duty?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for heads the county executive."
+    },
+    {
+     "beat": "write",
+     "do": "Write who does the other two: county assembly; the President."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_LAWS",
+     "listen_for": [
+      "The Governor"
+     ],
+     "ask": "Who makes the county laws?",
+     "repair": "Ask: who makes the rules at school and who sees they are followed?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_PRESIDENT",
+     "listen_for": [
+      "The whole country"
+     ],
+     "ask": "The Governor is head of which?",
+     "repair": "Place the Governor and the President on a map of Kenya: which area does each lead?"
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_FOREVER",
+     "listen_for": [
+      "For life"
+     ],
+     "ask": "How long is a Governor's term?",
+     "repair": "Show the general election cycle: every five years."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_APPOINTED",
+     "listen_for": [
+      "The President"
+     ],
+     "ask": "Who chooses the Governor of a county?",
+     "repair": "Ask who votes in the county at a general election."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who elects the Governor?",
+     "answer": "the voters of the county",
+     "shows": "elected"
+    },
+    {
+     "question": "Does the Governor make county laws?",
+     "answer": "No: the county assembly does; the Governor carries them out",
+     "shows": "Governor does not make laws"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA",
+   "key_step": "The child says an MCA is elected by a ward, makes county laws, approves the budget, checks the executive and speaks for the ward.",
+   "floor": {
+    "prerequisite": "Knows a ward is part of a sub-county.",
+    "question": "Name the smallest unit of the county.",
+    "answer": "the ward"
+   },
+   "representations": [
+    "a ward map of an imaginary county",
+    "duty cards",
+    "a role play of an assembly debate"
+   ],
+   "steps": [
+    "Say who elects the MCA: the ward.",
+    "Name the duties: makes laws, approves the budget, checks the executive.",
+    "Say whom the MCA speaks for: the ward.",
+    "Say what the MCA does not do: build roads personally."
+   ],
+   "contexts": [
+    "an MCA asking for a borehole for the ward",
+    "the assembly passing a market law",
+    "MCAs questioning a county officer"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a county split into wards with one ward shaded."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the shaded ward.",
+     "say": "Who speaks for this ward in the county assembly?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the MCA."
+    },
+    {
+     "beat": "write",
+     "do": "Write the MCA's duties beside it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_ENFORCES",
+     "listen_for": [
+      "Builds the roads himself"
+     ],
+     "ask": "What does an MCA do?",
+     "repair": "Ask who writes the plan and who builds the road."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_WHOLE",
+     "listen_for": [
+      "The whole country"
+     ],
+     "ask": "Whom does an MCA represent?",
+     "repair": "Mark a ward on a sketch and name the MCA."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_APPOINTED",
+     "listen_for": [
+      "The Governor"
+     ],
+     "ask": "Who chooses the Member of the County Assembly for a ward?",
+     "repair": "Name what is on the ballot at a general election, including the MCA."
+    },
+    {
+     "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_BUDGET_NONE",
+     "listen_for": [
+      "The Governor alone"
+     ],
+     "ask": "Who approves the county budget?",
+     "repair": "Act a budget: the executive proposes, the MCAs debate and vote."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who does an MCA speak for?",
+     "answer": "the people of the ward",
+     "shows": "whom the MCA serves"
+    },
+    {
+     "question": "Give one role of an MCA.",
+     "answer": "any of: makes county laws, approves the budget, checks the executive, speaks for the ward",
+     "shows": "MCA role"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO",
+ "title": "Diversity and interpersonal skills",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Celebrate the class's cultures without ranking them. Peer pressure: practise saying no with a reason and walking away.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY",
+   "key_step": "The child describes Kenya's social and cultural diversity and how healthy self-esteem grows within it.",
+   "floor": {
+    "prerequisite": "Names factors of human diversity.",
+    "question": "Give one factor of diversity.",
+    "answer": "any factor such as language"
+   },
+   "representations": [
+    "a culture map of Kenya",
+    "food, dress and language cards",
+    "a culture day"
+   ],
+   "steps": [
+    "Name the community.",
+    "Name its language, food or dress.",
+    "Say how to respect it.",
+    "Say how pride in your own culture and respect fit together."
+   ],
+   "contexts": [
+    "a school culture day",
+    "many languages in one class",
+    "different places of worship in a town"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"My culture is the best.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Does this show healthy self-esteem?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write a healthy version."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_ONE_CULTURE",
+     "listen_for": [
+      "Only one"
+     ],
+     "ask": "How many cultures does Kenya have?",
+     "repair": "Ask the child to name three communities and a food from each."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_BETTER",
+     "listen_for": [
+      "See ours as better than theirs"
+     ],
+     "ask": "How should we treat other cultures?",
+     "repair": "Ask what we gain from learning about another culture."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_ESTEEM",
+     "listen_for": [
+      "By feeling better than others"
+     ],
+     "ask": "How does healthy self-esteem grow in a diverse society?",
+     "repair": "Ask: can I be proud of my culture and still respect yours?"
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.DIVERSITY.M_G8_DV8_RELIGION_ONE",
+     "listen_for": [
+      "Only one"
+     ],
+     "ask": "How many religions are practised in Kenya?",
+     "repair": "List places of worship in the town."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many cultures does Kenya have?",
+     "answer": "many: more than forty communities with their own cultures",
+     "shows": "diversity"
+    },
+    {
+     "question": "How does healthy self-esteem grow in a diverse society?",
+     "answer": "by being proud of your own culture and respecting others",
+     "shows": "esteem"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE",
+   "key_step": "The child says how emotions affect people and picks ways to handle peer pressure.",
+   "floor": {
+    "prerequisite": "Manages emotions in healthy ways.",
+    "question": "Give a healthy way to handle anger.",
+    "answer": "pause, breathe and talk calmly"
+   },
+   "representations": [
+    "scenario cards",
+    "refusal sentence frames",
+    "a role play"
+   ],
+   "steps": [
+    "Name the feeling.",
+    "Say how it affects you and others.",
+    "Name the pressure.",
+    "Choose a way to refuse or accept."
+   ],
+   "contexts": [
+    "friends offering alcohol",
+    "a dare to skip class",
+    "friends inviting you to a club"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Friends dare you to steal a sweet.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"dare\".",
+     "say": "What can you say?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a clear no with a reason."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more ways to refuse."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_GIVE_IN",
+     "listen_for": [
+      "Give in to be liked"
+     ],
+     "ask": "A friend pushes you to do wrong. What should you do?",
+     "repair": "Role play the refusal."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_HIDE",
+     "listen_for": [
+      "Hide it for ever"
+     ],
+     "ask": "What should you do with a strong feeling?",
+     "repair": "Ask who they can talk to."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_ANGER",
+     "listen_for": [
+      "Hit the person at once"
+     ],
+     "ask": "What is a healthy way to handle anger?",
+     "repair": "Practise a pause and a calm sentence."
+    },
+    {
+     "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.PEER_PRESSURE.M_G8_PR_GOOD_PRESSURE",
+     "listen_for": [
+      "Yes, all peer pressure is bad"
+     ],
+     "ask": "Friends encourage Juma to join the reading club. Is this peer pressure bad?",
+     "repair": "Sort examples into positive and negative pressure."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A friend pushes you to do wrong. What should you do?",
+     "answer": "say no clearly and walk away",
+     "shows": "refuse"
+    },
+    {
+     "question": "Give one way emotions affect others.",
+     "answer": "any such as anger hurting others or joy lifting them",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

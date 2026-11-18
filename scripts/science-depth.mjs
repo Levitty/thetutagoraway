@@ -6,12 +6,15 @@
 //   pre    { SKILL: [[ref, reason, strength?], ...] }  more prerequisites. ref is a full code (a skill of any Science,
 //          Integrated Science or Mathematics grade, or a Grade 1-3 Environmental Activities outcome) or a skill key of this grade
 //   mis    [[skill, short, error, question, wrong, right, cause, help, feedback, source?], ...]  more misconceptions
-//   fix    { SHORT: [cause, help] | { error?, cause?, help? } }  a real cause (and a sharper error or repair) for an older
+//   fix    { SHORT: cause | [cause, help] | { error?, cause?, help? } }  a real cause (and a sharper error or repair) for an older
 //          misconception that had a stock line
 //   (review marks in scripts/data/science-depth/reviews.json are put back on their misconceptions every build)
 //   pack   { SKILL: { key_step, floor, reps, steps, contexts, board, mis, checks } }  the teaching pack entry, written to
 //          curriculum/<dir>/teaching/g<N>/<number>-<name>.json with the Maths rules (scripts/maths-teaching-pack-file.mjs)
 // A sub-strand's entry: { key, packNotes, pre, mis, fix, pack }. Everything stays proposed or draft until a teacher reviews it.
+// Social Studies Grades 4-9 use the same pass (18 Nov 2026): dir 'social_studies', data in scripts/data/socialstudies-depth/.
+// With { derive: true } a pack entry may leave out a misconception: its listen-for, ask and repair are then the library's own
+// wrong answer, example question and help, so every library misconception is in the pack without writing it twice.
 // ============================================================================
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { packEntries, packFileText } from './maths-teaching-pack-file.mjs';
@@ -20,7 +23,8 @@ const ROOT = new URL('../', import.meta.url);
 const J = (f) => JSON.parse(readFileSync(new URL(`curriculum/${f}.json`, ROOT), 'utf8'));
 const fail = (m) => { throw new Error(m); };
 const FILES = ['science/g4', 'science/g5', 'science/g6', 'integrated_science/g7', 'integrated_science/g8', 'integrated_science/g9',
-  ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `mathematics/g${n}`), 'environmental_activities/g1', 'environmental_activities/g2', 'environmental_activities/g3'];
+  ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `mathematics/g${n}`), 'environmental_activities/g1', 'environmental_activities/g2', 'environmental_activities/g3',
+  ...[4, 5, 6, 7, 8, 9].map(n => `social_studies/g${n}`)];
 
 function knownCodes() {
   const skills = new Set(), outcomes = new Set();
@@ -34,10 +38,10 @@ function knownCodes() {
 // Review marks from the blind reviews of 13 Nov 2026 (Science G4 and G6, Integrated Science G7), kept by misconception code so a
 // rebuild never drops them; scripts/build-subject-map.mjs carries them into engine/data/curriculum/<subject>.g<N>.misconceptions.json.
 const REVIEWS = JSON.parse(readFileSync(new URL('scripts/data/science-depth/reviews.json', ROOT), 'utf8'));
-const SUBJECT = { science: 'Science and Technology', integrated_science: 'Integrated Science' };
+const SUBJECT = { science: 'Science and Technology', integrated_science: 'Integrated Science', social_studies: 'Social Studies' };
 
 // g: the grade's JSON after its own build; depth: the sub-strand entries; dir: 'science' | 'integrated_science'.
-export function applyDepth(g, depth, { dir, grade, prefix }) {
+export function applyDepth(g, depth, { dir, grade, prefix, derive = false }) {
   const reviewer = `a CBC ${SUBJECT[dir]} teacher`;
   const TC = `To confirm by ${reviewer}: a common classroom error, not traced to a study by the author.`;
   const { skills: KNOWN, outcomes: OUTS } = knownCodes();
@@ -75,7 +79,7 @@ export function applyDepth(g, depth, { dir, grade, prefix }) {
     }
     for (const [short, f] of Object.entries(d.fix || {})) {
       const m = s.misconceptions.find(x => x.code.endsWith(`.${short}`)) || fail(`${s.code}: fix for unknown misconception ${short}`);
-      const { error, cause, help } = Array.isArray(f) ? { cause: f[0], help: f[1] } : f;
+      const { error, cause, help } = typeof f === 'string' ? { cause: f } : Array.isArray(f) ? { cause: f[0], help: f[1] } : f;
       if (error) m.error = error; if (cause) m.cause = cause; if (help) m.help = help;
       added.fix++;
     }
@@ -90,7 +94,8 @@ export function applyDepth(g, depth, { dir, grade, prefix }) {
     }
     if (d.pack) {
       const suffixes = [...mine.keys()];
-      const pack = Object.fromEntries(Object.entries(d.pack).map(([key, p]) => [key, { ...p, mis: p.mis }]));
+      const lib = (key) => Object.fromEntries(s.misconceptions.filter(m => m.skill === `${s.code}.${key}`).map(m => [m.code.slice(m.skill.length + 1), [[m.example.wrong_answer], m.example.question, m.help]]));
+      const pack = Object.fromEntries(Object.entries(d.pack).map(([key, p]) => [key, { ...p, mis: derive ? { ...lib(key), ...(p.mis || {}) } : p.mis }]));
       for (const key of Object.keys(pack)) if (!mine.has(key)) fail(`${s.code}: teaching pack for unknown skill ${key}`);
       const file = `${number}-${s.sub_strand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.json`;
       const status = `draft: written 18 Nov 2026 offline for Grade ${grade} ${SUBJECT[dir]}; not yet checked by ${reviewer}; not loaded by the live tutor`;

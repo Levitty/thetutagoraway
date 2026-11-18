@@ -198,6 +198,15 @@
    ],
    "mastery": "The child names the factors (latitude, altitude, distance from the sea, ocean currents, winds, relief), says temperature falls with height (about 6.5 degrees Celsius for every 1000 metres) and the equator is hot, and describes the equatorial (hot and wet all year, Congo basin), tropical savanna (wet and dry seasons), desert (hot and very dry, Sahara), Mediterranean (rain in winter, dry summer) and mountain regions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.CLIMATE_CHANGE": {
+   "forms": [
+    "pick an effect of climate change",
+    "pick the action that reduces it",
+    "link a climate to the activity it allows",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says climate change is a long-term change in the usual weather (rising temperatures, unreliable rain, longer droughts and heavier floods), gives causes (burning fuels, cutting forests), names effects on the environment and people (dry rivers, crop failure, loss of pasture, floods, disease), and picks responses (planting trees, saving energy, water harvesting, drought-resistant crops, early warning). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.VEGETATION": {
    "forms": [
     "pick the vegetation for a region",
@@ -233,6 +242,15 @@
     "find the false step in a learner's answer"
    ],
    "mastery": "The child names rights of the child in Kenya (a name and nationality, free and compulsory basic education, health care, food and shelter, protection from abuse, neglect, child labour and harmful practices), names who protects them (parents, teachers, the chief, the police, the children's department, Childline Kenya 116) and says rights come with responsibilities. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G8.POLITI.HUMAN_RIGHTS.HR_COMMUNICATE": {
+   "forms": [
+    "put the steps of raising a rights issue in order",
+    "pick who to report to",
+    "pick the respectful way to speak up",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the steps in order (get the facts, choose the right person or office, say the issue clearly and calmly with evidence, listen to the reply, follow up), names channels (a teacher, the chief, the police, the children's department, Childline 116, the Kenya National Commission on Human Rights) and picks assertive, respectful language over shouting, rumours or silence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "SOCI.G8.POLITI.CITIZENSHIP.CITIZENSHIP": {
    "forms": [

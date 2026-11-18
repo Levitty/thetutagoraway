@@ -1,0 +1,283 @@
+{
+ "sub_strand": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE",
+ "title": "Location and size of the County",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use a cut-out paper county split into sub-counties and wards like a puzzle. Real county names come only from the teacher; questions use imaginary counties.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+   "key_step": "The child puts county, sub-county and ward in order of size and says which holds which.",
+   "floor": {
+    "prerequisite": "Knows the name of the place where they live.",
+    "question": "Name the village or estate where you live.",
+    "answer": "any local place name"
+   },
+   "representations": [
+    "a paper county cut into sub-county pieces, each cut into wards",
+    "nested boxes, the biggest for the county",
+    "a list: county, sub-county, ward"
+   ],
+   "steps": [
+    "Show the whole county.",
+    "Cut it into sub-counties.",
+    "Cut one sub-county into wards.",
+    "Say the order from biggest to smallest."
+   ],
+   "contexts": [
+    "the ward where the MCA is elected",
+    "the sub-county office where birth certificates are collected",
+    "the county where the Governor serves"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a large box labelled county."
+    },
+    {
+     "beat": "draw",
+     "do": "Split it into three parts labelled sub-county."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one sub-county.",
+     "say": "What smaller pieces can we cut this into?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for wards."
+    },
+    {
+     "beat": "write",
+     "do": "Write county, sub-county, ward from big to small."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_SUB_BIGGER",
+     "listen_for": [
+      "A sub-county"
+     ],
+     "ask": "Which is bigger, a county or a sub-county?",
+     "repair": "Use boxes inside boxes: the county box holds several sub-county boxes, which hold wards."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_ORDER",
+     "listen_for": [
+      "Sub-county"
+     ],
+     "ask": "Which is the smallest unit: county, sub-county or ward?",
+     "repair": "Draw the three nested boxes and label them from the outside in; then ask for smallest and largest."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_NEIGHBOUR_SUB",
+     "listen_for": [
+      "Yes, it is a sub-county of Kalia"
+     ],
+     "ask": "Kalia County has a neighbour called Mwangaza County. Is Mwangaza one of the sub-counties of Kalia?",
+     "repair": "Draw two county boxes side by side and a boundary line between them; sub-counties are drawn inside one box only."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_WARD_COUNTY",
+     "listen_for": [
+      "They are the same size"
+     ],
+     "ask": "Which is smaller: a ward or a county?",
+     "repair": "Fit the puzzle: wards into a sub-county, sub-counties into the county, and count the pieces."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Put in order from biggest: ward, county, sub-county.",
+     "answer": "county, sub-county, ward",
+     "shows": "orders the units"
+    },
+    {
+     "question": "A learner says the sub-county is bigger than the county. Is this right?",
+     "answer": "No: the county is made of sub-counties",
+     "shows": "sub-county inside county"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION",
+   "key_step": "The child finds the counties that share a boundary with their county and names the direction of each.",
+   "floor": {
+    "prerequisite": "Gives the direction from one place to another on a described map.",
+    "question": "The shop is west of the school. Where is the school from the shop?",
+    "answer": "east"
+   },
+   "representations": [
+    "a described map of imaginary counties",
+    "paper counties laid edge to edge",
+    "a table with the county in the middle"
+   ],
+   "steps": [
+    "Find your county on the map.",
+    "Run a finger along its boundary.",
+    "Every county touched is a neighbour.",
+    "Name the direction of each neighbour from your county."
+   ],
+   "contexts": [
+    "a family travelling to a county next door for a wedding",
+    "cattle crossing a county boundary to find grass",
+    "a textbook map of imaginary counties"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a county with one county touching its east side and one further east that does not touch."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the far county.",
+     "say": "Is it a neighbour?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to check the boundary."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the gap: it does not touch, so it is not a neighbour."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_DIR_REVERSE",
+     "listen_for": [
+      "North"
+     ],
+     "ask": "On a map, Kitale County lies north of Meru County. In which direction is Meru County from Kitale County?",
+     "repair": "Mark two dots on paper and ask the direction from each dot to the other."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_NOT_TOUCHING",
+     "listen_for": [
+      "A county two counties away"
+     ],
+     "ask": "Which county is a neighbour of Kalia County, with a shared boundary?",
+     "repair": "Use a described map: trace the boundary of the county and name only the counties that touch it."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_INSIDE_NEIGHBOUR",
+     "listen_for": [
+      "Yes, it is close by"
+     ],
+     "ask": "Kibo Town is inside Mlima County. Is Kibo Town a neighbour county of Mlima?",
+     "repair": "On the cut-out map, put a dot for the town inside the county and colour the counties that share the edge."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_ONE_NEIGHBOUR_PER_SIDE",
+     "listen_for": [
+      "One; only one county can be north"
+     ],
+     "ask": "Two counties both lie to the north of Mlima County and touch it. How many northern neighbours does Mlima have?",
+     "repair": "Draw a county with two counties along its northern edge and count them."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Mto County touches Mlima County on its south side. Where is Mlima from Mto?",
+     "answer": "north",
+     "shows": "reverses a neighbour direction"
+    },
+    {
+     "question": "Which counties are neighbours: those that share a boundary or those within the same region?",
+     "answer": "those that share a boundary",
+     "shows": "neighbour means sharing a boundary"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE",
+   "key_step": "The child compares county areas by the full number of square kilometres, not by how many people live there or how a picture looks.",
+   "floor": {
+    "prerequisite": "Can order whole numbers up to 10,000.",
+    "question": "Which is bigger, 3,000 or 800?",
+    "answer": "3,000"
+   },
+   "representations": [
+    "a table of county areas",
+    "squares on a grid standing for square kilometres",
+    "two maps at different sizes"
+   ],
+   "steps": [
+    "Read each area with its unit.",
+    "Line up the numbers by place value.",
+    "Compare from the biggest place.",
+    "Say which county is larger."
+   ],
+   "contexts": [
+    "comparing a large dry county with a small busy one",
+    "a textbook table of imaginary county areas",
+    "a farmer's small plot next to a big ranch"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Ziwa 2,500 and Mlima 900."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the thousands place.",
+     "say": "Which number has more thousands?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Ziwa."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"Ziwa is bigger\" and cross out the population column."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_POP_SIZE",
+     "listen_for": [
+      "County A, because it has more people"
+     ],
+     "ask": "County A has 3,000 square kilometres and 900,000 people. County B has 12,000 square kilometres and 400,000 people. Which county is larger in size?",
+     "repair": "Compare a large empty field and a small crowded classroom: which has more space and which has more people?"
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_DIGIT",
+     "listen_for": [
+      "County A"
+     ],
+     "ask": "County A is 800 square kilometres and County B is 3,000 square kilometres. Which is larger?",
+     "repair": "Write the two numbers in a place value table and compare the thousands first."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_LOOKS_BIGGER",
+     "listen_for": [
+      "Ziwa, it looks bigger"
+     ],
+     "ask": "Map A shows Ziwa County large on a full page. Map B shows Mlima County small in a corner. The table says Ziwa is 2,000 square kilometres and Mlima 6,000. Which is bigger?",
+     "repair": "Draw the same classroom on a big sheet and on a small card: the room did not change size."
+    },
+    {
+     "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_UNIT_IGNORED",
+     "listen_for": [
+      "Mlima, 900 is more than 3"
+     ],
+     "ask": "Ziwa County is 3 thousand square kilometres. Mlima is 900 square kilometres. Which is bigger?",
+     "repair": "Write both as full numbers, 3,000 and 900, and line up the digits by place value."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Ziwa County is 1,200 square kilometres with 900,000 people. Mto County is 5,000 square kilometres with 300,000 people. Which county is bigger?",
+     "answer": "Mto County",
+     "shows": "size is area, not people"
+    },
+    {
+     "question": "Which is larger: 4,050 or 950 square kilometres?",
+     "answer": "4,050",
+     "shows": "compares by place value"
+    }
+   ]
+  }
+ ]
+}

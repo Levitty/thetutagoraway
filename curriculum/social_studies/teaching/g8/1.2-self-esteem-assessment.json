@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT",
+ "title": "Self-Esteem Assessment",
+ "status": "draft: written 18 Nov 2026 offline for Grade 8 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "No learner rates another. Use story characters for low, healthy and inflated self-esteem.",
+ "skills": [
+  {
+   "skill": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM",
+   "key_step": "The child says what self-esteem is and tells healthy, low and inflated self-esteem by their signs and effects.",
+   "floor": {
+    "prerequisite": "Manages emotions in healthy ways.",
+    "question": "Give a healthy way to manage sadness.",
+    "answer": "talk to a trusted person"
+   },
+   "representations": [
+    "three story characters",
+    "sign cards",
+    "a scale from low to inflated"
+   ],
+   "steps": [
+    "Read what the character does.",
+    "Place it on the scale.",
+    "Name the effect on daily life.",
+    "Say how to build healthy self-esteem."
+   ],
+   "contexts": [
+    "a learner who gives up after one mistake",
+    "a learner who boasts and looks down on others",
+    "a learner who tries again after failing"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a line with low, healthy and inflated."
+    },
+    {
+     "beat": "point",
+     "do": "Point at inflated.",
+     "say": "A boy says he is better than everyone. Where does he go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for inflated."
+    },
+    {
+     "beat": "write",
+     "do": "Write a sign of each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_PRIDE",
+     "listen_for": [
+      "Boasting about yourself"
+     ],
+     "ask": "What is self-esteem?",
+     "repair": "Ask: can a person be confident and still kind?"
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_LOW_NO_EFFECT",
+     "listen_for": [
+      "Nothing, it has no effect"
+     ],
+     "ask": "What can low self-esteem lead to?",
+     "repair": "Ask how a child who thinks they cannot do anything behaves."
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_HIGH_GOOD",
+     "listen_for": [
+      "Healthy self-esteem"
+     ],
+     "ask": "A boy brags that he is better than everyone. What is this?",
+     "repair": "Ask how his classmates feel."
+    },
+    {
+     "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.SELF_ESTEEM.M_G8_SA_MARKS_ONLY",
+     "listen_for": [
+      "Yes, marks show your worth"
+     ],
+     "ask": "Achieng did badly in one test. Must her self-esteem be low?",
+     "repair": "List other things Achieng does well."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is self-esteem?",
+     "answer": "how you value and respect yourself",
+     "shows": "meaning"
+    },
+    {
+     "question": "Give one effect of low self-esteem.",
+     "answer": "any of: giving up easily, withdrawing, being easily bullied",
+     "shows": "effect"
+    }
+   ]
+  }
+ ]
+}

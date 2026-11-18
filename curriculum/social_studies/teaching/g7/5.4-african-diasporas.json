@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G7.POLITI.AFRICAN_DIASPORAS",
+ "title": "African Diasporas",
+ "status": "draft: written 18 Nov 2026 offline for Grade 7 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): W. E. B. Du Bois, Marcus Garvey, George Padmore, Kwame Nkrumah; Pan-African congresses (Manchester 1945).",
+ "skills": [
+  {
+   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS",
+   "key_step": "The child says what a diaspora is and the factors that put Africans across the world.",
+   "floor": {
+    "prerequisite": "Gives the factors of the Indian Ocean slave trade.",
+    "question": "Give one factor of the Indian Ocean slave trade.",
+    "answer": "any factor such as plantation demand"
+   },
+   "representations": [
+    "a world map with arrows",
+    "factor cards",
+    "a definition card"
+   ],
+   "steps": [
+    "Say what a diaspora is.",
+    "Name forced movements.",
+    "Name later free movements.",
+    "Show them on the map."
+   ],
+   "contexts": [
+    "the Atlantic slave trade",
+    "Kenyan students abroad",
+    "refugees from war"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"diaspora\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the word.",
+     "say": "Does it mean the homeland or people living away?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for people living away."
+    },
+    {
+     "beat": "write",
+     "do": "Write three factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS.M_AD_ALL_VOLUNTARY",
+     "listen_for": [
+      "Voluntary holidays"
+     ],
+     "ask": "Which factor brought many Africans to the Americas?",
+     "repair": "Ask whether captives chose to board the ships."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS.M_AD_DIASPORA_WORD",
+     "listen_for": [
+      "The homeland of a people"
+     ],
+     "ask": "What is a diaspora?",
+     "repair": "Ask where the diaspora lives."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS.M_AD_ONLY_SLAVERY",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Give a reason Africans live abroad today besides the slave trade.",
+     "repair": "List reasons people move today."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS.M_AD_INDIAN_NONE",
+     "listen_for": [
+      "Only the Atlantic trade"
+     ],
+     "ask": "Which trade took Africans to Arabia and India?",
+     "repair": "Recall the Indian Ocean routes from the slavery lesson."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a diaspora?",
+     "answer": "a people living away from their homeland",
+     "shows": "meaning"
+    },
+    {
+     "question": "Which factor brought many Africans to the Americas?",
+     "answer": "the forced slave trade",
+     "shows": "factor"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE",
+   "key_step": "The child places where African diasporas lived by 1960.",
+   "floor": {
+    "prerequisite": "Says what a diaspora is.",
+    "question": "What is a diaspora?",
+    "answer": "a people living away from their homeland"
+   },
+   "representations": [
+    "a world map",
+    "place cards",
+    "pins"
+   ],
+   "steps": [
+    "Name the country.",
+    "Name its continent or region.",
+    "Place it.",
+    "Say how Africans came there."
+   ],
+   "contexts": [
+    "the United States",
+    "Jamaica",
+    "Britain"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a world outline."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the Caribbean.",
+     "say": "Which island with a large African diaspora is here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Jamaica or Haiti."
+    },
+    {
+     "beat": "write",
+     "do": "Place three more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE.M_AD_NO_AMERICAS",
+     "listen_for": [
+      "Only Asia"
+     ],
+     "ask": "Which region held a large African diaspora by 1960?",
+     "repair": "Ask which countries are named for the Caribbean."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE.M_AD_JAMAICA_ASIA",
+     "listen_for": [
+      "Asia"
+     ],
+     "ask": "In which region is Jamaica?",
+     "repair": "Ask which ocean lies around Jamaica."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE.M_AD_BRAZIL_AFRICA",
+     "listen_for": [
+      "Africa"
+     ],
+     "ask": "In which continent is Brazil?",
+     "repair": "Find Brazil on a world map."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE.M_AD_EUROPE_NONE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Did African diasporas live in Europe by 1960?",
+     "repair": "Name the Manchester Pan-African Congress of 1945."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which region is Jamaica?",
+     "answer": "the Caribbean, in the Americas",
+     "shows": "locate"
+    },
+    {
+     "question": "Name one country with a large African diaspora by 1960.",
+     "answer": "any of: the United States, Brazil, Jamaica, Haiti, Cuba, Britain, France",
+     "shows": "locate"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE",
+   "key_step": "The child tells how the diasporas helped political change in Africa through Pan-Africanism.",
+   "floor": {
+    "prerequisite": "Tells what colonial rule did.",
+    "question": "Give one harm of colonial rule.",
+    "answer": "any harm such as loss of independence"
+   },
+   "representations": [
+    "leader cards",
+    "a timeline of congresses",
+    "a definition card"
+   ],
+   "steps": [
+    "Say what Pan-Africanism is.",
+    "Name diaspora leaders.",
+    "Name what they did.",
+    "Say how it helped independence."
+   ],
+   "contexts": [
+    "Marcus Garvey's speeches",
+    "the 1945 Manchester congress",
+    "Nkrumah leading Ghana to independence"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Pan-Africanism."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"Pan\".",
+     "say": "Pan means all. What does Pan-Africanism mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"all Africans uniting\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write two leaders."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE.M_AD_NO_ROLE",
+     "listen_for": [
+      "It did not help"
+     ],
+     "ask": "How did the diaspora help African independence?",
+     "repair": "Ask who organised Pan-African congresses."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE.M_AD_PAN_MEANING",
+     "listen_for": [
+      "A trading company"
+     ],
+     "ask": "What is Pan-Africanism?",
+     "repair": "Ask what pan means."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE.M_AD_NKRUMAH_DIASPORA",
+     "listen_for": [
+      "The Americas"
+     ],
+     "ask": "Where was Kwame Nkrumah from?",
+     "repair": "Sort leaders: from the diaspora, from Africa."
+    },
+    {
+     "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE.M_AD_CONGRESS_TRADE",
+     "listen_for": [
+      "Trade fairs"
+     ],
+     "ask": "What were the Pan-African congresses?",
+     "repair": "Read a short line from a congress resolution."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is Pan-Africanism?",
+     "answer": "the idea that African peoples should unite",
+     "shows": "meaning"
+    },
+    {
+     "question": "How did the diaspora help African independence?",
+     "answer": "supported Pan-Africanism, congresses and writings for freedom",
+     "shows": "role"
+    }
+   ]
+  }
+ ]
+}

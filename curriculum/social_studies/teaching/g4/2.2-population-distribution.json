@@ -1,0 +1,99 @@
+{
+ "sub_strand": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION",
+ "title": "Population Distribution",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use beans on a drawn county map: many beans near the river, the town and the road, few on the dry hills. The child moves the beans and says why.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS",
+   "key_step": "The child says where people are many and where few in a county, and gives the reason: water, fertile soil, work, roads, security.",
+   "floor": {
+    "prerequisite": "Compares the size of counties.",
+    "question": "Which is bigger: a county of 3,000 or 900 square kilometres?",
+    "answer": "3,000"
+   },
+   "representations": [
+    "beans on a drawn county map",
+    "a dot map of an imaginary county",
+    "photos of a busy town and empty dry land"
+   ],
+   "steps": [
+    "Look at where the dots or beans bunch up.",
+    "Name those places dense.",
+    "Name the empty places sparse.",
+    "Give a reason for each from the land and services."
+   ],
+   "contexts": [
+    "many homes near the tarmac road and the market",
+    "few homes on steep, dry hills",
+    "crowding near a factory that gives jobs"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a river with many dots along it and a hill with few dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the river dots.",
+     "say": "Why might many people live here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for water or good soil."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"dense: water, good soil\" by the river and \"sparse: steep and dry\" on the hill."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_TOTAL",
+     "listen_for": [
+      "The total number of people in a county"
+     ],
+     "ask": "What does population distribution mean?",
+     "repair": "Place twelve counters on a page: first all in one corner, then spread out; the total is the same."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_DENSE_BIG",
+     "listen_for": [
+      "Sparse"
+     ],
+     "ask": "An area has many people living close together. Is it dense or sparse?",
+     "repair": "Compare ten learners in a small room and ten on a football pitch."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_REASON_REVERSE",
+     "listen_for": [
+      "Because there is no water there"
+     ],
+     "ask": "Why do many people live near a river with good soil and rain?",
+     "repair": "Ask what the family needs each day and where they find it."
+    },
+    {
+     "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_EVEN_SPREAD",
+     "listen_for": [
+      "Yes, people spread out evenly"
+     ],
+     "ask": "Is the number of people the same in every part of a county?",
+     "repair": "Drop beans on the map where the class thinks people live; the beans bunch up."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Many people live near a river with fertile soil. What is that area called: dense or sparse?",
+     "answer": "dense",
+     "shows": "dense and sparse"
+    },
+    {
+     "question": "Give one reason few people live in a place.",
+     "answer": "any of: very dry, steep, floods, unsafe, no roads or work",
+     "shows": "reasons for sparse"
+    }
+   ]
+  }
+ ]
+}

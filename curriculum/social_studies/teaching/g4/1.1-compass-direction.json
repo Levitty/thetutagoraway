@@ -1,0 +1,197 @@
+{
+ "sub_strand": "SOCI.G4.NATURA.COMPASS_DIRECTION",
+ "title": "Compass Direction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach standing up, outside if possible: the class faces the morning sun (east), then turns to face north. Chalk a large compass on the floor or the playground and walk it before any page is used.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS",
+   "key_step": "The child faces north, names the other three points clockwise (north, east, south, west) and pairs each with its opposite.",
+   "floor": {
+    "prerequisite": "Can make a quarter turn and a half turn on the spot.",
+    "question": "Stand up and make a half turn. Are you facing the same way?",
+    "answer": "No, the opposite way"
+   },
+   "representations": [
+    "a compass rose chalked on the floor",
+    "the morning sun in the east",
+    "a card compass the child turns"
+   ],
+   "steps": [
+    "Face the morning sun: that is east.",
+    "Make a quarter turn to the left: that is north.",
+    "Name the points clockwise from north: north, east, south, west.",
+    "Opposite pairs: north and south, east and west."
+   ],
+   "contexts": [
+    "the school flag post in the morning sun",
+    "a herder telling a friend which way the cattle went",
+    "a matatu stage with roads going four ways"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cross with N at the top."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the right arm.",
+     "say": "Which point comes after north, going clockwise?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say east."
+    },
+    {
+     "beat": "write",
+     "do": "Write E, then S at the bottom and W on the left."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what is opposite east before writing it."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_OPPOSITE",
+     "listen_for": [
+      "East"
+     ],
+     "ask": "Which point is opposite north on a compass?",
+     "repair": "Draw a plus sign: north at the top, south at the bottom, east and west across. Ask for the point straight across."
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_LEFT_RIGHT",
+     "listen_for": [
+      "The left hand"
+     ],
+     "ask": "You face north. Which side is east on?",
+     "repair": "Have the child stand and face north, stretch out the right arm and say \"east\". Then turn and do it again."
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_SUN",
+     "listen_for": [
+      "The west"
+     ],
+     "ask": "In which direction does the sun rise?",
+     "repair": "Watch the sun rise on a school morning and name the side; use it to find east and then the other points."
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_UP_NORTH",
+     "listen_for": [
+      "Up at the sky"
+     ],
+     "ask": "Stand up and face north. Where do you point?",
+     "repair": "Lay the map flat on the desk, then on the floor, and turn it so north on the map points along the ground to north."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the opposite of north?",
+     "answer": "south",
+     "shows": "opposite pairs"
+    },
+    {
+     "question": "The sun rises behind the classroom. Which direction is behind the classroom?",
+     "answer": "east",
+     "shows": "uses the sun to find east"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS",
+   "key_step": "The child finds the north arrow, says where one place is from another, and turns the direction round for the way back.",
+   "floor": {
+    "prerequisite": "Names the four cardinal points and their opposites.",
+    "question": "What is opposite west?",
+    "answer": "east"
+   },
+   "representations": [
+    "a described map of an imaginary village",
+    "a three by three table of places",
+    "the class acting a walk across the room"
+   ],
+   "steps": [
+    "Find the north arrow on the map.",
+    "Start at the first place and look to the second.",
+    "Name the direction.",
+    "For the way back, give the opposite direction."
+   ],
+   "contexts": [
+    "giving a visitor directions from the school to the market",
+    "a boda boda rider asking the way to the dispensary",
+    "a map of an imaginary county in a textbook"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a school in the middle and a market above it, with a north arrow pointing up."
+    },
+    {
+     "beat": "point",
+     "do": "Point from the school to the market.",
+     "say": "Which way is the market from the school?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for north."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which way the school is from the market before saying it."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"south\" on the way back."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_REVERSE",
+     "listen_for": [
+      "North"
+     ],
+     "ask": "A school is north of a market. In which direction is the market from the school?",
+     "repair": "Put two objects on the desk. Ask \"from this one to that one\", then swap and ask again."
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_TURN",
+     "listen_for": [
+      "South"
+     ],
+     "ask": "Wanjiku faces east and turns left. Which direction does she face now?",
+     "repair": "Have the child stand and face a wall called east, then turn a quarter turn left and name the new wall."
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_TOP_ALWAYS_NORTH",
+     "listen_for": [
+      "East, because the right is east"
+     ],
+     "ask": "On a map the north arrow points to the right. The well is on the right of the school. Where is the well from the school?",
+     "repair": "Draw the same village twice, once with the arrow up and once with the arrow to the right, and ask each time where north is."
+    },
+    {
+     "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_LEFT_IS_WEST",
+     "listen_for": [
+      "West"
+     ],
+     "ask": "Achieng faces south. She turns her head to her left. Which direction is she looking?",
+     "repair": "Stand facing south with the class and point: the left hand now points east. Turn and do it for each direction."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The church is east of the river. Which direction is the river from the church?",
+     "answer": "west",
+     "shows": "reverses a direction"
+    },
+    {
+     "question": "On a map the north arrow points down the page. The shop is at the bottom of the page from the school. Where is the shop from the school?",
+     "answer": "north",
+     "shows": "reads the north arrow"
+    }
+   ]
+  }
+ ]
+}

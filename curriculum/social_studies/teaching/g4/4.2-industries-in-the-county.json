@@ -1,0 +1,283 @@
+{
+ "sub_strand": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY",
+ "title": "Industries in the County",
+ "status": "draft: written 18 Nov 2026 offline for Grade 4 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Bring a product and its raw material: a packet of milk and a picture of a cow, sugar and a piece of sugarcane, flour and maize. Name the factory that joins them.",
+ "skills": [
+  {
+   "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS",
+   "key_step": "The child says what an industry makes and from which raw material, keeping raw material and product the right way round.",
+   "floor": {
+    "prerequisite": "Relates food items to the animals or plants they come from.",
+    "question": "Which animal gives us eggs?",
+    "answer": "a hen"
+   },
+   "representations": [
+    "a raw material and its product side by side",
+    "arrow cards: raw material to product",
+    "a list of county industries"
+   ],
+   "steps": [
+    "Name the raw material.",
+    "Say what the factory does to it.",
+    "Name the product.",
+    "Check the arrow goes from raw material to product."
+   ],
+   "contexts": [
+    "a sugar factory in Mumias",
+    "a tea factory in Kericho",
+    "a posho mill in the village"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow, an arrow and a packet of milk."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow.",
+     "say": "What happens to the milk in the factory?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"it is cooled, cleaned and packed\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write raw material under the cow and product under the packet."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which comes first for sugarcane and sugar."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_RAW_PRODUCT",
+     "listen_for": [
+      "Sugar"
+     ],
+     "ask": "What is the raw material in a sugar factory?",
+     "repair": "Use pairs: before the factory and after the factory."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_SHOP_INDUSTRY",
+     "listen_for": [
+      "A shop that sells sugar"
+     ],
+     "ask": "Which place is an industry?",
+     "repair": "Ask: does this place make something new from something else?"
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_HANDMADE_NOT",
+     "listen_for": [
+      "No, only big factories are industries"
+     ],
+     "ask": "A women's group makes baskets from sisal to sell. Is this an industry?",
+     "repair": "Compare a big sugar factory and a jaggery mill: both turn sugarcane into a product."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_PRODUCT_RAW_TEA",
+     "listen_for": [
+      "Green leaves"
+     ],
+     "ask": "A tea factory buys green tea leaves from farmers. What does it sell?",
+     "repair": "Show green leaves and a packet of tea side by side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the raw material for a posho mill?",
+     "answer": "maize",
+     "shows": "raw material"
+    },
+    {
+     "question": "Is a shop that sells soap an industry?",
+     "answer": "No: it sells goods; it does not make them",
+     "shows": "shop is not an industry"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS",
+   "key_step": "The child says who gains from an industry: workers, farmers who sell to it, buyers of its goods and the county.",
+   "floor": {
+    "prerequisite": "Names an industry and its product.",
+    "question": "What does a tea factory make?",
+    "answer": "tea"
+   },
+   "representations": [
+    "a web drawing with the factory in the middle",
+    "role cards for a worker, a farmer and a shopper",
+    "a sort: benefits and problems"
+   ],
+   "steps": [
+    "Name the industry.",
+    "Ask who works there.",
+    "Ask who sells to it and who buys from it.",
+    "Ask what the county gets."
+   ],
+   "contexts": [
+    "a milk factory buying from farmers",
+    "a jua kali workshop making jikos",
+    "a bakery selling bread to schools"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a factory in a circle with four lines going out."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one line.",
+     "say": "Who is at the end of this line, and what do they get?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a worker getting pay."
+    },
+    {
+     "beat": "write",
+     "do": "Write farmer, worker, shopper, county on the lines."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_OWNER_ONLY",
+     "listen_for": [
+      "Only the owner"
+     ],
+     "ask": "Who gains when a factory opens in a county?",
+     "repair": "List who works at a milk factory, who sells it the milk and who buys the milk."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_POLLUTION_BENEFIT",
+     "listen_for": [
+      "Dirty smoke from the chimney"
+     ],
+     "ask": "Which is a benefit of an industry?",
+     "repair": "Sort a list into \"good for people\" and \"problem to solve\"."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_FARMER_NO_GAIN",
+     "listen_for": [
+      "It does not; it takes their milk"
+     ],
+     "ask": "How does a milk factory help dairy farmers?",
+     "repair": "Draw the milk going to the factory and the money going back to the farmer."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_BENEFIT_HARM_SAME",
+     "listen_for": [
+      "Smoke, it shows the factory is busy"
+     ],
+     "ask": "Which is a benefit of a factory: jobs, smoke, noise?",
+     "repair": "Sort cards into \"helps people\" and \"harms people\"."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way a sugar factory helps cane farmers.",
+     "answer": "It buys their cane so they earn money",
+     "shows": "benefit to farmers"
+    },
+    {
+     "question": "Which is a benefit of a factory: jobs or noise?",
+     "answer": "jobs",
+     "shows": "tells benefit from problem"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE",
+   "key_step": "The child places an industry near its raw material, roads, water and workers and away from homes, and gives the reason.",
+   "floor": {
+    "prerequisite": "Says where counties and places are on a described map.",
+    "question": "The farms are north of the town. Where is the town from the farms?",
+    "answer": "south"
+   },
+   "representations": [
+    "a described map with farms, a road, a river and houses",
+    "factory cut-outs the child places",
+    "a checklist: raw material, road, water, workers"
+   ],
+   "steps": [
+    "Find the raw material on the map.",
+    "Find the road and the water.",
+    "Place the factory near them.",
+    "Check it is not among the homes."
+   ],
+   "contexts": [
+    "a tea factory among tea farms",
+    "a fish factory on the lake shore",
+    "a quarry beside the main road"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw tea farms, a road and a river."
+    },
+    {
+     "beat": "point",
+     "do": "Point at two places: near the farms and far up a hill.",
+     "say": "Where should the tea factory go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a choice and a reason."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the lorry route to each place to show the cost."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_ANYWHERE",
+     "listen_for": [
+      "Because there is no reason, any place does"
+     ],
+     "ask": "Why is a sugar factory built near sugarcane farms?",
+     "repair": "Ask the child to carry a heavy bag a short way and a long way."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_RAW_FAR",
+     "listen_for": [
+      "Far from any dairy farms"
+     ],
+     "ask": "Where is the best place for a milk factory?",
+     "repair": "Ask what happens to fresh milk after a day in the sun."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_NO_ROAD",
+     "listen_for": [
+      "On the far hill, land is cheap"
+     ],
+     "ask": "Where should a new milk factory go: next to the dairy farms by the main road, or on a far hill with no road?",
+     "repair": "Ask how lorries will bring milk to the far hill."
+    },
+    {
+     "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_HOMES_INSIDE",
+     "listen_for": [
+      "In the middle of the houses"
+     ],
+     "ask": "Where is the best place for a noisy, smoky factory?",
+     "repair": "Ask how families would sleep next to the noise and smoke."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why is a sugar factory built near cane farms?",
+     "answer": "The cane is heavy and spoils, so it is close to carry",
+     "shows": "near raw material"
+    },
+    {
+     "question": "Give one more thing a factory needs near it besides raw material.",
+     "answer": "any of: roads, water, workers, power",
+     "shows": "location factors"
+    }
+   ]
+  }
+ ]
+}
