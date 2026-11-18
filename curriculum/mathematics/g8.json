@@ -39,7 +39,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it). Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. The lift family's feedback for the one-short answer says floor 0 was not counted, but the number it gives is the one a child gets by counting the starting floor as a step; tagged M_START_COUNTED_AS_STEP, feedback wording for a teacher to confirm. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it).",
+   "design_notes": "Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it). Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. The lift family's feedback for the one-short answer says floor 0 was not counted, but the number it gives is the one a child gets by counting the starting floor as a step; tagged M_START_COUNTED_AS_STEP, feedback wording for a teacher to confirm. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it). Official outcomes a to c are tested; d (use IT) and e (reflect) are not questions. KICD names addition and subtraction on the number line (c); its learning experiences add combined operations, so the last skill takes repeated changes (a change times a number of steps, a total change shared over steps) in real situations. Grades 6 and 7 have no Integers sub-strand: the floor is Grade 7 temperature below zero and whole-number operations. The lift family's feedback for the one-short answer says floor 0 was not counted, but the number it gives is the one a child gets by counting the starting floor as a step; tagged M_START_COUNTED_AS_STEP, feedback wording for a teacher to confirm. The coverage family g8c.int.number-line-lift is a near duplicate of g8.int.lift-floors and is filed under the number line (b); a teacher should merge or retire one. Teacher to confirm: whether multiplying and dividing integers belongs in Grade 8 or waits for Grade 9 (two existing families use it).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
     "design": "KICD-Grade8-Mathematics-Curriculum-Design.pdf",
@@ -182,7 +182,8 @@
       "representation"
      ],
      "horeb_skill_ids": [
-      "G6_INTEGERS_INTRO"
+      "G6_INTEGERS_INTRO",
+      "G6_INTEGERS_ADD_SUB"
      ],
      "prerequisites": [
       {
@@ -4910,7 +4911,7 @@
        "requires": "MATH.G7.NUMBER.SQUARES_AND_SQUARE_ROOTS.SQUARE_WHOLE_NUMBER",
        "kind": "skill",
        "strength": "helpful",
-       "reason": "Squares.",
+       "reason": "Squaring a whole number.",
        "status": "proposed"
       }
      ],
@@ -11233,7 +11234,7 @@
        "requires": "MATH.G7.NUMBER.WHOLE_NUMBERS.DIV_LARGE",
        "kind": "skill",
        "strength": "helpful",
-       "reason": "Division.",
+       "reason": "Dividing by the scale.",
        "status": "proposed"
       }
      ],
@@ -11473,7 +11474,7 @@
        "requires": "MATH.G7.MEASUR.AREA.LAND_UNITS_HA_ACRE",
        "kind": "skill",
        "strength": "helpful",
-       "reason": "Hectares.",
+       "reason": "Hectares and square metres.",
        "status": "proposed"
       }
      ],
@@ -13407,21 +13408,21 @@
        "requires": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE",
        "kind": "skill",
        "strength": "essential",
-       "reason": "The mode.",
+       "reason": "Finding the mode.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
        "kind": "skill",
        "strength": "essential",
-       "reason": "The mean.",
+       "reason": "Finding the mean.",
        "status": "proposed"
       },
       {
        "requires": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
        "kind": "skill",
        "strength": "essential",
-       "reason": "The median.",
+       "reason": "Finding the median.",
        "status": "proposed"
       }
      ],

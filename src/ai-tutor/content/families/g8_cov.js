@@ -12,7 +12,7 @@ const sgn = (n) => (n < 0 ? `−${-n}` : `${n}`);
 
 export const FAMILIES = [
   // ================================================================ INTEGERS
-  cov({ id: 'g8c.int.number-line-lift', skill: 'G6_INTEGERS_ADD_SUB', outcome: 'MATH.G8.NUMBER.INTEGERS.c', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_ADD_SUB_LINE', misMapped: false, reveals: ['M_SIGN_DROPPED_BELOW_ZERO', 'M_DOWN_AS_ADD', 'M_WRONG_SIDE_OF_ZERO', 'M_START_COUNTED_AS_STEP'], form: 'word', rung: 2, allowNegative: true,
+  cov({ id: 'g8c.int.number-line-lift', skill: 'G6_INTEGERS_ADD_SUB', outcome: 'MATH.G8.NUMBER.INTEGERS.b', cskill: 'MATH.G8.NUMBER.INTEGERS.INT_NUMBER_LINE', misMapped: false, reveals: ['M_SIGN_DROPPED_BELOW_ZERO', 'M_DOWN_AS_ADD', 'M_WRONG_SIDE_OF_ZERO', 'M_START_COUNTED_AS_STEP'], form: 'word', rung: 2, allowNegative: true,
     gen: () => {
       const s = -randInt(1, 4), n = randInt(2, 7), up = Math.random() < 0.6, d = up ? n : -n, r = s + d;
       if (r === 0 || Math.abs(r) === Math.abs(s)) return null;

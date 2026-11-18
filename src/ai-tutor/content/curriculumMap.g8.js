@@ -762,7 +762,8 @@ export const SKILLS_G8 = {
    "MATH.G8.NUMBER.INTEGERS.b"
   ],
   "horeb": [
-   "G6_INTEGERS_INTRO"
+   "G6_INTEGERS_INTRO",
+   "G6_INTEGERS_ADD_SUB"
   ],
   "primary": "G6_INTEGERS_INTRO",
   "pre": [
