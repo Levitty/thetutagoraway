@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 156,
-  "misconceptions": 267
+  "prerequisites": 157,
+  "misconceptions": 273
  },
  "sub_strands": [
   {
@@ -4979,6 +4979,13 @@
        "strength": "essential",
        "reason": "Counting squares to find area.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Each square counted is 1 cm2.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -5087,6 +5094,96 @@
      "cause": "Does not see a part square as less than a whole.",
      "reveals": "All squares counted whole.",
      "help": "Halve the number of part squares before adding.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_HALF_BOTH",
+     "skill": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE",
+     "error": "Halves both the base and the height before multiplying.",
+     "example": {
+      "question": "Triangle base 8 cm, height 5 cm: area?",
+      "wrong_answer": "10 cm2 (4 x 2.5)",
+      "correct_answer": "20 cm2"
+     },
+     "cause": "Knows \"half\" is in the rule and applies it to every length.",
+     "reveals": "A quarter of base times height as an option.",
+     "help": "Cut a rectangle 8 by 5 along its diagonal: each triangle is half of 40.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_AREA_IN_CM",
+     "skill": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE",
+     "error": "Gives an area in cm instead of cm2.",
+     "example": {
+      "question": "Triangle base 8 cm, height 5 cm: area?",
+      "wrong_answer": "20 cm",
+      "correct_answer": "20 cm2"
+     },
+     "cause": "Copies the unit of the lengths.",
+     "reveals": "The right number with the wrong unit.",
+     "help": "Area counts squares: each square is 1 cm by 1 cm, written cm2.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.AREA_COMBINED.M_OVERLAP_COUNTED_TWICE",
+     "skill": "MATH.G6.MEASUR.AREA.AREA_COMBINED",
+     "error": "Uses a length of the whole shape for one of its parts, so a piece is counted twice.",
+     "example": {
+      "question": "An L-shape is a 10 cm by 4 cm rectangle on top of a 4 cm by 6 cm rectangle (total height 10 cm). Area?",
+      "wrong_answer": "80 cm2 (10 x 4 + 4 x 10)",
+      "correct_answer": "64 cm2 (10 x 4 + 4 x 6)"
+     },
+     "cause": "Reads the 10 cm side for the second rectangle as well.",
+     "reveals": "The area with the corner counted twice.",
+     "help": "Draw the split line and write the two lengths of each part on the part before multiplying.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.AREA_COMBINED.M_TRIANGLE_PART_NOT_HALVED",
+     "skill": "MATH.G6.MEASUR.AREA.AREA_COMBINED",
+     "error": "Forgets to halve the triangle part of a combined shape.",
+     "example": {
+      "question": "A house shape: a 6 cm square with a triangle roof of base 6 cm and height 4 cm. Area?",
+      "wrong_answer": "60 cm2 (36 + 24)",
+      "correct_answer": "48 cm2 (36 + 12)"
+     },
+     "cause": "Works the triangle as a rectangle while busy with the other parts.",
+     "reveals": "The answer with the triangle not halved.",
+     "help": "Name each part first: square, triangle. The triangle uses half base times height.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING.M_SQUARE_AROUND_CIRCLE",
+     "skill": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING",
+     "error": "Counts every square inside the square drawn round the circle.",
+     "example": {
+      "question": "A circle of diameter 6 cm is drawn on 1 cm squares. Estimate its area.",
+      "wrong_answer": "36 cm2 (the 6 by 6 square)",
+      "correct_answer": "about 28 cm2"
+     },
+     "cause": "Takes the box the circle sits in as the circle.",
+     "reveals": "The area of the surrounding square as an option.",
+     "help": "Shade only the squares inside the circle; the corners of the box are outside it.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING.M_ESTIMATE_CALLED_EXACT",
+     "skill": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING",
+     "error": "Believes counting squares gives the exact area.",
+     "example": {
+      "question": "A circle covers 20 whole squares and 12 part squares, so about 26 cm2. Is this exact?",
+      "wrong_answer": "Yes, it was counted",
+      "correct_answer": "No: the part squares were each taken as a half, so it is an estimate"
+     },
+     "cause": "Thinks counting is always exact.",
+     "reveals": "A yes-or-no choice about the estimate.",
+     "help": "Look at the part squares: some are nearly whole, some are tiny, so taking each as a half is only close.",
      "source": "to be confirmed by a teacher (no source yet)",
      "status": "draft"
     }

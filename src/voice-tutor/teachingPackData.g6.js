@@ -5402,6 +5402,403 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.MEASUR.LENGTH",
   "sub_strand_name": "Length",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.AREA.AREA_TRIANGLE": {
+  "skill": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE",
+  "key_step": "The child shows that a triangle is half of a rectangle with the same base and height, and uses the height at right angles to the base.",
+  "floor": {
+   "prerequisite": "Finds the area of a rectangle.",
+   "question": "Area of a rectangle 8 cm by 5 cm?",
+   "answer": "40 cm2"
+  },
+  "representations": [
+   "a paper rectangle cut along its diagonal",
+   "a triangle drawn on squared paper with its height dotted",
+   "the rule half x base x height"
+  ],
+  "steps": [
+   "Find the base.",
+   "Find the height at right angles to the base, not a slanting side.",
+   "Multiply base by height.",
+   "Halve, and write cm2."
+  ],
+  "contexts": [
+   "a triangular flag for sports day",
+   "a gable of a house",
+   "a triangular plot"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle 8 by 5 and its diagonal."
+   },
+   {
+    "beat": "point",
+    "do": "Point at one triangle.",
+    "say": "What part of the rectangle is this triangle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for half."
+   },
+   {
+    "beat": "write",
+    "do": "Write area = half of 8 x 5."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask the child for the area before you write it."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_NO_HALF",
+    "listen_for": [
+     "40",
+     "base times height"
+    ],
+    "ask": "Is the triangle the whole rectangle?",
+    "repair": "The triangle is half of the rectangle: halve 40.",
+    "error": "Multiplies the base by the height and does not halve.",
+    "example": {
+     "question": "Triangle base 8 cm, height 5 cm: area?",
+     "wrong_answer": "40 cm2",
+     "correct_answer": "20 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_SLANT_SIDE_AS_HEIGHT",
+    "listen_for": [
+     "the slanting side",
+     "8 for height"
+    ],
+    "ask": "Does that side stand at right angles to the base?",
+    "repair": "The height is the straight-up distance, dotted at right angles.",
+    "error": "Uses the slanting side instead of the perpendicular height.",
+    "example": {
+     "question": "Base 10 cm, perpendicular height 6 cm, slanting side 8 cm",
+     "wrong_answer": "40 cm2 (half of 10 x 8)",
+     "correct_answer": "30 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_PERIMETER_FOR_AREA",
+    "listen_for": [
+     "16",
+     "add the sides"
+    ],
+    "ask": "Are we going round the edge or covering the inside?",
+    "repair": "Area covers the inside: half base times height.",
+    "error": "Adds the sides, giving the perimeter in place of the area.",
+    "example": {
+     "question": "A triangle has sides 5 cm, 5 cm and 6 cm. Its base is 6 cm and its height is 4 cm. Area?",
+     "wrong_answer": "16 cm2 (the sides added: the perimeter)",
+     "correct_answer": "12 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_HALF_BOTH",
+    "listen_for": [
+     "10",
+     "half of each"
+    ],
+    "ask": "How many times do we halve?",
+    "repair": "Halve once: half of 8 x 5.",
+    "error": "Halves both the base and the height before multiplying.",
+    "example": {
+     "question": "Triangle base 8 cm, height 5 cm: area?",
+     "wrong_answer": "10 cm2 (4 x 2.5)",
+     "correct_answer": "20 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_TRIANGLE.M_AREA_IN_CM",
+    "listen_for": [
+     "cm",
+     "centimetres"
+    ],
+    "ask": "Are we counting lengths or squares?",
+    "repair": "Area is in square units: cm2.",
+    "error": "Gives an area in cm instead of cm2.",
+    "example": {
+     "question": "Triangle base 8 cm, height 5 cm: area?",
+     "wrong_answer": "20 cm",
+     "correct_answer": "20 cm2"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A triangle has base 8 cm and height 5 cm. What is its area?",
+    "answer": "20 cm2",
+    "shows": "half base times height"
+   },
+   {
+    "question": "A triangle has area 24 cm2 and base 8 cm. What is its height?",
+    "answer": "6 cm",
+    "shows": "missing height"
+   }
+  ],
+  "name": "Area of triangles in square centimetres",
+  "sub_strand": "MATH.G6.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.AREA.AREA_COMBINED": {
+  "skill": "MATH.G6.MEASUR.AREA.AREA_COMBINED",
+  "key_step": "The child splits the shape into rectangles, squares and triangles with a line, writes the two lengths of each part on it, and adds (or subtracts a cut-out).",
+  "floor": {
+   "prerequisite": "Finds areas of rectangles and triangles.",
+   "question": "Area of a triangle with base 6 cm and height 4 cm?",
+   "answer": "12 cm2"
+  },
+  "representations": [
+   "a paper shape cut into pieces",
+   "the shape with a coloured split line and lengths on each part",
+   "a table of parts and their areas"
+  ],
+  "steps": [
+   "Draw a line to split the shape.",
+   "Write the length and width of each part, finding missing sides by subtracting.",
+   "Find each area.",
+   "Add the parts, or take away a part that is cut out."
+  ],
+  "contexts": [
+   "a classroom floor with an alcove",
+   "a house wall with a roof",
+   "a garden with a path cut out"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a house shape: a 6 cm square with a triangle roof of height 4 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the roof.",
+    "say": "What shape is this part, and what rule does it use?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for triangle, half base times height."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write the area inside each part."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 36 + 12 = 48 cm2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_COMBINED.M_ONE_PART_ONLY",
+    "listen_for": [
+     "only the top",
+     "one rectangle"
+    ],
+    "ask": "Does your answer cover the whole shape?",
+    "repair": "Find every part and add them.",
+    "error": "Finds the area of only one of the parts.",
+    "example": {
+     "question": "L-shape made of two rectangles",
+     "wrong_answer": "one rectangle area",
+     "correct_answer": "total of both"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_COMBINED.M_CUT_OUT_ADDED",
+    "listen_for": [
+     "64",
+     "add the hole"
+    ],
+    "ask": "Is the cut-out part still there?",
+    "repair": "A cut-out is taken away.",
+    "error": "Adds the area of a cut-out part instead of subtracting it.",
+    "example": {
+     "question": "Rectangle 10 by 6 with a 2 by 2 square cut out",
+     "wrong_answer": "64 cm2",
+     "correct_answer": "56 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_COMBINED.M_OVERLAP_COUNTED_TWICE",
+    "listen_for": [
+     "80",
+     "used the 10 again"
+    ],
+    "ask": "Is the second rectangle really 10 cm long?",
+    "repair": "Write each part's own lengths; the overlap is counted once.",
+    "error": "Uses a length of the whole shape for one of its parts, so a piece is counted twice.",
+    "example": {
+     "question": "An L-shape is a 10 cm by 4 cm rectangle on top of a 4 cm by 6 cm rectangle (total height 10 cm). Area?",
+     "wrong_answer": "80 cm2 (10 x 4 + 4 x 10)",
+     "correct_answer": "64 cm2 (10 x 4 + 4 x 6)"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_COMBINED.M_TRIANGLE_PART_NOT_HALVED",
+    "listen_for": [
+     "60",
+     "6 times 4"
+    ],
+    "ask": "Is the roof a rectangle or a triangle?",
+    "repair": "Halve the triangle part.",
+    "error": "Forgets to halve the triangle part of a combined shape.",
+    "example": {
+     "question": "A house shape: a 6 cm square with a triangle roof of base 6 cm and height 4 cm. Area?",
+     "wrong_answer": "60 cm2 (36 + 24)",
+     "correct_answer": "48 cm2 (36 + 12)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A rectangle 10 cm by 6 cm has a 2 cm by 2 cm square cut out. What area is left?",
+    "answer": "56 cm2",
+    "shows": "take away a cut-out"
+   },
+   {
+    "question": "A house shape is a 6 cm square with a triangle roof of base 6 cm and height 4 cm. What is its area?",
+    "answer": "48 cm2",
+    "shows": "rectangle and triangle"
+   }
+  ],
+  "name": "Area of combined shapes of squares, rectangles and triangles",
+  "sub_strand": "MATH.G6.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING": {
+  "skill": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING",
+  "key_step": "The child counts the whole squares inside the circle, counts the part squares and takes each as half, adds, and says the answer is an estimate.",
+  "floor": {
+   "prerequisite": "Counts squares to find an area.",
+   "question": "A shape covers 12 whole squares of 1 cm2. What is its area?",
+   "answer": "12 cm2"
+  },
+  "representations": [
+   "a round lid traced on squared paper",
+   "whole squares ticked and part squares dotted",
+   "a table: whole, part, half of part, total"
+  ],
+  "steps": [
+   "Tick every whole square inside the circle.",
+   "Dot every part square.",
+   "Add the whole squares and half the part squares.",
+   "Say \"about\" and the unit cm2."
+  ],
+  "contexts": [
+   "a round tabletop",
+   "a circular flower bed",
+   "the bottom of a sufuria"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a circle on squared paper."
+   },
+   {
+    "beat": "count",
+    "do": "Count the whole squares inside with the child."
+   },
+   {
+    "beat": "count",
+    "do": "Count the part squares with the child."
+   },
+   {
+    "beat": "point",
+    "do": "Point at a part square.",
+    "say": "Is this a whole square of the circle?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say part of one."
+   },
+   {
+    "beat": "write",
+    "do": "Write wholes + half the parts = about ... cm2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING.M_COUNT_WHOLE_ONLY",
+    "listen_for": [
+     "20",
+     "only the full ones"
+    ],
+    "ask": "Are the part squares inside the circle at all?",
+    "repair": "Add half of the part squares too.",
+    "error": "Counts only the whole squares and ignores the part squares.",
+    "example": {
+     "question": "A circle covers 20 whole squares and 12 part squares",
+     "wrong_answer": "20 cm2",
+     "correct_answer": "26 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING.M_COUNT_PART_AS_WHOLE",
+    "listen_for": [
+     "32",
+     "all of them"
+    ],
+    "ask": "Is a part square a whole square?",
+    "repair": "Take each part square as about a half.",
+    "error": "Counts every part square as a whole square.",
+    "example": {
+     "question": "20 whole squares, 12 part squares",
+     "wrong_answer": "32 cm2",
+     "correct_answer": "26 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING.M_SQUARE_AROUND_CIRCLE",
+    "listen_for": [
+     "36",
+     "six by six"
+    ],
+    "ask": "Are the corners of the box inside the circle?",
+    "repair": "Count only squares inside the circle.",
+    "error": "Counts every square inside the square drawn round the circle.",
+    "example": {
+     "question": "A circle of diameter 6 cm is drawn on 1 cm squares. Estimate its area.",
+     "wrong_answer": "36 cm2 (the 6 by 6 square)",
+     "correct_answer": "about 28 cm2"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING.M_ESTIMATE_CALLED_EXACT",
+    "listen_for": [
+     "exact",
+     "it is counted"
+    ],
+    "ask": "Is every part square exactly a half?",
+    "repair": "It is an estimate: say \"about\".",
+    "error": "Believes counting squares gives the exact area.",
+    "example": {
+     "question": "A circle covers 20 whole squares and 12 part squares, so about 26 cm2. Is this exact?",
+     "wrong_answer": "Yes, it was counted",
+     "correct_answer": "No: the part squares were each taken as a half, so it is an estimate"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A circle covers 20 whole squares and 12 part squares of 1 cm2. Estimate its area.",
+    "answer": "about 26 cm2",
+    "shows": "wholes plus half the parts"
+   },
+   {
+    "question": "A circle covers 30 whole squares and 10 part squares of 1 cm2. Estimate its area.",
+    "answer": "about 35 cm2",
+    "shows": "wholes plus half the parts"
+   }
+  ],
+  "name": "Estimate the area of a circle by counting squares",
+  "sub_strand": "MATH.G6.MEASUR.AREA",
+  "sub_strand_name": "Area",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

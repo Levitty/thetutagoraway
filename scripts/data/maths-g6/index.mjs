@@ -11,4 +11,5 @@ import * as ineq from './inequalities.mjs';
 import * as frac from './fractions.mjs';
 import * as dec from './decimals.mjs';
 import * as length from './length.mjs';
-export const DEPTH = [whole, mult, div, ineq, frac, dec, length];
+import * as area from './area.mjs';
+export const DEPTH = [whole, mult, div, ineq, frac, dec, length, area];

@@ -115673,7 +115673,9 @@ var SKILLS_G6 = {
     "mis": [
       "M_NO_HALF",
       "M_SLANT_SIDE_AS_HEIGHT",
-      "M_PERIMETER_FOR_AREA"
+      "M_PERIMETER_FOR_AREA",
+      "M_HALF_BOTH",
+      "M_AREA_IN_CM"
     ]
   },
   "MATH.G6.MEASUR.AREA.AREA_COMBINED": {
@@ -115693,7 +115695,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_ONE_PART_ONLY",
-      "M_CUT_OUT_ADDED"
+      "M_CUT_OUT_ADDED",
+      "M_OVERLAP_COUNTED_TWICE",
+      "M_TRIANGLE_PART_NOT_HALVED"
     ]
   },
   "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING": {
@@ -115708,11 +115712,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_AREA_RECT",
     "pre": [
-      "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT"
+      "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT",
+      "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING"
     ],
     "mis": [
       "M_COUNT_WHOLE_ONLY",
-      "M_COUNT_PART_AS_WHOLE"
+      "M_COUNT_PART_AS_WHOLE",
+      "M_SQUARE_AROUND_CIRCLE",
+      "M_ESTIMATE_CALLED_EXACT"
     ]
   },
   "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION": {
