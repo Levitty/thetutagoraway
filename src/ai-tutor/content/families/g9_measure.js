@@ -255,32 +255,32 @@ export const FAMILIES = [
     check: ({ r }, v) => Math.abs(v[2] - 3 * (22 / 7) * r * r) < 0.07 && Math.abs(v[0] - 2 * v[1]) < 0.02 }),
 
   // ======================================================== VOLUME
-  fam({ id: 'g9.vol.prism-trough', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.a', rung: 2, form: 'word',
+  fam({ id: 'g9.vol.prism-trough', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.a', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM', rung: 2, form: 'word',
     draw: () => { const b = pick([40, 60, 80, 100]), h = pick([30, 40, 50]), L = pick([100, 150, 200, 250]); const l = (b * h * L) / 2 / 1000; return dp(l, 1) ? { b, h, L, l } : null; },
     make: ({ b, h, L, l }) => ({
       question: `A feeding trough for calves is a prism. Its ends are triangles with a base of ${b} cm and a height of ${h} cm. The trough is ${L} cm long. How many litres of water can it hold when full? (1 litre = 1,000 cm³)`,
       answer: l,
-      wrong: [[(b * h * L) / 1000, 'The end of the trough is a triangle, so its area is half of base times height.'], [(b * h * L) / 2, 'That is the volume in cm³. Change it to litres.'], [(b * h * L) / 6000, 'The volume of a prism is the area of the end times the length. The one third is for a pyramid.'], [(b * h * L) / 200, 'To change cm³ to litres, divide by 1,000.']],
+      wrong: [[(b * h * L) / 1000, 'The end of the trough is a triangle, so its area is half of base times height.', 'M_END_NOT_HALVED'], [(b * h * L) / 2, 'That is the volume in cm³. Change it to litres.', 'M_CM3_NOT_LITRES'], [(b * h * L) / 6000, 'The volume of a prism is the area of the end times the length. The one third is for a pyramid.', 'M_PYRAMID_THIRD_FOR_PRISM'], [(b * h * L) / 200, 'To change cm³ to litres, divide by 1,000.', 'M_LITRE_FACTOR_WRONG']],
       hints: ['Volume of a prism = area of the end × length.', 'The end is a triangle.'],
       steps: [`End: ½ × ${b} × ${h} = ${T((b * h) / 2)} cm².`, `Volume: ${T((b * h) / 2)} × ${L} = ${T((b * h * L) / 2)} cm³.`, `Litres: ${T((b * h * L) / 2)} ÷ 1,000 = ${T(l)}.`] }),
     check: ({ b, h, L }, a) => a * 1000 * 2 === b * h * L }),
 
-  fam({ id: 'g9.vol.prism-pool', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.a', rung: 3, form: 'steps',
+  fam({ id: 'g9.vol.prism-pool', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.a', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM', rung: 3, form: 'steps',
     draw: () => ({ d1: pick([1, 1.5]), d2: pick([2.5, 3, 3.5]), len: pick([10, 20, 25]), w: pick([5, 8, 10]) }),
     make: ({ d1, d2, len, w }) => {
       const side = ((d1 + d2) / 2) * len, vol = side * w;
       return { question: `A swimming pool is a prism, ${w} m wide. Its floor slopes. The depth is ${d1} m at the shallow end and ${d2} m at the deep end. The pool is ${len} m long. The side wall of the pool is a trapezium.`,
         parts: [
-          { prompt: 'Area of the side wall, in m²:', answer: side, unit: 'm²', hint: 'Trapezium: half of the sum of the parallel sides times the distance between them. The parallel sides are the two depths.', wrong: [[d1 * len + d2 * len, 'Take the average of the two depths first, or use half of the sum of the two depths.'], [(d1 + d2) * len, 'The area of a trapezium has a half in it.']] },
-          { prompt: 'Volume of the pool, in m³:', answer: vol, unit: 'm³', hint: 'Area of the side × width.', wrong: [[side * len, 'The pool is as wide as the width given. Multiply by the width.'], [side, 'That is the area of one wall. Multiply by the width to get a volume.']] },
-          { prompt: 'Litres of water when full (1 m³ = 1,000 litres):', answer: vol * 1000, unit: 'litres', hint: 'Multiply by 1,000.', wrong: [[vol * 100, '1 m³ is 1,000 litres, not 100.'], [vol / 1000, 'A cubic metre is a lot of litres. Multiply, do not divide.']] },
+          { prompt: 'Area of the side wall, in m²:', answer: side, unit: 'm²', hint: 'Trapezium: half of the sum of the parallel sides times the distance between them. The parallel sides are the two depths.', wrong: [[d1 * len + d2 * len, 'Take the average of the two depths first, or use half of the sum of the two depths.', 'M_TRAPEZIUM_NOT_HALVED'], [(d1 + d2) * len, 'The area of a trapezium has a half in it.', 'M_TRAPEZIUM_NOT_HALVED']] },
+          { prompt: 'Volume of the pool, in m³:', answer: vol, unit: 'm³', hint: 'Area of the side × width.', wrong: [[side * len, 'The pool is as wide as the width given. Multiply by the width.', 'M_LENGTH_USED_TWICE'], [side, 'That is the area of one wall. Multiply by the width to get a volume.', 'M_WIDTH_LEFT_OUT']] },
+          { prompt: 'Litres of water when full (1 m³ = 1,000 litres):', answer: vol * 1000, unit: 'litres', hint: 'Multiply by 1,000.', wrong: [[vol * 100, '1 m³ is 1,000 litres, not 100.', 'M_LITRE_FACTOR_WRONG'], [vol / 1000, 'A cubic metre is a lot of litres. Multiply, do not divide.', 'M_LITRE_DIRECTION_WRONG']] },
         ],
         hints: ['The pool is a prism lying on its side. Its cross-section is the trapezium.'],
         steps: [`Side: ½ × (${d1} + ${d2}) × ${len} = ${T(side)} m².`, `Volume: ${T(side)} × ${w} = ${T(vol)} m³.`, `Litres: ${T(vol)} × 1,000 = ${T(vol * 1000)}.`] };
     },
     check: ({ d1, d2, len, w }, v) => Math.abs(v[0] - ((d1 + d2) * len) / 2) < 1e-9 && v[1] === v[0] * w && v[2] === v[1] * 1000 }),
 
-  fam({ id: 'g9.vol.prism-spot', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.a', rung: 2, form: 'spot',
+  fam({ id: 'g9.vol.prism-spot', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.a', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM', rung: 2, form: 'spot',
     draw: () => { const b = pick([40, 60, 80, 100]), h = pick([30, 40, 50]), L = pick([100, 150, 200]); return { b, h, L, kind: pick(['half', 'times', 'litres']), who: person() }; },
     make: ({ b, h, L, kind, who }) => {
       const area = kind === 'half' ? b * h : (b * h) / 2;
@@ -291,88 +291,89 @@ export const FAMILIES = [
           { text: kind === 'times' ? `Volume = ${T(area)} + ${L} = ${T(vol)} cm³` : `Volume = ${T(area)} × ${L} = ${T(vol)} cm³`, ok: vol === area * L },
           { text: kind === 'litres' ? `Litres = ${T(vol)} ÷ 100 = ${T(lit)}` : `Litres = ${T(vol)} ÷ 1,000 = ${T(lit)}`, ok: lit === vol / 1000 },
         ],
+        mis: kind === 'half' ? 'M_END_NOT_HALVED' : kind === 'times' ? 'M_LENGTH_ADDED' : 'M_LITRE_FACTOR_WRONG',
         fix: kind === 'half' ? 'The area of a triangle is half of base times height. The half is missing.' : kind === 'times' ? 'The volume of a prism is the area of the end times the length, not plus.' : 'There are 1,000 cm³ in a litre, so divide by 1,000.',
         steps: [`End: ½ × ${b} × ${h} = ${T((b * h) / 2)} cm².`, `Volume: ${T((b * h) / 2)} × ${L} = ${T((b * h * L) / 2)} cm³, which is ${T((b * h * L) / 2000)} litres.`] };
     } }),
 
-  fam({ id: 'g9.vol.pyramid-third', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.b', rung: 1, form: 'word',
+  fam({ id: 'g9.vol.pyramid-third', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.b', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID', rung: 1, form: 'word',
     draw: () => ({ v: pick([120, 180, 240, 300, 450, 600]), what: pick(['tank', 'store', 'bin']) }),
     make: ({ v, what }) => ({
       question: `Two ${what}s have the same square base and the same height. One is a cuboid and holds ${v} litres. The other is a pyramid. How many litres does the pyramid ${what} hold?`,
       answer: v / 3,
-      wrong: [[v / 2, 'A pyramid takes up one third of the prism with the same base and height, not one half.'], [v, 'The pyramid comes to a point at the top, so it holds less than the cuboid.'], [v * 3, 'The pyramid holds less than the cuboid, not more.'], [(2 * v) / 3, 'That is the amount the pyramid is missing. The pyramid is one third of the cuboid.']],
+      wrong: [[v / 2, 'A pyramid takes up one third of the prism with the same base and height, not one half.', 'M_PYRAMID_HALF'], [v, 'The pyramid comes to a point at the top, so it holds less than the cuboid.', 'M_PYRAMID_SAME_AS_PRISM'], [v * 3, 'The pyramid holds less than the cuboid, not more.', 'M_PYRAMID_TIMES_THREE'], [(2 * v) / 3, 'That is the amount the pyramid is missing. The pyramid is one third of the cuboid.', 'M_PYRAMID_MISSING_PART']],
       hints: ['A pyramid is one third of the prism with the same base and height.', 'Divide the cuboid volume to get the pyramid volume.'],
       steps: [`A pyramid is ⅓ of the cuboid.`, `${v} ÷ 3 = ${v / 3} litres.`] }),
     check: ({ v }, a) => a * 3 === v }),
 
-  fam({ id: 'g9.vol.pyramid-height', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.b', rung: 3, form: 'word',
+  fam({ id: 'g9.vol.pyramid-height', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.b', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID', rung: 3, form: 'word',
     draw: () => { const b = pick([3, 5, 6, 9, 10, 12]), h = pick([4, 6, 9, 12, 15]); const v = (b * b * h) / 3; return Number.isInteger(v) ? { b, h, v } : null; },
     make: ({ b, h, v }) => ({
       question: `A monument is made of ${T(v)} m³ of concrete. It is a solid pyramid standing on a ${b} m by ${b} m square. How tall is the monument, in metres?`,
       answer: h,
-      wrong: [[round(v / (b * b), 2), 'The volume of a pyramid has a one third in it. Multiply by 3 before dividing.'], [round((3 * v) / b, 2), 'The base area is the side times the side, so divide by b × b.'], [round(v * 3 * b * b, 2), 'To find the height you divide the volume by the base area. Do not multiply.'], [round(v / 3 / b, 2), 'You need to multiply the volume by 3 and divide by the base area.']],
+      wrong: [[round(v / (b * b), 2), 'The volume of a pyramid has a one third in it. Multiply by 3 before dividing.', 'M_HEIGHT_NO_TIMES_THREE'], [round((3 * v) / b, 2), 'The base area is the side times the side, so divide by b × b.', 'M_BASE_SIDE_FOR_AREA'], [round(v * 3 * b * b, 2), 'To find the height you divide the volume by the base area. Do not multiply.', 'M_BASE_AREA_MULTIPLIED'], [round(v / 3 / b, 2), 'You need to multiply the volume by 3 and divide by the base area.', 'M_THIRD_APPLIED_BACKWARDS']],
       hints: ['Volume = ⅓ × base area × height.', 'Work backwards: multiply the volume by 3, then divide by the base area.'],
       steps: [`Base area: ${b} × ${b} = ${b * b} m².`, `${T(v)} = ⅓ × ${b * b} × h, so h = ${T(v)} × 3 ÷ ${b * b} = ${h} m.`] }),
     check: ({ b, v }, a) => (b * b * a) / 3 === v }),
 
-  fam({ id: 'g9.vol.cone-sand', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.c', rung: 3, form: 'word',
+  fam({ id: 'g9.vol.cone-sand', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.c', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE', rung: 3, form: 'word',
     draw: () => { const h = pick([3, 6, 9, 12]); return { r: 7, h, cap: 14, who: person() }; },
     make: ({ r, h, cap, who }) => {
       const v = round((PI * r * r * h) / 3, 2);
       return { question: `A heap of sand is a cone with a radius of ${r} m and a height of ${h} m. ${who.name} hires a lorry that carries ${cap} m³ of sand each trip. How many trips are needed to move all the sand? (Use π = 22/7)`,
         answer: v / cap,
-        wrong: [[round((PI * r * r * h) / cap, 2), 'A cone is one third of a cylinder with the same base and height. Remember the ⅓.'], [round((PI * r * r * h) / 3 / cap / 2, 2), 'Check the radius. The base area is π × r × r.'], [v, 'That is the volume of the heap in m³. Divide by the load of each trip.'], [round((PI * (2 * r) * (2 * r) * h) / 3 / cap, 2), 'The radius is given, not the diameter. Do not double it.']],
+        wrong: [[round((PI * r * r * h) / cap, 2), 'A cone is one third of a cylinder with the same base and height. Remember the ⅓.', 'M_CONE_THIRD_LEFT_OUT'], [round((PI * r * r * h) / 3 / cap / 2, 2), 'Check the radius. The base area is π × r × r.', 'M_RADIUS_HALVED'], [v, 'That is the volume of the heap in m³. Divide by the load of each trip.', 'M_VOLUME_NOT_TRIPS'], [round((PI * (2 * r) * (2 * r) * h) / 3 / cap, 2), 'The radius is given, not the diameter. Do not double it.', 'M_DIAMETER_AS_RADIUS']],
         hints: ['First find the volume of the cone.', 'Then divide by the amount in one trip.'],
         steps: [`Volume: ⅓ × 22/7 × ${r} × ${r} × ${h} = ${T(v)} m³.`, `Trips: ${T(v)} ÷ ${cap} = ${T(v / cap)}.`] };
     },
     check: ({ r, h, cap }, a) => Math.abs((a * cap * 3) / h - (22 / 7) * r * r) < 0.01 }),
 
-  fam({ id: 'g9.vol.bucket-frustum', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.d', rung: 3, form: 'steps',
+  fam({ id: 'g9.vol.bucket-frustum', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.d', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM', rung: 3, form: 'steps',
     draw: () => ({ h: pick([18, 24, 30]), who: person() }),
     make: ({ h, who }) => {
       const H = 2 * h, big = round((PI * 14 * 14 * H) / 3, 2), small = round((PI * 7 * 7 * h) / 3, 2), bucket = round(big - small, 2);
       return { question: `${who.name}'s bucket is a cone with its pointed end cut off. The cone it was cut from has a radius of 14 cm at the top and a height of ${H} cm. The piece cut off is a small cone with a radius of 7 cm and a height of ${h} cm. Use π = 22/7.`,
         parts: [
-          { prompt: 'Volume of the whole cone, in cm³:', answer: big, unit: 'cm³', hint: 'Volume of a cone = ⅓ × π × r × r × height.', wrong: [[round(PI * 14 * 14 * H, 2), 'A cone has one third of the volume of a cylinder.'], [round((PI * 7 * 7 * H) / 3, 2), 'Use the radius of the big cone, 14 cm.']] },
-          { prompt: 'Volume of the small cone that was cut off, in cm³:', answer: small, unit: 'cm³', hint: 'Use its own radius and its own height.', wrong: [[round((PI * 7 * 7 * H) / 3, 2), 'The small cone is only as tall as the piece cut off.'], [round((PI * 14 * 14 * h) / 3, 2), 'The small cone has a radius of 7 cm.']] },
-          { prompt: 'Volume of the bucket, in cm³:', answer: bucket, unit: 'cm³', hint: 'Take the small cone away from the whole cone.', wrong: [[round(big + small, 2), 'The small cone was cut away, so take it away.'], [big, 'The cut-off piece is not part of the bucket.']] },
-          { prompt: 'How many litres does the bucket hold? (1 litre = 1,000 cm³)', answer: bucket / 1000, unit: 'litres', hint: 'Divide by 1,000.', wrong: [[bucket / 100, 'There are 1,000 cm³ in a litre.'], [bucket * 1000, 'Divide, because a litre is bigger than a cm³.']] },
+          { prompt: 'Volume of the whole cone, in cm³:', answer: big, unit: 'cm³', hint: 'Volume of a cone = ⅓ × π × r × r × height.', wrong: [[round(PI * 14 * 14 * H, 2), 'A cone has one third of the volume of a cylinder.', 'M_BIG_CONE_NO_THIRD'], [round((PI * 7 * 7 * H) / 3, 2), 'Use the radius of the big cone, 14 cm.', 'M_CONE_RADII_MIXED']] },
+          { prompt: 'Volume of the small cone that was cut off, in cm³:', answer: small, unit: 'cm³', hint: 'Use its own radius and its own height.', wrong: [[round((PI * 7 * 7 * H) / 3, 2), 'The small cone is only as tall as the piece cut off.', 'M_BIG_HEIGHT_FOR_SMALL'], [round((PI * 14 * 14 * h) / 3, 2), 'The small cone has a radius of 7 cm.', 'M_CONE_RADII_MIXED']] },
+          { prompt: 'Volume of the bucket, in cm³:', answer: bucket, unit: 'cm³', hint: 'Take the small cone away from the whole cone.', wrong: [[round(big + small, 2), 'The small cone was cut away, so take it away.', 'M_SMALL_CONE_ADDED'], [big, 'The cut-off piece is not part of the bucket.', 'M_SMALL_CONE_KEPT']] },
+          { prompt: 'How many litres does the bucket hold? (1 litre = 1,000 cm³)', answer: bucket / 1000, unit: 'litres', hint: 'Divide by 1,000.', wrong: [[bucket / 100, 'There are 1,000 cm³ in a litre.', 'M_LITRE_FACTOR_WRONG'], [bucket * 1000, 'Divide, because a litre is bigger than a cm³.', 'M_LITRE_DIRECTION_WRONG']] },
         ],
         hints: ['Bucket = whole cone minus the cut-off cone.'],
         steps: [`Whole cone: ⅓ × 22/7 × 14 × 14 × ${H} = ${T(big)} cm³.`, `Small cone: ⅓ × 22/7 × 7 × 7 × ${h} = ${T(small)} cm³.`, `Bucket: ${T(big)} − ${T(small)} = ${T(bucket)} cm³.`, `Litres: ${T(bucket)} ÷ 1,000 = ${T(bucket / 1000)}.`] };
     },
     check: ({ h }, v) => Math.abs(v[0] - v[1] * 8) < 0.01 && Math.abs(v[2] - (v[0] - v[1])) < 0.01 && Math.abs(v[3] * 1000 - v[2]) < 0.01 && Math.abs(v[1] - (22 / 7 / 3) * 49 * h) < 0.01 }),
 
-  fam({ id: 'g9.vol.frustum-scale', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.d', rung: 3, form: 'word',
+  fam({ id: 'g9.vol.frustum-scale', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.d', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM', rung: 3, form: 'word',
     draw: () => { const k = pick([2, 3]), m = pick([10, 20, 30, 40, 50]); return { k, v: k ** 3 * m, who: person() }; },
     make: ({ k, v, who }) => {
       const small = v / k ** 3;
       return { question: `${who.name} makes a bucket by cutting the pointed end off a cone. The whole cone would hold ${T(v)} cm³ of water. The piece cut off is a small cone of the same shape, only ${k === 2 ? 'half' : 'one third'} as tall as the whole cone. How many cm³ does the bucket hold?`,
         answer: v - small,
-        wrong: [[v - v / k, 'The small cone is smaller than that. Volumes change by the scale factor cubed.'], [v - v / k ** 2, `Area changes by the scale factor squared, but volume changes by the scale factor cubed.`], [small, 'That is the volume of the piece cut off. The bucket is what is left.'], [v, 'The small cone has been cut off, so it is not part of the bucket.']],
+        wrong: [[v - v / k, 'The small cone is smaller than that. Volumes change by the scale factor cubed.', 'M_SCALE_NOT_CUBED'], [v - v / k ** 2, `Area changes by the scale factor squared, but volume changes by the scale factor cubed.`, 'M_SCALE_SQUARED'], [small, 'That is the volume of the piece cut off. The bucket is what is left.', 'M_SMALL_CONE_AS_BUCKET'], [v, 'The small cone has been cut off, so it is not part of the bucket.', 'M_SMALL_CONE_KEPT']],
         hints: ['Similar solids: the volume is multiplied by the scale factor cubed.', 'Bucket = whole cone minus the small cone.'],
         steps: [`The small cone is ${k === 2 ? 'half' : 'one third'} as tall, so its volume is 1/${k ** 3} of the whole.`, `Small cone: ${T(v)} ÷ ${k ** 3} = ${T(small)} cm³.`, `Bucket: ${T(v)} − ${T(small)} = ${T(v - small)} cm³.`] };
     },
     check: ({ k, v }, a) => a * k ** 3 === v * (k ** 3 - 1) }),
 
-  fam({ id: 'g9.vol.hemisphere-bowl', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.e', rung: 2, form: 'word',
+  fam({ id: 'g9.vol.hemisphere-bowl', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.e', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE', rung: 2, form: 'word',
     draw: () => ({ r: pick([10.5, 21]), what: pick(['gourd bowl', 'wooden bowl', 'clay pot']) }),
     make: ({ r, what }) => {
       const v = round((2 / 3) * PI * r ** 3, 2), full = round((4 / 3) * PI * r ** 3, 2);
       return { question: `A ${what} is exactly half of a ball. From the middle of its flat top to the rim is ${r} cm. How many cm³ of porridge does it hold when full? Use π = 22/7.`,
         answer: v,
-        wrong: [[full, 'That is the volume of a whole sphere. The bowl is half of one.'], [round((2 / 3) * PI * r * r, 2), 'Volume needs the radius three times: r × r × r.'], [round(PI * r ** 3 * 2, 2), 'A sphere is ⁴⁄₃ π r³. Half of that is ⅔ π r³.'], [round(PI * r * r * r / 3, 2), 'The sphere has ⁴⁄₃ π r³, so the half has ⅔ π r³, not ⅓.']],
+        wrong: [[full, 'That is the volume of a whole sphere. The bowl is half of one.', 'M_HEMISPHERE_WHOLE_SPHERE'], [round((2 / 3) * PI * r * r, 2), 'Volume needs the radius three times: r × r × r.', 'M_RADIUS_SQUARED_NOT_CUBED'], [round(PI * r ** 3 * 2, 2), 'A sphere is ⁴⁄₃ π r³. Half of that is ⅔ π r³.', 'M_SPHERE_FRACTION_WRONG'], [round(PI * r * r * r / 3, 2), 'The sphere has ⁴⁄₃ π r³, so the half has ⅔ π r³, not ⅓.', 'M_CONE_THIRD_FOR_HEMISPHERE']],
         hints: ['A sphere has volume ⁴⁄₃ π r³.', 'The bowl is half of that.'],
         steps: [`Whole sphere: ⁴⁄₃ × 22/7 × ${r}³ = ${T(full)} cm³.`, `Half: ${T(full)} ÷ 2 = ${T(v)} cm³.`] };
     },
     check: ({ r }, a) => Math.abs(a * 2 - (4 / 3) * (22 / 7) * r ** 3) < 0.02 }),
 
-  fam({ id: 'g9.vol.sphere-recast', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.e', rung: 3, form: 'word',
+  fam({ id: 'g9.vol.sphere-recast', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.e', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE', rung: 3, form: 'word',
     draw: () => { const [R, r] = pick([[6, 3], [9, 3], [12, 3], [15, 3], [4, 2], [6, 2], [8, 2], [10, 5]]); return { R, r }; },
     make: ({ R, r }) => ({
       question: `A metalworker melts one solid metal sphere of radius ${R} cm. The metal is cast into small solid spheres of radius ${r} cm. No metal is lost. How many small spheres can be made?`,
       answer: (R / r) ** 3,
-      wrong: [[R / r, 'The radius is ' + (R / r) + ' times bigger, but the volume grows with the radius three times over.'], [(R / r) ** 2, 'That compares surface areas. Compare volumes, which use r × r × r.'], [R ** 3 - r ** 3, 'Divide the big volume by the small volume. Do not subtract.'], [(R - r) ** 3, 'Divide the volume of the big sphere by the volume of a small one.']],
+      wrong: [[R / r, 'The radius is ' + (R / r) + ' times bigger, but the volume grows with the radius three times over.', 'M_RADIUS_RATIO_NOT_CUBED'], [(R / r) ** 2, 'That compares surface areas. Compare volumes, which use r × r × r.', 'M_RADIUS_RATIO_SQUARED'], [R ** 3 - r ** 3, 'Divide the big volume by the small volume. Do not subtract.', 'M_VOLUMES_SUBTRACTED'], [(R - r) ** 3, 'Divide the volume of the big sphere by the volume of a small one.', 'M_RADII_SUBTRACTED_CUBED']],
       hints: ['The metal keeps the same volume. Compare the volume of the big sphere with the volume of one small sphere.', 'Volume of a sphere = ⁴⁄₃ π r³. The ⁴⁄₃ π cancels.'],
       steps: [`Big sphere: ⁴⁄₃ π × ${R}³. Small sphere: ⁴⁄₃ π × ${r}³.`, `Number = ${R}³ ÷ ${r}³ = ${R ** 3} ÷ ${r ** 3} = ${(R / r) ** 3}.`] }),
     check: ({ R, r }, a) => a * r ** 3 === R ** 3 }),
@@ -995,15 +996,15 @@ export const FAMILIES = [
     },
     check: ({ rho }, a) => a * 40 === rho * 40 }),
 
-  fam({ id: 'g9.vol.sphere-double-why', skill: 'G9_VOLUME_ADV', outcome: 'G9.VOL.e', rung: 3, form: 'why',
+  fam({ id: 'g9.vol.sphere-double-why', skill: 'G9_VOLUME_ADV', outcome: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.e', cskill: 'MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE', rung: 3, form: 'why',
     draw: () => ({ k: pick([2, 3]), r: pick([2, 3, 4, 5]), what: pick(['ball', 'water tank', 'sphere of clay']) }),
     make: ({ k, r, what }) => ({
       question: `The radius of a ${what} is ${r} cm. It is made ${k} times as wide, so its radius is ${k * r} cm. A learner says its volume becomes ${k ** 3} times as big. Why?`,
       options: [
         { text: `The volume of a sphere uses r × r × r, so multiplying r by ${k} multiplies the volume by ${Array(3).fill(k).join(' × ')}`, right: true },
-        { text: `The volume of a sphere uses r × r, so multiplying r by ${k} multiplies the volume by ${k} × ${k}`, right: false, why: 'That is how the surface area grows. Volume has the radius three times: r × r × r.' },
-        { text: `The volume grows by the same number as the radius, so it is multiplied by ${k}`, right: false, why: 'Volume does not grow in step with the radius. It uses the radius three times over.' },
-        { text: `The volume of a sphere uses the number 3, so it is multiplied by ${k} + ${k} + ${k}`, right: false, why: 'The 3 in r³ means r × r × r, not r + r + r.' },
+        { text: `The volume of a sphere uses r × r, so multiplying r by ${k} multiplies the volume by ${k} × ${k}`, right: false, why: 'That is how the surface area grows. Volume has the radius three times: r × r × r.', mis: 'M_RADIUS_RATIO_SQUARED' },
+        { text: `The volume grows by the same number as the radius, so it is multiplied by ${k}`, right: false, why: 'Volume does not grow in step with the radius. It uses the radius three times over.', mis: 'M_RADIUS_RATIO_NOT_CUBED' },
+        { text: `The volume of a sphere uses the number 3, so it is multiplied by ${k} + ${k} + ${k}`, right: false, why: 'The 3 in r³ means r × r × r, not r + r + r.', mis: 'M_CUBE_AS_TIMES_THREE' },
       ],
       hints: ['What is the formula for the volume of a sphere? How many times does r appear?', 'Try it: put r and then k × r into the formula.'],
       steps: [`Volume = ⁴⁄₃ π r³. With radius ${k}r the volume is ⁴⁄₃ π (${k}r)³ = ${k ** 3} × ⁴⁄₃ π r³.`, `So the volume is ${k ** 3} times as big.`] }) }),

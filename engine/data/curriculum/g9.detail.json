@@ -606,6 +606,51 @@
     "curved surface"
    ],
    "mastery": "The child uses 4 pi r squared for a sphere, half of it for the curved part of a hemisphere, and adds the flat circle for a solid hemisphere (3 pi r squared), and uses the area for paint or plating: a tank of radius 7 m has 616 square m, so at 14 square m a litre it needs 44 litres."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM": {
+   "forms": [
+    "how many litres",
+    "volume of the pool",
+    "which step is wrong",
+    "area of the end times the length"
+   ],
+   "mastery": "The child finds the area of the end (a triangle, rectangle or trapezium) and multiplies by the length, then changes cubic cm to litres (divide by 1,000) or cubic m to litres (multiply by 1,000): a trough with triangular ends of base 40 cm and height 30 cm, 150 cm long, holds 90,000 cubic cm = 90 litres."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID": {
+   "forms": [
+    "volume of the pyramid",
+    "how tall",
+    "how many litres",
+    "compared with the cuboid"
+   ],
+   "mastery": "The child finds a pyramid as one third of base area times height (one third of the prism on the same base and height), and works back to the height by multiplying the volume by 3 and dividing by the base area."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE": {
+   "forms": [
+    "volume of the heap",
+    "how many trips",
+    "how many litres",
+    "one third"
+   ],
+   "mastery": "The child finds a cone as one third of pi r squared times h, using the radius (half the diameter), and uses the volume for loads and capacity: a heap of sand of radius 3.5 m and height 2 m is about 25.7 cubic m, so a lorry of 6 cubic m needs 5 trips."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM": {
+   "forms": [
+    "capacity of the bucket",
+    "volume of the cut-off cone",
+    "complete the steps",
+    "what is left"
+   ],
+   "mastery": "The child finds the volume of a frustum (a bucket, a lampshade) as the whole cone minus the small cone cut off, each with its own radius and height, and changes it to litres; when the small cone is a scale copy, uses the cube of the scale factor."
+  },
+  "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE": {
+   "forms": [
+    "volume of the bowl",
+    "how many small spheres",
+    "why 8 times",
+    "capacity in litres"
+   ],
+   "mastery": "The child uses four thirds pi r cubed for a sphere and two thirds pi r cubed for a hemisphere, uses the radius three times, and compares volumes of spheres by the cube of the radius: melting a sphere of radius 6 cm gives 8 spheres of radius 3 cm."
   }
  }
 }

@@ -1,0 +1,611 @@
+{
+ "sub_strand": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS",
+ "title": "Volume of Solids",
+ "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Official outcomes a to e are tested; f (promote the use) is not a question. Volume of triangular and rectangular prisms (a), pyramids as one third of the prism on the same base (b), cones (c), frustums as a big cone minus the small cone cut off (d) and spheres and hemispheres (e), with capacity in litres. Grade 7 did cuboids and cylinders. g9.vol.frustum-scale uses the cube of the scale factor for the cut-off cone, which links to Similarity and Enlargement; a teacher should confirm learners meet volume scale factors before this family.",
+ "skills": [
+  {
+   "skill": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM",
+   "key_step": "The child finds the area of the end first, multiplies by the length, then changes units in one separate step.",
+   "floor": {
+    "prerequisite": "Finds the volume of a cuboid.",
+    "question": "2 by 3 by 4",
+    "answer": "24"
+   },
+   "representations": [
+    "a prism sliced like bread",
+    "end area x length",
+    "a units ladder cubic cm to litres"
+   ],
+   "steps": [
+    "Area of the end.",
+    "Times the length.",
+    "Change to litres if asked.",
+    "Check the size makes sense."
+   ],
+   "contexts": [
+    "a calf's feeding trough",
+    "a school swimming pool with a sloping floor",
+    "a water tank on a stand"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a trough with a triangular end and slices along its length."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one slice.",
+     "say": "How much water is in one 1 cm slice?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the area of the end."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write end area x 150 slices."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_END_NOT_HALVED",
+     "listen_for": [
+      "180,000"
+     ],
+     "ask": "Is the end a rectangle?",
+     "repair": "A triangle: half."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_CM3_NOT_LITRES",
+     "listen_for": [
+      "90,000 litres"
+     ],
+     "ask": "Is a cubic cm a litre?",
+     "repair": "No: 1,000 of them."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_PYRAMID_THIRD_FOR_PRISM",
+     "listen_for": [
+      "30,000"
+     ],
+     "ask": "Does the trough come to a point?",
+     "repair": "No: no third."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_LITRE_FACTOR_WRONG",
+     "listen_for": [
+      "900"
+     ],
+     "ask": "How many cubic cm in a litre?",
+     "repair": "1,000."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_TRAPEZIUM_NOT_HALVED",
+     "listen_for": [
+      "80"
+     ],
+     "ask": "Area of a trapezium?",
+     "repair": "Half the sum times the length."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_WIDTH_LEFT_OUT",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "Is that the wall or the water?",
+     "repair": "The wall: times the width."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_LENGTH_ADDED",
+     "listen_for": [
+      "750"
+     ],
+     "ask": "Slices: add or multiply?",
+     "repair": "Multiply."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_LENGTH_USED_TWICE",
+     "listen_for": [
+      "800"
+     ],
+     "ask": "Did the wall already use the 20 m?",
+     "repair": "Yes: now times the width."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PRISM.M_LITRE_DIRECTION_WRONG",
+     "listen_for": [
+      "0.4 litres"
+     ],
+     "ask": "Is a cubic metre bigger than a litre?",
+     "repair": "Much bigger: multiply."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A prism has triangular ends of base 20 cm and height 15 cm, and is 80 cm long. Litres?",
+     "answer": "12 litres",
+     "shows": "end x length, then litres"
+    },
+    {
+     "question": "A pool 8 m wide, depths 1 m and 2 m, 25 m long. Volume?",
+     "answer": "300 cubic m",
+     "shows": "trapezium end"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID",
+   "key_step": "The child writes one third of base area times height, and to work back multiplies the volume by 3 before dividing by the base area.",
+   "floor": {
+    "prerequisite": "Finds the volume of a prism.",
+    "question": "Base 36, height 4",
+    "answer": "144"
+   },
+   "representations": [
+    "a pyramid inside a cuboid",
+    "three pyramids filling a cuboid",
+    "1/3 x base x height"
+   ],
+   "steps": [
+    "Base area.",
+    "Times the height.",
+    "One third of that.",
+    "To work back: 3 x volume / base area."
+   ],
+   "contexts": [
+    "a concrete monument",
+    "a sand mould at the beach",
+    "a pyramid-shaped tea bag"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a pyramid inside a cuboid with the same base and height."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cuboid.",
+     "say": "How many pyramids of water fill it?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child guesses."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write three: the pyramid is one third."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_PYRAMID_HALF",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "How many pyramids fill the cuboid?",
+     "repair": "Three."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_PYRAMID_SAME_AS_PRISM",
+     "listen_for": [
+      "30"
+     ],
+     "ask": "Does the pyramid fill the corners?",
+     "repair": "No: less."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_PYRAMID_TIMES_THREE",
+     "listen_for": [
+      "90"
+     ],
+     "ask": "Is the pyramid bigger?",
+     "repair": "No: divide."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_PYRAMID_MISSING_PART",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "Is 20 the pyramid or the empty space?",
+     "repair": "The space."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_HEIGHT_NO_TIMES_THREE",
+     "listen_for": [
+      "1.33"
+     ],
+     "ask": "Where is the third?",
+     "repair": "Multiply by 3 first."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_BASE_SIDE_FOR_AREA",
+     "listen_for": [
+      "24"
+     ],
+     "ask": "Is 6 the area of the base?",
+     "repair": "No: 36."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_BASE_AREA_MULTIPLIED",
+     "listen_for": [
+      "a huge height"
+     ],
+     "ask": "Is the monument taller than its volume?",
+     "repair": "No: divide by the base area."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_PYRAMID.M_THIRD_APPLIED_BACKWARDS",
+     "listen_for": [
+      "2.67"
+     ],
+     "ask": "How do you undo taking one third?",
+     "repair": "Multiply by 3."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A pyramid has a square base of side 9 m and height 10 m. Volume?",
+     "answer": "270 cubic m",
+     "shows": "one third"
+    },
+    {
+     "question": "A pyramid of volume 80 cubic cm has a base of 4 cm by 6 cm. Height?",
+     "answer": "10 cm",
+     "shows": "working back"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE",
+   "key_step": "The child writes one third pi r squared h with the radius, then uses the volume for the question asked (trips, litres) and rounds by the story.",
+   "floor": {
+    "prerequisite": "Finds the volume of a cylinder.",
+    "question": "r = 7, h = 10",
+    "answer": "1,540"
+   },
+   "representations": [
+    "a cone inside a cylinder",
+    "one third pi r squared h",
+    "a load table"
+   ],
+   "steps": [
+    "Find the radius.",
+    "pi r squared h.",
+    "One third of it.",
+    "Use it: divide by a load, change to litres."
+   ],
+   "contexts": [
+    "a heap of sand at a building site",
+    "an ice-cream cone",
+    "a heap of maize at a store"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cone inside a cylinder with the same base and height."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cylinder.",
+     "say": "How many cones fill it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for three."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write volume = 1/3 pi r squared h."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE.M_CONE_THIRD_LEFT_OUT",
+     "listen_for": [
+      "77"
+     ],
+     "ask": "Is the heap a cylinder?",
+     "repair": "No: one third."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE.M_DIAMETER_AS_RADIUS",
+     "listen_for": [
+      "used 7"
+     ],
+     "ask": "Is 7 the radius?",
+     "repair": "The diameter: use 3.5."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE.M_VOLUME_NOT_TRIPS",
+     "listen_for": [
+      "25.7"
+     ],
+     "ask": "Were trips asked?",
+     "repair": "Yes: divide by 6."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE.M_RADIUS_HALVED",
+     "listen_for": [
+      "1.75"
+     ],
+     "ask": "Did the question give the diameter?",
+     "repair": "No, the radius."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_CONE.M_TRIPS_ROUNDED_DOWN",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Is all the sand moved after 4 trips?",
+     "repair": "No: 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A cone has radius 6 cm and height 14 cm. Volume? (pi = 22/7)",
+     "answer": "528 cubic cm",
+     "shows": "one third"
+    },
+    {
+     "question": "A heap of 40 cubic m of sand; a lorry carries 7 cubic m. Trips?",
+     "answer": "6",
+     "shows": "round up"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM",
+   "key_step": "The child draws the whole cone and the small cone, labels each with its own radius and height, and subtracts.",
+   "floor": {
+    "prerequisite": "Finds the volume of a cone.",
+    "question": "r = 7, h = 15",
+    "answer": "770"
+   },
+   "representations": [
+    "a bucket with the missing tip drawn in",
+    "big cone minus small cone",
+    "a table of radius and height for each"
+   ],
+   "steps": [
+    "Volume of the whole cone.",
+    "Volume of the small cone cut off.",
+    "Subtract.",
+    "Change to litres if asked."
+   ],
+   "contexts": [
+    "a plastic bucket",
+    "a lampshade",
+    "a flower pot"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bucket and dash in the missing tip to make a whole cone."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the dashed tip.",
+     "say": "Is this part of the bucket?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write bucket = big cone - small cone."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_BIG_CONE_NO_THIRD",
+     "listen_for": [
+      "no third"
+     ],
+     "ask": "Is a cone a cylinder?",
+     "repair": "One third."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_CONE_RADII_MIXED",
+     "listen_for": [
+      "radius 7 for the big cone"
+     ],
+     "ask": "Which radius belongs to the big cone?",
+     "repair": "14."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_BIG_HEIGHT_FOR_SMALL",
+     "listen_for": [
+      "30 for the small cone"
+     ],
+     "ask": "How tall is the cut-off piece?",
+     "repair": "Its own height."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_SMALL_CONE_ADDED",
+     "listen_for": [
+      "6,930"
+     ],
+     "ask": "Is the tip part of the bucket?",
+     "repair": "No: subtract."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_SMALL_CONE_KEPT",
+     "listen_for": [
+      "6,160"
+     ],
+     "ask": "Did you cut off the tip?",
+     "repair": "Take it away."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_SCALE_NOT_CUBED",
+     "listen_for": [
+      "1/2"
+     ],
+     "ask": "Every length halves. What happens to volume?",
+     "repair": "1/8."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_SCALE_SQUARED",
+     "listen_for": [
+      "1/4"
+     ],
+     "ask": "Is 1/4 for area or volume?",
+     "repair": "Area: volume is 1/8."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_FRUSTUM.M_SMALL_CONE_AS_BUCKET",
+     "listen_for": [
+      "770"
+     ],
+     "ask": "Which part holds the water?",
+     "repair": "The part left."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A whole cone holds 8,000 cubic cm. The tip cut off is half as tall. The frustum holds?",
+     "answer": "7,000 cubic cm",
+     "shows": "scale cubed"
+    },
+    {
+     "question": "Big cone 4,312 cubic cm, small cone 539 cubic cm. Bucket in litres?",
+     "answer": "3.773 litres",
+     "shows": "subtract and convert"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE",
+   "key_step": "The child writes the radius three times, uses four thirds for a sphere and two thirds for a hemisphere, and compares spheres by the cube of the radius.",
+   "floor": {
+    "prerequisite": "Cubes a number.",
+    "question": "7 cubed",
+    "answer": "343"
+   },
+   "representations": [
+    "a ball cut in half",
+    "4/3 pi r cubed",
+    "a table of radius and volume"
+   ],
+   "steps": [
+    "r x r x r.",
+    "Sphere: times 4/3 pi. Hemisphere: times 2/3 pi.",
+    "For recasting: big volume / small volume.",
+    "Change units if asked."
+   ],
+   "contexts": [
+    "a porridge bowl",
+    "melting metal balls at a jua kali workshop",
+    "a round water tank"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write radius 6 and radius 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 6 and 3.",
+     "say": "The radius halves. What happens to the volume?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child guesses."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2 x 2 x 2 = 8 small spheres."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_HEMISPHERE_WHOLE_SPHERE",
+     "listen_for": [
+      "1,437"
+     ],
+     "ask": "Is the bowl a whole ball?",
+     "repair": "Half."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_RADIUS_SQUARED_NOT_CUBED",
+     "listen_for": [
+      "102.7"
+     ],
+     "ask": "How many times is r used for volume?",
+     "repair": "Three."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_SPHERE_FRACTION_WRONG",
+     "listen_for": [
+      "2 pi r cubed"
+     ],
+     "ask": "Half of four thirds?",
+     "repair": "Two thirds."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_CONE_THIRD_FOR_HEMISPHERE",
+     "listen_for": [
+      "1/3"
+     ],
+     "ask": "Is the bowl a cone?",
+     "repair": "No: two thirds."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_RADIUS_RATIO_NOT_CUBED",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Does the volume halve when the radius halves?",
+     "repair": "It is an eighth."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_RADIUS_RATIO_SQUARED",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Is 4 for area or volume?",
+     "repair": "Area."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_VOLUMES_SUBTRACTED",
+     "listen_for": [
+      "189"
+     ],
+     "ask": "How many small ones fit the big one?",
+     "repair": "Divide."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_RADII_SUBTRACTED_CUBED",
+     "listen_for": [
+      "27"
+     ],
+     "ask": "Is 6 three more than 3, or twice 3?",
+     "repair": "Twice: 2 cubed = 8."
+    },
+    {
+     "code": "MATH.G9.MEASUR.VOLUME_OF_SOLIDS.VOL_SPHERE.M_CUBE_AS_TIMES_THREE",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "What is 3 cubed?",
+     "repair": "27."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Volume of a hemisphere of radius 3 cm in terms of pi?",
+     "answer": "18 pi cubic cm",
+     "shows": "two thirds"
+    },
+    {
+     "question": "A sphere of radius 4 cm is melted into spheres of radius 1 cm. How many?",
+     "answer": "64",
+     "shows": "cube of the ratio"
+    }
+   ]
+  }
+ ]
+}
