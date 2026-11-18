@@ -492,7 +492,7 @@ export const FAMILIES = [
     check: ({ h, k, ask, SA, V }, a) => (ask === 'area' ? a / SA === (k * h / h) ** 2 : a / V === (k * h / h) ** 3) }),
 
   // =========================== TRIGONOMETRY ===========================
-  fam({ id: 'g9.trig.which-fraction', skill: 'G9_TRIG_INTRO', outcome: 'G9.TRIG.b', rung: 1, form: 'direct',
+  fam({ id: 'g9.trig.which-fraction', skill: 'G9_TRIG_INTRO', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.b', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY', misMapped: false, reveals: ['M_RATIO_UPSIDE_DOWN', 'M_RATIOS_MIXED'], rung: 1, form: 'direct',
     draw: () => {
       const [x, y, z] = pick([[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]]), m = pick([1, 2]);
       const legs = Math.random() < 0.5 ? [x * m, y * m] : [y * m, x * m];
@@ -510,7 +510,7 @@ export const FAMILIES = [
         steps: [`Opposite angle ${ang}: ${opp} cm. Next to angle ${ang}: ${adj} cm. Hypotenuse: ${hyp} cm.`, `${r} ${ang} = ${full} = ${F[set[0][0]]}.`] };
     } }),
 
-  fam({ id: 'g9.trig.find-side-spot', skill: 'G9_TRIG_INTRO', outcome: 'G9.TRIG.b', rung: 2, form: 'spot',
+  fam({ id: 'g9.trig.find-side-spot', skill: 'G9_TRIG_INTRO', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.b', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY', rung: 2, form: 'spot',
     draw: () => ({ A: pick([20, 25, 35, 40, 55, 65]), H: pick([12, 15, 20, 25, 30, 40]), side: pick(['opposite', 'adjacent']), kind: pick(['ratio', 'op', 'val']), p: person() }),
     make: ({ A, H, side, kind, p }) => {
       const tr = side === 'opposite' ? 'sin' : 'cos', other = side === 'opposite' ? 'cos' : 'sin';
@@ -526,10 +526,11 @@ export const FAMILIES = [
       ];
       const fixes = { ratio: `The side x is ${side === 'opposite' ? 'opposite' : 'next to'} the angle and the other side given is the hypotenuse. That pair needs ${tr}, not ${other}.`, op: `From ${tr} ${A}° = x ÷ ${H}, multiply both sides by ${H}. Do not divide.`, val: `${usedR} ${A}° is ${val(usedR)}. The number used in the last step belongs to ${other}.` };
       return { question: `${p.name} finds the side x of a right-angled triangle. The hypotenuse is ${H} cm and x is the side ${side === 'opposite' ? 'opposite' : 'next to'} the ${A}° angle. The table gives sin ${A}° = ${val('sin')} and cos ${A}° = ${val('cos')}. Which step has the mistake?`,
-        working, fix: fixes[kind], steps: [`x is ${side} the angle, with the hypotenuse known: use ${tr}.`, `x = ${H} × ${tr} ${A}° = ${H} × ${val(tr)} = ${round(H * val(tr), 2)} cm.`] };
+        working, mis: { ratio: 'M_WRONG_RATIO_FOR_SIDES', op: 'M_DIVIDE_WHEN_UNKNOWN_ON_TOP', val: 'M_TABLE_VALUE_MISREAD' }[kind],
+        fix: fixes[kind], steps: [`x is ${side} the angle, with the hypotenuse known: use ${tr}.`, `x = ${H} × ${tr} ${A}° = ${H} × ${val(tr)} = ${round(H * val(tr), 2)} cm.`] };
     } }),
 
-  fam({ id: 'g9.trig.table-ladder-sine', skill: 'G9_TRIG_INTRO', outcome: 'G9.TRIG.c', rung: 2, form: 'table',
+  fam({ id: 'g9.trig.table-ladder-sine', skill: 'G9_TRIG_INTRO', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.c', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES', rung: 2, form: 'table',
     draw: () => {
       const A = randInt(24, 68), L = pick([4, 5, 6, 8, 10]), start = A - randInt(0, 4);
       const sv = TRIG.sin(A), sn = TRIG.sin(A + 1);
@@ -541,13 +542,13 @@ export const FAMILIES = [
       question: `A ladder of ${L} m leans against a wall and makes an angle of ${A}° with the ground. Use the table of sines to find how high up the wall the ladder reaches. Give the answer to 2 decimal places, in metres.`,
       model: { type: 'table', data: { head: ['Angle', 'sin'], rows: [0, 1, 2, 3, 4].map(i => ({ label: `${start + i}°`, value: TRIG.sin(start + i).toFixed(4) })) } },
       answer: a,
-      wrong: [[round(L / sv, 2), 'The height is the side opposite the angle, and the ladder is the hypotenuse. Multiply the ladder by the sine, do not divide.'], [round(L * sn, 2), 'That reads the row below the one needed. Check the angle in the table.'], [sv, 'That is the sine from the table. Now multiply by the length of the ladder.']],
+      wrong: [[round(L / sv, 2), 'The height is the side opposite the angle, and the ladder is the hypotenuse. Multiply the ladder by the sine, do not divide.', 'M_DIVIDE_BY_SINE'], [round(L * sn, 2), 'That reads the row below the one needed. Check the angle in the table.', 'M_TABLE_ROW_MISREAD'], [sv, 'That is the sine from the table. Now multiply by the length of the ladder.', 'M_RATIO_AS_LENGTH']],
       hints: ['The height is opposite the angle. The ladder is the hypotenuse.', 'Height = ladder length × sine of the angle.'],
       steps: [`From the table, sin ${A}° = ${sv}.`, `Height = ${L} × ${sv} = ${round(L * sv, 3)}, which is ${a} m to 2 decimal places.`],
     }),
     check: ({ L, sv }, v) => Math.abs(v - L * sv) <= 0.0051 }),
 
-  fam({ id: 'g9.trig.table-find-angle', skill: 'G9_TRIG_INTRO', outcome: 'G9.TRIG.c', rung: 1, form: 'table',
+  fam({ id: 'g9.trig.table-find-angle', skill: 'G9_TRIG_INTRO', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.c', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES', rung: 1, form: 'table',
     draw: () => {
       const A = randInt(22, 68), kind = pick(['sin', 'tan']), off = randInt(0, 4);
       if (A >= 42 && A <= 48) return null;
@@ -557,43 +558,43 @@ export const FAMILIES = [
       question: `A surveyor finds that the ${k} of the angle of a slope is ${TRIG[kind](A).toFixed(4)}. Use the table to find the angle.`, story: true,
       model: { type: 'table', data: { head: ['Angle', kind], rows: [0, 1, 2, 3, 4].map(i => ({ label: `${start + i}°`, value: TRIG[kind](start + i).toFixed(4) })) } },
       answer: A,
-      wrong: [[A + 1, 'That is the row below the right one. Match the value exactly.'], [A - 1, 'That is the row above the right one. Match the value exactly.'], [90 - A, 'That is the other acute angle of the triangle. The table gives the angle for this ratio.']],
+      wrong: [[A + 1, 'That is the row below the right one. Match the value exactly.', 'M_ANGLE_NEIGHBOUR'], [A - 1, 'That is the row above the right one. Match the value exactly.', 'SLIP'], [90 - A, 'That is the other acute angle of the triangle. The table gives the angle for this ratio.', 'M_COMPLEMENT_ANGLE']],
       hints: ['Find the value in the second column.', 'The angle is in the same row, in the first column.'],
       steps: [`Look down the ${kind} column for ${TRIG[kind](A).toFixed(4)}.`, `It is in the row for ${A}°.`],
     }),
     check: ({ kind, A }, a) => TRIG[kind](a) === TRIG[kind](A) }),
 
-  fam({ id: 'g9.trig.table-ramp-steps', skill: 'G9_TRIG_INTRO', outcome: 'G9.TRIG.c', rung: 2, form: 'steps',
+  fam({ id: 'g9.trig.table-ramp-steps', skill: 'G9_TRIG_INTRO', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.c', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES', rung: 2, form: 'steps',
     draw: () => ({ A: randInt(22, 68), L: pick([10, 12, 15, 20]), off: randInt(0, 2) }),
     make: ({ A, L, off }) => {
       const s = TRIG.sin(A), c = TRIG.cos(A);
       return { question: `A footpath up a hill is ${L} m long and climbs at ${A}° to the horizontal. Read the sine and the cosine of the angle from the table. Then find the rise of the path and its horizontal length.`,
         model: { type: 'table', data: { head: ['Angle', 'sin', 'cos'], rows: [0, 1, 2].map(i => { const a = A - off + i; return { cells: [`${a}°`, TRIG.sin(a).toFixed(4), TRIG.cos(a).toFixed(4)] }; }) } },
         parts: [
-          { prompt: `Read sin ${A}° from the table.`, answer: s, hint: `Find the row for ${A}° and the sin column.`, wrong: [[c, 'That is the cos column. Use the sin column.']] },
-          { prompt: 'Find how far the path rises, in metres, to 2 decimal places.', answer: round(L * s, 2), unit: 'm', hint: 'The rise is opposite the angle: path length × sine.', wrong: [[round(L * c, 2), 'The rise is opposite the angle, so use the sine, not the cosine.']] },
-          { prompt: `Read cos ${A}° from the table.`, answer: c, hint: 'Use the cos column.', wrong: [[s, 'That is the sin column. Use the cos column.']] },
-          { prompt: 'Find the horizontal length of the path, in metres, to 2 decimal places.', answer: round(L * c, 2), unit: 'm', hint: 'The horizontal length is next to the angle: path length × cosine.', wrong: [[round(L * s, 2), 'The horizontal length is next to the angle, so use the cosine.']] },
+          { prompt: `Read sin ${A}° from the table.`, answer: s, hint: `Find the row for ${A}° and the sin column.`, wrong: [[c, 'That is the cos column. Use the sin column.', 'M_WRONG_COLUMN_TRIG']] },
+          { prompt: 'Find how far the path rises, in metres, to 2 decimal places.', answer: round(L * s, 2), unit: 'm', hint: 'The rise is opposite the angle: path length × sine.', wrong: [[round(L * c, 2), 'The rise is opposite the angle, so use the sine, not the cosine.', 'M_COS_FOR_RISE']] },
+          { prompt: `Read cos ${A}° from the table.`, answer: c, hint: 'Use the cos column.', wrong: [[s, 'That is the sin column. Use the cos column.', 'M_WRONG_COLUMN_TRIG']] },
+          { prompt: 'Find the horizontal length of the path, in metres, to 2 decimal places.', answer: round(L * c, 2), unit: 'm', hint: 'The horizontal length is next to the angle: path length × cosine.', wrong: [[round(L * s, 2), 'The horizontal length is next to the angle, so use the cosine.', 'M_SIN_FOR_RUN']] },
         ],
         steps: [`sin ${A}° = ${s} and cos ${A}° = ${c}.`, `Height = ${L} × ${s} = ${round(L * s, 2)} m.`, `Horizontal length: ${L} × ${c} = ${round(L * c, 2)} m.`] };
     },
     check: ({ L }, v) => Math.abs(v[1] - L * v[0]) <= 0.0051 && Math.abs(v[3] - L * v[2]) <= 0.0051 && Math.abs(v[0] ** 2 + v[2] ** 2 - 1) < 0.001 }),
 
-  fam({ id: 'g9.trig.building-elevation-depression', skill: 'G9_TRIG_PROBLEMS', outcome: 'G9.TRIG.e', rung: 3, form: 'steps',
+  fam({ id: 'g9.trig.building-elevation-depression', skill: 'G9_TRIG_PROBLEMS', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.e', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH', rung: 3, form: 'steps',
     draw: () => ({ A: pick([32, 35, 38, 40, 42, 48]), d: pick([20, 25, 40, 50, 80]), eye: pick([1.5, 1.6]) }),
     make: ({ A, d, eye }) => {
       const t = TRIG.tan(A), h = round(d * t, 1);
       return { question: `A learner's eyes are ${eye} m above the ground, ${d} m from the foot of the school building. The angle of elevation of the top of the building from the learner's eyes is ${A}°. Use tan ${A}° = ${t}.`,
         parts: [
-          { prompt: 'How high is the top of the building above the learner\'s eyes, in metres, to 1 decimal place?', answer: h, unit: 'm', hint: 'The height is opposite the angle and the distance is next to it. Use the tangent.', wrong: [[round(d / t, 1), 'The height is opposite the angle: height = distance × tan, not divided by it.']] },
-          { prompt: 'How high is the building above the ground, in metres?', answer: round(h + eye, 1), unit: 'm', hint: 'Add the height of the eyes above the ground.', wrong: [[h, 'The eyes are not at ground level. Add their height.']] },
-          { prompt: 'From the top of the building, what is the angle of depression of the learner\'s eyes?', answer: A, unit: '°', hint: 'The horizontal lines at the top and at eye level are parallel.', wrong: [[90 - A, 'Angles of depression and elevation are equal, not complementary.']] },
+          { prompt: 'How high is the top of the building above the learner\'s eyes, in metres, to 1 decimal place?', answer: h, unit: 'm', hint: 'The height is opposite the angle and the distance is next to it. Use the tangent.', wrong: [[round(d / t, 1), 'The height is opposite the angle: height = distance × tan, not divided by it.', 'M_TAN_DIVIDED']] },
+          { prompt: 'How high is the building above the ground, in metres?', answer: round(h + eye, 1), unit: 'm', hint: 'Add the height of the eyes above the ground.', wrong: [[h, 'The eyes are not at ground level. Add their height.', 'M_EYE_HEIGHT_FORGOTTEN']] },
+          { prompt: 'From the top of the building, what is the angle of depression of the learner\'s eyes?', answer: A, unit: '°', hint: 'The horizontal lines at the top and at eye level are parallel.', wrong: [[90 - A, 'Angles of depression and elevation are equal, not complementary.', 'M_DEPRESSION_COMPLEMENT']] },
         ],
         steps: [`Height above the eyes = ${d} × ${t} = ${h} m.`, `Building height = ${h} + ${eye} = ${round(h + eye, 1)} m.`, `Alternate angles are equal, so the angle of depression is ${A}°.`] };
     },
     check: ({ A, d, eye }, v) => Math.abs(v[0] - d * TRIG.tan(A)) <= 0.051 && Math.abs(v[1] - v[0] - eye) < 1e-6 && v[2] === A }),
 
-  fam({ id: 'g9.trig.which-ratio-ramp', skill: 'G9_TRIG_PROBLEMS', outcome: 'G9.TRIG.e', rung: 2, form: 'why',
+  fam({ id: 'g9.trig.which-ratio-ramp', skill: 'G9_TRIG_PROBLEMS', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.e', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH', misMapped: false, reveals: ['M_ANY_RATIO_WORKS', 'M_RATIO_SIDES_MISMATCHED'], rung: 2, form: 'why',
     draw: () => ({ pair: pick([['hyp', 'opp'], ['hyp', 'adj'], ['adj', 'opp'], ['opp', 'hyp'], ['adj', 'hyp'], ['opp', 'adj']]), k: randInt(0, 3) }),
     make: ({ pair, k }) => {
       const NAME = { hyp: 'the length of the ramp', opp: 'the height of the platform', adj: 'the distance along the ground' };
@@ -606,7 +607,7 @@ export const FAMILIES = [
         steps: ['The ramp is the hypotenuse. The platform height is opposite the angle. The distance along the ground is adjacent to it.', `The ratio that joins ${NAME[pair[0]]} and ${NAME[pair[1]]} is ${opts.find(o => o.right).text.split(',')[0].toLowerCase()}.`] };
     } }),
 
-  fam({ id: 'g9.trig.tower-height-spot', skill: 'G9_TRIG_PROBLEMS', outcome: 'G9.TRIG.e', rung: 2, form: 'spot',
+  fam({ id: 'g9.trig.tower-height-spot', skill: 'G9_TRIG_PROBLEMS', outcome: 'MATH.G9.GEOMET.TRIGONOMETRY.e', cskill: 'MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH', rung: 2, form: 'spot',
     draw: () => ({ A: pick([32, 35, 38, 40, 42, 48]), d: pick([20, 40, 50, 80]), eye: pick([1.4, 1.5, 1.6]), kind: pick(['flip', 'eye', 'slip']), p: person() }),
     make: ({ A, d, eye, kind, p }) => {
       const t = TRIG.tan(A), op = kind === 'flip' ? '÷' : '×';
@@ -621,7 +622,8 @@ export const FAMILIES = [
       ];
       const fixes = { flip: 'The tangent is opposite ÷ adjacent. The height is the opposite side, so it goes on the top.', eye: `The sighting tube is ${eye} m above the ground. That must be added to get the height of the tree.`, slip: `${d} × ${t} was worked out wrongly. The decimal point is in the wrong place.` };
       return { question: `${p.name} wants the height of a tree. ${p.She} sights its top at an angle of elevation of ${A}° from a spot ${d} m from its foot, holding a sighting tube ${eye} m above the ground. Using tan ${A}° = ${t}, ${p.she} works as shown. Which step has the mistake?`,
-        working, fix: fixes[kind], steps: [`tan ${A}° = height above the tube ÷ ${d}, so the height is ${d} × ${t} = ${round(d * t, 1)} m.`, `Add the height of the tube: ${round(d * t, 1)} + ${eye} = ${round(d * t + eye, 1)} m.`] };
+        working, mis: { flip: 'M_TAN_UPSIDE_DOWN_E', eye: 'M_EYE_HEIGHT_FORGOTTEN', slip: 'SLIP' }[kind],
+        fix: fixes[kind], steps: [`tan ${A}° = height above the tube ÷ ${d}, so the height is ${d} × ${t} = ${round(d * t, 1)} m.`, `Add the height of the tube: ${round(d * t, 1)} + ${eye} = ${round(d * t + eye, 1)} m.`] };
     } }),
 
   // =========================== GROUPED DATA ===========================

@@ -1074,6 +1074,60 @@
     "why is this wrong"
    ],
    "mastery": "The child uses the square of the linear scale factor for areas and its cube for volumes and capacities (a tank twice as wide holds 8 times as much), and works back from a volume factor to the linear factor by the cube root and on to the area factor by squaring."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES": {
+   "forms": [
+    "which side is opposite",
+    "name the hypotenuse",
+    "adjacent to the angle",
+    "from the other angle"
+   ],
+   "mastery": "The child names the hypotenuse (opposite the right angle, the longest side), the opposite side (across from the given angle) and the adjacent side (next to the given angle, not the hypotenuse), and renames them when the other acute angle is used."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY": {
+   "forms": [
+    "which fraction is sin A",
+    "write cos B",
+    "which step is wrong",
+    "find the side"
+   ],
+   "mastery": "The child writes sin = opposite / hypotenuse, cos = adjacent / hypotenuse and tan = opposite / adjacent for a given angle, picks the right fraction from a triangle with known sides, and uses the ratio to set up the side asked: opposite = hypotenuse x sin."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES": {
+   "forms": [
+    "use the table of sines",
+    "find the angle",
+    "rise and horizontal length",
+    "how high up the wall"
+   ],
+   "mastery": "The child reads sin, cos or tan of an angle from the right column and row of the table, uses it to find a side (multiplying by the hypotenuse for the rise and run of a path), and reads the table backwards to find the angle whose ratio is given."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR": {
+   "forms": [
+    "use a calculator",
+    "which key",
+    "find the angle",
+    "round to 4 decimal places"
+   ],
+   "mastery": "The child sets the calculator to degrees, keys sin, cos or tan then the angle, uses the inverse key (sin to the -1) to find an angle from a ratio, rounds to the accuracy asked, and checks against a known value (sin 30 = 0.5, tan 45 = 1)."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH": {
+   "forms": [
+    "height of the building",
+    "which ratio",
+    "length of the ramp",
+    "which step is wrong"
+   ],
+   "mastery": "The child sketches the right-angled triangle, marks the known and wanted sides from the angle, chooses the one ratio that joins them, rearranges (multiply when the unknown is on top, divide when it is underneath), and adds an eye height when an angle of elevation is measured from the eye: 40 m away at 35 degrees with the eye 1.5 m up gives 40 x 0.7002 + 1.5 = 29.5 m."
+  },
+  "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE": {
+   "forms": [
+    "find the angle of the ramp",
+    "angle of elevation",
+    "which ratio",
+    "from two sides"
+   ],
+   "mastery": "The child writes the ratio of the two known sides for the angle (a ramp rising 1.2 m over 5 m: tan x = 0.24), then finds the angle from the table or the inverse key (13.5 degrees), and checks the angle is sensible."
   }
  }
 }

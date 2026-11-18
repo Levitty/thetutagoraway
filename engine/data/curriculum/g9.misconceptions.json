@@ -8524,5 +8524,439 @@
   "help": "Same shape, bigger box: more inside.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_AS_OPPOSITE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES",
+  "error": "Calls the hypotenuse the opposite side because it is across from the angle.",
+  "example": {
+   "question": "Angle A: which side is opposite?",
+   "wrong_answer": "the hypotenuse",
+   "correct_answer": "the side across from A that is not the hypotenuse"
+  },
+  "cause": "Looks only for the side across.",
+  "reveals": "The answer the hypotenuse as a wrong option, with a reason that names the idea.",
+  "help": "The hypotenuse is always across from the right angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_ADJACENT_AS_HYPOTENUSE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES",
+  "error": "Calls the hypotenuse the adjacent side because it touches the angle.",
+  "example": {
+   "question": "Which side is adjacent to A?",
+   "wrong_answer": "the hypotenuse",
+   "correct_answer": "the shorter side next to A"
+  },
+  "cause": "Two sides touch the angle.",
+  "reveals": "The answer the hypotenuse as a wrong option, with a reason that names the idea.",
+  "help": "Adjacent is the one next to A that is not the hypotenuse.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_SIDES_FIXED_NAMES": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES",
+  "error": "Keeps the same names for opposite and adjacent when the other angle is used.",
+  "example": {
+   "question": "From angle B, which side is opposite?",
+   "wrong_answer": "the same as from A",
+   "correct_answer": "the side that was adjacent to A"
+  },
+  "cause": "Thinks the names belong to the sides.",
+  "reveals": "The answer the same as from A as a wrong option, with a reason that names the idea.",
+  "help": "Opposite and adjacent depend on which angle you stand at.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_NOT_LONGEST": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES",
+  "error": "Picks a side that is not the longest as the hypotenuse.",
+  "example": {
+   "question": "Sides 5, 12, 13. Hypotenuse?",
+   "wrong_answer": "12",
+   "correct_answer": "13"
+  },
+  "cause": "Looks at the drawing's position.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "The hypotenuse is the longest side, across from the right angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_RATIO_UPSIDE_DOWN": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY",
+  "error": "Writes the right two sides but upside down.",
+  "example": {
+   "question": "Sides: opp 3, adj 4, hyp 5. sin A?",
+   "wrong_answer": "5/3",
+   "correct_answer": "3/5"
+  },
+  "cause": "Does not hold which side goes on top.",
+  "reveals": "The answer 5/3 as a wrong option, with a reason that names the idea.",
+  "help": "SOH: opposite over hypotenuse.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_RATIOS_MIXED": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY",
+  "error": "Uses the fraction for a different ratio.",
+  "example": {
+   "question": "opp 3, adj 4, hyp 5. cos A?",
+   "wrong_answer": "3/5",
+   "correct_answer": "4/5"
+  },
+  "cause": "Mixes up sin and cos.",
+  "reveals": "The answer 3/5 as a wrong option, with a reason that names the idea.",
+  "help": "CAH: adjacent over hypotenuse.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_WRONG_RATIO_FOR_SIDES": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY",
+  "error": "Uses a ratio that does not join the known and wanted sides.",
+  "example": {
+   "question": "Hypotenuse known, side next to the angle wanted. Ratio?",
+   "wrong_answer": "sin",
+   "correct_answer": "cos"
+  },
+  "cause": "Picks the first ratio remembered.",
+  "reveals": "The answer sin as a wrong option, with a reason that names the idea.",
+  "help": "Adjacent and hypotenuse: cos.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_DIVIDE_WHEN_UNKNOWN_ON_TOP": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY",
+  "error": "Divides by the ratio when the unknown side is on top.",
+  "example": {
+   "question": "sin 30 = x / 10. x?",
+   "wrong_answer": "20",
+   "correct_answer": "5"
+  },
+  "cause": "Rearranges the wrong way.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply both sides by 10: x = 10 x sin 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_TABLE_VALUE_MISREAD": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY",
+  "error": "Uses the value of the other ratio from the table.",
+  "example": {
+   "question": "sin 40 = 0.6428, cos 40 = 0.7660. Use sin 40.",
+   "wrong_answer": "0.7660",
+   "correct_answer": "0.6428"
+  },
+  "cause": "Takes the wrong column.",
+  "reveals": "The answer 0.7660 as a wrong option, with a reason that names the idea.",
+  "help": "Read the column of the ratio you chose.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_DIVIDE_BY_SINE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Divides the hypotenuse by the sine to find the opposite side.",
+  "example": {
+   "question": "Ladder 6 m at 70 degrees; sin 70 = 0.9397. Height?",
+   "wrong_answer": "6.39",
+   "correct_answer": "5.64"
+  },
+  "cause": "Rearranges the wrong way.",
+  "reveals": "The answer 6.39 as a wrong option, with a reason that names the idea.",
+  "help": "Opposite = hypotenuse x sin.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_TABLE_ROW_MISREAD": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Reads the row for the next angle.",
+  "example": {
+   "question": "sin 70 from the table.",
+   "wrong_answer": "the value for 71",
+   "correct_answer": "the value for 70"
+  },
+  "cause": "Loses place in the table.",
+  "reveals": "The answer the value for 71 as a wrong option, with a reason that names the idea.",
+  "help": "Put a ruler under the row.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_RATIO_AS_LENGTH": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Gives the ratio from the table as the length.",
+  "example": {
+   "question": "sin 70 = 0.9397; ladder 6 m. Height?",
+   "wrong_answer": "0.9397",
+   "correct_answer": "5.64"
+  },
+  "cause": "Stops after reading.",
+  "reveals": "The answer 0.9397 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by the ladder.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_ANGLE_NEIGHBOUR": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Gives the neighbouring angle when reading the table backwards.",
+  "example": {
+   "question": "tan x = 0.7002. x?",
+   "wrong_answer": "36",
+   "correct_answer": "35"
+  },
+  "cause": "Takes the nearest row without matching.",
+  "reveals": "The answer 36 as a wrong option, with a reason that names the idea.",
+  "help": "Find the exact value and read its angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_COMPLEMENT_ANGLE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Gives 90 minus the angle.",
+  "example": {
+   "question": "sin x = 0.5. x?",
+   "wrong_answer": "60",
+   "correct_answer": "30"
+  },
+  "cause": "Mixes the two acute angles.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "The table gives the angle for this ratio directly.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_WRONG_COLUMN_TRIG": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Reads the cos column when sin is needed, or the other way.",
+  "example": {
+   "question": "Rise of a path: which column?",
+   "wrong_answer": "cos",
+   "correct_answer": "sin"
+  },
+  "cause": "Picks the first column.",
+  "reveals": "The answer cos as a wrong option, with a reason that names the idea.",
+  "help": "The rise is opposite: sin.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_COS_FOR_RISE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Uses cosine for the rise of a slope.",
+  "example": {
+   "question": "Path 200 m at 10 degrees. Rise?",
+   "wrong_answer": "200 x cos 10",
+   "correct_answer": "200 x sin 10"
+  },
+  "cause": "Mixes the ratios.",
+  "reveals": "The answer 200 x cos 10 as a wrong option, with a reason that names the idea.",
+  "help": "Rise is opposite the angle: sin.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_SIN_FOR_RUN": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "error": "Uses sine for the horizontal length of a slope.",
+  "example": {
+   "question": "Path 200 m at 10 degrees. Horizontal length?",
+   "wrong_answer": "200 x sin 10",
+   "correct_answer": "200 x cos 10"
+  },
+  "cause": "Mixes the ratios.",
+  "reveals": "The answer 200 x sin 10 as a wrong option, with a reason that names the idea.",
+  "help": "Horizontal is adjacent: cos.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_CALC_RADIAN_MODE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR",
+  "error": "Works with the calculator in radians or grads.",
+  "example": {
+   "question": "sin 30 on the calculator gives -0.988.",
+   "wrong_answer": "accept it",
+   "correct_answer": "set the calculator to degrees"
+  },
+  "cause": "Does not check the mode.",
+  "reveals": "The answer accept it as a wrong option, with a reason that names the idea.",
+  "help": "Check with sin 30 = 0.5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_INVERSE_NOT_USED": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR",
+  "error": "Presses sin instead of the inverse key to find an angle.",
+  "example": {
+   "question": "sin x = 0.5. Find x.",
+   "wrong_answer": "sin 0.5 = 0.0087",
+   "correct_answer": "sin to the -1 of 0.5 = 30"
+  },
+  "cause": "Uses the forward key.",
+  "reveals": "The answer sin 0.5 = 0.0087 as a wrong option, with a reason that names the idea.",
+  "help": "To find an angle, use the inverse key.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_CALC_TRIG_NOT_ROUNDED": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR",
+  "error": "Copies the whole display or rounds wrongly.",
+  "example": {
+   "question": "tan 35 to 4 decimal places.",
+   "wrong_answer": "0.700207538",
+   "correct_answer": "0.7002"
+  },
+  "cause": "Thinks more digits are better.",
+  "reveals": "The answer 0.700207538 as a wrong option, with a reason that names the idea.",
+  "help": "Round to the places asked.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_RATIO_TIMES_ANGLE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR",
+  "error": "Thinks sin 30 means sin times 30.",
+  "example": {
+   "question": "What is sin 30?",
+   "wrong_answer": "30 times something",
+   "correct_answer": "0.5"
+  },
+  "cause": "Reads sin as a number.",
+  "reveals": "The answer 30 times something as a wrong option, with a reason that names the idea.",
+  "help": "sin is a function of the angle: key sin, then 30.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_TAN_DIVIDED": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "error": "Divides the distance by tan instead of multiplying.",
+  "example": {
+   "question": "40 m away at 35 degrees; tan 35 = 0.7002. Height above the eye?",
+   "wrong_answer": "57.1",
+   "correct_answer": "28.0"
+  },
+  "cause": "Rearranges the wrong way.",
+  "reveals": "The answer 57.1 as a wrong option, with a reason that names the idea.",
+  "help": "tan = height / distance, so height = distance x tan.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_EYE_HEIGHT_FORGOTTEN": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "error": "Forgets to add the eye height.",
+  "example": {
+   "question": "Height above the eye 28.0 m; eye 1.5 m. Building?",
+   "wrong_answer": "28.0",
+   "correct_answer": "29.5"
+  },
+  "cause": "Draws the triangle from the ground.",
+  "reveals": "The answer 28.0 as a wrong option, with a reason that names the idea.",
+  "help": "The angle was measured at the eye: add 1.5 m.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_DEPRESSION_COMPLEMENT": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "error": "Takes the angle of depression as 90 minus the angle of elevation.",
+  "example": {
+   "question": "Elevation from the learner 35 degrees. Depression from the top?",
+   "wrong_answer": "55",
+   "correct_answer": "35"
+  },
+  "cause": "Sees the right angle and subtracts.",
+  "reveals": "The answer 55 as a wrong option, with a reason that names the idea.",
+  "help": "Alternate angles between horizontals are equal.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_ANY_RATIO_WORKS": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "error": "Thinks any ratio will do in a right-angled triangle.",
+  "example": {
+   "question": "Known ramp length, wanted platform height. Which ratio?",
+   "wrong_answer": "any of them",
+   "correct_answer": "sine"
+  },
+  "cause": "Does not match sides to ratios.",
+  "reveals": "The answer any of them as a wrong option, with a reason that names the idea.",
+  "help": "Only one ratio joins the two sides you have.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_RATIO_SIDES_MISMATCHED": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "error": "Chooses a ratio that joins the wrong pair of sides.",
+  "example": {
+   "question": "Known distance along the ground, wanted height. Ratio?",
+   "wrong_answer": "sine",
+   "correct_answer": "tangent"
+  },
+  "cause": "Mixes up the sides.",
+  "reveals": "The answer sine as a wrong option, with a reason that names the idea.",
+  "help": "Ground (adjacent) and height (opposite): tan.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_TAN_UPSIDE_DOWN_E": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "error": "Writes tan as adjacent over opposite.",
+  "example": {
+   "question": "Height h, 40 m away, 35 degrees. Equation?",
+   "wrong_answer": "tan 35 = 40 / h",
+   "correct_answer": "tan 35 = h / 40"
+  },
+  "cause": "Puts the known side on top.",
+  "reveals": "The answer tan 35 = 40 / h as a wrong option, with a reason that names the idea.",
+  "help": "TOA: opposite over adjacent.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_RATIO_AS_ANGLE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE",
+  "error": "Gives the ratio as the angle.",
+  "example": {
+   "question": "tan x = 0.24. x?",
+   "wrong_answer": "0.24 degrees",
+   "correct_answer": "13.5 degrees"
+  },
+  "cause": "Stops at the ratio.",
+  "reveals": "The answer 0.24 degrees as a wrong option, with a reason that names the idea.",
+  "help": "Turn the ratio into an angle with the table or inverse key.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_SIDES_RATIO_INVERTED": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE",
+  "error": "Divides the sides the wrong way up.",
+  "example": {
+   "question": "Ramp rises 1.2 m over 5 m. tan x?",
+   "wrong_answer": "4.17",
+   "correct_answer": "0.24"
+  },
+  "cause": "Puts the larger number on top.",
+  "reveals": "The answer 4.17 as a wrong option, with a reason that names the idea.",
+  "help": "Opposite over adjacent: 1.2 / 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_ANGLE_FROM_SUBTRACTION": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE",
+  "error": "Subtracts the sides to find the angle.",
+  "example": {
+   "question": "Rises 1.2 m over 5 m. Angle?",
+   "wrong_answer": "3.8 degrees",
+   "correct_answer": "13.5 degrees"
+  },
+  "cause": "Combines lengths as if they were angles.",
+  "reveals": "The answer 3.8 degrees as a wrong option, with a reason that names the idea.",
+  "help": "Find the ratio, then the angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_OTHER_ANGLE_GIVEN": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE",
+  "error": "Gives the other acute angle of the triangle.",
+  "example": {
+   "question": "tan x = 0.24 for the ramp. x?",
+   "wrong_answer": "76.5",
+   "correct_answer": "13.5"
+  },
+  "cause": "Uses 90 minus the angle.",
+  "reveals": "The answer 76.5 as a wrong option, with a reason that names the idea.",
+  "help": "The ratio gives the angle at the bottom of the ramp.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

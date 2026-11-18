@@ -15250,6 +15250,812 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.GEOMET.SIMILARITY_AND_ENLARGEME",
   "sub_strand_name": "Similarity and Enlargement",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES",
+  "key_step": "The child marks the right angle first, then the given angle, and names the sides from that angle.",
+  "floor": {
+   "prerequisite": "Finds the hypotenuse.",
+   "question": "Sides 3, 4 and 5",
+   "answer": "5"
+  },
+  "representations": [
+   "a triangle with H, O, A labels",
+   "a ladder against a wall",
+   "colours for each side"
+  ],
+  "steps": [
+   "Mark the right angle: the side across is the hypotenuse.",
+   "Mark the given angle: the side across is opposite.",
+   "The other side next to it is adjacent.",
+   "Rename for the other angle."
+  ],
+  "contexts": [
+   "a ladder against a classroom wall",
+   "a ramp at a hospital",
+   "a kite string"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a right-angled triangle with angle A marked."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the right angle.",
+    "say": "Which side is across from it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the hypotenuse."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child labels O and A."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_AS_OPPOSITE",
+    "listen_for": [
+     "the hypotenuse is opposite"
+    ],
+    "ask": "What is across from the right angle?",
+    "repair": "The hypotenuse.",
+    "error": "Calls the hypotenuse the opposite side because it is across from the angle.",
+    "example": {
+     "question": "Angle A: which side is opposite?",
+     "wrong_answer": "the hypotenuse",
+     "correct_answer": "the side across from A that is not the hypotenuse"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_ADJACENT_AS_HYPOTENUSE",
+    "listen_for": [
+     "the hypotenuse is adjacent"
+    ],
+    "ask": "Which side next to A is not the hypotenuse?",
+    "repair": "That is adjacent.",
+    "error": "Calls the hypotenuse the adjacent side because it touches the angle.",
+    "example": {
+     "question": "Which side is adjacent to A?",
+     "wrong_answer": "the hypotenuse",
+     "correct_answer": "the shorter side next to A"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_SIDES_FIXED_NAMES",
+    "listen_for": [
+     "same names from B"
+    ],
+    "ask": "From B, what is across?",
+    "repair": "The other side.",
+    "error": "Keeps the same names for opposite and adjacent when the other angle is used.",
+    "example": {
+     "question": "From angle B, which side is opposite?",
+     "wrong_answer": "the same as from A",
+     "correct_answer": "the side that was adjacent to A"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.RIGHT_TRIANGLE_SIDES.M_HYPOTENUSE_NOT_LONGEST",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Which is longest?",
+    "repair": "13.",
+    "error": "Picks a side that is not the longest as the hypotenuse.",
+    "example": {
+     "question": "Sides 5, 12, 13. Hypotenuse?",
+     "wrong_answer": "12",
+     "correct_answer": "13"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "In triangle ABC with the right angle at C, which side is opposite A?",
+    "answer": "BC",
+    "shows": "naming"
+   },
+   {
+    "question": "Which side is the hypotenuse?",
+    "answer": "AB",
+    "shows": "naming"
+   }
+  ],
+  "name": "Identify the sides of a right-angled triangle from a given angle",
+  "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
+  "sub_strand_name": "Trigonometry",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY",
+  "key_step": "The child labels O, A and H from the angle, writes SOH CAH TOA, and picks the fraction that matches.",
+  "floor": {
+   "prerequisite": "Names the sides from an angle.",
+   "question": "Which side is adjacent to A?",
+   "answer": "the side next to A, not the hypotenuse"
+  },
+  "representations": [
+   "SOH CAH TOA",
+   "a labelled triangle",
+   "the fraction written from the labels"
+  ],
+  "steps": [
+   "Label O, A, H from the angle.",
+   "sin = O/H, cos = A/H, tan = O/A.",
+   "Write the fraction with the lengths.",
+   "For a side: multiply when it is on top."
+  ],
+  "contexts": [
+   "a ladder",
+   "a roof truss",
+   "a kite"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a triangle with sides 3, 4, 5 and angle A."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the side opposite A.",
+    "say": "What is sin A?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3/5."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write sin A = 3/5, cos A = 4/5, tan A = 3/4."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_RATIO_UPSIDE_DOWN",
+    "listen_for": [
+     "5/3"
+    ],
+    "ask": "Can a sine be bigger than 1?",
+    "repair": "No: 3/5.",
+    "error": "Writes the right two sides but upside down.",
+    "example": {
+     "question": "Sides: opp 3, adj 4, hyp 5. sin A?",
+     "wrong_answer": "5/3",
+     "correct_answer": "3/5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_RATIOS_MIXED",
+    "listen_for": [
+     "3/5 for cos"
+    ],
+    "ask": "CAH: which side goes on top?",
+    "repair": "Adjacent.",
+    "error": "Uses the fraction for a different ratio.",
+    "example": {
+     "question": "opp 3, adj 4, hyp 5. cos A?",
+     "wrong_answer": "3/5",
+     "correct_answer": "4/5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_WRONG_RATIO_FOR_SIDES",
+    "listen_for": [
+     "sin"
+    ],
+    "ask": "Which ratio joins adjacent and hypotenuse?",
+    "repair": "cos.",
+    "error": "Uses a ratio that does not join the known and wanted sides.",
+    "example": {
+     "question": "Hypotenuse known, side next to the angle wanted. Ratio?",
+     "wrong_answer": "sin",
+     "correct_answer": "cos"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_DIVIDE_WHEN_UNKNOWN_ON_TOP",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "x is on top: multiply or divide?",
+    "repair": "Multiply: 5.",
+    "error": "Divides by the ratio when the unknown side is on top.",
+    "example": {
+     "question": "sin 30 = x / 10. x?",
+     "wrong_answer": "20",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_RATIOS_IDENTIFY.M_TABLE_VALUE_MISREAD",
+    "listen_for": [
+     "0.7660"
+    ],
+    "ask": "Is that sin or cos?",
+    "repair": "cos: use 0.6428.",
+    "error": "Uses the value of the other ratio from the table.",
+    "example": {
+     "question": "sin 40 = 0.6428, cos 40 = 0.7660. Use sin 40.",
+     "wrong_answer": "0.7660",
+     "correct_answer": "0.6428"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "opp 5, adj 12, hyp 13. tan A?",
+    "answer": "5/12",
+    "shows": "ratio"
+   },
+   {
+    "question": "hyp 10, angle 30 degrees, sin 30 = 0.5. Opposite side?",
+    "answer": "5",
+    "shows": "using the ratio"
+   }
+  ],
+  "name": "Identify sine, cosine and tangent as ratios of sides",
+  "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
+  "sub_strand_name": "Trigonometry",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES",
+  "key_step": "The child finds the angle's row and the ratio's column, then multiplies by the known side; backwards, finds the value and reads its angle.",
+  "floor": {
+   "prerequisite": "Reads a mathematical table.",
+   "question": "Row 2.3, column 7",
+   "answer": "the value there"
+  },
+  "representations": [
+   "the table of sines, cosines and tangents",
+   "a ruler under the row",
+   "a path triangle"
+  ],
+  "steps": [
+   "Choose the ratio.",
+   "Read the row for the angle in that column.",
+   "Multiply by the known side.",
+   "Backwards: find the value and read the angle."
+  ],
+  "contexts": [
+   "a ladder against a wall",
+   "a footpath up Ngong Hills",
+   "a surveyor's slope"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a ladder of 6 m at 70 degrees to the ground."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the height up the wall.",
+    "say": "Opposite or adjacent?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for opposite."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 6 x sin 70 = 6 x 0.9397 = 5.64 m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_DIVIDE_BY_SINE",
+    "listen_for": [
+     "6.39"
+    ],
+    "ask": "Is the height taller than the ladder?",
+    "repair": "No: multiply.",
+    "error": "Divides the hypotenuse by the sine to find the opposite side.",
+    "example": {
+     "question": "Ladder 6 m at 70 degrees; sin 70 = 0.9397. Height?",
+     "wrong_answer": "6.39",
+     "correct_answer": "5.64"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_TABLE_ROW_MISREAD",
+    "listen_for": [
+     "the next row"
+    ],
+    "ask": "Which angle is this row?",
+    "repair": "Check: 70.",
+    "error": "Reads the row for the next angle.",
+    "example": {
+     "question": "sin 70 from the table.",
+     "wrong_answer": "the value for 71",
+     "correct_answer": "the value for 70"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_RATIO_AS_LENGTH",
+    "listen_for": [
+     "0.9397"
+    ],
+    "ask": "Is that a length?",
+    "repair": "Times 6.",
+    "error": "Gives the ratio from the table as the length.",
+    "example": {
+     "question": "sin 70 = 0.9397; ladder 6 m. Height?",
+     "wrong_answer": "0.9397",
+     "correct_answer": "5.64"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_ANGLE_NEIGHBOUR",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "Does the value match exactly?",
+    "repair": "Find the exact row.",
+    "error": "Gives the neighbouring angle when reading the table backwards.",
+    "example": {
+     "question": "tan x = 0.7002. x?",
+     "wrong_answer": "36",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_COMPLEMENT_ANGLE",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Which angle does the table give?",
+    "repair": "The one with this ratio: 30.",
+    "error": "Gives 90 minus the angle.",
+    "example": {
+     "question": "sin x = 0.5. x?",
+     "wrong_answer": "60",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_WRONG_COLUMN_TRIG",
+    "listen_for": [
+     "cos column"
+    ],
+    "ask": "Which ratio does the rise need?",
+    "repair": "sin.",
+    "error": "Reads the cos column when sin is needed, or the other way.",
+    "example": {
+     "question": "Rise of a path: which column?",
+     "wrong_answer": "cos",
+     "correct_answer": "sin"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_COS_FOR_RISE",
+    "listen_for": [
+     "cos"
+    ],
+    "ask": "Is the rise opposite or adjacent?",
+    "repair": "Opposite: sin.",
+    "error": "Uses cosine for the rise of a slope.",
+    "example": {
+     "question": "Path 200 m at 10 degrees. Rise?",
+     "wrong_answer": "200 x cos 10",
+     "correct_answer": "200 x sin 10"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_TABLES.M_SIN_FOR_RUN",
+    "listen_for": [
+     "sin"
+    ],
+    "ask": "Is the horizontal opposite or adjacent?",
+    "repair": "Adjacent: cos.",
+    "error": "Uses sine for the horizontal length of a slope.",
+    "example": {
+     "question": "Path 200 m at 10 degrees. Horizontal length?",
+     "wrong_answer": "200 x sin 10",
+     "correct_answer": "200 x cos 10"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A path 150 m long climbs at 12 degrees (sin 12 = 0.2079). Rise?",
+    "answer": "31.19 m",
+    "shows": "table then multiply"
+   },
+   {
+    "question": "cos x = 0.8660. x from the table?",
+    "answer": "30 degrees",
+    "shows": "reading backwards"
+   }
+  ],
+  "name": "Read tables of trigonometric ratios for acute angles, both ways",
+  "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
+  "sub_strand_name": "Trigonometry",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR",
+  "key_step": "The child checks degree mode with sin 30 = 0.5, then keys the function and the angle, or the inverse key for an angle.",
+  "floor": {
+   "prerequisite": "Rounds to decimal places.",
+   "question": "0.70020 to 4 places",
+   "answer": "0.7002"
+  },
+  "representations": [
+   "a calculator",
+   "a check value",
+   "the inverse key"
+  ],
+  "steps": [
+   "Check degrees: sin 30 = 0.5.",
+   "Key the function, then the angle.",
+   "For an angle, use the inverse key.",
+   "Round as asked."
+  ],
+  "contexts": [
+   "a fundi checking a roof pitch",
+   "a survey on a phone calculator",
+   "a science practical"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write sin 30 = ?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at the calculator.",
+    "say": "What should sin 30 show?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 0.5."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write if not 0.5, change to degrees."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_CALC_RADIAN_MODE",
+    "listen_for": [
+     "-0.988"
+    ],
+    "ask": "Is sin 30 equal to 0.5 on your calculator?",
+    "repair": "No: change to degrees.",
+    "error": "Works with the calculator in radians or grads.",
+    "example": {
+     "question": "sin 30 on the calculator gives -0.988.",
+     "wrong_answer": "accept it",
+     "correct_answer": "set the calculator to degrees"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_INVERSE_NOT_USED",
+    "listen_for": [
+     "0.0087"
+    ],
+    "ask": "Do you want a ratio or an angle?",
+    "repair": "An angle: inverse key.",
+    "error": "Presses sin instead of the inverse key to find an angle.",
+    "example": {
+     "question": "sin x = 0.5. Find x.",
+     "wrong_answer": "sin 0.5 = 0.0087",
+     "correct_answer": "sin to the -1 of 0.5 = 30"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_CALC_TRIG_NOT_ROUNDED",
+    "listen_for": [
+     "all digits"
+    ],
+    "ask": "How many places?",
+    "repair": "Four.",
+    "error": "Copies the whole display or rounds wrongly.",
+    "example": {
+     "question": "tan 35 to 4 decimal places.",
+     "wrong_answer": "0.700207538",
+     "correct_answer": "0.7002"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_CALCULATOR.M_RATIO_TIMES_ANGLE",
+    "listen_for": [
+     "sin times 30"
+    ],
+    "ask": "Is sin a number?",
+    "repair": "No: it acts on the angle.",
+    "error": "Thinks sin 30 means sin times 30.",
+    "example": {
+     "question": "What is sin 30?",
+     "wrong_answer": "30 times something",
+     "correct_answer": "0.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Use a calculator: tan 52 to 4 decimal places.",
+    "answer": "1.2799",
+    "shows": "key and round"
+   },
+   {
+    "question": "Use a calculator: the angle whose cosine is 0.25, to 1 decimal place.",
+    "answer": "75.5 degrees",
+    "shows": "inverse key"
+   }
+  ],
+  "name": "Determine trigonometric ratios and angles using a calculator",
+  "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
+  "sub_strand_name": "Trigonometry",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH",
+  "key_step": "The child sketches, labels the known and wanted sides from the angle, picks the one ratio that joins them, and adds any eye height at the end.",
+  "floor": {
+   "prerequisite": "Uses a ratio to find a side.",
+   "question": "sin 30 = x / 10",
+   "answer": "x = 5"
+  },
+  "representations": [
+   "a sketch with the eye line",
+   "SOH CAH TOA",
+   "a working in steps"
+  ],
+  "steps": [
+   "Sketch and mark the angle.",
+   "Label known and wanted sides.",
+   "Pick the ratio; rearrange.",
+   "Add the eye height if the angle was at the eye."
+  ],
+  "contexts": [
+   "the height of a school building",
+   "a tree in the compound",
+   "a ramp to a platform"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a learner 40 m from a building, eye 1.5 m up, angle 35 degrees."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the distance and the height.",
+    "say": "Which ratio joins these two?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for tan."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 40 x 0.7002 + 1.5 = 29.5 m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_TAN_DIVIDED",
+    "listen_for": [
+     "57.1"
+    ],
+    "ask": "Height = distance times or divided by tan?",
+    "repair": "Times.",
+    "error": "Divides the distance by tan instead of multiplying.",
+    "example": {
+     "question": "40 m away at 35 degrees; tan 35 = 0.7002. Height above the eye?",
+     "wrong_answer": "57.1",
+     "correct_answer": "28.0"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_EYE_HEIGHT_FORGOTTEN",
+    "listen_for": [
+     "28.0"
+    ],
+    "ask": "Was the angle measured at the ground?",
+    "repair": "At the eye: add 1.5.",
+    "error": "Forgets to add the eye height.",
+    "example": {
+     "question": "Height above the eye 28.0 m; eye 1.5 m. Building?",
+     "wrong_answer": "28.0",
+     "correct_answer": "29.5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_DEPRESSION_COMPLEMENT",
+    "listen_for": [
+     "55"
+    ],
+    "ask": "Are the horizontals parallel?",
+    "repair": "Yes: equal angles.",
+    "error": "Takes the angle of depression as 90 minus the angle of elevation.",
+    "example": {
+     "question": "Elevation from the learner 35 degrees. Depression from the top?",
+     "wrong_answer": "55",
+     "correct_answer": "35"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_ANY_RATIO_WORKS",
+    "listen_for": [
+     "any"
+    ],
+    "ask": "Which ratio joins those two sides?",
+    "repair": "Only one.",
+    "error": "Thinks any ratio will do in a right-angled triangle.",
+    "example": {
+     "question": "Known ramp length, wanted platform height. Which ratio?",
+     "wrong_answer": "any of them",
+     "correct_answer": "sine"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_RATIO_SIDES_MISMATCHED",
+    "listen_for": [
+     "sine"
+    ],
+    "ask": "Is the hypotenuse known?",
+    "repair": "No: tan.",
+    "error": "Chooses a ratio that joins the wrong pair of sides.",
+    "example": {
+     "question": "Known distance along the ground, wanted height. Ratio?",
+     "wrong_answer": "sine",
+     "correct_answer": "tangent"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_LENGTH.M_TAN_UPSIDE_DOWN_E",
+    "listen_for": [
+     "40 / h"
+    ],
+    "ask": "TOA: which side on top?",
+    "repair": "Opposite: h.",
+    "error": "Writes tan as adjacent over opposite.",
+    "example": {
+     "question": "Height h, 40 m away, 35 degrees. Equation?",
+     "wrong_answer": "tan 35 = 40 / h",
+     "correct_answer": "tan 35 = h / 40"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "From 25 m away, the top of a mast is at 50 degrees (tan 50 = 1.1918), eye 1.6 m. Height?",
+    "answer": "31.4 m",
+    "shows": "tan plus eye"
+   },
+   {
+    "question": "A ramp of 8 m makes 15 degrees with the ground (sin 15 = 0.2588). Height of the platform?",
+    "answer": "2.07 m",
+    "shows": "sin"
+   }
+  ],
+  "name": "Apply trigonometric ratios to find lengths in real situations",
+  "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
+  "sub_strand_name": "Trigonometry",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE": {
+  "skill": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE",
+  "key_step": "The child writes the ratio of the two known sides, then turns it into an angle.",
+  "floor": {
+   "prerequisite": "Reads a table backwards.",
+   "question": "tan x = 1",
+   "answer": "45 degrees"
+  },
+  "representations": [
+   "a sketch",
+   "the ratio as a decimal",
+   "the table or inverse key"
+  ],
+  "steps": [
+   "Label the two known sides.",
+   "Pick the ratio and divide.",
+   "Find the angle from the table or inverse key.",
+   "Check it is sensible."
+  ],
+  "contexts": [
+   "a wheelchair ramp",
+   "a roof pitch",
+   "a hill path"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a ramp rising 1.2 m over 5 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two sides.",
+    "say": "Which ratio joins them?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for tan."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write tan x = 0.24, so x = 13.5 degrees."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_RATIO_AS_ANGLE",
+    "listen_for": [
+     "0.24 degrees"
+    ],
+    "ask": "Is 0.24 an angle?",
+    "repair": "A ratio: turn it into an angle.",
+    "error": "Gives the ratio as the angle.",
+    "example": {
+     "question": "tan x = 0.24. x?",
+     "wrong_answer": "0.24 degrees",
+     "correct_answer": "13.5 degrees"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_SIDES_RATIO_INVERTED",
+    "listen_for": [
+     "4.17"
+    ],
+    "ask": "Opposite over adjacent?",
+    "repair": "1.2 / 5.",
+    "error": "Divides the sides the wrong way up.",
+    "example": {
+     "question": "Ramp rises 1.2 m over 5 m. tan x?",
+     "wrong_answer": "4.17",
+     "correct_answer": "0.24"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_ANGLE_FROM_SUBTRACTION",
+    "listen_for": [
+     "3.8"
+    ],
+    "ask": "Can lengths be subtracted into an angle?",
+    "repair": "No.",
+    "error": "Subtracts the sides to find the angle.",
+    "example": {
+     "question": "Rises 1.2 m over 5 m. Angle?",
+     "wrong_answer": "3.8 degrees",
+     "correct_answer": "13.5 degrees"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.TRIGONOMETRY.TRIG_FIND_ANGLE.M_OTHER_ANGLE_GIVEN",
+    "listen_for": [
+     "76.5"
+    ],
+    "ask": "Is that the angle at the ground?",
+    "repair": "No: 13.5.",
+    "error": "Gives the other acute angle of the triangle.",
+    "example": {
+     "question": "tan x = 0.24 for the ramp. x?",
+     "wrong_answer": "76.5",
+     "correct_answer": "13.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A ladder of 5 m reaches 4 m up a wall. Angle with the ground? (sin x = 0.8)",
+    "answer": "53.1 degrees",
+    "shows": "angle from sides"
+   },
+   {
+    "question": "A road rises 3 m over 50 m. Angle of slope? (tan x = 0.06)",
+    "answer": "3.4 degrees",
+    "shows": "angle from sides"
+   }
+  ],
+  "name": "Apply trigonometric ratios to find angles in real situations",
+  "sub_strand": "MATH.G9.GEOMET.TRIGONOMETRY",
+  "sub_strand_name": "Trigonometry",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;
