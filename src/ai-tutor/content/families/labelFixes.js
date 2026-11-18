@@ -452,13 +452,13 @@ export const CORE_FAMILIES = [
     } }),
 
   // ---- G8_SURFACE_AREA: cylinders as well as cuboids
-  fx({ id: 'g8.surface.cylinder-tin', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.d', rung: 2, form: 'word',
+  fx({ id: 'g8.surface.cylinder-tin', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.d', cskill: 'MATH.G8.MEASUR.AREA.SA_CYLINDER', rung: 2, form: 'word',
     draw: () => { const r = pick([7, 14, 3.5]), h = pick([10, 15, 20, 30]); return { r, h, what: pick(['A closed tin of cooking fat', 'A closed cylindrical drum', 'A closed paint tin']) }; },
     make: ({ r, h, what }) => {
       const pi = 22 / 7, sa = round(2 * pi * r * (r + h), 1);
       return { question: `${what} has a circular top and bottom of radius ${r} cm, and stands ${h} cm tall. How much metal covers the whole outside, in cm²? (Use π = 22/7)`,
         answer: sa,
-        wrong: [[round(2 * pi * r * h, 1), 'That is the curved side only. A closed tin has a top and a bottom too.'], [round(2 * pi * r * h + pi * r * r, 1), 'That has one circle. A closed tin has two.'], [round(pi * r * r * h, 1), 'That is the volume. Surface area is what covers the outside.']],
+        wrong: [[round(2 * pi * r * h, 1), 'That is the curved side only. A closed tin has a top and a bottom too.', 'M_ENDS_LEFT_OUT'], [round(2 * pi * r * h + pi * r * r, 1), 'That has one circle. A closed tin has two.', 'M_ONE_END_ONLY'], [round(pi * r * r * h, 1), 'That is the volume. Surface area is what covers the outside.', 'M_VOLUME_FOR_SA_CYL']],
         hints: ['A closed cylinder opens out into a rectangle and two circles.', 'Curved part = 2πrh. Each circle = πr².'],
         steps: [`Curved part: 2 × 22/7 × ${r} × ${h} = ${round(2 * pi * r * h, 1)} cm².`, `Two circles: 2 × 22/7 × ${r} × ${r} = ${round(2 * pi * r * r, 1)} cm².`, `Total: ${sa} cm².`] };
     },

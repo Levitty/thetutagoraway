@@ -166,20 +166,20 @@ export const FAMILIES = [
     check: ({ r, P }, a) => near(a * (22 / 7 + 2), P) }),
 
   // ================================================================ AREA
-  fam({ id: 'g8.area.path-round-field', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.a', rung: 3, form: 'steps',
+  fam({ id: 'g8.area.path-round-field', skill: 'G8_AREA_COMPOSITE', outcome: 'MATH.G8.MEASUR.AREA.a', cskill: 'MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE', rung: 3, form: 'steps',
     draw: () => { const r = pick([14, 21, 28]), w = pick([7, 14]), R = r + w; return { r, w, R, A1: (22 * r * r) / 7, A2: (22 * R * R) / 7 }; },
     make: ({ r, w, R, A1, A2 }) => ({
       question: `A round flower garden at a school has a radius of ${r} m. A path ${w} m wide goes all the way round the outside of the garden. Use π = 22/7.`,
       parts: [
-        { prompt: 'What is the area of the garden, in m²?', answer: A1, unit: 'm²', hint: 'Area of a circle = π × radius × radius.', wrong: [[(44 * r) / 7, 'That is the distance round the field. Area is π × r × r.']] },
-        { prompt: 'The garden and the path together make a bigger circle. What is its radius, in metres?', answer: R, unit: 'm', hint: 'The path is added all round the edge.', wrong: [[r + 2 * w, 'The path is added once to the radius, not twice.'], [w, 'That is the width of the path only.']] },
-        { prompt: 'What is the area of the path alone, in m²?', answer: A2 - A1, unit: 'm²', hint: 'Take the area of the field away from the area of the bigger circle.', wrong: [[(22 * w * w) / 7, 'That is the area of a circle as wide as the path. The path is a ring.'], [A2, 'That includes the field. Take the field away.']] },
+        { prompt: 'What is the area of the garden, in m²?', answer: A1, unit: 'm²', hint: 'Area of a circle = π × radius × radius.', wrong: [[(44 * r) / 7, 'That is the distance round the field. Area is π × r × r.', 'M_CIRCUMFERENCE_FOR_AREA']] },
+        { prompt: 'The garden and the path together make a bigger circle. What is its radius, in metres?', answer: R, unit: 'm', hint: 'The path is added all round the edge.', wrong: [[r + 2 * w, 'The path is added once to the radius, not twice.', 'M_PATH_ADDED_TWICE_RADIUS'], [w, 'That is the width of the path only.', 'M_PATH_WIDTH_AS_RADIUS']] },
+        { prompt: 'What is the area of the path alone, in m²?', answer: A2 - A1, unit: 'm²', hint: 'Take the area of the field away from the area of the bigger circle.', wrong: [[(22 * w * w) / 7, 'That is the area of a circle as wide as the path. The path is a ring.', 'M_RING_AS_SMALL_CIRCLE'], [A2, 'That includes the field. Take the field away.', 'M_INNER_NOT_SUBTRACTED']] },
       ],
       steps: [`Field: 22/7 × ${r} × ${r} = ${A1} m².`, `Bigger circle radius: ${r} + ${w} = ${R} m.`, `Bigger circle area: 22/7 × ${R} × ${R} = ${A2} m².`, `Path: ${A2} − ${A1} = ${A2 - A1} m².`],
     }),
     check: ({ r, w, A1, A2 }, v) => v[0] === A1 && v[1] === r + w && v[2] + A1 === A2 }),
 
-  fam({ id: 'g8.area.arched-window', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.a', rung: 3, form: 'word',
+  fam({ id: 'g8.area.arched-window', skill: 'G8_AREA_COMPOSITE', outcome: 'MATH.G8.MEASUR.AREA.a', cskill: 'MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE', rung: 3, form: 'word',
     draw: () => {
       const w = pick([70, 140]), h = pick([100, 120, 150, 180]), r = w / 2, semi = (11 * w * w) / 28, rect = w * h;
       return uniq(rect + semi, rect + 2 * semi, rect, rect + (11 * w * w) / 7) ? { w, h, r, semi, rect } : null;
@@ -187,27 +187,27 @@ export const FAMILIES = [
     make: ({ w, h, r, semi, rect }) => ({
       question: `A church window is a rectangle ${w} cm wide and ${h} cm tall. On top of it sits a half circle whose flat side is the top of the rectangle. Find the area of glass in the whole window, in cm². (Use π = 22/7)`,
       answer: rect + semi,
-      wrong: [[rect + 2 * semi, 'That adds a whole circle. Only half a circle sits on top.'], [rect, 'That is the rectangle only. The half circle on top has glass too.'], [rect + (11 * w * w) / 7, 'You used the whole width as the radius. The radius is half the width.']],
+      wrong: [[rect + 2 * semi, 'That adds a whole circle. Only half a circle sits on top.', 'M_FULL_CIRCLE_FOR_HALF_AREA'], [rect, 'That is the rectangle only. The half circle on top has glass too.', 'M_PART_LEFT_OUT'], [rect + (11 * w * w) / 7, 'You used the whole width as the radius. The radius is half the width.', 'M_DIAMETER_AS_RADIUS_AREA']],
       hints: ['Split the window into two shapes: a rectangle and a half circle.', 'The flat side of the half circle is as long as the width. How does the radius relate to that?'],
       steps: [`Rectangle: ${w} × ${h} = ${rect} cm².`, `Radius of the half circle: ${w} ÷ 2 = ${r} cm.`, `Half circle: 1/2 × 22/7 × ${r} × ${r} = ${semi} cm².`, `Total: ${rect} + ${semi} = ${rect + semi} cm².`],
     }),
     check: ({ w, h }, a) => near(a, w * h + 0.5 * PI * (w / 2) ** 2) }),
 
-  fam({ id: 'g8.area.double-radius', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.a', rung: 3, form: 'why',
+  fam({ id: 'g8.area.double-radius', skill: 'G8_AREA_COMPOSITE', outcome: 'MATH.G8.MEASUR.AREA.a', cskill: 'MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS', rung: 3, form: 'why',
     draw: () => ({ k: pick([3, 4, 5]), p: person() }),
     make: ({ k, p }) => ({
       question: `${p.name} digs a round fish pond. ${p.She} then digs a second round pond with a radius ${k} times as long. How many times as much water surface does the second pond have?`,
       options: [
         { text: `${k * k} times as much, because r is multiplied twice`, right: true },
-        { text: `${k} times as much, because the radius is ${k} times as long`, right: false, why: 'The area uses the radius twice. A circle that is wider is also taller in every direction.' },
-        { text: `${2 * k} times as much, because the area has a 2 in it`, right: false, why: 'The 2 belongs to the circumference, 2 × π × r. The area formula is π × r × r.' },
-        { text: `${k * k * k} times as much, because the area is a cube`, right: false, why: 'A flat area uses two lengths multiplied, not three. Three lengths give a volume.' },
+        { text: `${k} times as much, because the radius is ${k} times as long`, right: false, why: 'The area uses the radius twice. A circle that is wider is also taller in every direction.', mis: 'M_AREA_SCALES_LINEARLY' },
+        { text: `${2 * k} times as much, because the area has a 2 in it`, right: false, why: 'The 2 belongs to the circumference, 2 × π × r. The area formula is π × r × r.', mis: 'M_AREA_HAS_A_TWO' },
+        { text: `${k * k * k} times as much, because the area is a cube`, right: false, why: 'A flat area uses two lengths multiplied, not three. Three lengths give a volume.', mis: 'M_AREA_SCALES_AS_CUBE' },
       ],
       hints: ['Try it: a pond with radius 1 unit, then one with radius multiplied by the number in the question.', 'Area = π × r × r. What happens to r × r when r is multiplied?'],
       steps: [`Area = π × r × r. Replace r with ${k} × r.`, `π × (${k}r) × (${k}r) = ${k * k} × π × r × r.`, `So the area is ${k * k} times as much.`],
     }) }),
 
-  fam({ id: 'g8.sector.sprinkler-area', skill: 'G9_ARC_LENGTH', outcome: 'G8.AREA.b', rung: 2, form: 'word',
+  fam({ id: 'g8.sector.sprinkler-area', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.AREA.b', cskill: 'MATH.G8.MEASUR.AREA.SECTOR_AREA', rung: 2, form: 'word',
     draw: () => {
       const r = pick([7, 14, 21]), th = pick([30, 45, 60, 90, 120, 135, 180, 270]), A = (th / 360) * PI * r * r;
       if (!nice(A) || A < 10) return null;
@@ -217,13 +217,13 @@ export const FAMILIES = [
     make: ({ r, th, A, w }) => ({
       question: `A sprinkler on a farm waters a sector-shaped patch of a field. It reaches ${r} m from the sprinkler and swings through ${th}°. What area does it water, in m²? (Use π = 22/7)`,
       answer: A,
-      wrong: [[w[0], 'That is the whole circle. The sprinkler swings through only part of a full turn.'], [w[1], 'That is the length of the curved edge. Area uses the radius twice.'], [w[2], 'You used the radius once. Area of a circle = π × r × r.']],
+      wrong: [[w[0], 'That is the whole circle. The sprinkler swings through only part of a full turn.', 'M_WHOLE_CIRCLE_FOR_SECTOR'], [w[1], 'That is the length of the curved edge. Area uses the radius twice.', 'M_ARC_FOR_SECTOR_AREA'], [w[2], 'You used the radius once. Area of a circle = π × r × r.', 'M_RADIUS_USED_ONCE']],
       hints: ['What fraction of a full turn (360°) does the sprinkler swing through?', 'The area watered is that fraction of the area of the whole circle.'],
       steps: [`Whole circle: 22/7 × ${r} × ${r} = ${PI * r * r} m².`, `Fraction: ${th}/360.`, `Area watered: ${th}/360 × ${PI * r * r} = ${A} m².`],
     }),
     check: ({ r, th }, a) => near((a * 360) / th, (22 * r * r) / 7) }),
 
-  fam({ id: 'g8.sector.find-angle', skill: 'G9_ARC_LENGTH', outcome: 'G8.AREA.b', rung: 3, form: 'word',
+  fam({ id: 'g8.sector.find-angle', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.AREA.b', cskill: 'MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE', rung: 3, form: 'word',
     draw: () => {
       const th = pick([60, 120, 240, 90, 270]), r = 21, A = round((th * 1386) / 360, 2);
       return nice(A) ? { th, r, A, w: [360 - th, round(A / 1386, 2), th / 2] } : null;
@@ -231,27 +231,27 @@ export const FAMILIES = [
     make: ({ th, r, A, w }) => ({
       question: `A floodlight on a school gate lights a sector of the compound. The light reaches ${r} m, and the area lit is ${A} m². Through what angle, in degrees, does the light spread? (Use π = 22/7)`,
       answer: th,
-      wrong: [[w[0], 'That is the angle for the part of the compound that is NOT lit.'], [w[1], 'That is the fraction of the circle. Turn the fraction into degrees by multiplying by 360.'], [w[2], 'Check the area of the whole circle. It is π × r × r with no 2 and no half.']],
+      wrong: [[w[0], 'That is the angle for the part of the compound that is NOT lit.', 'M_UNLIT_ANGLE'], [w[1], 'That is the fraction of the circle. Turn the fraction into degrees by multiplying by 360.', 'M_FRACTION_NOT_TO_DEGREES'], [w[2], 'Check the area of the whole circle. It is π × r × r with no 2 and no half.', 'M_CIRCLE_AREA_WRONG_FORMULA']],
       hints: ['Find the area of the whole circle first.', 'The angle is the fraction (area lit ÷ whole circle) of 360°.'],
       steps: [`Whole circle: 22/7 × ${r} × ${r} = 1,386 m².`, `Fraction lit: ${A} ÷ 1,386.`, `Angle: that fraction × 360 = ${th}°.`],
     }),
     check: ({ th, r, A }, a) => near((A / 1386) * 360, a) && r === 21 }),
 
-  fam({ id: 'g8.sector.fraction-why', skill: 'G9_ARC_LENGTH', outcome: 'G8.AREA.b', rung: 3, form: 'why',
+  fam({ id: 'g8.sector.fraction-why', skill: 'G9_ARC_LENGTH', outcome: 'MATH.G8.MEASUR.AREA.b', cskill: 'MATH.G8.MEASUR.AREA.SECTOR_AREA', rung: 3, form: 'why',
     draw: () => { const th = pick([60, 90, 120, 45, 72]); return { th, n: 360 / th, p: person() }; },
     make: ({ th, n, p }) => ({
       question: `A round table cloth has a pattern. ${p.name} says a sector of angle ${th}° has exactly 1/${n} of the area of the whole circle, without using the radius. Why is that right?`,
       options: [
         { text: 'Area is shared out in the same fractions as the angle', right: true },
-        { text: `${th}° means ${th}% of the circle, and ${th}% is 1/${n}`, right: false, why: 'A full turn is 360°, not 100°. Degrees are not per cent.' },
-        { text: 'The area of any sector is always half of the circle', right: false, why: 'Only a half circle, 180°, has half the area. The fraction depends on the angle.' },
-        { text: `The radius cancels, so the area is ${th} ÷ 100 of the circle`, right: false, why: 'The radius does not cancel like that. The angle is compared with the 360° of a full turn.' },
+        { text: `${th}° means ${th}% of the circle, and ${th}% is 1/${n}`, right: false, why: 'A full turn is 360°, not 100°. Degrees are not per cent.', mis: 'M_DEGREES_AS_PERCENT' },
+        { text: 'The area of any sector is always half of the circle', right: false, why: 'Only a half circle, 180°, has half the area. The fraction depends on the angle.', mis: 'M_SECTOR_ALWAYS_HALF' },
+        { text: `The radius cancels, so the area is ${th} ÷ 100 of the circle`, right: false, why: 'The radius does not cancel like that. The angle is compared with the 360° of a full turn.', mis: 'M_ANGLE_OVER_100' },
       ],
       hints: ['How many degrees are there in a full turn?', 'Write the angle of the sector as a fraction of that.'],
       steps: [`A full turn is 360°.`, `${th}/360 = 1/${n}.`, `Equal turns cut equal slices, so the sector is 1/${n} of the circle's area.`],
     }) }),
 
-  fam({ id: 'g8.surface.carton-table', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.c', rung: 2, form: 'table',
+  fam({ id: 'g8.surface.carton-table', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.c', cskill: 'MATH.G8.MEASUR.AREA.SA_CUBOID', misMapped: false, reveals: ['M_ONE_OF_EACH_FACE', 'M_VOLUME_FOR_SA'], rung: 2, form: 'table',
     draw: () => {
       for (let t = 0; t < 3000; t++) {
         const sizes = [0, 1, 2].map(() => [randInt(2, 8) * 5, randInt(2, 8) * 5, randInt(2, 8) * 5]);
@@ -272,7 +272,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g8.surface.classroom-paint', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.c', rung: 3, form: 'steps',
+  fam({ id: 'g8.surface.classroom-paint', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.c', cskill: 'MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT', rung: 3, form: 'steps',
     draw: () => {
       const l = pick([8, 9, 10, 12]), w = pick([6, 7, 8]), h = pick([3, 4]), o = pick([6, 8, 10, 12]), cov = pick([8, 10, 12]);
       const walls = 2 * (l + w) * h, ceil = l * w, paint = walls + ceil - o;
@@ -281,16 +281,16 @@ export const FAMILIES = [
     make: ({ l, w, h, o, cov, walls, ceil, paint, lit }) => ({
       question: `A classroom is a cuboid, ${l} m long, ${w} m wide and ${h} m high. The four walls and the ceiling are to be painted. The doors and windows cover ${o} m² and are not painted. One litre of paint covers ${cov} m².`,
       parts: [
-        { prompt: 'What is the area of the four walls, in m²?', answer: walls, unit: 'm²', hint: 'The walls make a long strip: the distance round the floor times the height.', wrong: [[l * w, 'That is the floor or ceiling. The walls stand around it.'], [(l + w) * h, 'There are four walls: two of each size.']] },
-        { prompt: 'What is the area of the ceiling, in m²?', answer: ceil, unit: 'm²', hint: 'The ceiling is a rectangle the same size as the floor.', wrong: [[l + w, 'Area is length times width.']] },
-        { prompt: 'What area must be painted, in m²?', answer: paint, unit: 'm²', hint: 'Add the walls and ceiling. Then take away the doors and windows.', wrong: [[walls + ceil, 'The doors and windows are not painted. Take them away.'], [walls + ceil + o, 'Take the doors and windows away, do not add them.']] },
-        { prompt: 'How many litres of paint are needed?', answer: lit, unit: 'litres', hint: 'How many lots of the coverage of one litre fit into the area?', wrong: [[paint * cov, 'One litre covers a fixed area. Divide to find how many litres.']] },
+        { prompt: 'What is the area of the four walls, in m²?', answer: walls, unit: 'm²', hint: 'The walls make a long strip: the distance round the floor times the height.', wrong: [[l * w, 'That is the floor or ceiling. The walls stand around it.', 'M_FLOOR_FOR_WALLS'], [(l + w) * h, 'There are four walls: two of each size.', 'M_TWO_WALLS_ONLY']] },
+        { prompt: 'What is the area of the ceiling, in m²?', answer: ceil, unit: 'm²', hint: 'The ceiling is a rectangle the same size as the floor.', wrong: [[l + w, 'Area is length times width.', 'M_AREA_AS_SUM']] },
+        { prompt: 'What area must be painted, in m²?', answer: paint, unit: 'm²', hint: 'Add the walls and ceiling. Then take away the doors and windows.', wrong: [[walls + ceil, 'The doors and windows are not painted. Take them away.', 'M_OPENINGS_NOT_REMOVED'], [walls + ceil + o, 'Take the doors and windows away, do not add them.', 'M_OPENINGS_ADDED']] },
+        { prompt: 'How many litres of paint are needed?', answer: lit, unit: 'litres', hint: 'How many lots of the coverage of one litre fit into the area?', wrong: [[paint * cov, 'One litre covers a fixed area. Divide to find how many litres.', 'M_LITRES_MULTIPLIED']] },
       ],
       steps: [`Walls: 2 × (${l} + ${w}) × ${h} = ${walls} m².`, `Ceiling: ${l} × ${w} = ${ceil} m².`, `To paint: ${walls} + ${ceil} − ${o} = ${paint} m².`, `Paint: ${paint} ÷ ${cov} = ${lit} litres.`],
     }),
     check: ({ l, w, h, o, cov }, v) => v[0] === 2 * h * (l + w) && v[1] === l * w && v[2] === v[0] + v[1] - o && v[3] * cov === v[2] }),
 
-  fam({ id: 'g8.surface.spot-cuboid', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.c', rung: 2, form: 'spot',
+  fam({ id: 'g8.surface.spot-cuboid', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.c', cskill: 'MATH.G8.MEASUR.AREA.SA_CUBOID', rung: 2, form: 'spot',
     draw: () => {
       const l = randInt(4, 12), w = randInt(3, 9), h = randInt(2, 8);
       return new Set([l, w, h]).size === 3 ? { l, w, h, m: randInt(0, 2), p: person() } : null;
@@ -305,12 +305,13 @@ export const FAMILIES = [
           ...faces.map(([a, b, name], i) => ({ text: i === m ? `${name}: ${a} × ${b} = ${a * b} cm²` : `${name}: 2 × ${a} × ${b} = ${2 * a * b} cm²`, ok: shown[i] === 2 * a * b })),
           { text: `Total: ${shown[0]} + ${shown[1]} + ${shown[2]} = ${total} cm²`, ok: shown[0] + shown[1] + shown[2] === total },
         ],
+        mis: 'M_ONE_OF_EACH_FACE',
         fix: `${faces[m][2]} is two faces, one on each side, so the area of one face must be doubled. That step used only one face.`,
         steps: [`Top and bottom: 2 × ${l} × ${w} = ${2 * l * w} cm².`, `Front and back: 2 × ${l} × ${h} = ${2 * l * h} cm².`, `Two sides: 2 × ${w} × ${h} = ${2 * w * h} cm².`, `Total = ${2 * (l * w + l * h + w * h)} cm².`],
       };
     } }),
 
-  fam({ id: 'g8.surface.open-water-tank', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.d', rung: 2, form: 'word',
+  fam({ id: 'g8.surface.open-water-tank', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.d', cskill: 'MATH.G8.MEASUR.AREA.SA_CYLINDER', rung: 2, form: 'word',
     draw: () => {
       const r = pick([35, 70]), h = pick([80, 100, 120, 150]), base = (22 * r * r) / 7, side = 2 * PI * r * h;
       return uniq(base + side, base * 2 + side, side, PI * r * r * h) ? { r, h, base, side } : null;
@@ -318,13 +319,13 @@ export const FAMILIES = [
     make: ({ r, h, base, side }) => ({
       question: `A welder makes a water tank from metal sheet. The tank is a cylinder with a round base and no lid. Its radius is ${r} cm and its height is ${h} cm. How much sheet metal is needed, in cm²? (Use π = 22/7)`,
       answer: base + side,
-      wrong: [[base * 2 + side, 'That has two circles. This tank has a base only, no lid.'], [side, 'That is the curved side only. The base needs metal too.'], [round(PI * r * r * h, 0), 'That is the volume, how much water it holds. The question asks for the metal.']],
+      wrong: [[base * 2 + side, 'That has two circles. This tank has a base only, no lid.', 'M_LID_ADDED_OPEN'], [side, 'That is the curved side only. The base needs metal too.', 'M_BASE_LEFT_OUT'], [round(PI * r * r * h, 0), 'That is the volume, how much water it holds. The question asks for the metal.', 'M_VOLUME_FOR_SA_CYL']],
       hints: ['Count the pieces of metal: a curved side and how many circles?', 'Curved side = 2 × π × r × h. One circle = π × r × r.'],
       steps: [`Curved side: 2 × 22/7 × ${r} × ${h} = ${side} cm².`, `Base, one circle: 22/7 × ${r} × ${r} = ${base} cm².`, `Total: ${side} + ${base} = ${base + side} cm².`],
     }),
     check: ({ r, h }, a) => near(a, PI * r * (r + 2 * h)) }),
 
-  fam({ id: 'g8.surface.tin-label', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.d', rung: 2, form: 'word',
+  fam({ id: 'g8.surface.tin-label', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.d', cskill: 'MATH.G8.MEASUR.AREA.SA_CYLINDER', rung: 2, form: 'word',
     draw: () => {
       const d = pick([7, 14, 21]), h = pick([8, 10, 12, 15]), a = (22 * d * h) / 7;
       return uniq(a, 2 * a, a + 2 * PI * (d / 2) ** 2, (d / 2) * h) ? { d, h, a, p: person() } : null;
@@ -332,13 +333,13 @@ export const FAMILIES = [
     make: ({ d, h, a, p }) => ({
       question: `${p.name} wraps a paper label once round the curved side of a tin of beans. The tin is a cylinder ${d} cm across and ${h} cm tall. The label has no overlap. What is the area of the label, in cm²? (Use π = 22/7)`,
       answer: a,
-      wrong: [[2 * a, 'You used the diameter where the formula needs the radius.'], [a + 2 * PI * (d / 2) ** 2, 'That adds the top and bottom circles. The label covers the curved side only.'], [(d / 2) * h, 'That misses the distance round the tin. The label is as long as the circumference.']],
+      wrong: [[2 * a, 'You used the diameter where the formula needs the radius.', 'M_DIAMETER_FOR_RADIUS_CYL'], [a + 2 * PI * (d / 2) ** 2, 'That adds the top and bottom circles. The label covers the curved side only.', 'M_ENDS_ADDED_TO_LABEL'], [(d / 2) * h, 'That misses the distance round the tin. The label is as long as the circumference.', 'M_RADIUS_TIMES_HEIGHT']],
       hints: ['Picture the label unrolled flat. What shape is it?', 'Its length is the distance round the tin, and its width is the height of the tin.'],
       steps: [`Length of the label: π × ${d} = ${(22 * d) / 7} cm, the circumference.`, `Area: ${(22 * d) / 7} × ${h} = ${a} cm².`],
     }),
     check: ({ d, h }, a) => near(a / h, PI * d) }),
 
-  fam({ id: 'g8.prism.tent', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.e', rung: 3, form: 'word',
+  fam({ id: 'g8.prism.tent', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.e', cskill: 'MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM', rung: 3, form: 'word',
     draw: () => {
       const [a, h, s] = pick([[1.5, 2, 2.5], [3, 4, 5], [2, 1.5, 2.5]]), L = pick([3, 4, 5, 6]);
       const ends = 2 * a * h, slopes = 2 * s * L, floor = 2 * a * L, tot = ends + slopes + floor;
@@ -347,13 +348,13 @@ export const FAMILIES = [
     make: ({ a, h, s, L, ends, slopes, floor, tot, p }) => ({
       question: `${p.name}'s camping tent is a triangular prism lying on its side. Each triangular end is ${2 * a} m wide at the floor and ${h} m high. Each sloping side is ${s} m from the floor to the top, and the tent is ${L} m long. The floor is sewn in. How much cloth is needed for the whole tent, in m²?`,
       answer: tot,
-      wrong: [[tot - floor, 'The floor is sewn in, so it needs cloth too.'], [tot - ends, 'The two triangular ends need cloth as well as the sloping sides.'], [2 * a * s + slopes + floor, 'The area of each triangle uses the height (the straight up measure), not the sloping side.']],
+      wrong: [[tot - floor, 'The floor is sewn in, so it needs cloth too.', 'M_FLOOR_LEFT_OUT'], [tot - ends, 'The two triangular ends need cloth as well as the sloping sides.', 'M_ENDS_LEFT_OUT_PRISM'], [2 * a * s + slopes + floor, 'The area of each triangle uses the height (the straight up measure), not the sloping side.', 'M_SLANT_FOR_HEIGHT']],
       hints: ['List the faces: two triangles, two sloping rectangles, and the floor.', 'Each triangle is half of base × height. Each sloping side is the sloping length × the length of the tent.'],
       steps: [`Two triangles: 2 × 1/2 × ${2 * a} × ${h} = ${ends} m².`, `Two sloping sides: 2 × ${s} × ${L} = ${slopes} m².`, `Floor: ${2 * a} × ${L} = ${floor} m².`, `Total: ${ends} + ${slopes} + ${floor} = ${tot} m².`],
     }),
     check: ({ a, h, s, L }, v) => near(v, a * h * 2 + L * (2 * s + 2 * a)) }),
 
-  fam({ id: 'g8.prism.table-faces', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.e', rung: 2, form: 'table',
+  fam({ id: 'g8.prism.table-faces', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.e', cskill: 'MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM', rung: 2, form: 'table',
     draw: () => {
       const [b, h, s] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15]]), L = pick([10, 12, 15, 20]);
       const tot = b * h + (b + h + s) * L;
@@ -363,13 +364,13 @@ export const FAMILIES = [
       question: 'The table lists the faces of a closed triangular prism made from card. What is the total surface area of the prism, in cm²?',
       model: { type: 'table', data: { head: ['Face', 'How many', 'Measures (cm)'], rows: [{ cells: ['Triangle', '2', `base ${b}, height ${h}`] }, { cells: ['Rectangle', '1', `${b} by ${L}`] }, { cells: ['Rectangle', '1', `${h} by ${L}`] }, { cells: ['Rectangle', '1', `${s} by ${L}`] }] } },
       answer: tot,
-      wrong: [[tot - (b * h) / 2, 'There are two triangles in the table. Count both.'], [tot + b * h, 'The area of a triangle is half of base × height.'], [tot - s * L, 'Use all three rectangles in the table.']],
+      wrong: [[tot - (b * h) / 2, 'There are two triangles in the table. Count both.', 'M_ONE_TRIANGLE_ONLY'], [tot + b * h, 'The area of a triangle is half of base × height.', 'M_TRIANGLE_NOT_HALVED'], [tot - s * L, 'Use all three rectangles in the table.', 'M_RECTANGLE_LEFT_OUT']],
       hints: ['Work out the area of one of each kind of face. Then use the "How many" column.', 'Area of a triangle = 1/2 × base × height. Area of a rectangle = length × width.'],
       steps: [`Triangles: 2 × 1/2 × ${b} × ${h} = ${b * h} cm².`, `Rectangles: ${b}×${L} + ${h}×${L} + ${s}×${L} = ${(b + h + s) * L} cm².`, `Total: ${b * h} + ${(b + h + s) * L} = ${tot} cm².`],
     }),
     check: ({ b, h, s, L }, a) => near(a, b * h + L * b + L * h + L * s) }),
 
-  fam({ id: 'g8.prism.spot-working', skill: 'G8_SURFACE_AREA', outcome: 'G8.AREA.e', rung: 2, form: 'spot',
+  fam({ id: 'g8.prism.spot-working', skill: 'G8_SURFACE_AREA', outcome: 'MATH.G8.MEASUR.AREA.e', cskill: 'MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM', rung: 2, form: 'spot',
     draw: () => { const [b, h, s] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15]]); return { b, h, s, L: pick([10, 12, 15, 20]), m: pick([0, 1]), p: person() }; },
     make: ({ b, h, s, L, m, p }) => {
       const tri = m === 0 ? b * h : (b * h) / 2, two = 2 * tri, rectLen = m === 1 ? b + h : b + h + s, rect = rectLen * L, tot = two + rect;
@@ -381,37 +382,38 @@ export const FAMILIES = [
           { text: m === 1 ? `Three rectangles: (${b} + ${h}) × ${L} = ${rect} cm²` : `Three rectangles: (${b} + ${h} + ${s}) × ${L} = ${rect} cm²`, ok: rectLen === b + h + s },
           { text: `Total: ${two} + ${rect} = ${tot} cm²`, ok: tot === two + rect },
         ],
+        mis: m === 0 ? 'M_TRIANGLE_NOT_HALVED' : 'M_RECTANGLE_LEFT_OUT',
         fix: m === 0 ? 'The area of a triangle is half of base × height. Step 1 left out the half.' : 'There are three rectangles, one for each side of the triangle. Step 3 used only two of the sides.',
         steps: [`One triangle: 1/2 × ${b} × ${h} = ${(b * h) / 2} cm².`, `Two triangles: ${b * h} cm².`, `Three rectangles: (${b} + ${h} + ${s}) × ${L} = ${(b + h + s) * L} cm².`, `Total: ${b * h + (b + h + s) * L} cm².`],
       };
     } }),
 
-  fam({ id: 'g8.grid.count-squares', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.f', rung: 2, form: 'table',
+  fam({ id: 'g8.grid.count-squares', skill: 'G8_AREA_COMPOSITE', outcome: 'MATH.G8.MEASUR.AREA.f', cskill: 'MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID', rung: 2, form: 'table',
     draw: () => { const F = randInt(18, 60), P = 2 * randInt(4, 12); return { F, P, p: person() }; },
     make: ({ F, P, p }) => ({
       question: `${p.name} traces the outline of a leaf on a grid. The leaf has an irregular shape. Each square of the grid is 1 cm². The table shows how many squares were counted. A part square is counted as half a square. Estimate the area of the leaf, in cm².`,
       model: { type: 'table', data: { head: ['Squares', 'Number'], rows: [{ label: 'Whole squares', value: String(F) }, { label: 'Part squares', value: String(P) }] } },
       answer: F + P / 2,
-      wrong: [[F + P, 'A part square is only part of a square. Count each as half.'], [F, 'The part squares cover some of the leaf too. Add half of them.'], [P / 2, 'That is the part squares only. Add the whole squares as well.']],
+      wrong: [[F + P, 'A part square is only part of a square. Count each as half.', 'M_PART_AS_WHOLE'], [F, 'The part squares cover some of the leaf too. Add half of them.', 'M_PARTS_LEFT_OUT'], [P / 2, 'That is the part squares only. Add the whole squares as well.', 'M_WHOLES_LEFT_OUT']],
       hints: ['Whole squares count as one each. Part squares count as one half each.', 'Add the two amounts together.'],
       steps: [`Part squares as half: ${P} ÷ 2 = ${P / 2}.`, `Area: ${F} + ${P / 2} = ${F + P / 2} cm².`],
     }),
     check: ({ F, P }, a) => 2 * a === 2 * F + P }),
 
-  fam({ id: 'g8.grid.scaled-plot', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.f', rung: 3, form: 'steps',
+  fam({ id: 'g8.grid.scaled-plot', skill: 'G8_AREA_COMPOSITE', outcome: 'MATH.G8.MEASUR.AREA.f', cskill: 'MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID', rung: 3, form: 'steps',
     draw: () => { const side = pick([2, 5, 10]), F = randInt(15, 50), P = 2 * randInt(4, 10); return { side, F, P }; },
     make: ({ side, F, P }) => ({
       question: `The outline of an irregular plot of land is drawn on a square grid. Each square of the grid stands for ${side} m by ${side} m. The outline covers ${F} whole squares and ${P} part squares. Count the part squares as half squares.`,
       parts: [
-        { prompt: 'How many m² does one square stand for?', answer: side * side, unit: 'm²', hint: 'Area of a square = side × side.', wrong: [[side * 4, 'That is the distance round one square. Area is side × side.'], [side, 'Multiply the side by itself to get the area.']] },
-        { prompt: 'How many whole squares is the plot, if part squares count as half?', answer: F + P / 2, hint: 'Add half of the part squares to the whole squares.', wrong: [[F + P, 'Count each part square as half.'], [F, 'Add half of the part squares.']] },
-        { prompt: 'What is the estimated area of the plot, in m²?', answer: (F + P / 2) * side * side, unit: 'm²', hint: 'Multiply the number of squares by the area of one square.', wrong: [[(F + P / 2) * side, 'Each square stands for an area of side × side, not just the side.']] },
+        { prompt: 'How many m² does one square stand for?', answer: side * side, unit: 'm²', hint: 'Area of a square = side × side.', wrong: [[side * 4, 'That is the distance round one square. Area is side × side.', 'M_PERIMETER_OF_SQUARE'], [side, 'Multiply the side by itself to get the area.', 'M_SIDE_FOR_SQUARE_AREA']] },
+        { prompt: 'How many whole squares is the plot, if part squares count as half?', answer: F + P / 2, hint: 'Add half of the part squares to the whole squares.', wrong: [[F + P, 'Count each part square as half.', 'M_PART_AS_WHOLE'], [F, 'Add half of the part squares.', 'M_PARTS_LEFT_OUT']] },
+        { prompt: 'What is the estimated area of the plot, in m²?', answer: (F + P / 2) * side * side, unit: 'm²', hint: 'Multiply the number of squares by the area of one square.', wrong: [[(F + P / 2) * side, 'Each square stands for an area of side × side, not just the side.', 'M_SIDE_FOR_SQUARE_AREA']] },
       ],
       steps: [`One square: ${side} × ${side} = ${side * side} m².`, `Squares: ${F} + ${P} ÷ 2 = ${F + P / 2}.`, `Area: ${F + P / 2} × ${side * side} = ${(F + P / 2) * side * side} m².`],
     }),
     check: ({ side, F, P }, v) => v[0] === side * side && 2 * v[1] === 2 * F + P && v[2] === v[1] * v[0] }),
 
-  fam({ id: 'g8.grid.compare-fields', skill: 'G8_AREA_COMPOSITE', outcome: 'G8.AREA.f', rung: 3, form: 'table',
+  fam({ id: 'g8.grid.compare-fields', skill: 'G8_AREA_COMPOSITE', outcome: 'MATH.G8.MEASUR.AREA.f', cskill: 'MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID', misMapped: false, reveals: ['M_PART_AS_WHOLE', 'M_PARTS_LEFT_OUT'], rung: 3, form: 'table',
     draw: () => {
       for (let t = 0; t < 3000; t++) {
         const fs = [0, 1, 2].map(() => [randInt(12, 40), 2 * randInt(2, 14)]);

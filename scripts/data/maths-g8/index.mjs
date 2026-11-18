@@ -7,4 +7,5 @@ import * as rates from './rates.mjs';
 import * as expressions from './expressions.mjs';
 import * as equations from './equations.mjs';
 import * as circles from './circles.mjs';
-export const SUBS = [integers, fractions, decimals, squares, rates, expressions, equations, circles];
+import * as area from './area.mjs';
+export const SUBS = [integers, fractions, decimals, squares, rates, expressions, equations, circles, area];

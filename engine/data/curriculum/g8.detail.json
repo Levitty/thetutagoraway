@@ -608,6 +608,87 @@
     "work back"
    ],
    "mastery": "The child writes the perimeter in terms of r (a half circle has πr + 2r), collects the r terms and divides: a perimeter of 72 m gives (22/7 + 2)r = 72, so r = 14 m."
+  },
+  "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS": {
+   "forms": [
+    "area of a circle",
+    "how many times as much",
+    "from the diameter",
+    "why"
+   ],
+   "mastery": "The child uses A = πr² with the radius (halving a diameter first), and explains that doubling the radius makes the area four times as big because the radius is used twice: a radius of 7 m gives 154 m², a radius of 14 m gives 616 m²."
+  },
+  "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE": {
+   "forms": [
+    "area of the path",
+    "an arched window",
+    "a ring",
+    "area of glass"
+   ],
+   "mastery": "The child splits a shape into circles, half circles and rectangles, finds each part with the right radius, and adds or subtracts: a path 7 m wide round a garden of radius 7 m has area π × 14² - π × 7² = 462 m²."
+  },
+  "MATH.G8.MEASUR.AREA.SECTOR_AREA": {
+   "forms": [
+    "area watered",
+    "area of a slice",
+    "why is that right",
+    "fraction of the circle"
+   ],
+   "mastery": "The child takes θ/360 of the area of the whole circle (not of the circumference), and explains that the area is shared in the same fraction as the angle: a sprinkler reaching 14 m through 90° waters 1/4 of 616 = 154 m²."
+  },
+  "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE": {
+   "forms": [
+    "through what angle",
+    "from the area lit",
+    "fraction to degrees",
+    "check"
+   ],
+   "mastery": "The child divides the area of the sector by the area of the whole circle to get the fraction, then multiplies by 360: a light reaching 14 m and lighting 154 m² spreads through 154/616 × 360 = 90°."
+  },
+  "MATH.G8.MEASUR.AREA.SA_CUBOID": {
+   "forms": [
+    "paper to cover a box",
+    "which carton needs the most card",
+    "which step has the mistake",
+    "a cube"
+   ],
+   "mastery": "The child finds the three different faces (l × w, l × h, w × h), doubles each because there is one on each side, and adds: a box 5 cm by 4 cm by 3 cm has 2(20 + 15 + 12) = 94 cm²; a cube has six equal faces."
+  },
+  "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT": {
+   "forms": [
+    "painting a classroom",
+    "an open box",
+    "litres of paint",
+    "take away the windows"
+   ],
+   "mastery": "The child decides which faces are covered (four walls and a ceiling, a box with no lid), takes away doors and windows, and divides by what one litre or one sheet covers."
+  },
+  "MATH.G8.MEASUR.AREA.SA_CYLINDER": {
+   "forms": [
+    "metal for a tank with no lid",
+    "area of a label",
+    "a closed tin",
+    "from the diameter"
+   ],
+   "mastery": "The child finds the curved side as the circumference times the height (2πrh), adds one circle for an open tank and two for a closed tin, and uses the radius (half the diameter): a closed tin of radius 7 cm and height 10 cm needs 440 + 308 = 748 cm²."
+  },
+  "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM": {
+   "forms": [
+    "cloth for a tent",
+    "total surface area from a table",
+    "which step has the mistake",
+    "card for a prism"
+   ],
+   "mastery": "The child adds the two triangular ends (each half base times the straight-up height) and the three rectangles (each side of the triangle times the length): ends of 3, 4 and 5 cm with length 10 cm give 12 + 120 = 132 cm²."
+  },
+  "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID": {
+   "forms": [
+    "area of a leaf",
+    "a plot on a scaled grid",
+    "which field is largest",
+    "part squares"
+   ],
+   "mastery": "The child counts whole squares, counts part squares as half each, adds, and multiplies by the area of one square when the grid is to scale: 20 whole and 10 part squares of 5 m by 5 m give 25 × 25 = 625 m²."
   }
  }
 }

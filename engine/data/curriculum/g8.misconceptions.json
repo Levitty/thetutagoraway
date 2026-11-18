@@ -3722,5 +3722,719 @@
   "help": "Add the r terms: (22/7 + 2)r = (36/7)r.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS.M_AREA_SCALES_LINEARLY": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS",
+  "error": "Believes doubling the radius doubles the area.",
+  "example": {
+   "question": "A pond with twice the radius has how many times the area?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "Thinks area grows like length.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The radius is used twice: 2 × 2 = 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS.M_AREA_HAS_A_TWO": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS",
+  "error": "Puts the 2 from the circumference into the area.",
+  "example": {
+   "question": "Area of a circle of radius 7 m",
+   "wrong_answer": "308 m²",
+   "correct_answer": "154 m²"
+  },
+  "cause": "Mixes 2πr and πr².",
+  "reveals": "The answer 308 m² as a wrong option, with a reason that names the idea.",
+  "help": "Area = π × r × r: no 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS.M_AREA_SCALES_AS_CUBE": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS",
+  "error": "Believes area grows as the cube of the radius.",
+  "example": {
+   "question": "Twice the radius: how many times the area?",
+   "wrong_answer": "8",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes area and volume.",
+  "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+  "help": "Two lengths multiply for an area: 2 × 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS.M_CIRCUMFERENCE_FOR_AREA": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS",
+  "error": "Gives the circumference as the area.",
+  "example": {
+   "question": "Area of a garden of radius 7 m",
+   "wrong_answer": "44 m²",
+   "correct_answer": "154 m²"
+  },
+  "cause": "Uses the first circle formula remembered.",
+  "reveals": "The answer 44 m² as a wrong option, with a reason that names the idea.",
+  "help": "Area is the space inside: πr².",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS.M_DIAMETER_SQUARED": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_RADIUS",
+  "error": "Squares the diameter in πr².",
+  "example": {
+   "question": "Area of a circle of diameter 14 m",
+   "wrong_answer": "616 m²",
+   "correct_answer": "154 m²"
+  },
+  "cause": "Forgets to halve the diameter.",
+  "reveals": "The answer 616 m² as a wrong option, with a reason that names the idea.",
+  "help": "r = 7: π × 7 × 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_PATH_ADDED_TWICE_RADIUS": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Adds the path width twice to the radius.",
+  "example": {
+   "question": "Garden radius 7 m, path 7 m wide. Outer radius?",
+   "wrong_answer": "21 m",
+   "correct_answer": "14 m"
+  },
+  "cause": "Adds the width on both sides as for a diameter.",
+  "reveals": "The answer 21 m as a wrong option, with a reason that names the idea.",
+  "help": "The radius goes out on one side only: 7 + 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_PATH_WIDTH_AS_RADIUS": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Uses the width of the path as the outer radius.",
+  "example": {
+   "question": "Garden radius 7 m, path 3 m wide. Outer radius?",
+   "wrong_answer": "3 m",
+   "correct_answer": "10 m"
+  },
+  "cause": "Reads the last number given.",
+  "reveals": "The answer 3 m as a wrong option, with a reason that names the idea.",
+  "help": "Outer radius = garden radius + path.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_RING_AS_SMALL_CIRCLE": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Finds the area of a circle as wide as the path.",
+  "example": {
+   "question": "Garden radius 7 m, path 7 m. Area of the path?",
+   "wrong_answer": "154 m²",
+   "correct_answer": "462 m²"
+  },
+  "cause": "Thinks of the path as one small circle.",
+  "reveals": "The answer 154 m² as a wrong option, with a reason that names the idea.",
+  "help": "The path is a ring: big circle minus small.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_INNER_NOT_SUBTRACTED": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Gives the area of the big circle for the ring.",
+  "example": {
+   "question": "Garden radius 7 m, path 7 m. Area of the path?",
+   "wrong_answer": "616 m²",
+   "correct_answer": "462 m²"
+  },
+  "cause": "Forgets to take the garden away.",
+  "reveals": "The answer 616 m² as a wrong option, with a reason that names the idea.",
+  "help": "Subtract the garden.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_FULL_CIRCLE_FOR_HALF_AREA": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Adds a whole circle where there is half a circle.",
+  "example": {
+   "question": "A window 14 cm wide and 20 cm tall with a half circle on top. Area?",
+   "wrong_answer": "434 cm²",
+   "correct_answer": "357 cm²"
+  },
+  "cause": "Uses πr² without halving.",
+  "reveals": "The answer 434 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Half a circle: ½πr².",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_PART_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Leaves out one part of the shape.",
+  "example": {
+   "question": "A window 14 cm by 20 cm with a half circle on top. Area?",
+   "wrong_answer": "280 cm²",
+   "correct_answer": "357 cm²"
+  },
+  "cause": "Finds the easy part only.",
+  "reveals": "The answer 280 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Add every part of the shape.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE.M_DIAMETER_AS_RADIUS_AREA": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_CIRCLE_COMPOSITE",
+  "error": "Uses the width of the rectangle as the radius of the half circle.",
+  "example": {
+   "question": "A window 14 cm wide with a half circle on top. Radius?",
+   "wrong_answer": "14 cm",
+   "correct_answer": "7 cm"
+  },
+  "cause": "Does not see the width is a diameter.",
+  "reveals": "The answer 14 cm as a wrong option, with a reason that names the idea.",
+  "help": "The flat side of the half circle is the diameter.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_AREA.M_WHOLE_CIRCLE_FOR_SECTOR": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_AREA",
+  "error": "Gives the area of the whole circle.",
+  "example": {
+   "question": "A sprinkler reaching 14 m through 90°. Area?",
+   "wrong_answer": "616 m²",
+   "correct_answer": "154 m²"
+  },
+  "cause": "Stops after the circle.",
+  "reveals": "The answer 616 m² as a wrong option, with a reason that names the idea.",
+  "help": "Take 90/360 of it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_AREA.M_ARC_FOR_SECTOR_AREA": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_AREA",
+  "error": "Gives the length of the arc as the area.",
+  "example": {
+   "question": "A sprinkler reaching 14 m through 90°. Area?",
+   "wrong_answer": "22 m²",
+   "correct_answer": "154 m²"
+  },
+  "cause": "Mixes the edge and the inside.",
+  "reveals": "The answer 22 m² as a wrong option, with a reason that names the idea.",
+  "help": "Area uses πr², not 2πr.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_AREA.M_RADIUS_USED_ONCE": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_AREA",
+  "error": "Uses the radius once in the area.",
+  "example": {
+   "question": "A sprinkler reaching 14 m through 90°. Area?",
+   "wrong_answer": "11 m²",
+   "correct_answer": "154 m²"
+  },
+  "cause": "Writes π × r.",
+  "reveals": "The answer 11 m² as a wrong option, with a reason that names the idea.",
+  "help": "Area = θ/360 × π × r × r.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_AREA.M_DEGREES_AS_PERCENT": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_AREA",
+  "error": "Reads the angle as a percentage of the circle.",
+  "example": {
+   "question": "A 36° sector is what fraction of the circle?",
+   "wrong_answer": "36%",
+   "correct_answer": "1/10"
+  },
+  "cause": "Thinks a full turn is 100.",
+  "reveals": "The answer 36% as a wrong option, with a reason that names the idea.",
+  "help": "A full turn is 360°.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_AREA.M_SECTOR_ALWAYS_HALF": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_AREA",
+  "error": "Believes any sector is half the circle.",
+  "example": {
+   "question": "A 60° sector is what fraction?",
+   "wrong_answer": "1/2",
+   "correct_answer": "1/6"
+  },
+  "cause": "Remembers half circles only.",
+  "reveals": "The answer 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "The fraction is the angle over 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_AREA.M_ANGLE_OVER_100": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_AREA",
+  "error": "Divides the angle by 100 to get the fraction.",
+  "example": {
+   "question": "A 72° sector is what fraction?",
+   "wrong_answer": "0.72",
+   "correct_answer": "1/5"
+  },
+  "cause": "Uses 100 as the whole.",
+  "reveals": "The answer 0.72 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by 360: 72/360 = 1/5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE.M_UNLIT_ANGLE": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE",
+  "error": "Gives the angle of the part not in the sector.",
+  "example": {
+   "question": "Radius 14 m, area lit 154 m². Angle?",
+   "wrong_answer": "270°",
+   "correct_answer": "90°"
+  },
+  "cause": "Takes the fraction from 360 the wrong way.",
+  "reveals": "The answer 270° as a wrong option, with a reason that names the idea.",
+  "help": "The lit part is 154/616 of 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE.M_FRACTION_NOT_TO_DEGREES": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE",
+  "error": "Gives the fraction of the circle as the angle.",
+  "example": {
+   "question": "Radius 14 m, area lit 154 m². Angle?",
+   "wrong_answer": "0.25",
+   "correct_answer": "90°"
+  },
+  "cause": "Stops at the fraction.",
+  "reveals": "The answer 0.25 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by 360.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE.M_CIRCLE_AREA_WRONG_FORMULA": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE",
+  "error": "Uses the wrong area for the whole circle (2πr or 2πr²).",
+  "example": {
+   "question": "Radius 14 m, area lit 154 m². Angle?",
+   "wrong_answer": "45°",
+   "correct_answer": "90°"
+  },
+  "cause": "Puts a 2 in the area.",
+  "reveals": "The answer 45° as a wrong option, with a reason that names the idea.",
+  "help": "Whole circle = π × 14 × 14 = 616 m².",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE.M_AREA_AS_ANGLE": {
+  "skill": "MATH.G8.MEASUR.AREA.SECTOR_FIND_ANGLE",
+  "error": "Gives the area as the angle.",
+  "example": {
+   "question": "Radius 14 m, area lit 154 m². Angle?",
+   "wrong_answer": "154°",
+   "correct_answer": "90°"
+  },
+  "cause": "Uses the number given.",
+  "reveals": "The answer 154° as a wrong option, with a reason that names the idea.",
+  "help": "Compare the area with the whole circle first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID.M_ONE_OF_EACH_FACE": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID",
+  "error": "Adds one of each face and forgets the opposite faces.",
+  "example": {
+   "question": "Surface area of a box 5 cm by 4 cm by 3 cm",
+   "wrong_answer": "47 cm²",
+   "correct_answer": "94 cm²"
+  },
+  "cause": "Sees three faces in a drawing.",
+  "reveals": "The answer 47 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Each face has a twin on the other side: double.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID.M_VOLUME_FOR_SA": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID",
+  "error": "Works out the volume instead of the surface area.",
+  "example": {
+   "question": "Card for a box 5 cm by 4 cm by 3 cm",
+   "wrong_answer": "60 cm²",
+   "correct_answer": "94 cm²"
+  },
+  "cause": "Multiplies the three lengths.",
+  "reveals": "The answer 60 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Card covers the faces: add the face areas.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID.M_FOUR_FACES_ONLY": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID",
+  "error": "Counts four faces of a cuboid and leaves out the top and bottom.",
+  "example": {
+   "question": "Surface area of a box 5 by 4 by 3",
+   "wrong_answer": "54 cm²",
+   "correct_answer": "94 cm²"
+  },
+  "cause": "Counts the sides seen standing round it.",
+  "reveals": "The answer 54 cm² as a wrong option, with a reason that names the idea.",
+  "help": "A closed box has 6 faces.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID.M_EDGES_ADDED": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID",
+  "error": "Adds the three edge lengths.",
+  "example": {
+   "question": "Surface area of a box 5 by 4 by 3",
+   "wrong_answer": "12 cm²",
+   "correct_answer": "94 cm²"
+  },
+  "cause": "Thinks adding lengths gives an area.",
+  "reveals": "The answer 12 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Each face is length × width.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT.M_FLOOR_FOR_WALLS": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT",
+  "error": "Uses the floor area for the walls.",
+  "example": {
+   "question": "A room 8 m by 6 m by 3 m: area of the four walls",
+   "wrong_answer": "48 m²",
+   "correct_answer": "84 m²"
+  },
+  "cause": "Multiplies the length by the width.",
+  "reveals": "The answer 48 m² as a wrong option, with a reason that names the idea.",
+  "help": "Walls stand up: length or width times height.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT.M_TWO_WALLS_ONLY": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT",
+  "error": "Counts two walls instead of four.",
+  "example": {
+   "question": "A room 8 m by 6 m by 3 m: area of the four walls",
+   "wrong_answer": "42 m²",
+   "correct_answer": "84 m²"
+  },
+  "cause": "Counts one of each size.",
+  "reveals": "The answer 42 m² as a wrong option, with a reason that names the idea.",
+  "help": "Two walls of each size: double.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT.M_AREA_AS_SUM": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT",
+  "error": "Adds length and width for an area.",
+  "example": {
+   "question": "Area of a ceiling 8 m by 6 m",
+   "wrong_answer": "14 m²",
+   "correct_answer": "48 m²"
+  },
+  "cause": "Adds the two numbers.",
+  "reveals": "The answer 14 m² as a wrong option, with a reason that names the idea.",
+  "help": "Area = length × width.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT.M_OPENINGS_NOT_REMOVED": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT",
+  "error": "Leaves the doors and windows in the area to paint.",
+  "example": {
+   "question": "Walls 84 m², ceiling 48 m², doors and windows 12 m². Area to paint?",
+   "wrong_answer": "132 m²",
+   "correct_answer": "120 m²"
+  },
+  "cause": "Forgets the openings.",
+  "reveals": "The answer 132 m² as a wrong option, with a reason that names the idea.",
+  "help": "Doors and windows are not painted: take them away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT.M_OPENINGS_ADDED": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT",
+  "error": "Adds the doors and windows instead of taking them away.",
+  "example": {
+   "question": "Walls 84, ceiling 48, openings 12. Area to paint?",
+   "wrong_answer": "144 m²",
+   "correct_answer": "120 m²"
+  },
+  "cause": "Adds every number in the story.",
+  "reveals": "The answer 144 m² as a wrong option, with a reason that names the idea.",
+  "help": "Openings are not painted: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT.M_LITRES_MULTIPLIED": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CUBOID_IN_CONTEXT",
+  "error": "Multiplies the area by the coverage to find litres.",
+  "example": {
+   "question": "120 m² to paint; 1 litre covers 10 m². Litres?",
+   "wrong_answer": "1,200",
+   "correct_answer": "12"
+  },
+  "cause": "Uses the wrong operation.",
+  "reveals": "The answer 1,200 as a wrong option, with a reason that names the idea.",
+  "help": "How many 10s in 120: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_LID_ADDED_OPEN": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Adds two circles for a tank with no lid.",
+  "example": {
+   "question": "Open tank, radius 7 cm, height 10 cm. Metal?",
+   "wrong_answer": "748 cm²",
+   "correct_answer": "594 cm²"
+  },
+  "cause": "Uses the closed formula for every cylinder.",
+  "reveals": "The answer 748 cm² as a wrong option, with a reason that names the idea.",
+  "help": "No lid: one circle only.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_BASE_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Gives the curved side only for a tank with a base.",
+  "example": {
+   "question": "Open tank, radius 7 cm, height 10 cm. Metal?",
+   "wrong_answer": "440 cm²",
+   "correct_answer": "594 cm²"
+  },
+  "cause": "Forgets the base.",
+  "reveals": "The answer 440 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Add the base circle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_VOLUME_FOR_SA_CYL": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Works out the volume instead of the surface area.",
+  "example": {
+   "question": "Closed tin, radius 7 cm, height 10 cm. Metal?",
+   "wrong_answer": "1,540 cm²",
+   "correct_answer": "748 cm²"
+  },
+  "cause": "Uses πr²h.",
+  "reveals": "The answer 1,540 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Metal covers the outside: add the faces.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_DIAMETER_FOR_RADIUS_CYL": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Uses the diameter where the radius is needed.",
+  "example": {
+   "question": "A label on a tin 7 cm across and 10 cm tall",
+   "wrong_answer": "440 cm²",
+   "correct_answer": "220 cm²"
+  },
+  "cause": "Puts d into 2πr.",
+  "reveals": "The answer 440 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Use r = 3.5, or πd × h.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_ENDS_ADDED_TO_LABEL": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Adds the top and bottom to the area of a label.",
+  "example": {
+   "question": "A label on a tin 7 cm across and 10 cm tall",
+   "wrong_answer": "297 cm²",
+   "correct_answer": "220 cm²"
+  },
+  "cause": "Finds the whole surface.",
+  "reveals": "The answer 297 cm² as a wrong option, with a reason that names the idea.",
+  "help": "The label covers the curved side only.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_RADIUS_TIMES_HEIGHT": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Multiplies the radius by the height for the curved side.",
+  "example": {
+   "question": "A label on a tin 7 cm across and 10 cm tall",
+   "wrong_answer": "35 cm²",
+   "correct_answer": "220 cm²"
+  },
+  "cause": "Forgets the label goes all the way round.",
+  "reveals": "The answer 35 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Length of the label = circumference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_ENDS_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Gives the curved side only for a closed tin.",
+  "example": {
+   "question": "Closed tin, radius 7 cm, height 10 cm. Metal?",
+   "wrong_answer": "440 cm²",
+   "correct_answer": "748 cm²"
+  },
+  "cause": "Forgets the top and bottom.",
+  "reveals": "The answer 440 cm² as a wrong option, with a reason that names the idea.",
+  "help": "A closed tin has two circles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_CYLINDER.M_ONE_END_ONLY": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_CYLINDER",
+  "error": "Adds only one circle for a closed tin.",
+  "example": {
+   "question": "Closed tin, radius 7 cm, height 10 cm. Metal?",
+   "wrong_answer": "594 cm²",
+   "correct_answer": "748 cm²"
+  },
+  "cause": "Forgets the lid or the base.",
+  "reveals": "The answer 594 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Top and bottom: two circles.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM.M_FLOOR_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM",
+  "error": "Leaves out the base rectangle of a tent with a sewn-in floor.",
+  "example": {
+   "question": "A tent: ends 6 m², slopes 25 m², floor 20 m². Cloth?",
+   "wrong_answer": "31 m²",
+   "correct_answer": "51 m²"
+  },
+  "cause": "Thinks of a tent as having no floor.",
+  "reveals": "The answer 31 m² as a wrong option, with a reason that names the idea.",
+  "help": "The floor is sewn in: add it.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM.M_ENDS_LEFT_OUT_PRISM": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM",
+  "error": "Leaves out the triangular ends.",
+  "example": {
+   "question": "A tent: ends 6 m², slopes 25 m², floor 20 m². Cloth?",
+   "wrong_answer": "45 m²",
+   "correct_answer": "51 m²"
+  },
+  "cause": "Counts the rectangles only.",
+  "reveals": "The answer 45 m² as a wrong option, with a reason that names the idea.",
+  "help": "Two triangular ends need cloth.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM.M_SLANT_FOR_HEIGHT": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM",
+  "error": "Uses the sloping side as the height of the triangle.",
+  "example": {
+   "question": "A triangle end 4 m wide, 1.5 m high, sloping sides 2.5 m. Area?",
+   "wrong_answer": "5 m²",
+   "correct_answer": "3 m²"
+  },
+  "cause": "Takes the side that is drawn as the height.",
+  "reveals": "The answer 5 m² as a wrong option, with a reason that names the idea.",
+  "help": "The height is the straight-up measure.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM.M_ONE_TRIANGLE_ONLY": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM",
+  "error": "Counts one triangular end.",
+  "example": {
+   "question": "Prism with 3-4-5 cm ends and length 10 cm. Total surface area?",
+   "wrong_answer": "126 cm²",
+   "correct_answer": "132 cm²"
+  },
+  "cause": "Sees one end.",
+  "reveals": "The answer 126 cm² as a wrong option, with a reason that names the idea.",
+  "help": "A prism has two ends.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM.M_TRIANGLE_NOT_HALVED": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM",
+  "error": "Leaves out the half in the area of a triangle.",
+  "example": {
+   "question": "Area of a triangle with base 3 cm and height 4 cm",
+   "wrong_answer": "12 cm²",
+   "correct_answer": "6 cm²"
+  },
+  "cause": "Uses the rectangle formula.",
+  "reveals": "The answer 12 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Half of base × height.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM.M_RECTANGLE_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.SA_TRIANGULAR_PRISM",
+  "error": "Uses only two of the three rectangles.",
+  "example": {
+   "question": "Prism with 3-4-5 cm ends, length 10. Rectangles?",
+   "wrong_answer": "70 cm²",
+   "correct_answer": "120 cm²"
+  },
+  "cause": "Counts the two rectangles that show.",
+  "reveals": "The answer 70 cm² as a wrong option, with a reason that names the idea.",
+  "help": "One rectangle for each side of the triangle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID.M_PART_AS_WHOLE": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID",
+  "error": "Counts part squares as whole squares.",
+  "example": {
+   "question": "20 whole and 10 part squares of 1 cm². Area?",
+   "wrong_answer": "30 cm²",
+   "correct_answer": "25 cm²"
+  },
+  "cause": "Counts every square touched.",
+  "reveals": "The answer 30 cm² as a wrong option, with a reason that names the idea.",
+  "help": "A part square counts as half.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID.M_PARTS_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID",
+  "error": "Leaves out the part squares.",
+  "example": {
+   "question": "20 whole and 10 part squares. Area?",
+   "wrong_answer": "20 cm²",
+   "correct_answer": "25 cm²"
+  },
+  "cause": "Counts whole squares only.",
+  "reveals": "The answer 20 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Add half of the part squares.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID.M_WHOLES_LEFT_OUT": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID",
+  "error": "Counts only the part squares.",
+  "example": {
+   "question": "20 whole and 10 part squares. Area?",
+   "wrong_answer": "5 cm²",
+   "correct_answer": "25 cm²"
+  },
+  "cause": "Forgets the whole squares.",
+  "reveals": "The answer 5 cm² as a wrong option, with a reason that names the idea.",
+  "help": "Wholes plus half the parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID.M_PERIMETER_OF_SQUARE": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID",
+  "error": "Uses the distance round one grid square as its area.",
+  "example": {
+   "question": "Each square is 5 m by 5 m. Area of one square?",
+   "wrong_answer": "20 m²",
+   "correct_answer": "25 m²"
+  },
+  "cause": "Adds the sides.",
+  "reveals": "The answer 20 m² as a wrong option, with a reason that names the idea.",
+  "help": "Area = side × side.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID.M_SIDE_FOR_SQUARE_AREA": {
+  "skill": "MATH.G8.MEASUR.AREA.AREA_IRREGULAR_GRID",
+  "error": "Multiplies the count by the side instead of the area of a square.",
+  "example": {
+   "question": "25 squares, each 5 m by 5 m. Area?",
+   "wrong_answer": "125 m²",
+   "correct_answer": "625 m²"
+  },
+  "cause": "Uses the side length as the size of a square.",
+  "reveals": "The answer 125 m² as a wrong option, with a reason that names the idea.",
+  "help": "Each square stands for 25 m².",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
