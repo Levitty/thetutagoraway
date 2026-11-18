@@ -11518,6 +11518,1174 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.GEOMET.COORDINATES_AND_GRAPHS",
   "sub_strand_name": "Coordinates and graphs",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE",
+  "key_step": "The child says what 1 cm stands for and divides each real length by it, keeping the lengths in order.",
+  "floor": {
+   "prerequisite": "Divides lengths.",
+   "question": "20 m ÷ 5 m",
+   "answer": "4"
+  },
+  "representations": [
+   "a real wall and its line on paper",
+   "a table of real and drawn lengths",
+   "the plan"
+  ],
+  "steps": [
+   "Read the scale: 1 cm stands for ?",
+   "Divide each real length by it.",
+   "Keep each drawn length beside its real length.",
+   "Check: drawn lengths are shorter."
+  ],
+  "contexts": [
+   "a surveyor's plan of a plot",
+   "a classroom plan",
+   "a plan of a church compound"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: real lengths 20 m, 35 m, 12.5 m; scale 1 cm to 5 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 20 m.",
+    "say": "How many 5 m lengths fit in 20 m?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes 4 cm and fills the rest."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE.M_MULTIPLIED_TO_MAP",
+    "listen_for": [
+     "100 cm"
+    ],
+    "ask": "Is the plan bigger than the wall?",
+    "repair": "Divide.",
+    "error": "Multiplies a real length by the scale to get the length to draw.",
+    "example": {
+     "question": "1 cm to 5 m. A 20 m wall is drawn as?",
+     "wrong_answer": "100 cm",
+     "correct_answer": "4 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE.M_REAL_FOR_MAP",
+    "listen_for": [
+     "20 cm"
+    ],
+    "ask": "Does 1 cm stand for 1 m?",
+    "repair": "It stands for 5 m.",
+    "error": "Writes the real length as the drawn length.",
+    "example": {
+     "question": "1 cm to 5 m. A 20 m wall is drawn as?",
+     "wrong_answer": "20 cm",
+     "correct_answer": "4 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE.M_LENGTHS_MISMATCHED",
+    "listen_for": [
+     "swapped"
+    ],
+    "ask": "Which drawn length goes with 20 m?",
+    "repair": "Keep the order.",
+    "error": "Swaps the drawn lengths of two parts.",
+    "example": {
+     "question": "Walls of 20 m and 35 m at 1 cm to 5 m",
+     "wrong_answer": "7 cm and 4 cm",
+     "correct_answer": "4 cm and 7 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE.M_SCALE_SUBTRACTED_MAP",
+    "listen_for": [
+     "15 cm"
+    ],
+    "ask": "Is taking 5 away using the scale?",
+    "repair": "Divide.",
+    "error": "Takes the scale away from the real length.",
+    "example": {
+     "question": "1 cm to 5 m. A 20 m wall?",
+     "wrong_answer": "15 cm",
+     "correct_answer": "4 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1 cm to 4 m. Draw 28 m and 10 m.",
+    "answer": "7 cm and 2.5 cm",
+    "shows": "divide"
+   },
+   {
+    "question": "1 cm to 10 m. A 45 m field is drawn as?",
+    "answer": "4.5 cm",
+    "shows": "decimal"
+   }
+  ],
+  "name": "Represent lengths to a given scale",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE",
+  "key_step": "The child divides the real length by what 1 cm stands for, in the same unit.",
+  "floor": {
+   "prerequisite": "Changes km to m.",
+   "question": "3 km in m",
+   "answer": "3,000 m"
+  },
+  "representations": [
+   "a real road",
+   "the division",
+   "the map length"
+  ],
+  "steps": [
+   "Same units as the scale.",
+   "Divide by what 1 cm stands for.",
+   "Give the answer in cm.",
+   "Check it is shorter."
+  ],
+  "contexts": [
+   "a road on a village map",
+   "a fence on a farm plan",
+   "a corridor on a school plan"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: scale 1 cm to 4 m; real length 24 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 24 m.",
+    "say": "How many lots of 4 m?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 6."
+   },
+   {
+    "beat": "write",
+    "do": "Write 6 cm on the plan."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE.M_MAP_MULTIPLIED_AGAIN",
+    "listen_for": [
+     "96"
+    ],
+    "ask": "Should the map length be bigger or smaller?",
+    "repair": "Smaller: divide.",
+    "error": "Multiplies by the scale again when going from real to map.",
+    "example": {
+     "question": "1 cm to 4 m. A real length of 24 m on the map?",
+     "wrong_answer": "96 cm",
+     "correct_answer": "6 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE.M_SUBTRACTED_FOR_MAP",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "How many lots of 4 m fit?",
+    "repair": "Divide.",
+    "error": "Subtracts the scale from the real length.",
+    "example": {
+     "question": "1 cm to 4 m. 24 m on the map?",
+     "wrong_answer": "20 cm",
+     "correct_answer": "6 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE.M_REAL_GIVEN_FOR_MAP",
+    "listen_for": [
+     "24 cm"
+    ],
+    "ask": "Is 24 cm on the map 24 m?",
+    "repair": "Scale down.",
+    "error": "Gives the real length as the map length.",
+    "example": {
+     "question": "1 cm to 4 m. 24 m on the map?",
+     "wrong_answer": "24 cm",
+     "correct_answer": "6 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.ACTUAL_TO_SCALE.M_UNITS_NOT_MATCHED_MAP",
+    "listen_for": [
+     "0.006"
+    ],
+    "ask": "Km and m together?",
+    "repair": "Change to metres first.",
+    "error": "Divides a real length in km by a scale in m.",
+    "example": {
+     "question": "1 cm to 500 m. A road of 3 km on the map?",
+     "wrong_answer": "0.006 cm",
+     "correct_answer": "6 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1 cm to 500 m. A road of 4 km on the map?",
+    "answer": "8 cm",
+    "shows": "units first"
+   },
+   {
+    "question": "1 cm to 2 m. A wall of 13 m on the plan?",
+    "answer": "6.5 cm",
+    "shows": "divide"
+   }
+  ],
+  "name": "Convert an actual length to a scale length",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL",
+  "key_step": "The child multiplies the plan length by what 1 cm stands for and keeps the scale's unit.",
+  "floor": {
+   "prerequisite": "Multiplies a decimal.",
+   "question": "7.5 × 2",
+   "answer": "15"
+  },
+  "representations": [
+   "a plan with lengths",
+   "a table of plan and real lengths",
+   "the real lengths"
+  ],
+  "steps": [
+   "Read the scale.",
+   "Multiply each plan length.",
+   "For a difference, subtract the real lengths.",
+   "Give the unit from the scale."
+  ],
+  "contexts": [
+   "a school plan",
+   "a map of two towns",
+   "a plan of a hall for a wedding"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a plan: hall 8 cm, classroom 5 cm; 1 cm to 3 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the hall.",
+    "say": "How long is the real hall?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 24 m."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: how much longer than the classroom?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL.M_MAP_DIFFERENCE_NOT_SCALED",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Is that in cm or real metres?",
+    "repair": "Scale it.",
+    "error": "Gives the difference on the plan, not in real life.",
+    "example": {
+     "question": "1 cm to 3 m. Hall 8 cm, classroom 5 cm. How much longer is the real hall?",
+     "wrong_answer": "3",
+     "correct_answer": "9 m"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL.M_ONE_LENGTH_FOR_DIFFERENCE",
+    "listen_for": [
+     "24"
+    ],
+    "ask": "Is that how much longer?",
+    "repair": "Subtract.",
+    "error": "Gives one real length when a difference is asked.",
+    "example": {
+     "question": "1 cm to 3 m. Hall 8 cm, classroom 5 cm. How much longer?",
+     "wrong_answer": "24 m",
+     "correct_answer": "9 m"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL.M_SUM_FOR_DIFFERENCE",
+    "listen_for": [
+     "39"
+    ],
+    "ask": "Does longer mean add?",
+    "repair": "Subtract.",
+    "error": "Adds the lengths when the difference is asked.",
+    "example": {
+     "question": "Hall 8 cm, classroom 5 cm at 1 cm to 3 m. How much longer?",
+     "wrong_answer": "39 m",
+     "correct_answer": "9 m"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL.M_SCALE_ADDED",
+    "listen_for": [
+     "9.5"
+    ],
+    "ask": "Does each cm add 2 m or stand for 2 m?",
+    "repair": "Multiply.",
+    "error": "Adds the scale to the map length.",
+    "example": {
+     "question": "1 cm to 2 m. 7.5 cm on the plan is?",
+     "wrong_answer": "9.5 m",
+     "correct_answer": "15 m"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL.M_SCALE_DIVIDED",
+    "listen_for": [
+     "3.75"
+    ],
+    "ask": "Is the real thing smaller than the plan?",
+    "repair": "Multiply.",
+    "error": "Divides by the scale when going from map to real.",
+    "example": {
+     "question": "1 cm to 2 m. 7.5 cm on the plan is?",
+     "wrong_answer": "3.75 m",
+     "correct_answer": "15 m"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL.M_UNIT_CHANGED_NEEDLESSLY",
+    "listen_for": [
+     "1,500"
+    ],
+    "ask": "What unit does the scale give?",
+    "repair": "Metres already.",
+    "error": "Changes the answer to another unit when the scale already gives the one asked.",
+    "example": {
+     "question": "1 cm to 2 m. 7.5 cm on the plan, in metres?",
+     "wrong_answer": "1,500",
+     "correct_answer": "15 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1 cm to 3 m. A room is 4.5 cm on the plan. Real length?",
+    "answer": "13.5 m",
+    "shows": "multiply"
+   },
+   {
+    "question": "Two towns 6 cm apart; 1 cm stands for 8 km. Real distance?",
+    "answer": "48 km",
+    "shows": "map"
+   }
+  ],
+  "name": "Convert a scale length to an actual length",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE",
+  "key_step": "The child shares the real distance among the map centimetres to say what one centimetre stands for.",
+  "floor": {
+   "prerequisite": "Finds an amount for one unit.",
+   "question": "30 km for 6 cm: for 1 cm",
+   "answer": "5 km"
+  },
+  "representations": [
+   "a map with a ruler",
+   "the statement",
+   "the scale bar"
+  ],
+  "steps": [
+   "Measure the map distance.",
+   "Divide the real distance by it.",
+   "Write \"1 cm represents ...\".",
+   "Use it to read other distances."
+  ],
+  "contexts": [
+   "a road map of Kenya",
+   "a plan of a market",
+   "a county map"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write: map 6 cm, real 30 km."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 6 cm.",
+    "say": "What does each centimetre stand for?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 5 km."
+   },
+   {
+    "beat": "write",
+    "do": "Write \"1 cm represents 5 km\"."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE.M_WHOLE_REAL_FOR_ONE_CM",
+    "listen_for": [
+     "30 km"
+    ],
+    "ask": "Is that for 1 cm or 6 cm?",
+    "repair": "Share by 6.",
+    "error": "Uses the whole real distance as what 1 cm stands for.",
+    "example": {
+     "question": "6 cm on the map for 30 km. Scale statement?",
+     "wrong_answer": "1 cm represents 30 km",
+     "correct_answer": "1 cm represents 5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE.M_STATEMENT_NOT_FOR_ONE_CM",
+    "listen_for": [
+     "6 cm represents"
+    ],
+    "ask": "Which length does a statement start with?",
+    "repair": "1 cm.",
+    "error": "Writes the statement for the map length instead of 1 cm.",
+    "example": {
+     "question": "6 cm for 30 km. Scale statement?",
+     "wrong_answer": "6 cm represents 5 km",
+     "correct_answer": "1 cm represents 5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE.M_MAP_FOR_REAL",
+    "listen_for": [
+     "6 km"
+    ],
+    "ask": "Which number is the real distance?",
+    "repair": "30 km.",
+    "error": "Uses the map distance as the real distance in the statement.",
+    "example": {
+     "question": "6 cm for 30 km. Scale statement?",
+     "wrong_answer": "1 cm represents 6 km",
+     "correct_answer": "1 cm represents 5 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE.M_STATEMENT_READ_BACKWARDS",
+    "listen_for": [
+     "0.6 km"
+    ],
+    "ask": "Each cm is how far?",
+    "repair": "5 km: times 3.",
+    "error": "Reads \"1 cm represents 5 km\" as 5 cm for 1 km.",
+    "example": {
+     "question": "1 cm represents 5 km. How far is 3 cm?",
+     "wrong_answer": "0.6 km",
+     "correct_answer": "15 km"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A road of 8 cm on the map is 40 km long. Write the scale as a statement.",
+    "answer": "1 cm represents 5 km",
+    "shows": "write"
+   },
+   {
+    "question": "1 cm represents 2.5 km. How far is 6 cm?",
+    "answer": "15 km",
+    "shows": "interpret"
+   }
+  ],
+  "name": "Interpret and write a linear scale in statement form",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE",
+  "key_step": "The child says both numbers in a ratio scale are centimetres, then converts the second to m or km.",
+  "floor": {
+   "prerequisite": "Changes cm to km.",
+   "question": "500,000 cm in km",
+   "answer": "5 km"
+  },
+  "representations": [
+   "a map with its ratio",
+   "cm to m to km steps",
+   "two maps of one town"
+  ],
+  "steps": [
+   "Read 1 : n as 1 cm to n cm.",
+   "Divide n by 100 for m, by 100,000 for km.",
+   "To write a ratio, change the real length to cm.",
+   "Smaller n: more detail."
+  ],
+  "contexts": [
+   "a county map",
+   "a town plan of Nakuru",
+   "a survey map"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 1 : 500,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 500,000.",
+    "say": "What unit is this in?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for cm."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child changes 500,000 cm to km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_RATIO_CM_NOT_CONVERTED",
+    "listen_for": [
+     "500,000 km"
+    ],
+    "ask": "Is it 500,000 km or cm?",
+    "repair": "Change to km.",
+    "error": "Gives the ratio number in centimetres when km or m is asked.",
+    "example": {
+     "question": "1 : 500,000. 1 cm stands for how many km?",
+     "wrong_answer": "500,000",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_METRES_FOR_KM",
+    "listen_for": [
+     "5,000"
+    ],
+    "ask": "Is that metres or km?",
+    "repair": "Divide by 1,000.",
+    "error": "Changes cm to metres and stops.",
+    "example": {
+     "question": "1 : 500,000. 1 cm stands for how many km?",
+     "wrong_answer": "5,000",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_DIVIDED_BY_1000",
+    "listen_for": [
+     "500"
+    ],
+    "ask": "How many cm in a km?",
+    "repair": "100,000.",
+    "error": "Divides the centimetres by 1,000 to get kilometres.",
+    "example": {
+     "question": "1 : 500,000. km for 1 cm?",
+     "wrong_answer": "500",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_BIGGER_NUMBER_MORE_DETAIL",
+    "listen_for": [
+     "1 : 250,000"
+    ],
+    "ask": "On which map is 1 cm less ground?",
+    "repair": "1 : 50,000.",
+    "error": "Believes a bigger number after the 1 shows more detail.",
+    "example": {
+     "question": "1 : 50,000 or 1 : 250,000: more detail?",
+     "wrong_answer": "1 : 250,000",
+     "correct_answer": "1 : 50,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_MORE_GROUND_MORE_DETAIL",
+    "listen_for": [
+     "the county map"
+    ],
+    "ask": "Same paper, more ground: bigger or smaller drawings?",
+    "repair": "Smaller.",
+    "error": "Believes a map covering more ground shows more detail.",
+    "example": {
+     "question": "Which shows more detail of a town: a county map or a town plan?",
+     "wrong_answer": "the county map",
+     "correct_answer": "the town plan"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_SAME_PLACE_SAME_DETAIL",
+    "listen_for": [
+     "same"
+    ],
+    "ask": "Is the town drawn the same size?",
+    "repair": "No.",
+    "error": "Believes two maps of the same place show the same detail.",
+    "example": {
+     "question": "Two maps of Nakuru at different scales: same detail?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_RATIO_SCALE_REVERSED",
+    "listen_for": [
+     "2,500 : 1"
+    ],
+    "ask": "Which comes first in a scale?",
+    "repair": "The drawing.",
+    "error": "Writes the real length first in a ratio scale.",
+    "example": {
+     "question": "2 cm on the drawing for 50 m. Ratio?",
+     "wrong_answer": "2,500 : 1",
+     "correct_answer": "1 : 2,500"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE.M_METRES_LEFT_IN_RATIO",
+    "listen_for": [
+     "1 : 25"
+    ],
+    "ask": "Are both in the same unit?",
+    "repair": "cm.",
+    "error": "Leaves the real length in metres in the ratio.",
+    "example": {
+     "question": "2 cm for 50 m. Ratio?",
+     "wrong_answer": "1 : 25",
+     "correct_answer": "1 : 2,500"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A map has a scale of 1 : 200,000. What does 1 cm stand for in km?",
+    "answer": "2 km",
+    "shows": "interpret"
+   },
+   {
+    "question": "A 4 cm line on a drawing stands for 20 m. Ratio scale?",
+    "answer": "1 : 500",
+    "shows": "write"
+   }
+  ],
+  "name": "Interpret and write a linear scale in ratio form",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS",
+  "key_step": "The child changes the real length to centimetres before writing it after 1 :, and back by dividing.",
+  "floor": {
+   "prerequisite": "Changes m to cm.",
+   "question": "20 m in cm",
+   "answer": "2,000 cm"
+  },
+  "representations": [
+   "the statement",
+   "the conversion steps",
+   "the ratio"
+  ],
+  "steps": [
+   "Statement to ratio: change the real length to cm.",
+   "Write 1 : that number.",
+   "Ratio to statement: divide by 100 (m) or 100,000 (km).",
+   "Check by converting back."
+  ],
+  "contexts": [
+   "a school field plan",
+   "a map in a geography book",
+   "a plot plan from a surveyor"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write \"1 cm represents 20 m\"."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 20 m.",
+    "say": "How many cm is that?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2,000."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 : 2,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_CM_IN_M_TEN",
+    "listen_for": [
+     "1 : 200"
+    ],
+    "ask": "How many cm in a metre?",
+    "repair": "100.",
+    "error": "Uses 10 cm in a metre when converting.",
+    "example": {
+     "question": "1 cm represents 20 m. Ratio?",
+     "wrong_answer": "1 : 200",
+     "correct_answer": "1 : 2,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_RATIO_INVERTED",
+    "listen_for": [
+     "2,000 : 1"
+    ],
+    "ask": "Which comes first?",
+    "repair": "The drawing, 1.",
+    "error": "Writes the ratio with the ground length first.",
+    "example": {
+     "question": "1 cm represents 20 m. Ratio?",
+     "wrong_answer": "2,000 : 1",
+     "correct_answer": "1 : 2,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_KM_NOT_TO_CM",
+    "listen_for": [
+     "1 : 3"
+    ],
+    "ask": "Are 1 cm and 3 km the same unit?",
+    "repair": "Change to cm.",
+    "error": "Leaves kilometres as they are in the ratio.",
+    "example": {
+     "question": "1 cm represents 3 km. Ratio?",
+     "wrong_answer": "1 : 3",
+     "correct_answer": "1 : 300,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_KM_TO_M_ONLY",
+    "listen_for": [
+     "1 : 3,000"
+    ],
+    "ask": "Is that cm yet?",
+    "repair": "Times 100 again.",
+    "error": "Changes km to m but not to cm.",
+    "example": {
+     "question": "1 cm represents 3 km. Ratio?",
+     "wrong_answer": "1 : 3,000",
+     "correct_answer": "1 : 300,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_CM_IN_KM_WRONG",
+    "listen_for": [
+     "1 : 30,000"
+    ],
+    "ask": "How many cm in 1 km?",
+    "repair": "100,000.",
+    "error": "Uses 10,000 cm in a kilometre.",
+    "example": {
+     "question": "1 cm represents 3 km. Ratio?",
+     "wrong_answer": "1 : 30,000",
+     "correct_answer": "1 : 300,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_DIVIDED_BY_TEN",
+    "listen_for": [
+     "250"
+    ],
+    "ask": "cm to m: divide by?",
+    "repair": "100.",
+    "error": "Divides the ratio number by 10 to get metres.",
+    "example": {
+     "question": "1 : 2,500. Each cm stands for how many m?",
+     "wrong_answer": "250",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_DIVIDED_TWICE_SCALE",
+    "listen_for": [
+     "0.25"
+    ],
+    "ask": "How many times do we divide for metres?",
+    "repair": "Once.",
+    "error": "Divides by 100 twice to get metres.",
+    "example": {
+     "question": "1 : 2,500. Metres for 1 cm?",
+     "wrong_answer": "0.25",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS.M_MULTIPLIED_TO_CONVERT",
+    "listen_for": [
+     "250,000"
+    ],
+    "ask": "Are there more cm or more m?",
+    "repair": "Fewer m: divide.",
+    "error": "Multiplies to change centimetres to metres.",
+    "example": {
+     "question": "1 : 2,500. Metres for 1 cm?",
+     "wrong_answer": "250,000",
+     "correct_answer": "25"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write \"1 cm represents 4 km\" as a ratio.",
+    "answer": "1 : 400,000",
+    "shows": "statement to ratio"
+   },
+   {
+    "question": "Write 1 : 25,000 as a statement in metres.",
+    "answer": "1 cm represents 250 m",
+    "shows": "ratio to statement"
+   }
+  ],
+  "name": "Convert a scale between statement form and ratio form",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING",
+  "key_step": "The child checks the longest length fits the paper before choosing a scale, then scales every length and keeps the angles.",
+  "floor": {
+   "prerequisite": "Represents a length to scale.",
+   "question": "40 m at 1 cm to 5 m",
+   "answer": "8 cm"
+  },
+  "representations": [
+   "a rough sketch with real lengths",
+   "a table of drawn lengths",
+   "the drawing with its scale"
+  ],
+  "steps": [
+   "Sketch with the real lengths.",
+   "Choose a scale that fits.",
+   "Work out each drawn length; keep the angles.",
+   "Draw, write the scale and check a length."
+  ],
+  "contexts": [
+   "a plan of the school compound",
+   "a plot for a new house",
+   "a football pitch"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Sketch a plot 40 m by 25 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 40 m.",
+    "say": "Will 1 cm to 2 m fit on a page 15 cm wide?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to check."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child chooses 1 cm to 5 m and lists the drawn lengths."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING.M_SCALE_NOT_FITTING_PAPER",
+    "listen_for": [
+     "too big"
+    ],
+    "ask": "How long would 60 m be?",
+    "repair": "Check the page.",
+    "error": "Chooses a scale that makes the drawing too big for the page.",
+    "example": {
+     "question": "A 60 m field on a page 20 cm wide: is 1 cm to 2 m suitable?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: 30 cm will not fit"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING.M_ONE_LENGTH_UNSCALED",
+    "listen_for": [
+     "25 cm"
+    ],
+    "ask": "Did every length get divided?",
+    "repair": "Scale every one.",
+    "error": "Scales some lengths and draws one at its real size.",
+    "example": {
+     "question": "A plot 40 m by 25 m at 1 cm to 5 m: draw",
+     "wrong_answer": "8 cm by 25 cm",
+     "correct_answer": "8 cm by 5 cm"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING.M_ANGLES_SCALED",
+    "listen_for": [
+     "12 degrees"
+    ],
+    "ask": "Does the corner get smaller?",
+    "repair": "Angles stay.",
+    "error": "Changes the angles when making a scale drawing.",
+    "example": {
+     "question": "A 60° corner at 1 cm to 5 m is drawn as?",
+     "wrong_answer": "12°",
+     "correct_answer": "60°"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.MAKE_SCALE_DRAWING.M_SCALE_NOT_WRITTEN",
+    "listen_for": [
+     "no scale"
+    ],
+    "ask": "How will someone read the real size?",
+    "repair": "Write the scale.",
+    "error": "Leaves the scale off the drawing.",
+    "example": {
+     "question": "What must be written on a scale drawing?",
+     "wrong_answer": "the title only",
+     "correct_answer": "the scale and the title"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A plot 60 m by 36 m on a page 15 cm wide. Which fits: 1 cm to 2 m or 1 cm to 5 m?",
+    "answer": "1 cm to 5 m (12 cm by 7.2 cm)",
+    "shows": "choose"
+   },
+   {
+    "question": "A 90° corner on the real plot is drawn as?",
+    "answer": "90°",
+    "shows": "angles stay"
+   }
+  ],
+  "name": "Make a scale drawing",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT": {
+  "skill": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT",
+  "key_step": "The child writes both lengths in centimetres to find a scale, and scales each length (not the area) before multiplying.",
+  "floor": {
+   "prerequisite": "Changes km to cm.",
+   "question": "30 km in cm",
+   "answer": "3,000,000 cm"
+  },
+  "representations": [
+   "a road map of Kenya",
+   "the journey in legs",
+   "the plot plan"
+  ],
+  "steps": [
+   "Map to real: multiply by n (cm), then change to km.",
+   "Add legs (before or after).",
+   "For a scale, n = real cm ÷ map cm.",
+   "For an area, scale both lengths first."
+  ],
+  "contexts": [
+   "a journey from Nakuru to Eldoret via Kericho",
+   "a shamba plan",
+   "a map of the Rift Valley"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a plan 5 cm by 3 cm with scale 1 cm to 20 m."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 5 cm side.",
+    "say": "How long is it in real life?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 100 m."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child finds 60 m for the other side, then the area."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_KM_PER_CM_AS_N",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "Are both in cm?",
+    "repair": "Change 5 km to cm.",
+    "error": "Gives the km that 1 cm stands for as the ratio number.",
+    "example": {
+     "question": "6 cm on the map for 30 km. Scale 1 : n?",
+     "wrong_answer": "5",
+     "correct_answer": "500,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_METRES_PER_CM_AS_N",
+    "listen_for": [
+     "5,000"
+    ],
+    "ask": "Is that cm?",
+    "repair": "Times 100.",
+    "error": "Gives the metres that 1 cm stands for as the ratio number.",
+    "example": {
+     "question": "6 cm for 30 km. n?",
+     "wrong_answer": "5,000",
+     "correct_answer": "500,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_RATIO_N_INVERTED",
+    "listen_for": [
+     "0.000002"
+    ],
+    "ask": "Should n be big or small?",
+    "repair": "Real ÷ map.",
+    "error": "Divides the map distance by the real distance.",
+    "example": {
+     "question": "6 cm for 30 km. n?",
+     "wrong_answer": "0.000002",
+     "correct_answer": "500,000"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_MAP_LENGTH_GIVEN",
+    "listen_for": [
+     "7"
+    ],
+    "ask": "Is that on the map or the road?",
+    "repair": "Use the scale.",
+    "error": "Gives the map length as the real distance.",
+    "example": {
+     "question": "On 1 : 200,000, legs of 4 cm and 3 cm. Journey in km?",
+     "wrong_answer": "7",
+     "correct_answer": "14 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_DIVIDED_TOO_MANY",
+    "listen_for": [
+     "0.14"
+    ],
+    "ask": "How many cm in a km?",
+    "repair": "Divide once by 100,000.",
+    "error": "Divides by 100 once too often in changing cm to km.",
+    "example": {
+     "question": "7 cm on 1 : 200,000 in km?",
+     "wrong_answer": "0.14",
+     "correct_answer": "14 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_ONE_LEG_ONLY",
+    "listen_for": [
+     "8 km"
+    ],
+    "ask": "What about the second road?",
+    "repair": "Add it.",
+    "error": "Gives the first part of the journey only.",
+    "example": {
+     "question": "Legs of 4 cm and 3 cm on 1 : 200,000. Whole journey?",
+     "wrong_answer": "8 km",
+     "correct_answer": "14 km"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_AREA_SCALED_ONCE",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "Did both sides get scaled?",
+    "repair": "Scale each side.",
+    "error": "Multiplies the plan area by the scale once.",
+    "example": {
+     "question": "A plan 5 cm by 3 cm at 1 cm to 20 m. Real area?",
+     "wrong_answer": "300 m²",
+     "correct_answer": "6,000 m²"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_HECTARE_AS_100",
+    "listen_for": [
+     "60 ha"
+    ],
+    "ask": "How many m² in a hectare?",
+    "repair": "10,000.",
+    "error": "Uses 100 m² in a hectare.",
+    "example": {
+     "question": "6,000 m² in hectares",
+     "wrong_answer": "60 ha",
+     "correct_answer": "0.6 ha"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_HECTARE_MULTIPLIED",
+    "listen_for": [
+     "huge number"
+    ],
+    "ask": "Are hectares bigger than m²?",
+    "repair": "Divide.",
+    "error": "Multiplies to change m² to hectares.",
+    "example": {
+     "question": "6,000 m² in hectares",
+     "wrong_answer": "60,000,000 ha",
+     "correct_answer": "0.6 ha"
+    }
+   },
+   {
+    "code": "MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT.M_RATIO_FIRST_NUMBER_READ",
+    "listen_for": [
+     "1"
+    ],
+    "ask": "Which number is the ground?",
+    "repair": "The second.",
+    "error": "Reads the 1 of the ratio as what 1 cm stands for.",
+    "example": {
+     "question": "On 1 : 250,000, 1 cm stands for how many cm?",
+     "wrong_answer": "1",
+     "correct_answer": "250,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "On a map of 1 : 250,000, legs of 6 cm and 4 cm. Whole journey in km?",
+    "answer": "25 km",
+    "shows": "journey"
+   },
+   {
+    "question": "A plan 4 cm by 2 cm at 1 cm to 25 m. Real area in m²?",
+    "answer": "5,000 m²",
+    "shows": "area"
+   }
+  ],
+  "name": "Apply scale drawing to maps, routes and plans",
+  "sub_strand": "MATH.G8.GEOMET.SCALE_DRAWING",
+  "sub_strand_name": "Scale Drawing",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

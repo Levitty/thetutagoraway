@@ -811,7 +811,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ SCALE
-  fam({ id: 'g8.scale.plan-table', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.b', rung: 2, form: 'table',
+  fam({ id: 'g8.scale.plan-table', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.c', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL', rung: 2, form: 'table',
     draw: () => {
       const s = pick([2, 4, 5]), cl = randInt(3, 5), lib = randInt(6, 8), hall = randInt(9, 13);
       return uniq((hall - cl) * s, hall - cl, hall * s, (hall + cl) * s) ? { s, cl, lib, hall, p: person() } : null;
@@ -820,24 +820,24 @@ export const FAMILIES = [
       question: `${p.name} draws a plan of the school with a scale of 1 cm to ${s} m. The table shows the lengths of three rooms on the plan. How many metres longer is the real hall than the real classroom?`,
       model: { type: 'table', data: { head: ['Room', 'Length on the plan (cm)'], rows: [{ label: 'Classroom', value: String(cl) }, { label: 'Library', value: String(lib) }, { label: 'Hall', value: String(hall) }] } },
       answer: (hall - cl) * s,
-      wrong: [[hall - cl, 'That is the difference on the plan, in cm. Use the scale to change it to real metres.'], [hall * s, 'That is the real length of the hall alone. The question asks for how much longer it is.'], [(hall + cl) * s, 'Longer means a difference, so subtract.']],
+      wrong: [[hall - cl, 'That is the difference on the plan, in cm. Use the scale to change it to real metres.', 'M_MAP_DIFFERENCE_NOT_SCALED'], [hall * s, 'That is the real length of the hall alone. The question asks for how much longer it is.', 'M_ONE_LENGTH_FOR_DIFFERENCE'], [(hall + cl) * s, 'Longer means a difference, so subtract.', 'M_SUM_FOR_DIFFERENCE']],
       hints: ['You can find both real lengths, then subtract. Or subtract on the plan, then use the scale.', 'Each cm on the plan stands for the number of metres in the scale.'],
       steps: [`Hall: ${hall} × ${s} = ${hall * s} m.`, `Classroom: ${cl} × ${s} = ${cl * s} m.`, `Difference: ${hall * s} − ${cl * s} = ${(hall - cl) * s} m.`],
     }),
     check: ({ s, cl, hall }, a) => a / s + cl === hall }),
 
-  fam({ id: 'g8.scale.ratio-to-km', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.d', rung: 2, form: 'word',
+  fam({ id: 'g8.scale.ratio-to-km', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.f', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE', rung: 2, form: 'word',
     draw: () => { const n = pick([20000, 50000, 200000, 250000, 400000, 500000]); return { n, km: n / 100000, p: person() }; },
     make: ({ n, km, p }) => ({
       question: `${p.name} is reading a county map. Its scale is written as 1 : ${commas(n)}. What does 1 cm on the map stand for in real life? Give the answer in kilometres.`,
       answer: km,
-      wrong: [[n, 'That is the distance in cm. Change it to kilometres.'], [n / 1000, 'That is the distance in metres. Change it to kilometres.'], [n / 100, 'Dividing by 100 changes cm to metres, which is not enough. A kilometre is 100,000 cm.']],
+      wrong: [[n, 'That is the distance in cm. Change it to kilometres.', 'M_RATIO_CM_NOT_CONVERTED'], [n / 1000, 'That is the distance in metres. Change it to kilometres.', 'M_DIVIDED_BY_1000'], [n / 100, 'Dividing by 100 changes cm to metres, which is not enough. A kilometre is 100,000 cm.', 'M_METRES_FOR_KM']],
       hints: ['The ratio 1 : n says that 1 cm on the map stands for n cm in real life.', 'There are 100 cm in 1 m and 1,000 m in 1 km.'],
       steps: [`1 cm on the map stands for ${commas(n)} cm.`, `${commas(n)} ÷ 100 = ${commas(n / 100)} m.`, `${commas(n / 100)} ÷ 1,000 = ${km} km.`],
     }),
     check: ({ n }, a) => near(a * 100000, n) }),
 
-  fam({ id: 'g8.scale.spot-ratio', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.d', rung: 2, form: 'spot',
+  fam({ id: 'g8.scale.spot-ratio', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.h', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS', rung: 2, form: 'spot',
     draw: () => ({ m: pick([5, 10, 20, 25, 50]), k: pick([0, 1]), p: person() }),
     make: ({ m, k, p }) => {
       const cm = k === 0 ? m * 10 : m * 100, ratio = k === 1 ? `${m * 100} : 1` : `1 : ${cm}`;
@@ -849,12 +849,13 @@ export const FAMILIES = [
           { text: `So 1 cm on the drawing stands for ${cm} cm on the ground`, ok: true },
           { text: `The ratio form is ${ratio}`, ok: k !== 1 },
         ],
+        mis: k === 0 ? 'M_CM_IN_M_TEN' : 'M_RATIO_INVERTED',
         fix: k === 0 ? 'There are 100 cm in 1 m, not 10. Step 2 multiplied by the wrong number.' : 'In a scale ratio, the drawing comes first and is written as 1. The numbers were the wrong way round.',
         steps: [`${m} m = ${m} × 100 = ${m * 100} cm.`, `So 1 cm stands for ${m * 100} cm.`, `Ratio form: 1 : ${m * 100}.`],
       };
     } }),
 
-  fam({ id: 'g8.scale.more-detail-why', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.d', rung: 3, form: 'why',
+  fam({ id: 'g8.scale.more-detail-why', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.f', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE', rung: 3, form: 'why',
     draw: () => {
       const [small, big] = pick([[10000, 50000], [25000, 100000], [50000, 250000], [20000, 200000]]);
       return Math.random() < 0.5 ? { x: 'A', y: 'B', sx: small, sy: big, win: 'A' } : { x: 'A', y: 'B', sx: big, sy: small, win: 'B' };
@@ -865,16 +866,16 @@ export const FAMILIES = [
         question: `Map A has a scale of 1 : ${commas(sx)}. Map B shows the same town with a scale of 1 : ${commas(sy)}. Which map shows more detail, and why?`,
         options: [
           { text: `Map ${win}, because 1 cm on it stands for less real distance`, right: true },
-          { text: `Map ${lose}, because the number in its scale is bigger`, right: false, why: 'A bigger number after the 1 means each cm covers more ground, so the town is drawn smaller with less room for detail.' },
-          { text: `Map ${lose}, because it covers more ground on the same sheet`, right: false, why: 'Covering more ground on the same paper means each cm stands for more, so there is less detail.' },
-          { text: 'Neither, because both maps show the same town', right: false, why: 'The same town can be drawn bigger or smaller. The bigger drawing has room for more detail.' },
+          { text: `Map ${lose}, because the number in its scale is bigger`, right: false, why: 'A bigger number after the 1 means each cm covers more ground, so the town is drawn smaller with less room for detail.', mis: 'M_BIGGER_NUMBER_MORE_DETAIL' },
+          { text: `Map ${lose}, because it covers more ground on the same sheet`, right: false, why: 'Covering more ground on the same paper means each cm stands for more, so there is less detail.', mis: 'M_MORE_GROUND_MORE_DETAIL' },
+          { text: 'Neither, because both maps show the same town', right: false, why: 'The same town can be drawn bigger or smaller. The bigger drawing has room for more detail.', mis: 'M_SAME_PLACE_SAME_DETAIL' },
         ],
         hints: ['Compare how much real ground 1 cm stands for on each map.', 'Which map draws the same town bigger?'],
         steps: [`On Map ${win}, 1 cm stands for fewer real centimetres.`, `So the same town takes up more paper on Map ${win}.`, `More paper means more room for detail.`],
       };
     } }),
 
-  fam({ id: 'g8.scale.find-scale-route', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.j', rung: 3, form: 'word',
+  fam({ id: 'g8.scale.find-scale-route', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.j', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT', rung: 3, form: 'word',
     draw: () => {
       const [a, b, km] = route(), n = pick([500000, 1000000, 2000000, 2500000]), cm = (km * 100000) / n;
       if (!nice(cm) || cm < 3 || cm > 40) return null;
@@ -884,13 +885,13 @@ export const FAMILIES = [
     make: ({ a, b, km, n, cm, w }) => ({
       question: `On a map, the distance between ${a} and ${b} is ${cm} cm. In real life it is ${km} km. The scale of the map is 1 : n. What is n?`,
       answer: n,
-      wrong: [[w[0], 'That is the number of km that 1 cm stands for. A scale ratio uses the same unit for both numbers: cm.'], [w[1], 'That is the number of metres for 1 cm. Both numbers in the ratio must be in cm.'], [w[2], 'The map distance is the 1 side and the real distance is the n side. You divided the wrong way round.']],
+      wrong: [[w[0], 'That is the number of km that 1 cm stands for. A scale ratio uses the same unit for both numbers: cm.', 'M_KM_PER_CM_AS_N'], [w[1], 'That is the number of metres for 1 cm. Both numbers in the ratio must be in cm.', 'M_METRES_PER_CM_AS_N'], [w[2], 'The map distance is the 1 side and the real distance is the n side. You divided the wrong way round.', 'M_RATIO_N_INVERTED']],
       hints: ['Change the real distance to cm. There are 100 cm in 1 m and 1,000 m in 1 km.', 'Divide the real distance in cm by the map distance in cm to find what 1 cm stands for.'],
       steps: [`${km} km = ${commas(km * 100000)} cm.`, `1 cm on the map stands for ${commas(km * 100000)} ÷ ${cm} = ${commas(n)} cm.`, `The scale is 1 : ${commas(n)}.`],
     }),
     check: ({ km, cm }, a) => near(a * cm, km * 100000) }),
 
-  fam({ id: 'g8.scale.two-legs', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.j', rung: 3, form: 'word',
+  fam({ id: 'g8.scale.two-legs', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.j', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT', rung: 3, form: 'word',
     draw: () => {
       const [x, y, z, k1, k2] = pick([['Nairobi', 'Nakuru', 'Kisumu', 160, 185], ['Nairobi', 'Nakuru', 'Eldoret', 160, 155], ['Nakuru', 'Eldoret', 'Kitale', 155, 70]]), n = pick([500000, 1000000]);
       const c1 = (k1 * 100000) / n, c2 = (k2 * 100000) / n, tot = k1 + k2;
@@ -899,13 +900,13 @@ export const FAMILIES = [
     make: ({ x, y, z, n, c1, c2, tot, k1, p }) => ({
       question: `${p.name} travels from ${x} to ${y} and then on to ${z}. On a road map with a scale of 1 : ${commas(n)}, the road from ${x} to ${y} measures ${c1} cm and the road from ${y} to ${z} measures ${c2} cm. How many kilometres is the whole journey?`,
       answer: tot,
-      wrong: [[c1 + c2, 'That is the length on the map. Use the scale to change it to real distance.'], [((c1 + c2) * n) / 100000 / 100, 'That divides by 100 too many times. There are 100,000 cm in 1 km.'], [k1, 'That is the first part of the journey only. Add the second part.']],
+      wrong: [[c1 + c2, 'That is the length on the map. Use the scale to change it to real distance.', 'M_MAP_LENGTH_GIVEN'], [((c1 + c2) * n) / 100000 / 100, 'That divides by 100 too many times. There are 100,000 cm in 1 km.', 'M_DIVIDED_TOO_MANY'], [k1, 'That is the first part of the journey only. Add the second part.', 'M_ONE_LEG_ONLY']],
       hints: ['Find the total length on the map first, or each part on its own.', `1 cm on this map stands for ${commas(n)} cm in real life. There are 100,000 cm in 1 km.`],
       steps: [`On the map: ${c1} + ${c2} = ${c1 + c2} cm.`, `Real distance: ${c1 + c2} × ${commas(n)} = ${commas((c1 + c2) * n)} cm.`, `In km: ${commas((c1 + c2) * n)} ÷ 100,000 = ${tot} km.`],
     }),
     check: ({ c1, c2, n }, a) => near(((c1 + c2) * n) / 100000, a) }),
 
-  fam({ id: 'g8.scale.shamba-area', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.j', rung: 3, form: 'steps',
+  fam({ id: 'g8.scale.shamba-area', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.j', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_IN_CONTEXT', rung: 3, form: 'steps',
     draw: () => {
       const s = pick([10, 20, 25, 50]), l = randInt(3, 9), w = randInt(2, 6), A = l * s * w * s;
       return l !== w && A % 5000 === 0 ? { s, l, w, A } : null;
@@ -913,10 +914,10 @@ export const FAMILIES = [
     make: ({ s, l, w, A }) => ({
       question: `A plan of a shamba is a rectangle ${l} cm long and ${w} cm wide. The scale of the plan is 1 cm to ${s} m.`,
       parts: [
-        { prompt: 'What is the real length of the shamba, in metres?', answer: l * s, unit: 'm', hint: 'Each cm on the plan stands for the number of metres in the scale.', wrong: [[l + s, 'Multiply by the scale, do not add.']] },
-        { prompt: 'What is the real width of the shamba, in metres?', answer: w * s, unit: 'm', hint: 'Use the same scale for the width.', wrong: [[w + s, 'Multiply by the scale, do not add.']] },
-        { prompt: 'What is the real area of the shamba, in m²?', answer: A, unit: 'm²', hint: 'Use the real length and the real width, not the sizes on the plan.', wrong: [[l * w * s, 'Area uses both lengths. Each length must be multiplied by the scale, so the area is multiplied by the scale twice.']] },
-        { prompt: 'What is the area in hectares? (1 hectare = 10,000 m²)', answer: A / 10000, unit: 'ha', hint: 'Divide the area in m² by the number of m² in one hectare.', wrong: [[A / 100, 'A hectare is 10,000 m², not 100 m².'], [A * 10000, 'To change m² into hectares you divide.']] },
+        { prompt: 'What is the real length of the shamba, in metres?', answer: l * s, unit: 'm', hint: 'Each cm on the plan stands for the number of metres in the scale.', wrong: [[l + s, 'Multiply by the scale, do not add.', 'M_SCALE_ADDED']] },
+        { prompt: 'What is the real width of the shamba, in metres?', answer: w * s, unit: 'm', hint: 'Use the same scale for the width.', wrong: [[w + s, 'Multiply by the scale, do not add.', 'M_SCALE_ADDED']] },
+        { prompt: 'What is the real area of the shamba, in m²?', answer: A, unit: 'm²', hint: 'Use the real length and the real width, not the sizes on the plan.', wrong: [[l * w * s, 'Area uses both lengths. Each length must be multiplied by the scale, so the area is multiplied by the scale twice.', 'M_AREA_SCALED_ONCE']] },
+        { prompt: 'What is the area in hectares? (1 hectare = 10,000 m²)', answer: A / 10000, unit: 'ha', hint: 'Divide the area in m² by the number of m² in one hectare.', wrong: [[A / 100, 'A hectare is 10,000 m², not 100 m².', 'M_HECTARE_AS_100'], [A * 10000, 'To change m² into hectares you divide.', 'M_HECTARE_MULTIPLIED']] },
       ],
       steps: [`Length: ${l} × ${s} = ${l * s} m.`, `Width: ${w} × ${s} = ${w * s} m.`, `Area: ${l * s} × ${w * s} = ${commas(A)} m².`, `Hectares: ${commas(A)} ÷ 10,000 = ${A / 10000} ha.`],
     }),

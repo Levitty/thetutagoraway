@@ -371,7 +371,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ SCALE DRAWING
-  cov({ id: 'g8c.scale.represent-length', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.a', form: 'table', rung: 2,
+  cov({ id: 'g8c.scale.represent-length', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.a', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.REPRESENT_TO_SCALE', misMapped: false, reveals: ['M_MULTIPLIED_TO_MAP', 'M_REAL_FOR_MAP', 'M_LENGTHS_MISMATCHED'], form: 'table', rung: 2,
     gen: () => {
       const s = pick([2, 4, 5, 10]), ks = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
       if (new Set(ks).size < 3) return null;
@@ -384,17 +384,17 @@ export const FAMILIES = [
         steps: names.map((n, i) => `${n}: ${reals[i]} ÷ ${s} = ${ks[i]} cm.`) };
     } }),
 
-  cov({ id: 'g8c.scale.map-to-actual', skill: 'G8_SCALE_DRAWING', outcome: 'G8.SCALE.c', form: 'word', rung: 2,
+  cov({ id: 'g8c.scale.map-to-actual', skill: 'G8_SCALE_DRAWING', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.c', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.SCALE_TO_ACTUAL', form: 'word', rung: 2,
     gen: () => {
       const s = pick([2, 5, 10, 20, 25]), L = randInt(11, 79) / 2, real = L * s, [a, b] = shuffle(['Nakuru', 'Naivasha', 'Gilgil', 'Nyahururu', 'Eldoret', 'Kitale', 'Kisumu', 'Kericho']).slice(0, 2);
       if (real % 0.5 !== 0) return null;
       return { question: `${a} and ${b} are ${L} cm apart on ${person().name}'s map. The key says that 1 cm stands for ${s} km. How far apart are the two towns in real life, in kilometres?`, answer: real,
-        wrong: [[round(L / s, 2), 'You divided. To go from the map to the real distance, multiply by what one centimetre stands for.'], [round(L + s, 2), 'You added. Each centimetre on the map stands for several kilometres, so multiply.'], [round(real * 100, 0), 'You changed the answer to centimetres. The question asks for kilometres.'], [round(real / 2, 2), 'Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm.']],
+        wrong: [[round(L / s, 2), 'You divided. To go from the map to the real distance, multiply by what one centimetre stands for.', 'M_SCALE_DIVIDED'], [round(L + s, 2), 'You added. Each centimetre on the map stands for several kilometres, so multiply.', 'M_SCALE_ADDED'], [round(real * 100, 0), 'You changed the answer to centimetres. The question asks for kilometres.', 'M_UNIT_CHANGED_NEEDLESSLY'], [round(real / 2, 2), 'Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm.', 'SLIP']],
         hints: ['Each centimetre on the map is one lot of the scale distance.', 'Multiply the map distance by the kilometres for 1 cm.'],
         steps: [`Real distance = ${L} × ${s}.`, `${L} × ${s} = ${real} km.`], chk: (a) => a / s === L };
     } }),
 
-  cov({ id: 'g8c.scale.write-statement', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.e', form: 'direct', rung: 2,
+  cov({ id: 'g8c.scale.write-statement', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.e', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.STATEMENT_SCALE', misMapped: false, reveals: ['M_WHOLE_REAL_FOR_ONE_CM', 'M_STATEMENT_NOT_FOR_ONE_CM', 'M_MAP_FOR_REAL'], form: 'direct', rung: 2,
     gen: () => {
       const s = pick([2, 5, 10, 20, 25, 50]), k = randInt(3, 9), real = s * k;
       const right = `1 cm represents ${s} km`;
@@ -405,7 +405,7 @@ export const FAMILIES = [
         steps: [`${real} km ÷ ${k} = ${s} km.`, `So ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.scale.ratio-to-ground', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.f', form: 'word', rung: 3,
+  cov({ id: 'g8c.scale.ratio-to-ground', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.f', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE', misMapped: false, reveals: ['M_RATIO_CM_NOT_CONVERTED', 'M_METRES_FOR_KM', 'M_DIVIDED_BY_1000'], form: 'word', rung: 3,
     gen: () => {
       const r = pick([[10000, 0.1], [20000, 0.2], [50000, 0.5], [100000, 1], [250000, 2.5]]), p = person();
       const w = [[r[0], 'This is the real length in centimetres. The question asks for kilometres.'], [r[0] / 100, 'This is in metres. The question asks for kilometres.'], [r[0] / 1000, 'This is not kilometres. 1 km is 100,000 cm.'], [round(r[1] * 10, 2), 'Check the change from centimetres to kilometres. Divide by 100 and then by 1,000.']];
@@ -414,7 +414,7 @@ export const FAMILIES = [
         steps: [`1 cm stands for ${commas(r[0])} cm.`, `${commas(r[0])} cm ÷ 100 000 = ${r[1]} km.`], chk: (a) => Math.round(a * 100000) === r[0] };
     } }),
 
-  cov({ id: 'g8c.scale.write-ratio', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.g', form: 'direct', rung: 3,
+  cov({ id: 'g8c.scale.write-ratio', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.g', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.RATIO_SCALE', misMapped: false, reveals: ['M_RATIO_SCALE_REVERSED', 'M_METRES_LEFT_IN_RATIO'], form: 'direct', rung: 3,
     gen: () => {
       const c = pick([2, 4, 5, 10]), m = c * randInt(2, 9) * 5 / 5, n = (m * 100) / c;
       if (n % 1 !== 0 || n < 20) return null;
@@ -425,7 +425,7 @@ export const FAMILIES = [
         steps: [`${m} m = ${m * 100} cm. The ratio is ${c} : ${m * 100}.`, `Divide both by ${c}: 1 : ${commas(n)}.`] };
     } }),
 
-  cov({ id: 'g8c.scale.statement-to-ratio', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.h', form: 'direct', rung: 3,
+  cov({ id: 'g8c.scale.statement-to-ratio', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.h', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS', misMapped: false, reveals: ['M_KM_NOT_TO_CM', 'M_KM_TO_M_ONLY', 'M_CM_IN_KM_WRONG'], form: 'direct', rung: 3,
     gen: () => {
       const k = pick([1, 2, 5, 10, 25]), n = k * 100000, right = `1 : ${commas(n)}`;
       const options = mc(right, [[`1 : ${commas(k)}`, 'The kilometres must be changed to centimetres to compare with 1 cm.'], [`1 : ${commas(k * 1000)}`, 'You changed kilometres to metres only. Both lengths must be in centimetres.'], [`1 : ${commas(k * 10000)}`, '1 km is 100,000 cm, not 10,000 cm.']]);
@@ -434,7 +434,7 @@ export const FAMILIES = [
         steps: [`${k} km = ${commas(k * 100000)} cm.`, `The ratio is 1 : ${commas(n)}.`] };
     } }),
 
-  cov({ id: 'g8c.scale.ratio-to-statement', skill: 'G8_SCALE_FORMS', outcome: 'G8.SCALE.h', form: 'word', rung: 3,
+  cov({ id: 'g8c.scale.ratio-to-statement', skill: 'G8_SCALE_FORMS', outcome: 'MATH.G8.GEOMET.SCALE_DRAWING.h', cskill: 'MATH.G8.GEOMET.SCALE_DRAWING.CONVERT_SCALE_FORMS', misMapped: false, reveals: ['M_DIVIDED_BY_TEN', 'M_DIVIDED_TWICE_SCALE', 'M_MULTIPLIED_TO_CONVERT'], form: 'word', rung: 3,
     gen: () => {
       const m = pick([5, 10, 20, 25, 50, 100]), n = m * 100, p = person();
       const w = [[n, 'This is in centimetres. The question asks for metres.'], [n / 10, 'You divided by ten only. A metre is much longer than ten centimetres.'], [round(m / 100, 3), 'You divided twice. Divide only once, to change centimetres to metres.'], [n * 100, 'You multiplied. To change centimetres to metres, divide.']];
