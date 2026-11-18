@@ -55147,7 +55147,8 @@ var SKILLS22 = {
     "mis": [
       "M_SC_SEPARATE",
       "M_SC_BIO_PLANTS",
-      "M_SC_CHEM_LAB"
+      "M_SC_CHEM_LAB",
+      "M_SC_PHYSICS_MATHS"
     ]
   },
   "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE": {
@@ -55163,7 +55164,8 @@ var SKILLS22 = {
     "mis": [
       "M_SM_LAB_ONLY",
       "M_SM_HEALTH_ONLY",
-      "M_SM_NO_CAREER"
+      "M_SM_NO_CAREER",
+      "M_SM_FARM_NOT_SCIENCE"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS": {
@@ -55177,7 +55179,8 @@ var SKILLS22 = {
     "mis": [
       "M_HS_FLAME_FIRE",
       "M_HS_SKULL_DEAD",
-      "M_HS_CORROSIVE_TOXIC"
+      "M_HS_CORROSIVE_TOXIC",
+      "M_HS_NO_SYMBOL_SAFE"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS": {
@@ -55193,7 +55196,8 @@ var SKILLS22 = {
     "mis": [
       "M_LA_TASTE_SAFE",
       "M_LA_POINT_TUBE",
-      "M_LA_CARELESS_ONLY"
+      "M_LA_CARELESS_ONLY",
+      "M_LA_RUN_EXIT"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID": {
@@ -55209,7 +55213,8 @@ var SKILLS22 = {
     "mis": [
       "M_FA_BUTTER_BURN",
       "M_FA_VOMIT",
-      "M_FA_CUT_WASH"
+      "M_FA_CUT_WASH",
+      "M_FA_EYE_RUB"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS": {
@@ -55225,7 +55230,8 @@ var SKILLS22 = {
     "mis": [
       "M_SS_PREDICT_RESULT",
       "M_SS_OBSERVE_EYES",
-      "M_SS_CONCLUSION_GUESS"
+      "M_SS_CONCLUSION_GUESS",
+      "M_SS_ONE_TEST_ENOUGH"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE": {
@@ -55242,7 +55248,8 @@ var SKILLS22 = {
     "mis": [
       "M_AU_BEAKER_EXACT",
       "M_AU_READ_TOP",
-      "M_AU_YELLOW_FLAME"
+      "M_AU_YELLOW_FLAME",
+      "M_AU_THERMOMETER_SHAKE_READ"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE": {
@@ -55258,7 +55265,8 @@ var SKILLS22 = {
     "mis": [
       "M_SB_GRAM",
       "M_SB_MASS_WEIGHT",
-      "M_SB_CELSIUS_SI"
+      "M_SB_CELSIUS_SI",
+      "M_SB_MINUTE_SI"
     ]
   },
   "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED": {
@@ -55274,7 +55282,8 @@ var SKILLS22 = {
     "mis": [
       "M_SD_LITRE_SI",
       "M_SD_AREA_M",
-      "M_SD_SPEED_M"
+      "M_SD_SPEED_M",
+      "M_SD_DENSITY_UNIT"
     ]
   },
   "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION": {
@@ -55288,7 +55297,8 @@ var SKILLS22 = {
     "mis": [
       "M_HM_DISAPPEAR",
       "M_HM_MUDDY_SOLUTION",
-      "M_HM_SOLVENT_SOLUTE"
+      "M_HM_SOLVENT_SOLUTE",
+      "M_HM_SOLUTION_ONLY_WATER"
     ]
   },
   "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE": {
@@ -55304,7 +55314,8 @@ var SKILLS22 = {
     "mis": [
       "M_SE_FILTER_SALT",
       "M_SE_EVAP_DISTIL",
-      "M_SE_CHROMA_COLOUR"
+      "M_SE_CHROMA_COLOUR",
+      "M_SE_DISTIL_DESTROYS_SALT"
     ]
   },
   "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES": {
@@ -55320,7 +55331,8 @@ var SKILLS22 = {
     "mis": [
       "M_SU_SALT_FILTER",
       "M_SU_OIL_ONE",
-      "M_SU_SCIENTISTS_ONLY"
+      "M_SU_SCIENTISTS_ONLY",
+      "M_SU_CHROMA_USELESS"
     ]
   },
   "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY": {
@@ -55337,7 +55349,8 @@ var SKILLS22 = {
     "mis": [
       "M_LC_BLUE_BASE",
       "M_LC_NEUTRAL_ACID",
-      "M_LC_TASTE_TEST"
+      "M_LC_TASTE_TEST",
+      "M_LC_SAME_PAPER_BOTH"
     ]
   },
   "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT": {
@@ -55353,7 +55366,8 @@ var SKILLS22 = {
     "mis": [
       "M_IP_ONLY_LITMUS",
       "M_IP_SAME_COLOUR",
-      "M_IP_STRONG_CHEM"
+      "M_IP_STRONG_CHEM",
+      "M_IP_ANY_LEAF"
     ]
   },
   "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES": {
@@ -55370,7 +55384,8 @@ var SKILLS22 = {
     "mis": [
       "M_AP_BASE_SWEET",
       "M_AP_ALL_BURN",
-      "M_AP_BASE_OPPOSITE"
+      "M_AP_BASE_OPPOSITE",
+      "M_AP_ACID_ALWAYS_LIQUID"
     ]
   },
   "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES": {
@@ -55386,7 +55401,8 @@ var SKILLS22 = {
     "mis": [
       "M_AU2_ANTACID_ACID",
       "M_AU2_SOIL_ASH",
-      "M_AU2_STRONGER"
+      "M_AU2_STRONGER",
+      "M_AU2_BLEACH_FOOD"
     ]
   },
   "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE": {
@@ -55401,7 +55417,8 @@ var SKILLS22 = {
     "mis": [
       "M_RM_TESTIS_URINE",
       "M_RM_URETHRA_ONE",
-      "M_RM_SCROTUM"
+      "M_RM_SCROTUM",
+      "M_RM_SPERM_DUCT_BLADDER"
     ]
   },
   "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE": {
@@ -55418,7 +55435,8 @@ var SKILLS22 = {
     "mis": [
       "M_RF_STOMACH_BABY",
       "M_RF_OVARY_UTERUS",
-      "M_RF_CERVIX_VAGINA"
+      "M_RF_CERVIX_VAGINA",
+      "M_RF_EGG_EVERY_DAY"
     ]
   },
   "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES": {
@@ -55435,7 +55453,8 @@ var SKILLS22 = {
     "mis": [
       "M_AC_BOYS_ONLY",
       "M_AC_SAME_AGE",
-      "M_AC_PERIOD_ILLNESS"
+      "M_AC_PERIOD_ILLNESS",
+      "M_AC_VOICE_GIRLS_NONE"
     ]
   },
   "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING": {
@@ -55451,7 +55470,8 @@ var SKILLS22 = {
     "mis": [
       "M_AC2_SQUEEZE",
       "M_AC2_KEEP_QUIET",
-      "M_AC2_PADS"
+      "M_AC2_PADS",
+      "M_AC2_SKIP_MEALS"
     ]
   },
   "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS": {
@@ -55466,7 +55486,8 @@ var SKILLS22 = {
     "mis": [
       "M_EO_FAECES",
       "M_EO_LUNGS_O2",
-      "M_EO_SKIN_ONLY_COOL"
+      "M_EO_SKIN_ONLY_COOL",
+      "M_EO_LIVER_NONE"
     ]
   },
   "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS": {
@@ -55482,7 +55503,8 @@ var SKILLS22 = {
     "mis": [
       "M_SK_EPIDERMIS_SWEAT",
       "M_SK_PORE_BLOOD",
-      "M_SK_HAIR_EPI"
+      "M_SK_HAIR_EPI",
+      "M_SK_SKIN_ONE_LAYER"
     ]
   },
   "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS": {
@@ -55498,7 +55520,8 @@ var SKILLS22 = {
     "mis": [
       "M_UP_KIDNEY_STORE",
       "M_UP_DRINK_BLADDER",
-      "M_UP_URETER_URETHRA"
+      "M_UP_URETER_URETHRA",
+      "M_UP_ONE_KIDNEY"
     ]
   },
   "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH": {
@@ -55516,7 +55539,8 @@ var SKILLS22 = {
     "mis": [
       "M_KH_STONES_CATCH",
       "M_KH_LESS_WATER",
-      "M_KH_SKIN_RARE"
+      "M_KH_SKIN_RARE",
+      "M_KH_PAINKILLERS_SAFE"
     ]
   },
   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES": {
@@ -55530,7 +55554,8 @@ var SKILLS22 = {
     "mis": [
       "M_ES_SOCKET",
       "M_ES_STORED_WIRE",
-      "M_ES_HYDRO_GEO"
+      "M_ES_HYDRO_GEO",
+      "M_ES_SOLAR_NIGHT"
     ]
   },
   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS": {
@@ -55546,7 +55571,8 @@ var SKILLS22 = {
     "mis": [
       "M_CB_ONE_WIRE",
       "M_CB_USED_UP",
-      "M_CB_SWITCH_OPEN"
+      "M_CB_SWITCH_OPEN",
+      "M_CB_CELL_ONE_END"
     ]
   },
   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL": {
@@ -55557,12 +55583,14 @@ var SKILLS22 = {
       "INTE.G7.FORCE_.ELECTRICAL_ENERGY.b"
     ],
     "pre": [
-      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS"
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES"
     ],
     "mis": [
       "M_SP_SERIES_STAY",
       "M_SP_PARALLEL_DIM",
-      "M_SP_HOUSE_SERIES"
+      "M_SP_HOUSE_SERIES",
+      "M_SP_MORE_BULBS_BRIGHTER"
     ]
   },
   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES": {
@@ -55578,7 +55606,8 @@ var SKILLS22 = {
     "mis": [
       "M_AP2_MAKES_ELEC",
       "M_AP2_RADIO_NONE",
-      "M_AP2_FRIDGE_COLD"
+      "M_AP2_FRIDGE_COLD",
+      "M_AP2_IRON_LIGHT"
     ]
   },
   "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY": {
@@ -55594,7 +55623,8 @@ var SKILLS22 = {
     "mis": [
       "M_ESF_WET_HANDS",
       "M_ESF_UNPLUG_PULL",
-      "M_ESF_OVERLOAD"
+      "M_ESF_OVERLOAD",
+      "M_ESF_KITE_POWERLINE"
     ]
   },
   "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES": {
@@ -55608,7 +55638,8 @@ var SKILLS22 = {
     "mis": [
       "M_MP_LIKE_ATTRACT",
       "M_MP_MIDDLE",
-      "M_MP_ONE_POLE"
+      "M_MP_ONE_POLE",
+      "M_MP_THROUGH_NOTHING"
     ]
   },
   "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS": {
@@ -55624,7 +55655,8 @@ var SKILLS22 = {
     "mis": [
       "M_MM_ALL_METALS",
       "M_MM_SHINY",
-      "M_MM_HEAVY"
+      "M_MM_HEAVY",
+      "M_MM_COIN_ALL"
     ]
   },
   "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES": {
@@ -55641,7 +55673,8 @@ var SKILLS22 = {
     "mis": [
       "M_MU_COMPASS_SUN",
       "M_MU_FRIDGE_GLUE",
-      "M_MU_PICK_ALL"
+      "M_MU_PICK_ALL",
+      "M_MU_ELEC_NO_MAGNET"
     ]
   }
 };
@@ -55652,6 +55685,8 @@ var MIS_FEEDBACK21 = {
   "M_SM_LAB_ONLY": "Science is in daily life: cooking, farming, healing and travelling all use it.",
   "M_SM_HEALTH_ONLY": "Science helps in farming, industry, transport, food and clothing, as well as health.",
   "M_SM_NO_CAREER": "Many careers use science: nurse, engineer, farmer, pilot, laboratory technician and more.",
+  "M_SC_PHYSICS_MATHS": "Physics studies energy and forces, such as friction in a brake. It uses maths, but it is science.",
+  "M_SM_FARM_NOT_SCIENCE": "Science is used on farms every day: tested seed, fertiliser, soil tests and pest control.",
   "M_HS_FLAME_FIRE": "The flame symbol warns that the substance is flammable: it catches fire easily and must be kept from flames.",
   "M_HS_SKULL_DEAD": "A skull and crossbones means toxic: the substance is poisonous and can kill.",
   "M_HS_CORROSIVE_TOXIC": "Corrosive means it eats away skin, cloth and metal. Toxic means poisonous. They are different warnings.",
@@ -55661,6 +55696,9 @@ var MIS_FEEDBACK21 = {
   "M_FA_BUTTER_BURN": "Cool the burn with cool running water. Creams, butter and toothpaste trap heat and can cause infection.",
   "M_FA_VOMIT": "Do not make the child vomit. Get an adult, say what was swallowed and take the child to hospital.",
   "M_FA_CUT_WASH": "Pressing on the cut with a clean cloth stops the bleeding. Raise the hurt part and get help.",
+  "M_HS_NO_SYMBOL_SAFE": "Never taste, smell or use anything that is not labelled. Tell the teacher.",
+  "M_LA_RUN_EXIT": "In an emergency walk quickly and calmly to the exit. Running causes falls and more accidents.",
+  "M_FA_EYE_RUB": "Rinse the eye with lots of clean running water. Never rub it. Tell the teacher at once.",
   "M_SS_PREDICT_RESULT": "A prediction is said before the test. The result is what happened.",
   "M_SS_OBSERVE_EYES": "Observing uses your senses safely. Never taste or smell unknown chemicals.",
   "M_SS_CONCLUSION_GUESS": "A conclusion says what the results show. A guess made before testing is a prediction.",
@@ -55673,6 +55711,10 @@ var MIS_FEEDBACK21 = {
   "M_SD_LITRE_SI": "The SI unit of volume is the cubic metre. The litre is a common smaller unit.",
   "M_SD_AREA_M": "Area is length times width, so the unit is square metres, m2.",
   "M_SD_SPEED_M": "Speed is distance divided by time, so its unit is metres per second, m/s.",
+  "M_SS_ONE_TEST_ENOUGH": "One test is not enough. Repeat with different samples before you conclude.",
+  "M_AU_THERMOMETER_SHAKE_READ": "Read a thermometer while its bulb is still in the liquid. In the air the reading changes.",
+  "M_SB_MINUTE_SI": "The SI unit of time is the second. Minutes and hours are made from seconds.",
+  "M_SD_DENSITY_UNIT": "Density is mass divided by volume, so its unit is kg/m\xB3.",
   "M_HM_DISAPPEAR": "The salt has not gone. It is spread through the water. Evaporate the water and it comes back.",
   "M_HM_MUDDY_SOLUTION": "Muddy water is a heterogeneous mixture. A solution looks the same all through and the solute does not settle.",
   "M_HM_SOLVENT_SOLUTE": "The solvent does the dissolving (water). The solute is what dissolves (sugar).",
@@ -55682,6 +55724,9 @@ var MIS_FEEDBACK21 = {
   "M_SU_SALT_FILTER": "The Sun evaporates the water in shallow pans and the salt is left.",
   "M_SU_OIL_ONE": "Crude oil is a mixture. Fractional distillation separates it using the different boiling points.",
   "M_SU_SCIENTISTS_ONLY": "Separating mixtures is used at home, on farms and in industry as well as in the laboratory.",
+  "M_HM_SOLUTION_ONLY_WATER": "Water is the commonest solvent, but others such as paraffin and spirit dissolve things water cannot.",
+  "M_SE_DISTIL_DESTROYS_SALT": "In distillation the water boils off and is collected; the salt stays in the flask.",
+  "M_SU_CHROMA_USELESS": "Chromatography is used to test dyes in food and inks, and in hospitals and crime labs.",
   "M_LC_BLUE_BASE": "Blue litmus turns red in an acid. Red litmus turns blue in a base.",
   "M_LC_NEUTRAL_ACID": "A liquid that changes neither paper is neutral. It is neither an acid nor a base.",
   "M_LC_TASTE_TEST": "Never taste to test. Use litmus paper or an indicator.",
@@ -55694,6 +55739,10 @@ var MIS_FEEDBACK21 = {
   "M_AU2_ANTACID_ACID": "An antacid is a base. It cancels some of the extra stomach acid.",
   "M_AU2_SOIL_ASH": "Lime and ash are bases. They cancel the extra acid in the soil.",
   "M_AU2_STRONGER": "Strong acids and bases burn. Weak ones are used in food and cleaning.",
+  "M_LC_SAME_PAPER_BOTH": "Blue staying blue only rules out an acid. Use red litmus to tell a base from neutral.",
+  "M_IP_ANY_LEAF": "A good indicator changes colour in acids and bases. Red cabbage does; most green leaves do not.",
+  "M_AP_ACID_ALWAYS_LIQUID": "Some acids are solids. They show acid properties when dissolved in water.",
+  "M_AU2_BLEACH_FOOD": "Bleach is for surfaces, not food. Wash fruit in clean water.",
   "M_RM_TESTIS_URINE": "The testes make sperm. The bladder only stores urine.",
   "M_RM_URETHRA_ONE": "In males the urethra is a shared passage: it carries urine and sperm, never both together.",
   "M_RM_SCROTUM": "The testes are in the scrotum. It is cooler outside the body, which is better for making sperm.",
@@ -55706,6 +55755,10 @@ var MIS_FEEDBACK21 = {
   "M_AC2_SQUEEZE": "Wash gently each day and do not squeeze pimples.",
   "M_AC2_KEEP_QUIET": "Talk to a trusted adult. Moods change in adolescence and help is there.",
   "M_AC2_PADS": "Use a clean pad and change it often. Girls can go to school.",
+  "M_RM_SPERM_DUCT_BLADDER": "The sperm duct carries sperm from the testes. Urine comes from the bladder. Both leave by the urethra, at different times.",
+  "M_RF_EGG_EVERY_DAY": "An egg is usually released about once a month, as part of the monthly cycle.",
+  "M_AC_VOICE_GIRLS_NONE": "Girls change in many ways: growth, breasts, wider hips, body hair, as well as periods.",
+  "M_AC2_SKIP_MEALS": "Growing bodies need balanced meals. Eat well and stay active; do not skip meals.",
   "M_EO_FAECES": "Excretion removes waste made by cells, such as urea and carbon dioxide. Faeces are undigested food.",
   "M_EO_LUNGS_O2": "The lungs remove carbon dioxide and water vapour when we breathe out.",
   "M_EO_SKIN_ONLY_COOL": "Sweat removes water and salts and also cools the body.",
@@ -55718,6 +55771,10 @@ var MIS_FEEDBACK21 = {
   "M_KH_STONES_CATCH": "Kidney stones are not caught from other people. They can form when too little water is drunk.",
   "M_KH_LESS_WATER": "Drinking enough clean water helps the kidneys wash out waste.",
   "M_KH_SKIN_RARE": "Washing every day keeps the skin healthy because sweat and germs build up.",
+  "M_EO_LIVER_NONE": "The liver also helps excretion: it breaks down wastes and old red blood cells.",
+  "M_SK_SKIN_ONE_LAYER": "Skin has two main layers: the epidermis outside and the dermis below with glands and vessels.",
+  "M_UP_ONE_KIDNEY": "Most people have two kidneys, at the back of the abdomen.",
+  "M_KH_PAINKILLERS_SAFE": "Take medicines only as advised. Too many painkillers can harm the kidneys.",
   "M_ES_SOCKET": "A socket only passes electricity on. A cell or a generator makes it.",
   "M_ES_STORED_WIRE": "Wires only carry electricity. It is made at a power station by a generator.",
   "M_ES_HYDRO_GEO": "Steam from underground heat is geothermal. Hydroelectric power uses falling water.",
@@ -55733,6 +55790,11 @@ var MIS_FEEDBACK21 = {
   "M_ESF_WET_HANDS": "Wet hands let electricity pass through the body. Dry them first.",
   "M_ESF_UNPLUG_PULL": "Switch off and pull on the plug, not the cable. Leave mending to an electrician.",
   "M_ESF_OVERLOAD": "Too many appliances on one socket can overheat the wire and start a fire.",
+  "M_ES_SOLAR_NIGHT": "A solar panel makes electricity only in daylight. At night the light comes from a battery it charged.",
+  "M_CB_CELL_ONE_END": "A circuit must go from one end of the cell, through the bulb, back to the other end.",
+  "M_SP_MORE_BULBS_BRIGHTER": "In series the bulbs share the push of the cell, so each is dimmer.",
+  "M_AP2_IRON_LIGHT": "An electric iron changes electricity mainly into heat.",
+  "M_ESF_KITE_POWERLINE": "Never play near power lines. A kite or a branch can carry a deadly shock.",
   "M_MP_LIKE_ATTRACT": "Like poles repel and unlike poles attract.",
   "M_MP_MIDDLE": "The pins stick at the poles. A magnet is strongest at its two poles.",
   "M_MP_ONE_POLE": "Each piece of a cut magnet has its own north and south poles.",
@@ -55741,7 +55803,10 @@ var MIS_FEEDBACK21 = {
   "M_MM_HEAVY": "Weight does not decide it. The material does.",
   "M_MU_COMPASS_SUN": "A compass needle is a small magnet that lines up north and south.",
   "M_MU_FRIDGE_GLUE": "The door seal has a magnet that pulls on the steel body.",
-  "M_MU_PICK_ALL": "A magnet picks out only iron and steel. Aluminium and copper stay."
+  "M_MU_PICK_ALL": "A magnet picks out only iron and steel. Aluminium and copper stay.",
+  "M_MP_THROUGH_NOTHING": "Magnetic force passes through non-magnetic materials such as paper and plastic.",
+  "M_MM_COIN_ALL": "Only iron, steel, nickel and cobalt are magnetic. Test each coin; do not assume.",
+  "M_MU_ELEC_NO_MAGNET": "Speakers, motors and generators all use magnets with coils of wire."
 };
 
 // src/ai-tutor/content/families/integratedscience_g7_signed.js
@@ -56767,7 +56832,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_AE_ATOM_MOLECULE",
       "M_G8_AE_ELEMENT_COMPOUND",
-      "M_G8_AE_MIXTURE"
+      "M_G8_AE_MIXTURE",
+      "M_G8_AE_GAS_NOT_ELEMENT"
     ]
   },
   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS": {
@@ -56782,7 +56848,9 @@ var SKILLS23 = {
     ],
     "mis": [
       "M_G8_SY_FIRST_LETTER",
-      "M_G8_SY_NAME"
+      "M_G8_SY_NAME",
+      "M_G8_SY_CAPITALS",
+      "M_G8_SY_SILVER_GOLD"
     ]
   },
   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS": {
@@ -56793,12 +56861,14 @@ var SKILLS23 = {
       "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.c"
     ],
     "pre": [
-      "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS"
+      "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS",
+      "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT"
     ],
     "mis": [
       "M_G8_WE_ORDER",
       "M_G8_WE_NAME",
-      "M_G8_WE_LOST"
+      "M_G8_WE_LOST",
+      "M_G8_WE_PLUS_PRODUCT"
     ]
   },
   "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES": {
@@ -56815,7 +56885,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_EU_WRONG_USE",
       "M_G8_EU_LABEL",
-      "M_G8_EU_COMPOUND_ELEMENT"
+      "M_G8_EU_COMPOUND_ELEMENT",
+      "M_G8_EU_CHLORINE_FOOD"
     ]
   },
   "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES": {
@@ -56829,7 +56900,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_ST_SOLID_STILL",
       "M_G8_ST_GAS_CLOSE",
-      "M_G8_ST_LIQUID_FIXED"
+      "M_G8_ST_LIQUID_FIXED",
+      "M_G8_ST_PARTICLES_EXPAND"
     ]
   },
   "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES": {
@@ -56845,7 +56917,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_IM_LOWER_BOIL",
       "M_G8_IM_RAISE_MELT",
-      "M_G8_IM_NO_EFFECT"
+      "M_G8_IM_NO_EFFECT",
+      "M_G8_IM_PURITY_BY_LOOK"
     ]
   },
   "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES": {
@@ -56862,7 +56935,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_CH_MELT_CHEMICAL",
       "M_G8_CH_BURN_PHYSICAL",
-      "M_G8_CH_NEW"
+      "M_G8_CH_NEW",
+      "M_G8_CH_DISSOLVE_CHEMICAL"
     ]
   },
   "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE": {
@@ -56877,7 +56951,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_FT_TWO_PARTS",
       "M_G8_FT_WATER_ALL",
-      "M_G8_FT_CAUSE"
+      "M_G8_FT_CAUSE",
+      "M_G8_FT_FAN_PUTS_OUT"
     ]
   },
   "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES": {
@@ -56893,7 +56968,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_FC_WATER_OIL",
       "M_G8_FC_WATER_ELEC",
-      "M_G8_FC_ALARM"
+      "M_G8_FC_ALARM",
+      "M_G8_FC_ONE_EXTINGUISHER"
     ]
   },
   "INTE.G8.LIVING.THE_CELL.CELL_PARTS": {
@@ -56926,7 +57002,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_MG_ADD",
       "M_G8_MG_ONE",
-      "M_G8_MG_FOUR"
+      "M_G8_MG_FOUR",
+      "M_G8_MG_REAL_SIZE"
     ]
   },
   "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS": {
@@ -56944,7 +57021,25 @@ var SKILLS23 = {
     "mis": [
       "M_G8_DO_UP_GRADIENT",
       "M_G8_DO_OSMOSIS_SOLUTE",
-      "M_G8_DO_ENERGY"
+      "M_G8_DO_ENERGY",
+      "M_G8_DO_ONLY_LIQUIDS"
+    ]
+  },
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS_DEMO": {
+    "name": "Predict and explain the results of simple diffusion and osmosis demonstrations",
+    "sub": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN",
+    "outcome": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.b",
+    "outcomes": [
+      "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.b"
+    ],
+    "pre": [
+      "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS"
+    ],
+    "mis": [
+      "M_G8_DD_SALT_INTO_POTATO",
+      "M_G8_DD_STIRRING_NEEDED",
+      "M_G8_DD_RAISIN_SHRINKS",
+      "M_G8_DD_HOT_SLOWER"
     ]
   },
   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL": {
@@ -56958,7 +57053,25 @@ var SKILLS23 = {
     "mis": [
       "M_G8_MC_LENGTH",
       "M_G8_MC_OVULATION",
-      "M_G8_MC_DISEASE"
+      "M_G8_MC_DISEASE",
+      "M_G8_MC_ALWAYS_REGULAR"
+    ]
+  },
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL_MANAGE": {
+    "name": "Choose the parts of a plan that manage the challenges of the menstrual cycle",
+    "sub": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE",
+    "outcome": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b",
+    "outcomes": [
+      "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b"
+    ],
+    "pre": [
+      "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL"
+    ],
+    "mis": [
+      "M_G8_MM_STAY_HOME",
+      "M_G8_MM_ONE_PAD_DAY",
+      "M_G8_MM_SEVERE_NORMAL",
+      "M_G8_MM_SECRET"
     ]
   },
   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION": {
@@ -56974,7 +57087,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_FE_PLACE",
       "M_G8_FE_ORDER",
-      "M_G8_FE_ZYGOTE"
+      "M_G8_FE_ZYGOTE",
+      "M_G8_FE_MANY_SPERM"
     ]
   },
   "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS": {
@@ -56991,7 +57105,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_STI_MYTH",
       "M_G8_STI_NO_CURE",
-      "M_G8_STI_PREVENT"
+      "M_G8_STI_PREVENT",
+      "M_G8_STI_NO_SYMPTOMS_SAFE"
     ]
   },
   "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES": {
@@ -57006,7 +57121,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_EN_RENEWABLE_COAL",
       "M_G8_EN_SOLAR_NONREN",
-      "M_G8_EN_FORM_MIX"
+      "M_G8_EN_FORM_MIX",
+      "M_G8_EN_FOOD_NOT_ENERGY"
     ]
   },
   "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM": {
@@ -57023,7 +57139,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_ET_KETTLE_LIGHT",
       "M_G8_ET_CREATED",
-      "M_G8_ET_SOLAR"
+      "M_G8_ET_SOLAR",
+      "M_G8_ET_ONE_STEP"
     ]
   },
   "INTE.G8.FORCE_.PRESSURE.PRESSURE": {
@@ -57038,7 +57155,8 @@ var SKILLS23 = {
     "mis": [
       "M_G8_PR_FORCE_ONLY",
       "M_G8_PR_AREA_WRONG",
-      "M_G8_PR_DEPTH"
+      "M_G8_PR_DEPTH",
+      "M_G8_PR_SHAPE_TANK"
     ]
   }
 };
@@ -57054,6 +57172,11 @@ var MIS_FEEDBACK22 = {
   "M_G8_EU_WRONG_USE": "Copper is used for electric wires because it carries electricity well.",
   "M_G8_EU_LABEL": "Labels give contents, amounts, dates and safety information.",
   "M_G8_EU_COMPOUND_ELEMENT": "Water is a compound of hydrogen and oxygen. Oxygen is an element.",
+  "M_G8_AE_GAS_NOT_ELEMENT": "An element can be a solid, a liquid or a gas. Oxygen is an element.",
+  "M_G8_SY_CAPITALS": "The first letter is a capital and the second is small: Cu, Na, Fe.",
+  "M_G8_SY_SILVER_GOLD": "Gold is Au and silver is Ag.",
+  "M_G8_WE_PLUS_PRODUCT": "The product is a new substance with a new name: magnesium oxide.",
+  "M_G8_EU_CHLORINE_FOOD": "Chlorine gas is poisonous. In salt it is joined with sodium, which makes a safe compound.",
   "M_G8_ST_SOLID_STILL": "Solid particles vibrate in fixed places. They do not move around.",
   "M_G8_ST_GAS_CLOSE": "Gas particles are far apart and move freely.",
   "M_G8_ST_LIQUID_FIXED": "Liquid particles are close but slide past each other.",
@@ -57063,12 +57186,17 @@ var MIS_FEEDBACK22 = {
   "M_G8_CH_MELT_CHEMICAL": "Melting makes no new substance, so it is physical.",
   "M_G8_CH_BURN_PHYSICAL": "Burning makes new substances and cannot be reversed, so it is chemical.",
   "M_G8_CH_NEW": "A chemical change makes a new substance.",
+  "M_G8_ST_PARTICLES_EXPAND": "When heated, particles move more and spread apart. They do not grow.",
+  "M_G8_IM_PURITY_BY_LOOK": "Pure water boils at 100 degrees at sea level. A different boiling point shows an impurity, even if it looks clear.",
+  "M_G8_CH_DISSOLVE_CHEMICAL": "Dissolving is a physical change. No new substance is made and the sugar can be got back.",
   "M_G8_FT_TWO_PARTS": "A fire needs heat, fuel and oxygen. Remove one and it goes out.",
   "M_G8_FT_WATER_ALL": "Water spreads an oil fire. It is not used on oil or electrical fires.",
   "M_G8_FT_CAUSE": "Lightning, volcanoes and the hot sun on dry grass are natural causes.",
   "M_G8_FC_WATER_OIL": "Water makes an oil fire spread. Smother it.",
   "M_G8_FC_WATER_ELEC": "Switch off the power first. Never use water on an electrical fire.",
   "M_G8_FC_ALARM": "Raise the alarm and leave safely. Only small fires are fought, by adults.",
+  "M_G8_FT_FAN_PUTS_OUT": "Fanning brings more oxygen, so a fire burns more. Blowing out a match takes away its heat.",
+  "M_G8_FC_ONE_EXTINGUISHER": "Each extinguisher is for certain classes of fire. Read the label before using it.",
   "M_G8_CP_WALL_ANIMAL": "Only plant cells have a cell wall.",
   "M_G8_CP_NUCLEUS": "The nucleus controls the cell. Chloroplasts make food.",
   "M_G8_CP_CHLORO": "Chloroplasts are found in plant cells.",
@@ -57076,9 +57204,15 @@ var MIS_FEEDBACK22 = {
   "M_G8_MG_ADD": "Multiply the two: 10 times 40 is 400.",
   "M_G8_MG_ONE": "Both lenses magnify, so multiply: 10 times 10 is 100.",
   "M_G8_MG_FOUR": "10 times 40 is 400.",
+  "M_G8_MG_REAL_SIZE": "A microscope makes an image bigger. The cell itself does not change size.",
   "M_G8_DO_UP_GRADIENT": "Particles spread from where there are many to where there are few.",
   "M_G8_DO_OSMOSIS_SOLUTE": "Osmosis is the movement of water through a membrane.",
   "M_G8_DO_ENERGY": "Diffusion happens without the cell using energy.",
+  "M_G8_DD_SALT_INTO_POTATO": "Water left the potato, so it became soft and shorter. In osmosis it is water that moves.",
+  "M_G8_DD_STIRRING_NEEDED": "The dye spreads by itself by diffusion. Stirring only makes it faster.",
+  "M_G8_DD_RAISIN_SHRINKS": "Water moves into the raisin, where the sugar solution is stronger, so it swells.",
+  "M_G8_DD_HOT_SLOWER": "Particles move faster when warm, so diffusion is faster in hot water.",
+  "M_G8_DO_ONLY_LIQUIDS": "Diffusion happens in gases and liquids. Smells spread through air by diffusion.",
   "M_G8_MC_LENGTH": "The cycle is about 28 days. The bleeding lasts three to seven days.",
   "M_G8_MC_OVULATION": "An egg is released about the middle of the cycle.",
   "M_G8_MC_DISEASE": "Menstruation is normal and not an illness.",
@@ -57088,15 +57222,25 @@ var MIS_FEEDBACK22 = {
   "M_G8_STI_MYTH": "STIs do not spread by hugging, shaking hands or toilet seats.",
   "M_G8_STI_NO_CURE": "Many STIs can be treated, so see a health worker early.",
   "M_G8_STI_PREVENT": "Abstinence and faithfulness to one uninfected partner prevent STIs.",
+  "M_G8_MM_STAY_HOME": "A period is no reason to miss school. Carry a spare pad and ask the school nurse or a trusted adult for help.",
+  "M_G8_MM_ONE_PAD_DAY": "Change a pad every four to six hours to stay clean and healthy.",
+  "M_G8_MM_SEVERE_NORMAL": "Some pain is common, but pain that stops you walking or very heavy bleeding needs a health worker.",
+  "M_G8_MM_SECRET": "It is good to talk to a trusted adult about periods. They can help.",
+  "M_G8_MC_ALWAYS_REGULAR": "28 days is only an average. Cycles vary, especially when periods have just started.",
+  "M_G8_FE_MANY_SPERM": "Only one sperm joins the egg to make the zygote.",
+  "M_G8_STI_NO_SYMPTOMS_SAFE": "Some STIs have no signs for a long time. Only a test at a health centre shows them.",
   "M_G8_EN_RENEWABLE_COAL": "Coal is non-renewable. Sun, wind and flowing water are renewable.",
   "M_G8_EN_SOLAR_NONREN": "Petroleum is non-renewable. Wind is renewable.",
   "M_G8_EN_FORM_MIX": "Moving objects have kinetic energy.",
   "M_G8_ET_KETTLE_LIGHT": "A kettle changes electrical energy to heat.",
   "M_G8_ET_CREATED": "Energy is never created or used up. It changes form.",
   "M_G8_ET_SOLAR": "A solar panel changes light to electrical energy.",
+  "M_G8_EN_FOOD_NOT_ENERGY": "Food stores chemical energy. The body changes it into movement and heat.",
+  "M_G8_ET_ONE_STEP": "Many devices change energy in steps. A torch: chemical, then electrical, then light and heat.",
   "M_G8_PR_FORCE_ONLY": "The same force on a smaller area gives a bigger pressure.",
   "M_G8_PR_AREA_WRONG": "A larger area spreads the force, so the pressure is smaller.",
-  "M_G8_PR_DEPTH": "Liquid pressure grows with depth, so a dam wall is thicker at the bottom."
+  "M_G8_PR_DEPTH": "Liquid pressure grows with depth, so a dam wall is thicker at the bottom.",
+  "M_G8_PR_SHAPE_TANK": "Liquid pressure depends on depth, not on how much water there is."
 };
 
 // src/ai-tutor/content/families/integratedscience_g8_signed.js
@@ -57889,7 +58033,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_AP_ELECTRON",
       "M_IS9_AP_CHARGE",
-      "M_IS9_AP_PROTON"
+      "M_IS9_AP_PROTON",
+      "M_IS9_AP_ATOM_CHARGED"
     ]
   },
   "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.MASS_NUMBER": {
@@ -57905,7 +58050,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_MN_ADD",
       "M_IS9_MN_ELECTRON",
-      "M_IS9_MN_ATOMIC"
+      "M_IS9_MN_ATOMIC",
+      "M_IS9_MN_NEUTRONS_FROM_MASS"
     ]
   },
   "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.ELECTRON_ARR": {
@@ -57921,7 +58067,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_EA_FIRST",
       "M_IS9_EA_SODIUM",
-      "M_IS9_EA_SECOND"
+      "M_IS9_EA_SECOND",
+      "M_IS9_EA_SKIP_SHELL"
     ]
   },
   "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.METAL_NONMETAL": {
@@ -57937,7 +58084,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_MM_CARBON",
       "M_IS9_MM_COPPER",
-      "M_IS9_MM_CONDUCT"
+      "M_IS9_MM_CONDUCT",
+      "M_IS9_MM_SOLID_IS_METAL"
     ]
   },
   "INTE.G9.MIXTUR.METALS_AND_ALLOYS.METAL_PROPS": {
@@ -57954,7 +58102,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_MP_MALLEABLE",
       "M_IS9_MP_DUCTILE",
-      "M_IS9_MP_USE"
+      "M_IS9_MP_USE",
+      "M_IS9_MP_ALL_MAGNETIC"
     ]
   },
   "INTE.G9.MIXTUR.METALS_AND_ALLOYS.ALLOYS": {
@@ -57971,7 +58120,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_AL_MEANING",
       "M_IS9_AL_BRASS",
-      "M_IS9_AL_STEEL"
+      "M_IS9_AL_STEEL",
+      "M_IS9_AL_WEAKER"
     ]
   },
   "INTE.G9.MIXTUR.METALS_AND_ALLOYS.RUSTING": {
@@ -57987,7 +58137,23 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_RU_NEED",
       "M_IS9_RU_PREVENT",
-      "M_IS9_RU_EFFECT"
+      "M_IS9_RU_EFFECT",
+      "M_IS9_RU_ALL_METALS"
+    ]
+  },
+  "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES": {
+    "name": "Describe the physical properties of pure water",
+    "sub": "INTE.G9.MIXTUR.WATER_HARDNESS",
+    "outcome": "INTE.G9.MIXTUR.WATER_HARDNESS.a",
+    "outcomes": [
+      "INTE.G9.MIXTUR.WATER_HARDNESS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_IS9_WA_BOIL_ANY",
+      "M_IS9_WA_ICE_HEAVIER",
+      "M_IS9_WA_PURE_TASTE",
+      "M_IS9_WA_DISSOLVES_NOTHING"
     ]
   },
   "INTE.G9.MIXTUR.WATER_HARDNESS.HARD_SOFT": {
@@ -57999,11 +58165,14 @@ var SKILLS24 = {
       "INTE.G9.MIXTUR.WATER_HARDNESS.c",
       "INTE.G9.MIXTUR.WATER_HARDNESS.d"
     ],
-    "pre": [],
+    "pre": [
+      "INTE.G9.MIXTUR.WATER_HARDNESS.WATER_PROPERTIES"
+    ],
     "mis": [
       "M_IS9_HS_LATHER",
       "M_IS9_HS_SCALE",
-      "M_IS9_HS_SOFTEN"
+      "M_IS9_HS_SOFTEN",
+      "M_IS9_HS_HARD_DIRTY"
     ]
   },
   "INTE.G9.LIVING.NUTRITION_IN_PLANTS.LEAF_PARTS": {
@@ -58018,7 +58187,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_LP_STOMATA",
       "M_IS9_LP_CHLORO",
-      "M_IS9_LP_BROAD"
+      "M_IS9_LP_BROAD",
+      "M_IS9_LP_VEINS_BLOOD"
     ]
   },
   "INTE.G9.LIVING.NUTRITION_IN_PLANTS.PHOTOSYNTHESIS": {
@@ -58035,7 +58205,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_PS_GAS",
       "M_IS9_PS_PRODUCT",
-      "M_IS9_PS_TEST"
+      "M_IS9_PS_TEST",
+      "M_IS9_PS_SOIL_FOOD"
     ]
   },
   "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.ANIMAL_NUTRITION": {
@@ -58050,7 +58221,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_AN_HERBI",
       "M_IS9_AN_CARNI",
-      "M_IS9_AN_OMNI"
+      "M_IS9_AN_OMNI",
+      "M_IS9_AN_ONLY_THREE"
     ]
   },
   "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.TEETH": {
@@ -58066,7 +58238,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_TE_CANINE",
       "M_IS9_TE_INCISOR",
-      "M_IS9_TE_MOLAR"
+      "M_IS9_TE_MOLAR",
+      "M_IS9_TE_ALL_SAME"
     ]
   },
   "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.DIGESTION": {
@@ -58082,7 +58255,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_DG_START",
       "M_IS9_DG_ABSORB",
-      "M_IS9_DG_WATER"
+      "M_IS9_DG_WATER",
+      "M_IS9_DG_STOMACH_ABSORBS_ALL"
     ]
   },
   "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FLOWER_PARTS": {
@@ -58090,13 +58264,15 @@ var SKILLS24 = {
     "sub": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS",
     "outcome": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a",
     "outcomes": [
-      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a"
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.a",
+      "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.f"
     ],
     "pre": [],
     "mis": [
       "M_IS9_FP_STAMEN",
       "M_IS9_FP_CARPEL",
-      "M_IS9_FP_PETAL"
+      "M_IS9_FP_PETAL",
+      "M_IS9_FP_ONLY_BEAUTY"
     ]
   },
   "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.POLLINATION": {
@@ -58113,7 +58289,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_PL_MEANING",
       "M_IS9_PL_WIND",
-      "M_IS9_PL_INSECT"
+      "M_IS9_PL_INSECT",
+      "M_IS9_PL_SELF_NEVER"
     ]
   },
   "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.FERTIL_DISPERSAL": {
@@ -58130,7 +58307,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_FD_FRUIT",
       "M_IS9_FD_SEED",
-      "M_IS9_FD_WIND"
+      "M_IS9_FD_WIND",
+      "M_IS9_FD_WATER_ANY"
     ]
   },
   "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.BIOTIC_ABIOTIC": {
@@ -58144,7 +58322,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_BA_LIGHT",
       "M_IS9_BA_PLANT",
-      "M_IS9_BA_WATER"
+      "M_IS9_BA_WATER",
+      "M_IS9_BA_DEAD_ABIOTIC_NEVER"
     ]
   },
   "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.FOOD_CHAINS": {
@@ -58161,7 +58340,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_FC_START",
       "M_IS9_FC_ARROW",
-      "M_IS9_FC_HUMAN"
+      "M_IS9_FC_HUMAN",
+      "M_IS9_FC_REMOVE_NO_EFFECT"
     ]
   },
   "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS": {
@@ -58176,7 +58356,25 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_CV_CONCAVE",
       "M_IS9_CV_CONVEX",
-      "M_IS9_CV_IMAGE"
+      "M_IS9_CV_IMAGE",
+      "M_IS9_CV_CONCAVE_ALWAYS_BIG"
+    ]
+  },
+  "INTE.G9.FORCE_.CURVED_MIRRORS.RAY_DIAGRAMS": {
+    "name": "Use the rules of ray diagrams to locate the image in a concave or convex mirror",
+    "sub": "INTE.G9.FORCE_.CURVED_MIRRORS",
+    "outcome": "INTE.G9.FORCE_.CURVED_MIRRORS.b",
+    "outcomes": [
+      "INTE.G9.FORCE_.CURVED_MIRRORS.b"
+    ],
+    "pre": [
+      "INTE.G9.FORCE_.CURVED_MIRRORS.CURVED_MIRRORS"
+    ],
+    "mis": [
+      "M_IS9_RD_ONE_RAY",
+      "M_IS9_RD_PARALLEL_RULE",
+      "M_IS9_RD_CONVEX_REAL",
+      "M_IS9_RD_CLOSE_INVERTED"
     ]
   },
   "INTE.G9.FORCE_.CURVED_MIRRORS.MIRROR_USES": {
@@ -58192,7 +58390,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_MU_DRIVING",
       "M_IS9_MU_SHAVING",
-      "M_IS9_MU_SECURITY"
+      "M_IS9_MU_SECURITY",
+      "M_IS9_MU_TORCH_CONVEX"
     ]
   },
   "INTE.G9.FORCE_.WAVES.WAVE_TYPES": {
@@ -58207,7 +58406,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_WT_SOUND",
       "M_IS9_WT_WATER",
-      "M_IS9_WT_DIR"
+      "M_IS9_WT_DIR",
+      "M_IS9_WT_WATER_TRAVELS"
     ]
   },
   "INTE.G9.FORCE_.WAVES.WAVE_PARTS": {
@@ -58225,7 +58425,8 @@ var SKILLS24 = {
     "mis": [
       "M_IS9_WP_CREST",
       "M_IS9_WP_FREQ",
-      "M_IS9_WP_LENGTH"
+      "M_IS9_WP_LENGTH",
+      "M_IS9_WP_AMPLITUDE_SPEED"
     ]
   }
 };
@@ -58242,6 +58443,10 @@ var MIS_FEEDBACK23 = {
   "M_IS9_MM_CARBON": "Carbon is a non-metal.",
   "M_IS9_MM_COPPER": "Copper is a metal.",
   "M_IS9_MM_CONDUCT": "Metals conduct electricity.",
+  "M_IS9_AP_ATOM_CHARGED": "An atom has equal numbers of protons and electrons, so it has no overall charge.",
+  "M_IS9_MN_NEUTRONS_FROM_MASS": "Neutrons = mass number - atomic number. For sodium, 23 - 11 = 12.",
+  "M_IS9_EA_SKIP_SHELL": "Shells fill from the inside: the first shell takes 2 before any go into the second.",
+  "M_IS9_MM_SOLID_IS_METAL": "Some non-metals are solids, such as sulphur and carbon. Sort by properties, not by state.",
   "M_IS9_MP_MALLEABLE": "Malleable metals can be hammered into sheets.",
   "M_IS9_MP_DUCTILE": "Ductile metals can be drawn into wires.",
   "M_IS9_MP_USE": "Copper conducts electricity well.",
@@ -58251,15 +58456,25 @@ var MIS_FEEDBACK23 = {
   "M_IS9_RU_NEED": "Iron needs both air and water to rust.",
   "M_IS9_RU_PREVENT": "Painting or oiling keeps air and water away.",
   "M_IS9_RU_EFFECT": "Rust weakens iron.",
+  "M_IS9_MP_ALL_MAGNETIC": "Most metals are not magnetic. Aluminium is a metal because it shines, bends and conducts.",
+  "M_IS9_AL_WEAKER": "Alloys are made to be stronger, harder or last longer than the pure metal.",
+  "M_IS9_RU_ALL_METALS": "Only iron and steel rust. Other metals can tarnish or corrode but do not form rust.",
   "M_IS9_HS_LATHER": "Soft water lathers easily.",
   "M_IS9_HS_SCALE": "Hard water leaves scale.",
   "M_IS9_HS_SOFTEN": "Boiling softens temporary hard water.",
+  "M_IS9_WA_BOIL_ANY": "Pure water boils at 100 degrees Celsius at sea level.",
+  "M_IS9_WA_ICE_HEAVIER": "Ice is less dense than water, so it floats.",
+  "M_IS9_WA_PURE_TASTE": "Pure water has no colour, smell or taste.",
+  "M_IS9_WA_DISSOLVES_NOTHING": "Water dissolves many substances, solids and gases.",
+  "M_IS9_HS_HARD_DIRTY": "Hard water has dissolved salts. It can be clean and safe; it only lathers poorly and leaves scale.",
   "M_IS9_LP_STOMATA": "Stomata let gases in and out.",
   "M_IS9_LP_CHLORO": "Chlorophyll is in chloroplasts in the leaves.",
   "M_IS9_LP_BROAD": "A broad, thin leaf catches light.",
   "M_IS9_PS_GAS": "Plants use carbon dioxide.",
   "M_IS9_PS_PRODUCT": "Photosynthesis gives off oxygen.",
   "M_IS9_PS_TEST": "Iodine turns blue-black with starch.",
+  "M_IS9_LP_VEINS_BLOOD": "Leaf veins carry water and minerals in and food out. They also hold the leaf open.",
+  "M_IS9_PS_SOIL_FOOD": "Plants make their own food in their leaves. Roots take in water and minerals, not food.",
   "M_IS9_AN_HERBI": "A herbivore eats plants only.",
   "M_IS9_AN_CARNI": "A carnivore eats flesh.",
   "M_IS9_AN_OMNI": "An omnivore eats both.",
@@ -58269,6 +58484,9 @@ var MIS_FEEDBACK23 = {
   "M_IS9_DG_START": "Digestion starts in the mouth.",
   "M_IS9_DG_ABSORB": "Digested food is absorbed in the small intestine.",
   "M_IS9_DG_WATER": "Water is absorbed in the large intestine.",
+  "M_IS9_AN_ONLY_THREE": "Some animals are parasites: they feed on another living animal, like a tick on a cow.",
+  "M_IS9_TE_ALL_SAME": "Teeth suit the food. Herbivores have broad grinding teeth; carnivores have big canines for tearing.",
+  "M_IS9_DG_STOMACH_ABSORBS_ALL": "The stomach starts protein digestion, but digestion is completed and food absorbed in the small intestine.",
   "M_IS9_FP_STAMEN": "The stamen is the male part.",
   "M_IS9_FP_CARPEL": "The carpel is the female part.",
   "M_IS9_FP_PETAL": "Petals attract insects.",
@@ -58278,24 +58496,37 @@ var MIS_FEEDBACK23 = {
   "M_IS9_FD_FRUIT": "The ovary becomes the fruit.",
   "M_IS9_FD_SEED": "The ovule becomes the seed.",
   "M_IS9_FD_WIND": "Wind-dispersed seeds have wings or hairs.",
+  "M_IS9_FP_ONLY_BEAUTY": "Flowers make seeds for new plants, and give food to insects, birds and people.",
+  "M_IS9_PL_SELF_NEVER": "Self-pollination is pollen reaching a stigma of the same flower or plant; cross-pollination is from another plant.",
+  "M_IS9_FD_WATER_ANY": "Water-dispersed fruits float, like the coconut with its air-filled husk.",
   "M_IS9_BA_LIGHT": "Sunlight is non-living.",
   "M_IS9_BA_PLANT": "A plant is living.",
   "M_IS9_BA_WATER": "Water is non-living.",
   "M_IS9_FC_START": "A food chain starts with a producer.",
   "M_IS9_FC_ARROW": "Arrows show energy moving to the eater.",
   "M_IS9_FC_HUMAN": "Cutting forests upsets food webs.",
+  "M_IS9_BA_DEAD_ABIOTIC_NEVER": "Dead plants and animals are part of the living web: decomposers feed on them and return minerals to the soil.",
+  "M_IS9_FC_REMOVE_NO_EFFECT": "In a food web one change spreads: fewer snakes can mean more rats and more damage to crops.",
   "M_IS9_CV_CONCAVE": "A concave mirror curves inwards.",
   "M_IS9_CV_CONVEX": "A convex mirror curves outwards.",
   "M_IS9_CV_IMAGE": "A convex mirror forms a small, upright, virtual image.",
   "M_IS9_MU_DRIVING": "Driving mirrors are convex for a wide view.",
   "M_IS9_MU_SHAVING": "A shaving mirror is concave for a larger image.",
   "M_IS9_MU_SECURITY": "Convex mirrors give a wide view.",
+  "M_IS9_RD_ONE_RAY": "Two rays are needed; the image is where they cross.",
+  "M_IS9_RD_PARALLEL_RULE": "A ray parallel to the axis reflects through F.",
+  "M_IS9_RD_CONVEX_REAL": "A convex mirror always forms a virtual image behind it.",
+  "M_IS9_RD_CLOSE_INVERTED": "Close to a concave mirror, the image is upright, larger and virtual.",
+  "M_IS9_CV_CONCAVE_ALWAYS_BIG": "A concave mirror magnifies only when you are close. From far away the image is upside down and smaller.",
+  "M_IS9_MU_TORCH_CONVEX": "A torch uses a concave mirror. The bulb at the focus gives a strong, parallel beam.",
   "M_IS9_WT_SOUND": "Sound is a longitudinal wave.",
   "M_IS9_WT_WATER": "Water waves are transverse.",
   "M_IS9_WT_DIR": "Transverse particles move at right angles.",
   "M_IS9_WP_CREST": "The crest is the highest point.",
   "M_IS9_WP_FREQ": "Frequency is measured in hertz.",
-  "M_IS9_WP_LENGTH": "The distance between two crests is the wavelength."
+  "M_IS9_WP_LENGTH": "The distance between two crests is the wavelength.",
+  "M_IS9_WT_WATER_TRAVELS": "A wave carries energy, not the water. The leaf only bobs up and down as the wave passes.",
+  "M_IS9_WP_AMPLITUDE_SPEED": "Amplitude is the height of the wave and shows its energy. It does not change the speed in the same rope."
 };
 
 // src/ai-tutor/content/families/integratedscience_g9_signed.js
@@ -81242,7 +81473,8 @@ var SKILLS34 = {
     "mis": [
       "M_PL_NOT_ALIVE",
       "M_PL_NO_WASTE",
-      "M_PL_NO_RESPOND"
+      "M_PL_NO_RESPOND",
+      "M_PL_SEED_DEAD"
     ]
   },
   "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS": {
@@ -81258,7 +81490,8 @@ var SKILLS34 = {
     "mis": [
       "M_PP_LEAVES_ABSORB",
       "M_PP_STEM_ONLY_HOLDS",
-      "M_PP_LEAVES_SHADE_ONLY"
+      "M_PP_LEAVES_SHADE_ONLY",
+      "M_PP_FOOD_FROM_SOIL"
     ]
   },
   "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS": {
@@ -81272,7 +81505,8 @@ var SKILLS34 = {
     "mis": [
       "M_AN_REPRODUCE_BIRTH_ONLY",
       "M_AN_STILL_NOT_ALIVE",
-      "M_AN_INSECT_NOT_ANIMAL"
+      "M_AN_INSECT_NOT_ANIMAL",
+      "M_AN_PLANTS_ARE_ANIMALS_MOVE"
     ]
   },
   "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT": {
@@ -81288,7 +81522,8 @@ var SKILLS34 = {
     "mis": [
       "M_VS_NO_LEGS_INVERT",
       "M_VS_LEGS_VERTEBRATE",
-      "M_VS_SHELL_IS_BONE"
+      "M_VS_SHELL_IS_BONE",
+      "M_VS_BIRD_NOT_VERTEBRATE"
     ]
   },
   "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE": {
@@ -81299,12 +81534,14 @@ var SKILLS34 = {
       "SCIE.G4.LIVING.ANIMALS.b"
     ],
     "pre": [
-      "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT"
+      "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+      "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS"
     ],
     "mis": [
       "M_VR_SMALL_INVERT",
       "M_VR_WINGS_OR_LEGS_RULE",
-      "M_VR_WATER_RULE"
+      "M_VR_WATER_RULE",
+      "M_VR_HARD_BODY_RULE"
     ]
   },
   "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS": {
@@ -81318,7 +81555,8 @@ var SKILLS34 = {
     "mis": [
       "M_DP_WINDPIPE",
       "M_DP_STOMACH_ALL",
-      "M_DP_LARGE_INTESTINE_FOOD"
+      "M_DP_LARGE_INTESTINE_FOOD",
+      "M_DP_FOOD_TO_LEGS"
     ]
   },
   "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER": {
@@ -81334,7 +81572,8 @@ var SKILLS34 = {
     "mis": [
       "M_DO_LARGE_BEFORE_SMALL",
       "M_DO_SMALL_IS_SHORT",
-      "M_DO_STOMACH_FIRST"
+      "M_DO_STOMACH_FIRST",
+      "M_DO_ANUS_BEFORE_LARGE"
     ]
   },
   "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH": {
@@ -81350,7 +81589,8 @@ var SKILLS34 = {
     "mis": [
       "M_DH_ONLY_WASH_FOOD",
       "M_DH_SODA_FOR_WATER",
-      "M_DH_UNBOILED_WATER"
+      "M_DH_UNBOILED_WATER",
+      "M_DH_FIBRE_NOT_NEEDED"
     ]
   },
   "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT": {
@@ -81364,7 +81604,8 @@ var SKILLS34 = {
     "mis": [
       "M_SS_POWDER_LIQUID",
       "M_SS_AIR_NOTHING",
-      "M_SS_SOFT_NOT_SOLID"
+      "M_SS_SOFT_NOT_SOLID",
+      "M_SS_STEAM_IS_SMOKE"
     ]
   },
   "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES": {
@@ -81380,7 +81621,8 @@ var SKILLS34 = {
     "mis": [
       "M_SP_LIQUID_OWN_SHAPE",
       "M_SP_GAS_WEIGHTLESS",
-      "M_SP_VOLUME_CHANGES"
+      "M_SP_VOLUME_CHANGES",
+      "M_SP_SOLID_CANNOT_CHANGE"
     ]
   },
   "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY": {
@@ -81394,7 +81636,8 @@ var SKILLS34 = {
     "mis": [
       "M_WC_PLASTIC_ROTS",
       "M_WC_RUST_IS_ROT",
-      "M_WC_BURY_DISAPPEARS"
+      "M_WC_BURY_DISAPPEARS",
+      "M_WC_PAPER_NEVER_ROTS"
     ]
   },
   "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS": {
@@ -81410,7 +81653,8 @@ var SKILLS34 = {
     "mis": [
       "M_WD_POLYTHENE_HARMLESS",
       "M_WD_BURNING_SAFE",
-      "M_WD_ONLY_SMELL"
+      "M_WD_ONLY_SMELL",
+      "M_WD_FAR_AWAY_NO_HARM"
     ]
   },
   "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE": {
@@ -81427,7 +81671,8 @@ var SKILLS34 = {
     "mis": [
       "M_WM_BURN_ALL",
       "M_WM_DUMP_RIVER",
-      "M_WM_COMPOST_PLASTIC"
+      "M_WM_COMPOST_PLASTIC",
+      "M_WM_REUSE_DIRTY"
     ]
   },
   "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING": {
@@ -81441,7 +81686,8 @@ var SKILLS34 = {
     "mis": [
       "M_CM_STORE_ALL",
       "M_CM_WATER_NEVER_ENDS",
-      "M_CM_ONLY_CLEAN_DRINKING"
+      "M_CM_ONLY_CLEAN_DRINKING",
+      "M_CM_ONLY_WHEN_SHORT"
     ]
   },
   "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS": {
@@ -81457,7 +81703,8 @@ var SKILLS34 = {
     "mis": [
       "M_CMT_TAP_RUNS",
       "M_CMT_HOSE_BETTER",
-      "M_CMT_NO_RAINWATER"
+      "M_CMT_NO_RAINWATER",
+      "M_CMT_REUSE_DIRTY_DRINK"
     ]
   },
   "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE": {
@@ -81473,7 +81720,8 @@ var SKILLS34 = {
     "mis": [
       "M_CI_ONLY_BILL",
       "M_CI_ONLY_PEOPLE",
-      "M_CI_RAIN_ENOUGH"
+      "M_CI_RAIN_ENOUGH",
+      "M_CI_TAP_WATER_ENDLESS"
     ]
   },
   "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES": {
@@ -81487,7 +81735,8 @@ var SKILLS34 = {
     "mis": [
       "M_FT_PUSH_PULL_MIX",
       "M_FT_MAGNET_ALL",
-      "M_FT_GRAVITY_ONLY_FALLING"
+      "M_FT_GRAVITY_ONLY_FALLING",
+      "M_FT_FORCE_IS_LIVING"
     ]
   },
   "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS": {
@@ -81503,7 +81752,8 @@ var SKILLS34 = {
     "mis": [
       "M_FE_ONLY_START",
       "M_FE_SHAPE_NOT_EFFECT",
-      "M_FE_MOTION_NEEDS_FORCE"
+      "M_FE_MOTION_NEEDS_FORCE",
+      "M_FE_STOPPED_NO_FORCE"
     ]
   },
   "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES": {
@@ -81520,7 +81770,8 @@ var SKILLS34 = {
     "mis": [
       "M_FU_FRICTION_BAD_ONLY",
       "M_FU_GRAVITY_ONLY_PROBLEM",
-      "M_FU_NOT_EVERYDAY"
+      "M_FU_NOT_EVERYDAY",
+      "M_FU_MORE_FORCE_ALWAYS_BETTER"
     ]
   },
   "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES": {
@@ -81534,7 +81785,8 @@ var SKILLS34 = {
     "mis": [
       "M_LS_MOON_SOURCE",
       "M_LS_SHINY_SOURCE",
-      "M_LS_NATURAL_ONLY_SKY"
+      "M_LS_NATURAL_ONLY_SKY",
+      "M_LS_ARTIFICIAL_NATURAL_MIX"
     ]
   },
   "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING": {
@@ -81550,7 +81802,8 @@ var SKILLS34 = {
     "mis": [
       "M_HL_WINDOW_ONLY_AIR",
       "M_HL_DARK_WALLS",
-      "M_HL_CANDLE_LEFT"
+      "M_HL_CANDLE_LEFT",
+      "M_HL_MORE_BULBS_ONLY"
     ]
   },
   "SCIE.G4.FORCE_.LIGHT.LIGHT_USES": {
@@ -81566,7 +81819,8 @@ var SKILLS34 = {
     "mis": [
       "M_LU_EYES_SEND",
       "M_LU_PLANT_SOIL_FOOD",
-      "M_LU_ONLY_SEE"
+      "M_LU_ONLY_SEE",
+      "M_LU_DARK_SEE_A_LITTLE"
     ]
   },
   "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES": {
@@ -81580,7 +81834,8 @@ var SKILLS34 = {
     "mis": [
       "M_HS_SUN_ONLY",
       "M_HS_HOT_OBJECT_SOURCE",
-      "M_HS_RUBBING_NOT_HEAT"
+      "M_HS_RUBBING_NOT_HEAT",
+      "M_HS_COLD_HAS_COLDNESS"
     ]
   },
   "SCIE.G4.FORCE_.HEAT.HEAT_USES": {
@@ -81596,7 +81851,8 @@ var SKILLS34 = {
     "mis": [
       "M_HU_BOIL_NOT_SAFE",
       "M_HU_DRY_IN_SHADE",
-      "M_HU_ONLY_COOKING"
+      "M_HU_ONLY_COOKING",
+      "M_HU_HEAT_ONLY_FIRE"
     ]
   },
   "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY": {
@@ -81612,7 +81868,8 @@ var SKILLS34 = {
     "mis": [
       "M_SF_BUTTER_ON_BURN",
       "M_SF_REFILL_LIT",
-      "M_SF_WET_CLOTH"
+      "M_SF_WET_CLOTH",
+      "M_SF_WATER_ON_OIL_FIRE"
     ]
   }
 };
@@ -81623,6 +81880,8 @@ var MIS_FEEDBACK33 = {
   "M_PP_LEAVES_ABSORB": "The roots take in water and mineral salts from the soil. The leaves make food using sunlight.",
   "M_PP_STEM_ONLY_HOLDS": "The stem holds the plant up and also carries water and food to the other parts.",
   "M_PP_LEAVES_SHADE_ONLY": "Leaves are the kitchen of the plant. They make food using sunlight.",
+  "M_PL_SEED_DEAD": "A dry seed is resting, not dead. Give it water and warmth and it grows.",
+  "M_PP_FOOD_FROM_SOIL": "Plants make their own food in their leaves. Roots take in water and mineral salts, not food.",
   "M_AN_REPRODUCE_BIRTH_ONLY": "Reproducing is making new animals. Some give birth to live young. Birds, fish, frogs and snakes lay eggs.",
   "M_AN_STILL_NOT_ALIVE": "An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.",
   "M_AN_INSECT_NOT_ANIMAL": "Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.",
@@ -81632,6 +81891,9 @@ var MIS_FEEDBACK33 = {
   "M_VR_SMALL_INVERT": "Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.",
   "M_VR_WINGS_OR_LEGS_RULE": "The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.",
   "M_VR_WATER_RULE": "Where an animal lives does not decide it. A crab lives in water but has no backbone, so it is an invertebrate.",
+  "M_AN_PLANTS_ARE_ANIMALS_MOVE": "Moving is only one sign. A living thing also feeds, breathes, grows and reproduces.",
+  "M_VS_BIRD_NOT_VERTEBRATE": "Birds have a backbone, so they are vertebrates, light or not.",
+  "M_VR_HARD_BODY_RULE": "Soft skin can cover a backbone. Ask what is inside, not how it feels.",
   "M_DP_WINDPIPE": "The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.",
   "M_DP_STOMACH_ALL": "The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.",
   "M_DP_LARGE_INTESTINE_FOOD": "The large intestine takes in water from the leftover food. What is left is waste that leaves through the anus.",
@@ -81641,12 +81903,17 @@ var MIS_FEEDBACK33 = {
   "M_DH_ONLY_WASH_FOOD": "Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.",
   "M_DH_SODA_FOR_WATER": "Clean water keeps the digestive system working. Soda and sweets are not a replacement for water or a balanced meal.",
   "M_DH_UNBOILED_WATER": "Clear water can still hold germs. Boil or treat water before drinking.",
+  "M_DP_FOOD_TO_LEGS": "Food travels in one long tube: mouth, food pipe, stomach, small and large intestine.",
+  "M_DO_ANUS_BEFORE_LARGE": "After the small intestine comes the large intestine, then the anus.",
+  "M_DH_FIBRE_NOT_NEEDED": "Vegetables and fruit give roughage, which helps food and waste move through the gut.",
   "M_SS_POWDER_LIQUID": "Sand pours, but each grain is a small solid with its own shape. Sand is a solid.",
   "M_SS_AIR_NOTHING": "Air is a gas. A gas is matter. It takes up room even if we cannot see it.",
   "M_SS_SOFT_NOT_SOLID": "A sponge is soft but it keeps its own shape, so it is a solid.",
   "M_SP_LIQUID_OWN_SHAPE": "A liquid takes the shape of its container. It has no shape of its own.",
   "M_SP_GAS_WEIGHTLESS": "Air takes up room and has weight. A pumped football weighs more than a flat one.",
   "M_SP_VOLUME_CHANGES": "The amount stays the same. Only the shape changes. One litre is still one litre.",
+  "M_SS_STEAM_IS_SMOKE": "The cloud above a kettle is water. Hot water turns into a gas called water vapour.",
+  "M_SP_SOLID_CANNOT_CHANGE": "A solid keeps its own shape unless a force changes it. It does not flow like a liquid.",
   "M_WC_PLASTIC_ROTS": "A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.",
   "M_WC_RUST_IS_ROT": "A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.",
   "M_WC_BURY_DISAPPEARS": "Glass does not rot. Buried glass stays for ages, so it is non-decomposable.",
@@ -81656,6 +81923,9 @@ var MIS_FEEDBACK33 = {
   "M_WM_BURN_ALL": "Plastic bottles are better recycled or reused. Burning makes smoke that pollutes the air.",
   "M_WM_DUMP_RIVER": "Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.",
   "M_WM_COMPOST_PLASTIC": "Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.",
+  "M_WC_PAPER_NEVER_ROTS": 'Paper comes from trees, so it rots. Ask "will it rot?" not "was it made in a factory?"',
+  "M_WD_FAR_AWAY_NO_HARM": "Waste does not stay where it is thrown. Wind and rain carry it to animals, rivers and farms.",
+  "M_WM_REUSE_DIRTY": "Reuse only safe, clean containers. A tin that held poison must never hold food or water.",
   "M_CM_STORE_ALL": "To conserve is to use wisely and not waste, so that there is enough for later.",
   "M_CM_WATER_NEVER_ENDS": "Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.",
   "M_CM_ONLY_CLEAN_DRINKING": "Conserving means not wasting water. Closing a tap or reusing water saves it.",
@@ -81665,6 +81935,9 @@ var MIS_FEEDBACK33 = {
   "M_CI_ONLY_BILL": "We save water so there is enough for everyone now and later, and not only to save money.",
   "M_CI_ONLY_PEOPLE": "People, animals and plants all need water to live.",
   "M_CI_RAIN_ENOUGH": "In a long dry season rivers and wells can dry up, so it is important to save water before it happens.",
+  "M_CM_ONLY_WHEN_SHORT": "Conserving water means using it carefully all the time, so there is enough later.",
+  "M_CMT_REUSE_DIRTY_DRINK": "Used water can water plants or clean floors. Drinking and cooking need clean water.",
+  "M_CI_TAP_WATER_ENDLESS": "Taps bring water from rivers, dams or boreholes. These can run low, so we save water.",
   "M_FT_PUSH_PULL_MIX": "Moving something towards you is a pull. Moving something away from you is a push.",
   "M_FT_MAGNET_ALL": "A magnet picks up only iron and steel things, not all metals.",
   "M_FT_GRAVITY_ONLY_FALLING": "Gravity pulls down on everything all the time, even things at rest.",
@@ -81674,6 +81947,9 @@ var MIS_FEEDBACK33 = {
   "M_FU_FRICTION_BAD_ONLY": "Friction is useful in brakes, in walking and in holding things. It is a force that slows things.",
   "M_FU_GRAVITY_ONLY_PROBLEM": "Gravity makes rain fall and keeps us and things on the ground.",
   "M_FU_NOT_EVERYDAY": "A push or a pull is a force. Even writing and walking use a force.",
+  "M_FT_FORCE_IS_LIVING": "Non-living things can push and pull too. A magnet pulls iron and the Earth pulls everything down.",
+  "M_FE_STOPPED_NO_FORCE": "A ball stops because a force (friction) acts on it. Less friction, longer roll.",
+  "M_FU_MORE_FORCE_ALWAYS_BETTER": "Each task needs the right amount of force. Too much can break things.",
   "M_LS_MOON_SOURCE": "The Moon only reflects light from the Sun. The Sun gives out its own light.",
   "M_LS_SHINY_SOURCE": "A shiny roof only reflects light. A burning candle makes its own light.",
   "M_LS_NATURAL_ONLY_SKY": "Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.",
@@ -81683,6 +81959,9 @@ var MIS_FEEDBACK33 = {
   "M_LU_EYES_SEND": "We see because light bounces off things into our eyes. In the dark, with no light, we cannot see.",
   "M_LU_PLANT_SOIL_FOOD": "Plants use light to make their food in the leaves.",
   "M_LU_ONLY_SEE": "Light is used to see, and also for signals, for plants to make food and for solar energy.",
+  "M_LS_ARTIFICIAL_NATURAL_MIX": "Natural sources (Sun, stars, lightning, fireflies) are not made by people. Candles, lamps and bulbs are artificial.",
+  "M_HL_MORE_BULBS_ONLY": "In the day, windows, clear roof sheets and light walls bring sunlight into a house.",
+  "M_LU_DARK_SEE_A_LITTLE": "We see things only when light from them enters our eyes. No light, nothing seen.",
   "M_HS_SUN_ONLY": "The Sun is a source of heat, and so are fire, electricity and cooking gas.",
   "M_HS_HOT_OBJECT_SOURCE": "A hot stone was warmed by the Sun. The Sun is the source.",
   "M_HS_RUBBING_NOT_HEAT": "Rubbing makes friction, and friction makes heat.",
@@ -81691,7 +81970,10 @@ var MIS_FEEDBACK33 = {
   "M_HU_ONLY_COOKING": "Heat is used for cooking and also for drying, warming, ironing and boiling water.",
   "M_SF_BUTTER_ON_BURN": "Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.",
   "M_SF_REFILL_LIT": "Put out the flame, let the stove cool, and then refill it.",
-  "M_SF_WET_CLOTH": "Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn."
+  "M_SF_WET_CLOTH": "Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn.",
+  "M_HS_COLD_HAS_COLDNESS": "Cold is less heat. Your hand feels cold because heat leaves it.",
+  "M_HU_HEAT_ONLY_FIRE": "The Sun gives heat we use for drying crops, clothes and warming water.",
+  "M_SF_WATER_ON_OIL_FIRE": "Never throw water on burning oil. Cover the pan to cut off the air, and call an adult."
 };
 
 // src/ai-tutor/content/families/science_g4_signed.js
@@ -82702,7 +82984,8 @@ var SKILLS35 = {
     "mis": [
       "M_PN_PETAL_SEPAL",
       "M_PN_STAMEN_PISTIL",
-      "M_PN_STIGMA_ANTHER"
+      "M_PN_STIGMA_ANTHER",
+      "M_PN_OVARY_IS_FRUIT"
     ]
   },
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS": {
@@ -82718,7 +83001,8 @@ var SKILLS35 = {
     "mis": [
       "M_PF_PETAL_SEPAL_JOBS",
       "M_PF_POLLEN_IS_SEED",
-      "M_PF_OVARY_MAKES_POLLEN"
+      "M_PF_OVARY_MAKES_POLLEN",
+      "M_PF_NECTAR_FOR_PLANT"
     ]
   },
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED": {
@@ -82729,12 +83013,14 @@ var SKILLS35 = {
       "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b"
     ],
     "pre": [
-      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS"
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES"
     ],
     "mis": [
       "M_FS_FRUIT_NOT_FROM_FLOWER",
       "M_FS_POLLINATION_DISPERSAL",
-      "M_FS_BEES_NOT_NEEDED"
+      "M_FS_BEES_NOT_NEEDED",
+      "M_FS_PETALS_BECOME_FRUIT"
     ]
   },
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS": {
@@ -82745,12 +83031,14 @@ var SKILLS35 = {
       "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c"
     ],
     "pre": [
-      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED"
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT"
     ],
     "mis": [
       "M_IM_ONLY_DECORATION",
       "M_IM_INSECTS_HARM",
-      "M_IM_FOOD_NOT_FROM_FLOWERS"
+      "M_IM_FOOD_NOT_FROM_FLOWERS",
+      "M_IM_NO_FLOWER_NO_SEEDS_OK"
     ]
   },
   "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS": {
@@ -82764,7 +83052,8 @@ var SKILLS35 = {
     "mis": [
       "M_VC_SIZE_DECIDES",
       "M_VC_NEEDS_LEGS",
-      "M_VC_SHELL_IS_BACKBONE"
+      "M_VC_SHELL_IS_BACKBONE",
+      "M_VC_ALL_WARM"
     ]
   },
   "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS": {
@@ -82800,7 +83089,9 @@ var SKILLS35 = {
     "mis": [
       "M_VF_SCALES_FISH_ONLY",
       "M_VF_WINGS_MEAN_BIRD",
-      "M_VF_AMPHIBIAN_WATER_ONLY"
+      "M_VF_AMPHIBIAN_WATER_ONLY",
+      "M_VF_FEATHERS_ON_BATS",
+      "M_VF_ALL_MAMMALS_LAND"
     ]
   },
   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS": {
@@ -82814,7 +83105,8 @@ var SKILLS35 = {
     "mis": [
       "M_BP_TRACHEA_FOOD",
       "M_BP_DIAPHRAGM_PLACE",
-      "M_BP_LUNGS_LOCATION"
+      "M_BP_LUNGS_LOCATION",
+      "M_BP_NOSE_MOUTH_ONLY"
     ]
   },
   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS": {
@@ -82842,11 +83134,14 @@ var SKILLS35 = {
       "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b"
     ],
     "pre": [
-      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS"
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS"
     ],
     "mis": [
       "M_BI_RIBS_IN",
-      "M_BI_AIR_PUSHES_CHEST"
+      "M_BI_AIR_PUSHES_CHEST",
+      "M_BI_DIAPHRAGM_UP_IN",
+      "M_BI_BREATHE_OUT_EMPTY"
     ]
   },
   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS": {
@@ -82857,12 +83152,14 @@ var SKILLS35 = {
       "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c"
     ],
     "pre": [
-      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS"
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS"
     ],
     "mis": [
       "M_BS_ASTHMA_CATCHING",
       "M_BS_ALLERGY_IS_INFECTION",
-      "M_BS_ALL_SAME"
+      "M_BS_ALL_SAME",
+      "M_BS_LONG_COUGH_IGNORED"
     ]
   },
   "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION": {
@@ -82893,7 +83190,8 @@ var SKILLS35 = {
     "mis": [
       "M_MM_CANNOT_BE_UNMIXED",
       "M_MM_NATURAL_NOT_MIXTURE",
-      "M_MM_EQUAL_PARTS"
+      "M_MM_EQUAL_PARTS",
+      "M_MM_DISSOLVED_IS_NEW"
     ]
   },
   "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS": {
@@ -82909,7 +83207,8 @@ var SKILLS35 = {
     "mis": [
       "M_MH_DISSOLVED_GONE",
       "M_MH_CLEAR_IS_PURE",
-      "M_MH_STIRRED_IS_HOMO"
+      "M_MH_STIRRED_IS_HOMO",
+      "M_MH_TWO_LIQUIDS_ALWAYS_HOMO"
     ]
   },
   "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES": {
@@ -82924,7 +83223,9 @@ var SKILLS35 = {
     ],
     "mis": [
       "M_MT_LOOKS_LIQUID",
-      "M_MT_THICK_IS_SOLID"
+      "M_MT_THICK_IS_SOLID",
+      "M_MT_GAS_NOT_PART",
+      "M_MT_NAME_BY_LOOK"
     ]
   },
   "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE": {
@@ -82940,7 +83241,8 @@ var SKILLS35 = {
     "mis": [
       "M_MS_FILTER_FOR_ALL",
       "M_MS_MAGNET_ANY_METAL",
-      "M_MS_FUNNEL_SOLIDS"
+      "M_MS_FUNNEL_SOLIDS",
+      "M_MS_EVAPORATE_SAND"
     ]
   },
   "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE": {
@@ -82951,12 +83253,14 @@ var SKILLS35 = {
       "SCIE.G5.MATTER.MIXTURES.b"
     ],
     "pre": [
-      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE"
+      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+      "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS"
     ],
     "mis": [
       "M_MP_FILTER_REMOVES_DISSOLVED",
       "M_MP_WINNOW_REVERSED",
-      "M_MP_SIEVE_REVERSED"
+      "M_MP_SIEVE_REVERSED",
+      "M_MP_MAGNET_PULLS_SAND"
     ]
   },
   "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES": {
@@ -82967,11 +83271,14 @@ var SKILLS35 = {
       "SCIE.G5.MATTER.MIXTURES.c"
     ],
     "pre": [
-      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE"
+      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+      "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE"
     ],
     "mis": [
       "M_MU_ONLY_LAB",
-      "M_MU_FILTER_IS_SAFE"
+      "M_MU_FILTER_IS_SAFE",
+      "M_MU_ONLY_ONE_METHOD_FARM",
+      "M_MU_TEA_STRAINER_FILTER"
     ]
   },
   "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY": {
@@ -82985,7 +83292,8 @@ var SKILLS35 = {
     "mis": [
       "M_WP_ONLY_VISIBLE",
       "M_WP_ONLY_FACTORIES",
-      "M_WP_HELPFUL_THINGS_SAFE"
+      "M_WP_HELPFUL_THINGS_SAFE",
+      "M_WP_NATURAL_NEVER_POLLUTES"
     ]
   },
   "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS": {
@@ -83001,7 +83309,8 @@ var SKILLS35 = {
     "mis": [
       "M_WE_ONLY_PEOPLE",
       "M_WE_UPSTREAM_ONLY",
-      "M_WE_BAD_TASTE_ONLY"
+      "M_WE_BAD_TASTE_ONLY",
+      "M_WE_ILLNESS_INSTANT"
     ]
   },
   "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION": {
@@ -83017,7 +83326,8 @@ var SKILLS35 = {
     "mis": [
       "M_WR_RIVER_WASHES_AWAY",
       "M_WR_LATRINE_NEAR_WELL",
-      "M_WR_WASH_IN_RIVER"
+      "M_WR_WASH_IN_RIVER",
+      "M_WR_BURY_CHEMICALS_SAFE"
     ]
   },
   "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE": {
@@ -83049,7 +83359,8 @@ var SKILLS35 = {
     "mis": [
       "M_FA_HEAVY_SINKS",
       "M_FA_MATERIAL_ALWAYS",
-      "M_FA_DEEP_WATER"
+      "M_FA_DEEP_WATER",
+      "M_FA_HALF_SUNK_SINKS"
     ]
   },
   "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS": {
@@ -83081,7 +83392,9 @@ var SKILLS35 = {
     ],
     "mis": [
       "M_FU_STEEL_LIGHT",
-      "M_FU_FLOAT_NO_WEIGHT"
+      "M_FU_FLOAT_NO_WEIGHT",
+      "M_FU_LIFE_JACKET_HEAVY",
+      "M_FU_FISHERMEN_NO_FLOATS"
     ]
   },
   "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES": {
@@ -83095,7 +83408,8 @@ var SKILLS35 = {
     "mis": [
       "M_SS_NO_VIBRATION",
       "M_SS_AIR_SILENT",
-      "M_SS_HIT_ONLY"
+      "M_SS_HIT_ONLY",
+      "M_SS_STOP_VIBRATION_SOUND_GOES_ON"
     ]
   },
   "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL": {
@@ -83123,12 +83437,14 @@ var SKILLS35 = {
       "SCIE.G5.FORCE_.SOUND_ENERGY.c"
     ],
     "pre": [
-      "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES"
+      "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+      "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL"
     ],
     "mis": [
       "M_SL_ONLY_EARS",
       "M_SL_GETS_USED",
-      "M_SL_MUSIC_SAFE"
+      "M_SL_MUSIC_SAFE",
+      "M_SL_LOUD_ONLY_ANNOYING"
     ]
   },
   "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES": {
@@ -83159,7 +83475,8 @@ var SKILLS35 = {
     "mis": [
       "M_HC_METAL_COLDER",
       "M_HC_WOOL_MAKES_HEAT",
-      "M_HC_CONDUCTOR_KEEPS_HEAT"
+      "M_HC_CONDUCTOR_KEEPS_HEAT",
+      "M_HC_INSULATOR_STOPS_COLD_ONLY"
     ]
   },
   "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES": {
@@ -83176,7 +83493,8 @@ var SKILLS35 = {
     "mis": [
       "M_HU_COLOUR_NO_EFFECT",
       "M_HU_VENT_LOW",
-      "M_HU_COOKING_ONLY"
+      "M_HU_COOKING_ONLY",
+      "M_HU_BLACK_POT_SLOW"
     ]
   },
   "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY": {
@@ -83192,7 +83510,8 @@ var SKILLS35 = {
     "mis": [
       "M_HS_WET_CLOTH",
       "M_HS_OFF_FIRE_COOL",
-      "M_HS_METAL_HANDLE_OK"
+      "M_HS_METAL_HANDLE_OK",
+      "M_HS_HANDLE_TURNED_OUT"
     ]
   }
 };
@@ -83213,6 +83532,10 @@ var MIS_FEEDBACK34 = {
   "M_IM_ONLY_DECORATION": "Flowers are much more than decoration. They make the fruits and seeds we eat, they feed bees, and they bring in money for farmers.",
   "M_IM_INSECTS_HARM": "Bees carry pollen from flower to flower, so the plant can make seeds. They help, and they also give us honey.",
   "M_IM_FOOD_NOT_FROM_FLOWERS": "Fruits and grains grow from flowers. Mangoes, beans, tomatoes and maize all started as flowers.",
+  "M_PN_OVARY_IS_FRUIT": "In a fresh flower it is the ovary. After pollination it grows into the fruit.",
+  "M_PF_NECTAR_FOR_PLANT": "Nectar is a sweet drink for insects. While they drink, they carry pollen from flower to flower.",
+  "M_FS_PETALS_BECOME_FRUIT": "The petals dry and fall. The ovary grows into the fruit and the ovules become the seeds.",
+  "M_IM_NO_FLOWER_NO_SEEDS_OK": "Grain, beans and fruits come from flowers. No flowers, no seeds or fruits.",
   "M_VC_SIZE_DECIDES": "Size does not matter. A mouse is small but it has a backbone, so it is a vertebrate.",
   "M_VC_NEEDS_LEGS": "Legs are not needed. A snake has a long backbone, so it is a vertebrate.",
   "M_VC_SHELL_IS_BACKBONE": "A crab has a hard shell on the outside, but no backbone inside. It is an invertebrate.",
@@ -83224,6 +83547,9 @@ var MIS_FEEDBACK34 = {
   "M_VF_SCALES_FISH_ONLY": "Fish have wet scales and live in water. Reptiles such as snakes and crocodiles have dry scales and lay their eggs on land.",
   "M_VF_WINGS_MEAN_BIRD": "Bats and insects have wings, but only birds have feathers. Feathers are found in birds and no other group.",
   "M_VF_AMPHIBIAN_WATER_ONLY": "Amphibians live part of their life in water and part on land. Tadpoles live in water; adult frogs can live on land.",
+  "M_VC_ALL_WARM": "Mammals and birds keep a steady warm body. Fish, frogs and reptiles warm up and cool down with their surroundings.",
+  "M_VF_FEATHERS_ON_BATS": "Only birds have feathers. A bat has fur and wings of skin, so it is a mammal.",
+  "M_VF_ALL_MAMMALS_LAND": "Mammals feed their young on milk. A dolphin does, so it is a mammal, even in the sea.",
   "M_BP_TRACHEA_FOOD": "There are two pipes in the neck. The windpipe, or trachea, carries air to the lungs. The food pipe carries food to the stomach.",
   "M_BP_DIAPHRAGM_PLACE": "The diaphragm is a sheet of muscle under the lungs. It is the part that moves when you breathe.",
   "M_BP_LUNGS_LOCATION": "There are two lungs, high in the chest and protected by the ribs. The stomach is lower, in the belly.",
@@ -83240,6 +83566,10 @@ var MIS_FEEDBACK34 = {
   "M_BV_ANTIBIOTICS": "Antibiotics do not kill viruses, and a cold is caused by a virus. Rest and water help. Go to a clinic if the cough is bad or does not go away.",
   "M_BV_HANDS_NO_MATTER": "Hands pick up virus from surfaces and then touch the nose, eyes and mouth. Washing them helps to stop it.",
   "M_BV_SMOKE_HARMLESS": "Smoke irritates the nose and lungs. It can bring on coughs and asthma. A chimney or an open door lets it out.",
+  "M_BP_NOSE_MOUTH_ONLY": "Air goes from the nose down the windpipe into the two lungs in your chest.",
+  "M_BI_DIAPHRAGM_UP_IN": "Breathing in, the diaphragm moves down and the ribs move up and out, so the chest gets bigger.",
+  "M_BI_BREATHE_OUT_EMPTY": "Some air always stays in the lungs, even after a big breath out.",
+  "M_BS_LONG_COUGH_IGNORED": "A cough that lasts more than two weeks needs a check at a health centre.",
   "M_MM_CANNOT_BE_UNMIXED": "In a mixture each substance stays the same and can be separated again. Salty water dries and leaves the salt behind.",
   "M_MM_NATURAL_NOT_MIXTURE": "Mixtures can be natural. Air is a mixture of gases, and soil holds sand, clay and bits of plants.",
   "M_MM_EQUAL_PARTS": "The parts of a mixture can be in any amounts. One spoon of sand in a bucket of water is still a mixture.",
@@ -83256,6 +83586,14 @@ var MIS_FEEDBACK34 = {
   "M_MP_SIEVE_REVERSED": "The holes of a sieve let small pieces fall through. Pieces too big for the holes stay on top.",
   "M_MU_ONLY_LAB": "People separate mixtures every day: sieving flour, picking stones from beans, straining tea, winnowing grain.",
   "M_MU_FILTER_IS_SAFE": "Filtering takes out the bits you can see, but germs and dissolved things are still there. The water must also be boiled or treated.",
+  "M_MM_DISSOLVED_IS_NEW": "Dissolved sugar is still sugar. It is mixed with the tea and can be got back by drying.",
+  "M_MH_TWO_LIQUIDS_ALWAYS_HOMO": "Some liquids do not mix. Oil floats in a layer on water, so you can see two parts.",
+  "M_MT_GAS_NOT_PART": "Gases can be part of mixtures too. Soda has gas in a liquid; air is a mixture of gases.",
+  "M_MT_NAME_BY_LOOK": "Name a mixture by its parts: soil is solid and water is liquid, so it is solid-liquid.",
+  "M_MS_EVAPORATE_SAND": "If you need the water, filter or decant. Evaporation keeps the solid but loses the water.",
+  "M_MP_MAGNET_PULLS_SAND": "A magnet pulls iron and steel. Sand is not attracted, so it stays behind.",
+  "M_MU_ONLY_ONE_METHOD_FARM": "Farmers use winnowing for chaff and sieving for flour. Many separations are done at home.",
+  "M_MU_TEA_STRAINER_FILTER": "A tea strainer is a filter. It separates the solid leaves from the liquid tea.",
   "M_WP_ONLY_VISIBLE": "Germs and many chemicals cannot be seen. Clear water can still be polluted.",
   "M_WP_ONLY_FACTORIES": "Homes, shambas and schools pollute water too: soap, rubbish, dung, fertiliser and latrines near the water.",
   "M_WP_HELPFUL_THINGS_SAFE": "Useful things pollute water when they get into it in the wrong place. Fertiliser and soap washed into a river harm the living things there.",
@@ -83269,6 +83607,9 @@ var MIS_FEEDBACK34 = {
   "M_WT_BOIL_REMOVES_ALL": "Boiling kills germs. It does not take out chemicals, soap or oil.",
   "M_WT_SOLAR_MUDDY": "Sunlight must reach the germs. Muddy water blocks the light, so it must be settled and filtered first.",
   "M_WT_MORE_CHLORINE": "Use exactly the amount on the packet. Too much chlorine gives a bad taste and can make you ill.",
+  "M_WP_NATURAL_NEVER_POLLUTES": "Natural things like dung and soil can pollute water. Dung carries germs.",
+  "M_WE_ILLNESS_INSTANT": "Some illnesses from dirty water show days later. Feeling well today does not prove the water is safe.",
+  "M_WR_BURY_CHEMICALS_SAFE": "Rain washes chemicals from the soil into rivers. Keep chemicals away from water.",
   "M_FA_HEAVY_SINKS": "Weight alone does not decide. A heavy log floats and a small stone sinks. What matters is how heavy the object is for its size.",
   "M_FA_MATERIAL_ALWAYS": "The material alone does not decide. A metal ship floats because of its shape, and a piece of ebony wood sinks. Test each object.",
   "M_FA_DEEP_WATER": "The amount of water does not change the result. A stone that sinks in a bucket sinks in a lake.",
@@ -83278,6 +83619,9 @@ var MIS_FEEDBACK34 = {
   "M_FF_LOAD_NO_EFFECT": "Each added load makes the boat float lower. With too much load water comes over the side and it sinks.",
   "M_FU_STEEL_LIGHT": "Steel is heavier than water. A ship floats because it is shaped like a big hollow bowl that pushes aside a lot of water.",
   "M_FU_FLOAT_NO_WEIGHT": "A floating object still has weight. It floats because the water pushes it up.",
+  "M_FA_HALF_SUNK_SINKS": "An object floats if it stays at the surface, even if most of it is under water.",
+  "M_FU_LIFE_JACKET_HEAVY": "A life jacket is full of light material or air that floats, so it holds you up in water.",
+  "M_FU_FISHERMEN_NO_FLOATS": "Floats keep the top of a net up and weights pull the bottom down, so the net hangs open.",
   "M_SS_NO_VIBRATION": "Every sound is made by something vibrating. The drum skin moves quickly to and fro, and the rice on it jumps.",
   "M_SS_AIR_SILENT": "In a flute or whistle the air inside the pipe vibrates. The vibrating air makes the sound.",
   "M_SS_HIT_ONLY": "Sound can come from plucking, blowing, rubbing or banging. What matters is that something vibrates.",
@@ -83288,6 +83632,8 @@ var MIS_FEEDBACK34 = {
   "M_SL_ONLY_EARS": "Very loud sound can damage hearing for good. It can also cause headaches, stress and poor sleep.",
   "M_SL_GETS_USED": "Feeling used to a noise does not stop the damage. Loud noise can still harm hearing, so ear protection is needed.",
   "M_SL_MUSIC_SAFE": "It is the loudness, not the kind of sound, that harms. Very loud music can damage hearing as well.",
+  "M_SS_STOP_VIBRATION_SOUND_GOES_ON": "Sound comes from vibrations. Stop the vibration and the sound stops.",
+  "M_SL_LOUD_ONLY_ANNOYING": "Loud sound can damage hearing and cause headaches and stress. Keep away from very loud places.",
   "M_HM_HEAT_RISES": "Hot air rises, but heat is not limited to going up. In a solid, heat spreads along it from the hot end to the colder parts.",
   "M_HM_COLD_TRAVELS": "There is no flow of cold. Heat always moves from a warmer thing to a colder thing, so the hand loses heat to the drink.",
   "M_HM_SUN_NEEDS_AIR": "Radiation is heat that travels without anything to carry it. That is how the Sun's heat crosses empty space.",
@@ -83300,7 +83646,10 @@ var MIS_FEEDBACK34 = {
   "M_HU_COOKING_ONLY": "Heat moves everywhere: when we cook, dry clothes in the sun and keep tea hot in a flask.",
   "M_HS_WET_CLOTH": "A wet cloth conducts heat to your hand and makes steam, which burns. Use a thick dry cloth.",
   "M_HS_OFF_FIRE_COOL": "Metal can stay very hot for a long time even when there is no flame or steam. Do not touch it.",
-  "M_HS_METAL_HANDLE_OK": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle."
+  "M_HS_METAL_HANDLE_OK": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle.",
+  "M_HC_INSULATOR_STOPS_COLD_ONLY": "An insulator slows heat moving either way. A flask keeps hot things hot and cold things cold.",
+  "M_HU_BLACK_POT_SLOW": "Black surfaces take in more of the sun's heat. Shiny ones reflect it.",
+  "M_HS_HANDLE_TURNED_OUT": "Turn pan handles inwards so nobody knocks the hot pan over."
 };
 var SKILLS_SCI_G5 = SKILLS35;
 var SUBSTRANDS_SCI_G5 = SUBSTRANDS34;
@@ -84966,7 +85315,8 @@ var SKILLS36 = {
     "mis": [
       "M_FI_PLANT",
       "M_FI_MOULD_DIRT",
-      "M_FI_YEAST_NOT_LIVING"
+      "M_FI_YEAST_NOT_LIVING",
+      "M_FI_ALL_MUSHROOMS_ONE_KIND"
     ]
   },
   "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES": {
@@ -84982,7 +85332,8 @@ var SKILLS36 = {
     "mis": [
       "M_FF_GREEN_FOOD",
       "M_FF_ROOTS_LEAVES",
-      "M_FF_ALL_EDIBLE"
+      "M_FF_ALL_EDIBLE",
+      "M_FF_SPORES_SEEDS"
     ]
   },
   "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE": {
@@ -84998,7 +85349,8 @@ var SKILLS36 = {
     "mis": [
       "M_FM_YEAST_GAS",
       "M_FM_ALL_HARMFUL",
-      "M_FM_DECAY_USELESS"
+      "M_FM_DECAY_USELESS",
+      "M_FM_MEDICINE_NOT_FUNGI"
     ]
   },
   "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH": {
@@ -85014,7 +85366,8 @@ var SKILLS36 = {
     "mis": [
       "M_FG_DRY_BEST",
       "M_FG_SCRAPE_SAFE",
-      "M_FG_AIR_ONLY"
+      "M_FG_AIR_ONLY",
+      "M_FG_FRIDGE_KILLS"
     ]
   },
   "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY": {
@@ -85028,7 +85381,8 @@ var SKILLS36 = {
     "mis": [
       "M_II_SPIDER_INSECT",
       "M_II_WORM_NOT_ANIMAL_GROUP",
-      "M_II_CRAB_FISH"
+      "M_II_CRAB_FISH",
+      "M_II_MILLIPEDE_INSECT"
     ]
   },
   "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS": {
@@ -85044,7 +85398,8 @@ var SKILLS36 = {
     "mis": [
       "M_IC_LEG_COUNT",
       "M_IC_ALL_SMALL",
-      "M_IC_ALL_LEGS"
+      "M_IC_ALL_LEGS",
+      "M_IC_SNAIL_SHELL_BONE"
     ]
   },
   "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE": {
@@ -85060,7 +85415,8 @@ var SKILLS36 = {
     "mis": [
       "M_IM_ALL_PESTS",
       "M_IM_MOSQUITO_WRONG",
-      "M_IM_WORMS_HARM"
+      "M_IM_WORMS_HARM",
+      "M_IM_BEES_ONLY_HONEY"
     ]
   },
   "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING": {
@@ -85076,7 +85432,8 @@ var SKILLS36 = {
     "mis": [
       "M_IH_BARE_HANDS",
       "M_IH_CRUSH",
-      "M_IH_NO_WASH"
+      "M_IH_NO_WASH",
+      "M_IH_JAR_NO_AIR"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS": {
@@ -85090,7 +85447,8 @@ var SKILLS36 = {
     "mis": [
       "M_CP_LUNGS_IN",
       "M_CP_HEART_PRODUCES",
-      "M_CP_VESSEL_NAMES"
+      "M_CP_VESSEL_NAMES",
+      "M_CP_ONLY_HEART"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS": {
@@ -85106,7 +85464,8 @@ var SKILLS36 = {
     "mis": [
       "M_HP_POSITION",
       "M_HP_UPPER_PUMP",
-      "M_HP_ONE_ROOM"
+      "M_HP_ONE_ROOM",
+      "M_HP_HEART_SHAPE_LOVE"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS": {
@@ -85122,7 +85481,8 @@ var SKILLS36 = {
     "mis": [
       "M_CV_SWAP",
       "M_CV_ONE_WAY",
-      "M_CV_CAPILLARY_BIG"
+      "M_CV_CAPILLARY_BIG",
+      "M_CV_VEINS_BLUE_BLOOD"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS": {
@@ -85138,7 +85498,8 @@ var SKILLS36 = {
     "mis": [
       "M_BC_WHITE_OXYGEN",
       "M_BC_PLATELETS",
-      "M_BC_ALL_RED"
+      "M_BC_ALL_RED",
+      "M_BC_PLASMA_WATER_ONLY"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS": {
@@ -85154,7 +85515,8 @@ var SKILLS36 = {
     "mis": [
       "M_CC_CATCHING",
       "M_CC_ARTERY_SOFT",
-      "M_CC_BP_MEANING"
+      "M_CC_BP_MEANING",
+      "M_CC_HEART_ATTACK_ONLY_OLD"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION": {
@@ -85170,7 +85532,8 @@ var SKILLS36 = {
     "mis": [
       "M_CR_REST_ONLY",
       "M_CR_OLD_ONLY",
-      "M_CR_SALT_FAT"
+      "M_CR_SALT_FAT",
+      "M_CR_THIN_SAFE"
     ]
   },
   "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE": {
@@ -85186,7 +85549,8 @@ var SKILLS36 = {
     "mis": [
       "M_CR_WATER_SKIP",
       "M_CR_ONE_HABIT",
-      "M_CR_SMOKE_SAFE"
+      "M_CR_SMOKE_SAFE",
+      "M_CR_WEEKEND_EXERCISE"
     ]
   },
   "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES": {
@@ -85200,7 +85564,8 @@ var SKILLS36 = {
     "mis": [
       "M_SN_MELT_DISSOLVE",
       "M_SN_EVAP_BOIL",
-      "M_SN_CONDENSE_MIXUP"
+      "M_SN_CONDENSE_MIXUP",
+      "M_SN_SUBLIMATION_MELT"
     ]
   },
   "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT": {
@@ -85216,7 +85581,8 @@ var SKILLS36 = {
     "mis": [
       "M_SH_COLD_MELTS",
       "M_SH_FREEZE_HEAT",
-      "M_SH_STEAM_SMOKE"
+      "M_SH_STEAM_SMOKE",
+      "M_SH_BOILING_HOTTER"
     ]
   },
   "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS": {
@@ -85232,7 +85598,8 @@ var SKILLS36 = {
     "mis": [
       "M_SA_CLOTHES_SOAK",
       "M_SA_CLOUD_SMOKE",
-      "M_SA_SALT_SEA"
+      "M_SA_SALT_SEA",
+      "M_SA_PERFUME_GONE"
     ]
   },
   "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS": {
@@ -85246,7 +85613,8 @@ var SKILLS36 = {
     "mis": [
       "M_AC_MOSTLY_OXYGEN",
       "M_AC_ONE_GAS",
-      "M_AC_CANDLE_ALL"
+      "M_AC_CANDLE_ALL",
+      "M_AC_CO2_MOST"
     ]
   },
   "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES": {
@@ -85262,7 +85630,8 @@ var SKILLS36 = {
     "mis": [
       "M_AU_CO2_ONLY_OUT",
       "M_AU_OXYGEN_FUEL",
-      "M_AU_N_USELESS"
+      "M_AU_N_USELESS",
+      "M_AU_PLANTS_NEED_O2_ONLY"
     ]
   },
   "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS": {
@@ -85278,7 +85647,8 @@ var SKILLS36 = {
     "mis": [
       "M_AP_ONLY_FACTORY",
       "M_AP_ONLY_SMELL",
-      "M_AP_DUST_NOT"
+      "M_AP_DUST_NOT",
+      "M_AP_INDOOR_CLEAN"
     ]
   },
   "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS": {
@@ -85294,7 +85664,8 @@ var SKILLS36 = {
     "mis": [
       "M_AE_ONLY_NEAR",
       "M_AE_PLANTS_FINE",
-      "M_AE_WARM_GOOD"
+      "M_AE_WARM_GOOD",
+      "M_AE_SMOG_ONLY_TOWNS"
     ]
   },
   "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE": {
@@ -85310,7 +85681,8 @@ var SKILLS36 = {
     "mis": [
       "M_AR_BURN_RUBBISH",
       "M_AR_TALL_CHIMNEY",
-      "M_AR_TREES_NOT"
+      "M_AR_TREES_NOT",
+      "M_AR_MASK_FIXES"
     ]
   },
   "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS": {
@@ -85324,7 +85696,8 @@ var SKILLS36 = {
     "mis": [
       "M_LM_COLOUR_OPAQUE",
       "M_LM_TRANSLUCENT_TRANSPARENT",
-      "M_LM_GLASS_ALWAYS"
+      "M_LM_GLASS_ALWAYS",
+      "M_LM_THICKNESS_IGNORED"
     ]
   },
   "SCIE.G6.FORCE_.LIGHT.SHADOWS": {
@@ -85340,7 +85713,8 @@ var SKILLS36 = {
     "mis": [
       "M_SD_MADE_BY_OBJECT",
       "M_SD_SIDE",
-      "M_SD_SIZE"
+      "M_SD_SIZE",
+      "M_SD_SHADOW_COLOUR"
     ]
   },
   "SCIE.G6.FORCE_.LIGHT.ECLIPSES": {
@@ -85356,7 +85730,8 @@ var SKILLS36 = {
     "mis": [
       "M_EC_CLOUD",
       "M_EC_SWAP",
-      "M_EC_SAFE"
+      "M_EC_SAFE",
+      "M_EC_EVERY_MONTH"
     ]
   },
   "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE": {
@@ -85372,7 +85747,8 @@ var SKILLS36 = {
     "mis": [
       "M_MR_NOT_EQUAL",
       "M_MR_FROM_SURFACE",
-      "M_MR_ABSORB"
+      "M_MR_ABSORB",
+      "M_MR_NORMAL_ON_MIRROR"
     ]
   },
   "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE": {
@@ -85388,7 +85764,8 @@ var SKILLS36 = {
     "mis": [
       "M_MI_SIZE",
       "M_MI_DISTANCE",
-      "M_MI_UPSIDE"
+      "M_MI_UPSIDE",
+      "M_MI_REAL_BEHIND"
     ]
   },
   "SCIE.G6.FORCE_.LIGHT.RAINBOW": {
@@ -85404,7 +85781,8 @@ var SKILLS36 = {
     "mis": [
       "M_RB_PAINT",
       "M_RB_SUN_FRONT",
-      "M_RB_COLOUR_ORDER"
+      "M_RB_COLOUR_ORDER",
+      "M_RB_ONLY_RAIN"
     ]
   },
   "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY": {
@@ -85418,7 +85796,8 @@ var SKILLS36 = {
     "mis": [
       "M_LI_LADDER",
       "M_LI_ONLY_LONG",
-      "M_LI_MORE_ENERGY"
+      "M_LI_MORE_ENERGY",
+      "M_LI_HANDLE_ANY"
     ]
   },
   "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS": {
@@ -85434,7 +85813,8 @@ var SKILLS36 = {
     "mis": [
       "M_LP_LOAD_EFFORT",
       "M_LP_FULCRUM_HANDLE",
-      "M_LP_MOVES"
+      "M_LP_MOVES",
+      "M_LP_FULCRUM_ALWAYS_MIDDLE"
     ]
   },
   "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER": {
@@ -85451,7 +85831,8 @@ var SKILLS36 = {
     "mis": [
       "M_LE_FAR_FROM_LOAD",
       "M_LE_SHORT_ARM",
-      "M_LE_FREE_WORK"
+      "M_LE_FREE_WORK",
+      "M_LE_LONGER_HARDER"
     ]
   },
   "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS": {
@@ -85467,7 +85848,8 @@ var SKILLS36 = {
     "mis": [
       "M_LC_FIRST_ALWAYS",
       "M_LC_USE_SIZE",
-      "M_LC_THIRD_SECOND"
+      "M_LC_THIRD_SECOND",
+      "M_LC_SCISSORS_SECOND"
     ]
   },
   "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES": {
@@ -85483,7 +85865,8 @@ var SKILLS36 = {
     "mis": [
       "M_ST_PULLEY",
       "M_ST_FLAT_ROAD",
-      "M_ST_WEDGE"
+      "M_ST_WEDGE",
+      "M_ST_SCREW_NOT_SLOPE"
     ]
   },
   "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER": {
@@ -85499,7 +85882,8 @@ var SKILLS36 = {
     "mis": [
       "M_SE_STEEP_EASIER",
       "M_SE_LIGHTER",
-      "M_SE_SHORTER_WAY"
+      "M_SE_SHORTER_WAY",
+      "M_SE_SLOPE_LESS_WORK"
     ]
   }
 };
@@ -85516,6 +85900,10 @@ var MIS_FEEDBACK35 = {
   "M_FG_DRY_BEST": "Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.",
   "M_FG_SCRAPE_SAFE": "Mould spreads inside food as thin threads. Mouldy food should be thrown away, not scraped.",
   "M_FG_AIR_ONLY": "Mould grows from tiny spores in the air that land on damp food and grow when it is warm.",
+  "M_FI_ALL_MUSHROOMS_ONE_KIND": "Fungi include mushrooms, toadstools, puffballs, yeast and moulds.",
+  "M_FF_SPORES_SEEDS": "Fungi make spores, not seeds. Spores are tiny and have no stored food.",
+  "M_FM_MEDICINE_NOT_FUNGI": "Some medicines come from fungi. Penicillin comes from a mould.",
+  "M_FG_FRIDGE_KILLS": "Cold slows mould growth but does not kill it. Food still goes bad in time.",
   "M_II_SPIDER_INSECT": "A spider is not an insect. It has eight legs, while an insect has six.",
   "M_II_WORM_NOT_ANIMAL_GROUP": "A snail, a worm and a starfish have no backbone. They are all invertebrates.",
   "M_II_CRAB_FISH": "A crab, an octopus and a starfish have no backbone. They are sea invertebrates, not fish.",
@@ -85528,6 +85916,10 @@ var MIS_FEEDBACK35 = {
   "M_IH_BARE_HANDS": "Some small animals sting or bite. Use a jar or a spoon, or watch and do not touch.",
   "M_IH_CRUSH": "Handle animals gently and put them back where you found them. Every animal has a place in nature.",
   "M_IH_NO_WASH": "Always wash your hands with soap and water after handling animals, soil or waste.",
+  "M_II_MILLIPEDE_INSECT": "Insects have six legs and three body parts. A millipede has many legs and many parts.",
+  "M_IC_SNAIL_SHELL_BONE": "A snail's shell is outside its soft body. It has no backbone, so it is an invertebrate.",
+  "M_IM_BEES_ONLY_HONEY": "Bees carry pollen between flowers, so crops make more fruit. Honey is a second gift.",
+  "M_IH_JAR_NO_AIR": "Small animals need air and food. Study them for a short time, then put them back.",
   "M_CP_LUNGS_IN": "The circulatory system is the heart, the blood vessels and the blood. The stomach and lungs belong to other systems.",
   "M_CP_HEART_PRODUCES": "The heart pumps blood round the body. Blood is made in the bones, not in the heart.",
   "M_CP_VESSEL_NAMES": "The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.",
@@ -85549,6 +85941,13 @@ var MIS_FEEDBACK35 = {
   "M_CR_WATER_SKIP": "Plenty of clean water is part of a healthy routine. Soft drinks have a lot of sugar.",
   "M_CR_ONE_HABIT": "A healthy routine has several parts: water, activity, healthy meals and enough sleep.",
   "M_CR_SMOKE_SAFE": "Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.",
+  "M_CP_ONLY_HEART": "The circulatory system has three parts: the heart, the blood vessels and the blood.",
+  "M_HP_HEART_SHAPE_LOVE": "The heart is a muscle about the size of your fist, in your chest between the lungs.",
+  "M_CV_VEINS_BLUE_BLOOD": "All blood is red. Blood in veins is a darker red; it only looks blue through the skin.",
+  "M_BC_PLASMA_WATER_ONLY": "Plasma is the liquid part of blood. It carries digested food, waste and the blood cells.",
+  "M_CC_HEART_ATTACK_ONLY_OLD": "Chest pain spreading to the arm, sweating and breathlessness are warning signs. Get help at once.",
+  "M_CR_THIN_SAFE": "Anyone can get high blood pressure. Too much salt, smoking and little exercise raise it.",
+  "M_CR_WEEKEND_EXERCISE": "The heart stays healthy with some exercise every day, not one big effort now and then.",
   "M_SN_MELT_DISSOLVE": "Melting is a solid changing into a liquid when heated. Dissolving is a solid mixing into a liquid.",
   "M_SN_EVAP_BOIL": "Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.",
   "M_SN_CONDENSE_MIXUP": "Condensation is a gas turning into a liquid. The drops come from water vapour in the air.",
@@ -85558,6 +85957,9 @@ var MIS_FEEDBACK35 = {
   "M_SA_CLOTHES_SOAK": "The water in clothes changes into water vapour and goes into the air. This is evaporation.",
   "M_SA_CLOUD_SMOKE": "Clouds form when water vapour cools and condenses into tiny drops of water.",
   "M_SA_SALT_SEA": "In salt pans the sun makes the water evaporate. The salt stays behind.",
+  "M_SN_SUBLIMATION_MELT": "A solid turning straight into a gas, with no liquid, is sublimation. Melting makes a liquid.",
+  "M_SH_BOILING_HOTTER": "Boiling water stays at the same temperature. The extra heat changes it into steam.",
+  "M_SA_PERFUME_GONE": "Drying water does not vanish. It evaporates into the air as water vapour.",
   "M_AC_MOSTLY_OXYGEN": "Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.",
   "M_AC_ONE_GAS": "Air is a mixture of gases: nitrogen, oxygen, carbon dioxide and others.",
   "M_AC_CANDLE_ALL": "The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.",
@@ -85573,6 +85975,11 @@ var MIS_FEEDBACK35 = {
   "M_AR_BURN_RUBBISH": "Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.",
   "M_AR_TALL_CHIMNEY": "A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.",
   "M_AR_TREES_NOT": "Trees take in carbon dioxide and give out oxygen, and their leaves trap dust.",
+  "M_AC_CO2_MOST": "Nitrogen is most of the air. Oxygen is about one fifth. Carbon dioxide is a very small part.",
+  "M_AU_PLANTS_NEED_O2_ONLY": "Plants use carbon dioxide from the air to make their food in the leaves.",
+  "M_AP_INDOOR_CLEAN": "Smoke inside the house is air pollution too. Keep windows open and cook where smoke can escape.",
+  "M_AE_SMOG_ONLY_TOWNS": "Smoke and dust harm people in villages as well as towns.",
+  "M_AR_MASK_FIXES": "A mask protects one person. Stopping burning and using cleaner stoves reduces the pollution itself.",
   "M_LM_COLOUR_OPAQUE": "Colour does not decide. The test is how much light passes through: all (transparent), some (translucent) or none (opaque).",
   "M_LM_TRANSLUCENT_TRANSPARENT": "Transparent lets nearly all light through so you see clearly. Translucent lets some through so you see only a blur.",
   "M_LM_GLASS_ALWAYS": "The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.",
@@ -85591,6 +85998,12 @@ var MIS_FEEDBACK35 = {
   "M_RB_PAINT": "A rainbow is light spread into colours by drops of water. It is not a solid thing.",
   "M_RB_SUN_FRONT": "To see a rainbow, the Sun is behind you and the raindrops are in front.",
   "M_RB_COLOUR_ORDER": "The seven colours are red, orange, yellow, green, blue, indigo and violet, with red on the outside.",
+  "M_LM_THICKNESS_IGNORED": "Test the actual sheet. Thin paper lets some light through (translucent); a thick pile does not.",
+  "M_SD_SHADOW_COLOUR": "A shadow is where light is blocked, so it is dark whatever colour the object is.",
+  "M_EC_EVERY_MONTH": "The Sun, Moon and Earth line up exactly only now and then, so eclipses are rare.",
+  "M_MR_NORMAL_ON_MIRROR": "The normal stands at 90 degrees to the mirror. Angles are measured from it.",
+  "M_MI_REAL_BEHIND": "The image only seems to be behind the mirror. No light reaches there, so it cannot be caught on paper.",
+  "M_RB_ONLY_RAIN": "Any drops of water in sunlight can split light into colours, even from a hose.",
   "M_LI_LADDER": "A lever is a bar that turns about a fixed point. A ladder does not turn about a point.",
   "M_LI_ONLY_LONG": "A lever can be short or long. Scissors, tweezers and a bottle opener are levers.",
   "M_LI_MORE_ENERGY": "A lever makes work easier by changing the effort needed. It does not make energy.",
@@ -85603,12 +86016,18 @@ var MIS_FEEDBACK35 = {
   "M_LC_FIRST_ALWAYS": "A wheelbarrow has the load in the middle. It is a second class lever.",
   "M_LC_USE_SIZE": "First class: fulcrum in the middle. Second: load in the middle. Third: effort in the middle.",
   "M_LC_THIRD_SECOND": "In tweezers the effort is in the middle, so they are third class levers.",
+  "M_LI_HANDLE_ANY": "A lever is a rigid bar that turns on a fixed point. A handle alone does not make a lever.",
+  "M_LP_FULCRUM_ALWAYS_MIDDLE": "The fulcrum is the point the lever turns on. In a wheelbarrow it is the wheel, at one end.",
+  "M_LE_LONGER_HARDER": "The further the effort is from the fulcrum, the less effort is needed.",
+  "M_LC_SCISSORS_SECOND": "Scissors have the fulcrum in the middle, so they are first-class levers.",
   "M_ST_PULLEY": "A slope is a tilted flat surface. A ramp is a slope; a see-saw is a lever.",
   "M_ST_FLAT_ROAD": "A slope must be tilted. A flat road is not a slope.",
   "M_ST_WEDGE": "An axe or a knife is a wedge, which is two slopes joined together.",
   "M_SE_STEEP_EASIER": "A longer and gentler slope needs less effort, but it is longer to travel.",
   "M_SE_LIGHTER": "The weight does not change. The slope only reduces the effort.",
-  "M_SE_SHORTER_WAY": "A ramp is longer than the straight lift. We trade a longer path for less effort."
+  "M_SE_SHORTER_WAY": "A ramp is longer than the straight lift. We trade a longer path for less effort.",
+  "M_ST_SCREW_NOT_SLOPE": "A screw thread is a slope wound round a rod, like a winding road up a hill.",
+  "M_SE_SLOPE_LESS_WORK": "A slope lets you use less effort, but you push further. The work is not reduced."
 };
 
 // src/ai-tutor/content/families/science_g6_signed.js
