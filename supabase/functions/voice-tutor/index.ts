@@ -120297,12 +120297,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_UNIT_CONVERSIONS",
     "pre": [
-      "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT"
+      "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT",
+      "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME"
     ],
     "mis": [
       "M_UNIT_TOO_BIG",
       "M_RULER_COUNT_FROM_ONE",
-      "M_CM_MARKS_ADDED"
+      "M_CM_MARKS_ADDED",
+      "M_OBJECT_NOT_AT_ZERO"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP": {
@@ -120322,7 +120324,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_HUNDRED_NOT_TEN",
-      "M_MM_AS_DECIMAL_CM"
+      "M_MM_AS_DECIMAL_CM",
+      "M_MM_BIGGER_THAN_CM",
+      "M_HALF_CM_AS_50"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM": {
@@ -120342,7 +120346,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_ADD_NOT_MULTIPLY",
-      "M_TIMES_HUNDRED"
+      "M_TIMES_HUNDRED",
+      "M_MM_PART_DROPPED",
+      "M_DIVIDE_NOT_MULTIPLY"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.ADD_CM_MM": {
@@ -120363,7 +120369,8 @@ var SKILLS_G6 = {
     "mis": [
       "M_MM_OVER_NINE_LEFT",
       "M_ADD_AS_DECIMAL",
-      "M_CARRY_FORGOTTEN"
+      "M_CARRY_FORGOTTEN",
+      "M_MM_ADDED_TO_CM"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM": {
@@ -120383,7 +120390,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_SMALLER_FROM_LARGER_MM",
-      "M_RENAME_NOT_REDUCED"
+      "M_RENAME_NOT_REDUCED",
+      "M_RENAME_AS_100",
+      "M_MM_COPIED_FROM_NOTHING"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM": {
@@ -120403,7 +120412,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_MULTIPLY_CM_ONLY",
-      "M_MM_NOT_RENAMED_AFTER_MULT"
+      "M_MM_NOT_RENAMED_AFTER_MULT",
+      "M_MULTIPLY_MM_ONLY",
+      "M_RENAMED_CM_NOT_ADDED"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM": {
@@ -120423,7 +120434,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_REMAINDER_CM_LOST",
-      "M_UNIT_NOT_CHANGED_BACK"
+      "M_UNIT_NOT_CHANGED_BACK",
+      "M_DIVIDE_CM_KEEP_MM",
+      "M_REMAINDER_WRITTEN_AS_MM"
     ]
   },
   "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL": {
@@ -120438,11 +120451,14 @@ var SKILLS_G6 = {
     ],
     "primary": "G6_UNIT_CONVERSIONS",
     "pre": [
-      "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP"
+      "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP",
+      "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D"
     ],
     "mis": [
       "M_CIRCUMFERENCE_AS_DIAMETER",
-      "M_TURNS_NOT_USED"
+      "M_TURNS_NOT_USED",
+      "M_OVERLAP_INCLUDED",
+      "M_TURNS_MULTIPLIED"
     ],
     "hands": true
   },
@@ -120463,7 +120479,9 @@ var SKILLS_G6 = {
     ],
     "mis": [
       "M_RADIUS_FOR_DIAMETER",
-      "M_CIRCUMFERENCE_TWICE_DIAMETER"
+      "M_CIRCUMFERENCE_TWICE_DIAMETER",
+      "M_DIAMETER_BY_MULTIPLYING",
+      "M_RATIO_GROWS_WITH_SIZE"
     ]
   },
   "MATH.G6.MEASUR.AREA.AREA_TRIANGLE": {

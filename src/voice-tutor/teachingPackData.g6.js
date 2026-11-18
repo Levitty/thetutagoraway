@@ -4266,6 +4266,1142 @@ export const TEACHING_PACK_G6 = {
   "sub_strand": "MATH.G6.NUMBER.INEQUALITIES",
   "sub_strand_name": "Inequalities",
   "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT": {
+  "skill": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
+  "key_step": "The child measures from the 0 mark (or takes the start reading from the end reading) and counts the cm and then the small marks as mm.",
+  "floor": {
+   "prerequisite": "Measures in whole centimetres.",
+   "question": "An eraser goes from 0 to the 4 cm mark. How long is it?",
+   "answer": "4 cm"
+  },
+  "representations": [
+   "a real ruler and a coin, a lead, a nail",
+   "a drawn ruler with mm marks",
+   "the length written as cm and mm and as mm"
+  ],
+  "steps": [
+   "Put the start of the object at 0, or read where it starts.",
+   "Count the whole cm.",
+   "Count the small marks after the last cm as mm.",
+   "Choose mm for small things such as coins and wires."
+  ],
+  "contexts": [
+   "the thickness of a one-shilling coin",
+   "a pencil lead",
+   "the width of an exercise book line"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a ruler with a nail from the 2 cm mark to 3 small marks past 7 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the start of the nail.",
+    "say": "Where does the nail start?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2 cm."
+   },
+   {
+    "beat": "count",
+    "do": "Count the cm and mm from the start to the end with the child."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 5 cm 3 mm = 53 mm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT.M_UNIT_TOO_BIG",
+    "listen_for": [
+     "centimetres",
+     "cm for the coin"
+    ],
+    "ask": "How many coins thick is one centimetre?",
+    "repair": "Very small lengths are measured in mm.",
+    "error": "Chooses cm or m for the thickness of a coin or wire.",
+    "example": {
+     "question": "Best unit for the thickness of a one-shilling coin?",
+     "wrong_answer": "centimetres",
+     "correct_answer": "millimetres"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT.M_RULER_COUNT_FROM_ONE",
+    "listen_for": [
+     "from the 1",
+     "start at one"
+    ],
+    "ask": "Where is the 0 on the ruler?",
+    "repair": "Start counting at 0, not at the first number.",
+    "error": "Reads a length on a ruler from the 1 mark instead of from 0, so is out by one mm or cm.",
+    "example": {
+     "question": "An eraser starts at 0 and ends on the 4th small mark after 3 cm",
+     "wrong_answer": "3 cm 5 mm",
+     "correct_answer": "3 cm 4 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT.M_CM_MARKS_ADDED",
+    "listen_for": [
+     "8 mm",
+     "5 plus 3"
+    ],
+    "ask": "Are the 5 and the 3 the same unit?",
+    "repair": "5 cm is 50 mm; then add the 3 mm.",
+    "error": "Adds the whole centimetres and the small marks instead of reading cm and mm separately.",
+    "example": {
+     "question": "A lead ends 3 small marks after the 5 cm mark: length in mm?",
+     "wrong_answer": "8 mm (5 + 3)",
+     "correct_answer": "53 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT.M_OBJECT_NOT_AT_ZERO",
+    "listen_for": [
+     "7 cm 3 mm",
+     "where it ends"
+    ],
+    "ask": "Where does the nail start?",
+    "repair": "Count from the start of the object, not from 0.",
+    "error": "Reads the mark at the end of the object as its length when the object does not start at 0.",
+    "example": {
+     "question": "A nail lies from the 2 cm mark to the 7 cm 3 mm mark. How long is it?",
+     "wrong_answer": "7 cm 3 mm",
+     "correct_answer": "5 cm 3 mm (53 mm)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is the best unit for the thickness of a coin?",
+    "answer": "mm",
+    "shows": "choose the unit"
+   },
+   {
+    "question": "A nail lies from the 2 cm mark to the 7 cm 3 mm mark. How long is it in mm?",
+    "answer": "53 mm",
+    "shows": "not starting at 0"
+   }
+  ],
+  "name": "Use the millimetre as a unit of length",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP": {
+  "skill": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP",
+  "key_step": "The child shows on a ruler that 10 small marks make 1 cm and uses \"1 cm = 10 mm\" both ways.",
+  "floor": {
+   "prerequisite": "Knows 1 m is 100 cm.",
+   "question": "How many cm in 2 m?",
+   "answer": "200 cm"
+  },
+  "representations": [
+   "a ruler with one cm split into 10 mm",
+   "a table of cm and mm",
+   "a length written both ways"
+  ],
+  "steps": [
+   "Count the mm in one cm on the ruler: 10.",
+   "cm to mm: times 10.",
+   "mm to cm and mm: tens of mm are cm, the rest are mm.",
+   "Compare lengths only in the same unit."
+  ],
+  "contexts": [
+   "beads on a necklace",
+   "the length of an ant",
+   "screws in a woodwork class"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw one cm of a ruler with its small marks."
+   },
+   {
+    "beat": "count",
+    "do": "Count the small marks with the child."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 10."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1 cm = 10 mm."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many mm are in 3 cm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP.M_HUNDRED_NOT_TEN",
+    "listen_for": [
+     "300 mm",
+     "a hundred"
+    ],
+    "ask": "How many small marks are in one cm?",
+    "repair": "1 cm is 10 mm, not 100.",
+    "error": "Believes 1 cm is 100 mm (as 1 m is 100 cm).",
+    "example": {
+     "question": "How many mm in 3 cm?",
+     "wrong_answer": "300 mm",
+     "correct_answer": "30 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP.M_MM_AS_DECIMAL_CM",
+    "listen_for": [
+     "25 cm",
+     "same number"
+    ],
+    "ask": "Is 25 mm longer than your hand?",
+    "repair": "25 mm is 2 cm and 5 mm.",
+    "error": "Writes 25 mm as 2.5 cm and then reads it as 2 cm 5 mm in the wrong way round, or as 25 cm.",
+    "example": {
+     "question": "25 mm in cm and mm",
+     "wrong_answer": "25 cm (the unit was not changed)",
+     "correct_answer": "2 cm 5 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP.M_MM_BIGGER_THAN_CM",
+    "listen_for": [
+     "8 is more",
+     "8 mm"
+    ],
+    "ask": "How many mm is 2 cm?",
+    "repair": "Compare in the same unit: 20 mm against 8 mm.",
+    "error": "Thinks a length in mm is longer because its number is bigger.",
+    "example": {
+     "question": "Which is longer: 8 mm or 2 cm?",
+     "wrong_answer": "8 mm",
+     "correct_answer": "2 cm (20 mm)"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP.M_HALF_CM_AS_50",
+    "listen_for": [
+     "50 mm",
+     "half of a hundred"
+    ],
+    "ask": "How many mm in a whole cm, and so in half?",
+    "repair": "Half a cm is 5 mm.",
+    "error": "Writes half a centimetre as 50 mm, halving 100 instead of 10.",
+    "example": {
+     "question": "4 and a half cm in cm and mm",
+     "wrong_answer": "4 cm 50 mm",
+     "correct_answer": "4 cm 5 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many mm are in 3 cm?",
+    "answer": "30 mm",
+    "shows": "times 10"
+   },
+   {
+    "question": "Write 25 mm in cm and mm.",
+    "answer": "2 cm 5 mm",
+    "shows": "the other way"
+   }
+  ],
+  "name": "The relationship between the millimetre and the centimetre",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM": {
+  "skill": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM",
+  "key_step": "The child changes the cm to mm by multiplying by 10 and then adds the mm.",
+  "floor": {
+   "prerequisite": "Knows 1 cm is 10 mm.",
+   "question": "How many mm in 1 cm?",
+   "answer": "10"
+  },
+  "representations": [
+   "a ruler",
+   "the length split into its cm part and its mm part",
+   "a two-step working line"
+  ],
+  "steps": [
+   "Multiply the cm by 10.",
+   "Add the mm.",
+   "Check: a smaller unit means a bigger number.",
+   "Write the unit mm."
+  ],
+  "contexts": [
+   "a carpenter's measurement",
+   "the length of a pencil",
+   "a strip of cloth for a craft"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4 cm 7 mm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 4 cm.",
+    "say": "How many mm is 4 cm?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 40."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 7 mm.",
+    "say": "What do we do with the 7 mm?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 40 + 7 = 47 mm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM.M_ADD_NOT_MULTIPLY",
+    "listen_for": [
+     "11 mm",
+     "4 plus 7"
+    ],
+    "ask": "How many mm is 4 cm?",
+    "repair": "Change the cm first: 4 x 10 = 40, then add 7.",
+    "error": "Adds the cm to the mm without changing the cm to mm.",
+    "example": {
+     "question": "4 cm 7 mm in mm",
+     "wrong_answer": "11 mm",
+     "correct_answer": "47 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM.M_TIMES_HUNDRED",
+    "listen_for": [
+     "600 mm",
+     "times a hundred"
+    ],
+    "ask": "How many mm in one cm?",
+    "repair": "Multiply by 10.",
+    "error": "Multiplies the cm by 100.",
+    "example": {
+     "question": "6 cm in mm",
+     "wrong_answer": "600 mm",
+     "correct_answer": "60 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM.M_MM_PART_DROPPED",
+    "listen_for": [
+     "40 mm",
+     "forgot the 7"
+    ],
+    "ask": "Where did the 7 mm go?",
+    "repair": "Add the mm after changing the cm.",
+    "error": "Changes the cm to mm but forgets to add the mm.",
+    "example": {
+     "question": "4 cm 7 mm in mm",
+     "wrong_answer": "40 mm",
+     "correct_answer": "47 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM.M_DIVIDE_NOT_MULTIPLY",
+    "listen_for": [
+     "6 mm",
+     "divide by ten"
+    ],
+    "ask": "Is 6 mm as long as 60 cm?",
+    "repair": "Smaller unit, more of them: multiply.",
+    "error": "Divides by 10 to change cm to mm.",
+    "example": {
+     "question": "60 cm in mm",
+     "wrong_answer": "6 mm",
+     "correct_answer": "600 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 4 cm 7 mm in mm.",
+    "answer": "47 mm",
+    "shows": "change and add"
+   },
+   {
+    "question": "Write 60 cm in mm.",
+    "answer": "600 mm",
+    "shows": "multiply by 10"
+   }
+  ],
+  "name": "Convert centimetres and millimetres to millimetres",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.ADD_CM_MM": {
+  "skill": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM",
+  "key_step": "The child adds mm to mm and cm to cm, then renames every 10 mm as 1 cm and adds it to the cm.",
+  "floor": {
+   "prerequisite": "Knows 10 mm is 1 cm.",
+   "question": "What is 14 mm in cm and mm?",
+   "answer": "1 cm 4 mm"
+  },
+  "representations": [
+   "two strips of paper laid end to end on a ruler",
+   "two columns, cm and mm",
+   "the renamed cm written above the cm column"
+  ],
+  "steps": [
+   "Write the lengths in cm and mm columns.",
+   "Add the mm.",
+   "If the mm are 10 or more, rename 10 mm as 1 cm and carry it.",
+   "Add the cm, including the carried cm."
+  ],
+  "contexts": [
+   "joining two pieces of ribbon",
+   "two pencil lengths",
+   "beads in a row"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 cm 8 mm + 1 cm 6 mm in two columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the mm column.",
+    "say": "What is 8 mm + 6 mm?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 14."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 14.",
+    "say": "Can the mm column keep 14?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to carry 1 cm and finish."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 5 cm 4 mm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM.M_MM_OVER_NINE_LEFT",
+    "listen_for": [
+     "4 cm 14 mm"
+    ],
+    "ask": "How many mm make a cm?",
+    "repair": "Rename 10 of the mm as 1 cm.",
+    "error": "Leaves 10 or more mm in the mm column, so writes an answer such as 5 cm 14 mm.",
+    "example": {
+     "question": "3 cm 8 mm + 1 cm 6 mm",
+     "wrong_answer": "4 cm 14 mm",
+     "correct_answer": "5 cm 4 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM.M_ADD_AS_DECIMAL",
+    "listen_for": [
+     "4.12",
+     "point twelve"
+    ],
+    "ask": "Is 4.12 cm the same as 4 cm 12 mm?",
+    "repair": "Rename 12 mm as 1 cm 2 mm.",
+    "error": "Adds the numbers as decimals (3.8 + 1.6 = 5.4) and reads the answer as 5 cm 4 mm without noticing the renaming.",
+    "example": {
+     "question": "2 cm 7 mm + 2 cm 5 mm",
+     "wrong_answer": "4.12 cm (the mm total 7 + 5 = 12 written after the point)",
+     "correct_answer": "5 cm 2 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM.M_CARRY_FORGOTTEN",
+    "listen_for": [
+     "4 cm 4 mm",
+     "forgot the cm"
+    ],
+    "ask": "Where did the 1 cm from the 14 mm go?",
+    "repair": "Write the carried cm above the cm column and add it.",
+    "error": "Renames 10 mm as 1 cm but does not add that cm to the total.",
+    "example": {
+     "question": "3 cm 8 mm + 1 cm 6 mm",
+     "wrong_answer": "4 cm 4 mm",
+     "correct_answer": "5 cm 4 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM.M_MM_ADDED_TO_CM",
+    "listen_for": [
+     "19 cm",
+     "add 16 to the 3"
+    ],
+    "ask": "Is 16 mm a number of cm?",
+    "repair": "Write 16 mm as 1 cm 6 mm before adding.",
+    "error": "Adds a length given only in mm to the cm of the other length.",
+    "example": {
+     "question": "3 cm 8 mm + 16 mm",
+     "wrong_answer": "19 cm 8 mm",
+     "correct_answer": "5 cm 4 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 3 cm 8 mm + 1 cm 6 mm?",
+    "answer": "5 cm 4 mm",
+    "shows": "renaming mm"
+   },
+   {
+    "question": "What is 2 cm 7 mm + 15 mm?",
+    "answer": "4 cm 2 mm",
+    "shows": "one length in mm only"
+   }
+  ],
+  "name": "Add centimetres and millimetres",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM": {
+  "skill": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM",
+  "key_step": "When there are too few mm on top, the child renames 1 cm as 10 mm and takes one off the cm.",
+  "floor": {
+   "prerequisite": "Adds cm and mm.",
+   "question": "What is 2 cm 5 mm + 2 cm 7 mm?",
+   "answer": "5 cm 2 mm"
+  },
+  "representations": [
+   "a strip cut from a longer strip on a ruler",
+   "two columns with renaming shown",
+   "a check by adding back"
+  ],
+  "steps": [
+   "Write the lengths in columns.",
+   "If the top mm are fewer, rename 1 cm as 10 mm.",
+   "Take one cm off the top cm.",
+   "Subtract mm, then cm, and check by adding."
+  ],
+  "contexts": [
+   "cutting a piece off a ribbon",
+   "how much longer one pencil is",
+   "trimming a picture"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5 cm 2 mm - 2 cm 7 mm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2 mm.",
+    "say": "Can we take 7 mm from 2 mm?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to cross out 5 cm, write 4 cm and 12 mm."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2 cm 5 mm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM.M_SMALLER_FROM_LARGER_MM",
+    "listen_for": [
+     "3 cm 5 mm",
+     "7 take away 2"
+    ],
+    "ask": "Which mm are we taking away from which?",
+    "repair": "The top number is taken from: rename a cm.",
+    "error": "Takes the smaller mm number from the larger whatever their order.",
+    "example": {
+     "question": "5 cm 2 mm - 2 cm 7 mm",
+     "wrong_answer": "3 cm 5 mm",
+     "correct_answer": "2 cm 5 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM.M_RENAME_NOT_REDUCED",
+    "listen_for": [
+     "4 cm 5 mm",
+     "still 6 cm"
+    ],
+    "ask": "You used one cm for the mm. How many cm are left?",
+    "repair": "Take one cm off when you rename it.",
+    "error": "Adds 10 mm but does not take 1 cm off the cm column.",
+    "example": {
+     "question": "6 cm 3 mm - 2 cm 8 mm",
+     "wrong_answer": "4 cm 5 mm",
+     "correct_answer": "3 cm 5 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM.M_RENAME_AS_100",
+    "listen_for": [
+     "102 mm",
+     "a hundred mm"
+    ],
+    "ask": "How many mm in 1 cm?",
+    "repair": "Rename 1 cm as 10 mm.",
+    "error": "Renames 1 cm as 100 mm when there are too few mm.",
+    "example": {
+     "question": "5 cm 2 mm - 2 cm 7 mm",
+     "wrong_answer": "2 cm 95 mm (102 mm - 7 mm)",
+     "correct_answer": "2 cm 5 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM.M_MM_COPIED_FROM_NOTHING",
+    "listen_for": [
+     "6 cm 5 mm",
+     "copy the 5"
+    ],
+    "ask": "What do we take the 5 mm from?",
+    "repair": "Rename: 8 cm = 7 cm 10 mm.",
+    "error": "Takes a cm and mm length from whole cm by subtracting the cm and copying the mm.",
+    "example": {
+     "question": "8 cm - 2 cm 5 mm",
+     "wrong_answer": "6 cm 5 mm",
+     "correct_answer": "5 cm 5 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 5 cm 2 mm - 2 cm 7 mm?",
+    "answer": "2 cm 5 mm",
+    "shows": "rename a cm"
+   },
+   {
+    "question": "What is 8 cm - 2 cm 5 mm?",
+    "answer": "5 cm 5 mm",
+    "shows": "from whole cm"
+   }
+  ],
+  "name": "Subtract centimetres and millimetres",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM": {
+  "skill": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM",
+  "key_step": "The child multiplies the mm and the cm separately and renames the mm product as cm and mm, adding the new cm.",
+  "floor": {
+   "prerequisite": "Adds cm and mm with renaming.",
+   "question": "What is 3 cm 6 mm + 3 cm 6 mm?",
+   "answer": "7 cm 2 mm"
+  },
+  "representations": [
+   "equal strips laid end to end",
+   "two columns, each multiplied",
+   "repeated adding as a check"
+  ],
+  "steps": [
+   "Multiply the mm.",
+   "Rename tens of mm as cm.",
+   "Multiply the cm and add the renamed cm.",
+   "Check by repeated adding for a small number."
+  ],
+  "contexts": [
+   "four equal pieces of wire joined",
+   "tiles in a row",
+   "a row of exercise books"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 cm 6 mm x 4 in two columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 6 mm.",
+    "say": "What is 6 mm x 4?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 24."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to rename 24 mm and carry."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 12 cm + 2 cm and 4 mm = 14 cm 4 mm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM.M_MULTIPLY_CM_ONLY",
+    "listen_for": [
+     "6 cm 4 mm",
+     "the mm stay"
+    ],
+    "ask": "Is each piece 2 cm or 2 cm 4 mm?",
+    "repair": "Multiply the mm too.",
+    "error": "Multiplies the cm and leaves the mm unchanged.",
+    "example": {
+     "question": "2 cm 4 mm x 3",
+     "wrong_answer": "6 cm 4 mm",
+     "correct_answer": "7 cm 2 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM.M_MM_NOT_RENAMED_AFTER_MULT",
+    "listen_for": [
+     "12 cm 24 mm"
+    ],
+    "ask": "Can the mm column hold 24?",
+    "repair": "Rename 20 mm as 2 cm.",
+    "error": "Leaves the product of the mm above 9 in the mm column.",
+    "example": {
+     "question": "3 cm 6 mm x 4",
+     "wrong_answer": "12 cm 24 mm",
+     "correct_answer": "14 cm 4 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM.M_MULTIPLY_MM_ONLY",
+    "listen_for": [
+     "2 cm 12 mm",
+     "only the mm"
+    ],
+    "ask": "Are there three pieces of 2 cm too?",
+    "repair": "Multiply both parts.",
+    "error": "Multiplies the mm and leaves the cm as they were.",
+    "example": {
+     "question": "2 cm 4 mm x 3",
+     "wrong_answer": "2 cm 12 mm (3 cm 2 mm)",
+     "correct_answer": "7 cm 2 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM.M_RENAMED_CM_NOT_ADDED",
+    "listen_for": [
+     "12 cm 4 mm",
+     "lost the 2 cm"
+    ],
+    "ask": "Where did the 2 cm from 24 mm go?",
+    "repair": "Add the renamed cm to the cm column.",
+    "error": "Renames the mm product as cm and mm but does not add the new cm.",
+    "example": {
+     "question": "3 cm 6 mm x 4",
+     "wrong_answer": "12 cm 4 mm",
+     "correct_answer": "14 cm 4 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 3 cm 6 mm x 4?",
+    "answer": "14 cm 4 mm",
+    "shows": "renaming after multiplying"
+   },
+   {
+    "question": "What is 2 cm 4 mm x 3?",
+    "answer": "7 cm 2 mm",
+    "shows": "both parts multiplied"
+   }
+  ],
+  "name": "Multiply centimetres and millimetres by a whole number",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM": {
+  "skill": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM",
+  "key_step": "When the cm do not share exactly, the child changes the whole length to mm, divides, and changes back to cm and mm.",
+  "floor": {
+   "prerequisite": "Changes cm and mm to mm.",
+   "question": "Write 7 cm 2 mm in mm.",
+   "answer": "72 mm"
+  },
+  "representations": [
+   "a strip cut into equal pieces on a ruler",
+   "the length changed to mm and divided",
+   "the answer checked by multiplying back"
+  ],
+  "steps": [
+   "Change the length to mm.",
+   "Divide by the number of pieces.",
+   "Change the answer back to cm and mm.",
+   "Give the unit the question asks for and check by multiplying."
+  ],
+  "contexts": [
+   "a ribbon cut into equal bows",
+   "a stick split into equal parts",
+   "sharing a strip of paper in a craft lesson"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 7 cm 2 mm / 4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 7 cm.",
+    "say": "Do 7 cm share exactly into 4?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for no."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Ask the child to write the length in mm."
+   },
+   {
+    "beat": "write",
+    "do": "Write 72 mm / 4 = 18 mm = 1 cm 8 mm."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM.M_REMAINDER_CM_LOST",
+    "listen_for": [
+     "1 cm 0 mm",
+     "drop the 3"
+    ],
+    "ask": "What happened to the 3 cm left over?",
+    "repair": "Change to mm so nothing is lost.",
+    "error": "Divides the cm and the mm separately and loses the remainder of the cm.",
+    "example": {
+     "question": "7 cm 2 mm / 4",
+     "wrong_answer": "1 cm 0 mm (7 / 4 and 2 / 4 divided separately)",
+     "correct_answer": "1 cm 8 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM.M_UNIT_NOT_CHANGED_BACK",
+    "listen_for": [
+     "1.4",
+     "cm"
+    ],
+    "ask": "Which unit does the question ask for?",
+    "repair": "Give the answer in the unit asked: 14 mm.",
+    "error": "Divides correctly in mm but gives the answer in cm, or the reverse.",
+    "example": {
+     "question": "A 5 cm 6 mm rod cut into 4 equal pieces: length of each in mm?",
+     "wrong_answer": "1.4 (cm)",
+     "correct_answer": "14 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM.M_DIVIDE_CM_KEEP_MM",
+    "listen_for": [
+     "2 cm 4 mm",
+     "the mm stay"
+    ],
+    "ask": "Is the 4 mm shared among the pieces too?",
+    "repair": "Divide every part, or change to mm first.",
+    "error": "Divides the cm and keeps the mm unchanged.",
+    "example": {
+     "question": "8 cm 4 mm / 4",
+     "wrong_answer": "2 cm 4 mm",
+     "correct_answer": "2 cm 1 mm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM.M_REMAINDER_WRITTEN_AS_MM",
+    "listen_for": [
+     "2 cm 1 mm",
+     "remainder 1"
+    ],
+    "ask": "Is the remainder 1 mm or 1 cm?",
+    "repair": "The remainder is 1 cm = 10 mm; change to mm first.",
+    "error": "Writes the remainder of the cm as mm and ignores the mm in the question.",
+    "example": {
+     "question": "9 cm 6 mm / 4",
+     "wrong_answer": "2 cm 1 mm (9 / 4 = 2 remainder 1)",
+     "correct_answer": "2 cm 4 mm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is 7 cm 2 mm / 4?",
+    "answer": "1 cm 8 mm",
+    "shows": "change to mm"
+   },
+   {
+    "question": "What is 9 cm 6 mm / 4?",
+    "answer": "2 cm 4 mm",
+    "shows": "no remainder lost"
+   }
+  ],
+  "name": "Divide centimetres and millimetres by a whole number",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL": {
+  "skill": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL",
+  "key_step": "The child measures the distance round the circle with string up to where it meets itself, and uses circumference times turns for a rolling wheel.",
+  "floor": {
+   "prerequisite": "Measures a length with a ruler.",
+   "question": "A string is laid along a ruler from 0 to 25 cm. How long is it?",
+   "answer": "25 cm"
+  },
+  "representations": [
+   "string wrapped round a tin, then straightened on a ruler",
+   "a wheel rolled once along the floor with a chalk mark",
+   "a table of circumferences and diameters"
+  ],
+  "steps": [
+   "Wrap the string once round and mark where it meets.",
+   "Straighten it and measure to the mark.",
+   "For a wheel: one turn moves one circumference.",
+   "Many turns: multiply; how many turns: divide."
+  ],
+  "contexts": [
+   "a bicycle wheel",
+   "a water tank",
+   "a round drum"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tin with a string round it that overlaps."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the overlap.",
+    "say": "Does this part go round the tin?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a wheel with a chalk mark rolling once along a line."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how far it goes in 50 turns if one turn is 2 m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL.M_CIRCUMFERENCE_AS_DIAMETER",
+    "listen_for": [
+     "35 cm",
+     "across"
+    ],
+    "ask": "Does the string go across the drum or round it?",
+    "repair": "Circumference is round the edge; the distance across is the diameter.",
+    "error": "Reads the diameter from the table where the circumference is wanted.",
+    "example": {
+     "question": "A drum is 35 cm across; length of string round it?",
+     "wrong_answer": "35 cm",
+     "correct_answer": "110 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL.M_TURNS_NOT_USED",
+    "listen_for": [
+     "2 m",
+     "one turn"
+    ],
+    "ask": "How far does one turn move the wheel? And 50 turns?",
+    "repair": "Multiply by the number of turns.",
+    "error": "Gives the distance for one turn of a wheel when asked for many turns.",
+    "example": {
+     "question": "Wheel of circumference 2 m turns 50 times",
+     "wrong_answer": "2 m",
+     "correct_answer": "100 m"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL.M_OVERLAP_INCLUDED",
+    "listen_for": [
+     "27 cm",
+     "the whole string"
+    ],
+    "ask": "Where does the string meet itself?",
+    "repair": "Measure only up to where the string meets.",
+    "error": "Measures the whole string, overlap and all, as the circumference.",
+    "example": {
+     "question": "A string wrapped once round a tin overlaps by 2 cm and measures 27 cm in all. What is the circumference?",
+     "wrong_answer": "27 cm",
+     "correct_answer": "25 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL.M_TURNS_MULTIPLIED",
+    "listen_for": [
+     "200",
+     "times"
+    ],
+    "ask": "How many 2 m lengths fit in 100 m?",
+    "repair": "To find turns, divide the distance by the circumference.",
+    "error": "Multiplies the distance by the circumference to find the number of turns.",
+    "example": {
+     "question": "A wheel of circumference 2 m rolls 100 m. How many turns does it make?",
+     "wrong_answer": "200",
+     "correct_answer": "50"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A wheel of circumference 2 m turns 50 times. How far does it roll?",
+    "answer": "100 m",
+    "shows": "times the turns"
+   },
+   {
+    "question": "A wheel of circumference 2 m rolls 100 m. How many turns does it make?",
+    "answer": "50",
+    "shows": "divide for turns"
+   }
+  ],
+  "name": "Determine the circumference of a circle practically",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION": {
+  "skill": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION",
+  "key_step": "The child says that the circumference is always a little more than 3 times the diameter (pi) for any circle, multiplies by pi for the circumference and divides by pi for the diameter.",
+  "floor": {
+   "prerequisite": "Multiplies and divides with fractions such as 22/7.",
+   "question": "What is 14 x 22/7?",
+   "answer": "44"
+  },
+  "representations": [
+   "measurements of several round objects in a table",
+   "the circumference divided by the diameter for each",
+   "the rule written with pi"
+  ],
+  "steps": [
+   "Measure or read the diameter (twice the radius).",
+   "Circumference = pi x diameter.",
+   "Diameter = circumference / pi.",
+   "Check: the circumference is about 3 times the diameter."
+  ],
+  "contexts": [
+   "the rim of a sufuria",
+   "a round water tank",
+   "a running track bend"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: object, circumference, diameter, circumference / diameter."
+   },
+   {
+    "beat": "write",
+    "do": "Fill in a bottle top (about 9.4 cm, 3 cm) and a bicycle wheel (about 220 cm, 70 cm)."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the last column.",
+    "say": "What do you notice about the two answers?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say they are both about 3."
+   },
+   {
+    "beat": "write",
+    "do": "Write C = pi x d."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION.M_RADIUS_FOR_DIAMETER",
+    "listen_for": [
+     "22 cm",
+     "used the 7"
+    ],
+    "ask": "Is 7 cm the distance across or half way?",
+    "repair": "The diameter is twice the radius: 14 cm.",
+    "error": "Uses the radius where the diameter is needed (or the reverse).",
+    "example": {
+     "question": "Radius 7 cm; circumference with pi = 22/7?",
+     "wrong_answer": "22 cm",
+     "correct_answer": "44 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION.M_CIRCUMFERENCE_TWICE_DIAMETER",
+    "listen_for": [
+     "20 cm",
+     "twice"
+    ],
+    "ask": "How many diameters fit round the circle?",
+    "repair": "About 3 and a bit: pi x 10 is about 31.",
+    "error": "Believes the circumference is twice the diameter.",
+    "example": {
+     "question": "Diameter 10 cm; circumference about?",
+     "wrong_answer": "20 cm",
+     "correct_answer": "31 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION.M_DIAMETER_BY_MULTIPLYING",
+    "listen_for": [
+     "138",
+     "times 22/7"
+    ],
+    "ask": "Can the distance across be longer than the distance round?",
+    "repair": "Divide by pi to find the diameter.",
+    "error": "Multiplies the circumference by pi to find the diameter.",
+    "example": {
+     "question": "Circumference 44 cm, pi = 22/7. What is the diameter?",
+     "wrong_answer": "about 138 cm (44 x 22/7)",
+     "correct_answer": "14 cm"
+    }
+   },
+   {
+    "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION.M_RATIO_GROWS_WITH_SIZE",
+    "listen_for": [
+     "bigger for B"
+    ],
+    "ask": "What did the bottle top and the wheel both give?",
+    "repair": "The circumference is about 3.14 diameters for every circle.",
+    "error": "Believes the circumference is a bigger number of diameters for a bigger circle.",
+    "example": {
+     "question": "Circle A has diameter 7 cm and circle B 70 cm. Is circumference / diameter bigger for B?",
+     "wrong_answer": "Yes, B is bigger",
+     "correct_answer": "No: it is about 3.14 (22/7) for both"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A circle has diameter 14 cm. Using pi = 22/7, what is its circumference?",
+    "answer": "44 cm",
+    "shows": "multiply by pi"
+   },
+   {
+    "question": "A circle has circumference 44 cm. Using pi = 22/7, what is its diameter?",
+    "answer": "14 cm",
+    "shows": "divide by pi"
+   }
+  ],
+  "name": "The relationship between circumference and diameter",
+  "sub_strand": "MATH.G6.MEASUR.LENGTH",
+  "sub_strand_name": "Length",
+  "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G6;

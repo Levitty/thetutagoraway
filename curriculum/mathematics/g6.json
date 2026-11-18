@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 6,
  "source": "KICD KICD-Grade6-Mathematics-Curriculum-Design.pdf, revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.LENGTH, MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites proposed; misconceptions draft; all awaiting teacher review (12 Nov 2026; deepened with a teaching pack 18 Nov 2026); not yet deepened: MEASUR.AREA, MEASUR.CAPACITY, MEASUR.MASS, MEASUR.TIME, MEASUR.MONEY, GEOMET.LINES, GEOMET.ANGLES, GEOMET.3_D_OBJECTS, DATA_H.BAR_GRAPHS",
  "totals": {
   "strands": 4,
   "sub_strands": 16,
   "outcomes": 97,
   "lessons": 150,
   "skills": 84,
-  "prerequisites": 154,
-  "misconceptions": 251
+  "prerequisites": 156,
+  "misconceptions": 267
  },
  "sub_strands": [
   {
@@ -3957,6 +3957,13 @@
        "strength": "helpful",
        "reason": "Choosing a unit sensible for the size.",
        "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "A millimetre is a tenth of a centimetre; reading a ruler between the cm marks is reading tenths.",
+       "status": "proposed"
       }
      ],
      "status": "proposed"
@@ -4210,6 +4217,13 @@
        "kind": "skill",
        "strength": "helpful",
        "reason": "Measuring and reading to the nearest mm.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.NUMBER.MULTIPLICATION.MULT_3D_BY_2D",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "The distance a wheel rolls is its circumference times the number of turns.",
        "status": "proposed"
       }
      ],
@@ -4553,6 +4567,246 @@
      "cause": "Does not look at the unit the question asks for.",
      "reveals": "Answer that is ten times too small.",
      "help": "Underline the unit in the question before writing the answer.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT.M_OBJECT_NOT_AT_ZERO",
+     "skill": "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT",
+     "error": "Reads the mark at the end of the object as its length when the object does not start at 0.",
+     "example": {
+      "question": "A nail lies from the 2 cm mark to the 7 cm 3 mm mark. How long is it?",
+      "wrong_answer": "7 cm 3 mm",
+      "correct_answer": "5 cm 3 mm (53 mm)"
+     },
+     "cause": "Thinks the ruler reading is always the length, wherever the object starts.",
+     "reveals": "The end reading as an option.",
+     "help": "Count the cm and mm from the start of the nail to its end, or take the start reading from the end reading.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP.M_MM_BIGGER_THAN_CM",
+     "skill": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP",
+     "error": "Thinks a length in mm is longer because its number is bigger.",
+     "example": {
+      "question": "Which is longer: 8 mm or 2 cm?",
+      "wrong_answer": "8 mm",
+      "correct_answer": "2 cm (20 mm)"
+     },
+     "cause": "Compares the numbers and not the units.",
+     "reveals": "The length with the bigger number in the smaller unit.",
+     "help": "Change both to mm before comparing: 2 cm is 20 mm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP.M_HALF_CM_AS_50",
+     "skill": "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP",
+     "error": "Writes half a centimetre as 50 mm, halving 100 instead of 10.",
+     "example": {
+      "question": "4 and a half cm in cm and mm",
+      "wrong_answer": "4 cm 50 mm",
+      "correct_answer": "4 cm 5 mm"
+     },
+     "cause": "Uses the 100 from metres and centimetres.",
+     "reveals": "An answer with 50 mm.",
+     "help": "Half of 10 mm is 5 mm: look at half a centimetre on the ruler.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM.M_MM_PART_DROPPED",
+     "skill": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM",
+     "error": "Changes the cm to mm but forgets to add the mm.",
+     "example": {
+      "question": "4 cm 7 mm in mm",
+      "wrong_answer": "40 mm",
+      "correct_answer": "47 mm"
+     },
+     "cause": "Changes one part and stops.",
+     "reveals": "The cm part changed alone as an option.",
+     "help": "Write it as two parts: 4 cm = 40 mm, plus 7 mm, makes 47 mm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM.M_DIVIDE_NOT_MULTIPLY",
+     "skill": "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM",
+     "error": "Divides by 10 to change cm to mm.",
+     "example": {
+      "question": "60 cm in mm",
+      "wrong_answer": "6 mm",
+      "correct_answer": "600 mm"
+     },
+     "cause": "Not sure which way to go, so divides.",
+     "reveals": "The answer one hundred times too small.",
+     "help": "A smaller unit needs more of them: multiply by 10.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM.M_MM_ADDED_TO_CM",
+     "skill": "MATH.G6.MEASUR.LENGTH.ADD_CM_MM",
+     "error": "Adds a length given only in mm to the cm of the other length.",
+     "example": {
+      "question": "3 cm 8 mm + 16 mm",
+      "wrong_answer": "19 cm 8 mm",
+      "correct_answer": "5 cm 4 mm"
+     },
+     "cause": "Adds the numbers it sees without matching the units.",
+     "reveals": "An answer with the mm added to the cm.",
+     "help": "Write 16 mm as 1 cm 6 mm first, then add cm to cm and mm to mm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM.M_RENAME_AS_100",
+     "skill": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM",
+     "error": "Renames 1 cm as 100 mm when there are too few mm.",
+     "example": {
+      "question": "5 cm 2 mm - 2 cm 7 mm",
+      "wrong_answer": "2 cm 95 mm (102 mm - 7 mm)",
+      "correct_answer": "2 cm 5 mm"
+     },
+     "cause": "Uses the 100 from metres and centimetres.",
+     "reveals": "An answer with far too many mm.",
+     "help": "1 cm is 10 mm: 5 cm 2 mm becomes 4 cm 12 mm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM.M_MM_COPIED_FROM_NOTHING",
+     "skill": "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM",
+     "error": "Takes a cm and mm length from whole cm by subtracting the cm and copying the mm.",
+     "example": {
+      "question": "8 cm - 2 cm 5 mm",
+      "wrong_answer": "6 cm 5 mm",
+      "correct_answer": "5 cm 5 mm"
+     },
+     "cause": "Has no mm to take from, so writes the 5 mm down.",
+     "reveals": "The answer with the mm copied.",
+     "help": "Rename one cm: 8 cm = 7 cm 10 mm, then subtract.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM.M_MULTIPLY_MM_ONLY",
+     "skill": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM",
+     "error": "Multiplies the mm and leaves the cm as they were.",
+     "example": {
+      "question": "2 cm 4 mm x 3",
+      "wrong_answer": "2 cm 12 mm (3 cm 2 mm)",
+      "correct_answer": "7 cm 2 mm"
+     },
+     "cause": "Multiplies one part only.",
+     "reveals": "The answer with only the mm multiplied.",
+     "help": "Each part is multiplied: 2 cm x 3 and 4 mm x 3.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM.M_RENAMED_CM_NOT_ADDED",
+     "skill": "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM",
+     "error": "Renames the mm product as cm and mm but does not add the new cm.",
+     "example": {
+      "question": "3 cm 6 mm x 4",
+      "wrong_answer": "12 cm 4 mm",
+      "correct_answer": "14 cm 4 mm"
+     },
+     "cause": "Writes the leftover mm and forgets where the cm go.",
+     "reveals": "An answer two cm short.",
+     "help": "Write the new cm above the cm column and add them in.",
+     "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM.M_DIVIDE_CM_KEEP_MM",
+     "skill": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM",
+     "error": "Divides the cm and keeps the mm unchanged.",
+     "example": {
+      "question": "8 cm 4 mm / 4",
+      "wrong_answer": "2 cm 4 mm",
+      "correct_answer": "2 cm 1 mm"
+     },
+     "cause": "Divides one part only.",
+     "reveals": "The answer with the mm not divided.",
+     "help": "Every part is shared: 8 cm / 4 and 4 mm / 4.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM.M_REMAINDER_WRITTEN_AS_MM",
+     "skill": "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM",
+     "error": "Writes the remainder of the cm as mm and ignores the mm in the question.",
+     "example": {
+      "question": "9 cm 6 mm / 4",
+      "wrong_answer": "2 cm 1 mm (9 / 4 = 2 remainder 1)",
+      "correct_answer": "2 cm 4 mm"
+     },
+     "cause": "Treats the remainder as the mm part of the answer.",
+     "reveals": "An answer whose mm is the remainder.",
+     "help": "Change to mm first: 96 mm / 4 = 24 mm = 2 cm 4 mm.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL.M_OVERLAP_INCLUDED",
+     "skill": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL",
+     "error": "Measures the whole string, overlap and all, as the circumference.",
+     "example": {
+      "question": "A string wrapped once round a tin overlaps by 2 cm and measures 27 cm in all. What is the circumference?",
+      "wrong_answer": "27 cm",
+      "correct_answer": "25 cm"
+     },
+     "cause": "Does not see that the overlap goes round twice.",
+     "reveals": "The full string length as an option.",
+     "help": "Mark where the string meets itself and measure only to that mark.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL.M_TURNS_MULTIPLIED",
+     "skill": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL",
+     "error": "Multiplies the distance by the circumference to find the number of turns.",
+     "example": {
+      "question": "A wheel of circumference 2 m rolls 100 m. How many turns does it make?",
+      "wrong_answer": "200",
+      "correct_answer": "50"
+     },
+     "cause": "Multiplies whenever a wheel and turns appear.",
+     "reveals": "The product as an option.",
+     "help": "Each turn moves 2 m: how many 2 m are in 100 m?",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION.M_DIAMETER_BY_MULTIPLYING",
+     "skill": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION",
+     "error": "Multiplies the circumference by pi to find the diameter.",
+     "example": {
+      "question": "Circumference 44 cm, pi = 22/7. What is the diameter?",
+      "wrong_answer": "about 138 cm (44 x 22/7)",
+      "correct_answer": "14 cm"
+     },
+     "cause": "Uses the rule for circumference in the wrong direction.",
+     "reveals": "A diameter bigger than the circumference.",
+     "help": "The diameter is about a third of the circumference: divide by pi.",
+     "source": "to be confirmed by a teacher (no source yet)",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION.M_RATIO_GROWS_WITH_SIZE",
+     "skill": "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION",
+     "error": "Believes the circumference is a bigger number of diameters for a bigger circle.",
+     "example": {
+      "question": "Circle A has diameter 7 cm and circle B 70 cm. Is circumference / diameter bigger for B?",
+      "wrong_answer": "Yes, B is bigger",
+      "correct_answer": "No: it is about 3.14 (22/7) for both"
+     },
+     "cause": "Thinks everything about a bigger circle is bigger.",
+     "reveals": "A choice between the two circles.",
+     "help": "Measure a bottle top and a bicycle wheel and divide: the answer is about 3 each time.",
      "source": "a familiar error type in maths education (no single source cited); how often Kenyan learners make it is to be confirmed by a teacher",
      "status": "draft"
     }
