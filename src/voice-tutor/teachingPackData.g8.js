@@ -13478,6 +13478,1194 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.GEOMET.COMMON_SOLIDS",
   "sub_strand_name": "Common Solids",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW",
+  "key_step": "The child divides each value by what one square stands for to get its height, starting the axis at zero.",
+  "floor": {
+   "prerequisite": "Divides by a scale.",
+   "question": "45 ÷ 5",
+   "answer": "9"
+  },
+  "representations": [
+   "a tally of eggs collected",
+   "a frequency table",
+   "the bar graph on squared paper"
+  ],
+  "steps": [
+   "Choose a scale from zero.",
+   "Divide each value by the scale.",
+   "Draw bars of equal width with equal gaps.",
+   "Label both axes and give a title."
+  ],
+  "contexts": [
+   "eggs collected on a school farm",
+   "shoe sizes in Grade 8",
+   "test scores"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table of eggs: Monday 20, Tuesday 45, Wednesday 30."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 45.",
+    "say": "With 1 square to 5 eggs, how many squares tall?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 9."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child draws the three bars."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_VALUE_FOR_SQUARES",
+    "listen_for": [
+     "45 squares"
+    ],
+    "ask": "Is each square one egg?",
+    "repair": "Divide by 5.",
+    "error": "Gives the value as the number of squares.",
+    "example": {
+     "question": "45 eggs; 1 square stands for 5 eggs. Squares tall?",
+     "wrong_answer": "45",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_SCALE_MULTIPLIED_BARS",
+    "listen_for": [
+     "225"
+    ],
+    "ask": "More squares than eggs?",
+    "repair": "Divide.",
+    "error": "Multiplies by the scale instead of dividing.",
+    "example": {
+     "question": "45 eggs; 1 square to 5 eggs. Squares tall?",
+     "wrong_answer": "225",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_SHORTEST_BAR",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "Which day had the most?",
+    "repair": "Tuesday.",
+    "error": "Works out the shortest bar when the tallest is asked.",
+    "example": {
+     "question": "Eggs 20, 45, 30 at 1 square to 5. Tallest bar?",
+     "wrong_answer": "4",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_BARS_UNEQUAL",
+    "listen_for": [
+     "different widths"
+    ],
+    "ask": "Should a wide bar mean more?",
+    "repair": "Equal widths.",
+    "error": "Draws bars of different widths or with uneven gaps.",
+    "example": {
+     "question": "Must the bars be the same width?",
+     "wrong_answer": "No",
+     "correct_answer": "Yes, with equal gaps"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_AXIS_NOT_FROM_ZERO",
+    "listen_for": [
+     "start at 20"
+    ],
+    "ask": "Does a bar from 20 show 20 eggs?",
+    "repair": "Start at 0.",
+    "error": "Starts the value axis at a number above zero.",
+    "example": {
+     "question": "Values 20 to 45: start the axis at?",
+     "wrong_answer": "20",
+     "correct_answer": "0"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Values 24, 36 and 60 with 1 square to 4. Tallest bar in squares?",
+    "answer": "15",
+    "shows": "scale"
+   },
+   {
+    "question": "With 1 square to 10, how tall is a bar for 85?",
+    "answer": "8.5 squares",
+    "shows": "half squares"
+   }
+  ],
+  "name": "Draw a bar graph of data with a suitable scale",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET",
+  "key_step": "The child reads each bar against the scale and writes the calculation the question asks for before answering.",
+  "floor": {
+   "prerequisite": "Reads a bar against a scale.",
+   "question": "A bar of 9 squares at 1 square to 5",
+   "answer": "45"
+  },
+  "representations": [
+   "the bar graph",
+   "values written on the bars",
+   "the calculation"
+  ],
+  "steps": [
+   "Read each bar.",
+   "Group the bars the question names.",
+   "How many more: subtract.",
+   "Check with the graph."
+  ],
+  "contexts": [
+   "learners in four Grade 8 streams",
+   "bags of maize sold",
+   "votes for class prefect"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar graph of four classes: 45, 42, 32, 30."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two tallest bars.",
+    "say": "How many learners in these two together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 87."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: and how many more than the two shortest?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_ONE_GROUP_FOR_DIFFERENCE",
+    "listen_for": [
+     "87"
+    ],
+    "ask": "Is that how many more?",
+    "repair": "Subtract.",
+    "error": "Gives one group's total when a difference is asked.",
+    "example": {
+     "question": "Classes 45, 42, 32, 30. Two biggest have how many more than two smallest?",
+     "wrong_answer": "87",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_SINGLE_BARS_COMPARED",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "How many classes in each group?",
+    "repair": "Two.",
+    "error": "Compares one bar with one bar when groups are asked.",
+    "example": {
+     "question": "Classes 45, 42, 32, 30. Two biggest more than two smallest by?",
+     "wrong_answer": "15",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_SUM_FOR_HOW_MANY_MORE",
+    "listen_for": [
+     "149"
+    ],
+    "ask": "Does how many more mean add?",
+    "repair": "Difference.",
+    "error": "Adds when \"how many more\" is asked.",
+    "example": {
+     "question": "Classes 45, 42, 32, 30. How many more?",
+     "wrong_answer": "149",
+     "correct_answer": "25"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_SCALE_IGNORED_READING",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "What does each square stand for?",
+    "repair": "Times 5.",
+    "error": "Reads the number of squares as the value.",
+    "example": {
+     "question": "A bar is 9 squares tall; 1 square to 5. Value?",
+     "wrong_answer": "9",
+     "correct_answer": "45"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Bars: 28, 35, 19, 22. How many more in the two biggest than the two smallest?",
+    "answer": "22",
+    "shows": "groups"
+   },
+   {
+    "question": "A bar is 7 squares tall at 1 square to 20 bags. Bags?",
+    "answer": "140",
+    "shows": "scale"
+   }
+  ],
+  "name": "Interpret bar graphs",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW",
+  "key_step": "The child asks \"do these values follow each other in time?\" before choosing a line graph.",
+  "floor": {
+   "prerequisite": "Plots points.",
+   "question": "Plot (1, 20) and (2, 35)",
+   "answer": "two points"
+  },
+  "representations": [
+   "a table of hourly readings",
+   "points plotted against time",
+   "the line graph"
+  ],
+  "steps": [
+   "Is it over time? Line graph.",
+   "Time along the bottom.",
+   "Plot each reading.",
+   "Join in order with straight lines."
+  ],
+  "contexts": [
+   "water in a tank each hour",
+   "the price of onions each week",
+   "temperature in Eldoret"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two tables: learners in four classes, and temperature each hour."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the temperature table.",
+    "say": "Bar or line graph? Why?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child plots the temperatures and joins them."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_BAR_FOR_TIME",
+    "listen_for": [
+     "bar for hours"
+    ],
+    "ask": "Do the hours follow each other?",
+    "repair": "Line.",
+    "error": "Chooses a bar graph for values that follow each other in time.",
+    "example": {
+     "question": "Temperature every hour: which graph?",
+     "wrong_answer": "bar graph",
+     "correct_answer": "line graph"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_LINE_FOR_GROUPS",
+    "listen_for": [
+     "line for classes"
+    ],
+    "ask": "Is there anything between class A and B?",
+    "repair": "Bar.",
+    "error": "Chooses a line graph for separate groups.",
+    "example": {
+     "question": "Learners in each of four classes: which graph?",
+     "wrong_answer": "line graph",
+     "correct_answer": "bar graph"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_REASON_MISMATCHED",
+    "listen_for": [
+     "groups are separate"
+    ],
+    "ask": "Is that why we use a line?",
+    "repair": "Change over time.",
+    "error": "Gives the right graph for the wrong reason.",
+    "example": {
+     "question": "Why a line graph for hourly readings?",
+     "wrong_answer": "because the groups are separate",
+     "correct_answer": "because it shows change over time"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_GRAPH_PURPOSE_CONFUSED",
+    "listen_for": [
+     "bar shows change"
+    ],
+    "ask": "Which graph joins points?",
+    "repair": "Line.",
+    "error": "Says a bar graph shows change from one time to the next.",
+    "example": {
+     "question": "What does a bar graph show best?",
+     "wrong_answer": "change over time",
+     "correct_answer": "separate groups side by side"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_TIME_ON_UPRIGHT_AXIS",
+    "listen_for": [
+     "time up the side"
+    ],
+    "ask": "Where does time go?",
+    "repair": "Along the bottom.",
+    "error": "Puts time on the upright axis.",
+    "example": {
+     "question": "Readings every hour: where does time go?",
+     "wrong_answer": "up the side",
+     "correct_answer": "along the bottom"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which graph for rainfall in each of six months?",
+    "answer": "a line graph (values follow in time)",
+    "shows": "choose"
+   },
+   {
+    "question": "Which graph for the favourite fruit of a class?",
+    "answer": "a bar graph (separate groups)",
+    "shows": "choose"
+   }
+  ],
+  "name": "Draw a line graph and know when to use one",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "key_step": "The child reads both values on the upright axis and subtracts, step by step for \"next to each other\".",
+  "floor": {
+   "prerequisite": "Finds a difference.",
+   "question": "110 - 80",
+   "answer": "30"
+  },
+  "representations": [
+   "the line graph",
+   "the readings written on the points",
+   "the steps up and down"
+  ],
+  "steps": [
+   "Read the values at the times asked.",
+   "Subtract for a change.",
+   "For the biggest rise, list every step.",
+   "Say up or down."
+  ],
+  "contexts": [
+   "onion prices at Wakulima market",
+   "learners at a school club",
+   "water in a tank"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line graph: 200, 350, 400, 600 litres at 1, 2, 3, 4 hours."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes the rise for each step."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the steps.",
+    "say": "Which is the biggest rise?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 200."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_HIGHEST_READING_FOR_RISE",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "Is that a reading or a rise?",
+    "repair": "A rise is a jump.",
+    "error": "Gives the highest reading as the biggest rise.",
+    "example": {
+     "question": "Tank: 200, 350, 400, 600 litres. Biggest rise between readings?",
+     "wrong_answer": "600",
+     "correct_answer": "200"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_FIRST_TO_LAST_RISE",
+    "listen_for": [
+     "400"
+    ],
+    "ask": "Are those readings next to each other?",
+    "repair": "Step by step.",
+    "error": "Gives the rise from the first reading to the last.",
+    "example": {
+     "question": "200, 350, 400, 600. Biggest rise between readings next to each other?",
+     "wrong_answer": "400",
+     "correct_answer": "200"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_NOT_ALL_STEPS_COMPARED",
+    "listen_for": [
+     "150"
+    ],
+    "ask": "Did you check every step?",
+    "repair": "List them all.",
+    "error": "Stops at a big rise without checking all the steps.",
+    "example": {
+     "question": "200, 350, 400, 600. Biggest rise?",
+     "wrong_answer": "150",
+     "correct_answer": "200"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_ONE_READING_FOR_CHANGE",
+    "listen_for": [
+     "110"
+    ],
+    "ask": "Is that the change?",
+    "repair": "Subtract.",
+    "error": "Gives one reading when the change is asked.",
+    "example": {
+     "question": "Price 80 in week 2, 110 in week 5. Rise?",
+     "wrong_answer": "110",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_READINGS_ADDED",
+    "listen_for": [
+     "190"
+    ],
+    "ask": "Does a change add the prices?",
+    "repair": "Subtract.",
+    "error": "Adds two readings for the change.",
+    "example": {
+     "question": "Price 80 in week 2, 110 in week 5. Rise?",
+     "wrong_answer": "190",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_WEEKS_FOR_PRICE",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Weeks or shillings?",
+    "repair": "Read up the side.",
+    "error": "Gives the number of weeks between instead of the change in value.",
+    "example": {
+     "question": "Week 2 to week 5: price rise?",
+     "wrong_answer": "3",
+     "correct_answer": "30"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_RISE_READ_AS_FALL",
+    "listen_for": [
+     "the line goes up there"
+    ],
+    "ask": "Does the line go down there?",
+    "repair": "Find where it goes down.",
+    "error": "Picks a part where the line goes up as a fall.",
+    "example": {
+     "question": "Between which weeks did the number fall?",
+     "wrong_answer": "a week where the line goes up",
+     "correct_answer": "the one place the line goes down"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Readings 50, 80, 75, 120. Biggest rise between readings next to each other?",
+    "answer": "45",
+    "shows": "steps"
+   },
+   {
+    "question": "In the same graph, between which readings did it fall?",
+    "answer": "between the 2nd and 3rd",
+    "shows": "fall"
+   }
+  ],
+  "name": "Interpret line graphs",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE",
+  "key_step": "The child counts how often each value appears and gives the value with the biggest count.",
+  "floor": {
+   "prerequisite": "Tallies data.",
+   "question": "Tally 3, 5, 3, 3, 5",
+   "answer": "3 three times, 5 twice"
+  },
+  "representations": [
+   "a tally",
+   "a frequency table",
+   "the mode"
+  ],
+  "steps": [
+   "Tally each value.",
+   "Find the biggest count.",
+   "Give its value.",
+   "Two equal biggest counts: two modes."
+  ],
+  "contexts": [
+   "shoe sizes in a class",
+   "mandazi sold each day",
+   "favourite colours"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 12, 9, 15, 20, 15."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child tallies each value."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the tallies.",
+    "say": "Which value appears most often?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 15."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_BIGGEST_FOR_MODE",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "How often does 20 appear?",
+    "repair": "Most often wins.",
+    "error": "Gives the biggest value as the mode.",
+    "example": {
+     "question": "12, 9, 15, 20, 15: mode?",
+     "wrong_answer": "20",
+     "correct_answer": "15"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_MODE_AS_FREQUENCY",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Is 9 a shoe size here or a count?",
+    "repair": "Give the size.",
+    "error": "Gives how many times the mode appears instead of the value.",
+    "example": {
+     "question": "Shoe sizes: size 6 appears 9 times, the most. Mode?",
+     "wrong_answer": "9",
+     "correct_answer": "size 6"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_MODE_IS_MIDDLE",
+    "listen_for": [
+     "the middle one"
+    ],
+    "ask": "Is the mode the middle?",
+    "repair": "Most often.",
+    "error": "Gives the middle value as the mode.",
+    "example": {
+     "question": "2, 2, 5, 8, 9: mode?",
+     "wrong_answer": "5",
+     "correct_answer": "2"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_NO_MODE_WHEN_TIE",
+    "listen_for": [
+     "no mode"
+    ],
+    "ask": "How often do 3 and 6 appear?",
+    "repair": "Both are modes.",
+    "error": "Says there is no mode when two values appear equally often.",
+    "example": {
+     "question": "3, 3, 5, 6, 6, 8: mode?",
+     "wrong_answer": "no mode",
+     "correct_answer": "3 and 6"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mode of 4, 7, 7, 2, 9, 7, 4?",
+    "answer": "7",
+    "shows": "list"
+   },
+   {
+    "question": "Shoe sizes 5, 6, 7 with frequencies 4, 9, 6. Mode?",
+    "answer": "size 6",
+    "shows": "table"
+   }
+  ],
+  "name": "Identify the mode of a set of discrete data",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
+  "key_step": "The child finds the total of all the values (value × frequency in a table) and divides by how many values there are.",
+  "floor": {
+   "prerequisite": "Divides a total equally.",
+   "question": "14 ÷ 10",
+   "answer": "1.4"
+  },
+  "representations": [
+   "counters shared equally",
+   "a frequency table with a total column",
+   "the mean"
+  ],
+  "steps": [
+   "Multiply each value by its frequency.",
+   "Add for the total.",
+   "Count the values.",
+   "Divide."
+  ],
+  "contexts": [
+   "goals scored by the school team",
+   "test marks",
+   "eggs laid each day"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: goals 0, 1, 2, 3 with matches 2, 3, 4, 1."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the row for 2 goals.",
+    "say": "How many goals came from these 4 matches?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 8."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills the total column and divides."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_MEAN_OF_SCORES_NOT_WEIGHTED",
+    "listen_for": [
+     "1.5"
+    ],
+    "ask": "Did each score happen once?",
+    "repair": "Times its frequency.",
+    "error": "Finds the mean of the scores in the table, ignoring how often each happened.",
+    "example": {
+     "question": "Goals 0, 1, 2, 3 in 2, 3, 4, 1 matches. Mean?",
+     "wrong_answer": "1.5",
+     "correct_answer": "1.4"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_TOTAL_FOR_MEAN",
+    "listen_for": [
+     "14"
+    ],
+    "ask": "Is that for one match?",
+    "repair": "Divide by 10.",
+    "error": "Gives the total as the mean.",
+    "example": {
+     "question": "Goals 0, 1, 2, 3 in 2, 3, 4, 1 matches. Mean?",
+     "wrong_answer": "14",
+     "correct_answer": "1.4"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_MODE_FOR_MEAN",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Is that the most common or the share?",
+    "repair": "Mean is the share.",
+    "error": "Gives the mode as the mean.",
+    "example": {
+     "question": "Goals 0, 1, 2, 3 in 2, 3, 4, 1 matches. Mean?",
+     "wrong_answer": "2",
+     "correct_answer": "1.4"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_DIVIDED_BY_ONE_LESS",
+    "listen_for": [
+     "10.67"
+    ],
+    "ask": "How many values are there?",
+    "repair": "Four.",
+    "error": "Divides the total by one less than the number of values.",
+    "example": {
+     "question": "6, 8, 7, 11: mean?",
+     "wrong_answer": "10.67",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_MEDIAN_FOR_MEAN",
+    "listen_for": [
+     "7.5"
+    ],
+    "ask": "Is that the middle or the share?",
+    "repair": "Total ÷ count.",
+    "error": "Gives the middle value as the mean.",
+    "example": {
+     "question": "6, 8, 7, 11: mean?",
+     "wrong_answer": "7.5",
+     "correct_answer": "8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mean of 6, 8, 7, 11?",
+    "answer": "8",
+    "shows": "list"
+   },
+   {
+    "question": "Scores 1, 2, 3 with frequencies 3, 5, 2. Mean?",
+    "answer": "1.9",
+    "shows": "table"
+   }
+  ],
+  "name": "Calculate the mean of a set of discrete data",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "key_step": "The child turns the mean back into a total (mean × count) before doing anything else.",
+  "floor": {
+   "prerequisite": "Finds a total from a mean.",
+   "question": "Mean 50 kg for 4 sacks: total",
+   "answer": "200 kg"
+  },
+  "representations": [
+   "sacks drawn",
+   "the total from the mean",
+   "the new total and count"
+  ],
+  "steps": [
+   "Total = mean × count.",
+   "Add or take away the value.",
+   "New count.",
+   "Divide."
+  ],
+  "contexts": [
+   "sacks of maize at a store",
+   "a hen's eggs in a week",
+   "a learner's test marks"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 4 sacks with \"mean 50 kg\" and a fifth sack of 60 kg."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 4 sacks.",
+    "say": "What do these 4 weigh together?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 200 kg."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child adds 60 and divides by 5."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_MEAN_OF_MEANS",
+    "listen_for": [
+     "55"
+    ],
+    "ask": "Is the 50 one sack or four?",
+    "repair": "Four: total 200.",
+    "error": "Averages the old mean with the new value as if they were two values.",
+    "example": {
+     "question": "4 sacks have a mean of 50 kg; a 60 kg sack is added. New mean?",
+     "wrong_answer": "55 kg",
+     "correct_answer": "52 kg"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_PART_ADDED_TO_MEAN",
+    "listen_for": [
+     "62"
+    ],
+    "ask": "Did you share the whole total?",
+    "repair": "Divide 260 by 5.",
+    "error": "Adds part of the new value to the mean.",
+    "example": {
+     "question": "Mean 50 kg for 4; add 60 kg. New mean?",
+     "wrong_answer": "62 kg",
+     "correct_answer": "52 kg"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_MEAN_UNCHANGED",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Is the new sack heavier?",
+    "repair": "The mean rises.",
+    "error": "Believes the mean stays the same when a different value is added.",
+    "example": {
+     "question": "Mean 50 for 4; add 60. New mean?",
+     "wrong_answer": "50 kg",
+     "correct_answer": "52 kg"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_MEAN_FOR_MISSING",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "What total do the 4 days need?",
+    "repair": "20.",
+    "error": "Gives the mean as the missing value.",
+    "example": {
+     "question": "Mean 5 over 4 days; three days were 4, 6, 3. Fourth day?",
+     "wrong_answer": "5",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_KNOWN_MEAN_FOR_MISSING",
+    "listen_for": [
+     "4.33"
+    ],
+    "ask": "Is that what the last day must be?",
+    "repair": "Total needed minus known.",
+    "error": "Gives the mean of the known values as the missing one.",
+    "example": {
+     "question": "Mean 5 over 4 days; three days 4, 6, 3. Fourth day?",
+     "wrong_answer": "4.33",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_TOTAL_ADDED_FOR_MISSING",
+    "listen_for": [
+     "33"
+    ],
+    "ask": "Add or take away?",
+    "repair": "Take away.",
+    "error": "Adds the known values to the total needed.",
+    "example": {
+     "question": "Mean 5 over 4 days; three days 4, 6, 3. Fourth day?",
+     "wrong_answer": "33",
+     "correct_answer": "7"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "The mean of 5 numbers is 12. Four of them are 10, 14, 9 and 15. The fifth?",
+    "answer": "12",
+    "shows": "missing"
+   },
+   {
+    "question": "3 learners have a mean mark of 60. A fourth scores 80. New mean?",
+    "answer": "65",
+    "shows": "new mean"
+   }
+  ],
+  "name": "Solve problems with the mean: a missing value and a new mean",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
+  "key_step": "The child puts every value in order (each as often as its frequency) and counts in from both ends.",
+  "floor": {
+   "prerequisite": "Orders numbers.",
+   "question": "Order 5, 9, 3, 7, 4",
+   "answer": "3, 4, 5, 7, 9"
+  },
+  "representations": [
+   "learners lined up by height",
+   "the ordered list",
+   "fingers counting in from both ends"
+  ],
+  "steps": [
+   "Put the values in order.",
+   "Count in from both ends.",
+   "Odd count: the middle one.",
+   "Even count: halfway between the two middle ones."
+  ],
+  "contexts": [
+   "customers at a kiosk",
+   "quiz marks",
+   "heights of learners"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5, 9, 3, 7, 4."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child writes them in order."
+   },
+   {
+    "beat": "count",
+    "do": "Count in from both ends with the child."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the middle.",
+    "say": "Which is the median?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MEDIAN_OF_LABELS",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Is that the middle learner or the middle mark?",
+    "repair": "List every learner.",
+    "error": "Gives the middle of the possible marks, not of the learners' marks.",
+    "example": {
+     "question": "Marks 1 to 5 with frequencies 1, 2, 2, 7, 3. Median?",
+     "wrong_answer": "3",
+     "correct_answer": "4"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MODE_FOR_MEDIAN",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Is that the middle or the most common?",
+    "repair": "Middle.",
+    "error": "Gives the mode as the median.",
+    "example": {
+     "question": "3, 4, 4, 7, 8, 9, 9, 9: median?",
+     "wrong_answer": "9",
+     "correct_answer": "7.5"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MEAN_FOR_MEDIAN",
+    "listen_for": [
+     "5.6"
+    ],
+    "ask": "Did you add them?",
+    "repair": "Order and pick the middle.",
+    "error": "Gives the mean as the median.",
+    "example": {
+     "question": "5, 9, 3, 7, 4: median?",
+     "wrong_answer": "5.6",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MEDIAN_UNSORTED",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Are they in order?",
+    "repair": "Order first.",
+    "error": "Takes the middle of the list without putting it in order.",
+    "example": {
+     "question": "5, 9, 3, 7, 4: median?",
+     "wrong_answer": "3",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_EVEN_COUNT_MIDDLE",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "How many middle values are there?",
+    "repair": "Two: halfway.",
+    "error": "Picks one of the two middle values when there is an even number.",
+    "example": {
+     "question": "3, 4, 7, 9: median?",
+     "wrong_answer": "4",
+     "correct_answer": "5.5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Median of 8, 3, 6, 12, 5?",
+    "answer": "6",
+    "shows": "odd count"
+   },
+   {
+    "question": "Median of 2, 9, 4, 7?",
+    "answer": "5.5",
+    "shows": "even count"
+   }
+  ],
+  "name": "Determine the median of a set of discrete data",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE",
+  "key_step": "The child names each average by what it does (mode: most common; median: middle; mean: equal share) before choosing.",
+  "floor": {
+   "prerequisite": "Finds a mean.",
+   "question": "9, 11, 12, 15, 15, 18, 20",
+   "answer": "14.3"
+  },
+  "representations": [
+   "one data set",
+   "all three averages side by side",
+   "the question's need"
+  ],
+  "steps": [
+   "Find the mode.",
+   "Order and find the median.",
+   "Total and divide for the mean.",
+   "Choose by what the question needs."
+  ],
+  "contexts": [
+   "mandazi sold over a week",
+   "salaries in a small business",
+   "milk from a cow"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write salaries 20,000, 22,000, 25,000 and 400,000."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 400,000.",
+    "say": "What does this one do to the mean?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child finds the mean and the median."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_MIDRANGE_FOR_MEAN",
+    "listen_for": [
+     "14.5"
+    ],
+    "ask": "Did you use all seven numbers?",
+    "repair": "Total ÷ 7.",
+    "error": "Takes halfway between the smallest and largest as the mean.",
+    "example": {
+     "question": "12, 9, 15, 20, 15, 11, 18: mean?",
+     "wrong_answer": "14.5",
+     "correct_answer": "14.3"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_MEAN_FOR_SKEWED",
+    "listen_for": [
+     "the mean"
+    ],
+    "ask": "Does one big salary pull the mean?",
+    "repair": "Use the median.",
+    "error": "Chooses the mean when one very large value pulls it up.",
+    "example": {
+     "question": "Salaries 20,000, 22,000, 25,000 and 400,000: which average shows a typical salary?",
+     "wrong_answer": "the mean",
+     "correct_answer": "the median"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_MODE_FOR_TOTAL",
+    "listen_for": [
+     "the mode"
+    ],
+    "ask": "Is sharing equally the most common value?",
+    "repair": "The mean.",
+    "error": "Chooses the mode when a total must be shared equally.",
+    "example": {
+     "question": "Share 10 days of milk equally: which average?",
+     "wrong_answer": "the mode",
+     "correct_answer": "the mean"
+    }
+   },
+   {
+    "code": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_RANGE_AS_AVERAGE",
+    "listen_for": [
+     "the range"
+    ],
+    "ask": "Does the range show the middle?",
+    "repair": "It shows spread.",
+    "error": "Gives the range as an average.",
+    "example": {
+     "question": "Is the range an average?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, it shows the spread"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mode, median and mean of 3, 4, 4, 5, 9?",
+    "answer": "mode 4, median 4, mean 5",
+    "shows": "all three"
+   },
+   {
+    "question": "House prices with one mansion: which average shows a typical price?",
+    "answer": "the median",
+    "shows": "choose"
+   }
+  ],
+  "name": "Find and compare the mode, mean and median, and choose one",
+  "sub_strand": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN",
+  "sub_strand_name": "Data Presentation and Interpretation",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

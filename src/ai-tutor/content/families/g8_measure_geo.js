@@ -1034,7 +1034,7 @@ export const FAMILIES = [
     check: ({ r }, a) => near(2 * a, circ(r)) }),
 
   // ================================================================ DATA
-  fam({ id: 'g8.data.bar-top-two', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.b', rung: 2, form: 'graph',
+  fam({ id: 'g8.data.bar-top-two', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.b', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET', rung: 2, form: 'graph',
     draw: () => {
       const vals = [0, 1, 2, 3].map(() => randInt(4, 16) * 5);
       if (new Set(vals).size < 4) return null;
@@ -1045,13 +1045,13 @@ export const FAMILIES = [
       question: 'The bar graph shows the number of learners in four classes. How many more learners are in the two biggest classes together than in the two smallest classes together?',
       model: { type: 'bar-chart', data: { bars: ['Grade 5', 'Grade 6', 'Grade 7', 'Grade 8'].map((label, i) => ({ label, value: vals[i] })) } },
       answer: top - bot,
-      wrong: [[top, 'That is the two biggest classes only. Take away the two smallest classes together.'], [s[0] - s[3], 'That compares one class with one class. The question uses two classes in each group.'], [top + bot, '"How many more" is a difference, so subtract.']],
+      wrong: [[top, 'That is the two biggest classes only. Take away the two smallest classes together.', 'M_ONE_GROUP_FOR_DIFFERENCE'], [s[0] - s[3], 'That compares one class with one class. The question uses two classes in each group.', 'M_SINGLE_BARS_COMPARED'], [top + bot, '"How many more" is a difference, so subtract.', 'M_SUM_FOR_HOW_MANY_MORE']],
       hints: ['Read the height of each bar. Then pick out the two tallest and the two shortest.', 'Add the two tallest, add the two shortest, then subtract.'],
       steps: [`The two tallest bars: ${s[0]} + ${s[1]} = ${top}.`, `The two shortest bars: ${s[2]} + ${s[3]} = ${bot}.`, `Difference: ${top} − ${bot} = ${top - bot}.`],
     }),
     check: ({ top, bot }, a) => bot + a === top }),
 
-  fam({ id: 'g8.data.line-biggest-rise', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.b', rung: 2, form: 'graph',
+  fam({ id: 'g8.data.line-biggest-rise', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET', rung: 2, form: 'graph',
     draw: () => {
       const ys = [randInt(2, 6) * 10]; for (let i = 0; i < 5; i++) ys.push(Math.max(10, ys[i] + pick([-20, -10, 10, 20, 30, 40, 50])));
       const d = ys.slice(1).map((v, i) => v - ys[i]), sorted = [...d].sort((a, b) => b - a);
@@ -1063,13 +1063,13 @@ export const FAMILIES = [
       question: 'The line graph shows the litres of water in a tank, read every hour. What is the biggest rise in water between two readings that are next to each other?',
       model: { type: 'line-graph', data: { points: ys.map((y, x) => ({ x, y })), xTicks: [0, 1, 2, 3, 4, 5], yTicks: [0, 50, 100, 150, 200, 250, 300].filter(t => t <= Math.ceil(Math.max(...ys) / 50) * 50), xLabel: 'Hours after 6 am', yLabel: 'Water (litres)' } },
       answer: best,
-      wrong: [[w[0], 'That is the highest reading, not a rise. A rise is how much the line goes up between two readings.'], [w[1], 'That is the rise from the first reading to the last. The question asks about readings next to each other.'], [w[2], 'That is the second biggest rise. Compare all of the steps up.']],
+      wrong: [[w[0], 'That is the highest reading, not a rise. A rise is how much the line goes up between two readings.', 'M_HIGHEST_READING_FOR_RISE'], [w[1], 'That is the rise from the first reading to the last. The question asks about readings next to each other.', 'M_FIRST_TO_LAST_RISE'], [w[2], 'That is the second biggest rise. Compare all of the steps up.', 'M_NOT_ALL_STEPS_COMPARED']],
       hints: ['For each pair of neighbouring readings, find how much the line goes up. Ignore the steps where it goes down.', 'Compare the rises and pick the biggest.'],
       steps: ys.slice(1).map((v, i) => `Hour ${i} to ${i + 1}: ${ys[i]} to ${v}, change ${v - ys[i] > 0 ? '+' : '−'}${Math.abs(v - ys[i])}.`).concat([`The biggest rise is ${best} litres.`]),
     }),
     check: ({ ys, best }, a) => ys.slice(1).some((v, i) => v - ys[i] === a) && ys.slice(1).every((v, i) => v - ys[i] <= a) }),
 
-  fam({ id: 'g8.data.table-bar-squares', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.b', rung: 1, form: 'table',
+  fam({ id: 'g8.data.table-bar-squares', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.a', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW', rung: 1, form: 'table',
     draw: () => {
       const s = pick([5, 10, 20]), vals = [0, 1, 2, 3, 4].map(() => randInt(2, 9) * s), mx = Math.max(...vals);
       return vals.filter(v => v === mx).length === 1 ? { s, vals, mx, p: person() } : null;
@@ -1078,13 +1078,13 @@ export const FAMILIES = [
       question: `${p.name} will draw a bar graph of the table. On the vertical axis, 1 square stands for ${s} eggs. How many squares tall is the tallest bar?`,
       model: { type: 'table', data: { head: ['Day', 'Eggs sold'], rows: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((label, i) => ({ label, value: String(vals[i]) })) } },
       answer: mx / s,
-      wrong: [[mx, 'That is the number of eggs. Each square stands for more than one egg, so the bar needs fewer squares.'], [mx * s, 'Each square stands for several eggs, so you divide, not multiply.'], [Math.min(...vals) / s, 'That is the shortest bar. The question asks about the tallest.']],
+      wrong: [[mx, 'That is the number of eggs. Each square stands for more than one egg, so the bar needs fewer squares.', 'M_VALUE_FOR_SQUARES'], [mx * s, 'Each square stands for several eggs, so you divide, not multiply.', 'M_SCALE_MULTIPLIED_BARS'], [Math.min(...vals) / s, 'That is the shortest bar. The question asks about the tallest.', 'M_SHORTEST_BAR']],
       hints: ['Find the largest number in the table.', 'How many squares of the size given are needed to reach that number?'],
       steps: [`The largest number is ${mx} eggs.`, `${mx} ÷ ${s} = ${mx / s} squares.`],
     }),
     check: ({ s, mx }, a) => a * s === mx }),
 
-  fam({ id: 'g8.data.which-graph-why', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.b', rung: 2, form: 'why',
+  fam({ id: 'g8.data.which-graph-why', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.c', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW', rung: 2, form: 'why',
     draw: () => {
       const S = [['the number of learners in each of Grades 4 to 8', 'bar'], ['how many learners chose each of four school clubs', 'bar'], ['the maize harvest of five farmers', 'bar'], ['the temperature of a school every hour of the day', 'line'], ['the price of a kilogram of maize in each month of the year', 'line'], ['the height of a seedling at the end of each week', 'line']];
       const [what, kind] = pick(S); return { what, kind, p: person() };
@@ -1092,16 +1092,16 @@ export const FAMILIES = [
     make: ({ what, kind, p }) => ({
       question: `${p.name} wants to show ${what}. Which graph is best, and why?`,
       options: [
-        { text: 'A bar graph, because the groups are separate and not joined by time', right: kind === 'bar', why: kind === 'bar' ? undefined : 'These values come one after another in time. A bar graph does not show how they change from one time to the next.' },
-        { text: 'A line graph, because it shows how a value changes over time', right: kind === 'line', why: kind === 'line' ? undefined : 'These are separate groups, not points in time. Joining them with a line would suggest values in between that do not exist.' },
-        { text: 'A line graph, because the groups are separate', right: false, why: 'A line joins one point to the next, which only makes sense when the values follow each other in time.' },
-        { text: 'A bar graph, because it shows how a value changes from one time to the next', right: false, why: 'A line graph does that job. A bar graph shows separate groups side by side.' },
+        { text: 'A bar graph, because the groups are separate and not joined by time', right: kind === 'bar', why: kind === 'bar' ? undefined : 'These values come one after another in time. A bar graph does not show how they change from one time to the next.', mis: 'M_BAR_FOR_TIME' },
+        { text: 'A line graph, because it shows how a value changes over time', right: kind === 'line', why: kind === 'line' ? undefined : 'These are separate groups, not points in time. Joining them with a line would suggest values in between that do not exist.', mis: 'M_LINE_FOR_GROUPS' },
+        { text: 'A line graph, because the groups are separate', right: false, why: 'A line joins one point to the next, which only makes sense when the values follow each other in time.', mis: 'M_REASON_MISMATCHED' },
+        { text: 'A bar graph, because it shows how a value changes from one time to the next', right: false, why: 'A line graph does that job. A bar graph shows separate groups side by side.', mis: 'M_GRAPH_PURPOSE_CONFUSED' },
       ],
       hints: ['Are the values in separate groups, or do they come one after another in time?', 'A line joins one reading to the next.'],
       steps: kind === 'bar' ? ['The values are for separate groups.', 'Bars stand side by side without joining, so a bar graph suits them.'] : ['The values come one after another in time.', 'A line shows the way the value rises and falls, so a line graph suits them.'],
     }) }),
 
-  fam({ id: 'g8.data.table-mean', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.e', rung: 2, form: 'table',
+  fam({ id: 'g8.data.table-mean', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN', rung: 2, form: 'table',
     draw: () => {
       for (let t = 0; t < 5000; t++) {
         const f = [0, 1, 2, 3, 4].map(() => randInt(1, 8)), n = f.reduce((a, b) => a + b, 0), tot = f.reduce((a, b, x) => a + b * x, 0);
@@ -1113,13 +1113,13 @@ export const FAMILIES = [
       question: 'The table shows the number of goals a school team scored in each of its matches. What is the mean number of goals scored in a match?',
       model: { type: 'table', data: { head: ['Goals in a match', 'Number of matches'], rows: f.map((c, x) => ({ label: String(x), value: String(c) })) } },
       answer: mean,
-      wrong: [[2, 'That is the mean of 0, 1, 2, 3, 4. Some scores happened more often than others, so they count more.'], [tot, 'That is the total number of goals. Divide it by the number of matches.'], [f.indexOf(Math.max(...f)), 'That is the mode, the score that happened most often. The mean uses every match.']],
+      wrong: [[2, 'That is the mean of 0, 1, 2, 3, 4. Some scores happened more often than others, so they count more.', 'M_MEAN_OF_SCORES_NOT_WEIGHTED'], [tot, 'That is the total number of goals. Divide it by the number of matches.', 'M_TOTAL_FOR_MEAN'], [f.indexOf(Math.max(...f)), 'That is the mode, the score that happened most often. The mean uses every match.', 'M_MODE_FOR_MEAN']],
       hints: ['Work out the total goals: each score times the number of matches with that score.', 'Divide the total goals by the total number of matches.'],
       steps: [`Total goals: ${f.map((c, x) => `${x}×${c}`).join(' + ')} = ${tot}.`, `Total matches: ${f.join(' + ')} = ${n}.`, `Mean: ${tot} ÷ ${n} = ${mean}.`],
     }),
     check: ({ n, tot }, a) => near(a * n, tot) }),
 
-  fam({ id: 'g8.data.table-median', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.e', rung: 2, form: 'table',
+  fam({ id: 'g8.data.table-median', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN', rung: 2, form: 'table',
     draw: () => {
       const f = [0, 1, 2, 3, 4].map(() => randInt(1, 7)), n = f.reduce((a, b) => a + b, 0), list = [];
       f.forEach((c, i) => { for (let k = 0; k < c; k++) list.push(i + 1); });
@@ -1131,13 +1131,13 @@ export const FAMILIES = [
       question: 'The table shows the marks out of 5 that learners got in a quick quiz. What is the median mark?',
       model: { type: 'table', data: { head: ['Mark', 'Number of learners'], rows: f.map((c, i) => ({ label: String(i + 1), value: String(c) })) } },
       answer: med,
-      wrong: [[3, 'That is the middle of the list of marks 1 to 5. The median is the middle of ALL the learners\' marks, so count each learner.'], [mode, 'That is the mode, the mark that most learners got.'], [mean, 'That is the mean. The median is the middle mark when all the marks are in order.']],
+      wrong: [[3, 'That is the middle of the list of marks 1 to 5. The median is the middle of ALL the learners\' marks, so count each learner.', 'M_MEDIAN_OF_LABELS'], [mode, 'That is the mode, the mark that most learners got.', 'M_MODE_FOR_MEDIAN'], [mean, 'That is the mean. The median is the middle mark when all the marks are in order.', 'M_MEAN_FOR_MEDIAN']],
       hints: ['There are as many marks as learners. Count all the learners first.', 'Find the middle position, then count along the table from the lowest mark until you reach it.'],
       steps: [`Number of learners: ${f.join(' + ')} = ${n}.`, n % 2 ? `The middle one is number ${(n + 1) / 2}.` : `The middle is between numbers ${n / 2} and ${n / 2 + 1}.`, `Counting along the table from mark 1 gives the median ${med}.`],
     }),
     check: ({ f, n, med }) => { let c = 0; const at = (k) => { let s = 0; for (let i = 0; i < 5; i++) { s += f[i]; if (k <= s) return i + 1; } return 0; }; return n % 2 ? at((n + 1) / 2) === med : (at(n / 2) + at(n / 2 + 1)) / 2 === med; } }),
 
-  fam({ id: 'g8.data.new-mean', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.e', rung: 3, form: 'word',
+  fam({ id: 'g8.data.new-mean', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS', rung: 3, form: 'word',
     draw: () => {
       const m = randInt(40, 60), x = randInt(30, 90);
       if ((4 * m + x) % 5 !== 0) return null;
@@ -1147,13 +1147,13 @@ export const FAMILIES = [
     make: ({ m, x, a }) => ({
       question: `The mean mass of 4 sacks of maize is ${m} kg. A fifth sack of ${x} kg is added to the pile. What is the mean mass of all 5 sacks, in kg?`,
       answer: a,
-      wrong: [[(m + x) / 2, 'That treats the four sacks as one sack. The mean of 4 sacks stands for the total of 4 sacks.'], [round(m + x / 5, 1), 'Share the TOTAL mass between 5 sacks. Do not add part of one sack to the mean.'], [m, 'The mean changes when a sack of a different mass is added.']],
+      wrong: [[(m + x) / 2, 'That treats the four sacks as one sack. The mean of 4 sacks stands for the total of 4 sacks.', 'M_MEAN_OF_MEANS'], [round(m + x / 5, 1), 'Share the TOTAL mass between 5 sacks. Do not add part of one sack to the mean.', 'M_PART_ADDED_TO_MEAN'], [m, 'The mean changes when a sack of a different mass is added.', 'M_MEAN_UNCHANGED']],
       hints: ['The total mass of the first 4 sacks is 4 times their mean.', 'Add the fifth sack to that total, then share it between 5 sacks.'],
       steps: [`Total of the first 4 sacks: 4 × ${m} = ${4 * m} kg.`, `With the fifth sack: ${4 * m} + ${x} = ${4 * m + x} kg.`, `Mean: ${4 * m + x} ÷ 5 = ${a} kg.`],
     }),
     check: ({ m, x }, a) => a * 5 === 4 * m + x }),
 
-  fam({ id: 'g8.data.seven-days', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.e', rung: 2, form: 'steps',
+  fam({ id: 'g8.data.seven-days', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.e', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE', rung: 2, form: 'steps',
     draw: () => {
       for (let t = 0; t < 2000; t++) {
         const mode = randInt(12, 30), others = [0, 1, 2, 3, 4].map(() => randInt(10, 40)), list = [mode, mode, ...others];
@@ -1168,15 +1168,15 @@ export const FAMILIES = [
     make: ({ list, mode, med, mean, sorted }) => ({
       question: `A shop sold these numbers of mandazi on seven days: ${list.join(', ')}.`,
       parts: [
-        { prompt: 'What is the mode?', answer: mode, hint: 'The mode is the number that appears most often.', wrong: [[Math.max(...list), 'That is the biggest number. The mode is the one that appears most often.']] },
-        { prompt: 'What is the median?', answer: med, hint: 'Put the numbers in order first. Then pick the middle one.', wrong: [[list[3], 'The numbers must be put in order before you pick the middle one.']] },
-        { prompt: 'What is the mean?', answer: mean, hint: 'Add all seven numbers and divide by 7.', wrong: [[(Math.min(...list) + Math.max(...list)) / 2, 'That is halfway between the smallest and the biggest. The mean uses all seven numbers.']] },
+        { prompt: 'What is the mode?', answer: mode, hint: 'The mode is the number that appears most often.', wrong: [[Math.max(...list), 'That is the biggest number. The mode is the one that appears most often.', 'M_BIGGEST_FOR_MODE']] },
+        { prompt: 'What is the median?', answer: med, hint: 'Put the numbers in order first. Then pick the middle one.', wrong: [[list[3], 'The numbers must be put in order before you pick the middle one.', 'M_MEDIAN_UNSORTED']] },
+        { prompt: 'What is the mean?', answer: mean, hint: 'Add all seven numbers and divide by 7.', wrong: [[(Math.min(...list) + Math.max(...list)) / 2, 'That is halfway between the smallest and the biggest. The mean uses all seven numbers.', 'M_MIDRANGE_FOR_MEAN']] },
       ],
       steps: [`Appears twice, so the mode is ${mode}.`, `In order: ${sorted.join(', ')}. The middle (4th) is ${med}.`, `Total ${sorted.reduce((a, b) => a + b, 0)} ÷ 7 = ${mean}.`],
     }),
     check: ({ list, sorted }, v) => list.filter(q => q === v[0]).length === 2 && sorted[3] === v[1] && v[2] * 7 === list.reduce((a, b) => a + b, 0) }),
 
-  fam({ id: 'g8.data.which-average-why', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.e', rung: 3, form: 'why',
+  fam({ id: 'g8.data.which-average-why', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.e', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE', misMapped: false, reveals: ['M_MEAN_FOR_SKEWED', 'M_MODE_FOR_TOTAL', 'M_RANGE_AS_AVERAGE'], rung: 3, form: 'why',
     draw: () => {
       const S = [['A shoe seller wants to know which size to stock the most of.', 'mode'], ['A tailor wants to know which school uniform size is bought most often, to sew more of it.', 'mode'], ['A duka owner records the flavour of soda bought each day and wants to know which to order the most of.', 'mode'],
         ['Five farmers pool their maize and then share it out equally between them.', 'mean'], ['A chama collects money from its members and then shares the whole amount out equally between them.', 'mean'], ['Four boda boda riders pool a week of fares and share it out equally.', 'mean'],

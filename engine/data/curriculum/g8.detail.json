@@ -1022,6 +1022,87 @@
     "an open box net"
    ],
    "mastery": "The child tells a hollow solid (a container, a tin, a box) from a compact one (a brick, a log), and plans a hollow model from a net with flaps for gluing, faces of matching sizes, and the right faces left open or closed."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW": {
+   "forms": [
+    "how many squares tall",
+    "choose a scale",
+    "draw the bars",
+    "label the axes"
+   ],
+   "mastery": "The child chooses a scale from zero, works out each bar's height in squares by dividing the value by what one square stands for, and draws bars of equal width with equal gaps, labelling both axes: 45 eggs at 1 square to 5 eggs is 9 squares tall."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET": {
+   "forms": [
+    "how many more",
+    "the two biggest together",
+    "which is the most",
+    "total"
+   ],
+   "mastery": "The child reads each bar against the scale, combines bars as the question asks, and answers \"how many more\" with a difference: the two biggest classes (45 + 42) have 25 more learners than the two smallest (32 + 30)."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW": {
+   "forms": [
+    "which graph is best and why",
+    "plot the readings",
+    "join the points",
+    "what goes on each axis"
+   ],
+   "mastery": "The child puts time along the bottom, plots each reading against its time, joins the points in order with straight lines, and chooses a line graph only for values that follow each other in time (a bar graph for separate groups)."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET": {
+   "forms": [
+    "by how much did it rise",
+    "the biggest rise",
+    "between which weeks did it fall",
+    "read the value"
+   ],
+   "mastery": "The child reads values at given times, finds the change between two readings by subtracting, finds the biggest rise or fall between readings next to each other, and says where the line goes up or down."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE": {
+   "forms": [
+    "the mode",
+    "from a frequency table",
+    "which shoe size is most common",
+    "two modes"
+   ],
+   "mastery": "The child finds the value that appears most often (from a list or a frequency table), gives the value and not its frequency, and knows a set can have two modes: in 12, 9, 15, 20, 15 the mode is 15."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN": {
+   "forms": [
+    "the mean",
+    "mean from a table",
+    "mean mark",
+    "average"
+   ],
+   "mastery": "The child adds all the values (multiplying each value by its frequency in a table) and divides by the number of values: goals of 0, 1, 2 and 3 in 2, 3, 4 and 1 matches give 14 ÷ 10 = 1.4 goals a match."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS": {
+   "forms": [
+    "the missing value",
+    "the new mean",
+    "what must the last one be",
+    "mean after adding"
+   ],
+   "mastery": "The child turns a mean into a total (mean × number of values), takes away the known values for a missing one, and for a new mean adds the new value to the old total before dividing by the new count: 4 sacks with mean 50 kg and a fifth of 60 kg give 260 ÷ 5 = 52 kg."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN": {
+   "forms": [
+    "the median",
+    "median from a table",
+    "what did he do wrong",
+    "even number of values"
+   ],
+   "mastery": "The child puts all the values in order (counting each value as often as its frequency), finds the middle one, and for an even number of values takes halfway between the two middle ones: 5, 9, 3, 7, 4 in order is 3, 4, 5, 7, 9, so the median is 5."
+  },
+  "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE": {
+   "forms": [
+    "mode, median and mean of the same data",
+    "which average should be used",
+    "why",
+    "which is the odd one"
+   ],
+   "mastery": "The child finds all three averages of one set of data without mixing them up, and chooses the median when one very large or small value would pull the mean, the mode for the most common item, and the mean for sharing a total equally."
   }
  }
 }

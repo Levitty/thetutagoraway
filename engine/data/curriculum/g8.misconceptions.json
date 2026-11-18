@@ -7264,5 +7264,635 @@
   "help": "An open box has no lid: five faces.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_VALUE_FOR_SQUARES": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW",
+  "error": "Gives the value as the number of squares.",
+  "example": {
+   "question": "45 eggs; 1 square stands for 5 eggs. Squares tall?",
+   "wrong_answer": "45",
+   "correct_answer": "9"
+  },
+  "cause": "Forgets the scale.",
+  "reveals": "The answer 45 as a wrong option, with a reason that names the idea.",
+  "help": "Each square stands for 5 eggs: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_SCALE_MULTIPLIED_BARS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW",
+  "error": "Multiplies by the scale instead of dividing.",
+  "example": {
+   "question": "45 eggs; 1 square to 5 eggs. Squares tall?",
+   "wrong_answer": "225",
+   "correct_answer": "9"
+  },
+  "cause": "Uses the wrong operation.",
+  "reveals": "The answer 225 as a wrong option, with a reason that names the idea.",
+  "help": "The bar has fewer squares than eggs.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_SHORTEST_BAR": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW",
+  "error": "Works out the shortest bar when the tallest is asked.",
+  "example": {
+   "question": "Eggs 20, 45, 30 at 1 square to 5. Tallest bar?",
+   "wrong_answer": "4",
+   "correct_answer": "9"
+  },
+  "cause": "Reads the wrong row.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Find the biggest value first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_BARS_UNEQUAL": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW",
+  "error": "Draws bars of different widths or with uneven gaps.",
+  "example": {
+   "question": "Must the bars be the same width?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes, with equal gaps"
+  },
+  "cause": "Thinks only height matters, so draws carelessly.",
+  "reveals": "The answer No as a wrong option, with a reason that names the idea.",
+  "help": "Equal widths so only the height shows the value.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW.M_AXIS_NOT_FROM_ZERO": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_DRAW",
+  "error": "Starts the value axis at a number above zero.",
+  "example": {
+   "question": "Values 20 to 45: start the axis at?",
+   "wrong_answer": "20",
+   "correct_answer": "0"
+  },
+  "cause": "Saves space.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Start at 0 or the bars mislead.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_ONE_GROUP_FOR_DIFFERENCE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET",
+  "error": "Gives one group's total when a difference is asked.",
+  "example": {
+   "question": "Classes 45, 42, 32, 30. Two biggest have how many more than two smallest?",
+   "wrong_answer": "87",
+   "correct_answer": "25"
+  },
+  "cause": "Stops after adding.",
+  "reveals": "The answer 87 as a wrong option, with a reason that names the idea.",
+  "help": "How many more: subtract the two totals.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_SINGLE_BARS_COMPARED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET",
+  "error": "Compares one bar with one bar when groups are asked.",
+  "example": {
+   "question": "Classes 45, 42, 32, 30. Two biggest more than two smallest by?",
+   "wrong_answer": "15",
+   "correct_answer": "25"
+  },
+  "cause": "Uses only the biggest and smallest.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Each group has two classes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_SUM_FOR_HOW_MANY_MORE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET",
+  "error": "Adds when \"how many more\" is asked.",
+  "example": {
+   "question": "Classes 45, 42, 32, 30. How many more?",
+   "wrong_answer": "149",
+   "correct_answer": "25"
+  },
+  "cause": "Adds every bar.",
+  "reveals": "The answer 149 as a wrong option, with a reason that names the idea.",
+  "help": "\"How many more\" is a difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET.M_SCALE_IGNORED_READING": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.BAR_GRAPH_INTERPRET",
+  "error": "Reads the number of squares as the value.",
+  "example": {
+   "question": "A bar is 9 squares tall; 1 square to 5. Value?",
+   "wrong_answer": "9",
+   "correct_answer": "45"
+  },
+  "cause": "Ignores the scale.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply the squares by 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_BAR_FOR_TIME": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW",
+  "error": "Chooses a bar graph for values that follow each other in time.",
+  "example": {
+   "question": "Temperature every hour: which graph?",
+   "wrong_answer": "bar graph",
+   "correct_answer": "line graph"
+  },
+  "cause": "Uses the graph met most often.",
+  "reveals": "The answer bar graph as a wrong option, with a reason that names the idea.",
+  "help": "Values over time: a line shows the change.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_LINE_FOR_GROUPS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW",
+  "error": "Chooses a line graph for separate groups.",
+  "example": {
+   "question": "Learners in each of four classes: which graph?",
+   "wrong_answer": "line graph",
+   "correct_answer": "bar graph"
+  },
+  "cause": "Thinks any data can be joined.",
+  "reveals": "The answer line graph as a wrong option, with a reason that names the idea.",
+  "help": "Separate groups have nothing in between to join.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_REASON_MISMATCHED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW",
+  "error": "Gives the right graph for the wrong reason.",
+  "example": {
+   "question": "Why a line graph for hourly readings?",
+   "wrong_answer": "because the groups are separate",
+   "correct_answer": "because it shows change over time"
+  },
+  "cause": "Remembers words without their meaning.",
+  "reveals": "The answer because the groups are separate as a wrong option, with a reason that names the idea.",
+  "help": "The reason must fit the graph.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_GRAPH_PURPOSE_CONFUSED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW",
+  "error": "Says a bar graph shows change from one time to the next.",
+  "example": {
+   "question": "What does a bar graph show best?",
+   "wrong_answer": "change over time",
+   "correct_answer": "separate groups side by side"
+  },
+  "cause": "Mixes up the two graphs.",
+  "reveals": "The answer change over time as a wrong option, with a reason that names the idea.",
+  "help": "Line: change over time. Bar: groups.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW.M_TIME_ON_UPRIGHT_AXIS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_DRAW",
+  "error": "Puts time on the upright axis.",
+  "example": {
+   "question": "Readings every hour: where does time go?",
+   "wrong_answer": "up the side",
+   "correct_answer": "along the bottom"
+  },
+  "cause": "Has no fixed habit.",
+  "reveals": "The answer up the side as a wrong option, with a reason that names the idea.",
+  "help": "Time goes along the bottom.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_HIGHEST_READING_FOR_RISE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Gives the highest reading as the biggest rise.",
+  "example": {
+   "question": "Tank: 200, 350, 400, 600 litres. Biggest rise between readings?",
+   "wrong_answer": "600",
+   "correct_answer": "200"
+  },
+  "cause": "Reads the top of the graph.",
+  "reveals": "The answer 600 as a wrong option, with a reason that names the idea.",
+  "help": "A rise is the jump between two readings.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_FIRST_TO_LAST_RISE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Gives the rise from the first reading to the last.",
+  "example": {
+   "question": "200, 350, 400, 600. Biggest rise between readings next to each other?",
+   "wrong_answer": "400",
+   "correct_answer": "200"
+  },
+  "cause": "Uses the whole graph.",
+  "reveals": "The answer 400 as a wrong option, with a reason that names the idea.",
+  "help": "Compare each step only.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_NOT_ALL_STEPS_COMPARED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Stops at a big rise without checking all the steps.",
+  "example": {
+   "question": "200, 350, 400, 600. Biggest rise?",
+   "wrong_answer": "150",
+   "correct_answer": "200"
+  },
+  "cause": "Picks the first big step.",
+  "reveals": "The answer 150 as a wrong option, with a reason that names the idea.",
+  "help": "List every step up, then compare.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_ONE_READING_FOR_CHANGE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Gives one reading when the change is asked.",
+  "example": {
+   "question": "Price 80 in week 2, 110 in week 5. Rise?",
+   "wrong_answer": "110",
+   "correct_answer": "30"
+  },
+  "cause": "Reads one point.",
+  "reveals": "The answer 110 as a wrong option, with a reason that names the idea.",
+  "help": "Change = later minus earlier.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_READINGS_ADDED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Adds two readings for the change.",
+  "example": {
+   "question": "Price 80 in week 2, 110 in week 5. Rise?",
+   "wrong_answer": "190",
+   "correct_answer": "30"
+  },
+  "cause": "Combines the numbers.",
+  "reveals": "The answer 190 as a wrong option, with a reason that names the idea.",
+  "help": "A change is a difference.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_WEEKS_FOR_PRICE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Gives the number of weeks between instead of the change in value.",
+  "example": {
+   "question": "Week 2 to week 5: price rise?",
+   "wrong_answer": "3",
+   "correct_answer": "30"
+  },
+  "cause": "Reads the bottom axis.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "The price is on the upright axis.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET.M_RISE_READ_AS_FALL": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET",
+  "error": "Picks a part where the line goes up as a fall.",
+  "example": {
+   "question": "Between which weeks did the number fall?",
+   "wrong_answer": "a week where the line goes up",
+   "correct_answer": "the one place the line goes down"
+  },
+  "cause": "Reads the slope backwards.",
+  "reveals": "The answer a week where the line goes up as a wrong option, with a reason that names the idea.",
+  "help": "Falling: the line goes down from left to right.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_BIGGEST_FOR_MODE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE",
+  "error": "Gives the biggest value as the mode.",
+  "example": {
+   "question": "12, 9, 15, 20, 15: mode?",
+   "wrong_answer": "20",
+   "correct_answer": "15"
+  },
+  "cause": "Thinks \"most\" means biggest.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Mode: the value that appears most often.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_MODE_AS_FREQUENCY": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE",
+  "error": "Gives how many times the mode appears instead of the value.",
+  "example": {
+   "question": "Shoe sizes: size 6 appears 9 times, the most. Mode?",
+   "wrong_answer": "9",
+   "correct_answer": "size 6"
+  },
+  "cause": "Reads the frequency column.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "The mode is the value, not the count.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_MODE_IS_MIDDLE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE",
+  "error": "Gives the middle value as the mode.",
+  "example": {
+   "question": "2, 2, 5, 8, 9: mode?",
+   "wrong_answer": "5",
+   "correct_answer": "2"
+  },
+  "cause": "Mixes mode with median.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Mode: most often. Median: middle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE.M_NO_MODE_WHEN_TIE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MODE",
+  "error": "Says there is no mode when two values appear equally often.",
+  "example": {
+   "question": "3, 3, 5, 6, 6, 8: mode?",
+   "wrong_answer": "no mode",
+   "correct_answer": "3 and 6"
+  },
+  "cause": "Thinks there can be only one mode.",
+  "reveals": "The answer no mode as a wrong option, with a reason that names the idea.",
+  "help": "Both 3 and 6 are modes.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_MEAN_OF_SCORES_NOT_WEIGHTED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
+  "error": "Finds the mean of the scores in the table, ignoring how often each happened.",
+  "example": {
+   "question": "Goals 0, 1, 2, 3 in 2, 3, 4, 1 matches. Mean?",
+   "wrong_answer": "1.5",
+   "correct_answer": "1.4"
+  },
+  "cause": "Uses the first column only.",
+  "reveals": "The answer 1.5 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply each score by its frequency first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_TOTAL_FOR_MEAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
+  "error": "Gives the total as the mean.",
+  "example": {
+   "question": "Goals 0, 1, 2, 3 in 2, 3, 4, 1 matches. Mean?",
+   "wrong_answer": "14",
+   "correct_answer": "1.4"
+  },
+  "cause": "Stops after adding.",
+  "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the number of matches.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_MODE_FOR_MEAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
+  "error": "Gives the mode as the mean.",
+  "example": {
+   "question": "Goals 0, 1, 2, 3 in 2, 3, 4, 1 matches. Mean?",
+   "wrong_answer": "2",
+   "correct_answer": "1.4"
+  },
+  "cause": "Mixes the averages.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The mean uses every match.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_DIVIDED_BY_ONE_LESS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
+  "error": "Divides the total by one less than the number of values.",
+  "example": {
+   "question": "6, 8, 7, 11: mean?",
+   "wrong_answer": "10.67",
+   "correct_answer": "8"
+  },
+  "cause": "Counts the gaps between values.",
+  "reveals": "The answer 10.67 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by how many values there are: 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN.M_MEDIAN_FOR_MEAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN",
+  "error": "Gives the middle value as the mean.",
+  "example": {
+   "question": "6, 8, 7, 11: mean?",
+   "wrong_answer": "7.5",
+   "correct_answer": "8"
+  },
+  "cause": "Mixes mean and median.",
+  "reveals": "The answer 7.5 as a wrong option, with a reason that names the idea.",
+  "help": "Mean = total ÷ number of values.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_MEAN_OF_MEANS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "error": "Averages the old mean with the new value as if they were two values.",
+  "example": {
+   "question": "4 sacks have a mean of 50 kg; a 60 kg sack is added. New mean?",
+   "wrong_answer": "55 kg",
+   "correct_answer": "52 kg"
+  },
+  "cause": "Treats the old mean as one value.",
+  "reveals": "The answer 55 kg as a wrong option, with a reason that names the idea.",
+  "help": "The old mean stands for 4 sacks: total 200.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_PART_ADDED_TO_MEAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "error": "Adds part of the new value to the mean.",
+  "example": {
+   "question": "Mean 50 kg for 4; add 60 kg. New mean?",
+   "wrong_answer": "62 kg",
+   "correct_answer": "52 kg"
+  },
+  "cause": "Shares the new value only.",
+  "reveals": "The answer 62 kg as a wrong option, with a reason that names the idea.",
+  "help": "Share the whole new total by 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_MEAN_UNCHANGED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "error": "Believes the mean stays the same when a different value is added.",
+  "example": {
+   "question": "Mean 50 for 4; add 60. New mean?",
+   "wrong_answer": "50 kg",
+   "correct_answer": "52 kg"
+  },
+  "cause": "Thinks the mean is fixed.",
+  "reveals": "The answer 50 kg as a wrong option, with a reason that names the idea.",
+  "help": "A heavier sack pulls the mean up.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_MEAN_FOR_MISSING": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "error": "Gives the mean as the missing value.",
+  "example": {
+   "question": "Mean 5 over 4 days; three days were 4, 6, 3. Fourth day?",
+   "wrong_answer": "5",
+   "correct_answer": "7"
+  },
+  "cause": "Thinks the missing value equals the mean.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Total needed: 5 × 4 = 20.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_KNOWN_MEAN_FOR_MISSING": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "error": "Gives the mean of the known values as the missing one.",
+  "example": {
+   "question": "Mean 5 over 4 days; three days 4, 6, 3. Fourth day?",
+   "wrong_answer": "4.33",
+   "correct_answer": "7"
+  },
+  "cause": "Finds a mean of what is known.",
+  "reveals": "The answer 4.33 as a wrong option, with a reason that names the idea.",
+  "help": "Find the total needed first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS.M_TOTAL_ADDED_FOR_MISSING": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS",
+  "error": "Adds the known values to the total needed.",
+  "example": {
+   "question": "Mean 5 over 4 days; three days 4, 6, 3. Fourth day?",
+   "wrong_answer": "33",
+   "correct_answer": "7"
+  },
+  "cause": "Adds instead of taking away.",
+  "reveals": "The answer 33 as a wrong option, with a reason that names the idea.",
+  "help": "Missing = total needed - known total.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MEDIAN_OF_LABELS": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
+  "error": "Gives the middle of the possible marks, not of the learners' marks.",
+  "example": {
+   "question": "Marks 1 to 5 with frequencies 1, 2, 2, 7, 3. Median?",
+   "wrong_answer": "3",
+   "correct_answer": "4"
+  },
+  "cause": "Takes the middle of the first column.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "List every learner's mark: the 8th of 15 is 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MODE_FOR_MEDIAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
+  "error": "Gives the mode as the median.",
+  "example": {
+   "question": "3, 4, 4, 7, 8, 9, 9, 9: median?",
+   "wrong_answer": "9",
+   "correct_answer": "7.5"
+  },
+  "cause": "Mixes the averages.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Median: the middle when in order.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MEAN_FOR_MEDIAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
+  "error": "Gives the mean as the median.",
+  "example": {
+   "question": "5, 9, 3, 7, 4: median?",
+   "wrong_answer": "5.6",
+   "correct_answer": "5"
+  },
+  "cause": "Adds and divides.",
+  "reveals": "The answer 5.6 as a wrong option, with a reason that names the idea.",
+  "help": "Median: order them and take the middle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_MEDIAN_UNSORTED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
+  "error": "Takes the middle of the list without putting it in order.",
+  "example": {
+   "question": "5, 9, 3, 7, 4: median?",
+   "wrong_answer": "3",
+   "correct_answer": "5"
+  },
+  "cause": "Skips ordering.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Put the numbers in order first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN.M_EVEN_COUNT_MIDDLE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN",
+  "error": "Picks one of the two middle values when there is an even number.",
+  "example": {
+   "question": "3, 4, 7, 9: median?",
+   "wrong_answer": "4",
+   "correct_answer": "5.5"
+  },
+  "cause": "Thinks there is always one middle.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Halfway between 4 and 7.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_MIDRANGE_FOR_MEAN": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE",
+  "error": "Takes halfway between the smallest and largest as the mean.",
+  "example": {
+   "question": "12, 9, 15, 20, 15, 11, 18: mean?",
+   "wrong_answer": "14.5",
+   "correct_answer": "14.3"
+  },
+  "cause": "Uses only the ends.",
+  "reveals": "The answer 14.5 as a wrong option, with a reason that names the idea.",
+  "help": "The mean uses all seven numbers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_MEAN_FOR_SKEWED": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE",
+  "error": "Chooses the mean when one very large value pulls it up.",
+  "example": {
+   "question": "Salaries 20,000, 22,000, 25,000 and 400,000: which average shows a typical salary?",
+   "wrong_answer": "the mean",
+   "correct_answer": "the median"
+  },
+  "cause": "Thinks the mean is always best.",
+  "reveals": "The answer the mean as a wrong option, with a reason that names the idea.",
+  "help": "One very large value pulls the mean; the median is not moved.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_MODE_FOR_TOTAL": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE",
+  "error": "Chooses the mode when a total must be shared equally.",
+  "example": {
+   "question": "Share 10 days of milk equally: which average?",
+   "wrong_answer": "the mode",
+   "correct_answer": "the mean"
+  },
+  "cause": "Picks the most common value.",
+  "reveals": "The answer the mode as a wrong option, with a reason that names the idea.",
+  "help": "Sharing a total equally is the mean.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE.M_RANGE_AS_AVERAGE": {
+  "skill": "MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.AVERAGES_COMPARE",
+  "error": "Gives the range as an average.",
+  "example": {
+   "question": "Is the range an average?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, it shows the spread"
+  },
+  "cause": "Groups all the data words together.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Range = largest - smallest: how spread out.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

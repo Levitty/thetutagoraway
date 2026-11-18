@@ -13,4 +13,5 @@ import * as construction from './construction.mjs';
 import * as graphs from './graphs.mjs';
 import * as scale from './scale.mjs';
 import * as solids from './solids.mjs';
-export const SUBS = [integers, fractions, decimals, squares, rates, expressions, equations, circles, area, money, construction, graphs, scale, solids];
+import * as data from './data.mjs';
+export const SUBS = [integers, fractions, decimals, squares, rates, expressions, equations, circles, area, money, construction, graphs, scale, solids, data];

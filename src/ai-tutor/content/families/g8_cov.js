@@ -204,7 +204,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ DATA
-  cov({ id: 'g8c.data.line-difference', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.d', form: 'graph', rung: 2,
+  cov({ id: 'g8c.data.line-difference', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET', form: 'graph', rung: 2,
     gen: () => {
       const ys = Array.from({ length: 6 }, () => randInt(5, 14) * 10), i = randInt(0, 2), j = randInt(i + 2, 5);
       if (ys[i] === ys[j]) return null;
@@ -212,12 +212,12 @@ export const FAMILIES = [
       const top = Math.max(...ys);
       return { question: `The line graph shows the price of a kilogram of onions at a market in six weeks. By how many shillings did the price ${up ? 'rise' : 'fall'} between week ${i + 1} and week ${j + 1}?`, answer: diff,
         model: { type: 'line-graph', data: { points: ys.map((y, k) => ({ x: k + 1, y })), xTicks: [1, 2, 3, 4, 5, 6], yTicks: Array.from({ length: Math.ceil(top / 20) + 1 }, (_, k) => k * 20), xLabel: 'Week', yLabel: 'Price (sh per kg)' } },
-        wrong: [[ys[j], `This is the price in week ${j + 1}. Take the price in week ${i + 1} from it.`], [ys[i] + ys[j], 'You added the two prices. The question asks for the change.'], [j - i, 'This is the number of weeks. Read the price on the vertical axis.'], [diff + 20, 'You read one tick too far on the axis. Check which marks the two points sit on.']],
+        wrong: [[ys[j], `This is the price in week ${j + 1}. Take the price in week ${i + 1} from it.`, 'M_ONE_READING_FOR_CHANGE'], [ys[i] + ys[j], 'You added the two prices. The question asks for the change.', 'M_READINGS_ADDED'], [j - i, 'This is the number of weeks. Read the price on the vertical axis.', 'M_WEEKS_FOR_PRICE'], [diff + 20, 'You read one tick too far on the axis. Check which marks the two points sit on.', 'SLIP']],
         hints: ['Read each price from the vertical axis. Use a ruler across from the point.', 'Take the smaller price from the bigger one.'],
         steps: [`Week ${i + 1}: ${ys[i]}. Week ${j + 1}: ${ys[j]}.`, `${Math.max(ys[i], ys[j])} − ${Math.min(ys[i], ys[j])} = ${diff} shillings.`], chk: (a) => a === Math.abs(ys[j] - ys[i]) };
     } }),
 
-  cov({ id: 'g8c.data.line-fall', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.d', form: 'graph', rung: 3,
+  cov({ id: 'g8c.data.line-fall', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.d', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.LINE_GRAPH_INTERPRET', misMapped: false, reveals: ['M_RISE_READ_AS_FALL'], form: 'graph', rung: 3,
     gen: () => {
       const ys = [randInt(6, 12) * 10]; for (let k = 1; k < 6; k++) ys.push(ys[k - 1] + 10 * randInt(1, 3));
       const f = randInt(1, 4); ys[f] = ys[f - 1] - 10 * randInt(1, 3); for (let k = f + 1; k < 6; k++) ys[k] = ys[k - 1] + 10 * randInt(1, 3);
@@ -235,7 +235,7 @@ export const FAMILIES = [
         steps: ys.slice(1).map((y, k) => `Week ${k + 1} to ${k + 2}: ${ys[k]} to ${y}, ${y < ys[k] ? 'a fall' : 'a rise'}.`) };
     } }),
 
-  cov({ id: 'g8c.data.mean-of-scores', skill: 'G6_MEAN', outcome: 'G8.DATA.f', form: 'word', rung: 2,
+  cov({ id: 'g8c.data.mean-of-scores', skill: 'G6_MEAN', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN', misMapped: false, reveals: ['M_TOTAL_FOR_MEAN', 'M_DIVIDED_BY_ONE_LESS', 'M_MEDIAN_FOR_MEAN'], form: 'word', rung: 2,
     gen: () => {
       const n = randInt(4, 6), mean = randInt(8, 30), vals = Array.from({ length: n }, () => mean + randInt(-6, 6));
       const adj = n * mean - vals.reduce((a, b) => a + b, 0); vals[0] += adj;
@@ -248,7 +248,7 @@ export const FAMILIES = [
         steps: [`Total: ${vals.join(' + ')} = ${sum}.`, `Mean = ${sum} ÷ ${n} = ${mean}.`], chk: (a) => a * n === vals.reduce((s, v) => s + v, 0) };
     } }),
 
-  cov({ id: 'g8c.data.mean-missing-value', skill: 'G6_MEAN', outcome: 'G8.DATA.f', form: 'word', rung: 3,
+  cov({ id: 'g8c.data.mean-missing-value', skill: 'G6_MEAN', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.f', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEAN_PROBLEMS', misMapped: false, reveals: ['M_MEAN_FOR_MISSING', 'M_KNOWN_MEAN_FOR_MISSING', 'M_TOTAL_ADDED_FOR_MISSING'], form: 'word', rung: 3,
     gen: () => {
       const n = randInt(4, 5), mean = randInt(12, 40), known = Array.from({ length: n - 1 }, () => mean + randInt(-8, 8)), last = n * mean - known.reduce((a, b) => a + b, 0);
       if (last < 1 || last === mean) return null;
@@ -259,7 +259,7 @@ export const FAMILIES = [
         steps: [`Total needed = ${mean} × ${n} = ${n * mean}.`, `${n * mean} − ${sumK} = ${last}.`], chk: (a) => (a + sumK) / n === mean };
     } }),
 
-  cov({ id: 'g8c.data.median-of-list', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.g', form: 'word', rung: 2,
+  cov({ id: 'g8c.data.median-of-list', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN', misMapped: false, reveals: ['M_MEDIAN_UNSORTED', 'M_MEAN_FOR_MEDIAN', 'M_EVEN_COUNT_MIDDLE'], form: 'word', rung: 2,
     gen: () => {
       const n = pick([5, 6, 7, 8]), vals = Array.from({ length: n }, () => randInt(3, 40)), sorted = [...vals].sort((a, b) => a - b);
       const median = n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
@@ -272,7 +272,7 @@ export const FAMILIES = [
         steps: [`In order: ${sorted.join(', ')}.`, n % 2 ? `The middle number is ${median}.` : `The two middle numbers are ${sorted[n / 2 - 1]} and ${sorted[n / 2]}, so the median is ${median}.`], chk: (a) => sorted.filter(v => v < a).length <= n / 2 && sorted.filter(v => v > a).length <= n / 2 };
     } }),
 
-  cov({ id: 'g8c.data.median-spot-reason', skill: 'G8_DATA_GRAPHS', outcome: 'G8.DATA.g', form: 'why', rung: 3,
+  cov({ id: 'g8c.data.median-spot-reason', skill: 'G8_DATA_GRAPHS', outcome: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.g', cskill: 'MATH.G8.DATA_H.DATA_PRESENTATION_AND_IN.MEDIAN', misMapped: false, reveals: ['M_MEDIAN_UNSORTED', 'M_MEAN_FOR_MEDIAN', 'M_MODE_FOR_MEDIAN'], form: 'why', rung: 3,
     gen: () => {
       const vals = Array.from({ length: 5 }, () => randInt(2, 30));
       const sorted = [...vals].sort((a, b) => a - b);
