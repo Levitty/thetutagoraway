@@ -230,6 +230,78 @@
     "what each gets"
    ],
    "mastery": "The child works out the cost of a fraction of a kilogram or metre, how many fractional pieces or packets can be cut or filled, and shares an amount by fractions, choosing to multiply or divide from the story: 3/4 kg at 120 shillings a kg costs 90 shillings; 6 m cut into 3/4 m pieces gives 8 pieces."
+  },
+  "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL": {
+   "forms": [
+    "fraction to decimal",
+    "by long division",
+    "make the denominator 100",
+    "mixed number to decimal"
+   ],
+   "mastery": "The child divides the numerator by the denominator (adding zeros after the point as needed) or makes the denominator a power of 10, and writes the decimal with each digit in its place: 3/8 = 0.375, 1/20 = 0.05, 7/4 = 1.75."
+  },
+  "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY": {
+   "forms": [
+    "recurring or not",
+    "which digits repeat",
+    "why does it never stop",
+    "will this fraction stop"
+   ],
+   "mastery": "The child sorts decimals into terminating and recurring, marks the repeating block (0.272727... has 27 repeating), and explains that a fraction in its simplest form recurs when its denominator has a prime factor other than 2 and 5: 5/12 recurs, 3/40 stops."
+  },
+  "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION": {
+   "forms": [
+    "let x =",
+    "multiply by 10 or 100",
+    "write as a fraction in simplest form",
+    "which fraction equals"
+   ],
+   "mastery": "The child lets x be the decimal, multiplies by 10 for one repeating digit or by 100 for two, subtracts x so the repeats cancel, divides and simplifies: 0.2727... gives 99x = 27, so x = 27/99 = 3/11."
+  },
+  "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES": {
+   "forms": [
+    "round to 1, 2 or 3 decimal places",
+    "a price to the nearest cent",
+    "a measurement",
+    "which is correct"
+   ],
+   "mastery": "The child counts the decimal places from the point, looks at the next digit, rounds up when it is 5 or more (carrying through a 9), and keeps the zeros the question asks for: 2.9765 to 2 d.p. is 2.98, 3.997 to 2 d.p. is 4.00."
+  },
+  "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES": {
+   "forms": [
+    "correct to 2 or 3 significant figures",
+    "how many significant figures",
+    "a population or a mass",
+    "find the mistake"
+   ],
+   "mastery": "The child counts significant figures from the first non-zero digit, rounds at the last one kept, and keeps zeros that hold the place in a whole number: 48,273 to 2 s.f. is 48,000; 0.004567 to 2 s.f. is 0.0046."
+  },
+  "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM": {
+   "forms": [
+    "write in standard form",
+    "write as an ordinary number",
+    "which step has the mistake",
+    "multiply in standard form"
+   ],
+   "mastery": "The child writes a number as A × 10 to a power with A from 1 up to but not including 10, the power counting the places the point moves (positive for large numbers, negative for small): 45,000 = 4.5 × 10⁴, 0.0032 = 3.2 × 10⁻³; when multiplying, multiplies the front numbers, adds the powers and adjusts so A stays below 10."
+  },
+  "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS": {
+   "forms": [
+    "work out",
+    "brackets first",
+    "where does the point go",
+    "which step has the mistake"
+   ],
+   "mastery": "The child works brackets, then multiplication and division, then addition and subtraction, places the point in a product by counting decimal places, and lines up points when adding: 2.5 + 0.4 × 1.3 = 3.02."
+  },
+  "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE": {
+   "forms": [
+    "profit altogether",
+    "change from a note",
+    "cost of the cloth",
+    "how much each"
+   ],
+   "mastery": "The child sets up a real problem with decimals (cloth at shillings a metre, items at shillings and cents, change from a note), works the cost of one, the cost of all, and the profit or change in the right order."
   }
  }
 }

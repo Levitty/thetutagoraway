@@ -1549,6 +1549,1135 @@ export const TEACHING_PACK_G8 = {
   "sub_strand": "MATH.G8.NUMBER.FRACTIONS",
   "sub_strand_name": "Fractions",
   "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+  "key_step": "The child says the fraction as a division (3 ÷ 8) and keeps dividing, writing zeros after the point, until it stops.",
+  "floor": {
+   "prerequisite": "Writes tenths and hundredths as decimals.",
+   "question": "7/100 as a decimal",
+   "answer": "0.07"
+  },
+  "representations": [
+   "a shared bar of 8 parts",
+   "long division with zeros after the point",
+   "the decimal"
+  ],
+  "steps": [
+   "Write top ÷ bottom.",
+   "Put the point and zeros after the top number.",
+   "Divide until it stops.",
+   "Check: is the answer less than 1 for a proper fraction?"
+  ],
+  "contexts": [
+   "3/8 of a cake",
+   "a 1/20 share of a harambee",
+   "litres of milk in a 7/4 jug"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3/8 = 3 ÷ 8."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3.",
+    "say": "Can 8 go into 3? What do we write after the 3?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say a point and a zero."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child does the long division."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_DIGITS_AS_DECIMAL",
+    "listen_for": [
+     "3.8"
+    ],
+    "ask": "Is 3/8 more or less than one?",
+    "repair": "Less: so 0.something.",
+    "error": "Writes the numerator and denominator side by side as a decimal.",
+    "example": {
+     "question": "3/8 as a decimal",
+     "wrong_answer": "3.8",
+     "correct_answer": "0.375"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_DIVIDE_WRONG_WAY",
+    "listen_for": [
+     "8 divided by 3"
+    ],
+    "ask": "Which number is shared?",
+    "repair": "Top ÷ bottom.",
+    "error": "Divides the denominator by the numerator.",
+    "example": {
+     "question": "3/8 as a decimal",
+     "wrong_answer": "2.667",
+     "correct_answer": "0.375"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_ZERO_PLACEHOLDER_DROPPED",
+    "listen_for": [
+     "0.5 for 1/20"
+    ],
+    "ask": "Is 1/20 the same as a half?",
+    "repair": "5 hundredths: 0.05.",
+    "error": "Drops the zero that holds the tenths place.",
+    "example": {
+     "question": "1/20 as a decimal",
+     "wrong_answer": "0.5",
+     "correct_answer": "0.05"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_REMAINDER_AS_DIGITS",
+    "listen_for": [
+     "1.3"
+    ],
+    "ask": "Is a remainder of 3 the same as 3 tenths?",
+    "repair": "Keep dividing.",
+    "error": "Stops the division and writes the remainder after the point.",
+    "example": {
+     "question": "7/4 as a decimal",
+     "wrong_answer": "1.3",
+     "correct_answer": "1.75"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 5/8 as a decimal.",
+    "answer": "0.625",
+    "shows": "division"
+   },
+   {
+    "question": "Write 3/25 as a decimal.",
+    "answer": "0.12",
+    "shows": "denominator 100"
+   }
+  ],
+  "name": "Convert a fraction to a decimal by division",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY",
+  "key_step": "The child simplifies the fraction, breaks the denominator into primes, and says it stops only if the primes are all 2s and 5s.",
+  "floor": {
+   "prerequisite": "Writes a number as a product of primes.",
+   "question": "40 as a product of primes",
+   "answer": "2 × 2 × 2 × 5"
+  },
+  "representations": [
+   "a calculator display",
+   "a factor tree of the denominator",
+   "the dot notation"
+  ],
+  "steps": [
+   "Simplify the fraction.",
+   "Factor the denominator into primes.",
+   "Only 2s and 5s: it stops.",
+   "Any other prime: it recurs; mark the repeating block."
+  ],
+  "contexts": [
+   "a calculator that fills its screen",
+   "sharing 1 shilling among 3",
+   "prices in thirds"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5/12 and 3/40."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child makes a factor tree for 12 and for 40."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 3 in 12.",
+    "say": "Which of these will stop?"
+   },
+   {
+    "beat": "predict",
+    "do": "Wait for the child to predict, then divide to check."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_PROPER_FRACTION_RECURS",
+    "listen_for": [
+     "top is smaller"
+    ],
+    "ask": "Does 3/4 stop?",
+    "repair": "0.75 stops: look at the primes.",
+    "error": "Believes a fraction recurs because the top is smaller than the bottom.",
+    "example": {
+     "question": "Does 3/4 give a recurring decimal?",
+     "wrong_answer": "Yes, 3 is less than 4",
+     "correct_answer": "No: 0.75"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_BIG_DENOMINATOR_RECURS",
+    "listen_for": [
+     "20 is big"
+    ],
+    "ask": "What are the primes of 20?",
+    "repair": "Only 2 and 5: it stops.",
+    "error": "Believes a denominator bigger than 10 makes the decimal recur.",
+    "example": {
+     "question": "Does 1/20 recur?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No: 0.05"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_ALL_FRACTIONS_RECUR",
+    "listen_for": [
+     "all recur"
+    ],
+    "ask": "What is 1/2 as a decimal?",
+    "repair": "0.5 stops.",
+    "error": "Believes every fraction gives a recurring decimal in the end.",
+    "example": {
+     "question": "Does 1/2 recur?",
+     "wrong_answer": "Yes, in the end",
+     "correct_answer": "No: 0.5"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_LONG_DECIMAL_IS_RECURRING",
+    "listen_for": [
+     "many digits"
+    ],
+    "ask": "Does a block repeat for ever?",
+    "repair": "Stopping is not recurring.",
+    "error": "Calls a long terminating decimal recurring.",
+    "example": {
+     "question": "Is 0.1234 recurring?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No, it stops"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_REPEAT_BLOCK_WRONG",
+    "listen_for": [
+     "7 repeats"
+    ],
+    "ask": "Read it in pairs: what do you see?",
+    "repair": "27, 27, 27.",
+    "error": "Marks the wrong digits as the repeating block.",
+    "example": {
+     "question": "Which digits repeat in 0.272727...?",
+     "wrong_answer": "7",
+     "correct_answer": "27"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Will 7/30 give a recurring decimal?",
+    "answer": "yes (30 has the prime 3)",
+    "shows": "prime factors"
+   },
+   {
+    "question": "Which digits repeat in 0.181818...?",
+    "answer": "18",
+    "shows": "the block"
+   }
+  ],
+  "name": "Identify recurring decimals and show the repeating digits",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "key_step": "The child multiplies x by 10 or 100 to move one whole block left of the point, so that subtracting x leaves a whole number.",
+  "floor": {
+   "prerequisite": "Simplifies a fraction.",
+   "question": "27/99 in simplest form",
+   "answer": "3/11"
+  },
+  "representations": [
+   "two lines, one under the other, with the repeats lined up",
+   "the subtraction",
+   "the simplified fraction"
+  ],
+  "steps": [
+   "Let x be the decimal.",
+   "Multiply by 10 (one repeating digit) or 100 (two).",
+   "Subtract x: the repeats cancel.",
+   "Divide and simplify."
+  ],
+  "contexts": [
+   "a calculator answer",
+   "a share of a prize",
+   "a measurement on a phone"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write x = 0.272727..."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 27.",
+    "say": "How many digits are in the block? What do we multiply by?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 100."
+   },
+   {
+    "beat": "write",
+    "do": "Write 100x = 27.272727... under it, repeats lined up."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child subtracts the two lines."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_NO_REPEAT_FRACTION",
+    "listen_for": [
+     "27/100"
+    ],
+    "ask": "Does 0.2727... stop at 0.27?",
+    "repair": "It is more: use the method.",
+    "error": "Writes the repeating digits over 10 or 100 as if the decimal stopped.",
+    "example": {
+     "question": "0.2727... as a fraction",
+     "wrong_answer": "27/100",
+     "correct_answer": "3/11"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_NINES_COUNT_WRONG",
+    "listen_for": [
+     "44/99"
+    ],
+    "ask": "How many digits repeat?",
+    "repair": "One digit, one nine.",
+    "error": "Uses the wrong number of nines for the block.",
+    "example": {
+     "question": "0.444... as a fraction",
+     "wrong_answer": "44/99",
+     "correct_answer": "4/9"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_MULTIPLIER_WRONG_POWER",
+    "listen_for": [
+     "times 10"
+    ],
+    "ask": "Does one block move past the point?",
+    "repair": "Two digits: times 100.",
+    "error": "Multiplies x by 10 when the block has two digits.",
+    "example": {
+     "question": "x = 0.2727... Multiply by what?",
+     "wrong_answer": "10",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_COEFFICIENT_FOR_VALUE",
+    "listen_for": [
+     "99"
+    ],
+    "ask": "What is left after the repeats cancel?",
+    "repair": "The block: 27.",
+    "error": "Gives the number of x (99) when the value of 99x is asked.",
+    "example": {
+     "question": "100x - x = 99x. What is 99x equal to, for 0.2727...?",
+     "wrong_answer": "99",
+     "correct_answer": "27"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_FRACTION_NOT_SIMPLIFIED",
+    "listen_for": [
+     "27/99"
+    ],
+    "ask": "Do 27 and 99 share a factor?",
+    "repair": "9: simplify.",
+    "error": "Leaves the fraction over 99 or 9 without simplifying.",
+    "example": {
+     "question": "0.2727... in simplest form",
+     "wrong_answer": "27/99",
+     "correct_answer": "3/11"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_DENOMINATOR_AS_HCF",
+    "listen_for": [
+     "99"
+    ],
+    "ask": "Does 99 go into 27?",
+    "repair": "The HCF divides both.",
+    "error": "Takes the denominator as the HCF of the numerator and denominator.",
+    "example": {
+     "question": "HCF of 27 and 99",
+     "wrong_answer": "99",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_NUMERATOR_FOR_DENOMINATOR",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Which number is below the line?",
+    "repair": "11.",
+    "error": "Gives the numerator when the denominator is asked.",
+    "example": {
+     "question": "3/11: the bottom number",
+     "wrong_answer": "3",
+     "correct_answer": "11"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 0.777... as a fraction.",
+    "answer": "7/9",
+    "shows": "one digit"
+   },
+   {
+    "question": "Write 0.363636... in simplest form.",
+    "answer": "4/11",
+    "shows": "two digits and simplify"
+   }
+  ],
+  "name": "Convert a recurring decimal to a fraction",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+  "key_step": "The child underlines the last place to keep and looks at the very next digit only.",
+  "floor": {
+   "prerequisite": "Rounds a whole number.",
+   "question": "3,476 to the nearest hundred",
+   "answer": "3,500"
+  },
+  "representations": [
+   "a number line between 2.97 and 2.98",
+   "the digit underlined",
+   "the rounded number"
+  ],
+  "steps": [
+   "Count the places from the point.",
+   "Underline the last one kept.",
+   "Next digit 5 or more: round up.",
+   "Write the zeros the question asks for."
+  ],
+  "contexts": [
+   "a price in shillings and cents",
+   "a runner's time",
+   "a length in metres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2.976 and underline the 7."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 6.",
+    "say": "Is this 5 or more?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a number line from 2.97 to 2.98 and mark 2.976."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_DP_TRUNCATED",
+    "listen_for": [
+     "2.97"
+    ],
+    "ask": "Which end of the line is 2.976 nearer?",
+    "repair": "Round, do not cut.",
+    "error": "Cuts the decimal off instead of rounding.",
+    "example": {
+     "question": "2.976 to 2 d.p.",
+     "wrong_answer": "2.97",
+     "correct_answer": "2.98"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_NINE_NO_CARRY",
+    "listen_for": [
+     "3.10"
+    ],
+    "ask": "What is 9 tenths and 1 more tenth?",
+    "repair": "A whole: 4.0.",
+    "error": "Rounds a 9 up to 10 in its place without carrying.",
+    "example": {
+     "question": "3.97 to 1 d.p.",
+     "wrong_answer": "3.10",
+     "correct_answer": "4.0"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_TRAILING_ZERO_DROPPED",
+    "listen_for": [
+     "4"
+    ],
+    "ask": "How many decimal places are asked?",
+    "repair": "Write 4.00.",
+    "error": "Leaves off a zero the question asks for.",
+    "example": {
+     "question": "3.996 to 2 d.p.",
+     "wrong_answer": "4",
+     "correct_answer": "4.00"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_ROUNDED_IN_STEPS",
+    "listen_for": [
+     "2.4"
+    ],
+    "ask": "Which digit comes right after the tenths?",
+    "repair": "Only the 4 decides: 2.3.",
+    "error": "Rounds one place at a time from the end.",
+    "example": {
+     "question": "2.346 to 1 d.p.",
+     "wrong_answer": "2.4",
+     "correct_answer": "2.3"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_DP_COUNTED_FROM_LEFT",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Where do decimal places start?",
+    "repair": "After the point.",
+    "error": "Counts decimal places from the first digit of the number.",
+    "example": {
+     "question": "14.567 to 2 d.p.",
+     "wrong_answer": "15",
+     "correct_answer": "14.57"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Round 5.6849 to 2 decimal places.",
+    "answer": "5.68",
+    "shows": "next digit 4"
+   },
+   {
+    "question": "Round 7.996 to 2 decimal places.",
+    "answer": "8.00",
+    "shows": "carry through 9s"
+   }
+  ],
+  "name": "Round a decimal to a given number of decimal places",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES",
+  "key_step": "The child finds the first non-zero digit, counts the figures from there, rounds at the last one and fills the places with zeros.",
+  "floor": {
+   "prerequisite": "Rounds to decimal places.",
+   "question": "0.0046 to 3 d.p.",
+   "answer": "0.005"
+  },
+  "representations": [
+   "the digits with the first non-zero circled",
+   "a number line",
+   "the rounded number"
+  ],
+  "steps": [
+   "Circle the first non-zero digit.",
+   "Count the figures needed.",
+   "Round at the last one.",
+   "Keep the place-holding zeros."
+  ],
+  "contexts": [
+   "the population of a county",
+   "kilometres a matatu travels in a year",
+   "the mass of a grain of rice"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 48,763."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 4.",
+    "say": "Which are the first two significant figures?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say 4 and 8."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: will the answer be nearer 48 thousand or 49 thousand?"
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_TRUNCATED",
+    "listen_for": [
+     "48,000"
+    ],
+    "ask": "What is the next digit after the 8?",
+    "repair": "7: round up.",
+    "error": "Cuts the number off instead of rounding.",
+    "example": {
+     "question": "48,763 to 2 s.f.",
+     "wrong_answer": "48,000",
+     "correct_answer": "49,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_COUNT_WRONG",
+    "listen_for": [
+     "48,800"
+    ],
+    "ask": "How many figures did you keep?",
+    "repair": "Two only.",
+    "error": "Gives one significant figure too many or too few.",
+    "example": {
+     "question": "48,763 to 2 s.f.",
+     "wrong_answer": "48,800",
+     "correct_answer": "49,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_PLACE_ZEROS_DROPPED",
+    "listen_for": [
+     "49"
+    ],
+    "ask": "Is 49 close to 48,763?",
+    "repair": "Keep the thousands: 49,000.",
+    "error": "Leaves out the zeros that hold the place in a whole number.",
+    "example": {
+     "question": "48,763 to 2 s.f.",
+     "wrong_answer": "49",
+     "correct_answer": "49,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_AS_DP",
+    "listen_for": [
+     "0.00"
+    ],
+    "ask": "Where do significant figures start?",
+    "repair": "At the first non-zero digit.",
+    "error": "Rounds to decimal places when significant figures are asked.",
+    "example": {
+     "question": "0.004567 to 2 s.f.",
+     "wrong_answer": "0.00",
+     "correct_answer": "0.0046"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_LEADING_ZEROS_COUNTED",
+    "listen_for": [
+     "0.00"
+    ],
+    "ask": "Do the front zeros count?",
+    "repair": "They hold the place only.",
+    "error": "Counts the zeros at the front of a small decimal as significant.",
+    "example": {
+     "question": "0.004567 to 3 s.f.",
+     "wrong_answer": "0.00",
+     "correct_answer": "0.00457"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 63,482 to 2 significant figures.",
+    "answer": "63,000",
+    "shows": "whole number"
+   },
+   {
+    "question": "Write 0.07069 to 2 significant figures.",
+    "answer": "0.071",
+    "shows": "small decimal"
+   }
+  ],
+  "name": "Write a number to a given number of significant figures",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "key_step": "The child moves the point until one non-zero digit is in front of it and counts the jumps as the power: positive if the number was big, negative if it was small.",
+  "floor": {
+   "prerequisite": "Multiplies by powers of 10.",
+   "question": "4.5 × 10,000",
+   "answer": "45,000"
+  },
+  "representations": [
+   "place value columns",
+   "jumps of the point drawn as arrows",
+   "A × 10 to a power"
+  ],
+  "steps": [
+   "Place the point after the first non-zero digit.",
+   "Count the jumps.",
+   "Big number: positive power. Small: negative.",
+   "Check A is from 1 to under 10."
+  ],
+  "contexts": [
+   "money raised at a harambee",
+   "households in a county",
+   "the width of a hair"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 45000."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child draws arrows for each jump of the point to 4.5."
+   },
+   {
+    "beat": "count",
+    "do": "Count the jumps with the child."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 4.5 × 10⁴."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWER_AS_DIGIT_COUNT",
+    "listen_for": [
+     "10 to the 5"
+    ],
+    "ask": "How many jumps did the point make?",
+    "repair": "Four jumps.",
+    "error": "Uses the number of digits as the power of 10.",
+    "example": {
+     "question": "45,000 in standard form",
+     "wrong_answer": "4.5 × 10⁵",
+     "correct_answer": "4.5 × 10⁴"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_FRONT_NOT_BETWEEN_1_10",
+    "listen_for": [
+     "45 × 10³"
+    ],
+    "ask": "Is 45 less than 10?",
+    "repair": "One digit before the point.",
+    "error": "Writes a front number of 10 or more, or less than 1.",
+    "example": {
+     "question": "45,000 in standard form",
+     "wrong_answer": "45 × 10³",
+     "correct_answer": "4.5 × 10⁴"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWER_SIGN_WRONG",
+    "listen_for": [
+     "positive power for 0.0032"
+    ],
+    "ask": "Is 0.0032 bigger or smaller than 1?",
+    "repair": "Smaller: negative power.",
+    "error": "Gives a small number a positive power, or a large number a negative one.",
+    "example": {
+     "question": "0.0032 in standard form",
+     "wrong_answer": "3.2 × 10³",
+     "correct_answer": "3.2 × 10⁻³"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWER_MISCOUNTED",
+    "listen_for": [
+     "10 to the minus 2"
+    ],
+    "ask": "Count each jump again.",
+    "repair": "Three jumps.",
+    "error": "Counts the places the point moves one too many or one too few.",
+    "example": {
+     "question": "0.0032 in standard form",
+     "wrong_answer": "3.2 × 10⁻²",
+     "correct_answer": "3.2 × 10⁻³"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_SF_FRONTS_ADDED",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "What do we do to the front numbers?",
+    "repair": "Multiply them.",
+    "error": "Adds the front numbers when two numbers in standard form are multiplied.",
+    "example": {
+     "question": "(2 × 10³) × (3 × 10⁴): front number",
+     "wrong_answer": "5",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWERS_MULTIPLIED",
+    "listen_for": [
+     "12"
+    ],
+    "ask": "Ten cubed times ten to the four: how many tens?",
+    "repair": "Add the powers.",
+    "error": "Multiplies the powers when multiplying numbers in standard form.",
+    "example": {
+     "question": "(2 × 10³) × (3 × 10⁴): the power",
+     "wrong_answer": "12",
+     "correct_answer": "7"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_FRONT_NOT_ADJUSTED",
+    "listen_for": [
+     "20 × 10⁵"
+    ],
+    "ask": "Is 20 allowed in front?",
+    "repair": "20 = 2 × 10: one more power.",
+    "error": "Leaves a product front number of 10 or more without moving a 10 into the power.",
+    "example": {
+     "question": "(4 × 10³) × (5 × 10²)",
+     "wrong_answer": "20 × 10⁵",
+     "correct_answer": "2 × 10⁶"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_ZEROS_MISCOUNTED",
+    "listen_for": [
+     "20,000,000"
+    ],
+    "ask": "How many jumps for 10 to the 6?",
+    "repair": "Six.",
+    "error": "Writes the ordinary number with the wrong number of zeros.",
+    "example": {
+     "question": "2 × 10⁶ as an ordinary number",
+     "wrong_answer": "20,000,000",
+     "correct_answer": "2,000,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 3,800,000 in standard form.",
+    "answer": "3.8 × 10⁶",
+    "shows": "large number"
+   },
+   {
+    "question": "Write 0.00051 in standard form.",
+    "answer": "5.1 × 10⁻⁴",
+    "shows": "small number"
+   }
+  ],
+  "name": "Write numbers in standard form and work with them",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS",
+  "key_step": "The child circles the multiplication or division first and counts decimal places to place the point.",
+  "floor": {
+   "prerequisite": "Multiplies decimals.",
+   "question": "0.4 × 1.3",
+   "answer": "0.52"
+  },
+  "representations": [
+   "money as shillings and cents",
+   "columns with points lined up",
+   "the working"
+  ],
+  "steps": [
+   "Brackets first.",
+   "Multiply or divide; count decimal places.",
+   "Add or subtract with points lined up.",
+   "Check the size is sensible."
+  ],
+  "contexts": [
+   "a class competition",
+   "mixing paint",
+   "measuring cloth"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2.5 + 0.4 × 1.3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ×.",
+    "say": "Which do we work first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child works 0.4 × 1.3 and counts the places."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_POINT_PLACES_PRODUCT",
+    "listen_for": [
+     "5.2"
+    ],
+    "ask": "How many decimal places in 0.4 and 1.3 together?",
+    "repair": "Two.",
+    "error": "Puts the point in a product by copying one number's decimal places.",
+    "example": {
+     "question": "0.4 × 1.3",
+     "wrong_answer": "5.2",
+     "correct_answer": "0.52"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_DEC_LEFT_TO_RIGHT",
+    "listen_for": [
+     "3.77"
+    ],
+    "ask": "Which comes first, + or ×?",
+    "repair": "Multiply first.",
+    "error": "Works from left to right, adding before multiplying.",
+    "example": {
+     "question": "2.5 + 0.4 × 1.3",
+     "wrong_answer": "3.77",
+     "correct_answer": "3.02"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_DEC_ALL_ADDED",
+    "listen_for": [
+     "4.2"
+    ],
+    "ask": "What does the × sign tell you?",
+    "repair": "Multiply.",
+    "error": "Adds all the numbers whatever the signs.",
+    "example": {
+     "question": "2.5 + 0.4 × 1.3",
+     "wrong_answer": "4.2",
+     "correct_answer": "3.02"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_POINTS_NOT_LINED_UP",
+    "listen_for": [
+     "0.77"
+    ],
+    "ask": "Are tenths under tenths?",
+    "repair": "Line up the points.",
+    "error": "Lines up the last digits instead of the points when adding.",
+    "example": {
+     "question": "2.5 + 0.52",
+     "wrong_answer": "0.77",
+     "correct_answer": "3.02"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_DIVISOR_POINT_NOT_MOVED",
+    "listen_for": [
+     "0.4"
+    ],
+    "ask": "How many 0.3s are in 1.2?",
+    "repair": "Make the divisor whole: 12 ÷ 3.",
+    "error": "Divides by a decimal without making the divisor a whole number.",
+    "example": {
+     "question": "1.2 ÷ 0.3",
+     "wrong_answer": "0.4",
+     "correct_answer": "4"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Work out 1.5 + 0.2 × 3.4.",
+    "answer": "2.18",
+    "shows": "multiply first"
+   },
+   {
+    "question": "Work out (4.2 - 1.8) ÷ 0.6.",
+    "answer": "4",
+    "shows": "brackets then divide"
+   }
+  ],
+  "name": "Work out combined operations on decimals in the correct order",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "key_step": "The child writes the cost of one item first, then the cost of all, and says whether the question wants profit, change or a total.",
+  "floor": {
+   "prerequisite": "Finds profit.",
+   "question": "Bought for 300, sold for 450. Profit?",
+   "answer": "150 shillings"
+  },
+  "representations": [
+   "a receipt",
+   "a table of cost and sale",
+   "the working"
+  ],
+  "steps": [
+   "Cost of one item.",
+   "Cost of all items.",
+   "Money in from selling.",
+   "Profit or change: subtract."
+  ],
+  "contexts": [
+   "a tailor in Gikomba",
+   "buying pens at a bookshop",
+   "selling mandazi"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: one dress, cloth 2.5 m at 120, sold at 900."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2.5 m and 120.",
+    "say": "What does the cloth for one dress cost?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills the row for 5 dresses."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_INCOME_FOR_PROFIT",
+    "listen_for": [
+     "4,500"
+    ],
+    "ask": "Did the tailor spend anything?",
+    "repair": "Take the cost away.",
+    "error": "Gives the money from selling as the profit.",
+    "example": {
+     "question": "5 dresses sold at 900 shillings, cloth 2.5 m at 120 a metre each. Profit?",
+     "wrong_answer": "4,500",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_COST_FOR_PROFIT",
+    "listen_for": [
+     "1,500"
+    ],
+    "ask": "Is that money in or money out?",
+    "repair": "Profit is in minus out.",
+    "error": "Gives the total cost as the profit.",
+    "example": {
+     "question": "5 dresses at 900, cloth 2.5 m at 120 each. Profit?",
+     "wrong_answer": "1,500",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_ONE_ITEM_ONLY",
+    "listen_for": [
+     "600"
+    ],
+    "ask": "How many dresses?",
+    "repair": "Multiply by 5.",
+    "error": "Works for one item when the question asks for all of them.",
+    "example": {
+     "question": "5 dresses at 900, cloth 2.5 m at 120 each. Profit?",
+     "wrong_answer": "600",
+     "correct_answer": "3,000"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_RATE_FOR_ITEM_COST",
+    "listen_for": [
+     "120"
+    ],
+    "ask": "How many metres does a dress use?",
+    "repair": "Length × price.",
+    "error": "Uses the price of one metre as the cost of one item.",
+    "example": {
+     "question": "A dress uses 2.5 m at 120 shillings a metre. Cloth cost of a dress?",
+     "wrong_answer": "120",
+     "correct_answer": "300"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_COST_FOR_CHANGE",
+    "listen_for": [
+     "136.50"
+    ],
+    "ask": "Is that what she pays or what she gets back?",
+    "repair": "Change = paid - cost.",
+    "error": "Gives the total cost when the change is asked.",
+    "example": {
+     "question": "3 pens at 45.50 shillings, paid with 200. Change?",
+     "wrong_answer": "136.50",
+     "correct_answer": "63.50"
+    }
+   },
+   {
+    "code": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_CHANGE_ADDED",
+    "listen_for": [
+     "336.50"
+    ],
+    "ask": "Does change make the money bigger?",
+    "repair": "Subtract.",
+    "error": "Adds the cost to the money paid to find the change.",
+    "example": {
+     "question": "3 pens at 45.50, paid with 200. Change?",
+     "wrong_answer": "336.50",
+     "correct_answer": "63.50"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "4 shirts each use 1.5 m of cloth at 200 shillings a metre and sell for 650 each. Profit?",
+    "answer": "1,400 shillings",
+    "shows": "profit"
+   },
+   {
+    "question": "5 exercise books at 37.50 shillings; paid with 500. Change?",
+    "answer": "312.50 shillings",
+    "shows": "change"
+   }
+  ],
+  "name": "Apply decimals to money, measures and profit in real life",
+  "sub_strand": "MATH.G8.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 18 Nov 2026 offline for Grade 8; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G8;

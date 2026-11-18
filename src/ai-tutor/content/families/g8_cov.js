@@ -23,7 +23,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ DECIMALS
-  cov({ id: 'g8c.dec.recurring-to-fraction', skill: 'G8_RECURRING_DECIMALS', outcome: 'G8.DEC.c', form: 'direct', rung: 3,
+  cov({ id: 'g8c.dec.recurring-to-fraction', skill: 'G8_RECURRING_DECIMALS', outcome: 'MATH.G8.NUMBER.DECIMALS.c', cskill: 'MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION', misMapped: false, reveals: ['M_NO_REPEAT_FRACTION', 'M_NINES_COUNT_WRONG'], form: 'direct', rung: 3,
     gen: () => {
       const two = Math.random() < 0.6, rep = two ? randInt(10, 98) : randInt(1, 8), den = two ? 99 : 9;
       if (two && rep % 11 === 0) return null;
@@ -34,7 +34,7 @@ export const FAMILIES = [
         steps: [`Let x = ${dec}. Then ${two ? 100 : 10}x = ${shown}.${shown.repeat(3)}...`, `Subtract: ${two ? 99 : 9}x = ${rep}, so x = ${rep}/${den} = ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.dec.significant-figures', skill: 'G8_STANDARD_FORM', outcome: 'G8.DEC.e', form: 'word', rung: 2,
+  cov({ id: 'g8c.dec.significant-figures', skill: 'G8_STANDARD_FORM', outcome: 'MATH.G8.NUMBER.DECIMALS.e', cskill: 'MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES', misMapped: false, reveals: ['M_SF_TRUNCATED', 'M_SF_COUNT_WRONG', 'M_SF_PLACE_ZEROS_DROPPED', 'M_SF_AS_DP'], form: 'word', rung: 2,
     gen: () => {
       const big = Math.random() < 0.5, sf = randInt(2, 3), p = person();
       let x, w, txt, unit;
@@ -50,7 +50,7 @@ export const FAMILIES = [
         steps: [`The first ${sf} significant figures are ${String(x).replace('.', '').slice(0, sf)}.`, `Rounding gives ${big ? commas(right) : right}.`], chk: (a) => Math.abs(a - x) <= (big ? 10 ** (String(x).length - sf) : 10 ** (Math.floor(Math.log10(x)) - sf + 1)) / 2 + 1e-9 };
     } }),
 
-  cov({ id: 'g8c.dec.to-standard-form', skill: 'G8_STANDARD_FORM', outcome: 'G8.DEC.f', form: 'direct', rung: 2,
+  cov({ id: 'g8c.dec.to-standard-form', skill: 'G8_STANDARD_FORM', outcome: 'MATH.G8.NUMBER.DECIMALS.f', cskill: 'MATH.G8.NUMBER.DECIMALS.STANDARD_FORM', misMapped: false, reveals: ['M_FRONT_NOT_BETWEEN_1_10', 'M_POWER_MISCOUNTED', 'M_POWER_SIGN_WRONG'], form: 'direct', rung: 2,
     gen: () => {
       const small = Math.random() < 0.4, m = randInt(11, 99) / 10, e = small ? -randInt(2, 6) : randInt(3, 8);
       if (m % 1 === 0) return null;
@@ -64,7 +64,7 @@ export const FAMILIES = [
         steps: [`Write ${m} as the first number, so that it is between 1 and 10.`, `The point moves ${Math.abs(e)} places, so the power is ${e}: ${right}.`] };
     } }),
 
-  cov({ id: 'g8c.dec.combined-operations', skill: 'G8_DECIMALS_COMBINED', outcome: 'G8.DEC.g', form: 'direct', rung: 3,
+  cov({ id: 'g8c.dec.combined-operations', skill: 'G8_DECIMALS_COMBINED', outcome: 'MATH.G8.NUMBER.DECIMALS.g', cskill: 'MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS', misMapped: false, reveals: ['M_DEC_LEFT_TO_RIGHT', 'M_DEC_ALL_ADDED', 'M_POINT_PLACES_PRODUCT'], form: 'direct', rung: 3,
     gen: () => {
       const a = randInt(11, 99) / 10, b = randInt(11, 59) / 10, c = randInt(2, 9) / 2, kind = pick(['add-mul', 'bracket']);
       if (a % 1 === 0 || b % 1 === 0) return null;
@@ -78,7 +78,7 @@ export const FAMILIES = [
         steps: kind === 'add-mul' ? [`${b} × ${c} = ${round(b * c, 3)}.`, `${a} + ${round(b * c, 3)} = ${right}.`] : [`${a} − ${b} = ${round(a - b, 3)}.`, `${round(a - b, 3)} × ${c} = ${right}.`], chk: (r) => (kind === 'add-mul' ? Math.abs(r - a - b * c) < 1e-6 : Math.abs(r - (a - b) * c) < 1e-6) };
     } }),
 
-  cov({ id: 'g8c.dec.shopping-change', skill: 'G8_DECIMALS_COMBINED', outcome: 'G8.DEC.h', form: 'word', rung: 2,
+  cov({ id: 'g8c.dec.shopping-change', skill: 'G8_DECIMALS_COMBINED', outcome: 'MATH.G8.NUMBER.DECIMALS.h', cskill: 'MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE', misMapped: false, reveals: ['M_ONE_ITEM_ONLY', 'M_COST_FOR_CHANGE', 'M_CHANGE_ADDED'], form: 'word', rung: 2,
     gen: () => {
       const item = pick([['kg of rice', 142.5], ['kg of sugar', 167.5], ['litres of milk', 62.5], ['kg of beans', 187.5], ['kg of maize flour', 112.5]]), n = randInt(2, 6), per = item[1] + pick([-10, 0, 10, 12.5]), pay = Math.ceil(n * per / 500) * 500 + (Math.random() < 0.5 ? 0 : 500), cost = round(n * per, 2), ch = round(pay - cost, 2), p = person();
       const w = [[round(pay - per, 2), `You took the price of one from the money paid. Find the cost of all ${n} first.`], [cost, 'This is the total cost. The question asks for the change, so take it from the money paid.'], [round(pay + cost, 2), 'You added. Change is the money paid minus the cost.'], [round(pay - n * Math.floor(per), 2), 'The shillings and cents were not both used. Multiply the full price.']];

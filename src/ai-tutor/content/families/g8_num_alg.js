@@ -181,7 +181,7 @@ export const FAMILIES = [
     check: ({ fr, mins }, a) => Math.abs(a / 480 + fr.reduce((s, [n, d]) => s + n / d, 0) - 1) < 1e-9 }),
 
   // ======================================================== DECIMALS
-  fam({ id: 'g8.dec.recurring-why', skill: 'G8_RECURRING_DECIMALS', outcome: 'G8.DEC.a', rung: 2, form: 'why',
+  fam({ id: 'g8.dec.recurring-why', skill: 'G8_RECURRING_DECIMALS', outcome: 'MATH.G8.NUMBER.DECIMALS.b', cskill: 'MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY', rung: 2, form: 'why',
     draw: () => { const den = pick([12, 14, 15, 18, 21, 22, 24, 33]); const n = randInt(1, den - 1); return gcd(n, den) === 1 ? { n, den } : null; },
     make: ({ n, den }) => {
       let q = den; for (const f of [2, 5]) while (q % f === 0) q /= f;
@@ -189,30 +189,30 @@ export const FAMILIES = [
       return { question: `A calculator shows that ${n}/${den} is a recurring decimal. Why does it never stop?`,
         options: [
           { text: `${den} has a prime factor ${prime}, not only 2 and 5`, right: q > 1 },
-          { text: `The top number is smaller than the bottom number`, right: false, why: 'Every proper fraction is like that, and 3/4 = 0.75 stops.' },
-          { text: `${den} is bigger than 10, so the decimal never stops`, right: false, why: '1/20 = 0.05 stops, and 20 is bigger than 10.' },
-          { text: 'Every fraction gives a recurring decimal in the end', right: false, why: 'Not so. 1/2 = 0.5 and 3/4 = 0.75 both stop.' },
+          { text: `The top number is smaller than the bottom number`, right: false, why: 'Every proper fraction is like that, and 3/4 = 0.75 stops.', mis: 'M_PROPER_FRACTION_RECURS' },
+          { text: `${den} is bigger than 10, so the decimal never stops`, right: false, why: '1/20 = 0.05 stops, and 20 is bigger than 10.', mis: 'M_BIG_DENOMINATOR_RECURS' },
+          { text: 'Every fraction gives a recurring decimal in the end', right: false, why: 'Not so. 1/2 = 0.5 and 3/4 = 0.75 both stop.', mis: 'M_ALL_FRACTIONS_RECUR' },
         ],
         hints: [`Break ${den} into prime factors.`, 'A decimal stops only if the bottom number is made of 2s and 5s.'],
         steps: [`${den} = ${(() => { const f = []; let m = den; for (let k = 2; m > 1; k++) while (m % k === 0) { f.push(k); m /= k; } return f.join(' × '); })()}.`, `A factor of ${prime} is not 2 or 5, so the division never ends and the digits repeat.`] };
     } }),
 
-  fam({ id: 'g8.dec.recurring-steps', skill: 'G8_RECURRING_DECIMALS', outcome: 'G8.DEC.a', rung: 3, form: 'steps',
+  fam({ id: 'g8.dec.recurring-steps', skill: 'G8_RECURRING_DECIMALS', outcome: 'MATH.G8.NUMBER.DECIMALS.c', cskill: 'MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION', rung: 3, form: 'steps',
     draw: () => { const ab = randInt(12, 98); return ab % 11 === 0 || gcd(ab, 99) === 1 ? null : { ab }; },
     make: ({ ab }) => {
       const g = gcd(ab, 99);
       return { question: `Let x = 0.${ab}${ab}${ab}... where the digits ${ab} repeat for ever. You want to write x as a fraction. Follow the method.`,
         parts: [
-          { prompt: 'The repeating block has 2 digits. What do you multiply x by so the blocks line up?', answer: 100, hint: 'Move the point past one whole block of digits.', wrong: [[10, 'That moves the point one place. A block has 2 digits.']] },
-          { prompt: `Take x away from your new line. What whole number is 100x − x?`, answer: ab, hint: 'The repeating digits cancel and only one block is left.', wrong: [[99, '99 tells how many x you have. Its value is the block of digits.']] },
-          { prompt: `So 99x = ${ab}. What is the highest common factor of ${ab} and 99?`, answer: g, hint: `List the factors of ${ab} and of 99.`, wrong: [[1, 'The two numbers share a bigger factor. Look again.'], [99, '99 does not divide into the smaller number.']] },
-          { prompt: 'Divide the top and bottom of the fraction by that factor. What is the denominator of x in simplest form?', answer: 99 / g, hint: 'x = block ÷ 99, then divide both by the factor.', wrong: [[99, 'That is the fraction before simplifying.'], [ab / g, 'That is the numerator. The question asks for the bottom number.']] },
+          { prompt: 'The repeating block has 2 digits. What do you multiply x by so the blocks line up?', answer: 100, hint: 'Move the point past one whole block of digits.', wrong: [[10, 'That moves the point one place. A block has 2 digits.', 'M_MULTIPLIER_WRONG_POWER']] },
+          { prompt: `Take x away from your new line. What whole number is 100x − x?`, answer: ab, hint: 'The repeating digits cancel and only one block is left.', wrong: [[99, '99 tells how many x you have. Its value is the block of digits.', 'M_COEFFICIENT_FOR_VALUE']] },
+          { prompt: `So 99x = ${ab}. What is the highest common factor of ${ab} and 99?`, answer: g, hint: `List the factors of ${ab} and of 99.`, wrong: [[1, 'The two numbers share a bigger factor. Look again.', 'M_FRACTION_NOT_SIMPLIFIED'], [99, '99 does not divide into the smaller number.', 'M_DENOMINATOR_AS_HCF']] },
+          { prompt: 'Divide the top and bottom of the fraction by that factor. What is the denominator of x in simplest form?', answer: 99 / g, hint: 'x = block ÷ 99, then divide both by the factor.', wrong: [[99, 'That is the fraction before simplifying.', 'M_FRACTION_NOT_SIMPLIFIED'], [ab / g, 'That is the numerator. The question asks for the bottom number.', 'M_NUMERATOR_FOR_DENOMINATOR']] },
         ],
         steps: ['100x = block.block block... and x = 0.block block..., so 100x − x = the block.', `99x = ${ab}, so x = ${ab}/99.`, `Divide by ${g}: x = ${ab / g}/${99 / g}.`] };
     },
     check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd(v[1], 99) === v[2] && Math.abs(ab / 99 - (ab / v[2]) / v[3]) < 1e-12 }),
 
-  fam({ id: 'g8.dec.cloth-profit', skill: 'G8_DECIMALS_COMBINED', outcome: 'G8.DEC.b', rung: 2, form: 'word',
+  fam({ id: 'g8.dec.cloth-profit', skill: 'G8_DECIMALS_COMBINED', outcome: 'MATH.G8.NUMBER.DECIMALS.h', cskill: 'MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE', rung: 2, form: 'word',
     draw: () => {
       const len = pick([1.5, 1.75, 2.25]), rate = pick([120, 160, 200, 240]), n = randInt(4, 8), cost = round(len * rate, 2);
       const sell = Math.ceil(cost / 100) * 100 + 100 * randInt(1, 4); const profit = n * (sell - cost);
@@ -221,13 +221,13 @@ export const FAMILIES = [
     make: ({ len, rate, n, cost, sell, profit, p }) => ({
       question: `${p.name} is a tailor. ${p.She} makes ${n} dresses. Each dress uses ${len} metres of cloth. The cloth costs sh ${rate} a metre. ${p.She} sells each dress for sh ${commas(sell)}. How much profit does ${p.she} make altogether, in shillings?`,
       answer: profit,
-      wrong: [[n * sell, 'That is the money from selling. Take away what the cloth cost.'], [n * cost, 'That is only the cost of the cloth. Profit is money in minus money spent.'], [sell - cost, 'That is the profit on one dress. How many dresses are there?'], [n * (sell - rate), 'Each dress uses more than 1 metre of cloth. Use the length for the cost of one dress.']],
+      wrong: [[n * sell, 'That is the money from selling. Take away what the cloth cost.', 'M_INCOME_FOR_PROFIT'], [n * cost, 'That is only the cost of the cloth. Profit is money in minus money spent.', 'M_COST_FOR_PROFIT'], [sell - cost, 'That is the profit on one dress. How many dresses are there?', 'M_ONE_ITEM_ONLY'], [n * (sell - rate), 'Each dress uses more than 1 metre of cloth. Use the length for the cost of one dress.', 'M_RATE_FOR_ITEM_COST']],
       hints: ['First find the cost of the cloth for one dress.', 'Profit on one dress = selling price − cost. Then multiply.'],
       steps: [`Cloth for one dress: ${len} × ${rate} = sh ${cost}.`, `Profit on one dress: ${sell} − ${cost} = sh ${round(sell - cost, 2)}.`, `For ${n} dresses: ${n} × ${round(sell - cost, 2)} = sh ${profit}.`],
     }),
     check: ({ n, cost, sell, len, rate }, a) => a / n + len * rate === sell && cost === len * rate }),
 
-  fam({ id: 'g8.dec.point-spot', skill: 'G8_DECIMALS_COMBINED', outcome: 'G8.DEC.b', rung: 2, form: 'spot',
+  fam({ id: 'g8.dec.point-spot', skill: 'G8_DECIMALS_COMBINED', outcome: 'MATH.G8.NUMBER.DECIMALS.g', cskill: 'MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS', rung: 2, form: 'spot',
     draw: () => { const B = randInt(11, 39), C = randInt(11, 39); if (B % 10 === 0 || C % 10 === 0) return null; return { a: randInt(21, 99) / 10, B, C, p: person() }; },
     make: ({ a, B, C, p }) => {
       const b = B / 10, c = C / 10, right = round(b * c, 2), shown = round((B * C) / 10, 1);
@@ -238,11 +238,12 @@ export const FAMILIES = [
           { text: `Then add: ${a} + ${shown} = ${round(a + shown, 2)}.`, ok: true },
           { text: `Answer: ${round(a + shown, 2)}.`, ok: true },
         ],
+        mis: 'M_POINT_PLACES_PRODUCT',
         fix: `${b} has 1 decimal place and ${c} has 1, so the answer needs 2 decimal places, not 1. The point goes 2 places from the right in ${B * C}.`,
         steps: ['Multiply before you add.', 'Count the decimal places in both numbers and put that many in the answer.'] };
     } }),
 
-  fam({ id: 'g8.dec.sf-spot', skill: 'G8_STANDARD_FORM', outcome: 'G8.DEC.d', rung: 2, form: 'spot',
+  fam({ id: 'g8.dec.sf-spot', skill: 'G8_STANDARD_FORM', outcome: 'MATH.G8.NUMBER.DECIMALS.f', cskill: 'MATH.G8.NUMBER.DECIMALS.STANDARD_FORM', rung: 2, form: 'spot',
     draw: () => { const sig = randInt(11, 99) / 10; if (Number.isInteger(sig)) return null; return { sig, k: randInt(4, 7), p: person() }; },
     make: ({ sig, k, p }) => {
       const N = Math.round(sig * 10) * 10 ** (k - 1), shown = k + 1;
@@ -253,19 +254,20 @@ export const FAMILIES = [
           { text: `So ${commas(N)} = ${sig} × 10^${shown}.`, ok: true },
           { text: `Answer: ${sig} × 10^${shown}.`, ok: true },
         ],
+        mis: 'M_POWER_AS_DIGIT_COUNT',
         fix: `The power of 10 is the number of places the point moves. Here it moves ${k} places, not the ${shown} digits in the number.`,
         steps: ['Count how far the point moves.', 'That count is the power of 10.'] };
     } }),
 
-  fam({ id: 'g8.dec.sf-product-steps', skill: 'G8_STANDARD_FORM', outcome: 'G8.DEC.d', rung: 3, form: 'steps',
+  fam({ id: 'g8.dec.sf-product-steps', skill: 'G8_STANDARD_FORM', outcome: 'MATH.G8.NUMBER.DECIMALS.f', cskill: 'MATH.G8.NUMBER.DECIMALS.STANDARD_FORM', rung: 3, form: 'steps',
     draw: () => { const a = randInt(2, 9), b = randInt(2, 9); return a * b >= 10 ? { a, b, m: pick([3, 4]), n: pick([2, 3]) } : null; },
     make: ({ a, b, m, n }) => ({
       question: `A county has ${a} × 10^${m} households. Each household pays ${b} × 10^${n} shillings a year for water. Find the total paid, in standard form.`,
       parts: [
-        { prompt: `What is ${a} × ${b}?`, answer: a * b, hint: 'Multiply the two front numbers.', wrong: [[a + b, 'The households and the payment are multiplied, not added.']] },
-        { prompt: `Multiplying 10^${m} by 10^${n} gives 10 to which power?`, answer: m + n, hint: 'When you multiply powers of 10, add the powers.', wrong: [[m * n, 'Powers are added when you multiply, not multiplied.']] },
-        { prompt: `The total is ${a * b} × 10^${m + n}. In standard form the front number is between 1 and 10. What is the new power of 10?`, answer: m + n + 1, hint: `${a * b} is 10 times a number between 1 and 10.`, wrong: [[m + n, `${a * b} is too big to be a front number. Move one factor of 10 into the power.`]] },
-        { prompt: 'How many shillings is that, written as an ordinary number?', answer: a * b * 10 ** (m + n), unit: 'sh', hint: 'Write the front number, then that many zeros.', wrong: [[a * b * 10 ** (m + n + 1), 'Check how many zeros the power gives.']] },
+        { prompt: `What is ${a} × ${b}?`, answer: a * b, hint: 'Multiply the two front numbers.', wrong: [[a + b, 'The households and the payment are multiplied, not added.', 'M_SF_FRONTS_ADDED']] },
+        { prompt: `Multiplying 10^${m} by 10^${n} gives 10 to which power?`, answer: m + n, hint: 'When you multiply powers of 10, add the powers.', wrong: [[m * n, 'Powers are added when you multiply, not multiplied.', 'M_POWERS_MULTIPLIED']] },
+        { prompt: `The total is ${a * b} × 10^${m + n}. In standard form the front number is between 1 and 10. What is the new power of 10?`, answer: m + n + 1, hint: `${a * b} is 10 times a number between 1 and 10.`, wrong: [[m + n, `${a * b} is too big to be a front number. Move one factor of 10 into the power.`, 'M_FRONT_NOT_ADJUSTED']] },
+        { prompt: 'How many shillings is that, written as an ordinary number?', answer: a * b * 10 ** (m + n), unit: 'sh', hint: 'Write the front number, then that many zeros.', wrong: [[a * b * 10 ** (m + n + 1), 'Check how many zeros the power gives.', 'M_ZEROS_MISCOUNTED']] },
       ],
       steps: [`${a} × ${b} = ${a * b}.`, `10^${m} × 10^${n} = 10^${m + n}.`, `${a * b} × 10^${m + n} = ${a * b / 10} × 10^${m + n + 1}.`, `As a number: ${commas(a * b * 10 ** (m + n))}.`],
     }),

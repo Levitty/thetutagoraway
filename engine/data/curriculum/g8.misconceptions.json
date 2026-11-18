@@ -796,5 +796,635 @@
   "help": "Find one fifth, then take two of them.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_DIGITS_AS_DECIMAL": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+  "error": "Writes the numerator and denominator side by side as a decimal.",
+  "example": {
+   "question": "3/8 as a decimal",
+   "wrong_answer": "3.8",
+   "correct_answer": "0.375"
+  },
+  "cause": "Thinks the fraction line is a decimal point.",
+  "reveals": "The answer 3.8 as a wrong option, with a reason that names the idea.",
+  "help": "A fraction is a division: 3 ÷ 8.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_DIVIDE_WRONG_WAY": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+  "error": "Divides the denominator by the numerator.",
+  "example": {
+   "question": "3/8 as a decimal",
+   "wrong_answer": "2.667",
+   "correct_answer": "0.375"
+  },
+  "cause": "Divides the larger number by the smaller.",
+  "reveals": "The answer 2.667 as a wrong option, with a reason that names the idea.",
+  "help": "Top divided by bottom: a proper fraction is less than 1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_ZERO_PLACEHOLDER_DROPPED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+  "error": "Drops the zero that holds the tenths place.",
+  "example": {
+   "question": "1/20 as a decimal",
+   "wrong_answer": "0.5",
+   "correct_answer": "0.05"
+  },
+  "cause": "Writes the digits of 5 hundredths straight after the point.",
+  "reveals": "The answer 0.5 as a wrong option, with a reason that names the idea.",
+  "help": "1/20 = 5/100: five hundredths, so 0.05.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL.M_REMAINDER_AS_DIGITS": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.FRACTION_TO_DECIMAL",
+  "error": "Stops the division and writes the remainder after the point.",
+  "example": {
+   "question": "7/4 as a decimal",
+   "wrong_answer": "1.3",
+   "correct_answer": "1.75"
+  },
+  "cause": "Treats \"1 remainder 3\" as 1.3.",
+  "reveals": "The answer 1.3 as a wrong option, with a reason that names the idea.",
+  "help": "Keep dividing: add zeros after the point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_PROPER_FRACTION_RECURS": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY",
+  "error": "Believes a fraction recurs because the top is smaller than the bottom.",
+  "example": {
+   "question": "Does 3/4 give a recurring decimal?",
+   "wrong_answer": "Yes, 3 is less than 4",
+   "correct_answer": "No: 0.75"
+  },
+  "cause": "Links recurring with proper fractions.",
+  "reveals": "The answer Yes, 3 is less than 4 as a wrong option, with a reason that names the idea.",
+  "help": "Look at the prime factors of the denominator: 4 = 2 × 2 stops.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_BIG_DENOMINATOR_RECURS": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY",
+  "error": "Believes a denominator bigger than 10 makes the decimal recur.",
+  "example": {
+   "question": "Does 1/20 recur?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No: 0.05"
+  },
+  "cause": "Thinks big denominators give long decimals.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "20 = 2 × 2 × 5: only 2s and 5s, so it stops.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_ALL_FRACTIONS_RECUR": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY",
+  "error": "Believes every fraction gives a recurring decimal in the end.",
+  "example": {
+   "question": "Does 1/2 recur?",
+   "wrong_answer": "Yes, in the end",
+   "correct_answer": "No: 0.5"
+  },
+  "cause": "Has met several recurring fractions in a row.",
+  "reveals": "The answer Yes, in the end as a wrong option, with a reason that names the idea.",
+  "help": "Some stop: those whose denominators have only 2s and 5s.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_LONG_DECIMAL_IS_RECURRING": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY",
+  "error": "Calls a long terminating decimal recurring.",
+  "example": {
+   "question": "Is 0.1234 recurring?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No, it stops"
+  },
+  "cause": "Thinks many digits means it repeats.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Recurring means a block repeats for ever.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY.M_REPEAT_BLOCK_WRONG": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_IDENTIFY",
+  "error": "Marks the wrong digits as the repeating block.",
+  "example": {
+   "question": "Which digits repeat in 0.272727...?",
+   "wrong_answer": "7",
+   "correct_answer": "27"
+  },
+  "cause": "Looks at the last digit only.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "Find the shortest block that repeats: 27, 27, 27.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_NO_REPEAT_FRACTION": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Writes the repeating digits over 10 or 100 as if the decimal stopped.",
+  "example": {
+   "question": "0.2727... as a fraction",
+   "wrong_answer": "27/100",
+   "correct_answer": "3/11"
+  },
+  "cause": "Uses the method for a terminating decimal.",
+  "reveals": "The answer 27/100 as a wrong option, with a reason that names the idea.",
+  "help": "A repeating decimal is a little more than 0.27: use 99.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_NINES_COUNT_WRONG": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Uses the wrong number of nines for the block.",
+  "example": {
+   "question": "0.444... as a fraction",
+   "wrong_answer": "44/99",
+   "correct_answer": "4/9"
+  },
+  "cause": "Does not match the nines to the repeating digits.",
+  "reveals": "The answer 44/99 as a wrong option, with a reason that names the idea.",
+  "help": "One repeating digit, one nine; two digits, two nines.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_MULTIPLIER_WRONG_POWER": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Multiplies x by 10 when the block has two digits.",
+  "example": {
+   "question": "x = 0.2727... Multiply by what?",
+   "wrong_answer": "10",
+   "correct_answer": "100"
+  },
+  "cause": "Always multiplies by 10.",
+  "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+  "help": "Move the point one whole block: two digits, times 100.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_COEFFICIENT_FOR_VALUE": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Gives the number of x (99) when the value of 99x is asked.",
+  "example": {
+   "question": "100x - x = 99x. What is 99x equal to, for 0.2727...?",
+   "wrong_answer": "99",
+   "correct_answer": "27"
+  },
+  "cause": "Mixes up how many x with what they equal.",
+  "reveals": "The answer 99 as a wrong option, with a reason that names the idea.",
+  "help": "The repeats cancel: what is left is the block, 27.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_FRACTION_NOT_SIMPLIFIED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Leaves the fraction over 99 or 9 without simplifying.",
+  "example": {
+   "question": "0.2727... in simplest form",
+   "wrong_answer": "27/99",
+   "correct_answer": "3/11"
+  },
+  "cause": "Stops once the fraction is found.",
+  "reveals": "The answer 27/99 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by the HCF, 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_DENOMINATOR_AS_HCF": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Takes the denominator as the HCF of the numerator and denominator.",
+  "example": {
+   "question": "HCF of 27 and 99",
+   "wrong_answer": "99",
+   "correct_answer": "9"
+  },
+  "cause": "Picks the bigger number.",
+  "reveals": "The answer 99 as a wrong option, with a reason that names the idea.",
+  "help": "The HCF must divide both: 99 does not divide 27.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION.M_NUMERATOR_FOR_DENOMINATOR": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.RECURRING_TO_FRACTION",
+  "error": "Gives the numerator when the denominator is asked.",
+  "example": {
+   "question": "3/11: the bottom number",
+   "wrong_answer": "3",
+   "correct_answer": "11"
+  },
+  "cause": "Reads the wrong part of the fraction.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "The denominator is below the line.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_DP_TRUNCATED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+  "error": "Cuts the decimal off instead of rounding.",
+  "example": {
+   "question": "2.976 to 2 d.p.",
+   "wrong_answer": "2.97",
+   "correct_answer": "2.98"
+  },
+  "cause": "Drops the digits after the place asked.",
+  "reveals": "The answer 2.97 as a wrong option, with a reason that names the idea.",
+  "help": "Look at the next digit: 6 rounds up.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_NINE_NO_CARRY": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+  "error": "Rounds a 9 up to 10 in its place without carrying.",
+  "example": {
+   "question": "3.97 to 1 d.p.",
+   "wrong_answer": "3.10",
+   "correct_answer": "4.0"
+  },
+  "cause": "Writes 10 in the tenths place.",
+  "reveals": "The answer 3.10 as a wrong option, with a reason that names the idea.",
+  "help": "9 tenths and one more is a whole: carry to the ones.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_TRAILING_ZERO_DROPPED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+  "error": "Leaves off a zero the question asks for.",
+  "example": {
+   "question": "3.996 to 2 d.p.",
+   "wrong_answer": "4",
+   "correct_answer": "4.00"
+  },
+  "cause": "Thinks end zeros do not matter.",
+  "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+  "help": "Two decimal places means two digits after the point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_ROUNDED_IN_STEPS": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+  "error": "Rounds one place at a time from the end.",
+  "example": {
+   "question": "2.346 to 1 d.p.",
+   "wrong_answer": "2.4",
+   "correct_answer": "2.3"
+  },
+  "cause": "Rounds 2.346 to 2.35, then to 2.4.",
+  "reveals": "The answer 2.4 as a wrong option, with a reason that names the idea.",
+  "help": "Look only at the digit after the place you keep.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES.M_DP_COUNTED_FROM_LEFT": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.ROUND_DECIMAL_PLACES",
+  "error": "Counts decimal places from the first digit of the number.",
+  "example": {
+   "question": "14.567 to 2 d.p.",
+   "wrong_answer": "15",
+   "correct_answer": "14.57"
+  },
+  "cause": "Counts digits from the left.",
+  "reveals": "The answer 15 as a wrong option, with a reason that names the idea.",
+  "help": "Decimal places start after the point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_TRUNCATED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES",
+  "error": "Cuts the number off instead of rounding.",
+  "example": {
+   "question": "48,763 to 2 s.f.",
+   "wrong_answer": "48,000",
+   "correct_answer": "49,000"
+  },
+  "cause": "Keeps the first digits and drops the rest.",
+  "reveals": "The answer 48,000 as a wrong option, with a reason that names the idea.",
+  "help": "Look at the next digit: 7 rounds up.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_COUNT_WRONG": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES",
+  "error": "Gives one significant figure too many or too few.",
+  "example": {
+   "question": "48,763 to 2 s.f.",
+   "wrong_answer": "48,800",
+   "correct_answer": "49,000"
+  },
+  "cause": "Miscounts the figures kept.",
+  "reveals": "The answer 48,800 as a wrong option, with a reason that names the idea.",
+  "help": "Count again from the first digit: 4, 8 are two figures.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_PLACE_ZEROS_DROPPED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES",
+  "error": "Leaves out the zeros that hold the place in a whole number.",
+  "example": {
+   "question": "48,763 to 2 s.f.",
+   "wrong_answer": "49",
+   "correct_answer": "49,000"
+  },
+  "cause": "Writes only the significant figures.",
+  "reveals": "The answer 49 as a wrong option, with a reason that names the idea.",
+  "help": "The number must stay about the same size: 49 thousand.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_SF_AS_DP": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES",
+  "error": "Rounds to decimal places when significant figures are asked.",
+  "example": {
+   "question": "0.004567 to 2 s.f.",
+   "wrong_answer": "0.00",
+   "correct_answer": "0.0046"
+  },
+  "cause": "Treats s.f. and d.p. as the same.",
+  "reveals": "The answer 0.00 as a wrong option, with a reason that names the idea.",
+  "help": "Significant figures start at the first non-zero digit.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES.M_LEADING_ZEROS_COUNTED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.SIGNIFICANT_FIGURES",
+  "error": "Counts the zeros at the front of a small decimal as significant.",
+  "example": {
+   "question": "0.004567 to 3 s.f.",
+   "wrong_answer": "0.00",
+   "correct_answer": "0.00457"
+  },
+  "cause": "Counts every digit after the point.",
+  "reveals": "The answer 0.00 as a wrong option, with a reason that names the idea.",
+  "help": "Zeros in front only hold the place: start at 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWER_AS_DIGIT_COUNT": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Uses the number of digits as the power of 10.",
+  "example": {
+   "question": "45,000 in standard form",
+   "wrong_answer": "4.5 × 10⁵",
+   "correct_answer": "4.5 × 10⁴"
+  },
+  "cause": "Counts the digits instead of the places the point moves.",
+  "reveals": "The answer 4.5 × 10⁵ as a wrong option, with a reason that names the idea.",
+  "help": "The point moves 4 places from 45000. to 4.5000.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_FRONT_NOT_BETWEEN_1_10": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Writes a front number of 10 or more, or less than 1.",
+  "example": {
+   "question": "45,000 in standard form",
+   "wrong_answer": "45 × 10³",
+   "correct_answer": "4.5 × 10⁴"
+  },
+  "cause": "Moves the point to any place.",
+  "reveals": "The answer 45 × 10³ as a wrong option, with a reason that names the idea.",
+  "help": "The front number is from 1 up to but not including 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWER_SIGN_WRONG": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Gives a small number a positive power, or a large number a negative one.",
+  "example": {
+   "question": "0.0032 in standard form",
+   "wrong_answer": "3.2 × 10³",
+   "correct_answer": "3.2 × 10⁻³"
+  },
+  "cause": "Forgets which way the point moved.",
+  "reveals": "The answer 3.2 × 10³ as a wrong option, with a reason that names the idea.",
+  "help": "Smaller than 1 means a negative power.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWER_MISCOUNTED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Counts the places the point moves one too many or one too few.",
+  "example": {
+   "question": "0.0032 in standard form",
+   "wrong_answer": "3.2 × 10⁻²",
+   "correct_answer": "3.2 × 10⁻³"
+  },
+  "cause": "Starts counting from the wrong digit.",
+  "reveals": "The answer 3.2 × 10⁻² as a wrong option, with a reason that names the idea.",
+  "help": "Count each jump of the point: three jumps to reach 3.2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_SF_FRONTS_ADDED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Adds the front numbers when two numbers in standard form are multiplied.",
+  "example": {
+   "question": "(2 × 10³) × (3 × 10⁴): front number",
+   "wrong_answer": "5",
+   "correct_answer": "6"
+  },
+  "cause": "Adds because the powers are added.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply the front numbers; add only the powers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_POWERS_MULTIPLIED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Multiplies the powers when multiplying numbers in standard form.",
+  "example": {
+   "question": "(2 × 10³) × (3 × 10⁴): the power",
+   "wrong_answer": "12",
+   "correct_answer": "7"
+  },
+  "cause": "Multiplies everything.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "10³ × 10⁴ is 7 tens multiplied: add the powers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_FRONT_NOT_ADJUSTED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Leaves a product front number of 10 or more without moving a 10 into the power.",
+  "example": {
+   "question": "(4 × 10³) × (5 × 10²)",
+   "wrong_answer": "20 × 10⁵",
+   "correct_answer": "2 × 10⁶"
+  },
+  "cause": "Does not check the front number at the end.",
+  "reveals": "The answer 20 × 10⁵ as a wrong option, with a reason that names the idea.",
+  "help": "20 = 2 × 10: one more power of 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM.M_ZEROS_MISCOUNTED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.STANDARD_FORM",
+  "error": "Writes the ordinary number with the wrong number of zeros.",
+  "example": {
+   "question": "2 × 10⁶ as an ordinary number",
+   "wrong_answer": "20,000,000",
+   "correct_answer": "2,000,000"
+  },
+  "cause": "Writes as many zeros as the power plus one.",
+  "reveals": "The answer 20,000,000 as a wrong option, with a reason that names the idea.",
+  "help": "Move the point 6 places right from 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_POINT_PLACES_PRODUCT": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS",
+  "error": "Puts the point in a product by copying one number's decimal places.",
+  "example": {
+   "question": "0.4 × 1.3",
+   "wrong_answer": "5.2",
+   "correct_answer": "0.52"
+  },
+  "cause": "Counts the places in one number only.",
+  "reveals": "The answer 5.2 as a wrong option, with a reason that names the idea.",
+  "help": "Add the decimal places of both numbers: 1 + 1 = 2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_DEC_LEFT_TO_RIGHT": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS",
+  "error": "Works from left to right, adding before multiplying.",
+  "example": {
+   "question": "2.5 + 0.4 × 1.3",
+   "wrong_answer": "3.77",
+   "correct_answer": "3.02"
+  },
+  "cause": "Reads the question in order.",
+  "reveals": "The answer 3.77 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply first, then add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_DEC_ALL_ADDED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS",
+  "error": "Adds all the numbers whatever the signs.",
+  "example": {
+   "question": "2.5 + 0.4 × 1.3",
+   "wrong_answer": "4.2",
+   "correct_answer": "3.02"
+  },
+  "cause": "Ignores the operation signs.",
+  "reveals": "The answer 4.2 as a wrong option, with a reason that names the idea.",
+  "help": "Read each sign: × multiplies.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_POINTS_NOT_LINED_UP": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS",
+  "error": "Lines up the last digits instead of the points when adding.",
+  "example": {
+   "question": "2.5 + 0.52",
+   "wrong_answer": "0.77",
+   "correct_answer": "3.02"
+  },
+  "cause": "Adds like whole numbers from the right.",
+  "reveals": "The answer 0.77 as a wrong option, with a reason that names the idea.",
+  "help": "Line up the points: tenths under tenths.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS.M_DIVISOR_POINT_NOT_MOVED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_COMBINED_OPERATIONS",
+  "error": "Divides by a decimal without making the divisor a whole number.",
+  "example": {
+   "question": "1.2 ÷ 0.3",
+   "wrong_answer": "0.4",
+   "correct_answer": "4"
+  },
+  "cause": "Divides 1.2 by 3.",
+  "reveals": "The answer 0.4 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply both by 10: 12 ÷ 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_INCOME_FOR_PROFIT": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "error": "Gives the money from selling as the profit.",
+  "example": {
+   "question": "5 dresses sold at 900 shillings, cloth 2.5 m at 120 a metre each. Profit?",
+   "wrong_answer": "4,500",
+   "correct_answer": "3,000"
+  },
+  "cause": "Forgets to take away what was spent.",
+  "reveals": "The answer 4,500 as a wrong option, with a reason that names the idea.",
+  "help": "Profit = money in minus money spent.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_COST_FOR_PROFIT": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "error": "Gives the total cost as the profit.",
+  "example": {
+   "question": "5 dresses at 900, cloth 2.5 m at 120 each. Profit?",
+   "wrong_answer": "1,500",
+   "correct_answer": "3,000"
+  },
+  "cause": "Finds the cost and stops.",
+  "reveals": "The answer 1,500 as a wrong option, with a reason that names the idea.",
+  "help": "The cost is taken away from the sales.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_ONE_ITEM_ONLY": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "error": "Works for one item when the question asks for all of them.",
+  "example": {
+   "question": "5 dresses at 900, cloth 2.5 m at 120 each. Profit?",
+   "wrong_answer": "600",
+   "correct_answer": "3,000"
+  },
+  "cause": "Stops at the profit on one.",
+  "reveals": "The answer 600 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply by the number of items.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_RATE_FOR_ITEM_COST": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "error": "Uses the price of one metre as the cost of one item.",
+  "example": {
+   "question": "A dress uses 2.5 m at 120 shillings a metre. Cloth cost of a dress?",
+   "wrong_answer": "120",
+   "correct_answer": "300"
+  },
+  "cause": "Uses the rate without the quantity.",
+  "reveals": "The answer 120 as a wrong option, with a reason that names the idea.",
+  "help": "Cost = length × price a metre.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_COST_FOR_CHANGE": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "error": "Gives the total cost when the change is asked.",
+  "example": {
+   "question": "3 pens at 45.50 shillings, paid with 200. Change?",
+   "wrong_answer": "136.50",
+   "correct_answer": "63.50"
+  },
+  "cause": "Stops at the total cost.",
+  "reveals": "The answer 136.50 as a wrong option, with a reason that names the idea.",
+  "help": "Change = money paid minus the cost.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE.M_CHANGE_ADDED": {
+  "skill": "MATH.G8.NUMBER.DECIMALS.DEC_REAL_LIFE",
+  "error": "Adds the cost to the money paid to find the change.",
+  "example": {
+   "question": "3 pens at 45.50, paid with 200. Change?",
+   "wrong_answer": "336.50",
+   "correct_answer": "63.50"
+  },
+  "cause": "Combines the two amounts.",
+  "reveals": "The answer 336.50 as a wrong option, with a reason that names the idea.",
+  "help": "The shopkeeper gives back what is left: subtract.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }
