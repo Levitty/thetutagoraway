@@ -1,0 +1,278 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.FRACTIONS",
+ "title": "Fractions",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a and b are KICD's words, but the PDF's text layer lost the fraction symbols: from the learning experiences they are 1/2, 1/4 and 1/8 (to confirm by a person). c is attitudinal.",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+   "key_step": "The child checks the parts are equal, counts them, and names one part by how many make the whole.",
+   "floor": {
+    "prerequisite": "Halves and quarters of a whole (Grade 2).",
+    "question": "A circle folded into 2 equal parts: what is one part?",
+    "answer": "a half"
+   },
+   "representations": [
+    "paper cut-outs to fold",
+    "drawn shapes",
+    "the written fraction"
+   ],
+   "steps": [
+    "Are the parts equal?",
+    "How many parts make the whole?",
+    "One part is one of that many.",
+    "Write 1 over the number of parts."
+   ],
+   "contexts": [
+    "sharing a chapati",
+    "cutting a cake at a birthday",
+    "folding a handkerchief"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle in 8 equal parts; shade one."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the parts.",
+     "say": "Are they equal? How many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 8."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1/8."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_UNEQUAL_PARTS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do the two pieces match?",
+     "repair": "No: a half needs two equal parts."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_COUNTS_PARTS_LEFT",
+     "listen_for": [
+      "3/4"
+     ],
+     "ask": "How many parts are shaded?",
+     "repair": "One out of four: 1/4."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_WRITES_PARTS_AS_DENOM",
+     "listen_for": [
+      "4/1"
+     ],
+     "ask": "How many equal parts make the whole?",
+     "repair": "4, at the bottom: 1/4."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_EIGHTH_AS_HALF_OF_QUARTER_CONFUSED",
+     "listen_for": [
+      "1/6"
+     ],
+     "ask": "How many parts do you see when you unfold it?",
+     "repair": "8 equal parts: an eighth."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A circle in 4 equal parts, 1 shaded. What fraction is shaded?",
+     "answer": "1/4",
+     "shows": "a quarter"
+    },
+    {
+     "question": "Is a square cut into 2 unequal parts in halves?",
+     "answer": "no",
+     "shows": "equal parts"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS",
+   "key_step": "The child says more equal parts of the same whole make each part smaller.",
+   "floor": {
+    "prerequisite": "Names halves, quarters and eighths.",
+    "question": "A circle in 8 equal parts: one part is?",
+    "answer": "1/8"
+   },
+   "representations": [
+    "same-size paper strips folded",
+    "drawn bars",
+    "fraction cards"
+   ],
+   "steps": [
+    "Same whole.",
+    "Count parts for each.",
+    "More parts, smaller part.",
+    "Order the pieces."
+   ],
+   "contexts": [
+    "Mama cutting chapatis",
+    "a watermelon shared at home",
+    "a cake at a party"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three same bars in 2, 4 and 8 parts."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one part of each.",
+     "say": "Which is biggest?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child predicts before shading."
+    },
+    {
+     "beat": "reveal",
+     "do": "Shade and order: 1/8, 1/4, 1/2."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS.M_FRAC_MORE_PIECES_BIGGER",
+     "listen_for": [
+      "1/8"
+     ],
+     "ask": "Which piece would you rather have?",
+     "repair": "The half: fewer pieces make bigger pieces."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS.M_FRAC_DIFFERENT_WHOLES",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are the watermelon and the orange the same size?",
+     "repair": "No, so the half is not always bigger."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS.M_FRAC_ORDER_BY_NUMBER",
+     "listen_for": [
+      "1/2, 1/4, 1/8"
+     ],
+     "ask": "Which strip has the smallest piece?",
+     "repair": "The eighths: 1/8, 1/4, 1/2."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS.M_FRAC_QUARTER_IS_HALF_OF_EIGHTH",
+     "listen_for": [
+      "half"
+     ],
+     "ask": "How many pieces does the quarter become?",
+     "repair": "Two eighths."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is smaller, 1/4 or 1/8 of the same bread?",
+     "answer": "1/8",
+     "shows": "comparing"
+    },
+    {
+     "question": "Order from biggest: 1/4, 1/2, 1/8.",
+     "answer": "1/2, 1/4, 1/8",
+     "shows": "ordering"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+   "key_step": "The child shares the group into that many equal groups and counts one group.",
+   "floor": {
+    "prerequisite": "Divides without a remainder.",
+    "question": "12 ÷ 4",
+    "answer": "3"
+   },
+   "representations": [
+    "counters in plates",
+    "a drawing of rings",
+    "a division sentence"
+   ],
+   "steps": [
+    "How many equal groups? The bottom number.",
+    "Share one by one.",
+    "Count one group.",
+    "Check all groups are equal."
+   ],
+   "contexts": [
+    "sharing oranges among friends",
+    "sweets in a class",
+    "eggs in a tray"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 12 dots and 4 rings."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child shares the dots one by one into the rings."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the count in one ring."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1/4 of 12 = 3."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FGRP_ANSWER_IS_DENOM",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "How many oranges on one plate?",
+     "repair": "3."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FGRP_SUBTRACTS",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "How many in each of the 2 groups?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FGRP_UNEQUAL_SHARE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do all heaps have the same number?",
+     "repair": "No, so it is not a quarter."
+    },
+    {
+     "code": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FGRP_MULTIPLIES",
+     "listen_for": [
+      "128"
+     ],
+     "ask": "Is an eighth of 16 more or less than 16?",
+     "repair": "Less: 16 shared into 8 groups is 2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 1/2 of 14?",
+     "answer": "7",
+     "shows": "a half"
+    },
+    {
+     "question": "What is 1/8 of 24?",
+     "answer": "3",
+     "shows": "an eighth"
+    }
+   ]
+  }
+ ]
+}

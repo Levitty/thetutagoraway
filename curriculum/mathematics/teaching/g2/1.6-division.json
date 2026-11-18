@@ -1,0 +1,366 @@
+{
+ "sub_strand": "MATH.G2.NUMBER.DIVISION",
+ "title": "Division",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; the text layer lost the ÷ sign in c. e is attitudinal. Sharing up to 20 by 2, grouping up to 25 by 3, dividing up to 25 by 4 and 5 with no remainder.",
+ "skills": [
+  {
+   "skill": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2",
+   "key_step": "The child gives one at a time to each of the two until none are left, then counts one share.",
+   "floor": {
+    "prerequisite": "Takes away with objects (Grade 1).",
+    "question": "8 take away 2",
+    "answer": "6"
+   },
+   "representations": [
+    "counters and two plates",
+    "a drawing of two piles",
+    "a sharing table"
+   ],
+   "steps": [
+    "Two plates.",
+    "One to each, again and again.",
+    "Stop when none are left.",
+    "Count one plate."
+   ],
+   "contexts": [
+    "sharing mangoes with a sibling",
+    "sweets between two friends",
+    "books between two desks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 10 dots and 2 plates."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child moves dots one at a time to each plate."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the count on one plate."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5 each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_UNEQUAL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do both have the same?",
+     "repair": "No: share to 5 and 5."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_GIVES_TOTAL",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "How many does each person hold?",
+     "repair": "6."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_TAKES_TWO",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "How many in each pile?",
+     "repair": "7."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2.M_DS_COUNTS_ROUNDS_WRONG",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Are both piles 8?",
+     "repair": "Yes: 8."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Share 18 between 2. How many each?",
+     "answer": "9",
+     "shows": "sharing"
+    },
+    {
+     "question": "Is 7 and 5 a fair share of 12?",
+     "answer": "no",
+     "shows": "fair"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
+   "key_step": "The child makes groups of the given size until none are left, then counts the groups.",
+   "floor": {
+    "prerequisite": "Shares equally.",
+    "question": "Share 6 between 2.",
+    "answer": "3 each"
+   },
+   "representations": [
+    "counters",
+    "rings drawn round groups",
+    "a benches picture"
+   ],
+   "steps": [
+    "Take a group of 3.",
+    "Again and again.",
+    "Stop when none are left.",
+    "Count the groups."
+   ],
+   "contexts": [
+    "learners on benches",
+    "eggs in groups",
+    "chairs at tables"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 15 stick learners."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rings groups of 3."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the number of rings."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5 benches."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_SUBTRACTS_ONCE",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "Is everyone seated after one bench?",
+     "repair": "No: 5 benches."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_GIVES_GROUP_SIZE",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is 3 the benches or the learners per bench?",
+     "repair": "Per bench: 6 benches."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_ONE_EXTRA",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "How many rings?",
+     "repair": "7."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3.M_DIV2_SHARE_GROUP_CONFUSED",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "How many counters in each group?",
+     "repair": "3, so 4 groups."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many groups of 3 in 21?",
+     "answer": "7",
+     "shows": "grouping"
+    },
+    {
+     "question": "12 learners, 3 to a bench. How many benches?",
+     "answer": "4",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.DIVISION.DIV_SIGN",
+   "key_step": "The child writes the number shared, then ÷, then the group number, then = and the answer.",
+   "floor": {
+    "prerequisite": "Groups objects.",
+    "question": "12 in groups of 3: how many groups?",
+    "answer": "4"
+   },
+   "representations": [
+    "pictures of sharing",
+    "a division sentence",
+    "number cards"
+   ],
+   "steps": [
+    "What is shared? Write it first.",
+    "Write ÷.",
+    "Write the number of groups or group size.",
+    "Write = and the answer."
+   ],
+   "contexts": [
+    "sharing bread",
+    "packing eggs",
+    "teams for a game"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 12 dots in 3 rings of 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at all the dots.",
+     "say": "What is shared?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12 ÷ 3 = 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_ORDER",
+     "listen_for": [
+      "3 ÷ 12 = 4"
+     ],
+     "ask": "What is being shared?",
+     "repair": "12: 12 ÷ 3 = 4."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_USES_MINUS",
+     "listen_for": [
+      "10 - 2 = 5"
+     ],
+     "ask": "Which sign means shared by?",
+     "repair": "÷: 10 ÷ 2 = 5."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_ANSWER_PLACE",
+     "listen_for": [
+      "5 ÷ 2 = 10"
+     ],
+     "ask": "What is the answer?",
+     "repair": "5, after =."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_SIGN.M_DSIGN_READS_AS_PLUS",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "Share 8 between 2: how many each?",
+     "repair": "4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 15 shared by 3 gives 5.",
+     "answer": "15 ÷ 3 = 5",
+     "shows": "writing"
+    },
+    {
+     "question": "Read 10 ÷ 2.",
+     "answer": "10 shared by 2",
+     "shows": "reading"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5",
+   "key_step": "The child counts in fours or fives up to the number and says how many counts.",
+   "floor": {
+    "prerequisite": "Knows fours and fives.",
+    "question": "4 x 5",
+    "answer": "20"
+   },
+   "representations": [
+    "counters",
+    "a number line in fives",
+    "a multiplication chart"
+   ],
+   "steps": [
+    "Count in the divisor.",
+    "Stop at the number.",
+    "Count the steps.",
+    "Check by multiplying."
+   ],
+   "contexts": [
+    "mangoes in heaps of 5",
+    "legs of cows",
+    "learners in teams of 4"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 20 ÷ 4."
+    },
+    {
+     "beat": "count",
+     "do": "Count in fours with the child to 20."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 5 counts."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 ÷ 4 = 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_GIVES_DIVISOR",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "How many groups of 4?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_SKIP_SLIP",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "How many fives did you count?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_SUBTRACTS",
+     "listen_for": [
+      "12"
+     ],
+     "ask": "How many times can you take 4?",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5.M_D45_MULTIPLIES",
+     "listen_for": [
+      "100"
+     ],
+     "ask": "Bigger or smaller than 20?",
+     "repair": "Smaller: 4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "25 ÷ 5",
+     "answer": "5",
+     "shows": "fives"
+    },
+    {
+     "question": "16 ÷ 4",
+     "answer": "4",
+     "shows": "fours"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,281 @@
+{
+ "sub_strand": "MATH.G2.MEASUR.MASS",
+ "title": "Mass",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Mass is measured on an improvised beam balance with items of the same mass, then against a 1 kg mass (or an empty 1 kg packet filled).",
+ "skills": [
+  {
+   "skill": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS",
+   "key_step": "The child adds equal items to one pan until the beam is level, then counts them.",
+   "floor": {
+    "prerequisite": "Compares heavier and lighter (Grade 1).",
+    "question": "Which is heavier: a stone or a leaf?",
+    "answer": "a stone"
+   },
+   "representations": [
+    "an improvised beam balance",
+    "bottle tops of one kind",
+    "a picture of a balance"
+   ],
+   "steps": [
+    "Object in one pan.",
+    "Add equal items to the other.",
+    "Stop when level.",
+    "Count the items."
+   ],
+   "contexts": [
+    "a coat hanger balance",
+    "bottle tops",
+    "stones of one size"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance: a book on one side, tipped down."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the low side.",
+     "say": "Which is heavier?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the book."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds bottle tops until level."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the count."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_UP_IS_HEAVY",
+     "listen_for": [
+      "the bottle tops"
+     ],
+     "ask": "Which side sank?",
+     "repair": "The stone's: it is heavier."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_MIXED_UNITS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are the stones the same?",
+     "repair": "No: use one kind."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_HEAVIER_UNIT_MORE",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Which unit balances with fewer?",
+     "repair": "The heavier stones: fewer."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS.M_FM_NOT_LEVEL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is the beam level?",
+     "repair": "No: add more."
+    }
+   ],
+   "checks": [
+    {
+     "question": "The bag's side sinks. Heavier or lighter than the tops?",
+     "answer": "heavier",
+     "shows": "reading"
+    },
+    {
+     "question": "Heavier units: more or fewer to balance?",
+     "answer": "fewer",
+     "shows": "unit size"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM",
+   "key_step": "The child links the kilogram to a 1 kg packet of flour or sugar and uses kg for mass.",
+   "floor": {
+    "prerequisite": "Measures with fixed units.",
+    "question": "How many tops balance the book?",
+    "answer": "a count"
+   },
+   "representations": [
+    "a 1 kg packet of flour",
+    "shop items",
+    "pictures"
+   ],
+   "steps": [
+    "Hold a 1 kg packet.",
+    "Name things sold in kg.",
+    "kg is for how heavy.",
+    "Write kg."
+   ],
+   "contexts": [
+    "sugar at the shop",
+    "maize at the posho mill",
+    "beans at the market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 1 kg packet of sugar."
+    },
+    {
+     "beat": "predict",
+     "do": "The child names something heavier than 1 kg."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_BIG_IS_KG",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Which is heavier?",
+     "repair": "The packet: the box is less than 1 kg."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_UNIT_MIX",
+     "listen_for": [
+      "a pencil"
+     ],
+     "ask": "Which is sold by weight?",
+     "repair": "Sugar."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_WRITES_KILO_WRONG",
+     "listen_for": [
+      "2 kgs"
+     ],
+     "ask": "How do we write it?",
+     "repair": "2 kg."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM.M_KK_FEATHER_KG",
+     "listen_for": [
+      "the maize"
+     ],
+     "ask": "What do they each balance?",
+     "repair": "1 kg: the same."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is bought by the kilogram: rice or milk?",
+     "answer": "rice",
+     "shows": "use of kg"
+    },
+    {
+     "question": "Write 4 kilograms short.",
+     "answer": "4 kg",
+     "shows": "unit"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG",
+   "key_step": "The child balances the object against 1 kg masses until level and counts the kilograms.",
+   "floor": {
+    "prerequisite": "Knows the kilogram.",
+    "question": "Which is about 1 kg: a packet of flour or a pen?",
+    "answer": "a packet of flour"
+   },
+   "representations": [
+    "a beam balance",
+    "1 kg masses",
+    "a record table"
+   ],
+   "steps": [
+    "Object in one pan.",
+    "Add 1 kg masses.",
+    "Stop when level.",
+    "Count; write kg."
+   ],
+   "contexts": [
+    "a bag of potatoes",
+    "a pumpkin",
+    "a jerrycan"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a bag balancing 3 kg masses."
+    },
+    {
+     "beat": "count",
+     "do": "Count the masses with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the unit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_COUNTS_ITEMS",
+     "listen_for": [
+      "4 kg"
+     ],
+     "ask": "How many 1 kg masses?",
+     "repair": "Two: 2 kg."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_NO_UNIT",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "3 what?",
+     "repair": "3 kg."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_HEAVIER_LESS",
+     "listen_for": [
+      "2 kg"
+     ],
+     "ask": "Which has more kg?",
+     "repair": "5 kg: heavier."
+    },
+    {
+     "code": "MATH.G2.MEASUR.MASS.MEASURE_IN_KG.M_MKG_READS_TIPPED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Which side sank?",
+     "repair": "The masses: the bag is less than 3 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A pumpkin balances four 1 kg masses. Its mass?",
+     "answer": "4 kg",
+     "shows": "reading"
+    },
+    {
+     "question": "Which is heavier: 6 kg or 3 kg?",
+     "answer": "6 kg",
+     "shows": "comparing"
+    }
+   ]
+  }
+ ]
+}

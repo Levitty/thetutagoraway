@@ -17,14 +17,17 @@
 //   briefFor(skillCode, { stage })    a short plain-text block for a turn brief
 //   packCoverage()                    { skills, misconceptions } counts
 // ============================================================================
+import { TEACHING_PACK_G1 } from './teachingPackData.g1.js';
+import { TEACHING_PACK_G2 } from './teachingPackData.g2.js';
+import { TEACHING_PACK_G3 } from './teachingPackData.g3.js';
 import { TEACHING_PACK_G4 } from './teachingPackData.g4.js';
 import { TEACHING_PACK_G5 } from './teachingPackData.js';
 import { TEACHING_PACK_G6 } from './teachingPackData.g6.js';
 import { TEACHING_PACK_G7 } from './teachingPackData.g7.js';
 import { TEACHING_PACK_G8 } from './teachingPackData.g8.js';
 import { TEACHING_PACK_G9 } from './teachingPackData.g9.js';
-// Grades 4 to 9 side by side: codes carry the grade, so they never clash.
-const PACK = { ...TEACHING_PACK_G4, ...TEACHING_PACK_G5, ...TEACHING_PACK_G6, ...TEACHING_PACK_G7, ...TEACHING_PACK_G8, ...TEACHING_PACK_G9 };
+// Grades 1 to 9 side by side (Grades 1 to 3 from 18 Nov 2026): codes carry the grade, so they never clash.
+const PACK = { ...TEACHING_PACK_G1, ...TEACHING_PACK_G2, ...TEACHING_PACK_G3, ...TEACHING_PACK_G4, ...TEACHING_PACK_G5, ...TEACHING_PACK_G6, ...TEACHING_PACK_G7, ...TEACHING_PACK_G8, ...TEACHING_PACK_G9 };
 
 export function teachingFor(skillCode) {
   return PACK[skillCode] || null;

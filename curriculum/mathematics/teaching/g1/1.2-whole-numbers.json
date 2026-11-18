@@ -1,0 +1,559 @@
+{
+ "sub_strand": "MATH.G1.NUMBER.WHOLE_NUMBERS",
+ "title": "Whole Numbers",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to f are KICD's words; g (patterns in play) is covered with the counting skill. Counting forward to 50, back from 30, objects to 30, symbols to 50, words to 10, patterns to 20 (the learning experiences count in 1s and 2s).",
+ "skills": [
+  {
+   "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+   "key_step": "The child says each number once, and after a 9 in the ones says the next ten.",
+   "floor": {
+    "prerequisite": "Counts objects to 10 (PP2).",
+    "question": "Count these 8 bottle tops.",
+    "answer": "8"
+   },
+   "representations": [
+    "counting objects",
+    "a number line to 50",
+    "a counting song"
+   ],
+   "steps": [
+    "Start at the number.",
+    "Say the next one.",
+    "After 9 ones: the next ten.",
+    "Keep going."
+   ],
+   "contexts": [
+    "counting learners at assembly",
+    "skipping rope",
+    "steps to the gate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 18, 19, __."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 19.",
+     "say": "What comes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 20."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_DECADE",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "What comes after nineteen?",
+     "repair": "Twenty."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_SKIPS_OR_REPEATS",
+     "listen_for": [
+      "38"
+     ],
+     "ask": "Touch and say: 36, then?",
+     "repair": "37."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_ONE_MORE",
+     "listen_for": [
+      "14"
+     ],
+     "ask": "What changes when we add a ten?",
+     "repair": "The tens: 23."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_COUNTS_DOWN",
+     "listen_for": [
+      "24"
+     ],
+     "ask": "Bigger or smaller?",
+     "repair": "Bigger: 26."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_TWO_TENS",
+     "listen_for": [
+      "42"
+     ],
+     "ask": "How many tens do we add each time?",
+     "repair": "One: 32."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What comes after 29?",
+     "answer": "30",
+     "shows": "across a ten"
+    },
+    {
+     "question": "Count on in twos: 2, 4, 6, __",
+     "answer": "8",
+     "shows": "twos"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+   "key_step": "The child says one less each time, and after a 0 in the ones says the 9 of the ten below.",
+   "floor": {
+    "prerequisite": "Counts forward to 50.",
+    "question": "What comes after 20?",
+    "answer": "21"
+   },
+   "representations": [
+    "a number line",
+    "a countdown song",
+    "bottle tops taken away"
+   ],
+   "steps": [
+    "Start at the number.",
+    "Say one less.",
+    "After 0 ones: 9 of the ten below.",
+    "End at 0."
+   ],
+   "contexts": [
+    "a race countdown",
+    "eating mandazi one by one",
+    "steps going down"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 22, 21, 20, __."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 20.",
+     "say": "One less?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 19."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 19."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_DECADE",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "What is one less than 20?",
+     "repair": "19."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_GOES_UP",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "Bigger or smaller?",
+     "repair": "Smaller: 14."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_BEFORE_AFTER",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "Is before one more or one less?",
+     "repair": "One less: 11."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_STOPS_AT_1",
+     "listen_for": [
+      "stops"
+     ],
+     "ask": "How many are left?",
+     "repair": "None: 0."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Count back: 13, 12, 11, __",
+     "answer": "10",
+     "shows": "back"
+    },
+    {
+     "question": "What comes before 30?",
+     "answer": "29",
+     "shows": "before"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+   "key_step": "The child moves each object as it is counted and knows the last number said is how many.",
+   "floor": {
+    "prerequisite": "Counts objects to 10 (PP2).",
+    "question": "Count 6 stones.",
+    "answer": "6"
+   },
+   "representations": [
+    "bottle tops, stones, sticks",
+    "a ten-frame",
+    "a counting mat"
+   ],
+   "steps": [
+    "Say the number.",
+    "Move one object for each count.",
+    "Stop at the number.",
+    "The last number is how many."
+   ],
+   "contexts": [
+    "counting mangoes",
+    "bottle tops",
+    "seeds for planting"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 12 dots in a muddle."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child crosses each dot as it is counted."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the last number."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_DOUBLE_COUNT",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "Did you move each one once?",
+     "repair": "Count again: 12."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_LAST_NOT_TOTAL",
+     "listen_for": [
+      "counts again"
+     ],
+     "ask": "What was the last number?",
+     "repair": "9: there are 9."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_COUNT_OUT_TOO_MANY",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Where should you stop?",
+     "repair": "At 7."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_SPREAD_MORE",
+     "listen_for": [
+      "the spread out row"
+     ],
+     "ask": "Is any stone without a partner?",
+     "repair": "No: the same."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Count out 15 sticks: how many when you stop?",
+     "answer": "15",
+     "shows": "counting out"
+    },
+    {
+     "question": "Two rows of 6, one spread out: which has more?",
+     "answer": "the same",
+     "shows": "conservation"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+   "key_step": "The child writes the tens digit first, then the ones, each digit facing the right way.",
+   "floor": {
+    "prerequisite": "Knows numerals to 10 (PP2).",
+    "question": "Write 7.",
+    "answer": "7"
+   },
+   "representations": [
+    "sand tray",
+    "number cards",
+    "a number line"
+   ],
+   "steps": [
+    "Say the number.",
+    "Which part is tens?",
+    "Write tens, then ones.",
+    "Check the digits face right."
+   ],
+   "contexts": [
+    "dates on a calendar",
+    "page numbers",
+    "house numbers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Say fourteen."
+    },
+    {
+     "beat": "point",
+     "do": "Point to the tens place.",
+     "say": "Which digit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 14."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_REVERSED",
+     "listen_for": [
+      "41"
+     ],
+     "ask": "Which digit is the ten?",
+     "repair": "1: 14."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_MIRROR",
+     "listen_for": [
+      "a back-to-front 3"
+     ],
+     "ask": "Which way does 3 open?",
+     "repair": "To the left."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_JOINED",
+     "listen_for": [
+      "205"
+     ],
+     "ask": "How many digits?",
+     "repair": "Two: 25."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_TEEN_TY",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "How many tens in fourteen?",
+     "repair": "One: 14."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write thirty-two.",
+     "answer": "32",
+     "shows": "digits"
+    },
+    {
+     "question": "Write seventeen.",
+     "answer": "17",
+     "shows": "teen"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+   "key_step": "The child says the word, counts fingers to check, and writes the word letter by letter.",
+   "floor": {
+    "prerequisite": "Writes numerals.",
+    "question": "Write 4.",
+    "answer": "4"
+   },
+   "representations": [
+    "word cards",
+    "fingers",
+    "a word and picture chart"
+   ],
+   "steps": [
+    "Read the numeral.",
+    "Say the word.",
+    "Count fingers to check.",
+    "Write the letters."
+   ],
+   "contexts": [
+    "a birthday card",
+    "a story about three goats",
+    "a song"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 8."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 8.",
+     "say": "What is its word?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for eight."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write eight."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_SPELLING",
+     "listen_for": [
+      "ate"
+     ],
+     "ask": "How do we spell the number eight?",
+     "repair": "e-i-g-h-t."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_SIX_SEVEN",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Count to seven on fingers.",
+     "repair": "7."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_TEN_AS_ONE_ZERO",
+     "listen_for": [
+      "one zero"
+     ],
+     "ask": "What do we call ten objects?",
+     "repair": "Ten."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_WORD_NUMERAL_MISMATCH",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many fingers on one hand?",
+     "repair": "Five: 5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 6 in words.",
+     "answer": "six",
+     "shows": "spelling"
+    },
+    {
+     "question": "Which number is ten?",
+     "answer": "10",
+     "shows": "matching"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+   "key_step": "The child finds the jump between two numbers and uses it to fill the gap.",
+   "floor": {
+    "prerequisite": "Counts on in ones and twos.",
+    "question": "Count in twos: 2, 4, __",
+    "answer": "6"
+   },
+   "representations": [
+    "number cards",
+    "jumps on a number line",
+    "hopscotch"
+   ],
+   "steps": [
+    "Look at two neighbours.",
+    "Find the jump.",
+    "Up or down?",
+    "Fill the gap."
+   ],
+   "contexts": [
+    "legs of hens in twos",
+    "hopscotch",
+    "counting shoes"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2, 4, __, 8."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw hops on a number line."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the jump."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_STEP_ONE",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "From 2 to 4 is how much?",
+     "repair": "2: 6."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_COPIES",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "What is between 10 and 20 here?",
+     "repair": "15."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_DIRECTION",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Are the numbers going down?",
+     "repair": "Yes: 7."
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_ODD_EVEN_MIX",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Two more than 5 is?",
+     "repair": "7."
+    }
+   ],
+   "checks": [
+    {
+     "question": "11, 12, __, 14",
+     "answer": "13",
+     "shows": "ones"
+    },
+    {
+     "question": "20, 18, 16, __",
+     "answer": "14",
+     "shows": "back in twos"
+    }
+   ]
+  }
+ ]
+}

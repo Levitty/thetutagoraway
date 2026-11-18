@@ -1,0 +1,653 @@
+{
+ "sub_strand": "MATH.G3.MEASUR.MONEY",
+ "title": "Money",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to g are KICD's words; h is attitudinal. Kenyan notes up to sh. 1,000 (50, 100, 200, 500, 1,000) and coins (1, 5, 10, 20); all amounts within sh. 1,000; buying up to 3 items with a balance in a classroom model shop.",
+ "skills": [
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.IDENTIFY_NOTES",
+   "key_step": "The child reads the number on the note and uses it, not the colour or the count, to say its value.",
+   "floor": {
+    "prerequisite": "Coins and notes to sh. 100 (Grade 2).",
+    "question": "Which is worth more: sh. 50 or sh. 100?",
+    "answer": "sh. 100"
+   },
+   "representations": [
+    "paper model notes",
+    "pictures of real notes",
+    "a value line"
+   ],
+   "steps": [
+    "Read the number.",
+    "Say its value.",
+    "Sort by number.",
+    "Compare values, not pieces."
+   ],
+   "contexts": [
+    "paying school fees",
+    "the market",
+    "a church offering"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw notes labelled 50, 1,000, 200."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 1,000 note.",
+     "say": "Which is worth most?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the answer."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child orders them by value."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 50, 200, 1,000."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.IDENTIFY_NOTES.M_NOTE_COLOUR_ONLY",
+     "listen_for": [
+      "the sh. 50 note"
+     ],
+     "ask": "What number is printed on it?",
+     "repair": "500."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.IDENTIFY_NOTES.M_NOTE_SIZE_COUNT",
+     "listen_for": [
+      "three sh. 50 notes"
+     ],
+     "ask": "How much are the three notes worth?",
+     "repair": "sh. 150: the sh. 500 note is worth more."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.IDENTIFY_NOTES.M_NOTE_COIN_VALUE",
+     "listen_for": [
+      "the sh. 20 coin"
+     ],
+     "ask": "Is 20 more than 50?",
+     "repair": "No: the note."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.IDENTIFY_NOTES.M_NOTE_ORDER",
+     "listen_for": [
+      "sh. 1,000, sh. 50, sh. 200"
+     ],
+     "ask": "Which number is smallest?",
+     "repair": "50 first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which note is worth more: sh. 200 or sh. 500?",
+     "answer": "sh. 500",
+     "shows": "comparing"
+    },
+    {
+     "question": "Order: sh. 100, sh. 1,000, sh. 50.",
+     "answer": "sh. 50, sh. 100, sh. 1,000",
+     "shows": "ordering"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.COUNT_MONEY",
+   "key_step": "The child sorts the money from largest to smallest and counts on by each piece's value.",
+   "floor": {
+    "prerequisite": "Counts sh. 50 and sh. 100 notes.",
+    "question": "Count three sh. 100 notes.",
+    "answer": "sh. 300"
+   },
+   "representations": [
+    "model money",
+    "a purse of mixed notes",
+    "a counting table"
+   ],
+   "steps": [
+    "Sort largest first.",
+    "Say the largest value.",
+    "Count on by each value.",
+    "Write sh."
+   ],
+   "contexts": [
+    "counting money for shopping",
+    "a harambee collection",
+    "pocket money saved"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw one sh. 500, two sh. 100, one sh. 50."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sh. 500.",
+     "say": "Start here."
+    },
+    {
+     "beat": "count",
+     "do": "Count on with the child: 600, 700, 750."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the unit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 750."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.COUNT_MONEY.M_CM_COUNTS_PIECES",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "What is each piece worth?",
+     "repair": "500, 600, 700, 750: sh. 750."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.COUNT_MONEY.M_CM_COUNT_ON_WRONG_STEP",
+     "listen_for": [
+      "sh. 502"
+     ],
+     "ask": "How much does a sh. 100 note add?",
+     "repair": "100: 600, 700."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.COUNT_MONEY.M_CM_SMALLEST_FIRST_LOSES",
+     "listen_for": [
+      "sh. 280"
+     ],
+     "ask": "Start with the sh. 200 note: then?",
+     "repair": "250, 270, 290: sh. 290."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.COUNT_MONEY.M_CM_NO_SH",
+     "listen_for": [
+      "200"
+     ],
+     "ask": "200 what?",
+     "repair": "sh. 200."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Count: sh. 200, sh. 200, sh. 50, sh. 20.",
+     "answer": "sh. 470",
+     "shows": "mixed"
+    },
+    {
+     "question": "Count four sh. 200 notes.",
+     "answer": "sh. 800",
+     "shows": "one kind"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.ADD_MONEY",
+   "key_step": "The child adds the amounts as numbers in columns and writes sh.",
+   "floor": {
+    "prerequisite": "Adds 3-digit numbers with a carry.",
+    "question": "350 + 275",
+    "answer": "625"
+   },
+   "representations": [
+    "price tags",
+    "model money",
+    "a column sum"
+   ],
+   "steps": [
+    "Line up the prices.",
+    "Add ones, tens, hundreds.",
+    "Carry once if needed.",
+    "Write sh."
+   ],
+   "contexts": [
+    "shopping for school",
+    "buying food at the market",
+    "paying fares"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write sh. 350 + sh. 275."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tens: 5 + 7.",
+     "say": "What do you get?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12 tens and the carry."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 625."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.ADD_MONEY.M_ADDM_FORGETS_CARRY",
+     "listen_for": [
+      "sh. 525"
+     ],
+     "ask": "5 tens + 7 tens is 12 tens: what do you carry?",
+     "repair": "One hundred: sh. 625."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.ADD_MONEY.M_ADDM_SUBTRACTS",
+     "listen_for": [
+      "sh. 220"
+     ],
+     "ask": "Together or difference?",
+     "repair": "Together: sh. 280."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.ADD_MONEY.M_ADDM_MISALIGNED",
+     "listen_for": [
+      "sh. 1025"
+     ],
+     "ask": "Which digit of 60 is the tens?",
+     "repair": "The 6, under the 2: sh. 485."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.ADD_MONEY.M_ADDM_ONE_ITEM_ONLY",
+     "listen_for": [
+      "sh. 130"
+     ],
+     "ask": "Did you add the sugar?",
+     "repair": "No: sh. 280."
+    }
+   ],
+   "checks": [
+    {
+     "question": "sh. 480 + sh. 150",
+     "answer": "sh. 630",
+     "shows": "carry"
+    },
+    {
+     "question": "A shirt sh. 400 and socks sh. 120. Total?",
+     "answer": "sh. 520",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.SUBTRACT_MONEY",
+   "key_step": "The child takes the smaller amount from the larger in columns, regrouping once if needed, and writes sh.",
+   "floor": {
+    "prerequisite": "Subtracts 3-digit numbers.",
+    "question": "600 - 250",
+    "answer": "350"
+   },
+   "representations": [
+    "model money",
+    "a bar for money left",
+    "a column subtraction"
+   ],
+   "steps": [
+    "Money at the start on top.",
+    "Take away what is spent.",
+    "Regroup once if needed.",
+    "Write sh."
+   ],
+   "contexts": [
+    "money left after the market",
+    "saving for a ball",
+    "comparing prices"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write sh. 500 - sh. 125."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 0 - 5.",
+     "say": "What do we do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: open a ten."
+    },
+    {
+     "beat": "count",
+     "do": "Finish the columns together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 375."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SUBTRACT_MONEY.M_SUBM_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "sh. 425"
+     ],
+     "ask": "Can you take 5 from 0?",
+     "repair": "No: open, sh. 375."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SUBTRACT_MONEY.M_SUBM_ADDS",
+     "listen_for": [
+      "sh. 850"
+     ],
+     "ask": "More or less money after spending?",
+     "repair": "Less: sh. 350."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SUBTRACT_MONEY.M_SUBM_GIVES_SPENT",
+     "listen_for": [
+      "sh. 150"
+     ],
+     "ask": "Is sh. 150 spent or left?",
+     "repair": "Spent: sh. 250 left."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SUBTRACT_MONEY.M_SUBM_HOW_MUCH_MORE_ADDS",
+     "listen_for": [
+      "sh. 650"
+     ],
+     "ask": "What is the gap from 200 to 450?",
+     "repair": "sh. 250."
+    }
+   ],
+   "checks": [
+    {
+     "question": "sh. 700 - sh. 340",
+     "answer": "sh. 360",
+     "shows": "regroup"
+    },
+    {
+     "question": "A bag sh. 450, a book sh. 200. How much more is the bag?",
+     "answer": "sh. 250",
+     "shows": "how much more"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.SAME_AMOUNT_WAYS",
+   "key_step": "The child counts the value of each collection to show that different notes can make the same amount.",
+   "floor": {
+    "prerequisite": "Counts money.",
+    "question": "Count two sh. 100 notes.",
+    "answer": "sh. 200"
+   },
+   "representations": [
+    "model notes",
+    "drawn collections",
+    "a matching table"
+   ],
+   "steps": [
+    "Choose an amount.",
+    "Make it with one kind of note.",
+    "Make it with another mix.",
+    "Count to check both."
+   ],
+   "contexts": [
+    "the model shop",
+    "paying fees with different notes",
+    "an M-Pesa agent changing money"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw one sh. 200 note."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says how many sh. 50 notes make it."
+    },
+    {
+     "beat": "count",
+     "do": "Count in fifties together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 x sh. 50 = sh. 200."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SAME_AMOUNT_WAYS.M_SAME_COUNTS_PIECES",
+     "listen_for": [
+      "no, two notes are more"
+     ],
+     "ask": "What is two hundreds?",
+     "repair": "200: the same."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SAME_AMOUNT_WAYS.M_SAME_WRONG_NUMBER",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How many fifties did you count?",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SAME_AMOUNT_WAYS.M_SAME_ONE_WAY_ONLY",
+     "listen_for": [
+      "cannot"
+     ],
+     "ask": "What notes add up to 500?",
+     "repair": "Five sh. 100 notes, or two sh. 200 and one sh. 100."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.SAME_AMOUNT_WAYS.M_SAME_ADDS_FACE_VALUES_WRONG",
+     "listen_for": [
+      "no, sh. 400"
+     ],
+     "ask": "200 and 200 is?",
+     "repair": "400, and 100 more is 500: yes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many sh. 100 notes make sh. 500?",
+     "answer": "5",
+     "shows": "one kind"
+    },
+    {
+     "question": "Do two sh. 200 notes and a sh. 100 note make sh. 500?",
+     "answer": "yes",
+     "shows": "a mix"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS",
+   "key_step": "The child counts in the smaller note's value up to the bigger note and says how many.",
+   "floor": {
+    "prerequisite": "Shows an amount in different ways.",
+    "question": "How many sh. 100 notes make sh. 200?",
+    "answer": "2"
+   },
+   "representations": [
+    "model notes to swap",
+    "a picture of change",
+    "a counting line"
+   ],
+   "steps": [
+    "Name the note to change.",
+    "Name the smaller note.",
+    "Count in its value to the bigger.",
+    "Say how many."
+   ],
+   "contexts": [
+    "changing money at a shop",
+    "a matatu conductor's change",
+    "a church offering"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a sh. 1,000 note."
+    },
+    {
+     "beat": "count",
+     "do": "Count in two hundreds with the child to 1,000."
+    },
+    {
+     "beat": "pause",
+     "do": "Ask how many and wait."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5 sh. 200 notes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS.M_CHG_WRONG_COUNT",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "200, 400, 600, 800, 1,000: how many?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS.M_CHG_THINKS_LOSES_VALUE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Five twenties make?",
+     "repair": "100: fair."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS.M_CHG_MISSING_PART",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "How much is left after the sh. 200 note?",
+     "repair": "sh. 300: three sh. 100 notes."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS.M_CHG_GIVES_VALUE_NOT_COUNT",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "Are we asking the value or how many?",
+     "repair": "How many: 2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Change sh. 100 into sh. 20 coins. How many?",
+     "answer": "5",
+     "shows": "coins"
+    },
+    {
+     "question": "sh. 500 into sh. 200 and sh. 100 notes: two sh. 200 and how many sh. 100?",
+     "answer": "1",
+     "shows": "a mix"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE",
+   "key_step": "The child adds all the prices, takes the total from the money paid, and checks cost plus balance equals the money paid.",
+   "floor": {
+    "prerequisite": "Adds and subtracts money.",
+    "question": "sh. 60 + sh. 70",
+    "answer": "sh. 130"
+   },
+   "representations": [
+    "the classroom model shop",
+    "a receipt",
+    "a bar: cost and balance"
+   ],
+   "steps": [
+    "Add every item.",
+    "Take the total from the money paid.",
+    "That is the balance.",
+    "Check: cost + balance = paid."
+   ],
+   "contexts": [
+    "buying bread and milk",
+    "school supplies",
+    "food at the market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write bread sh. 60, milk sh. 70, paid sh. 200."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the prices.",
+     "say": "Total cost?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for sh. 130."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the balance."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write sh. 70; check 130 + 70 = 200."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE.M_MONEY_GIVES_COST_AS_CHANGE",
+     "listen_for": [
+      "sh. 130"
+     ],
+     "ask": "What happens after finding the cost?",
+     "repair": "Take it from 200: sh. 70."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE.M_MONEY_PAYS_ONE_ITEM",
+     "listen_for": [
+      "sh. 140"
+     ],
+     "ask": "Did you pay for the milk?",
+     "repair": "Yes: cost 130, change sh. 70."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE.M_MONEY_ADDS_PAID_AND_COST",
+     "listen_for": [
+      "sh. 850"
+     ],
+     "ask": "Is the change more than sh. 500?",
+     "repair": "No: sh. 150."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE.M_MONEY_CHANGE_NO_CHECK",
+     "listen_for": [
+      "sh. 220"
+     ],
+     "ask": "Is 380 + 220 equal to 500?",
+     "repair": "No, 600: the change is sh. 120."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A ball sh. 350, paid sh. 500. Balance?",
+     "answer": "sh. 150",
+     "shows": "one item"
+    },
+    {
+     "question": "Pen sh. 30, book sh. 120, ruler sh. 50, paid sh. 500. Balance?",
+     "answer": "sh. 300",
+     "shows": "three items"
+    }
+   ]
+  }
+ ]
+}

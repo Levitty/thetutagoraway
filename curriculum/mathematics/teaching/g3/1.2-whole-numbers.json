@@ -1,0 +1,577 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.WHOLE_NUMBERS",
+ "title": "Whole Numbers",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to f are KICD's words; g (games with number patterns) is covered with the pattern skill. Numbers are read up to 1,000 in symbols but written in words only up to 100. Place value stops at hundreds.",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+   "key_step": "The child says the step size, then watches which digit changes and moves to the next ten or hundred when a column is full.",
+   "floor": {
+    "prerequisite": "Counts forward to 100 (Grade 2).",
+    "question": "What comes after 99?",
+    "answer": "100"
+   },
+   "representations": [
+    "skipping rope counts",
+    "an abacus with three spikes",
+    "a 1 to 1,000 number line"
+   ],
+   "steps": [
+    "Say the start number.",
+    "Say the step: ones, tens or hundreds.",
+    "Change that digit by one each time.",
+    "When it passes 9, the next place goes up."
+   ],
+   "contexts": [
+    "counting bottle tops collected",
+    "rope skipping in a game",
+    "numbers on houses along a road"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 197, 198, 199, __."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ones digit.",
+     "say": "What happens after 9?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the tens and hundreds change."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 200."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000.M_CNT_STUCK_AT_HUNDRED",
+     "listen_for": [
+      "1000"
+     ],
+     "ask": "What happens to the tens and ones when we add one to 199?",
+     "repair": "They become a new hundred: 200."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000.M_CNT_TENS_SKIPS_HUNDRED",
+     "listen_for": [
+      "3100"
+     ],
+     "ask": "How many tens make a hundred?",
+     "repair": "Ten: 390 and one more ten is 400."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000.M_CNT_REPEATS_START",
+     "listen_for": [
+      "458"
+     ],
+     "ask": "Is 456 the first step, or where we stand?",
+     "repair": "Where we stand: 457, 458, 459."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000.M_CNT_ONES_INSTEAD_OF_TENS",
+     "listen_for": [
+      "521"
+     ],
+     "ask": "Which digit changes when we add a ten?",
+     "repair": "The tens digit: 530."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Count on in tens: 470, 480, 490, __",
+     "answer": "500",
+     "shows": "crossing a hundred in tens"
+    },
+    {
+     "question": "Count on in ones: 698, 699, __",
+     "answer": "700",
+     "shows": "crossing a hundred in ones"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS",
+   "key_step": "The child takes one hundred away each time: only the hundreds digit goes down.",
+   "floor": {
+    "prerequisite": "Counts back from 50.",
+    "question": "Count back: 50, 49, 48, __",
+    "answer": "47"
+   },
+   "representations": [
+    "ten bundles of a hundred straws",
+    "number cards in hundreds",
+    "a number line from 0 to 1,000"
+   ],
+   "steps": [
+    "Start at 1,000 or the given hundred.",
+    "Take away one hundred.",
+    "The hundreds digit goes down by one.",
+    "Stop at 0."
+   ],
+   "contexts": [
+    "counting down to the start of a race",
+    "money in hundred-shilling notes spent one by one",
+    "pages in a book"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 0 to 1,000 marked in hundreds."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 1,000.",
+     "say": "Take one hundred away."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says where the jump lands."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 900, then 800."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS.M_CB_FORWARD_INSTEAD",
+     "listen_for": [
+      "700"
+     ],
+     "ask": "Is the number getting bigger or smaller?",
+     "repair": "Smaller: 500."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS.M_CB_1000_TO_9000",
+     "listen_for": [
+      "990"
+     ],
+     "ask": "How many hundreds are left when one is taken from ten hundreds?",
+     "repair": "Nine hundreds: 900."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS.M_CB_STEP_TEN",
+     "listen_for": [
+      "290"
+     ],
+     "ask": "Which digit changes when we take away a hundred?",
+     "repair": "The hundreds digit: 200."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS.M_CB_ZERO_AFTER_100",
+     "listen_for": [
+      "00"
+     ],
+     "ask": "If one hundred bundle is taken away, how many are left?",
+     "repair": "None: 0."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Count back in hundreds: 600, 500, __",
+     "answer": "400",
+     "shows": "count back"
+    },
+    {
+     "question": "What hundred comes before 1,000?",
+     "answer": "900",
+     "shows": "from a thousand"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+   "key_step": "The child puts the number in a hundreds, tens and ones chart and reads each digit's worth from its column.",
+   "floor": {
+    "prerequisite": "Place value in tens and ones (Grade 2).",
+    "question": "In 46, what is the 4 worth?",
+    "answer": "40"
+   },
+   "representations": [
+    "bundles of straws (hundreds, tens, ones)",
+    "an abacus",
+    "a place value chart"
+   ],
+   "steps": [
+    "Write the digits in the chart from the right.",
+    "Name the column of each digit.",
+    "Say its worth: digit times the column.",
+    "An empty column gets 0."
+   ],
+   "contexts": [
+    "counting maize cobs in sacks",
+    "learners in a school",
+    "pages in a story book"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a chart: Hundreds, Tens, Ones. Write 305."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 0.",
+     "say": "What does the 0 tell us?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: no tens."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws 3 hundred squares and 5 dots."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 300 + 0 + 5 = 305."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS.M_PV_FACE_VALUE",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Which column is the 4 in?",
+     "repair": "The tens: 4 tens is 40."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS.M_PV_SKIPS_EMPTY_PLACE",
+     "listen_for": [
+      "35"
+     ],
+     "ask": "What goes in the tens column?",
+     "repair": "0: 305."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS.M_PV_REVERSED_ORDER",
+     "listen_for": [
+      "862"
+     ],
+     "ask": "Which place comes first on the left?",
+     "repair": "Hundreds: 268."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS.M_PV_ADDS_DIGITS",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Is 4 hundreds the same as 4?",
+     "repair": "No, 400: then 430, then 432."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS.M_PV_LEAVES_OUT_PLACE",
+     "listen_for": [
+      "501"
+     ],
+     "ask": "Did you write the 7 tens?",
+     "repair": "Yes, in the middle: 571."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS.M_PV_BIGGEST_DIGIT_WINS",
+     "listen_for": [
+      "189"
+     ],
+     "ask": "Which has more hundreds?",
+     "repair": "312 has 3 hundreds, so it is greater."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the 6 in 263 worth?",
+     "answer": "60",
+     "shows": "worth of a digit"
+    },
+    {
+     "question": "Write 7 hundreds and 4 ones as a number.",
+     "answer": "704",
+     "shows": "an empty place"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+   "key_step": "The child names the hundreds, says 'and', then reads the last two digits as one number.",
+   "floor": {
+    "prerequisite": "Reads numbers up to 100.",
+    "question": "Read 64.",
+    "answer": "sixty-four"
+   },
+   "representations": [
+    "number cards",
+    "a place value chart",
+    "price tags in a model shop"
+   ],
+   "steps": [
+    "How many digits?",
+    "Say the hundreds.",
+    "Say 'and'.",
+    "Read the last two digits as one number, or skip zeros."
+   ],
+   "contexts": [
+    "page numbers",
+    "prices in a shop",
+    "a bus fare board"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 406."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4.",
+     "say": "How many hundreds?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for four hundred."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 0.",
+     "say": "Do we say zero?"
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: four hundred and six."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000.M_READ_ZERO_SAID",
+     "listen_for": [
+      "four hundred zero six"
+     ],
+     "ask": "How many tens are there?",
+     "repair": "None, so we say four hundred and six."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000.M_READ_DIGIT_BY_DIGIT",
+     "listen_for": [
+      "two five three"
+     ],
+     "ask": "What is the 2 worth?",
+     "repair": "Two hundred: two hundred and fifty-three."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000.M_READ_TEEN_TY",
+     "listen_for": [
+      "three hundred and forty"
+     ],
+     "ask": "How many tens are in 314?",
+     "repair": "One ten: fourteen."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000.M_READ_HUNDRED_AS_THOUSAND",
+     "listen_for": [
+      "seven thousand"
+     ],
+     "ask": "How many digits does 700 have?",
+     "repair": "Three: seven hundred."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read 518 aloud.",
+     "answer": "five hundred and eighteen",
+     "shows": "a teen ending"
+    },
+    {
+     "question": "Read 900 aloud.",
+     "answer": "nine hundred",
+     "shows": "hundreds only"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100",
+   "key_step": "The child writes the tens word, a hyphen, then the ones word, and the tens digit first when writing figures.",
+   "floor": {
+    "prerequisite": "Writes numbers 1 to 20 in words.",
+    "question": "Write 15 in words.",
+    "answer": "fifteen"
+   },
+   "representations": [
+    "number word cards",
+    "a hundred square with words",
+    "cheques and receipts in play"
+   ],
+   "steps": [
+    "Find the tens.",
+    "Write the tens word.",
+    "Add a hyphen and the ones word.",
+    "Check the spelling of forty."
+   ],
+   "contexts": [
+    "a class list of ages",
+    "a receipt from the model shop",
+    "a church offering card"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 47."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4.",
+     "say": "What tens word is that?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for forty."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write forty-seven."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100.M_WORDS_FOURTY",
+     "listen_for": [
+      "fourty"
+     ],
+     "ask": "Does forty have the letter u?",
+     "repair": "No: forty."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100.M_WORDS_TEEN_FOR_TY",
+     "listen_for": [
+      "sixteen"
+     ],
+     "ask": "How many tens is 60?",
+     "repair": "Six tens: sixty."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100.M_WORDS_REVERSED_DIGITS",
+     "listen_for": [
+      "72"
+     ],
+     "ask": "Which part is the tens: twenty or seven?",
+     "repair": "Twenty: 27."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100.M_WORDS_JOINED_NUMBER",
+     "listen_for": [
+      "205"
+     ],
+     "ask": "How many digits does a number up to 99 have?",
+     "repair": "Two: 25."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 90 in words.",
+     "answer": "ninety",
+     "shows": "a ty word"
+    },
+    {
+     "question": "Write sixty-eight as a number.",
+     "answer": "68",
+     "shows": "words to figures"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000",
+   "key_step": "The child finds the jump between neighbours, checks it on both sides, and uses it to fill the gap.",
+   "floor": {
+    "prerequisite": "Patterns to 100.",
+    "question": "10, 20, 30, __",
+    "answer": "40"
+   },
+   "representations": [
+    "number cards in a row",
+    "jumps drawn on a number line",
+    "a hundred square"
+   ],
+   "steps": [
+    "Find the difference between two neighbours.",
+    "Check it with another pair.",
+    "Up or down?",
+    "Use the jump to find the missing number."
+   ],
+   "contexts": [
+    "house numbers along a street",
+    "saving 50 shillings each week",
+    "seats numbered in a hall"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 105, 110, __, 120."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw jumps between 105 and 110."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the jump."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the missing number."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 115."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000.M_PAT_ONES_FOR_TENS",
+     "listen_for": [
+      "261"
+     ],
+     "ask": "How much does it go up each time?",
+     "repair": "Ten: 270."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000.M_PAT_DIRECTION",
+     "listen_for": [
+      "800"
+     ],
+     "ask": "Are the numbers getting bigger or smaller?",
+     "repair": "Smaller by 100: 600."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000.M_PAT_FIRST_JUMP_ONLY",
+     "listen_for": [
+      "111"
+     ],
+     "ask": "What is the jump from 120 to 125?",
+     "repair": "Five: 110 then 115."
+    },
+    {
+     "code": "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000.M_PAT_CROSS_HUNDRED",
+     "listen_for": [
+      "4100"
+     ],
+     "ask": "What is 490 and ten more?",
+     "repair": "500."
+    }
+   ],
+   "checks": [
+    {
+     "question": "350, 400, 450, __",
+     "answer": "500",
+     "shows": "jump of 50"
+    },
+    {
+     "question": "820, 810, __, 790",
+     "answer": "800",
+     "shows": "going down in tens"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,564 @@
+{
+ "sub_strand": "MATH.G1.NUMBER.ADDITION",
+ "title": "Addition",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to f are KICD's words; g (games with devices or other resources) is covered with adding two single digits. Addition is modelled with objects first; sums of a 2-digit and a 1-digit number stay within 50 with no regrouping.",
+ "skills": [
+  {
+   "skill": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+   "key_step": "The child puts both groups together and counts all, or holds the first number and counts on the second.",
+   "floor": {
+    "prerequisite": "Put small groups together (PP2).",
+    "question": "2 stones and 1 more: how many?",
+    "answer": "3"
+   },
+   "representations": [
+    "real objects",
+    "drawings of two groups",
+    "a number line"
+   ],
+   "steps": [
+    "Show the first group.",
+    "Add the second group.",
+    "Count all, or count on.",
+    "Say how many now."
+   ],
+   "contexts": [
+    "birds on a tree",
+    "mangoes in a basket",
+    "children joining a game"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 6 birds and 3 more flying in."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 6.",
+     "say": "Keep 6 in your head."
+    },
+    {
+     "beat": "count",
+     "do": "Count on with the child: 7, 8, 9."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 9."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 9 birds."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_COUNTS_START_AGAIN",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Is 6 the first step?",
+     "repair": "No: 7, 8, 9."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_TAKES_AWAY",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "More or fewer birds now?",
+     "repair": "More: 11."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_GIVES_START",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Did you count the new birds?",
+     "repair": "No: 9."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_COUNTS_ONE_GROUP_TWICE",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Did you count any twice?",
+     "repair": "Yes: 7."
+    }
+   ],
+   "checks": [
+    {
+     "question": "5 hens and 2 more come. How many now?",
+     "answer": "7",
+     "shows": "putting together"
+    },
+    {
+     "question": "4 books and 4 more. How many?",
+     "answer": "8",
+     "shows": "counting on"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+   "key_step": "The child writes the first number, +, the second number, =, then the answer.",
+   "floor": {
+    "prerequisite": "Puts groups together.",
+    "question": "3 and 2 more is?",
+    "answer": "5"
+   },
+   "representations": [
+    "number and sign cards",
+    "pictures",
+    "a number sentence"
+   ],
+   "steps": [
+    "Count the first group.",
+    "Write it, then +.",
+    "Count the second; write it.",
+    "Write = and the answer."
+   ],
+   "contexts": [
+    "cows in two fields",
+    "pencils in two tins",
+    "sweets in two hands"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 2 cows and 4 cows."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each group.",
+     "say": "How many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2 and 4."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 2 + 4 ="
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_EQUALS_FIRST",
+     "listen_for": [
+      "= 3 + 2 5"
+     ],
+     "ask": "What comes just before the answer?",
+     "repair": "=: 3 + 2 = 5."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_MINUS",
+     "listen_for": [
+      "4 - 3 = 7"
+     ],
+     "ask": "Which sign means add?",
+     "repair": "+."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_EQUALS_MEANS_ANSWER_NEXT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is 3 + 2 the same as 5 + 1?",
+     "repair": "No: 5 and 6."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_PICTURE_WRONG_NUMBERS",
+     "listen_for": [
+      "2 + 2 = 4"
+     ],
+     "ask": "How many in each group?",
+     "repair": "2 and 4: 2 + 4 = 6."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write: 5 add 3 equals 8.",
+     "answer": "5 + 3 = 8",
+     "shows": "writing"
+    },
+    {
+     "question": "Which sign is missing: 4 __ 2 = 6?",
+     "answer": "+",
+     "shows": "the sign"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+   "key_step": "The child starts at the bigger number and counts on the smaller one.",
+   "floor": {
+    "prerequisite": "Reads addition sentences.",
+    "question": "3 + 2",
+    "answer": "5"
+   },
+   "representations": [
+    "fingers",
+    "bottle tops",
+    "a number line to 20"
+   ],
+   "steps": [
+    "Find the bigger number.",
+    "Hold it.",
+    "Count on the smaller.",
+    "Say the total."
+   ],
+   "contexts": [
+    "rolling two dice",
+    "two baskets of eggs",
+    "two classes of children"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 7 + 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 7.",
+     "say": "Start here."
+    },
+    {
+     "beat": "count",
+     "do": "Count on 5 with the child: 8, 9, 10, 11, 12."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_COUNTS_START",
+     "listen_for": [
+      "11"
+     ],
+     "ask": "Is 7 the first count?",
+     "repair": "No: 12."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_COUNTS_ALL",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "Start at 8: 9, 10, 11, 12, 13, then?",
+     "repair": "14."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_REVERSED_ANSWER",
+     "listen_for": [
+      "21"
+     ],
+     "ask": "How many tens in 12?",
+     "repair": "One: 12."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_SUBTRACTS",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "What does + mean?",
+     "repair": "Add: 13."
+    }
+   ],
+   "checks": [
+    {
+     "question": "8 + 6",
+     "answer": "14",
+     "shows": "counting on"
+    },
+    {
+     "question": "3 + 9",
+     "answer": "12",
+     "shows": "start from bigger"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+   "key_step": "The child adds two numbers, writes or holds the total, then adds the third.",
+   "floor": {
+    "prerequisite": "Adds two numbers.",
+    "question": "4 + 3",
+    "answer": "7"
+   },
+   "representations": [
+    "three groups of objects",
+    "a number line",
+    "number cards"
+   ],
+   "steps": [
+    "Add the first two.",
+    "Hold that total.",
+    "Add the third.",
+    "Look for a pair making 10."
+   ],
+   "contexts": [
+    "sweets from three friends",
+    "eggs from three hens",
+    "three baskets"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 4 + 3 + 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 4 + 3.",
+     "say": "What is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7."
+    },
+    {
+     "beat": "count",
+     "do": "Count on 5 from 7 together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_ADDS_TWO",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Did you add the 5?",
+     "repair": "No: 12."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_LOSES_TOTAL",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "What was 6 + 2?",
+     "repair": "8, and 3 more: 11."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_COUNTS_START",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Is 5 the first count?",
+     "repair": "No: 10."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_STORY_TWO_ONLY",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many amounts did you underline?",
+     "repair": "Three: 9."
+    }
+   ],
+   "checks": [
+    {
+     "question": "2 + 5 + 3",
+     "answer": "10",
+     "shows": "three numbers"
+    },
+    {
+     "question": "6 + 4 + 2",
+     "answer": "12",
+     "shows": "make ten first"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+   "key_step": "The child keeps the tens and adds the ones to the ones.",
+   "floor": {
+    "prerequisite": "Adds single digits.",
+    "question": "3 + 4",
+    "answer": "7"
+   },
+   "representations": [
+    "an abacus",
+    "bundles and sticks",
+    "a column"
+   ],
+   "steps": [
+    "Ones under ones.",
+    "Add the ones.",
+    "Keep the tens.",
+    "Read the answer."
+   ],
+   "contexts": [
+    "learners in a class",
+    "mangoes on a tree",
+    "shillings saved"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 23 + 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3 and 4.",
+     "say": "Add the ones."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 27."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_MISALIGNED",
+     "listen_for": [
+      "63"
+     ],
+     "ask": "Is 4 tens or ones?",
+     "repair": "Ones: 27."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_DIGITS_ADDED",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "What happens to the tens?",
+     "repair": "They stay: 37."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_COUNTS_START",
+     "listen_for": [
+      "43"
+     ],
+     "ask": "Is 41 a step?",
+     "repair": "No: 44."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_ONES_ONLY",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "What about the 2 tens?",
+     "repair": "27."
+    }
+   ],
+   "checks": [
+    {
+     "question": "31 + 6",
+     "answer": "37",
+     "shows": "column"
+    },
+    {
+     "question": "42 + 5",
+     "answer": "47",
+     "shows": "count on"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+   "key_step": "The child counts up from the number known to the total and counts the steps.",
+   "floor": {
+    "prerequisite": "Adds by counting on.",
+    "question": "6 + 4",
+    "answer": "10"
+   },
+   "representations": [
+    "fingers",
+    "a number line",
+    "bottle tops"
+   ],
+   "steps": [
+    "Start at the number known.",
+    "Count up to the total.",
+    "Count the steps.",
+    "Check by adding."
+   ],
+   "contexts": [
+    "stickers needed",
+    "seats left in a matatu",
+    "eggs to fill a tray"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 6 + __ = 10."
+    },
+    {
+     "beat": "count",
+     "do": "Count up from 6 to 10 with the child on fingers."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 4 fingers."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_COUNTS_START",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "How many steps?",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_GIVES_KNOWN",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Is 6 what she has or what she needs?",
+     "repair": "What she has: 4 more."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_ADDS_BOTH",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "Is the missing number more than 10?",
+     "repair": "No: 4."
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_PATTERN_ONE",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "From 5 to 7 is?",
+     "repair": "2: 11."
+    }
+   ],
+   "checks": [
+    {
+     "question": "7 + __ = 10",
+     "answer": "3",
+     "shows": "missing number"
+    },
+    {
+     "question": "10, 12, 14, __",
+     "answer": "16",
+     "shows": "pattern"
+    }
+   ]
+  }
+ ]
+}

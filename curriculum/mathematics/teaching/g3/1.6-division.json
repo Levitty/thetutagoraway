@@ -1,0 +1,286 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.DIVISION",
+ "title": "Division",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Repeated subtraction is for numbers up to 50 by 4 and 5; division has no remainder; dividing by 10 is for multiples of ten up to 90.",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION",
+   "key_step": "The child takes away the same number again and again until nothing is left and counts the takes.",
+   "floor": {
+    "prerequisite": "Equal grouping by 3 (Grade 2).",
+    "question": "Put 12 counters in threes. How many groups?",
+    "answer": "4"
+   },
+   "representations": [
+    "counters",
+    "a backwards number line",
+    "a subtraction chain"
+   ],
+   "steps": [
+    "Start with all.",
+    "Take away the group size.",
+    "Write what is left.",
+    "Count the takes when you reach 0."
+   ],
+   "contexts": [
+    "feeding cows maize cobs each day",
+    "packing eggs",
+    "sharing mangoes"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 20 dots."
+    },
+    {
+     "beat": "point",
+     "do": "Ring 5 dots.",
+     "say": "How many left?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rings fives until none are left."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the number of rings."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 ÷ 5 = 4."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION.M_DREP_ANSWER_LAST_NUMBER",
+     "listen_for": [
+      "0"
+     ],
+     "ask": "How many rings?",
+     "repair": "4: 20 ÷ 5 = 4."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION.M_DREP_STOPS_EARLY",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Is anything left after 3 takes?",
+     "repair": "4 left, one more take: 4 times."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION.M_DREP_SUBTRACTS_ONCE",
+     "listen_for": [
+      "35"
+     ],
+     "ask": "Is the store empty after one day?",
+     "repair": "No: keep going, 8 days."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION.M_DREP_WRONG_GROUP",
+     "listen_for": [
+      "20, 16"
+     ],
+     "ask": "What is 20 take away 5?",
+     "repair": "15."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Take 4 at a time from 28. How many times?",
+     "answer": "7",
+     "shows": "by 4"
+    },
+    {
+     "question": "45 ÷ 5",
+     "answer": "9",
+     "shows": "by 5"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+   "key_step": "The child asks which times-table fact gives the number and reads the missing factor.",
+   "floor": {
+    "prerequisite": "Times tables.",
+    "question": "6 x 7",
+    "answer": "42"
+   },
+   "representations": [
+    "counters shared into plates",
+    "the multiplication chart",
+    "a number sentence"
+   ],
+   "steps": [
+    "What is shared and by what?",
+    "Find the table of the divisor.",
+    "Find the number in it.",
+    "The step is the answer."
+   ],
+   "contexts": [
+    "learners at tables",
+    "rope cut into pieces",
+    "books shared among groups"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 42 ÷ 6."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 6 times table.",
+     "say": "Where is 42?"
+    },
+    {
+     "beat": "count",
+     "do": "Count in sixes with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7 steps."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 42 ÷ 6 = 7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D.M_DIV_SUBTRACTS_ONCE",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "How many 4s fit into 24?",
+     "repair": "6."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D.M_DIV_GIVES_GROUP_SIZE",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Is 5 the tables or the learners at a table?",
+     "repair": "Learners at a table: 7 tables."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D.M_DIV_ONE_EXTRA",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "What is 6 x 8?",
+     "repair": "48: too much, so 7."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D.M_DIV_REVERSED",
+     "listen_for": [
+      "0"
+     ],
+     "ask": "What is being shared?",
+     "repair": "42 sweets: 42 ÷ 6 = 7."
+    }
+   ],
+   "checks": [
+    {
+     "question": "56 ÷ 8",
+     "answer": "7",
+     "shows": "a table fact"
+    },
+    {
+     "question": "36 learners sit 4 at each desk. How many desks?",
+     "answer": "9",
+     "shows": "grouping story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.DIVISION.DIV_BY_10",
+   "key_step": "The child counts how many tens make the number.",
+   "floor": {
+    "prerequisite": "Multiplies by 10.",
+    "question": "8 x 10",
+    "answer": "80"
+   },
+   "representations": [
+    "bundles of ten straws",
+    "ten-shilling coins",
+    "the 10 times table"
+   ],
+   "steps": [
+    "Count in tens.",
+    "Stop at the number.",
+    "The count is the answer.",
+    "Check by x 10."
+   ],
+   "contexts": [
+    "pencils in packets",
+    "eggs in crates of 10",
+    "ten-shilling coins"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 7 bundles of ten."
+    },
+    {
+     "beat": "count",
+     "do": "Count them in tens with the child to 70."
+    },
+    {
+     "beat": "pause",
+     "do": "Ask how many bundles."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 70 ÷ 10 = 7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_BY_10.M_D10_SUBTRACTS_TEN",
+     "listen_for": [
+      "60"
+     ],
+     "ask": "How many bundles of ten make 70?",
+     "repair": "7."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_BY_10.M_D10_KEEPS_ZERO",
+     "listen_for": [
+      "05"
+     ],
+     "ask": "How many tens in 50?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_BY_10.M_D10_MULTIPLIES",
+     "listen_for": [
+      "300"
+     ],
+     "ask": "Will the answer be bigger or smaller than 30?",
+     "repair": "Smaller: 3."
+    },
+    {
+     "code": "MATH.G3.NUMBER.DIVISION.DIV_BY_10.M_D10_WRONG_TENS",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "How many tens to reach 90?",
+     "repair": "9 packets."
+    }
+   ],
+   "checks": [
+    {
+     "question": "80 ÷ 10",
+     "answer": "8",
+     "shows": "fact"
+    },
+    {
+     "question": "40 shillings in ten-shilling coins: how many coins?",
+     "answer": "4",
+     "shows": "story"
+    }
+   ]
+  }
+ ]
+}

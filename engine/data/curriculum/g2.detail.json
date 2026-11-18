@@ -1,0 +1,562 @@
+{
+ "outcomes": {
+  "MATH.G2.NUMBER.NUMBER_CONCEPT.a": "identify numbers 1 to 100 in symbols in different situations",
+  "MATH.G2.NUMBER.NUMBER_CONCEPT.b": "represent numbers 1 to 100 using concrete objects from the environment",
+  "MATH.G2.NUMBER.NUMBER_CONCEPT.c": "play number games using number cards or digital devices",
+  "MATH.G2.NUMBER.NUMBER_CONCEPT.d": "appreciate the use of numbers in real life situations",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.a": "count numbers forward up to 100 in different situations",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.b": "count numbers backward from number 50",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.c": "read and write numbers 1 to 100 in symbols in different situations",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.d": "identify the place value of numbers in ones and tens",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.e": "read and write numbers 1 to 20 in words",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.f": "work out missing numbers in number patterns up to 100",
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.g": "appreciate number patterns in playing number games",
+  "MATH.G2.NUMBER.ADDITION.a": "add a 2 digit number to a 1 digit number without and with regrouping with sum not exceeding 100",
+  "MATH.G2.NUMBER.ADDITION.b": "add a 2 digit number to a 2 digit number without and with regrouping, with sum not exceeding 100",
+  "MATH.G2.NUMBER.ADDITION.c": "add two multiples of 10 whose sum does not exceed 100",
+  "MATH.G2.NUMBER.ADDITION.d": "work out missing numbers in patterns involving addition of whole numbers up to 100",
+  "MATH.G2.NUMBER.ADDITION.e": "appreciate the addition of numbers in real life situations",
+  "MATH.G2.NUMBER.SUBTRACTION.a": "subtract a 1 digit number from a 2 digit number without regrouping",
+  "MATH.G2.NUMBER.SUBTRACTION.b": "subtract a 2 digit number from a 2 digit number without and with regrouping",
+  "MATH.G2.NUMBER.SUBTRACTION.c": "subtract a lower multiple of from a higher multiple of 10",
+  "MATH.G2.NUMBER.SUBTRACTION.d": "work out missing numbers in patterns involving subtraction up to 100",
+  "MATH.G2.NUMBER.SUBTRACTION.e": "appreciate subtraction of numbers in real life situations",
+  "MATH.G2.NUMBER.MULTIPLICATION.a": "represent multiplication as repeated addition using numbers 1, 2, 3, by 2 and 3",
+  "MATH.G2.NUMBER.MULTIPLICATION.b": "write repeated addition sentences as multiplication using ‘ ’ sign",
+  "MATH.G2.NUMBER.MULTIPLICATION.c": "multiply 1 digit numbers by 1, 2, 3, 4 and 5",
+  "MATH.G2.NUMBER.MULTIPLICATION.d": "multiply 1 digit numbers by 10",
+  "MATH.G2.NUMBER.MULTIPLICATION.e": "appreciate arranging objects in groups of 3’s, 4’s, 5’s and 10’s in real life situations",
+  "MATH.G2.NUMBER.DIVISION.a": "represent division as equal sharing up to number 20 by 2",
+  "MATH.G2.NUMBER.DIVISION.b": "represent division as equal grouping of numbers up to 25 by 3",
+  "MATH.G2.NUMBER.DIVISION.c": "use ' ' sign in writing division statements",
+  "MATH.G2.NUMBER.DIVISION.d": "divide numbers up to 25 by 4 and 5 without a remainder",
+  "MATH.G2.NUMBER.DIVISION.e": "appreciate the application of division of numbers in real life situations",
+  "MATH.G2.NUMBER.FRACTIONS.a": "identify a as part of a whole in different situations",
+  "MATH.G2.NUMBER.FRACTIONS.b": "identify a as part of a whole in different situations",
+  "MATH.G2.NUMBER.FRACTIONS.c": "use fractions in day-to-day activities",
+  "MATH.G2.NUMBER.FRACTIONS.d": "appreciate the application of fractions in daily life activities",
+  "MATH.G2.MEASUR.LENGTH.a": "measure length using fixed units",
+  "MATH.G2.MEASUR.LENGTH.b": "identify the metre as a unit of measuring length",
+  "MATH.G2.MEASUR.LENGTH.c": "measure length in metres",
+  "MATH.G2.MEASUR.LENGTH.d": "appreciate measuring length using fixed units in real life situations",
+  "MATH.G2.MEASUR.MASS.a": "measure mass using fixed units",
+  "MATH.G2.MEASUR.MASS.b": "identify the kilogram as a unit of measuring mass",
+  "MATH.G2.MEASUR.MASS.c": "measure mass of different objects in kilograms",
+  "MATH.G2.MEASUR.MASS.d": "appreciate measuring mass using fixed units in real life situations",
+  "MATH.G2.MEASUR.CAPACITY.a": "measure capacity using fixed units",
+  "MATH.G2.MEASUR.CAPACITY.b": "identify the litre as a unit of measuring capacity",
+  "MATH.G2.MEASUR.CAPACITY.c": "measure capacity in litres",
+  "MATH.G2.MEASUR.CAPACITY.d": "appreciate measuring capacity in litres using improvised containers in real life situations",
+  "MATH.G2.MEASUR.TIME.a": "relate the months of the year to special occasions",
+  "MATH.G2.MEASUR.TIME.b": "recite the number of days in each month of the year",
+  "MATH.G2.MEASUR.TIME.c": "read the calendar in terms of day and date",
+  "MATH.G2.MEASUR.TIME.d": "measure time using arbitrary units",
+  "MATH.G2.MEASUR.TIME.e": "identify the minute and hour hand in clock face",
+  "MATH.G2.MEASUR.TIME.f": "read time by the hour from the clock face",
+  "MATH.G2.MEASUR.TIME.g": "write time by the hour shown by an analogue and digital clock",
+  "MATH.G2.MEASUR.TIME.h": "appreciate keeping time in day-to-day activities",
+  "MATH.G2.MEASUR.MONEY.a": "identify Kenyan currency coins and notes up to sh.100",
+  "MATH.G2.MEASUR.MONEY.b": "count the number of sh. 10 and sh. 20 coins in different situations",
+  "MATH.G2.MEASUR.MONEY.c": "count the number of sh. 50 and sh. 100 notes in different situations",
+  "MATH.G2.MEASUR.MONEY.d": "add two denominations of money with a sum not exceeding sh. 100",
+  "MATH.G2.MEASUR.MONEY.e": "use money to buy up to 3 items without balance",
+  "MATH.G2.MEASUR.MONEY.f": "appreciate the use of money in buying items",
+  "MATH.G2.GEOMET.LINES.a": "model straight lines in different ways",
+  "MATH.G2.GEOMET.LINES.b": "draw straight lines in different ways",
+  "MATH.G2.GEOMET.LINES.c": "model curved lines in different ways",
+  "MATH.G2.GEOMET.LINES.d": "draw curved lines in different situations",
+  "MATH.G2.GEOMET.LINES.e": "appreciate the use of lines in real life situations",
+  "MATH.G2.GEOMET.SHAPES.a": "identify different shapes in the environment",
+  "MATH.G2.GEOMET.SHAPES.b": "draw shapes in different ways",
+  "MATH.G2.GEOMET.SHAPES.c": "draw patterns involving different shapes",
+  "MATH.G2.GEOMET.SHAPES.d": "appreciate the use of shapes in forming patterns in fabrics"
+ },
+ "skills": {
+  "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100": {
+   "forms": [
+    "point to the number said",
+    "name the number on the card",
+    "which card shows 47",
+    "find the number on a hundred chart"
+   ],
+   "mastery": "The child picks out and names any number from 1 to 100 shown on a card, chart, page or calendar, and tells apart numbers with the same digits (16 and 61). Number games with cards or devices are played in class."
+  },
+  "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100": {
+   "forms": [
+    "how many sticks are shown",
+    "show this number with bundles",
+    "match the group to its number",
+    "count by making tens"
+   ],
+   "mastery": "The child shows a number up to 100 with real objects grouped in tens and ones (bundles of 10 sticks and loose sticks), counts a collection by making tens, and matches a group of objects to its number.",
+   "hands_on": "Collecting and bundling objects from the environment is done in class."
+  },
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100": {
+   "forms": [
+    "count on from a number",
+    "what comes next",
+    "missing number in a forward count",
+    "count on across a ten"
+   ],
+   "mastery": "Starting from any number, the child counts on in ones to 100, crossing each ten correctly (29, 30, 31; 99, 100), and says the next number after any number below 100."
+  },
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50": {
+   "forms": [
+    "count back from a number",
+    "what comes before",
+    "missing number in a backward count",
+    "count back across a ten"
+   ],
+   "mastery": "The child counts back in ones from 50, or from any number up to 50, crossing each ten correctly (31, 30, 29), and says the number before a given number."
+  },
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100": {
+   "forms": [
+    "write the number said",
+    "read the number",
+    "write the number shown by objects",
+    "correct a mirrored digit"
+   ],
+   "mastery": "The child writes in symbols any number up to 100 that is said or shown, with the digits in the right order and correctly formed (not mirror-written), and reads a written number aloud."
+  },
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS": {
+   "forms": [
+    "which digit is in the tens place",
+    "what is the digit worth",
+    "tens and ones to a number",
+    "put the card in the right tin"
+   ],
+   "mastery": "For any 2-digit number the child says which digit is in the tens place and which in the ones place, what each is worth (the 7 in 74 is 70), and builds a number from tens and ones (5 tens and 3 ones is 53)."
+  },
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20": {
+   "forms": [
+    "write the number in words",
+    "match the word to the number",
+    "choose the correct spelling",
+    "read the word"
+   ],
+   "mastery": "The child reads and writes the number words one to twenty with correct spelling (eight, eleven, twelve, fifteen, twenty) and matches a word to its number."
+  },
+  "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100": {
+   "forms": [
+    "next number in the pattern",
+    "missing number in the middle",
+    "what is the jump",
+    "count in fives or tens"
+   ],
+   "mastery": "The child finds the rule of a pattern counting on or back in ones, twos, fives or tens (35, 40, 45, __), and fills in missing numbers up to 100."
+  },
+  "MATH.G2.NUMBER.ADDITION.ADD_2D_1D": {
+   "forms": [
+    "column addition",
+    "horizontal to vertical",
+    "count on",
+    "a story with a total"
+   ],
+   "mastery": "The child adds a 1-digit number to a 2-digit number with a sum up to 100 (43 + 5 = 48; 47 + 8 = 55), counting on or in a column, and carries a ten when the ones make ten or more."
+  },
+  "MATH.G2.NUMBER.ADDITION.ADD_2D_2D": {
+   "forms": [
+    "column addition",
+    "horizontal addition",
+    "a two-amount story",
+    "missing digit"
+   ],
+   "mastery": "The child adds two 2-digit numbers with a sum up to 100 (34 + 25 = 59; 38 + 45 = 83), lining up tens and ones and carrying a ten from the ones."
+  },
+  "MATH.G2.NUMBER.ADDITION.ADD_TENS": {
+   "forms": [
+    "add the tens",
+    "bundles of ten",
+    "ten-shilling coins",
+    "missing ten"
+   ],
+   "mastery": "The child adds two multiples of ten (30 + 50 = 80) by adding the tens, and explains it with bundles of ten."
+  },
+  "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100": {
+   "forms": [
+    "missing number in an addition",
+    "how much more to make 100",
+    "next in an adding pattern",
+    "missing term"
+   ],
+   "mastery": "The child finds the missing number in an addition (35 + __ = 100) by counting up in tens and ones, and continues or fills in a pattern made by adding the same number (12, 17, 22, __)."
+  },
+  "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_1D": {
+   "forms": [
+    "column subtraction",
+    "count back",
+    "how many are left",
+    "horizontal to vertical"
+   ],
+   "mastery": "The child subtracts a 1-digit number from a 2-digit number where the ones digit is big enough (48 - 5 = 43), by counting back or in a column."
+  },
+  "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D": {
+   "forms": [
+    "column subtraction",
+    "how many fewer",
+    "how many are left",
+    "find the mistake"
+   ],
+   "mastery": "The child subtracts two 2-digit numbers (68 - 25 = 43; 52 - 27 = 25), opening a ten into ten ones when the top ones digit is smaller, using place value apparatus or a column."
+  },
+  "MATH.G2.NUMBER.SUBTRACTION.SUB_TENS": {
+   "forms": [
+    "take away tens",
+    "bundles of ten",
+    "ten-shilling coins",
+    "missing ten"
+   ],
+   "mastery": "The child subtracts multiples of ten (80 - 30 = 50) by taking tens from tens, and explains it with bundles."
+  },
+  "MATH.G2.NUMBER.SUBTRACTION.SUB_PATTERNS_100": {
+   "forms": [
+    "next number going down",
+    "missing term",
+    "what is taken away",
+    "missing number in a subtraction"
+   ],
+   "mastery": "The child continues or fills in a pattern made by taking away the same number (90, 80, 70, __; 50, 47, 44, __) and finds a missing number in a subtraction sentence (60 - __ = 25)."
+  },
+  "MATH.G2.NUMBER.MULTIPLICATION.MULT_REPEATED_ADD": {
+   "forms": [
+    "make groups with counters",
+    "write the repeated addition",
+    "how many groups of",
+    "draw the groups"
+   ],
+   "mastery": "The child shows 1, 2 or 3 groups of 2 or 3 with counters and writes the repeated addition (3 + 3 = 6), saying how many groups and how many in each."
+  },
+  "MATH.G2.NUMBER.MULTIPLICATION.MULT_SIGN": {
+   "forms": [
+    "write as multiplication",
+    "read the x sentence",
+    "match addition to multiplication",
+    "fill the missing number"
+   ],
+   "mastery": "The child writes a repeated addition as a multiplication sentence (2 + 2 + 2 = 6 is 3 x 2 = 6), with the number of groups and the size of a group, and reads x as 'times' or 'groups of'."
+  },
+  "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5": {
+   "forms": [
+    "times fact",
+    "equal groups story",
+    "skip count",
+    "read the chart"
+   ],
+   "mastery": "The child gives products of a 1-digit number and 1, 2, 3, 4 or 5 (4 x 5 = 20), by skip counting or from a multiplication chart, and solves equal-groups stories (legs, rows, packets)."
+  },
+  "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_10": {
+   "forms": [
+    "times 10",
+    "bundles of ten",
+    "ten-shilling coins",
+    "multiples of 10"
+   ],
+   "mastery": "The child multiplies a 1-digit number by 10 (7 x 10 = 70) as that many tens, with bundles of ten or ten-shilling coins."
+  },
+  "MATH.G2.NUMBER.DIVISION.DIV_SHARING_2": {
+   "forms": [
+    "share between two",
+    "how many each",
+    "is the sharing fair",
+    "draw the sharing"
+   ],
+   "mastery": "The child shares up to 20 objects equally between 2 by giving one at a time, says how many each gets, and says the sharing is fair only when both have the same."
+  },
+  "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3": {
+   "forms": [
+    "how many groups of 3",
+    "make groups and count",
+    "a bench or table story",
+    "draw the groups"
+   ],
+   "mastery": "The child puts up to 25 objects into groups of 3 (or another given size), counts how many groups are made, and tells grouping (how many groups) from sharing (how many in each)."
+  },
+  "MATH.G2.NUMBER.DIVISION.DIV_SIGN": {
+   "forms": [
+    "write the division",
+    "read the division",
+    "match a picture to a division",
+    "fill the missing number"
+   ],
+   "mastery": "The child writes a sharing or grouping as a division statement (12 ÷ 3 = 4), with the number shared first, and reads ÷ as 'shared by' or 'divided by'."
+  },
+  "MATH.G2.NUMBER.DIVISION.DIV_BY_4_5": {
+   "forms": [
+    "division fact",
+    "groups of 4 or 5",
+    "a sharing story",
+    "count in fives"
+   ],
+   "mastery": "The child divides numbers up to 25 by 4 or 5 where it goes exactly (20 ÷ 4 = 5; 25 ÷ 5 = 5), by grouping objects or counting in fours and fives."
+  },
+  "MATH.G2.NUMBER.FRACTIONS.HALF_OF_WHOLE": {
+   "forms": [
+    "which shows a half",
+    "shade a half",
+    "are these halves",
+    "write a half"
+   ],
+   "mastery": "The child folds or cuts a circle or rectangle into 2 equal parts, names one part as a half, writes it 1/2, and says two unequal parts are not halves.",
+   "hands_on": "Folding paper cut-outs is done in class."
+  },
+  "MATH.G2.NUMBER.FRACTIONS.QUARTER_OF_WHOLE": {
+   "forms": [
+    "which shows a quarter",
+    "shade a quarter",
+    "how many quarters make a whole",
+    "write a quarter"
+   ],
+   "mastery": "The child folds a circle or rectangle into 4 equal parts, names one part as a quarter, writes it 1/4, and knows two quarters make a half.",
+   "hands_on": "Folding paper cut-outs is done in class."
+  },
+  "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS": {
+   "forms": [
+    "half of a group",
+    "share a chapati",
+    "which is bigger, a half or a quarter",
+    "how many quarters"
+   ],
+   "mastery": "The child uses halves and quarters in everyday situations: half of a chapati, half of a group of 8 mangoes is 4, a quarter of an orange, and says which is bigger, a half or a quarter of the same thing."
+  },
+  "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS": {
+   "forms": [
+    "how many sticks long",
+    "which measure is correct",
+    "why are the counts different",
+    "longer unit, fewer units"
+   ],
+   "mastery": "The child measures a length by laying sticks of the same length end to end with no gaps or overlaps, counts them, and says that the same object measured with a longer stick gives a smaller count.",
+   "hands_on": "Measuring with sticks is done in class."
+  },
+  "MATH.G2.MEASUR.LENGTH.KNOW_METRE": {
+   "forms": [
+    "which is about a metre",
+    "what unit is a metre",
+    "the short way to write metre",
+    "more or less than a metre"
+   ],
+   "mastery": "The child knows the metre as the standard unit for length, recognises a metre stick, names everyday things about 1 metre long (a big step, a door's width), and writes m."
+  },
+  "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES": {
+   "forms": [
+    "how many metres long",
+    "read the metre sticks in a picture",
+    "record with m",
+    "which is longer in metres"
+   ],
+   "mastery": "The child measures lengths in whole metres with a metre stick (the classroom, the corridor), laying it end to end, and records the result with m.",
+   "hands_on": "Making metre sticks from local materials and measuring is done in class."
+  },
+  "MATH.G2.MEASUR.MASS.MEASURE_FIXED_MASS": {
+   "forms": [
+    "how many bottle tops balance it",
+    "which side is heavier",
+    "read the balance picture",
+    "heavier unit, fewer units"
+   ],
+   "mastery": "The child balances an object on a beam balance against items of the same mass (bottle tops, stones of one size), counts them when the beam is level, and says a heavier unit gives a smaller count.",
+   "hands_on": "Improvising a beam balance is done in class."
+  },
+  "MATH.G2.MEASUR.MASS.KNOW_KILOGRAM": {
+   "forms": [
+    "which is about 1 kg",
+    "what is sold in kilograms",
+    "the short way to write kilogram",
+    "heavier or lighter than 1 kg"
+   ],
+   "mastery": "The child knows the kilogram as the standard unit for mass, recognises things sold by the kilogram (sugar, flour, maize), feels about how heavy 1 kg is, and writes kg."
+  },
+  "MATH.G2.MEASUR.MASS.MEASURE_IN_KG": {
+   "forms": [
+    "how many kilograms",
+    "read the balance",
+    "record with kg",
+    "which is heavier in kg"
+   ],
+   "mastery": "The child balances an object against 1 kg masses until level, counts the kilograms, and records the mass with kg.",
+   "hands_on": "Measuring with a beam balance and 1 kg masses is done in class."
+  },
+  "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY": {
+   "forms": [
+    "how many cups fill it",
+    "which holds more",
+    "same capacity, different shape",
+    "bigger cup, fewer cups"
+   ],
+   "mastery": "The child fills a container using a small container of a fixed size (a cup), counts the full cups, and says containers of different shapes can hold the same, and that a bigger cup gives a smaller count.",
+   "hands_on": "Filling containers with water is done in class."
+  },
+  "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE": {
+   "forms": [
+    "which holds about 1 litre",
+    "what is sold in litres",
+    "the short way to write litre",
+    "more or less than 1 litre"
+   ],
+   "mastery": "The child knows the litre as the standard unit for capacity, recognises 1-litre bottles and packets (milk, water, oil), names containers that hold more or less than 1 litre, and writes l."
+  },
+  "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES": {
+   "forms": [
+    "how many litres",
+    "how many full litre fills",
+    "record with l",
+    "how many buckets fill it"
+   ],
+   "mastery": "The child fills a big container with a 1-litre container (or pours it out into one), counts the full litres, and records the capacity with l; finds how many buckets of a given number of litres fill a drum.",
+   "hands_on": "Measuring with 1-litre bottles is done in class."
+  },
+  "MATH.G2.MEASUR.TIME.MONTHS_OCCASIONS": {
+   "forms": [
+    "which month is this occasion in",
+    "the month after",
+    "the month before",
+    "put months in order"
+   ],
+   "mastery": "The child names the months of the year in order and links special occasions to their months (Christmas in December, Madaraka Day in June, Jamhuri Day in December, school opening in January), and says which month comes before or after another."
+  },
+  "MATH.G2.MEASUR.TIME.DAYS_IN_MONTHS": {
+   "forms": [
+    "how many days in this month",
+    "which months have 30 days",
+    "which month is shortest",
+    "the knuckle method"
+   ],
+   "mastery": "The child says how many days each month has (30 for April, June, September, November; 31 for the others; February 28, or 29 in a leap year), using a rhyme or the knuckle method."
+  },
+  "MATH.G2.MEASUR.TIME.READ_CALENDAR": {
+   "forms": [
+    "what day is this date",
+    "what date is this day",
+    "the date a week later",
+    "write the date"
+   ],
+   "mastery": "The child reads a calendar page to say the day of a given date (the 14th is a Thursday) and the date of a given day, and writes a date (Tuesday, 3rd March)."
+  },
+  "MATH.G2.MEASUR.TIME.ARBITRARY_TIME": {
+   "forms": [
+    "how many claps did it take",
+    "which took longer",
+    "when is the shadow shortest",
+    "morning or midday from a shadow"
+   ],
+   "mastery": "The child measures how long something takes with an arbitrary unit (claps, counts, drops of water) and relates the time of day to the length of a shadow (long in the morning and evening, short at midday).",
+   "hands_on": "Watching a tree's shadow through the day is done in class."
+  },
+  "MATH.G2.MEASUR.TIME.CLOCK_HANDS": {
+   "forms": [
+    "which is the hour hand",
+    "which is the minute hand",
+    "which hand moves faster",
+    "label the hands"
+   ],
+   "mastery": "The child points to the long minute hand and the short hour hand on an analogue clock, and says which hand moves faster."
+  },
+  "MATH.G2.MEASUR.TIME.READ_HOUR": {
+   "forms": [
+    "what time is it",
+    "which clock shows 7 o'clock",
+    "the time one hour later",
+    "match clock and time"
+   ],
+   "mastery": "The child reads an analogue clock showing an o'clock time (the minute hand on 12, the hour hand on 4 is 4 o'clock) and matches clocks to o'clock times."
+  },
+  "MATH.G2.MEASUR.TIME.WRITE_HOUR": {
+   "forms": [
+    "write the time shown",
+    "write the digital time",
+    "draw the hands",
+    "match analogue and digital"
+   ],
+   "mastery": "The child writes the o'clock time shown on an analogue clock (3 o'clock) and on a digital clock (3:00), and draws the hands for a given o'clock time."
+  },
+  "MATH.G2.MEASUR.MONEY.IDENTIFY_MONEY_100": {
+   "forms": [
+    "name the coin or note",
+    "sort the money",
+    "which is worth more",
+    "coin or note"
+   ],
+   "mastery": "The child names the Kenyan coins (sh. 1, 5, 10, 20) and notes (sh. 50, 100) by value, sorts them, and tells which is worth more by the number, not the size or the count."
+  },
+  "MATH.G2.MEASUR.MONEY.COUNT_10_20_COINS": {
+   "forms": [
+    "how much money in ten-shilling coins",
+    "count the twenty-shilling coins",
+    "how many coins make sh. 60",
+    "write the total"
+   ],
+   "mastery": "The child counts a set of sh. 10 coins in tens and a set of sh. 20 coins in twenties, up to sh. 100, and writes the total with sh."
+  },
+  "MATH.G2.MEASUR.MONEY.COUNT_50_100_NOTES": {
+   "forms": [
+    "how much in fifty-shilling notes",
+    "count the hundred-shilling notes",
+    "how many fifties make a hundred",
+    "write the total"
+   ],
+   "mastery": "The child counts sh. 50 notes in fifties and sh. 100 notes in hundreds and says the total (two sh. 50 notes are sh. 100)."
+  },
+  "MATH.G2.MEASUR.MONEY.ADD_MONEY_100": {
+   "forms": [
+    "add two amounts",
+    "total of two coins",
+    "how much for two items",
+    "column addition with sh."
+   ],
+   "mastery": "The child adds two amounts or two coins and notes (sh. 50 + sh. 20 = sh. 70; sh. 35 + sh. 40 = sh. 75), with a sum up to sh. 100, and writes sh."
+  },
+  "MATH.G2.MEASUR.MONEY.BUY_NO_BALANCE": {
+   "forms": [
+    "total cost of the items",
+    "which coins pay exactly",
+    "can you buy these with this money",
+    "role play at the shop"
+   ],
+   "mastery": "The child picks coins and notes that pay exactly for up to 3 items (total up to sh. 100) in a model shop, finds the total cost, and checks no change is needed.",
+   "hands_on": "Role play in the classroom model shop is done in class."
+  },
+  "MATH.G2.GEOMET.LINES.STRAIGHT_LINES": {
+   "forms": [
+    "which line is straight",
+    "draw a straight line",
+    "is the edge straight or curved",
+    "straight lines in a picture"
+   ],
+   "mastery": "The child picks out straight lines in pictures and objects (the edge of a ruler, a door), models them with sticks or a stretched string, and draws them with a ruler, held upright, flat or slanting.",
+   "hands_on": "Modelling lines with sticks, string and clay is done in class."
+  },
+  "MATH.G2.GEOMET.LINES.CURVED_LINES": {
+   "forms": [
+    "which line is curved",
+    "draw a curved line",
+    "is the edge straight or curved",
+    "curved lines in a picture"
+   ],
+   "mastery": "The child picks out curved lines in pictures and objects (the edge of a plate, a rainbow), models them with string or clay, and draws them freehand.",
+   "hands_on": "Modelling curved lines with string and clay is done in class."
+  },
+  "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV": {
+   "forms": [
+    "name the shape of the object",
+    "which object is a circle",
+    "straight or curved sides",
+    "sort the shapes"
+   ],
+   "mastery": "The child names triangles, squares, rectangles, circles and ovals in objects and pictures (a window, a clock, an egg), in any position, and says the kind of lines each has (straight or curved)."
+  },
+  "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES": {
+   "forms": [],
+   "mastery": "The child draws a triangle, a square, a circle and an oval, freehand and with a ruler or round objects, with the right number of sides.",
+   "hands_on": "Drawing shapes on manila paper is done in class."
+  },
+  "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS": {
+   "forms": [
+    "what comes next",
+    "what is missing",
+    "which part repeats",
+    "make a pattern"
+   ],
+   "mastery": "The child finds the part of a shape pattern that repeats (circle, triangle, triangle), says or draws what comes next, and makes a pattern of their own."
+  }
+ }
+}

@@ -1,0 +1,552 @@
+{
+ "sub_strand": "MATH.G2.NUMBER.WHOLE_NUMBERS",
+ "title": "Whole Numbers",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to f are KICD's words; g is attitudinal. Counting forward to 100, back from 50, place value in tens and ones, number words to 20, patterns to 100.",
+ "skills": [
+  {
+   "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100",
+   "key_step": "The child says each number aloud, and after a 9 in the ones moves to the next ten.",
+   "floor": {
+    "prerequisite": "Counts forward to 50 (Grade 1).",
+    "question": "What comes after 49?",
+    "answer": "50"
+   },
+   "representations": [
+    "a skipping rope count",
+    "a hundred chart",
+    "a number line to 100"
+   ],
+   "steps": [
+    "Start at the number.",
+    "Say the next one.",
+    "After 9 ones: next ten.",
+    "Keep going."
+   ],
+   "contexts": [
+    "counting learners in a line",
+    "rope skipping",
+    "counting mangoes in a basket"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 27, 28, 29, __."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ones digit 9.",
+     "say": "What comes next?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: 30."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 30."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_DECADE_SKIP",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "After 9 ones, what happens to the tens?",
+     "repair": "One more ten: 30."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_TEN_TEN",
+     "listen_for": [
+      "thirty-ten"
+     ],
+     "ask": "What is ten ones?",
+     "repair": "One ten: forty."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_99_TO_1000",
+     "listen_for": [
+      "1000"
+     ],
+     "ask": "How many tens is 99 and one more?",
+     "repair": "Ten tens: 100."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_100.M_CF_COUNTS_START",
+     "listen_for": [
+      "48"
+     ],
+     "ask": "Is 46 the first step?",
+     "repair": "No: 47, 48, 49."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What comes after 69?",
+     "answer": "70",
+     "shows": "across a ten"
+    },
+    {
+     "question": "Count on from 96: 96, 97, __, __",
+     "answer": "98, 99",
+     "shows": "near 100"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50",
+   "key_step": "The child says one less each time, and after a 0 in the ones goes to the 9 of the ten below.",
+   "floor": {
+    "prerequisite": "Counts back from 30 (Grade 1).",
+    "question": "Count back: 22, 21, __",
+    "answer": "20"
+   },
+   "representations": [
+    "a number line",
+    "number cards",
+    "a countdown game"
+   ],
+   "steps": [
+    "Start at the number.",
+    "Say one less.",
+    "After 0 ones: 9 of the ten below.",
+    "Keep going."
+   ],
+   "contexts": [
+    "counting down to a race start",
+    "pages left in a book",
+    "chairs being stacked"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 32, 31, 30, __."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 0.",
+     "say": "What is one less?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 29."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 29."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_DECADE_BACK",
+     "listen_for": [
+      "20"
+     ],
+     "ask": "What is one less than 30?",
+     "repair": "29."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_GOES_FORWARD",
+     "listen_for": [
+      "45"
+     ],
+     "ask": "Bigger or smaller each time?",
+     "repair": "Smaller: 43."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_NUMBER_BEFORE_AFTER",
+     "listen_for": [
+      "41"
+     ],
+     "ask": "Is before left or right on the line?",
+     "repair": "Left: 39."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.COUNT_BACK_50.M_CB_TEENS_REVERSED",
+     "listen_for": [
+      "71, 61, 51"
+     ],
+     "ask": "Which digit is the ten?",
+     "repair": "The 1: 17, 16, 15."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Count back: 41, 40, __",
+     "answer": "39",
+     "shows": "across a ten"
+    },
+    {
+     "question": "What comes before 50?",
+     "answer": "49",
+     "shows": "before"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100",
+   "key_step": "The child writes the tens digit first, then the ones, each correctly formed.",
+   "floor": {
+    "prerequisite": "Writes numbers to 50.",
+    "question": "Write twenty-three.",
+    "answer": "23"
+   },
+   "representations": [
+    "number cards",
+    "sand trays for tracing",
+    "a hundred chart"
+   ],
+   "steps": [
+    "Hear the tens word.",
+    "Write the tens digit.",
+    "Write the ones digit.",
+    "Read it back."
+   ],
+   "contexts": [
+    "writing a date",
+    "a phone number game",
+    "a bus number"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Say forty-five."
+    },
+    {
+     "beat": "point",
+     "do": "Point to the tens place.",
+     "say": "Which digit goes here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 4."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 45."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_REVERSED_DIGITS",
+     "listen_for": [
+      "54"
+     ],
+     "ask": "Which part is the tens?",
+     "repair": "Forty: 45."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_JOINED",
+     "listen_for": [
+      "405"
+     ],
+     "ask": "How many digits?",
+     "repair": "Two: 45."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_MIRROR_DIGIT",
+     "listen_for": [
+      "a mirrored 3 or 7"
+     ],
+     "ask": "Which way does the 3 open?",
+     "repair": "To the left: 37."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.READ_WRITE_SYMBOLS_100.M_RW_TEEN_TY",
+     "listen_for": [
+      "70"
+     ],
+     "ask": "How many tens in seventeen?",
+     "repair": "One: 17."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write sixty-eight.",
+     "answer": "68",
+     "shows": "digit order"
+    },
+    {
+     "question": "Write seventeen.",
+     "answer": "17",
+     "shows": "a teen"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
+   "key_step": "The child puts the number in tens and ones tins and reads each digit's worth from its tin.",
+   "floor": {
+    "prerequisite": "Groups objects in tens and ones.",
+    "question": "2 bundles of ten and 3 sticks: how many?",
+    "answer": "23"
+   },
+   "representations": [
+    "place value tins or pockets",
+    "bundles of sticks",
+    "a tens and ones chart"
+   ],
+   "steps": [
+    "Write the number in the chart.",
+    "Left digit: tens.",
+    "Right digit: ones.",
+    "Worth: tens digit times 10."
+   ],
+   "contexts": [
+    "sorting number cards into tins",
+    "counting eggs in trays of ten",
+    "ten-shilling coins"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw tins: Tens, Ones. Write 74."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 7.",
+     "say": "Which tin?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for tens."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7 tens = 70."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_REVERSED",
+     "listen_for": [
+      "74"
+     ],
+     "ask": "Which place is on the left?",
+     "repair": "Tens: 47."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_ADDS_DIGITS",
+     "listen_for": [
+      "11"
+     ],
+     "ask": "What are 4 tens worth?",
+     "repair": "40, and 7 more: 47."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_TEN_AS_HUNDRED",
+     "listen_for": [
+      "407"
+     ],
+     "ask": "How much is one ten?",
+     "repair": "10: 47."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS.M_PV2_FACE_VALUE",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Which tin is the 7 in?",
+     "repair": "Tens: 70."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 5 tens and 3 ones?",
+     "answer": "53",
+     "shows": "building"
+    },
+    {
+     "question": "What is the 6 in 62 worth?",
+     "answer": "60",
+     "shows": "worth"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20",
+   "key_step": "The child knows the special words (eleven, twelve, thirteen, fifteen, twenty) and spells the rest as ones word plus -teen.",
+   "floor": {
+    "prerequisite": "Number words 1 to 10 (Grade 1).",
+    "question": "Write 7 in words.",
+    "answer": "seven"
+   },
+   "representations": [
+    "word cards",
+    "a word and number chart",
+    "a matching game"
+   ],
+   "steps": [
+    "Read the number.",
+    "Is it a special word?",
+    "Otherwise ones word + teen.",
+    "Check the spelling."
+   ],
+   "contexts": [
+    "a birthday card with the age",
+    "a church hymn number",
+    "a class register"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 15."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 5.",
+     "say": "How does five change?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for fif-."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write fifteen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_SPELLING_ELEVEN_TWELVE",
+     "listen_for": [
+      "twelf"
+     ],
+     "ask": "What letters end the word twelve?",
+     "repair": "ve: twelve."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_TEN_ONE",
+     "listen_for": [
+      "ten-one"
+     ],
+     "ask": "What do we call 11?",
+     "repair": "Eleven."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_FIFTEEN_FIVETEEN",
+     "listen_for": [
+      "fiveteen"
+     ],
+     "ask": "How does five change in fifteen?",
+     "repair": "fif: fifteen."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.WORDS_20.M_W20_EIGHT_SPELLING",
+     "listen_for": [
+      "eigth"
+     ],
+     "ask": "Which letters come after ei?",
+     "repair": "g-h-t: eight."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 12 in words.",
+     "answer": "twelve",
+     "shows": "special word"
+    },
+    {
+     "question": "Write 18 in words.",
+     "answer": "eighteen",
+     "shows": "-teen"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
+   "key_step": "The child finds the jump between neighbours and uses it to fill the gap.",
+   "floor": {
+    "prerequisite": "Patterns to 20 (Grade 1).",
+    "question": "2, 4, 6, __",
+    "answer": "8"
+   },
+   "representations": [
+    "number cards",
+    "jumps on a number line",
+    "a hundred chart"
+   ],
+   "steps": [
+    "Find the jump.",
+    "Check another pair.",
+    "Up or down?",
+    "Fill the gap."
+   ],
+   "contexts": [
+    "counting legs of hens in twos",
+    "five-shilling coins",
+    "tens on a hundred chart"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 35, 40, __, 50."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw jumps between the numbers."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the jump."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 45."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 45."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_STEP_ONE",
+     "listen_for": [
+      "41"
+     ],
+     "ask": "From 35 to 40 is how much?",
+     "repair": "5: 45."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_COPIES_NEXT",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "Which numbers are on each side of the gap?",
+     "repair": "30 and 50: 40."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_DIRECTION",
+     "listen_for": [
+      "50"
+     ],
+     "ask": "Are the numbers going up or down?",
+     "repair": "Down by 10: 30."
+    },
+    {
+     "code": "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100.M_PAT2_CROSS_100",
+     "listen_for": [
+      "910"
+     ],
+     "ask": "What is 95 and 5 more?",
+     "repair": "100."
+    }
+   ],
+   "checks": [
+    {
+     "question": "10, 20, 30, __",
+     "answer": "40",
+     "shows": "tens"
+    },
+    {
+     "question": "50, 48, 46, __",
+     "answer": "44",
+     "shows": "back in twos"
+    }
+   ]
+  }
+ ]
+}

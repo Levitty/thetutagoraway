@@ -1,0 +1,376 @@
+{
+ "sub_strand": "MATH.G3.MEASUR.LENGTH",
+ "title": "Length",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Grade 3 length is in whole metres only (no centimetres): measuring with a metre stick or a knotted 5-metre string, adding and subtracting metres, and estimating up to 10 metres.",
+ "skills": [
+  {
+   "skill": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
+   "key_step": "The child starts at one end and lays the metre stick end to end, counting the sticks.",
+   "floor": {
+    "prerequisite": "Knows the metre (Grade 2).",
+    "question": "Which is about a metre: a pencil or a big step?",
+    "answer": "a big step"
+   },
+   "representations": [
+    "a real metre stick",
+    "a knotted 5 m string",
+    "a picture of sticks laid end to end"
+   ],
+   "steps": [
+    "Start at one end.",
+    "Lay the stick; mark its end.",
+    "Move it to the mark.",
+    "Count the sticks; write m."
+   ],
+   "contexts": [
+    "the length of the classroom",
+    "the school corridor",
+    "a football pitch"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wall with a metre stick laid 3 times, end to end."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the joins.",
+     "say": "Any gaps?"
+    },
+    {
+     "beat": "count",
+     "do": "Count the sticks with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the unit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES.M_LEN_GAPS_OVERLAPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Did the stick start where it last ended?",
+     "repair": "No: gaps make the real length longer."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES.M_LEN_NO_UNIT",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "2 what?",
+     "repair": "2 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES.M_LEN_COUNTS_KNOTS",
+     "listen_for": [
+      "6 m"
+     ],
+     "ask": "How many spaces between 6 knots?",
+     "repair": "5: 5 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES.M_LEN_START_NOT_AT_END",
+     "listen_for": [
+      "6 m"
+     ],
+     "ask": "Where did the measuring start?",
+     "repair": "1 m in, so add it: 7 m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "5 metre sticks fit along a table end to end. How long is it?",
+     "answer": "5 m",
+     "shows": "counting sticks"
+    },
+    {
+     "question": "A knotted string has knots every metre; 4 spaces reach the gate. How far?",
+     "answer": "4 m",
+     "shows": "spaces not knots"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.LENGTH.ADD_METRES",
+   "key_step": "The child adds the lengths as numbers and keeps the unit m.",
+   "floor": {
+    "prerequisite": "Adds whole numbers.",
+    "question": "8 + 6 + 8 + 6",
+    "answer": "28"
+   },
+   "representations": [
+    "ropes joined",
+    "a drawn room plan",
+    "a column sum with m"
+   ],
+   "steps": [
+    "List every length.",
+    "Add them.",
+    "Carry if needed.",
+    "Write m."
+   ],
+   "contexts": [
+    "fencing a garden",
+    "walls of a classroom",
+    "ropes for a game"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a rectangle room: 8 m and 6 m on two sides."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the other two sides.",
+     "say": "How long are they?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 8 m and 6 m."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the total."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 28 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ADD_METRES.M_LADD_ONLY_TWO_SIDES",
+     "listen_for": [
+      "14 m"
+     ],
+     "ask": "How many walls are there?",
+     "repair": "Four: 8 + 6 + 8 + 6 = 28 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ADD_METRES.M_LADD_SUBTRACTS",
+     "listen_for": [
+      "2 m"
+     ],
+     "ask": "Is the new rope longer or shorter?",
+     "repair": "Longer: 16 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ADD_METRES.M_LADD_CARRY",
+     "listen_for": [
+      "73 m"
+     ],
+     "ask": "5 + 8 is 13: what do you carry?",
+     "repair": "One ten: 83 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ADD_METRES.M_LADD_UNIT_LOST",
+     "listen_for": [
+      "10"
+     ],
+     "ask": "10 what?",
+     "repair": "10 m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "12 m + 15 m",
+     "answer": "27 m",
+     "shows": "two lengths"
+    },
+    {
+     "question": "A goat is tied with two ropes joined: 6 m and 9 m. Total?",
+     "answer": "15 m",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES",
+   "key_step": "The child takes the shorter length from the longer one and keeps the unit.",
+   "floor": {
+    "prerequisite": "Subtracts whole numbers.",
+    "question": "9 - 5",
+    "answer": "4"
+   },
+   "representations": [
+    "two ropes side by side",
+    "a bar with the extra part",
+    "a column subtraction"
+   ],
+   "steps": [
+    "Which is longer?",
+    "Longer minus shorter.",
+    "Or start minus cut.",
+    "Write m."
+   ],
+   "contexts": [
+    "chalkboard and table",
+    "rope cut for a skipping game",
+    "distance left to walk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two bars: 4 m and 2 m."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the extra part.",
+     "say": "How long is it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2 m."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 m - 2 m = 2 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES.M_LSUB_ADDS",
+     "listen_for": [
+      "6 m"
+     ],
+     "ask": "Which part sticks out?",
+     "repair": "The extra 2 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES.M_LSUB_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "45 m"
+     ],
+     "ask": "Can you take 7 from 2?",
+     "repair": "No: open a ten, 12 - 7 = 5, so 35 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES.M_LSUB_GIVES_PIECE_CUT",
+     "listen_for": [
+      "3 m"
+     ],
+     "ask": "Is 3 m what was cut or what is left?",
+     "repair": "Cut: 7 m is left."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES.M_LSUB_ORDER",
+     "listen_for": [
+      "0 m"
+     ],
+     "ask": "Which is longer?",
+     "repair": "9 m: 9 - 5 = 4 m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 15 m rope has 6 m cut off. How much is left?",
+     "answer": "9 m",
+     "shows": "left"
+    },
+    {
+     "question": "How much longer is 34 m than 18 m?",
+     "answer": "16 m",
+     "shows": "difference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES",
+   "key_step": "The child uses a benchmark (a big step is about 1 metre) to make a sensible guess, then measures.",
+   "floor": {
+    "prerequisite": "Measures in metres.",
+    "question": "How many metre sticks long is a desk?",
+    "answer": "about 1"
+   },
+   "representations": [
+    "big steps",
+    "a metre stick held up",
+    "a table of estimates and measures"
+   ],
+   "steps": [
+    "Picture a metre.",
+    "Count benchmarks along the length.",
+    "Say 'about'.",
+    "Measure and compare."
+   ],
+   "contexts": [
+    "distance to the gate",
+    "length of the flag pole shadow",
+    "a garden bed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a door and a metre stick beside it."
+    },
+    {
+     "beat": "predict",
+     "do": "The child guesses the door height in metres."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for about 2 m."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show it is about 2 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES.M_LEST_WILD_GUESS",
+     "listen_for": [
+      "100 m"
+     ],
+     "ask": "How many big steps across the room?",
+     "repair": "About 8: about 8 m."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES.M_LEST_WRONG_UNIT",
+     "listen_for": [
+      "a pencil"
+     ],
+     "ask": "Is a pencil as long as the metre stick?",
+     "repair": "No: a door is about 1 m wide."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES.M_LEST_MUST_BE_EXACT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is 6 close to 7?",
+     "repair": "Yes: a good estimate."
+    },
+    {
+     "code": "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES.M_LEST_STEPS_NOT_METRES",
+     "listen_for": [
+      "20 m"
+     ],
+     "ask": "Is a small step a whole metre?",
+     "repair": "No: about half, so about 10 m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is a sensible estimate for a classroom: 8 m or 80 m?",
+     "answer": "8 m",
+     "shows": "sense of size"
+    },
+    {
+     "question": "A big step is about 1 m. 7 big steps to the tree. About how far?",
+     "answer": "about 7 m",
+     "shows": "benchmark"
+    }
+   ]
+  }
+ ]
+}

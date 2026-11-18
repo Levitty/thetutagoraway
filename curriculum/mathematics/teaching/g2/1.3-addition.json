@@ -1,0 +1,380 @@
+{
+ "sub_strand": "MATH.G2.NUMBER.ADDITION",
+ "title": "Addition",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Sums do not exceed 100; regrouping is ones into tens. Horizontal sums are rewritten vertically by place value.",
+ "skills": [
+  {
+   "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D",
+   "key_step": "The child lines up ones under ones, adds the ones, and carries a ten when there are ten or more.",
+   "floor": {
+    "prerequisite": "Adds 2-digit and 1-digit without regrouping (Grade 1).",
+    "question": "23 + 4",
+    "answer": "27"
+   },
+   "representations": [
+    "bundles and loose sticks",
+    "a number line",
+    "a column sum"
+   ],
+   "steps": [
+    "Write ones under ones.",
+    "Add the ones.",
+    "Ten or more: carry a ten.",
+    "Add the tens."
+   ],
+   "contexts": [
+    "mangoes in a basket",
+    "learners joining a class",
+    "eggs collected"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 47 + 8."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 7 + 8.",
+     "say": "How many ones?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 15."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles ten ones as a bundle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 55."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_MISALIGNED",
+     "listen_for": [
+      "93"
+     ],
+     "ask": "Is 5 tens or ones?",
+     "repair": "Ones: 48."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_FORGETS_CARRY",
+     "listen_for": [
+      "45"
+     ],
+     "ask": "7 + 8 is 15: what about the ten?",
+     "repair": "Carry it: 55."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_COUNTS_START",
+     "listen_for": [
+      "47"
+     ],
+     "ask": "Is 43 one of the steps?",
+     "repair": "No: 44 to 48."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_1D.M_A21_WRITES_15",
+     "listen_for": [
+      "415"
+     ],
+     "ask": "Can the ones column hold 15?",
+     "repair": "No: write 5, carry 1, so 55."
+    }
+   ],
+   "checks": [
+    {
+     "question": "36 + 3",
+     "answer": "39",
+     "shows": "no regrouping"
+    },
+    {
+     "question": "58 + 6",
+     "answer": "64",
+     "shows": "regrouping"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D",
+   "key_step": "The child adds ones with ones and tens with tens, carrying a ten from the ones.",
+   "floor": {
+    "prerequisite": "Adds 2-digit and 1-digit.",
+    "question": "47 + 8",
+    "answer": "55"
+   },
+   "representations": [
+    "bundles and sticks",
+    "a tens and ones chart",
+    "a column sum"
+   ],
+   "steps": [
+    "Line up tens and ones.",
+    "Add the ones.",
+    "Carry a ten if needed.",
+    "Add the tens."
+   ],
+   "contexts": [
+    "boys and girls in a class",
+    "shillings saved in two weeks",
+    "books on two shelves"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 38 + 45."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 8 + 5.",
+     "say": "How many ones?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 13."
+    },
+    {
+     "beat": "count",
+     "do": "Add the tens with the carried ten together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 83."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_FORGETS_CARRY",
+     "listen_for": [
+      "73"
+     ],
+     "ask": "8 + 5 = 13: where does the ten go?",
+     "repair": "Into the tens: 83."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_ADDS_ALL_DIGITS",
+     "listen_for": [
+      "14"
+     ],
+     "ask": "What are 3 tens and 2 tens?",
+     "repair": "5 tens: 59."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_SUBTRACTS",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "Putting together or taking away?",
+     "repair": "Together: 59."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_2D_2D.M_A22_CARRY_TWICE",
+     "listen_for": [
+      "87"
+     ],
+     "ask": "Do 2 and 5 make ten?",
+     "repair": "No: 77."
+    }
+   ],
+   "checks": [
+    {
+     "question": "34 + 25",
+     "answer": "59",
+     "shows": "no regrouping"
+    },
+    {
+     "question": "27 + 36",
+     "answer": "63",
+     "shows": "regrouping"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.ADDITION.ADD_TENS",
+   "key_step": "The child adds the number of tens and writes it as tens.",
+   "floor": {
+    "prerequisite": "Knows tens.",
+    "question": "How many tens in 50?",
+    "answer": "5"
+   },
+   "representations": [
+    "bundles of ten",
+    "ten-shilling coins",
+    "a tens number line"
+   ],
+   "steps": [
+    "How many tens in each?",
+    "Add the tens.",
+    "Write as tens: digit then 0.",
+    "Check under 100."
+   ],
+   "contexts": [
+    "ten-shilling coins",
+    "crates of ten eggs",
+    "bundles of firewood"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 3 bundles and 5 bundles of ten."
+    },
+    {
+     "beat": "count",
+     "do": "Count all the bundles with the child in tens."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 80."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 30 + 50 = 80."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_ADDS_ZEROS",
+     "listen_for": [
+      "800"
+     ],
+     "ask": "How many bundles?",
+     "repair": "8 tens: 80."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_ONES_COUNT",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "8 what?",
+     "repair": "8 tens: 80."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_JOINS",
+     "listen_for": [
+      "3050"
+     ],
+     "ask": "Is the answer less than 100?",
+     "repair": "Yes: 80."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_TENS.M_AT_WRONG_TEN_COUNT",
+     "listen_for": [
+      "80"
+     ],
+     "ask": "How many tens did you count on?",
+     "repair": "Three: 70."
+    }
+   ],
+   "checks": [
+    {
+     "question": "20 + 60",
+     "answer": "80",
+     "shows": "tens"
+    },
+    {
+     "question": "40 + 50",
+     "answer": "90",
+     "shows": "tens"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100",
+   "key_step": "The child counts up from the known number to the total, first to the next ten, then in tens.",
+   "floor": {
+    "prerequisite": "Adds 2-digit numbers.",
+    "question": "35 + 65",
+    "answer": "100"
+   },
+   "representations": [
+    "a number line to 100",
+    "ten-shilling coins",
+    "a part-whole bar"
+   ],
+   "steps": [
+    "Start at the number you have.",
+    "Count up to the next ten.",
+    "Count up in tens to the total.",
+    "Add the jumps."
+   ],
+   "contexts": [
+    "saving for a book",
+    "seats left in a matatu",
+    "points needed to win"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 35 to 100."
+    },
+    {
+     "beat": "point",
+     "do": "Point from 35 to 40.",
+     "say": "How far?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 5."
+    },
+    {
+     "beat": "count",
+     "do": "Count the tens from 40 to 100 together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 65."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_COUNT_UP_TENS_SLIP",
+     "listen_for": [
+      "75"
+     ],
+     "ask": "How many tens from 40 to 100?",
+     "repair": "6 tens and 5: 65."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_GIVES_KNOWN",
+     "listen_for": [
+      "35"
+     ],
+     "ask": "If the box were 35, would the total be 100?",
+     "repair": "No, 70: the box is 65."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_ADDS_BOTH",
+     "listen_for": [
+      "110"
+     ],
+     "ask": "Is the missing number bigger than 70?",
+     "repair": "No: 30."
+    },
+    {
+     "code": "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100.M_AMISS_PATTERN_ONE_STEP",
+     "listen_for": [
+      "23"
+     ],
+     "ask": "What is added each time?",
+     "repair": "5: 27."
+    }
+   ],
+   "checks": [
+    {
+     "question": "45 + __ = 100",
+     "answer": "55",
+     "shows": "to 100"
+    },
+    {
+     "question": "10, 14, 18, __",
+     "answer": "22",
+     "shows": "pattern"
+    }
+   ]
+  }
+ ]
+}

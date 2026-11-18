@@ -3,15 +3,15 @@
  "subject_key": "mathematics",
  "grade": 1,
  "source": "KICD Mathematical Activities, First Published in 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word (a few left for a person to confirm); skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (18 Nov 2026)",
  "totals": {
   "strands": 3,
   "sub_strands": 11,
   "outcomes": 54,
   "lessons": 150,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 38,
+  "prerequisites": 76,
+  "misconceptions": 153
  },
  "sub_strands": [
   {
@@ -43,7 +43,7 @@
    "values": "Unity: in teams, learner matches objects according to size, colour, and shape.\nResponsibility: learner assists in arranging items according to size, colour, shape, and storage at home.",
    "pcis": "Safety: learner observes safety as they collect objects from the immediate environment.\nSocial Cohesion: learner works with peers as they pair and match objects according to size, colour and shape.",
    "links": "The learner can relate the skills used in creating patterns to the concept of patterns in Creative Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to d are KICD's words; e is attitudinal. Sorting, matching, ordering and patterning with real objects collected from the environment; prerequisites below Grade 1 are pre-primary readiness skills HOREB names (scripts/data/maths-g1/readiness.mjs).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -89,8 +89,400 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+     "name": "Sort objects according to similar attributes",
+     "outcomes": [
+      "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.a"
+     ],
+     "mastery": "The child sorts a mixed collection into groups by one attribute (colour, size, shape, use or texture), says the rule used, and finds the object that does not belong in a group.",
+     "question_forms": [
+      "which one does not belong",
+      "sort into groups",
+      "what is the sorting rule",
+      "which group does this go in"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_PRENUMBER"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.SORT_ONE_ATTRIBUTE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Sorted by one attribute in pre-primary.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.SIZE_WORDS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Uses size words for sorting by size.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Collecting and sorting real objects is done in class.",
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+     "name": "Match objects with similar attributes",
+     "outcomes": [
+      "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.b"
+     ],
+     "mastery": "The child pairs objects that share an attribute (a shoe with a shoe, a big stone with a big stone, things used together such as a cup and a saucer), and says why they match.",
+     "question_forms": [
+      "match the pairs",
+      "which one goes with this",
+      "why do these match",
+      "find the same"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_PRENUMBER"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Notices attributes by sorting.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.COMPARE_MORE_LESS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Matches one to one.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+     "name": "Order objects according to given criteria",
+     "outcomes": [
+      "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.c"
+     ],
+     "mastery": "The child arranges three to five objects from smallest to biggest (or shortest to longest, lightest to heaviest) and the reverse, and names the first and last.",
+     "question_forms": [
+      "order from smallest to biggest",
+      "which comes first",
+      "which is out of order",
+      "order from biggest"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_PRENUMBER"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.SIZE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses big and small.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Compares objects two at a time.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+     "name": "Create patterns of different sizes and shapes using real objects",
+     "outcomes": [
+      "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.d"
+     ],
+     "mastery": "The child copies, continues and makes a repeating pattern with real objects (bottle tops, leaves, beads) by colour, size or shape, and says what comes next.",
+     "question_forms": [
+      "what comes next",
+      "what is missing in the pattern",
+      "which part repeats",
+      "make a pattern"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_PRENUMBER"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.COPY_AB_PATTERN",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Copies a simple pattern.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Sees colour, size and shape.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Making patterns with real objects is done in class.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_TWO_RULES",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+     "error": "Changes the rule part way, sorting some by colour and some by size.",
+     "example": {
+      "question": "Sort these by colour: a big red ball, a small red ball, a big blue ball. Which go together?",
+      "wrong_answer": "the two big balls",
+      "correct_answer": "the two red balls"
+     },
+     "cause": "Starts with one rule and switches.",
+     "reveals": "The answer the two big balls as a wrong option, with a reason that names the idea.",
+     "help": "Say the rule aloud before each object.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_ODD_ONE",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+     "error": "Cannot say which object does not belong.",
+     "example": {
+      "question": "A spoon, a fork, a cup and a stone. Which does not belong with things for eating?",
+      "wrong_answer": "the cup",
+      "correct_answer": "the stone"
+     },
+     "cause": "Looks at shape, not use.",
+     "reveals": "The answer the cup as a wrong option, with a reason that names the idea.",
+     "help": "Ask: what do we use each one for?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_NO_RULE",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+     "error": "Groups objects with no rule and cannot say why.",
+     "example": {
+      "question": "Why did you put the leaf with the bottle top?",
+      "wrong_answer": "I wanted to",
+      "correct_answer": "they are both green"
+     },
+     "cause": "Sorts by liking or at random.",
+     "reveals": "The answer I wanted to as a wrong option, with a reason that names the idea.",
+     "help": "Name what is the same about the group.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_ONE_GROUP_MISSED",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+     "error": "Leaves out objects that fit the rule.",
+     "example": {
+      "question": "Put all the round things together: a ball, an orange, a plate, a box.",
+      "wrong_answer": "the ball and the orange",
+      "correct_answer": "the ball, the orange and the plate"
+     },
+     "cause": "Stops before checking every object.",
+     "reveals": "The answer the ball and the orange as a wrong option, with a reason that names the idea.",
+     "help": "Check each object against the rule.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_COLOUR_ONLY",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+     "error": "Matches by colour when asked to match by use.",
+     "example": {
+      "question": "Match by use: a cup goes with a saucer or a red ball?",
+      "wrong_answer": "the red ball (same colour)",
+      "correct_answer": "the saucer"
+     },
+     "cause": "Looks at colour first.",
+     "reveals": "The answer the red ball (same colour) as a wrong option, with a reason that names the idea.",
+     "help": "Ask what each is used for.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_SIZE_MISS",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+     "error": "Matches objects of the same kind but different sizes when asked for the same size.",
+     "example": {
+      "question": "Match the same size: a big stone with a small stone or a big stone?",
+      "wrong_answer": "the small stone",
+      "correct_answer": "the big stone"
+     },
+     "cause": "Matches the kind, not the size.",
+     "reveals": "The answer the small stone as a wrong option, with a reason that names the idea.",
+     "help": "Place them side by side.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_EXTRA",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+     "error": "Leaves one object with no partner and does not notice.",
+     "example": {
+      "question": "Pair the shoes: 7 shoes. Are all paired?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, one is left"
+     },
+     "cause": "Does not check each one has a pair.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Count the pairs and see what is left.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_CANNOT_SAY_WHY",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+     "error": "Matches but cannot give the shared attribute.",
+     "example": {
+      "question": "Why do the two leaves match?",
+      "wrong_answer": "they match",
+      "correct_answer": "both are long and green"
+     },
+     "cause": "Has not named the attribute.",
+     "reveals": "The answer they match as a wrong option, with a reason that names the idea.",
+     "help": "Say: they are both ...",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_REVERSED",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+     "error": "Orders from biggest to smallest when asked smallest first.",
+     "example": {
+      "question": "Order from smallest: a mango, a grape, a pumpkin.",
+      "wrong_answer": "pumpkin, mango, grape",
+      "correct_answer": "grape, mango, pumpkin"
+     },
+     "cause": "Ignores the direction word.",
+     "reveals": "The answer pumpkin, mango, grape as a wrong option, with a reason that names the idea.",
+     "help": "Point to the start: smallest first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_MIDDLE",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+     "error": "Puts the ends right but the middle wrong.",
+     "example": {
+      "question": "Order from shortest: sticks of 3, 7, 5 and 9 hand spans.",
+      "wrong_answer": "3, 7, 5, 9",
+      "correct_answer": "3, 5, 7, 9"
+     },
+     "cause": "Compares only with the ends.",
+     "reveals": "The answer 3, 7, 5, 9 as a wrong option, with a reason that names the idea.",
+     "help": "Take the smallest of those left each time.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_NOT_ALIGNED",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+     "error": "Compares lengths without lining up one end.",
+     "example": {
+      "question": "Two pencils: one sticks out further but starts higher. Which is longer?",
+      "wrong_answer": "the one that sticks out",
+      "correct_answer": "the one that is longer end to end"
+     },
+     "cause": "Looks only at one end.",
+     "reveals": "The answer the one that sticks out as a wrong option, with a reason that names the idea.",
+     "help": "Line up one end first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_SIZE_HEIGHT_MIX",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+     "error": "Orders by height when asked for heaviness.",
+     "example": {
+      "question": "Order from lightest: a tall empty box, a small stone, a feather.",
+      "wrong_answer": "feather, stone, box",
+      "correct_answer": "feather, box, stone"
+     },
+     "cause": "Uses size for every comparison.",
+     "reveals": "The answer feather, stone, box as a wrong option, with a reason that names the idea.",
+     "help": "Hold each: which is heavier?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_REPEATS_LAST",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+     "error": "Repeats the last object instead of the pattern.",
+     "example": {
+      "question": "red, blue, red, blue, red, __",
+      "wrong_answer": "red",
+      "correct_answer": "blue"
+     },
+     "cause": "Copies the last one.",
+     "reveals": "The answer red as a wrong option, with a reason that names the idea.",
+     "help": "Say the pattern aloud from the start.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_ALWAYS_AB",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+     "error": "Treats every pattern as two parts.",
+     "example": {
+      "question": "leaf, leaf, stone, leaf, leaf, stone, leaf, __",
+      "wrong_answer": "stone",
+      "correct_answer": "leaf"
+     },
+     "cause": "Uses the AB habit.",
+     "reveals": "The answer stone as a wrong option, with a reason that names the idea.",
+     "help": "Ring the part that repeats.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_ONE_ATTRIBUTE",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+     "error": "Follows the colour and ignores the size or shape.",
+     "example": {
+      "question": "big red, small red, big red, small __",
+      "wrong_answer": "blue",
+      "correct_answer": "red"
+     },
+     "cause": "Changes an attribute that was not changing.",
+     "reveals": "The answer blue as a wrong option, with a reason that names the idea.",
+     "help": "Check each attribute: what changes, what stays?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_MISSING_MIDDLE",
+     "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+     "error": "Fills a gap with the object after the gap.",
+     "example": {
+      "question": "bottle top, __, bottle top, stick, bottle top, stick",
+      "wrong_answer": "bottle top",
+      "correct_answer": "stick"
+     },
+     "cause": "Copies a neighbour.",
+     "reveals": "The answer bottle top as a wrong option, with a reason that names the idea.",
+     "help": "Say the pattern from the start.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.1.1",
     "MATH.G1.RUBRIC.1.2",
@@ -133,7 +525,7 @@
    "values": "Respect: learner appreciates peers as they take turns in counting numbers forward up to 50.",
    "pcis": "Social Cohesion: learner takes turns counting numbers forward up to 50.\nEnvironmental Safety: learner observes safety when collecting concrete objects from the immediate environment.",
    "links": "The learner can relate the skills used in the concept of reading and writing numbers in words and symbols to functional reading and writing in English Language Activities.\nThe learner can relate the skills used in creating number patterns to the concept of patterns in Creative Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to f are KICD's words; g (patterns in play) is covered with the counting skill. Counting forward to 50, back from 30, objects to 30, symbols to 50, words to 10, patterns to 20 (the learning experiences count in 1s and 2s).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -192,8 +584,611 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+     "name": "Count numbers forward up to 50",
+     "outcomes": [
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.a",
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.g"
+     ],
+     "mastery": "Starting from any number, the child counts on in ones to 50 (and in twos to 20), saying each number once, crossing each ten correctly (19, 20, 21), and says the number after any number.",
+     "question_forms": [
+      "count on from a number",
+      "what comes next",
+      "missing number in a forward count",
+      "count on in twos"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_COUNTING"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.COUNT_OBJECTS_10",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects to 10.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.NUMERALS_1_10",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows numerals to 10.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+     "name": "Count numbers backward from 30",
+     "outcomes": [
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.b"
+     ],
+     "mastery": "The child counts back in ones from 30 or from any number up to 30, crossing each ten correctly (21, 20, 19), and says the number before.",
+     "question_forms": [
+      "count back from a number",
+      "what comes before",
+      "missing number in a backward count",
+      "count down to zero"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_COUNTING"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows the order of numbers forward.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.NUMERALS_1_10",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Knows numerals to 10.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+     "name": "Represent numbers 1 to 30 using concrete objects",
+     "outcomes": [
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.c"
+     ],
+     "mastery": "The child counts out a given number of objects up to 30, touching each once, and matches a group of objects to its number, keeping track by moving each object as it is counted.",
+     "question_forms": [
+      "count out this many",
+      "how many objects",
+      "match the group to the number",
+      "show the number with bottle tops"
+     ],
+     "thinking": [
+      "representation",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_COUNTING"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.COUNT_OBJECTS_10",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects one to one.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Says the numbers to 30 in order.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Counting real objects is done in class.",
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+     "name": "Read and write numbers 1 to 50 in symbols",
+     "outcomes": [
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.d"
+     ],
+     "mastery": "The child reads any number up to 50 and writes numbers to 50 in symbols with digits facing the right way and in the right order (14, not 41).",
+     "question_forms": [
+      "write the number said",
+      "read the number",
+      "write the number of objects",
+      "which is written correctly"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_COUNTING"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.NUMERALS_1_10",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows numerals to 10.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Says numbers to 50.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+     "name": "Read and write numbers 1 to 10 in words",
+     "outcomes": [
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.e"
+     ],
+     "mastery": "The child reads and writes the number words one to ten with correct spelling and matches each word to its numeral and to a group of objects.",
+     "question_forms": [
+      "write the number in words",
+      "match the word to the number",
+      "choose the right spelling",
+      "read the word"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_COUNTING"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Writes numerals.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.NUMERALS_1_10",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows numerals to 10.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+     "name": "Identify missing numbers in number patterns up to 20",
+     "outcomes": [
+      "MATH.G1.NUMBER.WHOLE_NUMBERS.f"
+     ],
+     "mastery": "The child finds the missing number in a counting pattern going up or down in ones or twos up to 20 (2, 4, __, 8), and says the jump. Counting in fives and tens is met in the older practice families.",
+     "question_forms": [
+      "missing number",
+      "next number",
+      "count in twos",
+      "what is the jump"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_COUNTING",
+      "G1_PRENUMBER"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts on in ones and twos.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Continues patterns with objects.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_DECADE",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+     "error": "After a number ending in 9 says the wrong next ten, as 29, 20 or 29, 40.",
+     "example": {
+      "question": "Count on: 18, 19, __",
+      "wrong_answer": "10",
+      "correct_answer": "20"
+     },
+     "cause": "Does not know which ten comes next.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "Count bundles: after 19 comes 2 tens.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_SKIPS_OR_REPEATS",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+     "error": "Skips or repeats a number while counting on.",
+     "example": {
+      "question": "Count on: 34, 35, 36, __",
+      "wrong_answer": "38",
+      "correct_answer": "37"
+     },
+     "cause": "Counts too fast.",
+     "reveals": "The answer 38 as a wrong option, with a reason that names the idea.",
+     "help": "Point to each number on a number line.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_ONE_MORE",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+     "error": "Counts on by one when asked to count in tens.",
+     "example": {
+      "question": "Count in tens from 13: 13, __",
+      "wrong_answer": "14",
+      "correct_answer": "23"
+     },
+     "cause": "Hears 'count' and counts in ones.",
+     "reveals": "The answer 14 as a wrong option, with a reason that names the idea.",
+     "help": "Ten more is one more bundle.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_COUNTS_DOWN",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+     "error": "Counts down when asked to count on.",
+     "example": {
+      "question": "Count on from 25: 25, __",
+      "wrong_answer": "24",
+      "correct_answer": "26"
+     },
+     "cause": "Mixes on and back.",
+     "reveals": "The answer 24 as a wrong option, with a reason that names the idea.",
+     "help": "On means bigger numbers.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50.M_CF1_TWO_TENS",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+     "error": "Jumps two tens instead of one.",
+     "example": {
+      "question": "Count in tens from 12: 12, 22, __",
+      "wrong_answer": "42",
+      "correct_answer": "32"
+     },
+     "cause": "Loses the step size.",
+     "reveals": "The answer 42 as a wrong option, with a reason that names the idea.",
+     "help": "One bundle each time.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_DECADE",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+     "error": "After a number ending in 0 says the wrong number, as 20, 10.",
+     "example": {
+      "question": "Count back: 22, 21, 20, __",
+      "wrong_answer": "10",
+      "correct_answer": "19"
+     },
+     "cause": "Jumps a whole ten.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "Count back on a number line one step.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_GOES_UP",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+     "error": "Counts up when asked to count back.",
+     "example": {
+      "question": "Count back from 15: 15, __",
+      "wrong_answer": "16",
+      "correct_answer": "14"
+     },
+     "cause": "Treats counting as going up.",
+     "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+     "help": "Walk backwards on a number line.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_BEFORE_AFTER",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+     "error": "Gives the number after when asked for the number before.",
+     "example": {
+      "question": "What number comes before 12?",
+      "wrong_answer": "13",
+      "correct_answer": "11"
+     },
+     "cause": "Mixes before and after.",
+     "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+     "help": "Before is one less.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30.M_CB1_STOPS_AT_1",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+     "error": "Stops at 1 and does not say zero.",
+     "example": {
+      "question": "Count back: 3, 2, 1, __",
+      "wrong_answer": "stops",
+      "correct_answer": "0"
+     },
+     "cause": "Has not met zero as a count.",
+     "reveals": "The answer stops as a wrong option, with a reason that names the idea.",
+     "help": "Take away the last bottle top: none left.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_DOUBLE_COUNT",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+     "error": "Counts some objects twice or misses some.",
+     "example": {
+      "question": "Count these 12 bottle tops.",
+      "wrong_answer": "13",
+      "correct_answer": "12"
+     },
+     "cause": "Does not move objects as they are counted.",
+     "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+     "help": "Move each object to one side as you count it.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_LAST_NOT_TOTAL",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+     "error": "Counts correctly but does not know the last number is how many.",
+     "example": {
+      "question": "You counted 1 to 9. How many stones are there?",
+      "wrong_answer": "counts again",
+      "correct_answer": "9"
+     },
+     "cause": "Does not link the last count to the total.",
+     "reveals": "The answer counts again as a wrong option, with a reason that names the idea.",
+     "help": "The last number you say tells how many.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_COUNT_OUT_TOO_MANY",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+     "error": "Gives too many when asked for a number, not stopping at it.",
+     "example": {
+      "question": "Give me 7 sticks.",
+      "wrong_answer": "9",
+      "correct_answer": "7"
+     },
+     "cause": "Keeps counting past the number.",
+     "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+     "help": "Say the number first, stop when you reach it.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30.M_REP1_SPREAD_MORE",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+     "error": "Thinks a spread-out group has more than the same number close together.",
+     "example": {
+      "question": "Two rows of 8 stones, one spread out. Which has more?",
+      "wrong_answer": "the spread out row",
+      "correct_answer": "the same"
+     },
+     "cause": "Judges by how much space they take.",
+     "reveals": "The answer the spread out row as a wrong option, with a reason that names the idea.",
+     "help": "Match the stones one to one.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_REVERSED",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+     "error": "Writes the digits of a teen in the order heard, as 41 for fourteen.",
+     "example": {
+      "question": "Write fourteen.",
+      "wrong_answer": "41",
+      "correct_answer": "14"
+     },
+     "cause": "Hears 'four' first.",
+     "reveals": "The answer 41 as a wrong option, with a reason that names the idea.",
+     "help": "Fourteen is ten and four: write the 1 first.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_MIRROR",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+     "error": "Writes a digit back to front.",
+     "example": {
+      "question": "Write 3.",
+      "wrong_answer": "a back-to-front 3",
+      "correct_answer": "3"
+     },
+     "cause": "Has not fixed how the digit faces.",
+     "reveals": "The answer a back-to-front 3 as a wrong option, with a reason that names the idea.",
+     "help": "Trace the digit in sand from the top.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_JOINED",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+     "error": "Writes 205 for twenty-five.",
+     "example": {
+      "question": "Write twenty-five.",
+      "wrong_answer": "205",
+      "correct_answer": "25"
+     },
+     "cause": "Writes 20 then 5.",
+     "reveals": "The answer 205 as a wrong option, with a reason that names the idea.",
+     "help": "Two digits only up to 99.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50.M_RW1_TEEN_TY",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+     "error": "Writes 40 for fourteen.",
+     "example": {
+      "question": "Write fourteen.",
+      "wrong_answer": "40",
+      "correct_answer": "14"
+     },
+     "cause": "Teen and ty sound alike.",
+     "reveals": "The answer 40 as a wrong option, with a reason that names the idea.",
+     "help": "Fourteen has 1 ten.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_SPELLING",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+     "error": "Spells number words by sound, as 'for', 'ate', 'too'.",
+     "example": {
+      "question": "Write 8 in words.",
+      "wrong_answer": "ate",
+      "correct_answer": "eight"
+     },
+     "cause": "Spells by sound.",
+     "reveals": "The answer ate as a wrong option, with a reason that names the idea.",
+     "help": "Learn each word's letters.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_SIX_SEVEN",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+     "error": "Mixes six and seven, or the words for 2 and 3.",
+     "example": {
+      "question": "Match the word seven to a number.",
+      "wrong_answer": "6",
+      "correct_answer": "7"
+     },
+     "cause": "The words start the same.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Count objects while saying the word.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_TEN_AS_ONE_ZERO",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+     "error": "Writes ten as 'one zero'.",
+     "example": {
+      "question": "Write 10 in words.",
+      "wrong_answer": "one zero",
+      "correct_answer": "ten"
+     },
+     "cause": "Reads the digits.",
+     "reveals": "The answer one zero as a wrong option, with a reason that names the idea.",
+     "help": "10 has its own word.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10.M_W10_WORD_NUMERAL_MISMATCH",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.WORDS_10",
+     "error": "Matches a word to the wrong numeral.",
+     "example": {
+      "question": "Which number is five?",
+      "wrong_answer": "2",
+      "correct_answer": "5"
+     },
+     "cause": "Guesses from the shape of the word.",
+     "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+     "help": "Read the word and count fingers.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_STEP_ONE",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+     "error": "Fills the gap by counting on one instead of the pattern's jump.",
+     "example": {
+      "question": "2, 4, __, 8",
+      "wrong_answer": "5",
+      "correct_answer": "6"
+     },
+     "cause": "Thinks patterns go up by one.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Find the jump between two numbers.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_COPIES",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+     "error": "Copies a number already in the pattern into the gap.",
+     "example": {
+      "question": "5, 10, __, 20",
+      "wrong_answer": "10",
+      "correct_answer": "15"
+     },
+     "cause": "Copies a neighbour.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "The gap is between its neighbours.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_DIRECTION",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+     "error": "Continues a falling pattern upwards.",
+     "example": {
+      "question": "10, 9, 8, __",
+      "wrong_answer": "9",
+      "correct_answer": "7"
+     },
+     "cause": "Assumes patterns grow.",
+     "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+     "help": "Bigger or smaller each time?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20.M_NPAT1_ODD_EVEN_MIX",
+     "skill": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+     "error": "Counting in twos from an odd number, jumps to even numbers.",
+     "example": {
+      "question": "1, 3, 5, __",
+      "wrong_answer": "6",
+      "correct_answer": "7"
+     },
+     "cause": "Knows only the even twos.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Count on two from 5: 6, 7.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.1.1",
     "MATH.G1.RUBRIC.1.2",
@@ -234,7 +1229,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read; a line on this page ran across two columns and was cut by position. Outcomes a to f are KICD's words; g (games with devices or other resources) is covered with adding two single digits. Addition is modelled with objects first; sums of a 2-digit and a 1-digit number stay within 50 with no regrouping.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -292,8 +1287,595 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+     "name": "Model addition as putting objects together",
+     "outcomes": [
+      "MATH.G1.NUMBER.ADDITION.a"
+     ],
+     "mastery": "The child puts two groups of objects together and counts all of them to find how many there are now, and tells a 'had some, got some more' story for it (3 birds and 2 more birds is 5 birds).",
+     "question_forms": [
+      "how many now",
+      "put together and count",
+      "a story with more coming",
+      "draw both groups"
+     ],
+     "thinking": [
+      "representation",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_ADD"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.ADD_ON_OBJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Put small groups together in pre-primary.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects to 30.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+     "name": "Use the + and = signs in writing addition statements",
+     "outcomes": [
+      "MATH.G1.NUMBER.ADDITION.b"
+     ],
+     "mastery": "The child writes an addition statement for a picture or story with + and = in the right places (3 + 2 = 5) and reads it as 'three add two equals five'.",
+     "question_forms": [
+      "write the addition sentence",
+      "read the sentence",
+      "put in the missing sign",
+      "match the picture to the sentence"
+     ],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G1_ADD"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Puts groups together.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Writes numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+     "name": "Add two single-digit numbers",
+     "outcomes": [
+      "MATH.G1.NUMBER.ADDITION.c",
+      "MATH.G1.NUMBER.ADDITION.g"
+     ],
+     "mastery": "The child adds two single-digit numbers (7 + 5 = 12) by counting on from the larger, using fingers, objects or a number line, in stories and number sentences. Games with dice and devices are played in class.",
+     "question_forms": [
+      "add two numbers",
+      "count on from the bigger",
+      "a story with two amounts",
+      "roll two dice"
+     ],
+     "thinking": [
+      "procedure",
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_ADD"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reads addition sentences.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts on from a number.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+     "name": "Add three single-digit numbers",
+     "outcomes": [
+      "MATH.G1.NUMBER.ADDITION.d"
+     ],
+     "mastery": "The child adds three single-digit numbers (4 + 3 + 5 = 12) by adding two first and then the third, or by finding a pair that makes ten.",
+     "question_forms": [
+      "add three numbers",
+      "a story with three amounts",
+      "make ten first",
+      "missing number of three"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_ADD"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Adds two numbers.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Counts on to 27.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+     "name": "Add a 2-digit number to a 1-digit number without regrouping, sum up to 50",
+     "outcomes": [
+      "MATH.G1.NUMBER.ADDITION.e"
+     ],
+     "mastery": "The child adds a 1-digit number to a 2-digit number when the ones do not make ten (23 + 4 = 27), across or in a column, using an abacus or number cards, with the sum up to 50.",
+     "question_forms": [
+      "column addition",
+      "horizontal addition",
+      "count on",
+      "a story with a total"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_ADD"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Adds single digits.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows 2-digit numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+     "name": "Work out missing numbers in addition patterns up to 50",
+     "outcomes": [
+      "MATH.G1.NUMBER.ADDITION.f"
+     ],
+     "mastery": "The child finds the missing number in an adding pattern (5, 7, 9, __) or in an addition (6 + __ = 10, how many more are needed) by counting up from the number known.",
+     "question_forms": [
+      "missing number in a pattern",
+      "how many more are needed",
+      "6 + __ = 10",
+      "next number"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_ADD"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Adds by counting on.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Missing numbers in counting patterns.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_COUNTS_START_AGAIN",
+     "skill": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+     "error": "When counting on, counts the start number again, so the answer is one less.",
+     "example": {
+      "question": "There are 6 birds. 3 more fly in. How many now?",
+      "wrong_answer": "8",
+      "correct_answer": "9"
+     },
+     "cause": "Says the first number as 'one' when counting on.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "Hold 6 in your head; count 7, 8, 9 on fingers.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_TAKES_AWAY",
+     "skill": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+     "error": "Takes away when more come.",
+     "example": {
+      "question": "There are 8 birds. 3 more fly in. How many now?",
+      "wrong_answer": "5",
+      "correct_answer": "11"
+     },
+     "cause": "Uses the operation last practised.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "More came: there are more now.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_GIVES_START",
+     "skill": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+     "error": "Gives the starting number as the answer.",
+     "example": {
+      "question": "There are 7 birds. 2 more fly in. How many now?",
+      "wrong_answer": "7",
+      "correct_answer": "9"
+     },
+     "cause": "Stops at the first group.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Count both groups.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION.M_ADD1_COUNTS_ONE_GROUP_TWICE",
+     "skill": "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
+     "error": "Counts one of the groups twice.",
+     "example": {
+      "question": "4 mangoes and 3 mangoes put together. How many?",
+      "wrong_answer": "8",
+      "correct_answer": "7"
+     },
+     "cause": "Does not move counted objects.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "Move each mango as you count it.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_EQUALS_FIRST",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+     "error": "Puts = before the numbers, as = 3 + 2 5.",
+     "example": {
+      "question": "Write 3 and 2 make 5.",
+      "wrong_answer": "= 3 + 2 5",
+      "correct_answer": "3 + 2 = 5"
+     },
+     "cause": "Does not know where = goes.",
+     "reveals": "The answer = 3 + 2 5 as a wrong option, with a reason that names the idea.",
+     "help": "The = comes just before the answer.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_MINUS",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+     "error": "Writes - instead of +.",
+     "example": {
+      "question": "Write: 4 add 3 makes 7.",
+      "wrong_answer": "4 - 3 = 7",
+      "correct_answer": "4 + 3 = 7"
+     },
+     "cause": "Mixes the signs.",
+     "reveals": "The answer 4 - 3 = 7 as a wrong option, with a reason that names the idea.",
+     "help": "+ has two lines crossing: add.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_EQUALS_MEANS_ANSWER_NEXT",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+     "error": "Thinks = means 'the answer comes next', so writes 3 + 2 = 5 + 1 = 6 as one line.",
+     "example": {
+      "question": "Is 3 + 2 = 5 + 1 true?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, 5 is not 6"
+     },
+     "cause": "Reads = as 'then'.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "= means both sides are the same amount.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS.M_SIGN1_PICTURE_WRONG_NUMBERS",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+     "error": "Writes numbers that do not match the picture.",
+     "example": {
+      "question": "A picture shows 2 cows and 4 cows. Write the sentence.",
+      "wrong_answer": "2 + 2 = 4",
+      "correct_answer": "2 + 4 = 6"
+     },
+     "cause": "Copies a sentence seen before.",
+     "reveals": "The answer 2 + 2 = 4 as a wrong option, with a reason that names the idea.",
+     "help": "Count each group in the picture first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+     "error": "Counts on from the first number including it.",
+     "example": {
+      "question": "7 + 5",
+      "wrong_answer": "11",
+      "correct_answer": "12"
+     },
+     "cause": "Says 7 as 'one'.",
+     "reveals": "The answer 11 as a wrong option, with a reason that names the idea.",
+     "help": "Start at 7 and count 8, 9, 10, 11, 12.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_COUNTS_ALL",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+     "error": "Counts all from one every time instead of counting on, and loses count.",
+     "example": {
+      "question": "8 + 6",
+      "wrong_answer": "13",
+      "correct_answer": "14"
+     },
+     "cause": "Counts both groups from 1.",
+     "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+     "help": "Start from the bigger number and count on the smaller.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_REVERSED_ANSWER",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+     "error": "Writes a teen answer with the digits reversed, as 21 for 12.",
+     "example": {
+      "question": "7 + 5",
+      "wrong_answer": "21",
+      "correct_answer": "12"
+     },
+     "cause": "Hears 'twelve' and writes the ones first, or reverses.",
+     "reveals": "The answer 21 as a wrong option, with a reason that names the idea.",
+     "help": "A teen has 1 ten: write the 1 first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE.M_A2S_SUBTRACTS",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+     "error": "Takes away instead of adding.",
+     "example": {
+      "question": "9 + 4",
+      "wrong_answer": "5",
+      "correct_answer": "13"
+     },
+     "cause": "Mixes the signs.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Circle the sign first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_ADDS_TWO",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+     "error": "Adds only two of the three numbers.",
+     "example": {
+      "question": "4 + 3 + 5",
+      "wrong_answer": "7",
+      "correct_answer": "12"
+     },
+     "cause": "Stops after the first pair.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Tick each number as you add it.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_LOSES_TOTAL",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+     "error": "Forgets the first total when adding the third number.",
+     "example": {
+      "question": "6 + 2 + 3",
+      "wrong_answer": "5",
+      "correct_answer": "11"
+     },
+     "cause": "Holds only the last pair.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Write the first total down, then add the third.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+     "error": "Counts on including the start number at each step.",
+     "example": {
+      "question": "5 + 3 + 2",
+      "wrong_answer": "8",
+      "correct_answer": "10"
+     },
+     "cause": "Counts each start number.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "Finger on the number; count on from the next.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE.M_A3S_STORY_TWO_ONLY",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_THREE_SINGLE",
+     "error": "In a story with three amounts, adds only the first two.",
+     "example": {
+      "question": "Juma has 3 sweets, Amina 4 and Otieno 2. How many in all?",
+      "wrong_answer": "7",
+      "correct_answer": "9"
+     },
+     "cause": "Misses the last person.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Underline every amount in the story.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_MISALIGNED",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+     "error": "Adds the 1-digit number to the tens.",
+     "example": {
+      "question": "23 + 4",
+      "wrong_answer": "63",
+      "correct_answer": "27"
+     },
+     "cause": "Lines up from the left.",
+     "reveals": "The answer 63 as a wrong option, with a reason that names the idea.",
+     "help": "Ones under ones.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_DIGITS_ADDED",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+     "error": "Adds all the digits together.",
+     "example": {
+      "question": "32 + 5",
+      "wrong_answer": "10",
+      "correct_answer": "37"
+     },
+     "cause": "Treats each digit the same.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "The 3 is 3 tens: keep it.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+     "error": "Counts on including the start number.",
+     "example": {
+      "question": "41 + 3, counting on",
+      "wrong_answer": "43",
+      "correct_answer": "44"
+     },
+     "cause": "Says 41 as 'one'.",
+     "reveals": "The answer 43 as a wrong option, with a reason that names the idea.",
+     "help": "Finger on 41: 42, 43, 44.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50.M_A21_1_ONES_ONLY",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_2D_1D_50",
+     "error": "Writes only the ones of the answer.",
+     "example": {
+      "question": "24 + 3",
+      "wrong_answer": "7",
+      "correct_answer": "27"
+     },
+     "cause": "Forgets the tens.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Bring down the tens.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+     "error": "Counts up from the known number including it, so gets one too many.",
+     "example": {
+      "question": "Achieng has 6 stickers and wants 10. How many more?",
+      "wrong_answer": "5",
+      "correct_answer": "4"
+     },
+     "cause": "Counts 6 as a step.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Start at 6 and count up to 10: 7, 8, 9, 10.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_GIVES_KNOWN",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+     "error": "Gives the number already known.",
+     "example": {
+      "question": "Achieng has 6 stickers and wants 10. How many more does she need?",
+      "wrong_answer": "6",
+      "correct_answer": "4"
+     },
+     "cause": "Repeats a number from the story.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Ask: how many are still missing?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_ADDS_BOTH",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+     "error": "Adds the two numbers given.",
+     "example": {
+      "question": "6 + __ = 10",
+      "wrong_answer": "16",
+      "correct_answer": "4"
+     },
+     "cause": "Sees + and adds.",
+     "reveals": "The answer 16 as a wrong option, with a reason that names the idea.",
+     "help": "Count up from 6 to 10.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50.M_AMISS1_PATTERN_ONE",
+     "skill": "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
+     "error": "Adds one in a pattern that goes up by two.",
+     "example": {
+      "question": "5, 7, 9, __",
+      "wrong_answer": "10",
+      "correct_answer": "11"
+     },
+     "cause": "Assumes a jump of one.",
+     "reveals": "The answer 10 as a wrong option, with a reason that names the idea.",
+     "help": "Find the jump between two numbers.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.1.1",
     "MATH.G1.RUBRIC.1.2",
@@ -335,7 +1917,7 @@
    "values": "",
    "pcis": "",
    "links": "",
-   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read.",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; values: heading on the page but no text read; pcis: heading on the page but no text read; links: heading on the page but no text read. Outcomes a to e are KICD's words; f (games) is covered with subtracting single digits. Subtraction is modelled as taking away with objects; a 1-digit number is taken from a 2-digit number with no regrouping.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -385,8 +1967,498 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+     "name": "Model subtraction as taking away using concrete objects",
+     "outcomes": [
+      "MATH.G1.NUMBER.SUBTRACTION.a"
+     ],
+     "mastery": "The child takes some objects away from a group and counts what is left (8 sweets, 3 given away, 5 left), and tells a 'had some, gave some away' story for it.",
+     "question_forms": [
+      "how many are left",
+      "take away and count",
+      "a story of giving away",
+      "cross out and count"
+     ],
+     "thinking": [
+      "representation",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_SUB"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.ADD_ON_OBJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Took some away from small groups in pre-primary.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+     "name": "Use the - and = signs in writing subtraction sentences",
+     "outcomes": [
+      "MATH.G1.NUMBER.SUBTRACTION.b"
+     ],
+     "mastery": "The child writes a subtraction sentence for a picture or story with - and = in the right places, with the starting number first (8 - 3 = 5), and reads it.",
+     "question_forms": [
+      "write the subtraction sentence",
+      "read the sentence",
+      "put in the missing sign",
+      "match the picture to the sentence"
+     ],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G1_SUB"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Takes away with objects.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_SIGNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses + and =.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+     "name": "Subtract single-digit numbers",
+     "outcomes": [
+      "MATH.G1.NUMBER.SUBTRACTION.c",
+      "MATH.G1.NUMBER.SUBTRACTION.f"
+     ],
+     "mastery": "The child takes a single-digit number from a number up to 18 (13 - 5 = 8) by counting back, using objects or a number line, or from a known addition fact (5 + 8 = 13). Games are played in class.",
+     "question_forms": [
+      "take away",
+      "count back",
+      "a giving-away story",
+      "use the addition fact"
+     ],
+     "thinking": [
+      "procedure",
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_SUB"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reads subtraction sentences.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_BACK_30",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts back.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+     "name": "Subtract a 1-digit number from a 2-digit number without regrouping",
+     "outcomes": [
+      "MATH.G1.NUMBER.SUBTRACTION.d"
+     ],
+     "mastery": "The child takes a 1-digit number from a 2-digit number when the ones digit is big enough (37 - 4 = 33), across or in a column, with number cards or a chart.",
+     "question_forms": [
+      "column subtraction",
+      "count back",
+      "how many are left",
+      "horizontal subtraction"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_SUB"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Subtracts single digits.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows 2-digit numbers.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+     "name": "Work out missing numbers in subtraction patterns up to 50",
+     "outcomes": [
+      "MATH.G1.NUMBER.SUBTRACTION.e"
+     ],
+     "mastery": "The child continues or fills in a pattern that goes down by the same number (20, 18, 16, __) and finds a missing number in a subtraction (some were eaten, 5 are left from 12: how many were eaten?).",
+     "question_forms": [
+      "next number going down",
+      "missing term",
+      "how many were taken",
+      "12 - __ = 5"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_SUB"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Subtracts single digits.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counting patterns.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+     "error": "Counts back including the starting number, so the answer is one more.",
+     "example": {
+      "question": "Juma has 9 sweets and gives 3 away. How many are left?",
+      "wrong_answer": "7",
+      "correct_answer": "6"
+     },
+     "cause": "Says 9 as the first count back.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Finger on 9; count back 8, 7, 6.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_ADDS",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+     "error": "Adds when some are given away.",
+     "example": {
+      "question": "Juma has 9 sweets and gives 3 away. How many are left?",
+      "wrong_answer": "12",
+      "correct_answer": "6"
+     },
+     "cause": "Sees two numbers and adds.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "Giving away makes fewer.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_GIVES_TAKEN",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+     "error": "Gives the number taken away as the answer.",
+     "example": {
+      "question": "Amina has 8 pencils and gives 3 away. How many are left?",
+      "wrong_answer": "3",
+      "correct_answer": "5"
+     },
+     "cause": "Repeats a number from the story.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "Cross out the ones given and count the rest.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION.M_SUB1_TAKES_WRONG_NUMBER",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
+     "error": "Takes away one too many or too few objects.",
+     "example": {
+      "question": "Take 4 away from 10 stones. How many are left?",
+      "wrong_answer": "5",
+      "correct_answer": "6"
+     },
+     "cause": "Does not count the ones taken.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Count each stone as you take it away.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_SMALL_FIRST",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+     "error": "Writes the smaller number first, as 3 - 8 = 5.",
+     "example": {
+      "question": "Write: 8 take away 3 is 5.",
+      "wrong_answer": "3 - 8 = 5",
+      "correct_answer": "8 - 3 = 5"
+     },
+     "cause": "Writes the numbers in any order.",
+     "reveals": "The answer 3 - 8 = 5 as a wrong option, with a reason that names the idea.",
+     "help": "Start with how many there were.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_PLUS",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+     "error": "Writes + for a taking-away story.",
+     "example": {
+      "question": "Write: 7 birds, 2 fly away, 5 left.",
+      "wrong_answer": "7 + 2 = 5",
+      "correct_answer": "7 - 2 = 5"
+     },
+     "cause": "Mixes the signs.",
+     "reveals": "The answer 7 + 2 = 5 as a wrong option, with a reason that names the idea.",
+     "help": "- means take away.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_EQUALS_PLACE",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+     "error": "Puts = in the wrong place, as 8 = 3 - 5.",
+     "example": {
+      "question": "Write 8 take away 3 equals 5.",
+      "wrong_answer": "8 = 3 - 5",
+      "correct_answer": "8 - 3 = 5"
+     },
+     "cause": "Does not know where = goes.",
+     "reveals": "The answer 8 = 3 - 5 as a wrong option, with a reason that names the idea.",
+     "help": "= goes just before the answer.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS.M_SSIGN_PICTURE_MISMATCH",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SIGNS",
+     "error": "Writes numbers that do not match the picture.",
+     "example": {
+      "question": "A picture: 6 mangoes, 2 crossed out. Write the sentence.",
+      "wrong_answer": "6 - 4 = 2",
+      "correct_answer": "6 - 2 = 4"
+     },
+     "cause": "Uses the number left as the number taken.",
+     "reveals": "The answer 6 - 4 = 2 as a wrong option, with a reason that names the idea.",
+     "help": "Count the crossed-out ones: that is taken away.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+     "error": "Counts back including the start number.",
+     "example": {
+      "question": "13 - 5",
+      "wrong_answer": "9",
+      "correct_answer": "8"
+     },
+     "cause": "Says 13 as a step.",
+     "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+     "help": "Finger on 13: 12, 11, 10, 9, 8.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_SMALL_FROM_BIG",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+     "error": "Takes the smaller digit from the larger, as 13 - 5 = 12 (5 - 3 = 2, keeps the 1).",
+     "example": {
+      "question": "13 - 5",
+      "wrong_answer": "12",
+      "correct_answer": "8"
+     },
+     "cause": "Takes 3 from 5 in the ones.",
+     "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+     "help": "Count back on a number line from 13.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_ADDS",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+     "error": "Adds instead of taking away.",
+     "example": {
+      "question": "9 - 4",
+      "wrong_answer": "13",
+      "correct_answer": "5"
+     },
+     "cause": "Misreads the sign.",
+     "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+     "help": "Circle the sign first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE.M_SS_FACT_WRONG_PART",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_SINGLE",
+     "error": "Uses the addition fact but gives the wrong part.",
+     "example": {
+      "question": "5 + 8 = 13, so 13 - 5 = ?",
+      "wrong_answer": "13",
+      "correct_answer": "8"
+     },
+     "cause": "Repeats the total.",
+     "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+     "help": "Take the 5 away from 5 + 8: what is left?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_TAKES_FROM_BOTH",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+     "error": "Takes the 1-digit number from both digits.",
+     "example": {
+      "question": "37 - 3",
+      "wrong_answer": "4",
+      "correct_answer": "34"
+     },
+     "cause": "Applies the take-away to every digit.",
+     "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+     "help": "Only the ones lose 3.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_ADDS",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+     "error": "Adds instead of subtracting.",
+     "example": {
+      "question": "37 - 4",
+      "wrong_answer": "41",
+      "correct_answer": "33"
+     },
+     "cause": "Misreads the sign.",
+     "reveals": "The answer 41 as a wrong option, with a reason that names the idea.",
+     "help": "Circle the sign.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_ONES_ONLY",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+     "error": "Gives only the ones digit.",
+     "example": {
+      "question": "28 - 5",
+      "wrong_answer": "3",
+      "correct_answer": "23"
+     },
+     "cause": "Forgets the tens.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "Bring down the tens.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP.M_S21_1_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_2D_1D_NO_REGROUP",
+     "error": "Counts back including the start number.",
+     "example": {
+      "question": "46 - 3, counting back",
+      "wrong_answer": "44",
+      "correct_answer": "43"
+     },
+     "cause": "Says 46 as a step.",
+     "reveals": "The answer 44 as a wrong option, with a reason that names the idea.",
+     "help": "Finger on 46: 45, 44, 43.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_COUNTS_START",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+     "error": "Counts up from the number left including it.",
+     "example": {
+      "question": "Wanjiru buys 12 mandazi and eats some. 5 are left. How many did she eat?",
+      "wrong_answer": "8",
+      "correct_answer": "7"
+     },
+     "cause": "Counts 5 as a step.",
+     "reveals": "The answer 8 as a wrong option, with a reason that names the idea.",
+     "help": "Start at 5, count up to 12: 6 to 12.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_GIVES_LEFT",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+     "error": "Gives the number left as the number eaten.",
+     "example": {
+      "question": "12 mandazi, some eaten, 5 left. How many eaten?",
+      "wrong_answer": "5",
+      "correct_answer": "7"
+     },
+     "cause": "Repeats a number.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Ask: how many went?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_ADDS",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+     "error": "Adds the two numbers.",
+     "example": {
+      "question": "12 - __ = 5",
+      "wrong_answer": "17",
+      "correct_answer": "7"
+     },
+     "cause": "Sees two numbers and adds.",
+     "reveals": "The answer 17 as a wrong option, with a reason that names the idea.",
+     "help": "Count up from 5 to 12.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50.M_SMISS1_PATTERN_UP",
+     "skill": "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
+     "error": "Continues a falling pattern upwards.",
+     "example": {
+      "question": "20, 18, 16, __",
+      "wrong_answer": "18",
+      "correct_answer": "14"
+     },
+     "cause": "Assumes patterns grow.",
+     "reveals": "The answer 18 as a wrong option, with a reason that names the idea.",
+     "help": "Check: up or down?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.1.1",
     "MATH.G1.RUBRIC.1.2",
@@ -424,7 +2496,7 @@
    "values": "Responsibility: learner takes care of objects collected from the environment for learning.",
    "pcis": "Social Cohesion: learner works harmoniously in teams as they measure lengths using arbitrary units.",
    "links": "The learner can relate the concept of using objects from the environment for learning to the concept of resources in the environment in Environmental Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to c are KICD's words; d is attitudinal. Collecting objects (a) goes with comparing (b). Lengths are compared directly and measured with arbitrary units (hand spans, steps, sticks).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -461,8 +2533,208 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+     "name": "Collect objects and compare their lengths: longer than, shorter than, same as",
+     "outcomes": [
+      "MATH.G1.MEASUR.LENGTH.a",
+      "MATH.G1.MEASUR.LENGTH.b"
+     ],
+     "mastery": "The child collects objects of different lengths, lines up one end of two objects, and says which is longer than, shorter than or the same as the other; finds the longest and shortest of three.",
+     "question_forms": [
+      "which is longer",
+      "which is shorter",
+      "are they the same length",
+      "the longest of three"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_LENGTH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.SIZE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses long and short.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Orders objects by size.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Collecting objects from the environment is done in class.",
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+     "name": "Measure length using arbitrary units",
+     "outcomes": [
+      "MATH.G1.MEASUR.LENGTH.c"
+     ],
+     "mastery": "The child measures a length with hand spans, steps, sticks or pencils laid end to end without gaps, counts the units, and says why two children's hand-span counts for the same desk can differ.",
+     "question_forms": [
+      "how many hand spans long",
+      "how many steps across",
+      "why are the counts different",
+      "which unit gives more"
+     ],
+     "thinking": [
+      "procedure",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_LENGTH"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Compares lengths.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects to 30.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Measuring with hand spans and steps is done in class.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_NOT_ALIGNED",
+     "skill": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+     "error": "Compares without lining up the ends.",
+     "example": {
+      "question": "Two sticks: the shorter one starts further along so its end is further right. Which is longer?",
+      "wrong_answer": "the one that ends further right",
+      "correct_answer": "the one longer from end to end"
+     },
+     "cause": "Looks at one end only.",
+     "reveals": "The answer the one that ends further right as a wrong option, with a reason that names the idea.",
+     "help": "Line up one end, then look at the other end.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_THICK_LONG",
+     "skill": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+     "error": "Thinks a thicker or bigger object is longer.",
+     "example": {
+      "question": "A thick short log and a thin long stick: which is longer?",
+      "wrong_answer": "the log",
+      "correct_answer": "the stick"
+     },
+     "cause": "Mixes size with length.",
+     "reveals": "The answer the log as a wrong option, with a reason that names the idea.",
+     "help": "Lay them side by side, ends together.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_LONGER_SHORTER_SWAP",
+     "skill": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+     "error": "Uses longer when shorter is meant.",
+     "example": {
+      "question": "A pencil is shorter than a ruler. Which is longer?",
+      "wrong_answer": "the pencil",
+      "correct_answer": "the ruler"
+     },
+     "cause": "Mixes the words.",
+     "reveals": "The answer the pencil as a wrong option, with a reason that names the idea.",
+     "help": "Act it: stretch arms for longer.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH.M_CL1_BENT_STRING",
+     "skill": "MATH.G1.MEASUR.LENGTH.COMPARE_LENGTH",
+     "error": "Thinks a curled string is shorter than a straight one of the same length.",
+     "example": {
+      "question": "Two equal strings, one curled up. Is the curled one shorter?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, the same"
+     },
+     "cause": "Judges by how far the ends reach.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Straighten the string and compare.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_GAPS",
+     "skill": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+     "error": "Leaves gaps between hand spans or steps.",
+     "example": {
+      "question": "Hand spans with gaps between count 6 along a desk. Is it 6 spans long?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, more"
+     },
+     "cause": "Does not put each span where the last ended.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Put the thumb where the little finger was.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_UNIT_SIZE",
+     "skill": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+     "error": "Thinks a bigger hand span gives a bigger count.",
+     "example": {
+      "question": "Teacher's span and a child's span measure the same table. Who counts more spans?",
+      "wrong_answer": "the teacher",
+      "correct_answer": "the child"
+     },
+     "cause": "Bigger unit, bigger number.",
+     "reveals": "The answer the teacher as a wrong option, with a reason that names the idea.",
+     "help": "Try both and compare.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_MIXED_UNITS",
+     "skill": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+     "error": "Mixes units (some spans, some steps) and adds the counts.",
+     "example": {
+      "question": "3 steps and 2 hand spans: is the path 5 long?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, the units are different"
+     },
+     "cause": "Does not keep one unit.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Use one unit for the whole length.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH.M_MAL_COUNTS_START",
+     "skill": "MATH.G1.MEASUR.LENGTH.MEASURE_ARBITRARY_LENGTH",
+     "error": "Counts the start before laying the first unit.",
+     "example": {
+      "question": "Counting steps from the door: 'one' at the door, then 4 steps. How many steps?",
+      "wrong_answer": "5",
+      "correct_answer": "4"
+     },
+     "cause": "Says one before moving.",
+     "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+     "help": "Say one when the first step lands.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.2.1",
     "MATH.G1.RUBRIC.2.2",
@@ -499,7 +2771,7 @@
    "values": "Unity: learner appreciates the effort of others as they measure the mass of different items.\nRespect: learner gives others equal opportunity as they use safe objects to identify heavier, lighter, or objects of the same mass.",
    "pcis": "Safety issues: learner observes safety as they collect objects of different mass from their immediate environment.\nEffective communication: learner listens and contributes to discussions on objects that are heavier, lighter, or have the same mass.",
    "links": "The learner can relate the concept of safe objects from the environment to the concept of safety in the school environment in Environmental Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to c are KICD's words; d is attitudinal. Collecting objects (a) goes with comparing (b). Masses are compared by holding and measured with arbitrary units (an empty container of known mass filled with beans or maize).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -536,8 +2808,207 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+     "name": "Collect objects and compare masses: heavier than, lighter than, same as",
+     "outcomes": [
+      "MATH.G1.MEASUR.MASS.a",
+      "MATH.G1.MEASUR.MASS.b"
+     ],
+     "mastery": "The child holds two objects and says which is heavier, lighter or about the same, and puts three objects in order from two comparisons (if the cow is heavier than the goat and the goat heavier than the hen, the cow is heaviest).",
+     "question_forms": [
+      "which is heavier",
+      "which is lighter",
+      "are they the same",
+      "the heaviest of three"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_MASS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.SIZE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses heavy and light.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Orders objects.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Collecting and holding objects is done in class.",
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+     "name": "Measure mass using arbitrary units",
+     "outcomes": [
+      "MATH.G1.MEASUR.MASS.c"
+     ],
+     "mastery": "The child measures how many cups or tins of beans or maize balance an object, or how many tins of a known mass make a bag, and counts the units.",
+     "question_forms": [
+      "how many tins balance it",
+      "how many cups of beans",
+      "which needs more units",
+      "read the balance picture"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_MASS"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Compares masses.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Measuring with containers of beans or maize is done in class.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_BIG_HEAVY",
+     "skill": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+     "error": "Thinks the bigger object is always heavier.",
+     "example": {
+      "question": "A big pillow or a small stone: which is heavier?",
+      "wrong_answer": "the pillow",
+      "correct_answer": "the stone"
+     },
+     "cause": "Judges mass by size.",
+     "reveals": "The answer the pillow as a wrong option, with a reason that names the idea.",
+     "help": "Hold one in each hand.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_CHAIN",
+     "skill": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+     "error": "Cannot put three in order from two comparisons.",
+     "example": {
+      "question": "A cow is heavier than a goat. A goat is heavier than a hen. Which is heaviest?",
+      "wrong_answer": "the goat",
+      "correct_answer": "the cow"
+     },
+     "cause": "Looks at one sentence only.",
+     "reveals": "The answer the goat as a wrong option, with a reason that names the idea.",
+     "help": "Line them up: heaviest first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_WORDS_SWAP",
+     "skill": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+     "error": "Says lighter when heavier is meant.",
+     "example": {
+      "question": "A bag of maize and a feather: which is lighter?",
+      "wrong_answer": "the bag",
+      "correct_answer": "the feather"
+     },
+     "cause": "Mixes the words.",
+     "reveals": "The answer the bag as a wrong option, with a reason that names the idea.",
+     "help": "Lighter is easier to lift.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_SAME_SIZE_SAME_MASS",
+     "skill": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+     "error": "Thinks two same-size objects must weigh the same.",
+     "example": {
+      "question": "A tin of sand and an empty tin of the same size: same mass?",
+      "wrong_answer": "yes",
+      "correct_answer": "no"
+     },
+     "cause": "Judges by size.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Hold both.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_UP_HEAVY",
+     "skill": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+     "error": "Thinks the side that goes up on a balance is heavier.",
+     "example": {
+      "question": "On a balance the bag goes down and the tins go up. Which is heavier?",
+      "wrong_answer": "the tins",
+      "correct_answer": "the bag"
+     },
+     "cause": "Links up with more.",
+     "reveals": "The answer the tins as a wrong option, with a reason that names the idea.",
+     "help": "Press each side: the heavy side sinks.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_PART_FULL",
+     "skill": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+     "error": "Counts a cup that is not full as a whole unit.",
+     "example": {
+      "question": "4 cups of beans, the last half full. How many full cups?",
+      "wrong_answer": "4",
+      "correct_answer": "3 and a half"
+     },
+     "cause": "Counts every scoop.",
+     "reveals": "The answer 4 as a wrong option, with a reason that names the idea.",
+     "help": "Fill each cup to the top.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_COUNTS_OBJECTS",
+     "skill": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+     "error": "Counts the objects on the pan instead of the units.",
+     "example": {
+      "question": "3 mangoes balance 6 tins. How many tins heavy are the mangoes?",
+      "wrong_answer": "3",
+      "correct_answer": "6"
+     },
+     "cause": "Counts the wrong side.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "Count the units, not the objects.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_BIGGER_UNIT_MORE",
+     "skill": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+     "error": "Thinks a heavier unit gives a bigger count.",
+     "example": {
+      "question": "A bag balances 8 small tins. With big tins, more or fewer?",
+      "wrong_answer": "more",
+      "correct_answer": "fewer"
+     },
+     "cause": "Bigger unit, bigger number.",
+     "reveals": "The answer more as a wrong option, with a reason that names the idea.",
+     "help": "Try both units.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.2.1",
     "MATH.G1.RUBRIC.2.2",
@@ -573,7 +3044,7 @@
    "values": "Responsibility: learner re-uses containers to keep items at home and school.\nUnity: learner jointly with others fills bigger containers with water using different small containers.",
    "pcis": "Safety issues: learner collects safe containers of different sizes from the environment.\nSustainable consumption: learner reuses of containers at home and school.",
    "links": "The learner can relate the skill of reusing empty containers to the skills of waste management in Environmental Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to d are KICD's words; collecting containers (a) and re-using them (d) go with comparing (b). Capacity is compared by pouring and measured with arbitrary units (cups, small tins).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -610,8 +3081,208 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+     "name": "Collect containers and compare capacity: more than, less than, same as",
+     "outcomes": [
+      "MATH.G1.MEASUR.CAPACITY.a",
+      "MATH.G1.MEASUR.CAPACITY.b",
+      "MATH.G1.MEASUR.CAPACITY.d"
+     ],
+     "mastery": "The child pours water from one container into another to say which holds more, less or the same, does not judge by height alone, and re-uses containers to keep items.",
+     "question_forms": [
+      "which holds more",
+      "which holds less",
+      "do they hold the same",
+      "fill and pour to check"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_CAPACITY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.SIZE_WORDS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses full and empty.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Orders objects.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Collecting, filling and re-using containers is done in class and at home.",
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+     "name": "Measure capacity using arbitrary units",
+     "outcomes": [
+      "MATH.G1.MEASUR.CAPACITY.c"
+     ],
+     "mastery": "The child fills a basin or jug with a small container (a cup, a tin), counts the full cups, and compares two containers by their cup counts.",
+     "question_forms": [
+      "how many cups fill it",
+      "which holds more cups",
+      "bigger cup, fewer cups",
+      "read the picture of cups"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_CAPACITY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Compares capacities.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.REPRESENT_30",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts objects.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Filling basins with small containers is done in class.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_TALL_MORE",
+     "skill": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+     "error": "Thinks the taller container holds more.",
+     "example": {
+      "question": "A tall thin bottle holds 3 cups of water and a short wide bowl holds 5 cups. Which holds more?",
+      "wrong_answer": "the bottle (it is taller)",
+      "correct_answer": "the bowl"
+     },
+     "cause": "Judges by height.",
+     "reveals": "The answer the bottle (it is taller) as a wrong option, with a reason that names the idea.",
+     "help": "Pour one into the other.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_MORE_LESS_SWAP",
+     "skill": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+     "error": "Says less when more is meant.",
+     "example": {
+      "question": "A bucket and a cup: which holds less?",
+      "wrong_answer": "the bucket",
+      "correct_answer": "the cup"
+     },
+     "cause": "Mixes the words.",
+     "reveals": "The answer the bucket as a wrong option, with a reason that names the idea.",
+     "help": "Less fills up faster.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_SPILL_IGNORED",
+     "skill": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+     "error": "Says one holds more even though water spilled over.",
+     "example": {
+      "question": "Pouring a full jug into a cup, water spills. Which holds more?",
+      "wrong_answer": "the cup",
+      "correct_answer": "the jug"
+     },
+     "cause": "Watches only the cup.",
+     "reveals": "The answer the cup as a wrong option, with a reason that names the idea.",
+     "help": "Spilling means the cup could not hold it all.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_SAME_IMPOSSIBLE",
+     "skill": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+     "error": "Thinks two different-looking containers cannot hold the same.",
+     "example": {
+      "question": "A tall jar and a wide pot both take 5 cups. Same?",
+      "wrong_answer": "no",
+      "correct_answer": "yes"
+     },
+     "cause": "Judges by shape.",
+     "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+     "help": "Count the cups for each.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_PART_CUP",
+     "skill": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+     "error": "Counts a cup that was not full.",
+     "example": {
+      "question": "A jug takes 6 cups, the last one half full. How many full cups?",
+      "wrong_answer": "6",
+      "correct_answer": "5 and a half"
+     },
+     "cause": "Counts every pour.",
+     "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+     "help": "Fill each cup to the top.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_BIGGER_CUP_MORE",
+     "skill": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+     "error": "Thinks a bigger cup gives a bigger count.",
+     "example": {
+      "question": "A basin takes 10 small cups. With a big mug, more or fewer?",
+      "wrong_answer": "more",
+      "correct_answer": "fewer"
+     },
+     "cause": "Bigger unit, bigger number.",
+     "reveals": "The answer more as a wrong option, with a reason that names the idea.",
+     "help": "Fill with both.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_COMPARE_COUNTS_SWAP",
+     "skill": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+     "error": "Says the container with fewer cups holds more.",
+     "example": {
+      "question": "A jug holds 8 cups. A bottle holds 5 cups. Which holds more?",
+      "wrong_answer": "the bottle",
+      "correct_answer": "the jug"
+     },
+     "cause": "Mixes the counts with size.",
+     "reveals": "The answer the bottle as a wrong option, with a reason that names the idea.",
+     "help": "More cups means it holds more.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_MIXED_CUPS",
+     "skill": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+     "error": "Uses different cups and adds the counts.",
+     "example": {
+      "question": "2 small cups and 3 big cups fill a pot. Does it hold 5 cups?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, the cups are different"
+     },
+     "cause": "Does not keep one unit.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Use one cup only.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.2.1",
     "MATH.G1.RUBRIC.2.2",
@@ -649,7 +3320,7 @@
    "values": "Peace: learner harmoniously sings songs/ rhymes related to days of the week together.\nPatriotism: learner is aware of his/her own culture as they name activities that take place during the days of the week.",
    "pcis": "Citizenship: learner names activities that take place during the days of the week such as raising of the flag.\nSocial Cohesion: learner collaboratively sings songs/ rhymes related to days of the week together.",
    "links": "The learner can relate the concept of time to the concept of weather and the sky, and day and night in Environmental Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to c are KICD's words; d is attitudinal. Days of the week in order, activities on different days, months of the year (songs and rhymes, birth months).",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -688,8 +3359,302 @@
      "indicator": "MATH.G1.RUBRIC.2.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+     "name": "Identify the days of the week",
+     "outcomes": [
+      "MATH.G1.MEASUR.TIME.a"
+     ],
+     "mastery": "The child says and writes the seven days of the week in order starting from any day, says which day comes before and after a given day, and counts on days (in 3 days from Monday it is Thursday), using today, yesterday and tomorrow.",
+     "question_forms": [
+      "the day after",
+      "the day before",
+      "in 2 days it will be",
+      "put the days in order"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_TIME"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.DAILY_ROUTINE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Uses today, yesterday and tomorrow.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Counts on from a number.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+     "name": "Relate days of the week to various activities",
+     "outcomes": [
+      "MATH.G1.MEASUR.TIME.b"
+     ],
+     "mastery": "The child names what happens on particular days (raising the flag on Monday and Friday, no school on Saturday and Sunday, church or mosque day, market day) and says the day for an activity.",
+     "question_forms": [
+      "which day is this activity",
+      "what do we do on Monday",
+      "school days and weekend days",
+      "order the week's activities"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_TIME"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows the days.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.DAILY_ROUTINE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Orders daily events.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+     "name": "Identify the months of the year",
+     "outcomes": [
+      "MATH.G1.MEASUR.TIME.c"
+     ],
+     "mastery": "The child says the twelve months in order (with a song), names the month of their birthday, and says which month comes before and after a given month.",
+     "question_forms": [
+      "the month after",
+      "the month before",
+      "your birth month",
+      "put the months in order"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_TIME"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Says a sequence of names in order.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.DAILY_ROUTINE",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Orders events in time.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_COUNTS_TODAY",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+     "error": "Counts today as the first day when counting on.",
+     "example": {
+      "question": "Today is Monday. What day will it be in 2 days?",
+      "wrong_answer": "Tuesday",
+      "correct_answer": "Wednesday"
+     },
+     "cause": "Says Monday as 'one'.",
+     "reveals": "The answer Tuesday as a wrong option, with a reason that names the idea.",
+     "help": "Say 'tomorrow' for the first day: Tuesday is 1, Wednesday is 2.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_ORDER",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+     "error": "Says the days out of order, as Monday, Wednesday, Tuesday.",
+     "example": {
+      "question": "What day comes after Tuesday?",
+      "wrong_answer": "Thursday",
+      "correct_answer": "Wednesday"
+     },
+     "cause": "Has not fixed the order.",
+     "reveals": "The answer Thursday as a wrong option, with a reason that names the idea.",
+     "help": "Sing the days song with fingers.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_WRAP",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+     "error": "Does not go back to Monday after Sunday.",
+     "example": {
+      "question": "What day comes after Sunday?",
+      "wrong_answer": "none",
+      "correct_answer": "Monday"
+     },
+     "cause": "Thinks the week ends.",
+     "reveals": "The answer none as a wrong option, with a reason that names the idea.",
+     "help": "The days go round like a circle.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK.M_DAYS_YESTERDAY_TOMORROW",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+     "error": "Mixes yesterday and tomorrow.",
+     "example": {
+      "question": "Today is Friday. What day was yesterday?",
+      "wrong_answer": "Saturday",
+      "correct_answer": "Thursday"
+     },
+     "cause": "Mixes the words.",
+     "reveals": "The answer Saturday as a wrong option, with a reason that names the idea.",
+     "help": "Yesterday is behind us; tomorrow is next.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_WEEKEND",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+     "error": "Says there is school on Saturday or Sunday.",
+     "example": {
+      "question": "Do most children go to school on Sunday?",
+      "wrong_answer": "yes",
+      "correct_answer": "no"
+     },
+     "cause": "Does not know the school week.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Mark school days on a week chart.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_WRONG_DAY",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+     "error": "Names the wrong day for a class activity.",
+     "example": {
+      "question": "On which days is the flag raised at our school?",
+      "wrong_answer": "Wednesday",
+      "correct_answer": "Monday and Friday"
+     },
+     "cause": "Guesses a day.",
+     "reveals": "The answer Wednesday as a wrong option, with a reason that names the idea.",
+     "help": "Keep a class chart of what happens each day.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_DAY_MONTH",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+     "error": "Gives a month for a day.",
+     "example": {
+      "question": "What day is market day in our town?",
+      "wrong_answer": "June",
+      "correct_answer": "a day of the week, such as Thursday"
+     },
+     "cause": "Mixes days and months.",
+     "reveals": "The answer June as a wrong option, with a reason that names the idea.",
+     "help": "Days are the seven names.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES.M_DACT_ORDER_EVENTS",
+     "skill": "MATH.G1.MEASUR.TIME.DAYS_ACTIVITIES",
+     "error": "Puts the week's events in the wrong order.",
+     "example": {
+      "question": "Put in order: weekend, Monday flag, Friday flag.",
+      "wrong_answer": "weekend, Friday flag, Monday flag",
+      "correct_answer": "Monday flag, Friday flag, weekend"
+     },
+     "cause": "Does not use the day order.",
+     "reveals": "The answer weekend, Friday flag, Monday flag as a wrong option, with a reason that names the idea.",
+     "help": "Use the days song to order them.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_ORDER",
+     "skill": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+     "error": "Says the months out of order.",
+     "example": {
+      "question": "What month comes after March?",
+      "wrong_answer": "May",
+      "correct_answer": "April"
+     },
+     "cause": "Has not fixed the order.",
+     "reveals": "The answer May as a wrong option, with a reason that names the idea.",
+     "help": "Sing the months song.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_DAY_FOR_MONTH",
+     "skill": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+     "error": "Gives a day when asked for a month.",
+     "example": {
+      "question": "Name the month of your birthday.",
+      "wrong_answer": "Saturday",
+      "correct_answer": "a month, such as August"
+     },
+     "cause": "Mixes days and months.",
+     "reveals": "The answer Saturday as a wrong option, with a reason that names the idea.",
+     "help": "Months are the twelve names in the year.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_WRAP",
+     "skill": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+     "error": "Does not go back to January after December.",
+     "example": {
+      "question": "What month comes after December?",
+      "wrong_answer": "none",
+      "correct_answer": "January"
+     },
+     "cause": "Thinks the year ends.",
+     "reveals": "The answer none as a wrong option, with a reason that names the idea.",
+     "help": "The months go round each year.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR.M_MON_COUNT",
+     "skill": "MATH.G1.MEASUR.TIME.MONTHS_OF_YEAR",
+     "error": "Says there are 7 or 10 months.",
+     "example": {
+      "question": "How many months are in a year?",
+      "wrong_answer": "7",
+      "correct_answer": "12"
+     },
+     "cause": "Mixes with the days of the week.",
+     "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+     "help": "Count the months in the song.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.2.1",
     "MATH.G1.RUBRIC.2.2",
@@ -726,7 +3691,7 @@
    "values": "Integrity: learner displays honesty as they role play selling and buying of items from the model classroom shop.\nPatriotism: learner is aware of own culture as they recognise different Kenyan currency coins and notes.",
    "pcis": "Financial literacy: learner recognises and sorts out different Kenyan currency coins according to their value.",
    "links": "The learner can relate the skill of using money to the concept of our market in Environmental Activities.",
-   "design_notes": "",
+   "design_notes": "Outcomes a to d are KICD's words; e is attitudinal. Kenyan coins (sh. 1, 5, 10, 20; the learning experiences also list sh. 40, a commemorative coin, to confirm by a teacher) and the sh. 50 note; prices in the model shop up to sh. 50; buying 2 items with no balance.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -771,8 +3736,399 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+     "name": "Identify Kenyan currency coins",
+     "outcomes": [
+      "MATH.G1.MEASUR.MONEY.a"
+     ],
+     "mastery": "The child names the Kenyan coins (sh. 1, sh. 5, sh. 10, sh. 20) by the number on them, sorts coins by value, and says which of two coins is worth more.",
+     "question_forms": [
+      "name the coin",
+      "sort coins by value",
+      "which coin is worth more",
+      "find the sh. 10 coin"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_MONEY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.COINS_IN_PLAY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows coins are money.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.NUMERALS_1_10",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reads numerals on coins.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE",
+     "name": "Identify the sh. 50 Kenyan currency note",
+     "outcomes": [
+      "MATH.G1.MEASUR.MONEY.b"
+     ],
+     "mastery": "The child recognises the sh. 50 note, says its value, and tells it from the coins.",
+     "question_forms": [
+      "which is the sh. 50 note",
+      "what is this note worth",
+      "note or coin",
+      "is the note worth more than a sh. 20 coin"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_MONEY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows the coins.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.READ_WRITE_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Reads the number 50.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.COUNT_COINS",
+     "name": "Count Kenyan currency coins one at a time",
+     "outcomes": [
+      "MATH.G1.MEASUR.MONEY.c"
+     ],
+     "mastery": "The child counts coins of one kind and then a mix (two sh. 10 coins and one sh. 5 coin is sh. 25) by counting on the value of each coin, and says how many coins there are and how much they are worth as two different things.",
+     "question_forms": [
+      "how much money",
+      "how many coins",
+      "count ten-shilling coins",
+      "count a mix of coins"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_MONEY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Knows each coin's value.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts on from a number.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS",
+     "name": "Use money to buy up to 2 items without balance",
+     "outcomes": [
+      "MATH.G1.MEASUR.MONEY.d"
+     ],
+     "mastery": "The child finds the cost of up to 2 items in a model shop (total up to sh. 50) and picks coins or the note that pay exactly, with no change.",
+     "question_forms": [
+      "total cost of two items",
+      "which coins pay exactly",
+      "is the money enough",
+      "role play at the shop"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [
+      "G1_MONEY"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.MEASUR.MONEY.COUNT_COINS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Counts coins.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.ADDITION.ADD_TWO_SINGLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Adds two numbers.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Role play in the classroom model shop is done in class.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS.M_COIN1_SIZE",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+     "error": "Thinks a bigger coin is worth more, whatever its number.",
+     "example": {
+      "question": "Which is worth more: a sh. 1 coin or a sh. 10 coin?",
+      "wrong_answer": "the bigger-looking coin",
+      "correct_answer": "the sh. 10 coin"
+     },
+     "cause": "Judges value by size.",
+     "reveals": "The answer the bigger-looking coin as a wrong option, with a reason that names the idea.",
+     "help": "Read the number on each coin.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS.M_COIN1_COLOUR",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+     "error": "Names coins by colour and mixes coins that look alike.",
+     "example": {
+      "question": "Which coin has 20 on it?",
+      "wrong_answer": "the sh. 10 coin",
+      "correct_answer": "the sh. 20 coin"
+     },
+     "cause": "Uses colour.",
+     "reveals": "The answer the sh. 10 coin as a wrong option, with a reason that names the idea.",
+     "help": "Read the number first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS.M_COIN1_ORDER",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+     "error": "Sorts coins in the wrong order of value.",
+     "example": {
+      "question": "Order from least: sh. 10, sh. 1, sh. 5.",
+      "wrong_answer": "sh. 10, sh. 1, sh. 5",
+      "correct_answer": "sh. 1, sh. 5, sh. 10"
+     },
+     "cause": "Orders by position.",
+     "reveals": "The answer sh. 10, sh. 1, sh. 5 as a wrong option, with a reason that names the idea.",
+     "help": "Line them up by number.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS.M_COIN1_MORE_COINS_MORE_MONEY",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_COINS",
+     "error": "Thinks more coins always means more money.",
+     "example": {
+      "question": "Which is more: three sh. 1 coins or one sh. 10 coin?",
+      "wrong_answer": "three sh. 1 coins",
+      "correct_answer": "one sh. 10 coin"
+     },
+     "cause": "Counts coins, not value.",
+     "reveals": "The answer three sh. 1 coins as a wrong option, with a reason that names the idea.",
+     "help": "Count the value: 1, 2, 3.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE.M_N50_PAPER_LESS",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE",
+     "error": "Thinks paper money is worth less than a heavy coin.",
+     "example": {
+      "question": "Which is worth more: a sh. 20 coin or the sh. 50 note?",
+      "wrong_answer": "the coin",
+      "correct_answer": "the note"
+     },
+     "cause": "Judges by weight.",
+     "reveals": "The answer the coin as a wrong option, with a reason that names the idea.",
+     "help": "Read the numbers.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE.M_N50_READS_5",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE",
+     "error": "Reads 50 as 5.",
+     "example": {
+      "question": "What is this note worth: 50?",
+      "wrong_answer": "sh. 5",
+      "correct_answer": "sh. 50"
+     },
+     "cause": "Misses the zero.",
+     "reveals": "The answer sh. 5 as a wrong option, with a reason that names the idea.",
+     "help": "Count the digits: 5 and 0.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE.M_N50_COIN_OR_NOTE",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE",
+     "error": "Calls the note a coin.",
+     "example": {
+      "question": "Is sh. 50 a coin or a note here?",
+      "wrong_answer": "a coin",
+      "correct_answer": "a note"
+     },
+     "cause": "Does not tell paper from metal money.",
+     "reveals": "The answer a coin as a wrong option, with a reason that names the idea.",
+     "help": "Coins are metal and round; notes are paper.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE.M_N50_ALWAYS_MORE",
+     "skill": "MATH.G1.MEASUR.MONEY.IDENTIFY_50_NOTE",
+     "error": "Thinks a note is worth more than any number of coins.",
+     "example": {
+      "question": "Are three sh. 20 coins more than one sh. 50 note?",
+      "wrong_answer": "no",
+      "correct_answer": "yes, sh. 60"
+     },
+     "cause": "Thinks notes beat coins.",
+     "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+     "help": "Count the coins: 20, 40, 60.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.COUNT_COINS.M_COIN1_COUNTS_PIECES",
+     "skill": "MATH.G1.MEASUR.MONEY.COUNT_COINS",
+     "error": "Counts the coins instead of their value.",
+     "example": {
+      "question": "Two sh. 10 coins and one sh. 5 coin. How much money?",
+      "wrong_answer": "3",
+      "correct_answer": "sh. 25"
+     },
+     "cause": "Counts pieces.",
+     "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+     "help": "Count on by each coin's value.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.COUNT_COINS.M_COIN1_ALL_AS_TEN",
+     "skill": "MATH.G1.MEASUR.MONEY.COUNT_COINS",
+     "error": "Counts every coin as ten.",
+     "example": {
+      "question": "One sh. 10 coin and two sh. 5 coins. How much?",
+      "wrong_answer": "sh. 30",
+      "correct_answer": "sh. 20"
+     },
+     "cause": "Uses one value for all.",
+     "reveals": "The answer sh. 30 as a wrong option, with a reason that names the idea.",
+     "help": "Say each coin's number as you count.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.COUNT_COINS.M_COIN1_ALL_AS_FIVE",
+     "skill": "MATH.G1.MEASUR.MONEY.COUNT_COINS",
+     "error": "Counts every coin as five.",
+     "example": {
+      "question": "Two sh. 10 coins and one sh. 5 coin. How much?",
+      "wrong_answer": "sh. 15",
+      "correct_answer": "sh. 25"
+     },
+     "cause": "Uses the smaller value for all.",
+     "reveals": "The answer sh. 15 as a wrong option, with a reason that names the idea.",
+     "help": "Start with the biggest coin.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.COUNT_COINS.M_COIN1_ONES_STEP",
+     "skill": "MATH.G1.MEASUR.MONEY.COUNT_COINS",
+     "error": "Counts on in ones for every coin, as 10, 11, 12.",
+     "example": {
+      "question": "One sh. 10 coin, two sh. 1 coins and a sh. 5 coin. How much?",
+      "wrong_answer": "sh. 13",
+      "correct_answer": "sh. 17"
+     },
+     "cause": "Counts on one per coin.",
+     "reveals": "The answer sh. 13 as a wrong option, with a reason that names the idea.",
+     "help": "Add each coin's value.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS.M_BUY1_ONE_ITEM",
+     "skill": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS",
+     "error": "Pays for only one of the two items.",
+     "example": {
+      "question": "A pencil sh. 10 and a sweet sh. 5. How much to pay?",
+      "wrong_answer": "sh. 10",
+      "correct_answer": "sh. 15"
+     },
+     "cause": "Forgets the second item.",
+     "reveals": "The answer sh. 10 as a wrong option, with a reason that names the idea.",
+     "help": "Tick each item as you add it.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS.M_BUY1_COUNTS_ITEMS",
+     "skill": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS",
+     "error": "Gives the number of items as the cost.",
+     "example": {
+      "question": "Two sweets at sh. 5 each. How much?",
+      "wrong_answer": "2",
+      "correct_answer": "sh. 10"
+     },
+     "cause": "Counts items.",
+     "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+     "help": "Add the prices.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS.M_BUY1_WRONG_COINS",
+     "skill": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS",
+     "error": "Gives coins that do not make the exact price.",
+     "example": {
+      "question": "Pay exactly sh. 15.",
+      "wrong_answer": "two sh. 10 coins",
+      "correct_answer": "one sh. 10 and one sh. 5"
+     },
+     "cause": "Picks coins without counting.",
+     "reveals": "The answer two sh. 10 coins as a wrong option, with a reason that names the idea.",
+     "help": "Count the coins you pick.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS.M_BUY1_NOT_ENOUGH",
+     "skill": "MATH.G1.MEASUR.MONEY.BUY_TWO_ITEMS",
+     "error": "Says the money is enough when it is less than the cost.",
+     "example": {
+      "question": "Items cost sh. 20 and sh. 20. Is a sh. 20 coin enough?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, the cost is sh. 40"
+     },
+     "cause": "Does not add first.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Find the total first.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.2.1",
     "MATH.G1.RUBRIC.2.2",
@@ -810,7 +4166,7 @@
    "values": "Respect: learner appreciates the effort of peers as they work in teams to observe and identify lines from different objects in the environment.\nResponsibility: learner follows instructions as they stand behind one another facing the same side to form a straight line.",
    "pcis": "Social Cohesion: learner works harmoniously in teams as they draw straight and curved lines.\nEnvironmental Awareness: learner observes and names lines from different objects in the environment.",
    "links": "The learner can relate the concept of drawing straight and curved lines to the concept of drawing in Creative Activities.",
-   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; a line on this page ran across two columns and was cut by position. Outcomes a to e are KICD's words. Identifying straight and curved lines (a, c, e) is one skill; drawing them on the ground and in books (b, d) is done in class.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -855,8 +4211,203 @@
      "indicator": "MATH.G1.RUBRIC.3.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+     "name": "Identify straight and curved lines in different situations and objects",
+     "outcomes": [
+      "MATH.G1.GEOMET.LINES.a",
+      "MATH.G1.GEOMET.LINES.c",
+      "MATH.G1.GEOMET.LINES.e"
+     ],
+     "mastery": "The child says whether a line or an edge is straight or curved (a queue of children, the edge of a door, a semicircle, the rim of a plate) and finds straight and curved lines in real objects.",
+     "question_forms": [
+      "straight or curved",
+      "which edge is curved",
+      "find a straight line in the picture",
+      "sort lines"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_LINES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.PENCIL_LINES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Drew lines and curves in pre-primary.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.BASIC_SHAPES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Knows circles and squares.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+     "name": "Draw straight and curved lines on different surfaces",
+     "outcomes": [
+      "MATH.G1.GEOMET.LINES.b",
+      "MATH.G1.GEOMET.LINES.d"
+     ],
+     "mastery": "The child draws straight lines by joining two points with a stick or ruler, and curved lines freehand, on the ground and in books.",
+     "question_forms": [],
+     "thinking": [
+      "representation"
+     ],
+     "horeb_skill_ids": [
+      "G1_LINES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Tells straight from curved.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.PP2.READINESS.PENCIL_LINES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Holds a pencil to draw.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Drawing lines on the ground and in books is done in class, with the teacher checking.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_SLANT",
+     "skill": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+     "error": "Thinks a slanting line is not straight.",
+     "example": {
+      "question": "A stick leans against a wall. Is its edge straight?",
+      "wrong_answer": "no, it is leaning",
+      "correct_answer": "yes"
+     },
+     "cause": "Thinks straight means upright.",
+     "reveals": "The answer no, it is leaning as a wrong option, with a reason that names the idea.",
+     "help": "Lay a ruler on it: it does not bend.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_CORNER_CURVE",
+     "skill": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+     "error": "Calls a corner a curve.",
+     "example": {
+      "question": "The corner of a table: curved or straight?",
+      "wrong_answer": "curved",
+      "correct_answer": "straight edges meeting"
+     },
+     "cause": "Any turn is a curve to the child.",
+     "reveals": "The answer curved as a wrong option, with a reason that names the idea.",
+     "help": "A curve bends smoothly; a corner turns sharply.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_CIRCLE_NO_LINE",
+     "skill": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+     "error": "Thinks the rim of a plate is not a line.",
+     "example": {
+      "question": "Is the edge of a plate a curved line?",
+      "wrong_answer": "no",
+      "correct_answer": "yes"
+     },
+     "cause": "Thinks lines are only straight.",
+     "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+     "help": "Trace the rim with a finger.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES.M_LINE1_WAVY_STRAIGHT",
+     "skill": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+     "error": "Calls a gently wavy path straight.",
+     "example": {
+      "question": "A path bends a little round a tree. Straight or curved?",
+      "wrong_answer": "straight",
+      "correct_answer": "curved"
+     },
+     "cause": "Looks at the overall direction.",
+     "reveals": "The answer straight as a wrong option, with a reason that names the idea.",
+     "help": "Does it leave a stretched string?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_WOBBLY",
+     "skill": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+     "error": "Draws a wobbly line and calls it straight.",
+     "example": {
+      "question": "Is your line drawn without a ruler straight?",
+      "wrong_answer": "yes",
+      "correct_answer": "not quite"
+     },
+     "cause": "Does not use a guide.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Join two points with a ruler or stick.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_MISSES_POINT",
+     "skill": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+     "error": "Does not reach the second point when joining two points.",
+     "example": {
+      "question": "Join the two dots with a straight line. Does it touch both?",
+      "wrong_answer": "stops short",
+      "correct_answer": "touches both"
+     },
+     "cause": "Stops early.",
+     "reveals": "The answer stops short as a wrong option, with a reason that names the idea.",
+     "help": "Put the ruler on both dots before drawing.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_CURVE_CORNERS",
+     "skill": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+     "error": "Draws a curve with corners.",
+     "example": {
+      "question": "Draw a curved line like a rainbow.",
+      "wrong_answer": "a line with corners",
+      "correct_answer": "a smooth curve"
+     },
+     "cause": "Draws in short straight strokes.",
+     "reveals": "The answer a line with corners as a wrong option, with a reason that names the idea.",
+     "help": "Move the whole arm in one smooth stroke.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.LINES.DRAW_LINES.M_DRAW1_RULER_SLIPS",
+     "skill": "MATH.G1.GEOMET.LINES.DRAW_LINES",
+     "error": "Lets the ruler slip so the line bends.",
+     "example": {
+      "question": "Your line bends at the end. Why?",
+      "wrong_answer": "nothing",
+      "correct_answer": "the ruler moved"
+     },
+     "cause": "Holds the ruler loosely.",
+     "reveals": "The answer nothing as a wrong option, with a reason that names the idea.",
+     "help": "Press the ruler down with the other hand.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.3.1",
     "MATH.G1.RUBRIC.3.2",
@@ -886,7 +4437,7 @@
    "values": "Peace: learner displays tolerance as they make patterns, colour them and share with classmates.\nResponsibility: learner is committed to duty as they work individually to make patterns of their choice using shapes.",
    "pcis": "Safety in the learning environment: learner uses safe objects from the environment for learning.\nCreative thinking: learner makes patterns of their choice using shapes.",
    "links": "The learner can relate the skills used in making and colouring patterns to drawing and decoration skills in Creative Activities.\nThe learner can relate the concept of using safe objects from the environment to the concept of safety in the school environmental in Environmental Activities.",
-   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; a line on this page ran across two columns and was cut by position.",
+   "design_notes": "Second read left this for a person to confirm: competencies: heading on the page but no text read; a line on this page ran across two columns and was cut by position. Outcomes a and b are KICD's words; c is attitudinal. Rectangles, triangles and circles in objects (ovals in patterns); patterns of these shapes.",
    "source": {
     "grade_page": "https://kicd.ac.ke/cbc-materials/curriculum-designs/lower-primary/",
     "design": "Grade 1-3 Mathematics - Revised.pdf",
@@ -918,8 +4469,205 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+     "name": "Identify rectangles, triangles and circles in objects from the environment",
+     "outcomes": [
+      "MATH.G1.GEOMET.SHAPES.a"
+     ],
+     "mastery": "The child names rectangles, triangles and circles in objects and pictures (a door, a roof, a clock), in any position, by their sides and corners (a triangle has 3 sides and 3 corners; a circle has none).",
+     "question_forms": [
+      "name the shape",
+      "which object is a circle",
+      "how many sides",
+      "pick the shape with 3 corners"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [
+      "G1_SHAPES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.PP2.READINESS.BASIC_SHAPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Named circles, squares and triangles.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Tells straight from curved.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+     "name": "Make patterns involving rectangles, triangles, circles and ovals",
+     "outcomes": [
+      "MATH.G1.GEOMET.SHAPES.b"
+     ],
+     "mastery": "The child copies, continues and makes a repeating pattern of shapes (circle, triangle, circle, triangle) and says which shape comes next.",
+     "question_forms": [
+      "what comes next",
+      "what is missing",
+      "which part repeats",
+      "make a shape pattern"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [
+      "G1_SHAPES"
+     ],
+     "prerequisites": [
+      {
+       "requires": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Names the shapes.",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Makes patterns with objects.",
+       "status": "proposed"
+      }
+     ],
+     "hands_on": "Making and colouring shape patterns is done in class.",
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_TURNED_TRIANGLE",
+     "skill": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+     "error": "Says a triangle on its point is not a triangle.",
+     "example": {
+      "question": "A shape with 3 sides points down. Is it a triangle?",
+      "wrong_answer": "no",
+      "correct_answer": "yes"
+     },
+     "cause": "Has only seen triangles on a base.",
+     "reveals": "The answer no as a wrong option, with a reason that names the idea.",
+     "help": "Count the sides: any 3-sided shape is a triangle.",
+     "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_OVAL_CIRCLE",
+     "skill": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+     "error": "Calls an oval a circle.",
+     "example": {
+      "question": "An egg shape: circle or not?",
+      "wrong_answer": "circle",
+      "correct_answer": "not a circle (an oval)"
+     },
+     "cause": "Calls round shapes circles.",
+     "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+     "help": "A circle is the same width every way.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_SIDE_COUNT",
+     "skill": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+     "error": "Counts the sides wrongly and names the wrong shape.",
+     "example": {
+      "question": "A shape has 4 sides. Is it a triangle?",
+      "wrong_answer": "yes",
+      "correct_answer": "no, a rectangle or square"
+     },
+     "cause": "Miscounts or guesses.",
+     "reveals": "The answer yes as a wrong option, with a reason that names the idea.",
+     "help": "Touch each side as you count.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_OBJECT_NAME",
+     "skill": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+     "error": "Names the object instead of the shape.",
+     "example": {
+      "question": "What shape is a door?",
+      "wrong_answer": "door",
+      "correct_answer": "rectangle"
+     },
+     "cause": "Answers with the object.",
+     "reveals": "The answer door as a wrong option, with a reason that names the idea.",
+     "help": "Ask: what shape is it?",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_REPEATS_LAST",
+     "skill": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+     "error": "Repeats the last shape instead of the pattern.",
+     "example": {
+      "question": "circle, triangle, circle, triangle, circle, __",
+      "wrong_answer": "circle",
+      "correct_answer": "triangle"
+     },
+     "cause": "Copies the last.",
+     "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+     "help": "Say the pattern aloud from the start.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_ALWAYS_AB",
+     "skill": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+     "error": "Treats every pattern as two parts.",
+     "example": {
+      "question": "circle, circle, triangle, circle, circle, __",
+      "wrong_answer": "circle",
+      "correct_answer": "triangle"
+     },
+     "cause": "Uses the AB habit.",
+     "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+     "help": "Ring the part that repeats.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_COLOUR",
+     "skill": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+     "error": "Follows the colour and ignores the shape.",
+     "example": {
+      "question": "red circle, blue triangle, red circle, blue __",
+      "wrong_answer": "circle",
+      "correct_answer": "triangle"
+     },
+     "cause": "Looks at colour only.",
+     "reveals": "The answer circle as a wrong option, with a reason that names the idea.",
+     "help": "Say the shape names aloud.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_MISSING",
+     "skill": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+     "error": "Fills a gap with the shape after the gap.",
+     "example": {
+      "question": "triangle, __, triangle, circle, triangle, circle",
+      "wrong_answer": "triangle",
+      "correct_answer": "circle"
+     },
+     "cause": "Copies a neighbour.",
+     "reveals": "The answer triangle as a wrong option, with a reason that names the idea.",
+     "help": "Say the pattern from the start.",
+     "source": "to confirm by a teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "MATH.G1.RUBRIC.3.1",
     "MATH.G1.RUBRIC.3.2",
@@ -1184,6 +4932,74 @@
      "status": "kicd_verified"
     }
    ]
+  }
+ ],
+ "readiness": [
+  {
+   "code": "MATH.PP2.READINESS.COUNT_OBJECTS_10",
+   "name": "Count objects up to 10",
+   "what": "Touches and counts up to 10 real objects one by one, saying one number for each, and says the last number is how many.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.NUMERALS_1_10",
+   "name": "Recognise numerals 1 to 10",
+   "what": "Names and points to the numerals 1 to 10 and matches each to a group of that many objects.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.SORT_ONE_ATTRIBUTE",
+   "name": "Sort objects by one attribute",
+   "what": "Puts objects into groups by one attribute at a time: colour, size or kind.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.COMPARE_MORE_LESS",
+   "name": "Compare two groups: more, less, the same",
+   "what": "Says which of two small groups has more or fewer objects, by matching one to one or by counting.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.SIZE_WORDS",
+   "name": "Use size words",
+   "what": "Uses big and small, long and short, tall and short, heavy and light, full and empty correctly about real objects.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.COPY_AB_PATTERN",
+   "name": "Copy and continue a simple pattern",
+   "what": "Copies and continues a two-part pattern of objects or colours (red, blue, red, blue).",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.BASIC_SHAPES",
+   "name": "Name basic shapes",
+   "what": "Names a circle, a square and a triangle in objects and pictures.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.DAILY_ROUTINE",
+   "name": "Order daily events",
+   "what": "Puts events of the day in order (wake up, go to school, come home, sleep) and uses today, yesterday and tomorrow.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.PENCIL_LINES",
+   "name": "Draw lines and patterns with a pencil",
+   "what": "Holds a pencil or crayon and draws lines, curves and simple patterns (pre-writing).",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.COINS_IN_PLAY",
+   "name": "Know coins as money in play",
+   "what": "Knows coins are money used to buy things and plays at buying and selling.",
+   "status": "proposed"
+  },
+  {
+   "code": "MATH.PP2.READINESS.ADD_ON_OBJECTS",
+   "name": "Put together and take away small groups of objects",
+   "what": "Puts two small groups of objects together or takes some away and counts how many there are now, up to 10.",
+   "status": "proposed"
   }
  ]
 }

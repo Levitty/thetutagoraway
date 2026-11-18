@@ -1,0 +1,366 @@
+{
+ "sub_strand": "MATH.G3.MEASUR.CAPACITY",
+ "title": "Capacity",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Capacity is in whole litres, measured by filling 1-litre containers, added, subtracted and estimated up to 5 litres.",
+ "skills": [
+  {
+   "skill": "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES",
+   "key_step": "The child fills the 1-litre container to the top each time and counts only full litres.",
+   "floor": {
+    "prerequisite": "Knows the litre (Grade 2).",
+    "question": "Which holds about 1 litre: a cup or a milk packet?",
+    "answer": "a milk packet"
+   },
+   "representations": [
+    "water and a 1-litre jug",
+    "containers of different shapes",
+    "a picture of jugs"
+   ],
+   "steps": [
+    "Fill the litre jug to the top.",
+    "Pour into the container.",
+    "Count each full litre.",
+    "Write l."
+   ],
+   "contexts": [
+    "a jerrycan for water",
+    "a sufuria for cooking",
+    "a milk can"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a basin and three full litre jugs."
+    },
+    {
+     "beat": "count",
+     "do": "Count the jugs with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the unit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 l."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES.M_CAP_TALLER_HOLDS_MORE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "What happened when you poured?",
+     "repair": "It filled exactly: they hold the same."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES.M_CAP_PART_FILLS_COUNTED",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Was the last one full?",
+     "repair": "No: 3 full litres and a bit more."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES.M_CAP_COUNTS_POURS_WRONG_CONTAINER",
+     "listen_for": [
+      "10 l"
+     ],
+     "ask": "Which container is one litre?",
+     "repair": "The jug: 2 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES.M_CAP_NO_UNIT",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "5 what?",
+     "repair": "5 l."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A basin takes 6 full litre jugs. Its capacity?",
+     "answer": "6 l",
+     "shows": "counting fills"
+    },
+    {
+     "question": "Two containers hold 4 l each: one tall, one wide. Which holds more?",
+     "answer": "the same",
+     "shows": "shape"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.CAPACITY.ADD_LITRES",
+   "key_step": "The child adds the litres each container brings and writes l.",
+   "floor": {
+    "prerequisite": "Adds whole numbers.",
+    "question": "5 + 3",
+    "answer": "8"
+   },
+   "representations": [
+    "jugs poured into a basin",
+    "a drawn tank",
+    "a column sum"
+   ],
+   "steps": [
+    "Write the litres for each pour.",
+    "Add them.",
+    "Carry if needed.",
+    "Write l."
+   ],
+   "contexts": [
+    "milking a cow",
+    "filling a water tank",
+    "buying cooking oil"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 4 buckets of 5 l and a tank."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 5 l on each bucket."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the total."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 20 l."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ADD_LITRES.M_CADD_SUBTRACTS",
+     "listen_for": [
+      "2 l"
+     ],
+     "ask": "Together or difference?",
+     "repair": "Together: 8 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ADD_LITRES.M_CAP_ADDS_COUNT_TO_LITRES",
+     "listen_for": [
+      "9 l"
+     ],
+     "ask": "How many litres does each bucket bring?",
+     "repair": "5 each, 4 times: 20 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ADD_LITRES.M_CADD_ONE_CONTAINER_SHORT",
+     "listen_for": [
+      "20 l"
+     ],
+     "ask": "How many tens did you add?",
+     "repair": "Three: 30 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ADD_LITRES.M_CADD_CARRY",
+     "listen_for": [
+      "33 l"
+     ],
+     "ask": "What do you carry?",
+     "repair": "One ten: 43 l."
+    }
+   ],
+   "checks": [
+    {
+     "question": "14 l + 9 l",
+     "answer": "23 l",
+     "shows": "carry"
+    },
+    {
+     "question": "Morning 6 l, evening 4 l of milk. Total?",
+     "answer": "10 l",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES",
+   "key_step": "The child takes what is used or poured out from what was there, and keeps l.",
+   "floor": {
+    "prerequisite": "Subtracts whole numbers.",
+    "question": "20 - 8",
+    "answer": "12"
+   },
+   "representations": [
+    "a jerrycan with water",
+    "a bar of litres",
+    "a column subtraction"
+   ],
+   "steps": [
+    "Start amount.",
+    "Take away what is used.",
+    "Or bigger minus smaller.",
+    "Write l."
+   ],
+   "contexts": [
+    "water used for washing",
+    "fuel in a jerrycan",
+    "milk sold"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 20 l jerrycan."
+    },
+    {
+     "beat": "point",
+     "do": "Shade 8 l used.",
+     "say": "How much is left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 12."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 12 l."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES.M_CSUB_GIVES_USED",
+     "listen_for": [
+      "8 l"
+     ],
+     "ask": "Is 8 l used or left?",
+     "repair": "Used: 12 l left."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES.M_CSUB_ADDS",
+     "listen_for": [
+      "70 l"
+     ],
+     "ask": "More or less water now?",
+     "repair": "Less: 30 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES.M_CSUB_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "35 l"
+     ],
+     "ask": "Can you take 5 from 0?",
+     "repair": "No: 25 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES.M_CSUB_DIFFERENCE_ORDER",
+     "listen_for": [
+      "0 l"
+     ],
+     "ask": "Which holds more?",
+     "repair": "5 l: 2 l less."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 50 l drum has 18 l used. Left?",
+     "answer": "32 l",
+     "shows": "left"
+    },
+    {
+     "question": "How much more does a 10 l bucket hold than a 4 l jug?",
+     "answer": "6 l",
+     "shows": "difference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES",
+   "key_step": "The child pictures how many 1-litre bottles would fill the container and says about how many litres.",
+   "floor": {
+    "prerequisite": "Measures in litres.",
+    "question": "A jug takes 3 litre fills. Capacity?",
+    "answer": "3 l"
+   },
+   "representations": [
+    "a 1-litre bottle",
+    "everyday containers",
+    "a table: estimate, measure"
+   ],
+   "steps": [
+    "Look at a 1-litre bottle.",
+    "Picture bottles filling the container.",
+    "Say 'about'.",
+    "Fill and compare."
+   ],
+   "contexts": [
+    "a basin",
+    "a kettle",
+    "a small bucket"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a kettle beside a 1-litre bottle."
+    },
+    {
+     "beat": "predict",
+     "do": "The child estimates the kettle."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an 'about' answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show: about 2 l."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES.M_CEST_HEIGHT_GUESS",
+     "listen_for": [
+      "5 l"
+     ],
+     "ask": "Is it as wide as the bottle?",
+     "repair": "No: about 1 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES.M_CEST_NO_BENCHMARK",
+     "listen_for": [
+      "100 l"
+     ],
+     "ask": "Does one cup fill the bottle?",
+     "repair": "No: less than 1 l."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES.M_CEST_MUST_BE_EXACT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Is 3 near 4?",
+     "repair": "Yes."
+    },
+    {
+     "code": "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES.M_CEST_MORE_LESS_SWAP",
+     "listen_for": [
+      "less"
+     ],
+     "ask": "Did it take more than 5 bottles?",
+     "repair": "Yes: more."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is closest to 5 l: a cup, a small bucket, a spoon?",
+     "answer": "a small bucket",
+     "shows": "benchmark"
+    },
+    {
+     "question": "Does a cup hold more or less than 1 l?",
+     "answer": "less",
+     "shows": "more or less"
+    }
+   ]
+  }
+ ]
+}

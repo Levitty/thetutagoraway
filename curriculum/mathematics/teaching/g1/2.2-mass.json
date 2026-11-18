@@ -1,0 +1,188 @@
+{
+ "sub_strand": "MATH.G1.MEASUR.MASS",
+ "title": "Mass",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Collecting objects (a) goes with comparing (b). Masses are compared by holding and measured with arbitrary units (an empty container of known mass filled with beans or maize).",
+ "skills": [
+  {
+   "skill": "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+   "key_step": "The child holds one object in each hand and says which pulls down more.",
+   "floor": {
+    "prerequisite": "Uses heavy and light (PP2).",
+    "question": "Which is heavier: a brick or a leaf?",
+    "answer": "a brick"
+   },
+   "representations": [
+    "real objects to hold",
+    "a simple balance",
+    "pictures"
+   ],
+   "steps": [
+    "Hold one in each hand.",
+    "Which pulls down more?",
+    "Say heavier, lighter or same.",
+    "For three, line them up."
+   ],
+   "contexts": [
+    "a bag of maize",
+    "a jerrycan of water",
+    "animals on the farm"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cow, a goat and a hen."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cow and the goat.",
+     "say": "Which is heavier?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child puts the three in order."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: cow, goat, hen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_BIG_HEAVY",
+     "listen_for": [
+      "the pillow"
+     ],
+     "ask": "Which hand feels pulled down?",
+     "repair": "The stone's."
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_CHAIN",
+     "listen_for": [
+      "the goat"
+     ],
+     "ask": "Who is heavier than the goat?",
+     "repair": "The cow: heaviest."
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_WORDS_SWAP",
+     "listen_for": [
+      "the bag"
+     ],
+     "ask": "Which is easier to lift?",
+     "repair": "The feather."
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.COMPARE_MASS.M_CM1_SAME_SIZE_SAME_MASS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do they feel the same?",
+     "repair": "No: the sand tin is heavier."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A stone or a feather: which is lighter?",
+     "answer": "the feather",
+     "shows": "comparing"
+    },
+    {
+     "question": "A dog is heavier than a cat, a cat heavier than a rat. Heaviest?",
+     "answer": "the dog",
+     "shows": "chain"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS",
+   "key_step": "The child adds units until the balance is level and counts them.",
+   "floor": {
+    "prerequisite": "Compares masses.",
+    "question": "Which side of a balance goes down?",
+    "answer": "the heavier side"
+   },
+   "representations": [
+    "a simple balance",
+    "tins or cups of beans",
+    "a record table"
+   ],
+   "steps": [
+    "Object on one side.",
+    "Add units to the other.",
+    "Stop when level.",
+    "Count the units."
+   ],
+   "contexts": [
+    "beans at the market",
+    "maize in tins",
+    "flour in cups"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance with a bag tipped down."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds tins until level."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the count."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the number of tins."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_UP_HEAVY",
+     "listen_for": [
+      "the tins"
+     ],
+     "ask": "Which side sank?",
+     "repair": "The bag's."
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_PART_FULL",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "Was the last cup full?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_COUNTS_OBJECTS",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "How many tins?",
+     "repair": "6."
+    },
+    {
+     "code": "MATH.G1.MEASUR.MASS.MEASURE_ARBITRARY_MASS.M_MAM_BIGGER_UNIT_MORE",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Which needs fewer?",
+     "repair": "The big tins."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A bag balances 5 tins. How many tins heavy?",
+     "answer": "5",
+     "shows": "counting"
+    },
+    {
+     "question": "The tins' side goes up. Heavier or lighter than the bag?",
+     "answer": "lighter",
+     "shows": "reading"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "sub_strand": "MATH.G1.GEOMET.SHAPES",
+ "title": "Shapes",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a and b are KICD's words; c is attitudinal. Rectangles, triangles and circles in objects (ovals in patterns); patterns of these shapes.",
+ "skills": [
+  {
+   "skill": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+   "key_step": "The child counts the sides and corners to name the shape, whichever way it is turned.",
+   "floor": {
+    "prerequisite": "Named basic shapes (PP2).",
+    "question": "What shape is a ball's outline?",
+    "answer": "a circle"
+   },
+   "representations": [
+    "cut-outs",
+    "objects in the class",
+    "pictures turned different ways"
+   ],
+   "steps": [
+    "Count the sides.",
+    "Count the corners.",
+    "Straight or round?",
+    "Name it."
+   ],
+   "contexts": [
+    "a door",
+    "a roof",
+    "a clock"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a triangle on its point."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each side.",
+     "say": "How many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: triangle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_TURNED_TRIANGLE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "How many sides?",
+     "repair": "3: a triangle."
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_OVAL_CIRCLE",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "Is it longer one way?",
+     "repair": "Yes: an oval."
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_SIDE_COUNT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "How many sides did you touch?",
+     "repair": "4: not a triangle."
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES.M_SHP1_OBJECT_NAME",
+     "listen_for": [
+      "door"
+     ],
+     "ask": "How many sides and corners?",
+     "repair": "4: a rectangle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A shape with no corners and no straight sides: what is it?",
+     "answer": "a circle",
+     "shows": "circle"
+    },
+    {
+     "question": "A window has 4 sides. Triangle or rectangle?",
+     "answer": "rectangle",
+     "shows": "rectangle"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1",
+   "key_step": "The child says the shapes aloud, rings the part that repeats, and continues it.",
+   "floor": {
+    "prerequisite": "Makes patterns with objects.",
+    "question": "red, blue, red, __",
+    "answer": "blue"
+   },
+   "representations": [
+    "shape cut-outs",
+    "a drawn row",
+    "fabric"
+   ],
+   "steps": [
+    "Say it aloud.",
+    "Find the repeat.",
+    "Ring it.",
+    "Say what comes next."
+   ],
+   "contexts": [
+    "kitenge cloth",
+    "beadwork",
+    "a painted wall"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw circle, circle, triangle, circle, circle, __."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rings each repeat."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the next shape."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a triangle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_REPEATS_LAST",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "What comes after circle?",
+     "repair": "Triangle."
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_ALWAYS_AB",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "How many circles before each triangle?",
+     "repair": "Two: triangle."
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_COLOUR",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "What shape is blue?",
+     "repair": "Triangle."
+    },
+    {
+     "code": "MATH.G1.GEOMET.SHAPES.SHAPE_PATTERNS_1.M_SPAT1_MISSING",
+     "listen_for": [
+      "triangle"
+     ],
+     "ask": "What comes after a triangle?",
+     "repair": "A circle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "triangle, circle, triangle, circle, __",
+     "answer": "triangle",
+     "shows": "AB"
+    },
+    {
+     "question": "circle, circle, rectangle, circle, circle, __",
+     "answer": "rectangle",
+     "shows": "AAB"
+    }
+   ]
+  }
+ ]
+}

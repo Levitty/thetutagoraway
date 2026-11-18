@@ -1,0 +1,287 @@
+{
+ "sub_strand": "MATH.G3.GEOMET.POSITION_AND_DIRECTION",
+ "title": "Position and Direction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Grade 3 moves along straight lines, tells right from left and turns right or left from a point; compass directions (north, east) come in Grade 4.",
+ "skills": [
+  {
+   "skill": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT",
+   "key_step": "The child marks the start and counts a step each time they land on a new place.",
+   "floor": {
+    "prerequisite": "Straight lines (Grade 2).",
+    "question": "Is a stretched string straight or curved?",
+    "answer": "straight"
+   },
+   "representations": [
+    "a line in the playground",
+    "a path of squares",
+    "a number track"
+   ],
+   "steps": [
+    "Find the start.",
+    "Face the way to move.",
+    "Count each new place.",
+    "Say where you end."
+   ],
+   "contexts": [
+    "walking to the gate",
+    "a race track",
+    "a game of hopscotch"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a path of 10 squares; a counter on square 3."
+    },
+    {
+     "beat": "point",
+     "do": "Point at square 3.",
+     "say": "Do we count this one?"
+    },
+    {
+     "beat": "count",
+     "do": "Count 4 steps with the child: 4, 5, 6, 7."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the end square."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT.M_MOVE_COUNTS_START",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Does the counter move on 'one'?",
+     "repair": "Yes, onto 4: 4, 5, 6, 7."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT.M_MOVE_DIRECTION",
+     "listen_for": [
+      "the tree"
+     ],
+     "ask": "Which way is 'back towards the gate'?",
+     "repair": "Towards the gate: nearer the gate."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT.M_MOVE_NOT_STRAIGHT",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does the string bend?",
+     "repair": "Yes: the path is not straight."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT.M_MOVE_STEPS_FROM_WRONG_POINT",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Where did she start?",
+     "repair": "The door: 6 + 3 = 9."
+    }
+   ],
+   "checks": [
+    {
+     "question": "From square 5, move 3 forward. Where?",
+     "answer": "8",
+     "shows": "counting steps"
+    },
+    {
+     "question": "From square 9, move 4 back. Where?",
+     "answer": "5",
+     "shows": "backwards"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT",
+   "key_step": "The child uses the person's own right and left, imagining facing the same way.",
+   "floor": {
+    "prerequisite": "Identifies objects around.",
+    "question": "What is in front of you?",
+    "answer": "the board"
+   },
+   "representations": [
+    "own hands with an L",
+    "two children facing each other",
+    "a picture of a person"
+   ],
+   "steps": [
+    "Hold up the left hand: L.",
+    "Name what is on each side.",
+    "For someone else: face their way.",
+    "Then name their right and left."
+   ],
+   "contexts": [
+    "the classroom",
+    "a market stall",
+    "the church pews"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child facing out of the page, a ball by one hand."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ball.",
+     "say": "Is it the child's right or left?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child turns to face the same way and predicts."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: the child's right."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT.M_LR_MIRROR",
+     "listen_for": [
+      "my right"
+     ],
+     "ask": "If you turn to face the same way as Kamau, where is his right hand?",
+     "repair": "On my right; facing me it is on my left."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT.M_LR_SWAP",
+     "listen_for": [
+      "right hand"
+     ],
+     "ask": "Which hand makes an L?",
+     "repair": "The left."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT.M_LR_PICTURE_VIEWER",
+     "listen_for": [
+      "the right side"
+     ],
+     "ask": "If you were the boy, where would your right be?",
+     "repair": "On the left of the page as we look."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT.M_LR_FRONT_BEHIND_CONFUSED",
+     "listen_for": [
+      "the board"
+     ],
+     "ask": "Is the board in front or at the side?",
+     "repair": "In front: look to the side."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Facing the board, what is on your left?",
+     "answer": "depends on the classroom",
+     "shows": "own body"
+    },
+    {
+     "question": "A girl faces you with a bag in her right hand. Is the bag on your right or left?",
+     "answer": "my left",
+     "shows": "facing"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT",
+   "key_step": "The child turns their body a quarter turn on the spot towards the named hand and says what they now face.",
+   "floor": {
+    "prerequisite": "Tells right from left.",
+    "question": "Raise your right hand.",
+    "answer": "the right hand"
+   },
+   "representations": [
+    "acting it out",
+    "arrows on paper",
+    "a simple map of the school"
+   ],
+   "steps": [
+    "Face forward.",
+    "Raise the named hand.",
+    "Turn on the spot to face it.",
+    "Say what you face now."
+   ],
+   "contexts": [
+    "finding the office",
+    "walking to the dining hall",
+    "a treasure hunt"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a child facing the gate, office on the right."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the child's right.",
+     "say": "What is there?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the office."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws an arrow for the turn."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: faces the office."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT.M_TURN_LEFT_RIGHT_SWAPPED",
+     "listen_for": [
+      "the field"
+     ],
+     "ask": "Which hand points to the office?",
+     "repair": "The right: you face the office."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT.M_TURN_HALF_TURN",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Did you turn to the side or all the way back?",
+     "repair": "To the side."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT.M_TURN_FROM_START_FACING",
+     "listen_for": [
+      "the same as after the first turn"
+     ],
+     "ask": "After the first turn, where is your right now?",
+     "repair": "Turning right twice faces back."
+    },
+    {
+     "code": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT.M_TURN_MOVES_SIDEWAYS",
+     "listen_for": [
+      "step sideways"
+     ],
+     "ask": "Where is your nose pointing?",
+     "repair": "To the left: you have turned."
+    }
+   ],
+   "checks": [
+    {
+     "question": "You face the gate and turn left. The field is on your left. What do you face?",
+     "answer": "the field",
+     "shows": "turn left"
+    },
+    {
+     "question": "Turn right twice from facing the board. What do you face?",
+     "answer": "the back wall",
+     "shows": "two turns"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,367 @@
+{
+ "sub_strand": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES",
+ "title": "Pre-number activities",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Sorting, matching, ordering and patterning with real objects collected from the environment; prerequisites below Grade 1 are pre-primary readiness skills HOREB names (scripts/data/maths-g1/readiness.mjs).",
+ "skills": [
+  {
+   "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS",
+   "key_step": "The child says one rule and checks every object against it.",
+   "floor": {
+    "prerequisite": "Sorted by one attribute (PP2).",
+    "question": "Put the red bottle tops together.",
+    "answer": "the red ones"
+   },
+   "representations": [
+    "real objects",
+    "picture cards",
+    "sorting hoops"
+   ],
+   "steps": [
+    "Choose one rule.",
+    "Say it aloud.",
+    "Check each object.",
+    "Name the odd one out."
+   ],
+   "contexts": [
+    "sorting beans and maize",
+    "shoes at the door",
+    "leaves in the compound"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a spoon, a fork, a cup and a stone."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each.",
+     "say": "What do we use it for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the odd one."
+    },
+    {
+     "beat": "reveal",
+     "do": "Ring the stone."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_TWO_RULES",
+     "listen_for": [
+      "the two big balls"
+     ],
+     "ask": "Are we sorting by colour or by size?",
+     "repair": "Colour: the two red balls."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_ODD_ONE",
+     "listen_for": [
+      "the cup"
+     ],
+     "ask": "Do we eat with a stone?",
+     "repair": "No: the stone does not belong."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_NO_RULE",
+     "listen_for": [
+      "I wanted to"
+     ],
+     "ask": "What is the same about them?",
+     "repair": "Both are green."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.SORT_OBJECTS.M_SORT_ONE_GROUP_MISSED",
+     "listen_for": [
+      "the ball and the orange"
+     ],
+     "ask": "Is the plate round?",
+     "repair": "Yes: it goes in too."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which does not belong: mango, banana, orange, shoe?",
+     "answer": "shoe",
+     "shows": "odd one out"
+    },
+    {
+     "question": "Sort by size: big ball, small ball, big stone. Which go together?",
+     "answer": "big ball and big stone",
+     "shows": "rule"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS",
+   "key_step": "The child names the shared attribute before pairing.",
+   "floor": {
+    "prerequisite": "Sorts objects.",
+    "question": "Put the round things together.",
+    "answer": "the round ones"
+   },
+   "representations": [
+    "real pairs",
+    "picture cards",
+    "a matching game"
+   ],
+   "steps": [
+    "Look at one object.",
+    "Name an attribute.",
+    "Find another with it.",
+    "Say why they match."
+   ],
+   "contexts": [
+    "shoes in pairs",
+    "cups and saucers",
+    "socks on the line"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a cup, a saucer, a red ball."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the cup.",
+     "say": "What goes with it when we drink?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the saucer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Join cup and saucer."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_COLOUR_ONLY",
+     "listen_for": [
+      "the red ball (same colour)"
+     ],
+     "ask": "Which do we use with a cup?",
+     "repair": "The saucer."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_SIZE_MISS",
+     "listen_for": [
+      "the small stone"
+     ],
+     "ask": "Are they the same size?",
+     "repair": "No: match the big stone."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_EXTRA",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is any shoe alone?",
+     "repair": "Yes: one."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.MATCH_OBJECTS.M_MATCH_CANNOT_SAY_WHY",
+     "listen_for": [
+      "they match"
+     ],
+     "ask": "What is the same about them?",
+     "repair": "Both long and green."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Match by use: a pencil goes with a book or a spoon?",
+     "answer": "a book",
+     "shows": "use"
+    },
+    {
+     "question": "Pair 6 shoes. How many pairs?",
+     "answer": "3",
+     "shows": "pairs"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS",
+   "key_step": "The child lines up one end and takes the smallest of those left each time.",
+   "floor": {
+    "prerequisite": "Uses size words (PP2).",
+    "question": "Which is bigger: a goat or a hen?",
+    "answer": "a goat"
+   },
+   "representations": [
+    "real objects",
+    "picture strips",
+    "a line on the floor"
+   ],
+   "steps": [
+    "Line them up.",
+    "Find the smallest.",
+    "From the rest, the smallest again.",
+    "Check first to last."
+   ],
+   "contexts": [
+    "children by height",
+    "fruits at the market",
+    "sticks"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a grape, a pumpkin and a mango."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says which is smallest."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the grape."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1, 2, 3 under grape, mango, pumpkin."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_REVERSED",
+     "listen_for": [
+      "pumpkin, mango, grape"
+     ],
+     "ask": "Which is smallest?",
+     "repair": "The grape: grape, mango, pumpkin."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_MIDDLE",
+     "listen_for": [
+      "3, 7, 5, 9"
+     ],
+     "ask": "Of 7, 5 and 9 which is shortest?",
+     "repair": "5."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_NOT_ALIGNED",
+     "listen_for": [
+      "the one that sticks out"
+     ],
+     "ask": "Do they start together?",
+     "repair": "Line them up, then compare."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.ORDER_OBJECTS.M_ORD1_SIZE_HEIGHT_MIX",
+     "listen_for": [
+      "feather, stone, box"
+     ],
+     "ask": "Is the empty box heavier than the stone?",
+     "repair": "No: feather, box, stone."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order from biggest: a cat, a cow, a mouse.",
+     "answer": "cow, cat, mouse",
+     "shows": "biggest first"
+    },
+    {
+     "question": "Order from shortest: sticks of 5, 2 and 8 hand spans.",
+     "answer": "2, 5, 8",
+     "shows": "shortest first"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+   "key_step": "The child says the pattern aloud, finds the part that repeats, and continues it.",
+   "floor": {
+    "prerequisite": "Copies a simple pattern (PP2).",
+    "question": "red, blue, red, __",
+    "answer": "blue"
+   },
+   "representations": [
+    "bottle tops and leaves",
+    "beads",
+    "a drawn row"
+   ],
+   "steps": [
+    "Say it aloud.",
+    "Find the repeat.",
+    "Ring each repeat.",
+    "Say what comes next."
+   ],
+   "contexts": [
+    "beadwork",
+    "kitenge cloth",
+    "a fence of poles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw leaf, leaf, stone, leaf, leaf, stone, leaf, __."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rings each repeat."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the next object."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a leaf."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_REPEATS_LAST",
+     "listen_for": [
+      "red"
+     ],
+     "ask": "What comes after red?",
+     "repair": "Blue."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_ALWAYS_AB",
+     "listen_for": [
+      "stone"
+     ],
+     "ask": "How many leaves before each stone?",
+     "repair": "Two: leaf."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_ONE_ATTRIBUTE",
+     "listen_for": [
+      "blue"
+     ],
+     "ask": "Does the colour change?",
+     "repair": "No: small red."
+    },
+    {
+     "code": "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS.M_OPAT_MISSING_MIDDLE",
+     "listen_for": [
+      "bottle top"
+     ],
+     "ask": "What comes after a bottle top?",
+     "repair": "A stick."
+    }
+   ],
+   "checks": [
+    {
+     "question": "red, red, blue, red, red, __",
+     "answer": "blue",
+     "shows": "repeat of three"
+    },
+    {
+     "question": "big, small, big, small, __",
+     "answer": "big",
+     "shows": "size pattern"
+    }
+   ]
+  }
+ ]
+}

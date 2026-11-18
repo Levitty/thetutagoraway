@@ -1,0 +1,477 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.SUBTRACTION",
+ "title": "Subtraction",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words; f is attitudinal. Regrouping is single (one borrow) and numbers stay within 1,000.",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP",
+   "key_step": "The child lines up from the right and takes the bottom digit from the top digit, ones first.",
+   "floor": {
+    "prerequisite": "Subtracts 2-digit numbers.",
+    "question": "58 - 23",
+    "answer": "35"
+   },
+   "representations": [
+    "bundles",
+    "an abacus",
+    "a column sum"
+   ],
+   "steps": [
+    "Line up the ones.",
+    "Ones: top minus bottom.",
+    "Tens: top minus bottom.",
+    "Bring down the hundreds."
+   ],
+   "contexts": [
+    "eggs left after selling",
+    "learners after some go home",
+    "money left"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 586 - 43."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 6 - 3.",
+     "say": "How many are left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "count",
+     "do": "Do the tens together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 543."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP.M_SUB_MISALIGNED",
+     "listen_for": [
+      "156"
+     ],
+     "ask": "Which digit of 43 is the ones?",
+     "repair": "The 3, under the 6: 543."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP.M_SUB_ADDS",
+     "listen_for": [
+      "629"
+     ],
+     "ask": "What does the - sign say?",
+     "repair": "Take away: 543."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP.M_SUB_COUNTS_BACK_FROM_START",
+     "listen_for": [
+      "354"
+     ],
+     "ask": "Is 357 the first step back?",
+     "repair": "No: 356, 355, 354, 353."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP.M_SUB_DROPS_HUNDREDS",
+     "listen_for": [
+      "43"
+     ],
+     "ask": "What is left in the hundreds?",
+     "repair": "4 hundreds: 443."
+    }
+   ],
+   "checks": [
+    {
+     "question": "768 - 35",
+     "answer": "733",
+     "shows": "no borrowing"
+    },
+    {
+     "question": "459 - 7",
+     "answer": "452",
+     "shows": "1-digit"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_REGROUP",
+   "key_step": "When the top digit is too small, the child opens one ten from the next column, writes one less there, and takes away.",
+   "floor": {
+    "prerequisite": "Subtracts without regrouping.",
+    "question": "586 - 43",
+    "answer": "543"
+   },
+   "representations": [
+    "bundles to open",
+    "a place value chart",
+    "a column with crossing out"
+   ],
+   "steps": [
+    "Ones: top smaller? Open a ten.",
+    "Cross out, write one less.",
+    "Ones now have ten more.",
+    "Subtract each column."
+   ],
+   "contexts": [
+    "mangoes left at the market",
+    "pages left to read",
+    "change after shopping"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 352 - 27."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 2 - 7.",
+     "say": "Can we?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: open a ten."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child crosses out 5, writes 4, writes 12."
+    },
+    {
+     "beat": "reveal",
+     "do": "12 - 7 = 5, 4 - 2 = 2: 325."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_REGROUP.M_SUB_SMALLER_FROM_LARGER_2D",
+     "listen_for": [
+      "335"
+     ],
+     "ask": "Can you take 7 straws from 2?",
+     "repair": "No: open a ten, 12 - 7 = 5, so 325."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_REGROUP.M_SUB_BORROW_NOT_REDUCED",
+     "listen_for": [
+      "335"
+     ],
+     "ask": "Where did the extra ten come from?",
+     "repair": "From the 5 tens: now 4 tens, so 325."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_REGROUP.M_SUB_BORROW_FROM_HUNDREDS",
+     "listen_for": [
+      "335"
+     ],
+     "ask": "Which column is next to the ones?",
+     "repair": "The tens: 435."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_REGROUP.M_SUB_ZERO_MINUS",
+     "listen_for": [
+      "524"
+     ],
+     "ask": "How many ones are there to take 4 from?",
+     "repair": "None, so open a ten: 516."
+    }
+   ],
+   "checks": [
+    {
+     "question": "471 - 36",
+     "answer": "435",
+     "shows": "borrow from tens"
+    },
+    {
+     "question": "540 - 24",
+     "answer": "516",
+     "shows": "zero on top"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP",
+   "key_step": "The child subtracts column by column, opens one ten or hundred when needed, and checks by adding.",
+   "floor": {
+    "prerequisite": "Subtracts 3-digit from 2-digit with a borrow.",
+    "question": "352 - 27",
+    "answer": "325"
+   },
+   "representations": [
+    "bundles",
+    "a place value chart",
+    "a column sum"
+   ],
+   "steps": [
+    "Biggest number on top.",
+    "Ones: open a ten if needed.",
+    "Tens, then hundreds.",
+    "Check: answer + bottom = top."
+   ],
+   "contexts": [
+    "learners staying at school",
+    "bags of cement used",
+    "a bus with passengers getting off"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 634 - 218."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 4 - 8.",
+     "say": "What do we do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: open a ten."
+    },
+    {
+     "beat": "count",
+     "do": "Finish the columns together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 416; check 416 + 218 = 634."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP.M_SUB_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "424"
+     ],
+     "ask": "Is it 4 - 8 or 8 - 4?",
+     "repair": "4 - 8: open a ten, 14 - 8 = 6, so 416."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP.M_SUB_ADDS_INSTEAD",
+     "listen_for": [
+      "852"
+     ],
+     "ask": "Do more or fewer stay than were there?",
+     "repair": "Fewer: take away, 416."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP.M_SUB_BORROWS_TWICE",
+     "listen_for": [
+      "406"
+     ],
+     "ask": "How many tens were moved to the ones?",
+     "repair": "One: so 2 tens are left, 416."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP.M_SUB_ZERO_MINUS_IS_ZERO",
+     "listen_for": [
+      "406"
+     ],
+     "ask": "How many tens are there to take 5 tens from?",
+     "repair": "None, so open a hundred: 10 - 5 = 5 tens, 6 hundreds left, so 356."
+    }
+   ],
+   "checks": [
+    {
+     "question": "725 - 318",
+     "answer": "407",
+     "shows": "borrow from tens"
+    },
+    {
+     "question": "846 - 572",
+     "answer": "274",
+     "shows": "borrow from hundreds"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER",
+   "key_step": "The child reads the sentence as a story and adds back or finds the gap to get the missing number.",
+   "floor": {
+    "prerequisite": "Subtracts 3-digit numbers.",
+    "question": "563 - 228",
+    "answer": "335"
+   },
+   "representations": [
+    "a part-part-whole bar",
+    "bundles",
+    "a number sentence"
+   ],
+   "steps": [
+    "Which part is missing: start, taken, or left?",
+    "Start missing: add taken and left.",
+    "Taken missing: start minus left.",
+    "Check by putting it back in."
+   ],
+   "contexts": [
+    "money spent at the shop",
+    "eggs broken",
+    "learners who left"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write __ - 125 = 340."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a bar split into 125 and 340."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says if the start is bigger or smaller than 340."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: add them."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 465."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER.M_SUBM_SUBTRACTS_AGAIN",
+     "listen_for": [
+      "215"
+     ],
+     "ask": "If 125 was taken and 340 are left, how many were there?",
+     "repair": "340 + 125 = 465."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER.M_SUBM_ADDS_FOR_SUBTRAHEND",
+     "listen_for": [
+      "791"
+     ],
+     "ask": "Is the missing number bigger than 563?",
+     "repair": "No: 563 - 228 = 335."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER.M_SUBM_DIGIT_NOT_REGROUPED",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "What is 287 + 135?",
+     "repair": "422, so the digit is 2."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER.M_SUBM_ANSWER_IS_SHOWN_NUMBER",
+     "listen_for": [
+      "450"
+     ],
+     "ask": "Were there more or fewer than 450 at the start?",
+     "repair": "More: 650."
+    }
+   ],
+   "checks": [
+    {
+     "question": "__ - 230 = 415",
+     "answer": "645",
+     "shows": "missing start"
+    },
+    {
+     "question": "700 - __ = 360",
+     "answer": "340",
+     "shows": "missing number taken"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000",
+   "key_step": "The child finds what is taken away each time and keeps taking it away.",
+   "floor": {
+    "prerequisite": "Counts back in hundreds.",
+    "question": "800, 700, __",
+    "answer": "600"
+   },
+   "representations": [
+    "number cards",
+    "jumps backwards on a number line",
+    "a table"
+   ],
+   "steps": [
+    "Find the jump.",
+    "Down or up?",
+    "Take the jump away.",
+    "Check the gap both sides."
+   ],
+   "contexts": [
+    "a water tank emptying",
+    "money spent each day",
+    "a countdown"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 950, 900, 850, __."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw arrows backwards."
+    },
+    {
+     "beat": "predict",
+     "do": "The child writes -50."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the next term."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 800."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000.M_SPAT_GOES_UP",
+     "listen_for": [
+      "900"
+     ],
+     "ask": "Is each number bigger or smaller?",
+     "repair": "Smaller by 50: 800."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000.M_SPAT_TAKES_ONE",
+     "listen_for": [
+      "579"
+     ],
+     "ask": "How much from 600 to 590?",
+     "repair": "Ten: 570."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000.M_SPAT_CROSS_HUNDRED",
+     "listen_for": [
+      "4910"
+     ],
+     "ask": "What is 500 take away ten?",
+     "repair": "490."
+    },
+    {
+     "code": "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000.M_SPAT_GAP_WRONG_JUMP",
+     "listen_for": [
+      "830"
+     ],
+     "ask": "What is the jump from 875 to 850?",
+     "repair": "25: 825."
+    }
+   ],
+   "checks": [
+    {
+     "question": "730, 720, 710, __",
+     "answer": "700",
+     "shows": "down in tens"
+    },
+    {
+     "question": "600, 575, __, 525",
+     "answer": "550",
+     "shows": "a gap"
+    }
+   ]
+  }
+ ]
+}

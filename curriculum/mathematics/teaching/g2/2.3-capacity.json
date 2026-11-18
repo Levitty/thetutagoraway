@@ -1,0 +1,276 @@
+{
+ "sub_strand": "MATH.G2.MEASUR.CAPACITY",
+ "title": "Capacity",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Capacity is measured by filling with small containers of equal capacity, then with 1-litre containers.",
+ "skills": [
+  {
+   "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY",
+   "key_step": "The child fills with the same cup each time, to the top, and counts full cups.",
+   "floor": {
+    "prerequisite": "Compares more and less (Grade 1).",
+    "question": "Which holds more: a cup or a bucket?",
+    "answer": "a bucket"
+   },
+   "representations": [
+    "water and one cup",
+    "containers of different shapes",
+    "a record table"
+   ],
+   "steps": [
+    "Choose one cup.",
+    "Fill to the top.",
+    "Pour; count.",
+    "Compare counts."
+   ],
+   "contexts": [
+    "filling a jerrycan",
+    "a basin for washing",
+    "a kettle"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tall bottle and a wide bowl."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says which holds more."
+    },
+    {
+     "beat": "count",
+     "do": "Count cups for each with the child."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 cups each: the same."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_TALL_MORE",
+     "listen_for": [
+      "the tall bottle"
+     ],
+     "ask": "How many cups did each take?",
+     "repair": "6 each: the same."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_PART_CUP",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Was the last cup full?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_BIGGER_CUP_MORE",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Which needs fewer?",
+     "repair": "The big mug."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_FIXED_CAPACITY.M_FC_MIXED_CUPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are the cups the same?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A jug takes 7 cups. With a bigger cup, more or fewer?",
+     "answer": "fewer",
+     "shows": "unit size"
+    },
+    {
+     "question": "Two different shapes take 5 cups each. Which holds more?",
+     "answer": "the same",
+     "shows": "shape"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE",
+   "key_step": "The child links the litre to a 1-litre milk packet or bottle and uses l for capacity.",
+   "floor": {
+    "prerequisite": "Measures with fixed units.",
+    "question": "How many cups fill the jug?",
+    "answer": "a count"
+   },
+   "representations": [
+    "a 1-litre bottle",
+    "milk packets",
+    "pictures"
+   ],
+   "steps": [
+    "Look at a 1-litre bottle.",
+    "Name things sold in litres.",
+    "l is for how much it holds.",
+    "Write l."
+   ],
+   "contexts": [
+    "milk from the dairy",
+    "cooking oil",
+    "water bottles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 1-litre milk packet."
+    },
+    {
+     "beat": "predict",
+     "do": "The child names a container holding more."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 l."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_CUP_LITRE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "How many cups fill it?",
+     "repair": "About 4: a cup is less."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_UNIT_MIX",
+     "listen_for": [
+      "sugar"
+     ],
+     "ask": "Can you pour milk?",
+     "repair": "Yes: milk."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_WRITES_LT",
+     "listen_for": [
+      "3 lt"
+     ],
+     "ask": "How do we write it?",
+     "repair": "3 l."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.KNOW_LITRE.M_KL_BIG_IS_LITRES",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Did it overflow?",
+     "repair": "Yes: the tray holds less."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is sold in litres: oil or rice?",
+     "answer": "oil",
+     "shows": "use of l"
+    },
+    {
+     "question": "Write 5 litres short.",
+     "answer": "5 l",
+     "shows": "unit"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
+   "key_step": "The child pours full litres (or full buckets) one at a time and counts them until the container is full.",
+   "floor": {
+    "prerequisite": "Knows the litre.",
+    "question": "Which holds about 1 litre: a milk packet or a spoon?",
+    "answer": "a milk packet"
+   },
+   "representations": [
+    "a 1-litre bottle",
+    "buckets of known size",
+    "a record table"
+   ],
+   "steps": [
+    "Fill the litre container.",
+    "Pour into the big one.",
+    "Count each full pour.",
+    "Write l."
+   ],
+   "contexts": [
+    "filling a drum",
+    "a sufuria for cooking",
+    "a water tank"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 20 l drum and a 5 l bucket."
+    },
+    {
+     "beat": "count",
+     "do": "Count the buckets with the child: 5, 10, 15, 20."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 4 buckets."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 buckets."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_SUBTRACTS_ONCE",
+     "listen_for": [
+      "15"
+     ],
+     "ask": "Is the drum full after one bucket?",
+     "repair": "No: 4 buckets."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_GIVES_CONTAINER_SIZE",
+     "listen_for": [
+      "2"
+     ],
+     "ask": "Is 2 the buckets or the litres in one?",
+     "repair": "Litres in one: 5 buckets."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_NO_UNIT",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "3 what?",
+     "repair": "3 l."
+    },
+    {
+     "code": "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES.M_LIT2_COUNTS_CUPS_AS_LITRES",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Which is the litre?",
+     "repair": "The bottle: 2 l."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A basin takes 6 litre fills. Its capacity?",
+     "answer": "6 l",
+     "shows": "counting"
+    },
+    {
+     "question": "A 10 l drum is filled with a 2 l jug. How many jugs?",
+     "answer": "5",
+     "shows": "buckets"
+    }
+   ]
+  }
+ ]
+}

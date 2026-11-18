@@ -9,6 +9,8 @@
 //     retagged when its link now names codes, options or a working's mis: the family-level tie is removed and each wrong answer
 //     gets its own code. A link with only reveals (6th) keeps the family-level tie. (The 127 g4c_*.js families are written with
 //     their codes and need no link.)
+//   Grades 3, 2, 1 (18 Nov 2026): g1_3.js, the older lower-primary families, all on HOREB's '.0' outcomes (G3.ADD.0), which the
+//     old-outcome match below now accepts as well as a letter.
 // One linker for both grades (18 Nov 2026): scripts/link-maths-g7-families.mjs is kept as the old command.
 // A link is  familyId: [skill suffix, outcome letter, wrong-option codes, mis for a working, options, reveals]
 // (scripts/data/maths-g<grade>/<sub>.mjs, `links`).
@@ -23,8 +25,8 @@
 // Idempotent: a family that already has a cskill is skipped.
 import { readFileSync, writeFileSync } from 'node:fs';
 const GRADE = Number(process.argv[2]);
-const FILES = { 4: ['g4.js', 'labelFixes.js'], 7: ['g7_num_alg.js', 'g7_measure.js', 'g7_geo_data.js', 'gaps.js', 'labelFixes.js'], 8: ['g8_num_alg.js', 'g8_measure_geo.js', 'g8_cov.js', 'gaps.js', 'labelFixes.js'], 9: ['g9_num_alg.js', 'g9_measure.js', 'g9_geo_data.js', 'gaps.js', 'labelFixes.js'] }[GRADE];
-if (!FILES) { console.error('usage: node scripts/link-maths-families.mjs 4|7|8|9 [sub-strand key]'); process.exit(1); }
+const FILES = { 1: ['g1_3.js'], 2: ['g1_3.js'], 3: ['g1_3.js'], 4: ['g4.js', 'labelFixes.js'], 7: ['g7_num_alg.js', 'g7_measure.js', 'g7_geo_data.js', 'gaps.js', 'labelFixes.js'], 8: ['g8_num_alg.js', 'g8_measure_geo.js', 'g8_cov.js', 'gaps.js', 'labelFixes.js'], 9: ['g9_num_alg.js', 'g9_measure.js', 'g9_geo_data.js', 'gaps.js', 'labelFixes.js'] }[GRADE];
+if (!FILES) { console.error('usage: node scripts/link-maths-families.mjs 1|2|3|4|7|8|9 [sub-strand key]'); process.exit(1); }
 const { SUBS } = await import(`./data/maths-g${GRADE}/index.mjs`);
 const DIR = new URL('../src/ai-tutor/content/families/', import.meta.url);
 const only = process.argv[3];
@@ -55,7 +57,7 @@ for (const d of SUBS) {
       }
       block = block.replace(/, misMapped: false, reveals: \[[^\]]*\]/, '');
     } else {
-    const m = new RegExp(`outcome: 'G${GRADE}\\.[A-Z_]+\\.([a-z])'`).exec(block.slice(0, 300));
+    const m = new RegExp(`outcome: 'G${GRADE}\\.[A-Z_]+\\.([a-z0-9])'`).exec(block.slice(0, 300));
     if (!m) { problems.push(`${id}: no old outcome`); continue; }
     block = block.replace(m[0], `outcome: 'MATH.G${GRADE}.${d.key}.${letter}', cskill: 'MATH.G${GRADE}.${d.key}.${cs}'` + (reveals ? `, misMapped: false, reveals: ${JSON.stringify(reveals).replace(/"/g, "'").replace(/,/g, ', ')}` : ''));
     }

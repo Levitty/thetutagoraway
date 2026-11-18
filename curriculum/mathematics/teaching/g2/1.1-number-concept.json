@@ -1,0 +1,188 @@
+{
+ "sub_strand": "MATH.G2.NUMBER.NUMBER_CONCEPT",
+ "title": "Number Concept",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; c (number games) is covered with the first skill; d is attitudinal. Numbers 1 to 100 are recognised in symbols and shown with real objects.",
+ "skills": [
+  {
+   "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100",
+   "key_step": "The child says the tens part first, then the ones, and matches the spoken number to the digits in that order.",
+   "floor": {
+    "prerequisite": "Reads numbers to 50 (Grade 1).",
+    "question": "Read 23.",
+    "answer": "twenty-three"
+   },
+   "representations": [
+    "number cards",
+    "a hundred chart",
+    "a calendar"
+   ],
+   "steps": [
+    "Say the number.",
+    "Which digit is the tens?",
+    "Find the card with that digit first.",
+    "Check the ones."
+   ],
+   "contexts": [
+    "page numbers in a book",
+    "a bus number",
+    "a calendar date"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 16 and 61."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 16.",
+     "say": "How many tens?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: one ten."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: sixteen."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_REVERSED_DIGITS",
+     "listen_for": [
+      "61"
+     ],
+     "ask": "Which digit is the ten in sixteen?",
+     "repair": "The 1: 16."
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_TEEN_TY",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "How many tens does fourteen have?",
+     "repair": "One: 14."
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_100_AS_10",
+     "listen_for": [
+      "ten"
+     ],
+     "ask": "How many digits does it have?",
+     "repair": "Three: one hundred."
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.IDENTIFY_1_100.M_ID_CHART_ROW_SLIP",
+     "listen_for": [
+      "35"
+     ],
+     "ask": "Does going down add one or ten?",
+     "repair": "Ten: 44."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is seventy-two: 27 or 72?",
+     "answer": "72",
+     "shows": "digit order"
+    },
+    {
+     "question": "Point to fifteen: 15 or 50?",
+     "answer": "15",
+     "shows": "teen and ty"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100",
+   "key_step": "The child makes bundles of ten, counts the bundles in tens and the loose ones in ones.",
+   "floor": {
+    "prerequisite": "Represents numbers to 30 (Grade 1).",
+    "question": "Show 12 with sticks.",
+    "answer": "a bundle of 10 and 2 sticks"
+   },
+   "representations": [
+    "sticks and rubber bands",
+    "bottle tops in cups of ten",
+    "a tens and ones chart"
+   ],
+   "steps": [
+    "Make bundles of ten.",
+    "Count the bundles: 10, 20, 30.",
+    "Count the loose ones on.",
+    "Write tens then ones."
+   ],
+   "contexts": [
+    "counting maize cobs",
+    "bottle tops collected",
+    "sticks for a fire"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 3 bundles of ten and 4 sticks."
+    },
+    {
+     "beat": "count",
+     "do": "Count the bundles with the child in tens."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 30, then count on."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 34."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_COUNTS_BUNDLES_AS_ONES",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "How many sticks in one bundle?",
+     "repair": "Ten: 10, 20, 30, 34."
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_ONES_TENS_SWAP",
+     "listen_for": [
+      "62"
+     ],
+     "ask": "How many tens?",
+     "repair": "2: 26."
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_NOT_GROUPED",
+     "listen_for": [
+      "45"
+     ],
+     "ask": "How many heaps of ten did you make?",
+     "repair": "4, and 7 more: 47."
+    },
+    {
+     "code": "MATH.G2.NUMBER.NUMBER_CONCEPT.REPRESENT_OBJECTS_100.M_REP_EXTRA_ZERO",
+     "listen_for": [
+      "305"
+     ],
+     "ask": "How many digits for tens and ones?",
+     "repair": "Two: 35."
+    }
+   ],
+   "checks": [
+    {
+     "question": "5 bundles of ten and 2 sticks. How many?",
+     "answer": "52",
+     "shows": "tens and ones"
+    },
+    {
+     "question": "Show 40 with bundles. How many bundles?",
+     "answer": "4",
+     "shows": "tens only"
+    }
+   ]
+  }
+ ]
+}

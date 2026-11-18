@@ -1,0 +1,281 @@
+{
+ "sub_strand": "MATH.G2.MEASUR.LENGTH",
+ "title": "Length",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Grade 2 moves from arbitrary to fixed units (sticks of equal length), then to the metre stick.",
+ "skills": [
+  {
+   "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS",
+   "key_step": "The child lays equal sticks end to end from one end with no gaps and counts them.",
+   "floor": {
+    "prerequisite": "Measured with arbitrary units (Grade 1).",
+    "question": "How many hand spans long is your desk?",
+    "answer": "a count of spans"
+   },
+   "representations": [
+    "equal sticks",
+    "a picture of sticks end to end",
+    "a record table"
+   ],
+   "steps": [
+    "Choose one kind of stick.",
+    "Start at one end.",
+    "End to end, no gaps.",
+    "Count the sticks."
+   ],
+   "contexts": [
+    "measuring a desk",
+    "a bench",
+    "a door"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a desk and sticks with gaps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gaps.",
+     "say": "Is the count right?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: no."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child redraws the sticks touching."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write the new count."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_GAPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are there gaps?",
+     "repair": "Yes: the desk is longer than 4 sticks."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_MIXED_UNITS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are all the sticks the same?",
+     "repair": "No: measure again with one kind."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_LONGER_UNIT_MORE",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Which stick fits fewer times?",
+     "repair": "The long one: fewer."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_FIXED_UNITS.M_FU_NOT_FROM_END",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Did the first stick start at the end?",
+     "repair": "No: the count is too small."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A bench is 5 short sticks long. With longer sticks, more or fewer?",
+     "answer": "fewer",
+     "shows": "unit size"
+    },
+    {
+     "question": "Sticks of two sizes give 6. Is that a good measure?",
+     "answer": "no",
+     "shows": "equal units"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.LENGTH.KNOW_METRE",
+   "key_step": "The child pictures a metre as a big step or a metre stick and uses it for lengths.",
+   "floor": {
+    "prerequisite": "Measures with fixed units.",
+    "question": "How many sticks long is the table?",
+    "answer": "a count"
+   },
+   "representations": [
+    "a metre stick",
+    "a big step",
+    "pictures of objects"
+   ],
+   "steps": [
+    "Look at a metre stick.",
+    "Find things about as long.",
+    "Metres are for length.",
+    "Write m."
+   ],
+   "contexts": [
+    "the width of a door",
+    "a big step",
+    "a classroom desk"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a metre stick next to a door."
+    },
+    {
+     "beat": "predict",
+     "do": "The child says if the door is about a metre wide."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write about 1 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_PENCIL_METRE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "How many pencils fit along the metre stick?",
+     "repair": "Many: a pencil is much shorter."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_UNIT_MIX",
+     "listen_for": [
+      "water in a jug"
+     ],
+     "ask": "Is water in a jug long?",
+     "repair": "No: a road."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_STEP_ANY",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is a small step as long as the stick?",
+     "repair": "No: a big step is about a metre."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.KNOW_METRE.M_KM_WRITES_MT",
+     "listen_for": [
+      "5 mt"
+     ],
+     "ask": "How do we write metre short?",
+     "repair": "m: 5 m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is about a metre: a door's width or a pencil?",
+     "answer": "a door's width",
+     "shows": "benchmark"
+    },
+    {
+     "question": "Write 6 metres short.",
+     "answer": "6 m",
+     "shows": "unit"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES",
+   "key_step": "The child lays the metre stick end to end from one end, counts the metres and writes m.",
+   "floor": {
+    "prerequisite": "Knows the metre.",
+    "question": "Which is about a metre: a big step or a pencil?",
+    "answer": "a big step"
+   },
+   "representations": [
+    "a metre stick",
+    "chalk marks",
+    "a record table"
+   ],
+   "steps": [
+    "Start at one end.",
+    "Lay the stick; mark its end.",
+    "Move to the mark.",
+    "Count; write m."
+   ],
+   "contexts": [
+    "the classroom",
+    "the corridor",
+    "the flower bed"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wall with 4 metre sticks."
+    },
+    {
+     "beat": "count",
+     "do": "Count the sticks with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the unit."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 4 m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_NO_UNIT",
+     "listen_for": [
+      "9"
+     ],
+     "ask": "9 what?",
+     "repair": "9 m."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_COUNTS_MARKS",
+     "listen_for": [
+      "5 m"
+     ],
+     "ask": "How many spaces?",
+     "repair": "4: 4 m."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_OVERLAP",
+     "listen_for": [
+      "the wall is 6 m"
+     ],
+     "ask": "Did the stick start at the chalk mark?",
+     "repair": "No: so the count is too big."
+    },
+    {
+     "code": "MATH.G2.MEASUR.LENGTH.MEASURE_IN_METRES.M_MM_LONGER_FEWER",
+     "listen_for": [
+      "4 m"
+     ],
+     "ask": "Which has more metres?",
+     "repair": "7 m: longer."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A wall is 6 metre sticks long. Its length?",
+     "answer": "6 m",
+     "shows": "counting"
+    },
+    {
+     "question": "Which is longer: 3 m or 8 m?",
+     "answer": "8 m",
+     "shows": "comparing"
+    }
+   ]
+  }
+ ]
+}

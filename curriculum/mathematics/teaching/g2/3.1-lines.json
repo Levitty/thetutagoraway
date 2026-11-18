@@ -1,0 +1,197 @@
+{
+ "sub_strand": "MATH.G2.GEOMET.LINES",
+ "title": "Lines",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Straight and curved lines are modelled with sticks, string and clay and drawn with rulers and crayons; the modelling is done in class.",
+ "skills": [
+  {
+   "skill": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES",
+   "key_step": "The child checks a line with a ruler edge: if it does not bend anywhere it is straight, whichever way it points.",
+   "floor": {
+    "prerequisite": "Straight lines (Grade 1).",
+    "question": "Is the edge of a ruler straight?",
+    "answer": "yes"
+   },
+   "representations": [
+    "sticks and stretched string",
+    "a ruler",
+    "pictures"
+   ],
+   "steps": [
+    "Look along the line.",
+    "Lay a ruler on it.",
+    "No bending: straight.",
+    "Draw with a firm ruler."
+   ],
+   "contexts": [
+    "the edge of a door",
+    "a flag pole",
+    "a desk edge"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an upright, a flat and a slanting line."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the slanting line.",
+     "say": "Is it straight?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a slanting line with a ruler."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: all straight."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_SLANT_NOT_STRAIGHT",
+     "listen_for": [
+      "no, it is slanting"
+     ],
+     "ask": "Does the line bend?",
+     "repair": "No: it is straight."
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_WOBBLY_OK",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Does it follow the ruler?",
+     "repair": "No: draw with the ruler."
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_BROKEN_IS_CURVED",
+     "listen_for": [
+      "curved"
+     ],
+     "ask": "Does any part bend smoothly?",
+     "repair": "No: straight parts."
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.STRAIGHT_LINES.M_SL_RULER_SLIPS",
+     "listen_for": [
+      "nothing"
+     ],
+     "ask": "Did the ruler move?",
+     "repair": "Yes: hold it firmly."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is a slanting line drawn with a ruler straight?",
+     "answer": "yes",
+     "shows": "slant"
+    },
+    {
+     "question": "Is a zigzag one straight line?",
+     "answer": "no",
+     "shows": "zigzag"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.GEOMET.LINES.CURVED_LINES",
+   "key_step": "The child sees that a curved line bends smoothly with no corners and draws it freehand.",
+   "floor": {
+    "prerequisite": "Curved lines (Grade 1).",
+    "question": "Is the edge of a plate curved?",
+    "answer": "yes"
+   },
+   "representations": [
+    "string and clay",
+    "round objects",
+    "pictures"
+   ],
+   "steps": [
+    "Look for smooth bends.",
+    "No corners: curved.",
+    "Model with string.",
+    "Draw freehand."
+   ],
+   "contexts": [
+    "a rainbow",
+    "the edge of a plate",
+    "a path round a tree"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a corner and a smooth curve."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each.",
+     "say": "Which is curved?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the smooth one."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws a curve round a cup."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: curved."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_CORNER_IS_CURVE",
+     "listen_for": [
+      "curved"
+     ],
+     "ask": "Does it bend smoothly?",
+     "repair": "No: a corner."
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_CIRCLE_NOT_LINE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Is it a line that bends?",
+     "repair": "Yes: a curved line."
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_RULER_FOR_CURVE",
+     "listen_for": [
+      "with a ruler"
+     ],
+     "ask": "Can a ruler bend?",
+     "repair": "No: draw freehand."
+    },
+    {
+     "code": "MATH.G2.GEOMET.LINES.CURVED_LINES.M_CL_WAVY_STRAIGHT",
+     "listen_for": [
+      "straight"
+     ],
+     "ask": "Does it bend away from the ruler?",
+     "repair": "Yes: curved."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is the corner of a book a curve?",
+     "answer": "no",
+     "shows": "corner"
+    },
+    {
+     "question": "Name something with a curved edge.",
+     "answer": "a plate",
+     "shows": "objects"
+    }
+   ]
+  }
+ ]
+}

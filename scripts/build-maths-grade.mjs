@@ -3,9 +3,14 @@
 //   Grade 7 (17 Nov 2026)  scripts/data/maths-g7/   at least 1 prerequisite and 2 misconceptions per skill
 //   Grade 8 (18 Nov 2026)  scripts/data/maths-g8/   the depth standard: at least 2 prerequisites and 4 misconceptions per skill
 //   Grade 9 (18 Nov 2026)  scripts/data/maths-g9/   the same depth standard; prerequisites may name Grade 5 to 8 skills
-//   Grade 4 (18 Nov 2026)  scripts/data/maths-g4/   the same depth standard; prerequisites name Grade 3 outcomes (Grade 3 has no
-//                          skills yet) or earlier Grade 4 skills. A skill may be hands_on (done with real objects in class).
+//   Grade 4 (18 Nov 2026)  scripts/data/maths-g4/   the same depth standard; prerequisites name Grade 3 skills (Grade 3 outcomes
+//                          until Grade 3 was mapped, later on 18 Nov 2026) or earlier Grade 4 skills. A skill may be hands_on (done with real objects in class).
 //                          scripts/build-maths-g4.mjs (the first pass, 12 Nov 2026) is kept as the old command.
+//   Grades 3, 2, 1 (18 Nov 2026)  scripts/data/maths-g3/, -g2/, -g1/   the same depth standard. A grade is built before the grade below
+//                          it has skills, so its prerequisites first name the lower grade's outcomes ('G2o:'), and are moved to that
+//                          grade's skills once it is mapped. Grade 4's 'G3o:' prerequisites became Grade 3 skills ('G3:') the same way.
+//                          Grade 1 reaches below the curriculum with 'PP2:NAME': a pre-primary readiness skill that HOREB defines in
+//                          scripts/data/maths-g1/readiness.mjs (KICD's PP2 design is not in this repository); kept in g1.json as `readiness`.
 // Official outcomes are never touched. A sub-strand with no data file is left as it was (no skills yet) and listed at the end.
 //   node scripts/build-maths-grade.mjs 8     then:  node scripts/build-curriculum-map-grade.mjs 8  and  node scripts/build-teaching-pack.mjs
 // One builder for Grades 7 and 8 (18 Nov 2026): scripts/build-maths-g7.mjs is kept as the old command (Grade 7 output unchanged).
@@ -27,9 +32,16 @@ const RULES = {
   // first pass were tagged '[Grade 4 map]' in design_notes and are replaced, not appended.
   4: { below: [3], minPre: 2, minMis: 4, when: '18 Nov 2026', notesTag: '[Grade 4 map]', outcomesNote: ' (a few left for a person to confirm)',
     pack: 'draft: written 18 Nov 2026 offline for Grade 4; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
+  3: { below: [2], minPre: 2, minMis: 4, when: '18 Nov 2026', outcomesNote: ' (a few left for a person to confirm)',
+    pack: 'draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
+  2: { below: [1], minPre: 2, minMis: 4, when: '18 Nov 2026', outcomesNote: ' (a few left for a person to confirm)',
+    pack: 'draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
+  1: { below: [], minPre: 2, minMis: 4, when: '18 Nov 2026', outcomesNote: ' (a few left for a person to confirm)', readiness: true,
+    pack: 'draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor' },
 }[GRADE];
-if (!RULES) { console.error('usage: node scripts/build-maths-grade.mjs 4|7|8|9'); process.exit(1); }
-const { SUBS } = await import(`./data/maths-g${GRADE}/index.mjs`);
+if (!RULES) { console.error('usage: node scripts/build-maths-grade.mjs 1|2|3|4|7|8|9'); process.exit(1); }
+const { SUBS, READINESS } = await import(`./data/maths-g${GRADE}/index.mjs`);
+const READY = new Set((RULES.readiness && READINESS || []).map(r => r.code));
 const G = `G${GRADE}`;
 const FILE = new URL(`../curriculum/mathematics/g${GRADE}.json`, import.meta.url);
 const PACK_DIR = new URL(`../curriculum/mathematics/teaching/g${GRADE}/`, import.meta.url);
@@ -64,6 +76,7 @@ for (const s of cur.sub_strands) {
     if (S[g]) { const c = `MATH.${g}.${rest}`; if (!S[g].has(c)) fail(`${key}: unknown prerequisite ${c}`); return [c, 'skill']; }
     if (g.endsWith('o') && O[g.slice(0, -1)]) { const c = `MATH.${g.slice(0, -1)}.${rest}`; if (!O[g.slice(0, -1)].has(c)) fail(`${key}: unknown outcome prerequisite ${c}`); return [c, 'outcome']; }
     if (g === G) { if (!own.has(rest)) fail(`${key}: unknown own prerequisite ${rest}`); return [`${s.code}.${rest}`, 'skill']; }
+    if (g === 'PP2' && READY.has(rest)) return [`MATH.PP2.READINESS.${rest}`, 'skill'];
     if (g === `${G}x`) { const c = `MATH.${G}.${rest}`; if (!allOwn.has(c)) fail(`${key}: unknown Grade ${GRADE} prerequisite ${c}`); return [c, 'skill']; }
     return fail(`${key}: bad prerequisite ref ${r}`);
   };
@@ -100,6 +113,7 @@ for (const s of cur.sub_strands) {
   packWritten.add(slug);
 }
 for (const f of readdirSync(PACK_DIR)) if (f.endsWith('.json') && !packWritten.has(f)) unlinkSync(new URL(f, PACK_DIR));
+if (RULES.readiness) cur.readiness = READINESS.map(r => ({ code: `MATH.PP2.READINESS.${r.code}`, name: r.name, what: r.what, status: 'proposed' }));
 cur.totals = { ...cur.totals, skills: nSk, prerequisites: nPre, misconceptions: nMis };
 cur.status = `outcomes from KICD's text, word for word${RULES.outcomesNote || ''}; skills and prerequisites proposed; misconceptions draft; all awaiting teacher review (${RULES.when})` + (left.length ? `; no skills yet for: ${left.join(', ')}` : '');
 writeFileSync(FILE, JSON.stringify(cur, null, 1) + '\n');

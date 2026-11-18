@@ -1,0 +1,283 @@
+{
+ "sub_strand": "MATH.G2.GEOMET.SHAPES",
+ "title": "Shapes",
+ "status": "draft: written 18 Nov 2026 offline for Grade 2; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Shapes are triangles, squares, circles and ovals (and rectangles from Grade 1). Drawing shapes is done in class; shape patterns can be asked as 'what comes next'.",
+ "skills": [
+  {
+   "skill": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV",
+   "key_step": "The child counts sides, checks straight or curved and equal or not, and names the shape whatever its position.",
+   "floor": {
+    "prerequisite": "Rectangles, triangles and circles (Grade 1).",
+    "question": "How many sides does a triangle have?",
+    "answer": "3"
+   },
+   "representations": [
+    "cut-outs",
+    "objects in the classroom",
+    "pictures in different positions"
+   ],
+   "steps": [
+    "Count the sides.",
+    "Straight or curved?",
+    "Equal?",
+    "Name it."
+   ],
+   "contexts": [
+    "windows and doors",
+    "a clock",
+    "a road sign"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an egg shape and a circle."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the egg.",
+     "say": "Same width every way?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: oval."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_TURNED",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Did the sides change?",
+     "repair": "No: still a square."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_OVAL_CIRCLE",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "Is the egg longer one way?",
+     "repair": "Yes: oval."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_RECT_SQUARE",
+     "listen_for": [
+      "square"
+     ],
+     "ask": "Are the door's sides all equal?",
+     "repair": "No: rectangle."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.NAME_SHAPES_ENV.M_NS_OBJECT_NAME",
+     "listen_for": [
+      "clock"
+     ],
+     "ask": "Is it round with no corners?",
+     "repair": "Yes: a circle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A door is what shape?",
+     "answer": "rectangle",
+     "shows": "objects"
+    },
+    {
+     "question": "A square turned on a corner: still a square?",
+     "answer": "yes",
+     "shows": "position"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES",
+   "key_step": "The child draws each side with a ruler (or traces round an object for a curve) and closes the shape.",
+   "floor": {
+    "prerequisite": "Names the shapes.",
+    "question": "Name a shape with 4 equal sides.",
+    "answer": "square"
+   },
+   "representations": [
+    "a ruler",
+    "round objects to trace",
+    "squared paper"
+   ],
+   "steps": [
+    "Choose the shape.",
+    "Count sides as you draw.",
+    "Ruler for straight sides.",
+    "Close the shape."
+   ],
+   "contexts": [
+    "drawing a house",
+    "a sun",
+    "a kite"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw one side of a square."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the end.",
+     "say": "Where next?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws the other sides."
+    },
+    {
+     "beat": "reveal",
+     "do": "Count: 4 sides, closed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_GAPS",
+     "listen_for": [
+      "gaps at corners"
+     ],
+     "ask": "Did you get back to the start?",
+     "repair": "Close the gap."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_SIDE_COUNT",
+     "listen_for": [
+      "3 or 5"
+     ],
+     "ask": "How many sides should a square have?",
+     "repair": "4."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_CURVED_SIDES",
+     "listen_for": [
+      "curved"
+     ],
+     "ask": "Should the sides bend?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.DRAW_SHAPES.M_DS_OVAL_FOR_CIRCLE",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is it the same width every way?",
+     "repair": "Trace again."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many sides does your triangle have?",
+     "answer": "3",
+     "shows": "sides"
+    },
+    {
+     "question": "Do the lines meet at every corner?",
+     "answer": "yes",
+     "shows": "closed"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+   "key_step": "The child rings the part that repeats and uses it to say what comes next.",
+   "floor": {
+    "prerequisite": "Made shape patterns (Grade 1).",
+    "question": "circle, square, circle, square, __",
+    "answer": "circle"
+   },
+   "representations": [
+    "cut-outs in a row",
+    "a drawn pattern",
+    "fabric patterns"
+   ],
+   "steps": [
+    "Say the pattern aloud.",
+    "Find the part that repeats.",
+    "Ring each repeat.",
+    "Say what comes next."
+   ],
+   "contexts": [
+    "kitenge fabric",
+    "beadwork",
+    "floor tiles"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw circle, triangle, triangle, circle, triangle, triangle, circle, __."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the start.",
+     "say": "Where does it repeat?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child rings each repeat."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the next shape."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw a triangle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_REPEAT_UNIT",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "What is in each ring?",
+     "repair": "circle, triangle, triangle: next is triangle."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_ALTERNATES",
+     "listen_for": [
+      "square"
+     ],
+     "ask": "How many squares before each circle?",
+     "repair": "Two: circle next."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_COLOUR_ONLY",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "What shape is blue each time?",
+     "repair": "Square."
+    },
+    {
+     "code": "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS.M_SPAT_MISSING_MIDDLE",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "What comes after circle each time?",
+     "repair": "Triangle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "square, circle, circle, square, circle, circle, __",
+     "answer": "square",
+     "shows": "repeat of three"
+    },
+    {
+     "question": "triangle, square, triangle, __",
+     "answer": "square",
+     "shows": "repeat of two"
+    }
+   ]
+  }
+ ]
+}

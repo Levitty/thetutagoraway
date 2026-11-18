@@ -1,0 +1,187 @@
+{
+ "sub_strand": "MATH.G1.MEASUR.CAPACITY",
+ "title": "Capacity",
+ "status": "draft: written 18 Nov 2026 offline for Grade 1; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; collecting containers (a) and re-using them (d) go with comparing (b). Capacity is compared by pouring and measured with arbitrary units (cups, small tins).",
+ "skills": [
+  {
+   "skill": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY",
+   "key_step": "The child pours from one container into the other and sees if it overflows or is not filled.",
+   "floor": {
+    "prerequisite": "Uses full and empty (PP2).",
+    "question": "Is this cup full or empty?",
+    "answer": "empty"
+   },
+   "representations": [
+    "water and containers",
+    "pictures",
+    "sand"
+   ],
+   "steps": [
+    "Fill one container.",
+    "Pour into the other.",
+    "Overflow: the first holds more.",
+    "Not full: the first holds less."
+   ],
+   "contexts": [
+    "a jerrycan and a bucket",
+    "cups and jugs at home",
+    "a basin for washing"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tall bottle and a wide bowl."
+    },
+    {
+     "beat": "predict",
+     "do": "The child guesses which holds more."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for a guess."
+    },
+    {
+     "beat": "reveal",
+     "do": "Pour to show; write the result."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_TALL_MORE",
+     "listen_for": [
+      "the bottle (it is taller)"
+     ],
+     "ask": "When the bottle is poured into the bowl, is the bowl full?",
+     "repair": "No: the bowl holds more."
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_MORE_LESS_SWAP",
+     "listen_for": [
+      "the bucket"
+     ],
+     "ask": "Which fills with fewer pours?",
+     "repair": "The cup."
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_SPILL_IGNORED",
+     "listen_for": [
+      "the cup"
+     ],
+     "ask": "Did all the water fit?",
+     "repair": "No: the jug holds more."
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.COMPARE_CAPACITY.M_CC1_SAME_IMPOSSIBLE",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "How many cups did each take?",
+     "repair": "5 each: the same."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A bucket and a cup: which holds more?",
+     "answer": "the bucket",
+     "shows": "comparing"
+    },
+    {
+     "question": "Water spills when a jug is poured into a mug. Which holds more?",
+     "answer": "the jug",
+     "shows": "overflow"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+   "key_step": "The child fills the cup to the top each time and counts full cups.",
+   "floor": {
+    "prerequisite": "Compares capacities.",
+    "question": "Which holds more: a bucket or a cup?",
+    "answer": "a bucket"
+   },
+   "representations": [
+    "one cup",
+    "water",
+    "a record table"
+   ],
+   "steps": [
+    "Choose one cup.",
+    "Fill to the top.",
+    "Pour and count.",
+    "Compare counts."
+   ],
+   "contexts": [
+    "filling a basin",
+    "a sufuria",
+    "a kettle"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a basin and 6 full cups."
+    },
+    {
+     "beat": "count",
+     "do": "Count the cups with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 6."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 cups."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_PART_CUP",
+     "listen_for": [
+      "6"
+     ],
+     "ask": "Was the last cup full?",
+     "repair": "No."
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_BIGGER_CUP_MORE",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Which needs fewer?",
+     "repair": "The big mug."
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_COMPARE_COUNTS_SWAP",
+     "listen_for": [
+      "the bottle"
+     ],
+     "ask": "Which took more cups?",
+     "repair": "The jug."
+    },
+    {
+     "code": "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY.M_MAC_MIXED_CUPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are the cups the same?",
+     "repair": "No."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A pot takes 9 cups, a jug 4 cups. Which holds more?",
+     "answer": "the pot",
+     "shows": "counts"
+    },
+    {
+     "question": "With a bigger cup, more or fewer to fill the pot?",
+     "answer": "fewer",
+     "shows": "unit size"
+    }
+   ]
+  }
+ ]
+}

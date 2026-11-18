@@ -103504,7 +103504,8 @@ var FAMILIES145 = [
   fam32({
     id: "g1.add.got-more",
     skill: "G1_ADD",
-    outcome: "G1.ADD.0",
+    outcome: "MATH.G1.NUMBER.ADDITION.a",
+    cskill: "MATH.G1.NUMBER.ADDITION.MODEL_ADDITION",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103514,7 +103515,7 @@ var FAMILIES145 = [
     make: ({ a, b, p, item }) => ({
       question: `There are ${a} birds on a tree. ${b} more birds fly in. How many birds are on the tree now?`,
       answer: a + b,
-      wrong: [[a + b - 1, `Count on from ${a}. Do not count ${a} itself again.`], [Math.abs(a - b), "Getting more means the number grows. Add, do not take away."], [a, `More birds came, so there are more than at the start.`]],
+      wrong: [[a + b - 1, `Count on from ${a}. Do not count ${a} itself again.`, "M_ADD1_COUNTS_START_AGAIN"], [Math.abs(a - b), "Getting more means the number grows. Add, do not take away.", "M_ADD1_TAKES_AWAY"], [a, `More birds came, so there are more than at the start.`, "M_ADD1_GIVES_START"]],
       hints: ["Start with how many there were. Then count on.", "Getting more means we put the two numbers together."],
       steps: [`There are ${a} birds. ${b} more come.`, `${a} + ${b} = ${a + b}.`]
     }),
@@ -103523,7 +103524,8 @@ var FAMILIES145 = [
   fam32({
     id: "g1.add.how-many-more",
     skill: "G1_ADD",
-    outcome: "G1.ADD.0",
+    outcome: "MATH.G1.NUMBER.ADDITION.f",
+    cskill: "MATH.G1.NUMBER.ADDITION.ADD_MISSING_50",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103533,7 +103535,7 @@ var FAMILIES145 = [
     make: ({ t, a, p }) => ({
       question: `${p.name} has ${a} stickers. ${p.She} wants ${t}. How many more stickers does ${p.she} need?`,
       answer: t - a,
-      wrong: [[t - a + 1, `Count up from ${a} to ${t}. Do not count ${a} itself.`], [a, `That is how many ${p.she} has now. Ask how many are still missing.`], [t + a, "Do not put the two numbers together. Find the gap between them."]],
+      wrong: [[t - a + 1, `Count up from ${a} to ${t}. Do not count ${a} itself.`, "M_AMISS1_COUNTS_START"], [a, `That is how many ${p.she} has now. Ask how many are still missing.`, "M_AMISS1_GIVES_KNOWN"], [t + a, "Do not put the two numbers together. Find the gap between them.", "M_AMISS1_ADDS_BOTH"]],
       hints: ["Count up from the number you have to the number you want.", "How many steps is that?"],
       steps: [`Count on from ${a} to ${t}.`, `${a} + ${t - a} = ${t}, so ${t - a} more.`]
     }),
@@ -103542,7 +103544,8 @@ var FAMILIES145 = [
   fam32({
     id: "g1.sub.gave-away",
     skill: "G1_SUB",
-    outcome: "G1.SUB.0",
+    outcome: "MATH.G1.NUMBER.SUBTRACTION.a",
+    cskill: "MATH.G1.NUMBER.SUBTRACTION.MODEL_SUBTRACTION",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103552,7 +103555,7 @@ var FAMILIES145 = [
     make: ({ a, b, p, item }) => ({
       question: `${p.name} has ${a} ${item}. ${p.She} gives ${b} to a friend. How many ${item} are left?`,
       answer: a - b,
-      wrong: [[a - b + 1, `Count back ${b} from ${a}. Do not count ${a} itself.`], [a + b, "Giving away means fewer are left. Take away, do not add."], [b, `That is how many ${p.she} gave. Ask how many ${p.she} still has.`]],
+      wrong: [[a - b + 1, `Count back ${b} from ${a}. Do not count ${a} itself.`, "M_SUB1_COUNTS_START"], [a + b, "Giving away means fewer are left. Take away, do not add.", "M_SUB1_ADDS"], [b, `That is how many ${p.she} gave. Ask how many ${p.she} still has.`, "M_SUB1_GIVES_TAKEN"]],
       hints: ["Start with how many there were. Then count back.", "Giving away means taking away."],
       steps: [`${p.name} starts with ${a} and gives away ${b}.`, `${a} \u2212 ${b} = ${a - b}.`]
     }),
@@ -103561,7 +103564,8 @@ var FAMILIES145 = [
   fam32({
     id: "g1.sub.how-many-ate",
     skill: "G1_SUB",
-    outcome: "G1.SUB.0",
+    outcome: "MATH.G1.NUMBER.SUBTRACTION.e",
+    cskill: "MATH.G1.NUMBER.SUBTRACTION.SUB_MISSING_50",
     rung: 2,
     form: "word",
     draw: () => {
@@ -103571,7 +103575,7 @@ var FAMILIES145 = [
     make: ({ a, left, p }) => ({
       question: `${p.name} buys ${a} mandazi and eats some. ${left} mandazi are left. How many did ${p.she} eat?`,
       answer: a - left,
-      wrong: [[a - left + 1, `Count up from ${left} to ${a}. Do not count ${left} itself.`], [left, `That is how many are left. Ask how many were eaten.`], [a + left, "Do not put the numbers together. Find how many went."]],
+      wrong: [[a - left + 1, `Count up from ${left} to ${a}. Do not count ${left} itself.`, "M_SMISS1_COUNTS_START"], [left, `That is how many are left. Ask how many were eaten.`, "M_SMISS1_GIVES_LEFT"], [a + left, "Do not put the numbers together. Find how many went.", "M_SMISS1_ADDS"]],
       hints: ["Some were eaten, so fewer are left than at the start.", `How many must you take from ${a} to get ${left}?`],
       steps: [`${p.name} started with ${a} and has ${left} left.`, `${a} \u2212 ${left} = ${a - left} eaten.`]
     }),
@@ -103580,7 +103584,8 @@ var FAMILIES145 = [
   fam32({
     id: "g1.counting.ten-more",
     skill: "G1_COUNTING",
-    outcome: "G1.WHOLE.0",
+    outcome: "MATH.G1.NUMBER.WHOLE_NUMBERS.a",
+    cskill: "MATH.G1.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_50",
     rung: 1,
     form: "direct",
     draw: () => ({ n: randInt(11, 40) }),
@@ -103588,7 +103593,7 @@ var FAMILIES145 = [
       story: false,
       question: `${person().name} counts in tens, starting at ${n}. What number comes next?`,
       answer: n + 10,
-      wrong: [[n + 1, "That is only one more. Ten more is one whole ten."], [n - 10, "More means the number grows. Count up, not down."], [n + 20, "That is two tens. Only one ten more is needed."]],
+      wrong: [[n + 1, "That is only one more. Ten more is one whole ten.", "M_CF1_ONE_MORE"], [n - 10, "More means the number grows. Count up, not down.", "M_CF1_COUNTS_DOWN"], [n + 20, "That is two tens. Only one ten more is needed.", "M_CF1_TWO_TENS"]],
       hints: ["Ten more means one more ten.", "Keep the ones digit the same. Change the tens digit."],
       steps: [`${n} has ${Math.floor(n / 10)} tens and ${n % 10} ones.`, `One more ten gives ${Math.floor(n / 10) + 1} tens and ${n % 10} ones: ${n + 10}.`]
     }),
@@ -103597,7 +103602,8 @@ var FAMILIES145 = [
   fam32({
     id: "g1.prenumber.skip-gap",
     skill: "G1_PRENUMBER",
-    outcome: "G1.PRENUMBER.0",
+    outcome: "MATH.G1.NUMBER.WHOLE_NUMBERS.f",
+    cskill: "MATH.G1.NUMBER.WHOLE_NUMBERS.NUMBER_PATTERNS_20",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -103609,7 +103615,7 @@ var FAMILIES145 = [
       story: false,
       question: `Count in ${s}s: ${a}, ${a + s}, __, ${a + 3 * s}, ${a + 4 * s}. Which number fills the gap?`,
       answer: a + 2 * s,
-      wrong: [[a + 2 * s - 1, `Each step jumps by ${s}. Count on from the number before the gap.`], [a + 2 * s + 1, `Each step jumps by ${s}. Check with the number after the gap.`], [a + s, "That number is already in the pattern, before the gap."]],
+      wrong: [[a + 2 * s - 1, `Each step jumps by ${s}. Count on from the number before the gap.`, "M_NPAT1_STEP_ONE"], [a + 2 * s + 1, `Each step jumps by ${s}. Check with the number after the gap.`, "M_NPAT1_STEP_ONE"], [a + s, "That number is already in the pattern, before the gap.", "M_NPAT1_COPIES"]],
       hints: ["How far is it from one number to the next?", "Add that jump to the number before the gap."],
       steps: [`The numbers go up by ${s} each time.`, `${a + s} + ${s} = ${a + 2 * s}.`]
     }),
@@ -103618,7 +103624,10 @@ var FAMILIES145 = [
   fam32({
     id: "g1.prenumber.bead-pattern",
     skill: "G1_PRENUMBER",
-    outcome: "G1.PRENUMBER.0",
+    outcome: "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.d",
+    cskill: "MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES.OBJECT_PATTERNS",
+    misMapped: false,
+    reveals: ["M_OPAT_REPEATS_LAST", "M_OPAT_ALWAYS_AB"],
     rung: 1,
     form: "word",
     draw: () => {
@@ -103666,7 +103675,10 @@ var FAMILIES145 = [
   fam32({
     id: "g1.mass.lightest-chain",
     skill: "G1_MASS",
-    outcome: "G1.MASS.0",
+    outcome: "MATH.G1.MEASUR.MASS.b",
+    cskill: "MATH.G1.MEASUR.MASS.COMPARE_MASS",
+    misMapped: false,
+    reveals: ["M_CM1_CHAIN", "M_CM1_WORDS_SWAP"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -103689,7 +103701,10 @@ var FAMILIES145 = [
   fam32({
     id: "g1.cap.holds-more",
     skill: "G1_CAPACITY",
-    outcome: "G1.CAP.0",
+    outcome: "MATH.G1.MEASUR.CAPACITY.c",
+    cskill: "MATH.G1.MEASUR.CAPACITY.MEASURE_ARBITRARY_CAPACITY",
+    misMapped: false,
+    reveals: ["M_MAC_COMPARE_COUNTS_SWAP"],
     rung: 1,
     form: "word",
     draw: () => {
@@ -103710,7 +103725,10 @@ var FAMILIES145 = [
   fam32({
     id: "g1.time.days-ahead",
     skill: "G1_TIME",
-    outcome: "G1.TIME.0",
+    outcome: "MATH.G1.MEASUR.TIME.a",
+    cskill: "MATH.G1.MEASUR.TIME.DAYS_OF_WEEK",
+    misMapped: false,
+    reveals: ["M_DAYS_COUNTS_TODAY"],
     rung: 1,
     form: "word",
     draw: () => ({ i: randInt(0, 6), k: randInt(2, 4) }),
@@ -103746,14 +103764,15 @@ var FAMILIES145 = [
   fam32({
     id: "g1.money.mixed-coins",
     skill: "G1_MONEY",
-    outcome: "G1.MONEY.0",
+    outcome: "MATH.G1.MEASUR.MONEY.c",
+    cskill: "MATH.G1.MEASUR.MONEY.COUNT_COINS",
     rung: 2,
     form: "word",
     draw: () => ({ a: randInt(1, 3), b: randInt(1, 4), p: person() }),
     make: ({ a, b, p }) => ({
       question: `${p.name} pays with ${a} ten-shilling coin${a > 1 ? "s" : ""} and ${b} five-shilling coin${b > 1 ? "s" : ""}. How many shillings is that?`,
       answer: 10 * a + 5 * b,
-      wrong: [[a + b, "That counts the coins. Count the shillings they are worth."], [10 * (a + b), "The 5 shilling coins are worth less than 10. Count them by 5."], [5 * (a + b), "The 10 shilling coins are worth more than 5. Count them by 10."]],
+      wrong: [[a + b, "That counts the coins. Count the shillings they are worth.", "M_COIN1_COUNTS_PIECES"], [10 * (a + b), "The 5 shilling coins are worth less than 10. Count them by 5.", "M_COIN1_ALL_AS_TEN"], [5 * (a + b), "The 10 shilling coins are worth more than 5. Count them by 10.", "M_COIN1_ALL_AS_FIVE"]],
       hints: ["Count the 10 shilling coins first: 10, 20, ...", "Then count on by 5 for the other coins."],
       steps: [`${a} coin${a > 1 ? "s" : ""} of 10 shillings make ${10 * a} shillings.`, `Then count on ${b} fives: ${10 * a + 5 * b} shillings.`]
     }),
@@ -103762,7 +103781,10 @@ var FAMILIES145 = [
   fam32({
     id: "g1.lines.curved-edge",
     skill: "G1_LINES",
-    outcome: "G1.LINES.0",
+    outcome: "MATH.G1.GEOMET.LINES.c",
+    cskill: "MATH.G1.GEOMET.LINES.IDENTIFY_LINES",
+    misMapped: false,
+    reveals: ["M_LINE1_CORNER_CURVE", "M_LINE1_CIRCLE_NO_LINE"],
     rung: 1,
     form: "direct",
     draw: () => {
@@ -103781,7 +103803,10 @@ var FAMILIES145 = [
   fam32({
     id: "g1.shapes.which-shape",
     skill: "G1_SHAPES",
-    outcome: "G1.SHAPES.0",
+    outcome: "MATH.G1.GEOMET.SHAPES.a",
+    cskill: "MATH.G1.GEOMET.SHAPES.IDENTIFY_SHAPES",
+    misMapped: false,
+    reveals: ["M_SHP1_SIDE_COUNT", "M_SHP1_TURNED_TRIANGLE"],
     rung: 1,
     form: "direct",
     draw: () => {
@@ -103801,7 +103826,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.add.make-100",
     skill: "G2_ADD",
-    outcome: "G2.ADD.0",
+    outcome: "MATH.G2.NUMBER.ADDITION.d",
+    cskill: "MATH.G2.NUMBER.ADDITION.ADD_MISSING_100",
     rung: 2,
     form: "word",
     draw: () => {
@@ -103811,7 +103837,7 @@ var FAMILIES145 = [
     make: ({ a, p }) => ({
       question: `${p.name} has ${sh(a)}. ${p.She} needs ${sh(100)} for a book. How much more does ${p.she} need?`,
       answer: 100 - a,
-      wrong: [[110 - a, "Count up from the tens first, then the ones. One ten too many was counted."], [90 - a, "Count up from the tens first, then the ones. One ten too few was counted."], [a, "That is the money already saved. Ask how much is missing."]],
+      wrong: [[110 - a, "Count up from the tens first, then the ones. One ten too many was counted.", "M_AMISS_COUNT_UP_TENS_SLIP"], [90 - a, "Count up from the tens first, then the ones. One ten too few was counted.", "M_AMISS_COUNT_UP_TENS_SLIP"], [a, "That is the money already saved. Ask how much is missing.", "M_AMISS_GIVES_KNOWN"]],
       hints: ["Count up from the money to the next ten, then to 100.", "Add the two jumps together."],
       steps: [`Count on from ${a} to 100.`, `${a} + ${100 - a} = 100, so ${sh(100 - a)} more.`]
     }),
@@ -103820,7 +103846,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.sub.how-many-fewer",
     skill: "G2_SUB",
-    outcome: "G2.SUB.0",
+    outcome: "MATH.G2.NUMBER.SUBTRACTION.b",
+    cskill: "MATH.G2.NUMBER.SUBTRACTION.SUB_2D_2D",
     rung: 2,
     form: "word",
     draw: () => {
@@ -103830,7 +103857,7 @@ var FAMILIES145 = [
     make: ({ a, b }) => ({
       question: `One shop has ${a} mangoes. Another shop has ${b} mangoes. How many fewer mangoes does the second shop have?`,
       answer: a - b,
-      wrong: [[a - b + 10, "Take care when you take the ones from the ones. Did you take one ten too few?"], [a - b - 10, "Take care when you borrow a ten. Did you take one ten too many?"], [a + b, "Fewer means the gap between the two. Take away, do not add."]],
+      wrong: [[a - b + 10, "Take care when you take the ones from the ones. Did you take one ten too few?", "M_SUB2_SMALLER_FROM_LARGER"], [a - b - 10, "Take care when you borrow a ten. Did you take one ten too many?", "M_SUB2_BORROWS_TWICE"], [a + b, "Fewer means the gap between the two. Take away, do not add.", "M_SUB2_ADDS"]],
       hints: ["Fewer means find the gap between the two numbers.", "Take the smaller number from the bigger one."],
       steps: [`The shops have ${a} and ${b} mangoes.`, `${a} \u2212 ${b} = ${a - b} fewer.`]
     }),
@@ -103839,7 +103866,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.counting.skip-gap",
     skill: "G2_COUNTING",
-    outcome: "G2.WHOLE.0",
+    outcome: "MATH.G2.NUMBER.WHOLE_NUMBERS.f",
+    cskill: "MATH.G2.NUMBER.WHOLE_NUMBERS.PATTERNS_100",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -103851,7 +103879,7 @@ var FAMILIES145 = [
       story: false,
       question: `Count ${d < 0 ? "back" : "on"} in ${s}s: ${a}, ${a + d}, __, ${a + 3 * d}, ${a + 4 * d}. What is the missing number?`,
       answer: a + 2 * d,
-      wrong: [[a + 2 * d + 1, `Each jump is ${s}, not 1.`], [a + 2 * d - 1, `Each jump is ${s}, not 1.`], [a + 3 * d, "That number is already in the pattern, after the gap."]],
+      wrong: [[a + 2 * d + 1, `Each jump is ${s}, not 1.`, "M_PAT2_STEP_ONE"], [a + 2 * d - 1, `Each jump is ${s}, not 1.`, "M_PAT2_STEP_ONE"], [a + 3 * d, "That number is already in the pattern, after the gap.", "M_PAT2_COPIES_NEXT"]],
       hints: ["Find the jump from one number to the next.", `Do the numbers go ${d < 0 ? "down" : "up"}?`],
       steps: [`The numbers go ${d < 0 ? "down" : "up"} by ${s} each time.`, `${a + d} ${d < 0 ? "\u2212" : "+"} ${s} = ${a + 2 * d}.`]
     }),
@@ -103860,7 +103888,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.place.tens-and-ones",
     skill: "G2_PLACE_VALUE",
-    outcome: "G2.WHOLE.0",
+    outcome: "MATH.G2.NUMBER.WHOLE_NUMBERS.d",
+    cskill: "MATH.G2.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENS",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -103871,7 +103900,7 @@ var FAMILIES145 = [
       story: false,
       question: `What number is ${t} tens and ${o} ones?`,
       answer: 10 * t + o,
-      wrong: [[10 * o + t, "The tens digit goes first. Check which digit is in the tens place."], [t + o, "That adds the digits. Each ten is worth 10."], [100 * t + o, "A ten is worth 10, not 100."]],
+      wrong: [[10 * o + t, "The tens digit goes first. Check which digit is in the tens place.", "M_PV2_REVERSED"], [t + o, "That adds the digits. Each ten is worth 10.", "M_PV2_ADDS_DIGITS"], [100 * t + o, "A ten is worth 10, not 100.", "M_PV2_TEN_AS_HUNDRED"]],
       hints: ["Each ten is worth 10. Count the tens first.", "Then add the ones."],
       steps: [`${t} tens is ${10 * t}.`, `${10 * t} + ${o} = ${10 * t + o}.`]
     }),
@@ -103880,7 +103909,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.mul.rows",
     skill: "G2_MULTIPLY_INTRO",
-    outcome: "G2.MUL.0",
+    outcome: "MATH.G2.NUMBER.MULTIPLICATION.c",
+    cskill: "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103890,7 +103920,7 @@ var FAMILIES145 = [
     make: ({ r, c: c19 }) => ({
       question: `A farmer plants ${r} rows of maize. Each row has ${c19} plants. How many plants are there?`,
       answer: r * c19,
-      wrong: [[r * c19 + c19, `Count the rows again. There are only ${r} rows.`], [r * c19 - c19, `Count the rows again. There are ${r} rows, not one less.`], [r + c19, "Do not add the two numbers. Add the plants row by row."]],
+      wrong: [[r * c19 + c19, `Count the rows again. There are only ${r} rows.`, "M_MUL2_ONE_GROUP_EXTRA"], [r * c19 - c19, `Count the rows again. There are ${r} rows, not one less.`, "M_MUL2_ONE_GROUP_SHORT"], [r + c19, "Do not add the two numbers. Add the plants row by row.", "M_MUL2_ADDS_NUMBERS"]],
       hints: ["Each row has the same number of plants.", "Add the row amounts: the same number again and again."],
       steps: [`${r} rows with ${c19} plants each.`, `${Array(r).fill(c19).join(" + ")} = ${r * c19}.`]
     }),
@@ -103899,7 +103929,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.mul.legs",
     skill: "G2_MULTIPLY_INTRO",
-    outcome: "G2.MUL.0",
+    outcome: "MATH.G2.NUMBER.MULTIPLICATION.c",
+    cskill: "MATH.G2.NUMBER.MULTIPLICATION.MULT_BY_1_TO_5",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103910,7 +103941,7 @@ var FAMILIES145 = [
     make: ({ an: [name, legs], n }) => ({
       question: `Each of the ${n} ${name} on the farm has ${legs} legs. How many legs are there altogether?`,
       answer: n * legs,
-      wrong: [[n + legs, "Do not add the two numbers. Count the legs animal by animal."], [n, "That is the number of animals. Count their legs."], [n * legs + legs, `Count the animals again. There are only ${n}.`]],
+      wrong: [[n + legs, "Do not add the two numbers. Count the legs animal by animal.", "M_MUL2_ADDS_NUMBERS"], [n, "That is the number of animals. Count their legs.", "M_MUL2_COUNTS_GROUPS"], [n * legs + legs, `Count the animals again. There are only ${n}.`, "M_MUL2_ONE_GROUP_EXTRA"]],
       hints: ["Every animal has the same number of legs.", "Add the legs animal by animal."],
       steps: [`${n} animals with ${legs} legs each.`, `${Array(n).fill(legs).join(" + ")} = ${n * legs}.`]
     }),
@@ -103919,7 +103950,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.div.benches",
     skill: "G2_DIVISION_INTRO",
-    outcome: "G2.DIV.0",
+    outcome: "MATH.G2.NUMBER.DIVISION.b",
+    cskill: "MATH.G2.NUMBER.DIVISION.DIV_GROUPING_3",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103930,7 +103962,7 @@ var FAMILIES145 = [
     make: ({ per, k, tot }) => ({
       question: `${tot} learners sit ${per} to a bench. How many benches do they need?`,
       answer: k,
-      wrong: [[tot - per, `Take away ${per} again and again. Count how many times.`], [per, "That is how many sit on one bench. Count how many benches."], [k + 1, "Count in groups. Do not count one extra bench."]],
+      wrong: [[tot - per, `Take away ${per} again and again. Count how many times.`, "M_DIV2_SUBTRACTS_ONCE"], [per, "That is how many sit on one bench. Count how many benches.", "M_DIV2_GIVES_GROUP_SIZE"], [k + 1, "Count in groups. Do not count one extra bench.", "M_DIV2_ONE_EXTRA"]],
       hints: [`Put the learners in groups of ${per}.`, "Count the groups."],
       steps: [`Each bench takes ${per} learners.`, `${per} \xD7 ${k} = ${tot}, so ${k} benches.`]
     }),
@@ -103939,7 +103971,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.frac.half-of",
     skill: "G2_FRACTIONS",
-    outcome: "G2.FRAC.0",
+    outcome: "MATH.G2.NUMBER.FRACTIONS.c",
+    cskill: "MATH.G2.NUMBER.FRACTIONS.USE_FRACTIONS",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103949,7 +103982,7 @@ var FAMILIES145 = [
     make: ({ n, a, b }) => ({
       question: `${a.name} has ${n} mangoes. ${a.She} gives half of them to ${b.name}. How many mangoes does ${b.name} get?`,
       answer: n / 2,
-      wrong: [[n, "Half is not all of them. Share into two equal groups."], [n - 2, "Half means two equal groups. Share them one by one between two."], [n / 2 + 1, "Check the two groups are equal. One group has one too many."]],
+      wrong: [[n, "Half is not all of them. Share into two equal groups.", "M_FRUSE_HALF_IS_ALL"], [n - 2, "Half means two equal groups. Share them one by one between two.", "M_FRUSE_TAKES_TWO"], [n / 2 + 1, "Check the two groups are equal. One group has one too many.", "M_FRUSE_UNEQUAL_HALVES"]],
       hints: ["Half means two equal groups.", "Share the mangoes one by one into two groups."],
       steps: [`Half means two equal groups of the ${n} mangoes.`, `${n} \xF7 2 = ${n / 2}.`]
     }),
@@ -103976,7 +104009,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.cap.buckets-fill",
     skill: "G2_CAPACITY",
-    outcome: "G2.CAP.0",
+    outcome: "MATH.G2.MEASUR.CAPACITY.c",
+    cskill: "MATH.G2.MEASUR.CAPACITY.MEASURE_IN_LITRES",
     rung: 1,
     form: "word",
     draw: () => {
@@ -103986,7 +104020,7 @@ var FAMILIES145 = [
     make: ({ j, k, tot }) => ({
       question: `A bucket holds ${j} litres. A drum holds ${tot} litres. How many full buckets fill the drum?`,
       answer: k,
-      wrong: [[tot - j, `Count how many buckets of ${j} litres fit. Do not take away once.`], [j, "That is the size of one bucket. Count how many buckets."], [k + 1, "Count the buckets again. One bucket too many."]],
+      wrong: [[tot - j, `Count how many buckets of ${j} litres fit. Do not take away once.`, "M_LIT2_SUBTRACTS_ONCE"], [j, "That is the size of one bucket. Count how many buckets.", "M_LIT2_GIVES_CONTAINER_SIZE"], [k + 1, "Count the buckets again. One bucket too many.", "SLIP"]],
       hints: [`Each bucket pours ${j} litres.`, "Count in jumps until you reach the drum."],
       steps: [`Count in ${j}s up to ${tot}.`, `${j} \xD7 ${k} = ${tot}, so ${k} buckets.`]
     }),
@@ -104011,7 +104045,8 @@ var FAMILIES145 = [
   fam32({
     id: "g2.money.two-things",
     skill: "G2_MONEY",
-    outcome: "G2.MONEY.0",
+    outcome: "MATH.G2.MEASUR.MONEY.d",
+    cskill: "MATH.G2.MEASUR.MONEY.ADD_MONEY_100",
     rung: 1,
     form: "word",
     draw: () => {
@@ -104026,7 +104061,7 @@ var FAMILIES145 = [
       return {
         question: `${cap3(art(items9[0]))} costs ${sh(pa)}. ${cap3(art(items9[1]))} costs ${sh(pb)}. How much do they cost together?`,
         answer: pa + pb,
-        wrong: [[Math.abs(pa - pb), "Together means put the prices together. Add, do not take away."], [pa + pb + 10, "Check the tens when you add the ones. One ten too many was carried."], [pa + pb - 10, "Check the ones when you add them. A ten was left out."]],
+        wrong: [[Math.abs(pa - pb), "Together means put the prices together. Add, do not take away.", "M_MON2_SUBTRACTS"], [pa + pb + 10, "Check the tens when you add the ones. One ten too many was carried.", "M_MON2_CARRY_SLIP"], [pa + pb - 10, "Check the ones when you add them. A ten was left out.", "M_MON2_CARRY_SLIP"]],
         hints: ["Together means add the two prices.", "Add the tens, then add the ones."],
         steps: [`Add the two prices: ${pa} + ${pb}.`, `${pa} + ${pb} = ${pa + pb}, so ${sh(pa + pb)}.`]
       };
@@ -104036,7 +104071,10 @@ var FAMILIES145 = [
   fam32({
     id: "g2.shapes.tile-pattern",
     skill: "G2_SHAPES",
-    outcome: "G2.SHAPES.0",
+    outcome: "MATH.G2.GEOMET.SHAPES.c",
+    cskill: "MATH.G2.GEOMET.SHAPES.SHAPE_PATTERNS",
+    misMapped: false,
+    reveals: ["M_SPAT_REPEAT_UNIT"],
     rung: 2,
     form: "word",
     draw: () => {
@@ -104062,7 +104100,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.count.build-number",
     skill: "G3_COUNTING",
-    outcome: "G3.WHOLE.0",
+    outcome: "MATH.G3.NUMBER.WHOLE_NUMBERS.c",
+    cskill: "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -104075,7 +104114,7 @@ var FAMILIES145 = [
       story: false,
       question: `Write ${h} hundreds, ${t} tens and ${o} ones as a number.`,
       answer: 100 * h + 10 * t + o,
-      wrong: [[100 * h + o, "The tens were left out. Put each digit in its own place."], [100 * o + 10 * t + h, "The hundreds digit comes first. Check the order of the places."], [h + t + o, "That adds the digits. Each digit is worth its place: hundreds, tens, ones."]],
+      wrong: [[100 * h + o, "The tens were left out. Put each digit in its own place.", "M_PV_LEAVES_OUT_PLACE"], [100 * o + 10 * t + h, "The hundreds digit comes first. Check the order of the places.", "M_PV_REVERSED_ORDER"], [h + t + o, "That adds the digits. Each digit is worth its place: hundreds, tens, ones.", "M_PV_ADDS_DIGITS"]],
       hints: ["Write the hundreds digit first, then tens, then ones.", "Each place needs one digit."],
       steps: [`${h} hundreds is ${100 * h}, ${t} tens is ${10 * t}, ${o} ones is ${o}.`, `${100 * h} + ${10 * t} + ${o} = ${100 * h + 10 * t + o}.`]
     }),
@@ -104084,7 +104123,10 @@ var FAMILIES145 = [
   fam32({
     id: "g3.count.greatest-of-three",
     skill: "G3_COUNTING",
-    outcome: "G3.WHOLE.0",
+    outcome: "MATH.G3.NUMBER.WHOLE_NUMBERS.c",
+    cskill: "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+    misMapped: false,
+    reveals: ["M_PV_BIGGEST_DIGIT_WINS"],
     rung: 1,
     form: "direct",
     draw: () => {
@@ -104106,7 +104148,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.add.two-days",
     skill: "G3_ADD",
-    outcome: "G3.ADD.0",
+    outcome: "MATH.G3.NUMBER.ADDITION.d",
+    cskill: "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP",
     rung: 1,
     form: "word",
     draw: () => {
@@ -104116,7 +104159,7 @@ var FAMILIES145 = [
     make: ({ a, b, item }) => ({
       question: `A shop sells ${a} ${item} on Monday and ${b} on Tuesday. How many is that altogether?`,
       answer: a + b,
-      wrong: [[a + b - 10, "The ones made a ten. Did you carry it to the tens?"], [Math.abs(a - b), "Altogether means put the two days together. Add, do not take away."], [a + b + 10, "Check the carrying. Did you carry a ten twice?"]],
+      wrong: [[a + b - 10, "The ones made a ten. Did you carry it to the tens?", "M_ADD_FORGETS_CARRY_3D"], [Math.abs(a - b), "Altogether means put the two days together. Add, do not take away.", "M_ADD_SUBTRACTS_INSTEAD"], [a + b + 10, "Check the carrying. Did you carry a ten twice?", "M_ADD_CARRIES_TWICE"]],
       hints: ["Altogether means add the two numbers.", "Add the ones first, then the tens, then the hundreds."],
       steps: [`Add Monday and Tuesday: ${a} + ${b}.`, `${a} + ${b} = ${a + b}.`]
     }),
@@ -104125,7 +104168,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.sub.trip",
     skill: "G3_SUB",
-    outcome: "G3.SUB.0",
+    outcome: "MATH.G3.NUMBER.SUBTRACTION.c",
+    cskill: "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP",
     rung: 1,
     form: "word",
     draw: () => {
@@ -104138,7 +104182,7 @@ var FAMILIES145 = [
     make: ({ a, b, slip }) => ({
       question: `A school has ${a} learners. ${b} learners go on a trip. How many learners stay at school?`,
       answer: a - b,
-      wrong: [[slip, "You took the smaller digit from the bigger one each time. Borrow a ten when the top digit is too small."], [a + b, "Stay means the ones who are left. Take away, do not add."], [a - b - 10, "Check your borrowing. Did you borrow a ten twice?"]],
+      wrong: [[slip, "You took the smaller digit from the bigger one each time. Borrow a ten when the top digit is too small.", "M_SUB_SMALLER_FROM_LARGER"], [a + b, "Stay means the ones who are left. Take away, do not add.", "M_SUB_ADDS_INSTEAD"], [a - b - 10, "Check your borrowing. Did you borrow a ten twice?", "M_SUB_BORROWS_TWICE"]],
       hints: ["Staying behind means the rest after the trip.", "Take the ones first. Borrow a ten if you need to."],
       steps: [`Take the trip learners from all learners: ${a} \u2212 ${b}.`, `${a} \u2212 ${b} = ${a - b}.`]
     }),
@@ -104147,7 +104191,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.mul.shelves",
     skill: "G3_MULTIPLY",
-    outcome: "G3.MUL.0",
+    outcome: "MATH.G3.NUMBER.MULTIPLICATION.b",
+    cskill: "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
     rung: 1,
     form: "word",
     draw: () => {
@@ -104157,7 +104202,7 @@ var FAMILIES145 = [
     make: ({ r, c: c19 }) => ({
       question: `A shop has ${r} shelves. Each shelf holds ${c19} tins. How many tins is that?`,
       answer: r * c19,
-      wrong: [[r + c19, "Do not add the two numbers. Equal groups mean multiply."], [r * c19 - c19, `Count the shelves again. There are ${r}, not one less.`], [r * c19 + r, `Check the table. Each of the ${r} shelves holds ${c19} tins.`]],
+      wrong: [[r + c19, "Do not add the two numbers. Equal groups mean multiply.", "M_MULT_ADDS_FACTORS"], [r * c19 - c19, `Count the shelves again. There are ${r}, not one less.`, "M_MULT_ONE_GROUP_SHORT"], [r * c19 + r, `Check the table. Each of the ${r} shelves holds ${c19} tins.`, "M_MULT_ONE_GROUP_EXTRA"]],
       hints: ["Each shelf holds the same number of tins.", `Use the ${c19} times table.`],
       steps: [`${r} shelves with ${c19} tins each.`, `${r} \xD7 ${c19} = ${r * c19}.`]
     }),
@@ -104166,7 +104211,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.mul.buy-many",
     skill: "G3_MULTIPLY",
-    outcome: "G3.MUL.0",
+    outcome: "MATH.G3.NUMBER.MULTIPLICATION.b",
+    cskill: "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
     rung: 2,
     form: "word",
     draw: () => {
@@ -104176,7 +104222,7 @@ var FAMILIES145 = [
     make: ({ pr: pr2, n, p }) => ({
       question: `A mandazi costs ${sh(pr2)}. ${p.name} buys ${n} mandazi. How much does ${p.she} pay?`,
       answer: pr2 * n,
-      wrong: [[pr2 + n, "Do not add the price and the number. Each mandazi costs the same, so multiply."], [pr2 * n - pr2, `${p.She} buys ${n} mandazi, not one less.`], [pr2 * n + pr2, `${p.She} buys ${n} mandazi, not one more.`]],
+      wrong: [[pr2 + n, "Do not add the price and the number. Each mandazi costs the same, so multiply.", "M_MULT_ADDS_FACTORS"], [pr2 * n - pr2, `${p.She} buys ${n} mandazi, not one less.`, "M_MULT_ONE_GROUP_SHORT"], [pr2 * n + pr2, `${p.She} buys ${n} mandazi, not one more.`, "M_MULT_ONE_GROUP_EXTRA"]],
       hints: ["Every mandazi costs the same.", "Multiply the price by how many are bought."],
       steps: [`${n} mandazi at ${sh(pr2)} each.`, `${n} \xD7 ${pr2} = ${pr2 * n}, so ${sh(pr2 * n)}.`]
     }),
@@ -104185,7 +104231,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.div.rope-pieces",
     skill: "G3_DIVIDE",
-    outcome: "G3.DIV.0",
+    outcome: "MATH.G3.NUMBER.DIVISION.b",
+    cskill: "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
     rung: 1,
     form: "word",
     draw: () => {
@@ -104195,7 +104242,7 @@ var FAMILIES145 = [
     make: ({ s, k, tot }) => ({
       question: `A rope is ${tot} metres long. It is cut into pieces of ${s} metres each. How many pieces are there?`,
       answer: k,
-      wrong: [[tot - s, `Cutting one piece leaves ${tot - s} metres. Count how many pieces of ${s} metres fit.`], [s, "That is the length of one piece. Count how many pieces."], [k + 1, "Check with the table. One piece too many."]],
+      wrong: [[tot - s, `Cutting one piece leaves ${tot - s} metres. Count how many pieces of ${s} metres fit.`, "M_DIV_SUBTRACTS_ONCE"], [s, "That is the length of one piece. Count how many pieces.", "M_DIV_GIVES_GROUP_SIZE"], [k + 1, "Check with the table. One piece too many.", "M_DIV_ONE_EXTRA"]],
       hints: [`How many ${s}s make ${tot}?`, `Think of the ${s} times table.`],
       steps: [`Find how many ${s}s are in ${tot}.`, `${tot} \xF7 ${s} = ${k}.`]
     }),
@@ -104204,7 +104251,10 @@ var FAMILIES145 = [
   fam32({
     id: "g3.frac.biggest-piece",
     skill: "G3_FRACTIONS",
-    outcome: "G3.FRAC.0",
+    outcome: "MATH.G3.NUMBER.FRACTIONS.a",
+    cskill: "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS",
+    misMapped: false,
+    reveals: ["M_FRAC_MORE_PIECES_BIGGER"],
     rung: 2,
     form: "direct",
     draw: () => ({ big: Math.random() < 0.5, food: pick(["chapatis", "cakes", "watermelons", "pizzas"]) }),
@@ -104237,7 +104287,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.cap.pour-buckets",
     skill: "G3_CAPACITY",
-    outcome: "G3.CAP.0",
+    outcome: "MATH.G3.MEASUR.CAPACITY.b",
+    cskill: "MATH.G3.MEASUR.CAPACITY.ADD_LITRES",
     rung: 2,
     form: "word",
     draw: () => {
@@ -104247,7 +104298,7 @@ var FAMILIES145 = [
     make: ({ b, n, p }) => ({
       question: `A bucket holds ${b} litres. ${p.name} pours ${n} full buckets into a tank. How many litres are in the tank?`,
       answer: b * n,
-      wrong: [[b + n, "Do not add the two numbers. Each full bucket holds the same, so multiply."], [b * n - b, `${p.She} pours ${n} buckets, not one less.`], [b * n + b, `${p.She} pours ${n} buckets, not one more.`]],
+      wrong: [[b + n, "Do not add the two numbers. Each full bucket holds the same, so multiply.", "M_CAP_ADDS_COUNT_TO_LITRES"], [b * n - b, `${p.She} pours ${n} buckets, not one less.`, "M_CADD_ONE_CONTAINER_SHORT"], [b * n + b, `${p.She} pours ${n} buckets, not one more.`, "M_CADD_ONE_CONTAINER_SHORT"]],
       hints: ["Each bucket pours the same amount.", "Multiply the litres in one bucket by the number of buckets."],
       steps: [`${n} buckets with ${b} litres each.`, `${n} \xD7 ${b} = ${b * n} litres.`]
     }),
@@ -104275,7 +104326,8 @@ var FAMILIES145 = [
   fam32({
     id: "g3.money.bread-and-milk",
     skill: "G3_MONEY",
-    outcome: "G3.MONEY.0",
+    outcome: "MATH.G3.MEASUR.MONEY.g",
+    cskill: "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE",
     rung: 2,
     form: "word",
     draw: () => {
@@ -104286,7 +104338,7 @@ var FAMILIES145 = [
     make: ({ x, y, p }) => ({
       question: `${p.name} buys bread for ${sh(x)} and milk for ${sh(y)}. ${p.She} pays with ${sh(200)}. How much change does ${p.she} get?`,
       answer: 200 - x - y,
-      wrong: [[x + y, "That is the cost of both. The change is what comes back from 200."], [200 - x, `The milk must be paid for too.`], [200 - y, `The bread must be paid for too.`]],
+      wrong: [[x + y, "That is the cost of both. The change is what comes back from 200.", "M_MONEY_GIVES_COST_AS_CHANGE"], [200 - x, `The milk must be paid for too.`, "M_MONEY_PAYS_ONE_ITEM"], [200 - y, `The bread must be paid for too.`, "M_MONEY_PAYS_ONE_ITEM"]],
       hints: ["First find the cost of both things.", "Then take that from the money paid."],
       steps: [`Cost: ${x} + ${y} = ${x + y}.`, `Change: ${200} \u2212 ${x + y} = ${200 - x - y}, so ${sh(200 - x - y)}.`]
     }),
@@ -104295,7 +104347,10 @@ var FAMILIES145 = [
   fam32({
     id: "g3.position.turn",
     skill: "G3_POSITION",
-    outcome: "G3.POSITION.0",
+    outcome: "MATH.G3.GEOMET.POSITION_AND_DIRECTION.c",
+    cskill: "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT",
+    misMapped: false,
+    reveals: ["M_TURN_LEFT_RIGHT_SWAPPED", "M_TURN_HALF_TURN"],
     rung: 1,
     form: "word",
     draw: () => ({ f: randInt(0, 3), right: Math.random() < 0.5, p: person() }),
@@ -105874,7 +105929,10 @@ var SKILLS_G4 = {
       "G4_PLACE_VALUE"
     ],
     "primary": "G4_PLACE_VALUE",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000"
+    ],
     "mis": [
       "M_PV_GIVES_TOTAL_VALUE",
       "M_PV_COUNT_FROM_LEFT",
@@ -105894,7 +105952,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_PLACE_VALUE",
     "pre": [
-      "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
+      "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10"
     ],
     "mis": [
       "M_TV_FACE_VALUE",
@@ -105915,7 +105974,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_NUMBER_WORDS",
     "pre": [
-      "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
+      "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000"
     ],
     "mis": [
       "M_SYM_JOIN_PARTS",
@@ -105935,7 +105995,10 @@ var SKILLS_G4 = {
       "G4_NUMBER_WORDS"
     ],
     "primary": "G4_NUMBER_WORDS",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000"
+    ],
     "mis": [
       "M_WORDS_HUNDRED_DROPPED",
       "M_WORDS_SPELLING_TY",
@@ -105954,7 +106017,10 @@ var SKILLS_G4 = {
       "G4_ORDER_ROUND"
     ],
     "primary": "G4_ORDER_ROUND",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+    ],
     "mis": [
       "M_ORDER_FIRST_DIGIT_ONLY",
       "M_ORDER_DIRECTION",
@@ -105973,7 +106039,10 @@ var SKILLS_G4 = {
       "G4_ORDER_ROUND"
     ],
     "primary": "G4_ORDER_ROUND",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS"
+    ],
     "mis": [
       "M_ROUND_DROP_ONES",
       "M_ROUND_NO_CARRY",
@@ -105992,7 +106061,10 @@ var SKILLS_G4 = {
       "G4_FACTORS_MULTIPLES"
     ],
     "primary": "G4_FACTORS_MULTIPLES",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+      "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D"
+    ],
     "mis": [
       "M_FACTOR_ONLY_ITSELF",
       "M_FACTOR_MULTIPLE_SWAP",
@@ -106011,7 +106083,10 @@ var SKILLS_G4 = {
       "G4_FACTORS_MULTIPLES"
     ],
     "primary": "G4_FACTORS_MULTIPLES",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+    ],
     "mis": [
       "M_MULTIPLE_FACTOR_SWAP",
       "M_MULTIPLE_STARTS_AT_ZERO_OR_ONE",
@@ -106030,7 +106105,10 @@ var SKILLS_G4 = {
       "G4_ODD_EVEN"
     ],
     "primary": "G4_ODD_EVEN",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+      "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D"
+    ],
     "mis": [
       "M_EVEN_ODD_TENS_DIGIT",
       "M_ZERO_NOT_EVEN",
@@ -106051,7 +106129,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_ODD_EVEN",
     "pre": [
-      "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100"
+      "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000"
     ],
     "mis": [
       "M_PATTERN_ADD_ONE",
@@ -106071,7 +106150,10 @@ var SKILLS_G4 = {
       "G4_ROMAN_NUMERALS"
     ],
     "primary": "G4_ROMAN_NUMERALS",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+    ],
     "mis": [
       "M_ROMAN_IV_AS_6",
       "M_ROMAN_IIII_FOR_4",
@@ -106092,6 +106174,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_ADD",
     "pre": [
+      "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP",
       "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
     ],
     "mis": [
@@ -106113,7 +106196,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_ADD",
     "pre": [
-      "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
+      "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+      "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP"
     ],
     "mis": [
       "M_ADD_CARRY_ONLY_ONCE",
@@ -106156,7 +106240,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_ADD",
     "pre": [
-      "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
+      "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+      "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000"
     ],
     "mis": [
       "M_PAT_ADD_ONE_STEP_ONLY",
@@ -106177,6 +106262,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_SUB",
     "pre": [
+      "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP",
       "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
     ],
     "mis": [
@@ -106198,6 +106284,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_SUB",
     "pre": [
+      "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP",
       "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP"
     ],
     "mis": [
@@ -106241,7 +106328,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_SUB",
     "pre": [
-      "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP"
+      "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
+      "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000"
     ],
     "mis": [
       "M_SUBPAT_ADDS",
@@ -106261,7 +106349,10 @@ var SKILLS_G4 = {
       "G4_MULTIPLY"
     ],
     "primary": "G4_MULTIPLY",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
+    ],
     "mis": [
       "M_MUL_TENS_ZERO_FORGOTTEN",
       "M_MUL_TENS_ZERO_TWICE",
@@ -106281,7 +106372,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_MULTIPLY",
     "pre": [
-      "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS"
+      "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
     ],
     "mis": [
       "M_MUL_ONES_ONLY",
@@ -106345,7 +106437,10 @@ var SKILLS_G4 = {
       "G4_MULTIPLY"
     ],
     "primary": "G4_MULTIPLY",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
+    ],
     "mis": [
       "M_MULPAT_ADD_STEP",
       "M_MULPAT_SKIP_TABLE",
@@ -106364,7 +106459,10 @@ var SKILLS_G4 = {
       "G4_DIVIDE"
     ],
     "primary": "G4_DIVIDE",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
+    ],
     "mis": [
       "M_DIV_LARGER_BY_SMALLER",
       "M_DIV_ZERO_DROPPED",
@@ -106384,7 +106482,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_DIVIDE",
     "pre": [
-      "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER"
+      "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
+      "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION"
     ],
     "mis": [
       "M_DIV_REMAINDER_TOO_BIG",
@@ -106404,7 +106503,10 @@ var SKILLS_G4 = {
       "G4_DIVIDE"
     ],
     "primary": "G4_DIVIDE",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+      "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION"
+    ],
     "mis": [
       "M_RELATE_WRONG_FACT",
       "M_RELATE_CHECK_ADDS",
@@ -106423,7 +106525,10 @@ var SKILLS_G4 = {
       "G4_FRACTIONS"
     ],
     "primary": "G4_FRACTIONS",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+      "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP"
+    ],
     "mis": [
       "M_FRAC_SWAP_NUM_DEN",
       "M_FRAC_TWO_NUMBERS_SEPARATE",
@@ -106443,7 +106548,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_FRACTIONS",
     "pre": [
-      "MATH.G4.NUMBER.FRACTIONS.NUM_DEN"
+      "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+      "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE"
     ],
     "mis": [
       "M_FRAC_SHADED_OVER_UNSHADED",
@@ -106464,7 +106570,9 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_FRACTIONS",
     "pre": [
-      "MATH.G4.NUMBER.FRACTIONS.NUM_DEN"
+      "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+      "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+      "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D"
     ],
     "mis": [
       "M_FRAC_GROUP_PART_OVER_OTHER",
@@ -106638,7 +106746,10 @@ var SKILLS_G4 = {
       "G4_LETTERS"
     ],
     "primary": "G4_LETTERS",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP",
+      "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER"
+    ],
     "mis": [
       "M_LET_LETTER_IS_ITS_ALPHABET_POSITION",
       "M_LET_LETTER_IS_OBJECT",
@@ -106660,7 +106771,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LETTERS",
     "pre": [
-      "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT"
+      "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
     ],
     "mis": [
       "M_EXP_NOT_NUMBER_WORD",
@@ -106681,7 +106793,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LETTERS",
     "pre": [
-      "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS"
+      "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
+      "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP"
     ],
     "mis": [
       "M_SIM_ADD_UNLIKE",
@@ -106701,7 +106814,10 @@ var SKILLS_G4 = {
       "G4_LENGTH"
     ],
     "primary": "G4_LENGTH",
-    "pre": [],
+    "pre": [
+      "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
+      "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES"
+    ],
     "mis": [
       "M_LEN_WRONG_UNIT",
       "M_LEN_CM_AS_M_SIZE",
@@ -106721,7 +106837,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LENGTH",
     "pre": [
-      "MATH.G4.MEASUR.LENGTH.CM_UNIT"
+      "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+      "MATH.G3.MEASUR.LENGTH.MEASURE_METRES"
     ],
     "mis": [
       "M_LEN_NOT_FROM_ZERO",
@@ -106742,6 +106859,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LENGTH",
     "pre": [
+      "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
       "MATH.G4.MEASUR.LENGTH.CM_UNIT"
     ],
     "mis": [
@@ -106763,7 +106881,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LENGTH",
     "pre": [
-      "MATH.G4.MEASUR.LENGTH.M_CM_RELATION"
+      "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10"
     ],
     "mis": [
       "M_CONV_ADD_DIGITS",
@@ -106786,6 +106905,7 @@ var SKILLS_G4 = {
     "primary": "G4_LENGTH",
     "pre": [
       "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+      "MATH.G3.MEASUR.LENGTH.ADD_METRES",
       "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
     ],
     "mis": [
@@ -106807,7 +106927,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LENGTH",
     "pre": [
-      "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM"
+      "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
+      "MATH.G3.MEASUR.LENGTH.ADD_METRES"
     ],
     "mis": [
       "M_LADD_NO_REGROUP",
@@ -106828,7 +106949,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LENGTH",
     "pre": [
-      "MATH.G4.MEASUR.LENGTH.LENGTH_ADD"
+      "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+      "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES"
     ],
     "mis": [
       "M_LSUB_SMALLER_FROM_LARGER",
@@ -106849,7 +106971,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_LENGTH",
     "pre": [
-      "MATH.G4.MEASUR.LENGTH.LENGTH_ADD"
+      "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
     ],
     "mis": [
       "M_LMUL_NO_REGROUP",
@@ -106892,7 +107015,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_AREA",
     "pre": [
-      "MATH.G4.MEASUR.AREA.AREA_COUNT"
+      "MATH.G4.MEASUR.AREA.AREA_COUNT",
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES"
     ],
     "mis": [
       "M_AREA_LONGER_IS_LARGER",
@@ -106912,7 +107036,10 @@ var SKILLS_G4 = {
       "G4_AREA"
     ],
     "primary": "G4_AREA",
-    "pre": [],
+    "pre": [
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
+    ],
     "mis": [
       "M_AREA_COUNTS_EDGE_ONLY",
       "M_AREA_COUNTS_TWICE",
@@ -106933,7 +107060,8 @@ var SKILLS_G4 = {
     "primary": "G4_AREA",
     "pre": [
       "MATH.G4.MEASUR.AREA.AREA_COUNT",
-      "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP"
+      "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
     ],
     "mis": [
       "M_AREA_ADDS_ROWS_COLS",
@@ -106953,7 +107081,10 @@ var SKILLS_G4 = {
       "G4_VOLUME"
     ],
     "primary": "G4_VOLUME",
-    "pre": [],
+    "pre": [
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+    ],
     "mis": [
       "M_VOL_CUBE_CUBOID_SWAP",
       "M_VOL_COUNT_VISIBLE_ONLY",
@@ -107016,7 +107147,10 @@ var SKILLS_G4 = {
       "G4_CAPACITY"
     ],
     "primary": "G4_CAPACITY",
-    "pre": [],
+    "pre": [
+      "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES",
+      "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES"
+    ],
     "mis": [
       "M_CAP_MASS_CONFUSED",
       "M_CAP_READS_JUG_TOP",
@@ -107058,6 +107192,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_CAPACITY",
     "pre": [
+      "MATH.G3.MEASUR.CAPACITY.ADD_LITRES",
       "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
     ],
     "mis": [
@@ -107080,6 +107215,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_CAPACITY",
     "pre": [
+      "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES",
       "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP"
     ],
     "mis": [
@@ -107100,7 +107236,10 @@ var SKILLS_G4 = {
       "G4_MASS"
     ],
     "primary": "G4_MASS",
-    "pre": [],
+    "pre": [
+      "MATH.G3.MEASUR.MASS.MEASURE_KG",
+      "MATH.G3.MEASUR.MASS.ESTIMATE_KG"
+    ],
     "mis": [
       "M_MASS_LARGER_IS_HEAVIER",
       "M_MASS_CAPACITY_UNIT",
@@ -107142,6 +107281,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_MASS",
     "pre": [
+      "MATH.G3.MEASUR.MASS.ADD_KG",
       "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
     ],
     "mis": [
@@ -107164,6 +107304,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_MASS",
     "pre": [
+      "MATH.G3.MEASUR.MASS.SUBTRACT_KG",
       "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP"
     ],
     "mis": [
@@ -107184,7 +107325,10 @@ var SKILLS_G4 = {
       "G4_TIME"
     ],
     "primary": "G4_TIME",
-    "pre": [],
+    "pre": [
+      "MATH.G3.MEASUR.TIME.TELL_PAST_TO",
+      "MATH.G3.MEASUR.TIME.READ_DIGITAL"
+    ],
     "mis": [
       "M_TIME_HANDS_SWAPPED",
       "M_TIME_PAST_TO_SWAP",
@@ -107204,7 +107348,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_TIME",
     "pre": [
-      "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM"
+      "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+      "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS"
     ],
     "mis": [
       "M_TIME_AMPM_WRONG",
@@ -107225,6 +107370,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_TIME",
     "pre": [
+      "MATH.G3.MEASUR.TIME.MINUTE_UNIT",
       "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS"
     ],
     "mis": [
@@ -107269,7 +107415,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_TIME",
     "pre": [
-      "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM"
+      "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+      "MATH.G3.MEASUR.TIME.ADD_TIME"
     ],
     "mis": [
       "M_TIME_DURATION_END_TIME",
@@ -107291,6 +107438,7 @@ var SKILLS_G4 = {
     "primary": "G4_TIME",
     "pre": [
       "MATH.G4.MEASUR.TIME.RECORD_DURATION",
+      "MATH.G3.MEASUR.TIME.SUBTRACT_TIME",
       "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES"
     ],
     "mis": [
@@ -107312,7 +107460,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_TIME",
     "pre": [
-      "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM"
+      "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+      "MATH.G3.MEASUR.TIME.READ_DIGITAL"
     ],
     "mis": [
       "M_TIME_DIGITAL_BASE_10",
@@ -107333,6 +107482,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_MONEY",
     "pre": [
+      "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS",
       "MATH.G4.MEASUR.LENGTH.M_CM_RELATION"
     ],
     "mis": [
@@ -107354,6 +107504,7 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_MONEY",
     "pre": [
+      "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE",
       "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS"
     ],
     "mis": [
@@ -107398,7 +107549,10 @@ var SKILLS_G4 = {
       "G4_POSITION"
     ],
     "primary": "G4_POSITION",
-    "pre": [],
+    "pre": [
+      "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT",
+      "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT"
+    ],
     "mis": [
       "M_TURN_CLOCKWISE_AS_LEFT",
       "M_TURN_VIEWED_FROM_BEHIND",
@@ -107419,7 +107573,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_POSITION",
     "pre": [
-      "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI"
+      "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
+      "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT"
     ],
     "mis": [
       "M_TURN_QUARTER_AS_HALF",
@@ -107439,7 +107594,10 @@ var SKILLS_G4 = {
       "G4_ANGLES"
     ],
     "primary": "G4_ANGLES",
-    "pre": [],
+    "pre": [
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+      "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT"
+    ],
     "mis": [
       "M_ANGLE_ARM_LENGTH",
       "M_ANGLE_IS_THE_LINE",
@@ -107459,7 +107617,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_ANGLES",
     "pre": [
-      "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT"
+      "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES"
     ],
     "mis": [
       "M_ANGLE_CURVED_HAS_ANGLE",
@@ -107501,7 +107660,10 @@ var SKILLS_G4 = {
       "G4_PLANE_FIGURES"
     ],
     "primary": "G4_PLANE_FIGURES",
-    "pre": [],
+    "pre": [
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+      "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED"
+    ],
     "mis": [
       "M_SHAPE_ORIENTATION",
       "M_SHAPE_OVAL_CIRCLE",
@@ -107521,7 +107683,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_PLANE_FIGURES",
     "pre": [
-      "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
+      "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+      "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED"
     ],
     "mis": [
       "M_DRAW_UNEQUAL_SQUARE",
@@ -107543,7 +107706,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_PLANE_FIGURES",
     "pre": [
-      "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
+      "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+      "MATH.G3.GEOMET.SHAPES.NAME_SHAPES"
     ],
     "mis": [
       "M_SYM_DIAGONAL_RECTANGLE",
@@ -107564,7 +107728,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_PLANE_FIGURES",
     "pre": [
-      "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
+      "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+      "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED"
     ],
     "mis": [
       "M_SPAT_REPEAT_BROKEN",
@@ -107607,7 +107772,10 @@ var SKILLS_G4 = {
       "G4_DATA"
     ],
     "primary": "G4_DATA",
-    "pre": [],
+    "pre": [
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+      "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
+    ],
     "mis": [
       "M_DATA_TALLY_ONES",
       "M_DATA_WRONG_TOOL",
@@ -107628,7 +107796,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_DATA",
     "pre": [
-      "MATH.G4.DATA_H.DATA.DATA_MATERIALS"
+      "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
     ],
     "mis": [
       "M_COLLECT_COUNTS_TWICE",
@@ -107651,7 +107820,8 @@ var SKILLS_G4 = {
     ],
     "primary": "G4_DATA",
     "pre": [
-      "MATH.G4.DATA_H.DATA.DATA_MATERIALS"
+      "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+      "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
     ],
     "mis": [
       "M_TABLE_TALLY_COUNTS_BARS",
