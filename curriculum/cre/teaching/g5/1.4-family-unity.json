@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CREATI.FAMILY_UNITY",
+ "title": "Family Unity",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY",
+   "key_step": "The child describes why family unity matters, names challenges families face (quarrels, money worries, distance, alcohol), and outlines what a child can do (obey, help with chores, forgive, pray) as Colossians 3:13-14 teaches.",
+   "floor": {
+    "prerequisite": "Knows why we forgive.",
+    "question": "What does Matthew 5:39 teach about revenge?",
+    "answer": "Do not pay back evil with evil"
+   },
+   "representations": [
+    "a family hand: each finger a member, the palm love",
+    "Colossians 3:14 written large",
+    "challenge cards"
+   ],
+   "steps": [
+    "Say what unity is: living in love, helping and forgiving.",
+    "Name a challenge.",
+    "Name what a child can do about it.",
+    "Read Colossians 3:14: love binds."
+   ],
+   "contexts": [
+    "a family meal",
+    "siblings quarrelling over the TV",
+    "a parent working far away"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a hand and write \"love\" on the palm."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one finger.",
+     "say": "What can a child do to help the family stay united?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name a way."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a way on each finger."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_FU_NO_QUARREL",
+     "listen_for": [
+      "Never disagreeing about anything"
+     ],
+     "ask": "What is family unity?",
+     "repair": "Read Colossians 3:13-14: bear with each other and forgive. That assumes there are things to forgive."
+    },
+    {
+     "code": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_FU_PARENTS_ONLY",
+     "listen_for": [
+      "Only the parents"
+     ],
+     "ask": "Who can help to make a family happy?",
+     "repair": "List three things a child can do: chores, kind words, obedience."
+    },
+    {
+     "code": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_FU_FORGIVE_PRETEND",
+     "listen_for": [
+      "To pretend nothing wrong was done"
+     ],
+     "ask": "What does it mean to forgive a family member?",
+     "repair": "Say what Colossians 3:13 asks: forgive as the Lord forgave you."
+    },
+    {
+     "code": "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY.M_C5_FU_RICH_HAPPY",
+     "listen_for": [
+      "Having a lot of money"
+     ],
+     "ask": "What makes a family united?",
+     "repair": "Read Colossians 3:13-14: what binds a family is love. List things that cost nothing and build unity."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Does a united family never disagree?",
+     "answer": "No: it forgives and works it out",
+     "shows": "meaning"
+    },
+    {
+     "question": "Who can help make a family happy?",
+     "answer": "Every member, including children",
+     "shows": "contribution"
+    }
+   ]
+  }
+ ]
+}

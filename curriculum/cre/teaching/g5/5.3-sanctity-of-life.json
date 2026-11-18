@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CHRIST.SANCTITY_OF_LIFE",
+ "title": "Sanctity of Life",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "If a child speaks of wanting to hurt himself or someone else, stop the lesson plan and follow the safeguarding policy.",
+ "skills": [
+  {
+   "skill": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE",
+   "key_step": "The child says God is the only source of life (Genesis 1:27, 9:6), that we must not take human life (Exodus 20:13), names causes of violence against life (anger, revenge, drugs), and ways to cope with hard feelings (walk away, breathe, talk to a trusted adult, pray).",
+   "floor": {
+    "prerequisite": "Knows how to cope with anger.",
+    "question": "What does Ephesians 4:26 say about anger?",
+    "answer": "Do not sin when you are angry"
+   },
+   "representations": [
+    "Genesis 1:27 and Exodus 20:13 written large",
+    "a calm-down plan: stop, breathe, walk away, tell",
+    "situation cards"
+   ],
+   "steps": [
+    "God gives life.",
+    "Every person is made in God's image.",
+    "Do not murder (Exodus 20:13).",
+    "When angry: stop, breathe, walk away, tell."
+   ],
+   "contexts": [
+    "a fight at break time",
+    "a quarrel at home",
+    "news of violence in the community"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Exodus 20:13 and draw a calm-down plan."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the plan.",
+     "say": "What can you do when you feel very angry?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to name a safe way."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write a trusted adult's name at the end."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SL_ANIMALS",
+     "listen_for": [
+      "Animals must never be used"
+     ],
+     "ask": "What does it mean that human life is sacred?",
+     "repair": "Read Genesis 1:27 and 9:6."
+    },
+    {
+     "code": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SL_ANGER",
+     "listen_for": [
+      "Hit back so that the other child learns"
+     ],
+     "ask": "What is a safe way to cope with anger?",
+     "repair": "Role-play walking away."
+    },
+    {
+     "code": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_SL_SOURCE",
+     "listen_for": [
+      "Only a person's parents"
+     ],
+     "ask": "According to Christian teaching, who is the source of life?",
+     "repair": "Read Genesis 2:7."
+    },
+    {
+     "code": "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE.M_C5_SL_SOME_LIVES",
+     "listen_for": [
+      "Only healthy and rich people"
+     ],
+     "ask": "Whose life is sacred in God's eyes?",
+     "repair": "Read Genesis 1:27: every person is made in God's image. Name people the world may overlook."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who is the source of life?",
+     "answer": "God",
+     "shows": "source"
+    },
+    {
+     "question": "Name a safe way to cope with anger.",
+     "answer": "Walk away and tell a trusted adult",
+     "shows": "coping"
+    }
+   ]
+  }
+ ]
+}

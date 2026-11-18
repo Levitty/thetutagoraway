@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT",
+ "title": "Sermon on the Mount",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT",
+   "key_step": "The child lists the virtues and promises of Matthew 5:7-9 (the merciful will be shown mercy, the pure in heart will see God, the peacemakers will be called children of God) and applies each at home and school.",
+   "floor": {
+    "prerequisite": "Knows Matthew 5:39 on not taking revenge.",
+    "question": "What does Matthew 5:39 teach?",
+    "answer": "Do not pay back evil with evil"
+   },
+   "representations": [
+    "three cards: merciful, pure in heart, peacemakers",
+    "promise cards to match",
+    "situation cards"
+   ],
+   "steps": [
+    "Read Matthew 5:7-9.",
+    "Match each blessing to its promise.",
+    "Pick a situation.",
+    "Say which virtue fits."
+   ],
+   "contexts": [
+    "two friends quarrelling at break",
+    "a classmate who wronged you says sorry",
+    "being honest when no one checks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write three blessings in a column."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"peacemakers\".",
+     "say": "What is promised to them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say called children of God."
+    },
+    {
+     "beat": "reveal",
+     "do": "Match the other promises."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_SM_PEACE_NO_FIGHT",
+     "listen_for": [
+      "Takes the side of the stronger friend"
+     ],
+     "ask": "What does a peacemaker do when two friends quarrel?",
+     "repair": "Ask what Matthew 5:9 says peacemakers will be called."
+    },
+    {
+     "code": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_SM_PURE_CLEAN",
+     "listen_for": [
+      "A clean body and neat clothes"
+     ],
+     "ask": "What is a pure heart?",
+     "repair": "Read Matthew 5:8: \"see God\"."
+    },
+    {
+     "code": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_SM_MERCY_WEAK",
+     "listen_for": [
+      "To be weak and let everyone win"
+     ],
+     "ask": "What does it mean to be merciful?",
+     "repair": "Give the example of a prefect who forgives a first mistake."
+    },
+    {
+     "code": "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT.M_C5_SM_REWARD_MIX",
+     "listen_for": [
+      "They will see God"
+     ],
+     "ask": "What does Matthew 5:9 promise the peacemakers?",
+     "repair": "Match three cards to three promises: merciful, mercy; pure in heart, see God; peacemakers, children of God."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does a peacemaker do when friends quarrel?",
+     "answer": "Helps them talk and make up",
+     "shows": "application"
+    },
+    {
+     "question": "What is promised to the pure in heart?",
+     "answer": "They will see God",
+     "shows": "promise"
+    }
+   ]
+  }
+ ]
+}

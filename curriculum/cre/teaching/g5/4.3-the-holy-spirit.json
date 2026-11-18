@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_CH.THE_HOLY_SPIRIT",
+ "title": "The Holy Spirit",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT",
+   "key_step": "The child lists the nine gifts of the Spirit (1 Corinthians 12:8-10: wisdom, knowledge, faith, healing, miracles, prophecy, discerning spirits, tongues, interpretation), tells them from the nine fruit (Galatians 5:22-23), and explains how the fruit bring harmony.",
+   "floor": {
+    "prerequisite": "Knows the nine fruit of the Spirit.",
+    "question": "Name three fruit of the Spirit.",
+    "answer": "love, joy, peace (any three)"
+   },
+   "representations": [
+    "two lists: gifts and fruit",
+    "1 Corinthians 12:7 written large",
+    "sorting cards"
+   ],
+   "steps": [
+    "Read 1 Corinthians 12:8-10: the gifts.",
+    "Read Galatians 5:22-23: the fruit.",
+    "Sort cards into gifts and fruit.",
+    "Say how one fruit brings harmony."
+   ],
+   "contexts": [
+    "a church choir working together",
+    "a family with patience during hard times",
+    "a Sunday school with kindness"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two baskets: gifts and fruit."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"prophecy\".",
+     "say": "Which basket: gift or fruit?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say gift."
+    },
+    {
+     "beat": "reveal",
+     "do": "Sort the other cards together."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_HS_MIX",
+     "listen_for": [
+      "Prophecy"
+     ],
+     "ask": "Which one is a fruit of the Holy Spirit?",
+     "repair": "Make two lists, gifts from 1 Corinthians 12 and fruit from Galatians 5."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_HS_COUNT",
+     "listen_for": [
+      "Five"
+     ],
+     "ask": "How many gifts of the Holy Spirit are listed in 1 Corinthians 12:1-11?",
+     "repair": "Count the gifts in verses 8 to 10 together."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_HS_HARMONY",
+     "listen_for": [
+      "It makes them leave quarrels unsolved"
+     ],
+     "ask": "How does the fruit of patience help Christians?",
+     "repair": "Ask what a patient friend does when you make a mistake."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT.M_C5_HS_GIFTS_FEW",
+     "listen_for": [
+      "Only pastors"
+     ],
+     "ask": "To whom does the Spirit give gifts, according to 1 Corinthians 12:7?",
+     "repair": "Read 1 Corinthians 12:7 and 12:11: to each one, as the Spirit decides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is kindness a gift or a fruit of the Spirit?",
+     "answer": "A fruit",
+     "shows": "sorting"
+    },
+    {
+     "question": "How many gifts are listed in 1 Corinthians 12:8-10?",
+     "answer": "Nine",
+     "shows": "count"
+    }
+   ]
+  }
+ ]
+}

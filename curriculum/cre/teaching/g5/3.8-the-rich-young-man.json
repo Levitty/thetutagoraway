@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN",
+ "title": "The Rich Young Man",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN",
+   "key_step": "The child retells Matthew 19:16-22: a young man asks what good thing gives eternal life, says he has kept the commandments, Jesus tells him to sell his possessions, give to the poor and follow him, and he goes away sad because he has great wealth; lessons: put God first, share.",
+   "floor": {
+    "prerequisite": "Knows ways of helping the needy.",
+    "question": "Name one way to help a needy person.",
+    "answer": "Share food (clothes, time)"
+   },
+   "representations": [
+    "a scale: wealth on one side, following Jesus on the other",
+    "Matthew 19:21 written large",
+    "a lessons list"
+   ],
+   "steps": [
+    "The young man asks about eternal life.",
+    "Keep the commandments.",
+    "Sell, give to the poor, follow me.",
+    "He goes away sad."
+   ],
+   "contexts": [
+    "sharing pocket money",
+    "giving clothes you no longer wear",
+    "choosing church over a game"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a scale with \"wealth\" and \"follow Jesus\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the heavy side.",
+     "say": "Why did the young man go away sad?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he had great wealth."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write three lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_RY_SOLD",
+     "listen_for": [
+      "He sold everything and followed Jesus"
+     ],
+     "ask": "What did the young man do when Jesus told him to sell his things?",
+     "repair": "Read Matthew 19:22."
+    },
+    {
+     "code": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_RY_RICH_SIN",
+     "listen_for": [
+      "That it is wrong to own anything"
+     ],
+     "ask": "What was Jesus showing the young man?",
+     "repair": "Ask whether Jesus told everyone to sell everything."
+    },
+    {
+     "code": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_RY_OLD",
+     "listen_for": [
+      "How he could get more money"
+     ],
+     "ask": "What did the young man ask Jesus?",
+     "repair": "Read Matthew 19:16."
+    },
+    {
+     "code": "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN.M_C5_RY_COMMANDMENTS_ENOUGH",
+     "listen_for": [
+      "Nothing more"
+     ],
+     "ask": "The young man said he had kept the commandments. What did Jesus then ask of him (Matthew 19:21)?",
+     "repair": "Read 19:20-21: \"What do I still lack?\" Jesus showed him what held his heart."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What did the young man do after Jesus spoke?",
+     "answer": "Went away sad",
+     "shows": "response"
+    },
+    {
+     "question": "What did Jesus show him?",
+     "answer": "His wealth held his heart; put God first",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CHRIST.HUMAN_SEXUALITY",
+ "title": "Human Sexuality",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Taught with a trusted adult always named and in the school's own agreed words for body changes; a CRE teacher and the school counsellor read this file first.",
+ "skills": [
+  {
+   "skill": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE",
+   "key_step": "The child names normal changes of adolescence in boys and girls, ways to cope (hygiene, asking a trusted adult, rest), tells healthy friendships (open, respectful, parents know) from unhealthy ones (secret, gifts for favours, pressure), and says 1 Corinthians 6:18-19 guides Christians to honour God with the body.",
+   "floor": {
+    "prerequisite": "Knows the body is a temple of the Holy Spirit.",
+    "question": "What does 1 Corinthians 6:19 call your body?",
+    "answer": "A temple of the Holy Spirit"
+   },
+   "representations": [
+    "a chart of normal changes",
+    "two columns: healthy and unhealthy friendship",
+    "1 Corinthians 6:19 written large"
+   ],
+   "steps": [
+    "Changes are normal and God-given.",
+    "Ask a trusted adult.",
+    "Healthy friendships are open and respectful.",
+    "Secret gifts and pressure are warning signs: tell."
+   ],
+   "contexts": [
+    "a health talk at school",
+    "a girl starting her periods",
+    "an older person giving secret gifts"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: healthy and unhealthy."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the card \"keeps it secret from parents\".",
+     "say": "Which column does this go in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say unhealthy."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write whom to tell at the bottom."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_SHAME",
+     "listen_for": [
+      "Ashamed, and tell no one"
+     ],
+     "ask": "How should a child feel about the changes of adolescence?",
+     "repair": "Say that all adults went through the same changes."
+    },
+    {
+     "code": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_FRIEND_INFO",
+     "listen_for": [
+      "From friends and anything on the internet"
+     ],
+     "ask": "Where is the best place to find the right information about growing up?",
+     "repair": "Compare a friend's guess with a nurse's answer."
+    },
+    {
+     "code": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_SECRET",
+     "listen_for": [
+      "The friend says to keep it secret and gives gifts for favours"
+     ],
+     "ask": "Which is a sign of an unhealthy friendship?",
+     "repair": "List warning signs: secrecy, pressure, gifts for favours."
+    },
+    {
+     "code": "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE.M_AD_BODY",
+     "listen_for": [
+      "The voice becomes deep"
+     ],
+     "ask": "Which change usually happens in girls at adolescence?",
+     "repair": "Use a health-class chart."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Are the changes of adolescence shameful?",
+     "answer": "No: they are normal; ask a trusted adult",
+     "shows": "normal"
+    },
+    {
+     "question": "Name a sign of an unhealthy friendship.",
+     "answer": "Secrets and gifts for favours",
+     "shows": "warning"
+    }
+   ]
+  }
+ ]
+}

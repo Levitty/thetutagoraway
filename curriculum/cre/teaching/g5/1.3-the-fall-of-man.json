@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.CREATI.THE_FALL_OF_MAN",
+ "title": "The Fall of Man",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN",
+   "key_step": "The child describes Genesis 3:1-11: the serpent asks \"Did God really say?\", the woman eats and gives to her husband, their eyes open, they hide, God calls \"Where are you?\", and they blame others; and outlines lessons (obey God, temptation starts with doubt, own up).",
+   "floor": {
+    "prerequisite": "Knows Adam and Eve disobeyed God.",
+    "question": "What did God tell Adam and Eve not to eat from?",
+    "answer": "The tree of the knowledge of good and evil"
+   },
+   "representations": [
+    "a picture of the garden with the tree",
+    "a sequence strip in five boxes",
+    "Genesis 3:9 written large"
+   ],
+   "steps": [
+    "The serpent questions God's word.",
+    "The woman eats and gives to the man.",
+    "They hide and cover themselves.",
+    "God calls, and they blame others."
+   ],
+   "contexts": [
+    "being tempted to take a sweet that is not yours",
+    "a child blaming a sibling for a broken plate",
+    "doubting a parent's safety rule"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw five boxes for the story."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the first box with the serpent.",
+     "say": "What did the serpent ask first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say \"Did God really say...?\""
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the boxes and write three lessons."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_APPLE",
+     "listen_for": [
+      "It was an apple"
+     ],
+     "ask": "What does Genesis 3 say about the kind of fruit that was eaten?",
+     "repair": "Read Genesis 3:6 and look for the name of the fruit together."
+    },
+    {
+     "code": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_ONE_PERSON",
+     "listen_for": [
+      "Only the woman"
+     ],
+     "ask": "Who ate the fruit God had forbidden?",
+     "repair": "Read Genesis 3:6 and count who ate."
+    },
+    {
+     "code": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_SERPENT_TRUE",
+     "listen_for": [
+      "He told them the truth about God"
+     ],
+     "ask": "What did the serpent do?",
+     "repair": "Compare what God said in Genesis 2:17 with what the serpent said in 3:4."
+    },
+    {
+     "code": "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN.M_FALL_BLAME",
+     "listen_for": [
+      "Blame someone else"
+     ],
+     "ask": "After eating the fruit, the man blamed the woman. What should a person do when he does wrong?",
+     "repair": "Read Genesis 3:12-13 and ask whether blaming helped."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who ate the fruit God had forbidden?",
+     "answer": "The woman, then her husband",
+     "shows": "story detail"
+    },
+    {
+     "question": "Name one lesson from the fall.",
+     "answer": "Obey God (admit wrong, resist temptation)",
+     "shows": "lesson"
+    }
+   ]
+  }
+ ]
+}

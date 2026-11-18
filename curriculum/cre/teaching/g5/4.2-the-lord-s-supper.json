@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_CH.THE_LORD_S_SUPPER",
+ "title": "The Lord’s Supper",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Only what Luke 22:14-20 says is asked. How each church celebrates the Lord's Supper is for the child's own church, not for marks.",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER",
+   "key_step": "The child describes Luke 22:14-20: at the Passover Jesus eats with the apostles, takes bread, gives thanks, breaks it, \"This is my body given for you; do this in remembrance of me\", and the cup, \"the new covenant in my blood\"; explains why Christians remember it and the values it needs (respect, forgiveness, unity), without asking how a church celebrates it.",
+   "floor": {
+    "prerequisite": "Knows why Easter is celebrated.",
+    "question": "Why do Christians celebrate Easter?",
+    "answer": "To remember Jesus' death and resurrection"
+   },
+   "representations": [
+    "bread and a cup drawn on a table",
+    "Luke 22:19 written large",
+    "a values list"
+   ],
+   "steps": [
+    "Jesus eats the Passover with the apostles.",
+    "He gives thanks and breaks bread.",
+    "He says \"do this in remembrance of me\".",
+    "He gives the cup of the new covenant."
+   ],
+   "contexts": [
+    "a church service of remembrance",
+    "Holy Week at church",
+    "remembering someone we love"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw bread and a cup on a table."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bread.",
+     "say": "What did Jesus say to do with it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say do this in remembrance of me."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Luke 22:19."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_LS2_ONE_NAME",
+     "listen_for": [
+      "Only one name is correct and the others are wrong"
+     ],
+     "ask": "Churches call the Lord's Supper by different names. Which is true?",
+     "repair": "Ask your own church's name and the names other churches use."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_LS2_WHEN",
+     "listen_for": [
+      "With a crowd of five thousand"
+     ],
+     "ask": "With whom did Jesus share the Passover meal in Luke 22?",
+     "repair": "Read Luke 22:14."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_LS2_WHY",
+     "listen_for": [
+      "Do this as a prize for the best behaved"
+     ],
+     "ask": "What did Jesus say to do with the bread and the cup?",
+     "repair": "Read Luke 22:19."
+    },
+    {
+     "code": "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER.M_C5_LS2_FEAST",
+     "listen_for": [
+      "A wedding feast"
+     ],
+     "ask": "Which meal were Jesus and his apostles eating in Luke 22:15?",
+     "repair": "Read Luke 22:15 and say: Passover remembered God bringing Israel out of Egypt."
+    }
+   ],
+   "checks": [
+    {
+     "question": "With whom did Jesus share the Passover in Luke 22?",
+     "answer": "His apostles",
+     "shows": "people"
+    },
+    {
+     "question": "What did Jesus say to do with the bread and cup?",
+     "answer": "Do this in remembrance of me",
+     "shows": "meaning"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A",
+ "title": "My purpose Talents and abilities",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE",
+   "key_step": "The child narrates Matthew 25:14-30 (five, two and one talents; two servants double theirs, one buries his) and says the lesson: use the gifts God gives, however many, faithfully.",
+   "floor": {
+    "prerequisite": "Knows each person is God's special creation.",
+    "question": "What does Psalm 139:14 say about how you are made?",
+    "answer": "Fearfully and wonderfully made"
+   },
+   "representations": [
+    "three bags drawn with 5, 2 and 1",
+    "a chart: given, gained, what the master said",
+    "Matthew 25:21 on a card"
+   ],
+   "steps": [
+    "The master gives 5, 2 and 1 talents.",
+    "Two servants trade and double.",
+    "One buries his talent.",
+    "The faithful are praised; the one who hid his is blamed."
+   ],
+   "contexts": [
+    "a child who sings in the choir",
+    "a learner good at drawing who helps make class charts",
+    "a farmer who uses a small plot well"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw three bags marked 5, 2 and 1."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the bag marked 1.",
+     "say": "Why was this servant blamed?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he hid it and did not use it."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the chart and write \"use your gifts\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_TAL_MONEY_ONLY",
+     "listen_for": [
+      "Keep your money safe and never spend it"
+     ],
+     "ask": "What does the parable of the talents teach a Grade 5 learner?",
+     "repair": "Ask what the servants did with what they were given. Then name other gifts: singing, kindness, farming, drawing, helping."
+    },
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_TAL_UNFAIR",
+     "listen_for": [
+      "He was given less than the others"
+     ],
+     "ask": "Why was the third servant blamed?",
+     "repair": "Reread Matthew 25:15, \"each according to his ability\", then the servant's own words about fear and the buried talent."
+    },
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_TAL_NUMBERS",
+     "listen_for": [
+      "Two more"
+     ],
+     "ask": "How many talents did the first servant gain?",
+     "repair": "Draw three columns: given, gained, total. Fill them from Matthew 25:16-18."
+    },
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE.M_C5_TAL_REWARD_SAME",
+     "listen_for": [
+      "Less praise, because he gained less"
+     ],
+     "ask": "What did the master say to the servant who gained two more talents (Matthew 25:23)?",
+     "repair": "Read 25:21 and 25:23 side by side: the same words. The master praised faithfulness, not the size."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many more talents did the servant with five gain?",
+     "answer": "Five more",
+     "shows": "story detail"
+    },
+    {
+     "question": "What does the parable teach?",
+     "answer": "Use the gifts God gives you",
+     "shows": "lesson"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES",
+   "key_step": "The child says what the three verses teach: God has plans for a hope and a future (Jeremiah 29:11), every good gift comes from God (James 1:17), and each gift is for serving others (1 Peter 4:10).",
+   "floor": {
+    "prerequisite": "Knows God is a loving Father.",
+    "question": "Which verse says \"God is love\"?",
+    "answer": "1 John 4:8"
+   },
+   "representations": [
+    "three verse cards with a key word each: plans, gift, serve",
+    "a gift box drawn on the board",
+    "a list of children's gifts"
+   ],
+   "steps": [
+    "Read Jeremiah 29:11: plans and hope.",
+    "Read James 1:17: good gifts from God.",
+    "Read 1 Peter 4:10: use gifts to serve.",
+    "Name a gift and how it serves others."
+   ],
+   "contexts": [
+    "a child good at football who coaches younger ones",
+    "a learner who reads to a blind grandparent",
+    "the church choir"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a gift box and write James 1:17 on it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the gift box.",
+     "say": "Who gives every good gift? What is it for?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say God, to serve others."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1 Peter 4:10 under the box."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_PUR_SHOW_OFF",
+     "listen_for": [
+      "Show it off so others admire you"
+     ],
+     "ask": "According to 1 Peter 4:10, what should each person do with the gift received?",
+     "repair": "Read 1 Peter 4:10 aloud and ask who benefits when a gift is used to serve."
+    },
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_PUR_FEW_ONLY",
+     "listen_for": [
+      "God has plans only for adults"
+     ],
+     "ask": "What does Jeremiah 29:11 say about God's plans?",
+     "repair": "Read Jeremiah 29:11 and ask who God is speaking about. Say that a Grade 5 child is included."
+    },
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_PUR_OWN_MAKING",
+     "listen_for": [
+      "From a person's own hard work alone"
+     ],
+     "ask": "According to James 1:17, where does every good gift come from?",
+     "repair": "Read James 1:17. Say that work matters, but that the ability to work and learn is a gift too."
+    },
+    {
+     "code": "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES.M_C5_PUR_FIXED_JOB",
+     "listen_for": [
+      "No, God's plan will happen anyway"
+     ],
+     "ask": "If God has a plan for you (Jeremiah 29:11), should you still work hard at school?",
+     "repair": "Join Jeremiah 29:11 with 1 Peter 4:10: God gives the hope; we use the gifts."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where does every good gift come from, according to James 1:17?",
+     "answer": "From God",
+     "shows": "source"
+    },
+    {
+     "question": "What does 1 Peter 4:10 say to do with a gift?",
+     "answer": "Use it to serve others",
+     "shows": "purpose"
+    }
+   ]
+  }
+ ]
+}

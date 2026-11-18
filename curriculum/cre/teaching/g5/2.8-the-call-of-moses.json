@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.THE_CALL_OF_MOSES",
+ "title": "The call of Moses",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL",
+   "key_step": "The child narrates Exodus 3:1-10: Moses tends Jethro's flock at Horeb, sees a bush burning but not burnt up, is told to remove his sandals on holy ground, and is sent to Pharaoh to bring Israel out of Egypt; and explains how Christian leaders obey God today.",
+   "floor": {
+    "prerequisite": "Knows God called Abram.",
+    "question": "What did God tell Abram to do?",
+    "answer": "Leave his country and go to the land God would show him"
+   },
+   "representations": [
+    "a burning bush drawn on a mountain",
+    "sandals drawn beside it",
+    "Exodus 3:10 written large"
+   ],
+   "steps": [
+    "Moses sees the bush that does not burn up.",
+    "God calls \"Moses! Moses!\"",
+    "Take off your sandals: holy ground.",
+    "Go to Pharaoh and bring my people out."
+   ],
+   "contexts": [
+    "a pastor sent to a new church",
+    "a head teacher who leads with honesty",
+    "a child asked to lead the class prayer"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a bush with flames but whole branches."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the branches.",
+     "say": "What was strange about this bush?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say it burned but was not burnt up."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Exodus 3:10: \"I am sending you to Pharaoh\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_MC_BUSH_BURNT",
+     "listen_for": [
+      "It burned up quickly"
+     ],
+     "ask": "What was strange about the bush Moses saw?",
+     "repair": "Read Exodus 3:2."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_MC_SANDALS",
+     "listen_for": [
+      "They were dirty"
+     ],
+     "ask": "Why did God tell Moses to take off his sandals?",
+     "repair": "Read Exodus 3:5."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_MC_TASK",
+     "listen_for": [
+      "To build a temple"
+     ],
+     "ask": "What did God send Moses to do?",
+     "repair": "Read Exodus 3:10."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL.M_C5_MC_READY",
+     "listen_for": [
+      "Happy and ready at once"
+     ],
+     "ask": "How did Moses feel when God spoke from the bush (Exodus 3:6)?",
+     "repair": "Read Exodus 3:6 and 3:11: Moses hid his face and asked \"Who am I?\". God promised to be with him."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Why did Moses take off his sandals?",
+     "answer": "The ground was holy",
+     "shows": "holiness"
+    },
+    {
+     "question": "What did God send Moses to do?",
+     "answer": "Bring the Israelites out of Egypt",
+     "shows": "task"
+    }
+   ]
+  }
+ ]
+}

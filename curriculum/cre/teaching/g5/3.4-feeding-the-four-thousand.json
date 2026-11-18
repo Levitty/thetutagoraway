@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN",
+ "title": "Feeding the four thousand",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000",
+   "key_step": "The child describes Matthew 15:32-38: after three days Jesus has compassion on the hungry crowd, takes seven loaves and a few fish, gives thanks, the disciples share it, all eat, seven baskets are left, four thousand men besides women and children; and lists ways to help the needy today.",
+   "floor": {
+    "prerequisite": "Knows the feeding of the five thousand.",
+    "question": "How many loaves did the boy give in the feeding of the five thousand?",
+    "answer": "Five"
+   },
+   "representations": [
+    "a compare chart: 5,000 and 4,000",
+    "seven loaves drawn",
+    "a list of ways to help"
+   ],
+   "steps": [
+    "The crowd has been with Jesus three days.",
+    "Jesus has compassion.",
+    "Seven loaves and a few fish; he gives thanks.",
+    "All eat; seven baskets left."
+   ],
+   "contexts": [
+    "a school feeding programme",
+    "a church food drive",
+    "sharing lunch with a classmate"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: 5,000 and 4,000."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 4,000 column.",
+     "say": "How many loaves and how many baskets?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say seven and seven."
+    },
+    {
+     "beat": "reveal",
+     "do": "List four ways to help the needy today."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_F4_FIVE_THOUSAND",
+     "listen_for": [
+      "Five loaves"
+     ],
+     "ask": "How many loaves did Jesus have when he fed the four thousand?",
+     "repair": "Make a two-column chart: four thousand and five thousand; fill loaves, fish, baskets."
+    },
+    {
+     "code": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_F4_WHY",
+     "listen_for": [
+      "To impress them"
+     ],
+     "ask": "Why did Jesus feed the crowd?",
+     "repair": "Read Matthew 15:32."
+    },
+    {
+     "code": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_F4_NEEDY_MONEY",
+     "listen_for": [
+      "Giving only money and nothing else"
+     ],
+     "ask": "Which is a way of helping the needy?",
+     "repair": "List five ways with the class: food, clothes, school items, time, prayer."
+    },
+    {
+     "code": "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000.M_C5_F4_BASKETS",
+     "listen_for": [
+      "Twelve"
+     ],
+     "ask": "How many basketfuls were left over after the four thousand ate (Matthew 15:37)?",
+     "repair": "Make a two-column chart: 5,000 (five loaves, twelve baskets) and 4,000 (seven loaves, seven baskets)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many loaves did Jesus use to feed the four thousand?",
+     "answer": "Seven",
+     "shows": "number"
+    },
+    {
+     "question": "Why did Jesus feed the crowd?",
+     "answer": "He had compassion",
+     "shows": "reason"
+    }
+   ]
+  }
+ ]
+}

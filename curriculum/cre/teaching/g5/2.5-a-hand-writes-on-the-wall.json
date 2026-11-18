@@ -1,0 +1,189 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL",
+ "title": "A hand writes on the wall",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL",
+   "key_step": "The child explains Daniel 5: King Belshazzar drinks from the holy vessels of the temple and praises idols, a hand writes on the wall, Daniel refuses the rewards but reads it (numbered, weighed, divided), and the kingdom falls that night.",
+   "floor": {
+    "prerequisite": "Knows Joseph interpreted a king's dreams.",
+    "question": "Who gave Joseph the meaning of Pharaoh's dreams?",
+    "answer": "God"
+   },
+   "representations": [
+    "a wall with four strange words",
+    "gold cups drawn on a table",
+    "a chart: word and meaning"
+   ],
+   "steps": [
+    "Belshazzar holds a feast.",
+    "He uses the temple vessels and praises idols.",
+    "A hand writes on the wall.",
+    "Daniel reads: numbered, weighed, divided."
+   ],
+   "contexts": [
+    "a child using a church Bible as a footstool",
+    "pride before a fall in a football team",
+    "a leader who forgets God"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a wall with a hand writing on it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the writing.",
+     "say": "What did it say about the king's kingdom?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say numbered, weighed, divided."
+    },
+    {
+     "beat": "reveal",
+     "do": "Fill in the word-and-meaning chart."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_KING",
+     "listen_for": [
+      "Nebuchadnezzar"
+     ],
+     "ask": "Which king held the feast in Daniel 5?",
+     "repair": "Read Daniel 5:1 and write the name."
+    },
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_WHO_WROTE",
+     "listen_for": [
+      "Daniel's hand"
+     ],
+     "ask": "Whose hand wrote on the wall?",
+     "repair": "Read Daniel 5:5."
+    },
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_VESSELS",
+     "listen_for": [
+      "They were too heavy to carry"
+     ],
+     "ask": "Why was it wrong to use the gold and silver vessels at the feast?",
+     "repair": "Read Daniel 5:2-4."
+    },
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL.M_WW_MEANING",
+     "listen_for": [
+      "It would grow bigger"
+     ],
+     "ask": "What did the writing say about the king's kingdom?",
+     "repair": "Read Daniel 5:25-28 and match mene, tekel and peres."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which king held the feast in Daniel 5?",
+     "answer": "Belshazzar",
+     "shows": "name"
+    },
+    {
+     "question": "Why was it wrong to use the vessels?",
+     "answer": "They were holy, from God's temple",
+     "shows": "holiness"
+    }
+   ]
+  },
+  {
+   "skill": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL",
+   "key_step": "The child says humility is not boasting and giving God the glory, contrasts proud Belshazzar with humble Daniel (who refused the rewards), and lists benefits of humility (God honours it, people trust you, you learn).",
+   "floor": {
+    "prerequisite": "Knows the story of the writing on the wall.",
+    "question": "Who read the writing on the wall?",
+    "answer": "Daniel"
+   },
+   "representations": [
+    "two columns: proud, humble",
+    "Daniel 5:17 written large",
+    "benefits list"
+   ],
+   "steps": [
+    "Who was proud? Belshazzar.",
+    "Who was humble? Daniel.",
+    "What did Daniel say about the gifts?",
+    "List five benefits of humility."
+   ],
+   "contexts": [
+    "a top learner who helps others",
+    "a class prefect who admits a mistake",
+    "a winner who thanks the team"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw two columns: proud and humble."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the humble column.",
+     "say": "What did Daniel do that shows humility?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say he refused the gifts and gave God credit."
+    },
+    {
+     "beat": "reveal",
+     "do": "List the benefits below."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_HD_WEAK",
+     "listen_for": [
+      "Being weak and having no opinions"
+     ],
+     "ask": "What is humility?",
+     "repair": "Ask whether Daniel was weak when he spoke to the king."
+    },
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_HD_PROUD_BELSHAZZAR",
+     "listen_for": [
+      "Daniel"
+     ],
+     "ask": "Who showed pride in the story?",
+     "repair": "Read Daniel 5:22-23, where Daniel says Belshazzar did not humble himself."
+    },
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_HD_REWARD",
+     "listen_for": [
+      "He asked for more rewards"
+     ],
+     "ask": "What did Daniel say to the king's gifts and rewards?",
+     "repair": "Read Daniel 5:17."
+    },
+    {
+     "code": "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL.M_C5_HD_HUMBLE_SILENT",
+     "listen_for": [
+      "No, humble people stay silent"
+     ],
+     "ask": "Daniel told the king hard words (Daniel 5:22-23). Was that humble?",
+     "repair": "Read Daniel 5:17 and 5:22: Daniel refused rewards (humble) and spoke the truth (brave)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who showed pride in Daniel 5?",
+     "answer": "King Belshazzar",
+     "shows": "contrast"
+    },
+    {
+     "question": "Name one benefit of humility.",
+     "answer": "God honours the humble (people trust you)",
+     "shows": "benefit"
+    }
+   ]
+  }
+ ]
+}

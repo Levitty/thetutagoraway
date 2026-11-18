@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU",
+ "title": "Peter’s miraculous rescue",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE",
+   "key_step": "The child retells Acts 12:3-17: Herod arrests Peter, the church prays earnestly, an angel wakes Peter, his chains fall off, the iron gate opens by itself, Peter goes to Mary's house, Rhoda is so glad she forgets to open the gate; lessons: God answers prayer, have faith.",
+   "floor": {
+    "prerequisite": "Knows Peter and John stood firm.",
+    "question": "By whose name was the lame man healed?",
+    "answer": "Jesus Christ"
+   },
+   "representations": [
+    "a prison with chains drawn",
+    "a sequence strip of six boxes",
+    "Acts 12:5 written large"
+   ],
+   "steps": [
+    "Herod puts Peter in prison.",
+    "The church prays.",
+    "An angel frees him; chains fall off.",
+    "Peter goes to Mary's house; Rhoda forgets the gate."
+   ],
+   "contexts": [
+    "a family praying for a relative in hospital",
+    "a prayer meeting at school",
+    "trusting God in a hard place"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a prison and a house full of people praying."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the house.",
+     "say": "What were the people in the house doing?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say praying for Peter."
+    },
+    {
+     "beat": "reveal",
+     "do": "Draw the path from the prison to the house."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_PR_BROKE_OUT",
+     "listen_for": [
+      "He broke the chains himself"
+     ],
+     "ask": "How did Peter get out of prison?",
+     "repair": "Read Acts 12:7."
+    },
+    {
+     "code": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_PR_NO_PRAYER",
+     "listen_for": [
+      "Waiting quietly and doing nothing"
+     ],
+     "ask": "What was the church doing while Peter was in prison?",
+     "repair": "Read Acts 12:5."
+    },
+    {
+     "code": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_PR_RHODA",
+     "listen_for": [
+      "Opened the gate immediately"
+     ],
+     "ask": "What did Rhoda do when she heard Peter's voice?",
+     "repair": "Read Acts 12:13-14."
+    },
+    {
+     "code": "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE.M_C5_PR_HOUSE",
+     "listen_for": [
+      "To Herod's palace"
+     ],
+     "ask": "Where did Peter go after the angel left him (Acts 12:12)?",
+     "repair": "Read Acts 12:12 and draw the house full of praying people. Peter went where they were praying for him."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How did Peter get out of prison?",
+     "answer": "An angel woke him and the chains fell off",
+     "shows": "rescue"
+    },
+    {
+     "question": "What did Rhoda do when she heard Peter?",
+     "answer": "Ran in with joy without opening the gate",
+     "shows": "story detail"
+    }
+   ]
+  }
+ ]
+}

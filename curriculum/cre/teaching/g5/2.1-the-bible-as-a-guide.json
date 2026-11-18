@@ -1,0 +1,99 @@
+{
+ "sub_strand": "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE",
+ "title": "The Bible as a Guide",
+ "status": "draft: written 18 Nov 2026 offline for Grade 5 Christian Religious Education; not yet checked by a CRE teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "",
+ "skills": [
+  {
+   "skill": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE",
+   "key_step": "The child outlines uses of the Bible today (guidance, comfort, teaching, oaths, worship) and benefits of reading it (Joshua 1:8: think on it day and night and do it; Psalm 1:1-3: like a tree by streams).",
+   "floor": {
+    "prerequisite": "Can find a book from the contents page.",
+    "question": "In which Testament is Joshua?",
+    "answer": "The Old Testament"
+   },
+   "representations": [
+    "a tree by a stream drawn on the board",
+    "Joshua 1:8 and Psalm 1:3 written large",
+    "a list of places the Bible is used"
+   ],
+   "steps": [
+    "Read Joshua 1:8.",
+    "Read Psalm 1:1-3.",
+    "List uses of the Bible today.",
+    "Plan a short daily reading."
+   ],
+   "contexts": [
+    "family devotion at night",
+    "a leader taking an oath of office",
+    "a hospital chaplain reading a psalm"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Draw a tree beside a stream."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tree.",
+     "say": "Who is like this tree in Psalm 1:3?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say the one who delights in God's word."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write Joshua 1:8 below the tree."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_BG_CHURCH_ONLY",
+     "listen_for": [
+      "Only at church on Sunday"
+     ],
+     "ask": "Where does the Bible guide a Christian?",
+     "repair": "Ask for a verse that helps at home or at school."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_BG_READ_ONCE",
+     "listen_for": [
+      "Read it once and then keep it safe"
+     ],
+     "ask": "What does Joshua 1:8 ask about God's word?",
+     "repair": "Read Joshua 1:8 and Psalm 1:2, \"his delight is in the law of the Lord\"."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_BG_PSALM_TREE",
+     "listen_for": [
+      "A strong wall"
+     ],
+     "ask": "In Psalm 1:3, the person who delights in God's word is like...",
+     "repair": "Read Psalm 1:3 and draw the tree."
+    },
+    {
+     "code": "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE.M_C5_BG_ONLY_RULES",
+     "listen_for": [
+      "Only to punish people who break rules"
+     ],
+     "ask": "Which of these is a use of the Bible in society today?",
+     "repair": "Show different parts: Psalms (songs), Gospels (Jesus' life), Proverbs (wisdom). Ask where each is used."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does Joshua 1:8 ask about God's word?",
+     "answer": "Think about it day and night and do it",
+     "shows": "verse"
+    },
+    {
+     "question": "Name one use of the Bible today.",
+     "answer": "Guidance (comfort, teaching, oaths, worship)",
+     "shows": "uses"
+    }
+   ]
+  }
+ ]
+}
