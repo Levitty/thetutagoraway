@@ -894,6 +894,69 @@
     "from the table"
    ],
    "mastery": "The child finds percentage error as error over the actual value times 100 (a bag of 80 kg estimated at 84 kg: 4 / 80 x 100 = 5%), and compares two measurements by their percentage errors, not by the size of the error alone or its unit."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS": {
+   "forms": [
+    "plot the point",
+    "which quadrant",
+    "read the coordinates",
+    "which point is at"
+   ],
+   "mastery": "The child plots and reads points with negative coordinates, x first (across) then y (up or down), and names the quadrant: (-3, 2) is 3 left and 2 up."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION": {
+   "forms": [
+    "complete the table",
+    "draw the line",
+    "does the point lie on the line",
+    "choose a scale"
+   ],
+   "mastery": "The child makes a table of at least three values of x, works out y for each from the equation (including negative x), plots the points, and joins them with one straight line, checking that the third point lies on it."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR": {
+   "forms": [
+    "draw a parallel line",
+    "draw a perpendicular line",
+    "through the point",
+    "which line is parallel"
+   ],
+   "mastery": "The child draws a line parallel to a given line through a point by keeping the same rise and run, and a perpendicular line by swapping the rise and run and changing one sign (a run of 3 and rise of 2 becomes a run of 2 and a fall of 3)."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS": {
+   "forms": [
+    "which line is parallel",
+    "find k",
+    "same gradient",
+    "complete the steps"
+   ],
+   "mastery": "The child says parallel lines have the same gradient whatever their c, picks the parallel line from a list of equations (y = 3x - 4 is parallel to y = 3x + 1), and uses equal gradients to find an unknown coordinate on a parallel line."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS": {
+   "forms": [
+    "gradient of the perpendicular line",
+    "equation of the perpendicular line",
+    "why is this wrong",
+    "which step is wrong"
+   ],
+   "mastery": "The child finds the perpendicular gradient by turning the gradient upside down and changing its sign (2/3 becomes -3/2), checks that the two multiply to -1, and finds the equation of a perpendicular line through a point."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED": {
+   "forms": [
+    "charge for each km",
+    "fixed charge",
+    "how many units",
+    "from the graph"
+   ],
+   "mastery": "The child reads the fixed charge where the line meets the charge axis (distance 0) and the rate as the rise for each unit across, finds the rate from two rows of a table before the fixed charge, and works back from a bill to the units used: (bill - fixed) / rate."
+  },
+  "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING": {
+   "forms": [
+    "for what distance",
+    "which is cheaper",
+    "where do the lines meet",
+    "same charge"
+   ],
+   "mastery": "The child reads the point where two charge lines cross, gives the distance along the bottom axis (both charge the same there), and says which is cheaper on each side of it."
   }
  }
 }

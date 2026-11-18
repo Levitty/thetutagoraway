@@ -6984,5 +6984,593 @@
   "help": "An error matters compared with the size of the thing.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_COORDINATES_SWAPPED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS",
+  "error": "Plots y across and x up.",
+  "example": {
+   "question": "Plot (-3, 2).",
+   "wrong_answer": "2 right, 3 down",
+   "correct_answer": "3 left, 2 up"
+  },
+  "cause": "Does not hold the order of the coordinates.",
+  "reveals": "The answer 2 right, 3 down as a wrong option, with a reason that names the idea.",
+  "help": "Along the corridor, then up the stairs: x first.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_NEGATIVE_DIRECTION_WRONG": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS",
+  "error": "Moves the wrong way for a negative coordinate.",
+  "example": {
+   "question": "Plot (-3, -2).",
+   "wrong_answer": "3 right, 2 down",
+   "correct_answer": "3 left, 2 down"
+  },
+  "cause": "Ignores the sign of x.",
+  "reveals": "The answer 3 right, 2 down as a wrong option, with a reason that names the idea.",
+  "help": "Negative x is left of the y-axis.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_QUADRANT_NAMED_WRONG": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS",
+  "error": "Names the wrong quadrant.",
+  "example": {
+   "question": "Which quadrant is (-4, 3) in?",
+   "wrong_answer": "fourth",
+   "correct_answer": "second"
+  },
+  "cause": "Counts the quadrants in the wrong order.",
+  "reveals": "The answer fourth as a wrong option, with a reason that names the idea.",
+  "help": "Count anticlockwise from the top right: first, second, third, fourth.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_POINT_ON_AXIS_WRONG": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS",
+  "error": "Puts a point with a 0 coordinate on the wrong axis.",
+  "example": {
+   "question": "Plot (0, -5).",
+   "wrong_answer": "on the x-axis",
+   "correct_answer": "on the y-axis"
+  },
+  "cause": "Thinks 0 means the x-axis.",
+  "reveals": "The answer on the x-axis as a wrong option, with a reason that names the idea.",
+  "help": "x = 0 means no move across: on the y-axis.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_NEGATIVE_X_SIGN_LOST": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION",
+  "error": "Loses the sign when putting a negative x into the equation.",
+  "example": {
+   "question": "y = 2x + 3 at x = -2",
+   "wrong_answer": "7",
+   "correct_answer": "-1"
+  },
+  "cause": "Multiplies the sizes only.",
+  "reveals": "The answer 7 as a wrong option, with a reason that names the idea.",
+  "help": "2 x -2 = -4, so y = -1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_CONSTANT_LEFT_OUT_TABLE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION",
+  "error": "Leaves the constant out when working out y.",
+  "example": {
+   "question": "y = 2x + 3 at x = 1",
+   "wrong_answer": "2",
+   "correct_answer": "5"
+  },
+  "cause": "Stops after the x term.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "Add the 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_POINTS_JOINED_CURVED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION",
+  "error": "Joins the points by eye into a bend when one is wrong.",
+  "example": {
+   "question": "Three points of y = 2x + 3 do not lie on one line.",
+   "wrong_answer": "join them anyway",
+   "correct_answer": "check the odd point"
+  },
+  "cause": "Trusts the plotting over the equation.",
+  "reveals": "The answer join them anyway as a wrong option, with a reason that names the idea.",
+  "help": "A linear equation gives one straight line: recheck the odd point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_UNEVEN_SCALE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION",
+  "error": "Uses uneven steps on an axis.",
+  "example": {
+   "question": "Axis marked 0, 1, 2, 4, 5.",
+   "wrong_answer": "fine",
+   "correct_answer": "a step is missing"
+  },
+  "cause": "Writes only the values in the table.",
+  "reveals": "The answer fine as a wrong option, with a reason that names the idea.",
+  "help": "Every square on an axis is the same step.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PARALLEL_SAME_POINT": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR",
+  "error": "Draws the \"parallel\" line through a point already on the first line, giving the same line.",
+  "example": {
+   "question": "Draw a line parallel to y = 2x through (1, 2).",
+   "wrong_answer": "y = 2x",
+   "correct_answer": "that is the same line; choose a point off it"
+  },
+  "cause": "Does not check the point.",
+  "reveals": "The answer y = 2x as a wrong option, with a reason that names the idea.",
+  "help": "A parallel line is a different line with the same slope.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PERP_RISE_RUN_NOT_SWAPPED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR",
+  "error": "Changes the sign of the slope but does not swap rise and run.",
+  "example": {
+   "question": "Perpendicular to a line rising 2 for 3 across.",
+   "wrong_answer": "falling 2 for 3 across",
+   "correct_answer": "falling 3 for 2 across"
+  },
+  "cause": "Thinks perpendicular is just the opposite slope.",
+  "reveals": "The answer falling 2 for 3 across as a wrong option, with a reason that names the idea.",
+  "help": "Swap the rise and run and change one sign.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PARALLEL_BY_EYE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR",
+  "error": "Draws a parallel line by eye, so the slope changes.",
+  "example": {
+   "question": "Draw a line parallel to one rising 1 in 4.",
+   "wrong_answer": "roughly the same slope",
+   "correct_answer": "rise 1 for every 4 across"
+  },
+  "cause": "Does not count squares.",
+  "reveals": "The answer roughly the same slope as a wrong option, with a reason that names the idea.",
+  "help": "Count the same rise and run from the new point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PERP_BY_EYE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR",
+  "error": "Draws a perpendicular line by eye without checking the right angle.",
+  "example": {
+   "question": "Draw a perpendicular line.",
+   "wrong_answer": "a line that looks about right",
+   "correct_answer": "a line whose slope is swapped and changed in sign"
+  },
+  "cause": "Trusts the look.",
+  "reveals": "The answer a line that looks about right as a wrong option, with a reason that names the idea.",
+  "help": "Check with the rise and run, or a set square.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_SAME_C_AS_PARALLEL": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Picks the line with the same c as the parallel one.",
+  "example": {
+   "question": "Which is parallel to y = 3x + 1: y = 2x + 1 or y = 3x - 4?",
+   "wrong_answer": "y = 2x + 1",
+   "correct_answer": "y = 3x - 4"
+  },
+  "cause": "Matches the end number.",
+  "reveals": "The answer y = 2x + 1 as a wrong option, with a reason that names the idea.",
+  "help": "Parallel needs the same gradient: the number in front of x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_OPPOSITE_SIGN_PARALLEL": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Thinks a line with the opposite gradient is parallel.",
+  "example": {
+   "question": "Is y = -3x + 2 parallel to y = 3x + 1?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No"
+  },
+  "cause": "Ignores the sign.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "A negative gradient slopes the other way.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_C_READ_AS_GRADIENT": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Reads the constant as the gradient.",
+  "example": {
+   "question": "Gradient of y = 3x + 5?",
+   "wrong_answer": "5",
+   "correct_answer": "3"
+  },
+  "cause": "Takes the last number.",
+  "reveals": "The answer 5 as a wrong option, with a reason that names the idea.",
+  "help": "The gradient multiplies x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_GRADIENT_INVERTED_PQ": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Finds the gradient upside down (change in x over change in y).",
+  "example": {
+   "question": "P(1, 2), Q(3, 8). Gradient?",
+   "wrong_answer": "1/3",
+   "correct_answer": "3"
+  },
+  "cause": "Puts x on top.",
+  "reveals": "The answer 1/3 as a wrong option, with a reason that names the idea.",
+  "help": "Change in y over change in x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_GRADIENT_SIGN_PQ": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Gets the sign of the gradient wrong by subtracting in different orders.",
+  "example": {
+   "question": "P(1, 8), Q(3, 2). Gradient?",
+   "wrong_answer": "3",
+   "correct_answer": "-3"
+  },
+  "cause": "Takes larger minus smaller each time.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Same order top and bottom.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_RUN_FOR_RISE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Uses the change in x as the change in y on the parallel line.",
+  "example": {
+   "question": "Gradient 3, x goes from 2 to 5. Change in y?",
+   "wrong_answer": "3",
+   "correct_answer": "9"
+  },
+  "cause": "Stops before multiplying.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "Change in y = gradient x change in x.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_GRADIENT_ADDED_TO_RUN": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Adds the gradient to the change in x.",
+  "example": {
+   "question": "Gradient 3, change in x 3. Change in y?",
+   "wrong_answer": "6",
+   "correct_answer": "9"
+  },
+  "cause": "Combines by adding.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Multiply.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_START_HEIGHT_LEFT_OUT": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Gives the change in y as the y-coordinate.",
+  "example": {
+   "question": "R(2, 4), change in y 9. k?",
+   "wrong_answer": "9",
+   "correct_answer": "13"
+  },
+  "cause": "Forgets where R starts.",
+  "reveals": "The answer 9 as a wrong option, with a reason that names the idea.",
+  "help": "Add the change to R's y: 4 + 9.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_CHANGE_SUBTRACTED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "error": "Takes the change in y away from R's y-coordinate.",
+  "example": {
+   "question": "R(2, 4), gradient 3, S at x = 5. k?",
+   "wrong_answer": "-5",
+   "correct_answer": "13"
+  },
+  "cause": "Moves the wrong way.",
+  "reveals": "The answer -5 as a wrong option, with a reason that names the idea.",
+  "help": "A positive gradient goes up as x increases: add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_RECIPROCAL_ONLY": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Turns the gradient upside down but keeps its sign.",
+  "example": {
+   "question": "Perpendicular to gradient 2?",
+   "wrong_answer": "1/2",
+   "correct_answer": "-1/2"
+  },
+  "cause": "Remembers half the rule.",
+  "reveals": "The answer 1/2 as a wrong option, with a reason that names the idea.",
+  "help": "Turn it upside down and change the sign: they multiply to -1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SIGN_ONLY": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Changes the sign but does not turn the gradient upside down.",
+  "example": {
+   "question": "Perpendicular to gradient 2?",
+   "wrong_answer": "-2",
+   "correct_answer": "-1/2"
+  },
+  "cause": "Thinks perpendicular means opposite.",
+  "reveals": "The answer -2 as a wrong option, with a reason that names the idea.",
+  "help": "2 x -2 = -4, not -1. Use -1/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SAME_GRADIENT": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Gives the same gradient as the first line.",
+  "example": {
+   "question": "Perpendicular to gradient 2?",
+   "wrong_answer": "2",
+   "correct_answer": "-1/2"
+  },
+  "cause": "Mixes up parallel and perpendicular.",
+  "reveals": "The answer 2 as a wrong option, with a reason that names the idea.",
+  "help": "The same gradient gives a parallel line.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SUM_RULE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Thinks perpendicular gradients add to 0 or 1.",
+  "example": {
+   "question": "Why are y = 2x and y = -2x not perpendicular?",
+   "wrong_answer": "They are: the gradients add to 0",
+   "correct_answer": "The gradients multiply to -4, not -1"
+  },
+  "cause": "Uses a sum rule.",
+  "reveals": "The answer They are: the gradients add to 0 as a wrong option, with a reason that names the idea.",
+  "help": "The product of the gradients is -1.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SAME_C": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Thinks perpendicular lines must cross the y-axis at the same point.",
+  "example": {
+   "question": "Must perpendicular lines have the same c?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No"
+  },
+  "cause": "Links the angle with the intercept.",
+  "reveals": "The answer Yes as a wrong option, with a reason that names the idea.",
+  "help": "Where a line crosses the y-axis does not set its angle.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_C_SIGN_PERP": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Adds mx to y instead of taking it away when finding c.",
+  "example": {
+   "question": "m = -1/2 through (4, 3). c?",
+   "wrong_answer": "1",
+   "correct_answer": "5"
+  },
+  "cause": "Moves the term without changing its sign.",
+  "reveals": "The answer 1 as a wrong option, with a reason that names the idea.",
+  "help": "c = y - mx = 3 - (-2) = 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_FIRST_GRADIENT_FOR_C": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Uses the first line's gradient to find c of the perpendicular line.",
+  "example": {
+   "question": "L has gradient 2; M is perpendicular through (4, 3). c of M?",
+   "wrong_answer": "-5 (3 - 2 x 4)",
+   "correct_answer": "5"
+  },
+  "cause": "Uses the gradient already found.",
+  "reveals": "The answer -5 (3 - 2 x 4) as a wrong option, with a reason that names the idea.",
+  "help": "Use M's own gradient, -1/2.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_C_WRITTEN_WRONG_SIGN": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Finds c correctly but writes it with the wrong sign in the equation.",
+  "example": {
+   "question": "m = -1/2, c = -5. Equation?",
+   "wrong_answer": "y = -1/2 x + 5",
+   "correct_answer": "y = -1/2 x - 5"
+  },
+  "cause": "Copies the size only.",
+  "reveals": "The answer y = -1/2 x + 5 as a wrong option, with a reason that names the idea.",
+  "help": "Carry the sign of c.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_C_AS_POINT_Y_PERP": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "error": "Takes the y-coordinate of the point as c.",
+  "example": {
+   "question": "m = -1/2 through (4, 3). c?",
+   "wrong_answer": "3",
+   "correct_answer": "5"
+  },
+  "cause": "Thinks any y on the line is c.",
+  "reveals": "The answer 3 as a wrong option, with a reason that names the idea.",
+  "help": "c is y at x = 0: substitute and solve.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_FIXED_AS_RATE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Gives the fixed charge as the charge for each km.",
+  "example": {
+   "question": "The line starts at 100 and rises 50 for each km. Charge per km?",
+   "wrong_answer": "100",
+   "correct_answer": "50"
+  },
+  "cause": "Reads the first number on the graph.",
+  "reveals": "The answer 100 as a wrong option, with a reason that names the idea.",
+  "help": "The rate is the rise for each km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_TOTAL_AS_RATE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Gives a whole charge as the rate.",
+  "example": {
+   "question": "4 km costs 300. Charge per km (fixed 100)?",
+   "wrong_answer": "300",
+   "correct_answer": "50"
+  },
+  "cause": "Reads a point and stops.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "Find the rise for 1 km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_TOTAL_OVER_DISTANCE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Divides a whole charge by the distance, so the fixed part is mixed in.",
+  "example": {
+   "question": "4 km costs 300, fixed 100. Charge per km?",
+   "wrong_answer": "75",
+   "correct_answer": "50"
+  },
+  "cause": "Treats the line as starting at 0.",
+  "reveals": "The answer 75 as a wrong option, with a reason that names the idea.",
+  "help": "Take away the fixed part first, or use the rise between two points.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_SHORTEST_TRIP_AS_FIXED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Gives the charge for the shortest trip as the fixed charge.",
+  "example": {
+   "question": "2 km 200, 5 km 350, 8 km 500. Fixed charge?",
+   "wrong_answer": "200",
+   "correct_answer": "100"
+  },
+  "cause": "Takes the first row.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "The fixed charge is for 0 km: take off 2 km of rate.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_RATE_AS_FIXED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Gives the rate as the fixed charge.",
+  "example": {
+   "question": "Rate 50 a km. Fixed charge?",
+   "wrong_answer": "50",
+   "correct_answer": "100"
+  },
+  "cause": "Mixes up the two parts.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "Fixed is paid even for 0 km.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_FIXED_NOT_REMOVED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Divides the bill by the rate without taking the fixed charge away.",
+  "example": {
+   "question": "Bill 1,450, fixed 250, 60 a unit. Units?",
+   "wrong_answer": "24.2",
+   "correct_answer": "20"
+  },
+  "cause": "Forgets the fixed part.",
+  "reveals": "The answer 24.2 as a wrong option, with a reason that names the idea.",
+  "help": "Units = (bill - fixed) / rate.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_FIXED_ADDED_TO_BILL": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Adds the fixed charge to the bill before dividing.",
+  "example": {
+   "question": "Bill 1,450, fixed 250, 60 a unit. Units?",
+   "wrong_answer": "28.3",
+   "correct_answer": "20"
+  },
+  "cause": "Adds instead of subtracting.",
+  "reveals": "The answer 28.3 as a wrong option, with a reason that names the idea.",
+  "help": "The fixed charge is part of the bill: take it away.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_MONEY_AS_UNITS": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "error": "Gives the money for units as the number of units.",
+  "example": {
+   "question": "Bill 1,450, fixed 250. Units at 60 each?",
+   "wrong_answer": "1,200",
+   "correct_answer": "20"
+  },
+  "cause": "Stops before dividing.",
+  "reveals": "The answer 1,200 as a wrong option, with a reason that names the idea.",
+  "help": "Divide 1,200 by 60.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_CHARGE_FOR_DISTANCE": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING",
+  "error": "Reads the charge where the lines meet instead of the distance.",
+  "example": {
+   "question": "The lines meet at (6 km, 400). Distance?",
+   "wrong_answer": "400",
+   "correct_answer": "6"
+  },
+  "cause": "Reads the wrong axis.",
+  "reveals": "The answer 400 as a wrong option, with a reason that names the idea.",
+  "help": "The distance is along the bottom.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_START_OF_LINE_READ": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING",
+  "error": "Reads where one line starts instead of where they meet.",
+  "example": {
+   "question": "Rider B starts at 200. Same charge at what distance?",
+   "wrong_answer": "200",
+   "correct_answer": "where the lines cross"
+  },
+  "cause": "Reads the first point seen.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Find the crossing point.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_NOT_FROM_GRAPH": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING",
+  "error": "Gives a number not read from the graph.",
+  "example": {
+   "question": "When do both charge the same?",
+   "wrong_answer": "the longest trip",
+   "correct_answer": "the distance at the crossing"
+  },
+  "cause": "Guesses.",
+  "reveals": "The answer the longest trip as a wrong option, with a reason that names the idea.",
+  "help": "Look for where the two lines cross.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_CHEAPER_SIDE_SWAPPED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING",
+  "error": "Says which is cheaper the wrong way round on each side of the crossing.",
+  "example": {
+   "question": "Before 6 km, which line is lower?",
+   "wrong_answer": "the steeper one",
+   "correct_answer": "the one that is lower on the graph there"
+  },
+  "cause": "Looks at steepness, not height.",
+  "reveals": "The answer the steeper one as a wrong option, with a reason that names the idea.",
+  "help": "Cheaper is the lower line at that distance.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

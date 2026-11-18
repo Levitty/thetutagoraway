@@ -12453,6 +12453,1041 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.MEASUR.APPROXIMATIONS_AND_ERROR",
   "sub_strand_name": "Approximations and Errors",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS",
+  "key_step": "The child starts at the origin, moves across for x (left if negative), then up or down for y.",
+  "floor": {
+   "prerequisite": "Plots points in the first quadrant.",
+   "question": "Plot (3, 2)",
+   "answer": "3 right, 2 up"
+  },
+  "representations": [
+   "a grid with four quadrants",
+   "arrows from the origin",
+   "a table of points"
+  ],
+  "steps": [
+   "Start at (0, 0).",
+   "Move across for x: left if negative.",
+   "Move up or down for y: down if negative.",
+   "Mark and label the point."
+  ],
+  "contexts": [
+   "a map of a school compound",
+   "a board game grid",
+   "plotting temperatures above and below zero"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw axes from -5 to 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the origin.",
+    "say": "For (-3, 2), which way first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3 left."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child plots the point."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write (-3, 2): second quadrant."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_COORDINATES_SWAPPED",
+    "listen_for": [
+     "went up first"
+    ],
+    "ask": "Which number is x?",
+    "repair": "The first: across.",
+    "error": "Plots y across and x up.",
+    "example": {
+     "question": "Plot (-3, 2).",
+     "wrong_answer": "2 right, 3 down",
+     "correct_answer": "3 left, 2 up"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_NEGATIVE_DIRECTION_WRONG",
+    "listen_for": [
+     "went right for -3"
+    ],
+    "ask": "Which way is negative x?",
+    "repair": "Left.",
+    "error": "Moves the wrong way for a negative coordinate.",
+    "example": {
+     "question": "Plot (-3, -2).",
+     "wrong_answer": "3 right, 2 down",
+     "correct_answer": "3 left, 2 down"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_QUADRANT_NAMED_WRONG",
+    "listen_for": [
+     "fourth"
+    ],
+    "ask": "Which way do we count the quadrants?",
+    "repair": "Anticlockwise from top right.",
+    "error": "Names the wrong quadrant.",
+    "example": {
+     "question": "Which quadrant is (-4, 3) in?",
+     "wrong_answer": "fourth",
+     "correct_answer": "second"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PLOT_POINTS_FOUR_QUADRANTS.M_POINT_ON_AXIS_WRONG",
+    "listen_for": [
+     "on the x-axis"
+    ],
+    "ask": "If x is 0, do you move across?",
+    "repair": "No: it is on the y-axis.",
+    "error": "Puts a point with a 0 coordinate on the wrong axis.",
+    "example": {
+     "question": "Plot (0, -5).",
+     "wrong_answer": "on the x-axis",
+     "correct_answer": "on the y-axis"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Plot (2, -4). Which quadrant?",
+    "answer": "fourth",
+    "shows": "four quadrants"
+   },
+   {
+    "question": "What are the coordinates of a point 5 left and 1 down?",
+    "answer": "(-5, -1)",
+    "shows": "reading"
+   }
+  ],
+  "name": "Plot points on the Cartesian plane in all four quadrants",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION",
+  "key_step": "The child chooses three x values, works out each y with signs, and checks the three points lie on one straight line.",
+  "floor": {
+   "prerequisite": "Completes a table of values.",
+   "question": "y = 2x + 1 at x = 2",
+   "answer": "5"
+  },
+  "representations": [
+   "a table of values",
+   "a grid with even scales",
+   "a ruler line through three points"
+  ],
+  "steps": [
+   "Choose three x values, one negative.",
+   "Work out y for each.",
+   "Plot the points on even scales.",
+   "Join with one straight line; recheck any odd point."
+  ],
+  "contexts": [
+   "a fare chart",
+   "a phone bundle cost",
+   "a growth chart for a plant"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: x -2, 0, 2 for y = 2x + 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point at x = -2.",
+    "say": "What is y?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for -1."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child fills the table and plots."
+   },
+   {
+    "beat": "reveal",
+    "do": "Draw the straight line through (-2, -1), (0, 3), (2, 7)."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_NEGATIVE_X_SIGN_LOST",
+    "listen_for": [
+     "7 at x = -2"
+    ],
+    "ask": "What is 2 x -2?",
+    "repair": "-4: y = -1.",
+    "error": "Loses the sign when putting a negative x into the equation.",
+    "example": {
+     "question": "y = 2x + 3 at x = -2",
+     "wrong_answer": "7",
+     "correct_answer": "-1"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_CONSTANT_LEFT_OUT_TABLE",
+    "listen_for": [
+     "2 at x = 1"
+    ],
+    "ask": "Where is the + 3?",
+    "repair": "Add it: 5.",
+    "error": "Leaves the constant out when working out y.",
+    "example": {
+     "question": "y = 2x + 3 at x = 1",
+     "wrong_answer": "2",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_POINTS_JOINED_CURVED",
+    "listen_for": [
+     "a bent line"
+    ],
+    "ask": "Is y = 2x + 3 straight?",
+    "repair": "Yes: recheck the odd point.",
+    "error": "Joins the points by eye into a bend when one is wrong.",
+    "example": {
+     "question": "Three points of y = 2x + 3 do not lie on one line.",
+     "wrong_answer": "join them anyway",
+     "correct_answer": "check the odd point"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_LINE_FROM_EQUATION.M_UNEVEN_SCALE",
+    "listen_for": [
+     "skipped 3"
+    ],
+    "ask": "Is every square the same step?",
+    "repair": "It must be.",
+    "error": "Uses uneven steps on an axis.",
+    "example": {
+     "question": "Axis marked 0, 1, 2, 4, 5.",
+     "wrong_answer": "fine",
+     "correct_answer": "a step is missing"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Complete for y = -x + 2: x = -1, 0, 3.",
+    "answer": "y = 3, 2, -1",
+    "shows": "table"
+   },
+   {
+    "question": "Does (1, 4) lie on y = 3x + 1?",
+    "answer": "Yes",
+    "shows": "checking a point"
+   }
+  ],
+  "name": "Draw a straight-line graph from its equation",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR",
+  "key_step": "The child counts the rise and run of the given line and uses the same (parallel) or swapped with one sign changed (perpendicular) from the new point.",
+  "floor": {
+   "prerequisite": "Finds rise and run.",
+   "question": "From (0, 1) to (3, 3)",
+   "answer": "run 3, rise 2"
+  },
+  "representations": [
+   "a staircase drawn on the line",
+   "rise and run arrows",
+   "a set square"
+  ],
+  "steps": [
+   "Count the rise and run of the given line.",
+   "Parallel: same rise and run from the new point.",
+   "Perpendicular: swap them and change one sign.",
+   "Draw and check."
+  ],
+  "contexts": [
+   "parallel rows of crops",
+   "a path at right angles to a road",
+   "roof beams"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line rising 2 for 3 across, and a point off it."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the staircase.",
+    "say": "For a perpendicular line, what becomes the run?"
+   },
+   {
+    "beat": "predict",
+    "do": "The child says 2 across and 3 down."
+   },
+   {
+    "beat": "reveal",
+    "do": "Draw it and check the right angle."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PARALLEL_SAME_POINT",
+    "listen_for": [
+     "the same line"
+    ],
+    "ask": "Is the point already on the line?",
+    "repair": "Choose a point off it.",
+    "error": "Draws the \"parallel\" line through a point already on the first line, giving the same line.",
+    "example": {
+     "question": "Draw a line parallel to y = 2x through (1, 2).",
+     "wrong_answer": "y = 2x",
+     "correct_answer": "that is the same line; choose a point off it"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PERP_RISE_RUN_NOT_SWAPPED",
+    "listen_for": [
+     "2 down for 3 across"
+    ],
+    "ask": "Did you swap rise and run?",
+    "repair": "3 down for 2 across.",
+    "error": "Changes the sign of the slope but does not swap rise and run.",
+    "example": {
+     "question": "Perpendicular to a line rising 2 for 3 across.",
+     "wrong_answer": "falling 2 for 3 across",
+     "correct_answer": "falling 3 for 2 across"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PARALLEL_BY_EYE",
+    "listen_for": [
+     "about the same"
+    ],
+    "ask": "Did you count squares?",
+    "repair": "Count 1 up, 4 across.",
+    "error": "Draws a parallel line by eye, so the slope changes.",
+    "example": {
+     "question": "Draw a line parallel to one rising 1 in 4.",
+     "wrong_answer": "roughly the same slope",
+     "correct_answer": "rise 1 for every 4 across"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.DRAW_PARALLEL_PERPENDICULAR.M_PERP_BY_EYE",
+    "listen_for": [
+     "looks right"
+    ],
+    "ask": "Check with the swapped rise and run.",
+    "repair": "Or a set square.",
+    "error": "Draws a perpendicular line by eye without checking the right angle.",
+    "example": {
+     "question": "Draw a perpendicular line.",
+     "wrong_answer": "a line that looks about right",
+     "correct_answer": "a line whose slope is swapped and changed in sign"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A line rises 1 for every 2 across. Rise and run of a perpendicular line?",
+    "answer": "2 down for 1 across",
+    "shows": "swap and change sign"
+   },
+   {
+    "question": "A line rises 3 for every 1 across. A parallel line?",
+    "answer": "rises 3 for every 1 across",
+    "shows": "same rise and run"
+   }
+  ],
+  "name": "Draw lines parallel and perpendicular to a given line",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS",
+  "key_step": "The child compares only the numbers in front of x, and uses gradient x change in x added to the start height.",
+  "floor": {
+   "prerequisite": "Finds a gradient from two points.",
+   "question": "(1, 2) and (3, 8)",
+   "answer": "3"
+  },
+  "representations": [
+   "equations in a table with m ringed",
+   "two parallel lines with staircases",
+   "a working in steps"
+  ],
+  "steps": [
+   "Find or read each gradient.",
+   "Same gradient: parallel.",
+   "For an unknown point: change in y = gradient x change in x.",
+   "Add to the start height."
+  ],
+  "contexts": [
+   "two roads on a map",
+   "rails of a railway",
+   "two fences"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write y = 3x + 1, y = 2x + 1, y = 3x - 4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the numbers in front of x.",
+    "say": "Which two match?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3 and 3."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write y = 3x - 4 is parallel to y = 3x + 1."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_SAME_C_AS_PARALLEL",
+    "listen_for": [
+     "y = 2x + 1"
+    ],
+    "ask": "Does the end number set the slope?",
+    "repair": "No: the gradient does.",
+    "error": "Picks the line with the same c as the parallel one.",
+    "example": {
+     "question": "Which is parallel to y = 3x + 1: y = 2x + 1 or y = 3x - 4?",
+     "wrong_answer": "y = 2x + 1",
+     "correct_answer": "y = 3x - 4"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_OPPOSITE_SIGN_PARALLEL",
+    "listen_for": [
+     "-3 is parallel"
+    ],
+    "ask": "Does -3 slope the same way?",
+    "repair": "No: the other way.",
+    "error": "Thinks a line with the opposite gradient is parallel.",
+    "example": {
+     "question": "Is y = -3x + 2 parallel to y = 3x + 1?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_C_READ_AS_GRADIENT",
+    "listen_for": [
+     "5"
+    ],
+    "ask": "Which number multiplies x?",
+    "repair": "3.",
+    "error": "Reads the constant as the gradient.",
+    "example": {
+     "question": "Gradient of y = 3x + 5?",
+     "wrong_answer": "5",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_GRADIENT_INVERTED_PQ",
+    "listen_for": [
+     "1/3"
+    ],
+    "ask": "y over x or x over y?",
+    "repair": "y over x.",
+    "error": "Finds the gradient upside down (change in x over change in y).",
+    "example": {
+     "question": "P(1, 2), Q(3, 8). Gradient?",
+     "wrong_answer": "1/3",
+     "correct_answer": "3"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_GRADIENT_SIGN_PQ",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Same order top and bottom?",
+    "repair": "-6 / 2 = -3.",
+    "error": "Gets the sign of the gradient wrong by subtracting in different orders.",
+    "example": {
+     "question": "P(1, 8), Q(3, 2). Gradient?",
+     "wrong_answer": "3",
+     "correct_answer": "-3"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_RUN_FOR_RISE",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Is that the rise?",
+    "repair": "Times the gradient: 9.",
+    "error": "Uses the change in x as the change in y on the parallel line.",
+    "example": {
+     "question": "Gradient 3, x goes from 2 to 5. Change in y?",
+     "wrong_answer": "3",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_GRADIENT_ADDED_TO_RUN",
+    "listen_for": [
+     "6"
+    ],
+    "ask": "Add or multiply?",
+    "repair": "Multiply.",
+    "error": "Adds the gradient to the change in x.",
+    "example": {
+     "question": "Gradient 3, change in x 3. Change in y?",
+     "wrong_answer": "6",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_START_HEIGHT_LEFT_OUT",
+    "listen_for": [
+     "9"
+    ],
+    "ask": "Where does R start?",
+    "repair": "At 4: 13.",
+    "error": "Gives the change in y as the y-coordinate.",
+    "example": {
+     "question": "R(2, 4), change in y 9. k?",
+     "wrong_answer": "9",
+     "correct_answer": "13"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS.M_CHANGE_SUBTRACTED",
+    "listen_for": [
+     "-5"
+    ],
+    "ask": "Up or down for a positive gradient?",
+    "repair": "Up: add.",
+    "error": "Takes the change in y away from R's y-coordinate.",
+    "example": {
+     "question": "R(2, 4), gradient 3, S at x = 5. k?",
+     "wrong_answer": "-5",
+     "correct_answer": "13"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which is parallel to y = -2x + 5: y = 2x + 5 or y = -2x - 1?",
+    "answer": "y = -2x - 1",
+    "shows": "same gradient"
+   },
+   {
+    "question": "A line parallel to gradient 2 passes through (1, 3) and (4, k). k?",
+    "answer": "9",
+    "shows": "finding k"
+   }
+  ],
+  "name": "Relate the gradients of parallel lines",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS",
+  "key_step": "The child turns the gradient upside down, changes its sign, checks the product is -1, then finds c with the new gradient.",
+  "floor": {
+   "prerequisite": "Finds the reciprocal.",
+   "question": "Reciprocal of 2/3",
+   "answer": "3/2"
+  },
+  "representations": [
+   "two gradients multiplied",
+   "a staircase turned through a right angle",
+   "a working in steps"
+  ],
+  "steps": [
+   "Upside down.",
+   "Change the sign.",
+   "Check: product -1.",
+   "c = y - mx with the new m."
+  ],
+  "contexts": [
+   "a path at right angles to a road",
+   "a shelf bracket",
+   "a map grid"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write gradient of L = 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2.",
+    "say": "What times 2 gives -1?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for -1/2."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write m of M = -1/2."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_RECIPROCAL_ONLY",
+    "listen_for": [
+     "1/2"
+    ],
+    "ask": "What is 2 x 1/2?",
+    "repair": "1, not -1: change the sign.",
+    "error": "Turns the gradient upside down but keeps its sign.",
+    "example": {
+     "question": "Perpendicular to gradient 2?",
+     "wrong_answer": "1/2",
+     "correct_answer": "-1/2"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SIGN_ONLY",
+    "listen_for": [
+     "-2"
+    ],
+    "ask": "What is 2 x -2?",
+    "repair": "-4: turn it over too.",
+    "error": "Changes the sign but does not turn the gradient upside down.",
+    "example": {
+     "question": "Perpendicular to gradient 2?",
+     "wrong_answer": "-2",
+     "correct_answer": "-1/2"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SAME_GRADIENT",
+    "listen_for": [
+     "2"
+    ],
+    "ask": "Same gradient gives which kind of line?",
+    "repair": "Parallel.",
+    "error": "Gives the same gradient as the first line.",
+    "example": {
+     "question": "Perpendicular to gradient 2?",
+     "wrong_answer": "2",
+     "correct_answer": "-1/2"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SUM_RULE",
+    "listen_for": [
+     "they add to 0"
+    ],
+    "ask": "Sum or product?",
+    "repair": "Product = -1.",
+    "error": "Thinks perpendicular gradients add to 0 or 1.",
+    "example": {
+     "question": "Why are y = 2x and y = -2x not perpendicular?",
+     "wrong_answer": "They are: the gradients add to 0",
+     "correct_answer": "The gradients multiply to -4, not -1"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_PERP_SAME_C",
+    "listen_for": [
+     "same c"
+    ],
+    "ask": "Does c decide the angle?",
+    "repair": "No.",
+    "error": "Thinks perpendicular lines must cross the y-axis at the same point.",
+    "example": {
+     "question": "Must perpendicular lines have the same c?",
+     "wrong_answer": "Yes",
+     "correct_answer": "No"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_C_SIGN_PERP",
+    "listen_for": [
+     "1"
+    ],
+    "ask": "c = y - mx: what is mx?",
+    "repair": "-2: 3 - (-2) = 5.",
+    "error": "Adds mx to y instead of taking it away when finding c.",
+    "example": {
+     "question": "m = -1/2 through (4, 3). c?",
+     "wrong_answer": "1",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_FIRST_GRADIENT_FOR_C",
+    "listen_for": [
+     "-5"
+    ],
+    "ask": "Which line's gradient did you use?",
+    "repair": "M's: -1/2.",
+    "error": "Uses the first line's gradient to find c of the perpendicular line.",
+    "example": {
+     "question": "L has gradient 2; M is perpendicular through (4, 3). c of M?",
+     "wrong_answer": "-5 (3 - 2 x 4)",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_C_WRITTEN_WRONG_SIGN",
+    "listen_for": [
+     "+5"
+    ],
+    "ask": "What sign did c have?",
+    "repair": "Negative.",
+    "error": "Finds c correctly but writes it with the wrong sign in the equation.",
+    "example": {
+     "question": "m = -1/2, c = -5. Equation?",
+     "wrong_answer": "y = -1/2 x + 5",
+     "correct_answer": "y = -1/2 x - 5"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS.M_C_AS_POINT_Y_PERP",
+    "listen_for": [
+     "3"
+    ],
+    "ask": "Is x 0 at (4, 3)?",
+    "repair": "No: solve for c.",
+    "error": "Takes the y-coordinate of the point as c.",
+    "example": {
+     "question": "m = -1/2 through (4, 3). c?",
+     "wrong_answer": "3",
+     "correct_answer": "5"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Gradient perpendicular to -3/4?",
+    "answer": "4/3",
+    "shows": "upside down and sign"
+   },
+   {
+    "question": "Equation of the line perpendicular to y = 2x + 1 through (2, 5)?",
+    "answer": "y = -1/2 x + 6",
+    "shows": "gradient then c"
+   }
+  ],
+  "name": "Relate the gradients of perpendicular lines",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED",
+  "key_step": "The child reads the fixed charge at distance 0 and the rate from the rise between two points, then works back from a bill by taking away the fixed charge first.",
+  "floor": {
+   "prerequisite": "Reads m and c in a story.",
+   "question": "y = 50x + 100: fixed charge",
+   "answer": "100"
+  },
+  "representations": [
+   "a fare graph with the start marked",
+   "a table of trips",
+   "bill = fixed + rate x units"
+  ],
+  "steps": [
+   "Fixed charge: where the line meets the charge axis.",
+   "Rate: rise between two points / run.",
+   "For a bill: take away the fixed charge.",
+   "Divide by the rate."
+  ],
+  "contexts": [
+   "a taxi in Mombasa",
+   "a Nairobi water bill",
+   "a boda boda tariff"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a fare line starting at 100 and rising to 300 at 4 km."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 0 km.",
+    "say": "What do you pay before moving?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 100."
+   },
+   {
+    "beat": "point",
+    "do": "Point from 0 to 4 km.",
+    "say": "How much does the line rise?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 200 / 4 = 50 a km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_FIXED_AS_RATE",
+    "listen_for": [
+     "100 a km"
+    ],
+    "ask": "Is 100 paid for each km or once?",
+    "repair": "Once.",
+    "error": "Gives the fixed charge as the charge for each km.",
+    "example": {
+     "question": "The line starts at 100 and rises 50 for each km. Charge per km?",
+     "wrong_answer": "100",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_TOTAL_AS_RATE",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "Is that for 1 km?",
+    "repair": "For 4 km.",
+    "error": "Gives a whole charge as the rate.",
+    "example": {
+     "question": "4 km costs 300. Charge per km (fixed 100)?",
+     "wrong_answer": "300",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_TOTAL_OVER_DISTANCE",
+    "listen_for": [
+     "75"
+    ],
+    "ask": "Does the line start at 0?",
+    "repair": "No: take off the 100.",
+    "error": "Divides a whole charge by the distance, so the fixed part is mixed in.",
+    "example": {
+     "question": "4 km costs 300, fixed 100. Charge per km?",
+     "wrong_answer": "75",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_SHORTEST_TRIP_AS_FIXED",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "Is 200 for 0 km?",
+    "repair": "For 2 km: take off 100.",
+    "error": "Gives the charge for the shortest trip as the fixed charge.",
+    "example": {
+     "question": "2 km 200, 5 km 350, 8 km 500. Fixed charge?",
+     "wrong_answer": "200",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_RATE_AS_FIXED",
+    "listen_for": [
+     "50"
+    ],
+    "ask": "Is 50 paid for 0 km?",
+    "repair": "No.",
+    "error": "Gives the rate as the fixed charge.",
+    "example": {
+     "question": "Rate 50 a km. Fixed charge?",
+     "wrong_answer": "50",
+     "correct_answer": "100"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_FIXED_NOT_REMOVED",
+    "listen_for": [
+     "24.2"
+    ],
+    "ask": "Did you take away the fixed charge?",
+    "repair": "1,200 / 60 = 20.",
+    "error": "Divides the bill by the rate without taking the fixed charge away.",
+    "example": {
+     "question": "Bill 1,450, fixed 250, 60 a unit. Units?",
+     "wrong_answer": "24.2",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_FIXED_ADDED_TO_BILL",
+    "listen_for": [
+     "28.3"
+    ],
+    "ask": "Is the fixed charge inside the bill?",
+    "repair": "Yes: subtract.",
+    "error": "Adds the fixed charge to the bill before dividing.",
+    "example": {
+     "question": "Bill 1,450, fixed 250, 60 a unit. Units?",
+     "wrong_answer": "28.3",
+     "correct_answer": "20"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED.M_MONEY_AS_UNITS",
+    "listen_for": [
+     "1,200"
+    ],
+    "ask": "Is that units or shillings?",
+    "repair": "Shillings: divide.",
+    "error": "Gives the money for units as the number of units.",
+    "example": {
+     "question": "Bill 1,450, fixed 250. Units at 60 each?",
+     "wrong_answer": "1,200",
+     "correct_answer": "20"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A taxi: 3 km costs 350, 7 km costs 650. Charge per km?",
+    "answer": "75 shillings",
+    "shows": "rate from two points"
+   },
+   {
+    "question": "Fixed charge for that taxi?",
+    "answer": "125 shillings",
+    "shows": "fixed from the rate"
+   }
+  ],
+  "name": "Read the rate and the fixed charge from a straight-line graph or table in real life",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING": {
+  "skill": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING",
+  "key_step": "The child finds the crossing point and reads its distance on the bottom axis.",
+  "floor": {
+   "prerequisite": "Reads a point on a graph.",
+   "question": "The point above 6 km",
+   "answer": "400"
+  },
+  "representations": [
+   "two lines on one graph",
+   "a table of both charges",
+   "the crossing point marked"
+  ],
+  "steps": [
+   "Find where the lines cross.",
+   "Read straight down to the distance.",
+   "Before it, the lower line is cheaper.",
+   "After it, the other is cheaper."
+  ],
+  "contexts": [
+   "two boda boda riders",
+   "two phone tariffs",
+   "two water vendors"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two fare lines crossing at 6 km."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the crossing.",
+    "say": "Read down: which distance?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 6 km."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write both charge the same at 6 km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_CHARGE_FOR_DISTANCE",
+    "listen_for": [
+     "400"
+    ],
+    "ask": "Is that a distance or a charge?",
+    "repair": "A charge.",
+    "error": "Reads the charge where the lines meet instead of the distance.",
+    "example": {
+     "question": "The lines meet at (6 km, 400). Distance?",
+     "wrong_answer": "400",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_START_OF_LINE_READ",
+    "listen_for": [
+     "200"
+    ],
+    "ask": "Is that where they meet?",
+    "repair": "Where B starts.",
+    "error": "Reads where one line starts instead of where they meet.",
+    "example": {
+     "question": "Rider B starts at 200. Same charge at what distance?",
+     "wrong_answer": "200",
+     "correct_answer": "where the lines cross"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_NOT_FROM_GRAPH",
+    "listen_for": [
+     "a guess"
+    ],
+    "ask": "Where do the lines cross?",
+    "repair": "Read it.",
+    "error": "Gives a number not read from the graph.",
+    "example": {
+     "question": "When do both charge the same?",
+     "wrong_answer": "the longest trip",
+     "correct_answer": "the distance at the crossing"
+    }
+   },
+   {
+    "code": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING.M_CHEAPER_SIDE_SWAPPED",
+    "listen_for": [
+     "the steeper one"
+    ],
+    "ask": "Which line is lower there?",
+    "repair": "That one is cheaper.",
+    "error": "Says which is cheaper the wrong way round on each side of the crossing.",
+    "example": {
+     "question": "Before 6 km, which line is lower?",
+     "wrong_answer": "the steeper one",
+     "correct_answer": "the one that is lower on the graph there"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Rider A: 100 + 40 a km. Rider B: 40 + 50 a km. Same charge at what distance?",
+    "answer": "6 km",
+    "shows": "where they meet"
+   },
+   {
+    "question": "For a 3 km trip, which rider is cheaper?",
+    "answer": "B",
+    "shows": "which side"
+   }
+  ],
+  "name": "Use where two straight-line graphs meet in real life",
+  "sub_strand": "MATH.G9.GEOMET.COORDINATES_AND_GRAPHS",
+  "sub_strand_name": "Coordinates and Graphs",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;

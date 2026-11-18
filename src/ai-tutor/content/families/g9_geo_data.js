@@ -26,7 +26,7 @@ const TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.co
 
 export const FAMILIES = [
   // =========================== COORDINATES AND GRAPHS ===========================
-  fam({ id: 'g9.graphs.parallel-table-pick', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.d', rung: 2, form: 'table',
+  fam({ id: 'g9.graphs.parallel-table-pick', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.d', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS', misMapped: false, reveals: ['M_SAME_C_AS_PARALLEL', 'M_OPPOSITE_SIGN_PARALLEL', 'M_C_READ_AS_GRADIENT'], rung: 2, form: 'table',
     draw: () => {
       const m = pick([2, 3, 4, 5, -2, -3, -4]), c = randInt(1, 9), c2 = randInt(-6, 8);
       if (c2 === c || c2 === 0) return null;
@@ -45,7 +45,7 @@ export const FAMILIES = [
         steps: [`The gradient of ${lineEq(m, c)} is ${m}.`, `Parallel lines have the same gradient, so look for the equation with ${sg(m)} in front of x.`, `That is ${lineEq(lines.find(l => l.t === 'right').m, lines.find(l => l.t === 'right').c)}.`] };
     } }),
 
-  fam({ id: 'g9.graphs.parallel-find-k', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.d', rung: 3, form: 'steps', allowNegative: true,
+  fam({ id: 'g9.graphs.parallel-find-k', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.d', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PARALLEL_GRADIENTS', rung: 3, form: 'steps', allowNegative: true,
     draw: () => {
       const g = pick([2, 3, 4, -2, -3]), x1 = randInt(0, 4), dx = randInt(1, 3), y1 = randInt(-3, 6);
       const r1 = randInt(0, 3), s1 = randInt(-4, 5), r2 = r1 + randInt(2, 4);
@@ -54,15 +54,15 @@ export const FAMILIES = [
     make: ({ g, x1, y1, x2, y2, r1, s1, r2, k }) => ({
       question: `Line PQ passes through P${pt(x1, y1)} and Q${pt(x2, y2)}. Line RS is parallel to PQ. R is the point ${pt(r1, s1)} and S is the point (${r2}, k).`,
       parts: [
-        { prompt: 'Find the gradient of PQ.', answer: g, hint: 'Gradient = change in y ÷ change in x.', wrong: [[round((x2 - x1) / (y2 - y1), 3), 'That is change in x ÷ change in y, upside down.'], [-g, 'Check the sign. Subtract the y values and the x values in the same order.']] },
-        { prompt: `RS is parallel to PQ, so it has the same gradient. From R to S, x goes up by ${r2 - r1}. By how much does y change?`, answer: g * (r2 - r1), hint: 'Change in y = gradient × change in x.', wrong: [[r2 - r1, 'That is the change in x. Multiply it by the gradient.'], [g + (r2 - r1), 'Multiply the gradient by the change in x. Do not add.']] },
-        { prompt: 'Find k, the y-coordinate of S.', answer: k, hint: 'Start from the y-coordinate of R and add the change in y.', wrong: [[g * (r2 - r1), 'That is only the change in y. S starts from the height of R.'], [s1 - g * (r2 - r1), 'The change in y is added to the y-coordinate of R, not taken away.']] },
+        { prompt: 'Find the gradient of PQ.', answer: g, hint: 'Gradient = change in y ÷ change in x.', wrong: [[round((x2 - x1) / (y2 - y1), 3), 'That is change in x ÷ change in y, upside down.', 'M_GRADIENT_INVERTED_PQ'], [-g, 'Check the sign. Subtract the y values and the x values in the same order.', 'M_GRADIENT_SIGN_PQ']] },
+        { prompt: `RS is parallel to PQ, so it has the same gradient. From R to S, x goes up by ${r2 - r1}. By how much does y change?`, answer: g * (r2 - r1), hint: 'Change in y = gradient × change in x.', wrong: [[r2 - r1, 'That is the change in x. Multiply it by the gradient.', 'M_RUN_FOR_RISE'], [g + (r2 - r1), 'Multiply the gradient by the change in x. Do not add.', 'M_GRADIENT_ADDED_TO_RUN']] },
+        { prompt: 'Find k, the y-coordinate of S.', answer: k, hint: 'Start from the y-coordinate of R and add the change in y.', wrong: [[g * (r2 - r1), 'That is only the change in y. S starts from the height of R.', 'M_START_HEIGHT_LEFT_OUT'], [s1 - g * (r2 - r1), 'The change in y is added to the y-coordinate of R, not taken away.', 'M_CHANGE_SUBTRACTED']] },
       ],
       steps: [`Gradient of PQ = (${y2} − ${sg(y1)}) ÷ (${x2} − ${x1}) = ${g}.`, `RS is parallel, so its gradient is also ${g}. Change in y = ${g} × ${r2 - r1} = ${g * (r2 - r1)}.`, `k = ${sg(s1)} + ${sg(g * (r2 - r1))} = ${k}.`],
     }),
     check: ({ r1, s1, r2, g }, v) => v[0] === g && v[2] - s1 === v[1] && (v[2] - s1) / (r2 - r1) === v[0] }),
 
-  fam({ id: 'g9.graphs.perpendicular-c', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.f', rung: 3, form: 'steps', allowNegative: true,
+  fam({ id: 'g9.graphs.perpendicular-c', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.f', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS', rung: 3, form: 'steps', allowNegative: true,
     draw: () => {
       const n = pick([2, 4, 5, -2, -4, -5]), x1 = randInt(0, 3), dx = randInt(1, 2), y1 = randInt(-2, 5);
       const p = Math.abs(n) * randInt(1, 3) * pick([1, 1, -1]), q = randInt(-5, 8);
@@ -74,29 +74,29 @@ export const FAMILIES = [
     make: ({ n, x1, y1, x2, y2, p, q, m, c }) => ({
       question: `Line L passes through A${pt(x1, y1)} and B${pt(x2, y2)}. Line M is perpendicular to L and passes through P${pt(p, q)}. The equation of M is y = mx + c.`,
       parts: [
-        { prompt: 'Find the gradient of L.', answer: n, hint: 'Gradient = change in y ÷ change in x.', wrong: [[round(1 / n, 4), 'That is change in x ÷ change in y, upside down.']] },
-        { prompt: 'Find the gradient of M, as a decimal.', answer: m, hint: 'The gradients of perpendicular lines multiply to give −1.', wrong: [[n, 'That is the gradient of L. A perpendicular line has a different gradient.'], [-n, 'Changing the sign is only half of it. Turn the number upside down too.'], [round(1 / n, 4), 'Turning it upside down is only half of it. Change the sign too.']] },
-        { prompt: 'M passes through P. Find c in y = mx + c.', answer: c, hint: 'Put the x and y of P into y = mx + c, then solve for c.', wrong: [[round(q + m * p, 4), 'Check the sign. c = y − mx, so take mx away from y.'], [round(q - n * p, 4), 'Use the gradient of M, not the gradient of L.'], [q, 'c is not the y-coordinate of P. First take mx away from it.']] },
+        { prompt: 'Find the gradient of L.', answer: n, hint: 'Gradient = change in y ÷ change in x.', wrong: [[round(1 / n, 4), 'That is change in x ÷ change in y, upside down.', 'M_GRADIENT_INVERTED_PQ']] },
+        { prompt: 'Find the gradient of M, as a decimal.', answer: m, hint: 'The gradients of perpendicular lines multiply to give −1.', wrong: [[n, 'That is the gradient of L. A perpendicular line has a different gradient.', 'M_PERP_SAME_GRADIENT'], [-n, 'Changing the sign is only half of it. Turn the number upside down too.', 'M_PERP_SIGN_ONLY'], [round(1 / n, 4), 'Turning it upside down is only half of it. Change the sign too.', 'M_PERP_RECIPROCAL_ONLY']] },
+        { prompt: 'M passes through P. Find c in y = mx + c.', answer: c, hint: 'Put the x and y of P into y = mx + c, then solve for c.', wrong: [[round(q + m * p, 4), 'Check the sign. c = y − mx, so take mx away from y.', 'M_C_SIGN_PERP'], [round(q - n * p, 4), 'Use the gradient of M, not the gradient of L.', 'M_FIRST_GRADIENT_FOR_C'], [q, 'c is not the y-coordinate of P. First take mx away from it.', 'M_C_AS_POINT_Y_PERP']] },
       ],
       steps: [`Gradient of L = (${y2} − ${sg(y1)}) ÷ (${x2} − ${x1}) = ${n}.`, `Perpendicular: ${n} × m = −1, so m = −1 ÷ ${sg(n)} = ${m}.`, `${q} = ${sg(m)} × ${sg(p)} + c, so c = ${q} − ${sg(round(m * p, 4))} = ${c}.`],
     }),
     check: ({ p, q }, v) => near(v[0] * v[1], -1) && near(v[1] * p + v[2], q) }),
 
-  fam({ id: 'g9.graphs.perpendicular-why-opposite', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.f', rung: 2, form: 'why',
+  fam({ id: 'g9.graphs.perpendicular-why-opposite', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.f', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS', rung: 2, form: 'why',
     draw: () => ({ m: randInt(2, 5), c1: randInt(1, 6), c2: randInt(1, 8), p: person() }),
     make: ({ m, c1, c2, p }) => ({
       question: `${p.name} says that ${lineEq(m, c1)} and ${lineEq(-m, c2)} are perpendicular, because the gradients are opposites. Why is ${p.name} wrong?`,
       options: [
         { text: `Gradients of perpendicular lines multiply to −1, and ${m} × ${sg(-m)} = ${sg(-m * m)}`, right: true },
-        { text: 'Perpendicular lines must have the same gradient', right: false, why: 'Lines with the same gradient are parallel, not perpendicular.' },
-        { text: 'Perpendicular lines must cross the y-axis at the same point', right: false, why: 'Where a line crosses the y-axis has nothing to do with its angle to another line.' },
-        { text: 'Perpendicular lines must have gradients that add up to 1', right: false, why: 'It is the product of the two gradients that matters, not the sum.' },
+        { text: 'Perpendicular lines must have the same gradient', right: false, why: 'Lines with the same gradient are parallel, not perpendicular.', mis: 'M_PERP_SAME_GRADIENT' },
+        { text: 'Perpendicular lines must cross the y-axis at the same point', right: false, why: 'Where a line crosses the y-axis has nothing to do with its angle to another line.', mis: 'M_PERP_SAME_C' },
+        { text: 'Perpendicular lines must have gradients that add up to 1', right: false, why: 'It is the product of the two gradients that matters, not the sum.', mis: 'M_PERP_SUM_RULE' },
       ],
       hints: ['What must the two gradients do when you multiply them?', 'Try multiplying the two gradients in this question.'],
       steps: [`The gradients are ${m} and ${sg(-m)}.`, `${m} × ${sg(-m)} = ${sg(-m * m)}, not −1, so the lines are not perpendicular.`],
     }) }),
 
-  fam({ id: 'g9.graphs.perpendicular-spot', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.f', rung: 3, form: 'spot',
+  fam({ id: 'g9.graphs.perpendicular-spot', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.f', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.PERPENDICULAR_GRADIENTS', rung: 3, form: 'spot',
     draw: () => {
       const m = pick([2, 4, 5]), c0 = randInt(1, 7), p = m * randInt(1, 3), q = randInt(-4, 7);
       if (q + p / m === 0) return null;
@@ -119,11 +119,12 @@ export const FAMILIES = [
       ];
       const fixes = { recip: 'The perpendicular gradient was only turned upside down. It must change sign as well, so that the two gradients multiply to −1.', neg: 'The sign was changed but the number was not turned upside down. The two gradients must multiply to −1.', sign: 'c = y − mx. The product mx was added to y instead of being taken away.', csign: 'The value of c was found correctly but written with the wrong sign in the final equation.' };
       return { question: `Wekesa worked out the equation of the line perpendicular to ${lineEq(m, c0)} that passes through ${pt(p, q)}. Which step has the mistake?`,
-        working, fix: fixes[kind],
+        working, mis: { recip: 'M_PERP_RECIPROCAL_ONLY', neg: 'M_PERP_SIGN_ONLY', sign: 'M_C_SIGN_PERP', csign: 'M_C_WRITTEN_WRONG_SIGN' }[kind],
+        fix: fixes[kind],
         steps: [`The perpendicular gradient is −1/${m}.`, `c = ${sg(q)} − (−1/${m}) × ${sg(p)} = ${sg(cTrue)}.`] };
     } }),
 
-  fam({ id: 'g9.graphs.fare-rate', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.g', rung: 2, form: 'graph',
+  fam({ id: 'g9.graphs.fare-rate', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED', rung: 2, form: 'graph',
     draw: () => {
       const rate = pick([50, 100]), fix = pick([50, 100, 150]);
       const y4 = fix + 4 * rate;
@@ -136,13 +137,13 @@ export const FAMILIES = [
       return { question: 'The graph shows the charge of a taxi for trips of up to 4 km. How much does the taxi charge for each km? Answer in shillings.',
         model: { type: 'line-graph', data: { points: xs.map(x => ({ x, y: y(x) })), xTicks: xs, yTicks, xLabel: 'Distance (km)', yLabel: 'Charge (sh)' } },
         answer: rate,
-        wrong: [[fix, 'That is the charge before the taxi has moved at all. The question asks how much each km adds.'], [y(4), 'That is the charge for 4 km altogether. Look at how much the line rises for each km.'], [y(4) / 4, 'That divides the whole charge, including the fixed part, by 4. Find how much the line rises for 1 km.']],
+        wrong: [[fix, 'That is the charge before the taxi has moved at all. The question asks how much each km adds.', 'M_FIXED_AS_RATE'], [y(4), 'That is the charge for 4 km altogether. Look at how much the line rises for each km.', 'M_TOTAL_AS_RATE'], [y(4) / 4, 'That divides the whole charge, including the fixed part, by 4. Find how much the line rises for 1 km.', 'M_TOTAL_OVER_DISTANCE']],
         hints: ['Read the charge at two distances.', 'The gradient is the rise for each 1 km along.'],
         steps: [`At 1 km the charge is sh ${y(1)}. At 2 km it is sh ${y(2)}.`, `The line rises ${y(2)} − ${y(1)} = ${rate} for each km, so the charge is sh ${rate} per km.`] };
     },
     check: ({ rate, fix }, a) => (fix + 3 * rate - (fix + rate)) / 2 === a }),
 
-  fam({ id: 'g9.graphs.tariff-fixed', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.g', rung: 2, form: 'table',
+  fam({ id: 'g9.graphs.tariff-fixed', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED', rung: 2, form: 'table',
     draw: () => {
       const r = pick([40, 50, 60, 80]), fix = pick([40, 60, 80, 100, 120]), x = [2, 4, 6];
       const y = x.map(v => fix + r * v);
@@ -153,13 +154,13 @@ export const FAMILIES = [
       question: 'A taxi firm charges a fixed amount plus a charge for each km. The table shows its charges for three trips (an example). What is the fixed charge, in shillings?',
       model: { type: 'table', data: { head: ['Distance', 'Charge'], rows: x.map((v, i) => ({ label: `${v} km`, value: sh(y[i]) })) } },
       answer: fix,
-      wrong: [[y[0], 'That is the charge for the shortest trip, which includes the charge for the km.'], [r, 'That is the charge for each km. The fixed charge is the part paid even for a trip of 0 km.'], [y[0] / 2, 'Dividing the charge by the distance mixes the fixed part into the rate. Find the rate from the rise first.']],
+      wrong: [[y[0], 'That is the charge for the shortest trip, which includes the charge for the km.', 'M_SHORTEST_TRIP_AS_FIXED'], [r, 'That is the charge for each km. The fixed charge is the part paid even for a trip of 0 km.', 'M_RATE_AS_FIXED'], [y[0] / 2, 'Dividing the charge by the distance mixes the fixed part into the rate. Find the rate from the rise first.', 'M_TOTAL_OVER_DISTANCE']],
       hints: ['Find how much the charge goes up for each extra km.', 'Take away the km charge for one trip. What is left is the fixed charge.'],
       steps: [`From ${x[0]} km to ${x[1]} km the charge rises by ${y[1] - y[0]}, so each km costs ${r}.`, `${x[0]} km costs ${x[0]} × ${r} = ${x[0] * r}. The rest of sh ${y[0]} is the fixed charge: ${y[0]} − ${x[0] * r} = ${fix}.`],
     }),
     check: ({ r, x, y }, a) => a + r * x[2] === y[2] }),
 
-  fam({ id: 'g9.graphs.tariff-cross', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.g', rung: 2, form: 'graph',
+  fam({ id: 'g9.graphs.tariff-cross', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPHS_MEETING', rung: 2, form: 'graph',
     draw: () => {
       const x0 = pick([2, 3, 4]), rB = pick([20, 30, 40]), D = pick([10, 20]), fA = pick([40, 60, 80]);
       const rA = rB + D, fB = fA + D * x0, y0 = fA + rA * x0;
@@ -172,7 +173,7 @@ export const FAMILIES = [
       return { question: 'Two boda boda riders charge as shown on the graph. For what distance do both charge the same? Answer in km.',
         model: { type: 'line-graph', data: { lines: [xs.map(x => ({ x, y: ya(x) })), xs.map(x => ({ x, y: yb(x) }))], xTicks: xs, yTicks, xLabel: 'Distance (km)', yLabel: 'Charge (sh)' } },
         answer: x0,
-        wrong: [[y0, 'That is the charge where the lines meet, read on the upright axis. The question asks for the distance, read along the bottom.'], [fB, 'That is where the higher line starts on the upright axis. Find where the two lines meet.'], [D, 'That is not read from the graph. Look for the point where the two lines cross.']],
+        wrong: [[y0, 'That is the charge where the lines meet, read on the upright axis. The question asks for the distance, read along the bottom.', 'M_CHARGE_FOR_DISTANCE'], [fB, 'That is where the higher line starts on the upright axis. Find where the two lines meet.', 'M_START_OF_LINE_READ'], [D, 'That is not read from the graph. Look for the point where the two lines cross.', 'M_NOT_FROM_GRAPH']],
         hints: ['The charges are equal where the two lines cross.', 'Read the distance under the crossing point.'],
         steps: ['Find the point where the two lines cross.', `Go straight down from that point to the distance axis: ${x0} km.`, `Check: both charges are sh ${y0} at ${x0} km.`] };
     },
@@ -918,7 +919,7 @@ export const FAMILIES = [
         steps: bags.map((x, i) => `Bag ${L[i]}: ${x.red} ÷ ${x.all} = ${round(x.red / x.all, 3)}.`).concat([`The ${least ? 'smallest' : 'biggest'} chance is for Bag ${L[ti]}.`]) };
     } }),
 
-  fam({ id: 'g9.graphs.water-bill-line', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'G9.GRAPHS.g', rung: 2, form: 'word',
+  fam({ id: 'g9.graphs.water-bill-line', skill: 'G9_PARALLEL_PERPENDICULAR', outcome: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.g', cskill: 'MATH.G9.GEOMET.COORDINATES_AND_GRAPHS.LINE_GRAPH_RATE_FIXED', rung: 2, form: 'word',
     draw: () => {
       const F = pick([200, 300, 400, 500]), r = pick([40, 50, 60, 80]), u = randInt(8, 30), B = F + r * u;
       if (!allDistinct(u, round(B / r, 2), round((B + F) / r, 2), B - F)) return null;
@@ -927,7 +928,7 @@ export const FAMILIES = [
     make: ({ F, r, u, B, p }) => ({
       question: `A water company charges a fixed amount of ${sh(F)} a month, plus ${sh(r)} for each unit of water used. ${p.name}'s bill for one month is ${sh(B)}. How many units did ${p.she} use?`,
       answer: u,
-      wrong: [[round(B / r, 2), 'The fixed amount is paid first. Take it away before you divide by the charge for each unit.'], [round((B + F) / r, 2), 'The fixed amount is part of the bill, so take it away from the bill. Do not add it.'], [B - F, 'That is the money paid for the units, not the number of units. Divide it by the charge for each unit.']],
+      wrong: [[round(B / r, 2), 'The fixed amount is paid first. Take it away before you divide by the charge for each unit.', 'M_FIXED_NOT_REMOVED'], [round((B + F) / r, 2), 'The fixed amount is part of the bill, so take it away from the bill. Do not add it.', 'M_FIXED_ADDED_TO_BILL'], [B - F, 'That is the money paid for the units, not the number of units. Divide it by the charge for each unit.', 'M_MONEY_AS_UNITS']],
       hints: ['The bill is the fixed amount plus the charge for the units.', 'Take away the fixed amount first.'],
       steps: [`Money paid for the units = ${B} − ${F} = ${B - F}.`, `Units = ${B - F} ÷ ${r} = ${u}.`],
     }),
