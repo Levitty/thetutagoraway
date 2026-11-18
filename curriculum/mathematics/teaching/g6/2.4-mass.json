@@ -1,0 +1,878 @@
+{
+ "sub_strand": "MATH.G6.MEASUR.MASS",
+ "title": "Mass",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "The tonne is built from things learners know: a 50 kg bag of cement, a 90 kg bag of maize, 20 bags of cement make a tonne. Every t and kg calculation is done in two columns with \"1 t = 1,000 kg\" written at the top, and the kg column always has three digits.",
+ "skills": [
+  {
+   "skill": "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT",
+   "key_step": "The child says that a tonne is 1,000 kg and is used for very heavy things, and chooses g, kg or t by comparing with a known mass.",
+   "floor": {
+    "prerequisite": "Chooses g or kg for an object.",
+    "question": "Which unit for a bag of sugar?",
+    "answer": "kg"
+   },
+   "representations": [
+    "a 1 kg packet of sugar and a 50 kg bag of cement",
+    "a picture of a lorry of sand",
+    "a unit ladder: g, kg, t"
+   ],
+   "steps": [
+    "Ask how heavy the object is compared with a 1 kg packet.",
+    "Light: g. A person or a bag: kg. A lorry load: t.",
+    "Remember 1 t = 1,000 kg.",
+    "Mass units are g, kg and t; litres are for capacity."
+   ],
+   "contexts": [
+    "a lorry of sand",
+    "a harvest of maize from a cooperative",
+    "a car on a ferry"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a unit ladder with g, kg and t."
+    },
+    {
+     "beat": "write",
+     "do": "Write a goat, a lorry of sand, a pencil."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lorry.",
+     "say": "Which step of the ladder fits it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to choose."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to put the other two on the ladder."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT.M_TONNE_LESS_THAN_KG",
+     "listen_for": [
+      "100 kg is heavier"
+     ],
+     "ask": "How many kg make one tonne?",
+     "repair": "1 t is 1,000 kg, heavier than 100 kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT.M_UNIT_FOR_SMALL_OBJECT",
+     "listen_for": [
+      "tonnes for the goat"
+     ],
+     "ask": "Can you lift a goat with a few people?",
+     "repair": "A goat is measured in kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT.M_UNIT_TOO_SMALL",
+     "listen_for": [
+      "grammes for the goat"
+     ],
+     "ask": "Is a goat lighter than a packet of sugar?",
+     "repair": "A goat is many kilogrammes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT.M_CAPACITY_UNIT_FOR_MASS",
+     "listen_for": [
+      "litres"
+     ],
+     "ask": "Are we asking how heavy it is or how much it holds?",
+     "repair": "Heavy loads are measured in tonnes."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is heavier, 1 t or 100 kg?",
+     "answer": "1 t",
+     "shows": "tonne is 1,000 kg"
+    },
+    {
+     "question": "Which unit is best for the mass of a lorry load of maize?",
+     "answer": "tonnes",
+     "shows": "choose the unit"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES",
+   "key_step": "The child picks things heavier than many people together (a lorry load, a heap of sand, a harvest) as measured in tonnes, judging the whole load.",
+   "floor": {
+    "prerequisite": "Knows the tonne is for very heavy things.",
+    "question": "Is a tonne heavier than a kg?",
+    "answer": "Yes"
+   },
+   "representations": [
+    "pictures of a cow, a lorry of sand and a crate of soda",
+    "how many people would balance the item",
+    "a sorting table: g, kg, t"
+   ],
+   "steps": [
+    "Think of the whole load, not one piece.",
+    "Compare with something known: one person is about 50 kg.",
+    "If it is like many people or more, use tonnes.",
+    "Liquids have mass too."
+   ],
+   "contexts": [
+    "a tanker of milk",
+    "sugarcane on a tractor",
+    "a harvest of tea leaves"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a tomato, a crate and a lorry full of crates."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lorry.",
+     "say": "How many crates fit in the lorry?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say many."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask which one is measured in tonnes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES.M_BIG_MEANS_TONNES",
+     "listen_for": [
+      "a cow",
+      "it is big"
+     ],
+     "ask": "Could a few men lift a cow on a stretcher?",
+     "repair": "A cow is a few hundred kg; a lorry load of sand is tonnes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES.M_LOAD_TOO_LIGHT",
+     "listen_for": [
+      "9 kg",
+      "kilogrammes"
+     ],
+     "ask": "Could you carry a lorry of sand on your back?",
+     "repair": "A lorry load is tonnes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES.M_SMALL_PIECES_NEVER_TONNES",
+     "listen_for": [
+      "tomatoes are light"
+     ],
+     "ask": "How many crates are in a full lorry?",
+     "repair": "Many light things together can make tonnes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES.M_LIQUID_HAS_NO_MASS",
+     "listen_for": [
+      "milk is in litres"
+     ],
+     "ask": "Is a full jerrycan heavy to carry?",
+     "repair": "Liquids have mass: 10,000 l of milk is about 10 t."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is measured in tonnes: a goat, a bag of cement or a lorry of sand?",
+     "answer": "a lorry of sand",
+     "shows": "pick the item"
+    },
+    {
+     "question": "Can a tanker carrying 10,000 l of milk be weighed in tonnes?",
+     "answer": "Yes, about 10 t",
+     "shows": "liquids have mass"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP",
+   "key_step": "The child uses 1 t = 1,000 kg to say how many equal bags make a tonne by dividing 1,000 by the mass of one bag.",
+   "floor": {
+    "prerequisite": "Knows 1 kg = 1,000 g.",
+    "question": "How many g in 1 kg?",
+    "answer": "1,000"
+   },
+   "representations": [
+    "bags of cement stacked to make a tonne",
+    "counting in fifties to 1,000",
+    "the relation written: 1 t = 1,000 kg"
+   ],
+   "steps": [
+    "Write 1 t = 1,000 kg.",
+    "For bags, divide 1,000 by the mass of one bag.",
+    "For a part of a tonne, take that part of 1,000.",
+    "Check by multiplying back."
+   ],
+   "contexts": [
+    "bags of cement for a school building",
+    "sacks of maize at the NCPB depot",
+    "bags of fertiliser"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 1 t = 1,000 kg."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a stack of 50 kg bags."
+    },
+    {
+     "beat": "count",
+     "do": "Count in fifties with the child up to 1,000."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say how many bags."
+    },
+    {
+     "beat": "write",
+     "do": "Write 1,000 / 50 = 20 bags."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP.M_HUNDRED_KG",
+     "listen_for": [
+      "2 sacks",
+      "a hundred"
+     ],
+     "ask": "How many kg in one tonne?",
+     "repair": "1 t is 1,000 kg, so 20 sacks of 50 kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP.M_TENS_NOT_THOUSANDS",
+     "listen_for": [
+      "20 kg",
+      "ten"
+     ],
+     "ask": "Is a tonne only 10 kg?",
+     "repair": "1 t = 1,000 kg, so 2 t = 2,000 kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP.M_SACKS_MULTIPLIED",
+     "listen_for": [
+      "50,000"
+     ],
+     "ask": "Can a tonne hold 50,000 sacks?",
+     "repair": "Divide 1,000 by 50."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP.M_PART_TONNE_FROM_100",
+     "listen_for": [
+      "25 kg",
+      "a quarter of a hundred"
+     ],
+     "ask": "How many kg in a whole tonne?",
+     "repair": "A quarter of 1,000 kg is 250 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many 50 kg sacks make a tonne?",
+     "answer": "20",
+     "shows": "divide 1,000"
+    },
+    {
+     "question": "How many kg is a quarter of a tonne?",
+     "answer": "250 kg",
+     "shows": "part of 1,000"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES",
+   "key_step": "The child estimates the whole load by thinking how many tonnes the items make, using a known mass such as 20 bags of 50 kg to a tonne, and says \"about\".",
+   "floor": {
+    "prerequisite": "Knows how many 50 kg bags make a tonne.",
+    "question": "How many 50 kg bags make 1 t?",
+    "answer": "20"
+   },
+   "representations": [
+    "a lorry drawn with bags in groups of 20",
+    "the groups counted as tonnes",
+    "an estimate written with \"about\""
+   ],
+   "steps": [
+    "Find the mass of one item.",
+    "Group the items into tonnes (for example 20 bags of 50 kg).",
+    "Count the groups.",
+    "Say \"about\" and give tonnes."
+   ],
+   "contexts": [
+    "a lorry of maize bags",
+    "a matatu full of passengers",
+    "a heap of ballast"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 200 bags as 10 groups of 20."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one group.",
+     "say": "How heavy is one group of 20 bags?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1 t."
+    },
+    {
+     "beat": "count",
+     "do": "Count the groups with the child."
+    },
+    {
+     "beat": "write",
+     "do": "Write about 10 t."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES.M_UNIT_NOT_CONVERTED",
+     "listen_for": [
+      "2,000 t"
+     ],
+     "ask": "Is 2,000 the number of kg or of tonnes?",
+     "repair": "Divide the kg by 1,000 to get tonnes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES.M_ESTIMATE_TOO_PRECISE",
+     "listen_for": [
+      "720 kg exactly"
+     ],
+     "ask": "Does the question ask for an exact mass?",
+     "repair": "An estimate is a round number: about 1 t."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES.M_ESTIMATE_TEN_TIMES_OFF",
+     "listen_for": [
+      "100 t"
+     ],
+     "ask": "How many groups of 20 bags are in 200 bags?",
+     "repair": "Ten groups: about 10 t."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES.M_ONE_ITEM_FOR_LOAD",
+     "listen_for": [
+      "50 kg",
+      "one bag"
+     ],
+     "ask": "Is the lorry as heavy as one bag?",
+     "repair": "Estimate all the bags together."
+    }
+   ],
+   "checks": [
+    {
+     "question": "40 bags of 50 kg are loaded. About how many tonnes is the load?",
+     "answer": "about 2 t",
+     "shows": "group into tonnes"
+    },
+    {
+     "question": "A lorry carries 200 bags of 50 kg. About how many tonnes?",
+     "answer": "about 10 t",
+     "shows": "bigger load"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES",
+   "key_step": "The child multiplies tonnes by 1,000 for kg and divides kg by 1,000 for tonnes, keeping three digits in the kg part.",
+   "floor": {
+    "prerequisite": "Knows 1 t = 1,000 kg.",
+    "question": "How many kg in 3 t?",
+    "answer": "3,000 kg"
+   },
+   "representations": [
+    "a place value chart with t and three kg columns",
+    "the number with a line three digits from the right",
+    "t and kg, and the decimal"
+   ],
+   "steps": [
+    "t to kg: multiply the tonnes by 1,000 and add the kg.",
+    "kg to t: draw a line three digits from the right.",
+    "Left of the line is tonnes, right is kg (or after the point).",
+    "Check the direction: bigger unit, smaller number."
+   ],
+   "contexts": [
+    "a weighbridge ticket",
+    "maize sold to a cooperative",
+    "a delivery of cement"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 t 45 kg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kg part.",
+     "say": "How many digits must the kg part have?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for three."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write 045 and join it to the 2."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2,045 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES.M_DIVIDE_BY_HUNDRED_TONNES",
+     "listen_for": [
+      "45 t",
+      "by a hundred"
+     ],
+     "ask": "How many kg in a tonne?",
+     "repair": "Divide by 1,000: 4.5 t."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES.M_TONNES_AS_KG_TEN",
+     "listen_for": [
+      "35 kg",
+      "times ten"
+     ],
+     "ask": "Is 3.5 t only 35 kg?",
+     "repair": "Multiply by 1,000: 3,500 kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES.M_KG_PLACE_HOLDER_LOST",
+     "listen_for": [
+      "2,450",
+      "join them"
+     ],
+     "ask": "Is 45 kg the same as 450 kg?",
+     "repair": "The kg part takes three places: 045."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES.M_KG_TO_T_MULTIPLY",
+     "listen_for": [
+      "3,000,000",
+      "times"
+     ],
+     "ask": "Should the number of tonnes be bigger or smaller than the kg?",
+     "repair": "Divide by 1,000: 3 t."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 4,500 kg in tonnes.",
+     "answer": "4.5 t",
+     "shows": "divide by 1,000"
+    },
+    {
+     "question": "Write 2 t 45 kg in kg.",
+     "answer": "2,045 kg",
+     "shows": "zero in the kg"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG",
+   "key_step": "The child adds kg to kg and t to t, then renames every 1,000 kg as 1 t and adds it to the tonnes.",
+   "floor": {
+    "prerequisite": "Adds kg and g with renaming.",
+    "question": "What is 2 kg 600 g + 1 kg 700 g?",
+    "answer": "4 kg 300 g"
+   },
+   "representations": [
+    "two weighbridge tickets",
+    "t and kg columns",
+    "the carried tonne written above the t column"
+   ],
+   "steps": [
+    "Change any amount in one unit so both have t and kg.",
+    "Add the kg.",
+    "If the kg are 1,000 or more, rename 1,000 kg as 1 t and carry it.",
+    "Add the tonnes, including the carried tonne."
+   ],
+   "contexts": [
+    "two loads of maize delivered",
+    "sand for a building in two trips",
+    "tea leaves picked in two weeks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 t 300 kg + 3 t 900 kg in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the kg.",
+     "say": "What is 300 + 900?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 1,200."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 1,200.",
+     "say": "How many tonnes are hiding in it?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to carry 1 t and finish."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 t 200 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG.M_KG_OVER_THOUSAND_LEFT",
+     "listen_for": [
+      "5 t 1,200 kg"
+     ],
+     "ask": "Can the kg column hold 1,000 or more?",
+     "repair": "Rename 1,000 kg as 1 t."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG.M_ADD_AS_DECIMAL_TONNES",
+     "listen_for": [
+      "3 t 5 kg",
+      "lost the zero"
+     ],
+     "ask": "Is 50 kg the same as 5 kg?",
+     "repair": "Keep three digits in the kg: 050 + 450 = 500."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG.M_RENAMED_TONNE_NOT_ADDED",
+     "listen_for": [
+      "5 t 200 kg",
+      "forgot the tonne"
+     ],
+     "ask": "Where did the tonne from 1,200 kg go?",
+     "repair": "Add the carried tonne to the tonnes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.ADD_TONNES_KG.M_NUMBERS_ADDED_UNITS_IGNORED",
+     "listen_for": [
+      "453",
+      "3 plus 450"
+     ],
+     "ask": "Is 3 a number of kg?",
+     "repair": "Write 3 t as 3,000 kg, then add."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 2 t 300 kg + 3 t 900 kg?",
+     "answer": "6 t 200 kg",
+     "shows": "renaming kg"
+    },
+    {
+     "question": "What is 3 t + 450 kg?",
+     "answer": "3 t 450 kg",
+     "shows": "different units"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG",
+   "key_step": "When there are too few kg on top, the child renames 1 t as 1,000 kg and takes one off the tonnes.",
+   "floor": {
+    "prerequisite": "Subtracts kg and g with renaming.",
+    "question": "What is 5 kg 200 g - 2 kg 700 g?",
+    "answer": "2 kg 500 g"
+   },
+   "representations": [
+    "a load with some taken off",
+    "t and kg columns with renaming shown",
+    "a check by adding back"
+   ],
+   "steps": [
+    "Write the masses in t and kg columns.",
+    "If the top kg are fewer, rename 1 t as 1,000 kg.",
+    "Take one off the top tonnes.",
+    "Subtract kg, then t, and check by adding."
+   ],
+   "contexts": [
+    "maize left after a delivery",
+    "sand used on a building site",
+    "a weighbridge: full lorry minus empty lorry"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 6 t 300 kg - 2 t 800 kg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 300 kg.",
+     "say": "Can we take 800 kg from 300 kg?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to cross out 6 t, write 5 t and 1,300 kg."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 t 500 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG.M_SMALLER_FROM_LARGER_KG",
+     "listen_for": [
+      "3 t 500 kg",
+      "700 take away 200"
+     ],
+     "ask": "Which kg are we taking from which?",
+     "repair": "Rename a tonne when the top kg are fewer."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG.M_TONNE_NOT_REDUCED",
+     "listen_for": [
+      "4 t 500 kg",
+      "still 6 t"
+     ],
+     "ask": "You used one tonne for the kg. How many tonnes are left?",
+     "repair": "Take one off the tonnes when you rename."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG.M_TONNE_AS_100_KG",
+     "listen_for": [
+      "150 kg",
+      "a hundred"
+     ],
+     "ask": "How many kg in one tonne?",
+     "repair": "Rename 1 t as 1,000 kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG.M_KG_COPIED_FROM_NOTHING",
+     "listen_for": [
+      "3 t 350 kg",
+      "copy the 350"
+     ],
+     "ask": "What is 1,000 kg - 350 kg?",
+     "repair": "4 t = 3 t 1,000 kg; 1,000 - 350 = 650."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 6 t 300 kg - 2 t 800 kg?",
+     "answer": "3 t 500 kg",
+     "shows": "rename a tonne"
+    },
+    {
+     "question": "What is 4 t - 350 kg?",
+     "answer": "3 t 650 kg",
+     "shows": "from whole tonnes"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG",
+   "key_step": "The child multiplies the kg and the tonnes separately, renames every 1,000 kg as a tonne and adds the new tonnes.",
+   "floor": {
+    "prerequisite": "Adds t and kg with renaming.",
+    "question": "What is 2 t 600 kg + 2 t 600 kg?",
+    "answer": "5 t 200 kg"
+   },
+   "representations": [
+    "equal loads on several lorries",
+    "t and kg columns, each multiplied",
+    "repeated adding as a check"
+   ],
+   "steps": [
+    "Multiply the kg.",
+    "Rename each 1,000 kg as 1 t.",
+    "Multiply the tonnes and add the renamed tonnes.",
+    "Check by repeated adding for a small number."
+   ],
+   "contexts": [
+    "four lorries with equal loads",
+    "a week of deliveries",
+    "bags on several trailers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 t 600 kg x 4 in columns."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 600 kg.",
+     "say": "What is 600 kg x 4?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 2,400."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to rename 2,400 kg and carry."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 8 t + 2 t and 400 kg = 10 t 400 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG.M_KG_NOT_RENAMED_AFTER_MULT",
+     "listen_for": [
+      "8 t 2,400 kg"
+     ],
+     "ask": "Can the kg column hold 2,400?",
+     "repair": "Rename 2,000 kg as 2 t."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG.M_MULTIPLY_TONNES_ONLY",
+     "listen_for": [
+      "3 t 250 kg",
+      "kg stay"
+     ],
+     "ask": "Does each lorry carry 250 kg too?",
+     "repair": "Multiply the kg as well."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG.M_RENAMED_T_NOT_ADDED_MULT",
+     "listen_for": [
+      "8 t 400 kg",
+      "lost the tonnes"
+     ],
+     "ask": "Where did the 2 t from 2,400 kg go?",
+     "repair": "Add the renamed tonnes."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG.M_KG_RENAMED_BY_100",
+     "listen_for": [
+      "24 t",
+      "32 t"
+     ],
+     "ask": "How many kg make a tonne?",
+     "repair": "2,400 kg is 2 t 400 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 2 t 600 kg x 4?",
+     "answer": "10 t 400 kg",
+     "shows": "renaming after multiplying"
+    },
+    {
+     "question": "What is 1 t 250 kg x 3?",
+     "answer": "3 t 750 kg",
+     "shows": "both parts"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG",
+   "key_step": "When the tonnes do not share exactly, the child changes the whole mass to kg, divides, and changes back.",
+   "floor": {
+    "prerequisite": "Changes t and kg to kg.",
+    "question": "Write 5 t 400 kg in kg.",
+    "answer": "5,400 kg"
+   },
+   "representations": [
+    "a load shared among lorries",
+    "the mass changed to kg and divided",
+    "the answer checked by multiplying back"
+   ],
+   "steps": [
+    "Change the mass to kg.",
+    "Divide by the number of parts.",
+    "Change the answer back to t and kg, or keep kg if asked.",
+    "Check by multiplying back."
+   ],
+   "contexts": [
+    "maize shared among schools",
+    "sand shared among building sites",
+    "a harvest shared among members"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 5 t 400 kg / 4."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 5 t.",
+     "say": "Do 5 tonnes share exactly into 4?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write the mass in kg."
+    },
+    {
+     "beat": "write",
+     "do": "Write 5,400 / 4 = 1,350 kg = 1 t 350 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG.M_REMAINDER_TONNE_LOST",
+     "listen_for": [
+      "1 t 100 kg",
+      "drop the tonne"
+     ],
+     "ask": "What happened to the tonne left over?",
+     "repair": "Change to kg so nothing is lost."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG.M_DIVIDE_THE_WRONG_WAY_ROUND",
+     "listen_for": [
+      "0.33 t",
+      "three divided by nine"
+     ],
+     "ask": "Is each truck carrying less than half a tonne?",
+     "repair": "Divide the mass by the number of trucks."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG.M_UNIT_NOT_CHANGED_BACK_T",
+     "listen_for": [
+      "0.9",
+      "tonnes"
+     ],
+     "ask": "Which unit does the question ask for?",
+     "repair": "Give the answer in kg: 900 kg."
+    },
+    {
+     "code": "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG.M_SHARE_KG_ONLY",
+     "listen_for": [
+      "8 t 100 kg"
+     ],
+     "ask": "Are the tonnes shared too?",
+     "repair": "Divide every part: 8 t / 4 = 2 t."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is 5 t 400 kg / 4?",
+     "answer": "1 t 350 kg",
+     "shows": "change to kg"
+    },
+    {
+     "question": "3 t 600 kg is shared equally by 4 lorries. How many kg does each carry?",
+     "answer": "900 kg",
+     "shows": "answer in kg"
+    }
+   ]
+  }
+ ]
+}

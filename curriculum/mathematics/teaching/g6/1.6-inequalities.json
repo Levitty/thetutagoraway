@@ -1,0 +1,324 @@
+{
+ "sub_strand": "MATH.G6.NUMBER.INEQUALITIES",
+ "title": "Inequalities",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Inequalities are taught on a number line first (a filled dot when the boundary is allowed, an open dot when it is not), with the words \"at least\", \"at most\", \"more than\" and \"fewer than\" matched to the symbols. Simplifying uses the balance idea of Grade 5 equations, with the symbol kept the same way.",
+ "skills": [
+  {
+   "skill": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY",
+   "key_step": "The child decides whether the boundary number is allowed and which side is allowed, and then chooses the symbol.",
+   "floor": {
+    "prerequisite": "Uses < and > to compare two numbers.",
+    "question": "Put < or > : 12 __ 30",
+    "answer": "<"
+   },
+   "representations": [
+    "the story acted with counters (some numbers allowed, some not)",
+    "a number line with an open or filled dot and a shaded side",
+    "the inequality written with x"
+   ],
+   "steps": [
+    "Find the boundary number in the story.",
+    "Ask: is the boundary itself allowed?",
+    "Ask: are bigger or smaller numbers allowed?",
+    "Write x with the symbol: >, <, >= or <=."
+   ],
+   "contexts": [
+    "passengers in a matatu",
+    "learners needed for a football team",
+    "shillings to spend at the canteen"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a number line from 10 to 18 with a dot at 14."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"A matatu carries at most 14 passengers.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at 14.",
+     "say": "Can it carry exactly 14?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes, then fill the dot."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 15.",
+     "say": "Can it carry 15?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to shade the side that is allowed."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write x <= 14."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY.M_AT_LEAST_STRICT",
+     "listen_for": [
+      "bigger than 30",
+      "x > 30"
+     ],
+     "ask": "Can there be exactly 30 learners?",
+     "repair": "At least 30 includes 30: x >= 30."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY.M_SYMBOL_DIRECTION",
+     "listen_for": [
+      "x > 12",
+      "the arrow"
+     ],
+     "ask": "Fewer than 12: are 5 mandazi allowed? Are 20?",
+     "repair": "The open end of the symbol faces the bigger number: x < 12."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY.M_AT_MOST_AS_MORE",
+     "listen_for": [
+      "most means more",
+      "x >= 14"
+     ],
+     "ask": "Can the matatu carry 20 passengers?",
+     "repair": "At most 14 is a top limit: 14 or fewer."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY.M_EQUALS_FOR_LIMIT",
+     "listen_for": [
+      "x equals 8",
+      "it is 8"
+     ],
+     "ask": "Could the lift carry 5 people?",
+     "repair": "A limit allows more than one number, so use an inequality."
+    }
+   ],
+   "checks": [
+    {
+     "question": "\"Not more than 40 learners\" as an inequality",
+     "answer": "x <= 40",
+     "shows": "boundary allowed, top limit"
+    },
+    {
+     "question": "\"More than 25 mangoes\" as an inequality",
+     "answer": "x > 25",
+     "shows": "boundary not allowed"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY",
+   "key_step": "The child undoes the operation on the x side by doing its inverse to both sides and writes the same symbol on every line.",
+   "floor": {
+    "prerequisite": "Solves a one-step equation.",
+    "question": "Solve x + 5 = 12",
+    "answer": "x = 7"
+   },
+   "representations": [
+    "a balance that tips to one side",
+    "the inequality with the same step written on both sides",
+    "a check with a number that should work"
+   ],
+   "steps": [
+    "Find what is done to x.",
+    "Do the inverse to both sides.",
+    "Copy the symbol down unchanged.",
+    "Check with a number from the answer."
+   ],
+   "contexts": [
+    "money left after buying a book",
+    "sharing exercise books equally",
+    "marks needed to pass"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance tipped to the right with x + 5 on the left and 12 on the right."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the + 5.",
+     "say": "What can we take off both sides?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to say 5."
+    },
+    {
+     "beat": "write",
+     "do": "Write x + 5 - 5 < 12 - 5."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask the child to write the answer and say whether the symbol changes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY.M_FLIP_THE_SYMBOL_FOR_NOTHING",
+     "listen_for": [
+      "x > 6",
+      "turn it round"
+     ],
+     "ask": "Does taking 4 from both sides change which side is lighter?",
+     "repair": "Adding, subtracting or dividing by a positive number keeps the symbol the same."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY.M_OPERATION_NOT_INVERTED",
+     "listen_for": [
+      "x < 17",
+      "add the 5"
+     ],
+     "ask": "What undoes + 5?",
+     "repair": "Do the inverse: subtract 5 from both sides."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY.M_ONE_SIDE_ONLY",
+     "listen_for": [
+      "x > 18"
+     ],
+     "ask": "What did you do to the 18?",
+     "repair": "Both sides get the same step: 18 / 3 = 6."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY.M_SYMBOL_BECOMES_EQUALS",
+     "listen_for": [
+      "x = 7",
+      "equals"
+     ],
+     "ask": "Is 5 also an answer?",
+     "repair": "Keep the inequality symbol: x < 7."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Simplify x + 9 > 15",
+     "answer": "x > 6",
+     "shows": "subtract from both sides"
+    },
+    {
+     "question": "Simplify 4x < 28",
+     "answer": "x < 7",
+     "shows": "divide both sides"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY",
+   "key_step": "The child simplifies to x and a symbol, then lists or picks the whole numbers allowed, saying whether the boundary is one of them.",
+   "floor": {
+    "prerequisite": "Simplifies a one-step inequality.",
+    "question": "Simplify x + 3 < 10",
+    "answer": "x < 7"
+   },
+   "representations": [
+    "a number line with the boundary dot and the allowed whole numbers circled",
+    "the two-step working, one line per step",
+    "a check by putting a number back in"
+   ],
+   "steps": [
+    "Undo adding or subtracting first, then multiplying or dividing.",
+    "Write x with the symbol.",
+    "Mark the boundary: open dot if not allowed, filled if allowed.",
+    "List or pick the whole numbers asked for and check one."
+   ],
+   "contexts": [
+    "how many packets a learner can buy",
+    "learners that fit in a classroom",
+    "days left to save for a trip"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2x + 3 < 17."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the + 3.",
+     "say": "What do we undo first?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to take 3 from both sides."
+    },
+    {
+     "beat": "write",
+     "do": "Write 2x < 14, then x < 7."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw a number line with an open dot at 7."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to circle the largest whole number allowed."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_BOUNDARY_INCLUDED",
+     "listen_for": [
+      "8",
+      "the number itself"
+     ],
+     "ask": "Is 8 less than 8?",
+     "repair": "A strict symbol leaves the boundary out: the largest is 7."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_ONE_SOLUTION_ONLY",
+     "listen_for": [
+      "5 only",
+      "one answer"
+     ],
+     "ask": "Does 6 also work?",
+     "repair": "An inequality has many answers; check each one."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_COUNT_ENDS_WRONG",
+     "listen_for": [
+      "6 numbers",
+      "from 3 to 8"
+     ],
+     "ask": "Is 3 more than 3? Is 8 less than 8?",
+     "repair": "Leave out an end that is not allowed, then count."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_BOUNDARY_LEFT_OUT",
+     "listen_for": [
+      "10",
+      "more than 9"
+     ],
+     "ask": "Does x >= 9 allow 9?",
+     "repair": "The line under the symbol means the boundary is allowed."
+    },
+    {
+     "code": "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY.M_DIVIDE_BEFORE_SUBTRACT",
+     "listen_for": [
+      "x < 6",
+      "divide first"
+     ],
+     "ask": "Put 7 into 2x + 4: is it less than 20?",
+     "repair": "Take 4 from both sides first, then divide both sides by 2."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the largest whole number with 2x + 3 < 17?",
+     "answer": "6",
+     "shows": "two steps, strict boundary"
+    },
+    {
+     "question": "List the whole numbers with 3 < x <= 6.",
+     "answer": "4, 5, 6",
+     "shows": "one end allowed, one not"
+    }
+   ]
+  }
+ ]
+}

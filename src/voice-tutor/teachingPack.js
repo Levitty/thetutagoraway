@@ -18,9 +18,10 @@
 //   packCoverage()                    { skills, misconceptions } counts
 // ============================================================================
 import { TEACHING_PACK_G5 } from './teachingPackData.js';
+import { TEACHING_PACK_G6 } from './teachingPackData.g6.js';
 import { TEACHING_PACK_G7 } from './teachingPackData.g7.js';
-// Grade 5 and Grade 7 side by side: codes carry the grade, so they never clash.
-const PACK = { ...TEACHING_PACK_G5, ...TEACHING_PACK_G7 };
+// Grades 5, 6 and 7 side by side: codes carry the grade, so they never clash.
+const PACK = { ...TEACHING_PACK_G5, ...TEACHING_PACK_G6, ...TEACHING_PACK_G7 };
 
 export function teachingFor(skillCode) {
   return PACK[skillCode] || null;

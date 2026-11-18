@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { SUBS } from './data/maths-g7/index.mjs';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
+import { packSlug, packEntries, packFileText } from './maths-teaching-pack-file.mjs';
 
 const FILE = new URL('../curriculum/mathematics/g7.json', import.meta.url);
 const PACK_DIR = new URL('../curriculum/mathematics/teaching/g7/', import.meta.url);
@@ -15,8 +16,6 @@ const outcomesOf = (j) => new Set(j.sub_strands.flatMap(s => s.outcomes.map(o =>
 const S = { G5: skillsOf(g5), G6: skillsOf(g6) }, O = { G5: outcomesOf(g5), G6: outcomesOf(g6) };
 const fail = (m) => { throw new Error(m); };
 const NOT_TESTED = /^(appreciate|reflect on|promote use|recogni[sz]e use|use IT|recogni[sz]e temperature)/;
-const BEATS = new Set(['draw', 'point', 'count', 'predict', 'pause', 'child_draws', 'reveal', 'write']);
-const CHILD = new Set(['pause', 'child_draws', 'count', 'predict']);
 
 const byKey = new Map(SUBS.map(d => [d.key, d]));
 for (const k of byKey.keys()) if (!g7.sub_strands.some(s => s.code === `MATH.G7.${k}`)) fail(`data for unknown sub-strand ${k}`);
@@ -64,33 +63,10 @@ for (const s of g7.sub_strands) {
   for (const k of s.skills) if (s.misconceptions.filter(m => m.skill === k.code).length < 2) fail(`${k.code}: fewer than two misconceptions`);
   done.push(key);
 
-  // ---- the teaching pack file for this sub-strand
-  const slug = `${s.number}-${s.sub_strand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.json`;
-  const entries = d.skills.map(k => {
-    const p = d.pack[k.code]; if (!p) fail(`${key}: no teaching pack entry for ${k.code}`);
-    const code = `${s.code}.${k.code}`;
-    const need = s.misconceptions.filter(m => m.skill === code).map(m => m.code.slice(code.length + 1));
-    for (const n of need) if (!p.mis[n]) fail(`${code}: teaching pack has no entry for misconception ${n}`);
-    for (const n of Object.keys(p.mis)) if (!need.includes(n)) fail(`${code}: teaching pack names ${n}, which is not in the library`);
-    if (p.checks.length !== 2) fail(`${code}: exactly two checks`);
-    if (!p.board.some(b => CHILD.has(b[0]))) fail(`${code}: board never gives the child a turn`);
-    const bi = p.board.findIndex(b => CHILD.has(b[0])), ri = p.board.findIndex(b => b[0] === 'reveal');
-    if (ri >= 0 && ri < bi) fail(`${code}: reveal before the child's turn`);
-    for (const b of p.board) if (!BEATS.has(b[0])) fail(`${code}: unknown beat ${b[0]}`);
-    return {
-      skill: code, key_step: p.key_step,
-      floor: { prerequisite: p.floor[0], question: p.floor[1], answer: p.floor[2] },
-      representations: p.reps, steps: p.steps, contexts: p.contexts,
-      board: p.board.map(([beat, doIt, say]) => ({ beat, do: doIt, ...(say ? { say } : {}) })),
-      misconceptions: need.map(n => ({ code: `${code}.${n}`, listen_for: p.mis[n][0], ask: p.mis[n][1], repair: p.mis[n][2] })),
-      checks: p.checks.map(([question, answer, shows]) => ({ question, answer, shows })),
-    };
-  });
-  writeFileSync(new URL(slug, PACK_DIR), JSON.stringify({
-    sub_strand: s.code, title: s.sub_strand,
-    status: 'draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor',
-    sources: [], notes: d.packNotes || d.notes || '', skills: entries,
-  }, null, 1) + '\n');
+  // ---- the teaching pack file for this sub-strand (rules shared with Grade 6: scripts/maths-teaching-pack-file.mjs)
+  const slug = packSlug(s);
+  writeFileSync(new URL(slug, PACK_DIR), packFileText(s, packEntries(s, d.skills.map(k => k.code), d.pack),
+    'draft: written 17 Nov 2026 offline for the Grade 7 pilot; not yet checked by a Kenyan maths teacher; not loaded by the live tutor', d.packNotes || d.notes || ''));
   packWritten.add(slug);
 }
 for (const f of readdirSync(PACK_DIR)) if (f.endsWith('.json') && !packWritten.has(f)) unlinkSync(new URL(f, PACK_DIR));

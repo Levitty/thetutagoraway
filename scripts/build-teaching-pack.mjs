@@ -17,7 +17,8 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-// One builder for every Grade (17 Nov 2026): Grade 5 writes teachingPackData.js, Grade 7 writes teachingPackData.g7.js. The default is Grade 5.
+// One builder for every Grade (17 Nov 2026): Grade 5 writes teachingPackData.js, Grade 6 (18 Nov 2026) teachingPackData.g6.js and
+// Grade 7 teachingPackData.g7.js. The default is Grade 5.
 const packDir = (g) => join(ROOT, `curriculum/mathematics/teaching/g${g}`);
 const libraryFile = (g) => join(ROOT, `curriculum/mathematics/g${g}.json`);
 export const outFile = (g = 5) => join(ROOT, g === 5 ? 'src/voice-tutor/teachingPackData.js' : `src/voice-tutor/teachingPackData.g${g}.js`);
@@ -141,7 +142,7 @@ export default TEACHING_PACK_G${grade};
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  for (const grade of [5, 7]) {
+  for (const grade of [5, 6, 7]) {
     const built = buildPack(grade);
     writeFileSync(outFile(grade), renderData(built, grade));
     console.log(`${outFile(grade).split('/').pop()} written: ${Object.keys(built.pack).length} skills`);

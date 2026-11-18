@@ -1,0 +1,494 @@
+{
+ "sub_strand": "MATH.G6.MEASUR.TIME",
+ "title": "Time",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Time is taught on a 24-hour day line from midnight to midnight with noon in the middle, a.m. on the left half and p.m. on the right, the 24-hour numbers written under the 12-hour ones. Many Kenyan learners also count hours in Swahili time (from 6 a.m.), so the tutor checks which system a child is using before correcting.",
+ "skills": [
+  {
+   "skill": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY",
+   "key_step": "The child places the event on a day line from midnight to midnight and says a.m. for before noon and p.m. for after noon.",
+   "floor": {
+    "prerequisite": "Reads the time on a clock.",
+    "question": "What time does the clock show when the short hand is on 3 and the long hand on 12?",
+    "answer": "3 o'clock"
+   },
+   "representations": [
+    "a day line from midnight to midnight with noon in the middle",
+    "events of a school day placed on the line",
+    "Swahili time written under English time"
+   ],
+   "steps": [
+    "Put midnight at the start and noon in the middle of the line.",
+    "Place the event on the line.",
+    "Before noon is a.m., after noon is p.m.",
+    "If the time is in Swahili time, add 6 hours first."
+   ],
+   "contexts": [
+    "morning assembly",
+    "the evening news",
+    "a night watchman's shift"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a day line: midnight, 6, noon, 6, midnight."
+    },
+    {
+     "beat": "write",
+     "do": "Write a.m. on the left half and p.m. on the right half."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the afternoon part of the line.",
+     "say": "Where does 3 o'clock in the afternoon go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the child to place it."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether it is a.m. or p.m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_NOON_IS_AM",
+     "listen_for": [
+      "12:30 is a.m.",
+      "still morning"
+     ],
+     "ask": "Is 12:30 before or after noon?",
+     "repair": "Half an hour after noon is p.m."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_NIGHT_IS_PM",
+     "listen_for": [
+      "2 at night is p.m.",
+      "night is p.m."
+     ],
+     "ask": "Is 2 in the night before or after midnight?",
+     "repair": "From midnight to noon is a.m."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_PM_STARTS_IN_EVENING",
+     "listen_for": [
+      "afternoon is a.m.",
+      "p.m. is evening"
+     ],
+     "ask": "Is 3 o'clock before or after noon?",
+     "repair": "Everything after noon is p.m."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY.M_SWAHILI_HOURS",
+     "listen_for": [
+      "saa tatu is 3",
+      "3 a.m."
+     ],
+     "ask": "In Swahili time, when is saa moja?",
+     "repair": "Swahili time starts at 6 a.m.: saa tatu asubuhi is 9 a.m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Is morning assembly at 8 o'clock a.m. or p.m.?",
+     "answer": "a.m.",
+     "shows": "before noon"
+    },
+    {
+     "question": "Is 12:30 in the afternoon a.m. or p.m.?",
+     "answer": "p.m.",
+     "shows": "just after noon"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.TIME.WRITE_AM_PM",
+   "key_step": "The child writes the hour and minutes from the clock or the words and adds a.m. or p.m. from where the time is on the day line.",
+   "floor": {
+    "prerequisite": "Identifies a.m. and p.m.",
+    "question": "Is supper time a.m. or p.m.?",
+    "answer": "p.m."
+   },
+   "representations": [
+    "a clock face with \"quarter to\" and \"quarter past\" marked",
+    "the day line",
+    "times written in a diary"
+   ],
+   "steps": [
+    "Read the hours and minutes; quarter to is 15 minutes before the hour.",
+    "Write hours:minutes.",
+    "Decide a.m. or p.m. from the day line.",
+    "12 at night is 12 a.m.; 12 in the day is 12 noon."
+   ],
+   "contexts": [
+    "a school timetable",
+    "a church service",
+    "a radio programme"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock showing quarter to 6."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the long hand.",
+     "say": "How many minutes before 6 o'clock is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 15."
+    },
+    {
+     "beat": "write",
+     "do": "Write 5:45."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask whether it is a.m. or p.m. if it is in the evening."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.TIME.WRITE_AM_PM.M_TWELVE_AT_NIGHT",
+     "listen_for": [
+      "12:15 p.m.",
+      "night is p.m."
+     ],
+     "ask": "Is 12:15 at night just after midnight or just after noon?",
+     "repair": "Just after midnight is a.m."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.WRITE_AM_PM.M_AM_PM_LEFT_OUT",
+     "listen_for": [
+      "4:00",
+      "no a.m."
+     ],
+     "ask": "How would someone know it is not 4 in the morning?",
+     "repair": "Write a.m. or p.m. every time."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.WRITE_AM_PM.M_QUARTER_TO_WRONG_HOUR",
+     "listen_for": [
+      "6:45"
+     ],
+     "ask": "Is quarter to 6 before or after 6 o'clock?",
+     "repair": "Quarter to 6 is 15 minutes before 6: 5:45."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.WRITE_AM_PM.M_EVENING_WITH_AM",
+     "listen_for": [
+      "7:30 a.m."
+     ],
+     "ask": "Is supper in the morning?",
+     "repair": "Evening times are p.m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write quarter to 6 in the evening.",
+     "answer": "5:45 p.m.",
+     "shows": "quarter to"
+    },
+    {
+     "question": "Write 12:15 at night.",
+     "answer": "12:15 a.m.",
+     "shows": "just after midnight"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE",
+   "key_step": "The child shows on the day line that the hours after noon carry on 13, 14, 15 ... so a p.m. hour is 12 more, and a.m. hours stay the same.",
+   "floor": {
+    "prerequisite": "Writes times with a.m. and p.m.",
+    "question": "Write 3 o'clock in the afternoon.",
+    "answer": "3:00 p.m."
+   },
+   "representations": [
+    "the day line with 0 to 24 written under the 12-hour times",
+    "a phone clock in 24-hour mode",
+    "a table of 12-hour and 24-hour times"
+   ],
+   "steps": [
+    "Find the time on the day line.",
+    "Morning hours keep their number (two digits).",
+    "Afternoon and evening hours: add 12.",
+    "Leave the minutes alone."
+   ],
+   "contexts": [
+    "a bus ticket",
+    "a phone alarm",
+    "a hospital visiting time"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the day line with 0 to 24 under it."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 3 p.m.",
+     "say": "Which number is under 3 p.m.?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 15."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to write the 24-hour numbers for 1 p.m. to 6 p.m."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what 9 a.m. is in 24-hour time."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE.M_ADD_TEN",
+     "listen_for": [
+      "13:00",
+      "add ten"
+     ],
+     "ask": "How many hours from noon to 3 p.m., and what is 12 + 3?",
+     "repair": "Add 12: 15:00."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE.M_SAME_NUMBER",
+     "listen_for": [
+      "05:00",
+      "same"
+     ],
+     "ask": "Is 05:00 in the morning or the evening?",
+     "repair": "After noon, add 12: 17:00."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE.M_AM_ALSO_PLUS_12",
+     "listen_for": [
+      "21:00",
+      "add twelve"
+     ],
+     "ask": "Is 9 a.m. before or after noon?",
+     "repair": "Morning times stay the same: 09:00."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE.M_MINUTES_CHANGED_TOO",
+     "listen_for": [
+      "15:32",
+      "twelve on the minutes"
+     ],
+     "ask": "Do the minutes change between the two clocks?",
+     "repair": "Only the hour changes: 15:20."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 3 p.m. in 24-hour time.",
+     "answer": "15:00",
+     "shows": "add 12"
+    },
+    {
+     "question": "Write 9 a.m. in 24-hour time.",
+     "answer": "09:00",
+     "shows": "morning stays"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.TIME.CONVERT_12_24",
+   "key_step": "The child adds 12 to the hour for p.m. times after 12 noon and takes 12 away for 24-hour hours after 12, with 12 noon as 12:00 and midnight as 00:00.",
+   "floor": {
+    "prerequisite": "Relates p.m. hours to the 24-hour clock.",
+    "question": "What is 5 p.m. in 24-hour time?",
+    "answer": "17:00"
+   },
+   "representations": [
+    "the day line with both systems",
+    "a table of conversions",
+    "a bus or train timetable"
+   ],
+   "steps": [
+    "12-hour to 24-hour: p.m. after 12 noon, add 12; a.m. keep (12 a.m. is 00).",
+    "24-hour to 12-hour: hours over 12, take 12 away and write p.m.",
+    "Hours under 12: write a.m.; 12 is noon.",
+    "Keep the minutes."
+   ],
+   "contexts": [
+    "the SGR train timetable",
+    "a long-distance bus ticket",
+    "a flight time"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 18:30."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 18.",
+     "say": "Is 18 more than 12?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for yes."
+    },
+    {
+     "beat": "child_draws",
+     "do": "Ask the child to take 12 away from the hour."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6:30 p.m."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.TIME.CONVERT_12_24.M_ADD_12_TO_NOON",
+     "listen_for": [
+      "24:00",
+      "add twelve"
+     ],
+     "ask": "Is noon in the middle of the day or at the end?",
+     "repair": "12 noon is 12:00."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.CONVERT_12_24.M_MIDNIGHT_AS_12",
+     "listen_for": [
+      "12:00",
+      "24:00 at the start"
+     ],
+     "ask": "Where does a new day start on the line?",
+     "repair": "Midnight at the start of a day is 00:00."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.CONVERT_12_24.M_PM_ON_24H",
+     "listen_for": [
+      "18:30 p.m."
+     ],
+     "ask": "Does a 12-hour clock show 18?",
+     "repair": "Take 12 away: 6:30 p.m."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.CONVERT_12_24.M_SUBTRACT_TEN",
+     "listen_for": [
+      "6 p.m.",
+      "drop the one"
+     ],
+     "ask": "Is 16 - 10 the right step?",
+     "repair": "Take away 12: 16 - 12 = 4 p.m."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 7:45 p.m. in 24-hour time.",
+     "answer": "19:45",
+     "shows": "add 12"
+    },
+    {
+     "question": "Write 16:20 in 12-hour time.",
+     "answer": "4:20 p.m.",
+     "shows": "take away 12"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE",
+   "key_step": "The child reads the departure and arrival times from the same row and counts on from departure to arrival in steps (to the next hour, whole hours, the minutes left).",
+   "floor": {
+    "prerequisite": "Adds and subtracts hours and minutes.",
+    "question": "What is 2 h 40 min + 20 min?",
+    "answer": "3 h"
+   },
+   "representations": [
+    "a printed timetable with rows for each bus",
+    "a time line counting on in jumps",
+    "the journey time written in h and min"
+   ],
+   "steps": [
+    "Find the row for the bus and read both times from it.",
+    "Count on from departure to the next whole hour.",
+    "Add the whole hours, then the minutes to arrival.",
+    "For overnight trips, count on to midnight and then from midnight."
+   ],
+   "contexts": [
+    "a Nairobi to Mombasa bus",
+    "the SGR timetable",
+    "a matatu stage"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a time line from 10:45 to 12:15."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 10:45.",
+     "say": "How long to 11:00?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 15 minutes."
+    },
+    {
+     "beat": "count",
+     "do": "Count on with the child: 15 min, then 1 h to 12:00, then 15 min."
+    },
+    {
+     "beat": "write",
+     "do": "Write 1 h 30 min."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE.M_SUBTRACT_AS_DECIMAL",
+     "listen_for": [
+      "1.70",
+      "70 minutes"
+     ],
+     "ask": "How many minutes are in an hour?",
+     "repair": "Count on in hours and minutes: 1 h 30 min."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE.M_WRONG_ROW_READ",
+     "listen_for": [
+      "the other bus"
+     ],
+     "ask": "Which row is our bus on?",
+     "repair": "Read both times from the same row."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE.M_HOURS_ONLY",
+     "listen_for": [
+      "3 hours",
+      "11 take away 8"
+     ],
+     "ask": "Does the bus leave at 08:00 or 08:40?",
+     "repair": "Count the minutes too: 2 h 35 min."
+    },
+    {
+     "code": "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE.M_OVERNIGHT_SUBTRACTED",
+     "listen_for": [
+      "16 h 30 min"
+     ],
+     "ask": "Does the bus travel all day, or through the night?",
+     "repair": "Count on through midnight: 2 h 30 min + 5 h."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A bus leaves at 10:45 and arrives at 12:15. How long is the journey?",
+     "answer": "1 h 30 min",
+     "shows": "count on"
+    },
+    {
+     "question": "A bus leaves at 21:30 and arrives at 05:00 the next day. How long is the journey?",
+     "answer": "7 h 30 min",
+     "shows": "overnight"
+    }
+   ]
+  }
+ ]
+}

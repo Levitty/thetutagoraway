@@ -6,3 +6,7 @@ export const sk = (code, name, outcomes, mastery, forms, thinking, horeb, pre, h
 // misconception: skill suffix, short code, error, [question, wrong, right], cause, reveals, help, source
 export const mi = (skill, short, error, ex, cause, reveals, help, source = TC) => ({ skill, short, error, example: { question: ex[0], wrong_answer: ex[1], correct_answer: ex[2] }, cause, reveals, help, source });
 export const E = 'essential', H = 'helpful';
+// teaching pack entry (18 Nov 2026, same shape as Grade 7): floor [prerequisite, question, answer]; reps; steps; contexts;
+// board [[beat, do, say?], ...]; mis { SHORT: [[listen_for...], ask, repair] }; checks [[question, answer, shows] x2]
+export const pk = (o) => o;
+export const P = (q, a, s) => [q, a, s];

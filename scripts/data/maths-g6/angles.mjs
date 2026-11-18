@@ -1,0 +1,107 @@
+import { mi, pk, P, E, H, LIT, TC } from '../maths-g6-lib.mjs';
+export const key = 'GEOMET.ANGLES';
+export const packNotes = 'Angles are turns. Every measured angle is estimated first (acute, right or obtuse) so the right protractor scale can be chosen. Angle facts (180 on a line, 180 in a triangle, 360 in a rectangle) are found by tearing the corners of a paper triangle and laying them on a line before any rule is written.';
+export const pre = {};
+export const mis = [
+  mi('ANGLES_STRAIGHT_LINE_IDENTIFY', 'M_LONG_ARMS_BIGGER', 'Believes an angle with longer arms is a bigger angle.', ['Two angles of 40 degrees are drawn, one with arms of 3 cm and one with arms of 8 cm. Which angle is bigger?', 'the one with 8 cm arms', 'They are equal'], 'Judges an angle by how much space the drawing takes.', 'The angle with longer arms as an option.', 'An angle is the amount of turn: lay one angle on the other and see the arms line up.', LIT),
+  mi('ANGLES_STRAIGHT_LINE_IDENTIFY', 'M_ONLY_TWO_ON_A_LINE', 'Believes only two angles can lie on a straight line at a point.', ['Three angles meet at a point on a straight line. Do all three lie on the straight line?', 'No, only two angles can', 'Yes: together they make the straight angle'], 'Has seen only pairs of angles on a line.', 'A no for three angles.', 'Count every angle between the two halves of the line: there can be two, three or more.'),
+  mi('MEASURE_ANGLES_PROTRACTOR', 'M_ZERO_NOT_ON_ARM', 'Reads where the second arm points without lining zero up with the first arm.', ['One arm of an angle lies on 20 on the protractor scale (not on 0). The other arm points to 85. What is the angle?', '85 degrees', '65 degrees'], 'Reads the number at the second arm only.', 'The reading at the second arm as an option.', 'Put the 0 line on one arm, or take the smaller reading from the larger.'),
+  mi('MEASURE_ANGLES_PROTRACTOR', 'M_EDGE_ON_VERTEX', 'Puts the edge or the end of the protractor on the vertex instead of the centre mark.', ['Which part of the protractor goes on the vertex (corner) of the angle?', 'the edge (or the end) of the protractor', 'the centre mark on the baseline'], 'Treats the protractor like a ruler that starts at its end.', 'The edge of the protractor as an option.', 'Find the small centre mark on the straight edge and put it exactly on the corner.'),
+  mi('SUM_ANGLES_STRAIGHT_LINE', 'M_MULTIPLE_HALVED', 'When one angle on a line is a multiple of the other, halves 180 instead of sharing it in the right parts.', ['Two angles lie on a straight line and one is twice the other. What is the smaller angle?', '90 degrees', '60 degrees'], 'Shares 180 into two equal parts out of habit.', 'Half of 180 as an option.', 'Draw it as parts: the small angle is 1 part, the big one 2 parts, so 3 parts make 180.'),
+  mi('SUM_ANGLES_STRAIGHT_LINE', 'M_ONE_ANGLE_SUBTRACTED_LINE', 'With three angles on a line, takes only one of the known angles from 180.', ['Angles of 100 and 50 degrees and an unknown angle lie on a straight line. What is the unknown angle?', '80 degrees', '30 degrees'], 'Stops after one subtraction.', 'An answer that misses one known angle.', 'Add the known angles first: 100 + 50 = 150, then 180 - 150.'),
+  mi('CONSTRUCT_TRIANGLES', 'M_RIGHT_NOT_ISOSCELES', 'Believes a right-angled triangle cannot also be isosceles.', ['Can a triangle be both right-angled and isosceles?', 'No, it is one or the other', 'Yes: its angles are 90, 45 and 45 degrees'], 'Thinks each triangle has only one name.', 'A no among the choices.', 'Fold a square along its diagonal: each half has a right angle and two equal sides.'),
+  mi('INTERIOR_ANGLES_TRIANGLES', 'M_GIVEN_ANGLE_TAKEN_AS_APEX', 'Treats a given base angle of an isosceles triangle as the angle at the top.', ['An isosceles triangle has a base angle of 50 degrees. What is the angle at the top?', '65 degrees ((180 - 50) / 2)', '80 degrees (180 - 50 - 50)'], 'Uses the apex method on a base angle.', 'The answer from halving 180 minus the given angle.', 'Mark the two equal angles first: both base angles are 50, so the top is 180 - 100.'),
+  mi('INTERIOR_ANGLES_TRIANGLES', 'M_BIG_EQUILATERAL_BIG_ANGLES', 'Believes a bigger equilateral triangle has bigger angles.', ['An equilateral triangle has sides of 10 cm. What is each angle?', 'more than 60 degrees, because the sides are long', '60 degrees'], 'Links the size of the angles to the length of the sides.', 'An angle bigger than 60 as an option.', 'Three equal angles always share 180: 180 / 3 = 60, for any size.', LIT),
+];
+export const pack = {
+  ANGLES_STRAIGHT_LINE_IDENTIFY: pk({
+    key_step: 'The child picks out the angles that sit between the two halves of a straight line at one point, however many there are, and names each acute, right or obtuse against 90 degrees.',
+    floor: ['Knows a right angle is 90 degrees.', 'Is the corner of a book more or less than 90 degrees?', 'It is 90 degrees'],
+    reps: ['a door opening as a turn', 'a straight line with two or three angles at one point', 'a right angle corner used to sort angles'],
+    steps: ['Find the straight line and the point on it.', 'Every angle between the two halves of the line lies on it.', 'Compare each angle with a right angle.', 'Name it acute, right or obtuse.'],
+    contexts: ['the hands of a clock', 'a road junction', 'scissors opening'],
+    board: [['draw', 'Draw a straight line with three angles at one point.'], ['point', 'Point at each angle in turn.', 'Is this angle part of the straight line?'], ['pause', 'Wait for the child to answer for each.'], ['child_draws', 'Ask the child to mark each angle acute, right or obtuse.']],
+    mis: {
+      M_ANY_TWO_ANGLES: [['the L-shape', 'they are next to each other'], 'Do the outer arms make one straight line?', 'Angles on a straight line share a point and their outer arms make a straight line.'],
+      M_OBTUSE_AS_ACUTE: [['120 is acute'], 'Is 120 more or less than a right angle?', 'More than 90 is obtuse.'],
+      M_LONG_ARMS_BIGGER: [['longer arms'], 'If we put one on top of the other, do the arms line up?', 'The turn is the same; arm length does not matter.'],
+      M_ONLY_TWO_ON_A_LINE: [['only two'], 'Is the third angle also between the two halves of the line?', 'All the angles at the point on the line lie on it.'],
+    },
+    checks: [P('Is an angle of 120 degrees acute or obtuse?', 'obtuse', 'compare with 90'), P('Two angles of 40 degrees are drawn, one with longer arms. Which is bigger?', 'They are equal', 'arm length')],
+  }),
+  MEASURE_ANGLES_PROTRACTOR: pk({
+    key_step: 'The child puts the centre mark on the vertex and the 0 line on one arm, estimates acute or obtuse, and reads the scale that starts at 0 on that arm.',
+    floor: ['Reads both scales of a protractor.', 'On the outer scale a line points to 50. What does the inner scale show there?', '130'],
+    reps: ['a real protractor on a drawn angle', 'an angle with the 0 arm marked', 'an estimate written before measuring'],
+    steps: ['Estimate: acute or obtuse?', 'Centre mark on the vertex.', '0 line along one arm.', 'Read the scale that starts at 0 on that arm; check against the estimate.'],
+    contexts: ['the angle of a roof', 'a ramp at school', 'the opening of a door'],
+    board: [['draw', 'Draw an acute angle and a protractor over it.'], ['point', 'Point at the angle.', 'Is it smaller or bigger than a right angle?'], ['pause', 'Wait for the child\'s estimate.'], ['point', 'Point at the two scale numbers by the arm.', 'Which number fits your estimate?'], ['child_draws', 'Ask the child to measure an angle drawn in their book.']],
+    mis: {
+      M_WRONG_SCALE: [['130', 'the outer one'], 'Is this angle acute or obtuse?', 'Use the scale that starts at 0 on the arm; check with the estimate.'],
+      M_DIFFERENCE_AS_SUM: [['145', 'add them'], 'Does the angle start at 0?', 'Take the smaller reading from the larger: 110 - 35.'],
+      M_ZERO_NOT_ON_ARM: [['85'], 'Where is the first arm on the scale?', 'Line 0 up with an arm, or subtract the two readings.'],
+      M_EDGE_ON_VERTEX: [['the end of the protractor'], 'Where is the small centre mark?', 'Put the centre mark on the vertex.'],
+    },
+    checks: [P('The arms of an angle are at 35 and 110 on a protractor. What is the angle?', '75 degrees', 'difference of readings'), P('One arm lies on 20 on the scale and the other points to 85. What is the angle?', '65 degrees', 'zero not on the arm')],
+  }),
+  SUM_ANGLES_STRAIGHT_LINE: pk({
+    key_step: 'The child says the angles on a straight line at a point add up to 180 degrees and finds the missing one by taking the sum of the known ones from 180.',
+    floor: ['Identifies angles on a straight line.', 'How many degrees is a straight angle?', '180'],
+    reps: ['a paper strip folded to show two angles on a line', 'the angles on a line with a bar of 180 split into parts', 'the working: 180 - (sum of known angles)'],
+    steps: ['Write the angles on the line add to 180.', 'Add the known angles.', 'Take the sum from 180.', 'For "one is twice the other", share 180 into 3 parts.'],
+    contexts: ['a ladder against a wall', 'a road leaving a straight road', 'a see-saw'],
+    board: [['draw', 'Draw a line with angles 100, 50 and ?.'], ['point', 'Point at the 100 and the 50.', 'What do these two make together?'], ['pause', 'Wait for 150.'], ['predict', 'Ask what the missing angle is.'], ['write', 'Write 180 - 150 = 30.']],
+    mis: {
+      M_NINETY_NOT_180: [['50', 'ninety'], 'Is a straight line a right angle?', 'A straight line is 180 degrees.'],
+      M_THREE_HUNDRED_SIXTY: [['210', '360'], 'Is a straight line a full turn?', 'A straight line is a half turn: 180.'],
+      M_MULTIPLE_HALVED: [['90', 'half of 180'], 'How many equal parts are there if one angle is twice the other?', '3 parts make 180: one part is 60.'],
+      M_ONE_ANGLE_SUBTRACTED_LINE: [['80'], 'Did you use the 50 as well?', 'Add the known angles, then take from 180.'],
+    },
+    checks: [P('An angle of 40 degrees lies on a straight line. What is the other angle?', '140 degrees', 'from 180'), P('Two angles lie on a straight line and one is twice the other. What is the smaller angle?', '60 degrees', 'shared in parts')],
+  }),
+  ANGLE_SUM_RECT_TRIANGLE: pk({
+    key_step: 'The child shows by tearing the corners of a paper triangle that they make a straight line (180 degrees), and that a rectangle has four right angles (360 degrees).',
+    floor: ['Knows the angles on a straight line add to 180.', 'Angles of 70 and ? on a straight line?', '110'],
+    reps: ['a paper triangle with its corners torn and laid on a line', 'a rectangle with each corner marked 90', 'the working: 180 - (sum of two angles)'],
+    steps: ['A triangle\'s angles add to 180.', 'A rectangle\'s angles add to 360 (4 x 90).', 'Add the known angles.', 'Take the sum from the total.'],
+    contexts: ['a triangular roof', 'a rectangular classroom floor', 'a set square'],
+    board: [['draw', 'Draw a triangle with its three corners torn off and laid on a line.'], ['point', 'Point at the three corners on the line.', 'What do they make together?'], ['pause', 'Wait for a straight line, 180.'], ['write', 'Write a triangle with 70 and 50 and ask for the third angle.'], ['predict', 'Ask the child for the answer.']],
+    mis: {
+      M_TRIANGLE_360: [['240', '360'], 'When we tore the corners, what did they make?', 'The corners of a triangle make a straight line: 180.'],
+      M_RECTANGLE_180: [['180 for a rectangle'], 'How many right angles has a rectangle?', '4 x 90 = 360.'],
+      M_SUBTRACT_ONE_ANGLE_ONLY: [['120', 'only the 60'], 'Did you use both known angles?', 'Add both, then take from 180.'],
+      M_ONE_CORNER_ONLY: [['90'], 'How many corners does a rectangle have?', 'Add all four: 360.'],
+    },
+    checks: [P('A triangle has angles of 70 and 50 degrees. What is the third angle?', '60 degrees', 'triangle sum'), P('What do the angles of a rectangle add up to?', '360 degrees', 'four right angles')],
+  }),
+  CONSTRUCT_TRIANGLES: pk({
+    key_step: 'The child names a triangle by its sides and angles (three equal sides, two equal sides, a right angle), knows a triangle can have two names, and that each angle of an equilateral triangle is 60 degrees.',
+    floor: ['Knows the angles of a triangle add to 180.', 'What are three equal angles that add to 180?', '60 each'],
+    reps: ['paper triangles sorted by sides and angles', 'a triangle constructed with ruler and compasses', 'equal sides marked with dashes'],
+    steps: ['Measure or read the sides: equal sides get dashes.', 'Three equal: equilateral. Two equal: isosceles.', 'A 90 degree angle: right-angled (it can also be isosceles).', 'Construct with a ruler, compasses and protractor, checking each length.'],
+    contexts: ['a triangular road sign', 'a roof truss', 'a folded square scarf'],
+    board: [['draw', 'Draw three triangles: three equal sides, two equal sides, a right angle.'], ['point', 'Point at the one with two dashes.', 'What do we call a triangle with two equal sides?'], ['pause', 'Wait for isosceles.'], ['draw', 'Draw a square folded along its diagonal.'], ['predict', 'Ask what names the half-square triangle has.']],
+    mis: {
+      M_ISOSCELES_THREE_EQUAL: [['three sides'], 'How many dashes are on an isosceles triangle?', 'Isosceles has two equal sides.'],
+      M_EQUILATERAL_ANGLE_90: [['90 each'], 'Can three 90 degree angles fit in a triangle?', 'Three equal angles share 180: 60 each.'],
+      M_TRIANGLE_NAMES_MIXED: [['isosceles for three equal'], 'How many equal sides does it have?', 'Three equal sides is equilateral.'],
+      M_RIGHT_NOT_ISOSCELES: [['only one name'], 'Fold a square along its diagonal: what do you see?', 'A triangle can be right-angled and isosceles: 90, 45, 45.'],
+    },
+    checks: [P('A triangle with three equal sides is called?', 'equilateral', 'name by sides'), P('Can a triangle be both right-angled and isosceles?', 'Yes, with angles 90, 45 and 45 degrees', 'two names')],
+  }),
+  INTERIOR_ANGLES_TRIANGLES: pk({
+    key_step: 'The child marks which angles are equal (base angles of an isosceles triangle, all three of an equilateral) and uses the sum of 180 to find the unknown.',
+    floor: ['Knows the angles of a triangle add to 180.', 'A triangle has angles 90 and 30. Third angle?', '60 degrees'],
+    reps: ['a paper isosceles triangle folded on its line of symmetry', 'equal angles marked with arcs', 'the working written step by step'],
+    steps: ['Mark the equal sides and the equal angles opposite them.', 'Write what is known.', 'Use 180 for the sum.', 'Check by adding the three angles.'],
+    contexts: ['a gable roof', 'a triangular flag', 'a bridge truss'],
+    board: [['draw', 'Draw an isosceles triangle with the top angle 40.'], ['point', 'Point at the two base angles.', 'What do we know about these two?'], ['pause', 'Wait for "they are equal".'], ['write', 'Write 180 - 40 = 140.'], ['predict', 'Ask for each base angle.']],
+    mis: {
+      M_BASE_ANGLES_NOT_EQUAL: [['140', 'one angle'], 'Is 140 for one base angle or both?', 'Share 140 between the two equal base angles: 70 each.'],
+      M_RIGHT_ANGLED_OTHER_90: [['90 again'], 'Can a triangle have two right angles?', 'The other two share 90: 90 - 35 = 55.'],
+      M_GIVEN_ANGLE_TAKEN_AS_APEX: [['65'], 'Is the 50 at the top or at the base?', 'Both base angles are 50: the top is 180 - 100 = 80.'],
+      M_BIG_EQUILATERAL_BIG_ANGLES: [['more than 60', 'long sides'], 'Does a bigger triangle turn more at each corner?', 'Every equilateral triangle has 60 degree angles.'],
+    },
+    checks: [P('An isosceles triangle has a top angle of 40 degrees. What is each base angle?', '70 degrees', 'equal base angles'), P('An isosceles triangle has a base angle of 50 degrees. What is the angle at the top?', '80 degrees', 'base angle given')],
+  }),
+};
