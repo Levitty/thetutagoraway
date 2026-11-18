@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA",
+ "title": "Mining in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): tanzanite only in Tanzania (Mererani); gold and diamonds in Tanzania; soda ash at Lake Magadi; copper in Uganda (Kilembe). Mercury from small gold mines poisons water.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
+   "key_step": "The child names the minerals of Eastern Africa and where each is found.",
+   "floor": {
+    "prerequisite": "Names Kenya's minerals and where they are mined.",
+    "question": "Where is soda ash mined?",
+    "answer": "Lake Magadi"
+   },
+   "representations": [
+    "a regional minerals map",
+    "mineral cards",
+    "photos"
+   ],
+   "steps": [
+    "Name the mineral.",
+    "Name the country and place.",
+    "Place it on the map.",
+    "Give one use."
+   ],
+   "contexts": [
+    "tanzanite at Mererani",
+    "gold in Geita",
+    "copper at Kilembe"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write tanzanite, copper, soda ash."
+    },
+    {
+     "beat": "point",
+     "do": "Point at tanzanite.",
+     "say": "Which country is it mined in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Tanzania."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_MINERAL_PLACE",
+     "listen_for": [
+      "Lake Naivasha"
+     ],
+     "ask": "Where is soda ash mined in Kenya?",
+     "repair": "Ask which lake is salty and in the south of the Rift."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_TANZANITE",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "Which country mines tanzanite?",
+     "repair": "Say tanzanite takes its name from the country."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_NOT_MINERAL",
+     "listen_for": [
+      "Coffee"
+     ],
+     "ask": "Which is a mineral?",
+     "repair": "Ask: dug from the ground or grown?"
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_OIL_NOT_MINERAL",
+     "listen_for": [
+      "No, it is a liquid"
+     ],
+     "ask": "Is the oil found in Turkana a mineral resource?",
+     "repair": "List minerals in all forms: solid (gold), liquid (oil)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which country is tanzanite mined?",
+     "answer": "Tanzania",
+     "shows": "mineral to country"
+    },
+    {
+     "question": "Name a mineral mined in Kenya.",
+     "answer": "any of: soda ash, fluorspar, titanium, gold, limestone",
+     "shows": "Kenyan mineral"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
+   "key_step": "The child describes mining methods and how some minerals are taken out.",
+   "floor": {
+    "prerequisite": "Names minerals of the region.",
+    "question": "Name a mineral mined in Uganda.",
+    "answer": "copper or limestone"
+   },
+   "representations": [
+    "method cards",
+    "a pan with sand and water",
+    "photos of a quarry and a shaft"
+   ],
+   "steps": [
+    "Name the method.",
+    "Say how it works.",
+    "Name a mineral it is used for.",
+    "Say why that method suits it."
+   ],
+   "contexts": [
+    "a limestone quarry",
+    "gold panning in a river",
+    "soda ash dredging"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a wide pit and a narrow shaft."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the wide pit.",
+     "say": "What method is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for open-cast."
+    },
+    {
+     "beat": "write",
+     "do": "Write a mineral for each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_METHOD_SWAP",
+     "listen_for": [
+      "In deep underground shafts"
+     ],
+     "ask": "How is limestone usually mined?",
+     "repair": "Show a quarry at the coast."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_PANNING",
+     "listen_for": [
+      "Blasting rock with explosives"
+     ],
+     "ask": "What is panning?",
+     "repair": "Ask what a pan and water can do to find gold."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_SODA_DREDGE",
+     "listen_for": [
+      "From deep shafts"
+     ],
+     "ask": "How is soda ash taken from Lake Magadi?",
+     "repair": "Show a photo of the white crust on Lake Magadi."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_OPEN_CAST_DEEP",
+     "listen_for": [
+      "A narrow deep tunnel"
+     ],
+     "ask": "What is open-cast mining?",
+     "repair": "Compare a quarry photo with a tunnel drawing."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which method is used for limestone?",
+     "answer": "open-cast mining (quarrying)",
+     "shows": "method"
+    },
+    {
+     "question": "What is panning?",
+     "answer": "washing gravel in water to find gold",
+     "shows": "panning"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
+   "key_step": "The child explains the effects of mining on the environment and ways of repairing them.",
+   "floor": {
+    "prerequisite": "Describes mining methods.",
+    "question": "What is open-cast mining?",
+    "answer": "digging an open pit from the surface"
+   },
+   "representations": [
+    "a T-chart",
+    "repair cards",
+    "before-and-after photos"
+   ],
+   "steps": [
+    "Name the effect.",
+    "Say what it harms.",
+    "Choose a repair.",
+    "Say who should do it."
+   ],
+   "contexts": [
+    "an abandoned quarry",
+    "mercury in a river",
+    "dust over farms"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw an open pit filled with water."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the pit.",
+     "say": "Why is this dangerous, and how is it repaired?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"people can drown; fill and plant\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write two harms and two repairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_NO_HARM",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What does open-cast mining leave behind?",
+     "repair": "Show a quarry photograph."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_REPAIR",
+     "listen_for": [
+      "Leave the pit open"
+     ],
+     "ask": "How can a mined area be repaired?",
+     "repair": "Talk about Haller Park in Mombasa."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_MERCURY",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "How can small gold mines harm rivers?",
+     "repair": "Show a picture of a warning sign at a polluted river."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_JOBS_ONLY",
+     "listen_for": [
+      "There are none; mining gives jobs"
+     ],
+     "ask": "Give one bad effect of mining.",
+     "repair": "Use a T-chart with both sides."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two harmful effects of mining.",
+     "answer": "any two of: holes, destroyed land and forest, dust and noise, poisoned water",
+     "shows": "effects"
+    },
+    {
+     "question": "Give one way of repairing land after mining.",
+     "answer": "any of: refilling pits, replanting trees, treating waste",
+     "shows": "repair"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST",
+ "title": "Climatic regions in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use rainfall and temperature graphs for four towns (Kampala, Lodwar, Mombasa, Nyeri). The child reads the bars before naming the region.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
+   "key_step": "The child names the climatic regions of Eastern Africa and places each.",
+   "floor": {
+    "prerequisite": "Places Kenya's climate regions.",
+    "question": "Which region of Kenya is hot and dry?",
+    "answer": "the north and north-east"
+   },
+   "representations": [
+    "a climate map of Eastern Africa",
+    "region cards",
+    "town graphs"
+   ],
+   "steps": [
+    "Read the map key.",
+    "Find each region.",
+    "Name one place in it.",
+    "Say why it is there (height, sea, lake)."
+   ],
+   "contexts": [
+    "Kampala in the equatorial region",
+    "the Serengeti in the tropical region",
+    "the Danakil in the arid region"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the outline of Eastern Africa."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the area around Lake Victoria.",
+     "say": "Which climatic region is here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for equatorial."
+    },
+    {
+     "beat": "write",
+     "do": "Label each region."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_ARID_EQUATOR",
+     "listen_for": [
+      "Equatorial"
+     ],
+     "ask": "Which climate does northern Kenya have?",
+     "repair": "Compare a rain table of Kisumu and Lodwar."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_HIGHLAND_PLACE",
+     "listen_for": [
+      "Along the coast"
+     ],
+     "ask": "Where is the highland climate found?",
+     "repair": "Ask what happens to temperature as we climb."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_ONE_COUNTRY_ONE",
+     "listen_for": [
+      "One, the Kenyan climate"
+     ],
+     "ask": "Does Kenya have one climatic region or several?",
+     "repair": "Colour the climate map: Kenya has many colours."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_MOUNTAIN_REGION_LOW",
+     "listen_for": [
+      "On the low plains"
+     ],
+     "ask": "Where is the mountain climate found?",
+     "repair": "Shade the mountains on the relief map and the mountain climate on the climate map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which climatic region is found around Lake Victoria?",
+     "answer": "equatorial",
+     "shows": "places a region"
+    },
+    {
+     "question": "Name two climatic regions found in Kenya.",
+     "answer": "any two of: arid, semi-arid, tropical, highland, coastal",
+     "shows": "many regions in one country"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
+   "key_step": "The child describes temperature and rainfall in each region.",
+   "floor": {
+    "prerequisite": "Names and places the climatic regions.",
+    "question": "Where is the arid region?",
+    "answer": "northern Kenya, Somalia and the Horn"
+   },
+   "representations": [
+    "four rainfall bar graphs",
+    "a temperature line",
+    "trait cards"
+   ],
+   "steps": [
+    "Read the rainfall bars.",
+    "Read the temperature line.",
+    "Describe: hot or cool, wet or dry, one season or two.",
+    "Name the region."
+   ],
+   "contexts": [
+    "afternoon rain in Kampala",
+    "cold mornings in the highlands",
+    "dry winds in Lodwar"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw twelve tall bars and twelve short bars."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tall bars.",
+     "say": "Which region has rain like this all year?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for equatorial."
+    },
+    {
+     "beat": "write",
+     "do": "Write the traits under each graph."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_COOL_WET",
+     "listen_for": [
+      "Cool with plenty of rain"
+     ],
+     "ask": "Which description fits the arid region?",
+     "repair": "Use a two-line table: rain and heat for each region."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_HEIGHT_HOT",
+     "listen_for": [
+      "It is nearer the sun so it is hot"
+     ],
+     "ask": "Why is the top of Mount Kenya cold although it is on the equator?",
+     "repair": "Use the fact that temperature falls with height; ask about the snow on Kilimanjaro."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_TROPICAL_WET_ALL",
+     "listen_for": [
+      "One, wet all year"
+     ],
+     "ask": "How many main seasons does the tropical (savanna) region have?",
+     "repair": "Compare a Kampala and a Dodoma rainfall graph."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_ARID_COLD",
+     "listen_for": [
+      "Hot like the day"
+     ],
+     "ask": "What are nights like in the arid region?",
+     "repair": "Read day and night temperatures for Lodwar."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Describe the climate of the equatorial region.",
+     "answer": "hot and wet all year",
+     "shows": "equatorial traits"
+    },
+    {
+     "question": "Why is the highland region cool?",
+     "answer": "it is high above the sea",
+     "shows": "height"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
+   "key_step": "The child links climate to what people do: crops, herding, tourism.",
+   "floor": {
+    "prerequisite": "Describes each climatic region.",
+    "question": "Describe the arid region.",
+    "answer": "hot with very little rain"
+   },
+   "representations": [
+    "activity cards",
+    "a climate map with crops drawn",
+    "photos"
+   ],
+   "steps": [
+    "Name the region.",
+    "Recall its climate.",
+    "Ask what grows or lives there.",
+    "Name the activity."
+   ],
+   "contexts": [
+    "tea in the Kericho highlands",
+    "camel herding in Marsabit",
+    "beach tourism at Diani"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a mountain with a tea bush on its slope."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the tea.",
+     "say": "Why does tea grow here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for cool and wet."
+    },
+    {
+     "beat": "write",
+     "do": "Write climate and activity pairs."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_FARM_ALL",
+     "listen_for": [
+      "It can be grown anywhere"
+     ],
+     "ask": "Why is tea grown in the cool, wet highlands?",
+     "repair": "Ask what happens to tea in the dry north."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_DROUGHT_FLOOD",
+     "listen_for": [
+      "Floods"
+     ],
+     "ask": "What does a long drought cause?",
+     "repair": "Draw rain cloud and no rain cloud and say what each does to farms."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_TEA_DRY",
+     "listen_for": [
+      "In hot, dry lowlands"
+     ],
+     "ask": "Where does tea grow best?",
+     "repair": "Show Kericho on the climate map."
+    },
+    {
+     "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_NOMAD_LAZY",
+     "listen_for": [
+      "They do not want to settle"
+     ],
+     "ask": "Why do herders in the arid north move with their animals?",
+     "repair": "Show a dry-season map of water points."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which activity suits the arid region?",
+     "answer": "nomadic herding",
+     "shows": "climate to activity"
+    },
+    {
+     "question": "Why is coffee grown in the highlands?",
+     "answer": "the climate is cool and wet",
+     "shows": "climate and crops"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_",
+ "title": "Wildlife and Tourism in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): Serengeti, Ngorongoro (Tanzania); Bwindi, Queen Elizabeth (Uganda); Volcanoes National Park (Rwanda, mountain gorillas); Maasai Mara, Tsavo, Amboseli (Kenya).",
+ "skills": [
+  {
+   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
+   "key_step": "The child explains the factors that promote tourism.",
+   "floor": {
+    "prerequisite": "Names Kenya's tourist attractions.",
+    "question": "Name one tourist attraction in Kenya.",
+    "answer": "any attraction such as the Maasai Mara"
+   },
+   "representations": [
+    "factor cards",
+    "a trip plan",
+    "brochures"
+   ],
+   "steps": [
+    "Name the attraction.",
+    "List what a tourist needs to reach and enjoy it.",
+    "Name the factor.",
+    "Say what happens without it."
+   ],
+   "contexts": [
+    "safari lodges",
+    "an airport at a park",
+    "peace in a region"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a park with a road and a hotel."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the road.",
+     "say": "Why does tourism need this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"to reach the park\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write five factors."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_TOURIST_ROADS",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What do airports and hotels do for tourism?",
+     "repair": "Follow a tourist from home to the park."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_INSECURITY",
+     "listen_for": [
+      "Brings more tourists"
+     ],
+     "ask": "What does insecurity do to tourism?",
+     "repair": "Ask whether a family would visit an unsafe place."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_ANIMALS_ONLY_FACTOR",
+     "listen_for": [
+      "Yes, animals are enough"
+     ],
+     "ask": "A country has many animals but no roads or hotels near the park. Will many tourists come?",
+     "repair": "Plan a trip: list what you need besides the animals."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_CLIMATE_NONE",
+     "listen_for": [
+      "There is no reason"
+     ],
+     "ask": "Why do many tourists come in the dry season?",
+     "repair": "Compare a muddy road in the rains with a dry one."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two factors that promote tourism.",
+     "answer": "any two of: wildlife and attractions, peace and security, roads and airports, hotels, climate, advertising",
+     "shows": "factors"
+    },
+    {
+     "question": "How does insecurity affect tourism?",
+     "answer": "tourists stay away",
+     "shows": "security factor"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
+   "key_step": "The child places the main parks and reserves of Eastern Africa in their countries.",
+   "floor": {
+    "prerequisite": "Places Kenya's parks.",
+    "question": "Where is the Maasai Mara?",
+    "answer": "Narok, south-western Kenya"
+   },
+   "representations": [
+    "a regional park map",
+    "park cards",
+    "animal photos"
+   ],
+   "steps": [
+    "Name the park.",
+    "Name the country.",
+    "Name its famous sight.",
+    "Place it on the map."
+   ],
+   "contexts": [
+    "the Serengeti migration",
+    "gorillas in Bwindi",
+    "Murchison Falls"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Serengeti, Bwindi, Tsavo."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Bwindi.",
+     "say": "Which country and which animal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Uganda, gorillas."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the rest."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_PARK_COUNTRY",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is the Serengeti National Park?",
+     "repair": "Say Serengeti is south of the border and Mara is north."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_GORILLA",
+     "listen_for": [
+      "The Maasai Mara"
+     ],
+     "ask": "Where can mountain gorillas be seen?",
+     "repair": "Say gorillas live in forest on mountains."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_NGORONGORO_KENYA",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is the Ngorongoro Crater?",
+     "repair": "Pin each park on the regional map."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_PARK_SAME_ANIMALS",
+     "listen_for": [
+      "In every park"
+     ],
+     "ask": "Where in Eastern Africa can mountain gorillas be seen?",
+     "repair": "Show the gorilla range on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which country is the Serengeti?",
+     "answer": "Tanzania",
+     "shows": "park to country"
+    },
+    {
+     "question": "Where can mountain gorillas be seen?",
+     "answer": "Bwindi in Uganda or the Volcanoes National Park in Rwanda",
+     "shows": "animal to park"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
+   "key_step": "The child pairs the challenges of tourism with their solutions.",
+   "floor": {
+    "prerequisite": "Explains factors that promote tourism.",
+    "question": "Give one factor that promotes tourism.",
+    "answer": "any factor such as security"
+   },
+   "representations": [
+    "problem and solution cards",
+    "a beehive fence photo",
+    "a news story"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Ask its cause.",
+    "Choose the solution.",
+    "Check the pair."
+   ],
+   "contexts": [
+    "poaching in Tsavo",
+    "elephants eating crops",
+    "poor roads to a park"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write poaching, poor roads, human-wildlife conflict."
+    },
+    {
+     "beat": "point",
+     "do": "Point at poaching.",
+     "say": "What solution fits?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for patrols and strict laws."
+    },
+    {
+     "beat": "write",
+     "do": "Pair each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_POACH_OK",
+     "listen_for": [
+      "Helps it grow"
+     ],
+     "ask": "What does poaching do to tourism?",
+     "repair": "Ask what is left to see if animals are killed."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_SOLUTION_SWAP",
+     "listen_for": [
+      "Building roads"
+     ],
+     "ask": "What helps to stop poaching?",
+     "repair": "Ask which answer stops a poacher."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_CONFLICT_KILL",
+     "listen_for": [
+      "Kill the elephants"
+     ],
+     "ask": "Elephants destroy crops near a park. What is a good solution?",
+     "repair": "Show a beehive fence that keeps elephants out."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_ADVERT_NONE",
+     "listen_for": [
+      "Do nothing"
+     ],
+     "ask": "How can a country bring more tourists?",
+     "repair": "Show a tourism advert."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which solution fits poaching?",
+     "answer": "anti-poaching patrols and strict laws",
+     "shows": "pairs"
+    },
+    {
+     "question": "Give one solution to human-wildlife conflict.",
+     "answer": "any of: fences, compensation, community conservancies",
+     "shows": "pairs"
+    }
+   ]
+  }
+ ]
+}

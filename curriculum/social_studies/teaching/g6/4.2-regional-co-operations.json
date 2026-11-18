@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS",
+ "title": "Regional co-operations",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm with current membership): EAC headquarters in Arusha, Tanzania; aims: customs union, common market, monetary union, political federation.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
+   "key_step": "The child names the objectives of the EAC and where its headquarters is.",
+   "floor": {
+    "prerequisite": "Names the countries of Eastern Africa.",
+    "question": "Name two countries of Eastern Africa.",
+    "answer": "any two such as Kenya and Uganda"
+   },
+   "representations": [
+    "an EAC map",
+    "objective cards",
+    "a timeline of steps"
+   ],
+   "steps": [
+    "Name the EAC members.",
+    "Name the headquarters: Arusha.",
+    "Name the objectives.",
+    "Say which are already in place."
+   ],
+   "contexts": [
+    "trucks crossing with fewer checks",
+    "the EAC flag",
+    "Arusha headquarters"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write customs union, common market, monetary union, political federation."
+    },
+    {
+     "beat": "point",
+     "do": "Point at monetary union.",
+     "say": "What would this mean?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for one currency."
+    },
+    {
+     "beat": "write",
+     "do": "Mark which are done and which are aims."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_HQ",
+     "listen_for": [
+      "Nairobi"
+     ],
+     "ask": "Where is the EAC headquarters?",
+     "repair": "Say Arusha is near Kilimanjaro in Tanzania."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_CUSTOMS",
+     "listen_for": [
+      "Each country taxes goods from partners"
+     ],
+     "ask": "What does a customs union do?",
+     "repair": "Say customs duty is a tax on goods that cross a border."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_ONE_COUNTRY",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Are EAC members now one country?",
+     "repair": "Show that each member still has its own president and flag."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_MONETARY_DONE",
+     "listen_for": [
+      "Yes, the same money"
+     ],
+     "ask": "Do EAC countries use one currency today?",
+     "repair": "Show a Kenyan shilling and a Tanzanian shilling."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Where is the EAC headquarters?",
+     "answer": "Arusha, Tanzania",
+     "shows": "headquarters"
+    },
+    {
+     "question": "Give two objectives of the EAC.",
+     "answer": "any two of: customs union, common market, monetary union, political federation, co-operation in trade and social life",
+     "shows": "objectives"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
+   "key_step": "The child describes the benefits of the EAC to members.",
+   "floor": {
+    "prerequisite": "Names EAC objectives.",
+    "question": "What is a customs union?",
+    "answer": "members trade without duty and charge the same duty on outside goods"
+   },
+   "representations": [
+    "benefit cards",
+    "a lorry crossing role play",
+    "a student story"
+   ],
+   "steps": [
+    "Name the benefit.",
+    "Say who gains.",
+    "Give an example.",
+    "Say what it was like before."
+   ],
+   "contexts": [
+    "Kenyan goods sold in Kampala",
+    "Ugandan students in Nairobi",
+    "one tourist visa for some members"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a lorry at a border."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the lorry.",
+     "say": "What does the customs union save it?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for duty."
+    },
+    {
+     "beat": "write",
+     "do": "Write three benefits."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_BENEFIT_ONE",
+     "listen_for": [
+      "Only the biggest country"
+     ],
+     "ask": "Who gains from a common market?",
+     "repair": "List a gain for a small and a large partner."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_NO_MOVE",
+     "listen_for": [
+      "No movement of workers"
+     ],
+     "ask": "What does the common market allow?",
+     "repair": "Say the market includes labour as well as goods."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_DUTY_ALL",
+     "listen_for": [
+      "Yes, the same as goods from anywhere"
+     ],
+     "ask": "Do goods made in Kenya pay customs duty in Uganda?",
+     "repair": "Act a lorry crossing a border with and without duty."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_STUDY_NONE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Can a Kenyan student study at a university in Uganda?",
+     "repair": "Tell of Kenyan students in Kampala universities."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two benefits of the EAC.",
+     "answer": "any two of: bigger market, trade without duties, free movement of people, shared transport, education links",
+     "shows": "benefits"
+    },
+    {
+     "question": "Can people move to work in another EAC country?",
+     "answer": "Yes, under the common market",
+     "shows": "free movement"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
+   "key_step": "The child pairs EAC challenges with solutions.",
+   "floor": {
+    "prerequisite": "Describes EAC benefits.",
+    "question": "Give one benefit of the EAC.",
+    "answer": "any benefit such as a bigger market"
+   },
+   "representations": [
+    "problem and solution cards",
+    "a story of a dispute",
+    "a border post photo"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Ask its cause.",
+    "Choose the solution.",
+    "Check the pair."
+   ],
+   "contexts": [
+    "border delays",
+    "different laws in each country",
+    "disputes between members"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write border delays, different laws, disputes."
+    },
+    {
+     "beat": "point",
+     "do": "Point at disputes.",
+     "say": "How should members settle them?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for dialogue."
+    },
+    {
+     "beat": "write",
+     "do": "Pair each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_PROBLEM_SOLUTION",
+     "listen_for": [
+      "Singing the anthem"
+     ],
+     "ask": "What helps to reduce delays at borders?",
+     "repair": "Ask which answer speeds lorries."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_WAR",
+     "listen_for": [
+      "By force"
+     ],
+     "ask": "How should disputes between partner states be settled?",
+     "repair": "Say the community is built on peace."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_LEAVE_SOLVE",
+     "listen_for": [
+      "Leave the EAC"
+     ],
+     "ask": "Two members disagree about trade. What is the best step?",
+     "repair": "Recall that the first EAC collapsed in 1977 and members lost the benefits."
+    },
+    {
+     "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_UNEQUAL_FINE",
+     "listen_for": [
+      "They cannot"
+     ],
+     "ask": "Why can unequal benefits harm the EAC?",
+     "repair": "Share a prize unfairly in a group game and talk about it."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which solution fits delays at borders?",
+     "answer": "one-stop border posts and removing barriers",
+     "shows": "pairs"
+    },
+    {
+     "question": "How should disputes between members be settled?",
+     "answer": "by dialogue and the EAC's own bodies",
+     "shows": "peaceful"
+    }
+   ]
+  }
+ ]
+}

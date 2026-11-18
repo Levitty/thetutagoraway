@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL",
+ "title": "Peace and Conflict Resolution",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Teach the four peaceful methods with role plays: dialogue, negotiation, mediation (a helper), arbitration (a decider).",
+ "skills": [
+  {
+   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
+   "key_step": "The child explains the causes of conflict in society.",
+   "floor": {
+    "prerequisite": "Names things that promote peace.",
+    "question": "Name one thing that promotes peace.",
+    "answer": "any such as sharing"
+   },
+   "representations": [
+    "cause cards",
+    "news stories without names",
+    "a cause web"
+   ],
+   "steps": [
+    "Read the story.",
+    "Ask what each side wants.",
+    "Name the cause.",
+    "Say how it could have been avoided."
+   ],
+   "contexts": [
+    "a quarrel over a land boundary",
+    "herders and farmers sharing water",
+    "hate speech before an election"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"Two clans quarrel over a grazing field.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"grazing field\".",
+     "say": "What is the cause?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for competition for pasture."
+    },
+    {
+     "beat": "write",
+     "do": "Write two more causes."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_NO_CAUSE",
+     "listen_for": [
+      "None, conflicts just happen"
+     ],
+     "ask": "Which is a cause of conflict?",
+     "repair": "Ask what two herders argue about at a dry well."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_VIOLENCE_SOLVE",
+     "listen_for": [
+      "By fighting"
+     ],
+     "ask": "How should a quarrel be settled?",
+     "repair": "Ask who wins after a fight."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_ONE_SIDE",
+     "listen_for": [
+      "One village is bad"
+     ],
+     "ask": "Two villages quarrel over a water point. What is the cause?",
+     "repair": "Ask what each village needs."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_HATE_SPEECH_OK",
+     "listen_for": [
+      "No, it is only words"
+     ],
+     "ask": "Can hate speech cause conflict?",
+     "repair": "Discuss how angry words spread and lead to fights."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two causes of conflict in society.",
+     "answer": "any two of: land disputes, water and pasture, political differences, ethnic hatred, unfair sharing, poverty, drugs, hate speech",
+     "shows": "causes"
+    },
+    {
+     "question": "Do conflicts happen for no reason?",
+     "answer": "No, they have causes",
+     "shows": "conflicts have causes"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
+   "key_step": "The child describes peaceful methods of resolving conflict and tells them apart.",
+   "floor": {
+    "prerequisite": "Names causes of conflict.",
+    "question": "Give one cause of conflict.",
+    "answer": "any cause such as land disputes"
+   },
+   "representations": [
+    "four method cards",
+    "role plays",
+    "a comparison table"
+   ],
+   "steps": [
+    "Dialogue: the sides talk.",
+    "Negotiation: they bargain to agree.",
+    "Mediation: a helper helps them agree.",
+    "Arbitration: a third person decides."
+   ],
+   "contexts": [
+    "elders mediating a family quarrel",
+    "a court arbitration",
+    "two traders negotiating"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write mediation and arbitration."
+    },
+    {
+     "beat": "point",
+     "do": "Point at arbitration.",
+     "say": "Who decides in arbitration?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the third person."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"helps\" under mediation and \"decides\" under arbitration."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_MED_ARB",
+     "listen_for": [
+      "Mediation"
+     ],
+     "ask": "In which method does a third person decide the answer?",
+     "repair": "Say a mediator helps and an arbitrator decides."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_COURT_ONLY",
+     "listen_for": [
+      "None"
+     ],
+     "ask": "Which is a peaceful way besides court?",
+     "repair": "Name Njuri Ncheke or Kaya elders."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_NEG_DIALOGUE",
+     "listen_for": [
+      "Dialogue, they are the same"
+     ],
+     "ask": "Two traders bargain over a price until they agree. Is this dialogue or negotiation?",
+     "repair": "Show that negotiation is bargaining to reach a deal."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_MEDIATOR_DECIDES",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Does a mediator decide who is right?",
+     "repair": "Act both: the mediator asks questions, the arbitrator gives a decision."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In which method does a third person help the two sides agree?",
+     "answer": "mediation",
+     "shows": "mediation"
+    },
+    {
+     "question": "In which method does a third person decide?",
+     "answer": "arbitration",
+     "shows": "arbitration"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
+   "key_step": "The child chooses ways of promoting peace and rejects ones that harm it.",
+   "floor": {
+    "prerequisite": "Describes peaceful methods.",
+    "question": "What is mediation?",
+    "answer": "a third person helping two sides agree"
+   },
+   "representations": [
+    "action cards",
+    "a peace club plan",
+    "a Nyumba Kumi poster"
+   ],
+   "steps": [
+    "Read the action.",
+    "Ask: does it bring people together?",
+    "Sort: promotes or harms peace.",
+    "Plan one action for the class."
+   ],
+   "contexts": [
+    "an inter-school sports day",
+    "a peace committee meeting",
+    "avoiding hate speech online"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"spread a rumour about another community\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Does this promote peace?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write a peace-building action."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_REVENGE",
+     "listen_for": [
+      "Taking revenge"
+     ],
+     "ask": "Which action promotes peace?",
+     "repair": "Ask what revenge brings next."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_RUMOUR",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What does spreading rumours do?",
+     "repair": "Tell a short story of a rumour."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_SEPARATE",
+     "listen_for": [
+      "Keeping them apart"
+     ],
+     "ask": "Which promotes peace: keeping communities apart, or sports days between them?",
+     "repair": "Ask how people learn to trust each other if they never meet."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_NYUMBA_KUMI",
+     "listen_for": [
+      "Counting houses"
+     ],
+     "ask": "What is Nyumba Kumi for?",
+     "repair": "Explain the idea: groups of neighbours look out for each other."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two ways of promoting peace.",
+     "answer": "any two of: peace clubs, sports and cultural days, sharing resources, respect for differences, peace committees, Nyumba Kumi, avoiding hate speech",
+     "shows": "ways"
+    },
+    {
+     "question": "Does revenge promote peace?",
+     "answer": "No, it makes the conflict worse",
+     "shows": "rejects revenge"
+    }
+   ]
+  }
+ ]
+}

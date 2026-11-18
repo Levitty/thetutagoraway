@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY",
+ "title": "School and Community",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the school's own examples: who gave the land, who helps on open day, which community groups use the field.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
+   "key_step": "The child names ways a school and its community work together.",
+   "floor": {
+    "prerequisite": "Names ways people depend on each other.",
+    "question": "Give one way people depend on each other.",
+    "answer": "any way such as trade"
+   },
+   "representations": [
+    "a web with the school in the middle",
+    "example cards",
+    "the school's own history"
+   ],
+   "steps": [
+    "Name what the community gives.",
+    "Name what the school gives back.",
+    "Draw both arrows.",
+    "Say who takes part."
+   ],
+   "contexts": [
+    "parents on a work day",
+    "a church using the school hall",
+    "learners cleaning the market"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a school and a village with arrows both ways."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the arrow from the school.",
+     "say": "What does the school give the community?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an answer."
+    },
+    {
+     "beat": "write",
+     "do": "Write two examples on each arrow."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_SCHOOL_ALONE",
+     "listen_for": [
+      "Teachers marking books alone"
+     ],
+     "ask": "Which is an example of the school working with the community?",
+     "repair": "Ask: who else took part?"
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_ONE_WAY",
+     "listen_for": [
+      "Nothing"
+     ],
+     "ask": "What can a school give the community?",
+     "repair": "Ask who votes in the school hall."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_PARENTS_ONLY",
+     "listen_for": [
+      "Nobody"
+     ],
+     "ask": "Who else in the community can work with the school besides parents?",
+     "repair": "List visitors to the school this term."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_FEES_ONLY",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "Give a way the community helps the school without money.",
+     "repair": "Tell how parents built the school fence on a work day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one way the community helps a school.",
+     "answer": "any of: land, labour, funds, security, advice",
+     "shows": "community gives"
+    },
+    {
+     "question": "Give one way a school helps its community.",
+     "answer": "any of: educated learners, use of facilities, clean-ups, health days",
+     "shows": "school gives"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
+   "key_step": "The child explains the benefits of school and community working together and picks strategies that keep it going.",
+   "floor": {
+    "prerequisite": "Names ways a school and community work together.",
+    "question": "Give one way they work together.",
+    "answer": "any example such as a work day"
+   },
+   "representations": [
+    "benefit cards",
+    "strategy cards: keeps or ends",
+    "a planning meeting role play"
+   ],
+   "steps": [
+    "Name the benefit for the school.",
+    "Name the benefit for the community.",
+    "Read a strategy.",
+    "Ask: will it keep them working together?"
+   ],
+   "contexts": [
+    "an open day",
+    "a parents meeting",
+    "a community sports day"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"never invite parents\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the sentence.",
+     "say": "Will this keep the school and community together?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write two strategies that do."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_BENEFIT_ONLY_SCHOOL",
+     "listen_for": [
+      "Only the school"
+     ],
+     "ask": "Who gains when the school and community collaborate?",
+     "repair": "Name one gain for each."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_STRATEGY_STOP",
+     "listen_for": [
+      "Never inviting parents"
+     ],
+     "ask": "Which strategy keeps collaboration going?",
+     "repair": "Ask what happens if no one talks."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_COMMUNITY_NO_GAIN",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does a community gain from a school?",
+     "repair": "List community events held at school."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_STRATEGY_OPEN_DAY",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does an open day help the school and the community work together?",
+     "repair": "Ask what parents talked about with teachers at the last open day."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one benefit of collaboration to the community.",
+     "answer": "any of: better learners, shared facilities, development",
+     "shows": "community benefit"
+    },
+    {
+     "question": "Give one strategy that keeps collaboration going.",
+     "answer": "any of: open days, meetings, sharing facilities, joint projects, good communication",
+     "shows": "strategy"
+    }
+   ]
+  }
+ ]
+}

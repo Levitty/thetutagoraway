@@ -1,0 +1,279 @@
+{
+ "sub_strand": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN",
+ "title": "Culture and Social Organisation",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Ask learners about clans and age-sets in their families, without asking anyone to share private customs. Harmful practices (FGM, early marriage) are named plainly as harmful and against the law.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
+   "key_step": "The child tells age-groups from age-sets and gives the roles of each.",
+   "floor": {
+    "prerequisite": "Knows early forms of government included age-sets.",
+    "question": "What was an age-set?",
+    "answer": "a group initiated together with duties for their age"
+   },
+   "representations": [
+    "a ladder: children, youth, adults, elders",
+    "age-set names from a community (teacher to supply)",
+    "role cards"
+   ],
+   "steps": [
+    "Name the age-group.",
+    "Give its role.",
+    "Say how an age-set was formed.",
+    "Give its duty."
+   ],
+   "contexts": [
+    "young men as warriors",
+    "elders settling a case",
+    "children herding goats"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a ladder of four steps."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the top step.",
+     "say": "Who is here, and what do they do?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for elders who make decisions."
+    },
+    {
+     "beat": "write",
+     "do": "Write a role on each step."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_SET_GROUP",
+     "listen_for": [
+      "They were born in the same month"
+     ],
+     "ask": "What makes people an age-set?",
+     "repair": "Say age-group means the same stage of life; age-set means initiated together."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_WARRIOR",
+     "listen_for": [
+      "Looking after the sick at home"
+     ],
+     "ask": "What was a main duty of the warrior age-set?",
+     "repair": "Ask who guarded cattle and villages."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_GROUP_SET_SAME",
+     "listen_for": [
+      "There is none"
+     ],
+     "ask": "What is the difference between an age-group and an age-set?",
+     "repair": "Place cards: all the children of a village (age-group); boys initiated in one year (age-set)."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_ELDERS_NO_DUTY",
+     "listen_for": [
+      "Nothing, they rested"
+     ],
+     "ask": "What did elders do in traditional societies?",
+     "repair": "Act a council of elders hearing a case."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is an age-set?",
+     "answer": "a group of people initiated together who stay a group for life",
+     "shows": "age-set"
+    },
+    {
+     "question": "Give one duty of warriors in traditional society.",
+     "answer": "defending the community and its cattle",
+     "shows": "role"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
+   "key_step": "The child says what a clan is and gives its functions.",
+   "floor": {
+    "prerequisite": "Tells age-groups from age-sets.",
+    "question": "Who was in the same age-set?",
+    "answer": "people initiated at the same time"
+   },
+   "representations": [
+    "a family tree back to one ancestor",
+    "function cards",
+    "a story of clan help"
+   ],
+   "steps": [
+    "Draw the ancestor.",
+    "Draw the families from him or her.",
+    "Name the group: a clan.",
+    "Name what the clan does."
+   ],
+   "contexts": [
+    "guiding marriage outside the clan",
+    "helping at a funeral",
+    "settling a quarrel between families"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw one ancestor with three family lines below."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the three lines.",
+     "say": "What do we call all these families together?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for clan."
+    },
+    {
+     "beat": "write",
+     "do": "Write three functions."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_MARRY_CLAN",
+     "listen_for": [
+      "Someone from the same clan"
+     ],
+     "ask": "Who could a person marry in a clan system?",
+     "repair": "Say clan members are like brothers and sisters."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_FAMILY",
+     "listen_for": [
+      "One family living in one home"
+     ],
+     "ask": "What is a clan?",
+     "repair": "Draw one ancestor with many branches."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_SAME_TRIBE",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a clan the same as the whole community?",
+     "repair": "Draw a community circle with several clan circles inside."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_NO_HELP",
+     "listen_for": [
+      "It did not"
+     ],
+     "ask": "How did a clan help a family whose house burnt down?",
+     "repair": "Tell a story of clan members helping after a fire."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is a clan?",
+     "answer": "a group of families from one ancestor",
+     "shows": "clan"
+    },
+    {
+     "question": "Give one function of a clan.",
+     "answer": "any of: unity, guiding marriage, helping members, settling disputes, passing on culture",
+     "shows": "function"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
+   "key_step": "The child sorts aspects of traditional culture into those to keep and those to stop, and says why.",
+   "floor": {
+    "prerequisite": "Gives the functions of a clan.",
+    "question": "Give one function of a clan.",
+    "answer": "any function such as helping members"
+   },
+   "representations": [
+    "keep and stop boxes",
+    "practice cards",
+    "a music festival video or photo"
+   ],
+   "steps": [
+    "Read the practice.",
+    "Ask: does it harm anyone?",
+    "If not and it helps, keep it.",
+    "If it harms, stop it and say why."
+   ],
+   "contexts": [
+    "respect for elders",
+    "early marriage",
+    "herbal knowledge"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write keep and stop."
+    },
+    {
+     "beat": "point",
+     "do": "Point at stop.",
+     "say": "Which practice harms girls and must stop?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for FGM or early marriage."
+    },
+    {
+     "beat": "write",
+     "do": "Sort five cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_ALL_GOOD",
+     "listen_for": [
+      "Respect for elders"
+     ],
+     "ask": "Which custom should NOT be preserved?",
+     "repair": "Ask which customs help people and which harm them."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_ALL_BAD",
+     "listen_for": [
+      "None, they are all old-fashioned"
+     ],
+     "ask": "Which custom should be preserved?",
+     "repair": "Ask what proverbs and folktales teach."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_HARM_HIDDEN",
+     "listen_for": [
+      "Yes, if nobody knows"
+     ],
+     "ask": "A family plans to carry out FGM in secret. Is it acceptable?",
+     "repair": "Say plainly that FGM harms girls and is against the law, and name who to tell."
+    },
+    {
+     "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_SONGS_STOP",
+     "listen_for": [
+      "No, they are old-fashioned"
+     ],
+     "ask": "Should traditional songs and dances be kept?",
+     "repair": "Watch a music festival performance."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give one aspect of traditional culture that should be kept.",
+     "answer": "any of: respect for elders, community work, hospitality, proverbs, songs, traditional foods, herbal knowledge",
+     "shows": "keep"
+    },
+    {
+     "question": "Give one practice that should stop and why.",
+     "answer": "FGM or early marriage, because they harm children",
+     "shows": "stop"
+    }
+   ]
+  }
+ ]
+}

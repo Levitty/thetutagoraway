@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS",
+ "title": "The Preamble of the Constitution of Kenya.",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Read the preamble aloud from the Constitution of Kenya 2010. Key words: sovereign, supremacy of God, heritage, diversity, unity, indivisible, human rights, equality, freedom, democracy, social justice, rule of law.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
+   "key_step": "The child says the preamble is the opening statement of the Constitution and picks its key words.",
+   "floor": {
+    "prerequisite": "Knows the types of democracy.",
+    "question": "In which type of democracy do people elect leaders?",
+    "answer": "representative democracy"
+   },
+   "representations": [
+    "the preamble read aloud",
+    "key word cards",
+    "a highlighted copy"
+   ],
+   "steps": [
+    "Read the preamble.",
+    "Underline the big words.",
+    "Write each key word on a card.",
+    "Say which part of the Constitution it opens."
+   ],
+   "contexts": [
+    "the 2010 Constitution",
+    "a class reading the preamble",
+    "a poster of key words"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"We, the people of Kenya...\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"We\".",
+     "say": "Who is speaking here?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the people of Kenya."
+    },
+    {
+     "beat": "write",
+     "do": "Write four key words."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_WHAT",
+     "listen_for": [
+      "At the end"
+     ],
+     "ask": "Where in the Constitution is the preamble?",
+     "repair": "Say pre means before."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_SOVEREIGN_WHO",
+     "listen_for": [
+      "The President"
+     ],
+     "ask": "In the preamble, who holds sovereign power?",
+     "repair": "Read the first words: We, the people of Kenya."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_LAW_SECTIONS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is the preamble a list of laws?",
+     "repair": "Read the preamble: it starts \"We, the people of Kenya\"."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_WE_GOVERNMENT",
+     "listen_for": [
+      "The government"
+     ],
+     "ask": "Who are \"We, the people of Kenya\" in the preamble?",
+     "repair": "Ask who voted for the Constitution in the 2010 referendum."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the preamble?",
+     "answer": "the opening statement of the Constitution",
+     "shows": "preamble"
+    },
+    {
+     "question": "Who holds sovereign power according to the preamble?",
+     "answer": "the people of Kenya",
+     "shows": "sovereignty"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
+   "key_step": "The child explains the meaning of the preamble's key words.",
+   "floor": {
+    "prerequisite": "Picks key words from the preamble.",
+    "question": "Name one key word in the preamble.",
+    "answer": "any of: sovereign, heritage, diversity, unity, indivisible, equality, freedom, democracy"
+   },
+   "representations": [
+    "word and meaning cards",
+    "examples from daily life",
+    "a matching game"
+   ],
+   "steps": [
+    "Read the key word.",
+    "Give its meaning.",
+    "Give an example from Kenya.",
+    "Use it in a sentence."
+   ],
+   "contexts": [
+    "the diversity of Kenya's communities",
+    "our heritage of Fort Jesus and our songs",
+    "the rule of law in court"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write indivisible."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"in-\".",
+     "say": "What does \"in\" do to \"divisible\"?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"not\"."
+    },
+    {
+     "beat": "write",
+     "do": "Write \"cannot be divided\"."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_INDIVISIBLE",
+     "listen_for": [
+      "Divided into counties"
+     ],
+     "ask": "What does indivisible mean?",
+     "repair": "Say in means not."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_HERITAGE",
+     "listen_for": [
+      "Money kept in a bank"
+     ],
+     "ask": "What is heritage?",
+     "repair": "Ask about a rock painting or a forest."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_DIVERSITY_DIVISION",
+     "listen_for": [
+      "Division and quarrels"
+     ],
+     "ask": "What does diversity mean in the preamble?",
+     "repair": "List the different communities in the class: that is diversity."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_RULE_LAW",
+     "listen_for": [
+      "Leaders can do as they like"
+     ],
+     "ask": "What does the rule of law mean?",
+     "repair": "Ask whether a leader may break a traffic law."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What does \"indivisible\" mean?",
+     "answer": "cannot be divided",
+     "shows": "indivisible"
+    },
+    {
+     "question": "What does \"heritage\" mean?",
+     "answer": "what we receive from the past and pass on",
+     "shows": "heritage"
+    }
+   ]
+  }
+ ]
+}

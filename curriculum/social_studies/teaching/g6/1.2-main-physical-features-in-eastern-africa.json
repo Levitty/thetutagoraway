@@ -1,0 +1,193 @@
+{
+ "sub_strand": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I",
+ "title": "Main physical features in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Make models: fold paper for a block mountain, press clay down between two blocks for the Rift Valley, pile ash-coloured soil for a volcano. Facts: Kilimanjaro (Tanzania) is Africa's highest mountain; the Rwenzori are block mountains; Lake Victoria lies in a shallow basin, not in the Rift Valley.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
+   "key_step": "The child names the main features of Eastern Africa, says what kind each is and which country it is in.",
+   "floor": {
+    "prerequisite": "Names Kenya's main features.",
+    "question": "What is Kenya's highest mountain?",
+    "answer": "Mount Kenya"
+   },
+   "representations": [
+    "a relief map of Eastern Africa",
+    "feature cards",
+    "a table: feature, kind, country"
+   ],
+   "steps": [
+    "Name the feature.",
+    "Say what kind it is.",
+    "Say which country it is in.",
+    "Add one fact (highest, largest, source of a river)."
+   ],
+   "contexts": [
+    "Kilimanjaro seen from Amboseli",
+    "the Nile leaving Lake Victoria at Jinja",
+    "the Rwenzori snow peaks"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write Kilimanjaro, Lake Tanganyika, Rwenzori."
+    },
+    {
+     "beat": "point",
+     "do": "Point at Kilimanjaro.",
+     "say": "Which country is Kilimanjaro in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for Tanzania."
+    },
+    {
+     "beat": "write",
+     "do": "Fill the table with kind and country."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_KILI_COUNTRY",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is Mount Kilimanjaro?",
+     "repair": "Find the peak on a map and say which side of the border its summit is."
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_TYPE_MIX",
+     "listen_for": [
+      "A river"
+     ],
+     "ask": "What kind of feature is Lake Tanganyika?",
+     "repair": "Ask whether water has land all round it or runs in a line to the sea."
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_VICTORIA_COUNTRY",
+     "listen_for": [
+      "Kenya only"
+     ],
+     "ask": "Which countries share Lake Victoria?",
+     "repair": "Colour the three shores on a sketch in three colours."
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_NILE_SOURCE",
+     "listen_for": [
+      "From Egypt into Lake Victoria"
+     ],
+     "ask": "Where does the White Nile flow from?",
+     "repair": "Trace the Nile with a finger from Jinja northwards on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "What is the highest mountain in Africa and where is it?",
+     "answer": "Mount Kilimanjaro, in Tanzania",
+     "shows": "highest mountain"
+    },
+    {
+     "question": "Which countries share Lake Victoria?",
+     "answer": "Kenya, Uganda and Tanzania",
+     "shows": "shared lake"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
+   "key_step": "The child says how volcanic mountains, block mountains, the Rift Valley and lakes were formed.",
+   "floor": {
+    "prerequisite": "Names the main features of Eastern Africa.",
+    "question": "Name a mountain in Uganda.",
+    "answer": "the Rwenzori or Mount Elgon"
+   },
+   "representations": [
+    "paper and clay models",
+    "a cross-section of the Rift Valley",
+    "photos of each feature"
+   ],
+   "steps": [
+    "Volcanic: magma and ash pile up.",
+    "Block: land between faults pushed up.",
+    "Rift Valley: land between faults sinks.",
+    "Lakes: water fills a rift, a crater or a basin."
+   ],
+   "contexts": [
+    "Mount Kenya, an old volcano",
+    "the Rift Valley floor at Naivasha",
+    "Lake Victoria's shallow basin"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two cracks in the ground and a block between them."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the block.",
+     "say": "If the block sinks, what feature forms?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Rift Valley."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw the block pushed up instead."
+    },
+    {
+     "beat": "predict",
+     "do": "Ask what forms now: a block mountain."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_ALL_VOLCANIC",
+     "listen_for": [
+      "By volcanic eruptions"
+     ],
+     "ask": "How were the Rwenzori Mountains formed?",
+     "repair": "Draw a block with two faults and push the middle up. Say block mountain."
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_RIFT_RIVER",
+     "listen_for": [
+      "A river cut it out over time"
+     ],
+     "ask": "How was the Great Rift Valley formed?",
+     "repair": "Draw a long block that slides down between two cracks."
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_LAKE_VICTORIA_RIFT",
+     "listen_for": [
+      "Lake Turkana"
+     ],
+     "ask": "Which lake lies in a shallow bowl made by the land sagging between the two arms of the Rift?",
+     "repair": "Mark both arms of the Rift on a sketch and ask where Victoria sits."
+    },
+    {
+     "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_VOLCANO_ACTIVE_ALL",
+     "listen_for": [
+      "Yes, all volcanoes erupt"
+     ],
+     "ask": "Is Mount Kenya an active volcano that erupts today?",
+     "repair": "Compare an extinct volcano (Mount Kenya) with an active one (Ol Doinyo Lengai, to confirm)."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How was the Great Rift Valley formed?",
+     "answer": "land between faults sank",
+     "shows": "rift formation"
+    },
+    {
+     "question": "Is the Rwenzori a volcanic or a block mountain?",
+     "answer": "a block mountain",
+     "shows": "mountain type"
+    }
+   ]
+  }
+ ]
+}

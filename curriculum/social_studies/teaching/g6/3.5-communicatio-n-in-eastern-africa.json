@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER",
+ "title": "Communicatio n in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Sort modes into traditional and modern, and into \"reaches one person\" and \"reaches many\".",
+ "skills": [
+  {
+   "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
+   "key_step": "The child names traditional and modern modes of communication and says which reach many people.",
+   "floor": {
+    "prerequisite": "Names modern means of communication in Kenya.",
+    "question": "Name one modern means of communication.",
+    "answer": "any such as a mobile phone"
+   },
+   "representations": [
+    "mode cards",
+    "two sorts: traditional or modern; one person or many",
+    "a radio"
+   ],
+   "steps": [
+    "Name the mode.",
+    "Sort it: traditional or modern.",
+    "Sort it: one person or many.",
+    "Give a use."
+   ],
+   "contexts": [
+    "a radio farmers' programme",
+    "a letter to a cousin in Kampala",
+    "a drum at a ceremony"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write radio, letter, drum."
+    },
+    {
+     "beat": "point",
+     "do": "Point at radio.",
+     "say": "Does it reach one person or many?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for many."
+    },
+    {
+     "beat": "write",
+     "do": "Sort all three."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_TRAD_MODERN",
+     "listen_for": [
+      "The mobile phone"
+     ],
+     "ask": "Which is a traditional way of communicating?",
+     "repair": "Ask which needs electricity."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_MASS",
+     "listen_for": [
+      "A letter"
+     ],
+     "ask": "Which mode reaches many people at once?",
+     "repair": "Ask who hears a radio in a village."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_PHONE_MASS",
+     "listen_for": [
+      "Yes"
+     ],
+     "ask": "Is a phone call between two friends mass communication?",
+     "repair": "Sort modes into one-to-one and one-to-many."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_INTERNET_ONE",
+     "listen_for": [
+      "Only games"
+     ],
+     "ask": "Give one use of the internet for communication.",
+     "repair": "Show an email and a news website."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two modern modes of communication.",
+     "answer": "any two of: letters, telephone, radio, television, newspapers, mobile phones, internet",
+     "shows": "modern"
+    },
+    {
+     "question": "Which mode reaches many people at once: radio or a letter?",
+     "answer": "radio",
+     "shows": "mass media"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
+   "key_step": "The child pairs communication challenges with solutions.",
+   "floor": {
+    "prerequisite": "Names modes of communication.",
+    "question": "Name a mode that reaches many people.",
+    "answer": "radio or television"
+   },
+   "representations": [
+    "problem and solution cards",
+    "a mast photo",
+    "a solar charger"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Ask its cause.",
+    "Choose the solution.",
+    "Check the pair."
+   ],
+   "contexts": [
+    "weak network in a remote area",
+    "no electricity to charge phones",
+    "stolen cables"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write no network, no electricity, vandalism."
+    },
+    {
+     "beat": "point",
+     "do": "Point at no electricity.",
+     "say": "What helps?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for solar or rural electrification."
+    },
+    {
+     "beat": "write",
+     "do": "Pair each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_ELEC",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "Why does lack of electricity harm communication?",
+     "repair": "Ask how a phone is charged."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_SOLUTION_SWAP",
+     "listen_for": [
+      "Training in digital skills"
+     ],
+     "ask": "What helps to stop theft of masts and cables?",
+     "repair": "Ask which action stops a thief."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_COST_NONE",
+     "listen_for": [
+      "Everyone uses it"
+     ],
+     "ask": "Why do some families not use the internet?",
+     "repair": "Compare the cost of data with the cost of a loaf of bread."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_FAKE_NEWS_NONE",
+     "listen_for": [
+      "No problem"
+     ],
+     "ask": "A message says a school is closed, but it is not true. What problem is this?",
+     "repair": "Check the message against the school's own notice."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which solution fits weak network in remote areas?",
+     "answer": "building more masts",
+     "shows": "pairs"
+    },
+    {
+     "question": "Which solution fits vandalism of cables?",
+     "answer": "laws and guards",
+     "shows": "pairs"
+    }
+   ]
+  }
+ ]
+}

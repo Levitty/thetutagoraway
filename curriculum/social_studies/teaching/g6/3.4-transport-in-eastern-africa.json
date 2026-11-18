@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR",
+ "title": "Transport in Eastern Africa",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts (to confirm): the Northern Corridor from Mombasa; the Central Corridor from Dar es Salaam; TAZARA from Dar es Salaam to Zambia; the SGR in Kenya and Tanzania; ports Mombasa, Dar es Salaam, Djibouti.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+   "key_step": "The child names the main transport networks of Eastern Africa and knows how landlocked countries reach the sea.",
+   "floor": {
+    "prerequisite": "Names modern means of transport in Kenya.",
+    "question": "Name a means of transport for heavy goods.",
+    "answer": "railway or road"
+   },
+   "representations": [
+    "a transport map",
+    "route cards",
+    "a port photo"
+   ],
+   "steps": [
+    "Name the route.",
+    "Say where it starts and ends.",
+    "Say what it carries.",
+    "Say which countries use it."
+   ],
+   "contexts": [
+    "lorries on the Northern Corridor",
+    "the SGR from Mombasa",
+    "ships at Dar es Salaam"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the coast with Mombasa and a line to Kampala."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the line.",
+     "say": "What is this route called?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the Northern Corridor."
+    },
+    {
+     "beat": "write",
+     "do": "Add the Central Corridor and TAZARA."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_PORT_COUNTRY",
+     "listen_for": [
+      "Kenya"
+     ],
+     "ask": "In which country is the port of Dar es Salaam?",
+     "repair": "Match port and country in a small table."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_MODE_LOAD",
+     "listen_for": [
+      "Air"
+     ],
+     "ask": "Which mode suits bulky heavy goods over a long distance?",
+     "repair": "Ask about the cost of flying a lorry load."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_LANDLOCKED_PORT",
+     "listen_for": [
+      "It has its own"
+     ],
+     "ask": "Which port does Uganda use for most of its imports?",
+     "repair": "Trace the road from Kampala to the sea."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_TAZARA_KENYA",
+     "listen_for": [
+      "Kenya and Uganda"
+     ],
+     "ask": "Which countries does the TAZARA railway join?",
+     "repair": "Trace TAZARA from Dar es Salaam to Zambia on the map."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How does Uganda send goods by sea?",
+     "answer": "through the port of Mombasa or Dar es Salaam",
+     "shows": "landlocked"
+    },
+    {
+     "question": "Which railway joins Tanzania and Zambia?",
+     "answer": "TAZARA",
+     "shows": "network"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
+   "key_step": "The child pairs transport challenges with their solutions.",
+   "floor": {
+    "prerequisite": "Names transport networks.",
+    "question": "Name the road route from Mombasa to Kampala.",
+    "answer": "the Northern Corridor"
+   },
+   "representations": [
+    "problem and solution cards",
+    "a road photo",
+    "a border post picture"
+   ],
+   "steps": [
+    "Name the problem.",
+    "Ask its cause.",
+    "Choose the solution.",
+    "Check the pair."
+   ],
+   "contexts": [
+    "potholes after rain",
+    "crashes on a busy highway",
+    "queues at Malaba"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write crashes, border delays, vandalism."
+    },
+    {
+     "beat": "point",
+     "do": "Point at border delays.",
+     "say": "What fixes this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for one-stop border posts."
+    },
+    {
+     "beat": "write",
+     "do": "Pair each."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_BORDER",
+     "listen_for": [
+      "Makes lorries wait longer"
+     ],
+     "ask": "What does a one-stop border post do?",
+     "repair": "Ask what one stop means."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_CRASH_SOLVE",
+     "listen_for": [
+      "Higher speeds"
+     ],
+     "ask": "What helps reduce road crashes?",
+     "repair": "Ask what happens when a car hits at high speed."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_BORDER_NO_PROBLEM",
+     "listen_for": [
+      "They never wait"
+     ],
+     "ask": "Why do lorries sometimes wait days at a border?",
+     "repair": "Describe a queue of lorries at Malaba."
+    },
+    {
+     "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_VANDAL_HARMLESS",
+     "listen_for": [
+      "It does not"
+     ],
+     "ask": "How does stealing road signs affect transport?",
+     "repair": "Show a bend with and without a warning sign."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which solution fits road crashes?",
+     "answer": "speed limits, driver training and road safety rules",
+     "shows": "pairs"
+    },
+    {
+     "question": "Which solution fits delays at borders?",
+     "answer": "one-stop border posts",
+     "shows": "pairs"
+    }
+   ]
+  }
+ ]
+}

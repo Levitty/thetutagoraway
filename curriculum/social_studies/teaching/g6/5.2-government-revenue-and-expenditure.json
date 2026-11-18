@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E",
+ "title": "Government Revenue and Expenditure",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Facts: the Kenya Revenue Authority collects national taxes; counties collect their own fees and levies and get a share of national revenue. Name no office holders.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
+   "key_step": "The child names the sources of national government revenue and who collects taxes.",
+   "floor": {
+    "prerequisite": "Knows the county assembly approves a budget.",
+    "question": "Who approves the county budget?",
+    "answer": "the county assembly"
+   },
+   "representations": [
+    "source cards",
+    "a receipt with VAT",
+    "a pay slip picture with income tax"
+   ],
+   "steps": [
+    "Name the source.",
+    "Say who pays it.",
+    "Say who collects it.",
+    "Sort tax or not a tax."
+   ],
+   "contexts": [
+    "VAT on a loaf of bread",
+    "income tax on a salary",
+    "a fine for breaking a traffic rule"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write income tax, VAT, fines, loans."
+    },
+    {
+     "beat": "point",
+     "do": "Point at loans.",
+     "say": "Is a loan a tax?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for no."
+    },
+    {
+     "beat": "write",
+     "do": "Write who collects taxes: KRA."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_LOAN_TAX",
+     "listen_for": [
+      "A loan from a bank"
+     ],
+     "ask": "Which is a tax?",
+     "repair": "Say a tax is compulsory and a loan must be repaid."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_COLLECTOR",
+     "listen_for": [
+      "The police"
+     ],
+     "ask": "Who collects national taxes in Kenya?",
+     "repair": "Say KRA stands for Kenya Revenue Authority."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_VAT_INCOME",
+     "listen_for": [
+      "Income tax"
+     ],
+     "ask": "A shopper pays a tax added to the price of soap. Which tax is this?",
+     "repair": "Show a receipt with VAT printed on it."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_PRINT_MONEY",
+     "listen_for": [
+      "Printing more money"
+     ],
+     "ask": "Where does most of the government's money come from?",
+     "repair": "Explain that printing too much makes prices rise; taxes are the main source."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Who collects national taxes in Kenya?",
+     "answer": "the Kenya Revenue Authority",
+     "shows": "collector"
+    },
+    {
+     "question": "Give two sources of government revenue.",
+     "answer": "any two of: income tax, VAT, customs duty, excise duty, fees and licences, fines, loans, grants",
+     "shows": "sources"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
+   "key_step": "The child says what the national and county governments each spend on.",
+   "floor": {
+    "prerequisite": "Names sources of revenue.",
+    "question": "Name one source of government revenue.",
+    "answer": "any source such as taxes"
+   },
+   "representations": [
+    "national and county boxes",
+    "spending cards",
+    "a budget pie"
+   ],
+   "steps": [
+    "Read the spending card.",
+    "Ask: is it a national or a county function?",
+    "Place it.",
+    "Say why."
+   ],
+   "contexts": [
+    "teachers' salaries",
+    "a county health centre",
+    "a national highway"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two boxes: national, county."
+    },
+    {
+     "beat": "point",
+     "do": "Point at county.",
+     "say": "Who pays for a county health centre?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for county."
+    },
+    {
+     "beat": "write",
+     "do": "Sort five cards."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_LEVEL_SWAP",
+     "listen_for": [
+      "The county government"
+     ],
+     "ask": "Which level of government pays teachers?",
+     "repair": "Say teachers are paid by the Teachers Service Commission."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_TAX_WASTE",
+     "listen_for": [
+      "Kept by officials"
+     ],
+     "ask": "What is tax money used for?",
+     "repair": "List what is built with taxes."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_COUNTY_DEFENCE",
+     "listen_for": [
+      "The county government"
+     ],
+     "ask": "Which government pays for defence?",
+     "repair": "Sort spending cards into national and county boxes."
+    },
+    {
+     "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_DEBT_NONE",
+     "listen_for": [
+      "No"
+     ],
+     "ask": "Does the government spend some revenue on paying debts?",
+     "repair": "Show that a loan must be paid back, like borrowing from a friend."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which government pays teachers' salaries?",
+     "answer": "the national government",
+     "shows": "national"
+    },
+    {
+     "question": "Give one thing a county government spends on.",
+     "answer": "any of: county health centres, county roads, markets, early childhood education",
+     "shows": "county"
+    }
+   ]
+  }
+ ]
+}

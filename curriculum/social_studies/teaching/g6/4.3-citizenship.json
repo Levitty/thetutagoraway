@@ -1,0 +1,189 @@
+{
+ "sub_strand": "SOCI.G6.POLITI.CITIZENSHIP",
+ "title": "Citizenship",
+ "status": "draft: written 18 Nov 2026 offline for Grade 6 Social Studies; not yet checked by a CBC Social Studies teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Use the Constitution's words: rights such as voting at 18; responsibilities such as obeying the law. Name no party or person.",
+ "skills": [
+  {
+   "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
+   "key_step": "The child tells rights of a citizen from responsibilities.",
+   "floor": {
+    "prerequisite": "Says how a person becomes a citizen.",
+    "question": "Name one way to become a Kenyan citizen.",
+    "answer": "by birth or registration"
+   },
+   "representations": [
+    "\"I may\" and \"I must\" columns",
+    "cards",
+    "the Constitution chapter titles"
+   ],
+   "steps": [
+    "Read the card.",
+    "Ask: is it something I may do or must do?",
+    "Sort it.",
+    "Pair a right with a responsibility."
+   ],
+   "contexts": [
+    "voting at 18",
+    "paying taxes",
+    "obeying the law"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write \"I may\" and \"I must\"."
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"I must\".",
+     "say": "Where does \"obey the law\" go?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for \"I must\"."
+    },
+    {
+     "beat": "write",
+     "do": "Sort four more."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_RIGHT_RESP",
+     "listen_for": [
+      "To vote when 18"
+     ],
+     "ask": "Which is a responsibility of a Kenyan citizen?",
+     "repair": "Ask what the state gives and what the citizen gives."
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_VOTE_AGE",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "At what age can a Kenyan citizen vote?",
+     "repair": "Link voting with the identity card at 18."
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_TAX_RIGHT",
+     "listen_for": [
+      "A right"
+     ],
+     "ask": "Is paying taxes a right or a responsibility?",
+     "repair": "Sort: \"I may\" (right) and \"I must\" (responsibility)."
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_ID_AGE",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "At what age does a Kenyan citizen get a national ID card?",
+     "repair": "Write 18: vote, ID card."
+    }
+   ],
+   "checks": [
+    {
+     "question": "At what age can a Kenyan citizen vote?",
+     "answer": "18",
+     "shows": "voting age"
+    },
+    {
+     "question": "Is obeying the law a right or a responsibility?",
+     "answer": "a responsibility",
+     "shows": "sorts"
+    }
+   ]
+  },
+  {
+   "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
+   "key_step": "The child names the qualities of a good Kenyan citizen and picks the action that shows each.",
+   "floor": {
+    "prerequisite": "Tells rights from responsibilities.",
+    "question": "Is paying taxes a right or a responsibility?",
+    "answer": "a responsibility"
+   },
+   "representations": [
+    "quality cards",
+    "scenario cards",
+    "a patriotism poster"
+   ],
+   "steps": [
+    "Read the scenario.",
+    "Name the quality.",
+    "Say how it helps Kenya.",
+    "Give another way to show it."
+   ],
+   "contexts": [
+    "a citizen refusing to give a bribe",
+    "a family planting trees",
+    "a youth group cleaning a market"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write: \"A driver refuses to give a bribe to a police officer.\""
+    },
+    {
+     "beat": "point",
+     "do": "Point at \"refuses\".",
+     "say": "Which quality is this?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for honesty or integrity."
+    },
+    {
+     "beat": "write",
+     "do": "Write the quality."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_PATRIOT",
+     "listen_for": [
+      "Only singing the anthem"
+     ],
+     "ask": "What is patriotism?",
+     "repair": "Ask for an action that helps the country."
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_CORRUPT",
+     "listen_for": [
+      "Paying a bribe for quick service"
+     ],
+     "ask": "Which action shows a good citizen?",
+     "repair": "Ask whether honesty or speed matters most."
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_TOLERANCE",
+     "listen_for": [
+      "Agreeing with everyone"
+     ],
+     "ask": "What does tolerance mean?",
+     "repair": "Act two learners who disagree politely."
+    },
+    {
+     "code": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_PATRIOT_ONLY_SOLDIERS",
+     "listen_for": [
+      "No, only soldiers"
+     ],
+     "ask": "Can a farmer show patriotism?",
+     "repair": "List ways different people show love for Kenya."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Give two qualities of a good citizen.",
+     "answer": "any two of: patriotism, honesty, respect for the law, responsibility, hard work, co-operation, tolerance",
+     "shows": "qualities"
+    },
+    {
+     "question": "Is giving a bribe to be served faster good citizenship?",
+     "answer": "No, it is corruption",
+     "shows": "integrity"
+    }
+   ]
+  }
+ ]
+}
