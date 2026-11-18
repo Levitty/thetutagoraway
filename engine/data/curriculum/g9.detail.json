@@ -309,6 +309,60 @@
     "compare two readings"
    ],
    "mastery": "The child reads a scale where each step of 1 multiplies the size by 10 (a tremor of magnitude 5 moves the ground 100 times as much as one of magnitude 3), writing each reading back as a power of 10 and dividing."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS": {
+   "forms": [
+    "share in the ratio",
+    "how much does each get",
+    "from the table",
+    "find the mistake"
+   ],
+   "mastery": "The child shares an amount in a ratio of two or three parts by adding the parts, finding the value of one part (amount divided by the total parts) and multiplying by each share: 36,000 shillings in the ratio 2:3:4 gives one part 4,000 and shares 8,000, 12,000 and 16,000, which add back to 36,000."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN": {
+   "forms": [
+    "combine the ratios",
+    "how many hens",
+    "why is this wrong",
+    "write as a:b:c"
+   ],
+   "mastery": "The child links a:b and b:c by making the shared term equal (multiply each ratio so the b values match, using the LCM), then writes a:b:c and uses it: cows:goats = 2:3 and goats:hens = 4:5 give cows:goats:hens = 8:12:15."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION": {
+   "forms": [
+    "how many kg",
+    "how many days",
+    "find the mistake",
+    "more or fewer"
+   ],
+   "mastery": "The child handles two changes at once (machines and hours, workers and shambas) by asking for each change whether it increases or decreases the answer and multiplying by the matching ratio, or by finding the amount for one unit of each first: 4 machines grind 1,200 kg in 6 hours, so 6 machines in 5 hours grind 1,200 x 6/4 x 5/6 = 1,500 kg."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION": {
+   "forms": [
+    "how many days",
+    "direct or inverse",
+    "find the constant",
+    "complete the table"
+   ],
+   "mastery": "The child sees that more workers take fewer days (workers x days stays the same), checks a table by multiplying x and y in each row (inverse) or dividing (direct), and finds a missing value from the constant product: 6 workers take 10 days, so 60 worker-days, so 4 workers take 15 days."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER": {
+   "forms": [
+    "how long together",
+    "how many days to finish",
+    "why is the average wrong",
+    "what fraction in one hour"
+   ],
+   "mastery": "The child turns each time into the part of the job done in one unit of time (a tap that fills a tank in 4 hours fills 1/4 an hour), adds the parts for people working together, and turns the total back into a time; for a job finished by one person, takes the work done together from the whole and divides the rest by that person's rate."
+  },
+  "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING": {
+   "forms": [
+    "how long to fill",
+    "pipe and leak",
+    "part filled in one hour",
+    "will it ever fill"
+   ],
+   "mastery": "The child finds the part filled in one hour by the pipe and the part emptied by the leak, subtracts the leak's part, and turns what is left back into a time: a pipe fills in 3 hours and a leak empties in 6 hours, so 1/3 - 1/6 = 1/6 a tank an hour, 6 hours."
   }
  }
 }

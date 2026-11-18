@@ -1524,5 +1524,453 @@
   "help": "Each step multiplies the size by 10, so later steps add far more.",
   "source": "to be confirmed by a teacher (no source yet)",
   "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_SHARED_EQUALLY": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS",
+  "error": "Shares the amount equally, ignoring the ratio.",
+  "example": {
+   "question": "Share 36,000 in the ratio 2:3:4. The largest share?",
+   "wrong_answer": "12,000",
+   "correct_answer": "16,000"
+  },
+  "cause": "Hears \"share\" and divides by the number of people.",
+  "reveals": "The answer 12,000 as a wrong option, with a reason that names the idea.",
+  "help": "The ratio says how many parts each gets: 2 + 3 + 4 = 9 parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_ONE_PART_GIVEN": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS",
+  "error": "Gives the value of one part as a share.",
+  "example": {
+   "question": "Share 36,000 in the ratio 2:3:4. The largest share?",
+   "wrong_answer": "4,000",
+   "correct_answer": "16,000"
+  },
+  "cause": "Stops after dividing by the total parts.",
+  "reveals": "The answer 4,000 as a wrong option, with a reason that names the idea.",
+  "help": "That is one part; this club gets 4 parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_DIVIDE_BY_OWN_PART": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS",
+  "error": "Divides the amount by the person's own number of parts.",
+  "example": {
+   "question": "Share 36,000 in the ratio 2:3:4. The largest share?",
+   "wrong_answer": "9,000",
+   "correct_answer": "16,000"
+  },
+  "cause": "Uses the share number as the divisor.",
+  "reveals": "The answer 9,000 as a wrong option, with a reason that names the idea.",
+  "help": "First divide by all the parts (9), then multiply by 4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_PARTS_MULTIPLIED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS",
+  "error": "Multiplies the numbers in the ratio to get the total parts.",
+  "example": {
+   "question": "Share 2,000 in the ratio 2:3. Total parts?",
+   "wrong_answer": "6",
+   "correct_answer": "5"
+  },
+  "cause": "Combines the ratio numbers by multiplying.",
+  "reveals": "The answer 6 as a wrong option, with a reason that names the idea.",
+  "help": "Parts are counted: 2 parts and 3 parts make 5 parts.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_PARTS_AS_HUNDREDS": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS",
+  "error": "Treats the ratio numbers as amounts of 100 shillings.",
+  "example": {
+   "question": "Profit 45,000 shared 2:3:4. The 3-part share?",
+   "wrong_answer": "300",
+   "correct_answer": "15,000"
+  },
+  "cause": "Attaches a unit to the ratio numbers.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "A part is worth the amount divided by the total parts, whatever it comes to.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_SHARED_TERM_NOT_MATCHED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN",
+  "error": "Joins two ratios without making the shared term equal.",
+  "example": {
+   "question": "Maize:beans = 2:3, beans:peas = 4:5. Maize:beans:peas?",
+   "wrong_answer": "2:3:5",
+   "correct_answer": "8:12:15"
+  },
+  "cause": "Sees the shared word and writes the numbers side by side.",
+  "reveals": "The answer 2:3:5 as a wrong option, with a reason that names the idea.",
+  "help": "Make the beans the same in both ratios: 12 in each.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_WRONG_PAIR_USED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN",
+  "error": "Uses the second ratio as if it compared the first and third items.",
+  "example": {
+   "question": "Cows:goats = 2:3, goats:hens = 2:5, 20 cows. Hens?",
+   "wrong_answer": "50",
+   "correct_answer": "75"
+  },
+  "cause": "Reads goats:hens as cows:hens.",
+  "reveals": "The answer 50 as a wrong option, with a reason that names the idea.",
+  "help": "Go through the goats: cows to goats, then goats to hens.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_MIDDLE_GIVEN": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN",
+  "error": "Gives the number for the shared item instead of the one asked.",
+  "example": {
+   "question": "Cows:goats = 2:3, goats:hens = 3:4, 20 cows. Hens?",
+   "wrong_answer": "30",
+   "correct_answer": "40"
+  },
+  "cause": "Stops after one step.",
+  "reveals": "The answer 30 as a wrong option, with a reason that names the idea.",
+  "help": "That is the goats; one more step to the hens.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_RATIOS_ADDED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN",
+  "error": "Adds the two ratios term by term.",
+  "example": {
+   "question": "Maize:beans = 2:3, beans:peas = 4:5. Combine.",
+   "wrong_answer": "6:8",
+   "correct_answer": "8:12:15"
+  },
+  "cause": "Thinks ratios combine like fractions or sums.",
+  "reveals": "The answer 6:8 as a wrong option, with a reason that names the idea.",
+  "help": "Ratios are not added; match the shared term.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_RATIO_TERMS_SUMMED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN",
+  "error": "Adds the numbers of a ratio to find one part when combining.",
+  "example": {
+   "question": "Maize:beans = 2:3 and beans:peas = 4:5. Why not 2:3:5?",
+   "wrong_answer": "Because 2 + 3 = 5 is one part",
+   "correct_answer": "Because the beans are not matched"
+  },
+  "cause": "Mixes up sharing with combining ratios.",
+  "reveals": "The answer Because 2 + 3 = 5 is one part as a wrong option, with a reason that names the idea.",
+  "help": "Combining ratios needs the shared term equal, not a sum.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_ONE_CHANGE_ONLY_TIME": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION",
+  "error": "Adjusts for the change in number and ignores the change in time.",
+  "example": {
+   "question": "4 machines grind 1,200 kg in 6 h. 6 machines in 5 h?",
+   "wrong_answer": "1,800",
+   "correct_answer": "1,500"
+  },
+  "cause": "Handles one change and stops.",
+  "reveals": "The answer 1,800 as a wrong option, with a reason that names the idea.",
+  "help": "Both changed: also multiply by 5/6 for the hours.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_ONE_CHANGE_ONLY_NUMBER": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION",
+  "error": "Adjusts for the change in time and ignores the change in number of machines or workers.",
+  "example": {
+   "question": "4 machines grind 1,200 kg in 6 h. 6 machines in 5 h?",
+   "wrong_answer": "1,000",
+   "correct_answer": "1,500"
+  },
+  "cause": "Handles one change and stops.",
+  "reveals": "The answer 1,000 as a wrong option, with a reason that names the idea.",
+  "help": "More machines grind more: also multiply by 6/4.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_UNIT_RATE_NOT_DIVIDED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION",
+  "error": "Finds the rate for one machine for one hour by dividing by only one of the two.",
+  "example": {
+   "question": "4 machines grind 1,200 kg in 6 h. One machine in one hour?",
+   "wrong_answer": "300",
+   "correct_answer": "50"
+  },
+  "cause": "Divides by machines but forgets the hours.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "Divide by both: 1,200 / 4 / 6 = 50.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_UNIT_MULTIPLIED_NOT_DIVIDED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION",
+  "error": "Multiplies when reducing to one unit instead of dividing.",
+  "example": {
+   "question": "24 worker-days for 3 shambas. Worker-days for 1 shamba?",
+   "wrong_answer": "72",
+   "correct_answer": "8"
+  },
+  "cause": "Uses multiplication at every step.",
+  "reveals": "The answer 72 as a wrong option, with a reason that names the idea.",
+  "help": "One shamba needs less work: divide by 3.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_WORKERS_MULTIPLIED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION",
+  "error": "Multiplies the work by the workers instead of sharing it among them.",
+  "example": {
+   "question": "40 worker-days shared by 5 workers. Days?",
+   "wrong_answer": "200",
+   "correct_answer": "8"
+  },
+  "cause": "Forgets that workers share the work.",
+  "reveals": "The answer 200 as a wrong option, with a reason that names the idea.",
+  "help": "Workers share the worker-days: divide.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_INVERSE_AS_DIRECT": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "error": "Makes the answer bigger when more workers do the same job.",
+  "example": {
+   "question": "6 workers take 10 days. 12 workers?",
+   "wrong_answer": "20",
+   "correct_answer": "5"
+  },
+  "cause": "Assumes every proportion is direct.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "More workers finish sooner: the days go down.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_TABLE_ROW_COPIED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "error": "Copies the days for a different number of workers from the table.",
+  "example": {
+   "question": "Table: 2 workers 30 days, 3 workers 20 days. 5 workers?",
+   "wrong_answer": "20",
+   "correct_answer": "12"
+  },
+  "cause": "Picks the nearest row.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Find the worker-days (60) and divide by 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_CONSTANT_AS_ANSWER": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "error": "Gives the constant product (worker-days) as the answer.",
+  "example": {
+   "question": "2 workers take 30 days. 5 workers?",
+   "wrong_answer": "60",
+   "correct_answer": "12"
+  },
+  "cause": "Stops after finding the constant.",
+  "reveals": "The answer 60 as a wrong option, with a reason that names the idea.",
+  "help": "Divide the worker-days by the workers.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_INVERSE_SUM_CONSTANT": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "error": "Thinks the sum of the two quantities stays the same in inverse proportion.",
+  "example": {
+   "question": "d varies inversely as p; 4 people, 15 days. 6 people?",
+   "wrong_answer": "13",
+   "correct_answer": "10"
+  },
+  "cause": "Expects one to go down as much as the other goes up.",
+  "reveals": "The answer 13 as a wrong option, with a reason that names the idea.",
+  "help": "The product stays the same: 4 x 15 = 60, so 60 / 6 = 10.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_CONSTANT_MULTIPLIED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "error": "Multiplies the constant by the given value instead of dividing.",
+  "example": {
+   "question": "p x d = 60. Find p when d = 5.",
+   "wrong_answer": "300",
+   "correct_answer": "12"
+  },
+  "cause": "Forgets that p = 60 / d.",
+  "reveals": "The answer 300 as a wrong option, with a reason that names the idea.",
+  "help": "p x 5 = 60, so p = 60 / 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_TEST_WRONG_WAY": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "error": "Checks for inverse proportion by dividing (or for direct by multiplying).",
+  "example": {
+   "question": "x: 1, 2, 3; y: 12, 6, 4. Direct or inverse?",
+   "wrong_answer": "Neither, y / x changes",
+   "correct_answer": "Inverse, x x y = 12"
+  },
+  "cause": "Uses one test for both kinds.",
+  "reveals": "The answer Neither, y / x changes as a wrong option, with a reason that names the idea.",
+  "help": "Direct: y / x stays the same. Inverse: x x y stays the same.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_TIMES_AVERAGED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Takes the average of the two times as the time together.",
+  "example": {
+   "question": "Taps fill a tank in 4 h and 6 h. Together?",
+   "wrong_answer": "5 h",
+   "correct_answer": "2.4 h"
+  },
+  "cause": "Thinks together is \"in between\".",
+  "reveals": "The answer 5 h as a wrong option, with a reason that names the idea.",
+  "help": "Together is quicker than the faster tap alone.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_TIMES_ADDED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Adds the times for working together.",
+  "example": {
+   "question": "Taps fill a tank in 4 h and 6 h. Together?",
+   "wrong_answer": "10 h",
+   "correct_answer": "2.4 h"
+  },
+  "cause": "Adds the numbers in the story.",
+  "reveals": "The answer 10 h as a wrong option, with a reason that names the idea.",
+  "help": "Add the parts done in an hour, not the times.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_TIMES_SUBTRACTED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Subtracts the times.",
+  "example": {
+   "question": "Taps fill a tank in 4 h and 6 h. Together?",
+   "wrong_answer": "2 h",
+   "correct_answer": "2.4 h"
+  },
+  "cause": "Looks for a smaller number.",
+  "reveals": "The answer 2 h as a wrong option, with a reason that names the idea.",
+  "help": "Times are not subtracted: 1/4 + 1/6 = 5/12 an hour.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_DAYS_AS_RATE": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Uses the number of days as the work done each day.",
+  "example": {
+   "question": "Field = 60 units, done alone in 12 days. Units a day?",
+   "wrong_answer": "12",
+   "correct_answer": "5"
+  },
+  "cause": "Mixes up time and rate.",
+  "reveals": "The answer 12 as a wrong option, with a reason that names the idea.",
+  "help": "Rate = work / time: 60 / 12.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_RATES_MULTIPLIED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Multiplies the two rates for working together.",
+  "example": {
+   "question": "A does 5 units a day, B does 4. Together a day?",
+   "wrong_answer": "20",
+   "correct_answer": "9"
+  },
+  "cause": "Combines rates by multiplying.",
+  "reveals": "The answer 20 as a wrong option, with a reason that names the idea.",
+  "help": "Together they do both amounts: add.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_DONE_FOR_LEFT": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Uses the work already done as the work left.",
+  "example": {
+   "question": "60 units; together 9 a day for 4 days. Work left?",
+   "wrong_answer": "36",
+   "correct_answer": "24"
+  },
+  "cause": "Stops before taking it from the whole.",
+  "reveals": "The answer 36 as a wrong option, with a reason that names the idea.",
+  "help": "Left = whole - done: 60 - 36.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_BOTH_STILL_WORKING": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "error": "Divides the remaining work by both rates when only one person is left.",
+  "example": {
+   "question": "24 units left; A alone does 5 a day. Days?",
+   "wrong_answer": "2.7 (24 / 9)",
+   "correct_answer": "4.8"
+  },
+  "cause": "Forgets that one person stopped.",
+  "reveals": "The answer 2.7 (24 / 9) as a wrong option, with a reason that names the idea.",
+  "help": "Only A works now: 24 / 5.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_LEAK_TIME_SUBTRACTED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING",
+  "error": "Subtracts the pipe's time from the leak's time.",
+  "example": {
+   "question": "Pipe fills in 3 h, leak empties in 6 h. Time to fill?",
+   "wrong_answer": "3 h",
+   "correct_answer": "6 h"
+  },
+  "cause": "Subtracts times as numbers.",
+  "reveals": "The answer 3 h as a wrong option, with a reason that names the idea.",
+  "help": "Compare one hour: 1/3 in, 1/6 out, 1/6 a tank filled.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_LEAK_TIMES_ADDED": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING",
+  "error": "Adds the two times.",
+  "example": {
+   "question": "Pipe 3 h, leak 6 h. Time to fill?",
+   "wrong_answer": "9 h",
+   "correct_answer": "6 h"
+  },
+  "cause": "Adds the numbers in the story.",
+  "reveals": "The answer 9 h as a wrong option, with a reason that names the idea.",
+  "help": "Find the part filled each hour; then turn it into a time.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_LEAK_AS_FILLING": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING",
+  "error": "Treats the leak as if it also fills the tank.",
+  "example": {
+   "question": "Pipe 3 h, leak 6 h. Time to fill?",
+   "wrong_answer": "2 h",
+   "correct_answer": "6 h"
+  },
+  "cause": "Uses the method for two taps filling.",
+  "reveals": "The answer 2 h as a wrong option, with a reason that names the idea.",
+  "help": "The leak takes water out: subtract its part.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_NET_RATE_AS_TIME": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING",
+  "error": "Gives the part filled in one hour as the time.",
+  "example": {
+   "question": "Net 1/6 of the tank an hour. Time?",
+   "wrong_answer": "1/6 h",
+   "correct_answer": "6 h"
+  },
+  "cause": "Stops at the rate.",
+  "reveals": "The answer 1/6 h as a wrong option, with a reason that names the idea.",
+  "help": "If 1/6 fills each hour, 6 hours fill the tank.",
+  "source": "to be confirmed by a teacher (no source yet)",
+  "status": "draft"
  }
 }

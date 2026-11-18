@@ -453,7 +453,7 @@ const LOGS = [
 ];
 // ---------------------------------------------------------------- COMPOUND PROPORTION AND RATES OF WORK
 const PROPORTION = [
-  fam({ id: 'g9.prop.three-way-share', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.a', rung: 2, form: 'word',
+  fam({ id: 'g9.prop.three-way-share', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.a', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS', rung: 2, form: 'word',
     draw: () => {
       const v = [randInt(1, 6), randInt(1, 6), randInt(1, 6)], s = v[0] + v[1] + v[2], unit = pick([100, 200, 250, 500]), T = s * unit, big = Math.random() < 0.5;
       const hi = Math.max(...v), lo = Math.min(...v);
@@ -464,12 +464,12 @@ const PROPORTION = [
     make: ({ v, T, unit, big, part }) => ({
       question: `Three school clubs take part in a harambee that raises ${sh(T)}. Their shares of the money are in the ratio ${v.join(':')}. The club with the ${big ? 'biggest' : 'smallest'} share buys books with all of its money. How much does it spend on books?`,
       answer: unit * part,
-      wrong: [[T / 3, 'The shares are not equal. The ratio tells you how many parts each club gets.'], [unit, 'That is the value of one part. The club gets more than one part.'], [round(T / part, 0), 'Divide the money by the total number of parts first, then multiply.']],
+      wrong: [[T / 3, 'The shares are not equal. The ratio tells you how many parts each club gets.', 'M_SHARED_EQUALLY'], [unit, 'That is the value of one part. The club gets more than one part.', 'M_ONE_PART_GIVEN'], [round(T / part, 0), 'Divide the money by the total number of parts first, then multiply.', 'M_DIVIDE_BY_OWN_PART']],
       hints: ['Add the numbers in the ratio to find the total parts.', 'Find the value of one part, then multiply by the club\'s number of parts.'],
       steps: [`Total parts: ${v.join(' + ')} = ${v[0] + v[1] + v[2]}.`, `One part: ${commas(T)} ÷ ${v[0] + v[1] + v[2]} = ${commas(unit)}. The club with ${part} parts gets ${part} × ${commas(unit)} = ${commas(unit * part)}.`],
     }),
     check: ({ v, T, big }, a) => { const hi = Math.max(...v), lo = Math.min(...v); return a * (v[0] + v[1] + v[2]) === T * (big ? hi : lo); } }),
-  fam({ id: 'g9.prop.spot-two-share', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.a', rung: 2, form: 'spot',
+  fam({ id: 'g9.prop.spot-two-share', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.a', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS', rung: 2, form: 'spot',
     draw: () => {
       const [a, b] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [1, 4], [1, 3]]), L = lcm(a * b, a + b), k = pick([2, 3, 4, 5]), T = L * k;
       const type = pick(['product', 'one-part']);
@@ -487,10 +487,10 @@ const PROPORTION = [
       ];
       const fix = type === 'product' ? 'The total number of parts is found by adding the numbers in the ratio, not multiplying them.' : `One part is the money divided by the total number of parts. Step 2 divided by ${a} instead of the total.`;
       const uu = T / (a + b);
-      return { question: `${n1.name} and ${n2.name} share ${sh(T)} in the ratio ${a}:${b}. Below is a method for finding each share. One step has a mistake. Which one?`, working, fix,
+      return { question: `${n1.name} and ${n2.name} share ${sh(T)} in the ratio ${a}:${b}. Below is a method for finding each share. One step has a mistake. Which one?`, working, mis: type === 'product' ? 'M_PARTS_MULTIPLIED' : 'M_DIVIDE_BY_OWN_PART', fix,
         steps: [`Total parts: ${a} + ${b} = ${a + b}.`, `One part: ${commas(T)} ÷ ${a + b} = ${commas(uu)}.`, `Shares: ${commas(a * uu)} and ${commas(b * uu)}.`] };
     } }),
-  fam({ id: 'g9.prop.table-share', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.a', rung: 2, form: 'table',
+  fam({ id: 'g9.prop.table-share', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.a', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS', rung: 2, form: 'table',
     draw: () => {
       const ps = [randInt(1, 5), randInt(1, 5), randInt(1, 5)], s = ps[0] + ps[1] + ps[2], unit = pick([200, 500, 1000]), T = s * unit, i = randInt(0, 2);
       let [x, y, z] = [person(), person(), person()];
@@ -501,12 +501,12 @@ const PROPORTION = [
       question: `Three partners run a shop. Their parts in the business are shown in the table. The shop makes a profit of ${sh(T)}. The profit is shared in proportion to the parts. How much does ${who[i].name} get?`,
       model: { type: 'table', data: { head: ['Partner', 'Parts'], rows: who.map((w, j) => ({ label: w.name, value: String(ps[j]) })) } },
       answer: unit * ps[i],
-      wrong: [[T / 3, 'The partners do not share equally. Their shares follow the number of parts.'], [unit, 'That is the value of one part. This partner has more than one part.'], [ps[i] * 100, 'Find the value of one part by dividing the profit by all the parts.']],
+      wrong: [[T / 3, 'The partners do not share equally. Their shares follow the number of parts.', 'M_SHARED_EQUALLY'], [unit, 'That is the value of one part. This partner has more than one part.', 'M_ONE_PART_GIVEN'], [ps[i] * 100, 'Find the value of one part by dividing the profit by all the parts.', 'M_PARTS_AS_HUNDREDS']],
       hints: ['Add all the parts from the table.', 'Divide the profit by the total parts, then multiply by this partner\'s parts.'],
       steps: [`Total parts: ${ps.join(' + ')} = ${ps[0] + ps[1] + ps[2]}.`, `One part: ${commas(T)} ÷ ${ps[0] + ps[1] + ps[2]} = ${commas(unit)}. ${who[i].name}: ${ps[i]} × ${commas(unit)} = ${commas(unit * ps[i])}.`],
     }),
     check: ({ ps, T, i }, a) => a * (ps[0] + ps[1] + ps[2]) === T * ps[i] }),
-  fam({ id: 'g9.prop.chain-ratio', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.b', rung: 3, form: 'word',
+  fam({ id: 'g9.prop.chain-ratio', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.b', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN', rung: 3, form: 'word',
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
       if (q === r || s <= r || gcd(p, q) !== 1 || gcd(r, s) !== 1) return null;
@@ -517,12 +517,12 @@ const PROPORTION = [
     make: ({ p, q, r, s, N, hens, w1, w2, w3 }) => ({
       question: `On a farm in Kitale, the ratio of cows to goats is ${p}:${q}. The ratio of goats to hens is ${r}:${s}. There are ${N} cows. How many hens are there?`,
       answer: hens,
-      wrong: [[w1, 'The goats are part of both ratios, but with different numbers. Make the goat numbers equal first.'], [w2, 'The second ratio is for goats to hens, not cows to hens.'], [w3, 'That is the number of goats. The question asks for hens.']],
+      wrong: [[w1, 'The goats are part of both ratios, but with different numbers. Make the goat numbers equal first.', 'M_SHARED_TERM_NOT_MATCHED'], [w2, 'The second ratio is for goats to hens, not cows to hens.', 'M_WRONG_PAIR_USED'], [w3, 'That is the number of goats. The question asks for hens.', 'M_MIDDLE_GIVEN']],
       hints: ['Both ratios have goats in them. Make the goat part the same in both ratios.', 'Then write cows : goats : hens as one ratio.'],
       steps: [`Make the goat part equal to ${lcm(q, r)} in both: cows : goats = ${p * lcm(q, r) / q}:${lcm(q, r)}, goats : hens = ${lcm(q, r)}:${s * lcm(q, r) / r}.`, `Cows : goats : hens = ${p * lcm(q, r) / q}:${lcm(q, r)}:${s * lcm(q, r) / r}.`, `${N} cows is ${N / (p * lcm(q, r) / q)} times ${p * lcm(q, r) / q}, so hens = ${N / (p * lcm(q, r) / q)} × ${s * lcm(q, r) / r} = ${hens}.`],
     }),
     check: ({ p, q, r, s, N }, a) => N * q * s === a * p * r }),
-  fam({ id: 'g9.prop.why-chain', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.b', rung: 3, form: 'why',
+  fam({ id: 'g9.prop.why-chain', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.b', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN', rung: 3, form: 'why',
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
       if (q === r || gcd(p, q) !== 1 || gcd(r, s) !== 1 || s === q) return null;
@@ -533,14 +533,14 @@ const PROPORTION = [
       return { question: `The ratio of maize to beans on a shamba is ${p}:${q}. The ratio of beans to peas is ${r}:${s}. ${who.name} says maize : beans : peas = ${p}:${q}:${s}. Why is this wrong?`,
         options: [
           { text: `The beans part is ${q} in one ratio and ${r} in the other. Make both ${L} first, giving ${A}:${L}:${C}`, right: true },
-          { text: `The ratios must be added together, giving ${p + r}:${q + q}:${s + s}`, right: false, why: 'Ratios are not added. Matching the part that both ratios share is what links them.' },
-          { text: `The peas part should be ${r + s}, the sum of the second ratio`, right: false, why: 'The numbers in a ratio are parts, and are not added to find one part.' },
-          { text: `Nothing is wrong, because the first and last numbers always stay as they are`, right: false, why: 'The shared part (beans) must be the same size in both ratios. Here it is not, so the other numbers must be scaled.' },
+          { text: `The ratios must be added together, giving ${p + r}:${q + q}:${s + s}`, right: false, why: 'Ratios are not added. Matching the part that both ratios share is what links them.', mis: 'M_RATIOS_ADDED' },
+          { text: `The peas part should be ${r + s}, the sum of the second ratio`, right: false, why: 'The numbers in a ratio are parts, and are not added to find one part.', mis: 'M_RATIO_TERMS_SUMMED' },
+          { text: `Nothing is wrong, because the first and last numbers always stay as they are`, right: false, why: 'The shared part (beans) must be the same size in both ratios. Here it is not, so the other numbers must be scaled.', mis: 'M_SHARED_TERM_NOT_MATCHED' },
         ],
         hints: ['Which part is in both ratios?', 'Make that part the same number in both ratios.'],
         steps: [`Beans: ${q} in the first ratio, ${r} in the second. The common multiple is ${L}.`, `Maize : beans = ${A}:${L} and beans : peas = ${L}:${C}, so maize : beans : peas = ${A}:${L}:${C}.`] };
     } }),
-  fam({ id: 'g9.prop.machines-output', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.c', rung: 2, form: 'word',
+  fam({ id: 'g9.prop.machines-output', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION', rung: 2, form: 'word',
     draw: () => {
       const m1 = randInt(2, 4), m2 = m1 + randInt(1, 4), h1 = randInt(2, 6), h2 = h1 + randInt(1, 4), r = pick([5, 10, 20]);
       const u1 = m1 * h1 * r, u2 = m2 * h2 * r, w1 = (u1 * m2) / m1, w2 = (u1 * h2) / h1, w3 = r * h1 * m2 * h2;
@@ -549,12 +549,12 @@ const PROPORTION = [
     make: ({ m1, m2, h1, h2, u1, u2, w1, w2, w3 }) => ({
       question: `At a posho mill, ${m1} machines grind ${commas(u1)} kg of maize in ${h1} hours. All the machines work at the same rate. How many kg of maize do ${m2} machines grind in ${h2} hours?`,
       answer: u2,
-      wrong: [[w1, `The time has changed from ${h1} hours to ${h2} hours. That must change the amount too.`], [w2, `The number of machines has changed from ${m1} to ${m2}. That must change the amount too.`], [w3, 'Find how much one machine grinds in one hour first. Divide by both the machines and the hours.']],
+      wrong: [[w1, `The time has changed from ${h1} hours to ${h2} hours. That must change the amount too.`, 'M_ONE_CHANGE_ONLY_TIME'], [w2, `The number of machines has changed from ${m1} to ${m2}. That must change the amount too.`, 'M_ONE_CHANGE_ONLY_NUMBER'], [w3, 'Find how much one machine grinds in one hour first. Divide by both the machines and the hours.', 'M_UNIT_RATE_NOT_DIVIDED']],
       hints: ['Find the amount one machine grinds in one hour.', 'Then multiply by the new number of machines and the new number of hours.'],
       steps: [`One machine in one hour: ${commas(u1)} ÷ ${m1} ÷ ${h1} = ${u1 / (m1 * h1)} kg.`, `${m2} machines in ${h2} hours: ${u1 / (m1 * h1)} × ${m2} × ${h2} = ${commas(u2)} kg.`],
     }),
     check: ({ m1, m2, h1, h2, u1 }, a) => a * m1 * h1 === u1 * m2 * h2 }),
-  fam({ id: 'g9.prop.spot-compound', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.c', rung: 3, form: 'spot',
+  fam({ id: 'g9.prop.spot-compound', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION', rung: 3, form: 'spot',
     draw: () => {
       const w1 = randInt(3, 6), d1 = randInt(4, 12), s1 = pick([2, 3]), s2 = s1 + randInt(1, 3), w2 = pick([2, 4, 5, 6, 8, 10]), type = pick(['mult', 'workers']);
       if ((w1 * d1) % s1 !== 0) return null;
@@ -570,10 +570,10 @@ const PROPORTION = [
       ];
       const fix = type === 'mult' ? `In Step 1, the worker-days for ${s1} shambas must be divided by ${s1} to get 1 shamba, not multiplied.` : 'In Step 3 the total worker-days must be divided among the workers, not multiplied by them.';
       const good = ((w1 * d1) / s1) * s2 / w2;
-      return { question: `${w1} workers take ${d1} days to harvest ${s1} shambas. All the workers work at the same rate. A learner works out how many days ${w2} workers need for ${s2} shambas. One step has a mistake. Which one?`, working, fix,
+      return { question: `${w1} workers take ${d1} days to harvest ${s1} shambas. All the workers work at the same rate. A learner works out how many days ${w2} workers need for ${s2} shambas. One step has a mistake. Which one?`, working, mis: type === 'mult' ? 'M_UNIT_MULTIPLIED_NOT_DIVIDED' : 'M_WORKERS_MULTIPLIED', fix,
         steps: [`Worker-days for 1 shamba: ${w1} × ${d1} ÷ ${s1} = ${(w1 * d1) / s1}.`, `For ${s2} shambas: ${(w1 * d1) / s1} × ${s2} = ${((w1 * d1) / s1) * s2}.`, `Days: ${((w1 * d1) / s1) * s2} ÷ ${w2} = ${good}.`] };
     } }),
-  fam({ id: 'g9.prop.table-workers', skill: 'G9_COMPOUND_PROPORTION', outcome: 'G9.PROPORTION.c', rung: 2, form: 'table',
+  fam({ id: 'g9.prop.table-workers', skill: 'G9_COMPOUND_PROPORTION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION', rung: 2, form: 'table',
     draw: () => {
       const P = pick([24, 36, 48, 60]), divs = [2, 3, 4, 5, 6, 8, 9, 10, 12, 15].filter(d => P % d === 0), pool = divs.sort(() => Math.random() - 0.5), rows = pool.slice(0, 4).sort((a, b) => a - b), w = pool[4];
       if (w == null || rows.length < 4) return null;
@@ -584,12 +584,12 @@ const PROPORTION = [
       question: `The table shows how many days different numbers of workers take to build the same wall. All the workers work at the same rate. How many days will ${w} workers take?`,
       model: { type: 'table', data: { head: ['Workers', 'Days'], rows: rows.map(r => ({ label: String(r), value: String(P / r) })) } },
       answer: ans,
-      wrong: [[w1, 'More workers will finish the wall in fewer days, not more.'], [w2, 'That is the number of days for a different number of workers in the table. Check the workers.'], [w3, 'That is the number of worker-days. Divide it by the number of workers.']],
+      wrong: [[w1, 'More workers will finish the wall in fewer days, not more.', 'M_INVERSE_AS_DIRECT'], [w2, 'That is the number of days for a different number of workers in the table. Check the workers.', 'M_TABLE_ROW_COPIED'], [w3, 'That is the number of worker-days. Divide it by the number of workers.', 'M_CONSTANT_AS_ANSWER']],
       hints: ['Multiply the workers by the days in one row of the table. Is it the same in the other rows?', 'That product is the total work. Divide it by the new number of workers.'],
       steps: [`${rows[0]} × ${P / rows[0]} = ${P}, and ${rows[1]} × ${P / rows[1]} = ${P}. The work is ${P} worker-days.`, `${P} ÷ ${w} = ${ans} days.`],
     }),
     check: ({ P, w }, a) => a * w === P }),
-  fam({ id: 'g9.var.table-type', skill: 'G9_VARIATION', outcome: 'G9.PROPORTION.c', rung: 2, form: 'table',
+  fam({ id: 'g9.var.table-type', skill: 'G9_VARIATION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION', misMapped: false, reveals: ['M_TEST_WRONG_WAY', 'M_INVERSE_AS_DIRECT'], rung: 2, form: 'table',
     draw: () => {
       const type = pick(['direct', 'inverse', 'neither']), xs = [1, 2, 3, 6], k = type === 'inverse' ? pick([12, 18, 24, 36]) : randInt(2, 7), off = randInt(2, 6);
       const ys = xs.map(x => (type === 'direct' ? k * x : type === 'inverse' ? k / x : k * x + off));
@@ -603,7 +603,7 @@ const PROPORTION = [
         hints: ['Work out y ÷ x for each row.', 'Then work out x × y for each row. Which one stays the same?'],
         steps: [`y ÷ x: ${xs.map((x, i) => round(ys[i] / x, 2)).join(', ')}. x × y: ${xs.map((x, i) => x * ys[i]).join(', ')}.`, type === 'direct' ? 'y ÷ x is constant, so y varies directly as x.' : type === 'inverse' ? 'x × y is constant, so y varies inversely as x.' : 'Neither is constant, so it is neither.'] };
     } }),
-  fam({ id: 'g9.var.steps-inverse', skill: 'G9_VARIATION', outcome: 'G9.PROPORTION.c', rung: 2, form: 'steps',
+  fam({ id: 'g9.var.steps-inverse', skill: 'G9_VARIATION', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.c', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION', rung: 2, form: 'steps',
     draw: () => {
       const k = pick([60, 72, 120, 180]), divs = [2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24].filter(d => k % d === 0).sort(() => Math.random() - 0.5);
       const [p1, p2, d3] = divs;
@@ -612,14 +612,14 @@ const PROPORTION = [
     make: ({ k, p1, p2, d3 }) => ({
       question: `A store of maize lasts d days. The number of days d varies inversely as the number of people p it feeds. The store lasts ${k / p1} days when it feeds ${p1} people.`,
       parts: [
-        { prompt: 'Find the constant k, where p × d = k.', answer: k, hint: `Multiply ${p1} by ${k / p1}.`, wrong: [[p1 + k / p1, 'For inverse variation, p × d is the constant, not p + d.']] },
-        { prompt: `How many days will the same store last ${p2} people?`, answer: k / p2, unit: 'days', hint: 'Divide k by the number of people.', wrong: [[round((k / p1) * p2 / p1, 1), 'More people use the maize faster, so the days go down, not up.']] },
-        { prompt: `For how many people will the store last ${d3} days?`, answer: k / d3, unit: 'people', hint: 'p × d = k, so divide k by the number of days.', wrong: [[k * d3, 'p × d = k, so divide k by d. Do not multiply.']] },
+        { prompt: 'Find the constant k, where p × d = k.', answer: k, hint: `Multiply ${p1} by ${k / p1}.`, wrong: [[p1 + k / p1, 'For inverse variation, p × d is the constant, not p + d.', 'M_INVERSE_SUM_CONSTANT']] },
+        { prompt: `How many days will the same store last ${p2} people?`, answer: k / p2, unit: 'days', hint: 'Divide k by the number of people.', wrong: [[round((k / p1) * p2 / p1, 1), 'More people use the maize faster, so the days go down, not up.', 'M_INVERSE_AS_DIRECT']] },
+        { prompt: `For how many people will the store last ${d3} days?`, answer: k / d3, unit: 'people', hint: 'p × d = k, so divide k by the number of days.', wrong: [[k * d3, 'p × d = k, so divide k by d. Do not multiply.', 'M_CONSTANT_MULTIPLIED']] },
       ],
       steps: [`k = ${p1} × ${k / p1} = ${k}.`, `d = ${k} ÷ ${p2} = ${k / p2} days.`, `p = ${k} ÷ ${d3} = ${k / d3} people.`],
     }),
     check: ({ k, p1, p2, d3 }, v) => v[0] === p1 * (k / p1) && v[1] * p2 === v[0] && v[2] * d3 === v[0] }),
-  fam({ id: 'g9.work.tap-and-leak', skill: 'G9_RATES_OF_WORK', outcome: 'G9.PROPORTION.d', rung: 3, form: 'word',
+  fam({ id: 'g9.work.tap-and-leak', skill: 'G9_RATES_OF_WORK', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.d', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING', rung: 3, form: 'word',
     draw: () => {
       const [a, b] = pick([[4, 12], [6, 12], [3, 6], [6, 9], [10, 15], [4, 6], [2, 3], [5, 10]]), t = (a * b) / (b - a);
       const w1 = b - a, w2 = a + b, w3 = round((a * b) / (a + b), 1);
@@ -628,12 +628,12 @@ const PROPORTION = [
     make: ({ a, b, t, w1, w2, w3, who }) => ({
       question: `A pipe can fill an empty tank at ${who.name}'s school in ${a} hours. A leak at the bottom can empty the full tank in ${b} hours. The pipe is open and the leak is open. How many hours does it take to fill the empty tank?`,
       answer: t,
-      wrong: [[w1, 'You cannot subtract times. Compare how much each does in one hour.'], [w2, 'The leak works against the pipe, so the tank fills faster than the time for the leak alone.'], [w3, 'That treats the leak as if it also fills the tank. It empties it.']],
+      wrong: [[w1, 'You cannot subtract times. Compare how much each does in one hour.', 'M_LEAK_TIME_SUBTRACTED'], [w2, 'The leak works against the pipe, so the tank fills faster than the time for the leak alone.', 'M_LEAK_TIMES_ADDED'], [w3, 'That treats the leak as if it also fills the tank. It empties it.', 'M_LEAK_AS_FILLING']],
       hints: ['Write what fraction of the tank the pipe fills in 1 hour, and what fraction the leak empties.', 'Subtract the fraction lost from the fraction gained, then find the time for the whole tank.'],
       steps: [`In 1 hour the pipe fills 1/${a} of the tank. The leak empties 1/${b}.`, `Net in 1 hour: 1/${a} − 1/${b} = ${b - a}/${a * b}.`, `The whole tank takes ${a * b}/${b - a} = ${t} hours.`],
     }),
     check: ({ a, b }, t) => t / a - t / b === 1 }),
-  fam({ id: 'g9.work.leftover-steps', skill: 'G9_RATES_OF_WORK', outcome: 'G9.PROPORTION.d', rung: 3, form: 'steps',
+  fam({ id: 'g9.work.leftover-steps', skill: 'G9_RATES_OF_WORK', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.d', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER', rung: 3, form: 'steps',
     draw: () => {
       const T = [6, 8, 10, 12, 15, 20, 24, 30], a = pick(T), b = pick(T), t = randInt(2, 8);
       if (a === b || a > b) return null;
@@ -643,23 +643,23 @@ const PROPORTION = [
     make: ({ a, b, t, L, ra, rb, left, ns }) => ({
       question: `${ns[0].name} can plough a field alone in ${a} days. ${ns[1].name} can plough it alone in ${b} days. They work together for ${t} days. Then ${ns[0].name} finishes the rest alone. Take the whole field as ${L} units of work.`,
       parts: [
-        { prompt: `How many units does ${ns[0].name} plough in one day?`, answer: ra, hint: `The whole field is ${L} units, done in ${a} days.`, wrong: [[a, 'Divide the work by the days. The days are not the units per day.']] },
-        { prompt: `How many units do they plough together in one day?`, answer: ra + rb, hint: `${ns[1].name} does ${L} ÷ ${b} units a day. Add the two rates.`, wrong: [[ra * rb, 'Add the units each does in a day.']] },
-        { prompt: `How many units are left after ${t} days together?`, answer: left, hint: `Take away ${t} days of the joint work from ${L}.`, wrong: [[t * (ra + rb), 'That is the work done in those days. Take it away from the whole field.']] },
-        { prompt: `How many more days does ${ns[0].name} need alone to finish?`, answer: left / ra, unit: 'days', hint: `Divide the units left by what ${ns[0].name} does in a day.`, wrong: [[left / (ra + rb), 'Only one person works now, not both.']] },
+        { prompt: `How many units does ${ns[0].name} plough in one day?`, answer: ra, hint: `The whole field is ${L} units, done in ${a} days.`, wrong: [[a, 'Divide the work by the days. The days are not the units per day.', 'M_DAYS_AS_RATE']] },
+        { prompt: `How many units do they plough together in one day?`, answer: ra + rb, hint: `${ns[1].name} does ${L} ÷ ${b} units a day. Add the two rates.`, wrong: [[ra * rb, 'Add the units each does in a day.', 'M_RATES_MULTIPLIED']] },
+        { prompt: `How many units are left after ${t} days together?`, answer: left, hint: `Take away ${t} days of the joint work from ${L}.`, wrong: [[t * (ra + rb), 'That is the work done in those days. Take it away from the whole field.', 'M_DONE_FOR_LEFT']] },
+        { prompt: `How many more days does ${ns[0].name} need alone to finish?`, answer: left / ra, unit: 'days', hint: `Divide the units left by what ${ns[0].name} does in a day.`, wrong: [[left / (ra + rb), 'Only one person works now, not both.', 'M_BOTH_STILL_WORKING']] },
       ],
       steps: [`${ns[0].name}: ${L} ÷ ${a} = ${ra} units a day. ${ns[1].name}: ${L} ÷ ${b} = ${rb} units a day.`, `Together: ${ra + rb} units a day. After ${t} days: ${t * (ra + rb)} units done, ${left} left.`, `${left} ÷ ${ra} = ${left / ra} days.`],
     }),
     check: ({ a, b, t, L }, v) => v[0] * a === L && v[1] === v[0] + L / b && v[2] + t * v[1] === L && v[3] * v[0] === v[2] }),
-  fam({ id: 'g9.work.why-average', skill: 'G9_RATES_OF_WORK', outcome: 'G9.PROPORTION.d', rung: 3, form: 'why',
+  fam({ id: 'g9.work.why-average', skill: 'G9_RATES_OF_WORK', outcome: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.d', cskill: 'MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER', rung: 3, form: 'why',
     draw: () => { const [a, b] = pick([[4, 12], [6, 12], [3, 9], [4, 8], [6, 10], [2, 6]]); return { a, b, who: person() }; },
     make: ({ a, b, who }) => ({
       question: `Tap A fills a tank in ${a} hours. Tap B fills the same tank in ${b} hours. ${who.name} says that both taps together take ${(a + b) / 2} hours, the average of the two times. Why is this wrong?`,
       options: [
         { text: `Two taps together work faster than the quicker tap alone, so the time must be less than ${a} hours`, right: true },
-        { text: `The times should be added, so both taps together take ${a + b} hours`, right: false, why: 'Adding the times gives a time longer than either tap alone. Two taps together must be quicker.' },
-        { text: `The time should be the difference of the two times, ${b - a} hours`, right: false, why: 'Times are not subtracted. What adds is the amount of the tank filled in one hour.' },
-        { text: `Nothing is wrong: the average of two times always gives the time for both together`, right: false, why: 'An average cannot be longer than the time of the faster tap when both taps work at once.' },
+        { text: `The times should be added, so both taps together take ${a + b} hours`, right: false, why: 'Adding the times gives a time longer than either tap alone. Two taps together must be quicker.', mis: 'M_TIMES_ADDED' },
+        { text: `The time should be the difference of the two times, ${b - a} hours`, right: false, why: 'Times are not subtracted. What adds is the amount of the tank filled in one hour.', mis: 'M_TIMES_SUBTRACTED' },
+        { text: `Nothing is wrong: the average of two times always gives the time for both together`, right: false, why: 'An average cannot be longer than the time of the faster tap when both taps work at once.', mis: 'M_TIMES_AVERAGED' },
       ],
       hints: ['If Tap A alone takes a certain time, what happens when Tap B helps?', 'Compare the average with the time for the quicker tap.'],
       steps: [`Tap A alone takes ${a} hours. With Tap B helping, the tank fills in less than ${a} hours.`, `The average, ${(a + b) / 2} hours, is more than ${a} hours, so it cannot be right.`],

@@ -2,4 +2,5 @@
 import * as integers from './integers.mjs';
 import * as cubes from './cubes.mjs';
 import * as indices from './indices.mjs';
-export const SUBS = [integers, cubes, indices];
+import * as proportion from './proportion.mjs';
+export const SUBS = [integers, cubes, indices, proportion];

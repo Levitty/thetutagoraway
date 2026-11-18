@@ -2870,6 +2870,853 @@ export const TEACHING_PACK_G9 = {
   "sub_strand": "MATH.G9.NUMBER.INDICES_AND_LOGARITHMS",
   "sub_strand_name": "INDICES AND LOGARITHMS",
   "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS",
+  "key_step": "The child adds the parts first and finds the value of one part before any share.",
+  "floor": {
+   "prerequisite": "Shares in a ratio of two parts.",
+   "question": "Share 100 in the ratio 2:3",
+   "answer": "40 and 60"
+  },
+  "representations": [
+   "a bar split into equal parts",
+   "a table of parts and shillings",
+   "the share sum"
+  ],
+  "steps": [
+   "Add the parts.",
+   "One part = amount / total parts.",
+   "Each share = its parts x one part.",
+   "Check the shares add back to the amount."
+  ],
+  "contexts": [
+   "harambee money shared among clubs",
+   "shop profit shared among partners",
+   "maize from a shared shamba"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a bar of 9 equal boxes, coloured 2, 3 and 4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the whole bar.",
+    "say": "If the bar is 36,000 shillings, what is one box worth?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 4,000."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write shares 8,000, 12,000 and 16,000."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_SHARED_EQUALLY",
+    "listen_for": [
+     "12,000"
+    ],
+    "ask": "Do all clubs get the same number of boxes?",
+    "repair": "No: 2, 3 and 4 boxes.",
+    "error": "Shares the amount equally, ignoring the ratio.",
+    "example": {
+     "question": "Share 36,000 in the ratio 2:3:4. The largest share?",
+     "wrong_answer": "12,000",
+     "correct_answer": "16,000"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_ONE_PART_GIVEN",
+    "listen_for": [
+     "4,000"
+    ],
+    "ask": "How many boxes does the biggest club get?",
+    "repair": "Four: 16,000.",
+    "error": "Gives the value of one part as a share.",
+    "example": {
+     "question": "Share 36,000 in the ratio 2:3:4. The largest share?",
+     "wrong_answer": "4,000",
+     "correct_answer": "16,000"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_DIVIDE_BY_OWN_PART",
+    "listen_for": [
+     "9,000"
+    ],
+    "ask": "How many boxes are there in all?",
+    "repair": "Nine: divide by 9 first.",
+    "error": "Divides the amount by the person's own number of parts.",
+    "example": {
+     "question": "Share 36,000 in the ratio 2:3:4. The largest share?",
+     "wrong_answer": "9,000",
+     "correct_answer": "16,000"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_PARTS_MULTIPLIED",
+    "listen_for": [
+     "6 parts"
+    ],
+    "ask": "Count the boxes: 2 boxes and 3 boxes.",
+    "repair": "Five boxes.",
+    "error": "Multiplies the numbers in the ratio to get the total parts.",
+    "example": {
+     "question": "Share 2,000 in the ratio 2:3. Total parts?",
+     "wrong_answer": "6",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.PROPORTIONAL_PARTS.M_PARTS_AS_HUNDREDS",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "Is one part 100 shillings?",
+    "repair": "One part is 45,000 / 9.",
+    "error": "Treats the ratio numbers as amounts of 100 shillings.",
+    "example": {
+     "question": "Profit 45,000 shared 2:3:4. The 3-part share?",
+     "wrong_answer": "300",
+     "correct_answer": "15,000"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Share 60,000 shillings in the ratio 1:2:3. Largest share?",
+    "answer": "30,000 shillings",
+    "shows": "parts first"
+   },
+   {
+    "question": "Share 4,500 in the ratio 4:5. Smaller share?",
+    "answer": "2,000",
+    "shows": "two parts"
+   }
+  ],
+  "name": "Divide a quantity into proportional parts",
+  "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+  "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN",
+  "key_step": "The child makes the shared term the same number in both ratios before writing one ratio.",
+  "floor": {
+   "prerequisite": "Writes equivalent ratios.",
+   "question": "2:3 = __:12",
+   "answer": "8:12"
+  },
+  "representations": [
+   "two ratio rows lined up under the shared item",
+   "the LCM of the shared terms",
+   "a table"
+  ],
+  "steps": [
+   "Line up the two ratios under the shared item.",
+   "Find the LCM of the shared numbers.",
+   "Scale each ratio to that LCM.",
+   "Write the three-part ratio and use it."
+  ],
+  "contexts": [
+   "cows, goats and hens on a farm in Kitale",
+   "maize, beans and peas on a shamba",
+   "boys, girls and teachers on a trip"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write cows : goats = 2 : 3 and under it goats : hens = 4 : 5, goats lined up."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 3 and 4.",
+    "say": "Can the goats be 3 and 4 at the same time?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say no."
+   },
+   {
+    "beat": "child_draws",
+    "do": "The child scales both ratios so the goats are 12."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 8 : 12 : 15."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_SHARED_TERM_NOT_MATCHED",
+    "listen_for": [
+     "2:3:5"
+    ],
+    "ask": "Are the beans the same number in both ratios?",
+    "repair": "No: make them 12.",
+    "error": "Joins two ratios without making the shared term equal.",
+    "example": {
+     "question": "Maize:beans = 2:3, beans:peas = 4:5. Maize:beans:peas?",
+     "wrong_answer": "2:3:5",
+     "correct_answer": "8:12:15"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_WRONG_PAIR_USED",
+    "listen_for": [
+     "used 4:5 for cows to hens"
+    ],
+    "ask": "What does the second ratio compare?",
+    "repair": "Goats to hens.",
+    "error": "Uses the second ratio as if it compared the first and third items.",
+    "example": {
+     "question": "Cows:goats = 2:3, goats:hens = 2:5, 20 cows. Hens?",
+     "wrong_answer": "50",
+     "correct_answer": "75"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_MIDDLE_GIVEN",
+    "listen_for": [
+     "30"
+    ],
+    "ask": "Is 30 the hens or the goats?",
+    "repair": "The goats: one more step.",
+    "error": "Gives the number for the shared item instead of the one asked.",
+    "example": {
+     "question": "Cows:goats = 2:3, goats:hens = 3:4, 20 cows. Hens?",
+     "wrong_answer": "30",
+     "correct_answer": "40"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_RATIOS_ADDED",
+    "listen_for": [
+     "6:8"
+    ],
+    "ask": "Do ratios add?",
+    "repair": "No: match the shared term.",
+    "error": "Adds the two ratios term by term.",
+    "example": {
+     "question": "Maize:beans = 2:3, beans:peas = 4:5. Combine.",
+     "wrong_answer": "6:8",
+     "correct_answer": "8:12:15"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATIO_CHAIN.M_RATIO_TERMS_SUMMED",
+    "listen_for": [
+     "added the parts"
+    ],
+    "ask": "Are we sharing or combining?",
+    "repair": "Combining: match the beans.",
+    "error": "Adds the numbers of a ratio to find one part when combining.",
+    "example": {
+     "question": "Maize:beans = 2:3 and beans:peas = 4:5. Why not 2:3:5?",
+     "wrong_answer": "Because 2 + 3 = 5 is one part",
+     "correct_answer": "Because the beans are not matched"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A:B = 3:4 and B:C = 6:7. Find A:B:C.",
+    "answer": "9:12:14",
+    "shows": "matching the shared term"
+   },
+   {
+    "question": "Boys:girls = 5:4, girls:teachers = 8:1. 40 boys. Teachers?",
+    "answer": "4",
+    "shows": "chain"
+   }
+  ],
+  "name": "Relate two ratios that share a term to make one ratio",
+  "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+  "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION",
+  "key_step": "The child takes one change at a time, asks whether it makes the answer bigger or smaller, and multiplies by the ratio that does that.",
+  "floor": {
+   "prerequisite": "Solves a proportion with one change.",
+   "question": "4 machines grind 1,200 kg. 6 machines?",
+   "answer": "1,800 kg"
+  },
+  "representations": [
+   "a table with one column per quantity",
+   "arrows for more or less",
+   "unit amount for one of each"
+  ],
+  "steps": [
+   "Write what is known in a table.",
+   "Take the first change: bigger or smaller?",
+   "Multiply by the matching ratio.",
+   "Do the same for the second change."
+  ],
+  "contexts": [
+   "a posho mill in Eldoret",
+   "workers harvesting tea in Kericho",
+   "a jua kali workshop making desks"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: machines 4, hours 6, kg 1,200; machines 6, hours 5, kg ?."
+   },
+   {
+    "beat": "point",
+    "do": "Point at machines 4 to 6.",
+    "say": "More machines: more kg or less?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for more."
+   },
+   {
+    "beat": "write",
+    "do": "Write 1,200 x 6/4."
+   },
+   {
+    "beat": "point",
+    "do": "Point at hours 6 to 5.",
+    "say": "Fewer hours: more or less?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write x 5/6 = 1,500 kg."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_ONE_CHANGE_ONLY_TIME",
+    "listen_for": [
+     "1,800"
+    ],
+    "ask": "Did the hours change too?",
+    "repair": "Yes: multiply by 5/6.",
+    "error": "Adjusts for the change in number and ignores the change in time.",
+    "example": {
+     "question": "4 machines grind 1,200 kg in 6 h. 6 machines in 5 h?",
+     "wrong_answer": "1,800",
+     "correct_answer": "1,500"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_ONE_CHANGE_ONLY_NUMBER",
+    "listen_for": [
+     "1,000"
+    ],
+    "ask": "Did the number of machines change?",
+    "repair": "Yes: multiply by 6/4.",
+    "error": "Adjusts for the change in time and ignores the change in number of machines or workers.",
+    "example": {
+     "question": "4 machines grind 1,200 kg in 6 h. 6 machines in 5 h?",
+     "wrong_answer": "1,000",
+     "correct_answer": "1,500"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_UNIT_RATE_NOT_DIVIDED",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "Is 300 for one machine for one hour?",
+    "repair": "For one machine for 6 hours: divide by 6.",
+    "error": "Finds the rate for one machine for one hour by dividing by only one of the two.",
+    "example": {
+     "question": "4 machines grind 1,200 kg in 6 h. One machine in one hour?",
+     "wrong_answer": "300",
+     "correct_answer": "50"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_UNIT_MULTIPLIED_NOT_DIVIDED",
+    "listen_for": [
+     "72"
+    ],
+    "ask": "Does one shamba need more or less work than three?",
+    "repair": "Less: divide.",
+    "error": "Multiplies when reducing to one unit instead of dividing.",
+    "example": {
+     "question": "24 worker-days for 3 shambas. Worker-days for 1 shamba?",
+     "wrong_answer": "72",
+     "correct_answer": "8"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.COMPOUND_PROPORTION.M_WORKERS_MULTIPLIED",
+    "listen_for": [
+     "200 days"
+    ],
+    "ask": "Do more workers take longer?",
+    "repair": "No: share the work.",
+    "error": "Multiplies the work by the workers instead of sharing it among them.",
+    "example": {
+     "question": "40 worker-days shared by 5 workers. Days?",
+     "wrong_answer": "200",
+     "correct_answer": "8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "5 workers dig 4 trenches in 6 days. How many days for 3 workers to dig 6 trenches?",
+    "answer": "15 days",
+    "shows": "two changes"
+   },
+   {
+    "question": "3 taps fill 2 tanks in 4 hours. How many tanks do 6 taps fill in 2 hours?",
+    "answer": "2 tanks",
+    "shows": "two changes"
+   }
+  ],
+  "name": "Solve compound proportion problems by the ratio method",
+  "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+  "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION",
+  "key_step": "The child finds the amount that stays the same (workers x days) and divides it by the new number.",
+  "floor": {
+   "prerequisite": "Tells direct from inverse proportion.",
+   "question": "More buses, fewer trips each. Direct or inverse?",
+   "answer": "Inverse"
+  },
+  "representations": [
+   "a table with a product column",
+   "worker-days",
+   "a curve on a graph"
+  ],
+  "steps": [
+   "Decide: more of one means less of the other?",
+   "Multiply to find the constant.",
+   "Divide the constant by the new value.",
+   "Check: is the answer smaller when the other is bigger?"
+  ],
+  "contexts": [
+   "workers building a school wall",
+   "a store of maize feeding a family",
+   "matatus sharing passengers"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a table: workers 2, 3, 5; days 30, 20, ?."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 2 and 30.",
+    "say": "What is 2 x 30?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 60."
+   },
+   {
+    "beat": "predict",
+    "do": "The child says what 3 x 20 gives."
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 60 / 5 = 12 days."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_INVERSE_AS_DIRECT",
+    "listen_for": [
+     "20 days"
+    ],
+    "ask": "Do more workers take longer?",
+    "repair": "No: fewer days.",
+    "error": "Makes the answer bigger when more workers do the same job.",
+    "example": {
+     "question": "6 workers take 10 days. 12 workers?",
+     "wrong_answer": "20",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_TABLE_ROW_COPIED",
+    "listen_for": [
+     "20"
+    ],
+    "ask": "Is that row for 5 workers?",
+    "repair": "No: use the worker-days.",
+    "error": "Copies the days for a different number of workers from the table.",
+    "example": {
+     "question": "Table: 2 workers 30 days, 3 workers 20 days. 5 workers?",
+     "wrong_answer": "20",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_CONSTANT_AS_ANSWER",
+    "listen_for": [
+     "60"
+    ],
+    "ask": "Is 60 days or worker-days?",
+    "repair": "Worker-days: divide by 5.",
+    "error": "Gives the constant product (worker-days) as the answer.",
+    "example": {
+     "question": "2 workers take 30 days. 5 workers?",
+     "wrong_answer": "60",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_INVERSE_SUM_CONSTANT",
+    "listen_for": [
+     "13"
+    ],
+    "ask": "Does the sum or the product stay the same?",
+    "repair": "The product.",
+    "error": "Thinks the sum of the two quantities stays the same in inverse proportion.",
+    "example": {
+     "question": "d varies inversely as p; 4 people, 15 days. 6 people?",
+     "wrong_answer": "13",
+     "correct_answer": "10"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_CONSTANT_MULTIPLIED",
+    "listen_for": [
+     "300"
+    ],
+    "ask": "p x 5 = 60. What is p?",
+    "repair": "12.",
+    "error": "Multiplies the constant by the given value instead of dividing.",
+    "example": {
+     "question": "p x d = 60. Find p when d = 5.",
+     "wrong_answer": "300",
+     "correct_answer": "12"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.INVERSE_PROPORTION.M_TEST_WRONG_WAY",
+    "listen_for": [
+     "neither"
+    ],
+    "ask": "What is x times y in each row?",
+    "repair": "12 every time: inverse.",
+    "error": "Checks for inverse proportion by dividing (or for direct by multiplying).",
+    "example": {
+     "question": "x: 1, 2, 3; y: 12, 6, 4. Direct or inverse?",
+     "wrong_answer": "Neither, y / x changes",
+     "correct_answer": "Inverse, x x y = 12"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "8 workers build a wall in 9 days. How many days for 12 workers?",
+    "answer": "6 days",
+    "shows": "constant product"
+   },
+   {
+    "question": "x: 2, 4, 8; y: 20, 10, 5. Direct or inverse?",
+    "answer": "Inverse (x times y = 40)",
+    "shows": "the test"
+   }
+  ],
+  "name": "Recognise and use inverse proportion",
+  "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+  "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER",
+  "key_step": "The child writes the part of the job each does in one hour (or day), adds them, and turns the total back into a time.",
+  "floor": {
+   "prerequisite": "Adds unlike fractions.",
+   "question": "1/4 + 1/6",
+   "answer": "5/12"
+  },
+  "representations": [
+   "a tank split into twelfths",
+   "units of work per day",
+   "a table of rates"
+  ],
+  "steps": [
+   "Write each rate as part of the job per hour.",
+   "Add the rates for working together.",
+   "Turn the total back into a time.",
+   "For a part left, divide by the rate of whoever is still working."
+  ],
+  "contexts": [
+   "two taps filling a school tank",
+   "two farmers ploughing a field in Bungoma",
+   "painting a classroom"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tank divided into 12 equal strips."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the tank.",
+    "say": "Tap A fills it in 4 hours. How many strips an hour?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 3."
+   },
+   {
+    "beat": "point",
+    "do": "Point again.",
+    "say": "Tap B fills it in 6 hours. How many strips?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 3 + 2 = 5 strips an hour: 12 / 5 = 2.4 hours."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_TIMES_AVERAGED",
+    "listen_for": [
+     "5 hours"
+    ],
+    "ask": "Should two taps be slower than tap A alone?",
+    "repair": "No: quicker.",
+    "error": "Takes the average of the two times as the time together.",
+    "example": {
+     "question": "Taps fill a tank in 4 h and 6 h. Together?",
+     "wrong_answer": "5 h",
+     "correct_answer": "2.4 h"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_TIMES_ADDED",
+    "listen_for": [
+     "10 hours"
+    ],
+    "ask": "Two taps take longer than one?",
+    "repair": "No: add the parts, not the times.",
+    "error": "Adds the times for working together.",
+    "example": {
+     "question": "Taps fill a tank in 4 h and 6 h. Together?",
+     "wrong_answer": "10 h",
+     "correct_answer": "2.4 h"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_TIMES_SUBTRACTED",
+    "listen_for": [
+     "2 hours"
+    ],
+    "ask": "Why subtract?",
+    "repair": "Add the strips per hour.",
+    "error": "Subtracts the times.",
+    "example": {
+     "question": "Taps fill a tank in 4 h and 6 h. Together?",
+     "wrong_answer": "2 h",
+     "correct_answer": "2.4 h"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_DAYS_AS_RATE",
+    "listen_for": [
+     "12 units a day"
+    ],
+    "ask": "Is 12 the days or the units each day?",
+    "repair": "The days: 60 / 12 = 5.",
+    "error": "Uses the number of days as the work done each day.",
+    "example": {
+     "question": "Field = 60 units, done alone in 12 days. Units a day?",
+     "wrong_answer": "12",
+     "correct_answer": "5"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_RATES_MULTIPLIED",
+    "listen_for": [
+     "20 units"
+    ],
+    "ask": "Together, do they do 5 and 4, or 5 times 4?",
+    "repair": "5 + 4 = 9.",
+    "error": "Multiplies the two rates for working together.",
+    "example": {
+     "question": "A does 5 units a day, B does 4. Together a day?",
+     "wrong_answer": "20",
+     "correct_answer": "9"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_DONE_FOR_LEFT",
+    "listen_for": [
+     "36"
+    ],
+    "ask": "Is 36 done or left?",
+    "repair": "Done: 60 - 36 = 24 left.",
+    "error": "Uses the work already done as the work left.",
+    "example": {
+     "question": "60 units; together 9 a day for 4 days. Work left?",
+     "wrong_answer": "36",
+     "correct_answer": "24"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_TOGETHER.M_BOTH_STILL_WORKING",
+    "listen_for": [
+     "divided by 9"
+    ],
+    "ask": "Who is still working?",
+    "repair": "Only A: divide by 5.",
+    "error": "Divides the remaining work by both rates when only one person is left.",
+    "example": {
+     "question": "24 units left; A alone does 5 a day. Days?",
+     "wrong_answer": "2.7 (24 / 9)",
+     "correct_answer": "4.8"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One tap fills a tank in 3 hours, another in 6 hours. Together?",
+    "answer": "2 hours",
+    "shows": "adding rates"
+   },
+   {
+    "question": "A paints a room in 10 days, B in 15 days. Together?",
+    "answer": "6 days",
+    "shows": "adding rates"
+   }
+  ],
+  "name": "Work out how long people or taps take when working together",
+  "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+  "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING": {
+  "skill": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING",
+  "key_step": "The child writes the pipe's part filled and the leak's part emptied in one hour, subtracts, and turns what is left back into a time.",
+  "floor": {
+   "prerequisite": "Turns a time into a rate.",
+   "question": "A pipe fills a tank in 3 hours. Part in one hour?",
+   "answer": "1/3"
+  },
+  "representations": [
+   "a tank in sixths",
+   "arrows in and out",
+   "fraction subtraction"
+  ],
+  "steps": [
+   "Pipe: part filled in one hour.",
+   "Leak: part emptied in one hour.",
+   "Subtract to get the part filled each hour.",
+   "Turn it into a time."
+  ],
+  "contexts": [
+   "a leaking school tank",
+   "a dam with an outlet",
+   "a bucket with a hole at a water point"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a tank in 6 strips, an arrow in and an arrow out."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the arrow in.",
+    "say": "The pipe fills it in 3 hours. Strips an hour?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 2."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the arrow out.",
+    "say": "The leak empties it in 6 hours. Strips out an hour?"
+   },
+   {
+    "beat": "reveal",
+    "do": "Write 2 - 1 = 1 strip an hour: 6 hours."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_LEAK_TIME_SUBTRACTED",
+    "listen_for": [
+     "3 hours"
+    ],
+    "ask": "Can times be subtracted like that?",
+    "repair": "No: compare one hour.",
+    "error": "Subtracts the pipe's time from the leak's time.",
+    "example": {
+     "question": "Pipe fills in 3 h, leak empties in 6 h. Time to fill?",
+     "wrong_answer": "3 h",
+     "correct_answer": "6 h"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_LEAK_TIMES_ADDED",
+    "listen_for": [
+     "9 hours"
+    ],
+    "ask": "Why add the times?",
+    "repair": "Find the strips per hour.",
+    "error": "Adds the two times.",
+    "example": {
+     "question": "Pipe 3 h, leak 6 h. Time to fill?",
+     "wrong_answer": "9 h",
+     "correct_answer": "6 h"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_LEAK_AS_FILLING",
+    "listen_for": [
+     "2 hours"
+    ],
+    "ask": "Does the leak put water in?",
+    "repair": "No: it takes water out.",
+    "error": "Treats the leak as if it also fills the tank.",
+    "example": {
+     "question": "Pipe 3 h, leak 6 h. Time to fill?",
+     "wrong_answer": "2 h",
+     "correct_answer": "6 h"
+    }
+   },
+   {
+    "code": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND.RATE_OF_WORK_OPPOSING.M_NET_RATE_AS_TIME",
+    "listen_for": [
+     "1/6 hour"
+    ],
+    "ask": "If 1/6 fills in one hour, how many hours for all of it?",
+    "repair": "6 hours.",
+    "error": "Gives the part filled in one hour as the time.",
+    "example": {
+     "question": "Net 1/6 of the tank an hour. Time?",
+     "wrong_answer": "1/6 h",
+     "correct_answer": "6 h"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A pipe fills a tank in 4 hours; a leak empties it in 12 hours. Time to fill with both open?",
+    "answer": "6 hours",
+    "shows": "subtract the leak"
+   },
+   {
+    "question": "A pipe fills a tank in 2 hours; a leak empties it in 3 hours. Time to fill?",
+    "answer": "6 hours",
+    "shows": "subtract the leak"
+   }
+  ],
+  "name": "Work out times when one rate works against another (a pipe and a leak)",
+  "sub_strand": "MATH.G9.NUMBER.COMPOUND_PROPORTIONS_AND",
+  "sub_strand_name": "COMPOUND PROPORTIONS AND RATES OF WORK",
+  "status": "draft: written 18 Nov 2026 offline for Grade 9; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G9;
