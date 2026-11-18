@@ -7881,7 +7881,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_UNIQ_BETTER",
       "M_C4_UNIQ_ACCIDENT",
-      "M_C4_UNIQ_FIRST_ONLY"
+      "M_C4_UNIQ_FIRST_ONLY",
+      "M_C4_UNIQ_LOOKS"
     ]
   },
   "CRES.G4.CREATI.SELF_AWARENESS.FEELINGS": {
@@ -7893,11 +7894,14 @@ var SKILLS6 = {
       "CRE.G4.CREATI.SELF_AWARENESS.b_",
       "CRE.G4.CREATI.SELF_AWARENESS.c_"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.CREATI.SELF_AWARENESS.UNIQUE_CREATION"
+    ],
     "mis": [
       "M_C4_FEEL_ANGER_SIN",
       "M_C4_FEEL_KEEP_ANGER",
-      "M_C4_FEEL_JOY_GOOD_TIMES"
+      "M_C4_FEEL_JOY_GOOD_TIMES",
+      "M_C4_FEEL_SUN"
     ]
   },
   "CRES.G4.CREATI.SELF_AWARENESS.CHOICES": {
@@ -7913,7 +7917,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_CHO_NO_RESULT",
       "M_C4_CHO_FRIENDS",
-      "M_C4_CHO_ONLY_BIG"
+      "M_C4_CHO_ONLY_BIG",
+      "M_C4_CHO_LUCK"
     ]
   },
   "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.FAMILY": {
@@ -7928,7 +7933,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_FAM_NUC_EXT",
       "M_C4_FAM_HOUSE_ONLY",
-      "M_C4_FAM_HONOUR_IF"
+      "M_C4_FAM_HONOUR_IF",
+      "M_C4_FAM_HONOUR_OBEY_WRONG"
     ]
   },
   "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION": {
@@ -7944,7 +7950,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_PRO_SECRET",
       "M_C4_PRO_STRANGER_ONLY",
-      "M_C4_PRO_BLAME_SELF"
+      "M_C4_PRO_BLAME_SELF",
+      "M_C4_PRO_ONCE_ONLY"
     ]
   },
   "CRES.G4.CREATI.ATTRIBUTES_OF_GOD.ATTRIBUTES": {
@@ -7960,7 +7967,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_ATT_SHARED",
       "M_C4_ATT_LOVE_EARNED",
-      "M_C4_ATT_HOLY_BIG"
+      "M_C4_ATT_HOLY_BIG",
+      "M_C4_ATT_ANGRY_JUDGE"
     ]
   },
   "CRES.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.BIBLE_BOOKS": {
@@ -7974,7 +7982,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_BK_NT_IN_OT",
       "M_C4_BK_OT_IN_NT",
-      "M_C4_BK_FIRST"
+      "M_C4_BK_FIRST",
+      "M_C4_BK_COUNT"
     ]
   },
   "CRES.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.ZACCHAEUS": {
@@ -7990,7 +7999,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_ZAC_NUMBERS",
       "M_C4_ZAC_CROWD_GLAD",
-      "M_C4_ZAC_SORRY_ONLY"
+      "M_C4_ZAC_SORRY_ONLY",
+      "M_C4_ZAC_TREE_WHY"
     ]
   },
   "CRES.G4.THE_HO.BALAAM_S_DONKEY.BALAAM": {
@@ -8005,7 +8015,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_BAL_SAW_FIRST",
       "M_C4_BAL_CURSE_OK",
-      "M_C4_BAL_STUBBORN"
+      "M_C4_BAL_STUBBORN",
+      "M_C4_BAL_DONKEY_SELF"
     ]
   },
   "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON": {
@@ -8021,7 +8032,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_SAM_WEAPON",
       "M_C4_SAM_OWN_STRENGTH",
-      "M_C4_SAM_TOLD"
+      "M_C4_SAM_TOLD",
+      "M_C4_SAM_HONEY_TOLD"
     ]
   },
   "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM": {
@@ -8036,7 +8048,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_JD_OWN_POWER",
       "M_C4_JD_NUMBERS",
-      "M_C4_JD_REVERSED"
+      "M_C4_JD_REVERSED",
+      "M_C4_JD_GRAIN_COWS"
     ]
   },
   "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_WISDOM": {
@@ -8055,7 +8068,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_JW_TERROR",
       "M_C4_JW_SCHOOL_ONLY",
-      "M_C4_JW_SELF_GLORY"
+      "M_C4_JW_SELF_GLORY",
+      "M_C4_JW_CLEVER_EQUALS"
     ]
   },
   "CRES.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.ABRAHAM": {
@@ -8074,7 +8088,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_ABR_KNEW_PLACE",
       "M_C4_ABR_ALONE",
-      "M_C4_ABR_NAME"
+      "M_C4_ABR_NAME",
+      "M_C4_ABR_AGE"
     ]
   },
   "CRES.G4.THE_LI.THE_ANNUNCIATION.ANNUNCIATION": {
@@ -8089,7 +8104,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_ANN_ZECHARIAH",
       "M_C4_ANN_PLACE",
-      "M_C4_ANN_NAME"
+      "M_C4_ANN_NAME",
+      "M_C4_ANN_AFRAID_DOUBT"
     ]
   },
   "CRES.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.JOHN_BIRTH": {
@@ -8106,7 +8122,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_JB_MOTHER",
       "M_C4_JB_MESSIAH",
-      "M_C4_JB_YOUNG_PARENTS"
+      "M_C4_JB_YOUNG_PARENTS",
+      "M_C4_JB_MUTE"
     ]
   },
   "CRES.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS": {
@@ -8125,7 +8142,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_BART_QUIET",
       "M_C4_BART_TOUCH",
-      "M_C4_BART_WENT_HOME"
+      "M_C4_BART_WENT_HOME",
+      "M_C4_BART_TOWN"
     ]
   },
   "CRES.G4.THE_LI.HEALING_BY_THE_END_OF_TH.LEPERS": {
@@ -8141,7 +8159,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_LEP_COUNT",
       "M_C4_LEP_WHO",
-      "M_C4_LEP_THANKS_NEED"
+      "M_C4_LEP_THANKS_NEED",
+      "M_C4_LEP_HEALED_THERE"
     ]
   },
   "CRES.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.WIDOW_SON": {
@@ -8160,7 +8179,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_WID_JAIRUS",
       "M_C4_WID_ASKED",
-      "M_C4_WID_HUSBAND"
+      "M_C4_WID_HUSBAND",
+      "M_C4_WID_PRAYED_LONG"
     ]
   },
   "CRES.G4.THE_LI.FORGIVENESS.FORGIVE": {
@@ -8175,7 +8195,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_FOR_REVENGE",
       "M_C4_FOR_WEAK",
-      "M_C4_FOR_FORGET"
+      "M_C4_FOR_FORGET",
+      "M_C4_FOR_CHEEK_LITERAL"
     ]
   },
   "CRES.G4.THE_LI.HELPING_THE_NEEDY.HELPING": {
@@ -8189,7 +8210,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_HELP_RICH",
       "M_C4_HELP_MONEY_ONLY",
-      "M_C4_HELP_PRAISE"
+      "M_C4_HELP_PRAISE",
+      "M_C4_HELP_LATER"
     ]
   },
   "CRES.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.COIN": {
@@ -8205,7 +8227,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_COIN_NINE",
       "M_C4_COIN_GAVE_UP",
-      "M_C4_COIN_MONEY_LESSON"
+      "M_C4_COIN_MONEY_LESSON",
+      "M_C4_COIN_ALONE"
     ]
   },
   "CRES.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.MUSTARD": {
@@ -8221,7 +8244,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_MUS_BIG_START",
       "M_C4_MUS_BIRDS",
-      "M_C4_MUS_ADULTS_ONLY"
+      "M_C4_MUS_ADULTS_ONLY",
+      "M_C4_MUS_REAL_FARMING"
     ]
   },
   "CRES.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.NICODEMUS": {
@@ -8231,13 +8255,15 @@ var SKILLS6 = {
     "outcomes": [
       "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.a",
       "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.b",
-      "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d"
+      "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d",
+      "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.c"
     ],
     "pre": [],
     "mis": [
       "M_C4_NIC_DAY",
       "M_C4_NIC_LITERAL",
-      "M_C4_NIC_FEW"
+      "M_C4_NIC_FEW",
+      "M_C4_NIC_BAPTISM_MAGIC"
     ]
   },
   "CRES.G4.CHRIST.TRUST.JOSEPH_RESISTS": {
@@ -8247,11 +8273,14 @@ var SKILLS6 = {
     "outcomes": [
       "CRE.G4.CHRIST.TRUST.a"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.JOSEPH_DREAM"
+    ],
     "mis": [
       "M_C4_JR_MASTER",
       "M_C4_JR_STAYED",
-      "M_C4_JR_PRIVATE"
+      "M_C4_JR_PRIVATE",
+      "M_C4_JR_REWARDED_AT_ONCE"
     ]
   },
   "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE": {
@@ -8262,11 +8291,14 @@ var SKILLS6 = {
       "CRE.G4.CHRIST.TRUST.b",
       "CRE.G4.CHRIST.TRUST.c"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS.PROTECTION"
+    ],
     "mis": [
       "M_C4_SP_KIND_STRANGER",
       "M_C4_SP_ALL_ADULTS",
-      "M_C4_SP_NO_TELL"
+      "M_C4_SP_NO_TELL",
+      "M_C4_SP_PHONE_FRIEND"
     ]
   },
   "CRES.G4.CHRIST.TRUST.TRUST_GOD": {
@@ -8276,11 +8308,14 @@ var SKILLS6 = {
     "outcomes": [
       "CRE.G4.CHRIST.TRUST.d"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.THE_HO.SAMSON_KILLS_A_LION.SAMSON"
+    ],
     "mis": [
       "M_C4_TG_NO_TROUBLE",
       "M_C4_TG_LAZY",
-      "M_C4_TG_OWN_STRENGTH"
+      "M_C4_TG_OWN_STRENGTH",
+      "M_C4_TG_ZION_PLACE"
     ]
   },
   "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH": {
@@ -8297,7 +8332,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_TR_WHITE_LIE",
       "M_C4_TR_LIE_LASTS",
-      "M_C4_TR_HIDE"
+      "M_C4_TR_HIDE",
+      "M_C4_TR_SILENCE"
     ]
   },
   "CRES.G4.CHRIST.OBEDIENCE_OBEDIENCE.OBEDIENCE": {
@@ -8316,7 +8352,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_OB_IF_AGREE",
       "M_C4_OB_NO_RESULT",
-      "M_C4_OB_RULES_HOME"
+      "M_C4_OB_RULES_HOME",
+      "M_C4_OB_PROMISE"
     ]
   },
   "CRES.G4.CHRIST.LOVE_LOVE.LOVE_CHILDREN": {
@@ -8331,7 +8368,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_LC_DISCIPLES",
       "M_C4_LC_BUSY",
-      "M_C4_LC_NO_HANDS"
+      "M_C4_LC_NO_HANDS",
+      "M_C4_LC_GROWN_UPS_FIRST"
     ]
   },
   "CRES.G4.CHRIST.RESPONSIBILITY_PERSONAL_.CARE_ITEMS": {
@@ -8346,7 +8384,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_CI_NOBODY",
       "M_C4_CI_REPLACE",
-      "M_C4_CI_ONLY_PERSONAL"
+      "M_C4_CI_ONLY_PERSONAL",
+      "M_C4_CI_SOMEONE_ELSE"
     ]
   },
   "CRES.G4.CHRIST.HOLINESS.HOLINESS": {
@@ -8362,7 +8401,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_HOL_MY_BODY",
       "M_C4_HOL_BUILDING",
-      "M_C4_HOL_TEST"
+      "M_C4_HOL_TEST",
+      "M_C4_HOL_FOOD_ONLY"
     ]
   },
   "CRES.G4.THE_CH.HOUSE_OF_GOD.HOUSE_OF_GOD": {
@@ -8376,7 +8416,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_HG_DROVE_WORSHIPPERS",
       "M_C4_HG_BUSINESS_OK",
-      "M_C4_HG_SERVICE_ONLY"
+      "M_C4_HG_SERVICE_ONLY",
+      "M_C4_HG_HEALED"
     ]
   },
   "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES": {
@@ -8390,7 +8431,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_TD_PAUL",
       "M_C4_TD_BROTHERS",
-      "M_C4_TD_COUNT"
+      "M_C4_TD_COUNT",
+      "M_C4_TD_MATTHEW_FISHER"
     ]
   },
   "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS": {
@@ -8401,11 +8443,14 @@ var SKILLS6 = {
       "CRE.G4.THE_CH.THE_EARLY_CHURCH.b",
       "CRE.G4.THE_CH.THE_EARLY_CHURCH.c"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.THE_CH.THE_EARLY_CHURCH.TWELVE_DISCIPLES"
+    ],
     "mis": [
       "M_C4_CB_WHO",
       "M_C4_CB_NUMBER",
-      "M_C4_CB_ONLY_BAPTISM"
+      "M_C4_CB_ONLY_BAPTISM",
+      "M_C4_CB_PLACE"
     ]
   },
   "CRES.G4.THE_CH.STANDING_FIRM_IN_FAITH.STEPHEN": {
@@ -8418,11 +8463,14 @@ var SKILLS6 = {
       "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.c",
       "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.d"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.THE_CH.THE_EARLY_CHURCH.CHURCH_BEGINS"
+    ],
     "mis": [
       "M_C4_ST_REVENGE",
       "M_C4_ST_CITY",
-      "M_C4_ST_GROUP"
+      "M_C4_ST_GROUP",
+      "M_C4_ST_SAUL"
     ]
   },
   "CRES.G4.THE_CH.THE_LORD_S_PRAYER.LORDS_PRAYER": {
@@ -8437,7 +8485,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_LP_BREAD",
       "M_C4_LP_FORGIVE",
-      "M_C4_LP_ONLY_CHURCH"
+      "M_C4_LP_ONLY_CHURCH",
+      "M_C4_LP_KINGDOM"
     ]
   },
   "CRES.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.FRUIT_SPIRIT": {
@@ -8452,7 +8501,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_FR_FOOD",
       "M_C4_FR_BAD",
-      "M_C4_FR_CHURCH_ONLY"
+      "M_C4_FR_CHURCH_ONLY",
+      "M_C4_FR_COUNT"
     ]
   },
   "CRES.G4.THE_CH.SELF_CONTROL.SELF_CONTROL": {
@@ -8470,7 +8520,8 @@ var SKILLS6 = {
     "mis": [
       "M_C4_SC_FEELINGS",
       "M_C4_SC_OWN_POWER",
-      "M_C4_SC_SECRET_OK"
+      "M_C4_SC_SECRET_OK",
+      "M_C4_SC_ONCE"
     ]
   },
   "CRES.G4.MORALI.USE_OF_SOCIAL_MEDIA.SOCIAL_MEDIA": {
@@ -8482,7 +8533,10 @@ var SKILLS6 = {
       "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.b",
       "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.c"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G4.CHRIST.TRUST.SAFE_PEOPLE",
+      "CRES.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.TRUTH"
+    ],
     "mis": [
       "M_C4_SM_STRANGER",
       "M_C4_SM_PRIVATE",
@@ -8501,66 +8555,89 @@ var MIS_FEEDBACK6 = {
   "M_C4_CHO_NO_RESULT": "Every choice has a result, even a secret one. Taking what is not yours is wrong whether or not anyone sees.",
   "M_C4_CHO_FRIENDS": "A right choice is guided by the word of God, not by what the group does. Choose to obey and attend, even when friends choose differently.",
   "M_C4_CHO_ONLY_BIG": "We make many choices every day: what to say, whom to sit with, whether to obey. Small choices matter too.",
+  "M_C4_UNIQ_LOOKS": "God's image is not about faces or colour. Everyone, of every look, is made like God to love and do good.",
+  "M_C4_FEEL_SUN": "The verse is not about bedtime. It means make peace the same day and do not carry anger into tomorrow.",
+  "M_C4_CHO_LUCK": "It was not luck. Not studying was a choice, and failing was its result.",
   "M_C4_FAM_NUC_EXT": "The nuclear family is parents and their children. The extended family includes grandparents, aunts, uncles and cousins too.",
   "M_C4_FAM_HOUSE_ONLY": "Your family includes relatives who do not live with you, such as a grandmother in the village. They are family even if you see them rarely.",
   "M_C4_FAM_HONOUR_IF": "Ephesians 6:1-3 says to obey and honour your parents because this is right, and that it brings a good life. Honour does not depend on gifts.",
   "M_C4_PRO_SECRET": "A wrong touch is never a secret to keep. Say NO, go away and tell a trusted adult, such as a parent or teacher, or call Childline Kenya on 116.",
   "M_C4_PRO_STRANGER_ONLY": "Anyone can do wrong, even a person we know. The rule is that private parts are private. If anyone breaks it, say NO and tell a trusted adult.",
   "M_C4_PRO_BLAME_SELF": "It is never the child's fault. The person who touched wrongly did wrong. Tell a trusted adult, and keep telling until someone helps.",
+  "M_C4_FAM_HONOUR_OBEY_WRONG": "We honour our parents, but we never do wrong because someone tells us to. Say no and tell a trusted adult.",
+  "M_C4_PRO_ONCE_ONLY": "Always tell a trusted adult, even if it happened once and even if the person said sorry.",
   "M_C4_ATT_SHARED": "Genesis 1 shows God as the sole creator. He alone made the heavens, the earth and everything in them.",
   "M_C4_ATT_LOVE_EARNED": '1 John 4:8 says "God is love". He is a loving Father to every child, and his love does not depend on being good all the time.',
   "M_C4_ATT_HOLY_BIG": "Holy means set apart and perfect, without any sin. 1 Samuel 2:2 says there is no one holy like the Lord.",
+  "M_C4_ATT_ANGRY_JUDGE": "God is holy and God is love, both at the same time. He is a Father who knows you by name.",
   "M_C4_BK_NT_IN_OT": "Genesis, Exodus, Psalms and Isaiah are in the Old Testament. Matthew, Mark, Luke, John, Acts and Revelation are in the New Testament.",
   "M_C4_BK_OT_IN_NT": "Psalms and Isaiah are in the Old Testament. The New Testament holds the four Gospels, Acts, the letters and Revelation.",
   "M_C4_BK_FIRST": "Genesis is the first book of the Bible, and Matthew is the first book of the New Testament.",
+  "M_C4_BK_COUNT": "The Old Testament has 39 books and the New Testament has 27 (in the Protestant Bible). The older part is longer.",
   "M_C4_ZAC_NUMBERS": "Zacchaeus promised to give half of his possessions to the poor and to pay back four times anything he had taken wrongly (Luke 19:8).",
   "M_C4_ZAC_CROWD_GLAD": "Luke 19:7 says the people grumbled that Jesus had gone to be the guest of a sinner. But Jesus came to seek and to save the lost.",
   "M_C4_ZAC_SORRY_ONLY": "To repent is to be sorry for wrong and turn away from it. Zacchaeus showed it by giving to the poor and repaying what he had taken.",
+  "M_C4_ZAC_TREE_WHY": "He was not hiding. He was short and wanted to see Jesus, so he climbed the tree.",
   "M_C4_BAL_SAW_FIRST": "The donkey saw the angel with the drawn sword first. Balaam saw him only when the Lord opened his eyes (Numbers 22:31).",
   "M_C4_BAL_CURSE_OK": "God told Balaam not to curse the people, and to do only what he was told (Numbers 22:12, 20). Speak well of others, not ill.",
   "M_C4_BAL_STUBBORN": "The donkey turned aside because she saw the angel. The angel said that if she had not, he would have killed Balaam (Numbers 22:33).",
+  "M_C4_BAL_DONKEY_SELF": "Donkeys did not talk. The Lord opened her mouth so that Balaam would listen.",
   "M_C4_SAM_WEAPON": "Judges 14:6 says Samson tore the lion apart with his bare hands, with no weapon, because the Spirit of the Lord came on him.",
   "M_C4_SAM_OWN_STRENGTH": "The strength came from the Spirit of the Lord, who came powerfully upon Samson. The story shows God's power.",
   "M_C4_SAM_TOLD": "Judges 14:6 says Samson did not tell his father or mother what he had done.",
+  "M_C4_SAM_HONEY_TOLD": "The Bible says Samson did not tell his parents that the honey came from the lion.",
   "M_C4_JD_OWN_POWER": "Joseph told Pharaoh he could not do it himself, but God would give the answer (Genesis 41:16).",
   "M_C4_JD_NUMBERS": "The seven fat cows and seven good ears stood for seven years of plenty. The seven thin cows stood for seven years of famine.",
   "M_C4_JD_REVERSED": "The seven thin cows stood for seven years of famine that would follow the seven years of plenty (Genesis 41:29-30).",
   "M_C4_JW_TERROR": "The fear of the Lord means honouring God and obeying him because we love him. It is the beginning of wisdom (Proverbs 1:7).",
   "M_C4_JW_SCHOOL_ONLY": "Proverbs 1:7 says the fear of the Lord is the beginning of wisdom. Joseph was young and in prison, yet God gave him wisdom.",
   "M_C4_JW_SELF_GLORY": "Joseph gave the credit to God (Genesis 41:16). A wise person depends on God and gives him the praise.",
+  "M_C4_JD_GRAIN_COWS": "Pharaoh had two dreams, one of cows and one of heads of grain. Both meant the same thing.",
+  "M_C4_JW_CLEVER_EQUALS": "Marks are good, but true wisdom starts with honouring God and doing right.",
   "M_C4_ABR_KNEW_PLACE": "God told Abram to go to a land that he would show him (Genesis 12:1). Abram obeyed without knowing the way.",
   "M_C4_ABR_ALONE": "Abram took Sarai his wife and Lot his nephew and the people they had gathered (Genesis 12:5).",
   "M_C4_ABR_NAME": "God changed Abram to Abraham, which means father of many nations (Genesis 17:5).",
+  "M_C4_ABR_AGE": "Abram was 75 when God called him. He was 99 when God changed his name to Abraham.",
   "M_C4_ANN_ZECHARIAH": "Gabriel told Mary at Nazareth that she would bear Jesus. His message to Zechariah in the temple was about the birth of John.",
   "M_C4_ANN_PLACE": "The angel came to Mary at Nazareth in Galilee (Luke 1:26). Jesus was born later, in Bethlehem.",
   "M_C4_ANN_NAME": "The angel told Mary to name her son Jesus (Luke 1:31). The name John was for Elizabeth's son.",
+  "M_C4_ANN_AFRAID_DOUBT": `Mary asked how it would happen, and then she said yes: "I am the Lord's servant."`,
   "M_C4_JB_MOTHER": "John's parents were Zechariah the priest and Elizabeth (Luke 1:5). Mary and Joseph were the parents of Jesus.",
   "M_C4_JB_MESSIAH": "John was a prophet who went before the Lord to prepare the way for him (Luke 1:76). He was not the Messiah.",
   "M_C4_JB_YOUNG_PARENTS": "Luke 1:7 says they had no child and were both well along in years, yet God sent them a son.",
+  "M_C4_JB_MUTE": 'Zechariah could not speak, so he wrote "His name is John". Then he could speak again.',
   "M_C4_BART_QUIET": "Mark 10:48 says Bartimaeus shouted all the more. He kept asking because he believed Jesus could help him.",
   "M_C4_BART_TOUCH": 'In Mark 10:52 Jesus said "Go, your faith has healed you" and Bartimaeus received his sight at once.',
   "M_C4_BART_WENT_HOME": "Mark 10:52 says he followed Jesus along the road. He now wanted to be with Jesus.",
+  "M_C4_BART_TOWN": "Jesus was leaving Jericho when he healed Bartimaeus by the roadside.",
   "M_C4_LEP_COUNT": "Only one of the ten came back to thank Jesus. Jesus asked where the other nine were (Luke 17:17).",
   "M_C4_LEP_WHO": "The man who returned was a Samaritan (Luke 17:16). Gratitude came from a person who was seen as an outsider.",
   "M_C4_LEP_THANKS_NEED": "The Samaritan thanked God after he was healed. We thank God every day for family, food, health and life, not only when we need help.",
+  "M_C4_LEP_HEALED_THERE": "Jesus did not touch them. He sent them to the priests, and they were healed as they went.",
   "M_C4_WID_JAIRUS": "At Nain, Jesus raised the only son of a widow (Luke 7:12-15). Jairus' daughter is a different story.",
   "M_C4_WID_ASKED": "Luke 7:13 says that when the Lord saw her, his heart went out to her. Nobody asked him; Jesus showed compassion.",
   "M_C4_WID_HUSBAND": "The widow had already lost her husband. Now her only son had died (Luke 7:12). Jesus gave him back to her.",
+  "M_C4_WID_PRAYED_LONG": 'Jesus touched the coffin and said, "Young man, I say to you, get up!" and he sat up.',
   "M_C4_FOR_REVENGE": "Matthew 5:39 teaches us not to pay back evil with evil. Hitting back makes two wrongs and keeps the quarrel going.",
   "M_C4_FOR_WEAK": "Forgiving takes strength. You can forgive and still tell a trusted adult if someone keeps hurting you.",
   "M_C4_FOR_FORGET": "To forgive is to let go of the wish to pay back and to make peace. It does not mean we pretend nothing happened.",
+  "M_C4_FOR_CHEEK_LITERAL": "Turning the other cheek means do not hit back. You may walk away and tell a teacher.",
   "M_C4_HELP_RICH": "Matthew 5:42 tells us to give to the one who asks. A child who has little can still share a pencil, lunch or time.",
   "M_C4_HELP_MONEY_ONLY": "We help with food, with work, with a visit and with a kind word, as well as with money.",
   "M_C4_HELP_PRAISE": "A Christian helps out of love for God and for others, and not to be praised.",
+  "M_C4_HELP_LATER": "Matthew 5:42 says give to the one who asks. Help when the need is there.",
   "M_C4_COIN_NINE": "The woman had ten silver coins and lost one, so nine were left (Luke 15:8).",
   "M_C4_COIN_GAVE_UP": "The woman lit a lamp, swept the house and searched carefully until she found the coin. God likewise searches for the lost.",
   "M_C4_COIN_MONEY_LESSON": "Jesus said there is rejoicing in heaven over one sinner who repents (Luke 15:10). The coin stands for a person God loves.",
+  "M_C4_COIN_ALONE": "She called her friends to celebrate. Heaven rejoices like that when one person turns back to God.",
   "M_C4_MUS_BIG_START": "Jesus said the kingdom of God is like a mustard seed that grows into a tree (Luke 13:19). It starts small and grows.",
   "M_C4_MUS_BIRDS": "Luke 13:19 says the birds perched in the branches of the tree. The kingdom gives shelter to many.",
   "M_C4_MUS_ADULTS_ONLY": "Every believer can help the kingdom grow by praying, living well and telling others about Jesus.",
+  "M_C4_MUS_REAL_FARMING": "Jesus used a seed to teach about God's kingdom, which starts small and grows big.",
   "M_C4_NIC_DAY": "John 3:2 says Nicodemus came to Jesus at night. He was a Pharisee and a member of the ruling council.",
   "M_C4_NIC_LITERAL": "Jesus was speaking of a new life from God, being born of water and the Spirit (John 3:5). Nicodemus first thought of a second birth from a mother.",
   "M_C4_NIC_FEW": "John 3:16 says God so loved the world that he gave his only Son, so that whoever believes may have eternal life.",
+  "M_C4_NIC_BAPTISM_MAGIC": "Baptism shows that a person has turned to God to live a new life following Jesus.",
   "M_C4_JR_MASTER": "Joseph said he could not do such a wicked thing and sin against God (Genesis 39:9). He feared God more than people.",
   "M_C4_JR_STAYED": "Joseph ran out of the house, leaving his cloak behind (Genesis 39:12). Sometimes the right thing is to run away from a bad situation.",
   "M_C4_JR_PRIVATE": "Joseph knew that God sees. He refused even though no one else was in the house (Genesis 39:11).",
@@ -8570,42 +8647,57 @@ var MIS_FEEDBACK6 = {
   "M_C4_TG_NO_TROUBLE": "Psalm 125:1 says those who trust in the Lord are like Mount Zion which cannot be shaken. Trouble may come, but God holds us.",
   "M_C4_TG_LAZY": "Trusting God does not mean doing nothing. We do our part and trust God with the rest.",
   "M_C4_TG_OWN_STRENGTH": "Psalm 125 says the Lord surrounds his people. Their firmness comes from God.",
+  "M_C4_JR_REWARDED_AT_ONCE": "Joseph did right and was put in prison at first. God was with him and later raised him up.",
+  "M_C4_SP_PHONE_FRIEND": "Knowing your name does not make someone safe. Tell a parent or teacher and never go to meet them.",
+  "M_C4_TG_ZION_PLACE": "The verse says people who trust God are like Mount Zion: they cannot be shaken.",
   "M_C4_TR_WHITE_LIE": "Ephesians 4:25 says to put away falsehood and speak truthfully. A small lie is still a lie, and telling the truth keeps trust.",
   "M_C4_TR_LIE_LASTS": "Proverbs 12:19 says truthful lips endure for ever but a lying tongue lasts only a moment.",
   "M_C4_TR_HIDE": "Ephesians 4:25 says to speak truthfully because we belong to one another. Telling the truth lets others help.",
+  "M_C4_TR_SILENCE": "Keeping quiet so someone else is blamed is not truthful. Own up and speak the truth.",
   "M_C4_OB_IF_AGREE": "Exodus 20:12 tells us to honour our father and mother. We obey for our own good and for peace, and not only when we agree.",
   "M_C4_OB_NO_RESULT": "Disobedience can bring danger, lost trust and punishment. Obedience brings peace and safety.",
   "M_C4_OB_RULES_HOME": "Children should obey parents at home and teachers and school rules at school, so that learning is peaceful and safe.",
+  "M_C4_OB_PROMISE": "Exodus 20:12 promises a long life in the land to those who honour their parents.",
   "M_C4_LC_DISCIPLES": "Matthew 19:13 says the disciples rebuked those who brought the children. Jesus corrected them.",
   "M_C4_LC_BUSY": 'Jesus said "Let the little children come to me and do not hinder them, for the kingdom of heaven belongs to such as these" (Matthew 19:14).',
   "M_C4_LC_NO_HANDS": "Matthew 19:15 says Jesus placed his hands on the children and went on from there. He loves children.",
+  "M_C4_LC_GROWN_UPS_FIRST": "Jesus said the kingdom of heaven belongs to such as these children. God loves and welcomes you now.",
   "M_C4_CI_NOBODY": "School property belongs to the whole school community. We all use it, so we all care for it.",
   "M_C4_CI_REPLACE": "Taking care of what we have shows thanks and responsibility. Things cost our parents money and work.",
   "M_C4_CI_ONLY_PERSONAL": "A responsible child takes care of personal items, such as a pullover and a pen, and of school property, such as desks and books.",
+  "M_C4_CI_SOMEONE_ELSE": "Looking after school things is everyone's job. If you see the tap running, close it.",
   "M_C4_HOL_MY_BODY": "1 Corinthians 6:19-20 says our body is a temple of the Holy Spirit. We honour God with it by how we care for it and how we live.",
   "M_C4_HOL_BUILDING": "In 1 Corinthians 6:19 the temple is our own body, where the Holy Spirit lives.",
   "M_C4_HOL_TEST": "To lead a holy life we keep away from places and company that lead to sin, as Joseph ran from temptation.",
+  "M_C4_HOL_FOOD_ONLY": "We honour God with our whole body: what we say, where we go and what we do, not only what we eat.",
   "M_C4_HG_DROVE_WORSHIPPERS": "Jesus drove out those who were buying and selling in the temple courts and overturned the tables of the money changers (Matthew 21:12).",
   "M_C4_HG_BUSINESS_OK": 'Jesus said, "My house will be called a house of prayer" (Matthew 21:13). It is not a place for trade.',
   "M_C4_HG_SERVICE_ONLY": "The church is a holy place, God's house, so we respect it at all times, not just during a service.",
+  "M_C4_HG_HEALED": "After Jesus cleared the temple, the blind and the lame came and he healed them.",
   "M_C4_TD_PAUL": "Paul was not one of the twelve in Matthew 10:2-4. The twelve included Peter, Andrew, James, John, Philip and others.",
   "M_C4_TD_BROTHERS": "Andrew was the brother of Simon Peter. James and John were brothers, the sons of Zebedee (Matthew 10:2).",
   "M_C4_TD_COUNT": "Jesus chose twelve disciples (Matthew 10:1-4).",
   "M_C4_CB_WHO": "In Acts 2 it was Peter who preached. Jesus had gone up to heaven and the Holy Spirit had come.",
   "M_C4_CB_NUMBER": "About three thousand people were added that day (Acts 2:41).",
   "M_C4_CB_ONLY_BAPTISM": 'Peter said "Repent and be baptised". To repent is to turn away from sin.',
+  "M_C4_TD_MATTHEW_FISHER": "Not all were fishermen. Matthew was a tax collector before Jesus called him.",
+  "M_C4_CB_PLACE": "The church began in Jerusalem on the day of Pentecost.",
   "M_C4_ST_REVENGE": 'Stephen prayed "Lord, do not hold this sin against them" (Acts 7:60). He forgave, as Jesus did.',
   "M_C4_ST_CITY": "Acts 11:26 says that at Antioch the believers were first called Christians.",
   "M_C4_ST_GROUP": "Stephen stood firm even when it cost him dearly. We should not join groups that do not follow Jesus, but refuse politely and stay firm.",
+  "M_C4_ST_SAUL": "A young man named Saul held their coats. Later God changed him and he became Paul.",
   "M_C4_LP_BREAD": `In the Lord's Prayer, "daily bread" means what we need each day. We ask God to provide.`,
   "M_C4_LP_FORGIVE": `The Lord's Prayer says "forgive us our debts as we also have forgiven our debtors" (Matthew 6:12). We forgive others too.`,
   "M_C4_LP_ONLY_CHURCH": "Jesus taught us to pray. We can pray every day, at home, at school and at church.",
+  "M_C4_LP_KINGDOM": `"Your kingdom come" asks that God's will be done on earth as in heaven.`,
   "M_C4_FR_FOOD": "The fruit of the Spirit are qualities such as love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control.",
   "M_C4_FR_BAD": "Kindness is a fruit of the Spirit. Jealousy and anger are not.",
   "M_C4_FR_CHURCH_ONLY": "The fruit of the Spirit show in the whole of life, at home, at school, at play and at church.",
+  "M_C4_FR_COUNT": "Galatians 5:22-23 names nine: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control.",
   "M_C4_SC_FEELINGS": "Self-control means choosing what is right even when a feeling pushes us another way.",
   "M_C4_SC_OWN_POWER": "Self-control is a fruit of the Spirit. We ask for the Spirit's help and keep in step with him (Galatians 5:25).",
   "M_C4_SC_SECRET_OK": "Things that harm the body and mind are wrong even in secret. Self-control means saying no.",
+  "M_C4_SC_ONCE": "Self-control means saying no even to the first time.",
   "M_C4_SM_STRANGER": "People online may not be who they say. Do not chat with strangers or agree to meet them. Tell a parent or teacher.",
   "M_C4_SM_PRIVATE": "Keep your password and home address private. Sharing them can let others harm you or use your account.",
   "M_C4_SM_NOBODY": "Integrity means doing right even when no one is watching. An unkind message hurts whether or not your name is on it.",
@@ -9274,6 +9366,9 @@ var FAMILIES17 = [
   ], "c")
 ];
 
+// src/ai-tutor/content/families/cre_g4_awaiting.js
+var AWAITING = [];
+
 // src/ai-tutor/content/subjects/cre_g4.js
 var cre_g4_default = {
   subject: "cre",
@@ -9290,6 +9385,8 @@ var cre_g4_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED6,
   signedFile: "cre_g4_signed.js",
+  awaiting: AWAITING,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "cre4.",
@@ -10079,7 +10176,8 @@ var SKILLS7 = {
     "mis": [
       "M_TAL_MONEY_ONLY",
       "M_TAL_UNFAIR",
-      "M_TAL_NUMBERS"
+      "M_TAL_NUMBERS",
+      "M_C5_TAL_REWARD_SAME"
     ]
   },
   "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES": {
@@ -10093,7 +10191,8 @@ var SKILLS7 = {
     "mis": [
       "M_PUR_SHOW_OFF",
       "M_PUR_FEW_ONLY",
-      "M_PUR_OWN_MAKING"
+      "M_PUR_OWN_MAKING",
+      "M_C5_PUR_FIXED_JOB"
     ]
   },
   "CRES.G5.CREATI.WORK.STEWARDSHIP": {
@@ -10108,7 +10207,8 @@ var SKILLS7 = {
     "mis": [
       "M_STW_RULE_HARM",
       "M_STW_WORK_PUNISHMENT",
-      "M_STW_HOME_ONLY"
+      "M_STW_HOME_ONLY",
+      "M_C5_STW_ADULT_ROLES"
     ]
   },
   "CRES.G5.CREATI.WORK.CHILD_LABOUR": {
@@ -10119,7 +10219,9 @@ var SKILLS7 = {
       "CRE.G5.CREATI.WORK.d",
       "CRE.G5.CREATI.WORK.e"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G5.CREATI.WORK.STEWARDSHIP"
+    ],
     "mis": [
       "M_CL_CHORES_ARE_LABOUR",
       "M_CL_LABOUR_IS_GOOD",
@@ -10156,7 +10258,8 @@ var SKILLS7 = {
     "mis": [
       "M_FU_NO_QUARREL",
       "M_FU_PARENTS_ONLY",
-      "M_FU_FORGIVE_PRETEND"
+      "M_FU_FORGIVE_PRETEND",
+      "M_C5_FU_RICH_HAPPY"
     ]
   },
   "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE": {
@@ -10171,7 +10274,8 @@ var SKILLS7 = {
     "mis": [
       "M_BG_CHURCH_ONLY",
       "M_BG_READ_ONCE",
-      "M_BG_PSALM_TREE"
+      "M_BG_PSALM_TREE",
+      "M_C5_BG_ONLY_RULES"
     ]
   },
   "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN": {
@@ -10187,7 +10291,8 @@ var SKILLS7 = {
     "mis": [
       "M_PJ_DENIED",
       "M_PJ_STOPPED",
-      "M_PJ_NO_POWER"
+      "M_PJ_NO_POWER",
+      "M_C5_PJ_OBEYED_RULERS"
     ]
   },
   "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON": {
@@ -10203,7 +10308,8 @@ var SKILLS7 = {
     "mis": [
       "M_SOL_WRONG_MOTHER",
       "M_SOL_CUT",
-      "M_SOL_STRONG_NOT_WISE"
+      "M_SOL_STRONG_NOT_WISE",
+      "M_C5_SOL_ASKED_RICHES"
     ]
   },
   "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS": {
@@ -10217,7 +10323,8 @@ var SKILLS7 = {
     "mis": [
       "M_NS_NAMES",
       "M_NS_HAM_COVERED",
-      "M_NS_FIRST_FLOOD"
+      "M_NS_FIRST_FLOOD",
+      "M_C5_NS_SAW_TOLD_PRAISE"
     ]
   },
   "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY": {
@@ -10233,7 +10340,8 @@ var SKILLS7 = {
     "mis": [
       "M_RE_AGREE",
       "M_RE_RELATIVES",
-      "M_RE_PAYMENT"
+      "M_RE_PAYMENT",
+      "M_C5_RE_IGNORE_POOR"
     ]
   },
   "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL": {
@@ -10265,7 +10373,8 @@ var SKILLS7 = {
     "mis": [
       "M_HD_WEAK",
       "M_HD_PROUD_BELSHAZZAR",
-      "M_HD_REWARD"
+      "M_HD_REWARD",
+      "M_C5_HD_HUMBLE_SILENT"
     ]
   },
   "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL": {
@@ -10280,7 +10389,8 @@ var SKILLS7 = {
     "mis": [
       "M_CAR_BAAL_ANSWERED",
       "M_CAR_ELIJAH_LIT",
-      "M_CAR_NUMBERS"
+      "M_CAR_NUMBERS",
+      "M_C5_CAR_NO_WATER"
     ]
   },
   "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD": {
@@ -10296,7 +10406,8 @@ var SKILLS7 = {
     "mis": [
       "M_TG_IDOL_POWER",
       "M_TG_SECRET_GROUP",
-      "M_TG_MANY_GODS"
+      "M_TG_MANY_GODS",
+      "M_C5_TG_LUCK_CHARMS"
     ]
   },
   "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH": {
@@ -10311,7 +10422,8 @@ var SKILLS7 = {
     "mis": [
       "M_MB_WHO_FOUND",
       "M_MB_PLACE",
-      "M_MB_NURSE"
+      "M_MB_NURSE",
+      "M_C5_MB_WHY_HIDE"
     ]
   },
   "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL": {
@@ -10329,7 +10441,8 @@ var SKILLS7 = {
     "mis": [
       "M_MC_BUSH_BURNT",
       "M_MC_SANDALS",
-      "M_MC_TASK"
+      "M_MC_TASK",
+      "M_C5_MC_READY"
     ]
   },
   "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST": {
@@ -10344,7 +10457,8 @@ var SKILLS7 = {
     "mis": [
       "M_JB_REPENT_SORRY",
       "M_JB_TAX",
-      "M_JB_SHARE"
+      "M_JB_SHARE",
+      "M_C5_JB_SOLDIERS"
     ]
   },
   "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS": {
@@ -10361,7 +10475,8 @@ var SKILLS7 = {
     "mis": [
       "M_BJ_SIGN",
       "M_BJ_VOICE",
-      "M_BJ_SINNED"
+      "M_BJ_SINNED",
+      "M_C5_BJ_WHO_BAPTISED"
     ]
   },
   "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM": {
@@ -10377,7 +10492,8 @@ var SKILLS7 = {
     "mis": [
       "M_CS_DISCIPLES_CALMED",
       "M_CS_AWAKE",
-      "M_CS_NO_TROUBLE"
+      "M_CS_NO_TROUBLE",
+      "M_C5_CS_SCOLDED_STORM_ONLY"
     ]
   },
   "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000": {
@@ -10393,7 +10509,8 @@ var SKILLS7 = {
     "mis": [
       "M_F4_FIVE_THOUSAND",
       "M_F4_WHY",
-      "M_F4_NEEDY_MONEY"
+      "M_F4_NEEDY_MONEY",
+      "M_C5_F4_BASKETS"
     ]
   },
   "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN": {
@@ -10408,7 +10525,8 @@ var SKILLS7 = {
     "mis": [
       "M_PM_DOOR",
       "M_PM_HEALED_FIRST",
-      "M_PM_ALONE"
+      "M_PM_ALONE",
+      "M_C5_PM_TEACHERS_GLAD"
     ]
   },
   "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP": {
@@ -10423,7 +10541,8 @@ var SKILLS7 = {
     "mis": [
       "M_LS_NINETY_NINE",
       "M_LS_PUNISH",
-      "M_LS_JOY"
+      "M_LS_JOY",
+      "M_C5_LS_WHO_TOLD"
     ]
   },
   "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT": {
@@ -10438,7 +10557,8 @@ var SKILLS7 = {
     "mis": [
       "M_SM_PEACE_NO_FIGHT",
       "M_SM_PURE_CLEAN",
-      "M_SM_MERCY_WEAK"
+      "M_SM_MERCY_WEAK",
+      "M_C5_SM_REWARD_MIX"
     ]
   },
   "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN": {
@@ -10454,7 +10574,8 @@ var SKILLS7 = {
     "mis": [
       "M_RY_SOLD",
       "M_RY_RICH_SIN",
-      "M_RY_OLD"
+      "M_RY_OLD",
+      "M_C5_RY_COMMANDMENTS_ENOUGH"
     ]
   },
   "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT": {
@@ -10470,7 +10591,8 @@ var SKILLS7 = {
     "mis": [
       "M_FM_FRIENDSHIP_ONLY",
       "M_FM_ONE_PRAYER",
-      "M_FM_LOAVES"
+      "M_FM_LOAVES",
+      "M_C5_FM_GOD_ASLEEP"
     ]
   },
   "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH": {
@@ -10486,7 +10608,8 @@ var SKILLS7 = {
     "mis": [
       "M_EC_OWN",
       "M_EC_SAME_JOB",
-      "M_EC_WHAT_DEVOTED"
+      "M_EC_WHAT_DEVOTED",
+      "M_C5_EC_DAILY_TEMPLE"
     ]
   },
   "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER": {
@@ -10502,7 +10625,8 @@ var SKILLS7 = {
     "mis": [
       "M_LS2_ONE_NAME",
       "M_LS2_WHEN",
-      "M_LS2_WHY"
+      "M_LS2_WHY",
+      "M_C5_LS2_FEAST"
     ]
   },
   "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT": {
@@ -10518,7 +10642,8 @@ var SKILLS7 = {
     "mis": [
       "M_HS_MIX",
       "M_HS_COUNT",
-      "M_HS_HARMONY"
+      "M_HS_HARMONY",
+      "M_C5_HS_GIFTS_FEW"
     ]
   },
   "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE": {
@@ -10535,7 +10660,8 @@ var SKILLS7 = {
     "mis": [
       "M_PR_BROKE_OUT",
       "M_PR_NO_PRAYER",
-      "M_PR_RHODA"
+      "M_PR_RHODA",
+      "M_C5_PR_HOUSE"
     ]
   },
   "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS": {
@@ -10550,7 +10676,8 @@ var SKILLS7 = {
     "mis": [
       "M_FR_POPULAR",
       "M_FR_FOLLOW",
-      "M_FR_PROVERB"
+      "M_FR_PROVERB",
+      "M_C5_FR_CHANGE_THEM"
     ]
   },
   "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE": {
@@ -10585,7 +10712,8 @@ var SKILLS7 = {
     "mis": [
       "M_SL_ANIMALS",
       "M_SL_ANGER",
-      "M_SL_SOURCE"
+      "M_SL_SOURCE",
+      "M_C5_SL_SOME_LIVES"
     ]
   },
   "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS": {
@@ -10631,6 +10759,8 @@ var MIS_FEEDBACK7 = {
   "M_PUR_SHOW_OFF": "1 Peter 4:10 says each person should use the gift received to serve others, as a good steward of God's grace. A gift is for service, not for showing off.",
   "M_PUR_FEW_ONLY": "Jeremiah 29:11 says that God has plans for our welfare, to give us a future and a hope. A child is part of that, not only an adult.",
   "M_PUR_OWN_MAKING": "James 1:17 says that every good and perfect gift comes from above, from God. Hard work matters, but the abilities we work with are gifts too.",
+  "M_C5_TAL_REWARD_SAME": 'Both faithful servants heard "Well done". God looks for faithful use of what we have, big or small.',
+  "M_C5_PUR_FIXED_JOB": "God has good plans for you, and he gives gifts for you to use. Working hard is part of using them.",
   "M_STW_RULE_HARM": "Genesis 2:15 shows what ruling means: to work the garden and take care of it. Human beings are God's caretakers of creation, not owners who may use it up.",
   "M_STW_WORK_PUNISHMENT": "In Genesis 2:15 God put the man in the garden to work it and take care of it before anything went wrong. Work is a good gift and a responsibility.",
   "M_STW_HOME_ONLY": "A child has roles at home, school and church. At church a child can sing, help as an usher, sweep, and help keep the compound clean.",
@@ -10638,6 +10768,7 @@ var MIS_FEEDBACK7 = {
   "M_CL_LABOUR_IS_GOOD": "Child labour takes children from school and can harm their health and safety. Learning to work happens through safe chores, not through harmful work.",
   "M_CL_REPORT_EMPLOYER": "A child who is forced to work should tell a trusted adult such as a parent, a teacher or the chief, or call the Childline Kenya helpline on 116. Not the person who is forcing the work.",
   "M_CL_CAUSE_LAZY": "Child labour is often caused by poverty, the loss of parents, ignorance of children's rights and the greed of those who use cheap labour. It is not the fault of the child.",
+  "M_C5_STW_ADULT_ROLES": "Paying fees is a parent's role. A child can help with dishes, water, sweeping and caring for younger ones.",
   "M_FALL_APPLE": 'Genesis 3 says "the fruit of the tree" but does not name it. The apple comes from pictures and stories, not from the Bible.',
   "M_FALL_ONE_PERSON": "In Genesis 3:6 the woman ate the fruit and she also gave some to her husband who was with her, and he ate. Both disobeyed God.",
   "M_FALL_SERPENT_TRUE": "The serpent made the woman doubt what God had said. He tempted them, and what he said was not true.",
@@ -10645,21 +10776,27 @@ var MIS_FEEDBACK7 = {
   "M_FU_NO_QUARREL": "A united family has disagreements too, but its members forgive each other and keep loving one another (Colossians 3:13-14).",
   "M_FU_PARENTS_ONLY": "Every member of the family, including children, can help to make a family happy by obeying, doing chores and speaking kindly.",
   "M_FU_FORGIVE_PRETEND": "To forgive is to let go of anger and choose to love again. It does not pretend that nothing was wrong.",
+  "M_C5_FU_RICH_HAPPY": "Money helps, but love, forgiveness and helping each other make a family united.",
   "M_BG_CHURCH_ONLY": "The Bible guides a Christian in every place and every day: at home, at school, at church and in the community.",
   "M_BG_READ_ONCE": "Joshua 1:8 asks us to think on God's word day and night and to do what it says. It is for daily use, not for reading once.",
   "M_BG_PSALM_TREE": "Psalm 1:3 says that the person who delights in the word of the Lord is like a tree planted by streams of water, which gives fruit in its season.",
+  "M_C5_BG_ONLY_RULES": "The Bible guides, comforts, teaches and inspires. It is used in homes, schools, churches and even when leaders take an oath.",
   "M_PJ_DENIED": "In Acts 4 Peter was filled with the Holy Spirit and spoke boldly. That is different from the night when he denied Jesus.",
   "M_PJ_STOPPED": "Acts 4:12 says that there is salvation in no one else, and no other name under heaven by which we must be saved. Peter did not give in.",
   "M_PJ_NO_POWER": "Peter told the rulers that the man was healed by the name of Jesus Christ of Nazareth. The apostles gave the glory to Jesus.",
+  "M_C5_PJ_OBEYED_RULERS": "They said they could not stop speaking about what they had seen and heard. They stood firm.",
   "M_SOL_WRONG_MOTHER": "The real mother loved her son so much that she begged the king to give him to the other woman rather than see him killed. So Solomon gave the baby to her.",
   "M_SOL_CUT": "The sword was never used. Solomon's order was a test to find out who the real mother was, and the baby was given to her alive.",
   "M_SOL_STRONG_NOT_WISE": "Proverbs 9:10 says that the fear of the Lord, that is, deep respect for God, is the beginning of wisdom. It is not riches or power.",
+  "M_C5_SOL_ASKED_RICHES": "Solomon asked for a wise, discerning heart to rule well. God was pleased.",
   "M_NS_NAMES": "Genesis 9:18 names Noah's sons who came out of the ark as Shem, Ham and Japheth.",
   "M_NS_HAM_COVERED": "Ham saw his father and told his brothers outside. Shem and Japheth took a garment and covered their father, walking backwards so that they did not see him.",
   "M_NS_FIRST_FLOOD": "In Genesis 9:18-23 the flood is already over. The story is about how Noah's sons treated their father after he lay uncovered in his tent.",
   "M_RE_AGREE": "Respect is shown by polite words and actions: greeting, listening, helping. It does not mean never speaking.",
   "M_RE_RELATIVES": "A child shows respect to every older person: grandparents, neighbours, teachers and elders in the community.",
   "M_RE_PAYMENT": "Christians respect and help the elderly because it is right and pleases God, not to gain a reward.",
+  "M_C5_NS_SAW_TOLD_PRAISE": "Ham spread his father's shame. Shem and Japheth covered their father with respect.",
+  "M_C5_RE_IGNORE_POOR": "Every elder deserves respect, rich or poor. God asks us to honour the old.",
   "M_WW_KING": "The king who held the feast in Daniel 5 was Belshazzar. Nebuchadnezzar had taken the vessels from the temple earlier.",
   "M_WW_WHO_WROTE": "In Daniel 5:5 the fingers of a human hand appeared and wrote on the wall. Daniel did not write them. He was called to read and explain them.",
   "M_WW_VESSELS": "The vessels belonged to the temple in Jerusalem and were holy to God. Belshazzar used them at his feast while praising idols of gold and silver.",
@@ -10667,60 +10804,79 @@ var MIS_FEEDBACK7 = {
   "M_HD_WEAK": "Humility is not weakness. A humble person does not boast, listens, and treats others with respect. Daniel spoke truthfully to a king.",
   "M_HD_PROUD_BELSHAZZAR": "Daniel told the king that he had not humbled himself but had lifted himself up against God. King Belshazzar showed pride, not Daniel.",
   "M_HD_REWARD": "In Daniel 5:17 Daniel said the king could keep his gifts and give his rewards to someone else, yet he would still read the writing. He served God faithfully, not for pay.",
+  "M_C5_HD_HUMBLE_SILENT": "Daniel was humble and brave. He did not want rewards, and he told the king the truth.",
   "M_CAR_BAAL_ANSWERED": "The prophets of Baal called from morning till noon and there was no voice and no answer. Only the Lord answered by fire.",
   "M_CAR_ELIJAH_LIT": "The fire of the Lord fell and burned up the offering, the wood, the stones and the dust, and even the water in the trench. Elijah did not light it.",
   "M_CAR_NUMBERS": "There were 450 prophets of Baal against Elijah alone. The twelve stones stood for the twelve tribes, and Elijah had jars of water poured on the altar.",
   "M_TG_IDOL_POWER": "An idol cannot hear, see, speak or answer. At Carmel the Lord answered and Baal did not. God alone is worthy of worship.",
   "M_TG_SECRET_GROUP": "A group that asks a child to hide things from her parents, or to do something against God's teaching, is unsafe. Mwende should refuse and tell her parents or a trusted adult.",
   "M_TG_MANY_GODS": "The Ten Commandments teach that God's people worship the Lord alone and do not make idols to bow down to (Exodus 20:3-5). Elijah asked the people not to waver between two opinions.",
+  "M_C5_CAR_NO_WATER": "Elijah had water poured three times. When the fire fell, everyone knew it was the Lord.",
+  "M_C5_TG_LUCK_CHARMS": "An object cannot protect you. Christians trust God alone, who made heaven and earth.",
   "M_MB_WHO_FOUND": "Pharaoh's daughter came down to the river to bathe, saw the basket among the reeds and took pity on the baby. His sister was watching from a distance.",
   "M_MB_PLACE": "Moses' mother put the basket among the reeds by the bank of the Nile river, not in the Red Sea.",
   "M_MB_NURSE": "Moses' sister offered to find a nurse and brought his own mother, whom Pharaoh's daughter paid to nurse him. God protected Moses.",
+  "M_C5_MB_WHY_HIDE": "She loved him. Pharaoh had ordered Hebrew boys killed, so she hid him to save his life.",
   "M_MC_BUSH_BURNT": "The bush was on fire but it was not burned up. This drew Moses to look and hear God speak.",
   "M_MC_SANDALS": "God told Moses to take off his sandals because the place where he stood was holy ground. It is a sign of respect for God.",
   "M_MC_TASK": 'God said, "I have seen the misery of my people", and sent Moses to Pharaoh to bring the Israelites out of Egypt.',
+  "M_C5_MC_READY": "Moses was afraid and hid his face. God promised to be with him, and he went.",
   "M_JB_REPENT_SORRY": 'Repentance is more than saying sorry. It is turning away from wrong and showing it by a changed life, "fruits" (Luke 3:8).',
   "M_JB_TAX": "John told the tax collectors to collect no more than they were ordered to. He taught honesty in their work.",
   "M_JB_SHARE": "John said that whoever has two coats should share with the one who has none, and whoever has food should do the same.",
+  "M_C5_JB_SOLDIERS": "John told the soldiers to be honest and content with their pay, not to leave their work.",
   "M_BJ_SIGN": "The Holy Spirit came down on Jesus in bodily form like a dove. It was a sign, not an ordinary bird.",
   "M_BJ_VOICE": 'A voice from heaven said, "You are my beloved Son; with you I am well pleased."',
   "M_BJ_SINNED": "Jesus was baptised to obey God and to stand with the people he came to save, not because he had sin to confess. A Christian follows his humility.",
+  "M_C5_BJ_WHO_BAPTISED": "John the Baptist baptised Jesus in the River Jordan.",
   "M_CS_DISCIPLES_CALMED": "Jesus woke up, told the wind to stop and the waves to be still, and there was a great calm. The disciples could not stop the storm themselves.",
   "M_CS_AWAKE": "Jesus was asleep on a cushion in the stern when the storm came. The disciples woke him and asked whether he did not care.",
   "M_CS_NO_TROUBLE": "The disciples were in the storm even though Jesus was with them. The lesson is that Jesus is with us in our troubles and has power over them.",
+  "M_C5_CS_SCOLDED_STORM_ONLY": 'Jesus calmed the storm and then asked, "Why are you so afraid? Do you still have no faith?"',
   "M_F4_FIVE_THOUSAND": "In Matthew 15 Jesus fed four thousand men with seven loaves and a few small fish, and seven baskets were left. The feeding of five thousand used five loaves and two fish and left twelve baskets.",
   "M_F4_WHY": 'Jesus said, "I have compassion on the crowd", because they had been with him three days and had nothing to eat.',
   "M_F4_NEEDY_MONEY": "We can help the needy by sharing food, clothes and school items, by visiting the sick, and by giving time, not only money.",
+  "M_C5_F4_BASKETS": "After the four thousand ate, seven basketfuls were left over.",
   "M_PM_DOOR": "The crowd was so large that the four friends could not reach Jesus by the door, so they made an opening in the roof and let the man down.",
   "M_PM_HEALED_FIRST": 'In Mark 2:5 Jesus first said, "Son, your sins are forgiven." The healing of the body came after that.',
   "M_PM_ALONE": "Jesus saw their faith: the faith of the man and of the four friends who carried him and lowered him down.",
+  "M_C5_PM_TEACHERS_GLAD": "They thought he was speaking against God, because only God forgives sins. Jesus showed he had that authority.",
   "M_LS_NINETY_NINE": "The shepherd left the ninety-nine and went after the one that was lost until he found it. Each one matters to him.",
   "M_LS_PUNISH": "The shepherd put the sheep on his shoulders and rejoiced. Jesus shows that God welcomes those who come back.",
   "M_LS_JOY": "Jesus said that there is more joy in heaven over one sinner who repents than over ninety-nine righteous people who need no repentance.",
+  "M_C5_LS_WHO_TOLD": "Jesus told it because people grumbled that he welcomed sinners. God goes looking for the lost.",
   "M_SM_PEACE_NO_FIGHT": "A peacemaker helps others to settle quarrels and make up, and works to bring peace. Jesus says peacemakers will be called children of God.",
   "M_SM_PURE_CLEAN": "A pure heart is honest and loves God without pretending. Matthew 5:8 says the pure in heart will see God.",
   "M_SM_MERCY_WEAK": "To be merciful is to show kindness and to forgive when you could punish. Jesus promised that the merciful will receive mercy (Matthew 5:7).",
+  "M_C5_SM_REWARD_MIX": "Peacemakers will be called children of God. The pure in heart will see God.",
   "M_RY_SOLD": "The young man went away sad because he had great wealth. He did not do what Jesus asked.",
   "M_RY_RICH_SIN": "Jesus did not say that owning things is wrong. He showed the young man that his wealth held his heart, and that he needed to put God first and share with the poor.",
   "M_RY_OLD": 'The young man asked, "What good deed must I do to have eternal life?" Jesus pointed him to the commandments and then to following him.',
+  "M_C5_RY_COMMANDMENTS_ENOUGH": "Jesus asked him to sell what he had, give to the poor and follow him. His wealth was holding his heart.",
   "M_FM_FRIENDSHIP_ONLY": "The friend got up and gave because the man kept asking and did not give up. Jesus used this to teach us to pray persistently.",
   "M_FM_ONE_PRAYER": "Jesus told this to teach us to keep praying and not to give up. He said: ask, seek and knock.",
   "M_FM_LOAVES": "The man asked his friend for three loaves because a traveller had arrived at midnight and he had nothing to give.",
+  "M_C5_FM_GOD_ASLEEP": "God is not sleepy or unwilling. The parable teaches us to keep praying to a Father who loves to give.",
   "M_EC_OWN": "They shared what they had with anyone who was in need. They were united in giving and helping.",
   "M_EC_SAME_JOB": "A church is united by love, sharing, forgiveness and humility. People may do different things and still be one.",
   "M_EC_WHAT_DEVOTED": "Acts 2:42 says that they devoted themselves to the apostles' teaching, to fellowship, to the breaking of bread and to prayers.",
+  "M_C5_EC_DAILY_TEMPLE": "They met every day, in the temple courts and in their homes, and ate together with glad hearts.",
   "M_LS2_ONE_NAME": "Different churches use different names such as Lord's Supper, Lord's Table, Holy Communion or Eucharist for the same remembrance of Jesus. The children in a class may know different names.",
   "M_LS2_WHEN": "Jesus sat at the table with his apostles at the Passover meal.",
   "M_LS2_WHY": 'Jesus said, "Do this in remembrance of me." Christians remember what Jesus did for them whenever they share the bread and the cup.',
+  "M_C5_LS2_FEAST": "They were eating the Passover. At that meal Jesus gave the bread and the cup.",
   "M_HS_MIX": "Kindness is one of the fruit of the Spirit (Galatians 5:22-23). Prophecy is one of the gifts (1 Corinthians 12:10).",
   "M_HS_COUNT": "1 Corinthians 12:8-10 lists nine gifts of the Spirit: wisdom, knowledge, faith, healing, miracles, prophecy, telling spirits apart, tongues, and interpreting tongues.",
   "M_HS_HARMONY": "Patience, kindness, gentleness and self-control help Christians to bear with one another and live in harmony.",
+  "M_C5_HS_GIFTS_FEW": "The Spirit gives gifts to each believer, for the good of all, not only to pastors.",
   "M_PR_BROKE_OUT": "An angel of the Lord appeared, woke Peter, and the chains fell off his hands. The gates opened by themselves.",
   "M_PR_NO_PRAYER": "The church was earnestly praying to God for Peter while he was in prison.",
   "M_PR_RHODA": "Rhoda was so glad that she ran in to tell the others without opening the gate. They did not believe her at first.",
+  "M_C5_PR_HOUSE": "Peter went to the house of Mary, John Mark's mother, where many people were praying.",
   "M_FR_POPULAR": "A good friend is chosen for good character: honest, kind, respectful and responsible. Popularity and possessions are not the test.",
   "M_FR_FOLLOW": "A good friend does not push you to do wrong. You can say no politely. A real friend will respect that.",
   "M_FR_PROVERB": "Proverbs 22:24-25 says that you should not make friends with a person who has a hot temper, or you may learn his ways.",
+  "M_C5_FR_CHANGE_THEM": "We may learn the ways of the friends we keep. Say no and choose friends who help you do right.",
   "M_AD_SHAME": "The changes of growing up are normal. A child can ask a parent, guardian, teacher or trusted adult for the right information.",
   "M_AD_FRIEND_INFO": "Friends and the internet can give wrong or harmful information. The right information comes from a parent, guardian, teacher or health worker you trust.",
   "M_AD_SECRET": "Secrecy, pressure and gifts for favours are warning signs of an unhealthy relationship. A child should tell a trusted adult at once.",
@@ -10728,6 +10884,7 @@ var MIS_FEEDBACK7 = {
   "M_SL_ANIMALS": "Human life is sacred because God gave it and made us in his image (Genesis 1:27). We are not to take human life (Genesis 9:6).",
   "M_SL_ANGER": "Hitting back can cause harm. A safe way to cope with anger is to walk away, calm down, and talk to a trusted person or pray.",
   "M_SL_SOURCE": "Parents bring a child into the world, but God is the source and giver of all life.",
+  "M_C5_SL_SOME_LIVES": "Every person's life is sacred, rich or poor, sick or well, because God made each in his image.",
   "M_DR_MEDICINE": "Medicine taken as a health worker directs is not drug abuse. Drug abuse is using a substance such as alcohol, bhang or glue in a way that harms the body and mind.",
   "M_DR_ONLY_ADULTS": "Children can be tempted too, often by friends or by wanting to feel grown up. It is important to know the dangers and how to say no.",
   "M_DR_SAFE_ONE": "Even one try can start a habit that is hard to stop. Proverbs 20:1 warns that strong drink leads people astray.",
@@ -11859,6 +12016,9 @@ var FAMILIES20 = [
   })
 ];
 
+// src/ai-tutor/content/families/cre_g5_awaiting.js
+var AWAITING2 = [];
+
 // src/ai-tutor/content/subjects/cre_g5.js
 var cre_g5_default = {
   subject: "cre",
@@ -11874,6 +12034,8 @@ var cre_g5_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED7,
   signedFile: "cre_g5_signed.js",
+  awaiting: AWAITING2,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "cre5.",
@@ -12461,7 +12623,8 @@ var SKILLS8 = {
     "mis": [
       "M_TAL6_SOURCE",
       "M_TAL6_SHOW",
-      "M_TAL6_VERSE"
+      "M_TAL6_VERSE",
+      "M_C6_TAL_ONLY_SCHOOL"
     ]
   },
   "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.MARRIAGE_BIBLE": {
@@ -12475,7 +12638,8 @@ var SKILLS8 = {
     "mis": [
       "M_MAR6_ORIGIN",
       "M_MAR6_LEAVE",
-      "M_MAR6_SLEEP"
+      "M_MAR6_SLEEP",
+      "M_C6_MAR_ADAM_NAMED"
     ]
   },
   "CRES.G6.CREATI.MARRIAGE_AND_FAMILY.EARLY_MARRIAGE": {
@@ -12493,7 +12657,8 @@ var SKILLS8 = {
     "mis": [
       "M_EM6_BENEFIT",
       "M_EM6_RIGHT",
-      "M_EM6_KEEP_QUIET"
+      "M_EM6_KEEP_QUIET",
+      "M_C6_EM_BOYS_FINE"
     ]
   },
   "CRES.G6.CREATI.LEISURE.LEISURE_REST": {
@@ -12508,7 +12673,8 @@ var SKILLS8 = {
     "mis": [
       "M_LEI6_TIRED",
       "M_LEI6_IDLE",
-      "M_LEI6_DAY"
+      "M_LEI6_DAY",
+      "M_C6_LEI_SABBATH_LAZY"
     ]
   },
   "CRES.G6.CREATI.LEISURE.LEISURE_USE": {
@@ -12525,7 +12691,9 @@ var SKILLS8 = {
     ],
     "mis": [
       "M_LEI6_MISUSE",
-      "M_LEI6_NO_LIMIT"
+      "M_LEI6_NO_LIMIT",
+      "M_C6_LEI_PHONE_ALL_DAY",
+      "M_C6_LEI_ONLY_PLAY"
     ]
   },
   "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.INSPIRED": {
@@ -12540,7 +12708,8 @@ var SKILLS8 = {
     "mis": [
       "M_INS6_ONE",
       "M_INS6_HUMAN",
-      "M_INS6_USE"
+      "M_INS6_USE",
+      "M_C6_INS_AUTHORS_WRONG"
     ]
   },
   "CRES.G6.THE_BI.INSPIRED_WORD_OF_GOD.TRANSLATION": {
@@ -12558,7 +12727,8 @@ var SKILLS8 = {
     "mis": [
       "M_TRA6_CHANGE",
       "M_TRA6_ENGLISH",
-      "M_TRA6_COST"
+      "M_TRA6_COST",
+      "M_C6_TRA_NEW_BOOKS"
     ]
   },
   "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE": {
@@ -12572,7 +12742,8 @@ var SKILLS8 = {
     "mis": [
       "M_TEN6_OTHER_LAW",
       "M_TEN6_INVENTED",
-      "M_TEN6_WRONG_MATCH"
+      "M_TEN6_WRONG_MATCH",
+      "M_C6_TEN_WHERE"
     ]
   },
   "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_VALUES": {
@@ -12589,7 +12760,9 @@ var SKILLS8 = {
     ],
     "mis": [
       "M_TEN6_VALUE",
-      "M_TEN6_RELIGIOUS_ONLY"
+      "M_TEN6_RELIGIOUS_ONLY",
+      "M_C6_TEN_COVET",
+      "M_C6_TEN_OLD_ONLY"
     ]
   },
   "CRES.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF.SAMSON": {
@@ -12605,7 +12778,8 @@ var SKILLS8 = {
     "mis": [
       "M_SAM6_OWN",
       "M_SAM6_WEAPON",
-      "M_SAM6_NUMBER"
+      "M_SAM6_NUMBER",
+      "M_C6_SAM_ROPES"
     ]
   },
   "CRES.G6.THE_BI.FAITH_IN_GOD_ELISHA.ELISHA": {
@@ -12621,7 +12795,8 @@ var SKILLS8 = {
     "mis": [
       "M_ELI6_SWIM",
       "M_ELI6_OWNER",
-      "M_ELI6_SMALL"
+      "M_ELI6_SMALL",
+      "M_C6_ELI_RIVER"
     ]
   },
   "CRES.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL.JACOB": {
@@ -12638,7 +12813,8 @@ var SKILLS8 = {
     "mis": [
       "M_JAC6_WON",
       "M_JAC6_NAME",
-      "M_JAC6_PLACE"
+      "M_JAC6_PLACE",
+      "M_C6_JAC_HIP"
     ]
   },
   "CRES.G6.THE_LI.THE_CALL_OF_DISCIPLES.DISCIPLES": {
@@ -12653,7 +12829,8 @@ var SKILLS8 = {
     "mis": [
       "M_DIS6_JOB",
       "M_DIS6_WORDS",
-      "M_DIS6_ONLY_CLERGY"
+      "M_DIS6_ONLY_CLERGY",
+      "M_C6_DIS_DELAYED"
     ]
   },
   "CRES.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS.TEMPTATIONS": {
@@ -12669,7 +12846,8 @@ var SKILLS8 = {
     "mis": [
       "M_TEM6_GAVE_IN",
       "M_TEM6_FIRST",
-      "M_TEM6_ALONE"
+      "M_TEM6_ALONE",
+      "M_C6_TEM_SCRIPTURE_ANSWER"
     ]
   },
   "CRES.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST.ROMAN_OFFICER": {
@@ -12685,7 +12863,8 @@ var SKILLS8 = {
     "mis": [
       "M_ROM6_WHO",
       "M_ROM6_WENT",
-      "M_ROM6_FAITH"
+      "M_ROM6_FAITH",
+      "M_C6_ROM_JEW"
     ]
   },
   "CRES.G6.THE_LI.MIRACLE_OF_HEALING.BLEEDING_WOMAN": {
@@ -12705,7 +12884,8 @@ var SKILLS8 = {
       "M_BLE6_DOCTORS",
       "M_BLE6_YEARS",
       "M_BLE6_WORDS",
-      "M_BLE6_HELP"
+      "M_BLE6_HELP",
+      "M_C6_BLE_HIDDEN"
     ]
   },
   "CRES.G6.THE_LI.RAISING_LAZARUS_FROM_THE.LAZARUS_RAISED": {
@@ -12723,7 +12903,8 @@ var SKILLS8 = {
     "mis": [
       "M_LAZ6_WEPT",
       "M_LAZ6_DAYS",
-      "M_LAZ6_WORDS"
+      "M_LAZ6_WORDS",
+      "M_C6_LAZ_SISTERS"
     ]
   },
   "CRES.G6.THE_LI.THE_HIDDEN_TREASURE.HIDDEN_TREASURE": {
@@ -12739,7 +12920,8 @@ var SKILLS8 = {
     "mis": [
       "M_HID6_RICH",
       "M_HID6_KEEP",
-      "M_HID6_PLACE"
+      "M_HID6_PLACE",
+      "M_C6_HID_STEAL"
     ]
   },
   "CRES.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS.RICH_MAN": {
@@ -12755,7 +12937,8 @@ var SKILLS8 = {
     "mis": [
       "M_RIC6_WEALTH",
       "M_RIC6_SAME",
-      "M_RIC6_CHASM"
+      "M_RIC6_CHASM",
+      "M_C6_RIC_SEND_LAZARUS"
     ]
   },
   "CRES.G6.THE_CH.APOSTLES_CREED.CREED_TEACHING": {
@@ -12771,7 +12954,8 @@ var SKILLS8 = {
     "mis": [
       "M_CRE6_OTHER",
       "M_CRE6_BIBLE",
-      "M_CRE6_ORDER"
+      "M_CRE6_ORDER",
+      "M_C6_CRE_PILATE"
     ]
   },
   "CRES.G6.THE_CH.APOSTLES_CREED.TRINITY": {
@@ -12788,7 +12972,8 @@ var SKILLS8 = {
     "mis": [
       "M_TRI6_THREE_GODS",
       "M_TRI6_MEMBER",
-      "M_TRI6_ROLE"
+      "M_TRI6_ROLE",
+      "M_C6_TRI_SON_LATER"
     ]
   },
   "CRES.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.PAUL_SUFFERING": {
@@ -12804,7 +12989,8 @@ var SKILLS8 = {
     "mis": [
       "M_PAU6_PUNISH",
       "M_PAU6_LIST",
-      "M_PAU6_VIRTUE"
+      "M_PAU6_VIRTUE",
+      "M_C6_PAU_GAVE_UP"
     ]
   },
   "CRES.G6.THE_CH.CHURCH_UNITY.CHURCH_UNITY": {
@@ -12820,7 +13006,8 @@ var SKILLS8 = {
     "mis": [
       "M_UNI6_SAME",
       "M_UNI6_BUILDING",
-      "M_UNI6_RANK"
+      "M_UNI6_RANK",
+      "M_C6_UNI_DENOMINATION"
     ]
   },
   "CRES.G6.CHRIST.FRIENDSHIP_FORMATION.FRIENDSHIP": {
@@ -12836,7 +13023,8 @@ var SKILLS8 = {
     "mis": [
       "M_FRI6_POPULAR",
       "M_FRI6_BAD",
-      "M_FRI6_GOSSIP"
+      "M_FRI6_GOSSIP",
+      "M_C6_FRI_WISE_FOOL"
     ]
   },
   "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_BIBLE": {
@@ -12851,7 +13039,8 @@ var SKILLS8 = {
     "mis": [
       "M_SEX6_BODY",
       "M_SEX6_TEMPT",
-      "M_SEX6_SECRET"
+      "M_SEX6_SECRET",
+      "M_C6_SEX_MEDIA_NORMAL"
     ]
   },
   "CRES.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.SEXUALITY_SKILLS": {
@@ -12868,7 +13057,8 @@ var SKILLS8 = {
     "mis": [
       "M_SEX6_PRESSURE",
       "M_SEX6_GIFT",
-      "M_SEX6_CAUSE"
+      "M_SEX6_CAUSE",
+      "M_C6_SEX_CANNOT_SAY_NO"
     ]
   },
   "CRES.G6.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE": {
@@ -12881,11 +13071,14 @@ var SKILLS8 = {
       "CRE.G6.CHRIST.SANCTITY_OF_LIFE.c",
       "CRE.G6.CHRIST.SANCTITY_OF_LIFE.d"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G6.THE_BI.THE_TEN_COMMANDMENTS.TEN_OUTLINE"
+    ],
     "mis": [
       "M_SAN6_OWN",
       "M_SAN6_MOB",
-      "M_SAN6_ANGER"
+      "M_SAN6_ANGER",
+      "M_C6_SAN_SELF_HARM"
     ]
   },
   "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_BIBLE": {
@@ -12900,7 +13093,8 @@ var SKILLS8 = {
     "mis": [
       "M_DRU6_MEDICINE",
       "M_DRU6_TRY",
-      "M_DRU6_VERSE"
+      "M_DRU6_VERSE",
+      "M_C6_DRU_ADULTS_FINE"
     ]
   },
   "CRES.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_PREVENT": {
@@ -12918,7 +13112,8 @@ var SKILLS8 = {
     "mis": [
       "M_DRP6_AGENCY",
       "M_DRP6_HIDE",
-      "M_DRP6_SAYNO"
+      "M_DRP6_SAYNO",
+      "M_C6_DRP_POLICE_ONLY"
     ]
   }
 };
@@ -12926,89 +13121,120 @@ var MIS_FEEDBACK8 = {
   "M_TAL6_SOURCE": "Exodus 31:3 says God gave Bezalel his skill. Talents are gifts from God.",
   "M_TAL6_SHOW": "Romans 12:4 shows that each part of the body serves the whole. Talents are for serving others.",
   "M_TAL6_VERSE": "Romans 12:4 compares us to one body with many parts. Exodus 31:3 is about God filling Bezalel with skill.",
+  "M_C6_TAL_ONLY_SCHOOL": "Talents are many: singing, drawing, crafts, kindness, leading. God gives them all to serve others.",
   "M_MAR6_ORIGIN": "Genesis 2:21-22 says God took one of the man's ribs and made the woman.",
   "M_MAR6_LEAVE": "Genesis 2:24 says a man leaves his father and mother and is united to his wife.",
   "M_MAR6_SLEEP": "Genesis 2:21 says God caused the man to fall into a deep sleep.",
   "M_EM6_BENEFIT": "Early marriage often ends school, brings early pregnancy and its risks, and deepens poverty.",
   "M_EM6_RIGHT": "The law in Kenya says a person must be 18 to marry.",
   "M_EM6_KEEP_QUIET": "A child at risk should tell a safe adult. Help is available, including Childline Kenya 116.",
+  "M_C6_MAR_ADAM_NAMED": 'The man said, "This is now bone of my bones... she shall be called woman."',
+  "M_C6_EM_BOYS_FINE": "Early marriage harms boys too. The law says 18 for everyone.",
   "M_LEI6_TIRED": "Genesis 2:2-3 says God finished his work, rested, blessed the day and made it holy.",
   "M_LEI6_IDLE": "1 Timothy 5:13 warns against idleness that leads to gossip and meddling. Rest itself is good.",
   "M_LEI6_DAY": "Genesis 2:2 says God rested on the seventh day.",
   "M_LEI6_MISUSE": "Gambling, drugs and endless phone time waste time and can harm. Reading, sport and helping are good uses.",
   "M_LEI6_NO_LIMIT": "Self-control and responsibility help us use free time well.",
+  "M_C6_LEI_SABBATH_LAZY": "God rested from the work of creating. He never stops caring for his world.",
+  "M_C6_LEI_PHONE_ALL_DAY": "Phones are not bad, but a whole day on one crowds out rest, family and growing. Use leisure wisely.",
+  "M_C6_LEI_ONLY_PLAY": "Leisure can be play, but also reading, hobbies, sport and helping others.",
   "M_INS6_ONE": "Many people, such as Moses, David and Paul, wrote the books of the Bible as God inspired them.",
   "M_INS6_HUMAN": "2 Timothy 3:16 says all Scripture is God-breathed.",
   "M_INS6_USE": "2 Timothy 3:16 says Scripture is useful for teaching, rebuking, correcting and training in righteousness.",
   "M_TRA6_CHANGE": "Translators carry the same message into a new language so that more people can understand.",
   "M_TRA6_ENGLISH": "People understand best in the language of the heart. That is why the Bible is translated.",
   "M_TRA6_COST": "The advantage is better understanding and more readers, not a shorter Bible.",
+  "M_C6_INS_AUTHORS_WRONG": "Moses, David and Paul are among those who wrote the Bible. Jesus' words were written down by others.",
+  "M_C6_TRA_NEW_BOOKS": "Translation puts the same books into another language. Nothing new is added.",
   "M_TEN6_OTHER_LAW": "The command to honour parents is in Exodus 20. Giving a tenth is a different law.",
   "M_TEN6_INVENTED": "The Ten Commandments in Exodus 20:3-17 do not set the number of daily prayers.",
   "M_TEN6_WRONG_MATCH": "Taking what belongs to someone else breaks the command not to steal.",
   "M_TEN6_VALUE": "Honouring parents teaches respect.",
   "M_TEN6_RELIGIOUS_ONLY": "Some commands are about God and some about how we treat other people.",
+  "M_C6_TEN_WHERE": "God gave the Ten Commandments to Moses for Israel at Mount Sinai.",
+  "M_C6_TEN_COVET": "Wanting what is someone else's so much that it rules you is coveting. Be content and thankful.",
+  "M_C6_TEN_OLD_ONLY": "They still guide us today: love God, respect parents, be honest, protect life.",
   "M_SAM6_OWN": "Judges 15:14 says the Spirit of the Lord came on him in power.",
   "M_SAM6_WEAPON": "Judges 15:15 says he found a fresh jawbone of a donkey.",
   "M_SAM6_NUMBER": "Judges 15:15 says he killed a thousand men.",
+  "M_C6_SAM_ROPES": "When the Spirit of the Lord came on Samson, the ropes became like burnt flax and fell off.",
   "M_ELI6_SWIM": "2 Kings 6:6 says Elisha cut a stick, threw it in and the iron floated.",
   "M_ELI6_OWNER": '2 Kings 6:5 says the man cried out, "It was borrowed!"',
   "M_ELI6_SMALL": "God cared about a borrowed axe head. We can take small needs to him.",
+  "M_C6_ELI_RIVER": "They were cutting trees by the River Jordan when the axe head fell in.",
   "M_JAC6_WON": "Jacob was blessed because he refused to let go until he was blessed, not because he was stronger.",
   "M_JAC6_NAME": "Genesis 32:28 says his name was changed to Israel.",
   "M_JAC6_PLACE": "Genesis 32:22 says they crossed the ford of the Jabbok.",
+  "M_C6_JAC_HIP": "Jacob's hip was put out of joint and he limped, but he held on until he was blessed.",
   "M_DIS6_JOB": "Mark 1:16 says they were fishermen casting a net.",
   "M_DIS6_WORDS": 'Mark 1:17 records "Follow me, and I will make you fishers of men".',
   "M_DIS6_ONLY_CLERGY": "God calls people to serve him as teachers, nurses, parents, farmers and pastors.",
+  "M_C6_DIS_DELAYED": "They left their nets at once and followed Jesus.",
   "M_TEM6_GAVE_IN": "Jesus did not give in. He answered with Scripture.",
   "M_TEM6_FIRST": "Luke 4:3 says the devil first told Jesus to turn a stone into bread.",
   "M_TEM6_ALONE": "Jesus used God's word. We can pray, remember the word and ask for help.",
+  "M_C6_TEM_SCRIPTURE_ANSWER": `Jesus answered each time with God's word, "It is written". We can use God's word too.`,
   "M_ROM6_WHO": "Matthew 8:6 says the officer's servant was paralysed.",
   "M_ROM6_WENT": "The officer said Jesus need only say the word, and the servant was healed that hour.",
   "M_ROM6_FAITH": "Matthew 8:10 says Jesus was amazed and said he had not found such great faith.",
+  "M_C6_ROM_JEW": "He was a Roman officer, not a Jew. Jesus praised his great faith.",
   "M_BLE6_DOCTORS": "Luke 8:43 says she had spent all on doctors and none could heal her. Jesus healed her.",
   "M_BLE6_YEARS": "Luke 8:43 says she had bled for twelve years.",
   "M_BLE6_WORDS": 'Luke 8:48 records "Daughter, your faith has healed you. Go in peace."',
   "M_BLE6_HELP": "The church and the government both run hospitals and clinics and care for the sick.",
+  "M_C6_BLE_HIDDEN": 'She came trembling, knelt and told everyone what happened. Jesus called her "Daughter".',
   "M_LAZ6_WEPT": "John 11:35, the shortest verse, says Jesus wept.",
   "M_LAZ6_DAYS": "John 11:39 says he had been dead four days.",
   "M_LAZ6_WORDS": 'John 11:43 records "Lazarus, come out!"',
+  "M_C6_LAZ_SISTERS": "Mary and Martha were Lazarus' sisters, at Bethany.",
   "M_HID6_RICH": "The treasure stands for the kingdom of heaven, worth more than anything we own.",
   "M_HID6_KEEP": "Matthew 13:44 says he sold all he had and bought the field.",
   "M_HID6_PLACE": "Matthew 13:44 says the treasure was hidden in a field.",
+  "M_C6_HID_STEAL": "He did not steal it. He sold all he had and bought the field with joy.",
   "M_RIC6_WEALTH": "The parable condemns the rich man for ignoring the needy Lazarus.",
   "M_RIC6_SAME": "In the parable Lazarus is a beggar. The Lazarus of John 11 was the brother of Mary and Martha.",
   "M_RIC6_CHASM": "Luke 16:26 says a great chasm had been fixed between them.",
+  "M_C6_RIC_SEND_LAZARUS": "Abraham said they had Moses and the Prophets to listen to. We have God's word now.",
   "M_CRE6_OTHER": "The creed says Jesus was born of the Virgin Mary.",
   "M_CRE6_BIBLE": "The creed is a short statement of Christian belief. It is not a book of the Bible.",
   "M_CRE6_ORDER": "The creed begins with God the Father Almighty, maker of heaven and earth.",
   "M_TRI6_THREE_GODS": "Christians believe in one God, Father, Son and Holy Spirit.",
   "M_TRI6_MEMBER": "The three persons are the Father, the Son and the Holy Spirit.",
   "M_TRI6_ROLE": "The Father is the creator, the Son is the saviour, and the Holy Spirit is the helper.",
+  "M_C6_CRE_PILATE": "The creed says Jesus suffered under Pontius Pilate, the Roman governor.",
+  "M_C6_TRI_SON_LATER": "Father, Son and Holy Spirit are one God. The Son is not a smaller god.",
   "M_PAU6_PUNISH": "Paul listed these hardships as part of faithful service, not as punishment.",
   "M_PAU6_LIST": "2 Corinthians 6:5 lists beatings, imprisonments, riots, hard work, sleepless nights and hunger.",
   "M_PAU6_VIRTUE": "2 Corinthians 6:6 names purity, understanding, patience, kindness and sincere love.",
+  "M_C6_PAU_GAVE_UP": "Paul kept serving God through every hardship, with patience and kindness.",
   "M_UNI6_SAME": "1 Corinthians 12:12 says one body has many different parts. Unity is not sameness.",
   "M_UNI6_BUILDING": 'Jesus said "I will build my church", which means his people, not only a building.',
   "M_UNI6_RANK": "Galatians 3:28 says all are one in Christ Jesus.",
+  "M_C6_UNI_DENOMINATION": "All who follow Christ are one body, even in different churches.",
   "M_FRI6_POPULAR": "A good friend is honest, kind and helps you do right.",
   "M_FRI6_BAD": "1 Corinthians 15:33 warns that bad company corrupts good character.",
   "M_FRI6_GOSSIP": "Proverbs 16:28 says a gossip separates close friends.",
+  "M_C6_FRI_WISE_FOOL": "Walk with the wise and you become wise; a companion of fools suffers harm.",
   "M_SEX6_BODY": "1 Corinthians 6:19 says the body is a temple of the Holy Spirit.",
   "M_SEX6_TEMPT": "James 1:14-15 says desire gives birth to sin when it is acted on. Being tempted is not itself a sin.",
   "M_SEX6_SECRET": "A trusted adult can help. Hiding a worry makes it harder.",
   "M_SEX6_PRESSURE": "Assertiveness and refusal skills help a young person say no.",
   "M_SEX6_GIFT": "Gifts offered for favours are a trap. Refuse and tell a trusted adult.",
   "M_SEX6_CAUSE": "Peer pressure, harmful content, idleness and too little guidance are causes.",
+  "M_C6_SEX_MEDIA_NORMAL": "Films do not decide what is right. God teaches us to keep sex for marriage and honour him with our bodies.",
+  "M_C6_SEX_CANNOT_SAY_NO": "You can always say no to what is wrong or unsafe, even to an older person, and tell a trusted adult.",
   "M_SAN6_OWN": "Life is a gift from God, so we protect it.",
   "M_SAN6_MOB": "Mob justice violates the right to life. Hand a suspect to the police.",
   "M_SAN6_ANGER": "In Matthew 5:21-22 Jesus teaches that anger toward a brother is also serious.",
+  "M_C6_SAN_SELF_HARM": "Your own life is God's gift too. Protect it, as you protect others'.",
   "M_DRU6_MEDICINE": "Medicine taken as a health worker directs is not abuse. Sniffing glue is.",
   "M_DRU6_TRY": "Trying once can lead to addiction.",
   "M_DRU6_VERSE": "Ephesians 5:18 says do not get drunk, but be filled with the Spirit.",
   "M_DRP6_AGENCY": "NACADA is the National Authority for the Campaign Against Alcohol and Drug Abuse.",
   "M_DRP6_HIDE": "Christians care for those who struggle and help them get counselling and treatment.",
-  "M_DRP6_SAYNO": "Saying no firmly takes courage. Walk away and tell an adult."
+  "M_DRP6_SAYNO": "Saying no firmly takes courage. Walk away and tell an adult.",
+  "M_C6_DRU_ADULTS_FINE": "Ephesians 5:18 says do not get drunk. It is for adults too.",
+  "M_C6_DRP_POLICE_ONLY": "Everyone has a part: families, churches, schools, NACADA, the police and you."
 };
 
 // src/ai-tutor/content/families/cre_g6_signed.js
@@ -13938,6 +14164,9 @@ var FAMILIES23 = [
   })
 ];
 
+// src/ai-tutor/content/families/cre_g6_awaiting.js
+var AWAITING3 = [];
+
 // src/ai-tutor/content/subjects/cre_g6.js
 var cre_g6_default = {
   subject: "cre",
@@ -13953,6 +14182,8 @@ var cre_g6_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED8,
   signedFile: "cre_g6_signed.js",
+  awaiting: AWAITING3,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "cre6.",
@@ -14565,13 +14796,15 @@ var SKILLS9 = {
     "outcome": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
     "outcomes": [
       "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
-      "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b"
+      "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b",
+      "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.c"
     ],
     "pre": [],
     "mis": [
       "M_CR7_CV_MARKS",
       "M_CR7_CV_CHURCH_ONLY",
-      "M_CR7_CV_VALUE_MIX"
+      "M_CR7_CV_VALUE_MIX",
+      "M_CR7_CV_RULES_ONLY"
     ]
   },
   "CRES.G7.CREATI.ACCOUNTS_OF_CREATION.CREATION_TWO": {
@@ -14587,7 +14820,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_CT_SEVEN",
       "M_CR7_CT_DUST",
-      "M_CR7_CT_ATTRIBUTE"
+      "M_CR7_CT_ATTRIBUTE",
+      "M_CR7_CT_ORDER_MAN"
     ]
   },
   "CRES.G7.CREATI.STEWARDSHIP_OVER_CREATIO.STEWARD_ANIMALS": {
@@ -14604,7 +14838,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_SA_RULE_HARM",
       "M_CR7_SA_PROTECT",
-      "M_CR7_SA_NOT_MINE"
+      "M_CR7_SA_NOT_MINE",
+      "M_CR7_SA_POACH_OK"
     ]
   },
   "CRES.G7.CREATI.RESPONSIBILITY_OVER_PLAN.STEWARD_PLANTS": {
@@ -14622,7 +14857,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_SP_WASTE",
       "M_CR7_SP_FOOD",
-      "M_CR7_SP_INCOME"
+      "M_CR7_SP_INCOME",
+      "M_CR7_SP_BURN_BUSH"
     ]
   },
   "CRES.G7.CREATI.USE_OF_NATURAL_RESOURCES.RESOURCES_USE": {
@@ -14640,7 +14876,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_RU_MISUSE",
       "M_CR7_RU_EFFECT",
-      "M_CR7_RU_GOOD"
+      "M_CR7_RU_GOOD",
+      "M_CR7_RU_ENDLESS"
     ]
   },
   "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS": {
@@ -14656,7 +14893,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_BF_STORY_ONLY",
       "M_CR7_BF_CHURCH_ONLY",
-      "M_CR7_BF_SERVICE"
+      "M_CR7_BF_SERVICE",
+      "M_CR7_BF_SPIRIT_ONLY"
     ]
   },
   "CRES.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.BIBLE_DIVISIONS": {
@@ -14673,7 +14911,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_BD_NUMBER",
       "M_CR7_BD_SORT_OT",
-      "M_CR7_BD_SORT_NT"
+      "M_CR7_BD_SORT_NT",
+      "M_CR7_BD_GROUPS"
     ]
   },
   "CRES.G7.THE_BI.BIBLE_TRANSLATION.BIBLE_TRANSLATION": {
@@ -14692,7 +14931,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_BT_LANGUAGE",
       "M_CR7_BT_WHY",
-      "M_CR7_BT_EFFECT"
+      "M_CR7_BT_EFFECT",
+      "M_CR7_BT_VERSION_DIFFERENT_BIBLE"
     ]
   },
   "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_PREPARED": {
@@ -14707,7 +14947,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_MP_PALACE",
       "M_CR7_MP_BUSH",
-      "M_CR7_MP_AARON"
+      "M_CR7_MP_AARON",
+      "M_CR7_MP_MIDIAN"
     ]
   },
   "CRES.G7.THE_BI.LEADERSHIP_IN_ISRAEL.MOSES_QUALITIES": {
@@ -14723,7 +14964,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_MQ_PRIDE",
       "M_CR7_MQ_LEADER",
-      "M_CR7_MQ_FEAR"
+      "M_CR7_MQ_FEAR",
+      "M_CR7_MQ_NEVER_AFRAID"
     ]
   },
   "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY": {
@@ -14740,7 +14982,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_MS_BETHLEHEM",
       "M_CR7_MS_VIRGIN",
-      "M_CR7_MS_FULFIL"
+      "M_CR7_MS_FULFIL",
+      "M_CR7_MS_IMMANUEL"
     ]
   },
   "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST": {
@@ -14750,7 +14993,8 @@ var SKILLS9 = {
     "outcomes": [
       "CRE.G7.THE_EA.JOHN_THE_BAPTIST.a",
       "CRE.G7.THE_EA.JOHN_THE_BAPTIST.b",
-      "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d"
+      "CRE.G7.THE_EA.JOHN_THE_BAPTIST.d",
+      "CRE.G7.THE_EA.JOHN_THE_BAPTIST.c"
     ],
     "pre": [
       "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY"
@@ -14758,7 +15002,9 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_JB_PARENTS",
       "M_CR7_JB_ROLE",
-      "M_CR7_JB_MESSAGE"
+      "M_CR7_JB_MESSAGE",
+      "M_CR7_JB_LAMB_LITERAL",
+      "M_CR7_JB_GREATER"
     ]
   },
   "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_BIRTH": {
@@ -14771,12 +15017,14 @@ var SKILLS9 = {
       "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.c"
     ],
     "pre": [
-      "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST"
+      "CRES.G7.THE_EA.JOHN_THE_BAPTIST.JOHN_BAPTIST",
+      "CRES.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.MESSIAH_PROPHECY"
     ],
     "mis": [
       "M_CR7_JBR_PLACE",
       "M_CR7_JBR_ANGEL",
-      "M_CR7_JBR_DEDICATION"
+      "M_CR7_JBR_DEDICATION",
+      "M_CR7_JBR_SIMEON"
     ]
   },
   "CRES.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.JESUS_TEMPLE": {
@@ -14793,7 +15041,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_JT_AGE",
       "M_CR7_JT_DAYS",
-      "M_CR7_JT_HOME"
+      "M_CR7_JT_HOME",
+      "M_CR7_JT_TEACHING"
     ]
   },
   "CRES.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.WORSHIP_FORMS": {
@@ -14809,7 +15058,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_WF_FASTING",
       "M_CR7_WF_PRAYER",
-      "M_CR7_WF_THANKS"
+      "M_CR7_WF_THANKS",
+      "M_CR7_WF_FAST_DIET"
     ]
   },
   "CRES.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.CHURCH_SERVICE": {
@@ -14821,11 +15071,14 @@ var SKILLS9 = {
       "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.b",
       "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.c"
     ],
-    "pre": [],
+    "pre": [
+      "CRES.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.BIBLE_FUNCTIONS"
+    ],
     "mis": [
       "M_CR7_CS_SCHOOLS",
       "M_CR7_CS_BARRIER",
-      "M_CR7_CS_SOLUTION"
+      "M_CR7_CS_SOLUTION",
+      "M_CR7_CS_PAST_ONLY"
     ]
   },
   "CRES.G7.CHRIST.HUMAN_SEXUALITY.SEXUALITY_BASICS": {
@@ -14835,13 +15088,17 @@ var SKILLS9 = {
     "outcomes": [
       "CRE.G7.CHRIST.HUMAN_SEXUALITY.a",
       "CRE.G7.CHRIST.HUMAN_SEXUALITY.b",
-      "CRE.G7.CHRIST.HUMAN_SEXUALITY.c"
+      "CRE.G7.CHRIST.HUMAN_SEXUALITY.c",
+      "CRE.G7.CHRIST.HUMAN_SEXUALITY.d",
+      "CRE.G7.CHRIST.HUMAN_SEXUALITY.e"
     ],
     "pre": [],
     "mis": [
       "M_CR7_SB_SHAME",
       "M_CR7_SB_HEALTHY",
-      "M_CR7_SB_PART"
+      "M_CR7_SB_PART",
+      "M_CR7_SB_NO_CONSEQUENCE",
+      "M_CR7_SB_CHASTE_IMPOSSIBLE"
     ]
   },
   "CRES.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.MARRIAGE_FAMILY": {
@@ -14859,7 +15116,8 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_MF_GENESIS",
       "M_CR7_MF_VALUE",
-      "M_CR7_MF_LASTING"
+      "M_CR7_MF_LASTING",
+      "M_CR7_MF_CHURCH_ROLE"
     ]
   },
   "CRES.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS_ABUSE": {
@@ -14869,13 +15127,15 @@ var SKILLS9 = {
     "outcomes": [
       "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a",
       "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
-      "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c"
+      "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
+      "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e"
     ],
     "pre": [],
     "mis": [
       "M_CR7_DA_DRUG",
       "M_CR7_DA_EFFECT",
-      "M_CR7_DA_REFUSE"
+      "M_CR7_DA_REFUSE",
+      "M_CR7_DA_PROVERBS_WINE"
     ]
   },
   "CRES.G7.CHRIST.GAMBLING.GAMBLING": {
@@ -14891,7 +15151,26 @@ var SKILLS9 = {
     "mis": [
       "M_CR7_GM_TYPE",
       "M_CR7_GM_EFFECT",
-      "M_CR7_GM_WEALTH"
+      "M_CR7_GM_WEALTH",
+      "M_CR7_GM_ONE_BET"
+    ]
+  },
+  "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES": {
+    "name": "Outline the teachings on money, wealth and true riches in the scriptures provided (1 Timothy 6:10, 6:17-19; Proverbs 13:11, 28:20-22; Ephesians 4:28; Matthew 6:19-21; Hebrews 13:5)",
+    "sub": "CRE.G7.CHRIST.GAMBLING",
+    "outcome": "CRE.G7.CHRIST.GAMBLING.c",
+    "outcomes": [
+      "CRE.G7.CHRIST.GAMBLING.c",
+      "CRE.G7.CHRIST.GAMBLING.e"
+    ],
+    "pre": [
+      "CRES.G7.CHRIST.GAMBLING.GAMBLING"
+    ],
+    "mis": [
+      "M_CR7_MR_MONEY_EVIL",
+      "M_CR7_MR_QUICK_RICH",
+      "M_CR7_MR_TREASURE_BANK",
+      "M_CR7_MR_THIEF_KEEP"
     ]
   },
   "CRES.G7.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA": {
@@ -14902,13 +15181,15 @@ var SKILLS9 = {
       "CRE.G7.CHRIST.SOCIAL_MEDIA.a",
       "CRE.G7.CHRIST.SOCIAL_MEDIA.b",
       "CRE.G7.CHRIST.SOCIAL_MEDIA.c",
-      "CRE.G7.CHRIST.SOCIAL_MEDIA.d"
+      "CRE.G7.CHRIST.SOCIAL_MEDIA.d",
+      "CRE.G7.CHRIST.SOCIAL_MEDIA.e"
     ],
     "pre": [],
     "mis": [
       "M_CR7_SM_PLATFORM",
       "M_CR7_SM_BULLY",
-      "M_CR7_SM_PRIVATE"
+      "M_CR7_SM_PRIVATE",
+      "M_CR7_SM_DELETED_GONE"
     ]
   }
 };
@@ -14916,66 +15197,93 @@ var MIS_FEEDBACK9 = {
   "M_CR7_CV_MARKS": "CRE helps us know God and live with good values.",
   "M_CR7_CV_CHURCH_ONLY": "We show values everywhere we live.",
   "M_CR7_CV_VALUE_MIX": "Honesty is a value; cheating is not.",
+  "M_CR7_CV_RULES_ONLY": "CRE helps us know God and grow in values. It is more than rules.",
   "M_CR7_CT_SEVEN": "God created in six days and rested on the seventh.",
   "M_CR7_CT_DUST": "The man formed from the dust is in Genesis 2.",
   "M_CR7_CT_ATTRIBUTE": "God is powerful and the creator of all things.",
+  "M_CR7_CT_ORDER_MAN": "In Genesis 1, people were made on the sixth day, after plants and animals.",
   "M_CR7_SA_RULE_HARM": "Ruling over means caring for them as God's creation.",
   "M_CR7_SA_PROTECT": "Keeping rivers clean and nests safe protects them.",
   "M_CR7_SA_NOT_MINE": "Creation belongs to God and we care for it.",
+  "M_CR7_SA_POACH_OK": "Poaching harms God's creation and breaks the law. There are honest ways to earn.",
   "M_CR7_SP_WASTE": "Plant a new tree when we cut one.",
   "M_CR7_SP_FOOD": "God gave plants for food and asked us to care for the garden.",
   "M_CR7_SP_INCOME": "Good crop care gives food and income.",
+  "M_CR7_SP_BURN_BUSH": "Burning harms the soil and creatures. Responsible stewards clear land carefully and keep soil covered.",
   "M_CR7_RU_MISUSE": "Polluting the river is misuse of water.",
   "M_CR7_RU_EFFECT": "Cutting trees without replanting causes erosion and drought.",
   "M_CR7_RU_GOOD": "Planting crops and covering soil uses it well.",
+  "M_CR7_RU_ENDLESS": "Resources can run out when misused. Caring for them is our God-given work.",
   "M_CR7_BF_STORY_ONLY": "The Bible teaches, guides and gives hope.",
   "M_CR7_BF_CHURCH_ONLY": "Everyone may read and learn from the Bible.",
   "M_CR7_BF_SERVICE": "Christians use the Bible in worship, teaching and service.",
+  "M_CR7_BF_SPIRIT_ONLY": "The Bible guides the whole person: spirit, mind, body and relationships.",
   "M_CR7_BD_NUMBER": "The Bible has the Old and the New Testament.",
   "M_CR7_BD_SORT_OT": "Genesis is the first book of the Old Testament.",
   "M_CR7_BD_SORT_NT": "Matthew is the first book of the New Testament.",
+  "M_CR7_BD_GROUPS": "Psalms is in the Poetry and Wisdom books of the Old Testament.",
   "M_CR7_BT_LANGUAGE": "The New Testament was first written in Greek.",
   "M_CR7_BT_WHY": "Translation lets people read the Bible in their own language.",
   "M_CR7_BT_EFFECT": "Translation helps reading and education.",
+  "M_CR7_BT_VERSION_DIFFERENT_BIBLE": "A version is one translation of the same Bible. The message is the same.",
   "M_CR7_MP_PALACE": "Moses was brought up in Pharaoh's palace.",
   "M_CR7_MP_BUSH": "God called Moses at the burning bush.",
   "M_CR7_MP_AARON": "Aaron, his brother, helped Moses speak.",
   "M_CR7_MQ_PRIDE": "Moses showed humility and obeyed God.",
   "M_CR7_MQ_LEADER": "A leader of integrity is honest and fair.",
   "M_CR7_MQ_FEAR": "Moses was helped by God and others.",
+  "M_CR7_MP_MIDIAN": "Moses was a shepherd in Midian. Caring for sheep helped prepare him to lead God's people.",
+  "M_CR7_MQ_NEVER_AFRAID": "Moses was unsure and afraid at first, but he obeyed God and grew as a leader.",
   "M_CR7_MS_BETHLEHEM": "Micah 5:2 names Bethlehem.",
   "M_CR7_MS_VIRGIN": "Isaiah 7:14 says a virgin will bear a son called Immanuel.",
   "M_CR7_MS_FULFIL": "A prophecy is fulfilled when it comes true.",
+  "M_CR7_MS_IMMANUEL": 'Immanuel means "God with us". It is a name for Jesus.',
   "M_CR7_JB_PARENTS": "John's parents were Zechariah and Elizabeth.",
   "M_CR7_JB_ROLE": "John prepared the way for the Messiah.",
   "M_CR7_JB_MESSAGE": "John told people to repent and share.",
+  "M_CR7_JB_LAMB_LITERAL": "The Lamb of God means Jesus would give his life to take away the sin of the world.",
+  "M_CR7_JB_GREATER": "John said the one coming was more powerful; John was not worthy even to untie his sandals.",
   "M_CR7_JBR_PLACE": "Jesus was born in Bethlehem.",
   "M_CR7_JBR_ANGEL": "The angel Gabriel told Mary.",
   "M_CR7_JBR_DEDICATION": "Jesus was dedicated at the Temple in Jerusalem.",
   "M_CR7_JT_AGE": "Jesus was twelve years old.",
   "M_CR7_JT_DAYS": "His parents found Him after three days.",
   "M_CR7_JT_HOME": "Jesus went home with them and obeyed.",
+  "M_CR7_JBR_SIMEON": "Simeon took Jesus in his arms and praised God, and the prophet Anna gave thanks.",
+  "M_CR7_JT_TEACHING": "Jesus sat with the teachers, listening and asking questions, and they were amazed at his understanding.",
   "M_CR7_WF_FASTING": "Jesus taught to fast without showing off.",
   "M_CR7_WF_PRAYER": "Prayer is talking with God.",
   "M_CR7_WF_THANKS": "Thanksgiving is thanking God.",
+  "M_CR7_WF_FAST_DIET": "Christian fasting is going without food for a time to pray and seek God, not dieting.",
   "M_CR7_CS_SCHOOLS": "Churches started many schools and hospitals.",
   "M_CR7_CS_BARRIER": "Poverty and long distances are barriers.",
   "M_CR7_CS_SOLUTION": "Training workers and working together help.",
+  "M_CR7_CS_PAST_ONLY": "The church still sponsors schools and runs hospitals and clinics today.",
   "M_CR7_SB_SHAME": "Tell a trusted adult if you feel unsafe.",
   "M_CR7_SB_HEALTHY": "Healthy relationships have respect and honesty.",
   "M_CR7_SB_PART": "Sexuality is part of who we are, to be handled with respect.",
+  "M_CR7_SB_NO_CONSEQUENCE": "Sex before marriage can bring early pregnancy, infections, leaving school and broken trust, whether or not anyone finds out.",
+  "M_CR7_SB_CHASTE_IMPOSSIBLE": "Yes, many young people stay chaste. God's help, good friends and self-control make it possible.",
   "M_CR7_MF_GENESIS": "A man is joined to his wife and they become one.",
   "M_CR7_MF_VALUE": "Love and forgiveness keep a family stable.",
   "M_CR7_MF_LASTING": "God planned marriage to be lasting.",
+  "M_CR7_MF_CHURCH_ROLE": "Churches teach and mentor young people and offer counselling before marriage.",
   "M_CR7_DA_DRUG": "Bhang is an abused drug.",
   "M_CR7_DA_EFFECT": "Drug abuse harms health and school work.",
   "M_CR7_DA_REFUSE": "Refuse and tell a trusted adult.",
+  "M_CR7_DA_PROVERBS_WINE": "Proverbs 20:1 warns that wine mocks and beer brawls. Being led astray by them is not wise.",
   "M_CR7_GM_TYPE": "Betting money on a game is gambling.",
   "M_CR7_GM_EFFECT": "Gambling causes debt and quarrels.",
   "M_CR7_GM_WEALTH": "1 Timothy 6:10 warns about the love of money.",
+  "M_CR7_MR_MONEY_EVIL": "The Bible says the love of money is a root of all kinds of evil, not money itself.",
+  "M_CR7_MR_QUICK_RICH": "Money gathered little by little grows. Chasing quick riches leads to trouble.",
+  "M_CR7_MR_TREASURE_BANK": "Treasures in heaven are good deeds, generosity and faithfulness to God, which moth and rust cannot destroy.",
+  "M_CR7_MR_THIEF_KEEP": "Ephesians 4:28 says: stop stealing, work honestly, and share with those in need.",
+  "M_CR7_GM_ONE_BET": "One bet, especially a win, can start a habit that leads to debt. Do not be mastered by anything.",
   "M_CR7_SM_PLATFORM": "WhatsApp is a social media platform.",
   "M_CR7_SM_BULLY": "Save the message and tell a trusted adult.",
-  "M_CR7_SM_PRIVATE": "Keep private information safe and be kind."
+  "M_CR7_SM_PRIVATE": "Keep private information safe and be kind.",
+  "M_CR7_SM_DELETED_GONE": "Once posted, something can be saved and shared even after you delete it. Think before you post."
 };
 
 // src/ai-tutor/content/families/cre_g7_signed.js
@@ -15434,6 +15742,11 @@ var FAMILIES26 = [
   ], ["a", "b", "c", "d"])
 ];
 
+// src/ai-tutor/content/families/cre_g7_awaiting.js
+var AWAITING4 = [
+  "CRES.G7.CHRIST.GAMBLING.MONEY_RICHES"
+];
+
 // src/ai-tutor/content/subjects/cre_g7.js
 var cre_g7_default = {
   subject: "cre",
@@ -15450,6 +15763,8 @@ var cre_g7_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED9,
   signedFile: "cre_g7_signed.js",
+  awaiting: AWAITING4,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "cre7.",
@@ -16097,7 +16412,26 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_SO_FRUIT",
       "M_CR8_SO_TEMPT",
-      "M_CR8_SO_RESULT"
+      "M_CR8_SO_RESULT",
+      "M_CR8_SO_SHAME_HIDE"
+    ]
+  },
+  "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY": {
+    "name": "Analyse the causes of sin today and the moral values and life skills that help overcome temptation (James 1:13-15; 1 John 2:16; 1 Corinthians 10:13; Matthew 26:41)",
+    "sub": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_",
+    "outcome": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.c",
+    "outcomes": [
+      "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.c",
+      "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.d"
+    ],
+    "pre": [
+      "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_ORIGIN"
+    ],
+    "mis": [
+      "M_CR8_ST_GOD_TEMPTS",
+      "M_CR8_ST_DEVIL_ONLY",
+      "M_CR8_ST_NO_WAY_OUT",
+      "M_CR8_ST_TEMPTED_SINNED"
     ]
   },
   "CRES.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.REDEMPTION": {
@@ -16115,7 +16449,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_RD_CLOTHES",
       "M_CR8_RD_JOHN",
-      "M_CR8_RD_WHY"
+      "M_CR8_RD_WHY",
+      "M_CR8_RD_EARN"
     ]
   },
   "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_FAITH": {
@@ -16130,7 +16465,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_AF_CALL",
       "M_CR8_AF_ISAAC",
-      "M_CR8_AF_FAITH"
+      "M_CR8_AF_FAITH",
+      "M_CR8_AF_SARAH_LAUGH"
     ]
   },
   "CRES.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.ABRAHAM_PROMISES": {
@@ -16147,7 +16483,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_AP_LAND",
       "M_CR8_AP_BLESS",
-      "M_CR8_AP_TRUST"
+      "M_CR8_AP_TRUST",
+      "M_CR8_AP_STARS"
     ]
   },
   "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM": {
@@ -16165,7 +16502,27 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_CA_MEANING",
       "M_CR8_CA_SIGN",
-      "M_CR8_CA_NAME"
+      "M_CR8_CA_NAME",
+      "M_CR8_CA_ONE_SIDED"
+    ]
+  },
+  "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY": {
+    "name": "Identify covenants in modern life, evaluate the marks of ungodly covenants and discern them by the word of God",
+    "sub": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT",
+    "outcome": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.a",
+    "outcomes": [
+      "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.a",
+      "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.e",
+      "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.f"
+    ],
+    "pre": [
+      "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANT_ABRAHAM"
+    ],
+    "mis": [
+      "M_CR8_CT_ALL_GOOD",
+      "M_CR8_CT_NOT_COVENANT",
+      "M_CR8_CT_SECRET_SAFE",
+      "M_CR8_CT_DISCERN_FEELING"
     ]
   },
   "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.KINGSHIP_ISRAEL": {
@@ -16180,7 +16537,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_KI_REASON",
       "M_CR8_KI_WARNING",
-      "M_CR8_KI_NATIONS"
+      "M_CR8_KI_NATIONS",
+      "M_CR8_KI_REJECT_GOD"
     ]
   },
   "CRES.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.SAUL_FAILURES": {
@@ -16197,7 +16555,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_SF_SACRIFICE",
       "M_CR8_SF_AMALEK",
-      "M_CR8_SF_RESULT"
+      "M_CR8_SF_RESULT",
+      "M_CR8_SF_OBEY_SACRIFICE"
     ]
   },
   "CRES.G8.THE_LI.HEALING_OF_BLIND_BARTIMA.BARTIMAEUS": {
@@ -16212,7 +16571,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_BT_PLACE",
       "M_CR8_BT_CRY",
-      "M_CR8_BT_RESULT"
+      "M_CR8_BT_RESULT",
+      "M_CR8_BT_CLOAK"
     ]
   },
   "CRES.G8.THE_LI.CALMING_THE_STORM.CALMING_STORM": {
@@ -16227,7 +16587,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_CS_SLEEP",
       "M_CR8_CS_WORDS",
-      "M_CR8_CS_FAITH"
+      "M_CR8_CS_FAITH",
+      "M_CR8_CS_FAITH_NO_FEAR"
     ]
   },
   "CRES.G8.THE_LI.HEALING_OF_THE_PARALYTIC.PARALYTIC": {
@@ -16243,7 +16604,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_PL_ROOF",
       "M_CR8_PL_SINS",
-      "M_CR8_PL_OPPOSITION"
+      "M_CR8_PL_OPPOSITION",
+      "M_CR8_PL_WHY_OPPOSE"
     ]
   },
   "CRES.G8.TEACHI.TEACHINGS_ON_PRAYER.PRAYER": {
@@ -16258,7 +16620,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_PR_LORDS",
       "M_CR8_PR_FAITH",
-      "M_CR8_PR_PERSIST"
+      "M_CR8_PR_PERSIST",
+      "M_CR8_PR_FRIENDS_ONLY"
     ]
   },
   "CRES.G8.TEACHI.THE_LOST_SHEEP.LOST_SHEEP": {
@@ -16272,7 +16635,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_LS_NUMBER",
       "M_CR8_LS_ACTION",
-      "M_CR8_LS_JOY"
+      "M_CR8_LS_JOY",
+      "M_CR8_LS_WHO_LOST"
     ]
   },
   "CRES.G8.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT": {
@@ -16281,13 +16645,15 @@ var SKILLS10 = {
     "outcome": "CRE.G8.THE_CH.THE_HOLY_SPIRIT.a",
     "outcomes": [
       "CRE.G8.THE_CH.THE_HOLY_SPIRIT.a",
-      "CRE.G8.THE_CH.THE_HOLY_SPIRIT.b"
+      "CRE.G8.THE_CH.THE_HOLY_SPIRIT.b",
+      "CRE.G8.THE_CH.THE_HOLY_SPIRIT.d"
     ],
     "pre": [],
     "mis": [
       "M_CR8_HS_DAY",
       "M_CR8_HS_SIGN",
-      "M_CR8_HS_FRUIT"
+      "M_CR8_HS_FRUIT",
+      "M_CR8_HS_CHURCH_ACTIVITY"
     ]
   },
   "CRES.G8.THE_CH.ACTS_OF_COMPASSION.COMPASSION": {
@@ -16297,13 +16663,16 @@ var SKILLS10 = {
     "outcomes": [
       "CRE.G8.THE_CH.ACTS_OF_COMPASSION.a",
       "CRE.G8.THE_CH.ACTS_OF_COMPASSION.c",
-      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.e"
+      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.e",
+      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.b",
+      "CRE.G8.THE_CH.ACTS_OF_COMPASSION.d"
     ],
     "pre": [],
     "mis": [
       "M_CR8_CM_FED",
       "M_CR8_CM_STRANGER",
-      "M_CR8_CM_LEAST"
+      "M_CR8_CM_LEAST",
+      "M_CR8_CM_INHERIT_RICH"
     ]
   },
   "CRES.G8.CHRIST.FAMILY_RELATIONSHIPS.FAMILY_ROLES": {
@@ -16314,13 +16683,16 @@ var SKILLS10 = {
       "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.a",
       "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.b",
       "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.c",
-      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.e"
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.e",
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.d",
+      "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.f"
     ],
     "pre": [],
     "mis": [
       "M_CR8_FRL_PARENT",
       "M_CR8_FRL_HEALTHY",
-      "M_CR8_FRL_CHILD"
+      "M_CR8_FRL_CHILD",
+      "M_CR8_FRL_CONFLICT_SILENCE"
     ]
   },
   "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY": {
@@ -16335,7 +16707,26 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_AS_TELL",
       "M_CR8_AS_MEANING",
-      "M_CR8_AS_VALUE"
+      "M_CR8_AS_VALUE",
+      "M_CR8_AS_KNOWN_SAFE"
+    ]
+  },
+  "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY": {
+    "name": "Evaluate causes of teenage pregnancy and examine the consequences of irresponsible sexual behaviour",
+    "sub": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI",
+    "outcome": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.b",
+    "outcomes": [
+      "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.b",
+      "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.c"
+    ],
+    "pre": [
+      "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.ABUSE_SAFETY"
+    ],
+    "mis": [
+      "M_CR8_TP_GIRL_FAULT",
+      "M_CR8_TP_GIFTS_HARMLESS",
+      "M_CR8_TP_ONCE_SAFE",
+      "M_CR8_TP_NO_FUTURE"
     ]
   },
   "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED": {
@@ -16351,7 +16742,29 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_LF_GIFT",
       "M_CR8_LF_COMMAND",
-      "M_CR8_LF_HELP"
+      "M_CR8_LF_HELP",
+      "M_CR8_LF_IMAGE"
+    ]
+  },
+  "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS": {
+    "name": "Evaluate causes of suicide and of abortion among teenage girls, the consequences of violating the right to life, and the values and life skills that uphold it",
+    "sub": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE",
+    "outcome": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.d",
+    "outcomes": [
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.d",
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.e",
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.f",
+      "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.g"
+    ],
+    "pre": [
+      "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_SACRED",
+      "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY"
+    ],
+    "mis": [
+      "M_CR8_LT_TALK_HARM",
+      "M_CR8_LT_WEAK_PEOPLE",
+      "M_CR8_LT_ABORTION_NO_EFFECT",
+      "M_CR8_LT_ONLY_MURDER"
     ]
   },
   "CRES.G8.CHRIST.BULLYING.BULLYING": {
@@ -16367,7 +16780,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_BL_CAUSE",
       "M_CR8_BL_EFFECT",
-      "M_CR8_BL_VALUE"
+      "M_CR8_BL_VALUE",
+      "M_CR8_BL_BYSTANDER"
     ]
   },
   "CRES.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.TALENTS_PARABLE": {
@@ -16382,7 +16796,8 @@ var SKILLS10 = {
     "mis": [
       "M_CR8_TP_NUMBER",
       "M_CR8_TP_BURY",
-      "M_CR8_TP_LESSON"
+      "M_CR8_TP_LESSON",
+      "M_CR8_TP_FEAR_REASON"
     ]
   },
   "CRES.G8.CHRIST.LEISURE.LEISURE": {
@@ -16393,13 +16808,15 @@ var SKILLS10 = {
       "CRE.G8.CHRIST.LEISURE.a",
       "CRE.G8.CHRIST.LEISURE.b",
       "CRE.G8.CHRIST.LEISURE.c",
-      "CRE.G8.CHRIST.LEISURE.d"
+      "CRE.G8.CHRIST.LEISURE.d",
+      "CRE.G8.CHRIST.LEISURE.f"
     ],
     "pre": [],
     "mis": [
       "M_CR8_LE_MEANING",
       "M_CR8_LE_MISUSE",
-      "M_CR8_LE_GOOD"
+      "M_CR8_LE_GOOD",
+      "M_CR8_LE_NO_VALUES"
     ]
   }
 };
@@ -16407,63 +16824,99 @@ var MIS_FEEDBACK10 = {
   "M_CR8_SO_FRUIT": "They ate the forbidden fruit.",
   "M_CR8_SO_TEMPT": "The serpent tempted Eve.",
   "M_CR8_SO_RESULT": "They were sent out of Eden.",
+  "M_CR8_ST_GOD_TEMPTS": "God does not tempt anyone to sin. Temptation comes from our own desires, and God gives a way out.",
+  "M_CR8_ST_DEVIL_ONLY": "We cannot blame the devil for our choices. Each person is responsible and can ask God for help.",
+  "M_CR8_ST_NO_WAY_OUT": "God gives a way out of every temptation. You can stand with his help.",
+  "M_CR8_ST_TEMPTED_SINNED": "Being tempted is not sin. Jesus was tempted too. Sin is giving in, and God helps us resist.",
+  "M_CR8_SO_SHAME_HIDE": "They hid from God among the trees. Sin brought shame and broke their friendship with God.",
   "M_CR8_RD_CLOTHES": "God made clothes for them.",
   "M_CR8_RD_JOHN": "God gave His only Son.",
   "M_CR8_RD_WHY": "Redemption restores people to God.",
+  "M_CR8_RD_EARN": "We are saved by God's grace through faith. Good works are our thankful answer.",
   "M_CR8_AF_CALL": "God told him to leave his country.",
   "M_CR8_AF_ISAAC": "God provided a ram.",
   "M_CR8_AF_FAITH": "Abraham obeyed.",
   "M_CR8_AP_LAND": "God promised many descendants.",
   "M_CR8_AP_BLESS": "All families would be blessed.",
   "M_CR8_AP_TRUST": "Christians trust God's promises.",
+  "M_CR8_AF_SARAH_LAUGH": "Abraham was a hundred when Isaac was born. He waited twenty-five years in faith.",
+  "M_CR8_AP_STARS": "God told Abram to count the stars: so many would his descendants be.",
   "M_CR8_CA_MEANING": "A covenant is a binding agreement.",
   "M_CR8_CA_SIGN": "Circumcision was the sign.",
   "M_CR8_CA_NAME": "Abram became Abraham.",
+  "M_CR8_CT_ALL_GOOD": "An agreement is not good only because people agree. Secret oaths that go against God's law are ungodly.",
+  "M_CR8_CT_NOT_COVENANT": "Covenants exist today: marriage vows, contracts and agreements between nations.",
+  "M_CR8_CT_SECRET_SAFE": "Godly agreements can be known and checked. Secrecy from parents and church is a warning sign.",
+  "M_CR8_CT_DISCERN_FEELING": "Test every agreement against God's word and ask trusted, godly people for advice.",
+  "M_CR8_CA_ONE_SIDED": "God asked Abraham to walk before him faithfully, and to keep the sign of circumcision.",
   "M_CR8_KI_REASON": "1 Samuel 8 gives this reason.",
   "M_CR8_KI_WARNING": "Samuel warned the king would take their sons and land.",
   "M_CR8_KI_NATIONS": "They wanted a king like other nations.",
   "M_CR8_SF_SACRIFICE": "Saul offered the sacrifice himself.",
   "M_CR8_SF_AMALEK": "Saul spared the best flocks.",
   "M_CR8_SF_RESULT": "God rejected Saul as king.",
+  "M_CR8_KI_REJECT_GOD": "God told Samuel they had rejected God as their king, not Samuel.",
+  "M_CR8_SF_OBEY_SACRIFICE": 'Samuel said, "To obey is better than sacrifice." God wants obedience more than offerings.',
   "M_CR8_BT_PLACE": "Bartimaeus was at Jericho.",
   "M_CR8_BT_CRY": 'He cried "Son of David".',
   "M_CR8_BT_RESULT": "He followed Jesus.",
+  "M_CR8_BT_CLOAK": "He threw his cloak aside and jumped up. He left what he had to come to Jesus.",
   "M_CR8_CS_SLEEP": "Jesus was asleep.",
   "M_CR8_CS_WORDS": 'He said "Be still".',
   "M_CR8_CS_FAITH": "He asked about their faith.",
+  "M_CR8_CS_FAITH_NO_FEAR": "Faith does not mean never feeling afraid. When we are afraid, we trust Jesus who is with us.",
   "M_CR8_PL_ROOF": "They lowered him through the roof.",
-  "M_CR8_PL_SINS": "Jesus first forgave his sins.",
+  "M_CR8_PL_SINS": 'Jesus first said, "Son, your sins are forgiven." Then he healed him.',
   "M_CR8_PL_OPPOSITION": "The teachers of the law objected.",
+  "M_CR8_PL_WHY_OPPOSE": "They said only God can forgive sins. Jesus healed the man to show he had that authority.",
   "M_CR8_PR_LORDS": "It is in Matthew 6.",
   "M_CR8_PR_FAITH": "Jesus taught to pray with faith.",
   "M_CR8_PR_PERSIST": "It teaches persistence.",
+  "M_CR8_PR_FRIENDS_ONLY": "Jesus taught us to pray for all people, even our enemies, and for leaders.",
   "M_CR8_LS_NUMBER": "He left ninety-nine.",
   "M_CR8_LS_ACTION": "He looked for it.",
   "M_CR8_LS_JOY": "There is joy in heaven.",
+  "M_CR8_LS_WHO_LOST": "The lost sheep stands for a person who has wandered from God. God searches for them.",
   "M_CR8_HS_DAY": "It was the day of Pentecost.",
   "M_CR8_HS_SIGN": "There was a sound like wind and tongues like fire.",
   "M_CR8_HS_FRUIT": "Love is a fruit of the Spirit.",
-  "M_CR8_CM_FED": "Feeding the hungry was done for Him.",
+  "M_CR8_HS_CHURCH_ACTIVITY": "Taking part in church activities builds your faith, gifts and responsibility, and good friendships.",
+  "M_CR8_CM_FED": "The king named simple acts: feeding the hungry, giving drink, welcoming strangers, clothing, caring for the sick and visiting prisoners.",
   "M_CR8_CM_STRANGER": 'The king said "I was a stranger and you welcomed me".',
   "M_CR8_CM_LEAST": "What was done for the least was done for Him.",
+  "M_CR8_CM_INHERIT_RICH": "Those who cared for the least, the hungry, the stranger, the sick and the prisoner, will inherit the kingdom.",
   "M_CR8_FRL_PARENT": "Parents provide, guide and care.",
   "M_CR8_FRL_HEALTHY": "Talking and forgiving are healthy.",
   "M_CR8_FRL_CHILD": "Children obey their parents.",
+  "M_CR8_FRL_CONFLICT_SILENCE": "Talk calmly, listen and forgive. If it is hard, ask an elder or pastor to help.",
   "M_CR8_AS_TELL": "Tell a trusted adult.",
   "M_CR8_AS_MEANING": "Abuse is hurting or taking advantage of someone.",
   "M_CR8_AS_VALUE": "Respect and self-control keep people safe.",
+  "M_CR8_TP_GIRL_FAULT": "A pregnancy involves two people. An adult who takes advantage of a girl commits a crime. Never blame a victim.",
+  "M_CR8_TP_GIFTS_HARMLESS": "Gifts that expect something in return are a trap. Refuse them and tell a trusted adult.",
+  "M_CR8_TP_ONCE_SAFE": "Pregnancy and infections can happen the first time. Waiting until marriage is the sure way.",
+  "M_CR8_TP_NO_FUTURE": "A girl who becomes pregnant can return to school. Christians show her care and support.",
+  "M_CR8_AS_KNOWN_SAFE": "Abuse can come from anyone, even someone you know. Say no, get away and tell a trusted adult.",
   "M_CR8_LF_GIFT": "Life is a gift from God.",
   "M_CR8_LF_COMMAND": "You shall not murder.",
   "M_CR8_LF_HELP": "Tell a trusted adult or counsellor.",
+  "M_CR8_LT_TALK_HARM": "Take it seriously, listen, and tell a trusted adult at once. Getting help can save a life.",
+  "M_CR8_LT_WEAK_PEOPLE": "Even strong believers like Elijah felt hopeless. God cared for him, and asking for help is right.",
+  "M_CR8_LT_ABORTION_NO_EFFECT": "Unsafe abortion can harm a girl's health and life and leave deep pain. Help and care are available.",
+  "M_CR8_LT_ONLY_MURDER": "Many acts violate the right to life: murder, mob justice, suicide, unsafe abortion and reckless driving.",
+  "M_CR8_LF_IMAGE": "Every person is made in God's image, so every life is sacred.",
   "M_CR8_BL_CAUSE": "Wanting power causes bullying.",
   "M_CR8_BL_EFFECT": "Bullying causes fear and loneliness.",
   "M_CR8_BL_VALUE": "Kindness stops bullying.",
+  "M_CR8_BL_BYSTANDER": "Watching in silence helps the bully. Stand with the victim and tell a teacher.",
   "M_CR8_TP_NUMBER": "The first servant got five.",
   "M_CR8_TP_BURY": "He buried it.",
   "M_CR8_TP_LESSON": "Use what you have faithfully.",
+  "M_CR8_TP_FEAR_REASON": "He was afraid and hid it. Fear can stop us using the gifts God gave us.",
   "M_CR8_LE_MEANING": "Leisure is free time.",
   "M_CR8_LE_MISUSE": "Gambling and drugs are misuse.",
-  "M_CR8_LE_GOOD": "Sport and helping are constructive."
+  "M_CR8_LE_GOOD": "Sport and helping are constructive.",
+  "M_CR8_LE_NO_VALUES": "Even free time needs self-control and good choices. Make the most of every opportunity (Ephesians 5:15-16)."
 };
 
 // src/ai-tutor/content/families/cre_g8_signed.js
@@ -16898,6 +17351,14 @@ var FAMILIES28 = [
   ], ["b", "c", "d"])
 ];
 
+// src/ai-tutor/content/families/cre_g8_awaiting.js
+var AWAITING5 = [
+  "CRES.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.SIN_TODAY",
+  "CRES.G8.THE_BI.ABRAHAMIC_COVENANT.COVENANTS_TODAY",
+  "CRES.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.TEEN_PREGNANCY",
+  "CRES.G8.CHRIST.SACREDNESS_OF_LIFE.LIFE_THREATS"
+];
+
 // src/ai-tutor/content/subjects/cre_g8.js
 var cre_g8_default = {
   subject: "cre",
@@ -16914,6 +17375,8 @@ var cre_g8_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED10,
   signedFile: "cre_g8_signed.js",
+  awaiting: AWAITING5,
+  // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-cre-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: "cre8.",
@@ -59017,7 +59480,7 @@ var FAMILIES78 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g4_awaiting.js
-var AWAITING = [
+var AWAITING6 = [
   "KISW.G4.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI",
   "KISW.G4.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU",
   "KISW.G4.KUANDI.T2_INSHA_YA_MASIMULIZI.INSHA_MASIMULIZI",
@@ -59056,7 +59519,7 @@ var kiswahili_g4_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED24,
   signedFile: "kiswahili_g4_signed.js",
-  awaiting: AWAITING,
+  awaiting: AWAITING6,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: "text",
   // word answers (marker 'text'): checked by english_checks.mjs, which is language-neutral except the reading-level rule (skipped for Kiswahili)
@@ -62432,7 +62895,7 @@ var FAMILIES84 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g5_awaiting.js
-var AWAITING2 = [
+var AWAITING7 = [
   "KISW.G5.KUSIKI.T1_MATAMSHI_BORA_SAUTI_.MATAMSHI",
   "KISW.G5.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU",
   "KISW.G5.KUSIKI.T2_MAAMKUZI_NA_MAAGANO.MAAMKUZI_MIKTADHA",
@@ -62475,7 +62938,7 @@ var kiswahili_g5_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED25,
   signedFile: "kiswahili_g5_signed.js",
-  awaiting: AWAITING2,
+  awaiting: AWAITING7,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: "text",
   // word answers (marker 'text'): checked by english_checks.mjs, which is language-neutral except the reading-level rule (skipped for Kiswahili)
@@ -65988,7 +66451,7 @@ var FAMILIES90 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g6_awaiting.js
-var AWAITING3 = [
+var AWAITING8 = [
   "KISW.G6.KUSIKI.T1_MATAMSHI_BORA.MATAMSHI",
   "KISW.G6.KUANDI.T1_INSHA_YA_WASIFU.INSHA_WASIFU",
   "KISW.G6.KUANDI.T2_INSHA_ZA_MASIMULIZI.INSHA_MASIMULIZI",
@@ -66030,7 +66493,7 @@ var kiswahili_g6_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED26,
   signedFile: "kiswahili_g6_signed.js",
-  awaiting: AWAITING3,
+  awaiting: AWAITING8,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: "text",
   // word answers (marker 'text'): checked by english_checks.mjs, which is language-neutral except the reading-level rule (skipped for Kiswahili)
@@ -69915,7 +70378,7 @@ var FAMILIES94 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g7_awaiting.js
-var AWAITING4 = [
+var AWAITING9 = [
   "KISW.G7.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAZUNGUMZO",
   "KISW.G7.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI",
   "KISW.G7.KUSOMA.T2_KUSOMA_KWA_MAPANA.MATINI_YA_KUCHAGUA",
@@ -69966,7 +70429,7 @@ var kiswahili_g7_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED27,
   signedFile: "kiswahili_g7_signed.js",
-  awaiting: AWAITING4,
+  awaiting: AWAITING9,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -73718,7 +74181,7 @@ var FAMILIES97 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g8_awaiting.js
-var AWAITING5 = [
+var AWAITING10 = [
   "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MAHOJIANO",
   "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI",
   "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI.KUANDIKA_SHUKRANI",
@@ -73771,7 +74234,7 @@ var kiswahili_g8_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED28,
   signedFile: "kiswahili_g8_signed.js",
-  awaiting: AWAITING5,
+  awaiting: AWAITING10,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -77729,7 +78192,7 @@ var FAMILIES100 = [
 ];
 
 // src/ai-tutor/content/families/kiswahili_g9_awaiting.js
-var AWAITING6 = [
+var AWAITING11 = [
   "KISW.G9.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.MJADALA",
   "KISW.G9.KUSIKI.T2_KUSIKILIZA_KWA_KINA.MATAMSHI",
   "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.KUJIBU_BARUA",
@@ -77783,7 +78246,7 @@ var kiswahili_g9_default = {
   // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED29,
   signedFile: "kiswahili_g9_signed.js",
-  awaiting: AWAITING6,
+  awaiting: AWAITING11,
   // skills of the deeper map (18 Nov 2026) with no family yet: listed, not failed (build-kiswahili-grade.mjs writes it)
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
