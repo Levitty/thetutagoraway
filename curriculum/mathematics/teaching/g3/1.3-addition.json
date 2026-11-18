@@ -1,0 +1,478 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.ADDITION",
+ "title": "Addition",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to e are KICD's words; f (practice with digital devices or other resources) is covered with the first skill. Regrouping is single only (one carry) and sums stay within 1,000. Addition is done horizontally and vertically with place value apparatus.",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_NO_REGROUP",
+   "key_step": "The child lines up the numbers from the right and adds ones, then tens, then hundreds.",
+   "floor": {
+    "prerequisite": "Adds two 2-digit numbers (Grade 2).",
+    "question": "34 + 25",
+    "answer": "59"
+   },
+   "representations": [
+    "bundles and straws",
+    "an abacus",
+    "a column sum"
+   ],
+   "steps": [
+    "Write the numbers with ones under ones.",
+    "Add the ones.",
+    "Add the tens.",
+    "Bring down the hundreds."
+   ],
+   "contexts": [
+    "eggs collected in a week",
+    "learners in two classes",
+    "shillings saved"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 342 + 25 in a column."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 5.",
+     "say": "Which column does it go in?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: under the 2, the ones."
+    },
+    {
+     "beat": "count",
+     "do": "Add each column with the child."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 367."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_NO_REGROUP.M_ADD_MISALIGNED",
+     "listen_for": [
+      "592"
+     ],
+     "ask": "Which digit of 25 is the ones?",
+     "repair": "The 5: it goes under the 2 of 342. The answer is 367."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_NO_REGROUP.M_ADD_ONLY_ONES",
+     "listen_for": [
+      "537"
+     ],
+     "ask": "Did you add the 4 tens?",
+     "repair": "Yes: 3 tens and 4 tens is 7 tens: 577."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_NO_REGROUP.M_ADD_COUNTS_ON_FROM_FIRST",
+     "listen_for": [
+      "606"
+     ],
+     "ask": "Do we count the number we start on?",
+     "repair": "No: 605, 606, 607."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_NO_REGROUP.M_ADD_DIGITS_JOINED",
+     "listen_for": [
+      "3425"
+     ],
+     "ask": "Is the answer bigger than a thousand?",
+     "repair": "No: 347."
+    }
+   ],
+   "checks": [
+    {
+     "question": "531 + 46",
+     "answer": "577",
+     "shows": "no regrouping"
+    },
+    {
+     "question": "802 + 7",
+     "answer": "809",
+     "shows": "a 1-digit number"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_REGROUP",
+   "key_step": "The child exchanges ten ones for a ten, writes one digit in the column and carries the ten.",
+   "floor": {
+    "prerequisite": "Adds with regrouping up to 100.",
+    "question": "38 + 25",
+    "answer": "63"
+   },
+   "representations": [
+    "bundles to exchange",
+    "a place value chart",
+    "a column sum with a carry box"
+   ],
+   "steps": [
+    "Add the ones.",
+    "Ten or more: write the ones digit, carry the ten.",
+    "Add the tens with the carry.",
+    "Bring down the hundreds."
+   ],
+   "contexts": [
+    "mandazi sold in two days",
+    "litres of milk collected",
+    "fare money"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 347 + 28."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 7 + 8.",
+     "say": "How many ones?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 15."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child circles ten ones and moves them to the tens."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 5, carry 1, then 375."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_REGROUP.M_ADD_FORGETS_CARRY",
+     "listen_for": [
+      "365"
+     ],
+     "ask": "15 ones: how many tens and ones is that?",
+     "repair": "1 ten and 5 ones: carry the 1, so 375."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_REGROUP.M_ADD_WRITES_BOTH_DIGITS",
+     "listen_for": [
+      "3615"
+     ],
+     "ask": "Can a column hold 15?",
+     "repair": "No: write 5, carry 1 ten."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_REGROUP.M_ADD_CARRY_TO_WRONG_COLUMN",
+     "listen_for": [
+      "393"
+     ],
+     "ask": "Is the carried 1 a ten or a hundred?",
+     "repair": "A ten: 293."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_REGROUP.M_ADD_ADDS_CARRY_TWICE",
+     "listen_for": [
+      "203"
+     ],
+     "ask": "Did you add the 1 again in the hundreds?",
+     "repair": "No: 193."
+    }
+   ],
+   "checks": [
+    {
+     "question": "456 + 37",
+     "answer": "493",
+     "shows": "carry from the ones"
+    },
+    {
+     "question": "283 + 54",
+     "answer": "337",
+     "shows": "carry from the tens"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP",
+   "key_step": "The child lines up two 3-digit numbers and adds each column from the ones.",
+   "floor": {
+    "prerequisite": "Adds a 3-digit and a 2-digit number.",
+    "question": "342 + 25",
+    "answer": "367"
+   },
+   "representations": [
+    "bundles",
+    "an abacus",
+    "a column sum"
+   ],
+   "steps": [
+    "Line up the columns.",
+    "Ones first.",
+    "Then tens.",
+    "Then hundreds."
+   ],
+   "contexts": [
+    "books in two libraries",
+    "people at two churches",
+    "bags of maize"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 423 + 361."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the ones.",
+     "say": "3 and 1?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 4."
+    },
+    {
+     "beat": "count",
+     "do": "Do the tens and hundreds together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 784."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP.M_ADD3_MIXES_COLUMNS",
+     "listen_for": [
+      "748"
+     ],
+     "ask": "Which digits are the tens?",
+     "repair": "2 and 6: 8 tens, so 784."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP.M_ADD3_LEFT_TO_RIGHT_SLIP",
+     "listen_for": [
+      "566"
+     ],
+     "ask": "Which column do we add first?",
+     "repair": "The ones: 5, then 6, then 6: 665."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP.M_ADD3_SUBTRACTS",
+     "listen_for": [
+      "251"
+     ],
+     "ask": "What does the sign tell you to do?",
+     "repair": "Add: 873."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP.M_ADD3_DROPS_ZERO",
+     "listen_for": [
+      "77"
+     ],
+     "ask": "What is 0 tens and 0 tens?",
+     "repair": "0 tens: write 0, so 707."
+    }
+   ],
+   "checks": [
+    {
+     "question": "214 + 563",
+     "answer": "777",
+     "shows": "no carry"
+    },
+    {
+     "question": "405 + 302",
+     "answer": "707",
+     "shows": "zeros"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP",
+   "key_step": "The child adds column by column from the ones and carries only when a column makes ten or more.",
+   "floor": {
+    "prerequisite": "Adds a 3-digit and 2-digit number with a carry.",
+    "question": "347 + 28",
+    "answer": "375"
+   },
+   "representations": [
+    "bundles",
+    "a place value chart",
+    "a column sum"
+   ],
+   "steps": [
+    "Ones first: carry if ten or more.",
+    "Tens with any carry.",
+    "Carry to hundreds if ten tens or more.",
+    "Hundreds."
+   ],
+   "contexts": [
+    "eggs sold on Monday and Tuesday",
+    "learners in two schools",
+    "kilometres travelled"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 256 + 318."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 6 + 8.",
+     "say": "What do you get?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 14 and the carry."
+    },
+    {
+     "beat": "count",
+     "do": "Add the tens with the carry together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 574."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP.M_ADD_FORGETS_CARRY_3D",
+     "listen_for": [
+      "564"
+     ],
+     "ask": "6 + 8 is 14: what do you do with the ten?",
+     "repair": "Carry it: 7 tens, so 574."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP.M_ADD_SUBTRACTS_INSTEAD",
+     "listen_for": [
+      "109"
+     ],
+     "ask": "Are we putting together or taking away?",
+     "repair": "Putting together: 381."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP.M_ADD_CARRIES_TWICE",
+     "listen_for": [
+      "588"
+     ],
+     "ask": "Did the ones make ten or more?",
+     "repair": "No: 8 ones, nothing to carry. 578."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP.M_ADD_CARRY_IN_TENS_TO_HUNDREDS",
+     "listen_for": [
+      "5115"
+     ],
+     "ask": "11 tens: how many hundreds and tens?",
+     "repair": "1 hundred and 1 ten: 615."
+    }
+   ],
+   "checks": [
+    {
+     "question": "167 + 225",
+     "answer": "392",
+     "shows": "carry from ones"
+    },
+    {
+     "question": "472 + 351",
+     "answer": "823",
+     "shows": "carry from tens"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000",
+   "key_step": "The child finds what is added each time, checks it twice, then adds it on.",
+   "floor": {
+    "prerequisite": "Missing numbers in patterns.",
+    "question": "240, 250, 260, __",
+    "answer": "270"
+   },
+   "representations": [
+    "number cards",
+    "jumps on a number line",
+    "a table of terms"
+   ],
+   "steps": [
+    "Find the jump.",
+    "Check another pair.",
+    "Add the jump to the last term.",
+    "Use the same jump for a gap."
+   ],
+   "contexts": [
+    "saving the same each week",
+    "seats in rows",
+    "a matatu stage counting passengers"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 125, 150, 175, __."
+    },
+    {
+     "beat": "draw",
+     "do": "Draw arrows between terms."
+    },
+    {
+     "beat": "predict",
+     "do": "The child writes +25 on the arrows."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the next term."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 200."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000.M_APAT_ADDS_ONE",
+     "listen_for": [
+      "176"
+     ],
+     "ask": "How much is added from 125 to 150?",
+     "repair": "25: 175 + 25 = 200."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000.M_APAT_JUMP_CHANGES",
+     "listen_for": [
+      "350"
+     ],
+     "ask": "What jump do the arrows show?",
+     "repair": "20: 360."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000.M_APAT_CARRY_SLIP",
+     "listen_for": [
+      "220"
+     ],
+     "ask": "5 + 5 ones is ten: what happens?",
+     "repair": "Carry one ten: 230."
+    },
+    {
+     "code": "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000.M_APAT_GAP_FROM_ONE_SIDE",
+     "listen_for": [
+      "450"
+     ],
+     "ask": "What is the jump from 600 to 700?",
+     "repair": "100: so 500."
+    }
+   ],
+   "checks": [
+    {
+     "question": "560, 580, 600, __",
+     "answer": "620",
+     "shows": "jump of 20"
+    },
+    {
+     "question": "215, 265, __, 365",
+     "answer": "315",
+     "shows": "a gap"
+    }
+   ]
+  }
+ ]
+}

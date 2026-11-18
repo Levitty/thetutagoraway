@@ -1,0 +1,294 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.MULTIPLICATION",
+ "title": "Multiplication",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Repeated addition uses 1 to 5 groups of 4 and 5; the times tables go to 10 x 10 with the multiplication chart; multiplying by 10 is from the tables.",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION",
+   "key_step": "The child names the number of groups and the size of each, then adds the group size that many times.",
+   "floor": {
+    "prerequisite": "Repeated addition by 2 and 3 (Grade 2).",
+    "question": "3 + 3 + 3 is how many threes?",
+    "answer": "three threes"
+   },
+   "representations": [
+    "counters in plates",
+    "drawn rings",
+    "an addition line"
+   ],
+   "steps": [
+    "Make equal groups.",
+    "Count the groups.",
+    "Write the size that many times.",
+    "Write groups x size."
+   ],
+   "contexts": [
+    "sweets in packets",
+    "legs of cows",
+    "chairs in rows"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 3 rings with 5 dots each."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the rings.",
+     "say": "How many groups?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 3."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child writes 5 + 5 + 5."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 x 5 = 15."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION.M_MREP_COUNTS_GROUPS",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "Are we counting plates or oranges?",
+     "repair": "Oranges: 4 + 4 + 4 = 12."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION.M_MREP_ADDS_THE_TWO",
+     "listen_for": [
+      "8"
+     ],
+     "ask": "Is it 3 + 5, or 5 three times?",
+     "repair": "5 + 5 + 5 = 15."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION.M_MREP_ONE_GROUP_SHORT",
+     "listen_for": [
+      "4 + 4 + 4 + 4 = 16"
+     ],
+     "ask": "How many fours did you write?",
+     "repair": "Five: 20."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION.M_MREP_UNEQUAL_GROUPS",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Are all the groups the same size?",
+     "repair": "No, so it is not 3 x 4."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 4 + 4 + 4 + 4 + 4 as multiplication.",
+     "answer": "5 x 4 = 20",
+     "shows": "repeated to times"
+    },
+    {
+     "question": "How many counters in 4 groups of 5?",
+     "answer": "20",
+     "shows": "groups of 5"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+   "key_step": "The child sees the story as equal groups and finds the fact on the chart or by skip counting.",
+   "floor": {
+    "prerequisite": "Repeated addition of fours and fives.",
+    "question": "3 x 5",
+    "answer": "15"
+   },
+   "representations": [
+    "arrays of bottle tops",
+    "a multiplication chart",
+    "skip counting"
+   ],
+   "steps": [
+    "Find the groups and group size.",
+    "Find the row and column on the chart.",
+    "Or skip count the size, groups times.",
+    "Turn round facts: 4 x 7 = 7 x 4."
+   ],
+   "contexts": [
+    "tins on shelves",
+    "desks in rows",
+    "legs of chickens"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 6 rows of 7 dots."
+    },
+    {
+     "beat": "point",
+     "do": "Point at one row.",
+     "say": "How many in a row?"
+    },
+    {
+     "beat": "count",
+     "do": "Skip count rows in sevens with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 42."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 x 7 = 42."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D.M_MULT_ADDS_FACTORS",
+     "listen_for": [
+      "13"
+     ],
+     "ask": "Is it 6 and 7 more, or 6 sevens?",
+     "repair": "6 sevens: 42."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D.M_MULT_ONE_GROUP_SHORT",
+     "listen_for": [
+      "35"
+     ],
+     "ask": "How many sevens did you count?",
+     "repair": "Six: 42."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D.M_MULT_ONE_GROUP_EXTRA",
+     "listen_for": [
+      "40"
+     ],
+     "ask": "How many eights?",
+     "repair": "Four: 32."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D.M_MULT_NEIGHBOUR_FACT",
+     "listen_for": [
+      "54"
+     ],
+     "ask": "Which row and which column?",
+     "repair": "Row 7, column 8: 56."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D.M_MULT_ZERO_IS_NUMBER",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "How many are there in 5 empty plates?",
+     "repair": "None: 0."
+    }
+   ],
+   "checks": [
+    {
+     "question": "8 x 3",
+     "answer": "24",
+     "shows": "a table fact"
+    },
+    {
+     "question": "5 benches with 6 children each. How many children?",
+     "answer": "30",
+     "shows": "a story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10",
+   "key_step": "The child says the number of tens and writes the digit in the tens place with a zero in the ones.",
+   "floor": {
+    "prerequisite": "Counts in tens.",
+    "question": "10, 20, 30, __",
+    "answer": "40"
+   },
+   "representations": [
+    "bundles of ten straws",
+    "a 10 times table",
+    "packets of 10 pencils"
+   ],
+   "steps": [
+    "How many tens?",
+    "Count in tens.",
+    "Digit in the tens place.",
+    "Zero in the ones."
+   ],
+   "contexts": [
+    "packets of 10 sweets",
+    "ten-shilling coins",
+    "crates of 10 eggs"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 6 bundles of ten sticks."
+    },
+    {
+     "beat": "count",
+     "do": "Count them in tens with the child."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 60."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6 x 10 = 60."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10.M_M10_ADDS_TEN",
+     "listen_for": [
+      "16"
+     ],
+     "ask": "How many tens is 6 bundles?",
+     "repair": "6 tens: 60."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10.M_M10_ZERO_IN_FRONT",
+     "listen_for": [
+      "04"
+     ],
+     "ask": "Which place shows the tens?",
+     "repair": "The left one: 40."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10.M_M10_HUNDRED",
+     "listen_for": [
+      "700"
+     ],
+     "ask": "Is 7 tens more or less than 100?",
+     "repair": "Less: 70."
+    },
+    {
+     "code": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10.M_M10_TEN_FOR_EACH_DIGIT",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "How many straws in one bundle?",
+     "repair": "Ten."
+    }
+   ],
+   "checks": [
+    {
+     "question": "9 x 10",
+     "answer": "90",
+     "shows": "tens"
+    },
+    {
+     "question": "How many pencils in 5 packets of 10?",
+     "answer": "50",
+     "shows": "story"
+    }
+   ]
+  }
+ ]
+}

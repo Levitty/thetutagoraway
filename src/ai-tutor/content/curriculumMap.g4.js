@@ -662,7 +662,10 @@ export const SKILLS_G4 = {
    "G4_PLACE_VALUE"
   ],
   "primary": "G4_PLACE_VALUE",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000"
+  ],
   "mis": [
    "M_PV_GIVES_TOTAL_VALUE",
    "M_PV_COUNT_FROM_LEFT",
@@ -682,7 +685,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_PLACE_VALUE",
   "pre": [
-   "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
+   "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10"
   ],
   "mis": [
    "M_TV_FACE_VALUE",
@@ -703,7 +707,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_NUMBER_WORDS",
   "pre": [
-   "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
+   "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000"
   ],
   "mis": [
    "M_SYM_JOIN_PARTS",
@@ -723,7 +728,10 @@ export const SKILLS_G4 = {
    "G4_NUMBER_WORDS"
   ],
   "primary": "G4_NUMBER_WORDS",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000"
+  ],
   "mis": [
    "M_WORDS_HUNDRED_DROPPED",
    "M_WORDS_SPELLING_TY",
@@ -742,7 +750,10 @@ export const SKILLS_G4 = {
    "G4_ORDER_ROUND"
   ],
   "primary": "G4_ORDER_ROUND",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+  ],
   "mis": [
    "M_ORDER_FIRST_DIGIT_ONLY",
    "M_ORDER_DIRECTION",
@@ -761,7 +772,10 @@ export const SKILLS_G4 = {
    "G4_ORDER_ROUND"
   ],
   "primary": "G4_ORDER_ROUND",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS"
+  ],
   "mis": [
    "M_ROUND_DROP_ONES",
    "M_ROUND_NO_CARRY",
@@ -780,7 +794,10 @@ export const SKILLS_G4 = {
    "G4_FACTORS_MULTIPLES"
   ],
   "primary": "G4_FACTORS_MULTIPLES",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+   "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D"
+  ],
   "mis": [
    "M_FACTOR_ONLY_ITSELF",
    "M_FACTOR_MULTIPLE_SWAP",
@@ -799,7 +816,10 @@ export const SKILLS_G4 = {
    "G4_FACTORS_MULTIPLES"
   ],
   "primary": "G4_FACTORS_MULTIPLES",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+  ],
   "mis": [
    "M_MULTIPLE_FACTOR_SWAP",
    "M_MULTIPLE_STARTS_AT_ZERO_OR_ONE",
@@ -818,7 +838,10 @@ export const SKILLS_G4 = {
    "G4_ODD_EVEN"
   ],
   "primary": "G4_ODD_EVEN",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+   "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D"
+  ],
   "mis": [
    "M_EVEN_ODD_TENS_DIGIT",
    "M_ZERO_NOT_EVEN",
@@ -839,7 +862,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_ODD_EVEN",
   "pre": [
-   "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100"
+   "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000"
   ],
   "mis": [
    "M_PATTERN_ADD_ONE",
@@ -859,7 +883,10 @@ export const SKILLS_G4 = {
    "G4_ROMAN_NUMERALS"
   ],
   "primary": "G4_ROMAN_NUMERALS",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+  ],
   "mis": [
    "M_ROMAN_IV_AS_6",
    "M_ROMAN_IIII_FOR_4",
@@ -880,6 +907,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_ADD",
   "pre": [
+   "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP",
    "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
   ],
   "mis": [
@@ -901,7 +929,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_ADD",
   "pre": [
-   "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
+   "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+   "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP"
   ],
   "mis": [
    "M_ADD_CARRY_ONLY_ONCE",
@@ -944,7 +973,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_ADD",
   "pre": [
-   "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
+   "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+   "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000"
   ],
   "mis": [
    "M_PAT_ADD_ONE_STEP_ONLY",
@@ -965,6 +995,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_SUB",
   "pre": [
+   "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP",
    "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH"
   ],
   "mis": [
@@ -986,6 +1017,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_SUB",
   "pre": [
+   "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP",
    "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP"
   ],
   "mis": [
@@ -1029,7 +1061,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_SUB",
   "pre": [
-   "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP"
+   "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
+   "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000"
   ],
   "mis": [
    "M_SUBPAT_ADDS",
@@ -1049,7 +1082,10 @@ export const SKILLS_G4 = {
    "G4_MULTIPLY"
   ],
   "primary": "G4_MULTIPLY",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
+  ],
   "mis": [
    "M_MUL_TENS_ZERO_FORGOTTEN",
    "M_MUL_TENS_ZERO_TWICE",
@@ -1069,7 +1105,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_MULTIPLY",
   "pre": [
-   "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS"
+   "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
   ],
   "mis": [
    "M_MUL_ONES_ONLY",
@@ -1133,7 +1170,10 @@ export const SKILLS_G4 = {
    "G4_MULTIPLY"
   ],
   "primary": "G4_MULTIPLY",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
+  ],
   "mis": [
    "M_MULPAT_ADD_STEP",
    "M_MULPAT_SKIP_TABLE",
@@ -1152,7 +1192,10 @@ export const SKILLS_G4 = {
    "G4_DIVIDE"
   ],
   "primary": "G4_DIVIDE",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
+  ],
   "mis": [
    "M_DIV_LARGER_BY_SMALLER",
    "M_DIV_ZERO_DROPPED",
@@ -1172,7 +1215,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_DIVIDE",
   "pre": [
-   "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER"
+   "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
+   "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION"
   ],
   "mis": [
    "M_DIV_REMAINDER_TOO_BIG",
@@ -1192,7 +1236,10 @@ export const SKILLS_G4 = {
    "G4_DIVIDE"
   ],
   "primary": "G4_DIVIDE",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+   "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION"
+  ],
   "mis": [
    "M_RELATE_WRONG_FACT",
    "M_RELATE_CHECK_ADDS",
@@ -1211,7 +1258,10 @@ export const SKILLS_G4 = {
    "G4_FRACTIONS"
   ],
   "primary": "G4_FRACTIONS",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+   "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP"
+  ],
   "mis": [
    "M_FRAC_SWAP_NUM_DEN",
    "M_FRAC_TWO_NUMBERS_SEPARATE",
@@ -1231,7 +1281,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_FRACTIONS",
   "pre": [
-   "MATH.G4.NUMBER.FRACTIONS.NUM_DEN"
+   "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+   "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE"
   ],
   "mis": [
    "M_FRAC_SHADED_OVER_UNSHADED",
@@ -1252,7 +1303,9 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_FRACTIONS",
   "pre": [
-   "MATH.G4.NUMBER.FRACTIONS.NUM_DEN"
+   "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+   "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+   "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D"
   ],
   "mis": [
    "M_FRAC_GROUP_PART_OVER_OTHER",
@@ -1426,7 +1479,10 @@ export const SKILLS_G4 = {
    "G4_LETTERS"
   ],
   "primary": "G4_LETTERS",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP",
+   "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER"
+  ],
   "mis": [
    "M_LET_LETTER_IS_ITS_ALPHABET_POSITION",
    "M_LET_LETTER_IS_OBJECT",
@@ -1448,7 +1504,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LETTERS",
   "pre": [
-   "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT"
+   "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
   ],
   "mis": [
    "M_EXP_NOT_NUMBER_WORD",
@@ -1469,7 +1526,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LETTERS",
   "pre": [
-   "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS"
+   "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
+   "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP"
   ],
   "mis": [
    "M_SIM_ADD_UNLIKE",
@@ -1489,7 +1547,10 @@ export const SKILLS_G4 = {
    "G4_LENGTH"
   ],
   "primary": "G4_LENGTH",
-  "pre": [],
+  "pre": [
+   "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
+   "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES"
+  ],
   "mis": [
    "M_LEN_WRONG_UNIT",
    "M_LEN_CM_AS_M_SIZE",
@@ -1509,7 +1570,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LENGTH",
   "pre": [
-   "MATH.G4.MEASUR.LENGTH.CM_UNIT"
+   "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+   "MATH.G3.MEASUR.LENGTH.MEASURE_METRES"
   ],
   "mis": [
    "M_LEN_NOT_FROM_ZERO",
@@ -1530,6 +1592,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LENGTH",
   "pre": [
+   "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
    "MATH.G4.MEASUR.LENGTH.CM_UNIT"
   ],
   "mis": [
@@ -1551,7 +1614,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LENGTH",
   "pre": [
-   "MATH.G4.MEASUR.LENGTH.M_CM_RELATION"
+   "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10"
   ],
   "mis": [
    "M_CONV_ADD_DIGITS",
@@ -1574,6 +1638,7 @@ export const SKILLS_G4 = {
   "primary": "G4_LENGTH",
   "pre": [
    "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+   "MATH.G3.MEASUR.LENGTH.ADD_METRES",
    "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
   ],
   "mis": [
@@ -1595,7 +1660,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LENGTH",
   "pre": [
-   "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM"
+   "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
+   "MATH.G3.MEASUR.LENGTH.ADD_METRES"
   ],
   "mis": [
    "M_LADD_NO_REGROUP",
@@ -1616,7 +1682,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LENGTH",
   "pre": [
-   "MATH.G4.MEASUR.LENGTH.LENGTH_ADD"
+   "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+   "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES"
   ],
   "mis": [
    "M_LSUB_SMALLER_FROM_LARGER",
@@ -1637,7 +1704,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_LENGTH",
   "pre": [
-   "MATH.G4.MEASUR.LENGTH.LENGTH_ADD"
+   "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D"
   ],
   "mis": [
    "M_LMUL_NO_REGROUP",
@@ -1680,7 +1748,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_AREA",
   "pre": [
-   "MATH.G4.MEASUR.AREA.AREA_COUNT"
+   "MATH.G4.MEASUR.AREA.AREA_COUNT",
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES"
   ],
   "mis": [
    "M_AREA_LONGER_IS_LARGER",
@@ -1700,7 +1769,10 @@ export const SKILLS_G4 = {
    "G4_AREA"
   ],
   "primary": "G4_AREA",
-  "pre": [],
+  "pre": [
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
+  ],
   "mis": [
    "M_AREA_COUNTS_EDGE_ONLY",
    "M_AREA_COUNTS_TWICE",
@@ -1721,7 +1793,8 @@ export const SKILLS_G4 = {
   "primary": "G4_AREA",
   "pre": [
    "MATH.G4.MEASUR.AREA.AREA_COUNT",
-   "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP"
+   "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
   ],
   "mis": [
    "M_AREA_ADDS_ROWS_COLS",
@@ -1741,7 +1814,10 @@ export const SKILLS_G4 = {
    "G4_VOLUME"
   ],
   "primary": "G4_VOLUME",
-  "pre": [],
+  "pre": [
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
+  ],
   "mis": [
    "M_VOL_CUBE_CUBOID_SWAP",
    "M_VOL_COUNT_VISIBLE_ONLY",
@@ -1804,7 +1880,10 @@ export const SKILLS_G4 = {
    "G4_CAPACITY"
   ],
   "primary": "G4_CAPACITY",
-  "pre": [],
+  "pre": [
+   "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES",
+   "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES"
+  ],
   "mis": [
    "M_CAP_MASS_CONFUSED",
    "M_CAP_READS_JUG_TOP",
@@ -1846,6 +1925,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_CAPACITY",
   "pre": [
+   "MATH.G3.MEASUR.CAPACITY.ADD_LITRES",
    "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
   ],
   "mis": [
@@ -1868,6 +1948,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_CAPACITY",
   "pre": [
+   "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES",
    "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP"
   ],
   "mis": [
@@ -1888,7 +1969,10 @@ export const SKILLS_G4 = {
    "G4_MASS"
   ],
   "primary": "G4_MASS",
-  "pre": [],
+  "pre": [
+   "MATH.G3.MEASUR.MASS.MEASURE_KG",
+   "MATH.G3.MEASUR.MASS.ESTIMATE_KG"
+  ],
   "mis": [
    "M_MASS_LARGER_IS_HEAVIER",
    "M_MASS_CAPACITY_UNIT",
@@ -1930,6 +2014,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_MASS",
   "pre": [
+   "MATH.G3.MEASUR.MASS.ADD_KG",
    "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP"
   ],
   "mis": [
@@ -1952,6 +2037,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_MASS",
   "pre": [
+   "MATH.G3.MEASUR.MASS.SUBTRACT_KG",
    "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP"
   ],
   "mis": [
@@ -1972,7 +2058,10 @@ export const SKILLS_G4 = {
    "G4_TIME"
   ],
   "primary": "G4_TIME",
-  "pre": [],
+  "pre": [
+   "MATH.G3.MEASUR.TIME.TELL_PAST_TO",
+   "MATH.G3.MEASUR.TIME.READ_DIGITAL"
+  ],
   "mis": [
    "M_TIME_HANDS_SWAPPED",
    "M_TIME_PAST_TO_SWAP",
@@ -1992,7 +2081,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_TIME",
   "pre": [
-   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM"
+   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+   "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS"
   ],
   "mis": [
    "M_TIME_AMPM_WRONG",
@@ -2013,6 +2103,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_TIME",
   "pre": [
+   "MATH.G3.MEASUR.TIME.MINUTE_UNIT",
    "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS"
   ],
   "mis": [
@@ -2057,7 +2148,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_TIME",
   "pre": [
-   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM"
+   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+   "MATH.G3.MEASUR.TIME.ADD_TIME"
   ],
   "mis": [
    "M_TIME_DURATION_END_TIME",
@@ -2079,6 +2171,7 @@ export const SKILLS_G4 = {
   "primary": "G4_TIME",
   "pre": [
    "MATH.G4.MEASUR.TIME.RECORD_DURATION",
+   "MATH.G3.MEASUR.TIME.SUBTRACT_TIME",
    "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES"
   ],
   "mis": [
@@ -2100,7 +2193,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_TIME",
   "pre": [
-   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM"
+   "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+   "MATH.G3.MEASUR.TIME.READ_DIGITAL"
   ],
   "mis": [
    "M_TIME_DIGITAL_BASE_10",
@@ -2121,6 +2215,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_MONEY",
   "pre": [
+   "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS",
    "MATH.G4.MEASUR.LENGTH.M_CM_RELATION"
   ],
   "mis": [
@@ -2142,6 +2237,7 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_MONEY",
   "pre": [
+   "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE",
    "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS"
   ],
   "mis": [
@@ -2186,7 +2282,10 @@ export const SKILLS_G4 = {
    "G4_POSITION"
   ],
   "primary": "G4_POSITION",
-  "pre": [],
+  "pre": [
+   "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT",
+   "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT"
+  ],
   "mis": [
    "M_TURN_CLOCKWISE_AS_LEFT",
    "M_TURN_VIEWED_FROM_BEHIND",
@@ -2207,7 +2306,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_POSITION",
   "pre": [
-   "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI"
+   "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
+   "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT"
   ],
   "mis": [
    "M_TURN_QUARTER_AS_HALF",
@@ -2227,7 +2327,10 @@ export const SKILLS_G4 = {
    "G4_ANGLES"
   ],
   "primary": "G4_ANGLES",
-  "pre": [],
+  "pre": [
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+   "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT"
+  ],
   "mis": [
    "M_ANGLE_ARM_LENGTH",
    "M_ANGLE_IS_THE_LINE",
@@ -2247,7 +2350,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_ANGLES",
   "pre": [
-   "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT"
+   "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES"
   ],
   "mis": [
    "M_ANGLE_CURVED_HAS_ANGLE",
@@ -2289,7 +2393,10 @@ export const SKILLS_G4 = {
    "G4_PLANE_FIGURES"
   ],
   "primary": "G4_PLANE_FIGURES",
-  "pre": [],
+  "pre": [
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+   "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED"
+  ],
   "mis": [
    "M_SHAPE_ORIENTATION",
    "M_SHAPE_OVAL_CIRCLE",
@@ -2309,7 +2416,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_PLANE_FIGURES",
   "pre": [
-   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
+   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+   "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED"
   ],
   "mis": [
    "M_DRAW_UNEQUAL_SQUARE",
@@ -2331,7 +2439,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_PLANE_FIGURES",
   "pre": [
-   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
+   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+   "MATH.G3.GEOMET.SHAPES.NAME_SHAPES"
   ],
   "mis": [
    "M_SYM_DIAGONAL_RECTANGLE",
@@ -2352,7 +2461,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_PLANE_FIGURES",
   "pre": [
-   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES"
+   "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+   "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED"
   ],
   "mis": [
    "M_SPAT_REPEAT_BROKEN",
@@ -2395,7 +2505,10 @@ export const SKILLS_G4 = {
    "G4_DATA"
   ],
   "primary": "G4_DATA",
-  "pre": [],
+  "pre": [
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+   "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION"
+  ],
   "mis": [
    "M_DATA_TALLY_ONES",
    "M_DATA_WRONG_TOOL",
@@ -2416,7 +2529,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_DATA",
   "pre": [
-   "MATH.G4.DATA_H.DATA.DATA_MATERIALS"
+   "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
   ],
   "mis": [
    "M_COLLECT_COUNTS_TWICE",
@@ -2439,7 +2553,8 @@ export const SKILLS_G4 = {
   ],
   "primary": "G4_DATA",
   "pre": [
-   "MATH.G4.DATA_H.DATA.DATA_MATERIALS"
+   "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+   "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000"
   ],
   "mis": [
    "M_TABLE_TALLY_COUNTS_BARS",

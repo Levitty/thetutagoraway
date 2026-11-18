@@ -1,0 +1,291 @@
+{
+ "sub_strand": "MATH.G3.NUMBER.NUMBER_CONCEPT",
+ "title": "Number Concept",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Grade 3 number concept is about size order and ordinal positions 1st to 20th, said and written in symbols (1st) and words (first).",
+ "skills": [
+  {
+   "skill": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDER_BY_SIZE",
+   "key_step": "The child lines up the objects at one end and takes the smallest (or largest) each time.",
+   "floor": {
+    "prerequisite": "Compares two objects (Grade 2).",
+    "question": "Which is longer, a pencil or a ruler?",
+    "answer": "the ruler"
+   },
+   "representations": [
+    "real sticks and stones",
+    "a picture strip",
+    "number sizes in a row"
+   ],
+   "steps": [
+    "Line up one end of all the objects.",
+    "Choose the smallest.",
+    "From the rest, choose the smallest again.",
+    "Check from first to last."
+   ],
+   "contexts": [
+    "sticks from the school compound",
+    "water containers at home",
+    "children by height in the class line"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw three sticks of different lengths, not lined up."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the left ends.",
+     "say": "Do they start together?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child redraws them starting at one line."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the shortest to be named."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 1st, 2nd, 3rd under them, shortest first."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDER_BY_SIZE.M_ORDER_REVERSED",
+     "listen_for": [
+      "8, 5, 3"
+     ],
+     "ask": "Which one comes first: the shortest or the longest?",
+     "repair": "Shortest first: 3, then 5, then 8."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDER_BY_SIZE.M_ORDER_BY_POSITION",
+     "listen_for": [
+      "bottle, cup, jerrycan"
+     ],
+     "ask": "Is the bottle smaller than the cup?",
+     "repair": "No: the cup is smallest, so it goes first."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDER_BY_SIZE.M_ORDER_TOPS_NOT_LENGTH",
+     "listen_for": [
+      "the one that reaches higher"
+     ],
+     "ask": "Do both pencils start at the same line?",
+     "repair": "Line them up at one end, then compare the other ends."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDER_BY_SIZE.M_ORDER_MIDDLE_LOST",
+     "listen_for": [
+      "smallest, third largest, second largest, largest"
+     ],
+     "ask": "Of the stones left, which is smallest now?",
+     "repair": "Take the smallest each time until none are left."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Order from shortest to longest: a ruler, a pencil, a broom.",
+     "answer": "pencil, ruler, broom",
+     "shows": "ordering three objects"
+    },
+    {
+     "question": "Order from largest to smallest: a cup, a jerrycan, a bucket.",
+     "answer": "jerrycan, bucket, cup",
+     "shows": "ordering largest first"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDINAL_POSITION_20",
+   "key_step": "The child finds the reference end first, then counts 1st, 2nd, 3rd up to the object.",
+   "floor": {
+    "prerequisite": "Counts forward to 20.",
+    "question": "What number comes after 13?",
+    "answer": "14"
+   },
+   "representations": [
+    "children in a real queue",
+    "a picture of a race",
+    "a number track with positions"
+   ],
+   "steps": [
+    "Find where counting starts.",
+    "Touch each one: 1st, 2nd, 3rd ...",
+    "Stop at the object and say its position.",
+    "Those in front are one fewer than the position."
+   ],
+   "contexts": [
+    "the class line at assembly",
+    "a race on sports day",
+    "birth order in a family"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw 10 stick children in a queue with a flag at the front."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the 6th child.",
+     "say": "Where do we start counting?"
+    },
+    {
+     "beat": "count",
+     "do": "Count with the child from the flag: 1st, 2nd ... 6th."
+    },
+    {
+     "beat": "pause",
+     "do": "Ask how many are in front and wait."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 6th, and 5 in front."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDINAL_POSITION_20.M_ORD_WRONG_END",
+     "listen_for": [
+      "7"
+     ],
+     "ask": "Where does the counting start?",
+     "repair": "At the front: 1st, 2nd, then Amina is 3rd, so 2 are in front."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDINAL_POSITION_20.M_ORD_IN_FRONT_EQUALS_POSITION",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "Is Otieno in front of himself?",
+     "repair": "No: 4 people are in front of the 5th."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDINAL_POSITION_20.M_ORD_SKIPS_IN_COUNT",
+     "listen_for": [
+      "14th"
+     ],
+     "ask": "Touch and count from the 10th: what comes after 12th?",
+     "repair": "13th, thirteenth."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDINAL_POSITION_20.M_ORD_CARDINAL_CONFUSION",
+     "listen_for": [
+      "8 mangoes"
+     ],
+     "ask": "Are we asking how many, or which one?",
+     "repair": "Which one: the last is the 8th."
+    }
+   ],
+   "checks": [
+    {
+     "question": "In a race, Wanjiru finishes after the 9th runner. What is her position?",
+     "answer": "10th",
+     "shows": "the next position"
+    },
+    {
+     "question": "Kamau is 7th in a line. How many people are in front of him?",
+     "answer": "6",
+     "shows": "in front is one fewer"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.NUMBER.NUMBER_CONCEPT.WRITE_ORDINALS",
+   "key_step": "The child writes the number, then the ending heard in the word: st, nd, rd for 1, 2, 3, th for the rest.",
+   "floor": {
+    "prerequisite": "Writes numbers 1 to 20 in words.",
+    "question": "Write 12 in words.",
+    "answer": "twelve"
+   },
+   "representations": [
+    "position cards with symbols and words",
+    "a race results board",
+    "a written list"
+   ],
+   "steps": [
+    "Say the position aloud.",
+    "Write the number.",
+    "Add st, nd, rd or th from the last sound.",
+    "In words, mind fifth, ninth, twelfth."
+   ],
+   "contexts": [
+    "race results",
+    "a class register in order",
+    "days of a month on a calendar"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 1st, 2nd, 3rd, 4th in a column."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the endings.",
+     "say": "Which ones are different?"
+    },
+    {
+     "beat": "predict",
+     "do": "The child says the ending for 12th."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for the word twelfth."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write twelfth and underline the f."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.WRITE_ORDINALS.M_ORDW_TH_EVERYWHERE",
+     "listen_for": [
+      "2th"
+     ],
+     "ask": "How do we say it: second. What are the last two letters?",
+     "repair": "nd: 2nd."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.WRITE_ORDINALS.M_ORDW_SPELLING_TWELFTH",
+     "listen_for": [
+      "twelveth"
+     ],
+     "ask": "Which letters change in twelve when we write 12th?",
+     "repair": "ve becomes f, and the e goes: twelfth."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.WRITE_ORDINALS.M_ORDW_CARDINAL_WORD",
+     "listen_for": [
+      "three"
+     ],
+     "ask": "Is it 'the three child' or 'the third child'?",
+     "repair": "The third child: third."
+    },
+    {
+     "code": "MATH.G3.NUMBER.NUMBER_CONCEPT.WRITE_ORDINALS.M_ORDW_REVERSED_TEEN",
+     "listen_for": [
+      "41th"
+     ],
+     "ask": "Which digit stands for the ten in fourteen?",
+     "repair": "The 1 first: 14th."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write 20th in words.",
+     "answer": "twentieth",
+     "shows": "irregular spelling"
+    },
+    {
+     "question": "Write the position third in symbols.",
+     "answer": "3rd",
+     "shows": "special ending"
+    }
+   ]
+  }
+ ]
+}

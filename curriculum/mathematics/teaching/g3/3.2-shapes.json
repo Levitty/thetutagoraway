@@ -1,0 +1,369 @@
+{
+ "sub_strand": "MATH.G3.GEOMET.SHAPES",
+ "title": "Shapes",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to c are KICD's words; d is attitudinal. Combined shapes are made of two different shapes (a hut is a triangle on a rectangle). Drawing and modelling are done with paper cut-outs and local materials in class.",
+ "skills": [
+  {
+   "skill": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+   "key_step": "The child counts the sides and corners and checks if they are equal or curved to name the shape.",
+   "floor": {
+    "prerequisite": "Identifies shapes (Grade 2).",
+    "question": "Which shape is round: a circle or a square?",
+    "answer": "a circle"
+   },
+   "representations": [
+    "paper cut-outs",
+    "drawings in different positions",
+    "objects in the room"
+   ],
+   "steps": [
+    "Count the sides.",
+    "Straight or curved?",
+    "Are the sides equal?",
+    "Name it, whatever its position."
+   ],
+   "contexts": [
+    "windows and doors",
+    "a road sign",
+    "a wall clock"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square turned on a corner."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each side.",
+     "say": "How many? Equal?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: 4 equal sides."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: square."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES.M_SHAPE_TURNED_SQUARE",
+     "listen_for": [
+      "no, a diamond"
+     ],
+     "ask": "Did the sides change when it turned?",
+     "repair": "No: still a square."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES.M_SHAPE_OVAL_CIRCLE",
+     "listen_for": [
+      "circle"
+     ],
+     "ask": "Is it as wide as it is long?",
+     "repair": "No: an oval."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES.M_SHAPE_SQUARE_NOT_RECTANGLE",
+     "listen_for": [
+      "square"
+     ],
+     "ask": "Are all its sides equal?",
+     "repair": "No: a rectangle."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES.M_SHAPE_TRIANGLE_UPRIGHT_ONLY",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "How many straight sides?",
+     "repair": "3: a triangle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A shape has 3 straight sides. Name it.",
+     "answer": "triangle",
+     "shows": "sides"
+    },
+    {
+     "question": "An egg shape: circle or oval?",
+     "answer": "oval",
+     "shows": "curved shapes"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.GEOMET.SHAPES.SHAPES_IN_COMBINED",
+   "key_step": "The child finds the inside line that splits the combined shape and names each part.",
+   "floor": {
+    "prerequisite": "Names the basic shapes.",
+    "question": "A shape has 4 equal sides. Name it.",
+    "answer": "square"
+   },
+   "representations": [
+    "a cut-out hut that comes apart",
+    "drawings",
+    "pictures of real buildings"
+   ],
+   "steps": [
+    "Look for the joining line.",
+    "Cover one part.",
+    "Name the part left.",
+    "Name the other part."
+   ],
+   "contexts": [
+    "a hut in the village",
+    "a house",
+    "an ice cream cone"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a hut: triangle roof on a rectangle."
+    },
+    {
+     "beat": "point",
+     "do": "Cover the roof.",
+     "say": "What shape is left?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: a rectangle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write: triangle and rectangle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.SHAPES_IN_COMBINED.M_COMB_ONE_SHAPE",
+     "listen_for": [
+      "a hut"
+     ],
+     "ask": "What is the roof's shape?",
+     "repair": "A triangle, and the walls a rectangle."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.SHAPES_IN_COMBINED.M_COMB_COUNTS_SIDES_TOTAL",
+     "listen_for": [
+      "a pentagon"
+     ],
+     "ask": "Is there a line between the roof and the walls?",
+     "repair": "Yes: a triangle and a square."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.SHAPES_IN_COMBINED.M_COMB_SAME_SHAPE_TWICE",
+     "listen_for": [
+      "two triangles"
+     ],
+     "ask": "Is the top part straight or round?",
+     "repair": "Round: a circle on a triangle."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.SHAPES_IN_COMBINED.M_COMB_WRONG_PART_NAME",
+     "listen_for": [
+      "roof"
+     ],
+     "ask": "How many sides does the roof have?",
+     "repair": "3: a triangle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A triangle on a square: which two shapes?",
+     "answer": "triangle and square",
+     "shows": "parts"
+    },
+    {
+     "question": "An ice cream cone: which two shapes?",
+     "answer": "circle and triangle",
+     "shows": "curved part"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED",
+   "key_step": "The child draws the first shape, then uses one of its sides as a side of the second.",
+   "floor": {
+    "prerequisite": "Draws shapes (Grade 2).",
+    "question": "Draw a triangle. How many sides?",
+    "answer": "3"
+   },
+   "representations": [
+    "a ruler and pencil",
+    "a model to copy",
+    "a drawing on squared paper"
+   ],
+   "steps": [
+    "Draw the bottom shape.",
+    "Choose the shared side.",
+    "Draw the second shape on it.",
+    "Count both shapes' sides."
+   ],
+   "contexts": [
+    "drawing a house",
+    "a church with a roof",
+    "a rocket"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a square."
+    },
+    {
+     "beat": "point",
+     "do": "Point at its top side.",
+     "say": "The roof sits here."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child draws the triangle on the top side."
+    },
+    {
+     "beat": "reveal",
+     "do": "Label: square and triangle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED.M_DRAW_GAP",
+     "listen_for": [
+      "drawn apart"
+     ],
+     "ask": "Which side do they share?",
+     "repair": "The top of the square."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED.M_DRAW_WRONG_SIDES",
+     "listen_for": [
+      "4"
+     ],
+     "ask": "How many sides should a triangle have?",
+     "repair": "3."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED.M_DRAW_CURVED_FOR_STRAIGHT",
+     "listen_for": [
+      "curved"
+     ],
+     "ask": "Should a triangle's sides be straight?",
+     "repair": "Yes."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED.M_DRAW_THREE_SHAPES",
+     "listen_for": [
+      "rectangle, triangle and circle"
+     ],
+     "ask": "How many shapes did you draw?",
+     "repair": "Two only."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Draw a rectangle with a triangle on top. How many shapes?",
+     "answer": "2",
+     "shows": "two shapes"
+    },
+    {
+     "question": "Do the shapes share a side?",
+     "answer": "yes",
+     "shows": "joined"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.GEOMET.SHAPES.MODEL_COMBINED",
+   "key_step": "The child picks the two right pieces and joins them along a side.",
+   "floor": {
+    "prerequisite": "Sees the shapes in a combined shape.",
+    "question": "A hut is made of which two shapes?",
+    "answer": "triangle and rectangle"
+   },
+   "representations": [
+    "paper cut-outs",
+    "sticks and clay",
+    "a picture to copy"
+   ],
+   "steps": [
+    "Name the two shapes.",
+    "Pick the pieces.",
+    "Join them along a side.",
+    "Say the two shapes."
+   ],
+   "contexts": [
+    "making a model hut",
+    "a flag on a pole",
+    "a kite"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw the target: a hut."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the roof.",
+     "say": "Which piece?"
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child joins a triangle to a rectangle."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say: triangle and rectangle."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.MODEL_COMBINED.M_MODEL_WRONG_PIECE",
+     "listen_for": [
+      "a rectangle and a circle"
+     ],
+     "ask": "What shape is a roof in the hut?",
+     "repair": "A triangle."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.MODEL_COMBINED.M_MODEL_NOT_JOINED",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Do the pieces touch?",
+     "repair": "No: join them."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.MODEL_COMBINED.M_MODEL_OVERLAP_HIDES",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Can you see all of the rectangle?",
+     "repair": "No: move the triangle to sit on top."
+    },
+    {
+     "code": "MATH.G3.GEOMET.SHAPES.MODEL_COMBINED.M_MODEL_NAMES_OBJECT",
+     "listen_for": [
+      "a house"
+     ],
+     "ask": "Which pieces did you use?",
+     "repair": "A square and a triangle."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which two cut-outs make a hut?",
+     "answer": "triangle and rectangle",
+     "shows": "choosing pieces"
+    },
+    {
+     "question": "Is a model with the pieces apart a combined shape?",
+     "answer": "no",
+     "shows": "joining"
+    }
+   ]
+  }
+ ]
+}

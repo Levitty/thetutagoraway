@@ -1,13 +1,14 @@
 // Grade 4 Mathematics against the curriculum map HOREB owns (curriculum/mathematics/g4.json): skills, prerequisites,
 // misconceptions, the question families filed under them and the teaching pack. First pass 12 Nov 2026; taken on 18 Nov 2026 to
-// the depth standard of Grades 5 to 9 (two prerequisites and four misconceptions per skill, a teaching pack). Grade 3 has no
-// skills yet, so prerequisites below Grade 4 are Grade 3 outcomes. Everything here is draft: nothing reaches a child.
+// the depth standard of Grades 5 to 9 (two prerequisites and four misconceptions per skill, a teaching pack). Prerequisites below
+// Grade 4 were Grade 3 outcomes until Grade 3 was mapped later on 18 Nov 2026; they now name Grade 3 skills. Everything here is draft: nothing reaches a child.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { FAMILIES } from '../engine/scripts/family_checks.mjs';
 import { isOn, setFamilyMode } from '../src/ai-tutor/content/families/core.js';
 import { SKILLS_G4, OUTCOMES_G4, SUBSTRANDS_G4, horebOf4 } from '../src/ai-tutor/content/curriculumMap.g4.js';
+import { SKILLS_G3 } from '../src/ai-tutor/content/curriculumMap.g3.js';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 import { OUTCOMES } from '../src/ai-tutor/curriculum/outcomes.js';
 import { LETTERS, SUB_OF, TEXT_FIXES } from '../scripts/data/maths-g4-letters.mjs';
@@ -35,7 +36,7 @@ test('the in-app map is generated from the file HOREB owns, whole, with every on
     assert.ok(SKILLS[k.primary], `${c}: primary HOREB skill ${k.primary} does not exist`);
     assert.ok(k.outcomes.every(o => OUTCOMES_G4[o]), `${c}: unknown outcome`);
     assert.ok(horebOf4(c).includes(k.primary));
-    for (const p of k.pre) assert.ok(SKILLS_G4[p], `${c}: unknown prerequisite ${p}`);
+    for (const p of k.pre) assert.ok(SKILLS_G4[p] || SKILLS_G3[p], `${c}: unknown prerequisite ${p}`);
   }
 });
 
@@ -59,22 +60,23 @@ test('every skill has a mastery rule, question forms (unless hands-on only), at 
     // a misconception the blind review of 13 Nov 2026 marked doubtful (a trap option, not a known error) does not count toward the four
     assert.ok(ms.filter(m => misLib[m.code]?.review?.mark !== 'doubtful').length >= 4, `${k.code}: fewer than four misconceptions that are not doubtful`);
     assert.equal(k.status, 'proposed');
-    if (k.prerequisites.some(p => p.kind === 'outcome')) down++;
+    if (k.prerequisites.some(p => p.requires.startsWith('MATH.G3.'))) down++;
   }
   assert.ok(down >= source.totals.skills * 0.7, `only ${down} skills reach down to Grade 3`);
 });
 
-test('prerequisites name a Grade 3 outcome or a Grade 4 skill that exists, and never loop', () => {
-  const g3codes = new Set(g3.sub_strands.flatMap(s => s.outcomes.map(o => o.code)));
+test('prerequisites name a Grade 3 or Grade 4 skill that exists (no Grade 3 outcomes left), and never loop', () => {
+  const g3codes = new Set(g3.sub_strands.flatMap(s => s.skills.map(k => k.code)));
   const own = new Set(skills.map(k => k.code));
   for (const k of skills) {
     for (const r of k.prerequisites) {
-      assert.ok(r.kind === 'outcome' ? g3codes.has(r.requires) : own.has(r.requires), `${k.code}: unknown prerequisite ${r.requires}`);
+      assert.equal(r.kind, 'skill', `${k.code}: ${r.requires} is not a skill`);
+      assert.ok(g3codes.has(r.requires) || own.has(r.requires), `${k.code}: unknown prerequisite ${r.requires}`);
       assert.ok(['essential', 'helpful'].includes(r.strength) && r.reason, `${k.code}: prerequisite needs a strength and a reason`);
     }
   }
   const state = {};
-  const visit = (c, path) => { if (state[c] === 2) return; assert.notEqual(state[c], 1, `prerequisite loop: ${[...path, c].join(' > ')}`); state[c] = 1; for (const r of skills.find(k => k.code === c).prerequisites) if (r.kind === 'skill') visit(r.requires, [...path, c]); state[c] = 2; };
+  const visit = (c, path) => { if (state[c] === 2) return; assert.notEqual(state[c], 1, `prerequisite loop: ${[...path, c].join(' > ')}`); state[c] = 1; for (const r of skills.find(k => k.code === c).prerequisites) if (own.has(r.requires)) visit(r.requires, [...path, c]); state[c] = 2; };
   for (const k of skills) visit(k.code, []);
 });
 

@@ -1,0 +1,630 @@
+{
+ "outcomes": {
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.a": "order objects according size",
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.b": "identify position of objects from 1 st to 20 th",
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.c": "write the position of objects in numbers symbols and in words",
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.d": "appreciate use of positions of items in real life situations",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.a": "count numbers forward up to 1000 starting from any point",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.b": "count numbers backward in multiples of 100 from 1000",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.c": "identify the place value of numbers up to hundreds",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.d": "read numbers 1 to 1000 in symbols",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.e": "read and write numbers 1 to 100 in words",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.f": "identify missing numbers in number patterns up to 1000",
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.g": "play games involving number patterns up to 1000",
+  "MATH.G3.NUMBER.ADDITION.a": "add a 3 digit number to up to a 2 digit number without regrouping with sum not exceeding 1000",
+  "MATH.G3.NUMBER.ADDITION.b": "add a 3 digit number to up to a 2 digit number with single regrouping with sum not exceeding 1000",
+  "MATH.G3.NUMBER.ADDITION.c": "add two 3 digit numbers without regrouping",
+  "MATH.G3.NUMBER.ADDITION.d": "add two 3 digit numbers with single regrouping with sum not exceeding 1000",
+  "MATH.G3.NUMBER.ADDITION.e": "create number patterns involving addition up to 1000",
+  "MATH.G3.NUMBER.ADDITION.f": "practice addition of numbers using digital devices or other resources",
+  "MATH.G3.NUMBER.SUBTRACTION.a": "subtract a 2-digit number from a 3 digit number without regrouping",
+  "MATH.G3.NUMBER.SUBTRACTION.b": "Subtract a 2 digit number from a three digit number with single regrouping",
+  "MATH.G3.NUMBER.SUBTRACTION.c": "subtract a 3 digit number from a 3 digit number with single regrouping",
+  "MATH.G3.NUMBER.SUBTRACTION.d": "subtract up to 3 digit numbers involving missing numbers with single regrouping",
+  "MATH.G3.NUMBER.SUBTRACTION.e": "work out missing numbers in number patterns involving subtraction up to 1000",
+  "MATH.G3.NUMBER.SUBTRACTION.f": "appreciate subtraction in real life situations",
+  "MATH.G3.NUMBER.MULTIPLICATION.a": "model multiplication as repeated addition using numbers 1,2,3,4 and 5 by 4 and 5",
+  "MATH.G3.NUMBER.MULTIPLICATION.b": "multiply a single digit number by a single digit number",
+  "MATH.G3.NUMBER.MULTIPLICATION.c": "multiply single digit numbers by 10",
+  "MATH.G3.NUMBER.MULTIPLICATION.d": "appreciate multiplication of numbers as repeated addition",
+  "MATH.G3.NUMBER.DIVISION.a": "represent division of numbers up to 50 by 4 and 5 as repeated subtraction",
+  "MATH.G3.NUMBER.DIVISION.b": "divide a 2 digit number by a single digit number without a remainder",
+  "MATH.G3.NUMBER.DIVISION.c": "divide a 2 digit number by 10 without a remainder",
+  "MATH.G3.NUMBER.DIVISION.d": "appreciate division as repeated subtraction in real life situations",
+  "MATH.G3.NUMBER.FRACTIONS.a": "identify , and as part of a whole",
+  "MATH.G3.NUMBER.FRACTIONS.b": "identify , and as part of a group",
+  "MATH.G3.NUMBER.FRACTIONS.c": "appreciate fractions as part of a whole in daily activities",
+  "MATH.G3.MEASUR.LENGTH.a": "measure length in metres",
+  "MATH.G3.MEASUR.LENGTH.b": "add length in metres",
+  "MATH.G3.MEASUR.LENGTH.c": "subtract length in metres",
+  "MATH.G3.MEASUR.LENGTH.d": "estimate length up to 10 metres",
+  "MATH.G3.MEASUR.LENGTH.e": "appreciate measuring length in metres in real life situations",
+  "MATH.G3.MEASUR.MASS.a": "measure mass in kilograms",
+  "MATH.G3.MEASUR.MASS.b": "add mass in kilograms",
+  "MATH.G3.MEASUR.MASS.c": "subtract mass in kilograms",
+  "MATH.G3.MEASUR.MASS.d": "estimate mass up to 5 kilograms",
+  "MATH.G3.MEASUR.MASS.e": "appreciate measuring mass of objects in kilograms",
+  "MATH.G3.MEASUR.CAPACITY.a": "measure capacity in litres",
+  "MATH.G3.MEASUR.CAPACITY.b": "add capacity in litres",
+  "MATH.G3.MEASUR.CAPACITY.c": "subtract capacity in litres",
+  "MATH.G3.MEASUR.CAPACITY.d": "estimate capacity up to 5 litres",
+  "MATH.G3.MEASUR.CAPACITY.e": "appreciate measuring capacity of containers in litres",
+  "MATH.G3.MEASUR.TIME.a": "identify the minute as a unit of measuring time",
+  "MATH.G3.MEASUR.TIME.b": "read and tell time using ‘past’ and ‘to’ the hour using the clock face",
+  "MATH.G3.MEASUR.TIME.c": "read and tell time using the digital clock or analogue clock",
+  "MATH.G3.MEASUR.TIME.d": "write time using ‘past’ and ‘to’ the hour",
+  "MATH.G3.MEASUR.TIME.e": "estimate time in hours",
+  "MATH.G3.MEASUR.TIME.f": "add time involving hours and minutes without conversion in real life situations",
+  "MATH.G3.MEASUR.TIME.g": "subtract time involving hours and minutes without conversion in real life situations",
+  "MATH.G3.MEASUR.TIME.h": "appreciate reading and telling time using digital and analogue clocks",
+  "MATH.G3.MEASUR.MONEY.a": "identify Kenyan currency notes up to sh.1000",
+  "MATH.G3.MEASUR.MONEY.b": "count money in different denominations up to sh.1000",
+  "MATH.G3.MEASUR.MONEY.c": "add money involving different denominations up to a sh.1000",
+  "MATH.G3.MEASUR.MONEY.d": "subtract money involving different denominations up to a sh.1000",
+  "MATH.G3.MEASUR.MONEY.e": "represent the same amount of money in different denominations",
+  "MATH.G3.MEASUR.MONEY.f": "convert money into different denominations",
+  "MATH.G3.MEASUR.MONEY.g": "use money to buy up to 3 items involving balance",
+  "MATH.G3.MEASUR.MONEY.h": "appreciate spending and saving money in real life situations",
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.a": "move along a straight line from a point",
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.b": "identify the right and left side from a point",
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.c": "turn to the right from a point",
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.d": "turn to the left from a point",
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.e": "appreciate use of directions in real life situations",
+  "MATH.G3.GEOMET.SHAPES.a": "identify the shapes in a combined shape made of two different shapes",
+  "MATH.G3.GEOMET.SHAPES.b": "draw a combined shape made of 2 shapes",
+  "MATH.G3.GEOMET.SHAPES.c": "model a combined shape made of two shapes",
+  "MATH.G3.GEOMET.SHAPES.d": "appreciate the use of combined shapes in the environment"
+ },
+ "skills": {
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDER_BY_SIZE": {
+   "forms": [
+    "order pictures from smallest to largest",
+    "which comes first or last in the order",
+    "order from largest to smallest",
+    "which object is out of order"
+   ],
+   "mastery": "The child arranges three to six real objects or pictures from the smallest to the largest and from the largest to the smallest, says which is first and last in the order, and keeps to the size asked for (length, height or bulk), not colour or position.",
+   "hands_on": "Arranging real objects collected from the school compound is done in class."
+  },
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.ORDINAL_POSITION_20": {
+   "forms": [
+    "which position is the object in",
+    "point to the object in a position",
+    "who is just before or after",
+    "positions in a race"
+   ],
+   "mastery": "Given a line of up to 20 objects or people and a reference point (the front, the left), the child names the position of any one of them (the 7th) and points to the one in a named position, counting from the stated end."
+  },
+  "MATH.G3.NUMBER.NUMBER_CONCEPT.WRITE_ORDINALS": {
+   "forms": [
+    "write the position in symbols",
+    "write the position in words",
+    "match 12th to twelfth",
+    "choose the correct ending"
+   ],
+   "mastery": "The child writes a position from 1st to 20th in symbols (1st, 2nd, 3rd, 4th ... 20th) with the right ending, and in words (first, second, third, twelfth, twentieth) with the right spelling, and matches the two forms."
+  },
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000": {
+   "forms": [
+    "count on in ones from a number",
+    "count on in tens",
+    "count on in hundreds",
+    "what comes next after a hundred"
+   ],
+   "mastery": "Starting from any number up to 1,000, the child counts on in ones, tens or hundreds, crossing a ten or a hundred correctly (198, 199, 200; 390, 400, 410), and says the next three numbers."
+  },
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS": {
+   "forms": [
+    "count back in hundreds",
+    "the hundred before",
+    "missing hundred in a backward line",
+    "how many hundreds back"
+   ],
+   "mastery": "The child counts back from 1,000 in hundreds (1,000, 900, 800 ... 100) and from any hundred, and says the hundred before a given hundred."
+  },
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS": {
+   "forms": [
+    "name the place of a digit",
+    "what the digit is worth",
+    "write hundreds, tens and ones as a number",
+    "which number is greater"
+   ],
+   "mastery": "For any number up to 999 the child names the place of each digit (hundreds, tens, ones), says what each digit is worth (the 4 in 347 is 40), builds the number from hundreds, tens and ones including an empty place (3 hundreds and 5 ones is 305), and compares numbers by their hundreds first."
+  },
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000": {
+   "forms": [
+    "read the number aloud",
+    "choose the number said",
+    "match a number to its name",
+    "read a price or a page number"
+   ],
+   "mastery": "The child reads aloud any number up to 1,000 written in symbols, saying the hundreds, the 'and' and the tens and ones (406 is four hundred and six), and picks the number said from a list."
+  },
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100": {
+   "forms": [
+    "write the number in words",
+    "write the words as a number",
+    "choose the correct spelling",
+    "match words to numbers"
+   ],
+   "mastery": "The child writes any number up to 100 in words with the correct spelling (forty, not fourty; a hyphen in twenty-seven) and writes a number given in words in symbols."
+  },
+  "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000": {
+   "forms": [
+    "next number in the pattern",
+    "missing number in the middle",
+    "what is the rule",
+    "make a pattern"
+   ],
+   "mastery": "The child finds the rule of a pattern that goes up or down in ones, twos, fives, tens or hundreds (240, 250, 260, __), fills in missing numbers in the middle or at the end, and makes a pattern of their own. Number games with patterns are done in class."
+  },
+  "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_NO_REGROUP": {
+   "forms": [
+    "column addition",
+    "horizontal addition",
+    "a word story with a total",
+    "fill in the missing digit of the sum"
+   ],
+   "mastery": "The child adds a 3-digit number and a 1- or 2-digit number with no carrying (342 + 25, 604 + 3), lining up ones under ones in a column and also working across, with sums up to 1,000. Practice with apparatus or digital games is done in class."
+  },
+  "MATH.G3.NUMBER.ADDITION.ADD_3D_2D_REGROUP": {
+   "forms": [
+    "column addition with carrying",
+    "horizontal addition",
+    "a story with a total",
+    "find the mistake in a working"
+   ],
+   "mastery": "The child adds a 3-digit number and a 1- or 2-digit number where the ones (or the tens) make ten or more, carrying one ten (or one hundred) to the next column, as in 347 + 28 = 375, with the sum up to 1,000."
+  },
+  "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP": {
+   "forms": [
+    "column addition",
+    "horizontal addition",
+    "a story with two amounts",
+    "missing digit"
+   ],
+   "mastery": "The child adds two 3-digit numbers with no carrying (423 + 361), column by column from the ones, with a sum up to 1,000."
+  },
+  "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP": {
+   "forms": [
+    "column addition with one carry",
+    "horizontal addition",
+    "a two-day total story",
+    "find the mistake"
+   ],
+   "mastery": "The child adds two 3-digit numbers with one carry, from the ones to the tens or from the tens to the hundreds (256 + 318 = 574), with the sum up to 1,000, and writes the carried digit in the right column."
+  },
+  "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000": {
+   "forms": [
+    "next number in the pattern",
+    "missing term",
+    "what is added each time",
+    "make your own pattern"
+   ],
+   "mastery": "The child continues a pattern made by adding the same number each time (125, 150, 175, __), finds a missing term, names the number added, and makes a pattern of their own up to 1,000."
+  },
+  "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP": {
+   "forms": [
+    "column subtraction",
+    "horizontal subtraction",
+    "how many are left story",
+    "missing digit"
+   ],
+   "mastery": "The child subtracts a 2-digit number from a 3-digit number where no column needs regrouping (586 - 43), lining up ones under ones, working from the ones, in a column and across."
+  },
+  "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_REGROUP": {
+   "forms": [
+    "column subtraction with borrowing",
+    "horizontal subtraction",
+    "how many are left story",
+    "find the mistake"
+   ],
+   "mastery": "The child subtracts a 2-digit number from a 3-digit number where one column needs regrouping (352 - 27 = 325), exchanging one ten for ten ones (or one hundred for ten tens) and crossing out to show it."
+  },
+  "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP": {
+   "forms": [
+    "column subtraction",
+    "a story of how many stay",
+    "check by adding",
+    "find the mistake"
+   ],
+   "mastery": "The child subtracts one 3-digit number from another with one regrouping (634 - 218 = 416, where only the ones are regrouped; 708 - 352 = 356, where only the tens are), from the ones to the hundreds, and checks the answer by adding."
+  },
+  "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER": {
+   "forms": [
+    "missing first number",
+    "missing number taken away",
+    "missing digit in a column",
+    "check by adding"
+   ],
+   "mastery": "The child finds the missing number in a subtraction sentence (__ - 125 = 340, 563 - __ = 228) or a missing digit in a column, with single regrouping, by using the link between adding and taking away."
+  },
+  "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000": {
+   "forms": [
+    "next number going down",
+    "missing term",
+    "what is taken away each time",
+    "make a falling pattern"
+   ],
+   "mastery": "The child continues a pattern that goes down by the same number (950, 900, 850, __), finds a missing term and names what is taken away each time."
+  },
+  "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION": {
+   "forms": [
+    "write the repeated addition",
+    "write as multiplication",
+    "how many groups of",
+    "draw groups for a sentence"
+   ],
+   "mastery": "The child shows 1 to 5 groups of 4 or 5 with counters, writes the repeated addition (5 + 5 + 5) and the multiplication (3 x 5 = 15), and says which number is the number of groups and which is the size of each group."
+  },
+  "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D": {
+   "forms": [
+    "times table fact",
+    "equal groups story",
+    "read the multiplication chart",
+    "missing factor"
+   ],
+   "mastery": "The child gives the product of any two single-digit numbers (7 x 6 = 42) from the multiplication chart or by known facts, solves equal-groups stories (shelves, rows, legs), and knows that 4 x 7 and 7 x 4 are the same."
+  },
+  "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10": {
+   "forms": [
+    "multiply by 10",
+    "how many in packets of 10",
+    "read from the 10 times table",
+    "missing factor with 10"
+   ],
+   "mastery": "The child multiplies any single-digit number by 10 (6 x 10 = 60), explains it as that many tens, and solves stories with bundles or packets of 10."
+  },
+  "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION": {
+   "forms": [
+    "take away groups until none are left",
+    "how many times can you take",
+    "write as a division",
+    "a feeding story"
+   ],
+   "mastery": "The child takes away 4 or 5 at a time from up to 50 objects until none are left, counts how many times, writes it as a repeated subtraction (20 - 5 - 5 - 5 - 5 = 0) and as a division (20 ÷ 5 = 4)."
+  },
+  "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D": {
+   "forms": [
+    "division fact",
+    "sharing story",
+    "grouping story",
+    "missing number in a division"
+   ],
+   "mastery": "The child divides a 2-digit number by a single-digit number where it goes exactly (42 ÷ 6 = 7), using the times tables backwards, and solves sharing and grouping stories."
+  },
+  "MATH.G3.NUMBER.DIVISION.DIV_BY_10": {
+   "forms": [
+    "divide by 10",
+    "how many packets of 10",
+    "how many tens",
+    "missing number"
+   ],
+   "mastery": "The child divides a multiple of ten up to 90 by 10 (70 ÷ 10 = 7), explains it as how many tens, and solves packing stories."
+  },
+  "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE": {
+   "forms": [
+    "which shape shows a quarter",
+    "shade one eighth",
+    "name the fraction shown",
+    "are the parts equal"
+   ],
+   "mastery": "Given a shape or cut-out folded or cut into 2, 4 or 8 equal parts, the child names one part as 1/2, 1/4 or 1/8, writes it, and says a shape cut into unequal parts does not show halves or quarters.",
+   "hands_on": "Folding circular and rectangular cut-outs is done in class."
+  },
+  "MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS": {
+   "forms": [
+    "which piece is bigger",
+    "order the pieces",
+    "which cut makes the smallest piece",
+    "true or false"
+   ],
+   "mastery": "The child says that of the same whole a half is bigger than a quarter and a quarter bigger than an eighth, because more equal parts make each part smaller, and orders the three."
+  },
+  "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP": {
+   "forms": [
+    "how many is a half of the group",
+    "a quarter of the sweets",
+    "an eighth of 16",
+    "share into equal groups"
+   ],
+   "mastery": "The child divides a group of objects (up to 40) into 2, 4 or 8 equal groups and names one small group as 1/2, 1/4 or 1/8 of the group, and says how many objects that is (1/4 of 12 oranges is 3 oranges)."
+  },
+  "MATH.G3.MEASUR.LENGTH.MEASURE_METRES": {
+   "forms": [
+    "read a measurement from a picture",
+    "how many metre sticks fit",
+    "which unit to use",
+    "record with the unit"
+   ],
+   "mastery": "The child measures a length or distance in whole metres with a metre stick or a string knotted every metre, starting at one end, laying the stick end to end without gaps or overlaps, and records the result with the unit (6 m).",
+   "hands_on": "Measuring the classroom walls and the compound with metre sticks and knotted strings is done in class."
+  },
+  "MATH.G3.MEASUR.LENGTH.ADD_METRES": {
+   "forms": [
+    "add two lengths",
+    "total length of the walls",
+    "a story of two pieces joined",
+    "column addition with m"
+   ],
+   "mastery": "The child adds lengths in metres (the four walls of a classroom: 8 m + 6 m + 8 m + 6 m), in stories and in columns, and writes the total with the unit m."
+  },
+  "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES": {
+   "forms": [
+    "how much longer",
+    "how much is left",
+    "difference between two lengths",
+    "column subtraction with m"
+   ],
+   "mastery": "The child finds the difference between two lengths in metres (how much longer the chalkboard is than the table) and what is left when a length is cut off, writing the unit m."
+  },
+  "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES": {
+   "forms": [
+    "about how many metres",
+    "which estimate is sensible",
+    "is it more or less than 10 m",
+    "compare estimate and measure"
+   ],
+   "mastery": "The child estimates a length or distance up to 10 metres using a body benchmark (a big step is about 1 metre), then measures to check and says whether the estimate was close.",
+   "hands_on": "Estimating distances in the compound and checking by measuring is done in class."
+  },
+  "MATH.G3.MEASUR.MASS.MEASURE_KG": {
+   "forms": [
+    "read the mass from a balance picture",
+    "how many 1 kg masses balance it",
+    "which side is heavier",
+    "record with kg"
+   ],
+   "mastery": "The child measures the mass of an object on a beam balance by adding 1 kg masses until the beam is level, reads the mass in whole kilograms, and records it with the unit kg.",
+   "hands_on": "Making 1 kg masses with sand and using a beam balance is done in class."
+  },
+  "MATH.G3.MEASUR.MASS.ADD_KG": {
+   "forms": [
+    "add two masses",
+    "total mass of shopping",
+    "column addition with kg",
+    "a model shop story"
+   ],
+   "mastery": "The child adds masses in kilograms (a 2 kg bag of sugar and a 5 kg bag of flour), in shop stories and in columns, and writes kg with the total."
+  },
+  "MATH.G3.MEASUR.MASS.SUBTRACT_KG": {
+   "forms": [
+    "how much heavier",
+    "how much is left",
+    "difference between two masses",
+    "column subtraction with kg"
+   ],
+   "mastery": "The child finds the difference between two masses in kilograms (how much heavier) and the mass left after some is used or sold, writing kg."
+  },
+  "MATH.G3.MEASUR.MASS.ESTIMATE_KG": {
+   "forms": [
+    "about how many kilograms",
+    "more or less than 5 kg",
+    "which estimate is sensible",
+    "compare estimate and measure"
+   ],
+   "mastery": "The child holds an object and a 1 kg mass and estimates the object's mass up to 5 kg, says whether it is more or less than 5 kg, then measures on a balance to check.",
+   "hands_on": "Estimating by holding items and checking on a balance is done in class."
+  },
+  "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES": {
+   "forms": [
+    "how many 1-litre fills",
+    "read a picture of litre jugs",
+    "which container holds more",
+    "record with l"
+   ],
+   "mastery": "The child finds how many litres a container holds by filling it from (or pouring it into) a 1-litre container, counting full litres only and filling each to the top, and records the result with the unit l.",
+   "hands_on": "Filling containers with water from a 1-litre container is done in class."
+  },
+  "MATH.G3.MEASUR.CAPACITY.ADD_LITRES": {
+   "forms": [
+    "add two capacities",
+    "total water poured",
+    "column addition with l",
+    "milk or water story"
+   ],
+   "mastery": "The child adds capacities in litres (5 l of milk in the morning and 3 l in the evening), including the same amount poured again and again, and writes l with the total."
+  },
+  "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES": {
+   "forms": [
+    "how much is left",
+    "how much more does it hold",
+    "difference in litres",
+    "column subtraction with l"
+   ],
+   "mastery": "The child finds what is left in a container after some litres are used or poured out, and the difference between two capacities, writing l."
+  },
+  "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES": {
+   "forms": [
+    "about how many litres",
+    "more or less than 5 litres",
+    "which estimate is sensible",
+    "compare estimate and measure"
+   ],
+   "mastery": "The child estimates how many litres a container holds, up to 5 litres, using a 1-litre bottle as the benchmark, then fills it to check.",
+   "hands_on": "Estimating and then filling containers is done in class."
+  },
+  "MATH.G3.MEASUR.TIME.MINUTE_UNIT": {
+   "forms": [
+    "how many minutes from one number to the next",
+    "how many minutes in an hour",
+    "count the minute marks",
+    "which takes about a minute"
+   ],
+   "mastery": "The child knows the small marks on the clock face are minutes, that the minute hand moves from one number to the next in 5 minutes and round the whole face in 60 minutes (one hour), and names activities that take about a minute."
+  },
+  "MATH.G3.MEASUR.TIME.TELL_PAST_TO": {
+   "forms": [
+    "read the clock",
+    "past or to",
+    "quarter past, half past, quarter to",
+    "match a clock to a time"
+   ],
+   "mastery": "The child reads an analogue clock to the nearest five minutes and says the time with 'past' when the minute hand is on the right half (10 past 4) and 'to' when it is on the left half (20 to 5), naming the hour the short hand has passed or is coming to."
+  },
+  "MATH.G3.MEASUR.TIME.READ_DIGITAL": {
+   "forms": [
+    "read the digital clock",
+    "match digital to analogue",
+    "say the time in words",
+    "which clock shows the same time"
+   ],
+   "mastery": "The child reads a digital clock (7:45) as hours then minutes, says it in words, and matches it to the same time on an analogue clock (quarter to 8)."
+  },
+  "MATH.G3.MEASUR.TIME.WRITE_PAST_TO": {
+   "forms": [
+    "write the time shown",
+    "draw the hands",
+    "choose the right words",
+    "fill in past or to"
+   ],
+   "mastery": "The child writes the time shown on a clock in words with past or to (twenty-five past three, quarter to six), and draws the hands for a written time."
+  },
+  "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS": {
+   "forms": [
+    "about how many hours",
+    "which takes about one hour",
+    "more or less than an hour",
+    "order activities by time"
+   ],
+   "mastery": "The child estimates how many hours an everyday activity takes (a school day about 7 hours, a journey to town about 2 hours, a meal less than 1 hour) and picks the sensible estimate."
+  },
+  "MATH.G3.MEASUR.TIME.ADD_TIME": {
+   "forms": [
+    "add hours and minutes",
+    "total time of two activities",
+    "column with h and min",
+    "a journey story"
+   ],
+   "mastery": "The child adds times given in hours and minutes where the minutes total less than 60 (2 h 15 min + 1 h 30 min = 3 h 45 min), hours with hours and minutes with minutes, in stories and in columns."
+  },
+  "MATH.G3.MEASUR.TIME.SUBTRACT_TIME": {
+   "forms": [
+    "subtract hours and minutes",
+    "how much longer",
+    "time left",
+    "column with h and min"
+   ],
+   "mastery": "The child subtracts times in hours and minutes where no minutes need borrowing (3 h 50 min - 1 h 20 min = 2 h 30 min), hours from hours and minutes from minutes."
+  },
+  "MATH.G3.MEASUR.MONEY.IDENTIFY_NOTES": {
+   "forms": [
+    "which note is this",
+    "sort notes by value",
+    "which is worth more",
+    "note or coin"
+   ],
+   "mastery": "The child names the Kenyan notes of sh. 50, 100, 200, 500 and 1,000 by their value (from the number, colour and size), sorts notes by value, and tells notes from coins."
+  },
+  "MATH.G3.MEASUR.MONEY.COUNT_MONEY": {
+   "forms": [
+    "count the money shown",
+    "how much in the purse",
+    "count notes of one kind",
+    "count a mix"
+   ],
+   "mastery": "The child counts a mix of notes and coins up to sh. 1,000 by starting with the largest and counting on in its value (500, 700, 800, 850, 870), and writes the total with sh."
+  },
+  "MATH.G3.MEASUR.MONEY.ADD_MONEY": {
+   "forms": [
+    "add two prices",
+    "total cost",
+    "column addition with sh.",
+    "a shopping story"
+   ],
+   "mastery": "The child adds amounts of money up to sh. 1,000 (sh. 350 + sh. 275), with single regrouping, in shopping stories and in columns, and writes sh."
+  },
+  "MATH.G3.MEASUR.MONEY.SUBTRACT_MONEY": {
+   "forms": [
+    "money left after buying",
+    "how much more",
+    "difference in price",
+    "column subtraction with sh."
+   ],
+   "mastery": "The child subtracts amounts of money up to sh. 1,000 (what is left after spending, how much more one item costs), with single regrouping, and writes sh."
+  },
+  "MATH.G3.MEASUR.MONEY.SAME_AMOUNT_WAYS": {
+   "forms": [
+    "show the amount another way",
+    "are these worth the same",
+    "which collection makes sh. 500",
+    "how many of a note make the amount"
+   ],
+   "mastery": "The child shows one amount (sh. 200) in two or more ways (one sh. 200 note; two sh. 100 notes; four sh. 50 notes) and says whether two collections are worth the same."
+  },
+  "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS": {
+   "forms": [
+    "how many of a smaller note",
+    "change a note into coins",
+    "what is missing in the change",
+    "role play at the shop"
+   ],
+   "mastery": "The child changes a note into smaller notes or coins (a sh. 1,000 note into sh. 500 notes, a sh. 100 note into sh. 20 coins) and says how many of the smaller kind are given."
+  },
+  "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE": {
+   "forms": [
+    "total and balance",
+    "how much change",
+    "can she afford it",
+    "role play at the model shop"
+   ],
+   "mastery": "The child finds the total cost of up to 3 items, takes it from the money paid, and gives the balance (change), within sh. 1,000, and checks that cost plus balance equals the money paid."
+  },
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT": {
+   "forms": [
+    "where do you end after the steps",
+    "how many steps from the start",
+    "move forward or back on a path",
+    "which path is straight"
+   ],
+   "mastery": "The child moves (or moves a counter on a grid) a given number of steps along a straight line from a stated starting point, forwards or backwards, and says where they end up and how many steps they moved.",
+   "hands_on": "Moving along lines outside the classroom is done in class."
+  },
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT": {
+   "forms": [
+    "what is on the right",
+    "what is on the left",
+    "right or left of the person in the picture",
+    "raise your right hand"
+   ],
+   "mastery": "The child says which objects are on their right and left, and on the right or left of a person facing them or facing another way, using the person's own right and left."
+  },
+  "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT": {
+   "forms": [
+    "what do you face after turning right",
+    "follow a route with turns",
+    "which way did they turn",
+    "turn left or right to reach a place"
+   ],
+   "mastery": "The child moves straight from a point, turns a quarter turn to the right or the left, and says what they now face or which way they now go; in pictures and on paths, they follow a route of moves and turns."
+  },
+  "MATH.G3.GEOMET.SHAPES.NAME_SHAPES": {
+   "forms": [
+    "name the shape",
+    "which shape has 3 sides",
+    "sort shapes",
+    "find the shape in an object"
+   ],
+   "mastery": "The child names a rectangle, a square, a triangle, a circle and an oval from cut-outs, drawings and objects, in any position or size, by their sides and corners (a triangle has 3 sides), not by how they are turned."
+  },
+  "MATH.G3.GEOMET.SHAPES.SHAPES_IN_COMBINED": {
+   "forms": [
+    "which two shapes make this",
+    "name the top and bottom shape",
+    "which picture is a triangle and a square",
+    "how many shapes"
+   ],
+   "mastery": "Given a combined shape (a hut, a house, an ice cream cone) the child names the two shapes it is made of and points to where one ends and the other begins."
+  },
+  "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED": {
+   "forms": [],
+   "mastery": "The child draws a combined shape of two named shapes (a triangle on top of a square for a house), with the shapes sharing an edge and each shape drawn with the right number of sides.",
+   "hands_on": "Drawing combined shapes is done in class, with the teacher checking the drawings."
+  },
+  "MATH.G3.GEOMET.SHAPES.MODEL_COMBINED": {
+   "forms": [],
+   "mastery": "The child makes a combined shape of two shapes from paper cut-outs, sticks or clay (a rectangle and a triangle for a hut) and names the two parts.",
+   "hands_on": "Modelling with local materials is done in class."
+  }
+ }
+}

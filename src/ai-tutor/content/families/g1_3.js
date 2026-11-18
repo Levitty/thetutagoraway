@@ -322,16 +322,16 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ GRADE 3
-  fam({ id: 'g3.count.build-number', skill: 'G3_COUNTING', outcome: 'G3.WHOLE.0', rung: 1, form: 'direct',
+  fam({ id: 'g3.count.build-number', skill: 'G3_COUNTING', outcome: 'MATH.G3.NUMBER.WHOLE_NUMBERS.c', cskill: 'MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS', rung: 1, form: 'direct',
     draw: () => { const h = randInt(1, 9), t = randInt(1, 9), o = randInt(1, 9); const n = 100 * h + 10 * t + o; const w = [h + t + o, 100 * o + 10 * t + h, 100 * h + o]; return distinct(n, ...w) ? { h, t, o } : null; },
     make: ({ h, t, o }) => ({ story: false, question: `Write ${h} hundreds, ${t} tens and ${o} ones as a number.`,
       answer: 100 * h + 10 * t + o,
-      wrong: [[100 * h + o, 'The tens were left out. Put each digit in its own place.'], [100 * o + 10 * t + h, 'The hundreds digit comes first. Check the order of the places.'], [h + t + o, 'That adds the digits. Each digit is worth its place: hundreds, tens, ones.']],
+      wrong: [[100 * h + o, 'The tens were left out. Put each digit in its own place.', 'M_PV_LEAVES_OUT_PLACE'], [100 * o + 10 * t + h, 'The hundreds digit comes first. Check the order of the places.', 'M_PV_REVERSED_ORDER'], [h + t + o, 'That adds the digits. Each digit is worth its place: hundreds, tens, ones.', 'M_PV_ADDS_DIGITS']],
       hints: ['Write the hundreds digit first, then tens, then ones.', 'Each place needs one digit.'],
       steps: [`${h} hundreds is ${100 * h}, ${t} tens is ${10 * t}, ${o} ones is ${o}.`, `${100 * h} + ${10 * t} + ${o} = ${100 * h + 10 * t + o}.`] }),
     check: ({ h, t, o }, ans) => Math.floor(ans / 100) === h && Math.floor(ans / 10) % 10 === t && ans % 10 === o }),
 
-  fam({ id: 'g3.count.greatest-of-three', skill: 'G3_COUNTING', outcome: 'G3.WHOLE.0', rung: 1, form: 'direct',
+  fam({ id: 'g3.count.greatest-of-three', skill: 'G3_COUNTING', outcome: 'MATH.G3.NUMBER.WHOLE_NUMBERS.c', cskill: 'MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS', misMapped: false, reveals: ['M_PV_BIGGEST_DIGIT_WINS'], rung: 1, form: 'direct',
     draw: () => { const dg = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 3); const perms = shuffle([[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]]).slice(0, 3); return { nums: perms.map(p => 100 * dg[p[0]] + 10 * dg[p[1]] + dg[p[2]]), big: Math.random() < 0.5 }; },
     make: ({ nums, big }) => {
       const t = big ? Math.max(...nums) : Math.min(...nums);
@@ -341,57 +341,57 @@ export const FAMILIES = [
         steps: [`Compare the hundreds digits: ${nums.map(n => Math.floor(n / 100)).join(', ')}.`, `The ${big ? 'greatest' : 'smallest'} is ${t}.`] };
     } }),
 
-  fam({ id: 'g3.add.two-days', skill: 'G3_ADD', outcome: 'G3.ADD.0', rung: 1, form: 'word',
+  fam({ id: 'g3.add.two-days', skill: 'G3_ADD', outcome: 'MATH.G3.NUMBER.ADDITION.d', cskill: 'MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP', rung: 1, form: 'word',
     draw: () => { const a = randInt(120, 480), b = randInt(110, 400); return a % 10 + b % 10 >= 10 && distinct(a + b, a + b - 10, Math.abs(a - b), a + b + 10) ? { a, b, item: pick(['loaves of bread', 'eggs', 'mandazi', 'exercise books']) } : null; },
     make: ({ a, b, item }) => ({
       question: `A shop sells ${a} ${item} on Monday and ${b} on Tuesday. How many is that altogether?`,
       answer: a + b,
-      wrong: [[a + b - 10, 'The ones made a ten. Did you carry it to the tens?'], [Math.abs(a - b), 'Altogether means put the two days together. Add, do not take away.'], [a + b + 10, 'Check the carrying. Did you carry a ten twice?']],
+      wrong: [[a + b - 10, 'The ones made a ten. Did you carry it to the tens?', 'M_ADD_FORGETS_CARRY_3D'], [Math.abs(a - b), 'Altogether means put the two days together. Add, do not take away.', 'M_ADD_SUBTRACTS_INSTEAD'], [a + b + 10, 'Check the carrying. Did you carry a ten twice?', 'M_ADD_CARRIES_TWICE']],
       hints: ['Altogether means add the two numbers.', 'Add the ones first, then the tens, then the hundreds.'],
       steps: [`Add Monday and Tuesday: ${a} + ${b}.`, `${a} + ${b} = ${a + b}.`] }),
     check: ({ a, b }, ans) => ans - a === b }),
 
-  fam({ id: 'g3.sub.trip', skill: 'G3_SUB', outcome: 'G3.SUB.0', rung: 1, form: 'word',
+  fam({ id: 'g3.sub.trip', skill: 'G3_SUB', outcome: 'MATH.G3.NUMBER.SUBTRACTION.c', cskill: 'MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP', rung: 1, form: 'word',
     draw: () => { const a = randInt(300, 900), b = randInt(110, a - 120); const dig = (n) => [Math.floor(n / 100), Math.floor(n / 10) % 10, n % 10]; const [x, y] = [dig(a), dig(b)]; const slip = 100 * Math.abs(x[0] - y[0]) + 10 * Math.abs(x[1] - y[1]) + Math.abs(x[2] - y[2]); return a % 10 < b % 10 && distinct(a - b, slip, a + b, a - b - 10) ? { a, b, slip } : null; },
     make: ({ a, b, slip }) => ({
       question: `A school has ${a} learners. ${b} learners go on a trip. How many learners stay at school?`,
       answer: a - b,
-      wrong: [[slip, 'You took the smaller digit from the bigger one each time. Borrow a ten when the top digit is too small.'], [a + b, 'Stay means the ones who are left. Take away, do not add.'], [a - b - 10, 'Check your borrowing. Did you borrow a ten twice?']],
+      wrong: [[slip, 'You took the smaller digit from the bigger one each time. Borrow a ten when the top digit is too small.', 'M_SUB_SMALLER_FROM_LARGER'], [a + b, 'Stay means the ones who are left. Take away, do not add.', 'M_SUB_ADDS_INSTEAD'], [a - b - 10, 'Check your borrowing. Did you borrow a ten twice?', 'M_SUB_BORROWS_TWICE']],
       hints: ['Staying behind means the rest after the trip.', 'Take the ones first. Borrow a ten if you need to.'],
       steps: [`Take the trip learners from all learners: ${a} − ${b}.`, `${a} − ${b} = ${a - b}.`] }),
     check: ({ a, b }, ans) => ans + b === a }),
 
-  fam({ id: 'g3.mul.shelves', skill: 'G3_MULTIPLY', outcome: 'G3.MUL.0', rung: 1, form: 'word',
+  fam({ id: 'g3.mul.shelves', skill: 'G3_MULTIPLY', outcome: 'MATH.G3.NUMBER.MULTIPLICATION.b', cskill: 'MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D', rung: 1, form: 'word',
     draw: () => { const r = randInt(3, 9), c = randInt(3, 9); return r !== c && distinct(r * c, r + c, r * c - c, r * c + r) ? { r, c } : null; },
     make: ({ r, c }) => ({
       question: `A shop has ${r} shelves. Each shelf holds ${c} tins. How many tins is that?`,
       answer: r * c,
-      wrong: [[r + c, 'Do not add the two numbers. Equal groups mean multiply.'], [r * c - c, `Count the shelves again. There are ${r}, not one less.`], [r * c + r, `Check the table. Each of the ${r} shelves holds ${c} tins.`]],
+      wrong: [[r + c, 'Do not add the two numbers. Equal groups mean multiply.', 'M_MULT_ADDS_FACTORS'], [r * c - c, `Count the shelves again. There are ${r}, not one less.`, 'M_MULT_ONE_GROUP_SHORT'], [r * c + r, `Check the table. Each of the ${r} shelves holds ${c} tins.`, 'M_MULT_ONE_GROUP_EXTRA']],
       hints: ['Each shelf holds the same number of tins.', `Use the ${c} times table.`],
       steps: [`${r} shelves with ${c} tins each.`, `${r} × ${c} = ${r * c}.`] }),
     check: ({ r, c }, ans) => ans / c === r }),
 
-  fam({ id: 'g3.mul.buy-many', skill: 'G3_MULTIPLY', outcome: 'G3.MUL.0', rung: 2, form: 'word',
+  fam({ id: 'g3.mul.buy-many', skill: 'G3_MULTIPLY', outcome: 'MATH.G3.NUMBER.MULTIPLICATION.b', cskill: 'MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D', rung: 2, form: 'word',
     draw: () => { const pr = price('mandazi'), n = randInt(3, 9); return distinct(pr * n, pr + n, pr * n - pr, pr * n + pr) ? { pr, n, p: person() } : null; },
     make: ({ pr, n, p }) => ({
       question: `A mandazi costs ${sh(pr)}. ${p.name} buys ${n} mandazi. How much does ${p.she} pay?`,
       answer: pr * n,
-      wrong: [[pr + n, 'Do not add the price and the number. Each mandazi costs the same, so multiply.'], [pr * n - pr, `${p.She} buys ${n} mandazi, not one less.`], [pr * n + pr, `${p.She} buys ${n} mandazi, not one more.`]],
+      wrong: [[pr + n, 'Do not add the price and the number. Each mandazi costs the same, so multiply.', 'M_MULT_ADDS_FACTORS'], [pr * n - pr, `${p.She} buys ${n} mandazi, not one less.`, 'M_MULT_ONE_GROUP_SHORT'], [pr * n + pr, `${p.She} buys ${n} mandazi, not one more.`, 'M_MULT_ONE_GROUP_EXTRA']],
       hints: ['Every mandazi costs the same.', 'Multiply the price by how many are bought.'],
       steps: [`${n} mandazi at ${sh(pr)} each.`, `${n} × ${pr} = ${pr * n}, so ${sh(pr * n)}.`] }),
     check: ({ pr, n }, ans) => ans / n === pr }),
 
-  fam({ id: 'g3.div.rope-pieces', skill: 'G3_DIVIDE', outcome: 'G3.DIV.0', rung: 1, form: 'word',
+  fam({ id: 'g3.div.rope-pieces', skill: 'G3_DIVIDE', outcome: 'MATH.G3.NUMBER.DIVISION.b', cskill: 'MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D', rung: 1, form: 'word',
     draw: () => { const s = randInt(3, 9), k = randInt(3, 9); return s !== k && distinct(k, s, k + 1, s * k - s) ? { s, k, tot: s * k } : null; },
     make: ({ s, k, tot }) => ({
       question: `A rope is ${tot} metres long. It is cut into pieces of ${s} metres each. How many pieces are there?`,
       answer: k,
-      wrong: [[tot - s, `Cutting one piece leaves ${tot - s} metres. Count how many pieces of ${s} metres fit.`], [s, 'That is the length of one piece. Count how many pieces.'], [k + 1, 'Check with the table. One piece too many.']],
+      wrong: [[tot - s, `Cutting one piece leaves ${tot - s} metres. Count how many pieces of ${s} metres fit.`, 'M_DIV_SUBTRACTS_ONCE'], [s, 'That is the length of one piece. Count how many pieces.', 'M_DIV_GIVES_GROUP_SIZE'], [k + 1, 'Check with the table. One piece too many.', 'M_DIV_ONE_EXTRA']],
       hints: [`How many ${s}s make ${tot}?`, `Think of the ${s} times table.`],
       steps: [`Find how many ${s}s are in ${tot}.`, `${tot} ÷ ${s} = ${k}.`] }),
     check: ({ s, tot }, ans) => ans * s === tot }),
 
-  fam({ id: 'g3.frac.biggest-piece', skill: 'G3_FRACTIONS', outcome: 'G3.FRAC.0', rung: 2, form: 'direct',
+  fam({ id: 'g3.frac.biggest-piece', skill: 'G3_FRACTIONS', outcome: 'MATH.G3.NUMBER.FRACTIONS.a', cskill: 'MATH.G3.NUMBER.FRACTIONS.COMPARE_UNIT_FRACTIONS', misMapped: false, reveals: ['M_FRAC_MORE_PIECES_BIGGER'], rung: 2, form: 'direct',
     draw: () => ({ big: Math.random() < 0.5, food: pick(['chapatis', 'cakes', 'watermelons', 'pizzas']) }),
     make: ({ big, food }) => ({ question: `Mama cuts 3 same-size ${food}. One into halves, one into quarters, one into eighths. Which pieces are ${big ? 'the biggest' : 'the smallest'}?`,
       options: opts(['halves', 'quarters', 'eighths'], big ? 'halves' : 'eighths', big ? 'More equal pieces make each piece smaller. Which cut makes the fewest pieces?' : 'Fewer equal pieces make each piece bigger. Which cut makes the most pieces?'),
@@ -408,12 +408,12 @@ export const FAMILIES = [
       steps: [`${m} m = ${100 * m} cm.`, `${100 * m} − ${c} = ${100 * m - c} cm.`] }),
     check: ({ m, c }, ans) => ans + c === 100 * m }),
 
-  fam({ id: 'g3.cap.pour-buckets', skill: 'G3_CAPACITY', outcome: 'G3.CAP.0', rung: 2, form: 'word',
+  fam({ id: 'g3.cap.pour-buckets', skill: 'G3_CAPACITY', outcome: 'MATH.G3.MEASUR.CAPACITY.b', cskill: 'MATH.G3.MEASUR.CAPACITY.ADD_LITRES', rung: 2, form: 'word',
     draw: () => { const b = pick([4, 5, 6, 8, 10]), n = randInt(3, 9); return distinct(b * n, b + n, b * n - b, b * n + b) ? { b, n, p: person() } : null; },
     make: ({ b, n, p }) => ({
       question: `A bucket holds ${b} litres. ${p.name} pours ${n} full buckets into a tank. How many litres are in the tank?`,
       answer: b * n,
-      wrong: [[b + n, 'Do not add the two numbers. Each full bucket holds the same, so multiply.'], [b * n - b, `${p.She} pours ${n} buckets, not one less.`], [b * n + b, `${p.She} pours ${n} buckets, not one more.`]],
+      wrong: [[b + n, 'Do not add the two numbers. Each full bucket holds the same, so multiply.', 'M_CAP_ADDS_COUNT_TO_LITRES'], [b * n - b, `${p.She} pours ${n} buckets, not one less.`, 'M_CADD_ONE_CONTAINER_SHORT'], [b * n + b, `${p.She} pours ${n} buckets, not one more.`, 'M_CADD_ONE_CONTAINER_SHORT']],
       hints: ['Each bucket pours the same amount.', 'Multiply the litres in one bucket by the number of buckets.'],
       steps: [`${n} buckets with ${b} litres each.`, `${n} × ${b} = ${b * n} litres.`] }),
     check: ({ b, n }, ans) => ans / b === n }),
@@ -428,17 +428,17 @@ export const FAMILIES = [
       steps: [`${w} weeks = ${w} × 7 = ${7 * w} days.`, `${7 * w} + ${d} = ${7 * w + d} days.`] }),
     check: ({ w, d }, ans) => ans - d === 7 * w }),
 
-  fam({ id: 'g3.money.bread-and-milk', skill: 'G3_MONEY', outcome: 'G3.MONEY.0', rung: 2, form: 'word',
+  fam({ id: 'g3.money.bread-and-milk', skill: 'G3_MONEY', outcome: 'MATH.G3.MEASUR.MONEY.g', cskill: 'MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE', rung: 2, form: 'word',
     draw: () => { const x = price('loaf of bread'), y = price('litre of milk'); const t = x + y; return t < 200 && distinct(200 - t, t, 200 - x, 200 - y) ? { x, y, p: person() } : null; },
     make: ({ x, y, p }) => ({
       question: `${p.name} buys bread for ${sh(x)} and milk for ${sh(y)}. ${p.She} pays with ${sh(200)}. How much change does ${p.she} get?`,
       answer: 200 - x - y,
-      wrong: [[x + y, 'That is the cost of both. The change is what comes back from 200.'], [200 - x, `The milk must be paid for too.`], [200 - y, `The bread must be paid for too.`]],
+      wrong: [[x + y, 'That is the cost of both. The change is what comes back from 200.', 'M_MONEY_GIVES_COST_AS_CHANGE'], [200 - x, `The milk must be paid for too.`, 'M_MONEY_PAYS_ONE_ITEM'], [200 - y, `The bread must be paid for too.`, 'M_MONEY_PAYS_ONE_ITEM']],
       hints: ['First find the cost of both things.', 'Then take that from the money paid.'],
       steps: [`Cost: ${x} + ${y} = ${x + y}.`, `Change: ${200} − ${x + y} = ${200 - x - y}, so ${sh(200 - x - y)}.`] }),
     check: ({ x, y }, ans) => ans + x + y === 200 }),
 
-  fam({ id: 'g3.position.turn', skill: 'G3_POSITION', outcome: 'G3.POSITION.0', rung: 1, form: 'word',
+  fam({ id: 'g3.position.turn', skill: 'G3_POSITION', outcome: 'MATH.G3.GEOMET.POSITION_AND_DIRECTION.c', cskill: 'MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT', misMapped: false, reveals: ['M_TURN_LEFT_RIGHT_SWAPPED', 'M_TURN_HALF_TURN'], rung: 1, form: 'word',
     draw: () => ({ f: randInt(0, 3), right: Math.random() < 0.5, p: person() }),
     make: ({ f, right, p }) => {
       const D = ['north', 'east', 'south', 'west'];

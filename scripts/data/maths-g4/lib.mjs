@@ -3,8 +3,9 @@
 // The first Grade 4 pass (12 Nov 2026) was in scripts/data/maths-g4-numbers.mjs, -measure.mjs and -geometry-data.mjs; it was moved
 // here on 18 Nov 2026 and taken to the depth standard (scripts/build-maths-grade.mjs 4): every skill at least two prerequisites and
 // four misconceptions, every misconception a reveal question and a repair in the teaching pack.
-// A prerequisite ref: 'G3o:SUB.letter' (a Grade 3 outcome: Grade 3 has no skills yet), 'G4:SKILL' (same sub-strand) or
-// 'G4x:SUB.SKILL' (another Grade 4 sub-strand).
+// A prerequisite ref: 'G3:SUB.SKILL' (a Grade 3 skill), 'G4:SKILL' (same sub-strand) or 'G4x:SUB.SKILL' (another Grade 4
+// sub-strand). Until Grade 3 was mapped (18 Nov 2026) the Grade 3 refs were outcomes ('G3o:SUB.letter'); each became the Grade 3
+// skill that carries that outcome.
 // A skill may carry a 9th argument, hands_on: what is done with real objects in class (a skill with no question forms is hands-on only).
 export { E, H, pk } from '../maths-g7/lib.mjs';
 export const LIT = 'widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher';

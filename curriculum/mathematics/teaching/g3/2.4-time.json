@@ -1,0 +1,649 @@
+{
+ "sub_strand": "MATH.G3.MEASUR.TIME",
+ "title": "Time",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to g are KICD's words; h is attitudinal. Time is read past and to the hour on analogue clocks and on digital clocks; adding and subtracting hours and minutes is without conversion (minutes never pass 60).",
+ "skills": [
+  {
+   "skill": "MATH.G3.MEASUR.TIME.MINUTE_UNIT",
+   "key_step": "The child counts the small marks: five minutes between numbers, sixty round the face.",
+   "floor": {
+    "prerequisite": "Knows the hour and minute hands (Grade 2).",
+    "question": "Which hand is longer?",
+    "answer": "the minute hand"
+   },
+   "representations": [
+    "a clock face with movable hands",
+    "a drawn face with marks",
+    "a 60-mark strip"
+   ],
+   "steps": [
+    "Find the small marks.",
+    "Count them from 12 to 1: 5.",
+    "Count in fives round the face.",
+    "60 minutes make one hour."
+   ],
+   "contexts": [
+    "a one-minute clap game",
+    "the school bell",
+    "boiling water for tea"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock face with minute marks."
+    },
+    {
+     "beat": "point",
+     "do": "Point from 12 to 1.",
+     "say": "How many small marks?"
+    },
+    {
+     "beat": "count",
+     "do": "Count in fives with the child round the face."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 60."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 60 minutes = 1 hour."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.MINUTE_UNIT.M_MIN_NUMBER_IS_MINUTE",
+     "listen_for": [
+      "3"
+     ],
+     "ask": "How many small marks from 12 to 3?",
+     "repair": "15: 15 minutes."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.MINUTE_UNIT.M_MIN_100_IN_HOUR",
+     "listen_for": [
+      "100"
+     ],
+     "ask": "How many small marks round the face?",
+     "repair": "60."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.MINUTE_UNIT.M_MIN_HOUR_MIN_SAME",
+     "listen_for": [
+      "a school day"
+     ],
+     "ask": "Could you clap through a whole school day?",
+     "repair": "No: a minute is short."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.MINUTE_UNIT.M_MIN_FIVE_BETWEEN_NUMBERS_ONE",
+     "listen_for": [
+      "1"
+     ],
+     "ask": "How many small marks?",
+     "repair": "5."
+    }
+   ],
+   "checks": [
+    {
+     "question": "How many minutes from 12 to 4 on the minute hand?",
+     "answer": "20",
+     "shows": "fives"
+    },
+    {
+     "question": "How many minutes in an hour?",
+     "answer": "60",
+     "shows": "the hour"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.TIME.TELL_PAST_TO",
+   "key_step": "The child finds the side of the clock the long hand is on, counts its minutes in fives, and names the hour from the short hand.",
+   "floor": {
+    "prerequisite": "Reads time by the hour (Grade 2).",
+    "question": "Short hand on 7, long hand on 12. What time?",
+    "answer": "7 o'clock"
+   },
+   "representations": [
+    "a clock with movable hands",
+    "a face split into past and to halves",
+    "time cards"
+   ],
+   "steps": [
+    "Which side is the long hand: past or to?",
+    "Count minutes in fives to or from 12.",
+    "Past: hour just passed.",
+    "To: the next hour."
+   ],
+   "contexts": [
+    "school assembly time",
+    "a matatu leaving the stage",
+    "a church service"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock: long hand on 8, short hand nearly at 5."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the long hand.",
+     "say": "Which side is it on?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the to side."
+    },
+    {
+     "beat": "count",
+     "do": "Count to 12 in fives with the child: 20."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say 20 to 5."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.TELL_PAST_TO.M_TIME_HANDS_SWAPPED",
+     "listen_for": [
+      "12 o'clock"
+     ],
+     "ask": "Which hand is the short one?",
+     "repair": "The hour hand: 3 o'clock."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.TELL_PAST_TO.M_TIME_PAST_TO_SWAP",
+     "listen_for": [
+      "20 past 4"
+     ],
+     "ask": "Which side is the minute hand on?",
+     "repair": "The left: 20 to 5."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.TELL_PAST_TO.M_TIME_HOUR_FROM_NEXT_NUMBER",
+     "listen_for": [
+      "10 past 5"
+     ],
+     "ask": "Has the short hand reached 5?",
+     "repair": "No: 10 past 4."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.TELL_PAST_TO.M_TIME_TO_COUNTS_FROM_12",
+     "listen_for": [
+      "45"
+     ],
+     "ask": "How many marks from 9 up to 12?",
+     "repair": "15: quarter to."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Long hand on 3, short hand just past 9. Time?",
+     "answer": "quarter past 9",
+     "shows": "past"
+    },
+    {
+     "question": "Long hand on 10, short hand nearly at 2. Time?",
+     "answer": "10 to 2",
+     "shows": "to"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.TIME.READ_DIGITAL",
+   "key_step": "The child reads the hours before the colon and the minutes after, then turns it into past or to.",
+   "floor": {
+    "prerequisite": "Reads past and to.",
+    "question": "Long hand on 6, short past 4. Time?",
+    "answer": "half past 4"
+   },
+   "representations": [
+    "a digital clock",
+    "an analogue clock beside it",
+    "a phone screen"
+   ],
+   "steps": [
+    "Hours before the colon.",
+    "Minutes after it.",
+    "Up to 30: past this hour.",
+    "After 30: to the next hour."
+   ],
+   "contexts": [
+    "a phone clock",
+    "a microwave in a shop",
+    "a bus timetable"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 7:45."
+    },
+    {
+     "beat": "point",
+     "do": "Point at 45.",
+     "say": "Past or to?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: to, 15 minutes."
+    },
+    {
+     "beat": "reveal",
+     "do": "Say quarter to 8."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.READ_DIGITAL.M_DIG_READS_AS_NUMBER",
+     "listen_for": [
+      "seven hundred and forty-five"
+     ],
+     "ask": "What is before the colon?",
+     "repair": "The hours: 7, then 45 minutes."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.READ_DIGITAL.M_DIG_45_QUARTER_PAST",
+     "listen_for": [
+      "quarter past 3"
+     ],
+     "ask": "Where is the long hand at 45 minutes?",
+     "repair": "On 9: quarter to 4."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.READ_DIGITAL.M_DIG_MINUTES_UNDER_10",
+     "listen_for": [
+      "ten to five"
+     ],
+     "ask": "How many minutes is 05?",
+     "repair": "5: five past four."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.READ_DIGITAL.M_DIG_HOUR_FOR_TO",
+     "listen_for": [
+      "twenty to six"
+     ],
+     "ask": "Which hour is 6:40 coming to?",
+     "repair": "7: twenty to seven."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Read 2:30 in words.",
+     "answer": "half past two",
+     "shows": "half past"
+    },
+    {
+     "question": "What is 9:50 in words?",
+     "answer": "ten to ten",
+     "shows": "to the next hour"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.TIME.WRITE_PAST_TO",
+   "key_step": "The child counts the minutes in fives, decides past or to, and writes the words with the right hour.",
+   "floor": {
+    "prerequisite": "Tells time past and to.",
+    "question": "Long hand on 4, short just past 6. Time?",
+    "answer": "20 past 6"
+   },
+   "representations": [
+    "a clock face to draw on",
+    "word cards",
+    "a drawn face"
+   ],
+   "steps": [
+    "Count minutes.",
+    "Past or to.",
+    "Choose the hour.",
+    "Write it in words."
+   ],
+   "contexts": [
+    "writing the time of a school event",
+    "a diary entry",
+    "a notice for a meeting"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a clock: long hand on 5, short just past 2."
+    },
+    {
+     "beat": "count",
+     "do": "Count in fives with the child to 25."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: past."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write twenty-five past two."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.WRITE_PAST_TO.M_WPT_FIVE_PAST_FOR_FIFTEEN",
+     "listen_for": [
+      "five past two"
+     ],
+     "ask": "How many fives to the 5?",
+     "repair": "Five fives: twenty-five past two."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.WRITE_PAST_TO.M_WPT_HANDS_SAME_LENGTH",
+     "listen_for": [
+      "short hand exactly on 3"
+     ],
+     "ask": "Where is the short hand half way through the hour?",
+     "repair": "Half way between 3 and 4."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.WRITE_PAST_TO.M_WPT_PAST_TO_WORD_SWAP",
+     "listen_for": [
+      "twenty past five"
+     ],
+     "ask": "Which hour has just gone at 4:20?",
+     "repair": "4: twenty past four."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.WRITE_PAST_TO.M_WPT_THIRTY_TO",
+     "listen_for": [
+      "thirty to eight"
+     ],
+     "ask": "Is the long hand half way round?",
+     "repair": "Yes: half past seven."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Write the time: long hand on 9, short nearly at 11.",
+     "answer": "quarter to eleven",
+     "shows": "to"
+    },
+    {
+     "question": "Draw half past 3: where is the short hand?",
+     "answer": "half way between 3 and 4",
+     "shows": "the hour hand"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS",
+   "key_step": "The child compares the activity with known hours (a lesson is under an hour, a school day about 7 hours).",
+   "floor": {
+    "prerequisite": "Reads hours on a clock.",
+    "question": "From 8 o'clock to 10 o'clock: how many hours?",
+    "answer": "2"
+   },
+   "representations": [
+    "a day timeline",
+    "a clock showing start and end",
+    "picture cards of activities"
+   ],
+   "steps": [
+    "Think of start and end.",
+    "Count the hours between.",
+    "More or less than an hour?",
+    "Choose the sensible estimate."
+   ],
+   "contexts": [
+    "a school day",
+    "a journey to Nairobi",
+    "a football match"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a timeline from 8 a.m. to 3 p.m."
+    },
+    {
+     "beat": "count",
+     "do": "Count the hours with the child."
+    },
+    {
+     "beat": "predict",
+     "do": "The child estimates the school day."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write about 7 hours."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS.M_EH_WILD",
+     "listen_for": [
+      "20 hours"
+     ],
+     "ask": "How many hours from 8 to 3?",
+     "repair": "7: about 7 hours."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS.M_EH_MINUTES_AS_HOURS",
+     "listen_for": [
+      "3 hours"
+     ],
+     "ask": "Is lunch longer than a lesson?",
+     "repair": "No: less than an hour."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS.M_EH_MORE_LESS_SWAP",
+     "listen_for": [
+      "less"
+     ],
+     "ask": "Bed at 8, up at 6: more or less than one hour?",
+     "repair": "Much more."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS.M_EH_ORDER",
+     "listen_for": [
+      "school day, football match, brushing teeth"
+     ],
+     "ask": "Which takes only minutes?",
+     "repair": "Brushing teeth first."
+    }
+   ],
+   "checks": [
+    {
+     "question": "About how long is a football match: 2 hours or 10 hours?",
+     "answer": "about 2 hours",
+     "shows": "sense"
+    },
+    {
+     "question": "Does brushing teeth take more or less than an hour?",
+     "answer": "less",
+     "shows": "more or less"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.TIME.ADD_TIME",
+   "key_step": "The child adds hours to hours and minutes to minutes in two columns.",
+   "floor": {
+    "prerequisite": "Adds whole numbers.",
+    "question": "15 + 30",
+    "answer": "45"
+   },
+   "representations": [
+    "two-column table: h and min",
+    "a time bar",
+    "clock faces"
+   ],
+   "steps": [
+    "Write h and min columns.",
+    "Add the minutes.",
+    "Add the hours.",
+    "Write h and min."
+   ],
+   "contexts": [
+    "a journey in two parts",
+    "homework and play time",
+    "a market day"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw columns h and min; write 2 15 and 1 30."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the minutes.",
+     "say": "15 and 30?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 45."
+    },
+    {
+     "beat": "count",
+     "do": "Add the hours together."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 h 45 min."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.ADD_TIME.M_ADDT_HOURS_TO_MINUTES",
+     "listen_for": [
+      "2 h 46 min"
+     ],
+     "ask": "Which column do hours go in?",
+     "repair": "The h column: 3 h 45 min."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.ADD_TIME.M_ADDT_DROPS_UNITS",
+     "listen_for": [
+      "345"
+     ],
+     "ask": "Which part is hours?",
+     "repair": "3 h 45 min."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.ADD_TIME.M_ADDT_ONLY_MINUTES",
+     "listen_for": [
+      "30 min"
+     ],
+     "ask": "Did you add the hours?",
+     "repair": "1 + 2 = 3: 3 h 30 min."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.ADD_TIME.M_ADDT_SUBTRACTS",
+     "listen_for": [
+      "50 min"
+     ],
+     "ask": "Together or difference?",
+     "repair": "Together: 3 h 30 min."
+    }
+   ],
+   "checks": [
+    {
+     "question": "1 h 25 min + 2 h 30 min",
+     "answer": "3 h 55 min",
+     "shows": "columns"
+    },
+    {
+     "question": "A trip of 2 h 10 min then 1 h 40 min. Total?",
+     "answer": "3 h 50 min",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.TIME.SUBTRACT_TIME",
+   "key_step": "The child takes hours from hours and minutes from minutes.",
+   "floor": {
+    "prerequisite": "Adds hours and minutes.",
+    "question": "2 h 15 min + 1 h 30 min",
+    "answer": "3 h 45 min"
+   },
+   "representations": [
+    "two-column table",
+    "a time bar",
+    "clock faces"
+   ],
+   "steps": [
+    "Write h and min columns.",
+    "Take the minutes.",
+    "Take the hours.",
+    "Write h and min."
+   ],
+   "contexts": [
+    "time left before the bus",
+    "how much longer a film is",
+    "time left for a test"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw columns; write 3 50 and 1 20."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the minutes.",
+     "say": "50 take away 20?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 30."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 2 h 30 min."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.TIME.SUBTRACT_TIME.M_SUBT_MIXES_COLUMNS",
+     "listen_for": [
+      "2 h 49 min"
+     ],
+     "ask": "Which numbers are minutes?",
+     "repair": "50 and 20: 30 min, so 2 h 30 min."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.SUBTRACT_TIME.M_SUBT_ADDS",
+     "listen_for": [
+      "4 h 10 min"
+     ],
+     "ask": "Do we want the extra part?",
+     "repair": "Yes: 1 h 10 min."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.SUBTRACT_TIME.M_SUBT_COUNTS_HOUR_NUMBERS",
+     "listen_for": [
+      "4 hours"
+     ],
+     "ask": "How many jumps from 2 to 5?",
+     "repair": "Three jumps: 3 hours, or 5 - 2 = 3."
+    },
+    {
+     "code": "MATH.G3.MEASUR.TIME.SUBTRACT_TIME.M_SUBT_GIVES_TIME_USED",
+     "listen_for": [
+      "1 h 10 min"
+     ],
+     "ask": "Is 1 h 10 min done or left?",
+     "repair": "Done: 2 h 30 min left."
+    }
+   ],
+   "checks": [
+    {
+     "question": "4 h 45 min - 2 h 15 min",
+     "answer": "2 h 30 min",
+     "shows": "columns"
+    },
+    {
+     "question": "A 3 h 40 min trip: 1 h 10 min done. Left?",
+     "answer": "2 h 30 min",
+     "shows": "left"
+    }
+   ]
+  }
+ ]
+}

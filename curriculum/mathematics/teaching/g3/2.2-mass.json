@@ -1,0 +1,372 @@
+{
+ "sub_strand": "MATH.G3.MEASUR.MASS",
+ "title": "Mass",
+ "status": "draft: written 18 Nov 2026 offline for Grade 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+ "sources": [],
+ "notes": "Outcomes a to d are KICD's words; e is attitudinal. Mass is in whole kilograms, measured on a beam balance against 1 kg masses (made with sand or soil), added, subtracted, and estimated up to 5 kg.",
+ "skills": [
+  {
+   "skill": "MATH.G3.MEASUR.MASS.MEASURE_KG",
+   "key_step": "The child adds 1 kg masses until the beam is level, then counts the masses.",
+   "floor": {
+    "prerequisite": "Knows the kilogram (Grade 2).",
+    "question": "Which is about 1 kg: a packet of flour or a pencil?",
+    "answer": "a packet of flour"
+   },
+   "representations": [
+    "a beam balance",
+    "sand masses of 1 kg",
+    "a picture of a balance"
+   ],
+   "steps": [
+    "Object in one pan.",
+    "Add 1 kg masses to the other.",
+    "Stop when level.",
+    "Count the masses; write kg."
+   ],
+   "contexts": [
+    "sugar at the shop",
+    "a bag of potatoes",
+    "a jerrycan of water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a balance: a bag on the left, the beam tipped left."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the low side.",
+     "say": "Which is heavier?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for: the bag."
+    },
+    {
+     "beat": "child_draws",
+     "do": "The child adds masses until level."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 3 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MASS.MEASURE_KG.M_MASS_HIGH_SIDE_HEAVY",
+     "listen_for": [
+      "the bag"
+     ],
+     "ask": "Which pan went down?",
+     "repair": "The masses: they are heavier."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.MEASURE_KG.M_MASS_BIGGER_IS_HEAVIER",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "What does the balance say?",
+     "repair": "They balance: same mass."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.MEASURE_KG.M_MASS_NOT_LEVEL",
+     "listen_for": [
+      "yes"
+     ],
+     "ask": "Is the beam level?",
+     "repair": "No: the object is less than 4 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.MEASURE_KG.M_MASS_COUNTS_PANS",
+     "listen_for": [
+      "3 kg"
+     ],
+     "ask": "How many 1 kg masses are there?",
+     "repair": "Two: 2 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A bag balances four 1 kg masses. Its mass?",
+     "answer": "4 kg",
+     "shows": "reading"
+    },
+    {
+     "question": "The pan with masses goes down. Is the object heavier or lighter?",
+     "answer": "lighter",
+     "shows": "beam direction"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MASS.ADD_KG",
+   "key_step": "The child adds the masses as numbers and writes kg.",
+   "floor": {
+    "prerequisite": "Adds whole numbers.",
+    "question": "5 + 2",
+    "answer": "7"
+   },
+   "representations": [
+    "shopping items with labels",
+    "a balance",
+    "a column sum"
+   ],
+   "steps": [
+    "Read each mass.",
+    "Add.",
+    "Carry if needed.",
+    "Write kg."
+   ],
+   "contexts": [
+    "shopping at the model shop",
+    "bags of maize to the posho mill",
+    "a load on a donkey"
+   ],
+   "board": [
+    {
+     "beat": "write",
+     "do": "Write 2 kg + 5 kg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at each label.",
+     "say": "Together?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 7."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 7 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MASS.ADD_KG.M_KADD_SUBTRACTS",
+     "listen_for": [
+      "1 kg"
+     ],
+     "ask": "Are we finding together or the difference?",
+     "repair": "Together: 7 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.ADD_KG.M_KADD_COUNTS_ITEMS",
+     "listen_for": [
+      "2 kg"
+     ],
+     "ask": "Are we counting bags or kilograms?",
+     "repair": "Kilograms: 7 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.ADD_KG.M_KADD_CARRY",
+     "listen_for": [
+      "65 kg"
+     ],
+     "ask": "8 + 7 is 15: what do you carry?",
+     "repair": "One ten: 75 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.ADD_KG.M_KADD_NO_UNIT",
+     "listen_for": [
+      "5"
+     ],
+     "ask": "5 what?",
+     "repair": "5 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "12 kg + 9 kg",
+     "answer": "21 kg",
+     "shows": "carry"
+    },
+    {
+     "question": "A sack of 20 kg and a bag of 5 kg. Total?",
+     "answer": "25 kg",
+     "shows": "story"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MASS.SUBTRACT_KG",
+   "key_step": "The child takes the lighter mass from the heavier one, or what was used from the start.",
+   "floor": {
+    "prerequisite": "Subtracts whole numbers.",
+    "question": "9 - 4",
+    "answer": "5"
+   },
+   "representations": [
+    "a balance",
+    "a bar with the difference",
+    "a column subtraction"
+   ],
+   "steps": [
+    "Which is heavier?",
+    "Heavier minus lighter.",
+    "Or start minus used.",
+    "Write kg."
+   ],
+   "contexts": [
+    "flour used for mandazi",
+    "maize sold",
+    "how much heavier a goat is than a dog"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw two bars: 9 kg and 4 kg."
+    },
+    {
+     "beat": "point",
+     "do": "Point at the extra part.",
+     "say": "How much?"
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for 5 kg."
+    },
+    {
+     "beat": "reveal",
+     "do": "Write 9 kg - 4 kg = 5 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MASS.SUBTRACT_KG.M_KSUB_ADDS_HEAVIER",
+     "listen_for": [
+      "13 kg"
+     ],
+     "ask": "How many kg more does the maize have?",
+     "repair": "5 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.SUBTRACT_KG.M_KSUB_SMALLER_FROM_LARGER",
+     "listen_for": [
+      "35 kg"
+     ],
+     "ask": "Can you take 8 from 3?",
+     "repair": "No: 13 - 8 = 5, so 25 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.SUBTRACT_KG.M_KSUB_GIVES_USED",
+     "listen_for": [
+      "4 kg"
+     ],
+     "ask": "Is 4 kg used or left?",
+     "repair": "Used: 6 kg left."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.SUBTRACT_KG.M_KSUB_ORDER",
+     "listen_for": [
+      "0 kg"
+     ],
+     "ask": "Which is heavier?",
+     "repair": "8 kg: 5 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "A 25 kg bag has 8 kg sold. Left?",
+     "answer": "17 kg",
+     "shows": "left"
+    },
+    {
+     "question": "How much heavier is 30 kg than 12 kg?",
+     "answer": "18 kg",
+     "shows": "difference"
+    }
+   ]
+  },
+  {
+   "skill": "MATH.G3.MEASUR.MASS.ESTIMATE_KG",
+   "key_step": "The child compares the object in one hand with a 1 kg mass in the other and says about how many kilograms.",
+   "floor": {
+    "prerequisite": "Measures in kg.",
+    "question": "A bag balances three 1 kg masses. Mass?",
+    "answer": "3 kg"
+   },
+   "representations": [
+    "a 1 kg bag of flour to hold",
+    "everyday items",
+    "a table: estimate, measure"
+   ],
+   "steps": [
+    "Feel 1 kg.",
+    "Lift the object.",
+    "About how many 1 kg?",
+    "Weigh and compare."
+   ],
+   "contexts": [
+    "a school bag",
+    "a pineapple",
+    "a small jerrycan of water"
+   ],
+   "board": [
+    {
+     "beat": "draw",
+     "do": "Draw a 1 kg flour packet and a school bag."
+    },
+    {
+     "beat": "predict",
+     "do": "The child estimates the bag's mass."
+    },
+    {
+     "beat": "pause",
+     "do": "Wait for an 'about' answer."
+    },
+    {
+     "beat": "reveal",
+     "do": "Show the measure: about 3 kg."
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "MATH.G3.MEASUR.MASS.ESTIMATE_KG.M_KEST_SIZE_GUESS",
+     "listen_for": [
+      "5 kg"
+     ],
+     "ask": "Is it heavier than the 1 kg mass?",
+     "repair": "No: less than 1 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.ESTIMATE_KG.M_KEST_NO_BENCHMARK",
+     "listen_for": [
+      "100 kg"
+     ],
+     "ask": "Is it as heavy as three bags of flour?",
+     "repair": "About: about 3 kg."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.ESTIMATE_KG.M_KEST_MUST_BE_EXACT",
+     "listen_for": [
+      "no"
+     ],
+     "ask": "Is 4 close to 5?",
+     "repair": "Yes."
+    },
+    {
+     "code": "MATH.G3.MEASUR.MASS.ESTIMATE_KG.M_KEST_MORE_LESS_SWAP",
+     "listen_for": [
+      "more"
+     ],
+     "ask": "Which is lighter?",
+     "repair": "The pencil: less than 5 kg."
+    }
+   ],
+   "checks": [
+    {
+     "question": "Which is closest to 5 kg: an egg, a big pumpkin, a pen?",
+     "answer": "a big pumpkin",
+     "shows": "benchmark"
+    },
+    {
+     "question": "Is a book more or less than 5 kg?",
+     "answer": "less",
+     "shows": "more or less"
+    }
+   ]
+  }
+ ]
+}

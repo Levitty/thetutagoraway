@@ -147,15 +147,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Place value to hundreds is the base for thousands and ten thousands.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading numbers to 1,000 in symbols supports reading longer numbers.",
        "status": "proposed"
@@ -192,8 +192,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Multiplying by 10 is how a digit takes on the value of a higher place.",
        "status": "proposed"
@@ -230,8 +230,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads numbers to 1,000 in symbols already.",
        "status": "proposed"
@@ -261,15 +261,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.e",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.WORDS_100",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Words for 1 to 100 are the building blocks for the tens and ones part.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Numbers to 1,000 in symbols come first.",
        "status": "proposed"
@@ -299,15 +299,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Comparing the hundreds digit uses place value to hundreds.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Counting forward to 1,000 gives the sense of order.",
        "status": "proposed"
@@ -336,15 +336,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_HUNDREDS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Needs the tens and ones places.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_BACK_HUNDREDS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Counting back and forward in steps gives the sense of nearest.",
        "status": "proposed"
@@ -374,15 +374,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Factor pairs are multiplication facts.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.DIVISION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "A factor divides the number exactly.",
        "status": "proposed"
@@ -412,15 +412,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Multiples are the products in a times table.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Skip counting from any starting point.",
        "status": "proposed"
@@ -450,15 +450,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counting in ones and twos shows the pattern.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.DIVISION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sharing by two with no remainder.",
        "status": "proposed"
@@ -495,8 +495,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.f",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.PATTERNS_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Finding a missing number in a pattern to 1,000.",
        "status": "proposed"
@@ -525,15 +525,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.READ_SYMBOLS_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Reading numbers 1 to 10 in symbols.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Counting 1 to 10 in order gives the sequence the numerals follow.",
        "status": "proposed"
@@ -1323,8 +1323,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.ADDITION.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds two 3-digit numbers with single regrouping.",
        "status": "proposed"
@@ -1367,8 +1367,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.ADDITION.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_REGROUP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Regrouping once in a 3-digit sum comes before regrouping twice.",
        "status": "proposed"
@@ -1443,8 +1443,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.ADDITION.e",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.ADDITION.ADD_PATTERNS_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Creates number patterns with addition to 1,000.",
        "status": "proposed"
@@ -1784,8 +1784,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.SUBTRACTION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_2D_NO_REGROUP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts a 2-digit number from a 3-digit number without regrouping.",
        "status": "proposed"
@@ -1821,8 +1821,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.SUBTRACTION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.SUBTRACTION.SUB_3D_3D_REGROUP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts a 3-digit number from a 3-digit number with single regrouping.",
        "status": "proposed"
@@ -1904,8 +1904,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.SUBTRACTION.e",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.SUBTRACTION.SUB_PATTERNS_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Missing numbers in subtraction patterns to 1,000.",
        "status": "proposed"
@@ -2246,15 +2246,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Multiplies a single digit by 10.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Single digit facts.",
        "status": "proposed"
@@ -2290,8 +2290,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Single digit facts.",
        "status": "proposed"
@@ -2396,15 +2396,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Single digit multiplication facts.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Repeated addition is how patterns are first seen.",
        "status": "proposed"
@@ -2795,15 +2795,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.DIVISION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Divides a 2-digit number by a single digit without a remainder.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Division facts come from multiplication facts.",
        "status": "proposed"
@@ -2840,8 +2840,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.DIVISION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Repeated subtraction shows what is left.",
        "status": "proposed"
@@ -2871,15 +2871,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Single digit multiplication facts.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.DIVISION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.DIVISION.DIV_REPEATED_SUBTRACTION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Division as repeated subtraction.",
        "status": "proposed"
@@ -3173,15 +3173,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.FRACTIONS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies halves, quarters and thirds as parts of a whole.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.FRACTIONS.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "A fraction of a group also has a top number and a bottom number.",
        "status": "proposed"
@@ -3218,8 +3218,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.FRACTIONS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Fractions as part of a whole.",
        "status": "proposed"
@@ -3256,15 +3256,15 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.FRACTIONS.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Fractions as part of a group.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.DIVISION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.DIVISION.DIV_2D_BY_1D",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sharing equally into groups.",
        "status": "proposed"
@@ -4296,15 +4296,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.ADDITION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Adds numbers; letters stand for numbers in sums.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.SUBTRACTION.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.SUBTRACTION.SUB_MISSING_NUMBER",
+       "kind": "skill",
        "strength": "essential",
        "reason": "A missing number in a box is the first step to a letter standing for a number.",
        "status": "proposed"
@@ -4341,8 +4341,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Multiplication of letter by a number.",
        "status": "proposed"
@@ -4379,8 +4379,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.ADDITION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.ADDITION.ADD_3D_3D_NO_REGROUP",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Adds like quantities.",
        "status": "proposed"
@@ -4728,15 +4728,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measures length in metres.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.ESTIMATE_METRES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Estimates length to 10 metres.",
        "status": "proposed"
@@ -4773,8 +4773,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measuring in metres from a start mark is the same action with a smaller unit.",
        "status": "proposed"
@@ -4804,8 +4804,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.MEASURE_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Metre as the unit.",
        "status": "proposed"
@@ -4849,8 +4849,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_BY_10",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Multiplies by 10 first, 100 builds on it.",
        "status": "proposed"
@@ -4888,8 +4888,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.ADD_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds lengths in metres.",
        "status": "proposed"
@@ -4932,8 +4932,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.ADD_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds lengths in whole metres.",
        "status": "proposed"
@@ -4969,8 +4969,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.LENGTH.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.LENGTH.SUBTRACT_METRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts lengths in whole metres.",
        "status": "proposed"
@@ -5006,8 +5006,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_1D_BY_1D",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Single digit facts.",
        "status": "proposed"
@@ -5685,8 +5685,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sees shapes made of other shapes.",
        "status": "proposed"
@@ -5716,15 +5716,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Recognises shapes.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Repeated addition of equal rows.",
        "status": "proposed"
@@ -5768,8 +5768,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Repeated addition as rows.",
        "status": "proposed"
@@ -6042,15 +6042,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Names shapes in combined shapes.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counting the blocks in a pile, each one once.",
        "status": "proposed"
@@ -6403,15 +6403,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.CAPACITY.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.CAPACITY.MEASURE_LITRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measures capacity in litres.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.CAPACITY.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.CAPACITY.ESTIMATE_LITRES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Estimates capacity up to 5 litres.",
        "status": "proposed"
@@ -6478,8 +6478,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.CAPACITY.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.CAPACITY.ADD_LITRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds capacity in litres.",
        "status": "proposed"
@@ -6515,8 +6515,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.CAPACITY.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.CAPACITY.SUBTRACT_LITRES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts capacity in litres.",
        "status": "proposed"
@@ -6879,15 +6879,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.MASS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.MASS.MEASURE_KG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Measures mass in kilograms.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.MASS.d",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.MASS.ESTIMATE_KG",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Estimates mass up to 5 kg.",
        "status": "proposed"
@@ -6954,8 +6954,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.MASS.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.MASS.ADD_KG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Adds mass in kilograms.",
        "status": "proposed"
@@ -6991,8 +6991,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.MASS.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.MASS.SUBTRACT_KG",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts mass in kilograms.",
        "status": "proposed"
@@ -7370,15 +7370,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.TIME.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.TELL_PAST_TO",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads time with past and to.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.TIME.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.READ_DIGITAL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads digital and analogue clocks.",
        "status": "proposed"
@@ -7414,8 +7414,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.TIME.e",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.ESTIMATE_HOURS",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Estimates time in hours.",
        "status": "proposed"
@@ -7445,8 +7445,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.TIME.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.MINUTE_UNIT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "The minute as a unit.",
        "status": "proposed"
@@ -7527,8 +7527,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.TIME.f",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.ADD_TIME",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Adds hours and minutes.",
        "status": "proposed"
@@ -7565,8 +7565,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.TIME.g",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.SUBTRACT_TIME",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Subtracts hours and minutes.",
        "status": "proposed"
@@ -7610,8 +7610,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.MEASUR.TIME.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.TIME.READ_DIGITAL",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Reads digital time.",
        "status": "proposed"
@@ -8139,8 +8139,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.MONEY.f",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.MONEY.CHANGE_DENOMINATIONS",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Converts money into different denominations.",
        "status": "proposed"
@@ -8177,8 +8177,8 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.MEASUR.MONEY.g",
-       "kind": "outcome",
+       "requires": "MATH.G3.MEASUR.MONEY.BUY_WITH_BALANCE",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Buys up to three items with a balance.",
        "status": "proposed"
@@ -8513,17 +8513,17 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.c",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.TURN_LEFT_RIGHT",
+       "kind": "skill",
        "strength": "essential",
-       "reason": "Turns to the right from a point.",
+       "reason": "Turns to the right and to the left from a point.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.d",
-       "kind": "outcome",
-       "strength": "essential",
-       "reason": "Turns to the left from a point.",
+       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT",
+       "kind": "skill",
+       "strength": "helpful",
+       "reason": "Moves along a straight line from a point before turning.",
        "status": "proposed"
       }
      ],
@@ -8560,8 +8560,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.LEFT_RIGHT",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Knows left and right.",
        "status": "proposed"
@@ -8774,15 +8774,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sees corners in shapes.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.POSITION_AND_DIRECTION.MOVE_STRAIGHT",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Moving along a straight line from a point gives the arms of an angle.",
        "status": "proposed"
@@ -8818,8 +8818,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Picking out the shapes in an object shows where its corners are.",
        "status": "proposed"
@@ -9144,15 +9144,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Identifies shapes in combined shapes.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Drawing combined shapes makes the child look at sides and corners.",
        "status": "proposed"
@@ -9183,8 +9183,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Draws a combined shape.",
        "status": "proposed"
@@ -9222,8 +9222,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.NAME_SHAPES",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Sees shapes in combined shapes.",
        "status": "proposed"
@@ -9254,8 +9254,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.GEOMET.SHAPES.b",
-       "kind": "outcome",
+       "requires": "MATH.G3.GEOMET.SHAPES.DRAW_COMBINED",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Draws combined shapes.",
        "status": "proposed"
@@ -9699,15 +9699,15 @@
      ],
      "prerequisites": [
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counting objects one by one is what a tally records.",
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.MULTIPLICATION.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.MULTIPLICATION.MULT_REPEATED_ADDITION",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Counting in fives as repeated addition reads a tally gate quickly.",
        "status": "proposed"
@@ -9738,8 +9738,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "essential",
        "reason": "Counting each item once, without missing or repeating any.",
        "status": "proposed"
@@ -9777,8 +9777,8 @@
        "status": "proposed"
       },
       {
-       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.a",
-       "kind": "outcome",
+       "requires": "MATH.G3.NUMBER.WHOLE_NUMBERS.COUNT_FORWARD_1000",
+       "kind": "skill",
        "strength": "helpful",
        "reason": "Counts in ones and fives.",
        "status": "proposed"

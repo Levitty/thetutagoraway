@@ -12,14 +12,15 @@
 // Not loaded by the live tutor yet: wiring it into the turn brief is a separate, approved change.
 //
 //   node scripts/build-teaching-pack.mjs [--doc ../Tutagora/Build/voice-tutor/training/TEACHING_PACK_G5.md]
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // One builder for every Grade (17 Nov 2026): Grade 5 writes teachingPackData.js, Grade 6 (18 Nov 2026) teachingPackData.g6.js and
 // Grade 7 teachingPackData.g7.js, Grade 8 (18 Nov 2026) teachingPackData.g8.js, Grade 9 (18 Nov 2026) teachingPackData.g9.js,
-// Grade 4 (18 Nov 2026) teachingPackData.g4.js. The default is Grade 5.
+// Grade 4 (18 Nov 2026) teachingPackData.g4.js, Grades 3, 2 and 1 (18 Nov 2026) teachingPackData.g3.js, .g2.js, .g1.js.
+// The default is Grade 5. A grade with no pack folder yet is skipped.
 const packDir = (g) => join(ROOT, `curriculum/mathematics/teaching/g${g}`);
 const libraryFile = (g) => join(ROOT, `curriculum/mathematics/g${g}.json`);
 export const outFile = (g = 5) => join(ROOT, g === 5 ? 'src/voice-tutor/teachingPackData.js' : `src/voice-tutor/teachingPackData.g${g}.js`);
@@ -143,7 +144,8 @@ export default TEACHING_PACK_G${grade};
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  for (const grade of [4, 5, 6, 7, 8, 9]) {
+  for (const grade of [1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+    if (!existsSync(packDir(grade))) continue;
     const built = buildPack(grade);
     writeFileSync(outFile(grade), renderData(built, grade));
     console.log(`${outFile(grade).split('/').pop()} written: ${Object.keys(built.pack).length} skills`);
