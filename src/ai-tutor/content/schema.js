@@ -16,6 +16,8 @@
 // tiers. This file is those builders; algebra.js is the composition.
 // ============================================================================
 
+import { exampleMismatch } from './exampleKind.js';
+
 // ---------------------------------------------------------------- RNG helpers
 export const randInt = (lo, hi) => lo + Math.floor(Math.random() * (hi - lo + 1));
 export const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -176,7 +178,11 @@ export const withLevels = (levels) => (opts = {}) => {
 // what the lesson UI renders.
 export const withWorkedExample = (gen) => () => {
   const p = gen();
-  const ex = gen();
+  // The example is the same kind of question with other numbers (F11): same
+  // instruction, same type, about the same thing, not this question. After 60
+  // draws the last one is kept rather than none.
+  let ex = gen();
+  for (let i = 0; i < 60 && exampleMismatch(p, ex); i++) ex = gen();
   p.hint = p.hint || (p.hints && p.hints[0]);
   p.solutionSteps = (p.solution?.steps || []).map(stepText);
   p.workedExample = {

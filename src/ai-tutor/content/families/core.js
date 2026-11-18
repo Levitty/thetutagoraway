@@ -30,6 +30,7 @@
 // ============================================================================
 
 import { accepts, hintLadder, stepText } from '../schema.js';
+import { exampleMismatch } from '../exampleKind.js';
 
 const num = (v) => Number(Number(v).toPrecision(12));
 export const fmtNum = (v) => String(num(v));
@@ -154,7 +155,9 @@ export function drawFamily(def, tries = 200) {
 // The problem a child gets: one draw, plus a separate solved example to study.
 export function serveFamily(def) {
   const { p } = drawFamily(def);
-  const { p: ex } = drawFamily(def);
+  // Same kind of question, not this one (F11, one rule with withWorkedExample).
+  let { p: ex } = drawFamily(def);
+  for (let i = 0; i < 60 && exampleMismatch(p, ex); i++) ex = drawFamily(def).p;
   p.workedExample = {
     problem: ex.question,
     steps: ex.solutionSteps,
