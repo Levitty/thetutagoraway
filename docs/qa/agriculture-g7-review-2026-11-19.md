@@ -153,19 +153,19 @@ Read the question, the right answer and what a child is told after a wrong one. 
 
 Skill `CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION`, outcome `a`, form direct, rung 1.
 
-**Q:** Which helps to control soil pollution?
-Options: Spraying more chemicals | **Reducing and recycling waste** | Burning plastic on the farm | Burying all the rubbish at once
-- If a child answers "Spraying more chemicals": Reduce, reuse and recycle waste. Reduce, reuse and recycle waste.
-- If a child answers "Burning plastic on the farm": Reduce, reuse and recycle waste. Too much fertiliser pollutes the soil.
+**Q:** What can too much fertiliser do to the soil?
+Options: Make it grow by itself | Turn it into rich water | Make it much healthier | **Pollute and harm it**
+- If a child answers "Make it grow by itself": Reduce, reuse and recycle waste. Reduce, reuse and recycle waste.
+- If a child answers "Turn it into rich water": Reduce, reuse and recycle waste. Polythene does not rot and blocks water and roots.
 
 ### agriculture7.sp.story
 
 Skill `CONSER.CONTROLLING_SOIL_POLLUTI.SOIL_POLLUTION`, outcome `a`, form word, rung 2.
 
-**Q:** A farmer sprays far too much pesticide. What can happen?
-Options: The soil is made healthier | The crops always grow better | **The soil and water are polluted** | The insects become friends
-- If a child answers "The soil is made healthier": Reduce, reuse and recycle waste. Too much fertiliser pollutes the soil.
-- If a child answers "The crops always grow better": Reduce, reuse and recycle waste. Polythene does not rot and blocks water and roots.
+**Q:** A farmer buries polythene bags in the shamba. What is the problem?
+Options: They feed the crops very well | They make the soil soft and rich | They disappear within a week | **They do not rot and block water**
+- If a child answers "They feed the crops very well": Reduce, reuse and recycle waste. Too much fertiliser pollutes the soil.
+- If a child answers "They make the soil soft and rich": Reduce, reuse and recycle waste. Polythene does not rot and blocks water and roots.
 
 ### agriculture7.sp.spot
 
@@ -180,26 +180,26 @@ Steps: Step 1: Oil spills harm the land. / Step 2: They pollute the soil. / **St
 
 Skill `CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF`, outcome `a`, form direct, rung 1.
 
-**Q:** What is surface run-off?
-Options: Water inside a tank | Water inside a plant | **Water flowing over the ground** | Water deep under the ground
-- If a child answers "Water inside a tank": Mulch slows run-off down. Trenches and water pans trap run-off.
-- If a child answers "Water inside a plant": Mulch slows run-off down. Mulch slows run-off and keeps water.
+**Q:** Which is a use of run-off in gardening?
+Options: Drying the seeds | Burning the weeds | **Watering the crops** | Painting the fence
+- If a child answers "Drying the seeds": Mulch slows run-off down. Trenches and water pans trap run-off.
+- If a child answers "Burning the weeds": Mulch slows run-off down. Run-off can be trapped and used.
 
 ### agriculture7.ro.story
 
 Skill `CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF`, outcome `a`, form word, rung 2.
 
-**Q:** A farmer plants on ridges across the slope. Why?
-Options: To spoil the crop | To speed the water up | **To slow the water down** | To dry the soil
-- If a child answers "To spoil the crop": Mulch slows run-off down. Mulch slows run-off and keeps water.
-- If a child answers "To speed the water up": Mulch slows run-off down. Run-off can be trapped and used.
+**Q:** A farmer digs a zai pit to hold water for maize. What is this?
+Options: A well that is always dry | A pit for dumping waste | A hole for burying rubbish | **A water retention structure**
+- If a child answers "A well that is always dry": Mulch slows run-off down. Mulch slows run-off and keeps water.
+- If a child answers "A pit for dumping waste": Mulch slows run-off down. Run-off can be trapped and used.
 
 ### agriculture7.ro.spot
 
 Skill `CONSER.CONSTRUCTING_WATER_RETEN.RUNOFF`, outcome `b`, form spot, rung 3.
 
-**Q:** Step 1: A trench can hold water. Which step is the mistake?
-Steps: Step 1: A trench can hold water. / Step 2: A water pan also holds water. / **Step 3: So a bare path traps run-off.**
+**Q:** Step 1: Rain makes surface run-off. Which step is the mistake?
+Steps: Step 1: Rain makes surface run-off. / Step 2: The water flows downhill. / **Step 3: So run-off cannot be used in the garden.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -207,26 +207,26 @@ Steps: Step 1: A trench can hold water. / Step 2: A water pan also holds water. 
 
 Skill `CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP`, outcome `a`, form direct, rung 1.
 
-**Q:** Which keeps vitamins best?
-Options: Soaking them for a day | Frying them for an hour | **Eating some vegetables raw** | Boiling them until soft and grey
-- If a child answers "Soaking them for a day": Wash before cutting. Wash before cutting to avoid losing vitamins.
-- If a child answers "Frying them for an hour": Wash before cutting. The water holds minerals; use it.
+**Q:** How should vegetables be peeled to keep minerals?
+Options: Not washed first | Cut off the whole outside | As thickly as possible | **Thinly**
+- If a child answers "Not washed first": Wash before cutting. Wash before cutting to avoid losing vitamins.
+- If a child answers "Cut off the whole outside": Wash before cutting. The water holds minerals; use it.
 
 ### agriculture7.nk.story
 
 Skill `CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP`, outcome `a`, form word, rung 2.
 
-**Q:** Mama steams carrots for five minutes with the lid on. Why is this good?
-Options: It destroys all the vitamins | It wastes the carrots a lot | It makes them raw and hard | **It keeps vitamins and minerals**
-- If a child answers "It destroys all the vitamins": Wash before cutting. Short cooking keeps the vitamins.
-- If a child answers "It wastes the carrots a lot": Wash before cutting. The water holds minerals; use it.
+**Q:** Peter cuts spinach into small pieces and then washes it. What is the problem?
+Options: The knife gets dirty | **Vitamins wash away** | The spinach grows again | Nothing is wrong
+- If a child answers "The knife gets dirty": Wash before cutting. Wash before cutting to avoid losing vitamins.
+- If a child answers "The spinach grows again": Wash before cutting. The water holds minerals; use it.
 
 ### agriculture7.nk.spot
 
 Skill `CONSER.CONSERVING_FOOD_NUTRIENT.NUTRIENT_KEEP`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Peeling removes the outer layer. Which step is the mistake?
-Steps: Step 1: Peeling removes the outer layer. / Step 2: Minerals lie near the skin. / **Step 3: So thick peeling keeps minerals.**
+**Q:** Step 1: Vegetables have vitamins. Which step is the mistake?
+Steps: Step 1: Vegetables have vitamins. / Step 2: Heat can destroy some vitamins. / **Step 3: So long boiling keeps them all.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -234,26 +234,26 @@ Steps: Step 1: Peeling removes the outer layer. / Step 2: Minerals lie near the 
 
 Skill `CONSER.GROWING_TREES.TREES_IMPORTANCE`, outcome `a`, form direct, rung 1.
 
-**Q:** Which gas do trees give out?
-Options: **Oxygen** | Dust only | Petrol fumes | Smoke
-- If a child answers "Dust only": Trees help rain and give homes to birds. Trees give shade, fruit, timber and shelter.
-- If a child answers "Petrol fumes": Trees help rain and give homes to birds. Trees give out oxygen.
+**Q:** What else do trees give besides firewood?
+Options: Only shade at night | **Shade, fruit and timber** | Nothing else at all | Only firewood
+- If a child answers "Only shade at night": Trees help rain and give homes to birds. Trees give shade, fruit, timber and shelter.
+- If a child answers "Nothing else at all": Trees help rain and give homes to birds. Trees give out oxygen.
 
 ### agriculture7.ti.story
 
 Skill `CONSER.GROWING_TREES.TREES_IMPORTANCE`, outcome `a`, form word, rung 2.
 
-**Q:** A village cuts all its trees and the rain falls less. What does this show?
-Options: Trees do not matter | Rain needs no trees | **Trees help bring rain** | Trees stop the rain
-- If a child answers "Trees do not matter": Trees help rain and give homes to birds. Trees give out oxygen.
-- If a child answers "Rain needs no trees": Trees help rain and give homes to birds. Trees give shade, fruit, timber and shelter.
+**Q:** A hillside has no trees and soil washes away. What would help?
+Options: Cutting more trees | Burning the grass | Leaving it bare | **Planting trees**
+- If a child answers "Cutting more trees": Trees help rain and give homes to birds. Trees hold soil and help rain.
+- If a child answers "Burning the grass": Trees help rain and give homes to birds. Trees give shade, fruit, timber and shelter.
 
 ### agriculture7.ti.spot
 
 Skill `CONSER.GROWING_TREES.TREES_IMPORTANCE`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Bare land erodes. Which step is the mistake?
-Steps: Step 1: Bare land erodes. / Step 2: Trees protect land. / **Step 3: So cut more trees to stop erosion.**
+**Q:** Step 1: Trees give wood. Which step is the mistake?
+Steps: Step 1: Trees give wood. / Step 2: They give fruit and shade. / **Step 3: So trees are useful only as firewood.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -261,53 +261,53 @@ Steps: Step 1: Bare land erodes. / Step 2: Trees protect land. / **Step 3: So cu
 
 Skill `FOOD_P.CROP_ESTABLISHMENT.TILTH`, outcome `a`, form direct, rung 1.
 
-**Q:** Which tool is used for primary cultivation of hard ground?
-Options: **A forked jembe** | A watering can | A rake | A garden fork for raking
-- If a child answers "A watering can": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
-- If a child answers "A rake": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
+**Q:** Why do small seeds need fine tilth?
+Options: So they dry quickly | So they can hide from birds | **So they can be covered and sprout** | So they stay in the sun
+- If a child answers "So they dry quickly": Maize and beans need medium tilth. Tubers and cuttings suit a coarse tilth.
+- If a child answers "So they can hide from birds": Maize and beans need medium tilth. Small seeds need a fine tilth.
 
 ### agriculture7.tl.story
 
 Skill `FOOD_P.CROP_ESTABLISHMENT.TILTH`, outcome `a`, form word, rung 2.
 
-**Q:** Esther tries to break hard ground with a rake. Which tool should she use?
-Options: **A jembe** | A panga for raking | A bigger rake | Her hands only
-- If a child answers "A panga for raking": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
-- If a child answers "A bigger rake": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
+**Q:** Kamau plants cassava cuttings. What tilth does he prepare?
+Options: Fine tilth | **Coarse tilth** | Powder-fine tilth | Wet mud only
+- If a child answers "Fine tilth": Maize and beans need medium tilth. Small seeds need a fine tilth.
+- If a child answers "Powder-fine tilth": Maize and beans need medium tilth. Tubers and cuttings suit a coarse tilth.
 
 ### agriculture7.tl.spot
 
 Skill `FOOD_P.CROP_ESTABLISHMENT.TILTH`, outcome `a`, form spot, rung 3.
 
-**Q:** Kimani explains his tools. Which step is wrong?
-Steps: **He broke the hard ground first with a rake.** / He used a jembe for digging. / He used a rake to level the bed.
-- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+**Q:** Step 1: Maize seeds are medium sized. Which step is the mistake?
+Steps: Step 1: Maize seeds are medium sized. / Step 2: They need medium tilth. / **Step 3: So maize needs fine tilth.**
+- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### agriculture7.cp.direct
 
 Skill `FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES`, outcome `a`, form direct, rung 1.
 
-**Q:** What should a cook wear near a grill?
-Options: **Sleeves rolled up, hair tied back** | Long hair untied | Any clothes are fine | Loose sleeves to stay cool
-- If a child answers "Long hair untied": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Roll up sleeves and tie back hair near a grill or fire.
-- If a child answers "Any clothes are fine": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Roll up sleeves and tie back hair near a grill or fire.
+**Q:** What is gapping?
+Options: Removing extra seedlings from rows | Cutting the whole crop short | **Replacing seeds that did not grow** | Digging a trench round the plot
+- If a child answers "Removing extra seedlings from rows": Gapping replaces seeds that did not grow. Weeds compete with crops.
+- If a child answers "Cutting the whole crop short": Gapping replaces seeds that did not grow. Thinning removes extra seedlings.
 
 ### agriculture7.cp.story
 
 Skill `FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES`, outcome `a`, form word, rung 2.
 
-**Q:** Shiru's chicken is brown outside but pink inside. Is it ready?
-Options: **No, it needs more cooking** | Yes, pink is fine | Only if turned once | Yes, brown means cooked
-- If a child answers "Yes, pink is fine": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Meat is cooked when the juices run clear and it is not pink inside.
-- If a child answers "Only if turned once": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Turn grilled food so both sides cook evenly.
+**Q:** Weeds are growing around Achieng's beans. What should she do?
+Options: Add more weeds | Cut the beans | Leave the weeds alone | **Weed the plot**
+- If a child answers "Add more weeds": Gapping replaces seeds that did not grow. Thinning removes extra seedlings.
+- If a child answers "Cut the beans": Gapping replaces seeds that did not grow. Gapping replaces seeds that did not grow.
 
 ### agriculture7.cp.spot
 
 Skill `FOOD_P.SELECTED_CROP_MANAGEMENT.CROP_PRACTICES`, outcome `a`, form spot, rung 3.
 
-**Q:** Wambui explains how she knows chicken is cooked. Which step is wrong?
-Steps: She cuts into the thickest part. / She looks at the juices. / **If the outside is brown, she says it is cooked.**
+**Q:** Step 1: Some seeds fail to grow. Which step is the mistake?
+Steps: Step 1: Some seeds fail to grow. / Step 2: Gaps appear. / **Step 3: So gapping removes seedlings.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -315,26 +315,26 @@ Steps: She cuts into the thickest part. / She looks at the juices. / **If the ou
 
 Skill `FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS`, outcome `a`, form direct, rung 1.
 
-**Q:** How should eggs be prepared to be safe?
-Options: Kept dirty | Left in the sun | **Cooked well** | Eaten raw always
-- If a child answers "Kept dirty": Raw milk can carry germs. Keep milk cool and covered.
-- If a child answers "Left in the sun": Raw milk can carry germs. Wash hands and tools first.
+**Q:** How should fresh milk be kept?
+Options: Near the rubbish | Open on the table | **Cool and covered** | In the hot sun
+- If a child answers "Near the rubbish": Raw milk can carry germs. Keep milk cool and covered.
+- If a child answers "Open on the table": Raw milk can carry germs. Wash hands and tools first.
 
 ### agriculture7.ap.story
 
 Skill `FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS`, outcome `a`, form word, rung 2.
 
-**Q:** Mama buys milk from a neighbour. What should she do first?
-Options: Add sugar and drink | **Boil it** | Drink it raw at once | Leave it in the sun
-- If a child answers "Add sugar and drink": Raw milk can carry germs. Wash hands and tools first.
-- If a child answers "Drink it raw at once": Raw milk can carry germs. Boil or pasteurise milk to kill germs.
+**Q:** A cook boils eggs for ten minutes. Why?
+Options: To make them rotten after a day | To make them dirty on the outside | **To cook them well and make them safe** | To make them cold and hard again
+- If a child answers "To make them rotten after a day": Raw milk can carry germs. Boil or pasteurise milk to kill germs.
+- If a child answers "To make them dirty on the outside": Raw milk can carry germs. Keep milk cool and covered.
 
 ### agriculture7.ap.spot
 
 Skill `FOOD_P.PREPARING_ANIMAL_PRODUCT.ANIMAL_PRODUCTS`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Eggs can carry germs. Which step is the mistake?
-Steps: Step 1: Eggs can carry germs. / Step 2: Cooking kills them. / **Step 3: So eggs are eaten raw to be safe.**
+**Q:** Step 1: Hands can carry germs. Which step is the mistake?
+Steps: Step 1: Hands can carry germs. / Step 2: Washing removes germs. / **Step 3: So hands need not be washed before handling meat.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -342,26 +342,26 @@ Steps: Step 1: Eggs can carry germs. / Step 2: Cooking kills them. / **Step 3: S
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_METHODS`, outcome `a`, form direct, rung 1.
 
-**Q:** What is roasting?
-Options: Cooking in cold oil | **Cooking with dry heat** | Cooking in steam | Cooking in deep water
-- If a child answers "Cooking in cold oil": Hot cooking is done with an adult. Baking uses an oven.
-- If a child answers "Cooking in steam": Hot cooking is done with an adult. Frying cooks food in hot oil.
+**Q:** What is boiling?
+Options: Cooking in an oven | Cooking in the sun | **Cooking in water that bubbles** | Cooking in oil
+- If a child answers "Cooking in an oven": Hot cooking is done with an adult. Frying cooks food in hot oil.
+- If a child answers "Cooking in the sun": Hot cooking is done with an adult. Baking uses an oven.
 
 ### agriculture7.cf.story
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_METHODS`, outcome `a`, form word, rung 2.
 
 **Q:** Mama cooks rice in bubbling water. Which method is this?
-Options: Frying | **Boiling** | Roasting | Baking
+Options: Baking | Frying | Roasting | **Boiling**
+- If a child answers "Baking": Hot cooking is done with an adult. Frying cooks food in hot oil.
 - If a child answers "Frying": Hot cooking is done with an adult. Steaming cooks food over steam.
-- If a child answers "Roasting": Hot cooking is done with an adult. Baking uses an oven.
 
 ### agriculture7.cf.spot
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_METHODS`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Boiling needs water. Which step is the mistake?
-Steps: Step 1: Boiling needs water. / Step 2: The water bubbles. / **Step 3: So boiling uses no water.**
+**Q:** Step 1: Steaming uses steam. Which step is the mistake?
+Steps: Step 1: Steaming uses steam. / Step 2: The food sits above the water. / **Step 3: So steaming uses hot oil.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -369,26 +369,26 @@ Steps: Step 1: Boiling needs water. / Step 2: The water bubbles. / **Step 3: So 
 
 Skill `HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE`, outcome `a`, form direct, rung 1.
 
-**Q:** Why wash hands after handling animals?
-Options: **To prevent the spread of disease** | To make hands dry | To make the animals clean | To save water
-- If a child answers "To make hands dry": Hygiene prevents disease. Clean the house and remove dung.
-- If a child answers "To make the animals clean": Hygiene prevents disease. Separate sick animals.
+**Q:** What should be done with a sick animal?
+Options: Let it eat with the healthy | **Separate it from the others** | Keep it with the others | Leave it near the water
+- If a child answers "Let it eat with the healthy": Hygiene prevents disease. Give clean water.
+- If a child answers "Keep it with the others": Hygiene prevents disease. Clean the house and remove dung.
 
 ### agriculture7.ah.story
 
 Skill `HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE`, outcome `a`, form word, rung 2.
 
-**Q:** A child washes hands after feeding the chickens. Why?
-Options: To wake the hens | To dry them | To waste water | **To stay free of germs**
-- If a child answers "To wake the hens": Hygiene prevents disease. Separate sick animals.
-- If a child answers "To dry them": Hygiene prevents disease. Clean the house and remove dung.
+**Q:** A farmer never cleans the cow shed. What may happen?
+Options: **The cows get diseases** | The cows give more milk | Nothing happens | The cows get stronger
+- If a child answers "The cows give more milk": Hygiene prevents disease. Give clean water.
+- If a child answers "Nothing happens": Hygiene prevents disease. Separate sick animals.
 
 ### agriculture7.ah.spot
 
 Skill `HYGIEN.HYGIENE_IN_REARING_ANIMA.ANIMAL_HYGIENE`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Sick animals spread disease. Which step is the mistake?
-Steps: Step 1: Sick animals spread disease. / Step 2: Healthy animals can catch it. / **Step 3: So keep them together.**
+**Q:** Step 1: Dung attracts flies. Which step is the mistake?
+Steps: Step 1: Dung attracts flies. / Step 2: Flies carry germs. / **Step 3: So dung should stay in the house.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -397,25 +397,25 @@ Steps: Step 1: Sick animals spread disease. / Step 2: Healthy animals can catch 
 Skill `HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS`, outcome `a`, form direct, rung 1.
 
 **Q:** Where should loose-coloured clothes dry?
-Options: On the hot roof | In the hot sun | Near a hot fire | **In the shade**
-- If a child answers "On the hot roof": Do not soak them long. Do not soak loose colours long.
+Options: **In the shade** | In the hot sun | On the hot roof | Near a hot fire
 - If a child answers "In the hot sun": Do not soak them long. Wash loose colours separately.
+- If a child answers "On the hot roof": Do not soak them long. Do not soak loose colours long.
 
 ### agriculture7.lc.story
 
 Skill `HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS`, outcome `a`, form word, rung 2.
 
-**Q:** A green blouse is dried in strong sunshine. What may happen?
-Options: **The colour fades** | It becomes new | It becomes brighter | It stays wet
-- If a child answers "It becomes new": Do not soak them long. Do not soak loose colours long.
+**Q:** Juma soaks a blue uniform overnight. What may happen?
+Options: It shrinks to fit | It becomes brighter | It dries itself | **The colour runs and fades**
+- If a child answers "It shrinks to fit": Do not soak them long. Dry loose colours in the shade.
 - If a child answers "It becomes brighter": Do not soak them long. Wash loose colours separately.
 
 ### agriculture7.lc.spot
 
 Skill `HYGIEN.LAUNDRY_LOOSE_COLOURED_I.LAUNDRY_COLOURS`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Sun fades colours. Which step is the mistake?
-Steps: Step 1: Sun fades colours. / Step 2: Shade protects them. / **Step 3: So dry them in the hot sun.**
+**Q:** Step 1: Loose colours run in water. Which step is the mistake?
+Steps: Step 1: Loose colours run in water. / Step 2: They can stain other clothes. / **Step 3: So wash them with white clothes.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -423,19 +423,19 @@ Steps: Step 1: Sun fades colours. / Step 2: Shade protects them. / **Step 3: So 
 
 Skill `PRODUC.KNITTING_SKILLS.KNITTING`, outcome `a`, form direct, rung 1.
 
-**Q:** What is casting on?
-Options: **Making the first row of stitches** | Cutting the yarn into pieces | Washing the wool in a basin | Finishing the knitting for good
-- If a child answers "Cutting the yarn into pieces": Casting on makes the first stitches. Knit and purl are knitting stitches.
-- If a child answers "Washing the wool in a basin": Casting on makes the first stitches. Casting on makes the first stitches.
+**Q:** Which stitches make stocking stitch?
+Options: Only nail stitches | Only brick stitches | Only casting on | **Alternate knit and purl rows**
+- If a child answers "Only nail stitches": Casting on makes the first stitches. Knit and purl are knitting stitches.
+- If a child answers "Only brick stitches": Casting on makes the first stitches. Knitting uses needles and yarn.
 
 ### agriculture7.kn.story
 
 Skill `PRODUC.KNITTING_SKILLS.KNITTING`, outcome `a`, form word, rung 2.
 
-**Q:** A learner asks for a tool for knitting a sweater. What should she get?
-Options: A hammer | **Knitting needles** | A saw | A spade
-- If a child answers "A hammer": Casting on makes the first stitches. Knitting uses needles and yarn.
-- If a child answers "A saw": Casting on makes the first stitches. Casting on makes the first stitches.
+**Q:** Kamau makes the first loops on the needle. What is this called?
+Options: Casting off | Cutting | **Casting on** | Purling
+- If a child answers "Casting off": Casting on makes the first stitches. Knitting uses needles and yarn.
+- If a child answers "Cutting": Casting on makes the first stitches. Casting on makes the first stitches.
 
 ### agriculture7.kn.spot
 
@@ -450,19 +450,19 @@ Steps: Step 1: Knitting starts with loops. / Step 2: The first row is cast on. /
 
 Skill `PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN`, outcome `a`, form direct, rung 1.
 
-**Q:** Which crop suits a suspended garden?
-Options: Large pumpkin vines on the ground | Tall timber trees | **Spinach or sukuma wiki** | Big maize for a whole field
-- If a child answers "Large pumpkin vines on the ground": It is useful in small compounds. Use soil mixed with manure.
-- If a child answers "Tall timber trees": It is useful in small compounds. Containers need drainage holes.
+**Q:** What should the soil mixture have?
+Options: Only water | Only sand | Only stones | **Soil and manure**
+- If a child answers "Only water": It is useful in small compounds. Use soil mixed with manure.
+- If a child answers "Only sand": It is useful in small compounds. A suspended garden saves space.
 
 ### agriculture7.fg.story
 
 Skill `PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAMED_GARDEN`, outcome `a`, form word, rung 2.
 
-**Q:** A school grows sukuma wiki in hanging sacks. Why is this good?
-Options: It wastes space | It needs more land | It spoils the crop | **It saves space and gives vegetables**
-- If a child answers "It wastes space": It is useful in small compounds. A suspended garden saves space.
-- If a child answers "It needs more land": It is useful in small compounds. Use soil mixed with manure.
+**Q:** A learner fills sacks with only sand. What is wrong?
+Options: **They need soil with manure** | Nothing, sand is best | They need only water | They need only stones
+- If a child answers "Nothing, sand is best": It is useful in small compounds. A suspended garden saves space.
+- If a child answers "They need only water": It is useful in small compounds. Use soil mixed with manure.
 
 ### agriculture7.fg.spot
 
@@ -477,26 +477,26 @@ Steps: Step 1: Plants need food from soil. / Step 2: Manure adds food. / **Step 
 
 Skill `PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION`, outcome `a`, form direct, rung 1.
 
-**Q:** How does value addition help a farmer?
-Options: It lowers the price | It wastes the produce | It makes the crop rot | **It raises the selling price**
-- If a child answers "It lowers the price": Value addition raises the price. Value addition raises the price.
-- If a child answers "It wastes the produce": Value addition raises the price. Clean and sort first.
+**Q:** What comes first in preparing produce for sale?
+Options: Leaving it in the sun | Selling it dirty | **Cleaning and sorting** | Mixing good and bad
+- If a child answers "Leaving it in the sun": Value addition raises the price. Clean and sort first.
+- If a child answers "Selling it dirty": Value addition raises the price. Value addition raises the price.
 
 ### agriculture7.va.story
 
 Skill `PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION`, outcome `a`, form word, rung 2.
 
-**Q:** A woman dries and grinds cassava into flour. What is this?
-Options: Losing cassava | Burning cassava | Wasting cassava | **Value addition**
-- If a child answers "Losing cassava": Value addition raises the price. Clean and sort first.
-- If a child answers "Burning cassava": Value addition raises the price. Making juice adds value.
+**Q:** A group makes jam from extra fruit. Why is this good?
+Options: It lowers income | It wastes the fruit | It spoils the fruit | **It adds value and saves the fruit**
+- If a child answers "It lowers income": Value addition raises the price. Clean and sort first.
+- If a child answers "It wastes the fruit": Value addition raises the price. Value addition raises the price.
 
 ### agriculture7.va.spot
 
 Skill `PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_ADDITION`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Juice comes from fruit. Which step is the mistake?
-Steps: Step 1: Juice comes from fruit. / Step 2: It lasts longer. / **Step 3: So making juice wastes the fruit.**
+**Q:** Step 1: Produce must be clean. Which step is the mistake?
+Steps: Step 1: Produce must be clean. / Step 2: It should be sorted. / **Step 3: So sell it dirty and mixed.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -504,26 +504,26 @@ Steps: Step 1: Juice comes from fruit. / Step 2: It lasts longer. / **Step 3: So
 
 Skill `PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is a powder soap use?
-Options: Planting seeds | Cooking food | Feeding animals | **Washing clothes**
-- If a child answers "Planting seeds": Strong soap chemicals are handled by the teacher only. Soap with water removes dirt and germs.
-- If a child answers "Cooking food": Strong soap chemicals are handled by the teacher only. Soap comes as bar, liquid, powder or paste.
+**Q:** Who handles strong soap chemicals?
+Options: **The teacher only** | Any child alone | No one | Any visitor
+- If a child answers "Any child alone": Strong soap chemicals are handled by the teacher only. Soap comes as bar, liquid, powder or paste.
+- If a child answers "No one": Strong soap chemicals are handled by the teacher only. Strong chemicals are handled by the teacher only.
 
 ### agriculture7.hs.story
 
 Skill `PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS`, outcome `a`, form word, rung 2.
 
 **Q:** A learner wants to make soap using strong chemicals. What should she do?
-Options: Use any chemical | Do it alone at home | **Do it only with the teacher** | Do it with friends alone
+Options: Use any chemical | **Do it only with the teacher** | Do it with friends alone | Do it alone at home
 - If a child answers "Use any chemical": Strong soap chemicals are handled by the teacher only. Strong chemicals are handled by the teacher only.
-- If a child answers "Do it alone at home": Strong soap chemicals are handled by the teacher only. Soap comes as bar, liquid, powder or paste.
+- If a child answers "Do it with friends alone": Strong soap chemicals are handled by the teacher only. Soap with water removes dirt and germs.
 
 ### agriculture7.hs.spot
 
 Skill `PRODUC.MAKING_HOMEMADE_SOAP.SOAP_FORMS`, outcome `a`, form spot, rung 3.
 
-**Q:** Step 1: Powder soap is used for clothes. Which step is the mistake?
-Steps: Step 1: Powder soap is used for clothes. / Step 2: It is mixed with water. / **Step 3: So powder soap is for cooking.**
+**Q:** Step 1: Handwashing stops disease. Which step is the mistake?
+Steps: Step 1: Handwashing stops disease. / Step 2: It needs soap and water. / **Step 3: So water alone is always enough.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -532,18 +532,18 @@ Steps: Step 1: Powder soap is used for clothes. / Step 2: It is mixed with water
 Skill `CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD`, outcome `b`, form direct, rung 1.
 
 **Q:** How is a water retention ditch laid out on a slope?
-Options: **Across the slope, on the contour** | From the top to the bottom | Wherever the soil is soft | Straight down the slope
-- If a child answers "From the top to the bottom": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Dig across the slope so the ditch catches the water instead of speeding it up.
+Options: Wherever the soil is soft | From the top to the bottom | **Across the slope, on the contour** | Straight down the slope
 - If a child answers "Wherever the soil is soft": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Clear the silt from the ditch after heavy rains so it keeps holding water.
+- If a child answers "From the top to the bottom": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Dig across the slope so the ditch catches the water instead of speeding it up.
 
 ### agriculture7.rb.story
 
 Skill `CONSER.CONSTRUCTING_WATER_RETEN.RETENTION_BUILD`, outcome `b`, form word, rung 2.
 
-**Q:** Mwangi has a retention pit that stays wet most of the year. What should he plant in it?
-Options: Nothing, the pit stays empty | **Bananas or napier grass** | Dry-land millet | Beans that rot in wet soil
-- If a child answers "Nothing, the pit stays empty": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Clear the silt from the ditch after heavy rains so it keeps holding water.
-- If a child answers "Dry-land millet": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Bananas, arrowroots, sugarcane and napier like the wet soil of a retention pit.
+**Q:** Kiprono digs a ditch from the top of his shamba straight to the bottom. What will the run-off do?
+Options: **Rush down faster and carry soil** | Stop moving at once | Turn into silt that feeds maize | Stay in the ditch and soak in
+- If a child answers "Stop moving at once": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Dig across the slope so the ditch catches the water instead of speeding it up.
+- If a child answers "Turn into silt that feeds maize": A retention ditch runs across the slope, the soil makes a bank downhill, and it is kept clear of silt. Bananas, arrowroots, sugarcane and napier like the wet soil of a retention pit.
 
 ### agriculture7.rb.spot
 
@@ -558,53 +558,53 @@ Steps: **She leaves the silt in because a ditch never needs clearing.** / She ch
 
 Skill `CONSER.GROWING_TREES.TREE_PLANTING`, outcome `b`, form direct, rung 1.
 
-**Q:** How deep is a seedling planted?
-Options: Deeper, with the stem buried | **At the depth it grew in the nursery** | Anywhere, depth does not matter | With the sleeve still on
-- If a child answers "Deeper, with the stem buried": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Choose a tree that suits the place. Eucalyptus uses much water, so keep it away from springs.
-- If a child answers "Anywhere, depth does not matter": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Water, weed and protect a young tree until it is established.
+**Q:** Why is eucalyptus not planted beside a spring?
+Options: It makes the spring flow faster | It is too small to matter | It does not matter which tree | **It uses a lot of water**
+- If a child answers "It makes the spring flow faster": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Choose a tree that suits the place. Eucalyptus uses much water, so keep it away from springs.
+- If a child answers "It is too small to matter": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Choose a tree that suits the place. Eucalyptus uses much water, so keep it away from springs.
 
 ### agriculture7.tp.story
 
 Skill `CONSER.GROWING_TREES.TREE_PLANTING`, outcome `b`, form word, rung 2.
 
-**Q:** A group wants trees beside a wetland. Which choice shows good thinking?
-Options: A tree planted over a latrine | Eucalyptus, any tree will do | **A tree that suits wet places** | The tallest tree they can find
-- If a child answers "A tree planted over a latrine": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Plant big trees away from houses, power lines and latrines, where they have room to grow.
-- If a child answers "Eucalyptus, any tree will do": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Choose a tree that suits the place. Eucalyptus uses much water, so keep it away from springs.
+**Q:** After planting, Lilian puts dry grass around her seedling and a small fence. Why?
+Options: So she need not water it again | **To keep moisture in and animals away** | To make the sleeve rot faster | So it can grow close to the wall
+- If a child answers "So she need not water it again": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Water, weed and protect a young tree until it is established.
+- If a child answers "To make the sleeve rot faster": Choose a tree that suits the place, remove the sleeve, plant at nursery depth, then water, mulch and protect it until it is established. Remove the polythene sleeve. Roots cannot grow through it.
 
 ### agriculture7.tp.spot
 
 Skill `CONSER.GROWING_TREES.TREE_PLANTING`, outcome `b`, form spot, rung 3.
 
-**Q:** Ouma explains which tree to plant by a spring. Which step is wrong?
-Steps: Different trees need different amounts of water. / A spring needs its water kept. / **So eucalyptus is a good tree beside the spring.**
+**Q:** Wairimu explains how she cares for a new tree. Which step is wrong?
+Steps: She mulched around the seedling. / **She stopped watering after the first day.** / She put a fence round it against goats.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
-### agriculture7.tl.direct
+### agriculture7.tlp.direct
 
 Skill `FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP`, outcome `b`, form direct, rung 1.
 
 **Q:** Which tool is used for primary cultivation of hard ground?
-Options: **A forked jembe** | A watering can | A rake | A garden fork for raking
+Options: A watering can | A garden fork for raking | A rake | **A forked jembe**
 - If a child answers "A watering can": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
-- If a child answers "A rake": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
+- If a child answers "A garden fork for raking": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
 
-### agriculture7.tl.story
+### agriculture7.tlp.story
 
 Skill `FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP`, outcome `b`, form word, rung 2.
 
 **Q:** Esther tries to break hard ground with a rake. Which tool should she use?
-Options: **A jembe** | A panga for raking | A bigger rake | Her hands only
-- If a child answers "A panga for raking": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
+Options: A bigger rake | Her hands only | **A jembe** | A panga for raking
 - If a child answers "A bigger rake": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
+- If a child answers "Her hands only": Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs. Dig with a jembe or forked jembe. A rake only levels and fines the surface.
 
-### agriculture7.tl.spot
+### agriculture7.tlp.spot
 
 Skill `FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP`, outcome `b`, form spot, rung 3.
 
-**Q:** Kimani explains his tools. Which step is wrong?
-Steps: **He broke the hard ground first with a rake.** / He used a jembe for digging. / He used a rake to level the bed.
+**Q:** Rehema explains the steps. Which step is wrong?
+Steps: **Her first step was raking before any clearing or digging.** / She broke the clods to a fine tilth for kale seeds. / She removed stones and roots.
 - If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -612,26 +612,26 @@ Steps: **He broke the hard ground first with a rake.** / He used a jembe for dig
 
 Skill `FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which seedlings are left when thinning?
-Options: The smallest ones | The weakest ones | **The strongest and healthiest** | Any, chosen by chance
-- If a child answers "The smallest ones": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Leave the strongest seedlings at the right spacing; remove the weak ones.
-- If a child answers "The weakest ones": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Leave the strongest seedlings at the right spacing; remove the weak ones.
+**Q:** When is gapping done?
+Options: When the crop flowers | Just before harvest | **Within about two weeks of germination** | A month or more after germination
+- If a child answers "When the crop flowers": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Gap within about two weeks so the new plants keep up with the rest.
+- If a child answers "Just before harvest": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Gap within about two weeks so the new plants keep up with the rest.
 
 ### agriculture7.ps.story
 
 Skill `FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS`, outcome `b`, form word, rung 2.
 
-**Q:** Mary thins her carrots and pulls out the biggest ones. What is wrong?
-Options: She should thin when the soil is dry | **She should leave the strongest** | She should dig deep instead | Nothing, big ones take space
-- If a child answers "She should thin when the soil is dry": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Thin when the soil is moist, so the seedlings left behind keep their roots.
-- If a child answers "She should dig deep instead": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Weed shallowly or by hand near the crop so its roots are not cut.
+**Q:** Njoki weeds deep with a jembe right next to her beans. What can happen?
+Options: The weeds are pulled more gently | The beans grow faster | The soil becomes moist | **She cuts the crop roots**
+- If a child answers "The weeds are pulled more gently": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Weed shallowly or by hand near the crop so its roots are not cut.
+- If a child answers "The beans grow faster": Gap within about two weeks of germination, thin moist soil leaving the strongest, weed shallowly, and earth up round the stems. Weed shallowly or by hand near the crop so its roots are not cut.
 
 ### agriculture7.ps.spot
 
 Skill `FOOD_P.SELECTED_CROP_MANAGEMENT.PRACTICE_STEPS`, outcome `b`, form spot, rung 3.
 
-**Q:** Grace explains her thinning. Which step is wrong?
-Steps: She watered the bed first. / **She pulled out the strongest seedlings and left the small ones.** / She thinned while the soil was moist.
+**Q:** Kioko explains when he thins. Which step is wrong?
+Steps: Thinning gives each plant space. / **It is best done when the soil is dry and hard.** / It is done soon after the crop comes up.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -639,48 +639,48 @@ Steps: She watered the bed first. / **She pulled out the strongest seedlings and
 
 Skill `FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP`, outcome `b`, form direct, rung 1.
 
-**Q:** How are eggs placed in a tray?
-Options: Lying on their sides | Pointed end up | **Broad end up** | Any way they fit
-- If a child answers "Lying on their sides": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Pack eggs broad end up, where the air space is, so they keep fresh longer.
-- If a child answers "Pointed end up": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Pack eggs broad end up, where the air space is, so they keep fresh longer.
+**Q:** What is done with cracked eggs when sorting?
+Options: Sold at the top of the tray | Hidden in the middle of the tray | **Removed and used first at home** | Packed with the others
+- If a child answers "Sold at the top of the tray": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Remove cracked eggs when grading. They spoil quickly and can spoil others.
+- If a child answers "Hidden in the middle of the tray": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Remove cracked eggs when grading. They spoil quickly and can spoil others.
 
 ### agriculture7.eh.story
 
 Skill `FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP`, outcome `b`, form word, rung 2.
 
-**Q:** A farmer candles eggs before packing them. Why?
-Options: To add water inside | To mix them all together | To make them heavier | **To find cracked or bad eggs**
-- If a child answers "To add water inside": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Keep honey dry. Water makes it ferment and spoil.
-- If a child answers "To mix them all together": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Remove cracked eggs when grading. They spoil quickly and can spoil others.
+**Q:** Peter packs his eggs pointed end up. What can happen?
+Options: **The air space moves and they keep less well** | They become cracked eggs | They stay fresher | Nothing, any way is fine
+- If a child answers "They become cracked eggs": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Remove cracked eggs when grading. They spoil quickly and can spoil others.
+- If a child answers "They stay fresher": Sort out cracked eggs, pack them broad end up, never add water to honey and keep it in a clean, dry, airtight container. Pack eggs broad end up, where the air space is, so they keep fresh longer.
 
 ### agriculture7.eh.spot
 
 Skill `FOOD_P.PREPARING_ANIMAL_PRODUCT.EGG_HONEY_PREP`, outcome `b`, form spot, rung 3.
 
-**Q:** Daudi explains how he stores honey. Which step is wrong?
-Steps: He lets the honey settle. / **He keeps it in an open basin so it can breathe.** / He labels each container.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Simon explains how eggs are packed. Which step is wrong?
+Steps: **He puts each egg pointed end up.** / He grades eggs by size. / He keeps the trays in a cool place.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
-### agriculture7.cp.direct
+### agriculture7.cpr.direct
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_PRACTICE`, outcome `b`, form direct, rung 1.
 
 **Q:** What should a cook wear near a grill?
-Options: **Sleeves rolled up, hair tied back** | Long hair untied | Any clothes are fine | Loose sleeves to stay cool
+Options: Loose sleeves to stay cool | Long hair untied | **Sleeves rolled up, hair tied back** | Any clothes are fine
+- If a child answers "Loose sleeves to stay cool": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Roll up sleeves and tie back hair near a grill or fire.
 - If a child answers "Long hair untied": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Roll up sleeves and tie back hair near a grill or fire.
-- If a child answers "Any clothes are fine": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Roll up sleeves and tie back hair near a grill or fire.
 
-### agriculture7.cp.story
+### agriculture7.cpr.story
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_PRACTICE`, outcome `b`, form word, rung 2.
 
 **Q:** Shiru's chicken is brown outside but pink inside. Is it ready?
-Options: **No, it needs more cooking** | Yes, pink is fine | Only if turned once | Yes, brown means cooked
-- If a child answers "Yes, pink is fine": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Meat is cooked when the juices run clear and it is not pink inside.
+Options: Only if turned once | Yes, pink is fine | Yes, brown means cooked | **No, it needs more cooking**
 - If a child answers "Only if turned once": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Turn grilled food so both sides cook evenly.
+- If a child answers "Yes, pink is fine": Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat. Meat is cooked when the juices run clear and it is not pink inside.
 
-### agriculture7.cp.spot
+### agriculture7.cpr.spot
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_PRACTICE`, outcome `b`, form spot, rung 3.
 
@@ -693,54 +693,54 @@ Steps: She cuts into the thickest part. / She looks at the juices. / **If the ou
 
 Skill `HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING`, outcome `b`, form direct, rung 1.
 
-**Q:** How often are feeders and waterers washed?
-Options: Only when they look green | Never, only topped up | **Every day before refilling** | Once a term
-- If a child answers "Only when they look green": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Wash and rinse feeders and waterers every day before refilling.
-- If a child answers "Never, only topped up": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Wash and rinse feeders and waterers every day before refilling.
+**Q:** What happens to the animals while their house is cleaned?
+Options: They stay on the wet floor | They stay while it is sprayed | **They are moved out** | They drink from the dirty waterer
+- If a child answers "They stay on the wet floor": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Let the house dry before new bedding goes in. Damp bedding grows germs.
+- If a child answers "They stay while it is sprayed": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Remove dirt and scrub first. Disinfectant works only on a clean surface.
 
 ### agriculture7.hc.story
 
 Skill `HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING`, outcome `b`, form word, rung 2.
 
 **Q:** A school cleans its poultry house. Which order is right?
-Options: **Remove litter, scrub, disinfect, dry** | Disinfect, then remove the litter | Add bedding, then scrub | Scrub, add bedding, then dry
+Options: **Remove litter, scrub, disinfect, dry** | Scrub, add bedding, then dry | Disinfect, then remove the litter | Add bedding, then scrub
+- If a child answers "Scrub, add bedding, then dry": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Let the house dry before new bedding goes in. Damp bedding grows germs.
 - If a child answers "Disinfect, then remove the litter": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Remove dirt and scrub first. Disinfectant works only on a clean surface.
-- If a child answers "Add bedding, then scrub": Wear gloves and a mask, remove old bedding before disinfecting, let the house dry before new bedding, and wash feeders daily. Let the house dry before new bedding goes in. Damp bedding grows germs.
 
 ### agriculture7.hc.spot
 
 Skill `HYGIEN.HYGIENE_IN_REARING_ANIMA.HOUSE_CLEANING`, outcome `b`, form spot, rung 3.
 
-**Q:** Waweru explains cleaning a poultry house. Which step is wrong?
-Steps: He moved the birds out. / He scrubbed the walls and floor. / **He put the new bedding down while the floor was still wet.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Kamau explains what he wears. Which step is wrong?
+Steps: **He removes the droppings with bare hands to work faster.** / He wears gumboots. / He wears an apron.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture7.cs.direct
 
 Skill `HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which water is used for loose colours?
-Options: Hot water | Boiling water | Water left overnight with the item | **Cool or lukewarm water**
-- If a child answers "Hot water": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Use cool or lukewarm water. Heat makes the dye run more.
-- If a child answers "Boiling water": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Use cool or lukewarm water. Heat makes the dye run more.
+**Q:** Where is a loose-coloured article dried?
+Options: Under the white sheets | Folded in a basin | In hot sun, right side out | **Inside out in the shade**
+- If a child answers "Under the white sheets": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Test a hidden part with a damp white cloth before washing.
+- If a child answers "Folded in a basin": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Hang loose colours to dry at once. Wet folds let colour run into other parts.
 
 ### agriculture7.cs.story
 
 Skill `HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS`, outcome `b`, form word, rung 2.
 
-**Q:** Omar folds his wet coloured shirt and leaves it in a bucket. What will he find?
-Options: A shirt that is now colour fast | A clean, bright shirt | A dry shirt | **Patches where the colour ran**
-- If a child answers "A shirt that is now colour fast": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Test a hidden part with a damp white cloth before washing.
-- If a child answers "A clean, bright shirt": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Hang loose colours to dry at once. Wet folds let colour run into other parts.
+**Q:** Wangari rinses her coloured blouse in cool water until the water is clear. Why?
+Options: To test it after washing | To make the colour run more | **To remove soap and loose dye** | Rinsing is not needed
+- If a child answers "To test it after washing": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Test a hidden part with a damp white cloth before washing.
+- If a child answers "To make the colour run more": Test for colour fastness, wash quickly in cool water by kneading and squeezing, rinse till clear and dry it at once, inside out in shade. Use cool or lukewarm water. Heat makes the dye run more.
 
 ### agriculture7.cs.spot
 
 Skill `HYGIEN.LAUNDRY_LOOSE_COLOURED_I.COLOUR_STEPS`, outcome `b`, form spot, rung 3.
 
-**Q:** Juma explains the water he uses. Which step is wrong?
-Steps: He makes soapy water. / **He uses hot water to get loose colours cleaner.** / He washes quickly.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Nduta explains drying. Which step is wrong?
+Steps: **She folded it wet and left it to dry later.** / She rinsed until the water was clear. / She squeezed out the water gently.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture7.ka.direct
@@ -748,52 +748,52 @@ Steps: He makes soapy water. / **He uses hot water to get loose colours cleaner.
 Skill `PRODUC.KNITTING_SKILLS.KNIT_ARTICLE`, outcome `b`, form direct, rung 1.
 
 **Q:** What happens if a dropped stitch is ignored?
-Options: Nothing | **It runs down and leaves a hole** | The ends sew themselves in | The article gets wider
+Options: Nothing | **It runs down and leaves a hole** | The article gets wider | The ends sew themselves in
 - If a child answers "Nothing": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Pick up a dropped stitch at once, or it runs down and makes a hole.
-- If a child answers "The ends sew themselves in": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Sew in the ends so the article does not unravel.
+- If a child answers "The article gets wider": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Count and measure: a test square tells how many stitches to cast on.
 
 ### agriculture7.ka.story
 
 Skill `PRODUC.KNITTING_SKILLS.KNIT_ARTICLE`, outcome `b`, form word, rung 2.
 
-**Q:** Esther knits every row to make garter stitch. What else keeps her work neat?
-Options: Guessing the width | **Even tension in every row** | Very tight casting on | Skipping dropped stitches
-- If a child answers "Guessing the width": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Count and measure: a test square tells how many stitches to cast on.
-- If a child answers "Very tight casting on": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Cast on evenly and not too tight so the needle goes in and the edge stretches.
+**Q:** Halima cuts her yarn ends short and leaves them. What happens?
+Options: It looks finished and strong | The stitches get tighter | **The work can come undone** | The mat gets wider
+- If a child answers "It looks finished and strong": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Sew in the ends so the article does not unravel.
+- If a child answers "The stitches get tighter": Count the stitches you cast on, keep the tension even, pick up dropped stitches and sew in the ends. Cast on evenly and not too tight so the needle goes in and the edge stretches.
 
 ### agriculture7.ka.spot
 
 Skill `PRODUC.KNITTING_SKILLS.KNIT_ARTICLE`, outcome `b`, form spot, rung 3.
 
-**Q:** Daniel explains how wide his scarf will be. Which step is wrong?
-Steps: He decided how wide it should be. / **He cast on until it looked wide enough without counting.** / He chose his yarn and needles.
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
+**Q:** Rose explains finishing. Which step is wrong?
+Steps: **She cut the yarn ends short and left them loose.** / She cast off the last row. / She pressed the article.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture7.fb.direct
 
 Skill `PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD`, outcome `b`, form direct, rung 1.
 
-**Q:** What is done before cutting and joining the frame?
-Options: Fill the containers | Plant the seedlings | **Sketch the frame and measure** | Nothing, start cutting the poles
-- If a child answers "Fill the containers": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Sketch and measure first, then cut. It saves materials.
-- If a child answers "Plant the seedlings": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Sketch and measure first, then cut. It saves materials.
+**Q:** Why are strong poles used for a suspended garden?
+Options: Thin sticks look neater | Strong poles give more shade | **Wet soil in many containers is heavy** | It does not carry much, so thin sticks do
+- If a child answers "Thin sticks look neater": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Wet soil is heavy. Use strong poles, planks or bars and fix them firmly.
+- If a child answers "Strong poles give more shade": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Space or stagger the containers so the lower plants get light too.
 
 ### agriculture7.fb.story
 
 Skill `PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD`, outcome `b`, form word, rung 2.
 
-**Q:** Kioko builds a frame from thin sticks. When the containers are watered, it bends. Why?
-Options: The containers were spaced out | Water makes thin sticks stronger and stiffer | He sketched it first | **Wet soil is too heavy for thin sticks**
-- If a child answers "The containers were spaced out": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Space or stagger the containers so the lower plants get light too.
-- If a child answers "Water makes thin sticks stronger and stiffer": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Wet soil is heavy. Use strong poles, planks or bars and fix them firmly.
+**Q:** Ali stands his poles on the ground. After a windy night the frame has fallen. What should he have done?
+Options: Hung the sacks closer | Used thinner, lighter poles instead | Skipped the sketch | **Dug the poles into the ground**
+- If a child answers "Hung the sacks closer": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Space or stagger the containers so the lower plants get light too.
+- If a child answers "Used thinner, lighter poles instead": Sketch and measure first, use strong materials, fix the uprights firmly, and space the containers so every plant gets light. Wet soil is heavy. Use strong poles, planks or bars and fix them firmly.
 
 ### agriculture7.fb.spot
 
 Skill `PRODUC.CONSTRUCTING_FRAMED_SUSP.FRAME_BUILD`, outcome `b`, form spot, rung 3.
 
-**Q:** Lilian explains the uprights. Which step is wrong?
-Steps: She measured where each post would go. / **She stood the posts on the ground without fixing them.** / She joined the cross bars level.
+**Q:** Barasa explains how he started. Which step is wrong?
+Steps: He chose a sunny place. / **He started cutting and joining without a sketch.** / He collected strong poles.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -801,10 +801,10 @@ Steps: She measured where each post would go. / **She stood the posts on the gro
 
 Skill `PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which produce is chosen for making crisps?
-Options: Any, the label hides it | Bitter pieces to use them up | **Sound, fresh produce** | Produce with rotten parts
-- If a child answers "Any, the label hides it": Choose sound produce, slice evenly, dry or fry, cool, pack in a sealed packet and label it. A label tells buyers what is inside, the weight, the date and the maker.
-- If a child answers "Bitter pieces to use them up": Choose sound produce, slice evenly, dry or fry, cool, pack in a sealed packet and label it. Sort out spoilt produce first. One bad piece spoils the batch.
+**Q:** Why are potatoes sliced evenly?
+Options: **So they cook or dry evenly** | So the thick ones stay soft | So they look different | It does not matter
+- If a child answers "So the thick ones stay soft": Choose sound produce, slice evenly, dry or fry, cool, pack in a sealed packet and label it. Thin, even slices dry or fry evenly and come out crisp.
+- If a child answers "So they look different": Choose sound produce, slice evenly, dry or fry, cool, pack in a sealed packet and label it. Thin, even slices dry or fry evenly and come out crisp.
 
 ### agriculture7.vs.story
 
@@ -819,37 +819,37 @@ Options: He makes more money safely | The label changes | **The whole batch tast
 
 Skill `PRODUC.ADDING_VALUE_TO_CROP_PRO.VALUE_STEPS`, outcome `b`, form spot, rung 3.
 
-**Q:** Peter explains sorting. Which step is wrong?
-Steps: He washed the potatoes. / He checked each one. / **He kept the rotten ones to save money.**
+**Q:** Hassan explains packing. Which step is wrong?
+Steps: He fried the slices with an adult. / **He packed them warm in an open bag.** / He drained off the oil.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture7.sm.direct
 
 Skill `PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING`, outcome `b`, form direct, rung 1.
 
-**Q:** Besides lye from ashes, what is needed to make soap?
-Options: Only more water | **Animal fat or plant oil** | Sugar | Nothing else is needed
-- If a child answers "Only more water": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Soap is made from lye and fat or oil. Ash water alone is not soap.
-- If a child answers "Sugar": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Soap is made from lye and fat or oil. Ash water alone is not soap.
+**Q:** Why is salt added to soap?
+Options: To make it smell sweet | To make it soft and runny | **To help it separate and set hard** | For taste
+- If a child answers "To make it smell sweet": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Salt helps the soap separate and set hard. Soap is never eaten.
+- If a child answers "To make it soft and runny": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Let homemade soap harden and cure for weeks before using it.
 
 ### agriculture7.sm.story
 
 Skill `PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING`, outcome `b`, form word, rung 2.
 
 **Q:** Nyokabi mixes ash water alone and waits for soap. Nothing forms. What is missing?
-Options: More ash only | **Fat or oil** | A cooking pot for food | Salt for taste
-- If a child answers "More ash only": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Soap is made from lye and fat or oil. Ash water alone is not soap.
+Options: Salt for taste | A cooking pot for food | More ash only | **Fat or oil**
+- If a child answers "Salt for taste": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Salt helps the soap separate and set hard. Soap is never eaten.
 - If a child answers "A cooking pot for food": Soap is lye from ashes with fat or oil, salt helps it set, it cures for weeks, and its pot is never used for food. The teacher handles the lye. Keep a separate pot for soap. Never cook food in it.
 
 ### agriculture7.sm.spot
 
 Skill `PRODUC.MAKING_HOMEMADE_SOAP.SOAP_MAKING`, outcome `b`, form spot, rung 3.
 
-**Q:** Sharon explains when the soap is ready. Which step is wrong?
-Steps: The soap was poured into moulds. / It cooled and became firm. / **Once it was cool it was ready to use that day.**
-- If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+**Q:** Baraka explains salt. Which step is wrong?
+Steps: **It is there to give the soap a good taste.** / Salt is added near the end. / It is stirred in.
+- If a child answers "Step 2": Step 2 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ## How to sign a family off
 

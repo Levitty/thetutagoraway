@@ -54,7 +54,7 @@ export const FAMILIES = [
       ['Njeri explains the planting depth. ' + STEP, 'She removed the sleeve gently.', 'She kept the ball of soil whole.', 'She buried the stem deeper than it grew in the nursery.', 'Plant at the same depth it grew in the nursery.', 3],
     ]),
 
-  ...T('tl', 'FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP', M('TP_RAKE', 'TP_WET', 'TP_ROOTS', 'TP_TOOL'),
+  ...T('tlp', 'FOOD_P.CROP_ESTABLISHMENT.TILTH_PREP', M('TP_RAKE', 'TP_WET', 'TP_ROOTS', 'TP_TOOL'),
     ['Think about the order: clear, dig, clean out, then break the clods.', 'Clear the site, dig with a jembe when the soil is moist, remove roots and stones, then break clods to the tilth the crop needs.'], [
       ['What is the first step in preparing a seedbed?', 'Clearing the site', 'Raking the soil fine|0', 'Sowing the seeds|0', 'Breaking the clods|0'],
       ['When is the best time to dig a seedbed?', 'When the soil is moist, not wet', 'When the soil is soaking wet|1', 'Straight after a heavy storm|1', 'When the soil is like mud|1'],
@@ -117,7 +117,7 @@ export const FAMILIES = [
       ['Neema explains honey hygiene. ' + STEP, 'Her hands and tools are clean.', 'The containers are dry.', 'Rinsing the jars and filling them wet is fine.', 'Wet jars add water and the honey can ferment.', 2],
     ]),
 
-  ...T('cp', 'FOOD_P.COOKING_FOOD.COOKING_PRACTICE', M('CPR_DRY', 'CPR_TURN', 'CPR_RAW', 'CPR_SLEEVE'),
+  ...T('cpr', 'FOOD_P.COOKING_FOOD.COOKING_PRACTICE', M('CPR_DRY', 'CPR_TURN', 'CPR_RAW', 'CPR_SLEEVE'),
     ['Think about what keeps the food cooking evenly and the cook safe.', 'Top up the steamer, turn food on the grill, check the inside is cooked, and keep sleeves and hair away from the heat.'], [
       ['What must be watched while steaming food?', 'That the water does not boil dry', 'Nothing, steaming looks after itself|0', 'That the lid stays off|0', 'That the food sits in the water|0'],
       ['Why is food on a grill turned?', 'So both sides cook evenly', 'It is not needed|1', 'To make it cook more slowly|1', 'So the fat drips onto it|1'],
